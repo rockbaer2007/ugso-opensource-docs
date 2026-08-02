@@ -4,34 +4,77 @@ description: Kurze Beschreibung für Suchmaschinen und Vorschau.
 date: 2026-08-02
 author: UGSo Software
 tags:
+  - Code
   - Home Assistant
-  - Open Source
 ---
 
 # Titel des Beitrags
 
 **2. August 2026 · UGSo Software**
 
-Kurze Einleitung zum Thema.
+Kurze Einleitung zum Code oder zum Problem.
 
-## Ausgangslage
+## Zweck
 
-Beschreibe, warum der Beitrag entstanden ist.
+Beschreibe, wofür der Code verwendet wird.
 
-## Umsetzung
+## Voraussetzungen
 
-Erkläre die wichtigsten Schritte oder Änderungen.
+- benötigte Integration
+- benötigte Entitäten
+- erforderliche Version
+
+## Code
+
+### YAML
 
 ```yaml
-# Beispielcode
+alias: Beispiel
+triggers: []
+conditions: []
+actions: []
+mode: single
 ```
 
-## Ergebnis
+### JavaScript
 
-Fasse das Ergebnis zusammen.
+```javascript
+function example(value) {
+  return value ?? 'unbekannt';
+}
+```
+
+### JSON
+
+```json
+{
+  "name": "Beispiel",
+  "enabled": true
+}
+```
+
+## Erklärung
+
+Erkläre die wichtigen Stellen des Codes.
+
+## Anpassungen
+
+Diese Werte müssen an das eigene System angepasst werden:
+
+```text
+entity_id
+topic
+dateipfad
+```
+
+## Hinweise
+
+::: warning
+Vor produktiven Änderungen immer ein Backup erstellen.
+:::
 
 ## Weiterführende Links
 
-- [UGSo Open Source](/)
+- [Blog](/blog/)
+- [Code-Snippets](/blog/snippets/)
 - [Projekte](/projects/)
-- [GitHub](https://github.com/rockbaer2007)

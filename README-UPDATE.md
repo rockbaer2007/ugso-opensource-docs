@@ -1,29 +1,33 @@
-# Blog-Update für UGSo Open Source Docs
+# Code-Blog-Update
 
-## Enthalten
+Dieses Paket erweitert den bestehenden VitePress-Blog um:
 
-- Blog-Navigation
-- Blogübersicht
-- zwei erste Beiträge
-- Beitragsvorlage
-- Blog-CSS
-- vollständige `config.mts`
-- aktualisierte Theme-Einbindung
+- Code-Snippet-Übersicht
+- Home-Assistant-YAML
+- JavaScript
+- Blockly
+- Lovelace und Bubble-Card
+- Code-Beitragsvorlage
+- Zeilennummern in Codeblöcken
+- automatische Syntaxhervorhebung
+- automatische Kopieren-Schaltfläche
 
 ## Installation
 
-ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und vorhandene Dateien überschreiben lassen.
+ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken.
+
+Vorhandene Dateien überschreiben lassen.
 
 Danach:
 
 ```powershell
 git add .
-git commit -m "Add UGSo Open Source blog"
+git commit -m "Expand blog with code snippets"
 git push
 ```
 
-Der Blog ist anschließend erreichbar unter:
+Neue Adresse:
 
 ```text
-https://opensource.ugso-software.de/blog/
+https://opensource.ugso-software.de/blog/snippets/
 ```

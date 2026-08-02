@@ -1,60 +1,81 @@
 ---
 title: Blog
-description: Neuigkeiten, Projektstände und technische Beiträge von UGSo Software.
+description: Neuigkeiten, Projektstände, Anleitungen und Code-Snippets von UGSo Software.
 ---
 
 # UGSo Open Source Blog
 
-Hier erscheinen Neuigkeiten, Entwicklungsstände und technische Beiträge rund um die Open-Source-Projekte von UGSo Software.
+Hier erscheinen Neuigkeiten, Entwicklungsstände, Anleitungen und wiederverwendbare Code-Snippets.
 
-## Aktuelle Beiträge
+## Bereiche
 
 <div class="blog-grid">
 
 <article class="blog-card">
 
-### HADash v0.9.4 Preview
+### 📰 Projektberichte
 
-**2. August 2026 · HADash**
+Neuigkeiten und Entwicklungsstände zu HADash, ATLAS, Ultimate Timer und weiteren Projekten.
 
-HADash erhält eine vereinfachte Windows-Oberfläche und verzichtet vollständig auf das bisherige Theme-System.
-
-[Beitrag lesen](./posts/hadash-preview)
+[Beiträge ansehen](./posts/hadash-preview)
 
 </article>
 
 <article class="blog-card">
 
-### ATLAS – Runtime Foundation
+### 💻 Code-Snippets
 
-**2. August 2026 · ATLAS**
+YAML, JavaScript, Blockly, Lovelace und Home-Assistant-Beispiele zum direkten Übernehmen.
 
-Ein Überblick über den aktuellen Entwicklungsstand und den nächsten Sprint G2.5.3.
+[Code-Snippets öffnen](./snippets/)
 
-[Beitrag lesen](./posts/atlas-runtime-foundation)
+</article>
+
+<article class="blog-card">
+
+### 🧰 Anleitungen
+
+Schritt-für-Schritt-Erklärungen mit vollständigen Beispielen und Hinweisen.
+
+[Beitragsvorlage öffnen](./beitragsvorlage)
 
 </article>
 
 </div>
 
-## Themen
+## Aktuelle Beiträge
 
-Der Blog behandelt unter anderem:
+- [HADash v0.9.4 Preview](./posts/hadash-preview)
+- [ATLAS – Runtime Foundation](./posts/atlas-runtime-foundation)
+- [Home Assistant YAML-Beispiele](./snippets/home-assistant-yaml)
+- [JavaScript-Beispiele](./snippets/javascript)
+- [Blockly-Beispiele](./snippets/blockly)
+- [Lovelace- und Bubble-Card-Beispiele](./snippets/lovelace)
 
-- Home Assistant
-- ESPHome und Thread
-- HADash
-- ATLAS
-- Lovelace-Komponenten
-- Blueprints und Automationen
-- technische Projektberichte
+## Code veröffentlichen
 
-## Neuen Beitrag erstellen
+VitePress erkennt die Sprache eines Codeblocks automatisch anhand der Angabe nach den drei Backticks:
 
-Neue Beiträge werden als Markdown-Dateien unter folgendem Pfad angelegt:
-
-```text
-docs/blog/posts/
+````md
+```yaml
+alias: Beispiel
+triggers: []
+actions: []
 ```
+````
 
-Eine fertige Vorlage findest du unter [Beitragsvorlage](./beitragsvorlage).
+Unterstützt werden unter anderem:
+
+- `yaml`
+- `javascript` oder `js`
+- `typescript` oder `ts`
+- `json`
+- `html`
+- `css`
+- `csharp`
+- `powershell`
+- `bash`
+- `xml`
+- `sql`
+
+Jeder Codeblock erhält automatisch eine **Kopieren-Schaltfläche**.

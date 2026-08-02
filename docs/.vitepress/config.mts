@@ -5,11 +5,15 @@ export default defineConfig({
   title: 'UGSo Open Source',
   titleTemplate: ':title | UGSo Open Source',
   description:
-    'Open-Source-Projekte und Blog von UGSo Software rund um Home Assistant, ESPHome, ATLAS und Lovelace.',
+    'Open-Source-Projekte, Code-Snippets und Blog von UGSo Software rund um Home Assistant, ESPHome, ATLAS, JavaScript und Lovelace.',
 
   base: '/',
   cleanUrls: true,
   lastUpdated: true,
+
+  markdown: {
+    lineNumbers: true
+  },
 
   head: [
     ['meta', { name: 'theme-color', content: '#0f172a' }],
@@ -23,7 +27,14 @@ export default defineConfig({
     nav: [
       { text: 'Startseite', link: '/' },
       { text: 'Projekte', link: '/projects/' },
-      { text: 'Blog', link: '/blog/' },
+      {
+        text: 'Blog',
+        items: [
+          { text: 'Blog-Übersicht', link: '/blog/' },
+          { text: 'Code-Snippets', link: '/blog/snippets/' },
+          { text: 'Neuer Beitrag', link: '/blog/beitragsvorlage' }
+        ]
+      },
       { text: 'HADash', link: '/projects/hadash/' },
       { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' },
       { text: 'ATLAS', link: '/projects/atlas/' },
@@ -38,9 +49,26 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Übersicht', link: '/blog/' },
-            { text: 'HADash veröffentlicht', link: '/blog/posts/hadash-preview' },
-            { text: 'ATLAS Entwicklungsstand', link: '/blog/posts/atlas-runtime-foundation' },
+            { text: 'Code-Snippets', link: '/blog/snippets/' },
             { text: 'Beitragsvorlage', link: '/blog/beitragsvorlage' }
+          ]
+        },
+        {
+          text: 'Beiträge',
+          collapsed: false,
+          items: [
+            { text: 'HADash v0.9.4 Preview', link: '/blog/posts/hadash-preview' },
+            { text: 'ATLAS Runtime Foundation', link: '/blog/posts/atlas-runtime-foundation' }
+          ]
+        },
+        {
+          text: 'Code-Beispiele',
+          collapsed: false,
+          items: [
+            { text: 'Home Assistant YAML', link: '/blog/snippets/home-assistant-yaml' },
+            { text: 'JavaScript', link: '/blog/snippets/javascript' },
+            { text: 'Blockly', link: '/blog/snippets/blockly' },
+            { text: 'Lovelace & Bubble-Card', link: '/blog/snippets/lovelace' }
           ]
         }
       ],
