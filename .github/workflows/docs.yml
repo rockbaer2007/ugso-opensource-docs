@@ -4,11 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'docs/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/docs.yml'
   workflow_dispatch:
 
 permissions:
@@ -37,11 +32,14 @@ jobs:
       - name: Abhängigkeiten installieren
         run: npm ci
 
+      - name: GitHub Pages konfigurieren
+        uses: actions/configure-pages@v5
+
       - name: VitePress bauen
         run: npm run docs:build
 
       - name: GitHub-Pages-Artefakt hochladen
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: docs/.vitepress/dist
 
