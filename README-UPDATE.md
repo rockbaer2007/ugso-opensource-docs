@@ -1,33 +1,19 @@
-# Code-Blog-Update
+# ioBroker-Repository-Link-Update
 
-Dieses Paket erweitert den bestehenden VitePress-Blog um:
+Dieses Update ergänzt die ioBroker-Blockly-Seite um Verweise auf:
 
-- Code-Snippet-Übersicht
-- Home-Assistant-YAML
-- JavaScript
-- Blockly
-- Lovelace und Bubble-Card
-- Code-Beitragsvorlage
-- Zeilennummern in Codeblöcken
-- automatische Syntaxhervorhebung
-- automatische Kopieren-Schaltfläche
+- das offizielle ioBroker.javascript-Repository
+- die deutsche Dokumentation
+- die offizielle Blockly-Dokumentation
 
 ## Installation
 
-ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken.
-
-Vorhandene Dateien überschreiben lassen.
+ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und die vorhandene Datei überschreiben lassen.
 
 Danach:
 
 ```powershell
 git add .
-git commit -m "Expand blog with code snippets"
+git commit -m "Add official ioBroker JavaScript repository links"
 git push
-```
-
-Neue Adresse:
-
-```text
-https://opensource.ugso-software.de/blog/snippets/
 ```
