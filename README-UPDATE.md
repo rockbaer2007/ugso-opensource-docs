@@ -1,24 +1,19 @@
-# Offizielles ioBroker-Blockly-Beispiel
+# Bild- und Rechtehinweis für ioBroker Blockly
 
-Dieses Update ersetzt die bisherigen allgemeinen Codebeispiele auf der ioBroker-Blockly-Seite.
+Dieses Update ergänzt:
 
-Enthalten sind:
-
-- offizielles Einstiegsbeispiel 1
-- offizielles Beispielbild
-- Erklärung der benötigten Blockly-Blöcke
-- Link zum importierbaren Blockly-XML
-- Verlinkung auf Beispiele 2 und 3
-- Verweis auf das offizielle Repository
+- das offizielle Blockly-Beispielbild
+- Verlinkung des Bildes auf die offizielle Dokumentation
+- Bildquellen- und Rechtehinweis auf das `ioBroker.javascript`-Repository
 
 ## Installation
 
-ZIP in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und die vorhandene Datei überschreiben lassen.
+ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und die vorhandene Datei überschreiben lassen.
 
 Danach:
 
 ```powershell
 git add .
-git commit -m "Use official ioBroker Blockly example"
+git commit -m "Add ioBroker image source and rights notice"
 git push
 ```
