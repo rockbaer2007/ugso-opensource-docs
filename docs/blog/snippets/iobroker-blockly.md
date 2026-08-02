@@ -27,13 +27,7 @@ Das offizielle Einstiegsbeispiel zeigt eine typische Bewegungserkennung:
 - Bewegung schaltet das Licht ein.
 - Keine Bewegung schaltet das Licht wieder aus.
 
-[![Offizielles ioBroker-Blockly-Beispiel 1](https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/docs/de/img/getting_started_1_de.png)](https://github.com/ioBroker/ioBroker.javascript/blob/master/docs/de/blockly.md#beispiel-1)
-
-<small>
-Bildquelle und Rechtehinweis: Das Bild stammt aus dem offiziellen
-<a href="https://github.com/ioBroker/ioBroker.javascript" target="_blank" rel="noopener">ioBroker.javascript-Repository</a>.
-Die Rechte und Lizenzbedingungen richten sich nach dem dort veröffentlichten Projekt und dessen Lizenz.
-</small>
+![Offizielles ioBroker-Blockly-Beispiel 1](https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/docs/de/img/getting_started_1_de.png)
 
 ## Benötigte Blockly-Blöcke
 
