@@ -1,15 +1,15 @@
-# Lokales ESPHome-Logo
+# Lokales FHEM-Logo
 
 Dieses Update enthält:
 
-- das lokal gespeicherte ESPHome-Logo
+- das lokal gespeicherte FHEM-Logo
 - eine angepasste Startseite
-- keine externe ESPHome-Bildquelle mehr
+- keine externe FHEM-Bildquelle mehr
 
 ## Datei
 
 ```text
-docs/public/images/brands/esphome.png
+docs/public/images/brands/fhem.png
 ```
 
 ## Installation
@@ -20,6 +20,6 @@ Danach:
 
 ```powershell
 git add .
-git commit -m "Add local ESPHome logo"
+git commit -m "Add local FHEM logo"
 git push
 ```

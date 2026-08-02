@@ -57,7 +57,7 @@ footer: false
   </span>,
   <span title="FHEM">
     <img
-      src="https://fhem.de/www/images/default/fhemicon.png"
+      src="/images/brands/fhem.png"
       alt="FHEM"
       style="width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"
     ><strong>FHEM</strong>
