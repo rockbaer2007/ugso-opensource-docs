@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'UGSo Open Source',
   titleTemplate: ':title | UGSo Open Source',
   description:
-    'Open-Source-Projekte von UGSo Software rund um Home Assistant, ESPHome, ATLAS und Lovelace.',
+    'Open-Source-Projekte und Blog von UGSo Software rund um Home Assistant, ESPHome, ATLAS und Lovelace.',
 
   base: '/',
   cleanUrls: true,
@@ -23,6 +23,7 @@ export default defineConfig({
     nav: [
       { text: 'Startseite', link: '/' },
       { text: 'Projekte', link: '/projects/' },
+      { text: 'Blog', link: '/blog/' },
       { text: 'HADash', link: '/projects/hadash/' },
       { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' },
       { text: 'ATLAS', link: '/projects/atlas/' },
@@ -31,6 +32,19 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/blog/': [
+        {
+          text: 'Blog',
+          collapsed: false,
+          items: [
+            { text: 'Übersicht', link: '/blog/' },
+            { text: 'HADash veröffentlicht', link: '/blog/posts/hadash-preview' },
+            { text: 'ATLAS Entwicklungsstand', link: '/blog/posts/atlas-runtime-foundation' },
+            { text: 'Beitragsvorlage', link: '/blog/beitragsvorlage' }
+          ]
+        }
+      ],
+
       '/projects/hadash/': [
         {
           text: 'HADash',
@@ -96,8 +110,8 @@ export default defineConfig({
     },
 
     docFooter: {
-      prev: 'Vorherige Seite',
-      next: 'Nächste Seite'
+      prev: 'Vorheriger Beitrag',
+      next: 'Nächster Beitrag'
     }
   }
 })

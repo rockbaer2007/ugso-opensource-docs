@@ -1,21 +1,29 @@
-# ATLAS-Dokumentationsupdate
+# Blog-Update für UGSo Open Source Docs
 
-Dieses Paket direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken.
+## Enthalten
 
-Vorhandene Dateien überschreiben lassen.
+- Blog-Navigation
+- Blogübersicht
+- zwei erste Beiträge
+- Beitragsvorlage
+- Blog-CSS
+- vollständige `config.mts`
+- aktualisierte Theme-Einbindung
 
-Danach ausführen:
+## Installation
+
+ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und vorhandene Dateien überschreiben lassen.
+
+Danach:
 
 ```powershell
 git add .
-git commit -m "Add ATLAS project documentation"
+git commit -m "Add UGSo Open Source blog"
 git push
 ```
 
-GitHub Pages baut die Seite anschließend automatisch neu.
-
-Neue Adresse:
+Der Blog ist anschließend erreichbar unter:
 
 ```text
-https://opensource.ugso-software.de/projects/atlas/
+https://opensource.ugso-software.de/blog/
 ```
