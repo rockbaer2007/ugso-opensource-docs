@@ -1,203 +1,107 @@
 ---
 title: ioBroker Blockly
-description: Blockly-Beispiele für den ioBroker-JavaScript-Adapter mit importierbarem XML und erzeugtem JavaScript.
+description: Einführung in Blockly des ioBroker-JavaScript-Adapters mit einem offiziellen Einstiegsbeispiel.
 ---
 
 # ioBroker Blockly
 
-Hier werden Blockly-Skripte für den **ioBroker-JavaScript-Adapter** veröffentlicht.
+Blockly ist der grafische Skripteditor des **ioBroker-JavaScript-Adapters**. Automationen werden aus Blöcken zusammengesetzt, ohne dass der JavaScript-Code vollständig von Hand geschrieben werden muss.
 
-Zu jedem Beispiel können folgende Inhalte gezeigt werden:
-
-- Beschreibung der Aufgabe
-- benötigte Objekt-IDs
-- Screenshot des Blockly-Aufbaus
-- importierbarer Blockly-XML-Code
-- erzeugtes JavaScript
-- Hinweise zur Anpassung
-
-::: info
-Blockly ist im ioBroker-JavaScript-Adapter die grafische Alternative zum direkten Schreiben eines JavaScript-Skripts. Für den Austausch ist besonders der exportierte Blockly-XML-Code geeignet.
+::: info Offizielle Dokumentation
+Diese Seite gibt nur einen kurzen Einstieg. Die vollständige Beschreibung aller Blöcke und weitere Beispiele befinden sich in der offiziellen ioBroker-Dokumentation.
 :::
 
 ## Offizielle Quellen
 
-Die vollständige und aktuelle Dokumentation befindet sich im offiziellen Repository des ioBroker-JavaScript-Adapters:
+- [ioBroker.javascript – offizielles Repository](https://github.com/ioBroker/ioBroker.javascript)
+- [Deutsche Dokumentation des JavaScript-Adapters](https://github.com/ioBroker/ioBroker.javascript/tree/master/docs/de)
+- [Vollständige Blockly-Dokumentation](https://github.com/ioBroker/ioBroker.javascript/blob/master/docs/de/blockly.md)
 
-- [ioBroker.javascript – offizielles GitHub-Repository](https://github.com/ioBroker/ioBroker.javascript)
-- [Deutsche Dokumentation](https://github.com/ioBroker/ioBroker.javascript/tree/master/docs/de)
-- [Offizielle Blockly-Dokumentation](https://github.com/ioBroker/ioBroker.javascript/blob/master/docs/de/blockly.md)
+## Beispiel 1: Datenpunkt abhängig von einem anderen Datenpunkt schalten
 
-Die Beispiele auf dieser Seite sind Ergänzungen aus der Praxis. Bei Fragen zu verfügbaren Blöcken, Adapterfunktionen oder Änderungen ist das offizielle Repository die maßgebliche Quelle.
+Das offizielle Einstiegsbeispiel zeigt eine typische Bewegungserkennung:
 
-## Datenpunkt bei Änderung überwachen
+- Ein Bewegungs-Datenpunkt dient als Auslöser.
+- Bei einer Zustandsänderung wird ein Licht-Datenpunkt gesteuert.
+- Der aktuelle Wert des Bewegungsmelders wird an den Licht-Datenpunkt weitergegeben.
+- Bewegung schaltet das Licht ein.
+- Keine Bewegung schaltet das Licht wieder aus.
 
-### Blockly-Aufbau
+[![Offizielles ioBroker-Blockly-Beispiel 1](https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/docs/de/img/getting_started_1_de.png)](https://github.com/ioBroker/ioBroker.javascript/blob/master/docs/de/blockly.md#beispiel-1)
+
+<small>
+Bildquelle und Rechtehinweis: Das Bild stammt aus dem offiziellen
+<a href="https://github.com/ioBroker/ioBroker.javascript" target="_blank" rel="noopener">ioBroker.javascript-Repository</a>.
+Die Rechte und Lizenzbedingungen richten sich nach dem dort veröffentlichten Projekt und dessen Lizenz.
+</small>
+
+## Benötigte Blockly-Blöcke
+
+### 1. Trigger
+
+Aus dem Bereich **Trigger** wird der Block **Falls Objekt** verwendet.
+
+Dort wird der Datenpunkt des Bewegungsmelders ausgewählt.
+
+### 2. Datenpunkt steuern
+
+Aus dem Bereich **System** wird der Block **Steuere** eingefügt.
+
+Als Ziel wird der Datenpunkt des Lichts ausgewählt.
+
+### 3. Wert übernehmen
+
+In den Steuere-Block wird **Wert von Objekt-ID** eingesetzt.
+
+Dort wird erneut der Bewegungs-Datenpunkt ausgewählt. Dadurch übernimmt das Licht den aktuellen Wahr/Falsch-Zustand des Bewegungsmelders.
+
+## Vereinfachter Ablauf
 
 ```text
-Trigger:
-  Objekt-ID: sensor.0.beispiel.temperatur
-  Änderung: wurde geändert
-
-Dann:
-  Log-Ausgabe mit dem neuen Wert
+Falls sich der Bewegungsmelder ändert
+    setze den Zustand des Lichts
+    auf den aktuellen Wert des Bewegungsmelders
 ```
 
-### Erzeugtes JavaScript
+## Blockly importieren
 
-```javascript
-on(
-  {
-    id: 'sensor.0.beispiel.temperatur',
-    change: 'ne'
-  },
-  async (obj) => {
-    const value = obj.state.val;
-    console.log(`Neue Temperatur: ${value}`);
-  }
-);
-```
+Den vollständigen importierbaren XML-Code stellt die offizielle Dokumentation direkt unter **Beispiel 1** bereit:
 
-## Blockly-XML veröffentlichen
+[Beispiel 1 mit Blockly-XML öffnen](https://github.com/ioBroker/ioBroker.javascript/blob/master/docs/de/blockly.md#beispiel-1)
 
-Für Besucher ist der exportierte XML-Code besonders nützlich, da er wieder in Blockly importiert werden kann.
+Dort kann der XML-Code kopiert und im Blockly-Editor über die Importfunktion eingefügt werden.
 
-````md
-```xml
-<xml xmlns="https://developers.google.com/blockly/xml">
-  <!-- exportierter ioBroker-Blockly-Code -->
-</xml>
-```
-````
+## Weitere offizielle Beispiele
 
-## Schalter abhängig von einem Wert setzen
+Die offizielle Dokumentation enthält zusätzlich:
 
-Wenn die Temperatur größer als 25 °C ist, wird ein Schalter eingeschaltet. Andernfalls wird er ausgeschaltet.
+- **Beispiel 2:** Licht bei Bewegung einschalten und nach zehn Minuten ohne weitere Bewegung wieder ausschalten.
+- **Beispiel 3:** E-Mail senden, wenn die Außentemperatur einen Grenzwert überschreitet.
 
-```javascript
-on(
-  {
-    id: 'sensor.0.beispiel.temperatur',
-    change: 'ne'
-  },
-  async (obj) => {
-    const temperatur = Number(obj.state.val);
+[Alle offiziellen Blockly-Beispiele ansehen](https://github.com/ioBroker/ioBroker.javascript/blob/master/docs/de/blockly.md#getting-started)
 
-    if (temperatur > 25) {
-      setState('javascript.0.beispiel.luefter', true);
-    } else {
-      setState('javascript.0.beispiel.luefter', false);
-    }
-  }
-);
-```
+## Eigene Blockly-Beiträge im Blog
 
-## Datenpunkt lesen
+Für eigene Beispiele empfiehlt sich folgender Aufbau:
 
-```javascript
-const value = getState('sensor.0.beispiel.temperatur').val;
+1. Aufgabe beschreiben
+2. benötigte Objekt-IDs nennen
+3. Screenshot des Blockly-Aufbaus einfügen
+4. exportierten Blockly-XML-Code bereitstellen
+5. Anpassungen und Voraussetzungen erklären
 
-console.log(`Aktueller Wert: ${value}`);
-```
-
-## Datenpunkt schreiben
-
-```javascript
-setState('javascript.0.beispiel.status', 'Bereit');
-```
-
-Mit Bestätigung:
-
-```javascript
-setState('javascript.0.beispiel.status', 'Bereit', true);
-```
-
-## Verzögert schalten
-
-```javascript
-setState('switch.0.beispiel.relay', true);
-
-setTimeout(() => {
-  setState('switch.0.beispiel.relay', false);
-}, 30 * 1000);
-```
-
-## Zeitplan
-
-### Jeden Tag um 09:00 Uhr
-
-```javascript
-schedule('0 9 * * *', async () => {
-  setState('javascript.0.beispiel.tagesaktion', true);
-});
-```
-
-### Alle fünf Minuten
-
-```javascript
-schedule('*/5 * * * *', async () => {
-  console.log('Der Zeitplan wurde ausgeführt.');
-});
-```
-
-## Mehrere Bedingungen
-
-```javascript
-const freigabe =
-  getState('javascript.0.beispiel.freigabe').val === true;
-
-const leistung =
-  Number(getState('sensor.0.beispiel.solarleistung').val);
-
-if (freigabe && leistung > 500) {
-  setState('switch.0.beispiel.pumpe', true);
-} else {
-  setState('switch.0.beispiel.pumpe', false);
-}
-```
-
-## Eigene Datenpunkte anlegen
-
-```javascript
-createState(
-  'javascript.0.beispiel.status',
-  'Unbekannt',
-  {
-    name: 'Beispielstatus',
-    type: 'string',
-    role: 'text',
-    read: true,
-    write: true
-  }
-);
-```
-
-## Nachricht an einen Adapter senden
-
-```javascript
-sendTo(
-  'telegram.0',
-  'send',
-  {
-    text: 'Die Automation wurde ausgeführt.'
-  }
-);
-```
-
-## Veröffentlichung mit Screenshot
-
-Lege Screenshots unter diesem Pfad ab:
+Screenshots werden im Dokumentationsprojekt hier abgelegt:
 
 ```text
 docs/public/images/blog/
 ```
 
-Im Beitrag bindest du das Bild so ein:
+Einbindung im Beitrag:
 
 ```md
 ![ioBroker Blockly](/images/blog/mein-blockly.png)
 ```
 
 ::: warning
-Die gezeigten Objekt-IDs sind Beispiele. Vor dem Einsatz müssen sie durch die tatsächlichen IDs des eigenen ioBroker-Systems ersetzt werden.
+Objekt-IDs aus Beispielen müssen immer an das eigene ioBroker-System angepasst werden.
 :::

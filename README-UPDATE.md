@@ -1,10 +1,10 @@
-# ioBroker-Repository-Link-Update
+# Bild- und Rechtehinweis für ioBroker Blockly
 
-Dieses Update ergänzt die ioBroker-Blockly-Seite um Verweise auf:
+Dieses Update ergänzt:
 
-- das offizielle ioBroker.javascript-Repository
-- die deutsche Dokumentation
-- die offizielle Blockly-Dokumentation
+- das offizielle Blockly-Beispielbild
+- Verlinkung des Bildes auf die offizielle Dokumentation
+- Bildquellen- und Rechtehinweis auf das `ioBroker.javascript`-Repository
 
 ## Installation
 
@@ -14,6 +14,6 @@ Danach:
 
 ```powershell
 git add .
-git commit -m "Add official ioBroker JavaScript repository links"
+git commit -m "Add ioBroker image source and rights notice"
 git push
 ```
