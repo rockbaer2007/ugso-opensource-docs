@@ -1,19 +1,19 @@
-# Bild- und Rechtehinweis für ioBroker Blockly
+# Menütext für ioBroker anpassen
 
-Dieses Update ergänzt:
+Dieses Update ändert den Menütext in Navigation und Sidebar auf:
 
-- das offizielle Blockly-Beispielbild
-- Verlinkung des Bildes auf die offizielle Dokumentation
-- Bildquellen- und Rechtehinweis auf das `ioBroker.javascript`-Repository
+```text
+Blockly / JavaScript (ioBroker)
+```
 
 ## Installation
 
-ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und die vorhandene Datei überschreiben lassen.
+ZIP in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und die vorhandene `config.mts` überschreiben lassen.
 
 Danach:
 
 ```powershell
 git add .
-git commit -m "Add ioBroker image source and rights notice"
+git commit -m "Rename ioBroker Blockly menu entry"
 git push
 ```

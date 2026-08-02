@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'UGSo Open Source',
   titleTemplate: ':title | UGSo Open Source',
   description:
-    'Open-Source-Projekte, Code-Snippets und Blog von UGSo Software rund um Home Assistant, ESPHome, ATLAS, JavaScript und Lovelace.',
+    'Open-Source-Projekte, Code-Snippets und Blog von UGSo Software rund um Home Assistant, ioBroker Blockly, ESPHome, ATLAS und Lovelace.',
 
   base: '/',
   cleanUrls: true,
@@ -32,6 +32,7 @@ export default defineConfig({
         items: [
           { text: 'Blog-Übersicht', link: '/blog/' },
           { text: 'Code-Snippets', link: '/blog/snippets/' },
+          { text: 'Blockly / JavaScript (ioBroker)', link: '/blog/snippets/iobroker-blockly' },
           { text: 'Neuer Beitrag', link: '/blog/beitragsvorlage' }
         ]
       },
@@ -67,7 +68,7 @@ export default defineConfig({
           items: [
             { text: 'Home Assistant YAML', link: '/blog/snippets/home-assistant-yaml' },
             { text: 'JavaScript', link: '/blog/snippets/javascript' },
-            { text: 'Blockly', link: '/blog/snippets/blockly' },
+            { text: 'Blockly / JavaScript (ioBroker)', link: '/blog/snippets/iobroker-blockly' },
             { text: 'Lovelace & Bubble-Card', link: '/blog/snippets/lovelace' }
           ]
         }
