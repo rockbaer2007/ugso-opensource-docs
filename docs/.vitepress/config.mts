@@ -7,9 +7,7 @@ export default defineConfig({
   description:
     'Open-Source-Projekte von UGSo Software rund um Home Assistant, ESPHome, ATLAS und Lovelace.',
 
-  // Eigene Domain: https://opensource.ugso-software.de/
   base: '/',
-
   cleanUrls: true,
   lastUpdated: true,
 
@@ -26,6 +24,7 @@ export default defineConfig({
       { text: 'Startseite', link: '/' },
       { text: 'Projekte', link: '/projects/' },
       { text: 'HADash', link: '/projects/hadash/' },
+      { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' },
       { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
       { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
     ],
@@ -44,6 +43,19 @@ export default defineConfig({
             { text: 'Portable Nutzung', link: '/projects/hadash/portable-nutzung' }
           ]
         }
+      ],
+      '/projects/ultimate-timer/': [
+        {
+          text: 'Ultimate Timer',
+          collapsed: false,
+          items: [
+            { text: 'Übersicht', link: '/projects/ultimate-timer/' },
+            { text: 'Installation', link: '/projects/ultimate-timer/installation' },
+            { text: 'Konfiguration', link: '/projects/ultimate-timer/konfiguration' },
+            { text: 'Funktionsweise', link: '/projects/ultimate-timer/funktionsweise' },
+            { text: 'Beispiele', link: '/projects/ultimate-timer/beispiele' }
+          ]
+        }
       ]
     },
 
@@ -51,9 +63,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/rockbaer2007' }
     ],
 
-    search: {
-      provider: 'local'
-    },
+    search: { provider: 'local' },
 
     footer: {
       message:
@@ -61,17 +71,8 @@ export default defineConfig({
       copyright: '© 2026 UGSo Software'
     },
 
-    outline: {
-      label: 'Auf dieser Seite'
-    },
-
-    lastUpdated: {
-      text: 'Zuletzt aktualisiert'
-    },
-
-    docFooter: {
-      prev: 'Vorherige Seite',
-      next: 'Nächste Seite'
-    }
+    outline: { label: 'Auf dieser Seite' },
+    lastUpdated: { text: 'Zuletzt aktualisiert' },
+    docFooter: { prev: 'Vorherige Seite', next: 'Nächste Seite' }
   }
 })
