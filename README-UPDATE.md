@@ -1,19 +1,23 @@
-# Menütext für ioBroker anpassen
+# Startseiten-Update mit Icons
 
-Dieses Update ändert den Menütext in Navigation und Sidebar auf:
+Dieses Update ändert den Einleitungstext auf der Startseite und ergänzt Icons vor den genannten Bereichen:
 
-```text
-Blockly / JavaScript (ioBroker)
-```
+- Home Assistant
+- ESPHome
+- ATLAS
+- Lovelace-Komponenten
+- ioBroker
+- FHEM
+- Arduino
 
 ## Installation
 
-ZIP in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und die vorhandene `config.mts` überschreiben lassen.
+ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und die vorhandene Datei überschreiben lassen.
 
 Danach:
 
 ```powershell
 git add .
-git commit -m "Rename ioBroker Blockly menu entry"
+git commit -m "Update homepage project areas and icons"
 git push
 ```

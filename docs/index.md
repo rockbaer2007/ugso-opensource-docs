@@ -23,12 +23,17 @@ footer: false
 <p class="ugso-intro">
   Hier entsteht die neue Open-Source-Plattform von
   <strong>UGSo Software</strong>.<br><br>
+
   Hier finden Sie unsere Open-Source-Projekte rund um
-  <strong>Home Assistant</strong>,
-  <strong>ESPHome</strong>,
-  <strong>ATLAS</strong>,
-  <strong>Lovelace-Komponenten</strong>
-  sowie weitere Softwareprojekte.
+  <span title="Home Assistant">🏠 <strong>Home Assistant</strong></span>,
+  <span title="ESPHome">🔌 <strong>ESPHome</strong></span>,
+  <span title="ATLAS">🧱 <strong>ATLAS</strong></span>,
+  <span title="Lovelace-Komponenten">🎛️ <strong>Lovelace-Komponenten</strong></span>
+  sowie weitere Softwareprojekte aus den Bereichen
+  <span title="ioBroker">🧩 <strong>ioBroker</strong></span>,
+  <span title="FHEM">🏡 <strong>FHEM</strong></span>
+  und
+  <span title="Arduino">🤖 <strong>Arduino</strong></span>.
 </p>
 
 <div class="ugso-actions">
