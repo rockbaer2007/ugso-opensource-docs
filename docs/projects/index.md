@@ -20,6 +20,18 @@ Ein leistungsstarker Hybrid-Timer-Blueprint für Home Assistant mit zuverlässig
 - [Ultimate-Timer-Dokumentation öffnen](./ultimate-timer/)
 - [Repository auf GitHub öffnen](https://github.com/rockbaer2007/ha-ultimate-timer-blueprint)
 
+## ATLAS
+
+**ATLAS – Modular Application Framework**
+
+ATLAS ist ein modulares TypeScript-Framework für wiederverwendbare Anwendungen, Plugins und Home-Assistant-nahe Werkzeuge.
+
+Das Projekt befindet sich aktuell in aktiver Entwicklung. Der Schwerpunkt liegt auf der Runtime Foundation, Events, Services und Dependency Injection.
+
+- [ATLAS-Projektseite öffnen](./atlas/)
+- [Architektur ansehen](./atlas/uebersicht)
+- [Entwicklungsstand ansehen](./atlas/entwicklungsstand)
+
 ## Weitere Projekte
 
-Weitere Dokumentationen zu ESPHome, ATLAS und Lovelace-Komponenten folgen.
+Weitere Dokumentationen zu ESPHome, Lovelace-Komponenten und dem geplanten UGSo Thread Monitor folgen.

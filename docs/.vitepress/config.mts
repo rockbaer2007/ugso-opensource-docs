@@ -25,6 +25,7 @@ export default defineConfig({
       { text: 'Projekte', link: '/projects/' },
       { text: 'HADash', link: '/projects/hadash/' },
       { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' },
+      { text: 'ATLAS', link: '/projects/atlas/' },
       { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
       { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
     ],
@@ -44,6 +45,7 @@ export default defineConfig({
           ]
         }
       ],
+
       '/projects/ultimate-timer/': [
         {
           text: 'Ultimate Timer',
@@ -56,6 +58,18 @@ export default defineConfig({
             { text: 'Beispiele', link: '/projects/ultimate-timer/beispiele' }
           ]
         }
+      ],
+
+      '/projects/atlas/': [
+        {
+          text: 'ATLAS',
+          collapsed: false,
+          items: [
+            { text: 'Übersicht', link: '/projects/atlas/' },
+            { text: 'Architektur', link: '/projects/atlas/uebersicht' },
+            { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' }
+          ]
+        }
       ]
     },
 
@@ -63,7 +77,9 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/rockbaer2007' }
     ],
 
-    search: { provider: 'local' },
+    search: {
+      provider: 'local'
+    },
 
     footer: {
       message:
@@ -71,8 +87,17 @@ export default defineConfig({
       copyright: '© 2026 UGSo Software'
     },
 
-    outline: { label: 'Auf dieser Seite' },
-    lastUpdated: { text: 'Zuletzt aktualisiert' },
-    docFooter: { prev: 'Vorherige Seite', next: 'Nächste Seite' }
+    outline: {
+      label: 'Auf dieser Seite'
+    },
+
+    lastUpdated: {
+      text: 'Zuletzt aktualisiert'
+    },
+
+    docFooter: {
+      prev: 'Vorherige Seite',
+      next: 'Nächste Seite'
+    }
   }
 })

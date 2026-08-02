@@ -1,20 +1,21 @@
-# Ultimate Timer – Dokumentationsupdate
+# ATLAS-Dokumentationsupdate
 
-Dieses Paket wird in das Hauptverzeichnis von `ugso-opensource-docs` entpackt.
+Dieses Paket direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken.
 
-Es ergänzt:
+Vorhandene Dateien überschreiben lassen.
 
-- Navigationseintrag `Ultimate Timer`
-- Projektübersicht
-- fünf Dokumentationsseiten
-- Demo- und Vorschaubilder
-
-Danach:
+Danach ausführen:
 
 ```powershell
 git add .
-git commit -m "Add Ultimate Timer documentation"
+git commit -m "Add ATLAS project documentation"
 git push
 ```
 
-GitHub Pages wird anschließend automatisch neu gebaut.
+GitHub Pages baut die Seite anschließend automatisch neu.
+
+Neue Adresse:
+
+```text
+https://opensource.ugso-software.de/projects/atlas/
+```
