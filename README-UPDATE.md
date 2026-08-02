@@ -1,23 +1,25 @@
-# Startseiten-Update mit Icons
+# Lokales ESPHome-Logo
 
-Dieses Update ändert den Einleitungstext auf der Startseite und ergänzt Icons vor den genannten Bereichen:
+Dieses Update enthält:
 
-- Home Assistant
-- ESPHome
-- ATLAS
-- Lovelace-Komponenten
-- ioBroker
-- FHEM
-- Arduino
+- das lokal gespeicherte ESPHome-Logo
+- eine angepasste Startseite
+- keine externe ESPHome-Bildquelle mehr
+
+## Datei
+
+```text
+docs/public/images/brands/esphome.png
+```
 
 ## Installation
 
-ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und die vorhandene Datei überschreiben lassen.
+ZIP direkt in das Hauptverzeichnis von `ugso-opensource-docs` entpacken und vorhandene Dateien überschreiben lassen.
 
 Danach:
 
 ```powershell
 git add .
-git commit -m "Update homepage project areas and icons"
+git commit -m "Add local ESPHome logo"
 git push
 ```

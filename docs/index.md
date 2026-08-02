@@ -25,13 +25,43 @@ footer: false
   <strong>UGSo Software</strong>.<br><br>
 
   Hier finden Sie unsere Open-Source-Projekte rund um
-  <span title="Home Assistant">🏠 <strong>Home Assistant</strong></span>,
-  <span title="ESPHome">🔌 <strong>ESPHome</strong></span>,
-  <span title="ATLAS">🧱 <strong>ATLAS</strong></span>,
+  <span title="Home Assistant">
+    <img
+      src="https://www.home-assistant.io/images/favicon-192x192-full.png"
+      alt="Home Assistant"
+      style="width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"
+    ><strong>Home Assistant</strong>
+  </span>,
+  <span title="ESPHome">
+    <img
+      src="/images/brands/esphome.png"
+      alt="ESPHome"
+      style="width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"
+    ><strong>ESPHome</strong>
+  </span>,
+  <span title="ATLAS">
+    <img
+      src="/images/brands/atlas.svg"
+      alt="ATLAS"
+      style="width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"
+    ><strong>ATLAS</strong>
+  </span>,
   <span title="Lovelace-Komponenten">🎛️ <strong>Lovelace-Komponenten</strong></span>
   sowie weitere Softwareprojekte aus den Bereichen
-  <span title="ioBroker">🧩 <strong>ioBroker</strong></span>,
-  <span title="FHEM">🏡 <strong>FHEM</strong></span>
+  <span title="ioBroker">
+    <img
+      src="/images/brands/iobroker.png"
+      alt="ioBroker"
+      style="width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"
+    ><strong>ioBroker</strong>
+  </span>,
+  <span title="FHEM">
+    <img
+      src="https://fhem.de/www/images/default/fhemicon.png"
+      alt="FHEM"
+      style="width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"
+    ><strong>FHEM</strong>
+  </span>
   und
   <span title="Arduino">🤖 <strong>Arduino</strong></span>.
 </p>
