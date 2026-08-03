@@ -164,6 +164,12 @@ the final drag-and-drop surface yet. Added fields are listed with a remove
 action so the preview can be adjusted field by field, making it the first
 visible step in that direction.
 
+The import path now also accepts nested Home Assistant stack cards. A real-world
+`vertical-stack` card can contain `horizontal-stack` rows and regular cards;
+ATLAS keeps the supported stack structure and extracts the involved entities.
+Advanced Bubble Card details such as `modules`, `styles`, `grid_options`,
+sliders and sub-buttons are planned as a later preservation layer.
+
 ## Planned Card Layout Editor
 
 ATLAS is intended to grow into a visual editor where users can build a Home

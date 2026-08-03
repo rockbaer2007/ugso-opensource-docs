@@ -168,6 +168,13 @@ aufgelistet, damit die Vorschau gezielt angepasst werden kann. Das ist noch
 keine finale Drag-and-drop-Oberfläche, aber der erste sichtbare Schritt in diese
 Richtung.
 
+Der Importpfad akzeptiert jetzt auch verschachtelte Home-Assistant-Stacks. Eine
+reale `vertical-stack`-Karte kann also `horizontal-stack`-Zeilen und einzelne
+Karten enthalten; ATLAS behält die unterstützte Stack-Struktur und extrahiert
+die enthaltenen Entitäten. Erweiterte Bubble-Card-Details wie `modules`,
+`styles`, `grid_options`, Slider und Sub-Buttons sind als spätere
+Erhaltungsschicht geplant.
+
 ## Geplanter Card-Layout-Editor
 
 ATLAS soll sich in Richtung eines visuellen Editors entwickeln, mit dem Nutzer
