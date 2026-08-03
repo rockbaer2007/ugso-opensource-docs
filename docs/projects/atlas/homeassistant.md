@@ -271,9 +271,9 @@ Palette-Scan ausgeblendet.
 Ein Reset-Button zeigt wieder die vollständige Liste. Die Palette selbst ist
 scrollbar und nutzt kompakte zweispaltige Template-Zeilen: Card-Name und
 Favoritenstatus stehen links, Layout-Details und Größensteuerung rechts.
-Ausgewählte Editorfelder können über Breite und Höhe in 1er-Schritten bis
-5x5 geändert werden; beim Hinzufügen bleibt die aktuelle Template-Größe der
-Standard.
+Ausgewählte Editorfelder können mit der Maus oder über Breite und Höhe in
+1er-Schritten verändert werden, bis zu fünf Rasterzellen über die
+Template-Standardgröße hinaus.
 
 ## Externe Referenz: Home Assistant Card Builder
 

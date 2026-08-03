@@ -259,9 +259,9 @@ helpers, icon packs and known non-card resources are hidden during the palette
 scan.
 The palette itself is scrollable and uses compact two-column template rows:
 card name and favorite state stay on the left, while layout details and sizing
-controls sit on the right. Selected editor fields can be resized through the
-Width and Height controls in one-cell steps up to 5x5; the current template size
-remains the default when a field is added.
+controls sit on the right. Selected editor fields can be resized with the mouse
+or through the Width and Height controls in one-cell steps, up to five grid
+cells beyond their template default size.
 
 ## External Reference: Home Assistant Card Builder
 
