@@ -219,8 +219,10 @@ The surface now uses a larger, visible 12-column grid that is closer to Home
 Assistant. Moving existing fields snaps against the real inner grid and
 preserves the point where the tile was grabbed, so fields can move upward
 without sideways jumps. The visible grid now sits on the same inner surface as
-the draggable tiles, with a smaller tile gap for closer vertical stacking. Each
-block in the left palette can define its own columns from 1 to 12 or `full`,
+the draggable tiles, with a smaller tile gap for closer vertical stacking.
+Focused tiles can also be nudged by one grid cell with the arrow keys; while
+edit mode is active, Shift plus an arrow resizes the selected field by one cell.
+Each block in the left palette can define its own columns from 1 to 12 or `full`,
 plus rows `auto` or 1 to 8. Entity List, State Button, Switch Button,
 `horizontal-stack` and `vertical-stack` start with the same default footprint;
 horizontal-stack drops can grow wider when multiple stack entities are

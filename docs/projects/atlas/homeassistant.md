@@ -227,7 +227,10 @@ das näher an Home Assistant erinnert. Beim Verschieben vorhandener Felder nutzt
 ATLAS das echte innere Raster und erhält den Punkt, an dem die Kachel gegriffen
 wurde; dadurch lassen sich Felder nach oben ziehen, ohne seitlich zu springen.
 Das sichtbare Raster liegt auf derselben inneren Fläche wie die Kacheln, mit
-kleinerem Kachelabstand für dichteres Stapeln. Jeder Baustein in der linken
+kleinerem Kachelabstand für dichteres Stapeln. Fokussierte Kacheln lassen sich
+zusätzlich per Pfeiltasten um je eine Rasterzelle verschieben; im
+Bearbeiten-Modus ändert `Shift` plus Pfeiltaste die Größe des ausgewählten
+Feldes in 1er-Schritten. Jeder Baustein in der linken
 Palette kann eigene Spalten von 1 bis 12 oder `full` sowie Zeilen `auto` oder
 1 bis 8 vorgeben. Entity List, State Button, Switch Button, `horizontal-stack` und
 `vertical-stack` starten mit derselben Standardfläche; Horizontal-Stacks können
