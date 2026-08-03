@@ -155,6 +155,11 @@ die Expert-Fläche erzeugen. Die Felder werden im Raster platziert, enthalten
 aber zunächst leere Entitäten und bleiben review-pflichtig. So kann die
 Oberfläche eine Umwandlung zeigen, ohne sie still zu importieren.
 
+Die Status-Demo nutzt diese Prüfung inzwischen direkt vor dem HA-Card-Import.
+Unterstützte ATLAS-Packages und rohe Home-Assistant-Cards werden importiert,
+externe Card-Builder-ähnliche Dateien zeigen eine Review-Ausgabe, und unbekannte
+Artefakte werden vor dem Parsen abgelehnt.
+
 ## Geplanter Card-Layout-Editor
 
 ATLAS soll sich in Richtung eines visuellen Editors entwickeln, mit dem Nutzer

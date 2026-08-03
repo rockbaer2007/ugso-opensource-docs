@@ -152,6 +152,11 @@ expert surface. The fields are placed on the grid, keep empty entities at first
 and remain review-required. This lets the UI show a conversion result without
 silently importing it.
 
+The status demo now uses this inspection before HA-card imports. Supported
+ATLAS packages and raw Home Assistant cards are imported, external
+card-builder-shaped files show a review output, and unknown artifacts are
+rejected before parsing.
+
 ## Planned Card Layout Editor
 
 ATLAS is intended to grow into a visual editor where users can build a Home
