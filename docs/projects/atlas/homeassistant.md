@@ -223,9 +223,13 @@ bereits eine linke Palette mit Simple/Expert-Umschaltung geworden: Der Nutzer
 kann einen Baustein anklicken oder per Drag-and-drop in die Editor-Fläche
 ziehen. Hinzugefügte Felder erscheinen als verschiebbare Kacheln auf der
 Rasterfläche. Die Fläche nutzt jetzt ein größeres, sichtbares 12-Spalten-Raster,
-das näher an Home Assistant erinnert. Jeder Baustein in der linken Palette kann
-eigene Spalten von 1 bis 12 oder `full` sowie Zeilen `auto` oder 1 bis 8
-vorgeben. Entity List, State Button, Switch Button, `horizontal-stack` und
+das näher an Home Assistant erinnert. Beim Verschieben vorhandener Felder nutzt
+ATLAS das echte innere Raster und erhält den Punkt, an dem die Kachel gegriffen
+wurde; dadurch lassen sich Felder nach oben ziehen, ohne seitlich zu springen.
+Das sichtbare Raster liegt auf derselben inneren Fläche wie die Kacheln, mit
+kleinerem Kachelabstand für dichteres Stapeln. Jeder Baustein in der linken
+Palette kann eigene Spalten von 1 bis 12 oder `full` sowie Zeilen `auto` oder
+1 bis 8 vorgeben. Entity List, State Button, Switch Button, `horizontal-stack` und
 `vertical-stack` starten mit derselben Standardfläche; Horizontal-Stacks können
 bei mehreren ausgewählten Entitäten entsprechend breiter werden. Die Palette
 kann geladene Lovelace-Ressourcen nutzen, um Custom-Card-Familien als

@@ -216,11 +216,15 @@ blocks such as Entity List, State Button, Switch Button, `vertical-stack` and
 Simple/Expert mode switch: the user can click a building block or drag it into
 the editor surface. Added fields appear as movable tiles on the grid surface.
 The surface now uses a larger, visible 12-column grid that is closer to Home
-Assistant. Each block in the left palette can define its own columns from 1 to
-12 or `full`, plus rows `auto` or 1 to 8. Entity List, State Button, Switch
-Button, `horizontal-stack` and `vertical-stack` start with the same default
-footprint; horizontal-stack drops can grow wider when multiple stack entities
-are selected. The palette can use loaded Lovelace resources to mark custom card
+Assistant. Moving existing fields snaps against the real inner grid and
+preserves the point where the tile was grabbed, so fields can move upward
+without sideways jumps. The visible grid now sits on the same inner surface as
+the draggable tiles, with a smaller tile gap for closer vertical stacking. Each
+block in the left palette can define its own columns from 1 to 12 or `full`,
+plus rows `auto` or 1 to 8. Entity List, State Button, Switch Button,
+`horizontal-stack` and `vertical-stack` start with the same default footprint;
+horizontal-stack drops can grow wider when multiple stack entities are
+selected. The palette can use loaded Lovelace resources to mark custom card
 families as installed, missing or unchecked. When a block is placed on the
 expert surface, ATLAS clamps column, row and size to the allowed grid bounds so
 elements cannot be dropped outside the valid area.
