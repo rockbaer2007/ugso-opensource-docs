@@ -218,9 +218,11 @@ als sicheren Fallback.
 In der Demo blendet Expert den einfachen Card-Layout-Wähler und den normalen
 HA-Card-Code aus. Export, Package-Export, Kopieren und Ressourcen-Kopieren
 verwenden dann den Expert-HA-Card-Code aus der Editor-Fläche.
-Auch `Panel group`, `Group name` und `Card target` werden im Expert-Modus
-ausgeblendet, weil die Editor-Fläche dort die zu exportierende Card-Struktur
-direkt bestimmt.
+Auch `Panel group`, `Group name`, `Card target`, `Card layout` sowie die
+Gruppen-Aktionsbuttons werden im Expert-Modus ausgeblendet, weil die
+Editor-Fläche dort die zu exportierende Card-Struktur direkt bestimmt.
+Expert nutzt dafür ein eigenes Feld `Expert card name` für Kopieren, Export und
+Paket-Dateinamen.
 
 Für die Bedienung ist eine seitliche Template-Palette vorgesehen. Dort können
 visuelle Bausteine wie Entity List, State Button, Switch Button,

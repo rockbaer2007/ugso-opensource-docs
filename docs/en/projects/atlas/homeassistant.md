@@ -212,9 +212,10 @@ contain populated fields yet, ATLAS falls back to the safe demo entities.
 In the demo UI, Expert mode hides the simple card-layout selector and the
 regular HA card code block. Export, package export, copy and resource-copy
 actions then use the Expert HA card code from the editor surface.
-`Panel group`, `Group name` and `Card target` are hidden in Expert mode as well
-because the editor surface directly defines the card structure that will be
-exported.
+`Panel group`, `Group name`, `Card target`, `Card layout` and the group action
+buttons are hidden in Expert mode as well because the editor surface directly
+defines the card structure that will be exported. Expert mode uses its own
+`Expert card name` field for copy, export and package filenames.
 
 For the UI, a sidebar template palette is planned. It can offer visual building
 blocks such as Entity List, State Button, Switch Button, `vertical-stack` and
