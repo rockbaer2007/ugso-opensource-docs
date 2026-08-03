@@ -176,6 +176,15 @@ independent contracts and UI models, name the original project clearly, and
 later evaluate optional import/export compatibility or an explicitly marked
 fork.
 
+The interoperability plan separates three paths:
+
+- **Inspiration**: public product ideas and documented behavior can inform
+  independent ATLAS contracts.
+- **Import/export compatibility**: ATLAS can later inspect documented artifacts
+  and provide its own mappings without copying source code.
+- **Fork/derivative**: only as an explicit decision with AGPL-3.0 compliance,
+  visible attribution and a full license review.
+
 ## Import Summary
 
 On import, ATLAS normalizes the card into a summary:

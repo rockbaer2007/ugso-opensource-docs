@@ -180,6 +180,15 @@ eigenständige Verträge und UI-Modelle bauen, das Original klar nennen und
 später optional Import-/Export-Kompatibilität oder einen bewusst
 gekennzeichneten Fork prüfen.
 
+Der Interop-Plan trennt drei Pfade:
+
+- **Inspiration**: öffentliche Produktideen und dokumentiertes Verhalten fließen
+  in eigenständige ATLAS-Verträge ein.
+- **Import/Export-Kompatibilität**: später kann ATLAS dokumentierte Artefakte
+  prüfen und eigene Mappings anbieten, ohne Quellcode zu kopieren.
+- **Fork/Derivative**: nur als bewusste Entscheidung mit AGPL-3.0-Erfüllung,
+  sichtbarer Attribution und vollständiger Lizenzprüfung.
+
 ## Import-Summary
 
 Beim Import normalisiert ATLAS die Karte in eine Zusammenfassung:
