@@ -99,6 +99,10 @@ erzeugen. Dieses Paket ist für spätere Editor- und HACS-nahe Workflows gedacht
 Wird ein Paket aus dem Expert-Modus exportiert, enthält es zusätzlich den
 Editorplan. Beim späteren Import kann ATLAS dadurch die platzierten Felder
 wiederherstellen und automatisch in den Expert-Modus wechseln.
+Das Demo-UI bietet dafür ein eigenes Feld für den HACS-Script-Dateinamen. Namen
+wie `Energy Kitchen` werden zu `energy-kitchen.js` normalisiert, im eingebetteten
+Editorplan gespeichert und beim erneuten Import eines Atlas Card Package wieder
+in das Feld übernommen.
 
 ```json
 {

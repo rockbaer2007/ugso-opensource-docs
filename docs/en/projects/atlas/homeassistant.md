@@ -98,6 +98,10 @@ package. This package is intended for later editor and HACS-oriented workflows.
 When a package is exported from Expert mode, it also includes the editor plan.
 On a later import, ATLAS can restore the placed fields and switch back to
 Expert mode automatically.
+The demo UI now exposes a dedicated HACS script filename field for that package
+flow. Names such as `Energy Kitchen` are normalized to `energy-kitchen.js`,
+stored in the embedded editor plan and restored into the field when an Atlas
+Card Package is imported again.
 
 ```json
 {
