@@ -388,6 +388,10 @@ In der Codex-Arbeitsumgebung wurde zuletzt häufig Port `4174` genutzt:
 http://127.0.0.1:4174/
 ```
 
+Auf breiten Bildschirmen nutzt die Demo kompakte Zwei- und Drei-Spalten-Raster
+für Verbindung, Card-Konfiguration und Entity-Picker, damit zusammengehörige
+Eingaben nebeneinander statt über die gesamte Seitenbreite laufen.
+
 ## Roadmap
 
 Die Home-Assistant-Integration zielt auf zwei Nutzungsarten:

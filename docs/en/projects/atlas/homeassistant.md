@@ -373,6 +373,10 @@ In the Codex workspace, port `4174` has often been used recently:
 http://127.0.0.1:4174/
 ```
 
+On wide screens the demo uses compact two- and three-column grids for
+connection, card configuration and entity-picker controls so related inputs sit
+next to each other instead of stretching across the full page width.
+
 ## Roadmap
 
 The Home Assistant integration targets two usage modes:
