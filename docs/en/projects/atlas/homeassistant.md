@@ -247,7 +247,9 @@ Community cards such as Mushroom and Bubble Card to the palette. Home Assistant
 does not expose a complete option registry for every custom card through this
 resource list, but installed resources can be detected as a starting point.
 Other registered Lovelace resources are shown as scanned-only entries until
-ATLAS knows a safe card mapping for them. A reset button restores the full list.
+ATLAS knows a safe card mapping for them. When Home Assistant connects, ATLAS
+requests this resource list automatically and keeps registered `/hacsfiles/`
+entries visible next to saved favorites. A reset button restores the full list.
 The palette itself is scrollable and uses compact two-column template rows:
 card name and favorite state stay on the left, while layout details and sizing
 controls sit on the right.

@@ -258,6 +258,9 @@ der Palette. Home Assistant liefert darüber keine vollständige Options-Registr
 für jede beliebige Custom-Card, aber installierte Ressourcen lassen sich so als
 Ausgangspunkt erkennen. Andere registrierte Lovelace-Ressourcen werden als
 Scan-only-Einträge sichtbar, bis ATLAS dafür ein sicheres Card-Mapping kennt.
+Beim Verbinden mit Home Assistant fordert ATLAS diese Ressourcenliste
+automatisch an und hält registrierte `/hacsfiles/`-Einträge auch neben
+gespeicherten Favoriten sichtbar.
 Ein Reset-Button zeigt wieder die vollständige Liste. Die Palette selbst ist
 scrollbar und nutzt kompakte zweispaltige Template-Zeilen: Card-Name und
 Favoritenstatus stehen links, Layout-Details und Größensteuerung rechts.
