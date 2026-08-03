@@ -102,6 +102,14 @@ The demo UI now exposes a dedicated HACS script filename field for that package
 flow. Names such as `Energy Kitchen` are normalized to `energy-kitchen.js`,
 stored in the embedded editor plan and restored into the field when an Atlas
 Card Package is imported again.
+The same package plan can now generate a custom-card JavaScript source. That
+script carries the normalized filename, the matching `custom:<name>` card type,
+the `/hacsfiles/atlas/...` resource path, a `getStubConfig()` default with safe
+demo entities and the replacement hint users should see before wiring their own
+Home Assistant entities.
+In the demo, this `.js` source can also be downloaded directly through the card
+script export so the artifact can be reviewed separately before a full HACS
+bundle is produced.
 
 ```json
 {
