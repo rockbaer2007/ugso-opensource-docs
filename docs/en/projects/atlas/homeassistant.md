@@ -161,6 +161,21 @@ desired card family, for example Bubble Card or Mushroom. When it is placed on
 the expert surface, ATLAS clamps column, row and size to the allowed grid
 bounds so elements cannot be dropped outside the valid area.
 
+## External Reference: Home Assistant Card Builder
+
+The
+[`studiobts/home-assistant-card-builder`](https://github.com/studiobts/home-assistant-card-builder)
+project is an important external reference for visual Home Assistant card
+editors. It already provides a drag-and-drop builder, a block system, a Home
+Assistant panel and a renderer.
+
+ATLAS does not copy source code from that project at this stage. The project is
+licensed under AGPL-3.0, so a real fork or derivative use would require clear
+license and attribution handling. The planned ATLAS path is to keep building
+independent contracts and UI models, name the original project clearly, and
+later evaluate optional import/export compatibility or an explicitly marked
+fork.
+
 ## Import Summary
 
 On import, ATLAS normalizes the card into a summary:

@@ -165,6 +165,21 @@ Bubble Card oder Mushroom. Beim Platzieren auf der Expert-Fläche klemmt ATLAS
 Spalte, Zeile und Größe an die erlaubten Rastergrenzen, damit Elemente nicht
 außerhalb der gültigen Fläche landen.
 
+## Externe Referenz: Home Assistant Card Builder
+
+Das Projekt
+[`studiobts/home-assistant-card-builder`](https://github.com/studiobts/home-assistant-card-builder)
+ist eine wichtige externe Referenz für visuelle Home-Assistant-Card-Editoren.
+Es bietet bereits einen Drag-and-drop-Builder, ein Blocksystem, ein eigenes
+Home-Assistant-Panel und einen Renderer.
+
+ATLAS übernimmt daraus aktuell keinen Quellcode. Das Projekt steht unter
+AGPL-3.0, daher würde ein echter Fork oder eine abgeleitete Nutzung klare
+Lizenz- und Attribution-Pflichten auslösen. Für ATLAS ist der geplante Weg:
+eigenständige Verträge und UI-Modelle bauen, das Original klar nennen und
+später optional Import-/Export-Kompatibilität oder einen bewusst
+gekennzeichneten Fork prüfen.
+
 ## Import-Summary
 
 Beim Import normalisiert ATLAS die Karte in eine Zusammenfassung:
