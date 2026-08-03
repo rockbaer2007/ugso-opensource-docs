@@ -154,6 +154,13 @@ A single field can also be marked as its own `horizontal-stack` or
 `vertical-stack` and contain several child entries. If an expert plan does not
 contain populated fields yet, ATLAS falls back to the safe demo entities.
 
+For the UI, a sidebar template palette is planned. It can offer visual building
+blocks such as Entity List, State Button, Switch Button, `vertical-stack` and
+`horizontal-stack`. The user picks a building block and combines it with the
+desired card family, for example Bubble Card or Mushroom. When it is placed on
+the expert surface, ATLAS clamps column, row and size to the allowed grid
+bounds so elements cannot be dropped outside the valid area.
+
 ## Import Summary
 
 On import, ATLAS normalizes the card into a summary:

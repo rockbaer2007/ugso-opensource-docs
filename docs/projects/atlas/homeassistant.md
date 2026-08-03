@@ -157,6 +157,14 @@ oder `vertical-stack` markiert werden und mehrere Einträge enthalten. Wenn ein
 Expert-Plan noch keine belegten Felder enthält, nutzt ATLAS die Demo-Entitäten
 als sicheren Fallback.
 
+Für die Bedienung ist eine seitliche Template-Palette vorgesehen. Dort können
+visuelle Bausteine wie Entity List, State Button, Switch Button,
+`vertical-stack` und `horizontal-stack` angeboten werden. Der Nutzer wählt
+einen Baustein und kombiniert ihn mit der gewünschten Card-Familie, zum Beispiel
+Bubble Card oder Mushroom. Beim Platzieren auf der Expert-Fläche klemmt ATLAS
+Spalte, Zeile und Größe an die erlaubten Rastergrenzen, damit Elemente nicht
+außerhalb der gültigen Fläche landen.
+
 ## Import-Summary
 
 Beim Import normalisiert ATLAS die Karte in eine Zusammenfassung:
