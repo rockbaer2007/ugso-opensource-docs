@@ -246,6 +246,10 @@ Entitätsnamen vor.
 Für Bubble-Felder zeigt ATLAS zusätzlich einen Bubble-Button-Type-Dropdown.
 Aktuell unterstützt sind `state`, `switch`, `slider` und `name`; der Wert wird
 als `button_type` in den generierten Bubble-Card-Code geschrieben.
+Die linke Expert-Palette trennt Core- und Community-Cards. Einzelne Cards
+können per Häkchen als Favoriten markiert werden; sobald Favoriten vorhanden
+sind, blendet ATLAS alle anderen Cards aus. Ein Reset-Button zeigt wieder die
+vollständige Liste.
 
 ## Externe Referenz: Home Assistant Card Builder
 
