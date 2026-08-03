@@ -258,6 +258,9 @@ der Palette. Home Assistant liefert darüber keine vollständige Options-Registr
 für jede beliebige Custom-Card, aber installierte Ressourcen lassen sich so als
 Ausgangspunkt erkennen. Andere registrierte Lovelace-Ressourcen werden als
 Scan-only-Einträge sichtbar, bis ATLAS dafür ein sicheres Card-Mapping kennt.
+Die Core-Liste enthält jetzt Entität, Entitäten, Button, Raster, Sensor,
+Stapel, Querstapel, Thermostat, Verknüpfung und Webseite. Die Webseite wird im
+Export als Home-Assistant-`iframe`-Card geschrieben.
 Beim Verbinden mit Home Assistant fordert ATLAS diese Ressourcenliste
 automatisch an und hält registrierte `/hacsfiles/`-Einträge auch neben
 gespeicherten Favoriten sichtbar.
