@@ -37,6 +37,42 @@ body {
   height: 38px;
 }
 
+.VPNavBarTranslations .title::after,
+.VPNavBarTranslations .link span::after,
+.VPNavBarExtra .translations .trans-title::after,
+.VPNavBarExtra .translations .link span::after {
+  display: inline-block;
+  width: 18px;
+  height: 12px;
+  margin-left: 8px;
+  border-radius: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.35);
+  content: "";
+  vertical-align: -1px;
+}
+
+html[lang="de-DE"] .VPNavBarTranslations .title::after,
+html[lang="de-DE"] .VPNavBarExtra .translations .trans-title::after,
+.VPNavBarTranslations a[href="/"] span::after,
+.VPNavBarExtra .translations a[href="/"] span::after {
+  background-image: url("/images/flags/deutschland.png");
+}
+
+html[lang="en-US"] .VPNavBarTranslations .title::after,
+html[lang="en-US"] .VPNavBarExtra .translations .trans-title::after,
+.VPNavBarTranslations a[href="/en/"] span::after,
+.VPNavBarExtra .translations a[href="/en/"] span::after {
+  background-image: url("/images/flags/englische-sprache.png");
+}
+
+.VPNavBarTranslations a[href="/fr/"] span::after,
+.VPNavBarExtra .translations a[href="/fr/"] span::after {
+  background-image: url("/images/flags/frankreich.png");
+}
+
 .VPContent {
   min-height: calc(100vh - var(--vp-nav-height));
 }

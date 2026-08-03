@@ -244,7 +244,7 @@ export default defineConfig({
 
   locales: {
     root: {
-      label: 'DE 🇩🇪',
+      label: 'DE',
       lang: 'de-DE',
       themeConfig: {
         nav: navDe,
@@ -252,7 +252,7 @@ export default defineConfig({
       }
     },
     en: {
-      label: 'EN 🇬🇧',
+      label: 'EN',
       lang: 'en-US',
       title: 'UGSo Open Source',
       description:
