@@ -95,6 +95,9 @@ This allows copy and download flows to use the same verified content.
 
 In addition to direct YAML/JSON export, ATLAS can create a portable JSON
 package. This package is intended for later editor and HACS-oriented workflows.
+When a package is exported from Expert mode, it also includes the editor plan.
+On a later import, ATLAS can restore the placed fields and switch back to
+Expert mode automatically.
 
 ```json
 {
@@ -273,6 +276,9 @@ cells beyond their template default size. The editor surface itself has a
 visible bottom-right resize handle and can grow by up to five grid steps in
 both directions while keeping the current size as the default. A reset button
 returns the editor surface to the default footprint.
+The selected Simple/Expert mode, placed Expert fields, selected field and
+resized editor surface are saved in local browser storage and restored after a
+reload.
 The Expert summary reports fields, populated fields, empty placeholders,
 occupied rows, current surface span, overlaps, card targets and layout types
 before the generated HA card code is copied or exported. Overlapping editor

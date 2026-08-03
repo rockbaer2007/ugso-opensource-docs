@@ -96,6 +96,9 @@ Dadurch nutzen Kopieren und Download denselben geprüften Inhalt.
 
 Zusätzlich zum direkten YAML/JSON-Export kann ATLAS ein portables JSON-Paket
 erzeugen. Dieses Paket ist für spätere Editor- und HACS-nahe Workflows gedacht.
+Wird ein Paket aus dem Expert-Modus exportiert, enthält es zusätzlich den
+Editorplan. Beim späteren Import kann ATLAS dadurch die platzierten Felder
+wiederherstellen und automatisch in den Expert-Modus wechseln.
 
 ```json
 {
@@ -287,6 +290,9 @@ Template-Standardgröße hinaus. Die Editorfläche selbst hat unten rechts einen
 sichtbaren Anfasser und kann in beide Richtungen um bis zu fünf Rasterschritte
 vergrößert werden; die aktuelle Größe bleibt der Standard. Ein Reset-Button
 setzt die Editorfläche wieder auf die Standardgröße zurück.
+Der gewählte Simple/Expert-Modus, platzierte Expert-Felder, das ausgewählte
+Feld und die vergrößerte Editorfläche werden lokal im Browser gespeichert und
+nach einem Neuladen wiederhergestellt.
 Die Expert-Zusammenfassung nennt Felder, befüllte Felder, leere Platzhalter,
 belegte Reihen, aktuelle Surface-Ausdehnung, Überschneidungen, Card-Ziele und
 Layouttypen, bevor der generierte HA-Card-Code kopiert oder exportiert wird.
