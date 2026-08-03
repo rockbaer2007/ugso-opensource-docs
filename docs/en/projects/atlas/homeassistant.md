@@ -291,7 +291,9 @@ resized editor surface are saved in local browser storage and restored after a
 reload.
 The demo UI is now bilingual: the language switcher in the header toggles
 between English and German. The selected language is saved locally and restored
-the next time the editor opens.
+the next time the editor opens. Static labels, entity picker feedback, stack
+summaries, dependency hints and key import/export status messages all use the
+same translation table.
 The Expert summary reports fields, populated fields, empty placeholders,
 occupied rows, current surface span, overlaps, card targets and layout types
 before the generated HA card code is copied or exported. Overlapping editor
