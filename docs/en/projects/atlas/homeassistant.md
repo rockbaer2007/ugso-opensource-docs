@@ -168,9 +168,10 @@ The import path now also accepts nested Home Assistant cards. A real-world
 `vertical-stack` card can contain `horizontal-stack` rows, `grid` containers,
 `conditional` cards and regular cards; ATLAS keeps the supported structure and
 extracts the involved entities. Bubble header or separator cards without an
-entity are accepted as well. Advanced Bubble Card details such as `modules`,
-`styles`, `grid_options`, sliders and sub-buttons are planned as a later
-preservation layer.
+entity are accepted as well, as are hand-built Bubble switch columns and
+`empty-column` cards. Advanced Bubble Card details such as `modules`, `styles`,
+`grid_options`, sliders and sub-buttons are planned as a later preservation
+layer.
 
 ## Planned Card Layout Editor
 
@@ -207,12 +208,13 @@ contain populated fields yet, ATLAS falls back to the safe demo entities.
 
 For the UI, a sidebar template palette is planned. It can offer visual building
 blocks such as Entity List, State Button, Switch Button, `vertical-stack` and
-`horizontal-stack`. In the demo this is already a left-hand palette: the user
-can click a building block or drag it into the editor surface. The palette can
-use loaded Lovelace resources to mark custom card families as installed,
-missing or unchecked. When a block is placed on the expert surface, ATLAS
-clamps column, row and size to the allowed grid bounds so elements cannot be
-dropped outside the valid area.
+`horizontal-stack`. In the demo this is already a left-hand palette with a
+Simple/Expert mode switch: the user can click a building block or drag it into
+the editor surface. Added fields appear as movable tiles on the grid surface.
+The palette can use loaded Lovelace resources to mark custom card families as
+installed, missing or unchecked. When a block is placed on the expert surface,
+ATLAS clamps column, row and size to the allowed grid bounds so elements cannot
+be dropped outside the valid area.
 
 ## External Reference: Home Assistant Card Builder
 

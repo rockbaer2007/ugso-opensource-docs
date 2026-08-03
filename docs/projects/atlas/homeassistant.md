@@ -173,8 +173,9 @@ reale `vertical-stack`-Karte kann also `horizontal-stack`-Zeilen,
 `grid`-Container, `conditional`-Karten und einzelne Karten enthalten; ATLAS
 behält die unterstützte Struktur und extrahiert die enthaltenen Entitäten.
 Bubble-Header oder Separatoren ohne Entity werden ebenfalls akzeptiert.
-Erweiterte Bubble-Card-Details wie `modules`, `styles`, `grid_options`, Slider
-und Sub-Buttons sind als spätere Erhaltungsschicht geplant.
+Handgebaute Bubble-Switch-Spalten und `empty-column`-Karten werden ebenfalls
+erkannt. Erweiterte Bubble-Card-Details wie `modules`, `styles`, `grid_options`,
+Slider und Sub-Buttons sind als spätere Erhaltungsschicht geplant.
 
 ## Geplanter Card-Layout-Editor
 
@@ -214,12 +215,14 @@ als sicheren Fallback.
 Für die Bedienung ist eine seitliche Template-Palette vorgesehen. Dort können
 visuelle Bausteine wie Entity List, State Button, Switch Button,
 `vertical-stack` und `horizontal-stack` angeboten werden. In der Demo ist daraus
-bereits eine linke Palette geworden: Der Nutzer kann einen Baustein anklicken
-oder per Drag-and-drop in die Editor-Fläche ziehen. Die Palette kann geladene
-Lovelace-Ressourcen nutzen, um Custom-Card-Familien als installiert, fehlend
-oder ungeprüft zu markieren. Beim Platzieren auf der Expert-Fläche klemmt ATLAS
-Spalte, Zeile und Größe an die erlaubten Rastergrenzen, damit Elemente nicht
-außerhalb der gültigen Fläche landen.
+bereits eine linke Palette mit Simple/Expert-Umschaltung geworden: Der Nutzer
+kann einen Baustein anklicken oder per Drag-and-drop in die Editor-Fläche
+ziehen. Hinzugefügte Felder erscheinen als verschiebbare Kacheln auf der
+Rasterfläche. Die Palette kann geladene Lovelace-Ressourcen nutzen, um
+Custom-Card-Familien als installiert, fehlend oder ungeprüft zu markieren. Beim
+Platzieren auf der Expert-Fläche klemmt ATLAS Spalte, Zeile und Größe an die
+erlaubten Rastergrenzen, damit Elemente nicht außerhalb der gültigen Fläche
+landen.
 
 ## Externe Referenz: Home Assistant Card Builder
 
