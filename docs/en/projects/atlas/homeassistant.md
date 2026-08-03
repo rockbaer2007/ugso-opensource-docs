@@ -230,6 +230,9 @@ resize the field inside the 12-column grid.
 Placed field titles are editable. The title is exported as the Entities title,
 Bubble button name or Mushroom primary text. A copy button can use the currently
 selected Home Assistant entity name as the field title.
+In Expert mode, selecting an entity from the picker or entity list assigns that
+entity to the currently selected editor field and prefills the title from the
+entity name.
 
 ## External Reference: Home Assistant Card Builder
 
