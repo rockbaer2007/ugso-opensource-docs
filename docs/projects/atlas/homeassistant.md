@@ -233,8 +233,8 @@ installiert, fehlend oder ungeprüft zu markieren. Beim Platzieren auf der
 Expert-Fläche klemmt ATLAS Spalte, Zeile und Größe an die erlaubten
 Rastergrenzen, damit Elemente nicht außerhalb der gültigen Fläche landen.
 Platzierte Felder können ausgewählt und über einen Bearbeiten-Modus angepasst
-werden. Erst im Bearbeiten-Modus erscheinen die vier Anfassecken, mit denen die
-Feldgröße innerhalb des 12-Spalten-Rasters verändert wird.
+werden. Erst im Bearbeiten-Modus erscheint der rechte untere Anfasser, mit dem
+die Feldgröße innerhalb des 12-Spalten-Rasters verändert wird.
 Die Titel platzierter Felder sind editierbar. Dieser Titel wird im Export als
 Entities-Title, Bubble-Button-Name oder Mushroom-Primary-Text verwendet. Ein
 Apply-Button übernimmt den manuell editierten Titel in das ausgewählte Feld.
@@ -258,6 +258,8 @@ der Palette. Home Assistant liefert darüber keine vollständige Options-Registr
 für jede beliebige Custom-Card, aber installierte Ressourcen lassen sich so als
 Ausgangspunkt erkennen. Andere registrierte Lovelace-Ressourcen werden als
 Scan-only-Einträge sichtbar, bis ATLAS dafür ein sicheres Card-Mapping kennt.
+Bereits gemappte Ressourcen werden dedupliziert, damit sie nicht noch einmal
+als Scan-only-Kopie erscheinen.
 Die Core-Liste enthält jetzt Entität, Entitäten, Button, Raster, Sensor,
 Stapel, Querstapel, Thermostat, Verknüpfung und Webseite. Die Webseite wird im
 Export als Home-Assistant-`iframe`-Card geschrieben.

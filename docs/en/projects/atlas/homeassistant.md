@@ -224,9 +224,9 @@ are selected. The palette can use loaded Lovelace resources to mark custom card
 families as installed, missing or unchecked. When a block is placed on the
 expert surface, ATLAS clamps column, row and size to the allowed grid bounds so
 elements cannot be dropped outside the valid area.
-Placed fields can be selected and then adjusted through edit mode. The four
-corner handles appear only while edit mode is active for the selected field, and
-resize the field inside the 12-column grid.
+Placed fields can be selected and then adjusted through edit mode. The
+bottom-right handle appears only while edit mode is active for the selected
+field, and resizes the field inside the 12-column grid.
 Placed field titles are editable. The title is exported as the Entities title,
 Bubble button name or Mushroom primary text. An apply button writes a manually
 edited title to the selected field. The existing copy button can still use the
@@ -247,9 +247,11 @@ Community cards such as Mushroom and Bubble Card to the palette. Home Assistant
 does not expose a complete option registry for every custom card through this
 resource list, but installed resources can be detected as a starting point.
 Other registered Lovelace resources are shown as scanned-only entries until
-ATLAS knows a safe card mapping for them. The Core list now includes Entity,
-Entities, Button, Grid, Sensor, Vertical stack, Horizontal stack, Thermostat,
-Link and Webpage. Webpage exports use the Home Assistant `iframe` card type.
+ATLAS knows a safe card mapping for them. Mapped resources are deduplicated so
+they do not appear again as scanned-only copies. The Core list now includes
+Entity, Entities, Button, Grid, Sensor, Vertical stack, Horizontal stack,
+Thermostat, Link and Webpage. Webpage exports use the Home Assistant `iframe`
+card type.
 When Home Assistant connects, ATLAS requests this resource list automatically
 and keeps registered `/hacsfiles/` entries visible next to saved favorites. A
 reset button restores the full list. Scanned-only HACS and HA resources can
