@@ -110,6 +110,10 @@ Home Assistant entities.
 In the demo, this `.js` source can also be downloaded directly through the card
 script export so the artifact can be reviewed separately before a full HACS
 bundle is produced.
+The next packaging step creates a zip-ready HACS bundle manifest. It lists the
+files a host can materialize later: `hacs.json`, the generated JavaScript card,
+a README, an example Lovelace card and the original Atlas Card Package for
+later editing.
 
 ```json
 {
