@@ -289,6 +289,9 @@ returns the editor surface to the default footprint.
 The selected Simple/Expert mode, placed Expert fields, selected field and
 resized editor surface are saved in local browser storage and restored after a
 reload.
+The demo UI is now bilingual: the language switcher in the header toggles
+between English and German. The selected language is saved locally and restored
+the next time the editor opens.
 The Expert summary reports fields, populated fields, empty placeholders,
 occupied rows, current surface span, overlaps, card targets and layout types
 before the generated HA card code is copied or exported. Overlapping editor

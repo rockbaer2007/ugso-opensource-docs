@@ -305,6 +305,9 @@ setzt die Editorfläche wieder auf die Standardgröße zurück.
 Der gewählte Simple/Expert-Modus, platzierte Expert-Felder, das ausgewählte
 Feld und die vergrößerte Editorfläche werden lokal im Browser gespeichert und
 nach einem Neuladen wiederhergestellt.
+Die Demo-Oberfläche ist jetzt zweisprachig: Über den Sprachumschalter im Kopf
+kann zwischen Deutsch und Englisch gewechselt werden. Die Auswahl wird ebenfalls
+lokal gespeichert und beim nächsten Öffnen wiederhergestellt.
 Die Expert-Zusammenfassung nennt Felder, befüllte Felder, leere Platzhalter,
 belegte Reihen, aktuelle Surface-Ausdehnung, Überschneidungen, Card-Ziele und
 Layouttypen, bevor der generierte HA-Card-Code kopiert oder exportiert wird.
