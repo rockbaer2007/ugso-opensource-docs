@@ -150,9 +150,12 @@ während reine Entities-Felder keine zusätzliche Custom-Card-Resource brauchen.
 
 Zusätzlich kann ein Editor-Plan jetzt in eine Home-Assistant-Card-Konfiguration
 übersetzt werden. Simple nutzt die gewählte Ziel-Card direkt. Expert sortiert
-belegte Felder nach Zeile und Spalte und erzeugt daraus vorerst einen
-`vertical-stack` mit einer Card pro Feld. Wenn ein Expert-Plan noch keine
-belegten Felder enthält, nutzt ATLAS die Demo-Entitäten als sicheren Fallback.
+belegte Felder nach Zeile und Spalte. Mehrere Felder in derselben Zeile werden
+zu einem `horizontal-stack`; mehrere Zeilen werden mit einem `vertical-stack`
+zusammengefasst. Ein einzelnes Feld kann außerdem selbst als `horizontal-stack`
+oder `vertical-stack` markiert werden und mehrere Einträge enthalten. Wenn ein
+Expert-Plan noch keine belegten Felder enthält, nutzt ATLAS die Demo-Entitäten
+als sicheren Fallback.
 
 ## Import-Summary
 

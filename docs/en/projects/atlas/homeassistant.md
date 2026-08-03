@@ -148,9 +148,11 @@ need an additional custom-card resource.
 
 An editor plan can now also be projected into a Home Assistant card
 configuration. Simple mode uses the selected target card directly. Expert mode
-sorts populated fields by row and column and currently emits a `vertical-stack`
-with one card per field. If an expert plan does not contain populated fields
-yet, ATLAS falls back to the safe demo entities.
+sorts populated fields by row and column. Multiple fields on the same row
+become a `horizontal-stack`; multiple rows are wrapped by a `vertical-stack`.
+A single field can also be marked as its own `horizontal-stack` or
+`vertical-stack` and contain several child entries. If an expert plan does not
+contain populated fields yet, ATLAS falls back to the safe demo entities.
 
 ## Import Summary
 
