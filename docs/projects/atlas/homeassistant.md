@@ -168,12 +168,13 @@ aufgelistet, damit die Vorschau gezielt angepasst werden kann. Das ist noch
 keine finale Drag-and-drop-Oberfläche, aber der erste sichtbare Schritt in diese
 Richtung.
 
-Der Importpfad akzeptiert jetzt auch verschachtelte Home-Assistant-Stacks. Eine
-reale `vertical-stack`-Karte kann also `horizontal-stack`-Zeilen und einzelne
-Karten enthalten; ATLAS behält die unterstützte Stack-Struktur und extrahiert
-die enthaltenen Entitäten. Erweiterte Bubble-Card-Details wie `modules`,
-`styles`, `grid_options`, Slider und Sub-Buttons sind als spätere
-Erhaltungsschicht geplant.
+Der Importpfad akzeptiert jetzt auch verschachtelte Home-Assistant-Karten. Eine
+reale `vertical-stack`-Karte kann also `horizontal-stack`-Zeilen,
+`grid`-Container, `conditional`-Karten und einzelne Karten enthalten; ATLAS
+behält die unterstützte Struktur und extrahiert die enthaltenen Entitäten.
+Bubble-Header oder Separatoren ohne Entity werden ebenfalls akzeptiert.
+Erweiterte Bubble-Card-Details wie `modules`, `styles`, `grid_options`, Slider
+und Sub-Buttons sind als spätere Erhaltungsschicht geplant.
 
 ## Geplanter Card-Layout-Editor
 
@@ -212,9 +213,11 @@ als sicheren Fallback.
 
 Für die Bedienung ist eine seitliche Template-Palette vorgesehen. Dort können
 visuelle Bausteine wie Entity List, State Button, Switch Button,
-`vertical-stack` und `horizontal-stack` angeboten werden. Der Nutzer wählt
-einen Baustein und kombiniert ihn mit der gewünschten Card-Familie, zum Beispiel
-Bubble Card oder Mushroom. Beim Platzieren auf der Expert-Fläche klemmt ATLAS
+`vertical-stack` und `horizontal-stack` angeboten werden. In der Demo ist daraus
+bereits eine linke Palette geworden: Der Nutzer kann einen Baustein anklicken
+oder per Drag-and-drop in die Editor-Fläche ziehen. Die Palette kann geladene
+Lovelace-Ressourcen nutzen, um Custom-Card-Familien als installiert, fehlend
+oder ungeprüft zu markieren. Beim Platzieren auf der Expert-Fläche klemmt ATLAS
 Spalte, Zeile und Größe an die erlaubten Rastergrenzen, damit Elemente nicht
 außerhalb der gültigen Fläche landen.
 
