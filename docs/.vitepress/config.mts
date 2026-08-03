@@ -1,5 +1,121 @@
 import { defineConfig } from 'vitepress'
 
+const navDe = [
+  { text: 'Startseite', link: '/' },
+  { text: 'Projekte', link: '/projects/' },
+  {
+    text: 'Blog',
+    items: [
+      { text: 'Blog-Übersicht', link: '/blog/' },
+      { text: 'Code-Snippets', link: '/blog/snippets/' },
+      { text: 'Blockly / JavaScript (ioBroker)', link: '/blog/snippets/iobroker-blockly' },
+      { text: 'Neuer Beitrag', link: '/blog/beitragsvorlage' }
+    ]
+  },
+  { text: 'HADash', link: '/projects/hadash/' },
+  { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' },
+  { text: 'ATLAS', link: '/projects/atlas/' },
+  { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
+  { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
+]
+
+const navEn = [
+  { text: 'Home', link: '/en/' },
+  { text: 'Projects', link: '/en/projects/' },
+  { text: 'ATLAS', link: '/en/projects/atlas/' },
+  { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
+  { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
+]
+
+const sidebarDe = {
+  '/blog/': [
+    {
+      text: 'Blog',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/blog/' },
+        { text: 'Code-Snippets', link: '/blog/snippets/' },
+        { text: 'Beitragsvorlage', link: '/blog/beitragsvorlage' }
+      ]
+    },
+    {
+      text: 'Beiträge',
+      collapsed: false,
+      items: [
+        { text: 'HADash v0.9.4 Preview', link: '/blog/posts/hadash-preview' },
+        { text: 'ATLAS Runtime Foundation', link: '/blog/posts/atlas-runtime-foundation' }
+      ]
+    },
+    {
+      text: 'Code-Beispiele',
+      collapsed: false,
+      items: [
+        { text: 'Home Assistant YAML', link: '/blog/snippets/home-assistant-yaml' },
+        { text: 'JavaScript', link: '/blog/snippets/javascript' },
+        { text: 'Blockly / JavaScript (ioBroker)', link: '/blog/snippets/iobroker-blockly' },
+        { text: 'Lovelace & Bubble-Card', link: '/blog/snippets/lovelace' }
+      ]
+    }
+  ],
+
+  '/projects/hadash/': [
+    {
+      text: 'HADash',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/hadash/' },
+        { text: 'Erste Schritte', link: '/projects/hadash/erste-schritte' },
+        { text: 'Dashboard einlesen', link: '/projects/hadash/dashboard-einlesen' },
+        { text: 'Ansicht exportieren', link: '/projects/hadash/ansicht-exportieren' },
+        { text: 'Backups und JSON', link: '/projects/hadash/backups-und-json' },
+        { text: 'Portable Nutzung', link: '/projects/hadash/portable-nutzung' }
+      ]
+    }
+  ],
+
+  '/projects/ultimate-timer/': [
+    {
+      text: 'Ultimate Timer',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/ultimate-timer/' },
+        { text: 'Installation', link: '/projects/ultimate-timer/installation' },
+        { text: 'Konfiguration', link: '/projects/ultimate-timer/konfiguration' },
+        { text: 'Funktionsweise', link: '/projects/ultimate-timer/funktionsweise' },
+        { text: 'Beispiele', link: '/projects/ultimate-timer/beispiele' }
+      ]
+    }
+  ],
+
+  '/projects/atlas/': [
+    {
+      text: 'ATLAS',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/atlas/' },
+        { text: 'Architektur', link: '/projects/atlas/uebersicht' },
+        { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' },
+        { text: 'Home Assistant', link: '/projects/atlas/homeassistant' }
+      ]
+    }
+  ]
+}
+
+const sidebarEn = {
+  '/en/projects/atlas/': [
+    {
+      text: 'ATLAS',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/projects/atlas/' },
+        { text: 'Architecture', link: '/en/projects/atlas/overview' },
+        { text: 'Development Status', link: '/en/projects/atlas/development-status' },
+        { text: 'Home Assistant', link: '/en/projects/atlas/homeassistant' }
+      ]
+    }
+  ]
+}
+
 export default defineConfig({
   lang: 'de-DE',
   title: 'UGSo Open Source',
@@ -24,98 +140,9 @@ export default defineConfig({
     logo: 'https://www.ugso-software.de/images/ugso_gross1.png',
     siteTitle: 'UGSo Open Source',
 
-    nav: [
-      { text: 'Startseite', link: '/' },
-      { text: 'Projekte', link: '/projects/' },
-      {
-        text: 'Blog',
-        items: [
-          { text: 'Blog-Übersicht', link: '/blog/' },
-          { text: 'Code-Snippets', link: '/blog/snippets/' },
-          { text: 'Blockly / JavaScript (ioBroker)', link: '/blog/snippets/iobroker-blockly' },
-          { text: 'Neuer Beitrag', link: '/blog/beitragsvorlage' }
-        ]
-      },
-      { text: 'HADash', link: '/projects/hadash/' },
-      { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' },
-      { text: 'ATLAS', link: '/projects/atlas/' },
-      { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
-      { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
-    ],
+    nav: navDe,
 
-    sidebar: {
-      '/blog/': [
-        {
-          text: 'Blog',
-          collapsed: false,
-          items: [
-            { text: 'Übersicht', link: '/blog/' },
-            { text: 'Code-Snippets', link: '/blog/snippets/' },
-            { text: 'Beitragsvorlage', link: '/blog/beitragsvorlage' }
-          ]
-        },
-        {
-          text: 'Beiträge',
-          collapsed: false,
-          items: [
-            { text: 'HADash v0.9.4 Preview', link: '/blog/posts/hadash-preview' },
-            { text: 'ATLAS Runtime Foundation', link: '/blog/posts/atlas-runtime-foundation' }
-          ]
-        },
-        {
-          text: 'Code-Beispiele',
-          collapsed: false,
-          items: [
-            { text: 'Home Assistant YAML', link: '/blog/snippets/home-assistant-yaml' },
-            { text: 'JavaScript', link: '/blog/snippets/javascript' },
-            { text: 'Blockly / JavaScript (ioBroker)', link: '/blog/snippets/iobroker-blockly' },
-            { text: 'Lovelace & Bubble-Card', link: '/blog/snippets/lovelace' }
-          ]
-        }
-      ],
-
-      '/projects/hadash/': [
-        {
-          text: 'HADash',
-          collapsed: false,
-          items: [
-            { text: 'Übersicht', link: '/projects/hadash/' },
-            { text: 'Erste Schritte', link: '/projects/hadash/erste-schritte' },
-            { text: 'Dashboard einlesen', link: '/projects/hadash/dashboard-einlesen' },
-            { text: 'Ansicht exportieren', link: '/projects/hadash/ansicht-exportieren' },
-            { text: 'Backups und JSON', link: '/projects/hadash/backups-und-json' },
-            { text: 'Portable Nutzung', link: '/projects/hadash/portable-nutzung' }
-          ]
-        }
-      ],
-
-      '/projects/ultimate-timer/': [
-        {
-          text: 'Ultimate Timer',
-          collapsed: false,
-          items: [
-            { text: 'Übersicht', link: '/projects/ultimate-timer/' },
-            { text: 'Installation', link: '/projects/ultimate-timer/installation' },
-            { text: 'Konfiguration', link: '/projects/ultimate-timer/konfiguration' },
-            { text: 'Funktionsweise', link: '/projects/ultimate-timer/funktionsweise' },
-            { text: 'Beispiele', link: '/projects/ultimate-timer/beispiele' }
-          ]
-        }
-      ],
-
-      '/projects/atlas/': [
-        {
-          text: 'ATLAS',
-          collapsed: false,
-          items: [
-            { text: 'Übersicht', link: '/projects/atlas/' },
-            { text: 'Architektur', link: '/projects/atlas/uebersicht' },
-            { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' },
-            { text: 'Home Assistant', link: '/projects/atlas/homeassistant' }
-          ]
-        }
-      ]
-    },
+    sidebar: sidebarDe,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/rockbaer2007' }
@@ -142,6 +169,38 @@ export default defineConfig({
     docFooter: {
       prev: 'Vorheriger Beitrag',
       next: 'Nächster Beitrag'
+    }
+  },
+
+  locales: {
+    root: {
+      label: '🇩🇪 Deutsch',
+      lang: 'de-DE',
+      themeConfig: {
+        nav: navDe,
+        sidebar: sidebarDe
+      }
+    },
+    en: {
+      label: '🇬🇧 English',
+      lang: 'en-US',
+      title: 'UGSo Open Source',
+      description:
+        'Open-source projects, code snippets and documentation by UGSo Software for Home Assistant, ESPHome, ATLAS and Lovelace.',
+      themeConfig: {
+        nav: navEn,
+        sidebar: sidebarEn,
+        outline: {
+          label: 'On this page'
+        },
+        lastUpdated: {
+          text: 'Last updated'
+        },
+        docFooter: {
+          prev: 'Previous page',
+          next: 'Next page'
+        }
+      }
     }
   }
 })
