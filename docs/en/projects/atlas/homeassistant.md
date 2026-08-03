@@ -238,8 +238,9 @@ For Bubble fields, ATLAS also shows a Bubble button type dropdown. The currently
 supported values are `state`, `switch`, `slider` and `name`; the selected value
 is written as `button_type` in the generated Bubble Card code.
 The left Expert palette separates Core and Community cards. Individual cards
-can be marked as favorites with a checkbox; when favorites exist, ATLAS hides
-the remaining cards. A reset button restores the full list.
+can be marked as favorites with a checkbox and saved through `Save favorites`.
+When saved favorites exist, ATLAS hides the remaining cards. A reset button
+restores the full list.
 
 ## External Reference: Home Assistant Card Builder
 
