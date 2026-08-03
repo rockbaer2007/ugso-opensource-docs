@@ -263,10 +263,15 @@ Stapel, Querstapel, Thermostat, Verknüpfung und Webseite. Die Webseite wird im
 Export als Home-Assistant-`iframe`-Card geschrieben.
 Beim Verbinden mit Home Assistant fordert ATLAS diese Ressourcenliste
 automatisch an und hält registrierte `/hacsfiles/`-Einträge auch neben
-gespeicherten Favoriten sichtbar.
+gespeicherten Favoriten sichtbar. Scan-only-HACS- und HA-Ressourcen können
+ebenfalls als Favoriten markiert werden, auch bevor ATLAS dafür ein ziehbares
+Card-Mapping kennt.
 Ein Reset-Button zeigt wieder die vollständige Liste. Die Palette selbst ist
 scrollbar und nutzt kompakte zweispaltige Template-Zeilen: Card-Name und
 Favoritenstatus stehen links, Layout-Details und Größensteuerung rechts.
+Ausgewählte Editorfelder können über Breite und Höhe in 1er-Schritten bis
+5x5 geändert werden; beim Hinzufügen bleibt die aktuelle Template-Größe der
+Standard.
 
 ## Externe Referenz: Home Assistant Card Builder
 
