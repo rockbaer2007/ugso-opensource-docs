@@ -12,6 +12,7 @@ spätere HACS-Nutzung.
 - Verbindung über Home-Assistant-WebSocket
 - Laden der Entitäten über `get_states`
 - Laden der Lovelace-Ressourcen über `lovelace/resources`
+- gemeinsamer Entity-Katalog für Typfilter und Suche
 - Card-Ziele für Entities, Mushroom Template und Bubble Card
 - Layouts `single`, `horizontal-stack` und `vertical-stack`
 - JSON- und YAML-Export für Home-Assistant-Karten
@@ -25,6 +26,23 @@ spätere HACS-Nutzung.
 | Entities | `entities` | in Home Assistant enthalten |
 | Mushroom Template | `custom:mushroom-template-card` | Mushroom |
 | Bubble Button | `custom:bubble-card` | Bubble Card |
+
+## Entity Picker und Suche
+
+ATLAS besitzt jetzt einen wiederverwendbaren Entity-Katalog im Paket
+`@atlas/homeassistant`. Dieser Katalog führt lokale Beispiel-Entitäten,
+gespeicherte Gruppen und live geladene Home-Assistant-Entitäten zusammen.
+
+Der Katalog liefert:
+
+- eindeutige und sortierte Entity IDs
+- Domain-Erkennung wie `sensor`, `binary_sensor`, `switch` oder `light`
+- bevorzugte Shortcut-Reihenfolge für häufige Domains
+- Labels aus Live-Entitäten, zum Beispiel Friendly Names
+- Suche nach Entity ID oder Label, auch mit Teilbegriffen wie `Hyper`
+
+Damit bleibt der Entity Picker nicht nur Demo-Code, sondern wird zu einer
+gemeinsamen Grundlage für die spätere Home-Assistant-Frontend-Integration.
 
 ## HACS- und Ressourcenhinweise
 
