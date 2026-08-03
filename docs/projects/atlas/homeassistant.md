@@ -47,6 +47,19 @@ Für Bubble Card ist der HACS-Ressourcenpfad absichtlich exakt so hinterlegt:
 Wichtig: Home Assistant läuft häufig auf Linux. Groß- und Kleinschreibung im
 Pfad sind dort relevant.
 
+ATLAS kann für Mushroom und Bubble Card außerdem einen kopierbaren
+Lovelace-Ressourcen-Snippet erzeugen. Im YAML-Format sieht das zum Beispiel für
+Bubble Card so aus:
+
+```yaml
+- url: "/hacsfiles/Bubble-Card/bubble-card.js"
+  type: "module"
+```
+
+Dieser Snippet ist für die Ressourcenregistrierung im Home-Assistant-Dashboard
+gedacht. Bei der eingebauten Entities Card ist kein zusätzlicher
+Ressourcen-Snippet erforderlich.
+
 ## Export-Modell
 
 ATLAS trennt den HA-Card-Export in drei Ebenen:
