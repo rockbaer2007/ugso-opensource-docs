@@ -48,17 +48,20 @@ Wichtig: Home Assistant läuft häufig auf Linux. Groß- und Kleinschreibung im
 Pfad sind dort relevant.
 
 ATLAS kann für Mushroom und Bubble Card außerdem einen kopierbaren
-Lovelace-Ressourcen-Snippet erzeugen. Im YAML-Format sieht das zum Beispiel für
-Bubble Card so aus:
+Lovelace-Ressourcen-Snippet erzeugen. Der kombinierte Snippet enthält die
+ATLAS-Frontend-Resource und, wenn nötig, die gewählte Card-Abhängigkeit. Im
+YAML-Format sieht das zum Beispiel für ATLAS Server plus Bubble Card so aus:
 
 ```yaml
+- url: "/local/atlas/atlas-homeassistant-panel.js"
+  type: "module"
 - url: "/hacsfiles/Bubble-Card/bubble-card.js"
   type: "module"
 ```
 
 Dieser Snippet ist für die Ressourcenregistrierung im Home-Assistant-Dashboard
-gedacht. Bei der eingebauten Entities Card ist kein zusätzlicher
-Ressourcen-Snippet erforderlich.
+gedacht. Bei der eingebauten Entities Card wird nur die ATLAS-Frontend-Resource
+kopiert.
 
 ## Export-Modell
 
@@ -144,6 +147,7 @@ Die neue Integrationsplanung kann dadurch gemeinsam prüfen:
 - ist die gewählte Card-Resource installiert?
 - fehlen bei Mushroom oder Bubble Card zusätzliche HACS-Pfade?
 - ist der gesamte Export bereit für Home Assistant?
+- welche JSON- oder YAML-Resources sollen in Home Assistant registriert werden?
 
 Damit ist der nächste Schritt in Richtung “ATLAS direkt in Home Assistant
 nutzen oder als HACS-nahe Integration installieren” vorbereitet.

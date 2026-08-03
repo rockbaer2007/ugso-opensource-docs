@@ -47,16 +47,20 @@ this:
 Home Assistant often runs on Linux. Path casing matters there.
 
 ATLAS can also create a copy-ready Lovelace resource snippet for Mushroom and
-Bubble Card. In YAML format, Bubble Card looks like this:
+Bubble Card. The combined snippet includes the ATLAS frontend resource and,
+when needed, the selected card dependency. In YAML format, ATLAS server plus
+Bubble Card looks like this:
 
 ```yaml
+- url: "/local/atlas/atlas-homeassistant-panel.js"
+  type: "module"
 - url: "/hacsfiles/Bubble-Card/bubble-card.js"
   type: "module"
 ```
 
 This snippet is intended for the resource registration in a Home Assistant
-dashboard. The built-in Entities card does not require an additional resource
-snippet.
+dashboard. With the built-in Entities card, only the ATLAS frontend resource is
+copied.
 
 ## Export Model
 
@@ -142,6 +146,7 @@ The integration plan can therefore check these things together:
 - whether the selected card resource is installed
 - whether Mushroom or Bubble Card still need additional HACS paths
 - whether the whole export is ready for Home Assistant
+- which JSON or YAML resources should be registered in Home Assistant
 
 This prepares the next step toward using ATLAS directly in Home Assistant or as
 a HACS-oriented integration.
