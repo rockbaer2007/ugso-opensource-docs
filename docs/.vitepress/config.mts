@@ -22,6 +22,17 @@ const navDe = [
 const navEn = [
   { text: 'Home', link: '/en/' },
   { text: 'Projects', link: '/en/projects/' },
+  {
+    text: 'Blog',
+    items: [
+      { text: 'Blog Overview', link: '/en/blog/' },
+      { text: 'Code Snippets', link: '/en/blog/snippets/' },
+      { text: 'Blockly / JavaScript (ioBroker)', link: '/en/blog/snippets/iobroker-blockly' },
+      { text: 'New Post Template', link: '/en/blog/post-template' }
+    ]
+  },
+  { text: 'HADash', link: '/en/projects/hadash/' },
+  { text: 'Ultimate Timer', link: '/en/projects/ultimate-timer/' },
   { text: 'ATLAS', link: '/en/projects/atlas/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
@@ -102,6 +113,65 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/blog/': [
+    {
+      text: 'Blog',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/blog/' },
+        { text: 'Code Snippets', link: '/en/blog/snippets/' },
+        { text: 'Post Template', link: '/en/blog/post-template' }
+      ]
+    },
+    {
+      text: 'Posts',
+      collapsed: false,
+      items: [
+        { text: 'HADash v0.9.4 Preview', link: '/en/blog/posts/hadash-preview' },
+        { text: 'ATLAS Runtime Foundation', link: '/en/blog/posts/atlas-runtime-foundation' }
+      ]
+    },
+    {
+      text: 'Code Examples',
+      collapsed: false,
+      items: [
+        { text: 'Home Assistant YAML', link: '/en/blog/snippets/home-assistant-yaml' },
+        { text: 'JavaScript', link: '/en/blog/snippets/javascript' },
+        { text: 'Blockly / JavaScript (ioBroker)', link: '/en/blog/snippets/iobroker-blockly' },
+        { text: 'Lovelace & Bubble Card', link: '/en/blog/snippets/lovelace' }
+      ]
+    }
+  ],
+
+  '/en/projects/hadash/': [
+    {
+      text: 'HADash',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/projects/hadash/' },
+        { text: 'Getting Started', link: '/en/projects/hadash/getting-started' },
+        { text: 'Import Dashboard', link: '/en/projects/hadash/import-dashboard' },
+        { text: 'Export View', link: '/en/projects/hadash/export-view' },
+        { text: 'Backups and JSON', link: '/en/projects/hadash/backups-and-json' },
+        { text: 'Portable Usage', link: '/en/projects/hadash/portable-usage' }
+      ]
+    }
+  ],
+
+  '/en/projects/ultimate-timer/': [
+    {
+      text: 'Ultimate Timer',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/projects/ultimate-timer/' },
+        { text: 'Installation', link: '/en/projects/ultimate-timer/installation' },
+        { text: 'Configuration', link: '/en/projects/ultimate-timer/configuration' },
+        { text: 'How It Works', link: '/en/projects/ultimate-timer/how-it-works' },
+        { text: 'Examples', link: '/en/projects/ultimate-timer/examples' }
+      ]
+    }
+  ],
+
   '/en/projects/atlas/': [
     {
       text: 'ATLAS',
