@@ -265,7 +265,9 @@ Beim Verbinden mit Home Assistant fordert ATLAS diese Ressourcenliste
 automatisch an und hält registrierte `/hacsfiles/`-Einträge auch neben
 gespeicherten Favoriten sichtbar. Scan-only-HACS- und HA-Ressourcen können
 ebenfalls als Favoriten markiert werden, auch bevor ATLAS dafür ein ziehbares
-Card-Mapping kennt.
+Card-Mapping kennt. Hilfsressourcen wie Card-Tools, Dashboards, Strategien,
+Navigationshelfer, Icon-Pakete und bekannte Nicht-Card-Ressourcen werden beim
+Palette-Scan ausgeblendet.
 Ein Reset-Button zeigt wieder die vollständige Liste. Die Palette selbst ist
 scrollbar und nutzt kompakte zweispaltige Template-Zeilen: Card-Name und
 Favoritenstatus stehen links, Layout-Details und Größensteuerung rechts.

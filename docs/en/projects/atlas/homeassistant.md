@@ -254,7 +254,9 @@ When Home Assistant connects, ATLAS requests this resource list automatically
 and keeps registered `/hacsfiles/` entries visible next to saved favorites. A
 reset button restores the full list. Scanned-only HACS and HA resources can
 also be marked as favorites, even before ATLAS has a draggable card mapping for
-them.
+them. Helper resources such as card tools, dashboards, strategies, navigation
+helpers, icon packs and known non-card resources are hidden during the palette
+scan.
 The palette itself is scrollable and uses compact two-column template rows:
 card name and favorite state stay on the left, while layout details and sizing
 controls sit on the right. Selected editor fields can be resized through the
