@@ -278,7 +278,11 @@ Ausgewählte Editorfelder können mit der Maus oder über Breite und Höhe in
 1er-Schritten verändert werden, bis zu fünf Rasterzellen über die
 Template-Standardgröße hinaus. Die Editorfläche selbst hat unten rechts einen
 sichtbaren Anfasser und kann in beide Richtungen um bis zu fünf Rasterschritte
-vergrößert werden; die aktuelle Größe bleibt der Standard.
+vergrößert werden; die aktuelle Größe bleibt der Standard. Ein Reset-Button
+setzt die Editorfläche wieder auf die Standardgröße zurück.
+Die Expert-Zusammenfassung nennt Felder, befüllte Felder, leere Platzhalter,
+belegte Reihen, aktuelle Surface-Ausdehnung, Card-Ziele und Layouttypen, bevor
+der generierte HA-Card-Code kopiert oder exportiert wird.
 
 ## Externe Referenz: Home Assistant Card Builder
 

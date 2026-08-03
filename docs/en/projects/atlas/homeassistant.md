@@ -265,7 +265,11 @@ controls sit on the right. Selected editor fields can be resized with the mouse
 or through the Width and Height controls in one-cell steps, up to five grid
 cells beyond their template default size. The editor surface itself has a
 visible bottom-right resize handle and can grow by up to five grid steps in
-both directions while keeping the current size as the default.
+both directions while keeping the current size as the default. A reset button
+returns the editor surface to the default footprint.
+The Expert summary reports fields, populated fields, empty placeholders,
+occupied rows, current surface span, card targets and layout types before the
+generated HA card code is copied or exported.
 
 ## External Reference: Home Assistant Card Builder
 
