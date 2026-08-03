@@ -26,6 +26,18 @@ spätere HACS-Nutzung.
 | Mushroom Template | `custom:mushroom-template-card` | Mushroom |
 | Bubble Button | `custom:bubble-card` | Bubble Card |
 
+## HACS- und Ressourcenhinweise
+
+ATLAS legt die erwarteten Ressourcenpfade direkt in den Export-Metadaten ab.
+Die Demo kann dadurch anzeigen, ob eine Custom Card bereits in Home Assistant
+registriert ist oder welcher Pfad noch fehlt.
+
+| Card-Ziel | HACS-Hinweis | Erwarteter Ressourcenpfad |
+|---|---|---|
+| Entities | nicht erforderlich | in Home Assistant enthalten |
+| Mushroom Template | HACS > Frontend > Mushroom | `/hacsfiles/lovelace-mushroom/mushroom.js` |
+| Bubble Button | HACS > Frontend > Bubble Card | `/hacsfiles/Bubble-Card/bubble-card.js` |
+
 Für Bubble Card ist der HACS-Ressourcenpfad absichtlich exakt so hinterlegt:
 
 ```text
