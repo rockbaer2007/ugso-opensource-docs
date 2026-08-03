@@ -281,8 +281,9 @@ sichtbaren Anfasser und kann in beide Richtungen um bis zu fünf Rasterschritte
 vergrößert werden; die aktuelle Größe bleibt der Standard. Ein Reset-Button
 setzt die Editorfläche wieder auf die Standardgröße zurück.
 Die Expert-Zusammenfassung nennt Felder, befüllte Felder, leere Platzhalter,
-belegte Reihen, aktuelle Surface-Ausdehnung, Card-Ziele und Layouttypen, bevor
-der generierte HA-Card-Code kopiert oder exportiert wird.
+belegte Reihen, aktuelle Surface-Ausdehnung, Überschneidungen, Card-Ziele und
+Layouttypen, bevor der generierte HA-Card-Code kopiert oder exportiert wird.
+Überlappende Editorfelder werden direkt auf der Fläche markiert.
 
 ## Externe Referenz: Home Assistant Card Builder
 

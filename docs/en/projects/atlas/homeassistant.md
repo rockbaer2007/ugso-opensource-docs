@@ -268,8 +268,9 @@ visible bottom-right resize handle and can grow by up to five grid steps in
 both directions while keeping the current size as the default. A reset button
 returns the editor surface to the default footprint.
 The Expert summary reports fields, populated fields, empty placeholders,
-occupied rows, current surface span, card targets and layout types before the
-generated HA card code is copied or exported.
+occupied rows, current surface span, overlaps, card targets and layout types
+before the generated HA card code is copied or exported. Overlapping editor
+fields are marked directly on the surface.
 
 ## External Reference: Home Assistant Card Builder
 
