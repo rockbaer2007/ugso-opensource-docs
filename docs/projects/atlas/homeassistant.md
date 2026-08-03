@@ -128,6 +128,26 @@ Mögliche Zustände:
 - `installed`: erwartete Ressource gefunden
 - `missing`: erwartete Ressource fehlt
 
+## ATLAS als Home-Assistant-Frontend
+
+ATLAS unterscheidet jetzt auch die Resource, die ATLAS selbst in Home Assistant
+verfügbar macht. Das ist getrennt von der gewählten Card-Abhängigkeit.
+
+| Nutzungsart | Zweck | Erwarteter Ressourcenpfad |
+|---|---|---|
+| ATLAS Server | selbst gehosteter ATLAS-Editor oder Panel | `/local/atlas/atlas-homeassistant-panel.js` |
+| ATLAS HACS | geplante HACS-Frontend-Integration | `/hacsfiles/atlas/atlas-homeassistant-panel.js` |
+
+Die neue Integrationsplanung kann dadurch gemeinsam prüfen:
+
+- ist die ATLAS-Frontend-Resource registriert?
+- ist die gewählte Card-Resource installiert?
+- fehlen bei Mushroom oder Bubble Card zusätzliche HACS-Pfade?
+- ist der gesamte Export bereit für Home Assistant?
+
+Damit ist der nächste Schritt in Richtung “ATLAS direkt in Home Assistant
+nutzen oder als HACS-nahe Integration installieren” vorbereitet.
+
 ## Aktuelle Demo
 
 Im ATLAS-Repo lässt sich die Demo nach dem Build starten:
