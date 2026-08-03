@@ -122,6 +122,23 @@ In der Demo enden diese Dateien auf:
 Der gleiche Import kann rohe Home-Assistant-Karten als JSON/YAML und Atlas Card
 Packages einlesen.
 
+Vor dem eigentlichen Import kann ATLAS Artefakte prüfen und einordnen:
+
+- ATLAS Card Package
+- rohe Home-Assistant-Card als JSON oder YAML
+- möglicher externer Card-Builder-Export
+- unbekannter Inhalt
+
+Externe Card-Builder-ähnliche Dateien werden dabei nicht automatisch importiert.
+Sie benötigen zuerst ein bewusstes Kompatibilitäts-Mapping und eine
+Lizenzprüfung.
+
+Aus dieser Prüfung entsteht eine Import-Entscheidung für die Oberfläche:
+
+- **Import**: unterstützte ATLAS- oder Home-Assistant-Artefakte.
+- **Review**: externe Card-Builder-ähnliche Artefakte.
+- **Reject**: unbekannte oder nicht sicher einordenbare Inhalte.
+
 ## Geplanter Card-Layout-Editor
 
 ATLAS soll sich in Richtung eines visuellen Editors entwickeln, mit dem Nutzer

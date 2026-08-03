@@ -121,6 +121,22 @@ In the demo, these files end with:
 The same import can read raw Home Assistant cards as JSON/YAML and Atlas Card
 Packages.
 
+Before the actual import, ATLAS can inspect and classify artifacts:
+
+- ATLAS Card Package
+- raw Home Assistant card as JSON or YAML
+- possible external card-builder export
+- unknown content
+
+External card-builder-shaped files are not imported automatically. They first
+need an explicit compatibility mapping and license review.
+
+The inspection becomes an import decision for the UI:
+
+- **Import**: supported ATLAS or Home Assistant artifacts.
+- **Review**: external card-builder-shaped artifacts.
+- **Reject**: unknown content or content without a safe import path.
+
 ## Planned Card Layout Editor
 
 ATLAS is intended to grow into a visual editor where users can build a Home
