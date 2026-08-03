@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: Entwicklungsstand
       link: /projects/atlas/entwicklungsstand
+    - theme: alt
+      text: Home Assistant
+      link: /projects/atlas/homeassistant
 
 features:
   - icon: 🧱
@@ -28,7 +31,7 @@ features:
 
   - icon: 🏠
     title: Home-Assistant-nah
-    details: Geplante Anbindung an Home Assistant und spätere Werkzeuge wie den UGSo Thread Monitor.
+    details: Status-Panels, Entitätenauswahl, HA-Card-Export und Lovelace-Ressourcenprüfung werden Schritt für Schritt ausgebaut.
 
   - icon: 🧪
     title: Testbar

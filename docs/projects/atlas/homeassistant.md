@@ -1,0 +1,135 @@
+# ATLAS und Home Assistant
+
+ATLAS besitzt mit `@atlas/homeassistant` ein eigenes Paket für die
+Home-Assistant-nahe Integration. Der aktuelle Schwerpunkt liegt auf einem
+Editor- und Export-Workflow für Home-Assistant-Karten, Live-Entitäten und
+spätere HACS-Nutzung.
+
+## Aktueller Umfang
+
+- ATLAS Status Preview mit Theme- und Renderer-Anbindung
+- lokale und live geladene Home-Assistant-Entitäten
+- Verbindung über Home-Assistant-WebSocket
+- Laden der Entitäten über `get_states`
+- Laden der Lovelace-Ressourcen über `lovelace/resources`
+- Card-Ziele für Entities, Mushroom Template und Bubble Card
+- Layouts `single`, `horizontal-stack` und `vertical-stack`
+- JSON- und YAML-Export für Home-Assistant-Karten
+- Atlas Card Packages für Editor-Roundtrips
+- Import-Summary für importierte Karten
+
+## Unterstützte Card-Ziele
+
+| Auswahl | Home-Assistant-Typ | Abhängigkeit |
+|---|---|---|
+| Entities | `entities` | in Home Assistant enthalten |
+| Mushroom Template | `custom:mushroom-template-card` | Mushroom |
+| Bubble Button | `custom:bubble-card` | Bubble Card |
+
+Für Bubble Card ist der HACS-Ressourcenpfad absichtlich exakt so hinterlegt:
+
+```text
+/hacsfiles/Bubble-Card/bubble-card.js
+```
+
+Wichtig: Home Assistant läuft häufig auf Linux. Groß- und Kleinschreibung im
+Pfad sind dort relevant.
+
+## Export-Modell
+
+ATLAS trennt den HA-Card-Export in drei Ebenen:
+
+1. **Card-Konfiguration**: das eigentliche Home-Assistant-Card-Objekt.
+2. **Export-Manifest**: Dateiname, Format, MIME-Type, Ziel, Layout und
+   Abhängigkeit.
+3. **Export-Payload**: Manifest plus serialisierter JSON- oder YAML-Inhalt.
+
+Dadurch nutzen Kopieren und Download denselben geprüften Inhalt.
+
+## Atlas Card Packages
+
+Zusätzlich zum direkten YAML/JSON-Export kann ATLAS ein portables JSON-Paket
+erzeugen. Dieses Paket ist für spätere Editor- und HACS-nahe Workflows gedacht.
+
+```json
+{
+  "version": 1,
+  "kind": "atlas.homeassistant.card",
+  "manifest": {
+    "name": "Office Light",
+    "filename": "office-light-bubble-single.yaml",
+    "format": "yaml",
+    "mimeType": "text/yaml",
+    "target": "bubble",
+    "layout": "single"
+  },
+  "content": "type: \"custom:bubble-card\"\n..."
+}
+```
+
+In der Demo enden diese Dateien auf:
+
+```text
+.atlas-card.json
+```
+
+Der gleiche Import kann rohe Home-Assistant-Karten als JSON/YAML und Atlas Card
+Packages einlesen.
+
+## Import-Summary
+
+Beim Import normalisiert ATLAS die Karte in eine Zusammenfassung:
+
+- Titel
+- Entitäten
+- Format
+- Ziel
+- Layout
+- Abhängigkeit
+- Information, ob die Quelle ein Atlas Card Package war
+
+Damit bleibt die eigentliche Editor-Logik im Paket `@atlas/homeassistant` und
+nicht verstreut in der Oberfläche.
+
+## Lovelace-Ressourcenprüfung
+
+Wenn ATLAS mit Home Assistant verbunden ist, kann die Demo Lovelace-Ressourcen
+abrufen und prüfen, ob Mushroom oder Bubble Card registriert sind.
+
+Mögliche Zustände:
+
+- `not-required`: Entities Card benötigt keine Custom-Card-Ressource
+- `unchecked`: noch nicht geprüft
+- `installed`: erwartete Ressource gefunden
+- `missing`: erwartete Ressource fehlt
+
+## Aktuelle Demo
+
+Im ATLAS-Repo lässt sich die Demo nach dem Build starten:
+
+```sh
+pnpm build
+node examples/status-demo/server.mjs
+```
+
+Standardadresse:
+
+```text
+http://127.0.0.1:4173/
+```
+
+In der Codex-Arbeitsumgebung wurde zuletzt häufig Port `4174` genutzt:
+
+```text
+http://127.0.0.1:4174/
+```
+
+## Roadmap
+
+Die Home-Assistant-Integration zielt auf zwei Nutzungsarten:
+
+- ATLAS als eigenständiger Server oder Editor
+- ATLAS als Home-Assistant-Frontend-Integration, später auch HACS-nah
+
+Die aktuellen Card Packages sind ein Zwischenschritt auf dem Weg zu einem
+installierbaren und wieder importierbaren HA-Card-Editor.

@@ -110,7 +110,8 @@ export default defineConfig({
           items: [
             { text: 'Übersicht', link: '/projects/atlas/' },
             { text: 'Architektur', link: '/projects/atlas/uebersicht' },
-            { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' }
+            { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' },
+            { text: 'Home Assistant', link: '/projects/atlas/homeassistant' }
           ]
         }
       ]
