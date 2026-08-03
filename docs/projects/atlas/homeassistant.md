@@ -264,8 +264,9 @@ Die Core-Liste enthält jetzt Entität, Entitäten, Button, Raster, Sensor,
 Stapel, Querstapel, Thermostat, Verknüpfung und Webseite. Die Webseite wird im
 Export als Home-Assistant-`iframe`-Card geschrieben.
 Beim Verbinden mit Home Assistant fordert ATLAS diese Ressourcenliste
-automatisch an und hält registrierte `/hacsfiles/`-Einträge auch neben
-gespeicherten Favoriten sichtbar. Scan-only-HACS- und HA-Ressourcen können
+automatisch an. Gespeicherte Favoriten blenden alle nicht ausgewählten Cards
+aus, inklusive gescannter `/hacsfiles/`-Einträge, bis `Show all cards` oder
+`Reset favorites` genutzt wird. Scan-only-HACS- und HA-Ressourcen können
 ebenfalls als Favoriten markiert werden, auch bevor ATLAS dafür ein ziehbares
 Card-Mapping kennt. Hilfsressourcen wie Card-Tools, Dashboards, Strategien,
 Navigationshelfer, Icon-Pakete und bekannte Nicht-Card-Ressourcen werden beim
