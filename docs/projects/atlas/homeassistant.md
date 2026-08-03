@@ -243,6 +243,9 @@ Home-Assistant-Entitätsnamen direkt als Titel einsetzen.
 Im Expert-Modus weist eine Entitätsauswahl aus Picker oder Entitätsliste die
 Entität dem aktuell ausgewählten Editor-Feld zu und füllt den Titel mit dem
 Entitätsnamen vor.
+Für Bubble-Felder zeigt ATLAS zusätzlich einen Bubble-Button-Type-Dropdown.
+Aktuell unterstützt sind `state`, `switch`, `slider` und `name`; der Wert wird
+als `button_type` in den generierten Bubble-Card-Code geschrieben.
 
 ## Externe Referenz: Home Assistant Card Builder
 

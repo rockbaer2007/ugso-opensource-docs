@@ -234,6 +234,9 @@ currently selected Home Assistant entity name as the field title.
 In Expert mode, selecting an entity from the picker or entity list assigns that
 entity to the currently selected editor field and prefills the title from the
 entity name.
+For Bubble fields, ATLAS also shows a Bubble button type dropdown. The currently
+supported values are `state`, `switch`, `slider` and `name`; the selected value
+is written as `button_type` in the generated Bubble Card code.
 
 ## External Reference: Home Assistant Card Builder
 
