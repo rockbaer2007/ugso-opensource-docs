@@ -232,6 +232,9 @@ kann geladene Lovelace-Ressourcen nutzen, um Custom-Card-Familien als
 installiert, fehlend oder ungeprüft zu markieren. Beim Platzieren auf der
 Expert-Fläche klemmt ATLAS Spalte, Zeile und Größe an die erlaubten
 Rastergrenzen, damit Elemente nicht außerhalb der gültigen Fläche landen.
+Platzierte Felder können ausgewählt und über einen Bearbeiten-Modus angepasst
+werden. Erst im Bearbeiten-Modus erscheinen die vier Anfassecken, mit denen die
+Feldgröße innerhalb des 12-Spalten-Rasters verändert wird.
 
 ## Externe Referenz: Home Assistant Card Builder
 

@@ -224,6 +224,9 @@ are selected. The palette can use loaded Lovelace resources to mark custom card
 families as installed, missing or unchecked. When a block is placed on the
 expert surface, ATLAS clamps column, row and size to the allowed grid bounds so
 elements cannot be dropped outside the valid area.
+Placed fields can be selected and then adjusted through edit mode. The four
+corner handles appear only while edit mode is active for the selected field, and
+resize the field inside the 12-column grid.
 
 ## External Reference: Home Assistant Card Builder
 
