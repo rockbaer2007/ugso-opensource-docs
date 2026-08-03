@@ -212,6 +212,10 @@ oder `vertical-stack` markiert werden und mehrere Einträge enthalten. Wenn ein
 Expert-Plan noch keine belegten Felder enthält, nutzt ATLAS die Demo-Entitäten
 als sicheren Fallback.
 
+In der Demo blendet Expert den einfachen Card-Layout-Wähler und den normalen
+HA-Card-Code aus. Export, Package-Export, Kopieren und Ressourcen-Kopieren
+verwenden dann den Expert-HA-Card-Code aus der Editor-Fläche.
+
 Für die Bedienung ist eine seitliche Template-Palette vorgesehen. Dort können
 visuelle Bausteine wie Entity List, State Button, Switch Button,
 `vertical-stack` und `horizontal-stack` angeboten werden. In der Demo ist daraus
