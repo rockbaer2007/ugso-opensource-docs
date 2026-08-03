@@ -160,6 +160,14 @@ Unterstützte ATLAS-Packages und rohe Home-Assistant-Cards werden importiert,
 externe Card-Builder-ähnliche Dateien zeigen eine Review-Ausgabe, und unbekannte
 Artefakte werden vor dem Parsen abgelehnt.
 
+Außerdem zeigt die Demo eine erste Expert-Editor-Vorschau. Sie verwendet die
+gemeinsame, klickbare Template-Palette, erlaubt die Auswahl einer Card-Familie,
+platziert Felder im begrenzten Raster und rendert daraus verschachtelten
+Home-Assistant-Card-Code. Hinzugefügte Felder werden mit Entfernen-Aktion
+aufgelistet, damit die Vorschau gezielt angepasst werden kann. Das ist noch
+keine finale Drag-and-drop-Oberfläche, aber der erste sichtbare Schritt in diese
+Richtung.
+
 ## Geplanter Card-Layout-Editor
 
 ATLAS soll sich in Richtung eines visuellen Editors entwickeln, mit dem Nutzer

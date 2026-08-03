@@ -157,6 +157,13 @@ ATLAS packages and raw Home Assistant cards are imported, external
 card-builder-shaped files show a review output, and unknown artifacts are
 rejected before parsing.
 
+The demo also shows a first Expert editor preview. It uses the shared, clickable
+template palette, allows selecting a card family, places fields on the bounded
+grid and renders nested Home Assistant card code from that model. This is not
+the final drag-and-drop surface yet. Added fields are listed with a remove
+action so the preview can be adjusted field by field, making it the first
+visible step in that direction.
+
 ## Planned Card Layout Editor
 
 ATLAS is intended to grow into a visual editor where users can build a Home
