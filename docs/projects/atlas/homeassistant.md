@@ -148,6 +148,12 @@ ableiten. Bei einem gemischten Expert-Layout erkennt ATLAS dadurch gemeinsam,
 ob zum Beispiel Mushroom und Bubble Card als HACS-Ressourcen benötigt werden,
 während reine Entities-Felder keine zusätzliche Custom-Card-Resource brauchen.
 
+Zusätzlich kann ein Editor-Plan jetzt in eine Home-Assistant-Card-Konfiguration
+übersetzt werden. Simple nutzt die gewählte Ziel-Card direkt. Expert sortiert
+belegte Felder nach Zeile und Spalte und erzeugt daraus vorerst einen
+`vertical-stack` mit einer Card pro Feld. Wenn ein Expert-Plan noch keine
+belegten Felder enthält, nutzt ATLAS die Demo-Entitäten als sicheren Fallback.
+
 ## Import-Summary
 
 Beim Import normalisiert ATLAS die Karte in eine Zusammenfassung:

@@ -146,6 +146,12 @@ used. In a mixed expert layout, this lets ATLAS detect whether Mushroom and
 Bubble Card are required as HACS resources while pure Entities fields do not
 need an additional custom-card resource.
 
+An editor plan can now also be projected into a Home Assistant card
+configuration. Simple mode uses the selected target card directly. Expert mode
+sorts populated fields by row and column and currently emits a `vertical-stack`
+with one card per field. If an expert plan does not contain populated fields
+yet, ATLAS falls back to the safe demo entities.
+
 ## Import Summary
 
 On import, ATLAS normalizes the card into a summary:
