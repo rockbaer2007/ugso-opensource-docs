@@ -293,6 +293,9 @@ Palette-Scan ausgeblendet.
 Ein Reset-Button zeigt wieder die vollständige Liste. Die Palette selbst ist
 scrollbar und nutzt kompakte zweispaltige Template-Zeilen: Card-Name und
 Favoritenstatus stehen links, Layout-Details und Größensteuerung rechts.
+Spalten- und Zeilenvorgaben der Templates werden mit der lokalen
+Demo-Konfiguration gespeichert und können über `Reset sizes` wieder auf die
+Standardwerte zurückgesetzt werden.
 Ausgewählte Editorfelder können mit der Maus oder über Breite und Höhe in
 1er-Schritten verändert werden, bis zu fünf Rasterzellen über die
 Template-Standardgröße hinaus. Die Editorfläche selbst hat unten rechts einen
