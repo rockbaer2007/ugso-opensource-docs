@@ -141,6 +141,11 @@ The editor should offer two workflows:
   Each field should be able to choose its own card target, for example
   Entities, Bubble Card or Mushroom Template.
 
+From the editor plan, ATLAS can later derive the card targets that are actually
+used. In a mixed expert layout, this lets ATLAS detect whether Mushroom and
+Bubble Card are required as HACS resources while pure Entities fields do not
+need an additional custom-card resource.
+
 ## Import Summary
 
 On import, ATLAS normalizes the card into a summary:

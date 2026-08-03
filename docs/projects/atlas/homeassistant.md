@@ -143,6 +143,11 @@ Der Editor soll zwei Arbeitsweisen anbieten:
   Pro Feld soll der Card-Typ wählbar sein, zum Beispiel Entities, Bubble Card
   oder Mushroom Template.
 
+Aus dem Editor-Plan kann ATLAS künftig die tatsächlich genutzten Card-Ziele
+ableiten. Bei einem gemischten Expert-Layout erkennt ATLAS dadurch gemeinsam,
+ob zum Beispiel Mushroom und Bubble Card als HACS-Ressourcen benötigt werden,
+während reine Entities-Felder keine zusätzliche Custom-Card-Resource brauchen.
+
 ## Import-Summary
 
 Beim Import normalisiert ATLAS die Karte in eine Zusammenfassung:
