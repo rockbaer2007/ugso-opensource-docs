@@ -134,6 +134,13 @@ entities such as `binary_sensor.atlas_status` and
 `sensor.atlas_temperature`. The UI should clearly tell users to replace these
 demo entities with their own Home Assistant entities.
 
+The editor should offer two workflows:
+
+- **Simple**: fast button stacks for regular card exports.
+- **Expert**: a free editor surface where fields can be positioned manually.
+  Each field should be able to choose its own card target, for example
+  Entities, Bubble Card or Mushroom Template.
+
 ## Import Summary
 
 On import, ATLAS normalizes the card into a summary:

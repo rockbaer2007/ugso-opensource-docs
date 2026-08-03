@@ -136,6 +136,13 @@ wie `binary_sensor.atlas_status` und `sensor.atlas_temperature` als sichere
 Vorgabe mitzugeben. Die Oberfläche soll dabei klar darauf hinweisen, dass diese
 Beispiel-Entitäten durch eigene Home-Assistant-Entitäten ersetzt werden müssen.
 
+Der Editor soll zwei Arbeitsweisen anbieten:
+
+- **Simple**: schnelle Button-Stacks für normale Card-Exporte.
+- **Expert**: freie Editor-Fläche, auf der Felder positioniert werden können.
+  Pro Feld soll der Card-Typ wählbar sein, zum Beispiel Entities, Bubble Card
+  oder Mushroom Template.
+
 ## Import-Summary
 
 Beim Import normalisiert ATLAS die Karte in eine Zusammenfassung:
