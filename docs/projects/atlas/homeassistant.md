@@ -237,8 +237,9 @@ werden. Erst im Bearbeiten-Modus erscheinen die vier Anfassecken, mit denen die
 Feldgröße innerhalb des 12-Spalten-Rasters verändert wird.
 Die Titel platzierter Felder sind editierbar. Dieser Titel wird im Export als
 Entities-Title, Bubble-Button-Name oder Mushroom-Primary-Text verwendet. Ein
-Übernahme-Button kann den aktuell gewählten Home-Assistant-Entitätsnamen direkt
-als Titel einsetzen.
+Apply-Button übernimmt den manuell editierten Titel in das ausgewählte Feld.
+Der bestehende Übernahme-Button kann zusätzlich den aktuell gewählten
+Home-Assistant-Entitätsnamen direkt als Titel einsetzen.
 Im Expert-Modus weist eine Entitätsauswahl aus Picker oder Entitätsliste die
 Entität dem aktuell ausgewählten Editor-Feld zu und füllt den Titel mit dem
 Entitätsnamen vor.

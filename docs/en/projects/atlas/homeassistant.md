@@ -228,8 +228,9 @@ Placed fields can be selected and then adjusted through edit mode. The four
 corner handles appear only while edit mode is active for the selected field, and
 resize the field inside the 12-column grid.
 Placed field titles are editable. The title is exported as the Entities title,
-Bubble button name or Mushroom primary text. A copy button can use the currently
-selected Home Assistant entity name as the field title.
+Bubble button name or Mushroom primary text. An apply button writes a manually
+edited title to the selected field. The existing copy button can still use the
+currently selected Home Assistant entity name as the field title.
 In Expert mode, selecting an entity from the picker or entity list assigns that
 entity to the currently selected editor field and prefills the title from the
 entity name.
