@@ -284,6 +284,9 @@ Die Expert-Zusammenfassung nennt Felder, befüllte Felder, leere Platzhalter,
 belegte Reihen, aktuelle Surface-Ausdehnung, Überschneidungen, Card-Ziele und
 Layouttypen, bevor der generierte HA-Card-Code kopiert oder exportiert wird.
 Überlappende Editorfelder werden direkt auf der Fläche markiert.
+`Auto arrange` packt Felder in Zeilen- und Spaltenreihenfolge auf die ersten
+freien Rasterplätze und reduziert Überschneidungen, ohne den Card-Inhalt zu
+verändern.
 
 ## Externe Referenz: Home Assistant Card Builder
 

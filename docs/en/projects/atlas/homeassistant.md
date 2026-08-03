@@ -271,6 +271,8 @@ The Expert summary reports fields, populated fields, empty placeholders,
 occupied rows, current surface span, overlaps, card targets and layout types
 before the generated HA card code is copied or exported. Overlapping editor
 fields are marked directly on the surface.
+`Auto arrange` repacks fields into the first available free grid slots in row
+and column order, reducing overlaps without changing card content.
 
 ## External Reference: Home Assistant Card Builder
 
