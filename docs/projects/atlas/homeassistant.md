@@ -276,7 +276,9 @@ scrollbar und nutzt kompakte zweispaltige Template-Zeilen: Card-Name und
 Favoritenstatus stehen links, Layout-Details und Größensteuerung rechts.
 Ausgewählte Editorfelder können mit der Maus oder über Breite und Höhe in
 1er-Schritten verändert werden, bis zu fünf Rasterzellen über die
-Template-Standardgröße hinaus.
+Template-Standardgröße hinaus. Die Editorfläche selbst hat unten rechts einen
+sichtbaren Anfasser und kann in beide Richtungen um bis zu fünf Rasterschritte
+vergrößert werden; die aktuelle Größe bleibt der Standard.
 
 ## Externe Referenz: Home Assistant Card Builder
 
