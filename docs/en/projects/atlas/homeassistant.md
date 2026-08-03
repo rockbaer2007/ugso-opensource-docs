@@ -137,6 +137,21 @@ The inspection becomes an import decision for the UI:
 - **Review**: external card-builder-shaped artifacts.
 - **Reject**: unknown content or content without a safe import path.
 
+For the review case, ATLAS already returns structured review items: license
+boundary, detected visual blocks, detected entity slots and the next schema
+mapping step. A host UI can later turn this into a dialog before converting an
+external artifact into ATLAS fields.
+
+ATLAS can also create a mapping preview. Common external block types are mapped
+to ATLAS templates: state-like blocks to State Buttons, switch-like blocks to
+Switch Buttons and horizontal or vertical layout blocks to matching stack
+templates. Unknown blocks stay visible and require manual review.
+
+From a mapping preview, ATLAS can also create a reviewed field preview for the
+expert surface. The fields are placed on the grid, keep empty entities at first
+and remain review-required. This lets the UI show a conversion result without
+silently importing it.
+
 ## Planned Card Layout Editor
 
 ATLAS is intended to grow into a visual editor where users can build a Home

@@ -139,6 +139,22 @@ Aus dieser Prüfung entsteht eine Import-Entscheidung für die Oberfläche:
 - **Review**: externe Card-Builder-ähnliche Artefakte.
 - **Reject**: unbekannte oder nicht sicher einordenbare Inhalte.
 
+Für den Review-Fall liefert ATLAS bereits strukturierte Prüfpunkte: Lizenzgrenze,
+erkannte visuelle Blöcke, erkannte Entity-Slots und den nächsten Schritt zur
+Schema-Zuordnung. Eine Oberfläche kann daraus später einen Dialog bauen, bevor
+ein externes Artefakt in ATLAS-Felder umgewandelt wird.
+
+Zusätzlich kann ATLAS eine Mapping-Vorschau erzeugen. Häufige externe
+Blocktypen werden dabei ATLAS-Templates zugeordnet: State-ähnliche Blöcke zu
+State Buttons, Switch-ähnliche Blöcke zu Switch Buttons und horizontale oder
+vertikale Layout-Blöcke zu passenden Stack-Templates. Nicht erkannte Blöcke
+bleiben sichtbar und müssen manuell bewertet werden.
+
+Aus einer Mapping-Vorschau kann ATLAS außerdem eine geprüfte Field-Preview für
+die Expert-Fläche erzeugen. Die Felder werden im Raster platziert, enthalten
+aber zunächst leere Entitäten und bleiben review-pflichtig. So kann die
+Oberfläche eine Umwandlung zeigen, ohne sie still zu importieren.
+
 ## Geplanter Card-Layout-Editor
 
 ATLAS soll sich in Richtung eines visuellen Editors entwickeln, mit dem Nutzer
