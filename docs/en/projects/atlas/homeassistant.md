@@ -227,6 +227,9 @@ elements cannot be dropped outside the valid area.
 Placed fields can be selected and then adjusted through edit mode. The four
 corner handles appear only while edit mode is active for the selected field, and
 resize the field inside the 12-column grid.
+Placed field titles are editable. The title is exported as the Entities title,
+Bubble button name or Mushroom primary text. A copy button can use the currently
+selected Home Assistant entity name as the field title.
 
 ## External Reference: Home Assistant Card Builder
 

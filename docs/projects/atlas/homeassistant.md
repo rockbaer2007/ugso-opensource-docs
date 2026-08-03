@@ -235,6 +235,10 @@ Rastergrenzen, damit Elemente nicht außerhalb der gültigen Fläche landen.
 Platzierte Felder können ausgewählt und über einen Bearbeiten-Modus angepasst
 werden. Erst im Bearbeiten-Modus erscheinen die vier Anfassecken, mit denen die
 Feldgröße innerhalb des 12-Spalten-Rasters verändert wird.
+Die Titel platzierter Felder sind editierbar. Dieser Titel wird im Export als
+Entities-Title, Bubble-Button-Name oder Mushroom-Primary-Text verwendet. Ein
+Übernahme-Button kann den aktuell gewählten Home-Assistant-Entitätsnamen direkt
+als Titel einsetzen.
 
 ## Externe Referenz: Home Assistant Card Builder
 
