@@ -158,10 +158,14 @@ die Expert-Fläche erzeugen. Die Felder werden im Raster platziert, enthalten
 aber zunächst leere Entitäten und bleiben review-pflichtig. So kann die
 Oberfläche eine Umwandlung zeigen, ohne sie still zu importieren.
 
-Die Status-Demo nutzt diese Prüfung inzwischen direkt vor dem HA-Card-Import.
+Die Card-Editor-Demo nutzt diese Prüfung inzwischen direkt vor dem HA-Card-Import.
 Unterstützte ATLAS-Packages und rohe Home-Assistant-Cards werden importiert,
 externe Card-Builder-ähnliche Dateien zeigen eine Review-Ausgabe, und unbekannte
 Artefakte werden vor dem Parsen abgelehnt.
+Die ATLAS Status Preview bleibt als Renderer-, Theme- und Entitäts-Smoke-Test
+erhalten, liegt aber jetzt im einklappbaren Diagnostics-Bereich und steht nicht
+mehr im Hauptfluss des Card-Editors. Ob Diagnostics geöffnet ist, wird mit der
+lokalen Demo-Konfiguration gespeichert.
 
 Außerdem zeigt die Demo eine erste Expert-Editor-Vorschau. Sie verwendet die
 gemeinsame, klickbare Template-Palette, erlaubt die Auswahl einer Card-Familie,

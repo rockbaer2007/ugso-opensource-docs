@@ -155,10 +155,14 @@ expert surface. The fields are placed on the grid, keep empty entities at first
 and remain review-required. This lets the UI show a conversion result without
 silently importing it.
 
-The status demo now uses this inspection before HA-card imports. Supported
+The card editor demo now uses this inspection before HA-card imports. Supported
 ATLAS packages and raw Home Assistant cards are imported, external
 card-builder-shaped files show a review output, and unknown artifacts are
 rejected before parsing.
+The ATLAS Status Preview remains available as a renderer, theme and entity
+smoke test, but it now lives in a collapsible Diagnostics panel and no longer
+sits in the main card-editor flow. The Diagnostics open state is saved with the
+local demo configuration.
 
 The demo also shows a first Expert editor preview. It uses the shared, clickable
 template palette, allows selecting a card family, places fields on the bounded
