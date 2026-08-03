@@ -121,6 +121,19 @@ In the demo, these files end with:
 The same import can read raw Home Assistant cards as JSON/YAML and Atlas Card
 Packages.
 
+## Planned Card Layout Editor
+
+ATLAS is intended to grow into a visual editor where users can build a Home
+Assistant card layout by drag and drop. The visible card name and the generated
+JavaScript filename should remain separate: for example, a user can name a card
+`Energy Kitchen` and later export an installable `energy-kitchen.js` file
+instead of being limited to a fixed name such as `atlas-card.js`.
+
+For the later HACS card package export, ATLAS should also include safe demo
+entities such as `binary_sensor.atlas_status` and
+`sensor.atlas_temperature`. The UI should clearly tell users to replace these
+demo entities with their own Home Assistant entities.
+
 ## Import Summary
 
 On import, ATLAS normalizes the card into a summary:

@@ -122,6 +122,20 @@ In der Demo enden diese Dateien auf:
 Der gleiche Import kann rohe Home-Assistant-Karten als JSON/YAML und Atlas Card
 Packages einlesen.
 
+## Geplanter Card-Layout-Editor
+
+ATLAS soll sich in Richtung eines visuellen Editors entwickeln, mit dem Nutzer
+eine Home-Assistant-Card per Drag-and-drop aufbauen können. Dabei sollen
+Cardname und JavaScript-Dateiname getrennt bleiben: Ein Nutzer kann also zum
+Beispiel eine Card `Energy Kitchen` nennen und daraus später eine installierbare
+Datei `energy-kitchen.js` erzeugen, statt auf einen festen Namen wie
+`atlas-card.js` beschränkt zu sein.
+
+Für den späteren HACS-Card-Paket-Export ist außerdem vorgesehen, Demo-Entitäten
+wie `binary_sensor.atlas_status` und `sensor.atlas_temperature` als sichere
+Vorgabe mitzugeben. Die Oberfläche soll dabei klar darauf hinweisen, dass diese
+Beispiel-Entitäten durch eigene Home-Assistant-Entitäten ersetzt werden müssen.
+
 ## Import-Summary
 
 Beim Import normalisiert ATLAS die Karte in eine Zusammenfassung:
