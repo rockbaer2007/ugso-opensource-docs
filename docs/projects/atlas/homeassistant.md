@@ -249,7 +249,16 @@ als `button_type` in den generierten Bubble-Card-Code geschrieben.
 Die linke Expert-Palette trennt Core- und Community-Cards. Einzelne Cards
 können per Häkchen als Favoriten markiert und über `Save favorites`
 gespeichert werden. Sobald Favoriten gespeichert sind, blendet ATLAS alle
-anderen Cards aus. Ein Reset-Button zeigt wieder die vollständige Liste.
+anderen Cards aus. `Show all cards` öffnet die vollständige Liste erneut,
+ohne die gespeicherten Favoriten zu löschen. Dadurch können mehrere Favoriten
+bequem nachträglich ausgewählt und danach gemeinsam gespeichert werden.
+`Scan HA cards` liest die aktuell registrierten Lovelace-Ressourcen aus Home
+Assistant und ergänzt erkannte Community-Cards wie Mushroom und Bubble Card in
+der Palette. Home Assistant liefert darüber keine vollständige Options-Registry
+für jede beliebige Custom-Card, aber installierte Ressourcen lassen sich so als
+Ausgangspunkt erkennen. Andere registrierte Lovelace-Ressourcen werden als
+Scan-only-Einträge sichtbar, bis ATLAS dafür ein sicheres Card-Mapping kennt.
+Ein Reset-Button zeigt wieder die vollständige Liste.
 
 ## Externe Referenz: Home Assistant Card Builder
 
