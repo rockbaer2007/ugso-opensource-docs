@@ -468,9 +468,11 @@ locale files are marked as `machine` and still need review before publishing.
 The server-side model name can be overridden with
 `ATLAS_OPENAI_TRANSLATION_MODEL`.
 After reloading Atlas Administration, the Admin page restores provider API keys
-from the local Admin configuration and can also refresh them from the running
-local Admin server through `GET /api/admin-connection?includeSecrets=1`. Raw
-keys still are not written to cookie or Card Editor handoff payloads.
+from an encrypted long-term Admin cookie. The browser-side decryption key stays
+in local Admin storage, so the cookie itself does not contain raw provider
+keys. The Admin page can also refresh secrets from the running local Admin
+server through `GET /api/admin-connection?includeSecrets=1`. Raw keys still are
+not written to the shared handoff cookie or Card Editor handoff payloads.
 
 The Lovelace UV Card is planned as a later follow-up project. For this card,
 `filipnet/haos-uv-index` is noted as an inspiration source. The relevant point
