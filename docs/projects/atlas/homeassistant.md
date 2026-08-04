@@ -57,14 +57,16 @@ registriert ist oder welcher Pfad noch fehlt.
 | Mushroom Template | HACS > Frontend > Mushroom | `/hacsfiles/lovelace-mushroom/mushroom.js` |
 | Bubble Button | HACS > Frontend > Bubble Card | `/hacsfiles/Bubble-Card/bubble-card.js` |
 
-Für Bubble Card ist der HACS-Ressourcenpfad absichtlich exakt so hinterlegt:
+Alle erwarteten Home-Assistant- und HACS-Ressourcenpfade werden exakt mit
+Groß- und Kleinschreibung geprüft. Für Bubble Card ist der Pfad zum Beispiel
+absichtlich so hinterlegt:
 
 ```text
 /hacsfiles/Bubble-Card/bubble-card.js
 ```
 
 Wichtig: Home Assistant läuft häufig auf Linux. Groß- und Kleinschreibung im
-Pfad sind dort relevant.
+Pfad sind dort für alle Ressourcen relevant.
 
 ATLAS kann für Mushroom und Bubble Card außerdem einen kopierbaren
 Lovelace-Ressourcen-Snippet erzeugen. Der kombinierte Snippet enthält die

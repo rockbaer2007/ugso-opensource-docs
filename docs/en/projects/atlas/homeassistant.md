@@ -56,14 +56,15 @@ Assistant or which path is still missing.
 | Mushroom Template | HACS > Frontend > Mushroom | `/hacsfiles/lovelace-mushroom/mushroom.js` |
 | Bubble Button | HACS > Frontend > Bubble Card | `/hacsfiles/Bubble-Card/bubble-card.js` |
 
-For Bubble Card, the HACS resource path is intentionally stored exactly like
-this:
+All expected Home Assistant and HACS resource paths are checked with exact
+casing. For Bubble Card, the path is intentionally stored like this:
 
 ```text
 /hacsfiles/Bubble-Card/bubble-card.js
 ```
 
-Home Assistant often runs on Linux. Path casing matters there.
+Home Assistant often runs on Linux. Path casing matters for every resource
+there.
 
 ATLAS can also create a copy-ready Lovelace resource snippet for Mushroom and
 Bubble Card. The combined snippet includes the ATLAS frontend resource and,
