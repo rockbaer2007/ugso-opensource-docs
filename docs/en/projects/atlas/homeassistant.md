@@ -443,8 +443,9 @@ the Runtime plugin contract and become discoverable through the Plugin Catalog.
 `createHomeAssistantCardEditorPluginInstallPackage()` also creates a first
 install package with manifest, README and example configuration.
 
-This plugin step is already visible in the demo: the minimal Atlas
-Administration panel shows the Card Editor as an installed reference plugin and
-exports the plugin package as `.atlas-plugin.json`. The admin surface also marks
-the intended security boundary: tokens and connection settings belong to Atlas
-centrally, while plugins receive only approved paths, URLs and capabilities.
+This plugin step is already visible: the minimal Atlas Administration runs as a
+dedicated surface on port `4175`, separate from the Card Editor on port `4174`.
+It shows the Card Editor as an installed reference plugin and exports the plugin
+package as `.atlas-plugin.json`. The admin surface also marks the intended
+security boundary: tokens and connection settings belong to Atlas centrally,
+while plugins receive only approved paths, URLs and capabilities.

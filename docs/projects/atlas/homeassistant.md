@@ -464,8 +464,9 @@ werden.
 `createHomeAssistantCardEditorPluginInstallPackage()` erzeugt zusätzlich ein
 erstes Installpaket mit Manifest, README und Beispielkonfiguration.
 
-In der Demo ist dieser Plugin-Schritt bereits sichtbar: Die minimale Atlas
-Administration zeigt den Card Editor als installiertes Referenz-Plugin und
+Dieser Plugin-Schritt ist bereits sichtbar: Die minimale Atlas Administration
+läuft als eigene Oberfläche auf Port `4175`, getrennt vom Card Editor auf Port
+`4174`. Sie zeigt den Card Editor als installiertes Referenz-Plugin und
 exportiert das Plugin-Paket als `.atlas-plugin.json`. Die Admin-Fläche markiert
 zugleich die spätere Sicherheitsgrenze: Tokens und Verbindungseinstellungen
 liegen zentral in Atlas, während Plugins nur freigegebene Pfade, URLs und
