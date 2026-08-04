@@ -66,6 +66,22 @@ A complete plugin documentation area should later contain:
 - versioning
 - publishing and HACS/package notes
 
+## Atlas Administration
+
+A dedicated Atlas Administration web surface is planned for plugin management. It should show installed plugins and support the full plugin workflow.
+
+Planned capabilities include:
+
+- viewing, enabling and disabling installed plugins
+- checking plugin status, versions, dependencies and diagnostics
+- creating new plugins through a wizard or template
+- editing plugin manifests and extension points
+- importing and exporting plugins
+- generating installable packages such as ZIP or HACS-oriented bundles
+- including demo data, example configurations and README files in packages
+
+In the long term, the administration surface should become the central place for plugin management, package building and quality checks.
+
 ## Example Direction
 
 A simple plugin could later:
@@ -97,4 +113,5 @@ The next documentation steps are:
 2. Define a minimal example plugin.
 3. Add manifest and lifecycle examples.
 4. Document Home Assistant-specific plugin extensions.
-5. Prepare a publishing checklist.
+5. Describe Atlas Administration for plugin management and package building.
+6. Prepare a publishing checklist.

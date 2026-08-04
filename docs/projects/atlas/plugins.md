@@ -66,6 +66,22 @@ Eine vollständige Plugin-Doku soll später folgende Kapitel enthalten:
 - Versionierung
 - Veröffentlichung und HACS-/Paket-Hinweise
 
+## Atlas Administration
+
+Für die Verwaltung von Plugins ist eine eigene Atlas-Administration als Weboberfläche geplant. Sie soll nicht nur installierte Plugins anzeigen, sondern den gesamten Arbeitsfluss rund um Plugins unterstützen.
+
+Geplante Funktionen sind:
+
+- installierte Plugins anzeigen, aktivieren und deaktivieren
+- Plugin-Status, Versionen, Abhängigkeiten und Diagnosemeldungen prüfen
+- neue Plugins über einen Wizard oder eine Vorlage erstellen
+- Plugin-Manifeste und Extension Points bearbeiten
+- Plugins importieren und exportieren
+- installierbare Pakete erzeugen, zum Beispiel ZIP- oder HACS-nahe Bundles
+- Demo-Daten, Beispielkonfigurationen und README-Dateien für Pakete mitliefern
+
+Die Administration soll langfristig als zentrale Oberfläche für Plugin-Verwaltung, Paketbau und Qualitätsprüfung dienen.
+
 ## Beispielrichtung
 
 Ein einfaches Plugin könnte später etwa:
@@ -97,4 +113,5 @@ Die nächsten Doku-Schritte sind:
 2. ein minimales Beispiel-Plugin definieren
 3. Manifest- und Lifecycle-Beispiele ergänzen
 4. Home-Assistant-spezifische Plugin-Erweiterungen dokumentieren
-5. Publishing-Checkliste ausarbeiten
+5. Atlas-Administration für Plugin-Verwaltung und Paketbau beschreiben
+6. Publishing-Checkliste ausarbeiten
