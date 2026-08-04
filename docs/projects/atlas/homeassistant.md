@@ -491,14 +491,18 @@ API. Erfolgreich erzeugte Locale-Dateien werden als `machine` markiert und
 muessen vor einer Veroeffentlichung weiterhin geprueft werden. Der verwendete
 OpenAI-Modellname kann serverseitig ueber `ATLAS_OPENAI_TRANSLATION_MODEL`
 ueberschrieben werden.
-Nach einem Reload der Atlas Administration stellt die Admin-Seite Provider-API-
-Keys aus einem verschluesselten Langzeit-Admin-Cookie wieder her. Der
-browserseitige Entschluesselungsschluessel bleibt in der lokalen
-Admin-Speicherung, damit der Cookie selbst keine rohen Provider-Keys enthaelt.
+Nach einem Reload der Atlas Administration stellt die Admin-Seite den
+Home-Assistant-Token und Provider-API-Keys aus einem verschluesselten
+Langzeit-Admin-Cookie wieder her. Der browserseitige
+Entschluesselungsschluessel bleibt in der lokalen Admin-Speicherung, damit der
+Cookie selbst keine rohen Provider-Keys und keinen rohen Token enthaelt.
 Zusaetzlich kann die Admin-Seite Secrets vom laufenden lokalen Admin-Server
 ueber `GET /api/admin-connection?includeSecrets=1` auffrischen. Die rohen Keys
-werden weiterhin nicht in den gemeinsamen Handoff-Cookie oder in
-Card-Editor-Handoff-Payloads geschrieben.
+und der rohe Token werden weiterhin nicht in den gemeinsamen Handoff-Cookie
+oder in Card-Editor-Handoff-Payloads geschrieben. Fuer Sicherungen kann die
+Administration `atlas-admin-settings.json` exportieren: normale Einstellungen
+bleiben lesbar, Token und Provider-API-Keys liegen darin als AES-GCM-
+verschluesselter `encryptedSecrets`-Block.
 
 Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig
