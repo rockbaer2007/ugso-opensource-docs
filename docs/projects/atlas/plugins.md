@@ -92,6 +92,10 @@ Eine vollständige Plugin-Doku soll später folgende Kapitel enthalten:
 
 Für die Verwaltung von Plugins ist eine eigene Atlas-Administration als Weboberfläche geplant. Sie soll nicht nur installierte Plugins anzeigen, sondern den gesamten Arbeitsfluss rund um Plugins unterstützen.
 
+Der erste sichtbare Schritt ist eine minimale Administration im Home-Assistant-Card-Editor-Demo. Sie liest den Runtime-Plugin-Katalog, zeigt den Home Assistant Card Editor als erstes Referenz-Plugin, stellt Status, Version, Extension Points und Fähigkeiten dar und bietet erste Aktionen wie Prüfen, Aktivieren, Deaktivieren und Paket exportieren.
+
+Die Administration ist außerdem der zentrale Ort für sensible Verbindungseinstellungen. Home-Assistant-Tokens sollen dort verwaltet werden. Plugins bekommen später nur freigegebene Kontextdaten wie Home-Assistant-URL, WebSocket-Pfad, erlaubte Ressourcenpfade und deklarierte Fähigkeiten, aber keinen rohen Access Token.
+
 Geplante Funktionen sind:
 
 - installierte Plugins anzeigen, aktivieren und deaktivieren

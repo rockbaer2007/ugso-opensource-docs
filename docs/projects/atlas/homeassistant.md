@@ -463,3 +463,10 @@ die Runtime-Plugin-Schnittstelle aktiviert und über den Plugin-Katalog gefunden
 werden.
 `createHomeAssistantCardEditorPluginInstallPackage()` erzeugt zusätzlich ein
 erstes Installpaket mit Manifest, README und Beispielkonfiguration.
+
+In der Demo ist dieser Plugin-Schritt bereits sichtbar: Die minimale Atlas
+Administration zeigt den Card Editor als installiertes Referenz-Plugin und
+exportiert das Plugin-Paket als `.atlas-plugin.json`. Die Admin-Fläche markiert
+zugleich die spätere Sicherheitsgrenze: Tokens und Verbindungseinstellungen
+liegen zentral in Atlas, während Plugins nur freigegebene Pfade, URLs und
+Fähigkeiten erhalten.

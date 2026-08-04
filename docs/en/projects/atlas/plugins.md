@@ -92,6 +92,10 @@ A complete plugin documentation area should later contain:
 
 A dedicated Atlas Administration web surface is planned for plugin management. It should show installed plugins and support the full plugin workflow.
 
+The first visible step is a minimal administration panel in the Home Assistant Card Editor demo. It reads the Runtime plugin catalog, shows the Home Assistant Card Editor as the first reference plugin, displays status, version, extension points and capabilities, and exposes first actions such as inspect, activate, deactivate and export package.
+
+Administration is also the central place for sensitive connection settings. Home Assistant tokens should be managed there. Plugins should later receive only approved context such as the Home Assistant URL, WebSocket path, allowed resource paths and declared capabilities, but never the raw access token.
+
 Planned capabilities include:
 
 - viewing, enabling and disabling installed plugins
