@@ -440,3 +440,5 @@ workflow.
 In the Atlas package, this step is already prepared through
 `createHomeAssistantCardEditorPlugin()`. This lets the editor activate through
 the Runtime plugin contract and become discoverable through the Plugin Catalog.
+`createHomeAssistantCardEditorPluginInstallPackage()` also creates a first
+install package with manifest, README and example configuration.

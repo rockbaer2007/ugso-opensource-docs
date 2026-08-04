@@ -49,6 +49,8 @@ The Home Assistant Card Editor is treated as the first official ATLAS reference 
 
 In the Atlas code, `createHomeAssistantCardEditorPlugin()` exposes the editor as a `RuntimePlugin`. During activation, the plugin registers a service with card targets, editor templates, Bubble button types and capabilities that can later be shown in Atlas Administration.
 
+`createHomeAssistantCardEditorPluginInstallPackage()` also creates the first install package for this reference plugin. It includes a plugin manifest, a README and an example Home Assistant card configuration.
+
 As a reference plugin, the editor uses these extension points:
 
 - `homeassistant.card-editor`

@@ -461,3 +461,5 @@ Im Atlas-Paket wird dieser Schritt bereits durch
 `createHomeAssistantCardEditorPlugin()` vorbereitet. Damit kann der Editor über
 die Runtime-Plugin-Schnittstelle aktiviert und über den Plugin-Katalog gefunden
 werden.
+`createHomeAssistantCardEditorPluginInstallPackage()` erzeugt zusätzlich ein
+erstes Installpaket mit Manifest, README und Beispielkonfiguration.

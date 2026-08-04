@@ -49,6 +49,8 @@ Der Home Assistant Card Editor wird als erstes offizielles ATLAS-Referenz-Plugin
 
 Im Atlas-Code stellt `createHomeAssistantCardEditorPlugin()` diesen Editor als `RuntimePlugin` bereit. Bei der Aktivierung registriert das Plugin einen Service mit Card Targets, Editor-Templates, Bubble-Button-Typen und Fähigkeiten, die später in der Atlas Administration angezeigt werden können.
 
+Zusätzlich erzeugt `createHomeAssistantCardEditorPluginInstallPackage()` ein erstes Installpaket für dieses Referenz-Plugin. Es enthält ein Plugin-Manifest, eine README und ein Beispiel für eine Home-Assistant-Card-Konfiguration.
+
 Als Referenz-Plugin nutzt der Editor folgende Extension Points:
 
 - `homeassistant.card-editor`
