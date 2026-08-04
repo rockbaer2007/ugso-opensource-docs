@@ -10,6 +10,7 @@ spätere HACS-Nutzung.
 - ATLAS Status Preview mit Theme- und Renderer-Anbindung
 - lokale und live geladene Home-Assistant-Entitäten
 - Verbindung über Home-Assistant-WebSocket
+- optionale automatische Verbindung beim Seitenaufruf mit lokal gespeichertem Token
 - Laden der Entitäten über `get_states`
 - Laden der Lovelace-Ressourcen über `lovelace/resources`
 - gemeinsamer Entity-Katalog für Typfilter und Suche
