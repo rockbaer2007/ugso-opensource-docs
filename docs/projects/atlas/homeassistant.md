@@ -116,6 +116,10 @@ Das Archiv enthaelt die Dateien fuer ein spaeteres Frontend-Repository:
 `hacs.json`, die generierte JavaScript-Card, eine README, eine
 Beispiel-Lovelace-Card und das urspruengliche Atlas Card Package fuer spaetere
 Bearbeitung.
+Die Demo kann solche `.hacs.zip`-Dateien beim HA-Card-Import wieder erkennen.
+Sie liest die ZIP-Struktur, meldet fehlende Bundle-Dateien und stoppt bewusst
+vor dem vollstaendigen Inhaltsimport. Dieser Vollimport bleibt der naechste
+Workflow-Schritt.
 
 ```json
 {
