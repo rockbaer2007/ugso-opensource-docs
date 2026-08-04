@@ -491,11 +491,11 @@ API. Erfolgreich erzeugte Locale-Dateien werden als `machine` markiert und
 muessen vor einer Veroeffentlichung weiterhin geprueft werden. Der verwendete
 OpenAI-Modellname kann serverseitig ueber `ATLAS_OPENAI_TRANSLATION_MODEL`
 ueberschrieben werden.
-Nach einem Reload der Atlas Administration kann die Admin-Seite Provider-API-
-Keys vom laufenden lokalen Admin-Server ueber
-`GET /api/admin-connection?includeSecrets=1` wieder in die Eingabefelder laden.
-Die rohen Keys werden weiterhin nicht in Cookie- oder Card-Editor-Handoff-
-Payloads geschrieben.
+Nach einem Reload der Atlas Administration stellt die Admin-Seite Provider-API-
+Keys aus der lokalen Admin-Konfiguration wieder her und kann sie zusaetzlich vom
+laufenden lokalen Admin-Server ueber
+`GET /api/admin-connection?includeSecrets=1` auffrischen. Die rohen Keys werden
+weiterhin nicht in Cookie- oder Card-Editor-Handoff-Payloads geschrieben.
 
 Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig
