@@ -473,6 +473,10 @@ spaetere echte automatische Uebersetzung muss klar darauf hinweisen, dass
 dafuer eine Internetverbindung erforderlich ist.
 Fuer DeepL ist `https://www.deepl.com/de/pro#api` als Referenz fuer die
 Free/Pro-API-Optionen vorgemerkt.
+Der vorbereitete DeepL-Translate-Endpunkt ist
+`https://api.deepl.com/v2/translate`; die Request-Details werden ueber
+`https://developers.deepl.com/api-reference/translate/request-translation`
+nachgehalten.
 
 Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig

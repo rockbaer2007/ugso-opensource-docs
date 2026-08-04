@@ -451,6 +451,9 @@ real automatic translation option must clearly state that it requires an
 internet connection.
 For DeepL, `https://www.deepl.com/de/pro#api` is kept as the reference for
 Free/Pro API options.
+The prepared DeepL translate endpoint is `https://api.deepl.com/v2/translate`;
+request details are tracked through
+`https://developers.deepl.com/api-reference/translate/request-translation`.
 
 The Lovelace UV Card is planned as a later follow-up project. For this card,
 `filipnet/haos-uv-index` is noted as an inspiration source. The relevant point
