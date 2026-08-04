@@ -9,7 +9,7 @@ Assistant cards, live entities and later HACS-oriented usage.
 - ATLAS Status Preview with Theme and Renderer integration
 - local and live Home Assistant entities
 - connection through the Home Assistant WebSocket API
-- optional automatic connection on page load with a locally stored token
+- token management in Atlas Administration with handoff to the active editor session
 - loading entities through `get_states`
 - loading Lovelace resources through `lovelace/resources`
 - shared entity catalog for type filters and search
@@ -447,5 +447,6 @@ This plugin step is already visible: the minimal Atlas Administration runs as a
 dedicated surface on port `4175`, separate from the Card Editor on port `4174`.
 It shows the Card Editor as an installed reference plugin and exports the plugin
 package as `.atlas-plugin.json`. The admin surface also marks the intended
-security boundary: tokens and connection settings belong to Atlas centrally,
+security boundary: tokens and connection settings belong to Atlas centrally.
+The editor receives the token only as a session handoff from Administration,
 while plugins receive only approved paths, URLs and capabilities.

@@ -10,7 +10,7 @@ spätere HACS-Nutzung.
 - ATLAS Status Preview mit Theme- und Renderer-Anbindung
 - lokale und live geladene Home-Assistant-Entitäten
 - Verbindung über Home-Assistant-WebSocket
-- optionale automatische Verbindung beim Seitenaufruf mit lokal gespeichertem Token
+- Token-Verwaltung in der Atlas Administration mit Übergabe an die aktive Editor-Sitzung
 - Laden der Entitäten über `get_states`
 - Laden der Lovelace-Ressourcen über `lovelace/resources`
 - gemeinsamer Entity-Katalog für Typfilter und Suche
@@ -469,5 +469,6 @@ läuft als eigene Oberfläche auf Port `4175`, getrennt vom Card Editor auf Port
 `4174`. Sie zeigt den Card Editor als installiertes Referenz-Plugin und
 exportiert das Plugin-Paket als `.atlas-plugin.json`. Die Admin-Fläche markiert
 zugleich die spätere Sicherheitsgrenze: Tokens und Verbindungseinstellungen
-liegen zentral in Atlas, während Plugins nur freigegebene Pfade, URLs und
+liegen zentral in Atlas. Der Editor erhält den Token nur als Sitzungsübergabe
+aus der Administration, während Plugins nur freigegebene Pfade, URLs und
 Fähigkeiten erhalten.
