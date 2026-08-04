@@ -39,6 +39,20 @@ Der Adapter bewahrt Plugin-Metadaten, Extension Points und bereitgestellte Fähi
 
 Mit `RuntimePluginCatalog` gibt es außerdem eine erste Discovery-Fläche. Sie registriert Plugins nach ID, stellt beschreibende Metadaten bereit und kann Plugins nach Extension Point oder bereitgestellter Capability finden.
 
+## Erstes Referenz-Plugin
+
+Der Home Assistant Card Editor soll als erstes offizielles ATLAS-Referenz-Plugin behandelt werden. Er ist damit nicht nur eine Demo, sondern der praktische Nachweis, dass Plugin-Lebenszyklus, Discovery, Administration, Import/Export und Paketbau zusammen funktionieren.
+
+Als Referenz-Plugin soll der Editor später unter anderem folgende Extension Points nutzen:
+
+- `homeassistant.card-editor`
+- `homeassistant.card-target`
+- `homeassistant.entity-picker`
+- `homeassistant.exporter`
+- `atlas.plugin.package-builder`
+
+Dadurch entsteht ein echtes Beispiel für weitere Plugins: sichtbar in der Atlas Administration, aktivierbar über den Plugin-Katalog und exportierbar als installierbares Paket.
+
 ## Geplante Extension-Flächen
 
 Die ersten Extension-Flächen sollen sich an den bestehenden ATLAS-Paketen orientieren:
@@ -110,7 +124,7 @@ Für veröffentlichbare Plugins sind geplant:
 Die nächsten Doku-Schritte sind:
 
 1. Plugin-Verträge im Atlas-Repo stabilisieren
-2. ein minimales Beispiel-Plugin definieren
+2. den Home Assistant Card Editor als erstes Referenz-Plugin modellieren
 3. Manifest- und Lifecycle-Beispiele ergänzen
 4. Home-Assistant-spezifische Plugin-Erweiterungen dokumentieren
 5. Atlas-Administration für Plugin-Verwaltung und Paketbau beschreiben

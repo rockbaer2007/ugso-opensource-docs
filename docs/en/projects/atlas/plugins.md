@@ -39,6 +39,20 @@ The adapter preserves plugin metadata, extension points and provided capabilitie
 
 `RuntimePluginCatalog` also provides the first discovery surface. It registers plugins by id, exposes descriptive metadata and can find plugins by extension point or provided capability.
 
+## First Reference Plugin
+
+The Home Assistant Card Editor should be treated as the first official ATLAS reference plugin. It is therefore more than a demo: it proves that plugin lifecycle, discovery, administration, import/export and package building work together.
+
+As a reference plugin, the editor should later use extension points such as:
+
+- `homeassistant.card-editor`
+- `homeassistant.card-target`
+- `homeassistant.entity-picker`
+- `homeassistant.exporter`
+- `atlas.plugin.package-builder`
+
+This creates a real example for future plugins: visible in Atlas Administration, activatable through the plugin catalog and exportable as an installable package.
+
 ## Planned Extension Surfaces
 
 The first extension surfaces should align with the existing ATLAS packages:
@@ -110,7 +124,7 @@ Publishable plugins should provide:
 The next documentation steps are:
 
 1. Stabilize plugin contracts in the Atlas repo.
-2. Define a minimal example plugin.
+2. Model the Home Assistant Card Editor as the first reference plugin.
 3. Add manifest and lifecycle examples.
 4. Document Home Assistant-specific plugin extensions.
 5. Describe Atlas Administration for plugin management and package building.

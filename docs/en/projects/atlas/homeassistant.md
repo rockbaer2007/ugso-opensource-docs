@@ -431,3 +431,8 @@ The Home Assistant integration targets two usage modes:
 
 The current Card Packages are an intermediate step toward an installable and
 re-importable HA card editor.
+
+The Home Assistant Card Editor is treated as the first official ATLAS reference
+plugin. It should later show how a plugin combines entity selection, card
+targets, import/export, HACS-oriented packages and administration in a real
+workflow.
