@@ -41,6 +41,8 @@ The adapter preserves plugin metadata, extension points and provided capabilitie
 
 `createRuntimePluginAdministrationView()` prepares the future Atlas Administration surface. It turns Plugin Catalog data into a management view with statuses such as `available`, `active` and `disabled`, plus actions such as `inspect`, `activate`, `deactivate` and `export-package`.
 
+`createRuntimePluginInstallPackage()` adds the first package contract. It creates a package description with `atlas-plugin.json`, `README.md` and optional additional files that can later be emitted as an installable package by the administration surface or an archive builder.
+
 ## First Reference Plugin
 
 The Home Assistant Card Editor is treated as the first official ATLAS reference plugin. It is therefore more than a demo: it proves that plugin lifecycle, discovery, administration, import/export and package building work together.

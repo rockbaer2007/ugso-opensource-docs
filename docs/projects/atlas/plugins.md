@@ -41,6 +41,8 @@ Mit `RuntimePluginCatalog` gibt es außerdem eine erste Discovery-Fläche. Sie r
 
 `createRuntimePluginAdministrationView()` bereitet die spätere Atlas Administration vor. Die Funktion erzeugt aus Plugin-Katalogdaten eine Verwaltungsansicht mit Statuswerten wie `available`, `active` und `disabled` sowie Aktionen wie `inspect`, `activate`, `deactivate` und `export-package`.
 
+Mit `createRuntimePluginInstallPackage()` gibt es auch den ersten Paketvertrag. Er erzeugt eine Paketbeschreibung mit `atlas-plugin.json`, `README.md` und optionalen Zusatzdateien, die später von der Administration oder einem Archiv-Builder als installierbares Paket ausgegeben werden kann.
+
 ## Erstes Referenz-Plugin
 
 Der Home Assistant Card Editor wird als erstes offizielles ATLAS-Referenz-Plugin behandelt. Er ist damit nicht nur eine Demo, sondern der praktische Nachweis, dass Plugin-Lebenszyklus, Discovery, Administration, Import/Export und Paketbau zusammen funktionieren.
