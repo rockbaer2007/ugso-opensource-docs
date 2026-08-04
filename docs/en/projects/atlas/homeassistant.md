@@ -432,6 +432,15 @@ The Home Assistant integration targets two usage modes:
 The current Card Packages are an intermediate step toward an installable and
 re-importable HA card editor.
 
+When exporting Card Packages and HACS bundles, the Card Editor asks for Card
+languages separately from the Atlas UI language. This affects only the exported
+Card, not Atlas itself. `en` is always included as the required fallback, and
+additional European languages can be selected with checkboxes. Until automatic
+translation is available, ATLAS generates English fallback files for additional
+languages and marks the corresponding `locales/*.json` files as needing
+translation and review before publishing. A later automatic translation option
+must clearly state that it requires an internet connection.
+
 The Lovelace UV Card is planned as a later follow-up project. For this card,
 `filipnet/haos-uv-index` is noted as an inspiration source. The relevant point
 is not code reuse, but product direction: UV-index sensor handling,

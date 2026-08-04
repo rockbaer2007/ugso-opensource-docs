@@ -452,6 +452,16 @@ Die Home-Assistant-Integration zielt auf zwei Nutzungsarten:
 Die aktuellen Card Packages sind ein Zwischenschritt auf dem Weg zu einem
 installierbaren und wieder importierbaren HA-Card-Editor.
 
+Beim Export von Card Packages und HACS-Bundles fragt der Card Editor die
+gewuenschten Card-Sprachen separat ab. Das betrifft nur die exportierte Card,
+nicht die Atlas-Oberflaeche selbst. `en` ist immer als Pflicht-Fallback
+enthalten, weitere europaeische Sprachen koennen per Checkbox ausgewaehlt
+werden. Solange keine automatische Uebersetzung aktiv ist, erzeugt ATLAS fuer
+zusaetzliche Sprachen englische Fallback-Dateien mit einem Hinweis, dass die
+entsprechenden `locales/*.json` Dateien vor einer Veroeffentlichung uebersetzt
+und geprueft werden muessen. Eine spaetere automatische Uebersetzung muss klar
+darauf hinweisen, dass dafuer eine Internetverbindung erforderlich ist.
+
 Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig
 sind dabei nicht Code-Uebernahme, sondern Produktideen: UV-Index-Sensor,
