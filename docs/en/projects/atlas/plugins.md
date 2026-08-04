@@ -43,7 +43,7 @@ The adapter preserves plugin metadata, extension points and provided capabilitie
 
 `createRuntimePluginInstallPackage()` adds the first package contract. It creates a package description with `atlas-plugin.json`, `README.md` and optional additional files that can later be emitted as an installable package by the administration surface or an archive builder.
 
-`parseRuntimePluginInstallPackage()` reads that package description back as a validated descriptor. It does not execute plugin code. This lets Administration safely display, inspect and re-export imported packages before full installation and activation flows are added later.
+`parseRuntimePluginInstallPackage()` reads that package description back as a validated descriptor. It does not execute plugin code. This lets Administration safely display, inspect, re-export and remove imported packages from the local import list before full installation and activation flows are added later.
 
 ## First Reference Plugin
 
