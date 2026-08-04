@@ -31,6 +31,12 @@ Ein Plugin soll später einen nachvollziehbaren Lebenszyklus besitzen:
 
 Die Dokumentation wird diese Schritte mit Beispielen begleiten, sobald die Verträge stabil sind.
 
+## Aktueller technischer Anker
+
+Der erste technische Schritt ist ein Runtime-Adapter. Ein `RuntimePlugin` kann mit `createRuntimeModuleFromPlugin()` in ein vorhandenes ATLAS Runtime-Modul übersetzt werden. Dadurch nutzt ein Plugin denselben Start-, Diagnose- und Shutdown-Weg wie andere Runtime-Module.
+
+Der Adapter bewahrt Plugin-Metadaten, Extension Points und bereitgestellte Fähigkeiten. Optionale Plugin-Hooks wie `deactivate()` und `dispose()` werden über den Runtime-Shutdown ausgeführt.
+
 ## Geplante Extension-Flächen
 
 Die ersten Extension-Flächen sollen sich an den bestehenden ATLAS-Paketen orientieren:
