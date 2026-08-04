@@ -221,10 +221,10 @@ The editor should offer two workflows:
   Each field should be able to choose its own card target, for example
   Entities, Bubble Card or Mushroom Template.
 
-From the editor plan, ATLAS can later derive the card targets that are actually
-used. In a mixed expert layout, this lets ATLAS detect whether Mushroom and
-Bubble Card are required as HACS resources while pure Entities fields do not
-need an additional custom-card resource.
+From the editor plan, ATLAS derives the card targets that are actually used. In
+a mixed expert layout, this lets ATLAS detect whether Mushroom and Bubble Card
+are required as HACS resources while pure Entities fields do not need an
+additional custom-card resource.
 
 An editor plan can now also be projected into a Home Assistant card
 configuration. Simple mode uses the selected target card directly. Expert mode
@@ -236,7 +236,9 @@ contain populated fields yet, ATLAS falls back to the safe demo entities.
 
 In the demo UI, Expert mode hides the simple card-layout selector and the
 regular HA card code block. Export, package export, copy and resource-copy
-actions then use the Expert HA card code from the editor surface.
+actions then use the Expert HA card code from the editor surface. In Expert
+mode, resource copy includes all placed Mushroom and Bubble dependencies
+together with the ATLAS frontend resource.
 `Panel group`, `Group name`, `Card target`, `Card layout` and the group action
 buttons are hidden in Expert mode as well because the editor surface directly
 defines the card structure that will be exported. Expert mode uses its own

@@ -227,10 +227,10 @@ Der Editor soll zwei Arbeitsweisen anbieten:
   Pro Feld soll der Card-Typ wählbar sein, zum Beispiel Entities, Bubble Card
   oder Mushroom Template.
 
-Aus dem Editor-Plan kann ATLAS künftig die tatsächlich genutzten Card-Ziele
-ableiten. Bei einem gemischten Expert-Layout erkennt ATLAS dadurch gemeinsam,
-ob zum Beispiel Mushroom und Bubble Card als HACS-Ressourcen benötigt werden,
-während reine Entities-Felder keine zusätzliche Custom-Card-Resource brauchen.
+Aus dem Editor-Plan leitet ATLAS die tatsächlich genutzten Card-Ziele ab. Bei
+einem gemischten Expert-Layout erkennt ATLAS dadurch gemeinsam, ob zum Beispiel
+Mushroom und Bubble Card als HACS-Ressourcen benötigt werden, während reine
+Entities-Felder keine zusätzliche Custom-Card-Resource brauchen.
 
 Zusätzlich kann ein Editor-Plan jetzt in eine Home-Assistant-Card-Konfiguration
 übersetzt werden. Simple nutzt die gewählte Ziel-Card direkt. Expert sortiert
@@ -243,7 +243,9 @@ als sicheren Fallback.
 
 In der Demo blendet Expert den einfachen Card-Layout-Wähler und den normalen
 HA-Card-Code aus. Export, Package-Export, Kopieren und Ressourcen-Kopieren
-verwenden dann den Expert-HA-Card-Code aus der Editor-Fläche.
+verwenden dann den Expert-HA-Card-Code aus der Editor-Fläche. Ressourcen-Kopieren
+nimmt in Expert alle platzierten Mushroom- und Bubble-Abhängigkeiten gemeinsam
+mit der ATLAS-Frontend-Resource auf.
 Auch `Panel group`, `Group name`, `Card target`, `Card layout` sowie die
 Gruppen-Aktionsbuttons werden im Expert-Modus ausgeblendet, weil die
 Editor-Fläche dort die zu exportierende Card-Struktur direkt bestimmt.
