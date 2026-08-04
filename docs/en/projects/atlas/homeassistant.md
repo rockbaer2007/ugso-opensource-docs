@@ -435,11 +435,20 @@ re-importable HA card editor.
 When exporting Card Packages and HACS bundles, the Card Editor asks for Card
 languages separately from the Atlas UI language. This affects only the exported
 Card, not Atlas itself. `en` is always included as the required fallback, and
-additional European languages can be selected with checkboxes. Until automatic
-translation is available, ATLAS generates English fallback files for additional
-languages and marks the corresponding `locales/*.json` files as needing
-translation and review before publishing. A later automatic translation option
-must clearly state that it requires an internet connection.
+additional European languages plus `ru` for Russian-speaking users can be
+selected with checkboxes. Until automatic translation is available, ATLAS
+generates English fallback files for additional languages and marks the
+corresponding `locales/*.json` files as needing translation and review before
+publishing.
+
+Atlas Administration owns the planned translation module choice. The first
+options are `none`, `chatgpt`, `deepl-free`, `deepl-pro` and `custom-ai`. In the
+Card Editor, automatic translation can be requested during export with a
+checkbox and a visible progress indicator. Until real provider adapters and API
+keys are connected, exported files remain explicitly marked as fallbacks so
+untranslated files are not mistaken for completed machine translations. A later
+real automatic translation option must clearly state that it requires an
+internet connection.
 
 The Lovelace UV Card is planned as a later follow-up project. For this card,
 `filipnet/haos-uv-index` is noted as an inspiration source. The relevant point

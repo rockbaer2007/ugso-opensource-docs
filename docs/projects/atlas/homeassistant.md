@@ -456,11 +456,21 @@ Beim Export von Card Packages und HACS-Bundles fragt der Card Editor die
 gewuenschten Card-Sprachen separat ab. Das betrifft nur die exportierte Card,
 nicht die Atlas-Oberflaeche selbst. `en` ist immer als Pflicht-Fallback
 enthalten, weitere europaeische Sprachen koennen per Checkbox ausgewaehlt
-werden. Solange keine automatische Uebersetzung aktiv ist, erzeugt ATLAS fuer
-zusaetzliche Sprachen englische Fallback-Dateien mit einem Hinweis, dass die
-entsprechenden `locales/*.json` Dateien vor einer Veroeffentlichung uebersetzt
-und geprueft werden muessen. Eine spaetere automatische Uebersetzung muss klar
-darauf hinweisen, dass dafuer eine Internetverbindung erforderlich ist.
+werden, inklusive `ru` fuer russischsprachige Nutzer. Solange keine
+automatische Uebersetzung aktiv ist, erzeugt ATLAS fuer zusaetzliche Sprachen
+englische Fallback-Dateien mit einem Hinweis, dass die entsprechenden
+`locales/*.json` Dateien vor einer Veroeffentlichung uebersetzt und geprueft
+werden muessen.
+
+Die Atlas Administration verwaltet die geplante Auswahl des
+Uebersetzungsmoduls. Vorgesehen sind zunaechst `none`, `chatgpt`,
+`deepl-free`, `deepl-pro` und `custom-ai`. Im Card Editor kann beim Export eine
+Checkbox fuer automatische Uebersetzung aktiviert werden. Die Oberflaeche zeigt
+dabei einen Fortschritt an. Bis echte Provider-Adapter und API-Schluessel
+angebunden sind, bleibt das Ergebnis bewusst als Fallback markiert, damit keine
+unuebersetzten Dateien versehentlich als maschinell uebersetzt gelten. Eine
+spaetere echte automatische Uebersetzung muss klar darauf hinweisen, dass
+dafuer eine Internetverbindung erforderlich ist.
 
 Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig
