@@ -39,6 +39,8 @@ The adapter preserves plugin metadata, extension points and provided capabilitie
 
 `RuntimePluginCatalog` also provides the first discovery surface. It registers plugins by id, exposes descriptive metadata and can find plugins by extension point or provided capability.
 
+`createRuntimePluginAdministrationView()` prepares the future Atlas Administration surface. It turns Plugin Catalog data into a management view with statuses such as `available`, `active` and `disabled`, plus actions such as `inspect`, `activate`, `deactivate` and `export-package`.
+
 ## First Reference Plugin
 
 The Home Assistant Card Editor is treated as the first official ATLAS reference plugin. It is therefore more than a demo: it proves that plugin lifecycle, discovery, administration, import/export and package building work together.

@@ -39,6 +39,8 @@ Der Adapter bewahrt Plugin-Metadaten, Extension Points und bereitgestellte Fähi
 
 Mit `RuntimePluginCatalog` gibt es außerdem eine erste Discovery-Fläche. Sie registriert Plugins nach ID, stellt beschreibende Metadaten bereit und kann Plugins nach Extension Point oder bereitgestellter Capability finden.
 
+`createRuntimePluginAdministrationView()` bereitet die spätere Atlas Administration vor. Die Funktion erzeugt aus Plugin-Katalogdaten eine Verwaltungsansicht mit Statuswerten wie `available`, `active` und `disabled` sowie Aktionen wie `inspect`, `activate`, `deactivate` und `export-package`.
+
 ## Erstes Referenz-Plugin
 
 Der Home Assistant Card Editor wird als erstes offizielles ATLAS-Referenz-Plugin behandelt. Er ist damit nicht nur eine Demo, sondern der praktische Nachweis, dass Plugin-Lebenszyklus, Discovery, Administration, Import/Export und Paketbau zusammen funktionieren.
