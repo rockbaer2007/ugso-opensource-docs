@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: Home Assistant
       link: /en/projects/atlas/homeassistant
+    - theme: alt
+      text: Plugin Docs
+      link: /en/projects/atlas/plugins
 
 features:
   - icon: modules
@@ -27,7 +30,7 @@ features:
 
   - icon: plugin
     title: Plugin Ready
-    details: ATLAS is planned as a basis for extensible applications and standalone modules.
+    details: ATLAS is planned as a basis for extensible applications, standalone modules and documented plugin extensions.
 
   - icon: home
     title: Close to Home Assistant

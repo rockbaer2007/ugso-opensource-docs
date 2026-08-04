@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: Home Assistant
       link: /projects/atlas/homeassistant
+    - theme: alt
+      text: Plugin-Doku
+      link: /projects/atlas/plugins
 
 features:
   - icon: 🧱
@@ -27,7 +30,7 @@ features:
 
   - icon: 🧩
     title: Pluginfähig
-    details: ATLAS ist als Basis für erweiterbare Anwendungen und eigenständige Module geplant.
+    details: ATLAS ist als Basis für erweiterbare Anwendungen, eigenständige Module und dokumentierte Plugin-Erweiterungen geplant.
 
   - icon: 🏠
     title: Home-Assistant-nah

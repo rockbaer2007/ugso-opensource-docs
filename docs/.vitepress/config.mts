@@ -106,7 +106,8 @@ const sidebarDe = {
         { text: 'Übersicht', link: '/projects/atlas/' },
         { text: 'Architektur', link: '/projects/atlas/uebersicht' },
         { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' },
-        { text: 'Home Assistant', link: '/projects/atlas/homeassistant' }
+        { text: 'Home Assistant', link: '/projects/atlas/homeassistant' },
+        { text: 'Plugin-Doku', link: '/projects/atlas/plugins' }
       ]
     }
   ]
@@ -180,7 +181,8 @@ const sidebarEn = {
         { text: 'Overview', link: '/en/projects/atlas/' },
         { text: 'Architecture', link: '/en/projects/atlas/overview' },
         { text: 'Development Status', link: '/en/projects/atlas/development-status' },
-        { text: 'Home Assistant', link: '/en/projects/atlas/homeassistant' }
+        { text: 'Home Assistant', link: '/en/projects/atlas/homeassistant' },
+        { text: 'Plugin Docs', link: '/en/projects/atlas/plugins' }
       ]
     }
   ]
