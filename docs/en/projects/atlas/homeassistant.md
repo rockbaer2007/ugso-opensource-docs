@@ -432,6 +432,12 @@ The Home Assistant integration targets two usage modes:
 The current Card Packages are an intermediate step toward an installable and
 re-importable HA card editor.
 
+The Lovelace UV Card is planned as a later follow-up project. For this card,
+`filipnet/haos-uv-index` is noted as an inspiration source. The relevant point
+is not code reuse, but product direction: UV-index sensor handling,
+color-coded risk display, WHO-style protection recommendations,
+Mushroom-compatible presentation and optional notification automations.
+
 The Home Assistant Card Editor is treated as the first official ATLAS reference
 plugin. It should later show how a plugin combines entity selection, card
 targets, import/export, HACS-oriented packages and administration in a real

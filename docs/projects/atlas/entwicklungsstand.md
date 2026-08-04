@@ -55,7 +55,7 @@ Nach Abschluss der grundlegenden Runtime soll ATLAS als technische Basis für we
 Geplante Folgeprojekte sind:
 
 - **UGSo Thread Monitor**: Darstellung von ESPHome-Thread-Geräten, Rollen, IPv6-Adressen, Statuswerten und Diagnosedaten als ATLAS-basiertes Plugin.
-- **Lovelace UV Card**: eine Home-Assistant-/Lovelace-Card für UV-Index, Schutzstatus, Grenzwerte und visuelle Dashboard-Ausgabe.
+- **Lovelace UV Card**: eine Home-Assistant-/Lovelace-Card für UV-Index, Schutzstatus, Grenzwerte und visuelle Dashboard-Ausgabe. Als Inspiration ist `filipnet/haos-uv-index` vorgemerkt: relevant sind UV-Index-Sensoren, farbcodierte Risikostufen, WHO-nahe Schutzempfehlungen, Mushroom-kompatible Darstellung und optionale Benachrichtigungs-Automationen. Die Umsetzung soll eine eigene UGSo/ATLAS-Card bleiben.
 
 ::: info Hinweis
 Die Roadmap kann sich während der Entwicklung ändern. Die Seite beschreibt den aktuellen Planungsstand.

@@ -452,6 +452,12 @@ Die Home-Assistant-Integration zielt auf zwei Nutzungsarten:
 Die aktuellen Card Packages sind ein Zwischenschritt auf dem Weg zu einem
 installierbaren und wieder importierbaren HA-Card-Editor.
 
+Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
+Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig
+sind dabei nicht Code-Uebernahme, sondern Produktideen: UV-Index-Sensor,
+farbcodierte Risikoanzeige, WHO-nahe Schutzempfehlungen,
+Mushroom-kompatible Darstellung und optionale Benachrichtigungs-Automationen.
+
 Der Home-Assistant-Card-Editor wird dabei als erstes offizielles
 ATLAS-Referenz-Plugin betrachtet. Er soll später zeigen, wie ein Plugin
 Entitätenauswahl, Card-Targets, Import/Export, HACS-nahe Pakete und

@@ -61,7 +61,11 @@ Planned follow-up projects include:
 - **UGSo Thread Monitor**: an ATLAS-based plugin for ESPHome Thread devices,
   roles, IPv6 addresses, status values and diagnostic data.
 - **Lovelace UV Card**: a Home Assistant/Lovelace card for UV index, protection
-  status, thresholds and visual dashboard output.
+  status, thresholds and visual dashboard output. `filipnet/haos-uv-index` is
+  noted as inspiration for UV-index sensor handling, color-coded risk levels,
+  WHO-style protection recommendations, Mushroom-compatible presentation and
+  optional notification automations. The implementation should remain an
+  original UGSo/ATLAS card.
 
 ::: info Note
 The roadmap may change during development. This page describes the current
