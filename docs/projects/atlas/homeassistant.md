@@ -503,6 +503,15 @@ oder in Card-Editor-Handoff-Payloads geschrieben. Fuer Sicherungen kann die
 Administration `atlas-admin-settings.json` exportieren: normale Einstellungen
 bleiben lesbar, Token und Provider-API-Keys liegen darin als AES-GCM-
 verschluesselter `encryptedSecrets`-Block.
+Diese verschluesselten Secrets sind zusaetzlich an die lokale
+Atlas-Administration-Installation gebunden. Der Admin-Server erzeugt dafuer
+eine Installationskennung in lokalen Benutzerdaten ausserhalb des Repos oder
+nutzt `ATLAS_INSTANCE_ID`, wenn eine Docker- oder Serverinstallation bewusst
+eine stabile Identitaet bekommen soll. Wird nur der Serverordner oder eine
+Exportdatei auf eine fremde Umgebung kopiert, gelten die Secrets als ungueltig.
+Normale Einstellungen koennen spaeter weiterhin migrierbar bleiben; fuer
+Secrets braucht ein bewusster Umzug eine eigene Transfer- oder
+Passphrase-Funktion.
 
 Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig

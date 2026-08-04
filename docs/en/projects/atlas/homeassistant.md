@@ -477,6 +477,13 @@ are not written to the shared handoff cookie or Card Editor handoff payloads.
 For backups, Administration can export `atlas-admin-settings.json`: normal
 settings stay readable, while the token and provider API keys are stored in an
 AES-GCM-encrypted `encryptedSecrets` block.
+Those encrypted secrets are also bound to the local Atlas Administration
+installation. The Admin server creates an installation identity in local user
+data outside the repository, or uses `ATLAS_INSTANCE_ID` when a Docker or server
+deployment needs an explicit stable identity. If only the server folder or an
+exported settings file is copied to another environment, the secrets are treated
+as invalid. Normal settings can remain migratable later; secrets need an
+explicit transfer or passphrase flow for deliberate moves.
 
 The Lovelace UV Card is planned as a later follow-up project. For this card,
 `filipnet/haos-uv-index` is noted as an inspiration source. The relevant point
