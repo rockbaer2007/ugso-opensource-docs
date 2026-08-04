@@ -442,18 +442,23 @@ corresponding `locales/*.json` files as needing translation and review before
 publishing.
 
 Atlas Administration owns the planned translation module choice. The first
-options are `none`, `chatgpt`, `deepl-free`, `deepl-pro` and `custom-ai`. In the
-Card Editor, automatic translation can be requested during export with a
-checkbox and a visible progress indicator. Until real provider adapters and API
-keys are connected, exported files remain explicitly marked as fallbacks so
-untranslated files are not mistaken for completed machine translations. A later
-real automatic translation option must clearly state that it requires an
-internet connection.
+options are `none`, `chatgpt`, `gemini`, `deepl-free`, `deepl-pro` and
+`custom-ai`. The selection should use a clear radio-list layout with API-key
+fields for each provider. In the Card Editor, automatic translation can be
+requested during export with a checkbox and a visible progress indicator. Until
+real provider adapters and API keys are connected, exported files remain
+explicitly marked as fallbacks so untranslated files are not mistaken for
+completed machine translations. A later real automatic translation option must
+clearly state that it requires an internet connection.
 For DeepL, `https://www.deepl.com/de/pro#api` is kept as the reference for
 Free/Pro API options.
 The prepared DeepL translate endpoint is `https://api.deepl.com/v2/translate`;
 request details are tracked through
 `https://developers.deepl.com/api-reference/translate/request-translation`.
+For Gemini, `https://ai.google.dev/gemini-api/docs/api-key` is kept as the
+API-key and security reference. Provider API keys belong to Atlas
+Administration or later backend adapters; the Card Editor should receive
+provider, endpoint and key-configured status only.
 
 The Lovelace UV Card is planned as a later follow-up project. For this card,
 `filipnet/haos-uv-index` is noted as an inspiration source. The relevant point

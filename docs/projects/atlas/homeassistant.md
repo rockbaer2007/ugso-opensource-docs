@@ -463,20 +463,26 @@ englische Fallback-Dateien mit einem Hinweis, dass die entsprechenden
 werden muessen.
 
 Die Atlas Administration verwaltet die geplante Auswahl des
-Uebersetzungsmoduls. Vorgesehen sind zunaechst `none`, `chatgpt`,
-`deepl-free`, `deepl-pro` und `custom-ai`. Im Card Editor kann beim Export eine
-Checkbox fuer automatische Uebersetzung aktiviert werden. Die Oberflaeche zeigt
-dabei einen Fortschritt an. Bis echte Provider-Adapter und API-Schluessel
-angebunden sind, bleibt das Ergebnis bewusst als Fallback markiert, damit keine
-unuebersetzten Dateien versehentlich als maschinell uebersetzt gelten. Eine
-spaetere echte automatische Uebersetzung muss klar darauf hinweisen, dass
-dafuer eine Internetverbindung erforderlich ist.
+Uebersetzungsmoduls. Vorgesehen sind zunaechst `none`, `chatgpt`, `gemini`,
+`deepl-free`, `deepl-pro` und `custom-ai`. Die Auswahl soll als klare
+Radio-Liste mit API-Key-Feldern fuer die jeweiligen Provider erfolgen. Im Card
+Editor kann beim Export eine Checkbox fuer automatische Uebersetzung aktiviert
+werden. Die Oberflaeche zeigt dabei einen Fortschritt an. Bis echte
+Provider-Adapter und API-Schluessel angebunden sind, bleibt das Ergebnis
+bewusst als Fallback markiert, damit keine unuebersetzten Dateien versehentlich
+als maschinell uebersetzt gelten. Eine spaetere echte automatische Uebersetzung
+muss klar darauf hinweisen, dass dafuer eine Internetverbindung erforderlich
+ist.
 Fuer DeepL ist `https://www.deepl.com/de/pro#api` als Referenz fuer die
 Free/Pro-API-Optionen vorgemerkt.
 Der vorbereitete DeepL-Translate-Endpunkt ist
 `https://api.deepl.com/v2/translate`; die Request-Details werden ueber
 `https://developers.deepl.com/api-reference/translate/request-translation`
 nachgehalten.
+Fuer Gemini ist `https://ai.google.dev/gemini-api/docs/api-key` als Referenz
+fuer API-Key- und Sicherheitshinweise vorgemerkt. Provider-API-Keys gehoeren in
+die Atlas Administration oder spaetere Backend-Adapter; der Card Editor soll
+nur Provider, Endpunkt und Key-konfiguriert-Status erhalten.
 
 Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig
