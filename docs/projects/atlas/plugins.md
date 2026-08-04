@@ -43,6 +43,8 @@ Mit `RuntimePluginCatalog` gibt es außerdem eine erste Discovery-Fläche. Sie r
 
 Mit `createRuntimePluginInstallPackage()` gibt es auch den ersten Paketvertrag. Er erzeugt eine Paketbeschreibung mit `atlas-plugin.json`, `README.md` und optionalen Zusatzdateien, die später von der Administration oder einem Archiv-Builder als installierbares Paket ausgegeben werden kann.
 
+`parseRuntimePluginInstallPackage()` liest diese Paketbeschreibung wieder als validierten Descriptor ein. Dabei wird kein Plugin-Code ausgeführt. Die Administration kann importierte Pakete dadurch sicher anzeigen, prüfen und erneut exportieren, bevor später echte Installations- und Aktivierungswege ergänzt werden.
+
 ## Erstes Referenz-Plugin
 
 Der Home Assistant Card Editor wird als erstes offizielles ATLAS-Referenz-Plugin behandelt. Er ist damit nicht nur eine Demo, sondern der praktische Nachweis, dass Plugin-Lebenszyklus, Discovery, Administration, Import/Export und Paketbau zusammen funktionieren.
@@ -92,7 +94,7 @@ Eine vollständige Plugin-Doku soll später folgende Kapitel enthalten:
 
 Für die Verwaltung von Plugins ist eine eigene Atlas-Administration als Weboberfläche geplant. Sie soll nicht nur installierte Plugins anzeigen, sondern den gesamten Arbeitsfluss rund um Plugins unterstützen.
 
-Der erste sichtbare Schritt ist eine eigene minimale Administration auf Port `4175`, getrennt vom Home-Assistant-Card-Editor auf Port `4174`. Sie liest den Runtime-Plugin-Katalog, zeigt den Home Assistant Card Editor als erstes Referenz-Plugin, stellt Status, Version, Extension Points und Fähigkeiten dar und bietet erste Aktionen wie Prüfen, Aktivieren, Deaktivieren und Paket exportieren.
+Der erste sichtbare Schritt ist eine eigene minimale Administration auf Port `4175`, getrennt vom Home-Assistant-Card-Editor auf Port `4174`. Sie liest den Runtime-Plugin-Katalog, zeigt den Home Assistant Card Editor als erstes Referenz-Plugin, stellt Status, Version, Extension Points und Fähigkeiten dar und bietet erste Aktionen wie Prüfen, Aktivieren, Deaktivieren, Paket exportieren und Paket importieren.
 
 Die Administration ist außerdem der zentrale Ort für sensible Verbindungseinstellungen. Home-Assistant-Tokens sollen dort verwaltet und bei `Save settings` lokal gespeichert werden können. Der lokale Admin-Server stellt gespeicherte Verbindungseinstellungen dem Card Editor bereit, damit Reloads und direkte Editor-Aufrufe funktionieren. Der Card Editor erhält den Token nur als Übergabe an die aktive Browser-Sitzung und kann optional nach dieser Übergabe automatisch verbinden. Plugins bekommen später nur freigegebene Kontextdaten wie Home-Assistant-URL, WebSocket-Pfad, erlaubte Ressourcenpfade und deklarierte Fähigkeiten, aber keinen rohen Access Token.
 

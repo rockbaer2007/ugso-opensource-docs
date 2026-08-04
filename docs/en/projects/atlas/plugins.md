@@ -43,6 +43,8 @@ The adapter preserves plugin metadata, extension points and provided capabilitie
 
 `createRuntimePluginInstallPackage()` adds the first package contract. It creates a package description with `atlas-plugin.json`, `README.md` and optional additional files that can later be emitted as an installable package by the administration surface or an archive builder.
 
+`parseRuntimePluginInstallPackage()` reads that package description back as a validated descriptor. It does not execute plugin code. This lets Administration safely display, inspect and re-export imported packages before full installation and activation flows are added later.
+
 ## First Reference Plugin
 
 The Home Assistant Card Editor is treated as the first official ATLAS reference plugin. It is therefore more than a demo: it proves that plugin lifecycle, discovery, administration, import/export and package building work together.
@@ -92,7 +94,7 @@ A complete plugin documentation area should later contain:
 
 A dedicated Atlas Administration web surface is planned for plugin management. It should show installed plugins and support the full plugin workflow.
 
-The first visible step is a dedicated minimal administration surface on port `4175`, separate from the Home Assistant Card Editor on port `4174`. It reads the Runtime plugin catalog, shows the Home Assistant Card Editor as the first reference plugin, displays status, version, extension points and capabilities, and exposes first actions such as inspect, activate, deactivate and export package.
+The first visible step is a dedicated minimal administration surface on port `4175`, separate from the Home Assistant Card Editor on port `4174`. It reads the Runtime plugin catalog, shows the Home Assistant Card Editor as the first reference plugin, displays status, version, extension points and capabilities, and exposes first actions such as inspect, activate, deactivate, export package and import package.
 
 Administration is also the central place for sensitive connection settings. Home Assistant tokens should be managed there and can be stored locally through `Save settings`. The local Admin server exposes saved connection settings to the Card Editor so reloads and direct editor opens still work. The Card Editor receives the token only as a handoff to the active browser session and can optionally connect automatically after that handoff. Plugins should later receive only approved context such as the Home Assistant URL, WebSocket path, allowed resource paths and declared capabilities, but never the raw access token.
 
