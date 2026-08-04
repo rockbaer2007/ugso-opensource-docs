@@ -483,6 +483,13 @@ Fuer Gemini ist `https://ai.google.dev/gemini-api/docs/api-key` als Referenz
 fuer API-Key- und Sicherheitshinweise vorgemerkt. Provider-API-Keys gehoeren in
 die Atlas Administration oder spaetere Backend-Adapter; der Card Editor soll
 nur Provider, Endpunkt und Key-konfiguriert-Status erhalten.
+ChatGPT/OpenAI ist der erste angebundene Adapterpfad. Der Card Editor ruft
+dafuer die Atlas Administration ueber `/api/card-translation` auf, und der
+Admin-Server nutzt den dort gehaltenen OpenAI-Key fuer die OpenAI Responses
+API. Erfolgreich erzeugte Locale-Dateien werden als `machine` markiert und
+muessen vor einer Veroeffentlichung weiterhin geprueft werden. Der verwendete
+OpenAI-Modellname kann serverseitig ueber `ATLAS_OPENAI_TRANSLATION_MODEL`
+ueberschrieben werden.
 
 Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig
