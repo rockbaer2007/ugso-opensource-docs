@@ -37,6 +37,8 @@ Der erste technische Schritt ist ein Runtime-Adapter. Ein `RuntimePlugin` kann m
 
 Der Adapter bewahrt Plugin-Metadaten, Extension Points und bereitgestellte Fähigkeiten. Optionale Plugin-Hooks wie `deactivate()` und `dispose()` werden über den Runtime-Shutdown ausgeführt.
 
+Mit `RuntimePluginCatalog` gibt es außerdem eine erste Discovery-Fläche. Sie registriert Plugins nach ID, stellt beschreibende Metadaten bereit und kann Plugins nach Extension Point oder bereitgestellter Capability finden.
+
 ## Geplante Extension-Flächen
 
 Die ersten Extension-Flächen sollen sich an den bestehenden ATLAS-Paketen orientieren:

@@ -37,6 +37,8 @@ The first technical step is a Runtime adapter. A `RuntimePlugin` can be translat
 
 The adapter preserves plugin metadata, extension points and provided capabilities. Optional plugin hooks such as `deactivate()` and `dispose()` run through Runtime shutdown.
 
+`RuntimePluginCatalog` also provides the first discovery surface. It registers plugins by id, exposes descriptive metadata and can find plugins by extension point or provided capability.
+
 ## Planned Extension Surfaces
 
 The first extension surfaces should align with the existing ATLAS packages:
