@@ -456,3 +456,8 @@ Der Home-Assistant-Card-Editor wird dabei als erstes offizielles
 ATLAS-Referenz-Plugin betrachtet. Er soll später zeigen, wie ein Plugin
 Entitätenauswahl, Card-Targets, Import/Export, HACS-nahe Pakete und
 Administration in einem echten Workflow verbindet.
+
+Im Atlas-Paket wird dieser Schritt bereits durch
+`createHomeAssistantCardEditorPlugin()` vorbereitet. Damit kann der Editor über
+die Runtime-Plugin-Schnittstelle aktiviert und über den Plugin-Katalog gefunden
+werden.

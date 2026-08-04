@@ -41,9 +41,11 @@ Mit `RuntimePluginCatalog` gibt es außerdem eine erste Discovery-Fläche. Sie r
 
 ## Erstes Referenz-Plugin
 
-Der Home Assistant Card Editor soll als erstes offizielles ATLAS-Referenz-Plugin behandelt werden. Er ist damit nicht nur eine Demo, sondern der praktische Nachweis, dass Plugin-Lebenszyklus, Discovery, Administration, Import/Export und Paketbau zusammen funktionieren.
+Der Home Assistant Card Editor wird als erstes offizielles ATLAS-Referenz-Plugin behandelt. Er ist damit nicht nur eine Demo, sondern der praktische Nachweis, dass Plugin-Lebenszyklus, Discovery, Administration, Import/Export und Paketbau zusammen funktionieren.
 
-Als Referenz-Plugin soll der Editor später unter anderem folgende Extension Points nutzen:
+Im Atlas-Code stellt `createHomeAssistantCardEditorPlugin()` diesen Editor als `RuntimePlugin` bereit. Bei der Aktivierung registriert das Plugin einen Service mit Card Targets, Editor-Templates, Bubble-Button-Typen und Fähigkeiten, die später in der Atlas Administration angezeigt werden können.
+
+Als Referenz-Plugin nutzt der Editor folgende Extension Points:
 
 - `homeassistant.card-editor`
 - `homeassistant.card-target`

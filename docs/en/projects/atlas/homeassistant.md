@@ -436,3 +436,7 @@ The Home Assistant Card Editor is treated as the first official ATLAS reference
 plugin. It should later show how a plugin combines entity selection, card
 targets, import/export, HACS-oriented packages and administration in a real
 workflow.
+
+In the Atlas package, this step is already prepared through
+`createHomeAssistantCardEditorPlugin()`. This lets the editor activate through
+the Runtime plugin contract and become discoverable through the Plugin Catalog.

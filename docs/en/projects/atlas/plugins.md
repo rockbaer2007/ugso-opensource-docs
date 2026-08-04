@@ -41,9 +41,11 @@ The adapter preserves plugin metadata, extension points and provided capabilitie
 
 ## First Reference Plugin
 
-The Home Assistant Card Editor should be treated as the first official ATLAS reference plugin. It is therefore more than a demo: it proves that plugin lifecycle, discovery, administration, import/export and package building work together.
+The Home Assistant Card Editor is treated as the first official ATLAS reference plugin. It is therefore more than a demo: it proves that plugin lifecycle, discovery, administration, import/export and package building work together.
 
-As a reference plugin, the editor should later use extension points such as:
+In the Atlas code, `createHomeAssistantCardEditorPlugin()` exposes the editor as a `RuntimePlugin`. During activation, the plugin registers a service with card targets, editor templates, Bubble button types and capabilities that can later be shown in Atlas Administration.
+
+As a reference plugin, the editor uses these extension points:
 
 - `homeassistant.card-editor`
 - `homeassistant.card-target`
