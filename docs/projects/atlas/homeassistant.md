@@ -471,6 +471,8 @@ angebunden sind, bleibt das Ergebnis bewusst als Fallback markiert, damit keine
 unuebersetzten Dateien versehentlich als maschinell uebersetzt gelten. Eine
 spaetere echte automatische Uebersetzung muss klar darauf hinweisen, dass
 dafuer eine Internetverbindung erforderlich ist.
+Fuer DeepL ist `https://www.deepl.com/de/pro#api` als Referenz fuer die
+Free/Pro-API-Optionen vorgemerkt.
 
 Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig
