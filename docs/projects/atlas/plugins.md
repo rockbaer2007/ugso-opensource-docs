@@ -94,7 +94,7 @@ Für die Verwaltung von Plugins ist eine eigene Atlas-Administration als Webober
 
 Der erste sichtbare Schritt ist eine eigene minimale Administration auf Port `4175`, getrennt vom Home-Assistant-Card-Editor auf Port `4174`. Sie liest den Runtime-Plugin-Katalog, zeigt den Home Assistant Card Editor als erstes Referenz-Plugin, stellt Status, Version, Extension Points und Fähigkeiten dar und bietet erste Aktionen wie Prüfen, Aktivieren, Deaktivieren und Paket exportieren.
 
-Die Administration ist außerdem der zentrale Ort für sensible Verbindungseinstellungen. Home-Assistant-Tokens sollen dort verwaltet werden. Der Card Editor erhält den Token nur als Übergabe an die aktive Browser-Sitzung und kann optional nach dieser Übergabe automatisch verbinden. Plugins bekommen später nur freigegebene Kontextdaten wie Home-Assistant-URL, WebSocket-Pfad, erlaubte Ressourcenpfade und deklarierte Fähigkeiten, aber keinen rohen Access Token.
+Die Administration ist außerdem der zentrale Ort für sensible Verbindungseinstellungen. Home-Assistant-Tokens sollen dort verwaltet und bei `Save settings` lokal gespeichert werden können. Der Card Editor erhält den Token nur als Übergabe an die aktive Browser-Sitzung und kann optional nach dieser Übergabe automatisch verbinden. Plugins bekommen später nur freigegebene Kontextdaten wie Home-Assistant-URL, WebSocket-Pfad, erlaubte Ressourcenpfade und deklarierte Fähigkeiten, aber keinen rohen Access Token.
 
 Geplante Funktionen sind:
 
