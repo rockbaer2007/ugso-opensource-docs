@@ -111,10 +111,11 @@ Entitäten in Home Assistant durch eigene Werte zu ersetzen.
 In der Demo kann diese `.js`-Quelle auch direkt ueber den Card-Script-Export
 heruntergeladen werden, damit das Artefakt vor einem vollstaendigen
 HACS-Bundle separat geprueft werden kann.
-Der naechste Paketierungsschritt erzeugt ein zip-faehiges HACS-Bundle-Manifest.
-Es listet die Dateien, die ein Host spaeter materialisieren kann: `hacs.json`,
-die generierte JavaScript-Card, eine README, eine Beispiel-Lovelace-Card und
-das urspruengliche Atlas Card Package fuer spaetere Bearbeitung.
+Der naechste Paketierungsschritt erzeugt ein abhaengigkeitsfreies `.hacs.zip`.
+Das Archiv enthaelt die Dateien fuer ein spaeteres Frontend-Repository:
+`hacs.json`, die generierte JavaScript-Card, eine README, eine
+Beispiel-Lovelace-Card und das urspruengliche Atlas Card Package fuer spaetere
+Bearbeitung.
 
 ```json
 {
