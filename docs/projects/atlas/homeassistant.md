@@ -478,7 +478,8 @@ Free/Pro-API-Optionen vorgemerkt.
 Der vorbereitete DeepL-Translate-Endpunkt ist
 `https://api.deepl.com/v2/translate`; die Request-Details werden ueber
 `https://developers.deepl.com/api-reference/translate/request-translation`
-nachgehalten.
+nachgehalten. Dieser Endpunkt ist interne Konfiguration und soll nicht als
+normales Eingabefeld in der Atlas Administration erscheinen.
 Fuer Gemini ist `https://ai.google.dev/gemini-api/docs/api-key` als Referenz
 fuer API-Key- und Sicherheitshinweise vorgemerkt. Provider-API-Keys gehoeren in
 die Atlas Administration oder spaetere Backend-Adapter; der Card Editor soll
