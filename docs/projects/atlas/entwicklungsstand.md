@@ -44,8 +44,9 @@ Geplant sind:
 3. Dependency Injection vervollständigen
 4. Diagnose- und Fehlerpfade ausbauen
 5. Plugin-Verträge vorbereiten
-6. Home-Assistant-Anbindung entwickeln
-7. Renderer- und Theme-Schichten erweitern
+6. Separate Plugin-Dokumentation für Erstellung, Lebenszyklus, Extension APIs, Beispiele und Veröffentlichung vorbereiten
+7. Home-Assistant-Anbindung entwickeln
+8. Renderer- und Theme-Schichten erweitern
 
 ## Langfristige Perspektive
 

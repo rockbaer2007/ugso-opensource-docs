@@ -47,8 +47,9 @@ Planned next goals:
 3. Complete dependency injection flows.
 4. Expand diagnostics and error paths.
 5. Prepare plugin contracts.
-6. Continue the Home Assistant integration.
-7. Expand Renderer and Theme layers.
+6. Prepare separate plugin documentation for authoring, lifecycle, extension APIs, examples and publishing.
+7. Continue the Home Assistant integration.
+8. Expand Renderer and Theme layers.
 
 ## Long-Term Perspective
 
