@@ -34,4 +34,4 @@ Das Projekt befindet sich aktuell in aktiver Entwicklung. Der Schwerpunkt liegt 
 
 ## Weitere Projekte
 
-Weitere Dokumentationen zu ESPHome, Lovelace-Komponenten und dem geplanten UGSo Thread Monitor folgen.
+Weitere Dokumentationen zu ESPHome, Lovelace-Komponenten, dem geplanten UGSo Thread Monitor und der geplanten Lovelace UV Card folgen.

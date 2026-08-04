@@ -38,5 +38,5 @@ Foundation, events, services and dependency injection.
 
 ## More Projects
 
-Additional documentation for ESPHome, Lovelace components and the planned UGSo
-Thread Monitor will follow.
+Additional documentation for ESPHome, Lovelace components, the planned UGSo
+Thread Monitor and the planned Lovelace UV Card will follow.

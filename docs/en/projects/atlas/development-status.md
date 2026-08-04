@@ -55,9 +55,12 @@ Planned next goals:
 After the runtime foundations are stable, ATLAS should serve as a technical
 basis for additional UGSo projects.
 
-One planned follow-up project is the **UGSo Thread Monitor**. It is intended to
-display ESPHome Thread devices, roles, IPv6 addresses, status values and
-diagnostic data as an ATLAS-based plugin.
+Planned follow-up projects include:
+
+- **UGSo Thread Monitor**: an ATLAS-based plugin for ESPHome Thread devices,
+  roles, IPv6 addresses, status values and diagnostic data.
+- **Lovelace UV Card**: a Home Assistant/Lovelace card for UV index, protection
+  status, thresholds and visual dashboard output.
 
 ::: info Note
 The roadmap may change during development. This page describes the current

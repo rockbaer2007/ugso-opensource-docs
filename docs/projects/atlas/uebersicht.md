@@ -58,3 +58,4 @@ ATLAS soll später als Basis dienen für:
 - Diagnoseanwendungen
 - Plugin-basierte Desktop- oder Webanwendungen
 - den geplanten **UGSo Thread Monitor**
+- die geplante **Lovelace UV Card**

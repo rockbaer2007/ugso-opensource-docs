@@ -58,3 +58,4 @@ ATLAS is intended to support:
 - diagnostics applications
 - plugin-based desktop or web applications
 - the planned **UGSo Thread Monitor**
+- the planned **Lovelace UV Card**

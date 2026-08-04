@@ -50,8 +50,9 @@ The focus is on:
 ATLAS is intended to create a shared technical foundation for several UGSo
 projects.
 
-A later project is the **UGSo Thread Monitor**, which should display ESPHome
-Thread devices, roles, IPv6 addresses and diagnostic data.
+Later projects include the **UGSo Thread Monitor** for ESPHome Thread devices,
+roles, IPv6 addresses and diagnostic data, plus the **Lovelace UV Card** for UV
+index, protection status and visual Home Assistant dashboards.
 
 ## Learn More
 
