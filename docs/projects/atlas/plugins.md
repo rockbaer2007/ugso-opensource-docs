@@ -43,7 +43,7 @@ Mit `RuntimePluginCatalog` gibt es außerdem eine erste Discovery-Fläche. Sie r
 
 Mit `createRuntimePluginInstallPackage()` gibt es auch den ersten Paketvertrag. Er erzeugt eine Paketbeschreibung mit `atlas-plugin.json`, `README.md` und optionalen Zusatzdateien, die später von der Administration oder einem Archiv-Builder als installierbares Paket ausgegeben werden kann.
 
-`parseRuntimePluginInstallPackage()` liest diese Paketbeschreibung wieder als validierten Descriptor ein. Dabei wird kein Plugin-Code ausgeführt. Die Administration kann importierte Pakete dadurch sicher anzeigen, prüfen, erneut exportieren und wieder aus der lokalen Importliste entfernen, bevor später echte Installations- und Aktivierungswege ergänzt werden.
+`parseRuntimePluginInstallPackage()` liest diese Paketbeschreibung wieder als validierten Descriptor ein. Dabei wird kein Plugin-Code ausgeführt. Die Administration kann importierte Pakete dadurch sicher anzeigen, prüfen, erneut exportieren und wieder aus der lokalen Importliste entfernen, bevor später echte Installations- und Aktivierungswege ergänzt werden. Aktivierungszustände werden in der lokalen Demo-Administration gemerkt, damit Plugin-Listen einen Reload überstehen.
 
 ## Erstes Referenz-Plugin
 
