@@ -118,9 +118,9 @@ Das Archiv enthaelt die Dateien fuer ein spaeteres Frontend-Repository:
 Beispiel-Lovelace-Card und das urspruengliche Atlas Card Package fuer spaetere
 Bearbeitung.
 Die Demo kann solche `.hacs.zip`-Dateien beim HA-Card-Import wieder erkennen.
-Sie liest die ZIP-Struktur, meldet fehlende Bundle-Dateien und stoppt bewusst
-vor dem vollstaendigen Inhaltsimport. Dieser Vollimport bleibt der naechste
-Workflow-Schritt.
+Sie liest die ZIP-Struktur, meldet fehlende Bundle-Dateien und importiert das
+eingebettete `atlas/*.atlas-card.json` wieder in den Simple- oder Expert-Editor.
+Damit ist ein erster HACS-Bundle-Roundtrip moeglich.
 
 ```json
 {

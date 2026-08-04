@@ -116,9 +116,9 @@ archive contains the files for a later frontend repository: `hacs.json`, the
 generated JavaScript card, a README, an example Lovelace card and the original
 Atlas Card Package for later editing.
 The demo can recognize those `.hacs.zip` files again through the HA card import
-control. It reads the ZIP structure, reports missing bundle files and
-deliberately stops before full content import. That full import remains the next
-workflow step.
+control. It reads the ZIP structure, reports missing bundle files and imports
+the embedded `atlas/*.atlas-card.json` back into the Simple or Expert editor.
+This enables the first HACS bundle roundtrip.
 
 ```json
 {
