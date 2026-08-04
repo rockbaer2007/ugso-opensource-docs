@@ -9,7 +9,7 @@ Assistant cards, live entities and later HACS-oriented usage.
 - ATLAS Status Preview with Theme and Renderer integration
 - local and live Home Assistant entities
 - connection through the Home Assistant WebSocket API
-- token management in Atlas Administration with handoff to the active editor session
+- token management in Atlas Administration with handoff and optional auto-connect to the active editor session
 - loading entities through `get_states`
 - loading Lovelace resources through `lovelace/resources`
 - shared entity catalog for type filters and search

@@ -94,7 +94,7 @@ A dedicated Atlas Administration web surface is planned for plugin management. I
 
 The first visible step is a dedicated minimal administration surface on port `4175`, separate from the Home Assistant Card Editor on port `4174`. It reads the Runtime plugin catalog, shows the Home Assistant Card Editor as the first reference plugin, displays status, version, extension points and capabilities, and exposes first actions such as inspect, activate, deactivate and export package.
 
-Administration is also the central place for sensitive connection settings. Home Assistant tokens should be managed there. The Card Editor receives the token only as a handoff to the active browser session. Plugins should later receive only approved context such as the Home Assistant URL, WebSocket path, allowed resource paths and declared capabilities, but never the raw access token.
+Administration is also the central place for sensitive connection settings. Home Assistant tokens should be managed there. The Card Editor receives the token only as a handoff to the active browser session and can optionally connect automatically after that handoff. Plugins should later receive only approved context such as the Home Assistant URL, WebSocket path, allowed resource paths and declared capabilities, but never the raw access token.
 
 Planned capabilities include:
 
