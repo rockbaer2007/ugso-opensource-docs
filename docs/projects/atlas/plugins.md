@@ -17,8 +17,6 @@ Geplante Einsatzbereiche sind:
 - wiederverwendbare Provider, Renderer, Themes und Devtools-Erweiterungen
 - optionale Community-Erweiterungen mit klaren Verträgen
 
-Die zuvor angedachte Thread-Card / der UGSo Thread Monitor ist aus dem Plugin-TODO entfernt, weil Home Assistant 2026.8 diese Thread-/Matter-Übersicht im Matter Server bereitstellt.
-
 ## Plugin-Lebenszyklus
 
 Ein Plugin soll später einen nachvollziehbaren Lebenszyklus besitzen:

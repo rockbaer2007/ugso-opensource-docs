@@ -58,5 +58,3 @@ ATLAS soll später als Basis dienen für:
 - Diagnoseanwendungen
 - Plugin-basierte Desktop- oder Webanwendungen
 - die geplante **Lovelace UV Card**
-
-Die zuvor geplante Thread-Card / der UGSo Thread Monitor wird nicht weiter als eigenes ATLAS-Folgeprojekt geführt, weil Home Assistant 2026.8 die benötigte Thread-/Matter-Übersicht im Matter Server bereitstellt.

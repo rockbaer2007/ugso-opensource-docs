@@ -48,7 +48,7 @@ Dabei liegt der Schwerpunkt auf:
 
 ATLAS soll eine gemeinsame technische Grundlage für mehrere UGSo-Projekte schaffen.
 
-Die **Lovelace UV Card** bleibt als späteres Projekt für UV-Index, Schutzstatus und visuelle Home-Assistant-Dashboards geplant. Die früher angedachte Thread-Card beziehungsweise der UGSo Thread Monitor wird nicht weiter als eigenes TODO geführt, weil Home Assistant 2026.8 die benötigte Thread-/Matter-Übersicht im Matter Server bereitstellt.
+Die **Lovelace UV Card** bleibt als späteres Projekt für UV-Index, Schutzstatus und visuelle Home-Assistant-Dashboards geplant.
 
 ## Mehr erfahren
 

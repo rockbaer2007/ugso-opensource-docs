@@ -56,8 +56,6 @@ Geplante Folgeprojekte sind:
 
 - **Lovelace UV Card**: eine Home-Assistant-/Lovelace-Card für UV-Index, Schutzstatus, Grenzwerte und visuelle Dashboard-Ausgabe. Als Inspiration ist `filipnet/haos-uv-index` vorgemerkt: relevant sind UV-Index-Sensoren, farbcodierte Risikostufen, WHO-nahe Schutzempfehlungen, Mushroom-kompatible Darstellung und optionale Benachrichtigungs-Automationen. Die Umsetzung soll eine eigene UGSo/ATLAS-Card bleiben.
 
-Die zuvor angedachte Thread-Card beziehungsweise der UGSo Thread Monitor wird nicht mehr als eigenes Folgeprojekt geführt. Ab Home Assistant 2026.8 stellt der Matter Server die benötigte Thread-/Matter-Übersicht bereits bereit.
-
 ::: info Hinweis
 Die Roadmap kann sich während der Entwicklung ändern. Die Seite beschreibt den aktuellen Planungsstand.
 :::

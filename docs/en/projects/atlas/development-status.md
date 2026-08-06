@@ -65,10 +65,6 @@ Planned follow-up projects include:
   optional notification automations. The implementation should remain an
   original UGSo/ATLAS card.
 
-The previously considered Thread card / UGSo Thread Monitor is no longer tracked
-as a separate follow-up project. As of Home Assistant 2026.8, the Matter Server
-already provides the needed Thread/Matter overview.
-
 ::: info Note
 The roadmap may change during development. This page describes the current
 planning state.

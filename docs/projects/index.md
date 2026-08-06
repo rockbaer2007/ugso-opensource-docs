@@ -34,4 +34,4 @@ Das Projekt befindet sich aktuell in aktiver Entwicklung. Der Schwerpunkt liegt 
 
 ## Weitere Projekte
 
-Weitere Dokumentationen zu ESPHome, Lovelace-Komponenten und der geplanten Lovelace UV Card folgen. Die bisher angedachte Thread-Card wird nicht mehr als eigenes UGSo-Projekt verfolgt, da Home Assistant 2026.8 die benoetigte Thread-/Matter-Uebersicht im Matter Server bereitstellt.
+Weitere Dokumentationen zu ESPHome, Lovelace-Komponenten und der geplanten Lovelace UV Card folgen.

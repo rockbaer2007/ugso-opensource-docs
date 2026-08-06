@@ -17,10 +17,6 @@ Planned use cases include:
 - reusable providers, renderers, themes and Devtools extensions
 - optional community extensions with clear contracts
 
-The previously considered Thread card / UGSo Thread Monitor has been removed
-from the plugin TODO because Home Assistant 2026.8 provides this Thread/Matter
-overview in the Matter Server.
-
 ## Plugin Lifecycle
 
 A plugin should later follow a clear lifecycle:
