@@ -57,5 +57,8 @@ ATLAS is intended to support:
 - dashboard components
 - diagnostics applications
 - plugin-based desktop or web applications
-- the planned **UGSo Thread Monitor**
 - the planned **Lovelace UV Card**
+
+The previously planned Thread card / UGSo Thread Monitor is no longer tracked as
+a separate ATLAS follow-up project because Home Assistant 2026.8 provides the
+needed Thread/Matter overview in the Matter Server.

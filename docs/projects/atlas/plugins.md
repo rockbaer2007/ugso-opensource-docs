@@ -13,9 +13,11 @@ Plugins sollen ATLAS erweitern können, ohne Kernpakete oder bestehende Anwendun
 Geplante Einsatzbereiche sind:
 
 - Home-Assistant-nahe Werkzeuge wie Card-Editoren, Diagnoseflächen und Lovelace-Helfer
-- eigenständige UGSo-Projekte wie der geplante UGSo Thread Monitor
+- eigenständige UGSo-Projekte wie die geplante Lovelace UV Card
 - wiederverwendbare Provider, Renderer, Themes und Devtools-Erweiterungen
 - optionale Community-Erweiterungen mit klaren Verträgen
+
+Die zuvor angedachte Thread-Card / der UGSo Thread Monitor ist aus dem Plugin-TODO entfernt, weil Home Assistant 2026.8 diese Thread-/Matter-Übersicht im Matter Server bereitstellt.
 
 ## Plugin-Lebenszyklus
 

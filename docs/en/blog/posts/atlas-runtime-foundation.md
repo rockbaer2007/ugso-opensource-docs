@@ -50,9 +50,11 @@ The focus is on:
 ATLAS is intended to create a shared technical foundation for several UGSo
 projects.
 
-Later projects include the **UGSo Thread Monitor** for ESPHome Thread devices,
-roles, IPv6 addresses and diagnostic data, plus the **Lovelace UV Card** for UV
-index, protection status and visual Home Assistant dashboards.
+The **Lovelace UV Card** remains planned as a later project for UV index,
+protection status and visual Home Assistant dashboards. The previously
+considered Thread card / UGSo Thread Monitor is no longer tracked as a separate
+TODO because Home Assistant 2026.8 provides the needed Thread/Matter overview in
+the Matter Server.
 
 ## Learn More
 

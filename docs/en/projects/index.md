@@ -38,5 +38,7 @@ Foundation, events, services and dependency injection.
 
 ## More Projects
 
-Additional documentation for ESPHome, Lovelace components, the planned UGSo
-Thread Monitor and the planned Lovelace UV Card will follow.
+Additional documentation for ESPHome, Lovelace components and the planned
+Lovelace UV Card will follow. The previously considered Thread card is no
+longer tracked as a separate UGSo project because Home Assistant 2026.8 provides
+the needed Thread/Matter overview in the Matter Server.
