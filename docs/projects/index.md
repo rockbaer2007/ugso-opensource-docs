@@ -11,6 +11,16 @@ HADash ist eine portable Windows-Anwendung zum Einlesen, Sichern und Exportieren
 - [HADash-Dokumentation öffnen](./hadash/)
 - [HADash auf GitHub öffnen](https://github.com/rockbaer2007/HADash)
 
+## Home Assistant Automation Exporter
+
+**Home Assistant Automation Exporter**
+
+Der Home Assistant Automation Exporter ist eine portable Windows-Anwendung zum Aufteilen einer `automations.yaml` in einzelne YAML-Dateien. Die Oberfläche listet alle Automationen mit Checkboxen auf, speichert den Export-Ordner portabel neben der EXE und exportiert nur die ausgewählten Automationen.
+
+![Home Assistant Automation Exporter](/images/ha-automation-exporter/automations-exporter.png)
+
+- [Automation Exporter auf GitHub öffnen](https://github.com/rockbaer2007/ha-automation-exporter)
+
 ## Ultimate Timer
 
 **Ultimate Timer V3.2.4 FINAL CLEAN**

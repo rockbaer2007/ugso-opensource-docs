@@ -12,6 +12,16 @@ Home Assistant dashboards and individual views.
 - [Open the HADash documentation](./hadash/)
 - [Open HADash on GitHub](https://github.com/rockbaer2007/HADash)
 
+## Home Assistant Automation Exporter
+
+**Home Assistant Automation Exporter**
+
+The Home Assistant Automation Exporter is a portable Windows application for splitting an `automations.yaml` file into separate YAML files. Its UI lists all automations with checkboxes, stores the export folder next to the EXE for portable use and exports only the selected automations.
+
+![Home Assistant Automation Exporter](/images/ha-automation-exporter/automations-exporter.png)
+
+- [Open Automation Exporter on GitHub](https://github.com/rockbaer2007/ha-automation-exporter)
+
 ## Ultimate Timer
 
 **Ultimate Timer V3.2.4 FINAL CLEAN**
