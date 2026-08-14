@@ -25,7 +25,7 @@ Use **Details** or double-click an automation to open a detail window with two t
 - **Entities** lists detected Home Assistant entities with source, line number and context. Entities found inside templates are detected heuristically and marked as template matches.
 - **YAML** shows the full code of the selected automation and includes a copy button.
 
-The UI supports **German**, **English**, **French**, **Spanish**, **Polish** and **Russian**. The **System** setting follows the Windows UI language; unsupported system languages fall back to English.
+The export folder and language are managed in the settings dialog, keeping the main view compact. The UI supports **German**, **English**, **French**, **Spanish**, **Polish** and **Russian**. The **System** setting follows the Windows UI language; unsupported system languages fall back to English.
 
 ![Automation details with entities](/images/ha-automation-exporter/details-entities.png)
 
