@@ -16,7 +16,7 @@ Home Assistant dashboards and individual views.
 
 **Home Assistant Automation Exporter**
 
-The Home Assistant Automation Exporter is a portable Windows application for splitting an `automations.yaml` file into separate YAML files. Its UI lists all automations with checkboxes, stores the export folder next to the EXE for portable use and exports only the selected automations.
+The Home Assistant Automation Exporter is a portable Windows application for splitting an `automations.yaml` file into separate YAML files. Its compact UI lists all automations with checkboxes, provides a dedicated settings dialog for export folder and language, and exports only the selected automations.
 
 ![Home Assistant Automation Exporter](/images/ha-automation-exporter/automations-exporter.png)
 
@@ -32,6 +32,7 @@ The export folder and language are managed in the settings dialog, keeping the m
 ![Automation details with YAML code](/images/ha-automation-exporter/details-yaml.png)
 
 - [Open Automation Exporter on GitHub](https://github.com/rockbaer2007/ha-automation-exporter)
+- [Download the current v0.2.2 release](https://github.com/rockbaer2007/ha-automation-exporter/releases/tag/v0.2.2)
 
 ## Ultimate Timer
 
