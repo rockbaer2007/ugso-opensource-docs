@@ -19,6 +19,15 @@ Der Home Assistant Automation Exporter ist eine portable Windows-Anwendung zum A
 
 ![Home Assistant Automation Exporter](/images/ha-automation-exporter/automations-exporter.png)
 
+Über **Details** oder per Doppelklick auf eine Automation öffnet der Exporter ein Detailfenster mit zwei Tabs:
+
+- **Entitäten** zeigt erkannte Home-Assistant-Entitäten mit Quelle, Zeilennummer und Kontext. Entitäten aus Templates werden heuristisch erkannt und entsprechend markiert.
+- **YAML** zeigt den vollständigen Code der ausgewählten Automation und bietet einen Kopierbutton.
+
+![Automation-Details mit Entitäten](/images/ha-automation-exporter/details-entities.png)
+
+![Automation-Details mit YAML-Code](/images/ha-automation-exporter/details-yaml.png)
+
 - [Automation Exporter auf GitHub öffnen](https://github.com/rockbaer2007/ha-automation-exporter)
 
 ## Ultimate Timer
