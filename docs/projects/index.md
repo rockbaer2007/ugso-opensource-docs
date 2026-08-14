@@ -24,7 +24,7 @@ Der Home Assistant Automation Exporter ist eine portable Windows-Anwendung zum A
 - **Entitäten** zeigt erkannte Home-Assistant-Entitäten mit Quelle, Zeilennummer und Kontext. Entitäten aus Templates werden heuristisch erkannt und entsprechend markiert.
 - **YAML** zeigt den vollständigen Code der ausgewählten Automation und bietet einen Kopierbutton.
 
-Export-Ordner und Sprache werden im Einstellungsdialog gepflegt, damit die Hauptansicht kompakt bleibt. Die Oberfläche unterstützt **Deutsch**, **Englisch**, **Französisch**, **Spanisch**, **Polnisch** und **Russisch**. Über die Einstellung **System** wird die Windows-UI-Sprache erkannt; nicht unterstützte Systemsprachen fallen auf Englisch zurück.
+Export-Ordner und Sprache werden im Einstellungsdialog gepflegt, damit die Hauptansicht kompakt bleibt. Die Oberfläche unterstützt **Deutsch**, **Englisch**, **Französisch**, **Spanisch**, **Polnisch** und **Russisch**. Die Sprache kann automatisch über die Einstellung **System** anhand der Windows-UI-Sprache erkannt oder manuell ausgewählt werden; nicht unterstützte Systemsprachen fallen auf Englisch zurück.
 
 ![Automation-Details mit Entitäten](/images/ha-automation-exporter/details-entities.png)
 
