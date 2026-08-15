@@ -26,6 +26,8 @@ Der Home Assistant Automation Exporter ist eine portable Windows-Anwendung zum A
 
 Export-Ordner und Sprache werden im Einstellungsdialog gepflegt, damit die Hauptansicht kompakt bleibt. Die Oberfläche unterstützt **Deutsch**, **Englisch**, **Französisch**, **Spanisch**, **Polnisch** und **Russisch**. Die Sprache kann automatisch über die Einstellung **System** anhand der Windows-UI-Sprache erkannt oder manuell ausgewählt werden; nicht unterstützte Systemsprachen fallen auf Englisch zurück.
 
+Für Beispiele aus GitHub, Foren und anderen Open-Source-Projekten berücksichtigt der Exporter unterschiedliche Home-Assistant-YAML-Schreibweisen. Ältere und neuere Automationsdefinitionen wie `trigger`/`triggers`, `condition`/`conditions`, `action`/`actions`, `- trigger: state` und `- action: switch.turn_on` werden beim Export automatisch in ein importfreundliches Einzel-Automationsformat normalisiert.
+
 ![Automation-Details mit Entitäten](/images/ha-automation-exporter/details-entities.png)
 
 ![Automation-Details mit YAML-Code](/images/ha-automation-exporter/details-yaml.png)

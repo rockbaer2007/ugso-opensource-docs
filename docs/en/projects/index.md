@@ -27,6 +27,8 @@ Use **Details** or double-click an automation to open a detail window with two t
 
 The export folder and language are managed in the settings dialog, keeping the main view compact. The UI supports **German**, **English**, **French**, **Spanish**, **Polish** and **Russian**. The language can be detected automatically through the **System** setting based on the Windows UI language or selected manually; unsupported system languages fall back to English.
 
+For examples from GitHub, forums and other open source projects, the exporter handles different Home Assistant YAML spellings. Older and newer automation definitions such as `trigger`/`triggers`, `condition`/`conditions`, `action`/`actions`, `- trigger: state` and `- action: switch.turn_on` are normalized automatically during export into an import-friendly single automation format.
+
 ![Automation details with entities](/images/ha-automation-exporter/details-entities.png)
 
 ![Automation details with YAML code](/images/ha-automation-exporter/details-yaml.png)
