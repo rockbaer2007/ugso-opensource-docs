@@ -33,7 +33,7 @@ Für Beispiele aus GitHub, Foren und anderen Open-Source-Projekten berücksichti
 ![Automation-Details mit YAML-Code](/images/ha-automation-exporter/details-yaml.png)
 
 - [Automation Exporter auf GitHub öffnen](https://github.com/rockbaer2007/ha-automation-exporter)
-- [Aktuelles Release v0.3.3 herunterladen](https://github.com/rockbaer2007/ha-automation-exporter/releases/tag/v0.3.3)
+- [Aktuelles Release v0.3.4 herunterladen](https://github.com/rockbaer2007/ha-automation-exporter/releases/tag/v0.3.4)
 
 ## Ultimate Timer
 
