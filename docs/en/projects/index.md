@@ -34,7 +34,7 @@ For examples from GitHub, forums and other open source projects, the exporter ha
 ![Automation details with YAML code](/images/ha-automation-exporter/details-yaml.png)
 
 - [Open Automation Exporter on GitHub](https://github.com/rockbaer2007/ha-automation-exporter)
-- [Download the current v0.3.0 release](https://github.com/rockbaer2007/ha-automation-exporter/releases/tag/v0.3.0)
+- [Download the current v0.3.1 release](https://github.com/rockbaer2007/ha-automation-exporter/releases/tag/v0.3.1)
 
 ## Ultimate Timer
 
