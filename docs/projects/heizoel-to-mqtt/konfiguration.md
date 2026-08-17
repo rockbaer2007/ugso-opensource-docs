@@ -8,10 +8,10 @@ amount: "1000,2000,3000"
 interval: 60
 esyActive: true
 deliveryTimes: ohne
-payment_type: EC-Karte
+payment_type: "EC-Karte"
 prod: Normal Schwefelarm
 unloading_points: 1
-hose: 40
+hose: "40 m"
 short_vehicle: mit Anhänger möglich
 hoDe: true
 hoAt: false
@@ -36,7 +36,7 @@ Die App ist nur für Deutschland und Österreich vorgesehen. Verwende deutsche o
 
 `payment_type` nutzt die sichtbaren Zahlungsarten aus der ioBroker-Maske: `EC-Karte`, `Barzahlung`, `Ratenkauf`, `Rechnung`, `Lastschrift` und `Vorkasse`.
 
-`hose` wird als Zahl in Metern eingetragen. Intern wird der Wert auf die passende EasyOil-Schlauchklasse abgebildet. `short_vehicle` wird in Home Assistant als `Tankwagen` angezeigt und bietet `mit Anhänger möglich` oder `ohne Anhänger`.
+`hose` bietet genau drei Werte: `40 m`, `60 m` und `80 m`. `short_vehicle` wird in Home Assistant als `Tankwagen` angezeigt und bietet `mit Anhänger möglich` oder `ohne Anhänger`.
 
 In der deutschen Home-Assistant-Oberfläche wird `esyActive` als `EasyOil aktivieren` angezeigt. `hoDe` und `hoAt` heißen dort `Heizöl24 Deutschland aktivieren (Nur PLZ und Menge wird übernommen)` und `Heizöl24 Österreich aktivieren (Nur PLZ und Menge wird übernommen)`.
 
