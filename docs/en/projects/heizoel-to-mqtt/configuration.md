@@ -3,28 +3,32 @@
 Example:
 
 ```yaml
-postal_code: "10115"
-amounts: "1000,2000,3000"
+plz: "10115"
+amount: "1000,2000,3000"
 interval: 60
-esyoil_enabled: true
-heizoel24_de_enabled: true
-heizoel24_at_enabled: false
-unloading_points: 1
+esyActive: true
+deliveryTimes: normal
 payment_type: ec
-product: normal
-delivery_times: normal
+prod: normal
+unloading_points: 1
 hose: fortyMetre
 short_vehicle: withTrailer
+hoDe: true
+hoAt: false
 log_response_details: false
 ```
 
-`postal_code` is the postal code used for price lookups.
+`plz` is the postal code used for price lookups.
 
-`amounts` is a comma-separated list of liter amounts.
+`amount` is a comma-separated list of liter amounts.
 
 `interval` is the polling interval in minutes. The minimum is `30`.
 
-`esyoil_enabled`, `heizoel24_de_enabled` and `heizoel24_at_enabled` enable the individual sources.
+`esyActive`, `hoDe` and `hoAt` enable the individual sources.
+
+`deliveryTimes`, `payment_type`, `prod`, `unloading_points`, `hose` and `short_vehicle` mirror the selection fields from the ioBroker mask. The detailed options are used for Esyoil. Heizöl24 mainly uses postal code and amount, matching the original ioBroker adapter note.
+
+Old `0.1.0` option names such as `postal_code`, `amounts`, `esyoil_enabled`, `heizoel24_de_enabled`, `heizoel24_at_enabled`, `product` and `delivery_times` are still accepted as fallback.
 
 `log_response_details` writes raw provider responses to the app log and should only be enabled for troubleshooting.
 
