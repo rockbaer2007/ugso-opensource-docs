@@ -32,6 +32,8 @@ Die App ist nur für Deutschland und Österreich vorgesehen. Verwende deutsche o
 
 `deliveryTimes` nutzt die sichtbaren Werte aus der ioBroker-Maske: `ohne`, `7:00 - 12:00 Uhr`, `12:00 - 17:00 Uhr`, `2 Wochentage (Express)`, `3 - 5 Wochentage (Mo.-Fr.)` und `6 - 10 Wochentage (Mo.-Fr.)`.
 
+In der deutschen Home-Assistant-Oberfläche wird `esyActive` als `EasyOil aktivieren` angezeigt. `hoDe` und `hoAt` heißen dort `Heizöl24 Deutschland aktivieren (Nur PLZ und Menge wird übernommen)` und `Heizöl24 Österreich aktivieren (Nur PLZ und Menge wird übernommen)`.
+
 In Home Assistant werden die Konfigurationsfelder bei deutscher Oberflächensprache mit deutschen Namen und Beschreibungen angezeigt.
 
 Alte Optionsnamen aus `0.1.0` für PLZ, Menge, Sorte und Liefertermin werden weiterhin als Fallback gelesen. Die Anbieter-Schalter heißen nur noch `esyActive`, `hoDe` und `hoAt`.

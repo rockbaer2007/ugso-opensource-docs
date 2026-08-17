@@ -32,6 +32,8 @@ The app is intended for Germany and Austria only. Use German or Austrian postal 
 
 `deliveryTimes` uses the visible values from the ioBroker mask: `ohne`, `7:00 - 12:00 Uhr`, `12:00 - 17:00 Uhr`, `2 Wochentage (Express)`, `3 - 5 Wochentage (Mo.-Fr.)` and `6 - 10 Wochentage (Mo.-Fr.)`.
 
+In the German Home Assistant UI, `esyActive` is shown as `EasyOil aktivieren`. `hoDe` and `hoAt` are shown as `Heizöl24 Deutschland aktivieren (Nur PLZ und Menge wird übernommen)` and `Heizöl24 Österreich aktivieren (Nur PLZ und Menge wird übernommen)`.
+
 Home Assistant shows translated configuration labels and descriptions when the active UI language is German or English.
 
 Old `0.1.0` option names for postal code, amount, product and delivery time are still accepted as fallback. Provider toggles now only use `esyActive`, `hoDe` and `hoAt`.
