@@ -10,6 +10,10 @@
 
 ## Add The Repository
 
+Use this button to open the repository directly in Home Assistant:
+
+[![Open FRITZ!Box to MQTT in Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Ffritzbox-to-mqtt)
+
 1. Open Home Assistant.
 2. Open **Settings > Apps > App-Store**.
 3. Open the three-dot menu and choose **Repositories**.
