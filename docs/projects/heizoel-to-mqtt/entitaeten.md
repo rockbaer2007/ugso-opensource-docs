@@ -21,4 +21,6 @@ Zusätzlich gibt es:
 
 Pro Angebot entstehen damit vier Entitäten: Name des Anbieters, Gesamtpreis, Preis pro Liter und Preis pro 100l. Die Attribute enthalten Rang, Lieferdauer, Lieferdatum, Bewertung und Währung.
 
+Preis-Entitäten werden mit zwei Nachkommastellen veröffentlicht und per MQTT Discovery mit `suggested_display_precision: 2` angekündigt.
+
 Die Bestpreis-Detailattribute enthalten Quelle, Menge, PLZ, Händler, Lieferdatum, Bewertung und Angebotsanzahl.

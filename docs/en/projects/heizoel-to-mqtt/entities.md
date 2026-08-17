@@ -21,4 +21,6 @@ It also creates:
 
 Each offer creates four entities: provider name, total price, price per liter and price per 100l. Attributes contain rank, delivery days, delivery date, rating and currency.
 
+Price entities are published with two decimal places and announced through MQTT Discovery with `suggested_display_precision: 2`.
+
 Best-price detail attributes contain source, amount, postal code, dealer, delivery date, rating and offer count.
