@@ -35,8 +35,8 @@ log_value_details: true
 
 `include_dect_lines` enables optional DECT handset sensors.
 
-`log_value_details` writes raw values and normalized values to the add-on log. Disable it after troubleshooting for quieter logs.
+`log_value_details` writes raw values and normalized values to the app log. Disable it after troubleshooting for quieter logs.
 
 ## MQTT
 
-When the Home Assistant MQTT service is available, the add-on reads broker, port and internal credentials automatically.
+When the Home Assistant MQTT service is available, the app reads broker, port and internal credentials automatically.

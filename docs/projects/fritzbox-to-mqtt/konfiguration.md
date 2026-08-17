@@ -35,8 +35,8 @@ log_value_details: true
 
 `include_dect_lines` aktiviert optionale DECT-Handset-Sensoren.
 
-`log_value_details` schreibt Rohwerte und normalisierte Werte ins Add-on-Protokoll. Für normale Nutzung kann es nach der Fehlersuche deaktiviert werden.
+`log_value_details` schreibt Rohwerte und normalisierte Werte ins App-Protokoll. Für normale Nutzung kann es nach der Fehlersuche deaktiviert werden.
 
 ## MQTT
 
-Wenn der Home-Assistant-MQTT-Dienst verfügbar ist, liest das Add-on Broker, Port und interne Zugangsdaten automatisch aus.
+Wenn der Home-Assistant-MQTT-Dienst verfügbar ist, liest die App Broker, Port und interne Zugangsdaten automatisch aus.

@@ -1,8 +1,8 @@
 # FRITZ!Box to MQTT
 
-FRITZ!Box to MQTT is a Home Assistant add-on that publishes FRITZ!Box data to Home Assistant through MQTT Discovery.
+FRITZ!Box to MQTT is a Home Assistant app that publishes FRITZ!Box data to Home Assistant through MQTT Discovery.
 
-The add-on combines several data sources because FRITZ!Box models and FRITZ!OS versions do not expose every value in the same place:
+The app combines several data sources because FRITZ!Box models and FRITZ!OS versions do not expose every value in the same place:
 
 - TR-064 for many FRITZ!Box services
 - FRITZ!Box web/Lua queries as fallbacks
@@ -10,7 +10,7 @@ The add-on combines several data sources because FRITZ!Box models and FRITZ!OS v
 - MQTT Discovery for automatic Home Assistant entity creation
 
 ::: info HACS
-This project is a Home Assistant Supervisor add-on. HACS installs custom integrations and frontend cards, but not Docker-based Supervisor add-ons. Install it through the Home Assistant add-on repository flow.
+This project is a Home Assistant Supervisor app. HACS installs custom integrations and frontend cards, but not Docker-based Supervisor apps. Install it through the Home Assistant app repository flow.
 :::
 
 ## Features
