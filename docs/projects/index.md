@@ -63,6 +63,16 @@ Eine Home-Assistant-App, die Heizölpreise von Esyoil und Heizöl24 per MQTT Dis
 - [Repository auf GitHub öffnen](https://github.com/rockbaer2007/heizoel-to-mqtt)
 - Adaptiert von: [TA2k/ioBroker.heizoel](https://github.com/TA2k/ioBroker.heizoel)
 
+## Parcel to MQTT
+
+**Parcel to MQTT**
+
+Eine Home-Assistant-App, die Paketverfolgung per MQTT Discovery als Entitäten bereitstellt. Die erste Version nutzt 17TRACK und überlässt Benachrichtigungen normalen Home-Assistant-Automationen.
+
+- [Parcel-to-MQTT-Dokumentation öffnen](./parcel-to-mqtt/)
+- [Repository auf GitHub öffnen](https://github.com/rockbaer2007/parcel-to-mqtt)
+- Adaptiert von: [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel)
+
 ## ATLAS
 
 **ATLAS – Modular Application Framework**
