@@ -6,6 +6,8 @@ Diese Lovelace-Karte zeigt einen Anbieter mit Preis pro Liter, Preis pro 100 Lit
 
 Voraussetzung ist, dass Mushroom in Home Assistant installiert ist. `card_mod` ist optional und wird nur für den Rahmen und Hintergrund verwendet.
 
+![Heizöl to MQTT Mushroom Anbieter Card](/images/heizoel-to-mqtt.png)
+
 ```yaml
 type: custom:mushroom-template-card
 entity: sensor.heizol_to_mqtt_esyoil_3000l_anbieter_01

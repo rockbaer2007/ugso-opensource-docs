@@ -6,6 +6,8 @@ This Lovelace card shows one provider with price per liter, price per 100 liters
 
 Mushroom must be installed in Home Assistant. `card_mod` is optional and only used for the border and background.
 
+![Heizöl to MQTT Mushroom provider card](/images/heizoel-to-mqtt.png)
+
 ```yaml
 type: custom:mushroom-template-card
 entity: sensor.heizol_to_mqtt_esyoil_3000l_anbieter_01
