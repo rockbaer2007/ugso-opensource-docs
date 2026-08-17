@@ -28,7 +28,7 @@ log_response_details: false
 
 `deliveryTimes`, `payment_type`, `prod`, `unloading_points`, `hose` and `short_vehicle` mirror the selection fields from the ioBroker mask. The detailed options are used for Esyoil. Heizöl24 mainly uses postal code and amount, matching the original ioBroker adapter note.
 
-Old `0.1.0` option names such as `postal_code`, `amounts`, `esyoil_enabled`, `heizoel24_de_enabled`, `heizoel24_at_enabled`, `product` and `delivery_times` are still accepted as fallback.
+Old `0.1.0` option names for postal code, amount, product and delivery time are still accepted as fallback. Provider toggles now only use `esyActive`, `hoDe` and `hoAt`.
 
 `log_response_details` writes raw provider responses to the app log and should only be enabled for troubleshooting.
 
