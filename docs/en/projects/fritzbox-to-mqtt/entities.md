@@ -24,6 +24,8 @@ Depending on the FRITZ!Box, these entities are created:
 - guest WLAN on/off
 - guest WLAN status
 
+The WLAN status sensors show `Ein` or `Aus`; the raw FRITZ!Box status is kept as an attribute.
+
 ## WAN And Box Status
 
 - connection download
@@ -37,6 +39,8 @@ Depending on the FRITZ!Box, these entities are created:
 - box IPv6 external
 - box DECT
 - box DNS over TLS
+
+`WAN link status` also shows `Ein` or `Aus`.
 
 Optional values that are not exposed by the FRITZ!Box are hidden or published as `unknown`.
 

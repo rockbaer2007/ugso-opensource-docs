@@ -24,6 +24,8 @@ Je nach FRITZ!Box werden angelegt:
 - WLAN Gast Ein/Aus
 - WLAN Gast Status
 
+Die WLAN-Statussensoren zeigen `Ein` oder `Aus`; der rohe FRITZ!Box-Status bleibt als Attribut erhalten.
+
 ## WAN und Box-Status
 
 - Verbindung Download
@@ -37,6 +39,8 @@ Je nach FRITZ!Box werden angelegt:
 - Box IPv6 Extern
 - Box DECT
 - Box DNS over TLS
+
+`WAN Link Status` zeigt ebenfalls `Ein` oder `Aus`.
 
 Nicht von der FRITZ!Box gelieferte optionale Werte werden ausgeblendet oder als `unknown` veröffentlicht.
 
