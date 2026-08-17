@@ -36,7 +36,7 @@ Die App ist nur für Deutschland und Österreich vorgesehen. Verwende deutsche o
 
 `payment_type` nutzt die sichtbaren Zahlungsarten aus der ioBroker-Maske: `EC-Karte`, `Barzahlung`, `Ratenkauf`, `Rechnung`, `Lastschrift` und `Vorkasse`.
 
-`hose` bietet genau drei Werte: `40m`, `60m` und `80m`. `short_vehicle` wird in Home Assistant als `Tankwagen` angezeigt und bietet `mit Anhänger möglich` oder `ohne Anhänger`.
+`hose` bietet die Werte `40m`, `60m` und `80m`. Bereits gespeicherte alte Werte mit Leerzeichen, zum Beispiel `40 m`, werden akzeptiert, damit Home Assistant bestehende Konfigurationen speichern kann. `short_vehicle` wird in Home Assistant als `Tankwagen` angezeigt und bietet `mit Anhänger möglich` oder `ohne Anhänger`.
 
 In der deutschen Home-Assistant-Oberfläche wird `esyActive` als `EasyOil aktivieren` angezeigt. `hoDe` und `hoAt` heißen dort `Heizöl24 Deutschland aktivieren (Nur PLZ und Menge wird übernommen)` und `Heizöl24 Österreich aktivieren (Nur PLZ und Menge wird übernommen)`.
 
