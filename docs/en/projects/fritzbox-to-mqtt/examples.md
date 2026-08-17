@@ -6,6 +6,8 @@ This Lovelace card shows download and upload rates, answering machines `AB0` to 
 
 Mushroom must be installed in Home Assistant.
 
+![FRITZ!Box to MQTT Mushroom status card](/images/fritzbox-to-mqtt.png)
+
 ```yaml
 type: vertical-stack
 cards:

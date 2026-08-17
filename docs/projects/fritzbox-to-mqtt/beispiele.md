@@ -6,6 +6,8 @@ Diese Lovelace-Karte zeigt die Download- und Uploadrate, die Anrufbeantworter `A
 
 Voraussetzung ist, dass Mushroom in Home Assistant installiert ist.
 
+![FRITZ!Box to MQTT Mushroom Status Card](/images/fritzbox-to-mqtt.png)
+
 ```yaml
 type: vertical-stack
 cards:
