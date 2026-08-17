@@ -8,9 +8,12 @@ General entities:
 - Parcel last update
 - Parcel shipments
 - Parcel total
+- Parcel registered
 - Parcel in transit
 - Parcel out for delivery
+- Parcel pickup point
 - Parcel delivered
+- Parcel returning
 - Parcel exception
 - Parcel unknown
 

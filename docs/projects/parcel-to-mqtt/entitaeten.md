@@ -8,9 +8,12 @@ Allgemeine Entitäten:
 - Parcel letzte Aktualisierung
 - Parcel Sendungen
 - Parcel Gesamt
+- Parcel Angemeldet
 - Parcel Unterwegs
 - Parcel In Zustellung
+- Parcel Abholstelle
 - Parcel Zugestellt
+- Parcel Rücksendung
 - Parcel Problem
 - Parcel Unbekannt
 
