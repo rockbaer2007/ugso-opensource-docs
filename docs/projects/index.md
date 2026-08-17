@@ -52,7 +52,6 @@ Eine Home-Assistant-App, die FRITZ!Box-Daten per MQTT Discovery als Entitäten b
 
 - [FRITZ!Box-to-MQTT-Dokumentation öffnen](./fritzbox-to-mqtt/)
 - [Repository auf GitHub öffnen](https://github.com/rockbaer2007/fritzbox-to-mqtt)
-- Discord: `#fritzbox-to-mqtt`
 
 ## Heizöl to MQTT
 
@@ -63,7 +62,6 @@ Eine Home-Assistant-App, die Heizölpreise von Esyoil und Heizöl24 per MQTT Dis
 - [Heizöl-to-MQTT-Dokumentation öffnen](./heizoel-to-mqtt/)
 - [Repository auf GitHub öffnen](https://github.com/rockbaer2007/heizoel-to-mqtt)
 - Adaptiert von: [TA2k/ioBroker.heizoel](https://github.com/TA2k/ioBroker.heizoel)
-- Discord: `#heizoel-to-mqtt`
 
 ## ATLAS
 
