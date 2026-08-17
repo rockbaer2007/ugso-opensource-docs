@@ -34,4 +34,5 @@ Dieses Projekt ist eine Home-Assistant-Supervisor-App. HACS installiert Custom I
 - [Installation](./installation)
 - [Konfiguration](./konfiguration)
 - [Entitäten](./entitaeten)
+- [Beispiele](./beispiele)
 - [Fehlersuche](./fehlersuche)

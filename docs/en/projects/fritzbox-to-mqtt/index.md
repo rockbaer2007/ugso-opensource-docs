@@ -34,4 +34,5 @@ This project is a Home Assistant Supervisor app. HACS installs custom integratio
 - [Installation](./installation)
 - [Configuration](./configuration)
 - [Entities](./entities)
+- [Examples](./examples)
 - [Troubleshooting](./troubleshooting)
