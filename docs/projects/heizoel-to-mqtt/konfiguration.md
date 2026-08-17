@@ -18,7 +18,7 @@ hoAt: false
 log_response_details: false
 ```
 
-`plz` ist die Postleitzahl für die Preisabfrage.
+`plz` ist die deutsche oder österreichische Postleitzahl für die Preisabfrage.
 
 `amount` ist eine kommagetrennte Liste von Liter-Mengen.
 
@@ -27,6 +27,8 @@ log_response_details: false
 `esyActive`, `hoDe` und `hoAt` aktivieren die einzelnen Quellen.
 
 `deliveryTimes`, `payment_type`, `prod`, `unloading_points`, `hose` und `short_vehicle` entsprechen den Auswahlfeldern aus der ioBroker-Maske. Die Detailoptionen werden für Esyoil genutzt. Heizöl24 nutzt wie der Ursprungshinweis des ioBroker-Adapters vor allem PLZ und Menge.
+
+Die App ist nur für Deutschland und Österreich vorgesehen. Verwende deutsche oder österreichische Postleitzahlen passend zu den aktivierten Anbietern.
 
 In Home Assistant werden die Konfigurationsfelder bei deutscher Oberflächensprache mit deutschen Namen und Beschreibungen angezeigt.
 

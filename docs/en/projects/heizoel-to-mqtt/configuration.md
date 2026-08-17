@@ -18,7 +18,7 @@ hoAt: false
 log_response_details: false
 ```
 
-`plz` is the postal code used for price lookups.
+`plz` is the German or Austrian postal code used for price lookups.
 
 `amount` is a comma-separated list of liter amounts.
 
@@ -27,6 +27,8 @@ log_response_details: false
 `esyActive`, `hoDe` and `hoAt` enable the individual sources.
 
 `deliveryTimes`, `payment_type`, `prod`, `unloading_points`, `hose` and `short_vehicle` mirror the selection fields from the ioBroker mask. The detailed options are used for Esyoil. Heizöl24 mainly uses postal code and amount, matching the original ioBroker adapter note.
+
+The app is intended for Germany and Austria only. Use German or Austrian postal codes that match the selected providers.
 
 Home Assistant shows translated configuration labels and descriptions when the active UI language is German or English.
 

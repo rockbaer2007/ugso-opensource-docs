@@ -2,7 +2,7 @@
 
 Heizöl to MQTT ist eine Home-Assistant-App, die Heizölpreise per MQTT Discovery in Home Assistant bereitstellt.
 
-Die App fragt öffentliche Preisrechner-Endpunkte ab und normalisiert die besten Angebote pro Quelle und Liter-Menge.
+Die App fragt öffentliche Preisrechner-Endpunkte ab und normalisiert die besten Angebote pro Quelle und Liter-Menge. Sie ist nur für Deutschland und Österreich vorgesehen.
 
 ::: info Ursprung
 Die Umsetzung ist adaptiert von und inspiriert durch den ioBroker-Adapter [TA2k/ioBroker.heizoel](https://github.com/TA2k/ioBroker.heizoel).
@@ -13,6 +13,8 @@ Die Umsetzung ist adaptiert von und inspiriert durch den ioBroker-Adapter [TA2k/
 - Esyoil
 - Heizöl24 Deutschland
 - Heizöl24 Österreich
+
+Die Preisabfragen sind nur für deutsche und österreichische Postleitzahlen gültig.
 
 ## Status
 

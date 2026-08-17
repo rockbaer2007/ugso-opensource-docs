@@ -2,7 +2,7 @@
 
 Heizöl to MQTT is a Home Assistant app that publishes heating-oil prices through MQTT Discovery.
 
-The app queries public price calculator endpoints and normalizes the best offer per source and amount.
+The app queries public price calculator endpoints and normalizes the best offer per source and amount. It is intended for Germany and Austria only.
 
 ::: info Origin
 This implementation is adapted from and inspired by the ioBroker adapter [TA2k/ioBroker.heizoel](https://github.com/TA2k/ioBroker.heizoel).
@@ -13,6 +13,8 @@ This implementation is adapted from and inspired by the ioBroker adapter [TA2k/i
 - Esyoil
 - Heizöl24 Germany
 - Heizöl24 Austria
+
+The price lookups are valid for German and Austrian postal codes only.
 
 ## Status
 
