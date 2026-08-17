@@ -1,5 +1,7 @@
 # Heizöl to MQTT
 
+<img src="/images/heizoel-to-mqtt-icon.svg" alt="Heizöl to MQTT icon" width="96">
+
 Heizöl to MQTT is a Home Assistant app that publishes heating-oil prices through MQTT Discovery.
 
 The app queries public price calculator endpoints and normalizes the best offer per source and amount. It is intended for Germany and Austria only.

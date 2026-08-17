@@ -1,5 +1,7 @@
 # Heizöl to MQTT
 
+<img src="/images/heizoel-to-mqtt-icon.svg" alt="Heizöl to MQTT Icon" width="96">
+
 Heizöl to MQTT ist eine Home-Assistant-App, die Heizölpreise per MQTT Discovery in Home Assistant bereitstellt.
 
 Die App fragt öffentliche Preisrechner-Endpunkte ab und normalisiert die besten Angebote pro Quelle und Liter-Menge. Sie ist nur für Deutschland und Österreich vorgesehen.

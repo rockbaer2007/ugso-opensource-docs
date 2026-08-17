@@ -1,5 +1,7 @@
 # FRITZ!Box to MQTT
 
+<img src="/images/fritzbox-to-mqtt-icon.svg" alt="FRITZ!Box to MQTT Icon" width="96">
+
 FRITZ!Box to MQTT ist eine Home-Assistant-App, die Daten aus einer FRITZ!Box per MQTT Discovery in Home Assistant bereitstellt.
 
 Die App nutzt mehrere Quellen, weil nicht jede FRITZ!Box dieselben Schnittstellen gleich ausliefert:
