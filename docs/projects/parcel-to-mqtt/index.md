@@ -27,6 +27,16 @@ Das gemeinsame Statusmodell ist inspiriert durch die MIT-lizenzierten Home-Assis
 - Beispiel-Mushroom-Card
 - Benachrichtigungen über Home Assistant Automationen
 
+## Provider-Roadmap
+
+Die Eingabemasken des ioBroker-Adapters dienen als Referenz für die nächsten Login-Varianten:
+
+- DHL: aktiv über `dhllogin://` Browser-Login-Code plus optionale manuelle Sendungsnummern
+- Amazon: geplant mit E-Mail, Passwort, optionalem OTP-Token und Cookie-Reset bei Login-Problemen
+- Hermes: aktuell per manueller Sendungsnummer aktiv; Konto-Login mit App-Username und App-Passwort ist geplant
+- UPS: geplant mit App-Username und App-Passwort
+- GLS und DPD: geplant, sobald der stabile Login-/Session-Ablauf sauber abgebildet ist
+
 ## Repository
 
 [Parcel to MQTT auf GitHub öffnen](https://github.com/rockbaer2007/parcel-to-mqtt)

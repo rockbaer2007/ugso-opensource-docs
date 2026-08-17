@@ -27,6 +27,16 @@ The shared status model is inspired by the MIT licensed Home Assistant parcel in
 - Mushroom example card
 - notifications through Home Assistant automations
 
+## Provider Roadmap
+
+The ioBroker adapter settings are used as a reference for future provider login flows:
+
+- DHL: active through `dhllogin://` browser login code plus optional manual tracking numbers
+- Amazon: planned with e-mail, password, optional OTP token and cookie reset for login problems
+- Hermes: currently active by manual tracking number; account login with app username and app password is planned
+- UPS: planned with app username and app password
+- GLS and DPD: planned after the stable login/session flow is mapped
+
 ## Repository
 
 [Open Parcel to MQTT on GitHub](https://github.com/rockbaer2007/parcel-to-mqtt)
