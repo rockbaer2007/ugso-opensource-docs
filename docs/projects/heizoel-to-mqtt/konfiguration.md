@@ -8,7 +8,7 @@ amount: "1000,2000,3000"
 interval: 60
 esyActive: true
 deliveryTimes: ohne
-payment_type: ec
+payment_type: EC-Karte
 prod: Normal Schwefelarm
 unloading_points: 1
 hose: 40
@@ -33,6 +33,8 @@ Die App ist nur für Deutschland und Österreich vorgesehen. Verwende deutsche o
 `deliveryTimes` nutzt die sichtbaren Werte aus der ioBroker-Maske: `ohne`, `7:00 - 12:00 Uhr`, `12:00 - 17:00 Uhr`, `2 Wochentage (Express)`, `3 - 5 Wochentage (Mo.-Fr.)` und `6 - 10 Wochentage (Mo.-Fr.)`.
 
 `prod` nutzt die sichtbaren Sorten aus der ioBroker-Maske: `Normal Schwefelarm`, `Premium Schwefelarm`, `Klimaneutral Premium`, `Klimaneutral Normal`, `Bio 10`, `Bio 15` und `Bio 10 Premium`.
+
+`payment_type` nutzt die sichtbaren Zahlungsarten aus der ioBroker-Maske: `EC-Karte`, `Barzahlung`, `Ratenkauf`, `Rechnung`, `Lastschrift` und `Vorkasse`.
 
 `hose` wird als Zahl in Metern eingetragen. Intern wird der Wert auf die passende EasyOil-Schlauchklasse abgebildet. `short_vehicle` wird in Home Assistant als `Tankwagen` angezeigt und bietet `mit Anhänger möglich` oder `ohne Anhänger`.
 
