@@ -11,8 +11,8 @@ deliveryTimes: ohne
 payment_type: ec
 prod: normal
 unloading_points: 1
-hose: fortyMetre
-short_vehicle: withTrailer
+hose: 40
+short_vehicle: mit Anhänger möglich
 hoDe: true
 hoAt: false
 log_response_details: false
@@ -31,6 +31,8 @@ log_response_details: false
 Die App ist nur für Deutschland und Österreich vorgesehen. Verwende deutsche oder österreichische Postleitzahlen passend zu den aktivierten Anbietern.
 
 `deliveryTimes` nutzt die sichtbaren Werte aus der ioBroker-Maske: `ohne`, `7:00 - 12:00 Uhr`, `12:00 - 17:00 Uhr`, `2 Wochentage (Express)`, `3 - 5 Wochentage (Mo.-Fr.)` und `6 - 10 Wochentage (Mo.-Fr.)`.
+
+`hose` wird als Zahl in Metern eingetragen. Intern wird der Wert auf die passende EasyOil-Schlauchklasse abgebildet. `short_vehicle` wird in Home Assistant als `Tankwagen` angezeigt und bietet `mit Anhänger möglich` oder `ohne Anhänger`.
 
 In der deutschen Home-Assistant-Oberfläche wird `esyActive` als `EasyOil aktivieren` angezeigt. `hoDe` und `hoAt` heißen dort `Heizöl24 Deutschland aktivieren (Nur PLZ und Menge wird übernommen)` und `Heizöl24 Österreich aktivieren (Nur PLZ und Menge wird übernommen)`.
 
