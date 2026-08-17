@@ -4,7 +4,7 @@
 
 Parcel to MQTT ist eine Home-Assistant-App, die Paketverfolgung per MQTT Discovery in Home Assistant bereitstellt.
 
-Die aktuelle Version nutzt direkte DHL- und Hermes-Paketverfolgung mit manuell konfigurierten Sendungsnummern. Benachrichtigungen werden bewusst nicht in der App selbst verschickt, sondern über normale Home-Assistant-Automationen auf Basis der erzeugten Entitäten gebaut.
+Die aktuelle Version nutzt DHL-Konto-Paketlisten, optionale manuelle DHL-Sendungsnummern und Hermes-Paketverfolgung. Benachrichtigungen werden bewusst nicht in der App selbst verschickt, sondern über normale Home-Assistant-Automationen auf Basis der erzeugten Entitäten gebaut.
 
 ::: info Ursprung
 Die Umsetzung ist adaptiert von und inspiriert durch den ioBroker-Adapter [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel).
@@ -14,7 +14,8 @@ Das gemeinsame Statusmodell ist inspiriert durch die MIT-lizenzierten Home-Assis
 
 ## Funktionen
 
-- direkte DHL-Paketverfolgung
+- DHL-Kontoliste über den DHL-Browser-Login-Code
+- optionale direkte DHL-Paketverfolgung über manuelle Sendungsnummern
 - direkte Hermes-Deutschland-Paketverfolgung
 - mehrere Sendungsnummern als kommagetrennte Listen
 - GLS-Konfiguration ist vorbereitet, GLS Deutschland ist aber noch nicht aktiv, da dafür eine Guest-Bearer-Session benötigt wird

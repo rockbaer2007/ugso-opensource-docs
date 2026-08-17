@@ -2,6 +2,7 @@
 
 ```yaml
 dhl_tracking_numbers: "00340434123456789012,00340434123456789013"
+dhl_login_code: ""
 hermes_tracking_numbers: "12345678901234"
 gls_tracking_numbers: ""
 gls_postal_code: ""
@@ -10,7 +11,9 @@ max_parcels: 6
 log_response_details: false
 ```
 
-`dhl_tracking_numbers` contains one or more DHL tracking numbers separated by commas.
+`dhl_login_code` optionally contains the `dhllogin://...` redirect URL from the DHL browser login. After the first successful login the app stores the refresh token in the app data folder and reads the DHL account parcel list automatically.
+
+`dhl_tracking_numbers` contains optional manual DHL tracking numbers separated by commas.
 
 `hermes_tracking_numbers` contains one or more Hermes tracking numbers separated by commas.
 
@@ -23,3 +26,14 @@ log_response_details: false
 `log_response_details` writes raw responses to the app log for troubleshooting. Disable it again after testing.
 
 Notifications are created through Home Assistant automations, for example when `sensor.parcel_in_zustellung` becomes greater than `0`.
+
+## DHL Account Login
+
+1. Open the DHL login URL in your browser.
+2. Sign in with your DHL account.
+3. Copy the complete `dhllogin://...` URL from the failed redirect.
+4. Paste the URL into `dhl_login_code` and restart the app.
+
+```text
+https://login.dhl.de/af5f9bb6-27ad-4af4-9445-008e7a5cddb8/login/authorize?redirect_uri=dhllogin://de.deutschepost.dhl/login&state=eyJycyI6dHJ1ZSwicnYiOmZhbHNlLCJmaWQiOiJhcHAtbG9naW4tbWVoci1mb290ZXIiLCJoaWQiOiJhcHAtbG9naW4tbWVoci1oZWFkZXIiLCJycCI6ZmFsc2V9&client_id=83471082-5c13-4fce-8dcb-19d2a3fca413&response_type=code&scope=openid%20offline_access&claims=%7B%22id_token%22:%7B%22email%22:null,%22post_number%22:null,%22twofa%22:null,%22service_mask%22:null,%22deactivate_account%22:null,%22last_login%22:null,%22customer_type%22:null,%22display_name%22:null,%22data_confirmation_required%22:null%7D%7D&nonce=&login_hint=&prompt=login&ui_locales=de-DE&code_challenge=MAhrhXXZP-Owy-R7ruyB7Fn-Z8ODW6qxCoHg4uXELCw&code_challenge_method=S256
+```

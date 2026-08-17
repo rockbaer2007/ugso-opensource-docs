@@ -67,7 +67,7 @@ Eine Home-Assistant-App, die Heizölpreise von Esyoil und Heizöl24 per MQTT Dis
 
 **Parcel to MQTT**
 
-Eine Home-Assistant-App, die Paketverfolgung per MQTT Discovery als Entitäten bereitstellt. Die aktuelle Version nutzt direkte DHL- und Hermes-Paketverfolgung und überlässt Benachrichtigungen normalen Home-Assistant-Automationen.
+Eine Home-Assistant-App, die Paketverfolgung per MQTT Discovery als Entitäten bereitstellt. Die aktuelle Version nutzt DHL-Konto-Paketlisten, optionale DHL-Sendungsnummern und Hermes-Paketverfolgung.
 
 - [Parcel-to-MQTT-Dokumentation öffnen](./parcel-to-mqtt/)
 - [Repository auf GitHub öffnen](https://github.com/rockbaer2007/parcel-to-mqtt)
