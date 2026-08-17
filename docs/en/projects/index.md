@@ -59,7 +59,7 @@ A Home Assistant app that publishes FRITZ!Box data as MQTT Discovery entities. I
 
 **Heizöl to MQTT**
 
-A Home Assistant app that publishes heating-oil prices from Esyoil and Heizöl24 as MQTT Discovery entities.
+A Home Assistant app that publishes heating-oil prices from Esyoil and Heizöl24 as MQTT Discovery entities. It currently publishes best prices and up to six provider offers per source and amount.
 
 - [Open the Heizöl to MQTT documentation](./heizoel-to-mqtt/)
 - [Open the repository on GitHub](https://github.com/rockbaer2007/heizoel-to-mqtt)

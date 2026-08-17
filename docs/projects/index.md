@@ -57,7 +57,7 @@ Eine Home-Assistant-App, die FRITZ!Box-Daten per MQTT Discovery als Entitäten b
 
 **Heizöl to MQTT**
 
-Eine Home-Assistant-App, die Heizölpreise von Esyoil und Heizöl24 per MQTT Discovery als Entitäten bereitstellt.
+Eine Home-Assistant-App, die Heizölpreise von Esyoil und Heizöl24 per MQTT Discovery als Entitäten bereitstellt. Aktuell werden Bestpreise und bis zu sechs Anbieter-Angebote pro Quelle und Menge veröffentlicht.
 
 - [Heizöl-to-MQTT-Dokumentation öffnen](./heizoel-to-mqtt/)
 - [Repository auf GitHub öffnen](https://github.com/rockbaer2007/heizoel-to-mqtt)

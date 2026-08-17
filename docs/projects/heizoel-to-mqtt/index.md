@@ -18,7 +18,9 @@ Die Preisabfragen sind nur für deutsche und österreichische Postleitzahlen gü
 
 ## Status
 
-Die App ist als testbares MVP gedacht. Die genutzten Preis-Endpunkte sind öffentliche Webseiten-Endpunkte und keine offiziell stabil dokumentierten APIs.
+Die App ist in Home Assistant testbar und liefert Werte per MQTT Discovery. Unterstützt werden Bestpreis-Entitäten sowie bis zu sechs Anbieter-Angebote pro Quelle und Menge.
+
+Die genutzten Preis-Endpunkte sind öffentliche Webseiten-Endpunkte und keine offiziell stabil dokumentierten APIs.
 
 ## Repository
 

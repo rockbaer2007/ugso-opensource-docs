@@ -18,7 +18,9 @@ The price lookups are valid for German and Austrian postal codes only.
 
 ## Status
 
-The app is a testable MVP. The used price endpoints are public website endpoints and not officially documented stable APIs.
+The app is testable in Home Assistant and publishes values through MQTT Discovery. It supports best-price entities and up to six provider offers per source and amount.
+
+The used price endpoints are public website endpoints and not officially documented stable APIs.
 
 ## Repository
 
