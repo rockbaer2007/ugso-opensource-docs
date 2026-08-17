@@ -44,6 +44,15 @@ Ein leistungsstarker Hybrid-Timer-Blueprint für Home Assistant mit zuverlässig
 - [Ultimate-Timer-Dokumentation öffnen](./ultimate-timer/)
 - [Repository auf GitHub öffnen](https://github.com/rockbaer2007/ha-ultimate-timer-blueprint)
 
+## FRITZ!Box to MQTT
+
+**FRITZ!Box to MQTT**
+
+Ein Home-Assistant-Add-on, das FRITZ!Box-Daten per MQTT Discovery als Entitäten bereitstellt. Es kombiniert TR-064, FRITZ!Box-Web-/Lua-Abfragen und den Live-Anrufmonitor.
+
+- [FRITZ!Box-to-MQTT-Dokumentation öffnen](./fritzbox-to-mqtt/)
+- [Repository auf GitHub öffnen](https://github.com/rockbaer2007/fritzbox-to-mqtt)
+
 ## ATLAS
 
 **ATLAS – Modular Application Framework**

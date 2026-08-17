@@ -46,6 +46,15 @@ persistent DONE status and optional MQTT support.
 - [Open the Ultimate Timer documentation](./ultimate-timer/)
 - [Open the repository on GitHub](https://github.com/rockbaer2007/ha-ultimate-timer-blueprint)
 
+## FRITZ!Box to MQTT
+
+**FRITZ!Box to MQTT**
+
+A Home Assistant add-on that publishes FRITZ!Box data as MQTT Discovery entities. It combines TR-064, FRITZ!Box web/Lua queries and the live call monitor.
+
+- [Open the FRITZ!Box to MQTT documentation](./fritzbox-to-mqtt/)
+- [Open the repository on GitHub](https://github.com/rockbaer2007/fritzbox-to-mqtt)
+
 ## ATLAS
 
 **ATLAS - Modular Application Framework**

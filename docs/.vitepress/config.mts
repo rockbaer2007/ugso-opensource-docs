@@ -14,6 +14,7 @@ const navDe = [
   },
   { text: 'HADash', link: '/projects/hadash/' },
   { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' },
+  { text: 'FRITZ!Box to MQTT', link: '/projects/fritzbox-to-mqtt/' },
   { text: 'ATLAS', link: '/projects/atlas/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
@@ -33,6 +34,7 @@ const navEn = [
   },
   { text: 'HADash', link: '/en/projects/hadash/' },
   { text: 'Ultimate Timer', link: '/en/projects/ultimate-timer/' },
+  { text: 'FRITZ!Box to MQTT', link: '/en/projects/fritzbox-to-mqtt/' },
   { text: 'ATLAS', link: '/en/projects/atlas/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
@@ -94,6 +96,20 @@ const sidebarDe = {
         { text: 'Konfiguration', link: '/projects/ultimate-timer/konfiguration' },
         { text: 'Funktionsweise', link: '/projects/ultimate-timer/funktionsweise' },
         { text: 'Beispiele', link: '/projects/ultimate-timer/beispiele' }
+      ]
+    }
+  ],
+
+  '/projects/fritzbox-to-mqtt/': [
+    {
+      text: 'FRITZ!Box to MQTT',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/fritzbox-to-mqtt/' },
+        { text: 'Installation', link: '/projects/fritzbox-to-mqtt/installation' },
+        { text: 'Konfiguration', link: '/projects/fritzbox-to-mqtt/konfiguration' },
+        { text: 'Entitäten', link: '/projects/fritzbox-to-mqtt/entitaeten' },
+        { text: 'Fehlersuche', link: '/projects/fritzbox-to-mqtt/fehlersuche' }
       ]
     }
   ],
@@ -169,6 +185,20 @@ const sidebarEn = {
         { text: 'Configuration', link: '/en/projects/ultimate-timer/configuration' },
         { text: 'How It Works', link: '/en/projects/ultimate-timer/how-it-works' },
         { text: 'Examples', link: '/en/projects/ultimate-timer/examples' }
+      ]
+    }
+  ],
+
+  '/en/projects/fritzbox-to-mqtt/': [
+    {
+      text: 'FRITZ!Box to MQTT',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/projects/fritzbox-to-mqtt/' },
+        { text: 'Installation', link: '/en/projects/fritzbox-to-mqtt/installation' },
+        { text: 'Configuration', link: '/en/projects/fritzbox-to-mqtt/configuration' },
+        { text: 'Entities', link: '/en/projects/fritzbox-to-mqtt/entities' },
+        { text: 'Troubleshooting', link: '/en/projects/fritzbox-to-mqtt/troubleshooting' }
       ]
     }
   ],
