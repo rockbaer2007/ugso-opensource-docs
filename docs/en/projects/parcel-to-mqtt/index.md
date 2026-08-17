@@ -4,7 +4,7 @@
 
 Parcel to MQTT is a Home Assistant app that publishes parcel tracking data through MQTT Discovery.
 
-The first version uses the 17TRACK API and manually configured tracking numbers. Notifications are intentionally handled through normal Home Assistant automations based on the generated entities.
+The first version uses direct DHL parcel tracking with manually configured DHL tracking numbers. Notifications are intentionally handled through normal Home Assistant automations based on the generated entities.
 
 ::: info Origin
 This implementation is adapted from and inspired by the ioBroker adapter [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel).
@@ -12,8 +12,8 @@ This implementation is adapted from and inspired by the ioBroker adapter [TA2k/i
 
 ## Features
 
-- 17TRACK API lookup
-- multiple tracking numbers as a comma-separated list
+- direct DHL parcel tracking
+- multiple DHL tracking numbers as a comma-separated list
 - MQTT Discovery for Home Assistant
 - counters for total, in transit, out for delivery, delivered, exception and unknown
 - JSON list of all parcels

@@ -12,7 +12,7 @@ https://github.com/rockbaer2007/parcel-to-mqtt
 ```
 
 5. **Parcel to MQTT** installieren.
-6. 17TRACK API-Key und Sendungsnummern eintragen.
+6. DHL-Sendungsnummern eintragen.
 7. App starten.
 
 MQTT Discovery muss in Home Assistant aktiv sein. Ein MQTT Broker wird benötigt.

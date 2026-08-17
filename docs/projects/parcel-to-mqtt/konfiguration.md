@@ -1,16 +1,13 @@
 # Konfiguration
 
 ```yaml
-track17_api_key: ""
-tracking_numbers: "00340434123456789012,1Z999AA10123456784"
+dhl_tracking_numbers: "00340434123456789012,00340434123456789013"
 interval: 60
 max_parcels: 6
 log_response_details: false
 ```
 
-`track17_api_key` ist der API-Key für 17TRACK.
-
-`tracking_numbers` enthält eine oder mehrere Sendungsnummern, mit Komma getrennt.
+`dhl_tracking_numbers` enthält eine oder mehrere DHL-Sendungsnummern, mit Komma getrennt.
 
 `interval` ist das Aktualisierungsintervall in Minuten.
 
