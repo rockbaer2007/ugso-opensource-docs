@@ -28,6 +28,8 @@ log_response_details: false
 
 `deliveryTimes`, `payment_type`, `prod`, `unloading_points`, `hose` und `short_vehicle` entsprechen den Auswahlfeldern aus der ioBroker-Maske. Die Detailoptionen werden für Esyoil genutzt. Heizöl24 nutzt wie der Ursprungshinweis des ioBroker-Adapters vor allem PLZ und Menge.
 
+In Home Assistant werden die Konfigurationsfelder bei deutscher Oberflächensprache mit deutschen Namen und Beschreibungen angezeigt.
+
 Alte Optionsnamen aus `0.1.0` für PLZ, Menge, Sorte und Liefertermin werden weiterhin als Fallback gelesen. Die Anbieter-Schalter heißen nur noch `esyActive`, `hoDe` und `hoAt`.
 
 `log_response_details` schreibt Rohantworten der Anbieter ins App-Protokoll und sollte nur zur Fehlersuche aktiviert werden.
