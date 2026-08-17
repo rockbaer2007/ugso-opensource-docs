@@ -31,3 +31,4 @@ The used price endpoints are public website endpoints and not officially documen
 - [Installation](./installation)
 - [Configuration](./configuration)
 - [Entities](./entities)
+- [Examples](./examples)

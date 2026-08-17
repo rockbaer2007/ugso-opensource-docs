@@ -31,3 +31,4 @@ Die genutzten Preis-Endpunkte sind öffentliche Webseiten-Endpunkte und keine of
 - [Installation](./installation)
 - [Konfiguration](./konfiguration)
 - [Entitäten](./entitaeten)
+- [Beispiele](./beispiele)
