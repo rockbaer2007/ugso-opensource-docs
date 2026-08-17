@@ -29,6 +29,10 @@ Dieses Projekt ist eine Home-Assistant-Supervisor-App. HACS installiert Custom I
 
 [FRITZ!Box to MQTT auf GitHub öffnen](https://github.com/rockbaer2007/fritzbox-to-mqtt)
 
+## Community
+
+Discord-Kanal: `#fritzbox-to-mqtt`
+
 ## Weitere Seiten
 
 - [Installation](./installation)

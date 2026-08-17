@@ -54,6 +54,7 @@ A Home Assistant app that publishes FRITZ!Box data as MQTT Discovery entities. I
 
 - [Open the FRITZ!Box to MQTT documentation](./fritzbox-to-mqtt/)
 - [Open the repository on GitHub](https://github.com/rockbaer2007/fritzbox-to-mqtt)
+- Discord: `#fritzbox-to-mqtt`
 
 ## Heizöl to MQTT
 
@@ -64,6 +65,7 @@ A Home Assistant app that publishes heating-oil prices from Esyoil and Heizöl24
 - [Open the Heizöl to MQTT documentation](./heizoel-to-mqtt/)
 - [Open the repository on GitHub](https://github.com/rockbaer2007/heizoel-to-mqtt)
 - Adapted from: [TA2k/ioBroker.heizoel](https://github.com/TA2k/ioBroker.heizoel)
+- Discord: `#heizoel-to-mqtt`
 
 ## ATLAS
 

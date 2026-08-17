@@ -29,6 +29,10 @@ This project is a Home Assistant Supervisor app. HACS installs custom integratio
 
 [Open FRITZ!Box to MQTT on GitHub](https://github.com/rockbaer2007/fritzbox-to-mqtt)
 
+## Community
+
+Discord channel: `#fritzbox-to-mqtt`
+
 ## Pages
 
 - [Installation](./installation)

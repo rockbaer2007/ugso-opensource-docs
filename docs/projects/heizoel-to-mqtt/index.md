@@ -26,6 +26,10 @@ Die genutzten Preis-Endpunkte sind öffentliche Webseiten-Endpunkte und keine of
 
 [Heizöl to MQTT auf GitHub öffnen](https://github.com/rockbaer2007/heizoel-to-mqtt)
 
+## Community
+
+Discord-Kanal: `#heizoel-to-mqtt`
+
 ## Weitere Seiten
 
 - [Installation](./installation)
