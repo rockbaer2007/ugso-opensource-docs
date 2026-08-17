@@ -7,7 +7,7 @@ plz: "10115"
 amount: "1000,2000,3000"
 interval: 60
 esyActive: true
-deliveryTimes: normal
+deliveryTimes: ohne
 payment_type: ec
 prod: normal
 unloading_points: 1
@@ -29,6 +29,8 @@ log_response_details: false
 `deliveryTimes`, `payment_type`, `prod`, `unloading_points`, `hose` und `short_vehicle` entsprechen den Auswahlfeldern aus der ioBroker-Maske. Die Detailoptionen werden für Esyoil genutzt. Heizöl24 nutzt wie der Ursprungshinweis des ioBroker-Adapters vor allem PLZ und Menge.
 
 Die App ist nur für Deutschland und Österreich vorgesehen. Verwende deutsche oder österreichische Postleitzahlen passend zu den aktivierten Anbietern.
+
+`deliveryTimes` nutzt die sichtbaren Werte aus der ioBroker-Maske: `ohne`, `7:00 - 12:00 Uhr`, `12:00 - 17:00 Uhr`, `2 Wochentage (Express)`, `3 - 5 Wochentage (Mo.-Fr.)` und `6 - 10 Wochentage (Mo.-Fr.)`.
 
 In Home Assistant werden die Konfigurationsfelder bei deutscher Oberflächensprache mit deutschen Namen und Beschreibungen angezeigt.
 

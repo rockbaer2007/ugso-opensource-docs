@@ -7,7 +7,7 @@ plz: "10115"
 amount: "1000,2000,3000"
 interval: 60
 esyActive: true
-deliveryTimes: normal
+deliveryTimes: ohne
 payment_type: ec
 prod: normal
 unloading_points: 1
@@ -29,6 +29,8 @@ log_response_details: false
 `deliveryTimes`, `payment_type`, `prod`, `unloading_points`, `hose` and `short_vehicle` mirror the selection fields from the ioBroker mask. The detailed options are used for Esyoil. Heizöl24 mainly uses postal code and amount, matching the original ioBroker adapter note.
 
 The app is intended for Germany and Austria only. Use German or Austrian postal codes that match the selected providers.
+
+`deliveryTimes` uses the visible values from the ioBroker mask: `ohne`, `7:00 - 12:00 Uhr`, `12:00 - 17:00 Uhr`, `2 Wochentage (Express)`, `3 - 5 Wochentage (Mo.-Fr.)` and `6 - 10 Wochentage (Mo.-Fr.)`.
 
 Home Assistant shows translated configuration labels and descriptions when the active UI language is German or English.
 
