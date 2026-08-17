@@ -26,7 +26,7 @@ log_response_details: false
 
 `max_parcels` controls how many parcel slot entities are created through MQTT Discovery.
 
-`log_response_details` writes raw responses to the app log for troubleshooting. Disable it again after testing.
+`log_response_details` writes masked provider requests and responses to the add-on log and additionally to `/data/provider_debug.log`. The file keeps at most 100 JSON lines. Tokens, passwords, authorization headers and DHL login codes are masked. Disable this option again after testing.
 
 Notifications are created through Home Assistant automations, for example when `sensor.parcel_in_zustellung` becomes greater than `0`.
 
