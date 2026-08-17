@@ -9,10 +9,10 @@ Für jede aktivierte Quelle und jede konfigurierte Liter-Menge entstehen:
 - Händler
 - Lieferdauer
 - Anzahl Angebote
-- Anbieter 01 bis Anbieter 10
-- Anbieter 01 bis Anbieter 10 Gesamtpreis
-- Anbieter 01 bis Anbieter 10 Preis pro Liter
-- Anbieter 01 bis Anbieter 10 Preis pro 100l
+- Anbieter 01 bis Anbieter 06
+- Anbieter 01 bis Anbieter 06 Gesamtpreis
+- Anbieter 01 bis Anbieter 06 Preis pro Liter
+- Anbieter 01 bis Anbieter 06 Preis pro 100l
 
 Zusätzlich gibt es:
 

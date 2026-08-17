@@ -11,7 +11,7 @@ deliveryTimes: ohne
 payment_type: "EC-Karte"
 prod: Normal Schwefelarm
 unloading_points: 1
-hose: "40 m"
+hose: 40m
 short_vehicle: mit Anhänger möglich
 hoDe: true
 hoAt: false
@@ -36,7 +36,7 @@ The app is intended for Germany and Austria only. Use German or Austrian postal 
 
 `payment_type` uses the visible payment names from the ioBroker mask: `EC-Karte`, `Barzahlung`, `Ratenkauf`, `Rechnung`, `Lastschrift` and `Vorkasse`.
 
-`hose` offers exactly three values: `40 m`, `60 m` and `80 m`. `short_vehicle` is shown in Home Assistant as `Tankwagen` and offers `mit Anhänger möglich` or `ohne Anhänger`.
+`hose` offers exactly three values: `40m`, `60m` and `80m`. `short_vehicle` is shown in Home Assistant as `Tankwagen` and offers `mit Anhänger möglich` or `ohne Anhänger`.
 
 In the German Home Assistant UI, `esyActive` is shown as `EasyOil aktivieren`. `hoDe` and `hoAt` are shown as `Heizöl24 Deutschland aktivieren (Nur PLZ und Menge wird übernommen)` and `Heizöl24 Österreich aktivieren (Nur PLZ und Menge wird übernommen)`.
 

@@ -9,10 +9,10 @@ For each enabled source and configured amount, the app creates:
 - dealer
 - delivery days
 - offer count
-- provider 01 through provider 10
-- provider 01 through provider 10 total price
-- provider 01 through provider 10 price per liter
-- provider 01 through provider 10 price per 100l
+- provider 01 through provider 06
+- provider 01 through provider 06 total price
+- provider 01 through provider 06 price per liter
+- provider 01 through provider 06 price per 100l
 
 It also creates:
 
