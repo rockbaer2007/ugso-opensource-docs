@@ -69,6 +69,7 @@ footer: false
 <div class="ugso-actions">
   <a class="ugso-button" href="/en/projects/">C# Projects</a>
   <a class="ugso-button secondary" href="/en/projects-mqtt/">MQTT Projects</a>
+  <a class="ugso-button secondary" href="/en/projects-diverse/">Misc Projects</a>
 </div>
 
 <div class="ugso-badge">🚧 Website under construction</div>

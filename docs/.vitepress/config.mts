@@ -4,6 +4,7 @@ const navDe = [
   { text: 'Startseite', link: '/' },
   { text: 'C# Projekte', link: '/projects/' },
   { text: 'MQTT Projekte', link: '/projects-mqtt/' },
+  { text: 'Diverse Projekte', link: '/projects-diverse/' },
   {
     text: 'Blog',
     items: [
@@ -22,6 +23,7 @@ const navEn = [
   { text: 'Home', link: '/en/' },
   { text: 'C# Projects', link: '/en/projects/' },
   { text: 'MQTT Projects', link: '/en/projects-mqtt/' },
+  { text: 'Misc Projects', link: '/en/projects-diverse/' },
   {
     text: 'Blog',
     items: [
@@ -37,6 +39,17 @@ const navEn = [
 ]
 
 const sidebarDe = {
+  '/projects-diverse/': [
+    {
+      text: 'Diverse Projekte',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects-diverse/' },
+        { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' }
+      ]
+    }
+  ],
+
   '/projects-mqtt/': [
     {
       text: 'MQTT Projekte',
@@ -152,6 +165,17 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects-diverse/': [
+    {
+      text: 'Misc Projects',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/projects-diverse/' },
+        { text: 'Ultimate Timer', link: '/en/projects/ultimate-timer/' }
+      ]
+    }
+  ],
+
   '/en/projects-mqtt/': [
     {
       text: 'MQTT Projects',

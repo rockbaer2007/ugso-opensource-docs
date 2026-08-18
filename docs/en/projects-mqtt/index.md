@@ -34,5 +34,5 @@ A Home Assistant app that publishes parcel tracking data as MQTT Discovery entit
 ## More Project Areas
 
 - [Open C# Projects](/en/projects/)
+- [Open Misc Projects](/en/projects-diverse/)
 - [Open ATLAS](/en/projects/atlas/)
-- [Open Ultimate Timer](/en/projects/ultimate-timer/)

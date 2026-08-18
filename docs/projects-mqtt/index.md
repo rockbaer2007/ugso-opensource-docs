@@ -34,5 +34,5 @@ Eine Home-Assistant-App, die Paketverfolgung per MQTT Discovery als Entitäten b
 ## Weitere Projektbereiche
 
 - [C# Projekte öffnen](/projects/)
+- [Diverse Projekte öffnen](/projects-diverse/)
 - [ATLAS öffnen](/projects/atlas/)
-- [Ultimate Timer öffnen](/projects/ultimate-timer/)

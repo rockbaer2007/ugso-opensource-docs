@@ -38,5 +38,5 @@ For examples from GitHub, forums and other open source projects, the exporter ha
 ## More Project Areas
 
 - [Open MQTT Projects](/en/projects-mqtt/)
+- [Open Misc Projects](/en/projects-diverse/)
 - [Open ATLAS](/en/projects/atlas/)
-- [Open Ultimate Timer](/en/projects/ultimate-timer/)
