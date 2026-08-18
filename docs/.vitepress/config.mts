@@ -330,7 +330,7 @@ export default defineConfig({
   },
 
   head: [
-    ['meta', { name: 'theme-color', content: '#0f172a' }],
+    ['meta', { name: 'theme-color', content: '#f4f5f7' }],
     ['meta', { name: 'application-name', content: 'UGSo Open Source' }]
   ],
 
