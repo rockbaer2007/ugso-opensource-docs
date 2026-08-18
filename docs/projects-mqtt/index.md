@@ -1,4 +1,4 @@
-# Projekte MQTT
+# MQTT Projekte
 
 Diese Seite sammelt die Home-Assistant-Apps von UGSo Software, die Daten per MQTT Discovery veröffentlichen.
 

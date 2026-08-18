@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 const navDe = [
   { text: 'Startseite', link: '/' },
   { text: 'C# Projekte', link: '/projects/' },
-  { text: 'Projekte MQTT', link: '/projects-mqtt/' },
+  { text: 'MQTT Projekte', link: '/projects-mqtt/' },
   {
     text: 'Blog',
     items: [
@@ -13,8 +13,6 @@ const navDe = [
       { text: 'Neuer Beitrag', link: '/blog/beitragsvorlage' }
     ]
   },
-  { text: 'HADash', link: '/projects/hadash/' },
-  { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' },
   { text: 'ATLAS', link: '/projects/atlas/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
@@ -33,8 +31,6 @@ const navEn = [
       { text: 'New Post Template', link: '/en/blog/post-template' }
     ]
   },
-  { text: 'HADash', link: '/en/projects/hadash/' },
-  { text: 'Ultimate Timer', link: '/en/projects/ultimate-timer/' },
   { text: 'ATLAS', link: '/en/projects/atlas/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
@@ -43,7 +39,7 @@ const navEn = [
 const sidebarDe = {
   '/projects-mqtt/': [
     {
-      text: 'Projekte MQTT',
+      text: 'MQTT Projekte',
       collapsed: false,
       items: [
         { text: 'Übersicht', link: '/projects-mqtt/' },

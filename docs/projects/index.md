@@ -37,6 +37,6 @@ Für Beispiele aus GitHub, Foren und anderen Open-Source-Projekten berücksichti
 
 ## Weitere Projektbereiche
 
-- [Projekte MQTT öffnen](/projects-mqtt/)
+- [MQTT Projekte öffnen](/projects-mqtt/)
 - [ATLAS öffnen](/projects/atlas/)
 - [Ultimate Timer öffnen](/projects/ultimate-timer/)
