@@ -1,32 +1,55 @@
-# Parcel to MQTT
+---
+layout: home
 
-<img src="/images/parcel-to-mqtt-icon.svg" alt="Parcel to MQTT icon" width="96">
+hero:
+  name: Parcel to MQTT
+  text: Parcel tracking for Home Assistant
+  tagline: Publish DHL, Hermes and prepared provider sections as parcel status, counters and parcel slots through MQTT Discovery.
+  actions:
+    - theme: brand
+      text: Installation
+      link: /en/projects/parcel-to-mqtt/installation
+    - theme: alt
+      text: GitHub
+      link: https://github.com/rockbaer2007/parcel-to-mqtt
+
+features:
+  - icon: 📦
+    title: Parcel status
+    details: Parcel status, last event, destination and tracking number as Home Assistant entities.
+
+  - icon: 🚚
+    title: DHL and Hermes active
+    details: DHL account parcel list, manual DHL tracking numbers and Hermes parcel tracking.
+
+  - icon: 🧩
+    title: Provider sections
+    details: Grouped settings for DHL, Hermes, GLS, DPD, UPS, Amazon Logistics, Deutsche Post letters and FedEx.
+
+  - icon: 📊
+    title: Counters and slots
+    details: Counters for total, in transit, out for delivery, pickup point, delivered, returning, exception and unknown.
+
+  - icon: 🏠
+    title: MQTT Discovery
+    details: Home Assistant creates parcel, status and counter entities automatically.
+
+  - icon: 🔔
+    title: Automations
+    details: Notifications are built through normal Home Assistant automations based on the generated entities.
+---
+
+## Overview
 
 Parcel to MQTT is a Home Assistant app that publishes parcel tracking data through MQTT Discovery.
 
-The current version uses DHL account parcel lists, optional manual DHL tracking numbers and Hermes parcel tracking. App settings are grouped by provider so the Home Assistant configuration stays compact as provider sections. Notifications are intentionally handled through normal Home Assistant automations based on the generated entities.
+The current version uses DHL account parcel lists, optional manual DHL tracking numbers and Hermes parcel tracking. App settings are grouped by provider so the Home Assistant configuration stays compact as provider sections.
 
 ::: info Origin
 This implementation is adapted from and inspired by the ioBroker adapter [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel).
 
 The shared status model is inspired by the MIT licensed Home Assistant parcel integrations [ha-parcel-integrations](https://github.com/ha-parcel-integrations).
 :::
-
-## Features
-
-- DHL account parcel list through the DHL browser login code
-- optional direct DHL parcel tracking by manual tracking number
-- direct Hermes Germany parcel tracking
-- grouped provider settings for DHL, Hermes, GLS, DPD, UPS, Amazon Logistics, Deutsche Post letters and FedEx
-- multiple tracking numbers as comma-separated lists
-- GLS configuration is prepared, but GLS Germany is not active yet because it needs a guest bearer session
-- DPD, UPS, Amazon Logistics, Deutsche Post letters and FedEx are visible as prepared configuration sections
-- MQTT Discovery for Home Assistant
-- counters for total, registered, in transit, out for delivery, pickup point, delivered, returning, exception and unknown
-- JSON list of all parcels
-- up to 20 parcel slots, 6 by default
-- Mushroom example card
-- notifications through Home Assistant automations
 
 ## Provider Roadmap
 
@@ -39,10 +62,6 @@ The ioBroker adapter settings are used as a reference for future provider login 
 - GLS: prepared with manual tracking numbers and delivery postal code; polling waits for a stable guest bearer session
 - DPD: prepared with username, password and manual tracking numbers after the stable login/session flow is mapped
 - Deutsche Post letters and FedEx: prepared with manual tracking numbers for later connectors
-
-## Repository
-
-[Open Parcel to MQTT on GitHub](https://github.com/rockbaer2007/parcel-to-mqtt)
 
 ## Pages
 
