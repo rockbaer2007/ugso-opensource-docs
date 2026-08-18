@@ -1,6 +1,45 @@
-# FRITZ!Box to MQTT
+---
+layout: home
 
-<img src="/images/fritzbox-to-mqtt-icon.svg" alt="FRITZ!Box to MQTT Icon" width="96">
+hero:
+  name: FRITZ!Box to MQTT
+  text: Home Assistant App für FRITZ!Box-Daten
+  tagline: Anruflisten, Live-Anrufe, WLAN, WAN, Telefonbücher und FRITZ!Box-Status per MQTT Discovery in Home Assistant bereitstellen.
+  actions:
+    - theme: brand
+      text: Installation
+      link: /projects/fritzbox-to-mqtt/installation
+    - theme: alt
+      text: GitHub
+      link: https://github.com/rockbaer2007/fritzbox-to-mqtt
+
+features:
+  - icon: 📞
+    title: Anrufe und Anrufbeantworter
+    details: Anruflisten, Live-Anrufmonitor und Anrufbeantworter AB0 bis AB4 als Home-Assistant-Entitäten.
+
+  - icon: 📶
+    title: WLAN und Netzwerk
+    details: Schalter für 2,4 GHz, 5 GHz und Gast-WLAN sowie WAN-Verbindungsdaten, IP-Adressen und Linkstatus.
+
+  - icon: 📚
+    title: Telefonbücher
+    details: Telefonbücher mit auswählbarer Anzeige und optionalen Ausschlüssen für einzelne Namen.
+
+  - icon: 🧭
+    title: Mehrere Datenquellen
+    details: TR-064, FRITZ!Box-Web-/Lua-Fallbacks und der Live-Anrufmonitor werden kombiniert.
+
+  - icon: 🏠
+    title: MQTT Discovery
+    details: Home Assistant legt die Sensoren und Schalter automatisch über MQTT Discovery an.
+
+  - icon: 🛠️
+    title: Fehlersuche
+    details: Eigene Troubleshooting-Seite für Login, TR-064, DNS over TLS, Call Monitor und MQTT.
+---
+
+## Überblick
 
 FRITZ!Box to MQTT ist eine Home-Assistant-App, die Daten aus einer FRITZ!Box per MQTT Discovery in Home Assistant bereitstellt.
 
@@ -14,22 +53,6 @@ Die App nutzt mehrere Quellen, weil nicht jede FRITZ!Box dieselben Schnittstelle
 ::: info HACS
 Dieses Projekt ist eine Home-Assistant-Supervisor-App. HACS installiert Custom Integrations und Frontend-Karten, aber keine Docker-basierten Supervisor-Apps. Die Installation erfolgt deshalb über die App-Repository-Funktion von Home Assistant.
 :::
-
-## Funktionen
-
-- Anrufbeantworter `AB0` bis `AB4` mit neuen und alten Nachrichten, Status und Ein/Aus-Schalter.
-- WLAN-Schalter für 2,4 GHz, 5 GHz und Gast-WLAN, sofern die FRITZ!Box sie bereitstellt.
-- WAN-Verbindungsdaten, Uploadrate, Downloadrate und Linkstatus.
-- Externe IPv4- und IPv6-Adresse, sofern verfügbar.
-- Box-Status wie Mesh-Rolle, PPP-Verbindung, DECT-Basis und DNS over TLS.
-- Anruflisten für alle, eingehende, ausgehende, verpasste, abgewiesene und gesperrte Anrufe.
-- Live-Anrufmonitor mit `RING`, `CALL`, `CONNECT` und `DISCONNECT`.
-- Telefonbücher mit auswählbarer Anzeige.
-- Optionale DECT-Handset-Sensoren für interne Nummer und Geräte-ID.
-
-## Repository
-
-[FRITZ!Box to MQTT auf GitHub öffnen](https://github.com/rockbaer2007/fritzbox-to-mqtt)
 
 ## Weitere Seiten
 

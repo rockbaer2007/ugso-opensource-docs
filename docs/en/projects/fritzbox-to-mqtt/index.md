@@ -1,6 +1,45 @@
-# FRITZ!Box to MQTT
+---
+layout: home
 
-<img src="/images/fritzbox-to-mqtt-icon.svg" alt="FRITZ!Box to MQTT icon" width="96">
+hero:
+  name: FRITZ!Box to MQTT
+  text: Home Assistant app for FRITZ!Box data
+  tagline: Publish call lists, live calls, WLAN, WAN, phonebooks and FRITZ!Box status to Home Assistant through MQTT Discovery.
+  actions:
+    - theme: brand
+      text: Installation
+      link: /en/projects/fritzbox-to-mqtt/installation
+    - theme: alt
+      text: GitHub
+      link: https://github.com/rockbaer2007/fritzbox-to-mqtt
+
+features:
+  - icon: 📞
+    title: Calls and answering machines
+    details: Call lists, live call monitor and answering machines AB0 to AB4 as Home Assistant entities.
+
+  - icon: 📶
+    title: WLAN and network
+    details: Switches for 2.4 GHz, 5 GHz and guest WLAN plus WAN connection data, IP addresses and link status.
+
+  - icon: 📚
+    title: Phonebooks
+    details: Phonebooks with selectable display and optional exclusions for individual names.
+
+  - icon: 🧭
+    title: Multiple data sources
+    details: TR-064, FRITZ!Box web/Lua fallbacks and the live call monitor are combined.
+
+  - icon: 🏠
+    title: MQTT Discovery
+    details: Home Assistant creates sensors and switches automatically through MQTT Discovery.
+
+  - icon: 🛠️
+    title: Troubleshooting
+    details: Dedicated troubleshooting page for login, TR-064, DNS over TLS, call monitor and MQTT.
+---
+
+## Overview
 
 FRITZ!Box to MQTT is a Home Assistant app that publishes FRITZ!Box data to Home Assistant through MQTT Discovery.
 
@@ -14,22 +53,6 @@ The app combines several data sources because FRITZ!Box models and FRITZ!OS vers
 ::: info HACS
 This project is a Home Assistant Supervisor app. HACS installs custom integrations and frontend cards, but not Docker-based Supervisor apps. Install it through the Home Assistant app repository flow.
 :::
-
-## Features
-
-- Answering machines `AB0` to `AB4` with new and old messages, status and on/off switch.
-- WLAN switches for 2.4 GHz, 5 GHz and guest WLAN where the FRITZ!Box exposes them.
-- WAN connection data, upload rate, download rate and link status.
-- External IPv4 and IPv6 address where available.
-- Box status such as mesh role, PPP connection, DECT base and DNS over TLS.
-- Call lists for all, incoming, outgoing, missed, rejected and blocked calls.
-- Live call monitor with `RING`, `CALL`, `CONNECT` and `DISCONNECT`.
-- Phonebooks with selectable display.
-- Optional DECT handset sensors for internal number and device ID.
-
-## Repository
-
-[Open FRITZ!Box to MQTT on GitHub](https://github.com/rockbaer2007/fritzbox-to-mqtt)
 
 ## Pages
 
