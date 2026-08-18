@@ -161,6 +161,18 @@ const sidebarDe = {
         { text: 'Plugin-Doku', link: '/projects/atlas/plugins' }
       ]
     }
+  ],
+
+  '/projects/': [
+    {
+      text: 'C# Projekte',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/' },
+        { text: 'HADash', link: '/projects/hadash/' },
+        { text: 'Home Assistant Automation Exporter', link: '/projects/#home-assistant-automation-exporter' }
+      ]
+    }
   ]
 }
 
@@ -285,6 +297,18 @@ const sidebarEn = {
         { text: 'Development Status', link: '/en/projects/atlas/development-status' },
         { text: 'Home Assistant', link: '/en/projects/atlas/homeassistant' },
         { text: 'Plugin Docs', link: '/en/projects/atlas/plugins' }
+      ]
+    }
+  ],
+
+  '/en/projects/': [
+    {
+      text: 'C# Projects',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/projects/' },
+        { text: 'HADash', link: '/en/projects/hadash/' },
+        { text: 'Home Assistant Automation Exporter', link: '/en/projects/#home-assistant-automation-exporter' }
       ]
     }
   ]
