@@ -4,7 +4,7 @@
 
 Parcel to MQTT ist eine Home-Assistant-App, die Paketverfolgung per MQTT Discovery in Home Assistant bereitstellt.
 
-Die aktuelle Version nutzt DHL-Konto-Paketlisten, optionale manuelle DHL-Sendungsnummern und Hermes-Paketverfolgung. Benachrichtigungen werden bewusst nicht in der App selbst verschickt, sondern über normale Home-Assistant-Automationen auf Basis der erzeugten Entitäten gebaut.
+Die aktuelle Version nutzt DHL-Konto-Paketlisten, optionale manuelle DHL-Sendungsnummern und Hermes-Paketverfolgung. Die App-Einstellungen sind nach Dienstleistern gruppiert, damit die Home-Assistant-Konfiguration kompakt als Anbieterbereiche erscheint. Benachrichtigungen werden bewusst nicht in der App selbst verschickt, sondern über normale Home-Assistant-Automationen auf Basis der erzeugten Entitäten gebaut.
 
 ::: info Ursprung
 Die Umsetzung ist adaptiert von und inspiriert durch den ioBroker-Adapter [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel).
@@ -17,9 +17,10 @@ Das gemeinsame Statusmodell ist inspiriert durch die MIT-lizenzierten Home-Assis
 - DHL-Kontoliste über den DHL-Browser-Login-Code
 - optionale direkte DHL-Paketverfolgung über manuelle Sendungsnummern
 - direkte Hermes-Deutschland-Paketverfolgung
+- gruppierte Anbieter-Einstellungen für DHL, Hermes, GLS, DPD, UPS, Amazon Logistics, Deutsche Post Briefe und FedEx
 - mehrere Sendungsnummern als kommagetrennte Listen
 - GLS-Konfiguration ist vorbereitet, GLS Deutschland ist aber noch nicht aktiv, da dafür eine Guest-Bearer-Session benötigt wird
-- DPD und UPS sind als nächste Provider-Ziele vorgesehen
+- DPD, UPS, Amazon Logistics, Deutsche Post Briefe und FedEx sind als vorbereitete Konfigurationsbereiche sichtbar
 - MQTT Discovery für Home Assistant
 - Zähler für Gesamt, angemeldet, unterwegs, in Zustellung, Abholstelle, zugestellt, Rücksendung, Problem und unbekannt
 - JSON-Liste aller Sendungen
@@ -32,10 +33,12 @@ Das gemeinsame Statusmodell ist inspiriert durch die MIT-lizenzierten Home-Assis
 Die Eingabemasken des ioBroker-Adapters dienen als Referenz für die nächsten Login-Varianten:
 
 - DHL: aktiv über `dhllogin://` Browser-Login-Code plus optionale manuelle Sendungsnummern
-- Amazon: geplant mit E-Mail, Passwort, optionalem OTP-Token und Cookie-Reset bei Login-Problemen
+- Amazon: vorbereitet mit E-Mail, Passwort und optionalem OTP-Token
 - Hermes: aktuell per manueller Sendungsnummer aktiv; Konto-Login mit App-Username und App-Passwort ist geplant
-- UPS: geplant mit App-Username und App-Passwort
-- GLS und DPD: geplant, sobald der stabile Login-/Session-Ablauf sauber abgebildet ist
+- UPS: vorbereitet mit App-Username, App-Passwort und manuellen Sendungsnummern
+- GLS: vorbereitet mit manuellen Sendungsnummern und Liefer-Postleitzahl; Polling wartet auf eine stabile Guest-Bearer-Session
+- DPD: vorbereitet mit Username, Passwort und manuellen Sendungsnummern, sobald der stabile Login-/Session-Ablauf sauber abgebildet ist
+- Deutsche Post Briefe und FedEx: vorbereitet mit manuellen Sendungsnummern für spätere Connectoren
 
 ## Repository
 
