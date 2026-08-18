@@ -67,8 +67,8 @@ footer: false
 </p>
 
 <div class="ugso-actions">
-  <a class="ugso-button" href="/projects/">Projekte ansehen</a>
-  <a class="ugso-button secondary" href="/projects/hadash/">HADash öffnen</a>
+  <a class="ugso-button" href="/projects/">C# Projekte</a>
+  <a class="ugso-button secondary" href="/projects-mqtt/">Projekte MQTT</a>
 </div>
 
 <div class="ugso-badge">🚧 Webseite im Aufbau</div>

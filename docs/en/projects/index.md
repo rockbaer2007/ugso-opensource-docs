@@ -1,13 +1,12 @@
-# Open Source Projects
+# C# Projects
 
-This page collects the published projects by UGSo Software.
+This page collects the published C#/.NET tools by UGSo Software.
 
 ## HADash
 
 **HADash - Home Assistant Dashboard Toolkit**
 
-HADash is a portable Windows application for reading, backing up and exporting
-Home Assistant dashboards and individual views.
+HADash is a portable Windows application for reading, backing up and exporting Home Assistant dashboards and individual views.
 
 - [Open the HADash documentation](./hadash/)
 - [Open HADash on GitHub](https://github.com/rockbaer2007/HADash)
@@ -36,60 +35,8 @@ For examples from GitHub, forums and other open source projects, the exporter ha
 - [Open Automation Exporter on GitHub](https://github.com/rockbaer2007/ha-automation-exporter)
 - [Download the current v0.3.4 release](https://github.com/rockbaer2007/ha-automation-exporter/releases/tag/v0.3.4)
 
-## Ultimate Timer
+## More Project Areas
 
-**Ultimate Timer V3.2.4 FINAL CLEAN**
-
-A powerful hybrid timer blueprint for Home Assistant with reliable STOP logic,
-persistent DONE status and optional MQTT support.
-
-- [Open the Ultimate Timer documentation](./ultimate-timer/)
-- [Open the repository on GitHub](https://github.com/rockbaer2007/ha-ultimate-timer-blueprint)
-
-## FRITZ!Box to MQTT
-
-**FRITZ!Box to MQTT**
-
-A Home Assistant app that publishes FRITZ!Box data as MQTT Discovery entities. It combines TR-064, FRITZ!Box web/Lua queries and the live call monitor.
-
-- [Open the FRITZ!Box to MQTT documentation](./fritzbox-to-mqtt/)
-- [Open the repository on GitHub](https://github.com/rockbaer2007/fritzbox-to-mqtt)
-
-## Heizöl to MQTT
-
-**Heizöl to MQTT**
-
-A Home Assistant app that publishes heating-oil prices from Esyoil and Heizöl24 as MQTT Discovery entities. It currently publishes best prices and up to six provider offers per source and amount.
-
-- [Open the Heizöl to MQTT documentation](./heizoel-to-mqtt/)
-- [Open the repository on GitHub](https://github.com/rockbaer2007/heizoel-to-mqtt)
-- Adapted from: [TA2k/ioBroker.heizoel](https://github.com/TA2k/ioBroker.heizoel)
-
-## Parcel to MQTT
-
-**Parcel to MQTT**
-
-A Home Assistant app that publishes parcel tracking data as MQTT Discovery entities. The current version uses DHL account parcel lists, optional DHL tracking numbers and Hermes parcel tracking.
-
-- [Open the Parcel to MQTT documentation](./parcel-to-mqtt/)
-- [Open the repository on GitHub](https://github.com/rockbaer2007/parcel-to-mqtt)
-- Adapted from: [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel)
-
-## ATLAS
-
-**ATLAS - Modular Application Framework**
-
-ATLAS is a modular TypeScript framework for reusable applications, plugins and
-Home-Assistant-oriented tools.
-
-The project is currently in active development. The focus is on the Runtime
-Foundation, events, services and dependency injection.
-
-- [Open the ATLAS project page](./atlas/)
-- [View the architecture](./atlas/overview)
-- [View the development status](./atlas/development-status)
-
-## More Projects
-
-Additional documentation for ESPHome, Lovelace components and the planned
-Lovelace UV Card will follow.
+- [Open MQTT Projects](/en/projects-mqtt/)
+- [Open ATLAS](/en/projects/atlas/)
+- [Open Ultimate Timer](/en/projects/ultimate-timer/)

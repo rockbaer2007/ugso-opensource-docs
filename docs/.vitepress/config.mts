@@ -2,7 +2,8 @@ import { defineConfig } from 'vitepress'
 
 const navDe = [
   { text: 'Startseite', link: '/' },
-  { text: 'Projekte', link: '/projects/' },
+  { text: 'C# Projekte', link: '/projects/' },
+  { text: 'Projekte MQTT', link: '/projects-mqtt/' },
   {
     text: 'Blog',
     items: [
@@ -14,8 +15,6 @@ const navDe = [
   },
   { text: 'HADash', link: '/projects/hadash/' },
   { text: 'Ultimate Timer', link: '/projects/ultimate-timer/' },
-  { text: 'FRITZ!Box to MQTT', link: '/projects/fritzbox-to-mqtt/' },
-  { text: 'Heizöl to MQTT', link: '/projects/heizoel-to-mqtt/' },
   { text: 'ATLAS', link: '/projects/atlas/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
@@ -23,7 +22,8 @@ const navDe = [
 
 const navEn = [
   { text: 'Home', link: '/en/' },
-  { text: 'Projects', link: '/en/projects/' },
+  { text: 'C# Projects', link: '/en/projects/' },
+  { text: 'MQTT Projects', link: '/en/projects-mqtt/' },
   {
     text: 'Blog',
     items: [
@@ -35,14 +35,25 @@ const navEn = [
   },
   { text: 'HADash', link: '/en/projects/hadash/' },
   { text: 'Ultimate Timer', link: '/en/projects/ultimate-timer/' },
-  { text: 'FRITZ!Box to MQTT', link: '/en/projects/fritzbox-to-mqtt/' },
-  { text: 'Heizöl to MQTT', link: '/en/projects/heizoel-to-mqtt/' },
   { text: 'ATLAS', link: '/en/projects/atlas/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
 
 const sidebarDe = {
+  '/projects-mqtt/': [
+    {
+      text: 'Projekte MQTT',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects-mqtt/' },
+        { text: 'FRITZ!Box to MQTT', link: '/projects/fritzbox-to-mqtt/' },
+        { text: 'Heizöl to MQTT', link: '/projects/heizoel-to-mqtt/' },
+        { text: 'Parcel to MQTT', link: '/projects/parcel-to-mqtt/' }
+      ]
+    }
+  ],
+
   '/blog/': [
     {
       text: 'Blog',
@@ -145,6 +156,19 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects-mqtt/': [
+    {
+      text: 'MQTT Projects',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/projects-mqtt/' },
+        { text: 'FRITZ!Box to MQTT', link: '/en/projects/fritzbox-to-mqtt/' },
+        { text: 'Heizöl to MQTT', link: '/en/projects/heizoel-to-mqtt/' },
+        { text: 'Parcel to MQTT', link: '/en/projects/parcel-to-mqtt/' }
+      ]
+    }
+  ],
+
   '/en/blog/': [
     {
       text: 'Blog',
