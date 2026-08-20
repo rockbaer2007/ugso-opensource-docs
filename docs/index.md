@@ -77,9 +77,7 @@ footer: false
 <div class="ugso-footer">
   © 2026 UGSo Software |
   <a
-    href="https://www.ugso-software.de/index.php/impressum"
-    target="_blank"
-    rel="noopener"
+    href="/impressum/"
   >Impressum</a>
 </div>
 
