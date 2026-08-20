@@ -330,6 +330,7 @@ export default defineConfig({
   },
 
   head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/ugso-klein.png' }],
     ['meta', { name: 'theme-color', content: '#f4f5f7' }],
     ['meta', { name: 'application-name', content: 'UGSo Open Source' }]
   ],
