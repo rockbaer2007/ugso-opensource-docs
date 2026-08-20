@@ -354,7 +354,7 @@ export default defineConfig({
 
     footer: {
       message:
-        '<a href="https://www.ugso-software.de/index.php/impressum" target="_blank" rel="noopener">Impressum</a>',
+        '<a href="/impressum/">Impressum</a>',
       copyright: '© 2026 UGSo Software'
     },
 
