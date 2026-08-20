@@ -67,7 +67,7 @@ footer: false
 </p>
 
 <div class="ugso-actions">
-  <a class="ugso-button" href="/projects/">C# Projekte</a>
+  <a class="ugso-button secondary" href="/projects/">C# Projekte</a>
   <a class="ugso-button secondary" href="/projects-mqtt/">MQTT Projekte</a>
   <a class="ugso-button secondary" href="/projects-diverse/">Diverse Projekte</a>
 </div>

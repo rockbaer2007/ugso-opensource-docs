@@ -169,8 +169,8 @@ body {
   padding: 0 18px;
   border: 1px solid #259c30;
   border-radius: 4px;
-  color: #ffffff !important;
-  background: #259c30;
+  color: #259c30 !important;
+  background: #ffffff;
   font-weight: 700;
   text-decoration: none !important;
   transition:
@@ -179,7 +179,8 @@ body {
 }
 
 .ugso-button:hover {
-  background: #165f1d;
+  color: #ffffff !important;
+  background: #259c30;
   transform: translateY(-1px);
 }
 
