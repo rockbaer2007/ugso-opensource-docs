@@ -330,7 +330,8 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/ugso-klein.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicon.png' }],
     ['meta', { name: 'theme-color', content: '#f4f5f7' }],
     ['meta', { name: 'application-name', content: 'UGSo Open Source' }]
   ],
