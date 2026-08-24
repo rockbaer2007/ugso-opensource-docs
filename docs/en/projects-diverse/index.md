@@ -11,6 +11,14 @@ A Home Assistant automation blueprint for reusable timers with stable STOP logic
 - [Open the Ultimate Timer documentation](/en/projects/ultimate-timer/)
 - [Open the blueprint on GitHub](https://github.com/rockbaer2007/ha-ultimate-timer-blueprint)
 
+## Home Assistant Blueprints
+
+**Home Assistant Blueprints**
+
+A small collection of custom Home Assistant blueprints for linking switches, target groups and emergency-off style automations. It includes blueprints for one source with up to six targets, one source with a freely selectable target group and an emergency-off automation that turns selected targets off when the source changes from `on` to `off`.
+
+- [Open the blueprints on GitHub](https://github.com/rockbaer2007/homeassistant-blueprints)
+
 ## More Project Areas
 
 - [Open C# Projects](/en/projects/)
