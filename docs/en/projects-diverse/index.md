@@ -17,6 +17,11 @@ A Home Assistant automation blueprint for reusable timers with stable STOP logic
 
 A small collection of custom Home Assistant blueprints for linking switches, target groups and emergency-off style automations. It includes blueprints for one source with up to six targets, one source with a freely selectable target group and an emergency-off automation that turns selected targets off when the source changes from `on` to `off`.
 
+- Link 1 to 6: One source switches up to six targets on and off in sync.
+- Link source to target group: One source switches selected entities, devices or areas.
+- Emergency-off source OFF to target group OFF: When the source changes from `on` to `off`, the selected targets are turned off.
+- The GitHub README includes direct Home Assistant import buttons for all included blueprints.
+
 - [Open the blueprints on GitHub](https://github.com/rockbaer2007/homeassistant-blueprints)
 
 ## More Project Areas
