@@ -2,6 +2,24 @@
 
 This page collects UGSo Software Home Assistant apps that publish data through MQTT Discovery.
 
+## Shared Add-on Repository
+
+The MQTT projects are also available as a shared Home Assistant add-on repository. Home Assistant only needs one repository URL; after adding it, the individual projects appear separately in the add-on store.
+
+Repository URL for Home Assistant:
+
+```text
+https://github.com/rockbaer2007/ugso-ha-mqtt-addons
+```
+
+Included add-ons:
+
+- FRITZ!Box to MQTT
+- Heizöl to MQTT
+- Parcel to MQTT
+
+- [Open the shared add-on repository on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
+
 ## FRITZ!Box to MQTT
 
 **FRITZ!Box to MQTT**
