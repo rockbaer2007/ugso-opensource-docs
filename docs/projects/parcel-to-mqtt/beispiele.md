@@ -1,5 +1,32 @@
 # Beispiele
 
+## Paketliste mit flex-table-card
+
+![Parcel to MQTT flex-table-card](/images/parcel-to-mqtt/parcel-flex-table-card.png)
+
+```yaml
+type: custom:flex-table-card
+title: Pakete
+entities:
+  include: sensor.parcel_to_mqtt_parcel_dhl_json
+columns:
+  - name: Richtung
+    data: sendungen
+    modify: x.sendungsinfo.sendungsrichtung
+  - name: Name
+    data: sendungen
+    modify: x.sendungsinfo.sendungsname
+  - name: Status
+    data: sendungen
+    modify: x.sendungsdetails.sendungsverlauf.status
+  - name: Fortschritt
+    data: sendungen
+    modify: x.sendungsdetails.sendungsverlauf.fortschritt
+  - name: Nummer
+    data: sendungen
+    modify: x.sendungsdetails.sendungsnummern.sendungsnummer
+```
+
 ## Mushroom Paket Card
 
 ```yaml
