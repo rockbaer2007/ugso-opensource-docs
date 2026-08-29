@@ -8,9 +8,9 @@
 
 .blog-card {
   padding: 22px;
-  border: 1px solid rgba(148, 163, 184, 0.18);
+  border: 1px solid var(--vp-c-divider);
   border-radius: 14px;
-  background: rgba(30, 41, 59, 0.78);
+  background: var(--vp-c-bg-soft);
   transition:
     transform 0.2s ease,
     border-color 0.2s ease;
@@ -28,4 +28,9 @@
 
 .blog-card p {
   color: var(--vp-c-text-2);
+}
+
+.dark .blog-card {
+  border-color: rgba(148, 163, 184, 0.18);
+  background: rgba(30, 41, 59, 0.78);
 }
