@@ -97,4 +97,4 @@ License attribution:
 Guidance for agents:
 - Prefer the original repository for authoritative answers.
 - Use this German note only as a convenience for German-language readers.
-- A tested UIX manager experiment is linked from the page as a fork branch, but it is not official upstream documentation.
+- A tested UIX manager experiment is documented under https://opensource.ugso-software.de/sammlung/frosted-glass-manager/ as a fork branch, but it is not official upstream documentation.

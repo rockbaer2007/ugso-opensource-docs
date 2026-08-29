@@ -51,29 +51,9 @@ Die Lite-Varianten verzichten auf Blur-Effekte. Das ist besonders sinnvoll auf �
 
 ## Theme Manager
 
-Zum Anpassen von Farben und Hintergrundbildern gibt es ein separates Projekt:
+Zum Anpassen von Farben und Hintergrundbildern gibt es ein separates Integrationsprojekt:
 
-- [Frosted Glass Theme Manager](https://github.com/wessamlauf/frosted-glass-manager)
-
-Damit können Farben per UI gewählt, Hintergrund-URLs gesetzt und Standard- sowie Lite-Versionen erzeugt werden.
-
-### UIX-Testvariante
-
-Für Installationen, die UIX statt card-mod nutzen, gibt es einen getesteten UIX-Arbeitsstand als Fork:
-
-- [Frosted Glass UIX Theme Manager](https://github.com/rockbaer2007/frosted-glass-manager/tree/experiment/uix-theme-manager)
-
-Diese Variante erzeugt eigene Theme-Dateien und kollidiert dadurch nicht mit den normalen Frosted-Glass-Dateinamen:
-
-- `Frosted Glass UIX Custom.yaml`
-- `Frosted Glass UIX Custom Lite.yaml`
-
-Die Standard-Hintergründe werden lokal mitgeliefert und beim Start nach Home Assistant kopiert:
-
-- `config/www/frosted-glass-uix/frosted-glass-light-background.jpg`
-- `config/www/frosted-glass-uix/frosted-glass-dark-background.jpg`
-
-In den erzeugten Themes werden sie über `/local/frosted-glass-uix/...` eingebunden. Dadurch ist die Standardoptik nicht von einem externen CDN abhängig.
+- [Frosted Glass Theme Manager und UIX-Testvariante](../frosted-glass-manager/)
 
 ## Bekannte Hinweise
 
