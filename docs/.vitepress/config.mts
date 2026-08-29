@@ -25,6 +25,7 @@ const navEn = [
   { text: 'C# Projects', link: '/en/projects/' },
   { text: 'MQTT Projects', link: '/en/projects-mqtt/' },
   { text: 'Misc Projects', link: '/en/projects-diverse/' },
+  { text: 'UIX Docs', link: 'https://uix.lf.technology/' },
   {
     text: 'Blog',
     items: [
