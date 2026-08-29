@@ -11,6 +11,7 @@ Dieser Bereich ist für Lovelace- und HACS-Karten gedacht, die als deutsche Doku
 | Projekt | Status | Hinweis |
 | --- | --- | --- |
 | [Home Assistant Standardkarten](./home-assistant-standardkarten/) | in Arbeit | Inoffizielle deutsche Arbeitsuebersetzung der offiziellen Dashboard-Cards-Doku mit Aenderungspruefung. |
+| [Mushroom Cards](./mushroom/) | in Arbeit | Deutsche Doku mit Installation, Kartenuebersicht, Beispielen und Aenderungspruefung. |
 | [flex-table-card](./flex-table-card/) | in Arbeit | Deutsche Doku mit Installation, Referenz und Praxisbeispielen. |
 | bar-card | später prüfen | Repository ist lokal vorhanden und kann danach bewertet werden. |
 | sidebar-card | später prüfen | Repository ist lokal vorhanden und kann danach bewertet werden. |

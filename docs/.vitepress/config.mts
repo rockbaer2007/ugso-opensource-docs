@@ -96,6 +96,23 @@ const sidebarDe = {
     }
   ],
 
+  '/sammlung/mushroom/': [
+    {
+      text: 'Mushroom',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/sammlung/mushroom/' },
+        { text: 'Installation', link: '/sammlung/mushroom/installation' },
+        { text: 'Nutzung', link: '/sammlung/mushroom/nutzung' },
+        { text: 'Karten', link: '/sammlung/mushroom/karten' },
+        { text: 'Beispiele', link: '/sammlung/mushroom/beispiele' },
+        { text: 'Entwicklung', link: '/sammlung/mushroom/entwicklung' },
+        { text: 'Fehlersuche', link: '/sammlung/mushroom/fehlersuche' },
+        { text: 'Lizenz & Stand', link: '/sammlung/mushroom/lizenz-und-stand' }
+      ]
+    }
+  ],
+
   '/sammlung/zendure-ha/': [
     {
       text: 'Zendure HA',
@@ -382,6 +399,16 @@ const sidebarEn = {
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/collection/home-assistant-standard-cards/' }
+      ]
+    }
+  ],
+
+  '/en/collection/mushroom/': [
+    {
+      text: 'Mushroom',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/collection/mushroom/' }
       ]
     }
   ],

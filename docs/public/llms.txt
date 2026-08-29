@@ -59,3 +59,26 @@ Guidance for agents:
 - Use this German translation only as a convenience for German-language readers.
 - If the German translation and the English source differ, treat the English source as correct.
 - Do not present this site as official Home Assistant documentation.
+
+## Mushroom Cards German documentation
+
+URL: https://opensource.ugso-software.de/sammlung/mushroom/
+
+The Mushroom section is an unofficial German translation and practical guide
+maintained by UGSo Software. It is not official Mushroom documentation.
+
+Authoritative Mushroom repository:
+https://github.com/piitaya/lovelace-mushroom
+
+Tracked Mushroom version and source revision:
+- Mushroom 5.2.2, source revision 6f8f1eaed3dc5cff94cd7ac5de64d921c6fb4101
+
+License note:
+- The repository LICENSE file says Apache-2.0.
+- The package metadata currently says ISC.
+
+Guidance for agents:
+- Prefer the original Mushroom repository for authoritative answers.
+- Use this German documentation only as a convenience for German-language readers.
+- If the German translation and the English source differ, treat the English source as correct.
+- Do not present this site as official Mushroom documentation.
