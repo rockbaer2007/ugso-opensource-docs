@@ -137,6 +137,17 @@ const sidebarDe = {
     }
   ],
 
+  '/sammlung/ha-automation-exporter/': [
+    {
+      text: 'HA Tools',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/sammlung/ha-tools' },
+        { text: 'Automation Exporter', link: '/sammlung/ha-automation-exporter/' }
+      ]
+    }
+  ],
+
   '/sammlung/': [
     {
       text: 'Sammlung',
@@ -149,6 +160,7 @@ const sidebarDe = {
         { text: 'HA Integrationen', link: '/sammlung/ha-integrationen' },
         { text: 'HA Blueprints', link: '/sammlung/ha-blueprints' },
         { text: 'HA Tools', link: '/sammlung/ha-tools' },
+        { text: 'Automation Exporter', link: '/sammlung/ha-automation-exporter/' },
         { text: 'HA Apps', link: '/sammlung/ha-apps' },
         { text: 'HACS Dokus', link: '/sammlung/hacs-dokus' },
         { text: 'Weitere Beispiele', link: '/sammlung/weitere-beispiele' }
@@ -386,7 +398,7 @@ const sidebarDe = {
       items: [
         { text: 'Übersicht', link: '/projects/' },
         { text: 'HADash', link: '/projects/hadash/' },
-        { text: 'Home Assistant Automation Exporter', link: '/projects/#home-assistant-automation-exporter' }
+        { text: 'Home Assistant Automation Exporter', link: '/sammlung/ha-automation-exporter/' }
       ]
     }
   ]
@@ -583,7 +595,7 @@ const sidebarEn = {
       items: [
         { text: 'Overview', link: '/en/projects/' },
         { text: 'HADash', link: '/en/projects/hadash/' },
-        { text: 'Home Assistant Automation Exporter', link: '/en/projects/#home-assistant-automation-exporter' }
+        { text: 'Home Assistant Automation Exporter', link: '/sammlung/ha-automation-exporter/' }
       ]
     }
   ]

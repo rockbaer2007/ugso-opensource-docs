@@ -11,7 +11,7 @@ Dieser Bereich sammelt externe Werkzeuge rund um Home Assistant, Dashboards und 
 | Projekt | Beschreibung |
 | --- | --- |
 | [HADash](/projects/hadash/) | Werkzeug zum Einlesen, Bearbeiten und Exportieren von Home-Assistant-Dashboards. |
-| [Home Assistant Automation Exporter](https://github.com/rockbaer2007/ha-automation-exporter) | Windows-Tool zum Exportieren einzelner Automationen aus einer `automations.yaml` in separate YAML-Dateien. |
+| [Home Assistant Automation Exporter](./ha-automation-exporter/) | Windows-Tool zum Exportieren einzelner Automationen aus einer `automations.yaml` in separate YAML-Dateien. |
 
 ## Interne Entwicklungswerkzeuge
 
