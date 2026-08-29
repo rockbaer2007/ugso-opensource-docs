@@ -51,7 +51,12 @@ const UgsoLayout = defineComponent({
     const route = useRoute()
     let observer: MutationObserver | undefined
 
+    const updateRouteClass = () => {
+      document.body.classList.toggle('uix-doc-route', route.path.startsWith('/projects/uix/'))
+    }
+
     onMounted(() => {
+      updateRouteClass()
       applyLocaleFlags()
       observer = new MutationObserver(() => applyLocaleFlags())
       observer.observe(document.body, { childList: true, subtree: true })
@@ -63,10 +68,35 @@ const UgsoLayout = defineComponent({
 
     watch(
       () => route.path,
-      () => nextTick(applyLocaleFlags)
+      () => nextTick(() => {
+        updateRouteClass()
+        applyLocaleFlags()
+      })
     )
 
-    return () => h(DefaultTheme.Layout)
+    return () =>
+      h(DefaultTheme.Layout, null, {
+        'doc-after': () =>
+          route.path.startsWith('/projects/uix/')
+            ? h('div', { class: 'uix-version-footer' }, [
+                h('strong', 'UIX deutsche Übersetzung'),
+                h('span', 'Diese Seite basiert auf UIX 8.1.0. Maßgeblich bleibt die englische Originaldokumentation.'),
+                h('span', [
+                  h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, 'Englische Originaldoku'),
+                  ' · ',
+                  h(
+                    'a',
+                    {
+                      href: 'https://github.com/Lint-Free-Technology/uix/commit/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9',
+                      target: '_blank',
+                      rel: 'noopener'
+                    },
+                    'Source-Revision 9a0fa57'
+                  )
+                ])
+              ])
+            : null
+      })
   }
 })
 

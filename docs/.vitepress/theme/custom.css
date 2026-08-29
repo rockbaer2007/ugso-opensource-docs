@@ -281,6 +281,61 @@ body {
   background: #dfeedf;
 }
 
+body.uix-doc-route {
+  --vp-c-brand-1: #ce3226;
+  --vp-c-brand-2: #d85a51;
+  --vp-c-brand-3: #9e261d;
+  --vp-c-brand-soft: rgba(206, 50, 38, 0.14);
+  --vp-code-line-highlight-color: rgba(206, 50, 38, 0.1);
+}
+
+body.uix-doc-route .VPNavBarMenuLink:hover,
+body.uix-doc-route .VPNavBarMenuGroup .button:hover,
+body.uix-doc-route .VPNavBarMenuLink.active,
+body.uix-doc-route .VPNavBarMenuGroup.active .button,
+body.uix-doc-route .VPSidebarItem .link:hover .text,
+body.uix-doc-route .VPSidebarItem.is-active > .item .text,
+body.uix-doc-route .VPDoc a {
+  color: #ce3226;
+}
+
+body.uix-doc-route .vp-doc th {
+  color: #5d1711;
+  background: #f7dedb;
+}
+
+body.uix-doc-route .vp-doc :not(pre) > code {
+  color: #9e261d;
+  background: #f7dedb;
+}
+
+.uix-version-footer {
+  max-width: 920px;
+  margin: 48px auto 0;
+  padding: 18px 20px;
+  border-top: 3px solid #ce3226;
+  border-radius: 6px;
+  background: #fff7f6;
+  color: #5d1711;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.uix-version-footer strong,
+.uix-version-footer span {
+  display: block;
+}
+
+.uix-version-footer a {
+  color: #ce3226;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.uix-version-footer a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 640px) {
   .ugso-container {
     padding: 28px 18px;
