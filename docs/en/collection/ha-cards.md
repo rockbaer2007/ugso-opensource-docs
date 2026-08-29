@@ -10,7 +10,6 @@ This section is for Lovelace and HACS cards that are maintained with examples.
 
 | Project | Status | Note |
 | --- | --- | --- |
-| [Home Assistant Standard Cards](./home-assistant-standard-cards/) | in progress | Unofficial German working translation of the official dashboard cards documentation with upstream change checks. |
 | [Bubble Card](https://github.com/Clooos/Bubble-Card/blob/main/i18n/README.de.md) | German available upstream | External German README maintained in the Bubble Card project, linked here instead of duplicated. |
 | [Calendar Card Pro](./calendar-card-pro/) | in progress | German documentation with installation, features, reference, examples and upstream change checks. |
 | [Mushroom Cards](./mushroom/) | in progress | German documentation with installation, card overview, examples and upstream change checks. |

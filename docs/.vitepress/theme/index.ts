@@ -29,7 +29,6 @@ const translatedCollectionRoutes = new Set([
   '/sammlung/weitere-beispiele',
   '/sammlung/calendar-card-pro/',
   '/sammlung/flex-table-card/',
-  '/sammlung/home-assistant-standardkarten/',
   '/sammlung/mushroom/',
   '/sammlung/zendure-ha/'
 ])

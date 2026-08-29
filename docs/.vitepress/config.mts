@@ -99,20 +99,6 @@ const sidebarDe = {
     }
   ],
 
-  '/sammlung/home-assistant-standardkarten/': [
-    {
-      text: 'HA Standardkarten',
-      collapsed: false,
-      items: [
-        { text: 'Übersicht', link: '/sammlung/home-assistant-standardkarten/' },
-        { text: 'Kartenübersicht', link: '/sammlung/home-assistant-standardkarten/karten-uebersicht' },
-        { text: 'Karten hinzufügen', link: '/sammlung/home-assistant-standardkarten/karten-hinzufuegen' },
-        { text: 'Sichtbarkeit & Layout', link: '/sammlung/home-assistant-standardkarten/sichtbarkeit-layout' },
-        { text: 'Lizenz & Stand', link: '/sammlung/home-assistant-standardkarten/lizenz-und-stand' }
-      ]
-    }
-  ],
-
   '/sammlung/mushroom/': [
     {
       text: 'Mushroom',
@@ -416,16 +402,6 @@ const sidebarEn = {
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/collection/calendar-card-pro/' }
-      ]
-    }
-  ],
-
-  '/en/collection/home-assistant-standard-cards/': [
-    {
-      text: 'HA Standard Cards',
-      collapsed: false,
-      items: [
-        { text: 'Overview', link: '/en/collection/home-assistant-standard-cards/' }
       ]
     }
   ],

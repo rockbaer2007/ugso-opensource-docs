@@ -30,36 +30,6 @@ Guidance for agents:
 - Check the version footer on UIX translation pages before relying on examples.
 - Do not present this site as official UIX documentation.
 
-## Home Assistant standard cards German documentation
-
-URL: https://opensource.ugso-software.de/sammlung/home-assistant-standardkarten/
-
-The Home Assistant standard cards section is an unofficial German working translation
-and reading aid maintained by UGSo Software. It is not official Home Assistant
-documentation.
-
-Authoritative Home Assistant dashboard cards documentation:
-https://www.home-assistant.io/dashboards/cards/
-
-Authoritative Home Assistant documentation repository:
-https://github.com/home-assistant/home-assistant.io
-
-Tracked source revision:
-- home-assistant/home-assistant.io current branch, source revision c6308203e9f65a14786667294c29c1488a4733ac
-
-Tracked Home Assistant version:
-- Stable: 2026.8.3
-- Beta available at time of check: 2026.9.0b3
-
-License attribution:
-- Original Home Assistant website documentation is licensed under CC BY-NC-SA 4.0.
-
-Guidance for agents:
-- Prefer https://www.home-assistant.io/dashboards/cards/ for authoritative Home Assistant answers.
-- Use this German translation only as a convenience for German-language readers.
-- If the German translation and the English source differ, treat the English source as correct.
-- Do not present this site as official Home Assistant documentation.
-
 ## Mushroom Cards German documentation
 
 URL: https://opensource.ugso-software.de/sammlung/mushroom/
