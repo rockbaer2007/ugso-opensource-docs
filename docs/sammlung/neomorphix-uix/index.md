@@ -15,6 +15,7 @@ Diese Seite ist keine offizielle Dokumentation des Projekts. Sie fasst die wicht
 | Originalprojekt | [yakidd/NeumorphixHome](https://github.com/yakidd/NeumorphixHome) |
 | Geprüfter Commit | [`269c298e47b02faaac4f08c8c9dfccf49d70d860`](https://github.com/yakidd/NeumorphixHome/commit/269c298e47b02faaac4f08c8c9dfccf49d70d860) |
 | Release | [`1.0.3`](https://github.com/yakidd/NeumorphixHome/releases/tag/1.0.3) |
+| UIX-Fork | [rockbaer2007/NeoMorphix-UIX](https://github.com/rockbaer2007/NeoMorphix-UIX/tree/experiment/uix-theme-variant) |
 | Lizenz | laut README: MIT |
 | Kategorie | HA Dashboard -> Themes |
 
@@ -22,7 +23,7 @@ Diese Seite ist keine offizielle Dokumentation des Projekts. Sie fasst die wicht
 
 NeoMorphix UIX basiert auf NeuMorphix und ist als HACS-Theme-Variante vorbereitet.
 
-[![NeoMorphix UIX in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=NeumorphixHome&category=theme)
+[![NeoMorphix UIX in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=NeoMorphix-UIX&category=theme)
 
 1. HACS installieren, falls noch nicht vorhanden.
 2. `UIX` installieren.
@@ -66,7 +67,7 @@ Darin enthalten sind sechs Theme-Varianten:
 
 Für UIX wurde ein ergänzender Branch erstellt, der die originalen card-mod-Dateien nicht ersetzt, sondern zusätzliche UIX-Theme-Dateien hinzufügt:
 
-- [UIX-Branch im Fork](https://github.com/rockbaer2007/NeumorphixHome/tree/experiment/uix-theme-variant)
+- [UIX-Branch im Fork](https://github.com/rockbaer2007/NeoMorphix-UIX/tree/experiment/uix-theme-variant)
 - [Pull Request zum Originalprojekt](https://github.com/yakidd/NeumorphixHome/pull/4)
 
 Der UIX-Branch ergänzt:
