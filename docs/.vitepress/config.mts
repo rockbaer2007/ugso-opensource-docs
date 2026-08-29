@@ -421,7 +421,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: 'https://www.ugso-software.de/images/ugso_gross1.png',
+    logo: '/ugso-klein.png',
     siteTitle: 'UGSo Open Source',
 
     nav: navDe,

@@ -12,7 +12,7 @@ footer: false
 
 <a href="https://www.ugso-software.de/" target="_blank" rel="noopener">
   <img
-    src="https://www.ugso-software.de/images/ugso_gross1.png"
+    src="/ugso-klein.png"
     alt="UGSo Software"
     class="ugso-logo"
   >
