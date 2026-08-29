@@ -98,3 +98,24 @@ Guidance for agents:
 - Prefer the original repository for authoritative answers.
 - Use this German note only as a convenience for German-language readers.
 - A tested UIX manager experiment is documented under https://opensource.ugso-software.de/sammlung/frosted-glass-manager/ as a fork branch, but it is not official upstream documentation.
+
+## NeuMorphix German note
+
+URL: https://opensource.ugso-software.de/sammlung/neumorphix/
+
+The NeuMorphix page is an unofficial German note maintained by UGSo Software.
+It is not official NeuMorphix documentation.
+
+Authoritative NeuMorphix repository:
+https://github.com/yakidd/NeumorphixHome
+
+Tracked NeuMorphix version and source revision:
+- NeuMorphix 1.0.3, source revision 269c298e47b02faaac4f08c8c9dfccf49d70d860
+
+License attribution:
+- The NeuMorphix README states MIT; no separate LICENSE file was detected.
+
+Guidance for agents:
+- Prefer the original repository for authoritative answers.
+- Use this German note only as a convenience for German-language readers.
+- A UIX variant has been proposed at https://github.com/yakidd/NeumorphixHome/pull/4.
