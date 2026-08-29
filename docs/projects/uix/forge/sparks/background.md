@@ -13,9 +13,10 @@ Der Background Spark fuegt einem Forge-Element eine eigene Hintergrundebene hinz
 | Bild-URL | `image_url` | Statisches Bild als `background-image`. Unterstuetzt `media-source://`-URIs. |
 | Farbe oder CSS-Shorthand | `background` | Beliebiger CSS-`background`-Wert oder Mapping einzelner Background-Eigenschaften. |
 
-!!! tip
-    Nutze `opacity`, um nur den Hintergrund abzudunkeln. Wenn du stattdessen das ganze Zielelement transparent machst, werden auch Text, Icons und Controls beeinflusst.
+::: tip
+Nutze `opacity`, um nur den Hintergrund abzudunkeln. Wenn du stattdessen das ganze Zielelement transparent machst, werden auch Text, Icons und Controls beeinflusst.
 
+:::
 ## Grundnutzung
 
 ```yaml
@@ -55,9 +56,10 @@ element:
 | `dissolve_target` | string oder list | - | Macht das Zielelement transparent, damit der Spark-Hintergrund sichtbar wird. |
 | `class` | string | - | Zusaetzliche CSS-Klasse fuer den Hintergrundcontainer `<div>`. |
 
-!!! tip
-    Fuer Kameras empfiehlt sich ein explizites Seitenverhaeltnis oder eine klare Hoehe am Zielcontainer. Sonst kann der Stream je nach Karte ungewohnt zugeschnitten wirken.
+::: tip
+Fuer Kameras empfiehlt sich ein explizites Seitenverhaeltnis oder eine klare Hoehe am Zielcontainer. Sonst kann der Stream je nach Karte ungewohnt zugeschnitten wirken.
 
+:::
 ## `background` als Mapping
 
 | Schluessel | CSS-Eigenschaft |

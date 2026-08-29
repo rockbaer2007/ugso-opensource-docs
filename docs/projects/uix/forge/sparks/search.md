@@ -35,9 +35,10 @@ element:
 | `text` | `string` | nein | - | Regulaerer Ausdruck. Wenn gesetzt, werden nur Elemente bearbeitet, deren kompletter Textinhalt passt. |
 | `actions` | `object` | nein | `{}` | Mutationen fuer jeden Treffer. |
 
-!!! tip
-    Nutze zuerst einen engen `query`-Selektor und erst danach `text`, wenn du weiter filtern musst.
+::: tip
+Nutze zuerst einen engen `query`-Selektor und erst danach `text`, wenn du weiter filtern musst.
 
+:::
 ## Aktionen
 
 | Schluessel | Typ | Beschreibung |
@@ -118,9 +119,10 @@ forge:
           - contains-window
 ```
 
-!!! note
-    `text` prueft den gesamten Textinhalt inklusive Kind-Elementen. Dadurch kann ein Treffer auch entstehen, wenn der sichtbare Text aus mehreren DOM-Knoten zusammengesetzt ist.
+::: note
+`text` prueft den gesamten Textinhalt inklusive Kind-Elementen. Dadurch kann ein Treffer auch entstehen, wenn der sichtbare Text aus mehreren DOM-Knoten zusammengesetzt ist.
 
+:::
 ## `replace_text` als String
 
 Wenn `replace_text` ein String ist, wird dieser String als regulaerer Ausdruck gesucht und durch einen leeren Wert ersetzt.

@@ -5,9 +5,10 @@ title: More-info Spark
 
 Der More-info Spark fuegt Home Assistants More-info-Inhalt direkt in ein Forge-Element ein. So kannst du den bekannten Detailbereich einer Entity in Karten, Stacks oder Shortcuts einbetten.
 
-!!! note
-    Der Spark nutzt Home-Assistant-Frontend-Elemente. Dadurch kann sich das genaue Aussehen mit Home-Assistant-Versionen aendern.
+::: note
+Der Spark nutzt Home-Assistant-Frontend-Elemente. Dadurch kann sich das genaue Aussehen mit Home-Assistant-Versionen aendern.
 
+:::
 ## Grundnutzung
 
 ```yaml
@@ -50,9 +51,10 @@ element:
 | `info` | `boolean` | nein | `true` | Wenn `false`, wird der Hauptinhalt `ha-more-info-info` nicht angezeigt. Nuetzlich zusammen mit `details: true`. |
 | `details` | `boolean` | nein | `false` | Fuegt einen einklappbaren `ha-more-info-details`-Bereich unter dem Hauptinhalt hinzu. |
 
-!!! note
-    Nutze entweder `after` oder `before`, wenn die Position exakt sein soll. Ohne klares Referenzelement kann der More-info-Bereich je nach Karte an einer unerwarteten Stelle erscheinen.
+::: note
+Nutze entweder `after` oder `before`, wenn die Position exakt sein soll. Ohne klares Referenzelement kann der More-info-Bereich je nach Karte an einer unerwarteten Stelle erscheinen.
 
+:::
 ## Theme-Styling
 
 ```yaml

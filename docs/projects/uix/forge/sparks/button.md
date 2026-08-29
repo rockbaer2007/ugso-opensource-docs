@@ -30,9 +30,10 @@ element:
   entity: light.living_room
 ```
 
-!!! tip
-    Mit dem DOM-Helfer [`uix_forge_path()`](../../concepts/dom#uix_forge_path0-forge-helper) findest du den richtigen Pfad fuer `after` oder `before` leichter.
+::: tip
+Mit dem DOM-Helfer [`uix_forge_path()`](../../concepts/dom#uix_forge_path0-forge-helper) findest du den richtigen Pfad fuer `after` oder `before` leichter.
 
+:::
 ## Konfiguration
 
 | Schluessel | Typ | Pflicht | Standard | Beschreibung |
@@ -53,17 +54,18 @@ element:
 | `hold_action` | action | nein | - | Aktion bei langem Druecken. |
 | `double_tap_action` | action | nein | - | Aktion bei Doppelklick oder Double Tap. |
 
-!!! note
-    Genau einer der beiden Schluessel `after` oder `before` muss gesetzt sein.
+::: note
+Genau einer der beiden Schluessel `after` oder `before` muss gesetzt sein.
 
-    Der Spark verwendet das erste Element, das durch `after` oder `before` gefunden wird.
+Der Spark verwendet das erste Element, das durch `after` oder `before` gefunden wird.
 
-    Das eingefuegte `ha-button` landet in einem umschliessenden `<div>` im gleichen Parent wie das Zielelement. Es wird also als Geschwisterelement eingefuegt, nicht als Kind.
+Das eingefuegte `ha-button` landet in einem umschliessenden `<div>` im gleichen Parent wie das Zielelement. Es wird also als Geschwisterelement eingefuegt, nicht als Kind.
 
-    `icon` und `label` schliessen sich gegenseitig aus. Wenn `icon` gesetzt ist, wird `label` ignoriert.
+`icon` und `label` schliessen sich gegenseitig aus. Wenn `icon` gesetzt ist, wird `label` ignoriert.
 
-    UIX setzt standardmaessig ein Margin von `-6px`, damit der Button in vielen Home-Assistant-Bereichen sauber ausgerichtet ist. Das Margin kann ueber `--uix-button-margin` angepasst werden.
+UIX setzt standardmaessig ein Margin von `-6px`, damit der Button in vielen Home-Assistant-Bereichen sauber ausgerichtet ist. Das Margin kann ueber `--uix-button-margin` angepasst werden.
 
+:::
 ## Aktionen
 
 Der Button nutzt die normalen Home-Assistant-Aktionen. In einer Tile Card werden Klickereignisse des Buttons von der Tile-eigenen Aktion getrennt. Es feuern also nur die Aktionen, die am Button selbst konfiguriert sind.
@@ -239,4 +241,5 @@ element:
 
 Home Assistant stellt verschiedene Kombinationen aus `variant` und `appearance` bereit. Die Namen bleiben in YAML englisch, weil sie direkt an `ha-button` weitergereicht werden.
 
-!!! info "Button-Varianten und Darstellungen"
+::: info Button-Varianten und Darstellungen
+:::

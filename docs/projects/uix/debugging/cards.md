@@ -45,18 +45,19 @@ my-awesome-theme:
   uix-badge-my-class-debug: true # Debug fuer Badges mit der Klasse `my-class`
 ```
 
-!!! warning "Theme-Variablen im Home-Assistant-Theme setzen"
-    Theme-Debug-Variablen werden aus dem Home-Assistant-Theme gelesen, das gerade im Kontext ist. Das kann global sein oder lokal ueber eine Dashboard-Ansicht beziehungsweise Karte angewendet werden.
+::: warning Theme-Variablen im Home-Assistant-Theme setzen
+Theme-Debug-Variablen werden aus dem Home-Assistant-Theme gelesen, das gerade im Kontext ist. Das kann global sein oder lokal ueber eine Dashboard-Ansicht beziehungsweise Karte angewendet werden.
 
-    Theme-Debug-Variablen werden nicht aus dem `uix-theme`-Theme gelesen. Wenn diese Themes verschieden sind, setze die Debug-Variablen also im aktiven Home-Assistant-Theme.
+Theme-Debug-Variablen werden nicht aus dem `uix-theme`-Theme gelesen. Wenn diese Themes verschieden sind, setze die Debug-Variablen also im aktiven Home-Assistant-Theme.
 
-    ```yaml
-    theme-mods:
-      # UIX Theme-Variablen, Styles und Makros stehen hier.
+```yaml
+theme-mods:
+  # UIX Theme-Variablen, Styles und Makros stehen hier.
 
-    my-awesome-theme:
-      uix-card-type-energy-sankey-debug: true
-      uix-badge-my-class-debug: true
+my-awesome-theme:
+  uix-card-type-energy-sankey-debug: true
+  uix-badge-my-class-debug: true
 
-      uix-theme: theme-mods
-    ```
+  uix-theme: theme-mods
+```
+:::

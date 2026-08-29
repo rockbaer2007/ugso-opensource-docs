@@ -21,9 +21,10 @@ element:
   entity: light.living_room
 ```
 
-!!! tip
-    Der Spark wirkt auf die direkten Kinder des Zielcontainers. Wenn sich scheinbar nichts aendert, pruefe im Browser-Inspektor, ob `for` wirklich den Container trifft, dessen Kinder du anordnen willst.
+::: tip
+Der Spark wirkt auf die direkten Kinder des Zielcontainers. Wenn sich scheinbar nichts aendert, pruefe im Browser-Inspektor, ob `for` wirklich den Container trifft, dessen Kinder du anordnen willst.
 
+:::
 ## Konfiguration
 
 ### Basiseigenschaften
@@ -57,9 +58,10 @@ element:
 | `query` | `string` | ja | Normale CSS-Media-Query, z. B. `"(min-width: 768px)"`. |
 | Grid-Eigenschaften | - | nein | Beliebige Grid-Eigenschaften wie `columns`, `rows`, `gap`, `areas`, `align_items` usw. |
 
-!!! tip
-    Die Werte in `media_queries` ueberschreiben nur die dort gesetzten Eigenschaften. Nicht genannte Eigenschaften bleiben aus der Basiskonfiguration erhalten.
+::: tip
+Die Werte in `media_queries` ueberschreiben nur die dort gesetzten Eigenschaften. Nicht genannte Eigenschaften bleiben aus der Basiskonfiguration erhalten.
 
+:::
 ## Beispiele
 
 ### Zwei Spalten
@@ -167,9 +169,10 @@ element:
   entity: sensor.energy_today
 ```
 
-!!! note
-    Der Grid Spark ersetzt keine komplette Dashboard-Layout-Engine. Er ist fuer das Layout innerhalb des erzeugten Elements gedacht.
+::: note
+Der Grid Spark ersetzt keine komplette Dashboard-Layout-Engine. Er ist fuer das Layout innerhalb des erzeugten Elements gedacht.
 
+:::
 ## `columns` und `rows` als Kurzform
 
 Zahlen werden als gleich breite Tracks interpretiert.

@@ -13,9 +13,10 @@ Der Theme Spark wendet ein Home-Assistant-Frontend-Theme auf das Forge-Element o
 | `for` | string | nein | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor fuer das Element, auf das das Theme angewendet wird. |
 | `theme` | string | nein | - | Name des anzuwendenden Themes. Unterstuetzt Templates. |
 
-!!! tip
-    Der Theme Spark setzt ein Home-Assistant-Theme auf ein konkretes Element. Fuer globale UIX-Theme-Styles nutze die normale [Theme-Konfiguration](../../using/themes).
+::: tip
+Der Theme Spark setzt ein Home-Assistant-Theme auf ein konkretes Element. Fuer globale UIX-Theme-Styles nutze die normale [Theme-Konfiguration](../../using/themes).
 
+:::
 ## Beispiel - einfach
 
 Theme:
@@ -71,5 +72,6 @@ element:
   entity: light.living_room
 ```
 
-!!! tip
-    Wenn sich das Theme nicht sichtbar aendert, pruefe, ob das Ziel wirklich im DOM vorhanden ist und ob die verwendeten Theme-Variablen von diesem Home-Assistant-Element gelesen werden.
+::: tip
+Wenn sich das Theme nicht sichtbar aendert, pruefe, ob das Ziel wirklich im DOM vorhanden ist und ob die verwendeten Theme-Variablen von diesem Home-Assistant-Element gelesen werden.
+:::

@@ -7,9 +7,10 @@ Der State Badge Spark fuegt ein Home-Assistant-`state-badge` in ein Forge-Elemen
 
 ## Grundnutzung
 
-!!! tip
-    Fuer reine Overlay-Marker ist oft der [Overlay Icon Spark](./overlay-icon) passender. `state-badge` ist richtig, wenn du Home Assistants native Entity-Darstellung einbetten willst.
+::: tip
+Fuer reine Overlay-Marker ist oft der [Overlay Icon Spark](./overlay-icon) passender. `state-badge` ist richtig, wenn du Home Assistants native Entity-Darstellung einbetten willst.
 
+:::
 ```yaml
 type: custom:uix-forge
 forge:
@@ -35,12 +36,14 @@ element:
 | `override_image` | `string` | nein | - | Bild-URL, die das Icon vollstaendig ersetzt. Kann mit `entity` kombiniert werden. |
 | `color` | string | nein | - | Iconfarbe fuer aktive Zustaende. Erlaubt `state`, `none`, Home-Assistant-Farbtoken oder Hexcode. |
 
-!!! note
-    Genau einer der beiden Schluessel `after` oder `before` muss gesetzt sein. Das Badge wird als Geschwisterelement eingefuegt, nicht als Kind.
+::: note
+Genau einer der beiden Schluessel `after` oder `before` muss gesetzt sein. Das Badge wird als Geschwisterelement eingefuegt, nicht als Kind.
 
-!!! tip
-    Wenn Home Assistant die Entity bereits mit Bild oder Kamera darstellt, uebernimmt `state-badge` diese native Darstellung automatisch.
+:::
+::: tip
+Wenn Home Assistant die Entity bereits mit Bild oder Kamera darstellt, uebernimmt `state-badge` diese native Darstellung automatisch.
 
+:::
 ## Beispiele
 
 ### Badge nach Tile-Icon

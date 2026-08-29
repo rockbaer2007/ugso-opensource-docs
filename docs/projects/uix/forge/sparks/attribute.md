@@ -15,9 +15,10 @@ Der Attribute Spark setzt, ersetzt oder entfernt ein HTML-Attribut an einem Elem
 | `action` | `string` | nein | `replace` | `replace` setzt einen neuen Wert, `remove` entfernt das Attribut komplett. |
 | `value` | `string` | nein | `""` | Neuer Attributwert. Wird nur bei `action: replace` genutzt und unterstuetzt Jinja2-Templates. |
 
-!!! tip
-    Wenn du nur einen Tooltip anzeigen willst, ist oft der [Tooltip Spark](./tooltip) besser. Der Attribute Spark ist sinnvoll, wenn wirklich das HTML-Attribut selbst geaendert werden soll.
+::: tip
+Wenn du nur einen Tooltip anzeigen willst, ist oft der [Tooltip Spark](./tooltip) besser. Der Attribute Spark ist sinnvoll, wenn wirklich das HTML-Attribut selbst geaendert werden soll.
 
+:::
 ## Nutzung
 
 ### Native Tooltip entfernen
@@ -68,5 +69,6 @@ element:
   entity: light.living_room
 ```
 
-!!! note
-    Der Spark wirkt auf das erste Element, das vom Selektor gefunden wird. Bei mehreren gleichen Elementen musst du den Pfad genauer machen.
+::: note
+Der Spark wirkt auf das erste Element, das vom Selektor gefunden wird. Bei mehreren gleichen Elementen musst du den Pfad genauer machen.
+:::

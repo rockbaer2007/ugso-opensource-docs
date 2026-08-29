@@ -7,9 +7,10 @@ Der Tile Icon Spark fuegt ein `ha-tile-icon` in ein Forge-Element ein. Du kannst
 
 ## Grundnutzung
 
-!!! tip
-    Dieser Spark ist besonders hilfreich, wenn eine Karte ein Tile-aehnliches Zusatzicon braucht, ohne dass du das eigentliche Kartenelement austauschst.
+::: tip
+Dieser Spark ist besonders hilfreich, wenn eine Karte ein Tile-aehnliches Zusatzicon braucht, ohne dass du das eigentliche Kartenelement austauschst.
 
+:::
 ```yaml
 type: custom:uix-forge
 forge:
@@ -40,12 +41,14 @@ element:
 | `hold_action` | action | nein | - | Aktion bei langem Druecken. |
 | `double_tap_action` | action | nein | - | Aktion bei Doppeltap. |
 
-!!! note
-    Fuer die Iconquelle muss mindestens einer dieser Werte gesetzt sein: `icon`, `icon_path`, `image_url` oder `entity`.
+::: note
+Fuer die Iconquelle muss mindestens einer dieser Werte gesetzt sein: `icon`, `icon_path`, `image_url` oder `entity`.
 
-!!! tip
-    Mit `entity` bekommst du Home Assistants native State-Icon-Logik. Mit `icon` oder `image_url` steuerst du das Aussehen selbst.
+:::
+::: tip
+Mit `entity` bekommst du Home Assistants native State-Icon-Logik. Mit `icon` oder `image_url` steuerst du das Aussehen selbst.
 
+:::
 ## Aktionen
 
 ```yaml
@@ -67,9 +70,10 @@ element:
   entity: sensor.room_temperature
 ```
 
-!!! note
-    Klicks auf das eingefuegte Icon werden getrennt von Aktionen des Ziel- oder Elternelements behandelt.
+::: note
+Klicks auf das eingefuegte Icon werden getrennt von Aktionen des Ziel- oder Elternelements behandelt.
 
+:::
 ## Beispiele
 
 ### MDI-Icon einfuegen

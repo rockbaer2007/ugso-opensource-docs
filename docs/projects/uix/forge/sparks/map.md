@@ -136,9 +136,10 @@ Punkte in `poi`:
 
 Der Spark erweitert die vorhandene `ha-map`-Karte im Frontend. Er speichert UI-Zustand lokal im laufenden Dashboard, blendet zusaetzliche Overlays ein und setzt Werte wie `hours_to_show` direkt an der Karte.
 
-!!! note
-    Der Spark arbeitet mit der gerenderten Home-Assistant-Karte. Wenn Home Assistant intern Markup aendert, kann ein Update der UIX-Selektoren oder des Sparks erforderlich werden.
+::: note
+Der Spark arbeitet mit der gerenderten Home-Assistant-Karte. Wenn Home Assistant intern Markup aendert, kann ein Update der UIX-Selektoren oder des Sparks erforderlich werden.
 
+:::
 ## Beispiele
 
 ### `fit_map` mit Auto-Entities

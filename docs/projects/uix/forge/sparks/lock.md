@@ -5,9 +5,10 @@ title: Lock Spark
 
 Der Lock Spark legt eine Sperrebene ueber ein Forge-Element oder ueber ein gezieltes Unterelement. Er kann je nach Benutzer, Adminstatus, PIN, Code oder Bestaetigung entsperrt werden.
 
-!!! tip
-    Der Spark schuetzt die Bedienung in der Oberflaeche. Er ersetzt keine serverseitige Home-Assistant-Berechtigung.
+::: tip
+Der Spark schuetzt die Bedienung in der Oberflaeche. Er ersetzt keine serverseitige Home-Assistant-Berechtigung.
 
+:::
 ## Grundnutzung
 
 ```yaml
@@ -43,9 +44,10 @@ element:
   entity: light.living_room
 ```
 
-!!! warning
-    Nutze keine PINs fuer echte Sicherheitsgrenzen. UIX laeuft im Browser und kann Bedienfehler vermeiden, aber keine Home-Assistant-Rechte erzwingen.
+::: warning
+Nutze keine PINs fuer echte Sicherheitsgrenzen. UIX laeuft im Browser und kann Bedienfehler vermeiden, aber keine Home-Assistant-Rechte erzwingen.
 
+:::
 ## Matching-Logik
 
 | Konfiguration | Wen sie trifft |
@@ -312,5 +314,6 @@ forge:
           admins: true
 ```
 
-!!! tip
-    Fuer robuste Dashboards ist es meist besser, PINs nicht aus frei sichtbaren Helpern zu lesen. Templates eignen sich eher fuer `active`, `confirmation` oder Benutzergruppenlogik.
+::: tip
+Fuer robuste Dashboards ist es meist besser, PINs nicht aus frei sichtbaren Helpern zu lesen. Templates eignen sich eher fuer `active`, `confirmation` oder Benutzergruppenlogik.
+:::

@@ -136,9 +136,10 @@ element:
   entity: input_boolean.show_energy
 ```
 
-!!! note
-    Der Event Spark ist fuer lokale UI-Kommunikation gedacht. Er ersetzt keine Home-Assistant-Entitaet und speichert keine Werte dauerhaft.
+::: note
+Der Event Spark ist fuer lokale UI-Kommunikation gedacht. Er ersetzt keine Home-Assistant-Entitaet und speichert keine Werte dauerhaft.
 
+:::
 ## Payload-Struktur
 
 Die Event-Payload sollte klein bleiben und nur Werte enthalten, die das empfangende Forge-Element wirklich fuer Templates braucht.

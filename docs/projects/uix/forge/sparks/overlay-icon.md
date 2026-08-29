@@ -57,12 +57,14 @@ element:
 | `--uix-overlay-icon-padding` | Bei `ha-tile-icon` `2px`, sonst `0` | Innenabstand um das Icon. |
 | `--uix-overlay-icon-position` | `none` | Zusaetzliches CSS-`translate`, z. B. `30px 6px`. |
 
-!!! warning
-    `right` und `bottom` werden intern in `left` beziehungsweise `top` mit `calc()` umgerechnet. Wenn die Position nicht passt, teste zuerst mit `top` und `left`.
+::: warning
+`right` und `bottom` werden intern in `left` beziehungsweise `top` mit `calc()` umgerechnet. Wenn die Position nicht passt, teste zuerst mit `top` und `left`.
 
-!!! note
-    Wenn `entity` gesetzt ist, erzeugt Home Assistant das Icon aus Domain, Device-Class und State. Das ist ideal fuer echte Statusmarker.
+:::
+::: note
+Wenn `entity` gesetzt ist, erzeugt Home Assistant das Icon aus Domain, Device-Class und State. Das ist ideal fuer echte Statusmarker.
 
+:::
 ## Beispiele
 
 ### Badge auf Tile-Icon

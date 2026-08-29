@@ -48,9 +48,10 @@ element:
 | `hide_delay` | number | nein | `150` | Wartezeit bis zum Ausblenden in Millisekunden. |
 | `without_arrow` | boolean | nein | `false` | Bei `true` wird der Richtungspfeil ausgeblendet. |
 
-!!! tip
-    Wenn ein Element bereits ein natives `title`-Attribut besitzt, kann der [Attribute Spark](./attribute) es entfernen, damit nicht zwei Tooltips gleichzeitig erscheinen.
+::: tip
+Wenn ein Element bereits ein natives `title`-Attribut besitzt, kann der [Attribute Spark](./attribute) es entfernen, damit nicht zwei Tooltips gleichzeitig erscheinen.
 
+:::
 ## Templates im Inhalt
 
 ```yaml
@@ -86,9 +87,10 @@ element:
 
 ## Aussehen anpassen
 
-!!! note
-    Tooltip-Styles werden ueber CSS-Variablen gesetzt. Das ist stabiler als interne Tooltip-Elemente direkt zu stylen.
+::: note
+Tooltip-Styles werden ueber CSS-Variablen gesetzt. Das ist stabiler als interne Tooltip-Elemente direkt zu stylen.
 
+:::
 ```yaml
 type: custom:uix-forge
 forge:

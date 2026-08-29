@@ -52,9 +52,10 @@ foundries:
       entity: light.living_room
 ```
 
-!!! warning "YAML-Merge-Keys sind flach"
-    YAML-Merge-Keys mergen nur die aktuelle Ebene. Verschachtelte Maps werden nicht tief zusammengefuehrt. Fuer tiefe Kombinationen nutze lieber Foundry-Merge-Verhalten.
+::: warning YAML-Merge-Keys sind flach
+YAML-Merge-Keys mergen nur die aktuelle Ebene. Verschachtelte Maps werden nicht tief zusammengefuehrt. Fuer tiefe Kombinationen nutze lieber Foundry-Merge-Verhalten.
 
+:::
 #### Datei registrieren
 
 Eine YAML-Datei muss in UIX registriert werden, damit ihre Foundries geladen werden. Der genaue Ort haengt von deiner Home-Assistant-Konfiguration ab, typisch ist ein Pfad unter `/config/uix/`.
@@ -112,9 +113,10 @@ foundries:
 
 ## Externe Dateien und Secrets einbinden
 
-!!! warning "Quotes in UI Foundries erforderlich"
-    In UI Foundries muessen `!include` und `!secret` als String gequotet werden. In YAML File Foundries koennen sie als YAML-Tags geschrieben werden.
+::: warning Quotes in UI Foundries erforderlich
+In UI Foundries muessen `!include` und `!secret` als String gequotet werden. In YAML File Foundries koennen sie als YAML-Tags geschrieben werden.
 
+:::
 ### `!include`
 
 ```yaml
@@ -231,9 +233,10 @@ element:
   entity: light.living_room
 ```
 
-!!! warning "Zirkulaere Referenzen"
-    Foundries duerfen sich nicht gegenseitig endlos referenzieren. Achte darauf, dass die Kette eindeutig endet.
+::: warning Zirkulaere Referenzen
+Foundries duerfen sich nicht gegenseitig endlos referenzieren. Achte darauf, dass die Kette eindeutig endet.
 
+:::
 ## Billets in Foundries
 
 Billets sind der wichtigste Weg, um Foundries flexibel zu halten.
@@ -294,16 +297,18 @@ element:
   entity: sensor.outdoor_temperature
 ```
 
-!!! note "UI Foundries: Kommentare werden entfernt"
-    In UI Foundries bleiben YAML-Kommentare nicht erhalten. Wenn Kommentare wichtig sind, nutze eine YAML-Datei im Repository.
+::: note UI Foundries: Kommentare werden entfernt
+In UI Foundries bleiben YAML-Kommentare nicht erhalten. Wenn Kommentare wichtig sind, nutze eine YAML-Datei im Repository.
 
+:::
 ## UIX-Styling aus einer Foundry
 
 Foundries koennen eigene `uix`-Styles enthalten. Die Instanz kann diese Styles ergaenzen.
 
-!!! tip "Styles kombinieren"
-    Lege gemeinsame Struktur und Theme-Variablen in die Foundry und instanzspezifische Abweichungen direkt in die Forge-Instanz.
+::: tip Styles kombinieren
+Lege gemeinsame Struktur und Theme-Variablen in die Foundry und instanzspezifische Abweichungen direkt in die Forge-Instanz.
 
+:::
 ```yaml
 # Foundry: "styled_tile"
 foundries:
@@ -336,9 +341,10 @@ uix:
 
 ## Beispiel: Global Foundry mit Makro
 
-!!! tip
-    Makros in Foundries halten wiederkehrende Template-Logik an einer Stelle.
+::: tip
+Makros in Foundries halten wiederkehrende Template-Logik an einer Stelle.
 
+:::
 ```yaml
 foundries:
   state_colored_tile:
