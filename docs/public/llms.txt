@@ -47,6 +47,10 @@ https://github.com/home-assistant/home-assistant.io
 Tracked source revision:
 - home-assistant/home-assistant.io current branch, source revision c6308203e9f65a14786667294c29c1488a4733ac
 
+Tracked Home Assistant version:
+- Stable: 2026.8.3
+- Beta available at time of check: 2026.9.0b3
+
 License attribution:
 - Original Home Assistant website documentation is licensed under CC BY-NC-SA 4.0.
 

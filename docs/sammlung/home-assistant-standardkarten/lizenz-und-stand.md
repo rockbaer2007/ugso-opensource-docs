@@ -11,6 +11,7 @@ Diese Dokumentation basiert auf der offiziellen Home-Assistant-Webseitendokument
 | Original-Repo | [home-assistant/home-assistant.io](https://github.com/home-assistant/home-assistant.io) |
 | Originalseite | [Dashboard cards](https://www.home-assistant.io/dashboards/cards/) |
 | Gepruefter Commit | [`c6308203e9f65a14786667294c29c1488a4733ac`](https://github.com/home-assistant/home-assistant.io/commit/c6308203e9f65a14786667294c29c1488a4733ac) |
+| Home-Assistant-Version | Stabil: `2026.8.3`, Beta verfuegbar: `2026.9.0b3` |
 | Lizenz | [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://github.com/home-assistant/home-assistant.io/blob/current/LICENSE.md) |
 
 ## Kennzeichnung
@@ -22,6 +23,8 @@ Die englische Originaldokumentation bleibt massgeblich. Bei Abweichungen, Fehler
 ## Aenderungspruefung
 
 Die GitHub Action `Check Home Assistant cards upstream` prueft regelmaessig, ob sich die ueberwachten Quelldateien im Original-Repository seit dem gespeicherten Commit geaendert haben.
+
+Der angegebene Home-Assistant-Versionsstand wird manuell mitgepflegt. Entscheidend fuer die Doku-Pruefung ist der gespeicherte Commit des offiziellen Dokumentations-Repositories.
 
 Ueberwacht werden:
 

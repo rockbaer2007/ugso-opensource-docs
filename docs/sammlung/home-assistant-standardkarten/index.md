@@ -16,6 +16,7 @@ Die englische Originaldokumentation von Home Assistant bleibt massgeblich. Diese
 | Original-Repo | [home-assistant/home-assistant.io](https://github.com/home-assistant/home-assistant.io) |
 | Quellpfad | `source/dashboards/cards.markdown`, `source/_dashboards/*.markdown` |
 | Gepruefter Commit | [`c6308203e9f65a14786667294c29c1488a4733ac`](https://github.com/home-assistant/home-assistant.io/commit/c6308203e9f65a14786667294c29c1488a4733ac) |
+| Home-Assistant-Version | Stabil: `2026.8.3`, Beta verfuegbar: `2026.9.0b3` |
 | Lizenz Originaldoku | [CC BY-NC-SA 4.0](https://github.com/home-assistant/home-assistant.io/blob/current/LICENSE.md) |
 | Status | Vollstaendige Kartenliste angelegt, Uebersicht und Arbeitsstruktur vorbereitet |
 
