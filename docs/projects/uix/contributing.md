@@ -3,6 +3,8 @@ description: Beitraege zur UIX-Dokumentation und zum Projekt
 ---
 # Mitwirken
 
+Die folgenden Hinweise beziehen sich auf Beiträge zum originalen UIX-Repository. Diese deutsche Dokumentation wird separat als inoffizielle Übersetzung gepflegt.
+
 UIX-Dokumentation ist ein Bereich, in dem jede Nutzerin und jeder Nutzer helfen kann. Wenn Python in deiner Umgebung installiert ist, kannst du die Dokumentationsquellen bearbeiten und das Ergebnis lokal in Echtzeit ansehen.
 
 ## Dokumentation aktualisieren
