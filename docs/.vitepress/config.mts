@@ -72,44 +72,6 @@ const sidebarDe = {
         { text: 'HA Apps', link: '/sammlung/ha-apps' },
         { text: 'HACS Dokus', link: '/sammlung/hacs-dokus' }
       ]
-    },
-    {
-      text: 'flex-table-card',
-      collapsed: false,
-      items: [
-        { text: 'Übersicht', link: '/sammlung/flex-table-card/' },
-        { text: 'Installation', link: '/sammlung/flex-table-card/installation' },
-        { text: 'Grundlagen', link: '/sammlung/flex-table-card/grundlagen' },
-        { text: 'Datenquellen', link: '/sammlung/flex-table-card/datenquellen' },
-        { text: 'Sortierung', link: '/sammlung/flex-table-card/sortierung' },
-        { text: 'Formatierung', link: '/sammlung/flex-table-card/formatierung' },
-        { text: 'CSS', link: '/sammlung/flex-table-card/css' },
-        { text: 'Header und Footer', link: '/sammlung/flex-table-card/header-footer' },
-        { text: 'Externe Daten', link: '/sammlung/flex-table-card/externe-daten' },
-        { text: 'Aktionen', link: '/sammlung/flex-table-card/aktionen' },
-        { text: 'Paketlisten-Beispiel', link: '/sammlung/flex-table-card/paketliste' },
-        { text: 'Referenz', link: '/sammlung/flex-table-card/referenz' }
-      ]
-    },
-    {
-      text: 'Zendure HA',
-      collapsed: false,
-      items: [
-        { text: 'Übersicht', link: '/sammlung/zendure-ha/' },
-        { text: 'Installation', link: '/sammlung/zendure-ha/installation' },
-        { text: 'Lokales MQTT', link: '/sammlung/zendure-ha/lokales-mqtt' },
-        { text: 'Fuse Group', link: '/sammlung/zendure-ha/fuse-group' },
-        { text: 'Zendure Manager', link: '/sammlung/zendure-ha/manager' },
-        { text: 'Entitäten', link: '/sammlung/zendure-ha/entitaeten' },
-        { text: 'Fehlersuche', link: '/sammlung/zendure-ha/fehlersuche' }
-      ]
-    },
-    {
-      text: 'Separat verlinkt',
-      collapsed: false,
-      items: [
-        { text: 'UIX deutsche Doku', link: '/projects/uix/' }
-      ]
     }
   ],
 
@@ -362,27 +324,6 @@ const sidebarEn = {
         { text: 'HA Tools', link: '/en/collection/ha-tools' },
         { text: 'HA Apps', link: '/en/collection/ha-apps' },
         { text: 'HACS Docs', link: '/en/collection/hacs-docs' }
-      ]
-    },
-    {
-      text: 'flex-table-card',
-      collapsed: false,
-      items: [
-        { text: 'Overview', link: '/en/collection/flex-table-card/' }
-      ]
-    },
-    {
-      text: 'Zendure HA',
-      collapsed: false,
-      items: [
-        { text: 'Overview', link: '/en/collection/zendure-ha/' }
-      ]
-    },
-    {
-      text: 'Separate link',
-      collapsed: false,
-      items: [
-        { text: 'UIX original docs', link: 'https://uix.lf.technology/' }
       ]
     }
   ],
