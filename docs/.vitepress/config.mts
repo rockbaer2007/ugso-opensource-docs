@@ -92,6 +92,19 @@ const sidebarDe = {
       ]
     },
     {
+      text: 'Zendure HA',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/sammlung/zendure-ha/' },
+        { text: 'Installation', link: '/sammlung/zendure-ha/installation' },
+        { text: 'Lokales MQTT', link: '/sammlung/zendure-ha/lokales-mqtt' },
+        { text: 'Fuse Group', link: '/sammlung/zendure-ha/fuse-group' },
+        { text: 'Zendure Manager', link: '/sammlung/zendure-ha/manager' },
+        { text: 'Entitäten', link: '/sammlung/zendure-ha/entitaeten' },
+        { text: 'Fehlersuche', link: '/sammlung/zendure-ha/fehlersuche' }
+      ]
+    },
+    {
       text: 'Separat verlinkt',
       collapsed: false,
       items: [
@@ -356,6 +369,13 @@ const sidebarEn = {
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/collection/flex-table-card/' }
+      ]
+    },
+    {
+      text: 'Zendure HA',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/collection/zendure-ha/' }
       ]
     },
     {

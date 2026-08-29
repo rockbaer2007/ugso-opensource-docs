@@ -10,7 +10,7 @@ This section collects Home Assistant custom integrations and HACS integrations.
 
 | Project | Status | Note |
 | --- | --- | --- |
-| Zendure Home Assistant Integration | analyzed | Good basis for German user documentation with installation, token, local MQTT, Zendure Manager, Fuse Group, entities and troubleshooting. |
+| [Zendure Home Assistant Integration](./zendure-ha/) | in progress | German user documentation with installation, token, local MQTT, Zendure Manager, Fuse Group, entities and troubleshooting. |
 
 ## Documentation Goals
 
@@ -24,4 +24,3 @@ Integration documentation should include:
 - typical automations or dashboards
 - troubleshooting
 - version, original source, license and freshness status
-

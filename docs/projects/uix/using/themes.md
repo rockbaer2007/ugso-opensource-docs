@@ -357,3 +357,40 @@ Makros auf Kartenebene (`uix.macros`) haben Vorrang vor Theme-Makros mit demselb
 ::: warning
 Theme-Makros sind nur in UIX-Styling-Templates verfügbar, nicht in UIX-Forge-`element`- oder `forge`-Templates. Nutze UIX Forge [Global Foundries](../forge/foundries#globale-foundries), um `forge.macros` global oder pro `mold` zu definieren.
 :::
+
+## Community-Beispiel: große Theme-Sammlung
+
+Ein umfangreiches Praxisbeispiel fuer UIX-Themes wird von Mariusthvdb als Gist gepflegt:
+
+- [UIX themes von Mariusthvdb](https://gist.github.com/Mariusthvdb/ecdd6ac6776d501b09e859888b01a9c6)
+
+Der Gist zeigt unter anderem:
+
+- globale UIX-Theme-Variablen
+- `uix-macros-yaml` mit wiederverwendbaren Makros
+- Icon- und Farbregeln fuer Entitaeten
+- Sidebar-, Header-, Badge- und View-Styling
+- Animationen und Zustandsfarben
+
+::: warning Community-Beispiel
+Dieses Beispiel ist kein Bestandteil der offiziellen UIX-Dokumentation und stark auf die eigene Home-Assistant-Installation des Autors zugeschnitten. Nutze es als Ideensammlung und passe Entitaeten, Labels, Farben, Makros und UIX-Version an deine Installation an.
+:::
+
+Kleine Auszuege koennen als Orientierung dienen. Das vollstaendige YAML sollte direkt aus dem Gist uebernommen und vor der Nutzung geprueft werden.
+
+```yaml
+theme-mods:
+  uix-top-app-bar-fixed: |
+    header.top-app-bar {
+      background: var(--header-background);
+      color: var(--text-color-off);
+    }
+
+  uix-macros-yaml: |
+    power_color:
+      template: >
+        {% for entity in label_entities('power') %}
+        --uix-icon-color-for-{{ entity.replace('.','_') }}:
+        {{ 'var(--success-color)' if states(entity)|int(0) < 2500 else 'var(--alert-color)' }};
+        {% endfor %}
+```
