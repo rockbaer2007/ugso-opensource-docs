@@ -11,4 +11,4 @@ This section collects Home Assistant dashboard topics that are not individual ca
 | Project | Status | Note |
 | --- | --- | --- |
 | [Frosted Glass Theme](/sammlung/frosted-glass-theme/) | reviewed | Modern Home Assistant theme with glass styling, HACS installation, card-mod or UIX requirement and Lite variants. |
-| [NeuMorphix](/sammlung/neumorphix/) | reviewed | Neumorphic Home Assistant theme with light, dark, Claude and inset variants; UIX variants are proposed as a PR. |
+| [NeoMorphix UIX](/sammlung/neomorphix-uix/) | reviewed | Neumorphic Home Assistant theme with light, dark, Claude and inset variants; UIX variants are proposed as a PR. |

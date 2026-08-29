@@ -11,7 +11,7 @@ Dieser Bereich sammelt Themen rund um Home-Assistant-Dashboards, die keine einze
 | Projekt | Status | Hinweis |
 | --- | --- | --- |
 | [Frosted Glass Theme](./frosted-glass-theme/) | geprüft | Modernes Home-Assistant-Theme mit Glasoptik, HACS-Installation, card-mod- oder UIX-Voraussetzung und Lite-Versionen. |
-| [NeuMorphix](./neumorphix/) | geprüft | Neumorphes Home-Assistant-Theme mit Light-, Dark-, Claude- und Inset-Varianten; UIX-Varianten sind als PR vorgeschlagen. |
+| [NeoMorphix UIX](./neomorphix-uix/) | geprüft | Neumorphes Home-Assistant-Theme mit Light-, Dark-, Claude- und Inset-Varianten; UIX-Varianten sind als PR vorgeschlagen. |
 
 ## Abgrenzung
 

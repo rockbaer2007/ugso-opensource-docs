@@ -1,10 +1,10 @@
 ---
-title: NeuMorphix
-description: Deutsche Kurznotiz zum NeuMorphix Home-Assistant-Theme.
+title: NeoMorphix UIX
+description: Deutsche Kurznotiz zum NeoMorphix UIX Home-Assistant-Theme.
 ---
-# NeuMorphix
+# NeoMorphix UIX
 
-NeuMorphix ist ein Home-Assistant-Theme mit neumorpher Optik. Es setzt auf weiche Schatten, runde Flächen und einen leicht plastischen Look für Dashboards.
+NeoMorphix UIX ist eine UIX-Variante des NeuMorphix Home-Assistant-Themes. Es setzt auf weiche Schatten, runde Flächen und einen leicht plastischen Look für Dashboards.
 
 ::: warning Inoffizielle Notiz
 Diese Seite ist keine offizielle Dokumentation des Projekts. Sie fasst die wichtigsten Installations- und Nutzungshinweise deutsch zusammen. Das Original-Repository bleibt maßgeblich.
@@ -20,15 +20,15 @@ Diese Seite ist keine offizielle Dokumentation des Projekts. Sie fasst die wicht
 
 ## Installation
 
-NeuMorphix ist als HACS-Theme installierbar.
+NeoMorphix UIX basiert auf NeuMorphix und ist als HACS-Theme-Variante vorbereitet.
 
-[![NeuMorphix in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=yakidd&repository=NeumorphixHome&category=theme)
+[![NeoMorphix UIX in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=NeumorphixHome&category=theme)
 
 1. HACS installieren, falls noch nicht vorhanden.
 2. `card-mod` installieren, wenn die Original-Theme-Dateien genutzt werden.
-3. NeuMorphix über HACS als Theme installieren.
+3. NeuMorphix oder den NeoMorphix-UIX-Fork über HACS als Theme installieren.
 4. Home Assistant neu starten.
-5. Im Benutzerprofil oder in den Dashboard-Einstellungen eine NeuMorphix-Variante auswählen.
+5. Im Benutzerprofil oder in den Dashboard-Einstellungen eine NeuMorphix- oder NeoMorphix-UIX-Variante auswählen.
 
 Für Home Assistant muss die Theme-Einbindung aktiv sein:
 
@@ -73,17 +73,17 @@ Für UIX wurde ein ergänzender Branch erstellt, der die originalen card-mod-Dat
 
 Der UIX-Branch ergänzt:
 
-- `themes/neumorphix-uix.yaml`
-- `themes/neumorphix-uix-inset.yaml`
+- `themes/neomorphix-uix.yaml`
+- `themes/neomorphix-uix-inset.yaml`
 
 Die zusätzlichen Theme-Namen lauten:
 
-- `neumorphix-light-uix`
-- `neumorphix-dark-uix`
-- `neumorphix-claude-uix`
-- `neumorphix-light-uix-inset`
-- `neumorphix-dark-uix-inset`
-- `neumorphix-claude-uix-inset`
+- `neomorphix-light-uix`
+- `neomorphix-dark-uix`
+- `neomorphix-claude-uix`
+- `neomorphix-light-uix-inset`
+- `neomorphix-dark-uix-inset`
+- `neomorphix-claude-uix-inset`
 
 Technisch wurden die zusätzlichen Dateien auf UIX-Theme-Schlüssel gemappt:
 
