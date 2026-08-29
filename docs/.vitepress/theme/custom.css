@@ -218,6 +218,15 @@ body {
   max-width: 920px;
 }
 
+.VPDocAside,
+.VPDoc .aside {
+  display: none !important;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 920px;
+}
+
 .VPDoc h1,
 .VPDoc h2,
 .VPDoc h3 {

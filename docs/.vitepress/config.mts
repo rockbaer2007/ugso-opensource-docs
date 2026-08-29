@@ -633,9 +633,7 @@ export default defineConfig({
       copyright: '© 2026 UGSo Software'
     },
 
-    outline: {
-      label: 'Auf dieser Seite'
-    },
+    outline: false,
 
     lastUpdated: {
       text: 'Zuletzt aktualisiert'
@@ -665,9 +663,7 @@ export default defineConfig({
       themeConfig: {
         nav: navEn,
         sidebar: sidebarEn,
-        outline: {
-          label: 'On this page'
-        },
+        outline: false,
         lastUpdated: {
           text: 'Last updated'
         },
