@@ -10,7 +10,7 @@ Dieser Bereich ist für inoffizielle deutsche Dokumentationen externer HACS-Proj
 
 | Projekt | Status | Hinweis |
 | --- | --- | --- |
-| flex-table-card | geplant | Soll als vollständige deutsche Doku mit Beispielen vorbereitet werden. |
+| [flex-table-card](./flex-table-card/) | in Arbeit | Vollständige deutsche Doku mit Beispielen und sichtbarer Original-Zuordnung. |
 
 ## Anforderungen
 

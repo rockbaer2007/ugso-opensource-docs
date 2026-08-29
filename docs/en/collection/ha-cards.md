@@ -10,7 +10,7 @@ This section is for Lovelace and HACS cards that are maintained with examples.
 
 | Project | Status | Note |
 | --- | --- | --- |
-| flex-table-card | planned | Good candidate for the first complete card documentation with configuration reference and examples. |
+| [flex-table-card](./flex-table-card/) | in progress | German documentation with installation, reference and practical examples. |
 | bar-card | review later | Repository is available locally and can be evaluated next. |
 | sidebar-card | review later | Repository is available locally and can be evaluated next. |
 

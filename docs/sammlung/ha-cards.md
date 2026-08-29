@@ -10,7 +10,7 @@ Dieser Bereich ist für Lovelace- und HACS-Karten gedacht, die als deutsche Doku
 
 | Projekt | Status | Hinweis |
 | --- | --- | --- |
-| flex-table-card | geplant | Gute Kandidatin für die erste vollständige Card-Doku mit Konfigurationsreferenz und Beispielen. |
+| [flex-table-card](./flex-table-card/) | in Arbeit | Deutsche Doku mit Installation, Referenz und Praxisbeispielen. |
 | bar-card | später prüfen | Repository ist lokal vorhanden und kann danach bewertet werden. |
 | sidebar-card | später prüfen | Repository ist lokal vorhanden und kann danach bewertet werden. |
 

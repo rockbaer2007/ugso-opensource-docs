@@ -65,6 +65,24 @@ const sidebarDe = {
       ]
     },
     {
+      text: 'flex-table-card',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/sammlung/flex-table-card/' },
+        { text: 'Installation', link: '/sammlung/flex-table-card/installation' },
+        { text: 'Grundlagen', link: '/sammlung/flex-table-card/grundlagen' },
+        { text: 'Datenquellen', link: '/sammlung/flex-table-card/datenquellen' },
+        { text: 'Sortierung', link: '/sammlung/flex-table-card/sortierung' },
+        { text: 'Formatierung', link: '/sammlung/flex-table-card/formatierung' },
+        { text: 'CSS', link: '/sammlung/flex-table-card/css' },
+        { text: 'Header und Footer', link: '/sammlung/flex-table-card/header-footer' },
+        { text: 'Externe Daten', link: '/sammlung/flex-table-card/externe-daten' },
+        { text: 'Aktionen', link: '/sammlung/flex-table-card/aktionen' },
+        { text: 'Paketlisten-Beispiel', link: '/sammlung/flex-table-card/paketliste' },
+        { text: 'Referenz', link: '/sammlung/flex-table-card/referenz' }
+      ]
+    },
+    {
       text: 'Separat verlinkt',
       collapsed: false,
       items: [
@@ -319,6 +337,13 @@ const sidebarEn = {
         { text: 'HA Cards', link: '/en/collection/ha-cards' },
         { text: 'HA Apps', link: '/en/collection/ha-apps' },
         { text: 'HACS Docs', link: '/en/collection/hacs-docs' }
+      ]
+    },
+    {
+      text: 'flex-table-card',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/collection/flex-table-card/' }
       ]
     },
     {

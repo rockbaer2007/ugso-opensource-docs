@@ -10,6 +10,6 @@ This section is for unofficial documentation and translations of external HACS p
 
 | Project | Status | Note |
 | --- | --- | --- |
-| flex-table-card | planned | To be prepared as complete German documentation with examples. |
+| [flex-table-card](./flex-table-card/) | in progress | German documentation with examples and visible original attribution. |
 
 Each external HACS documentation should include original source, version, license attribution and a clear note that the original documentation remains authoritative.
