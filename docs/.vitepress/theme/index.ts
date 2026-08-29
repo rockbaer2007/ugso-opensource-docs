@@ -106,6 +106,13 @@ const UgsoLayout = defineComponent({
                     },
                     'Beta-Revision 892e22a'
                   )
+                ]),
+                h('span', [
+                  'Originale UIX-Dokumentation von ',
+                  h('a', { href: 'https://github.com/Lint-Free-Technology/uix', target: '_blank', rel: 'noopener' }, 'Lint-Free-Technology/uix'),
+                  ', lizenziert unter ',
+                  h('a', { href: 'https://creativecommons.org/licenses/by/4.0/', target: '_blank', rel: 'noopener' }, 'CC BY 4.0'),
+                  '.'
                 ])
               ])
             : null

@@ -9,6 +9,8 @@ title: Übersicht
 > Basis: GitHub-Release `v8.1.0`, ergänzt um gekennzeichnete Inhalte aus `v8.2.0-beta.3`. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Master-Stand [`9a0fa57`](https://github.com/Lint-Free-Technology/uix/commit/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9) vom 22.08.2026, Beta-Stand [`892e22a`](https://github.com/Lint-Free-Technology/uix/commit/892e22a).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
+>
+> Die originale UIX-Dokumentation ist von [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix) und steht unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Code des UIX-Projekts bleibt separat unter MIT lizenziert.
 
 
 ![UIX Logo](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/images/mixed.png)
