@@ -67,14 +67,15 @@ footer: false
 </p>
 
 <div class="ugso-actions">
-  <a class="ugso-button secondary" href="/projects/">C# Projekte</a>
-  <a class="ugso-button secondary" href="/projects-mqtt/">MQTT Projekte</a>
-  <a class="ugso-button secondary" href="/projects-diverse/">Diverse Projekte</a>
-  <a class="ugso-button secondary" href="/projects/uix/">UIX inoffizielle dt. Doku</a>
+  <a class="ugso-button secondary" href="/sammlung/">Sammlung öffnen</a>
+  <a class="ugso-button secondary" href="/sammlung/ha-cards">HA Cards</a>
+  <a class="ugso-button secondary" href="/sammlung/ha-apps">HA Apps</a>
+  <a class="ugso-button secondary" href="/sammlung/hacs-dokus">HACS Dokus</a>
 </div>
 
 <p class="ugso-intro">
-  Neu: <a href="/projects/uix/">UIX - inoffizielle deutsche Doku</a>
+  UIX bleibt separat gepflegt:
+  <a href="/projects/uix/">UIX - inoffizielle deutsche Doku</a>
 </p>
 
 <div class="ugso-badge">🚧 Webseite im Aufbau</div>

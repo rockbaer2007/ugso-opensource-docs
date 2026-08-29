@@ -2,10 +2,16 @@ import { defineConfig } from 'vitepress'
 
 const navDe = [
   { text: 'Startseite', link: '/' },
-  { text: 'C# Projekte', link: '/projects/' },
-  { text: 'MQTT Projekte', link: '/projects-mqtt/' },
-  { text: 'Diverse Projekte', link: '/projects-diverse/' },
-  { text: 'UIX Doku', link: '/projects/uix/' },
+  {
+    text: 'Sammlung',
+    items: [
+      { text: 'Übersicht', link: '/sammlung/' },
+      { text: 'HA Cards', link: '/sammlung/ha-cards' },
+      { text: 'HA Apps', link: '/sammlung/ha-apps' },
+      { text: 'HACS Dokus', link: '/sammlung/hacs-dokus' },
+      { text: 'UIX Doku (separat)', link: '/projects/uix/' }
+    ]
+  },
   {
     text: 'Blog',
     items: [
@@ -22,10 +28,16 @@ const navDe = [
 
 const navEn = [
   { text: 'Home', link: '/en/' },
-  { text: 'C# Projects', link: '/en/projects/' },
-  { text: 'MQTT Projects', link: '/en/projects-mqtt/' },
-  { text: 'Misc Projects', link: '/en/projects-diverse/' },
-  { text: 'UIX Docs', link: 'https://uix.lf.technology/' },
+  {
+    text: 'Collection',
+    items: [
+      { text: 'Overview', link: '/en/collection/' },
+      { text: 'HA Cards', link: '/en/collection/ha-cards' },
+      { text: 'HA Apps', link: '/en/collection/ha-apps' },
+      { text: 'HACS Docs', link: '/en/collection/hacs-docs' },
+      { text: 'UIX Docs (separate)', link: 'https://uix.lf.technology/' }
+    ]
+  },
   {
     text: 'Blog',
     items: [
@@ -41,6 +53,26 @@ const navEn = [
 ]
 
 const sidebarDe = {
+  '/sammlung/': [
+    {
+      text: 'Sammlung',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/sammlung/' },
+        { text: 'HA Cards', link: '/sammlung/ha-cards' },
+        { text: 'HA Apps', link: '/sammlung/ha-apps' },
+        { text: 'HACS Dokus', link: '/sammlung/hacs-dokus' }
+      ]
+    },
+    {
+      text: 'Separat verlinkt',
+      collapsed: false,
+      items: [
+        { text: 'UIX deutsche Doku', link: '/projects/uix/' }
+      ]
+    }
+  ],
+
   '/projects-diverse/': [
     {
       text: 'Diverse Projekte',
@@ -278,6 +310,26 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/collection/': [
+    {
+      text: 'Collection',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/collection/' },
+        { text: 'HA Cards', link: '/en/collection/ha-cards' },
+        { text: 'HA Apps', link: '/en/collection/ha-apps' },
+        { text: 'HACS Docs', link: '/en/collection/hacs-docs' }
+      ]
+    },
+    {
+      text: 'Separate link',
+      collapsed: false,
+      items: [
+        { text: 'UIX original docs', link: 'https://uix.lf.technology/' }
+      ]
+    }
+  ],
+
   '/en/projects-diverse/': [
     {
       text: 'Misc Projects',

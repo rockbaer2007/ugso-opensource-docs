@@ -67,10 +67,16 @@ footer: false
 </p>
 
 <div class="ugso-actions">
-  <a class="ugso-button secondary" href="/en/projects/">C# Projects</a>
-  <a class="ugso-button secondary" href="/en/projects-mqtt/">MQTT Projects</a>
-  <a class="ugso-button secondary" href="/en/projects-diverse/">Misc Projects</a>
+  <a class="ugso-button secondary" href="/en/collection/">Open collection</a>
+  <a class="ugso-button secondary" href="/en/collection/ha-cards">HA Cards</a>
+  <a class="ugso-button secondary" href="/en/collection/ha-apps">HA Apps</a>
+  <a class="ugso-button secondary" href="/en/collection/hacs-docs">HACS Docs</a>
 </div>
+
+<p class="ugso-intro">
+  UIX remains maintained separately:
+  <a href="https://uix.lf.technology/">official UIX documentation</a>
+</p>
 
 <div class="ugso-badge">🚧 Website under construction</div>
 
