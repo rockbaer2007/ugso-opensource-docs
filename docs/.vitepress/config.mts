@@ -173,6 +173,7 @@ const sidebarDe = {
         { text: 'Übersicht', link: '/projects/uix/' },
         { text: 'Schnellstart', link: '/projects/uix/quick-start' },
         { text: 'FAQ', link: '/projects/uix/faq' },
+        { text: 'Übersetzungsstatus', link: '/projects/uix/translation-status' },
         { text: 'Mitwirken', link: '/projects/uix/contributing' }
       ]
     },
@@ -187,9 +188,23 @@ const sidebarDe = {
         { text: 'Bilder', link: '/projects/uix/using/images' },
         { text: 'Abschnitte', link: '/projects/uix/using/section-backgrounds' },
         { text: 'Ansichten', link: '/projects/uix/using/view-backgrounds' },
+        { text: 'Custom Panels', link: '/projects/uix/using/custom-panels' },
         { text: 'Templates', link: '/projects/uix/using/templates' },
         { text: 'Themes', link: '/projects/uix/using/themes' },
         { text: 'Weitere Optionen', link: '/projects/uix/using/other' }
+      ]
+    },
+    {
+      text: 'UIX Broker',
+      collapsed: true,
+      items: [
+        { text: 'Übersicht', link: '/projects/uix/broker/' },
+        { text: 'Broker', link: '/projects/uix/broker/broker' },
+        { text: 'Realms', link: '/projects/uix/broker/realms' },
+        { text: 'Interaction Anchors', link: '/projects/uix/broker/interaction-anchors' },
+        { text: 'Rules', link: '/projects/uix/broker/rules' },
+        { text: 'Directives', link: '/projects/uix/broker/directives' },
+        { text: 'Examples', link: '/projects/uix/broker/examples' }
       ]
     },
     {
@@ -240,6 +255,8 @@ const sidebarDe = {
         { text: 'Hash-Template-Variablen', link: '/projects/uix/extras/hash-template-variable-updates' },
         { text: 'Icon-Styling deaktivieren', link: '/projects/uix/extras/disable-icon-styling' },
         { text: 'Entity-Picture-Override', link: '/projects/uix/extras/disable-entity-picture-image-override' },
+        { text: 'Always patch ha-card', link: '/projects/uix/extras/always-patch-ha-card' },
+        { text: 'Custom Panels im iframe', link: '/projects/uix/extras/style-custom-panels' },
         { text: 'Entwickler', link: '/projects/uix/developers/' },
         { text: 'Karten entwickeln', link: '/projects/uix/developers/cards' },
         { text: 'Themes entwickeln', link: '/projects/uix/developers/themes' }
