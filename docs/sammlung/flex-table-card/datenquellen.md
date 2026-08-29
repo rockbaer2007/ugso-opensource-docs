@@ -1,10 +1,10 @@
 ---
 title: flex-table-card Datenquellen
-description: Daten aus Entitaeten, Attributen, Aktionen und statischen Daten lesen.
+description: Daten aus Entitäten, Attributen, Aktionen und statischen Daten lesen.
 ---
 # Datenquellen
 
-## Daten aus Entitaeten
+## Daten aus Entitäten
 
 Der Wert bei `data` bestimmt, was in einer Spalte angezeigt wird.
 
@@ -20,7 +20,7 @@ columns:
     data: icon
 ```
 
-Hauefig nutzbare Selektoren:
+Häufig nutzbare Selektoren:
 
 | Selektor | Bedeutung |
 | --- | --- |
@@ -28,10 +28,10 @@ Hauefig nutzbare Selektoren:
 | `object_id` | Entity-ID ohne Domain |
 | `entity_id` | komplette Entity-ID |
 | `state` | aktueller Status |
-| `icon` | Icon der Entitaet |
-| `area` | Bereich, falls verfuegbar |
-| `floor` | Etage, falls verfuegbar |
-| `device` | Geraetename, falls verfuegbar |
+| `icon` | Icon der Entität |
+| `area` | Bereich, falls verfügbar |
+| `floor` | Etage, falls verfügbar |
+| `device` | Gerätename, falls verfügbar |
 | `platform` | Domain, zum Beispiel `sensor` |
 
 ## Verschachtelte Attribute
@@ -48,7 +48,7 @@ columns:
 
 ## Mehrere Werte in einer Spalte
 
-Mehrere Selektoren koennen mit Komma kombiniert werden.
+Mehrere Selektoren können mit Komma kombiniert werden.
 
 ```yaml
 columns:
@@ -59,7 +59,7 @@ columns:
 
 ## Statische Daten
 
-Fuer Tabellen ohne Home-Assistant-Entitaeten kann `static_data` genutzt werden.
+Für Tabellen ohne Home-Assistant-Entitäten kann `static_data` genutzt werden.
 
 ```yaml
 type: custom:flex-table-card

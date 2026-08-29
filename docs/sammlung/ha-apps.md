@@ -1,10 +1,10 @@
 ---
 title: HA Apps und Add-ons
-description: Home-Assistant-Add-ons, Apps und MQTT-Bruecken in der UGSo-OpenSource-Sammlung.
+description: Home-Assistant-Add-ons, Apps und MQTT-Brücken in der UGSo-OpenSource-Sammlung.
 ---
 # HA Apps und Add-ons
 
-Dieser Bereich sammelt Home-Assistant-Add-ons, Apps, MQTT-Bruecken und laufende Dienste.
+Dieser Bereich sammelt Home-Assistant-Add-ons, Apps, MQTT-Brücken und laufende Dienste.
 
 ## Vorhandene Projekte
 

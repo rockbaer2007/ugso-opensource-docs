@@ -11,8 +11,8 @@ Dieser Bereich ist für Lovelace- und HACS-Karten gedacht, die als deutsche Doku
 | Projekt | Status | Hinweis |
 | --- | --- | --- |
 | [Bubble Card](https://github.com/Clooos/Bubble-Card/blob/main/i18n/README.de.md) | deutsch im Original vorhanden | Externe deutsche Original-README im Bubble-Card-Projekt, daher hier nur verlinkt. |
-| [Calendar Card Pro](./calendar-card-pro/) | in Arbeit | Deutsche Doku mit Installation, Features, Referenz, Beispielen und Aenderungspruefung. |
-| [Mushroom Cards](./mushroom/) | in Arbeit | Deutsche Doku mit Installation, Kartenuebersicht, Beispielen und Aenderungspruefung. |
+| [Calendar Card Pro](./calendar-card-pro/) | in Arbeit | Deutsche Doku mit Installation, Features, Referenz, Beispielen und Änderungsprüfung. |
+| [Mushroom Cards](./mushroom/) | in Arbeit | Deutsche Doku mit Installation, Kartenübersicht, Beispielen und Änderungsprüfung. |
 | [flex-table-card](./flex-table-card/) | in Arbeit | Deutsche Doku mit Installation, Referenz und Praxisbeispielen. |
 | bar-card | später prüfen | Repository ist lokal vorhanden und kann danach bewertet werden. |
 | sidebar-card | später prüfen | Repository ist lokal vorhanden und kann danach bewertet werden. |

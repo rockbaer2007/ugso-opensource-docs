@@ -3,18 +3,18 @@ title: Theme Spark
 ---
 # Theme Spark
 
-Der Theme Spark wendet ein Home-Assistant-Frontend-Theme auf das Forge-Element oder auf ein bestimmtes Unterelement an. Das ist nuetzlich, wenn nur ein Teil einer Karte anders aussehen soll.
+Der Theme Spark wendet ein Home-Assistant-Frontend-Theme auf das Forge-Element oder auf ein bestimmtes Unterelement an. Das ist nützlich, wenn nur ein Teil einer Karte anders aussehen soll.
 
 ## Konfiguration
 
-| Schluessel | Typ | Pflicht | Standard | Beschreibung |
+| Schlüssel | Typ | Pflicht | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
 | `type` | string | ja | - | Muss `theme` sein. |
-| `for` | string | nein | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor fuer das Element, auf das das Theme angewendet wird. |
-| `theme` | string | nein | - | Name des anzuwendenden Themes. Unterstuetzt Templates. |
+| `for` | string | nein | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor für das Element, auf das das Theme angewendet wird. |
+| `theme` | string | nein | - | Name des anzuwendenden Themes. Unterstützt Templates. |
 
 ::: tip
-Der Theme Spark setzt ein Home-Assistant-Theme auf ein konkretes Element. Fuer globale UIX-Theme-Styles nutze die normale [Theme-Konfiguration](../../using/themes).
+Der Theme Spark setzt ein Home-Assistant-Theme auf ein konkretes Element. Für globale UIX-Theme-Styles nutze die normale [Theme-Konfiguration](../../using/themes).
 
 :::
 ## Beispiel - einfach
@@ -73,5 +73,5 @@ element:
 ```
 
 ::: tip
-Wenn sich das Theme nicht sichtbar aendert, pruefe, ob das Ziel wirklich im DOM vorhanden ist und ob die verwendeten Theme-Variablen von diesem Home-Assistant-Element gelesen werden.
+Wenn sich das Theme nicht sichtbar ändert, prüfe, ob das Ziel wirklich im DOM vorhanden ist und ob die verwendeten Theme-Variablen von diesem Home-Assistant-Element gelesen werden.
 :::

@@ -111,18 +111,18 @@ Dieses Script enthält den normalisierten Dateinamen, den passenden
 `custom:<name>`-Kartentyp, den `/hacsfiles/atlas/...`-Resource-Pfad, eine
 `getStubConfig()`-Vorgabe mit sicheren Demo-Entitäten und den Hinweis, diese
 Entitäten in Home Assistant durch eigene Werte zu ersetzen.
-In der Demo kann diese `.js`-Quelle auch direkt ueber den Card-Script-Export
-heruntergeladen werden, damit das Artefakt vor einem vollstaendigen
-HACS-Bundle separat geprueft werden kann.
-Der naechste Paketierungsschritt erzeugt ein abhaengigkeitsfreies `.hacs.zip`.
-Das Archiv enthaelt die Dateien fuer ein spaeteres Frontend-Repository:
+In der Demo kann diese `.js`-Quelle auch direkt über den Card-Script-Export
+heruntergeladen werden, damit das Artefakt vor einem vollständigen
+HACS-Bundle separat geprüft werden kann.
+Der nächste Paketierungsschritt erzeugt ein abhängigkeitsfreies `.hacs.zip`.
+Das Archiv enthält die Dateien für ein späteres Frontend-Repository:
 `hacs.json`, die generierte JavaScript-Card, eine README, eine
-Beispiel-Lovelace-Card und das urspruengliche Atlas Card Package fuer spaetere
+Beispiel-Lovelace-Card und das ursprüngliche Atlas Card Package für spätere
 Bearbeitung.
 Die Demo kann solche `.hacs.zip`-Dateien beim HA-Card-Import wieder erkennen.
 Sie liest die ZIP-Struktur, meldet fehlende Bundle-Dateien und importiert das
 eingebettete `atlas/*.atlas-card.json` wieder in den Simple- oder Expert-Editor.
-Damit ist ein erster HACS-Bundle-Roundtrip moeglich.
+Damit ist ein erster HACS-Bundle-Roundtrip möglich.
 
 ```json
 {
@@ -453,25 +453,25 @@ Die aktuellen Card Packages sind ein Zwischenschritt auf dem Weg zu einem
 installierbaren und wieder importierbaren HA-Card-Editor.
 
 Beim Export von Card Packages und HACS-Bundles fragt der Card Editor die
-gewuenschten Card-Sprachen separat ab. Das betrifft nur die exportierte Card,
-nicht die Atlas-Oberflaeche selbst. `en` ist immer als Pflicht-Fallback
-enthalten, weitere europaeische Sprachen koennen per Checkbox ausgewaehlt
-werden, inklusive `ru` fuer russischsprachige Nutzer. Solange keine
-automatische Uebersetzung aktiv ist, erzeugt ATLAS fuer zusaetzliche Sprachen
+gewünschten Card-Sprachen separat ab. Das betrifft nur die exportierte Card,
+nicht die Atlas-Oberfläche selbst. `en` ist immer als Pflicht-Fallback
+enthalten, weitere europäische Sprachen können per Checkbox ausgewählt
+werden, inklusive `ru` für russischsprachige Nutzer. Solange keine
+automatische Übersetzung aktiv ist, erzeugt ATLAS für zusätzliche Sprachen
 englische Fallback-Dateien mit einem Hinweis, dass die entsprechenden
-`locales/*.json` Dateien vor einer Veroeffentlichung uebersetzt und geprueft
-werden muessen.
+`locales/*.json` Dateien vor einer Veröffentlichung übersetzt und geprüft
+werden müssen.
 
 Die Atlas Administration verwaltet die geplante Auswahl des
-Uebersetzungsmoduls. Vorgesehen sind zunaechst `none`, `chatgpt`, `gemini`,
+Übersetzungsmoduls. Vorgesehen sind zunächst `none`, `chatgpt`, `gemini`,
 `deepl-free`, `deepl-pro` und `custom-ai`. Die Auswahl soll als klare
-Radio-Liste mit API-Key-Feldern fuer die jeweiligen Provider erfolgen. Im Card
-Editor kann beim Export eine Checkbox fuer automatische Uebersetzung aktiviert
-werden. Die Oberflaeche zeigt dabei einen Fortschritt an. Bis echte
-Provider-Adapter und API-Schluessel angebunden sind, bleibt das Ergebnis
-bewusst als Fallback markiert, damit keine unuebersetzten Dateien versehentlich
-als maschinell uebersetzt gelten. Eine spaetere echte automatische Uebersetzung
-muss klar darauf hinweisen, dass dafuer eine Internetverbindung erforderlich
+Radio-Liste mit API-Key-Feldern für die jeweiligen Provider erfolgen. Im Card
+Editor kann beim Export eine Checkbox für automatische Übersetzung aktiviert
+werden. Die Oberfläche zeigt dabei einen Fortschritt an. Bis echte
+Provider-Adapter und API-Schlüssel angebunden sind, bleibt das Ergebnis
+bewusst als Fallback markiert, damit keine unübersetzten Dateien versehentlich
+als maschinell übersetzt gelten. Eine spätere echte automatische Übersetzung
+muss klar darauf hinweisen, dass dafür eine Internetverbindung erforderlich
 ist.
 Fuer DeepL ist `https://www.deepl.com/de/pro#api` als Referenz fuer die
 Free/Pro-API-Optionen vorgemerkt.
@@ -481,41 +481,41 @@ Der vorbereitete DeepL-Translate-Endpunkt ist
 nachgehalten. Dieser Endpunkt ist interne Konfiguration und soll nicht als
 normales Eingabefeld in der Atlas Administration erscheinen.
 Fuer Gemini ist `https://ai.google.dev/gemini-api/docs/api-key` als Referenz
-fuer API-Key- und Sicherheitshinweise vorgemerkt. Provider-API-Keys gehoeren in
-die Atlas Administration oder spaetere Backend-Adapter; der Card Editor soll
+für API-Key- und Sicherheitshinweise vorgemerkt. Provider-API-Keys gehören in
+die Atlas Administration oder spätere Backend-Adapter; der Card Editor soll
 nur Provider, Endpunkt und Key-konfiguriert-Status erhalten.
 ChatGPT/OpenAI ist der erste angebundene Adapterpfad. Der Card Editor ruft
-dafuer die Atlas Administration ueber `/api/card-translation` auf, und der
-Admin-Server nutzt den dort gehaltenen OpenAI-Key fuer die OpenAI Responses
+dafür die Atlas Administration über `/api/card-translation` auf, und der
+Admin-Server nutzt den dort gehaltenen OpenAI-Key für die OpenAI Responses
 API. Erfolgreich erzeugte Locale-Dateien werden als `machine` markiert und
-muessen vor einer Veroeffentlichung weiterhin geprueft werden. Der verwendete
-OpenAI-Modellname kann serverseitig ueber `ATLAS_OPENAI_TRANSLATION_MODEL`
-ueberschrieben werden.
+müssen vor einer Veröffentlichung weiterhin geprüft werden. Der verwendete
+OpenAI-Modellname kann serverseitig über `ATLAS_OPENAI_TRANSLATION_MODEL`
+überschrieben werden.
 Nach einem Reload der Atlas Administration stellt die Admin-Seite den
-Home-Assistant-Token und Provider-API-Keys aus einem verschluesselten
+Home-Assistant-Token und Provider-API-Keys aus einem verschlüsselten
 Langzeit-Admin-Cookie wieder her. Der browserseitige
-Entschluesselungsschluessel bleibt in der lokalen Admin-Speicherung, damit der
-Cookie selbst keine rohen Provider-Keys und keinen rohen Token enthaelt.
-Zusaetzlich kann die Admin-Seite Secrets vom laufenden lokalen Admin-Server
-ueber `GET /api/admin-connection?includeSecrets=1` auffrischen. Die rohen Keys
+Entschlüsselungsschlüssel bleibt in der lokalen Admin-Speicherung, damit der
+Cookie selbst keine rohen Provider-Keys und keinen rohen Token enthält.
+Zusätzlich kann die Admin-Seite Secrets vom laufenden lokalen Admin-Server
+über `GET /api/admin-connection?includeSecrets=1` auffrischen. Die rohen Keys
 und der rohe Token werden weiterhin nicht in den gemeinsamen Handoff-Cookie
-oder in Card-Editor-Handoff-Payloads geschrieben. Fuer Sicherungen kann die
+oder in Card-Editor-Handoff-Payloads geschrieben. Für Sicherungen kann die
 Administration `atlas-admin-settings.json` exportieren: normale Einstellungen
 bleiben lesbar, Token und Provider-API-Keys liegen darin als AES-GCM-
-verschluesselter `encryptedSecrets`-Block.
-Diese verschluesselten Secrets sind zusaetzlich an die lokale
-Atlas-Administration-Installation gebunden. Der Admin-Server erzeugt dafuer
-eine Installationskennung in lokalen Benutzerdaten ausserhalb des Repos oder
+verschlüsselter `encryptedSecrets`-Block.
+Diese verschlüsselten Secrets sind zusätzlich an die lokale
+Atlas-Administration-Installation gebunden. Der Admin-Server erzeugt dafür
+eine Installationskennung in lokalen Benutzerdaten außerhalb des Repos oder
 nutzt `ATLAS_INSTANCE_ID`, wenn eine Docker- oder Serverinstallation bewusst
-eine stabile Identitaet bekommen soll. Wird nur der Serverordner oder eine
-Exportdatei auf eine fremde Umgebung kopiert, gelten die Secrets als ungueltig.
-Normale Einstellungen koennen spaeter weiterhin migrierbar bleiben; fuer
+eine stabile Identität bekommen soll. Wird nur der Serverordner oder eine
+Exportdatei auf eine fremde Umgebung kopiert, gelten die Secrets als ungültig.
+Normale Einstellungen können später weiterhin migrierbar bleiben; für
 Secrets braucht ein bewusster Umzug eine eigene Transfer- oder
 Passphrase-Funktion.
 
-Als spaeteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Fuer diese
+Als späteres Folgeprojekt ist die Lovelace UV Card vorgesehen. Für diese
 Card ist `filipnet/haos-uv-index` als Inspirationsquelle vorgemerkt. Wichtig
-sind dabei nicht Code-Uebernahme, sondern Produktideen: UV-Index-Sensor,
+sind dabei nicht Code-Übernahme, sondern Produktideen: UV-Index-Sensor,
 farbcodierte Risikoanzeige, WHO-nahe Schutzempfehlungen,
 Mushroom-kompatible Darstellung und optionale Benachrichtigungs-Automationen.
 

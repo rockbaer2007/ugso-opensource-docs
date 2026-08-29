@@ -3,20 +3,20 @@ title: Attribute Spark
 ---
 # Attribute Spark
 
-Der Attribute Spark setzt, ersetzt oder entfernt ein HTML-Attribut an einem Element innerhalb eines Forge-Elements. Das ist praktisch fuer native Tooltips, ARIA-Attribute, Titel oder kleine Datenattribute.
+Der Attribute Spark setzt, ersetzt oder entfernt ein HTML-Attribut an einem Element innerhalb eines Forge-Elements. Das ist praktisch für native Tooltips, ARIA-Attribute, Titel oder kleine Datenattribute.
 
 ## Konfiguration
 
-| Schluessel | Typ | Pflicht | Standard | Beschreibung |
+| Schlüssel | Typ | Pflicht | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | ja | - | Muss `attribute` sein. |
 | `attribute` | `string` | ja | - | Name des HTML-Attributs, z. B. `title`. |
-| `for` | `string` | nein | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | CSS/UIX-Selektor fuer das Ziel. `$` wechselt in Shadow Roots. |
+| `for` | `string` | nein | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | CSS/UIX-Selektor für das Ziel. `$` wechselt in Shadow Roots. |
 | `action` | `string` | nein | `replace` | `replace` setzt einen neuen Wert, `remove` entfernt das Attribut komplett. |
 | `value` | `string` | nein | `""` | Neuer Attributwert. Wird nur bei `action: replace` genutzt und unterstuetzt Jinja2-Templates. |
 
 ::: tip
-Wenn du nur einen Tooltip anzeigen willst, ist oft der [Tooltip Spark](./tooltip) besser. Der Attribute Spark ist sinnvoll, wenn wirklich das HTML-Attribut selbst geaendert werden soll.
+Wenn du nur einen Tooltip anzeigen willst, ist oft der [Tooltip Spark](./tooltip) besser. Der Attribute Spark ist sinnvoll, wenn wirklich das HTML-Attribut selbst geändert werden soll.
 
 :::
 ## Nutzung

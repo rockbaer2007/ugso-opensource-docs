@@ -10,15 +10,15 @@ Dieser Bereich sammelt Home-Assistant-Blueprints und wiederverwendbare Automatio
 
 | Projekt | Beschreibung |
 | --- | --- |
-| [Ultimate Timer](/projects/ultimate-timer/) | Home-Assistant-Blueprint fuer wiederverwendbare Timer. |
+| [Ultimate Timer](/projects/ultimate-timer/) | Home-Assistant-Blueprint für wiederverwendbare Timer. |
 
-## Ziel fuer Blueprint-Dokus
+## Ziel für Blueprint-Dokus
 
 Eine Blueprint-Doku sollte mindestens enthalten:
 
-- Zweck und typische Einsatzfaelle
+- Zweck und typische Einsatzfälle
 - Import-Link oder Installationsweg
-- benoetigte Helfer, Entitaeten und Eingaben
+- benötigte Helfer, Entitäten und Eingaben
 - Beispielkonfiguration
 - Hinweise zu Triggern, Bedingungen und Aktionen
 - Troubleshooting

@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Architektur
-      link: /projects/atlas/uebersicht
+      link: /projects/atlas/übersicht
     - theme: alt
       text: Entwicklungsstand
       link: /projects/atlas/entwicklungsstand

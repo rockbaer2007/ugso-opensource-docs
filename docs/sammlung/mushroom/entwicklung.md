@@ -1,8 +1,8 @@
 ---
-title: Mushroom Entwicklung und Uebersetzung
-description: Entwicklungsserver, Build und Uebersetzungshinweise fuer Mushroom.
+title: Mushroom Entwicklung und Übersetzung
+description: Entwicklungsserver, Build und Übersetzungshinweise für Mushroom.
 ---
-# Entwicklung Und Uebersetzung
+# Entwicklung Und Übersetzung
 
 ## Home-Assistant-Demo Starten
 
@@ -22,7 +22,7 @@ npm run start:hass-cmd
 
 ## Entwicklungsserver
 
-Abhaengigkeiten installieren und Entwicklungsserver starten:
+Abhängigkeiten installieren und Entwicklungsserver starten:
 
 ```sh
 npm install
@@ -39,10 +39,10 @@ npm run build
 
 Der Build erzeugt `mushroom.js` im `dist`-Ordner.
 
-## Uebersetzungen Der Mushroom-Oberflaeche
+## Übersetzungen Der Mushroom-Oberfläche
 
-Mushroom nutzt Weblate fuer UI-Uebersetzungen:
+Mushroom nutzt Weblate für UI-Übersetzungen:
 
 - [Mushroom auf Weblate](https://hosted.weblate.org/engage/mushroom/)
 
-Neue Sprachdateien muessen Home-Assistant-kompatible BCP-47-Sprachcodes verwenden, zum Beispiel `de`, `fr`, `fr-CA` oder `zh-Hans`.
+Neue Sprachdateien müssen Home-Assistant-kompatible BCP-47-Sprachcodes verwenden, zum Beispiel `de`, `fr`, `fr-CA` oder `zh-Hans`.

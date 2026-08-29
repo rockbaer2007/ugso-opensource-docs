@@ -3,10 +3,10 @@ title: Lock Spark
 ---
 # Lock Spark
 
-Der Lock Spark legt eine Sperrebene ueber ein Forge-Element oder ueber ein gezieltes Unterelement. Er kann je nach Benutzer, Adminstatus, PIN, Code oder Bestaetigung entsperrt werden.
+Der Lock Spark legt eine Sperrebene über ein Forge-Element oder über ein gezieltes Unterelement. Er kann je nach Benutzer, Adminstatus, PIN, Code oder Bestätigung entsperrt werden.
 
 ::: tip
-Der Spark schuetzt die Bedienung in der Oberflaeche. Er ersetzt keine serverseitige Home-Assistant-Berechtigung.
+Der Spark schützt die Bedienung in der Oberfläche. Er ersetzt keine serverseitige Home-Assistant-Berechtigung.
 
 :::
 ## Grundnutzung
@@ -25,7 +25,7 @@ element:
   entity: light.living_room
 ```
 
-## Ziel mit `for` waehlen
+## Ziel mit `for` wählen
 
 Ohne `for` wird das ganze Forge-Element gesperrt. Mit `for` kann ein bestimmtes Element gesperrt werden, zum Beispiel nur das Tile-Icon.
 
@@ -45,14 +45,14 @@ element:
 ```
 
 ::: warning
-Nutze keine PINs fuer echte Sicherheitsgrenzen. UIX laeuft im Browser und kann Bedienfehler vermeiden, aber keine Home-Assistant-Rechte erzwingen.
+Nutze keine PINs für echte Sicherheitsgrenzen. UIX läuft im Browser und kann Bedienfehler vermeiden, aber keine Home-Assistant-Rechte erzwingen.
 
 :::
 ## Matching-Logik
 
 | Konfiguration | Wen sie trifft |
 | --- | --- |
-| `users`-Liste vorhanden | Nutzer, deren Name in der Liste steht. Mit `admins: true` zusaetzlich Admins. |
+| `users`-Liste vorhanden | Nutzer, deren Name in der Liste steht. Mit `admins: true` zusätzlich Admins. |
 | Keine `users`-Liste | Alle Nicht-Admins, die nicht in `except` stehen. |
 | Keine `users`-Liste und `admins: true` | Alle Nutzer, Admins und Nicht-Admins, sofern sie nicht in `except` stehen. |
 
@@ -60,10 +60,10 @@ Nutze keine PINs fuer echte Sicherheitsgrenzen. UIX laeuft im Browser und kann B
 
 ### Top-Level
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `type` | string | - | Muss `lock` sein. |
-| `for` | string | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor fuer das Element, ueber das die Sperre gelegt wird. |
+| `for` | string | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor für das Element, über das die Sperre gelegt wird. |
 | `action` | string | `tap` | Geste zum Entsperren: `tap`, `hold` oder `double_tap`. |
 | `duration` | number oder string | `3000` | Dauer bis zum erneuten Sperren nach erfolgreichem Entsperren. Zahlen sind Millisekunden, Strings z. B. `5s`, `1m`, `500ms`. |
 | `icon_locked` | string | `mdi:lock-outline` | Icon im gesperrten Zustand. |
@@ -71,48 +71,48 @@ Nutze keine PINs fuer echte Sicherheitsgrenzen. UIX laeuft im Browser und kann B
 | `icon_locked_color` | string | `--error-color` | Farbe des gesperrten Icons. |
 | `icon_unlocked_color` | string | `--success-color` | Farbe des entsperrten Icons. |
 | `icon_position` | object | je nach Ziel | Pixel-Offsets des Icons. Erlaubt `top` oder `bottom` und `left` oder `right`. |
-| `icon_size` | number oder string | `24px`, bei `ha-tile-icon` `12px` | Icongroesse. `--uix-lock-icon-size` hat Vorrang. |
-| `permissive` | boolean | `false` | Bei `true` bleiben Elemente zugaenglich, wenn kein Lock-Eintrag zum aktuellen Nutzer passt. |
-| `entity` | string | - | Entity-ID fuer einfache HA-Aktionen in `unlocked_action`. |
+| `icon_size` | number oder string | `24px`, bei `ha-tile-icon` `12px` | Icongröße. `--uix-lock-icon-size` hat Vorrang. |
+| `permissive` | boolean | `false` | Bei `true` bleiben Elemente zugänglich, wenn kein Lock-Eintrag zum aktuellen Nutzer passt. |
+| `entity` | string | - | Entity-ID für einfache HA-Aktionen in `unlocked_action`. |
 | `unlocked_action` | object | - | Aktion direkt nach erfolgreichem Entsperren. |
-| `locks` | list | `[]` | Geordnete Liste von Lock-Eintraegen. |
-| `code_dialog` | object | - | Optionen fuer den Code- oder Passphrase-Dialog. |
+| `locks` | list | `[]` | Geordnete Liste von Lock-Einträgen. |
+| `code_dialog` | object | - | Optionen für den Code- oder Passphrase-Dialog. |
 
 ### `code_dialog`
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `title` | string | HA-Standard | Dialogtitel. |
-| `submit_text` | string | HA-Standard | Text des Bestaetigungsbuttons. |
+| `submit_text` | string | HA-Standard | Text des Bestätigungsbuttons. |
 | `cancel_text` | string | HA-Standard | Text des Abbrechen-Buttons. |
 
 ### `unlocked_action`
 
 | Wert | Wirkung |
 | --- | --- |
-| `action: element_tap` | Loest die `tap_action` des Zielelements aus. |
-| `action: element_hold` | Loest die `hold_action` des Zielelements aus. |
-| `action: element_double_tap` | Loest die `double_tap_action` des Zielelements aus. |
-| Beliebige HA-Aktion | Fuehrt diese Aktion gegen `entity` aus, z. B. `action: toggle`. |
+| `action: element_tap` | Löst die `tap_action` des Zielelements aus. |
+| `action: element_hold` | Löst die `hold_action` des Zielelements aus. |
+| `action: element_double_tap` | Löst die `double_tap_action` des Zielelements aus. |
+| Beliebige HA-Aktion | Führt diese Aktion gegen `entity` aus, z. B. `action: toggle`. |
 
-### Lock-Eintraege
+### Lock-Einträge
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
-| `active` | boolean | `true` | Mit `false` wird fuer passende Nutzer explizit entsperrt. |
+| `active` | boolean | `true` | Mit `false` wird für passende Nutzer explizit entsperrt. |
 | `code` | string oder number | - | Einzugebender Code. Zahlen zeigen das HA-Nummernfeld, Text zeigt ein Passwortfeld. |
-| `pin` | string oder number | - | Alias fuer `code`. |
-| `confirmation` | string oder boolean | - | Bestaetigungsdialog. `true` nutzt den HA-Standardtext, ein String nutzt eigenen Text. |
-| `users` | Liste von Strings | - | Nutzernamen, fuer die dieser Eintrag gilt. |
-| `admins` | boolean | `false` | Additiv. Ohne `users` erfasst `admins: true` alle Nutzer. Mit `users` werden Admins zusaetzlich erfasst. |
+| `pin` | string oder number | - | Alias für `code`. |
+| `confirmation` | string oder boolean | - | Bestätigungsdialog. `true` nutzt den HA-Standardtext, ein String nutzt eigenen Text. |
+| `users` | Liste von Strings | - | Nutzernamen, für die dieser Eintrag gilt. |
+| `admins` | boolean | `false` | Additiv. Ohne `users` erfasst `admins: true` alle Nutzer. Mit `users` werden Admins zusätzlich erfasst. |
 | `except` | Liste von Strings | - | Ausnahmen, wenn keine `users`-Liste gesetzt ist. |
 | `retry_delay` | number oder string | - | Wartezeit zwischen falschen Codeversuchen. |
-| `max_retries` | number | - | Anzahl falscher Versuche vor der laengeren Sperrzeit. |
+| `max_retries` | number | - | Anzahl falscher Versuche vor der längeren Sperrzeit. |
 | `max_retries_delay` | number oder string | `30000` | Sperrzeit nach `max_retries`, z. B. `30s` oder `5m`. |
 
 ## Beispiele
 
-### Gleiche PIN fuer alle, inklusive Admins
+### Gleiche PIN für alle, inklusive Admins
 
 ```yaml
 forge:
@@ -123,7 +123,7 @@ forge:
           admins: true
 ```
 
-### Keine Sperre fuer Admins und einen bestimmten Nutzer
+### Keine Sperre für Admins und einen bestimmten Nutzer
 
 ```yaml
 forge:
@@ -135,7 +135,7 @@ forge:
             - Max
 ```
 
-### Bestaetigung fuer alle inklusive Admins
+### Bestätigung für alle inklusive Admins
 
 ```yaml
 forge:
@@ -146,7 +146,7 @@ forge:
           admins: true
 ```
 
-### PIN fuer alle, aber nicht fuer genannte Nutzer
+### PIN für alle, aber nicht für genannte Nutzer
 
 ```yaml
 forge:
@@ -190,7 +190,7 @@ forge:
             - Gast
 ```
 
-### Nach Entsperren die Hold-Aktion der Tile Card ausfuehren
+### Nach Entsperren die Hold-Aktion der Tile Card ausführen
 
 ```yaml
 forge:
@@ -265,7 +265,7 @@ forge:
 | `--uix-lock-background-unlocked` | `none` | Hintergrundfarbe im entsperrten Zustand. |
 | `--uix-lock-background-blocked` | `--uix-lock-background` | Hintergrund, wenn dauerhaft blockiert ist. |
 | `--uix-lock-border-radius` | `inherit` | Rundung des Overlays. |
-| `--uix-lock-icon-size` | `24px`, bei `ha-tile-icon` `12px` | Groesse des Schlossicons. |
+| `--uix-lock-icon-size` | `24px`, bei `ha-tile-icon` `12px` | Größe des Schlossicons. |
 | `--uix-lock-icon-background` | `none` | Hintergrund des Iconelements. |
 | `--uix-lock-icon-border-radius` | `none`, bei `ha-tile-icon` `50%` | Rundung des Iconelements. |
 | `--uix-lock-icon-padding` | `0`, bei `ha-tile-info` `2px` | Innenabstand um das Icon. |
@@ -303,7 +303,7 @@ uix:
 
 ## Templates
 
-Lock-Werte koennen Templates nutzen, wenn du Regeln an Zustandswerte koppeln willst.
+Lock-Werte können Templates nutzen, wenn du Regeln an Zustandswerte koppeln willst.
 
 ```yaml
 forge:
@@ -315,5 +315,5 @@ forge:
 ```
 
 ::: tip
-Fuer robuste Dashboards ist es meist besser, PINs nicht aus frei sichtbaren Helpern zu lesen. Templates eignen sich eher fuer `active`, `confirmation` oder Benutzergruppenlogik.
+Für robuste Dashboards ist es meist besser, PINs nicht aus frei sichtbaren Helpern zu lesen. Templates eignen sich eher für `active`, `confirmation` oder Benutzergruppenlogik.
 :::

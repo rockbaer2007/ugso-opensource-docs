@@ -19,7 +19,7 @@ columns:
     data: state
 ```
 
-Fuer einzelne Spalten kann die automatische Formatierung abgeschaltet werden.
+Für einzelne Spalten kann die automatische Formatierung abgeschaltet werden.
 
 ```yaml
 columns:
@@ -61,7 +61,7 @@ columns:
 | --- | --- |
 | `number` | Wert in Zahl umwandeln |
 | `duration` | Sekunden als Zeitdauer anzeigen |
-| `duration_h` | laengere Dauer mit Tagen anzeigen |
+| `duration_h` | längere Dauer mit Tagen anzeigen |
 | `icon` | MDI-Icon anzeigen |
 | `full_datetime` | Datumsstring in Timestamp umwandeln |
 | `hours_passed` | vergangene Stunden seit Datum |

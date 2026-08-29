@@ -4,7 +4,7 @@ description: Tabellenlayout und Farben der flex-table-card per CSS anpassen.
 ---
 # CSS
 
-Die flex-table-card kann ueber den Abschnitt `css` direkt gestaltet werden. Der CSS-Selektor steht als Schluessel, der CSS-Inhalt als Wert.
+Die flex-table-card kann über den Abschnitt `css` direkt gestaltet werden. Der CSS-Selektor steht als Schlüssel, der CSS-Inhalt als Wert.
 
 ```yaml
 type: custom:flex-table-card
@@ -26,14 +26,14 @@ css:
 
 ## Ersetzen oder Erweitern
 
-Ohne `+` wird der vorhandene Stil fuer den Selektor ersetzt.
+Ohne `+` wird der vorhandene Stil für den Selektor ersetzt.
 
 ```yaml
 css:
   table: "border: 0;"
 ```
 
-Mit `+` wird der Stil ergaenzt.
+Mit `+` wird der Stil ergänzt.
 
 ```yaml
 css:
@@ -49,7 +49,7 @@ css:
   "tbody tr td:nth-child(3)": "text-align: right;"
 ```
 
-## Schriftgroesse in Tabellenzeilen
+## Schriftgröße in Tabellenzeilen
 
 ```yaml
 css:

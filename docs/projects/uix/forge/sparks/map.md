@@ -24,38 +24,38 @@ element:
 
 ## Konfiguration
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `type` | string | - | Muss `map` sein. |
 | `memory` | boolean | `false` | Speichert Zoom und Kartenmitte vor Updates und stellt sie danach wieder her. |
-| `fit_map` | boolean | `false` | Passt die Karte einmal an alle Entities an, sobald sie sichtbar ist. Nuetzlich fuer beim Laden versteckte Karten. |
+| `fit_map` | boolean | `false` | Passt die Karte einmal an alle Entities an, sobald sie sichtbar ist. Nuetzlich für beim Laden versteckte Karten. |
 | `tour` | boolean oder object | `false` | Aktiviert Tour-Modus. `true` nutzt Standards, ein Objekt passt die Tour an. |
-| `hours_to_show` | boolean oder object | `false` | Aktiviert einen Slider fuer `hours_to_show`. `true` nutzt Standards. |
+| `hours_to_show` | boolean oder object | `false` | Aktiviert einen Slider für `hours_to_show`. `true` nutzt Standards. |
 | `entity_filter` | boolean oder object | `false` | Aktiviert ein Dropdown zum Ein- und Ausblenden von Entities. `true` nutzt Standards. |
 
 ### `tour`
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `period` | string oder number | `10s` | Aufenthaltsdauer an jedem Punkt. Zahlen sind Millisekunden, Strings z. B. `30s` oder `2m`. |
-| `zoom` | number | `14` | Standard-Zoom fuer Tourpunkte. |
-| `icon_pause` | string | `mdi:pause` | Icon, wenn die Tour laeuft. |
+| `zoom` | number | `14` | Standard-Zoom für Tourpunkte. |
+| `icon_pause` | string | `mdi:pause` | Icon, wenn die Tour läuft. |
 | `icon_play` | string | `mdi:play` | Icon, wenn die Tour pausiert ist. |
 | `icon_position` | object | `{bottom: 10px, right: 10px}` | CSS-Position des Buttons. Zahlen werden als Pixel behandelt. |
 | `poi` | list | nicht gesetzt | Liste der Punkte. Ohne Liste werden die Entities der `ha-map` genutzt. |
 
 Punkte in `poi`:
 
-| Schluessel | Typ | Beschreibung |
+| Schlüssel | Typ | Beschreibung |
 | --- | --- | --- |
 | `entity` | string | Entity-ID. Muss in der `entities`-Liste der Karte vorhanden sein. Latitude und Longitude kommen aus den State-Attributen. |
 | `latitude` | number | Breitengrad, erforderlich wenn keine `entity` gesetzt ist. |
-| `longitude` | number | Laengengrad, erforderlich wenn keine `entity` gesetzt ist. |
-| `zoom` | number | Zoom nur fuer diesen Punkt. |
+| `longitude` | number | Längengrad, erforderlich wenn keine `entity` gesetzt ist. |
+| `zoom` | number | Zoom nur für diesen Punkt. |
 
 ### `hours_to_show`
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `min` | number | `0` | Minimaler Stundenwert. |
 | `max` | number | `24` | Maximaler Stundenwert. |
@@ -65,10 +65,10 @@ Punkte in `poi`:
 
 ### `entity_filter`
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `position` | object | `{bottom: 10px, right: 10px}` | CSS-Position des Filterbuttons. |
-| `size` | string | `s` | Buttongroesse, z. B. `s`, `m`, `l`. |
+| `size` | string | `s` | Buttongröße, z. B. `s`, `m`, `l`. |
 | `variant` | string | `neutral` | Buttonvariante, z. B. `brand`, `neutral`, `danger`, `warning`, `success`. |
 | `appearance` | string | `filled` | Darstellung, z. B. `accent`, `filled`, `plain`. |
 | `icon` | string | `mdi:filter-variant` | Start-Icon des Buttons. |
@@ -77,11 +77,11 @@ Punkte in `poi`:
 
 #### Gruppierung
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
-| `persons` | string | `Persons` | Label fuer `person`-Entities. |
-| `trackers` | string | `Trackers` | Label fuer `device_tracker`-Entities. |
-| `zones` | string | `Zones` | Label fuer `zone`-Entities. |
+| `persons` | string | `Persons` | Label für `person`-Entities. |
+| `trackers` | string | `Trackers` | Label für `device_tracker`-Entities. |
+| `zones` | string | `Zones` | Label für `zone`-Entities. |
 
 ## CSS-Variablen
 
@@ -94,7 +94,7 @@ Punkte in `poi`:
 | `--uix-map-tour-icon-background` | `rgba(255,255,255,0.8)` | Buttonhintergrund. |
 | `--uix-map-tour-icon-box-shadow` | `0 1px 5px rgba(0,0,0,0.4)` | Schatten des Iconcontainers. |
 | `--uix-map-tour-icon-width` | `auto` | Buttonbreite. |
-| `--uix-map-tour-icon-height` | `auto` | Buttonhoehe. |
+| `--uix-map-tour-icon-height` | `auto` | Buttonhöhe. |
 | `--uix-map-tour-icon-border-radius` | `9999px` | Rundung des Buttons. |
 | `--uix-map-tour-icon-z-index` | `1000` | Stapelreihenfolge. Leaflet-Kontrollen nutzen ebenfalls `1000`. |
 
@@ -110,8 +110,8 @@ Punkte in `poi`:
 | `--uix-map-slider-box-shadow` | `0 1px 5px rgba(0,0,0,0.4)` | Schatten. |
 | `--uix-map-slider-z-index` | `1000` | Overlay-Ebene. |
 | `--uix-map-slider-label-min-width` | `28px` | Mindestbreite des Labels. |
-| `--uix-map-slider-thumb-size` | nicht gesetzt | Hoehe und Breite des Thumbs zusammen. |
-| `--uix-map-slider-thumb-height` | `16px` | Thumb-Hoehe. |
+| `--uix-map-slider-thumb-size` | nicht gesetzt | Höhe und Breite des Thumbs zusammen. |
+| `--uix-map-slider-thumb-height` | `16px` | Thumb-Höhe. |
 | `--uix-map-slider-thumb-width` | `16px` | Thumb-Breite. |
 | `--uix-map-slider-track-size` | `4px` | Dicke der Slider-Spur. |
 | `--uix-map-slider-track-color` | `var(--disabled-color)` | Grundfarbe der Spur. |
@@ -130,14 +130,14 @@ Punkte in `poi`:
 | `--uix-map-entity-filter-z-index` | `1000` | Overlay-Ebene. |
 | `--uix-map-entity-filter-dropdown-min-width` | `180px` | Mindestbreite des Dropdowns. |
 | `--uix-map-entity-filter-item-icon-color` | `var(--ha-color-fill-neutral-loud-resting)` | Farbe des Check-Icons. |
-| `--uix-map-entity-filter-item-icon-checked-color` | `var(--uix-map-entity-filter-item-icon-color, var(--primary-color))` | Farbe des Check-Icons im ausgewaehlten Zustand. |
+| `--uix-map-entity-filter-item-icon-checked-color` | `var(--uix-map-entity-filter-item-icon-color, var(--primary-color))` | Farbe des Check-Icons im ausgewählten Zustand. |
 
 ## Wie es funktioniert
 
-Der Spark erweitert die vorhandene `ha-map`-Karte im Frontend. Er speichert UI-Zustand lokal im laufenden Dashboard, blendet zusaetzliche Overlays ein und setzt Werte wie `hours_to_show` direkt an der Karte.
+Der Spark erweitert die vorhandene `ha-map`-Karte im Frontend. Er speichert UI-Zustand lokal im laufenden Dashboard, blendet zusätzliche Overlays ein und setzt Werte wie `hours_to_show` direkt an der Karte.
 
 ::: note
-Der Spark arbeitet mit der gerenderten Home-Assistant-Karte. Wenn Home Assistant intern Markup aendert, kann ein Update der UIX-Selektoren oder des Sparks erforderlich werden.
+Der Spark arbeitet mit der gerenderten Home-Assistant-Karte. Wenn Home Assistant intern Markup ändert, kann ein Update der UIX-Selektoren oder des Sparks erforderlich werden.
 
 :::
 ## Beispiele
@@ -262,7 +262,7 @@ element:
 
 ## `memory` im Detail
 
-`memory` verhindert, dass die Karte bei jedem Home-Assistant-Update auf den urspruenglichen Ausschnitt zurueckspringt.
+`memory` verhindert, dass die Karte bei jedem Home-Assistant-Update auf den ursprünglichen Ausschnitt zurückspringt.
 
 ```yaml
 forge:
@@ -271,7 +271,7 @@ forge:
       memory: true
 ```
 
-Das ist besonders nuetzlich, wenn viele Tracker aktualisiert werden oder wenn die Karte in einer Live-Ansicht lange offen bleibt.
+Das ist besonders nützlich, wenn viele Tracker aktualisiert werden oder wenn die Karte in einer Live-Ansicht lange offen bleibt.
 
 ## `fit_map` im Detail
 
@@ -302,7 +302,7 @@ forge:
             zoom: 13
 ```
 
-Entity-POIs muessen in der `entities`-Liste der `map`-Karte stehen, damit Home Assistant sie kennt.
+Entity-POIs müssen in der `entities`-Liste der `map`-Karte stehen, damit Home Assistant sie kennt.
 
 ## Slider positionieren
 
@@ -346,7 +346,7 @@ forge:
           zones: Zonen
 ```
 
-## Styling-Beispiel fuer alle Overlays
+## Styling-Beispiel für alle Overlays
 
 ```yaml
 uix:
@@ -366,6 +366,6 @@ uix:
 | --- | --- |
 | `memory` | Wenn Nutzer manuell zoomen oder verschieben |
 | `fit_map` | Wenn die Karte beim Laden versteckt ist |
-| `tour` | Fuer Uebersichten mehrerer Personen, Fahrzeuge oder Orte |
-| `hours_to_show` | Fuer Tracker-Verlauf direkt in der Karte |
+| `tour` | Für Übersichten mehrerer Personen, Fahrzeuge oder Orte |
+| `hours_to_show` | Für Tracker-Verlauf direkt in der Karte |
 | `entity_filter` | Wenn viele Entities in einer Map liegen |

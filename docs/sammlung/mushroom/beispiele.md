@@ -1,6 +1,6 @@
 ---
 title: Mushroom Beispiele
-description: Praxisbeispiele fuer Mushroom Cards in Home Assistant.
+description: Praxisbeispiele für Mushroom Cards in Home Assistant.
 ---
 # Beispiele
 

@@ -1,10 +1,10 @@
 ---
 title: flex-table-card Paketliste
-description: Praxisbeispiel fuer Parcel to MQTT Paketlisten als flex-table-card.
+description: Praxisbeispiel für Parcel to MQTT Paketlisten als flex-table-card.
 ---
 # Paketlisten-Beispiel
 
-Dieses Beispiel zeigt eine Paketliste aus einem JSON-Sensor, wie sie von `Parcel to MQTT` oder aehnlichen Adaptern bereitgestellt werden kann.
+Dieses Beispiel zeigt eine Paketliste aus einem JSON-Sensor, wie sie von `Parcel to MQTT` oder ähnlichen Adaptern bereitgestellt werden kann.
 
 ## Erwartete Struktur
 
@@ -87,5 +87,5 @@ columns:
     data: sendungen.sendungsdetails.sendungsnummern.sendungsnummer
 ```
 
-Fuer DHL, Hermes, DPD, GLS und UPS reichen meist `max_rows: 10`. Amazon kann bei Bedarf auf `15` bleiben.
+Für DHL, Hermes, DPD, GLS und UPS reichen meist `max_rows: 10`. Amazon kann bei Bedarf auf `15` bleiben.
 

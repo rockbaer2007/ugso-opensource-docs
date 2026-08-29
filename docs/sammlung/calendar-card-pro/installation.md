@@ -1,6 +1,6 @@
 ---
 title: Calendar Card Pro Installation
-description: Calendar Card Pro ueber HACS oder manuell installieren.
+description: Calendar Card Pro über HACS oder manuell installieren.
 ---
 # Installation
 
@@ -9,9 +9,9 @@ description: Calendar Card Pro ueber HACS oder manuell installieren.
 Der empfohlene Weg ist HACS.
 
 1. Pruefen, ob HACS installiert ist.
-2. In Home Assistant **HACS** oeffnen.
+2. In Home Assistant **HACS** öffnen.
 3. Zu **Frontend** wechseln.
-4. **Custom Repositories** oeffnen.
+4. **Custom Repositories** öffnen.
 5. Repository eintragen: `https://github.com/alexpfau/calendar-card-pro`
 6. Typ auf `Dashboard` setzen.
 7. Calendar Card Pro installieren.
@@ -23,18 +23,18 @@ Direktlink:
 
 ## Manuelle Installation
 
-Bei manueller Installation muessen beide Release-Dateien geladen werden:
+Bei manueller Installation müssen beide Release-Dateien geladen werden:
 
 - `calendar-card-pro.js`
 - `editor.js`
 
-Beide Dateien gehoeren in denselben Unterordner, zum Beispiel:
+Beide Dateien gehören in denselben Unterordner, zum Beispiel:
 
 ```text
 /config/www/calendar-card-pro/
 ```
 
-Danach wird nur `calendar-card-pro.js` als Ressource eingetragen. Die Karte laedt den Editor selbst, wenn er benoetigt wird.
+Danach wird nur `calendar-card-pro.js` als Ressource eingetragen. Die Karte lädt den Editor selbst, wenn er benötigt wird.
 
 ```yaml
 url: /local/calendar-card-pro/calendar-card-pro.js
@@ -47,7 +47,7 @@ type: module
 
 ## Voraussetzungen
 
-Calendar Card Pro benoetigt mindestens eine Kalenderentitaet in Home Assistant, zum Beispiel:
+Calendar Card Pro benötigt mindestens eine Kalenderentität in Home Assistant, zum Beispiel:
 
 ```text
 calendar.family

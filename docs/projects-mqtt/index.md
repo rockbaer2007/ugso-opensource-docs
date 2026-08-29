@@ -4,9 +4,9 @@ Diese Seite sammelt die Home-Assistant-Apps von UGSo Software, die Daten per MQT
 
 ## Gemeinsames Add-on-Repository
 
-Die MQTT-Projekte werden jetzt primaer ueber ein gemeinsames Home-Assistant-Add-on-Repository bereitgestellt. In Home Assistant muss nur eine Repository-URL eingetragen werden; danach erscheinen die einzelnen Projekte separat im Add-on Store.
+Die MQTT-Projekte werden jetzt primär über ein gemeinsames Home-Assistant-Add-on-Repository bereitgestellt. In Home Assistant muss nur eine Repository-URL eingetragen werden; danach erscheinen die einzelnen Projekte separat im Add-on Store.
 
-Repository-URL fuer Home Assistant:
+Repository-URL für Home Assistant:
 
 ```text
 https://github.com/rockbaer2007/ugso-ha-mqtt-addons
@@ -20,7 +20,7 @@ Enthaltene Add-ons:
 
 - [Gemeinsames Add-on-Repository auf GitHub öffnen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
 
-Die frueheren Einzel-Repositories bleiben als archivierte Historie sichtbar und verweisen auf dieses gemeinsame Repository.
+Die früheren Einzel-Repositories bleiben als archivierte Historie sichtbar und verweisen auf dieses gemeinsame Repository.
 
 ## FRITZ!Box to MQTT
 

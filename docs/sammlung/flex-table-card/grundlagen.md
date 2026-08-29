@@ -6,7 +6,7 @@ description: Grundprinzip der flex-table-card mit Zeilen, Spalten und Selektoren
 
 Die Konfiguration besteht im Kern aus zwei Schritten:
 
-1. `entities` waehlt die moeglichen Zeilen aus.
+1. `entities` wählt die möglichen Zeilen aus.
 2. `columns` beschreibt, welche Werte pro Zeile als Spalten angezeigt werden.
 
 ## Minimales Beispiel
@@ -28,7 +28,7 @@ columns:
 
 ## Include und Exclude
 
-`include` und `exclude` koennen einzelne Ausdruecke oder Listen sein.
+`include` und `exclude` können einzelne Ausdrücke oder Listen sein.
 
 ```yaml
 type: custom:flex-table-card
@@ -47,7 +47,7 @@ columns:
     data: state
 ```
 
-Eine Entitaet wird aufgenommen, wenn mindestens ein `include` passt. Sie wird ausgeschlossen, sobald ein `exclude` passt.
+Eine Entität wird aufgenommen, wenn mindestens ein `include` passt. Sie wird ausgeschlossen, sobald ein `exclude` passt.
 
 ## Sortierung und Begrenzung
 

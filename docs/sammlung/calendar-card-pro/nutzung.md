@@ -4,17 +4,17 @@ description: Calendar Card Pro im Home-Assistant-Dashboard verwenden.
 ---
 # Nutzung
 
-## Karte Per Editor Hinzufuegen
+## Karte Per Editor Hinzufügen
 
-1. Dashboard oeffnen.
+1. Dashboard öffnen.
 2. Dashboard bearbeiten.
-3. Neue Karte hinzufuegen.
+3. Neue Karte hinzufügen.
 4. Nach `Calendar` suchen.
-5. Calendar Card Pro auswaehlen.
-6. Drei-Punkte-Menue der Karte oeffnen.
-7. **Configure** waehlen, um den visuellen Editor zu oeffnen.
+5. Calendar Card Pro auswählen.
+6. Drei-Punkte-Menü der Karte öffnen.
+7. **Configure** wählen, um den visuellen Editor zu öffnen.
 
-Ab Home Assistant `2026.6` kann die Karte laut Original auch im Tab **By entity** vorgeschlagen werden, wenn eine `calendar.*`-Entitaet gewaehlt wird.
+Ab Home Assistant `2026.6` kann die Karte laut Original auch im Tab **By entity** vorgeschlagen werden, wenn eine `calendar.*`-Entität gewählt wird.
 
 ## Schnellstart Per YAML
 
@@ -27,7 +27,7 @@ show_location: false
 show_month: false
 ```
 
-`calendar.family` muss durch eine eigene Kalenderentitaet ersetzt werden.
+`calendar.family` muss durch eine eigene Kalenderentität ersetzt werden.
 
 ## Mehrere Kalender
 
@@ -47,11 +47,11 @@ tap_action:
   action: expand
 ```
 
-## Typische Einsatzfaelle
+## Typische Einsatzfälle
 
 - Familienkalender im Dashboard
 - Arbeits- und Privatkalender in einer Ansicht
-- Wochenuebersicht in Spalten
+- Wochenübersicht in Spalten
 - Termine mit Wettervorschau
-- kompakte Kalenderkarte fuer Wandtablets
-- dynamische Titel mit naechstem Termin oder Terminanzahl
+- kompakte Kalenderkarte für Wandtablets
+- dynamische Titel mit nächstem Termin oder Terminanzahl

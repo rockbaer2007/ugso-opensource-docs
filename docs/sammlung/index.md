@@ -15,12 +15,12 @@ Der Schwerpunkt liegt auf praktisch nutzbaren Dokus mit Version, Originalquelle,
 | Bereich | Inhalt |
 | --- | --- |
 | [HA Cards](./ha-cards) | Lovelace- und HACS-Karten mit deutscher Anleitung und Beispielen. |
-| [HA Dashboard](./ha-dashboard) | Themes, Layoutideen und visuelle Dashboard-Erweiterungen fuer Home Assistant. |
-| [HA Integrationen](./ha-integrationen) | Custom Integrations und HACS-Integrationen fuer Home Assistant. |
+| [HA Dashboard](./ha-dashboard) | Themes, Layoutideen und visuelle Dashboard-Erweiterungen für Home Assistant. |
+| [HA Integrationen](./ha-integrationen) | Custom Integrations und HACS-Integrationen für Home Assistant. |
 | [HA Blueprints](./ha-blueprints) | Automations-Blueprints und wiederverwendbare Home-Assistant-Vorlagen. |
 | [HA Tools](./ha-tools) | Externe Werkzeuge rund um Home Assistant, Dashboards und Entwicklung. |
-| [HA Apps](./ha-apps) | Add-ons, MQTT-Bruecken und laufende Dienste fuer Home Assistant. |
-| [HACS Dokus](./hacs-dokus) | Sammelbereich fuer externe HACS-Projekte, die nicht klar Card oder Integration sind. |
+| [HA Apps](./ha-apps) | Add-ons, MQTT-Brücken und laufende Dienste für Home Assistant. |
+| [HACS Dokus](./hacs-dokus) | Sammelbereich für externe HACS-Projekte, die nicht klar Card oder Integration sind. |
 | [Weitere interessante Beispiele](./weitere-beispiele) | Externe Community-Beispiele, Gists und Ideen, die bewusst nicht in Projektdokus eingemischt werden. |
 
 ## Separat gepflegt

@@ -4,10 +4,10 @@ description: Inoffizielle deutsche Dokumentation zur Zendure Home Assistant Inte
 ---
 # Zendure Home Assistant Integration
 
-Die Zendure Home Assistant Integration bindet Zendure-Geraete in Home Assistant ein. Sie stellt gemeldete Werte als Entitaeten bereit, ermoeglicht Steuerwerte wie Lade- und Ausgangsgrenzen und bietet mit dem Zendure Manager eine Leistungsregelung anhand eines P1-/Hausverbrauchssensors.
+Die Zendure Home Assistant Integration bindet Zendure-Geräte in Home Assistant ein. Sie stellt gemeldete Werte als Entitäten bereit, ermöglicht Steuerwerte wie Lade- und Ausgangsgrenzen und bietet mit dem Zendure Manager eine Leistungsregelung anhand eines P1-/Hausverbrauchssensors.
 
 ::: warning Inoffizielle deutsche Dokumentation
-Diese Dokumentation ist eine unabhaengige deutsche Aufbereitung. Massgeblich bleiben das Originalprojekt und die Original-Wiki.
+Diese Dokumentation ist eine unabhängige deutsche Aufbereitung. Maßgeblich bleiben das Originalprojekt und die Original-Wiki.
 :::
 
 ## Projektstand

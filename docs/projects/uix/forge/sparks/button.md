@@ -3,13 +3,13 @@ title: Button Spark
 ---
 # Button Spark
 
-Der Button Spark fuegt in ein Forge-Element einen Home-Assistant-Button ein. Der Button kann als Textbutton, als Iconbutton oder als Kombination aus Text mit Start- und End-Icon erscheinen.
+Der Button Spark fügt in ein Forge-Element einen Home-Assistant-Button ein. Der Button kann als Textbutton, als Iconbutton oder als Kombination aus Text mit Start- und End-Icon erscheinen.
 
-Moegliche Inhalte:
+Mögliche Inhalte:
 
 - Textlabel mit `label`
 - Icon anstelle des Labels mit `icon`
-- fuehrendes Icon mit `start_icon`
+- führendes Icon mit `start_icon`
 - nachgestelltes Icon mit `end_icon`
 
 ## Grundnutzung
@@ -31,17 +31,17 @@ element:
 ```
 
 ::: tip
-Mit dem DOM-Helfer [`uix_forge_path()`](../../concepts/dom#uix_forge_path0-forge-helper) findest du den richtigen Pfad fuer `after` oder `before` leichter.
+Mit dem DOM-Helfer [`uix_forge_path()`](../../concepts/dom#uix_forge_path0-forge-helper) findest du den richtigen Pfad für `after` oder `before` leichter.
 
 :::
 ## Konfiguration
 
-| Schluessel | Typ | Pflicht | Standard | Beschreibung |
+| Schlüssel | Typ | Pflicht | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | ja | - | Muss `button` sein. |
-| `after` | `string` | `after` oder `before` | Bei Blank-Card-Konfiguration `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor fuer das Referenzelement. Der Button wird als Geschwisterelement nach dem Treffer eingefuegt. |
-| `before` | `string` | `after` oder `before` | - | UIX-Selektor fuer das Referenzelement. Der Button wird als Geschwisterelement vor dem Treffer eingefuegt. |
-| `entity` | `string` | nein | - | Entity-ID fuer Aktionen wie `toggle`. Fuer entitybasierte Aktionen erforderlich. |
+| `after` | `string` | `after` oder `before` | Bei Blank-Card-Konfiguration `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor für das Referenzelement. Der Button wird als Geschwisterelement nach dem Treffer eingefügt. |
+| `before` | `string` | `after` oder `before` | - | UIX-Selektor für das Referenzelement. Der Button wird als Geschwisterelement vor dem Treffer eingefügt. |
+| `entity` | `string` | nein | - | Entity-ID für Aktionen wie `toggle`. Für entitybasierte Aktionen erforderlich. |
 | `icon` | `string` | nein | - | MDI-Icon im Label-Slot, z. B. `mdi:lightbulb`. Nicht zusammen mit `label` nutzen. |
 | `color` | `string` | nein | - | Iconfarbe im reinen Iconmodus, z. B. `red` oder `var(--primary-color)`. |
 | `label` | `string` | nein | `""` | Text im Button. Nicht zusammen mit `icon` nutzen. |
@@ -49,21 +49,21 @@ Mit dem DOM-Helfer [`uix_forge_path()`](../../concepts/dom#uix_forge_path0-forge
 | `end_icon` | `string` | nein | - | MDI-Icon nach dem Label, z. B. `mdi:chevron-right`. |
 | `variant` | `string` | nein | `brand`, bei `icon` `neutral` | Farbvariante: `brand`, `neutral`, `danger`, `warning`, `success`. |
 | `appearance` | `string` | nein | `accent`, bei `icon` `plain` | Darstellung: `accent`, `filled`, `plain`. |
-| `size` | `string` | nein | - | Buttongroesse: `s` oder `m`. |
+| `size` | `string` | nein | - | Buttongröße: `s` oder `m`. |
 | `tap_action` | action | nein | - | Aktion bei Klick oder Tap. |
-| `hold_action` | action | nein | - | Aktion bei langem Druecken. |
+| `hold_action` | action | nein | - | Aktion bei langem Drücken. |
 | `double_tap_action` | action | nein | - | Aktion bei Doppelklick oder Double Tap. |
 
 ::: note
-Genau einer der beiden Schluessel `after` oder `before` muss gesetzt sein.
+Genau einer der beiden Schlüssel `after` oder `before` muss gesetzt sein.
 
 Der Spark verwendet das erste Element, das durch `after` oder `before` gefunden wird.
 
-Das eingefuegte `ha-button` landet in einem umschliessenden `<div>` im gleichen Parent wie das Zielelement. Es wird also als Geschwisterelement eingefuegt, nicht als Kind.
+Das eingefügte `ha-button` landet in einem umschließenden `<div>` im gleichen Parent wie das Zielelement. Es wird also als Geschwisterelement eingefügt, nicht als Kind.
 
-`icon` und `label` schliessen sich gegenseitig aus. Wenn `icon` gesetzt ist, wird `label` ignoriert.
+`icon` und `label` schließen sich gegenseitig aus. Wenn `icon` gesetzt ist, wird `label` ignoriert.
 
-UIX setzt standardmaessig ein Margin von `-6px`, damit der Button in vielen Home-Assistant-Bereichen sauber ausgerichtet ist. Das Margin kann ueber `--uix-button-margin` angepasst werden.
+UIX setzt standardmäßig ein Margin von `-6px`, damit der Button in vielen Home-Assistant-Bereichen sauber ausgerichtet ist. Das Margin kann über `--uix-button-margin` angepasst werden.
 
 :::
 ## Aktionen
@@ -93,7 +93,7 @@ element:
 | Variable | Standard | Beschreibung |
 | --- | --- | --- |
 | `--uix-button-label-text-wrap` | `wrap` | Steuert den Zeilenumbruch des Buttonlabels. Setze `nowrap`, wenn Labels nicht umbrechen sollen. |
-| `--uix-button-margin` | `-6px` | Steuert das Margin des eingefuegten Buttons. |
+| `--uix-button-margin` | `-6px` | Steuert das Margin des eingefügten Buttons. |
 
 ## Beispiele
 

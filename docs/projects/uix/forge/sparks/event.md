@@ -3,15 +3,15 @@ title: Event Spark
 ---
 # Event Spark
 
-Der Event Spark verbindet Forge-Elemente ueber `fire-dom-event`. Daten aus passenden Events werden in `uixForge.event` abgelegt und koennen danach in Templates verwendet werden.
+Der Event Spark verbindet Forge-Elemente über `fire-dom-event`. Daten aus passenden Events werden in `uixForge.event` abgelegt und können danach in Templates verwendet werden.
 
 ## Konfiguration
 
-| Schluessel | Typ | Pflicht | Standard | Beschreibung |
+| Schlüssel | Typ | Pflicht | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | ja | - | Muss `event` sein. |
-| `forge_id` | `string` | nein | - | ID dieses Forge-Elements. Daten aus `fire-dom-event`-Events mit gleicher `forge_id` werden direkt nach `uixForge.event` uebernommen. |
-| `other_forge_ids` | Liste von Strings | nein | - | IDs anderer Forge-Elemente, auf deren Events gehoert werden soll. Daten sind unter `uixForge.event.<id>` verfuegbar. |
+| `forge_id` | `string` | nein | - | ID dieses Forge-Elements. Daten aus `fire-dom-event`-Events mit gleicher `forge_id` werden direkt nach `uixForge.event` übernommen. |
+| `other_forge_ids` | Liste von Strings | nein | - | IDs anderer Forge-Elemente, auf deren Events gehört werden soll. Daten sind unter `uixForge.event.<id>` verfügbar. |
 
 ## Template-Variablen
 
@@ -20,9 +20,9 @@ Der Event Spark verbindet Forge-Elemente ueber `fire-dom-event`. Daten aus passe
 | `uixForge.event.<key>` | Daten aus Events mit passender eigener `forge_id`, direkt unter `uixForge.event`. |
 | `uixForge.event.<other_id>.<key>` | Daten eines anderen Forge-Elements aus `other_forge_ids`, verschachtelt unter dessen ID. |
 
-## Event ausloesen
+## Event auslösen
 
-Ein Event wird typischerweise ueber eine Home-Assistant-Aktion `fire-dom-event` ausgeloest. Die Payload muss eine `forge_id` enthalten, damit der Event Spark sie zuordnen kann.
+Ein Event wird typischerweise über eine Home-Assistant-Aktion `fire-dom-event` ausgelöst. Die Payload muss eine `forge_id` enthalten, damit der Event Spark sie zuordnen kann.
 
 ```yaml
 tap_action:
@@ -64,7 +64,7 @@ element:
       room: living_room
 ```
 
-Empfaenger:
+Empfänger:
 
 ```yaml
 type: custom:uix-forge
@@ -78,7 +78,7 @@ element:
   entity: "light.&#123;&#123; uixForge.event.room | default('living_room') &#125;&#125;"
 ```
 
-### Auf Events eines anderen Forge-Elements hoeren
+### Auf Events eines anderen Forge-Elements hören
 
 ```yaml
 type: custom:uix-forge
@@ -112,7 +112,7 @@ element:
 
 ### Daten an mehrere Forge-Elemente senden
 
-Wenn mehrere Forge-Elemente dieselbe `forge_id` beobachten, erhalten sie dieselbe Event-Payload. Das ist nuetzlich fuer gemeinsame Filter, Auswahlkarten oder Shortcut-Badges.
+Wenn mehrere Forge-Elemente dieselbe `forge_id` beobachten, erhalten sie dieselbe Event-Payload. Das ist nützlich für gemeinsame Filter, Auswahlkarten oder Shortcut-Badges.
 
 ```yaml
 tap_action:
@@ -122,7 +122,7 @@ tap_action:
     value: climate
 ```
 
-### Shortcut-Badge fuer Expander-Zustaende
+### Shortcut-Badge für Expander-Zustände
 
 ```yaml
 type: custom:uix-forge
@@ -137,12 +137,12 @@ element:
 ```
 
 ::: note
-Der Event Spark ist fuer lokale UI-Kommunikation gedacht. Er ersetzt keine Home-Assistant-Entitaet und speichert keine Werte dauerhaft.
+Der Event Spark ist für lokale UI-Kommunikation gedacht. Er ersetzt keine Home-Assistant-Entität und speichert keine Werte dauerhaft.
 
 :::
 ## Payload-Struktur
 
-Die Event-Payload sollte klein bleiben und nur Werte enthalten, die das empfangende Forge-Element wirklich fuer Templates braucht.
+Die Event-Payload sollte klein bleiben und nur Werte enthalten, die das empfangende Forge-Element wirklich für Templates braucht.
 
 ```yaml
 tap_action:
@@ -154,7 +154,7 @@ tap_action:
     icon: mdi:silverware-fork-knife
 ```
 
-Im Empfaenger:
+Im Empfänger:
 
 ```yaml
 element:
@@ -174,9 +174,9 @@ icon: "&#123;&#123; uixForge.event.icon | default('mdi:lightbulb') &#125;&#125;"
 
 Ohne Default kann eine Karte beim ersten Rendern leer oder fehlerhaft sein.
 
-## Mehrere Empfaenger
+## Mehrere Empfänger
 
-Mehrere Forge-Elemente koennen dieselbe `forge_id` verwenden. Dadurch lassen sich ein Detailbereich, ein Badge und ein Button gleichzeitig aktualisieren.
+Mehrere Forge-Elemente können dieselbe `forge_id` verwenden. Dadurch lassen sich ein Detailbereich, ein Badge und ein Button gleichzeitig aktualisieren.
 
 ```yaml
 forge:
@@ -196,7 +196,7 @@ forge:
 
 ## Eigene ID und fremde IDs
 
-`forge_id` ist fuer Events gedacht, die dieses Element direkt betreffen. `other_forge_ids` ist fuer externe Steuerquellen gedacht.
+`forge_id` ist für Events gedacht, die dieses Element direkt betreffen. `other_forge_ids` ist für externe Steuerquellen gedacht.
 
 ```yaml
 forge:
@@ -219,8 +219,8 @@ entity: "light.&#123;&#123; uixForge.event.room_picker.room | default('living_ro
 
 | Fall | Empfehlung |
 | --- | --- |
-| Wert soll Neustarts ueberleben | Home-Assistant-Helper nutzen |
-| Wert gilt nur fuer aktuelle UI-Auswahl | Event Spark verwenden |
+| Wert soll Neustarts überleben | Home-Assistant-Helper nutzen |
+| Wert gilt nur für aktuelle UI-Auswahl | Event Spark verwenden |
 | Mehrere Dashboards sollen synchron bleiben | Entity, Helper oder Automatisierung verwenden |
 | Nur eine Karte soll reagieren | `forge_id` eindeutig halten |
 

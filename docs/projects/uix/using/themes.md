@@ -360,6 +360,6 @@ Theme-Makros sind nur in UIX-Styling-Templates verfügbar, nicht in UIX-Forge-`e
 
 ## Community-Beispiele
 
-Ausfuehrliche Community- und Fremdbeispiele werden bewusst ausserhalb der UIX-Dokumentation gesammelt, damit diese Doku nah am Originalprojekt bleibt.
+Ausführliche Community- und Fremdbeispiele werden bewusst außerhalb der UIX-Dokumentation gesammelt, damit diese Doku nah am Originalprojekt bleibt.
 
 - [Weitere interessante Beispiele: UIX Theme-Sammlung](/sammlung/weitere-beispiele#uix-theme-sammlung-von-mariusthvdb)

@@ -1,6 +1,6 @@
 ---
 title: Zendure HA lokales MQTT
-description: Lokales MQTT fuer Zendure Legacy-Geraete einrichten.
+description: Lokales MQTT für Zendure Legacy-Geräte einrichten.
 ---
 # Lokales MQTT
 

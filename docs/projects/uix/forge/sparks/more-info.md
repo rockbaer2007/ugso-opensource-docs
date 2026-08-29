@@ -3,10 +3,10 @@ title: More-info Spark
 ---
 # More-info Spark
 
-Der More-info Spark fuegt Home Assistants More-info-Inhalt direkt in ein Forge-Element ein. So kannst du den bekannten Detailbereich einer Entity in Karten, Stacks oder Shortcuts einbetten.
+Der More-info Spark fügt Home Assistants More-info-Inhalt direkt in ein Forge-Element ein. So kannst du den bekannten Detailbereich einer Entity in Karten, Stacks oder Shortcuts einbetten.
 
 ::: note
-Der Spark nutzt Home-Assistant-Frontend-Elemente. Dadurch kann sich das genaue Aussehen mit Home-Assistant-Versionen aendern.
+Der Spark nutzt Home-Assistant-Frontend-Elemente. Dadurch kann sich das genaue Aussehen mit Home-Assistant-Versionen ändern.
 
 :::
 ## Grundnutzung
@@ -42,12 +42,12 @@ element:
 
 ## Konfiguration
 
-| Schluessel | Typ | Pflicht | Standard | Beschreibung |
+| Schlüssel | Typ | Pflicht | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | ja | - | Muss `more-info` sein. |
-| `after` | `string` | nein | Bei Blank Card `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor fuer das Referenzelement. Der More-info-Inhalt wird danach als Geschwisterelement eingefuegt. |
-| `before` | `string` | nein | - | UIX-Selektor fuer das Referenzelement. Der Inhalt wird davor eingefuegt. |
-| `entity` | `string` | nein | `element.entity` | Entity-ID fuer den eingebetteten More-info-Bereich. Ohne Wert nutzt UIX die Entity des Forge-Elements, falls vorhanden. |
+| `after` | `string` | nein | Bei Blank Card `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor für das Referenzelement. Der More-info-Inhalt wird danach als Geschwisterelement eingefügt. |
+| `before` | `string` | nein | - | UIX-Selektor für das Referenzelement. Der Inhalt wird davor eingefügt. |
+| `entity` | `string` | nein | `element.entity` | Entity-ID für den eingebetteten More-info-Bereich. Ohne Wert nutzt UIX die Entity des Forge-Elements, falls vorhanden. |
 | `info` | `boolean` | nein | `true` | Wenn `false`, wird der Hauptinhalt `ha-more-info-info` nicht angezeigt. Nuetzlich zusammen mit `details: true`. |
 | `details` | `boolean` | nein | `false` | Fuegt einen einklappbaren `ha-more-info-details`-Bereich unter dem Hauptinhalt hinzu. |
 
@@ -70,21 +70,21 @@ my-theme:
 
 | Variable | Standard | Beschreibung |
 | --- | --- | --- |
-| `--uix-more-info-details-head-height` | `40px` | Hoehe der Details-Toggle-Zeile. |
+| `--uix-more-info-details-head-height` | `40px` | Höhe der Details-Toggle-Zeile. |
 | `--uix-more-info-details-head-padding` | `0 var(--ha-space-4, 16px)` | Innenabstand der Details-Toggle-Zeile. |
 | `--uix-more-info-details-head-gap` | `var(--ha-space-2, 8px)` | Abstand zwischen Aktionsbuttons. |
-| `--uix-more-info-details-outer-padding` | `0 var(--ha-space-6, 24px) var(--ha-space-6, 24px)` | Aussenabstand um den Detailsbereich. |
+| `--uix-more-info-details-outer-padding` | `0 var(--ha-space-6, 24px) var(--ha-space-6, 24px)` | Außenabstand um den Detailsbereich. |
 | `--uix-more-info-details-no-info-outer-padding` | `var(--ha-space-6, 24px)` | Abstand, wenn nur Details ohne Hauptinfo angezeigt werden. |
-| `--uix-more-info-details-toggle-width` | `32px` | Groesse der Details-Iconbuttons. |
-| `--uix-more-info-details-transition-duration` | `350ms` | Dauer fuer Dropdown, Toggle-Icon und YAML-Button-Fade. |
+| `--uix-more-info-details-toggle-width` | `32px` | Größe der Details-Iconbuttons. |
+| `--uix-more-info-details-transition-duration` | `350ms` | Dauer für Dropdown, Toggle-Icon und YAML-Button-Fade. |
 | `--uix-more-info-details-toggle-color` | `var(--primary-text-color)` | Farbe der Details-Aktionsbuttons. |
-| `--uix-more-info-details-max-height` | `unset` | Maximale Hoehe des geoeffneten Detailsbereichs. Bei gesetzter Hoehe wird Overflow scrollbar. |
+| `--uix-more-info-details-max-height` | `unset` | Maximale Höhe des geöffneten Detailsbereichs. Bei gesetzter Höhe wird Overflow scrollbar. |
 
 ## Bedienung und Styling-Hinweise
 
 ### YAML-Details-Fullscreen-Button
 
-Der Detailsbereich kann einen YAML-Button fuer die Vollansicht enthalten. Wenn du sehr kompakte Karten baust, plane dafuer genug Platz ein oder begrenze den Detailsbereich ueber `--uix-more-info-details-max-height`.
+Der Detailsbereich kann einen YAML-Button für die Vollansicht enthalten. Wenn du sehr kompakte Karten baust, plane dafür genug Platz ein oder begrenze den Detailsbereich über `--uix-more-info-details-max-height`.
 
 ### Padding des More-info-Hauptinhalts
 
@@ -192,6 +192,6 @@ element:
 
 ## Fehlerquellen
 
-- Wenn keine Entity gefunden wird, pruefe `entity` oder `element.entity`.
+- Wenn keine Entity gefunden wird, prüfe `entity` oder `element.entity`.
 - Wenn der Inhalt an falscher Stelle erscheint, setze `after` oder `before` explizit.
-- Wenn Details zu gross werden, begrenze die Hoehe mit `--uix-more-info-details-max-height`.
+- Wenn Details zu groß werden, begrenze die Höhe mit `--uix-more-info-details-max-height`.

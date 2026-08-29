@@ -1,6 +1,6 @@
 ---
 title: Mushroom Karten
-description: Vollstaendige Uebersicht der Mushroom Cards, Legacy Card und Badge.
+description: Vollständige Übersicht der Mushroom Cards, Legacy Card und Badge.
 ---
 # Karten
 
@@ -52,4 +52,4 @@ name: Wohnzimmer
 icon: mdi:lightbulb
 ```
 
-Der konkrete `type` haengt von der Karte ab, zum Beispiel `custom:mushroom-light-card`, `custom:mushroom-climate-card` oder `custom:mushroom-template-card`.
+Der konkrete `type` hängt von der Karte ab, zum Beispiel `custom:mushroom-light-card`, `custom:mushroom-climate-card` oder `custom:mushroom-template-card`.

@@ -3,14 +3,14 @@ title: Background Spark
 ---
 # Background Spark
 
-Der Background Spark fuegt einem Forge-Element eine eigene Hintergrundebene hinzu. Der Vordergrund bleibt davon getrennt, sodass du Hintergrundbild, Kamera, Video, Farbe und Deckkraft steuern kannst, ohne die Lesbarkeit des eigentlichen Elements direkt zu veraendern.
+Der Background Spark fügt einem Forge-Element eine eigene Hintergrundebene hinzu. Der Vordergrund bleibt davon getrennt, sodass du Hintergrundbild, Kamera, Video, Farbe und Deckkraft steuern kannst, ohne die Lesbarkeit des eigentlichen Elements direkt zu verändern.
 
-| Quelle | Schluessel | Beschreibung |
+| Quelle | Schlüssel | Beschreibung |
 | --- | --- | --- |
-| Kamera | `camera_entity` | Live-Stream ueber `ha-camera-stream`. Unterstuetzt Zoom, Pan und Position. Zeigt waehrend des Ladens einen Spinner. |
-| Entity Picture | `image_entity` | Liest `entity_picture` aus einer Entity und signiert die URL. Zeigt waehrend des Ladens einen Spinner. |
-| Video | `video_url` | Fuegt ein `<video>`-Element ein, automatisch startend, stumm und geloopt. Unterstuetzt `media-source://`-URIs. |
-| Bild-URL | `image_url` | Statisches Bild als `background-image`. Unterstuetzt `media-source://`-URIs. |
+| Kamera | `camera_entity` | Live-Stream über `ha-camera-stream`. Unterstützt Zoom, Pan und Position. Zeigt während des Ladens einen Spinner. |
+| Entity Picture | `image_entity` | Liest `entity_picture` aus einer Entity und signiert die URL. Zeigt während des Ladens einen Spinner. |
+| Video | `video_url` | Fuegt ein `<video>`-Element ein, automatisch startend, stumm und geloopt. Unterstützt `media-source://`-URIs. |
+| Bild-URL | `image_url` | Statisches Bild als `background-image`. Unterstützt `media-source://`-URIs. |
 | Farbe oder CSS-Shorthand | `background` | Beliebiger CSS-`background`-Wert oder Mapping einzelner Background-Eigenschaften. |
 
 ::: tip
@@ -38,31 +38,31 @@ element:
 
 ## Konfiguration
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `type` | string | - | Muss `background` sein. |
-| `for` | string | Bei Blank-Card-Konfiguration `uix-forge-blank-card $ div.content`, sonst `element`. | UIX-Selektor fuer das Zielelement. |
-| `camera_entity` | string | - | Entity-ID einer `camera.*`-Entity fuer einen Live-Hintergrund. |
+| `for` | string | Bei Blank-Card-Konfiguration `uix-forge-blank-card $ div.content`, sonst `element`. | UIX-Selektor für das Zielelement. |
+| `camera_entity` | string | - | Entity-ID einer `camera.*`-Entity für einen Live-Hintergrund. |
 | `camera_zoom` | string oder number | - | CSS-Zoom oder Skalierung, z. B. `1.5` oder `"150%"`. |
 | `camera_pan_x` | string oder number | - | CSS-Verschiebung auf der X-Achse, z. B. `"10%"` oder `"-20px"`. |
 | `camera_pan_y` | string oder number | - | CSS-Verschiebung auf der Y-Achse. |
 | `camera_position` | string | `center` | Positionierung des Streams: `center`, `top`, `bottom`, `left`, `right`, `top-left`, `top-right`, `bottom-left`, `bottom-right`. |
-| `camera_stream_cache_ms` | number | `20000` | Wie lange ein `ha-camera-stream` nach dem Entfernen im Cache bleibt. So kann ein Stream beim naechsten Aufbau wiederverwendet werden. |
+| `camera_stream_cache_ms` | number | `20000` | Wie lange ein `ha-camera-stream` nach dem Entfernen im Cache bleibt. So kann ein Stream beim nächsten Aufbau wiederverwendet werden. |
 | `image_entity` | string | - | Entity-ID, deren Attribut `entity_picture` als Hintergrundbild genutzt wird. |
 | `video_url` | string | - | Video-URL. `media-source://` wird unterstuetzt. |
 | `image_url` | string | - | Bild-URL. `media-source://` wird unterstuetzt. |
-| `background` | string oder object | - | CSS-`background`-Shorthand oder Mapping einzelner Eigenschaften. Bei `image_entity` oder `image_url` koennen Objektwerte wie `position` und `size` das Bildlayout ueberschreiben. |
+| `background` | string oder object | - | CSS-`background`-Shorthand oder Mapping einzelner Eigenschaften. Bei `image_entity` oder `image_url` können Objektwerte wie `position` und `size` das Bildlayout überschreiben. |
 | `opacity` | number | - | CSS-Deckkraft der Hintergrundebene von `0` bis `1`. |
 | `dissolve_target` | string oder list | - | Macht das Zielelement transparent, damit der Spark-Hintergrund sichtbar wird. |
-| `class` | string | - | Zusaetzliche CSS-Klasse fuer den Hintergrundcontainer `<div>`. |
+| `class` | string | - | Zusätzliche CSS-Klasse für den Hintergrundcontainer `<div>`. |
 
 ::: tip
-Fuer Kameras empfiehlt sich ein explizites Seitenverhaeltnis oder eine klare Hoehe am Zielcontainer. Sonst kann der Stream je nach Karte ungewohnt zugeschnitten wirken.
+Für Kameras empfiehlt sich ein explizites Seitenverhältnis oder eine klare Höhe am Zielcontainer. Sonst kann der Stream je nach Karte ungewohnt zugeschnitten wirken.
 
 :::
 ## `background` als Mapping
 
-| Schluessel | CSS-Eigenschaft |
+| Schlüssel | CSS-Eigenschaft |
 | --- | --- |
 | `color` | `background-color` |
 | `image` | `background-image` |
@@ -87,7 +87,7 @@ forge:
 
 ## `dissolve_target`
 
-`dissolve_target` entfernt oder reduziert den bestehenden Hintergrund des Zielelements. Das ist besonders wichtig bei Karten, deren eigenes `ha-card` sonst ueber der neuen Hintergrundebene liegt.
+`dissolve_target` entfernt oder reduziert den bestehenden Hintergrund des Zielelements. Das ist besonders wichtig bei Karten, deren eigenes `ha-card` sonst über der neuen Hintergrundebene liegt.
 
 ```yaml
 forge:
@@ -111,7 +111,7 @@ forge:
 
 ## Media-Source-URIs
 
-Lokale Medien aus Home Assistant koennen ueber `media-source://` eingebunden werden.
+Lokale Medien aus Home Assistant können über `media-source://` eingebunden werden.
 
 ```yaml
 image_url: media-source://media_source/local/backgrounds/room.jpg
@@ -125,7 +125,7 @@ video_url: media-source://media_source/local/videos/ambient.mp4
 
 ### Card-Adapter
 
-Bei normalen Karten arbeitet der Spark mit dem erzeugten Kartenelement. Wenn kein `for` gesetzt ist, steht `element` fuer das Root-Element des Forge-Ergebnisses.
+Bei normalen Karten arbeitet der Spark mit dem erzeugten Kartenelement. Wenn kein `for` gesetzt ist, steht `element` für das Root-Element des Forge-Ergebnisses.
 
 ### Section-Adapter
 
@@ -220,7 +220,7 @@ element:
   entity: light.kitchen
 ```
 
-### Vollstaendiger CSS-Background
+### Vollständiger CSS-Background
 
 ```yaml
 type: custom:uix-forge
@@ -234,7 +234,7 @@ element:
   entity: light.living_room
 ```
 
-### Zustandsabhaengige Hintergrundfarbe
+### Zustandsabhängige Hintergrundfarbe
 
 ```yaml
 type: custom:uix-forge
@@ -290,7 +290,7 @@ element:
 
 ## Positionierung und Lesbarkeit
 
-Hintergruende liegen hinter dem eigentlichen Element. Wenn Text oder Icons schlecht lesbar sind, kombiniere Bild, Deckkraft und Overlay-Farbe.
+Hintergründe liegen hinter dem eigentlichen Element. Wenn Text oder Icons schlecht lesbar sind, kombiniere Bild, Deckkraft und Overlay-Farbe.
 
 ```yaml
 forge:
@@ -328,7 +328,7 @@ forge:
       opacity: 0.5
 ```
 
-## Mehrere Hintergruende
+## Mehrere Hintergründe
 
 Wenn du mehrere Background Sparks nutzt, entscheidet die Reihenfolge und das CSS der Container. Meist ist ein einzelner Spark mit CSS-Shorthand klarer.
 
@@ -341,17 +341,17 @@ forge:
 
 ## Typische Probleme
 
-| Problem | Ursache | Loesung |
+| Problem | Ursache | Lösung |
 | --- | --- | --- |
 | Bild sichtbar, Text schlecht lesbar | Hintergrund zu hell oder zu kontrastreich | `opacity`, `text-shadow` oder dunkles Gradient nutzen |
 | Hintergrund nicht sichtbar | Zielkarte hat eigenen Hintergrund | `dissolve_target` auf `background` setzen |
-| Kamera startet langsam | Stream wird neu aufgebaut | `camera_stream_cache_ms` erhoehen |
+| Kamera startet langsam | Stream wird neu aufgebaut | `camera_stream_cache_ms` erhöhen |
 | Bild falsch zugeschnitten | `background-size` oder Position fehlt | `background.size` und `background.position` setzen |
-| Medienbibliothek funktioniert nicht | URI falsch | `media-source://media_source/local/...` pruefen |
+| Medienbibliothek funktioniert nicht | URI falsch | `media-source://media_source/local/...` prüfen |
 
 ## Template-Quellen
 
-Hintergrundquellen koennen aus States oder Attributen kommen.
+Hintergrundquellen können aus States oder Attributen kommen.
 
 ```yaml
 forge:
@@ -365,7 +365,7 @@ forge:
 
 ## Wann nicht verwenden?
 
-Nutze den Background Spark nicht fuer rein dekorative Ueberladung. Er ist am staerksten, wenn der Hintergrund echte Information traegt, zum Beispiel Kamera, Raumfoto, Coverbild oder klarer Zustandskontrast.
+Nutze den Background Spark nicht für rein dekorative Überladung. Er ist am stärksten, wenn der Hintergrund echte Information trägt, zum Beispiel Kamera, Raumfoto, Coverbild oder klarer Zustandskontrast.
 
 ## Kombination mit Sections
 

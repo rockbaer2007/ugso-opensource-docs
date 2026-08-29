@@ -1,6 +1,6 @@
 ---
 title: Calendar Card Pro Beispiele
-description: Praxisbeispiele fuer Calendar Card Pro in Home Assistant.
+description: Praxisbeispiele für Calendar Card Pro in Home Assistant.
 ---
 # Beispiele
 

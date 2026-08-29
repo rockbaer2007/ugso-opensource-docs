@@ -4,7 +4,7 @@ description: Zellaktionen, Tap-Actions und Edit-Actions der flex-table-card.
 ---
 # Aktionen
 
-Spalten koennen Home-Assistant-Aktionen ausloesen. Unterstuetzt werden typische Lovelace-Aktionen wie `more-info`, `toggle`, `perform-action`, `navigate`, `url`, `assist` und auch `fire-dom-event`.
+Spalten können Home-Assistant-Aktionen auslösen. Unterstützt werden typische Lovelace-Aktionen wie `more-info`, `toggle`, `perform-action`, `navigate`, `url`, `assist` und auch `fire-dom-event`.
 
 ## More-info beim Tippen
 
@@ -24,7 +24,7 @@ columns:
 
 ## Aktion mit Spaltenwerten
 
-Innerhalb einer Zeile koennen Werte anderer Spalten referenziert werden.
+Innerhalb einer Zeile können Werte anderer Spalten referenziert werden.
 
 | Referenz | Bedeutung |
 | --- | --- |
@@ -51,5 +51,5 @@ columns:
 
 ## Hinweis zu alten Begriffen
 
-Home Assistant nutzt heute `action` und `perform-action`. Alte Begriffe wie `call-service`, `service` oder `service_data` sollten fuer Spaltenaktionen nicht mehr genutzt werden.
+Home Assistant nutzt heute `action` und `perform-action`. Alte Begriffe wie `call-service`, `service` oder `service_data` sollten für Spaltenaktionen nicht mehr genutzt werden.
 

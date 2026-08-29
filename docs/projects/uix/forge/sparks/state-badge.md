@@ -3,12 +3,12 @@ title: State Badge Spark
 ---
 # State Badge Spark
 
-Der State Badge Spark fuegt ein Home-Assistant-`state-badge` in ein Forge-Element ein. Das Badge zeigt das native Icon, Entity-Picture oder den Kamera-Status einer Entity.
+Der State Badge Spark fügt ein Home-Assistant-`state-badge` in ein Forge-Element ein. Das Badge zeigt das native Icon, Entity-Picture oder den Kamera-Status einer Entity.
 
 ## Grundnutzung
 
 ::: tip
-Fuer reine Overlay-Marker ist oft der [Overlay Icon Spark](./overlay-icon) passender. `state-badge` ist richtig, wenn du Home Assistants native Entity-Darstellung einbetten willst.
+Für reine Overlay-Marker ist oft der [Overlay Icon Spark](./overlay-icon) passender. `state-badge` ist richtig, wenn du Home Assistants native Entity-Darstellung einbetten willst.
 
 :::
 ```yaml
@@ -26,22 +26,22 @@ element:
 
 ## Konfiguration
 
-| Schluessel | Typ | Pflicht | Standard | Beschreibung |
+| Schlüssel | Typ | Pflicht | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | ja | - | Muss `state-badge` sein. |
-| `after` | `string` | `after` oder `before` | Bei Blank Card `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor fuer das Referenzelement. Das Badge wird danach als Geschwisterelement eingefuegt. |
-| `before` | `string` | `after` oder `before` | - | UIX-Selektor fuer das Referenzelement. Das Badge wird davor eingefuegt. |
-| `entity` | `string` | ja | - | Entity-ID. Der aktuelle State wird an `state-badge` uebergeben. |
+| `after` | `string` | `after` oder `before` | Bei Blank Card `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor für das Referenzelement. Das Badge wird danach als Geschwisterelement eingefügt. |
+| `before` | `string` | `after` oder `before` | - | UIX-Selektor für das Referenzelement. Das Badge wird davor eingefügt. |
+| `entity` | `string` | ja | - | Entity-ID. Der aktuelle State wird an `state-badge` übergeben. |
 | `override_icon` | `string` | nein | - | MDI-Icon, das das Standardicon ersetzt. Kann mit `entity` kombiniert werden. |
-| `override_image` | `string` | nein | - | Bild-URL, die das Icon vollstaendig ersetzt. Kann mit `entity` kombiniert werden. |
-| `color` | string | nein | - | Iconfarbe fuer aktive Zustaende. Erlaubt `state`, `none`, Home-Assistant-Farbtoken oder Hexcode. |
+| `override_image` | `string` | nein | - | Bild-URL, die das Icon vollständig ersetzt. Kann mit `entity` kombiniert werden. |
+| `color` | string | nein | - | Iconfarbe für aktive Zustände. Erlaubt `state`, `none`, Home-Assistant-Farbtoken oder Hexcode. |
 
 ::: note
-Genau einer der beiden Schluessel `after` oder `before` muss gesetzt sein. Das Badge wird als Geschwisterelement eingefuegt, nicht als Kind.
+Genau einer der beiden Schlüssel `after` oder `before` muss gesetzt sein. Das Badge wird als Geschwisterelement eingefügt, nicht als Kind.
 
 :::
 ::: tip
-Wenn Home Assistant die Entity bereits mit Bild oder Kamera darstellt, uebernimmt `state-badge` diese native Darstellung automatisch.
+Wenn Home Assistant die Entity bereits mit Bild oder Kamera darstellt, übernimmt `state-badge` diese native Darstellung automatisch.
 
 :::
 ## Beispiele
@@ -77,7 +77,7 @@ element:
   entity: lock.front_door
 ```
 
-### Icon ueberschreiben
+### Icon überschreiben
 
 ```yaml
 type: custom:uix-forge
@@ -94,7 +94,7 @@ element:
   entity: sensor.energy_today
 ```
 
-### Bild ueberschreiben
+### Bild überschreiben
 
 ```yaml
 type: custom:uix-forge
@@ -132,7 +132,7 @@ forge:
       color: green
 ```
 
-Mit `color: none` bleibt die normale Darstellung ohne aktive Faerbung erhalten.
+Mit `color: none` bleibt die normale Darstellung ohne aktive Färbung erhalten.
 
 ## Unterschied zu Overlay Icon
 
@@ -161,4 +161,4 @@ element:
 
 - `entity` ist Pflicht, auch wenn `override_icon` oder `override_image` gesetzt ist.
 - Genau einer von `after` und `before` sollte gesetzt sein.
-- Wenn das Badge nicht sichtbar ist, pruefe den DOM-Pfad und ob das Referenzelement vorhanden ist.
+- Wenn das Badge nicht sichtbar ist, prüfe den DOM-Pfad und ob das Referenzelement vorhanden ist.

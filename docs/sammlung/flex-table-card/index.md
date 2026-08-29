@@ -4,10 +4,10 @@ description: Inoffizielle deutsche Dokumentation zur Home-Assistant flex-table-c
 ---
 # flex-table-card
 
-Die `flex-table-card` ist eine HACS/Lovelace-Karte fuer Home Assistant, mit der sich tabellarische Daten sehr flexibel anzeigen lassen. Sie eignet sich besonders fuer Listen mit vielen Zeilen oder Spalten, zum Beispiel Paketlisten, Sensoruebersichten, Batterielevel, Geraetelisten oder statische Referenztabellen.
+Die `flex-table-card` ist eine HACS/Lovelace-Karte für Home Assistant, mit der sich tabellarische Daten sehr flexibel anzeigen lassen. Sie eignet sich besonders für Listen mit vielen Zeilen oder Spalten, zum Beispiel Paketlisten, Sensorübersichten, Batterielevel, Gerätelisten oder statische Referenztabellen.
 
 ::: warning Inoffizielle deutsche Dokumentation
-Diese Dokumentation ist eine unabhaengige deutsche Aufbereitung. Massgeblich bleibt immer das Originalprojekt.
+Diese Dokumentation ist eine unabhängige deutsche Aufbereitung. Maßgeblich bleibt immer das Originalprojekt.
 :::
 
 ## Projektstand
@@ -23,12 +23,12 @@ Diese Dokumentation ist eine unabhaengige deutsche Aufbereitung. Massgeblich ble
 ## Was die Karte kann
 
 - beliebig viele Spalten und Zeilen anzeigen
-- Daten aus Entitaeten, Attributen, Aktionen/Skripten oder statischen Daten lesen
+- Daten aus Entitäten, Attributen, Aktionen/Skripten oder statischen Daten lesen
 - verschachtelte Daten per Punktnotation ausgeben
 - Zellen per `prefix`, `suffix`, `align`, `fmt` und `modify` formatieren
 - Zeilen sortieren, begrenzen und optional durchsuchbar machen
 - Tabellen per CSS anpassen
-- Aktionen aus Zellen heraus ausloesen
+- Aktionen aus Zellen heraus auslösen
 
 ## Einstieg
 

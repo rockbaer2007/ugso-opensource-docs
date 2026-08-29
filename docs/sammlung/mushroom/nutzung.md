@@ -4,22 +4,22 @@ description: Mushroom Cards im Home-Assistant-Dashboard verwenden.
 ---
 # Nutzung
 
-Alle Mushroom Cards koennen ueber den Dashboard-Editor von Home Assistant konfiguriert werden.
+Alle Mushroom Cards können über den Dashboard-Editor von Home Assistant konfiguriert werden.
 
-1. Dashboard oeffnen.
-2. Oben rechts das Drei-Punkte-Menue oeffnen.
-3. **Dashboard bearbeiten** waehlen.
-4. Plus-Button zum Hinzufuegen einer Karte waehlen.
-5. Eine der `Custom: Mushroom` Karten auswaehlen.
-6. Entitaet, Name, Icon, Layout und Optionen im Editor setzen.
+1. Dashboard öffnen.
+2. Oben rechts das Drei-Punkte-Menü öffnen.
+3. **Dashboard bearbeiten** wählen.
+4. Plus-Button zum Hinzufügen einer Karte wählen.
+5. Eine der `Custom: Mushroom` Karten auswählen.
+6. Entität, Name, Icon, Layout und Optionen im Editor setzen.
 7. Speichern.
 
-## Typische Staerken
+## Typische Stärken
 
-- Editor fuer alle Karten und Optionen
+- Editor für alle Karten und Optionen
 - Icon-Auswahl
 - Farbauswahl
-- keine zusaetzliche Card-Abhaengigkeit
+- keine zusätzliche Card-Abhängigkeit
 - Material-UI-Farben
 - helle und dunkle Themes
 - optionale Theme-Anpassung
@@ -27,7 +27,7 @@ Alle Mushroom Cards koennen ueber den Dashboard-Editor von Home Assistant konfig
 
 ## Themes
 
-Mushroom funktioniert ohne eigenes Theme. Fuer eine staerker passende Darstellung kann das separate Projekt Mushroom Themes genutzt werden:
+Mushroom funktioniert ohne eigenes Theme. Für eine stärker passende Darstellung kann das separate Projekt Mushroom Themes genutzt werden:
 
 - [piitaya/lovelace-mushroom-themes](https://github.com/piitaya/lovelace-mushroom-themes)
 

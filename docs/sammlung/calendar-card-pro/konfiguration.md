@@ -1,31 +1,31 @@
 ---
 title: Calendar Card Pro Konfiguration
-description: Deutsche Konfigurationsreferenz fuer Calendar Card Pro.
+description: Deutsche Konfigurationsreferenz für Calendar Card Pro.
 ---
 # Konfigurationsreferenz
 
-Diese Seite bildet die Optionsgruppen der Originalreferenz ab. Fuer Detailbeispiele bleibt die englische Originalreferenz massgeblich.
+Diese Seite bildet die Optionsgruppen der Originalreferenz ab. Für Detailbeispiele bleibt die englische Originalreferenz maßgeblich.
 
 ## Grundeinstellungen
 
 | Option | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
-| `entities` | array | Pflicht | Liste der Kalenderentitaeten, optional mit eigenen Einstellungen pro Kalender. |
-| `view` | string | `list` | Layout: `list` fuer Tage untereinander, `column` fuer Tage nebeneinander. |
+| `entities` | array | Pflicht | Liste der Kalenderentitäten, optional mit eigenen Einstellungen pro Kalender. |
+| `view` | string | `list` | Layout: `list` für Tage untereinander, `column` für Tage nebeneinander. |
 | `start_date` | string | heute | Startdatum als `YYYY-MM-DD` oder relativer Ausdruck wie `today+7`, `start_of_week`, `monday+1w`. |
 | `days_to_show` | number | `3` | Anzahl der angezeigten Tage. |
 | `compact_days_to_show` | number | - | Anzahl der Tage im kompakten Modus. |
 | `compact_events_to_show` | number | - | Anzahl der Termine im kompakten Modus. |
-| `compact_events_complete_days` | boolean | `false` | Zeigt alle Termine fuer Tage, an denen mindestens ein Termin sichtbar ist. |
-| `show_empty_days` | boolean | `false` | Tage ohne Termine anzeigen. In der Spaltenansicht standardmaessig `true`. |
+| `compact_events_complete_days` | boolean | `false` | Zeigt alle Termine für Tage, an denen mindestens ein Termin sichtbar ist. |
+| `show_empty_days` | boolean | `false` | Tage ohne Termine anzeigen. In der Spaltenansicht standardmäßig `true`. |
 | `hide_when_empty` | boolean | `false` | Karte ausblenden, wenn keine kommenden Termine vorhanden sind. |
-| `empty_day_text` | string | uebersetzter Standard | Eigener Text fuer leere Tage oder komplett leere Karten. |
+| `empty_day_text` | string | übersetzter Standard | Eigener Text für leere Tage oder komplett leere Karten. |
 | `filter_duplicates` | boolean | `false` | Doppelte Termine ausblenden, wenn Titel, Start, Ende und Ort identisch sind. |
-| `split_multiday_events` | boolean | `false` | Mehrtaegige Termine auf jedem betroffenen Tag anzeigen. In der Spaltenansicht standardmaessig `true`. |
+| `split_multiday_events` | boolean | `false` | Mehrtägige Termine auf jedem betroffenen Tag anzeigen. In der Spaltenansicht standardmäßig `true`. |
 | `language` | string | System, Fallback `en` | Sprache der Kartentexte, automatisch aus Home Assistant erkennbar. |
-| `column` | object | erbt Top-Level-Werte | Spezielle Darstellungsoptionen fuer `view: column`. |
+| `column` | object | erbt Top-Level-Werte | Spezielle Darstellungsoptionen für `view: column`. |
 
-## Nur Fuer Die Spaltenansicht
+## Nur Für Die Spaltenansicht
 
 | Option | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ Diese Seite bildet die Optionsgruppen der Originalreferenz ab. Fuer Detailbeispi
 
 ## Optionen Ohne Wirkung In Der Spaltenansicht
 
-Diese Optionen bleiben fuer die Listenansicht relevant, wirken aber nicht direkt in der Spaltenansicht:
+Diese Optionen bleiben für die Listenansicht relevant, wirken aber nicht direkt in der Spaltenansicht:
 
 `date_vertical_alignment`, `today_indicator_position`, `compact_events_to_show`, `compact_days_to_show`, `compact_events_complete_days`, kalenderbezogenes `split_multiday_events`.
 
@@ -48,29 +48,29 @@ Ein Eintrag in `entities` kann nur eine Entity-ID sein oder ein Objekt mit eigen
 
 | Option | Beschreibung |
 | --- | --- |
-| `entity` | Kalenderentitaet, zum Beispiel `calendar.family`. |
+| `entity` | Kalenderentität, zum Beispiel `calendar.family`. |
 | `label` | Eigene Beschriftung des Kalenders. |
 | `label_type` | Steuert, wie die Beschriftung gelesen wird. |
 | `color` | Kalenderfarbe. |
-| `accent_color` | Akzentfarbe fuer Linie und optionale Hintergruende. |
-| `label_icon_color` | Farbe fuer Label/Icon. |
-| `show_time` | Zeit fuer diesen Kalender anzeigen. |
-| `show_location` | Ort fuer diesen Kalender anzeigen. |
-| `show_description` | Beschreibung fuer diesen Kalender anzeigen. |
-| `compact_events_to_show` | Kompaktes Limit fuer diesen Kalender. |
-| `blocklist` | Begriffe oder Muster ausschliessen. |
+| `accent_color` | Akzentfarbe für Linie und optionale Hintergründe. |
+| `label_icon_color` | Farbe für Label/Icon. |
+| `show_time` | Zeit für diesen Kalender anzeigen. |
+| `show_location` | Ort für diesen Kalender anzeigen. |
+| `show_description` | Beschreibung für diesen Kalender anzeigen. |
+| `compact_events_to_show` | Kompaktes Limit für diesen Kalender. |
+| `blocklist` | Begriffe oder Muster ausschließen. |
 | `allowlist` | Nur passende Begriffe oder Muster anzeigen. |
-| `split_multiday_events` | Mehrtaegige Termine fuer diesen Kalender splitten. |
+| `split_multiday_events` | Mehrtägige Termine für diesen Kalender splitten. |
 
 ## Header
 
 | Option | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `title` | string | - | Kartentitel, kann Home-Assistant-Templates enthalten. |
-| `title_font_size` | string | `--calendar-card-font-size-title` | Schriftgroesse des Titels. |
+| `title_font_size` | string | `--calendar-card-font-size-title` | Schriftgröße des Titels. |
 | `title_color` | string | `--calendar-card-color-title` | Titelfarbe. |
 
-## Layout Und Abstaende
+## Layout Und Abstände
 
 | Option | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
@@ -79,17 +79,17 @@ Ein Eintrag in `entities` kann nur eine Entity-ID sein oder ein Objekt mit eigen
 | `vertical_line_width` | string | `2px` | Breite der vertikalen Linie. |
 | `day_spacing` | string | `10px` | Abstand zwischen Tagen oder Spalten. |
 | `event_spacing` | string | `4px` | Innenabstand innerhalb eines Termins. |
-| `additional_card_spacing` | string | `0px` | Zusaetzlicher Abstand oben/unten in der Karte. |
-| `height` | string | `auto` | Exakte feste Kartenhoehe. |
-| `max_height` | string | `none` | Maximale Kartenhoehe bei wachsendem Inhalt. |
+| `additional_card_spacing` | string | `0px` | Zusätzlicher Abstand oben/unten in der Karte. |
+| `height` | string | `auto` | Exakte feste Kartenhöhe. |
+| `max_height` | string | `none` | Maximale Kartenhöhe bei wachsendem Inhalt. |
 
 ## Wochennummern Und Trennlinien
 
 | Option | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `show_week_numbers` | string | `null` | Wochennummern anzeigen: `iso`, `simple` oder deaktiviert. |
-| `show_current_week_number` | boolean | `true` | Wochennummer fuer aktuelle/erste Woche anzeigen. |
-| `week_number_font_size` | string | `12px` | Schriftgroesse der Wochennummer. |
+| `show_current_week_number` | boolean | `true` | Wochennummer für aktuelle/erste Woche anzeigen. |
+| `week_number_font_size` | string | `12px` | Schriftgröße der Wochennummer. |
 | `week_number_color` | string | `var(--primary-text-color)` | Textfarbe der Wochennummer. |
 | `week_number_background_color` | string | `#03a9f450` | Hintergrundfarbe der Wochennummer. |
 | `first_day_of_week` | string | `system` | Wochenstart: `monday`, `sunday` oder `system`. |
@@ -107,71 +107,71 @@ Ein Eintrag in `entities` kann nur eine Entity-ID sein oder ein Objekt mit eigen
 | `today_indicator` | boolean/string | `false` | Heute-Markierung: `true`, `dot`, `pulse`, `glow`, MDI-Icon, Emoji oder Bildpfad. |
 | `today_indicator_position` | string | `15% 50%` | Position im CSS-Format. |
 | `today_indicator_color` | string | `#03a9f4` | Farbe der Markierung. |
-| `today_indicator_size` | string | `6px` | Groesse der Markierung. |
+| `today_indicator_size` | string | `6px` | Größe der Markierung. |
 
 ## Datumsspalte
 
 | Option | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `date_vertical_alignment` | string | `middle` | Vertikale Ausrichtung: `top`, `middle`, `bottom`. |
-| `weekday_font_size` | string | `14px` | Schriftgroesse des Wochentags. |
+| `weekday_font_size` | string | `14px` | Schriftgröße des Wochentags. |
 | `weekday_color` | string | `--primary-text-color` | Farbe des Wochentags. |
-| `day_font_size` | string | `26px` | Schriftgroesse der Tageszahl. |
+| `day_font_size` | string | `26px` | Schriftgröße der Tageszahl. |
 | `day_color` | string | `--primary-text-color` | Farbe der Tageszahl. |
 | `show_month` | boolean | `true` | Monatsnamen anzeigen. |
-| `month_font_size` | string | `12px` | Schriftgroesse des Monats. |
+| `month_font_size` | string | `12px` | Schriftgröße des Monats. |
 | `month_color` | string | `--primary-text-color` | Monatsfarbe. |
 | `weekend_weekday_color` | string | erbt `weekday_color` | Wochentagsfarbe am Wochenende. |
 | `weekend_day_color` | string | erbt `day_color` | Tageszahlfarbe am Wochenende. |
 | `weekend_month_color` | string | erbt `month_color` | Monatsfarbe am Wochenende. |
-| `today_weekday_color` | string | erbt Wochenende/Standard | Wochentagsfarbe fuer heute. |
-| `today_day_color` | string | erbt Wochenende/Standard | Tageszahlfarbe fuer heute. |
-| `today_month_color` | string | erbt Wochenende/Standard | Monatsfarbe fuer heute. |
+| `today_weekday_color` | string | erbt Wochenende/Standard | Wochentagsfarbe für heute. |
+| `today_day_color` | string | erbt Wochenende/Standard | Tageszahlfarbe für heute. |
+| `today_month_color` | string | erbt Wochenende/Standard | Monatsfarbe für heute. |
 
 ## Terminspalte
 
 | Option | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
-| `event_background_opacity` | number | `0` | Hintergrunddeckkraft fuer Termine mit Akzentfarbe, 0-100. |
+| `event_background_opacity` | number | `0` | Hintergrunddeckkraft für Termine mit Akzentfarbe, 0-100. |
 | `event_icon_vertical_alignment` | string | `top` | Vertikale Icon-Ausrichtung: `top`, `middle`, `bottom`. |
 | `show_past_events` | boolean | `false` | Bereits beendete Termine anzeigen. |
 | `show_countdown` | boolean | `false` | Countdown bis zum Termin anzeigen. |
-| `show_countdown_allday` | boolean | `true` | Countdown auch fuer ganztägige Termine anzeigen. |
-| `show_progress_bar` | boolean | `false` | Fortschrittsbalken fuer laufende Termine anzeigen. |
+| `show_countdown_allday` | boolean | `true` | Countdown auch für ganztägige Termine anzeigen. |
+| `show_progress_bar` | boolean | `false` | Fortschrittsbalken für laufende Termine anzeigen. |
 | `progress_bar_color` | string | `var(--secondary-text-color)` | Farbe des Fortschrittsbalkens. |
-| `progress_bar_height` | string | berechnet | Hoehe des Fortschrittsbalkens. |
+| `progress_bar_height` | string | berechnet | Höhe des Fortschrittsbalkens. |
 | `progress_bar_width` | string | je Layout | Breite des Fortschrittsbalkens. |
-| `empty_day_color` | string | `--primary-text-color` | Farbe fuer Text an leeren Tagen. |
-| `event_font_size` | string | `14px` | Schriftgroesse des Termintitels. |
-| `title_max_lines` | number | `0` | Maximale Zeilen fuer Termintitel, `0` = unbegrenzt. |
+| `empty_day_color` | string | `--primary-text-color` | Farbe für Text an leeren Tagen. |
+| `event_font_size` | string | `14px` | Schriftgröße des Termintitels. |
+| `title_max_lines` | number | `0` | Maximale Zeilen für Termintitel, `0` = unbegrenzt. |
 | `event_color` | string | `--primary-text-color` | Farbe des Termintitels. |
 | `show_time` | boolean | `true` | Terminzeit anzeigen. |
-| `show_single_allday_time` | boolean | `true` | Zeitdarstellung fuer einzelne ganztägige Termine anzeigen. |
+| `show_single_allday_time` | boolean | `true` | Zeitdarstellung für einzelne ganztägige Termine anzeigen. |
 | `time_24h` | boolean | System | 24-Stunden-Format nutzen. |
 | `time_two_digit_hours` | boolean | `false` | Stunden zweistellig anzeigen. |
 | `show_end_time` | boolean | `true` | Endzeit anzeigen. |
-| `time_icon_size` | string | `14px` | Groesse des Uhr-Icons. |
-| `time_font_size` | string | `12px` | Schriftgroesse der Zeit. |
+| `time_icon_size` | string | `14px` | Größe des Uhr-Icons. |
+| `time_font_size` | string | `12px` | Schriftgröße der Zeit. |
 | `time_color` | string | `--secondary-text-color` | Farbe der Zeit. |
-| `time_max_lines` | number | `0` | Maximale Zeilen fuer Zeittext. |
+| `time_max_lines` | number | `0` | Maximale Zeilen für Zeittext. |
 | `show_location` | boolean | `true` | Ort anzeigen. |
-| `remove_location_country` | boolean/string | `false` | Laendernamen aus Orten entfernen, optional per Regex-String. |
-| `location_icon_size` | string | `14px` | Groesse des Orts-Icons. |
-| `location_font_size` | string | `12px` | Schriftgroesse des Orts. |
+| `remove_location_country` | boolean/string | `false` | Ländernamen aus Orten entfernen, optional per Regex-String. |
+| `location_icon_size` | string | `14px` | Größe des Orts-Icons. |
+| `location_font_size` | string | `12px` | Schriftgröße des Orts. |
 | `location_color` | string | `--secondary-text-color` | Farbe des Orts. |
-| `location_max_lines` | number | `0` | Maximale Zeilen fuer Ort. |
+| `location_max_lines` | number | `0` | Maximale Zeilen für Ort. |
 | `show_description` | boolean | `false` | Beschreibung anzeigen. |
-| `description_icon_size` | string | `14px` | Groesse des Beschreibungs-Icons. |
-| `description_font_size` | string | `12px` | Schriftgroesse der Beschreibung. |
+| `description_icon_size` | string | `14px` | Größe des Beschreibungs-Icons. |
+| `description_font_size` | string | `12px` | Schriftgröße der Beschreibung. |
 | `description_color` | string | `--secondary-text-color` | Farbe der Beschreibung. |
-| `description_max_lines` | number | `0` | Maximale Zeilen fuer Beschreibung. |
+| `description_max_lines` | number | `0` | Maximale Zeilen für Beschreibung. |
 
 ## Wetter
 
 | Option | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `weather` | object | - | Wetterkonfiguration. |
-| `weather.entity` | string | - | Wetterentitaet fuer Forecasts. |
+| `weather.entity` | string | - | Wetterentität für Forecasts. |
 | `weather.position` | string | `date` | Position: `none`, `date`, `event`, `both`. |
 | `weather.date` | object | - | Wetteranzeige im Tageskopf. |
 | `weather.event` | object | - | Wetteranzeige neben Terminen. |
@@ -187,7 +187,7 @@ Ein Eintrag in `entities` kann nur eine Entity-ID sein oder ein Objekt mit eigen
 | `tap_action` | object | `none` | Aktion beim Tippen auf die Karte. |
 | `hold_action` | object | `none` | Aktion beim Halten der Karte. |
 
-Aktionsparameter koennen je nach Aktion sein:
+Aktionsparameter können je nach Aktion sein:
 
 `action`, `navigation_path`, `service`, `service_data`, `url_path`, `open_tab`.
 

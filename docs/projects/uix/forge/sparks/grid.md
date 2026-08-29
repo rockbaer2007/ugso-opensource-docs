@@ -22,44 +22,44 @@ element:
 ```
 
 ::: tip
-Der Spark wirkt auf die direkten Kinder des Zielcontainers. Wenn sich scheinbar nichts aendert, pruefe im Browser-Inspektor, ob `for` wirklich den Container trifft, dessen Kinder du anordnen willst.
+Der Spark wirkt auf die direkten Kinder des Zielcontainers. Wenn sich scheinbar nichts ändert, prüfe im Browser-Inspektor, ob `for` wirklich den Container trifft, dessen Kinder du anordnen willst.
 
 :::
 ## Konfiguration
 
 ### Basiseigenschaften
 
-| Schluessel | Typ | Pflicht | Standard | Beschreibung |
+| Schlüssel | Typ | Pflicht | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | ja | - | Muss `grid` sein. |
-| `for` | `string` | nein | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor fuer den Zielcontainer. `$` wechselt in Shadow Roots. |
-| `columns` | `number` oder `string` | nein | - | `grid-template-columns`. Eine Zahl wird zu `repeat(n, 1fr)`, ein String wird unveraendert verwendet. |
+| `for` | `string` | nein | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor für den Zielcontainer. `$` wechselt in Shadow Roots. |
+| `columns` | `number` oder `string` | nein | - | `grid-template-columns`. Eine Zahl wird zu `repeat(n, 1fr)`, ein String wird unverändert verwendet. |
 | `rows` | `number` oder `string` | nein | - | `grid-template-rows`. Gleiche Kurzform wie `columns`. |
-| `gap` | `number` oder `string` | nein | - | Abstand fuer Zeilen und Spalten. Zahlen werden als Pixel interpretiert. |
+| `gap` | `number` oder `string` | nein | - | Abstand für Zeilen und Spalten. Zahlen werden als Pixel interpretiert. |
 | `column_gap` | `number` oder `string` | nein | - | Nur Spaltenabstand. |
 | `row_gap` | `number` oder `string` | nein | - | Nur Zeilenabstand. |
-| `auto_rows` | `string` | nein | - | Wert fuer `grid-auto-rows`, z. B. `minmax(100px, auto)`. |
-| `auto_columns` | `string` | nein | - | Wert fuer `grid-auto-columns`. |
-| `auto_flow` | `string` | nein | - | Wert fuer `grid-auto-flow`: `row`, `column`, `row dense` oder `column dense`. |
-| `justify_items` | `string` | nein | - | Wert fuer `justify-items`: `start`, `end`, `center`, `stretch`. |
-| `align_items` | `string` | nein | - | Wert fuer `align-items`: `start`, `end`, `center`, `stretch`. |
-| `justify_content` | `string` | nein | - | Wert fuer `justify-content`. |
-| `align_content` | `string` | nein | - | Wert fuer `align-content`. |
-| `place_items` | `string` | nein | - | Kurzform fuer `<align-items> / <justify-items>`. |
-| `place_content` | `string` | nein | - | Kurzform fuer `<align-content> / <justify-content>`. |
-| `areas` | `string` | nein | - | Wert fuer `grid-template-areas`, z. B. `'"header header" "main sidebar"'`. |
-| `elements` | `list[string]` | nein | `[]` | Namen fuer `grid-area`, die den direkten Kindern der Reihe nach zugewiesen werden. |
-| `media_queries` | `list` | nein | `[]` | Responsive Ueberschreibungen, siehe unten. |
+| `auto_rows` | `string` | nein | - | Wert für `grid-auto-rows`, z. B. `minmax(100px, auto)`. |
+| `auto_columns` | `string` | nein | - | Wert für `grid-auto-columns`. |
+| `auto_flow` | `string` | nein | - | Wert für `grid-auto-flow`: `row`, `column`, `row dense` oder `column dense`. |
+| `justify_items` | `string` | nein | - | Wert für `justify-items`: `start`, `end`, `center`, `stretch`. |
+| `align_items` | `string` | nein | - | Wert für `align-items`: `start`, `end`, `center`, `stretch`. |
+| `justify_content` | `string` | nein | - | Wert für `justify-content`. |
+| `align_content` | `string` | nein | - | Wert für `align-content`. |
+| `place_items` | `string` | nein | - | Kurzform für `<align-items> / <justify-items>`. |
+| `place_content` | `string` | nein | - | Kurzform für `<align-content> / <justify-content>`. |
+| `areas` | `string` | nein | - | Wert für `grid-template-areas`, z. B. `'"header header" "main sidebar"'`. |
+| `elements` | `list[string]` | nein | `[]` | Namen für `grid-area`, die den direkten Kindern der Reihe nach zugewiesen werden. |
+| `media_queries` | `list` | nein | `[]` | Responsive Überschreibungen, siehe unten. |
 
 ### Media Queries
 
-| Schluessel | Typ | Pflicht | Beschreibung |
+| Schlüssel | Typ | Pflicht | Beschreibung |
 | --- | --- | --- | --- |
 | `query` | `string` | ja | Normale CSS-Media-Query, z. B. `"(min-width: 768px)"`. |
 | Grid-Eigenschaften | - | nein | Beliebige Grid-Eigenschaften wie `columns`, `rows`, `gap`, `areas`, `align_items` usw. |
 
 ::: tip
-Die Werte in `media_queries` ueberschreiben nur die dort gesetzten Eigenschaften. Nicht genannte Eigenschaften bleiben aus der Basiskonfiguration erhalten.
+Die Werte in `media_queries` überschreiben nur die dort gesetzten Eigenschaften. Nicht genannte Eigenschaften bleiben aus der Basiskonfiguration erhalten.
 
 :::
 ## Beispiele
@@ -170,7 +170,7 @@ element:
 ```
 
 ::: note
-Der Grid Spark ersetzt keine komplette Dashboard-Layout-Engine. Er ist fuer das Layout innerhalb des erzeugten Elements gedacht.
+Der Grid Spark ersetzt keine komplette Dashboard-Layout-Engine. Er ist für das Layout innerhalb des erzeugten Elements gedacht.
 
 :::
 ## `columns` und `rows` als Kurzform
@@ -185,7 +185,7 @@ forge:
       rows: 2
 ```
 
-Das entspricht sinngemaess:
+Das entspricht sinngemäß:
 
 ```css
 grid-template-columns: repeat(3, 1fr);
@@ -218,7 +218,7 @@ forge:
         - content
 ```
 
-Wenn weniger Namen als Kinder vorhanden sind, bleiben die restlichen Kinder ohne `grid-area`. Wenn mehr Namen vorhanden sind, werden die ueberzaehligen Namen ignoriert.
+Wenn weniger Namen als Kinder vorhanden sind, bleiben die restlichen Kinder ohne `grid-area`. Wenn mehr Namen vorhanden sind, werden die überzähligen Namen ignoriert.
 
 ## Typische Grid-Werte
 
@@ -228,7 +228,7 @@ Wenn weniger Namen als Kinder vorhanden sind, bleiben die restlichen Kinder ohne
 | Icon plus Text | `columns: "40px 1fr"` |
 | Text plus Aktion | `columns: "1fr auto"` |
 | Kompakte Kacheln | `columns: "repeat(auto-fit, minmax(120px, 1fr))"` |
-| Gleichmaessiger Abstand | `gap: 8` |
+| Gleichmäßiger Abstand | `gap: 8` |
 | Unterschiedlicher Abstand | `gap: "6px 12px"` |
 
 ## Responsive Bereiche
@@ -247,9 +247,9 @@ forge:
 
 ## Fehlerquellen
 
-| Problem | Ursache | Loesung |
+| Problem | Ursache | Lösung |
 | --- | --- | --- |
-| Grid wirkt nicht | `for` trifft kein Container-Element | DOM mit Inspektor pruefen |
-| Kinder bleiben untereinander | Zielcontainer hat keine direkten Kinder | Einen tieferen Container waehlen |
-| Bereiche passen nicht | `areas` und `elements` stimmen nicht zusammen | DOM-Reihenfolge pruefen |
+| Grid wirkt nicht | `for` trifft kein Container-Element | DOM mit Inspektor prüfen |
+| Kinder bleiben untereinander | Zielcontainer hat keine direkten Kinder | Einen tieferen Container wählen |
+| Bereiche passen nicht | `areas` und `elements` stimmen nicht zusammen | DOM-Reihenfolge prüfen |
 | Mobile Ansicht zu eng | Feste Spalten | `media_queries` oder `minmax()` nutzen |

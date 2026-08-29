@@ -1,5 +1,5 @@
 ---
-description: Beitraege zur UIX-Dokumentation und zum Projekt
+description: Beiträge zur UIX-Dokumentation und zum Projekt
 ---
 # Mitwirken
 
@@ -37,83 +37,83 @@ zensical serve localhost:9000
 
 ## Pull Requests einreichen
 
-Bitte beachte fuer Pull Requests:
+Bitte beachte für Pull Requests:
 
-- Fuege `uix.js` nicht zu Commits hinzu. Diese Ressourcendatei wird beim Release gebaut. UIX kann hier nicht einfach Release-Assets nutzen, weil `uix.js` im Ordner `custom_components/uix` liegen muss.
-- Fuege Tests fuer neue visuelle Komponenten hinzu. Hinweise stehen in der `README.MD` im Testordner des Repositories.
-- Verwende nach Moeglichkeit Conventional-Commit-Namen. Das ist nicht zwingend, weil Pull Requests beim Mergen zusammengefasst und der Titel angepasst werden kann, hilft aber bei der Einordnung.
-- Wenn es sich um eine Breaking Change handelt, erwaehne im Commit-Footer oder Pull Request `BREAKING CHANGE: ...`.
+- Füge `uix.js` nicht zu Commits hinzu. Diese Ressourcendatei wird beim Release gebaut. UIX kann hier nicht einfach Release-Assets nutzen, weil `uix.js` im Ordner `custom_components/uix` liegen muss.
+- Füge Tests für neue visuelle Komponenten hinzu. Hinweise stehen in der `README.MD` im Testordner des Repositories.
+- Verwende nach Möglichkeit Conventional-Commit-Namen. Das ist nicht zwingend, weil Pull Requests beim Mergen zusammengefasst und der Titel angepasst werden kann, hilft aber bei der Einordnung.
+- Wenn es sich um eine Breaking Change handelt, erwähne im Commit-Footer oder Pull Request `BREAKING CHANGE: ...`.
 - Verweise im Commit-Footer oder Pull Request auf behobene Issues, zum Beispiel `fixes #1234`.
 
-## Externe Dokumentationsuebersetzungen
+## Externe Dokumentationsübersetzungen
 
-Direkte Sprachuebersetzungen werden nicht als normale Kopie in das Hauptrepository aufgenommen. Der bevorzugte Weg ist eine extern gepflegte Uebersetzung, die in der Originaldokumentation registriert wird.
+Direkte Sprachübersetzungen werden nicht als normale Kopie in das Hauptrepository aufgenommen. Der bevorzugte Weg ist eine extern gepflegte Übersetzung, die in der Originaldokumentation registriert wird.
 
-Wichtig fuer eine externe Uebersetzung:
+Wichtig für eine externe Übersetzung:
 
-- Sie muss klar als Uebersetzung gekennzeichnet sein.
+- Sie muss klar als Übersetzung gekennzeichnet sein.
 - Sie sollte zur passenden UIX-Version passen.
-- Bilder und Animationen sollten nach Moeglichkeit aus der Originaldokumentation referenziert oder nach dem offiziellen Workflow erzeugt werden.
-- Bei neuen UIX-Releases muss die Uebersetzung nachgezogen werden, damit Nutzer keine veralteten Informationen fuer aktuell halten.
+- Bilder und Animationen sollten nach Möglichkeit aus der Originaldokumentation referenziert oder nach dem offiziellen Workflow erzeugt werden.
+- Bei neuen UIX-Releases muss die Übersetzung nachgezogen werden, damit Nutzer keine veralteten Informationen für aktuell halten.
 
 Der Registrierungsweg fuer externe Uebersetzungen ist in der offiziellen Dokumentation beschrieben: [External documentation translations](https://uix.lf.technology/contributing/#external-documentation-translations).
 
-## Hinweise fuer Dokumentationsuebersetzer
+## Hinweise für Dokumentationsübersetzer
 
-Externe Uebersetzungen sollten sich am aktuellen Originalstand orientieren. Bei UIX ist das besonders wichtig, weil viele Beispiele direkt Home-Assistant-YAML enthalten und kleine Unterschiede das Verhalten aendern koennen.
+Externe Übersetzungen sollten sich am aktuellen Originalstand orientieren. Bei UIX ist das besonders wichtig, weil viele Beispiele direkt Home-Assistant-YAML enthalten und kleine Unterschiede das Verhalten ändern können.
 
 Empfohlenes Vorgehen:
 
 1. Original-Repository aktualisieren.
-2. Aenderungen der Dokumentation seit der letzten uebersetzten Version pruefen.
-3. Neue oder geaenderte Seiten uebersetzen.
+2. Änderungen der Dokumentation seit der letzten übersetzten Version prüfen.
+3. Neue oder geänderte Seiten übersetzen.
 4. Beispiele mit dem Original vergleichen.
-5. Lokalen Build ausfuehren.
-6. Versionshinweis und Link zur englischen Originalseite pruefen.
+5. Lokalen Build ausführen.
+6. Versionshinweis und Link zur englischen Originalseite prüfen.
 
 ## Version und Originalquelle
 
-Eine externe Uebersetzung sollte sichtbar zeigen:
+Eine externe Übersetzung sollte sichtbar zeigen:
 
-- fuer welche UIX-Version sie gepflegt wurde
-- dass sie eine inoffizielle Uebersetzung ist
+- für welche UIX-Version sie gepflegt wurde
+- dass sie eine inoffizielle Übersetzung ist
 - wo die englische Originaldokumentation liegt
-- wann die Uebersetzung zuletzt aktualisiert wurde
+- wann die Übersetzung zuletzt aktualisiert wurde
 
-So koennen Nutzer bei Unsicherheit schnell gegen die Originaldokumentation pruefen.
+So können Nutzer bei Unsicherheit schnell gegen die Originaldokumentation prüfen.
 
 ## Bilder und Animationen
 
-Das UIX-Projekt erzeugt viele Bilder und Animationen aus seinem eigenen visuellen Test- und Dokumentationsworkflow. Eine externe Uebersetzung sollte diese Assets nicht unnoetig duplizieren.
+Das UIX-Projekt erzeugt viele Bilder und Animationen aus seinem eigenen visuellen Test- und Dokumentationsworkflow. Eine externe Übersetzung sollte diese Assets nicht unnötig duplizieren.
 
-Wenn Bilder benoetigt werden, sind diese Wege sinnvoll:
+Wenn Bilder benötigt werden, sind diese Wege sinnvoll:
 
 - Originalbilder extern verlinken, wenn das Projekt es erlaubt.
-- Eigene Bilder klar als Beispiele der Uebersetzung kennzeichnen.
-- Keine veralteten Screenshots verwenden, wenn sich die UIX-Oberflaeche geaendert hat.
+- Eigene Bilder klar als Beispiele der Übersetzung kennzeichnen.
+- Keine veralteten Screenshots verwenden, wenn sich die UIX-Oberfläche geändert hat.
 
 ## Abgleich mit neuen Releases
 
-Bei neuen Minor-Versionen sollte die Uebersetzung neu geprueft werden. Besonders kritisch sind:
+Bei neuen Minor-Versionen sollte die Übersetzung neu geprüft werden. Besonders kritisch sind:
 
 - neue Konfigurationsoptionen
-- geaenderte YAML-Beispiele
+- geänderte YAML-Beispiele
 - neue Sparks oder Forge-Funktionen
-- geaenderte Theme-Variablen
+- geänderte Theme-Variablen
 - Hinweise zu Breaking Changes
 
 ## Pull-Request-Grenze
 
-Fuer die Registrierung einer externen Uebersetzung soll im UIX-Hauptrepository nur die dafuer vorgesehene Registrierungsdatei geaendert werden. Die eigentliche deutsche Dokumentation bleibt im eigenen Repository.
+Für die Registrierung einer externen Übersetzung soll im UIX-Hauptrepository nur die dafür vorgesehene Registrierungsdatei geändert werden. Die eigentliche deutsche Dokumentation bleibt im eigenen Repository.
 
 ## Was nicht in einen normalen Beitrag sollte
 
-Bitte vermeide bei Beitraegen zum Originalprojekt:
+Bitte vermeide bei Beiträgen zum Originalprojekt:
 
 - automatisch gebaute Dateien, die beim Release erzeugt werden
 - doppelte Bilder oder Animationen ohne klaren Grund
-- grosse Formatierungsaenderungen ohne fachliche Aenderung
-- Uebersetzungsdateien direkt im Hauptrepository, wenn der externe Uebersetzungsweg vorgesehen ist
+- große Formatierungsänderungen ohne fachliche Änderung
+- Übersetzungsdateien direkt im Hauptrepository, wenn der externe Übersetzungsweg vorgesehen ist
 - Beispiele, die nicht mit dem aktuellen UIX-Verhalten getestet wurden
 
-Damit bleiben Pull Requests kleiner und fuer Maintainer leichter pruefbar.
+Damit bleiben Pull Requests kleiner und für Maintainer leichter prüfbar.

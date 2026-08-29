@@ -4,21 +4,21 @@ description: Wiederverwendbare UIX-Forge-Konfigurationen mit Global Foundries, Y
 ---
 # Foundries
 
-Foundries sind wiederverwendbare Forge-Vorlagen. Eine Foundry beschreibt ein Muster aus `forge`, `element`, `uix`, Makros und Billets. Einzelne Forge-Instanzen koennen diese Vorlage verwenden und gezielt Werte ueberschreiben.
+Foundries sind wiederverwendbare Forge-Vorlagen. Eine Foundry beschreibt ein Muster aus `forge`, `element`, `uix`, Makros und Billets. Einzelne Forge-Instanzen können diese Vorlage verwenden und gezielt Werte überschreiben.
 
 ## Global Foundries
 
-Global Foundries stehen dashboardweit zur Verfuegung. Sie eignen sich fuer wiederkehrende Kacheln, Standardstile, Lock-Muster, Badge-Layouts oder Kombinationen aus Sparks.
+Global Foundries stehen dashboardweit zur Verfügung. Sie eignen sich für wiederkehrende Kacheln, Standardstile, Lock-Muster, Badge-Layouts oder Kombinationen aus Sparks.
 
 ## Foundries verwalten
 
 ### UI Foundries
 
-UI Foundries werden in der Home-Assistant-Oberflaeche gepflegt. Sie sind bequem fuer kleinere Vorlagen und schnelle Anpassungen.
+UI Foundries werden in der Home-Assistant-Oberfläche gepflegt. Sie sind bequem für kleinere Vorlagen und schnelle Anpassungen.
 
 ### YAML File Foundries
 
-YAML File Foundries liegen in Dateien und sind besser fuer groessere oder versionierte Konfigurationen geeignet.
+YAML File Foundries liegen in Dateien und sind besser für größere oder versionierte Konfigurationen geeignet.
 
 #### Dateiformat
 
@@ -36,7 +36,7 @@ foundries:
 
 #### YAML-Anker
 
-YAML-Anker koennen gemeinsame Teile wiederverwenden.
+YAML-Anker können gemeinsame Teile wiederverwenden.
 
 ```yaml
 defaults: &tile_defaults
@@ -53,24 +53,24 @@ foundries:
 ```
 
 ::: warning YAML-Merge-Keys sind flach
-YAML-Merge-Keys mergen nur die aktuelle Ebene. Verschachtelte Maps werden nicht tief zusammengefuehrt. Fuer tiefe Kombinationen nutze lieber Foundry-Merge-Verhalten.
+YAML-Merge-Keys mergen nur die aktuelle Ebene. Verschachtelte Maps werden nicht tief zusammengeführt. Für tiefe Kombinationen nutze lieber Foundry-Merge-Verhalten.
 
 :::
 #### Datei registrieren
 
-Eine YAML-Datei muss in UIX registriert werden, damit ihre Foundries geladen werden. Der genaue Ort haengt von deiner Home-Assistant-Konfiguration ab, typisch ist ein Pfad unter `/config/uix/`.
+Eine YAML-Datei muss in UIX registriert werden, damit ihre Foundries geladen werden. Der genaue Ort hängt von deiner Home-Assistant-Konfiguration ab, typisch ist ein Pfad unter `/config/uix/`.
 
 #### Dateien neu laden
 
-Nach Aenderungen an YAML-Dateien muessen die Foundries neu geladen werden. Danach greifen neue Forge-Instanzen auf die aktualisierte Vorlage zu.
+Nach Änderungen an YAML-Dateien müssen die Foundries neu geladen werden. Danach greifen neue Forge-Instanzen auf die aktualisierte Vorlage zu.
 
 #### Registrierung entfernen
 
-Nicht mehr benoetigte Dateien koennen aus der Foundry-Registrierung entfernt werden. Bereits konfigurierte Dashboards sollten danach keine Foundries aus dieser Datei mehr referenzieren.
+Nicht mehr benötigte Dateien können aus der Foundry-Registrierung entfernt werden. Bereits konfigurierte Dashboards sollten danach keine Foundries aus dieser Datei mehr referenzieren.
 
 #### Vorrang
 
-Wenn Foundries denselben Namen verwenden, entscheidet die UIX-Ladereihenfolge. Halte Namen eindeutig, damit keine unbeabsichtigte Vorlage eine andere ueberschreibt.
+Wenn Foundries denselben Namen verwenden, entscheidet die UIX-Ladereihenfolge. Halte Namen eindeutig, damit keine unbeabsichtigte Vorlage eine andere überschreibt.
 
 ## Foundry verwenden
 
@@ -80,7 +80,7 @@ forge:
   foundry: living_room_tile
 ```
 
-Mit Ueberschreibung:
+Mit Überschreibung:
 
 ```yaml
 type: custom:uix-forge
@@ -114,7 +114,7 @@ foundries:
 ## Externe Dateien und Secrets einbinden
 
 ::: warning Quotes in UI Foundries erforderlich
-In UI Foundries muessen `!include` und `!secret` als String gequotet werden. In YAML File Foundries koennen sie als YAML-Tags geschrieben werden.
+In UI Foundries müssen `!include` und `!secret` als String gequotet werden. In YAML File Foundries können sie als YAML-Tags geschrieben werden.
 
 :::
 ### `!include`
@@ -156,7 +156,7 @@ pin: "!secret my_pin"
 
 ## Merge-Verhalten
 
-Foundry-Konfigurationen werden mit der Instanzkonfiguration zusammengefuehrt. Dadurch kannst du Defaults in der Foundry definieren und nur die abweichenden Werte im Dashboard setzen.
+Foundry-Konfigurationen werden mit der Instanzkonfiguration zusammengeführt. Dadurch kannst du Defaults in der Foundry definieren und nur die abweichenden Werte im Dashboard setzen.
 
 ### Merge-Beispiel
 
@@ -203,7 +203,7 @@ element:
 
 ## Verschachtelte Foundries
 
-Foundries koennen auf anderen Foundries aufbauen.
+Foundries können auf anderen Foundries aufbauen.
 
 ```yaml
 foundries:
@@ -233,15 +233,15 @@ element:
   entity: light.living_room
 ```
 
-::: warning Zirkulaere Referenzen
-Foundries duerfen sich nicht gegenseitig endlos referenzieren. Achte darauf, dass die Kette eindeutig endet.
+::: warning Zirkuläre Referenzen
+Foundries dürfen sich nicht gegenseitig endlos referenzieren. Achte darauf, dass die Kette eindeutig endet.
 
 :::
 ## Billets in Foundries
 
 Billets sind der wichtigste Weg, um Foundries flexibel zu halten.
 
-### Muster 1: Defaults in der Foundry definieren, pro Instanz ueberschreiben
+### Muster 1: Defaults in der Foundry definieren, pro Instanz überschreiben
 
 ```yaml
 foundries:
@@ -303,7 +303,7 @@ In UI Foundries bleiben YAML-Kommentare nicht erhalten. Wenn Kommentare wichtig 
 :::
 ## UIX-Styling aus einer Foundry
 
-Foundries koennen eigene `uix`-Styles enthalten. Die Instanz kann diese Styles ergaenzen.
+Foundries können eigene `uix`-Styles enthalten. Die Instanz kann diese Styles ergänzen.
 
 ::: tip Styles kombinieren
 Lege gemeinsame Struktur und Theme-Variablen in die Foundry und instanzspezifische Abweichungen direkt in die Forge-Instanz.

@@ -3,12 +3,12 @@ title: Tile Icon Spark
 ---
 # Tile Icon Spark
 
-Der Tile Icon Spark fuegt ein `ha-tile-icon` in ein Forge-Element ein. Du kannst ein MDI-Icon, einen SVG-Pfad, ein Bild oder ein Entity-basiertes State-Icon verwenden.
+Der Tile Icon Spark fügt ein `ha-tile-icon` in ein Forge-Element ein. Du kannst ein MDI-Icon, einen SVG-Pfad, ein Bild oder ein Entity-basiertes State-Icon verwenden.
 
 ## Grundnutzung
 
 ::: tip
-Dieser Spark ist besonders hilfreich, wenn eine Karte ein Tile-aehnliches Zusatzicon braucht, ohne dass du das eigentliche Kartenelement austauschst.
+Dieser Spark ist besonders hilfreich, wenn eine Karte ein Tile-ähnliches Zusatzicon braucht, ohne dass du das eigentliche Kartenelement austauschst.
 
 :::
 ```yaml
@@ -27,22 +27,22 @@ element:
 
 ## Konfiguration
 
-| Schluessel | Typ | Pflicht | Standard | Beschreibung |
+| Schlüssel | Typ | Pflicht | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | ja | - | Muss `tile-icon` sein. |
-| `after` | `string` | `after` oder `before` | Bei Blank Card `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor fuer das Referenzelement. Das Icon wird danach als Geschwisterelement eingefuegt. |
-| `before` | `string` | `after` oder `before` | - | UIX-Selektor fuer das Referenzelement. Das Icon wird davor eingefuegt. |
+| `after` | `string` | `after` oder `before` | Bei Blank Card `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor für das Referenzelement. Das Icon wird danach als Geschwisterelement eingefügt. |
+| `before` | `string` | `after` oder `before` | - | UIX-Selektor für das Referenzelement. Das Icon wird davor eingefügt. |
 | `icon` | `string` | eine Iconquelle | - | MDI-Icon, z. B. `mdi:star`. Kann auch das Entity-Icon ersetzen, wenn `entity` gesetzt ist. |
-| `icon_path` | `string` | eine Iconquelle | - | SVG-Pfad fuer `ha-tile-icon` als `iconPath`, gerendert ueber `ha-svg-icon`. |
+| `icon_path` | `string` | eine Iconquelle | - | SVG-Pfad für `ha-tile-icon` als `iconPath`, gerendert über `ha-svg-icon`. |
 | `image_url` | `string` | eine Iconquelle | - | Bild-URL innerhalb des Tile-Icons. |
-| `entity` | `string` | eine Iconquelle | - | Entity-ID. Der aktuelle State wird an ein `ha-state-icon` im Icon-Slot uebergeben. |
-| `color` | CSS color | nein | - | Farbe des Tile-Icons. Ueberschreibt Entity-State-Farbe. |
+| `entity` | `string` | eine Iconquelle | - | Entity-ID. Der aktuelle State wird an ein `ha-state-icon` im Icon-Slot übergeben. |
+| `color` | CSS color | nein | - | Farbe des Tile-Icons. Überschreibt Entity-State-Farbe. |
 | `tap_action` | action | nein | - | Aktion bei Tap. |
-| `hold_action` | action | nein | - | Aktion bei langem Druecken. |
+| `hold_action` | action | nein | - | Aktion bei langem Drücken. |
 | `double_tap_action` | action | nein | - | Aktion bei Doppeltap. |
 
 ::: note
-Fuer die Iconquelle muss mindestens einer dieser Werte gesetzt sein: `icon`, `icon_path`, `image_url` oder `entity`.
+Für die Iconquelle muss mindestens einer dieser Werte gesetzt sein: `icon`, `icon_path`, `image_url` oder `entity`.
 
 :::
 ::: tip
@@ -71,12 +71,12 @@ element:
 ```
 
 ::: note
-Klicks auf das eingefuegte Icon werden getrennt von Aktionen des Ziel- oder Elternelements behandelt.
+Klicks auf das eingefügte Icon werden getrennt von Aktionen des Ziel- oder Elternelements behandelt.
 
 :::
 ## Beispiele
 
-### MDI-Icon einfuegen
+### MDI-Icon einfügen
 
 ```yaml
 type: custom:uix-forge

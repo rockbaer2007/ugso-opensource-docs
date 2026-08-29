@@ -1,12 +1,12 @@
 ---
 title: flex-table-card Header und Footer
-description: Spaltenkoepfe, Icons und Zusammenfassungszeilen in der flex-table-card.
+description: Spaltenköpfe, Icons und Zusammenfassungszeilen in der flex-table-card.
 ---
 # Header und Footer
 
-## Spaltenueberschriften
+## Spaltenüberschriften
 
-Die Karte bestimmt die Ueberschrift einer Spalte in dieser Reihenfolge:
+Die Karte bestimmt die Überschrift einer Spalte in dieser Reihenfolge:
 
 1. `name`
 2. `id`
@@ -21,7 +21,7 @@ columns:
   - data: area
 ```
 
-Eine leere Ueberschrift ist moeglich:
+Eine leere Überschrift ist möglich:
 
 ```yaml
 columns:
@@ -54,7 +54,7 @@ Danach kann pro Spalte festgelegt werden, was im Footer berechnet oder angezeigt
 | `sum` | Summe |
 | `average` | Durchschnitt |
 | `count` | Anzahl |
-| `max` | hoechster Wert |
+| `max` | höchster Wert |
 | `min` | niedrigster Wert |
 | `text` | fester Text |
 

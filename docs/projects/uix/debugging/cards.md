@@ -1,32 +1,32 @@
 # Karten debuggen
 
-Die DOM-Navigation wirkt am Anfang schnell etwas sperrig. Nach ein paar Durchlaeufen wird aber klar, welche Schritte UIX intern geht.
+Die DOM-Navigation wirkt am Anfang schnell etwas sperrig. Nach ein paar Durchläufen wird aber klar, welche Schritte UIX intern geht.
 
 Du kannst den Element-Inspektor deines Browsers nutzen, um die UIX-Kette sichtbar zu machen:
 
-- Oeffne den Element-Inspektor und suche das Basiselement, zum Beispiel `#shadow-root`, die Karte in `<hui-card>` oder ein `<ha-card>` innerhalb einer Custom Card. Mehr dazu steht unter [Konzepte - Anwendung](../concepts/application).
+- Öffne den Element-Inspektor und suche das Basiselement, zum Beispiel `#shadow-root`, die Karte in `<hui-card>` oder ein `<ha-card>` innerhalb einer Custom Card. Mehr dazu steht unter [Konzepte - Anwendung](../concepts/application).
 - In diesem Bereich sollte ein `<uix-node>` liegen, auch wenn du keinen Style angegeben hast.
-- Waehle das `<uix-node>`-Element aus.
-- Oeffne die Browser-Konsole. In Chrome kannst du mit `Esc` Konsole und Inspektor gleichzeitig anzeigen.
-- Gib `$0.uix_input` ein und bestaetige mit Enter. Das ist die Styling-Information, die dieser Schritt der Kette erhalten hat. Ist es ein String, bist du am Ende der Kette. Ist es ein Objekt, kannst du den naechsten Schritt untersuchen.
-- Gib `$0.uix_children` ein und bestaetige mit Enter. Das ist die Menge der `<uix-node>`-Elemente im naechsten Schritt einer Kette. Wenn du im `value:` eines Eintrags auf `uix` klickst, springt der Inspektor zu diesem `<uix-node>` und du kannst weiter pruefen.
+- Wähle das `<uix-node>`-Element aus.
+- Öffne die Browser-Konsole. In Chrome kannst du mit `Esc` Konsole und Inspektor gleichzeitig anzeigen.
+- Gib `$0.uix_input` ein und bestätige mit Enter. Das ist die Styling-Information, die dieser Schritt der Kette erhalten hat. Ist es ein String, bist du am Ende der Kette. Ist es ein Objekt, kannst du den nächsten Schritt untersuchen.
+- Gib `$0.uix_children` ein und bestätige mit Enter. Das ist die Menge der `<uix-node>`-Elemente im nächsten Schritt einer Kette. Wenn du im `value:` eines Eintrags auf `uix` klickst, springt der Inspektor zu diesem `<uix-node>` und du kannst weiter prüfen.
 - Mit `$0.uix_parent` findest du das Eltern-`<uix-node>` eines Knotens in der Kette.
 
-Fuer etwas mehr Diagnoseausgabe kannst du in der problematischen Karte Debug aktivieren:
+Für etwas mehr Diagnoseausgabe kannst du in der problematischen Karte Debug aktivieren:
 
 ```yaml
 uix:
   debug: true
 ```
 
-## Debug ueber Theme-Variablen setzen
+## Debug über Theme-Variablen setzen
 
-Wie bei einer Karte mit `uix:` und `debug: true` kannst du Debug auch ueber Theme-Variablen aktivieren. Das kann der einzige Weg sein, wenn du einen bestimmten Typ oder eine Klasse in einem Panel stylst, das kein Lovelace-Dashboard oder kein Lovelace-Strategy-Dashboard ist.
+Wie bei einer Karte mit `uix:` und `debug: true` kannst du Debug auch über Theme-Variablen aktivieren. Das kann der einzige Weg sein, wenn du einen bestimmten Typ oder eine Klasse in einem Panel stylst, das kein Lovelace-Dashboard oder kein Lovelace-Strategy-Dashboard ist.
 
 Debug kann so gesetzt werden:
 
-1. Mit der Theme-Variable `uix-<type>-debug: true`, definiert in deiner Theme-YAML-Datei ohne fuehrendes `--`. Damit debugst du alle Elemente vom Typ `<type>`. In CSS wird diese Variable als `--uix-<type>-debug` referenziert.
-2. Mit der Theme-Variable `uix-<type>-<class>-debug: true`, ebenfalls ohne fuehrendes `--` in YAML. Damit debugst du alle Elemente vom Typ `<type>`, die die Klasse `<class>` besitzen. In CSS wird sie als `--uix-<type>-<class>-debug` referenziert. Dazu gehoeren Klassen, die UIX setzt, und Klassen, die du selbst in der UIX-Konfiguration einer Karte oder eines Elements angegeben hast.
+1. Mit der Theme-Variable `uix-<type>-debug: true`, definiert in deiner Theme-YAML-Datei ohne führendes `--`. Damit debugst du alle Elemente vom Typ `<type>`. In CSS wird diese Variable als `--uix-<type>-debug` referenziert.
+2. Mit der Theme-Variable `uix-<type>-<class>-debug: true`, ebenfalls ohne führendes `--` in YAML. Damit debugst du alle Elemente vom Typ `<type>`, die die Klasse `<class>` besitzen. In CSS wird sie als `--uix-<type>-<class>-debug` referenziert. Dazu gehören Klassen, die UIX setzt, und Klassen, die du selbst in der UIX-Konfiguration einer Karte oder eines Elements angegeben hast.
 
 Beispiel:
 
@@ -46,7 +46,7 @@ my-awesome-theme:
 ```
 
 ::: warning Theme-Variablen im Home-Assistant-Theme setzen
-Theme-Debug-Variablen werden aus dem Home-Assistant-Theme gelesen, das gerade im Kontext ist. Das kann global sein oder lokal ueber eine Dashboard-Ansicht beziehungsweise Karte angewendet werden.
+Theme-Debug-Variablen werden aus dem Home-Assistant-Theme gelesen, das gerade im Kontext ist. Das kann global sein oder lokal über eine Dashboard-Ansicht beziehungsweise Karte angewendet werden.
 
 Theme-Debug-Variablen werden nicht aus dem `uix-theme`-Theme gelesen. Wenn diese Themes verschieden sind, setze die Debug-Variablen also im aktiven Home-Assistant-Theme.
 

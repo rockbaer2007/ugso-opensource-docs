@@ -6,7 +6,7 @@ description: Auto-Entities, Aktionen, Skripte und CSV-Dateien als Datenquellen.
 
 ## Auto-Entities
 
-Die Karte kann mit `custom:auto-entities` kombiniert werden. Auto-Entities uebernimmt dann die Filterung, flex-table-card die tabellarische Ausgabe.
+Die Karte kann mit `custom:auto-entities` kombiniert werden. Auto-Entities übernimmt dann die Filterung, flex-table-card die tabellarische Ausgabe.
 
 ```yaml
 type: custom:auto-entities
@@ -28,7 +28,7 @@ Original-Beispielbild: [Auto-Entities Result](https://user-images.githubusercont
 
 ## Daten aus Home-Assistant-Aktionen
 
-Home Assistant verschiebt viele groessere Datenstrukturen aus Attributen in Aktionsantworten. Die flex-table-card kann solche Antworten als Datenquelle verwenden.
+Home Assistant verschiebt viele größere Datenstrukturen aus Attributen in Aktionsantworten. Die flex-table-card kann solche Antworten als Datenquelle verwenden.
 
 ```yaml
 type: custom:flex-table-card
@@ -50,7 +50,7 @@ columns:
     suffix: "%"
 ```
 
-Wichtig: Die Karte aktualisiert sich, wenn sich eine angegebene Entitaet aendert. Bei Aktionsdaten sollte deshalb eine passende Entitaet unter `entities` stehen.
+Wichtig: Die Karte aktualisiert sich, wenn sich eine angegebene Entität ändert. Bei Aktionsdaten sollte deshalb eine passende Entität unter `entities` stehen.
 
 Original-Beispielbild: [WeatherServiceExample.png](https://raw.githubusercontent.com/custom-cards/flex-table-card/master/images/WeatherServiceExample.png)
 
@@ -92,9 +92,9 @@ Wenn `entities: []` genutzt wird, muss die oberste Ebene der Antwort direkt die 
 
 Original-Beispielbild: [ScriptExample.png](https://raw.githubusercontent.com/custom-cards/flex-table-card/master/images/ScriptExample.png)
 
-## CSV-Dateien ueber Command-Line-Sensor
+## CSV-Dateien über Command-Line-Sensor
 
-Die flex-table-card liest Dateien nicht direkt. Der uebliche Weg ist ein Home-Assistant-Sensor, der die Datei in JSON-Attribute umwandelt.
+Die flex-table-card liest Dateien nicht direkt. Der übliche Weg ist ein Home-Assistant-Sensor, der die Datei in JSON-Attribute umwandelt.
 
 ```yaml
 command_line:

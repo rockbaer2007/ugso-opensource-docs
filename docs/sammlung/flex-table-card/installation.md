@@ -1,20 +1,20 @@
 ---
 title: flex-table-card Installation
-description: Installation der flex-table-card ueber HACS oder manuell.
+description: Installation der flex-table-card über HACS oder manuell.
 ---
 # Installation
 
-## Installation ueber HACS
+## Installation über HACS
 
-Die empfohlene Installation laeuft ueber HACS.
+Die empfohlene Installation läuft über HACS.
 
-1. Home Assistant oeffnen.
-2. HACS oeffnen.
+1. Home Assistant öffnen.
+2. HACS öffnen.
 3. Nach `flex-table` suchen.
 4. Die Karte installieren.
 5. Home Assistant neu laden, falls HACS dazu auffordert.
 
-Danach steht der Kartentyp in Lovelace als Custom Card zur Verfuegung:
+Danach steht der Kartentyp in Lovelace als Custom Card zur Verfügung:
 
 ```yaml
 type: custom:flex-table-card
@@ -22,7 +22,7 @@ type: custom:flex-table-card
 
 ## Manuelle Installation
 
-Die manuelle Installation ist eher fuer Entwickler oder Sonderfaelle gedacht.
+Die manuelle Installation ist eher für Entwickler oder Sonderfälle gedacht.
 
 1. Datei `flex-table-card.js` aus dem Original-Repository laden.
 2. Datei in den Home-Assistant-Ordner `www` legen.
@@ -34,7 +34,7 @@ resources:
     url: /local/flex-table-card.js
 ```
 
-Bei HACS wird die Resource normalerweise automatisch oder ueber den HACS-Hinweis gepflegt.
+Bei HACS wird die Resource normalerweise automatisch oder über den HACS-Hinweis gepflegt.
 
 ## Schnelltest
 

@@ -6,7 +6,7 @@ description: Sortierung, strict mode und Zeilenbegrenzung in der flex-table-card
 
 ## Einfach sortieren
 
-Sortiert wird ueber `sort_by`. Am besten bekommt die Spalte dafuer eine stabile `id`.
+Sortiert wird über `sort_by`. Am besten bekommt die Spalte dafür eine stabile `id`.
 
 ```yaml
 type: custom:flex-table-card
@@ -50,11 +50,11 @@ Mit `strict: true` werden nur Zeilen angezeigt, in denen alle Spalten einen pass
 strict: true
 ```
 
-Das ist besonders nuetzlich, wenn ein `include` viele Entitaeten findet, aber nur ein Teil davon wirklich alle benoetigten Attribute besitzt.
+Das ist besonders nützlich, wenn ein `include` viele Entitäten findet, aber nur ein Teil davon wirklich alle benötigten Attribute besitzt.
 
 ## Sortierung trotz modify
 
-Normalerweise sortiert die Karte nach dem Wert, der nach `modify` entsteht. Wenn das nicht passt, kann mit `sort_unmodified: true` der urspruengliche Wert fuer die Sortierung genutzt werden.
+Normalerweise sortiert die Karte nach dem Wert, der nach `modify` entsteht. Wenn das nicht passt, kann mit `sort_unmodified: true` der ursprüngliche Wert für die Sortierung genutzt werden.
 
 ```yaml
 columns:

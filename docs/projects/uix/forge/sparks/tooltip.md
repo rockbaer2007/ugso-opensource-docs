@@ -3,7 +3,7 @@ title: Tooltip Spark
 ---
 # Tooltip Spark
 
-Der Tooltip Spark haengt einen gestylten Tooltip an ein Element im Forge-Ergebnis. Der Inhalt kann normaler Text, HTML oder ein Template sein.
+Der Tooltip Spark hängt einen gestylten Tooltip an ein Element im Forge-Ergebnis. Der Inhalt kann normaler Text, HTML oder ein Template sein.
 
 ## Grundnutzung
 
@@ -36,10 +36,10 @@ element:
 
 ## Konfiguration
 
-| Schluessel | Typ | Pflicht | Standard | Beschreibung |
+| Schlüssel | Typ | Pflicht | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
 | `type` | `string` | ja | - | Muss `tooltip` sein. |
-| `for` | string | nein | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor fuer das Zielelement. |
+| `for` | string | nein | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor für das Zielelement. |
 | `content` | string | nein | `""` | HTML-Inhalt des Tooltips. |
 | `placement` | string | nein | `top` | Position relativ zum Ziel: `top`, `top-start`, `top-end`, `bottom`, `bottom-start`, `bottom-end`, `left`, `left-start`, `left-end`, `right`, `right-start`, `right-end`. |
 | `distance` | number | nein | `8` | Abstand zwischen Tooltip und Ziel in Pixeln. |
@@ -88,7 +88,7 @@ element:
 ## Aussehen anpassen
 
 ::: note
-Tooltip-Styles werden ueber CSS-Variablen gesetzt. Das ist stabiler als interne Tooltip-Elemente direkt zu stylen.
+Tooltip-Styles werden über CSS-Variablen gesetzt. Das ist stabiler als interne Tooltip-Elemente direkt zu stylen.
 
 :::
 ```yaml
@@ -118,12 +118,12 @@ uix:
 | `--uix-tooltip-background-color` | `--secondary-background-color` | Hintergrundfarbe. |
 | `--uix-tooltip-content-color` | `--primary-text-color` | Textfarbe. |
 | `--uix-tooltip-font-family` | `--ha-font-family-body` | Schriftfamilie. |
-| `--uix-tooltip-font-size` | `--ha-font-size-s` | Schriftgroesse. |
+| `--uix-tooltip-font-size` | `--ha-font-size-s` | Schriftgröße. |
 | `--uix-tooltip-font-weight` | `--ha-font-weight-normal` | Schriftgewicht. |
-| `--uix-tooltip-line-height` | `--ha-line-height-condensed` | Zeilenhoehe. |
+| `--uix-tooltip-line-height` | `--ha-line-height-condensed` | Zeilenhöhe. |
 | `--uix-tooltip-padding` | `8px` | Innenabstand. |
 | `--uix-tooltip-border-radius` | `--ha-border-radius-sm` | Rundung. |
-| `--uix-tooltip-arrow-size` | `8px` | Groesse des Richtungspfeils. |
+| `--uix-tooltip-arrow-size` | `8px` | Größe des Richtungspfeils. |
 | `--uix-tooltip-border-width` | nicht gesetzt | Rahmenbreite. |
 | `--uix-tooltip-border-color` | nicht gesetzt | Rahmenfarbe. |
 | `--uix-tooltip-border-style` | nicht gesetzt | Rahmenstil. |

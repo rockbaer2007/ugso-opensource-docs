@@ -1,10 +1,10 @@
 ---
 title: HACS Dokus
-description: Sammelbereich fuer HACS-Projekte ohne eigene Kategorie.
+description: Sammelbereich für HACS-Projekte ohne eigene Kategorie.
 ---
 # HACS Dokus
 
-Dieser Bereich bleibt als Sammelbereich fuer HACS-Projekte, die nicht klar in `HA Cards`, `HA Integrationen`, `HA Blueprints`, `HA Tools` oder `HA Apps und Add-ons` passen.
+Dieser Bereich bleibt als Sammelbereich für HACS-Projekte, die nicht klar in `HA Cards`, `HA Integrationen`, `HA Blueprints`, `HA Tools` oder `HA Apps und Add-ons` passen.
 
 ## Geplant
 
@@ -28,7 +28,7 @@ Für jede externe HACS-Doku sollten sichtbar sein:
 
 - Lovelace-Karten: [HA Cards](./ha-cards)
 - Custom Integrations: [HA Integrationen](./ha-integrationen)
-- Add-ons und MQTT-Bruecken: [HA Apps und Add-ons](./ha-apps)
+- Add-ons und MQTT-Brücken: [HA Apps und Add-ons](./ha-apps)
 
 ## UIX
 

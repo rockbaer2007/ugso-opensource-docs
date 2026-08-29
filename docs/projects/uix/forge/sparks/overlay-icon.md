@@ -3,7 +3,7 @@ title: Overlay Icon Spark
 ---
 # Overlay Icon Spark
 
-Der Overlay Icon Spark legt ein Icon, ein Bild oder ein zustandsgetriebenes Entity-Icon ueber ein Ziel. Typische Einsaetze sind kleine Statusmarker, Badges auf Tile-Icons oder visuelle Hinweise auf Buttons.
+Der Overlay Icon Spark legt ein Icon, ein Bild oder ein zustandsgetriebenes Entity-Icon über ein Ziel. Typische Einsätze sind kleine Statusmarker, Badges auf Tile-Icons oder visuelle Hinweise auf Buttons.
 
 ## Grundnutzung
 
@@ -27,18 +27,18 @@ element:
 
 ### Top-Level
 
-| Schluessel | Typ | Standard | Beschreibung |
+| Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `type` | string | - | Muss `overlay-icon` sein. |
-| `for` | string | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor fuer das Ziel. |
+| `for` | string | `element`, bei Blank Card `uix-forge-blank-card $ div.content` | UIX-Selektor für das Ziel. |
 | `icon` | string | - | MDI- oder Custom-Icon. Nutze entweder `icon` oder `image_url`. |
 | `image_url` | string | - | Statisches Bild als Overlay. `media-source://` wird unterstuetzt. Nutze entweder `icon` oder `image_url`. |
 | `entity` | string | - | Rendert ein zustandsbasiertes `ha-state-icon`. Wenn `entity` gesetzt ist, werden `icon` und `image_url` ignoriert. |
-| `value` | string | - | Ueberschreibt den State-Wert, der fuer das Entity-Icon verwendet wird. |
-| `color` | string | `state` | Iconfarbe fuer aktive Entity-Zustaende. Erlaubt `state`, `none`, Home-Assistant-Farbtoken oder Hexcode. |
-| `icon_color` | string | Bei `ha-tile-icon` `var(--white-color)`, sonst `var(--primary-color)` | CSS-Farbe des Icons. Ueberschreibt `color`. |
+| `value` | string | - | Überschreibt den State-Wert, der für das Entity-Icon verwendet wird. |
+| `color` | string | `state` | Iconfarbe für aktive Entity-Zustände. Erlaubt `state`, `none`, Home-Assistant-Farbtoken oder Hexcode. |
+| `icon_color` | string | Bei `ha-tile-icon` `var(--white-color)`, sonst `var(--primary-color)` | CSS-Farbe des Icons. Überschreibt `color`. |
 | `icon_position` | object | je nach Ziel | Position des Icons innerhalb des Overlays. Zahlen werden als Pixel behandelt. |
-| `icon_size` | number oder string | Bei `ha-tile-icon` `12px`, sonst `24px` | Groesse des Icons. |
+| `icon_size` | number oder string | Bei `ha-tile-icon` `12px`, sonst `24px` | Größe des Icons. |
 | `icon_background` | CSS background | Bei `ha-tile-icon` `var(--primary-color)`, sonst nicht gesetzt | Expliziter CSS-Hintergrund des Icons. |
 
 ## Overlay anpassen
@@ -51,18 +51,18 @@ element:
 | `--uix-overlay-icon-border-radius` | `inherit` | Rundung des Overlays. |
 | `--uix-overlay-icon-row-border-radius` | `--uix-overlay-icon-border-radius` | Rundung bei `row`-Mold. |
 | `--uix-overlay-icon-border` | `unset` | CSS-Border. |
-| `--uix-overlay-icon-size` | `24px`, bei `ha-tile-icon` `12px` | Icontextgroesse, ueberschreibt `icon_size`. |
+| `--uix-overlay-icon-size` | `24px`, bei `ha-tile-icon` `12px` | Icontextgröße, überschreibt `icon_size`. |
 | `--uix-overlay-icon-color` | Bei `ha-tile-icon` `var(--white-color)`, sonst `var(--primary-color)` | Iconfarbe. |
 | `--uix-overlay-icon-background` | Bei `ha-tile-icon` `var(--primary-color)`, sonst `transparent` | Iconhintergrund, wenn `icon_background` nicht gesetzt ist. |
 | `--uix-overlay-icon-padding` | Bei `ha-tile-icon` `2px`, sonst `0` | Innenabstand um das Icon. |
-| `--uix-overlay-icon-position` | `none` | Zusaetzliches CSS-`translate`, z. B. `30px 6px`. |
+| `--uix-overlay-icon-position` | `none` | Zusätzliches CSS-`translate`, z. B. `30px 6px`. |
 
 ::: warning
 `right` und `bottom` werden intern in `left` beziehungsweise `top` mit `calc()` umgerechnet. Wenn die Position nicht passt, teste zuerst mit `top` und `left`.
 
 :::
 ::: note
-Wenn `entity` gesetzt ist, erzeugt Home Assistant das Icon aus Domain, Device-Class und State. Das ist ideal fuer echte Statusmarker.
+Wenn `entity` gesetzt ist, erzeugt Home Assistant das Icon aus Domain, Device-Class und State. Das ist ideal für echte Statusmarker.
 
 :::
 ## Beispiele
@@ -197,7 +197,7 @@ icon_position:
   left: "calc(100% - 18px)"
 ```
 
-Wenn du zusaetzlich `--uix-overlay-icon-position` setzt, wird diese CSS-Translation mit `icon_position` kombiniert.
+Wenn du zusätzlich `--uix-overlay-icon-position` setzt, wird diese CSS-Translation mit `icon_position` kombiniert.
 
 ## Entity-Farbe
 
@@ -239,10 +239,10 @@ forge:
 | Kleines Badge auf Tile-Icon | `for: hui-tile-card $ ha-tile-icon`, `icon_size: 12` |
 | Warnsymbol auf Karte | `for: element`, `icon: mdi:alert`, `icon_background: var(--error-color)` |
 | State-Marker | `entity` plus `color: state` |
-| Bildmarker | `image_url` plus CSS-Variablen fuer Groesse und Hintergrund |
+| Bildmarker | `image_url` plus CSS-Variablen für Größe und Hintergrund |
 
 ## Fehlerquellen
 
 - Wenn `entity` gesetzt ist, werden `icon` und `image_url` ignoriert.
-- Wenn das Overlay hinter anderen Elementen liegt, erhoehe `--uix-overlay-icon-z-index`.
+- Wenn das Overlay hinter anderen Elementen liegt, erhöhe `--uix-overlay-icon-z-index`.
 - Wenn `right` oder `bottom` nicht wie erwartet wirken, teste zuerst mit `top` und `left`.
