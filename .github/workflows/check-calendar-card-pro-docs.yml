@@ -1,0 +1,88 @@
+name: Check Calendar Card Pro docs upstream
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-calendar-card-pro-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout UGSo docs
+        uses: actions/checkout@v4
+
+      - name: Check original Calendar Card Pro docs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          UPSTREAM_REPO: https://github.com/alexpfau/calendar-card-pro.git
+          TRACKED_COMMIT_FILE: docs/sammlung/calendar-card-pro/.upstream-commit
+        run: |
+          set -euo pipefail
+
+          tracked_commit="$(cat "$TRACKED_COMMIT_FILE" | tr -d '[:space:]')"
+          workdir="$(mktemp -d)"
+
+          git clone --filter=blob:none --no-checkout "$UPSTREAM_REPO" "$workdir/calendar-card-pro"
+          git -C "$workdir/calendar-card-pro" fetch origin main
+          git -C "$workdir/calendar-card-pro" fetch origin "$tracked_commit" || true
+
+          latest_commit="$(git -C "$workdir/calendar-card-pro" rev-parse origin/main)"
+
+          if [ "$tracked_commit" = "$latest_commit" ]; then
+            echo "Calendar Card Pro docs are already tracked at the latest upstream commit."
+            exit 0
+          fi
+
+          changed_docs="$(git -C "$workdir/calendar-card-pro" diff --name-only "$tracked_commit" "$latest_commit" -- \
+            README.md \
+            package.json \
+            hacs.json \
+            LICENSE \
+            NOTICE \
+            ':(glob)docs/**/*.md' || true)"
+
+          if [ -z "$changed_docs" ]; then
+            echo "Calendar Card Pro repository changed, but no tracked docs changed."
+            exit 0
+          fi
+
+          title="Calendar-Card-Pro-Doku pruefen: Originaldoku wurde geaendert"
+          existing_count="$(gh issue list --state open --search "$title in:title" --json number --jq 'length')"
+
+          if [ "$existing_count" != "0" ]; then
+            echo "An open Calendar Card Pro documentation update issue already exists."
+            exit 0
+          fi
+
+          short_tracked="${tracked_commit:0:7}"
+          short_latest="${latest_commit:0:7}"
+          compare_url="https://github.com/alexpfau/calendar-card-pro/compare/${tracked_commit}...${latest_commit}"
+
+          {
+            echo "Die englische Originaldokumentation von Calendar Card Pro hat sich seit dem gespeicherten Stand geaendert."
+            echo
+            echo "- Gespeicherter Stand: \`$tracked_commit\`"
+            echo "- Neuer Stand: \`$latest_commit\`"
+            echo "- Vergleich: $compare_url"
+            echo
+            echo "Geaenderte ueberwachte Dateien:"
+            echo
+            echo "\`\`\`text"
+            echo "$changed_docs"
+            echo "\`\`\`"
+            echo
+            echo "Aufgabe:"
+            echo "1. Aenderungen im Original pruefen."
+            echo "2. Deutsche Calendar-Card-Pro-Doku unter \`docs/sammlung/calendar-card-pro/\` aktualisieren."
+            echo "3. \`docs/sammlung/calendar-card-pro/.upstream-commit\` auf den neuen Commit setzen."
+            echo "4. Lizenz- und Quellenstand aktualisieren."
+          } > "$workdir/issue-body.md"
+
+          gh issue create \
+            --title "$title ($short_tracked -> $short_latest)" \
+            --body-file "$workdir/issue-body.md"

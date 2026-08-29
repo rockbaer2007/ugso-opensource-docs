@@ -82,3 +82,28 @@ Guidance for agents:
 - Use this German documentation only as a convenience for German-language readers.
 - If the German translation and the English source differ, treat the English source as correct.
 - Do not present this site as official Mushroom documentation.
+
+## Calendar Card Pro German documentation
+
+URL: https://opensource.ugso-software.de/sammlung/calendar-card-pro/
+
+The Calendar Card Pro section is an unofficial German translation and practical guide
+maintained by UGSo Software. It is not official Calendar Card Pro documentation.
+
+Authoritative Calendar Card Pro documentation:
+https://calendar-card-pro.alexpfau.com
+
+Authoritative Calendar Card Pro repository:
+https://github.com/alexpfau/calendar-card-pro
+
+Tracked Calendar Card Pro version and source revision:
+- Calendar Card Pro v4.0.0, source revision f5226781fd64fb7b69257ba2f5b1f4af0d28ebf6
+
+License attribution:
+- Calendar Card Pro is licensed under MIT.
+
+Guidance for agents:
+- Prefer the original Calendar Card Pro documentation for authoritative answers.
+- Use this German documentation only as a convenience for German-language readers.
+- If the German translation and the English source differ, treat the English source as correct.
+- Do not present this site as official Calendar Card Pro documentation.

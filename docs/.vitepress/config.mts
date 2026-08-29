@@ -82,6 +82,23 @@ const sidebarDe = {
     }
   ],
 
+  '/sammlung/calendar-card-pro/': [
+    {
+      text: 'Calendar Card Pro',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/sammlung/calendar-card-pro/' },
+        { text: 'Installation', link: '/sammlung/calendar-card-pro/installation' },
+        { text: 'Nutzung', link: '/sammlung/calendar-card-pro/nutzung' },
+        { text: 'Features', link: '/sammlung/calendar-card-pro/features' },
+        { text: 'Konfiguration', link: '/sammlung/calendar-card-pro/konfiguration' },
+        { text: 'Beispiele', link: '/sammlung/calendar-card-pro/beispiele' },
+        { text: 'Entwicklung', link: '/sammlung/calendar-card-pro/entwicklung' },
+        { text: 'Lizenz & Stand', link: '/sammlung/calendar-card-pro/lizenz-und-stand' }
+      ]
+    }
+  ],
+
   '/sammlung/home-assistant-standardkarten/': [
     {
       text: 'HA Standardkarten',
@@ -389,6 +406,16 @@ const sidebarEn = {
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/collection/flex-table-card/' }
+      ]
+    }
+  ],
+
+  '/en/collection/calendar-card-pro/': [
+    {
+      text: 'Calendar Card Pro',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/collection/calendar-card-pro/' }
       ]
     }
   ],

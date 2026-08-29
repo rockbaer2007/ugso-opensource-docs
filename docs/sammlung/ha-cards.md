@@ -12,6 +12,7 @@ Dieser Bereich ist für Lovelace- und HACS-Karten gedacht, die als deutsche Doku
 | --- | --- | --- |
 | [Home Assistant Standardkarten](./home-assistant-standardkarten/) | in Arbeit | Inoffizielle deutsche Arbeitsuebersetzung der offiziellen Dashboard-Cards-Doku mit Aenderungspruefung. |
 | [Bubble Card](https://github.com/Clooos/Bubble-Card/blob/main/i18n/README.de.md) | deutsch im Original vorhanden | Externe deutsche Original-README im Bubble-Card-Projekt, daher hier nur verlinkt. |
+| [Calendar Card Pro](./calendar-card-pro/) | in Arbeit | Deutsche Doku mit Installation, Features, Referenz, Beispielen und Aenderungspruefung. |
 | [Mushroom Cards](./mushroom/) | in Arbeit | Deutsche Doku mit Installation, Kartenuebersicht, Beispielen und Aenderungspruefung. |
 | [flex-table-card](./flex-table-card/) | in Arbeit | Deutsche Doku mit Installation, Referenz und Praxisbeispielen. |
 | bar-card | später prüfen | Repository ist lokal vorhanden und kann danach bewertet werden. |
