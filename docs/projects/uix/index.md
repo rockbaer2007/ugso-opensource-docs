@@ -6,7 +6,7 @@ title: Übersicht
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
-> Basis: GitHub-Release `v8.1.0`, Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Commit [`9a0fa57`](https://github.com/Lint-Free-Technology/uix/commit/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9) vom 22.08.2026.
+> Basis: GitHub-Release `v8.1.0`, ergänzt um gekennzeichnete Inhalte aus `v8.2.0-beta.3`. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Master-Stand [`9a0fa57`](https://github.com/Lint-Free-Technology/uix/commit/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9) vom 22.08.2026, Beta-Stand [`892e22a`](https://github.com/Lint-Free-Technology/uix/commit/892e22a).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
 
@@ -38,4 +38,4 @@ Der beste Einstieg ist der [Schnellstart](./quick-start). Dort findest du Instal
 - [FAQ](./faq)
 
 > **Stand dieser deutschen Doku**
-> Diese lokale deutsche Doku ist als erste deutsche Arbeitsfassung angelegt. Die wichtigsten Einstiegsseiten sind übersetzt und strukturiert; lange Referenzseiten können danach Schritt für Schritt aus der englischen Originaldoku vertieft werden.
+> Diese deutsche Doku ist eine inoffizielle Übersetzung für UIX `8.1.0` und gekennzeichnete `8.2.0-beta.3`-Bereiche. Bei Unklarheiten gilt immer die englische Originaldokumentation.

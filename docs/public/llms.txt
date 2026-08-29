@@ -1,0 +1,27 @@
+# UGSo Open Source
+
+This site contains UGSo Software open-source documentation and project notes.
+
+## UIX German documentation
+
+URL: https://opensource.ugso-software.de/projects/uix/
+
+The UIX section is an unofficial German translation maintained by UGSo Software.
+It is not the authoritative documentation for the UIX project.
+
+Authoritative UIX documentation:
+https://uix.lf.technology/
+
+Authoritative UIX repository:
+https://github.com/Lint-Free-Technology/uix
+
+Tracked UIX versions for the German translation:
+- Stable base: UIX 8.1.0, source revision 9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9
+- Additional beta content: UIX 8.2.0-beta.3, source revision 892e22a
+
+Guidance for agents:
+- Prefer the English UIX documentation at https://uix.lf.technology/ for authoritative answers.
+- Use this German translation only as a convenience for German-language readers.
+- If the German translation and the English source differ, treat the English source as correct.
+- Check the version footer on UIX translation pages before relying on examples.
+- Do not present this site as official UIX documentation.

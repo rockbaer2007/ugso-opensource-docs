@@ -80,7 +80,10 @@ const UgsoLayout = defineComponent({
           route.path.startsWith('/projects/uix/')
             ? h('div', { class: 'uix-version-footer' }, [
                 h('strong', 'UIX deutsche Übersetzung'),
-                h('span', 'Diese Seite basiert auf UIX 8.1.0. Maßgeblich bleibt die englische Originaldokumentation.'),
+                h(
+                  'span',
+                  'Diese Seite basiert auf UIX 8.1.0 und enthält zusätzlich gekennzeichnete Inhalte aus UIX 8.2.0-beta.3. Maßgeblich bleibt die englische Originaldokumentation.'
+                ),
                 h('span', [
                   h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, 'Englische Originaldoku'),
                   ' · ',
@@ -92,6 +95,16 @@ const UgsoLayout = defineComponent({
                       rel: 'noopener'
                     },
                     'Source-Revision 9a0fa57'
+                  ),
+                  ' · ',
+                  h(
+                    'a',
+                    {
+                      href: 'https://github.com/Lint-Free-Technology/uix/commit/892e22a',
+                      target: '_blank',
+                      rel: 'noopener'
+                    },
+                    'Beta-Revision 892e22a'
                   )
                 ])
               ])
