@@ -145,7 +145,6 @@ const sidebarDe = {
         { text: 'HA Empfehlungen', link: '/sammlung/ha-empfehlungen' },
         { text: 'HA Cards', link: '/sammlung/ha-cards' },
         { text: 'HA Dashboard', link: '/sammlung/ha-dashboard' },
-        { text: 'NeoMorphix UIX', link: '/sammlung/neomorphix-uix/' },
         { text: 'HA Integrationen', link: '/sammlung/ha-integrationen' },
         { text: 'HA Blueprints', link: '/sammlung/ha-blueprints' },
         { text: 'HA Tools', link: '/sammlung/ha-tools' },
