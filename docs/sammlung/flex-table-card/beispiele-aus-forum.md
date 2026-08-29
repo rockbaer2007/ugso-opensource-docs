@@ -548,19 +548,23 @@ onMounted(() => {
 <style>
 .forum-example-row {
   display: grid;
-  grid-template-columns: minmax(180px, 26%) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 16px;
   align-items: start;
-  margin: 14px 0 30px;
+  margin: 14px 0 36px;
 }
 .forum-example-label,
 .forum-example-code-header {
   margin-bottom: 8px;
   font-weight: 600;
 }
+.forum-example-image {
+  grid-column: 1 / -1;
+}
 .forum-example-image img {
   display: block;
-  max-width: 100%;
+  width: auto;
+  max-width: min(100%, 920px);
   height: auto;
   border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
@@ -600,16 +604,6 @@ onMounted(() => {
   font-size: 12px;
   line-height: 1.45;
 }
-@media (max-width: 1100px) {
-  .forum-example-row {
-    grid-template-columns: minmax(220px, 34%) minmax(0, 1fr);
-  }
-
-  .forum-example-code-uix {
-    grid-column: 2;
-  }
-}
-
 @media (max-width: 760px) {
   .forum-example-row {
     grid-template-columns: 1fr;
