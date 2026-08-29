@@ -214,8 +214,17 @@ body {
   text-decoration: underline;
 }
 
+.VPDoc .container {
+  max-width: 1180px;
+}
+
+.VPDoc .content {
+  width: 100%;
+  max-width: none;
+}
+
 .VPDoc .content-container {
-  max-width: 920px;
+  max-width: 1120px;
 }
 
 .VPDocAside,
@@ -224,7 +233,7 @@ body {
 }
 
 .VPDoc.has-aside .content-container {
-  max-width: 920px;
+  max-width: 1120px;
 }
 
 .VPDoc h1,
@@ -324,7 +333,7 @@ body.uix-doc-route .vp-doc :not(pre) > code {
 }
 
 .uix-version-footer {
-  max-width: 920px;
+  max-width: 1120px;
   margin: 48px auto 0;
   padding: 18px 20px;
   border-top: 3px solid #ce3226;
