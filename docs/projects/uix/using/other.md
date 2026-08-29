@@ -1,17 +1,18 @@
 ---
 title: Weitere Optionen
+description: Weitere UIX-Styling-Funktionen und Randfälle.
 ---
-# Weitere Optionen
+# Weitere Styling-Optionen
 
-Diese Seite sammelt kleinere UIX-Funktionen und Randfälle, die nicht in die anderen Styling-Kategorien passen.
+Diese Seite sammelt kleinere Styling-Funktionen und Randfälle, die nicht in die anderen UIX-Styling-Kategorien passen.
 
-## Beispiele
+UIX kann neben Karten, Rows, Badges, Bildern und Views auch andere Home-Assistant-Frontend-Bereiche über passende Theme-Variablen erreichen. Dazu gehören zum Beispiel Dialoge, Toasts, Sidebars, Konfigurationsseiten, Kalender, To-do-Ansichten, History-Ansichten und Persistent Notifications.
 
-- Kompatibilitätsoptionen für bestimmte Karten.
-- Feineinstellungen für Rendering-Zeitpunkte.
-- Sonderfälle, bei denen Home Assistant Elemente verzögert einfügt.
-- Kombinationen aus UIX Styling und Forge.
+Wichtig ist immer, das DOM-Ziel zu prüfen und den passenden UIX-Kontext zu wählen:
 
-## Empfehlung
+- Für lokale Kartenänderungen: `uix:` direkt in der Karte.
+- Für wiederverwendbare globale Regeln: UIX-Theme-Variablen wie `uix-card`, `uix-row`, `uix-dialog` oder `uix-config`.
+- Für Shadow-DOM-Pfade: die jeweilige `-yaml`-Variante.
+- Für dynamische Werte: Jinja2-Templates, Makros oder Billets.
 
-Wenn eine Anpassung nicht zuverlässig wirkt, zuerst prüfen, ob es dafür eine spezielle Extra-Option gibt oder ob das Ziel erst nachträglich im DOM erscheint.
+Wenn ein Element nicht zuverlässig gefunden wird, prüfe zuerst [DOM-Navigation](../concepts/dom), Lade-Reihenfolge und mögliche Shadow-Root-Grenzen.

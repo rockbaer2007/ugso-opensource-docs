@@ -1,16 +1,20 @@
 ---
 title: Icon-Styling deaktivieren
+description: Icon-Styling-Patching deaktivieren.
 ---
-# Icon-Styling deaktivieren
+# Icon-Styling-Patching deaktivieren
 
-Diese Option deaktiviert bestimmte automatische Icon-Anpassungen, wenn sie mit einer bestehenden Oberfläche kollidieren.
+Diese Option verhindert, dass UIX Icon-Styling-Patches anwendet. Sie ist hilfreich, wenn eine Integration oder Custom Card eigene Icon-Logik nutzt und UIX diese nicht beeinflussen soll.
 
-## Wann sinnvoll?
+## Einstellung über die Integrations-UI
 
-Wenn eine Karte eigene Icon-Logik hat oder ein Theme Icons bereits kontrolliert, kann UIX-Styling unerwünscht eingreifen. Dann lässt sich dieser Teil gezielt abschalten.
+1. In Home Assistant zu **Settings -> Devices & Services -> UI eXtension -> Configure** gehen.
+2. **Performance settings** oder den passenden Optionsbereich öffnen.
+3. **Disable icon styling patching** aktivieren.
+4. Speichern.
 
-## Hinweise
+## Verhalten bei aktivierter Option
 
-- Erst prüfen, welche Regel den Konflikt auslöst.
-- Nur die benötigte Kompatibilitätsoption deaktivieren.
-- Danach Light und Dark Mode testen.
+- UIX überschreibt keine Icons über `--uix-icon` oder `--uix-icon-for-<entity_id>`.
+- UIX überschreibt keine Icon-Farben über `--uix-icon-color` oder `--uix-icon-color-for-<entity_id>`.
+- Andere UIX-Styling-Funktionen bleiben verfügbar.

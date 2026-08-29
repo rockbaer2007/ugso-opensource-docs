@@ -18,7 +18,7 @@ Templates können mit UIX-Debug-Ausgaben untersucht werden. Typische Probleme si
 uix:
   style: |
     ha-card {
-      opacity: {{ 1 if is_state('light.bed_light', 'on') else 0.4 }};
+      opacity: &#123;&#123; 1 if is_state('light.bed_light', 'on') else 0.4 &#125;&#125;;
     }
 ```
 

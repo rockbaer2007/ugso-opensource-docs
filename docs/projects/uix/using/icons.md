@@ -44,8 +44,8 @@ Templates werden unterstützt.
   uix:
     style: |
       ha-icon {
-        --uix-icon: {{ 'mdi:hvac' if is_state('climate.hvac', 'auto') else 'mdi:hvac-off' }};
-        --uix-icon-color: {{ 'var(--state-climate-auto-color)' if is_state('climate.hvac', 'auto') else 'var(--state-inactive-color)' }};
+        --uix-icon: &#123;&#123; 'mdi:hvac' if is_state('climate.hvac', 'auto') else 'mdi:hvac-off' &#125;&#125;;
+        --uix-icon-color: &#123;&#123; 'var(--state-climate-auto-color)' if is_state('climate.hvac', 'auto') else 'var(--state-inactive-color)' &#125;&#125;;
       }
 - type: tile
   entity: sensor.sauna_temperature
@@ -54,20 +54,20 @@ Templates werden unterstützt.
       ha-tile-icon {
         --uix-icon: mdi:thermometer-bluetooth;
         --uix-icon-color:
-        {%- set raw = states(config.entity) -%}
-        {%- if raw in ['unknown', 'unavailable', 'none'] -%} gray;
-        {%- else -%}
-        {%- set state = raw|float(-5) -%}
-        {%- if state < 5 -%} dodgerblue
-        {%- elif state < 10 -%} lightblue
-        {%- elif state < 15 -%} turquoise
-        {%- elif state < 20 -%} green
-        {%- elif state < 25 -%} darkgreen
-        {%- elif state < 30 -%} orange
-        {%- elif state < 35 -%} crimson
-        {%- else -%} firebrick
-        {%- endif -%};
-        {%- endif -%}
+        &#123;%- set raw = states(config.entity) -%&#125;
+        &#123;%- if raw in ['unknown', 'unavailable', 'none'] -%&#125; gray;
+        &#123;%- else -%&#125;
+        &#123;%- set state = raw|float(-5) -%&#125;
+        &#123;%- if state < 5 -%&#125; dodgerblue
+        &#123;%- elif state < 10 -%&#125; lightblue
+        &#123;%- elif state < 15 -%&#125; turquoise
+        &#123;%- elif state < 20 -%&#125; green
+        &#123;%- elif state < 25 -%&#125; darkgreen
+        &#123;%- elif state < 30 -%&#125; orange
+        &#123;%- elif state < 35 -%&#125; crimson
+        &#123;%- else -%&#125; firebrick
+        &#123;%- endif -%&#125;;
+        &#123;%- endif -%&#125;
       }
 - type: tile
   entity: sensor.basement_temperature
@@ -76,20 +76,20 @@ Templates werden unterstützt.
       ha-tile-icon {
         --uix-icon: mdi:thermometer-bluetooth;
         --uix-icon-color:
-        {%- set raw = states(config.entity) -%}
-        {%- if raw in ['unknown', 'unavailable', 'none'] -%} gray;
-        {%- else -%}
-        {%- set state = raw|float(-5) -%}
-        {%- if state < 5 -%} dodgerblue
-        {%- elif state < 10 -%} lightblue
-        {%- elif state < 15 -%} turquoise
-        {%- elif state < 20 -%} green
-        {%- elif state < 25 -%} darkgreen
-        {%- elif state < 30 -%} orange
-        {%- elif state < 35 -%} crimson
-        {%- else -%} firebrick
-        {%- endif -%};
-        {%- endif -%}
+        &#123;%- set raw = states(config.entity) -%&#125;
+        &#123;%- if raw in ['unknown', 'unavailable', 'none'] -%&#125; gray;
+        &#123;%- else -%&#125;
+        &#123;%- set state = raw|float(-5) -%&#125;
+        &#123;%- if state < 5 -%&#125; dodgerblue
+        &#123;%- elif state < 10 -%&#125; lightblue
+        &#123;%- elif state < 15 -%&#125; turquoise
+        &#123;%- elif state < 20 -%&#125; green
+        &#123;%- elif state < 25 -%&#125; darkgreen
+        &#123;%- elif state < 30 -%&#125; orange
+        &#123;%- elif state < 35 -%&#125; crimson
+        &#123;%- else -%&#125; firebrick
+        &#123;%- endif -%&#125;;
+        &#123;%- endif -%&#125;
       }
 - type: tile
   entity: sensor.kitchen_temperature
@@ -98,20 +98,20 @@ Templates werden unterstützt.
       ha-tile-icon {
         --uix-icon: mdi:thermometer-bluetooth;
         --uix-icon-color:
-        {%- set raw = states(config.entity) -%}
-        {%- if raw in ['unknown', 'unavailable', 'none'] -%} gray;
-        {%- else -%}
-        {%- set state = raw|float(-5) -%}
-        {%- if state < 5 -%} dodgerblue
-        {%- elif state < 10 -%} lightblue
-        {%- elif state < 15 -%} turquoise
-        {%- elif state < 20 -%} green
-        {%- elif state < 25 -%} darkgreen
-        {%- elif state < 30 -%} orange
-        {%- elif state < 35 -%} crimson
-        {%- else -%} firebrick
-        {%- endif -%};
-        {%- endif -%}
+        &#123;%- set raw = states(config.entity) -%&#125;
+        &#123;%- if raw in ['unknown', 'unavailable', 'none'] -%&#125; gray;
+        &#123;%- else -%&#125;
+        &#123;%- set state = raw|float(-5) -%&#125;
+        &#123;%- if state < 5 -%&#125; dodgerblue
+        &#123;%- elif state < 10 -%&#125; lightblue
+        &#123;%- elif state < 15 -%&#125; turquoise
+        &#123;%- elif state < 20 -%&#125; green
+        &#123;%- elif state < 25 -%&#125; darkgreen
+        &#123;%- elif state < 30 -%&#125; orange
+        &#123;%- elif state < 35 -%&#125; crimson
+        &#123;%- else -%&#125; firebrick
+        &#123;%- endif -%&#125;;
+        &#123;%- endif -%&#125;
       }
 - type: tile
   entity: sensor.attic_temperature
@@ -120,20 +120,20 @@ Templates werden unterstützt.
       ha-tile-icon {
         --uix-icon: mdi:thermometer-bluetooth;
         --uix-icon-color:
-        {%- set raw = states(config.entity) -%}
-        {%- if raw in ['unknown', 'unavailable', 'none'] -%} gray;
-        {%- else -%}
-        {%- set state = raw|float(-5) -%}
-        {%- if state < 5 -%} dodgerblue
-        {%- elif state < 10 -%} lightblue
-        {%- elif state < 15 -%} turquoise
-        {%- elif state < 20 -%} green
-        {%- elif state < 25 -%} darkgreen
-        {%- elif state < 30 -%} orange
-        {%- elif state < 35 -%} crimson
-        {%- else -%} firebrick
-        {%- endif -%};
-        {%- endif -%}
+        &#123;%- set raw = states(config.entity) -%&#125;
+        &#123;%- if raw in ['unknown', 'unavailable', 'none'] -%&#125; gray;
+        &#123;%- else -%&#125;
+        &#123;%- set state = raw|float(-5) -%&#125;
+        &#123;%- if state < 5 -%&#125; dodgerblue
+        &#123;%- elif state < 10 -%&#125; lightblue
+        &#123;%- elif state < 15 -%&#125; turquoise
+        &#123;%- elif state < 20 -%&#125; green
+        &#123;%- elif state < 25 -%&#125; darkgreen
+        &#123;%- elif state < 30 -%&#125; orange
+        &#123;%- elif state < 35 -%&#125; crimson
+        &#123;%- else -%&#125; firebrick
+        &#123;%- endif -%&#125;;
+        &#123;%- endif -%&#125;
       }
 - type: tile
   entity: climate.hvac
@@ -143,8 +143,8 @@ Templates werden unterstützt.
   uix:
     style: |
       ha-state-icon {
-        --uix-icon: {{ 'mdi:hvac' if is_state('climate.hvac', 'auto') else 'mdi:hvac-off' }};
-        --uix-icon-color: {{ 'var(--state-climate-auto-color)' if is_state('climate.hvac', 'auto') else 'var(--state-inactive-color)' }};
+        --uix-icon: &#123;&#123; 'mdi:hvac' if is_state('climate.hvac', 'auto') else 'mdi:hvac-off' &#125;&#125;;
+        --uix-icon-color: &#123;&#123; 'var(--state-climate-auto-color)' if is_state('climate.hvac', 'auto') else 'var(--state-inactive-color)' &#125;&#125;;
       }
 ```
 
@@ -166,45 +166,45 @@ uix-doc-icon-for-entity-theme:
       params:
         - entity_id
       template: >
-        {%- set entityString = entity_id.replace('.','_') -%}
-        --uix-icon-for-{{ entityString }}: mdi:thermometer-bluetooth;
-        --uix-icon-color-for-{{ entityString }}:
-        {%- set raw = states(entity_id) -%}
-        {%- if raw in ['unknown', 'unavailable', 'none'] -%} gray;
-        {%- else -%}
-        {%- set state = raw|float(-5) -%}
-        {%- if state < 5 -%} dodgerblue
-        {%- elif state < 10 -%} lightblue
-        {%- elif state < 15 -%} turquoise
-        {%- elif state < 20 -%} green
-        {%- elif state < 25 -%} darkgreen
-        {%- elif state < 30 -%} orange
-        {%- elif state < 35 -%} crimson
-        {%- else -%} firebrick
-        {%- endif -%};
-        {%- endif -%}
+        &#123;%- set entityString = entity_id.replace('.','_') -%&#125;
+        --uix-icon-for-&#123;&#123; entityString &#125;&#125;: mdi:thermometer-bluetooth;
+        --uix-icon-color-for-&#123;&#123; entityString &#125;&#125;:
+        &#123;%- set raw = states(entity_id) -%&#125;
+        &#123;%- if raw in ['unknown', 'unavailable', 'none'] -%&#125; gray;
+        &#123;%- else -%&#125;
+        &#123;%- set state = raw|float(-5) -%&#125;
+        &#123;%- if state < 5 -%&#125; dodgerblue
+        &#123;%- elif state < 10 -%&#125; lightblue
+        &#123;%- elif state < 15 -%&#125; turquoise
+        &#123;%- elif state < 20 -%&#125; green
+        &#123;%- elif state < 25 -%&#125; darkgreen
+        &#123;%- elif state < 30 -%&#125; orange
+        &#123;%- elif state < 35 -%&#125; crimson
+        &#123;%- else -%&#125; firebrick
+        &#123;%- endif -%&#125;;
+        &#123;%- endif -%&#125;
     temp_icon_color_all:
       template: >
-        {% set entities = states.sensor
+        &#123;% set entities = states.sensor
           | selectattr('attributes.device_class', 'defined')
           | selectattr('attributes.device_class', 'eq', 'temperature')
           | selectattr('attributes.state_class', 'defined')
           | selectattr('attributes.state_class', 'eq', 'measurement')
-          | map(attribute='entity_id') | list %}
-        {% for entity in entities %}
-          {{ temp_icon_color(entity) }}
-        {% endfor %}
+          | map(attribute='entity_id') | list %&#125;
+        &#123;% for entity in entities %&#125;
+          &#123;&#123; temp_icon_color(entity) &#125;&#125;
+        &#123;% endfor %&#125;
 
   uix-root-yaml: |
     .: |
       :host {
-        {{ temp_icon_color_all() }}
+        &#123;&#123; temp_icon_color_all() &#125;&#125;
       }
 
   uix-more-info-yaml: |
     .: |
       :host {
-        {{ temp_icon_color_all() }}
+        &#123;&#123; temp_icon_color_all() &#125;&#125;
       }
 ```
 
@@ -232,9 +232,9 @@ cards:
     uix:
       style: |
         ha-tile-icon {
-          {% if is_state('climate.hvac', 'auto') %}
+          &#123;% if is_state('climate.hvac', 'auto') %&#125;
             --uix-icon: mdi:thermometer-auto;
-          {% endif %}
+          &#123;% endif %&#125;
         }
   - type: tile
     entity: sensor.attic_temperature

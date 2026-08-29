@@ -1,11 +1,15 @@
 ---
-title: Forge-Referenz
+title: UIX Forge
+description: Deutsche Referenz fuer UIX Forge, Molds, Templates, Billets, Styling und Sparks
 ---
-# Forge-Referenz
+# UIX Forge
 
-UIX Forge nutzt eine Konfiguration mit `forge`, `element` und optional `uix`.
+UIX Forge erzeugt Home-Assistant-Frontend-Elemente aus YAML und erweitert sie optional mit Sparks. Damit kannst du Karten, Zeilen, Badges, Picture-Elements, Sections, Footer und Card-Features erzeugen, ohne eine eigene Custom Card schreiben zu muessen.
 
-Minimalbeispiel:
+!!! tip "In UIX Forge einhuellen"
+    Forge ist besonders nuetzlich, wenn eine bestehende Karte fast passt, aber ein Button, Tooltip, Lock, Hintergrund, More-info-Bereich oder ein anderes Zusatzverhalten fehlt.
+
+## Grundstruktur
 
 ```yaml
 type: custom:uix-forge
@@ -13,43 +17,483 @@ forge:
   mold: card
 element:
   type: tile
-  entity: sun.sun
+  entity: light.living_room
 ```
 
-## Aufbau
+`forge` beschreibt, wie und in welchem Kontext das Element erzeugt wird. `element` enthaelt die eigentliche Home-Assistant-Konfiguration. Optional kann `uix` Styling fuer das erzeugte Element enthalten.
 
-- `type: custom:uix-forge` aktiviert das Forge-Element.
-- `forge.mold` legt fest, in welchem Kontext das Element erzeugt wird.
-- `element` enthält die eigentliche Home-Assistant-Konfiguration.
-- `uix` kann zusätzlich Styling auf das erzeugte Element anwenden.
-- `forge.sparks` ergänzt optionale Verhalten.
+## Forge-Optionen
 
-## Häufige Molds
+| Schluessel | Typ | Templates | Standard | Beschreibung |
+| --- | --- | --- | --- | --- |
+| `mold` | string | nein | Pflicht | Art des erzeugten Elements. Standard-Molds: `card`, `badge`, `row`, `picture-element`, `section`, `footer`, `card-feature`. Cross-Context-Molds: `card_as_row`, `card_as_badge`, `row_as_card`, `row_as_badge`, `badge_as_card`, `badge_as_row`, `badge_as_picture_element`. |
+| `macros` | mapping | nein | - | Template-Makros, die allen Templates in der Forge-Konfiguration zur Verfuegung stehen. Sie werden auch an `uix`-Konfigurationen in Forge und erzeugtem Element weitergegeben. |
+| `billets` | mapping | nein | - | Benannte YAML-Werte als Template-Konstanten fuer alle Templates in der Forge-Konfiguration. |
+| `hidden` | boolean | ja | `false` | Blendet das Element aus, wenn der Wert wahr ist. |
+| `grid_options` | mapping | ja | - | Lovelace-Grid-Optionen wie `rows` und `columns`, nur fuer `mold: card`. |
+| `show_error` | boolean | nein | `false` | Bei `true` wird bei Fehlern die Lovelace-Fehlerkarte angezeigt, statt das Element zu verstecken. |
+| `template_nesting` | string | nein | `"<<>>"` | Vier Zeichen zum Escapen verschachtelter Templates. Standard: `<<...>>` fuer `&#123;&#123;...&#125;&#125;` und `<%...%>` fuer `&#123;%...%&#125;`. |
+| `sparks` | list | ja | `[]` | Liste von [Spark-Konfigurationen](./sparks/), die an das erzeugte Element angehaengt werden. |
+| `delayed_hass` | boolean | nein | - | Verzögert die Uebergabe des `hass`-Objekts, bis die Karte geladen ist. Hilft bei manchen Custom Cards, z. B. ApexCharts. |
 
-| Mold | Zweck |
+!!! warning
+    Nicht jede Option ist in jedem Mold sinnvoll. `grid_options` wird zum Beispiel nur bei `mold: card` beachtet.
+
+## Element-Konfiguration
+
+`element` ist die YAML-Konfiguration des Home-Assistant-Elements, das Forge erzeugen soll.
+
+!!! example inline end "Forge-Beispiel"
+    ```yaml
+    type: custom:uix-forge
+    forge:
+      mold: card
+    element:
+      type: tile
+      entity: sensor.outdoor_temperature
+    ```
+
+Bei `mold: card` entspricht `element` einer normalen Lovelace-Karte. Bei `mold: row` entspricht es einer Entity-Row. Bei `mold: badge` entspricht es einem Badge.
+
+### Entity-Konfiguration im Element
+
+Viele Home-Assistant-Elemente erwarten `entity`. Forge reicht diese Konfiguration unveraendert weiter.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: tile
+  entity: light.kitchen
+  name: Kueche
+```
+
+### Blank-Card-Konfiguration
+
+Eine Blank Card ist nuetzlich, wenn du ein leeres Ziel fuer Sparks oder UIX-Styling brauchst.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: custom:uix-forge-blank-card
+```
+
+Mit Inhalt:
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: custom:uix-forge-blank-card
+  cards:
+    - type: tile
+      entity: light.living_room
+    - type: tile
+      entity: sensor.living_room_temperature
+```
+
+Mit Sparks:
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: grid
+      columns: 2
+      gap: 8
+element:
+  type: custom:uix-forge-blank-card
+  cards:
+    - type: tile
+      entity: light.living_room
+    - type: tile
+      entity: light.kitchen
+```
+
+!!! tip
+    Bei Blank Cards zeigen viele Sparks standardmaessig auf `uix-forge-blank-card $ div.content`.
+
+## Template-Variablen und Makros
+
+| Kontext | Template-Variablen |
 | --- | --- |
-| `card` | erzeugt eine Lovelace-Karte |
-| `row` | erzeugt eine Zeile für Entities-Karten |
-| `badge` | erzeugt ein Badge |
-| `section` | erzeugt einen Abschnitt |
-| `picture-element` | erzeugt ein Element für Picture-Elements |
+| Templates in Forge und Element, ausser `uix`-Styling | Forge-Konfiguration: `config.forge`; Element-Konfiguration: `config.element`; `config.entity`, falls in globaler `uix-forge`-Konfiguration enthalten. |
+| Templates im Forge-`uix`-Styling | Forge-Konfiguration: `config.forge`; Element-Konfiguration: `config.element`; `config.entity`, falls enthalten. |
+| Templates im `uix`-Styling des Elements | Forge-Konfiguration nicht verfuegbar; Element-Konfiguration als `config`; `config.entity`, falls enthalten. |
 
-## Template-Werte
+!!! tip
+    Makros eignen sich fuer wiederholte CSS- oder YAML-Schnipsel, etwa Farben, Zustandslabels oder DOM-Pfade.
 
-Viele Forge-Werte können Templates enthalten. Dadurch lassen sich Sichtbarkeit, Entitäten, Icons, Texte und Layoutwerte abhängig vom Home-Assistant-Zustand steuern.
+!!! warning
+    In VitePress muss Jinja-Syntax in Markdown-Beispielen escaped werden. In echtem Home-Assistant-YAML schreibst du natuerlich normale Jinja-Klammern.
+
+### Vollbeispiel mit Makro
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  macros:
+    state_color: |
+      &#123;% macro state_color(entity) -%&#125;
+      &#123;&#123; 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' &#125;&#125;
+      &#123;%- endmacro %&#125;
+element:
+  type: tile
+  entity: light.living_room
+uix:
+  style: |
+    ha-card {
+      border-color: &#123;&#123; state_color(config.element.entity) &#125;&#125;;
+    }
+```
+
+### Billets
+
+Billets sind benannte YAML-Werte, die in Templates als Konstanten genutzt werden koennen. Sie sind praktisch fuer Defaults, Farben, Entity-IDs oder Textbausteine.
+
+!!! warning
+    Billets sind Konfiguration, keine sichere Geheimnisablage. Fuer sensible Werte nutze Home-Assistant-Secrets oder passende Backend-Mechanismen.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  billets:
+    main_entity: light.living_room
+    accent_color: var(--primary-color)
+element:
+  type: tile
+  entity: "&#123;&#123; main_entity &#125;&#125;"
+uix:
+  style: |
+    ha-card {
+      border-color: &#123;&#123; accent_color &#125;&#125;;
+    }
+```
+
+#### Billet-Typen
+
+| YAML-Typ | Beispiel | Jinja2-Typ | Nutzung im Template |
+| --- | --- | --- | --- |
+| Leer (`~` oder `null`) | `my_billet: ~` | `none` | `&#123;&#123; my_billet &#125;&#125;` ergibt leer |
+| String | `my_billet: hello` | `str` | `&#123;&#123; my_billet &#125;&#125;` ergibt `hello` |
+| Zahl | `my_billet: 42` | `int` oder `float` | `&#123;&#123; my_billet + 1 &#125;&#125;` ergibt `43` |
+| Boolean | `my_billet: true` | `bool` | `&#123;% if my_billet %&#125;...&#123;% endif %&#125;` |
+| Liste | `my_billet: [1, 2, 3]` | `list` | `&#123;&#123; my_billet | join(', ') &#125;&#125;` |
+| Mapping | `my_billet: {a: 1}` | `dict` | `&#123;&#123; my_billet.a &#125;&#125;` |
+
+#### Billet-Interpolation
+
+Billets koennen andere Billets referenzieren.
 
 ```yaml
 forge:
-  mold: card
-  hidden: "{{ is_state('input_boolean.hide_card', 'on') }}"
+  billets:
+    room: living_room
+    entity: "light.&#123;&#123; room &#125;&#125;"
 element:
   type: tile
-  entity: "{{ states('input_text.target_entity') }}"
+  entity: "&#123;&#123; entity &#125;&#125;"
 ```
 
-## Fehler vermeiden
+Mehrere Werte koennen zusammengesetzt werden:
 
-- Achte auf gültiges YAML.
-- Verwende Fallback-Werte in Templates.
-- Teste zunächst ohne Sparks und ergänze sie danach.
-- Schalte `show_error` nur dann aus, wenn Fehler bewusst verborgen werden sollen.
+```yaml
+forge:
+  billets:
+    domain: sensor
+    object_id: outdoor_temperature
+    entity: "&#123;&#123; domain &#125;&#125;.&#123;&#123; object_id &#125;&#125;"
+```
+
+!!! note "Zirkulaere Referenzen"
+    Billets duerfen sich nicht gegenseitig endlos referenzieren. Halte Abhaengigkeiten einfach und eindeutig.
+
+#### Billets und Foundries
+
+Foundries koennen Billets definieren, die einzelne Forge-Instanzen ueberschreiben. Das ist der bevorzugte Weg fuer wiederverwendbare Kartenmuster.
+
+## Templates im Element ignorieren
+
+Manche erzeugten Elemente enthalten selbst Jinja-aehnliche Syntax. Dann musst du verschachtelte Templates escapen, damit Forge sie nicht zu frueh auswertet.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: markdown
+  content: |
+    << states('sensor.outdoor_temperature') >>
+```
+
+!!! warning "Templates ignorieren und mehrere Forge-Schichten"
+    Wenn mehrere Forge-Schichten ineinander liegen, braucht jede zusaetzliche Ebene ein weiteres Paar Nesting-Zeichen.
+
+### Template-Nesting
+
+Mit `template_nesting` legst du fest, welche Zeichen fuer verschachtelte Jinja-Ausdruecke verwendet werden.
+
+```yaml
+forge:
+  template_nesting: "<<>>"
+element:
+  type: markdown
+  content: "<< states('sensor.outdoor_temperature') >>"
+```
+
+#### Mehrere Verschachtelungsebenen
+
+Bei zwei Ebenen nutzt du ein weiteres Klammerpaar, zum Beispiel `<<< ... >>>` fuer den inneren Ausdruck.
+
+#### Template-Nesting und Makros
+
+Makros koennen ebenfalls verschachtelte Templates ausgeben. Wichtig ist, dass die Ebene, die das Template auswerten soll, die Syntax erkennt.
+
+!!! tip
+    Wenn ein Template zu frueh ausgewertet wird, ist das fast immer ein Nesting-Problem.
+
+#### Billets in verschachtelten Templates
+
+Billets stehen auch in verschachtelten Templates zur Verfuegung, sofern sie auf der auswertenden Ebene sichtbar sind.
+
+!!! note "Von decluttering-card kommend?"
+    Forge deckt viele Muster ab, die sonst mit `decluttering-card` gebaut werden. Der wichtigste Unterschied: Forge erzeugt echte Home-Assistant-Elemente und kann zusaetzlich Sparks anwenden.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  billets:
+    entity: light.living_room
+element:
+  type: tile
+  entity: "&#123;&#123; entity &#125;&#125;"
+```
+
+```jinja
+&#123;% if is_state(entity, 'on') %&#125;
+  eingeschaltet
+&#123;% endif %&#125;
+```
+
+!!! tip
+    Halte Vorlagen klein. Wenn ein Template schwer lesbar wird, lagere wiederholte Teile in Makros oder Foundries aus.
+
+### Nutzung mit Auto-Entities
+
+Forge kann mit `custom:auto-entities` kombiniert werden, wenn automatisch gefundene Entities als erzeugte Karten, Reihen oder Badges eingesetzt werden sollen.
+
+```yaml
+type: custom:auto-entities
+card:
+  type: vertical-stack
+card_param: cards
+filter:
+  include:
+    - domain: light
+      options:
+        type: custom:uix-forge
+        forge:
+          mold: card
+        element:
+          type: tile
+          entity: this.entity_id
+```
+
+!!! tip
+    Bei Auto-Entities ist es besonders wichtig, mit Fallbacks zu arbeiten, weil nicht jede Entity dieselben Attribute besitzt.
+
+## UIX-Styling
+
+Forge kann sowohl die erzeugte Karte als auch deren innere Elemente mit UIX stylen.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: tile
+  entity: light.living_room
+uix:
+  style: |
+    ha-card {
+      border: 1px solid var(--primary-color);
+    }
+```
+
+### Element-Styling
+
+`uix` auf oberster Ebene stylt das Forge-Ergebnis. `uix` innerhalb von `element` gehoert zur eigentlichen Elementkonfiguration.
+
+!!! warning
+    Die verfuegbaren Template-Variablen unterscheiden sich je nach Ebene. Im Element-`uix` ist die Elementkonfiguration als `config` sichtbar, nicht als `config.element`.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: tile
+  entity: light.living_room
+  uix:
+    style: |
+      ha-card {
+        color: var(--primary-text-color);
+      }
+```
+
+### Theme-Styling
+
+UIX-Themes koennen Forge-Molds gezielt stylen. Nutze die bekannten Variablen wie `uix-card`, `uix-row`, `uix-badge` oder spezifischere Klassen.
+
+## Sections
+
+Forge kann Sections fuer die neue Dashboard-Section-Ansicht erzeugen.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: section
+element:
+  type: heading
+  heading: Wohnzimmer
+```
+
+```yaml
+# Nur Hauptkonfiguration fuer Sections. Visibility wird nicht unterstuetzt.
+type: custom:uix-forge
+forge:
+  mold: section
+element:
+  type: grid
+  cards:
+    - type: tile
+      entity: light.living_room
+```
+
+!!! warning
+    Section-Konfiguration folgt den Home-Assistant-Regeln fuer Sections. Nicht jede Kartenoption ist dort gueltig.
+
+## Footer
+
+Mit `mold: footer` kann Forge einen Footer erzeugen, der unten im Viewport sitzt.
+
+!!! note
+    Footer sind fuer kompakte, dauerhaft sichtbare Bedienelemente gedacht. Sie sollten nicht zu viel Inhalt aufnehmen.
+
+| Schluessel | Typ | Templates | Standard | Beschreibung |
+| --- | --- | --- | --- | --- |
+| `max_width` | string | nein | `600` | Maximale Breite des Footers in Pixeln. |
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: footer
+  max_width: 600
+element:
+  type: horizontal-stack
+  cards:
+    - type: button
+      entity: light.living_room
+    - type: button
+      entity: light.kitchen
+```
+
+Footer-Variablen:
+
+| Variable | Standard | Beschreibung |
+| --- | --- | --- |
+| `--uix-forge-footer-border-width` | `1px` | Rahmenbreite der erzeugten Karte im Footer. |
+| `--uix-forge-footer-bottom` | `var(--ha-space-2)` | Abstand vom unteren Viewport-Rand. |
+| `--uix-forge-footer-padding` | `0 var(--ha-space-2)` | Padding des Footer-Containers. |
+
+### Visibility
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: footer
+  hidden: "&#123;&#123; is_state('input_boolean.hide_footer', 'on') &#125;&#125;"
+element:
+  type: button
+  entity: input_boolean.hide_footer
+```
+
+## Card Features
+
+Mit `mold: card-feature` koennen Card-Feature-Elemente erzeugt werden, die in Cards verwendet werden.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card-feature
+element:
+  type: toggle
+```
+
+In einer Tile Card:
+
+```yaml
+type: tile
+entity: light.living_room
+features:
+  - type: custom:uix-forge
+    forge:
+      mold: card-feature
+    element:
+      type: toggle
+```
+
+## Cross-Context-Molds
+
+Cross-Context-Molds erzeugen ein Element in einem Kontext, lassen es aber in einem anderen Kontext auftreten.
+
+| Mold | Erzeugt | Verhaelt sich wie |
+| --- | --- | --- |
+| `card_as_row` | `hui-card` | Row in `entities` oder `fold-entity-row` |
+| `card_as_badge` | `hui-card` | Badge in einem Badge-Container |
+| `row_as_card` | Row-Element | Karte im Kartengrid |
+| `row_as_badge` | Row-Element | Badge in einem Badge-Container |
+| `badge_as_card` | `hui-badge` | Karte im Kartengrid |
+| `badge_as_row` | `hui-badge` | Row in `entities` oder `fold-entity-row` |
+| `badge_as_picture_element` | `hui-badge` | Picture-Element in einer Picture-Elements-Karte |
+
+### `card_as_row`: Karte als Zeile einbetten
+
+```yaml
+type: entities
+entities:
+  - type: custom:uix-forge
+    forge:
+      mold: card_as_row
+    element:
+      type: tile
+      entity: light.living_room
+```
+
+### Badge als Picture-Element einbetten
+
+```yaml
+type: picture-elements
+image: /local/floorplan.png
+elements:
+  - type: custom:uix-forge
+    forge:
+      mold: badge_as_picture_element
+    element:
+      type: entity
+      entity: light.living_room
+    style:
+      top: 40%
+      left: 60%
+```
+
+!!! tip "Visibility"
+    Wenn Sichtbarkeit benoetigt wird, pruefe zuerst, ob Home Assistant sie in diesem Kontext direkt unterstuetzt. Forge kann Elemente ausblenden, aber manche Container erwarten trotzdem bestimmte Elementformen.

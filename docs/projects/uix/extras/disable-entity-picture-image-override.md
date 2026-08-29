@@ -1,16 +1,20 @@
 ---
 title: Entity-Picture-Override deaktivieren
+description: Overrides für Entitätsbilder deaktivieren.
 ---
-# Entity-Picture-Image-Override deaktivieren
+# Entity-Picture-Image-Overrides deaktivieren
 
-Diese Option verhindert, dass UIX bestimmte Entitätsbilder überschreibt. Das ist nützlich bei Integrationen oder Karten, die eigene Bildlogik nutzen.
+Diese Option verhindert, dass UIX Entitätsbilder ersetzt. Das ist nützlich, wenn eine Karte, Integration oder Kamera eigene Bildlogik nutzt und UIX diese Bilder nicht überschreiben soll.
 
-## Wann sinnvoll?
+## Einstellung über die Integrations-UI
 
-Wenn Entitätsbilder von einer Integration, Kamera oder Spezialkarte gesteuert werden, soll UIX diese Bilder manchmal nicht verändern. Die Option erhält dann das ursprüngliche Verhalten.
+1. In Home Assistant zu **Settings -> Devices & Services -> UI eXtension -> Configure** gehen.
+2. Den passenden Optionsbereich öffnen.
+3. **Disable entity picture image overrides** aktivieren.
+4. Speichern.
 
-## Hinweise
+## Verhalten bei aktivierter Option
 
-- Besonders bei Personen-, Medien- und Kamera-Entitäten prüfen.
-- Bild-Overrides können je nach Karte unterschiedlich wirken.
-- Nach Änderung Browsercache leeren, wenn alte Bilder sichtbar bleiben.
+- UIX wendet `--uix-image` und `--uix-image-for-<entity_id>` nicht mehr als Bild-Override an.
+- Bestehende Kartenbilder und Entitätsbilder bleiben unverändert.
+- Andere UIX-Styling- und Theme-Funktionen bleiben verfügbar.

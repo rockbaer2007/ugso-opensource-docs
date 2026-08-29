@@ -1,16 +1,24 @@
 ---
-title: Hash-Template-Variablen
+title: Hash-Template-Variable deaktivieren
+description: Hash-Template-Variable und Updates deaktivieren.
 ---
-# Hash-Template-Variablen
+# Hash-Template-Variable und Updates deaktivieren
 
-Hash-Template-Variablen erlauben Reaktionen auf Änderungen in der URL, zum Beispiel bei Ansichten oder internen Navigationszuständen.
+UIX stellt Templates die Variable `hash` bereit. Sie enthält den Teil der URL nach `#`. UIX beobachtet außerdem `location-changed` und `popstate`, damit Templates neu gebunden werden, wenn sich der Hash ändert.
 
-## Einsatz
+## Einstellung über die Integrations-UI
 
-Wenn ein Dashboard über URL-Hashes unterschiedliche Zustände zeigt, können Templates darauf reagieren. So lassen sich sichtbare Bereiche, Farben oder Hinweise abhängig vom Hash ändern.
+1. In Home Assistant zu **Settings -> Devices & Services -> UI eXtension -> Configure** gehen.
+2. **Performance settings** öffnen.
+3. **Disable hash template variable and updates** aktivieren.
+4. Speichern.
 
-## Hinweise
+## Verhalten bei aktivierter Option
 
-- Hash-Werte sollten stabil benannt werden.
-- Nutze Fallbacks, wenn kein Hash gesetzt ist.
-- Teste Browser-Zurück/Vorwärts-Navigation.
+- Die Template-Variable `hash` ist nicht verfügbar.
+- UIX bindet Templates nicht wegen Hash-Änderungen neu.
+- Bestehende Templates, die `hash` verwenden, sollten angepasst werden.
+
+::: warning
+Aktiviere diese Option nur, wenn du keine Hash-basierten UIX-Templates verwendest oder wenn Hash-Updates in deinem Dashboard unnötige Template-Aktualisierungen auslösen.
+:::
