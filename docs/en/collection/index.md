@@ -12,6 +12,7 @@ External projects are marked as unofficial translations or supplemental document
 
 | Section | Content |
 | --- | --- |
+| [HA Recommendations](./ha-recommendations) | Curated links to cards, integrations, apps and tools with German docs or useful entry points. |
 | [HA Cards](./ha-cards) | Lovelace and HACS cards with examples. |
 | [HA Dashboard](./ha-dashboard) | Themes, layout ideas and visual dashboard extensions for Home Assistant. |
 | [HA Integrations](./ha-integrations) | Custom integrations and HACS integrations for Home Assistant. |

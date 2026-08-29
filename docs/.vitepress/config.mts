@@ -6,6 +6,7 @@ const navDe = [
     text: 'Sammlung',
     items: [
       { text: 'Übersicht', link: '/sammlung/' },
+      { text: 'HA Empfehlungen', link: '/sammlung/ha-empfehlungen' },
       { text: 'HA Cards', link: '/sammlung/ha-cards' },
       { text: 'HA Dashboard', link: '/sammlung/ha-dashboard' },
       { text: 'HA Integrationen', link: '/sammlung/ha-integrationen' },
@@ -37,6 +38,7 @@ const navEn = [
     text: 'Collection',
     items: [
       { text: 'Overview', link: '/en/collection/' },
+      { text: 'HA Recommendations', link: '/en/collection/ha-recommendations' },
       { text: 'HA Cards', link: '/en/collection/ha-cards' },
       { text: 'HA Dashboard', link: '/en/collection/ha-dashboard' },
       { text: 'HA Integrations', link: '/en/collection/ha-integrations' },
@@ -140,6 +142,7 @@ const sidebarDe = {
       collapsed: false,
       items: [
         { text: 'Übersicht', link: '/sammlung/' },
+        { text: 'HA Empfehlungen', link: '/sammlung/ha-empfehlungen' },
         { text: 'HA Cards', link: '/sammlung/ha-cards' },
         { text: 'HA Dashboard', link: '/sammlung/ha-dashboard' },
         { text: 'NeoMorphix UIX', link: '/sammlung/neomorphix-uix/' },
@@ -437,6 +440,7 @@ const sidebarEn = {
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/collection/' },
+        { text: 'HA Recommendations', link: '/en/collection/ha-recommendations' },
         { text: 'HA Cards', link: '/en/collection/ha-cards' },
         { text: 'HA Dashboard', link: '/en/collection/ha-dashboard' },
         { text: 'HA Integrations', link: '/en/collection/ha-integrations' },

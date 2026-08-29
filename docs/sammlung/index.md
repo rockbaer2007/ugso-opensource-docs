@@ -14,6 +14,7 @@ Der Schwerpunkt liegt auf praktisch nutzbaren Dokus mit Version, Originalquelle,
 
 | Bereich | Inhalt |
 | --- | --- |
+| [HA Empfehlungen](./ha-empfehlungen) | Kuratierte Links zu Cards, Integrationen, Apps und Tools mit deutscher Doku oder gutem Einstieg. |
 | [HA Cards](./ha-cards) | Lovelace- und HACS-Karten mit deutscher Anleitung und Beispielen. |
 | [HA Dashboard](./ha-dashboard) | Themes, Layoutideen und visuelle Dashboard-Erweiterungen für Home Assistant. |
 | [HA Integrationen](./ha-integrationen) | Custom Integrations und HACS-Integrationen für Home Assistant. |
