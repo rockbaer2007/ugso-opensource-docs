@@ -81,6 +81,7 @@ const sidebarDe = {
         { text: 'Externe Daten', link: '/sammlung/flex-table-card/externe-daten' },
         { text: 'Aktionen', link: '/sammlung/flex-table-card/aktionen' },
         { text: 'Paketlisten-Beispiel', link: '/sammlung/flex-table-card/paketliste' },
+        { text: 'Beispiele aus Forum', link: '/sammlung/flex-table-card/beispiele-aus-forum' },
         { text: 'Referenz', link: '/sammlung/flex-table-card/referenz' }
       ]
     }
