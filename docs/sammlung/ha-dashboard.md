@@ -10,7 +10,7 @@ Dieser Bereich sammelt Themen rund um Home-Assistant-Dashboards, die keine einze
 
 | Projekt | Status | Hinweis |
 | --- | --- | --- |
-| [Frosted Glass Theme](./frosted-glass-theme/) | geprueft | Modernes Home-Assistant-Theme mit Glasoptik, HACS-Installation, card-mod-Abhaengigkeit und Lite-Versionen. |
+| [Frosted Glass Theme](./frosted-glass-theme/) | geprueft | Modernes Home-Assistant-Theme mit Glasoptik, HACS-Installation, card-mod- oder UIX-Voraussetzung und Lite-Versionen. |
 
 ## Abgrenzung
 

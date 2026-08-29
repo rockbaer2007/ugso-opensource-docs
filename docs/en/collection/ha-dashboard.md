@@ -10,4 +10,4 @@ This section collects Home Assistant dashboard topics that are not individual ca
 
 | Project | Status | Note |
 | --- | --- | --- |
-| [Frosted Glass Theme](/sammlung/frosted-glass-theme/) | reviewed | Modern Home Assistant theme with glass styling, HACS installation, card-mod dependency and Lite variants. |
+| [Frosted Glass Theme](/sammlung/frosted-glass-theme/) | reviewed | Modern Home Assistant theme with glass styling, HACS installation, card-mod or UIX requirement and Lite variants. |

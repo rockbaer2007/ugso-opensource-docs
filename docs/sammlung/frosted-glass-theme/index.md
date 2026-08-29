@@ -23,7 +23,7 @@ Diese Seite ist keine offizielle Dokumentation des Projekts. Sie fasst die wicht
 Das Theme ist ueber HACS installierbar.
 
 1. HACS installieren, falls noch nicht vorhanden.
-2. `card-mod` ueber HACS installieren.
+2. `card-mod` oder `UIX` installieren.
 3. Frosted Glass Theme ueber HACS installieren.
 4. Home Assistant neu starten.
 5. Im Benutzerprofil das Theme auswaehlen.
@@ -32,8 +32,8 @@ Direktlink:
 
 [Frosted Glass Theme in HACS oeffnen](https://my.home-assistant.io/redirect/hacs_repository/?owner=WessamLauf&repository=homeassistant-frosted-glass-themes&category=theme)
 
-::: warning card-mod erforderlich
-Das Theme benoetigt `card-mod`, damit Blur- und Styling-Effekte korrekt funktionieren.
+::: warning card-mod oder UIX erforderlich
+Das Theme benoetigt `card-mod` oder `UIX`, damit Blur- und Styling-Effekte korrekt funktionieren.
 :::
 
 ## Varianten
