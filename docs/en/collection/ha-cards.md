@@ -6,7 +6,7 @@ description: Documentation and examples for Home Assistant cards.
 
 This section is for Lovelace and HACS cards that are maintained with examples.
 
-## Planned
+## Used And Reviewed HA Cards
 
 | Project | Status | Note |
 | --- | --- | --- |

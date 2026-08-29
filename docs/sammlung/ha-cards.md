@@ -6,7 +6,7 @@ description: Deutsche Dokumentationen und Beispiele für Home-Assistant-Karten.
 
 Dieser Bereich ist für Lovelace- und HACS-Karten gedacht, die als deutsche Doku mit Beispielen gepflegt werden.
 
-## Geplant
+## Genutzte und geprüfte HA Cards
 
 | Projekt | Status | Hinweis |
 | --- | --- | --- |
