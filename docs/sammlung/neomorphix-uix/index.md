@@ -26,7 +26,7 @@ NeoMorphix UIX basiert auf NeuMorphix und ist als HACS-Theme-Variante vorbereite
 [![NeoMorphix UIX in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=NeoMorphix-UIX&category=theme)
 
 1. HACS installieren, falls noch nicht vorhanden.
-2. `UIX` installieren.
+2. <a href="https://uix.lf.technology/quick-start/" target="_blank" rel="noopener noreferrer">UIX installieren</a>.
 3. Den NeoMorphix-UIX-Fork über HACS als Theme installieren.
 4. Home Assistant neu starten.
 5. Im Benutzerprofil oder in den Dashboard-Einstellungen eine NeoMorphix-UIX-Variante auswählen.
