@@ -236,6 +236,14 @@ body {
   max-width: 1120px;
 }
 
+.VPDoc:has(._sammlung_flex-table-card_beispiele-aus-forum) .container {
+  max-width: 1500px;
+}
+
+.VPDoc:has(._sammlung_flex-table-card_beispiele-aus-forum) .content-container {
+  max-width: 1440px;
+}
+
 .VPDoc h1,
 .VPDoc h2,
 .VPDoc h3 {
