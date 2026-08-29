@@ -13,8 +13,11 @@ External projects are marked as unofficial translations or supplemental document
 | Section | Content |
 | --- | --- |
 | [HA Cards](./ha-cards) | Lovelace and HACS cards with examples. |
-| [HA Apps](./ha-apps) | Home Assistant apps, add-ons and MQTT projects. |
-| [HACS Docs](./hacs-docs) | Translated or supplemental documentation for external HACS projects. |
+| [HA Integrations](./ha-integrations) | Custom integrations and HACS integrations for Home Assistant. |
+| [HA Blueprints](./ha-blueprints) | Automation blueprints and reusable Home Assistant templates. |
+| [HA Tools](./ha-tools) | External tools for Home Assistant, dashboards and development. |
+| [HA Apps](./ha-apps) | Add-ons, MQTT bridges and services for Home Assistant. |
+| [HACS Docs](./hacs-docs) | Catch-all section for HACS projects without a better category. |
 
 ## Separate UIX Link
 

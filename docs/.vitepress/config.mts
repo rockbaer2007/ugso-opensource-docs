@@ -7,6 +7,9 @@ const navDe = [
     items: [
       { text: 'Übersicht', link: '/sammlung/' },
       { text: 'HA Cards', link: '/sammlung/ha-cards' },
+      { text: 'HA Integrationen', link: '/sammlung/ha-integrationen' },
+      { text: 'HA Blueprints', link: '/sammlung/ha-blueprints' },
+      { text: 'HA Tools', link: '/sammlung/ha-tools' },
       { text: 'HA Apps', link: '/sammlung/ha-apps' },
       { text: 'HACS Dokus', link: '/sammlung/hacs-dokus' },
       { text: 'UIX Doku (separat)', link: '/projects/uix/' }
@@ -33,6 +36,9 @@ const navEn = [
     items: [
       { text: 'Overview', link: '/en/collection/' },
       { text: 'HA Cards', link: '/en/collection/ha-cards' },
+      { text: 'HA Integrations', link: '/en/collection/ha-integrations' },
+      { text: 'HA Blueprints', link: '/en/collection/ha-blueprints' },
+      { text: 'HA Tools', link: '/en/collection/ha-tools' },
       { text: 'HA Apps', link: '/en/collection/ha-apps' },
       { text: 'HACS Docs', link: '/en/collection/hacs-docs' },
       { text: 'UIX Docs (separate)', link: 'https://uix.lf.technology/' }
@@ -60,6 +66,9 @@ const sidebarDe = {
       items: [
         { text: 'Übersicht', link: '/sammlung/' },
         { text: 'HA Cards', link: '/sammlung/ha-cards' },
+        { text: 'HA Integrationen', link: '/sammlung/ha-integrationen' },
+        { text: 'HA Blueprints', link: '/sammlung/ha-blueprints' },
+        { text: 'HA Tools', link: '/sammlung/ha-tools' },
         { text: 'HA Apps', link: '/sammlung/ha-apps' },
         { text: 'HACS Dokus', link: '/sammlung/hacs-dokus' }
       ]
@@ -335,6 +344,9 @@ const sidebarEn = {
       items: [
         { text: 'Overview', link: '/en/collection/' },
         { text: 'HA Cards', link: '/en/collection/ha-cards' },
+        { text: 'HA Integrations', link: '/en/collection/ha-integrations' },
+        { text: 'HA Blueprints', link: '/en/collection/ha-blueprints' },
+        { text: 'HA Tools', link: '/en/collection/ha-tools' },
         { text: 'HA Apps', link: '/en/collection/ha-apps' },
         { text: 'HACS Docs', link: '/en/collection/hacs-docs' }
       ]

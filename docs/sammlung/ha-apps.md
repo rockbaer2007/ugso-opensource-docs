@@ -1,10 +1,10 @@
 ---
-title: HA Apps
-description: Home-Assistant-Apps, Add-ons und MQTT-Projekte in der UGSo-OpenSource-Sammlung.
+title: HA Apps und Add-ons
+description: Home-Assistant-Add-ons, Apps und MQTT-Bruecken in der UGSo-OpenSource-Sammlung.
 ---
-# HA Apps
+# HA Apps und Add-ons
 
-Dieser Bereich sammelt Home-Assistant-Apps, Add-ons und MQTT-Projekte.
+Dieser Bereich sammelt Home-Assistant-Add-ons, Apps, MQTT-Bruecken und laufende Dienste.
 
 ## Vorhandene Projekte
 
@@ -13,8 +13,6 @@ Dieser Bereich sammelt Home-Assistant-Apps, Add-ons und MQTT-Projekte.
 | [FRITZ!Box to MQTT](/projects/fritzbox-to-mqtt/) | FRITZ!Box-Daten per MQTT Discovery in Home Assistant. |
 | [Heizöl to MQTT](/projects/heizoel-to-mqtt/) | Heizölpreise per MQTT Discovery in Home Assistant. |
 | [Parcel to MQTT](/projects/parcel-to-mqtt/) | Paketverfolgung per MQTT Discovery in Home Assistant. |
-| [Ultimate Timer](/projects/ultimate-timer/) | Home-Assistant-Blueprint für wiederverwendbare Timer. |
-| [HADash](/projects/hadash/) | Werkzeug zum Einlesen, Bearbeiten und Exportieren von Home-Assistant-Dashboards. |
 
 ## Add-on-Repository
 

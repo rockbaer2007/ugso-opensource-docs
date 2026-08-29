@@ -69,8 +69,8 @@ footer: false
 <div class="ugso-actions">
   <a class="ugso-button secondary" href="/sammlung/">Sammlung öffnen</a>
   <a class="ugso-button secondary" href="/sammlung/ha-cards">HA Cards</a>
-  <a class="ugso-button secondary" href="/sammlung/ha-apps">HA Apps</a>
-  <a class="ugso-button secondary" href="/sammlung/hacs-dokus">HACS Dokus</a>
+  <a class="ugso-button secondary" href="/sammlung/ha-integrationen">HA Integrationen</a>
+  <a class="ugso-button secondary" href="/sammlung/ha-tools">HA Tools</a>
 </div>
 
 <p class="ugso-intro">
