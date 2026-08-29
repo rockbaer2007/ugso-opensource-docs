@@ -120,3 +120,97 @@ forge:
 
 !!! note
     `text` prueft den gesamten Textinhalt inklusive Kind-Elementen. Dadurch kann ein Treffer auch entstehen, wenn der sichtbare Text aus mehreren DOM-Knoten zusammengesetzt ist.
+
+## `replace_text` als String
+
+Wenn `replace_text` ein String ist, wird dieser String als regulaerer Ausdruck gesucht und durch einen leeren Wert ersetzt.
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".event"
+      actions:
+        replace_text: "^Home Assistant: "
+```
+
+## `replace_text` mit `find` und `replace`
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".event"
+      actions:
+        replace_text:
+          find: "Birthday"
+          replace: "Geburtstag"
+```
+
+## Attribute setzen
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".calendar-event"
+      text: "Arzt"
+      actions:
+        add_attribute:
+          - attribute: data-kind
+            value: appointment
+          - attribute: aria-label
+            value: Termin
+```
+
+## Klassen kombinieren
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".row"
+      text: "Warnung|Fehler|Alarm"
+      actions:
+        add_class:
+          - important-row
+        remove_class:
+          - muted-row
+```
+
+## Mit UIX-Styling verbinden
+
+Der Search Spark ist oft nur der erste Schritt. Danach werden die gesetzten Klassen mit UIX gestylt.
+
+```yaml
+uix:
+  style: |
+    .important-row {
+      color: var(--error-color);
+      font-weight: 600;
+    }
+    [data-kind="appointment"] {
+      border-left: 3px solid var(--accent-color);
+      padding-left: 8px;
+    }
+```
+
+## Hinweise zu RegEx
+
+`text` und `replace_text` verwenden regulaere Ausdruecke. Sonderzeichen wie `.` oder `[` haben deshalb eine besondere Bedeutung und muessen bei Bedarf escaped werden.
+
+| Gewuenscht | Beispiel |
+| --- | --- |
+| Enthält Wort | `Fenster` |
+| Anfang des Textes | `^Fenster` |
+| Ende des Textes | `offen$` |
+| Mehrere Begriffe | `Fenster|Tuer|Tor` |
+| Punkt als Zeichen | `\\.` |
+
+## Performance
+
+Suche nicht unnoetig im gesamten Elementbaum. Ein genauer `for`-Container und ein enger `query`-Selektor sind schneller und stabiler.

@@ -285,3 +285,151 @@ element:
   type: heading
   heading: Zuhause
 ```
+
+## Positionierung und Lesbarkeit
+
+Hintergruende liegen hinter dem eigentlichen Element. Wenn Text oder Icons schlecht lesbar sind, kombiniere Bild, Deckkraft und Overlay-Farbe.
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      image_url: /local/backgrounds/room.jpg
+      background:
+        size: cover
+        position: center
+      opacity: 0.45
+element:
+  type: tile
+  entity: sensor.room_status
+uix:
+  style: |
+    ha-card {
+      color: var(--white-color);
+      text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    }
+```
+
+## Kamera-Zoom und Pan
+
+Bei Live-Kameras kannst du Ausschnitt und Fokus steuern.
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      camera_entity: camera.driveway
+      camera_zoom: 1.6
+      camera_pan_x: "-8%"
+      camera_pan_y: "4%"
+      camera_position: center
+      opacity: 0.5
+```
+
+## Mehrere Hintergruende
+
+Wenn du mehrere Background Sparks nutzt, entscheidet die Reihenfolge und das CSS der Container. Meist ist ein einzelner Spark mit CSS-Shorthand klarer.
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      background: "linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.15)), url('/local/backgrounds/night.jpg') center / cover no-repeat"
+```
+
+## Typische Probleme
+
+| Problem | Ursache | Loesung |
+| --- | --- | --- |
+| Bild sichtbar, Text schlecht lesbar | Hintergrund zu hell oder zu kontrastreich | `opacity`, `text-shadow` oder dunkles Gradient nutzen |
+| Hintergrund nicht sichtbar | Zielkarte hat eigenen Hintergrund | `dissolve_target` auf `background` setzen |
+| Kamera startet langsam | Stream wird neu aufgebaut | `camera_stream_cache_ms` erhoehen |
+| Bild falsch zugeschnitten | `background-size` oder Position fehlt | `background.size` und `background.position` setzen |
+| Medienbibliothek funktioniert nicht | URI falsch | `media-source://media_source/local/...` pruefen |
+
+## Template-Quellen
+
+Hintergrundquellen koennen aus States oder Attributen kommen.
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      image_url: "&#123;&#123; state_attr('sensor.current_room', 'background') | default('/local/backgrounds/default.jpg') &#125;&#125;"
+      background:
+        size: cover
+        position: center
+```
+
+## Wann nicht verwenden?
+
+Nutze den Background Spark nicht fuer rein dekorative Ueberladung. Er ist am staerksten, wenn der Hintergrund echte Information traegt, zum Beispiel Kamera, Raumfoto, Coverbild oder klarer Zustandskontrast.
+
+## Kombination mit Sections
+
+Bei Sections sollte der Hintergrund dezent bleiben, weil Sections oft mehrere Karten zusammenfassen.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: section
+  sparks:
+    - type: background
+      image_url: /local/backgrounds/living-room-wide.jpg
+      background:
+        size: cover
+        position: center
+      opacity: 0.2
+element:
+  type: heading
+  heading: Wohnzimmer
+```
+
+## Kombination mit Lock Spark
+
+Ein Hintergrund kann zusammen mit einem Lock Spark genutzt werden. Die Reihenfolge ist wichtig, wenn beide Sparks denselben Bereich betreffen.
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      image_url: /local/backgrounds/garage.jpg
+      opacity: 0.35
+    - type: lock
+      locks:
+        - confirmation: Garagentor bedienen?
+          admins: true
+```
+
+## Kamera-Cache verstehen
+
+`camera_stream_cache_ms` hält einen entfernten Kamera-Stream kurzzeitig verbunden. Dadurch muss Home Assistant beim erneuten Aufbau nicht sofort einen neuen Stream aushandeln.
+
+| Wert | Wirkung |
+| --- | --- |
+| `0` | Kein Cache |
+| `5000` | Kurzer Cache für schnelle Re-Renders |
+| `20000` | Standardwert |
+| `60000` | Längerer Cache für langsame Views oder Tabs |
+
+Ein längerer Cache kann flüssiger wirken, hält aber den Stream länger aktiv.
+
+## Hintergrund über CSS-Variablen
+
+Du kannst Hintergrundwerte auch über Theme-Variablen oder UIX-Variablen steuern.
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      background:
+        color: var(--uix-room-background, var(--card-background-color))
+```
+
+```yaml
+uix:
+  style: |
+    :host {
+      --uix-room-background: rgba(25, 118, 210, 0.12);
+    }
+```

@@ -258,3 +258,113 @@ element:
     - device_tracker.phone
     - zone.home
 ```
+
+## `memory` im Detail
+
+`memory` verhindert, dass die Karte bei jedem Home-Assistant-Update auf den urspruenglichen Ausschnitt zurueckspringt.
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      memory: true
+```
+
+Das ist besonders nuetzlich, wenn viele Tracker aktualisiert werden oder wenn die Karte in einer Live-Ansicht lange offen bleibt.
+
+## `fit_map` im Detail
+
+`fit_map` passt die Karte an alle sichtbaren Entities an, sobald die Map sichtbar ist. Das hilft bei Karten, die beim Laden in Tabs, Expandern oder Conditional Cards versteckt sind.
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      fit_map: true
+```
+
+## Tour mit Entity- und Koordinatenpunkten
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      tour:
+        period: 15s
+        zoom: 14
+        poi:
+          - entity: person.max
+          - entity: device_tracker.car
+            zoom: 16
+          - latitude: 50.356
+            longitude: 7.589
+            zoom: 13
+```
+
+Entity-POIs muessen in der `entities`-Liste der `map`-Karte stehen, damit Home Assistant sie kennt.
+
+## Slider positionieren
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      hours_to_show:
+        min: 0
+        max: 72
+        step: 6
+        position:
+          bottom: 12
+          left: 12
+```
+
+## Filter ohne Label
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      entity_filter:
+        label: ""
+        icon: mdi:filter
+        position:
+          top: 12
+          right: 12
+```
+
+## Filtergruppen deutsch benennen
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      entity_filter:
+        group:
+          persons: Personen
+          trackers: Geraete
+          zones: Zonen
+```
+
+## Styling-Beispiel fuer alle Overlays
+
+```yaml
+uix:
+  style: |
+    :host {
+      --uix-map-tour-icon-background: var(--card-background-color);
+      --uix-map-slider-background: var(--card-background-color);
+      --uix-map-entity-filter-background: var(--card-background-color);
+      --uix-map-slider-box-shadow: var(--ha-card-box-shadow);
+      --uix-map-entity-filter-box-shadow: var(--ha-card-box-shadow);
+    }
+```
+
+## Hinweise
+
+| Funktion | Wann sinnvoll |
+| --- | --- |
+| `memory` | Wenn Nutzer manuell zoomen oder verschieben |
+| `fit_map` | Wenn die Karte beim Laden versteckt ist |
+| `tour` | Fuer Uebersichten mehrerer Personen, Fahrzeuge oder Orte |
+| `hours_to_show` | Fuer Tracker-Verlauf direkt in der Karte |
+| `entity_filter` | Wenn viele Entities in einer Map liegen |

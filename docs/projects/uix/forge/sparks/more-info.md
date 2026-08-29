@@ -124,3 +124,72 @@ cards:
       entity: light.living_room
       name: Wohnzimmer
 ```
+
+## Nur Details anzeigen
+
+Mit `info: false` und `details: true` blendest du den Hauptbereich aus und zeigst nur den Detailsbereich.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: more-info
+      after: hui-tile-card
+      entity: climate.living_room
+      info: false
+      details: true
+element:
+  type: tile
+  entity: climate.living_room
+```
+
+## Andere Entity als die Karte
+
+Der Spark kann eine andere Entity anzeigen als das erzeugte Element.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: more-info
+      after: hui-tile-card
+      entity: sensor.energy_today
+element:
+  type: tile
+  entity: light.living_room
+```
+
+## Mit Template-Entity
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  billets:
+    details_entity: sensor.outdoor_temperature
+  sparks:
+    - type: more-info
+      after: hui-tile-card
+      entity: "&#123;&#123; details_entity &#125;&#125;"
+      details: true
+element:
+  type: tile
+  entity: sensor.outdoor_temperature
+```
+
+## Layout-Tipps
+
+| Ziel | Einstellung |
+| --- | --- |
+| Detailsbereich begrenzen | `--uix-more-info-details-max-height` setzen |
+| Nur Details zeigen | `info: false`, `details: true` |
+| Abstand reduzieren | Padding-Variablen anpassen |
+| More-info nach einer Karte anzeigen | `after` auf das Kartenelement setzen |
+
+## Fehlerquellen
+
+- Wenn keine Entity gefunden wird, pruefe `entity` oder `element.entity`.
+- Wenn der Inhalt an falscher Stelle erscheint, setze `after` oder `before` explizit.
+- Wenn Details zu gross werden, begrenze die Hoehe mit `--uix-more-info-details-max-height`.

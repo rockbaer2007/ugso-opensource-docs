@@ -106,3 +106,56 @@ element:
   type: tile
   entity: person.max
 ```
+
+## Farbe
+
+`color` kann Home Assistants State-Farbe nutzen oder eine feste Farbe setzen.
+
+```yaml
+forge:
+  sparks:
+    - type: state-badge
+      after: hui-tile-card $ ha-tile-icon
+      entity: binary_sensor.motion
+      color: state
+```
+
+```yaml
+forge:
+  sparks:
+    - type: state-badge
+      after: hui-tile-card $ ha-tile-icon
+      entity: sensor.energy_today
+      color: green
+```
+
+Mit `color: none` bleibt die normale Darstellung ohne aktive Faerbung erhalten.
+
+## Unterschied zu Overlay Icon
+
+| Bedarf | Geeigneter Spark |
+| --- | --- |
+| Natives Home-Assistant-State-Badge | `state-badge` |
+| Kleines Icon als Overlay | `overlay-icon` |
+| Bild oder Icon frei positionieren | `overlay-icon` |
+| Entity-Picture wie Home Assistant anzeigen | `state-badge` |
+
+## Mit Blank Card
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: state-badge
+      after: uix-forge-blank-card $ div.content
+      entity: sensor.outdoor_temperature
+element:
+  type: custom:uix-forge-blank-card
+```
+
+## Fehlerquellen
+
+- `entity` ist Pflicht, auch wenn `override_icon` oder `override_image` gesetzt ist.
+- Genau einer von `after` und `before` sollte gesetzt sein.
+- Wenn das Badge nicht sichtbar ist, pruefe den DOM-Pfad und ob das Referenzelement vorhanden ist.

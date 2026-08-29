@@ -55,3 +55,63 @@ Wichtig fuer eine externe Uebersetzung:
 - Bei neuen UIX-Releases muss die Uebersetzung nachgezogen werden, damit Nutzer keine veralteten Informationen fuer aktuell halten.
 
 Der Registrierungsweg fuer externe Uebersetzungen ist in der offiziellen Dokumentation beschrieben: [External documentation translations](https://uix.lf.technology/contributing/#external-documentation-translations).
+
+## Hinweise fuer Dokumentationsuebersetzer
+
+Externe Uebersetzungen sollten sich am aktuellen Originalstand orientieren. Bei UIX ist das besonders wichtig, weil viele Beispiele direkt Home-Assistant-YAML enthalten und kleine Unterschiede das Verhalten aendern koennen.
+
+Empfohlenes Vorgehen:
+
+1. Original-Repository aktualisieren.
+2. Aenderungen der Dokumentation seit der letzten uebersetzten Version pruefen.
+3. Neue oder geaenderte Seiten uebersetzen.
+4. Beispiele mit dem Original vergleichen.
+5. Lokalen Build ausfuehren.
+6. Versionshinweis und Link zur englischen Originalseite pruefen.
+
+## Version und Originalquelle
+
+Eine externe Uebersetzung sollte sichtbar zeigen:
+
+- fuer welche UIX-Version sie gepflegt wurde
+- dass sie eine inoffizielle Uebersetzung ist
+- wo die englische Originaldokumentation liegt
+- wann die Uebersetzung zuletzt aktualisiert wurde
+
+So koennen Nutzer bei Unsicherheit schnell gegen die Originaldokumentation pruefen.
+
+## Bilder und Animationen
+
+Das UIX-Projekt erzeugt viele Bilder und Animationen aus seinem eigenen visuellen Test- und Dokumentationsworkflow. Eine externe Uebersetzung sollte diese Assets nicht unnoetig duplizieren.
+
+Wenn Bilder benoetigt werden, sind diese Wege sinnvoll:
+
+- Originalbilder extern verlinken, wenn das Projekt es erlaubt.
+- Eigene Bilder klar als Beispiele der Uebersetzung kennzeichnen.
+- Keine veralteten Screenshots verwenden, wenn sich die UIX-Oberflaeche geaendert hat.
+
+## Abgleich mit neuen Releases
+
+Bei neuen Minor-Versionen sollte die Uebersetzung neu geprueft werden. Besonders kritisch sind:
+
+- neue Konfigurationsoptionen
+- geaenderte YAML-Beispiele
+- neue Sparks oder Forge-Funktionen
+- geaenderte Theme-Variablen
+- Hinweise zu Breaking Changes
+
+## Pull-Request-Grenze
+
+Fuer die Registrierung einer externen Uebersetzung soll im UIX-Hauptrepository nur die dafuer vorgesehene Registrierungsdatei geaendert werden. Die eigentliche deutsche Dokumentation bleibt im eigenen Repository.
+
+## Was nicht in einen normalen Beitrag sollte
+
+Bitte vermeide bei Beitraegen zum Originalprojekt:
+
+- automatisch gebaute Dateien, die beim Release erzeugt werden
+- doppelte Bilder oder Animationen ohne klaren Grund
+- grosse Formatierungsaenderungen ohne fachliche Aenderung
+- Uebersetzungsdateien direkt im Hauptrepository, wenn der externe Uebersetzungsweg vorgesehen ist
+- Beispiele, die nicht mit dem aktuellen UIX-Verhalten getestet wurden
+
+Damit bleiben Pull Requests kleiner und fuer Maintainer leichter pruefbar.

@@ -176,3 +176,71 @@ element:
   type: custom:template-entity-row
   entity: sensor.front_door_status
 ```
+
+## Positionierung
+
+`icon_position` nimmt Zahlen oder CSS-Werte. Zahlen werden als Pixel interpretiert.
+
+```yaml
+icon_position:
+  top: 4
+  right: 4
+```
+
+Mit CSS-Werten:
+
+```yaml
+icon_position:
+  bottom: "0.25rem"
+  left: "calc(100% - 18px)"
+```
+
+Wenn du zusaetzlich `--uix-overlay-icon-position` setzt, wird diese CSS-Translation mit `icon_position` kombiniert.
+
+## Entity-Farbe
+
+```yaml
+forge:
+  sparks:
+    - type: overlay-icon
+      entity: binary_sensor.motion
+      color: state
+```
+
+`color: none` deaktiviert die automatische State-Farbe. Mit `icon_color` setzt du eine feste Farbe.
+
+```yaml
+forge:
+  sparks:
+    - type: overlay-icon
+      entity: binary_sensor.motion
+      color: none
+      icon_color: var(--primary-text-color)
+```
+
+## Bild-Overlay
+
+```yaml
+forge:
+  sparks:
+    - type: overlay-icon
+      image_url: /local/icons/package.png
+      icon_position:
+        top: -6
+        right: -6
+```
+
+## Typische Overlay-Muster
+
+| Muster | Konfiguration |
+| --- | --- |
+| Kleines Badge auf Tile-Icon | `for: hui-tile-card $ ha-tile-icon`, `icon_size: 12` |
+| Warnsymbol auf Karte | `for: element`, `icon: mdi:alert`, `icon_background: var(--error-color)` |
+| State-Marker | `entity` plus `color: state` |
+| Bildmarker | `image_url` plus CSS-Variablen fuer Groesse und Hintergrund |
+
+## Fehlerquellen
+
+- Wenn `entity` gesetzt ist, werden `icon` und `image_url` ignoriert.
+- Wenn das Overlay hinter anderen Elementen liegt, erhoehe `--uix-overlay-icon-z-index`.
+- Wenn `right` oder `bottom` nicht wie erwartet wirken, teste zuerst mit `top` und `left`.

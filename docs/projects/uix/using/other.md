@@ -16,3 +16,22 @@ Wichtig ist immer, das DOM-Ziel zu prüfen und den passenden UIX-Kontext zu wäh
 - Für dynamische Werte: Jinja2-Templates, Makros oder Billets.
 
 Wenn ein Element nicht zuverlässig gefunden wird, prüfe zuerst [DOM-Navigation](../concepts/dom), Lade-Reihenfolge und mögliche Shadow-Root-Grenzen.
+
+## Häufige Zielbereiche
+
+| Bereich | Möglicher UIX-Kontext |
+| --- | --- |
+| Dialoge | `uix-dialog` oder passende Dialog-spezifische Regeln |
+| Konfigurationsseiten | `uix-config` |
+| Sidebar | Theme- oder Panel-Kontext |
+| Toasts und Hinweise | passender Frontend-Kontext, abhängig vom DOM |
+| Kalender und To-do | Karten- oder Panel-Kontext |
+
+Nicht jeder Home-Assistant-Bereich ist gleich stabil. Prüfe daher bei Randfällen immer mit den DOM-Helfern, ob UIX den gewünschten Bereich tatsächlich erreicht.
+
+## Vorgehen bei unbekannten Elementen
+
+1. Element im Browser-Inspektor auswählen.
+2. `uix_tree($0)` oder `uix_style_path($0)` in der Konsole ausführen.
+3. Den vorgeschlagenen Pfad in einer kleinen Testregel verwenden.
+4. Erst danach komplexes Styling ergänzen.

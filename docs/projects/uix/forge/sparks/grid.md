@@ -169,3 +169,84 @@ element:
 
 !!! note
     Der Grid Spark ersetzt keine komplette Dashboard-Layout-Engine. Er ist fuer das Layout innerhalb des erzeugten Elements gedacht.
+
+## `columns` und `rows` als Kurzform
+
+Zahlen werden als gleich breite Tracks interpretiert.
+
+```yaml
+forge:
+  sparks:
+    - type: grid
+      columns: 3
+      rows: 2
+```
+
+Das entspricht sinngemaess:
+
+```css
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+```
+
+Strings werden direkt als CSS-Wert verwendet:
+
+```yaml
+forge:
+  sparks:
+    - type: grid
+      columns: "minmax(80px, 160px) 1fr auto"
+      rows: "auto minmax(120px, 1fr)"
+```
+
+## `elements` und Reihenfolge
+
+`elements` vergibt `grid-area`-Namen an die direkten Kinder des Zielcontainers. Die Reihenfolge entspricht der DOM-Reihenfolge.
+
+```yaml
+forge:
+  sparks:
+    - type: grid
+      areas: '"title actions" "content content"'
+      columns: "1fr auto"
+      elements:
+        - title
+        - actions
+        - content
+```
+
+Wenn weniger Namen als Kinder vorhanden sind, bleiben die restlichen Kinder ohne `grid-area`. Wenn mehr Namen vorhanden sind, werden die ueberzaehligen Namen ignoriert.
+
+## Typische Grid-Werte
+
+| Ziel | Wert |
+| --- | --- |
+| Zwei gleich breite Spalten | `columns: 2` |
+| Icon plus Text | `columns: "40px 1fr"` |
+| Text plus Aktion | `columns: "1fr auto"` |
+| Kompakte Kacheln | `columns: "repeat(auto-fit, minmax(120px, 1fr))"` |
+| Gleichmaessiger Abstand | `gap: 8` |
+| Unterschiedlicher Abstand | `gap: "6px 12px"` |
+
+## Responsive Bereiche
+
+```yaml
+forge:
+  sparks:
+    - type: grid
+      areas: '"title" "content" "actions"'
+      columns: 1
+      media_queries:
+        - query: "(min-width: 900px)"
+          areas: '"title actions" "content content"'
+          columns: "1fr auto"
+```
+
+## Fehlerquellen
+
+| Problem | Ursache | Loesung |
+| --- | --- | --- |
+| Grid wirkt nicht | `for` trifft kein Container-Element | DOM mit Inspektor pruefen |
+| Kinder bleiben untereinander | Zielcontainer hat keine direkten Kinder | Einen tieferen Container waehlen |
+| Bereiche passen nicht | `areas` und `elements` stimmen nicht zusammen | DOM-Reihenfolge pruefen |
+| Mobile Ansicht zu eng | Feste Spalten | `media_queries` oder `minmax()` nutzen |

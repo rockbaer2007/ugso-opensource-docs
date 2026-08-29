@@ -75,3 +75,43 @@ Nutze die Option, wenn Dialog-Styles manchmal nicht greifen, erst nach erneutem 
 ::: warning
 Die Verzögerung kann sichtbar sein, wenn sehr starke Dialog-Styles angewendet werden. Aktiviere sie nur, wenn sie ein echtes Timing-Problem löst.
 :::
+
+## Reihenfolge der Einstellungen
+
+UIX kann Dialog Styling Delay aus mehreren Quellen erhalten. Entscheidend ist die konkrete Browser-Session.
+
+| Quelle | Wirkung |
+| --- | --- |
+| Integrations-UI | Globaler Standard für alle Browser |
+| `setDialogApplyAfterShowOverride(true)` | Aktiviert Delay nur für diese Browser-Session |
+| `setDialogApplyAfterShowOverride(false)` | Deaktiviert Delay nur für diese Browser-Session |
+| `setDialogApplyAfterShowOverride(null)` | Entfernt den Session-Override und nutzt wieder den globalen Standard |
+
+Der Override ist besonders nützlich für Wandtablets oder Companion-App-Sessions, wenn nur ein Gerät Timing-Probleme zeigt.
+
+## Typische Dialoge
+
+| Dialogtyp | Wann Delay helfen kann |
+| --- | --- |
+| More-info | Inhalte werden erst nach Öffnung vollständig montiert |
+| Browser-Mod-Dialog | Custom-Inhalte erscheinen verzögert |
+| Adaptive Dialoge | Layout ändert sich während der Öffnungsanimation |
+| Custom-Card-Dialoge | Interne Shadow Roots entstehen erst nach dem ersten Render |
+
+## Testablauf
+
+1. Dialog ohne Delay öffnen und prüfen, ob UIX-Styling direkt greift.
+2. Delay global oder per Browser-Override aktivieren.
+3. Home Assistant im Browser hart neu laden.
+4. Dialog erneut öffnen und vergleichen.
+5. Wenn nur ein Gerät betroffen ist, global wieder deaktivieren und den Browser-Override nutzen.
+
+## Rückgängig machen
+
+Global wird die Option wieder in der Integrations-UI deaktiviert. Ein lokaler Override wird so entfernt:
+
+```js
+window.uixCoordinator.setDialogApplyAfterShowOverride(null)
+```
+
+Danach gilt wieder der globale Wert aus der Integration.

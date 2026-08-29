@@ -352,3 +352,39 @@ uix_forge_path($0)
 ::: warning
 Wenn du ein Spark-Element desselben Typs hinzufügst, zum Beispiel ein Tile-Icon **before** `ha-tile-icon`, achte besonders auf die Dokumentation dieses Sparks. Der Pfad muss spezifisch genug sein, damit UIX bei Updates nicht das Spark-Element selbst auswählt.
 :::
+
+## Tipps für stabile DOM-Pfade
+
+- Beginne mit dem nächsten stabilen Home-Assistant-Element, nicht mit tiefen zufälligen Klassen.
+- Nutze `$`, wenn du bewusst in einen Shadow Root wechselst.
+- Vermeide automatisch erzeugte Klassen oder IDs, wenn sie sich bei Updates ändern können.
+- Prüfe Custom Cards nach Updates erneut, wenn interne Markup-Strukturen geändert wurden.
+- Nutze `uix_forge_path($0)` für Spark-Ziele, weil Spark-Pfade vom Forge-Element aus gedacht sind.
+
+## Unterschied zwischen Style-Pfad und Forge-Pfad
+
+| Helfer | Gedacht für | Ergebnis |
+| --- | --- | --- |
+| `uix_style_path($0)` | normales UIX-Styling | YAML-Grundgerüst für `uix:` oder Theme-Variablen |
+| `uix_forge_path($0)` | Spark-Konfiguration | Pfad für `for`, `before` oder `after` |
+| `uix_tree($0)` | Übersicht und Fehlersuche | Eltern, Kinder und verfügbare Selektoren |
+
+Ein Style-Pfad und ein Forge-Pfad können ähnlich aussehen, starten aber in unterschiedlichen Kontexten. Verwende deshalb immer den Helfer, der zur geplanten Konfiguration passt.
+
+## Wenn ein Selektor nichts findet
+
+1. Prüfe, ob das Element erst später gerendert wird.
+2. Prüfe, ob ein Shadow Root mit `$` übersprungen werden muss.
+3. Prüfe, ob der Pfad vom richtigen UIX-Parent startet.
+4. Teste eine einfache sichtbare Regel wie `outline`.
+5. Erzeuge den Pfad erneut mit dem passenden Browser-Helfer.
+
+```yaml
+uix:
+  style:
+    "hui-tile-card $ ha-tile-icon":
+      ".": |
+        outline: 2px solid red;
+```
+
+Wenn diese Regel wirkt, ist der Pfad korrekt und du kannst das eigentliche Styling einsetzen.

@@ -80,3 +80,51 @@ Nutze Throttling bei Dashboards mit vielen Karten, vielen schnell wechselnden Se
 ::: warning
 Ein zu großes Intervall kann Anzeigen träge wirken lassen. Starte konservativ, zum Beispiel mit 200 bis 500 ms, und prüfe die Bedienung danach im Alltag.
 :::
+
+## Reihenfolge der Einstellungen
+
+| Quelle | Wirkung |
+| --- | --- |
+| Integrations-UI | Globaler Standard für alle Browser |
+| `setThrottleOverride(500)` | Setzt das Intervall für diese Browser-Session auf 500 ms |
+| `setThrottleOverride(null)` | Entfernt den Session-Override und nutzt wieder den globalen Standard |
+
+Der Session-Override eignet sich für Geräte mit schwacher Hardware, etwa ältere Tablets, ohne schnelle Desktop-Browser unnötig zu bremsen.
+
+## Was nicht gedrosselt wird
+
+Frontend States Throttling betrifft nur die Verarbeitung im Browser.
+
+- Home-Assistant-States im Backend werden normal aktualisiert.
+- Automationen laufen unverändert.
+- MQTT, Recorder, History und Template-Sensoren werden nicht gebremst.
+- Services werden weiterhin sofort ausgeführt.
+
+Gedrosselt wird nur, wie oft das Frontend State-Änderungen an UI-Elemente weitergibt und dadurch Re-Renders auslöst.
+
+## Geeignete Intervalle
+
+| Intervall | Einsatz |
+| --- | --- |
+| `50` bis `150` ms | Sehr leichte Drosselung, kaum sichtbar |
+| `200` bis `500` ms | Gute Startwerte für große Dashboards |
+| `1000` ms | Für Wanddisplays mit vielen Sensoren |
+| Über `1000` ms | Nur testen, wenn Trägheit akzeptabel ist |
+
+## Beispiele für problematische Dashboards
+
+- viele Energie-, Leistungs- oder Wetter-Sensoren mit schnellen Updates
+- große Karten wie Map, History, ApexCharts oder Auto-Entities
+- mehrere Tabs/Views auf schwacher Tablet-Hardware
+- viele Template-Ausdrücke in UIX-Styles
+- viele Karten mit häufig aktualisierten Entities
+
+## Prüfen, ob es hilft
+
+1. Dashboard ohne Throttling öffnen.
+2. Browser-Performance oder sichtbares Ruckeln beobachten.
+3. Throttling mit 200 ms aktivieren.
+4. Dashboard neu laden.
+5. Schrittweise auf 500 ms oder 1000 ms erhöhen, wenn es noch ruckelt.
+
+Wenn wichtige Anzeigen zu langsam reagieren, reduziere das Intervall wieder oder nutze einen Session-Override nur auf dem betroffenen Gerät.

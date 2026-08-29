@@ -497,3 +497,219 @@ elements:
 
 !!! tip "Visibility"
     Wenn Sichtbarkeit benoetigt wird, pruefe zuerst, ob Home Assistant sie in diesem Kontext direkt unterstuetzt. Forge kann Elemente ausblenden, aber manche Container erwarten trotzdem bestimmte Elementformen.
+
+## Praxis: welche Mold fuer welchen Zweck?
+
+| Ziel | Geeignete Mold | Typischer Einsatz |
+| --- | --- | --- |
+| Normale Dashboard-Karte | `card` | Tile, Entities, Markdown, Map, Custom Cards |
+| Zeile in Entities-Karte | `row` | Entity-Row, Template-Entity-Row, Fold-Entity-Row |
+| Badge im Kopfbereich | `badge` | Entity-Badge, Status-Badge, Shortcut-Badge |
+| Element in Picture-Elements | `picture-element` | Marker, Badge, Button auf Grundriss |
+| Abschnitt in Sections View | `section` | Heading, Grid oder Section-Inhalt |
+| Fester unterer Bereich | `footer` | Schnellaktionen, Navigation, Raumumschalter |
+| Feature in Tile Card | `card-feature` | Toggle, Slider oder andere Feature-Elemente |
+
+Cross-Context-Molds nutzt du nur, wenn Home Assistant ein Element in einem anderen Kontext erwartet als die Karte, die du eigentlich erzeugen moechtest. Das ist maechtig, aber auch empfindlicher gegen Aenderungen im Frontend.
+
+## Komplettes Forge-Beispiel
+
+Dieses Beispiel kombiniert Template, Billets, Sparks und UIX-Styling:
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  grid_options:
+    columns: 8
+    rows: 1
+  billets:
+    entity: light.living_room
+    label: Wohnzimmer
+  sparks:
+    - type: tooltip
+      for: hui-tile-card $ ha-tile-icon
+      content: "&#123;&#123; label &#125;&#125;: &#123;&#123; states(entity) &#125;&#125;"
+    - type: button
+      after: hui-tile-card $ ha-tile-info
+      label: Umschalten
+      entity: "&#123;&#123; entity &#125;&#125;"
+      tap_action:
+        action: toggle
+    - type: overlay-icon
+      for: hui-tile-card $ ha-tile-icon
+      icon: "&#123;&#123; 'mdi:check' if is_state(entity, 'on') else 'mdi:minus' &#125;&#125;"
+      icon_background: "&#123;&#123; 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' &#125;&#125;"
+element:
+  type: tile
+  entity: "&#123;&#123; entity &#125;&#125;"
+  name: "&#123;&#123; label &#125;&#125;"
+uix:
+  style: |
+    ha-card {
+      border: 1px solid var(--divider-color);
+    }
+    ha-button {
+      margin-left: auto;
+    }
+```
+
+## Fehleranzeige und Fehlersuche
+
+Mit `show_error: true` zeigt Forge bei Problemen die Lovelace-Fehlerkarte. Das ist beim Entwickeln hilfreich, weil falsche Molds, ungueltiges YAML oder fehlende Entities sonst nur als verschwundenes Element wirken koennen.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  show_error: true
+element:
+  type: tile
+  entity: sensor.does_not_exist
+```
+
+Nach dem Debuggen kannst du `show_error` wieder entfernen oder auf `false` setzen.
+
+## `hidden` mit Templates
+
+`hidden` kann als Boolean oder Template genutzt werden.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  hidden: "&#123;&#123; not is_state('input_boolean.show_lights', 'on') &#125;&#125;"
+element:
+  type: tile
+  entity: light.living_room
+```
+
+Bei Template-Ausdruecken sollte das Ergebnis klar wahr oder falsch sein. Nutze einfache Bedingungen und Fallbacks.
+
+## `grid_options`
+
+`grid_options` wird an Lovelace weitergegeben, wenn Forge eine Karte erzeugt.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  grid_options:
+    columns: 6
+    rows: 2
+element:
+  type: tile
+  entity: sensor.energy_today
+```
+
+Das beeinflusst die Position und Groesse der Karte in Home Assistants Grid-Layout, nicht das interne Layout der Karte. Fuer internes Layout ist der [Grid Spark](./sparks/grid) gedacht.
+
+## `delayed_hass`
+
+Einige Custom Cards reagieren empfindlich, wenn `hass` sehr frueh gesetzt wird. `delayed_hass` wartet, bis die Karte geladen ist.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  delayed_hass: true
+element:
+  type: custom:apexcharts-card
+  graph_span: 24h
+  series:
+    - entity: sensor.energy_today
+```
+
+Setze diese Option nur, wenn du sie wirklich brauchst, zum Beispiel bei Konsolenfehlern oder fehlerhaft initialisierten Custom Cards.
+
+## Sparks kombinieren
+
+Sparks werden in der Reihenfolge verarbeitet, in der sie in `forge.sparks` stehen. Wenn ein Spark ein Element erzeugt und ein anderer Spark dieses Element verwenden soll, muss der erzeugende Spark vorher stehen.
+
+```yaml
+forge:
+  mold: card
+  sparks:
+    - type: button
+      after: hui-tile-card $ ha-tile-info
+      label: Mehr
+      entity: light.living_room
+      tap_action:
+        action: more-info
+    - type: tooltip
+      for: hui-tile-card $ ha-button
+      content: Details oeffnen
+```
+
+## Forge mit Reihen
+
+`mold: row` erzeugt eine Zeile fuer Karten, die Row-Elemente erwarten.
+
+```yaml
+type: entities
+entities:
+  - type: custom:uix-forge
+    forge:
+      mold: row
+      sparks:
+        - type: tooltip
+          content: Direkte UIX-Zeile
+    element:
+      type: custom:template-entity-row
+      entity: light.living_room
+      name: Wohnzimmer
+```
+
+## Forge mit Badges
+
+`mold: badge` erzeugt ein Badge fuer den Dashboard-Kopfbereich.
+
+```yaml
+badges:
+  - type: custom:uix-forge
+    forge:
+      mold: badge
+      sparks:
+        - type: tooltip
+          content: Haustuerstatus
+    element:
+      type: entity
+      entity: binary_sensor.front_door
+```
+
+## Forge mit Picture-Elements
+
+```yaml
+type: picture-elements
+image: /local/floorplan.png
+elements:
+  - type: custom:uix-forge
+    forge:
+      mold: picture-element
+      sparks:
+        - type: lock
+          locks:
+            - confirmation: Licht schalten?
+    element:
+      type: state-icon
+      entity: light.living_room
+    style:
+      top: 45%
+      left: 55%
+```
+
+## Empfehlungen
+
+- Starte mit einer minimalen Forge-Konfiguration und fuege danach Sparks hinzu.
+- Nutze `show_error: true`, solange du an einer neuen Forge-Struktur arbeitest.
+- Halte DOM-Selektoren so genau wie noetig und so kurz wie moeglich.
+- Verwende Billets fuer Werte, die pro Instanz austauschbar bleiben sollen.
+- Verwende Foundries, sobald du dieselbe Forge-Struktur mehrfach brauchst.
+- Nutze Cross-Context-Molds nur dort, wo Home Assistant wirklich einen anderen Kontext verlangt.
+
+## Verwandte Seiten
+
+- [Foundries](./foundries) fuer wiederverwendbare Forge-Vorlagen.
+- [Sparks](./sparks/) fuer optionale Verhalten.
+- [DOM-Navigation](../concepts/dom) fuer Selektoren mit Shadow-DOM-Wechseln.
+- [Templates](../using/templates) fuer Jinja-Variablen, Makros und Hash-Werte.
