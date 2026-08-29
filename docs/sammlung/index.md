@@ -15,6 +15,7 @@ Der Schwerpunkt liegt auf praktisch nutzbaren Dokus mit Version, Originalquelle,
 | Bereich | Inhalt |
 | --- | --- |
 | [HA Cards](./ha-cards) | Lovelace- und HACS-Karten mit deutscher Anleitung und Beispielen. |
+| [HA Dashboard](./ha-dashboard) | Themes, Layoutideen und visuelle Dashboard-Erweiterungen fuer Home Assistant. |
 | [HA Integrationen](./ha-integrationen) | Custom Integrations und HACS-Integrationen fuer Home Assistant. |
 | [HA Blueprints](./ha-blueprints) | Automations-Blueprints und wiederverwendbare Home-Assistant-Vorlagen. |
 | [HA Tools](./ha-tools) | Externe Werkzeuge rund um Home Assistant, Dashboards und Entwicklung. |

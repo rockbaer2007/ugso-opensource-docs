@@ -13,6 +13,7 @@ External projects are marked as unofficial translations or supplemental document
 | Section | Content |
 | --- | --- |
 | [HA Cards](./ha-cards) | Lovelace and HACS cards with examples. |
+| [HA Dashboard](./ha-dashboard) | Themes, layout ideas and visual dashboard extensions for Home Assistant. |
 | [HA Integrations](./ha-integrations) | Custom integrations and HACS integrations for Home Assistant. |
 | [HA Blueprints](./ha-blueprints) | Automation blueprints and reusable Home Assistant templates. |
 | [HA Tools](./ha-tools) | External tools for Home Assistant, dashboards and development. |

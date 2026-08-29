@@ -21,6 +21,7 @@ const localeSelector = [
 const translatedCollectionRoutes = new Set([
   '/sammlung/',
   '/sammlung/ha-cards',
+  '/sammlung/ha-dashboard',
   '/sammlung/ha-integrationen',
   '/sammlung/ha-blueprints',
   '/sammlung/ha-tools',

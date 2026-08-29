@@ -1,0 +1,19 @@
+---
+title: HA Dashboard
+description: Dashboard-Themes, Layoutideen und visuelle Erweiterungen fuer Home Assistant.
+---
+# HA Dashboard
+
+Dieser Bereich sammelt Themen rund um Home-Assistant-Dashboards, die keine einzelne Card und keine Integration sind.
+
+## Themes
+
+| Projekt | Status | Hinweis |
+| --- | --- | --- |
+| [Frosted Glass Theme](./frosted-glass-theme/) | geprueft | Modernes Home-Assistant-Theme mit Glasoptik, HACS-Installation, card-mod-Abhaengigkeit und Lite-Versionen. |
+
+## Abgrenzung
+
+- Einzelne Lovelace-/HACS-Karten stehen unter [HA Cards](./ha-cards).
+- Integrationen stehen unter [HA Integrationen](./ha-integrationen).
+- Allgemeine externe Beispiele stehen unter [Weitere interessante Beispiele](./weitere-beispiele).

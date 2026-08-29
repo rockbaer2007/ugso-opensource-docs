@@ -7,6 +7,7 @@ const navDe = [
     items: [
       { text: 'Übersicht', link: '/sammlung/' },
       { text: 'HA Cards', link: '/sammlung/ha-cards' },
+      { text: 'HA Dashboard', link: '/sammlung/ha-dashboard' },
       { text: 'HA Integrationen', link: '/sammlung/ha-integrationen' },
       { text: 'HA Blueprints', link: '/sammlung/ha-blueprints' },
       { text: 'HA Tools', link: '/sammlung/ha-tools' },
@@ -37,6 +38,7 @@ const navEn = [
     items: [
       { text: 'Overview', link: '/en/collection/' },
       { text: 'HA Cards', link: '/en/collection/ha-cards' },
+      { text: 'HA Dashboard', link: '/en/collection/ha-dashboard' },
       { text: 'HA Integrations', link: '/en/collection/ha-integrations' },
       { text: 'HA Blueprints', link: '/en/collection/ha-blueprints' },
       { text: 'HA Tools', link: '/en/collection/ha-tools' },
@@ -139,6 +141,7 @@ const sidebarDe = {
       items: [
         { text: 'Übersicht', link: '/sammlung/' },
         { text: 'HA Cards', link: '/sammlung/ha-cards' },
+        { text: 'HA Dashboard', link: '/sammlung/ha-dashboard' },
         { text: 'HA Integrationen', link: '/sammlung/ha-integrationen' },
         { text: 'HA Blueprints', link: '/sammlung/ha-blueprints' },
         { text: 'HA Tools', link: '/sammlung/ha-tools' },
@@ -433,6 +436,7 @@ const sidebarEn = {
       items: [
         { text: 'Overview', link: '/en/collection/' },
         { text: 'HA Cards', link: '/en/collection/ha-cards' },
+        { text: 'HA Dashboard', link: '/en/collection/ha-dashboard' },
         { text: 'HA Integrations', link: '/en/collection/ha-integrations' },
         { text: 'HA Blueprints', link: '/en/collection/ha-blueprints' },
         { text: 'HA Tools', link: '/en/collection/ha-tools' },

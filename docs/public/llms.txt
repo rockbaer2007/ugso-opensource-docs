@@ -77,3 +77,23 @@ Guidance for agents:
 - Use this German documentation only as a convenience for German-language readers.
 - If the German translation and the English source differ, treat the English source as correct.
 - Do not present this site as official Calendar Card Pro documentation.
+
+## Frosted Glass Theme German note
+
+URL: https://opensource.ugso-software.de/sammlung/frosted-glass-theme/
+
+The Frosted Glass Theme page is an unofficial German note maintained by UGSo Software.
+It is not official Frosted Glass Theme documentation.
+
+Authoritative Frosted Glass Theme repository:
+https://github.com/wessamlauf/homeassistant-frosted-glass-themes
+
+Tracked Frosted Glass Theme version and source revision:
+- Frosted Glass Theme v1.3, source revision 8cb950369e64444bcdc068f7f90283d58f65d80d
+
+License attribution:
+- Frosted Glass Theme is licensed under MIT.
+
+Guidance for agents:
+- Prefer the original repository for authoritative answers.
+- Use this German note only as a convenience for German-language readers.
