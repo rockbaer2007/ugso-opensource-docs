@@ -59,6 +59,43 @@ const navEn = [
 ]
 
 const sidebarDe = {
+  '/sammlung/flex-table-card/': [
+    {
+      text: 'flex-table-card',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/sammlung/flex-table-card/' },
+        { text: 'Installation', link: '/sammlung/flex-table-card/installation' },
+        { text: 'Grundlagen', link: '/sammlung/flex-table-card/grundlagen' },
+        { text: 'Datenquellen', link: '/sammlung/flex-table-card/datenquellen' },
+        { text: 'Sortierung', link: '/sammlung/flex-table-card/sortierung' },
+        { text: 'Formatierung', link: '/sammlung/flex-table-card/formatierung' },
+        { text: 'CSS', link: '/sammlung/flex-table-card/css' },
+        { text: 'Header und Footer', link: '/sammlung/flex-table-card/header-footer' },
+        { text: 'Externe Daten', link: '/sammlung/flex-table-card/externe-daten' },
+        { text: 'Aktionen', link: '/sammlung/flex-table-card/aktionen' },
+        { text: 'Paketlisten-Beispiel', link: '/sammlung/flex-table-card/paketliste' },
+        { text: 'Referenz', link: '/sammlung/flex-table-card/referenz' }
+      ]
+    }
+  ],
+
+  '/sammlung/zendure-ha/': [
+    {
+      text: 'Zendure HA',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/sammlung/zendure-ha/' },
+        { text: 'Installation', link: '/sammlung/zendure-ha/installation' },
+        { text: 'Lokales MQTT', link: '/sammlung/zendure-ha/lokales-mqtt' },
+        { text: 'Fuse Group', link: '/sammlung/zendure-ha/fuse-group' },
+        { text: 'Zendure Manager', link: '/sammlung/zendure-ha/manager' },
+        { text: 'Entitäten', link: '/sammlung/zendure-ha/entitaeten' },
+        { text: 'Fehlersuche', link: '/sammlung/zendure-ha/fehlersuche' }
+      ]
+    }
+  ],
+
   '/sammlung/': [
     {
       text: 'Sammlung',
@@ -312,6 +349,26 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/collection/flex-table-card/': [
+    {
+      text: 'flex-table-card',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/collection/flex-table-card/' }
+      ]
+    }
+  ],
+
+  '/en/collection/zendure-ha/': [
+    {
+      text: 'Zendure HA',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/collection/zendure-ha/' }
+      ]
+    }
+  ],
+
   '/en/collection/': [
     {
       text: 'Collection',
