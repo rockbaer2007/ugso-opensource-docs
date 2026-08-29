@@ -5,6 +5,7 @@ const navDe = [
   { text: 'C# Projekte', link: '/projects/' },
   { text: 'MQTT Projekte', link: '/projects-mqtt/' },
   { text: 'Diverse Projekte', link: '/projects-diverse/' },
+  { text: 'UIX Doku', link: '/projects/uix/' },
   {
     text: 'Blog',
     items: [
@@ -159,6 +160,88 @@ const sidebarDe = {
         { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' },
         { text: 'Home Assistant', link: '/projects/atlas/homeassistant' },
         { text: 'Plugin-Doku', link: '/projects/atlas/plugins' }
+      ]
+    }
+  ],
+
+  '/projects/uix/': [
+    {
+      text: 'UIX Deutsch',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/uix/' },
+        { text: 'Schnellstart', link: '/projects/uix/quick-start' },
+        { text: 'FAQ', link: '/projects/uix/faq' },
+        { text: 'Mitwirken', link: '/projects/uix/contributing' }
+      ]
+    },
+    {
+      text: 'UIX Styling',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/uix/using/' },
+        { text: 'Karten', link: '/projects/uix/using/cards' },
+        { text: 'Entitäten', link: '/projects/uix/using/entities' },
+        { text: 'Icons', link: '/projects/uix/using/icons' },
+        { text: 'Bilder', link: '/projects/uix/using/images' },
+        { text: 'Abschnitte', link: '/projects/uix/using/section-backgrounds' },
+        { text: 'Ansichten', link: '/projects/uix/using/view-backgrounds' },
+        { text: 'Templates', link: '/projects/uix/using/templates' },
+        { text: 'Themes', link: '/projects/uix/using/themes' },
+        { text: 'Weitere Optionen', link: '/projects/uix/using/other' }
+      ]
+    },
+    {
+      text: 'UIX Forge',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/uix/forge/' },
+        { text: 'Forge-Referenz', link: '/projects/uix/forge/forge' },
+        { text: 'Foundries', link: '/projects/uix/forge/foundries' },
+        { text: 'Sparks', link: '/projects/uix/forge/sparks/' },
+        { text: 'Tooltip', link: '/projects/uix/forge/sparks/tooltip' },
+        { text: 'Button', link: '/projects/uix/forge/sparks/button' },
+        { text: 'Attribute', link: '/projects/uix/forge/sparks/attribute' },
+        { text: 'Event', link: '/projects/uix/forge/sparks/event' },
+        { text: 'Grid', link: '/projects/uix/forge/sparks/grid' },
+        { text: 'Map', link: '/projects/uix/forge/sparks/map' },
+        { text: 'Lock', link: '/projects/uix/forge/sparks/lock' },
+        { text: 'More-info', link: '/projects/uix/forge/sparks/more-info' },
+        { text: 'Overlay Icon', link: '/projects/uix/forge/sparks/overlay-icon' },
+        { text: 'Background', link: '/projects/uix/forge/sparks/background' },
+        { text: 'Theme', link: '/projects/uix/forge/sparks/theme' },
+        { text: 'Tile Icon', link: '/projects/uix/forge/sparks/tile-icon' },
+        { text: 'State Badge', link: '/projects/uix/forge/sparks/state-badge' },
+        { text: 'Search', link: '/projects/uix/forge/sparks/search' }
+      ]
+    },
+    {
+      text: 'Konzepte & Hilfe',
+      collapsed: false,
+      items: [
+        { text: 'Konzepte', link: '/projects/uix/concepts/' },
+        { text: 'DOM-Konzept', link: '/projects/uix/concepts/dom' },
+        { text: 'Anwendung', link: '/projects/uix/concepts/application' },
+        { text: 'Debugging', link: '/projects/uix/debugging/' },
+        { text: 'Karten debuggen', link: '/projects/uix/debugging/cards' },
+        { text: 'Templates debuggen', link: '/projects/uix/debugging/templates' },
+        { text: 'Cache-Probleme', link: '/projects/uix/debugging/cache' }
+      ]
+    },
+    {
+      text: 'Extras & Entwickler',
+      collapsed: true,
+      items: [
+        { text: 'Extras', link: '/projects/uix/extras/' },
+        { text: 'UIX Actions', link: '/projects/uix/extras/uix-actions' },
+        { text: 'Frontend State Throttling', link: '/projects/uix/extras/frontend-states-throttling' },
+        { text: 'Dialog Styling Delay', link: '/projects/uix/extras/dialog-styling-delay' },
+        { text: 'Hash-Template-Variablen', link: '/projects/uix/extras/hash-template-variable-updates' },
+        { text: 'Icon-Styling deaktivieren', link: '/projects/uix/extras/disable-icon-styling' },
+        { text: 'Entity-Picture-Override', link: '/projects/uix/extras/disable-entity-picture-image-override' },
+        { text: 'Entwickler', link: '/projects/uix/developers/' },
+        { text: 'Karten entwickeln', link: '/projects/uix/developers/cards' },
+        { text: 'Themes entwickeln', link: '/projects/uix/developers/themes' }
       ]
     }
   ],

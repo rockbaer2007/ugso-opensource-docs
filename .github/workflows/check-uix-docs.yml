@@ -1,0 +1,82 @@
+name: Check UIX documentation upstream
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-uix-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout UGSo docs
+        uses: actions/checkout@v4
+
+      - name: Check original UIX docs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          UPSTREAM_REPO: https://github.com/Lint-Free-Technology/uix.git
+          TRACKED_COMMIT_FILE: docs/projects/uix/.upstream-commit
+        run: |
+          set -euo pipefail
+
+          tracked_commit="$(cat "$TRACKED_COMMIT_FILE" | tr -d '[:space:]')"
+          workdir="$(mktemp -d)"
+
+          git clone --filter=blob:none --no-checkout "$UPSTREAM_REPO" "$workdir/uix"
+          git -C "$workdir/uix" fetch origin master
+          git -C "$workdir/uix" fetch origin "$tracked_commit" || true
+
+          latest_commit="$(git -C "$workdir/uix" rev-parse origin/master)"
+
+          if [ "$tracked_commit" = "$latest_commit" ]; then
+            echo "UIX docs are already tracked at the latest upstream commit."
+            exit 0
+          fi
+
+          changed_docs="$(git -C "$workdir/uix" diff --name-only "$tracked_commit" "$latest_commit" -- docs || true)"
+
+          if [ -z "$changed_docs" ]; then
+            echo "UIX repository changed, but no files under docs/ changed."
+            exit 0
+          fi
+
+          title="UIX-Doku pruefen: Originaldoku wurde geaendert"
+          existing_count="$(gh issue list --state open --search "$title in:title" --json number --jq 'length')"
+
+          if [ "$existing_count" != "0" ]; then
+            echo "An open UIX documentation update issue already exists."
+            exit 0
+          fi
+
+          short_tracked="${tracked_commit:0:7}"
+          short_latest="${latest_commit:0:7}"
+          compare_url="https://github.com/Lint-Free-Technology/uix/compare/${tracked_commit}...${latest_commit}"
+
+          {
+            echo "Die englische Originaldokumentation von UIX hat sich seit dem gespeicherten Stand geaendert."
+            echo
+            echo "- Gespeicherter Stand: \`$tracked_commit\`"
+            echo "- Neuer Stand: \`$latest_commit\`"
+            echo "- Vergleich: $compare_url"
+            echo
+            echo "Geaenderte Dateien unter \`docs/\`:"
+            echo
+            echo "\`\`\`text"
+            echo "$changed_docs"
+            echo "\`\`\`"
+            echo
+            echo "Aufgabe:"
+            echo "1. Aenderungen im Original pruefen."
+            echo "2. Deutsche UIX-Doku unter \`docs/projects/uix/\` aktualisieren."
+            echo "3. \`docs/projects/uix/.upstream-commit\` auf den neuen Commit setzen."
+            echo "4. Hinweis auf der UIX-Startseite aktualisieren."
+          } > "$workdir/issue-body.md"
+
+          gh issue create \
+            --title "$title ($short_tracked -> $short_latest)" \
+            --body-file "$workdir/issue-body.md"

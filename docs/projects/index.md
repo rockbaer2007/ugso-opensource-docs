@@ -20,6 +20,16 @@ Der Home Assistant Automation Exporter ist eine portable Windows-Anwendung zum A
 - [Automation Exporter auf GitHub öffnen](https://github.com/rockbaer2007/ha-automation-exporter)
 - [Aktuelles Release v0.3.4 herunterladen](https://github.com/rockbaer2007/ha-automation-exporter/releases/tag/v0.3.4)
 
+## UIX Deutsch
+
+**Unabhängige deutsche UIX-Dokumentation**
+
+Diese Dokumentation ist eine unabhängige deutsche Übersetzung der UIX-Dokumentation. Sie wird im UGSo-OpenSource-Design veröffentlicht und verweist für Originalbilder auf das UIX-Repository.
+
+- [UIX-Dokumentation öffnen](/projects/uix/)
+- [Offizielle UIX-Dokumentation öffnen](https://uix.lf.technology/)
+- [Original-Repository öffnen](https://github.com/Lint-Free-Technology/uix)
+
 ## Weitere Projektbereiche
 
 - [MQTT Projekte öffnen](/projects-mqtt/)
