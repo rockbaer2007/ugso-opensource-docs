@@ -70,7 +70,12 @@ footer: false
   <a class="ugso-button secondary" href="/projects/">C# Projekte</a>
   <a class="ugso-button secondary" href="/projects-mqtt/">MQTT Projekte</a>
   <a class="ugso-button secondary" href="/projects-diverse/">Diverse Projekte</a>
+  <a class="ugso-button secondary" href="/projects/uix/">UIX inoffizielle dt. Doku</a>
 </div>
+
+<p class="ugso-intro">
+  Neu: <a href="/projects/uix/">UIX - inoffizielle deutsche Doku</a>
+</p>
 
 <div class="ugso-badge">🚧 Webseite im Aufbau</div>
 
