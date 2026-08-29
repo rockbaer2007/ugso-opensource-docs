@@ -18,6 +18,7 @@ Der Schwerpunkt liegt auf praktisch nutzbaren Dokus mit Version, Originalquelle,
 | [HA Tools](./ha-tools) | Externe Werkzeuge rund um Home Assistant, Dashboards und Entwicklung. |
 | [HA Apps](./ha-apps) | Add-ons, MQTT-Bruecken und laufende Dienste fuer Home Assistant. |
 | [HACS Dokus](./hacs-dokus) | Sammelbereich fuer externe HACS-Projekte, die nicht klar Card oder Integration sind. |
+| [Weitere interessante Beispiele](./weitere-beispiele) | Externe Community-Beispiele, Gists und Ideen, die bewusst nicht in Projektdokus eingemischt werden. |
 
 ## Separat gepflegt
 

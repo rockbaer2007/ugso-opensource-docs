@@ -18,6 +18,7 @@ External projects are marked as unofficial translations or supplemental document
 | [HA Tools](./ha-tools) | External tools for Home Assistant, dashboards and development. |
 | [HA Apps](./ha-apps) | Add-ons, MQTT bridges and services for Home Assistant. |
 | [HACS Docs](./hacs-docs) | Catch-all section for HACS projects without a better category. |
+| [Interesting Examples](./interesting-examples) | External community examples, gists and ideas kept separate from project documentation. |
 
 ## Separate UIX Link
 

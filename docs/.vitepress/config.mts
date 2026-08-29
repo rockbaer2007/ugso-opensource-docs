@@ -12,6 +12,7 @@ const navDe = [
       { text: 'HA Tools', link: '/sammlung/ha-tools' },
       { text: 'HA Apps', link: '/sammlung/ha-apps' },
       { text: 'HACS Dokus', link: '/sammlung/hacs-dokus' },
+      { text: 'Weitere Beispiele', link: '/sammlung/weitere-beispiele' },
       { text: 'UIX Doku (separat)', link: '/projects/uix/' }
     ]
   },
@@ -41,6 +42,7 @@ const navEn = [
       { text: 'HA Tools', link: '/en/collection/ha-tools' },
       { text: 'HA Apps', link: '/en/collection/ha-apps' },
       { text: 'HACS Docs', link: '/en/collection/hacs-docs' },
+      { text: 'Interesting Examples', link: '/en/collection/interesting-examples' },
       { text: 'UIX Docs (separate)', link: 'https://uix.lf.technology/' }
     ]
   },
@@ -107,7 +109,8 @@ const sidebarDe = {
         { text: 'HA Blueprints', link: '/sammlung/ha-blueprints' },
         { text: 'HA Tools', link: '/sammlung/ha-tools' },
         { text: 'HA Apps', link: '/sammlung/ha-apps' },
-        { text: 'HACS Dokus', link: '/sammlung/hacs-dokus' }
+        { text: 'HACS Dokus', link: '/sammlung/hacs-dokus' },
+        { text: 'Weitere Beispiele', link: '/sammlung/weitere-beispiele' }
       ]
     }
   ],
@@ -380,7 +383,8 @@ const sidebarEn = {
         { text: 'HA Blueprints', link: '/en/collection/ha-blueprints' },
         { text: 'HA Tools', link: '/en/collection/ha-tools' },
         { text: 'HA Apps', link: '/en/collection/ha-apps' },
-        { text: 'HACS Docs', link: '/en/collection/hacs-docs' }
+        { text: 'HACS Docs', link: '/en/collection/hacs-docs' },
+        { text: 'Interesting Examples', link: '/en/collection/interesting-examples' }
       ]
     }
   ],
