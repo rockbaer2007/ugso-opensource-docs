@@ -12,151 +12,456 @@ Die Beispiele sind Forumsausschnitte und können je nach Home-Assistant-Version,
 
 ## 1. Zero padding und farbiger Tabellenrahmen
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-01.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-01.png" alt="1. Zero padding und farbiger Tabellenrahmen" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">- type: custom:auto-entities<br>    filter:<br>      include:<br>        - domain: light<br>    sort:<br>      count: 5<br>    card:<br>      type: custom:flex-table-card<br>      columns:<br>        - &amp;ref_column<br>          name: brightness<br>          data: brightness<br>        - *ref_column<br>      strict: true<br>      css:<br>        table+: &gt;-<br>          border: 1px solid cyan;<br>          padding: 0px;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-01.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-01.png" alt="1. Zero padding und farbiger Tabellenrahmen"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-01">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-01" data-code-b64="LSB0eXBlOiBjdXN0b206YXV0by1lbnRpdGllcwogICAgZmlsdGVyOgogICAgICBpbmNsdWRlOgogICAgICAgIC0gZG9tYWluOiBsaWdodAogICAgc29ydDoKICAgICAgY291bnQ6IDUKICAgIGNhcmQ6CiAgICAgIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICAgICAgY29sdW1uczoKICAgICAgICAtICZyZWZfY29sdW1uCiAgICAgICAgICBuYW1lOiBicmlnaHRuZXNzCiAgICAgICAgICBkYXRhOiBicmlnaHRuZXNzCiAgICAgICAgLSAqcmVmX2NvbHVtbgogICAgICBzdHJpY3Q6IHRydWUKICAgICAgY3NzOgogICAgICAgIHRhYmxlKzogPi0KICAgICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIGN5YW47CiAgICAgICAgICBwYWRkaW5nOiAwcHg7"></code></pre>
+  </div>
+</div>
 
 ## 2. Keine internen Rahmen
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-02.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-02.png" alt="2. Keine internen Rahmen" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: vertical-stack<br>cards:<br>  - type: markdown<br>    content: &#124;<br>      no borders<br>    style: &#124;<br>      ha-card {<br>        color: red;<br>      }<br>  - type: custom:auto-entities<br>    filter:<br>      include:<br>        - domain: light<br>    sort:<br>      count: 5<br>    card:<br>      type: custom:flex-table-card<br>      columns:<br>        - &amp;ref_column<br>          name: hhh<br>          data: brightness<br>          align: center<br>        - *ref_column<br>        - *ref_column<br>      strict: true<br>      css:<br>        table+: &#x27;border-collapse: collapse;&#x27;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-02.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-02.png" alt="2. Keine internen Rahmen"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-02">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-02" data-code-b64="dHlwZTogdmVydGljYWwtc3RhY2sKY2FyZHM6CiAgLSB0eXBlOiBtYXJrZG93bgogICAgY29udGVudDogfAogICAgICBubyBib3JkZXJzCiAgICBzdHlsZTogfAogICAgICBoYS1jYXJkIHsKICAgICAgICBjb2xvcjogcmVkOwogICAgICB9CiAgLSB0eXBlOiBjdXN0b206YXV0by1lbnRpdGllcwogICAgZmlsdGVyOgogICAgICBpbmNsdWRlOgogICAgICAgIC0gZG9tYWluOiBsaWdodAogICAgc29ydDoKICAgICAgY291bnQ6IDUKICAgIGNhcmQ6CiAgICAgIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICAgICAgY29sdW1uczoKICAgICAgICAtICZyZWZfY29sdW1uCiAgICAgICAgICBuYW1lOiBoaGgKICAgICAgICAgIGRhdGE6IGJyaWdodG5lc3MKICAgICAgICAgIGFsaWduOiBjZW50ZXIKICAgICAgICAtICpyZWZfY29sdW1uCiAgICAgICAgLSAqcmVmX2NvbHVtbgogICAgICBzdHJpY3Q6IHRydWUKICAgICAgY3NzOgogICAgICAgIHRhYmxlKzogJ2JvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7Jw=="></code></pre>
+  </div>
+</div>
 
 ## 3. Eigene interne Rahmen: Header und Zellen
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-03.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-03.png" alt="3. Eigene interne Rahmen: Header und Zellen" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 5<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>      align: center<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    table+: &#x27;border-collapse: collapse;&#x27;<br>    th+: &amp;ref_border_style &#x27;border: 1px solid red;&#x27;<br>    td+: *ref_border_style</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-03.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-03.png" alt="3. Eigene interne Rahmen: Header und Zellen"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-03">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-03" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogNQpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogY2VudGVyCiAgICAtICpyZWZfY29sdW1uCiAgICAtICpyZWZfY29sdW1uCiAgc3RyaWN0OiB0cnVlCiAgY3NzOgogICAgdGFibGUrOiAnYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsnCiAgICB0aCs6ICZyZWZfYm9yZGVyX3N0eWxlICdib3JkZXI6IDFweCBzb2xpZCByZWQ7JwogICAgdGQrOiAqcmVmX2JvcmRlcl9zdHlsZQ=="></code></pre>
+  </div>
+</div>
 
 ## 4. Eigene interne Rahmen: nur Tabellenzellen
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-04.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-04.png" alt="4. Eigene interne Rahmen: nur Tabellenzellen" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 5<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>      align: center<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    table+: &#x27;border-collapse: collapse;&#x27;<br>    td+: &#x27;border: 1px solid red;&#x27;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-04.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-04.png" alt="4. Eigene interne Rahmen: nur Tabellenzellen"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-04">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-04" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogNQpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogY2VudGVyCiAgICAtICpyZWZfY29sdW1uCiAgICAtICpyZWZfY29sdW1uCiAgc3RyaWN0OiB0cnVlCiAgY3NzOgogICAgdGFibGUrOiAnYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsnCiAgICB0ZCs6ICdib3JkZXI6IDFweCBzb2xpZCByZWQ7Jw=="></code></pre>
+  </div>
+</div>
 
 ## 5. Eigene interne Rahmen: Zeilenoberkante
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-05.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-05.png" alt="5. Eigene interne Rahmen: Zeilenoberkante" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 5<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>      align: center<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    table+: &#x27;border-collapse: collapse;&#x27;<br>    tbody tr+: &#x27;border-top: 1px solid red;&#x27;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-05.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-05.png" alt="5. Eigene interne Rahmen: Zeilenoberkante"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-05">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-05" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogNQpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogY2VudGVyCiAgICAtICpyZWZfY29sdW1uCiAgICAtICpyZWZfY29sdW1uCiAgc3RyaWN0OiB0cnVlCiAgY3NzOgogICAgdGFibGUrOiAnYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsnCiAgICB0Ym9keSB0cis6ICdib3JkZXItdG9wOiAxcHggc29saWQgcmVkOyc="></code></pre>
+  </div>
+</div>
 
 ## 6. Eigene interne Rahmen: Spaltentrenner
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-06.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-06.png" alt="6. Eigene interne Rahmen: Spaltentrenner" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 5<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>      align: center<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    table+: &#x27;border-collapse: collapse;&#x27;<br>    th:nth-of-type(n+2)+: &amp;ref_border_style &#x27;border-left: 1px solid red;&#x27;<br>    td:nth-of-type(n+2)+: *ref_border_style</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-06.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-06.png" alt="6. Eigene interne Rahmen: Spaltentrenner"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-06">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-06" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogNQpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogY2VudGVyCiAgICAtICpyZWZfY29sdW1uCiAgICAtICpyZWZfY29sdW1uCiAgc3RyaWN0OiB0cnVlCiAgY3NzOgogICAgdGFibGUrOiAnYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsnCiAgICB0aDpudGgtb2YtdHlwZShuKzIpKzogJnJlZl9ib3JkZXJfc3R5bGUgJ2JvcmRlci1sZWZ0OiAxcHggc29saWQgcmVkOycKICAgIHRkOm50aC1vZi10eXBlKG4rMikrOiAqcmVmX2JvcmRlcl9zdHlsZQ=="></code></pre>
+  </div>
+</div>
 
 ## 7. Padding per card_mod wiederherstellen
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-07.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-07.png" alt="7. Padding per card_mod wiederherstellen" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">card_mod:<br>    style: &#124;<br>      div {<br>        padding: 16px;<br>      }</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-07.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-07.png" alt="7. Padding per card_mod wiederherstellen"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-07">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-07" data-code-b64="Y2FyZF9tb2Q6CiAgICBzdHlsZTogfAogICAgICBkaXYgewogICAgICAgIHBhZGRpbmc6IDE2cHg7CiAgICAgIH0="></code></pre>
+  </div>
+</div>
 
 ## 8. Horizontaler Scrollbalken
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-08.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-08.png" alt="8. Horizontaler Scrollbalken" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">- type: custom:auto-entities<br>    filter:<br>      include:<br>        - domain: light<br>    sort:<br>      count: 5<br>    card:<br>      type: custom:flex-table-card<br>      columns:<br>        - &amp;ref_column<br>          name: brightness<br>          data: brightness<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>      strict: true<br>      css:<br>        table+: &#x27;padding: 0px&#x27;<br>      card_mod:<br>        style: &#124;<br>          ha-card {<br>            overflow: auto;<br>          }</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-08.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-08.png" alt="8. Horizontaler Scrollbalken"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-08">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-08" data-code-b64="LSB0eXBlOiBjdXN0b206YXV0by1lbnRpdGllcwogICAgZmlsdGVyOgogICAgICBpbmNsdWRlOgogICAgICAgIC0gZG9tYWluOiBsaWdodAogICAgc29ydDoKICAgICAgY291bnQ6IDUKICAgIGNhcmQ6CiAgICAgIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICAgICAgY29sdW1uczoKICAgICAgICAtICZyZWZfY29sdW1uCiAgICAgICAgICBuYW1lOiBicmlnaHRuZXNzCiAgICAgICAgICBkYXRhOiBicmlnaHRuZXNzCiAgICAgICAgLSAqcmVmX2NvbHVtbgogICAgICAgIC0gKnJlZl9jb2x1bW4KICAgICAgICAtICpyZWZfY29sdW1uCiAgICAgICAgLSAqcmVmX2NvbHVtbgogICAgICAgIC0gKnJlZl9jb2x1bW4KICAgICAgICAtICpyZWZfY29sdW1uCiAgICAgICAgLSAqcmVmX2NvbHVtbgogICAgICAgIC0gKnJlZl9jb2x1bW4KICAgICAgc3RyaWN0OiB0cnVlCiAgICAgIGNzczoKICAgICAgICB0YWJsZSs6ICdwYWRkaW5nOiAwcHgnCiAgICAgIGNhcmRfbW9kOgogICAgICAgIHN0eWxlOiB8CiAgICAgICAgICBoYS1jYXJkIHsKICAgICAgICAgICAgb3ZlcmZsb3c6IGF1dG87CiAgICAgICAgICB9"></code></pre>
+  </div>
+</div>
 
 ## 9. Horizontaler und vertikaler Scrollbalken
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-09.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-09.png" alt="9. Horizontaler und vertikaler Scrollbalken" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">- type: custom:auto-entities<br>    filter:<br>      include:<br>        - domain: light<br>    sort:<br>      count: 13<br>    card:<br>      type: custom:flex-table-card<br>      columns:<br>        - &amp;ref_column<br>          name: brightness<br>          data: brightness<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>      strict: true<br>      css:<br>        table+: &#x27;padding: 0px&#x27;<br>      card_mod:<br>        style: &#124;<br>          ha-card {<br>            overflow: auto;<br>            max-height: 200px;<br>          }</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-09.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-09.png" alt="9. Horizontaler und vertikaler Scrollbalken"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-09">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-09" data-code-b64="LSB0eXBlOiBjdXN0b206YXV0by1lbnRpdGllcwogICAgZmlsdGVyOgogICAgICBpbmNsdWRlOgogICAgICAgIC0gZG9tYWluOiBsaWdodAogICAgc29ydDoKICAgICAgY291bnQ6IDEzCiAgICBjYXJkOgogICAgICB0eXBlOiBjdXN0b206ZmxleC10YWJsZS1jYXJkCiAgICAgIGNvbHVtbnM6CiAgICAgICAgLSAmcmVmX2NvbHVtbgogICAgICAgICAgbmFtZTogYnJpZ2h0bmVzcwogICAgICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICAgIC0gKnJlZl9jb2x1bW4KICAgICAgICAtICpyZWZfY29sdW1uCiAgICAgICAgLSAqcmVmX2NvbHVtbgogICAgICAgIC0gKnJlZl9jb2x1bW4KICAgICAgICAtICpyZWZfY29sdW1uCiAgICAgICAgLSAqcmVmX2NvbHVtbgogICAgICAgIC0gKnJlZl9jb2x1bW4KICAgICAgICAtICpyZWZfY29sdW1uCiAgICAgIHN0cmljdDogdHJ1ZQogICAgICBjc3M6CiAgICAgICAgdGFibGUrOiAncGFkZGluZzogMHB4JwogICAgICBjYXJkX21vZDoKICAgICAgICBzdHlsZTogfAogICAgICAgICAgaGEtY2FyZCB7CiAgICAgICAgICAgIG92ZXJmbG93OiBhdXRvOwogICAgICAgICAgICBtYXgtaGVpZ2h0OiAyMDBweDsKICAgICAgICAgIH0="></code></pre>
+  </div>
+</div>
 
 ## 10. Header: verschiedene Styles
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-10.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-10.png" alt="10. Header: verschiedene Styles" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 2<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>      align: right<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    thead th: &gt;-<br>      background-color: magenta;<br>      text-align: left !important;<br>      font-weight: 300;<br>      border: 1px solid;<br>    thead th:first-child: &gt;-<br>      text-align: center !important;<br>      color: cyan;<br>    thead th:nth-child(2): &gt;-<br>      background-color: lightgreen;<br>    thead th:nth-child(4): &gt;-<br>      background-color: rgba(0,0,255,0.2);<br>    thead th:nth-child(5): &gt;-<br>      background-color: rgb(255,255,255);<br>      color: red;<br>      border-color: cyan;<br>    thead th:last-child: &gt;-<br>      background-color: yellow;<br>      color: orange;<br>      text-align: right !important;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-10.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-10.png" alt="10. Header: verschiedene Styles"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-10">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-10" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogMgpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogcmlnaHQKICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICBzdHJpY3Q6IHRydWUKICBjc3M6CiAgICB0aGVhZCB0aDogPi0KICAgICAgYmFja2dyb3VuZC1jb2xvcjogbWFnZW50YTsKICAgICAgdGV4dC1hbGlnbjogbGVmdCAhaW1wb3J0YW50OwogICAgICBmb250LXdlaWdodDogMzAwOwogICAgICBib3JkZXI6IDFweCBzb2xpZDsKICAgIHRoZWFkIHRoOmZpcnN0LWNoaWxkOiA+LQogICAgICB0ZXh0LWFsaWduOiBjZW50ZXIgIWltcG9ydGFudDsKICAgICAgY29sb3I6IGN5YW47CiAgICB0aGVhZCB0aDpudGgtY2hpbGQoMik6ID4tCiAgICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JlZW47CiAgICB0aGVhZCB0aDpudGgtY2hpbGQoNCk6ID4tCiAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwwLDI1NSwwLjIpOwogICAgdGhlYWQgdGg6bnRoLWNoaWxkKDUpOiA+LQogICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LDI1NSwyNTUpOwogICAgICBjb2xvcjogcmVkOwogICAgICBib3JkZXItY29sb3I6IGN5YW47CiAgICB0aGVhZCB0aDpsYXN0LWNoaWxkOiA+LQogICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB5ZWxsb3c7CiAgICAgIGNvbG9yOiBvcmFuZ2U7CiAgICAgIHRleHQtYWxpZ246IHJpZ2h0ICFpbXBvcnRhbnQ7"></code></pre>
+  </div>
+</div>
 
 ## 11. Header ausblenden
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-11.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-11.png" alt="11. Header ausblenden" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 2<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    thead th: &#x27;display: none;&#x27;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-11.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-11.png" alt="11. Header ausblenden"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-11">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-11" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogMgpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogIHN0cmljdDogdHJ1ZQogIGNzczoKICAgIHRoZWFkIHRoOiAnZGlzcGxheTogbm9uZTsn"></code></pre>
+  </div>
+</div>
 
 ## 12. Header teilweise ausblenden
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-12.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-12.png" alt="12. Header teilweise ausblenden" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 2<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    thead th: &#x27;color: transparent;&#x27;<br>    thead th:first-child: &gt;-<br>      color: unset;<br>      background-color: lightgreen;<br>    thead th:last-child: &gt;-<br>      color: unset;<br>      background-color: yellow;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-12.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-12.png" alt="12. Header teilweise ausblenden"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-12">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-12" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogMgpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogIHN0cmljdDogdHJ1ZQogIGNzczoKICAgIHRoZWFkIHRoOiAnY29sb3I6IHRyYW5zcGFyZW50OycKICAgIHRoZWFkIHRoOmZpcnN0LWNoaWxkOiA+LQogICAgICBjb2xvcjogdW5zZXQ7CiAgICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JlZW47CiAgICB0aGVhZCB0aDpsYXN0LWNoaWxkOiA+LQogICAgICBjb2xvcjogdW5zZXQ7CiAgICAgIGJhY2tncm91bmQtY29sb3I6IHllbGxvdzs="></code></pre>
+  </div>
+</div>
 
 ## 13. Header optisch zusammenfassen
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-13.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-13.png" alt="13. Header optisch zusammenfassen" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 5<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>      align: right<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    table+: &#x27;border-collapse: collapse;&#x27;<br>    th+: &gt;-<br>      border-bottom: 1px solid rgb(127,127,127);<br>      text-align: left !important;<br>    th:nth-of-type(n+2)+: &amp;ref_style_border &gt;-<br>      border-left: 1px solid rgb(127,127,127)<br>    td:nth-of-type(n+2)+: *ref_style_border<br>    th:nth-of-type(2)+: &amp;ref_style_merged_header &gt;-<br>      border-left: none;<br>      color: transparent;<br>    th:nth-of-type(5)+: *ref_style_merged_header<br>  card_mod:<br>    style: &#124;<br>      div {<br>        padding: 16px;<br>      }</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-13.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-13.png" alt="13. Header optisch zusammenfassen"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-13">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-13" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogNQpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogcmlnaHQKICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICBzdHJpY3Q6IHRydWUKICBjc3M6CiAgICB0YWJsZSs6ICdib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlOycKICAgIHRoKzogPi0KICAgICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYigxMjcsMTI3LDEyNyk7CiAgICAgIHRleHQtYWxpZ246IGxlZnQgIWltcG9ydGFudDsKICAgIHRoOm50aC1vZi10eXBlKG4rMikrOiAmcmVmX3N0eWxlX2JvcmRlciA+LQogICAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkIHJnYigxMjcsMTI3LDEyNykKICAgIHRkOm50aC1vZi10eXBlKG4rMikrOiAqcmVmX3N0eWxlX2JvcmRlcgogICAgdGg6bnRoLW9mLXR5cGUoMikrOiAmcmVmX3N0eWxlX21lcmdlZF9oZWFkZXIgPi0KICAgICAgYm9yZGVyLWxlZnQ6IG5vbmU7CiAgICAgIGNvbG9yOiB0cmFuc3BhcmVudDsKICAgIHRoOm50aC1vZi10eXBlKDUpKzogKnJlZl9zdHlsZV9tZXJnZWRfaGVhZGVyCiAgY2FyZF9tb2Q6CiAgICBzdHlsZTogfAogICAgICBkaXYgewogICAgICAgIHBhZGRpbmc6IDE2cHg7CiAgICAgIH0="></code></pre>
+  </div>
+</div>
 
 ## 14. Zeilen: gleiche Hintergrundfarbe
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-14.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-14.png" alt="14. Zeilen: gleiche Hintergrundfarbe" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 5<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>      align: right<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    tbody tr+: &gt;-<br>      background-color: rgba(0,255,0,0.4) !important;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-14.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-14.png" alt="14. Zeilen: gleiche Hintergrundfarbe"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-14">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-14" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogNQpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogcmlnaHQKICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICBzdHJpY3Q6IHRydWUKICBjc3M6CiAgICB0Ym9keSB0cis6ID4tCiAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwyNTUsMCwwLjQpICFpbXBvcnRhbnQ7"></code></pre>
+  </div>
+</div>
 
 ## 15. Zeilen: abwechselnde und einzelne Styles
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-15.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-15.png" alt="15. Zeilen: abwechselnde und einzelne Styles" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 7<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>      align: right<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    tbody tr+: &#x27;color: red&#x27;<br>    tbody tr:nth-child(odd)+: &#x27;background-color: rgba(0,255,0,0.4);&#x27;<br>    tbody tr:nth-child(even)+: &#x27;background-color: rgba(255,255,0,0.4);&#x27;<br>    tbody tr:nth-child(4)+: &gt;-<br>      background-color: orange;<br>      color: blue;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-15.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-15.png" alt="15. Zeilen: abwechselnde und einzelne Styles"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-15">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-15" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogNwpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogcmlnaHQKICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICBzdHJpY3Q6IHRydWUKICBjc3M6CiAgICB0Ym9keSB0cis6ICdjb2xvcjogcmVkJwogICAgdGJvZHkgdHI6bnRoLWNoaWxkKG9kZCkrOiAnYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLDI1NSwwLDAuNCk7JwogICAgdGJvZHkgdHI6bnRoLWNoaWxkKGV2ZW4pKzogJ2JhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LDI1NSwwLDAuNCk7JwogICAgdGJvZHkgdHI6bnRoLWNoaWxkKDQpKzogPi0KICAgICAgYmFja2dyb3VuZC1jb2xvcjogb3JhbmdlOwogICAgICBjb2xvcjogYmx1ZTs="></code></pre>
+  </div>
+</div>
 
 ## 16. Zeilen: Hover-Styling
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-16.gif" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-16.gif" alt="16. Zeilen: Hover-Styling" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 5<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  card_mod:<br>    style: &#124;<br>      tbody tr:hover {<br>        background-color: coral !important;<br>      }</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-16.gif" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-16.gif" alt="16. Zeilen: Hover-Styling"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-16">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-16" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogNQpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogIHN0cmljdDogdHJ1ZQogIGNhcmRfbW9kOgogICAgc3R5bGU6IHwKICAgICAgdGJvZHkgdHI6aG92ZXIgewogICAgICAgIGJhY2tncm91bmQtY29sb3I6IGNvcmFsICFpbXBvcnRhbnQ7CiAgICAgIH0="></code></pre>
+  </div>
+</div>
 
 ## 17. Spalten: verschiedene Styles
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-17.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-17.png" alt="17. Spalten: verschiedene Styles" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 2<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>      align: right<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    tbody tr td+: &gt;-<br>      background-color: yellow;<br>      color: red;<br>    tbody tr td:nth-child(odd)+: &gt;-<br>      background-color: pink;<br>    tbody tr td:first-child+: &gt;-<br>      background-color: cyan;<br>      color: white;<br>      border: 1px solid black;<br>      text-align: left;<br>    tbody tr td:last-child+: &gt;-<br>      background-color: orange;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-17.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-17.png" alt="17. Spalten: verschiedene Styles"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-17">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-17" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogMgpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogcmlnaHQKICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICBzdHJpY3Q6IHRydWUKICBjc3M6CiAgICB0Ym9keSB0ciB0ZCs6ID4tCiAgICAgIGJhY2tncm91bmQtY29sb3I6IHllbGxvdzsKICAgICAgY29sb3I6IHJlZDsKICAgIHRib2R5IHRyIHRkOm50aC1jaGlsZChvZGQpKzogPi0KICAgICAgYmFja2dyb3VuZC1jb2xvcjogcGluazsKICAgIHRib2R5IHRyIHRkOmZpcnN0LWNoaWxkKzogPi0KICAgICAgYmFja2dyb3VuZC1jb2xvcjogY3lhbjsKICAgICAgY29sb3I6IHdoaXRlOwogICAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjazsKICAgICAgdGV4dC1hbGlnbjogbGVmdDsKICAgIHRib2R5IHRyIHRkOmxhc3QtY2hpbGQrOiA+LQogICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBvcmFuZ2U7"></code></pre>
+  </div>
+</div>
 
 ## 18. Spaltenbreite anpassen
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-18.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-18.png" alt="18. Spaltenbreite anpassen" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: custom:auto-entities<br>filter:<br>  include:<br>    - domain: light<br>sort:<br>  count: 2<br>card:<br>  type: custom:flex-table-card<br>  columns:<br>    - &amp;ref_column<br>      name: hhh<br>      data: brightness<br>    - *ref_column<br>    - *ref_column<br>  strict: true<br>  css:<br>    tbody tr td:first-child+: &#x27;width: 50%;&#x27;<br>    tbody tr td:last-child+: &#x27;width: 30%;&#x27;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-18.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-18.png" alt="18. Spaltenbreite anpassen"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-18">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-18" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogMgpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogIHN0cmljdDogdHJ1ZQogIGNzczoKICAgIHRib2R5IHRyIHRkOmZpcnN0LWNoaWxkKzogJ3dpZHRoOiA1MCU7JwogICAgdGJvZHkgdHIgdGQ6bGFzdC1jaGlsZCs6ICd3aWR0aDogMzAlOyc="></code></pre>
+  </div>
+</div>
 
 ## 19. Zellen: einzelne Zeile und Zelle stylen
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-19.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-19.png" alt="19. Zellen: einzelne Zeile und Zelle stylen" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">type: vertical-stack<br>cards:<br>  - type: markdown<br>    content: &#124;<br>      обращение к ячейке + align<br>    style: &#124;<br>      ha-card {<br>        color: red;<br>      }<br>  - type: custom:auto-entities<br>    filter:<br>      include:<br>        - domain: light<br>    sort:<br>      count: 5<br>    card:<br>      type: custom:flex-table-card<br>      columns:<br>        - &amp;ref_column<br>          name: hhh<br>          data: brightness<br>          align: right<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>        - *ref_column<br>      strict: true<br>      css:<br>        tbody tr:nth-child(4)+: &gt;-<br>          background-color: orange;<br>          color: blue;<br>        tbody tr:nth-child(4) td+: &gt;-<br>          text-align: center;<br>        tbody tr:nth-child(4) td:nth-child(3)+: &gt;-<br>          background-color: yellow;<br>          color: red;<br>          text-align: left;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-19.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-19.png" alt="19. Zellen: einzelne Zeile und Zelle stylen"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-19">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-19" data-code-b64="dHlwZTogdmVydGljYWwtc3RhY2sKY2FyZHM6CiAgLSB0eXBlOiBtYXJrZG93bgogICAgY29udGVudDogfAogICAgICDQvtCx0YDQsNGJ0LXQvdC40LUg0Log0Y/Rh9C10LnQutC1ICsgYWxpZ24KICAgIHN0eWxlOiB8CiAgICAgIGhhLWNhcmQgewogICAgICAgIGNvbG9yOiByZWQ7CiAgICAgIH0KICAtIHR5cGU6IGN1c3RvbTphdXRvLWVudGl0aWVzCiAgICBmaWx0ZXI6CiAgICAgIGluY2x1ZGU6CiAgICAgICAgLSBkb21haW46IGxpZ2h0CiAgICBzb3J0OgogICAgICBjb3VudDogNQogICAgY2FyZDoKICAgICAgdHlwZTogY3VzdG9tOmZsZXgtdGFibGUtY2FyZAogICAgICBjb2x1bW5zOgogICAgICAgIC0gJnJlZl9jb2x1bW4KICAgICAgICAgIG5hbWU6IGhoaAogICAgICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICAgICAgYWxpZ246IHJpZ2h0CiAgICAgICAgLSAqcmVmX2NvbHVtbgogICAgICAgIC0gKnJlZl9jb2x1bW4KICAgICAgICAtICpyZWZfY29sdW1uCiAgICAgICAgLSAqcmVmX2NvbHVtbgogICAgICAgIC0gKnJlZl9jb2x1bW4KICAgICAgc3RyaWN0OiB0cnVlCiAgICAgIGNzczoKICAgICAgICB0Ym9keSB0cjpudGgtY2hpbGQoNCkrOiA+LQogICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogb3JhbmdlOwogICAgICAgICAgY29sb3I6IGJsdWU7CiAgICAgICAgdGJvZHkgdHI6bnRoLWNoaWxkKDQpIHRkKzogPi0KICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgICAgICB0Ym9keSB0cjpudGgtY2hpbGQoNCkgdGQ6bnRoLWNoaWxkKDMpKzogPi0KICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IHllbGxvdzsKICAgICAgICAgIGNvbG9yOiByZWQ7CiAgICAgICAgICB0ZXh0LWFsaWduOiBsZWZ0Ow=="></code></pre>
+  </div>
+</div>
 
 ## 20. Dynamisches Styling per Entity-Zustand, Variante 1
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-20.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-20.png" alt="20. Dynamisches Styling per Entity-Zustand, Variante 1" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">- type: entities<br>    entities:<br>      - entity: input_boolean.test_boolean<br>        name: change color<br><br>  - type: custom:auto-entities<br>    filter:<br>      include:<br>        - domain: light<br>    sort:<br>      count: 4<br>    card:<br>      type: custom:flex-table-card<br>      columns: *ref_brightness_right_6cols<br>      strict: true<br>      card_mod:<br>        style: &#124;<br>          ha-card {<br>            {% if is_state(&#x27;input_boolean.test_boolean&#x27;,&#x27;on&#x27;) %}<br>              --my-background-color: yellow;<br>            {% else %}<br>              --my-background-color: cyan;<br>            {% endif %}<br>          }<br>      css:<br>        tbody tr:nth-child(4) td:nth-child(3)+: &#x27;background-color: var(--my-background-color);&#x27;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-20.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-20.png" alt="20. Dynamisches Styling per Entity-Zustand, Variante 1"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-20">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-20" data-code-b64="LSB0eXBlOiBlbnRpdGllcwogICAgZW50aXRpZXM6CiAgICAgIC0gZW50aXR5OiBpbnB1dF9ib29sZWFuLnRlc3RfYm9vbGVhbgogICAgICAgIG5hbWU6IGNoYW5nZSBjb2xvcgoKICAtIHR5cGU6IGN1c3RvbTphdXRvLWVudGl0aWVzCiAgICBmaWx0ZXI6CiAgICAgIGluY2x1ZGU6CiAgICAgICAgLSBkb21haW46IGxpZ2h0CiAgICBzb3J0OgogICAgICBjb3VudDogNAogICAgY2FyZDoKICAgICAgdHlwZTogY3VzdG9tOmZsZXgtdGFibGUtY2FyZAogICAgICBjb2x1bW5zOiAqcmVmX2JyaWdodG5lc3NfcmlnaHRfNmNvbHMKICAgICAgc3RyaWN0OiB0cnVlCiAgICAgIGNhcmRfbW9kOgogICAgICAgIHN0eWxlOiB8CiAgICAgICAgICBoYS1jYXJkIHsKICAgICAgICAgICAgeyUgaWYgaXNfc3RhdGUoJ2lucHV0X2Jvb2xlYW4udGVzdF9ib29sZWFuJywnb24nKSAlfQogICAgICAgICAgICAgIC0tbXktYmFja2dyb3VuZC1jb2xvcjogeWVsbG93OwogICAgICAgICAgICB7JSBlbHNlICV9CiAgICAgICAgICAgICAgLS1teS1iYWNrZ3JvdW5kLWNvbG9yOiBjeWFuOwogICAgICAgICAgICB7JSBlbmRpZiAlfQogICAgICAgICAgfQogICAgICBjc3M6CiAgICAgICAgdGJvZHkgdHI6bnRoLWNoaWxkKDQpIHRkOm50aC1jaGlsZCgzKSs6ICdiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1teS1iYWNrZ3JvdW5kLWNvbG9yKTsn"></code></pre>
+  </div>
+</div>
 
 ## 21. Dynamisches Styling per Entity-Zustand, Variante 2
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-21.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-21.png" alt="21. Dynamisches Styling per Entity-Zustand, Variante 2" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">- type: entities<br>    entities:<br>      - entity: input_boolean.test_boolean<br>        name: change color<br><br>  - type: custom:auto-entities<br>    filter:<br>      include:<br>        - domain: light<br>    sort:<br>      count: 4<br>    card:<br>      type: custom:flex-table-card<br>      columns: *ref_brightness_right_6cols<br>      strict: true<br>      card_mod:<br>        style: &#124;<br>          ha-card {<br>            {% if is_state(&#x27;input_boolean.test_boolean&#x27;,&#x27;on&#x27;) %}<br>              --my-background-color: yellow;<br>            {% else %}<br>              --my-background-color: cyan;<br>            {% endif %}<br>          }<br>      css:<br>        tbody tr:nth-child(4) td:nth-child(3)+: &#x27;background-color: var(--my-background-color);&#x27;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-21.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-21.png" alt="21. Dynamisches Styling per Entity-Zustand, Variante 2"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-21">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-21" data-code-b64="LSB0eXBlOiBlbnRpdGllcwogICAgZW50aXRpZXM6CiAgICAgIC0gZW50aXR5OiBpbnB1dF9ib29sZWFuLnRlc3RfYm9vbGVhbgogICAgICAgIG5hbWU6IGNoYW5nZSBjb2xvcgoKICAtIHR5cGU6IGN1c3RvbTphdXRvLWVudGl0aWVzCiAgICBmaWx0ZXI6CiAgICAgIGluY2x1ZGU6CiAgICAgICAgLSBkb21haW46IGxpZ2h0CiAgICBzb3J0OgogICAgICBjb3VudDogNAogICAgY2FyZDoKICAgICAgdHlwZTogY3VzdG9tOmZsZXgtdGFibGUtY2FyZAogICAgICBjb2x1bW5zOiAqcmVmX2JyaWdodG5lc3NfcmlnaHRfNmNvbHMKICAgICAgc3RyaWN0OiB0cnVlCiAgICAgIGNhcmRfbW9kOgogICAgICAgIHN0eWxlOiB8CiAgICAgICAgICBoYS1jYXJkIHsKICAgICAgICAgICAgeyUgaWYgaXNfc3RhdGUoJ2lucHV0X2Jvb2xlYW4udGVzdF9ib29sZWFuJywnb24nKSAlfQogICAgICAgICAgICAgIC0tbXktYmFja2dyb3VuZC1jb2xvcjogeWVsbG93OwogICAgICAgICAgICB7JSBlbHNlICV9CiAgICAgICAgICAgICAgLS1teS1iYWNrZ3JvdW5kLWNvbG9yOiBjeWFuOwogICAgICAgICAgICB7JSBlbmRpZiAlfQogICAgICAgICAgfQogICAgICBjc3M6CiAgICAgICAgdGJvZHkgdHI6bnRoLWNoaWxkKDQpIHRkOm50aC1jaGlsZCgzKSs6ICdiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1teS1iYWNrZ3JvdW5kLWNvbG9yKTsn"></code></pre>
+  </div>
+</div>
 
 ## 22. Bedingte Zellinhalte mit modify, div und span
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-22.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-22.png" alt="22. Bedingte Zellinhalte mit modify, div und span" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">- type: custom:auto-entities<br>    filter:<br>      include:<br>        - domain: light<br>    sort:<br>      count: 5<br>    card:<br>      type: custom:flex-table-card<br>      columns:<br>        - name: brightness<br>          data: brightness<br>        - name: &quot;div&quot;<br>          data: brightness<br>          modify: &#124;-<br>            if (x == undefined)<br>              &quot;none&quot;<br>            else if (parseInt(x) &gt;= 100 )<br>              &#x27;&lt;div style=&quot;color:cyan;&quot;&gt;more&lt;/div&gt;&#x27;<br>            else<br>              &#x27;&lt;div style=&quot;color:red;&quot;&gt;less&lt;/div&gt;&#x27;<br>        - name: &quot;span&quot;<br>          data: brightness<br>          modify: &#124;-<br>            if (x == undefined)<br>              &quot;none&quot;<br>            else if (parseInt(x) &gt;= 100 )<br>              &#x27;&lt;span style=&quot;color:cyan;&quot;&gt;more&lt;/span&gt;&#x27;<br>            else<br>              &#x27;&lt;span style=&quot;color:red;&quot;&gt;less&lt;/span&gt;&#x27;<br>      strict: true</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-22.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-22.png" alt="22. Bedingte Zellinhalte mit modify, div und span"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-22">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-22" data-code-b64="LSB0eXBlOiBjdXN0b206YXV0by1lbnRpdGllcwogICAgZmlsdGVyOgogICAgICBpbmNsdWRlOgogICAgICAgIC0gZG9tYWluOiBsaWdodAogICAgc29ydDoKICAgICAgY291bnQ6IDUKICAgIGNhcmQ6CiAgICAgIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICAgICAgY29sdW1uczoKICAgICAgICAtIG5hbWU6IGJyaWdodG5lc3MKICAgICAgICAgIGRhdGE6IGJyaWdodG5lc3MKICAgICAgICAtIG5hbWU6ICJkaXYiCiAgICAgICAgICBkYXRhOiBicmlnaHRuZXNzCiAgICAgICAgICBtb2RpZnk6IHwtCiAgICAgICAgICAgIGlmICh4ID09IHVuZGVmaW5lZCkKICAgICAgICAgICAgICAibm9uZSIKICAgICAgICAgICAgZWxzZSBpZiAocGFyc2VJbnQoeCkgPj0gMTAwICkKICAgICAgICAgICAgICAnPGRpdiBzdHlsZT0iY29sb3I6Y3lhbjsiPm1vcmU8L2Rpdj4nCiAgICAgICAgICAgIGVsc2UKICAgICAgICAgICAgICAnPGRpdiBzdHlsZT0iY29sb3I6cmVkOyI+bGVzczwvZGl2PicKICAgICAgICAtIG5hbWU6ICJzcGFuIgogICAgICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICAgICAgbW9kaWZ5OiB8LQogICAgICAgICAgICBpZiAoeCA9PSB1bmRlZmluZWQpCiAgICAgICAgICAgICAgIm5vbmUiCiAgICAgICAgICAgIGVsc2UgaWYgKHBhcnNlSW50KHgpID49IDEwMCApCiAgICAgICAgICAgICAgJzxzcGFuIHN0eWxlPSJjb2xvcjpjeWFuOyI+bW9yZTwvc3Bhbj4nCiAgICAgICAgICAgIGVsc2UKICAgICAgICAgICAgICAnPHNwYW4gc3R5bGU9ImNvbG9yOnJlZDsiPmxlc3M8L3NwYW4+JwogICAgICBzdHJpY3Q6IHRydWU="></code></pre>
+  </div>
+</div>
 
 ## 23. Text in Tabellenzellen auswählbar machen
 
-| Bild | Code |
-| --- | --- |
-| <a href="/images/flex-table-card/forum/forum-example-23.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-23.png" alt="23. Text in Tabellenzellen auswählbar machen" style="max-width: 320px; width: 100%; height: auto; border: 1px solid var(--vp-c-divider);"></a> | <code class="forum-inline-code">- type: custom:auto-entities<br>    filter:<br>      include:<br>        - domain: light<br>    sort:<br>      count: 2<br>    card:<br>      type: custom:flex-table-card<br>      columns:<br>        - &amp;ref_0<br>          name: hhh<br>          data: brightness<br>          align: right<br>        - *ref_0<br>        - *ref_0<br>        - *ref_0<br>        - *ref_0<br>        - *ref_0<br>      strict: true<br>      css:<br>        tbody tr+: &#x27;user-select: text&#x27;</code> |
+<div class="forum-example-row">
+  <div class="forum-example-image">
+    <div class="forum-example-label">Bild</div>
+    <a href="/images/flex-table-card/forum/forum-example-23.png" target="_blank" rel="noopener noreferrer"><img src="/images/flex-table-card/forum/forum-example-23.png" alt="23. Text in Tabellenzellen auswählbar machen"></a>
+  </div>
+  <div class="forum-example-code">
+    <div class="forum-example-code-header">
+      <span>Code</span>
+      <button type="button" class="forum-copy-button" data-copy-target="forum-code-23">Kopieren</button>
+    </div>
+    <pre><code id="forum-code-23" data-code-b64="LSB0eXBlOiBjdXN0b206YXV0by1lbnRpdGllcwogICAgZmlsdGVyOgogICAgICBpbmNsdWRlOgogICAgICAgIC0gZG9tYWluOiBsaWdodAogICAgc29ydDoKICAgICAgY291bnQ6IDIKICAgIGNhcmQ6CiAgICAgIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICAgICAgY29sdW1uczoKICAgICAgICAtICZyZWZfMAogICAgICAgICAgbmFtZTogaGhoCiAgICAgICAgICBkYXRhOiBicmlnaHRuZXNzCiAgICAgICAgICBhbGlnbjogcmlnaHQKICAgICAgICAtICpyZWZfMAogICAgICAgIC0gKnJlZl8wCiAgICAgICAgLSAqcmVmXzAKICAgICAgICAtICpyZWZfMAogICAgICAgIC0gKnJlZl8wCiAgICAgIHN0cmljdDogdHJ1ZQogICAgICBjc3M6CiAgICAgICAgdGJvZHkgdHIrOiAndXNlci1zZWxlY3Q6IHRleHQn"></code></pre>
+  </div>
+</div>
+
+<script setup>
+import { onMounted } from 'vue'
+
+const decodeCode = (value) => decodeURIComponent(Array.from(atob(value), (char) => `%${char.charCodeAt(0).toString(16).padStart(2, '0')}`).join(''))
+
+onMounted(() => {
+  document.querySelectorAll('[data-code-b64]').forEach((code) => {
+    code.textContent = decodeCode(code.dataset.codeB64 || '')
+  })
+  document.querySelectorAll('.forum-copy-button').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const target = document.getElementById(button.dataset.copyTarget)
+      if (!target) return
+      try {
+        await navigator.clipboard.writeText(target.textContent || '')
+        button.textContent = 'Kopiert'
+        window.setTimeout(() => { button.textContent = 'Kopieren' }, 1400)
+      } catch {
+        button.textContent = 'Fehler'
+        window.setTimeout(() => { button.textContent = 'Kopieren' }, 1400)
+      }
+    })
+  })
+})
+</script>
 
 <style>
-.forum-inline-code {
+.forum-example-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 38%) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  margin: 14px 0 30px;
+}
+.forum-example-label,
+.forum-example-code-header {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.forum-example-image img {
   display: block;
-  max-height: 420px;
-  overflow: auto;
-  padding: 10px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
+}
+.forum-example-code {
+  min-width: 0;
+}
+.forum-example-code-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+.forum-copy-button {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  padding: 4px 10px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  font-size: 12px;
+}
+.forum-copy-button:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+.forum-example-code pre {
+  max-height: 420px;
+  margin: 0;
+  overflow: auto;
+  padding: 12px;
+  border-radius: 6px;
+  background: var(--vp-code-block-bg);
+}
+.forum-example-code code {
   white-space: pre;
   font-size: 12px;
   line-height: 1.45;
+}
+@media (max-width: 760px) {
+  .forum-example-row {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
