@@ -72,17 +72,17 @@ Für UIX wurde ein ergänzender Branch erstellt, der die originalen card-mod-Dat
 
 Der UIX-Branch ergänzt:
 
-- `themes/neomorphix-uix.yaml`
-- `themes/neomorphix-uix-inset.yaml`
+- `themes/NeoMorphix UIX.yaml`
+- `themes/NeoMorphix UIX Inset.yaml`
 
 Die zusätzlichen Theme-Namen lauten:
 
-- `neomorphix-light-uix`
-- `neomorphix-dark-uix`
-- `neomorphix-claude-uix`
-- `neomorphix-light-uix-inset`
-- `neomorphix-dark-uix-inset`
-- `neomorphix-claude-uix-inset`
+- `NeoMorphix UIX Light`
+- `NeoMorphix UIX Dark`
+- `NeoMorphix UIX Claude`
+- `NeoMorphix UIX Light Inset`
+- `NeoMorphix UIX Dark Inset`
+- `NeoMorphix UIX Claude Inset`
 
 Technisch wurden die zusätzlichen Dateien auf UIX-Theme-Schlüssel gemappt:
 
