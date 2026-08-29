@@ -147,7 +147,6 @@ const sidebarDe = {
         { text: 'HA Dashboard', link: '/sammlung/ha-dashboard' },
         { text: 'NeoMorphix UIX', link: '/sammlung/neomorphix-uix/' },
         { text: 'HA Integrationen', link: '/sammlung/ha-integrationen' },
-        { text: 'Frosted Glass Manager', link: '/sammlung/frosted-glass-manager/' },
         { text: 'HA Blueprints', link: '/sammlung/ha-blueprints' },
         { text: 'HA Tools', link: '/sammlung/ha-tools' },
         { text: 'HA Apps', link: '/sammlung/ha-apps' },
