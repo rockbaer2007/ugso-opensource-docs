@@ -85,6 +85,11 @@ body {
   box-shadow: 0 0 0 1px rgba(66, 71, 83, 0.16);
 }
 
+.ugso-hide-locale-switch .VPNavBarTranslations,
+.ugso-hide-locale-switch .VPNavBarExtra .translations {
+  display: none !important;
+}
+
 .VPContent {
   min-height: calc(100vh - var(--vp-nav-height));
 }

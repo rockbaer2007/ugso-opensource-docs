@@ -18,6 +18,35 @@ const localeSelector = [
   '.VPNavBarExtra .translations .link span'
 ].join(',')
 
+const translatedCollectionRoutes = new Set([
+  '/sammlung/',
+  '/sammlung/ha-cards',
+  '/sammlung/ha-integrationen',
+  '/sammlung/ha-blueprints',
+  '/sammlung/ha-tools',
+  '/sammlung/ha-apps',
+  '/sammlung/hacs-dokus',
+  '/sammlung/weitere-beispiele',
+  '/sammlung/flex-table-card/',
+  '/sammlung/home-assistant-standardkarten/',
+  '/sammlung/mushroom/',
+  '/sammlung/zendure-ha/'
+])
+
+function normalizePath(path: string) {
+  return path.replace(/\.html$/, '').replace(/\/index$/, '/')
+}
+
+function hasVisibleLocaleSwitch(path: string) {
+  const normalizedPath = normalizePath(path)
+
+  if (!normalizedPath.startsWith('/sammlung/')) {
+    return true
+  }
+
+  return translatedCollectionRoutes.has(normalizedPath)
+}
+
 function applyLocaleFlags() {
   document.querySelectorAll<HTMLElement>(localeSelector).forEach((label) => {
     const code = label.textContent?.trim().match(/^(DE|EN|FR)\b/)?.[1]
@@ -53,6 +82,7 @@ const UgsoLayout = defineComponent({
 
     const updateRouteClass = () => {
       document.body.classList.toggle('uix-doc-route', route.path.startsWith('/projects/uix/'))
+      document.body.classList.toggle('ugso-hide-locale-switch', !hasVisibleLocaleSwitch(route.path))
     }
 
     onMounted(() => {
