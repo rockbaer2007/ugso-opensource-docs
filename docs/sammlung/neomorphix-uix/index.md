@@ -25,10 +25,10 @@ NeoMorphix UIX basiert auf NeuMorphix und ist als HACS-Theme-Variante vorbereite
 [![NeoMorphix UIX in HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=NeumorphixHome&category=theme)
 
 1. HACS installieren, falls noch nicht vorhanden.
-2. `card-mod` installieren, wenn die Original-Theme-Dateien genutzt werden.
-3. NeuMorphix oder den NeoMorphix-UIX-Fork über HACS als Theme installieren.
+2. `UIX` installieren.
+3. Den NeoMorphix-UIX-Fork über HACS als Theme installieren.
 4. Home Assistant neu starten.
-5. Im Benutzerprofil oder in den Dashboard-Einstellungen eine NeuMorphix- oder NeoMorphix-UIX-Variante auswählen.
+5. Im Benutzerprofil oder in den Dashboard-Einstellungen eine NeoMorphix-UIX-Variante auswählen.
 
 Für Home Assistant muss die Theme-Einbindung aktiv sein:
 
@@ -37,13 +37,11 @@ frontend:
   themes: !include_dir_merge_named themes
 ```
 
-Für die originale card-mod-Variante wird zusätzlich die card-mod-Ressource benötigt:
+Die originale NeuMorphix-Version nutzt card-mod. Für NeoMorphix UIX ist stattdessen UIX erforderlich.
 
 ```yaml
 frontend:
   themes: !include_dir_merge_named themes
-  extra_module_url:
-    - /hacsfiles/lovelace-card-mod/card-mod.js
 ```
 
 ## Varianten
