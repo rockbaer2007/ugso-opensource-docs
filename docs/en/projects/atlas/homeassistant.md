@@ -23,6 +23,23 @@ Assistant cards, live entities and later HACS-oriented usage.
 - Atlas Card Packages and HACS-oriented bundles for editor roundtrips
 - import summaries for imported cards
 
+## Working Shortcuts
+
+Short chat commands are used during ongoing ATLAS editor work to trigger
+repeated actions quickly:
+
+| Shortcut | Meaning |
+|---|---|
+| `??` | answer only, do not implement |
+| `>>` | implement the described step completely |
+| `>>!` | execute and provide a short summary |
+| `<<` | undo the last change |
+| `!!B` / `!!b` | create a backup of the current state |
+| `!!D` / `!!d` | update the open-source documentation |
+
+Shortcuts can be combined. For example, `!!D !!B` means that the current state
+is backed up and the public documentation is updated where appropriate.
+
 ## Supported Card Targets
 
 | Selection | Home Assistant type | Dependency |

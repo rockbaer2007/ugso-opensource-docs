@@ -24,6 +24,24 @@ spätere HACS-Nutzung.
 - Atlas Card Packages und HACS-nahe Bundles für Editor-Roundtrips
 - Import-Summary für importierte Karten
 
+## Arbeits-Kurzbefehle
+
+Für die laufende ATLAS-Editor-Arbeit werden kurze Chat-Befehle verwendet, um
+wiederkehrende Schritte schnell auszulösen:
+
+| Kürzel | Bedeutung |
+|---|---|
+| `??` | nur antworten, nichts umsetzen |
+| `>>` | den beschriebenen Schritt komplett umsetzen |
+| `>>!` | ausführen und eine kurze Zusammenfassung ausgeben |
+| `<<` | die letzte Änderung rückgängig machen |
+| `!!B` / `!!b` | Backup vom aktuellen Stand erstellen |
+| `!!D` / `!!d` | Open-Source-Dokumentation aktualisieren |
+
+Die Kurzbefehle können kombiniert werden. `!!D !!B` bedeutet zum Beispiel,
+dass der aktuelle Stand gesichert und die öffentliche Dokumentation passend
+aktualisiert wird.
+
 ## Unterstützte Card-Ziele
 
 | Auswahl | Home-Assistant-Typ | Abhängigkeit |
