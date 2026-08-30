@@ -13,10 +13,14 @@ Assistant cards, live entities and later HACS-oriented usage.
 - loading entities through `get_states`
 - loading Lovelace resources through `lovelace/resources`
 - shared entity catalog for type filters and search
-- card targets for Entities, Mushroom Template and Bubble Card
-- `single`, `horizontal-stack` and `vertical-stack` layouts
+- card targets for built-in Home Assistant cards, Mushroom Template and Bubble Card
+- Expert editor with 12-column grid, drag and drop, resizing and container cards
+- container cards for `vertical-stack`, `horizontal-stack` and `custom:tabbed-card-v2`
+- card import through JSON/YAML, file upload, clipboard and HACS bundles
+- detection of `card_mod` and `uix` styles during import
+- `single`, `horizontal-stack`, `vertical-stack`, `grid`, `conditional` and `tabbed-card-v2` layouts
 - JSON and YAML export for Home Assistant cards
-- Atlas Card Packages for editor roundtrips
+- Atlas Card Packages and HACS-oriented bundles for editor roundtrips
 - import summaries for imported cards
 
 ## Supported Card Targets
@@ -26,6 +30,7 @@ Assistant cards, live entities and later HACS-oriented usage.
 | Entities | `entities` | built into Home Assistant |
 | Mushroom Template | `custom:mushroom-template-card` | Mushroom |
 | Bubble Button | `custom:bubble-card` | Bubble Card |
+| Tabbed Card V2 | `custom:tabbed-card-v2` | ATLAS Tabbed Card V2 |
 
 ## Entity Picker and Search
 
@@ -186,12 +191,12 @@ smoke test, but it now lives in a collapsible Diagnostics panel and no longer
 sits in the main card-editor flow. The Diagnostics open state is saved with the
 local demo configuration.
 
-The demo also shows a first Expert editor preview. It uses the shared, clickable
-template palette, allows selecting a card family, places fields on the bounded
-grid and renders nested Home Assistant card code from that model. This is not
-the final drag-and-drop surface yet. Added fields are listed with a remove
-action so the preview can be adjusted field by field, making it the first
-visible step in that direction.
+The demo now includes the visual Expert editor. It uses the shared template
+palette, lets users select a card family, places fields by click or drag and
+drop on the bounded 12-column grid, and renders nested Home Assistant card code
+from that model. Fields can be selected, moved, removed and resized in edit
+mode. During drops, ATLAS looks for a free grid position so new or moved fields
+do not land on already occupied tiles.
 
 The import path now also accepts nested Home Assistant cards. A real-world
 `vertical-stack` card can contain `horizontal-stack` rows, `grid` containers,
@@ -202,10 +207,10 @@ entity are accepted as well, as are hand-built Bubble switch columns and
 `grid_options`, sliders and sub-buttons are planned as a later preservation
 layer.
 
-## Planned Card Layout Editor
+## Card Layout Editor
 
-ATLAS is intended to grow into a visual editor where users can build a Home
-Assistant card layout by drag and drop. The visible card name and the generated
+ATLAS is growing into a visual editor where users can build a Home Assistant
+card layout by drag and drop. The visible card name and the generated
 JavaScript filename should remain separate: for example, a user can name a card
 `Energy Kitchen` and later export an installable `energy-kitchen.js` file
 instead of being limited to a fixed name such as `atlas-card.js`.
@@ -227,13 +232,19 @@ a mixed expert layout, this lets ATLAS detect whether Mushroom and Bubble Card
 are required as HACS resources while pure Entities fields do not need an
 additional custom-card resource.
 
-An editor plan can now also be projected into a Home Assistant card
+An editor plan can be projected into a Home Assistant card
 configuration. Simple mode uses the selected target card directly. Expert mode
 sorts populated fields by row and column. Multiple fields on the same row
 become a `horizontal-stack`; multiple rows are wrapped by a `vertical-stack`.
 A single field can also be marked as its own `horizontal-stack` or
-`vertical-stack` and contain several child entries. If an expert plan does not
-contain populated fields yet, ATLAS falls back to the safe demo entities.
+`vertical-stack` and contain several child card entries. `custom:tabbed-card-v2`
+is supported as its own container: tabs are configured in a popup, selected and
+then filled with cards. Containers intentionally start without an entity and
+without an automatically generated first card. When created, they receive
+technical, incrementing titles such as `Tabbed 1`, `Vertical 1` or
+`Horizontal 1`; cards inside the container keep their own titles. If an expert
+plan does not contain populated fields yet, ATLAS falls back to the safe demo
+entities.
 
 In the demo UI, Expert mode hides the simple card-layout selector and the
 regular HA card code block. Export, package export, copy and resource-copy
@@ -250,8 +261,8 @@ blocks such as Entity List, State Button, Switch Button, `vertical-stack` and
 `horizontal-stack`. In the demo this is already a left-hand palette with a
 Simple/Expert mode switch: the user can click a building block or drag it into
 the editor surface. Added fields appear as movable tiles on the grid surface.
-The surface now uses a larger, visible 12-column grid that is closer to Home
-Assistant. Moving existing fields snaps against the real inner grid and
+The surface uses a visible 12-column grid that is closer to Home Assistant.
+Moving existing fields snaps against the real inner grid and
 preserves the point where the tile was grabbed, so fields can move upward
 without sideways jumps. The visible grid now sits on the same inner surface as
 the draggable tiles, with a smaller tile gap for closer vertical stacking.
@@ -268,10 +279,13 @@ elements cannot be dropped outside the valid area.
 Placed fields can be selected and then adjusted through edit mode. The
 bottom-right handle appears only while edit mode is active for the selected
 field, and resizes the field inside the 12-column grid.
-Placed field titles are editable. The title is exported as the Entities title,
-Bubble button name or Mushroom primary text. An apply button writes a manually
-edited title to the selected field. The existing copy button can still use the
-currently selected Home Assistant entity name as the field title.
+Placed field titles are editable. New fields first receive an automatically
+counted title by type, for example `Entity 1`, `Bubble 1`, `Mushroom 1`,
+`Tabbed 1`, `Vertical 1` or `Horizontal 1`. The title is exported as the
+Entities title, Bubble button name or Mushroom primary text. An apply button
+writes a manually edited title to the selected field. The existing copy button
+can still use the currently selected Home Assistant entity name as the field
+title.
 In Expert mode, selecting an entity from the picker or entity list assigns that
 entity to the currently selected editor field and prefills the title from the
 entity name.
@@ -323,7 +337,23 @@ occupied rows, current surface span, overlaps, card targets and layout types
 before the generated HA card code is copied or exported. Overlapping editor
 fields are marked directly on the surface.
 `Auto arrange` repacks fields into the first available free grid slots in row
-and column order, reducing overlaps without changing card content.
+and column order, reducing overlaps without changing card content. During
+regular drops and moves, ATLAS also searches for a free target position if the
+requested grid slot is already occupied.
+
+## YAML Import and Styles
+
+The editor can read raw Home Assistant card configurations as YAML or JSON.
+YAML can be pasted into an input dialog, inserted from the clipboard or loaded
+from files with extensions such as `.yaml`, `.yml` or `.txt`. The imported YAML
+code remains largely original in the HA card code view; Atlas only adds or
+changes content where the user actually edits something in the editor.
+
+During import, ATLAS detects `card_mod` and `uix` styles. Entity-level styles
+are assigned to the imported entities in the preview and shown through a compact
+style popup. Global card styles remain visible separately. During HA card
+export, the user can choose whether styles should be kept as `card_mod` or
+written as `uix`.
 
 ## External Reference: Home Assistant Card Builder
 
@@ -407,12 +437,6 @@ node examples/status-demo/server.mjs
 ```
 
 Default address:
-
-```text
-http://127.0.0.1:4173/
-```
-
-In the Codex workspace, port `4174` has often been used recently:
 
 ```text
 http://127.0.0.1:4174/

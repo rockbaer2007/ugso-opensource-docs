@@ -14,10 +14,14 @@ spätere HACS-Nutzung.
 - Laden der Entitäten über `get_states`
 - Laden der Lovelace-Ressourcen über `lovelace/resources`
 - gemeinsamer Entity-Katalog für Typfilter und Suche
-- Card-Ziele für Entities, Mushroom Template und Bubble Card
-- Layouts `single`, `horizontal-stack` und `vertical-stack`
+- Card-Ziele für eingebaute Home-Assistant-Cards, Mushroom Template und Bubble Card
+- Expert-Editor mit 12-Spalten-Raster, Drag-and-drop, Größenänderung und Container-Cards
+- Container-Cards für `vertical-stack`, `horizontal-stack` und `custom:tabbed-card-v2`
+- Card-Import per JSON/YAML, Datei, Zwischenablage und HACS-Bundle
+- Erkennung von `card_mod`- und `uix`-Styles beim Import
+- Layouts `single`, `horizontal-stack`, `vertical-stack`, `grid`, `conditional` und `tabbed-card-v2`
 - JSON- und YAML-Export für Home-Assistant-Karten
-- Atlas Card Packages für Editor-Roundtrips
+- Atlas Card Packages und HACS-nahe Bundles für Editor-Roundtrips
 - Import-Summary für importierte Karten
 
 ## Unterstützte Card-Ziele
@@ -27,6 +31,7 @@ spätere HACS-Nutzung.
 | Entities | `entities` | in Home Assistant enthalten |
 | Mushroom Template | `custom:mushroom-template-card` | Mushroom |
 | Bubble Button | `custom:bubble-card` | Bubble Card |
+| Tabbed Card V2 | `custom:tabbed-card-v2` | ATLAS Tabbed Card V2 |
 
 ## Entity Picker und Suche
 
@@ -191,13 +196,13 @@ erhalten, liegt aber jetzt im einklappbaren Diagnostics-Bereich und steht nicht
 mehr im Hauptfluss des Card-Editors. Ob Diagnostics geöffnet ist, wird mit der
 lokalen Demo-Konfiguration gespeichert.
 
-Außerdem zeigt die Demo eine erste Expert-Editor-Vorschau. Sie verwendet die
-gemeinsame, klickbare Template-Palette, erlaubt die Auswahl einer Card-Familie,
-platziert Felder im begrenzten Raster und rendert daraus verschachtelten
-Home-Assistant-Card-Code. Hinzugefügte Felder werden mit Entfernen-Aktion
-aufgelistet, damit die Vorschau gezielt angepasst werden kann. Das ist noch
-keine finale Drag-and-drop-Oberfläche, aber der erste sichtbare Schritt in diese
-Richtung.
+Außerdem enthält die Demo inzwischen den visuellen Expert-Editor. Er verwendet
+die gemeinsame Template-Palette, erlaubt die Auswahl einer Card-Familie,
+platziert Felder per Klick oder Drag-and-drop im begrenzten 12-Spalten-Raster
+und rendert daraus verschachtelten Home-Assistant-Card-Code. Felder können
+ausgewählt, verschoben, gelöscht und im Bearbeiten-Modus in der Größe geändert
+werden. Beim Ablegen sucht ATLAS eine freie Rasterposition, damit neue oder
+verschobene Felder nicht auf bereits belegten Kacheln landen.
 
 Der Importpfad akzeptiert jetzt auch verschachtelte Home-Assistant-Karten. Eine
 reale `vertical-stack`-Karte kann also `horizontal-stack`-Zeilen,
@@ -208,11 +213,11 @@ Handgebaute Bubble-Switch-Spalten und `empty-column`-Karten werden ebenfalls
 erkannt. Erweiterte Bubble-Card-Details wie `modules`, `styles`, `grid_options`,
 Slider und Sub-Buttons sind als spätere Erhaltungsschicht geplant.
 
-## Geplanter Card-Layout-Editor
+## Card-Layout-Editor
 
-ATLAS soll sich in Richtung eines visuellen Editors entwickeln, mit dem Nutzer
-eine Home-Assistant-Card per Drag-and-drop aufbauen können. Dabei sollen
-Cardname und JavaScript-Dateiname getrennt bleiben: Ein Nutzer kann also zum
+ATLAS entwickelt sich in Richtung eines visuellen Editors, mit dem Nutzer
+eine Home-Assistant-Card per Drag-and-drop aufbauen können. Dabei bleiben
+Cardname und JavaScript-Dateiname getrennt: Ein Nutzer kann also zum
 Beispiel eine Card `Energy Kitchen` nennen und daraus später eine installierbare
 Datei `energy-kitchen.js` erzeugen, statt auf einen festen Namen wie
 `atlas-card.js` beschränkt zu sein.
@@ -234,14 +239,19 @@ einem gemischten Expert-Layout erkennt ATLAS dadurch gemeinsam, ob zum Beispiel
 Mushroom und Bubble Card als HACS-Ressourcen benötigt werden, während reine
 Entities-Felder keine zusätzliche Custom-Card-Resource brauchen.
 
-Zusätzlich kann ein Editor-Plan jetzt in eine Home-Assistant-Card-Konfiguration
+Zusätzlich kann ein Editor-Plan in eine Home-Assistant-Card-Konfiguration
 übersetzt werden. Simple nutzt die gewählte Ziel-Card direkt. Expert sortiert
 belegte Felder nach Zeile und Spalte. Mehrere Felder in derselben Zeile werden
 zu einem `horizontal-stack`; mehrere Zeilen werden mit einem `vertical-stack`
 zusammengefasst. Ein einzelnes Feld kann außerdem selbst als `horizontal-stack`
-oder `vertical-stack` markiert werden und mehrere Einträge enthalten. Wenn ein
-Expert-Plan noch keine belegten Felder enthält, nutzt ATLAS die Demo-Entitäten
-als sicheren Fallback.
+oder `vertical-stack` markiert werden und mehrere Card-Einträge enthalten.
+`custom:tabbed-card-v2` wird als eigener Container unterstützt: Tabs werden im
+Popup eingerichtet, ausgewählt und anschließend mit Cards befüllt. Container
+starten absichtlich ohne Entity und ohne automatisch erzeugte erste Card.
+Beim Anlegen erhalten sie technische, fortlaufende Titel wie `Tabbed 1`,
+`Vertical 1` oder `Horizontal 1`; Cards im Container behalten eigene Titel.
+Wenn ein Expert-Plan noch keine belegten Felder enthält, nutzt ATLAS die
+Demo-Entitäten als sicheren Fallback.
 
 In der Demo blendet Expert den einfachen Card-Layout-Wähler und den normalen
 HA-Card-Code aus. Export, Package-Export, Kopieren und Ressourcen-Kopieren
@@ -260,8 +270,8 @@ visuelle Bausteine wie Entity List, State Button, Switch Button,
 bereits eine linke Palette mit Simple/Expert-Umschaltung geworden: Der Nutzer
 kann einen Baustein anklicken oder per Drag-and-drop in die Editor-Fläche
 ziehen. Hinzugefügte Felder erscheinen als verschiebbare Kacheln auf der
-Rasterfläche. Die Fläche nutzt jetzt ein größeres, sichtbares 12-Spalten-Raster,
-das näher an Home Assistant erinnert. Beim Verschieben vorhandener Felder nutzt
+Rasterfläche. Die Fläche nutzt ein sichtbares 12-Spalten-Raster, das näher an
+Home Assistant erinnert. Beim Verschieben vorhandener Felder nutzt
 ATLAS das echte innere Raster und erhält den Punkt, an dem die Kachel gegriffen
 wurde; dadurch lassen sich Felder nach oben ziehen, ohne seitlich zu springen.
 Das sichtbare Raster liegt auf derselben inneren Fläche wie die Kacheln, mit
@@ -280,9 +290,12 @@ Rastergrenzen, damit Elemente nicht außerhalb der gültigen Fläche landen.
 Platzierte Felder können ausgewählt und über einen Bearbeiten-Modus angepasst
 werden. Erst im Bearbeiten-Modus erscheint der rechte untere Anfasser, mit dem
 die Feldgröße innerhalb des 12-Spalten-Rasters verändert wird.
-Die Titel platzierter Felder sind editierbar. Dieser Titel wird im Export als
-Entities-Title, Bubble-Button-Name oder Mushroom-Primary-Text verwendet. Ein
-Apply-Button übernimmt den manuell editierten Titel in das ausgewählte Feld.
+Die Titel platzierter Felder sind editierbar. Neue Felder bekommen zunächst
+einen automatisch gezählten Titel nach Typ, zum Beispiel `Entity 1`,
+`Bubble 1`, `Mushroom 1`, `Tabbed 1`, `Vertical 1` oder `Horizontal 1`.
+Dieser Titel wird im Export als Entities-Title, Bubble-Button-Name oder
+Mushroom-Primary-Text verwendet. Ein Apply-Button übernimmt den manuell
+editierten Titel in das ausgewählte Feld.
 Der bestehende Übernahme-Button kann zusätzlich den aktuell gewählten
 Home-Assistant-Entitätsnamen direkt als Titel einsetzen.
 Im Expert-Modus weist eine Entitätsauswahl aus Picker oder Entitätsliste die
@@ -343,7 +356,23 @@ Layouttypen, bevor der generierte HA-Card-Code kopiert oder exportiert wird.
 Überlappende Editorfelder werden direkt auf der Fläche markiert.
 `Auto arrange` packt Felder in Zeilen- und Spaltenreihenfolge auf die ersten
 freien Rasterplätze und reduziert Überschneidungen, ohne den Card-Inhalt zu
-verändern.
+verändern. Beim normalen Drop und beim Verschieben sucht ATLAS ebenfalls nach
+einem freien Zielplatz, wenn die gewünschte Rasterposition bereits belegt ist.
+
+## YAML-Import und Styles
+
+Der Editor kann rohe Home-Assistant-Card-Konfigurationen als YAML oder JSON
+einlesen. YAML kann über ein Eingabefenster eingefügt, aus der Zwischenablage
+übernommen oder als Datei mit Endungen wie `.yaml`, `.yml` oder `.txt` geladen
+werden. Der importierte YAML-Code bleibt für den HA-Card-Code weitgehend im
+Original erhalten; Atlas ergänzt oder ändert ihn nur dort, wo der Nutzer im
+Editor tatsächlich etwas anpasst.
+
+Beim Import erkennt ATLAS `card_mod`- und `uix`-Styles. Entity-nahe Styles
+werden den importierten Entities in der Vorschau zugeordnet und dort über ein
+kompaktes Style-Popup angezeigt. Globale Card-Styles bleiben getrennt sichtbar.
+Beim HA-Card-Export kann der Nutzer wählen, ob Styles als `card_mod` erhalten
+oder als `uix` ausgegeben werden sollen.
 
 ## Externe Referenz: Home Assistant Card Builder
 
@@ -427,12 +456,6 @@ node examples/status-demo/server.mjs
 ```
 
 Standardadresse:
-
-```text
-http://127.0.0.1:4173/
-```
-
-In der Codex-Arbeitsumgebung wurde zuletzt häufig Port `4174` genutzt:
 
 ```text
 http://127.0.0.1:4174/
