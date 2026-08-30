@@ -350,6 +350,10 @@ ebenfalls als Favoriten markiert werden, auch bevor ATLAS dafür ein ziehbares
 Card-Mapping kennt. Hilfsressourcen wie Card-Tools, Dashboards, Strategien,
 Navigationshelfer, Icon-Pakete und bekannte Nicht-Card-Ressourcen werden beim
 Palette-Scan ausgeblendet.
+Der temporäre Ressourcencheck besitzt einen zuschaltbaren Debugbereich. Über
+`Ressourcen-Debug anzeigen` kann der Verlauf der WebSocket- und
+Admin-Proxy-Abfragen eingeblendet werden, um zu sehen, ob der Browser-WebSocket,
+der Admin-WebSocket-Proxy oder ein Fallback hängt.
 Die Home-Assistant-Entitätenliste wird lokal im Browser gecacht. Beim Öffnen
 steht der zuletzt bekannte Katalog sofort für Filter und Picker bereit; bei
 einer Verbindung mit Home Assistant synchronisiert ATLAS die Live-Liste und

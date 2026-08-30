@@ -333,7 +333,10 @@ template starts without a demo entity, receives automatic names such as
 `Glance 1` or `Glance 2`, and is populated through its own entity editing
 dialog.
 When Home Assistant connects, ATLAS requests the Lovelace resource list
-automatically. The Home Assistant entity catalog is cached locally in the
+automatically. The temporary resource check has an optional debug panel. Enable
+`Show resource debug` to inspect the browser WebSocket request, the Admin
+WebSocket proxy and fallback status when a resource scan stalls. The Home
+Assistant entity catalog is cached locally in the
 browser. On startup, the last known catalog is immediately available to filters
 and pickers; once Home Assistant is connected, ATLAS synchronizes the live list
 and shows below the connection state whether the catalog is cached,
