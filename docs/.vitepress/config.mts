@@ -286,6 +286,7 @@ const sidebarDe = {
         { text: 'Architektur', link: '/projects/atlas/uebersicht' },
         { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' },
         { text: 'Home Assistant', link: '/projects/atlas/homeassistant' },
+        { text: 'Card Editor', link: '/projects/atlas/card-editor' },
         { text: 'Plugin-Doku', link: '/projects/atlas/plugins' }
       ]
     }
@@ -581,6 +582,7 @@ const sidebarEn = {
         { text: 'Architecture', link: '/en/projects/atlas/overview' },
         { text: 'Development Status', link: '/en/projects/atlas/development-status' },
         { text: 'Home Assistant', link: '/en/projects/atlas/homeassistant' },
+        { text: 'Card Editor', link: '/en/projects/atlas/card-editor' },
         { text: 'Plugin Docs', link: '/en/projects/atlas/plugins' }
       ]
     }

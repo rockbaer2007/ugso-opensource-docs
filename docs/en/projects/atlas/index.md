@@ -16,6 +16,9 @@ hero:
       text: Home Assistant
       link: /en/projects/atlas/homeassistant
     - theme: alt
+      text: Card Editor
+      link: /en/projects/atlas/card-editor
+    - theme: alt
       text: Plugin Docs
       link: /en/projects/atlas/plugins
 
@@ -35,6 +38,10 @@ features:
   - icon: home
     title: Close to Home Assistant
     details: Status panels, entity selection, HA card export and Lovelace resource checks are being expanded step by step.
+
+  - icon: tools
+    title: Card Editor
+    details: Simple and Expert mode for Home Assistant cards with YAML import, export, resource checks and container cards.
 
   - icon: test
     title: Testable
