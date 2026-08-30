@@ -318,9 +318,12 @@ Ausgangspunkt erkennen. Andere registrierte Lovelace-Ressourcen werden als
 Scan-only-Einträge sichtbar, bis ATLAS dafür ein sicheres Card-Mapping kennt.
 Bereits gemappte Ressourcen werden dedupliziert, damit sie nicht noch einmal
 als Scan-only-Kopie erscheinen.
-Die Core-Liste enthält jetzt Entität, Entitäten, Button, Raster, Sensor,
-Stapel, Querstapel, Thermostat, Verknüpfung und Webseite. Die Webseite wird im
-Export als Home-Assistant-`iframe`-Card geschrieben.
+Die Core-Liste enthält jetzt Entität, Entitäten, Übersicht/Glance, Button,
+Raster, Sensor, Stapel, Querstapel, Thermostat, Verknüpfung und Webseite. Die
+Webseite wird im Export als Home-Assistant-`iframe`-Card geschrieben. Die
+Übersicht/Glance-Vorlage startet ohne Demo-Entität, erhält automatisch Namen
+wie `Glance 1` oder `Glance 2` und wird über ein eigenes Entitäten-Popup
+befüllt.
 Beim Verbinden mit Home Assistant fordert ATLAS diese Ressourcenliste
 automatisch an. Gespeicherte Favoriten blenden alle nicht ausgewählten Cards
 aus, inklusive gescannter `/hacsfiles/`-Einträge, bis `Show all cards` oder
@@ -329,6 +332,12 @@ ebenfalls als Favoriten markiert werden, auch bevor ATLAS dafür ein ziehbares
 Card-Mapping kennt. Hilfsressourcen wie Card-Tools, Dashboards, Strategien,
 Navigationshelfer, Icon-Pakete und bekannte Nicht-Card-Ressourcen werden beim
 Palette-Scan ausgeblendet.
+Die Home-Assistant-Entitätenliste wird lokal im Browser gecacht. Beim Öffnen
+steht der zuletzt bekannte Katalog sofort für Filter und Picker bereit; bei
+einer Verbindung mit Home Assistant synchronisiert ATLAS die Live-Liste und
+zeigt unter dem Verbindungsstatus an, ob der Katalog aus dem Cache kommt, noch
+synchronisiert, fertig geladen ist oder ein Fehler aufgetreten ist. Die Meldung
+nennt auch neue und entfernte Entitäten.
 Ein Reset-Button zeigt wieder die vollständige Liste. Die Palette selbst ist
 scrollbar und nutzt kompakte zweispaltige Template-Zeilen: Card-Name und
 Favoritenstatus stehen links, Layout-Details und Größensteuerung rechts.
@@ -358,6 +367,9 @@ Layouttypen, bevor der generierte HA-Card-Code kopiert oder exportiert wird.
 freien Rasterplätze und reduziert Überschneidungen, ohne den Card-Inhalt zu
 verändern. Beim normalen Drop und beim Verschieben sucht ATLAS ebenfalls nach
 einem freien Zielplatz, wenn die gewünschte Rasterposition bereits belegt ist.
+Die Liste der ausgewählten Entitäten unterhalb des Editors ist einklappbar. Im
+Simple-Modus bleibt sie standardmäßig offen; im Expert-Modus ist sie
+standardmäßig zugeklappt, kann aber bei Bedarf geöffnet werden.
 
 ## YAML-Import und Styles
 
@@ -370,9 +382,12 @@ Editor tatsächlich etwas anpasst.
 
 Beim Import erkennt ATLAS `card_mod`- und `uix`-Styles. Entity-nahe Styles
 werden den importierten Entities in der Vorschau zugeordnet und dort über ein
-kompaktes Style-Popup angezeigt. Globale Card-Styles bleiben getrennt sichtbar.
-Beim HA-Card-Export kann der Nutzer wählen, ob Styles als `card_mod` erhalten
-oder als `uix` ausgegeben werden sollen.
+kompaktes Style-Popup angezeigt. In der Übersicht/Glance-Entitätenbearbeitung
+stehen erkannte Entity-Styles zusätzlich direkt unter der jeweiligen Entität
+als einklappbarer Style-Code. Globale Card-Styles bleiben getrennt sichtbar.
+Beim Expert-Export bleiben die zugeordneten Entity-Styles an den passenden
+Entity-Blöcken erhalten. Beim HA-Card-Export kann der Nutzer wählen, ob Styles
+als `card_mod` erhalten oder als `uix` ausgegeben werden sollen.
 
 ## Externe Referenz: Home Assistant Card Builder
 

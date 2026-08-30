@@ -303,17 +303,25 @@ does not expose a complete option registry for every custom card through this
 resource list, but installed resources can be detected as a starting point.
 Other registered Lovelace resources are shown as scanned-only entries until
 ATLAS knows a safe card mapping for them. Mapped resources are deduplicated so
-they do not appear again as scanned-only copies. The Core list now includes
-Entity, Entities, Button, Grid, Sensor, Vertical stack, Horizontal stack,
-Thermostat, Link and Webpage. Webpage exports use the Home Assistant `iframe`
-card type.
-When Home Assistant connects, ATLAS requests this resource list automatically.
-Saved favorites hide every non-selected card, including scanned `/hacsfiles/`
-entries, until `Show all cards` or `Reset favorites` is used. Scanned-only HACS
-and HA resources can also be marked as favorites, even before ATLAS has a
-draggable card mapping for them. Helper resources such as card tools,
-dashboards, strategies, navigation helpers, icon packs and known non-card
-resources are hidden during the palette scan.
+they do not appear again as scanned-only copies. Saved favorites hide every
+non-selected card, including scanned `/hacsfiles/` entries, until `Show all
+cards` or `Reset favorites` is used. Scanned-only HACS and HA resources can also
+be marked as favorites, even before ATLAS has a draggable card mapping for them.
+Helper resources such as card tools, dashboards, strategies, navigation helpers,
+icon packs and known non-card resources are hidden during the palette scan.
+The Core list now includes Entity, Entities, Overview / Glance, Button, Grid,
+Sensor, Vertical stack, Horizontal stack, Thermostat, Link and Webpage. Webpage
+exports use the Home Assistant `iframe` card type. The Overview / Glance
+template starts without a demo entity, receives automatic names such as
+`Glance 1` or `Glance 2`, and is populated through its own entity editing
+dialog.
+When Home Assistant connects, ATLAS requests the Lovelace resource list
+automatically. The Home Assistant entity catalog is cached locally in the
+browser. On startup, the last known catalog is immediately available to filters
+and pickers; once Home Assistant is connected, ATLAS synchronizes the live list
+and shows below the connection state whether the catalog is cached,
+synchronizing, finished or failed. The status also reports newly added and
+removed entities.
 The palette itself is scrollable and uses compact two-column template rows:
 card name and favorite state stay on the left, while layout details and sizing
 controls sit on the right. Template column and row choices are saved with the
@@ -340,6 +348,9 @@ fields are marked directly on the surface.
 and column order, reducing overlaps without changing card content. During
 regular drops and moves, ATLAS also searches for a free target position if the
 requested grid slot is already occupied.
+The selected entity list below the editor is collapsible. It remains open by
+default in Simple mode and collapsed by default in Expert mode, but can still be
+opened when needed.
 
 ## YAML Import and Styles
 
@@ -351,9 +362,11 @@ changes content where the user actually edits something in the editor.
 
 During import, ATLAS detects `card_mod` and `uix` styles. Entity-level styles
 are assigned to the imported entities in the preview and shown through a compact
-style popup. Global card styles remain visible separately. During HA card
-export, the user can choose whether styles should be kept as `card_mod` or
-written as `uix`.
+style popup. In the Overview / Glance entity editor, detected entity styles are
+also shown directly below the matching entity as collapsible style code. Global
+card styles remain visible separately. Expert export keeps assigned entity
+styles attached to the matching entity blocks. During HA card export, the user
+can choose whether styles should be kept as `card_mod` or written as `uix`.
 
 ## External Reference: Home Assistant Card Builder
 
