@@ -6,7 +6,7 @@ description: Deutsche Sammlung gepflegter Home-Assistant-, HACS- und Open-Source
 
 Diese Sammlung bündelt deutsch gepflegte Dokumentationen, Beispiele und Projektseiten rund um Home Assistant, HACS und Open Source.
 
-Diese Sammlung ist aus meiner persönlichen Dokumentation entstanden. Sie wurde ursprünglich für einen Freundes- und Bekanntenkreis erstellt, der sich für Home Assistant interessiert, aber keine oder nur geringe Englischkenntnisse hat.
+Diese Sammlung ist aus meiner persönlichen Dokumentation entstanden. Sie wurde ursprünglich für einen Freundes- und Bekanntenkreis erstellt, der sich für Home Assistant interessiert, aber keine oder nur geringe Englischkenntnisse hat. Die private Ausgangsdokumentation wurde anschließend mit ChatGPT gegen die jeweiligen Originaldokumentationen abgeglichen; dabei wurden erkennbare Fehler, veraltete Formulierungen und unklare Stellen bereinigt.
 
 Der Schwerpunkt liegt auf praktisch nutzbaren Dokus mit Version, Originalquelle, Lizenzhinweis und Beispielen. Externe Projekte werden als inoffizielle Übersetzungen oder ergänzende Arbeitsdokumentationen gekennzeichnet.
 
