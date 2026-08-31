@@ -43,7 +43,9 @@ The adapter preserves plugin metadata, extension points and provided capabilitie
 
 `createRuntimePluginInstallPackage()` adds the first package contract. It creates a package description with `atlas-plugin.json`, `README.md` and optional additional files that can later be emitted as an installable package by the administration surface or an archive builder.
 
-`parseRuntimePluginInstallPackage()` reads that package description back as a validated descriptor. It does not execute plugin code. This lets Administration safely display, inspect, re-export and remove imported packages from the local import list before full installation and activation flows are added later. Activation states are remembered in the local demo Administration so plugin lists survive reloads.
+`parseRuntimePluginInstallPackage()` reads that package description back as a validated descriptor. It does not execute plugin code. This lets Administration safely display, inspect, re-export and remove imported packages from the local import list. Activation states are remembered in the local demo Administration so plugin lists survive reloads.
+
+Administration also has a first ATLAS repository installation flow. A custom `repository.json` can be loaded, available plugins are shown, and packages can be installed from `package` or `manifest` URLs into the local Administration plugin store. Each repository plugin compares its installed version with the repository version so Administration can offer `Install`, `Update` and `Remove`. This first step is browser-/Administration-local; a later host installer can derive real filesystem or add-on installation from the same metadata.
 
 ## First Reference Plugin
 
@@ -89,6 +91,43 @@ A complete plugin documentation area should later contain:
 - tests
 - versioning
 - publishing and HACS/package notes
+
+## Repository Format and Demo Template
+
+The next stable step is a dedicated public demo repository, for example `atlas-plugin-repository-demo`. This repository is first used as a test source for Administration and later becomes the official reference template for plugin authors.
+
+Planned structure:
+
+```text
+repository.json
+plugins/
+  example-plugin/
+    plugin.atlas-plugin.json
+    icon.png
+    preview.png
+    README.md
+```
+
+The `repository.json` should contain at least these fields:
+
+| Field | Purpose |
+|---|---|
+| `kind` | Identifies the file as an ATLAS plugin repository. |
+| `name` | Display name of the repository. |
+| `version` | Format version of the repository file. |
+| `plugins[]` | List of installable plugins. |
+| `plugins[].id` | Unique plugin id. |
+| `plugins[].name` | Plugin display name. |
+| `plugins[].version` | Published plugin version. |
+| `plugins[].description` | Short Administration description. |
+| `plugins[].icon` | Path or URL to the plugin icon. |
+| `plugins[].preview` | Path or URL to a preview image. |
+| `plugins[].package` | Path or URL to the installable package. |
+| `plugins[].manifest` | Fallback path or URL to the manifest. |
+| `plugins[].capabilities` | Declared capabilities. |
+| `plugins[].compatibility` | ATLAS/host compatibility. |
+
+The demo repository should later become a reusable plugin template. After that, a generator can create a new ATLAS plugin with the correct folder structure, manifest, icon/preview placeholders and README.
 
 ## Atlas Administration
 
@@ -141,5 +180,7 @@ The next documentation steps are:
 2. Model the Home Assistant Card Editor as the first reference plugin.
 3. Add manifest and lifecycle examples.
 4. Document Home Assistant-specific plugin extensions.
-5. Describe Atlas Administration for plugin management and package building.
-6. Prepare a publishing checklist.
+5. Define the repository format with a demo repository.
+6. Describe Atlas Administration for plugin management and package building.
+7. Derive a plugin template and later generator from the demo repository.
+8. Prepare a publishing checklist.

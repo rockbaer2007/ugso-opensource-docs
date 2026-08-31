@@ -43,7 +43,9 @@ Mit `RuntimePluginCatalog` gibt es außerdem eine erste Discovery-Fläche. Sie r
 
 Mit `createRuntimePluginInstallPackage()` gibt es auch den ersten Paketvertrag. Er erzeugt eine Paketbeschreibung mit `atlas-plugin.json`, `README.md` und optionalen Zusatzdateien, die später von der Administration oder einem Archiv-Builder als installierbares Paket ausgegeben werden kann.
 
-`parseRuntimePluginInstallPackage()` liest diese Paketbeschreibung wieder als validierten Descriptor ein. Dabei wird kein Plugin-Code ausgeführt. Die Administration kann importierte Pakete dadurch sicher anzeigen, prüfen, erneut exportieren und wieder aus der lokalen Importliste entfernen, bevor später echte Installations- und Aktivierungswege ergänzt werden. Aktivierungszustände werden in der lokalen Demo-Administration gemerkt, damit Plugin-Listen einen Reload überstehen.
+`parseRuntimePluginInstallPackage()` liest diese Paketbeschreibung wieder als validierten Descriptor ein. Dabei wird kein Plugin-Code ausgeführt. Die Administration kann importierte Pakete dadurch sicher anzeigen, prüfen, erneut exportieren und wieder aus der lokalen Importliste entfernen. Aktivierungszustände werden in der lokalen Demo-Administration gemerkt, damit Plugin-Listen einen Reload überstehen.
+
+Zusätzlich gibt es eine erste ATLAS-Repository-Installation in der Administration. Eine hinzugefügte `repository.json` wird geladen, verfügbare Plugins werden angezeigt und Pakete können aus `package`- oder `manifest`-URLs in den lokalen Administrationsspeicher installiert werden. Pro Repository-Plugin wird die installierte Version mit der Repository-Version verglichen, sodass die Administration `Installieren`, `Aktualisieren` und `Entfernen` anbieten kann. Dieser erste Schritt installiert noch browser-/administrationsnah; ein späterer Host-Installer kann daraus echte Dateisystem- oder Add-on-Installationen ableiten.
 
 ## Erstes Referenz-Plugin
 
@@ -89,6 +91,43 @@ Eine vollständige Plugin-Doku soll später folgende Kapitel enthalten:
 - Tests
 - Versionierung
 - Veröffentlichung und HACS-/Paket-Hinweise
+
+## Repository-Format und Demo-Vorlage
+
+Als nächster stabiler Schritt soll ein eigenes öffentliches Demo-Repository entstehen, zum Beispiel `atlas-plugin-repository-demo`. Dieses Repository dient zuerst als Testquelle für die Administration und später als offizielle Vorlage für Plugin-Autoren.
+
+Geplante Struktur:
+
+```text
+repository.json
+plugins/
+  example-plugin/
+    plugin.atlas-plugin.json
+    icon.png
+    preview.png
+    README.md
+```
+
+Die `repository.json` soll mindestens folgende Informationen enthalten:
+
+| Feld | Zweck |
+|---|---|
+| `kind` | Kennzeichnet die Datei als ATLAS-Plugin-Repository. |
+| `name` | Anzeigename des Repositorys. |
+| `version` | Formatversion der Repository-Datei. |
+| `plugins[]` | Liste installierbarer Plugins. |
+| `plugins[].id` | Eindeutige Plugin-ID. |
+| `plugins[].name` | Anzeigename des Plugins. |
+| `plugins[].version` | Veröffentlichte Plugin-Version. |
+| `plugins[].description` | Kurzbeschreibung für die Administration. |
+| `plugins[].icon` | Pfad oder URL zum Plugin-Icon. |
+| `plugins[].preview` | Pfad oder URL zu einem Vorschaubild. |
+| `plugins[].package` | Pfad oder URL zum installierbaren Paket. |
+| `plugins[].manifest` | Fallback-Pfad oder URL zum Manifest. |
+| `plugins[].capabilities` | Deklarierte Fähigkeiten. |
+| `plugins[].compatibility` | ATLAS-/Host-Kompatibilität. |
+
+Aus dem Demo-Repository soll später eine wiederverwendbare Plugin-Vorlage entstehen. Danach kann ein Generator folgen, der ein neues ATLAS-Plugin mit korrekter Ordnerstruktur, Manifest, Icon-/Preview-Platzhaltern und README vorbereitet.
 
 ## Atlas Administration
 
@@ -141,5 +180,7 @@ Die nächsten Doku-Schritte sind:
 2. den Home Assistant Card Editor als erstes Referenz-Plugin modellieren
 3. Manifest- und Lifecycle-Beispiele ergänzen
 4. Home-Assistant-spezifische Plugin-Erweiterungen dokumentieren
-5. Atlas-Administration für Plugin-Verwaltung und Paketbau beschreiben
-6. Publishing-Checkliste ausarbeiten
+5. Repository-Format mit Demo-Repository konkretisieren
+6. Atlas-Administration für Plugin-Verwaltung und Paketbau beschreiben
+7. Plugin-Vorlage und späteren Generator aus dem Demo-Repository ableiten
+8. Publishing-Checkliste ausarbeiten
