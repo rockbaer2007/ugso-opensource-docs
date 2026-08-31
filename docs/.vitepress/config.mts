@@ -301,6 +301,7 @@ const sidebarDe = {
         { text: 'Schnellstart', link: '/projects/uix/quick-start' },
         { text: 'FAQ', link: '/projects/uix/faq' },
         { text: 'Übersetzungsstatus', link: '/projects/uix/translation-status' },
+        { text: 'Dokumentationslizenz', link: '/projects/uix/license' },
         { text: 'Mitwirken', link: '/projects/uix/contributing' }
       ]
     },

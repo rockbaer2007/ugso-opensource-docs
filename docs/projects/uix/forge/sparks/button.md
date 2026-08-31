@@ -48,7 +48,7 @@ Mit dem DOM-Helfer [`uix_forge_path()`](../../concepts/dom#uix_forge_path0-forge
 | `start_icon` | `string` | nein | - | MDI-Icon vor dem Label, z. B. `mdi:play`. |
 | `end_icon` | `string` | nein | - | MDI-Icon nach dem Label, z. B. `mdi:chevron-right`. |
 | `variant` | `string` | nein | `brand`, bei `icon` `neutral` | Farbvariante: `brand`, `neutral`, `danger`, `warning`, `success`. |
-| `appearance` | `string` | nein | `accent`, bei `icon` `plain` | Darstellung: `accent`, `filled`, `plain`. |
+| `appearance` | `string` | nein | `accent`, bei `icon` `plain` | Darstellung: `accent`, `filled`, `outlined`, `plain`. |
 | `size` | `string` | nein | - | Buttongröße: `s` oder `m`. |
 | `tap_action` | action | nein | - | Aktion bei Klick oder Tap. |
 | `hold_action` | action | nein | - | Aktion bei langem Drücken. |
@@ -242,4 +242,5 @@ element:
 Home Assistant stellt verschiedene Kombinationen aus `variant` und `appearance` bereit. Die Namen bleiben in YAML englisch, weil sie direkt an `ha-button` weitergereicht werden.
 
 ::: info Button-Varianten und Darstellungen
+`outlined` ist ab UIX `8.2.0-beta.4` als Home-Assistant-Button-Darstellung dokumentiert.
 :::

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "project": "uix",
+  "language": "de",
+  "site_url": "https://opensource.ugso-software.de/projects/uix/",
+  "canonical_url": "https://uix.lf.technology/",
+  "alternates": [
+    {
+      "lang": "en",
+      "url": "https://uix.lf.technology/"
+    },
+    {
+      "lang": "de",
+      "url": "https://opensource.ugso-software.de/projects/uix/"
+    }
+  ]
+}
