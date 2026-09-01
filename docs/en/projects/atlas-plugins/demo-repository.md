@@ -12,6 +12,7 @@ The demo repository is the real test source for the ATLAS installation flow:
 - compare versions and surface updates
 - test the installation transition page
 - load ATLAS File Studio as the second real plugin entry
+- verify Home Assistant app install and update behavior against real GitHub repositories
 
 ## Installation Page
 
@@ -24,3 +25,5 @@ The button copies the ATLAS repository URL and explains that it must be pasted i
 ## Update Test
 
 Every functional change to the plugin package must increment the plugin version. Only then can Administration detect an update compared with the installed version.
+
+This also applies to test packages: when UI, manifest, icons, package contents or behavior change, the published repository version must be incremented.

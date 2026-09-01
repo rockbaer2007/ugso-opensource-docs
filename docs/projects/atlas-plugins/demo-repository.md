@@ -12,6 +12,7 @@ Das Demo-Repository dient als reale Testquelle für den ATLAS-Installationsfluss
 - Versionen vergleichen und Updates sichtbar machen
 - Installations-Zwischenseite testen
 - ATLAS File Studio als zweiten realen Plugin-Eintrag laden
+- Installations- und Update-Verhalten der Home-Assistant-App gegen echte GitHub-Repositories prüfen
 
 ## Installationsseite
 
@@ -24,3 +25,5 @@ Der Button kopiert die ATLAS-Repository-URL und erklärt, dass sie in der ATLAS-
 ## Update-Test
 
 Bei jeder funktionalen Änderung am Plugin-Paket muss die Plugin-Version erhöht werden. Nur dann kann die Administration ein Update gegenüber der bereits installierten Version erkennen.
+
+Das gilt auch für Testpakete: Wenn sich UI, Manifest, Icons, Paketinhalt oder Verhalten ändern, muss die veröffentlichte Version im Repository hochgezählt werden.

@@ -11,6 +11,7 @@ The plugin interfaces are still in progress. These pages document the current AT
 - [Repository Format](./repository-format): `repository.json` structure, required fields, ATLAS marker and example.
 - [Home Assistant Card Editor](./homeassistant-card-editor): the first official ATLAS reference plugin.
 - [ATLAS File Studio](./file-studio): second independent ATLAS plugin for approved Home Assistant file paths.
+- [Automation Extractor](./automation-extractor): planned plugin for analyzing and later splitting Home Assistant automations.
 - [Demo Repository](./demo-repository): public test repository for Administration, Hub and install flow.
 
 ## Goal
@@ -36,3 +37,7 @@ The current entry point is the Runtime adapter. A `RuntimePlugin` can be transla
 ## Publishing Rules
 
 Publishable plugins need clear names, explicit versions, documented dependencies, safe demo or fallback data, traceable build artifacts and notes for ATLAS, Home Assistant or HACS-oriented usage.
+
+## Planned Plugins
+
+The next noted plugin candidate is Automation Extractor. It should bring the earlier Windows idea into ATLAS and start read-only: detect automations, show dependencies and prepare safe export or refactoring steps.

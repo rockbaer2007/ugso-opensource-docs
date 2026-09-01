@@ -47,6 +47,8 @@ Geplant sind:
 6. Separate Plugin-Dokumentation für Erstellung, Lebenszyklus, Extension APIs, Beispiele und Veröffentlichung vorbereiten
 7. Home-Assistant-Anbindung entwickeln
 8. Renderer- und Theme-Schichten erweitern
+9. ATLAS File Studio als installierbares Plugin weiter ausbauen
+10. Automation Extractor als weiteres Plugin zuerst lesend planen und danach mit sicherem Exportpfad umsetzen
 
 ## Langfristige Perspektive
 

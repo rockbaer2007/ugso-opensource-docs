@@ -50,6 +50,8 @@ Planned next goals:
 6. Prepare separate plugin documentation for authoring, lifecycle, extension APIs, examples and publishing.
 7. Continue the Home Assistant integration.
 8. Expand Renderer and Theme layers.
+9. Continue expanding ATLAS File Studio as an installable plugin.
+10. Plan Automation Extractor as another plugin, starting read-only and later adding a safe export path.
 
 ## Long-Term Perspective
 
