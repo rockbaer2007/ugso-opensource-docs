@@ -11,6 +11,7 @@ Das Demo-Repository dient als reale Testquelle für den ATLAS-Installationsfluss
 - verfügbare Plugins im Hub und in der Administration anzeigen
 - Versionen vergleichen und Updates sichtbar machen
 - Installations-Zwischenseite testen
+- ATLAS File Studio als zweiten realen Plugin-Eintrag laden
 
 ## Installationsseite
 

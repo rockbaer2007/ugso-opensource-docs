@@ -11,6 +11,7 @@ The demo repository is the real test source for the ATLAS installation flow:
 - show available plugins in Hub and Administration
 - compare versions and surface updates
 - test the installation transition page
+- load ATLAS File Studio as the second real plugin entry
 
 ## Installation Page
 
