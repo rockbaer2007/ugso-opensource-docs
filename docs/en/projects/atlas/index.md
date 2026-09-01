@@ -19,8 +19,8 @@ hero:
       text: Card Editor
       link: /en/projects/atlas/card-editor
     - theme: alt
-      text: Plugin Docs
-      link: /en/projects/atlas/plugins
+      text: ATLAS Plugins
+      link: /en/projects/atlas-plugins/
 
 features:
   - icon: modules
@@ -33,7 +33,7 @@ features:
 
   - icon: plugin
     title: Plugin Ready
-    details: ATLAS is planned as a basis for extensible applications, standalone modules and documented plugin extensions.
+    details: ATLAS provides the platform; plugin authors have a dedicated ATLAS plugin documentation area.
 
   - icon: home
     title: Close to Home Assistant

@@ -28,6 +28,7 @@ const navDe = [
     ]
   },
   { text: 'ATLAS', link: '/projects/atlas/' },
+  { text: 'ATLAS Plugins', link: '/projects/atlas-plugins/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
@@ -60,6 +61,7 @@ const navEn = [
     ]
   },
   { text: 'ATLAS', link: '/en/projects/atlas/' },
+  { text: 'ATLAS Plugins', link: '/en/projects/atlas-plugins/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
@@ -286,8 +288,20 @@ const sidebarDe = {
         { text: 'Architektur', link: '/projects/atlas/uebersicht' },
         { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' },
         { text: 'Home Assistant', link: '/projects/atlas/homeassistant' },
-        { text: 'Card Editor', link: '/projects/atlas/card-editor' },
-        { text: 'Plugin-Doku', link: '/projects/atlas/plugins' }
+        { text: 'Card Editor', link: '/projects/atlas/card-editor' }
+      ]
+    }
+  ],
+
+  '/projects/atlas-plugins/': [
+    {
+      text: 'ATLAS Plugins',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/atlas-plugins/' },
+        { text: 'Repository-Format', link: '/projects/atlas-plugins/repository-format' },
+        { text: 'Home Assistant Card Editor', link: '/projects/atlas-plugins/homeassistant-card-editor' },
+        { text: 'Demo-Repository', link: '/projects/atlas-plugins/demo-repository' }
       ]
     }
   ],
@@ -583,8 +597,20 @@ const sidebarEn = {
         { text: 'Architecture', link: '/en/projects/atlas/overview' },
         { text: 'Development Status', link: '/en/projects/atlas/development-status' },
         { text: 'Home Assistant', link: '/en/projects/atlas/homeassistant' },
-        { text: 'Card Editor', link: '/en/projects/atlas/card-editor' },
-        { text: 'Plugin Docs', link: '/en/projects/atlas/plugins' }
+        { text: 'Card Editor', link: '/en/projects/atlas/card-editor' }
+      ]
+    }
+  ],
+
+  '/en/projects/atlas-plugins/': [
+    {
+      text: 'ATLAS Plugins',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/projects/atlas-plugins/' },
+        { text: 'Repository Format', link: '/en/projects/atlas-plugins/repository-format' },
+        { text: 'Home Assistant Card Editor', link: '/en/projects/atlas-plugins/homeassistant-card-editor' },
+        { text: 'Demo Repository', link: '/en/projects/atlas-plugins/demo-repository' }
       ]
     }
   ],

@@ -36,3 +36,4 @@ Diese Dokumentation ist eine unabhängige deutsche Übersetzung der UIX-Dokument
 - [MQTT Projekte öffnen](/projects-mqtt/)
 - [Diverse Projekte öffnen](/projects-diverse/)
 - [ATLAS öffnen](/projects/atlas/)
+- [ATLAS Plugins öffnen](/projects/atlas-plugins/)

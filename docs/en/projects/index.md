@@ -26,3 +26,4 @@ The Home Assistant Automation Exporter is a portable Windows application for spl
 - [Open MQTT Projects](/en/projects-mqtt/)
 - [Open Misc Projects](/en/projects-diverse/)
 - [Open ATLAS](/en/projects/atlas/)
+- [Open ATLAS Plugins](/en/projects/atlas-plugins/)
