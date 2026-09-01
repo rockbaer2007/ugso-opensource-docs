@@ -20,6 +20,7 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - YAML-Prüfung vor dem Speichern
 - Speichern der aktuell bearbeiteten Datei
 - lokal speichern, Upload und Download
+- ZIP-Inhaltsvorschau ohne Entpacken
 - `/config` als Standardwurzel
 - Add-on-Verzeichnis nur nach Admin-Freigabe
 - kein freier Root-Zugriff standardmäßig
@@ -46,5 +47,9 @@ Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor ec
 
 - feinere Home-Assistant-YAML-Hilfen auf Basis bekannter HA-Strukturen
 - bessere Dateityp-Icons nach dem Vorbild von VS Code Icons
+- Archiv-Unterstützung nach ZIP: `.rar` inklusive RAR5, `.tar`, `.tar.gz`,
+  `.tgz`, `.gz` und `.gzip` lesen und extrahieren
+- Archiv-Extraktion zuerst sicher als Inhaltsliste und gezieltes
+  Einzeldatei-Extrahieren, später mit geschützter Alles-extrahieren-Aktion
 - optionaler Icon-/Logo-Studio-Workflow mit SVG- und PNG-Ausgabe
 - Speichern von Icon-SVGs unter `/config/www/custom_local_icons/`, wenn die passende Home-Assistant-Integration genutzt wird

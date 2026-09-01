@@ -20,6 +20,7 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - YAML validation before saving
 - save the currently opened file
 - save locally, upload and download
+- ZIP content preview without extraction
 - `/config` as default root
 - add-on directory only after Administration approval
 - no free root access by default
@@ -46,5 +47,9 @@ This lets the install and update flow be tested before real file access is enabl
 
 - more specific Home Assistant YAML assistance based on known HA structures
 - improved file type icons inspired by VS Code Icons
+- archive support after ZIP: read and extract `.rar` including RAR5, `.tar`,
+  `.tar.gz`, `.tgz`, `.gz` and `.gzip`
+- archive extraction should start with safe content listing and targeted
+  single-file extraction, followed later by a guarded extract-all action
 - optional icon/logo studio workflow with SVG and PNG output
 - saving icon SVGs under `/config/www/custom_local_icons/` when the matching Home Assistant integration is used
