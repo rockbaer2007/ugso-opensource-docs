@@ -136,6 +136,12 @@ Expected resource:
 /hacsfiles/tabbed-card-v2/tabbed-card-v2.js
 ```
 
+Export prerequisite: **ATLAS Tabbed Card V2** must be installed in Home
+Assistant. It belongs to the ATLAS plugin/card line and is provided through the
+ATLAS repository:
+
+`https://github.com/rockbaer2007/atlas`
+
 The editor notes that Tabbed Card V2 is its own card. It is inspired by the
 original `kinghat/tabbed-card`, but maintained as a separate ATLAS variant.
 
@@ -145,4 +151,3 @@ The Card Editor is in active development. Simple and Expert mode, import/export,
 entity selection, resource checks and container cards are already testable.
 Additional custom-card mappings from scanned HACS resources will be added step
 by step.
-
