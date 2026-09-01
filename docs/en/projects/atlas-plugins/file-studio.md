@@ -36,6 +36,10 @@ The first plugin contract describes a fixed access policy:
 | `/addons` | disabled | only through Atlas Administration |
 | `/` | disabled | not allowed by default |
 
+`/config` is the normal Home Assistant configuration area. It contains files such as `configuration.yaml`, `automations.yaml`, dashboards, themes, blueprints, scripts and local web files under `www`.
+
+`/addons` is used for local Home Assistant add-ons. It can contain custom add-on folders with files such as `config.yaml`, `Dockerfile`, startup scripts, icons and documentation. Because changes there can directly affect installable add-ons, File Studio keeps this area locked by default and only shows it after explicit approval in Atlas Administration.
+
 This lets the install and update flow be tested before real file access is enabled in the add-on runtime.
 
 ## Next Expansion Steps

@@ -36,6 +36,10 @@ Der erste Plugin-Vertrag beschreibt eine feste Zugriffspolitik:
 | `/addons` | deaktiviert | nur über Atlas Administration |
 | `/` | deaktiviert | nicht standardmäßig erlaubt |
 
+`/config` ist der normale Home-Assistant-Konfigurationsbereich. Dort liegen zum Beispiel `configuration.yaml`, `automations.yaml`, Dashboards, Themes, Blueprints, Skripte und lokale Webdateien unter `www`.
+
+`/addons` wird für lokale Home-Assistant-Add-ons genutzt. Dort können eigene Add-on-Ordner mit Dateien wie `config.yaml`, `Dockerfile`, Startskripten, Icons und Dokumentation liegen. Weil Änderungen dort direkt installierbare Add-ons beeinflussen können, bleibt dieser Bereich in File Studio standardmäßig gesperrt und wird nur nach bewusster Freigabe in der Atlas Administration sichtbar.
+
 Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor echter Dateizugriff in der Add-on-Runtime freigeschaltet wird.
 
 ## Nächste Ausbaustufen
