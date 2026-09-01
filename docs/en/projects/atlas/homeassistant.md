@@ -4,8 +4,8 @@ ATLAS includes its own `@atlas/homeassistant` package for Home-Assistant-oriente
 integration. The current focus is an editor and export workflow for Home
 Assistant cards, live entities and later HACS-oriented usage.
 
-The detailed user and feature documentation for the editor now lives on the
-dedicated [Home Assistant Card Editor](./card-editor) page.
+The detailed user and feature documentation for the editor now lives in the
+plugin section: [Home Assistant Card Editor](/en/projects/atlas-plugins/homeassistant-card-editor).
 
 ## Current Scope
 

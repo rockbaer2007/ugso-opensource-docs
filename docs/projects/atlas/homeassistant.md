@@ -5,8 +5,8 @@ Home-Assistant-nahe Integration. Der aktuelle Schwerpunkt liegt auf einem
 Editor- und Export-Workflow für Home-Assistant-Karten, Live-Entitäten und
 spätere HACS-Nutzung.
 
-Die ausführliche Bedien- und Funktionsdoku zum Editor liegt jetzt auf der
-eigenen Seite [Home Assistant Card Editor](./card-editor).
+Die ausführliche Bedien- und Funktionsdoku zum Editor liegt jetzt in der
+Plugin-Rubrik: [Home Assistant Card Editor](/projects/atlas-plugins/homeassistant-card-editor).
 
 ## Aktueller Umfang
 

@@ -16,9 +16,6 @@ hero:
       text: Home Assistant
       link: /projects/atlas/homeassistant
     - theme: alt
-      text: Card Editor
-      link: /projects/atlas/card-editor
-    - theme: alt
       text: ATLAS Plugins
       link: /projects/atlas-plugins/
 
@@ -38,10 +35,6 @@ features:
   - icon: 🏠
     title: Home-Assistant-nah
     details: Status-Panels, Entitätenauswahl, HA-Card-Export und Lovelace-Ressourcenprüfung werden Schritt für Schritt ausgebaut.
-
-  - icon: 🧰
-    title: Card Editor
-    details: Simple- und Expert-Modus für Home-Assistant-Cards mit YAML-Import, Export, Ressourcencheck und Container-Cards.
 
   - icon: 🧪
     title: Testbar
