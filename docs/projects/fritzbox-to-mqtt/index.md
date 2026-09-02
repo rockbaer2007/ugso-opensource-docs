@@ -11,7 +11,7 @@ hero:
       link: /projects/fritzbox-to-mqtt/installation
     - theme: alt
       text: GitHub
-      link: https://github.com/rockbaer2007/fritzbox-to-mqtt
+      link: https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 
 features:
   - icon: 📞
@@ -42,6 +42,10 @@ features:
 ## Überblick
 
 FRITZ!Box to MQTT ist eine Home-Assistant-App, die Daten aus einer FRITZ!Box per MQTT Discovery in Home Assistant bereitstellt.
+
+Der aktuelle veröffentlichte Add-on-Stand liegt im gemeinsamen Repository
+`rockbaer2007/ugso-ha-mqtt-addons`. Das frühere Einzelrepository
+`rockbaer2007/fritzbox-to-mqtt` ist archiviert.
 
 Die App nutzt mehrere Quellen, weil nicht jede FRITZ!Box dieselben Schnittstellen gleich ausliefert:
 

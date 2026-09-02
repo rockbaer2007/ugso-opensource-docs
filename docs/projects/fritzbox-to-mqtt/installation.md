@@ -12,7 +12,7 @@
 
 Über den Button kann das Repository direkt in Home Assistant geöffnet werden:
 
-[![FRITZ!Box to MQTT in Home Assistant öffnen](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Ffritzbox-to-mqtt)
+[![FRITZ!Box to MQTT in Home Assistant öffnen](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Fugso-ha-mqtt-addons)
 
 1. Home Assistant öffnen.
 2. **Einstellungen > Apps > App-Store** öffnen.
@@ -20,12 +20,30 @@
 4. Dieses Repository eintragen:
 
 ```text
-https://github.com/rockbaer2007/fritzbox-to-mqtt
+https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 ```
 
 5. **FRITZ!Box to MQTT** installieren.
 6. Konfiguration ausfüllen.
 7. App starten.
+
+## Lokale Entwicklung
+
+Wenn du den aktuellen Stand lokal in Home Assistant testen willst, kopiere den
+Add-on-Ordner aus dem Sammel-Repository in den Home-Assistant-`addons`-Ordner:
+
+```text
+C:\Users\rockb\source\repos\ugso-ha-mqtt-addons\fritzbox_tr064_tam
+```
+
+Ziel in Home Assistant:
+
+```text
+/addons/fritzbox_tr064_tam
+```
+
+Danach im Home-Assistant-App-Store die Repositories neu laden, das Add-on
+aktualisieren oder installieren und neu starten.
 
 ## HACS
 

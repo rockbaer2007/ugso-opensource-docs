@@ -6,6 +6,12 @@ description: Home Assistant add-ons, apps and MQTT bridges.
 
 This section collects Home Assistant add-ons, apps, MQTT bridges and running services.
 
+The MQTT add-ons are published through the shared Home Assistant add-on repository:
+
+```text
+https://github.com/rockbaer2007/ugso-ha-mqtt-addons
+```
+
 | Project | Description |
 | --- | --- |
 | [FRITZ!Box to MQTT](/en/projects/fritzbox-to-mqtt/) | FRITZ!Box data through MQTT Discovery for Home Assistant. |
