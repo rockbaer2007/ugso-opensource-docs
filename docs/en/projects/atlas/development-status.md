@@ -17,7 +17,8 @@ Completed work includes:
 - ATLAS File Studio as the second plugin with `/config` by default, optional
   `/addons` approval, YAML validation, upload/download, backups, history with
   comparison and restore, search filters, multi-select actions, drag-and-drop
-  upload and secret-free problem reports with GitHub issue links
+  upload, trash restore, favorites, file-type icons and secret-free problem
+  reports with GitHub issue links
 
 ## Current Focus
 

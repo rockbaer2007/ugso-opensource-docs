@@ -12,14 +12,14 @@ ATLAS File Studio is the second independent ATLAS plugin. It is intended to edit
 
 File Studio is published as an installable ATLAS plugin and can be tested through the demo repository in Administration and Hub.
 
-- current plugin version: `0.1.32`
-- current Home Assistant App/Add-on version: `0.1.94`
+- current plugin version: `0.1.33`
+- current Home Assistant App/Add-on version: `0.1.95`
 - file tree for the approved `/config` area
 - flexible two-column surface with optional maximum width and height limits
 - file and folder actions next to the path: create file, create folder, refresh and collapse all folders
 - editor surface with a locally bundled CodeMirror 6 editor
 - syntax highlighting for YAML, JSON, JavaScript, TypeScript and Markdown
-- YAML validation before saving with Home Assistant hints for common files such as `configuration.yaml`, `automations.yaml`, `scripts.yaml` and packages
+- YAML validation before saving with Home Assistant hints for common files such as `configuration.yaml`, `automations.yaml`, `scripts.yaml` and packages, including common root keys, automation/script structure and directly entered secret values
 - save the currently opened file
 - automatic backups before saving, a history list of recent backups, comparison
   with the current state and restore of a selected backup
@@ -27,6 +27,9 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - download names are counted up in the browser, for example `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`
 - upload conflicts can be replaced, renamed or cancelled in a File Studio dialog
 - multi-select delete, copy and move actions
+- trash restore instead of immediate permanent deletion
+- favorites bar for frequently used files and folders
+- colored file-type icons with compact type badges
 - search with type filters, optional content search, matching line and content preview
 - opt-in problem report in a File Studio dialog with preview and a prepared GitHub issue link; the report does not include Home Assistant tokens, provider API keys or file contents
 - ZIP content preview without extraction
@@ -55,7 +58,6 @@ This lets the install and update flow be tested before real file access is enabl
 ## Next Expansion Steps
 
 - further Home Assistant YAML assistance, for example real schema/service checks against a connected Home Assistant instance
-- improved file type icons inspired by VS Code Icons
 - archive support after ZIP: read and extract `.rar` including RAR5, `.tar`,
   `.tar.gz`, `.tgz`, `.gz` and `.gzip`
 - archive extraction should start with safe content listing and targeted

@@ -16,7 +16,8 @@ Abgeschlossen sind unter anderem:
 - ATLAS File Studio als zweites Plugin mit `/config`-Standard, optionaler
   `/addons`-Freigabe, YAML-Prüfung, Upload/Download, Backups, Verlauf mit
   Vergleich und Wiederherstellung, Suchfiltern, Mehrfachauswahl,
-  Drag-and-drop-Upload und secret-freiem Problembericht mit GitHub-Issue-Link
+  Drag-and-drop-Upload, Papierkorb, Favoriten, Dateityp-Icons und
+  secret-freiem Problembericht mit GitHub-Issue-Link
 
 ## Aktueller Sprint
 

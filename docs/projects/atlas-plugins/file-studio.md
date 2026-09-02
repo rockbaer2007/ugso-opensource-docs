@@ -12,14 +12,14 @@ ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in f
 
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
-- aktueller Plugin-Stand: `0.1.32`
-- aktueller Home-Assistant-App/Add-on-Stand: `0.1.94`
+- aktueller Plugin-Stand: `0.1.33`
+- aktueller Home-Assistant-App/Add-on-Stand: `0.1.95`
 - Dateibaum für den freigegebenen `/config`-Bereich
 - flexible Zwei-Spalten-Oberfläche mit begrenzbarer Maximalbreite und Maximalhöhe
 - Datei- und Ordneraktionen direkt am Pfad: Datei anlegen, Ordner anlegen, neu laden und alle Ordner einklappen
 - Editorfläche mit lokaler CodeMirror-6-Bündelung
 - Syntax Highlighting für YAML, JSON, JavaScript, TypeScript und Markdown
-- YAML-Prüfung vor dem Speichern mit Home-Assistant-Hinweisen für häufige Dateien wie `configuration.yaml`, `automations.yaml`, `scripts.yaml` und Packages
+- YAML-Prüfung vor dem Speichern mit Home-Assistant-Hinweisen für häufige Dateien wie `configuration.yaml`, `automations.yaml`, `scripts.yaml` und Packages, inklusive typischer Root-Keys, Automations-/Script-Struktur und direkt eingetragener Secret-Werte
 - Speichern der aktuell bearbeiteten Datei
 - automatische Backups vor dem Speichern, Verlaufsliste der letzten Sicherungen,
   Vergleich mit dem aktuellen Stand und Wiederherstellen einer ausgewählten
@@ -28,6 +28,9 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - Downloadnamen werden im Browser automatisch hochgezählt, zum Beispiel `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`
 - Upload-Konflikte können im File-Studio-Dialog ersetzt, umbenannt oder abgebrochen werden
 - Mehrfachauswahl für Löschen, Kopieren und Verschieben
+- Papierkorb mit Wiederherstellen statt sofortigem endgültigem Löschen
+- Favoritenleiste für häufig genutzte Dateien und Ordner
+- farbige Dateityp-Icons mit kompakten Typ-Badges
 - Suche mit Typfilter, optionaler Inhaltssuche, Trefferzeile und Inhaltsvorschau
 - opt-in Problembericht im File-Studio-Dialog mit Vorschau und vorbereitetem GitHub-Issue-Link; der Bericht enthält keine Home-Assistant-Token, Provider-API-Keys oder Dateiinhalte
 - ZIP-Inhaltsvorschau ohne Entpacken
@@ -56,7 +59,6 @@ Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor ec
 ## Nächste Ausbaustufen
 
 - Home-Assistant-YAML-Hilfen weiter ausbauen, zum Beispiel mit echter Schema-/Service-Prüfung gegen eine verbundene Home-Assistant-Instanz
-- bessere Dateityp-Icons nach dem Vorbild von VS Code Icons
 - Archiv-Unterstützung nach ZIP: `.rar` inklusive RAR5, `.tar`, `.tar.gz`,
   `.tgz`, `.gz` und `.gzip` lesen und extrahieren
 - Archiv-Extraktion zuerst sicher als Inhaltsliste und gezieltes
