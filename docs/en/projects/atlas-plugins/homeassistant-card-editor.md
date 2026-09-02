@@ -6,6 +6,8 @@ The Home Assistant Card Editor is the first official ATLAS reference plugin. It 
 
 The plugin provides an editor for Home Assistant cards. It supports Simple and Expert workflows, entity selection, resource checks, YAML/JSON import, HACS-oriented bundle exports and multilingual card packages.
 
+In the Expert workflow, the background grid stays square. The number of columns is controlled by a horizontal slider above the surface, while the number of rows is controlled by a vertical slider on the left. The previous stretch behavior is now represented as a controlled grid size from `12` to `17` cells per axis.
+
 ## Extension Points
 
 The editor currently uses these ATLAS extension points:
