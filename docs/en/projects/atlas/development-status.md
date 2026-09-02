@@ -18,7 +18,7 @@ Completed work includes:
   sidebar helper
 - Plugin Hub with startup behavior for 0, 1 or multiple active plugins,
   dynamic plugin URLs, URL or `panel_iframe` copy actions and capability lists
-  collapsed by default on every plugin card
+  plus sidebar URLs collapsed by default on every plugin card
 - Home Assistant Card Editor with Simple/Expert workflows, HACS-oriented
   export, problem reporting, a three-column import/entity area and separate
   `X`, `Y` and Zoom controls for the square Expert grid
@@ -46,7 +46,7 @@ ATLAS File Studio, Automation Exporter / Editor and Home Assistant App/Add-on wo
 
 The work currently expands safe Home Assistant file workflows, versioned
 add-on releases and traceable plugin updates.
-The current Home Assistant App/Add-on version is `0.1.126`.
+The current Home Assistant App/Add-on version is `0.1.127`.
 
 ## Prepared Architecture Decisions
 
@@ -74,6 +74,7 @@ Planned next goals:
 8. Expand Renderer and Theme layers.
 9. Continue expanding ATLAS File Studio as an installable plugin, especially later real Home Assistant reload actions.
 10. Expand ATLAS Automation Exporter / Editor as another plugin: system `automations.yaml`, YAML upload, export overview and File Studio editing.
+11. Let File Studio switch between `/config` and the Automation Exporter output folder when Automation Exporter / Editor is installed.
 
 ## Long-Term Perspective
 

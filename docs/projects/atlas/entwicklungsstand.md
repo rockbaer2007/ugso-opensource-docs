@@ -17,7 +17,7 @@ Abgeschlossen sind unter anderem:
   Seitenleisten-Helfer
 - Plugin-Hub mit Startlogik fuer 0, 1 oder mehrere aktive Plugins,
   dynamischen Plugin-URLs, URL- und `panel_iframe`-Kopie sowie standardmäßig
-  eingeklappten Fähigkeitslisten pro Plugin
+  eingeklappten Fähigkeitslisten und Seitenleisten-URLs pro Plugin
 - Home Assistant Card Editor mit Simple-/Expert-Workflow, HACS-nahem Export,
   Problembericht, dreispaltigem Import-/Entitaetenbereich und getrennten
   `X`-, `Y`- und Zoom-Reglern fuer das quadratische Expert-Raster
@@ -45,7 +45,7 @@ ATLAS File Studio, Automation Exporter / Editor und Home-Assistant-App/Add-on-Wo
 
 Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
 versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.126`.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.127`.
 
 ## Bereits vorbereitete Architekturentscheidungen
 
@@ -72,6 +72,7 @@ Geplant sind:
 8. Renderer- und Theme-Schichten erweitern
 9. ATLAS File Studio als installierbares Plugin weiter ausbauen, insbesondere spätere echte Home-Assistant-Reload-Aktionen
 10. ATLAS Automation Exporter / Editor als weiteres Plugin ausbauen: System-`automations.yaml`, YAML-Upload, Exportuebersicht und File-Studio-Bearbeitung
+11. File Studio soll bei installiertem Automation Exporter / Editor zwischen `/config` und dem Automation-Export-Ordner umschalten können
 
 ## Langfristige Perspektive
 
