@@ -12,14 +12,21 @@ ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in f
 
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
+- aktueller Plugin-Stand: `0.1.29`
+- aktueller Home-Assistant-App/Add-on-Stand: `0.1.91`
 - Dateibaum für den freigegebenen `/config`-Bereich
 - flexible Zwei-Spalten-Oberfläche mit begrenzbarer Maximalbreite und Maximalhöhe
 - Datei- und Ordneraktionen direkt am Pfad: Datei anlegen, Ordner anlegen, neu laden und alle Ordner einklappen
 - Editorfläche mit lokaler CodeMirror-6-Bündelung
 - Syntax Highlighting für YAML, JSON, JavaScript, TypeScript und Markdown
-- YAML-Prüfung vor dem Speichern
+- YAML-Prüfung vor dem Speichern mit Home-Assistant-Hinweisen für häufige Dateien wie `configuration.yaml`, `automations.yaml`, `scripts.yaml` und Packages
 - Speichern der aktuell bearbeiteten Datei
+- automatische Backups vor dem Speichern und einfache Verlaufsliste der letzten Sicherungen
 - lokal speichern, Upload und Download
+- Downloadnamen werden im Browser automatisch hochgezählt, zum Beispiel `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`
+- Upload-Konflikte können ersetzt, umbenannt oder abgebrochen werden
+- Suche mit Trefferzeile und Inhaltsvorschau
+- opt-in Problembericht mit Vorschau; der Bericht enthält keine Home-Assistant-Token, Provider-API-Keys oder Dateiinhalte
 - ZIP-Inhaltsvorschau ohne Entpacken
 - `/config` als Standardwurzel
 - Add-on-Verzeichnis nur nach Admin-Freigabe
@@ -45,7 +52,9 @@ Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor ec
 
 ## Nächste Ausbaustufen
 
-- feinere Home-Assistant-YAML-Hilfen auf Basis bekannter HA-Strukturen
+- Home-Assistant-YAML-Hilfen weiter ausbauen, zum Beispiel für Includes, Pakete, Automationen und Skripte
+- Wiederherstellen aus der Verlaufsliste direkt in der Oberfläche
+- Problembericht später mit GitHub-Issue-Link vorbereiten
 - bessere Dateityp-Icons nach dem Vorbild von VS Code Icons
 - Archiv-Unterstützung nach ZIP: `.rar` inklusive RAR5, `.tar`, `.tar.gz`,
   `.tgz`, `.gz` und `.gzip` lesen und extrahieren

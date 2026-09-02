@@ -13,16 +13,20 @@ Abgeschlossen sind unter anderem:
 - Referenzimplementierung `DefaultEventBus`
 - Heartbeat- und EventBus-Grundlagen
 - Snapshot und Pre-Release-Tag für den Event-Stand
+- ATLAS File Studio als zweites Plugin mit `/config`-Standard, optionaler
+  `/addons`-Freigabe, YAML-Prüfung, Upload/Download, Backups, Verlauf,
+  Suchvorschau und secret-freiem Problembericht
 
 ## Aktueller Sprint
 
-Der nächste Entwicklungsschritt ist:
+Der aktuelle Entwicklungsschwerpunkt ist:
 
 ```text
-Sprint G2.5.3 – Runtime Foundation
+ATLAS File Studio und Home-Assistant-App/Add-on-Workflow
 ```
 
-Der Schwerpunkt liegt auf dem Ausbau der Runtime-Grundlagen.
+Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
+versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
 
 ## Bereits vorbereitete Architekturentscheidungen
 
@@ -47,7 +51,7 @@ Geplant sind:
 6. Separate Plugin-Dokumentation für Erstellung, Lebenszyklus, Extension APIs, Beispiele und Veröffentlichung vorbereiten
 7. Home-Assistant-Anbindung entwickeln
 8. Renderer- und Theme-Schichten erweitern
-9. ATLAS File Studio als installierbares Plugin weiter ausbauen
+9. ATLAS File Studio als installierbares Plugin weiter ausbauen, insbesondere Wiederherstellen aus dem Verlauf, feinere HA-YAML-Hilfen und GitHub-verknüpfte Problemberichte
 10. Automation Extractor als weiteres Plugin zuerst lesend planen und danach mit sicherem Exportpfad umsetzen
 
 ## Langfristige Perspektive
