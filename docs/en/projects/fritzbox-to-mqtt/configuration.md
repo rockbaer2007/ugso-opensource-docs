@@ -44,6 +44,11 @@ FRITZ!Box polling is split into groups to reduce load on the box:
 
 The live call monitor stays active independently and reports events directly through port `1012`.
 
+When WAN/DSL appears offline, the app pauses call list, answering machine, DECT
+and phonebook polling. Only WLAN, WAN and general connection status polling
+remain active so the app can detect when the connection returns. Once WAN/DSL is
+online again, the paused groups are refreshed immediately.
+
 `phonebooks` controls the phonebooks shown at startup. After the first successful scan, the display can be changed through the Home Assistant select entity.
 
 `phonebook_names` overrides generic phonebook names.

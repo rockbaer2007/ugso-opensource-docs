@@ -44,6 +44,12 @@ Die FRITZ!Box-Abfragen sind in Gruppen aufgeteilt, damit die Box weniger belaste
 
 Der Live-Anrufmonitor bleibt unabhängig davon dauerhaft aktiv und meldet Ereignisse direkt über Port `1012`.
 
+Wenn WAN/DSL als offline erkannt wird, pausiert die App Anruflisten-,
+Anrufbeantworter-, DECT- und Telefonbuchabfragen. Aktiv bleiben nur WLAN-, WAN-
+und allgemeine Verbindungsstatusabfragen, damit die App erkennt, wann die
+Verbindung zurück ist. Sobald WAN/DSL wieder online ist, werden die pausierten
+Gruppen sofort einmal nachgezogen.
+
 `phonebooks` steuert die beim Start angezeigten Telefonbücher. Nach dem ersten erfolgreichen Scan kann die Anzeige über die Home-Assistant-Select-Entität geändert werden.
 
 `phonebook_names` überschreibt generische Telefonbuchnamen.
