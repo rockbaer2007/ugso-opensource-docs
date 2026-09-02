@@ -48,6 +48,9 @@ When WAN/DSL appears offline, the app pauses call list, answering machine, DECT
 and phonebook polling. Only WLAN, WAN and general connection status polling
 remain active so the app can detect when the connection returns. Once WAN/DSL is
 online again, the paused groups are refreshed immediately.
+The diagnostic sensors `Abfrage Modus` and `Abfrage Hinweis` show whether all
+polling is active (`full`) or detail polling is paused while the FRITZ!Box
+reconnects (`limited`).
 
 `phonebooks` controls the phonebooks shown at startup. After the first successful scan, the display can be changed through the Home Assistant select entity.
 

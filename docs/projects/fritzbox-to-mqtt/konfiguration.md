@@ -49,6 +49,9 @@ Anrufbeantworter-, DECT- und Telefonbuchabfragen. Aktiv bleiben nur WLAN-, WAN-
 und allgemeine Verbindungsstatusabfragen, damit die App erkennt, wann die
 Verbindung zurück ist. Sobald WAN/DSL wieder online ist, werden die pausierten
 Gruppen sofort einmal nachgezogen.
+Die Diagnose-Sensoren `Abfrage Modus` und `Abfrage Hinweis` zeigen dabei an, ob
+alle Abfragen laufen (`full`) oder Detailabfragen pausiert sind, während die
+FRITZ!Box die Verbindung wieder aufbaut (`limited`).
 
 `phonebooks` steuert die beim Start angezeigten Telefonbücher. Nach dem ersten erfolgreichen Scan kann die Anzeige über die Home-Assistant-Select-Entität geändert werden.
 
