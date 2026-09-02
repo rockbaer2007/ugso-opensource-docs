@@ -36,9 +36,9 @@ Der aktuelle Einstieg ist der Runtime-Adapter. Ein `RuntimePlugin` kann mit `cre
 
 Der Plugin-Hub folgt inzwischen einer klaren Startregel: Wenn keine Plugins installiert sind, verweist er auf die Administration. Bei genau einem aktiven Plugin öffnet ATLAS dieses Plugin direkt. Bei zwei oder mehr aktiven Plugins zeigt ATLAS die Auswahlseite. Geplante oder deaktivierte Plugins dürfen sichtbar sein, werden aber nicht automatisch gestartet.
 
-Atlas Administration kann außerdem Seitenleisten-Einträge für Home Assistant vorbereiten. Der Dialog listet die aktuellen Plugins dynamisch, zeigt Name, URL, Version, Status und Icon-Vorschlag und kopiert einen fertigen `panel_iframe`-Block für die `configuration.yaml`. Alternativ können dieselben Werte für ein Home-Assistant-Dashboard vom Typ `Webseite` genutzt werden.
+Der Plugin-Hub kann außerdem Seitenleisten-Einträge für Home Assistant vorbereiten. Der Dialog listet die aktuellen Plugins dynamisch, zeigt Name, URL, Version, Status und Icon-Vorschlag und kopiert einen fertigen `panel_iframe`-Block für die `configuration.yaml`. Alternativ können dieselben Werte für ein Home-Assistant-Dashboard vom Typ `Webseite` genutzt werden.
 
-Der Plugin-Hub öffnet diesen Dialog direkt und zeigt bei startbaren Plugins die direkte Seitenleisten-URL. Für ATLAS File Studio ist das die Plugin-URL unter `/plugin-assets/file-studio/index.html` am ATLAS-App-Port beziehungsweise über die entsprechende Home-Assistant-Ingress-/Webseiten-Adresse.
+Für ATLAS File Studio nutzt der Hub die Plugin-URL unter `/plugin-assets/file-studio/index.html` am ATLAS-App-Port beziehungsweise über die entsprechende Home-Assistant-Ingress-/Webseiten-Adresse. Diese URL wird auch dann vorbereitet, wenn ein älterer gespeicherter Plugin-Stand noch keine Start-URL enthält.
 
 ## Veröffentlichungsregeln
 
