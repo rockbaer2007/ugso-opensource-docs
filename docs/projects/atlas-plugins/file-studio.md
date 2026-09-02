@@ -12,8 +12,8 @@ ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in f
 
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
-- aktueller Plugin-Stand: `0.1.33`
-- aktueller Home-Assistant-App/Add-on-Stand: `0.1.95`
+- aktueller Plugin-Stand: `0.1.34`
+- aktueller Home-Assistant-App/Add-on-Stand: `0.1.96`
 - Dateibaum für den freigegebenen `/config`-Bereich
 - flexible Zwei-Spalten-Oberfläche mit begrenzbarer Maximalbreite und Maximalhöhe
 - Datei- und Ordneraktionen direkt am Pfad: Datei anlegen, Ordner anlegen, neu laden und alle Ordner einklappen
@@ -28,7 +28,9 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - Downloadnamen werden im Browser automatisch hochgezählt, zum Beispiel `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`
 - Upload-Konflikte können im File-Studio-Dialog ersetzt, umbenannt oder abgebrochen werden
 - Mehrfachauswahl für Löschen, Kopieren und Verschieben
-- Papierkorb mit Wiederherstellen statt sofortigem endgültigem Löschen
+- Papierkorb mit Wiederherstellen statt sofortigem endgültigem Löschen; das
+  rechte Toolbar-Icon ist grau im leeren Zustand und rot, sobald Einträge
+  vorhanden sind
 - Favoritenleiste für häufig genutzte Dateien und Ordner
 - farbige Dateityp-Icons mit kompakten Typ-Badges
 - Suche mit Typfilter, optionaler Inhaltssuche, Trefferzeile und Inhaltsvorschau

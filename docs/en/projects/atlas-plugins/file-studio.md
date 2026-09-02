@@ -12,8 +12,8 @@ ATLAS File Studio is the second independent ATLAS plugin. It is intended to edit
 
 File Studio is published as an installable ATLAS plugin and can be tested through the demo repository in Administration and Hub.
 
-- current plugin version: `0.1.33`
-- current Home Assistant App/Add-on version: `0.1.95`
+- current plugin version: `0.1.34`
+- current Home Assistant App/Add-on version: `0.1.96`
 - file tree for the approved `/config` area
 - flexible two-column surface with optional maximum width and height limits
 - file and folder actions next to the path: create file, create folder, refresh and collapse all folders
@@ -27,7 +27,8 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - download names are counted up in the browser, for example `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`
 - upload conflicts can be replaced, renamed or cancelled in a File Studio dialog
 - multi-select delete, copy and move actions
-- trash restore instead of immediate permanent deletion
+- trash restore instead of immediate permanent deletion; the right-side toolbar
+  icon is gray when empty and red when entries exist
 - favorites bar for frequently used files and folders
 - colored file-type icons with compact type badges
 - search with type filters, optional content search, matching line and content preview
