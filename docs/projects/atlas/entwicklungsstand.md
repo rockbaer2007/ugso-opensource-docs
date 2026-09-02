@@ -45,7 +45,7 @@ ATLAS File Studio, Automation Exporter / Editor und Home-Assistant-App/Add-on-Wo
 
 Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
 versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.127`.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.128`.
 
 ## Bereits vorbereitete Architekturentscheidungen
 

@@ -36,7 +36,7 @@ The current entry point is the Runtime adapter. A `RuntimePlugin` can be transla
 
 The Plugin Hub now follows a clear start rule: if no plugins are installed, it points to Administration. With exactly one active plugin, ATLAS opens that plugin directly. With two or more active plugins, ATLAS shows the selection page. Planned or disabled plugins may be visible, but they are not started automatically.
 
-The Plugin Hub can also prepare Home Assistant sidebar entries. The dialog lists current plugins dynamically, shows name, URL, version, status and icon suggestion, and copies either the URL alone or a ready-to-use `panel_iframe` block for `configuration.yaml`. The URL copy action is intended for Home Assistant dashboards of type `Webpage`.
+The Plugin Hub can also prepare Home Assistant sidebar entries. The dialog lists current plugins dynamically, shows name, URL, version, status and icon suggestion, and copies either the URL alone or a ready-to-use `panel_iframe` block for `configuration.yaml`. The URL copy action is intended for Home Assistant dashboards of type `Webpage`. Long capability lists and sidebar URLs stay collapsed by default on plugin cards so the Hub remains compact with many plugins.
 
 For ATLAS File Studio, the Hub uses the plugin URL under `/plugin-assets/file-studio/index.html` on the ATLAS app port or through the matching Home Assistant Ingress/Webpage address. This URL is prepared even when older saved plugin state does not yet include a launch URL.
 
