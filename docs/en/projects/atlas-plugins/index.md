@@ -38,6 +38,8 @@ The Plugin Hub now follows a clear start rule: if no plugins are installed, it p
 
 Atlas Administration can also prepare Home Assistant sidebar entries. The dialog lists current plugins dynamically, shows name, URL, version, status and icon suggestion, and copies the values for a Home Assistant dashboard of type `Webpage`. The actual entry is created in Home Assistant: add a dashboard, choose Webpage, paste the values and enable **Show in sidebar**.
 
+The Plugin Hub now points to this option as well and shows the direct sidebar URL for launchable plugins. For ATLAS File Studio, that is the plugin URL under `/plugin-assets/file-studio/index.html` on the ATLAS app port or through the matching Home Assistant Ingress/Webpage address.
+
 ## Publishing Rules
 
 Publishable plugins need clear names, explicit versions, documented dependencies, safe demo or fallback data, traceable build artifacts and notes for ATLAS, Home Assistant or HACS-oriented usage.

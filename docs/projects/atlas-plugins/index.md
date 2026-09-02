@@ -38,6 +38,8 @@ Der Plugin-Hub folgt inzwischen einer klaren Startregel: Wenn keine Plugins inst
 
 Atlas Administration kann außerdem Seitenleisten-Einträge für Home Assistant vorbereiten. Der Dialog listet die aktuellen Plugins dynamisch, zeigt Name, URL, Version, Status und Icon-Vorschlag und kopiert die Werte für ein Home-Assistant-Dashboard vom Typ `Webseite`. Das eigentliche Anlegen bleibt in Home Assistant: Dashboard hinzufügen, Webseite wählen, Werte einsetzen und **In Seitenleiste anzeigen** aktivieren.
 
+Der Plugin-Hub weist jetzt ebenfalls auf diese Möglichkeit hin und zeigt bei startbaren Plugins die direkte Seitenleisten-URL. Für ATLAS File Studio ist das die Plugin-URL unter `/plugin-assets/file-studio/index.html` am ATLAS-App-Port beziehungsweise über die entsprechende Home-Assistant-Ingress-/Webseiten-Adresse.
+
 ## Veröffentlichungsregeln
 
 Veröffentlichbare Plugins brauchen eindeutige Namen, klare Versionsangaben, dokumentierte Abhängigkeiten, sichere Demo- oder Fallback-Daten, nachvollziehbare Build-Artefakte und Hinweise für ATLAS, Home Assistant oder HACS-nahe Nutzung.
