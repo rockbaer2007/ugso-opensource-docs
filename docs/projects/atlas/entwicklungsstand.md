@@ -29,7 +29,8 @@ Abgeschlossen sind unter anderem:
   secret-freiem Problembericht mit GitHub-Issue-Link
 - ATLAS Automation Exporter / Editor als eigenständiges GitHub-installierbares
   Plugin mit System-`automations.yaml`, YAML-Upload, Zeitstempel-Export,
-  Exportübersicht und File-Studio-Anbindung
+  Exportübersicht, File-Studio-Anbindung und Analysehinweisen für fehlende oder
+  doppelte IDs/Aliasse, fehlende Trigger/Actions und deaktivierte Automationen
 
 ## Aktueller Sprint
 
@@ -41,7 +42,7 @@ ATLAS File Studio, Automation Exporter / Editor und Home-Assistant-App/Add-on-Wo
 
 Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
 versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.122`.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.123`.
 
 ## Bereits vorbereitete Architekturentscheidungen
 

@@ -14,7 +14,7 @@ entries and prepare further editing through File Studio.
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Install page: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository file: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- current installable plugin version: `0.1.1`
+- current installable plugin version: `0.1.2`
 
 ATLAS Administration accepts the GitHub URL directly. During preview, ATLAS
 converts it to the matching `repository.json` address automatically.
@@ -22,6 +22,9 @@ converts it to the matching `repository.json` address automatically.
 - read `/config/automations.yaml` through the approved File Studio path
 - analyze external `.yaml` and `.yml` uploads
 - show id, alias, description, triggers, conditions and actions
+- show analysis hints for missing or duplicate ids/aliases, missing triggers or
+  actions and disabled automations
+- filter to automations with hints only
 - surface related entities, scripts, scenes, helpers and notification targets
 - configure an export folder target
 - export selected automations as individual YAML files
