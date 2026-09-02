@@ -14,8 +14,9 @@ Abgeschlossen sind unter anderem:
 - Heartbeat- und EventBus-Grundlagen
 - Snapshot und Pre-Release-Tag für den Event-Stand
 - ATLAS File Studio als zweites Plugin mit `/config`-Standard, optionaler
-  `/addons`-Freigabe, YAML-Prüfung, Upload/Download, Backups, Verlauf,
-  Suchvorschau und secret-freiem Problembericht
+  `/addons`-Freigabe, YAML-Prüfung, Upload/Download, Backups, Verlauf mit
+  Wiederherstellung, Suchvorschau und secret-freiem Problembericht mit
+  GitHub-Issue-Link
 
 ## Aktueller Sprint
 
@@ -51,7 +52,7 @@ Geplant sind:
 6. Separate Plugin-Dokumentation für Erstellung, Lebenszyklus, Extension APIs, Beispiele und Veröffentlichung vorbereiten
 7. Home-Assistant-Anbindung entwickeln
 8. Renderer- und Theme-Schichten erweitern
-9. ATLAS File Studio als installierbares Plugin weiter ausbauen, insbesondere Wiederherstellen aus dem Verlauf, feinere HA-YAML-Hilfen und GitHub-verknüpfte Problemberichte
+9. ATLAS File Studio als installierbares Plugin weiter ausbauen, insbesondere eigene Dialoge, feinere HA-YAML-Hilfen und spätere echte Home-Assistant-Reload-Aktionen
 10. Automation Extractor als weiteres Plugin zuerst lesend planen und danach mit sicherem Exportpfad umsetzen
 
 ## Langfristige Perspektive

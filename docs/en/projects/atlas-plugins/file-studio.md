@@ -12,8 +12,8 @@ ATLAS File Studio is the second independent ATLAS plugin. It is intended to edit
 
 File Studio is published as an installable ATLAS plugin and can be tested through the demo repository in Administration and Hub.
 
-- current plugin version: `0.1.29`
-- current Home Assistant App/Add-on version: `0.1.91`
+- current plugin version: `0.1.30`
+- current Home Assistant App/Add-on version: `0.1.92`
 - file tree for the approved `/config` area
 - flexible two-column surface with optional maximum width and height limits
 - file and folder actions next to the path: create file, create folder, refresh and collapse all folders
@@ -21,12 +21,13 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - syntax highlighting for YAML, JSON, JavaScript, TypeScript and Markdown
 - YAML validation before saving with Home Assistant hints for common files such as `configuration.yaml`, `automations.yaml`, `scripts.yaml` and packages
 - save the currently opened file
-- automatic backups before saving and a simple history list of recent backups
+- automatic backups before saving, a history list of recent backups and restore
+  of a selected backup
 - save locally, upload and download
 - download names are counted up in the browser, for example `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`
 - upload conflicts can be replaced, renamed or cancelled
 - search results with matching line and content preview
-- opt-in problem report with preview; the report does not include Home Assistant tokens, provider API keys or file contents
+- opt-in problem report with preview and a prepared GitHub issue link; the report does not include Home Assistant tokens, provider API keys or file contents
 - ZIP content preview without extraction
 - `/config` as default root
 - add-on directory only after Administration approval
@@ -52,9 +53,8 @@ This lets the install and update flow be tested before real file access is enabl
 
 ## Next Expansion Steps
 
-- further Home Assistant YAML assistance for includes, packages, automations and scripts
-- restoring directly from the history list in the UI
-- preparing the problem report flow with a GitHub issue link
+- further Home Assistant YAML assistance, for example real schema/service checks against a connected Home Assistant instance
+- better custom dialogs instead of browser dialogs for history, upload conflicts and problem reports
 - improved file type icons inspired by VS Code Icons
 - archive support after ZIP: read and extract `.rar` including RAR5, `.tar`,
   `.tar.gz`, `.tgz`, `.gz` and `.gzip`
