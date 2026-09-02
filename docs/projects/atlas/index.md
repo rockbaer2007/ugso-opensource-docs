@@ -49,7 +49,8 @@ features:
 
 ATLAS befindet sich aktuell in aktiver Entwicklung.
 
-Der derzeitige Schwerpunkt liegt auf der **Runtime Foundation** und dem Ausbau der grundlegenden Architektur.
+Der derzeitige Schwerpunkt liegt auf der **Home-Assistant-nahen ATLAS-App** mit
+Administration, Plugin-Hub, Card Editor und File Studio.
 
 ::: warning Entwicklungsprojekt
 ATLAS ist noch nicht für den produktiven Einsatz freigegeben. APIs, Paketstrukturen und interne Verträge können sich noch ändern.
@@ -67,4 +68,7 @@ Dazu gehören unter anderem:
 - modulare Plugins
 - Diagnose- und Entwicklungswerkzeuge
 - Home-Assistant-Anbindungen
+- Administration und Plugin-Hub
+- File Studio fuer freigegebene Home-Assistant-Dateipfade
+- Card Editor mit Simple- und Expert-Workflow
 - gemeinsame Theme- und Renderer-Strukturen

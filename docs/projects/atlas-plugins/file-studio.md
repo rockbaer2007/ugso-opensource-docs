@@ -13,9 +13,11 @@ ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in f
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
 - aktueller Plugin-Stand: `0.1.36`
-- aktueller Home-Assistant-App/Add-on-Stand: `0.1.99`
+- aktueller Home-Assistant-App/Add-on-Stand: `0.1.119`
 - Dateibaum für den freigegebenen `/config`-Bereich
 - flexible Zwei-Spalten-Oberfläche mit begrenzbarer Maximalbreite und Maximalhöhe
+- kompakte Werkzeugzeile unterhalb von `Dateibaum /config`, damit die Icons in
+  schmaleren Ansichten nicht in die rechte Dateiliste rutschen
 - Datei- und Ordneraktionen direkt am Pfad: Datei anlegen, Ordner anlegen, neu laden und alle Ordner einklappen
 - Editorfläche mit lokaler CodeMirror-6-Bündelung
 - große Dateien scrollen innerhalb der Editorfläche, damit die Statuszeile unten sichtbar bleibt
@@ -65,7 +67,7 @@ Im Home-Assistant-App/Add-on-Betrieb kommen diese Freigaben aus der Add-on-Konfi
 
 ## Home-Assistant-Update-Hinweis
 
-Nach jedem sichtbaren ATLAS-Update wird die Home-Assistant-App/Add-on-Version angehoben. Home Assistant vergleicht die installierte Version (`old`) mit der Repository-Version (`target`). Für diesen Stand sollte `target` mindestens `0.1.97` anzeigen. Wenn weiter eine alte Zielversion erscheint, im Add-on Store die Repository-Informationen neu laden und anschließend ATLAS aktualisieren oder neu starten.
+Nach jedem sichtbaren ATLAS-Update wird die Home-Assistant-App/Add-on-Version angehoben. Home Assistant vergleicht die installierte Version (`old`) mit der Repository-Version (`target`). Für diesen Stand sollte `target` mindestens `0.1.119` anzeigen. Wenn weiter eine alte Zielversion erscheint, im Add-on Store die Repository-Informationen neu laden und anschließend ATLAS aktualisieren oder neu starten.
 
 Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor echter Dateizugriff in der Add-on-Runtime freigeschaltet wird.
 

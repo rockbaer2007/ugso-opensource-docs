@@ -49,8 +49,8 @@ features:
 
 ATLAS is currently in active development.
 
-The current focus is the **Runtime Foundation** and the Home Assistant editor
-workflow built on top of it.
+The current focus is the **Home-Assistant-oriented ATLAS app** with
+Administration, Plugin Hub, Card Editor and File Studio.
 
 ::: warning Development project
 ATLAS is not released for production use yet. APIs, package structures and
@@ -70,4 +70,7 @@ This includes:
 - modular plugins
 - diagnostics and development tools
 - Home Assistant integrations
+- Administration and Plugin Hub
+- File Studio for approved Home Assistant file paths
+- Card Editor with Simple and Expert workflows
 - shared theme and renderer structures

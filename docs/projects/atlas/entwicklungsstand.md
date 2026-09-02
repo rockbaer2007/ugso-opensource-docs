@@ -12,6 +12,14 @@ Abgeschlossen sind unter anderem:
 - öffentliche Event-Verträge
 - Referenzimplementierung `DefaultEventBus`
 - Heartbeat- und EventBus-Grundlagen
+- Atlas Administration mit Plugin-Verwaltung, Capability-Freigaben,
+  Home-Assistant-Verbindung, Add-on-Update-Hinweisen und vorbereitetem
+  Seitenleisten-Helfer
+- Plugin-Hub mit Startlogik fuer 0, 1 oder mehrere aktive Plugins,
+  dynamischen Plugin-URLs sowie URL- und `panel_iframe`-Kopie
+- Home Assistant Card Editor mit Simple-/Expert-Workflow, HACS-nahem Export,
+  Problembericht, dreispaltigem Import-/Entitaetenbereich und getrennten
+  `X`-, `Y`- und Zoom-Reglern fuer das quadratische Expert-Raster
 - Snapshot und Pre-Release-Tag für den Event-Stand
 - ATLAS File Studio als zweites Plugin mit `/config`-Standard, optionaler
   `/addons`-Freigabe, YAML-Prüfung, Upload/Download, Backups, Verlauf mit
@@ -29,6 +37,7 @@ ATLAS File Studio und Home-Assistant-App/Add-on-Workflow
 
 Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
 versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.119`.
 
 ## Bereits vorbereitete Architekturentscheidungen
 
@@ -53,7 +62,7 @@ Geplant sind:
 6. Separate Plugin-Dokumentation für Erstellung, Lebenszyklus, Extension APIs, Beispiele und Veröffentlichung vorbereiten
 7. Home-Assistant-Anbindung entwickeln
 8. Renderer- und Theme-Schichten erweitern
-9. ATLAS File Studio als installierbares Plugin weiter ausbauen, insbesondere feinere HA-YAML-Hilfen und spätere echte Home-Assistant-Reload-Aktionen
+9. ATLAS File Studio als installierbares Plugin weiter ausbauen, insbesondere spätere echte Home-Assistant-Reload-Aktionen
 10. Automation Extractor als weiteres Plugin zuerst lesend planen und danach mit sicherem Exportpfad umsetzen
 
 ## Langfristige Perspektive

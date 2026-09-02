@@ -13,6 +13,14 @@ Completed work includes:
 - `DefaultEventBus` reference implementation
 - heartbeat and EventBus foundations
 - Home Assistant status demo with entity selection and card export
+- Atlas Administration with plugin management, capability approvals,
+  Home Assistant connection settings, add-on update hints and the prepared
+  sidebar helper
+- Plugin Hub with startup behavior for 0, 1 or multiple active plugins,
+  dynamic plugin URLs and URL or `panel_iframe` copy actions
+- Home Assistant Card Editor with Simple/Expert workflows, HACS-oriented
+  export, problem reporting, a three-column import/entity area and separate
+  `X`, `Y` and Zoom controls for the square Expert grid
 - external documentation in the UGSo Open Source docs site
 - ATLAS File Studio as the second plugin with `/config` by default, optional
   `/addons` approval, YAML validation, upload/download, backups, history with
@@ -30,6 +38,7 @@ ATLAS File Studio and Home Assistant App/Add-on workflow
 
 The work currently expands safe Home Assistant file workflows, versioned
 add-on releases and traceable plugin updates.
+The current Home Assistant App/Add-on version is `0.1.119`.
 
 ## Prepared Architecture Decisions
 
@@ -55,7 +64,7 @@ Planned next goals:
 6. Prepare separate plugin documentation for authoring, lifecycle, extension APIs, examples and publishing.
 7. Continue the Home Assistant integration.
 8. Expand Renderer and Theme layers.
-9. Continue expanding ATLAS File Studio as an installable plugin, especially more specific HA YAML assistance and later real Home Assistant reload actions.
+9. Continue expanding ATLAS File Studio as an installable plugin, especially later real Home Assistant reload actions.
 10. Plan Automation Extractor as another plugin, starting read-only and later adding a safe export path.
 
 ## Long-Term Perspective
