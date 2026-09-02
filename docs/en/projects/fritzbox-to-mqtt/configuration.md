@@ -52,6 +52,42 @@ The diagnostic sensors `Abfrage Modus` and `Abfrage Hinweis` show whether all
 polling is active (`full`) or detail polling is paused while the FRITZ!Box
 reconnects (`limited`).
 
+## Polling Status In Home Assistant
+
+The app publishes two diagnostic sensors for dashboards and automations:
+
+- `Abfrage Modus`: technical status for automations
+- `Abfrage Hinweis`: readable message for dashboard cards
+
+MQTT topics:
+
+- `fritzbox/polling/mode`
+- `fritzbox/polling/message`
+- `fritzbox/polling/attributes`
+
+Possible values for `Abfrage Modus`:
+
+- `full`: WAN/DSL is online and all groups are polled normally
+- `limited`: WAN/DSL is offline and detail polling is paused
+- `unknown`: the connection status is being detected
+
+Example Home Assistant automation:
+
+```yaml
+alias: FRITZBox detail polling paused
+trigger:
+  - platform: state
+    entity_id: sensor.abfrage_modus
+    to: "limited"
+action:
+  - service: persistent_notification.create
+    data:
+      title: "FRITZ!Box is reconnecting"
+      message: "Detail polling is paused. Once WAN/DSL is online again, all groups are refreshed."
+```
+
+Adjust `entity_id` to the actual entity name in your Home Assistant installation.
+
 `phonebooks` controls the phonebooks shown at startup. After the first successful scan, the display can be changed through the Home Assistant select entity.
 
 `phonebook_names` overrides generic phonebook names.

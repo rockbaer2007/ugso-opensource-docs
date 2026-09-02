@@ -53,6 +53,42 @@ Die Diagnose-Sensoren `Abfrage Modus` und `Abfrage Hinweis` zeigen dabei an, ob
 alle Abfragen laufen (`full`) oder Detailabfragen pausiert sind, während die
 FRITZ!Box die Verbindung wieder aufbaut (`limited`).
 
+## Abfragestatus in Home Assistant
+
+Die App veröffentlicht zwei Diagnose-Sensoren für Dashboards und Automationen:
+
+- `Abfrage Modus`: technischer Status für Automationen
+- `Abfrage Hinweis`: lesbarer Hinweistext für Dashboard-Karten
+
+MQTT-Topics:
+
+- `fritzbox/polling/mode`
+- `fritzbox/polling/message`
+- `fritzbox/polling/attributes`
+
+Mögliche Werte für `Abfrage Modus`:
+
+- `full`: WAN/DSL ist online, alle Gruppen werden normal abgefragt
+- `limited`: WAN/DSL ist offline, Detailabfragen sind pausiert
+- `unknown`: der Verbindungsstatus wird gerade ermittelt
+
+Beispiel für eine Home-Assistant-Automation:
+
+```yaml
+alias: FRITZBox Detailabfragen pausiert
+trigger:
+  - platform: state
+    entity_id: sensor.abfrage_modus
+    to: "limited"
+action:
+  - service: persistent_notification.create
+    data:
+      title: "FRITZ!Box baut Verbindung auf"
+      message: "Detailabfragen sind pausiert. Sobald WAN/DSL wieder online ist, werden alle Gruppen nachgezogen."
+```
+
+Passe `entity_id` an den tatsächlichen Entity-Namen in deiner Home-Assistant-Installation an.
+
 `phonebooks` steuert die beim Start angezeigten Telefonbücher. Nach dem ersten erfolgreichen Scan kann die Anzeige über die Home-Assistant-Select-Entität geändert werden.
 
 `phonebook_names` überschreibt generische Telefonbuchnamen.
