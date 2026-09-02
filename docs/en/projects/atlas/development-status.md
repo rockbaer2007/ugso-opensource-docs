@@ -27,18 +27,21 @@ Completed work includes:
   comparison and restore, search filters, multi-select actions, drag-and-drop
   upload, trash restore, favorites, file-type icons and secret-free problem
   reports with GitHub issue links
+- ATLAS Automation Exporter / Editor as an independent GitHub-installable
+  plugin with system `automations.yaml`, YAML upload, timestamped exports,
+  export overview and File Studio handoff
 
 ## Current Focus
 
 The current development focus is:
 
 ```text
-ATLAS File Studio and Home Assistant App/Add-on workflow
+ATLAS File Studio, Automation Exporter / Editor and Home Assistant App/Add-on workflow
 ```
 
 The work currently expands safe Home Assistant file workflows, versioned
 add-on releases and traceable plugin updates.
-The current Home Assistant App/Add-on version is `0.1.120`.
+The current Home Assistant App/Add-on version is `0.1.121`.
 
 ## Prepared Architecture Decisions
 

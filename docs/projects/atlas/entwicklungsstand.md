@@ -26,18 +26,21 @@ Abgeschlossen sind unter anderem:
   Vergleich und Wiederherstellung, Suchfiltern, Mehrfachauswahl,
   Drag-and-drop-Upload, Papierkorb, Favoriten, Dateityp-Icons und
   secret-freiem Problembericht mit GitHub-Issue-Link
+- ATLAS Automation Exporter / Editor als eigenständiges GitHub-installierbares
+  Plugin mit System-`automations.yaml`, YAML-Upload, Zeitstempel-Export,
+  Exportübersicht und File-Studio-Anbindung
 
 ## Aktueller Sprint
 
 Der aktuelle Entwicklungsschwerpunkt ist:
 
 ```text
-ATLAS File Studio und Home-Assistant-App/Add-on-Workflow
+ATLAS File Studio, Automation Exporter / Editor und Home-Assistant-App/Add-on-Workflow
 ```
 
 Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
 versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.120`.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.121`.
 
 ## Bereits vorbereitete Architekturentscheidungen
 
