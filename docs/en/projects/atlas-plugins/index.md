@@ -36,6 +36,8 @@ The current entry point is the Runtime adapter. A `RuntimePlugin` can be transla
 
 The Plugin Hub now follows a clear start rule: if no plugins are installed, it points to Administration. With exactly one active plugin, ATLAS opens that plugin directly. With two or more active plugins, ATLAS shows the selection page. Planned or disabled plugins may be visible, but they are not started automatically.
 
+Atlas Administration can also prepare Home Assistant sidebar entries. The dialog lists current plugins dynamically, shows name, URL, version, status and icon suggestion, and copies the values for a Home Assistant dashboard of type `Webpage`. The actual entry is created in Home Assistant: add a dashboard, choose Webpage, paste the values and enable **Show in sidebar**.
+
 ## Publishing Rules
 
 Publishable plugins need clear names, explicit versions, documented dependencies, safe demo or fallback data, traceable build artifacts and notes for ATLAS, Home Assistant or HACS-oriented usage.

@@ -36,6 +36,8 @@ Der aktuelle Einstieg ist der Runtime-Adapter. Ein `RuntimePlugin` kann mit `cre
 
 Der Plugin-Hub folgt inzwischen einer klaren Startregel: Wenn keine Plugins installiert sind, verweist er auf die Administration. Bei genau einem aktiven Plugin öffnet ATLAS dieses Plugin direkt. Bei zwei oder mehr aktiven Plugins zeigt ATLAS die Auswahlseite. Geplante oder deaktivierte Plugins dürfen sichtbar sein, werden aber nicht automatisch gestartet.
 
+Atlas Administration kann außerdem Seitenleisten-Einträge für Home Assistant vorbereiten. Der Dialog listet die aktuellen Plugins dynamisch, zeigt Name, URL, Version, Status und Icon-Vorschlag und kopiert die Werte für ein Home-Assistant-Dashboard vom Typ `Webseite`. Das eigentliche Anlegen bleibt in Home Assistant: Dashboard hinzufügen, Webseite wählen, Werte einsetzen und **In Seitenleiste anzeigen** aktivieren.
+
 ## Veröffentlichungsregeln
 
 Veröffentlichbare Plugins brauchen eindeutige Namen, klare Versionsangaben, dokumentierte Abhängigkeiten, sichere Demo- oder Fallback-Daten, nachvollziehbare Build-Artefakte und Hinweise für ATLAS, Home Assistant oder HACS-nahe Nutzung.
