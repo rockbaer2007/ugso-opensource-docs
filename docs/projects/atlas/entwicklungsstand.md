@@ -37,7 +37,7 @@ ATLAS File Studio und Home-Assistant-App/Add-on-Workflow
 
 Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
 versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.119`.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.120`.
 
 ## Bereits vorbereitete Architekturentscheidungen
 
@@ -63,7 +63,7 @@ Geplant sind:
 7. Home-Assistant-Anbindung entwickeln
 8. Renderer- und Theme-Schichten erweitern
 9. ATLAS File Studio als installierbares Plugin weiter ausbauen, insbesondere spätere echte Home-Assistant-Reload-Aktionen
-10. Automation Extractor als weiteres Plugin zuerst lesend planen und danach mit sicherem Exportpfad umsetzen
+10. ATLAS Automation Exporter / Editor als weiteres Plugin ausbauen: System-`automations.yaml`, YAML-Upload, Exportuebersicht und File-Studio-Bearbeitung
 
 ## Langfristige Perspektive
 

@@ -11,7 +11,7 @@ The plugin interfaces are still in progress. These pages document the current AT
 - [Repository Format](./repository-format): `repository.json` structure, required fields, ATLAS marker and example.
 - [Home Assistant Card Editor](./homeassistant-card-editor): the first official ATLAS reference plugin.
 - [ATLAS File Studio](./file-studio): second independent ATLAS plugin for approved Home Assistant file paths.
-- [Automation Extractor](./automation-extractor): planned plugin for analyzing and later splitting Home Assistant automations.
+- [ATLAS Automation Exporter / Editor](./automation-extractor): new plugin for analyzing, exporting and later editing Home Assistant automations.
 - [Demo Repository](./demo-repository): public test repository for Administration, Hub and install flow.
 
 ## Goal
@@ -48,4 +48,4 @@ Publishable plugins need clear names, explicit versions, documented dependencies
 
 ## Planned Plugins
 
-The next noted plugin candidate is Automation Extractor. It should bring the earlier Windows idea into ATLAS and start read-only: detect automations, show dependencies and prepare safe export or refactoring steps.
+The next plugin candidate has started as ATLAS Automation Exporter / Editor. It brings the earlier Windows idea into ATLAS: detect automations, show dependencies, export individual timestamped YAML files and prepare further editing through File Studio.

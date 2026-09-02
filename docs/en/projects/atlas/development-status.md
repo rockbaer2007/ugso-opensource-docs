@@ -38,7 +38,7 @@ ATLAS File Studio and Home Assistant App/Add-on workflow
 
 The work currently expands safe Home Assistant file workflows, versioned
 add-on releases and traceable plugin updates.
-The current Home Assistant App/Add-on version is `0.1.119`.
+The current Home Assistant App/Add-on version is `0.1.120`.
 
 ## Prepared Architecture Decisions
 
@@ -65,7 +65,7 @@ Planned next goals:
 7. Continue the Home Assistant integration.
 8. Expand Renderer and Theme layers.
 9. Continue expanding ATLAS File Studio as an installable plugin, especially later real Home Assistant reload actions.
-10. Plan Automation Extractor as another plugin, starting read-only and later adding a safe export path.
+10. Expand ATLAS Automation Exporter / Editor as another plugin: system `automations.yaml`, YAML upload, export overview and File Studio editing.
 
 ## Long-Term Perspective
 
