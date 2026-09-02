@@ -15,6 +15,10 @@ Eintraege exportieren und die weitere Bearbeitung ueber File Studio vorbereiten.
 - Installationsseite: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository-Datei: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
 
+In ATLAS Administration kann direkt die GitHub-URL eingefuegt werden. ATLAS
+wandelt sie beim Pruefen automatisch in die passende `repository.json`-Adresse
+um.
+
 - `/config/automations.yaml` automatisch ueber den freigegebenen File-Studio-Pfad lesen
 - fremde `.yaml`- und `.yml`-Dateien per Upload analysieren
 - ID, Alias, Beschreibung, Trigger, Conditions und Actions anzeigen
