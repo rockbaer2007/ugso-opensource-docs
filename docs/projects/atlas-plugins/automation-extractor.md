@@ -14,7 +14,7 @@ Eintraege exportieren und die weitere Bearbeitung ueber File Studio vorbereiten.
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Installationsseite: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository-Datei: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- aktueller installierbarer Plugin-Stand: `0.1.4`
+- aktueller installierbarer Plugin-Stand: `0.1.5`
 
 In ATLAS Administration kann direkt die GitHub-URL eingefuegt werden. ATLAS
 wandelt sie beim Pruefen automatisch in die passende `repository.json`-Adresse
@@ -29,6 +29,8 @@ um.
   Actions und deaktivierte Automationen anzeigen
 - nur Automationen mit Hinweisen filtern
 - Detail-YAML farbig wie im File Studio darstellen
+- Automationsliste auf ungefähr 15 sichtbare Einträge begrenzen und intern
+  scrollbar halten
 - beteiligte Entitaeten, Scripts, Szenen, Helfer und Benachrichtigungsziele sichtbar machen
 - Export-Ordner als Zielvorgabe festlegen
 - ausgewaehlte Automationen als einzelne YAML-Dateien exportieren

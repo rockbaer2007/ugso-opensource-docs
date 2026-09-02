@@ -33,7 +33,8 @@ Completed work includes:
   export overview, File Studio handoff and analysis hints for missing or
   duplicate ids/aliases, missing triggers/actions and disabled automations;
   service calls are detected from both `service:` and modern
-  `action: domain.service` syntax, and detail YAML is shown with highlighting
+  `action: domain.service` syntax, detail YAML is shown with highlighting and
+  long automation lists scroll internally
 
 ## Current Focus
 
@@ -45,7 +46,7 @@ ATLAS File Studio, Automation Exporter / Editor and Home Assistant App/Add-on wo
 
 The work currently expands safe Home Assistant file workflows, versioned
 add-on releases and traceable plugin updates.
-The current Home Assistant App/Add-on version is `0.1.125`.
+The current Home Assistant App/Add-on version is `0.1.126`.
 
 ## Prepared Architecture Decisions
 
