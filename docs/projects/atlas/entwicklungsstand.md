@@ -16,7 +16,8 @@ Abgeschlossen sind unter anderem:
   Home-Assistant-Verbindung, Add-on-Update-Hinweisen und vorbereitetem
   Seitenleisten-Helfer
 - Plugin-Hub mit Startlogik fuer 0, 1 oder mehrere aktive Plugins,
-  dynamischen Plugin-URLs sowie URL- und `panel_iframe`-Kopie
+  dynamischen Plugin-URLs, URL- und `panel_iframe`-Kopie sowie standardmäßig
+  eingeklappten Fähigkeitslisten pro Plugin
 - Home Assistant Card Editor mit Simple-/Expert-Workflow, HACS-nahem Export,
   Problembericht, dreispaltigem Import-/Entitaetenbereich und getrennten
   `X`-, `Y`- und Zoom-Reglern fuer das quadratische Expert-Raster
@@ -40,7 +41,7 @@ ATLAS File Studio, Automation Exporter / Editor und Home-Assistant-App/Add-on-Wo
 
 Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
 versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.121`.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.122`.
 
 ## Bereits vorbereitete Architekturentscheidungen
 
