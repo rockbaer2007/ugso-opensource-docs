@@ -40,6 +40,8 @@ Der Plugin-Hub kann außerdem Seitenleisten-Einträge für Home Assistant vorber
 
 Für ATLAS File Studio nutzt der Hub die Plugin-URL unter `/plugin-assets/file-studio/index.html` am ATLAS-App-Port beziehungsweise über die entsprechende Home-Assistant-Ingress-/Webseiten-Adresse. Diese URL wird auch dann vorbereitet, wenn ein älterer gespeicherter Plugin-Stand noch keine Start-URL enthält.
 
+Neue lokale Plugins bekommen ebenfalls automatisch eine Start-URL, wenn ihr Plugin-Ordner eine `index.html` enthält und im Manifest kein `entry` gesetzt ist. ATLAS veröffentlicht dann `/plugin-assets/<plugin-ordner>/index.html`, sodass Nutzer direkt zwischen Hub und Home-Assistant-Seitenleiste wählen können.
+
 ## Veröffentlichungsregeln
 
 Veröffentlichbare Plugins brauchen eindeutige Namen, klare Versionsangaben, dokumentierte Abhängigkeiten, sichere Demo- oder Fallback-Daten, nachvollziehbare Build-Artefakte und Hinweise für ATLAS, Home Assistant oder HACS-nahe Nutzung.

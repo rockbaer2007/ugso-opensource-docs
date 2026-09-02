@@ -40,6 +40,8 @@ The Plugin Hub can also prepare Home Assistant sidebar entries. The dialog lists
 
 For ATLAS File Studio, the Hub uses the plugin URL under `/plugin-assets/file-studio/index.html` on the ATLAS app port or through the matching Home Assistant Ingress/Webpage address. This URL is prepared even when older saved plugin state does not yet include a launch URL.
 
+New local plugins also receive an automatic launch URL when their plugin folder contains an `index.html` and the manifest does not define `entry`. ATLAS then exposes `/plugin-assets/<plugin-folder>/index.html`, so users can choose between the Hub and a Home Assistant sidebar entry from the start.
+
 ## Publishing Rules
 
 Publishable plugins need clear names, explicit versions, documented dependencies, safe demo or fallback data, traceable build artifacts and notes for ATLAS, Home Assistant or HACS-oriented usage.
