@@ -32,7 +32,7 @@ Abgeschlossen sind unter anderem:
   Exportübersicht, File-Studio-Anbindung und Analysehinweisen für fehlende oder
   doppelte IDs/Aliasse, fehlende Trigger/Actions und deaktivierte Automationen;
   Service-Aufrufe werden sowohl aus `service:` als auch aus modernem
-  `action: domain.service` erkannt
+  `action: domain.service` erkannt und die Detail-YAML wird farbig dargestellt
 
 ## Aktueller Sprint
 
@@ -44,7 +44,7 @@ ATLAS File Studio, Automation Exporter / Editor und Home-Assistant-App/Add-on-Wo
 
 Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
 versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.124`.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.125`.
 
 ## Bereits vorbereitete Architekturentscheidungen
 
