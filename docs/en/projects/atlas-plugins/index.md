@@ -34,6 +34,8 @@ A plugin should be installable, inspectable, activatable, updatable and removabl
 
 The current entry point is the Runtime adapter. A `RuntimePlugin` can be translated into an ATLAS Runtime module with `createRuntimeModuleFromPlugin()`. `RuntimePluginCatalog` provides discovery, while Administration makes plugins visible, compares versions and prepares local installs.
 
+The Plugin Hub now follows a clear start rule: if no plugins are installed, it points to Administration. With exactly one active plugin, ATLAS opens that plugin directly. With two or more active plugins, ATLAS shows the selection page. Planned or disabled plugins may be visible, but they are not started automatically.
+
 ## Publishing Rules
 
 Publishable plugins need clear names, explicit versions, documented dependencies, safe demo or fallback data, traceable build artifacts and notes for ATLAS, Home Assistant or HACS-oriented usage.

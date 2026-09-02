@@ -12,8 +12,8 @@ ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in f
 
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
-- aktueller Plugin-Stand: `0.1.34`
-- aktueller Home-Assistant-App/Add-on-Stand: `0.1.96`
+- aktueller Plugin-Stand: `0.1.35`
+- aktueller Home-Assistant-App/Add-on-Stand: `0.1.97`
 - Dateibaum für den freigegebenen `/config`-Bereich
 - flexible Zwei-Spalten-Oberfläche mit begrenzbarer Maximalbreite und Maximalhöhe
 - Datei- und Ordneraktionen direkt am Pfad: Datei anlegen, Ordner anlegen, neu laden und alle Ordner einklappen
@@ -37,7 +37,8 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - opt-in Problembericht im File-Studio-Dialog mit Vorschau und vorbereitetem GitHub-Issue-Link; der Bericht enthält keine Home-Assistant-Token, Provider-API-Keys oder Dateiinhalte
 - ZIP-Inhaltsvorschau ohne Entpacken
 - `/config` als Standardwurzel
-- Add-on-Verzeichnis nur nach Admin-Freigabe
+- zusätzliche Pfad-Freigaben für `www`, `custom_components`, `addons` und `parent-of-config`
+- Add-on-Verzeichnis nur nach Admin- oder Add-on-Freigabe
 - kein freier Root-Zugriff standardmäßig
 
 Die Editor-Bibliothek wird lokal mit dem Plugin ausgeliefert. Dadurch braucht File Studio für die Codeansicht kein CDN und bleibt auch im Home-Assistant-Add-on-Betrieb nachvollziehbar versioniert.
@@ -49,12 +50,21 @@ Der erste Plugin-Vertrag beschreibt eine feste Zugriffspolitik:
 | Pfad | Standard | Freigabe |
 |---|---|---|
 | `/config` | aktiv | ohne zusätzliche Freigabe |
-| `/addons` | deaktiviert | nur über Atlas Administration |
+| `/config/www` | sichtbar als Fähigkeit | über Atlas Administration oder Add-on-Option |
+| `/config/custom_components` | sichtbar als Fähigkeit | über Atlas Administration oder Add-on-Option |
+| `/addons` | deaktiviert | über Atlas Administration oder Add-on-Option |
+| `parent-of-config` | deaktiviert | nur bewusst als Admin-Freigabe |
 | `/` | deaktiviert | nicht standardmäßig erlaubt |
 
 `/config` ist der normale Home-Assistant-Konfigurationsbereich. Dort liegen zum Beispiel `configuration.yaml`, `automations.yaml`, Dashboards, Themes, Blueprints, Skripte und lokale Webdateien unter `www`.
 
 `/addons` wird für lokale Home-Assistant-Add-ons genutzt. Dort können eigene Add-on-Ordner mit Dateien wie `config.yaml`, `Dockerfile`, Startskripten, Icons und Dokumentation liegen. Weil Änderungen dort direkt installierbare Add-ons beeinflussen können, bleibt dieser Bereich in File Studio standardmäßig gesperrt und wird nur nach bewusster Freigabe in der Atlas Administration sichtbar.
+
+Im Home-Assistant-App/Add-on-Betrieb kommen diese Freigaben aus der Add-on-Konfiguration. In Docker- oder Linux-Installationen steuert Atlas Administration dieselben Datei-Fähigkeiten. Plugins erhalten dabei keine rohen Dauer-Secrets, sondern nur den freigegebenen Pfadkontext.
+
+## Home-Assistant-Update-Hinweis
+
+Nach jedem sichtbaren ATLAS-Update wird die Home-Assistant-App/Add-on-Version angehoben. Home Assistant vergleicht die installierte Version (`old`) mit der Repository-Version (`target`). Für diesen Stand sollte `target` mindestens `0.1.97` anzeigen. Wenn weiter eine alte Zielversion erscheint, im Add-on Store die Repository-Informationen neu laden und anschließend ATLAS aktualisieren oder neu starten.
 
 Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor echter Dateizugriff in der Add-on-Runtime freigeschaltet wird.
 

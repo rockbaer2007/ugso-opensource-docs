@@ -12,8 +12,8 @@ ATLAS File Studio is the second independent ATLAS plugin. It is intended to edit
 
 File Studio is published as an installable ATLAS plugin and can be tested through the demo repository in Administration and Hub.
 
-- current plugin version: `0.1.34`
-- current Home Assistant App/Add-on version: `0.1.96`
+- current plugin version: `0.1.35`
+- current Home Assistant App/Add-on version: `0.1.97`
 - file tree for the approved `/config` area
 - flexible two-column surface with optional maximum width and height limits
 - file and folder actions next to the path: create file, create folder, refresh and collapse all folders
@@ -35,7 +35,8 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - opt-in problem report in a File Studio dialog with preview and a prepared GitHub issue link; the report does not include Home Assistant tokens, provider API keys or file contents
 - ZIP content preview without extraction
 - `/config` as default root
-- add-on directory only after Administration approval
+- additional path approvals for `www`, `custom_components`, `addons` and `parent-of-config`
+- add-on directory only after Administration or Add-on approval
 - no free root access by default
 
 The editor library is shipped with the plugin. File Studio therefore does not need a CDN for the code editor and remains traceably versioned in the Home Assistant add-on runtime.
@@ -47,12 +48,21 @@ The first plugin contract describes a fixed access policy:
 | Path | Default | Approval |
 |---|---|---|
 | `/config` | active | no additional approval |
-| `/addons` | disabled | only through Atlas Administration |
+| `/config/www` | visible as capability | through Atlas Administration or Add-on option |
+| `/config/custom_components` | visible as capability | through Atlas Administration or Add-on option |
+| `/addons` | disabled | through Atlas Administration or Add-on option |
+| `parent-of-config` | disabled | only through deliberate admin approval |
 | `/` | disabled | not allowed by default |
 
 `/config` is the normal Home Assistant configuration area. It contains files such as `configuration.yaml`, `automations.yaml`, dashboards, themes, blueprints, scripts and local web files under `www`.
 
 `/addons` is used for local Home Assistant add-ons. It can contain custom add-on folders with files such as `config.yaml`, `Dockerfile`, startup scripts, icons and documentation. Because changes there can directly affect installable add-ons, File Studio keeps this area locked by default and only shows it after explicit approval in Atlas Administration.
+
+In Home Assistant App/Add-on mode, these approvals come from the Add-on configuration. In Docker or Linux installs, Atlas Administration controls the same file capabilities. Plugins receive approved path context only, not raw long-lived secrets.
+
+## Home Assistant Update Note
+
+Every visible ATLAS update bumps the Home Assistant App/Add-on version. Home Assistant compares the installed version (`old`) with the repository version (`target`). For this build, `target` should be at least `0.1.97`. If Home Assistant still shows an older target version, reload repository information in the Add-on Store and then update or restart ATLAS.
 
 This lets the install and update flow be tested before real file access is enabled in the add-on runtime.
 
