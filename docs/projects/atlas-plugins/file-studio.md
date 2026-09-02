@@ -12,12 +12,13 @@ ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in f
 
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
-- aktueller Plugin-Stand: `0.1.35`
-- aktueller Home-Assistant-App/Add-on-Stand: `0.1.97`
+- aktueller Plugin-Stand: `0.1.36`
+- aktueller Home-Assistant-App/Add-on-Stand: `0.1.99`
 - Dateibaum für den freigegebenen `/config`-Bereich
 - flexible Zwei-Spalten-Oberfläche mit begrenzbarer Maximalbreite und Maximalhöhe
 - Datei- und Ordneraktionen direkt am Pfad: Datei anlegen, Ordner anlegen, neu laden und alle Ordner einklappen
 - Editorfläche mit lokaler CodeMirror-6-Bündelung
+- große Dateien scrollen innerhalb der Editorfläche, damit die Statuszeile unten sichtbar bleibt
 - Syntax Highlighting für YAML, JSON, JavaScript, TypeScript und Markdown
 - YAML-Prüfung vor dem Speichern mit Home-Assistant-Hinweisen für häufige Dateien wie `configuration.yaml`, `automations.yaml`, `scripts.yaml` und Packages, inklusive typischer Root-Keys, Automations-/Script-Struktur und direkt eingetragener Secret-Werte
 - Speichern der aktuell bearbeiteten Datei
