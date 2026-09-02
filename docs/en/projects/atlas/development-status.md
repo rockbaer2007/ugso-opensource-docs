@@ -16,8 +16,8 @@ Completed work includes:
 - external documentation in the UGSo Open Source docs site
 - ATLAS File Studio as the second plugin with `/config` by default, optional
   `/addons` approval, YAML validation, upload/download, backups, history with
-  restore, search previews and secret-free problem reports with GitHub issue
-  links
+  comparison and restore, search filters, multi-select actions, drag-and-drop
+  upload and secret-free problem reports with GitHub issue links
 
 ## Current Focus
 
@@ -54,7 +54,7 @@ Planned next goals:
 6. Prepare separate plugin documentation for authoring, lifecycle, extension APIs, examples and publishing.
 7. Continue the Home Assistant integration.
 8. Expand Renderer and Theme layers.
-9. Continue expanding ATLAS File Studio as an installable plugin, especially custom dialogs, more specific HA YAML assistance and later real Home Assistant reload actions.
+9. Continue expanding ATLAS File Studio as an installable plugin, especially more specific HA YAML assistance and later real Home Assistant reload actions.
 10. Plan Automation Extractor as another plugin, starting read-only and later adding a safe export path.
 
 ## Long-Term Perspective

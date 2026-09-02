@@ -12,8 +12,8 @@ ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in f
 
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
-- aktueller Plugin-Stand: `0.1.30`
-- aktueller Home-Assistant-App/Add-on-Stand: `0.1.92`
+- aktueller Plugin-Stand: `0.1.32`
+- aktueller Home-Assistant-App/Add-on-Stand: `0.1.94`
 - Dateibaum für den freigegebenen `/config`-Bereich
 - flexible Zwei-Spalten-Oberfläche mit begrenzbarer Maximalbreite und Maximalhöhe
 - Datei- und Ordneraktionen direkt am Pfad: Datei anlegen, Ordner anlegen, neu laden und alle Ordner einklappen
@@ -21,13 +21,15 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - Syntax Highlighting für YAML, JSON, JavaScript, TypeScript und Markdown
 - YAML-Prüfung vor dem Speichern mit Home-Assistant-Hinweisen für häufige Dateien wie `configuration.yaml`, `automations.yaml`, `scripts.yaml` und Packages
 - Speichern der aktuell bearbeiteten Datei
-- automatische Backups vor dem Speichern, Verlaufsliste der letzten Sicherungen
-  und Wiederherstellen einer ausgewählten Sicherung
-- lokal speichern, Upload und Download
+- automatische Backups vor dem Speichern, Verlaufsliste der letzten Sicherungen,
+  Vergleich mit dem aktuellen Stand und Wiederherstellen einer ausgewählten
+  Sicherung
+- lokal speichern, Drag-and-drop-Upload, Mehrfach-Upload und Download
 - Downloadnamen werden im Browser automatisch hochgezählt, zum Beispiel `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`
-- Upload-Konflikte können ersetzt, umbenannt oder abgebrochen werden
-- Suche mit Trefferzeile und Inhaltsvorschau
-- opt-in Problembericht mit Vorschau und vorbereitetem GitHub-Issue-Link; der Bericht enthält keine Home-Assistant-Token, Provider-API-Keys oder Dateiinhalte
+- Upload-Konflikte können im File-Studio-Dialog ersetzt, umbenannt oder abgebrochen werden
+- Mehrfachauswahl für Löschen, Kopieren und Verschieben
+- Suche mit Typfilter, optionaler Inhaltssuche, Trefferzeile und Inhaltsvorschau
+- opt-in Problembericht im File-Studio-Dialog mit Vorschau und vorbereitetem GitHub-Issue-Link; der Bericht enthält keine Home-Assistant-Token, Provider-API-Keys oder Dateiinhalte
 - ZIP-Inhaltsvorschau ohne Entpacken
 - `/config` als Standardwurzel
 - Add-on-Verzeichnis nur nach Admin-Freigabe
@@ -54,7 +56,6 @@ Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor ec
 ## Nächste Ausbaustufen
 
 - Home-Assistant-YAML-Hilfen weiter ausbauen, zum Beispiel mit echter Schema-/Service-Prüfung gegen eine verbundene Home-Assistant-Instanz
-- bessere eigene Dialoge statt Browser-Dialoge für Verlauf, Upload-Konflikte und Problemberichte
 - bessere Dateityp-Icons nach dem Vorbild von VS Code Icons
 - Archiv-Unterstützung nach ZIP: `.rar` inklusive RAR5, `.tar`, `.tar.gz`,
   `.tgz`, `.gz` und `.gzip` lesen und extrahieren
