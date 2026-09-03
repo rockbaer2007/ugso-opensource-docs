@@ -298,6 +298,7 @@ const sidebarDe = {
       collapsed: false,
       items: [
         { text: 'Übersicht', link: '/projects/atlas-plugins/' },
+        { text: 'Geprüfte Plugins', link: '/projects/atlas-plugins/gepruefte-plugins' },
         { text: 'Repository-Format', link: '/projects/atlas-plugins/repository-format' },
         { text: 'Home Assistant Card Editor', link: '/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/projects/atlas-plugins/file-studio' },
@@ -608,6 +609,7 @@ const sidebarEn = {
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/projects/atlas-plugins/' },
+        { text: 'Verified Plugins', link: '/en/projects/atlas-plugins/verified-plugins' },
         { text: 'Repository Format', link: '/en/projects/atlas-plugins/repository-format' },
         { text: 'Home Assistant Card Editor', link: '/en/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/en/projects/atlas-plugins/file-studio' },

@@ -9,6 +9,7 @@ Die Plugin-Schnittstellen sind noch in Arbeit. Die Seiten dokumentieren den aktu
 ## Einstieg
 
 - [Repository-Format](./repository-format): Struktur einer `repository.json`, Pflichtfelder, ATLAS-Kennung und Beispiel.
+- [Geprüfte Plugins](./gepruefte-plugins): kompakte Listen geprüfter und neuer ungeprüfter ATLAS-Plugins.
 - [Home Assistant Card Editor](./homeassistant-card-editor): erstes offizielles ATLAS-Referenz-Plugin.
 - [ATLAS File Studio](./file-studio): zweites unabhängiges ATLAS-Plugin für freigegebene Home-Assistant-Dateipfade.
 - [ATLAS Automation Exporter / Editor](./automation-extractor): neues Plugin zum Analysieren, Exportieren und spaeteren Bearbeiten von Home-Assistant-Automationen.

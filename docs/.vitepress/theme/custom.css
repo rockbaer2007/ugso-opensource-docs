@@ -199,6 +199,30 @@ body {
   background: #259c30;
 }
 
+.atlas-plugin-table-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  min-width: 88px;
+  padding: 0 12px;
+  border: 1px solid #259c30;
+  border-radius: 4px;
+  color: #259c30 !important;
+  background: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none !important;
+}
+
+.atlas-plugin-table-button:hover,
+.atlas-plugin-table-button:focus-visible {
+  color: #ffffff !important;
+  background: #259c30;
+  outline: 0;
+}
+
 .ugso-footer {
   margin-top: 38px;
   color: #737373;
