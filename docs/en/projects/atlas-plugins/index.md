@@ -38,6 +38,8 @@ The Plugin Hub now follows a clear start rule: if no plugins are installed, it p
 
 The Plugin Hub can also prepare Home Assistant sidebar entries. The dialog lists current plugins dynamically, shows name, URL, version, status and icon suggestion, and copies either the URL alone or a ready-to-use `panel_iframe` block for `configuration.yaml`. The URL copy action is intended for Home Assistant dashboards of type `Webpage`. Long capability lists and sidebar URLs stay collapsed by default on plugin cards so the Hub remains compact with many plugins.
 
+In Add-on mode, Card Editor, Administration and local plugin assets are served through ATLAS app routes. This preserves Home Assistant Ingress base paths in Hub and sidebar URLs, and other network clients do not need direct access to the separate development ports.
+
 For ATLAS File Studio, the Hub uses the plugin URL under `/plugin-assets/file-studio/index.html` on the ATLAS app port or through the matching Home Assistant Ingress/Webpage address. This URL is prepared even when older saved plugin state does not yet include a launch URL.
 
 New local plugins also receive an automatic launch URL when their plugin folder contains an `index.html` and the manifest does not define `entry`. ATLAS then exposes `/plugin-assets/<plugin-folder>/index.html`, so users can choose between the Hub and a Home Assistant sidebar entry from the start.
