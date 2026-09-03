@@ -6,11 +6,25 @@ description: Deutsche Übersicht der wichtigsten Calendar-Card-Pro-Funktionen.
 
 ## Visueller Editor
 
-Die Karte besitzt einen visuellen Editor. Laut Original wurde dieser in Version `4.0.0` neu aufgebaut und in mehrere Bereiche gegliedert. Er bietet Suche nach Einstellungen, Filter für angepasste Werte, kalenderbezogene Einstellungen und Ausnahmen für die Spaltenansicht.
+Die Karte besitzt einen visuellen Editor. Laut Original wurde dieser in Version `4.0.0` neu aufgebaut und in mehrere Bereiche gegliedert. Er bietet Suche nach Einstellungen, Filter für angepasste Werte, kalenderbezogene Einstellungen und Ausnahmen für die Spaltenansicht. Seit `4.1.0` kann der Editor Kalenderblöcke duplizieren, damit ein Kalender mehrfach mit unterschiedlichen Filtern, Farben oder Event-Typen genutzt werden kann.
 
 ## Mehrere Kalender
 
 Mehrere Kalender können in einer Karte angezeigt werden. Jeder Kalender kann eigene Farben und Anzeigeoptionen erhalten.
+
+Seit `4.1.0` lässt sich ein Kalender auch nach Terminart aufteilen. Mit `event_type: timed` werden nur Termine mit Uhrzeit angezeigt, mit `event_type: all_day` nur ganztägige Termine. Dadurch kann derselbe Kalender zweimal eingebunden und unterschiedlich eingefärbt werden.
+
+```yaml
+entities:
+  - entity: calendar.family
+    label: Familie ganztägig
+    event_type: all_day
+    accent_color: "#ff9800"
+  - entity: calendar.family
+    label: Familie Termine
+    event_type: timed
+    accent_color: "#03a9f4"
+```
 
 ## Kompakte Ansicht
 
@@ -51,6 +65,56 @@ Beispiele:
 ## Mehrtägige Termine
 
 Mit `split_multiday_events` können mehrtägige Termine auf jedem betroffenen Tag angezeigt werden. In der Spaltenansicht ist das besonders sinnvoll, weil jede Spalte einen Tag darstellt.
+
+Für ganztägige Termine gibt es zusätzliche Steuerung: `allday_expires_at` lässt ganztägige Termine eines Kalenders schon zu einer Uhrzeit am letzten Tag verschwinden, wenn `show_past_events` deaktiviert ist. Das ist zum Beispiel für Müllabfuhr- oder Erinnerungs-Kalender sinnvoll.
+
+```yaml
+entities:
+  - entity: calendar.waste
+    label: Abfall
+    allday_expires_at: "10:00"
+```
+
+## Wochentage Und Wochenenden
+
+Mit `days_of_week` kann ein Kalender auf Werktage oder Wochenenden eingeschränkt werden. Bei gesplitteten mehrtägigen Terminen wird jeder angezeigte Tag einzeln bewertet.
+
+```yaml
+entities:
+  - entity: calendar.school
+    days_of_week: weekdays
+  - entity: calendar.family
+    days_of_week: weekends
+```
+
+## Ganztags-Badges
+
+Mit `allday_badge` können ganztägige Termine als Badge dargestellt werden. `title` legt das Badge um den Titel, `time` ersetzt die Ganztags-Zeile neben dem Uhr-Icon. `allday_badge_style` steuert die Form, `allday_badge_color` die Farbe.
+
+```yaml
+allday_badge: title
+allday_badge_style: subtle
+allday_badge_color: accent
+```
+
+## Filter Und Textersetzung
+
+`blocklist` und `allowlist` lesen standardmäßig den Titel. Mit `filter_field` können sie stattdessen auf `location` oder `description` angewendet werden.
+
+`replace_field`, `replace_pattern` und `replace_with` ändern den angezeigten Text beim Rendern der Karte, ohne den Originaltermin im Kalender zu verändern.
+
+```yaml
+entities:
+  - entity: calendar.work
+    filter_field: location
+    allowlist: teams.microsoft.com
+    replace_field: title
+    replace_with: Besetzt
+```
+
+## Orts-Icon
+
+Microsoft-Teams-Termine können automatisch mit Teams-Icon statt Karten-Pin erscheinen. Pro Kalender kann `location_icon` ein eigenes Icon setzen oder mit `mdi:map-marker-outline` wieder den normalen Marker erzwingen.
 
 ## Wetterintegration
 

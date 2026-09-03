@@ -4,7 +4,7 @@ description: Inoffizielle deutsche Dokumentation zur Calendar Card Pro für Home
 ---
 # Calendar Card Pro
 
-Calendar Card Pro ist eine moderne, stark anpassbare Kalenderkarte für Home Assistant. Sie zeigt kommende Termine performant und übersichtlich an, unterstützt mehrere Kalender, kompakte Ansichten, Spaltenansicht, Wetter, Templates, Aktionen und einen visuellen Editor.
+Calendar Card Pro ist eine moderne, stark anpassbare Kalenderkarte für Home Assistant. Sie zeigt kommende Termine performant und übersichtlich an, unterstützt mehrere Kalender, kompakte Ansichten, Spaltenansicht, Wetter, Templates, Aktionen, ganztägige Termin-Badges, kalenderbezogene Filter und einen visuellen Editor.
 
 ::: warning Inoffizielle deutsche Doku
 Diese Dokumentation ist eine inoffizielle deutsche Arbeitsübersetzung und Praxisdoku. Das originale Calendar-Card-Pro-Projekt und dessen englische Dokumentation bleiben maßgeblich.
@@ -16,8 +16,8 @@ Diese Dokumentation ist eine inoffizielle deutsche Arbeitsübersetzung und Praxi
 | --- | --- |
 | Originalprojekt | [alexpfau/calendar-card-pro](https://github.com/alexpfau/calendar-card-pro) |
 | Originaldoku | [calendar-card-pro.alexpfau.com](https://calendar-card-pro.alexpfau.com) |
-| Gepruefter Commit | [`f5226781fd64fb7b69257ba2f5b1f4af0d28ebf6`](https://github.com/alexpfau/calendar-card-pro/commit/f5226781fd64fb7b69257ba2f5b1f4af0d28ebf6) |
-| Release | [`v4.0.0`](https://github.com/alexpfau/calendar-card-pro/releases/tag/v4.0.0) |
+| Gepruefter Commit | [`a3b01138daa44947f6673c33fe700e5ef4a08957`](https://github.com/alexpfau/calendar-card-pro/commit/a3b01138daa44947f6673c33fe700e5ef4a08957) |
+| Release | [`v4.1.0`](https://github.com/alexpfau/calendar-card-pro/releases/tag/v4.1.0) |
 | Lizenz | [MIT](https://github.com/alexpfau/calendar-card-pro/blob/main/LICENSE) |
 | Status | Deutsche Doku mit Installation, Nutzung, Features, Referenz, Beispielen und Änderungsprüfung |
 

@@ -6,6 +6,17 @@ description: Deutsche Konfigurationsreferenz für Calendar Card Pro.
 
 Diese Seite bildet die Optionsgruppen der Originalreferenz ab. Für Detailbeispiele bleibt die englische Originalreferenz maßgeblich.
 
+## Neu In v4.1.0
+
+Version `4.1.0` ergänzt mehrere kalenderbezogene Steuerungen:
+
+- `event_type` trennt Termine mit Uhrzeit von ganztägigen Terminen.
+- `filter_field` lässt `blocklist` und `allowlist` auf Titel, Ort oder Beschreibung arbeiten.
+- `replace_field`, `replace_pattern` und `replace_with` verändern den angezeigten Text, ohne den Kalendertermin selbst zu ändern.
+- `allday_expires_at` lässt ganztägige Termine eines Kalenders früher am Tag auslaufen.
+- `days_of_week` begrenzt einen Kalender auf Werktage oder Wochenende.
+- `allday_badge`, `allday_badge_style` und `allday_badge_color` steuern die neue Badge-Darstellung für ganztägige Termine.
+
 ## Grundeinstellungen
 
 | Option | Typ | Standard | Beschreibung |
@@ -14,6 +25,7 @@ Diese Seite bildet die Optionsgruppen der Originalreferenz ab. Für Detailbeispi
 | `view` | string | `list` | Layout: `list` für Tage untereinander, `column` für Tage nebeneinander. |
 | `start_date` | string | heute | Startdatum als `YYYY-MM-DD` oder relativer Ausdruck wie `today+7`, `start_of_week`, `monday+1w`. |
 | `days_to_show` | number | `3` | Anzahl der angezeigten Tage. |
+| `event_type` | string | `all` | Terminart: `all`, `timed` oder `all_day`. Kann global oder pro Kalender gesetzt werden. |
 | `compact_days_to_show` | number | - | Anzahl der Tage im kompakten Modus. |
 | `compact_events_to_show` | number | - | Anzahl der Termine im kompakten Modus. |
 | `compact_events_complete_days` | boolean | `false` | Zeigt alle Termine für Tage, an denen mindestens ein Termin sichtbar ist. |
@@ -56,11 +68,19 @@ Ein Eintrag in `entities` kann nur eine Entity-ID sein oder ein Objekt mit eigen
 | `label_icon_color` | Farbe für Label/Icon. |
 | `show_time` | Zeit für diesen Kalender anzeigen. |
 | `show_location` | Ort für diesen Kalender anzeigen. |
+| `location_icon` | Icon für Ortsangaben dieses Kalenders, zum Beispiel `mdi:office-building`; kann automatische Teams-Erkennung überschreiben. |
 | `show_description` | Beschreibung für diesen Kalender anzeigen. |
 | `compact_events_to_show` | Kompaktes Limit für diesen Kalender. |
 | `blocklist` | Begriffe oder Muster ausschließen. |
 | `allowlist` | Nur passende Begriffe oder Muster anzeigen. |
+| `filter_field` | Feld für `blocklist`/`allowlist`: `title`, `location` oder `description`. |
+| `replace_field` | Feld für Textersetzung: `title`, `location` oder `description`. |
+| `replace_pattern` | Regex-Muster, das im gewählten Feld ersetzt oder entfernt wird. |
+| `replace_with` | Ersatztext; ohne `replace_pattern` wird das ganze Feld ersetzt. |
 | `split_multiday_events` | Mehrtägige Termine für diesen Kalender splitten. |
+| `event_type` | Kalenderbezogene Terminart: `all`, `timed` oder `all_day`. |
+| `allday_expires_at` | Uhrzeit im Format `HH:MM`, ab der ganztägige Termine dieses Kalenders als vergangen gelten. |
+| `days_of_week` | Beschränkung auf `weekdays` oder `weekends`. |
 
 ## Header
 
@@ -75,7 +95,7 @@ Ein Eintrag in `entities` kann nur eine Entity-ID sein oder ein Objekt mit eigen
 | Option | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `background_color` | string | `--ha-card-background` | Hintergrundfarbe der Karte. |
-| `accent_color` | string | `#03a9f4` | Akzentfarbe der vertikalen Linie. |
+| `accent_color` | string | `#03a9f4` | Akzentfarbe der vertikalen Linie und optionaler Termin-/Ganztags-Badges. |
 | `vertical_line_width` | string | `2px` | Breite der vertikalen Linie. |
 | `day_spacing` | string | `10px` | Abstand zwischen Tagen oder Spalten. |
 | `event_spacing` | string | `4px` | Innenabstand innerhalb eines Termins. |
@@ -137,6 +157,10 @@ Ein Eintrag in `entities` kann nur eine Entity-ID sein oder ein Objekt mit eigen
 | `show_past_events` | boolean | `false` | Bereits beendete Termine anzeigen. |
 | `show_countdown` | boolean | `false` | Countdown bis zum Termin anzeigen. |
 | `show_countdown_allday` | boolean | `true` | Countdown auch für ganztägige Termine anzeigen. |
+| `show_multiday_allday_time` | boolean | `true` | Zeitzeile bei mehrtägigen ganztägigen Terminen anzeigen; sie trägt die Enddatums-Information. |
+| `allday_badge` | string | `off` | Position des Ganztags-Badges: `off`, `title` oder `time`. |
+| `allday_badge_style` | string | `subtle` | Badge-Stil: `subtle`, `outline`, `tinted` oder `filled`. |
+| `allday_badge_color` | string | `accent` | Badge-Farbe: `accent`, `text` oder eine CSS-Farbe. |
 | `show_progress_bar` | boolean | `false` | Fortschrittsbalken für laufende Termine anzeigen. |
 | `progress_bar_color` | string | `var(--secondary-text-color)` | Farbe des Fortschrittsbalkens. |
 | `progress_bar_height` | string | berechnet | Höhe des Fortschrittsbalkens. |
@@ -155,12 +179,14 @@ Ein Eintrag in `entities` kann nur eine Entity-ID sein oder ein Objekt mit eigen
 | `time_color` | string | `--secondary-text-color` | Farbe der Zeit. |
 | `time_max_lines` | number | `0` | Maximale Zeilen für Zeittext. |
 | `show_location` | boolean | `true` | Ort anzeigen. |
+| `show_location_allday` | boolean | `true` | Orte auch bei ganztägigen Terminen anzeigen, wenn `show_location` aktiv ist. |
 | `remove_location_country` | boolean/string | `false` | Ländernamen aus Orten entfernen, optional per Regex-String. |
 | `location_icon_size` | string | `14px` | Größe des Orts-Icons. |
 | `location_font_size` | string | `12px` | Schriftgröße des Orts. |
 | `location_color` | string | `--secondary-text-color` | Farbe des Orts. |
 | `location_max_lines` | number | `0` | Maximale Zeilen für Ort. |
 | `show_description` | boolean | `false` | Beschreibung anzeigen. |
+| `show_description_allday` | boolean | `true` | Beschreibungen auch bei ganztägigen Terminen anzeigen, wenn `show_description` aktiv ist. |
 | `description_icon_size` | string | `14px` | Größe des Beschreibungs-Icons. |
 | `description_font_size` | string | `12px` | Schriftgröße der Beschreibung. |
 | `description_color` | string | `--secondary-text-color` | Farbe der Beschreibung. |

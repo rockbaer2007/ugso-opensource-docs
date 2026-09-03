@@ -13,8 +13,8 @@ The German documentation is maintained as an unofficial translation and practica
 | German documentation | [Calendar Card Pro German docs](/sammlung/calendar-card-pro/) |
 | Original project | [alexpfau/calendar-card-pro](https://github.com/alexpfau/calendar-card-pro) |
 | Original documentation | [calendar-card-pro.alexpfau.com](https://calendar-card-pro.alexpfau.com) |
-| Tracked source commit | [`f5226781fd64fb7b69257ba2f5b1f4af0d28ebf6`](https://github.com/alexpfau/calendar-card-pro/commit/f5226781fd64fb7b69257ba2f5b1f4af0d28ebf6) |
-| Release | `v4.0.0` |
+| Tracked source commit | [`a3b01138daa44947f6673c33fe700e5ef4a08957`](https://github.com/alexpfau/calendar-card-pro/commit/a3b01138daa44947f6673c33fe700e5ef4a08957) |
+| Release | `v4.1.0` |
 | License | MIT |
 
-The source files are checked by a scheduled GitHub Action so the German documentation can be updated when the original documentation changes.
+The source files are checked daily by a scheduled GitHub Action so the German documentation can be updated when the original documentation changes.

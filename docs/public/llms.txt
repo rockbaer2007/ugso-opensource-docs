@@ -67,7 +67,7 @@ Authoritative Calendar Card Pro repository:
 https://github.com/alexpfau/calendar-card-pro
 
 Tracked Calendar Card Pro version and source revision:
-- Calendar Card Pro v4.0.0, source revision f5226781fd64fb7b69257ba2f5b1f4af0d28ebf6
+- Calendar Card Pro v4.1.0, source revision a3b01138daa44947f6673c33fe700e5ef4a08957
 
 License attribution:
 - Calendar Card Pro is licensed under MIT.
