@@ -6,7 +6,7 @@ title: Übersicht
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
-> Basis: GitHub-Release `v8.1.0`, ergänzt um gekennzeichnete Inhalte aus `v8.2.0-beta.4`. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Master-Stand [`9a0fa57`](https://github.com/Lint-Free-Technology/uix/commit/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9) vom 22.08.2026, Beta-Stand [`3e9b1d4`](https://github.com/Lint-Free-Technology/uix/commit/3e9b1d4).
+> Basis: GitHub-Release `v8.1.0`, ergänzt um gekennzeichnete Inhalte aus `v8.2.0-beta.13`. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Master-Stand [`9a0fa57`](https://github.com/Lint-Free-Technology/uix/commit/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9) vom 22.08.2026, Beta-Stand [`83a6323`](https://github.com/Lint-Free-Technology/uix/commit/83a63239d954525a6c53e5508002560b6f4fd655).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
 >
