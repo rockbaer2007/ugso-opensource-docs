@@ -1,5 +1,16 @@
 import { defineConfig } from 'vitepress'
 
+const siteBaseUrl = 'https://opensource.ugso-software.de'
+
+function canonicalHref(relativePath = 'index.md') {
+  const cleanPath = relativePath
+    .replace(/(^|\/)index\.md$/, '$1')
+    .replace(/\.md$/, '')
+
+  const pagePath = cleanPath.startsWith('/') ? cleanPath : `/${cleanPath}`
+  return new URL(pagePath, siteBaseUrl).href
+}
+
 const navDe = [
   { text: 'Startseite', link: '/' },
   {
@@ -652,6 +663,12 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#f4f5f7' }],
     ['meta', { name: 'application-name', content: 'UGSo Open Source' }]
   ],
+
+  transformHead({ pageData }) {
+    return [
+      ['link', { rel: 'canonical', href: canonicalHref(pageData.relativePath) }]
+    ]
+  },
 
   themeConfig: {
     logo: '/ugso-klein.png',
