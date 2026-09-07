@@ -94,6 +94,11 @@ element:
 | --- | --- | --- |
 | `--uix-button-label-text-wrap` | `wrap` | Steuert den Zeilenumbruch des Buttonlabels. Setze `nowrap`, wenn Labels nicht umbrechen sollen. |
 | `--uix-button-margin` | `-6px` | Steuert das Margin des eingefügten Buttons. |
+| `--uix-button-border-color` | `revert-layer` | Steuert die Rahmenfarbe des Buttons. Sie ergibt sich normalerweise aus `variant` und `appearance`, kann aber über diese CSS-Variable direkt gesetzt werden. |
+| `--uix-icon-button-background-color` | `currentColor` | Steuert die Hintergrundfarbe eines reinen Iconbuttons. Ohne eigenen Wert übernimmt `currentColor` die konfigurierte `color`, falls gesetzt, oder die aktuelle Textfarbe der Umgebung. Standardmäßig wird diese Farbe nur beim Hover sichtbar. |
+| `--uix-icon-button-background-opacity` | `0` | Steuert die Deckkraft des Iconbutton-Hintergrunds. Setze einen Wert von `0` bis `1`, wenn die Hintergrundfarbe dauerhaft mit dieser Deckkraft sichtbar sein soll. |
+| `--uix-icon-button-background-color-hover` | `var(--uix-icon-button-background-color, currentColor)` | Überschreibt die Hintergrundfarbe eines reinen Iconbuttons beim Hover. |
+| `--uix-icon-button-background-opacity-hover` | `calc(var(--uix-icon-button-background-opacity, 0) + 0.1)` | Überschreibt die Deckkraft eines reinen Iconbuttons beim Hover. |
 
 ## Beispiele
 
