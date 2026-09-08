@@ -154,6 +154,40 @@ ATLAS repository:
 The editor notes that Tabbed Card V2 is its own card. It is inspired by the
 original `kinghat/tabbed-card`, but maintained as a separate ATLAS variant.
 
+### Tabbed Card V2 Styling
+
+Tabbed Card V2 keeps the Material tab variables and adds dedicated variables
+for tab backgrounds:
+
+| Name | Default | Description |
+| --- | --- | --- |
+| `--mdc-theme-primary` | `--primary-color` | Active tab text, indicator and accent color. |
+| `--mdc-tab-text-label-color-default` | `--secondary-text-color` | Inactive tab text color. Use an `rgba(...)` value with alpha when transparency is needed. |
+| `--mdc-typography-button-font-size` | `14px` | Tab label font size. |
+| `--tabbed-card-v2-tabbar-background` | `transparent` | Background of the whole tab bar. |
+| `--tabbed-card-v2-active-background` | `transparent` | Background of the active tab. |
+| `--tabbed-card-v2-inactive-background` | `transparent` | Background of inactive tabs. |
+| `--tabbed-card-v2-hover-background` | `--secondary-background-color` | Background while hovering or focusing a tab. |
+
+Example:
+
+```yaml
+type: custom:tabbed-card-v2
+styles:
+  --mdc-theme-primary: "#ff9800"
+  --mdc-tab-text-label-color-default: "rgba(255,255,255,0.75)"
+  --tabbed-card-v2-tabbar-background: "rgba(0,0,0,0.18)"
+  --tabbed-card-v2-active-background: "rgba(255,152,0,0.22)"
+  --tabbed-card-v2-inactive-background: "rgba(255,255,255,0.06)"
+  --tabbed-card-v2-hover-background: "rgba(255,255,255,0.12)"
+tabs:
+  - attributes:
+      label: Light
+    card:
+      type: button
+      entity: light.bed_light
+```
+
 ## Current Status
 
 The Card Editor is in active development. Expert workflow, import/export,

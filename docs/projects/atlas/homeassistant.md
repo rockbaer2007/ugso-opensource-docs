@@ -273,6 +273,9 @@ Popup eingerichtet, ausgewählt und anschließend mit Cards befüllt. Container
 starten absichtlich ohne Entity und ohne automatisch erzeugte erste Card.
 Beim Anlegen erhalten sie technische, fortlaufende Titel wie `Tabbed 1`,
 `Vertical 1` oder `Horizontal 1`; Cards im Container behalten eigene Titel.
+Die HACS-Card unterstützt zusätzlich eigene Style-Variablen für aktive und
+inaktive Tab-Hintergründe; die vollständige Liste steht in der
+[Card-Editor-Dokumentation](./card-editor#tabbed-card-v2-styling).
 Wenn ein Expert-Plan noch keine belegten Felder enthält, nutzt ATLAS die
 Demo-Entitäten als sicheren Fallback.
 

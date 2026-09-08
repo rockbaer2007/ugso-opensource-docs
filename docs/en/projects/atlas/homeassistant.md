@@ -265,7 +265,9 @@ without an automatically generated first card. When created, they receive
 technical, incrementing titles such as `Tabbed 1`, `Vertical 1` or
 `Horizontal 1`; cards inside the container keep their own titles. If an expert
 plan does not contain populated fields yet, ATLAS falls back to the safe demo
-entities.
+entities. The HACS card also supports dedicated style variables for active and
+inactive tab backgrounds; the full list is documented in the
+[Card Editor documentation](./card-editor#tabbed-card-v2-styling).
 
 In the demo UI, the simple card-layout selector and the regular HA card code
 block are hidden. Export, package export, copy and resource-copy actions use
