@@ -12,8 +12,8 @@ ATLAS File Studio is the second independent ATLAS plugin. It is intended to edit
 
 File Studio is published as an installable ATLAS plugin and can be tested through the demo repository in Administration and Hub.
 
-- current plugin version: `0.1.36`
-- current Home Assistant App/Add-on version: `0.1.129`
+- current plugin version: `0.1.39`
+- current Home Assistant App/Add-on version: `0.1.171`
 - file tree for the approved `/config` area
 - flexible two-column surface with optional maximum width and height limits
 - compact toolbar below `Dateibaum /config`, keeping icons out of the right file
@@ -21,6 +21,8 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - file and folder actions next to the path: create file, create folder, refresh and collapse all folders
 - editor surface with a locally bundled CodeMirror 6 editor
 - large files scroll inside the editor surface so the lower status row stays visible
+- direct links open files even when they are deeper than the initially loaded
+  file tree, for example Automation Exporter outputs
 - syntax highlighting for YAML, JSON, JavaScript, TypeScript and Markdown
 - YAML validation before saving with Home Assistant hints for common files such as `configuration.yaml`, `automations.yaml`, `scripts.yaml` and packages, including common root keys, automation/script structure and directly entered secret values
 - save the currently opened file
@@ -65,7 +67,7 @@ In Home Assistant App/Add-on mode, these approvals come from the Add-on configur
 
 ## Home Assistant Update Note
 
-Every visible ATLAS update bumps the Home Assistant App/Add-on version. Home Assistant compares the installed version (`old`) with the repository version (`target`). For this build, `target` should be at least `0.1.129`. If Home Assistant still shows an older target version, reload repository information in the Add-on Store and then update or restart ATLAS.
+Every visible ATLAS update bumps the Home Assistant App/Add-on version. Home Assistant compares the installed version (`old`) with the repository version (`target`). For this build, `target` should be at least `0.1.171`. If Home Assistant still shows an older target version, reload repository information in the Add-on Store and then update or restart ATLAS.
 
 This lets the install and update flow be tested before real file access is enabled in the add-on runtime.
 
