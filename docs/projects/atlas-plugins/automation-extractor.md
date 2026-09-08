@@ -14,7 +14,7 @@ ausgewählte Einträge und bereitet die weitere Bearbeitung über File Studio vo
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Installationsseite: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository-Datei: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- aktueller installierbarer Plugin-Stand: `0.1.19`
+- aktueller installierbarer Plugin-Stand: `0.1.20`
 
 In ATLAS Administration kann direkt die GitHub-URL eingefügt werden. ATLAS
 wandelt sie beim Prüfen automatisch in die passende `repository.json`-Adresse
@@ -32,6 +32,8 @@ um.
   Sekundenwerte wie `25200` wieder als `'07:00:00'` ausgeben
 - Analysehinweise für fehlende oder doppelte IDs/Aliasse, fehlende Trigger oder
   Actions und deaktivierte Automationen anzeigen
+- doppelte IDs und Aliasse direkt in der Automationsliste als Konflikte
+  vormarkieren
 - nur Automationen mit Hinweisen filtern
 - Detail-YAML farbig wie im File Studio darstellen
 - Automationsliste auf ungefähr 15 sichtbare Einträge begrenzen und intern
