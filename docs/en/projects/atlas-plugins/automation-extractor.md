@@ -14,7 +14,7 @@ entries and prepare further editing through File Studio.
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Install page: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository file: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- current installable plugin version: `0.1.16`
+- current installable plugin version: `0.1.17`
 
 ATLAS Administration accepts the GitHub URL directly. During preview, ATLAS
 converts it to the matching `repository.json` address automatically.
@@ -26,6 +26,8 @@ converts it to the matching `repository.json` address automatically.
 - show id, alias, description, triggers, conditions and actions
 - detect service calls from classic `service:` and modern
   `action: domain.service` syntax
+- keep time triggers as quoted `HH:MM:SS` values during export and repair
+  numeric second values such as `25200` back to `'07:00:00'`
 - show analysis hints for missing or duplicate ids/aliases, missing triggers or
   actions and disabled automations
 - filter to automations with hints only
