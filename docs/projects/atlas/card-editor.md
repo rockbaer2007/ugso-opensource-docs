@@ -172,7 +172,9 @@ eigene Variablen für Tab-Hintergründe, Rundungen und Abstände:
 | `--mdc-typography-button-font-size` | `14px` | Schriftgröße der Tab-Beschriftung. |
 | `--tabbed-card-v2-tabbar-background` | `transparent` | Hintergrund der gesamten Tab-Leiste. |
 | `--tabbed-card-v2-active-background` | `transparent` | Hintergrund des aktiven Tabs. |
+| `--tabbed-card-v2-active-background-opacity` | `100` | Deckkraft des aktiven Tab-Hintergrunds von `0` bis `100`. |
 | `--tabbed-card-v2-inactive-background` | `transparent` | Hintergrund inaktiver Tabs. |
+| `--tabbed-card-v2-inactive-background-opacity` | `100` | Deckkraft inaktiver Tab-Hintergründe von `0` bis `100`. |
 | `--tabbed-card-v2-hover-background` | `--secondary-background-color` | Hintergrund beim Hover oder Fokus eines Tabs. |
 | `--tabbed-card-v2-tab-border-radius-top` | `0` | Rundung oben links und oben rechts pro Tab. |
 | `--tabbed-card-v2-tab-border-radius-bottom` | `0` | Rundung unten links und unten rechts pro Tab. |
@@ -188,8 +190,10 @@ styles:
   --mdc-theme-primary: "#ff9800"
   --mdc-tab-text-label-color-default: "rgba(255,255,255,0.75)"
   --tabbed-card-v2-tabbar-background: "rgba(0,0,0,0.18)"
-  --tabbed-card-v2-active-background: "rgba(255,152,0,0.22)"
-  --tabbed-card-v2-inactive-background: "rgba(255,255,255,0.06)"
+  --tabbed-card-v2-active-background: "#ff9800"
+  --tabbed-card-v2-active-background-opacity: 35
+  --tabbed-card-v2-inactive-background: "#ffffff"
+  --tabbed-card-v2-inactive-background-opacity: 8
   --tabbed-card-v2-hover-background: "rgba(255,255,255,0.12)"
   --tabbed-card-v2-tab-border-radius-top: "12px"
   --tabbed-card-v2-tab-border-radius-bottom: "6px"
