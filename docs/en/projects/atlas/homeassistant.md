@@ -323,13 +323,16 @@ Community cards such as Mushroom and Bubble Card to the palette. Home Assistant
 does not expose a complete option registry for every custom card through this
 resource list, but installed resources can be detected as a starting point.
 Other registered Lovelace resources are shown as scanned-only entries until
-ATLAS knows a safe card mapping for them. Mapped resources are deduplicated so
-they do not appear again as scanned-only copies. Saved favorites hide every
-non-selected card, including scanned `/hacsfiles/` entries, until `Show all
-cards` or `Reset favorites` is used. Scanned-only HACS and HA resources can also
-be marked as favorites, even before ATLAS has a draggable card mapping for them.
-Helper resources such as card tools, dashboards, strategies, navigation helpers,
-icon packs and known non-card resources are hidden during the palette scan.
+ATLAS includes a built-in card mapping for them. Users can locally map those
+entries to the matching `custom:*` card type. After that mapping, they become
+draggable custom cards, export with that card type in the Expert YAML and keep
+their resource path in exported resource snippets. Mapped resources are
+deduplicated so they do not appear again as scanned-only copies. Saved
+favorites hide every non-selected card, including scanned `/hacsfiles/`
+entries, until `Show all cards` or `Reset favorites` is used. Mapped scanned
+HACS and HA resources can also be marked as favorites. Helper resources such as
+card tools, dashboards, strategies, navigation helpers, icon packs and known
+non-card resources are hidden during the palette scan.
 The Core list now includes Entity, Entities, Overview / Glance, Button, Grid,
 Sensor, Vertical stack, Horizontal stack, Thermostat, Link and Webpage. Webpage
 exports use the Home Assistant `iframe` card type. The Overview / Glance

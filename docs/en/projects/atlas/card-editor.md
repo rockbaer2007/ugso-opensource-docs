@@ -72,9 +72,11 @@ Supported base cards include:
 - Bubble Card
 - Tabbed Card V2
 
-Scan-only entries are registered Lovelace resources for which ATLAS does not yet
-know a safe card mapping. They are shown for inspection but are not treated as
-fully configurable cards automatically.
+Scan-only entries are registered Lovelace resources for which ATLAS does not
+yet include a built-in card mapping. They can be mapped locally to the matching
+`custom:*` Lovelace card type. After that mapping, they become active custom
+cards in the palette, can be placed through drag and drop and keep their
+resource path when resource snippets are exported.
 
 ## Container Cards
 
@@ -149,6 +151,6 @@ original `kinghat/tabbed-card`, but maintained as a separate ATLAS variant.
 ## Current Status
 
 The Card Editor is in active development. Expert workflow, import/export,
-entity selection, resource checks and container cards are already testable.
-Additional custom-card mappings from scanned HACS resources will be added step
-by step.
+entity selection, resource checks, container cards and local custom-card
+mappings for scanned Lovelace resources are already testable. Additional
+reviewed custom-card mappings will be added step by step.

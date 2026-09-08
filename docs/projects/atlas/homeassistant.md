@@ -337,9 +337,12 @@ Assistant und ergänzt erkannte Community-Cards wie Mushroom und Bubble Card in
 der Palette. Home Assistant liefert darüber keine vollständige Options-Registry
 für jede beliebige Custom-Card, aber installierte Ressourcen lassen sich so als
 Ausgangspunkt erkennen. Andere registrierte Lovelace-Ressourcen werden als
-Scan-only-Einträge sichtbar, bis ATLAS dafür ein sicheres Card-Mapping kennt.
-Bereits gemappte Ressourcen werden dedupliziert, damit sie nicht noch einmal
-als Scan-only-Kopie erscheinen.
+Scan-only-Einträge sichtbar, bis ATLAS dafür ein fest eingebautes Card-Mapping
+kennt. Der Nutzer kann solche Einträge lokal einem passenden `custom:*`
+Card-Typ zuordnen. Danach sind sie als gemappte Custom Cards ziehbar, werden im
+Expert-YAML mit diesem Card-Typ exportiert und ihr Resource-Pfad wird beim
+Ressourcen-Snippet mitgeführt. Bereits gemappte Ressourcen werden dedupliziert,
+damit sie nicht noch einmal als Scan-only-Kopie erscheinen.
 Die Core-Liste enthält jetzt Entität, Entitäten, Übersicht/Glance, Button,
 Raster, Sensor, Stapel, Querstapel, Thermostat, Verknüpfung und Webseite. Die
 Webseite wird im Export als Home-Assistant-`iframe`-Card geschrieben. Die
@@ -349,11 +352,10 @@ befüllt.
 Beim Verbinden mit Home Assistant fordert ATLAS diese Ressourcenliste
 automatisch an. Gespeicherte Favoriten blenden alle nicht ausgewählten Cards
 aus, inklusive gescannter `/hacsfiles/`-Einträge, bis `Show all cards` oder
-`Reset favorites` genutzt wird. Scan-only-HACS- und HA-Ressourcen können
-ebenfalls als Favoriten markiert werden, auch bevor ATLAS dafür ein ziehbares
-Card-Mapping kennt. Hilfsressourcen wie Card-Tools, Dashboards, Strategien,
-Navigationshelfer, Icon-Pakete und bekannte Nicht-Card-Ressourcen werden beim
-Palette-Scan ausgeblendet.
+`Reset favorites` genutzt wird. Gemappte Scan-only-HACS- und HA-Ressourcen
+können ebenfalls als Favoriten markiert werden. Hilfsressourcen wie Card-Tools,
+Dashboards, Strategien, Navigationshelfer, Icon-Pakete und bekannte
+Nicht-Card-Ressourcen werden beim Palette-Scan ausgeblendet.
 Der temporäre Ressourcencheck besitzt einen zuschaltbaren Debugbereich. Über
 `Ressourcen-Debug anzeigen` kann der Verlauf der WebSocket- und
 Admin-Proxy-Abfragen eingeblendet werden, um zu sehen, ob der Browser-WebSocket,

@@ -75,8 +75,10 @@ Unterstützte Basis-Cards sind unter anderem:
 - Tabbed Card V2
 
 Scan-only-Einträge zeigen registrierte Lovelace-Ressourcen, für die ATLAS noch
-kein sicheres Card-Mapping kennt. Sie werden sichtbar gemacht, aber nicht
-automatisch als vollständig konfigurierbare Card behandelt.
+kein fest eingebautes Card-Mapping kennt. Sie können lokal einem passenden
+`custom:*` Lovelace-Card-Typ zugeordnet werden. Nach dieser Zuordnung werden
+sie als gemappte Custom Card in der Palette aktiv, können per Drag-and-drop
+platziert werden und behalten ihren Resource-Pfad beim Ressourcen-Export.
 
 ## Container-Cards
 
@@ -153,6 +155,6 @@ ATLAS-Variante geführt wird.
 ## Aktueller Status
 
 Der Card Editor ist ein aktiver Entwicklungsstand. Expert-Workflow,
-Import/Export, Entity-Auswahl, Ressourcenprüfung und Container-Cards sind
-bereits testbar. Weitere Custom-Card-Mappings aus gescannten HACS-Ressourcen
-werden schrittweise ergänzt.
+Import/Export, Entity-Auswahl, Ressourcenprüfung, Container-Cards und lokale
+Custom-Card-Mappings für gescannte Lovelace-Ressourcen sind bereits testbar.
+Weitere geprüfte Custom-Card-Mappings werden schrittweise ergänzt.
