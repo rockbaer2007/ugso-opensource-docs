@@ -333,6 +333,9 @@ anderen Cards aus. `Show all cards` öffnet die vollständige Liste erneut,
 ohne die gespeicherten Favoriten zu löschen. Zusätzlich können nicht benötigte
 Einträge über eine rote `Versteckt`-Checkbox aus der normalen Palette
 ausgeblendet und in der vollständigen Liste wieder eingeblendet werden.
+Eine weitere opt-in Option kann unbekannte registrierte Ressourcen automatisch
+aus dem Dateinamen einem `custom:*` Card-Typ zuordnen; sie steht unter den
+Import-Werkzeugen und ist mit einem roten Sicherheitshinweis markiert.
 Dadurch können mehrere Favoriten bequem nachträglich ausgewählt und danach
 gemeinsam gespeichert werden.
 `Scan HA cards` liest die aktuell registrierten Lovelace-Ressourcen aus Home

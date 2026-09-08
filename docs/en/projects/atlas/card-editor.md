@@ -80,6 +80,9 @@ resource path when resource snippets are exported.
 Palette entries that are not useful as cards, such as JavaScript helper
 resources, can be marked as hidden locally. Hidden cards disappear from the
 normal list, remain visible in the full list and can be restored from there.
+The import tools also include an opt-in automatic card type mapping option. It
+tries to derive a `custom:*` card type for unknown registered resources from the
+JavaScript filename and therefore carries a red safety warning.
 
 ## Container Cards
 

@@ -319,7 +319,9 @@ When saved favorites exist, ATLAS hides the remaining cards. `Show all cards`
 opens the complete list again without deleting saved favorites, so several
 favorites can be selected later and saved together. Entries that are not useful
 as cards can also be hidden through a red `Hidden` checkbox and restored from
-the full list. `Scan HA cards` reads the
+the full list. Another opt-in option can automatically derive a `custom:*` card
+type for unknown registered resources from the filename; it is placed below the
+import tools and marked with a red safety warning. `Scan HA cards` reads the
 currently registered Lovelace resources from Home Assistant and adds recognized
 Community cards such as Mushroom and Bubble Card to the palette. Home Assistant
 does not expose a complete option registry for every custom card through this

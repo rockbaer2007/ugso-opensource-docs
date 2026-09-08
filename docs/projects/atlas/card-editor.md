@@ -83,6 +83,10 @@ Nicht benötigte Palette-Einträge, etwa JavaScript-Hilfsressourcen ohne eigene
 Card, können lokal als versteckt markiert werden. Versteckte Cards verschwinden
 aus der normalen Liste, bleiben aber über die vollständige Liste sichtbar und
 können dort wieder eingeblendet werden.
+Unter den Import-Werkzeugen gibt es zusätzlich eine opt-in Option für
+automatische Cardtypzuordnung. Sie versucht unbekannte registrierte Ressourcen
+aus dem Dateinamen einem `custom:*` Card-Typ zuzuordnen und ist deshalb mit
+einem roten Sicherheitshinweis versehen.
 
 ## Container-Cards
 
