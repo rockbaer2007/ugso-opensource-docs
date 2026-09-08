@@ -12,7 +12,7 @@ The plugin interfaces are still in progress. These pages document the current AT
 - [Verified Plugins](./verified-plugins): compact lists of verified and new unreviewed ATLAS plugins.
 - [Home Assistant Card Editor](./homeassistant-card-editor): the first official ATLAS reference plugin.
 - [ATLAS File Studio](./file-studio): second independent ATLAS plugin for approved Home Assistant file paths.
-- [ATLAS Automation Exporter / Editor](./automation-extractor): new plugin for analyzing, exporting and later editing Home Assistant automations.
+- [ATLAS Automation Exporter / Editor](./automation-extractor): new plugin for analyzing, safely backing up and exporting Home Assistant automations.
 - [Demo Repository](./demo-repository): public test repository for Administration, Hub and install flow.
 
 ## Goal
@@ -51,4 +51,4 @@ Publishable plugins need clear names, explicit versions, documented dependencies
 
 ## Planned Plugins
 
-The next plugin candidate has started as ATLAS Automation Exporter / Editor. It brings the earlier Windows idea into ATLAS: detect automations, show dependencies, export individual timestamped YAML files and prepare further editing through File Studio.
+The next plugin candidate has started as ATLAS Automation Exporter / Editor. It brings the earlier Windows idea into ATLAS: detect automations, show dependencies, create a safety backup while reading and export selected automations as an export version with `id` plus a cleaned import version without `id` for the Home Assistant YAML editor.

@@ -14,12 +14,14 @@ entries and prepare further editing through File Studio.
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Install page: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository file: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- current installable plugin version: `0.1.5`
+- current installable plugin version: `0.1.16`
 
 ATLAS Administration accepts the GitHub URL directly. During preview, ATLAS
 converts it to the matching `repository.json` address automatically.
 
 - read `/config/automations.yaml` through the approved File Studio path
+- create a safety backup before reading the real `/config/automations.yaml`,
+  stored as `/config/atlas_backups/automations/<date-time>/automations.yaml`
 - analyze external `.yaml` and `.yml` uploads
 - show id, alias, description, triggers, conditions and actions
 - detect service calls from classic `service:` and modern
@@ -32,18 +34,20 @@ converts it to the matching `repository.json` address automatically.
   internally scrollable
 - surface related entities, scripts, scenes, helpers and notification targets
 - configure an export folder target
-- export selected automations as individual YAML files
-- create timestamped export filenames: `name_dd_mm_yy-hh_mm_ss.yaml`
+- export selected automations into one timestamped run folder
+- create two files with the same automation filename: `export-version` with
+  `id` and `bereinigte-import-version` without `id` for the Home Assistant YAML
+  editor
 - show an overview of exported automations
 - prepare editing exported files through File Studio
-- run later refactoring steps only with backup, validation, diff preview and a recovery path
 
 ## Safety Line
 
-The first stage stays intentionally conservative. The plugin reads system YAML
-or uploaded YAML files, analyzes them and prepares downloads. Writing changes
-back into Home Assistant files belongs to a later stage once backup, YAML
-validation, diff preview and restore paths are in place.
+The plugin does not write back into Home Assistant system files. It reads system
+YAML or uploaded YAML files, creates a safety backup when opening the real
+`automations.yaml`, analyzes the automations and exports separate YAML files.
+Manual restore and further editing should continue through File Studio and Home
+Assistant's own YAML tools.
 
 ## Positioning
 
