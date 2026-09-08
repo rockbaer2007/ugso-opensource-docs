@@ -108,6 +108,10 @@ jeweiligen Entitäten zugeordnet; globale Styles bleiben als eigener Style-Block
 erkennbar. Der ursprüngliche YAML-Code soll so weit wie möglich erhalten bleiben
 und nur bei echten Änderungen angepasst werden.
 
+Handgeschriebene `custom:tabbed-card-v2`-Cards mit `tabs[].card`,
+verschachtelten `horizontal-stack`-/`vertical-stack`-Bereichen und rohen Custom
+Cards werden erkannt und direkt im Expert-Modus als Containerstruktur geöffnet.
+
 ## Export
 
 Der Editor kann verschiedene Artefakte erzeugen:

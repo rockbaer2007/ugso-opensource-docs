@@ -233,6 +233,9 @@ Bubble-Header oder Separatoren ohne Entity werden ebenfalls akzeptiert.
 Handgebaute Bubble-Switch-Spalten und `empty-column`-Karten werden ebenfalls
 erkannt. Erweiterte Bubble-Card-Details wie `modules`, `styles`, `grid_options`,
 Slider und Sub-Buttons sind als spätere Erhaltungsschicht geplant.
+Handgeschriebene `custom:tabbed-card-v2`-Cards mit `tabs[].card` und
+verschachtelten Stack-Bereichen werden ebenfalls erkannt und im Expert-Modus als
+Tabbed-Container geöffnet.
 
 ## Card-Layout-Editor
 

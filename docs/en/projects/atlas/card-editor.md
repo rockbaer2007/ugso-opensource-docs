@@ -107,6 +107,10 @@ assigned to the matching entities; global styles remain visible as their own
 style block. The original YAML should stay as close as possible to the imported
 source and only change when the user edits the card.
 
+Hand-written `custom:tabbed-card-v2` cards with `tabs[].card`, nested
+`horizontal-stack`/`vertical-stack` sections and raw custom cards are detected
+and opened directly in Expert mode as a container structure.
+
 ## Export
 
 The editor can create several artifact types:

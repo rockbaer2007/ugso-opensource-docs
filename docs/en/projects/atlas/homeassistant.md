@@ -226,6 +226,8 @@ entity are accepted as well, as are hand-built Bubble switch columns and
 `empty-column` cards. Advanced Bubble Card details such as `modules`, `styles`,
 `grid_options`, sliders and sub-buttons are planned as a later preservation
 layer.
+Hand-written `custom:tabbed-card-v2` cards with `tabs[].card` and nested stack
+sections are also detected and opened in Expert mode as a tabbed container.
 
 ## Card Layout Editor
 
