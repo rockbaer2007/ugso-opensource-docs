@@ -72,5 +72,5 @@ This includes:
 - Home Assistant integrations
 - Administration and Plugin Hub
 - File Studio for approved Home Assistant file paths
-- Card Editor with Simple and Expert workflows
+- Card Editor with a direct Expert workflow
 - shared theme and renderer structures

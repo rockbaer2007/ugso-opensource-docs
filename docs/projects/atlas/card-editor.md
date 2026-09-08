@@ -1,6 +1,6 @@
 ---
 title: Home Assistant Card Editor
-description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Simple-Modus, Expert-Modus, Import, Export, Ressourcencheck und Home-Assistant-Anbindung.
+description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Expert-Editor, Import, Export, Ressourcencheck und Home-Assistant-Anbindung.
 ---
 
 # Home Assistant Card Editor
@@ -22,18 +22,16 @@ Die Verbindungseinstellungen werden über die Atlas Administration verwaltet:
 http://127.0.0.1:4175/
 ```
 
-## Modi
+## Expert-Workflow
 
-Der Editor trennt zwei Arbeitsweisen.
+Der Editor startet direkt im Expert-Workflow. Der frühere sichtbare
+Simple-Modus und der Simple/Expert-Umschalter wurden entfernt. Import,
+HA-Card-Import, YAML-Einfügen, Ressourcen-Debug und Entitätsauswahl bleiben als
+Werkzeuge erhalten.
 
-| Modus | Zweck |
-|---|---|
-| Simple | schnelle Card-Erzeugung aus ausgewählten Entitäten und Layouts |
-| Expert | freie Editor-Fläche mit 12-Spalten-Raster, Drag-and-drop, Größenänderung und Container-Cards |
-
-Im Simple-Modus stehen Entitätsauswahl, Card-Ziel, Layout und YAML-Vorschau im
-Vordergrund. Im Expert-Modus werden Cards aus der linken Card-Liste auf eine
-Home-Assistant-ähnliche Rasterfläche gelegt.
+Cards werden aus der linken Card-Liste auf eine Home-Assistant-ähnliche
+Rasterfläche gelegt. Dort können sie verschoben, bearbeitet, verschachtelt und
+als Home-Assistant-YAML exportiert werden.
 
 ## Home-Assistant-Anbindung
 
@@ -154,7 +152,7 @@ ATLAS-Variante geführt wird.
 
 ## Aktueller Status
 
-Der Card Editor ist ein aktiver Entwicklungsstand. Simple- und Expert-Modus,
+Der Card Editor ist ein aktiver Entwicklungsstand. Expert-Workflow,
 Import/Export, Entity-Auswahl, Ressourcenprüfung und Container-Cards sind
 bereits testbar. Weitere Custom-Card-Mappings aus gescannten HACS-Ressourcen
 werden schrittweise ergänzt.

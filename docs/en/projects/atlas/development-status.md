@@ -22,7 +22,7 @@ Completed work includes:
   Administration and plugin assets run through ATLAS app routes that preserve
   Home Assistant Ingress paths instead of requiring direct access to separate
   development ports
-- Home Assistant Card Editor with Simple/Expert workflows, HACS-oriented
+- Home Assistant Card Editor with a direct Expert workflow, HACS-oriented
   export, problem reporting, a three-column import/entity area and separate
   `X`, `Y` and Zoom controls for the square Expert grid
 - external documentation in the UGSo Open Source docs site

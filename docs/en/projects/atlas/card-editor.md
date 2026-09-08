@@ -1,6 +1,6 @@
 ---
 title: Home Assistant Card Editor
-description: Dedicated documentation for the ATLAS Home Assistant Card Editor with Simple mode, Expert mode, import, export, resource checks and Home Assistant connection.
+description: Dedicated documentation for the ATLAS Home Assistant Card Editor with the Expert editor, import, export, resource checks and Home Assistant connection.
 ---
 
 # Home Assistant Card Editor
@@ -22,18 +22,15 @@ Connection settings are managed through Atlas Administration:
 http://127.0.0.1:4175/
 ```
 
-## Modes
+## Expert Workflow
 
-The editor separates two workflows.
+The editor now opens directly in the Expert workflow. The former visible
+Simple mode and the Simple/Expert switch have been removed. Import, HA card
+import, YAML paste, resource debug and entity selection remain available as
+tools.
 
-| Mode | Purpose |
-|---|---|
-| Simple | fast card generation from selected entities and layouts |
-| Expert | free editor surface with a 12-column grid, drag and drop, resizing and container cards |
-
-Simple mode focuses on entity selection, card target, layout and YAML preview.
-Expert mode places cards from the left card list on a Home-Assistant-like grid
-surface.
+Cards are placed from the left card list onto a Home-Assistant-like grid
+surface. They can be moved, edited, nested and exported as Home Assistant YAML.
 
 ## Home Assistant Connection
 
@@ -151,7 +148,7 @@ original `kinghat/tabbed-card`, but maintained as a separate ATLAS variant.
 
 ## Current Status
 
-The Card Editor is in active development. Simple and Expert mode, import/export,
+The Card Editor is in active development. Expert workflow, import/export,
 entity selection, resource checks and container cards are already testable.
 Additional custom-card mappings from scanned HACS resources will be added step
 by step.

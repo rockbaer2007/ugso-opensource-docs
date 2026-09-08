@@ -147,8 +147,8 @@ Beispiel-Lovelace-Card und das ursprüngliche Atlas Card Package für spätere
 Bearbeitung.
 Die Demo kann solche `.hacs.zip`-Dateien beim HA-Card-Import wieder erkennen.
 Sie liest die ZIP-Struktur, meldet fehlende Bundle-Dateien und importiert das
-eingebettete `atlas/*.atlas-card.json` wieder in den Simple- oder Expert-Editor.
-Damit ist ein erster HACS-Bundle-Roundtrip möglich.
+eingebettete `atlas/*.atlas-card.json` wieder in den Expert-Editor. Damit ist
+ein erster HACS-Bundle-Roundtrip möglich.
 
 ```json
 {
@@ -251,12 +251,11 @@ wie `binary_sensor.atlas_status` und `sensor.atlas_temperature` als sichere
 Vorgabe mitzugeben. Die Oberfläche soll dabei klar darauf hinweisen, dass diese
 Beispiel-Entitäten durch eigene Home-Assistant-Entitäten ersetzt werden müssen.
 
-Der Editor soll zwei Arbeitsweisen anbieten:
-
-- **Simple**: schnelle Button-Stacks für normale Card-Exporte.
-- **Expert**: freie Editor-Fläche, auf der Felder positioniert werden können.
-  Pro Feld soll der Card-Typ wählbar sein, zum Beispiel Entities, Bubble Card
-  oder Mushroom Template.
+Der Editor startet direkt im Expert-Workflow. Der frühere sichtbare
+Simple-Modus und der Simple/Expert-Umschalter wurden entfernt, damit die
+Bedienung kompakter bleibt und die freie Editor-Fläche im Mittelpunkt steht.
+Pro Feld ist der Card-Typ wählbar, zum Beispiel Entities, Bubble Card,
+Mushroom Template, `vertical-stack`, `horizontal-stack` oder Tabbed Card V2.
 
 Aus dem Editor-Plan leitet ATLAS die tatsächlich genutzten Card-Ziele ab. Bei
 einem gemischten Expert-Layout erkennt ATLAS dadurch gemeinsam, ob zum Beispiel
@@ -264,11 +263,11 @@ Mushroom und Bubble Card als HACS-Ressourcen benötigt werden, während reine
 Entities-Felder keine zusätzliche Custom-Card-Resource brauchen.
 
 Zusätzlich kann ein Editor-Plan in eine Home-Assistant-Card-Konfiguration
-übersetzt werden. Simple nutzt die gewählte Ziel-Card direkt. Expert sortiert
-belegte Felder nach Zeile und Spalte. Mehrere Felder in derselben Zeile werden
-zu einem `horizontal-stack`; mehrere Zeilen werden mit einem `vertical-stack`
-zusammengefasst. Ein einzelnes Feld kann außerdem selbst als `horizontal-stack`
-oder `vertical-stack` markiert werden und mehrere Card-Einträge enthalten.
+übersetzt werden. Der Expert-Workflow sortiert belegte Felder nach Zeile und
+Spalte. Mehrere Felder in derselben Zeile werden zu einem `horizontal-stack`;
+mehrere Zeilen werden mit einem `vertical-stack` zusammengefasst. Ein einzelnes
+Feld kann außerdem selbst als `horizontal-stack` oder `vertical-stack` markiert
+werden und mehrere Card-Einträge enthalten.
 `custom:tabbed-card-v2` wird als eigener Container unterstützt: Tabs werden im
 Popup eingerichtet, ausgewählt und anschließend mit Cards befüllt. Container
 starten absichtlich ohne Entity und ohne automatisch erzeugte erste Card.
@@ -277,25 +276,24 @@ Beim Anlegen erhalten sie technische, fortlaufende Titel wie `Tabbed 1`,
 Wenn ein Expert-Plan noch keine belegten Felder enthält, nutzt ATLAS die
 Demo-Entitäten als sicheren Fallback.
 
-In der Demo blendet Expert den einfachen Card-Layout-Wähler und den normalen
-HA-Card-Code aus. Export, Package-Export, Kopieren und Ressourcen-Kopieren
-verwenden dann den Expert-HA-Card-Code aus der Editor-Fläche. Ressourcen-Kopieren
-nimmt in Expert alle platzierten Mushroom- und Bubble-Abhängigkeiten gemeinsam
-mit der ATLAS-Frontend-Resource auf.
+In der Demo sind der einfache Card-Layout-Wähler und der normale HA-Card-Code
+ausgeblendet. Export, Package-Export, Kopieren und Ressourcen-Kopieren verwenden
+den Expert-HA-Card-Code aus der Editor-Fläche. Ressourcen-Kopieren nimmt alle
+platzierten Mushroom- und Bubble-Abhängigkeiten gemeinsam mit der
+ATLAS-Frontend-Resource auf.
 Auch `Panel group`, `Group name`, `Card target`, `Card layout` sowie die
-Gruppen-Aktionsbuttons werden im Expert-Modus ausgeblendet, weil die
-Editor-Fläche dort die zu exportierende Card-Struktur direkt bestimmt.
-Expert nutzt dafür ein eigenes Feld `Expert card name` für Kopieren, Export und
-Paket-Dateinamen.
+Gruppen-Aktionsbuttons werden ausgeblendet, weil die Editor-Fläche die zu
+exportierende Card-Struktur direkt bestimmt. Der Editor nutzt dafür ein eigenes
+Feld `Expert card name` für Kopieren, Export und Paket-Dateinamen.
 
 Für die Bedienung ist eine seitliche Template-Palette vorgesehen. Dort können
 visuelle Bausteine wie Entity List, State Button, Switch Button,
 `vertical-stack` und `horizontal-stack` angeboten werden. In der Demo ist daraus
-bereits eine linke Palette mit Simple/Expert-Umschaltung geworden: Der Nutzer
-kann einen Baustein anklicken oder per Drag-and-drop in die Editor-Fläche
-ziehen. Hinzugefügte Felder erscheinen als verschiebbare Kacheln auf der
-Rasterfläche. Die Fläche nutzt ein sichtbares 12-Spalten-Raster, das näher an
-Home Assistant erinnert. Beim Verschieben vorhandener Felder nutzt
+bereits eine linke Palette ohne Modus-Umschaltung geworden: Der Nutzer kann
+einen Baustein anklicken oder per Drag-and-drop in die Editor-Fläche ziehen.
+Hinzugefügte Felder erscheinen als verschiebbare Kacheln auf der Rasterfläche.
+Die Fläche nutzt ein sichtbares 12-Spalten-Raster, das näher an Home Assistant
+erinnert. Beim Verschieben vorhandener Felder nutzt
 ATLAS das echte innere Raster und erhält den Punkt, an dem die Kachel gegriffen
 wurde; dadurch lassen sich Felder nach oben ziehen, ohne seitlich zu springen.
 Das sichtbare Raster liegt auf derselben inneren Fläche wie die Kacheln, mit
@@ -378,9 +376,9 @@ Template-Standardgröße hinaus. Die Editorfläche selbst hat unten rechts einen
 sichtbaren Anfasser und kann in beide Richtungen um bis zu fünf Rasterschritte
 vergrößert werden; die aktuelle Größe bleibt der Standard. Ein Reset-Button
 setzt die Editorfläche wieder auf die Standardgröße zurück.
-Der gewählte Simple/Expert-Modus, platzierte Expert-Felder, das ausgewählte
-Feld und die vergrößerte Editorfläche werden lokal im Browser gespeichert und
-nach einem Neuladen wiederhergestellt.
+Platzierte Expert-Felder, das ausgewählte Feld und die vergrößerte
+Editorfläche werden lokal im Browser gespeichert und nach einem Neuladen
+wiederhergestellt.
 Die Demo-Oberfläche ist jetzt zweisprachig: Über den Sprachumschalter im Kopf
 kann zwischen Deutsch und Englisch gewechselt werden. Die Auswahl wird ebenfalls
 lokal gespeichert und beim nächsten Öffnen wiederhergestellt. Neben statischen
@@ -395,8 +393,7 @@ Layouttypen, bevor der generierte HA-Card-Code kopiert oder exportiert wird.
 freien Rasterplätze und reduziert Überschneidungen, ohne den Card-Inhalt zu
 verändern. Beim normalen Drop und beim Verschieben sucht ATLAS ebenfalls nach
 einem freien Zielplatz, wenn die gewünschte Rasterposition bereits belegt ist.
-Die Liste der ausgewählten Entitäten unterhalb des Editors ist einklappbar. Im
-Simple-Modus bleibt sie standardmäßig offen; im Expert-Modus ist sie
+Die Liste der ausgewählten Entitäten unterhalb des Editors ist einklappbar und
 standardmäßig zugeklappt, kann aber bei Bedarf geöffnet werden.
 
 ## YAML-Import und Styles

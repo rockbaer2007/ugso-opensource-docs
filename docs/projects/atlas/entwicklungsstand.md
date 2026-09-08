@@ -20,9 +20,9 @@ Abgeschlossen sind unter anderem:
   eingeklappten Fähigkeitslisten und Seitenleisten-URLs pro Plugin; Card
   Editor, Administration und Plugin-Assets laufen über App-/Ingress-fähige
   ATLAS-Routen statt nur über separate Entwicklungsports
-- Home Assistant Card Editor mit Simple-/Expert-Workflow, HACS-nahem Export,
-  Problembericht, dreispaltigem Import-/Entitaetenbereich und getrennten
-  `X`-, `Y`- und Zoom-Reglern fuer das quadratische Expert-Raster
+- Home Assistant Card Editor mit direktem Expert-Workflow, HACS-nahem Export,
+  Problembericht, dreispaltigem Import-/Entitätenbereich und getrennten
+  `X`-, `Y`- und Zoom-Reglern für das quadratische Expert-Raster
 - Snapshot und Pre-Release-Tag für den Event-Stand
 - ATLAS File Studio als zweites Plugin mit `/config`-Standard, optionaler
   `/addons`-Freigabe, YAML-Prüfung, Upload/Download, Backups, Verlauf mit

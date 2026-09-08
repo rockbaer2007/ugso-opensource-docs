@@ -69,6 +69,6 @@ Dazu gehören unter anderem:
 - Diagnose- und Entwicklungswerkzeuge
 - Home-Assistant-Anbindungen
 - Administration und Plugin-Hub
-- File Studio fuer freigegebene Home-Assistant-Dateipfade
-- Card Editor mit Simple- und Expert-Workflow
+- File Studio für freigegebene Home-Assistant-Dateipfade
+- Card Editor mit direktem Expert-Workflow
 - gemeinsame Theme- und Renderer-Strukturen

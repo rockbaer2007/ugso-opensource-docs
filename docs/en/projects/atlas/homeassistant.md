@@ -143,8 +143,8 @@ generated JavaScript card, a README, an example Lovelace card and the original
 Atlas Card Package for later editing.
 The demo can recognize those `.hacs.zip` files again through the HA card import
 control. It reads the ZIP structure, reports missing bundle files and imports
-the embedded `atlas/*.atlas-card.json` back into the Simple or Expert editor.
-This enables the first HACS bundle roundtrip.
+the embedded `atlas/*.atlas-card.json` back into the Expert editor. This enables
+the first HACS bundle roundtrip.
 
 ```json
 {
@@ -242,22 +242,21 @@ entities such as `binary_sensor.atlas_status` and
 `sensor.atlas_temperature`. The UI should clearly tell users to replace these
 demo entities with their own Home Assistant entities.
 
-The editor should offer two workflows:
-
-- **Simple**: fast button stacks for regular card exports.
-- **Expert**: a free editor surface where fields can be positioned manually.
-  Each field should be able to choose its own card target, for example
-  Entities, Bubble Card or Mushroom Template.
+The editor now opens directly in the Expert workflow. The former visible Simple
+mode and the Simple/Expert switch have been removed so the UI stays more
+compact and the free editor surface becomes the main workflow. Each field can
+choose its own card target, for example Entities, Bubble Card, Mushroom
+Template, `vertical-stack`, `horizontal-stack` or Tabbed Card V2.
 
 From the editor plan, ATLAS derives the card targets that are actually used. In
 a mixed expert layout, this lets ATLAS detect whether Mushroom and Bubble Card
 are required as HACS resources while pure Entities fields do not need an
 additional custom-card resource.
 
-An editor plan can be projected into a Home Assistant card
-configuration. Simple mode uses the selected target card directly. Expert mode
-sorts populated fields by row and column. Multiple fields on the same row
-become a `horizontal-stack`; multiple rows are wrapped by a `vertical-stack`.
+An editor plan can be projected into a Home Assistant card configuration. The
+Expert workflow sorts populated fields by row and column. Multiple fields on
+the same row become a `horizontal-stack`; multiple rows are wrapped by a
+`vertical-stack`.
 A single field can also be marked as its own `horizontal-stack` or
 `vertical-stack` and contain several child card entries. `custom:tabbed-card-v2`
 is supported as its own container: tabs are configured in a popup, selected and
@@ -268,22 +267,22 @@ technical, incrementing titles such as `Tabbed 1`, `Vertical 1` or
 plan does not contain populated fields yet, ATLAS falls back to the safe demo
 entities.
 
-In the demo UI, Expert mode hides the simple card-layout selector and the
-regular HA card code block. Export, package export, copy and resource-copy
-actions then use the Expert HA card code from the editor surface. In Expert
-mode, resource copy includes all placed Mushroom and Bubble dependencies
-together with the ATLAS frontend resource.
+In the demo UI, the simple card-layout selector and the regular HA card code
+block are hidden. Export, package export, copy and resource-copy actions use
+the Expert HA card code from the editor surface. Resource copy includes all
+placed Mushroom and Bubble dependencies together with the ATLAS frontend
+resource.
 `Panel group`, `Group name`, `Card target`, `Card layout` and the group action
-buttons are hidden in Expert mode as well because the editor surface directly
-defines the card structure that will be exported. Expert mode uses its own
-`Expert card name` field for copy, export and package filenames.
+buttons are hidden as well because the editor surface directly defines the card
+structure that will be exported. The editor uses its own `Expert card name`
+field for copy, export and package filenames.
 
 For the UI, a sidebar template palette is planned. It can offer visual building
 blocks such as Entity List, State Button, Switch Button, `vertical-stack` and
-`horizontal-stack`. In the demo this is already a left-hand palette with a
-Simple/Expert mode switch: the user can click a building block or drag it into
-the editor surface. Added fields appear as movable tiles on the grid surface.
-The surface uses a visible 12-column grid that is closer to Home Assistant.
+`horizontal-stack`. In the demo this is already a left-hand palette without a
+mode switch: the user can click a building block or drag it into the editor
+surface. Added fields appear as movable tiles on the grid surface. The surface
+uses a visible 12-column grid that is closer to Home Assistant.
 Moving existing fields snaps against the real inner grid and
 preserves the point where the tile was grabbed, so fields can move upward
 without sideways jumps. The visible grid now sits on the same inner surface as
@@ -357,9 +356,8 @@ their template default size. The editor surface itself has a
 visible bottom-right resize handle and can grow by up to five grid steps in
 both directions while keeping the current size as the default. A reset button
 returns the editor surface to the default footprint.
-The selected Simple/Expert mode, placed Expert fields, selected field and
-resized editor surface are saved in local browser storage and restored after a
-reload.
+Placed Expert fields, the selected field and the resized editor surface are
+saved in local browser storage and restored after a reload.
 The demo UI is now bilingual: the language switcher in the header toggles
 between English and German. The selected language is saved locally and restored
 the next time the editor opens. Static labels, entity picker feedback, stack
@@ -373,9 +371,8 @@ fields are marked directly on the surface.
 and column order, reducing overlaps without changing card content. During
 regular drops and moves, ATLAS also searches for a free target position if the
 requested grid slot is already occupied.
-The selected entity list below the editor is collapsible. It remains open by
-default in Simple mode and collapsed by default in Expert mode, but can still be
-opened when needed.
+The selected entity list below the editor is collapsible and collapsed by
+default, but can still be opened when needed.
 
 ## YAML Import and Styles
 
