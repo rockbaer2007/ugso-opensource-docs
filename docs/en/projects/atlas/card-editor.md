@@ -180,6 +180,8 @@ for tab backgrounds, radii and spacing:
 
 ![Tabbed Card V2 styling in the Home Assistant editor](/images/atlas/tabbed-card-v2-0.1.7.png)
 
+![Tabbed Card V2 result with rounded tabs](/images/atlas/tabbed-card-v2-result-0.1.7.png)
+
 Example:
 
 ```yaml

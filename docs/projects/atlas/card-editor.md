@@ -186,6 +186,8 @@ eigene Variablen für Tab-Hintergründe, Rundungen und Abstände:
 
 ![Tabbed Card V2 Styling im Home-Assistant-Editor](/images/atlas/tabbed-card-v2-0.1.7.png)
 
+![Tabbed Card V2 Ergebnis mit abgerundeten Tabs](/images/atlas/tabbed-card-v2-result-0.1.7.png)
+
 Beispiel:
 
 ```yaml
