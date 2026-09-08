@@ -163,7 +163,7 @@ ATLAS-Variante geführt wird.
 ### Tabbed Card V2 Styling
 
 Tabbed Card V2 übernimmt weiterhin die Material-Tab-Variablen und ergänzt
-eigene Variablen für Tab-Hintergründe:
+eigene Variablen für Tab-Hintergründe, Rundungen und Abstände:
 
 | Name | Standard | Beschreibung |
 | --- | --- | --- |
@@ -174,6 +174,11 @@ eigene Variablen für Tab-Hintergründe:
 | `--tabbed-card-v2-active-background` | `transparent` | Hintergrund des aktiven Tabs. |
 | `--tabbed-card-v2-inactive-background` | `transparent` | Hintergrund inaktiver Tabs. |
 | `--tabbed-card-v2-hover-background` | `--secondary-background-color` | Hintergrund beim Hover oder Fokus eines Tabs. |
+| `--tabbed-card-v2-tab-border-radius-top` | `0` | Rundung oben links und oben rechts pro Tab. |
+| `--tabbed-card-v2-tab-border-radius-bottom` | `0` | Rundung unten links und unten rechts pro Tab. |
+| `--tabbed-card-v2-tabs-padding-left` | `0` | Abstand links vor dem ersten Tab. |
+| `--tabbed-card-v2-tabs-padding-top` | `0` | Abstand oberhalb der Tab-Leiste. |
+| `--tabbed-card-v2-tabs-gap` | `0` | Abstand zwischen den Tabs. |
 
 Beispiel:
 
@@ -186,6 +191,11 @@ styles:
   --tabbed-card-v2-active-background: "rgba(255,152,0,0.22)"
   --tabbed-card-v2-inactive-background: "rgba(255,255,255,0.06)"
   --tabbed-card-v2-hover-background: "rgba(255,255,255,0.12)"
+  --tabbed-card-v2-tab-border-radius-top: "12px"
+  --tabbed-card-v2-tab-border-radius-bottom: "6px"
+  --tabbed-card-v2-tabs-padding-left: "8px"
+  --tabbed-card-v2-tabs-padding-top: "8px"
+  --tabbed-card-v2-tabs-gap: "6px"
 tabs:
   - attributes:
       label: Light
