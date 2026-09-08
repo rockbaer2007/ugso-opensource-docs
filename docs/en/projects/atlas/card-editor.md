@@ -175,6 +175,8 @@ for tab backgrounds, radii and spacing:
 | `--tabbed-card-v2-tabs-padding-left` | `0` | Space before the first tab. |
 | `--tabbed-card-v2-tabs-padding-top` | `0` | Space above the tab row. |
 | `--tabbed-card-v2-tabs-gap` | `0` | Space between tabs. |
+| `--tabbed-card-v2-indicator-inset` | `0` | Horizontal inset for the active tab indicator. |
+| `--tabbed-card-v2-indicator-border-radius` | `0` | Border radius for the active tab indicator. |
 
 Example:
 
@@ -194,6 +196,8 @@ styles:
   --tabbed-card-v2-tabs-padding-left: "8px"
   --tabbed-card-v2-tabs-padding-top: "8px"
   --tabbed-card-v2-tabs-gap: "6px"
+  --tabbed-card-v2-indicator-inset: "10px"
+  --tabbed-card-v2-indicator-border-radius: "999px"
 tabs:
   - attributes:
       label: Light

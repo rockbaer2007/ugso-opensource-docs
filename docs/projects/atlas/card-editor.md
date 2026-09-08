@@ -181,6 +181,8 @@ eigene Variablen für Tab-Hintergründe, Rundungen und Abstände:
 | `--tabbed-card-v2-tabs-padding-left` | `0` | Abstand links vor dem ersten Tab. |
 | `--tabbed-card-v2-tabs-padding-top` | `0` | Abstand oberhalb der Tab-Leiste. |
 | `--tabbed-card-v2-tabs-gap` | `0` | Abstand zwischen den Tabs. |
+| `--tabbed-card-v2-indicator-inset` | `0` | Horizontaler Innenabstand des aktiven Tab-Indikators. |
+| `--tabbed-card-v2-indicator-border-radius` | `0` | Rundung des aktiven Tab-Indikators. |
 
 Beispiel:
 
@@ -200,6 +202,8 @@ styles:
   --tabbed-card-v2-tabs-padding-left: "8px"
   --tabbed-card-v2-tabs-padding-top: "8px"
   --tabbed-card-v2-tabs-gap: "6px"
+  --tabbed-card-v2-indicator-inset: "10px"
+  --tabbed-card-v2-indicator-border-radius: "999px"
 tabs:
   - attributes:
       label: Light
