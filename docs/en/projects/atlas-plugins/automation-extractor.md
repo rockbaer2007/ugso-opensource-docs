@@ -14,7 +14,7 @@ entries and prepare further editing through File Studio.
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Install page: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository file: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- current installable plugin version: `0.1.20`
+- current installable plugin version: `0.1.21`
 
 ATLAS Administration accepts the GitHub URL directly. During preview, ATLAS
 converts it to the matching `repository.json` address automatically.
@@ -37,6 +37,7 @@ converts it to the matching `repository.json` address automatically.
 - limit the automation list to roughly 15 visible entries and keep it
   internally scrollable
 - surface related entities, scripts, scenes, helpers and notification targets
+- group and filter the automation list by domain, area or device
 - configure an export folder target
 - export selected automations into one timestamped run folder
 - create two files with the same automation filename: `export-version` with

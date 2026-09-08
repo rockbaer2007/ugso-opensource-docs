@@ -14,7 +14,7 @@ ausgewählte Einträge und bereitet die weitere Bearbeitung über File Studio vo
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Installationsseite: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository-Datei: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- aktueller installierbarer Plugin-Stand: `0.1.20`
+- aktueller installierbarer Plugin-Stand: `0.1.21`
 
 In ATLAS Administration kann direkt die GitHub-URL eingefügt werden. ATLAS
 wandelt sie beim Prüfen automatisch in die passende `repository.json`-Adresse
@@ -39,6 +39,7 @@ um.
 - Automationsliste auf ungefähr 15 sichtbare Einträge begrenzen und intern
   scrollbar halten
 - beteiligte Entitäten, Scripts, Szenen, Helfer und Benachrichtigungsziele sichtbar machen
+- Automationsliste nach Domain, Bereich oder Gerät gruppieren und filtern
 - Export-Ordner als Zielvorgabe festlegen
 - ausgewählte Automationen in einen Laufordner mit Datum und Uhrzeit
   exportieren
