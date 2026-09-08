@@ -184,6 +184,8 @@ eigene Variablen für Tab-Hintergründe, Rundungen und Abstände:
 | `--tabbed-card-v2-indicator-inset` | `0` | Horizontaler Innenabstand des aktiven Tab-Indikators. |
 | `--tabbed-card-v2-indicator-border-radius` | `0` | Rundung des aktiven Tab-Indikators. |
 
+![Tabbed Card V2 Styling im Home-Assistant-Editor](/images/atlas/tabbed-card-v2-0.1.7.png)
+
 Beispiel:
 
 ```yaml
