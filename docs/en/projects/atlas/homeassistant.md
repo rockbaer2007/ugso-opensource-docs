@@ -317,7 +317,9 @@ The left Expert palette separates Core and Community cards. Individual cards
 can be marked as favorites with a checkbox and saved through `Save favorites`.
 When saved favorites exist, ATLAS hides the remaining cards. `Show all cards`
 opens the complete list again without deleting saved favorites, so several
-favorites can be selected later and saved together. `Scan HA cards` reads the
+favorites can be selected later and saved together. Entries that are not useful
+as cards can also be hidden through a red `Hidden` checkbox and restored from
+the full list. `Scan HA cards` reads the
 currently registered Lovelace resources from Home Assistant and adds recognized
 Community cards such as Mushroom and Bubble Card to the palette. Home Assistant
 does not expose a complete option registry for every custom card through this
@@ -329,10 +331,11 @@ draggable custom cards, export with that card type in the Expert YAML and keep
 their resource path in exported resource snippets. Mapped resources are
 deduplicated so they do not appear again as scanned-only copies. Saved
 favorites hide every non-selected card, including scanned `/hacsfiles/`
-entries, until `Show all cards` or `Reset favorites` is used. Mapped scanned
-HACS and HA resources can also be marked as favorites. Helper resources such as
-card tools, dashboards, strategies, navigation helpers, icon packs and known
-non-card resources are hidden during the palette scan.
+entries. Hidden cards stay out of the normal view until `Show all cards` is
+used and the hidden marker is removed. Mapped scanned HACS and HA resources can
+also be marked as favorites. Helper resources such as card tools, dashboards,
+strategies, navigation helpers, icon packs and known non-card resources are
+hidden during the palette scan.
 The Core list now includes Entity, Entities, Overview / Glance, Button, Grid,
 Sensor, Vertical stack, Horizontal stack, Thermostat, Link and Webpage. Webpage
 exports use the Home Assistant `iframe` card type. The Overview / Glance

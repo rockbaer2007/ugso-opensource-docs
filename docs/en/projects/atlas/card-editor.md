@@ -77,6 +77,9 @@ yet include a built-in card mapping. They can be mapped locally to the matching
 `custom:*` Lovelace card type. After that mapping, they become active custom
 cards in the palette, can be placed through drag and drop and keep their
 resource path when resource snippets are exported.
+Palette entries that are not useful as cards, such as JavaScript helper
+resources, can be marked as hidden locally. Hidden cards disappear from the
+normal list, remain visible in the full list and can be restored from there.
 
 ## Container Cards
 

@@ -330,8 +330,11 @@ Die linke Expert-Palette trennt Core- und Community-Cards. Einzelne Cards
 können per Häkchen als Favoriten markiert und über `Save favorites`
 gespeichert werden. Sobald Favoriten gespeichert sind, blendet ATLAS alle
 anderen Cards aus. `Show all cards` öffnet die vollständige Liste erneut,
-ohne die gespeicherten Favoriten zu löschen. Dadurch können mehrere Favoriten
-bequem nachträglich ausgewählt und danach gemeinsam gespeichert werden.
+ohne die gespeicherten Favoriten zu löschen. Zusätzlich können nicht benötigte
+Einträge über eine rote `Versteckt`-Checkbox aus der normalen Palette
+ausgeblendet und in der vollständigen Liste wieder eingeblendet werden.
+Dadurch können mehrere Favoriten bequem nachträglich ausgewählt und danach
+gemeinsam gespeichert werden.
 `Scan HA cards` liest die aktuell registrierten Lovelace-Ressourcen aus Home
 Assistant und ergänzt erkannte Community-Cards wie Mushroom und Bubble Card in
 der Palette. Home Assistant liefert darüber keine vollständige Options-Registry
@@ -351,11 +354,12 @@ wie `Glance 1` oder `Glance 2` und wird über ein eigenes Entitäten-Popup
 befüllt.
 Beim Verbinden mit Home Assistant fordert ATLAS diese Ressourcenliste
 automatisch an. Gespeicherte Favoriten blenden alle nicht ausgewählten Cards
-aus, inklusive gescannter `/hacsfiles/`-Einträge, bis `Show all cards` oder
-`Reset favorites` genutzt wird. Gemappte Scan-only-HACS- und HA-Ressourcen
-können ebenfalls als Favoriten markiert werden. Hilfsressourcen wie Card-Tools,
-Dashboards, Strategien, Navigationshelfer, Icon-Pakete und bekannte
-Nicht-Card-Ressourcen werden beim Palette-Scan ausgeblendet.
+aus, inklusive gescannter `/hacsfiles/`-Einträge. Versteckte Cards bleiben in
+der normalen Ansicht ausgeblendet, bis `Show all cards` genutzt und die
+Versteckt-Markierung wieder entfernt wird. Gemappte Scan-only-HACS- und
+HA-Ressourcen können ebenfalls als Favoriten markiert werden. Hilfsressourcen
+wie Card-Tools, Dashboards, Strategien, Navigationshelfer, Icon-Pakete und
+bekannte Nicht-Card-Ressourcen werden beim Palette-Scan ausgeblendet.
 Der temporäre Ressourcencheck besitzt einen zuschaltbaren Debugbereich. Über
 `Ressourcen-Debug anzeigen` kann der Verlauf der WebSocket- und
 Admin-Proxy-Abfragen eingeblendet werden, um zu sehen, ob der Browser-WebSocket,

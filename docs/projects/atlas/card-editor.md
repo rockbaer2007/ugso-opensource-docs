@@ -79,6 +79,10 @@ kein fest eingebautes Card-Mapping kennt. Sie können lokal einem passenden
 `custom:*` Lovelace-Card-Typ zugeordnet werden. Nach dieser Zuordnung werden
 sie als gemappte Custom Card in der Palette aktiv, können per Drag-and-drop
 platziert werden und behalten ihren Resource-Pfad beim Ressourcen-Export.
+Nicht benötigte Palette-Einträge, etwa JavaScript-Hilfsressourcen ohne eigene
+Card, können lokal als versteckt markiert werden. Versteckte Cards verschwinden
+aus der normalen Liste, bleiben aber über die vollständige Liste sichtbar und
+können dort wieder eingeblendet werden.
 
 ## Container-Cards
 
