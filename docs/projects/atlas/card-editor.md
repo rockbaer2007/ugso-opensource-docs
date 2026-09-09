@@ -182,6 +182,8 @@ eigene Variablen für Tab-Hintergründe, Rundungen und Abstände:
 | `--tabbed-card-v2-card-background` | Home-Assistant-Card-Hintergrund | Hintergrund der äußeren Card. Für Glas-/Overlay-Layouts `transparent` nutzen. |
 | `--tabbed-card-v2-card-border` | Home-Assistant-Card-Rahmen | Rahmen der äußeren Card. |
 | `--tabbed-card-v2-card-border-radius` | Home-Assistant-Card-Rundung | Rundung der äußeren Card. |
+| `--tabbed-card-v2-content-padding-side` | `0` | Gleicher Abstand links und rechts innerhalb des Card-Inhalts. |
+| `--tabbed-card-v2-content-padding-bottom` | `0` | Unterer Abstand innerhalb des Card-Inhalts. |
 | `--tabbed-card-v2-tabbar-background` | `transparent` | Hintergrund der gesamten Tab-Leiste. |
 | `--tabbed-card-v2-active-background` | `transparent` | Hintergrund des aktiven Tabs. |
 | `--tabbed-card-v2-active-background-opacity` | `100` | Deckkraft des aktiven Tab-Hintergrunds von `0` bis `100`. |
@@ -210,6 +212,8 @@ styles:
   --tabbed-card-v2-card-background: "transparent"
   --tabbed-card-v2-card-border: "0.2px solid var(--primary-color)"
   --tabbed-card-v2-card-border-radius: "12px"
+  --tabbed-card-v2-content-padding-side: "16px"
+  --tabbed-card-v2-content-padding-bottom: "16px"
   --tabbed-card-v2-tabbar-background: "rgba(0,0,0,0.18)"
   --tabbed-card-v2-active-background: "#ff9800"
   --tabbed-card-v2-active-background-opacity: 35
