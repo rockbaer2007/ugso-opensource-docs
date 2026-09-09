@@ -159,6 +159,10 @@ Multi-line YAML blocks such as `>-` and `|-` stay multi-line values, so Mushroom
 template chips, Jinja expressions and `card_mod` styles are not destroyed when
 the code is applied.
 
+Opacity values for active and inactive tab backgrounds are rendered as stable
+color values before switching tab content. This keeps transparent tab
+backgrounds consistent after moving between tabs.
+
 ### Tabbed Card V2 Styling
 
 Tabbed Card V2 keeps the Material tab variables and adds dedicated variables

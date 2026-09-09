@@ -165,6 +165,10 @@ Der eingebaute Home-Assistant-Editor der Card kann YAML oder JSON direkt
 mehrzeilige Werte erhalten, damit Mushroom-Template-Chips, Jinja-Ausdrücke und
 `card_mod`-Styles nicht beim Übernehmen zerstört werden.
 
+Die Deckkraftwerte für aktive und inaktive Tab-Hintergründe werden vor dem
+Tabwechsel als stabile Farbwerte gerendert. Dadurch bleiben transparente
+Tab-Hintergründe auch nach dem Umschalten zwischen Tabs erhalten.
+
 ### Tabbed Card V2 Styling
 
 Tabbed Card V2 übernimmt weiterhin die Material-Tab-Variablen und ergänzt
