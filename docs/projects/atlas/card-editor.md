@@ -160,6 +160,11 @@ Der Editor weist darauf hin, dass Tabbed Card V2 eine eigene Card ist und sich
 vom ursprünglichen `kinghat/tabbed-card` ableitet, aber als eigenständige
 ATLAS-Variante geführt wird.
 
+Der eingebaute Home-Assistant-Editor der Card kann YAML oder JSON direkt
+übernehmen. Mehrzeilige YAML-Blöcke wie `>-` und `|-` bleiben dabei als
+mehrzeilige Werte erhalten, damit Mushroom-Template-Chips, Jinja-Ausdrücke und
+`card_mod`-Styles nicht beim Übernehmen zerstört werden.
+
 ### Tabbed Card V2 Styling
 
 Tabbed Card V2 übernimmt weiterhin die Material-Tab-Variablen und ergänzt

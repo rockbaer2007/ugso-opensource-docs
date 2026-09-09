@@ -154,6 +154,11 @@ ATLAS repository:
 The editor notes that Tabbed Card V2 is its own card. It is inspired by the
 original `kinghat/tabbed-card`, but maintained as a separate ATLAS variant.
 
+The built-in Home Assistant editor for the card accepts YAML or JSON directly.
+Multi-line YAML blocks such as `>-` and `|-` stay multi-line values, so Mushroom
+template chips, Jinja expressions and `card_mod` styles are not destroyed when
+the code is applied.
+
 ### Tabbed Card V2 Styling
 
 Tabbed Card V2 keeps the Material tab variables and adds dedicated variables
