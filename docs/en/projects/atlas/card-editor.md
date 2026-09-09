@@ -173,6 +173,9 @@ for tab backgrounds, radii and spacing:
 | `--mdc-theme-primary` | `--primary-color` | Active tab text, indicator and accent color. |
 | `--mdc-tab-text-label-color-default` | `--secondary-text-color` | Inactive tab text color. Use an `rgba(...)` value with alpha when transparency is needed. |
 | `--mdc-typography-button-font-size` | `14px` | Tab label font size. |
+| `--tabbed-card-v2-card-background` | Home Assistant card background | Background of the outer card. Use `transparent` for a glass/overlay layout. |
+| `--tabbed-card-v2-card-border` | Home Assistant card border | Border of the outer card. |
+| `--tabbed-card-v2-card-border-radius` | Home Assistant card radius | Border radius of the outer card. |
 | `--tabbed-card-v2-tabbar-background` | `transparent` | Background of the whole tab bar. |
 | `--tabbed-card-v2-active-background` | `transparent` | Background of the active tab. |
 | `--tabbed-card-v2-active-background-opacity` | `100` | Active tab background opacity from `0` to `100`. |
@@ -198,6 +201,9 @@ type: custom:tabbed-card-v2
 styles:
   --mdc-theme-primary: "#ff9800"
   --mdc-tab-text-label-color-default: "rgba(255,255,255,0.75)"
+  --tabbed-card-v2-card-background: "transparent"
+  --tabbed-card-v2-card-border: "0.2px solid var(--primary-color)"
+  --tabbed-card-v2-card-border-radius: "12px"
   --tabbed-card-v2-tabbar-background: "rgba(0,0,0,0.18)"
   --tabbed-card-v2-active-background: "#ff9800"
   --tabbed-card-v2-active-background-opacity: 35

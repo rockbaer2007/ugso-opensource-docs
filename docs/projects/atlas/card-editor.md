@@ -179,6 +179,9 @@ eigene Variablen für Tab-Hintergründe, Rundungen und Abstände:
 | `--mdc-theme-primary` | `--primary-color` | Text, Indikator und Akzentfarbe des aktiven Tabs. |
 | `--mdc-tab-text-label-color-default` | `--secondary-text-color` | Textfarbe inaktiver Tabs. Für Transparenz sollte ein `rgba(...)`-Wert mit Alpha-Kanal genutzt werden. |
 | `--mdc-typography-button-font-size` | `14px` | Schriftgröße der Tab-Beschriftung. |
+| `--tabbed-card-v2-card-background` | Home-Assistant-Card-Hintergrund | Hintergrund der äußeren Card. Für Glas-/Overlay-Layouts `transparent` nutzen. |
+| `--tabbed-card-v2-card-border` | Home-Assistant-Card-Rahmen | Rahmen der äußeren Card. |
+| `--tabbed-card-v2-card-border-radius` | Home-Assistant-Card-Rundung | Rundung der äußeren Card. |
 | `--tabbed-card-v2-tabbar-background` | `transparent` | Hintergrund der gesamten Tab-Leiste. |
 | `--tabbed-card-v2-active-background` | `transparent` | Hintergrund des aktiven Tabs. |
 | `--tabbed-card-v2-active-background-opacity` | `100` | Deckkraft des aktiven Tab-Hintergrunds von `0` bis `100`. |
@@ -204,6 +207,9 @@ type: custom:tabbed-card-v2
 styles:
   --mdc-theme-primary: "#ff9800"
   --mdc-tab-text-label-color-default: "rgba(255,255,255,0.75)"
+  --tabbed-card-v2-card-background: "transparent"
+  --tabbed-card-v2-card-border: "0.2px solid var(--primary-color)"
+  --tabbed-card-v2-card-border-radius: "12px"
   --tabbed-card-v2-tabbar-background: "rgba(0,0,0,0.18)"
   --tabbed-card-v2-active-background: "#ff9800"
   --tabbed-card-v2-active-background-opacity: 35
