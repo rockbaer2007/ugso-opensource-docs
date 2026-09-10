@@ -247,5 +247,5 @@ element:
 Home Assistant stellt verschiedene Kombinationen aus `variant` und `appearance` bereit. Die Namen bleiben in YAML englisch, weil sie direkt an `ha-button` weitergereicht werden.
 
 ::: info Button-Varianten und Darstellungen
-`outlined` ist ab UIX `8.2.0-beta.4` als Home-Assistant-Button-Darstellung dokumentiert.
+`outlined` ist seit UIX `8.2.0` als Home-Assistant-Button-Darstellung dokumentiert.
 :::

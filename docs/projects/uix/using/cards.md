@@ -38,7 +38,7 @@ uix:
     }
 ```
 
-![Styling with CSS variables](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/basic-first-uix.png)
+![Styling with CSS variables](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/basic-first-uix.png)
 :::
 
 ## Lokales Theme für ein gestyltes Element
@@ -95,4 +95,4 @@ entities:
   - entity: sun.sun
 ```
 
-![Custom CSS variables](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/custom-css-variables.png)
+![Custom CSS variables](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/custom-css-variables.png)

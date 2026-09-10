@@ -148,7 +148,7 @@ Templates werden unterstützt.
       }
 ```
 
-![Icon generic override example](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/icons-direct-icon-color-entity.png)
+![Icon generic override example](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/icons-direct-icon-color-entity.png)
 
 :::
 
@@ -240,4 +240,4 @@ cards:
     entity: sensor.attic_temperature
 ```
 
-![Icon override by entity in theme](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/theme-icon-color-entity.png)
+![Icon override by entity in theme](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/theme-icon-color-entity.png)

@@ -113,7 +113,7 @@ const UgsoLayout = defineComponent({
                 h('strong', 'UIX deutsche Übersetzung'),
                 h(
                   'span',
-                  'Diese Seite basiert auf UIX 8.1.0 und enthält zusätzlich gekennzeichnete Inhalte aus UIX 8.2.0-beta.4. Maßgeblich bleibt die englische Originaldokumentation.'
+                  'Diese Seite basiert auf UIX 8.2.0. Maßgeblich bleibt die englische Originaldokumentation.'
                 ),
                 h('span', [
                   h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, 'Englische Originaldoku'),
@@ -121,21 +121,11 @@ const UgsoLayout = defineComponent({
                   h(
                     'a',
                     {
-                      href: 'https://github.com/Lint-Free-Technology/uix/commit/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9',
+                      href: 'https://github.com/Lint-Free-Technology/uix/commit/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933',
                       target: '_blank',
                       rel: 'noopener'
                     },
-                    'Source-Revision 9a0fa57'
-                  ),
-                  ' · ',
-                  h(
-                    'a',
-                    {
-                      href: 'https://github.com/Lint-Free-Technology/uix/commit/3e9b1d4',
-                      target: '_blank',
-                      rel: 'noopener'
-                    },
-                    'Beta-Revision 3e9b1d4'
+                    'Source-Revision f9eb8fa'
                   )
                 ]),
                 h('span', [

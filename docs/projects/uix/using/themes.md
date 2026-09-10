@@ -29,7 +29,7 @@ red-theme:
 Der Theme-Name muss in der ersten Zeile stehen. Alle weiteren Werte werden eine Ebene eingerückt.
 :::
 
-![Red theme example](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/theme-red.png)
+![Red theme example](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/theme-red.png)
 
 ## Einfaches UIX-Theme
 
@@ -97,7 +97,7 @@ red-theme:
     }
 ```
 
-![Red theme row border example](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/theme-red-black-rows-border.png)
+![Red theme row border example](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/theme-red-black-rows-border.png)
 
 ::: tip `uix-<thing>`-Variablen
 `uix-<thing>`-Variablen enthalten CSS-Code als String. Sie müssen mit `|` oder `>` beginnen und mindestens eine Ebene eingerückt sein.
@@ -116,7 +116,7 @@ red-theme:
     }
 ```
 
-![Red theme with template row borders](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/theme-red-red-rows-template.png)
+![Red theme with template row borders](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/theme-red-red-rows-template.png)
 
 ## Klassen
 
@@ -147,7 +147,7 @@ entities:
       class: purple
 ```
 
-![Red theme with classes](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/theme-red-classes.png)
+![Red theme with classes](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/theme-red-classes.png)
 
 ## Shadow DOM navigieren
 
@@ -214,7 +214,7 @@ entities:
       theme: row-blue-override
 ```
 
-![UIX Theme override example](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/theme-local-override.png)
+![UIX Theme override example](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/theme-local-override.png)
 
 ::: warning Theme-Overrides bewusst einsetzen
 Styling und Theming in Home Assistant können komplex werden. Eine CSS-Variable kann gesetzt sein und trotzdem nicht dort wirken, wo man sie erwartet. Wird beispielsweise `--primary-text-color` auf eine Entities Row gesetzt, kann der Text trotzdem unverändert bleiben, weil die tatsächliche Farbe weiter oben am `ha-card`-Element der Entities-Karte gesetzt wird.
@@ -333,7 +333,7 @@ badges:
         }
 ```
 
-![Example using theme macros with defaults](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/theme-macros-badge-1.gif)
+![Example using theme macros with defaults](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/theme-macros-badge-1.gif)
 
 Badge-Beispiel mit gesetztem benanntem Parameter `color_on='red'`:
 
@@ -350,7 +350,7 @@ badges:
         }
 ```
 
-![Example using theme macros with defaults](https://raw.githubusercontent.com/Lint-Free-Technology/uix/9a0fa57d4afd262a5eaec4f1bfb7c154667bb2c9/docs/source/assets/page-assets/using/theme-macros-badge-2.gif)
+![Example using theme macros with defaults](https://raw.githubusercontent.com/Lint-Free-Technology/uix/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933/docs/source/assets/page-assets/using/theme-macros-badge-2.gif)
 
 Makros auf Kartenebene (`uix.macros`) haben Vorrang vor Theme-Makros mit demselben Namen.
 
