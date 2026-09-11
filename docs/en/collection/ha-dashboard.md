@@ -10,7 +10,7 @@ This section collects Home Assistant dashboard topics that are not individual ca
 
 | Project | Status | Note |
 | --- | --- | --- |
-| [Dashboard Layout Card V2](https://github.com/rockbaer2007/lovelace-layout-card-v2) | experimental | Fork of Lovelace layout-card with dedicated V2 layout types, side tab menu, subviews, home entry, theme inheritance from the home view, clock/date display, optional analog hour/minute marks, colors, 3D frames, dividers and optional hiding of the Home Assistant header/sidebar. |
+| [Dashboard Layout Card V2](https://github.com/rockbaer2007/lovelace-layout-card-v2) | experimental | Fork of Lovelace layout-card with dedicated V2 layout types, side tab menu, subviews, new subviews defaulting to Sections V2, home entry, theme inheritance from the home view, clock/date display, optional analog hour/minute marks, colors, 3D frames, dividers and optional hiding of the Home Assistant header/sidebar. |
 
 ![Dashboard Layout Card V2 view](/images/dashboard-layout-card-v2/view.png)
 
