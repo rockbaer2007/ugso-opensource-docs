@@ -10,7 +10,7 @@ Dieser Bereich sammelt Themen rund um Home-Assistant-Dashboards, die keine einze
 
 | Projekt | Status | Hinweis |
 | --- | --- | --- |
-| [Dashboard Layout Card V2](https://github.com/rockbaer2007/lovelace-layout-card-v2) | experimentell | Fork der Lovelace layout-card mit eigenen V2-Layouttypen, seitlichem Tab-Menü, Unterseiten, Home-Eintrag, Uhr/Datum, optionalen Stunden-/Minutenmarkierungen der Analoguhr, Farben, 3D-Rahmen, Trennern und optionalem Ausblenden von Home-Assistant-Header/Sidebar. |
+| [Dashboard Layout Card V2](https://github.com/rockbaer2007/lovelace-layout-card-v2) | experimentell | Fork der Lovelace layout-card mit eigenen V2-Layouttypen, seitlichem Tab-Menü, Unterseiten, Home-Eintrag, Theme-Übernahme von der Hauptansicht, Uhr/Datum, optionalen Stunden-/Minutenmarkierungen der Analoguhr, Farben, 3D-Rahmen, Trennern und optionalem Ausblenden von Home-Assistant-Header/Sidebar. |
 
 ![Dashboard Layout Card V2 Ansicht](/images/dashboard-layout-card-v2/view.png)
 
