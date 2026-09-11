@@ -14,6 +14,11 @@ This section collects Home Assistant dashboard topics that are not individual ca
 
 ![Dashboard Layout Card V2 view](/images/dashboard-layout-card-v2/view.png)
 
+The V2 layouts appear in the normal Home Assistant view layout selector next to
+the standard layouts.
+
+![Dashboard Layout Card V2 view layout selection](/images/dashboard-layout-card-v2/view-layout-selection.png)
+
 <video controls src="/images/dashboard-layout-card-v2/demo.mp4" style="width: 100%; border-radius: 8px;"></video>
 
 Note: Portrait images work best for menu backgrounds. A practical aspect ratio is about `1:2.5` width:height. Other formats are supported, but `cover` may crop them depending on the visible menu area. Only use images you own or images with a compatible free/open-source license.
