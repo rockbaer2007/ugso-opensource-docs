@@ -6,6 +6,18 @@ description: Dashboard-Themes, Layoutideen und visuelle Erweiterungen für Home 
 
 Dieser Bereich sammelt Themen rund um Home-Assistant-Dashboards, die keine einzelne Card und keine Integration sind.
 
+## Dashboard-Erweiterungen
+
+| Projekt | Status | Hinweis |
+| --- | --- | --- |
+| [Dashboard Layout Card V2](https://github.com/rockbaer2007/lovelace-layout-card-v2) | experimentell | Fork der Lovelace layout-card mit eigenen V2-Layouttypen, seitlichem Tab-Menü, Unterseiten, Home-Eintrag, Uhr/Datum, Farben, 3D-Rahmen, Trennern und optionalem Ausblenden von Home-Assistant-Header/Sidebar. |
+
+![Dashboard Layout Card V2 Ansicht](/images/dashboard-layout-card-v2/view.png)
+
+<video controls src="/images/dashboard-layout-card-v2/demo.mp4" style="width: 100%; border-radius: 8px;"></video>
+
+Hinweis: Für Menü-Hintergründe funktionieren Hochformat-Bilder besonders gut. Ein praktisches Seitenverhältnis ist ungefähr `1:2,5` Breite:Höhe. Andere Formate sind möglich, werden durch `cover` aber je nach sichtbarer Menüfläche zugeschnitten. Bitte nur eigene Bilder oder Bilder mit passender freier/Open-Source-Lizenz verwenden.
+
 ## Themes
 
 | Projekt | Status | Hinweis |

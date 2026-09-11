@@ -6,6 +6,18 @@ description: Dashboard themes, layout ideas and visual extensions for Home Assis
 
 This section collects Home Assistant dashboard topics that are not individual cards and not integrations.
 
+## Dashboard Extensions
+
+| Project | Status | Note |
+| --- | --- | --- |
+| [Dashboard Layout Card V2](https://github.com/rockbaer2007/lovelace-layout-card-v2) | experimental | Fork of Lovelace layout-card with dedicated V2 layout types, side tab menu, subviews, home entry, clock/date display, colors, 3D frames, dividers and optional hiding of the Home Assistant header/sidebar. |
+
+![Dashboard Layout Card V2 view](/images/dashboard-layout-card-v2/view.png)
+
+<video controls src="/images/dashboard-layout-card-v2/demo.mp4" style="width: 100%; border-radius: 8px;"></video>
+
+Note: Portrait images work best for menu backgrounds. A practical aspect ratio is about `1:2.5` width:height. Other formats are supported, but `cover` may crop them depending on the visible menu area. Only use images you own or images with a compatible free/open-source license.
+
 ## Themes
 
 | Project | Status | Note |
