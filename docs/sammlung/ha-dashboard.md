@@ -18,6 +18,8 @@ Die V2-Layouts erscheinen in der normalen Home-Assistant-Auswahl für Ansichts-L
 
 ![Dashboard Layout Card V2 Ansichtsauswahl](/images/dashboard-layout-card-v2/view-layout-selection.png)
 
+Sections-V2-Ansichten verhalten sich im Bearbeitungsmodus nah an der nativen Home-Assistant-Abschnittsansicht. Abschnitte können über den Drei-Striche-Griff verschoben werden; die neue Reihenfolge wird direkt in der Ansicht gespeichert.
+
 <video controls src="/images/dashboard-layout-card-v2/demo.mp4" style="width: 100%; border-radius: 8px;"></video>
 
 Hinweis: Für Menü-Hintergründe funktionieren Hochformat-Bilder besonders gut. Ein praktisches Seitenverhältnis ist ungefähr `1:2,5` Breite:Höhe. Andere Formate sind möglich, werden durch `cover` aber je nach sichtbarer Menüfläche zugeschnitten. Bitte nur eigene Bilder oder Bilder mit passender freier/Open-Source-Lizenz verwenden.

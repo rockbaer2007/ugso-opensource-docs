@@ -19,6 +19,10 @@ the standard layouts.
 
 ![Dashboard Layout Card V2 view layout selection](/images/dashboard-layout-card-v2/view-layout-selection.png)
 
+Sections V2 views behave close to Home Assistant's native Sections view in edit
+mode. Sections can be moved with the three-line drag handle, and the new order
+is saved back to the view.
+
 <video controls src="/images/dashboard-layout-card-v2/demo.mp4" style="width: 100%; border-radius: 8px;"></video>
 
 Note: Portrait images work best for menu backgrounds. A practical aspect ratio is about `1:2.5` width:height. Other formats are supported, but `cover` may crop them depending on the visible menu area. Only use images you own or images with a compatible free/open-source license.
