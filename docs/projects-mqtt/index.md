@@ -17,7 +17,7 @@ Enthaltene Add-ons:
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
 - Parcel to MQTT
-- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client): ausgewählte HA-Zustände an ioBroker oder andere externe Broker senden, optional Ein/Aus-Befehle empfangen. Der bestehende HA-Broker bleibt erhalten. Version 0.1.0 verwendet eine konfigurierbare Entitätsliste und eine Zustandsabfrage alle fünf Sekunden; keine MQTT-Discovery.
+- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client): ausgewählte HA-Zustände an ioBroker oder andere externe Broker senden, optional Ein/Aus-Befehle empfangen. Der bestehende HA-Broker bleibt erhalten. Version 0.1.1 ergänzt eine Weboberfläche für Broker-IP, Port, Benutzer, Passwort und Verbindungsstatus; die Entitätsliste bleibt konfigurierbar und wird alle fünf Sekunden abgefragt.
 
 - [Gemeinsames Add-on-Repository auf GitHub öffnen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
 
