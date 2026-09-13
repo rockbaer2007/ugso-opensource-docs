@@ -17,7 +17,7 @@ Enthaltene Add-ons:
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
 - Parcel to MQTT
-- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client): ausgewählte HA-Zustände an ioBroker oder andere externe Broker senden, optional Schreibbefehle empfangen. Der bestehende HA-Broker bleibt erhalten. Version 0.1.12 sendet Werte als ioBroker-Gerätebaum; Wert-Zeilen haben links eine Checkbox und übernehmen State plus alle Attribute, ohne das Geräte-Popup nach Änderungen neu zu öffnen.
+- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client): gezielte Home-Assistant-zu-ioBroker-Übertragung per MQTT. Statt mit dem ioBroker-HASS-Adapter pauschal alle Home-Assistant-Entitäten zu spiegeln, wählst du einzelne Geräte und Werte aus; diese erscheinen in ioBroker als übersichtlicher Gerätebaum. Der bestehende HA-Broker bleibt erhalten.
 
 - [Gemeinsames Add-on-Repository auf GitHub öffnen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
 
