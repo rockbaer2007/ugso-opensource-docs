@@ -17,7 +17,7 @@ Included add-ons:
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
 - Parcel to MQTT
-- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/mqtt_client/DOCS.en.md): export selected HA states to ioBroker or other external brokers, with optional write commands. The existing HA broker stays in place. Version 0.1.10 publishes values as an ioBroker device tree (`<prefix>/<device>/<value>/state`) and reliably groups values with a shared Entity-ID prefix, such as `1pm_mini_gen3_res1_*`, under the main device.
+- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/mqtt_client/DOCS.en.md): export selected HA states to ioBroker or other external brokers, with optional write commands. The existing HA broker stays in place. Version 0.1.11 publishes values as an ioBroker device tree and sends each checked value row with its state plus all attributes; device select-all sends every value including attributes.
 
 - [Open the shared add-on repository on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
 
