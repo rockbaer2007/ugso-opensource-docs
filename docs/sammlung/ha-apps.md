@@ -13,6 +13,7 @@ Dieser Bereich sammelt Home-Assistant-Add-ons, Apps, MQTT-Brücken und laufende 
 | [FRITZ!Box to MQTT](/projects/fritzbox-to-mqtt/) | FRITZ!Box-Daten per MQTT Discovery in Home Assistant. |
 | [Heizöl to MQTT](/projects/heizoel-to-mqtt/) | Heizölpreise per MQTT Discovery in Home Assistant. |
 | [Parcel to MQTT](/projects/parcel-to-mqtt/) | Paketverfolgung per MQTT Discovery in Home Assistant. |
+| [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client) | Ausgewählte HA-Zustände an einen externen Broker wie ioBroker senden; optional Ein/Aus-Befehle empfangen. Der HA-Broker bleibt bestehen. |
 
 ## Add-on-Repository
 

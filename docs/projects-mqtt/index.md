@@ -1,6 +1,6 @@
 # MQTT Projekte
 
-Diese Seite sammelt die Home-Assistant-Apps von UGSo Software, die Daten per MQTT Discovery veröffentlichen.
+Diese Seite sammelt die Home-Assistant-Apps von UGSo Software für MQTT Discovery und den Datenaustausch mit externen MQTT-Brokern.
 
 ## Gemeinsames Add-on-Repository
 
@@ -17,6 +17,7 @@ Enthaltene Add-ons:
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
 - Parcel to MQTT
+- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client): ausgewählte HA-Zustände an ioBroker oder andere externe Broker senden, optional Ein/Aus-Befehle empfangen. Der bestehende HA-Broker bleibt erhalten. Version 0.1.0 verwendet eine konfigurierbare Entitätsliste und eine Zustandsabfrage alle fünf Sekunden; keine MQTT-Discovery.
 
 - [Gemeinsames Add-on-Repository auf GitHub öffnen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
 
