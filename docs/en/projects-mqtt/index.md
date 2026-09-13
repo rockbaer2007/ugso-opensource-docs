@@ -17,7 +17,7 @@ Included add-ons:
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
 - Parcel to MQTT
-- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/mqtt_client/DOCS.en.md): export selected HA states to ioBroker or other external brokers, with optional write commands. The existing HA broker stays in place. Version 0.1.5 shows friendly names first, maps `press` to `button` and `state_boolean` to `switch`, and offers bidirectional commands for controllable domains, value inputs and buttons.
+- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/mqtt_client/DOCS.en.md): export selected HA states to ioBroker or other external brokers, with optional write commands. The existing HA broker stays in place. Version 0.1.6 groups entities by device, keeps related switches, sensor values, updates and states in one device view, maps `press` to `button` and `state_boolean` to `switch`, and offers bidirectional commands for controllable domains, value inputs and buttons.
 
 - [Open the shared add-on repository on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
 
