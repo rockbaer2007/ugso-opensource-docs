@@ -33,7 +33,7 @@ element:
 | `hidden` | boolean | ja | `false` | Blendet das Element aus, wenn der Wert wahr ist. |
 | `grid_options` | mapping | ja | - | Lovelace-Grid-Optionen wie `rows` und `columns`, nur für `mold: card`. |
 | `show_error` | boolean | nein | `false` | Bei `true` wird bei Fehlern die Lovelace-Fehlerkarte angezeigt, statt das Element zu verstecken. |
-| `template_nesting` | string | nein | `"<<>>"` | Vier Zeichen zum Escapen verschachtelter Templates. Standard: `<<...>>` für `&#123;&#123;...&#125;&#125;` und `<%...%>` für `&#123;%...%&#125;`. |
+| `template_nesting` | string | nein | `"<<>>"` | Vier Zeichen zum Escapen verschachtelter Templates. Standard: `<<...>>` für <code v-pre>{{...}}</code> und `<%...%>` für <code v-pre>{%...%}</code>. |
 | `sparks` | list | ja | `[]` | Liste von [Spark-Konfigurationen](./sparks/), die an das erzeugte Element angehängt werden. |
 | `delayed_hass` | boolean | nein | - | Verzögert die Übergabe des `hass`-Objekts, bis die Karte geladen ist. Hilft bei manchen Custom Cards, z. B. ApexCharts. |
 
@@ -146,16 +146,16 @@ forge:
   mold: card
   macros:
     state_color: |
-      &#123;% macro state_color(entity) -%&#125;
-      &#123;&#123; 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' &#125;&#125;
-      &#123;%- endmacro %&#125;
+      {% macro state_color(entity) -%}
+      {{ 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' }}
+      {%- endmacro %}
 element:
   type: tile
   entity: light.living_room
 uix:
   style: |
     ha-card {
-      border-color: &#123;&#123; state_color(config.element.entity) &#125;&#125;;
+      border-color: {{ state_color(config.element.entity) }};
     }
 ```
 
@@ -176,11 +176,11 @@ forge:
     accent_color: var(--primary-color)
 element:
   type: tile
-  entity: "&#123;&#123; main_entity &#125;&#125;"
+  entity: "{{ main_entity }}"
 uix:
   style: |
     ha-card {
-      border-color: &#123;&#123; accent_color &#125;&#125;;
+      border-color: {{ accent_color }};
     }
 ```
 
@@ -188,12 +188,12 @@ uix:
 
 | YAML-Typ | Beispiel | Jinja2-Typ | Nutzung im Template |
 | --- | --- | --- | --- |
-| Leer (`~` oder `null`) | `my_billet: ~` | `none` | `&#123;&#123; my_billet &#125;&#125;` ergibt leer |
-| String | `my_billet: hello` | `str` | `&#123;&#123; my_billet &#125;&#125;` ergibt `hello` |
-| Zahl | `my_billet: 42` | `int` oder `float` | `&#123;&#123; my_billet + 1 &#125;&#125;` ergibt `43` |
-| Boolean | `my_billet: true` | `bool` | `&#123;% if my_billet %&#125;...&#123;% endif %&#125;` |
-| Liste | `my_billet: [1, 2, 3]` | `list` | `&#123;&#123; my_billet | join(', ') &#125;&#125;` |
-| Mapping | `my_billet: {a: 1}` | `dict` | `&#123;&#123; my_billet.a &#125;&#125;` |
+| Leer (`~` oder `null`) | `my_billet: ~` | `none` | <code v-pre>{{ my_billet }}</code> ergibt leer |
+| String | `my_billet: hello` | `str` | <code v-pre>{{ my_billet }}</code> ergibt `hello` |
+| Zahl | `my_billet: 42` | `int` oder `float` | <code v-pre>{{ my_billet + 1 }}</code> ergibt `43` |
+| Boolean | `my_billet: true` | `bool` | <code v-pre>{% if my_billet %}...{% endif %}</code> |
+| Liste | `my_billet: [1, 2, 3]` | `list` | <code v-pre>{{ my_billet &#124; join(', ') }}</code> |
+| Mapping | `my_billet: {a: 1}` | `dict` | <code v-pre>{{ my_billet.a }}</code> |
 
 #### Billet-Interpolation
 
@@ -203,10 +203,10 @@ Billets können andere Billets referenzieren.
 forge:
   billets:
     room: living_room
-    entity: "light.&#123;&#123; room &#125;&#125;"
+    entity: "light.{{ room }}"
 element:
   type: tile
-  entity: "&#123;&#123; entity &#125;&#125;"
+  entity: "{{ entity }}"
 ```
 
 Mehrere Werte können zusammengesetzt werden:
@@ -216,7 +216,7 @@ forge:
   billets:
     domain: sensor
     object_id: outdoor_temperature
-    entity: "&#123;&#123; domain &#125;&#125;.&#123;&#123; object_id &#125;&#125;"
+    entity: "{{ domain }}.{{ object_id }}"
 ```
 
 ::: note Zirkuläre Referenzen
@@ -285,13 +285,13 @@ forge:
     entity: light.living_room
 element:
   type: tile
-  entity: "&#123;&#123; entity &#125;&#125;"
+  entity: "{{ entity }}"
 ```
 
 ```jinja
-&#123;% if is_state(entity, 'on') %&#125;
+{% if is_state(entity, 'on') %}
   eingeschaltet
-&#123;% endif %&#125;
+{% endif %}
 ```
 
 ::: tip
@@ -436,7 +436,7 @@ Footer-Variablen:
 type: custom:uix-forge
 forge:
   mold: footer
-  hidden: "&#123;&#123; is_state('input_boolean.hide_footer', 'on') &#125;&#125;"
+  hidden: "{{ is_state('input_boolean.hide_footer', 'on') }}"
 element:
   type: button
   entity: input_boolean.hide_footer
@@ -546,21 +546,21 @@ forge:
   sparks:
     - type: tooltip
       for: hui-tile-card $ ha-tile-icon
-      content: "&#123;&#123; label &#125;&#125;: &#123;&#123; states(entity) &#125;&#125;"
+      content: "{{ label }}: {{ states(entity) }}"
     - type: button
       after: hui-tile-card $ ha-tile-info
       label: Umschalten
-      entity: "&#123;&#123; entity &#125;&#125;"
+      entity: "{{ entity }}"
       tap_action:
         action: toggle
     - type: overlay-icon
       for: hui-tile-card $ ha-tile-icon
-      icon: "&#123;&#123; 'mdi:check' if is_state(entity, 'on') else 'mdi:minus' &#125;&#125;"
-      icon_background: "&#123;&#123; 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' &#125;&#125;"
+      icon: "{{ 'mdi:check' if is_state(entity, 'on') else 'mdi:minus' }}"
+      icon_background: "{{ 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' }}"
 element:
   type: tile
-  entity: "&#123;&#123; entity &#125;&#125;"
-  name: "&#123;&#123; label &#125;&#125;"
+  entity: "{{ entity }}"
+  name: "{{ label }}"
 uix:
   style: |
     ha-card {
@@ -595,7 +595,7 @@ Nach dem Debuggen kannst du `show_error` wieder entfernen oder auf `false` setze
 type: custom:uix-forge
 forge:
   mold: card
-  hidden: "&#123;&#123; not is_state('input_boolean.show_lights', 'on') &#125;&#125;"
+  hidden: "{{ not is_state('input_boolean.show_lights', 'on') }}"
 element:
   type: tile
   entity: light.living_room

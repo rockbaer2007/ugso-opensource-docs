@@ -113,7 +113,7 @@ const UgsoLayout = defineComponent({
                 h('strong', 'UIX deutsche Übersetzung'),
                 h(
                   'span',
-                  'Diese Seite basiert auf UIX 8.2.0. Maßgeblich bleibt die englische Originaldokumentation.'
+                  'Stabile Basis: UIX 8.2.0. Gekennzeichnete Ergänzungen bis 8.3.0-beta.8, geprüft am 13.09.2026. Maßgeblich bleibt die englische Originaldokumentation.'
                 ),
                 h('span', [
                   h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, 'Englische Originaldoku'),
@@ -125,8 +125,10 @@ const UgsoLayout = defineComponent({
                       target: '_blank',
                       rel: 'noopener'
                     },
-                    'Source-Revision f9eb8fa'
-                  )
+                    'Stabile Basis f9eb8fa'
+                  ),
+                  ' · ',
+                  h('a', { href: '/projects/uix/translation-status' }, 'Abgleich c33ff79')
                 ]),
                 h('span', [
                   'Originale UIX-Dokumentation von ',

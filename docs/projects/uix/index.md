@@ -7,6 +7,7 @@ title: Übersicht
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
 > Basis: GitHub-Release `v8.2.0`. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`f9eb8fa`](https://github.com/Lint-Free-Technology/uix/commit/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933) vom 09.09.2026.
+> Ergänzende Dokumentationsänderungen wurden am 13.09.2026 bis [`c33ff79`](https://github.com/Lint-Free-Technology/uix/commit/c33ff7995b757d5e7ead0cf8fd5fd85ed4d791ab) aus UIX `8.3.0-beta.8` abgeglichen. Beta-Funktionen sind auf den jeweiligen Seiten gekennzeichnet; siehe [Übersetzungsstatus](./translation-status).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
 >
@@ -22,10 +23,11 @@ title: Übersicht
 >
 UI eXtension, kurz UIX, ist eine Home-Assistant-Integration für Anpassungen an der Oberfläche. Sie erweitert Karten, Zeilen, Badges, Dialoge und andere Frontend-Elemente mit CSS, Templates und zusätzlichen UI-Verhalten.
 
-UIX besteht aus zwei großen Bereichen:
+UIX besteht aus drei großen Bereichen:
 
 - [UIX Styling](./using/index) für CSS-Anpassungen an Home-Assistant-Frontend-Elementen.
 - [UIX Forge](./forge/index) für dynamisch erzeugte Elemente, wiederverwendbare Vorlagen und erweiterte Sparks.
+- [UIX Broker](./broker/index) für deklarative Interaktionen: Browser-Events, Tastenkürzel und Home-Assistant-Events wählen ein Element aus, prüfen Regeln und führen Direktiven in ihrer Reihenfolge aus.
 
 ## Schnell loslegen
 
@@ -35,9 +37,10 @@ Der beste Einstieg ist der [Schnellstart](./quick-start). Dort findest du Instal
 
 - [UIX Styling verwenden](./using/index)
 - [UIX Forge verwenden](./forge/index)
+- [UIX Broker verwenden](./broker/index)
 - [Konzepte verstehen](./concepts/index)
 - [Debugging](./debugging/index)
 - [FAQ](./faq)
 
 > **Stand dieser deutschen Doku**
-> Diese deutsche Doku ist eine inoffizielle Übersetzung für UIX `8.2.0`. Bei Unklarheiten gilt immer die englische Originaldokumentation.
+> Stabile Basis ist UIX `8.2.0`, ergänzt um gekennzeichnete Änderungen bis `8.3.0-beta.8`. Bei Unklarheiten gilt immer die englische Originaldokumentation.

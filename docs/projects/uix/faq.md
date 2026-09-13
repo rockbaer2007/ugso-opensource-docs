@@ -27,7 +27,7 @@ Nein. UIX nutzt eine eigene Architektur und eigene Frontend-Patches. Es adressie
 | Korrekte Behandlung von `...-more-info(-yaml)` | Nein seit HA 2026.3.0 | Ja |
 | Adaptive Dialogs für `...-dialog(-yaml)` patchen | Nein seit HA 2026.3.0 | Ja |
 | [DOM-Inspektionshelfer](./concepts/dom#dom-inspektionshelfer) | Nein | Ja |
-| [Host/Element-Pfad-Auswahl](./concepts/dom#hostelement-pfad-auswahl) | Nein | Ja |
+| [Host/Element-Pfad-Auswahl](./concepts/dom#host-element-pfad-auswahl) | Nein | Ja |
 | [Express Search Selector](./concepts/dom#express-search-selector) | Nein | Ja |
 | [Forge](./forge/) als Custom-Lovelace-Element | Nein | Ja |
 | [Foundries](./forge/foundries) als wiederverwendbare Forges | Nein | Ja |

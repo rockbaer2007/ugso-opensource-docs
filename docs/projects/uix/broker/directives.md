@@ -12,6 +12,7 @@ Direktiven laufen nacheinander, nachdem alle Regeln einer Interaktion passen. Je
 - [Call](#call): Eine Element-Methode aufrufen.
 - [Button](#button): Einen interaktiven Home-Assistant-Button einfügen.
 - [Tile icon](#tile-icon): Ein interaktives Home-Assistant-Tile-Icon einfügen.
+- [Tooltip](#tooltip): Einen gestalteten Tooltip an ein Element hängen.
 - [Action](#action): Home-Assistant-, Frontend- oder UIX-Action ausführen.
 - [Template](#template): Ein Jinja2-Template einmal rendern und das Ergebnis speichern.
 - [JavaScript](#javascript): JavaScript synchron auswerten und den Rückgabewert speichern.
@@ -19,7 +20,7 @@ Direktiven laufen nacheinander, nachdem alle Regeln einer Interaktion passen. Je
 
 ## Direktiven-Regeln
 
-Füge `rules` zu jeder Direktive außer `block` hinzu, um nur diese Direktive zu konditionieren. Die Syntax entspricht den [Interaktionsregeln](./rules). Bei `property`, `event`, `call`, `button` und `tile-icon` prüfen Host-Element-Regeln standardmäßig den aufgelösten Direktiven-Anchor. Bei `action` und `wait` prüfen sie den Interaction Anchor. Ein eigener `anchor` innerhalb einer Regel bleibt relativ zu diesem Standard-Anchor oder kann wie gewohnt absolut sein.
+Füge `rules` zu jeder Direktive außer `block` hinzu, um nur diese Direktive zu konditionieren. Die Syntax entspricht den [Interaktionsregeln](./rules). Bei `property`, `event`, `call`, `button`, `tile-icon` und `tooltip` prüfen Host-Element-Regeln standardmäßig den aufgelösten Direktiven-Anchor. Bei `action` und `wait` prüfen sie den Interaction Anchor. Ein eigener `anchor` innerhalb einer Regel bleibt relativ zu diesem Standard-Anchor oder kann wie gewohnt absolut sein.
 
 ```yaml
 directives:
@@ -50,7 +51,7 @@ directives:
 
 ## Direktiven-Anchors
 
-`property`, `event`, `call`, `button` und `tile-icon` nutzen standardmäßig den Interaction Anchor. Jede dieser Direktiven kann den Standard mit eigener `anchor`-Konfiguration überschreiben. Ein einfacher String ist relativ zum Interaction Anchor, ein String mit `&` am Anfang ist ein kompakter absoluter `select_tree`-Pfad ab `document`, und `{ select_tree: ... }` ist die entsprechende lange absolute Form.
+`property`, `event`, `call`, `button`, `tile-icon` und `tooltip` nutzen standardmäßig den Interaction Anchor. Jede dieser Direktiven kann den Standard mit eigener `anchor`-Konfiguration überschreiben. Ein einfacher String ist relativ zum Interaction Anchor, ein String mit `&` am Anfang ist ein kompakter absoluter `select_tree`-Pfad ab `document`, und `{ select_tree: ... }` ist die entsprechende lange absolute Form.
 
 ```yaml
 directives:
@@ -304,6 +305,78 @@ Nutze `uix` für UIX-Styling, einschließlich Styles innerhalb des Shadow Root d
 - Pointer-, Mouse-, Touch- und Click-Events stoppen am erzeugten Icon. Dadurch reagiert kein umgebendes Element mit Ripple oder Action-Handler, während die eigene Tile-Icon-Action erhalten bleibt.
 - Broker ergänzt jedes erzeugte Tile-Icon mit dem Attribut `data-uix-broker-tile-icon`, damit es aus UIX-Styling selektiert werden kann.
 :::
+
+## Tooltip
+
+::: info Verfügbar ab UIX 8.3.0-beta.5
+Die `tooltip`-Direktive wurde in beta.5 ergänzt; `trigger`, `open` und das Scroll-/Hover-Verhalten folgen in beta.8.
+:::
+
+`tooltip` fügt Home Assistants `wa-tooltip` als Geschwisterelement des gewählten Ziels ein. Optionen und CSS-Variablen entsprechen dem [Forge Tooltip Spark](../forge/sparks/tooltip). Standardmäßig ist `for` der aufgelöste Direktiven-Anchor. Ein Selektor ist relativ zu diesem Anchor und verwendet die normale UIX-`select_tree`-Syntax. Das Ziel muss ein Element sein, kein abschließender Shadow Root.
+
+```yaml
+- type: tooltip
+  content: Steuerung der Wohnzimmerbeleuchtung öffnen
+  placement: bottom
+```
+
+Mit `for: previous` direkt nach einer UI-Direktive erhält deren erzeugtes Element den Tooltip. Das funktioniert mit `button` und `tile-icon` und ist für spätere elementerzeugende Direktiven vorbereitet.
+
+```yaml
+- type: button
+  icon: mdi:lightbulb
+  tap_action:
+    action: toggle
+- type: tooltip
+  for: previous
+  content: Licht umschalten
+  placement: bottom
+```
+
+```yaml
+- type: tooltip
+  for: "$ ha-dialog ha-icon-button"
+  content: Schließen
+  without_arrow: true
+```
+
+`style` ist ein flaches Mapping von CSS-Eigenschaften. Damit lassen sich insbesondere `--uix-tooltip-*`-Variablen direkt auf dem erzeugten Tooltip setzen:
+
+```yaml
+- type: tooltip
+  for: previous
+  content: Licht umschalten
+  style:
+    "--uix-tooltip-background-color": var(--primary-color)
+    "--uix-tooltip-content-color": white
+    "--uix-tooltip-max-width": 24ch
+```
+
+`trigger` akzeptiert die durch Leerzeichen getrennten Web-Awesome-Aktivierungsarten `hover`, `focus`, `click` und `manual`. Bei `hover` bleibt der Tooltip geöffnet, wenn der Zeiger vom Ziel in seinen Inhalt bewegt wird; begrenzte Inhalte können dadurch gescrollt werden. `manual` aktiviert ihn nicht automatisch. `open` setzt den Zustand beim Ausführen der Direktive.
+
+```yaml
+- type: tooltip
+  for: previous
+  trigger: manual
+  open: true
+  content: Dieser Tooltip wird durch die Direktive geöffnet
+```
+
+| Schlüssel | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `for` | string | Direktiven-Anchor | Zielselektor oder `previous` für die vorherige elementerzeugende Direktive. |
+| `content` | string | `""` | HTML-Inhalt des Tooltips. |
+| `placement` | string | `"top"` | `top`, `top-start`, `top-end`, `bottom`, `bottom-start`, `bottom-end`, `left`, `left-start`, `left-end`, `right`, `right-start` oder `right-end`. |
+| `distance` | number | `8` | Abstand zwischen Tooltip und Ziel in Pixeln. |
+| `skidding` | number | `0` | Versatz entlang der Zielachse in Pixeln. |
+| `show_delay` | number | `150` | Wartezeit bis zum Anzeigen in Millisekunden. |
+| `hide_delay` | number | `150` | Wartezeit bis zum Ausblenden in Millisekunden. |
+| `trigger` | string | `"hover focus"` | Aktivierungsarten `hover`, `focus`, `click` oder `manual`, durch Leerzeichen getrennt. |
+| `open` | boolean | `false` | Öffnungszustand beim Ausführen setzen; besonders für `trigger: manual`. |
+| `without_arrow` | boolean | `false` | Richtungspfeil ausblenden. |
+| `style` | object | — | Flaches Mapping von CSS-Eigenschaften auf String- oder Zahlenwerte, inline auf `wa-tooltip` gesetzt. |
+
+Da der Tooltip neben dem Ziel liegt, müssen vererbte CSS-Variablen auf dem Eltern- oder einem Vorfahrenelement gesetzt werden. Siehe [CSS-Variablen des Tooltip Sparks](../forge/sparks/tooltip#css-variablen).
 
 ## Action
 

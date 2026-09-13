@@ -201,7 +201,9 @@ Die Prüfung erfolgt direkt gegen Parent-/Host-Properties, nicht über die CSS-S
 | `[attr~=val]` | Whitespace-getrenntes Wort |
 | `[attr\|=val]` | Wert ist gleich oder beginnt als `-`-Subtag |
 | `{.prop}` | `element.prop` ist nicht `null` oder `undefined` |
+| `{!.prop}` | Der Property-Pfad existiert nicht. |
 | `{.prop=val}` | `String(element.prop) === val` |
+| `{.prop=undefined}` | Die Property existiert und ihr Wert ist strikt `undefined`. |
 | `{.prop^=val}` | String-Wert beginnt mit `val` |
 | `{.prop$=val}` | String-Wert endet mit `val` |
 | `{.prop*=val}` | String-Wert enthält `val` |
@@ -211,6 +213,8 @@ Die Prüfung erfolgt direkt gegen Parent-/Host-Properties, nicht über die CSS-S
 Tokens können kombiniert werden, zum Beispiel `&ha-dialog.my-class[data-type="video"]`. Alle Tokens müssen passen. Leerzeichen außerhalb von Attributklammern und Property-Klammern teilen den Pfad und sind in einem `&`-Selektor nicht unterstützt. Leerzeichen und `$` innerhalb von `[...]` und `{...}` gelten als normale Zeichen.
 
 Property-Selektoren navigieren echte JavaScript-Properties über dot-separierte Pfade mit optionalem Chaining, zum Beispiel `{.notification.notification_id='1234567'}`. Ganze Zahlen werden bei Arrays als Indizes behandelt, etwa `{.items.0.name}`.
+
+Auch benannte Array-Properties funktionieren, da Arrays JavaScript-Objekte sind. Werte können ohne Anführungszeichen, einfach oder doppelt in Anführungszeichen geschrieben werden. Der unquotierte Wert `undefined` prüft den tatsächlichen JavaScript-Wert; `'undefined'` oder `"undefined"` prüfen den gleichnamigen String. `{!.prop}` passt nur auf fehlende Pfade, nicht auf vorhandene Properties mit `undefined` oder `null`.
 
 Klassenbasierte Selektoren können zur Lesbarkeit geklammert werden: `&(.my-class)` entspricht `&.my-class`.
 
@@ -352,6 +356,34 @@ uix_forge_path($0)
 ::: warning
 Wenn du ein Spark-Element desselben Typs hinzufügst, zum Beispiel ein Tile-Icon **before** `ha-tile-icon`, achte besonders auf die Dokumentation dieses Sparks. Der Pfad muss spezifisch genug sein, damit UIX bei Updates nicht das Spark-Element selbst auswählt.
 :::
+
+### `uix_broker_path($0)`: Helfer für Direktiven-Anchors
+
+Löse zuerst eine Broker-Interaktion aus und wähle im Browser-Inspector ein Element innerhalb ihres aufgelösten Interaction Anchors aus:
+
+```javascript
+uix_broker_path($0)
+```
+
+Der Helfer findet den spezifischsten kürzlich verwendeten Interaction Anchor, der `$0` enthält, und gibt einen vollständigen UIX-Baumpfad relativ dazu aus. Dieser Pfad kann beispielsweise als `anchor` einer `property`- oder `event`-Direktive verwendet werden. Bei überlappenden Interaktionen lässt sich der beabsichtigte Anchor explizit als zweites Argument angeben:
+
+```javascript
+uix_broker_path($0, $1)
+```
+
+### `uix_broker_absolute_path($0)`: Helfer für Interaction Anchors
+
+Wähle das Zielelement im **Elements**-Bereich des Browser-Inspectors aus:
+
+```javascript
+uix_broker_absolute_path($0)
+```
+
+Der Helfer zeigt einen absoluten UIX-Baumpfad ab `document` mit dem Präfix `&` an und gibt ihn zurück. Er kann direkt als Interaction Anchor verwendet werden:
+
+```yaml
+anchor: "&home-assistant $ hui-dialog-create-card"
+```
 
 ## Tipps für stabile DOM-Pfade
 

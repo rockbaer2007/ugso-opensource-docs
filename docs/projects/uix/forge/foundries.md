@@ -29,7 +29,7 @@ foundries:
       mold: card
     element:
       type: tile
-      entity: "&#123;&#123; entity &#125;&#125;"
+      entity: "{{ entity }}"
     billets:
       entity: light.living_room
 ```
@@ -100,7 +100,7 @@ foundries:
       sparks: []
     element:
       type: tile
-      entity: "&#123;&#123; entity &#125;&#125;"
+      entity: "{{ entity }}"
     uix:
       style: |
         ha-card {
@@ -169,10 +169,10 @@ foundries:
       mold: card
       sparks:
         - type: tooltip
-          content: "&#123;&#123; tooltip &#125;&#125;"
+          content: "{{ tooltip }}"
     element:
       type: tile
-      entity: "&#123;&#123; entity &#125;&#125;"
+      entity: "{{ entity }}"
     billets:
       tooltip: Details anzeigen
 ```
@@ -251,8 +251,8 @@ foundries:
       name: Wohnzimmer
     element:
       type: tile
-      entity: "&#123;&#123; entity &#125;&#125;"
-      name: "&#123;&#123; name &#125;&#125;"
+      entity: "{{ entity }}"
+      name: "{{ name }}"
 ```
 
 ```yaml
@@ -280,7 +280,7 @@ foundries:
       entity: ~
     element:
       type: tile
-      entity: "&#123;&#123; entity &#125;&#125;"
+      entity: "{{ entity }}"
 ```
 
 ```yaml
@@ -317,7 +317,7 @@ foundries:
       mold: card
     element:
       type: tile
-      entity: "&#123;&#123; entity &#125;&#125;"
+      entity: "{{ entity }}"
     uix:
       style: |
         ha-card {
@@ -350,20 +350,20 @@ foundries:
   state_colored_tile:
     macros:
       active_color: |
-        &#123;% macro active_color(entity) -%&#125;
-        &#123;&#123; 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' &#125;&#125;
-        &#123;%- endmacro %&#125;
+        {% macro active_color(entity) -%}
+        {{ 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' }}
+        {%- endmacro %}
     billets:
       entity: light.living_room
     forge:
       mold: card
     element:
       type: tile
-      entity: "&#123;&#123; entity &#125;&#125;"
+      entity: "{{ entity }}"
     uix:
       style: |
         ha-card {
-          border-color: &#123;&#123; active_color(entity) &#125;&#125;;
+          border-color: {{ active_color(entity) }};
         }
 ```
 

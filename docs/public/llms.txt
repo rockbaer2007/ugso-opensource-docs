@@ -17,6 +17,7 @@ https://github.com/Lint-Free-Technology/uix
 
 Tracked UIX versions for the German translation:
 - Stable base: UIX 8.2.0, source revision f9eb8fa571dbce6cd771c53ca11dcf2401c8a933
+- Canonical documentation changes reviewed through c33ff7995b757d5e7ead0cf8fd5fd85ed4d791ab (8.3.0-beta.8) on 2026-09-13; prerelease additions are marked on the affected pages.
 
 License attribution:
 - Original UIX documentation by Lint-Free-Technology/uix is licensed under CC BY 4.0.

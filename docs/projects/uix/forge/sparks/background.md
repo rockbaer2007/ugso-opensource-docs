@@ -242,7 +242,7 @@ forge:
   mold: card
   sparks:
     - type: background
-      background: "&#123;&#123; 'var(--error-color)' if is_state('binary_sensor.window', 'on') else 'var(--success-color)' &#125;&#125;"
+      background: "{{ 'var(--error-color)' if is_state('binary_sensor.window', 'on') else 'var(--success-color)' }}"
       opacity: 0.16
 element:
   type: tile
@@ -357,7 +357,7 @@ Hintergrundquellen können aus States oder Attributen kommen.
 forge:
   sparks:
     - type: background
-      image_url: "&#123;&#123; state_attr('sensor.current_room', 'background') | default('/local/backgrounds/default.jpg') &#125;&#125;"
+      image_url: "{{ state_attr('sensor.current_room', 'background') | default('/local/backgrounds/default.jpg') }}"
       background:
         size: cover
         position: center

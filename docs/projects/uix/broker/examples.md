@@ -4,8 +4,8 @@ description: UIX-Broker-Beispiele.
 ---
 # Beispiele
 
-::: info Verfügbar ab UIX 8.2.0-beta.2
-UIX Broker gehört zum aktuellen Entwicklungszweig.
+::: info Versionsstand
+UIX Broker gehört zur stabilen Basis 8.2.0; zusätzliche 8.3-Beta-Funktionen sind auf den jeweiligen Referenzseiten gekennzeichnet.
 :::
 
 ## Card-Tab im Add-Card-Dialog als Standard setzen
@@ -127,6 +127,8 @@ Das Menüelement **Toggle YAML Mode** löst `toggle-yaml-mode` aus. Ohne Koordin
 
 ::: details Vollständiges YAML für die drei Automation-Sidebar-Beispiele
 
+Als neue YAML-Datei im Home-Assistant-Konfigurationsordner oder einem Unterordner speichern und über die UIX-Optionen registrieren. Das vollständige Beispiel ergänzt auch einen Button zum Umschalten des YAML-Modus.
+
 ```yaml
 uix_broker:
   - realm: browser
@@ -141,6 +143,14 @@ uix_broker:
       - anchor: $ ha-automation-sidebar
         method: _toggleYamlMode
         type: call
+      - type: button
+        before: $ ha-automation-sidebar $$ ha-automation-sidebar-card $ ha-dialog-header slot:nth-of-type(3) ha-dropdown
+        icon: mdi:code-braces
+        tap_action:
+          action: fire-dom-event
+          uix:
+            action: event
+            name: toggle-yaml-mode
   - realm: browser
     listen: toggle-yaml-mode
     anchor: manual-automation-editor <$$ target
@@ -181,6 +191,7 @@ Methode:
 
 - Auf `show-dialog` im `browser`-Realm lauschen.
 - Die Regel passt nur, wenn `dialogTag` den Wert `add-automation-element-dialog` hat.
+- Eine zweite Regel beschränkt das Beispiel auf `trigger`; Dialoge für `action` oder `condition` bleiben unverändert.
 - Der absolute Kurzform-Interaction-Anchor findet den Dialog.
 - Direktiven setzen `_tab` auf `groups` und `_selectedGroup` auf `entity`.
 
@@ -191,6 +202,7 @@ Methode:
   debug: true
   rules:
     - '@captured.dialogTag': add-automation-element-dialog
+    - "@captured.dialogParams.type": trigger
   directives:
     - type: property
       set: _tab
@@ -279,7 +291,7 @@ Methode:
 
 Ergebnis:
 
-- Ähnlich wie bei [Werkzeug-Button zum Sidebar-Titel hinzufügen](#werkzeug-button-zum-sidebar-titel-hinzufuegen) fügt dieses Beispiel dem Home-Menüpunkt in der Sidebar einen Toggle-Button für ein Licht hinzu. Damit der aktuelle Zustand des Lichts sichtbar bleibt, nutzt es zusätzlich eine Hilfsinteraktion vom Server-Realm zum Browser-Realm. Dadurch läuft die Hauptinteraktion erneut, wenn sich der Entity-Status ändert.
+- Ähnlich wie bei [Werkzeug-Button zum Sidebar-Titel hinzufügen](#werkzeug-button-zum-sidebar-titel-hinzufugen) fügt dieses Beispiel dem Home-Menüpunkt in der Sidebar einen Toggle-Button für ein Licht hinzu. Damit der aktuelle Zustand des Lichts sichtbar bleibt, nutzt es zusätzlich eine Hilfsinteraktion vom Server-Realm zum Browser-Realm. Dadurch läuft die Hauptinteraktion erneut, wenn sich der Entity-Status ändert.
 
 Methode für die Sidebar-Interaktion:
 

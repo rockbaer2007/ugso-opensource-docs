@@ -56,7 +56,78 @@ Wichtig für eine externe Übersetzung:
 - Bilder und Animationen sollten nach Möglichkeit aus der Originaldokumentation referenziert oder nach dem offiziellen Workflow erzeugt werden.
 - Bei neuen UIX-Releases muss die Übersetzung nachgezogen werden, damit Nutzer keine veralteten Informationen für aktuell halten.
 
-Der Registrierungsweg fuer externe Uebersetzungen ist in der offiziellen Dokumentation beschrieben: [External documentation translations](https://uix.lf.technology/contributing/#external-documentation-translations).
+Der Registrierungsweg für externe Übersetzungen ist in der offiziellen Dokumentation beschrieben: [External documentation translations](https://uix.lf.technology/contributing/#external-documentation-translations).
+
+### Übersetzungs-Fork und Veröffentlichung
+
+Im Übersetzungs-Fork bleiben die englischen Quellen unter `docs/source` unverändert. Die deutsche Übersetzung liegt unter `docs/source-de`. Der gemeinsame Dokumentationsworkflow wählt anhand von `docs/site.json` automatisch das passende Verzeichnis; `docs_dir` in `docs/mkdocs.yml` wird nicht geändert.
+
+Beispiel für `docs/site.json`:
+
+```json
+{
+  "schema": 1,
+  "language": "de",
+  "name": "Deutsch",
+  "site_url": "https://example.github.io/uix-de/",
+  "canonical_url": "https://uix.lf.technology",
+  "translation_notice": "Diese unabhängige Übersetzung kann Ungenauigkeiten enthalten. Bitte beachten Sie {canonical}.",
+  "translation_notice_link": "die kanonische englische Dokumentation"
+}
+```
+
+`translation_notice` muss genau einen Platzhalter `{canonical}` enthalten. Der Workflow ersetzt ihn durch den Link mit dem Text aus `translation_notice_link`, setzt Sprache und Website-URL und erzeugt Metadaten und Footer. Veröffentlicht wird über **Deploy MkDocs to GitHub Pages**; GitHub Pages muss im Fork für GitHub Actions aktiviert sein.
+
+Übersetzte Texte und eigene übersetzungsspezifische Medien werden unter CC BY 4.0 veröffentlicht. Code, Konfigurationen und fremde Materialien behalten ihre jeweiligen Lizenzen. Diese UGSo-Seite verwendet VitePress als unabhängigen Veröffentlichungsweg und erfüllt denselben öffentlichen Metadatenvertrag.
+
+### Registrierung
+
+Ein Registrierungs-PR im kanonischen UIX-Repository ändert ausschließlich `docs/translations.json`:
+
+```json
+{
+  "schema": 1,
+  "languages": [
+    {
+      "code": "de",
+      "name": "Deutsch",
+      "url": "https://docs.example.org/uix/de/",
+      "metadata_url": "https://docs.example.org/uix/de/uix-docs.json",
+      "curators": ["example-translator"]
+    }
+  ]
+}
+```
+
+`code` ist ein kleingeschriebener ISO-639-1-Sprachcode und darf nicht `en` sein. `name` enthält möglichst den muttersprachlichen Sprachnamen. Beide URLs müssen endgültige, öffentliche HTTPS-Adressen sein; Weiterleitungen werden nicht verfolgt. Übersetzte Markdown-Dateien und generierte Dateien gehören nicht in diesen PR.
+
+### Automatische Übersetzungshinweise
+
+Das optionale Feld `curators` enthält GitHub-Namen ohne `@`. Eingetragene Kuratoren werden in der [Discussion für Übersetzungsaktualisierungen](https://github.com/Lint-Free-Technology/uix/discussions/581) erwähnt, sobald englische Quellen oder relevante Dokumentationswerkzeuge auf `dev` oder `master` geändert werden. Deshalb können mehrere E-Mails zu einer Seite eintreffen. Die Änderungen sollten bis zur letzten geprüften Revision gemeinsam abgeglichen werden.
+
+Die Teilnahme ist freiwillig: Trage nur deinen eigenen Namen ein. Ohne `curators` bleibt eine Übersetzung gültig. Änderungen der Registrierung, Builds eines Übersetzungs-Forks und tägliche Health-Checks erzeugen diese Kuratorhinweise nicht. Pull Requests und der manuelle Preview-Modus des Workflows erzeugen nur einen Prüfbericht, keine öffentliche Nachricht.
+
+### Metadaten und Sprachverweise
+
+Die registrierte Metadaten-URL muss mindestens diesen Vertrag erfüllen:
+
+```json
+{
+  "schema": 1,
+  "project": "uix",
+  "language": "de",
+  "docs_version": "8.2.0",
+  "source_revision": "v8.2.0"
+}
+```
+
+Bei stabilen UIX-Releases muss die Hauptversion übereinstimmen; die aktuelle oder unmittelbar vorherige Minor-Version der Übersetzung ist zulässig. **Vorabversionen behalten das Kompatibilitätsfenster des letzten stabilen Releases:** Bei `8.3.0-beta.1` sind daher `8.1.x` und `8.2.x` zulässig. Erst mit dem stabilen Release `8.3.0` entfällt `8.1.x`.
+
+Ungültige, nicht erreichbare, zu alte oder zukünftige Übersetzungen werden mit einer Warnung aus der Sprachauswahl ausgelassen und blockieren die englische Veröffentlichung nicht.
+
+Zusätzlich wird `uix_sites.json` veröffentlicht. Die Datei beschreibt `schema`, `project`, `language`, `site_url`, `canonical_url` und die englische sowie eigene Alternative in `alternates` als `lang`/`url`-Paare. Im HTML müssen ein selbstreferenzierender `rel="canonical"`-Link sowie englische und eigene `hreflang`-Verweise vorhanden sein. Der tägliche Health-Check kontrolliert die Datei und diese HTML-Verweise; er meldet Probleme nur als Warnungen. Ein grüner Workflow kann deshalb trotzdem offene Warnungen enthalten.
+
+Ein optionales `llms.txt` sollte erklären, dass die Seite eine unabhängige Übersetzung ist und bei technischer Genauigkeit, Syntax, Versionsfragen oder Widersprüchen die englische Dokumentation maßgeblich bleibt. Sprachverweise stellen keine redaktionelle Autorität her.
 
 ## Hinweise für Dokumentationsübersetzer
 

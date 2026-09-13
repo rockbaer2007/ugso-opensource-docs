@@ -75,7 +75,7 @@ forge:
       forge_id: room_picker
 element:
   type: tile
-  entity: "light.&#123;&#123; uixForge.event.room | default('living_room') &#125;&#125;"
+  entity: "light.{{ uixForge.event.room | default('living_room') }}"
 ```
 
 ### Auf Events eines anderen Forge-Elements hören
@@ -90,7 +90,7 @@ forge:
         - room_picker
 element:
   type: tile
-  entity: "light.&#123;&#123; uixForge.event.room_picker.room | default('living_room') &#125;&#125;"
+  entity: "light.{{ uixForge.event.room_picker.room | default('living_room') }}"
 ```
 
 ### Eigene und fremde IDs kombinieren
@@ -107,7 +107,7 @@ forge:
         - mode_picker
 element:
   type: tile
-  entity: "light.&#123;&#123; uixForge.event.room_picker.room | default('living_room') &#125;&#125;"
+  entity: "light.{{ uixForge.event.room_picker.room | default('living_room') }}"
 ```
 
 ### Daten an mehrere Forge-Elemente senden
@@ -159,8 +159,8 @@ Im Empfänger:
 ```yaml
 element:
   type: tile
-  entity: "light.&#123;&#123; uixForge.event.room | default('living_room') &#125;&#125;"
-  name: "&#123;&#123; uixForge.event.label | default('Wohnzimmer') &#125;&#125;"
+  entity: "light.{{ uixForge.event.room | default('living_room') }}"
+  name: "{{ uixForge.event.label | default('Wohnzimmer') }}"
 ```
 
 ## Defaults in Templates
@@ -168,8 +168,8 @@ element:
 Da Events erst nach einer Nutzeraktion eintreffen, sollten Templates immer Default-Werte haben.
 
 ```yaml
-entity: "light.&#123;&#123; uixForge.event.room | default('living_room') &#125;&#125;"
-icon: "&#123;&#123; uixForge.event.icon | default('mdi:lightbulb') &#125;&#125;"
+entity: "light.{{ uixForge.event.room | default('living_room') }}"
+icon: "{{ uixForge.event.icon | default('mdi:lightbulb') }}"
 ```
 
 Ohne Default kann eine Karte beim ersten Rendern leer oder fehlerhaft sein.
@@ -211,8 +211,8 @@ forge:
 Dann kannst du beides getrennt auslesen:
 
 ```yaml
-name: "&#123;&#123; uixForge.event.title | default('Details') &#125;&#125;"
-entity: "light.&#123;&#123; uixForge.event.room_picker.room | default('living_room') &#125;&#125;"
+name: "{{ uixForge.event.title | default('Details') }}"
+entity: "light.{{ uixForge.event.room_picker.room | default('living_room') }}"
 ```
 
 ## Einsatzgrenzen
@@ -239,7 +239,7 @@ element:
   type: markdown
   content: |
     ```json
-    &#123;&#123; uixForge.event | tojson &#125;&#125;
+    {{ uixForge.event | tojson }}
     ```
 ```
 
@@ -261,13 +261,13 @@ Vermeide sehr generische IDs wie `main` oder `test`, sobald mehrere Forge-Elemen
 Events werden erst nach dem ersten Rendern verfügbar. Deshalb sind Default-Filter wichtig.
 
 ```yaml
-name: "&#123;&#123; uixForge.event.name | default('Keine Auswahl') &#125;&#125;"
+name: "{{ uixForge.event.name | default('Keine Auswahl') }}"
 ```
 
 Für verschachtelte Daten:
 
 ```yaml
-name: "&#123;&#123; uixForge.event.room_picker.name | default('Wohnzimmer') &#125;&#125;"
+name: "{{ uixForge.event.room_picker.name | default('Wohnzimmer') }}"
 ```
 
 ## Fehlersuche

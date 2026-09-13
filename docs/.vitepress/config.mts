@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, type HeadConfig } from 'vitepress'
 
 const siteBaseUrl = 'https://opensource.ugso-software.de'
 
@@ -665,9 +665,21 @@ export default defineConfig({
   ],
 
   transformHead({ pageData }) {
-    return [
+    const links: HeadConfig[] = [
       ['link', { rel: 'canonical', href: canonicalHref(pageData.relativePath) }]
     ]
+    if (pageData.relativePath.startsWith('projects/uix/')) {
+      const relativeSource = pageData.relativePath.slice('projects/uix/'.length)
+      // The status page belongs to the translation rather than the English source.
+      if (relativeSource !== 'translation-status.md') {
+        const englishPath = relativeSource.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '/')
+        links.push(
+          ['link', { rel: 'alternate', hreflang: 'en', href: new URL(englishPath, 'https://uix.lf.technology/').href }],
+          ['link', { rel: 'alternate', hreflang: 'de', href: canonicalHref(pageData.relativePath) }]
+        )
+      }
+    }
+    return links
   },
 
   themeConfig: {

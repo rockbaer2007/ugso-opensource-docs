@@ -112,7 +112,7 @@ forge:
   sparks:
     - type: overlay-icon
       for: hui-button-card
-      icon: "mdi:numeric-&#123;&#123; [states.light | selectattr('state', 'eq', 'on') | list | count, 9] | min &#125;&#125;"
+      icon: "mdi:numeric-{{ [states.light | selectattr('state', 'eq', 'on') | list | count, 9] | min }}"
       icon_position:
         top: 4
         right: 4

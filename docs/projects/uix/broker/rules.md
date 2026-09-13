@@ -4,8 +4,8 @@ description: UIX-Broker-Interaktionen gegen Elemente, Captured Data und Browser-
 ---
 # Rules
 
-::: info Verfügbar ab UIX 8.2.0-beta.2
-UIX Broker gehört zum aktuellen Entwicklungszweig.
+::: info Versionsstand
+UIX Broker gehört zur stabilen Basis 8.2.0. Die Regeln `user` und `user_is_admin` sind ab 8.3.0-beta.1 verfügbar.
 :::
 
 Alle Regeln einer Interaktion müssen passen, bevor Broker die Direktiven ausführt. Regeln nutzen standardmäßig den Interaction Anchor, können aber einen relativen oder absoluten Override-Anchor definieren.
@@ -14,7 +14,7 @@ Bei Interaktionen ohne `block` versucht UIX Broker einen fehlenden Regel-Anchor 
 
 ## Host-Element-Regeln
 
-Kompakte String-Regeln nutzen den [UIX Host-Element-Pfad](../concepts/dom#hostelement-path-selection) und prüfen ihn gegen den Interaction Anchor oder einen Override-Anchor.
+Kompakte String-Regeln nutzen den [UIX Host-Element-Pfad](../concepts/dom#host-element-pfad-auswahl) und prüfen ihn gegen den Interaction Anchor oder einen Override-Anchor.
 
 Unterstützt werden Tag-, Klassen-, ID-, Attribut- und Property-Selektoren.
 
@@ -53,7 +53,7 @@ Regel-Anchors verwenden dieselbe `select_tree`-Syntax wie Direktiven-Anchors und
 
 ## Typisierte Regeln
 
-Typisierte Regeln haben einen `type`-Schlüssel. Unterstützt werden `browserid` und `captured`.
+Typisierte Regeln haben einen `type`-Schlüssel. Unterstützt werden `browserid`, `user`, `user_is_admin`, `hash`, `search`, `captured` und `panel`.
 
 ### Browser-Identität
 
@@ -65,9 +65,75 @@ rules:
     id: kitchen-tablet
 ```
 
+### Home-Assistant-Benutzer
+
+`type: user` prüft den angemeldeten Benutzer anhand des Anzeigenamens (`hass.user.name`) oder der stabilen Benutzer-ID (`hass.user.id`). Der Anmeldename ist im Frontend-Benutzerobjekt nicht verfügbar und wird nicht unterstützt. Setze entweder `match` oder `value`. Beide verwenden dieselben Operatoren wie [Captured-Data-Regeln](#captured-data-regeln), einschließlich Wildcards, regulärer Ausdrücke und boolescher Verknüpfungen.
+
+```yaml
+rules:
+  - type: user
+    match: Darryn
+  # Wenn bekannt, vorzugsweise die stabile ID verwenden:
+  - type: user
+    match: 9f1362c9e0a24d918c66d4fdcf12b001
+```
+
+Bei einem positiven Vergleich genügt ein Treffer bei Name oder ID. Ein negierter Vergleich mit `not` oder `!=` muss beide Felder ausschließen:
+
+```yaml
+rules:
+  - type: user
+    match:
+      not: wall-panel
+```
+
+`type: user_is_admin` prüft den Administratorstatus. Ohne Vergleich bedeutet die Regel „ist Administrator“. Mit `match: false` oder `value: false` passt sie auf Nicht-Administratoren. Auch die erweiterten Matcher-Objekte werden unterstützt.
+
+```yaml
+rules:
+  - type: user_is_admin
+```
+
+Nicht-Administrator mit einem Namen oder einer ID, die mit `wall-` beginnt:
+
+```yaml
+rules:
+  - type: user
+    match: wall-*
+  - type: user_is_admin
+    match: false
+```
+
+### URL-Fragment
+
+`type: hash` prüft den Teil der Browser-URL nach `#`; ein `path` wird nicht benötigt. `match` und `value` unterstützen dieselben Vergleiche wie Captured-Data-Regeln.
+
+```yaml
+rules:
+  - type: hash
+    match: settings
+```
+
+Die Direktiven laufen hier nur, wenn die aktuelle URL mit `#settings` endet.
+
+### URL-Suchparameter
+
+`type: search` prüft einen benannten URL-Parameter. `path` gibt dessen Namen an; `match` und `value` verwenden dieselbe Vergleichssyntax wie Captured-Data-Regeln.
+
+```yaml
+rules:
+  - type: search
+    path: entity_id
+    match: "light.kitchen*"
+```
+
+Die Regel passt nur bei einem entsprechenden `?entity_id=`-Parameter. Mit `exists: false` lässt sich ein fehlender Parameter prüfen.
+
 ## Captured-Data-Regeln
 
 Mit `type: captured` werden Daten geprüft, die aus dem auslösenden Event gesammelt wurden. `path` ist ein dot-separierter Optional-Chaining-Pfad relativ zu den Captured Data. Er beginnt nicht mit `@captured`.
+
+Array-Indizes können als `items.0` oder `items[0]` geschrieben werden. Für Property-Namen mit Satzzeichen funktionieren Schlüssel in Anführungszeichen und Klammern, etwa `settings['icon-color']`.
 
 Bei Browser- und Shortcut-Interaktionen beginnen Captured Data beim `detail`-Objekt des DOM-Events. Bei Server-Interaktionen liegen Home-Assistant-Eventdaten unter `data`. Array-Indizes werden unterstützt.
 
@@ -133,3 +199,30 @@ rules:
   - "@captured.user.role": admin
     "@captured.enabled": true
 ```
+
+## Panel-Regeln
+
+`type: panel` prüft das aktuelle UIX-Panel-Objekt. Broker ermittelt es asynchron. Es enthält dieselben `panel`-Felder wie [Templates](../using/templates), beispielsweise `fullUrlPath`, `panelUrlPath`, `viewUrlPath` und `panelComponentName`.
+
+`path` oder sein Alias `property` ist ein dot-separierter Optional-Chaining-Pfad relativ zu diesem Objekt. `match` und `value` unterstützen alle Captured-Data-Vergleiche, einschließlich Wildcards, regulärer Ausdrücke, Zahlenvergleiche, `exists` und Verknüpfungen mit `and`, `or` und `not`.
+
+```yaml
+rules:
+  - type: panel
+    path: fullUrlPath
+    match: "lovelace/kitchen*"
+  - type: panel
+    path: fullUrlPath
+    match:
+      operator: contains
+      value: automation/edit
+  - type: panel
+    path: panelComponentName
+    match:
+      operator: "="
+      value: lovelace
+```
+
+::: warning Panel-Regeln und Blocking
+Eine Interaktion mit Panel-Regel darf keine `block`-Direktive verwenden. Panel-Zustände werden asynchron ermittelt; das Blockieren eines Browser-Events muss dagegen im synchronen Aufruf erfolgen. Broker überspringt solche Interaktionen und protokolliert eine Warnung.
+:::

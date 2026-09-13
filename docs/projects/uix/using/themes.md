@@ -112,7 +112,7 @@ red-theme:
   uix-row: |
     :host {
       display: block;
-      border: 1px solid &#123;% if is_state(config.entity, 'on') %&#125; red &#123;% else %&#125; black &#123;% endif %&#125;;
+      border: 1px solid {% if is_state(config.entity, 'on') %} red {% else %} black {% endif %};
     }
 ```
 
@@ -239,7 +239,7 @@ red-theme:
     .: |
       :host {
         display: block;
-        border: 1px solid &#123;% if is_state(config.entity, 'on') %&#125; red &#123;% else %&#125; black &#123;% endif %&#125;;
+        border: 1px solid {% if is_state(config.entity, 'on') %} red {% else %} black {% endif %};
       }
       :host(.teal) {
         background: teal;
@@ -307,7 +307,7 @@ my-awesome-theme:
       params:
         - entity_id
       returns: true
-      template: "&#123;%- do returns(is_state(entity_id, 'on')) -%&#125;"
+      template: "{%- do returns(is_state(entity_id, 'on')) -%}"
     badge_color:
       params:
         - entity_id
@@ -315,7 +315,7 @@ my-awesome-theme:
           default: "'var(--state-active-color)'"
         - name: color_off
           default: "'var(--state-inactive-color)'"
-      template: "&#123;&#123; color_on if is_on(entity_id) else color_off &#125;&#125;"
+      template: "{{ color_on if is_on(entity_id) else color_off }}"
 ```
 
 Badge-Beispiel mit Standardwerten für `badge_color()`:
@@ -329,7 +329,7 @@ badges:
     uix:
       style: |
         ha-badge {
-          --badge-color: &#123;&#123; badge_color(config.entity) &#125;&#125; !important;
+          --badge-color: {{ badge_color(config.entity) }} !important;
         }
 ```
 
@@ -346,7 +346,7 @@ badges:
     uix:
       style: |
         ha-badge {
-          --badge-color: &#123;&#123; badge_color(config.entity, color_on='red') &#125;&#125; !important;
+          --badge-color: {{ badge_color(config.entity, color_on='red') }} !important;
         }
 ```
 
@@ -355,7 +355,7 @@ badges:
 Makros auf Kartenebene (`uix.macros`) haben Vorrang vor Theme-Makros mit demselben Namen.
 
 ::: warning
-Theme-Makros sind nur in UIX-Styling-Templates verfügbar, nicht in UIX-Forge-`element`- oder `forge`-Templates. Nutze UIX Forge [Global Foundries](../forge/foundries#globale-foundries), um `forge.macros` global oder pro `mold` zu definieren.
+Theme-Makros sind nur in UIX-Styling-Templates verfügbar, nicht in UIX-Forge-`element`- oder `forge`-Templates. Nutze UIX Forge [Global Foundries](../forge/foundries#global-foundries), um `forge.macros` global oder pro `mold` zu definieren.
 :::
 
 ## Community-Beispiele

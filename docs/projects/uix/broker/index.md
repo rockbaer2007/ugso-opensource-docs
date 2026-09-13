@@ -4,8 +4,8 @@ description: Deklarative Frontend-Interaktionen für Home Assistant mit UIX Brok
 ---
 # UIX Broker
 
-::: info Verfügbar ab UIX 8.2.0-beta.2
-UIX Broker ist eine neue Funktion aus dem aktuellen UIX-Entwicklungszweig. Die stabile Basis dieser deutschen Doku bleibt weiterhin UIX 8.1.0, bis das nächste stabile Release veröffentlicht ist.
+::: info Versionsstand
+UIX Broker gehört zur stabilen Basis 8.2.0. Zusätzliche Funktionen bis 8.3.0-beta.8 sind auf den jeweiligen Referenzseiten gekennzeichnet.
 :::
 
 UIX Broker wandelt Browser-Events, Tastenkürzel und Home-Assistant-Event-Bus-Events in deklarative Interaktionen um. Eine Interaktion wählt ein Browser-Element aus, prüft optionale Regeln und führt anschließend die Direktiven in der konfigurierten Reihenfolge aus.
@@ -36,8 +36,8 @@ uix_broker:
 - [Broker](./broker): Struktur, Konfigurationsquellen, Lebenszyklus und Debugging.
 - [Realms](./realms): Browser-Events, Tastenkürzel und Home-Assistant-Event-Bus-Events.
 - [Interaction Anchors](./interaction-anchors): Auswahl von Elementen über Event-Pfad und `select_tree`.
-- [Rules](./rules): Host-Element-, Captured-Data- und Browser-Identity-Regeln.
-- [Directives](./directives): `block`, `property`, `event`, `call` und Home-Assistant-Actions.
+- [Rules](./rules): Host-Element-, Captured-Data-, Browser-, Benutzer-, URL- und Panel-Regeln.
+- [Directives](./directives): `block`, `property`, `event`, `call`, `button`, `tile-icon`, `tooltip`, Actions, Templates, JavaScript und Wartezeiten.
 - [Examples](./examples): Beispiele. Weitere ausführliche Beispiele können zusätzlich in den UIX Guides veröffentlicht werden.
 
 ::: info
@@ -50,6 +50,6 @@ UIX Broker ist aktiv in Entwicklung. Bisherige Funktionen und Beispiele entstand
 
 Geplante Erweiterungen sind unter anderem:
 
-- **JavaScript-Regel**: Führt JavaScript mit dem aktuellen Interaktionszustand als Variablen aus und gibt ein Ergebnisobjekt zurück.
-- **Erweiterte JavaScript-Action-Direktive**: Erlaubt Rückgaben aus der Action, um weitere Direktiven fortzusetzen oder abzubrechen.
+- **JavaScript-Regel**: Führt JavaScript mit dem aktuellen Interaktionszustand als Variablen aus und gibt `{result: <truthy>, [optional] namedObject: <object data>}` zurück. Optionale `namedObject`-Daten stehen späteren Regeln und Direktiven zur Verfügung.
+- **Erweiterte JavaScript-Action-Direktive**: Gibt `{continue: <truthy>, [optional] namedObject: <object data>}` zurück. Bei falschem `continue` werden keine weiteren Direktiven ausgeführt; optionale Objektdaten stehen den übrigen Direktiven zur Verfügung.
 - **Jinja2-Template-Regel**: Rendert ein einmaliges Jinja2-Template und kann ein Wahr/Falsch-Ergebnis sowie optionale Objektdaten liefern.

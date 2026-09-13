@@ -4,8 +4,8 @@ description: Das Element auswählen, das UIX Broker standardmäßig für Regeln 
 ---
 # Interaction Anchors
 
-::: info Verfügbar ab UIX 8.2.0-beta.2
-UIX Broker gehört zum aktuellen Entwicklungszweig.
+::: info Versionsstand
+UIX Broker gehört zur stabilen Basis 8.2.0; zusätzliche 8.3-Beta-Funktionen sind auf den jeweiligen Referenzseiten gekennzeichnet.
 :::
 
 Ein Interaction Anchor wählt das Element aus, das Host-Element-Regeln prüfen und Direktiven standardmäßig verwenden. Browser- und Shortcut-Interaktionen können aus dem composed path des auslösenden Events wählen oder einen UIX-`select_tree`-Pfad nutzen. Server-Interaktionen verwenden ausschließlich `select_tree`.

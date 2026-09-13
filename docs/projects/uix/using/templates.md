@@ -33,7 +33,7 @@ Beispielwerte in `panel`:
 `panel.theme` ist gesetzt, wenn die Dashboard-Ansicht direkt ein Theme nutzt, sonst ist es `None`. `panel.globalTheme` ist das global angewendete Home-Assistant-Theme. Das effektiv genutzte UIX-Theme ist nicht Teil des `panel`-Dictionary.
 :::
 
-Templates können mit dem Kommentar `&#123;# uix.debug #&#125;` debuggt werden. UIX zeigt dann Meldungen beim Binden, Aktualisieren, Wiederverwenden, Lösen und endgültigen Abmelden des Templates. Templates bleiben für eine kurze Cooldown-Zeit im Cache, was beim Wechsel zwischen Views oder bei mehrfach verwendeten Templates etwas Geschwindigkeit bringen kann.
+Templates können mit dem Kommentar <code v-pre>{# uix.debug #}</code> debuggt werden. UIX zeigt dann Meldungen beim Binden, Aktualisieren, Wiederverwenden, Lösen und endgültigen Abmelden des Templates. Templates bleiben für eine kurze Cooldown-Zeit im Cache, was beim Wechsel zwischen Views oder bei mehrfach verwendeten Templates etwas Geschwindigkeit bringen kann.
 
 ## Makros
 
@@ -55,10 +55,10 @@ uix:
           default: "'yellow'"
         - name: color_off
           default: "'gray'"
-      template: "&#123;&#123; color_on if is_state(entity_id, 'on') else color_off &#125;&#125;"
+      template: "{{ color_on if is_state(entity_id, 'on') else color_off }}"
   style: |
     ha-card {
-      background: &#123;&#123; state_color(config.entity) &#125;&#125;;
+      background: {{ state_color(config.entity) }};
     }
 ```
 
@@ -68,7 +68,7 @@ Jeder Makro-Eintrag unterstützt diese Schlüssel:
 | --- | --- | --- |
 | `template` | Ja | Der Jinja2-Template-Body des Makros. |
 | `params` | Nein | Liste der Parameter. Ein Eintrag ist entweder ein String oder ein Mapping mit `name` und `default`. |
-| `returns` | Nein | Mit `true` wird das Makro über Home Assistants `as_function`-Filter als Funktion aufrufbar. Im Template wird dann `&#123;%- do returns(<wert>) -%&#125;` verwendet. |
+| `returns` | Nein | Mit `true` wird das Makro über Home Assistants `as_function`-Filter als Funktion aufrufbar. Im Template wird dann <code v-pre>{%- do returns(&lt;wert&gt;) -%}</code> verwendet. |
 
 Einträge in `params` können einfache Strings oder Mappings sein:
 
@@ -84,16 +84,16 @@ params:
 Daraus entsteht sinngemäß diese Jinja2-Signatur:
 
 ```jinja
-&#123;% macro state_color(entity_id, color_on = 'yellow', color_off = 'gray') %&#125;
-&#123;&#123; color_on if is_state(entity_id, 'on') else color_off &#125;&#125;
-&#123;% endmacro %&#125;
+{% macro state_color(entity_id, color_on = 'yellow', color_off = 'gray') %}
+{{ color_on if is_state(entity_id, 'on') else color_off }}
+{% endmacro %}
 ```
 
 Der `default`-Wert wird unverändert als Jinja2-Ausdruck eingefügt. Strings sollten innerhalb des YAML-Strings mit einfachen Anführungszeichen notiert werden, zum Beispiel `"'yellow'"`.
 
 ### Makros mit `returns`
 
-Ein inline renderndes Makro ohne `returns` gibt immer einen String zurück. Auch `&#123;&#123; is_state(entity_id, "on") &#125;&#125;` ergibt dann den String `"True"` oder `"False"`, und nicht leere Strings sind in Jinja2 wahr. Wenn ein tatsächlicher Boolean oder eine Zahl zurückgegeben werden soll, nutze `returns: true`.
+Ein inline renderndes Makro ohne `returns` gibt immer einen String zurück. Auch <code v-pre>{{ is_state(entity_id, "on") }}</code> ergibt dann den String `"True"` oder `"False"`, und nicht leere Strings sind in Jinja2 wahr. Wenn ein tatsächlicher Boolean oder eine Zahl zurückgegeben werden soll, nutze `returns: true`.
 
 ```yaml
 type: tile
@@ -104,20 +104,20 @@ uix:
       params:
         - entity_id
       returns: true
-      template: "&#123;%- do returns(is_state(entity_id, 'on')) -%&#125;"
+      template: "{%- do returns(is_state(entity_id, 'on')) -%}"
   style: |
     ha-card {
-      --tile-color: &#123;&#123; 'yellow' if is_on(config.entity) else 'gray' &#125;&#125; !important;
+      --tile-color: {{ 'yellow' if is_on(config.entity) else 'gray' }} !important;
     }
 ```
 
 Intern wird daraus ein Makro nach Home-Assistant-`as_function`-Konvention:
 
 ```jinja
-&#123;% macro macro_is_on(entity_id, returns) %&#125;
-&#123;%- do returns(is_state(entity_id, 'on')) -%&#125;
-&#123;% endmacro %&#125;
-&#123;% set is_on = macro_is_on | as_function %&#125;
+{% macro macro_is_on(entity_id, returns) %}
+{%- do returns(is_state(entity_id, 'on')) -%}
+{% endmacro %}
+{% set is_on = macro_is_on | as_function %}
 ```
 
 ### Makros zusammensetzen
@@ -132,26 +132,26 @@ uix:
     color_for_state:
       params:
         - entity_id
-      template: "&#123;&#123; 'green' if is_state(entity_id, 'on') else 'red' &#125;&#125;"
+      template: "{{ 'green' if is_state(entity_id, 'on') else 'red' }}"
     border_style:
       params:
         - entity_id
-      template: "2px solid &#123;&#123; color_for_state(entity_id) &#125;&#125;"
+      template: "2px solid {{ color_for_state(entity_id) }}"
   style: |
     ha-card {
-      border: &#123;&#123; border_style(config.entity) &#125;&#125;;
+      border: {{ border_style(config.entity) }};
     }
 ```
 
 Obwohl nur `border_style` im Style-Template steht, wird `color_for_state` ebenfalls eingebunden.
 
 ```jinja
-&#123;% macro color_for_state(entity_id) %&#125;
-&#123;&#123; 'green' if is_state(entity_id, 'on') else 'red' &#125;&#125;
-&#123;% endmacro %&#125;
-&#123;% macro border_style(entity_id) %&#125;
-2px solid &#123;&#123; color_for_state(entity_id) &#125;&#125;
-&#123;% endmacro %&#125;
+{% macro color_for_state(entity_id) %}
+{{ 'green' if is_state(entity_id, 'on') else 'red' }}
+{% endmacro %}
+{% macro border_style(entity_id) %}
+2px solid {{ color_for_state(entity_id) }}
+{% endmacro %}
 ```
 
 ### Makros aus Custom-Template-Dateien importieren
@@ -166,14 +166,14 @@ uix:
     state_color: "my_macros.jinja"
   style: |
     ha-card {
-      background: &#123;&#123; state_color(config.entity) &#125;&#125;;
+      background: {{ state_color(config.entity) }};
     }
 ```
 
 Daraus entsteht:
 
 ```jinja
-&#123;% from 'my_macros.jinja' import state_color %&#125;
+{% from 'my_macros.jinja' import state_color %}
 ```
 
 Das Makro `state_color` muss in `/config/custom_templates/my_macros.jinja` definiert sein. Jeder Eintrag in `macros` importiert sein eigenes Makro:
@@ -204,7 +204,7 @@ Billets sind benannte YAML-Werte, die zu einfachen Template-Konstanten werden. A
 
 ### Billets in UIX Styling
 
-Billets werden auf einer Karte unter `uix.billets` definiert. Jedes Billet wird als `&#123;%- set name = value -%&#125;` vor jedes Style-Template dieser Karte gesetzt.
+Billets werden auf einer Karte unter `uix.billets` definiert. Jedes Billet wird als <code v-pre>{%- set name = value -%}</code> vor jedes Style-Template dieser Karte gesetzt.
 
 #### Billet-Interpolation
 
@@ -220,7 +220,7 @@ uix:
       - dim
     default_scene: "{scenes[0]}"
   style: |
-    ha-card { content: "&#123;&#123; entity_id &#125;&#125; / &#123;&#123; default_scene &#125;&#125;"; }
+    ha-card { content: "{{ entity_id }} / {{ default_scene }}"; }
 ```
 
 Billet-Referenzen werden in Abhängigkeitsreihenfolge aufgelöst:
@@ -255,13 +255,13 @@ forge:
       - ambient
 element:
   type: tile
-  entity: "&#123;&#123; config.entity &#125;&#125;"
-  name: "&#123;&#123; my_color | capitalize &#125;&#125; light"
+  entity: "{{ config.entity }}"
+  name: "{{ my_color | capitalize }} light"
   tap_action:
     action: perform-action
     perform_action: light.turn_on
     target:
-      entity_id: "&#123;&#123; config.entity &#125;&#125;"
+      entity_id: "{{ config.entity }}"
     data:
-      brightness: "&#123;&#123; max_brightness &#125;&#125;"
+      brightness: "{{ max_brightness }}"
 ```

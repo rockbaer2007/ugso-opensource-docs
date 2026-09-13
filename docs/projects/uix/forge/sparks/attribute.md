@@ -63,7 +63,7 @@ forge:
     - type: attribute
       for: hui-tile-card
       attribute: data-state
-      value: "&#123;&#123; states(config.element.entity) &#125;&#125;"
+      value: "{{ states(config.element.entity) }}"
 element:
   type: tile
   entity: light.living_room

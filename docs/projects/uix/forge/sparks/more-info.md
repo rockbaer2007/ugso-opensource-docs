@@ -174,7 +174,7 @@ forge:
   sparks:
     - type: more-info
       after: hui-tile-card
-      entity: "&#123;&#123; details_entity &#125;&#125;"
+      entity: "{{ details_entity }}"
       details: true
 element:
   type: tile

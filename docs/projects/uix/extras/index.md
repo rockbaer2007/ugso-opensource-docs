@@ -13,3 +13,5 @@ UIX Extras sind zusätzliche Funktionen außerhalb der normalen Styling- und For
 - [Hash-Template-Variablen](./hash-template-variable-updates)
 - [Icon-Styling deaktivieren](./disable-icon-styling)
 - [Entity-Picture-Image-Override deaktivieren](./disable-entity-picture-image-override)
+- [ha-card immer patchen (experimentell)](./always-patch-ha-card)
+- [Custom Panels stylen (experimentell)](./style-custom-panels)

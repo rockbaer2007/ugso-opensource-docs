@@ -51,7 +51,7 @@ forge:
   mold: card
   sparks:
     - type: theme
-      theme: "&#123;&#123; 'Alarm Theme' if is_state('binary_sensor.window', 'on') else 'Normal Theme' &#125;&#125;"
+      theme: "{{ 'Alarm Theme' if is_state('binary_sensor.window', 'on') else 'Normal Theme' }}"
 element:
   type: tile
   entity: binary_sensor.window

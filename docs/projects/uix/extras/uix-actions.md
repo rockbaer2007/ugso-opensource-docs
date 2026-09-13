@@ -1,6 +1,6 @@
 ---
 title: UIX Actions
-description: UIX-spezifische Actions im Home-Assistant-Frontend.
+description: UIX-Actions für Cache, More-info, Toasts, JavaScript und Aktionen mit Code-Abfrage.
 ---
 # UIX Actions
 
@@ -119,4 +119,106 @@ tap_action:
         entity: light.bed_light
       code: |
         console.log('UIX JavaScript action', variables.entity)
+```
+
+## `locked_action`: Aktion erst nach Code oder Bestätigung ausführen
+
+::: info Verfügbar ab UIX 8.3.0-beta.2
+Diese Ergänzung gehört zur 8.3-Vorabversion, nicht zur stabilen Basis 8.2.0.
+:::
+
+`locked_action` führt eine normale Home-Assistant-Action erst aus, nachdem der aktuelle Benutzer die konfigurierte Sperre passiert hat. Das eignet sich beispielsweise für Neustarts, Tore oder wichtige Einstellungen, ohne die gesamte Karte in einen Forge Lock zu hüllen.
+
+```yaml
+type: button
+name: Home Assistant neu starten
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: locked_action
+    data:
+      locks:
+        - code: 1234
+          admins: true
+      locked_action:
+        action: perform-action
+        perform_action: homeassistant.restart
+```
+
+::: warning Schutz vor versehentlicher Bedienung
+Die Sperre wirkt im Frontend und ist keine Berechtigungsgrenze. Wer das Dashboard bearbeiten oder seine geladene Konfiguration untersuchen kann, sieht den Code und die geschützte Action. Für Zugriffsschutz sind Home-Assistant-Berechtigungen und serverseitige Kontrollen erforderlich.
+:::
+
+### Konfiguration
+
+| Schlüssel | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `locked_action` | object | — | **Pflicht:** Home-Assistant-Action nach bestandener Sperre. |
+| `locks` | list | `[]` | Geordnete Liste der Sperreinträge; siehe [Zuordnung](#zuordnung-der-sperren). |
+| `permissive` | boolean | `false` | Bei `true` dürfen Benutzer ohne passenden Eintrag die Aktion ausführen. |
+| `entity` | string | — | Entity-ID für eine verschachtelte Action, die eine Karten-Entity verwendet. |
+| `code_dialog` | object | — | Beschriftungen für die Code-/Passphrase-Abfrage. |
+| `id` | string oder number | — | Stabile Kennung für Fehlversuche und Sperrzeiten; bei `retry_delay` oder `max_retries` dringend empfohlen. Pro geschützter Action eine eigene ID verwenden. |
+
+`locked_action` akzeptiert normale Home-Assistant-Action-Objekte, darunter `perform-action`, `toggle`, `more-info`, `navigate` und `fire-dom-event`.
+
+### Zuordnung der Sperren
+
+`locks` wird in Reihenfolge geprüft. Der erste passende aktive Eintrag bestimmt die Abfrage. Passt kein aktiver Eintrag, erlaubt der erste passende Eintrag mit `active: false` die Aktion ohne Abfrage.
+
+| Konfiguration | Passende Benutzer |
+| --- | --- |
+| `users` vorhanden | Benutzer mit einem Namen in der Liste; mit `admins: true` zusätzlich alle Administratoren. |
+| Ohne `users` | Alle Nicht-Administratoren außer den unter `except` genannten Benutzern. |
+| Ohne `users`, mit `admins: true` | Alle Benutzer außer den unter `except` genannten Benutzern. |
+
+`admins` erweitert die Zuordnung: Ohne diese Option sind Administratoren ausgeschlossen, sofern sie nicht in `users` stehen. Passt kein Sperreintrag, erlaubt `permissive: true` die Aktion. Beim Standard `permissive: false` umgehen Administratoren die Bediensperre; Nicht-Administratoren dürfen die Aktion nicht ausführen.
+
+### Schlüssel eines Sperreintrags
+
+| Schlüssel | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `active` | boolean | `true` | `false` erlaubt passenden Benutzern die Aktion ohne Abfrage. |
+| `code` | string oder number | — | Einzugebender Code. Rein numerische Codes öffnen den HA-Ziffernblock, andere Werte ein Passwortfeld. |
+| `pin` | string oder number | — | Alias für `code`. |
+| `confirmation` | string, boolean oder object | — | Bestätigung nach einer eventuellen Code-Abfrage. `true` verwendet den HA-Standardtext; ein String eigenen Text, ein Objekt `title` und `text`. |
+| `users` | Liste von Strings | — | Namen der Benutzer, für die der Eintrag gilt. |
+| `admins` | boolean | `false` | Bezieht zusätzlich Administratoren ein; ohne `users` gilt der Eintrag dadurch für alle Benutzer. |
+| `except` | Liste von Strings | — | Ausgenommene Benutzernamen bei Einträgen ohne `users`. |
+| `retry_delay` | number oder string | — | Wartezeit nach falschem Code; Zahl in Millisekunden oder String mit Einheit, etwa `"10s"`. |
+| `max_retries` | number | — | Erlaubte Fehlversuche vor der längeren Sperre. |
+| `max_retries_delay` | number oder string | `30000` | Sperrdauer nach `max_retries`; Millisekunden oder etwa `"30s"` / `"5m"`. |
+
+### Code-Dialog
+
+Mit `code_dialog` werden die Texte für Code- und Passphrase-Abfragen angepasst:
+
+| Schlüssel | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `title` | string | Home-Assistant-Standard | Dialogtitel. |
+| `submit_text` | string | Home-Assistant-Standard | Beschriftung der Bestätigungsschaltfläche. |
+| `cancel_text` | string | Home-Assistant-Standard | Beschriftung der Abbruchschaltfläche. |
+
+### Fehlversuche und Sperrzeiten
+
+Fehlversuche bleiben in der aktuellen Browser-Session gespeichert. Eine explizite `id` erhält die Zuordnung auch dann, wenn ein Template oder eine Custom Card das Bedienelement neu erzeugt. Gleiche IDs teilen denselben Fehlversuchszähler; verschiedene geschützte Aktionen sollten deshalb verschiedene IDs haben.
+
+```yaml
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: locked_action
+    data:
+      id: restart-home-assistant
+      code_dialog:
+        title: Administrator-PIN eingeben
+        submit_text: Neu starten
+      locks:
+        - code: 1234
+          admins: true
+          max_retries: 3
+          max_retries_delay: 5m
+      locked_action:
+        action: perform-action
+        perform_action: homeassistant.restart
 ```

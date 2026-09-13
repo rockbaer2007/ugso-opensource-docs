@@ -310,7 +310,7 @@ forge:
   sparks:
     - type: lock
       locks:
-        - pin: "&#123;&#123; states('input_text.dashboard_pin') &#125;&#125;"
+        - pin: "{{ states('input_text.dashboard_pin') }}"
           admins: true
 ```
 

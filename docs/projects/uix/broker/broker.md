@@ -4,8 +4,8 @@ description: UIX-Broker-Interaktionen konfigurieren und Konfigurationsquellen ve
 ---
 # UIX Broker
 
-::: info Verfügbar ab UIX 8.2.0-beta.2
-UIX Broker gehört zum aktuellen Entwicklungszweig.
+::: info Versionsstand
+UIX Broker gehört zur stabilen Basis 8.2.0; zusätzliche 8.3-Beta-Funktionen sind auf den jeweiligen Referenzseiten gekennzeichnet.
 :::
 
 Eine Interaktion besteht aus `realm`, `listen`, einem Interaktions-`anchor`, optionalen `rules` und einer geordneten Liste von `directives`.
@@ -63,7 +63,7 @@ Listen werden nur im `browser`-Realm unterstützt. `shortcut`- und `server`-Inte
 
 Nachdem UIX Broker seine Konfiguration angewendet hat, löst er auf `window` das Browser-Event `uix-broker-ready` aus. Das Event wird ausgelöst, nachdem Broker seine Browser-Realm-Listener registriert hat. Eine Interaktion kann auf dieses Event lauschen, um eine anfängliche UI-Anpassung anzuwenden. Es wird außerdem nach jedem Broker-Konfigurations-Reload ausgelöst.
 
-Siehe [Werkzeug-Button zum Sidebar-Titel hinzufügen](./examples#werkzeug-button-zum-sidebar-titel-hinzufuegen) für ein Beispiel mit diesem Event.
+Siehe [Werkzeug-Button zum Sidebar-Titel hinzufügen](./examples#werkzeug-button-zum-sidebar-titel-hinzufugen) für ein Beispiel mit diesem Event.
 
 ## Konfigurationsquellen
 
@@ -97,7 +97,7 @@ Da die Direktive `block` synchron laufen muss, benötigen Interaktionen mit `blo
 
 Nach einer blockierenden Interaktion verwenden spätere `property`-, `event`-, `call`- und `button`-Direktiven wieder das normale asynchrone Retry-Verhalten.
 
-Für Interaktionen ohne `block` werden fehlende Interaction Anchors und Host-Element-Regel-Anchors alle 50 ms bis zu zwei Sekunden lang erneut gesucht. Das hilft zum Beispiel bei Dialogen, die erst nach dem auslösenden Event gerendert werden.
+Für Interaktionen ohne `block` werden fehlende Interaction Anchors und Host-Element-Regel-Anchors alle 50 ms bis zu zwei Sekunden lang erneut gesucht. Das hilft zum Beispiel bei Dialogen, die erst nach dem auslösenden `show-dialog`-Event gerendert werden.
 
 ## Debugging
 

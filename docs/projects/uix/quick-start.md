@@ -60,14 +60,14 @@ type: custom:uix-forge
 forge:
   mold: card
   show_error: false
-  hidden: "&#123;&#123; is_state('input_boolean.test_boolean', 'on') &#125;&#125;"
+  hidden: "{{ is_state('input_boolean.test_boolean', 'on') }}"
   grid_options:
-    columns: "&#123;&#123; 6 &#125;&#125;"
+    columns: "{{ 6 }}"
     rows: 1
 element:
   type: tile
-  icon: "&#123;&#123; 'mdi:test-tube' &#125;&#125;"
-  entity: "&#123;&#123; 'sun.sun' &#125;&#125;"
+  icon: "{{ 'mdi:test-tube' }}"
+  entity: "{{ 'sun.sun' }}"
   uix:
     style: |
       ha-card {

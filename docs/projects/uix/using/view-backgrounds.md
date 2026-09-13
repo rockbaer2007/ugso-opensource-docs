@@ -116,11 +116,11 @@ my-theme:
   uix-theme: my-theme
   uix-drawer: |
     :host {
-      &#123;%- if panel.viewUrlPath == 'garage' -%&#125;
+      {%- if panel.viewUrlPath == 'garage' -%}
       --uix-view-background-camera-entity: camera.garage
-      &#123;%- elif panel.viewUrlPath == 'driveway' -%&#125;
+      {%- elif panel.viewUrlPath == 'driveway' -%}
       --uix-view-background-camera-entity: camera.driveway
-      &#123;%- endif -%&#125;;
+      {%- endif -%};
       --uix-view-background-cover: view;
     }
 ```
@@ -132,8 +132,8 @@ Um zu prüfen, welche `panel`-Variablen verfügbar sind, kann in einem Theme ein
 
 ```yaml
 uix-drawer: |
-  &#123;# uix.debug #&#125;
-  &#123;&#123; '/* testing */' &#125;&#125;
+  {# uix.debug #}
+  {{ '/* testing */' }}
 ```
 :::
 
@@ -231,10 +231,10 @@ my-theme:
   uix-drawer: |
     :host {
       --uix-view-background-camera-entity: camera.garden;
-      &#123;%- if panel.viewUrlPath == 'living-room' -%&#125;
+      {%- if panel.viewUrlPath == 'living-room' -%}
       --uix-camera-zoom: 1.8;
       --uix-camera-pan-x: -15%;
-      &#123;%- endif %&#125;
+      {%- endif %}
     }
 ```
 

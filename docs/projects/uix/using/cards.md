@@ -54,7 +54,7 @@ uix:
     }
 ```
 
-`uix.theme` überschreibt das geerbte oder aktuelle Theme für diesen UIX-Knoten und seine UIX-Kindpfade, solange ein Kind kein eigenes `theme` setzt. Ein vollständiges Beispiel steht unter [UIX Themes - Override mit `uix.theme`](./themes#lokales-theme-override-mit-uixtheme).
+`uix.theme` überschreibt das geerbte oder aktuelle Theme für diesen UIX-Knoten und seine UIX-Kindpfade, solange ein Kind kein eigenes `theme` setzt. Ein vollständiges Beispiel steht unter [UIX Themes - Override mit `uix.theme`](./themes#lokales-theme-override-mit-uix-theme).
 
 ## Eigene CSS-Variablen
 
@@ -63,11 +63,11 @@ UIX-Themes können eigene CSS-Variablen bereitstellen. Sinnvoll ist das hoch in 
 ```yaml
 uix-drawer: |
   :host {
-    &#123;% set isDark = is_state('sun.sun','below_horizon') %&#125;
-    --darkslateblue-if-dark: &#123;&#123; 'darkslateblue' if isDark else 'red' &#125;&#125;;
-    --slategrey-if-dark: &#123;&#123; 'slategrey' if isDark else 'green' &#125;&#125;;
-    --yellow-if-not-dark: &#123;&#123; 'yellow' if not isDark else 'pink' &#125;&#125;;
-    --orange-if-not-dark: &#123;&#123; 'orange' if not isDark else 'purple' &#125;&#125;;
+    {% set isDark = is_state('sun.sun','below_horizon') %}
+    --darkslateblue-if-dark: {{ 'darkslateblue' if isDark else 'red' }};
+    --slategrey-if-dark: {{ 'slategrey' if isDark else 'green' }};
+    --yellow-if-not-dark: {{ 'yellow' if not isDark else 'pink' }};
+    --orange-if-not-dark: {{ 'orange' if not isDark else 'purple' }};
   }
 ```
 

@@ -4,8 +4,8 @@ description: Festlegen, wo eine UIX-Broker-Interaktion auf Events lauscht.
 ---
 # Realms
 
-::: info Verfügbar ab UIX 8.2.0-beta.2
-UIX Broker gehört zum aktuellen Entwicklungszweig.
+::: info Versionsstand
+UIX Broker gehört zur stabilen Basis 8.2.0; zusätzliche 8.3-Beta-Funktionen sind auf den jeweiligen Referenzseiten gekennzeichnet.
 :::
 
 Der `realm` einer Interaktion legt fest, wo Broker lauscht und wie `listen` interpretiert wird.
@@ -80,11 +80,15 @@ Die Direktive `block` ist in den Realms `browser` und `shortcut` verfügbar. Anc
 
 ::: info
 Tinykeys ignoriert Tastendrücke in `input`, `textarea`, `select` und `contenteditable`. Ein `shortcut`-Realm mit `block` läuft dort daher nicht. Um Tasten in solchen Bereichen zu blockieren, nutze den `browser`-Realm mit `listen: keydown`.
+
+Wenn ein Shortcut ausgeführt wird, verhindert `block` die native Standardaktion und spätere Listener auf `window`. Einen bereits ausgeführten Home-Assistant-Shortcut-Handler kann es nicht rückgängig machen.
 :::
 
 ## Templates
 
 UIX Broker stellt bewusst keinen Realm bereit, der direkt Jinja2-Templates abonniert. Nutze stattdessen ein Script, eine Automation oder eine Template-Entität mit Trigger, löse ein eigenes Home-Assistant-Event aus und lausche im `server`-Realm darauf.
+
+Die [`template`-Direktive](./directives#template) kann während einer Interaktion einmalig ein Template rendern. Sie beobachtet keine späteren Änderungen. Für reaktives Verhalten kann beispielsweise ein eigenes Event `uix-update` aus Home Assistant ausgelöst werden.
 
 ::: tip
 Die Integration `custom_event` kann eigene Events auf dem Home-Assistant-Event-Bus auslösen, auf die UIX Broker im `server`-Realm reagieren kann.
