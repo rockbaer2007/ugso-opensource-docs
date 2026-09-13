@@ -34,6 +34,8 @@ Sobald der Helper Text enthält, erscheint die Meldung im Menü, zum Beispiel f�
 
 ![Dashboard Layout Card V2 Benachrichtigung und Statuswerte](/images/dashboard-layout-card-v2/notify-and-status.png)
 
+Bis einschließlich 600 Pixel Bildschirmbreite zeigen die Menütasten nur Icons. Am Desktop bleiben die Beschriftungen sichtbar. Einträge ohne eigenes Icon erhalten mobil ein Dashboard-Symbol; die Seitennamen bleiben als Tooltip und für Screenreader verfügbar.
+
 ## Themes
 
 | Projekt | Status | Hinweis |

@@ -37,6 +37,8 @@ As soon as the helper contains text, the message appears in the menu, for exampl
 
 ![Dashboard Layout Card V2 notification and status values](/images/dashboard-layout-card-v2/notify-and-status.png)
 
+At viewport widths up to and including 600 pixels, menu buttons show icons only. Desktop keeps the text labels. Entries without a custom icon use a dashboard icon on mobile; page names remain available as tooltips and to screen readers.
+
 ## Themes
 
 | Project | Status | Note |
