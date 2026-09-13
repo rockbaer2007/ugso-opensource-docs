@@ -17,7 +17,7 @@ Enthaltene Add-ons:
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
 - Parcel to MQTT
-- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client): ausgewählte HA-Zustände an ioBroker oder andere externe Broker senden, optional Schreibbefehle empfangen. Der bestehende HA-Broker bleibt erhalten. Version 0.1.8 sendet Werte als ioBroker-Gerätebaum (`<prefix>/<gerät>/<wert>/state`), bietet im Geräte-Popup **Alle States dieses Geräts übertragen** und behält Bidirektional für steuerbare Domains, Eingabewerte und Buttons bei.
+- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client): ausgewählte HA-Zustände an ioBroker oder andere externe Broker senden, optional Schreibbefehle empfangen. Der bestehende HA-Broker bleibt erhalten. Version 0.1.9 sendet Werte als ioBroker-Gerätebaum (`<prefix>/<gerät>/<wert>/state`), gruppiert Shelly-Statuswerte sauber unter dem Hauptgerät und öffnet Einzelwerte ohne zusätzliches Geräte-Zwischenfenster.
 
 - [Gemeinsames Add-on-Repository auf GitHub öffnen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
 
