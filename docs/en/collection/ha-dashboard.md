@@ -45,6 +45,8 @@ Main menu, submenu and home entries can optionally define their own colors. Supp
 
 Menu and card borders have separate opacity sliders. Divider entries can also use their own opacity for the divider color and 3D effect. This makes it easier to tune visible frames, transparent glass styling and compact kiosk layouts.
 
+The editor can export the current dashboard state as a YAML file to the local computer. The export does not modify Home Assistant and is useful as a backup before larger tests or design changes.
+
 ## Themes
 
 | Project | Status | Note |

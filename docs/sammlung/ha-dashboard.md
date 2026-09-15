@@ -42,6 +42,8 @@ Hauptmenü-, Submenü- und Home-Einträge können optional eigene Farben erhalte
 
 Menü- und Card-Rahmen besitzen eigene Opacity-Regler. Auch Trenner können mit eigener Opacity für Farbe und 3D-Effekt eingestellt werden. Dadurch lassen sich sichtbare Rahmen, transparente Glasoptik und zurückhaltende Kiosk-Layouts genauer abstimmen.
 
+Im Editor kann der aktuelle Dashboard-Stand als YAML-Datei auf den eigenen PC exportiert werden. Der Export verändert Home Assistant nicht und eignet sich als Sicherung vor größeren Tests oder Designänderungen.
+
 ## Themes
 
 | Projekt | Status | Hinweis |
