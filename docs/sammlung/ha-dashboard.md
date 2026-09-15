@@ -38,11 +38,13 @@ Bis einschließlich 600 Pixel Bildschirmbreite zeigen die Menütasten nur Icons.
 
 Für Menüeinträge können Submenüs angelegt werden. Das Submenü steht als eigene Icon-Spalte neben dem Hauptmenü und zeigt immer nur die Unterseiten des aktuell gewählten Hauptmenüpunktes. Der erste Submenübutton kann als Startseite des Hauptmenüpunktes dienen oder deaktiviert werden, damit direkt zur ersten Unterseite gewechselt wird. Die Subbuttons übernehmen zunächst den Stil des Hauptbuttons; der Submenü-Hintergrund ist separat einstellbar.
 
-Hauptmenü-, Submenü- und Home-Einträge können optional eigene Farben erhalten. Unterstützt werden Icon-Farbe, aktive Icon-Farbe, Icon-Hintergrund, aktiver Icon-Hintergrund, Button-Farbe und aktive Button-Farbe je Eintrag. Leere Felder verwenden weiterhin den globalen Menü-Stil. Ein Reset-Button setzt bei Bedarf nur die Farben des jeweiligen Eintrags auf globale Werte zurück.
+Hauptmenü-, Submenü- und Home-Einträge können optional eigene Farben erhalten. Unterstützt werden Icon-Farbe, aktive Icon-Farbe, Icon-Hintergrund, aktiver Icon-Hintergrund, Button-Farbe und aktive Button-Farbe je Eintrag. Leere Felder verwenden weiterhin den globalen Menü-Stil.
+
+Die zugehörigen YAML-Felder sind `icon_color`, `icon_active_color`, `icon_background_color`, `icon_background_active_color`, `tab_color` und `active_tab_color`. Ein Reset-Button setzt bei Bedarf nur diese Farben des jeweiligen Eintrags auf globale Werte zurück; Seite, Pfad, Icon, Submenü und globale Farben bleiben erhalten.
 
 Menü- und Card-Rahmen besitzen eigene Opacity-Regler. Auch Trenner können mit eigener Opacity für Farbe und 3D-Effekt eingestellt werden. Dadurch lassen sich sichtbare Rahmen, transparente Glasoptik und zurückhaltende Kiosk-Layouts genauer abstimmen.
 
-Im Editor kann der aktuelle Dashboard-Stand als YAML-Datei auf den eigenen PC exportiert werden. Der Export verändert Home Assistant nicht und eignet sich als Sicherung vor größeren Tests oder Designänderungen.
+Im Tab **Erweitert** kann der aktuelle Dashboard-Stand als YAML-Datei auf den eigenen PC exportiert werden. Der Export verändert Home Assistant nicht und eignet sich als Sicherung vor größeren Tests oder Designänderungen.
 
 ## Themes
 
