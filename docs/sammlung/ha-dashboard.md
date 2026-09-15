@@ -38,7 +38,7 @@ Bis einschließlich 600 Pixel Bildschirmbreite zeigen die Menütasten nur Icons.
 
 Für Menüeinträge können Submenüs angelegt werden. Das Submenü steht als eigene Icon-Spalte neben dem Hauptmenü und zeigt immer nur die Unterseiten des aktuell gewählten Hauptmenüpunktes. Der erste Submenübutton kann als Startseite des Hauptmenüpunktes dienen oder deaktiviert werden, damit direkt zur ersten Unterseite gewechselt wird. Die Subbuttons übernehmen zunächst den Stil des Hauptbuttons; der Submenü-Hintergrund ist separat einstellbar.
 
-Hauptmenü-, Submenü- und Home-Einträge können optional eigene Farben erhalten. Unterstützt werden Icon-Farbe, aktive Icon-Farbe, Button-Farbe und aktive Button-Farbe je Eintrag. Leere Felder verwenden weiterhin den globalen Menü-Stil.
+Hauptmenü-, Submenü- und Home-Einträge können optional eigene Farben erhalten. Unterstützt werden Icon-Farbe, aktive Icon-Farbe, Icon-Hintergrund, aktiver Icon-Hintergrund, Button-Farbe und aktive Button-Farbe je Eintrag. Leere Felder verwenden weiterhin den globalen Menü-Stil.
 
 Menü- und Card-Rahmen besitzen eigene Opacity-Regler. Auch Trenner können mit eigener Opacity für Farbe und 3D-Effekt eingestellt werden. Dadurch lassen sich sichtbare Rahmen, transparente Glasoptik und zurückhaltende Kiosk-Layouts genauer abstimmen.
 
