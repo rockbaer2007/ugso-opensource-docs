@@ -41,7 +41,7 @@ At viewport widths up to and including 600 pixels, menu buttons show icons only.
 
 Menu entries can have submenus. The submenu is rendered as its own icon column next to the main menu and only shows the subpages of the currently selected main menu entry. The first submenu button can act as the start page for the main menu entry or be disabled so the main entry jumps directly to the first subpage. Submenu buttons currently inherit the main button style, and the submenu background can be configured separately.
 
-Menu and card borders have separate opacity sliders. This makes it easier to tune visible frames, transparent glass styling and compact kiosk layouts.
+Menu and card borders have separate opacity sliders. Divider entries can also use their own opacity for the divider color and 3D effect. This makes it easier to tune visible frames, transparent glass styling and compact kiosk layouts.
 
 ## Themes
 
