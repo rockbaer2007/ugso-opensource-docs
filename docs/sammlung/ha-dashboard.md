@@ -10,7 +10,7 @@ Dieser Bereich sammelt Themen rund um Home-Assistant-Dashboards, die keine einze
 
 | Projekt | Status | Hinweis |
 | --- | --- | --- |
-| [Dashboard Layout Card V2](https://github.com/rockbaer2007/lovelace-layout-card-v2) | experimentell | Fork der Lovelace layout-card mit eigenen V2-Layouttypen, seitlichem Tab-Menü, Unterseiten, neuen Unterseiten standardmäßig als Sections V2, Home-Eintrag, Theme-Übernahme von der Hauptansicht, Uhr/Datum, optionalen Stunden-/Minutenmarkierungen der Analoguhr, Farben, 3D-Rahmen, Trennern mit automatischer Farbübernahme vom vorherigen Trenner, Benachrichtigungsbox, Statuswerten und optionalem Ausblenden von Home-Assistant-Header/Sidebar. |
+| [Dashboard Layout Card V2](https://github.com/rockbaer2007/lovelace-layout-card-v2) | experimentell | Fork der Lovelace layout-card mit eigenen V2-Layouttypen, seitlichem Tab-Menü, optionalem Icon-only-Modus, Submenü-Spalte, Unterseiten, neuen Unterseiten standardmäßig als Sections V2, Home-Eintrag, Theme-Übernahme von der Hauptansicht, Uhr/Datum, optionalen Stunden-/Minutenmarkierungen der Analoguhr, Farben, Rahmen-Opacity, 3D-Rahmen, Trennern mit automatischer Farbübernahme vom vorherigen Trenner, Benachrichtigungs-Popup im Icon-only-Modus, Statuswerten und optionalem Ausblenden von Home-Assistant-Header/Sidebar. |
 
 ![Dashboard Layout Card V2 Ansicht](/images/dashboard-layout-card-v2/view.png)
 
@@ -34,7 +34,11 @@ Sobald der Helper Text enthält, erscheint die Meldung im Menü, zum Beispiel f�
 
 ![Dashboard Layout Card V2 Benachrichtigung und Statuswerte](/images/dashboard-layout-card-v2/notify-and-status.png)
 
-Bis einschließlich 600 Pixel Bildschirmbreite zeigen die Menütasten nur Icons. Am Desktop bleiben die Beschriftungen sichtbar. Einträge ohne eigenes Icon erhalten mobil ein Dashboard-Symbol; die Seitennamen bleiben als Tooltip und für Screenreader verfügbar.
+Bis einschließlich 600 Pixel Bildschirmbreite zeigen die Menütasten nur Icons. Zusätzlich kann der Icon-only-Modus manuell aktiviert werden, zum Beispiel für Kiosk-Tablets oder Wanddisplays. In diesem Modus werden Uhr, Datum und Statuswerte ausgeblendet; Benachrichtigungen bleiben über einen kompakten Hinweisbutton als Popup erreichbar.
+
+Für Menüeinträge können Submenüs angelegt werden. Das Submenü steht als eigene Icon-Spalte neben dem Hauptmenü und zeigt immer nur die Unterseiten des aktuell gewählten Hauptmenüpunktes. Der erste Submenübutton kann als Startseite des Hauptmenüpunktes dienen oder deaktiviert werden, damit direkt zur ersten Unterseite gewechselt wird. Die Subbuttons übernehmen zunächst den Stil des Hauptbuttons; der Submenü-Hintergrund ist separat einstellbar.
+
+Menü- und Card-Rahmen besitzen eigene Opacity-Regler. Dadurch lassen sich sichtbare Rahmen, transparente Glasoptik und zurückhaltende Kiosk-Layouts genauer abstimmen.
 
 ## Themes
 
