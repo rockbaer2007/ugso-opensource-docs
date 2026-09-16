@@ -22,6 +22,7 @@ const translatedCollectionRoutes = new Set([
   '/sammlung/',
   '/sammlung/ha-cards',
   '/sammlung/ha-dashboard',
+  '/sammlung/dashboard-layout-card-v2/',
   '/sammlung/ha-integrationen',
   '/sammlung/ha-blueprints',
   '/sammlung/ha-tools',
@@ -46,6 +47,39 @@ function hasVisibleLocaleSwitch(path: string) {
   }
 
   return translatedCollectionRoutes.has(normalizedPath)
+}
+
+const localeRouteTargets: Record<string, Partial<Record<'DE' | 'EN' | 'FR', string>>> = {
+  '/sammlung/dashboard-layout-card-v2/': {
+    EN: '/en/collection/dashboard-layout-card-v2/'
+  },
+  '/en/collection/dashboard-layout-card-v2/': {
+    DE: '/sammlung/dashboard-layout-card-v2/'
+  }
+}
+
+function applyLocaleLinks(path: string) {
+  const targets = localeRouteTargets[normalizePath(path)]
+
+  if (!targets) {
+    return
+  }
+
+  document.querySelectorAll<HTMLAnchorElement>(
+    '.VPNavBarTranslations a.link, .VPNavBarExtra .translations a.link'
+  ).forEach((link) => {
+    const code = link.textContent?.trim().match(/^(DE|EN|FR)\b/)?.[1] as 'DE' | 'EN' | 'FR' | undefined
+    const target = code ? targets[code] : undefined
+
+    if (target) {
+      link.setAttribute('href', target)
+    }
+  })
+}
+
+function applyLocaleChrome(path: string) {
+  applyLocaleFlags()
+  applyLocaleLinks(path)
 }
 
 function applyLocaleFlags() {
@@ -88,8 +122,8 @@ const UgsoLayout = defineComponent({
 
     onMounted(() => {
       updateRouteClass()
-      applyLocaleFlags()
-      observer = new MutationObserver(() => applyLocaleFlags())
+      applyLocaleChrome(route.path)
+      observer = new MutationObserver(() => applyLocaleChrome(route.path))
       observer.observe(document.body, { childList: true, subtree: true })
     })
 
@@ -101,7 +135,7 @@ const UgsoLayout = defineComponent({
       () => route.path,
       () => nextTick(() => {
         updateRouteClass()
-        applyLocaleFlags()
+        applyLocaleChrome(route.path)
       })
     )
 
