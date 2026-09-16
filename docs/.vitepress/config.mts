@@ -161,6 +161,15 @@ const sidebarDe = {
     }
   ],
 
+  '/sammlung/dashboard-layout-card-v2/': [
+    {
+      text: 'Dashboard Layout Card V2',
+      items: [
+        { text: 'Übersicht', link: '/sammlung/dashboard-layout-card-v2/' }
+      ]
+    }
+  ],
+
   '/sammlung/': [
     {
       text: 'Sammlung',
@@ -170,6 +179,7 @@ const sidebarDe = {
         { text: 'HA Empfehlungen', link: '/sammlung/ha-empfehlungen' },
         { text: 'HA Cards', link: '/sammlung/ha-cards' },
         { text: 'HA Dashboard', link: '/sammlung/ha-dashboard' },
+        { text: 'Dashboard Layout Card V2', link: '/sammlung/dashboard-layout-card-v2/' },
         { text: 'HA Integrationen', link: '/sammlung/ha-integrationen' },
         { text: 'HA Blueprints', link: '/sammlung/ha-blueprints' },
         { text: 'HA Tools', link: '/sammlung/ha-tools' },
@@ -472,6 +482,15 @@ const sidebarEn = {
     }
   ],
 
+  '/en/collection/dashboard-layout-card-v2/': [
+    {
+      text: 'Dashboard Layout Card V2',
+      items: [
+        { text: 'Overview', link: '/en/collection/dashboard-layout-card-v2/' }
+      ]
+    }
+  ],
+
   '/en/collection/': [
     {
       text: 'Collection',
@@ -481,6 +500,7 @@ const sidebarEn = {
         { text: 'HA Recommendations', link: '/en/collection/ha-recommendations' },
         { text: 'HA Cards', link: '/en/collection/ha-cards' },
         { text: 'HA Dashboard', link: '/en/collection/ha-dashboard' },
+        { text: 'Dashboard Layout Card V2', link: '/en/collection/dashboard-layout-card-v2/' },
         { text: 'HA Integrations', link: '/en/collection/ha-integrations' },
         { text: 'HA Blueprints', link: '/en/collection/ha-blueprints' },
         { text: 'HA Tools', link: '/en/collection/ha-tools' },
