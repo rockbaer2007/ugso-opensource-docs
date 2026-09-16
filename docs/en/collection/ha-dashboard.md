@@ -47,7 +47,7 @@ The matching YAML fields are `icon_color`, `icon_active_color`, `icon_background
 
 Menu and card borders have separate opacity sliders. Divider entries can also use their own opacity for the divider color and 3D effect. This makes it easier to tune visible frames, transparent glass styling and compact kiosk layouts.
 
-The global style tab is named **Styles Global**. It also includes the active icon-field color and an opacity control for the global menu background color.
+The global style tab is named **Styles Global**. It also includes the active icon-field color and opacity controls for the global menu background color and the separate submenu background.
 
 The Backup tab can export the current dashboard state as a YAML file to the local computer. The export does not modify Home Assistant and is useful as a backup before larger tests or design changes. The tab is also prepared for a later YAML import action.
 
