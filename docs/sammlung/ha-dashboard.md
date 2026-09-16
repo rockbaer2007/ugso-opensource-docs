@@ -48,6 +48,22 @@ Das Editorfenster öffnet standardmäßig breiter mit 80 Prozent der Ansichtsbre
 
 Im Tab **Backup** kann der aktuelle Dashboard-Stand als YAML-Datei auf den eigenen PC exportiert werden. Der Export verändert Home Assistant nicht und eignet sich als Sicherung vor größeren Tests oder Designänderungen. Der Tab ist außerdem vorbereitet, damit später ein YAML-Import ergänzt werden kann.
 
+
+### Aktuelle Editor-Optionen
+
+| Tab | Optionen |
+| --- | --- |
+| Menü | Menüposition (`left`, `none`, `right`), Menütitel und globaler Icon-only-Modus für Kiosk-/Tablet-Layouts. |
+| Hauptseite | Hauptseite anzeigen oder ausblenden, Titel, Pfad, Icon, eigene Home-Farben für Icon und Button, maximale Sections-V2-Spalten, dichte Abschnittsplatzierung, zusätzlicher Platz oben und Theme-Übernahme von der Hauptansicht. |
+| Anzeige | Uhrmodus (`none`, `digital`, `analog`), Stundenmarkierungen, Minutenmarkierungen und Sekundenzeiger der Analoguhr, Datum anzeigen, Wochentag (`none`, `short`, `long`), Wochenendfarbe, Uhr-/Ringfarbe, Analogfarben für Teilungen und Zeiger, Holiday-/Birthday-/Christmas-Helper sowie Größe des Tages-Symbols. |
+| Seiten | Hauptmenü-Seiten, Abstände und Trenner; Titel, Pfad, Icon, Layouttyp, maximale Spalten, eigene Farben je Eintrag, Zurücksetzen auf globale Farben, Verhalten des ersten Submenübuttons, Trennerfarbe, Trenner-3D-Farbe, Trenner-Opacity und Trennerhöhe. |
+| Submenü | Unterseiten der ausgewählten Hauptseite mit Titel, Pfad, Icon, Layouttyp, maximalen Spalten, eigenen Farben je Eintrag und Zurücksetzen auf globale Farben. Der Tab erscheint, wenn der ausgewählte Haupteintrag Unterseiten besitzt. |
+| Meldungen | Optionales Benachrichtigungs-Popup über Text-Helfer, Rahmenfarbe und Opacity der Benachrichtigung, optionale Statuswerte mit bis zu vier Entity-Zeilen, Labels, Einheiten, Status-Rahmenfarbe und Status-Rahmen-Opacity. |
+| Styles Global | Uhrgröße, Datumgröße, Umbruchgröße für langen Wochentag, Tab-/Text-/Hoverfarben, Menürahmenfarbe und Opacity, Tab-3D-Farbe, Card-/Inhaltsrahmenfarbe und Opacity, Card-3D-Farbe, gemeinsamer 3D-Versatz, Icon-Farbe, aktive Icon-Farbe, Icon-Feld-Farbe, aktive Icon-Feld-Farbe, Icon-Form, Icon-Größe, Menü-Hintergrundmodus (`none`, `color`, `image`), Menü-Hintergrundfarbe und Opacity, Menü-Hintergrundbild, Submenü-Hintergrundfarbe und Submenü-Hintergrund-Opacity. |
+| Farben | Bis zu 20 wiederverwendbare Farbfavoriten. Der Button **Farben speichern** speichert nur diese Favoriten. |
+| Backup | YAML-Export des aktuellen Dashboard-Editorstands auf den eigenen PC. |
+| Erweitert | Home-Assistant-Chrome-Einstellungen, Admin-Bedienelemente optional dauerhaft sichtbar, Liste sichtbarer Benutzer und JSON-Spezialoptionen für Seitendaten. |
+
 ## Themes
 
 | Projekt | Status | Hinweis |
