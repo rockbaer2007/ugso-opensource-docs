@@ -51,10 +51,16 @@ function hasVisibleLocaleSwitch(path: string) {
 
 const localeRouteTargets: Record<string, Partial<Record<'DE' | 'EN' | 'FR', string>>> = {
   '/sammlung/dashboard-layout-card-v2/': {
-    EN: '/en/collection/dashboard-layout-card-v2/'
+    EN: '/en/collection/dashboard-layout-card-v2/',
+    FR: '/fr/collection/dashboard-layout-card-v2/'
   },
   '/en/collection/dashboard-layout-card-v2/': {
-    DE: '/sammlung/dashboard-layout-card-v2/'
+    DE: '/sammlung/dashboard-layout-card-v2/',
+    FR: '/fr/collection/dashboard-layout-card-v2/'
+  },
+  '/fr/collection/dashboard-layout-card-v2/': {
+    DE: '/sammlung/dashboard-layout-card-v2/',
+    EN: '/en/collection/dashboard-layout-card-v2/'
   }
 }
 
@@ -72,7 +78,12 @@ function applyLocaleLinks(path: string) {
     const target = code ? targets[code] : undefined
 
     if (target) {
+      link.hidden = false
+      link.style.display = ''
       link.setAttribute('href', target)
+    } else if (code === 'FR') {
+      link.hidden = true
+      link.style.display = 'none'
     }
   })
 }

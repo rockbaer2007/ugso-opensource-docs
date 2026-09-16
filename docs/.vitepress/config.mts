@@ -79,6 +79,18 @@ const navEn = [
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
 
+
+const navFr = [
+  { text: 'Accueil', link: '/fr/' },
+  {
+    text: 'Collection',
+    items: [
+      { text: 'Dashboard Layout Card V2', link: '/fr/collection/dashboard-layout-card-v2/' }
+    ]
+  },
+  { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
+]
+
 const sidebarDe = {
   '/sammlung/flex-table-card/': [
     {
@@ -664,6 +676,27 @@ const sidebarEn = {
   ]
 }
 
+const sidebarFr = {
+  '/fr/collection/dashboard-layout-card-v2/': [
+    {
+      text: 'Dashboard Layout Card V2',
+      items: [
+        { text: 'Vue d’ensemble', link: '/fr/collection/dashboard-layout-card-v2/' }
+      ]
+    }
+  ],
+  '/fr/collection/': [
+    {
+      text: 'Collection',
+      collapsed: false,
+      items: [
+        { text: 'Dashboard Layout Card V2', link: '/fr/collection/dashboard-layout-card-v2/' }
+      ]
+    }
+  ]
+}
+
+
 export default defineConfig({
   lang: 'de-DE',
   title: 'UGSo Open Source',
@@ -763,6 +796,25 @@ export default defineConfig({
         docFooter: {
           prev: 'Previous page',
           next: 'Next page'
+        }
+      }
+    },
+    fr: {
+      label: 'FR',
+      lang: 'fr-FR',
+      title: 'UGSo Open Source',
+      description:
+        'Projets open source, extraits de code et documentation UGSo Software pour Home Assistant, ESPHome, ATLAS et Lovelace.',
+      themeConfig: {
+        nav: navFr,
+        sidebar: sidebarFr,
+        outline: false,
+        lastUpdated: {
+          text: 'Dernière mise à jour'
+        },
+        docFooter: {
+          prev: 'Page précédente',
+          next: 'Page suivante'
         }
       }
     }
