@@ -72,7 +72,7 @@ debug:
   language: de # de, en oder fr
 ```
 
-Ohne `debug.language` nutzt die Card automatisch die Home-Assistant- oder Browser-Sprache und fällt auf Englisch zurück.
+Ohne `debug.language` nutzt die Card automatisch die Home-Assistant- oder Browser-Sprache und fällt auf Englisch zurück. Wenn der View-Editor geöffnet wird und der Eintrag fehlt, schreibt er einen leeren Platzhalter, der direkt im YAML gefüllt werden kann.
 
 ### Aktuelle Editor-Optionen
 
