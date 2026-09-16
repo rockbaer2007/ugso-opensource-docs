@@ -66,6 +66,17 @@ The editor window opens wider by default at 80 percent of the viewport width and
 The Backup tab can export the current dashboard state as a YAML file to the local computer. The export does not modify Home Assistant and is useful as a backup before larger tests or design changes. The tab is also prepared for a later YAML import action.
 
 
+### YAML language override for screenshots
+
+For documentation screenshots or language testing, the displayed UI language can be forced directly in YAML. This option is intentionally not shown in the editor.
+
+```yaml
+debug:
+  language: de # de, en or fr
+```
+
+Without `debug.language`, the card uses the Home Assistant or browser language automatically and falls back to English.
+
 ### Current Editor Options
 
 | Tab | Options |

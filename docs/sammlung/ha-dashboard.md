@@ -63,6 +63,17 @@ Das Editorfenster öffnet standardmäßig breiter mit 80 Prozent der Ansichtsbre
 Im Tab **Backup** kann der aktuelle Dashboard-Stand als YAML-Datei auf den eigenen PC exportiert werden. Der Export verändert Home Assistant nicht und eignet sich als Sicherung vor größeren Tests oder Designänderungen. Der Tab ist außerdem vorbereitet, damit später ein YAML-Import ergänzt werden kann.
 
 
+### YAML-Sprachumschaltung für Screenshots
+
+Für Dokumentations-Screenshots oder Sprachtests kann die angezeigte Sprache direkt im YAML erzwungen werden. Diese Option ist absichtlich nicht im Editor sichtbar.
+
+```yaml
+debug:
+  language: de # de, en oder fr
+```
+
+Ohne `debug.language` nutzt die Card automatisch die Home-Assistant- oder Browser-Sprache und fällt auf Englisch zurück.
+
 ### Aktuelle Editor-Optionen
 
 | Tab | Optionen |
