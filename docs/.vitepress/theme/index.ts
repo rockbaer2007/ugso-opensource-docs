@@ -42,30 +42,75 @@ function normalizePath(path: string) {
 function hasVisibleLocaleSwitch(path: string) {
   const normalizedPath = normalizePath(path)
 
-  if (!normalizedPath.startsWith('/sammlung/')) {
+  if (normalizedPath.startsWith('/sammlung/')) {
     return true
   }
 
-  return translatedCollectionRoutes.has(normalizedPath)
+  return true
 }
 
-const localeRouteTargets: Record<string, Partial<Record<'DE' | 'EN' | 'FR', string>>> = {
-  '/sammlung/dashboard-layout-card-v2/': {
-    EN: '/en/collection/dashboard-layout-card-v2/',
-    FR: '/fr/collection/dashboard-layout-card-v2/'
-  },
-  '/en/collection/dashboard-layout-card-v2/': {
-    DE: '/sammlung/dashboard-layout-card-v2/',
-    FR: '/fr/collection/dashboard-layout-card-v2/'
-  },
-  '/fr/collection/dashboard-layout-card-v2/': {
-    DE: '/sammlung/dashboard-layout-card-v2/',
-    EN: '/en/collection/dashboard-layout-card-v2/'
+const collectionPathMap: Record<string, string> = {
+  'ha-empfehlungen': 'ha-recommendations',
+  'ha-integrationen': 'ha-integrations',
+  'hacs-dokus': 'hacs-docs',
+  'weitere-beispiele': 'interesting-examples'
+}
+
+const reverseCollectionPathMap = Object.fromEntries(
+  Object.entries(collectionPathMap).map(([dePath, enPath]) => [enPath, dePath])
+)
+
+function trimSlashes(path: string) {
+  return path.replace(/^\/+|\/+$/g, '')
+}
+
+function mapCollectionPath(path: string, map: Record<string, string>) {
+  const cleanPath = trimSlashes(path)
+  if (!cleanPath) return ''
+  const parts = cleanPath.split('/')
+  parts[0] = map[parts[0]] ?? parts[0]
+  return parts.join('/')
+}
+
+function withTrailingSlashForIndex(path: string, suffix: string) {
+  return suffix ? `${path}/${suffix}` : `${path}/`
+}
+
+function collectionLocaleTargets(path: string): Partial<Record<'DE' | 'EN' | 'FR', string>> | undefined {
+  const normalizedPath = normalizePath(path)
+
+  if (normalizedPath.startsWith('/sammlung/')) {
+    const sourcePath = trimSlashes(normalizedPath.slice('/sammlung/'.length))
+    const translatedPath = mapCollectionPath(sourcePath, collectionPathMap)
+    return {
+      EN: withTrailingSlashForIndex('/en/collection', translatedPath),
+      FR: withTrailingSlashForIndex('/fr/collection', translatedPath)
+    }
   }
+
+  if (normalizedPath.startsWith('/en/collection/')) {
+    const sourcePath = trimSlashes(normalizedPath.slice('/en/collection/'.length))
+    const germanPath = mapCollectionPath(sourcePath, reverseCollectionPathMap)
+    return {
+      DE: withTrailingSlashForIndex('/sammlung', germanPath),
+      FR: withTrailingSlashForIndex('/fr/collection', sourcePath)
+    }
+  }
+
+  if (normalizedPath.startsWith('/fr/collection/')) {
+    const sourcePath = trimSlashes(normalizedPath.slice('/fr/collection/'.length))
+    const germanPath = mapCollectionPath(sourcePath, reverseCollectionPathMap)
+    return {
+      DE: withTrailingSlashForIndex('/sammlung', germanPath),
+      EN: withTrailingSlashForIndex('/en/collection', sourcePath)
+    }
+  }
+
+  return undefined
 }
 
 function applyLocaleLinks(path: string) {
-  const targets = localeRouteTargets[normalizePath(path)]
+  const targets = collectionLocaleTargets(path)
 
   if (!targets) {
     return
