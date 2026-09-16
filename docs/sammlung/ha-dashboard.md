@@ -32,6 +32,20 @@ Die optionale Benachrichtigungsbox wird oberhalb der Statuswerte im seitlichen M
 
 Sobald der Helper Text enthält, erscheint die Meldung im Menü, zum Beispiel für Störungen, Wartungshinweise oder kurze Dashboard-Hinweise. Darunter können bis zu vier Statuswerte angezeigt werden. Numerische Werte werden kompakt mit maximal einer Nachkommastelle formatiert.
 
+
+#### Benötigte Helper
+
+Es müssen nur die Helper angelegt werden, deren Funktion im Menü genutzt wird. Die Helper werden in Home Assistant unter **Einstellungen > Geräte & Dienste > Helfer** erstellt.
+
+| Entity | Helper-Typ | Zweck | Pflicht? |
+| --- | --- | --- | --- |
+| `input_text.dashboard_notification` | Text | Optionaler Benachrichtigungstext im Dashboard. Leer, `unknown` und `unavailable` blenden die Meldung aus. | Nur wenn `menu.notify.enabled` genutzt wird. |
+| `input_boolean.dashboard_holiday` | Umschalter | Optionales Tages-Symbol für Feiertage. | Nur wenn das Tages-Symbol auf Feiertage reagieren soll. |
+| `input_boolean.dashboard_birthday` | Umschalter | Optionales Tages-Symbol für Geburtstage. | Nur wenn das Tages-Symbol auf Geburtstage reagieren soll. |
+| `input_boolean.dashboard_christmas` | Umschalter | Optionales Tages-Symbol für Advent/Weihnachten. | Nur wenn das Tages-Symbol auf Advent/Weihnachten reagieren soll. |
+
+Statuswerte benötigen keine speziellen Helper. Dort können beliebige lesbare Home-Assistant-Entitäten verwendet werden, zum Beispiel Sensoren, Binary-Sensoren oder Template-Sensoren.
+
 ![Dashboard Layout Card V2 Benachrichtigung und Statuswerte](/images/dashboard-layout-card-v2/notify-and-status.png)
 
 Bis einschließlich 600 Pixel Bildschirmbreite zeigen die Menütasten nur Icons. Zusätzlich kann der Icon-only-Modus manuell aktiviert werden, zum Beispiel für Kiosk-Tablets oder Wanddisplays. In diesem Modus werden Uhr, Datum und Statuswerte ausgeblendet; Benachrichtigungen bleiben über einen kompakten Hinweisbutton als Popup erreichbar.

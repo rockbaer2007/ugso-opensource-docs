@@ -35,6 +35,20 @@ The optional notification box appears above the status values in the side menu. 
 
 As soon as the helper contains text, the message appears in the menu, for example for faults, maintenance notes or short dashboard-wide alerts. Up to four status values can be shown below it. Numeric values are formatted compactly with at most one decimal place.
 
+
+#### Required Helpers
+
+Only the features enabled in the menu need helpers. Create them in Home Assistant under **Settings > Devices & services > Helpers**.
+
+| Entity | Helper type | Purpose | Required? |
+| --- | --- | --- | --- |
+| `input_text.dashboard_notification` | Text | Optional dashboard notification text. Empty, `unknown` and `unavailable` hide the notification. | Only when `menu.notify.enabled` is used. |
+| `input_boolean.dashboard_holiday` | Toggle | Optional day-symbol indicator for holidays. | Only when the day symbol should react to holidays. |
+| `input_boolean.dashboard_birthday` | Toggle | Optional day-symbol indicator for birthdays. | Only when the day symbol should react to birthdays. |
+| `input_boolean.dashboard_christmas` | Toggle | Optional day-symbol indicator for Advent/Christmas. | Only when the day symbol should react to Advent/Christmas. |
+
+Status values do not require special helpers. They can use any readable Home Assistant entity, for example sensors, binary sensors or template sensors.
+
 ![Dashboard Layout Card V2 notification and status values](/images/dashboard-layout-card-v2/notify-and-status.png)
 
 At viewport widths up to and including 600 pixels, menu buttons show icons only. Icon-only mode can also be enabled manually, for example for kiosk tablets or wall displays. In this mode, clock, date and status values are hidden; notifications remain available through a compact popup button.
