@@ -44,7 +44,7 @@ Die zugehörigen YAML-Felder sind `icon_color`, `icon_active_color`, `icon_backg
 
 Menü- und Card-Rahmen besitzen eigene Opacity-Regler. Auch Trenner können mit eigener Opacity für Farbe und 3D-Effekt eingestellt werden. Dadurch lassen sich sichtbare Rahmen, transparente Glasoptik und zurückhaltende Kiosk-Layouts genauer abstimmen.
 
-Der globale Style-Tab heißt **Styles Global**. Dort lassen sich zusätzlich die aktive Icon-Feld-Farbe sowie die Opacity der globalen Menü-Hintergrundfarbe und des separaten Submenü-Hintergrunds einstellen. Der separate Tab **Farben** speichert bis zu 20 Farbfavoriten, die anschließend in allen Farbfeldern ausgewählt werden können.
+Der globale Style-Tab heißt **Styles Global**. Dort lassen sich zusätzlich die aktive Icon-Feld-Farbe sowie die Opacity der globalen Menü-Hintergrundfarbe und des separaten Submenü-Hintergrunds einstellen. Der separate Tab **Farben** speichert bis zu 20 Farbfavoriten, die anschließend in allen Farbfeldern ausgewählt werden können; der Button **Farben speichern** schreibt nur diese Favoriten, ohne andere offene Editoränderungen zu übernehmen.
 
 Im Tab **Backup** kann der aktuelle Dashboard-Stand als YAML-Datei auf den eigenen PC exportiert werden. Der Export verändert Home Assistant nicht und eignet sich als Sicherung vor größeren Tests oder Designänderungen. Der Tab ist außerdem vorbereitet, damit später ein YAML-Import ergänzt werden kann.
 
