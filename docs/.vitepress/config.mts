@@ -85,9 +85,32 @@ const navFr = [
   {
     text: 'Collection',
     items: [
-      { text: 'Dashboard Layout Card V2', link: '/fr/collection/dashboard-layout-card-v2/' }
+      { text: 'Vue d’ensemble', link: '/fr/collection/' },
+      { text: 'Recommandations HA', link: '/fr/collection/ha-recommendations' },
+      { text: 'HA Cards', link: '/fr/collection/ha-cards' },
+      { text: 'HA Dashboard', link: '/fr/collection/ha-dashboard' },
+      { text: 'Dashboard Layout Card V2', link: '/fr/collection/dashboard-layout-card-v2/' },
+      { text: 'Intégrations HA', link: '/fr/collection/ha-integrations' },
+      { text: 'HA Blueprints', link: '/fr/collection/ha-blueprints' },
+      { text: 'HA Tools', link: '/fr/collection/ha-tools' },
+      { text: 'HA Apps', link: '/fr/collection/ha-apps' },
+      { text: 'Docs HACS', link: '/fr/collection/hacs-docs' },
+      { text: 'Exemples intéressants', link: '/fr/collection/interesting-examples' },
+      { text: 'UIX Docs', link: '/fr/projects/uix/' }
     ]
   },
+  {
+    text: 'Blog',
+    items: [
+      { text: 'Vue d’ensemble', link: '/fr/blog/' },
+      { text: 'Extraits de code', link: '/fr/blog/snippets/' },
+      { text: 'Blockly / JavaScript (ioBroker)', link: '/fr/blog/snippets/iobroker-blockly' },
+      { text: 'Modèle d’article', link: '/fr/blog/post-template' }
+    ]
+  },
+  { text: 'ATLAS', link: '/fr/projects/atlas/' },
+  { text: 'ATLAS Plugins', link: '/fr/projects/atlas-plugins/' },
+  { text: 'Projets MQTT', link: '/fr/projects-mqtt/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
 
@@ -678,24 +701,126 @@ const sidebarEn = {
 
 const sidebarFr = {
   '/fr/collection/dashboard-layout-card-v2/': [
-    {
-      text: 'Dashboard Layout Card V2',
-      items: [
-        { text: 'Vue d’ensemble', link: '/fr/collection/dashboard-layout-card-v2/' }
-      ]
-    }
+    { text: 'Dashboard Layout Card V2', items: [{ text: 'Vue d’ensemble', link: '/fr/collection/dashboard-layout-card-v2/' }] }
   ],
   '/fr/collection/': [
     {
       text: 'Collection',
       collapsed: false,
       items: [
-        { text: 'Dashboard Layout Card V2', link: '/fr/collection/dashboard-layout-card-v2/' }
+        { text: 'Vue d’ensemble', link: '/fr/collection/' },
+        { text: 'Recommandations HA', link: '/fr/collection/ha-recommendations' },
+        { text: 'HA Cards', link: '/fr/collection/ha-cards' },
+        { text: 'HA Dashboard', link: '/fr/collection/ha-dashboard' },
+        { text: 'Dashboard Layout Card V2', link: '/fr/collection/dashboard-layout-card-v2/' },
+        { text: 'Intégrations HA', link: '/fr/collection/ha-integrations' },
+        { text: 'HA Blueprints', link: '/fr/collection/ha-blueprints' },
+        { text: 'HA Tools', link: '/fr/collection/ha-tools' },
+        { text: 'HA Apps', link: '/fr/collection/ha-apps' },
+        { text: 'Docs HACS', link: '/fr/collection/hacs-docs' },
+        { text: 'Exemples intéressants', link: '/fr/collection/interesting-examples' }
+      ]
+    }
+  ],
+  '/fr/blog/': [
+    {
+      text: 'Blog',
+      collapsed: false,
+      items: [
+        { text: 'Vue d’ensemble', link: '/fr/blog/' },
+        { text: 'Modèle d’article', link: '/fr/blog/post-template' },
+        { text: 'Extraits de code', link: '/fr/blog/snippets/' },
+        { text: 'Blockly', link: '/fr/blog/snippets/blockly' },
+        { text: 'Home Assistant YAML', link: '/fr/blog/snippets/home-assistant-yaml' },
+        { text: 'ioBroker Blockly', link: '/fr/blog/snippets/iobroker-blockly' },
+        { text: 'JavaScript', link: '/fr/blog/snippets/javascript' },
+        { text: 'Lovelace', link: '/fr/blog/snippets/lovelace' }
+      ]
+    }
+  ],
+  '/fr/projects/atlas-plugins/': [
+    {
+      text: 'ATLAS Plugins',
+      collapsed: false,
+      items: [
+        { text: 'Vue d’ensemble', link: '/fr/projects/atlas-plugins/' },
+        { text: 'Plugins vérifiés', link: '/fr/projects/atlas-plugins/verified-plugins' },
+        { text: 'Format du dépôt', link: '/fr/projects/atlas-plugins/repository-format' },
+        { text: 'Home Assistant Card Editor', link: '/fr/projects/atlas-plugins/homeassistant-card-editor' },
+        { text: 'ATLAS File Studio', link: '/fr/projects/atlas-plugins/file-studio' },
+        { text: 'Automation Extractor', link: '/fr/projects/atlas-plugins/automation-extractor' },
+        { text: 'Dépôt de démonstration', link: '/fr/projects/atlas-plugins/demo-repository' }
+      ]
+    }
+  ],
+  '/fr/projects/atlas/': [
+    {
+      text: 'ATLAS',
+      collapsed: false,
+      items: [
+        { text: 'Vue d’ensemble', link: '/fr/projects/atlas/' },
+        { text: 'Aperçu', link: '/fr/projects/atlas/overview' },
+        { text: 'État du développement', link: '/fr/projects/atlas/development-status' },
+        { text: 'Home Assistant', link: '/fr/projects/atlas/homeassistant' },
+        { text: 'Card Editor', link: '/fr/projects/atlas/card-editor' },
+        { text: 'Plugins', link: '/fr/projects/atlas/plugins' }
+      ]
+    }
+  ],
+  '/fr/projects/fritzbox-to-mqtt/': [
+    { text: 'FRITZ!Box to MQTT', collapsed: false, items: [
+      { text: 'Vue d’ensemble', link: '/fr/projects/fritzbox-to-mqtt/' },
+      { text: 'Installation', link: '/fr/projects/fritzbox-to-mqtt/installation' },
+      { text: 'Configuration', link: '/fr/projects/fritzbox-to-mqtt/configuration' },
+      { text: 'Entités', link: '/fr/projects/fritzbox-to-mqtt/entities' },
+      { text: 'Exemples', link: '/fr/projects/fritzbox-to-mqtt/examples' },
+      { text: 'Dépannage', link: '/fr/projects/fritzbox-to-mqtt/troubleshooting' }
+    ] }
+  ],
+  '/fr/projects/hadash/': [
+    { text: 'HADash', collapsed: false, items: [
+      { text: 'Vue d’ensemble', link: '/fr/projects/hadash/' },
+      { text: 'Premiers pas', link: '/fr/projects/hadash/getting-started' },
+      { text: 'Importer un dashboard', link: '/fr/projects/hadash/import-dashboard' },
+      { text: 'Exporter une vue', link: '/fr/projects/hadash/export-view' },
+      { text: 'Sauvegardes et JSON', link: '/fr/projects/hadash/backups-and-json' },
+      { text: 'Utilisation portable', link: '/fr/projects/hadash/portable-usage' }
+    ] }
+  ],
+  '/fr/projects/uix/': [
+    { text: 'UIX', collapsed: false, items: [
+      { text: 'Vue d’ensemble', link: '/fr/projects/uix/' },
+      { text: 'Quick start', link: '/fr/projects/uix/quick-start' },
+      { text: 'Guides', link: '/fr/projects/uix/guides' },
+      { text: 'FAQ', link: '/fr/projects/uix/faq' },
+      { text: 'Licence', link: '/fr/projects/uix/license' },
+      { text: 'État de traduction', link: '/fr/projects/uix/translation-status' }
+    ] }
+  ],
+  '/fr/projects/ultimate-timer/': [
+    { text: 'Ultimate Timer', collapsed: false, items: [
+      { text: 'Vue d’ensemble', link: '/fr/projects/ultimate-timer/' },
+      { text: 'Installation', link: '/fr/projects/ultimate-timer/installation' },
+      { text: 'Configuration', link: '/fr/projects/ultimate-timer/configuration' },
+      { text: 'Fonctionnement', link: '/fr/projects/ultimate-timer/how-it-works' },
+      { text: 'Exemples', link: '/fr/projects/ultimate-timer/examples' }
+    ] }
+  ],
+  '/fr/projects/': [
+    {
+      text: 'Projets',
+      collapsed: false,
+      items: [
+        { text: 'Vue d’ensemble', link: '/fr/projects/' },
+        { text: 'HADash', link: '/fr/projects/hadash/' },
+        { text: 'Ultimate Timer', link: '/fr/projects/ultimate-timer/' },
+        { text: 'FRITZ!Box to MQTT', link: '/fr/projects/fritzbox-to-mqtt/' },
+        { text: 'Heizöl to MQTT', link: '/fr/projects/heizoel-to-mqtt/' },
+        { text: 'Parcel to MQTT', link: '/fr/projects/parcel-to-mqtt/' }
       ]
     }
   ]
 }
-
 
 export default defineConfig({
   lang: 'de-DE',
