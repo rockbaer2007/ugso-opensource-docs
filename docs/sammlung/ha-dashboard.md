@@ -42,7 +42,7 @@ Hauptmenü-, Submenü- und Home-Einträge können optional eigene Farben erhalte
 
 Die zugehörigen YAML-Felder sind `icon_color`, `icon_active_color`, `icon_background_color`, `icon_background_active_color`, `tab_color` und `active_tab_color`. Ein Reset-Button setzt bei Bedarf nur diese Farben des jeweiligen Eintrags auf globale Werte zurück; Seite, Pfad, Icon, Submenü und globale Farben bleiben erhalten.
 
-Menü- und Card-Rahmen besitzen eigene Opacity-Regler. Auch Trenner können mit eigener Opacity für Farbe und 3D-Effekt eingestellt werden. Dadurch lassen sich sichtbare Rahmen, transparente Glasoptik und zurückhaltende Kiosk-Layouts genauer abstimmen.
+Menü-, Card-, Benachrichtigungs- und Statusrahmen besitzen eigene Opacity-Regler. Auch Trenner können mit eigener Opacity für Farbe und 3D-Effekt eingestellt werden. Dadurch lassen sich sichtbare Rahmen, transparente Glasoptik und zurückhaltende Kiosk-Layouts genauer abstimmen.
 
 Das Editorfenster öffnet standardmäßig breiter mit 80 Prozent der Ansichtsbreite und kann per Doppelklick auf den oberen Rand auf 95 Prozent erweitert werden. Der globale Style-Tab heißt **Styles Global**. Dort lassen sich zusätzlich die aktive Icon-Feld-Farbe, die Icon-Größe sowie die Opacity der globalen Menü-Hintergrundfarbe und des separaten Submenü-Hintergrunds einstellen. Der separate Tab **Farben** speichert bis zu 20 Farbfavoriten, die anschließend in allen Farbfeldern inklusive Trennerfarbe und Trenner-3D-Effekt ausgewählt werden können; der Button **Farben speichern** schreibt nur diese Favoriten, ohne andere offene Editoränderungen zu übernehmen.
 

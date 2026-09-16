@@ -45,7 +45,7 @@ Main menu, submenu and home entries can optionally define their own colors. Supp
 
 The matching YAML fields are `icon_color`, `icon_active_color`, `icon_background_color`, `icon_background_active_color`, `tab_color` and `active_tab_color`. A reset button can clear only these color overrides of the selected entry when needed; the page, path, icon, submenu and global colors remain unchanged.
 
-Menu and card borders have separate opacity sliders. Divider entries can also use their own opacity for the divider color and 3D effect. This makes it easier to tune visible frames, transparent glass styling and compact kiosk layouts.
+Menu, card, notification and status borders have separate opacity sliders. Divider entries can also use their own opacity for the divider color and 3D effect. This makes it easier to tune visible frames, transparent glass styling and compact kiosk layouts.
 
 The editor window opens wider by default at 80 percent of the viewport width and can be expanded to 95 percent by double-clicking the top bar. The global style tab is named **Styles Global**. It also includes the active icon-field color, icon size and opacity controls for the global menu background color and the separate submenu background. The separate **Farben** tab stores up to 20 color favorites that can then be selected in all color fields, including divider color and divider 3D effect; the **Farben speichern** button writes only these favorites without applying other open editor changes.
 
