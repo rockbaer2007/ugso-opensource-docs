@@ -1,15 +1,27 @@
 ---
-title: Always patch ha-card
-description: Page française préparée pour Always patch ha-card dans la documentation UGSo Open Source.
+title: Toujours corriger ha-card (expérimental)
+description: Découvrez comment activer en permanence la correction de ha-card avec ce réglage expérimental.
 ---
-# Always patch ha-card
+# Toujours corriger ha-card
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+Par défaut, UIX ne corrige pas `ha-card` s'il ne trouve pas de configuration de carte dans le premier élément Frontend ou personnalisé de son arbre DOM parent. Cette option expérimentale permet de toujours corriger l'élément ha-card afin que la variable de thème `uix-card(-yaml)` puisse s'appliquer. Un `ha-card` sans configuration peut être utilisé dans des panneaux de configuration ou personnalisés.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/extras/always-patch-ha-card.md`](/en/projects/uix/extras/always-patch-ha-card).
+Lorsqu'un `ha-card` est corrigé sans configuration, la classe `type-generic-card` lui est ajoutée.
 
-## Statut
+## Réglage depuis l'interface de l'intégration
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+Cette option est **désactivée par défaut**. Pour l'activer :
+
+1. Dans Home Assistant, ouvrez **Paramètres → Appareils et services → UI eXtension → Configurer**.
+2. Sélectionnez **Réglages expérimentaux** dans le menu.
+3. Activez **Toujours corriger ha-card**.
+4. Enregistrez.
+
+Le réglage est disponible immédiatement dans toutes les sessions de navigateur connectées. Un rechargement de la page peut être nécessaire pour qu'il prenne effet.
+
+## Comportement lorsqu'elle est activée
+
+Lorsque cette option est activée :
+
+- `ha-card` est toujours corrigé, même sans configuration de carte disponible.
+- Dans ce cas, la classe `type-generic-card` est ajoutée à `ha-card`.

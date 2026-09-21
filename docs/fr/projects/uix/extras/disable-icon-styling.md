@@ -1,15 +1,25 @@
 ---
-title: Icon-Styling deaktivieren
-description: Page française préparée pour Icon-Styling deaktivieren dans la documentation UGSo Open Source.
+title: Désactiver la correction du style des icônes
+description: Découvrez comment désactiver la correction du style des icônes et quand utiliser cette option de performance.
 ---
-# Icon-Styling deaktivieren
+# Désactiver la correction du style des icônes
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+Par défaut, UIX corrige les éléments d'icône standard de Home Assistant (`ha-icon`, `ha-state-icon`, `ha-svg-icon`) pour permettre les styles et surcharges personnalisés, comme `--uix-icon`, `--uix-icon-color`, `--uix-icon-dim` ou `--uix-icon-for-<entity_id>`. UIX propose une option pour désactiver cette correction afin d'améliorer le rendu et de réduire la charge processeur des appareils peu puissants.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/extras/disable-icon-styling.md`](/en/projects/uix/extras/disable-icon-styling).
+## Réglage depuis l'interface de l'intégration
 
-## Statut
+Cette option est **désactivée par défaut**. Pour l'activer :
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+1. Dans Home Assistant, ouvrez **Paramètres → Appareils et services → UI eXtension → Configurer**.
+2. Sélectionnez **Réglages de performance**.
+3. Activez **Désactiver la correction du style des icônes**.
+4. Enregistrez.
+
+Le réglage prend effet immédiatement dans toutes les sessions de navigateur connectées ; aucun rechargement n'est nécessaire.
+
+## Comportement lorsqu'elle est activée
+
+Lorsque cette option est activée :
+
+- Les éléments d'icône standard Home Assistant ne sont **pas corrigés** ni surveillés pour les propriétés d'icône personnalisées.
+- Les surcharges existantes d'icône ou de couleur via des variables CSS, par exemple `--uix-icon`, `--uix-icon-color`, `--uix-icon-dim` ou `--uix-icon-for-*`, ne s'appliquent **pas** aux éléments d'icône standard.

@@ -1,15 +1,25 @@
 ---
-title: Entity-Picture-Override deaktivieren
-description: Page française préparée pour Entity-Picture-Override deaktivieren dans la documentation UGSo Open Source.
+title: Désactiver les surcharges d'image des entités
+description: Découvrez comment désactiver les surcharges d'image des entités et quand utiliser cette option de performance.
 ---
-# Entity-Picture-Override deaktivieren
+# Désactiver les surcharges d'image des entités
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+Par défaut, UIX corrige les badges et marqueurs standard de Home Assistant (`ha-entity-marker`, `ha-tile-icon`, `state-badge`, `ha-user-badge`, `ha-person-badge`) afin de permettre les surcharges d'image personnalisées comme `--uix-image` ou `--uix-image-for-<entity_id>`. Cette option désactive cette correction pour améliorer le rendu sur les appareils peu puissants.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/extras/disable-entity-picture-image-override.md`](/en/projects/uix/extras/disable-entity-picture-image-override).
+## Réglage depuis l'interface de l'intégration
 
-## Statut
+Cette option est **désactivée par défaut**. Pour l'activer :
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+1. Dans Home Assistant, ouvrez **Paramètres → Appareils et services → UI eXtension → Configurer**.
+2. Sélectionnez **Réglages de performance**.
+3. Activez **Désactiver les surcharges d'image des entités**.
+4. Enregistrez.
+
+Le réglage prend effet immédiatement dans toutes les sessions de navigateur connectées ; aucun rechargement n'est nécessaire.
+
+## Comportement lorsqu'elle est activée
+
+Lorsque cette option est activée :
+
+- Les badges et marqueurs standard ne sont **pas corrigés** ni surveillés pour les propriétés d'image personnalisées.
+- Les surcharges d'image existantes via des variables CSS, par exemple `--uix-image` ou `--uix-image-for-*`, ne s'appliquent **pas** aux badges ou marqueurs.
