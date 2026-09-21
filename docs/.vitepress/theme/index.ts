@@ -172,7 +172,7 @@ const UgsoLayout = defineComponent({
     let observer: MutationObserver | undefined
 
     const updateRouteClass = () => {
-      document.body.classList.toggle('uix-doc-route', route.path.startsWith('/projects/uix/'))
+      document.body.classList.toggle('uix-doc-route', /^\/(?:fr\/)?projects\/uix\//.test(route.path))
       document.body.classList.toggle('ugso-hide-locale-switch', !hasVisibleLocaleSwitch(route.path))
     }
 
@@ -198,7 +198,7 @@ const UgsoLayout = defineComponent({
     return () =>
       h(DefaultTheme.Layout, null, {
         'doc-after': () =>
-          route.path.startsWith('/projects/uix/')
+          /^\/(?:fr\/)?projects\/uix\//.test(route.path)
             ? h('div', { class: 'uix-version-footer' }, [
                 h('strong', 'UIX deutsche Übersetzung'),
                 h(
