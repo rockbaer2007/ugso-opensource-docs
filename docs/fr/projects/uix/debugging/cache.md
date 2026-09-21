@@ -1,15 +1,8 @@
 ---
-title: Cache
-description: Page française préparée pour Cache dans la documentation UGSo Open Source.
+title: Clearing cache
 ---
-# Cache
+# Vider le cache de l'interface Home Assistant
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+If at any time you need to clear the Home Assistant Frontend Application cache, which is used in addition to Browser cache, you can use a custom action to clear the Home Assistant Application cache and reload the Browser. This can be very convenient especially for devices where the option is hidden in a debugging menu and will also clear more than just the Frontend Application cache (e.g. localStorage which clears out many stored items like Browser Mod Browser ID).
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/debugging/cache.md`](/en/projects/uix/debugging/cache).
-
-## Statut
-
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+See [`clear_cache`](../extras/uix-actions.md#clear-cache-clearing-home-assistant-frontend-cache) UIX action.

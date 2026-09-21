@@ -1,15 +1,7 @@
----
-title: Debugging
-description: Page française préparée pour Debugging dans la documentation UGSo Open Source.
----
-# Debugging
+# Débogage
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+- [Debugging - cards](./cards.md)
+- [Debugging - templates](./templates.md)
+- [Debugging - clearing cache](./cache.md)
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/debugging/index.md`](/en/projects/uix/debugging/).
-
-## Statut
-
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+See also [DOM inspection helpers](../concepts/dom.md#dom-inspection-helpers) for information on `uix_tree()`, `uix_style_path()` / `uix_path()`, `uix_forge_path()`, `uix_broker_path()`, and `uix_broker_absolute_path()` console helpers.

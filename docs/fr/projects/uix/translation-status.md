@@ -1,15 +1,15 @@
 ---
-title: Übersetzungsstatus
-description: Page française préparée pour Übersetzungsstatus dans la documentation UGSo Open Source.
+title: État de la traduction
+description: État de la documentation UIX française.
 ---
-# Übersetzungsstatus
+# État de la traduction
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+Cette documentation française est maintenue à partir de la documentation UIX canonique en anglais. Les pages principales, le démarrage rapide et les aperçus de UIX Styling, Forge, Broker et Extras sont déjà disponibles en français.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/translation-status.md`](/en/projects/uix/translation-status).
+## Référence canonique
 
-## Statut
+La [documentation UIX anglaise](https://uix.lf.technology/) reste la référence pour la syntaxe, le comportement lié à une version et les nouveaux changements. Certaines pages détaillées sont encore en cours de traduction.
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## Prochaine étape
+
+Les pages de référence détaillées seront traduites progressivement, en commençant par les sections les plus utilisées de UIX Styling.

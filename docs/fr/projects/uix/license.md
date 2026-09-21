@@ -1,15 +1,16 @@
 ---
-title: UIX Documentation Licence
-description: Page française préparée pour UIX Documentation Licence dans la documentation UGSo Open Source.
+hide:
+  - toc
+  - navigation
 ---
-# UIX Documentation Licence
+# Licence de la documentation
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+Les textes et les médias originaux de la documentation UIX sont publiés sous licence [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/license.md`](/en/projects/uix/license).
+La licence CC BY 4.0 vous permet de partager et d'adapter ce contenu, y compris à des fins commerciales, à condition de citer correctement la source, de créer un lien vers la licence et d'indiquer les modifications.
 
-## Statut
+Le code source UIX, les outils de documentation, les feuilles de style, les modèles, les blocs de code et les exemples de configuration restent publiés sous [licence MIT](https://github.com/Lint-Free-Technology/uix/blob/master/LICENSE.txt). Les contenus de tiers, y compris les marques, restent soumis à leur propre licence ou à leurs propres conditions.
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+La documentation déjà publiée sous la licence MIT applicable à l'ensemble du dépôt reste disponible sous cette licence. La licence CC BY 4.0 constitue une autorisation complémentaire pour le contenu de documentation décrit ci-dessus.
+
+Pour l'avis de licence du code source du dépôt, consultez [`docs/LICENSE.md`](https://github.com/Lint-Free-Technology/uix/blob/master/docs/LICENSE.md).

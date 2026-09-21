@@ -790,8 +790,12 @@ const sidebarFr = {
   '/fr/projects/uix/': [
     { text: 'UIX', collapsed: false, items: [
       { text: 'Vue d’ensemble', link: '/fr/projects/uix/' },
-      { text: 'Quick start', link: '/fr/projects/uix/quick-start' },
-      { text: 'Guides', link: '/fr/projects/uix/guides' },
+      { text: 'Démarrage rapide', link: '/fr/projects/uix/quick-start' },
+      { text: 'UIX Styling', link: '/fr/projects/uix/using/' },
+      { text: 'UIX Forge', link: '/fr/projects/uix/forge/' },
+      { text: 'UIX Broker', link: '/fr/projects/uix/broker/' },
+      { text: 'UIX Extras', link: '/fr/projects/uix/extras/' },
+      { text: 'Guides UIX', link: '/fr/projects/uix/guides' },
       { text: 'FAQ', link: '/fr/projects/uix/faq' },
       { text: 'Licence', link: '/fr/projects/uix/license' },
       { text: 'État de traduction', link: '/fr/projects/uix/translation-status' }

@@ -1,15 +1,5 @@
----
-title: Leitfäden
-description: Page française préparée pour Leitfäden dans la documentation UGSo Open Source.
----
-# Leitfäden
+# Guides UIX
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+[![light-logo-icon](./assets/images/mixed.png)](https://uix-guides.lf.technology)
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/guides.md`](/en/projects/uix/guides).
-
-## Statut
-
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+La communauté UIX maintient une collection de guides UIX, disponible sur <https://uix-guides.lf.technology>. Les guides UIX sont publiés sous licence [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0).

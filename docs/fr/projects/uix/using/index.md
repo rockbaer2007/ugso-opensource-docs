@@ -1,15 +1,16 @@
 ---
-title: UIX Styling
-description: Page française préparée pour UIX Styling dans la documentation UGSo Open Source.
+title: Utiliser UIX
+description: Découvrez comment utiliser UI eXtension pour styliser les éléments de votre interface Home Assistant.
 ---
-# UIX Styling
+# Utiliser UIX Styling pour Home Assistant
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
-
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/using/index.md`](/en/projects/uix/using/).
-
-## Statut
-
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+- :bar_chart: [Styliser les cartes](./cards.md)
+- :bulb: [Styliser les entités, badges, éléments et marqueurs d'entité](entities.md)
+- :red_circle: [Styliser les icônes](./icons.md)
+- :adult: [Styliser les images d'entité](./images.md)
+- :white_square_button: [Arrière-plans de sections](./section-backgrounds.md)
+- :film_frames: [Arrière-plans de vues : caméra, vidéo et image](./view-backgrounds.md)
+- :abacus: [Styliser les panneaux personnalisés](./custom-panels.md)
+- :clipboard: [Modèles](./templates.md)
+- :art: [Thèmes](./themes.md)
+- :hammer_and_pick: [Autres options](other.md)

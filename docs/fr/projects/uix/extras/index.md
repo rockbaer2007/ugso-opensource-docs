@@ -1,15 +1,15 @@
 ---
-title: UIX Extras
-description: Page française préparée pour UIX Extras dans la documentation UGSo Open Source.
+title: Extras UIX
+description: Découvrez les réglages supplémentaires de l'intégration qui contrôlent UIX ou le Frontend Home Assistant.
 ---
-# UIX Extras
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+UI eXtension propose des réglages supplémentaires pour contrôler l'intégration ou le Frontend Home Assistant.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/extras/index.md`](/en/projects/uix/extras/).
-
-## Statut
-
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+- [Actions UIX](./uix-actions.md)
+- [Limitation des mises à jour d'états Frontend](./frontend-states-throttling.md)
+- [Délai de style des dialogues](./dialog-styling-delay.md)
+- [Désactiver la variable de modèle hash et ses mises à jour](./hash-template-variable-updates.md)
+- [Désactiver le patch de style des icônes](./disable-icon-styling.md)
+- [Désactiver le remplacement des images d'entité](./disable-entity-picture-image-override.md)
+- [Toujours patcher ha-card (expérimental)](always-patch-ha-card.md)
+- [Styliser les panneaux personnalisés (expérimental)](style-custom-panels.md)

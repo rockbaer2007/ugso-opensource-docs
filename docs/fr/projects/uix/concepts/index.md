@@ -1,15 +1,11 @@
 ---
-title: Konzepte
-description: Page française préparée pour Konzepte dans la documentation UGSo Open Source.
+description: Learn about UI eXtension concepts such as DOM navigation and how UIX patches and applies to UI elements in Home Assistant.
 ---
-# Konzepte
+# Concepts UIX
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+UI eXtension does its magic by patching various functions of HTML elements used by Home Assistant Frontend to inject a UIX styling node, `<uix-node>` where styles are injected into the DOM. To get the most out of UIX you can either use [UIX Guides](../guides.md) to follow what others have created, or work it out yourself.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/concepts/index.md`](/en/projects/uix/concepts/).
+## Ressources des concepts
 
-## Statut
-
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+- [DOM navigation](dom.md)
+- [UIX application](application.md)

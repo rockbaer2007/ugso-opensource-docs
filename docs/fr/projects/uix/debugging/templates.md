@@ -1,15 +1,3 @@
----
-title: Templates debuggen
-description: Page française préparée pour Templates debuggen dans la documentation UGSo Open Source.
----
-# Templates debuggen
+# Débogage des modèles
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
-
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/uix/debugging/templates.md`](/en/projects/uix/debugging/templates).
-
-## Statut
-
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+Vous pouvez déboguer les modèles UIX Jinja2 en plaçant le commentaire `<code v-pre>{# uix.debug #}</code>` n'importe où dans votre modèle. Vous verrez les messages de débogage lors de la liaison du modèle, de la mise à jour de valeur, de la réutilisation, de la déliaison et du désabonnement final. Chaque modèle reste abonné dans le cache pendant 20 secondes afin de faciliter l'application des modèles et d'améliorer légèrement la vitesse lorsque vous passez d'une vue à l'autre ou utilisez le même modèle sur des cartes de vues différentes.
