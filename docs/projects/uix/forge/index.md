@@ -30,7 +30,7 @@ Verfügbare Sparks:
 - :shield: [State Badge](./sparks/state-badge) - Status-Badge einfügen.
 - :material-grid: [Grid](./sparks/grid) - CSS Grid auf Container anwenden.
 - :mag: [Search](./sparks/search) - Elemente per CSS-Selektor suchen und verändern.
-- :material-map: [Map](./sparks/map) - Kartenansicht stabil halten.
+- :material-map: [Map](./sparks/map) - Kartenansicht bewahren sowie Touren, Verlaufsregler und Entity-Filter mit konfigurierbaren Positionen ergänzen.
 - :material-lock: [Lock](./sparks/lock) - Interaktion per Sperre schützen.
 - :material-star-four-points-outline: [Overlay Icon](./sparks/overlay-icon) - Icon über ein Element legen.
 - :material-image-outline: [Background](./sparks/background) - Hintergrundfarbe, Bild, Video oder Kamera einfügen.

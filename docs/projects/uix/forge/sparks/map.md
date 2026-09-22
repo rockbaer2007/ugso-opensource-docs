@@ -28,7 +28,7 @@ element:
 | --- | --- | --- | --- |
 | `type` | string | - | Muss `map` sein. |
 | `memory` | boolean | `false` | Speichert Zoom und Kartenmitte vor Updates und stellt sie danach wieder her. |
-| `fit_map` | boolean | `false` | Passt die Karte einmal an alle Entities an, sobald sie sichtbar ist. Nuetzlich für beim Laden versteckte Karten. |
+| `fit_map` | boolean | `false` | Passt die Karte einmal an alle Entities an, sobald sie sichtbar ist. Nützlich für beim Laden versteckte Karten. |
 | `tour` | boolean oder object | `false` | Aktiviert Tour-Modus. `true` nutzt Standards, ein Objekt passt die Tour an. |
 | `hours_to_show` | boolean oder object | `false` | Aktiviert einen Slider für `hours_to_show`. `true` nutzt Standards. |
 | `entity_filter` | boolean oder object | `false` | Aktiviert ein Dropdown zum Ein- und Ausblenden von Entities. `true` nutzt Standards. |
@@ -41,7 +41,7 @@ element:
 | `zoom` | number | `14` | Standard-Zoom für Tourpunkte. |
 | `icon_pause` | string | `mdi:pause` | Icon, wenn die Tour läuft. |
 | `icon_play` | string | `mdi:play` | Icon, wenn die Tour pausiert ist. |
-| `icon_position` | object | `{bottom: 10px, right: 10px}` | CSS-Position des Buttons. Zahlen werden als Pixel behandelt. |
+| `icon_position` | object | `{bottom: 40px, right: 10px}` | CSS-Position des Buttons. `top`, `bottom`, `left` und `right` sind möglich; Zahlen werden als Pixel behandelt. |
 | `poi` | list | nicht gesetzt | Liste der Punkte. Ohne Liste werden die Entities der `ha-map` genutzt. |
 
 Punkte in `poi`:
@@ -60,14 +60,16 @@ Punkte in `poi`:
 | `min` | number | `0` | Minimaler Stundenwert. |
 | `max` | number | `24` | Maximaler Stundenwert. |
 | `step` | number | `1` | Schrittweite. |
-| `position` | object | `{bottom: 10px, right: 10px}` | CSS-Position der Slider-Kapsel. |
+| `position` | object | `{bottom: 40px, right: 10px}` | CSS-Position der Slider-Kapsel. |
 | `tooltip_distance` | number | `20` | Abstand des Slider-Tooltips vom Thumb in Pixeln. |
+
+Bedienelemente ohne konfigurierte Position oder mit der expliziten Position `{bottom: 40px, right: 10px}` liegen gemeinsam in einer horizontalen Reihe über der Karten-Attribution. Alle anderen Positionen, auch `{bottom: 10px, right: 10px}`, verwenden ihre konfigurierten Abstände unabhängig voneinander.
 
 ### `entity_filter`
 
 | Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
-| `position` | object | `{bottom: 10px, right: 10px}` | CSS-Position des Filterbuttons. |
+| `position` | object | `{bottom: 40px, right: 10px}` | CSS-Position des Filterbuttons. |
 | `size` | string | `s` | Buttongröße, z. B. `s`, `m`, `l`. |
 | `variant` | string | `neutral` | Buttonvariante, z. B. `brand`, `neutral`, `danger`, `warning`, `success`. |
 | `appearance` | string | `filled` | Darstellung, z. B. `accent`, `filled`, `plain`. |
@@ -134,10 +136,10 @@ Punkte in `poi`:
 
 ## Wie es funktioniert
 
-Der Spark erweitert die vorhandene `ha-map`-Karte im Frontend. Er speichert UI-Zustand lokal im laufenden Dashboard, blendet zusätzliche Overlays ein und setzt Werte wie `hours_to_show` direkt an der Karte.
+Der Spark erweitert die vorhandene `ha-map`-Karte im Frontend. Er speichert UI-Zustand lokal im laufenden Dashboard, blendet zusätzliche Overlays ein und setzt Werte wie `hours_to_show` direkt an der Karte. Für den Speichermodus nutzt er die Karten-Engine von Home Assistant statt direkt eine Leaflet-Instanz anzusprechen.
 
 ::: note
-Der Spark arbeitet mit der gerenderten Home-Assistant-Karte. Wenn Home Assistant intern Markup ändert, kann ein Update der UIX-Selektoren oder des Sparks erforderlich werden.
+Der Spark arbeitet mit der gerenderten Home-Assistant-Karte. Er unterstützt MapLibre, wenn verfügbar, mit Leaflet-Fallback sowie ältere Leaflet-basierte Frontends. Wenn Home Assistant intern Markup ändert, kann ein Update der UIX-Selektoren oder des Sparks erforderlich werden.
 
 :::
 ## Beispiele
