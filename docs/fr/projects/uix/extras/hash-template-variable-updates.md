@@ -26,4 +26,4 @@ Lorsque cette option est activée :
 - Les changements d'URL limités au hash ne déclenchent **pas** de mise à jour UIX Forge.
 
 !!! warning
-    Tout modèle qui référence `hash` sans valeur par défaut génère une erreur lorsque cette option est activée, car la variable n'est plus disponible. Si vous souhaitez pouvoir activer ou désactiver l'option, définissez une valeur par défaut, par exemple `{{ hash | default("") }}`, ou utilisez une variable locale dans les modèles plus complexes : `{% set hashWithDefault = hash | default("") %}`.
+    Tout modèle qui référence `hash` sans valeur par défaut génère une erreur lorsque cette option est activée, car la variable n'est plus disponible. Si vous souhaitez pouvoir activer ou désactiver l'option, définissez une valeur par défaut, par exemple `&#123;&#123; hash | default("") &#125;&#125;`, ou utilisez une variable locale dans les modèles plus complexes : `{% set hashWithDefault = hash | default("") %}`.
