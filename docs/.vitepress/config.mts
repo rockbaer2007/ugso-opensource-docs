@@ -821,7 +821,7 @@ const sidebarFr = {
       { text: 'UIX Forge', collapsed: true, items: [
         { text: 'Vue d’ensemble', link: '/fr/projects/uix/forge/' },
         { text: 'Référence Forge', link: '/fr/projects/uix/forge/forge' },
-        { text: 'Foundries', link: '/fr/projects/uix/forge/foundries' },
+        { text: 'Fonderies', link: '/fr/projects/uix/forge/foundries' },
         { text: 'Sparks', link: '/fr/projects/uix/forge/sparks/' },
         { text: 'Info-bulle', link: '/fr/projects/uix/forge/sparks/tooltip' },
         { text: 'Bouton', link: '/fr/projects/uix/forge/sparks/button' },
