@@ -787,13 +787,29 @@ const sidebarFr = {
       { text: 'Utilisation portable', link: '/fr/projects/hadash/portable-usage' }
     ] }
   ],
-  '/fr/projects/uix/': [
-    { text: 'UIX', collapsed: false, items: [
-      { text: 'Vue d’ensemble', link: '/fr/projects/uix/' },
-      { text: 'Démarrage rapide', link: '/fr/projects/uix/quick-start' },
-      { text: 'UIX Styling', link: '/fr/projects/uix/using/' },
-      { text: 'UIX Forge', link: '/fr/projects/uix/forge/' },
-        { text: 'UIX Broker', collapsed: false, items: [
+    '/fr/projects/uix/': [
+      { text: 'UIX', collapsed: false, items: [
+        { text: 'Vue d’ensemble', link: '/fr/projects/uix/' },
+        { text: 'Démarrage rapide', link: '/fr/projects/uix/quick-start' },
+        { text: 'FAQ', link: '/fr/projects/uix/faq' },
+        { text: 'État de traduction', link: '/fr/projects/uix/translation-status' },
+        { text: 'Licence', link: '/fr/projects/uix/license' },
+        { text: 'Contribuer', link: '/fr/projects/uix/contributing' }
+      ] },
+      { text: 'UIX Styling', collapsed: true, items: [
+        { text: 'Vue d’ensemble', link: '/fr/projects/uix/using/' },
+        { text: 'Cartes', link: '/fr/projects/uix/using/cards' },
+        { text: 'Entités', link: '/fr/projects/uix/using/entities' },
+        { text: 'Icônes', link: '/fr/projects/uix/using/icons' },
+        { text: 'Images', link: '/fr/projects/uix/using/images' },
+        { text: 'Sections', link: '/fr/projects/uix/using/section-backgrounds' },
+        { text: 'Vues', link: '/fr/projects/uix/using/view-backgrounds' },
+        { text: 'Panneaux personnalisés', link: '/fr/projects/uix/using/custom-panels' },
+        { text: 'Modèles', link: '/fr/projects/uix/using/templates' },
+        { text: 'Thèmes', link: '/fr/projects/uix/using/themes' },
+        { text: 'Autres options', link: '/fr/projects/uix/using/other' }
+      ] },
+      { text: 'UIX Broker', collapsed: true, items: [
           { text: 'Vue d’ensemble', link: '/fr/projects/uix/broker/' },
           { text: 'Broker', link: '/fr/projects/uix/broker/broker' },
           { text: 'Domaines', link: '/fr/projects/uix/broker/realms' },
@@ -801,14 +817,51 @@ const sidebarFr = {
           { text: 'Règles', link: '/fr/projects/uix/broker/rules' },
           { text: 'Directives', link: '/fr/projects/uix/broker/directives' },
           { text: 'Exemples', link: '/fr/projects/uix/broker/examples' }
-        ] },
-      { text: 'UIX Extras', link: '/fr/projects/uix/extras/' },
-      { text: 'Guides UIX', link: '/fr/projects/uix/guides' },
-      { text: 'FAQ', link: '/fr/projects/uix/faq' },
-      { text: 'Licence', link: '/fr/projects/uix/license' },
-      { text: 'État de traduction', link: '/fr/projects/uix/translation-status' }
-    ] }
-  ],
+      ] },
+      { text: 'UIX Forge', collapsed: true, items: [
+        { text: 'Vue d’ensemble', link: '/fr/projects/uix/forge/' },
+        { text: 'Référence Forge', link: '/fr/projects/uix/forge/forge' },
+        { text: 'Foundries', link: '/fr/projects/uix/forge/foundries' },
+        { text: 'Sparks', link: '/fr/projects/uix/forge/sparks/' },
+        { text: 'Info-bulle', link: '/fr/projects/uix/forge/sparks/tooltip' },
+        { text: 'Bouton', link: '/fr/projects/uix/forge/sparks/button' },
+        { text: 'Attribut', link: '/fr/projects/uix/forge/sparks/attribute' },
+        { text: 'Événement', link: '/fr/projects/uix/forge/sparks/event' },
+        { text: 'Grille', link: '/fr/projects/uix/forge/sparks/grid' },
+        { text: 'Carte', link: '/fr/projects/uix/forge/sparks/map' },
+        { text: 'Verrou', link: '/fr/projects/uix/forge/sparks/lock' },
+        { text: 'Plus d’informations', link: '/fr/projects/uix/forge/sparks/more-info' },
+        { text: 'Icône superposée', link: '/fr/projects/uix/forge/sparks/overlay-icon' },
+        { text: 'Arrière-plan', link: '/fr/projects/uix/forge/sparks/background' },
+        { text: 'Thème', link: '/fr/projects/uix/forge/sparks/theme' },
+        { text: 'Icône de tuile', link: '/fr/projects/uix/forge/sparks/tile-icon' },
+        { text: 'Badge d’état', link: '/fr/projects/uix/forge/sparks/state-badge' },
+        { text: 'Recherche', link: '/fr/projects/uix/forge/sparks/search' }
+      ] },
+      { text: 'Concepts et aide', collapsed: true, items: [
+        { text: 'Concepts', link: '/fr/projects/uix/concepts/' },
+        { text: 'DOM', link: '/fr/projects/uix/concepts/dom' },
+        { text: 'Application', link: '/fr/projects/uix/concepts/application' },
+        { text: 'Débogage', link: '/fr/projects/uix/debugging/' },
+        { text: 'Déboguer les cartes', link: '/fr/projects/uix/debugging/cards' },
+        { text: 'Déboguer les modèles', link: '/fr/projects/uix/debugging/templates' },
+        { text: 'Problèmes de cache', link: '/fr/projects/uix/debugging/cache' }
+      ] },
+      { text: 'Extras et développement', collapsed: true, items: [
+        { text: 'Extras', link: '/fr/projects/uix/extras/' },
+        { text: 'Actions UIX', link: '/fr/projects/uix/extras/uix-actions' },
+        { text: 'Limitation des états frontend', link: '/fr/projects/uix/extras/frontend-states-throttling' },
+        { text: 'Délai de style des boîtes de dialogue', link: '/fr/projects/uix/extras/dialog-styling-delay' },
+        { text: 'Variables de modèle de hachage', link: '/fr/projects/uix/extras/hash-template-variable-updates' },
+        { text: 'Désactiver le style des icônes', link: '/fr/projects/uix/extras/disable-icon-styling' },
+        { text: 'Remplacement de l’image d’entité', link: '/fr/projects/uix/extras/disable-entity-picture-image-override' },
+        { text: 'Toujours corriger ha-card', link: '/fr/projects/uix/extras/always-patch-ha-card' },
+        { text: 'Panneaux personnalisés dans une iframe', link: '/fr/projects/uix/extras/style-custom-panels' },
+        { text: 'Développeurs', link: '/fr/projects/uix/developers/' },
+        { text: 'Développer des cartes', link: '/fr/projects/uix/developers/cards' },
+        { text: 'Développer des thèmes', link: '/fr/projects/uix/developers/themes' }
+      ] }
+    ],
   '/fr/projects/ultimate-timer/': [
     { text: 'Ultimate Timer', collapsed: false, items: [
       { text: 'Vue d’ensemble', link: '/fr/projects/ultimate-timer/' },
