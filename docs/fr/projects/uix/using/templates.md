@@ -3,9 +3,9 @@ description: Learn all about using templates.
 ---
 # Modèles
 
-All styles may contain [Jinja2 templates](https://www.home-assistant.io/docs/configuration/templating/) that will be processed by the Home Assistant backend.
+Tous les styles peuvent contenir des [modèles Jinja2](https://www.home-assistant.io/docs/configuration/templating/), qui seront traités par le moteur de Home Assistant.
 
-UI eXtension also makes the following variables available for templates:
+UI eXtension met également les variables suivantes à disposition des modèles :
 
 - `config` - The entire configuration of the card, entity or badge - (`config.entity` may be of special interest)
 - `user` - The name of the currently logged in user
@@ -33,11 +33,11 @@ Vous pouvez déboguer les modèles UIX Jinja2 en plaçant le commentaire <code v
 
 ## Macros
 
-UI eXtension supports reusable [Jinja2 macros](https://jinja.palletsprojects.com/en/stable/templates/#macros) that can be defined at card level or via a theme, and are prepended to every template in the card.
+UI eXtension prend en charge les [macros Jinja2 réutilisables](https://jinja.palletsprojects.com/en/stable/templates/#macros), définies au niveau d'une carte ou d'un thème, qui sont ajoutées au début de chaque modèle de la carte.
 
 ### Définir des macros sur une carte
 
-Macros are defined under `uix.macros` in the card configuration. A macro without `returns` renders its template inline as a string — use this when you want to substitute a text value (such as a CSS color or icon name) directly into the template:
+Les macros sont définies sous `uix.macros` dans la configuration de la carte. Une macro sans `returns` produit son modèle directement sous forme de chaîne. Utilisez-la pour insérer une valeur textuelle (par exemple une couleur CSS ou un nom d'icône) dans le modèle :
 
 ```yaml
 type: tile
@@ -58,7 +58,7 @@ uix:
     }
 ```
 
-Each macro entry supports the following keys:
+Chaque entrée de macro accepte les clés suivantes :
 
 | Key | Required | Description |
 | --- | -------- | ----------- |
@@ -66,7 +66,7 @@ Each macro entry supports the following keys:
 | `params` | No | A list of parameters the macro accepts. Each entry is either a plain string (parameter name) or a mapping with `name` and `default` keys (see below). |
 | `returns` | No | Set to `true` to make the macro callable as a function using Home Assistant's `as_function` filter. When `true`, use `<code v-pre>{%- do returns(<value>) -%}</code>` inside the template to return a typed value (boolean, number, etc.). |
 
-Each item in `params` can be either:
+Chaque élément de `params` peut être :
 
 - A **plain string** — just the parameter name: `- entity_id`
 - A **mapping** with `name` and `default` — the parameter name and its Jinja2 default expression:
@@ -80,7 +80,7 @@ params:
     default: "'gray'"
 ```
 
-This generates the following Jinja2 macro signature:
+Cela génère la signature de macro Jinja2 suivante :
 
 ```jinja
 {% macro state_color(entity_id, color_on = 'yellow', color_off = 'gray') %}
@@ -88,13 +88,13 @@ This generates the following Jinja2 macro signature:
 {% endmacro %}
 ```
 
-The `default` value is injected verbatim as a Jinja2 expression. Quote string values with single quotes inside the YAML string (e.g. `"'yellow'"`).
+La valeur `default` est insérée telle quelle comme expression Jinja2. Encadrez les valeurs textuelles d'apostrophes à l'intérieur de la chaîne YAML (par exemple `"'yellow'"`).
 
 ### Macros avec `returns`
 
-When a macro renders inline (no `returns`), its output is always a string — even <code>&#123;&#123; is_state(entity_id, "on") &#125;&#125;</code> produces the string `"True"` or `"False"`, and any non-empty string is truthy in Jinja2. To return an actual boolean or numeric value that behaves correctly in conditionals and comparisons, use `returns: true`.
+Lorsqu'une macro produit son résultat directement (sans `returns`), celui-ci est toujours une chaîne : même <code>&#123;&#123; is_state(entity_id, "on") &#125;&#125;</code> renvoie la chaîne `"True"` ou `"False"`, et toute chaîne non vide est considérée comme vraie par Jinja2. Pour renvoyer une valeur booléenne ou numérique qui fonctionne correctement dans les conditions et les comparaisons, utilisez `returns: true`.
 
-When `returns: true`, the macro follows Home Assistant's [`as_function`](https://www.home-assistant.io/docs/configuration/templating/#as_function) convention: the macro is internally named `macro_<name>` with `returns` added as its last parameter, then exposed as `<name>` via the `as_function` filter. The `returns` callable is injected automatically when the macro is invoked as a function:
+Avec `returns: true`, la macro suit la convention [`as_function`](https://www.home-assistant.io/docs/configuration/templating/#as_function) de Home Assistant : son nom interne devient `macro_<name>`, avec `returns` comme dernier paramètre, puis elle est exposée sous le nom `<name>` au moyen du filtre `as_function`. L'appelable `returns` est injecté automatiquement lorsque la macro est appelée comme une fonction :
 
 ```yaml
 type: tile
@@ -112,7 +112,7 @@ uix:
     }
 ```
 
-This generates the following Jinja2 block that is prepended to every template:
+Cela génère le bloc Jinja2 suivant, ajouté au début de chaque modèle :
 
 ```jinja
 {% macro macro_is_on(entity_id, returns) %}
@@ -123,7 +123,7 @@ This generates the following Jinja2 block that is prepended to every template:
 
 ### Composer des macros
 
-Macros can call other macros defined in the same card. UIX automatically detects these dependencies and includes all required macros in the output, even if only the outermost macro is referenced in the main template.
+Les macros peuvent appeler d'autres macros définies dans la même carte. UIX détecte automatiquement ces dépendances et inclut toutes les macros nécessaires dans le résultat, même si seul l'appel à la macro externe apparaît dans le modèle principal.
 
 ```yaml
 type: tile
@@ -157,7 +157,7 @@ Even though only `border_style` is used in the style template, `color_for_state`
 
 ### Importer des macros depuis des fichiers de modèles personnalisés
 
-In addition to defining macros inline, you can import macros from [Home Assistant reusable templates](https://www.home-assistant.io/docs/configuration/templating/#reusing-templates) stored in `/config/custom_templates/*.jinja`. To do this, set the macro entry's value to the filename (a plain string) instead of a macro definition object:
+En plus de définir les macros directement, vous pouvez importer des macros depuis les [modèles réutilisables de Home Assistant](https://www.home-assistant.io/docs/configuration/templating/#reusing-templates) enregistrés dans `/config/custom_templates/*.jinja`. Pour cela, indiquez le nom du fichier (une simple chaîne) comme valeur de l'entrée de macro, au lieu d'un objet de définition :
 
 ```yaml
 type: tile
@@ -171,13 +171,13 @@ uix:
     }
 ```
 
-This generates the following import statement that is prepended to every template:
+Cela génère l'instruction d'importation suivante, ajoutée au début de chaque modèle :
 
 ```jinja
 {% from 'my_macros.jinja' import state_color %}
 ```
 
-The macro `state_color` must be defined in `/config/custom_templates/my_macros.jinja`. Each entry in `macros` imports its own named macro, so you can import multiple macros from the same or different files:
+La macro `state_color` doit être définie dans `/config/custom_templates/my_macros.jinja`. Chaque entrée de `macros` importe la macro portant son nom ; vous pouvez donc importer plusieurs macros depuis un même fichier ou depuis différents fichiers :
 
 ```yaml
 uix:
@@ -188,24 +188,24 @@ uix:
 ```
 
 ::: tip Using template file macros
-All template files must have the .jinja extension and be less than 5MiB. Templates in the `/config/custom_template` folder will be loaded at Home Assistant startup. To reload the templates without restarting Home Assistant, invoke the `homeassistant.reload_custom_templates` action.
+Tous les fichiers de modèles doivent porter l'extension `.jinja` et faire moins de 5 Mio. Les modèles du dossier `/config/custom_templates` sont chargés au démarrage de Home Assistant. Pour les recharger sans redémarrer Home Assistant, exécutez l'action `homeassistant.reload_custom_templates`.
 
 :::
 Inline and file-import macros can be freely mixed within the same card.
 
 ### Macros de thème
 
-Macros can also be defined in a theme so they are available to all cards that use it. See [Themes - Macros](themes.md#macros) for details.
+Vous pouvez également définir des macros dans un thème afin qu'elles soient disponibles pour toutes les cartes qui l'utilisent. Consultez [Thèmes - Macros](themes.md#macros) pour en savoir plus.
 
-Card-level macros take precedence over theme macros of the same name, allowing individual cards to override theme-defined macros.
+Les macros définies sur une carte sont prioritaires sur celles du thème portant le même nom ; une carte peut ainsi remplacer une macro du thème.
 
 ## Billets
 
-Billets are named YAML values that become plain template constants — usable **without parentheses**, unlike macros. They are available in both UIX Styling and UIX Forge templates. Billet string values may reference other billets via `{name}` substitution — declaration order does not matter.
+Les billets sont des valeurs YAML nommées qui deviennent des constantes simples dans les modèles — utilisables **sans parenthèses**, contrairement aux macros. Ils sont disponibles dans les modèles UIX Styling et UIX Forge. Les valeurs textuelles peuvent référencer d'autres billets avec la syntaxe `{name}` ; l'ordre des déclarations n'a pas d'importance.
 
 ### Billets dans UIX Styling
 
-Define billets under `uix.billets` on a card. Each billet is injected as a `<code v-pre>{%- set name = value -%}</code>` statement ahead of every style template on that card:
+Définissez les billets sous `uix.billets` dans une carte. Chaque billet est inséré sous la forme d'une instruction `<code v-pre>{%- set name = value -%}</code>` avant chaque modèle de style de cette carte :
 
 #### Billet interpolation
 
@@ -234,7 +234,7 @@ billets:
 ```
 
 ::: note Circular references
-If billets reference each other in a cycle (directly or through a chain), none of the cycle members can be resolved. UIX logs an error for each and leaves their values unchanged.
+Si des billets se référencent en boucle, directement ou par une chaîne de références, aucun billet de cette boucle ne peut être résolu. UIX consigne une erreur pour chacun et conserve leurs valeurs telles quelles.
 
 :::
 ```yaml
@@ -288,6 +288,6 @@ In templates, billets are used as plain constants:
 
 ### Billets dans UIX Forge
 
-When using [UIX Forge](../forge/index.md), billets defined under `forge.billets` are available in all forge templates **and** in any `uix:` style on the forge card or the forged element. Forge billets are merged with any billets defined directly in the `uix:` config, with the local `uix:` billets taking precedence.
+Avec [UIX Forge](../forge/index.md), les billets définis sous `forge.billets` sont disponibles dans tous les modèles Forge **ainsi que** dans tout style `uix:` de la carte Forge ou de l'élément généré. Ils sont fusionnés avec les billets définis directement dans la configuration `uix:` ; ceux-ci restent prioritaires.
 
-See [UIX Forge — Billets](../forge/forge.md#billets) for the full reference including supported types and foundry override behaviour.
+Consultez la référence complète [UIX Forge — Billets](../forge/forge.md#billets), qui décrit les types pris en charge et le comportement de remplacement des fonderies.

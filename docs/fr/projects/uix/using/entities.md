@@ -1,13 +1,13 @@
 ---
-description: Learn all about styling entities, badges, elements and entity markers.
+description: Découvrez comment styliser les entités, les badges, les éléments et les marqueurs d'entité.
 ---
 # Styliser les entités, badges, éléments et marqueurs d'entité
 
-In `entities`, `glance` and `map` cards, [each entity can have options](https://www.home-assistant.io/lovelace/entities/#options-for-entities). Those elements can be styled individually by adding a `uix` parameter to the entity configuration.
+Dans les cartes `entities`, `glance` et `map`, [chaque entité peut avoir ses propres options](https://www.home-assistant.io/lovelace/entities/#options-for-entities). Pour styliser individuellement ces éléments, ajoutez un paramètre `uix` à la configuration de l'entité.
 
-For those cases, the styles are injected into a shadowRoot, and the bottommost element is thus accessed through `:host`.
+Dans ces cas, les styles sont injectés dans un `shadowRoot` ; l'élément le plus profond est donc ciblé avec `:host`.
 
-This also applies to view badges and elements in `picture-elements` cards.
+Cela s'applique également aux badges de vue et aux éléments des cartes `picture-elements`.
 
 ```yaml
 type: entities
@@ -32,14 +32,14 @@ entities:
         }
 ```
 
-![Entities row coloring](../assets/page-assets/using/entities-base.png)
+![Coloration des lignes d'entités](../assets/page-assets/using/entities-base.png)
 
 ## Styliser les lignes conditionnelles des entités
 
-Rows in entities conditional rows can be styled directly. If you style the conditional config itself, you need to take care as the conditional row wrapper is not in a shadowRoot so styles may leak to other rows/elements.
+Les lignes conditionnelles d'une carte Entities peuvent être stylisées directement. Si vous stylisez la configuration conditionnelle elle-même, soyez prudent : son conteneur n'est pas dans un `shadowRoot` et les styles peuvent déborder sur d'autres lignes ou éléments.
 
-::: example Conditional row examples
-Styling a conditional row directly. Only the entity row.
+::: example Exemples de lignes conditionnelles
+Styliser directement une ligne conditionnelle, uniquement la ligne de l'entité :
 ```yaml
 type: entities
 entities:
@@ -57,7 +57,7 @@ entities:
             color: red;
           }
 ```
-Styling a conditional row config using shadowRoot. This method is available for legacy configurations.
+Styliser la configuration d'une ligne conditionnelle en utilisant le `shadowRoot` (méthode réservée aux anciennes configurations) :
 ```yaml
 type: entities
 entities:
@@ -76,11 +76,11 @@ entities:
             color: red;
           }
 ```
-Both the above will give the following output.
+Les deux exemples précédents produisent le résultat suivant :
 
 ![Conditional row styling](../assets/page-assets/using/entities-conditional-regular.gif)
 
-Styling a conditional config where styles will 'leak' to all rows.
+Styliser une configuration conditionnelle dont les styles « débordent » sur toutes les lignes :
 ```yaml
 type: entities
 entities:
@@ -103,10 +103,10 @@ entities:
 :::
 ## Styliser les éléments conditionnels de picture-elements
 
-The elements in a picture-elements conditional element can be styled directly. If you style the conditional config itself, you need to take care as the conditional element wrapper is not in a shadowRoot so styles may leak to other rows/elements.
+Les éléments d'une condition dans `picture-elements` peuvent être stylisés directement. Si vous stylisez la configuration conditionnelle elle-même, soyez prudent : son conteneur n'est pas dans un `shadowRoot` et les styles peuvent déborder sur d'autres lignes ou éléments.
 
-::: example Conditional picture-elements example
-Styling a conditional element directly. Only the element.
+::: example Exemple de condition dans picture-elements
+Styliser directement un élément conditionnel, et lui seul :
 ```yaml
 type: picture-elements
 image:
@@ -133,7 +133,7 @@ elements:
               color: white;
             }
 ```
-Styling the conditional config. This method is available for legacy configurations.
+Styliser la configuration conditionnelle (méthode réservée aux anciennes configurations) :
 ```yaml
 type: picture-elements
 image:
@@ -161,11 +161,11 @@ elements:
             color: white;
           }
 ```
-Both the above will give the following output.
+Les deux exemples précédents produisent le résultat suivant :
 
 ![Conditional picture element styling](../assets/page-assets/using/elements-conditional-regular.gif)
 
-Styling the conditional config where styles will 'leak' to all elements.
+Styliser la configuration conditionnelle dont les styles « débordent » sur tous les éléments :
 ```yaml
 type: picture-elements
     image:
@@ -192,14 +192,14 @@ type: picture-elements
               --primary-text-color: white;
             }
 ```
-![Conditional picture element styling leakage](../assets/page-assets/using/elements-conditional-leakage.gif)
+![Débordement des styles d'un élément conditionnel](../assets/page-assets/using/elements-conditional-leakage.gif)
 
 :::
 ## Styliser les marqueurs d'entité sur une carte
 
-Entity markers on a map can be styled individually by card config or by theme. In both examples the picture image is also styled.
+Les marqueurs d'entité d'une carte peuvent être stylisés individuellement dans la configuration de la carte ou dans un thème. Les deux exemples stylisent également l'image.
 
-Styling by config.
+Style défini dans la configuration :
 
 ```yaml
   type: map
@@ -214,7 +214,7 @@ Styling by config.
   theme_mode: auto
 ```
 
-Styling by theme. Here the `&` host selector is used to take advantage of the `ha-entity-marker` having the `entity-id` as an attribute.
+Style défini dans le thème. Le sélecteur hôte `&` permet de cibler l'attribut `entity-id` de `ha-entity-marker`.
 
 ```yaml
   uix-entity-marker-yaml: |
@@ -228,6 +228,6 @@ Styling by theme. Here the `&` host selector is used to take advantage of the `h
       }
 ```
 
-Both the above will give the following output
+Les deux exemples précédents produisent le résultat suivant :
 
 ![Entity marker styling](../assets/page-assets/using/entity-marker.png)

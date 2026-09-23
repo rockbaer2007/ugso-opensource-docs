@@ -1,10 +1,10 @@
 ---
-description: Information for developers of themes and integrations.
+description: Informations pour les développeurs de thèmes et d'intégrations.
 ---
 # Développeurs - Thèmes et intégrations
 
-When using UI eXtension in a theme please **DO NOT** attempt to ship any part of the UI eXtension integration standalone. Always guide your theme users to the UI eXtension Quick Start Guide to install the integration.
+Si vous utilisez UI eXtension dans un thème, **n'incluez aucune partie de l'intégration UI eXtension dans votre thème**. Invitez toujours les utilisateurs à installer l'intégration en suivant le [guide de démarrage rapide de UI eXtension](../quick-start.md).
 
-When using UI eXtension alongside another custom integration, please set UI eXtension as a dependency in your `manifest.json`. That way users will be required to install UI eXtension before they can use your integration.
+Si vous utilisez UI eXtension avec une autre intégration personnalisée, ajoutez UI eXtension comme dépendance dans votre `manifest.json`. Les utilisateurs devront ainsi installer UI eXtension avant de pouvoir utiliser votre intégration.
 
-If you have any question please start a [GitHub discussion](https://github.com/Lint-Free-Technology/uix/discussions).
+Pour toute question, lancez une [discussion GitHub](https://github.com/Lint-Free-Technology/uix/discussions).

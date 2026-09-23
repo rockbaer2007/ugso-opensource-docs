@@ -1,39 +1,39 @@
 ---
-description: Learn all about styling icons including change icons and their color.
+description: Découvrez comment styliser les icônes, notamment modifier leur symbole et leur couleur.
 ---
 # Styliser les icônes
 
-With UI eXtension installed, the `ha-state-icon`, `<ha-icon>` or `ha-svg-icon` elements - used, for example, by `tile`, `entities`, `glance`, `heading` and many more cards can have its icon and color set using CSS variables either directly in UIX styling on the card or by theme.
+Une fois UI eXtension installé, vous pouvez définir par variables CSS l'icône et sa couleur pour les éléments `ha-state-icon`, `<ha-icon>` ou `<ha-svg-icon>`. Ils sont notamment utilisés par les cartes `tile`, `entities`, `glance` et `heading`. Définissez ces variables directement dans le style UIX de la carte ou dans un thème.
 
 ## Définir une surcharge pour une entité
 
-Define CSS variables of the form `--uix-icon-for-<entity_id>` and/or `--uix-icon-color-for-<entity_id>`, where every `.` in the entity ID is replaced with `_`. When an icon is rendered its icon and/or color is replaced with the supplied icon and/or color.
+Définissez des variables CSS sous la forme `--uix-icon-for-<entity_id>` et/ou `--uix-icon-color-for-<entity_id>`, en remplaçant chaque `.` de l'identifiant d'entité par `_`. Lors du rendu de l'icône, UIX remplace son symbole et/ou sa couleur par les valeurs fournies.
 
-Templates are supported. For use see [Full theme example](#full-theme-example).
+Les modèles sont pris en charge. Consultez l'[exemple complet de thème](#full-theme-example).
 
 ::: tip
-- The variable can be set at any ancestor level in the DOM. UIX will detect it on the element via computed styles. If the variable is not set, or the element's entity does not match, the original icon is left unchanged.
-- To style overrides for Home Assistant dashboards add `--uix-icon-for-<entity_id>` and/or `--uix-icon-color-for-<entity_id>` to theme variables `uix-root(-yaml)` and `uix-more-info(-yaml)`.
-- To style overrides for config and UI editing add `--uix-icon-for-<entity_id>` and/or `--uix-icon-color-for-<entity_id>` to theme variables `uix-config(-yaml)` and `uix-dialog(-yaml)`.
-- To style override for other UIX stylable panels add  `--uix-icon-for-<entity_id>` and/or `--uix-icon-color-for-<entity_id>` to the appropriate theme variable. e.g. For History panel add the overrides to `uix-history(-yaml)`.
+- La variable peut être définie sur n'importe quel ancêtre dans le DOM. UIX la détecte sur l'élément grâce aux styles calculés. Si elle n'est pas définie ou si l'entité de l'élément ne correspond pas, l'icône d'origine est conservée.
+- Pour les tableaux de bord Home Assistant, ajoutez `--uix-icon-for-<entity_id>` et/ou `--uix-icon-color-for-<entity_id>` aux variables de thème `uix-root(-yaml)` et `uix-more-info(-yaml)`.
+- Pour les écrans de configuration et d'édition de l'interface, ajoutez ces variables aux variables de thème `uix-config(-yaml)` et `uix-dialog(-yaml)`.
+- Pour les autres panneaux stylisables par UIX, ajoutez-les à la variable de thème appropriée. Par exemple, pour le panneau Historique, utilisez `uix-history(-yaml)`.
 
 :::
 ## Définir une surcharge générique
 
-Define generic CSS variables `--uix-icon` and/or `--uix-icon-color` in the context of the icon you wish to override.
+Définissez les variables CSS génériques `--uix-icon` et/ou `--uix-icon-color` dans le contexte de l'icône à remplacer.
 
-When an icon is rendered its icon and/or color is replaced with the supplied icon and/or color.
+Lors du rendu de l'icône, UIX remplace son symbole et/ou sa couleur par les valeurs fournies.
 
-Templates are supported.
+Les modèles sont pris en charge.
 
 ::: tip
-- If both `--uix-icon` and `--uix-icon-for-<entity_id>` are defined, `--uix-icon` takes precedence.
-- If both `--uix-icon-color` and `--uix-icon-color-for-<entity_id>` are defined, `--uix-icon-color` takes precedence.
-- In some cases to be able to override an icon you need to define an icon in the card's config. e.g. `heading` card. Without an icon set in config, no icon is rendered for UIX to override.
-- Special care needs to be taken for elements that use more than the single icon in the `:host`, like when a tile icon also has a badge. In that case set the `--uix-icon` styling to specific icon. See example.
+- Si `--uix-icon` et `--uix-icon-for-<entity_id>` sont tous deux définis, `--uix-icon` est prioritaire.
+- Si `--uix-icon-color` et `--uix-icon-color-for-<entity_id>` sont tous deux définis, `--uix-icon-color` est prioritaire.
+- Dans certains cas, vous devez définir l'icône dans la configuration de la carte pour pouvoir la remplacer, par exemple avec une carte `heading`. Sans icône configurée, UIX n'a aucune icône à remplacer.
+- Soyez prudent avec les éléments qui affichent plusieurs icônes dans `:host`, par exemple une icône de tuile accompagnée d'un badge. Dans ce cas, appliquez `--uix-icon` à l'icône précise. Voir l'exemple.
 
 :::
-::: example Generic override example
+::: example Exemple de remplacement générique
 ```yaml
   - type: heading
     heading: House Temperatures
@@ -151,9 +151,9 @@ Templates are supported.
 :::
 ## Exemple complet de thème
 
-This example uses two macros in UIX theme and applying those macros in styling for theme variables `uix-root-yaml` and `uix-more-info-yaml`. While the root selector `.:` is the only selector used, the example uses the `-yaml` variants as you may already have these variants in your [theme](./themes.md).
+Cet exemple définit deux macros dans un thème UIX et les utilise pour styliser les variables de thème `uix-root-yaml` et `uix-more-info-yaml`. Il n'utilise que le sélecteur racine `.:`, mais choisit les variantes `-yaml`, que vous avez peut-être déjà définies dans votre [thème](./themes.md).
 
-Theme:
+Thème :
 
 ```yaml
 uix-doc-icon-for-entity-theme:
@@ -206,10 +206,10 @@ uix-doc-icon-for-entity-theme:
 ```
 
 ::: tip
-`--uix-icon` and `--uix-icon-color` take precedence over `--uix-icon-for-<entity_id>` and/or `--uix-icon-color-for-<entity_id>`. See the `sensor.kitchen_temperature` tile in the example.
+`--uix-icon` et `--uix-icon-color` sont prioritaires sur `--uix-icon-for-<entity_id>` et `--uix-icon-color-for-<entity_id>`. Voir la tuile `sensor.kitchen_temperature` dans l'exemple.
 
 :::
-Dashboard cards (section):
+Cartes du tableau de bord (section) :
 
 ```yaml
 type: grid

@@ -1,6 +1,6 @@
 # Développeurs
 
-If you are a developer of custom card or theme or integration, check out the links to developer information below.
+Si vous développez une carte personnalisée, un thème ou une intégration, consultez les ressources destinées aux développeurs ci-dessous.
 
-- :bar_chart: [Developers - custom cards](./cards.md)
-- :art: [Developers - themes & integrations](./themes.md)
+- :bar_chart: [Développeurs — cartes personnalisées](./cards.md)
+- :art: [Développeurs — thèmes et intégrations](./themes.md)

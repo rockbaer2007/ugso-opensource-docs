@@ -3,10 +3,10 @@ description: Learn how to display a full-screen camera stream, video, or image a
 ---
 # Arrière-plans des vues
 
-UIX can display a full-screen **camera stream**, **video**, or **image** as a background behind your Home Assistant dashboard views and config panels.  The background is controlled entirely through CSS variables set in your theme and supports Jinja2 templates, so you can switch sources per view without any custom code.
+UIX peut afficher un **flux de caméra**, une **vidéo** ou une **image** en plein écran derrière les vues de votre tableau de bord Home Assistant et les panneaux de configuration. L'arrière-plan est entièrement contrôlé par des variables CSS définies dans votre thème et prend en charge les modèles Jinja2 ; vous pouvez donc changer de source selon la vue sans code personnalisé.
 
 ::: info How it works
-The `ha-drawer` styling patch also controls the view background, which allows the feature to work in dashboard views *and* config panels.  Variables must be set on `:host` inside the `uix-drawer` theme key so they are readable via `getComputedStyle(ha-drawer)`.  Because `ha-drawer` persists across navigation, the background element is **reused** when navigating between views with the same  / video / image — no teardown/recreate cycle.
+Le correctif de style de `ha-drawer` contrôle également l'arrière-plan de la vue, ce qui permet à cette fonction de s'appliquer aux vues du tableau de bord *et* aux panneaux de configuration. Définissez les variables sur `:host` dans la clé de thème `uix-drawer` afin qu'elles soient accessibles via `getComputedStyle(ha-drawer)`. Comme `ha-drawer` persiste pendant la navigation, l'élément d'arrière-plan est **réutilisé** entre les vues lorsque la source (vidéo ou image) est identique ; il n'est pas détruit puis recréé.
 
 :::
 ## Variables CSS
@@ -29,12 +29,12 @@ The `ha-drawer` styling patch also controls the view background, which allows th
 **Priority order**: `camera-entity` → `image-entity` → `video` → `image` → `background`.  All five slots can be active simultaneously as independent layers.
 
 ::: tip
-You don't need to include `url()` around any of the camera entity, image entity, video or image CSS variables to use view backgrounds. `url()` will be added if and when required. You **DO** need to provide if you are using `--uix-view-background`.
+Il n'est pas nécessaire d'entourer de `url()` les variables CSS d'entité caméra, d'entité image, de vidéo ou d'image pour les arrière-plans de vue. UIX ajoute `url()` si nécessaire. Vous **devez** toutefois le fournir si vous utilisez `--uix-view-background`.
 
 :::
 ## Modes de couverture
 
-The `--uix-view-background-cover` variable controls how much of the viewport the background fills.
+La variable `--uix-view-background-cover` contrôle la partie de la fenêtre occupée par l'arrière-plan.
 
 | Value | Description |
 |---|---|
@@ -85,7 +85,7 @@ my-theme:
 
 ### Raccourci d'arrière-plan
 
-Use `--uix-view-background` when you need the full CSS `background` shorthand — gradients, multiple images, `url()` with sizing and positioning all in one value.  You are responsible for the complete value.
+Utilisez `--uix-view-background` lorsque vous avez besoin de la propriété raccourcie CSS `background` complète : dégradés, images multiples ou `url()` avec taille et position dans une seule valeur. Vous devez fournir la valeur complète.
 
 ```yaml
 my-theme:
@@ -97,7 +97,7 @@ my-theme:
     }
 ```
 
-Gradients work equally well:
+Les dégradés fonctionnent également :
 
 ```yaml
   uix-drawer: |
@@ -108,7 +108,7 @@ Gradients work equally well:
 
 ## Changer par vue avec des modèles
 
-As the `uix-drawer` style supports Jinja2 templates and the `panel` template variable reflects the current view, you can switch the background source automatically:
+Comme le style `uix-drawer` prend en charge les modèles Jinja2 et que la variable de modèle `panel` indique la vue actuelle, vous pouvez changer automatiquement la source d'arrière-plan :
 
 ```yaml
 my-theme:
@@ -124,10 +124,10 @@ my-theme:
     }
 ```
 
-See [Templates](./templates.md) for full template variable documentation.
+Consultez [Modèles](./templates.md) pour la documentation complète des variables de modèle.
 
 ::: tip Use template debug to check variables
-To check what `panel` variables are available for your template, you can use a template in your theme with UIX debug and a CSS comment. Look for `UIX: Template updated` in your Browser console and drill down to `variables` and then `panel`.
+Pour vérifier quelles variables `panel` sont disponibles, utilisez un modèle dans votre thème avec le débogage UIX et un commentaire CSS. Dans la console de votre navigateur, repérez `UIX: Template updated`, puis développez `variables` et enfin `panel`.
 ```yaml
 uix-drawer: |
   {# uix.debug #}
@@ -139,7 +139,7 @@ uix-drawer: |
 
 UIX styling for the view background is available using the theme variables `uix-view-background`.  This lets you style the background content using the `uix-view-background` theme key — exactly like any other UIX theme target.
 
-Common uses include opacity, grayscale, blur, and brightness:
+Les usages courants comprennent le réglage de l'opacité, du niveau de gris, du flou et de la luminosité :
 
 ```yaml
 my-theme:
@@ -155,7 +155,7 @@ my-theme:
     }
 ```
 
-If you wish to adjust position or other attributes of the view background you can adjust the host container display parameters and also the displayed element. The displayed element will be per the table below.
+Pour ajuster la position ou d'autres propriétés de l'arrière-plan de la vue, vous pouvez modifier les paramètres d'affichage du conteneur hôte ainsi que ceux de l'élément affiché. Cet élément dépend du type indiqué dans le tableau ci-dessous.
 
 | Type | Element |
 | - | - |
@@ -167,7 +167,7 @@ If you wish to adjust position or other attributes of the view background you ca
 
 ### Positionnement de la caméra
 
-Camera backgrounds are **centred by default** — the stream fills the container and any aspect-ratio overflow is clipped symmetrically on all sides.  Use `--uix-camera-position` to change where the stream is anchored when it overflows:
+Par défaut, les arrière-plans de caméra sont **centrés** : le flux remplit le conteneur et le débordement dû au rapport hauteur/largeur est rogné symétriquement de chaque côté. Utilisez `--uix-camera-position` pour modifier le point d'ancrage du flux en cas de débordement :
 
 | Value | Description |
 |---|---|
@@ -217,7 +217,7 @@ my-theme:
 
 **Zoom in and centre on the upper-left quadrant:**
 
-At 2× zoom, the stream is twice the size of the container.  To bring the upper-left quadrant's centre into view, shift right and down by 50% of the container dimensions:
+Avec un zoom de 2×, le flux fait deux fois la taille du conteneur. Pour afficher le centre du quadrant supérieur gauche, déplacez l'image vers la droite et vers le bas de 50 % des dimensions du conteneur :
 
 ```yaml
   uix-drawer: |
@@ -266,7 +266,7 @@ my-theme:
     }
 ```
 
-You can combine this with `--uix-camera-position` for screens of different proportions:
+Vous pouvez combiner ce réglage avec `--uix-camera-position` pour les écrans de proportions différentes :
 
 ```yaml
   uix-drawer: |
@@ -287,7 +287,7 @@ You can combine this with `--uix-camera-position` for screens of different propo
 
 ### Personnaliser les propriétés CSS de l'arrière-plan d'image
 
-Both **entity image** and **plain image** backgrounds render as a `<div class="uix-bg-image">`.  The div defaults to `background-size: cover; background-position: center; background-repeat: no-repeat`.  You can override any of these properties — or add new ones — via the `.uix-bg-image` selector:
+Les arrière-plans **d'image issue d'une entité** et **d'image simple** sont rendus dans un `<div class="uix-bg-image">`. Par défaut, ce div utilise `background-size: cover; background-position: center; background-repeat: no-repeat`. Vous pouvez remplacer ces propriétés ou en ajouter d'autres avec le sélecteur `.uix-bg-image` :
 
 ```yaml
 my-theme:
@@ -309,7 +309,7 @@ my-theme:
 
 ## Rendre la barre d'application et la barre latérale transparentes
 
-You can use UIX styling on `uix-top-app-bar-fixed` to make the top app bar and sidebar transparent. Further config panels may have their own toolbars which you may also need to style via `uix-config`.
+Vous pouvez appliquer un style UIX à `uix-top-app-bar-fixed` pour rendre transparentes la barre supérieure de l'application et la barre latérale. Certains panneaux de configuration possèdent leur propre barre d'outils ; vous devrez peut-être également la styliser avec `uix-config`.
 
 [Example](https://github.com/ngocjohn/hass-config/blob/40288532f57eacbbf9dd38b14f20b31ea615a9f5/config/themes/graphite-auto.yaml#L758-L768) as shared by `@ngocjohn` on Home Assistant Community Forum.
 
@@ -326,9 +326,9 @@ You can use UIX styling on `uix-top-app-bar-fixed` to make the top app bar and s
 
 ## Indicateur de chargement
 
-While the media is loading UIX shows a CSS-only animated spinner centred on the background container.  The spinner fades out automatically once the media is ready (camera stream starts playing, video can play, or image has loaded).
+Pendant le chargement du média, UIX affiche au centre du conteneur d'arrière-plan un indicateur animé réalisé uniquement en CSS. Il disparaît automatiquement lorsque le média est prêt : démarrage du flux caméra, lecture possible de la vidéo ou chargement de l'image terminé.
 
-The spinner can be customised via `uix-view-background` — it uses the class `.uix-spinner` (the track ring) and the pseudo-element `.uix-spinner::after` (the animated arc).
+Vous pouvez personnaliser cet indicateur avec `uix-view-background` : la classe `.uix-spinner` désigne l'anneau et le pseudo-élément `.uix-spinner::after` l'arc animé.
 
 ```yaml
 my-theme:
@@ -355,6 +355,6 @@ my-theme:
 
 ## Récupération de la visibilité d'un onglet
 
-Browsers suspend WebRTC/HLS streams and video playback when a tab is in the background for a long time.  UIX automatically recreates camera stream and video elements when you return to the tab, recovering the stream or playback without any manual intervention.
+Les navigateurs suspendent les flux WebRTC/HLS et la lecture vidéo lorsqu'un onglet reste longtemps en arrière-plan. Lorsque vous revenez dans l'onglet, UIX recrée automatiquement les éléments de flux caméra et de vidéo afin de rétablir le flux ou la lecture sans intervention manuelle.
 
-Static image backgrounds are not affected.
+Les arrière-plans constitués d'images statiques ne sont pas concernés.

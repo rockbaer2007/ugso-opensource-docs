@@ -1,22 +1,22 @@
 ---
-description: Information for developers of custom cards
+description: Informations pour les développeurs de cartes personnalisées.
 ---
 # Développeurs - Cartes personnalisées
 
-Generally UIX should work with all custom cards.
+En règle générale, UIX devrait fonctionner avec toutes les cartes personnalisées.
 
-::: hint Where UIX will work out of the box
-- Custom card loaded by Home Assistant and not child of another custom card. In this case UIX patches via `<hui-card>`.
-- Custom card includes `<ha-card>` and stores card config in either `config` or `_config` property. In this case UIX patches via `<ha-card>`.
-
-:::
-::: warning Where UIX will NOT work without further code or styling from parent card
-- Custom card loaded by another custom card that does NOT use modern `<hui-card>` method AND
-  - Custom card does NOT use `<ha-card>` OR
-  - Custom card uses `<ha-card>` but does NOT use `config` or `_config` property to store config. In this case UIX cannot find the `uix:` config for styling and does not apply.
+::: tip Cas où UIX fonctionne directement
+- La carte personnalisée est chargée par Home Assistant et n'est pas enfant d'une autre carte personnalisée. UIX intervient alors via `<hui-card>`.
+- La carte personnalisée inclut `<ha-card>` et stocke sa configuration dans la propriété `config` ou `_config`. UIX intervient alors via `<ha-card>`.
 
 :::
-If your custom card's use falls into the case where it is not working with other custom cards, you can apply UIX directly using `uix.applyToElement()`.
+::: warning Cas où UIX nécessite du code ou un style fourni par la carte parente
+- La carte personnalisée est chargée par une autre carte personnalisée qui n'utilise PAS la méthode moderne `<hui-card>` ET :
+  - la carte personnalisée n'utilise PAS `<ha-card>` ; OU
+  - elle utilise `<ha-card>` mais ne stocke PAS sa configuration dans `config` ou `_config`. UIX ne peut alors pas trouver la configuration `uix:` à appliquer.
+
+:::
+Si votre carte personnalisée ne fonctionne pas lorsqu'elle est utilisée avec d'autres cartes personnalisées, vous pouvez appliquer UIX directement avec `uix.applyToElement()`.
 
 ```js
 customElements.whenDefined("uix-node").then((uix) => {
@@ -31,14 +31,14 @@ customElements.whenDefined("uix-node").then((uix) => {
 }
 ```
 
-The UIX configuration is an object with the following optional properties:
+La configuration UIX est un objet qui accepte les propriétés facultatives suivantes :
 
-- `style` - UIX style definition (string or object)
-- `theme` - Home Assistant theme name applied only to this styled element subtree (`uix.theme` takes precedence over inherited/current theme)
-- `class` - string or array of classes to apply to the element
-- `debug` - boolean to enable debugging mode for the element (default `false`)
+- `style` - définition du style UIX (chaîne ou objet) ;
+- `theme` - nom du thème Home Assistant appliqué uniquement à la branche de cet élément (`uix.theme` est prioritaire sur le thème hérité ou actif) ;
+- `class` - chaîne ou tableau de classes à appliquer à l'élément ;
+- `debug` - booléen qui active le mode de débogage de l'élément (par défaut `false`).
 
-When `theme` is set, UIX applies Home Assistant frontend-style `applyThemesOnElement()` logic directly on the target element before processing UIX theme styles/macros.
+Lorsque `theme` est défini, UIX applique directement à l'élément cible la logique `applyThemesOnElement()` du frontend Home Assistant avant de traiter les styles et macros du thème UIX.
 
 ## Exemple
 
@@ -75,10 +75,10 @@ class MyAwesomeCard extends LitElement {
       <div class="content">
         <h1> This is a custom card</h1>
         <div class="my-class">
-          This card is used to test the UIX configuration for custom cards.
-          It doesn't have a <b>ha-card</b> element,
-          but it will still use any styles for cards from the UIX configuration or theme
-          when used in other custom cards.
+          Cette carte sert à tester la configuration UIX des cartes personnalisées.
+          Elle ne contient pas d'élément <b>ha-card</b>,
+          mais elle peut tout de même utiliser les styles de carte de la configuration ou du thème UIX
+          lorsqu'elle est intégrée à une autre carte personnalisée.
         </div>
       </div>
     `;

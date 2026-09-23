@@ -2,18 +2,18 @@
 
 ## Premiers pas
 
-To get started, you need themes enabled in Home Assistant.
+Pour commencer, activez les thèmes dans Home Assistant.
 
-The best way to do this is to create a new /config/themes/ directory, and then add the following to your configuration.yaml
+La méthode recommandée consiste à créer un dossier `/config/themes/`, puis à ajouter les lignes suivantes à votre fichier `configuration.yaml` :
 
 ```yaml
 frontend:
   themes: !include_dir_merge_named themes/
 ```
 
-After restarting Home Assistant, you can place theme files in that directory, load them with the Frontend [reload_theme](https://www.home-assistant.io/integrations/frontend/#setting-themes) service.
+Après avoir redémarré Home Assistant, placez les fichiers de thème dans ce dossier et chargez-les avec le service Frontend [reload_theme](https://www.home-assistant.io/integrations/frontend/#setting-themes).
 
-Theme files are normally yaml documents, which contain settings for the many themeable variables available in Home Assistant.
+Les fichiers de thème sont généralement des documents YAML contenant les paramètres des nombreuses variables personnalisables de Home Assistant.
 
 `/config/themes/red.yaml`
 
@@ -24,7 +24,7 @@ red-theme:
 ```
 
 ::: tip Theme name
-The theme name must be on the first row, and the rest should be indented one level.
+Le nom du thème doit figurer sur la première ligne ; le reste doit être indenté d'un niveau.
 
 :::
 ![Red theme example](../assets/page-assets/using/theme-red.png){ width="500" }
@@ -32,12 +32,9 @@ The theme name must be on the first row, and the rest should be indented one lev
 ## Thème UIX de base
 
 ::: info Theme variable
-The theme MUST define a `uix-theme` variable whose value selects the theme
-definition UIX uses for UIX styles and macros. `uix-theme` normally matches the Home
-Assistant theme name, but may point to another theme when you want to reuse
-its UIX configuration.
+Le thème DOIT définir une variable `uix-theme` dont la valeur désigne la configuration de thème utilisée par UIX pour ses styles et ses macros. En général, `uix-theme` correspond au nom du thème Home Assistant, mais peut désigner un autre thème si vous souhaitez réutiliser sa configuration UIX.
 
-`uix-theme` matching Home Assistant theme.
+`uix-theme` correspondant au thème Home Assistant :
 
 ```yaml
 my-awesome-theme:
@@ -46,7 +43,7 @@ my-awesome-theme:
   ... UIX theme variables, styles, macros go here ...
 ```
 
-`uix-theme` pointing to another theme.
+`uix-theme` désignant un autre thème :
 
 ```yaml
 theme-mods:
@@ -68,11 +65,11 @@ red-theme:
   ha-card-border-radius: 20
 ```
 
-Once `uix-theme` is set, we're ready to do some really powerful things.
+Une fois `uix-theme` défini, vous pouvez utiliser les fonctionnalités avancées de UIX.
 
-To apply the basic functionality of UIX globally, you can use the `uix-<thing>` variables, where `<thing>` is any [theme variable](#theme-variables).
+Pour appliquer globalement les fonctions de base de UIX, utilisez les variables `uix-<thing>`, où `<thing>` correspond à n'importe quelle [variable de thème](#theme-variables).
 
-For example, say you want a border around every row in an entities card, you may do something like the following.
+Par exemple, pour ajouter une bordure autour de chaque ligne d'une carte Entités, vous pouvez procéder ainsi :
 
 ```yaml
 type: entities
@@ -99,7 +96,7 @@ entities:
         }
 ```
 
-This can now be added to our theme instead.
+Vous pouvez maintenant déplacer cette règle dans le thème :
 
 ```yaml
 red-theme:
@@ -118,7 +115,7 @@ red-theme:
 `uix-<thing>` variables contain strings containing CSS code, and must start with `|` or `>` and be indented at least one step.
 
 :::
-Just like normal, you can use Jinja2 templating to process the styles.
+Comme pour les styles habituels, vous pouvez utiliser les modèles Jinja2 pour traiter les règles.
 
 ```yaml
 red-theme:
@@ -167,7 +164,7 @@ entities:
 
 ## Naviguer dans le DOM shadow
 
-Just like with UIX styles applied to a card, you can traverse the shadow DOM structure of the thing you want to style. To do this, you need to specify the variable `uix-<thing>-yaml`, and then the syntax is exactly the same.
+Comme pour les styles UIX appliqués à une carte, vous pouvez parcourir la structure DOM fantôme de l'élément à styliser. Pour cela, indiquez la variable `uix-<thing>-yaml` ; la syntaxe reste identique.
 
 ```yaml
 red-theme:
@@ -187,14 +184,14 @@ red-theme:
 ```
 
 ::: tip Theme variables MUST be strings
-While the value of the `uix-<thing>-yaml` variable is actually yaml, as far as the theme is concerned it MUST be a string, which in turn contains more strings.
+Bien que la valeur de `uix-<thing>-yaml` soit du YAML, elle DOIT être une chaîne du point de vue du thème, contenant elle-même d'autres chaînes.
 
 :::
 ## Surcharge locale de thème avec `uix.theme` { #local-theme-override-with-uixtheme }
 
-You can force one styled card/row/badge/element to use a different Home Assistant theme than the currently active global theme. `uix.theme` takes precedence over inherited/current theme for that UIX node.
+Vous pouvez imposer à une carte, une ligne, un badge ou un élément stylisé un thème Home Assistant différent du thème global actif. Pour ce nœud UIX, `uix.theme` est prioritaire sur le thème hérité ou actif.
 
-Main red row theme:
+Thème principal de ligne rouge :
 
 ```yaml
 row-red:
@@ -207,7 +204,7 @@ row-red:
 
 ```
 
-Override blue row theme:
+Thème de remplacement de ligne bleue :
 
 ```yaml
 row-blue-override:
@@ -219,7 +216,7 @@ row-blue-override:
       }
 ```
 
-Entities card with theme override for one row:
+Carte Entités avec un thème de remplacement pour une ligne :
 
 ```yaml
 type: entities
@@ -235,7 +232,7 @@ entities:
 ![UIX Theme override example](../assets/page-assets/using/theme-local-override.png){ width="500" }
 
 ::: warning Take caution where you use theme overrides
-Styling and theming in Home Assistant can get quite complex. You may expect a CSS variable to apply and find it does not. For example, if you apply `--primary-text-color: color;` to an entities row either by direct UIX styling to `:host {}` or `uix.theme` override you may expect the entities text to be the color you have set to `--primary-text-color`. However in this case `color` style is set at the `ha-card` element of the entities card, so this override will have no effect.
+La personnalisation des styles et des thèmes dans Home Assistant peut devenir complexe. Une variable CSS peut ne pas s'appliquer comme prévu. Par exemple, si vous définissez `--primary-text-color: color;` sur une ligne Entités avec un style UIX direct sur `:host {}` ou avec `uix.theme`, vous pourriez vous attendre à ce que le texte prenne cette couleur. Toutefois, dans ce cas, la propriété `color` est définie sur l'élément `ha-card` de la carte Entités ; le remplacement n'aura donc aucun effet.
 
 :::
 ## Mettre à jour une variable `uix-<thing>` vers `uix-<thing>-yaml`
@@ -244,7 +241,7 @@ Styling and theming in Home Assistant can get quite complex. You may expect a CS
 `uix-<thing>-yaml` always takes precedence over `uix-<thing>` which is NOT used if `uix-<thing>-yaml` is present in the theme.
 
 :::
-As you develop your UIX themes you are likely to come to a point where you started with straight CSS strings with `uix-<thing>` but need to update to use `uix-<thing>-yaml`. You can do this by using the root yaml selector `.:`. Below is the full example of the red theme using `uix-row-yaml`.
+En développant vos thèmes UIX, vous pourriez commencer avec des chaînes CSS simples dans `uix-<thing>`, puis avoir besoin de passer à `uix-<thing>-yaml`. Utilisez alors le sélecteur YAML racine `.:`. Voici l'exemple complet du thème rouge avec `uix-row-yaml`.
 
 ```yaml
 red-theme:
@@ -304,17 +301,17 @@ red-theme:
 - `uix-view-background`
 - `uix-persistent-notification-item`
 
-Also `<any variable>-yaml`.
+Aussi `<any variable>-yaml`.
 
 ## Boîtes de dialogue
 
 `uix-dialog` and `uix-dialog-yaml` apply to styles rooted in the dialog element of dialogs which may be `ha-dialog`, `ha-adaptive-dialog`, or `ha-drawer` (notification uses a dialog with an element using the drawer type). Dialogs will also have their class set to `type-<dialog-type>` where `<dialog-type>` will be the dialog element name with any `ha-` prefix stripped. e.g. UIX will append `type-dialog-box` to dialog boxes as used by alerts and other dialog boxes. The Home Assistant dialog manager places dialogs in the shadow root of the top `<home-assistant>` element. The active dialog will be the last child of the shadow root. To view what dialog you wish to target, review the last child of this shadow root node.
 
-See UIX guide [Styling dialogs with UI eXtension](https://uix-guides.lf.technology/dialogs/2026/02/27/styling-dialogs.html).
+Consultez le guide UIX [Styliser les boîtes de dialogue avec UI eXtension](https://uix-guides.lf.technology/dialogs/2026/02/27/styling-dialogs.html).
 
 ## Macros
 
-Themes can define reusable Jinja2 macros available to all cards that use the theme. Macros are specified under the `uix-macros-yaml` theme key as a YAML dictionary of macro definitions — see [Templates - Macros](templates.md#macros) for the full macro configuration reference.
+Les thèmes peuvent définir des macros Jinja2 réutilisables par toutes les cartes qui les utilisent. Les macros sont déclarées sous la clé de thème `uix-macros-yaml`, sous forme de dictionnaire YAML de définitions. Consultez [Modèles - Macros](templates.md#macros) pour la référence complète de configuration.
 
 ```yaml
 my-awesome-theme:
@@ -336,7 +333,7 @@ my-awesome-theme:
       template: "{{ color_on if is_on(entity_id) else color_off }}"
 ```
 
-Badge example using theme macros with defaults for `badge_color()`:
+Exemple de badge utilisant les valeurs par défaut de la macro de thème `badge_color()` :
 
 ```yaml
   badges:
@@ -353,7 +350,7 @@ Badge example using theme macros with defaults for `badge_color()`:
 
 ![Example using theme macros with defaults](../assets/page-assets/using/theme-macros-badge-1.gif)
 
-Badge example using theme macros setting `color_on` named variable to `red` in the `badge_color()` macro:
+Exemple de badge définissant la variable nommée `color_on` sur `red` dans la macro de thème `badge_color()` :
 
 ```yaml
   badges:
@@ -370,9 +367,9 @@ Badge example using theme macros setting `color_on` named variable to `red` in t
 
 ![Example using theme macros with defaults](../assets/page-assets/using/theme-macros-badge-2.gif)
 
-Card-level `uix.macros` take precedence over theme macros of the same name.
+Les macros `uix.macros` définies sur une carte sont prioritaires sur celles du thème portant le même nom.
 
 ::: warning
 [Theme macros](#macros) are only available in UIX styling templates, not in UIX Forge element/forge templates.
-Use UIX Forge [Global foundries](../forge/foundries.md#global-foundries) to define `forge.macros` available globally or per `mold`.
+Utilisez les [fonderies globales](../forge/foundries.md#global-foundries) de UIX Forge pour définir des `forge.macros` disponibles globalement ou pour un `mold`.
 :::
