@@ -4,7 +4,7 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
-Cette documentation française est maintenue à partir de la documentation UIX canonique en anglais. Les pages principales, le démarrage rapide et les aperçus de UIX Styling, Forge, Broker et Extras sont déjà disponibles en français.
+Cette documentation française est maintenue à partir de la documentation UIX canonique en anglais. Les pages principales, le démarrage rapide et les aperçus de UIX Styling, Forge, Broker et Extras sont déjà disponibles en français. La section complète **UIX Broker** est également disponible en français.
 
 ## Référence canonique
 
@@ -12,4 +12,4 @@ La [documentation UIX anglaise](https://uix.lf.technology/) reste la référence
 
 ## Prochaine étape
 
-Les pages de référence détaillées seront traduites progressivement, en commençant par les sections les plus utilisées de UIX Styling.
+Les pages de référence détaillées restantes seront traduites progressivement, en commençant par les sections les plus utilisées de UIX Styling et de UIX Forge.

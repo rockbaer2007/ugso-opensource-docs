@@ -793,7 +793,15 @@ const sidebarFr = {
       { text: 'Démarrage rapide', link: '/fr/projects/uix/quick-start' },
       { text: 'UIX Styling', link: '/fr/projects/uix/using/' },
       { text: 'UIX Forge', link: '/fr/projects/uix/forge/' },
-      { text: 'UIX Broker', link: '/fr/projects/uix/broker/' },
+        { text: 'UIX Broker', collapsed: false, items: [
+          { text: 'Vue d’ensemble', link: '/fr/projects/uix/broker/' },
+          { text: 'Broker', link: '/fr/projects/uix/broker/broker' },
+          { text: 'Domaines', link: '/fr/projects/uix/broker/realms' },
+          { text: 'Ancres d’interaction', link: '/fr/projects/uix/broker/interaction-anchors' },
+          { text: 'Règles', link: '/fr/projects/uix/broker/rules' },
+          { text: 'Directives', link: '/fr/projects/uix/broker/directives' },
+          { text: 'Exemples', link: '/fr/projects/uix/broker/examples' }
+        ] },
       { text: 'UIX Extras', link: '/fr/projects/uix/extras/' },
       { text: 'Guides UIX', link: '/fr/projects/uix/guides' },
       { text: 'FAQ', link: '/fr/projects/uix/faq' },
