@@ -199,35 +199,40 @@ const UgsoLayout = defineComponent({
       h(DefaultTheme.Layout, null, {
         'doc-after': () =>
           /^\/(?:fr\/)?projects\/uix\//.test(route.path)
-            ? h('div', { class: 'uix-version-footer' }, [
-                h('strong', 'UIX deutsche Übersetzung'),
-                h(
-                  'span',
-                  'Stabile Basis: UIX 8.2.0. Gekennzeichnete Ergänzungen bis 8.3.0-beta.8, geprüft am 13.09.2026. Maßgeblich bleibt die englische Originaldokumentation.'
-                ),
-                h('span', [
-                  h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, 'Englische Originaldoku'),
-                  ' · ',
+            ? (() => {
+                const isFrench = route.path.startsWith('/fr/')
+                return h('div', { class: 'uix-version-footer' }, [
+                  h('strong', isFrench ? 'Traduction française d’UIX' : 'UIX deutsche Übersetzung'),
                   h(
-                    'a',
-                    {
-                      href: 'https://github.com/Lint-Free-Technology/uix/commit/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933',
-                      target: '_blank',
-                      rel: 'noopener'
-                    },
-                    'Stabile Basis f9eb8fa'
+                    'span',
+                    isFrench
+                      ? 'Base stable : UIX 8.2.0. Compléments signalés jusqu’à 8.3.0-beta.8, vérifiés le 13/09/2026. La documentation originale en anglais reste la référence.'
+                      : 'Stabile Basis: UIX 8.2.0. Gekennzeichnete Ergänzungen bis 8.3.0-beta.8, geprüft am 13.09.2026. Maßgeblich bleibt die englische Originaldokumentation.'
                   ),
-                  ' · ',
-                  h('a', { href: '/projects/uix/translation-status' }, 'Abgleich c33ff79')
-                ]),
-                h('span', [
-                  'Originale UIX-Dokumentation von ',
-                  h('a', { href: 'https://github.com/Lint-Free-Technology/uix', target: '_blank', rel: 'noopener' }, 'Lint-Free-Technology/uix'),
-                  ', lizenziert unter ',
-                  h('a', { href: 'https://creativecommons.org/licenses/by/4.0/', target: '_blank', rel: 'noopener' }, 'CC BY 4.0'),
-                  '.'
+                  h('span', [
+                    h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),
+                    ' · ',
+                    h(
+                      'a',
+                      {
+                        href: 'https://github.com/Lint-Free-Technology/uix/commit/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933',
+                        target: '_blank',
+                        rel: 'noopener'
+                      },
+                      isFrench ? 'Base stable f9eb8fa' : 'Stabile Basis f9eb8fa'
+                    ),
+                    ' · ',
+                    h('a', { href: isFrench ? '/fr/projects/uix/translation-status' : '/projects/uix/translation-status' }, isFrench ? 'Comparaison c33ff79' : 'Abgleich c33ff79')
+                  ]),
+                  h('span', [
+                    isFrench ? 'Documentation originale d’UIX par ' : 'Originale UIX-Dokumentation von ',
+                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix', target: '_blank', rel: 'noopener' }, 'Lint-Free-Technology/uix'),
+                    isFrench ? ', publiée sous licence ' : ', lizenziert unter ',
+                    h('a', { href: 'https://creativecommons.org/licenses/by/4.0/', target: '_blank', rel: 'noopener' }, 'CC BY 4.0'),
+                    '.'
+                  ])
                 ])
-              ])
+              })()
             : null
       })
   }
