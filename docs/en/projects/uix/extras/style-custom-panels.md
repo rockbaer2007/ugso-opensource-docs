@@ -1,12 +1,12 @@
 ---
-title: Style custom panels loaded as iframe
-description: English placeholder page for Style custom panels loaded as iframe in the UGSo Open Source documentation.
+title: Style frame panels
+description: English placeholder page for styling panels loaded inside frames.
 ---
-# Style custom panels loaded as iframe
+# Style frame panels
 
-This English page has been added so the Open Source documentation has a complete language path. The detailed English translation is still being expanded.
+This English page keeps the language path available while its full translation is being prepared.
 
-The German source page is currently the reference: [projects/uix/extras/style-custom-panels.md](/projects/uix/extras/style-custom-panels).
+The German page currently contains the translated details: [Frame-Panels stylen](/projects/uix/extras/style-frame-panels).
 
 ## Status
 

@@ -4,14 +4,14 @@ description: Custom Panels mit UIX stylen.
 ---
 # Custom Panels stylen
 
-::: info iframe-Custom-Panels ab UIX 8.2.0-beta.1
-Direkt geladene Custom Panels kann UIX bereits stylen. Styling für Custom Panels, die als iframe geladen werden, ist experimentell und muss aktiviert werden. Siehe [Extras - Custom Panels als iframe stylen](../extras/style-custom-panels).
+::: info Experimentelles Styling von Frame-Panels
+Direkt geladene Custom Panels kann UIX ohne zusätzliche Einstellung stylen. Das Styling innerhalb von Custom-Panel-Frames und App-Frames ist experimentell und muss aktiviert werden. Siehe [Extras – Frame-Panels stylen](../extras/style-frame-panels).
 :::
 
-UIX stylt Custom Panels, die nicht als iframe geladen werden, direkt. Es kann außerdem Custom Panels stylen, die als iframe geladen werden. Diese Funktion ist aktuell experimentell.
+UIX stylt direkt geladene Custom Panels unmittelbar. Für Custom Panels, die in einem iframe geladen werden, kann UIX außerdem eine interne Laufzeit in den Frame einfügen. Diese experimentelle Laufzeit wird mit App-Frames geteilt und ist unabhängig davon, welcher Paneltyp sie aufruft.
 
 ::: info So funktioniert iframe-Styling
-1. Custom Panels im iframe werden über einen Patch in `ha-panel-custom` gestylt. Dadurch entsteht eine gepatchte Home-Assistant-Frontend-`customPanelJS`, die im iframe zunächst die normale Home-Assistant-Frontend-`customPanelJS` und danach ein verdichtetes UIX-JavaScript-Modul ausführt.
+1. Custom Panels im iframe werden durch die interne UIX-Frame-Laufzeit gestylt, die der Patch für `ha-panel-custom` einfügt. Dieselbe Laufzeit wird auch für App-Frames verwendet und ist nicht an einen bestimmten Paneltyp gebunden.
 2. Wenn UIX erkennt, dass kein Theme angewendet wurde, wird UIX Styling mit dem aktuell geladenen Home-Assistant-Frontend-Theme angewendet. Manche Custom Panels wie HACS wenden das Theme selbst an; dann erbt UIX Styling dieses Theme.
 3. Home-Assistant-Custom-Panels werden mit einer Konfiguration inklusive `name:` definiert. UIX nutzt diesen Namen für die Theme-Variable, mit der iframe-Custom-Panels gestylt werden.
 :::

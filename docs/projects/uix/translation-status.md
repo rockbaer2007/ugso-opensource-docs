@@ -31,6 +31,18 @@ Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation 
 | Veröffentlichung | Englische/deutsche Sprachverweise im HTML, Metadatenvertrag und Vorabversions-Kompatibilität beschrieben |
 | Kopierbare Beispiele | Maskierte Jinja-Klammern auf 17 Seiten durch echte Template-Begrenzer ersetzt, einschließlich eines zusätzlich gefundenen verschachtelten Codeblocks; Inline-Code und defekte Abschnittslinks korrigiert |
 
+## Abgleich vom 24.09.2026
+
+Die UIX-Änderungen bis zur englischen Revision [`8c6fb83`](https://github.com/Lint-Free-Technology/uix/commit/8c6fb830d75477b30f035323161bac8d41599a78) wurden für Deutsch und Französisch geprüft. Dabei wurden die Änderungen aus [`a43f3e2`](https://github.com/Lint-Free-Technology/uix/commit/a43f3e2bf03edb808c0ea8d83af426d06626181e) und [`8711f1e`](https://github.com/Lint-Free-Technology/uix/commit/8711f1eb4a2a479a2a43d748c0b26f94b040e87a) mitberücksichtigt.
+
+| Bereich | Abgeglichene Inhalte |
+| --- | --- |
+| Extras | Die frühere Seite zum Styling von Custom Panels im iframe wurde durch [Frame-Panels stylen](./extras/style-frame-panels) ersetzt. Sie beschreibt die experimentelle, interne Laufzeit, die Aktivierung, unterstützte gleichursprüngliche Frames und die Framework-Kompatibilität. |
+| UIX Styling | [Custom Panels](./using/custom-panels) unterscheidet nun zwischen direkt geladenen Panels, Panel-Frames und App-Frames. [App- und Ingress-Panels](./using/apps) dokumentiert die Theme-Schlüssel, Slug-Auflösung und den Geltungsbereich von `uix-app`. |
+| Navigation und Medien | Deutsche Seitenleiste und Übersichtsseiten verweisen auf die neuen Seiten; das App-Panel-Beispielbild wurde auf den kanonischen Stand aktualisiert. |
+
+Die App-Frame-Funktion ist laut Original ab UIX `3.4.0-beta.1` verfügbar. Die experimentelle Option für Frame-Panels ist standardmäßig deaktiviert. Die stabile Metadatenbasis der deutschen Übersetzung bleibt davon unberührt.
+
 Die stabile Metadatenbasis in `uix-docs.json` bleibt `8.2.0` / `f9eb8fa`. Dieser zusätzliche Änderungsabgleich ist kein Wechsel auf eine stabile Version 8.3.0. Eine Vorabversion ist als solche zu behandeln.
 
 Die Dokumentation wird mit VitePress gebaut. Die ergänzende Prüfung `python scripts/check-uix-docs.py` kontrolliert nach dem Build die gerenderten Codebeispiele, UIX-Linkziele und Sprachverweise. Home-Assistant-Laufzeittests sämtlicher Beispiele sind damit nicht abgedeckt.

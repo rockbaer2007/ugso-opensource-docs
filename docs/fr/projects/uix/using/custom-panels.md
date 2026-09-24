@@ -3,10 +3,14 @@ description: Apprenez à styliser les panneaux personnalisés.
 ---
 # Styliser les panneaux personnalisés
 
-UIX peut styliser directement les panneaux personnalisés qui ne sont pas chargés dans une iframe. Il peut également styliser ceux qui y sont chargés. Cette fonction expérimentale doit être activée au préalable. Consultez [Extras — Styliser les panneaux personnalisés](../extras/style-custom-panels.md).
+::: info Style expérimental des panneaux intégrés dans un frame
+UIX peut styliser directement les panneaux personnalisés sans réglage supplémentaire. Le style à l'intérieur des frames de panneaux personnalisés et d'applications est expérimental et doit être activé. Consultez [Extras — Styliser les panneaux intégrés dans un frame](../extras/style-frame-panels.md).
+:::
+
+UIX stylise directement les panneaux personnalisés chargés dans Home Assistant. Pour ceux qui sont chargés dans une iframe, UIX peut également injecter un moteur interne dans la frame. Ce moteur expérimental est partagé avec les frames d'applications et ne dépend pas du type de panneau qui l'appelle.
 
 ::: info Panneau personnalisé chargé dans une iframe — fonctionnement
-1. Un correctif dans `ha-panel-custom` crée une version modifiée du fichier `customPanelJS` du frontend Home Assistant, utilisée par l'iframe du panneau. Elle exécute le `customPanelJS` standard, puis un module JavaScript UIX allégé.
+1. Les panneaux personnalisés chargés dans une iframe sont stylisés par le moteur interne des frames UIX, injecté par le correctif de `ha-panel-custom`. Ce même moteur est utilisé pour les frames d'applications et ne dépend pas du type de panneau qui l'a appelé.
 2. Si UIX détecte qu'aucun thème n'est appliqué, il applique UIX Styling avec le thème actuellement chargé dans le frontend Home Assistant. Certains panneaux, comme [HACS](https://hacs.xyz), appliquent déjà le thème ; dans ce cas, le style UIX hérite de celui-ci.
 3. La configuration des [panneaux personnalisés Home Assistant](https://www.home-assistant.io/integrations/panel_custom/) contient un champ `name:`. UIX Styling utilise ce nom pour créer la variable de thème UIX qui stylise les panneaux chargés dans une iframe.
 

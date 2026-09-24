@@ -391,6 +391,7 @@ const sidebarDe = {
         { text: 'Abschnitte', link: '/projects/uix/using/section-backgrounds' },
         { text: 'Ansichten', link: '/projects/uix/using/view-backgrounds' },
         { text: 'Custom Panels', link: '/projects/uix/using/custom-panels' },
+        { text: 'App- und Ingress-Panels', link: '/projects/uix/using/apps' },
         { text: 'Templates', link: '/projects/uix/using/templates' },
         { text: 'Themes', link: '/projects/uix/using/themes' },
         { text: 'Weitere Optionen', link: '/projects/uix/using/other' }
@@ -458,7 +459,7 @@ const sidebarDe = {
         { text: 'Icon-Styling deaktivieren', link: '/projects/uix/extras/disable-icon-styling' },
         { text: 'Entity-Picture-Override', link: '/projects/uix/extras/disable-entity-picture-image-override' },
         { text: 'Always patch ha-card', link: '/projects/uix/extras/always-patch-ha-card' },
-        { text: 'Custom Panels im iframe', link: '/projects/uix/extras/style-custom-panels' },
+        { text: 'Frame-Panels stylen', link: '/projects/uix/extras/style-frame-panels' },
         { text: 'Entwickler', link: '/projects/uix/developers/' },
         { text: 'Karten entwickeln', link: '/projects/uix/developers/cards' },
         { text: 'Themes entwickeln', link: '/projects/uix/developers/themes' }
@@ -805,6 +806,7 @@ const sidebarFr = {
         { text: 'Sections', link: '/fr/projects/uix/using/section-backgrounds' },
         { text: 'Vues', link: '/fr/projects/uix/using/view-backgrounds' },
         { text: 'Panneaux personnalisés', link: '/fr/projects/uix/using/custom-panels' },
+        { text: 'Panneaux d’applications et d’Ingress', link: '/fr/projects/uix/using/apps' },
         { text: 'Modèles', link: '/fr/projects/uix/using/templates' },
         { text: 'Thèmes', link: '/fr/projects/uix/using/themes' },
         { text: 'Autres options', link: '/fr/projects/uix/using/other' }
@@ -856,7 +858,7 @@ const sidebarFr = {
         { text: 'Désactiver le style des icônes', link: '/fr/projects/uix/extras/disable-icon-styling' },
         { text: 'Remplacement de l’image d’entité', link: '/fr/projects/uix/extras/disable-entity-picture-image-override' },
         { text: 'Toujours corriger ha-card', link: '/fr/projects/uix/extras/always-patch-ha-card' },
-        { text: 'Panneaux personnalisés dans une iframe', link: '/fr/projects/uix/extras/style-custom-panels' },
+        { text: 'Styliser les panneaux intégrés dans un frame', link: '/fr/projects/uix/extras/style-frame-panels' },
         { text: 'Développeurs', link: '/fr/projects/uix/developers/' },
         { text: 'Développer des cartes', link: '/fr/projects/uix/developers/cards' },
         { text: 'Développer des thèmes', link: '/fr/projects/uix/developers/themes' }

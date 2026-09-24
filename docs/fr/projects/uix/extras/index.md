@@ -12,4 +12,4 @@ UI eXtension propose des réglages supplémentaires pour contrôler l'intégrati
 - [Désactiver le patch de style des icônes](./disable-icon-styling.md)
 - [Désactiver le remplacement des images d'entité](./disable-entity-picture-image-override.md)
 - [Toujours patcher ha-card (expérimental)](always-patch-ha-card.md)
-- [Styliser les panneaux personnalisés (expérimental)](style-custom-panels.md)
+- [Styliser les panneaux intégrés dans un frame (expérimental)](style-frame-panels.md)

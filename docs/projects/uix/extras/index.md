@@ -3,7 +3,7 @@ title: UIX Extras
 ---
 # UIX Extras
 
-UIX Extras sind zusätzliche Funktionen außerhalb der normalen Styling- und Forge-Konfiguration. Sie helfen bei Aktionen, Performance, Dialogen, Hash-Variablen und Kompatibilitätsoptionen.
+UIX Extras bieten zusätzliche Einstellungen zur Steuerung der Integration oder des Home-Assistant-Frontends.
 
 ## Themen
 
@@ -14,4 +14,4 @@ UIX Extras sind zusätzliche Funktionen außerhalb der normalen Styling- und For
 - [Icon-Styling deaktivieren](./disable-icon-styling)
 - [Entity-Picture-Image-Override deaktivieren](./disable-entity-picture-image-override)
 - [ha-card immer patchen (experimentell)](./always-patch-ha-card)
-- [Custom Panels stylen (experimentell)](./style-custom-panels)
+- [Frame-Panels stylen (experimentell)](./style-frame-panels)
