@@ -360,6 +360,7 @@ const sidebarDe = {
         { text: 'Repository-Format', link: '/projects/atlas-plugins/repository-format' },
         { text: 'Home Assistant Card Editor', link: '/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/projects/atlas-plugins/file-studio' },
+        { text: 'ATLAS Terminal', link: '/projects/atlas-plugins/terminal' },
         { text: 'Automation Extractor', link: '/projects/atlas-plugins/automation-extractor' },
         { text: 'Demo-Repository', link: '/projects/atlas-plugins/demo-repository' }
       ]
@@ -682,6 +683,7 @@ const sidebarEn = {
         { text: 'Repository Format', link: '/en/projects/atlas-plugins/repository-format' },
         { text: 'Home Assistant Card Editor', link: '/en/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/en/projects/atlas-plugins/file-studio' },
+        { text: 'ATLAS Terminal', link: '/en/projects/atlas-plugins/terminal' },
         { text: 'Automation Extractor', link: '/en/projects/atlas-plugins/automation-extractor' },
         { text: 'Demo Repository', link: '/en/projects/atlas-plugins/demo-repository' }
       ]
@@ -749,6 +751,7 @@ const sidebarFr = {
         { text: 'Format du dépôt', link: '/fr/projects/atlas-plugins/repository-format' },
         { text: 'Home Assistant Card Editor', link: '/fr/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/fr/projects/atlas-plugins/file-studio' },
+        { text: 'ATLAS Terminal', link: '/fr/projects/atlas-plugins/terminal' },
         { text: 'Automation Extractor', link: '/fr/projects/atlas-plugins/automation-extractor' },
         { text: 'Dépôt de démonstration', link: '/fr/projects/atlas-plugins/demo-repository' }
       ]

@@ -12,6 +12,7 @@ ATLAS is still in development. Even verified plugins do not replace your own rev
 | --- | --- | --- | --- |
 | 🧩 | ATLAS Home Assistant Card Editor | verified | <a class="atlas-plugin-table-button" href="/en/projects/atlas-plugins/homeassistant-card-editor">Details</a> |
 | 🗂️ | ATLAS File Studio | verified | <a class="atlas-plugin-table-button" href="/en/projects/atlas-plugins/file-studio">Details</a> |
+| 🖥️ | ATLAS Terminal | experimental | <a class="atlas-plugin-table-button" href="/en/projects/atlas-plugins/terminal">Details</a> |
 | ⚙️ | ATLAS Automation Exporter / Editor | experimental | <a class="atlas-plugin-table-button" href="/en/projects/atlas-plugins/automation-extractor">Details</a> |
 
 ## New/Unreviewed Plugins
