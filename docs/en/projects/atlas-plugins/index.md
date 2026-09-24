@@ -12,7 +12,7 @@ The plugin interfaces are still in progress. These pages document the current AT
 - [Verified Plugins](./verified-plugins): compact lists of verified and new unreviewed ATLAS plugins.
 - [Home Assistant Card Editor](./homeassistant-card-editor): the first official ATLAS reference plugin.
 - [ATLAS File Studio](./file-studio): second independent ATLAS plugin for approved Home Assistant file paths.
-- [ATLAS Terminal](./terminal): standalone plugin repository for the authenticated browser terminal with an optional SSH target.
+- [ATLAS Terminal](./terminal): authenticated browser terminal with optional SSH, Oh My Posh themes and a server-served Nerd Font.
 - [ATLAS Automation Exporter / Editor](./automation-extractor): new plugin for analyzing, safely backing up and exporting Home Assistant automations.
 - [Demo Repository](./demo-repository): public test repository for Administration, Hub and install flow.
 
