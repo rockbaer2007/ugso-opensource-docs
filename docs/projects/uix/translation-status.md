@@ -9,14 +9,18 @@ Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation 
 ## Stand
 
 - Alle 61 Markdown-Seiten des abgeglichenen englischen Stands haben deutsche Gegenstücke.
-- Die stabile Basis der deutschen Dokumentation ist UIX `8.2.0`.
-- Letzter Änderungsabgleich: **13.09.2026**, englische Revision [`c33ff79`](https://github.com/Lint-Free-Technology/uix/commit/c33ff7995b757d5e7ead0cf8fd5fd85ed4d791ab), enthalten in **8.3.0-beta.8**.
-- Alle 21 automatischen Übersetzungshinweise vom 04. bis 13.09.2026 wurden berücksichtigt. Neue 8.3-Funktionen sind als Vorabfunktionen gekennzeichnet.
+- Geprüft gegen den stabilen UIX-Release `8.3.1` vom 22.09.2026, Revision [`add5557`](https://github.com/Lint-Free-Technology/uix/commit/add5557c0ee13a98c9fe249bed06d215606f2507).
+- Die Release-Korrekturen sind berücksichtigt: Die Map-Spark-Seite nennt den Fix für Home Assistant 2026.9.0; außerdem dokumentiert diese Statusseite den Kompatibilitätsfix für das Laden von Web Awesome auf älteren Geräten, einschließlich iOS 15.
+- Die zuvor abgeglichenen Ergänzungen aus UIX `8.3.0-beta.8` sind nun Bestandteil der stabilen 8.3-Reihe; Hinweise auf Beta-Versionen bleiben dort erhalten, wo sie die Einführung einzelner Funktionen beschreiben.
 - Frühere `8.2.0-beta`-Hinweise wurden mit dem stabilen Release `8.2.0` zusammengeführt.
 - Die Seiten [Icons](./using/icons) und [Bilder](./using/images) wurden gezielt näher an die englische Originaldokumentation angeglichen, da diese Bereiche bei der externen Prüfung aufgefallen sind.
 - Die Seite [Button Spark](./forge/sparks/button) enthält die mit UIX `8.2.0` veröffentlichte `outlined`-Darstellung.
 - Lizenz- und Footer-Hinweise nennen die CC-BY-4.0-Lizenz der originalen UIX-Dokumentation.
 - Die deutsche Fassung wird weiter mit dem englischen Original abgeglichen, sobald neue UIX-Änderungen im Original-Repository verfügbar sind.
+
+## Aktualisierung vom 24.09.2026
+
+Der Dokumentationsstand wurde gegen den stabilen UIX-Release `8.3.1` geprüft. Das Release nennt zwei Fehlerbehebungen: Die Map-Spark-Funktion wurde nach Änderungen an Home Assistant 2026.9.0 wiederhergestellt, und ein Ladeproblem von Web Awesome auf älteren Geräten (darunter iOS 15) wird umgangen. Diese Punkte sind Release-Änderungen; sie führen keine neue Konfigurationsoption ein.
 
 ## Aktualisierung vom 13.09.2026
 
@@ -43,7 +47,7 @@ Die UIX-Änderungen bis zur englischen Revision [`8c6fb83`](https://github.com/L
 
 Die App-Frame-Funktion ist laut Original ab UIX `3.4.0-beta.1` verfügbar. Die experimentelle Option für Frame-Panels ist standardmäßig deaktiviert. Die stabile Metadatenbasis der deutschen Übersetzung bleibt davon unberührt.
 
-Die stabile Metadatenbasis in `uix-docs.json` bleibt `8.2.0` / `f9eb8fa`. Dieser zusätzliche Änderungsabgleich ist kein Wechsel auf eine stabile Version 8.3.0. Eine Vorabversion ist als solche zu behandeln.
+Die stabile Versionsangabe in `uix-docs.json` ist auf `8.3.1` / `add5557` aktualisiert.
 
 Die Dokumentation wird mit VitePress gebaut. Die ergänzende Prüfung `python scripts/check-uix-docs.py` kontrolliert nach dem Build die gerenderten Codebeispiele, UIX-Linkziele und Sprachverweise. Home-Assistant-Laufzeittests sämtlicher Beispiele sind damit nicht abgedeckt.
 

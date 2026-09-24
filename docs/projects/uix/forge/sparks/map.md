@@ -5,6 +5,8 @@ title: Map Spark
 
 Der Map Spark erweitert Home-Assistant-Karten mit Kartenfunktionen wie Zoom-Speicher, automatischem Einpassen, Tour-Modus, Verlaufsslider und Entity-Filter.
 
+> **Hinweis zu UIX 8.3.1:** Das Release behebt einen Fehler, durch den der Map Spark nach Änderungen an der Home-Assistant-Karte in Version 2026.9.0 nicht mehr funktionierte.
+
 ## Grundnutzung
 
 ```yaml

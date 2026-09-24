@@ -3,6 +3,8 @@ title: À propos
 ---
 # UI eXtension pour Home Assistant
 
+> **Traduction indépendante** — Cette documentation française est maintenue par UGSo Software et n'est pas la documentation officielle du projet UIX. La documentation anglaise reste la référence. Cette version a été vérifiée avec la version stable UIX `8.3.1` du 22 septembre 2026, révision [`add5557`](https://github.com/Lint-Free-Technology/uix/commit/add5557c0ee13a98c9fe249bed06d215606f2507).
+
 ![light-logo-icon](./assets/images/mixed.png)
 
 ## Qu'est-ce que UI eXtension ?

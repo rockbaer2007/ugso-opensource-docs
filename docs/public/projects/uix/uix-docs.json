@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "uix",
   "language": "de",
-  "docs_version": "8.2.0",
-  "stable_version": "8.2.0",
-  "source_revision": "f9eb8fa571dbce6cd771c53ca11dcf2401c8a933",
+  "docs_version": "8.3.1",
+  "stable_version": "8.3.1",
+  "source_revision": "add5557c0ee13a98c9fe249bed06d215606f2507",
   "canonical_url": "https://uix.lf.technology/",
   "repository": "https://github.com/Lint-Free-Technology/uix",
   "translation_notice": "Unofficial German translation. The English UIX documentation is authoritative."

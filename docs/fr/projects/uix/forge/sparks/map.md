@@ -14,6 +14,8 @@ Le spark `map` ajoute une gestion avancée de la vue à une carte Map utilisée 
 - **Mode curseur de période** (`hours_to_show: true | object`) : ajoute un curseur `ha-slider` interactif à la carte afin de régler en temps réel la durée de l'historique chargé et affiché.
 - **Mode filtre d'entités** (`entity_filter: true | object`) : ajoute à la carte un menu déroulant avec cases à cocher pour afficher ou masquer les entités en temps réel.
 
+> **Note pour UIX 8.3.1 :** cette version corrige un problème qui empêchait le spark Map de fonctionner après les changements apportés à la carte Home Assistant dans la version 2026.9.0.
+
 ## Utilisation de base
 
 ```yaml
