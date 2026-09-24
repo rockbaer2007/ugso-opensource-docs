@@ -5,6 +5,37 @@ import type { Theme } from 'vitepress'
 import './custom.css'
 import '../blog.css'
 
+declare global {
+  interface Window {
+    ugsoTrack?: (path?: string) => void
+  }
+}
+
+const statsScriptUrl = 'https://stats.ugso-software.de/tracker.js'
+
+function trackPage(path: string) {
+  window.ugsoTrack?.(path)
+}
+
+function loadStatsTracker(getPath: () => string) {
+  const existingScript = document.querySelector<HTMLScriptElement>(`script[src="${statsScriptUrl}"]`)
+
+  if (existingScript) {
+    if (window.ugsoTrack) {
+      trackPage(getPath())
+    } else {
+      existingScript.addEventListener('load', () => trackPage(getPath()), { once: true })
+    }
+    return
+  }
+
+  const script = document.createElement('script')
+  script.src = statsScriptUrl
+  script.async = true
+  script.onload = () => trackPage(getPath())
+  document.head.appendChild(script)
+}
+
 const localeFlags: Record<string, string> = {
   DE: '/images/flags/deutschland.png',
   EN: '/images/flags/englische-sprache.png',
@@ -179,6 +210,7 @@ const UgsoLayout = defineComponent({
     onMounted(() => {
       updateRouteClass()
       applyLocaleChrome(route.path)
+      loadStatsTracker(() => route.path)
       observer = new MutationObserver(() => applyLocaleChrome(route.path))
       observer.observe(document.body, { childList: true, subtree: true })
     })
@@ -192,6 +224,7 @@ const UgsoLayout = defineComponent({
       () => nextTick(() => {
         updateRouteClass()
         applyLocaleChrome(route.path)
+        trackPage(route.path)
       })
     )
 
