@@ -6,6 +6,10 @@ description: Create an ATLAS plugin from the official GitHub template.
 
 The [official ATLAS Plugin Template on GitHub](https://github.com/rockbaer2007/atlas-plugin-template) is a ready-to-use repository for a single ATLAS plugin. Use GitHub's **Use this template** action to create your own repository.
 
+## Plugin generator in Administration
+
+ATLAS Administration includes an initial plugin generator. It creates an install package from the plugin ID, name, description, version, entry path and capabilities, with an editable HTML/CSS/JavaScript starter, plus a `repository.json` catalog file. Review the generated content and paths and add the files to your repository; the generator does not create a GitHub repository or publish anything automatically.
+
 ## Quick start
 
 1. Open the template repository and choose **Use this template** → **Create a new repository**.
