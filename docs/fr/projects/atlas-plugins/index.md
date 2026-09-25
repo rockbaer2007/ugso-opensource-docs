@@ -13,7 +13,7 @@ Les interfaces de plugins sont encore en cours d'élaboration. La documentation 
 ## Pour commencer
 
 - [Format du dépôt](./repository-format) : structure de `repository.json`, champs obligatoires, identifiant ATLAS et exemple.
-- [Modèle de plugin](https://github.com/rockbaer2007/atlas-plugin-template) : modèle GitHub réutilisable avec génération du paquet et validation.
+- [Modèle de plugin](./plugin-template) : utiliser le modèle, personnaliser un plugin, créer son paquet et le publier.
 - [Plugins vérifiés](./verified-plugins) : liste des plugins vérifiés et des nouvelles propositions qui restent à examiner.
 - [Home Assistant Card Editor](./homeassistant-card-editor) : premier plugin de référence officiel d'ATLAS.
 - [ATLAS File Studio](./file-studio) : plugin indépendant pour les chemins Home Assistant autorisés.
