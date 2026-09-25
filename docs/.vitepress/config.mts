@@ -359,11 +359,26 @@ const sidebarDe = {
         { text: 'Geprüfte Plugins', link: '/projects/atlas-plugins/gepruefte-plugins' },
         { text: 'Repository-Format', link: '/projects/atlas-plugins/repository-format' },
         { text: 'Plugin-Vorlage', link: '/projects/atlas-plugins/plugin-template' },
+        { text: 'Plugin-Entwicklung', link: '/projects/atlas-plugins/developers/' },
         { text: 'Home Assistant Card Editor', link: '/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/projects/atlas-plugins/file-studio' },
         { text: 'ATLAS Terminal', link: '/projects/atlas-plugins/terminal' },
         { text: 'Automation Extractor', link: '/projects/atlas-plugins/automation-extractor' },
         { text: 'Demo-Repository', link: '/projects/atlas-plugins/demo-repository' }
+      ]
+    }
+  ],
+  '/projects/atlas-plugins/developers/': [
+    {
+      text: 'Plugin-Entwicklung',
+      collapsed: false,
+      items: [
+        { text: 'Übersicht', link: '/projects/atlas-plugins/developers/' },
+        { text: 'Manifest und Fähigkeiten', link: '/projects/atlas-plugins/developers/manifest' },
+        { text: 'Runtime und Lebenszyklus', link: '/projects/atlas-plugins/developers/runtime' },
+        { text: 'Bauen und veröffentlichen', link: '/projects/atlas-plugins/developers/publishing' },
+        { text: 'Plugin-Vorlage', link: '/projects/atlas-plugins/plugin-template' },
+        { text: 'Repository-Format', link: '/projects/atlas-plugins/repository-format' }
       ]
     }
   ],
@@ -683,11 +698,26 @@ const sidebarEn = {
         { text: 'Verified Plugins', link: '/en/projects/atlas-plugins/verified-plugins' },
         { text: 'Repository Format', link: '/en/projects/atlas-plugins/repository-format' },
         { text: 'Plugin Template', link: '/en/projects/atlas-plugins/plugin-template' },
+        { text: 'Plugin Development', link: '/en/projects/atlas-plugins/developers/' },
         { text: 'Home Assistant Card Editor', link: '/en/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/en/projects/atlas-plugins/file-studio' },
         { text: 'ATLAS Terminal', link: '/en/projects/atlas-plugins/terminal' },
         { text: 'Automation Extractor', link: '/en/projects/atlas-plugins/automation-extractor' },
         { text: 'Demo Repository', link: '/en/projects/atlas-plugins/demo-repository' }
+      ]
+    }
+  ],
+  '/en/projects/atlas-plugins/developers/': [
+    {
+      text: 'Plugin Development',
+      collapsed: false,
+      items: [
+        { text: 'Overview', link: '/en/projects/atlas-plugins/developers/' },
+        { text: 'Manifest and Capabilities', link: '/en/projects/atlas-plugins/developers/manifest' },
+        { text: 'Runtime and Lifecycle', link: '/en/projects/atlas-plugins/developers/runtime' },
+        { text: 'Build and Publish', link: '/en/projects/atlas-plugins/developers/publishing' },
+        { text: 'Plugin Template', link: '/en/projects/atlas-plugins/plugin-template' },
+        { text: 'Repository Format', link: '/en/projects/atlas-plugins/repository-format' }
       ]
     }
   ],
@@ -752,11 +782,26 @@ const sidebarFr = {
         { text: 'Plugins vérifiés', link: '/fr/projects/atlas-plugins/verified-plugins' },
         { text: 'Format du dépôt', link: '/fr/projects/atlas-plugins/repository-format' },
         { text: 'Modèle de plugin', link: '/fr/projects/atlas-plugins/plugin-template' },
+        { text: 'Développement de plugins', link: '/fr/projects/atlas-plugins/developers/' },
         { text: 'Home Assistant Card Editor', link: '/fr/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/fr/projects/atlas-plugins/file-studio' },
         { text: 'ATLAS Terminal', link: '/fr/projects/atlas-plugins/terminal' },
         { text: 'Automation Extractor', link: '/fr/projects/atlas-plugins/automation-extractor' },
         { text: 'Dépôt de démonstration', link: '/fr/projects/atlas-plugins/demo-repository' }
+      ]
+    }
+  ],
+  '/fr/projects/atlas-plugins/developers/': [
+    {
+      text: 'Développement de plugins',
+      collapsed: false,
+      items: [
+        { text: 'Vue d’ensemble', link: '/fr/projects/atlas-plugins/developers/' },
+        { text: 'Manifeste et capacités', link: '/fr/projects/atlas-plugins/developers/manifest' },
+        { text: 'Runtime et cycle de vie', link: '/fr/projects/atlas-plugins/developers/runtime' },
+        { text: 'Construire et publier', link: '/fr/projects/atlas-plugins/developers/publishing' },
+        { text: 'Modèle de plugin', link: '/fr/projects/atlas-plugins/plugin-template' },
+        { text: 'Format du dépôt', link: '/fr/projects/atlas-plugins/repository-format' }
       ]
     }
   ],
