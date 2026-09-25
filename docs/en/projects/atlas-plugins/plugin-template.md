@@ -8,7 +8,7 @@ The [official ATLAS Plugin Template on GitHub](https://github.com/rockbaer2007/a
 
 ## Plugin generator in Administration
 
-ATLAS Administration includes an initial plugin generator. It creates an install package from the plugin ID, name, description, version, entry path and capabilities, with an editable HTML/CSS/JavaScript starter, plus a `repository.json` catalog file. Review the generated content and paths and add the files to your repository; the generator does not create a GitHub repository or publish anything automatically.
+ATLAS Administration includes an initial plugin generator. It creates an install package from the plugin ID, name, description, version, entry path and capabilities, with an editable HTML/CSS/JavaScript starter, plus a `repository.json` catalog file. Review the generated content and paths and add the files to your repository; the generator does not create a GitHub repository or publish anything automatically. Manually imported packages appear in the Plugin Hub, but their files are not yet served or executed as plugin pages. To launch a plugin, make it available through a repository or a locally served plugin folder.
 
 ## Quick start
 
