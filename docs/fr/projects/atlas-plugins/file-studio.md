@@ -14,6 +14,8 @@ File Studio permet de prévisualiser les archives ZIP, TAR, TAR.GZ et TGZ, puis 
 
 Les fichiers de 64 Mio maximum peuvent être téléversés directement vers un dossier autorisé. Le transfert utilise les données binaires et contourne ainsi la limite de taille des requêtes JSON.
 
+Au-delà de cette limite, aucun téléversement n'est lancé. File Studio invite à utiliser l'[extension Samba de Home Assistant](https://github.com/home-assistant/addons/tree/master/samba) pour les fichiers volumineux.
+
 ## Statut
 
 - Le chemin de langue existe.
