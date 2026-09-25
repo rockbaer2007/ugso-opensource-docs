@@ -4,6 +4,8 @@ Das Demo-Repository dient als reale Testquelle für den ATLAS-Installationsfluss
 
 `https://github.com/rockbaer2007/atlas-plugin-repository-demo`
 
+Pour démarrer votre propre dépôt de plugin, utilisez le [modèle GitHub ATLAS Plugin Template](https://github.com/rockbaer2007/atlas-plugin-template).
+
 ## Zweck
 
 - Plugin-Repository in der Administration hinzufügen

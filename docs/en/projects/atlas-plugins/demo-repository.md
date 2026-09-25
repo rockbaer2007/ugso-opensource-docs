@@ -4,6 +4,8 @@ The demo repository is the real test source for the ATLAS installation flow:
 
 `https://github.com/rockbaer2007/atlas-plugin-repository-demo`
 
+To start your own plugin repository, use the [ATLAS Plugin Template](https://github.com/rockbaer2007/atlas-plugin-template).
+
 ## Purpose
 
 - add a plugin repository in Administration

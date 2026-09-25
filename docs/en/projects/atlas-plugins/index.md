@@ -9,6 +9,7 @@ The plugin interfaces are still in progress. These pages document the current AT
 ## Start Here
 
 - [Repository Format](./repository-format): `repository.json` structure, required fields, ATLAS marker and example.
+- [Plugin Template](https://github.com/rockbaer2007/atlas-plugin-template): reusable GitHub template with a package builder and validation.
 - [Verified Plugins](./verified-plugins): compact lists of verified and new unreviewed ATLAS plugins.
 - [Home Assistant Card Editor](./homeassistant-card-editor): the first official ATLAS reference plugin.
 - [ATLAS File Studio](./file-studio): second independent ATLAS plugin for approved Home Assistant file paths.

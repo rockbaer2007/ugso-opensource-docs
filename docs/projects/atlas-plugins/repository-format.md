@@ -7,6 +7,15 @@ ATLAS nutzt ein eigenes Repository-Format für installierbare Plugins. Ein Repos
 - Demo-Repository: `https://github.com/rockbaer2007/atlas-plugin-repository-demo`
 - Repository-Datei: `https://raw.githubusercontent.com/rockbaer2007/atlas-plugin-repository-demo/main/repository.json`
 - Installations-Zwischenseite: `https://rockbaer2007.github.io/atlas-plugin-repository-demo/install.html`
+- Offizielle Plugin-Vorlage: [atlas-plugin-template](https://github.com/rockbaer2007/atlas-plugin-template) (GitHub-Funktion „Use this template“)
+
+Die Vorlage enthält ein funktionsfähiges Beispiel-Plugin, Manifest, Katalog,
+Grafiken, Paketgenerator und Validierung. Nach Änderungen am Manifest erzeugt
+`npm run build` das installierbare Paket und synchronisiert die Katalogdaten;
+`npm run check` prüft die Konsistenz. GitHub Actions führt beide Prüfungen aus.
+
+Der aktuelle generische Repository-Installer speichert Paketdateien lokal. Er
+führt heruntergeladenen Plugin-Code noch nicht automatisch aus.
 
 ## Struktur
 

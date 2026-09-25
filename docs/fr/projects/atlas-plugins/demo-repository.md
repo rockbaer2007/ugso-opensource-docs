@@ -1,15 +1,20 @@
 ---
-title: Demo Repository
-description: Page française préparée pour Demo Repository dans la documentation UGSo Open Source.
+title: Dépôt de démonstration
+description: Dépôt public de test et modèle de départ pour les plugins ATLAS.
 ---
-# Demo Repository
+# Dépôt de démonstration
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+Le dépôt de démonstration est la source de test réelle pour le parcours d'installation d'ATLAS :
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/atlas-plugins/demo-repository.md`](/en/projects/atlas-plugins/demo-repository).
+https://github.com/rockbaer2007/atlas-plugin-repository-demo
 
-## Statut
+Pour démarrer votre propre dépôt de plugin, utilisez le [modèle GitHub ATLAS Plugin Template](https://github.com/rockbaer2007/atlas-plugin-template).
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## Objectif
+
+- Ajouter un dépôt de plugins dans l'Administration
+- Vérifier le marqueur de dépôt ATLAS
+- Afficher les plugins dans le Hub et l'Administration
+- Comparer les versions et détecter les mises à jour
+- Tester la page de transition d'installation
+- Charger ATLAS File Studio comme deuxième plugin réel

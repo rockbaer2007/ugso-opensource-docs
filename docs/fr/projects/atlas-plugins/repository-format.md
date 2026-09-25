@@ -1,15 +1,26 @@
 ---
-title: Repository Format
-description: Page française préparée pour Repository Format dans la documentation UGSo Open Source.
+title: Format du dépôt
+description: Format des dépôts ATLAS, modèle de plugin et génération des paquets installables.
 ---
-# Repository Format
+# Format du dépôt
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+ATLAS utilise son propre format pour les dépôts de plugins installables. Il est distinct des dépôts d'extensions Home Assistant et s'identifie avec des métadonnées ATLAS.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/atlas-plugins/repository-format.md`](/en/projects/atlas-plugins/repository-format).
+## Références
 
-## Statut
+- Dépôt de démonstration : [atlas-plugin-repository-demo](https://github.com/rockbaer2007/atlas-plugin-repository-demo)
+- Fichier catalogue : [repository.json](https://raw.githubusercontent.com/rockbaer2007/atlas-plugin-repository-demo/main/repository.json)
+- Modèle GitHub officiel : [atlas-plugin-template](https://github.com/rockbaer2007/atlas-plugin-template)
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+Le modèle inclut un plugin fonctionnel, son manifeste, un catalogue, des visuels,
+un générateur de paquet et des contrôles de validation. Après modification du
+manifeste, `npm run build` régénère le paquet installable et synchronise le
+catalogue ; `npm run check` vérifie leur cohérence. GitHub Actions exécute ces
+contrôles à chaque modification.
+
+L'installateur générique actuel stocke les fichiers du paquet localement. Il
+n'exécute pas le code arbitraire téléchargé depuis un dépôt de plugins.
+
+Les chemins relatifs du catalogue sont résolus par rapport à `repository.json`.
+Le champ `package` désigne le paquet installable ; `manifest` reste disponible
+pour l'aperçu, le diagnostic et la vérification manuelle.
