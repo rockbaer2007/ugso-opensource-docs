@@ -31,6 +31,7 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
   Sicherung
 - lokal speichern, Drag-and-drop-Upload, Mehrfach-Upload und Download
 - Uploads werden im aktuell ausgewählten Ordner gespeichert
+- Nach dem Upload wird der Dateibaum aktualisiert, ohne die Datei automatisch zu öffnen
 - Downloadnamen werden im Browser automatisch hochgezählt, zum Beispiel `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`
 - Upload-Konflikte können im File-Studio-Dialog ersetzt, umbenannt oder abgebrochen werden
 - Mehrfachauswahl für Löschen, Kopieren und Verschieben

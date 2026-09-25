@@ -30,6 +30,7 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
   with the current state and restore of a selected backup
 - save locally, drag-and-drop upload, multi-file upload and download
 - uploads are saved in the currently selected folder
+- the file tree refreshes after upload without automatically opening the uploaded file
 - download names are counted up in the browser, for example `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`
 - upload conflicts can be replaced, renamed or cancelled in a File Studio dialog
 - multi-select delete, copy and move actions
