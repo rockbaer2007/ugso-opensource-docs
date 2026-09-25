@@ -40,6 +40,7 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - farbige Dateityp-Icons mit kompakten Typ-Badges
 - Suche mit Typfilter, optionaler Inhaltssuche, Trefferzeile und Inhaltsvorschau
 - opt-in Problembericht im File-Studio-Dialog mit Vorschau und vorbereitetem GitHub-Issue-Link; der Bericht enthält keine Home-Assistant-Token, Provider-API-Keys oder Dateiinhalte
+- Dateien bis 64 MiB direkt in einen freigegebenen Zielordner hochladen; der Transfer erfolgt als Binärdaten statt als Base64-JSON
 - ZIP-, TAR-, TAR.GZ- und TGZ-Inhaltsvorschau
 - einzelne Dateien direkt aus der Archivvorschau extrahieren, ohne das ganze Archiv zu entpacken
 - vollständige TAR-Archive mit Pfadprüfung sowie Grenzen für Dateigröße und Gesamtumfang entpacken

@@ -38,6 +38,7 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - colored file-type icons with compact type badges
 - search with type filters, optional content search, matching line and content preview
 - opt-in problem report in a File Studio dialog with preview and a prepared GitHub issue link; the report does not include Home Assistant tokens, provider API keys or file contents
+- upload files up to 64 MiB directly to an approved destination folder using a binary transfer instead of Base64 JSON
 - ZIP, TAR, TAR.GZ and TGZ content preview
 - extract individual files directly from an archive preview without unpacking the entire archive
 - extract complete TAR archives with path validation and per-file and total size limits
