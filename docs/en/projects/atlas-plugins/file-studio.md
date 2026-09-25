@@ -41,6 +41,7 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - ZIP content preview without extraction
 - `/config` as default root
 - additional path approvals for `www`, `custom_components`, `addons` and `parent-of-config`
+- compact access notice in smaller, regular-weight text; each approved path has a distinct color for easier scanning
 - add-on directory only after Administration or Add-on approval
 - no free root access by default
 

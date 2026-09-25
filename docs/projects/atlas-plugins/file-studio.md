@@ -43,6 +43,7 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - ZIP-Inhaltsvorschau ohne Entpacken
 - `/config` als Standardwurzel
 - zusätzliche Pfad-Freigaben für `www`, `custom_components`, `addons` und `parent-of-config`
+- kompakter Freigabehinweis in normaler, kleinerer Schrift; jeder freigegebene Pfad ist zur besseren Unterscheidung farblich markiert
 - Add-on-Verzeichnis nur nach Admin- oder Add-on-Freigabe
 - kein freier Root-Zugriff standardmäßig
 

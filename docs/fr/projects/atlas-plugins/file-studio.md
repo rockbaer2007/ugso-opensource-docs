@@ -13,3 +13,7 @@ La page anglaise correspondante est actuellement la référence de structure : [
 - Le chemin de langue existe.
 - La navigation et le build peuvent résoudre cette page.
 - La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+
+## Indication des accès
+
+L'espace File Studio affiche les autorisations de fichiers actives dans un encadré compact, avec une typographie normale et légèrement plus petite. Chaque chemin autorisé possède une couleur distincte, ce qui facilite la lecture de chemins tels que `/config/www`, `/addons` et `/parent-of-config`.
