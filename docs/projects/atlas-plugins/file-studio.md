@@ -41,6 +41,7 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - Suche mit Typfilter, optionaler Inhaltssuche, Trefferzeile und Inhaltsvorschau
 - opt-in Problembericht im File-Studio-Dialog mit Vorschau und vorbereitetem GitHub-Issue-Link; der Bericht enthält keine Home-Assistant-Token, Provider-API-Keys oder Dateiinhalte
 - ZIP-Inhaltsvorschau ohne Entpacken
+- einzelne Dateien direkt aus der ZIP-Vorschau extrahieren, ohne das ganze Archiv zu entpacken
 - `/config` als Standardwurzel
 - zusätzliche Pfad-Freigaben für `www`, `custom_components`, `addons` und `parent-of-config`
 - kompakter Freigabehinweis in normaler, kleinerer Schrift; jeder freigegebene Pfad ist zur besseren Unterscheidung farblich markiert
@@ -79,8 +80,8 @@ Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor ec
 - Home-Assistant-YAML-Hilfen weiter ausbauen, zum Beispiel mit echter Schema-/Service-Prüfung gegen eine verbundene Home-Assistant-Instanz
 - Archiv-Unterstützung nach ZIP: `.rar` inklusive RAR5, `.tar`, `.tar.gz`,
   `.tgz`, `.gz` und `.gzip` lesen und extrahieren
-- Archiv-Extraktion zuerst sicher als Inhaltsliste und gezieltes
-  Einzeldatei-Extrahieren, später mit geschützter Alles-extrahieren-Aktion
+- Archiv-Unterstützung nach ZIP: `.rar` inklusive RAR5, `.tar`, `.tar.gz`,
+  `.tgz`, `.gz` und `.gzip` lesen und extrahieren
 - optionaler Icon-/Logo-Studio-Workflow mit SVG- und PNG-Ausgabe
 - Speichern von Icon-SVGs unter `/config/www/custom_local_icons/`, wenn die passende Home-Assistant-Integration genutzt wird
 - Umschaltung zwischen `/config` und dem Automation-Export-Ordner anzeigen, wenn

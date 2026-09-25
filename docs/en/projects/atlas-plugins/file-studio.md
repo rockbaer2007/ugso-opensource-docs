@@ -39,6 +39,7 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - search with type filters, optional content search, matching line and content preview
 - opt-in problem report in a File Studio dialog with preview and a prepared GitHub issue link; the report does not include Home Assistant tokens, provider API keys or file contents
 - ZIP content preview without extraction
+- extract individual files directly from the ZIP preview without unpacking the entire archive
 - `/config` as default root
 - additional path approvals for `www`, `custom_components`, `addons` and `parent-of-config`
 - compact access notice in smaller, regular-weight text; each approved path has a distinct color for easier scanning
@@ -77,8 +78,8 @@ This lets the install and update flow be tested before real file access is enabl
 - further Home Assistant YAML assistance, for example real schema/service checks against a connected Home Assistant instance
 - archive support after ZIP: read and extract `.rar` including RAR5, `.tar`,
   `.tar.gz`, `.tgz`, `.gz` and `.gzip`
-- archive extraction should start with safe content listing and targeted
-  single-file extraction, followed later by a guarded extract-all action
+- archive support after ZIP: read and extract `.rar` including RAR5, `.tar`,
+  `.tar.gz`, `.tgz`, `.gz` and `.gzip`
 - optional icon/logo studio workflow with SVG and PNG output
 - saving icon SVGs under `/config/www/custom_local_icons/` when the matching Home Assistant integration is used
 - show a switch between `/config` and the Automation Exporter output folder when
