@@ -24,6 +24,8 @@ Füge in ATLAS Administration unter **Plugins → Repository hinzufügen** den T
 - optionales SSH-Ziel mit serverseitig konfiguriertem Host, Benutzer, Schlüssel und `known_hosts`
 - Hostschlüsselprüfung bleibt aktiv; das Browserfenster kann kein beliebiges SSH-Ziel angeben
 - eigenständige Versionierung des Frontends im Plugin-Repository
+- einklappbare Token-Einstellungen: beim Verbinden geschlossen, nach dem Trennen oder Sitzungsende wieder geöffnet
+- lokale Shell-Sitzungen starten im Dateisystem-Root `/` des ATLAS-Containers statt in `/app`; SSH behält das Standardverzeichnis des Zielservers
 
 ## Nerd Font einrichten
 
@@ -31,11 +33,11 @@ Lege `MesloLGMNerdFontMono-Regular.ttf` und `MesloLGMNerdFontMono-Bold.ttf` in `
 
 ## Voraussetzungen und Sicherheit
 
-Das Repository enthält das Plugin-Frontend, ist aber **kein eigenständiger SSH-Server und kein Home-Assistant-Add-on**. Shell-, Supervisor- und WebSocket-Funktionen stellt der ATLAS-Host bereit. Die Kompatibilitätserklärung nennt ATLAS `>=0.2.0-alpha.79` und Home Assistant `>=2026.8`. Das Laden der Meslo-Schrift aus Home Assistant benötigt mindestens App/Add-on `0.1.214`.
+Das Repository enthält das Plugin-Frontend, ist aber **kein eigenständiger SSH-Server und kein Home-Assistant-Add-on**. Shell-, Supervisor- und WebSocket-Funktionen stellt der ATLAS-Host bereit. Die Kompatibilitätserklärung nennt ATLAS `>=0.2.0-alpha.79` und Home Assistant `>=2026.8`. Das Laden der Meslo-Schrift aus Home Assistant benötigt mindestens App/Add-on `0.1.214`; das Root-Startverzeichnis und die einklappbaren Token-Einstellungen benötigen `0.1.215` oder neuer.
 
 Das Terminal ist standardmäßig deaktiviert. Aktiviere es erst, nachdem auf dem ATLAS-Host ein starkes, zufälliges Zugriffstoken mit mindestens 32 URL-sicheren Zeichen eingerichtet wurde. Die lokale Shell läuft mit den Berechtigungen des ATLAS-Prozesses. Im Home-Assistant-App/Add-on-Betrieb können Supervisor-Berechtigungen auch administrative `ha`-Befehle ermöglichen. Behandle den Terminalzugriff daher wie administrativen Zugriff.
 
-Das Zugriffstoken bleibt im lokalen Browserspeicher und wird beim Verbindungsaufbau über das WebSocket-Subprotokoll, nicht über eine URL, übertragen. Skripte derselben Website können auf diesen Speicher zugreifen. Verwende das Terminal nur in einem vertrauenswürdigen Browserprofil.
+Das Zugriffstoken bleibt im lokalen Browserspeicher und wird beim Verbindungsaufbau über das WebSocket-Subprotokoll, nicht über eine URL, übertragen. Die Token-Einstellungen klappen beim Verbinden ein und nach dem Trennen oder Sitzungsende wieder aus. Ohne gespeichertes Token sind die Einstellungen beim ersten Aufruf geöffnet. Skripte derselben Website können auf diesen Speicher zugreifen. Verwende das Terminal nur in einem vertrauenswürdigen Browserprofil.
 
 ## Status und Lizenz
 

@@ -24,6 +24,8 @@ Dans l'Administration ATLAS, ouvrez **Plugins → Ajouter un dépôt**, choisiss
 - cible SSH facultative avec hôte, utilisateur, clé et fichier `known_hosts` configurés côté serveur
 - vérification de la clé d'hôte maintenue ; le navigateur ne peut pas choisir une cible SSH arbitraire
 - interface versionnée séparément dans le dépôt du plugin
+- paramètres du jeton repliables : ils se ferment à la connexion et se rouvrent après la déconnexion ou la fin de la session
+- les sessions shell locales démarrent à la racine du système de fichiers `/` dans le conteneur ATLAS, au lieu de `/app` ; en SSH, le répertoire par défaut du serveur distant est conservé
 
 ## Installer la Nerd Font
 
@@ -31,11 +33,11 @@ Placez `MesloLGMNerdFontMono-Regular.ttf` et `MesloLGMNerdFontMono-Bold.ttf` dan
 
 ## Prérequis et sécurité
 
-Le dépôt contient l'interface du plugin, mais **ce n'est ni un serveur SSH autonome ni un module complémentaire Home Assistant**. L'hôte ATLAS fournit le shell ainsi que les fonctions Supervisor et WebSocket. La déclaration de compatibilité indique ATLAS `>=0.2.0-alpha.79` et Home Assistant `>=2026.8`. Le chargement de la police Meslo depuis Home Assistant nécessite l'App/Add-on `0.1.214` ou une version plus récente.
+Le dépôt contient l'interface du plugin, mais **ce n'est ni un serveur SSH autonome ni un module complémentaire Home Assistant**. L'hôte ATLAS fournit le shell ainsi que les fonctions Supervisor et WebSocket. La déclaration de compatibilité indique ATLAS `>=0.2.0-alpha.79` et Home Assistant `>=2026.8`. Le chargement de la police Meslo depuis Home Assistant nécessite l'App/Add-on `0.1.214` ou une version plus récente ; le répertoire racine de travail et les paramètres repliables du jeton nécessitent la version `0.1.215` ou ultérieure.
 
 Le terminal est désactivé par défaut. Activez-le uniquement après avoir configuré sur l'hôte ATLAS un jeton d'accès aléatoire et robuste d'au moins 32 caractères sûrs pour les URL. Le shell local s'exécute avec les droits du processus ATLAS. En mode App/Add-on Home Assistant, les permissions Supervisor peuvent également autoriser des commandes `ha` d'administration. Considérez donc l'accès au terminal comme un accès administratif.
 
-Le jeton reste dans le stockage local du navigateur et est transmis lors de la connexion via le sous-protocole WebSocket, jamais dans une URL. Les scripts du même site peuvent accéder à ce stockage. Utilisez le terminal uniquement dans un profil de navigateur de confiance.
+Le jeton reste dans le stockage local du navigateur et est transmis lors de la connexion via le sous-protocole WebSocket, jamais dans une URL. Les paramètres du jeton se replient à la connexion et se rouvrent après la déconnexion ou la fin de la session. Ils restent ouverts au premier chargement si aucun jeton n'est enregistré. Les scripts du même site peuvent accéder à ce stockage. Utilisez le terminal uniquement dans un profil de navigateur de confiance.
 
 ## État et licence
 

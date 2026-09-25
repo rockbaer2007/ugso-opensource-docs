@@ -24,6 +24,8 @@ In ATLAS Administration, open **Plugins → Add repository**, choose **Plugin**,
 - optional SSH target with a server-configured host, user, key and `known_hosts`
 - host-key verification stays enabled; the browser cannot select an arbitrary SSH target
 - independently versioned frontend in the plugin repository
+- collapsible token settings: they close on connect and reopen after disconnecting or when the session ends
+- local shell sessions start at filesystem root `/` inside the ATLAS container instead of `/app`; SSH keeps the target server's default directory
 
 ## Setting up the Nerd Font
 
@@ -31,11 +33,11 @@ Place `MesloLGMNerdFontMono-Regular.ttf` and `MesloLGMNerdFontMono-Bold.ttf` in 
 
 ## Requirements and Security
 
-The repository contains the plugin frontend, but it is **not a standalone SSH server or a Home Assistant add-on**. The ATLAS host provides the shell, Supervisor and WebSocket functions. Its compatibility declaration lists ATLAS `>=0.2.0-alpha.79` and Home Assistant `>=2026.8`. Loading the Meslo font from Home Assistant requires App/Add-on `0.1.214` or newer.
+The repository contains the plugin frontend, but it is **not a standalone SSH server or a Home Assistant add-on**. The ATLAS host provides the shell, Supervisor and WebSocket functions. Its compatibility declaration lists ATLAS `>=0.2.0-alpha.79` and Home Assistant `>=2026.8`. Loading the Meslo font from Home Assistant requires App/Add-on `0.1.214` or newer; the root working directory and collapsible token settings require `0.1.215` or newer.
 
 The terminal is disabled by default. Enable it only after configuring a strong, random access token of at least 32 URL-safe characters on the ATLAS host. The local shell runs with the permissions of the ATLAS process. In Home Assistant App/Add-on mode, Supervisor permissions may also enable administrative `ha` commands. Treat terminal access as administrative access.
 
-The access token stays in local browser storage and is sent during connection setup through the WebSocket subprotocol, not in a URL. Scripts from the same website can access this storage. Use the terminal only in a trusted browser profile.
+The access token stays in local browser storage and is sent during connection setup through the WebSocket subprotocol, not in a URL. The token settings collapse when a session connects and reopen after disconnecting or when the session ends. They are open on first load if no token is saved. Scripts from the same website can access this storage. Use the terminal only in a trusted browser profile.
 
 ## Status and License
 
