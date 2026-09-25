@@ -8,7 +8,7 @@ The [official ATLAS Plugin Template on GitHub](https://github.com/rockbaer2007/a
 
 ## Plugin generator in Administration
 
-ATLAS Administration includes an initial plugin generator. It creates an install package from the plugin ID, name, description, version, entry path and capabilities, with an editable HTML/CSS/JavaScript starter, plus a `repository.json` catalog file. Review the generated content and paths and add the files to your repository; the generator does not create a GitHub repository or publish anything automatically. Manually imported packages appear in the Plugin Hub, but their files are not yet served or executed as plugin pages. To launch a plugin, make it available through a repository or a locally served plugin folder.
+ATLAS Administration includes a plugin generator. In addition to the plugin ID, name, description, version, entry path and capabilities, you can search the MDI icon catalog and select an icon with a click. The catalog is bundled locally; the selected SVG and its license notices are included in the install package. The generator also creates an editable HTML/CSS/JavaScript starter and a `repository.json` catalog file. Review the generated content and paths and add the files to your repository; the generator does not create a GitHub repository or publish anything automatically. Manually imported packages appear in the Plugin Hub, but their files are not yet served or executed as plugin pages. To launch a plugin, make it available through a repository or a locally served plugin folder.
 
 ## Quick start
 

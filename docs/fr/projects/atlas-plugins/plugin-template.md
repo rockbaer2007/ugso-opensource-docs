@@ -8,7 +8,7 @@ Le [modèle officiel ATLAS Plugin Template sur GitHub](https://github.com/rockba
 
 ## Générateur de plugins dans l'Administration
 
-L'Administration ATLAS propose une première version du générateur de plugins. À partir de l'identifiant, du nom, de la description, de la version, du chemin d'entrée et des capacités, il crée un paquet d'installation avec une base HTML/CSS/JavaScript modifiable ainsi qu'un fichier catalogue `repository.json`. Vérifiez le contenu et les chemins générés, puis ajoutez les fichiers à votre dépôt ; le générateur ne crée pas de dépôt GitHub et ne publie rien automatiquement. Les paquets importés manuellement apparaissent dans le Plugin Hub, mais leurs fichiers ne sont pas encore servis ni exécutés comme pages de plugin. Pour lancer un plugin, rendez-le disponible via un dépôt ou un dossier de plugin servi localement.
+L'Administration ATLAS propose un générateur de plugins. En plus de l'identifiant, du nom, de la description, de la version, du chemin d'entrée et des capacités, vous pouvez rechercher une icône MDI et la sélectionner d'un clic. Le catalogue est intégré localement ; le SVG choisi et ses mentions de licence sont inclus dans le paquet d'installation. Le générateur crée également une base HTML/CSS/JavaScript modifiable ainsi qu'un fichier catalogue `repository.json`. Vérifiez le contenu et les chemins générés, puis ajoutez les fichiers à votre dépôt ; le générateur ne crée pas de dépôt GitHub et ne publie rien automatiquement. Les paquets importés manuellement apparaissent dans le Plugin Hub, mais leurs fichiers ne sont pas encore servis ni exécutés comme pages de plugin. Pour lancer un plugin, rendez-le disponible via un dépôt ou un dossier de plugin servi localement.
 
 ## Démarrage rapide
 

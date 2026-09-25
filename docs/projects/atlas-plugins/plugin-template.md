@@ -8,7 +8,7 @@ Die [offizielle ATLAS Plugin-Vorlage auf GitHub](https://github.com/rockbaer2007
 
 ## Plugin-Generator in der Administration
 
-Die ATLAS-Administration bietet einen ersten Plugin-Generator. Er erstellt aus ID, Name, Beschreibung, Version, Einstiegspfad und Fähigkeiten ein Installationspaket mit einem bearbeitbaren HTML/CSS/JavaScript-Grundgerüst sowie eine `repository.json`-Katalogdatei. Prüfe die erzeugten Inhalte und Pfade und ergänze die Dateien in deinem Repository; der Generator legt kein GitHub-Repository an und veröffentlicht nichts automatisch. Manuell importierte Pakete erscheinen im Plugin Hub. Ihre Dateien werden derzeit jedoch nicht als Plugin-Seite bereitgestellt oder ausgeführt; dafür muss das Plugin über ein Repository beziehungsweise einen lokal bereitgestellten Plugin-Ordner verfügbar sein.
+Die ATLAS-Administration bietet einen Plugin-Generator. Neben ID, Name, Beschreibung, Version, Einstiegspfad und Fähigkeiten kannst du ein MDI-Icon suchen und per Klick auswählen. Die Suche nutzt eine lokal gebündelte Liste; das gewählte SVG und die zugehörigen Lizenzhinweise werden in das Installationspaket übernommen. Der Generator erstellt außerdem ein bearbeitbares HTML/CSS/JavaScript-Grundgerüst sowie eine `repository.json`-Katalogdatei. Prüfe die erzeugten Inhalte und Pfade und ergänze die Dateien in deinem Repository; der Generator legt kein GitHub-Repository an und veröffentlicht nichts automatisch. Manuell importierte Pakete erscheinen im Plugin Hub. Ihre Dateien werden derzeit jedoch nicht als Plugin-Seite bereitgestellt oder ausgeführt; dafür muss das Plugin über ein Repository beziehungsweise einen lokal bereitgestellten Plugin-Ordner verfügbar sein.
 
 ## Schnellstart
 
