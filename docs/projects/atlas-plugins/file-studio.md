@@ -40,8 +40,9 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - farbige Dateityp-Icons mit kompakten Typ-Badges
 - Suche mit Typfilter, optionaler Inhaltssuche, Trefferzeile und Inhaltsvorschau
 - opt-in Problembericht im File-Studio-Dialog mit Vorschau und vorbereitetem GitHub-Issue-Link; der Bericht enthält keine Home-Assistant-Token, Provider-API-Keys oder Dateiinhalte
-- ZIP-Inhaltsvorschau ohne Entpacken
-- einzelne Dateien direkt aus der ZIP-Vorschau extrahieren, ohne das ganze Archiv zu entpacken
+- ZIP-, TAR-, TAR.GZ- und TGZ-Inhaltsvorschau
+- einzelne Dateien direkt aus der Archivvorschau extrahieren, ohne das ganze Archiv zu entpacken
+- vollständige TAR-Archive mit Pfadprüfung sowie Grenzen für Dateigröße und Gesamtumfang entpacken
 - `/config` als Standardwurzel
 - zusätzliche Pfad-Freigaben für `www`, `custom_components`, `addons` und `parent-of-config`
 - kompakter Freigabehinweis in normaler, kleinerer Schrift; jeder freigegebene Pfad ist zur besseren Unterscheidung farblich markiert
@@ -78,10 +79,8 @@ Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor ec
 ## Nächste Ausbaustufen
 
 - Home-Assistant-YAML-Hilfen weiter ausbauen, zum Beispiel mit echter Schema-/Service-Prüfung gegen eine verbundene Home-Assistant-Instanz
-- Archiv-Unterstützung nach ZIP: `.rar` inklusive RAR5, `.tar`, `.tar.gz`,
-  `.tgz`, `.gz` und `.gzip` lesen und extrahieren
-- Archiv-Unterstützung nach ZIP: `.rar` inklusive RAR5, `.tar`, `.tar.gz`,
-  `.tgz`, `.gz` und `.gzip` lesen und extrahieren
+- optionale RAR-Unterstützung einschließlich RAR5, falls ein frei nutzbares
+  Backend verfügbar ist
 - optionaler Icon-/Logo-Studio-Workflow mit SVG- und PNG-Ausgabe
 - Speichern von Icon-SVGs unter `/config/www/custom_local_icons/`, wenn die passende Home-Assistant-Integration genutzt wird
 - Umschaltung zwischen `/config` und dem Automation-Export-Ordner anzeigen, wenn

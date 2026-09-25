@@ -8,9 +8,9 @@ Cette page française a été ajoutée afin que la documentation Open Source dis
 
 La page anglaise correspondante est actuellement la référence de structure : [`en/projects/atlas-plugins/file-studio.md`](/en/projects/atlas-plugins/file-studio).
 
-## Archives ZIP
+## Archives
 
-File Studio permet de prévisualiser le contenu d'une archive ZIP et d'en extraire un fichier sélectionné sans décompresser l'ensemble de l'archive. L'extraction refuse les chemins dangereux, limite chaque fichier extrait à 64 Mio et ne remplace jamais un fichier existant.
+File Studio permet de prévisualiser les archives ZIP, TAR, TAR.GZ et TGZ, puis d'en extraire un fichier sélectionné sans décompresser l'ensemble de l'archive. L'extraction complète TAR vérifie les chemins et limite la taille de chaque fichier à 64 Mio ainsi que la taille totale à 512 Mio. Les liens symboliques et les types d'entrée non pris en charge sont ignorés. RAR et RAR5 restent une option ultérieure, sous réserve de trouver un outil librement utilisable.
 
 ## Statut
 
