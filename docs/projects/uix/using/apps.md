@@ -62,6 +62,18 @@ Das Styling gleichursprünglicher App-Frames ist ab UIX 3.4.0-beta.1 verfügbar.
 
 `uix-app` stylt weiterhin die Oberfläche des Home-Assistant-Panels und kann dessen iframe überlagern. Zusätzlich installiert UIX seine interne Frame-Laufzeit in gleichursprünglichen App-Frames. Das Styling der Frame-Inhalte erfordert die experimentelle Option [Frame-Panels stylen](../extras/style-frame-panels); das Styling des Host-Elements nicht.
 
-Für Frame-Inhalte verwendest du `uix-<add-on-slug>` oder die Variante mit `-yaml`. UIX prüft zuerst den vollständigen Home-Assistant-Add-on-Slug und danach einen vom Repository unabhängigen Slug, bei dem `core_`, `local_` oder ein achtstelliger Repository-Hash entfernt wurde. `uix-a0d7b954_nodered` hat beispielsweise Vorrang vor `uix-nodered`.
+Für Frame-Inhalte verwendest du `uix-<app-slug>` oder die Variante mit `-yaml`. UIX prüft zuerst den vollständigen Home-Assistant-App-Slug und danach einen vom Repository unabhängigen Slug, bei dem `core_`, `local_` oder ein achtstelliger Repository-Hash entfernt wurde. `uix-a0d7b954_nodered` hat beispielsweise Vorrang vor `uix-nodered`.
+
+::: tip
+Den App-Slug für `uix-<app-slug>` findest du am einfachsten in der Browser-Entwicklerkonsole. Die von `uixFrame.js` ausgegebene UIX-Ladeinformation sieht beispielsweise so aus:
+
+<span style="background:#CE3226;color:white;padding:2px 5px;font-weight:bold;border-radius:5px;">💡 UIX 8.4.0 IS INSTALLED 💡 for 45df7312_zigbee2mqtt</span>
+
+Der letzte Teil der Meldung ist der App-Slug, hier also `45df7312_zigbee2mqtt`.
+:::
 
 Die Frame-Laufzeit ist eine interne API, die auch von Custom-Panel-Frames verwendet wird. Die Begriffe für Nutzer bleiben getrennt: `uix-app` bezeichnet immer den Container `<ha-panel-app>`, `uix-panel-custom` immer den Container `<ha-panel-custom>`.
+
+## Styling
+
+Einige App-Panels wie das KNX-Frontend verwenden `ha-card` zur Darstellung von Informationen. Damit dein `uix-card`- oder `uix-card-yaml`-Theme dort greift, aktiviere die experimentelle Option [Always patch ha-card](../extras/always-patch-ha-card).

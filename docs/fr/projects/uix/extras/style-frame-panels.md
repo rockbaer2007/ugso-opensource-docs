@@ -29,5 +29,13 @@ Lorsque cette option est activée :
 
 - UIX installe son moteur interne, indépendant du type de panneau, dans les frames de même origine prises en charge pour les applications et les panneaux personnalisés.
 - Pour les frames de panneaux personnalisés, le nom du panneau sert de cible de thème. Pour les applications, UIX essaie d'abord le slug complet du module complémentaire, puis son slug indépendant du dépôt.
-- UIX n'ajoute un nœud de style que si le thème actif définit une cible de frame correspondante. Les frames sans section `uix-<target>` ou `card-mod-<target>` correspondante restent inchangées.
+- UIX n'ajoute un nœud de style que si le thème actif définit une cible `uix-<target>` correspondante. Les frames sans section `uix-<target>` correspondante restent inchangées.
 - Si UIX détecte qu'aucun thème n'est appliqué, UIX Styling utilise le thème actuellement chargé dans le frontend de Home Assistant. Certains panneaux personnalisés, comme HACS, appliquent eux-mêmes le thème ; UIX Styling l'hérite alors.
+
+::: tip
+Le moyen le plus simple de trouver la cible `uix-<target>` consiste à consulter la console développeur du navigateur. L'information de chargement UIX générée par `uixFrame.js` ressemble à ceci :
+
+<span style="background:#CE3226;color:white;padding:2px 5px;font-weight:bold;border-radius:5px;">💡 UIX 8.4.0 IS INSTALLED 💡 for hacs-frontend</span>
+
+La dernière partie du message indique la cible, ici `hacs-frontend`.
+:::

@@ -29,5 +29,13 @@ Wenn die Option aktiviert ist:
 
 - Installiert UIX seine interne, vom Paneltyp unabhängige Laufzeit in unterstützten gleichursprünglichen App- und Custom-Panel-Frames.
 - Bei Custom-Panel-Frames verwendet UIX den Namen des Panels als Theme-Ziel. Bei App-Frames wird zuerst der vollständige Add-on-Slug und danach der vom Repository unabhängige Slug geprüft.
-- UIX fügt einen Styling-Knoten nur ein, wenn das aktive Theme ein passendes Frame-Ziel definiert. Frames ohne passenden Abschnitt `uix-<target>` oder `card-mod-<target>` bleiben unverändert.
+- UIX fügt einen Styling-Knoten nur ein, wenn das aktive Theme ein passendes Ziel `uix-<target>` definiert. Frames ohne passenden Abschnitt `uix-<target>` bleiben unverändert.
 - Wenn UIX erkennt, dass kein Theme angewendet wurde, wird UIX Styling mit dem aktuell geladenen Home-Assistant-Frontend-Theme ausgeführt. Einige Custom Panels wie HACS wenden das Theme selbst an; in diesem Fall übernimmt UIX Styling dieses Theme.
+
+::: tip
+Das Ziel für `uix-<target>` findest du am einfachsten in der Browser-Entwicklerkonsole. Die von `uixFrame.js` ausgegebene UIX-Ladeinformation sieht beispielsweise so aus:
+
+<span style="background:#CE3226;color:white;padding:2px 5px;font-weight:bold;border-radius:5px;">💡 UIX 8.4.0 IS INSTALLED 💡 for hacs-frontend</span>
+
+Der letzte Teil der Meldung ist das Ziel, hier also `hacs-frontend`.
+:::
