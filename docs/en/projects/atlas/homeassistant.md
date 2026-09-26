@@ -7,6 +7,23 @@ Assistant cards, live entities and later HACS-oriented usage.
 The detailed user and feature documentation for the editor now lives in the
 plugin section: [Home Assistant Card Editor](/en/projects/atlas-plugins/homeassistant-card-editor).
 
+## Plugin links in the Home Assistant sidebar
+
+Starting with ATLAS App/Add-on `0.1.236`, the sidebar dialog generates a stable
+launch URL through port `4176`, for example:
+
+```text
+http://<ATLAS_HOST>:4176/launch/atlas.plugin.file-studio
+```
+
+If a plugin is already listed in the Home Assistant sidebar, reopen the
+sidebar dialog in ATLAS, copy the **URL** offered there, and replace the old
+`url` value in that plugin's `panel_iframe` entry. Alternatively, copy and
+replace the entire YAML block. Then restart Home Assistant to reload the
+sidebar configuration. The Home Assistant sidebar path, such as
+`/atlas-studio/0`, stays the same; update the embedded panel's `url`. Port
+`4176` must be reachable from the browser used to access Home Assistant.
+
 ## Current Scope
 
 - ATLAS Status Preview with Theme and Renderer integration
