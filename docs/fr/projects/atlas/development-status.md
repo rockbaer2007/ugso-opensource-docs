@@ -1,15 +1,30 @@
 ---
-title: Development Status
-description: Page française préparée pour Development Status dans la documentation UGSo Open Source.
+title: État du développement
+description: État actuel du développement d'ATLAS.
 ---
-# Development Status
+# État du développement
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+## État actuel
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/atlas/development-status.md`](/en/projects/atlas/development-status).
+ATLAS est en cours de développement. L'application Home Assistant comprend
+l'Administration, le Hub des plugins et le Card Editor ; File Studio et
+Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-## Statut
+La version actuelle de l'application Home Assistant est `0.1.260`.
+L'Administration et le Hub des plugins proposent des interfaces en allemand,
+anglais et français. Leur préférence de langue enregistrée est partagée entre
+les deux interfaces, y compris lorsque leurs ports sont différents. Le
+paramètre `language` d'une URL reste prioritaire pour la page ouverte.
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## Suite du travail
+
+- Étendre progressivement la traduction aux interfaces de plugins qui déclarent
+  leurs propres textes localisés.
+- Continuer à intégrer les fonctions Renderer et Theme dans des parcours visibles
+  de l'application.
+- Stabiliser les API et les contrats avant une version de production.
+
+::: info État évolutif
+La feuille de route évolue avec le développement. Consultez les pages ATLAS et
+Plugins ATLAS pour connaître les fonctions documentées.
+:::

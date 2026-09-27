@@ -52,6 +52,10 @@ ATLAS is currently in active development.
 The current focus is the **Home-Assistant-oriented ATLAS app** with
 Administration, Plugin Hub, Card Editor and File Studio.
 
+Administration and Plugin Hub support German, English and French. Their saved
+language preference is shared across both surfaces, including when they run on
+separate app ports. A language parameter in a plugin URL still takes precedence.
+
 ::: warning Development project
 ATLAS is not released for production use yet. APIs, package structures and
 internal contracts may still change.

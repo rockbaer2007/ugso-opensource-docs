@@ -52,6 +52,11 @@ ATLAS befindet sich aktuell in aktiver Entwicklung.
 Der derzeitige Schwerpunkt liegt auf der **Home-Assistant-nahen ATLAS-App** mit
 Administration, Plugin-Hub, Card Editor und File Studio.
 
+Administration und Plugin-Hub unterstützen Deutsch, Englisch und Französisch.
+Die Sprachauswahl wird zwischen beiden Oberflächen gespeichert und gilt auch
+über ihre getrennten App-Ports hinweg. Ein Sprachparameter in einer Plugin-URL
+hat weiterhin Vorrang.
+
 ::: warning Entwicklungsprojekt
 ATLAS ist noch nicht für den produktiven Einsatz freigegeben. APIs, Paketstrukturen und interne Verträge können sich noch ändern.
 :::

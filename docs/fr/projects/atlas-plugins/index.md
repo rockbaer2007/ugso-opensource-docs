@@ -48,6 +48,14 @@ Le Hub peut aussi préparer des entrées de barre latérale Home Assistant. La f
 
 En mode App/Add-on, Card Editor, Administration et les ressources locales des plugins sont servies par les routes de l'application ATLAS. Les chemins de base Home Assistant Ingress sont ainsi conservés dans le Hub et les liens de barre latérale.
 
+### Préférence de langue partagée
+
+L'Administration et le Hub des plugins prennent en charge l'allemand, l'anglais
+et le français. La langue choisie dans l'une des interfaces est mémorisée et
+utilisée dans l'autre, même si elles fonctionnent sur des ports différents. Un
+paramètre `language` explicite dans l'URL d'un plugin reste prioritaire pour la
+visite en cours.
+
 Les nouveaux plugins locaux reçoivent une URL de lancement automatique si leur dossier contient `index.html` et que le manifeste ne définit pas `entry`. ATLAS publie alors `/plugin-assets/<dossier-du-plugin>/index.html`.
 
 ## Règles de publication

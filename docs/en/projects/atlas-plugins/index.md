@@ -44,6 +44,13 @@ The Plugin Hub can also prepare Home Assistant sidebar entries. The dialog lists
 
 In Add-on mode, Card Editor, Administration and local plugin assets are served through ATLAS app routes. This preserves Home Assistant Ingress base paths in Hub and sidebar URLs, and other network clients do not need direct access to the separate development ports.
 
+### Shared language preference
+
+Administration and Plugin Hub support German, English and French. A language
+selected in either surface is saved and used by the other, including when the
+surfaces run on separate ports. An explicit `language` parameter in a plugin
+URL overrides that preference for the current visit.
+
 For ATLAS File Studio, the Hub uses the plugin URL under `/plugin-assets/file-studio/index.html` on the ATLAS app port or through the matching Home Assistant Ingress/Webpage address. This URL is prepared even when older saved plugin state does not yet include a launch URL.
 
 New local plugins also receive an automatic launch URL when their plugin folder contains an `index.html` and the manifest does not define `entry`. ATLAS then exposes `/plugin-assets/<plugin-folder>/index.html`, so users can choose between the Hub and a Home Assistant sidebar entry from the start.
