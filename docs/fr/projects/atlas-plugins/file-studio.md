@@ -14,7 +14,12 @@ ATLAS File Studio est un plugin indépendant pour parcourir et modifier les fich
 
 ## Langue française
 
-Le sélecteur DE/EN/FR permet de choisir le français. Cette version traduit l’en-tête, les principaux contrôles de la barre d’outils et les messages de limite d’envoi. Les dialogues et messages des workflows de fichiers restent à traduire.
+Le sélecteur DE/EN/FR permet de choisir le français. Cette version traduit l’en-tête, les principaux contrôles de la barre d’outils et les messages relatifs à la limite d’envoi. Les dialogues et les autres messages des workflows de fichiers ne sont pas encore entièrement traduits.
+
+## Versions actuelles
+
+- Version du plugin : `0.1.40`
+- Version de l’application/extension Home Assistant : `0.1.262`
 
 ## Archives
 
@@ -26,12 +31,6 @@ Les fichiers téléversés sont enregistrés dans le dossier actuellement sélec
 Après le téléversement, l'arborescence est actualisée sans ouvrir automatiquement le fichier.
 
 Au-delà de cette limite, aucun téléversement n'est lancé. File Studio invite à utiliser l'[extension Samba de Home Assistant](https://github.com/home-assistant/addons/tree/master/samba) pour les fichiers volumineux.
-
-## Statut
-
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
 
 ## Indication des accès
 

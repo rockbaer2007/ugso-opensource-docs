@@ -13,7 +13,7 @@ Die Oberfläche ist auf Deutsch, Englisch und Französisch verfügbar. Die Sprac
 - GitHub: [rockbaer2007/atlas-terminal-plugin](https://github.com/rockbaer2007/atlas-terminal-plugin)
 - Installationsseite: [ATLAS Terminal hinzufügen](https://rockbaer2007.github.io/atlas-terminal-plugin/install.html)
 - Repository-Manifest: [repository.json](https://raw.githubusercontent.com/rockbaer2007/atlas-terminal-plugin/main/repository.json)
-- Plugin-Version: `0.1.5`
+- Plugin-Version: `0.1.7`
 
 Füge in ATLAS Administration unter **Plugins → Repository hinzufügen** den Typ **Plugin** hinzu und verwende die Manifest-URL. Prüfe das Repository und installiere anschließend das Plugin-Paket. Der ATLAS-Host muss ein kompatibles Terminal-Backend enthalten.
 

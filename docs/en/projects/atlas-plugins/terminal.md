@@ -13,7 +13,7 @@ The interface is available in German, English and French. The language choice is
 - GitHub: [rockbaer2007/atlas-terminal-plugin](https://github.com/rockbaer2007/atlas-terminal-plugin)
 - Install page: [Add ATLAS Terminal](https://rockbaer2007.github.io/atlas-terminal-plugin/install.html)
 - Repository manifest: [repository.json](https://raw.githubusercontent.com/rockbaer2007/atlas-terminal-plugin/main/repository.json)
-- Plugin version: `0.1.5`
+- Plugin version: `0.1.7`
 
 In ATLAS Administration, open **Plugins → Add repository**, choose **Plugin**, and enter the manifest URL. Review the repository and install the plugin package. The ATLAS host must provide a compatible Terminal backend.
 
