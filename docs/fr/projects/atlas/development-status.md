@@ -10,7 +10,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.260`.
+La version actuelle de l'application Home Assistant est `0.1.261`.
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le
