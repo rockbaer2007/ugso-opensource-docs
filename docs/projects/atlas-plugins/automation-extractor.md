@@ -14,7 +14,8 @@ ausgewählte Einträge und bereitet die weitere Bearbeitung über File Studio vo
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Installationsseite: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository-Datei: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- aktueller installierbarer Plugin-Stand: `0.1.23`
+- aktueller installierbarer Plugin-Stand: `0.1.25`
+- Benutzeroberfläche auf Deutsch, Englisch und Französisch; die gespeicherte ATLAS-Sprache wird beim Öffnen übernommen.
 
 In ATLAS Administration kann direkt die GitHub-URL eingefügt werden. ATLAS
 wandelt sie beim Prüfen automatisch in die passende `repository.json`-Adresse

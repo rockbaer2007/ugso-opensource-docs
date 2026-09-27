@@ -14,7 +14,8 @@ entries and prepare further editing through File Studio.
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Install page: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository file: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- current installable plugin version: `0.1.23`
+- current installable plugin version: `0.1.25`
+- User interface in German, English and French; the saved ATLAS language is applied when the plugin opens.
 
 ATLAS Administration accepts the GitHub URL directly. During preview, ATLAS
 converts it to the matching `repository.json` address automatically.
