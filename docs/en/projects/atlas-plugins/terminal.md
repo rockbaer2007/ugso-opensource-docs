@@ -6,6 +6,8 @@ description: ATLAS browser terminal with ANSI colors, optional SSH, Oh My Posh t
 
 ATLAS Terminal is a standalone plugin repository for an authenticated browser terminal. It provides ANSI colors, an adjustable font size, selectable Oh My Posh themes and an optional SSH connection to a server-configured target.
 
+The interface is available in German, English and French. The language choice is saved in the browser and can also be passed in the `language` URL parameter.
+
 ## Repository and Installation
 
 - GitHub: [rockbaer2007/atlas-terminal-plugin](https://github.com/rockbaer2007/atlas-terminal-plugin)

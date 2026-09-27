@@ -6,6 +6,8 @@ description: Terminal web ATLAS avec couleurs ANSI, SSH facultatif, thèmes Oh M
 
 ATLAS Terminal est un dépôt de plugin indépendant qui fournit un terminal web authentifié. Il propose les couleurs ANSI, une taille de police réglable, des thèmes Oh My Posh sélectionnables et une connexion SSH facultative vers une cible configurée côté serveur.
 
+L’interface est disponible en allemand, en anglais et en français. Le choix de langue est enregistré dans le navigateur et peut être transmis dans l’URL avec le paramètre `language`.
+
 ## Dépôt et installation
 
 - GitHub : [rockbaer2007/atlas-terminal-plugin](https://github.com/rockbaer2007/atlas-terminal-plugin)

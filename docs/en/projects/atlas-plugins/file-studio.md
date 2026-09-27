@@ -1,5 +1,9 @@
 # ATLAS File Studio
 
+The interface language selector includes French. In this release, French covers the main header and toolbar controls plus upload-limit notices; deeper file dialogs and workflow messages still need full localization.
+
+The interface language selector includes French. In this release, French covers the main header and toolbar controls plus upload-limit notices; deeper file dialogs and workflow messages still need full localization.
+
 ATLAS File Studio is the second independent ATLAS plugin. It is intended to edit files in approved Home Assistant paths without allowing free root access by default.
 
 ## Repository
@@ -12,7 +16,7 @@ ATLAS File Studio is the second independent ATLAS plugin. It is intended to edit
 
 File Studio is published as an installable ATLAS plugin and can be tested through the demo repository in Administration and Hub.
 
-- current plugin version: `0.1.39`
+- current plugin version: `0.1.40`
 - current Home Assistant App/Add-on version: `0.1.177`
 - file tree for the approved `/config` area
 - flexible two-column surface with optional maximum width and height limits

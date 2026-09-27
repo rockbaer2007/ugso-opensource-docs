@@ -4,9 +4,17 @@ description: Page française préparée pour ATLAS File Studio dans la documenta
 ---
 # ATLAS File Studio
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+ATLAS File Studio est un plugin indépendant pour parcourir et modifier les fichiers Home Assistant dans les chemins autorisés. Il comprend un éditeur, la validation YAML, l’aperçu d’images et d’archives, ainsi que des fonctions de transfert et de sauvegarde.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/atlas-plugins/file-studio.md`](/en/projects/atlas-plugins/file-studio).
+## Dépôt et installation
+
+- GitHub : [rockbaer2007/atlas-file-studio-plugin](https://github.com/rockbaer2007/atlas-file-studio-plugin)
+- Page d’installation : [Ajouter ATLAS File Studio](https://rockbaer2007.github.io/atlas-file-studio-plugin/install.html)
+- Fichier du dépôt : [repository.json](https://raw.githubusercontent.com/rockbaer2007/atlas-file-studio-plugin/main/repository.json)
+
+## Langue française
+
+Le sélecteur DE/EN/FR permet de choisir le français. Cette version traduit l’en-tête, les principaux contrôles de la barre d’outils et les messages de limite d’envoi. Les dialogues et messages des workflows de fichiers restent à traduire.
 
 ## Archives
 

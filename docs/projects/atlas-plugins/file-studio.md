@@ -12,7 +12,8 @@ ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in f
 
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
-- aktueller Plugin-Stand: `0.1.39`
+- aktueller Plugin-Stand: `0.1.40`
+- französische Oberfläche: DE/EN/FR-Auswahl sowie zentrale Elemente der oberen Werkzeugleiste
 - aktueller Home-Assistant-App/Add-on-Stand: `0.1.177`
 - Dateibaum für den freigegebenen `/config`-Bereich
 - flexible Zwei-Spalten-Oberfläche mit begrenzbarer Maximalbreite und Maximalhöhe

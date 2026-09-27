@@ -49,7 +49,7 @@ ATLAS File Studio, Automation Exporter / Editor and Home Assistant App/Add-on wo
 
 The work currently expands safe Home Assistant file workflows, versioned
 add-on releases and traceable plugin updates.
-The current Home Assistant App/Add-on version is `0.1.261`. Administration and
+The current Home Assistant App/Add-on version is `0.1.262`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 
