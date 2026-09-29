@@ -12,10 +12,12 @@ ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in f
 
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
-- aktueller Plugin-Stand: `0.1.40`
+- aktueller Plugin-Stand: `0.1.51`
 - französische Oberfläche: DE/EN/FR-Auswahl, Kopfzeile, zentrale Werkzeugleisten-Steuerelemente und Hinweise zur Upload-Grenze; Dialoge und weitere Ablaufmeldungen sind noch nicht vollständig übersetzt
 - Upload-Hinweis: Dateien bis 64 MiB können direkt hochgeladen werden; bei größeren Dateien verweist File Studio auf die Samba-App
-- aktueller Home-Assistant-App/Add-on-Stand: `0.1.262`
+- aktueller Home-Assistant-App/Add-on-Stand: `0.1.280`
+- Bildvorschau: SVG-, PNG-, JPG/JPEG- und WebP-Dateien direkt an das separat installierte ATLAS Icon Studio übergeben. Rasterdateien öffnen sich dort als Vorschau; einfache SVG-Pfaddateien werden in das monochrome Iconset importiert.
+- Die Übergabe verwendet einen kurzlebigen Schlüssel im lokalen Browser und den freigegebenen File-Studio-Dateizugriff. Beide Plugins müssen auf demselben ATLAS-Server installiert sein; die Datei wird nicht hochgeladen oder dupliziert.
 - Dateibaum für den freigegebenen `/config`-Bereich
 - flexible Zwei-Spalten-Oberfläche mit begrenzbarer Maximalbreite und Maximalhöhe
 - kompakte Werkzeugzeile unterhalb von `Dateibaum /config`, damit die Icons in
@@ -78,7 +80,7 @@ Im Home-Assistant-App/Add-on-Betrieb kommen diese Freigaben aus der Add-on-Konfi
 
 ## Home-Assistant-Update-Hinweis
 
-Nach jedem sichtbaren ATLAS-Update wird die Home-Assistant-App/Add-on-Version angehoben. Home Assistant vergleicht die installierte Version (`old`) mit der Repository-Version (`target`). Für diesen Stand sollte `target` mindestens `0.1.262` anzeigen. Wenn weiter eine alte Zielversion erscheint, im Add-on Store die Repository-Informationen neu laden und anschließend ATLAS aktualisieren oder neu starten.
+Nach jedem sichtbaren ATLAS-Update wird die Home-Assistant-App/Add-on-Version angehoben. Home Assistant vergleicht die installierte Version (`old`) mit der Repository-Version (`target`). Für diesen Stand sollte `target` mindestens `0.1.280` anzeigen. Wenn weiter eine alte Zielversion erscheint, im Add-on Store die Repository-Informationen neu laden und anschließend ATLAS aktualisieren oder neu starten.
 
 Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor echter Dateizugriff in der Add-on-Runtime freigeschaltet wird.
 
@@ -87,7 +89,6 @@ Damit kann der Installations- und Update-Fluss bereits getestet werden, bevor ec
 - Home-Assistant-YAML-Hilfen weiter ausbauen, zum Beispiel mit echter Schema-/Service-Prüfung gegen eine verbundene Home-Assistant-Instanz
 - optionale RAR-Unterstützung einschließlich RAR5, falls ein frei nutzbares
   Backend verfügbar ist
-- optionaler Icon-/Logo-Studio-Workflow mit SVG- und PNG-Ausgabe
 - Speichern von Icon-SVGs unter `/config/www/custom_local_icons/`, wenn die passende Home-Assistant-Integration genutzt wird
 - Umschaltung zwischen `/config` und dem Automation-Export-Ordner anzeigen, wenn
   der ATLAS Automation Exporter / Editor installiert ist

@@ -18,8 +18,12 @@ Le sélecteur DE/EN/FR permet de choisir le français. Cette version traduit l�
 
 ## Versions actuelles
 
-- Version du plugin : `0.1.40`
-- Version de l’application/extension Home Assistant : `0.1.262`
+- Version du plugin : `0.1.51`
+- Version de l’application/extension Home Assistant : `0.1.280`
+
+## Intégration avec Icon Studio
+
+Depuis l’aperçu d’image, les fichiers SVG, PNG, JPG/JPEG et WebP peuvent être transmis à ATLAS Icon Studio, installé séparément. Les images matricielles s’ouvrent en aperçu ; les fichiers SVG simples contenant des chemins sont importés dans son jeu d’icônes monochromes. Les deux plugins doivent être installés sur le même serveur ATLAS. Le transfert utilise une clé temporaire dans le navigateur et l’accès aux fichiers autorisé de File Studio ; le fichier n’est ni envoyé ni dupliqué.
 
 ## Archives
 

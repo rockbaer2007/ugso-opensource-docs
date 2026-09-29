@@ -14,10 +14,12 @@ ATLAS File Studio is the second independent ATLAS plugin. It is intended to edit
 
 File Studio is published as an installable ATLAS plugin and can be tested through the demo repository in Administration and Hub.
 
-- current plugin version: `0.1.40`
+- current plugin version: `0.1.51`
 - French UI coverage: DE/EN/FR selector, header, main toolbar controls and upload-limit notices; dialogs and other workflow messages are not fully translated yet
 - upload limit: files up to 64 MiB can be uploaded directly; larger files are directed to the Samba add-on
-- current Home Assistant App/Add-on version: `0.1.262`
+- current Home Assistant App/Add-on version: `0.1.280`
+- image preview: open SVG, PNG, JPG/JPEG and WebP files directly in the separately installed ATLAS Icon Studio. Raster files open as previews; simple SVG path files import into its monochrome icon set.
+- The handoff uses a short-lived browser-local key and File Studio's approved file access. Both plugins must be installed on the same ATLAS server; the file is not uploaded or duplicated.
 - file tree for the approved `/config` area
 - flexible two-column surface with optional maximum width and height limits
 - compact toolbar below `Dateibaum /config`, keeping icons out of the right file
@@ -78,7 +80,7 @@ In Home Assistant App/Add-on mode, these approvals come from the Add-on configur
 
 ## Home Assistant Update Note
 
-Every visible ATLAS update bumps the Home Assistant App/Add-on version. Home Assistant compares the installed version (`old`) with the repository version (`target`). For this build, `target` should be at least `0.1.262`. If Home Assistant still shows an older target version, reload repository information in the Add-on Store and then update or restart ATLAS.
+Every visible ATLAS update bumps the Home Assistant App/Add-on version. Home Assistant compares the installed version (`old`) with the repository version (`target`). For this build, `target` should be at least `0.1.280`. If Home Assistant still shows an older target version, reload repository information in the Add-on Store and then update or restart ATLAS.
 
 This lets the install and update flow be tested before real file access is enabled in the add-on runtime.
 
@@ -86,7 +88,6 @@ This lets the install and update flow be tested before real file access is enabl
 
 - further Home Assistant YAML assistance, for example real schema/service checks against a connected Home Assistant instance
 - optional RAR support, including RAR5, if a freely usable backend is available
-- optional icon/logo studio workflow with SVG and PNG output
 - saving icon SVGs under `/config/www/custom_local_icons/` when the matching Home Assistant integration is used
 - show a switch between `/config` and the Automation Exporter output folder when
   ATLAS Automation Exporter / Editor is installed
