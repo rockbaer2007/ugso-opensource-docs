@@ -22,4 +22,6 @@ Ajoutez ce dépôt externe dans le gestionnaire de plugins ATLAS :
 https://raw.githubusercontent.com/rockbaer2007/atlas-icon-library-plugin/main/repository.json
 ```
 
+ATLAS 0.1.248 ou une version ultérieure est requis, car cette version corrige l’installation des paquets externes.
+
 Consultez le [dépôt GitHub](https://github.com/rockbaer2007/atlas-icon-library-plugin) pour le code source et les instructions de développement.

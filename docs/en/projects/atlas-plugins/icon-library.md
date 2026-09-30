@@ -22,4 +22,6 @@ Add this external repository in the ATLAS Plugin Manager:
 https://raw.githubusercontent.com/rockbaer2007/atlas-icon-library-plugin/main/repository.json
 ```
 
+ATLAS 0.1.248 or newer is required because that release fixes external package installation.
+
 See the [GitHub repository](https://github.com/rockbaer2007/atlas-icon-library-plugin) for source code and development notes.
