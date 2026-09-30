@@ -22,6 +22,10 @@ Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation 
 
 Der Dokumentationsstand wurde gegen den stabilen UIX-Release `8.3.1` geprüft. Das Release nennt zwei Fehlerbehebungen: Die Map-Spark-Funktion wurde nach Änderungen an Home Assistant 2026.9.0 wiederhergestellt, und ein Ladeproblem von Web Awesome auf älteren Geräten (darunter iOS 15) wird umgangen. Diese Punkte sind Release-Änderungen; sie führen keine neue Konfigurationsoption ein.
 
+## Abgleich vom 30.09.2026
+
+Die deutschen Seiten zu [Entitäten](./using/entities) und [Bildern](./using/images) wurden mit der kanonischen Dokumentationsrevision [`7d7c95a`](https://github.com/Lint-Free-Technology/uix/commit/7d7c95acb449c1222d8a338e3d9423f91ff0f2a2) abgeglichen. Ergänzt wurden die CSS-Parts für Map-Marker ab Home Assistant 2026.10.0 sowie `hui-map-overview` und der Hinweis auf Entity-spezifische Bildüberschreibungen. Die stabile Basis bleibt UIX `8.3.1`; der Footer weist zusätzlich auf die abgeglichenen Dokumentationsänderungen bis UIX `8.4.0-beta.3` hin.
+
 ## Aktualisierung vom 13.09.2026
 
 | Bereich | Abgeglichene Inhalte |

@@ -23,6 +23,10 @@ La version 8.3.1 corrige deux problèmes : le Map spark fonctionne de nouveau ap
 
 Selon la documentation canonique, le style des frames d'applications de même origine est disponible à partir de UIX `3.4.0-beta.1`. L'option expérimentale de style des frames est désactivée par défaut.
 
+## Mise à jour du 30 septembre 2026
+
+Les pages françaises sur les [entités](./using/entities) et les [images](./using/images) ont été comparées à la révision documentaire canonique [`7d7c95a`](https://github.com/Lint-Free-Technology/uix/commit/7d7c95acb449c1222d8a338e3d9423f91ff0f2a2). Les parts CSS pour les marqueurs de carte depuis Home Assistant 2026.10.0, `hui-map-overview` et la restriction aux surcharges propres à une entité ont été ajoutées. La base stable reste UIX `8.3.1` ; le pied de page indique également les changements documentaires vérifiés jusqu’à UIX `8.4.0-beta.3`.
+
 ## Prochaine étape
 
 La documentation française sera révisée au fil des prochaines modifications de la documentation canonique.

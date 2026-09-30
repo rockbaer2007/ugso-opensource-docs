@@ -239,8 +239,8 @@ const UgsoLayout = defineComponent({
                   h(
                     'span',
                     isFrench
-                      ? 'Base stable : UIX 8.2.0. Compléments signalés jusqu’à 8.3.0-beta.8, vérifiés le 13/09/2026. La documentation originale en anglais reste la référence.'
-                      : 'Stabile Basis: UIX 8.2.0. Gekennzeichnete Ergänzungen bis 8.3.0-beta.8, geprüft am 13.09.2026. Maßgeblich bleibt die englische Originaldokumentation.'
+                      ? 'Base stable : UIX 8.3.1. Documentation vérifiée jusqu’aux changements canoniques de UIX 8.4.0-beta.3, le 30/09/2026. La documentation originale en anglais reste la référence.'
+                      : 'Stabile Basis: UIX 8.3.1. Dokumentationsänderungen bis UIX 8.4.0-beta.3 abgeglichen, Stand 30.09.2026. Maßgeblich bleibt die englische Originaldokumentation.'
                   ),
                   h('span', [
                     h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),
@@ -248,14 +248,16 @@ const UgsoLayout = defineComponent({
                     h(
                       'a',
                       {
-                        href: 'https://github.com/Lint-Free-Technology/uix/commit/f9eb8fa571dbce6cd771c53ca11dcf2401c8a933',
+                        href: 'https://github.com/Lint-Free-Technology/uix/releases/tag/v8.3.1',
                         target: '_blank',
                         rel: 'noopener'
                       },
-                      isFrench ? 'Base stable f9eb8fa' : 'Stabile Basis f9eb8fa'
+                      isFrench ? 'Base stable 8.3.1' : 'Stabile Basis 8.3.1'
                     ),
                     ' · ',
-                    h('a', { href: isFrench ? '/fr/projects/uix/translation-status' : '/projects/uix/translation-status' }, isFrench ? 'Comparaison c33ff79' : 'Abgleich c33ff79')
+                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/7d7c95acb449c1222d8a338e3d9423f91ff0f2a2', target: '_blank', rel: 'noopener' }, isFrench ? 'Révision documentaire 7d7c95' : 'Doku-Revision 7d7c95'),
+                    ' · ',
+                    h('a', { href: isFrench ? '/fr/projects/uix/translation-status' : '/projects/uix/translation-status' }, isFrench ? 'État de la traduction' : 'Übersetzungsstatus')
                   ]),
                   h('span', [
                     isFrench ? 'Documentation originale d’UIX par ' : 'Originale UIX-Dokumentation von ',
