@@ -15,6 +15,7 @@ Die Plugin-Schnittstellen sind noch in Arbeit. Die Seiten dokumentieren den aktu
 - [Home Assistant Card Editor](./homeassistant-card-editor): erstes offizielles ATLAS-Referenz-Plugin.
 - [ATLAS File Studio](./file-studio): zweites unabhängiges ATLAS-Plugin für freigegebene Home-Assistant-Dateipfade.
 - [ATLAS Icon Studio](./icon-studio): Iconsets verwalten, importieren und in Home Assistant speichern.
+- [ATLAS Icon Bibliothek](./icon-library): Iconsets durchsuchen und vollständige Icon-Namen kopieren.
 - [ATLAS Terminal](./terminal): authentifiziertes Browser-Terminal mit optionalem SSH-Ziel, Oh-My-Posh-Themes und serverseitig geladener Nerd Font.
 - [ATLAS Automation Exporter / Editor](./automation-extractor): neues Plugin zum Analysieren, sicheren Sichern und Exportieren von Home-Assistant-Automationen.
 - [Demo-Repository](./demo-repository): öffentliches Test-Repository für Administration, Hub und Installationsfluss.

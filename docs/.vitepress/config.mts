@@ -363,6 +363,7 @@ const sidebarDe = {
         { text: 'Home Assistant Card Editor', link: '/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/projects/atlas-plugins/file-studio' },
         { text: 'ATLAS Icon Studio', link: '/projects/atlas-plugins/icon-studio' },
+        { text: 'ATLAS Icon Bibliothek', link: '/projects/atlas-plugins/icon-library' },
         { text: 'ATLAS Terminal', link: '/projects/atlas-plugins/terminal' },
         { text: 'Automation Extractor', link: '/projects/atlas-plugins/automation-extractor' },
         { text: 'Demo-Repository', link: '/projects/atlas-plugins/demo-repository' }
@@ -703,6 +704,7 @@ const sidebarEn = {
         { text: 'Home Assistant Card Editor', link: '/en/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/en/projects/atlas-plugins/file-studio' },
         { text: 'ATLAS Icon Studio', link: '/en/projects/atlas-plugins/icon-studio' },
+        { text: 'ATLAS Icon Library', link: '/en/projects/atlas-plugins/icon-library' },
         { text: 'ATLAS Terminal', link: '/en/projects/atlas-plugins/terminal' },
         { text: 'Automation Extractor', link: '/en/projects/atlas-plugins/automation-extractor' },
         { text: 'Demo Repository', link: '/en/projects/atlas-plugins/demo-repository' }
@@ -788,6 +790,7 @@ const sidebarFr = {
         { text: 'Home Assistant Card Editor', link: '/fr/projects/atlas-plugins/homeassistant-card-editor' },
         { text: 'ATLAS File Studio', link: '/fr/projects/atlas-plugins/file-studio' },
         { text: 'ATLAS Icon Studio', link: '/fr/projects/atlas-plugins/icon-studio' },
+        { text: 'Bibliothèque d’icônes ATLAS', link: '/fr/projects/atlas-plugins/icon-library' },
         { text: 'ATLAS Terminal', link: '/fr/projects/atlas-plugins/terminal' },
         { text: 'Automation Extractor', link: '/fr/projects/atlas-plugins/automation-extractor' },
         { text: 'Dépôt de démonstration', link: '/fr/projects/atlas-plugins/demo-repository' }
