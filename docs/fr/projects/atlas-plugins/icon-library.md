@@ -8,7 +8,7 @@ La Bibliothèque d’icônes ATLAS est un plugin autonome qui permet de recherch
 
 ## Charger des jeux d’icônes
 
-Le paquet du plugin inclut le catalogue MDI. Les collections Icon Studio peuvent être importées depuis l’ordinateur sous forme de fichiers JavaScript ou chargées depuis `/config/www/` avec File Studio. Le scanner peut détecter les fichiers pris en charge générés par Icon Studio et regrouper ceux qui utilisent le même préfixe. Les collections importées sont enregistrées localement dans le navigateur.
+Le paquet du plugin inclut le catalogue MDI. Les collections Icon Studio peuvent être importées depuis l’ordinateur sous forme de fichiers JavaScript ou chargées depuis `/config/www/` avec File Studio. Le scanner parcourt également les sous-dossiers, notamment `/config/www/community/` (accessible dans Home Assistant sous `/local/community/`). Il recherche les jeux d’icônes JavaScript compatibles lorsque le nom du fichier ou d’un dossier contient « icon », puis regroupe ceux qui utilisent le même préfixe. Les collections importées sont enregistrées localement dans le navigateur.
 
 Certains anciens jeux d’icônes Home Assistant exposent leurs noms via `window.customIcons` et peuvent être affichés ainsi. La nouvelle interface `window.customIconsets` ne fournit pas de mécanisme général pour lister tous les noms d’un jeu quelconque. Ces jeux ne peuvent être affichés que s’ils fournissent également une liste de noms lisible.
 

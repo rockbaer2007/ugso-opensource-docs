@@ -8,7 +8,7 @@ Die ATLAS Icon Bibliothek ist ein eigenständiges Plugin zum Suchen und Durchsuc
 
 ## Iconsets laden
 
-Der Plugin-Paket enthält den MDI-Katalog. Icon-Studio-Sammlungen können als JavaScript-Datei vom PC importiert oder über File Studio aus `/config/www/` geladen werden. Der Scanner kann dort unterstützte, von Icon Studio erzeugte Dateien finden und Dateien mit gleichem Präfix zusammenfassen. Importierte Sammlungen werden lokal im Browser gespeichert.
+Das Plugin-Paket enthält den MDI-Katalog. Icon-Studio-Sammlungen können als JavaScript-Datei vom PC importiert oder über File Studio aus `/config/www/` geladen werden. Der Scanner durchsucht auch Unterordner, darunter `/config/www/community/` (in Home Assistant als `/local/community/` erreichbar). Er berücksichtigt unterstützte JavaScript-Iconsets, wenn „icon“ im Datei- oder Ordnernamen vorkommt, und fasst Dateien mit gleichem Präfix zusammen. Importierte Sammlungen werden lokal im Browser gespeichert.
 
 Einige ältere Home-Assistant-Iconsets stellen über `window.customIcons` eine Icon-Namensliste bereit und können damit angezeigt werden. Die neuere `window.customIconsets`-Schnittstelle bietet keinen allgemeinen Mechanismus, um alle Icon-Namen eines beliebigen Sets aufzulisten. Solche Sets lassen sich nur anzeigen, wenn sie zusätzlich eine lesbare Namensliste bereitstellen.
 
