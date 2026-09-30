@@ -6,6 +6,8 @@ description: Rechercher des jeux d’icônes Home Assistant, les parcourir et co
 
 La Bibliothèque d’icônes ATLAS est un plugin autonome qui permet de rechercher et de parcourir des jeux d’icônes. Les icônes sont affichées dans une grille de 20 colonnes au maximum ; pour les grands jeux, l’interface ne rend que la partie visible. Cliquez sur une icône pour copier son nom complet, par exemple `mdi:home` ou `atlas:home`.
 
+Le catalogue MDI est inclus dans le plugin et le champ source l’identifie comme une source intégrée, et non comme un chemin de fichier Home Assistant. Par défaut, les icônes SVG utilisent la couleur d’accent et l’interface suit le thème clair ou sombre du navigateur.
+
 ## Charger des jeux d’icônes
 
 Le paquet du plugin inclut le catalogue MDI. Les collections Icon Studio et les jeux d’icônes statiques Home Assistant compatibles peuvent être importés depuis l’ordinateur sous forme de fichiers JavaScript ou chargés depuis `/config/www/` avec File Studio. Le scanner parcourt également les sous-dossiers, notamment `/config/www/community/` (accessible dans Home Assistant sous `/local/community/`). Il recherche les jeux d’icônes JavaScript compatibles lorsque le nom du fichier ou d’un dossier contient « icon », puis regroupe ceux qui utilisent le même préfixe. Il prend notamment en charge Hue, Selfh.st, BHA, Yandex, Custom Icons, KNX, Thermal Comfort et Custom Brand Icons. Les fichiers JavaScript sont analysés comme des données et ne sont jamais exécutés. Les collections importées sont enregistrées localement dans le navigateur.

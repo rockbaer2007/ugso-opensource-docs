@@ -6,6 +6,8 @@ description: Home-Assistant-Iconsets suchen, durchsuchen und Icon-Namen kopieren
 
 Die ATLAS Icon Bibliothek ist ein eigenständiges Plugin zum Suchen und Durchsuchen von Iconsets. Die Icons erscheinen in einem Raster mit bis zu 20 Spalten; bei großen Sets lädt die Oberfläche nur den sichtbaren Ausschnitt. Ein Klick kopiert den vollständigen Namen wie `mdi:home` oder `atlas:home`.
 
+Der MDI-Katalog ist im Plugin enthalten und wird in der Quellenanzeige als integrierte Quelle ausgewiesen. Er erscheint nicht als Home-Assistant-Dateipfad. SVG-Icons verwenden standardmäßig die Akzentfarbe; das Erscheinungsbild folgt dem Hell-/Dunkel-Farbschema des Browsers.
+
 ## Iconsets laden
 
 Das Plugin-Paket enthält den MDI-Katalog. Icon-Studio-Sammlungen und unterstützte statische Home-Assistant-Iconsets können als JavaScript-Datei vom PC importiert oder über File Studio aus `/config/www/` geladen werden. Der Scanner durchsucht auch Unterordner, darunter `/config/www/community/` (in Home Assistant als `/local/community/` erreichbar). Er berücksichtigt unterstützte JavaScript-Iconsets, wenn „icon“ im Datei- oder Ordnernamen vorkommt, und fasst Dateien mit gleichem Präfix zusammen. Beispielsweise werden Hue, Selfh.st, BHA, Yandex, Custom Icons, KNX, Thermal Comfort und Custom Brand Icons unterstützt. Die JavaScript-Dateien werden als Daten gelesen, nicht ausgeführt. Importierte Sammlungen werden lokal im Browser gespeichert.
