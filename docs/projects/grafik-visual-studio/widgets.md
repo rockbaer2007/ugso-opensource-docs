@@ -6,27 +6,29 @@ title: Widget-Übersicht
 
 Der aktuelle Widget-Katalog enthält **45 Einträge in drei Gruppen**. Die Namen entsprechen der Palette im Editor. Einige Widgets verwenden derzeit Testwerte oder ändern Zustände nur lokal; eine vollständige Home-Assistant-Live-Anbindung ist noch nicht vorhanden. Ein Feld für eine Entity-ID allein bedeutet daher noch keine Steuerung der Entität.
 
+Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche auf Englisch. Frühere deutsche Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
+
 ## HA Grafik – Basis (43)
 
 | Widget | Aktuelle Funktion |
 | --- | --- |
-| Link | Formatierbarer HTML-Inhalt als Link zu einer URL. |
+| link | Formatierbarer HTML-Inhalt als Link zu einer URL. |
 | Note | Notizzettel mit Text beziehungsweise HTML und optional ausgeblendeter Ecke. |
 | Screen Resolution | Zeigt die aktuelle Fensterauflösung an. |
 | Red Number | Zahlenwert als farbiger Kreis oder Pin mit anpassbarem Radius. |
-| Boolesches SVG | Wählt je nach Testzustand eines von zwei SVG-Motiven. |
-| SVG Shape | Zeichnet eine geometrische SVG-Form mit Farbe, Strichbreite, Rotation und Skalierung. |
-| Eingegebener Wert | Lokales Text- oder Zahlen-Eingabefeld mit Darstellungs- und Eingabeoptionen. |
-| View in Widget | Bettet eine Projektseite ein; rekursive Einbettung wird verhindert. |
+| Bool SVG | Wählt je nach Testzustand eines von zwei SVG-Motiven. |
+| SVG shape | Zeichnet eine geometrische SVG-Form mit Farbe, Strichbreite, Rotation und Skalierung. |
+| Input val | Lokales Text- oder Zahlen-Eingabefeld mit Darstellungs- und Eingabeoptionen. |
+| View in widget | Bettet eine Projektseite ein; rekursive Einbettung wird verhindert. |
 | View in widget 8 | Wählt eine von bis zu 50 Seiten anhand eines Index-Testwerts. |
-| iframe | Bettet eine URL ein, sofern die Zielseite dies erlaubt; mit Rahmen-, Scroll- und Aktualisierungsoptionen. |
-| iframe 8 | Wählt anhand eines Index-Testwerts einen von bis zu 20 konfigurierten Frames. |
+| iFrame | Bettet eine URL ein, sofern die Zielseite dies erlaubt; mit Rahmen-, Scroll- und Aktualisierungsoptionen. |
+| iFrame 8 | Wählt anhand eines Index-Testwerts einen von bis zu 20 konfigurierten Frames. |
 | Image 8 | Wählt anhand eines Index-Testwerts eines von bis zu 50 Bildern. |
 | AckFlag HTML | Zeigt zwei konfigurierbare HTML-Zustände; Home Assistant hat kein natives ioBroker-`ack`-Flag. |
 | Schaltfläche (Icon Ein/Aus) | Schaltfläche mit getrennten Bildern für Ein und Aus; Zustandswechsel derzeit lokal. |
 | Switch | Grafischer Ein/Aus-Schalter; Zustandswechsel derzeit lokal. |
-| Checkbox | Ein/Aus-Auswahl; Zustandswechsel derzeit lokal. |
-| Lampe ein/aus | Lampensymbol mit getrennten Ein-/Aus-Bildern; Zustandswechsel derzeit lokal. |
+| Bool Checkbox | Ein/Aus-Auswahl; Zustandswechsel derzeit lokal. |
+| Bulb on/off | Lampensymbol mit getrennten Ein-/Aus-Bildern; Zustandswechsel derzeit lokal. |
 | Slider | Regler mit Minimum, Maximum und Schrittweite; Wertänderung derzeit lokal. |
 | Number | Zahl mit Einheit, Multiplikator, Nachkommastellen und Vor-/Nachsilbe; getrennt vom grafischen Widget „Red Number“. |
 | String | Textwert mit optionalem Icon und HTML vor oder nach dem Wert. |
@@ -41,18 +43,18 @@ Der aktuelle Widget-Katalog enthält **45 Einträge in drei Gruppen**. Die Namen
 | ValueList HTML Style | Zeigt einen HTML-Listeneintrag mit zugeordnetem CSS-Stil. |
 | Bool HTML | Zeigt je nach Testzustand einen von zwei HTML-Inhalten. |
 | Bool Select | Auswahlfeld für Ein/Aus mit anpassbaren Beschriftungen. |
-| Bool HTML-Steuerung | Anklickbare Ein/Aus-HTML-Anzeige; Wechsel derzeit lokal. |
+| Bool HTML (control) | Anklickbare Ein/Aus-HTML-Anzeige; Wechsel derzeit lokal. |
 | HTML State | Eigener HTML-Inhalt mit optionalem Klick-Link und Wertplatzhalter. |
 | Table | Tabelle aus JSON-Testdaten mit Zeilenauswahl und Druckoption. |
 | Full Screen | Schaltfläche für den Vollbildmodus der Oberfläche. |
 | Bar | Horizontaler oder vertikaler Balken für einen Testwert. |
 | HTML | Frei konfigurierbarer HTML-Inhalt. |
-| HTML Navigation | Schaltfläche oder Link zu einer Projektseite, URL oder einem HA-Pfad. |
-| Filter Dropdown | Filtert Runtime-Widgets anhand des in „Generell“ gesetzten Filterworts. |
+| HTML navigation | Schaltfläche oder Link zu einer Projektseite, URL oder einem HA-Pfad. |
+| filter - dropdown | Filtert Runtime-Widgets anhand des in „Generell“ gesetzten Filterworts. |
 | Text | Freies Textfeld ohne Entitätsbindung. |
-| Rahmen | Rahmen mit Titel, Titelposition, Kopfbereich und Farben. |
+| Border | Rahmen mit Titel, Titelposition, Kopfbereich und Farben. |
 | Messanzeige | Einfache Messwertanzeige mit Einheit. |
-| Bild / Kamera | Zeigt eine konfigurierbare Bildquelle; noch keine Live-Kamera-Anbindung. |
+| Image | Zeigt eine konfigurierbare Bildquelle; noch keine Live-Kamera-Anbindung. |
 
 ## HA Grafik – Interaktiv (1)
 
