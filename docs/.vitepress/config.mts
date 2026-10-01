@@ -124,7 +124,8 @@ const sidebarDe = {
       { text: 'Widget-Übersicht', link: '/projects/grafik-visual-studio/widgets' },
       { text: 'Zeichnen: SVG-Verbindungslinie', link: '/projects/grafik-visual-studio/zeichnen' },
       { text: 'Widget-Paket-Schnittstelle', link: '/projects/grafik-visual-studio/widget-pakete' },
-      { text: 'Tool-Paket-Schnittstelle', link: '/projects/grafik-visual-studio/tool-pakete' }
+      { text: 'Tool-Paket-Schnittstelle', link: '/projects/grafik-visual-studio/tool-pakete' },
+      { text: 'Packer für Pakete', link: '/projects/grafik-visual-studio/packer' }
     ]
   }],
   '/sammlung/flex-table-card/': [
@@ -518,7 +519,8 @@ const sidebarEn = {
       { text: 'Widget catalog', link: '/en/projects/grafik-visual-studio/widgets' },
       { text: 'Drawing: SVG connection line', link: '/en/projects/grafik-visual-studio/zeichnen' },
       { text: 'Widget package interface', link: '/en/projects/grafik-visual-studio/widget-packages' },
-      { text: 'Tool package interface', link: '/en/projects/grafik-visual-studio/tool-packages' }
+      { text: 'Tool package interface', link: '/en/projects/grafik-visual-studio/tool-packages' },
+      { text: 'Package packer', link: '/en/projects/grafik-visual-studio/packer' }
     ]
   }],
   '/en/collection/flex-table-card/': [
