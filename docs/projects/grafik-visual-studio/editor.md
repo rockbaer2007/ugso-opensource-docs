@@ -6,7 +6,7 @@ title: Editor und Tastenkombinationen
 
 ## Einstieg
 
-Lege im Menü **Projekte** ein Projekt an und wähle über **Seiten** eine Seite. Stelle die Seitengröße ein, öffne **Widgets** und füge ein Element aus der Palette ein. Ein Klick auf ein Widget wählt es aus; rechts erscheinen seine Eigenschaften. Über **Runtime** prüfst du die Ansicht. **Speichern** sichert manuell; unter **Einstellungen** lassen sich Auto-Save und dessen Verzögerung ändern.
+Lege im Menü **Projekte** ein Projekt an und wähle über **Seiten** eine Seite. Stelle die Seitengröße ein, öffne **Widgets** und füge ein Element aus der Palette ein. Mit **Widgets suchen** oben in der Palette filterst du die verfügbaren Widgets nach Name oder Typ; passende Gruppen öffnen sich während der Suche, ohne ihre bisherigen Klappzustände zu ändern. Ein Klick auf ein Widget wählt es aus; rechts erscheinen seine Eigenschaften. Über **Runtime** prüfst du die Ansicht. **Speichern** sichert manuell; unter **Einstellungen** lassen sich Auto-Save und dessen Verzögerung ändern.
 
 In der Widget-Auswahl der oberen Leiste kannst du mehrere Widgets markieren oder die Auswahl aufheben. Die Aktionsleiste bietet Ausschneiden, Kopieren, Einfügen, Duplizieren, Löschen und bis zu 50 Schritte Rückgängig/Wiederholen. Die zehn Ausrichtungsaktionen arbeiten mit mehreren ausgewählten normalen Widgets; das erste ausgewählte Widget ist die Referenz. Bei **Breite** und **Höhe** öffnet langes Drücken (etwa 0,6 Sekunden) eine Eingabe für den gewünschten Pixelwert.
 
