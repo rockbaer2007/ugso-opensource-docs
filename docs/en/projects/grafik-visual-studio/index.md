@@ -9,6 +9,10 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 [Editor and keyboard shortcuts](./editor) · [All 45 widgets](./widgets) · [Drawing: SVG connection line](./zeichnen) · [Source and Home Assistant app](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
 
+![HA Grafik Visual Studio editor with widget palette and SVG connection lines](/images/grafik-visual-studio/editor-zeichnung.png)
+
+*Editor view with drawn connection lines. [Open the full-resolution image](/images/grafik-visual-studio/editor-zeichnung.png).*
+
 ## What works today
 
 - Manage multiple projects and named pages, each with its own size, background and widgets. The runtime presents visible pages separately.

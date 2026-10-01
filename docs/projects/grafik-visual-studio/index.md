@@ -9,6 +9,10 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 [Editor und Tastenkombinationen](./editor) · [Alle 45 Widgets](./widgets) · [Zeichnen: SVG-Verbindungslinie](./zeichnen) · [Quellcode und Home-Assistant-App](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
 
+![Editor von HA Grafik Visual Studio mit Widget-Palette und SVG-Verbindungslinien](/images/grafik-visual-studio/editor-zeichnung.png)
+
+*Editoransicht mit gezeichneten Verbindungslinien. [Bild in voller Auflösung öffnen](/images/grafik-visual-studio/editor-zeichnung.png).*
+
 ## Was derzeit möglich ist
 
 - Mehrere Projekte und benannte Seiten mit eigenen Abmessungen, Hintergrund und Widgets verwalten. Die Runtime zeigt sichtbare Seiten separat an.
