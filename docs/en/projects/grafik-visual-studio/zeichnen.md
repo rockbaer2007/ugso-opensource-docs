@@ -12,13 +12,13 @@ The drawing widget appears in the palette as **HA Grafik – Spezial → SVG-Ver
 2. Enable the **Andockpunkte** property group on the target widget. Its twelve positions can be enabled individually: left/right at top, center and bottom; top/bottom at one-quarter, center and three-quarter width. Clearing the group checkbox turns off all docking points. Multiple occupancy, maximum connections, lane spacing and persistent visibility are configurable.
 3. Choose the **Pfadart**: straight, automatic orthogonal, curve or manual zigzag/multi-point path. Clicking the line opens a centered dialog with **Klick** and **Sammelpunkt**; “Klick” is the default. Confirming with **OK** adds a draggable intermediate point and changes the path to manual multi-point mode. Points can also be named and positioned by X/Y in the properties editor.
 
-An enabled **Sammelpunkt** can be explicitly chosen as the start or destination of another line. Crossing or proximity alone never joins lines. A disabled collector point cannot be chosen for new connections. Multiple lines can lead to one enabled collector point.
+An enabled **Sammelpunkt** can be chosen as the start or destination of another line. You can also drag a free line endpoint onto the visible collector point: it snaps into place and stores the connection. Crossing or proximity alone never joins lines. A disabled collector point will not accept a new line. Multiple lines can lead to one enabled collector point. Lines that only touch the point visually must be docked again once.
 
 ## Appearance and flow
 
 - **Line:** Base color, second animation color, width, opacity, solid/dashed/dotted pattern, dash and gap lengths, line caps and corner radius.
 - **Arrowheads:** Set start and end independently to none, filled or open arrow, or circle; size and color are configurable.
-- **Animation:** Two-color flow, moving dashes, pulse or moving light; direction from start to end or reverse, plus duration. A branch line can inherit colors, width and animation from a chosen main line. Synchronization offers matching phase or arrival at the collector point. When connected to a collector, animation direction is oriented toward that point automatically.
+- **Animation:** Two-color flow, moving dashes, pulse or moving light; direction from start to end or reverse, plus duration. With **Animationstakt der Hauptlinie übernehmen** enabled, a branch follows the main line's animation timing while keeping its own colors when the animation is active. If it is coupled to that main line's collector and the main line is not animated, the branch also stops and shows the main line's base color, including its arrowheads. The branch's own color and animation settings remain stored and apply again after detaching. Synchronization offers matching phase or arrival at the collector point. When connected to a collector, animation direction is oriented toward that point automatically.
 - **Crossing and stacking:** Overlay, visual gap or bridge/arc, plus automatic, above, below or manual z-index. A higher z-index is visually in front of a lower one; it does not create a connection.
 
 ## Editing
