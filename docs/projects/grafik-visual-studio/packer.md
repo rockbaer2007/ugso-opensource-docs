@@ -20,6 +20,24 @@ Ein Widget-Paket kann 1 bis 30 Widgets enthalten; ein Tool-Paket enthält in Sch
 
 Die Qt-Oberfläche läuft unter Windows und Linux. Der Button **Endungen registrieren** zeigt zuerst eine Vorschau und richtet nach Bestätigung eigene Icons und „Öffnen mit“-Einträge für `.wg` und `.tp` beim aktuellen Benutzer ein. Eine bestehende Standard-App wird nicht geändert. Der Packer kann ein vorhandenes Paket zur Prüfung öffnen, ohne es zu installieren. Nach dem Verschieben des Programms muss die Dateityp-Registrierung erneut ausgeführt werden.
 
-Eigenständige Programme wurden für Windows und Linux gebaut und jeweils mit einem Selbsttest geprüft; der Linux-Build lief zusätzlich in einem frischen Ubuntu-24.04-Docker-Container. Unter Linux werden die üblichen Qt-Systembibliotheken für EGL und OpenGL benötigt. **Diese Builds sind noch unsignierte interne Testversionen. Es gibt derzeit keinen öffentlichen Packer-Download.** Öffentliche Downloadlinks folgen erst mit einem signierten Release und veröffentlichtem Prüfschlüssel. Der Packer-Quellcode wird in einem privaten Entwicklungs-Repository gepflegt; die Paketregeln und Studio-Schnittstellen sind öffentlich dokumentiert.
+Version **0.2.0** ist als früher Test-Release im [Studio-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-packer-v0.2.0) erhältlich:
 
-Der [öffentliche Release-Schlüssel](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/packer-release.pub) ist separat bereitgestellt. Sein Ed25519-Fingerabdruck lautet `SHA256:W3iUvKedcI4FWS1kMoBrLlrAF2GbsB4sELphG0uITLE`. Lade den Schlüssel aus dieser Dokumentation, bevor du ein Release prüfst; der private Schlüssel wird nicht veröffentlicht.
+| System | Download | SHA-256 |
+| --- | --- | --- |
+| Windows x86_64 | [ZIP herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/download/grafik-packer-v0.2.0/HA-Grafik-Packer-0.2.0-windows-x86_64.zip) | `7ab24f0d69fec36e15037edf1e4c3c34c29296be4491f16b65801a3e9fa22b9c` |
+| Linux x86_64 | [TAR.GZ herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/download/grafik-packer-v0.2.0/HA-Grafik-Packer-0.2.0-linux-x86_64.tar.gz) | `baa80a8bbc7c5b78f5d16f59fe3c3bc80c8bd3076cb9a17178f5362a207045c9` |
+
+Entpacke das Archiv vollständig und starte `HA-Grafik-Packer.exe` beziehungsweise `HA-Grafik-Packer`. Der Ordner `_internal` muss daneben bleiben; er enthält auch die separat austauschbaren Qt-Bibliotheken. Der Linux-Build wurde zusätzlich in einem frischen Ubuntu-24.04-Docker-Container geprüft und benötigt Qt-Systembibliotheken für EGL/OpenGL. Lizenztexte und Hinweise liegen im Archiv.
+
+## Download prüfen
+
+Lade aus demselben Release [SHA256SUMS](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/download/grafik-packer-v0.2.0/SHA256SUMS) und [SHA256SUMS.sig](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/download/grafik-packer-v0.2.0/SHA256SUMS.sig) herunter. Die [Vertrauensdatei für OpenSSH](https://raw.githubusercontent.com/rockbaer2007/ugso-opensource-docs/main/docs/public/keys/packer-allowed-signers) und der [öffentliche Release-Schlüssel](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/packer-release.pub) werden getrennt vom Release bereitgestellt. Der Ed25519-Fingerabdruck ist `SHA256:W3iUvKedcI4FWS1kMoBrLlrAF2GbsB4sELphG0uITLE`.
+
+Prüfe zuerst die Signatur. Unter Linux im Downloadordner:
+
+```sh
+ssh-keygen -Y verify -f packer-allowed-signers -I packer-release -n ha-grafik-visual-studio-packer-release -s SHA256SUMS.sig < SHA256SUMS
+sha256sum -c SHA256SUMS
+```
+
+Unter Windows funktionieren dieselben Signaturparameter in `cmd.exe` mit der gezeigten Eingabeumleitung. Vergleiche danach `certutil -hashfile DATEINAME SHA256` mit dem Wert in `SHA256SUMS`. Lade Schlüssel und Vertrauensdatei vor dem Prüfen von den oben verlinkten Quellen. Der Packer-Quellcode bleibt im privaten Entwicklungs-Repository; die von GitHub automatisch angebotenen „Source code“-Archive dieses Releases gehören zum **Studio**.
