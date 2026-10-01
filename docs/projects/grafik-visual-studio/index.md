@@ -22,6 +22,7 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 - Mit dem Spezial-Widget Verbindungslinien mit Zwischen- und explizit aktivierten Sammelpunkten, Farben, Pfeilspitzen und Animationen zeichnen. Kreuzende Linien koppeln sich nicht von selbst.
 - Dateien aus Home Assistants `www`-Ordner auswählen und unterstützte Dateien hochladen. Der Entitätenbrowser kann Entitäten und aktuelle Zustände suchen und Entity-IDs in Widget-Felder übernehmen.
 - Änderungen automatisch nach einer einstellbaren Wartezeit speichern (standardmäßig fünf Sekunden) oder manuell speichern. Widgets lassen sich als JSON exportieren und importieren.
+- Die Oberfläche übernimmt die Home-Assistant-Sprache: Deutsch bei deutscher HA-Sprache, sonst Englisch. Unter **Einstellungen → Sprache** kann jeder Browser **Automatisch**, **Deutsch** oder **English** wählen. Projekt- und Widget-Inhalte bleiben dabei unverändert.
 
 ## Grenzen des aktuellen Stands
 

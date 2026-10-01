@@ -22,6 +22,7 @@ description: A different kind of Home Assistant dashboard, with its current deve
 - Draw connection lines with intermediate points, explicitly enabled collector points, colors, arrowheads and animations. Lines that cross do not connect automatically.
 - Select files from Home Assistant's `www` folder and upload supported files. The entity browser can search entities and current states and insert entity IDs into widget fields.
 - Save changes automatically after a configurable delay (five seconds by default) or save manually. Widgets can be exported and imported as JSON.
+- The interface follows Home Assistant's language: German when HA is set to German, English otherwise. Under **Settings → Language**, each browser can choose **Automatic**, **German** or **English**. Project and widget content is left unchanged.
 
 ## Current limitations
 
