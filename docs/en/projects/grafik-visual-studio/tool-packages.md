@@ -5,7 +5,7 @@ description: Create and install local editor tools for HA Grafik Visual Studio.
 
 # Tool package interface 0.1
 
-Under **Settings → Tools**, you can install a local `*.tp.zip`. Tool packages extend the editor, not the widget palette or runtime. Interface 0.1 supports one declarative action: setting the current page's background color. **Run** opens a preview; only **Apply** commits the change. **Undo** can revert it, and normal project saving persists it. Installation itself does not run an action.
+Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tools also appear as icons in two rows of the editor toolbar; its toolbox icon opens the Tools tab for management. Tool packages extend the editor, not the widget palette or runtime. Interface 0.1 supports one declarative action: setting the current page's background color. Clicking a toolbar tool icon or **Run** in the Tools tab opens a preview; only **Apply** commits the change. **Undo** can revert it, and normal project saving persists it. Installation itself does not run an action.
 
 ## Build a package
 
@@ -39,6 +39,6 @@ The ZIP limit is 2 MB, the manifest limit is 200 KB, and each image is limited t
 
 1. Create a ZIP such as `page-color.tp.zip` with `manifest.json` and any referenced images.
 2. Select it under **Settings → Tools**. The list shows the package ID, version, license and tools.
-3. Open the tool preview with **Run** and confirm the page change with **Apply**.
+3. Open the preview from the tool icon in the editor toolbar or with **Run** in the Tools tab, then confirm the page change with **Apply**.
 
 Packages can be removed from the Tools tab. Custom scripts, Home Assistant services, external URLs, GitHub installation and updates are not part of 0.1 yet. See the planned compatibility and extension points in the [tool rules in the source repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/tool-rules.md).
