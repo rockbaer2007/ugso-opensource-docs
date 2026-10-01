@@ -9,7 +9,7 @@ Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tool
 
 ## Build a package
 
-The ZIP contains a UTF-8 `manifest.json` and optionally referenced SVG or PNG images under `icons/`. No other files are allowed. Package IDs use dot-separated parts; tool IDs use the package namespace. Package versions have the form `x.y.z`. A package contains 1 to 20 tools.
+The ZIP contains a UTF-8 `manifest.json` and optionally referenced SVG or PNG images under `icons/`. No other files are allowed. Package IDs use dot-separated parts; the tool ID uses the package namespace. Package versions have the form `x.y.z`. A tool package contains exactly one tool.
 
 ```json
 {
@@ -38,7 +38,7 @@ The ZIP limit is 2 MB, the manifest limit is 200 KB, and each image is limited t
 ## Install and manage
 
 1. Create a ZIP such as `page-color.tp.zip` with `manifest.json` and any referenced images.
-2. Select it under **Settings → Tools**. The list shows the package ID, version, license and tools.
+2. Select it under **Settings → Tools**. The list shows the package ID, version, license and included tool.
 3. Open the preview from the tool icon in the editor toolbar or with **Run** in the Tools tab, then confirm the page change with **Apply**.
 
 Packages can be removed from the Tools tab. Custom scripts, Home Assistant services, external URLs, GitHub installation and updates are not part of 0.1 yet. See the planned compatibility and extension points in the [tool rules in the source repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/tool-rules.md).

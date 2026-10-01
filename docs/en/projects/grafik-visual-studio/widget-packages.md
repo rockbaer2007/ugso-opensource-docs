@@ -9,7 +9,7 @@ Under **Settings → Widget packages**, you can install a local `*.wg.zip`. Inte
 
 ## Build a package
 
-The ZIP contains a UTF-8 `manifest.json` at its root and optionally referenced SVG or PNG images under `icons/`. No other files are allowed. Package IDs use dot-separated parts, such as `example.widgets`; widget types use the package namespace, such as `example.widgets/label`. Package versions have the form `x.y.z`. A package contains 1 to 30 widgets.
+The ZIP contains a UTF-8 `manifest.json` at its root and optionally referenced SVG or PNG images under `icons/`. No other files are allowed. Package IDs use dot-separated parts, such as `example.widgets`; widget types use the package namespace, such as `example.widgets/label`. Package versions have the form `x.y.z`. A package contains 1 to 30 widgets; each appears as its own entry in the package's palette set.
 
 ```json
 {

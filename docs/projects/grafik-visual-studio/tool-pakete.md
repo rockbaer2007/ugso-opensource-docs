@@ -9,7 +9,7 @@ description: Lokale Editor-Tools für HA Grafik Visual Studio erstellen und inst
 
 ## Paket aufbauen
 
-Das ZIP enthält `manifest.json` in UTF-8 und optional referenzierte SVG- oder PNG-Bilder unter `icons/`. Andere Dateien sind nicht zulässig. Eine Paket-ID ist punktgetrennt; Tool-IDs liegen im Paket-Namensraum. Die Paketversion hat das Format `x.y.z`. Ein Paket enthält 1 bis 20 Tools.
+Das ZIP enthält `manifest.json` in UTF-8 und optional referenzierte SVG- oder PNG-Bilder unter `icons/`. Andere Dateien sind nicht zulässig. Eine Paket-ID ist punktgetrennt; die Tool-ID liegt im Paket-Namensraum. Die Paketversion hat das Format `x.y.z`. Ein Tool-Paket enthält genau ein Tool.
 
 ```json
 {
@@ -38,7 +38,7 @@ Das ZIP darf höchstens 2 MB, das Manifest 200 KB und jedes Bild 50 KB groß sei
 ## Installieren und verwalten
 
 1. Erstelle beispielsweise `seitenfarbe.tp.zip` mit `manifest.json` und gegebenenfalls den referenzierten Bildern.
-2. Wähle die Datei unter **Einstellungen → Tools**. Die Liste zeigt Paket-ID, Version, Lizenz und die enthaltenen Tools.
+2. Wähle die Datei unter **Einstellungen → Tools**. Die Liste zeigt Paket-ID, Version, Lizenz und das enthaltene Tool.
 3. Öffne für das Tool über sein Symbol in der Editor-Werkzeugleiste oder mit **Ausführen** im Tools-Tab die Vorschau und bestätige die gewünschte Seitenänderung mit **Anwenden**.
 
 Pakete können im Tool-Tab entfernt werden. Eigene Skripte, Home-Assistant-Dienste, externe URLs, GitHub-Installation und Updates sind noch nicht Teil von 0.1. Die geplanten Kompatibilitäts- und Erweiterungsregeln stehen in den [Tool-Regeln im Quellcode](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/tool-rules.md).
