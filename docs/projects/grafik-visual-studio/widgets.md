@@ -28,7 +28,7 @@ Der aktuelle Widget-Katalog enthält **45 Einträge in drei Gruppen**. Die Namen
 | Checkbox | Ein/Aus-Auswahl; Zustandswechsel derzeit lokal. |
 | Lampe ein/aus | Lampensymbol mit getrennten Ein-/Aus-Bildern; Zustandswechsel derzeit lokal. |
 | Slider | Regler mit Minimum, Maximum und Schrittweite; Wertänderung derzeit lokal. |
-| Zahlenwert | Zahl mit Einheit, Multiplikator, Nachkommastellen und Vor-/Nachsilbe. |
+| Number | Zahl mit Einheit, Multiplikator, Nachkommastellen und Vor-/Nachsilbe; getrennt vom grafischen Widget „Red Number“. |
 | String | Textwert mit optionalem Icon und HTML vor oder nach dem Wert. |
 | String (unescaped) | Stellt einen HTML-Testwert mit Vor- und Nachsatz dar. |
 | String img src | Zeigt ein Bild aus einer URL im Testwert. |

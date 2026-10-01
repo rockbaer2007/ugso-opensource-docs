@@ -28,7 +28,7 @@ The current catalog has **45 widgets in three groups**. Names match the editor p
 | Checkbox | On/off checkbox; state changes are local for now. |
 | Lampe ein/aus | Lamp with separate on/off images; state changes are local for now. |
 | Slider | Range slider with minimum, maximum and step; value changes are local for now. |
-| Zahlenwert | Number with unit, multiplier, decimal places, prefix and suffix. |
+| Number | Number with unit, multiplier, decimal places, prefix and suffix; separate from the graphical Red Number widget. |
 | String | Text value with optional icon and HTML before or after the value. |
 | String (unescaped) | Displays an HTML sample value with prefix and suffix. |
 | String img src | Displays an image from a URL in the sample value. |
