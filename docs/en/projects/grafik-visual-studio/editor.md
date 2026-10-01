@@ -33,7 +33,7 @@ The choice is stored only in this browser and survives a reload. Other users and
 | Move a connection endpoint faster | Hold `Shift` with an arrow key for 10-pixel steps |
 | Detach a connected endpoint | Hold `Ctrl` and drag it; `Ctrl` plus an arrow key also works |
 | Move an entire connection line | Press and drag the line; this detaches its existing docked endpoints |
-| Add an intermediate or collector point | Click the line, choose “Klick” or “Sammelpunkt”, then confirm with **OK** |
+| Add an intermediate or collector point | Click the line, choose “Intermediate point” or “Collector point”, then confirm with **OK** |
 
 Undo/redo shortcuts apply when focus is outside input, text area and select controls. Cut, copy and paste are available as buttons; global `Ctrl+X/C/V` shortcuts are not currently implemented.
 
