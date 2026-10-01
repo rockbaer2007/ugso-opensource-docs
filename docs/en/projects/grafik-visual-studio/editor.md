@@ -6,13 +6,13 @@ title: Editor and keyboard shortcuts
 
 ## Getting started
 
-Create a project under **Projekte** and choose a page under **Seiten**. Set the page size, open **Widgets**, and add an item from the palette. **Search widgets** at the top of the palette filters available widgets by name or type; matching groups open during the search without changing their previous expanded state. Clicking a widget selects it and shows its properties on the right. Use **Runtime** to check the view. **Speichern** saves manually; **Einstellungen** controls auto-save and its delay.
+Create a project under **Projekte** and choose a page under **Seiten**. Set the page size, open **Widgets**, and add an item from the palette. **Search widgets** at the top of the palette filters available widgets by name or type; matching groups open during the search without changing their previous expanded state. Clicking a widget selects it and shows its properties on the right. Use **Runtime** to check the view. **Speichern** saves manually; auto-save and its delay are under **Settings → General**. The **Widget packages** and **Tools** tabs currently show empty lists; package installation will follow later.
 
 The widget selector in the top bar lets you select several widgets or clear the selection. The action bar provides cut, copy, paste, duplicate, delete and up to 50 undo/redo steps. The ten alignment actions work on multiple selected normal widgets; the first selected widget is the reference. Pressing **Breite** or **Höhe** for about 0.6 seconds opens an exact pixel-size input.
 
 ## Interface language
 
-Open **Settings → Language → App language**, choose an option, then click **Save**:
+Open **Settings → General → Language → App language**, choose an option, then click **Save**:
 
 | Option | Display language |
 | --- | --- |
