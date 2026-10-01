@@ -5,6 +5,8 @@ description: Create and install local editor tools for HA Grafik Visual Studio.
 
 # Tool package interface 0.1
 
+Starting with Studio 0.1.89, you can install ZIP-based packages ending in `.tp`. Existing `.tp.zip` files remain supported; the extension and manifest must both identify a tool package.
+
 Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tools also appear as icons in two rows of the editor toolbar; its toolbox icon opens the Tools tab for management. Tool packages extend the editor, not the widget palette or runtime. Interface 0.1 supports one declarative action: setting the current page's background color. Clicking a toolbar tool icon or **Run** in the Tools tab opens a preview; only **Apply** commits the change. **Undo** can revert it, and normal project saving persists it. Installation itself does not run an action.
 
 ## Build a package
@@ -37,7 +39,7 @@ The ZIP limit is 2 MB, the manifest limit is 200 KB, and each image is limited t
 
 ## Install and manage
 
-1. Create a ZIP such as `page-color.tp.zip` with `manifest.json` and any referenced images.
+1. Create a ZIP such as `page-color.tp` with `manifest.json` and any referenced images. `page-color.tp.zip` remains supported.
 2. Select it under **Settings → Tools**. The list shows the package ID, version, license and included tool.
 3. Open the preview from the tool icon in the editor toolbar or with **Run** in the Tools tab, then confirm the page change with **Apply**.
 

@@ -5,6 +5,8 @@ description: Create and install local widget packages for HA Grafik Visual Studi
 
 # Widget package interface 0.1
 
+Starting with Studio 0.1.89, you can install ZIP-based packages ending in `.wg`. Existing `.wg.zip` files remain supported; the extension and manifest must both identify a widget package.
+
 Under **Settings → Widget packages**, you can install a local `*.wg.zip`. Interface 0.1 accepts validated, declarative text widgets. After reloading the app, they appear as a separate set in the palette and work in both editor and runtime. Installation does not execute package code.
 
 ## Build a package
@@ -38,7 +40,7 @@ The ZIP limit is 2 MB, the manifest limit is 200 KB, and each image is limited t
 
 ## Install and manage
 
-1. Create a ZIP named, for example, `my-package.wg.zip` with the files above.
+1. Create a ZIP named, for example, `my-package.wg` with the files above. `my-package.wg.zip` remains supported.
 2. Select the local ZIP under **Settings → Widget packages**.
 3. Review its package ID, version, API version, widget count and license. Use **Reload** to make the set appear in the palette.
 

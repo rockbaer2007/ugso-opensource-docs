@@ -5,6 +5,8 @@ description: Lokale Widget-Pakete für HA Grafik Visual Studio erstellen und ins
 
 # Widget-Paket-Schnittstelle 0.1
 
+Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.wg` installieren. Bisherige `.wg.zip`-Dateien bleiben nutzbar; Endung und Manifest müssen zur Widget-Paketart passen.
+
 Über **Einstellungen → Widget-Pakete** installierst du ein lokales `*.wg.zip`. Die Schnittstelle 0.1 nimmt geprüfte, deklarative Text-Widgets auf. Nach dem Neuladen erscheinen sie als eigenes Set in der Widget-Palette und funktionieren im Editor und in der Runtime. Die Installation führt keinen Paket-Code aus.
 
 ## Paket aufbauen
@@ -38,7 +40,7 @@ Das ZIP darf höchstens 2 MB, das Manifest 200 KB und jedes Bild 50 KB groß sei
 
 ## Installieren und verwalten
 
-1. Erstelle das ZIP mit dem Dateinamen `mein-paket.wg.zip` und den genannten Dateien.
+1. Erstelle das ZIP mit dem Dateinamen `mein-paket.wg` und den genannten Dateien. Auch `mein-paket.wg.zip` wird weiter angenommen.
 2. Öffne **Einstellungen → Widget-Pakete** und wähle die lokale ZIP-Datei.
 3. Prüfe den Eintrag mit Paket-ID, Version, API-Version, Widget-Anzahl und Lizenz. Lade die App über **Neuladen** erneut, damit das Set in der Palette erscheint.
 
