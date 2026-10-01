@@ -122,7 +122,9 @@ const sidebarDe = {
       { text: 'Überblick', link: '/projects/grafik-visual-studio/' },
       { text: 'Editor und Tastenkombinationen', link: '/projects/grafik-visual-studio/editor' },
       { text: 'Widget-Übersicht', link: '/projects/grafik-visual-studio/widgets' },
-      { text: 'Zeichnen: SVG-Verbindungslinie', link: '/projects/grafik-visual-studio/zeichnen' }
+      { text: 'Zeichnen: SVG-Verbindungslinie', link: '/projects/grafik-visual-studio/zeichnen' },
+      { text: 'Widget-Paket-Schnittstelle', link: '/projects/grafik-visual-studio/widget-pakete' },
+      { text: 'Tool-Paket-Schnittstelle', link: '/projects/grafik-visual-studio/tool-pakete' }
     ]
   }],
   '/sammlung/flex-table-card/': [
@@ -514,7 +516,9 @@ const sidebarEn = {
       { text: 'Overview', link: '/en/projects/grafik-visual-studio/' },
       { text: 'Editor and keyboard shortcuts', link: '/en/projects/grafik-visual-studio/editor' },
       { text: 'Widget catalog', link: '/en/projects/grafik-visual-studio/widgets' },
-      { text: 'Drawing: SVG connection line', link: '/en/projects/grafik-visual-studio/zeichnen' }
+      { text: 'Drawing: SVG connection line', link: '/en/projects/grafik-visual-studio/zeichnen' },
+      { text: 'Widget package interface', link: '/en/projects/grafik-visual-studio/widget-packages' },
+      { text: 'Tool package interface', link: '/en/projects/grafik-visual-studio/tool-packages' }
     ]
   }],
   '/en/collection/flex-table-card/': [

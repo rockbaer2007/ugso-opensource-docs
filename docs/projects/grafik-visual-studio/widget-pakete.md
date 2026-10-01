@@ -1,0 +1,47 @@
+---
+title: Widget-Paket-Schnittstelle
+description: Lokale Widget-Pakete für HA Grafik Visual Studio erstellen und installieren.
+---
+
+# Widget-Paket-Schnittstelle 0.1
+
+Über **Einstellungen → Widget-Pakete** installierst du ein lokales `*.wg.zip`. Die Schnittstelle 0.1 nimmt geprüfte, deklarative Text-Widgets auf. Nach dem Neuladen erscheinen sie als eigenes Set in der Widget-Palette und funktionieren im Editor und in der Runtime. Die Installation führt keinen Paket-Code aus.
+
+## Paket aufbauen
+
+Das ZIP enthält eine UTF-8-Datei `manifest.json` im Wurzelverzeichnis und optional darin referenzierte SVG- oder PNG-Bilder unter `icons/`. Andere Dateien sind nicht zulässig. Eine Paket-ID ist punktgetrennt, zum Beispiel `beispiel.widgets`; Widget-Typen liegen in ihrem Namensraum, etwa `beispiel.widgets/label`. Die Paketversion hat das Format `x.y.z`. Ein Paket enthält 1 bis 30 Widgets.
+
+```json
+{
+  "format": "ha-grafik-widget-package",
+  "apiVersion": "0.1",
+  "id": "beispiel.widgets",
+  "name": "Beispiel Widgets",
+  "version": "1.0.0",
+  "license": "MIT",
+  "widgets": [{
+    "type": "beispiel.widgets/label",
+    "label": "Label",
+    "defaults": { "text": "Hallo" },
+    "propertyGroups": [{
+      "label": "Inhalt",
+      "fields": [{ "key": "text", "label": "Text", "type": "text" }]
+    }],
+    "render": { "kind": "text", "valueKey": "text" }
+  }]
+}
+```
+
+`valueKey` bezeichnet ein bearbeitbares Text- oder Zahlenfeld. Für Eigenschaften sind `text`, `number`, `checkbox`, `color`, `range` und `select` vorgesehen. Jede Eigenschaft braucht einen passenden Standardwert in `defaults`. Die gemeinsamen Bereiche **Generell** und **Sichtbarkeit** ergänzt das Studio selbst. Ein Paket oder Widget kann zusätzlich `"icon": "icons/name.svg"` beziehungsweise `.png` angeben; die Bilddatei muss dann im ZIP liegen. Ohne eigenes Widget-Bild erscheint das integrierte SVG-Textsymbol.
+
+Das ZIP darf höchstens 2 MB, das Manifest 200 KB und jedes Bild 50 KB groß sein. PNG-Bilder sind auf 1024 × 1024 Pixel begrenzt; SVG-Dateien werden auf passive Formen und Attribute geprüft. Paket- und Widget-Bilder dürfen SVG oder PNG sein, während die Aktionsbuttons des Studios ihre SVG-Symbole behalten.
+
+## Installieren und verwalten
+
+1. Erstelle das ZIP mit dem Dateinamen `mein-paket.wg.zip` und den genannten Dateien.
+2. Öffne **Einstellungen → Widget-Pakete** und wähle die lokale ZIP-Datei.
+3. Prüfe den Eintrag mit Paket-ID, Version, API-Version, Widget-Anzahl und Lizenz. Lade die App über **Neuladen** erneut, damit das Set in der Palette erscheint.
+
+Ein bereits installiertes Paket wird nicht überschrieben. **Entfernen** ist gesperrt, solange ein Widget-Typ des Pakets in einem Projekt verwendet wird. GitHub-Installation und Paket-Updates sind noch nicht verfügbar. Eigene Skripte, Home-Assistant-Zustandsbindungen und Schreibaktionen gehören ebenfalls nicht zu Schnittstelle 0.1.
+
+Bestehende Widget-Grundfunktionen sollen bei späteren Erweiterungen erhalten bleiben. Die vollständigen Regeln und weitere geplante Fähigkeiten stehen in den [Widget-Regeln im Quellcode](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/widget-rules.md).
