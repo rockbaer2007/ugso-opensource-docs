@@ -120,7 +120,9 @@ const sidebarDe = {
   '/projects/grafik-visual-studio/': [{
     text: 'Grafik Visual Studio', collapsed: false, items: [
       { text: 'Überblick', link: '/projects/grafik-visual-studio/' },
-      { text: 'Editor und Tastenkombinationen', link: '/projects/grafik-visual-studio/editor' }
+      { text: 'Editor und Tastenkombinationen', link: '/projects/grafik-visual-studio/editor' },
+      { text: 'Widget-Übersicht', link: '/projects/grafik-visual-studio/widgets' },
+      { text: 'Zeichnen: SVG-Verbindungslinie', link: '/projects/grafik-visual-studio/zeichnen' }
     ]
   }],
   '/sammlung/flex-table-card/': [
@@ -510,7 +512,9 @@ const sidebarEn = {
   '/en/projects/grafik-visual-studio/': [{
     text: 'Grafik Visual Studio', collapsed: false, items: [
       { text: 'Overview', link: '/en/projects/grafik-visual-studio/' },
-      { text: 'Editor and keyboard shortcuts', link: '/en/projects/grafik-visual-studio/editor' }
+      { text: 'Editor and keyboard shortcuts', link: '/en/projects/grafik-visual-studio/editor' },
+      { text: 'Widget catalog', link: '/en/projects/grafik-visual-studio/widgets' },
+      { text: 'Drawing: SVG connection line', link: '/en/projects/grafik-visual-studio/zeichnen' }
     ]
   }],
   '/en/collection/flex-table-card/': [

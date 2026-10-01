@@ -7,7 +7,7 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 **A different kind of Home Assistant dashboard.** Grafik Visual Studio is an experimental Home Assistant app with a freeform editing surface and a separate runtime. It is still in early development; its project format and controls may change. It is not yet intended for production dashboards.
 
-[Editor and keyboard shortcuts](./editor) · [Source and Home Assistant app](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
+[Editor and keyboard shortcuts](./editor) · [All 45 widgets](./widgets) · [Drawing: SVG connection line](./zeichnen) · [Source and Home Assistant app](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
 
 ## What works today
 

@@ -7,7 +7,7 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 **Das etwas andere Dashboard für Home Assistant.** Grafik Visual Studio ist eine experimentelle Home-Assistant-App mit freier Editorfläche und getrennter Runtime. Das Projekt befindet sich in einer frühen Entwicklungsphase; Format und Bedienung können sich ändern. Es ist derzeit nicht für produktive Dashboards gedacht.
 
-[Editor und Tastenkombinationen](./editor) · [Quellcode und Home-Assistant-App](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
+[Editor und Tastenkombinationen](./editor) · [Alle 45 Widgets](./widgets) · [Zeichnen: SVG-Verbindungslinie](./zeichnen) · [Quellcode und Home-Assistant-App](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
 
 ## Was derzeit möglich ist
 
