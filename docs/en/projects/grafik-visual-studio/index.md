@@ -26,7 +26,7 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 ## Current limitations
 
-Many data widgets still use local sample values. Selecting an entity ID does not yet provide complete live state binding or control in the runtime. Some interactions can be tested there locally. Visibility's “Nur für Gruppen” option and `multi-views` behavior are not fully implemented. The editor filter affects only the editor view.
+In the runtime, Sensor, String, Red Number, Bar, Gauge and Bool HTML read a bound Home Assistant entity every five seconds; visibility rules use those states too. Other data widgets still use local sample values. Selecting an entity ID does not yet provide complete live binding or real control. Some interactions can be tested locally. Visibility's “Nur für Gruppen” option and `multi-views` behavior are not fully implemented. The editor filter affects only the editor view.
 
 The app provides one standard Home Assistant Ingress entry. Separate sidebar entries for editor and runtime require the additional experimental integration from `custom_components/ha_grafik_visual_studio`, which requires Home Assistant OS or Supervised with Supervisor. The [repository README](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/README.md) explains the installation.
 
