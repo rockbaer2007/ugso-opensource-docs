@@ -10,6 +10,18 @@ Create a project under **Projekte** and choose a page under **Seiten**. Set the 
 
 The widget selector in the top bar lets you select several widgets or clear the selection. The action bar provides cut, copy, paste, duplicate, delete and up to 50 undo/redo steps. The ten alignment actions work on multiple selected normal widgets; the first selected widget is the reference. Pressing **Breite** or **Höhe** for about 0.6 seconds opens an exact pixel-size input.
 
+## Interface language
+
+Open **Settings → Language → App language**, choose an option, then click **Save**:
+
+| Option | Display language |
+| --- | --- |
+| **Automatic (Home Assistant)** | German when Home Assistant is set to German; English for any other HA language. If the HA language is unavailable, the browser language is used with the same German/English fallback. |
+| **German** | Keep the interface in German. |
+| **English** | Keep the interface in English. |
+
+The choice is stored only in this browser and survives a reload. Other users and browsers keep their own choice. It translates interface text such as menus, dialogs, the widget palette and properties; user-defined project and widget names and widget content are not translated.
+
 ## Keyboard and mouse
 
 | Action | Control |

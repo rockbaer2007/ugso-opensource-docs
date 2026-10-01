@@ -10,6 +10,18 @@ Lege im Menü **Projekte** ein Projekt an und wähle über **Seiten** eine Seite
 
 In der Widget-Auswahl der oberen Leiste kannst du mehrere Widgets markieren oder die Auswahl aufheben. Die Aktionsleiste bietet Ausschneiden, Kopieren, Einfügen, Duplizieren, Löschen und bis zu 50 Schritte Rückgängig/Wiederholen. Die zehn Ausrichtungsaktionen arbeiten mit mehreren ausgewählten normalen Widgets; das erste ausgewählte Widget ist die Referenz. Bei **Breite** und **Höhe** öffnet langes Drücken (etwa 0,6 Sekunden) eine Eingabe für den gewünschten Pixelwert.
 
+## Sprache der Oberfläche
+
+Öffne **Einstellungen → Sprache → App-Sprache**, wähle eine Option und klicke auf **Speichern**:
+
+| Auswahl | Anzeige |
+| --- | --- |
+| **Automatisch (Home Assistant)** | Deutsch, wenn Home Assistant auf Deutsch eingestellt ist; bei jeder anderen Sprache Englisch. Ist die HA-Sprache nicht erreichbar, gilt die Browsersprache mit demselben Deutsch-/Englisch-Rückfall. |
+| **Deutsch** | Die Oberfläche bleibt auf Deutsch. |
+| **English** | Die Oberfläche bleibt auf Englisch. |
+
+Die Auswahl gilt nur in diesem Browser und bleibt nach einem Neuladen erhalten. Andere Benutzer und Browser behalten ihre eigene Wahl. Die Sprache ändert Oberflächentexte wie Menüs, Dialoge, Widget-Palette und Eigenschaften; selbst vergebene Projekt- und Widget-Namen sowie Widget-Inhalte werden nicht übersetzt.
+
 ## Tastatur und Maus
 
 | Aktion | Bedienung |
