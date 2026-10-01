@@ -41,6 +41,7 @@ const navDe = [
   },
   { text: 'ATLAS', link: '/projects/atlas/' },
   { text: 'ATLAS Plugins', link: '/projects/atlas-plugins/' },
+  { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
@@ -75,6 +76,7 @@ const navEn = [
   },
   { text: 'ATLAS', link: '/en/projects/atlas/' },
   { text: 'ATLAS Plugins', link: '/en/projects/atlas-plugins/' },
+  { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
@@ -115,6 +117,12 @@ const navFr = [
 ]
 
 const sidebarDe = {
+  '/projects/grafik-visual-studio/': [{
+    text: 'Grafik Visual Studio', collapsed: false, items: [
+      { text: 'Überblick', link: '/projects/grafik-visual-studio/' },
+      { text: 'Editor und Tastenkombinationen', link: '/projects/grafik-visual-studio/editor' }
+    ]
+  }],
   '/sammlung/flex-table-card/': [
     {
       text: 'flex-table-card',
@@ -499,6 +507,12 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects/grafik-visual-studio/': [{
+    text: 'Grafik Visual Studio', collapsed: false, items: [
+      { text: 'Overview', link: '/en/projects/grafik-visual-studio/' },
+      { text: 'Editor and keyboard shortcuts', link: '/en/projects/grafik-visual-studio/editor' }
+    ]
+  }],
   '/en/collection/flex-table-card/': [
     {
       text: 'flex-table-card',
