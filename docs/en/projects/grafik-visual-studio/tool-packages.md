@@ -9,19 +9,21 @@ Starting with Studio 0.1.89, you can install ZIP-based packages ending in `.tp`.
 
 Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tools also appear as icons in two rows of the editor toolbar; its toolbox icon opens the Tools tab for management. Tool packages extend the editor, not the widget palette or runtime. Interface 0.1 supports one declarative action: setting the current page's background color. Clicking a toolbar tool icon or **Run** in the Tools tab opens a preview; only **Apply** commits the change. **Undo** can revert it, and normal project saving persists it. Installation itself does not run an action.
 
-## UGSo Colorpicker 1.0.0
+## UGSo Colorpicker 1.2.0
 
-**Update 1.1.0 (Studio 0.1.111):** **Save favorite** is available alongside Copy. The separate **Favorites** tab holds up to 15 colors with HEX and names, automatically saved locally in this browser on each change. Duplicate colors do not consume another slot. At capacity, a yellow **Favorites full** message appears and Save is disabled. Delete entries individually; later entries shift forward, leaving free slots at the end. Selecting a favorite returns its color to the picker for copying.
+**Update 1.2.0 (Studio 0.1.112):** **Save favorite** is available alongside Copy. The separate **Favorites** tab holds up to 15 colors with HEX and names, automatically stored in add-on data and shared across HA administrator browsers through Ingress. Regular users can use the picker but cannot access favorites. Duplicate colors do not consume another slot. At capacity, a yellow **Favorites full** message appears and Save is disabled. Each entry has an SVG button to copy its HEX value and a trash button. Deleting shifts later entries forward. Selecting a color returns it to the picker. Opening the Favorites tab reloads the shared list.
 
-[Download Colorpicker 1.1.0](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.1.0).
+**Import local favorites** merges the previous browser list into the shared list. Colors that do not fit remain locally stored. Tool updates or reinstalls do not delete favorites. Back up add-on data before uninstalling the add-on or migrating servers. If the administrator check is unavailable, reopen Studio through Home Assistant; favorites are not stored locally as a fallback.
 
-This practical add-on tool requires **HA Grafik Visual Studio 0.1.109 or newer**. Download [ugso-colorpicker-1.0.0.tp from the release](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.0.0) and install it under **Settings → Tools**. Open the color-wheel toolbar icon or click **Run**.
+[Download Colorpicker 1.2.0](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.2.0).
+
+This tool requires **HA Grafik Visual Studio 0.1.112 or newer**. Install the downloaded `.tp` file under **Settings → Tools**. Existing Colorpicker installations receive the new dialog by updating Studio. Open the color-wheel toolbar icon or click **Run**.
 
 - Choose hue and saturation on the wheel; adjust brightness separately or enter HEX directly.
 - Select **HEX** or **Color name** and click **Copy**. If browser clipboard access is unavailable, select and copy the output manually.
 - The 31,918 names from [meodai/color-names](https://github.com/meodai/color-names) are bundled locally; no internet connection is required. Exact and nearest matches are distinguished using RGB distance.
 - Names are labels, not CSS color values. Copy HEX for widget color fields.
-- No project or Home Assistant permissions are required; the tool does not modify projects. Left/right arrow keys change hue and up/down change saturation on the wheel.
+- The picker does not modify projects and requires no project permissions. Shared favorites require HA administrator rights. Left/right arrow keys change hue and up/down change saturation on the wheel.
 
 The new declarative `color-picker` action uses `capabilities: []`. Studio supplies the dialog and color-name data; the data-only package activates the tool. Older Studio versions do not support this action. License and attribution links are available in the dialog. The existing `set-page-background` action remains unchanged.
 

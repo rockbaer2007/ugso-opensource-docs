@@ -9,13 +9,15 @@ Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.tp` in
 
 Über **Einstellungen → Tools** installierst du ein lokales `*.tp.zip`. Installierte Tools erscheinen zusätzlich als Symbole in zwei Reihen der Editor-Werkzeugleiste; das Koffersymbol dort öffnet direkt den Tools-Tab zur Verwaltung. Tool-Pakete ergänzen den Editor, nicht die Widget-Palette oder Runtime. Schnittstelle 0.1 unterstützt eine deklarative Aktion: die Hintergrundfarbe der aktuellen Seite setzen. Ein Klick auf das Tool-Symbol oder **Ausführen** im Tools-Tab zeigt zunächst eine Vorschau; erst **Anwenden** übernimmt die Änderung. Sie lässt sich mit **Rückgängig** zurücknehmen und wird über den normalen Projektweg gespeichert. Bei der Installation wird keine Aktion ausgeführt.
 
-## UGSo Colorpicker 1.0.0
+## UGSo Colorpicker 1.2.0
 
-**Update 1.1.0 (Studio 0.1.111):** Zusätzlich zu Kopieren bietet der Colorpicker den Button **Als Favorit speichern**. Im zweiten Tab **Favoriten** stehen bis zu 15 Farben mit HEX und Namen. Sie werden bei jeder Änderung automatisch lokal in diesem Browser gespeichert. Doppelte Farben belegen keinen weiteren Platz. Bei voller Liste erscheint gelb **Favoriten voll**, und Speichern wird deaktiviert. Jeder Eintrag lässt sich einzeln löschen; die übrigen rücken nach und geben am Ende einen Platz frei. Ein Klick auf eine Favoritenfarbe übernimmt sie in den Colorpicker zum Kopieren.
+**Update 1.2.0 (Studio 0.1.112):** Zusätzlich zu Kopieren bietet der Colorpicker **Als Favorit speichern**. Im zweiten Tab **Favoriten** stehen bis zu 15 Farben mit HEX und Namen. Die Liste wird automatisch im Add-on gespeichert und ist für HA-Admins über Ingress auf mehreren Rechnern gemeinsam verfügbar. Normale Benutzer können den Colorpicker verwenden, haben aber keinen Zugriff auf die Favoriten. Doppelte Farben belegen keinen weiteren Platz. Bei voller Liste erscheint gelb **Favoriten voll**, und Speichern wird deaktiviert. Jeder Eintrag hat einen SVG-Kopierbutton für seinen HEX-Wert und einen Papierkorb zum Löschen; die übrigen rücken nach. Ein Klick auf die Farbe übernimmt sie in den Colorpicker. Beim Öffnen des Favoriten-Tabs wird die gemeinsame Liste neu geladen.
 
-[Colorpicker 1.1.0 herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.1.0).
+**Lokale Favoriten übernehmen** führt die bisherigen Browserfavoriten mit der gemeinsamen Liste zusammen. Farben, die nicht mehr hineinpassen, bleiben lokal erhalten. Ein Tool-Update oder eine erneute Tool-Installation löscht die Favoriten nicht. Sichere die Add-on-Daten vor einer Deinstallation oder einem Serverumzug. Falls die Adminprüfung fehlt, öffne Studio erneut über Home Assistant; Favoriten werden dann nicht lokal als Ersatz gespeichert.
 
-Das erste praktische Zusatztool benötigt **HA Grafik Visual Studio 0.1.109 oder neuer**. Lade [ugso-colorpicker-1.0.0.tp aus dem Release](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.0.0) herunter und installiere es unter **Einstellungen → Tools**. Das Farbkreis-Symbol in der Werkzeugleiste oder **Ausführen** öffnet den Colorpicker.
+[Colorpicker 1.2.0 herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.2.0).
+
+Das Zusatztool benötigt **HA Grafik Visual Studio 0.1.112 oder neuer**. Installiere die heruntergeladene `.tp`-Datei unter **Einstellungen → Tools**. Bei bereits installiertem Colorpicker genügt das Studio-Update für den neuen Dialog. Das Farbkreis-Symbol in der Werkzeugleiste oder **Ausführen** öffnet den Colorpicker.
 
 - Farbton und Sättigung im Farbkreis wählen; Helligkeit separat einstellen oder HEX direkt eingeben.
 - Als Ausgabe **HEX** oder **Farbname** wählen und **Kopieren** drücken. Ohne Browser-Zwischenablage kannst du die Ausgabe markieren und manuell kopieren.
