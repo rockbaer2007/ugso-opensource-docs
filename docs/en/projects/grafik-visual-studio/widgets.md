@@ -30,7 +30,7 @@ VIS2-inspired widget names remain in English regardless of the interface languag
 | Bool Checkbox | On/off checkbox; state changes are local for now. |
 | Bulb on/off | Lamp with separate on/off images; state changes are local for now. |
 | Slider | Range slider with minimum, maximum and step; value changes are local for now. |
-| Number | Number with unit, multiplier, decimal places, prefix and suffix; separate from the graphical Red Number widget. |
+| Number | Without an entity, previews its title, unit, multiplier, decimal places, prefix and suffix. With a selected HA entity, editor and runtime show only the formatted current numeric value; missing values display `--`. Separate from the graphical Red Number widget. |
 | String | Text value with optional icon and HTML before or after the value. |
 | String (unescaped) | Displays an HTML sample value with prefix and suffix. |
 | String img src | Displays an image from a URL in the sample value. |

@@ -30,7 +30,7 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 | Bool Checkbox | Ein/Aus-Auswahl; Zustandswechsel derzeit lokal. |
 | Bulb on/off | Lampensymbol mit getrennten Ein-/Aus-Bildern; Zustandswechsel derzeit lokal. |
 | Slider | Regler mit Minimum, Maximum und Schrittweite; Wertänderung derzeit lokal. |
-| Number | Zahl mit Einheit, Multiplikator, Nachkommastellen und Vor-/Nachsilbe; getrennt vom grafischen Widget „Red Number“. |
+| Number | Ohne Entität Vorschau mit Titel, Einheit, Multiplikator, Nachkommastellen und Vor-/Nachsilbe. Mit gewählter HA-Entität zeigt Editor und Runtime nur den formatierten aktuellen Zahlenwert; bei fehlendem Wert `--`. Getrennt vom grafischen Widget „Red Number“. |
 | String | Textwert mit optionalem Icon und HTML vor oder nach dem Wert. |
 | String (unescaped) | Stellt einen HTML-Testwert mit Vor- und Nachsatz dar. |
 | String img src | Zeigt ein Bild aus einer URL im Testwert. |
