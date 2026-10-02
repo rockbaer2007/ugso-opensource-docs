@@ -11,6 +11,8 @@ Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tool
 
 ## UGSo Colorpicker 1.2.0
 
+Starting with Studio **0.1.113**, Colorpicker and Favorites retain the same dialog size when switching tabs. Favorites use two columns on larger screens and one column on narrow screens. Longer lists scroll within the tab. Existing tool installations only require the Studio update.
+
 **Update 1.2.0 (Studio 0.1.112):** **Save favorite** is available alongside Copy. The separate **Favorites** tab holds up to 15 colors with HEX and names, automatically stored in add-on data and shared across HA administrator browsers through Ingress. Regular users can use the picker but cannot access favorites. Duplicate colors do not consume another slot. At capacity, a yellow **Favorites full** message appears and Save is disabled. Each entry has an SVG button to copy its HEX value and a trash button. Deleting shifts later entries forward. Selecting a color returns it to the picker. Opening the Favorites tab reloads the shared list.
 
 **Import local favorites** merges the previous browser list into the shared list. Colors that do not fit remain locally stored. Tool updates or reinstalls do not delete favorites. Back up add-on data before uninstalling the add-on or migrating servers. If the administrator check is unavailable, reopen Studio through Home Assistant; favorites are not stored locally as a fallback.

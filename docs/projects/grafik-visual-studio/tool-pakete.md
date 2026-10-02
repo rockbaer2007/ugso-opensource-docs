@@ -11,6 +11,8 @@ Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.tp` in
 
 ## UGSo Colorpicker 1.2.0
 
+Ab Studio **0.1.113** behalten Colorpicker und Favoriten beim Tabwechsel dieselbe Dialoggröße. Die Favoriten stehen auf größeren Bildschirmen in zwei Spalten, auf schmalen Bildschirmen in einer Spalte. Lange Listen lassen sich innerhalb des Tabs scrollen. Bei installiertem Tool genügt das Studio-Update.
+
 **Update 1.2.0 (Studio 0.1.112):** Zusätzlich zu Kopieren bietet der Colorpicker **Als Favorit speichern**. Im zweiten Tab **Favoriten** stehen bis zu 15 Farben mit HEX und Namen. Die Liste wird automatisch im Add-on gespeichert und ist für HA-Admins über Ingress auf mehreren Rechnern gemeinsam verfügbar. Normale Benutzer können den Colorpicker verwenden, haben aber keinen Zugriff auf die Favoriten. Doppelte Farben belegen keinen weiteren Platz. Bei voller Liste erscheint gelb **Favoriten voll**, und Speichern wird deaktiviert. Jeder Eintrag hat einen SVG-Kopierbutton für seinen HEX-Wert und einen Papierkorb zum Löschen; die übrigen rücken nach. Ein Klick auf die Farbe übernimmt sie in den Colorpicker. Beim Öffnen des Favoriten-Tabs wird die gemeinsame Liste neu geladen.
 
 **Lokale Favoriten übernehmen** führt die bisherigen Browserfavoriten mit der gemeinsamen Liste zusammen. Farben, die nicht mehr hineinpassen, bleiben lokal erhalten. Ein Tool-Update oder eine erneute Tool-Installation löscht die Favoriten nicht. Sichere die Add-on-Daten vor einer Deinstallation oder einem Serverumzug. Falls die Adminprüfung fehlt, öffne Studio erneut über Home Assistant; Favoriten werden dann nicht lokal als Ersatz gespeichert.
