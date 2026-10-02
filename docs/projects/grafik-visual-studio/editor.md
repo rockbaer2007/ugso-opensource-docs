@@ -10,6 +10,8 @@ Lege im Menü **Projekte** ein Projekt an und wähle über **Seiten** eine Seite
 
 In der Widget-Auswahl der oberen Leiste kannst du mehrere Widgets markieren oder die Auswahl aufheben. Die Aktionsleiste bietet Ausschneiden, Kopieren, Einfügen, Duplizieren, Löschen und bis zu 50 Schritte Rückgängig/Wiederholen. Die zehn Ausrichtungsaktionen arbeiten mit mehreren ausgewählten normalen Widgets; das erste ausgewählte Widget ist die Referenz. Bei **Breite** und **Höhe** öffnet langes Drücken (etwa 0,6 Sekunden) eine Eingabe für den gewünschten Pixelwert.
 
+Die Runtime zentriert eine Seite, wenn sie vollständig ins Browserfenster passt. Bei größeren Seiten beginnt sie links oben; horizontale und vertikale Scrollbalken machen die ganze Seite erreichbar, ohne Widget-Koordinaten zu verändern.
+
 ## Sprache der Oberfläche
 
 Öffne **Einstellungen → Allgemein → Sprache → App-Sprache**, wähle eine Option und klicke auf **Speichern**:

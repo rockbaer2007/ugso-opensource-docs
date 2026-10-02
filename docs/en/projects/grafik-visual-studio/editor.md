@@ -10,6 +10,8 @@ Create a project under **Projekte** and choose a page under **Seiten**. Set the 
 
 The widget selector in the top bar lets you select several widgets or clear the selection. The action bar provides cut, copy, paste, duplicate, delete and up to 50 undo/redo steps. The ten alignment actions work on multiple selected normal widgets; the first selected widget is the reference. Pressing **Breite** or **Höhe** for about 0.6 seconds opens an exact pixel-size input.
 
+Runtime centers a page when it fits entirely inside the browser window. Larger pages start at the top-left corner; horizontal and vertical scrollbars keep the whole page reachable without changing widget coordinates.
+
 ## Interface language
 
 Open **Settings → General → Language → App language**, choose an option, then click **Save**:
