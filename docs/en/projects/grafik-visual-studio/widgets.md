@@ -68,5 +68,5 @@ VIS2-inspired widget names remain in English regardless of the interface languag
 
 | Widget | Current behavior |
 | --- | --- |
-| [SVG-Line](./zeichnen) | Draws and animates links between widgets with docking points, manual multi-point paths and intentional collector-point joins. |
-| [SVG LineBox](./zeichnen#linebox-as-an-invisible-distributor) | Visible in the editor: sums incoming line values and passes the result to outgoing lines and optionally a Home Assistant number helper. A configurable circle covers joined line ends at runtime. |
+| [SVG-Line](./svg-line) | Draws and animates links between widgets with docking points, manual multi-point paths and intentional collector-point joins. |
+| [SVG LineBox](./svg-linebox) | Visible in the editor: sums incoming line values and passes the result to outgoing lines and optionally a Home Assistant number helper. A configurable circle covers joined line ends at runtime. |

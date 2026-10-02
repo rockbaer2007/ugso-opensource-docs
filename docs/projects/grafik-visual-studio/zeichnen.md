@@ -4,6 +4,8 @@ title: Zeichnen mit SVG-Line und SVG LineBox
 
 # Zeichnen: SVG-Line und SVG LineBox
 
+Die vollständigen Anleitungen stehen auf eigenen Seiten: [SVG-Line – Verbindungslinien und Animation](./svg-line) und [SVG LineBox – Werte sammeln und weitergeben](./svg-linebox). Auf der LineBox-Seite sind auch die Videos für Editor und Runtime eingebunden. Diese Übersicht bleibt für bestehende Links erhalten.
+
 Das Linien-Widget steht in der Palette als **HA Grafik – Spezial → SVG-Line**. Damit kannst du zum Beispiel zwei Solarpanels optisch mit einem Wechselrichter verbinden oder mehrere Ströme an einem Sammelpunkt zusammenführen. SVG-Line liest für die Animation optional eine Home-Assistant-Entität; die SVG LineBox kann die Zahlenwerte mehrerer Linien addieren und an eine Ausgangslinie weitergeben.
 
 ## Eine Verbindung zeichnen

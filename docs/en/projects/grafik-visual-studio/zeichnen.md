@@ -4,6 +4,8 @@ title: Drawing with SVG-Line and SVG LineBox
 
 # Drawing: SVG-Line and SVG LineBox
 
+See the dedicated guides for [SVG-Line connections and animation](./svg-line) and [SVG LineBox value collection and forwarding](./svg-linebox). The LineBox guide also includes editor and runtime videos. This overview remains available for existing links.
+
 The line widget appears in the palette as **HA Grafik – Spezial → SVG-Line**. For example, you can visually connect two solar panels to an inverter or merge several flows at a collector point. SVG-Line can read a Home Assistant entity to control its animation; SVG LineBox can add values from several lines and pass the result to an outgoing line.
 
 ## Draw a connection
