@@ -18,6 +18,8 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 
 ### Tabs bearbeiten
 
+Ab Studio 0.1.119 kannst du unter jedem **Tab [n]** die **Tab-Hintergrundfarbe** unabhängig einstellen. Sie färbt den jeweiligen Reiter in horizontalen und vertikalen Layouts; die Markierung des aktiven Tabs bleibt sichtbar.
+
 Füge **Tabs** aus der Palette ein und stelle Breite und Höhe einmal am Hauptwidget ein. In **Tab [1]**, **Tab [2]** usw. wählst du die Inhaltsart. **Tabfläche bearbeiten** öffnet die eigene Fläche mit der normalen Widget-Palette oder die referenzierte Projektseite. **Zurück zum Tabs-Widget** führt zum Hauptwidget zurück. Die eigene Inhaltsgröße ergibt sich aus dem Hauptwidget abzüglich 44 px für horizontale Reiter beziehungsweise bis zu 120 px für vertikale Reiter (höchstens die halbe Widget-Breite). Eigene Flächen gehören zum Widget und erscheinen nicht als separate Projektseiten. Vorhandene Seiten bleiben gemeinsam genutzte Referenzen; Änderungen wirken auf alle Einbettungen.
 
 Speichere vor der Vorschau oder Runtime, insbesondere bei deaktiviertem Auto-Save: Die eingebetteten Inhalte werden aus dem gespeicherten Projekt geladen. Größere vorhandene Seiten werden ohne automatische Skalierung angezeigt; Überlauf X/Y steuert die Scrollbarkeit. Bei verringerter Tabanzahl bleiben die ausgeblendeten eigenen Inhalte gespeichert und erscheinen bei erneuter Erhöhung wieder. Kopieren, Gruppieren sowie Export/Import erhalten eigene Inhalte; Kopien bekommen neue Widget- und Gruppen-IDs. Zyklische Seiteneinbettungen werden verhindert. Weitere Tabs-Widgets innerhalb eigener Tabflächen sind zunächst nicht unterstützt. Die Umsetzung ist eigenständig; ein VIS2-Import ist damit nicht verbunden.
