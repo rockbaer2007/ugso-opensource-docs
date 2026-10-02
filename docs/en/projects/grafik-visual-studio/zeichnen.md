@@ -35,6 +35,8 @@ This widget is experimental. Crossing effects and synchronized animation may sti
 
 ## Linebox as an invisible distributor
 
+The editor regularly refreshes the states of selected numeric and Boolean entities. This lets you check SVG-Line animation and the calculated Linebox value before switching to runtime.
+
 **HA Grafik – Spezial → Linebox** can be moved and configured in the editor but is invisible at runtime. It has the same twelve docking positions as other widgets, all initially off. Under **Docking points**, enable only the positions you need. Under **Ports**, each enabled point then gets one role: **Input**, **Neutral**, or **Output**. Neutral is the default and does not affect the calculation. Disabled points have no role control. At runtime, lines on active input and output ports meet visually at one invisible point in the center of Linebox. Their separate docking positions remain in the editor; neutral ports do not join that point.
 
 To test it, dock two SVG-Lines to input ports and a third SVG-Line to an output port. For both incoming lines, select **Numeric entity** as the animation direction source and enter a valid Home Assistant entity ID. Lines ending at Linebox add their signed values: `1000` and `-300` produce `700`. A line starting at Linebox and assigned to an input contributes with the opposite sign. Missing or invalid states are ignored.
