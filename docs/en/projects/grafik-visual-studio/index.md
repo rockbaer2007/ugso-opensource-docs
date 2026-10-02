@@ -7,7 +7,7 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 **A different kind of Home Assistant dashboard.** Grafik Visual Studio is an experimental Home Assistant app with a freeform editing surface and a separate runtime. It is still in early development; its project format and controls may change. It is not yet intended for production dashboards.
 
-[Editor and keyboard shortcuts](./editor) · [All 46 widgets](./widgets) · [Drawing: SVG-Line and Linebox](./zeichnen) · [Widget package interface](./widget-packages) · [Tool package interface](./tool-packages) · [Package packer](./packer) · [Source and Home Assistant app](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
+[Editor and keyboard shortcuts](./editor) · [All 46 widgets](./widgets) · [Drawing: SVG-Line and SVG LineBox](./zeichnen) · [Widget package interface](./widget-packages) · [Tool package interface](./tool-packages) · [Package packer](./packer) · [Source and Home Assistant app](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
 
 ![HA Grafik Visual Studio editor with widget palette and SVG connection lines](/images/grafik-visual-studio/editor-zeichnung.png)
 
@@ -17,7 +17,7 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 - Manage multiple projects and named pages, each with its own size, background and widgets. The runtime presents visible pages separately.
 - Place, move, resize and name widgets on a scrollable canvas, and arrange them with z-index. The editor supports multiple selection, alignment, size matching, copy/paste and undo/redo.
-- Use widgets from the “HA Grafik – Basis”, “HA Grafik – Interaktiv” and “HA Grafik – Spezial” groups. They include text, HTML, images, numbers, switches, sliders, tables, SVG-Line and Linebox. The widget palette shows a preview or icon appropriate to each type.
+- Use widgets from the “HA Grafik – Basis”, “HA Grafik – Interaktiv” and “HA Grafik – Spezial” groups. They include text, HTML, images, numbers, switches, sliders, tables, SVG-Line and SVG LineBox. The widget palette shows a preview or icon appropriate to each type.
 - Edit layout, CSS, “Generell”, visibility and docking-point properties. The editor widget filter uses the “Filterwort” property in “Generell”.
 - Draw connection lines with intermediate points, explicitly enabled collector points, colors, arrowheads and animations. Lines that cross do not connect automatically.
 - Select files from Home Assistant's `www` folder and upload supported files. The entity browser can search entities and current states and insert entity IDs into widget fields.

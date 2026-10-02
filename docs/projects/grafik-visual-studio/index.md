@@ -7,7 +7,7 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 **Das etwas andere Dashboard für Home Assistant.** Grafik Visual Studio ist eine experimentelle Home-Assistant-App mit freier Editorfläche und getrennter Runtime. Das Projekt befindet sich in einer frühen Entwicklungsphase; Format und Bedienung können sich ändern. Es ist derzeit nicht für produktive Dashboards gedacht.
 
-[Editor und Tastenkombinationen](./editor) · [Alle 46 Widgets](./widgets) · [Zeichnen: SVG-Line und Linebox](./zeichnen) · [Widget-Paket-Schnittstelle](./widget-pakete) · [Tool-Paket-Schnittstelle](./tool-pakete) · [Packer für Pakete](./packer) · [Quellcode und Home-Assistant-App](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
+[Editor und Tastenkombinationen](./editor) · [Alle 46 Widgets](./widgets) · [Zeichnen: SVG-Line und SVG LineBox](./zeichnen) · [Widget-Paket-Schnittstelle](./widget-pakete) · [Tool-Paket-Schnittstelle](./tool-pakete) · [Packer für Pakete](./packer) · [Quellcode und Home-Assistant-App](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio)
 
 ![Editor von HA Grafik Visual Studio mit Widget-Palette und SVG-Verbindungslinien](/images/grafik-visual-studio/editor-zeichnung.png)
 
@@ -17,7 +17,7 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 - Mehrere Projekte und benannte Seiten mit eigenen Abmessungen, Hintergrund und Widgets verwalten. Die Runtime zeigt sichtbare Seiten separat an.
 - Widgets auf einer scrollbar erreichbaren Fläche platzieren, verschieben, skalieren, benennen und per z-index anordnen. Mehrfachauswahl, Ausrichtung, Größenabgleich, Kopieren, Einfügen sowie Rückgängig/Wiederholen sind im Editor vorhanden.
-- Widgets aus den Gruppen „HA Grafik – Basis“, „HA Grafik – Interaktiv“ und „HA Grafik – Spezial“ verwenden. Dazu gehören unter anderem Text, HTML, Bild, Zahl, Schalter, Slider, Tabelle, SVG-Line und Linebox. Die Widget-Palette zeigt je nach Typ eine Vorschau oder ein Symbol.
+- Widgets aus den Gruppen „HA Grafik – Basis“, „HA Grafik – Interaktiv“ und „HA Grafik – Spezial“ verwenden. Dazu gehören unter anderem Text, HTML, Bild, Zahl, Schalter, Slider, Tabelle, SVG-Line und SVG LineBox. Die Widget-Palette zeigt je nach Typ eine Vorschau oder ein Symbol.
 - Eigenschaften für Layout, CSS, „Generell“, Sichtbarkeit und Andockpunkte bearbeiten. Der Editor-Widget-Filter verwendet das Feld „Filterwort“ aus „Generell“.
 - Mit dem Spezial-Widget Verbindungslinien mit Zwischen- und explizit aktivierten Sammelpunkten, Farben, Pfeilspitzen und Animationen zeichnen. Kreuzende Linien koppeln sich nicht von selbst.
 - Dateien aus Home Assistants `www`-Ordner auswählen und unterstützte Dateien hochladen. Der Entitätenbrowser kann Entitäten und aktuelle Zustände suchen und Entity-IDs in Widget-Felder übernehmen.

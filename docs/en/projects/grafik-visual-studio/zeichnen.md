@@ -1,10 +1,10 @@
 ---
-title: Drawing with SVG-Line and Linebox
+title: Drawing with SVG-Line and SVG LineBox
 ---
 
-# Drawing: SVG-Line and Linebox
+# Drawing: SVG-Line and SVG LineBox
 
-The line widget appears in the palette as **HA Grafik – Spezial → SVG-Line**. For example, you can visually connect two solar panels to an inverter or merge several flows at a collector point. SVG-Line can read a Home Assistant entity to control its animation; Linebox can add values from several lines and pass the result to an outgoing line.
+The line widget appears in the palette as **HA Grafik – Spezial → SVG-Line**. For example, you can visually connect two solar panels to an inverter or merge several flows at a collector point. SVG-Line can read a Home Assistant entity to control its animation; SVG LineBox can add values from several lines and pass the result to an outgoing line.
 
 ## Draw a connection
 
@@ -33,16 +33,18 @@ An enabled **Sammelpunkt** can be chosen as the start or destination of another 
 
 This widget is experimental. Crossing effects and synchronized animation may still need refinement for some paths and browsers.
 
-## Linebox as an invisible distributor
+## SVG LineBox as an invisible distributor {#linebox-as-an-invisible-distributor}
 
-The editor regularly refreshes the states of selected numeric and Boolean entities. This lets you check SVG-Line animation and the calculated Linebox value before switching to runtime.
+The editor regularly refreshes the states of selected numeric and Boolean entities. This lets you check SVG-Line animation and the calculated SVG LineBox value before switching to runtime.
 
-**HA Grafik – Spezial → Linebox** can be moved and configured in the editor. Its box stays invisible at runtime, while connected lines meet at its center. By default, a circle covers their angular ends. Under **Junction**, you can hide the circle or set its diameter, fill color, border color, and border width. With thick lines, the circle grows as needed to keep covering their ends. **Show output value** offers **Off** (default), **Above the circle**, and **Below the circle**. The label shows the signed sum of the inputs and updates during slider movement at runtime. Linebox has the same twelve docking positions as other widgets, all initially off. Under **Docking points**, enable only the positions you need. Under **Ports**, each enabled point then gets one role: **Input**, **Neutral**, or **Output**. Neutral is the default and does not affect the calculation. Disabled points have no role control. Their separate docking positions remain in the editor; neutral ports do not join the common point.
+**HA Grafik – Spezial → SVG LineBox** can be moved and configured in the editor. Its box stays invisible at runtime, while connected lines meet at its center. By default, a circle covers their angular ends. Under **Junction**, you can hide the circle or set its diameter, fill color, border color, and border width. With thick lines, the circle grows as needed to keep covering their ends. **Show output value** offers **Off** (default), **Above the circle**, and **Below the circle**. The label shows the signed sum of the inputs and updates during slider movement at runtime. SVG LineBox has the same twelve docking positions as other widgets, all initially off. Under **Docking points**, enable only the positions you need. Under **Ports**, each enabled point then gets one role: **Input**, **Neutral**, or **Output**. Neutral is the default and does not affect the calculation. Disabled points have no role control. Their separate docking positions remain in the editor; neutral ports do not join the common point.
 
-To test it, dock two SVG-Lines to input ports and a third SVG-Line to an output port. For both incoming lines, select **Numeric entity** as the animation direction source and enter a valid Home Assistant entity ID. Lines ending at Linebox add their signed values: `1000` and `-300` produce `700`. A line starting at Linebox and assigned to an input contributes with the opposite sign. Missing or invalid states are ignored.
+To test it, dock two SVG-Lines to SVG LineBox input ports and a third SVG-Line to an output port. For both incoming lines, select **Numeric entity** as the animation direction source and enter a valid Home Assistant entity ID. Lines ending at SVG LineBox add their signed values: `1000` and `-300` produce `700`. A line starting at SVG LineBox and assigned to an input contributes with the opposite sign. Missing or invalid states are ignored.
 
-Set the outgoing port to **Output** and enable **Pass calculated value**, which is initially off. Enable animation on the outgoing SVG-Line. Its direction and speed now follow the sum. **Linebox divisor (on handoff)** sets the ratio: `700` with divisor `100` yields 7 cycles/s. The line retains its own colors, arrowheads, and line style. A sum of `0`, or no valid input, stops its animation. Turn off value passing at the port to restore the outgoing line's own animation controls.
+Set the outgoing port to **Output** and enable **Pass calculated value**, which is initially off. Enable animation on the outgoing SVG-Line. Its direction and speed now follow the sum. **SVG LineBox divisor (on handoff)** sets the ratio: `700` with divisor `100` yields 7 cycles/s. The line retains its own colors, arrowheads, and line style. A sum of `0`, or no valid input, stops its animation. Turn off value passing at the port to restore the outgoing line's own animation controls.
 
-Calculation and handoff normally stay internal. Under **Number helper output**, you can also write the sum to an `input_number` helper for use elsewhere in Home Assistant. Internal handoff remains active. The helper is written only when the sum changes; a helper that also feeds an input of the same Linebox is rejected to prevent direct feedback. Configure the helper's allowed range to cover possible sums.
+Calculation and handoff normally stay internal. Under **Number helper output**, you can also write the sum to an `input_number` helper for use elsewhere in Home Assistant. Internal handoff remains active. The helper is written only when the sum changes; a helper that also feeds an input of the same SVG LineBox is rejected to prevent direct feedback. Configure the helper's allowed range to cover possible sums.
 
-This first version uses numeric entities on incoming lines. Separate entity control for each Linebox port is not yet available.
+This first version uses numeric entities on incoming lines. Separate entity control for each SVG LineBox port is not yet available.
+
+The former palette name “Linebox” remains a search term. Saved projects continue to use the technical widget type `linebox`; existing custom widget names are left unchanged.

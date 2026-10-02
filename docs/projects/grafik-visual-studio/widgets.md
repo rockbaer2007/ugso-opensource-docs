@@ -69,4 +69,4 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 | Widget | Aktuelle Funktion |
 | --- | --- |
 | [SVG-Line](./zeichnen) | Zeichnet und animiert Verbindungen zwischen Widgets, mit Andockpunkten, manuellem Mehrpunktpfad und gezielter Kopplung über Sammelpunkte. |
-| [Linebox](./zeichnen#linebox-als-unsichtbarer-verteiler) | Im Editor sichtbarer Verteiler: Zahlenwerte eingehender Linien summieren und an Ausgangslinien sowie optional an einen HA-Zahlenhelfer weitergeben. Ein einstellbarer Kreis verdeckt in der Runtime die verbundenen Linienenden. |
+| [SVG LineBox](./zeichnen#linebox-als-unsichtbarer-verteiler) | Im Editor sichtbarer Verteiler: Zahlenwerte eingehender Linien summieren und an Ausgangslinien sowie optional an einen HA-Zahlenhelfer weitergeben. Ein einstellbarer Kreis verdeckt in der Runtime die verbundenen Linienenden. |
