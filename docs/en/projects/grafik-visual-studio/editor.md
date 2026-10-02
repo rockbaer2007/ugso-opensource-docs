@@ -39,7 +39,7 @@ Undo/redo shortcuts apply when focus is outside input, text area and select cont
 
 ## Connection lines and docking points
 
-Enable **Andockpunkte** in a target widget's properties. Individual edge points can be enabled; clearing the group checkbox disables them all. Drag SVG connection endpoints onto active points. An intermediate point splits the path into additional segments; only an explicitly enabled **Sammelpunkt** can be selected as a connection by another line. A simple crossing does not connect lines. Available settings include line and zigzag/multi-point paths, colors, width, arrowheads, animation and z-index.
+Enable **Andockpunkte** in a target widget's properties. All points start off on new widgets. **All points** switches the twelve positions together; each point can then be adjusted individually. The group checkbox enables or disables the entire section. Drag SVG connection endpoints onto active points. An intermediate point splits the path into additional segments; only an explicitly enabled **Sammelpunkt** can be selected as a connection by another line. A simple crossing does not connect lines. Available settings include line and zigzag/multi-point paths, colors, width, arrowheads, animation and z-index.
 
 ## Visibility and filters
 

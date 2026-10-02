@@ -39,7 +39,7 @@ Die Kürzel für Rückgängig/Wiederholen gelten, wenn der Fokus nicht in einem 
 
 ## Verbindungslinien und Andockpunkte
 
-Aktiviere **Andockpunkte** in den Eigenschaften eines Ziel-Widgets. Die Punkte an den Seiten können einzeln geschaltet werden; die Gruppen-Checkbox deaktiviert bei Bedarf alle. Die Enden einer SVG-Verbindung lassen sich auf aktive Punkte ziehen. Ein Zwischenpunkt teilt den Pfad in weitere Segmente; nur ein ausdrücklich aktivierter **Sammelpunkt** kann von anderen Linien als Kopplung ausgewählt werden. Eine bloße Kreuzung verbindet Linien nicht. Für die Darstellung stehen unter anderem Linie, Zickzack-/Mehrpunktpfad, Farben, Dicke, Pfeilspitzen, Animation und z-index bereit.
+Aktiviere **Andockpunkte** in den Eigenschaften eines Ziel-Widgets. Bei neuen Widgets sind alle Punkte aus. **Alle Punkte** schaltet die zwölf Positionen gemeinsam; einzelne Punkte können danach angepasst werden. Die Gruppen-Checkbox aktiviert oder deaktiviert den gesamten Bereich. Die Enden einer SVG-Verbindung lassen sich auf aktive Punkte ziehen. Ein Zwischenpunkt teilt den Pfad in weitere Segmente; nur ein ausdrücklich aktivierter **Sammelpunkt** kann von anderen Linien als Kopplung ausgewählt werden. Eine bloße Kreuzung verbindet Linien nicht. Für die Darstellung stehen unter anderem Linie, Zickzack-/Mehrpunktpfad, Farben, Dicke, Pfeilspitzen, Animation und z-index bereit.
 
 ## Sichtbarkeit und Filter
 
