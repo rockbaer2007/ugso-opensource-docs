@@ -1,14 +1,14 @@
 ---
-title: Zeichnen mit der SVG-Verbindungslinie
+title: Zeichnen mit SVG-Line und Linebox
 ---
 
-# Zeichnen: SVG-Verbindungslinie
+# Zeichnen: SVG-Line und Linebox
 
-Das „Zeichnen“-Widget steht in der Palette als **HA Grafik – Spezial → SVG-Verbindungslinie**. Damit kannst du zum Beispiel zwei Solarpanels optisch mit einem Wechselrichter verbinden oder mehrere Ströme an einem Sammelpunkt zusammenführen. Die Linie ist ein grafisches Widget; sie überträgt selbst keine Home-Assistant-Werte.
+Das Linien-Widget steht in der Palette als **HA Grafik – Spezial → SVG-Line**. Damit kannst du zum Beispiel zwei Solarpanels optisch mit einem Wechselrichter verbinden oder mehrere Ströme an einem Sammelpunkt zusammenführen. SVG-Line liest für die Animation optional eine Home-Assistant-Entität; die Linebox kann die Zahlenwerte mehrerer Linien addieren und an eine Ausgangslinie weitergeben.
 
 ## Eine Verbindung zeichnen
 
-1. Füge die **SVG-Verbindungslinie** ein und wähle sie aus. Ihre beiden Endpunkte sind als ziehbare Kreise sichtbar. Ziehe einen freien Endpunkt auf einen Andockpunkt eines anderen Widgets. Alternativ kannst du unter **Start** und **Ziel** ein Widget samt Andockpunkt auswählen oder freie X-/Y-Koordinaten eingeben.
+1. Füge **SVG-Line** ein und wähle sie aus. Ihre beiden Endpunkte sind als ziehbare Kreise sichtbar. Ziehe einen freien Endpunkt auf einen Andockpunkt eines anderen Widgets. Alternativ kannst du unter **Start** und **Ziel** ein Widget samt Andockpunkt auswählen oder freie X-/Y-Koordinaten eingeben.
 2. Aktiviere am Ziel-Widget die Eigenschaftengruppe **Andockpunkte**. Bei neuen Widgets sind alle zwölf Positionen zunächst aus. **Alle Punkte** schaltet sie gemeinsam ein oder aus und zeigt bei einer Teilauswahl einen gemischten Zustand. Die Punkte lassen sich auch einzeln aktivieren: links/rechts jeweils oben, Mitte, unten; oben/unten jeweils bei 1/4, Mitte und 3/4 der Breite. Der Haken in der Gruppenüberschrift aktiviert oder deaktiviert den ganzen Bereich. Mehrfachbelegung, maximale Verbindungen, Spurabstand und dauerhafte Anzeige sind einstellbar.
 3. Wähle die **Pfadart**: gerade, automatisch rechtwinklig, Kurve oder manueller Zickzack-/Mehrpunktpfad. Ein Klick auf die Linie öffnet mittig den Dialog **Zwischenpunkt** oder **Sammelpunkt**; „Zwischenpunkt“ ist vorausgewählt. Nach **OK** entsteht ein verschiebbarer Zwischenpunkt und der Pfad wechselt in den manuellen Mehrpunktmodus. Die Punkte lassen sich zusätzlich im Eigenschaften-Editor benennen und per X/Y setzen.
 
@@ -32,3 +32,13 @@ Ein aktivierter **Sammelpunkt** kann von einer anderen Linie als Start oder Ziel
 | Linienpunkt hinzufügen | Linie ohne Ziehen anklicken, Punkttyp wählen und mit **OK** bestätigen. |
 
 Das Widget ist experimentell. Die Darstellung von Kreuzungen und synchronisierten Animationen kann je nach Pfadverlauf und Browser noch verfeinert werden.
+
+## Linebox als unsichtbarer Verteiler
+
+**HA Grafik – Spezial → Linebox** ist im Editor sichtbar und verschiebbar, in der Runtime aber unsichtbar. Sie besitzt dieselben zwölf Andockpositionen wie andere Widgets. Anfangs sind alle aus. Aktiviere unter **Andockpunkte** nur die benötigten Positionen. Unter **Anschlüsse** erscheint dann für jeden aktiven Punkt die Rolle **Eingang**, **Nullstellung** oder **Ausgang**. Nullstellung ist die Voreinstellung und nimmt nicht an der Berechnung teil. Deaktivierte Punkte haben keine Rollenwahl.
+
+Zum Testen verbindest du zwei SVG-Lines mit Eingängen der Linebox und eine dritte SVG-Line mit einem Ausgang. Bei beiden Eingangsleitungen wählst du unter **Animation → Richtungsquelle** die **Zahlen-Entität** und trägst eine gültige Home-Assistant-Entity-ID ein. Enden die Eingangsleitungen an der Linebox, werden ihre signierten Werte addiert. Beispiel: `1000` und `-300` ergeben `700`. Eine Leitung, die an der Linebox beginnt, zählt am Eingang mit umgekehrtem Vorzeichen. Fehlende oder ungültige Zustände werden nicht mitgerechnet.
+
+Stelle den Ausgangspunkt auf **Ausgang** und aktiviere den zunächst ausgeschalteten Haken **Berechneten Wert weitergeben**. Bei der Ausgangsleitung aktivierst du die Animation. Sie verwendet dann Vorzeichen und Betrag der Summe für Richtung und Geschwindigkeit. Mit **Linebox-Teiler (bei Übergabe)** bestimmst du das Verhältnis: Bei `700` und Teiler `100` läuft die Linie mit 7 Zyklen/s. Ihre eigenen Linienfarben, Pfeilspitzen und die Linienart bleiben erhalten. Bei Summe `0` oder ohne gültigen Eingang hält die Animation an. Schaltest du die Weitergabe am Ausgang aus, nutzt die Leitung wieder ihre eigenen Animationseinstellungen.
+
+Die erste Version nutzt Zahlen-Entitäten an den Eingangsleitungen. Eine gesonderte Entitätssteuerung pro Linebox-Anschluss ist noch nicht vorhanden.

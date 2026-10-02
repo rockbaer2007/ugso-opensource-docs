@@ -1,14 +1,14 @@
 ---
-title: Drawing with SVG connection lines
+title: Drawing with SVG-Line and Linebox
 ---
 
-# Drawing: SVG connection line
+# Drawing: SVG-Line and Linebox
 
-The drawing widget appears in the palette as **HA Grafik – Spezial → SVG-Verbindungslinie**. For example, you can visually connect two solar panels to an inverter or merge several flows at a collector point. The line is a visual widget; it does not transfer Home Assistant values itself.
+The line widget appears in the palette as **HA Grafik – Spezial → SVG-Line**. For example, you can visually connect two solar panels to an inverter or merge several flows at a collector point. SVG-Line can read a Home Assistant entity to control its animation; Linebox can add values from several lines and pass the result to an outgoing line.
 
 ## Draw a connection
 
-1. Add an **SVG-Verbindungslinie** and select it. Both endpoints appear as draggable circles. Drag a free endpoint onto a docking point of another widget. Alternatively, choose a widget and docking point under **Start** and **Ziel**, or enter free X/Y coordinates.
+1. Add an **SVG-Line** and select it. Both endpoints appear as draggable circles. Drag a free endpoint onto a docking point of another widget. Alternatively, choose a widget and docking point under **Start** and **Ziel**, or enter free X/Y coordinates.
 2. Enable the **Andockpunkte** property group on the target widget. New widgets start with all twelve positions off. **All points** switches them on or off together and shows a mixed state when only some are selected. Each position can also be enabled individually: left/right at top, center and bottom; top/bottom at one-quarter, center and three-quarter width. The checkbox in the group heading enables or disables the entire section. Multiple occupancy, maximum connections, lane spacing and persistent visibility are configurable.
 3. Choose the **Pfadart**: straight, automatic orthogonal, curve or manual zigzag/multi-point path. Clicking the line opens a centered dialog with **Intermediate point** and **Collector point**; “Intermediate point” is the default. Confirming with **OK** adds a draggable intermediate point and changes the path to manual multi-point mode. Points can also be named and positioned by X/Y in the properties editor.
 
@@ -32,3 +32,13 @@ An enabled **Sammelpunkt** can be chosen as the start or destination of another 
 | Add a line point | Click the line without dragging, choose a point type and confirm with **OK**. |
 
 This widget is experimental. Crossing effects and synchronized animation may still need refinement for some paths and browsers.
+
+## Linebox as an invisible distributor
+
+**HA Grafik – Spezial → Linebox** can be moved and configured in the editor but is invisible at runtime. It has the same twelve docking positions as other widgets, all initially off. Under **Docking points**, enable only the positions you need. Under **Ports**, each enabled point then gets one role: **Input**, **Neutral**, or **Output**. Neutral is the default and does not affect the calculation. Disabled points have no role control.
+
+To test it, dock two SVG-Lines to input ports and a third SVG-Line to an output port. For both incoming lines, select **Numeric entity** as the animation direction source and enter a valid Home Assistant entity ID. Lines ending at Linebox add their signed values: `1000` and `-300` produce `700`. A line starting at Linebox and assigned to an input contributes with the opposite sign. Missing or invalid states are ignored.
+
+Set the outgoing port to **Output** and enable **Pass calculated value**, which is initially off. Enable animation on the outgoing SVG-Line. Its direction and speed now follow the sum. **Linebox divisor (on handoff)** sets the ratio: `700` with divisor `100` yields 7 cycles/s. The line retains its own colors, arrowheads, and line style. A sum of `0`, or no valid input, stops its animation. Turn off value passing at the port to restore the outgoing line's own animation controls.
+
+This first version uses numeric entities on incoming lines. Separate entity control for each Linebox port is not yet available.

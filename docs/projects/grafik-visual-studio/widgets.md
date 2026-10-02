@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **45 Einträge in drei Gruppen**. Die Namen entsprechen der Palette im Editor. Einige Widgets verwenden derzeit Testwerte oder ändern Zustände nur lokal; eine vollständige Home-Assistant-Live-Anbindung ist noch nicht vorhanden. Ein Feld für eine Entity-ID allein bedeutet daher noch keine Steuerung der Entität.
+Der aktuelle Widget-Katalog enthält **46 Einträge in drei Gruppen**. Die Namen entsprechen der Palette im Editor. Einige Widgets verwenden derzeit Testwerte oder ändern Zustände nur lokal; eine vollständige Home-Assistant-Live-Anbindung ist noch nicht vorhanden. Ein Feld für eine Entity-ID allein bedeutet daher noch keine Steuerung der Entität.
 
 Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche auf Englisch. Frühere deutsche Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -25,7 +25,7 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 | iFrame 8 | Wählt anhand eines Index-Testwerts einen von bis zu 20 konfigurierten Frames. |
 | Image 8 | Wählt anhand eines Index-Testwerts eines von bis zu 50 Bildern. |
 | AckFlag HTML | Zeigt zwei konfigurierbare HTML-Zustände; Home Assistant hat kein natives ioBroker-`ack`-Flag. |
-| Schaltfläche (Icon Ein/Aus) | Schaltfläche mit getrennten Bildern für Ein und Aus; Zustandswechsel derzeit lokal. |
+| Icon Toggle Button | Schaltfläche mit getrennten Bildern für Ein und Aus; Zustandswechsel derzeit lokal. |
 | Switch | Grafischer Ein/Aus-Schalter; Zustandswechsel derzeit lokal. |
 | Bool Checkbox | Ein/Aus-Auswahl; Zustandswechsel derzeit lokal. |
 | Bulb on/off | Lampensymbol mit getrennten Ein-/Aus-Bildern; Zustandswechsel derzeit lokal. |
@@ -53,17 +53,18 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 | filter - dropdown | Filtert Runtime-Widgets anhand des in „Generell“ gesetzten Filterworts. |
 | Text | Freies Textfeld ohne Entitätsbindung. |
 | Border | Rahmen mit Titel, Titelposition, Kopfbereich und Farben. |
-| Messanzeige | Einfache Messwertanzeige mit Einheit. |
+| Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle; noch keine Live-Kamera-Anbindung. |
 
 ## HA Grafik – Interaktiv (1)
 
 | Widget | Aktuelle Funktion |
 | --- | --- |
-| Zustands-Element | Bis zu fünf Testzustände mit jeweils Icon, Bild, Text oder HTML; Schalter-, Button-, Nur-Anzeige- und Navigationsmodus. Die lokale Runtime-Interaktion ist vorhanden, HA-Schreibzugriff noch nicht. |
+| State Element | Bis zu fünf Testzustände mit jeweils Icon, Bild, Text oder HTML; Schalter-, Button-, Nur-Anzeige- und Navigationsmodus. Die lokale Runtime-Interaktion ist vorhanden, HA-Schreibzugriff noch nicht. |
 
-## HA Grafik – Spezial (1)
+## HA Grafik – Spezial (2)
 
 | Widget | Aktuelle Funktion |
 | --- | --- |
-| [SVG-Verbindungslinie („Zeichnen“)](./zeichnen) | Zeichnet und animiert Verbindungen zwischen Widgets, mit Andockpunkten, manuellem Mehrpunktpfad und gezielter Kopplung über Sammelpunkte. |
+| [SVG-Line](./zeichnen) | Zeichnet und animiert Verbindungen zwischen Widgets, mit Andockpunkten, manuellem Mehrpunktpfad und gezielter Kopplung über Sammelpunkte. |
+| [Linebox](./zeichnen#linebox-als-unsichtbarer-verteiler) | Im Editor sichtbarer, in der Runtime unsichtbarer Verteiler: aktive Andockpunkte als Eingang, Nullstellung oder Ausgang festlegen, Zahlenwerte eingehender Linien summieren und optional an Ausgangslinien weitergeben. |
