@@ -11,6 +11,10 @@ Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tool
 
 ## UGSo Colorpicker 1.0.0
 
+**Update 1.1.0 (Studio 0.1.111):** **Save favorite** is available alongside Copy. The separate **Favorites** tab holds up to 15 colors with HEX and names, automatically saved locally in this browser on each change. Duplicate colors do not consume another slot. At capacity, a yellow **Favorites full** message appears and Save is disabled. Delete entries individually; later entries shift forward, leaving free slots at the end. Selecting a favorite returns its color to the picker for copying.
+
+[Download Colorpicker 1.1.0](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.1.0).
+
 This practical add-on tool requires **HA Grafik Visual Studio 0.1.109 or newer**. Download [ugso-colorpicker-1.0.0.tp from the release](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.0.0) and install it under **Settings → Tools**. Open the color-wheel toolbar icon or click **Run**.
 
 - Choose hue and saturation on the wheel; adjust brightness separately or enter HEX directly.

@@ -11,6 +11,10 @@ Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.tp` in
 
 ## UGSo Colorpicker 1.0.0
 
+**Update 1.1.0 (Studio 0.1.111):** Zusätzlich zu Kopieren bietet der Colorpicker den Button **Als Favorit speichern**. Im zweiten Tab **Favoriten** stehen bis zu 15 Farben mit HEX und Namen. Sie werden bei jeder Änderung automatisch lokal in diesem Browser gespeichert. Doppelte Farben belegen keinen weiteren Platz. Bei voller Liste erscheint gelb **Favoriten voll**, und Speichern wird deaktiviert. Jeder Eintrag lässt sich einzeln löschen; die übrigen rücken nach und geben am Ende einen Platz frei. Ein Klick auf eine Favoritenfarbe übernimmt sie in den Colorpicker zum Kopieren.
+
+[Colorpicker 1.1.0 herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.1.0).
+
 Das erste praktische Zusatztool benötigt **HA Grafik Visual Studio 0.1.109 oder neuer**. Lade [ugso-colorpicker-1.0.0.tp aus dem Release](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.0.0) herunter und installiere es unter **Einstellungen → Tools**. Das Farbkreis-Symbol in der Werkzeugleiste oder **Ausführen** öffnet den Colorpicker.
 
 - Farbton und Sättigung im Farbkreis wählen; Helligkeit separat einstellen oder HEX direkt eingeben.
