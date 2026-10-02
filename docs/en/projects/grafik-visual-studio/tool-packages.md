@@ -9,6 +9,18 @@ Starting with Studio 0.1.89, you can install ZIP-based packages ending in `.tp`.
 
 Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tools also appear as icons in two rows of the editor toolbar; its toolbox icon opens the Tools tab for management. Tool packages extend the editor, not the widget palette or runtime. Interface 0.1 supports one declarative action: setting the current page's background color. Clicking a toolbar tool icon or **Run** in the Tools tab opens a preview; only **Apply** commits the change. **Undo** can revert it, and normal project saving persists it. Installation itself does not run an action.
 
+## UGSo Colorpicker 1.0.0
+
+This practical add-on tool requires **HA Grafik Visual Studio 0.1.109 or newer**. Download [ugso-colorpicker-1.0.0.tp from the release](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.0.0) and install it under **Settings → Tools**. Open the color-wheel toolbar icon or click **Run**.
+
+- Choose hue and saturation on the wheel; adjust brightness separately or enter HEX directly.
+- Select **HEX** or **Color name** and click **Copy**. If browser clipboard access is unavailable, select and copy the output manually.
+- The 31,918 names from [meodai/color-names](https://github.com/meodai/color-names) are bundled locally; no internet connection is required. Exact and nearest matches are distinguished using RGB distance.
+- Names are labels, not CSS color values. Copy HEX for widget color fields.
+- No project or Home Assistant permissions are required; the tool does not modify projects. Left/right arrow keys change hue and up/down change saturation on the wheel.
+
+The new declarative `color-picker` action uses `capabilities: []`. Studio supplies the dialog and color-name data; the data-only package activates the tool. Older Studio versions do not support this action. License and attribution links are available in the dialog. The existing `set-page-background` action remains unchanged.
+
 ## Build a package
 
 The ZIP contains a UTF-8 `manifest.json` and optionally referenced SVG or PNG images under `icons/`. No other files are allowed. Package IDs use dot-separated parts; the tool ID uses the package namespace. Package versions have the form `x.y.z`. A tool package contains exactly one tool.
