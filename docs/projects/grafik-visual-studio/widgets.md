@@ -18,7 +18,7 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 | Red Number | Zahlenwert als farbiger Kreis oder Pin mit anpassbarem Radius. |
 | Bool SVG | Wählt je nach Testzustand eines von zwei SVG-Motiven. |
 | SVG shape | Zeichnet eine geometrische SVG-Form mit Farbe, Strichbreite, Rotation und Skalierung. |
-| Input val | Lokales Text- oder Zahlen-Eingabefeld mit Darstellungs- und Eingabeoptionen. |
+| Input val | Umrandetes Text- oder Zahlen-Eingabefeld. Liest und schreibt in der Runtime einen gewählten `input_number`- oder `input_text`-Helfer; ohne Entität bleibt die Eingabe lokal. „Auto-setzen“ schreibt nach einer kurzen Eingabepause, „withEnter“ nur bei Enter. |
 | View in widget | Bettet eine Projektseite ein; rekursive Einbettung wird verhindert. |
 | View in widget 8 | Wählt eine von bis zu 50 Seiten anhand eines Index-Testwerts. |
 | iFrame | Bettet eine URL ein, sofern die Zielseite dies erlaubt; mit Rahmen-, Scroll- und Aktualisierungsoptionen. |
@@ -29,7 +29,7 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 | Switch | Grafischer Ein/Aus-Schalter; Zustandswechsel derzeit lokal. |
 | Bool Checkbox | Ein/Aus-Auswahl; Zustandswechsel derzeit lokal. |
 | Bulb on/off | Lampensymbol mit getrennten Ein-/Aus-Bildern; Zustandswechsel derzeit lokal. |
-| Slider | Regler mit Minimum, Maximum und Schrittweite; Wertänderung derzeit lokal. |
+| Slider | Regler mit Minimum, Maximum und Schrittweite; diese Grenzen sollten zum Helfer passen, etwa `-200` bis `200`. Ein gewählter `input_number`-Helfer liefert den aktuellen Wert; beim Loslassen schreibt der Regler den neuen Wert nach Home Assistant. Ohne Entität bleibt die Änderung lokal. |
 | Number | Ohne Entität Vorschau mit Titel, Einheit, Multiplikator, Nachkommastellen und Vor-/Nachsilbe. Mit gewählter HA-Entität zeigt Editor und Runtime nur den formatierten aktuellen Zahlenwert; bei fehlendem Wert `--`. Getrennt vom grafischen Widget „Red Number“. |
 | String | Textwert mit optionalem Icon und HTML vor oder nach dem Wert. |
 | String (unescaped) | Stellt einen HTML-Testwert mit Vor- und Nachsatz dar. |

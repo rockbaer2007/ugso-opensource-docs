@@ -18,7 +18,7 @@ VIS2-inspired widget names remain in English regardless of the interface languag
 | Red Number | Number displayed as a colored circle or pin with adjustable radius. |
 | Bool SVG | Selects one of two SVG drawings according to a sample Boolean state. |
 | SVG shape | Draws an SVG shape with color, stroke, rotation and scaling. |
-| Input val | Local text or number input with display and input options. |
+| Input val | Bordered text or number input. At runtime it reads and writes a selected `input_number` or `input_text` helper; without an entity it stays local. Auto-set writes after a short typing pause, while withEnter writes only on Enter. |
 | View in widget | Embeds a project page while preventing recursive embedding. |
 | View in widget 8 | Selects one of up to 50 pages using a sample index value. |
 | iFrame | Embeds a URL if the target permits it; offers frame, scrolling and refresh settings. |
@@ -29,7 +29,7 @@ VIS2-inspired widget names remain in English regardless of the interface languag
 | Switch | On/off switch; state changes are local for now. |
 | Bool Checkbox | On/off checkbox; state changes are local for now. |
 | Bulb on/off | Lamp with separate on/off images; state changes are local for now. |
-| Slider | Range slider with minimum, maximum and step; value changes are local for now. |
+| Slider | Range slider with minimum, maximum and step; these limits should match the helper, for example `-200` to `200`. A selected `input_number` helper supplies the current value; releasing the slider writes the new value to Home Assistant. Without an entity changes stay local. |
 | Number | Without an entity, previews its title, unit, multiplier, decimal places, prefix and suffix. With a selected HA entity, editor and runtime show only the formatted current numeric value; missing values display `--`. Separate from the graphical Red Number widget. |
 | String | Text value with optional icon and HTML before or after the value. |
 | String (unescaped) | Displays an HTML sample value with prefix and suffix. |
