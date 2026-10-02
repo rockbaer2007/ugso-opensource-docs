@@ -18,6 +18,10 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 
 ### Tabs bearbeiten
 
+Ab Studio 0.1.121 stellst du in der Haupteinstellung **Tabs** die **Textfarbe aktiv** und **Textfarbe nicht aktiv** getrennt ein. Sie gelten für die Beschriftung aller Reiter, abhängig von der aktuellen Auswahl. Bleibt ein Wert leer, wird die bisherige **Tab-Farbe** verwendet. Die Symbolfarbe je Tab bleibt unabhängig; die Tab-Farbe bestimmt weiterhin die aktive Markierung.
+
+**Überlauf X** und **Überlauf Y** bieten ab Studio 0.1.120 die Auswahl `none`, `visible`, `hidden`, `scroll`, `auto`, `initial` und `inherit`. `none` entfernt die eigene CSS-Vorgabe, `visible` lässt überstehenden Inhalt sichtbar, `hidden` schneidet ihn ab, `scroll` aktiviert Scrollleisten und `auto` zeigt sie bei Bedarf. `initial` verwendet den CSS-Ausgangswert, `inherit` übernimmt die Vorgabe des übergeordneten Elements. Ohne gespeicherte Auswahl bleibt `auto` der Standard. CSS kann die beiden Achsen gemeinsam beeinflussen, insbesondere wenn `visible` mit einer scrollbaren anderen Achse kombiniert wird.
+
 Ab Studio 0.1.119 kannst du unter jedem **Tab [n]** die **Tab-Hintergrundfarbe** unabhängig einstellen. Sie färbt den jeweiligen Reiter in horizontalen und vertikalen Layouts; die Markierung des aktiven Tabs bleibt sichtbar.
 
 Füge **Tabs** aus der Palette ein und stelle Breite und Höhe einmal am Hauptwidget ein. In **Tab [1]**, **Tab [2]** usw. wählst du die Inhaltsart. **Tabfläche bearbeiten** öffnet die eigene Fläche mit der normalen Widget-Palette oder die referenzierte Projektseite. **Zurück zum Tabs-Widget** führt zum Hauptwidget zurück. Die eigene Inhaltsgröße ergibt sich aus dem Hauptwidget abzüglich 44 px für horizontale Reiter beziehungsweise bis zu 120 px für vertikale Reiter (höchstens die halbe Widget-Breite). Eigene Flächen gehören zum Widget und erscheinen nicht als separate Projektseiten. Vorhandene Seiten bleiben gemeinsam genutzte Referenzen; Änderungen wirken auf alle Einbettungen.
