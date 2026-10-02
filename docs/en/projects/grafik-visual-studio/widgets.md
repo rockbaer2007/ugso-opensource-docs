@@ -18,6 +18,8 @@ VIS2-inspired widget names remain in English regardless of the interface languag
 
 ### Editing Tabs
 
+From Studio 0.1.122, the main **Tabs** settings include **Dim inactive tabs (%)**, ranging from 0 to 90. At 0, colors remain unchanged; at 90, 10% brightness remains. Inactive header backgrounds, text and icons are dimmed together; the active header and tab content stay unchanged. This applies to horizontal and vertical layouts and is saved with the project.
+
 From Studio 0.1.121, the main **Tabs** settings offer separate **Active text color** and **Inactive text color**. They apply to all tab labels according to the current selection. Empty values use the existing **Tab color**. Per-tab icon colors remain independent; Tab color still controls the active marker.
 
 From Studio 0.1.120, **Overflow X** and **Overflow Y** offer `none`, `visible`, `hidden`, `scroll`, `auto`, `initial` and `inherit`. `none` removes the explicit CSS override, `visible` shows overflowing content, `hidden` clips it, `scroll` enables scrollbars and `auto` shows them when needed. `initial` uses the CSS initial value; `inherit` takes the parent element's setting. Without a saved selection, `auto` remains the default. CSS can affect both axes together, particularly when `visible` is combined with a scrollable other axis.

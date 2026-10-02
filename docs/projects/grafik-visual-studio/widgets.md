@@ -18,6 +18,8 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 
 ### Tabs bearbeiten
 
+Ab Studio 0.1.122 bietet die Haupteinstellung **Tabs** den Regler **Inaktive Reiter abdunkeln (%)** von 0 bis 90. Bei 0 bleiben die Farben unverändert, bei 90 bleiben 10 % Helligkeit. Hintergrund, Text und Symbol der inaktiven Reiter werden gemeinsam abgedunkelt; der aktive Reiter und der Tab-Inhalt bleiben unverändert. Die Einstellung gilt horizontal und vertikal und wird im Projekt gespeichert.
+
 Ab Studio 0.1.121 stellst du in der Haupteinstellung **Tabs** die **Textfarbe aktiv** und **Textfarbe nicht aktiv** getrennt ein. Sie gelten für die Beschriftung aller Reiter, abhängig von der aktuellen Auswahl. Bleibt ein Wert leer, wird die bisherige **Tab-Farbe** verwendet. Die Symbolfarbe je Tab bleibt unabhängig; die Tab-Farbe bestimmt weiterhin die aktive Markierung.
 
 **Überlauf X** und **Überlauf Y** bieten ab Studio 0.1.120 die Auswahl `none`, `visible`, `hidden`, `scroll`, `auto`, `initial` und `inherit`. `none` entfernt die eigene CSS-Vorgabe, `visible` lässt überstehenden Inhalt sichtbar, `hidden` schneidet ihn ab, `scroll` aktiviert Scrollleisten und `auto` zeigt sie bei Bedarf. `initial` verwendet den CSS-Ausgangswert, `inherit` übernimmt die Vorgabe des übergeordneten Elements. Ohne gespeicherte Auswahl bleibt `auto` der Standard. CSS kann die beiden Achsen gemeinsam beeinflussen, insbesondere wenn `visible` mit einer scrollbaren anderen Achse kombiniert wird.
