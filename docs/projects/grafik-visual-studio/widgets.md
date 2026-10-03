@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **52 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **54 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche auf Englisch. Frühere deutsche Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -14,7 +14,7 @@ Ab Studio 0.1.135 bleibt der technische Widget-Name in der Editoroberfläche. Au
 
 **Schreibfähige Widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG und Bool HTML (control) schalten gebundene `switch`-, `light`- oder `input_boolean`-Entitäten. Bulb on/off schaltet diese Entitäten oder setzt einen `input_number`-Helfer auf sein konfiguriertes Minimum/Maximum. Slider schreibt nur `input_number`; Input val schreibt `input_number` oder `input_text`. Note schreibt im Notizdialog an einen `input_text`-Helfer ohne Attributauswahl. Universal Element schreibt im Schaltermodus seine false-/true-Werte und im Tastermodus den nächsten konfigurierten Wert an eine passende schaltbare Entität oder einen Zahlen-/Texthelfer. Bei einer unpassenden oder nicht verfügbaren Entität ist die Bedienung gesperrt. Die übrigen Widgets schreiben keinen HA-Zustand.
 
-## HA Grafik – Basis (44)
+## HA Grafik – Basis (46)
 
 | Widget | Aktuelle Funktion |
 | --- | --- |
@@ -79,6 +79,8 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | filter - dropdown | Filtert Runtime-Widgets anhand des in „Generell“ gesetzten Filterworts. |
 | Text | Freies Textfeld ohne Entitätsbindung. |
 | Border | Rahmen mit Titel, Titelposition, Kopfbereich und Farben. |
+| Horizontal line | Horizontale Trennlinie mit einstellbaren Enden und Einrasten. |
+| Vertical line | Vertikale Trennlinie mit einstellbaren Enden und Einrasten. |
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Bildquelle, Strecken und gesteuertes Neuladen; optionale native Browserinteraktionen. Standardgröße 200 × 130 px. |
 
@@ -302,6 +304,16 @@ Ein Klick in der Runtime öffnet den Notizdialog. Ein verfügbarer **input_text-
 ![Note mit Testtext und Vergleich der ausgeblendeten und sichtbaren Ecke](/images/grafik-visual-studio/note.png)
 
 Funktionale Referenz: [VIS2 Note](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicNote.tsx).
+
+### Horizontal line / Vertical line
+
+Die zwei Trennlinien sind reine Anzeige und benötigen keinen HA-Helfer. Horizontal line startet mit **200 × 16 px**, Vertical line mit **16 × 200 px**. Unter **CSS Trennlinie** stehen Dicke (1–100 px, Standard 2), HEX-Farbe, Rahmenfarbe, Rahmenbreite und Enden zur Verfügung: **Eckig** (Standard), **Rund** oder **Spitz (pfeilartig)** an beiden Enden. Eine erhöhte Dicke vergrößert bei Bedarf die Querabmessung des Widgets; beim anschließenden Verkleinern begrenzt die Widgetfläche die sichtbare Dicke.
+
+**Einrasten** ist standardmäßig aktiviert. Beim einzelnen Ziehen, Skalieren eines Linienendes oder Bearbeiten der Geometrie werden Enden innerhalb von **8 Seitenpixeln** auf die Mitte einer rechtwinkligen Trennlinie gesetzt. Das funktioniert an beliebigen Stellen entlang der anderen Linie, auch für T-Verbindungen. Parallel verlaufende Linien rasten nicht ein. Gemeinsames Verschieben mehrerer Widgets verändert ihre relativen Abstände nicht. Frei gesetzte CSS-Positionen/-Größen und CSS-Transformationen deaktivieren das Einrasten.
+
+Gespeichert werden die tatsächlichen Koordinaten und die Liniengestaltung, auch im Widget- und Projekt-Export. Die Verbindung ist keine dauerhafte Bindung: Wird eine Linie später wegbewegt, folgt die andere nicht automatisch. **CSS Allgemein** und **CSS Trennlinie** bleiben für das Speichern aktiv. Der optionale Umsteigerhinweis folgt der zentralen Einstellung **Umsteigerhinweise anzeigen**.
+
+![Trennlinien mit T-Verbindung, pfeilartigen Enden und CSS-Einstellungen](/images/grafik-visual-studio/separator-lines.png)
 
 ### Border
 

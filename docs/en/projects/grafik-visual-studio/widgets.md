@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **52 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **54 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired widget names remain in English regardless of the interface language. Former German palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -14,7 +14,7 @@ From Studio 0.1.135, technical widget names stay in the editor interface. The ca
 
 **Writable widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG, and Bool HTML (control) can control bound `switch`, `light`, or `input_boolean` entities. Bulb on/off controls those entities or sets an `input_number` helper to its configured minimum/maximum. Slider writes only `input_number`; Input val writes `input_number` or `input_text`. Note writes from its text dialog to an `input_text` helper without an attribute selection. In switch mode, Universal Element writes its false/true values; in button mode it writes the next configured value to a suitable switchable entity or number/text helper. Controls are disabled for unsupported or unavailable entities. Other widgets do not write HA state.
 
-## HA Grafik – Basis (44)
+## HA Grafik – Basis (46)
 
 | Widget | Current behavior |
 | --- | --- |
@@ -79,6 +79,8 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | filter - dropdown | Filters runtime widgets by their “Filterwort” property in “Generell”. |
 | Text | Free text field without entity binding. |
 | Border | Frame with title, title position, header area and colors. |
+| Horizontal line | Horizontal separator with configurable ends and snapping. |
+| Vertical line | Vertical separator with configurable ends and snapping. |
 | Gauge | Simple value gauge with unit. |
 | Image | Image source, stretching and controlled refresh; optional native browser interactions. Default size 200 × 130 px. |
 
@@ -302,6 +304,16 @@ Clicking a note in runtime opens its text dialog. An available **input_text help
 ![Note with test text and a comparison of hidden and visible corners](/images/grafik-visual-studio/note.png)
 
 Functional reference: [VIS2 Note](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicNote.tsx).
+
+### Horizontal line / Vertical line
+
+These display-only separators need no HA helper. Horizontal line starts at **200 × 16 px**, Vertical line at **16 × 200 px**. **CSS separator** provides thickness (1–100 px, default 2), HEX fill and border colors, border width and ends: **Square** (default), **Round**, or **Pointed (arrow-like)** at both ends. Increasing thickness expands the widget's cross dimension if needed; shrinking the widget afterwards limits the visible thickness to its bounds.
+
+**Snap** is enabled by default. Moving a single line, resizing its endpoint or editing geometry aligns endpoints within **8 page pixels** with the center of a perpendicular separator. Connections can meet anywhere along the other line, including T junctions. Parallel lines do not snap. Moving multiple selected widgets together preserves their relative spacing. Custom CSS positions/sizes and transforms disable snapping.
+
+Actual coordinates and styling are saved in widget and project exports. Connections are not permanent bindings: moving one line away later does not make the other follow automatically. **CSS General** and **CSS separator** remain enabled for saving. The optional migration hint follows the central **Show migration hints** setting.
+
+![Separators with a T junction, pointed ends and CSS settings](/images/grafik-visual-studio/separator-lines.png)
 
 ### Border
 
