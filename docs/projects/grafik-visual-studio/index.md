@@ -20,7 +20,7 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 - Widgets aus den Gruppen „HA Grafik – Basis“, „HA Grafik – Interaktiv“ und „HA Grafik – Spezial“ verwenden. Dazu gehören unter anderem Text, HTML, Bild, Zahl, Schalter, Slider, Tabelle, SVG-Line und SVG LineBox. Die Widget-Palette zeigt je nach Typ eine Vorschau oder ein Symbol.
 - Eigenschaften für Layout, CSS, „Generell“, Sichtbarkeit und Andockpunkte bearbeiten. Der Editor-Widget-Filter verwendet das Feld „Filterwort“ aus „Generell“.
 - Mit dem Spezial-Widget Verbindungslinien mit Zwischen- und explizit aktivierten Sammelpunkten, Farben, Pfeilspitzen und Animationen zeichnen. Kreuzende Linien koppeln sich nicht von selbst.
-- Dateien aus Home Assistants `www`-Ordner auswählen und unterstützte Dateien hochladen. Der Entitätenbrowser kann Entitäten und aktuelle Zustände suchen und Entity-IDs in Widget-Felder übernehmen.
+- Dateien aus Home Assistants `/config/www/studio`-Ordner auswählen und unterstützte Dateien hochladen. Der Dateienbrowser legt diesen Stammordner beim Öffnen automatisch an. Falls Schreibrechte fehlen, erscheint ein Hinweis zum manuellen Erstellen. Der Entitätenbrowser kann Entitäten und aktuelle Zustände suchen und Entity-IDs in Widget-Felder übernehmen.
 - Änderungen automatisch nach einer einstellbaren Wartezeit speichern (standardmäßig fünf Sekunden) oder manuell speichern. Widgets lassen sich als JSON exportieren und importieren.
 - Die Oberfläche übernimmt die Home-Assistant-Sprache: Deutsch bei deutscher HA-Sprache, sonst Englisch. Unter **Einstellungen → Sprache** kann jeder Browser **Automatisch**, **Deutsch** oder **English** wählen. Projekt- und Widget-Inhalte bleiben dabei unverändert.
 
