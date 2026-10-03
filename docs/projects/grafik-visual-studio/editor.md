@@ -8,7 +8,9 @@ title: Editor und Tastenkombinationen
 
 Ab **0.1.184** unterscheiden Hintergrundfarben die Widget-Sets in der Palette: **Interaktiv** ist olivgrün, **Spezial** blau und **Datenfluss** violett. **Basis** behält seine bisherige Darstellung. Zusätzliche installierte Sets erhalten jeweils eine eigene Farbe. Die Farben gelten für die Auswahlknöpfe der Palette; die Gestaltung eingefügter Widgets bleibt unabhängig.
 
-![Olivgrüne Einträge des interaktiven Widget-Sets](/images/grafik-visual-studio/palette-set-colors.png)
+Ab **0.1.185** sind die Auswahlboxen aller Sets flacher: 34 statt 42 px Mindesthöhe, mit 32 × 26 px großen Vorschauen. Die Beschriftungen bleiben gut lesbar. **Dashboard in widget** erhält das Standard-Symbol `mdi:view-dashboard`.
+
+![Flachere Auswahlboxen der Widget-Palette](/images/grafik-visual-studio/palette-compact.png)
 
 Ab Studio **0.1.115** öffnet ein Rechtsklick auf ein Widget, eine Gruppenlasche oder die freie Editorfläche ein Kontextmenü: **Auswählen**, **Gruppieren**, **Gruppierung aufheben**, **Gruppe bearbeiten**, **Kopieren**, **Ausschneiden**, **Einfügen** und **Löschen**. **Mehr** enthält Duplizieren, Vorder-/Hintergrund, Sperren/Entsperren, Rückgängig/Wiederholen und Widget-Import/Export. Nicht verfügbare Aktionen sind ausgegraut; Escape schließt das Menü, Pfeil hoch/runter navigiert darin. Auswählen bietet alle Widgets und die Widgets unter dem Mauszeiger.
 

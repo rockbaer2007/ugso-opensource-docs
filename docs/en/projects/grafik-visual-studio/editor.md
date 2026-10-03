@@ -8,7 +8,9 @@ title: Editor and keyboard shortcuts
 
 From **0.1.184**, background colors distinguish palette sets: **Interactive** is olive green, **Special** blue and **Data Flow** violet. **Basic** keeps its existing appearance. Additional installed sets each receive their own color. These colors apply to palette selection buttons; inserted widgets retain their independently configured appearance.
 
-![Olive green entries in the Interactive widget set](/images/grafik-visual-studio/palette-set-colors.png)
+From **0.1.185**, selection boxes in every set are flatter: 34 instead of 42 px minimum height, with 32 × 26 px previews. Labels remain readable. **Dashboard in widget** uses the standard `mdi:view-dashboard` icon.
+
+![Flatter widget palette selection boxes](/images/grafik-visual-studio/palette-compact.png)
 
 Starting with Studio **0.1.115**, right-click a widget, group label or empty editor surface to open a context menu: **Select**, **Group widgets**, **Ungroup**, **Edit group**, **Copy**, **Cut**, **Paste** and **Delete**. **More** provides duplication, front/back ordering, lock/unlock, undo/redo and widget import/export. Unavailable actions are disabled; Escape closes the menu and up/down arrows navigate it. Select offers all widgets and widgets under the pointer.
 
