@@ -15,6 +15,7 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 ## Was derzeit möglich ist
 
+- Die Widget-Auswahlliste bleibt vor allen Widgets sichtbar. Über „Kopieren“ und „Löschen“ direkt in der Liste lassen sich die angehakten Widgets gemeinsam bearbeiten; beim Löschen gilt der Bestätigungsdialog.
 - Beim Löschen von Widgets erscheint ein Bestätigungsdialog mit den ausgewählten Widget-IDs. „Abbrechen“ oder Escape bricht ab; „Frage für die nächsten 5 Minuten unterdrücken“ überspringt weitere Löschfragen für fünf Minuten im geöffneten Editor. Löschen lässt sich weiterhin rückgängig machen.
 - Die Widget-Auswahl übernimmt einzelne Häkchen und die Auswahl aller Widgets sofort in die Editorfläche. Signalbilder, Extrasteuerung und Andockpunkte sind bei neuen Widgets standardmäßig deaktiviert und lassen sich bei Bedarf aktivieren.
 - Die Bildauswahl der Widgets verwendet ebenfalls `/config/www/studio`; übernommene und kopierte Bildpfade beginnen mit `/local/studio/`.
