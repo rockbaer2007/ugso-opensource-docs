@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **59 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **60 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive Widgets wie Terminkalender und Schieberegler verwenden übersetzte Palettennamen. Frühere Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -367,7 +367,7 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (6)
+## HA Grafik – Interaktiv (7)
 
 
 | Widget | Aktuelle Funktion |
@@ -378,6 +378,22 @@ Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem *
 | Checkbox | Eigene false-/true-Werte, Zustandstexte, vier Textpositionen und Boxgestaltung. |
 | Schieberegler | Horizontaler/vertikaler Zahlenregler mit Wertetikett, Schrittmarkierungen und getrennten Stilen für Spur und Daumen. |
 | Tabelle | JSON-Tabelle mit Spaltenformaten, Formeln, Sortierung, Filtern, Seitenaufteilung und Zeilenfarben. |
+| Lauftext | Statischer Text oder HA-Zustand als fortlaufender Ticker mit Richtung, Geschwindigkeit und Hover-Pause. |
+
+### Lauftext
+
+Ab **0.1.178** findest du **Lauftext** unter **Interaktiv**. Neue Widgets starten mit **300 × 40 px**, Richtung **Links**, **80 px/s**, **3 Textkopien** und **50 px Abstand**. Ohne Entität gilt **Lauftext (statisch)**; mit Entität hat der HA-Zustand Vorrang. Der Inhalt bleibt reiner Text und schreibt keine HA-Werte.
+
+- **Richtung:** Links oder Rechts; Geschwindigkeit **10–500 px/s**. Sie bleibt auch bei mehr Kopien konstant.
+- **Textkopien:** **1–200**; kurze Texte werden zusätzlich so oft wiederholt, dass der Bereich gefüllt bleibt. **Abstand zwischen Kopien**: **0–1000 px**.
+- **Bei Hover pausieren:** hält die Animation unter dem Mauszeiger an und setzt sie beim Verlassen fort. Unveränderte Texte laufen bei HA-Aktualisierungen ohne Neustart weiter.
+- **Darstellung:** Hintergrund sowie Schrift, Textfarbe, Größe und Abstände über die normalen CSS-Einstellungen. Im Editor steht der Text still. **Reduzierte Bewegung beachten** ist standardmäßig aktiv: Bei der entsprechenden Systemeinstellung bleibt auch die Runtime statisch; die Option lässt sich pro Widget abschalten.
+
+Alle Einstellungen bleiben im Projekt und im Widget-/Paket-Export erhalten.
+
+![Lauftext mit Energie- und Wettermeldungen sowie automatisch ergänzten kurzen Textkopien](/images/grafik-visual-studio/marquee.png)
+
+Funktionsreferenz: [inventwo Lauftext für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/de/widgets/marquee-widget.md). Studio verwendet eine eigene Implementierung.
 
 ### Tabelle
 

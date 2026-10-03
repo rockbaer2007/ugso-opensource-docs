@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **59 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **60 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired Basic widgets retain their English names. Interactive widgets such as Event Calendar and Interactive Slider use translated palette names. Former palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -367,7 +367,7 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (6)
+## HA Grafik – Interaktiv (7)
 
 | Widget | Current behavior |
 | --- | --- |
@@ -377,6 +377,22 @@ New widgets use **300 × 200 pixels** with only **CSS General** enabled. Central
 | Checkbox | Custom false/true values, state labels, four label positions and box styling. |
 | Interactive Slider | Horizontal/vertical numeric control with value labels, step marks and independent track/thumb styling. |
 | Interactive Table | JSON table with column formats, formulas, sorting, filters, pagination and row colors. |
+| Marquee | Static text or HA state as a continuous ticker with direction, speed and hover pause. |
+
+### Marquee
+
+From **0.1.178**, **Marquee** is available under **Interactive**. New widgets use **300 × 40 px**, **Left** direction, **80 px/s**, **3 text copies** and a **50 px gap**. Without an entity, **Static marquee text** is used; a bound HA state takes precedence. Content stays plain text and never writes HA values.
+
+- **Direction:** Left or Right; speed **10–500 px/s** remains constant when increasing the copy count.
+- **Text copies:** **1–200**; extra repetitions automatically fill the viewport for short text. **Gap between copies**: **0–1000 px**.
+- **Pause on hover:** pauses under the pointer and resumes when it leaves. Unchanged text keeps its animation progress across HA refreshes.
+- **Appearance:** background, font, text color, size and spacing use standard CSS settings. The editor stays static. **Respect reduced motion** is enabled by default: the runtime stays static when requested by the system; this option can be disabled per widget.
+
+All settings survive project and widget/package exports.
+
+![Marquee with energy and weather messages and automatically extended short text copies](/images/grafik-visual-studio/marquee.png)
+
+Functional reference: [inventwo Marquee for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/marquee-widget.md). Studio uses its own implementation.
 
 ### Interactive Table
 
