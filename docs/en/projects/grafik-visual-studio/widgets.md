@@ -4,9 +4,9 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **57 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **58 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
-VIS2-inspired widget names remain in English regardless of the interface language. Former German palette names still work as search terms. Existing custom widget names remain unchanged.
+VIS2-inspired Basic widgets retain their English names. Interactive widgets such as Event Calendar and Interactive Slider use translated palette names. Former palette names still work as search terms. Existing custom widget names remain unchanged.
 
 **HTML Logout is excluded** and is not planned as a future Studio widget.
 
@@ -367,7 +367,7 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (4)
+## HA Grafik – Interaktiv (5)
 
 | Widget | Current behavior |
 | --- | --- |
@@ -375,6 +375,22 @@ New widgets use **300 × 200 pixels** with only **CSS General** enabled. Central
 | Calendar | Monthly datepicker with today highlighting, day restrictions and week numbers. |
 | Event Calendar | Events in month, week, day, year and list views; multiple sources and color rules. |
 | Checkbox | Custom false/true values, state labels, four label positions and box styling. |
+| Interactive Slider | Horizontal/vertical numeric control with value labels, step marks and independent track/thumb styling. |
+
+### Interactive Slider
+
+From **0.1.176**, **Interactive** includes a separate **Interactive Slider**. The existing Basic **Slider** remains available. New widgets use **150 × 40 px**, a **0–100** range, step **1**, horizontal orientation and visible min/max values.
+
+- **General:** optional title and spacing, unit, HA entity, minimum/maximum, step and preview value. Vertical sliders increase from bottom to top. The value label appears during interaction, always or never. Title and unit are displayed as text.
+- **Step marks:** automatic intervals or custom positions from a comma-separated list, such as `-20,0,20,50,80`. Marks are independent of the interaction step and can appear inside the track, above/below or left/right. Dense scales are thinned to at most 201 marks; numeric labels adapt to the widget size.
+- **CSS Slider – Track / Thumb:** HEX colors, track width, thumb size, percentage rounding and separate shadows with X/Y offset, blur and spread. Track modes are Normal, Inverted or No active track. Thumb size **0** hides the thumb. **From widget** inherits each group independently from another Interactive Slider; copying widgets together remaps internal references. **CSS General** remains enabled.
+- **Interaction:** writing requires an available `input_number` helper. Minimum, maximum and step must match the helper. Sensors and unavailable entities are display only. **Read only** prevents changes. Without an entity, values stay local; editor previews never write values. HA writes are sent when a change finishes.
+
+Widget JSON exports retain all control options, styling and entity bindings. Referenced entities and styling widgets must also exist at the destination. A larger widget may be useful for titles, value labels and scales.
+
+![Horizontal and vertical sliders, progress display and custom marks](/images/grafik-visual-studio/styled-slider.png)
+
+Functional reference: [inventwo Slider for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/slider-widget.md). Studio uses its own implementation.
 
 ### Checkbox
 

@@ -4,9 +4,9 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **57 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **58 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
-Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche auf Englisch. Frühere deutsche Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
+Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive Widgets wie Terminkalender und Schieberegler verwenden übersetzte Palettennamen. Frühere Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
 **HTML Logout wird nicht übernommen** und ist nicht als zukünftiges Studio-Widget vorgesehen.
 
@@ -367,7 +367,7 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (4)
+## HA Grafik – Interaktiv (5)
 
 
 | Widget | Aktuelle Funktion |
@@ -376,6 +376,22 @@ Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem *
 | Calendar | Monatsansicht mit Datumsauswahl, Heute-Markierung, Tagessperren und Kalenderwochen. |
 | Terminkalender | Termine in Monats-, Wochen-, Tages-, Jahres- und Listenansichten; mehrere Quellen und Farbregeln. |
 | Checkbox | Eigene false-/true-Werte, Zustandstexte, vier Textpositionen und Boxgestaltung. |
+| Schieberegler | Horizontaler/vertikaler Zahlenregler mit Wertetikett, Schrittmarkierungen und getrennten Stilen für Spur und Daumen. |
+
+### Schieberegler
+
+Ab **0.1.176** steht unter **Interaktiv** ein eigener **Schieberegler** bereit. Der bisherige **Slider** unter Basis bleibt erhalten. Neue Widgets starten mit **150 × 40 px**, Bereich **0–100**, Schritt **1**, horizontaler Ausrichtung und sichtbaren Min./Max.-Werten.
+
+- **Allgemein:** optionale Überschrift mit Abstand, Einheit, HA-Entität, Mindest-/Maximalwert, Schritt und Vorschauwert. Vertikale Regler steigen von unten nach oben. Das Wertetikett erscheint beim Bedienen, immer oder nie. Überschrift und Einheit werden als Text angezeigt.
+- **Schrittmarkierungen:** automatisch im eingestellten Markierungsabstand oder an eigenen Positionen aus einer Kommaliste, zum Beispiel `-20,0,20,50,80`. Markierungen sind unabhängig vom Bedienschritt und können innerhalb der Spur oder oben/unten bzw. links/rechts stehen. Dichte Skalen werden auf höchstens 201 Markierungen ausgedünnt; Zahlenbeschriftungen passen sich der Widgetgröße an.
+- **CSS Schieberegler – Spur / Daumen:** HEX-Farben, Spurbreite, Daumengröße, Rundung in Prozent und getrennte Schatten mit X/Y-Versatz, Unschärfe und Ausdehnung. Der Spurtyp bietet Normal, Umgekehrt oder Keine aktive Spur. Daumengröße **0** blendet den Daumen aus. **Vom Widget** übernimmt jede Gruppe unabhängig von einem anderen Schieberegler; gemeinsam kopierte Widgets erhalten passende interne Verweise. **CSS Allgemein** bleibt aktiviert.
+- **Bedienung:** zum Schreiben ist ein verfügbarer `input_number`-Helfer nötig. Minimum, Maximum und Schritt müssen zum Helfer passen. Sensoren und nicht verfügbare Entitäten werden nur angezeigt. **Schreibgeschützt** verhindert Änderungen. Ohne Entität bleibt der Wert lokal; im Editor wird nichts geschrieben. HA-Schreibaufträge werden beim Abschluss einer Änderung gesendet.
+
+Beim Widget-JSON-Export werden sämtliche Regleroptionen, Stile und Entitätsbindungen gespeichert. Die Entität und referenzierte Stil-Quellwidgets müssen am Ziel ebenfalls vorhanden sein. Für Überschrift, Wertetikett und Skala kann ein größeres Widget sinnvoll sein.
+
+![Horizontaler und vertikaler Schieberegler, Fortschrittsanzeige und eigene Markierungen](/images/grafik-visual-studio/styled-slider.png)
+
+Funktionsreferenz: [inventwo Schieberegler für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/de/widgets/slider-widget.md). Studio verwendet eine eigene Implementierung.
 
 ### Checkbox
 
