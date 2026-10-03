@@ -214,6 +214,18 @@ Unter **Allgemein** stehen die HA-Entität, **Nur Anzeige**, **SVG bei false**, 
 
 Die Durchsichtigkeit reicht von 0 bis 1. Im Editor bleiben mindestens 20 % sichtbar, damit das Widget bearbeitbar bleibt; in der Runtime gilt auch vollständige Transparenz. **CSS Allgemein** ist für Position und Größe aktiv, die übrigen CSS-Gruppen sind bei neuen Widgets deaktiviert. Die optionalen Umsteigerhinweise erklären die Schreibziele und das Verhalten der Durchsichtigkeit.
 
+### Red Number
+
+![Red Number mit HTML-Vortext und benutzerdefinierten Farben](/images/grafik-visual-studio/red-number.png)
+
+*Vergrößerte Beispielanzeige mit lokalem Vorschauwert 125; Standardgröße neuer Widgets ist 52 × 30 px.*
+
+Neue Widgets beginnen mit 52 × 30 px. **Allgemein** bietet die HA-Entität, **type** (Kreis/Pin), drei HTML-Felder mit Code-Editor, Hintergrund und beim Kreis zusätzlich Randfarbe sowie Grenzradius (0–100, Standard 16). Der Kreis verwendet einen 3-px-Rand; der Pin zeigt eine Markierungsform ohne Kreisrand. Farben werden über HEX-Farbwähler eingestellt; bestehende RGB(A)-Farben bleiben darstellbar.
+
+**HTML voranstellen** steht vor der Zahl. Bei genau 1 gilt **HTML anhängen (Singular)**, sonst **HTML anhängen (Plural)**. Der Zahlenwert wird aus dem Zustand gelesen. In der Runtime wird die Anzeige bei 0, false oder fehlendem gültigen Zahlenwert ausgeblendet. Im Editor bleibt sie sichtbar; ohne Quelle erscheint `--`. Lange HTML-Texte benötigen eine entsprechend größere Widgetfläche.
+
+Das Widget liest nur und benötigt keinen zusätzlichen HA-Helfer. Der vorhandene Ausgangspunkt bleibt als Wertquelle nutzbar, auch wenn die Null-Anzeige ausgeblendet ist. **CSS Allgemein** bleibt aktiv, übrige CSS-Gruppen starten deaktiviert. Der optionale Umsteigerhinweis erklärt das Ausblenden.
+
 ### Bool Checkbox
 
 Die Checkbox zeigt den Zustand der gebundenen Home-Assistant-Entität. In der Runtime kann sie `switch`, `light` und `input_boolean` schalten; ohne verfügbare, passende Entität ist sie gesperrt. Im Editor dient sie nur als Vorschau.

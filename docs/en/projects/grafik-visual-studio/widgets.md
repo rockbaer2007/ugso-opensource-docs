@@ -214,6 +214,18 @@ A selection writes `0` or `1` to a compatible `input_number` or `input_text` hel
 
 Transparency ranges from 0 to 1. The editor keeps at least 20% visible so the widget remains editable; runtime also allows complete transparency. **CSS General** remains enabled for position and size, while other CSS groups start disabled. Optional migration hints explain write targets and transparency behavior.
 
+### Red Number
+
+![Red Number with HTML prefix and custom colors](/images/grafik-visual-studio/red-number.png)
+
+*Enlarged example using a local preview value of 125; new widgets default to 52 × 30 px.*
+
+New widgets start at 52 × 30 px. **General** provides the HA entity, **type** (Circle/Pin), three HTML fields with code editors, background, and circle-only border color and border radius (0–100, default 16). Circles use a 3-px border; pins display a marker shape without the circle border. Color pickers use HEX; existing RGB(A) colors remain renderable.
+
+**HTML prefix** appears before the number. Exactly 1 uses **HTML suffix (singular)**; other values use **HTML suffix (plural)**. The number is read from the state. Runtime hides the display for zero, false, or a missing valid numeric value. The editor keeps it visible and shows `--` without a source. Long HTML text requires a larger widget surface.
+
+This widget only reads and requires no additional HA helper. Its existing output point remains usable as a value source even when the zero display is hidden. **CSS General** stays enabled; other CSS groups start disabled. The optional migration hint explains the hiding behavior.
+
 ### Bool Checkbox
 
 The checkbox displays the bound Home Assistant entity state. In the runtime it can control `switch`, `light`, and `input_boolean`; it is disabled without an available, supported entity. In the editor it is a preview only.
