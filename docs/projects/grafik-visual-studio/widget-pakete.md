@@ -5,6 +5,8 @@ description: Lokale Widget-Pakete für HA Grafik Visual Studio erstellen und ins
 
 # Widget-Paket-Schnittstelle
 
+Ab Studio 0.1.203 unterstützt API 0.2 `technic-status-list`: bis zu zehn lesende HA-Zeilen mit den Bindungen und Zahlen-/UND-/ODER-Optionen von `technic-room`. `valueOffset` und `containerPaddingLeft` steuern die Spalten und den Innenabstand. Die Schrift wird aus CSS geerbt; überlaufende Zeilen scrollen. Das Paket bleibt deklarativ. Siehe [Technic](technic.md#status-list).
+
 Ab Studio 0.1.202 unterstützt API 0.2 `technic-temperature` mit fünf HA-Bindungen, Reglergrenzen, Schrittweite und Farben. Der feste Host prüft aktuelle Fähigkeiten und Werteraster vor `climate.set_temperature` beziehungsweise `input_number.set_value`. Der Verlauf liest HA-Recorder-Daten für höchstens drei Entitäten, 24 Stunden oder sieben Tage und liefert maximal 720 Punkte pro Reihe. Pakete enthalten weiterhin keine ausführbaren Skripte oder HA-Tokens. Siehe [Technic](technic.md#thermostat-temperature).
 
 Ab Studio 0.1.201 unterstützt API 0.2 `technic-clock` für Browserzeit und getrennt konfigurierbare Datumsanzeigen. Der Host aktualisiert nur Text über einen gemeinsamen Ticker. Datumsnamen nutzen `Intl`, das Leerzeichen-Trennzeichen wird als `separator=space` gespeichert. Keine Entitätsbindung oder ausführbare Paketdatei erforderlich.

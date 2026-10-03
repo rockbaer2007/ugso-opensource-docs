@@ -5,6 +5,8 @@ description: Create and install local widget packages for HA Grafik Visual Studi
 
 # Widget package interface
 
+From Studio 0.1.203, API 0.2 supports `technic-status-list`: up to ten read-only HA rows using the bindings and numeric/AND/OR options from `technic-room`. `valueOffset` and `containerPaddingLeft` control columns and padding. Typography inherits CSS; overflowing rows scroll. The package remains declarative. See [Technic](technic.md#status-list).
+
 From Studio 0.1.202, API 0.2 supports `technic-temperature` with five HA bindings, dial bounds, step and colors. The fixed host checks live capabilities and step grids before `climate.set_temperature` or `input_number.set_value`. History reads HA Recorder for at most three entities, 24 hours or seven days, returning at most 720 points per series. Packages still contain no executable scripts or HA tokens. See [Technic](technic.md#thermostat-temperature).
 
 From Studio 0.1.201, API 0.2 supports `technic-clock` for browser-local time and independently configured dates. The host updates text with one shared ticker. Date names use `Intl`; the space separator is stored as `separator=space`. No entity binding or executable package file is required.

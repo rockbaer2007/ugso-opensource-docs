@@ -7,7 +7,17 @@ description: Das externe Technic-Widget-Set installieren und Window – Wall mit
 
 **Inspiriert von den [ioBroker-Technic-Widgets von Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** Eigene Umsetzung für Home Assistant.
 
-Ab **Studio 0.1.202** kannst du **UGSo Technic 1.5.0** installieren. Das Paket enthält **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date** und **Thermostat – Temperature**. Das verbleibende StatusList-Widget ist noch nicht enthalten. Version 1.5.0 kann über die Paketverwaltung als Erweiterung der bisherigen Versionen installiert werden; bestehende Widgets bleiben erhalten.
+Ab **Studio 0.1.203** kannst du **UGSo Technic 1.6.0** installieren. Das Paket enthält alle sieben Widget-Typen: **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date**, **Thermostat – Temperature** und **Status – List**. Version 1.6.0 kann über die Paketverwaltung als Erweiterung der bisherigen Versionen installiert werden; bestehende Widgets bleiben erhalten.
+
+## Status – List
+
+![Statusliste mit Temperatur und Fensterzustand, simulierte HA-Testdaten](/images/grafik-visual-studio/technic-status-runtime.png)
+
+Die Statusliste zeigt bis zu **zehn ausschließlich lesende Statuszeilen**. Standardmäßig sind **0 Zeilen** eingestellt; das Widget ist dann leer. Standardgröße: **160 × 120 Pixel**. Unter **Statuszeilen** stellst du Anzahl, **Werte-Spalten-Versatz (90 px)** und **Container-Abstand links (8 px)** ein. Der Versatz bestimmt die Breite der Bezeichnungsspalte; danach beginnt mit 4 px Abstand die Wertespalte. Der linke Container-Abstand kommt zum festen Innenabstand von 8 px hinzu.
+
+Mit der Anzahl erscheinen **Statuszeile [1]** bis **[10]**. Jede Zeile erhält eine Bezeichnung und eine Home-Assistant-Entität. **Zahl** unterstützt Einheit, Dezimalstellen und Zahlenfarbe. **Wahr / Falsch** unterstützt Texte und Farben für EIN/AUS sowie zusätzliche kommagetrennte Entitäten mit **UND** oder **ODER**. Die Originalfelder `oid1` bis `oid10` entsprechen den Studio-Feldern `rowEntityId1` bis `rowEntityId10`; `oidsExtra1` bis `oidsExtra10` entsprechen `extraEntityIds1` bis `extraEntityIds10`.
+
+Fehlende, unbekannte oder nicht verfügbare Werte bleiben `—`. Schriftgröße, Schriftart, Fettdruck und Bezeichnungsfarbe kommen aus **CSS → Font und Text**. Lange Bezeichnungen oder Werte werden mit Ellipse gekürzt; der Tooltip zeigt den vollständigen Text. Vergrößere für lange Einheiten die Widgetbreite; die Abbildung verwendet 240 Pixel. Bei zu vielen Zeilen wird innerhalb des Widgets gescrollt. Klicks schreiben keine HA-Zustände und blenden keine Beschriftungen aus. Alle Zeilen und Abstände bleiben im Projekt- und Widget-Export erhalten.
 
 ## Thermostat – Temperature
 

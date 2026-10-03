@@ -7,7 +7,17 @@ description: Install the external Technic widget set and connect Window – Wall
 
 **Inspired by the [ioBroker Technic Widgets by Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** An independent implementation for Home Assistant.
 
-From **Studio 0.1.202**, you can install **UGSo Technic 1.5.0**. The package contains **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date** and **Thermostat – Temperature**. The remaining StatusList widget is not included yet. Install 1.5.0 through package management as an additive update to previous versions; existing widgets are preserved.
+From **Studio 0.1.203**, you can install **UGSo Technic 1.6.0**. The package contains all seven widget types: **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date**, **Thermostat – Temperature** and **Status – List**. Install 1.6.0 through package management as an additive update to previous versions; existing widgets are preserved.
+
+## Status – List
+
+![Status list showing temperature and window state, simulated HA test data](/images/grafik-visual-studio/technic-status-runtime.png)
+
+The status list displays up to **ten read-only status rows**. The default is **0 rows**, leaving the widget empty. Default size: **160 × 120 pixels**. Under **Status rows**, configure the count, **value column offset (90 px)** and **container left padding (8 px)**. The offset defines the label column width; the value column follows after a 4 px gap. Container left padding is added to the fixed 8 px inset.
+
+The count reveals **Status row [1]** through **[10]**. Each row has a label and a Home Assistant entity. **Number** supports units, decimals and number color. **Boolean** supports ON/OFF text and colors, plus comma-separated additional entities with **AND** or **OR**. Original fields `oid1` through `oid10` map to Studio's `rowEntityId1` through `rowEntityId10`; `oidsExtra1` through `oidsExtra10` map to `extraEntityIds1` through `extraEntityIds10`.
+
+Missing, unknown and unavailable inputs remain `—`. Font size, family, bold and label color inherit **CSS → Font and Text**. Long labels or values use ellipsis, with full text in tooltips. Increase widget width for long units; the screenshot uses 240 pixels. Overflowing rows scroll inside the widget. Clicks never write HA states or hide labels. All row settings and spacing remain in project and widget exports.
 
 ## Thermostat – Temperature
 
