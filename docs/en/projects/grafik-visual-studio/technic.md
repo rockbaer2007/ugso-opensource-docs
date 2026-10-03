@@ -7,7 +7,21 @@ description: Install the external Technic widget set and connect Window – Wall
 
 **Inspired by the [ioBroker Technic Widgets by Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** An independent implementation for Home Assistant.
 
-From **Studio 0.1.199**, you can install **UGSo Technic 1.2.0**. The package contains **Window – Wall**, **Switch – Boolean** and **Dimmer – Light**. The other four widgets from the original set are not included yet. Install 1.2.0 through package management as an additive update to 1.0.0 or 1.1.0; existing widgets are preserved.
+From **Studio 0.1.200**, you can install **UGSo Technic 1.3.0**. The package contains **Window – Wall**, **Switch – Boolean**, **Dimmer – Light** and **Room – Overlay**. The other three widgets from the original set are not included yet. Install 1.3.0 through package management as an additive update to previous versions; existing widgets are preserved.
+
+## Room – Overlay
+
+![Room tile with preserved caption and an open Studio target page](/images/grafik-visual-studio/technic-room-popup.png)
+
+The room tile displays a custom **room name** and up to **ten status rows**. Configure name color, font size, bold text, horizontal and vertical alignment, and padding on each side. Default size: 160 × 100 pixels.
+
+Under **Status rows**, select the count, font size and label color. Rows can be arranged vertically or horizontally with a separator and gap. The corresponding **Status row [1]** through **[10]** groups appear according to the count.
+
+Each row has a label and a Home Assistant entity. **Number** supports units, decimal places and number color. **True / False** supports ON/OFF text and colors plus comma-separated additional entities combined with **AND** or **OR**. Missing, unknown or unavailable inputs display `—`; they never report OFF. Data is read only.
+
+Under **Click behavior / Popup**, select an existing **Studio target page**. **Popup** opens its runtime in a dialog; **Switch page** navigates directly. Recreate an ioBroker view as a Studio page first. Invalid targets, self references and recursive embedding cannot open a popup. In the editor, clicking only selects the widget.
+
+Configure popup width and height, a fixed X/Y position instead of centering, background, border color, width and radius. Outside-click closing, the close button and automatic closing after a number of seconds are configurable (`0` = off). **Escape** always closes it. Live updates preserve the open popup and caption. Navigating away or removing the tile closes the dialog. Dimensions are constrained to the viewport. All settings remain in project and widget exports.
 
 ## Installation
 

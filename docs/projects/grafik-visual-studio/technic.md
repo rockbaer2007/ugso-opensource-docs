@@ -7,7 +7,21 @@ description: Das externe Technic-Widget-Set installieren und Window – Wall mit
 
 **Inspiriert von den [ioBroker-Technic-Widgets von Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** Eigene Umsetzung für Home Assistant.
 
-Ab **Studio 0.1.199** kannst du **UGSo Technic 1.2.0** installieren. Das Paket enthält **Window – Wall**, **Switch – Boolean** und **Dimmer – Light**. Die vier weiteren Widgets des Originalsets sind noch nicht enthalten. Version 1.2.0 kann über die Paketverwaltung als Erweiterung von 1.0.0 oder 1.1.0 installiert werden; bestehende Widgets bleiben erhalten.
+Ab **Studio 0.1.200** kannst du **UGSo Technic 1.3.0** installieren. Das Paket enthält **Window – Wall**, **Switch – Boolean**, **Dimmer – Light** und **Room – Overlay**. Die drei weiteren Widgets des Originalsets sind noch nicht enthalten. Version 1.3.0 kann über die Paketverwaltung als Erweiterung der bisherigen Versionen installiert werden; bestehende Widgets bleiben erhalten.
+
+## Room – Overlay
+
+![Raumkachel mit sichtbarer Beschriftung und geöffneter Studio-Zielseite](/images/grafik-visual-studio/technic-room-popup.png)
+
+Die Raumkachel zeigt einen frei wählbaren **Raumnamen** und bis zu **zehn Statuszeilen**. Namensfarbe, Schriftgröße, Fettdruck, horizontale und vertikale Ausrichtung sowie die vier Innenabstände sind einstellbar. Standardgröße: 160 × 100 Pixel.
+
+Unter **Statuszeilen** bestimmst du Anzahl, Schriftgröße und Bezeichnungsfarbe. Zeilen können untereinander oder waagerecht mit Trennzeichen und Abstand angeordnet werden. Die passenden Gruppen **Statuszeile [1]** bis **[10]** erscheinen entsprechend der Anzahl.
+
+Jede Zeile erhält eine Bezeichnung und eine Home-Assistant-Entität. **Zahl** unterstützt Einheit, Dezimalstellen und Zahlenfarbe. **Wahr / Falsch** unterstützt Text und Farbe für EIN/AUS sowie zusätzliche kommagetrennte Entitäten mit **UND** oder **ODER**. Fehlende, unbekannte oder nicht verfügbare Werte erscheinen als `—`; sie werden nicht als ausgeschaltet gewertet. Die Daten werden nur gelesen.
+
+Unter **Klickverhalten / Popup** wählst du eine vorhandene **Studio-Zielseite**. **Popup** öffnet deren Runtime in einem Dialog; **Seite wechseln** navigiert direkt dorthin. Eine ioBroker-View muss zuerst als Studio-Seite nachgebildet werden. Ohne gültiges Ziel öffnet die Kachel nichts; Selbstverweise und rekursive Einbettungen sind gesperrt. Im Editor dient ein Klick zur Auswahl.
+
+Popup-Breite und -Höhe, feste X/Y-Position statt Zentrierung, Hintergrund, Rahmenfarbe, Rahmenbreite und Eckenradius sind konfigurierbar. Du kannst das Schließen bei Klick außerhalb, den Schließen-Button und das automatische Schließen nach Sekunden einstellen (`0` = aus). **Escape** schließt immer. Das Popup bleibt bei Live-Aktualisierungen geöffnet; die Beschriftung bleibt sichtbar. Beim Seitenwechsel oder Entfernen der Kachel schließt der Dialog. Die Größe wird auf den Bildschirm begrenzt. Alle Einstellungen bleiben im Projekt- und Widget-Export erhalten.
 
 ## Installieren
 
