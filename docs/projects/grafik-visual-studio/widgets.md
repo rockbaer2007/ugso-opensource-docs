@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **60 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **61 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive Widgets wie Terminkalender und Schieberegler verwenden übersetzte Palettennamen. Frühere Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -367,7 +367,7 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (7)
+## HA Grafik – Interaktiv (8)
 
 
 | Widget | Aktuelle Funktion |
@@ -379,6 +379,22 @@ Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem *
 | Schieberegler | Horizontaler/vertikaler Zahlenregler mit Wertetikett, Schrittmarkierungen und getrennten Stilen für Spur und Daumen. |
 | Tabelle | JSON-Tabelle mit Spaltenformaten, Formeln, Sortierung, Filtern, Seitenaufteilung und Zeilenfarben. |
 | Lauftext | Statischer Text oder HA-Zustand als fortlaufender Ticker mit Richtung, Geschwindigkeit und Hover-Pause. |
+| Werteliste | Text in einzelne Listeneinträge aufteilen; acht Zeichenarten, Nummerierung, eigene Zeichen und Abstände. |
+
+### Werteliste
+
+Ab **0.1.179** ergänzt **Werteliste** unter **Interaktiv** die bisherigen Basis-Widgets **ValueList Text/HTML/HTML Style**. Neue Widgets starten mit **200 × 150 px**, Komma als Trennzeichen, aktivem Entfernen äußerer Leerzeichen und Ignorieren leerer Einträge. Mit HA-Entität gilt deren Zustand; ohne Entität verwendest du **Text (manuell)**. Die Liste liest ausschließlich und zeigt Text wörtlich an.
+
+- **Trennzeichen:** Zeichen oder mehrstellige Zeichenfolge; `\\n` für Zeilen und `\\t` für Tabulatoren. Ein leeres Trennzeichen zeigt den gesamten Text als einen Eintrag. Windows-Zeilenumbrüche werden berücksichtigt.
+- **Leerzeichen entfernen** und **Leere Einträge ignorieren** arbeiten unabhängig. Bei ausgeschalteter Filterung bleiben leere Zeilen sichtbar; Nummern folgen den angezeigten Einträgen.
+- **Darstellung:** Punkt, Kreis, Quadrat, Strich, Pfeil, Nummerierung, kein Zeichen oder eigenes Zeichen/Emoji. Zeichenfarbe ist unabhängig von der Textfarbe. Ohne Zeichen entfallen Zeichenfarbe und Zeichenabstand; das eigene Zeichenfeld erscheint nur bei dieser Auswahl.
+- **Abstände:** Zeichen zu Text **0–50 px** (Standard **8**), Zeilen **0–50 px** (Standard **4**), Innenabstand **0–200 px** (Standard **4**). Lange Einträge brechen um; umfangreiche Listen lassen sich innerhalb des Widgets scrollen.
+
+Schrift, Textfarbe und Hintergrund stellst du über die normalen CSS-Gruppen ein. Alle Einstellungen bleiben im Projekt und im Widget-/Paket-Export erhalten.
+
+![Wertelisten mit Punkten, Nummerierung, eigenen Zeichen und umgebrochenem Text](/images/grafik-visual-studio/interactive-value-list.png)
+
+Funktionsreferenz: [inventwo Werteliste für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/value-list-widget.md). Studio verwendet eine eigene Implementierung.
 
 ### Lauftext
 

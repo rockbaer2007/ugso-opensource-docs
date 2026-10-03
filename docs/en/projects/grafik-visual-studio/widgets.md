@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **60 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **61 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired Basic widgets retain their English names. Interactive widgets such as Event Calendar and Interactive Slider use translated palette names. Former palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -367,7 +367,7 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (7)
+## HA Grafik – Interaktiv (8)
 
 | Widget | Current behavior |
 | --- | --- |
@@ -378,6 +378,22 @@ New widgets use **300 × 200 pixels** with only **CSS General** enabled. Central
 | Interactive Slider | Horizontal/vertical numeric control with value labels, step marks and independent track/thumb styling. |
 | Interactive Table | JSON table with column formats, formulas, sorting, filters, pagination and row colors. |
 | Marquee | Static text or HA state as a continuous ticker with direction, speed and hover pause. |
+| Value List | Split text into list items with eight bullet types, numbering, custom characters and spacing. |
+
+### Value List
+
+From **0.1.179**, **Value List** under **Interactive** complements the existing Basic **ValueList Text/HTML/HTML Style** widgets. Defaults are **200 × 150 px**, comma separator, trimming and ignoring empty entries enabled. A bound HA state takes precedence; without an entity, use **Text (manual)**. The list is read only and displays literal text.
+
+- **Separator:** one or several literal characters; `\\n` for lines and `\\t` for tabs. An empty separator keeps the entire text as one item. Windows line endings are supported.
+- **Trim whitespace** and **Ignore empty entries** work independently. Disabling filtering keeps blank rows visible; numbering follows the displayed entries.
+- **Appearance:** Disc, Circle, Square, Dash, Arrow, Numbered, None or Custom character/emoji. Bullet color is independent of text color. None hides bullet color and spacing controls; Custom reveals its character field.
+- **Spacing:** bullet to text **0–50 px** (default **8**), lines **0–50 px** (default **4**), padding **0–200 px** (default **4**). Long entries wrap; longer lists scroll inside the widget.
+
+Font, text color and background use standard CSS groups. All settings survive project and widget/package exports.
+
+![Value lists with bullets, numbering, custom characters and wrapped text](/images/grafik-visual-studio/interactive-value-list.png)
+
+Functional reference: [inventwo Value List for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/value-list-widget.md). Studio uses its own implementation.
 
 ### Marquee
 
