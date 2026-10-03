@@ -65,7 +65,7 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | ValueList Text | Displays a list entry selected by the index state as text. |
 | ValueList HTML | Displays a list entry selected by the index state as HTML. |
 | ValueList HTML Style | Displays an HTML list entry with its CSS style. |
-| Bool HTML | Displays one of two HTML contents for the current Boolean state. |
+| Bool HTML | Displays one of two HTML contents for the current Boolean state, with optional prepended/appended HTML. |
 | Bool Select | On/off select control with configurable labels; can control a switchable entity. |
 | Bool HTML (control) | Clickable on/off HTML display; can control a switchable entity. |
 | HTML State | Custom HTML with optional click link and value placeholder. |
@@ -79,6 +79,12 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Border | Frame with title, title position, header area and colors. |
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
+
+### Bool HTML
+
+From **0.1.146**, prepended HTML, appended HTML, **HTML for 'false'** and **HTML for 'true'** all offer HTML-editor controls. The entity state selects the content; without an entity, the test state supplies a preview. Boolean `true`, number `1` and the strings `true`, `on`, `ein`, `yes` and `1` select the true content; other states select false. Prepended and appended HTML appear for either state. Studio HTML sanitization applies to all four fields.
+
+New widgets start with empty HTML fields and disabled CSS groups. Existing configured content is preserved. **Bool HTML** only displays a state and does not switch an entity; use **Bool HTML (control)** for that purpose.
 
 ### ValueList HTML
 

@@ -65,7 +65,7 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | ValueList Text | Zeigt einen über den Indexzustand ausgewählten Listeneintrag als Text. |
 | ValueList HTML | Zeigt einen über den Indexzustand ausgewählten Listeneintrag als HTML. |
 | ValueList HTML Style | Zeigt einen HTML-Listeneintrag mit zugeordnetem CSS-Stil. |
-| Bool HTML | Zeigt je nach Zustand einen von zwei HTML-Inhalten. |
+| Bool HTML | Zeigt je nach Zustand einen von zwei HTML-Inhalten, mit optionalem HTML davor und dahinter. |
 | Bool Select | Ein/Aus-Auswahl mit anpassbaren Beschriftungen; kann eine schaltbare Entität steuern. |
 | Bool HTML (control) | Anklickbare Ein/Aus-HTML-Anzeige; kann eine schaltbare Entität steuern. |
 | HTML State | Eigener HTML-Inhalt mit optionalem Klick-Link und Wertplatzhalter. |
@@ -79,6 +79,12 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Border | Rahmen mit Titel, Titelposition, Kopfbereich und Farben. |
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
+
+### Bool HTML
+
+Ab **0.1.146** stehen **HTML voranstellen**, **HTML anhängen**, **HTML bei 'false'** und **HTML bei 'true'** zur Verfügung, jeweils mit HTML-Editor. Der Entitätszustand wählt den Inhalt; ohne Entität dient **Testzustand** als Vorschau. Boolean `true`, Zahl `1` sowie die Texte `true`, `on`, `ein`, `yes` und `1` wählen den true-Inhalt; andere Zustände wählen false. Vorangestelltes und angehängtes HTML erscheinen unabhängig davon. Die Studio-HTML-Bereinigung gilt für alle vier Felder.
+
+Neue Widgets beginnen mit leeren HTML-Feldern und deaktivierten CSS-Bereichen. Bereits konfigurierte Inhalte bleiben erhalten. **Bool HTML** zeigt nur an und schaltet keine Entität; dafür gibt es **Bool HTML (control)**.
 
 ### ValueList HTML
 
