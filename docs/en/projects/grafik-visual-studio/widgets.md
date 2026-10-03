@@ -80,6 +80,12 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
 
+### ValueList HTML
+
+From **0.1.144**, **Test value (editor only)** selects an index from the available entries. **Live value / preview state** also shows the normal widget state in the editor. Selecting a test index changes neither the stored preview state nor the HA value; runtime always uses the bound entity state or the unbound preview state.
+
+Separate entries with semicolons or newlines: `Test;test2;test3` provides indices 0, 1 and 2. Commas remain part of the text: `Test, test2, test3` is one entry. Write a semicolon inside an HTML entry as `§§`, for example in a CSS style or HTML entity. Prepended and appended HTML surround the selected entry; HTML follows Studio sanitization rules. Missing, invalid or out-of-range states display no list entry. New ValueList HTML widgets start with all CSS groups disabled; existing settings are preserved.
+
 ## HA Grafik – Interaktiv (1)
 
 | Widget | Current behavior |

@@ -80,7 +80,14 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
 
+### ValueList HTML
+
+Ab **0.1.144** wählt **Testwert (nur Editor)** einen Index aus den vorhandenen Listeneinträgen. **Livewert / Vorschauzustand** zeigt auch im Editor den normalen Widgetzustand. Ein Testwert ändert weder den gespeicherten Vorschauzustand noch den HA-Wert; die Runtime verwendet immer den gebundenen Entitätszustand beziehungsweise den ungebundenen Vorschauzustand.
+
+Trenne Einträge mit Semikolon oder Zeilenumbrüchen: `Test;test2;test3` ergibt die Indizes 0, 1 und 2. Kommas bleiben Teil des Textes: `Test, test2, test3` ist ein Eintrag. Schreibe ein Semikolon innerhalb eines HTML-Eintrags als `§§`, etwa in einem CSS-Stil oder einer HTML-Entität. **HTML voranstellen** und **HTML anhängen** umgeben den ausgewählten Eintrag; HTML wird nach den Studio-Regeln bereinigt. Fehlende, ungültige oder außerhalb der Liste liegende Zustände zeigen keinen Listeneintrag. Neue ValueList-HTML-Widgets haben alle CSS-Bereiche standardmäßig deaktiviert; bestehende Einstellungen bleiben erhalten.
+
 ## HA Grafik – Interaktiv (1)
+
 
 | Widget | Aktuelle Funktion |
 | --- | --- |
