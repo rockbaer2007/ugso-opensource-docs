@@ -4,6 +4,8 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
+Weiteres externes Set: [UGSo Technic](technic.md) mit **Window – Wall**, ab Studio 0.1.197. Inspiriert von den ioBroker-Technic-Widgets von Sefina-DS, mit eigener HA-Anbindung und MIT-Lizenz im Paket.
+
 Zusätzlich nachinstallierbar: [Wetter und Heizung](weather-heating.md) mit **Allgemeines Diagramm** (ab 0.1.187), **Balkendiagramm für zwei Wochen** (ab 0.1.188), **Wetter-Widget** (ab 0.1.189), **Übersicht über Heizräume** (ab 0.1.190), **METEORED-Wetter-Widget** (ab 0.1.191), **Fensterstatus-Übersicht** (ab 0.1.192), **Meinen Vermieter informieren** (ab 0.1.193) und **Allgemeine Heizparameter** (ab 0.1.194). Das optionale Paket zählt nicht zu den 74 integrierten Widgets und erhält automatisch eine freie Set-Farbe.
 
 Der aktuelle Widget-Katalog enthält **74 Einträge in fünf Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.

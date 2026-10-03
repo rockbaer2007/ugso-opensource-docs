@@ -15,7 +15,9 @@ Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.wg` in
 
 ## Paket aufbauen
 
-Das ZIP enthält eine UTF-8-Datei `manifest.json` im Wurzelverzeichnis und optional darin referenzierte SVG- oder PNG-Bilder unter `icons/`. Andere Dateien sind nicht zulässig. Eine Paket-ID ist punktgetrennt, zum Beispiel `beispiel.widgets`; Widget-Typen liegen in ihrem Namensraum, etwa `beispiel.widgets/label`. Die Paketversion hat das Format `x.y.z`. Ein Paket enthält 1 bis 30 Widgets; jedes erscheint als eigener Eintrag im Paket-Set der Palette.
+Das ZIP enthält eine UTF-8-Datei `manifest.json` im Wurzelverzeichnis und optional darin referenzierte SVG- oder PNG-Bilder unter `icons/`. Ab Studio 0.1.197 sind zusätzlich `LICENSE.txt` und `README.md` als UTF-8-Text mit jeweils höchstens 50 KB erlaubt. Diese Dokumente werden nicht ausgeführt oder im Studio als HTML angezeigt. Andere Dateien sind nicht zulässig. Eine Paket-ID ist punktgetrennt, zum Beispiel `beispiel.widgets`; Widget-Typen liegen in ihrem Namensraum, etwa `beispiel.widgets/label`. Die Paketversion hat das Format `x.y.z`. Ein Paket enthält 1 bis 30 Widgets; jedes erscheint als eigener Eintrag im Paket-Set der Palette.
+
+Ab Studio 0.1.197 unterstützt 0.2 `render: {"kind":"technic-window","valueKey":"heading"}`. Der feste Host liest `contactEntityId`, `coverEntityId` (`current_position`, `supported_features`) und `modeEntityId`; `invertContact`, `invertCover`, `invertMode` drehen die Werte um. Runtime-Schreiben ist auf Positionssteuerung einer verfügbaren `cover`-Entität und einen `input_boolean`-/`switch`-Modus begrenzt. Siehe [UGSo Technic](technic.md).
 
 ```json
 {
