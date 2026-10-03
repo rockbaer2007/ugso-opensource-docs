@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **64 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **74 widgets in five groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired Basic widgets retain their English names. Interactive widgets such as Event Calendar and Interactive Slider use translated palette names. Former palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -574,6 +574,29 @@ The former name **State Element** remains searchable. Existing projects retain t
 ![Universal Element with neutral property sections and several visual styles](/images/grafik-visual-studio/universal-element.png)
 
 The functional reference is [inventwo’s VIS2 Universal documentation](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/universal/styling-and-shapes.md). Studio uses its own implementation and does not require the ioBroker package.
+
+## HA Grafik – Gauges (10)
+
+From **0.1.186**, a separate gold-brown instrument set is available. Its functional reference is the [current ioBroker.vis-2-widgets-gauges source](https://github.com/ioBroker/ioBroker.vis-2-widgets-gauges/tree/main/src-widgets/src), which contains ten types; the reference project's README shows only the first three. Studio draws its own SVG instruments and does not require ioBroker. These are independent Studio widgets, rather than a direct import of ioBroker configuration.
+
+| Widget | Function and specific settings |
+| --- | --- |
+| Color gauge | Colored arc sections, needle, sweep angle and min/max labels. |
+| Water gauge | Circular level display with wave amplitude and optional animation. |
+| Battery | Horizontal or vertical battery, up to 20 cells, charging entity and charging symbol. |
+| Arc gauge | Progress arc, rotation, up to 100 segments, fill from zero and target entity. |
+| Compass | Degrees and cardinal direction, north offset, inverted direction, rotating dial and speed entity. |
+| Linear gauge | Horizontal or vertical bar or pointer, major/minor divisions and target marker. |
+| Radial gauge | Needle instrument with color band, labeled scale, sweep angle, rotation and bezel. |
+| Rings | Up to eight separate entities with individual ranges, colors, labels and units; bottom, side or hidden legend. |
+| Tank | Cylinder, rectangle or horizontal tank with scale, level, optional percentage and waves. |
+| Thermometer | Column and bulb with configurable range; scale on the left, right or both sides. |
+
+All instruments read HA states without writing values. Unbound widgets use preview values; missing or unavailable bound entities show **—**. Out-of-range readings remain visible as numbers while fills clamp to 0–100 %. Invalid ranges also show **—**. Units, decimal places, labels, active color, scale/track/needle/text colors and sizes are configurable. Up to ten color levels are sorted by upper threshold; the first matching level includes its threshold. All settings and entity bindings are stored in project and widget JSON exports.
+
+Rings use their individual entities instead of the main entity. Charging, speed and targets are polled together with primary readings. Waves run only at runtime and respect reduced-motion preferences. Empty and full displays remain exact without waves.
+
+![All ten gauges as independent Studio instruments](/images/grafik-visual-studio/gauges.png)
 
 ## HA Grafik – Data flow (3)
 

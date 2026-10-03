@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **64 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **74 Einträge in fünf Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive Widgets wie Terminkalender und Schieberegler verwenden übersetzte Palettennamen. Frühere Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -575,6 +575,29 @@ Der frühere Name **State Element** bleibt als Suchbegriff erhalten. Bestehende 
 ![Universal Element mit neutralen Einstellungsbereichen und mehreren Darstellungsformen](/images/grafik-visual-studio/universal-element.png)
 
 Die Funktionen orientieren sich an der [VIS2-Universal-Dokumentation von inventwo](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/universal/styling-and-shapes.md). Studio verwendet eine eigene Implementierung und benötigt das ioBroker-Paket nicht.
+
+## HA Grafik – Gauges (10)
+
+Ab **0.1.186** gibt es ein eigenes, goldbraun hinterlegtes Instrumenten-Set. Als Funktionsreferenz dient der [aktuelle Quellcode von ioBroker.vis-2-widgets-gauges](https://github.com/ioBroker/ioBroker.vis-2-widgets-gauges/tree/main/src-widgets/src), der zehn Typen enthält. Die README des Referenzprojekts zeigt nur die ersten drei. Studio zeichnet die Instrumente selbst als SVG; ioBroker ist nicht erforderlich. Es handelt sich um eigenständige Studio-Widgets, nicht um einen direkten Import der ioBroker-Konfiguration.
+
+| Widget | Funktion und besondere Einstellungen |
+| --- | --- |
+| Farbmesser | Farbige Bogenabschnitte, Zeiger, Bogenwinkel und Min./Max.-Beschriftungen. |
+| Wasserstand | Kreisförmige Füllstandsanzeige mit einstellbarer Wellenhöhe und optionaler Animation. |
+| Batterie | Horizontale oder vertikale Batterie, bis zu 20 Zellen, Ladezustand-Entität und Ladesymbol. |
+| Bogenmesser | Fortschrittsbogen, Drehung, bis zu 100 Segmente, Füllung ab Null und Zielwert-Entität. |
+| Kompass | Grad und Himmelsrichtung, Nordversatz, Richtungsumkehr, mitdrehende Skala und Geschwindigkeits-Entität. |
+| Linearmesser | Horizontaler oder vertikaler Balken beziehungsweise Zeiger mit Haupt-/Unterteilungen und Zielmarkierung. |
+| Rundinstrument | Zeigerinstrument mit Farbband, beschrifteter Skala, Bogenwinkel, Drehung und Instrumentenrahmen. |
+| Ringe | Bis zu acht getrennte Entitäten mit eigenen Bereichen, Farben, Bezeichnungen und Einheiten; Legende unten, seitlich oder ausgeblendet. |
+| Tank | Zylinder, Rechteck oder liegender Tank mit Skala, Füllstand, optionalem Prozentwert und Wellen. |
+| Thermometer | Säule und Kugel mit eigenem Wertebereich; Skala links, rechts oder beidseitig. |
+
+Alle Instrumente lesen HA-Zustände und schreiben keine Werte. Ohne Entität gilt der Vorschauwert; eine fehlende oder nicht verfügbare gebundene Entität wird als **—** angezeigt. Werte außerhalb des Bereichs bleiben als Zahl sichtbar, während die Füllung auf 0–100 % begrenzt wird. Ein ungültiger Wertebereich zeigt ebenfalls **—**. Zahlen, Einheiten, Nachkommastellen, Bezeichnung, aktive Farbe, Skalen-/Spur-/Zeiger-/Textfarben und Größen sind konfigurierbar. Bis zu zehn Farbstufen werden nach ihren Obergrenzen sortiert; die erste passende Stufe gilt einschließlich ihres Grenzwerts. Alle Einstellungen und Entitätsbindungen werden im Projekt- und Widget-JSON gespeichert.
+
+Bei Ringen wird die Hauptentität durch die einzelnen Ring-Entitäten ersetzt. Ladezustand, Geschwindigkeit und Zielmarkierungen werden zusammen mit den Hauptwerten abgefragt. Wellen laufen nur in der Runtime und respektieren die Einstellung für reduzierte Bewegung. Die Null- und Vollanzeige bleibt ohne Wellen exakt.
+
+![Alle zehn Gauges als eigenständige Studio-Instrumente](/images/grafik-visual-studio/gauges.png)
 
 ## HA Grafik – Datenfluss (3)
 
