@@ -562,6 +562,10 @@ Functional reference: [inventwo Event Calendar for VIS2](https://github.com/inve
 
 ### Universal Element
 
+![Captions remain visible after clicking all three affected widgets](/images/grafik-visual-studio/captions-after-click.png)
+
+Starting with Studio **0.1.195**, an empty state text inherits the default state text, then the optional title. A caption such as “Garage light” therefore remains visible when switching, including separate buttons. Nonempty state texts still override the default. For **Checkbox** and **Switch**, an empty state text inherits the other state text, then the title. Leave all text fields and the title empty for an unlabelled widget. The editor name is never displayed as a caption.
+
 The former name **State Element** remains searchable. Existing projects retain the stored `universal-button` widget type.
 
 - **General:** HA entity, interaction, button mode, false/true values and navigation URL. Without an entity, the element works locally. Sensors are not write targets; number and text values require suitable `input_number`/`input_text` helpers. Display and navigation do not write HA state.

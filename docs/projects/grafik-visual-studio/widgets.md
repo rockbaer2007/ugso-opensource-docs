@@ -563,6 +563,10 @@ Funktionsreferenz: [inventwo-Terminkalender für VIS2](https://github.com/invent
 
 ### Universal Element
 
+![Beschriftungen bleiben nach dem Klick in allen drei betroffenen Widgets sichtbar](/images/grafik-visual-studio/captions-after-click.png)
+
+Ab Studio **0.1.195** übernimmt ein leerer Zustandstext den Text des Standardzustands, danach den optionalen Titel. So bleibt etwa „Licht Garage“ beim Schalten sichtbar, auch bei getrennten Tasten. Nichtleere Zustandstexte ersetzen weiterhin den Standardtext. Bei **Checkbox** und **Schalten** übernimmt ein leerer Zustandstext den anderen Zustandstext, danach den Titel. Für eine Anzeige ohne Beschriftung bleiben alle Textfelder und der Titel leer. Der Editorname wird nicht eingeblendet.
+
 Der frühere Name **State Element** bleibt als Suchbegriff erhalten. Bestehende Projekte verwenden weiterhin denselben Widget-Typ `universal-button`.
 
 - **Allgemein:** HA-Entität, Bedienung, Modus, false-/true-Werte und Navigations-URL. Ohne Entität arbeitet das Element lokal. Ein Sensor ist kein Schreibziel; Zahlen und Text benötigen passende `input_number`-/`input_text`-Helfer. Nur Anzeige und Navigation schreiben keinen HA-Zustand.
