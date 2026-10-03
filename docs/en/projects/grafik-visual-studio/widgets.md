@@ -82,9 +82,17 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 
 ### HTML
 
+From **0.1.154**, **CSS General** is mandatory for every widget, including saved projects and future widget packages. Position and size remain in exports. Earlier notes about disabled CSS groups now apply only to the remaining CSS groups.
+
 **HTML** displays custom markup through the existing HTML editor. `<b>Hallo</b><i> Susi</i>` produces bold **Hallo** and italic *Susi*. **Update interval (ms)** rebuilds this content periodically; `0`, empty or `null` disables periodic refresh. The interval supports up to 180000ms in 100ms steps. This is not an HA polling interval and requires no helper.
 
 Studio sanitizes HTML: embedded scripts and event handlers are not executed. This differs from the VIS2 original and is explained through optional migration hints. `{value}` is not a placeholder. New widgets start with empty HTML, 200 × 130px and disabled CSS groups; existing content is preserved. The optional output point remains available.
+
+### HTML navigation
+
+**HTML** is the formatted label; **View for navigation** selects a project page. Click or Enter/Space switches to it only in runtime, without an HA write target or helper. Without a destination the label remains visible. New widgets start with empty HTML, 200 × 130px and only **CSS General** enabled. Saved URL/HA-path targets and old labels remain usable.
+
+VIS2 **Subview** serves special navigation systems such as Jaeger Design and is not supported in Studio yet; this field is disabled. It does not refer to a Studio tab. Optional migration hints explain this limitation and HTML sanitization.
 
 ### Bar
 

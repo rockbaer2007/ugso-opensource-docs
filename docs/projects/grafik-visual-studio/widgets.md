@@ -82,9 +82,17 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 
 ### HTML
 
+Ab **0.1.154** bleibt **CSS Allgemein** bei allen Widgets verpflichtend aktiv, einschließlich bereits gespeicherter Projekte und zukünftiger Widget-Pakete. Position und Größe bleiben damit im Export erhalten. Frühere Hinweise auf deaktivierte CSS-Bereiche gelten ab dieser Version nur für die übrigen CSS-Gruppen.
+
 **HTML** zeigt eigenen HTML-Inhalt mit dem vorhandenen HTML-Editor. `<b>Hallo</b><i> Susi</i>` ergibt **Hallo** und ein kursives *Susi*. **Updatezeit (ms)** baut diesen Inhalt im eingestellten Abstand neu auf; `0`, leer oder `null` deaktiviert die periodische Aktualisierung. Der Bereich reicht bis 180000 ms in Schritten von 100 ms. Dies ist keine HA-Abfragezeit und benötigt keinen Helfer.
 
 Studio bereinigt das HTML: Eingebettete Skripte und Event-Handler werden nicht ausgeführt. Das unterscheidet sich vom VIS2-Original und wird als abschaltbarer Umsteigerhinweis erklärt. `{value}` ist kein Platzhalter. Neue Widgets beginnen mit leerem HTML, 200 × 130 px und deaktivierten CSS-Bereichen; vorhandene Inhalte bleiben erhalten. Der optionale Ausgangspunkt ist weiterhin verfügbar.
+
+### HTML navigation
+
+**HTML** ist die frei formatierbare Beschriftung; **View zum Navigieren** wählt eine Projektseite. Ein Klick oder Enter/Leertaste wechselt nur in der Runtime dorthin, ohne HA-Schreibziel oder Helfer. Ohne Ziel bleibt die Beschriftung sichtbar. Neue Widgets starten mit leerem HTML, 200 × 130 px und nur **CSS Allgemein** aktiviert. Gespeicherte URL-/HA-Pfad-Ziele und alte Beschriftungen bleiben nutzbar.
+
+**Unteransicht** aus VIS2 ist für spezielle Navigationssysteme wie Jaeger Design vorgesehen und in Studio noch nicht angebunden; das Feld ist deaktiviert. Es bezeichnet keinen Studio-Tab. Die abschaltbaren Umsteigerhinweise erklären diese Einschränkung und die HTML-Bereinigung.
 
 ### Bar
 
