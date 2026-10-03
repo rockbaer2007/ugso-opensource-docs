@@ -18,6 +18,26 @@ Under **Appearance**, choose an optional icon, its size (8–512 px) and color, 
 
 **Additional CSS style** accepts supported inline declarations such as `border-radius: 4px; opacity: 0.8;`. It applies after the color fields and can override them. URLs and executable expressions are not allowed.
 
+![Small LineBox Math with calculator icon](/images/grafik-visual-studio/math-size-icon.png)
+
+*Small editor example with an icon and hidden result text.*
+
+[Open image at full size](/images/grafik-visual-studio/math-size-icon.png)
+
+![LineBox Math rounded through CSS border settings](/images/grafik-visual-studio/math-css.png)
+
+*The CSS Borders section sets the corner radius to 24 px. Visible editor ports keep their positions.*
+
+[Open image at full size](/images/grafik-visual-studio/math-css.png)
+
+## Runtime presentation
+
+![LineBox Math square with result 90 and right-angle connections](/images/grafik-visual-studio/math-runtime.png)
+
+*Runtime test scene: the square and its result remain visible, with right-angle incoming/outgoing lines; editor port letters and selection handles are hidden. The result follows the configured calculation and the sum per occupied input port.*
+
+[Open image at full size](/images/grafik-visual-studio/math-runtime.png)
+
 ## Four calculations and output assignments
 
 ![Expanded SVG LineBox Math dialog with separate calculations and internal handoff to input C](/images/grafik-visual-studio/linebox-math-four-dialog.png)

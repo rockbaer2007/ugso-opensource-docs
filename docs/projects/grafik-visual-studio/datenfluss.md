@@ -16,7 +16,12 @@ Wert-Verbindung und Wert-Berechnung verwenden intern die bestehenden SVG-Line- u
 
 ## Eine Quelle verbinden
 
-Ab **0.1.143** sind bei neuen Datenfluss-Widgets alle CSS-Bereiche standardmäßig deaktiviert, bei Wert-Berechnung zusätzlich **Darstellung**. Berechnung und Konvertierung bleiben aktiv. Die Bereiche lassen sich bei Bedarf einschalten; deaktivierte CSS-Felder werden nicht exportiert. Neue Wert-Verbindungen haben an beiden Enden keine Pfeilspitzen. Bereits gespeicherte Widgets behalten ihre Einstellungen.
+![Einzelner Ausgangspunkt mit Positionsauswahl](/images/grafik-visual-studio/output-point.png)
+
+Seit 0.1.154 bleibt CSS Allgemein auch bei diesen Widgets verpflichtend aktiv; die übrigen CSS-Bereiche sind optional.
+
+
+Ab **0.1.143** sind bei neuen Datenfluss-Widgets die optionalen CSS-Bereiche standardmäßig deaktiviert, bei Wert-Berechnung zusätzlich **Darstellung**. Berechnung und Konvertierung bleiben aktiv. Die Bereiche lassen sich bei Bedarf einschalten; deaktivierte CSS-Felder werden nicht exportiert. Neue Wert-Verbindungen haben an beiden Enden keine Pfeilspitzen. Bereits gespeicherte Widgets behalten ihre Einstellungen.
 
 1. Schalte bei einem Widget mit Entitäts- oder Vorschauwert unter **Datenfluss** **Ausgangspunkt aktivieren** ein. Wähle mit den Radiobuttons **Oben**, **Unten**, **Rechts** oder **Links** die Mitte der entsprechenden Seite; standardmäßig rechts. Dieser einzelne Ausgang funktioniert unabhängig vom Bereich **Andockpunkte** und ist abschaltbar. Unter **Einstellungen → Ausgangspunkt** stellst du seine eigene Farbe ein. Der Punkt ist nur im Editor sichtbar; die Wertweitergabe bleibt in der Runtime aktiv. Widgets ohne verfügbaren Wert, etwa reine Rahmen, liefern keinen Wert. Bestehende Andockpunkt-Konfigurationen bleiben erhalten; LineBox, LineBox Math und Konverter verwenden weiterhin ihre eigenen Anschlüsse.
 2. Füge eine **Wert-Verbindung** ein: Start an den Ausgang der Quelle, Ziel an den Eingang des Konverters oder Empfängers. Der Wertfluss folgt immer dieser Richtung, auch ohne sichtbare Pfeilspitzen; Linienanimation ist ausgeschaltet.

@@ -16,6 +16,26 @@ In der Widget-Auswahl der oberen Leiste kannst du mehrere Widgets markieren oder
 
 Die Runtime zentriert eine Seite, wenn sie vollständig ins Browserfenster passt. Bei größeren Seiten beginnt sie links oben; horizontale und vertikale Scrollbalken machen die ganze Seite erreichbar, ohne Widget-Koordinaten zu verändern.
 
+## Widget-Auswahl, Kopieren und Löschen
+
+![Widget-Auswahlliste vor der Editorfläche](/images/grafik-visual-studio/widget-menu.png)
+
+Die angehakten Zeilen wählen dieselben Widgets auf der Arbeitsfläche aus. Die Liste bleibt davor sichtbar; **Kopieren** und **Löschen** betreffen alle angehakten Widgets.
+
+![Mehrere eingefügte Widgets gemeinsam verschoben](/images/grafik-visual-studio/multi-move.png)
+
+Ziehe eines der ausgewählten Widgets, um die gesamte Auswahl zu verschieben, auch nach Kopieren und Einfügen. Ausgewählte Verbindungen und Zwischenpunkte bewegen sich mit; gesperrte Widgets verhindern das gemeinsame Verschieben. Rückgängig nimmt den Zug als einen Schritt zurück.
+
+![Löschbestätigung mit fünf Minuten Unterdrückung](/images/grafik-visual-studio/delete-dialog.png)
+
+**Abbrechen** oder Escape beendet das Löschen. Das Häkchen unterdrückt weitere Fragen für fünf Minuten in dieser Editorsitzung. Gelöschte Widgets lassen sich weiterhin mit Rückgängig wiederherstellen.
+
+## Dateien und Bildauswahl
+
+![Dateisuche unterhalb des Studio-Stammordners](/images/grafik-visual-studio/files-search.png)
+
+Der Stammordner ist **/config/www/studio**. Studio legt ihn nach Möglichkeit an; fehlende Schreibrechte werden gemeldet. Auch die Bildauswahl der Widgets verwendet diesen Ordner; öffentliche Pfade beginnen mit **/local/studio/**. Die Suche berücksichtigt alle Unterordner sowie Dateinamen und Pfade ohne Beachtung der Groß-/Kleinschreibung. Ein leeres Suchfeld zeigt wieder den geöffneten Ordner. Bilder einschließlich GIF lassen sich auswählen. Der Wechsel zum übergeordneten Ordner bleibt innerhalb dieses Stammordners.
+
 ## Sprache der Oberfläche
 
 Öffne **Einstellungen → Allgemein → Sprache → App-Sprache**, wähle eine Option und klicke auf **Speichern**:

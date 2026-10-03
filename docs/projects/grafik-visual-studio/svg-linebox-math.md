@@ -18,6 +18,26 @@ Unter **Darstellung** wählst du ein optionales Icon, seine Größe (8–512 px)
 
 **Zusätzlicher CSS-Stil** erlaubt unterstützte Inline-Deklarationen, zum Beispiel `border-radius: 4px; opacity: 0.8;`. Er wird nach den Farbfeldern angewendet und kann diese überschreiben. URLs und ausführbare Ausdrücke sind darin nicht zugelassen.
 
+![Kleine LineBox Math mit Taschenrechner-Icon](/images/grafik-visual-studio/math-size-icon.png)
+
+*Kleines Editorbeispiel mit Icon und ausgeblendetem Ergebnistext.*
+
+[Bild in voller Größe öffnen](/images/grafik-visual-studio/math-size-icon.png)
+
+![Per CSS abgerundete LineBox Math](/images/grafik-visual-studio/math-css.png)
+
+*Unter CSS Ränder ist ein Eckenradius von 24 px eingestellt. Die sichtbaren Editor-Anschlüsse behalten ihre Position.*
+
+[Bild in voller Größe öffnen](/images/grafik-visual-studio/math-css.png)
+
+## Darstellung in der Runtime
+
+![LineBox-Math-Quadrat mit Ergebnis 90 und rechtwinkligen Verbindungen](/images/grafik-visual-studio/math-runtime.png)
+
+*Runtime-Testszene: Quadrat und Ergebnis bleiben sichtbar, die Leitungen treten rechtwinklig ein und aus. Anschlussbuchstaben und Auswahlgriffe des Editors sind ausgeblendet. Das Ergebnis folgt der eingestellten Rechnung und der Summierung je belegtem Eingangsanschluss.*
+
+[Bild in voller Größe öffnen](/images/grafik-visual-studio/math-runtime.png)
+
 ## Vier Rechnungen und Ausgangszuordnung
 
 ![Erweiterter SVG-LineBox-Math-Dialog mit separaten Rechnungen und interner Übergabe an Eingang C](/images/grafik-visual-studio/linebox-math-four-dialog.png)

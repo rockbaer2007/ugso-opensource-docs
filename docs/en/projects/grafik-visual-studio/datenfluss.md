@@ -16,7 +16,12 @@ Value connection and Value calculation internally reuse the SVG-Line and SVG-Lin
 
 ## Connecting a source
 
-From **0.1.143**, new Data flow widgets start with all CSS groups disabled; Value calculation also disables **Display** by default. Calculation and conversion remain enabled. Enable these groups when needed; disabled CSS fields are omitted from exports. New Value connections have no arrowheads at either end. Previously saved widgets retain their settings.
+![Single output point with position radio buttons](/images/grafik-visual-studio/output-point.png)
+
+Since 0.1.154, CSS General remains required for these widgets too; the other CSS groups are optional.
+
+
+From **0.1.143**, undefined; Value calculation also disables **Display** by default. Calculation and conversion remain enabled. Enable these groups when needed; disabled CSS fields are omitted from exports. New Value connections have no arrowheads at either end. Previously saved widgets retain their settings.
 
 1. On a widget with an entity or preview value, enable **Enable output point** under **Data flow**. Use the **Top**, **Bottom**, **Right** or **Left** radio buttons to select the center of that edge; right is the default. This single output works independently of **Docking points** and can be disabled. Set its separate color under **Settings → Output point**. The point is visible only in the editor; forwarding stays active in runtime. Widgets without an available value, such as plain borders, provide no value. Existing docking configurations are preserved; LineBox, LineBox Math and converters continue using their own ports.
 2. Add a **Value connection**: start at the source output and end at the converter or receiver input. Values always follow this direction, even without visible arrowheads; animation is disabled.

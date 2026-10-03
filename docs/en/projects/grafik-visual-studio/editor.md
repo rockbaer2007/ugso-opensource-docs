@@ -16,6 +16,26 @@ The widget selector in the top bar lets you select several widgets or clear the 
 
 Runtime centers a page when it fits entirely inside the browser window. Larger pages start at the top-left corner; horizontal and vertical scrollbars keep the whole page reachable without changing widget coordinates.
 
+## Widget selection, copying and deletion
+
+![Widget selector in front of the editor](/images/grafik-visual-studio/widget-menu.png)
+
+The checked rows select the same widgets on the canvas. The list stays in front of them; **Copy** and **Delete** act on all checked widgets.
+
+![Multiple pasted widgets moved together](/images/grafik-visual-studio/multi-move.png)
+
+Drag any selected widget to move the entire selection, including after copying and pasting. Selected connections and intermediate points move with it; locked widgets prevent the joint move. Undo reverts the drag as one step.
+
+![Delete confirmation with five-minute suppression option](/images/grafik-visual-studio/delete-dialog.png)
+
+**Cancel** or Escape stops deletion. The checkbox suppresses further prompts for five minutes in this editor session. Deleted widgets can still be restored with Undo.
+
+## Files and image selection
+
+![File search below the Studio root folder](/images/grafik-visual-studio/files-search.png)
+
+The root is **/config/www/studio**. Studio creates it when possible; missing write permissions produce a message. Widget image selection uses this folder too, and public paths start with **/local/studio/**. Search includes all subfolders and matches file names and paths regardless of case; an empty query returns to the open folder. Images, including GIF, can be selected. The up-folder action stays within this root.
+
 ## Interface language
 
 Open **Settings → General → Language → App language**, choose an option, then click **Save**:

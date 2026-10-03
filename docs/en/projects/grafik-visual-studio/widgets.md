@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **51 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **52 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired widget names remain in English regardless of the interface language. Former German palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -80,15 +80,33 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
 
+The screenshots below show German test projects. Older CSS checkbox states are labelled in the captions; the current behavior is described in the text.
+
 ### CSS defaults
+
+![Required CSS General and optional CSS groups](/images/grafik-visual-studio/html-navigation-css.png)
+
+*CSS General is checked and locked; the other CSS groups are optional.*
 
 From **0.1.154**, **CSS General** is mandatory for every widget, including saved projects and future widget packages. Position and size remain in exports. Earlier notes about disabled CSS groups now apply only to the remaining CSS groups.
 
 ### Input val
 
+From **0.1.157**, numeric mode offers optional **min/max**. **Auto-set** submits after the configured pause, default **1000 ms**; it also works with **withEnter** enabled. Enter always submits. **withEnter** adds a confirmation button for unsent changes; without Auto-set, leaving the field alone does not submit. Manual drafts remain available until confirmed. Read-only sensors can display their value; writable numeric/text values require compatible `input_number`/`input_text` helpers. The editor never writes to HA.
+
+![Input val detail with number limits and auto-set delay](/images/grafik-visual-studio/input-value.png)
+
+*Detail from the input settings: min/max 0–1000, delay 1000 ms and read-only enabled.*
+
 Styled inputs use prepended HTML as the field label and appended HTML as helper text below the field. **No style** instead renders sanitized HTML before and after a plain input. Variants are standard, outlined and filled. Empty, invalid or out-of-range numbers are not written. New widgets enable only CSS General; migration hints can be disabled centrally.
 
 ### String
+
+![String preview with a 43px bulb icon and formatted prefix and suffix](/images/grafik-visual-studio/string.png)
+
+*Editor example with a 43px icon, bold prefix and italic suffix; the source value stays plain text.*
+
+[Open image at full size](/images/grafik-visual-studio/string.png)
 
 From **0.1.156**, **Prepend HTML**, **Append HTML** and **Test text** provide the HTML editor. Entity values and test text still render as plain text: `<b>Test</b>` in test text displays the tags literally. Only the prefix and suffix render as sanitized HTML. Nonempty test text overrides the source in the editor; runtime uses the source. Without an entity the runtime value is empty; a missing entity or attribute displays `--`.
 
@@ -98,9 +116,13 @@ For an ioBroker datapoint ending in `…attribute.friendly_name`, select the cor
 
 ### HTML
 
+![HTML editor and refresh interval](/images/grafik-visual-studio/html.png)
+
+*Earlier HTML test view with a 500 ms interval. CSS General has been mandatory since 0.1.154.*
+
 **HTML** displays custom markup through the existing HTML editor. `<b>Hallo</b><i> Susi</i>` produces bold **Hallo** and italic *Susi*. **Update interval (ms)** rebuilds this content periodically; `0`, empty or `null` disables periodic refresh. The interval supports up to 180000ms in 100ms steps. This is not an HA polling interval and requires no helper.
 
-Studio sanitizes HTML: embedded scripts and event handlers are not executed. This differs from the VIS2 original and is explained through optional migration hints. `{value}` is not a placeholder. New widgets start with empty HTML, 200 × 130px and disabled CSS groups; existing content is preserved. The optional output point remains available.
+Studio sanitizes HTML: embedded scripts and event handlers are not executed. This differs from the VIS2 original and is explained through optional migration hints. `{value}` is not a placeholder. New widgets start with empty HTML, 200 × 130px and only CSS General enabled; existing content is preserved. The optional output point remains available.
 
 ### HTML navigation
 
@@ -109,6 +131,12 @@ Studio sanitizes HTML: embedded scripts and event handlers are not executed. Thi
 VIS2 **Subview** serves special navigation systems such as Jaeger Design and is not supported in Studio yet; this field is disabled. It does not refer to a Studio tab. Optional migration hints explain this limitation and HTML sanitization.
 
 ### filter - dropdown
+
+![Filter entry editor with HEX colors and defaults](/images/grafik-visual-studio/filter-editor.png)
+
+*Two entries: the first has an icon and HEX colors; the second is the default.*
+
+[Open image at full size](/images/grafik-visual-studio/filter-editor.png)
 
 From **0.1.155**, **editor → Edit** manages value, title, icon, image, text color, active color and default selection. Add/remove entries and reorder them with the dialog's arrow buttons. Single selection permits one default; multiple selection permits several. **Apply** commits the draft and **Cancel** discards it.
 
@@ -120,29 +148,47 @@ Filter values match widget **Filter word** on the same page. Comma or semicolon 
 
 ### Bar
 
+![Reversed blue bar with border and shadow settings](/images/grafik-visual-studio/bar.png)
+
+*Earlier test view: the reversed bar fills from the right. CSS General is now mandatory.*
+
+[Open image at full size](/images/grafik-visual-studio/bar.png)
+
 **Bar** displays a numeric value between **Minimum** and **Maximum** as a colored bar. For 0–1000, a value of 300 fills 30%. Out-of-range values are clamped to 0–100%; equal minimum and maximum produce an empty bar. A solar-power HA sensor is suitable: the widget only reads and requires no additional helper.
 
 Horizontal bars grow from the left, vertical bars from the top. **Reverse value** changes the origin to the right or bottom; 30% stays 30%. **Border** expects CSS such as `2px solid blue`; the bare `2` in the export is not a complete border definition. **Transparency (shadow/CSS)** corresponds to VIS2's `shadow` field and expects a CSS box shadow such as `2px 2px 4px #0008`, not an opacity value. Previously saved Studio opacity remains effective.
 
-New bars start blue, horizontal, with 0–100, 200 × 130px and disabled CSS groups. Field explanations follow the **Show migration hints** setting. The optional output point remains available.
+New bars start blue, horizontal, with 0–100, 200 × 130px and only CSS General enabled. Field explanations follow the **Show migration hints** setting. The optional output point remains available.
 
 ### HTML State
+
+![HTML State fixed value and URL migration hints](/images/grafik-visual-studio/html-state.png)
+
+*The example displays Hallo and submits off; the small hints explain valid write targets and browser URL requests.*
 
 **HTML** supplies the displayed content. **Wert** is a fixed command value: every click sends the same value, independently of the current state. An example with `Hallo` and `off` displays “Hallo” and sends an off command to a compatible controllable HA entity. Sensors are not write targets. Numbers require compatible `input_number` helpers, text requires `input_text`; `switch`, `light`, and `input_boolean` accept compatible on/off values. Unavailable or unsupported targets are not written.
 
 **Call URL on click** optionally sends an HTTP(S) GET request from the browser while keeping the current view open. It also works without an HA write target. Requests do not run through an ioBroker server; browser, HTTPS and network restrictions apply. An opaque browser response does not confirm success in the target system. The editor neither writes values nor calls URLs. Runtime activation supports click, Enter and Space.
 
-New widgets start with empty fields and disabled CSS groups. Existing contents remain; the previous preview state is used as the fixed-value fallback until a new **Wert** is set. HTML is sanitized; `{value}` is not a placeholder here. Entity and URL migration hints can be disabled centrally in Settings.
+New widgets start with empty fields and only CSS General enabled. Existing contents remain; the previous preview state is used as the fixed-value fallback until a new **Wert** is set. HTML is sanitized; `{value}` is not a placeholder here. Entity and URL migration hints can be disabled centrally in Settings.
 
 ### Migration hints
+
+![Optional red migration hint beneath an entity field](/images/grafik-visual-studio/migration-hints.png)
+
+*Bool Select example with the hint beneath the entity selector. These editor hints can be switched off centrally.*
 
 Use **Settings → General → Show migration hints** to enable or disable the hints centrally. The choice is saved per project and defaults to enabled. Hints appear directly below relevant editor fields and explain compatible HA switch targets or helpers, JSON/index sources and extra controls that are not connected yet. Read-only display does not require an additional write helper. Text uses 10px regular type, light red on dark editor backgrounds and dark red on light backgrounds. Hints do not appear in the runtime.
 
 ### Table
 
+![Table showing Title and Value columns](/images/grafik-visual-studio/table.png)
+
+*Static JSON example: _Description metadata is omitted from the two displayed columns.*
+
 **Static JSON (ohne ID)** contains an array of row objects. A bound HA entity supplies its JSON state in the runtime instead. For `[{"Title":"first","Value":1,"_Description":"Value1"},{"Title":"second","Value":2,"_Description":"Value2"}]`, the visible columns are **Title** and **Value**. Underscore attributes are hidden metadata; `_btn…` creates an acknowledgment button. Cells support sanitized HTML.
 
-**Kolumnanzahl** exposes column title, CSS width and attribute settings. Explicit attribute mappings can expose metadata. **Kein Header**, **Zeige Scrollbar**, and **Maximale Zeilenanzahl** control presentation. New tables have CSS groups disabled. A print button appears only when **btn_print** has a caption; **view_for_print** optionally selects the print page.
+**Kolumnanzahl** exposes column title, CSS width and attribute settings. Explicit attribute mappings can expose metadata. **Kein Header**, **Zeige Scrollbar**, and **Maximale Zeilenanzahl** control presentation. New tables enable only CSS General. A print button appears only when **btn_print** has a caption; **view_for_print** optionally selects the print page.
 
 **Ereignis ID** reads individual JSON rows. Its initial state is not collected as a new event. Changes add event rows; matching `_id` values replace existing event rows. **Neues Ereignis am Anfang** affects the event list without reversing the base table. Events and selection last for the current runtime session.
 
@@ -150,27 +196,35 @@ Selecting a row writes its JSON to **Ausgewählt ID** (`input_text`) and display
 
 ### Bool Select
 
+![Bool Select with a running state](/images/grafik-visual-studio/bool-select.png)
+
+*Runtime example with prepended Tor: and the selected label Läuft.*
+
 The dropdown has two entries configured through **Text bei 'false'** and **Text bei 'true'**. It reads Boolean and numeric states: `0` is false, other numbers are true. HA states `off`/`on` are normalized accordingly. Prepended/appended HTML and autofocus are supported; autofocus applies only in the runtime.
 
-A selection writes `0` or `1` to a compatible `input_number` or `input_text` helper. For `switch`, `light`, and `input_boolean`, it sends the corresponding HA switch command. Unsupported or unavailable targets are disabled. Without an entity, a local runtime preview is possible; the editor does not write values. New widgets start with empty text/HTML fields, autofocus disabled, and all CSS groups disabled. Existing captions are preserved.
+A selection writes `0` or `1` to a compatible `input_number` or `input_text` helper. For `switch`, `light`, and `input_boolean`, it sends the corresponding HA switch command. Unsupported or unavailable targets are disabled. Without an entity, a local runtime preview is possible; the editor does not write values. New widgets start with empty text/HTML fields, autofocus disabled, and only CSS General enabled. Existing captions are preserved.
 
 ### Bool Checkbox
 
 The checkbox displays the bound Home Assistant entity state. In the runtime it can control `switch`, `light`, and `input_boolean`; it is disabled without an available, supported entity. In the editor it is a preview only.
 
-**HTML voranstellen** and **HTML anhängen** add text or HTML before and after the checkbox. **Autofokus** applies only in the runtime. New widgets start with empty HTML fields, autofocus disabled, and all CSS groups disabled. Existing settings are preserved.
+**HTML voranstellen** and **HTML anhängen** add text or HTML before and after the checkbox. **Autofokus** applies only in the runtime. New widgets start with empty HTML fields, autofocus disabled, and only CSS General enabled. Existing settings are preserved.
 
 ### Bool HTML
 
+![Bool HTML true and false content editors](/images/grafik-visual-studio/bool-html.png)
+
+*Earlier test view of the four HTML fields. CSS General is now mandatory.*
+
 From **0.1.146**, prepended HTML, appended HTML, **HTML for 'false'** and **HTML for 'true'** all offer HTML-editor controls. The entity state selects the content; without an entity, the test state supplies a preview. Boolean `true`, number `1` and the strings `true`, `on`, `ein`, `yes` and `1` select the true content; other states select false. Prepended and appended HTML appear for either state. Studio HTML sanitization applies to all four fields.
 
-New widgets start with empty HTML fields and disabled CSS groups. Existing configured content is preserved. **Bool HTML** only displays a state and does not switch an entity; use **Bool HTML (control)** for that purpose.
+New widgets start with empty HTML fields and only CSS General enabled. Existing configured content is preserved. **Bool HTML** only displays a state and does not switch an entity; use **Bool HTML (control)** for that purpose.
 
 ### ValueList HTML
 
 From **0.1.144**, **Test value (editor only)** selects an index from the available entries. **Live value / preview state** also shows the normal widget state in the editor. Selecting a test index changes neither the stored preview state nor the HA value; runtime always uses the bound entity state or the unbound preview state.
 
-Separate entries with semicolons or newlines: `Test;test2;test3` provides indices 0, 1 and 2. Commas remain part of the text: `Test, test2, test3` is one entry. Write a semicolon inside an HTML entry as `§§`, for example in a CSS style or HTML entity. Prepended and appended HTML surround the selected entry; HTML follows Studio sanitization rules. Missing, invalid or out-of-range states display no list entry. New ValueList HTML widgets start with all CSS groups disabled; existing settings are preserved.
+Separate entries with semicolons or newlines: `Test;test2;test3` provides indices 0, 1 and 2. Commas remain part of the text: `Test, test2, test3` is one entry. Write a semicolon inside an HTML entry as `§§`, for example in a CSS style or HTML entity. Prepended and appended HTML surround the selected entry; HTML follows Studio sanitization rules. Missing, invalid or out-of-range states display no list entry. New ValueList HTML widgets start with only CSS General enabled; existing settings are preserved.
 
 ### ValueList HTML Style
 
@@ -178,7 +232,7 @@ From **0.1.145**, individual **Value [0]** through **Value [n]** sections provid
 
 **Test value (editor only)** selects an entry for preview only. Runtime reads the index from the bound entity or unbound preview state; `true` and `false` correspond to 1 and 0. This is an index, not a measurement range: with entries `10`, `20`, `30`, state `2` displays `30`; state `30` is outside a list ending at index 2 and displays no entry.
 
-Entry styles also apply to prepended and appended HTML. Use complete CSS declarations, such as `font-weight: bold; color: #29c8b5; font-size: 20px;`. Plain `bold` has no effect. Studio accepts its approved presentation styles without external CSS URLs. General CSS groups start disabled on new widgets; individual entry styles remain independently usable.
+Entry styles also apply to prepended and appended HTML. Use complete CSS declarations, such as `font-weight: bold; color: #29c8b5; font-size: 20px;`. Plain `bold` has no effect. Studio accepts its approved presentation styles without external CSS URLs. Only CSS General starts enabled on new widgets; individual entry styles remain independently usable.
 
 ## HA Grafik – Interaktiv (1)
 
@@ -204,6 +258,10 @@ Entry styles also apply to prepended and appended HTML. Use complete CSS declara
 | [SVG LineBox](./svg-linebox) | Visible in the editor: sums incoming line values and passes the result to outgoing lines and optionally a Home Assistant number helper. A configurable circle covers joined line ends at runtime. |
 
 ### Dashboard in widget
+
+![HA dashboard editor preview for lovelace view 0](/images/grafik-visual-studio/dashboard-widget.png)
+
+*Editor preview only: /lovelace/0. This local test image does not show an authenticated HA dashboard.*
 
 **Dashboard** opens the HA dashboard list through “…”. Alternatively enter a path such as `/lovelace` or `/dashboard-solar`. **Dashboard view** optionally selects a view path or number, such as `energy` or `0`. Leave **HA base URL** empty when using HA ingress. For direct Studio access, enter the HA address, for example `https://ha.example.org`.
 

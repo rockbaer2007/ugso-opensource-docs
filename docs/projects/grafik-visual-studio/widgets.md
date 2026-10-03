@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **51 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **52 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche auf Englisch. Frühere deutsche Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -80,27 +80,49 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
 
+Die folgenden Bilder stammen aus deutschen Testprojekten. Frühere CSS-Häkchen sind in den Bildunterschriften gekennzeichnet; maßgeblich ist das im Text beschriebene aktuelle Verhalten.
+
 ### CSS-Vorgaben
+
+![Verpflichtendes CSS Allgemein und optionale CSS-Bereiche](/images/grafik-visual-studio/html-navigation-css.png)
+
+*CSS Allgemein ist angehakt und gesperrt; die übrigen CSS-Gruppen sind optional.*
 
 Ab **0.1.154** bleibt **CSS Allgemein** bei allen Widgets verpflichtend aktiv, einschließlich bereits gespeicherter Projekte und zukünftiger Widget-Pakete. Position und Größe bleiben damit im Export erhalten. Frühere Hinweise auf deaktivierte CSS-Bereiche gelten ab dieser Version nur für die übrigen CSS-Gruppen.
 
 ### Input val / Eingegebener Wert
 
+Ab **0.1.157** bietet der Zahlenmodus optionale **min/max**. **Auto-setzen** übernimmt nach der eingestellten Pause, standardmäßig **1000 ms**, auch bei aktiviertem **withEnter**. Enter bestätigt immer. **withEnter** ergänzt eine Bestätigungstaste für ungesendete Änderungen; ohne Auto-setzen schreibt das Verlassen des Feldes nichts. Manuelle Eingaben bleiben bis zur Bestätigung erhalten. Nur-lesend kann auch Sensorwerte anzeigen; zum Schreiben von Zahlen/Text sind passende `input_number`-/`input_text`-Helfer nötig. Im Editor wird nie nach HA geschrieben.
+
+![Detail der Eingabeeinstellungen mit Zahlengrenzen und Auto-setzen](/images/grafik-visual-studio/input-value.png)
+
+*Ausschnitt der Eingabeeinstellungen: min/max 0–1000, Verzögerung 1000 ms und Nur-lesend aktiviert.*
+
 Mit Style sind „HTML voranstellen“ die Feldbeschriftung und „HTML anhängen“ der Hilfstext unter dem Feld. **Kein Style** zeigt stattdessen bereinigtes HTML vor und hinter einem einfachen Eingabefeld. Die Varianten sind standard, outlined und filled. Leere, ungültige oder außerhalb von min/max liegende Zahlen werden nicht geschrieben. Neue Widgets aktivieren nur CSS Allgemein; die Umsteigerhinweise lassen sich zentral abschalten.
 
 ### String / Zeichenfolge
+
+![String-Vorschau mit 43-Pixel-Lampensymbol und formatierten Vor- und Nachtexten](/images/grafik-visual-studio/string.png)
+
+*Editorbeispiel mit 43-px-Symbol, fettem Vorsatz und kursivem Nachsatz; der Quellwert bleibt normaler Text.*
+
+[Bild in voller Größe öffnen](/images/grafik-visual-studio/string.png)
 
 Ab **0.1.156** haben **HTML voranstellen**, **HTML anhängen** und **Testtext** den HTML-Editor. Der Entitätswert und Testtext werden trotzdem als normaler Text dargestellt: `<b>Test</b>` im Testtext zeigt die Tags wörtlich. Nur Vor- und Nachsatz werden als bereinigtes HTML formatiert. Ein nicht leerer Testtext übersteuert die Quelle im Editor; in der Runtime gilt die Quelle. Ohne Entität bleibt der Runtime-Wert leer, fehlende Entität oder fehlendes Attribut ergibt `--`.
 
 Für den ioBroker-Datenpunkt `…attribute.friendly_name` wählst du die zugehörige **Home-Assistant-Entität** und trägst unter **HA-Attribut (leer: Zustand)** `friendly_name` ein. Ein leeres Attributfeld zeigt den Zustand. Dafür ist kein Helfer nötig; die Auswahl liest nur. Der optionale Ausgangspunkt gibt denselben Quellwert weiter, ohne Vor-/Nachsatz oder Editor-Testtext.
 
-**Icon** verwendet die vorhandene Icon-/Bildauswahl. **Symbolgröße in Pixel** erscheint nur bei gewähltem Icon, bietet 5–200 px und startet bei 24 px. Der Exportwert `43` ergibt ein 43 × 43 px großes Symbol. Neue Widgets starten mit leeren Inhalten, 100 × 30 px und nur CSS Allgemein aktiviert; für größere Symbole die Widget-Höhe entsprechend anpassen. Die Umsteigerhinweise zu Attributen und Testtext sind zentral abschaltbar.
+**Icon** verwendet die vorhandene Icon-/Bildauswahl. **Symbolgröße in Pixel** erscheint nur bei gewähltem Icon, bietet 5–200 px und startet bei 24 px. Der Exportwert `43` ergibt ein 43 × 43 px großes Symbol. Neue Widgets starten mit leeren Inhalten, 100 × 30 px und ausschließlich aktiviertem CSS Allgemein; für größere Symbole die Widget-Höhe entsprechend anpassen. Die Umsteigerhinweise zu Attributen und Testtext sind zentral abschaltbar.
 
 ### HTML
 
+![HTML-Editor mit Aktualisierungsintervall](/images/grafik-visual-studio/html.png)
+
+*Frühere HTML-Testansicht mit 500-ms-Intervall. Seit 0.1.154 bleibt CSS Allgemein verpflichtend aktiv.*
+
 **HTML** zeigt eigenen HTML-Inhalt mit dem vorhandenen HTML-Editor. `<b>Hallo</b><i> Susi</i>` ergibt **Hallo** und ein kursives *Susi*. **Updatezeit (ms)** baut diesen Inhalt im eingestellten Abstand neu auf; `0`, leer oder `null` deaktiviert die periodische Aktualisierung. Der Bereich reicht bis 180000 ms in Schritten von 100 ms. Dies ist keine HA-Abfragezeit und benötigt keinen Helfer.
 
-Studio bereinigt das HTML: Eingebettete Skripte und Event-Handler werden nicht ausgeführt. Das unterscheidet sich vom VIS2-Original und wird als abschaltbarer Umsteigerhinweis erklärt. `{value}` ist kein Platzhalter. Neue Widgets beginnen mit leerem HTML, 200 × 130 px und deaktivierten CSS-Bereichen; vorhandene Inhalte bleiben erhalten. Der optionale Ausgangspunkt ist weiterhin verfügbar.
+Studio bereinigt das HTML: Eingebettete Skripte und Event-Handler werden nicht ausgeführt. Das unterscheidet sich vom VIS2-Original und wird als abschaltbarer Umsteigerhinweis erklärt. `{value}` ist kein Platzhalter. Neue Widgets beginnen mit leerem HTML, 200 × 130 px und ausschließlich aktiviertem CSS Allgemein; vorhandene Inhalte bleiben erhalten. Der optionale Ausgangspunkt ist weiterhin verfügbar.
 
 ### HTML navigation
 
@@ -109,6 +131,12 @@ Studio bereinigt das HTML: Eingebettete Skripte und Event-Handler werden nicht a
 **Unteransicht** aus VIS2 ist für spezielle Navigationssysteme wie Jaeger Design vorgesehen und in Studio noch nicht angebunden; das Feld ist deaktiviert. Es bezeichnet keinen Studio-Tab. Die abschaltbaren Umsteigerhinweise erklären diese Einschränkung und die HTML-Bereinigung.
 
 ### filter - dropdown
+
+![Filtereditor mit HEX-Farben und Standardauswahl](/images/grafik-visual-studio/filter-editor.png)
+
+*Zwei Einträge: Der erste hat ein Icon und HEX-Farben, der zweite ist die Standardauswahl.*
+
+[Bild in voller Größe öffnen](/images/grafik-visual-studio/filter-editor.png)
 
 Ab **0.1.155** bearbeitet **editor → Bearbeiten** die Einträge mit Wert, Titel, Symbol, Bild, Textfarbe, aktiver Farbe und Standardauswahl. Einträge lassen sich hinzufügen, löschen und mit den Pfeiltasten im Dialog umsortieren. Bei Einfachauswahl kann nur ein Eintrag Standard sein; Mehrfachauswahl erlaubt mehrere. **Anwenden** übernimmt die Änderungen, **Abbrechen** verwirft sie.
 
@@ -120,29 +148,47 @@ Filterwerte passen zu **Filterwort** der Widgets auf derselben Seite. Komma oder
 
 ### Bar
 
+![Umgekehrter blauer Balken mit Rand- und Schatteneinstellungen](/images/grafik-visual-studio/bar.png)
+
+*Frühere Testansicht: Der umgekehrte Balken wächst von rechts. CSS Allgemein bleibt heute verpflichtend aktiv.*
+
+[Bild in voller Größe öffnen](/images/grafik-visual-studio/bar.png)
+
 **Bar** zeigt einen Zahlenwert innerhalb von **Minimum** und **Maximum** als farbigen Balken. Bei 0–1000 entspricht 300 einem Füllstand von 30 %. Werte außerhalb des Bereichs werden auf 0–100 % begrenzt; bei gleichem Minimum und Maximum bleibt der Balken leer. Eine HA-Sensorentität wie Solarleistung passt hier: Das Widget liest nur und benötigt keinen zusätzlichen Helfer.
 
 Horizontal wächst der Balken von links, vertikal von oben. **Wert umkehren** wechselt den Ursprung zu rechts beziehungsweise unten; 30 % bleiben dabei 30 %. **Rand** erwartet CSS, etwa `2px solid blue`; die einzelne `2` aus dem Export ist keine vollständige Randdefinition. **Durchsichtigkeit (Schatten/CSS)** entspricht dem VIS2-Feld `shadow` und erwartet einen CSS-Schatten wie `2px 2px 4px #0008`, keinen Transparenzwert. Alte gespeicherte Studio-Deckkraftwerte bleiben wirksam.
 
-Neue Balken starten blau, horizontal, mit 0–100, 200 × 130 px und deaktivierten CSS-Bereichen. Umsteigerhinweise erklären die Felder und sind über **Umsteigerhinweise anzeigen** abschaltbar. Der optionale Ausgangspunkt bleibt verfügbar.
+Neue Balken starten blau, horizontal, mit 0–100, 200 × 130 px und ausschließlich aktiviertem CSS Allgemein. Umsteigerhinweise erklären die Felder und sind über **Umsteigerhinweise anzeigen** abschaltbar. Der optionale Ausgangspunkt bleibt verfügbar.
 
 ### HTML State
+
+![HTML State mit festem Wert und Umsteigerhinweisen](/images/grafik-visual-studio/html-state.png)
+
+*Das Beispiel zeigt Hallo und sendet off; die kleinen Hinweise erklären Schreibziele und Browser-URL-Aufrufe.*
 
 **HTML** ist der angezeigte Inhalt. **Wert** ist ein fester Schreibwert: Bei jedem Klick wird derselbe Wert gesendet, unabhängig vom aktuellen Zustand. Dein Beispiel mit `Hallo` und `off` zeigt „Hallo“ und sendet bei jedem Klick einen Aus-Befehl an eine passende schaltbare HA-Entität. Ein Sensor ist kein Schreibziel. Zahlen benötigen einen passenden `input_number`-Helfer, Text einen `input_text`-Helfer; `switch`, `light` und `input_boolean` unterstützen passende Ein-/Aus-Werte. Nicht verfügbare oder ungeeignete Ziele werden nicht beschrieben.
 
 **Rufe URL bei Klick** sendet optional einen HTTP(S)-GET-Aufruf vom Browser. Die Ansicht bleibt geöffnet. Dieser Aufruf funktioniert auch ohne HA-Schreibziel und wird nicht über einen ioBroker-Server ausgeführt; Browserregeln, HTTPS und Netzwerkzugriff gelten weiterhin. Eine undurchsichtige Browserantwort bestätigt nicht den Erfolg des Zielsystems. Im Editor werden weder Werte geschrieben noch URLs aufgerufen. In der Runtime sind Klick, Enter und Leertaste möglich.
 
-Neue Widgets beginnen mit leeren Feldern und deaktivierten CSS-Bereichen. Bisherige Inhalte bleiben erhalten; der alte Vorschauwert wird als fester Wert übernommen, solange kein neuer **Wert** gesetzt ist. HTML wird bereinigt angezeigt; `{value}` ist hier kein Platzhalter. Umsteigerhinweise an Entität und URL lassen sich zentral in den Einstellungen abschalten.
+Neue Widgets beginnen mit leeren Feldern und ausschließlich aktiviertem CSS Allgemein. Bisherige Inhalte bleiben erhalten; der alte Vorschauwert wird als fester Wert übernommen, solange kein neuer **Wert** gesetzt ist. HTML wird bereinigt angezeigt; `{value}` ist hier kein Platzhalter. Umsteigerhinweise an Entität und URL lassen sich zentral in den Einstellungen abschalten.
 
 ### Umsteigerhinweise
+
+![Abschaltbarer roter Umsteigerhinweis unter einer Entität](/images/grafik-visual-studio/migration-hints.png)
+
+*Bool-Select-Beispiel mit Hinweis unter der Entitätsauswahl. Diese Editorhinweise lassen sich zentral abschalten.*
 
 Unter **Einstellungen → Allgemein → Umsteigerhinweise anzeigen** lassen sich die Hinweise zentral ein- und ausschalten. Die Auswahl wird pro Projekt gespeichert; standardmäßig sind sie aktiv. Sie stehen direkt unter betroffenen Editorfeldern und erklären passende HA-Schaltziele oder Helfer, JSON-/Indexquellen und noch nicht angebundene Extrasteuerung. Reine Anzeige benötigt keinen zusätzlichen Schreibhelfer. Die Texte sind 10 px groß, ohne Fettdruck, hellrot auf dunklem beziehungsweise dunkelrot auf hellem Editorhintergrund. In der Runtime erscheinen sie nicht.
 
 ### Table
 
+![Tabelle mit den Spalten Title und Value](/images/grafik-visual-studio/table.png)
+
+*Static-JSON-Beispiel: Die Metadaten _Description erscheinen nicht in den beiden sichtbaren Spalten.*
+
 **Static JSON (ohne ID)** enthält ein Array von Zeilenobjekten. Eine gebundene HA-Entität liefert stattdessen ihren JSON-Zustand in der Runtime. Beim Beispiel `[{"Title":"first","Value":1,"_Description":"Value1"},{"Title":"second","Value":2,"_Description":"Value2"}]` erscheinen die Spalten **Title** und **Value**. Attribute mit `_` bleiben als Metadaten verborgen; `_btn…` erzeugt eine Bestätigungsschaltfläche. Zellen dürfen HTML enthalten, das vor der Anzeige bereinigt wird.
 
-**Kolumnanzahl** blendet Einstellungen für Spaltentitel, CSS-Breite und Attributzuordnung ein. Eine ausdrückliche Attributzuordnung kann auch Metadaten anzeigen. **Kein Header**, **Zeige Scrollbar** und **Maximale Zeilenanzahl** steuern die Darstellung. Neue Tabellen starten mit deaktivierten CSS-Bereichen. Ein Druckbutton erscheint erst mit einem Text in **btn_print**; **view_for_print** wählt optional die Druckseite.
+**Kolumnanzahl** blendet Einstellungen für Spaltentitel, CSS-Breite und Attributzuordnung ein. Eine ausdrückliche Attributzuordnung kann auch Metadaten anzeigen. **Kein Header**, **Zeige Scrollbar** und **Maximale Zeilenanzahl** steuern die Darstellung. Neue Tabellen starten mit nur CSS Allgemein aktiviert. Ein Druckbutton erscheint erst mit einem Text in **btn_print**; **view_for_print** wählt optional die Druckseite.
 
 **Ereignis ID** liest einzelne JSON-Zeilen. Der anfänglich vorhandene Zustand wird nicht als neues Ereignis übernommen. Änderungen ergänzen die Ereignisliste; gleiche `_id` ersetzen eine vorhandene Ereigniszeile. **Neues Ereignis am Anfang** gilt für diese Ereignisliste und dreht die Grundtabelle nicht um. Ereignisse und Auswahl gelten für die laufende Runtime-Sitzung.
 
@@ -150,27 +196,35 @@ Eine Zeilenauswahl schreibt das Zeilenobjekt als JSON in **Ausgewählt ID** (`in
 
 ### Bool Select
 
+![Bool Select mit ausgewähltem Zustand Läuft](/images/grafik-visual-studio/bool-select.png)
+
+*Runtime-Beispiel mit vorangestelltem Tor: und ausgewähltem Text Läuft.*
+
 Das Auswahlfeld hat zwei Einträge mit **Text bei 'false'** und **Text bei 'true'**. Es liest boolesche und numerische Zustände: `0` gilt als false, andere Zahlen als true. HA-Zustände `off`/`on` werden passend zugeordnet. **HTML voranstellen**, **HTML anhängen** und **Autofokus** sind vorhanden; Autofokus gilt nur in der Runtime.
 
-Eine Auswahl schreibt `0` oder `1` in einen passenden `input_number`- oder `input_text`-Helfer. Bei `switch`, `light` und `input_boolean` wird ein entsprechender HA-Schaltbefehl gesendet. Ungeeignete oder nicht verfügbare Ziele sind gesperrt. Ohne Entität ist eine lokale Runtime-Vorschau möglich; im Editor wird nicht geschrieben. Neue Widgets starten mit leeren Text-/HTML-Feldern, deaktiviertem Autofokus und deaktivierten CSS-Bereichen. Bestehende Beschriftungen bleiben erhalten.
+Eine Auswahl schreibt `0` oder `1` in einen passenden `input_number`- oder `input_text`-Helfer. Bei `switch`, `light` und `input_boolean` wird ein entsprechender HA-Schaltbefehl gesendet. Ungeeignete oder nicht verfügbare Ziele sind gesperrt. Ohne Entität ist eine lokale Runtime-Vorschau möglich; im Editor wird nicht geschrieben. Neue Widgets starten mit leeren Text-/HTML-Feldern, deaktiviertem Autofokus und ausschließlich aktiviertem CSS Allgemein. Bestehende Beschriftungen bleiben erhalten.
 
 ### Bool Checkbox
 
 Die Checkbox zeigt den Zustand der gebundenen Home-Assistant-Entität. In der Runtime kann sie `switch`, `light` und `input_boolean` schalten; ohne verfügbare, passende Entität ist sie gesperrt. Im Editor dient sie nur als Vorschau.
 
-**HTML voranstellen** und **HTML anhängen** ergänzen die Checkbox um Text oder HTML. **Autofokus** gilt nur in der Runtime. Neue Widgets beginnen mit leeren HTML-Feldern, deaktiviertem Autofokus und deaktivierten CSS-Bereichen. Bestehende Einstellungen bleiben erhalten.
+**HTML voranstellen** und **HTML anhängen** ergänzen die Checkbox um Text oder HTML. **Autofokus** gilt nur in der Runtime. Neue Widgets beginnen mit leeren HTML-Feldern, deaktiviertem Autofokus und ausschließlich aktiviertem CSS Allgemein. Bestehende Einstellungen bleiben erhalten.
 
 ### Bool HTML
 
+![Bool HTML mit Editoren für true und false](/images/grafik-visual-studio/bool-html.png)
+
+*Frühere Testansicht der vier HTML-Felder. CSS Allgemein bleibt heute verpflichtend aktiv.*
+
 Ab **0.1.146** stehen **HTML voranstellen**, **HTML anhängen**, **HTML bei 'false'** und **HTML bei 'true'** zur Verfügung, jeweils mit HTML-Editor. Der Entitätszustand wählt den Inhalt; ohne Entität dient **Testzustand** als Vorschau. Boolean `true`, Zahl `1` sowie die Texte `true`, `on`, `ein`, `yes` und `1` wählen den true-Inhalt; andere Zustände wählen false. Vorangestelltes und angehängtes HTML erscheinen unabhängig davon. Die Studio-HTML-Bereinigung gilt für alle vier Felder.
 
-Neue Widgets beginnen mit leeren HTML-Feldern und deaktivierten CSS-Bereichen. Bereits konfigurierte Inhalte bleiben erhalten. **Bool HTML** zeigt nur an und schaltet keine Entität; dafür gibt es **Bool HTML (control)**.
+Neue Widgets beginnen mit leeren HTML-Feldern und ausschließlich aktiviertem CSS Allgemein. Bereits konfigurierte Inhalte bleiben erhalten. **Bool HTML** zeigt nur an und schaltet keine Entität; dafür gibt es **Bool HTML (control)**.
 
 ### ValueList HTML
 
 Ab **0.1.144** wählt **Testwert (nur Editor)** einen Index aus den vorhandenen Listeneinträgen. **Livewert / Vorschauzustand** zeigt auch im Editor den normalen Widgetzustand. Ein Testwert ändert weder den gespeicherten Vorschauzustand noch den HA-Wert; die Runtime verwendet immer den gebundenen Entitätszustand beziehungsweise den ungebundenen Vorschauzustand.
 
-Trenne Einträge mit Semikolon oder Zeilenumbrüchen: `Test;test2;test3` ergibt die Indizes 0, 1 und 2. Kommas bleiben Teil des Textes: `Test, test2, test3` ist ein Eintrag. Schreibe ein Semikolon innerhalb eines HTML-Eintrags als `§§`, etwa in einem CSS-Stil oder einer HTML-Entität. **HTML voranstellen** und **HTML anhängen** umgeben den ausgewählten Eintrag; HTML wird nach den Studio-Regeln bereinigt. Fehlende, ungültige oder außerhalb der Liste liegende Zustände zeigen keinen Listeneintrag. Neue ValueList-HTML-Widgets haben alle CSS-Bereiche standardmäßig deaktiviert; bestehende Einstellungen bleiben erhalten.
+Trenne Einträge mit Semikolon oder Zeilenumbrüchen: `Test;test2;test3` ergibt die Indizes 0, 1 und 2. Kommas bleiben Teil des Textes: `Test, test2, test3` ist ein Eintrag. Schreibe ein Semikolon innerhalb eines HTML-Eintrags als `§§`, etwa in einem CSS-Stil oder einer HTML-Entität. **HTML voranstellen** und **HTML anhängen** umgeben den ausgewählten Eintrag; HTML wird nach den Studio-Regeln bereinigt. Fehlende, ungültige oder außerhalb der Liste liegende Zustände zeigen keinen Listeneintrag. Neue ValueList-HTML-Widgets haben nur CSS Allgemein standardmäßig aktiviert; bestehende Einstellungen bleiben erhalten.
 
 ### ValueList HTML Style
 
@@ -178,7 +232,7 @@ Ab **0.1.145** bietet das Widget einzelne Bereiche **Wert [0]** bis **Wert [n]**
 
 **Testwert (nur Editor)** wählt einen Eintrag ausschließlich für die Vorschau. Die Runtime liest den Index aus der gebundenen Entität oder dem ungebundenen Vorschauzustand; `true` und `false` entsprechen 1 und 0. Der Index ist kein Messwertbereich: Bei Einträgen `10`, `20`, `30` zeigt Zustand `2` den Text `30`; Zustand `30` liegt außerhalb einer Liste bis Index 2 und zeigt keinen Eintrag.
 
-Der Stil gilt auch für das vorangestellte und angehängte HTML. Verwende vollständige CSS-Deklarationen, zum Beispiel `font-weight: bold; color: #29c8b5; font-size: 20px;`. `bold` allein hat keine Wirkung. Studio akzeptiert die freigegebenen Darstellungsstile ohne externe CSS-URLs. Allgemeine CSS-Bereiche sind bei neuen Widgets deaktiviert; die Stile der einzelnen Werte bleiben davon unabhängig nutzbar.
+Der Stil gilt auch für das vorangestellte und angehängte HTML. Verwende vollständige CSS-Deklarationen, zum Beispiel `font-weight: bold; color: #29c8b5; font-size: 20px;`. `bold` allein hat keine Wirkung. Studio akzeptiert die freigegebenen Darstellungsstile ohne externe CSS-URLs. Bei neuen Widgets ist nur CSS Allgemein standardmäßig aktiviert; die Stile der einzelnen Werte bleiben davon unabhängig nutzbar.
 
 ## HA Grafik – Interaktiv (1)
 
@@ -205,6 +259,10 @@ Der Stil gilt auch für das vorangestellte und angehängte HTML. Verwende vollst
 | [SVG LineBox](./svg-linebox) | Im Editor sichtbarer Verteiler: Zahlenwerte eingehender Linien summieren und an Ausgangslinien sowie optional an einen HA-Zahlenhelfer weitergeben. Ein einstellbarer Kreis verdeckt in der Runtime die verbundenen Linienenden. |
 
 ### Dashboard in widget
+
+![HA-Dashboard-Vorschau im Editor für lovelace Ansicht 0](/images/grafik-visual-studio/dashboard-widget.png)
+
+*Editor-Vorschau für /lovelace/0. Das lokale Testbild zeigt kein angemeldetes HA-Dashboard.*
 
 **Dashboard** öffnet über „…“ die Liste der HA-Dashboards. Alternativ lässt sich ein Pfad wie `/lovelace` oder `/dashboard-solar` direkt eingeben. **Dashboard-Ansicht** wählt optional einen Ansichtspfad oder eine Zahl, etwa `energie` oder `0`. Im HA-Ingress bleibt **HA-Basis-URL** leer. Bei direktem Studio-Zugriff wird dort die HA-Adresse eingetragen, beispielsweise `https://ha.example.org`.
 
