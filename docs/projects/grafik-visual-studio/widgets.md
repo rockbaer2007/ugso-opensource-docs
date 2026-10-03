@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **55 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **56 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche auf Englisch. Frühere deutsche Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -367,13 +367,14 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (2)
+## HA Grafik – Interaktiv (3)
 
 
 | Widget | Aktuelle Funktion |
 | --- | --- |
 | Universal Element | Standardzustand und bis zu 20 bedingte Zustände; Symbol, Bild, Text oder HTML. Schalten, Taster, Anzeige und Navigation mit Einzel- oder getrennten Tasten. |
 | Calendar | Monatsansicht mit Datumsauswahl, Heute-Markierung, Tagessperren und Kalenderwochen. |
+| Terminkalender | Termine in Monats-, Wochen-, Tages-, Jahres- und Listenansichten; mehrere Quellen und Farbregeln. |
 
 ### Calendar
 
@@ -391,6 +392,29 @@ Monat und Jahr können direkt gewählt werden. Ist Monats-/Jahresnavigation deak
 ![Calendar mit Datumsauswahl, Heute-Markierung und Kalenderwochen](/images/grafik-visual-studio/calendar.png)
 
 Funktionsreferenz: [Kalender von inventwo für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/de/widgets/calendar-widget.md). Studio verwendet eine eigene Implementierung ohne Abhängigkeit vom ioBroker-Paket.
+
+### Terminkalender
+
+Ab **0.1.174** zeigt der **Terminkalender** Termine ausschließlich lesend an. Die Standardgröße ist **600 × 500 px**. Zur Auswahl stehen Monat, Woche mit Stundenraster, Tag, Jahr mit zwölf Monaten und Listen für Tag, Woche, Monat oder Jahr. Kopfzeile und Navigation lassen sich getrennt abschalten. Wochenbeginn, ISO-/einfache Kalenderwochen und die Uhrzeit-Linie sind einstellbar. **Max. Termine pro Tag** begrenzt die sichtbaren Einträge; `0` zeigt alle. Weitere Termine öffnen sich über **+N weitere**.
+
+- **Termine (HA-Entität):** `calendar.*` lädt den sichtbaren Zeitraum über [calendar.get_events](https://www.home-assistant.io/integrations/calendar/). Der normale Kalenderzustand enthält keine vollständige Terminliste. Andere HA-Entitäten können eine JSON-Liste als Zustand liefern.
+- **Termine (JSON, ohne Entität):** Eine direkt gespeicherte JSON-Liste dient als lokale Quelle. Unterstützt werden `title` / `summary` / `event`, `start` / `_date`, optional `end` / `_end`, `allDay` / `_allDay` und `color` / `_calColor`. Beginn und Ende sind ISO-Datum, ISO-Datum mit Uhrzeit oder Millisekunden. Ein reines Datum gilt als ganztägig; dessen Ende ist exklusiv. Fehlendes oder mit dem Beginn identisches Ende nutzt die Standarddauer.
+- **Weitere Kalender:** Bis zu 20 Quellen mit HA-Entität, optionaler HEX-Quellfarbe und Legendentext. Sobald die Anzahl größer als `0` ist, ersetzen diese Quellen das einzelne Entitätsfeld und die lokale JSON-Liste. Leere Quellen liefern keine Termine. Die Legende lässt sich abschalten.
+- **Termin-Farbregeln:** Bis zu 20 Regeln vergleichen einen Titelteil ohne Beachtung der Groß-/Kleinschreibung. Die erste passende Regel setzt die Hintergrundfarbe. Die Quellfarbe bleibt als linker Streifen bzw. Punkt in Listen sichtbar.
+
+```json
+[{"title":"Familienausflug","start":"2026-10-03","end":"2026-10-05","color":"#3686BD"}]
+```
+
+Die sechs neutralen Gruppen **CSS Terminkalender – Kopfzeile / Wochentage / Tag / Heute / Termin-Kacheln / Rahmen** bieten HEX-Farben, Schriftgrößen, Radien, Rahmen und Hover-Farben für Navigationsbuttons. **Vom Widget** übernimmt den jeweiligen Bereich eines anderen Terminkalenders; zyklische Verweise enden sicher. **CSS Allgemein** bleibt aktiviert. Umsteigerhinweise folgen dem zentralen Schalter. Editor-Vorschauen schreiben keine Termine und lassen sich weiterhin ziehen und skalieren.
+
+HA-Kalender werden beim Zeitraumwechsel und frühestens nach 60 Sekunden erneut gelesen; JSON-Entitätszustände folgen der normalen Abfrage alle fünf Sekunden. Fehler werden im Widget angezeigt. `.ics`-Dateien werden über eine HA-Kalenderintegration eingebunden. Es gibt keine Termin-Erstellung, -Bearbeitung oder -Löschung.
+
+Beim Widget-Export werden Konfiguration und direkt eingetragenes JSON mitgenommen, aber keine live abgerufenen HA-Termine. Am Ziel müssen die verwendeten Entitäten verfügbar sein; referenzierte CSS-Quellwidgets müssen ebenfalls mitgeliefert werden.
+
+![Terminkalender mit Farbregeln und zusätzlichem Termin-Popup](/images/grafik-visual-studio/event-calendar.png)
+
+Funktionsreferenz: [inventwo-Terminkalender für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/de/widgets/event-calendar-widget.md). Studio verwendet eine eigene Datenanbindung und den lokal mitgelieferten [FullCalendar 6.1.21](https://legacy.fullcalendar.io/v6/) unter MIT-Lizenz; das ioBroker-Paket ist nicht erforderlich.
 
 ### Universal Element
 

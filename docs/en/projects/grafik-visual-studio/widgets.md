@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **55 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **56 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired widget names remain in English regardless of the interface language. Former German palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -367,12 +367,13 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (2)
+## HA Grafik – Interaktiv (3)
 
 | Widget | Current behavior |
 | --- | --- |
 | Universal Element | Default state and up to 20 conditional states with an icon, image, text or HTML. Switch, button, display and navigation modes, using single or separate buttons. |
 | Calendar | Monthly datepicker with today highlighting, day restrictions and week numbers. |
+| Event Calendar | Events in month, week, day, year and list views; multiple sources and color rules. |
 
 ### Calendar
 
@@ -390,6 +391,29 @@ Month and year can be chosen directly. With month/year navigation disabled, runt
 ![Calendar with selected date, today highlighting and week numbers](/images/grafik-visual-studio/calendar.png)
 
 Functional reference: [inventwo Calendar for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/calendar-widget.md). Studio uses its own implementation without the ioBroker package.
+
+### Event Calendar
+
+From **0.1.174**, **Event Calendar** displays events read only. The default size is **600 × 500 px**. Choose month, week with time slots, day, year with twelve months, or day/week/month/year lists. Header and navigation can be disabled independently. First weekday, ISO/simple week numbers and the current-time line are configurable. **Max. events per day** limits visible entries; `0` shows all. **+N more** opens additional events.
+
+- **Events (HA entity):** `calendar.*` loads the visible range using [calendar.get_events](https://www.home-assistant.io/integrations/calendar/). The ordinary calendar state does not provide a complete event list. Other HA entities can supply a JSON list in their state.
+- **Events (JSON, without entity):** A directly saved JSON list is a local source. Supported fields are `title` / `summary` / `event`, `start` / `_date`, optional `end` / `_end`, `allDay` / `_allDay` and `color` / `_calColor`. Dates accept ISO dates, ISO datetimes or milliseconds. Date-only events are all-day; their end is exclusive. An omitted end or one identical to the start uses the default duration.
+- **Additional calendars:** Up to 20 sources with HA entity, optional HEX source color and legend label. A count greater than `0` replaces the single entity and local JSON list. Empty sources provide no events. The legend can be disabled.
+- **Event color rules:** Up to 20 rules match a case-insensitive title substring. The first match sets the background color. The source color remains visible as a left stripe or a list dot.
+
+```json
+[{"title":"Family trip","start":"2026-10-03","end":"2026-10-05","color":"#3686BD"}]
+```
+
+The six neutral **CSS Event Calendar – Header / Weekdays / Day / Today / Event tiles / Borders** groups provide HEX colors, font sizes, radii, borders and navigation button hover colors. **From widget** inherits that group from another Event Calendar; cyclic references terminate safely. **CSS General** stays enabled. Migration hints follow the central switch. Editor previews never write events and remain draggable and resizable.
+
+HA calendars reload when changing the range and after at least 60 seconds; JSON entity states use normal five-second polling. Errors appear inside the widget. Import `.ics` files through an HA calendar integration. Creating, editing and deleting events are not supported.
+
+Widget exports include configuration and directly entered JSON, but no live HA events. Referenced entities must exist at the destination; referenced CSS source widgets must also be included.
+
+![Event Calendar with color rules and additional event popup](/images/grafik-visual-studio/event-calendar.png)
+
+Functional reference: [inventwo Event Calendar for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/event-calendar-widget.md). Studio uses its own data bridge and locally bundled [FullCalendar 6.1.21](https://legacy.fullcalendar.io/v6/) under the MIT license; the ioBroker package is not required.
 
 ### Universal Element
 
