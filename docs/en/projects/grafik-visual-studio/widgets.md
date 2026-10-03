@@ -309,11 +309,15 @@ Functional reference: [VIS2 Note](https://github.com/ioBroker/ioBroker.vis-2/blo
 
 These display-only separators need no HA helper. Horizontal line starts at **200 × 16 px**, Vertical line at **16 × 200 px**. **CSS separator** provides thickness (1–100 px, default 2), HEX fill and border colors, border width and ends: **Square** (default), **Round**, or **Pointed (arrow-like)** at both ends. Increasing thickness expands the widget's cross dimension if needed; shrinking the widget afterwards limits the visible thickness to its bounds.
 
-**Snap** is enabled by default. Moving a single line, resizing its endpoint or editing geometry aligns endpoints within **8 page pixels** with the center of a perpendicular separator. Connections can meet anywhere along the other line, including T junctions. Parallel lines do not snap. Moving multiple selected widgets together preserves their relative spacing. Custom CSS positions/sizes and transforms disable snapping.
+From **0.1.183**, separators have no **Docking points** or **Data flow** controls. **Enable snapping** under **CSS separator** turns on geometric snapping; new lines start with it off. Existing enabled settings are retained. Moving a single line, resizing its endpoint or editing geometry aligns endpoints within **8 page pixels** with the center of a perpendicular separator. Connections can meet anywhere along the other line, including T junctions. Parallel lines do not snap. Moving multiple selected widgets together preserves their relative spacing. Custom CSS positions/sizes and transforms disable snapping.
 
 Actual coordinates and styling are saved in widget and project exports. Connections are not permanent bindings: moving one line away later does not make the other follow automatically. **CSS General** and **CSS separator** remain enabled for saving. The optional migration hint follows the central **Show migration hints** setting.
 
 ![Separators with a T junction, pointed ends and CSS settings](/images/grafik-visual-studio/separator-lines.png)
+
+![Enabled snapping without docking points or data-flow controls in the separator editor](/images/grafik-visual-studio/separator-snap.png)
+
+*Snapping connects anywhere along the other separator. Legacy docking and data-flow settings are removed when loading and saving.*
 
 ### Border
 

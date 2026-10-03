@@ -309,11 +309,15 @@ Funktionale Referenz: [VIS2 Note](https://github.com/ioBroker/ioBroker.vis-2/blo
 
 Die zwei Trennlinien sind reine Anzeige und benötigen keinen HA-Helfer. Horizontal line startet mit **200 × 16 px**, Vertical line mit **16 × 200 px**. Unter **CSS Trennlinie** stehen Dicke (1–100 px, Standard 2), HEX-Farbe, Rahmenfarbe, Rahmenbreite und Enden zur Verfügung: **Eckig** (Standard), **Rund** oder **Spitz (pfeilartig)** an beiden Enden. Eine erhöhte Dicke vergrößert bei Bedarf die Querabmessung des Widgets; beim anschließenden Verkleinern begrenzt die Widgetfläche die sichtbare Dicke.
 
-**Einrasten** ist standardmäßig aktiviert. Beim einzelnen Ziehen, Skalieren eines Linienendes oder Bearbeiten der Geometrie werden Enden innerhalb von **8 Seitenpixeln** auf die Mitte einer rechtwinkligen Trennlinie gesetzt. Das funktioniert an beliebigen Stellen entlang der anderen Linie, auch für T-Verbindungen. Parallel verlaufende Linien rasten nicht ein. Gemeinsames Verschieben mehrerer Widgets verändert ihre relativen Abstände nicht. Frei gesetzte CSS-Positionen/-Größen und CSS-Transformationen deaktivieren das Einrasten.
+Ab **0.1.183** besitzen die Trennlinien keine **Andockpunkte** und keinen **Datenfluss**. **Snapfunktion aktivieren** unter **CSS Trennlinie** schaltet das geometrische Einrasten zu; bei neuen Linien ist es ausgeschaltet. Bereits aktivierte Snap-Einstellungen bleiben erhalten. Beim einzelnen Ziehen, Skalieren eines Linienendes oder Bearbeiten der Geometrie werden Enden innerhalb von **8 Seitenpixeln** auf die Mitte einer rechtwinkligen Trennlinie gesetzt. Das funktioniert an beliebigen Stellen entlang der anderen Linie, auch für T-Verbindungen. Parallel verlaufende Linien rasten nicht ein. Gemeinsames Verschieben mehrerer Widgets verändert ihre relativen Abstände nicht. Frei gesetzte CSS-Positionen/-Größen und CSS-Transformationen deaktivieren das Einrasten.
 
 Gespeichert werden die tatsächlichen Koordinaten und die Liniengestaltung, auch im Widget- und Projekt-Export. Die Verbindung ist keine dauerhafte Bindung: Wird eine Linie später wegbewegt, folgt die andere nicht automatisch. **CSS Allgemein** und **CSS Trennlinie** bleiben für das Speichern aktiv. Der optionale Umsteigerhinweis folgt der zentralen Einstellung **Umsteigerhinweise anzeigen**.
 
 ![Trennlinien mit T-Verbindung, pfeilartigen Enden und CSS-Einstellungen](/images/grafik-visual-studio/separator-lines.png)
+
+![Aktivierte Snapfunktion ohne Andockpunkte und Datenfluss im Trennlinien-Editor](/images/grafik-visual-studio/separator-snap.png)
+
+*Die Snapfunktion verbindet an beliebigen Stellen der jeweils anderen Trennlinie. Alte Dock- und Datenflusseinstellungen werden beim Laden und Speichern entfernt.*
 
 ### Border
 
