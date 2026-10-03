@@ -4,6 +4,8 @@ title: SVG LineBox Math
 
 # SVG LineBox Math
 
+Ab **0.1.141** blendet **In Runtime ausblenden** unter Berechnung nur die Darstellung aus; alle Rechnungen und Wertübergaben bleiben aktiv. Die Variante **Wert-Berechnung** in [HA Grafik – Datenfluss](./datenfluss) verwendet dieselbe Logik und startet mit dieser Option eingeschaltet. Wert-Konverter und unsichtbare Wert-Verbindungen können vorgeschaltet werden.
+
 Ab Studio **0.1.138** enthält der vergrößerte Dialog **vier getrennte Rechnungen**. Jede hat eine eigene Aktivierung, Formel beziehungsweise Durchschnittsberechnung, Ausgangsliste und Ergebnisvorschau. Rechnung 1 übernimmt bei älteren Projekten die bisherige Berechnung und ihre Ausgänge; Rechnungen 2–4 sowie alle internen Eingangsübergaben sind zunächst aus.
 
 ## Größe, Icon und Farben

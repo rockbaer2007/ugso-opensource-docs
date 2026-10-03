@@ -126,6 +126,7 @@ const sidebarDe = {
       { text: 'SVG-Line', link: '/projects/grafik-visual-studio/svg-line' },
       { text: 'SVG LineBox', link: '/projects/grafik-visual-studio/svg-linebox' },
       { text: 'SVG LineBox Math', link: '/projects/grafik-visual-studio/svg-linebox-math' },
+      { text: 'Datenfluss: Werte und Konverter', link: '/projects/grafik-visual-studio/datenfluss' },
       { text: 'Widget-Paket-Schnittstelle', link: '/projects/grafik-visual-studio/widget-pakete' },
       { text: 'Tool-Paket-Schnittstelle', link: '/projects/grafik-visual-studio/tool-pakete' },
       { text: 'Packer für Pakete', link: '/projects/grafik-visual-studio/packer' }
@@ -524,6 +525,7 @@ const sidebarEn = {
       { text: 'SVG-Line', link: '/en/projects/grafik-visual-studio/svg-line' },
       { text: 'SVG LineBox', link: '/en/projects/grafik-visual-studio/svg-linebox' },
       { text: 'SVG LineBox Math', link: '/en/projects/grafik-visual-studio/svg-linebox-math' },
+      { text: 'Data flow: values and converters', link: '/en/projects/grafik-visual-studio/datenfluss' },
       { text: 'Widget package interface', link: '/en/projects/grafik-visual-studio/widget-packages' },
       { text: 'Tool package interface', link: '/en/projects/grafik-visual-studio/tool-packages' },
       { text: 'Package packer', link: '/en/projects/grafik-visual-studio/packer' }

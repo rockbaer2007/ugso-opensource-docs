@@ -1,0 +1,48 @@
+---
+title: Datenfluss – Werte, Konvertierung und Berechnung
+---
+
+# HA Grafik – Datenfluss
+
+Ab Studio **0.1.141** enthält die eigene Palette **HA Grafik – Datenfluss** drei Widgets. Alle Berechnungen und Konvertierungen laufen im Browser des jeweiligen Display-Computers. Home Assistant liefert die Entitätswerte; zusätzliche HA-Entitäten sind für die interne Verarbeitung nicht nötig. Die Visualisierung muss dafür geöffnet sein.
+
+| Widget | Im Editor | In der Runtime |
+| --- | --- | --- |
+| **Wert-Verbindung** | Einfache SVG-Linie ohne Animation, mit Richtung vom Start zum Ziel | Unsichtbar; Werte werden weitergegeben |
+| **Wert-Konverter** | Widget und eigener Dialog mit Radiobuttons, Eingangs-/Ausgangstyp und Vorschau | Immer unsichtbar; Konvertierung bleibt aktiv |
+| **Wert-Berechnung** | Gleicher Editor wie [SVG LineBox Math](./svg-linebox-math), mit vier Rechnungen und Anschlüssen A–P | Standardmäßig unsichtbar; alle Rechnungen und Ausgänge bleiben aktiv |
+
+Wert-Verbindung und Wert-Berechnung verwenden intern die bestehenden SVG-Line- und SVG-LineBox-Math-Typen. Dadurch bleiben Andocken, Verschieben, Kopieren, Projektimport/-export und die gemeinsame Rechenlogik erhalten. Bei SVG LineBox Math lässt sich **In Runtime ausblenden** ebenfalls einschalten. Bei Wert-Berechnung kannst du diese Option wieder ausschalten, wenn du das Rechenwidget sehen möchtest.
+
+## Eine Quelle verbinden
+
+1. Wähle bei einem Widget mit Entitäts- oder Vorschauwert unter **Datenfluss** den **Ausgangs-Dockpunkt**, standardmäßig rechts Mitte. Aktiviere diesen Punkt unter **Andockpunkte**. Widgets ohne verfügbaren Wert, etwa reine Rahmen, liefern keinen Wert.
+2. Füge eine **Wert-Verbindung** ein: Start an den Ausgang der Quelle, Ziel an den Eingang des Konverters oder Empfängers. Die Pfeilrichtung beschreibt den Wertfluss; Linienanimation ist ausgeschaltet.
+3. Öffne am Konverter **Konvertierung bearbeiten**, wähle Ein- und Ausgang und aktiviere **Gewählte Ein-/Ausgangs-Dockpunkte aktivieren**. Neue Dockpunkte bleiben bis zur ausdrücklichen Aktivierung aus.
+4. Wähle die Konvertierung und prüfe die Vorschau. Für einen normalen Empfänger aktiviere unter **Datenfluss** **Wert vom Datenfluss übernehmen** und dessen Eingangs-Dockpunkt. Number kann alternativ seine bestehende numerische Dockpunktübernahme verwenden; dort werden mehrere Zahlenwerte weiterhin summiert.
+
+Ein Konverter und die allgemeine Datenflussübernahme erlauben **genau eine Quelle je Eingang**. Mehrere ausgehende Verbindungen dürfen dasselbe Ergebnis an unterschiedliche Empfänger verteilen. Der Konverter summiert keine Texte oder Schaltzustände. LineBox Math behält seine eigene Summierung numerischer Mehrfachbelegungen.
+
+## Konverterdialog
+
+![Konverterdialog mit Radiobuttons und Vorschau für Temperaturtext zu Zahl](/images/grafik-visual-studio/dataflow-converter-dialog.png)
+
+| Konvertierung | Einstellungen und Ergebnis |
+| --- | --- |
+| Zahl → Text | 0–10 Nachkommastellen, Dezimalpunkt oder -komma, optionale Einheit |
+| Text → Zahl | Dezimalpunkt/-komma und angehängte Einheit erkennen; Ausgabe als Zahl |
+| Schaltzustand → Zahl | Ein → 1, Aus → 0; optional invertieren |
+| Zahl → Schaltzustand | Ein bei Wert ≥ Schwellwert, ansonsten Aus; optional invertieren |
+| Schaltzustand → Text | Eigene Texte für Ein und Aus; optional invertieren |
+| Schaltzustand normalisieren | `on/off`, `true/false` oder `1/0` einlesen; Ausgabe als echte Booleans, Zahlen oder `on/off`-Text |
+| Zahl skalieren | `Wert * Faktor + Offset`, optional Zieleinheit; z. B. °C → °F mit Faktor 1,8 und Offset 32 |
+
+Groß-/Kleinschreibung und äußere Leerzeichen werden bei Schaltzuständen toleriert. Unbekannte Zustände werden gemeldet. Nur die zum gewählten Modus passenden Einstellungen werden angezeigt. Änderungen werden erst mit **Anwenden** übernommen und unterstützen Rückgängig.
+
+## Einheiten und Fehler
+
+`23,5 °C` wird in Zahlenwert **23,5** und Einheit **°C** getrennt. Bei einem reinen Wert wird die HA-Einheit aus `unit_of_measurement` beziehungsweise die Widget-Einheit übernommen. Fehlt beides, kannst du eine Fallback-Einheit eintragen. Eine bereits im Text vorhandene Einheit hat Vorrang und wird bei Textausgabe nicht doppelt angehängt. **Einheit im Text mit ausgeben** ist optional. Einheitenerkennung allein führt keine Umrechnung durch; dafür wählst du ausdrücklich **Zahl skalieren** mit passendem Faktor, Offset und Ziel.
+
+Leere Werte, `unknown`, `unavailable`, ungültige Zahlen, unbekannte Schaltzustände, inaktive Eingänge, Mehrfachquellen und Rückkopplungen erzeugen einen Fehler. Standardmäßig wird dann kein Wert ausgegeben. **Ersatzwert bei Fehler aktivieren** ist zunächst aus und gibt bei Aktivierung den eingetragenen Ersatztext aus; das ist keine automatische Zahl- oder Boolean-Konvertierung.
+
+Beispiel: Temperaturanzeige `23,5 °C` → Konverter **Text → Zahl** → Wert-Berechnung `A * 2` → Number **47,0**. In der Runtime sind nur Temperaturanzeige und Number sichtbar. Ergebnisse werden intern weitergegeben und nicht automatisch in Home Assistant gespeichert. Ein einfacher Schwellwert hat derzeit keine Hysterese; er wechselt direkt an der Grenze.

@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **48 widgets in three groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **51 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired widget names remain in English regardless of the interface language. Former German palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -85,6 +85,14 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Widget | Current behavior |
 | --- | --- |
 | State Element | Up to five states, each with an icon, image, text or HTML; switch, button, display-only and navigation modes. Reads a bound entity and can write to suitable entities in switch/button mode. |
+
+## HA Grafik – Data flow (3)
+
+| Widget | Current functionality |
+| --- | --- |
+| [Value connection](./datenfluss) | Directed internal value transfer; simple editor line, invisible in runtime. |
+| [Value converter](./datenfluss) | Converts numbers, text, switch states and units with a dedicated dialog and type preview; invisible in runtime. |
+| [Value calculation](./datenfluss) | Same four calculations as SVG LineBox Math; invisible in runtime by default. |
 
 ## HA Grafik – Spezial (3)
 

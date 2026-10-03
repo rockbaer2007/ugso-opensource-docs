@@ -4,6 +4,8 @@ title: SVG LineBox Math
 
 # SVG LineBox Math
 
+From **0.1.141**, **Hide in runtime** under Calculation hides only the display; all calculations and output handoffs remain active. **Value calculation** in [HA Grafik – Data flow](./datenfluss) uses the same logic with this option enabled by default. Value converters and invisible Value connections can supply its inputs.
+
 From Studio **0.1.138**, the enlarged dialog contains **four independent calculations**. Each has its own enabled state, formula or average mode, output list and result preview. Existing projects retain their previous calculation and outputs as calculation 1; calculations 2–4 and all internal input handoffs start disabled.
 
 ## Size, icon and colors
