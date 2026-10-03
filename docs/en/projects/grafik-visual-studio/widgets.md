@@ -86,6 +86,14 @@ From **0.1.144**, **Test value (editor only)** selects an index from the availab
 
 Separate entries with semicolons or newlines: `Test;test2;test3` provides indices 0, 1 and 2. Commas remain part of the text: `Test, test2, test3` is one entry. Write a semicolon inside an HTML entry as `§§`, for example in a CSS style or HTML entity. Prepended and appended HTML surround the selected entry; HTML follows Studio sanitization rules. Missing, invalid or out-of-range states display no list entry. New ValueList HTML widgets start with all CSS groups disabled; existing settings are preserved.
 
+### ValueList HTML Style
+
+From **0.1.145**, individual **Value [0]** through **Value [n]** sections provide HTML content and a CSS style. The configured count is the highest index: `2` provides three entries and `0` provides one. Studio supports up to index 50. Legacy list fields remain available as fallback values.
+
+**Test value (editor only)** selects an entry for preview only. Runtime reads the index from the bound entity or unbound preview state; `true` and `false` correspond to 1 and 0. This is an index, not a measurement range: with entries `10`, `20`, `30`, state `2` displays `30`; state `30` is outside a list ending at index 2 and displays no entry.
+
+Entry styles also apply to prepended and appended HTML. Use complete CSS declarations, such as `font-weight: bold; color: #29c8b5; font-size: 20px;`. Plain `bold` has no effect. Studio accepts its approved presentation styles without external CSS URLs. General CSS groups start disabled on new widgets; individual entry styles remain independently usable.
+
 ## HA Grafik – Interaktiv (1)
 
 | Widget | Current behavior |

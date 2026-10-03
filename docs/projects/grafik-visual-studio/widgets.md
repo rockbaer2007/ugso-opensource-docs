@@ -86,6 +86,14 @@ Ab **0.1.144** wählt **Testwert (nur Editor)** einen Index aus den vorhandenen 
 
 Trenne Einträge mit Semikolon oder Zeilenumbrüchen: `Test;test2;test3` ergibt die Indizes 0, 1 und 2. Kommas bleiben Teil des Textes: `Test, test2, test3` ist ein Eintrag. Schreibe ein Semikolon innerhalb eines HTML-Eintrags als `§§`, etwa in einem CSS-Stil oder einer HTML-Entität. **HTML voranstellen** und **HTML anhängen** umgeben den ausgewählten Eintrag; HTML wird nach den Studio-Regeln bereinigt. Fehlende, ungültige oder außerhalb der Liste liegende Zustände zeigen keinen Listeneintrag. Neue ValueList-HTML-Widgets haben alle CSS-Bereiche standardmäßig deaktiviert; bestehende Einstellungen bleiben erhalten.
 
+### ValueList HTML Style
+
+Ab **0.1.145** bietet das Widget einzelne Bereiche **Wert [0]** bis **Wert [n]** mit HTML-Inhalt und zugehörigem CSS-Stil. **Werteanzahl bis** ist der höchste Index: `2` ergibt drei Einträge, `0` genau einen. Studio erlaubt maximal Index 50. Vorhandene Listenfelder aus älteren Projekten dienen weiterhin als Fallback.
+
+**Testwert (nur Editor)** wählt einen Eintrag ausschließlich für die Vorschau. Die Runtime liest den Index aus der gebundenen Entität oder dem ungebundenen Vorschauzustand; `true` und `false` entsprechen 1 und 0. Der Index ist kein Messwertbereich: Bei Einträgen `10`, `20`, `30` zeigt Zustand `2` den Text `30`; Zustand `30` liegt außerhalb einer Liste bis Index 2 und zeigt keinen Eintrag.
+
+Der Stil gilt auch für das vorangestellte und angehängte HTML. Verwende vollständige CSS-Deklarationen, zum Beispiel `font-weight: bold; color: #29c8b5; font-size: 20px;`. `bold` allein hat keine Wirkung. Studio akzeptiert die freigegebenen Darstellungsstile ohne externe CSS-URLs. Allgemeine CSS-Bereiche sind bei neuen Widgets deaktiviert; die Stile der einzelnen Werte bleiben davon unabhängig nutzbar.
+
 ## HA Grafik – Interaktiv (1)
 
 
