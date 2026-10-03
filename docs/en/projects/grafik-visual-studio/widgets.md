@@ -90,6 +90,12 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 
 Selecting a row writes its JSON to **Ausgewählt ID** (`input_text`) and displays `_detail` in **Detailed widget**. Acknowledgment buttons write `_ack_id` or the row JSON to **Bestätigung ID**. HA targets must be available, compatible number/text helpers; their type and length limits still apply. The editor does not write HA values.
 
+### Bool Select
+
+The dropdown has two entries configured through **Text bei 'false'** and **Text bei 'true'**. It reads Boolean and numeric states: `0` is false, other numbers are true. HA states `off`/`on` are normalized accordingly. Prepended/appended HTML and autofocus are supported; autofocus applies only in the runtime.
+
+A selection writes `0` or `1` to a compatible `input_number` or `input_text` helper. For `switch`, `light`, and `input_boolean`, it sends the corresponding HA switch command. Unsupported or unavailable targets are disabled. Without an entity, a local runtime preview is possible; the editor does not write values. New widgets start with empty text/HTML fields, autofocus disabled, and all CSS groups disabled. Existing captions are preserved.
+
 ### Bool Checkbox
 
 The checkbox displays the bound Home Assistant entity state. In the runtime it can control `switch`, `light`, and `input_boolean`; it is disabled without an available, supported entity. In the editor it is a preview only.

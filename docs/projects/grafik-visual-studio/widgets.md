@@ -90,6 +90,12 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 
 Eine Zeilenauswahl schreibt das Zeilenobjekt als JSON in **Ausgewählt ID** (`input_text`) und zeigt `_detail` im **Detailed widget**. Bestätigungsbuttons schreiben `_ack_id` oder das Zeilenobjekt in **Bestätigung ID**. HA-Ziele müssen verfügbare, passende Zahlen-/Texthelfer sein; deren Typ- und Längenlimits gelten weiterhin. Im Editor werden keine HA-Werte geschrieben.
 
+### Bool Select
+
+Das Auswahlfeld hat zwei Einträge mit **Text bei 'false'** und **Text bei 'true'**. Es liest boolesche und numerische Zustände: `0` gilt als false, andere Zahlen als true. HA-Zustände `off`/`on` werden passend zugeordnet. **HTML voranstellen**, **HTML anhängen** und **Autofokus** sind vorhanden; Autofokus gilt nur in der Runtime.
+
+Eine Auswahl schreibt `0` oder `1` in einen passenden `input_number`- oder `input_text`-Helfer. Bei `switch`, `light` und `input_boolean` wird ein entsprechender HA-Schaltbefehl gesendet. Ungeeignete oder nicht verfügbare Ziele sind gesperrt. Ohne Entität ist eine lokale Runtime-Vorschau möglich; im Editor wird nicht geschrieben. Neue Widgets starten mit leeren Text-/HTML-Feldern, deaktiviertem Autofokus und deaktivierten CSS-Bereichen. Bestehende Beschriftungen bleiben erhalten.
+
 ### Bool Checkbox
 
 Die Checkbox zeigt den Zustand der gebundenen Home-Assistant-Entität. In der Runtime kann sie `switch`, `light` und `input_boolean` schalten; ohne verfügbare, passende Entität ist sie gesperrt. Im Editor dient sie nur als Vorschau.
