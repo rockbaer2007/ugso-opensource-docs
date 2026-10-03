@@ -10,6 +10,18 @@ Ab Studio **0.1.138** enthält der vergrößerte Dialog **vier getrennte Rechnun
 
 ![Erweiterter SVG-LineBox-Math-Dialog mit separaten Rechnungen und interner Übergabe an Eingang C](/images/grafik-visual-studio/linebox-math-four-dialog.png)
 
+Der aktuelle Screenshot zeigt die getrennten Rechnungen und die aktivierte interne Übergabe an C. So kann Rechnung 2 das Ergebnis von Rechnung 1 direkt weiterverarbeiten.
+
+## Berechnung auf dem Display-Computer
+
+Die Berechnungen laufen im Browser des jeweiligen Display-Computers. Home Assistant liefert die Entitätswerte; SVG LineBox Math berechnet daraus die Ergebnisse und gibt sie innerhalb der Visualisierung an andere Widgets weiter. Auch verkettete Rechnungen mit mehreren Ein- und Ausgängen benötigen dafür weder zusätzliche HA-Entitäten noch HA-Automationen.
+
+Damit übernimmt der Display-Computer die Rechenarbeit und die Darstellung. Jedes geöffnete Display berechnet seine eigene Visualisierung. Home Assistant bleibt für die Verbindung und den Austausch der Entitätswerte zuständig; diese Kommunikation verursacht weiterhin Last. Die lokalen Math-Ergebnisse werden durch die interne Dockpunktübergabe nicht automatisch in Home Assistant gespeichert.
+
+Berechnungen stehen nur zur Verfügung, solange die Visualisierung geöffnet ist und ihr Browser ausgeführt wird. Für Abläufe, die auch bei ausgeschaltetem Display zuverlässig weiterlaufen sollen, bleibt eine serverseitige Berechnung oder HA-Automation erforderlich.
+
+## Ausgänge konfigurieren
+
 Stelle zuerst oben die Rollen der Anschlüsse ein. Trage dann je aktivierter Rechnung unter **Ausgänge (z. B. E,F;H)** die gewünschten Buchstaben ein. Komma, Semikolon und Leerzeichen sind als Trennzeichen erlaubt; Kleinbuchstaben werden ebenfalls erkannt. `E,F;H` ordnet dasselbe Ergebnis den drei Ausgängen E, F und H zu. Jeder dieser Punkte muss ein aktiver **Ausgang** sein. Ist ein Buchstabe als Eingang eingerichtet, erscheint ein Hinweis; eine widersprüchliche Zuordnung lässt sich nicht übernehmen. Ein Ausgang darf nur einer Rechnung zugeordnet sein. Ein Ausgang ohne Zuordnung liefert keinen Wert.
 
 ## Ergebnisse intern weiterverarbeiten

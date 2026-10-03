@@ -10,6 +10,18 @@ From Studio **0.1.138**, the enlarged dialog contains **four independent calcula
 
 ![Expanded SVG LineBox Math dialog with separate calculations and internal handoff to input C](/images/grafik-visual-studio/linebox-math-four-dialog.png)
 
+The current screenshot shows separate calculations and an enabled internal handoff to C. Calculation 2 can therefore process the result of calculation 1 directly.
+
+## Calculation on the display computer
+
+Calculations run in the browser of each display computer. Home Assistant supplies entity values; SVG LineBox Math calculates results and passes them to other widgets within the visualization. Chained calculations with multiple inputs and outputs require neither additional HA entities nor HA automations for this processing.
+
+The display computer handles calculation and rendering. Each open display calculates its own visualization. Home Assistant still handles the connection and entity-value exchange, so this communication continues to generate load. Internal docking handoffs do not automatically store local Math results in Home Assistant.
+
+Calculations are available only while the visualization is open and its browser is running. Processes that must continue reliably when the display is switched off still require a server-side calculation or HA automation.
+
+## Configuring outputs
+
 First configure the port roles at the top. For each enabled calculation, enter the destination letters under **Outputs (e.g. E,F;H)**. Commas, semicolons and whitespace separate the letters; lowercase letters are also accepted. `E,F;H` assigns the same result to outputs E, F and H. Each port must be an active **Output**. An input letter produces a warning, and conflicting assignments cannot be applied. An output can belong to only one calculation. Unassigned outputs provide no value.
 
 ## Reusing results internally
