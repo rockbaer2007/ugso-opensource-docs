@@ -4,6 +4,8 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
+Zusätzlich nachinstallierbar ab 0.1.187: [Wetter und Heizung – Allgemeines Diagramm](weather-heating.md). Das optionale Paket zählt nicht zu den 74 integrierten Widgets und erhält automatisch eine freie Set-Farbe.
+
 Der aktuelle Widget-Katalog enthält **74 Einträge in fünf Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive Widgets wie Terminkalender und Schieberegler verwenden übersetzte Palettennamen. Frühere Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.

@@ -3,11 +3,21 @@ title: Widget package interface
 description: Create and install local widget packages for HA Grafik Visual Studio.
 ---
 
-# Widget package interface 0.1
+# Widget package interface
+
+From Studio 0.1.187, **interface 0.2** adds declarative charts alongside 0.1 text widgets. The optional [Weather and Heating](weather-heating.md) set uses this extension. External sets automatically receive an unused palette color separated from existing hues. Assignments remain in this browser across reloads, removal and reinstallation; Basic and built-in sets retain their colors.
+
+## Interface 0.1: text
 
 Starting with Studio 0.1.89, you can install ZIP-based packages ending in `.wg`. Existing `.wg.zip` files remain supported; the extension and manifest must both identify a widget package.
 
 Under **Settings → Widget packages**, you can install a local `*.wg.zip`. Interface 0.1 accepts validated, declarative text widgets. After reloading the app, they appear as a separate set in the palette and work in both editor and runtime. Installation does not execute package code.
+
+## Interface 0.2: chart
+
+The manifest uses `apiVersion: "0.2"` and `render: {"kind":"chart","valueKey":"headline"}`. Declare `headline` as a text field with a default. Instances save definition version 0.2. Manifest and validated icons remain the only allowed package files; Studio uses its own SVG renderer.
+
+The fixed property keys and limits are listed in the [chart contract](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/widget-rules.md#widget-paket-schnittstelle-02). It supports up to ten JSON series, line/bar charts, left/right axes, time/category axes and read-only HA state/attribute bindings. Executable formatters and write actions are excluded. Existing 0.1 text packages remain supported.
 
 ## Build a package
 

@@ -3,7 +3,11 @@ title: Widget-Paket-Schnittstelle
 description: Lokale Widget-Pakete für HA Grafik Visual Studio erstellen und installieren.
 ---
 
-# Widget-Paket-Schnittstelle 0.1
+# Widget-Paket-Schnittstelle
+
+Ab Studio 0.1.187 ergänzt **Schnittstelle 0.2** die Text-Widgets aus 0.1 um deklarative Diagramme. Das nachinstallierbare Set [Wetter und Heizung](weather-heating.md) nutzt diese Erweiterung. Externe Sets erhalten automatisch eine noch nicht belegte Palettenfarbe mit Abstand zu vorhandenen Farbtönen. Die Zuordnung bleibt in diesem Browser nach Neuladen, Entfernen und Neuinstallation erhalten; Basis und integrierte Sets behalten ihre Farben.
+
+## Schnittstelle 0.1: Text
 
 Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.wg` installieren. Bisherige `.wg.zip`-Dateien bleiben nutzbar; Endung und Manifest müssen zur Widget-Paketart passen.
 
@@ -37,6 +41,12 @@ Das ZIP enthält eine UTF-8-Datei `manifest.json` im Wurzelverzeichnis und optio
 `valueKey` bezeichnet ein bearbeitbares Text- oder Zahlenfeld. Für Eigenschaften sind `text`, `number`, `checkbox`, `color`, `range` und `select` vorgesehen. Jede Eigenschaft braucht einen passenden Standardwert in `defaults`. Die gemeinsamen Bereiche **Generell** und **Sichtbarkeit** ergänzt das Studio selbst. Ein Paket oder Widget kann zusätzlich `"icon": "icons/name.svg"` beziehungsweise `.png` angeben; die Bilddatei muss dann im ZIP liegen. Ohne eigenes Widget-Bild erscheint das integrierte SVG-Textsymbol.
 
 Das ZIP darf höchstens 2 MB, das Manifest 200 KB und jedes Bild 50 KB groß sein. PNG-Bilder sind auf 1024 × 1024 Pixel begrenzt; SVG-Dateien werden auf passive Formen und Attribute geprüft. Paket- und Widget-Bilder dürfen SVG oder PNG sein, während die Aktionsbuttons des Studios ihre SVG-Symbole behalten.
+
+## Schnittstelle 0.2: Diagramm
+
+Das Manifest verwendet `apiVersion: "0.2"` und `render: {"kind":"chart","valueKey":"headline"}`. `headline` ist ein deklariertes Textfeld mit Standardwert. Die Instanz speichert Definitionsversion 0.2. Manifest und Icons bleiben die einzigen zulässigen Paketdateien; das Studio zeichnet mit seinem eigenen SVG-Renderer.
+
+Die festen Diagrammschlüssel und Grenzen stehen im [Diagrammvertrag](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/widget-rules.md#widget-paket-schnittstelle-02). Unterstützt werden bis zu zehn JSON-Reihen, Linien/Balken, linke/rechte Achse, Zeit-/Kategorieachse und lesende HA-Zustands-/Attributbindungen. Ausführbare Formatierer und Schreibaktionen sind nicht enthalten. Bestehende Text-Pakete aus 0.1 bleiben nutzbar.
 
 ## Installieren und verwalten
 
