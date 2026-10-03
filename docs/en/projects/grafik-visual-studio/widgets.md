@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **62 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **63 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired Basic widgets retain their English names. Interactive widgets such as Event Calendar and Interactive Slider use translated palette names. Former palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -12,7 +12,7 @@ VIS2-inspired Basic widgets retain their English names. Interactive widgets such
 
 From Studio 0.1.135, technical widget names stay in the editor interface. The canvas and runtime show only custom captions; new widgets start with an empty title. This central policy also covers future widget packages and LineBox. Loading an older project removes previous stock titles once. Custom captions remain; you can then explicitly enter a former stock caption again.
 
-**Writable widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG, and Bool HTML (control) can control bound `switch`, `light`, or `input_boolean` entities. Bulb on/off controls those entities or sets an `input_number` helper to its configured minimum/maximum. Slider writes only `input_number`; Input val writes `input_number` or `input_text`. Note writes from its text dialog to an `input_text` helper without an attribute selection. In switch mode, Universal Element writes its false/true values; in button mode it writes the next configured value to a suitable switchable entity or number/text helper. Controls are disabled for unsupported or unavailable entities. Checkbox and Interactive Switch write their configured pairs to compatible switches or numeric/text helpers. Other widgets do not write HA state.
+**Writable widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG, and Bool HTML (control) can control bound `switch`, `light`, or `input_boolean` entities. Bulb on/off controls those entities or sets an `input_number` helper to its configured minimum/maximum. Slider, Interactive Slider and Radial Slider write only `input_number`; Input val writes `input_number` or `input_text`. Note writes from its text dialog to an `input_text` helper without an attribute selection. In switch mode, Universal Element writes its false/true values; in button mode it writes the next configured value to a suitable switchable entity or number/text helper. Controls are disabled for unsupported or unavailable entities. Checkbox and Interactive Switch write their configured pairs to compatible switches or numeric/text helpers. Other widgets do not write HA state.
 
 ## HA Grafik – Basis (46)
 
@@ -367,7 +367,7 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (9)
+## HA Grafik – Interaktiv (10)
 
 | Widget | Current behavior |
 | --- | --- |
@@ -380,6 +380,26 @@ New widgets use **300 × 200 pixels** with only **CSS General** enabled. Central
 | Marquee | Static text or HA state as a continuous ticker with direction, speed and hover pause. |
 | Value List | Split text into list items with eight bullet types, numbering, custom characters and spacing. |
 | Interactive Switch | Custom false/true pairs and state labels; independent track/thumb styling and inheritance. |
+| Radial Slider | Numeric dial with start/end angles, value and label, plus independent track/thumb styling. |
+
+### Radial Slider
+
+From **0.1.181**, **Radial Slider** is available under **Interactive**. Defaults are **200 × 200 px**, range **0–100**, step **1**, start angle **225°** and end angle **135°**. **0° is at the top**; the arc runs clockwise, covering **270°** by default. Equal angles create a full circle; **270° to 90°** creates a top semicircle.
+
+- **General:** HA entity, minimum, maximum, step, start/end angles, show value, show label, label and read-only. Without an entity, the preview value is the initial value.
+- **CSS Radial Slider – Track:** track color, active color, width **1–50 px**, shadow color, X/Y offsets and blur.
+- **CSS Radial Slider – Thumb:** color, size **1–50 px** and its own shadow.
+- **CSS Radial Slider – Value:** value size **8–100 px**, value color, label size **8–50 px** and label color. Numbers shrink when space is limited; long labels use ellipsis. The full text remains the slider's accessible name.
+- **From widget:** track and thumb can inherit independently from another radial slider. Value display, label and numeric range remain local. Cycles terminate safely; copying related widgets remaps references.
+- **Interaction:** drag or use arrow keys for one step, Page Up/Down for ten steps and Home/End for minimum/maximum. The arc gap selects the nearest endpoint. Cancelling a drag restores the original value without writing.
+- **HA:** only available `input_number` helpers are written, on release or a keypress. Match range and step to the helper. Sensors and read-only mode support display only; missing values show an em dash. Unbound changes stay local. The editor never writes.
+
+All settings and style references survive project, widget and package exports.
+
+![Radial sliders with the default arc, a decimal value, a semicircle and a read-only full circle](/images/grafik-visual-studio/radial-slider.png)
+
+Functional reference: [inventwo Radial Slider for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/radial-slider-widget.md). Studio uses its own implementation.
+
 
 ### Interactive Switch
 

@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **62 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **63 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive Widgets wie Terminkalender und Schieberegler verwenden übersetzte Palettennamen. Frühere Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -12,7 +12,7 @@ Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive 
 
 Ab Studio 0.1.135 bleibt der technische Widget-Name in der Editoroberfläche. Auf der Arbeitsfläche und in der Runtime erscheinen nur eigene Beschriftungen; neue Widgets starten ohne voreingestellten Titel. Das gilt zentral auch für zukünftige Widget-Pakete und die LineBox. Beim Laden älterer Projekte werden bisherige Standardtitel einmal entfernt. Individuelle Beschriftungen bleiben erhalten; anschließend kannst du auch einen früheren Standardtext ausdrücklich wieder eintragen.
 
-**Schreibfähige Widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG und Bool HTML (control) schalten gebundene `switch`-, `light`- oder `input_boolean`-Entitäten. Bulb on/off schaltet diese Entitäten oder setzt einen `input_number`-Helfer auf sein konfiguriertes Minimum/Maximum. Slider schreibt nur `input_number`; Input val schreibt `input_number` oder `input_text`. Note schreibt im Notizdialog an einen `input_text`-Helfer ohne Attributauswahl. Universal Element schreibt im Schaltermodus seine false-/true-Werte und im Tastermodus den nächsten konfigurierten Wert an eine passende schaltbare Entität oder einen Zahlen-/Texthelfer. Bei einer unpassenden oder nicht verfügbaren Entität ist die Bedienung gesperrt. Checkbox und Schalten schreiben ihre konfigurierten Wertepaare an passende Schalter oder Zahlen-/Texthelfer. Die übrigen Widgets schreiben keinen HA-Zustand.
+**Schreibfähige Widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG und Bool HTML (control) schalten gebundene `switch`-, `light`- oder `input_boolean`-Entitäten. Bulb on/off schaltet diese Entitäten oder setzt einen `input_number`-Helfer auf sein konfiguriertes Minimum/Maximum. Slider, Schieberegler und Radialer Schieberegler schreiben nur `input_number`; Input val schreibt `input_number` oder `input_text`. Note schreibt im Notizdialog an einen `input_text`-Helfer ohne Attributauswahl. Universal Element schreibt im Schaltermodus seine false-/true-Werte und im Tastermodus den nächsten konfigurierten Wert an eine passende schaltbare Entität oder einen Zahlen-/Texthelfer. Bei einer unpassenden oder nicht verfügbaren Entität ist die Bedienung gesperrt. Checkbox und Schalten schreiben ihre konfigurierten Wertepaare an passende Schalter oder Zahlen-/Texthelfer. Die übrigen Widgets schreiben keinen HA-Zustand.
 
 ## HA Grafik – Basis (46)
 
@@ -367,7 +367,7 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (9)
+## HA Grafik – Interaktiv (10)
 
 
 | Widget | Aktuelle Funktion |
@@ -381,6 +381,26 @@ Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem *
 | Lauftext | Statischer Text oder HA-Zustand als fortlaufender Ticker mit Richtung, Geschwindigkeit und Hover-Pause. |
 | Werteliste | Text in einzelne Listeneinträge aufteilen; acht Zeichenarten, Nummerierung, eigene Zeichen und Abstände. |
 | Schalten | Eigene false-/true-Werte und Zustandstexte; getrennte Spur-/Daumenstile mit Stilübernahme. |
+| Radialer Schieberegler | Zahlenregler mit Start-/Endwinkel, Wert und Bezeichnung sowie eigenen Spur-/Daumenstilen. |
+
+### Radialer Schieberegler
+
+Ab **0.1.181** steht unter **Interaktiv** der **Radiale Schieberegler** bereit. Neue Widgets starten mit **200 × 200 px**, Bereich **0–100**, Schritt **1**, Startwinkel **225°** und Endwinkel **135°**. **0° liegt oben**; der Bogen läuft im Uhrzeigersinn, standardmäßig über **270°**. Gleiche Winkel ergeben einen Vollkreis; **270° bis 90°** ergibt einen oberen Halbkreis.
+
+- **Allgemein:** HA-Entität, Minimum, Maximum, Schritt, Start-/Endwinkel, Wert anzeigen, Bezeichnung anzeigen, Bezeichnung und Schreibschutz. Ohne Entität dient der Vorschauwert als Ausgangswert.
+- **CSS Radialregler – Spur:** Spurfarbe, aktive Farbe, Breite **1–50 px** sowie Schattenfarbe, X/Y-Versatz und Unschärfe.
+- **CSS Radialregler – Daumen:** Farbe, Größe **1–50 px** und eigener Schatten.
+- **CSS Radialregler – Wert:** Wertgröße **8–100 px**, Wertfarbe, Bezeichnungsgröße **8–50 px** und Bezeichnungsfarbe. Zahlen werden bei Platzmangel verkleinert; lange Bezeichnungen gekürzt. Der vollständige Text bleibt als zugänglicher Name des Reglers erhalten.
+- **Vom Widget:** Spur und Daumen können unabhängig von einem anderen Radialregler übernommen werden. Wertanzeige, Bezeichnung und Wertebereich bleiben lokal. Zyklen werden abgefangen; gemeinsame Kopien erhalten passende neue Referenzen.
+- **Bedienung:** Ziehen oder Pfeiltasten ändern um einen Schritt, Bild auf/ab um zehn Schritte, Pos1/Ende wählen Minimum/Maximum. Die Bogenlücke wählt den näheren Endwert. Ein abgebrochener Ziehvorgang stellt den Ausgangswert wieder her und schreibt nichts.
+- **HA:** Nur verfügbare `input_number`-Helfer werden beschrieben, beim Loslassen beziehungsweise Tastendruck. Grenzen und Schritt müssen zum Helfer passen. Sensoren und Schreibschutz erlauben ausschließlich Anzeige; fehlende Werte erscheinen als Gedankenstrich. Ohne Entität bleiben Änderungen lokal. Im Editor wird nichts geschrieben.
+
+Alle Einstellungen und Stilreferenzen bleiben in Projekt-, Widget- und Paketexporten erhalten.
+
+![Radialregler mit Standardbogen, Dezimalwert, Halbkreis und schreibgeschütztem Vollkreis](/images/grafik-visual-studio/radial-slider.png)
+
+Funktionsreferenz: [inventwo Radial Slider für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/radial-slider-widget.md). Studio verwendet eine eigene Umsetzung.
+
 
 ### Schalten
 
