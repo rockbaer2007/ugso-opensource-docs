@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Zusätzlich nachinstallierbar: [Wetter und Heizung](weather-heating.md) mit **Allgemeines Diagramm** (ab 0.1.187), **Balkendiagramm für zwei Wochen** (ab 0.1.188), **Wetter-Widget** (ab 0.1.189) und **Übersicht über Heizräume** (ab 0.1.190). Das optionale Paket zählt nicht zu den 74 integrierten Widgets und erhält automatisch eine freie Set-Farbe.
+Zusätzlich nachinstallierbar: [Wetter und Heizung](weather-heating.md) mit **Allgemeines Diagramm** (ab 0.1.187), **Balkendiagramm für zwei Wochen** (ab 0.1.188), **Wetter-Widget** (ab 0.1.189), **Übersicht über Heizräume** (ab 0.1.190) und **METEORED-Wetter-Widget** (ab 0.1.191). Das optionale Paket zählt nicht zu den 74 integrierten Widgets und erhält automatisch eine freie Set-Farbe.
 
 Der aktuelle Widget-Katalog enthält **74 Einträge in fünf Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 

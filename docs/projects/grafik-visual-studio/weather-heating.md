@@ -5,7 +5,7 @@ description: Das optionale Diagramm-Widget-Paket installieren und konfigurieren.
 
 # Wetter und Heizung
 
-Ab **Studio 0.1.190** kannst du das Paket **Wetter und Heizung 1.3.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget** und **Übersicht über Heizräume**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
+Ab **Studio 0.1.191** kannst du das Paket **Wetter und Heizung 1.4.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget**, **Übersicht über Heizräume** und **METEORED-Wetter-Widget**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
 
 ## Installieren
 
@@ -13,7 +13,7 @@ Lade [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addo
 
 ## Diagramm konfigurieren
 
-Ein installiertes Paket 1.0.0, 1.1.0 oder 1.2.0 kannst du über denselben Import auf 1.3.0 aktualisieren. Vorhandene Diagramme und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
+Ein installiertes Paket 1.0.0 bis 1.3.0 kannst du über denselben Import auf 1.4.0 aktualisieren. Vorhandene Widgets und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
 
 Unter **Allgemein** findest du Überschrift, Anzahl der Serien (1–10), Legende und Darstellung ohne Karte. Die erste Reihe kann die allgemeine Entität verwenden. Jede Gruppe **Daten [N]** bietet eine eigene Entität, ein optionales Attribut, Vorschau-JSON, X-/Y-Schlüssel, Name, Einheit, Farbe, Linie/Balken, linke/rechte Wertachse und Differenzberechnung. Mit einer Entitätsbindung liest das Diagramm ausschließlich deren Zustand oder Attribut. Fehlen Live-Daten, wird kein Vorschau-JSON eingesetzt. Es schreibt keine HA-Zustände.
 
@@ -70,5 +70,15 @@ Das Widget erzeugt keine Raumdaten oder Heizprofile und steuert keine Thermostat
 **Allgemein → Ohne Karte**, **Farben → Überschriftenfarbe**, Größe und die gemeinsamen CSS-Einstellungen sind verfügbar. Tabellen, Textformatierung, Zellspannen und ausgewählte Farben/Abstände werden übernommen. Skripte, Ereignishandler, Formulare, Einbettungen und externe Ressourcen werden entfernt. Eingaben sind auf 200.000 Zeichen, die Darstellung auf 5.000 Knoten und 40 Verschachtelungsebenen begrenzt. Große Tabellen scrollen innerhalb des Widgets. Alle Einstellungen bleiben im Widget-/Projektexport erhalten.
 
 ![Heizraumübersicht mit Vorschautabelle](/images/grafik-visual-studio/weather-heating-rooms.png)
+
+## METEORED-Wetter-Widget
+
+Ab **0.1.191** findest du unter **Allgemein** die Optionen **Ohne Karte**, **Meteored-Widget-ID** und **Neuladen aktivieren**. Erstelle dein Widget bei [Meteored / daswetter.com](https://www.daswetter.com/widget/) und trage ausschließlich dessen ID ein, keinen vollständigen HTML-Code und keine URL. Erlaubt sind 1–128 Buchstaben, Ziffern, Unterstriche oder Bindestriche. Gib beim Anbieter die Domain frei, unter der du die Runtime tatsächlich aufrufst.
+
+Die Runtime lädt den offiziellen Loader `https://api.meteored.com/widget/loader/ID` in einem separaten Frame. Internetzugriff und eine gültige Anbieter-Konfiguration sind erforderlich. **Neuladen aktivieren** ist standardmäßig eingeschaltet und lädt einmal pro Stunde neu. Ausschalten beendet den Timer; ID-Wechsel und Entfernen räumen den alten Timer auf. Normale Runtime-Neuzeichnungen starten den Frame und seinen Timer nicht erneut. Im Editor siehst du eine Konfigurationsvorschau; eine leere oder ungültige ID lädt nichts.
+
+Der Frame hat `sandbox="allow-scripts"`; die Loader-Seite erhält dieselbe Sandbox über ihren HTTP-Header. Meteored-Code läuft damit ohne Zugriff auf den Studio-DOM. Das Widget benötigt keine HA-Entität und übernimmt Standort, Sprache und Gestaltung aus deiner Meteored-Konfiguration. Alle drei Optionen sowie Größe und CSS bleiben im Export erhalten. Eine vollständige Prüfung der Anbieteranzeige benötigt deine echte Widget-ID und freigegebene Domain.
+
+![METEORED-Konfiguration im Editor](/images/grafik-visual-studio/weather-heating-meteored.png)
 
 Der reproduzierbare Paketbau und das geprüfte Manifest stehen im [Quellcode](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/weather-heating). Der [Paketvertrag](widget-pakete.md) beschreibt Schnittstelle 0.2.

@@ -5,7 +5,7 @@ description: Install and configure the optional chart widget package.
 
 # Weather and Heating
 
-From **Studio 0.1.190**, you can install **Weather and Heating 1.3.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget** and **Heating Rooms Overview**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
+From **Studio 0.1.191**, you can install **Weather and Heating 1.4.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview** and **METEORED Weather Widget**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
 
 ## Install
 
@@ -13,7 +13,7 @@ Download [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-
 
 ## Configure the chart
 
-An installed 1.0.0, 1.1.0 or 1.2.0 package can be updated to 1.3.0 through the same import. Existing charts and saved project values remain intact. Updates may only add widgets; changes to existing definitions and downgrades are rejected.
+An installed 1.0.0 through 1.3.0 package can be updated to 1.4.0 through the same import. Existing widgets and saved project values remain intact. Updates may only add widgets; changes to existing definitions and downgrades are rejected.
 
 **General** provides a headline, series count (1–10), legend and display without a card. The first series can use the main entity. Each **Data [N]** group provides its own entity, optional attribute, preview JSON, X/Y keys, name, unit, color, line/bar type, left/right axis and difference calculation. A bound series reads only its entity state or attribute. Missing live data never falls back to preview JSON. The widget does not write HA states.
 
@@ -70,5 +70,15 @@ The widget does not generate room data/heating profiles or control thermostats. 
 **General → Without card**, **Colors → Headline color**, size and shared CSS settings are available. Tables, text formatting, cell spans and selected colors/spacing are preserved. Scripts, event handlers, forms, embeds and external resources are removed. Input is limited to 200,000 characters; rendering is limited to 5,000 nodes and 40 nesting levels. Large tables scroll within the widget. All settings remain in widget/project exports.
 
 ![Heating Rooms Overview with preview table](/images/grafik-visual-studio/weather-heating-rooms.png)
+
+## METEORED Weather Widget
+
+From **0.1.191**, **General** provides **Without card**, **Meteored widget ID** and **Enable reload**. Create your widget at [Meteored / daswetter.com](https://www.daswetter.com/widget/) and enter only its ID, not full HTML code or a URL. IDs accept 1–128 letters, digits, underscores or hyphens. Allow the domain you actually use to open the runtime in the provider configuration.
+
+The runtime loads the official `https://api.meteored.com/widget/loader/ID` loader in a separate frame. Internet access and valid provider settings are required. **Enable reload** is on by default and reloads once per hour. Disabling it stops the timer; ID changes and widget removal clean up the old timer. Ordinary runtime redraws do not restart the frame or timer. The editor shows a configuration preview; empty or invalid IDs load nothing.
+
+The frame uses `sandbox="allow-scripts"`; the loader page receives the same sandbox through its HTTP header. Meteored code therefore runs without access to Studio's DOM. No HA entity is needed; location, language and appearance come from your Meteored configuration. All three options, size and CSS remain in exports. Fully verifying the provider display requires your real widget ID and allowed domain.
+
+![METEORED configuration in the editor](/images/grafik-visual-studio/weather-heating-meteored.png)
 
 The reproducible builder and validated manifest are in the [source repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/weather-heating). The [package contract](widget-packages.md) describes interface 0.2.
