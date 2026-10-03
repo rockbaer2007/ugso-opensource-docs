@@ -8,6 +8,8 @@ From Studio **0.1.138**, the enlarged dialog contains **four independent calcula
 
 ## Size, icon and colors
 
+From **0.1.140**, the **WIDGET** tab provides the same five CSS sections as basic widgets: **General CSS**, **CSS Font & Text**, **CSS background**, **CSS borders** and **CSS shadow and spacing**. Configure positioning, display, opacity, fonts, text alignment, background images, borders, **corner radius**, shadows, padding and margins. LineBox Math honors font size, alignment, corner radius and padding. Rounding retains the geometric docking positions; large radii may move the visible border away from corner ports. Additional inline CSS still overrides the corresponding fields. The **CSS** tab contains global project CSS instead.
+
 From **0.1.139**, width and height can be set independently between **32 and 2000 px**, in the calculation dialog or using editor resize handles. Rectangular shapes are supported. The 16 ports retain their relative positions, with perpendicular line entry. Small widgets use smaller editor markers to prevent overlap. A larger editor view is recommended for assigning letters comfortably; runtime hides the markers.
 
 Under **Appearance**, choose an optional icon, its size (8–512 px) and color, plus background, border and result text colors. Icons fit the available space. Recoloring requires a tintable icon; multicolor raster images retain their image colors. Disable **Show result** without stopping calculations or output handoffs. For 32 × 32 px, an icon with hidden result text is useful.
