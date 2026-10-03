@@ -78,7 +78,7 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Text | Free text field without entity binding. |
 | Border | Frame with title, title position, header area and colors. |
 | Gauge | Simple value gauge with unit. |
-| Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
+| Image | Image source, stretching and controlled refresh; optional native browser interactions. Default size 200 × 130 px. |
 
 The screenshots below show German test projects. Older CSS checkbox states are labelled in the captions; the current behavior is described in the text.
 
@@ -235,6 +235,21 @@ Shapes are drawn directly as SVG; no image files, HA entities or additional help
 **Line color** and **Fill color** use HEX pickers. **Line width** ranges from 0 to 100 (default 5), and **Rotate** from 0 to 360 degrees. Separate **Width scale** and **Height scale** range from 0 to 1 in steps of 0.05. Shapes rotate and scale around their center. Following the VIS2 reference, lines only use rotation and keep their stroke width when resized.
 
 Stars use crossing edges; arrows point upwards without rotation. Stroke width reduces the available radius for circles and polygons. Very thick strokes can completely fill small shapes; negative radii are prevented. **CSS General** remains enabled for position and size; all other CSS groups start disabled. Editor and runtime draw the same geometry.
+
+### Image
+
+**General** contains source, stretch, refresh interval (ms), refresh on wake-up, refresh on view change, unchanged URL and `allowUserInteractions`. **CSS General** remains enabled; other CSS sections start disabled.
+
+- Without **Stretch**, the image fills the widget width at its original aspect ratio. Excess height is clipped. With stretching, it fills both width and height, even when this changes its aspect ratio.
+- **Interval 0** disables periodic reloads. For example, `51800` refreshes every 51.8 seconds. Unchanged images do not reload during unrelated state changes; running timers retain their cadence. Invisible images are not periodically refreshed.
+- **Refresh on wake-up / view change** reloads when the browser page becomes active again or the project page opens. **Unchanged URL** keeps the original URL; the browser may use its cache. Otherwise Studio adds a timestamp while preserving existing parameters and fragments.
+- **allowUserInteractions** enables normal browser actions, such as dragging or the image context menu, in runtime. When disabled, pointer actions pass through to underlying elements. In the editor, the widget remains selectable and movable.
+
+Choose an image using Studio files or a URL. Replace VIS2 paths such as `_PRJ_NAME/001_cheerful.png` with the appropriate Studio file path. No HA helper is needed. Existing projects with a URL entity remain readable; this does not provide an HA camera API. Small red migration hints can be shown or hidden using the global setting.
+
+![Image with stretched and proportional rendering for comparison](/images/grafik-visual-studio/image.png)
+
+Functional reference: [VIS2 Image](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicImage.tsx).
 
 ### iFrame
 

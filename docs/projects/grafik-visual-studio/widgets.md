@@ -78,7 +78,7 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Text | Freies Textfeld ohne Entitätsbindung. |
 | Border | Rahmen mit Titel, Titelposition, Kopfbereich und Farben. |
 | Gauge | Einfache Messwertanzeige mit Einheit. |
-| Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
+| Image | Bildquelle, Strecken und gesteuertes Neuladen; optionale native Browserinteraktionen. Standardgröße 200 × 130 px. |
 
 Die folgenden Bilder stammen aus deutschen Testprojekten. Frühere CSS-Häkchen sind in den Bildunterschriften gekennzeichnet; maßgeblich ist das im Text beschriebene aktuelle Verhalten.
 
@@ -235,6 +235,21 @@ Die Form wird direkt als SVG gezeichnet; Bilddateien, HA-Entitäten oder zusätz
 **Linienfarbe** und **Füllfarbe** werden als HEX gewählt. Die **Linienbreite** reicht von 0 bis 100 (Standard 5), **Drehen** von 0 bis 360 Grad. **Breitenskala** und **Höhenskala** sind getrennt von 0 bis 1 in Schritten von 0,05 einstellbar. Drehung und Skalierung erfolgen um die Formmitte; bei der Linie gilt wie im VIS2-Vorbild nur die Drehung, ihre Strichbreite wird beim Vergrößern nicht mitskaliert.
 
 Der Stern verwendet sich kreuzende Kanten, der Pfeil zeigt ohne Drehung nach oben. Die Strichbreite verkleinert den verfügbaren Radius von Kreis und Polygonen. Sehr breite Striche können kleine Formen vollständig ausfüllen; negative Radien werden verhindert. **CSS Allgemein** bleibt für Position und Größe aktiv; alle übrigen CSS-Gruppen sind bei neuen Widgets deaktiviert. Editor und Runtime zeichnen dieselbe Geometrie.
+
+### Image
+
+**Allgemein** enthält Quelle, Strecken, Updatezeit (ms), Update bei Aufwachen, Update bei Viewwechsel, Addiere nichts zu URL und `allowUserInteractions`. **CSS Allgemein** bleibt aktiv; andere CSS-Gruppen starten deaktiviert.
+
+- Ohne **Strecken** verwendet das Bild die volle Widget-Breite mit seinem ursprünglichen Seitenverhältnis. Überstehende Höhe wird abgeschnitten. Mit Strecken füllt es Breite und Höhe, auch wenn sich dadurch das Seitenverhältnis ändert.
+- **Updatezeit 0** deaktiviert regelmäßiges Neuladen. Beispielsweise aktualisiert `51800` alle 51,8 Sekunden. Unveränderte Bilder werden durch andere Zustandswechsel nicht neu geladen; laufende Timer behalten ihren Takt. Unsichtbare Bilder werden nicht regelmäßig aktualisiert.
+- **Update bei Aufwachen / Viewwechsel** lädt beim erneuten Aktivieren der Browserseite beziehungsweise beim Öffnen der Projektseite nach. **Addiere nichts zu URL** behält die URL unverändert; dabei kann der Browser seinen Cache verwenden. Ohne Haken ergänzt Studio einen Zeitstempel und erhält vorhandene URL-Parameter und Sprungmarken.
+- **allowUserInteractions** erlaubt normale Browseraktionen wie Ziehen oder das Bild-Kontextmenü in der Runtime. Ohne Haken werden Zeigeraktionen zum darunterliegenden Element durchgereicht. Im Editor bleibt das Widget auswählbar und verschiebbar.
+
+Bild über die Studio-Dateiauswahl oder eine URL wählen. VIS2-Pfade wie `_PRJ_NAME/001_cheerful.png` müssen durch den entsprechenden Studio-Dateipfad ersetzt werden. Kein HA-Helfer nötig. Bestehende Projekte mit einer URL-Entität werden weiterhin gelesen; eine HA-Kamera-API wird dadurch nicht angebunden. Die kleinen roten Umsteigerhinweise sind über die zentrale Einstellung ein- und ausschaltbar.
+
+![Image mit Strecken und proportionaler Darstellung im Vergleich](/images/grafik-visual-studio/image.png)
+
+Funktionale Referenz: [VIS2 Image](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicImage.tsx).
 
 ### iFrame
 
