@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **63 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **64 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired Basic widgets retain their English names. Interactive widgets such as Event Calendar and Interactive Slider use translated palette names. Former palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -12,7 +12,7 @@ VIS2-inspired Basic widgets retain their English names. Interactive widgets such
 
 From Studio 0.1.135, technical widget names stay in the editor interface. The canvas and runtime show only custom captions; new widgets start with an empty title. This central policy also covers future widget packages and LineBox. Loading an older project removes previous stock titles once. Custom captions remain; you can then explicitly enter a former stock caption again.
 
-**Writable widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG, and Bool HTML (control) can control bound `switch`, `light`, or `input_boolean` entities. Bulb on/off controls those entities or sets an `input_number` helper to its configured minimum/maximum. Slider, Interactive Slider and Radial Slider write only `input_number`; Input val writes `input_number` or `input_text`. Note writes from its text dialog to an `input_text` helper without an attribute selection. In switch mode, Universal Element writes its false/true values; in button mode it writes the next configured value to a suitable switchable entity or number/text helper. Controls are disabled for unsupported or unavailable entities. Checkbox and Interactive Switch write their configured pairs to compatible switches or numeric/text helpers. Other widgets do not write HA state.
+**Writable widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG, and Bool HTML (control) can control bound `switch`, `light`, or `input_boolean` entities. Bulb on/off controls those entities or sets an `input_number` helper to its configured minimum/maximum. Slider, Interactive Slider and Radial Slider write only `input_number`; Input val writes `input_number` or `input_text`. Note writes from its text dialog to an `input_text` helper without an attribute selection. In switch mode, Universal Element writes its false/true values; in button mode it writes the next configured value to a suitable switchable entity or number/text helper. Controls are disabled for unsupported or unavailable entities. Checkbox and Interactive Switch write their configured pairs to compatible switches or numeric/text helpers. Dropdown selects options in `select`/`input_select` or writes custom values to numeric/text helpers. Other widgets do not write HA state.
 
 ## HA Grafik – Basis (46)
 
@@ -367,7 +367,7 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (10)
+## HA Grafik – Interaktiv (11)
 
 | Widget | Current behavior |
 | --- | --- |
@@ -381,6 +381,23 @@ New widgets use **300 × 200 pixels** with only **CSS General** enabled. Central
 | Value List | Split text into list items with eight bullet types, numbering, custom characters and spacing. |
 | Interactive Switch | Custom false/true pairs and state labels; independent track/thumb styling and inheritance. |
 | Radial Slider | Numeric dial with start/end angles, value and label, plus independent track/thumb styling. |
+| Dropdown | HA or custom options with a title, conditional background and separate menu/widget shadows. |
+
+### Dropdown
+
+From **0.1.182**, **Dropdown** under **Interactive** provides option selection with an optional title, defaulting to **300 × 50 px**. HA `select` and `input_select` supply their `options` attribute. **Use custom options** supports up to **200 value/text pairs**; duplicate values appear once. Display toggles choose value, text or both, without repeating identical labels. If both are off, the value remains visible for an identifiable choice.
+
+- **Writing:** `select`/`input_select` accept only currently allowed options. Custom numbers write to `input_number`; strings up to 255 characters write to `input_text`. Incompatible options are disabled. Sensors, missing states, read-only mode and editor previews never write; unbound widgets support local selection.
+- **Background color conditions:** up to **20 ordered rules** with six comparison operators. The first matching rule wins. Conditions use the selected value unless a separate background entity is set. Unknown or unavailable values never trigger a rule.
+- **CSS Dropdown:** font size, text, background, highlight and border colors, border width/radius, title size/color and four title paddings. The title can use the matching condition color. **Dropdown shadow** styles the control and open menu; **Widget shadow** covers the whole area including its title. Both have X/Y offsets, blur, spread and color.
+- **From widget:** inherits presentation only, including title styling and shadows. Title text, options, entity and rules remain local. Copying related widgets remaps style references; cycles terminate safely.
+- **Interaction:** click or an arrow key opens the menu. Arrow keys, Home/End, Enter/Space and Escape operate the list; Tab leaves it. Long menu entries wrap and large lists scroll. Read-only mode displays the value without a selection arrow.
+
+All settings, custom options, rules and references survive project, widget and package exports. Studio uses its own menu for consistent colors and shadows.
+
+![Dropdowns with conditional backgrounds, read-only display, an open menu and inherited styling](/images/grafik-visual-studio/dropdown.png)
+
+Functional reference: [inventwo Dropdown for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/dropdown-widget.md). HA integration and rendering use Studio's own implementation.
 
 ### Radial Slider
 

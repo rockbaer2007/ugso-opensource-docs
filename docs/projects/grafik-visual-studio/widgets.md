@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **63 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **64 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive Widgets wie Terminkalender und Schieberegler verwenden übersetzte Palettennamen. Frühere Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -12,7 +12,7 @@ Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive 
 
 Ab Studio 0.1.135 bleibt der technische Widget-Name in der Editoroberfläche. Auf der Arbeitsfläche und in der Runtime erscheinen nur eigene Beschriftungen; neue Widgets starten ohne voreingestellten Titel. Das gilt zentral auch für zukünftige Widget-Pakete und die LineBox. Beim Laden älterer Projekte werden bisherige Standardtitel einmal entfernt. Individuelle Beschriftungen bleiben erhalten; anschließend kannst du auch einen früheren Standardtext ausdrücklich wieder eintragen.
 
-**Schreibfähige Widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG und Bool HTML (control) schalten gebundene `switch`-, `light`- oder `input_boolean`-Entitäten. Bulb on/off schaltet diese Entitäten oder setzt einen `input_number`-Helfer auf sein konfiguriertes Minimum/Maximum. Slider, Schieberegler und Radialer Schieberegler schreiben nur `input_number`; Input val schreibt `input_number` oder `input_text`. Note schreibt im Notizdialog an einen `input_text`-Helfer ohne Attributauswahl. Universal Element schreibt im Schaltermodus seine false-/true-Werte und im Tastermodus den nächsten konfigurierten Wert an eine passende schaltbare Entität oder einen Zahlen-/Texthelfer. Bei einer unpassenden oder nicht verfügbaren Entität ist die Bedienung gesperrt. Checkbox und Schalten schreiben ihre konfigurierten Wertepaare an passende Schalter oder Zahlen-/Texthelfer. Die übrigen Widgets schreiben keinen HA-Zustand.
+**Schreibfähige Widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG und Bool HTML (control) schalten gebundene `switch`-, `light`- oder `input_boolean`-Entitäten. Bulb on/off schaltet diese Entitäten oder setzt einen `input_number`-Helfer auf sein konfiguriertes Minimum/Maximum. Slider, Schieberegler und Radialer Schieberegler schreiben nur `input_number`; Input val schreibt `input_number` oder `input_text`. Note schreibt im Notizdialog an einen `input_text`-Helfer ohne Attributauswahl. Universal Element schreibt im Schaltermodus seine false-/true-Werte und im Tastermodus den nächsten konfigurierten Wert an eine passende schaltbare Entität oder einen Zahlen-/Texthelfer. Bei einer unpassenden oder nicht verfügbaren Entität ist die Bedienung gesperrt. Checkbox und Schalten schreiben ihre konfigurierten Wertepaare an passende Schalter oder Zahlen-/Texthelfer. Dropdown wählt Optionen in `select`/`input_select` oder eigene Werte in Zahlen-/Texthelfern. Die übrigen Widgets schreiben keinen HA-Zustand.
 
 ## HA Grafik – Basis (46)
 
@@ -367,7 +367,7 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (10)
+## HA Grafik – Interaktiv (11)
 
 
 | Widget | Aktuelle Funktion |
@@ -382,6 +382,23 @@ Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem *
 | Werteliste | Text in einzelne Listeneinträge aufteilen; acht Zeichenarten, Nummerierung, eigene Zeichen und Abstände. |
 | Schalten | Eigene false-/true-Werte und Zustandstexte; getrennte Spur-/Daumenstile mit Stilübernahme. |
 | Radialer Schieberegler | Zahlenregler mit Start-/Endwinkel, Wert und Bezeichnung sowie eigenen Spur-/Daumenstilen. |
+| Dropdown | HA- oder eigene Optionen mit Titel, bedingtem Hintergrund und getrennten Menü-/Widget-Schatten. |
+
+### Dropdown
+
+Ab **0.1.182** bietet **Dropdown** unter **Interaktiv** eine Optionsauswahl mit optionalem Titel, standardmäßig **300 × 50 px**. Bei HA-`select` und `input_select` kommen die Optionen aus dem Attribut `options`. **Eigene Optionen verwenden** erlaubt bis zu **200 Wert-/Textpaare**; doppelte Werte erscheinen einmal. Die beiden Anzeigehäkchen wählen Wert, Text oder die Kombination; gleiche Texte werden nicht doppelt angezeigt. Sind beide aus, bleibt der Wert zur eindeutigen Auswahl sichtbar.
+
+- **Schreiben:** `select`/`input_select` verwenden ausschließlich aktuell erlaubte Optionen. Eigene Zahlenwerte schreiben an `input_number`, Texte bis 255 Zeichen an `input_text`. Unpassende Optionen werden gesperrt. Sensoren, fehlende Zustände, Schreibschutz und der Editor bleiben ohne Schreibzugriff; ohne Entität funktioniert eine lokale Auswahl.
+- **Hintergrundfarb-Bedingungen:** bis zu **20 Regeln**, mit sechs Vergleichsoperatoren. Die erste passende Regel gewinnt. Ohne zusätzliche Hintergrund-Entität gilt der ausgewählte Wert; sonst deren Zustand. Unbekannte oder nicht verfügbare Zustände lösen keine Farbregel aus.
+- **CSS Dropdown:** Schriftgröße, Text-, Hintergrund-, Hervorhebungs- und Rahmenfarbe, Rahmenbreite/-radius sowie Titelgröße/-farbe und vier Titelabstände. Der Titel kann die aktive Bedingungsfarbe übernehmen. **Dropdown-Schatten** gestaltet Auswahl und offenes Menü; **Widget-Schatten** den gesamten Bereich inklusive Titel. Beide haben X/Y-Versatz, Unschärfe, Ausdehnung und Farbe.
+- **Vom Widget:** übernimmt ausschließlich die Darstellung eines anderen Dropdowns, einschließlich Titelstil und Schatten. Titeltext, Optionsliste, Entität und Regeln bleiben lokal. Gemeinsame Kopien erhalten passende Stilreferenzen; Zyklen werden abgefangen.
+- **Bedienung:** Klick oder Pfeiltaste öffnet das Menü. Pfeiltasten, Pos1/Ende, Enter/Leertaste und Escape bedienen die Liste; Tab verlässt sie. Lange Einträge umbrechen im Menü, große Listen scrollen. Schreibschutz zeigt den Wert ohne Auswahlpfeil.
+
+Alle Einstellungen, eigenen Optionen, Regeln und Referenzen bleiben in Projekt-, Widget- und Paketexporten erhalten. Die Optionsliste ist ein eigenes Studio-Menü, damit Farben und Schatten einheitlich wirken.
+
+![Dropdowns mit bedingtem Hintergrund, Schreibschutz, geöffnetem Menü und übernommenem Stil](/images/grafik-visual-studio/dropdown.png)
+
+Funktionsreferenz: [inventwo Dropdown für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/dropdown-widget.md). Die HA-Anbindung und Darstellung sind eigenständig umgesetzt.
 
 ### Radialer Schieberegler
 
