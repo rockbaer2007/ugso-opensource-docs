@@ -236,6 +236,18 @@ Shapes are drawn directly as SVG; no image files, HA entities or additional help
 
 Stars use crossing edges; arrows point upwards without rotation. Stroke width reduces the available radius for circles and polygons. Very thick strokes can completely fill small shapes; negative radii are prevented. **CSS General** remains enabled for position and size; all other CSS groups start disabled. Editor and runtime draw the same geometry.
 
+### iFrame
+
+![iFrame embedding the UGSo website with refresh options](/images/grafik-visual-studio/iframe.png)
+
+New widgets measure **600 × 320 px**. **General** exposes Source, Update time (ms), No sandbox, Update on wake-up, Update on view change, Add nothing to URL, Scroll X/Y and No frame. **CSS General** stays enabled; other CSS groups start disabled. The editor lets you select and move the widget without the embedded page intercepting mouse input.
+
+**Update time 0** disables periodic reloads. Values up to 180000 ms enable an interval. **Update on wake-up** reloads when the browser document becomes visible again; **Update on view change** applies when showing the Studio page. Changes to other widget values do not reload an unchanged frame. Without **Add nothing to URL**, refreshes add a timestamp parameter named `_gvs`, preserving existing parameters and fragments. With this option checked, the same URL is loaded again.
+
+By default, a sandbox restricts the embedded page to scripts and forms. **No sandbox** removes this restriction. Authentication, cookies and the target page's embedding rules still apply; browser policies may prevent embedding. Scroll X/Y set the requested overflow options; actual scrollbars also depend on the browser and target content. Studio cannot enforce internal scroll axes on a different origin. **No frame** removes the iframe border.
+
+No HA state is written and no HA helper is required. Optional migration hints explain sandbox and refresh behavior. After export, an iframe still references its source; the external website is not embedded as a local copy.
+
 ### Bool Checkbox
 
 The checkbox displays the bound Home Assistant entity state. In the runtime it can control `switch`, `light`, and `input_boolean`; it is disabled without an available, supported entity. In the editor it is a preview only.

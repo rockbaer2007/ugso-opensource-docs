@@ -236,6 +236,18 @@ Die Form wird direkt als SVG gezeichnet; Bilddateien, HA-Entitäten oder zusätz
 
 Der Stern verwendet sich kreuzende Kanten, der Pfeil zeigt ohne Drehung nach oben. Die Strichbreite verkleinert den verfügbaren Radius von Kreis und Polygonen. Sehr breite Striche können kleine Formen vollständig ausfüllen; negative Radien werden verhindert. **CSS Allgemein** bleibt für Position und Größe aktiv; alle übrigen CSS-Gruppen sind bei neuen Widgets deaktiviert. Editor und Runtime zeichnen dieselbe Geometrie.
 
+### iFrame
+
+![iFrame mit eingebetteter UGSo-Website und Aktualisierungsoptionen](/images/grafik-visual-studio/iframe.png)
+
+Neue Widgets haben **600 × 320 px**. Unter **Allgemein** stehen Quelle, Updatezeit (ms), Kein Sandkasten, Update bei Aufwachen, Update bei Viewwechsel, Addiere nichts zu URL, Scroll X/Y und Kein Rahmen. **CSS Allgemein** bleibt aktiv; die übrigen CSS-Gruppen starten deaktiviert. Im Editor lässt sich das Widget auswählen und verschieben, ohne dass die eingebettete Seite die Mausbedienung übernimmt.
+
+**Updatezeit 0** deaktiviert regelmäßiges Neuladen. Werte bis 180000 ms aktivieren ein Intervall. **Update bei Aufwachen** lädt nach Rückkehr zum sichtbaren Browserfenster neu; **Update bei Viewwechsel** gilt beim Anzeigen der Studio-Seite. Änderungen anderer Widgetwerte laden eine unveränderte Einbettung nicht neu. Ohne **Addiere nichts zu URL** ergänzt eine Aktualisierung den Zeitstempelparameter `_gvs`; vorhandene URL-Parameter und Sprungmarken bleiben erhalten. Mit Haken wird dieselbe URL erneut geladen.
+
+Standardmäßig beschränkt eine Sandbox die eingebettete Seite auf Skripte und Formulare. **Kein Sandkasten** entfernt diese Einschränkung. Anmeldung, Cookies und Einbettungsregeln der Zielseite gelten weiterhin; eine Seite kann die Einbettung per Browserrichtlinie verweigern. Scroll X/Y setzen die gewünschten Überlaufoptionen, die tatsächlich verfügbaren Scrollleisten hängen auch vom Browser und Inhalt der Zielseite ab. Bei fremden Domains kann Studio deren interne Scrollachsen nicht erzwingen. **Kein Rahmen** entfernt den iFrame-Rand.
+
+Es wird kein HA-Zustand geschrieben und kein HA-Helfer benötigt. Die optionalen Umsteigerhinweise erklären Sandbox und Aktualisierung. Ein iFrame verweist auch nach einem Export auf seine Quelle; die fremde Website wird nicht als lokale Kopie eingebettet.
+
 ### Bool Checkbox
 
 Die Checkbox zeigt den Zustand der gebundenen Home-Assistant-Entität. In der Runtime kann sie `switch`, `light` und `input_boolean` schalten; ohne verfügbare, passende Entität ist sie gesperrt. Im Editor dient sie nur als Vorschau.
