@@ -54,6 +54,6 @@ The ZIP limit is 2 MB, the manifest limit is 200 KB, and each image is limited t
 2. Select the local ZIP under **Settings → Widget packages**.
 3. Review its package ID, version, API version, widget count and license. Use **Reload** to make the set appear in the palette.
 
-An already installed package is not overwritten. **Remove** is blocked while any project uses a widget type from that package. GitHub installation and package updates are not available yet. Custom scripts, Home Assistant state binding and write actions are also outside interface 0.1.
+From Studio 0.1.188, the local import may install a higher package version if its identity and all existing widget definitions remain exactly unchanged. It may add new widgets even while existing package widgets are used. Saved projects are not modified. Changes to existing definitions, identical versions and downgrades are rejected. **Remove** remains blocked while any project uses a widget type from that package. GitHub installation and automatic updates are not available yet. Custom scripts, Home Assistant state binding and write actions remain outside interface 0.1.
 
 Later extensions should preserve existing widget behavior. See the complete [widget rules in the source repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/widget-rules.md).

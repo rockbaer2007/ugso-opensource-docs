@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-Optional from 0.1.187: [Weather and Heating – General Chart](weather-heating.md). This package is separate from the 74 built-in widgets and automatically receives an unused set color.
+Optional: [Weather and Heating](weather-heating.md), with **General Chart** (from 0.1.187) and **Two Weeks Bar Chart** (from 0.1.188). This package is separate from the 74 built-in widgets and automatically receives an unused set color.
 
 The current catalog has **74 widgets in five groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
