@@ -50,6 +50,8 @@ The ZIP limit is 2 MB, the manifest limit is 200 KB, and each image is limited t
 
 ## Install and manage
 
+From Studio 0.1.192, interface 0.2 also supports `render: {"kind":"window-overview","valueKey":"windowPreview"}`. The host reads a JSON room list using `entityId` and optional `tableAttribute`. `openCountEntityId` and optional `openCountAttribute` provide a separate open room count. Without a list binding, the preview value is used; without a count binding, only a fully known, non-empty list is counted. Unknown readings remain unknown. See [Weather and Heating](weather-heating.md).
+
 From Studio 0.1.191, interface 0.2 also supports `render: {"kind":"meteored","valueKey":"meteoredWidgetId"}`. This fixed host mode loads the official Meteored loader in an isolated runtime frame; `enableReload` controls hourly reloading. Packages still contain no scripts or custom loader URLs. The editor shows a configuration preview. Users must configure their provider ID and allowed domain.
 
 From Studio 0.1.190, interface 0.2 also supports `render: {"kind":"room-table","valueKey":"tablePreview"}`. The host reads `entityId` and optional `tableAttribute`, or uses the declared preview value without a binding. It rebuilds passive HTML table elements and selected formatting; executable content and external resources are removed. This mode requires Studio 0.1.190 or later. The optional [Weather and Heating](weather-heating.md) package is the reference implementation.

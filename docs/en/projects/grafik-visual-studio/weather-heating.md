@@ -5,7 +5,7 @@ description: Install and configure the optional chart widget package.
 
 # Weather and Heating
 
-From **Studio 0.1.191**, you can install **Weather and Heating 1.4.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview** and **METEORED Weather Widget**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
+From **Studio 0.1.192**, you can install **Weather and Heating 1.5.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview**, **METEORED Weather Widget** and **Window Status Overview**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
 
 ## Install
 
@@ -13,7 +13,28 @@ Download [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-
 
 ## Configure the chart
 
-An installed 1.0.0 through 1.3.0 package can be updated to 1.4.0 through the same import. Existing widgets and saved project values remain intact. Updates may only add widgets; changes to existing definitions and downgrades are rejected.
+An installed 1.0.0 through 1.4.0 package can be updated to 1.5.0 through the same import. Existing widgets and saved project values remain intact. Updates may only add widgets; changes to existing definitions and downgrades are rejected.
+
+## Window Status Overview
+
+Under **Window list**, select an HA entity and optional attribute providing a JSON array. The original data point is named `WindowStatesHtmlTableVis2`, but contains JSON. Without an entity binding, the widget uses its editable preview:
+
+```json
+[
+  {"room":"Living room","sinceText":"since","changed":"03.10.2026 12:30","isOpen":true},
+  {"room":"Kitchen","sinceText":"since","changed":"03.10.2026 11:00","isOpen":false}
+]
+```
+
+`isOpen` accepts Boolean values, 1/0 and the strings `true`/`false`, `on`/`off`, `open`/`closed`. If the status is missing, the widget recognizes the legacy icon names `fts_window_1w_open.svg` and `fts_window_1w.svg` without loading image files. Otherwise it shows **Unknown**. Room and change strings are plain text, not HTML. Limits: 200,000 JSON characters, 500 rooms and 512 characters per text field.
+
+**Open rooms: entity** and an optional attribute provide a separate non-negative integer count of rooms with open windows. Without this binding, the count is derived only from a non-empty list with fully known states. Missing bound data never uses preview data; an unknown count is explicitly displayed.
+
+**Colors** provides headline, status line, open/closed room name, open/closed last change and room background colors. Open defaults to red, closed to green, and its change time to blue. Assignments follow the field names; the reversed assignments in the original are not copied. A dedicated background color replaces the ioBroker theme value `background.paper`. **General → Without card** removes the outer card background. Settings are retained in project and widget exports.
+
+Your HA entity must already provide the JSON list; this widget does not aggregate individual window sensors or write HA states. No `heatingcontrol` adapter is required.
+
+![Window Status Overview with open and closed rooms](/images/grafik-visual-studio/weather-heating-windows.png)
 
 **General** provides a headline, series count (1–10), legend and display without a card. The first series can use the main entity. Each **Data [N]** group provides its own entity, optional attribute, preview JSON, X/Y keys, name, unit, color, line/bar type, left/right axis and difference calculation. A bound series reads only its entity state or attribute. Missing live data never falls back to preview JSON. The widget does not write HA states.
 

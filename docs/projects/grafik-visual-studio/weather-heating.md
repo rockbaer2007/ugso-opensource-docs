@@ -5,7 +5,7 @@ description: Das optionale Diagramm-Widget-Paket installieren und konfigurieren.
 
 # Wetter und Heizung
 
-Ab **Studio 0.1.191** kannst du das Paket **Wetter und Heizung 1.4.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget**, **Übersicht über Heizräume** und **METEORED-Wetter-Widget**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
+Ab **Studio 0.1.192** kannst du das Paket **Wetter und Heizung 1.5.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget**, **Übersicht über Heizräume**, **METEORED-Wetter-Widget** und **Fensterstatus-Übersicht**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
 
 ## Installieren
 
@@ -13,7 +13,28 @@ Lade [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addo
 
 ## Diagramm konfigurieren
 
-Ein installiertes Paket 1.0.0 bis 1.3.0 kannst du über denselben Import auf 1.4.0 aktualisieren. Vorhandene Widgets und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
+Ein installiertes Paket 1.0.0 bis 1.4.0 kannst du über denselben Import auf 1.5.0 aktualisieren. Vorhandene Widgets und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
+
+## Fensterstatus-Übersicht
+
+Unter **Fensterliste** wählst du eine HA-Entität und optional ein Attribut mit einer JSON-Liste. Der Originaldatenpunkt heißt `WindowStatesHtmlTableVis2`, enthält jedoch JSON. Ohne Entitätsbindung verwendet das Widget die bearbeitbare Vorschau:
+
+```json
+[
+  {"room":"Wohnzimmer","sinceText":"seit","changed":"03.10.2026 12:30","isOpen":true},
+  {"room":"Küche","sinceText":"seit","changed":"03.10.2026 11:00","isOpen":false}
+]
+```
+
+`isOpen` akzeptiert Boolean-Werte, 1/0 und die Texte `true`/`false`, `on`/`off`, `open`/`closed`. Fehlt der Status, erkennt das Widget die alten Icon-Namen `fts_window_1w_open.svg` und `fts_window_1w.svg`, ohne Bilddateien zu laden. Sonst erscheint **Unbekannt**. Raum- und Änderungstexte werden als Text angezeigt, nicht als HTML. Grenzen: 200.000 Zeichen JSON, 500 Räume und 512 Zeichen pro Textfeld.
+
+**Offene Räume: Entität** und ein optionales Attribut liefern eine separate, nicht negative ganzzahlige Anzahl. Gezählt werden Räume mit offenen Fenstern. Ohne diese Bindung wird die Anzahl nur aus einer nicht leeren Liste mit vollständig bekannten Zuständen abgeleitet. Fehlende gebundene Daten verwenden keine Vorschau; eine unbekannte Anzahl wird ausdrücklich angezeigt.
+
+Unter **Farben** stehen Überschrift, Statuszeile, Raumname offen/geschlossen, letzte Änderung offen/geschlossen und Raumhintergrund. Offen verwendet standardmäßig Rot, geschlossen Grün und dessen Änderungszeit Blau. Die Zuordnung folgt den Feldnamen; die vertauschte Zuordnung des Originals wird nicht übernommen. Statt des ioBroker-Themewerts `background.paper` gibt es eine eigene Hintergrundfarbe. **Allgemein → Ohne Karte** entfernt den äußeren Kartenhintergrund. Einstellungen bleiben in Projekt und Widget-Export erhalten.
+
+Deine HA-Entität muss die JSON-Liste bereits bereitstellen; das Widget aggregiert keine einzelnen Fenstersensoren und schreibt keine HA-Zustände. Ein `heatingcontrol`-Adapter ist nicht erforderlich.
+
+![Fensterstatus-Übersicht mit offenen und geschlossenen Räumen](/images/grafik-visual-studio/weather-heating-windows.png)
 
 Unter **Allgemein** findest du Überschrift, Anzahl der Serien (1–10), Legende und Darstellung ohne Karte. Die erste Reihe kann die allgemeine Entität verwenden. Jede Gruppe **Daten [N]** bietet eine eigene Entität, ein optionales Attribut, Vorschau-JSON, X-/Y-Schlüssel, Name, Einheit, Farbe, Linie/Balken, linke/rechte Wertachse und Differenzberechnung. Mit einer Entitätsbindung liest das Diagramm ausschließlich deren Zustand oder Attribut. Fehlen Live-Daten, wird kein Vorschau-JSON eingesetzt. Es schreibt keine HA-Zustände.
 

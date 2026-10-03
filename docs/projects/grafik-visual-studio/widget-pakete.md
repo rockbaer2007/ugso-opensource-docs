@@ -50,6 +50,8 @@ Die festen Diagrammschlüssel und Grenzen stehen im [Diagrammvertrag](https://gi
 
 ## Installieren und verwalten
 
+Ab Studio 0.1.192 unterstützt 0.2 auch `render: {"kind":"window-overview","valueKey":"windowPreview"}`. Der Host liest eine JSON-Raumliste über `entityId` und optional `tableAttribute`. `openCountEntityId` und optional `openCountAttribute` liefern eine separate Anzahl offener Räume. Ohne Listenbindung gilt der Vorschauwert; ohne Anzahlbindung wird nur eine vollständig bekannte, nicht leere Liste gezählt. Unbekannte Werte bleiben unbekannt. Siehe [Wetter und Heizung](weather-heating.md).
+
 Ab Studio 0.1.191 unterstützt 0.2 außerdem `render: {"kind":"meteored","valueKey":"meteoredWidgetId"}`. Dieser feste Host-Modus lädt in der Runtime den offiziellen Meteored-Loader in einem isolierten Frame; `enableReload` steuert das stündliche Neuladen. Pakete enthalten weiterhin keine Skripte oder eigenen Loader-URLs. Der Editor zeigt eine Konfigurationsvorschau. Anbieter-ID und Domainfreigabe müssen vom Benutzer eingerichtet werden.
 
 Ab Studio 0.1.190 bietet Schnittstelle 0.2 zusätzlich `render: {"kind":"room-table","valueKey":"tablePreview"}`. Der Host liest `entityId` und optional `tableAttribute` oder verwendet ohne Bindung den deklarierten Vorschauwert. Er baut passive HTML-Tabellenelemente und ausgewählte Formatierungen nach; ausführbare Inhalte und externe Ressourcen werden entfernt. Der neue Modus benötigt mindestens Studio 0.1.190. Das optionale Paket [Wetter und Heizung](weather-heating.md) dient als Referenz.
