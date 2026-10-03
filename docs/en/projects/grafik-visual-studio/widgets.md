@@ -80,9 +80,19 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
 
-### HTML
+### CSS defaults
 
 From **0.1.154**, **CSS General** is mandatory for every widget, including saved projects and future widget packages. Position and size remain in exports. Earlier notes about disabled CSS groups now apply only to the remaining CSS groups.
+
+### String
+
+From **0.1.156**, **Prepend HTML**, **Append HTML** and **Test text** provide the HTML editor. Entity values and test text still render as plain text: `<b>Test</b>` in test text displays the tags literally. Only the prefix and suffix render as sanitized HTML. Nonempty test text overrides the source in the editor; runtime uses the source. Without an entity the runtime value is empty; a missing entity or attribute displays `--`.
+
+For an ioBroker datapoint ending in `…attribute.friendly_name`, select the corresponding **Home Assistant entity** and enter `friendly_name` in **HA attribute (empty: state)**. Empty reads the state. No helper is needed; this is read-only. The optional output point forwards the same source value without prefix, suffix or editor test text.
+
+**Icon** uses the existing icon/image picker. **Icon size in pixels** appears only with an icon, supports 5–200px and defaults to 24px. The export value `43` produces a 43 × 43px icon. New widgets start with empty content, 100 × 30px and only CSS General enabled; increase widget height for larger icons. Attribute and preview migration hints can be disabled centrally.
+
+### HTML
 
 **HTML** displays custom markup through the existing HTML editor. `<b>Hallo</b><i> Susi</i>` produces bold **Hallo** and italic *Susi*. **Update interval (ms)** rebuilds this content periodically; `0`, empty or `null` disables periodic refresh. The interval supports up to 180000ms in 100ms steps. This is not an HA polling interval and requires no helper.
 

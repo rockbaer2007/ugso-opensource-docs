@@ -80,9 +80,19 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
 
-### HTML
+### CSS-Vorgaben
 
 Ab **0.1.154** bleibt **CSS Allgemein** bei allen Widgets verpflichtend aktiv, einschließlich bereits gespeicherter Projekte und zukünftiger Widget-Pakete. Position und Größe bleiben damit im Export erhalten. Frühere Hinweise auf deaktivierte CSS-Bereiche gelten ab dieser Version nur für die übrigen CSS-Gruppen.
+
+### String / Zeichenfolge
+
+Ab **0.1.156** haben **HTML voranstellen**, **HTML anhängen** und **Testtext** den HTML-Editor. Der Entitätswert und Testtext werden trotzdem als normaler Text dargestellt: `<b>Test</b>` im Testtext zeigt die Tags wörtlich. Nur Vor- und Nachsatz werden als bereinigtes HTML formatiert. Ein nicht leerer Testtext übersteuert die Quelle im Editor; in der Runtime gilt die Quelle. Ohne Entität bleibt der Runtime-Wert leer, fehlende Entität oder fehlendes Attribut ergibt `--`.
+
+Für den ioBroker-Datenpunkt `…attribute.friendly_name` wählst du die zugehörige **Home-Assistant-Entität** und trägst unter **HA-Attribut (leer: Zustand)** `friendly_name` ein. Ein leeres Attributfeld zeigt den Zustand. Dafür ist kein Helfer nötig; die Auswahl liest nur. Der optionale Ausgangspunkt gibt denselben Quellwert weiter, ohne Vor-/Nachsatz oder Editor-Testtext.
+
+**Icon** verwendet die vorhandene Icon-/Bildauswahl. **Symbolgröße in Pixel** erscheint nur bei gewähltem Icon, bietet 5–200 px und startet bei 24 px. Der Exportwert `43` ergibt ein 43 × 43 px großes Symbol. Neue Widgets starten mit leeren Inhalten, 100 × 30 px und nur CSS Allgemein aktiviert; für größere Symbole die Widget-Höhe entsprechend anpassen. Die Umsteigerhinweise zu Attributen und Testtext sind zentral abschaltbar.
+
+### HTML
 
 **HTML** zeigt eigenen HTML-Inhalt mit dem vorhandenen HTML-Editor. `<b>Hallo</b><i> Susi</i>` ergibt **Hallo** und ein kursives *Susi*. **Updatezeit (ms)** baut diesen Inhalt im eingestellten Abstand neu auf; `0`, leer oder `null` deaktiviert die periodische Aktualisierung. Der Bereich reicht bis 180000 ms in Schritten von 100 ms. Dies ist keine HA-Abfragezeit und benötigt keinen Helfer.
 
