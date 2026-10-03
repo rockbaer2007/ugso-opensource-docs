@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **56 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **57 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche auf Englisch. Frühere deutsche Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -367,7 +367,7 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (3)
+## HA Grafik – Interaktiv (4)
 
 
 | Widget | Aktuelle Funktion |
@@ -375,6 +375,21 @@ Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem *
 | Universal Element | Standardzustand und bis zu 20 bedingte Zustände; Symbol, Bild, Text oder HTML. Schalten, Taster, Anzeige und Navigation mit Einzel- oder getrennten Tasten. |
 | Calendar | Monatsansicht mit Datumsauswahl, Heute-Markierung, Tagessperren und Kalenderwochen. |
 | Terminkalender | Termine in Monats-, Wochen-, Tages-, Jahres- und Listenansichten; mehrere Quellen und Farbregeln. |
+| Checkbox | Eigene false-/true-Werte, Zustandstexte, vier Textpositionen und Boxgestaltung. |
+
+### Checkbox
+
+Ab **0.1.175** ergänzt **Checkbox** unter **Interaktiv** die bisherige **Bool Checkbox** aus Basis. Neue Widgets starten mit **70 × 40 px**, **24 px** Boxgröße und Textposition **Ende**.
+
+- **Allgemein:** HA-Entität, false-/true-Werte, Text falsch/wahr, Textposition und Testzustand. Leere Werte verwenden `false` und `true`. Die Positionen Ende/Start/Oben/Unten setzen den Text rechts/links/oberhalb/unterhalb der Box. Texte werden als Text angezeigt.
+- **CSS Checkbox – Stil:** optionale HEX-Boxfarben für inaktiv/aktiv, Boxgröße von 0 bis 50 px und **Vom Widget** für die Stilübernahme einer anderen Checkbox. Zyklische Verweise enden sicher; gemeinsam kopierte Widgets erhalten passende interne Verweise. Schrift und Textfarbe folgen den allgemeinen CSS-Einstellungen. **CSS Allgemein** bleibt aktiviert.
+- **Bedienung:** Ohne Entität wird lokal geschaltet. `switch`, `light` und `input_boolean` unterstützen boolesche Werte bzw. on/off und 0/1. Zahlenpaare benötigen `input_number`, Textpaare `input_text`. Sensoren, nicht verfügbare Entitäten und unpassende Wertepaare bleiben schreibgeschützt. Im Editor wird nichts geschrieben. Laufende HA-Schreibaufträge sperren die Checkbox vorübergehend.
+
+Beim JSON-Export werden Werte, Texte, Stil und Entitätsbindung gespeichert. Die Entitäten müssen am Ziel existieren; referenzierte Stil-Quellwidgets müssen ebenfalls enthalten sein. Die kleinen roten Hinweise folgen **Umsteigerhinweise anzeigen**.
+
+![Checkbox mit Zustandstext und Stilübernahme](/images/grafik-visual-studio/checkbox.png)
+
+Funktionsreferenz: [inventwo Checkbox für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/de/widgets/checkbox-widget.md). Studio verwendet eine eigene Implementierung.
 
 ### Calendar
 

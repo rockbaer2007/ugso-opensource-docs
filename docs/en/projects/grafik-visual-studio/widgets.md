@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **56 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **57 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired widget names remain in English regardless of the interface language. Former German palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -367,13 +367,28 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (3)
+## HA Grafik – Interaktiv (4)
 
 | Widget | Current behavior |
 | --- | --- |
 | Universal Element | Default state and up to 20 conditional states with an icon, image, text or HTML. Switch, button, display and navigation modes, using single or separate buttons. |
 | Calendar | Monthly datepicker with today highlighting, day restrictions and week numbers. |
 | Event Calendar | Events in month, week, day, year and list views; multiple sources and color rules. |
+| Checkbox | Custom false/true values, state labels, four label positions and box styling. |
+
+### Checkbox
+
+From **0.1.175**, **Checkbox** under **Interactive** complements the existing **Bool Checkbox** under Basic. New widgets start at **70 × 40 px**, with a **24 px** box and **End** label position.
+
+- **General:** HA entity, false/true values, false/true text, label position and preview state. Empty values mean `false` and `true`. End/Start/Top/Bottom place the label right/left/above/below the box. Labels are displayed as text.
+- **CSS Checkbox – Style:** optional HEX colors for inactive/active boxes, size from 0 to 50 px and **From widget** to inherit styling from another Checkbox. Cyclic references terminate safely; copying widgets together remaps internal references. Font and text color follow general CSS settings. **CSS General** remains enabled.
+- **Interaction:** Without an entity, switching stays local. `switch`, `light` and `input_boolean` support Boolean values, on/off and 0/1. Number pairs require `input_number`; text pairs require `input_text`. Sensors, unavailable entities and incompatible pairs remain read only. Editor previews never write values. Pending HA writes temporarily disable the checkbox.
+
+JSON exports include values, labels, styling and entity binding. Referenced entities must exist at the destination; referenced styling widgets must also be included. Small red hints follow **Show migration hints**.
+
+![Checkbox with state labels and inherited styling](/images/grafik-visual-studio/checkbox.png)
+
+Functional reference: [inventwo Checkbox for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/checkbox-widget.md). Studio uses its own implementation.
 
 ### Calendar
 
