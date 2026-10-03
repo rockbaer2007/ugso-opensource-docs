@@ -80,6 +80,16 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
 
+### Table
+
+**Static JSON (ohne ID)** enthält ein Array von Zeilenobjekten. Eine gebundene HA-Entität liefert stattdessen ihren JSON-Zustand in der Runtime. Beim Beispiel `[{"Title":"first","Value":1,"_Description":"Value1"},{"Title":"second","Value":2,"_Description":"Value2"}]` erscheinen die Spalten **Title** und **Value**. Attribute mit `_` bleiben als Metadaten verborgen; `_btn…` erzeugt eine Bestätigungsschaltfläche. Zellen dürfen HTML enthalten, das vor der Anzeige bereinigt wird.
+
+**Kolumnanzahl** blendet Einstellungen für Spaltentitel, CSS-Breite und Attributzuordnung ein. Eine ausdrückliche Attributzuordnung kann auch Metadaten anzeigen. **Kein Header**, **Zeige Scrollbar** und **Maximale Zeilenanzahl** steuern die Darstellung. Neue Tabellen starten mit deaktivierten CSS-Bereichen. Ein Druckbutton erscheint erst mit einem Text in **btn_print**; **view_for_print** wählt optional die Druckseite.
+
+**Ereignis ID** liest einzelne JSON-Zeilen. Der anfänglich vorhandene Zustand wird nicht als neues Ereignis übernommen. Änderungen ergänzen die Ereignisliste; gleiche `_id` ersetzen eine vorhandene Ereigniszeile. **Neues Ereignis am Anfang** gilt für diese Ereignisliste und dreht die Grundtabelle nicht um. Ereignisse und Auswahl gelten für die laufende Runtime-Sitzung.
+
+Eine Zeilenauswahl schreibt das Zeilenobjekt als JSON in **Ausgewählt ID** (`input_text`) und zeigt `_detail` im **Detailed widget**. Bestätigungsbuttons schreiben `_ack_id` oder das Zeilenobjekt in **Bestätigung ID**. HA-Ziele müssen verfügbare, passende Zahlen-/Texthelfer sein; deren Typ- und Längenlimits gelten weiterhin. Im Editor werden keine HA-Werte geschrieben.
+
 ### Bool Checkbox
 
 Die Checkbox zeigt den Zustand der gebundenen Home-Assistant-Entität. In der Runtime kann sie `switch`, `light` und `input_boolean` schalten; ohne verfügbare, passende Entität ist sie gesperrt. Im Editor dient sie nur als Vorschau.

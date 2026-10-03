@@ -80,6 +80,16 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
 
+### Table
+
+**Static JSON (ohne ID)** contains an array of row objects. A bound HA entity supplies its JSON state in the runtime instead. For `[{"Title":"first","Value":1,"_Description":"Value1"},{"Title":"second","Value":2,"_Description":"Value2"}]`, the visible columns are **Title** and **Value**. Underscore attributes are hidden metadata; `_btn…` creates an acknowledgment button. Cells support sanitized HTML.
+
+**Kolumnanzahl** exposes column title, CSS width and attribute settings. Explicit attribute mappings can expose metadata. **Kein Header**, **Zeige Scrollbar**, and **Maximale Zeilenanzahl** control presentation. New tables have CSS groups disabled. A print button appears only when **btn_print** has a caption; **view_for_print** optionally selects the print page.
+
+**Ereignis ID** reads individual JSON rows. Its initial state is not collected as a new event. Changes add event rows; matching `_id` values replace existing event rows. **Neues Ereignis am Anfang** affects the event list without reversing the base table. Events and selection last for the current runtime session.
+
+Selecting a row writes its JSON to **Ausgewählt ID** (`input_text`) and displays `_detail` in **Detailed widget**. Acknowledgment buttons write `_ack_id` or the row JSON to **Bestätigung ID**. HA targets must be available, compatible number/text helpers; their type and length limits still apply. The editor does not write HA values.
+
 ### Bool Checkbox
 
 The checkbox displays the bound Home Assistant entity state. In the runtime it can control `switch`, `light`, and `input_boolean`; it is disabled without an available, supported entity. In the editor it is a preview only.
