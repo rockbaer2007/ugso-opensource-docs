@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **54 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **55 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired widget names remain in English regardless of the interface language. Former German palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -367,11 +367,29 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (1)
+## HA Grafik – Interaktiv (2)
 
 | Widget | Current behavior |
 | --- | --- |
 | Universal Element | Default state and up to 20 conditional states with an icon, image, text or HTML. Switch, button, display and navigation modes, using single or separate buttons. |
+| Calendar | Monthly datepicker with today highlighting, day restrictions and week numbers. |
+
+### Calendar
+
+**Calendar** is a monthly datepicker, not an event calendar. New widgets measure **320 × 350 px**, with **36 px** day cells, Monday as the first weekday and today highlighting. **General** includes the HA entity, value format, editor-only test date, read-only mode, past/future restrictions, month/year navigation, first weekday, week numbers and cell size (20–80 px).
+
+- **Timestamp (number, ms):** Milliseconds since epoch, written to an `input_number` helper. Set a sufficiently large helper range. Selecting a date writes midnight in the browser's local time zone.
+- **ISO date:** `YYYY-MM-DD`, written to an `input_text` helper. Sensors may supply a date but cannot be written. Only available helpers matching the chosen format allow date selection; read-only mode also disables navigation.
+- Without an entity, runtime selections remain local and are not saved to the project. **Test date** applies only in the editor and is ignored by runtime. The editor disables calendar interaction and never writes dates.
+- Past/future restrictions compare local calendar dates; today remains selectable. **ISO-8601** handles week-year boundaries; **Simple** assigns week 1 to the week containing January 1 and respects the chosen first weekday.
+
+The six neutral **CSS Calendar – Header / Weekdays / Day / Selected day / Today / Week number** groups provide HEX colors, day radius and selected-day shadows. Unset text colors use Studio theme colors. **From widget** inherits only that group from another Calendar widget; cyclic or invalid references terminate safely. Copying calendars together remaps internal references; exports must include referenced calendars. **CSS General** stays enabled and stores position and size. Small red helper hints follow **Show migration hints**.
+
+Month and year can be chosen directly. With month/year navigation disabled, runtime still offers previous/next month arrows. Failed HA writes show an error and allow another attempt.
+
+![Calendar with selected date, today highlighting and week numbers](/images/grafik-visual-studio/calendar.png)
+
+Functional reference: [inventwo Calendar for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/calendar-widget.md). Studio uses its own implementation without the ioBroker package.
 
 ### Universal Element
 

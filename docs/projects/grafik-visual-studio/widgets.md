@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **54 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **55 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche auf Englisch. Frühere deutsche Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -367,12 +367,30 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (1)
+## HA Grafik – Interaktiv (2)
 
 
 | Widget | Aktuelle Funktion |
 | --- | --- |
 | Universal Element | Standardzustand und bis zu 20 bedingte Zustände; Symbol, Bild, Text oder HTML. Schalten, Taster, Anzeige und Navigation mit Einzel- oder getrennten Tasten. |
+| Calendar | Monatsansicht mit Datumsauswahl, Heute-Markierung, Tagessperren und Kalenderwochen. |
+
+### Calendar
+
+**Calendar** ist eine Monatsansicht zur Datumsauswahl, keine Terminanzeige. Neue Widgets starten mit **320 × 350 px**, Tageszellen von **36 px**, Montag als Wochenbeginn und Hervorhebung des heutigen Tages. **Allgemein** enthält die HA-Entität, das Werteformat, ein Testdatum nur für den Editor, Schreibschutz, Vergangenheits-/Zukunftssperre, Monats-/Jahresnavigation, Wochenbeginn, Kalenderwochen und Zellgröße (20–80 px).
+
+- **Zeitstempel (Zahl, ms):** Millisekunden seit Epoch, zum Schreiben in einen `input_number`-Helfer. Wähle dessen Wertebereich ausreichend groß. Die Datumsauswahl schreibt Mitternacht in der lokalen Browser-Zeitzone.
+- **ISO-Datum:** `JJJJ-MM-TT`, zum Schreiben in einen `input_text`-Helfer. Ein Sensor kann das Datum liefern, wird aber nicht beschrieben. Nur verfügbare Helfer im passenden Format erlauben die Datumsauswahl; Schreibschutz sperrt auch die Navigation.
+- Ohne Entität bleibt die Auswahl lokal in der Runtime und wird nicht in das Projekt geschrieben. **Testdatum** wird ausschließlich im Editor verwendet; die Runtime ignoriert es. Der Editor schreibt keine Datumswerte und sperrt die Kalenderbedienung.
+- Vergangene und zukünftige Tage werden relativ zum lokalen heutigen Datum gesperrt. Heute bleibt auswählbar. **ISO-8601** berücksichtigt Kalenderwochen am Jahreswechsel; **Einfach** setzt KW 1 auf die Woche mit dem 1. Januar und berücksichtigt den gewählten Wochenbeginn.
+
+Die sechs neutralen Gruppen **CSS Kalender – Kopfzeile / Wochentage / Tag / Ausgewählter Tag / Heute / Kalenderwoche** bieten HEX-Farben, Tagesradius und den Schatten des ausgewählten Tages. Nicht gesetzte Textfarben verwenden die Studio-Themenfarben. **Vom Widget** übernimmt ausschließlich den jeweiligen Bereich eines anderen Calendar-Widgets; zyklische oder ungültige Verweise enden ohne Endlosschleife. Bei gemeinsamem Kopieren werden interne Verweise angepasst; beim Export müssen referenzierte Kalender mit enthalten sein. **CSS Allgemein** bleibt aktiviert und speichert Position und Größe. Die kleinen roten Helferhinweise folgen **Umsteigerhinweise anzeigen**.
+
+Monat und Jahr können direkt gewählt werden. Ist Monats-/Jahresnavigation deaktiviert, bleiben in der Runtime die Pfeile für den vorherigen und nächsten Monat verfügbar. Ein fehlgeschlagener HA-Schreibauftrag zeigt einen Fehler und erlaubt einen erneuten Versuch.
+
+![Calendar mit Datumsauswahl, Heute-Markierung und Kalenderwochen](/images/grafik-visual-studio/calendar.png)
+
+Funktionsreferenz: [Kalender von inventwo für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/de/widgets/calendar-widget.md). Studio verwendet eine eigene Implementierung ohne Abhängigkeit vom ioBroker-Paket.
 
 ### Universal Element
 
