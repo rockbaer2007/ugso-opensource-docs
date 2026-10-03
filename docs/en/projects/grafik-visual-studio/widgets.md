@@ -80,6 +80,12 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
 
+### Bool Checkbox
+
+The checkbox displays the bound Home Assistant entity state. In the runtime it can control `switch`, `light`, and `input_boolean`; it is disabled without an available, supported entity. In the editor it is a preview only.
+
+**HTML voranstellen** and **HTML anhängen** add text or HTML before and after the checkbox. **Autofokus** applies only in the runtime. New widgets start with empty HTML fields, autofocus disabled, and all CSS groups disabled. Existing settings are preserved.
+
 ### Bool HTML
 
 From **0.1.146**, prepended HTML, appended HTML, **HTML for 'false'** and **HTML for 'true'** all offer HTML-editor controls. The entity state selects the content; without an entity, the test state supplies a preview. Boolean `true`, number `1` and the strings `true`, `on`, `ein`, `yes` and `1` select the true content; other states select false. Prepended and appended HTML appear for either state. Studio HTML sanitization applies to all four fields.
