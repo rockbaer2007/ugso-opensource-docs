@@ -7,7 +7,29 @@ description: Das externe Technic-Widget-Set installieren und Window – Wall mit
 
 **Inspiriert von den [ioBroker-Technic-Widgets von Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** Eigene Umsetzung für Home Assistant.
 
-Ab **Studio 0.1.201** kannst du **UGSo Technic 1.4.0** installieren. Das Paket enthält **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay** und **Clock – Date**. Die zwei weiteren Widgets des Originalsets sind noch nicht enthalten. Version 1.4.0 kann über die Paketverwaltung als Erweiterung der bisherigen Versionen installiert werden; bestehende Widgets bleiben erhalten.
+Ab **Studio 0.1.202** kannst du **UGSo Technic 1.5.0** installieren. Das Paket enthält **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date** und **Thermostat – Temperature**. Das verbleibende StatusList-Widget ist noch nicht enthalten. Version 1.5.0 kann über die Paketverwaltung als Erweiterung der bisherigen Versionen installiert werden; bestehende Widgets bleiben erhalten.
+
+## Thermostat – Temperature
+
+![Temperaturregler nach einer Sollwertänderung; Beschriftung bleibt sichtbar](/images/grafik-visual-studio/technic-temperature-runtime.png)
+
+Der Temperaturregler zeigt Soll-/Ist-Temperatur, Feuchtigkeit, Stellmotor und Kühlmodus. Standardgröße: **220 × 220 Pixel**, Bereich **15–28**, Schrittweite **0,5**. Unter **Allgemein** stellst du Bezeichnung, Anzeige, Position oben/unten, Icon-Größe und Schreibschutz ein. Unter **Regler** wählst du Grenzen und Schrittweite; **Farben** enthält EIN, AUS und Kühlen.
+
+| Originalfeld | Studio-Bindung | Home Assistant |
+| --- | --- | --- |
+| `oid_temp_soll` | Soll-Temperatur | `climate` mit einzelnem Sollwert oder `input_number` |
+| `oid_temp_ist` | Ist-Temperatur | Temperatursensor oder `climate.current_temperature` |
+| `oid_feuchtigkeit` | Feuchtigkeit | Sensor in Prozent oder `climate.current_humidity` |
+| `oid_stellmotor` | Stellmotor | Sensor 0–100 %, boolescher Zustand oder `climate.hvac_action` |
+| `oid_kuehlmodus` | Kühlmodus | Boolescher Zustand oder Kühlzustand einer `climate`-Entität |
+
+Leere Lesebindungen verwenden die passenden Attribute der Sollwert-`climate`-Entität. Bei `input_number` brauchst du separate Sensoren. Heiz-/Kühlaktivität bedeutet **100 %**, idle/off **0 %**; dies ist keine gemessene Ventilposition. Fehlende oder nicht verfügbare Werte bleiben `—`.
+
+In der Runtime ziehst du den **300°-Bogen** oder bedienst den Regler per Tastatur. Erst beim Loslassen wird einmal geschrieben: `climate.set_temperature` beziehungsweise `input_number.set_value`. Der Server prüft zuvor aktuelle HA-Fähigkeiten, HA-Grenzen und beide Schrittweiten. Nicht passende Raster, unbekannte Zustände, Schreibschutz und Editorbetrieb erlauben keine Schreibaktion. Der Regler verändert nur den Sollwert; Betriebsmodus und Ein/Aus werden nicht mitgeschaltet. Nach einem HA-Fehler erscheint ein Hinweis; die Beschriftung bleibt erhalten.
+
+![Sieben-Tage-Verlauf mit Soll-/Ist-Temperatur und separater Stellmotor-Achse; simulierte Testdaten](/images/grafik-visual-studio/technic-temperature-history.png)
+
+**Verlauf** öffnet **24 Stunden** oder **7 Tage** aus dem **Home-Assistant-Recorder**. Soll und Ist verwenden die Temperaturachse, der Stellmotor die rechte Prozentachse. Die drei Farben sind unter **Verlauf (HA-Recorder)** einstellbar. Unbekannte Werte unterbrechen die Kurve. Der Recorder muss die ausgewählten Entitäten aufzeichnen und Daten für den gewünschten Zeitraum behalten. Die ioBroker-Einstellung `influxInstance` wird hier durch den HA-Recorder ersetzt. Alle Bindungen, Anzeigeoptionen und Farben bleiben im Projekt- und Widget-Export erhalten. Die Abbildungen stammen aus einem lokalen Test mit simulierten HA-Antworten.
 
 ## Clock – Date
 

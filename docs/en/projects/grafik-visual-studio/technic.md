@@ -7,7 +7,29 @@ description: Install the external Technic widget set and connect Window – Wall
 
 **Inspired by the [ioBroker Technic Widgets by Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** An independent implementation for Home Assistant.
 
-From **Studio 0.1.201**, you can install **UGSo Technic 1.4.0**. The package contains **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay** and **Clock – Date**. The other two widgets from the original set are not included yet. Install 1.4.0 through package management as an additive update to previous versions; existing widgets are preserved.
+From **Studio 0.1.202**, you can install **UGSo Technic 1.5.0**. The package contains **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date** and **Thermostat – Temperature**. The remaining StatusList widget is not included yet. Install 1.5.0 through package management as an additive update to previous versions; existing widgets are preserved.
+
+## Thermostat – Temperature
+
+![Temperature dial after a setpoint change; the caption remains visible](/images/grafik-visual-studio/technic-temperature-runtime.png)
+
+The thermostat displays target/actual temperature, humidity, actuator and cooling mode. Default size: **220 × 220 pixels**, range **15–28**, step **0.5**. **General** controls the caption, visibility, top/bottom position, icon scale and read-only mode. **Dial** controls bounds and step; **Colors** provides ON, OFF and cooling colors.
+
+| Original field | Studio binding | Home Assistant |
+| --- | --- | --- |
+| `oid_temp_soll` | Target temperature | `climate` with a single setpoint or `input_number` |
+| `oid_temp_ist` | Actual temperature | Temperature sensor or `climate.current_temperature` |
+| `oid_feuchtigkeit` | Humidity | Percentage sensor or `climate.current_humidity` |
+| `oid_stellmotor` | Actuator | Sensor 0–100%, Boolean state or `climate.hvac_action` |
+| `oid_kuehlmodus` | Cooling mode | Boolean state or a `climate` cooling state |
+
+Blank read bindings use matching attributes of the target `climate` entity. An `input_number` target needs separate sensors. Heating/cooling activity means **100%**, idle/off **0%**; this is not a measured valve position. Missing or unavailable readings remain `—`.
+
+In runtime, drag the **300° arc** or use the keyboard range. Release commits once through `climate.set_temperature` or `input_number.set_value`. The server first checks current HA capabilities, bounds and both step grids. Incompatible grids, unknown states, read-only mode and editor operation never write. Only the setpoint changes; operating mode and power are not changed. HA failures show a status message; the caption remains visible.
+
+![Seven-day target/actual temperature history and separate actuator axis; simulated test data](/images/grafik-visual-studio/technic-temperature-history.png)
+
+**History** opens **24 hours** or **7 days** from **Home Assistant Recorder**. Target and actual use the temperature axis; actuator uses the right percentage axis. Configure the three colors under **History (HA Recorder)**. Unknown readings break the curve. Recorder must track the selected entities and retain data for the requested period. HA Recorder replaces the ioBroker `influxInstance` setting. All bindings, display settings and colors remain in project and widget exports. The screenshots were captured locally with simulated HA responses.
 
 ## Clock – Date
 
