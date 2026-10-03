@@ -6,6 +6,10 @@ title: Editor and keyboard shortcuts
 
 ## Getting started
 
+From **0.1.184**, background colors distinguish palette sets: **Interactive** is olive green, **Special** blue and **Data Flow** violet. **Basic** keeps its existing appearance. Additional installed sets each receive their own color. These colors apply to palette selection buttons; inserted widgets retain their independently configured appearance.
+
+![Olive green entries in the Interactive widget set](/images/grafik-visual-studio/palette-set-colors.png)
+
 Starting with Studio **0.1.115**, right-click a widget, group label or empty editor surface to open a context menu: **Select**, **Group widgets**, **Ungroup**, **Edit group**, **Copy**, **Cut**, **Paste** and **Delete**. **More** provides duplication, front/back ordering, lock/unlock, undo/redo and widget import/export. Unavailable actions are disabled; Escape closes the menu and up/down arrows navigate it. Select offers all widgets and widgets under the pointer.
 
 Groups retain freely positioned members and move together when dragging a member or the group label. They persist in project data; copies and multi-widget exports receive independent groups when pasted or imported. **Edit group** enables individual member editing; **Finish editing group** or clicking the group label restores group selection. Ungroup preserves positions and dimensions. Undo/redo includes grouping and movement. Groups are flat; SVG connection lines cannot be grouped, and groups containing locked members cannot be dragged. Runtime shows neither group outlines nor editor menus. Grouping does not create tab contents or import VIS2 widgets.

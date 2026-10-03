@@ -6,6 +6,10 @@ title: Editor und Tastenkombinationen
 
 ## Einstieg
 
+Ab **0.1.184** unterscheiden Hintergrundfarben die Widget-Sets in der Palette: **Interaktiv** ist olivgrün, **Spezial** blau und **Datenfluss** violett. **Basis** behält seine bisherige Darstellung. Zusätzliche installierte Sets erhalten jeweils eine eigene Farbe. Die Farben gelten für die Auswahlknöpfe der Palette; die Gestaltung eingefügter Widgets bleibt unabhängig.
+
+![Olivgrüne Einträge des interaktiven Widget-Sets](/images/grafik-visual-studio/palette-set-colors.png)
+
 Ab Studio **0.1.115** öffnet ein Rechtsklick auf ein Widget, eine Gruppenlasche oder die freie Editorfläche ein Kontextmenü: **Auswählen**, **Gruppieren**, **Gruppierung aufheben**, **Gruppe bearbeiten**, **Kopieren**, **Ausschneiden**, **Einfügen** und **Löschen**. **Mehr** enthält Duplizieren, Vorder-/Hintergrund, Sperren/Entsperren, Rückgängig/Wiederholen und Widget-Import/Export. Nicht verfügbare Aktionen sind ausgegraut; Escape schließt das Menü, Pfeil hoch/runter navigiert darin. Auswählen bietet alle Widgets und die Widgets unter dem Mauszeiger.
 
 Gruppen behalten die freien Positionen ihrer Mitglieder und werden beim Ziehen eines Mitglieds oder der Gruppenlasche gemeinsam bewegt. Sie werden im Projekt gespeichert; Kopien und Exporte mehrerer ausgewählter Widgets erhalten beim Einfügen beziehungsweise Import unabhängige Gruppen. **Gruppe bearbeiten** erlaubt einzelne Mitglieder zu bearbeiten; **Gruppenbearbeitung beenden** oder ein Klick auf die Gruppenlasche wechselt zurück zur gemeinsamen Auswahl. Gruppierung aufheben erhält Positionen und Größen. Rückgängig/Wiederholen gilt auch für Gruppierung und Bewegung. Gruppen sind flach; SVG-Verbindungslinien können nicht gruppiert werden, und Gruppen mit gesperrten Mitgliedern lassen sich nicht ziehen. Die Runtime zeigt weder Gruppenrahmen noch das Editormenü. Die Gruppierung erzeugt keine Tab-Inhalte und importiert keine VIS2-Widgets.
