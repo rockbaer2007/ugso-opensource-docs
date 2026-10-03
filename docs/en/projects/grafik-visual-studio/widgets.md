@@ -287,6 +287,20 @@ The state-dependent variant reads its HA entity as a URL index. `false`/`off` se
 
 The default size is **600 × 320 px**. Refresh interval, wake-up, view changes, unchanged URLs, Scroll X/Y and borders behave like **iFrame**. Sandbox is selected per entry. An unchanged URL with unchanged sandbox is retained when other widget values change. Different URLs or sandbox settings replace the embedding. **CSS General** stays enabled; other CSS groups start disabled. Optional migration hints explain indexes, sandbox and refresh behavior.
 
+### Border
+
+Border draws a frame with a title and optional header. New widgets measure **100 × 70 px**, with a gray (`#888888`) 1 px border and visible overflow. **General** contains the six standard fields: Title, Title background, Title top offset, Title left offset, Header height and Header color. Colors use HEX pickers.
+
+The title is positioned absolutely relative to the frame: defaults are **top −10 px, left 20 px**, without an additional vertical translation. Simple HTML formatting such as `<b>Title</b>` is supported; scripts, event handlers and active embeddings are removed. Use the corresponding CSS sections to style text and borders.
+
+**Header height 0** hides the header. Without an explicit title background, the title receives a black background in the dark page theme or white in the light theme. With a visible header, the title background remains transparent unless set explicitly. An empty header color also uses theme-matched black or white. The left example only sets the title background; the right example additionally has a 30 px header.
+
+No HA entity or helper is required. **CSS General** remains enabled for position and size; other CSS groups start disabled. Optional small red migration hints can be toggled globally.
+
+![Border with title positioning and an optional header](/images/grafik-visual-studio/border.png)
+
+Functional reference: [VIS2 Border](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicFrame.tsx).
+
 ### Bool Checkbox
 
 The checkbox displays the bound Home Assistant entity state. In the runtime it can control `switch`, `light`, and `input_boolean`; it is disabled without an available, supported entity. In the editor it is a preview only.

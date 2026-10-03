@@ -287,6 +287,20 @@ Die zustandsabhängige Variante verwendet die HA-Entität als URL-Index. `false`
 
 Standardgröße ist **600 × 320 px**. Aktualisierungsintervall, Aufwachen, Viewwechsel, unveränderte URL, Scroll X/Y und Rahmen funktionieren wie bei **iFrame**. Die Sandbox wird je Eintrag gewählt. Eine unveränderte URL mit unveränderter Sandbox wird bei Änderungen anderer Widgets nicht erneut geladen. Bei anderer URL oder Sandbox wird die Einbettung ersetzt. **CSS Allgemein** bleibt aktiv; die übrigen CSS-Gruppen starten deaktiviert. Die optionalen Umsteigerhinweise erklären Index, Sandbox und Aktualisierung.
 
+### Border
+
+Border zeichnet einen Rahmen mit Titel und optionalem Kopfbereich. Neue Widgets sind **100 × 70 px** groß, mit einem grauen (`#888888`) Rahmen von 1 px und sichtbarem Überlauf. **Allgemein** enthält die sechs Standardfelder: Titel, Titelhintergrund, Titel-Oben-Abstand, Titel-Links-Abstand, Kopfhöhe und Kopffarbe. Farben werden als HEX gewählt.
+
+Die Titelposition ist absolut zum Rahmen: Standard **oben −10 px, links 20 px**, ohne zusätzliche vertikale Verschiebung. Der Titel darf einfache HTML-Formatierungen wie `<b>Titel</b>` enthalten; Skripte, Event-Handler und aktive Einbettungen werden entfernt. Schrift und Rahmen lassen sich über die passenden CSS-Gruppen gestalten.
+
+**Kopfhöhe 0** blendet den Kopfbereich aus. Ohne eigenen Titelhintergrund erhält der Titel dann eine schwarze Fläche im dunklen beziehungsweise eine weiße Fläche im hellen Seitenthema. Bei sichtbarem Kopfbereich bleibt der Titelhintergrund ohne eigene Farbe transparent; eine leere Kopffarbe verwendet ebenfalls Schwarz oder Weiß passend zum Thema. Im Beispiel links ist nur der Titelhintergrund gesetzt, rechts zusätzlich ein 30 px hoher Kopfbereich.
+
+Rahmen und Titel benötigen keine HA-Entität und keinen Helfer. **CSS Allgemein** bleibt für Position und Größe aktiv; die anderen CSS-Gruppen starten deaktiviert. Optionale kleine rote Umsteigerhinweise lassen sich zentral ein- und ausschalten.
+
+![Border mit Titelposition und optionalem Kopfbereich](/images/grafik-visual-studio/border.png)
+
+Funktionale Referenz: [VIS2 Border](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicFrame.tsx).
+
 ### Bool Checkbox
 
 Die Checkbox zeigt den Zustand der gebundenen Home-Assistant-Entität. In der Runtime kann sie `switch`, `light` und `input_boolean` schalten; ohne verfügbare, passende Entität ist sie gesperrt. Im Editor dient sie nur als Vorschau.
