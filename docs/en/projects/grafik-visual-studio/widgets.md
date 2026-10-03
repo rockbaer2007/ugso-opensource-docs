@@ -80,6 +80,10 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
 
+### Migration hints
+
+Use **Settings → General → Show migration hints** to enable or disable the hints centrally. The choice is saved per project and defaults to enabled. Hints appear directly below relevant editor fields and explain compatible HA switch targets or helpers, JSON/index sources and extra controls that are not connected yet. Read-only display does not require an additional write helper. Text uses 10px regular type, light red on dark editor backgrounds and dark red on light backgrounds. Hints do not appear in the runtime.
+
 ### Table
 
 **Static JSON (ohne ID)** contains an array of row objects. A bound HA entity supplies its JSON state in the runtime instead. For `[{"Title":"first","Value":1,"_Description":"Value1"},{"Title":"second","Value":2,"_Description":"Value2"}]`, the visible columns are **Title** and **Value**. Underscore attributes are hidden metadata; `_btn…` creates an acknowledgment button. Cells support sanitized HTML.

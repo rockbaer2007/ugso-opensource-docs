@@ -80,6 +80,10 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
 
+### Umsteigerhinweise
+
+Unter **Einstellungen → Allgemein → Umsteigerhinweise anzeigen** lassen sich die Hinweise zentral ein- und ausschalten. Die Auswahl wird pro Projekt gespeichert; standardmäßig sind sie aktiv. Sie stehen direkt unter betroffenen Editorfeldern und erklären passende HA-Schaltziele oder Helfer, JSON-/Indexquellen und noch nicht angebundene Extrasteuerung. Reine Anzeige benötigt keinen zusätzlichen Schreibhelfer. Die Texte sind 10 px groß, ohne Fettdruck, hellrot auf dunklem beziehungsweise dunkelrot auf hellem Editorhintergrund. In der Runtime erscheinen sie nicht.
+
 ### Table
 
 **Static JSON (ohne ID)** enthält ein Array von Zeilenobjekten. Eine gebundene HA-Entität liefert stattdessen ihren JSON-Zustand in der Runtime. Beim Beispiel `[{"Title":"first","Value":1,"_Description":"Value1"},{"Title":"second","Value":2,"_Description":"Value2"}]` erscheinen die Spalten **Title** und **Value**. Attribute mit `_` bleiben als Metadaten verborgen; `_btn…` erzeugt eine Bestätigungsschaltfläche. Zellen dürfen HTML enthalten, das vor der Anzeige bereinigt wird.
