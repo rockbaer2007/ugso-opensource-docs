@@ -80,6 +80,14 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
 
+### Bar
+
+**Bar** zeigt einen Zahlenwert innerhalb von **Minimum** und **Maximum** als farbigen Balken. Bei 0–1000 entspricht 300 einem Füllstand von 30 %. Werte außerhalb des Bereichs werden auf 0–100 % begrenzt; bei gleichem Minimum und Maximum bleibt der Balken leer. Eine HA-Sensorentität wie Solarleistung passt hier: Das Widget liest nur und benötigt keinen zusätzlichen Helfer.
+
+Horizontal wächst der Balken von links, vertikal von oben. **Wert umkehren** wechselt den Ursprung zu rechts beziehungsweise unten; 30 % bleiben dabei 30 %. **Rand** erwartet CSS, etwa `2px solid blue`; die einzelne `2` aus dem Export ist keine vollständige Randdefinition. **Durchsichtigkeit (Schatten/CSS)** entspricht dem VIS2-Feld `shadow` und erwartet einen CSS-Schatten wie `2px 2px 4px #0008`, keinen Transparenzwert. Alte gespeicherte Studio-Deckkraftwerte bleiben wirksam.
+
+Neue Balken starten blau, horizontal, mit 0–100, 200 × 130 px und deaktivierten CSS-Bereichen. Umsteigerhinweise erklären die Felder und sind über **Umsteigerhinweise anzeigen** abschaltbar. Der optionale Ausgangspunkt bleibt verfügbar.
+
 ### HTML State
 
 **HTML** ist der angezeigte Inhalt. **Wert** ist ein fester Schreibwert: Bei jedem Klick wird derselbe Wert gesendet, unabhängig vom aktuellen Zustand. Dein Beispiel mit `Hallo` und `off` zeigt „Hallo“ und sendet bei jedem Klick einen Aus-Befehl an eine passende schaltbare HA-Entität. Ein Sensor ist kein Schreibziel. Zahlen benötigen einen passenden `input_number`-Helfer, Text einen `input_text`-Helfer; `switch`, `light` und `input_boolean` unterstützen passende Ein-/Aus-Werte. Nicht verfügbare oder ungeeignete Ziele werden nicht beschrieben.

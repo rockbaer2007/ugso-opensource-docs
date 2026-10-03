@@ -80,6 +80,14 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
 
+### Bar
+
+**Bar** displays a numeric value between **Minimum** and **Maximum** as a colored bar. For 0–1000, a value of 300 fills 30%. Out-of-range values are clamped to 0–100%; equal minimum and maximum produce an empty bar. A solar-power HA sensor is suitable: the widget only reads and requires no additional helper.
+
+Horizontal bars grow from the left, vertical bars from the top. **Reverse value** changes the origin to the right or bottom; 30% stays 30%. **Border** expects CSS such as `2px solid blue`; the bare `2` in the export is not a complete border definition. **Transparency (shadow/CSS)** corresponds to VIS2's `shadow` field and expects a CSS box shadow such as `2px 2px 4px #0008`, not an opacity value. Previously saved Studio opacity remains effective.
+
+New bars start blue, horizontal, with 0–100, 200 × 130px and disabled CSS groups. Field explanations follow the **Show migration hints** setting. The optional output point remains available.
+
 ### HTML State
 
 **HTML** supplies the displayed content. **Wert** is a fixed command value: every click sends the same value, independently of the current state. An example with `Hallo` and `off` displays “Hallo” and sends an off command to a compatible controllable HA entity. Sensors are not write targets. Numbers require compatible `input_number` helpers, text requires `input_text`; `switch`, `light`, and `input_boolean` accept compatible on/off values. Unavailable or unsupported targets are not written.
