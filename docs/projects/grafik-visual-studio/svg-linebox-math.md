@@ -4,6 +4,35 @@ title: SVG LineBox Math
 
 # SVG LineBox Math
 
+Ab Studio **0.1.138** enthält der vergrößerte Dialog **vier getrennte Rechnungen**. Jede hat eine eigene Aktivierung, Formel beziehungsweise Durchschnittsberechnung, Ausgangsliste und Ergebnisvorschau. Rechnung 1 übernimmt bei älteren Projekten die bisherige Berechnung und ihre Ausgänge; Rechnungen 2–4 sowie alle internen Eingangsübergaben sind zunächst aus.
+
+## Vier Rechnungen und Ausgangszuordnung
+
+![Erweiterter SVG-LineBox-Math-Dialog mit separaten Rechnungen und interner Übergabe an Eingang C](/images/grafik-visual-studio/linebox-math-four-dialog.png)
+
+Stelle zuerst oben die Rollen der Anschlüsse ein. Trage dann je aktivierter Rechnung unter **Ausgänge (z. B. E,F;H)** die gewünschten Buchstaben ein. Komma, Semikolon und Leerzeichen sind als Trennzeichen erlaubt; Kleinbuchstaben werden ebenfalls erkannt. `E,F;H` ordnet dasselbe Ergebnis den drei Ausgängen E, F und H zu. Jeder dieser Punkte muss ein aktiver **Ausgang** sein. Ist ein Buchstabe als Eingang eingerichtet, erscheint ein Hinweis; eine widersprüchliche Zuordnung lässt sich nicht übernehmen. Ein Ausgang darf nur einer Rechnung zugeordnet sein. Ein Ausgang ohne Zuordnung liefert keinen Wert.
+
+## Ergebnisse intern weiterverarbeiten
+
+Jede Rechnung hat die zunächst ausgeschaltete Option **Ergebnis intern an Eingang übergeben**. Erst nach dem Einschalten kannst du unter **Interner Eingang** einen einzelnen aktiven Eingangs-Buchstaben wählen. Andere Rechnungen dürfen diesen Buchstaben anschließend in ihren Formeln verwenden. Die interne Übergabe ersetzt an diesem Punkt die externen Leitungswerte; nach dem Ausschalten gelten wieder die angeschlossenen Leitungen. Pro Eingang ist nur ein internes Ergebnis erlaubt. Die Reihenfolge der Rechnungsnummern spielt für die Auflösung von Abhängigkeiten keine Rolle.
+
+Beispiel mit A = 150 und B = 30:
+
+| Rechnung | Formel | Ausgänge | Interne Übergabe | Ergebnis |
+| --- | --- | --- | --- | --- |
+| 1 | `A + B` | `E,F;H` | eingeschaltet → Eingang C | 180 |
+| 2 | `C * 2` | `G` | aus | 360 |
+| 3 | `A - B` | `I` | aus | 120 |
+| 4 | deaktiviert | — | aus | — |
+
+Eine Rechnung darf ihr Ergebnis nicht an einen Eingang zurückführen, von dem sie selbst abhängt. Direkte und indirekte Rückkopplungen sowie doppelte Zuordnungen werden gemeldet und vor dem Übernehmen zurückgewiesen. Bei **Durchschnitt aller belegten Eingänge** zählen auch aktiv zugewiesene interne Eingänge mit; eine Übergabe dieser Durchschnittsrechnung an ihren eigenen Eingangsbereich wäre daher eine Rückkopplung.
+
+Ein Rechenfehler wie Division durch null stoppt die betreffende Rechnung und ihre abhängigen Rechnungen. Unabhängige Rechnungen arbeiten weiter. Fehlende Werte sind nur dann relevant, wenn die Rechnung diesen Eingang verwendet; eine Durchschnittsrechnung benötigt gültige Werte an allen belegten Eingängen. Der Dialog zeigt Hinweise pro Rechnung. Bei kleinen Bildschirmen wird der Inhalt scrollbar und die Rechnungsbereiche stehen untereinander.
+
+## Grundlagen und Beispiel einer Einzelrechnung
+
+Das folgende Bild zeigt den ursprünglichen Dialog aus Studio 0.1.137. Die Berechnung funktioniert weiterhin als Rechnung 1 im erweiterten Dialog.
+
 ![SVG LineBox Math: Berechnungsdialog mit Anschlüssen A–P, Eingangswerten und Durchschnitt 90](/images/grafik-visual-studio/linebox-math-dialog.png)
 
 Das Bild zeigt den Berechnungsdialog mit **Durchschnitt aller belegten Eingänge**. Eingang **A** enthält bereits die Summe seiner beiden Leitungen (100 + 50 = **150**), Eingang **B** liefert **30**. Daher lautet das Ergebnis **90**. **G** ist als Ausgang eingerichtet und gibt dieses Ergebnis weiter. Die grünen Buchstaben A, B und G kennzeichnen angeschlossene Punkte; die orangefarbenen Buchstaben sind ohne Leitung. Ein unverbundener Eingang mit `—` zählt beim Durchschnitt nicht mit. Bei dieser Berechnungsart ist das Formelfeld deaktiviert, seine bisherige Formel bleibt jedoch erhalten.
