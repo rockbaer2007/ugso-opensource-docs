@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **58 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **59 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive Widgets wie Terminkalender und Schieberegler verwenden übersetzte Palettennamen. Frühere Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -367,7 +367,7 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (5)
+## HA Grafik – Interaktiv (6)
 
 
 | Widget | Aktuelle Funktion |
@@ -377,6 +377,29 @@ Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem *
 | Terminkalender | Termine in Monats-, Wochen-, Tages-, Jahres- und Listenansichten; mehrere Quellen und Farbregeln. |
 | Checkbox | Eigene false-/true-Werte, Zustandstexte, vier Textpositionen und Boxgestaltung. |
 | Schieberegler | Horizontaler/vertikaler Zahlenregler mit Wertetikett, Schrittmarkierungen und getrennten Stilen für Spur und Daumen. |
+| Tabelle | JSON-Tabelle mit Spaltenformaten, Formeln, Sortierung, Filtern, Seitenaufteilung und Zeilenfarben. |
+
+### Tabelle
+
+Ab **0.1.177** ergänzt **Tabelle** unter **Interaktiv** die bisherige Basis-**Table**. Neue Widgets starten mit **400 × 300 px**, automatischen Spalten, sichtbarer Kopfzeile und ohne Seitenaufteilung. Daten sind eine JSON-Liste von Objekten, zum Beispiel:
+
+```json
+[{"raum":"Küche","temperatur":25.4,"leistung":120,"aktiv":true}]
+```
+
+Die Runtime liest die gebundene HA-Entität oder das ausdrücklich ausgewählte **HA-Attribut**. Für längere Listen sollte ein Attribut verwendet werden. Ohne Entität und im Editor gelten die JSON-Testdaten. Die Tabelle liest ausschließlich; Sortieren, Filtern und Seitenwechsel schreiben keine HA-Werte.
+
+- **Spalten:** 0 erkennt die Schlüssel automatisch; bis zu 50 Spalten lassen sich konfigurieren. Möglich sind Ausblenden, Schlüssel, Titel, Breite, Ausrichtung, Präfix/Suffix und Platzhalter. Formate: Text, Zahl mit Dezimal-/Tausendertrennzeichen, Boolean als gesperrte Checkbox, Datum/Uhrzeit mit eigenem Muster, Bild, URL und IP-Adresse. Inhalte werden als Text behandelt; Bilder und Links benötigen eine erlaubte URL.
+- **Formeln:** rechnen mit Zahlenfeldern der Zeile, beispielsweise `leistung * 2`. Unterstützt werden `+ - * / % **` und Klammern. Es wird kein JavaScript ausgeführt; ungültige Formeln verwenden den Platzhalter. Eigene Datumsmuster unterstützen `YYYY`, `YY`, `MM`, `M`, `DD`, `D`, `hh`, `h`, `mm`, `ss`, `sss`, `WD`, `WDL`, `KW` und `K`.
+- **Sortierung und Filter:** Standardsortierung nach Schlüssel und Richtung; optional bis zu 20 Standardsortierungen mit Priorität. Klicks auf sortierbare Kopfzeilen wechseln aufsteigend/absteigend/ohne Sortierung. Automatische Spalten sind sortierbar; manuelle Spalten bieten eigene Sortier- und Filteroptionen. Filter wählen die zugelassenen Zellwerte. Die Zeilenbegrenzung gilt nach Filtern und Sortieren, vor der Seitenaufteilung. Kopfzeilen können beim Scrollen fixiert werden.
+- **Zeilenbedingungen:** bis zu 20 Regeln nach Schlüssel oder Spaltenindex ab 0, mit sechs Vergleichsoperatoren. Die erste passende Regel bestimmt Hintergrund, Textfarbe der ganzen Zeile und/oder der Bedingungsspalte. **Summenzeile markieren** zieht eine Doppellinie über der letzten Ergebniszeile; Summen müssen bereits in den Daten stehen.
+- **CSS Tabelle:** neutrale Gruppen **Darstellung**, **Rahmenradius**, **Rahmen** und **Äußerer Schatten**, mit HEX-Farben, Zeilen-/Kopfhöhen, Zeilenrändern, getrennten Ecken und Randseiten. **Vom Widget** übernimmt jede Gruppe unabhängig von einer anderen Tabelle; gemeinsam kopierte Widgets erhalten passende Verweise. **CSS Allgemein** bleibt aktiviert.
+
+Der Widget-JSON-Export enthält Spalten, Regeln, Stile und Quellenbindung. Benötigte HA-Entitäten, Attribute und referenzierte Stilwidgets müssen am Ziel vorhanden sein. Ohne Entitätsbindung bleiben die gespeicherten JSON-Daten nutzbar. Kleine Umsteigerhinweise lassen sich zentral abschalten.
+
+![Interaktive Tabelle mit Sortierung, Zeilenbedingungen, berechneter Leistung und Seitenaufteilung](/images/grafik-visual-studio/interactive-table.png)
+
+Funktionsreferenz: [inventwo Tabelle für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/de/widgets/table-widget.md). Studio verwendet eine eigene Implementierung.
 
 ### Schieberegler
 

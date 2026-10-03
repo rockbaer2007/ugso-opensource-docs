@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **58 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **59 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired Basic widgets retain their English names. Interactive widgets such as Event Calendar and Interactive Slider use translated palette names. Former palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -367,7 +367,7 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (5)
+## HA Grafik – Interaktiv (6)
 
 | Widget | Current behavior |
 | --- | --- |
@@ -376,6 +376,29 @@ New widgets use **300 × 200 pixels** with only **CSS General** enabled. Central
 | Event Calendar | Events in month, week, day, year and list views; multiple sources and color rules. |
 | Checkbox | Custom false/true values, state labels, four label positions and box styling. |
 | Interactive Slider | Horizontal/vertical numeric control with value labels, step marks and independent track/thumb styling. |
+| Interactive Table | JSON table with column formats, formulas, sorting, filters, pagination and row colors. |
+
+### Interactive Table
+
+From **0.1.177**, **Interactive Table** complements the existing Basic **Table**. New widgets use **400 × 300 px**, automatic columns, a visible header and no pagination. Data is a JSON array of objects, for example:
+
+```json
+[{"room":"Kitchen","temperature":25.4,"power":120,"active":true}]
+```
+
+Runtime reads the bound HA entity or explicitly selected **HA attribute**. Longer lists should use an attribute. Unbound widgets and editor previews use the JSON test data. The table is read only; sorting, filtering and pagination never write HA values.
+
+- **Columns:** 0 detects keys automatically; up to 50 columns can be configured. Options include visibility, key, title, width, alignment, prefix/suffix and placeholder. Formats: text, number with decimal/thousands separators, Boolean as a disabled checkbox, date/time with custom patterns, image, URL and IP address. Content is treated as text; images and links require an allowed URL.
+- **Formulas:** calculate using numeric row fields, such as `power * 2`. Operators are `+ - * / % **` and parentheses. No JavaScript is executed; invalid formulas use the placeholder. Custom date patterns support `YYYY`, `YY`, `MM`, `M`, `DD`, `D`, `hh`, `h`, `mm`, `ss`, `sss`, `WD`, `WDL`, `KW` and `K`.
+- **Sorting and filters:** default key/direction, optionally up to 20 ordered default criteria. Sortable header clicks cycle ascending/descending/unsorted. Automatic columns are sortable; manual columns expose separate sorting and filter options. Filters select allowed cell values. Row limits apply after filtering/sorting, before pagination. Headers can remain fixed while scrolling.
+- **Row conditions:** up to 20 rules using a key or zero-based column index, with six comparison operators. The first matching rule sets the background, whole-row text color and/or condition-column text color. **Mark summary row** draws a double line above the last result row; totals must already exist in the data.
+- **CSS Table:** neutral **Appearance**, **Corner radius**, **Border** and **Outer shadow** groups, with HEX colors, header/row heights, row borders, individual corners and border sides. **From widget** inherits each group independently from another Interactive Table; copying widgets together remaps references. **CSS General** remains enabled.
+
+Widget JSON exports include columns, rules, styling and source bindings. Referenced HA entities, attributes and styling widgets must exist at the destination. Unbound tables retain their saved JSON data. Small migration hints can be disabled centrally.
+
+![Interactive table with sorting, row conditions, calculated power and pagination](/images/grafik-visual-studio/interactive-table.png)
+
+Functional reference: [inventwo Table for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/table-widget.md). Studio uses its own implementation.
 
 ### Interactive Slider
 
