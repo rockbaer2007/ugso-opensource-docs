@@ -40,7 +40,7 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Note | Note with text or HTML and an optional folded corner. |
 | Screen Resolution | Displays the current window resolution. |
 | Red Number | Number displayed as a colored circle or pin with adjustable radius. |
-| Bool SVG | Selects one of two SVG drawings according to the current state; can control a switchable entity. |
+| Bool SVG | Selects one of two SVG drawings according to the current state; can control a switchable entity or a suitable 0/1 helper. |
 | SVG shape | Draws an SVG shape with color, stroke, rotation and scaling. |
 | Input val | Text or number input (150 × 70). Numeric mode supports optional min/max; read-only mode also accepts sensors. Enter always submits. Auto-set writes after the configured typing pause (1000 ms default), including withEnter mode. withEnter adds a confirmation button for unsent input. Without auto-set, leaving the field does not write. Writable targets are suitable `input_number`/`input_text` helpers; without an entity input stays local. |
 | View in widget | Embeds a Studio project page (300 × 200 default) while preventing recursive embedding. A separate widget under Special embeds HA dashboards. |
@@ -203,6 +203,16 @@ Selecting a row writes its JSON to **Ausgewählt ID** (`input_text`) and display
 The dropdown has two entries configured through **Text bei 'false'** and **Text bei 'true'**. It reads Boolean and numeric states: `0` is false, other numbers are true. HA states `off`/`on` are normalized accordingly. Prepended/appended HTML and autofocus are supported; autofocus applies only in the runtime.
 
 A selection writes `0` or `1` to a compatible `input_number` or `input_text` helper. For `switch`, `light`, and `input_boolean`, it sends the corresponding HA switch command. Unsupported or unavailable targets are disabled. Without an entity, a local runtime preview is possible; the editor does not write values. New widgets start with empty text/HTML fields, autofocus disabled, and only CSS General enabled. Existing captions are preserved.
+
+### Bool SVG
+
+![Bool SVG with a star drawing and read-only mode](/images/grafik-visual-studio/bool-svg.png)
+
+**General** contains the HA entity, **Read only**, **SVG when false**, **SVG when true**, and **Transparency**. Both SVG fields open the code editor. New widgets measure 85 × 85 px and use the two star snippets from the VIS2 reference. SVG coordinates and custom `transform` attributes are preserved; resizing the widget does not automatically scale its content.
+
+`false`, `off`, and numeric zero select the false drawing; nonzero numbers select the true drawing. Numeric switching follows the VIS2 threshold of 0.5: values below it write 1; values at or above it write 0. Switchable HA entities receive on/off; number or text values require a compatible `input_number`/`input_text` helper. **Read only** prevents writes and also allows sensors as sources. The editor never switches an entity.
+
+Transparency ranges from 0 to 1. The editor keeps at least 20% visible so the widget remains editable; runtime also allows complete transparency. **CSS General** remains enabled for position and size, while other CSS groups start disabled. Optional migration hints explain write targets and transparency behavior.
 
 ### Bool Checkbox
 

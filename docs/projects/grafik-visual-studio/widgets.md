@@ -40,7 +40,7 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Note | Notizzettel mit Text beziehungsweise HTML und optional ausgeblendeter Ecke. |
 | Screen Resolution | Zeigt die aktuelle Fensterauflösung an. |
 | Red Number | Zahlenwert als farbiger Kreis oder Pin mit anpassbarem Radius. |
-| Bool SVG | Wählt nach dem aktuellen Zustand eines von zwei SVG-Motiven; kann eine schaltbare Entität steuern. |
+| Bool SVG | Wählt nach dem aktuellen Zustand eines von zwei SVG-Motiven; kann eine schaltbare Entität oder einen passenden 0/1-Helfer steuern. |
 | SVG shape | Zeichnet eine geometrische SVG-Form mit Farbe, Strichbreite, Rotation und Skalierung. |
 | Input val | Text- oder Zahlen-Eingabefeld (150 × 70). Zahlenmodus mit optionalem min/max; Nur-lesend erlaubt auch Sensoren. Enter bestätigt immer. Auto-setzen schreibt nach der einstellbaren Eingabepause (Standard 1000 ms), auch mit withEnter. withEnter ergänzt eine Bestätigungstaste für ungesendete Eingaben. Ohne Auto-setzen schreibt das Verlassen des Feldes nichts. Schreibziele sind passende `input_number`-/`input_text`-Helfer; ohne Entität bleibt die Eingabe lokal. |
 | View in widget | Bettet eine Studio-Projektseite ein (Standard 300 × 200); rekursive Einbettung wird verhindert. Für HA-Dashboards gibt es ein eigenes Widget unter Spezial. |
@@ -203,6 +203,16 @@ Eine Zeilenauswahl schreibt das Zeilenobjekt als JSON in **Ausgewählt ID** (`in
 Das Auswahlfeld hat zwei Einträge mit **Text bei 'false'** und **Text bei 'true'**. Es liest boolesche und numerische Zustände: `0` gilt als false, andere Zahlen als true. HA-Zustände `off`/`on` werden passend zugeordnet. **HTML voranstellen**, **HTML anhängen** und **Autofokus** sind vorhanden; Autofokus gilt nur in der Runtime.
 
 Eine Auswahl schreibt `0` oder `1` in einen passenden `input_number`- oder `input_text`-Helfer. Bei `switch`, `light` und `input_boolean` wird ein entsprechender HA-Schaltbefehl gesendet. Ungeeignete oder nicht verfügbare Ziele sind gesperrt. Ohne Entität ist eine lokale Runtime-Vorschau möglich; im Editor wird nicht geschrieben. Neue Widgets starten mit leeren Text-/HTML-Feldern, deaktiviertem Autofokus und ausschließlich aktiviertem CSS Allgemein. Bestehende Beschriftungen bleiben erhalten.
+
+### Bool SVG
+
+![Bool SVG mit Stern-Motiv und Nur Anzeige](/images/grafik-visual-studio/bool-svg.png)
+
+Unter **Allgemein** stehen die HA-Entität, **Nur Anzeige**, **SVG bei false**, **SVG bei true** und **Durchsichtigkeit**. Die SVG-Felder lassen sich im Code-Editor bearbeiten. Neue Widgets sind 85 × 85 px groß und verwenden die beiden Stern-Motive der VIS2-Vorlage. SVG-Koordinaten und eigene `transform`-Angaben bleiben erhalten; die Widgetgröße skaliert den Inhalt nicht automatisch.
+
+`false`, `off` und numerische Null wählen das false-Motiv; Zahlen ungleich Null das true-Motiv. Beim Schalten numerischer Werte gilt der VIS2-Schwellwert 0,5: darunter wird 1, ab 0,5 wird 0 geschrieben. Schaltbare HA-Entitäten erhalten Ein/Aus; Zahlen- oder Textwerte benötigen einen passenden `input_number`-/`input_text`-Helfer. **Nur Anzeige** verhindert das Schreiben, auch Sensoren können dann als Quelle dienen. Im Editor wird niemals geschaltet.
+
+Die Durchsichtigkeit reicht von 0 bis 1. Im Editor bleiben mindestens 20 % sichtbar, damit das Widget bearbeitbar bleibt; in der Runtime gilt auch vollständige Transparenz. **CSS Allgemein** ist für Position und Größe aktiv, die übrigen CSS-Gruppen sind bei neuen Widgets deaktiviert. Die optionalen Umsteigerhinweise erklären die Schreibziele und das Verhalten der Durchsichtigkeit.
 
 ### Bool Checkbox
 
