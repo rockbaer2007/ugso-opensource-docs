@@ -226,6 +226,16 @@ Neue Widgets beginnen mit 52 × 30 px. **Allgemein** bietet die HA-Entität, **t
 
 Das Widget liest nur und benötigt keinen zusätzlichen HA-Helfer. Der vorhandene Ausgangspunkt bleibt als Wertquelle nutzbar, auch wenn die Null-Anzeige ausgeblendet ist. **CSS Allgemein** bleibt aktiv, übrige CSS-Gruppen starten deaktiviert. Der optionale Umsteigerhinweis erklärt das Ausblenden.
 
+### SVG shape
+
+![SVG shape mit Kreis und getrennten Skalierungsreglern](/images/grafik-visual-studio/svg-shape.png)
+
+Die Form wird direkt als SVG gezeichnet; Bilddateien, HA-Entitäten oder zusätzliche Helfer werden nicht benötigt. Neue Widgets sind **100 × 100 px** groß. Unter **Allgemein** stehen Linie, Dreieck, Quadrat, Pentagon, Sechseck, Achteck, Kreis, Stern, Pfeil und benutzerdefiniertes Polygon zur Auswahl. Beim benutzerdefinierten Polygon wird zusätzlich die **Punkteanzahl** von 3 bis 20 angeboten; sie erzeugt ein regelmäßiges Polygon, keine frei eingegebenen Koordinaten.
+
+**Linienfarbe** und **Füllfarbe** werden als HEX gewählt. Die **Linienbreite** reicht von 0 bis 100 (Standard 5), **Drehen** von 0 bis 360 Grad. **Breitenskala** und **Höhenskala** sind getrennt von 0 bis 1 in Schritten von 0,05 einstellbar. Drehung und Skalierung erfolgen um die Formmitte; bei der Linie gilt wie im VIS2-Vorbild nur die Drehung, ihre Strichbreite wird beim Vergrößern nicht mitskaliert.
+
+Der Stern verwendet sich kreuzende Kanten, der Pfeil zeigt ohne Drehung nach oben. Die Strichbreite verkleinert den verfügbaren Radius von Kreis und Polygonen. Sehr breite Striche können kleine Formen vollständig ausfüllen; negative Radien werden verhindert. **CSS Allgemein** bleibt für Position und Größe aktiv; alle übrigen CSS-Gruppen sind bei neuen Widgets deaktiviert. Editor und Runtime zeichnen dieselbe Geometrie.
+
 ### Bool Checkbox
 
 Die Checkbox zeigt den Zustand der gebundenen Home-Assistant-Entität. In der Runtime kann sie `switch`, `light` und `input_boolean` schalten; ohne verfügbare, passende Entität ist sie gesperrt. Im Editor dient sie nur als Vorschau.

@@ -226,6 +226,16 @@ New widgets start at 52 × 30 px. **General** provides the HA entity, **type** (
 
 This widget only reads and requires no additional HA helper. Its existing output point remains usable as a value source even when the zero display is hidden. **CSS General** stays enabled; other CSS groups start disabled. The optional migration hint explains the hiding behavior.
 
+### SVG shape
+
+![SVG shape with a circle and separate scale controls](/images/grafik-visual-studio/svg-shape.png)
+
+Shapes are drawn directly as SVG; no image files, HA entities or additional helpers are required. New widgets measure **100 × 100 px**. **General** offers Line, Triangle, Square, Pentagon, Hexagon, Octagon, Circle, Star, Arrow and Custom polygon. Custom polygon additionally exposes **Point count**, ranging from 3 to 20; this generates a regular polygon rather than accepting arbitrary coordinates.
+
+**Line color** and **Fill color** use HEX pickers. **Line width** ranges from 0 to 100 (default 5), and **Rotate** from 0 to 360 degrees. Separate **Width scale** and **Height scale** range from 0 to 1 in steps of 0.05. Shapes rotate and scale around their center. Following the VIS2 reference, lines only use rotation and keep their stroke width when resized.
+
+Stars use crossing edges; arrows point upwards without rotation. Stroke width reduces the available radius for circles and polygons. Very thick strokes can completely fill small shapes; negative radii are prevented. **CSS General** remains enabled for position and size; all other CSS groups start disabled. Editor and runtime draw the same geometry.
+
 ### Bool Checkbox
 
 The checkbox displays the bound Home Assistant entity state. In the runtime it can control `switch`, `light`, and `input_boolean`; it is disabled without an available, supported entity. In the editor it is a preview only.
