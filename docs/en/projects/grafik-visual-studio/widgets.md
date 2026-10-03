@@ -94,6 +94,16 @@ Studio sanitizes HTML: embedded scripts and event handlers are not executed. Thi
 
 VIS2 **Subview** serves special navigation systems such as Jaeger Design and is not supported in Studio yet; this field is disabled. It does not refer to a Studio tab. Optional migration hints explain this limitation and HTML sanitization.
 
+### filter - dropdown
+
+From **0.1.155**, **editor → Edit** manages value, title, icon, image, text color, active color and default selection. Add/remove entries and reorder them with the dialog's arrow buttons. Single selection permits one default; multiple selection permits several. **Apply** commits the draft and **Cancel** discards it.
+
+Colors are saved as **HEX**: `rgba(120,112,160,1)` becomes `#7870A0`, and `rgba(65,77,25,1)` becomes `#414D19`. An optional alpha channel uses `#RRGGBBAA`. Colors can also be cleared. For buttons, **Active color** controls the selected entry's text; the background follows the variant. Icon takes precedence over image.
+
+**Type** offers dropdown, horizontal or vertical buttons. Buttons use outlined/contained/text; dropdowns use standard/outlined/filled with optional name, autofocus and small size. Dropdown options display icons/images and support keyboard operation. **Hide no-filter option** removes reset; otherwise its label is configurable.
+
+Filter values match widget **Filter word** on the same page. Comma or semicolon can address several filter words. Untagged widgets stay visible. Defaults and filtering apply in runtime; editor widgets stay editable. Selection is separate per page. No HA helper is needed. New filters start with empty entries, 200 × 50px and only CSS General enabled. Existing simple lists remain usable.
+
 ### Bar
 
 **Bar** displays a numeric value between **Minimum** and **Maximum** as a colored bar. For 0–1000, a value of 300 fills 30%. Out-of-range values are clamped to 0–100%; equal minimum and maximum produce an empty bar. A solar-power HA sensor is suitable: the widget only reads and requires no additional helper.

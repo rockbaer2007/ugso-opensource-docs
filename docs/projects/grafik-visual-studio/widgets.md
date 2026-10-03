@@ -94,6 +94,16 @@ Studio bereinigt das HTML: Eingebettete Skripte und Event-Handler werden nicht a
 
 **Unteransicht** aus VIS2 ist für spezielle Navigationssysteme wie Jaeger Design vorgesehen und in Studio noch nicht angebunden; das Feld ist deaktiviert. Es bezeichnet keinen Studio-Tab. Die abschaltbaren Umsteigerhinweise erklären diese Einschränkung und die HTML-Bereinigung.
 
+### filter - dropdown
+
+Ab **0.1.155** bearbeitet **editor → Bearbeiten** die Einträge mit Wert, Titel, Symbol, Bild, Textfarbe, aktiver Farbe und Standardauswahl. Einträge lassen sich hinzufügen, löschen und mit den Pfeiltasten im Dialog umsortieren. Bei Einfachauswahl kann nur ein Eintrag Standard sein; Mehrfachauswahl erlaubt mehrere. **Anwenden** übernimmt die Änderungen, **Abbrechen** verwirft sie.
+
+Farben werden als **HEX** gespeichert: `rgba(120,112,160,1)` entspricht `#7870A0`, `rgba(65,77,25,1)` entspricht `#414D19`. Optional ist ein Alphakanal als `#RRGGBBAA` möglich. Das Farbfeld kann auch geleert werden. **Aktive Farbe** ist bei den Tasten die Textfarbe des ausgewählten Eintrags; der Hintergrund folgt der Variante. Symbol hat Vorrang vor Bild.
+
+**Typ** bietet Dropdown-Menü, horizontale oder vertikale Tasten. Tasten haben outlined/contained/text; Dropdowns standard/outlined/filled sowie optional Name, Autofokus und Klein. Die Dropdown-Liste zeigt Icons/Bilder und unterstützt Tastaturbedienung. **Keine Option Kein Filter** blendet die Rücksetzoption aus; ihr Text ist ansonsten frei wählbar.
+
+Filterwerte passen zu **Filterwort** der Widgets auf derselben Seite. Komma oder Semikolon im Wert kann mehrere Filterwörter ansprechen. Widgets ohne Filterwort bleiben sichtbar. Standardauswahl und Filterung gelten in der Runtime; im Editor bleiben die Widgets bearbeitbar. Jede Seite hat eine eigene Auswahl. Es wird kein HA-Helfer benötigt. Neue Filter starten mit leerer Eintragsliste, 200 × 50 px und nur CSS Allgemein aktiv. Bestehende einfache Listen bleiben verwendbar.
+
 ### Bar
 
 **Bar** zeigt einen Zahlenwert innerhalb von **Minimum** und **Maximum** als farbigen Balken. Bei 0–1000 entspricht 300 einem Füllstand von 30 %. Werte außerhalb des Bereichs werden auf 0–100 % begrenzt; bei gleichem Minimum und Maximum bleibt der Balken leer. Eine HA-Sensorentität wie Solarleistung passt hier: Das Widget liest nur und benötigt keinen zusätzlichen Helfer.
