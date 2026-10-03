@@ -80,6 +80,12 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
 
+### HTML
+
+**HTML** displays custom markup through the existing HTML editor. `<b>Hallo</b><i> Susi</i>` produces bold **Hallo** and italic *Susi*. **Update interval (ms)** rebuilds this content periodically; `0`, empty or `null` disables periodic refresh. The interval supports up to 180000ms in 100ms steps. This is not an HA polling interval and requires no helper.
+
+Studio sanitizes HTML: embedded scripts and event handlers are not executed. This differs from the VIS2 original and is explained through optional migration hints. `{value}` is not a placeholder. New widgets start with empty HTML, 200 × 130px and disabled CSS groups; existing content is preserved. The optional output point remains available.
+
 ### Bar
 
 **Bar** displays a numeric value between **Minimum** and **Maximum** as a colored bar. For 0–1000, a value of 300 fills 30%. Out-of-range values are clamped to 0–100%; equal minimum and maximum produce an empty bar. A solar-power HA sensor is suitable: the widget only reads and requires no additional helper.

@@ -80,6 +80,12 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
 
+### HTML
+
+**HTML** zeigt eigenen HTML-Inhalt mit dem vorhandenen HTML-Editor. `<b>Hallo</b><i> Susi</i>` ergibt **Hallo** und ein kursives *Susi*. **Updatezeit (ms)** baut diesen Inhalt im eingestellten Abstand neu auf; `0`, leer oder `null` deaktiviert die periodische Aktualisierung. Der Bereich reicht bis 180000 ms in Schritten von 100 ms. Dies ist keine HA-Abfragezeit und benötigt keinen Helfer.
+
+Studio bereinigt das HTML: Eingebettete Skripte und Event-Handler werden nicht ausgeführt. Das unterscheidet sich vom VIS2-Original und wird als abschaltbarer Umsteigerhinweis erklärt. `{value}` ist kein Platzhalter. Neue Widgets beginnen mit leerem HTML, 200 × 130 px und deaktivierten CSS-Bereichen; vorhandene Inhalte bleiben erhalten. Der optionale Ausgangspunkt ist weiterhin verfügbar.
+
 ### Bar
 
 **Bar** zeigt einen Zahlenwert innerhalb von **Minimum** und **Maximum** als farbigen Balken. Bei 0–1000 entspricht 300 einem Füllstand von 30 %. Werte außerhalb des Bereichs werden auf 0–100 % begrenzt; bei gleichem Minimum und Maximum bleibt der Balken leer. Eine HA-Sensorentität wie Solarleistung passt hier: Das Widget liest nur und benötigt keinen zusätzlichen Helfer.
