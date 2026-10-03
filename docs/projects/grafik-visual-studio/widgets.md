@@ -37,7 +37,7 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Widget | Aktuelle Funktion |
 | --- | --- |
 | link | Formatierbarer HTML-Inhalt als Link zu einer URL. |
-| Note | Notizzettel mit Text beziehungsweise HTML und optional ausgeblendeter Ecke. |
+| Note | Notizzettel mit Entitätswert, Testtext, optional ausgeblendeter Ecke und Textdialog. |
 | Screen Resolution | Zeigt die aktuelle Fensterauflösung an. |
 | Red Number | Zahlenwert als farbiger Kreis oder Pin mit anpassbarem Radius. |
 | Bool SVG | Wählt nach dem aktuellen Zustand eines von zwei SVG-Motiven; kann eine schaltbare Entität oder einen passenden 0/1-Helfer steuern. |
@@ -286,6 +286,20 @@ Die zustandsabhängige Variante verwendet die HA-Entität als URL-Index. `false`
 **Werteanzahl bis** ist der höchste Index, nicht die Anzahl: Standard 2 ergibt [0], [1], [2]; Maximum 20 ergibt **21 Einträge von [0] bis [20]**. Die Gruppen **frames [n]** enthalten **URL falls Wert [n]** und **Kein Sandkasten [n]**. Sie können aktiviert/deaktiviert, kopiert, gelöscht und umgeordnet werden. Beim Reduzieren der höchsten Nummer bleiben ausgeblendete Einträge erhalten. Die Nummern entsprechen direkt dem Entitätswert; Umordnen verändert diese Zuordnung.
 
 Standardgröße ist **600 × 320 px**. Aktualisierungsintervall, Aufwachen, Viewwechsel, unveränderte URL, Scroll X/Y und Rahmen funktionieren wie bei **iFrame**. Die Sandbox wird je Eintrag gewählt. Eine unveränderte URL mit unveränderter Sandbox wird bei Änderungen anderer Widgets nicht erneut geladen. Bei anderer URL oder Sandbox wird die Einbettung ersetzt. **CSS Allgemein** bleibt aktiv; die übrigen CSS-Gruppen starten deaktiviert. Die optionalen Umsteigerhinweise erklären Index, Sandbox und Aktualisierung.
+
+### Note
+
+**Allgemein** enthält Home-Assistant-Entität, HA-Attribut, HTML voranstellen, HTML anhängen, Testtext und Ecke ausblenden. Das zusätzliche Attributfeld ersetzt ioBroker-Attributdatenpunkte: Für `friendly_name` die passende HA-Entität wählen und `friendly_name` eintragen. Ein leeres Attributfeld liest den Zustand.
+
+Ein nicht leerer **Testtext** ersetzt im Editor den Entitätswert. In der Runtime wird ausschließlich der Entitätswert beziehungsweise das Attribut angezeigt; fehlt er, bleibt der mittlere Text leer. Voranstellen und Anhängen bleiben sichtbar. Wie im VIS2-Note-Quellcode werden auch die als HTML bezeichneten Felder als Text dargestellt; `<b>` erzeugt hier keine Fettschrift. Zeilenumbrüche bleiben erhalten.
+
+**Ecke ausblenden** steuert nur die untere rechte Ecke und ist kein Schreibschutz. Ohne Haken zeigt sie die Rahmenfarbe. Neue Notizen sind **100 × 70 px** groß, mit 5 px Eckenradius, grauem 1 px Rahmen und gelbem Hintergrund `#FFFF69CC`. Größe und Farben bleiben über CSS anpassbar; **CSS Allgemein** bleibt aktiv, andere CSS-Gruppen starten deaktiviert.
+
+Ein Klick in der Runtime öffnet den Notizdialog. Ein verfügbarer **input_text-Helfer ohne Attributauswahl** erlaubt Bearbeiten, Leeren und Übernehmen; seine maximale Textlänge wird beachtet. Geschrieben wird nur der Notiztext, ohne Voranstellen und Anhängen. Sensoren und Attribute bleiben lesbar, bieten aber kein Schreibziel. Ohne passendes Schreibziel ist das Textfeld im Dialog nur lesbar und Übernehmen deaktiviert. Abbrechen und Escape schließen den Dialog ohne Schreiben. Die kleinen roten Helferhinweise lassen sich über **Umsteigerhinweise anzeigen** ein- und ausschalten.
+
+![Note mit Testtext und Vergleich der ausgeblendeten und sichtbaren Ecke](/images/grafik-visual-studio/note.png)
+
+Funktionale Referenz: [VIS2 Note](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicNote.tsx).
 
 ### Border
 

@@ -37,7 +37,7 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Widget | Current behavior |
 | --- | --- |
 | link | Formatted HTML content linking to a URL. |
-| Note | Note with text or HTML and an optional folded corner. |
+| Note | Note with an entity value, test text, optional corner and a text dialog. |
 | Screen Resolution | Displays the current window resolution. |
 | Red Number | Number displayed as a colored circle or pin with adjustable radius. |
 | Bool SVG | Selects one of two SVG drawings according to the current state; can control a switchable entity or a suitable 0/1 helper. |
@@ -286,6 +286,20 @@ The state-dependent variant reads its HA entity as a URL index. `false`/`off` se
 **Highest value index** defines the highest index rather than the number of entries: default 2 creates [0], [1], [2]; maximum 20 creates **21 entries from [0] through [20]**. Each **frames [n]** group contains **URL for value [n]** and **No sandbox [n]**. Groups can be enabled/disabled, copied, deleted and reordered. Reducing the highest index preserves hidden entries. Numbers directly correspond to the entity value; reordering changes that mapping.
 
 The default size is **600 × 320 px**. Refresh interval, wake-up, view changes, unchanged URLs, Scroll X/Y and borders behave like **iFrame**. Sandbox is selected per entry. An unchanged URL with unchanged sandbox is retained when other widget values change. Different URLs or sandbox settings replace the embedding. **CSS General** stays enabled; other CSS groups start disabled. Optional migration hints explain indexes, sandbox and refresh behavior.
+
+### Note
+
+**General** contains Home Assistant entity, HA attribute, prepend HTML, append HTML, test text and hide corner. The additional attribute field replaces ioBroker attribute data points: select the corresponding HA entity and enter `friendly_name` to read that attribute. An empty attribute field reads the state.
+
+Non-empty **test text** replaces the entity value in the editor. Runtime exclusively displays the entity value or selected attribute; a missing value leaves the middle text empty. Prepend and append text remain visible. Following the VIS2 Note source, the fields labeled HTML are also displayed as text; `<b>` does not create bold text here. Line breaks are preserved.
+
+**Hide corner** only controls the bottom-right corner and does not enable read-only mode. The visible corner uses the border color. New notes measure **100 × 70 px**, with a 5 px radius, gray 1 px border and yellow `#FFFF69CC` background. Size and colors remain configurable through CSS; **CSS General** stays enabled while other CSS groups start disabled.
+
+Clicking a note in runtime opens its text dialog. An available **input_text helper without an attribute selection** supports editing, clearing and applying the text, respecting the helper's maximum length. Only the note text is written, without prepend or append text. Sensors and attributes remain readable but cannot serve as write targets. Without a suitable target, the dialog is read only and Apply is disabled. Cancel and Escape close it without writing. Small red helper hints can be toggled through **Show migration hints**.
+
+![Note with test text and a comparison of hidden and visible corners](/images/grafik-visual-studio/note.png)
+
+Functional reference: [VIS2 Note](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicNote.tsx).
 
 ### Border
 
