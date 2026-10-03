@@ -15,6 +15,8 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 ## Was derzeit möglich ist
 
+- Die Widget-Auswahl übernimmt einzelne Häkchen und die Auswahl aller Widgets sofort in die Editorfläche. Signalbilder, Extrasteuerung und Andockpunkte sind bei neuen Widgets standardmäßig deaktiviert und lassen sich bei Bedarf aktivieren.
+- Die Bildauswahl der Widgets verwendet ebenfalls `/config/www/studio`; übernommene und kopierte Bildpfade beginnen mit `/local/studio/`.
 - Mehrere Projekte und benannte Seiten mit eigenen Abmessungen, Hintergrund und Widgets verwalten. Die Runtime zeigt sichtbare Seiten separat an.
 - Widgets auf einer scrollbar erreichbaren Fläche platzieren, verschieben, skalieren, benennen und per z-index anordnen. Mehrfachauswahl, Ausrichtung, Größenabgleich, Kopieren, Einfügen sowie Rückgängig/Wiederholen sind im Editor vorhanden.
 - Widgets aus den Gruppen „HA Grafik – Basis“, „HA Grafik – Interaktiv“ und „HA Grafik – Spezial“ verwenden. Dazu gehören unter anderem Text, HTML, Bild, Zahl, Schalter, Slider, Tabelle, SVG-Line und SVG LineBox. Die Widget-Palette zeigt je nach Typ eine Vorschau oder ein Symbol.
