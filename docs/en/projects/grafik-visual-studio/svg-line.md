@@ -4,6 +4,8 @@ title: SVG-Line – draw and animate connections
 
 # SVG-Line
 
+From Studio 0.1.136, **Animation** offers independent automatic divisors for the numeric entity and the SVG LineBox output. Each has its own target speed (default 1 cycle/s, range 0.05–5). The divisor is calculated from the current value's magnitude and the target speed, keeping motion at the chosen speed even when power changes substantially. Zero stops motion; negative values reverse direction. Automation starts disabled; the manual divisor remains stored and takes effect again when automation is disabled. Inheriting the main line's timing still takes precedence.
+
 Find **SVG-Line** under **HA Grafik – Spezial**. It visually connects widgets, routes paths around corners, and can animate a value flow. A line can start or end at a widget docking point, an explicitly enabled collector point on another SVG-Line, or free coordinates. The line itself is not a Home Assistant entity; an optional entity controls its animation.
 
 ## Connect widgets

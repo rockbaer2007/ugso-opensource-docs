@@ -4,6 +4,8 @@ title: SVG LineBox – collect and pass line values
 
 # SVG LineBox
 
+From Studio 0.1.136, the output line also offers an automatic SVG LineBox divisor with its own target speed (0.05–5 cycles/s, default 1). This keeps motion adjustable even for large sums. This option is independent of numeric-entity divisor automation; see [SVG-Line](./svg-line).
+
 **SVG LineBox**, under **HA Grafik – Spezial**, collects numeric values from connected SVG-Lines, calculates a signed sum, and can pass it to outgoing lines and optionally a Home Assistant number helper. Its box is visible in the editor. At runtime the box disappears, and active lines meet visually at its center.
 
 ## Set it up in the editor

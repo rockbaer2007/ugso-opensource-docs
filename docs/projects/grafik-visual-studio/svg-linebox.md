@@ -4,6 +4,8 @@ title: SVG LineBox – Linienwerte sammeln und weitergeben
 
 # SVG LineBox
 
+Ab Studio 0.1.136 bietet die Ausgangslinie zusätzlich **Teiler automatisch anpassen (SVG LineBox)** mit eigener Zielgeschwindigkeit (0,05–5 Zyklen/s, Standard 1). Damit bleiben auch große Summen gut einstellbar animiert. Diese Option ist unabhängig von der Teilerautomatik für Zahlen-Entitäten; siehe [SVG-Line](./svg-line).
+
 Die **SVG LineBox** unter **HA Grafik – Spezial** sammelt Zahlenwerte verbundener SVG-Lines, bildet eine vorzeichenbehaftete Summe und kann sie an Ausgangslinien sowie optional an einen Home-Assistant-Zahlenhelfer weitergeben. Im Editor ist der Kasten sichtbar. In der Runtime verschwindet er; aktive Leitungen treffen sich optisch in seiner Mitte.
 
 ## Im Editor einrichten

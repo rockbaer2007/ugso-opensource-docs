@@ -4,6 +4,8 @@ title: SVG-Line – Verbindungslinien zeichnen und animieren
 
 # SVG-Line
 
+Ab Studio 0.1.136 kannst du unter **Animation** den **Teiler automatisch anpassen**: getrennt für die Zahlen-Entität und den SVG-LineBox-Ausgang. Jede Automatik hat eine eigene **Zielgeschwindigkeit** (Standard 1 Zyklus/s, Bereich 0,05–5). Der Teiler wird aus dem Betrag des aktuellen Werts und der Zielgeschwindigkeit berechnet; dadurch bleibt die Bewegung auch bei stark wechselnden Leistungen gleich schnell. Null hält die Animation an, negative Werte kehren die Richtung um. Die Automatik ist standardmäßig aus; der manuelle Teiler bleibt gespeichert und gilt nach dem Ausschalten wieder. Bei aktivierter Übernahme des Hauptlinientakts hat dieser weiterhin Vorrang.
+
 **SVG-Line** findest du unter **HA Grafik – Spezial**. Das Widget verbindet andere Widgets optisch, führt Linien über Ecken und kann einen Wertefluss animieren. Eine Linie kann an Widget-Andockpunkten, an einem ausdrücklich aktivierten Sammelpunkt einer anderen SVG-Line oder an freien Koordinaten beginnen und enden. Sie ist selbst keine Home-Assistant-Entität; eine optionale Entität steuert ihre Animation.
 
 ## Verbindung und Andockpunkte
