@@ -10,7 +10,7 @@ Die Namen der VIS2-inspirierten Widgets bleiben auch bei deutscher Oberfläche a
 
 Ab Studio 0.1.135 bleibt der technische Widget-Name in der Editoroberfläche. Auf der Arbeitsfläche und in der Runtime erscheinen nur eigene Beschriftungen; neue Widgets starten ohne voreingestellten Titel. Das gilt zentral auch für zukünftige Widget-Pakete und die LineBox. Beim Laden älterer Projekte werden bisherige Standardtitel einmal entfernt. Individuelle Beschriftungen bleiben erhalten; anschließend kannst du auch einen früheren Standardtext ausdrücklich wieder eintragen.
 
-**Schreibfähige Widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG und Bool HTML (control) schalten gebundene `switch`-, `light`- oder `input_boolean`-Entitäten. Bulb on/off schaltet diese Entitäten oder setzt einen `input_number`-Helfer auf sein konfiguriertes Minimum/Maximum. Slider schreibt nur `input_number`; Input val schreibt `input_number` oder `input_text`. State Element schreibt im Schaltermodus Ein/Aus und im Buttonmodus den nächsten konfigurierten Wert an eine passende schaltbare Entität oder einen Zahlen-/Texthelfer. Bei einer unpassenden oder nicht verfügbaren Entität ist die Bedienung gesperrt. Die übrigen Widgets schreiben keinen HA-Zustand.
+**Schreibfähige Widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG und Bool HTML (control) schalten gebundene `switch`-, `light`- oder `input_boolean`-Entitäten. Bulb on/off schaltet diese Entitäten oder setzt einen `input_number`-Helfer auf sein konfiguriertes Minimum/Maximum. Slider schreibt nur `input_number`; Input val schreibt `input_number` oder `input_text`. Universal Element schreibt im Schaltermodus seine false-/true-Werte und im Tastermodus den nächsten konfigurierten Wert an eine passende schaltbare Entität oder einen Zahlen-/Texthelfer. Bei einer unpassenden oder nicht verfügbaren Entität ist die Bedienung gesperrt. Die übrigen Widgets schreiben keinen HA-Zustand.
 
 ## HA Grafik – Basis (44)
 
@@ -303,7 +303,24 @@ Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem *
 
 | Widget | Aktuelle Funktion |
 | --- | --- |
-| State Element | Bis zu fünf Zustände mit jeweils Icon, Bild, Text oder HTML; Schalter-, Button-, Nur-Anzeige- und Navigationsmodus. Liest eine gebundene Entität und kann im Schalter-/Buttonmodus passende Entitäten schreiben. |
+| Universal Element | Standardzustand und bis zu 20 bedingte Zustände; Symbol, Bild, Text oder HTML. Schalten, Taster, Anzeige und Navigation mit Einzel- oder getrennten Tasten. |
+
+### Universal Element
+
+Der frühere Name **State Element** bleibt als Suchbegriff erhalten. Bestehende Projekte verwenden weiterhin denselben Widget-Typ `universal-button`.
+
+- **Allgemein:** HA-Entität, Bedienung, Modus, false-/true-Werte und Navigations-URL. Ohne Entität arbeitet das Element lokal. Ein Sensor ist kein Schreibziel; Zahlen und Text benötigen passende `input_number`-/`input_text`-Helfer. Nur Anzeige und Navigation schreiben keinen HA-Zustand.
+- **Klick-Feedback:** Dauer in Millisekunden und sechs optionale Farben; `0` deaktiviert die Rückmeldung. Sie bleibt während des Zustandswechsels sichtbar. „Klick durchlassen“ reicht Mausklicks in der Runtime an darunterliegende Elemente weiter und deaktiviert die eigene Bedienung.
+- **Standardzustand / Zustände und Inhalte:** Der erste passende aktive Zustand gewinnt; ohne Treffer erscheint der Standardzustand. Regeln vergleichen die Widget-Entität oder eine andere HA-Entität mit `==`, `!=`, `>`, `>=`, `<` oder `<=`. Zustände lassen sich kopieren, löschen, verschieben und deaktivieren. Eine kleinere Anzahl behält die ausgeblendeten Einträge. „Klick deaktivieren wenn aktiv“ sperrt nur den aktuell passenden Zustand. Text kann zusätzlich zum Symbol oder Bild angezeigt werden; das Blinkintervall `0` bedeutet kein Blinken.
+- **Text / Inhalt / Ausrichtung:** Textdekoration, getrennte Außenabstände, Größe, Drehung und Spiegelung des Inhalts; Zeile oder Spalte, Verteilung, Text- und Inhaltsausrichtung sowie umgekehrte Reihenfolge. Eine ausdrücklich gewählte Inhaltsart im Bereich „Inhalt“ gilt für alle Zustände. Zustandsgröße `0` verwendet die Widget-Größe des Inhalts.
+- **Transparenz / Abstand:** Hintergrund und Inhalt haben eigene Opazitäten; vier Innenabstände sind unabhängig einstellbar.
+- **Ecken / Rahmen / Äußerer Schatten / Innerer Schatten / Form:** Vier abgerundete oder abgeschrägte Ecken, getrennte Rahmenbreiten und Rahmenstil sowie Schatten mit Versatz, Unschärfe, Größe und Farbe. Formen reichen vom Rechteck bis zum Stern und eigenen Polygonen. Polygonpunkte werden als Prozentpaare eingegeben; ungültige Eingaben fallen auf das Rechteck zurück. Formdrehung und Formradius betreffen Polygone; die normalen Ecken gelten für Rechtecke.
+
+**Vom Widget** übernimmt die Einstellungen des jeweiligen Bereichs dauerhaft von einem anderen Universal Element. Änderungen am Quellwidget wirken sofort; fehlende Quellen und zyklische Verweise führen zu lokalen Einstellungen statt einer Endlosschleife. Farbverweise übernehmen die Standardfarben des Quellwidgets. Der Haken „eigene Farbe“ schaltet einen HEX-Farbwert ein; ohne Haken bleibt die Farbe vererbt. Beim gemeinsamen Kopieren werden interne Verweise angepasst; beim Export müssen die referenzierten Widgets mit enthalten sein. **CSS Allgemein** bleibt aktiv, damit Position und Größe gespeichert werden. Die kleinen roten Umsteigerhinweise lassen sich zentral ausblenden.
+
+![Universal Element mit neutralen Einstellungsbereichen und mehreren Darstellungsformen](/images/grafik-visual-studio/universal-element.png)
+
+Die Funktionen orientieren sich an der [VIS2-Universal-Dokumentation von inventwo](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/universal/styling-and-shapes.md). Studio verwendet eine eigene Implementierung und benötigt das ioBroker-Paket nicht.
 
 ## HA Grafik – Datenfluss (3)
 

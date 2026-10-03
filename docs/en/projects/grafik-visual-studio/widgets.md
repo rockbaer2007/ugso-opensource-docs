@@ -10,7 +10,7 @@ VIS2-inspired widget names remain in English regardless of the interface languag
 
 From Studio 0.1.135, technical widget names stay in the editor interface. The canvas and runtime show only custom captions; new widgets start with an empty title. This central policy also covers future widget packages and LineBox. Loading an older project removes previous stock titles once. Custom captions remain; you can then explicitly enter a former stock caption again.
 
-**Writable widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG, and Bool HTML (control) can control bound `switch`, `light`, or `input_boolean` entities. Bulb on/off controls those entities or sets an `input_number` helper to its configured minimum/maximum. Slider writes only `input_number`; Input val writes `input_number` or `input_text`. In switch mode, State Element writes on/off; in button mode it writes the next configured value to a suitable switchable entity or number/text helper. Controls are disabled for unsupported or unavailable entities. Other widgets do not write HA state.
+**Writable widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG, and Bool HTML (control) can control bound `switch`, `light`, or `input_boolean` entities. Bulb on/off controls those entities or sets an `input_number` helper to its configured minimum/maximum. Slider writes only `input_number`; Input val writes `input_number` or `input_text`. In switch mode, Universal Element writes its false/true values; in button mode it writes the next configured value to a suitable switchable entity or number/text helper. Controls are disabled for unsupported or unavailable entities. Other widgets do not write HA state.
 
 ## HA Grafik – Basis (44)
 
@@ -302,7 +302,24 @@ New widgets use **300 × 200 pixels** with only **CSS General** enabled. Central
 
 | Widget | Current behavior |
 | --- | --- |
-| State Element | Up to five states, each with an icon, image, text or HTML; switch, button, display-only and navigation modes. Reads a bound entity and can write to suitable entities in switch/button mode. |
+| Universal Element | Default state and up to 20 conditional states with an icon, image, text or HTML. Switch, button, display and navigation modes, using single or separate buttons. |
+
+### Universal Element
+
+The former name **State Element** remains searchable. Existing projects retain the stored `universal-button` widget type.
+
+- **General:** HA entity, interaction, button mode, false/true values and navigation URL. Without an entity, the element works locally. Sensors are not write targets; number and text values require suitable `input_number`/`input_text` helpers. Display and navigation do not write HA state.
+- **Click feedback:** Duration in milliseconds and six optional colors; `0` disables feedback. It remains visible during state changes. “Pass clicks through” sends pointer clicks to underlying elements in runtime and disables this element’s own interaction.
+- **Default state / States and content:** The first matching enabled state wins; otherwise the default state appears. Rules compare the widget entity or another HA entity using `==`, `!=`, `>`, `>=`, `<` or `<=`. States support copying, deletion, reordering and disabling. Reducing the count retains hidden entries. “Disable click when active” only blocks the currently matching state. Text can accompany icons or images; blink interval `0` disables blinking.
+- **Text / Content / Alignment:** Text decoration, separate margins, content size, rotation and mirroring; row or column, spacing, text/content alignment and reversed order. An explicitly selected type in “Content” applies to all states. State size `0` uses the widget’s content size.
+- **Opacity / Padding:** Background and content have separate opacity values; each padding side is independent.
+- **Corners / Border / Outer shadow / Inner shadow / Shape:** Four rounded or chamfered corners, separate border widths and style, and shadows with offset, blur, spread and color. Shapes include rectangles, stars and custom polygons. Polygon points use percentage pairs; invalid input falls back to a rectangle. Shape rotation and radius apply to polygons; regular corner settings apply to rectangles.
+
+**From widget** continuously inherits a section’s settings from another Universal Element. Source changes propagate immediately; missing sources and cycles fall back to local settings instead of looping. Color references inherit the source widget’s default colors. The “custom color” checkbox enables a HEX value; without it, the color remains inherited. Copying linked widgets together remaps their internal references; exports must include referenced widgets. **CSS General** remains enabled to preserve position and size. Small red migration hints can be hidden globally.
+
+![Universal Element with neutral property sections and several visual styles](/images/grafik-visual-studio/universal-element.png)
+
+The functional reference is [inventwo’s VIS2 Universal documentation](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/universal/styling-and-shapes.md). Studio uses its own implementation and does not require the ioBroker package.
 
 ## HA Grafik – Data flow (3)
 
