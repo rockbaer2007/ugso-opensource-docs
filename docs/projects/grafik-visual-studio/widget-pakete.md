@@ -21,6 +21,8 @@ Ab Studio 0.1.197 unterstützt 0.2 `render: {"kind":"technic-window","valueKey":
 
 Ab Studio 0.1.198 ergänzt 0.2 `render: {"kind":"technic-switch","valueKey":"heading"}`. `entityId` wird mit `valueType` bool oder number ausgewertet; Runtime-Schreiben ist auf switch/light/input_boolean oder input_number mit 0/1 begrenzt. `readOnly` sperrt die Bedienung. `iconKey`, `iconScale`, `colorAN`/`colorAUS` und Bezeichnungsoptionen steuern die feste Darstellung.
 
+Ab Studio 0.1.199 ergänzt 0.2 `render: {"kind":"technic-light","valueKey":"heading"}`. `powerEntityId` und `brightnessEntityId` werden separat gelesen; Helligkeit kommt aus light.brightness oder einem Zahlenhelfer. `linkPowerDimmer` koppelt Power und Prozentwert. Der feste Host prüft alle Ziele für `/api/light-dimmer`; gleiche light-Bindungen werden zu einem Aufruf kombiniert. Getrennte Ziele sind sequenzielle HA-Aktionen.
+
 ```json
 {
   "format": "ha-grafik-widget-package",

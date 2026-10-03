@@ -27,6 +27,8 @@ From Studio 0.1.197, interface 0.2 supports `render: {"kind":"technic-window","v
 
 From Studio 0.1.198, interface 0.2 adds `render: {"kind":"technic-switch","valueKey":"heading"}`. `entityId` is evaluated using `valueType` bool or number; runtime writes are limited to switch/light/input_boolean or input_number with 0/1. `readOnly` prevents operation. `iconKey`, `iconScale`, `colorAN`/`colorAUS` and caption options configure the fixed renderer.
 
+From Studio 0.1.199, interface 0.2 adds `render: {"kind":"technic-light","valueKey":"heading"}`. `powerEntityId` and `brightnessEntityId` are read separately; brightness comes from light.brightness or a numeric helper. `linkPowerDimmer` links power and percent. The fixed host validates all targets for `/api/light-dimmer`; identical light bindings are combined into one call. Separate targets use sequential HA actions.
+
 ```json
 {
   "format": "ha-grafik-widget-package",

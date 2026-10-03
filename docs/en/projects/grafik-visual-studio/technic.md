@@ -7,7 +7,7 @@ description: Install the external Technic widget set and connect Window – Wall
 
 **Inspired by the [ioBroker Technic Widgets by Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** An independent implementation for Home Assistant.
 
-From **Studio 0.1.198**, you can install **UGSo Technic 1.1.0**. The package contains **Window – Wall** and **Switch – Boolean**. The other five widgets from the original set are not included yet. Install 1.1.0 through package management as an additive update to 1.0.0; the existing window widget is preserved.
+From **Studio 0.1.199**, you can install **UGSo Technic 1.2.0**. The package contains **Window – Wall**, **Switch – Boolean** and **Dimmer – Light**. The other four widgets from the original set are not included yet. Install 1.2.0 through package management as an additive update to 1.0.0 or 1.1.0; existing widgets are preserved.
 
 ## Installation
 
@@ -50,6 +50,20 @@ The switch follows the configuration options of `tplTechnicSchalterBoolean`. Def
 Click the symbol in the runtime to toggle; the caption stays visible. Tab and Enter/Space support keyboard operation. **Read-only** blocks changes. Pending actions cannot be sent twice; failures show a message and allow retry. **ON (preview)** applies only to unbound editor widgets. All settings remain in project and widget exports.
 
 ![Switch after turning on with its caption still visible](/images/grafik-visual-studio/technic-switch-runtime.png)
+
+## Dimmer – Light
+
+Follows the options of `tplTechnicReglerLicht`: caption **Light**, visible at the bottom, icon size 80%, 160 × 200 pixels. **ON color** is `#2ecfbf`, **OFF color** `#5f8f8a`, **Dimmer background** `#0d1820`. Size, colors and caption placement are configurable; the graphic is an independent SVG implementation.
+
+**On/Off: entity** accepts `light`, `switch` or `input_boolean`. **Brightness: entity (0–100)** accepts a dimmable `light` entity or an `input_number` helper. For a normal HA light, enter **the same light entity in both fields**. The host converts HA `brightness` from 0–255 to percent. OFF displays 0%. A numeric helper should use min = 0, max = 100 and step = 1. Sensors can display values but are never written.
+
+**Link power and brightness** is enabled by default: ON sets 100%, OFF sets 0%, dimming above zero turns ON. Both bindings must be available and writable. Binding the same light generates one HA call. Without linking, separate bindings remain independent; an HA brightness action using `light.turn_on` still turns that light on. 0% uses `light.turn_off`.
+
+Drag the outer radial arc or use the range control with the keyboard. The value previews locally while dragging and is sent only on release. The center power button toggles ON/OFF. The caption stays visible. **Read-only** blocks actions; unknown or non-dimmable entities cannot be operated. Missing live values never use preview fallbacks. **ON (preview)** and **Brightness (preview)** apply only to unbound editor widgets.
+
+The host validates all targets before the first write. Separate entities use sequential HA calls; a provider error can partially apply an action. Error feedback asks you to check the state before retrying. Pending actions cannot be sent twice. Operation was tested with simulated HA entities; real hardware needs separate verification.
+
+![Runtime light dimmer at 50 percent with its caption visible](/images/grafik-visual-studio/technic-light-runtime.png)
 
 ## Preview and export
 

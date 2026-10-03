@@ -7,7 +7,7 @@ description: Das externe Technic-Widget-Set installieren und Window – Wall mit
 
 **Inspiriert von den [ioBroker-Technic-Widgets von Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** Eigene Umsetzung für Home Assistant.
 
-Ab **Studio 0.1.198** kannst du **UGSo Technic 1.1.0** installieren. Das Paket enthält **Window – Wall** und **Switch – Boolean**. Die fünf weiteren Widgets des Originalsets sind noch nicht enthalten. Version 1.1.0 kann über die Paketverwaltung als Erweiterung von 1.0.0 installiert werden; das bestehende Fenster-Widget bleibt erhalten.
+Ab **Studio 0.1.199** kannst du **UGSo Technic 1.2.0** installieren. Das Paket enthält **Window – Wall**, **Switch – Boolean** und **Dimmer – Light**. Die vier weiteren Widgets des Originalsets sind noch nicht enthalten. Version 1.2.0 kann über die Paketverwaltung als Erweiterung von 1.0.0 oder 1.1.0 installiert werden; bestehende Widgets bleiben erhalten.
 
 ## Installieren
 
@@ -50,6 +50,20 @@ Der Schalter entspricht den Einstellmöglichkeiten von `tplTechnicSchalterBoolea
 Ein Klick auf das Symbol schaltet in der Runtime; die Bezeichnung bleibt sichtbar. Tastaturbedienung mit Tab und Enter/Leertaste ist möglich. **Schreibgeschützt** sperrt Änderungen. Laufende Aktionen werden nicht doppelt gesendet; Fehler zeigen einen Hinweis und erlauben einen erneuten Versuch. **EIN (Vorschau)** gilt nur ungebunden im Editor. Alle Einstellungen bleiben im Projekt und Export erhalten.
 
 ![Schalter nach dem Einschalten mit sichtbarer Beschriftung](/images/grafik-visual-studio/technic-switch-runtime.png)
+
+## Dimmer – Light
+
+Entspricht den Optionen von `tplTechnicReglerLicht`: Bezeichnung **Light**, sichtbar unten, Icon-Größe 80 %, 160 × 200 Pixel. **Farbe EIN** ist `#2ecfbf`, **Farbe AUS** `#5f8f8a`, **Regler-Hintergrund** `#0d1820`. Größe, Farben und Beschriftungsposition sind einstellbar; die Darstellung ist eine eigene SVG-Umsetzung.
+
+**Ein/Aus: Entität** akzeptiert `light`, `switch` oder `input_boolean`. **Helligkeit: Entität (0–100)** akzeptiert eine dimmbare `light`-Entität oder einen `input_number`-Helfer. Für ein gewöhnliches HA-Licht trägst du **dieselbe light-Entität in beide Felder** ein. Der Host rechnet das HA-Attribut `brightness` von 0–255 in Prozent um. Bei AUS zeigt er 0 %. Ein Zahlenhelfer sollte min = 0, max = 100 und step = 1 haben. Sensoren können Werte anzeigen, werden aber nicht beschrieben.
+
+**Ein/Aus mit Helligkeit verknüpfen** ist standardmäßig aktiv: EIN setzt 100 %, AUS setzt 0 %, Dimmen über 0 schaltet ein. Beide Bindungen müssen verfügbar und schreibbar sein. Bei derselben light-Entität wird ein einzelner HA-Aufruf erzeugt. Ohne Verknüpfung bleiben getrennte Bindungen unabhängig; eine HA-Helligkeitsaktion über `light.turn_on` schaltet das betreffende Licht dennoch ein. 0 % verwendet `light.turn_off`.
+
+Ziehe den äußeren Kreisbogen oder nutze den Schieberegler mit Tastatur. Der Wert wird während des Ziehens lokal angezeigt und erst beim Loslassen übertragen. Der mittlere Power-Knopf schaltet EIN/AUS. Die Bezeichnung bleibt sichtbar. **Schreibgeschützt** sperrt Aktionen; unbekannte oder nicht dimmbare Entitäten sind nicht bedienbar. Fehlende Live-Werte werden nicht durch Vorschau ersetzt. **EIN (Vorschau)** und **Helligkeit (Vorschau)** gelten nur ungebunden im Editor.
+
+Der Host prüft alle Ziele vor dem ersten Schreibvorgang. Bei getrennten Entitäten werden die HA-Aufrufe nacheinander ausgeführt; ein Anbieterfehler kann eine Aktion teilweise anwenden. Der Fehlerhinweis fordert zur Zustandsprüfung vor erneutem Versuch auf. Laufende Aktionen werden nicht doppelt gesendet. Die Bedienung wurde mit simulierten HA-Entitäten geprüft; reale Hardware muss separat getestet werden.
+
+![Lichtregler in der Runtime bei 50 Prozent mit sichtbarer Beschriftung](/images/grafik-visual-studio/technic-light-runtime.png)
 
 ## Vorschau und Export
 
