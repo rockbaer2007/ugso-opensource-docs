@@ -47,7 +47,7 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | View in widget 8 | Wählt eine von bis zu 50 Seiten anhand des Indexzustands. |
 | iFrame | Bettet eine URL ein, sofern die Zielseite dies erlaubt; mit Rahmen-, Scroll- und Aktualisierungsoptionen. |
 | iFrame 8 | Wählt anhand des Indexzustands einen Frame aus [0] bis [20], mit eigener Sandbox-Einstellung je URL. |
-| Image 8 | Wählt anhand des Indexzustands eines von bis zu 50 Bildern. |
+| Image 8 | Wählt anhand des Indexzustands Bild [0] bis maximal Bild [200]. |
 | AckFlag HTML | Zeigt zwei konfigurierbare HTML-Zustände; Home Assistant hat kein natives ioBroker-`ack`-Flag. |
 | Icon Toggle Button | Schaltfläche mit getrennten Bildern für Ein und Aus; kann eine schaltbare Entität steuern. |
 | Switch | Grafischer Ein/Aus-Schalter; kann eine schaltbare Entität steuern. |
@@ -250,6 +250,18 @@ Bild über die Studio-Dateiauswahl oder eine URL wählen. VIS2-Pfade wie `_PRJ_N
 ![Image mit Strecken und proportionaler Darstellung im Vergleich](/images/grafik-visual-studio/image.png)
 
 Funktionale Referenz: [VIS2 Image](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicImage.tsx).
+
+### Image 8
+
+Die HA-Entität liefert den Bildindex; `false`/`off` entspricht 0, `true`/`on` entspricht 1. Ohne Entität oder bei einem fehlenden Zustand wird **Bild [0]** verwendet. Die Entität wird im Editor und in der Runtime nur gelesen; ein zusätzlicher HA-Helfer ist nicht nötig.
+
+**Werteanzahl bis** bezeichnet den höchsten Index und ist auf **200** begrenzt: 0 ergibt einen Eintrag, 200 ergibt **201 Einträge von Bild [0] bis Bild [200]**. Jede Bildgruppe besitzt eine Quelle mit Dateiauswahl und kann kopiert, gelöscht, verschoben oder deaktiviert werden. Der letzte Eintrag bleibt erhalten; bei Index 200 ist Kopieren deaktiviert. Leere, deaktivierte oder ungültige Indizes zeigen kein Bild; vorhandene Quellen werden nicht automatisch neu nummeriert. Beim Verringern der Grenze bleiben die ausgeblendeten Quellen erhalten, bis sie ausdrücklich gelöscht werden.
+
+Neue Widgets sind **200 × 130 px** groß. Strecken, Updatezeit, Aufwachen, Viewwechsel, unveränderte URL und normale Browseraktionen entsprechen **Image**. Ein unverändertes Bild wird bei anderen Zustandsänderungen nicht neu geladen; laufende Refresh-Timer behalten ihren Takt. **CSS Allgemein** bleibt aktiv, andere CSS-Gruppen starten deaktiviert. Die kleinen roten Umsteigerhinweise lassen sich zentral ein- und ausschalten.
+
+![Image 8 mit höchstem Bildindex 200 und Refresh-Einstellungen](/images/grafik-visual-studio/image8.png)
+
+Funktionale Referenz: [VIS2 Image 8](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicImage8.tsx).
 
 ### iFrame
 

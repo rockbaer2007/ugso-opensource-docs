@@ -47,7 +47,7 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | View in widget 8 | Selects one of up to 50 pages using the index state. |
 | iFrame | Embeds a URL if the target permits it; offers frame, scrolling and refresh settings. |
 | iFrame 8 | Selects a frame from [0] through [20] using an index state, with a separate sandbox setting per URL. |
-| Image 8 | Selects one of up to 50 images using the index state. |
+| Image 8 | Selects Image [0] through a maximum of Image [200] using the index state. |
 | AckFlag HTML | Displays two configurable HTML states; Home Assistant has no native ioBroker `ack` flag. |
 | Icon Toggle Button | Button with separate on/off images; can control a switchable entity. |
 | Switch | On/off switch; can control a switchable entity. |
@@ -250,6 +250,18 @@ Choose an image using Studio files or a URL. Replace VIS2 paths such as `_PRJ_NA
 ![Image with stretched and proportional rendering for comparison](/images/grafik-visual-studio/image.png)
 
 Functional reference: [VIS2 Image](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicImage.tsx).
+
+### Image 8
+
+The HA entity supplies the image index; `false`/`off` is 0, `true`/`on` is 1. Without an entity or when its state is missing, **Image [0]** is used. The entity is read in both editor and runtime; no additional HA helper is required.
+
+**Highest index** is limited to **200**: 0 gives one entry, while 200 gives **201 entries from Image [0] to Image [200]**. Each image group has a source with file selection and supports copying, deleting, moving and disabling. The last entry remains; copying is disabled at index 200. Empty, disabled or invalid indices display no image; existing sources are not automatically renumbered. Reducing the limit retains hidden sources until they are explicitly deleted.
+
+New widgets measure **200 × 130 px**. Stretching, refresh interval, wake-up, view change, unchanged URL and native browser actions follow **Image**. Unchanged images do not reload during unrelated state changes; active refresh timers retain their cadence. **CSS General** remains enabled; other CSS groups start disabled. Small red migration hints can be toggled globally.
+
+![Image 8 with highest image index 200 and refresh settings](/images/grafik-visual-studio/image8.png)
+
+Functional reference: [VIS2 Image 8](https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Vis/Widgets/Basic/BasicImage8.tsx).
 
 ### iFrame
 
