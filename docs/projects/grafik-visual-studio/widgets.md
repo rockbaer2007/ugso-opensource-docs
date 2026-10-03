@@ -4,7 +4,7 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
-Der aktuelle Widget-Katalog enthält **61 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
+Der aktuelle Widget-Katalog enthält **62 Einträge in vier Gruppen**. Die Namen entsprechen der Palette im Editor. Widgets mit Entitätsbindung lesen in der Runtime den aktuellen Home-Assistant-Zustand; ohne Entität verwenden sie Vorschauwerte oder ausdrücklich konfigurierte Dockpunktwerte. Schreibzugriff ist auf die unten genannten Widgets und Entitätstypen begrenzt. Externe Zustandsänderungen werden derzeit alle fünf Sekunden abgefragt. Eigene Änderungen an einem Regler wirken sofort auf Number und SVG-Line, während der Schreibauftrag an Home Assistant läuft.
 
 Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive Widgets wie Terminkalender und Schieberegler verwenden übersetzte Palettennamen. Frühere Palettennamen können weiterhin als Suchbegriffe dienen. Bereits gespeicherte eigene Widget-Namen bleiben unverändert.
 
@@ -12,7 +12,7 @@ Die VIS2-inspirierten Basis-Widgets behalten ihre englischen Namen. Interaktive 
 
 Ab Studio 0.1.135 bleibt der technische Widget-Name in der Editoroberfläche. Auf der Arbeitsfläche und in der Runtime erscheinen nur eigene Beschriftungen; neue Widgets starten ohne voreingestellten Titel. Das gilt zentral auch für zukünftige Widget-Pakete und die LineBox. Beim Laden älterer Projekte werden bisherige Standardtitel einmal entfernt. Individuelle Beschriftungen bleiben erhalten; anschließend kannst du auch einen früheren Standardtext ausdrücklich wieder eintragen.
 
-**Schreibfähige Widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG und Bool HTML (control) schalten gebundene `switch`-, `light`- oder `input_boolean`-Entitäten. Bulb on/off schaltet diese Entitäten oder setzt einen `input_number`-Helfer auf sein konfiguriertes Minimum/Maximum. Slider schreibt nur `input_number`; Input val schreibt `input_number` oder `input_text`. Note schreibt im Notizdialog an einen `input_text`-Helfer ohne Attributauswahl. Universal Element schreibt im Schaltermodus seine false-/true-Werte und im Tastermodus den nächsten konfigurierten Wert an eine passende schaltbare Entität oder einen Zahlen-/Texthelfer. Bei einer unpassenden oder nicht verfügbaren Entität ist die Bedienung gesperrt. Die übrigen Widgets schreiben keinen HA-Zustand.
+**Schreibfähige Widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG und Bool HTML (control) schalten gebundene `switch`-, `light`- oder `input_boolean`-Entitäten. Bulb on/off schaltet diese Entitäten oder setzt einen `input_number`-Helfer auf sein konfiguriertes Minimum/Maximum. Slider schreibt nur `input_number`; Input val schreibt `input_number` oder `input_text`. Note schreibt im Notizdialog an einen `input_text`-Helfer ohne Attributauswahl. Universal Element schreibt im Schaltermodus seine false-/true-Werte und im Tastermodus den nächsten konfigurierten Wert an eine passende schaltbare Entität oder einen Zahlen-/Texthelfer. Bei einer unpassenden oder nicht verfügbaren Entität ist die Bedienung gesperrt. Checkbox und Schalten schreiben ihre konfigurierten Wertepaare an passende Schalter oder Zahlen-/Texthelfer. Die übrigen Widgets schreiben keinen HA-Zustand.
 
 ## HA Grafik – Basis (46)
 
@@ -367,7 +367,7 @@ Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität ei
 
 Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
 
-## HA Grafik – Interaktiv (8)
+## HA Grafik – Interaktiv (9)
 
 
 | Widget | Aktuelle Funktion |
@@ -380,6 +380,22 @@ Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem *
 | Tabelle | JSON-Tabelle mit Spaltenformaten, Formeln, Sortierung, Filtern, Seitenaufteilung und Zeilenfarben. |
 | Lauftext | Statischer Text oder HA-Zustand als fortlaufender Ticker mit Richtung, Geschwindigkeit und Hover-Pause. |
 | Werteliste | Text in einzelne Listeneinträge aufteilen; acht Zeichenarten, Nummerierung, eigene Zeichen und Abstände. |
+| Schalten | Eigene false-/true-Werte und Zustandstexte; getrennte Spur-/Daumenstile mit Stilübernahme. |
+
+### Schalten
+
+Ab **0.1.180** ergänzt **Schalten** unter **Interaktiv** den bisherigen Basis-**Switch**. Neue Widgets starten mit **70 × 40 px**, Textposition **Ende**, **12 px** Spur und **16 px** Daumen. Leere **Wert false/true** verwenden Boolean-Werte; eigene Zahlen oder Texte erlauben andere Wertepaare. **Text falsch/wahr** wird passend zum Zustand rechts, links, oben oder unten angezeigt und bleibt reiner Text.
+
+- **CSS Schalten – Spur:** getrennte Farben für false/true, Spurbreite **1–50 px**, Rundung **1–100 %** sowie X-/Y-Versatz, Unschärfe, Ausdehnung und getrennte Schattenfarben je Zustand.
+- **CSS Schalten – Daumen:** getrennte Farben für false/true, Größe **1–50 px**, Rundung **1–100 %** und eigene Schatteneinstellungen. 100 % ergibt eine runde Form.
+- **Vom Widget:** übernimmt Spur und Daumen unabhängig von einem anderen Schalten-Widget. Wertbindung und Texte bleiben lokal; zyklische Verweise enden sicher. Gemeinsames Kopieren ordnet die Verweise den kopierten Widgets zu.
+- **Bedienung:** Klick auf Schalter oder Text, alternativ Leertaste. Die Runtime schreibt passende Werte an verfügbare `switch`-, `light`-, `input_boolean`-, `input_number`- oder `input_text`-Entitäten. Sensoren, unpassende Wertepaare, fehlende Zustände und der Editor bleiben nicht schreibfähig. Ohne Entität kannst du lokal umschalten.
+
+Schrift und Textfarbe kommen aus den üblichen CSS-Gruppen. Alle Werte, Zustandstexte, Stilfelder und Verweise bleiben im Projekt und Widget-/Paket-Export erhalten.
+
+![Schalten mit vier Textpositionen, unabhängiger Spurübernahme und gesperrter Sensoranzeige](/images/grafik-visual-studio/styled-switch.png)
+
+Funktionsreferenz: [inventwo Switch für VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/switch-widget.md). Studio verwendet eine eigene Implementierung.
 
 ### Werteliste
 

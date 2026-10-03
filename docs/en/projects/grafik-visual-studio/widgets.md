@@ -4,7 +4,7 @@ title: Widget catalog
 
 # Widget catalog
 
-The current catalog has **61 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
+The current catalog has **62 widgets in four groups**. Names match the editor palette. Entity-bound widgets read the current Home Assistant state at runtime; unbound widgets use preview values or explicitly configured docking inputs. Writes are limited to the widget and entity types listed below. External state changes are currently polled every five seconds. A local slider change immediately affects bound Number and SVG-Line widgets while the write request is sent to Home Assistant.
 
 VIS2-inspired Basic widgets retain their English names. Interactive widgets such as Event Calendar and Interactive Slider use translated palette names. Former palette names still work as search terms. Existing custom widget names remain unchanged.
 
@@ -12,7 +12,7 @@ VIS2-inspired Basic widgets retain their English names. Interactive widgets such
 
 From Studio 0.1.135, technical widget names stay in the editor interface. The canvas and runtime show only custom captions; new widgets start with an empty title. This central policy also covers future widget packages and LineBox. Loading an older project removes previous stock titles once. Custom captions remain; you can then explicitly enter a former stock caption again.
 
-**Writable widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG, and Bool HTML (control) can control bound `switch`, `light`, or `input_boolean` entities. Bulb on/off controls those entities or sets an `input_number` helper to its configured minimum/maximum. Slider writes only `input_number`; Input val writes `input_number` or `input_text`. Note writes from its text dialog to an `input_text` helper without an attribute selection. In switch mode, Universal Element writes its false/true values; in button mode it writes the next configured value to a suitable switchable entity or number/text helper. Controls are disabled for unsupported or unavailable entities. Other widgets do not write HA state.
+**Writable widgets:** Switch, Icon Toggle Button, Bool Checkbox, Bool Select, Bool SVG, and Bool HTML (control) can control bound `switch`, `light`, or `input_boolean` entities. Bulb on/off controls those entities or sets an `input_number` helper to its configured minimum/maximum. Slider writes only `input_number`; Input val writes `input_number` or `input_text`. Note writes from its text dialog to an `input_text` helper without an attribute selection. In switch mode, Universal Element writes its false/true values; in button mode it writes the next configured value to a suitable switchable entity or number/text helper. Controls are disabled for unsupported or unavailable entities. Checkbox and Interactive Switch write their configured pairs to compatible switches or numeric/text helpers. Other widgets do not write HA state.
 
 ## HA Grafik – Basis (46)
 
@@ -367,7 +367,7 @@ Since **0.1.160**, this widget embeds a **Studio project page** according to an 
 
 New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
 
-## HA Grafik – Interaktiv (8)
+## HA Grafik – Interaktiv (9)
 
 | Widget | Current behavior |
 | --- | --- |
@@ -379,6 +379,22 @@ New widgets use **300 × 200 pixels** with only **CSS General** enabled. Central
 | Interactive Table | JSON table with column formats, formulas, sorting, filters, pagination and row colors. |
 | Marquee | Static text or HA state as a continuous ticker with direction, speed and hover pause. |
 | Value List | Split text into list items with eight bullet types, numbering, custom characters and spacing. |
+| Interactive Switch | Custom false/true pairs and state labels; independent track/thumb styling and inheritance. |
+
+### Interactive Switch
+
+From **0.1.180**, **Interactive Switch** under **Interactive** complements the existing Basic **Switch**. Defaults are **70 × 40 px**, **End** label position, a **12 px** track and a **16 px** thumb. Empty **Value false/true** use Boolean values; custom numbers or text support other pairs. **Text false/true** follows the state at the right, left, top or bottom and stays plain text.
+
+- **CSS Switch – Track:** separate false/true colors, track size **1–50 px**, rounding **1–100 %**, shadow X/Y offsets, blur, spread and separate shadow colors for each state.
+- **CSS Switch – Thumb:** separate false/true colors, size **1–50 px**, rounding **1–100 %** and independent shadows. 100 % produces a round shape.
+- **From widget:** inherits track and thumb independently from another Interactive Switch. Entity binding and labels stay local; cycles terminate safely. Copying related widgets together remaps their references.
+- **Interaction:** click the switch or its label, or press Space. Runtime writes compatible values to available `switch`, `light`, `input_boolean`, `input_number` or `input_text` entities. Sensors, incompatible pairs, missing states and the editor stay non-writing. Unbound switches can be toggled locally.
+
+Font and text color use standard CSS groups. All pairs, labels, style fields and references survive project and widget/package exports.
+
+![Interactive switches with four label positions, independent track inheritance and a disabled sensor display](/images/grafik-visual-studio/styled-switch.png)
+
+Functional reference: [inventwo Switch for VIS2](https://github.com/inventwo/ioBroker.vis-2-widgets-inventwo/blob/main/docs/en/widgets/switch-widget.md). Studio uses its own implementation.
 
 ### Value List
 
