@@ -6,6 +6,14 @@ title: SVG LineBox Math
 
 From Studio **0.1.138**, the enlarged dialog contains **four independent calculations**. Each has its own enabled state, formula or average mode, output list and result preview. Existing projects retain their previous calculation and outputs as calculation 1; calculations 2–4 and all internal input handoffs start disabled.
 
+## Size, icon and colors
+
+From **0.1.139**, width and height can be set independently between **32 and 2000 px**, in the calculation dialog or using editor resize handles. Rectangular shapes are supported. The 16 ports retain their relative positions, with perpendicular line entry. Small widgets use smaller editor markers to prevent overlap. A larger editor view is recommended for assigning letters comfortably; runtime hides the markers.
+
+Under **Appearance**, choose an optional icon, its size (8–512 px) and color, plus background, border and result text colors. Icons fit the available space. Recoloring requires a tintable icon; multicolor raster images retain their image colors. Disable **Show result** without stopping calculations or output handoffs. For 32 × 32 px, an icon with hidden result text is useful.
+
+**Additional CSS style** accepts supported inline declarations such as `border-radius: 4px; opacity: 0.8;`. It applies after the color fields and can override them. URLs and executable expressions are not allowed.
+
 ## Four calculations and output assignments
 
 ![Expanded SVG LineBox Math dialog with separate calculations and internal handoff to input C](/images/grafik-visual-studio/linebox-math-four-dialog.png)
@@ -51,7 +59,7 @@ The screenshot shows the German calculation dialog with **Average of all occupie
 
 From Studio 0.1.137, **SVG LineBox Math** is also available under **HA Grafik – Spezial**. Its square remains visible in both editor and runtime. Its 16 ports run clockwise from A at the top-left: A–E across the top, E–I down the right, I–M across the bottom and M–A up the left. Each side has three additional points between its corners. Connected editor markers are green and free markers orange, with contrasting letters; runtime hides the markers. Lines enter perpendicular to the edges. A/E enter from above, I/M from below; the remaining side ports enter through their respective edges.
 
-Select the widget and open **Edit calculation**. Set the square size (96–2000 px), each letter's **Off**, **Input** or **Output** role, and the calculation. New docking points start disabled; assigning an input or output role in the dialog enables that point. The **Docking points** section can also enable all points together.
+Select the widget and open **Edit calculation**. Set width and height (32–2000 px), each letter's **Off**, **Input** or **Output** role, and the calculation. New docking points start disabled; assigning an input or output role in the dialog enables that point. The **Docking points** section can also enable all points together.
 
 **Custom formula** supports `+`, `-`, `*`, `/`, parentheses, numbers with decimal points and letters A–P. Multiplication and division take precedence over addition and subtraction. Example: `(A + B) / C`. Multiple lines connected to one input first sum their signed values: A receiving 100 and 50 becomes 150; B receiving 30 gives 120 for `A - B`. **Average of all occupied inputs** counts each occupied input port once, producing `(150 + 30) / 2 = 90`; unconnected ports are excluded.
 

@@ -6,6 +6,14 @@ title: SVG LineBox Math
 
 Ab Studio **0.1.138** enthält der vergrößerte Dialog **vier getrennte Rechnungen**. Jede hat eine eigene Aktivierung, Formel beziehungsweise Durchschnittsberechnung, Ausgangsliste und Ergebnisvorschau. Rechnung 1 übernimmt bei älteren Projekten die bisherige Berechnung und ihre Ausgänge; Rechnungen 2–4 sowie alle internen Eingangsübergaben sind zunächst aus.
 
+## Größe, Icon und Farben
+
+Ab **0.1.139** sind Breite und Höhe unabhängig zwischen **32 und 2000 px** einstellbar: im Berechnungsdialog oder über die Größenanfasser im Editor. Rechteckige Formen sind möglich. Die 16 Dockpunkte behalten ihre relative Position; Leitungen treten weiterhin rechtwinklig ein. Bei kleinen Widgets werden die Editor-Markierungen kleiner, damit sie nicht überlappen. Für bequemes Zuordnen der Buchstaben empfiehlt sich eine größere Editoransicht; in der Runtime sind die Markierungen ausgeblendet.
+
+Unter **Darstellung** wählst du ein optionales Icon, seine Größe (8–512 px) und Farbe sowie Hintergrund-, Rahmen- und Ergebnistextfarbe. Icons werden an den verfügbaren Platz angepasst. Die Färbung setzt ein färbbares Icon voraus; mehrfarbige Rasterbilder behalten ihre Bildfarben. **Ergebnis anzeigen** lässt sich ausschalten, ohne Berechnung oder Weitergabe zu stoppen. Für 32 × 32 px sind ein Icon und ausgeblendeter Ergebnistext sinnvoll.
+
+**Zusätzlicher CSS-Stil** erlaubt unterstützte Inline-Deklarationen, zum Beispiel `border-radius: 4px; opacity: 0.8;`. Er wird nach den Farbfeldern angewendet und kann diese überschreiben. URLs und ausführbare Ausdrücke sind darin nicht zugelassen.
+
 ## Vier Rechnungen und Ausgangszuordnung
 
 ![Erweiterter SVG-LineBox-Math-Dialog mit separaten Rechnungen und interner Übergabe an Eingang C](/images/grafik-visual-studio/linebox-math-four-dialog.png)
@@ -51,7 +59,7 @@ Das Bild zeigt den Berechnungsdialog mit **Durchschnitt aller belegten Eingänge
 
 Ab Studio 0.1.137 steht **SVG LineBox Math** ebenfalls unter **HA Grafik – Spezial**. Es bleibt als Quadrat im Editor und in der Runtime sichtbar. Seine 16 Anschlüsse heißen im Uhrzeigersinn A–P, beginnend links oben: A–E oben, E–I rechts, I–M unten und M–A links. Jede Seite besitzt drei zusätzliche Punkte zwischen ihren Ecken. Im Editor sind angeschlossene Punkte grün und freie Punkte orange, mit kontrastreichen Buchstaben; in der Runtime verschwinden die Markierungen. Leitungen treten rechtwinklig ein. A/E werden von oben, I/M von unten angefahren; die seitlichen Punkte über ihre jeweilige Seitenkante.
 
-Wähle das Widget und öffne **Berechnung bearbeiten**. Dort stellst du die Quadratgröße (96–2000 px), die Rollen **Aus**, **Eingang** und **Ausgang** für jeden Buchstaben sowie die Berechnung ein. Neue Andockpunkte sind zunächst ausgeschaltet; eine Eingangs- oder Ausgangsrolle im Dialog aktiviert den jeweiligen Punkt. Alle Punkte lassen sich auch im Bereich **Andockpunkte** gemeinsam einschalten.
+Wähle das Widget und öffne **Berechnung bearbeiten**. Dort stellst du Breite und Höhe (32–2000 px), die Rollen **Aus**, **Eingang** und **Ausgang** für jeden Buchstaben sowie die Berechnung ein. Neue Andockpunkte sind zunächst ausgeschaltet; eine Eingangs- oder Ausgangsrolle im Dialog aktiviert den jeweiligen Punkt. Alle Punkte lassen sich auch im Bereich **Andockpunkte** gemeinsam einschalten.
 
 **Eigene Formel** unterstützt `+`, `-`, `*`, `/`, Klammern, Zahlen mit Dezimalpunkt und die Buchstaben A–P. Multiplikation und Division gehen vor Addition und Subtraktion. Beispiel: `(A + B) / C`. Mehrere Leitungen an einem Eingang werden zunächst mit Vorzeichen summiert: A mit 100 und 50 ergibt 150; B mit 30 ergibt bei `A - B` den Wert 120. **Durchschnitt aller belegten Eingänge** zählt jeden belegten Eingangsanschluss einmal, hier also `(150 + 30) / 2 = 90`; unbelegte Punkte bleiben unberücksichtigt.
 
