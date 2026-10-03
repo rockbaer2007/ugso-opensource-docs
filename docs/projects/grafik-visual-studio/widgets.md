@@ -42,7 +42,7 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Red Number | Zahlenwert als farbiger Kreis oder Pin mit anpassbarem Radius. |
 | Bool SVG | Wählt nach dem aktuellen Zustand eines von zwei SVG-Motiven; kann eine schaltbare Entität steuern. |
 | SVG shape | Zeichnet eine geometrische SVG-Form mit Farbe, Strichbreite, Rotation und Skalierung. |
-| Input val | Umrandetes Text- oder Zahlen-Eingabefeld. Liest und schreibt in der Runtime einen gewählten `input_number`- oder `input_text`-Helfer; ohne Entität bleibt die Eingabe lokal. „Auto-setzen“ schreibt nach einer kurzen Eingabepause, „withEnter“ nur bei Enter. |
+| Input val | Text- oder Zahlen-Eingabefeld (150 × 70). Zahlenmodus mit optionalem min/max; Nur-lesend erlaubt auch Sensoren. Enter bestätigt immer. Auto-setzen schreibt nach der einstellbaren Eingabepause (Standard 1000 ms), auch mit withEnter. withEnter ergänzt eine Bestätigungstaste für ungesendete Eingaben. Ohne Auto-setzen schreibt das Verlassen des Feldes nichts. Schreibziele sind passende `input_number`-/`input_text`-Helfer; ohne Entität bleibt die Eingabe lokal. |
 | View in widget | Bettet eine Projektseite ein; rekursive Einbettung wird verhindert. |
 | View in widget 8 | Wählt eine von bis zu 50 Seiten anhand des Indexzustands. |
 | iFrame | Bettet eine URL ein, sofern die Zielseite dies erlaubt; mit Rahmen-, Scroll- und Aktualisierungsoptionen. |
@@ -83,6 +83,10 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 ### CSS-Vorgaben
 
 Ab **0.1.154** bleibt **CSS Allgemein** bei allen Widgets verpflichtend aktiv, einschließlich bereits gespeicherter Projekte und zukünftiger Widget-Pakete. Position und Größe bleiben damit im Export erhalten. Frühere Hinweise auf deaktivierte CSS-Bereiche gelten ab dieser Version nur für die übrigen CSS-Gruppen.
+
+### Input val / Eingegebener Wert
+
+Mit Style sind „HTML voranstellen“ die Feldbeschriftung und „HTML anhängen“ der Hilfstext unter dem Feld. **Kein Style** zeigt stattdessen bereinigtes HTML vor und hinter einem einfachen Eingabefeld. Die Varianten sind standard, outlined und filled. Leere, ungültige oder außerhalb von min/max liegende Zahlen werden nicht geschrieben. Neue Widgets aktivieren nur CSS Allgemein; die Umsteigerhinweise lassen sich zentral abschalten.
 
 ### String / Zeichenfolge
 

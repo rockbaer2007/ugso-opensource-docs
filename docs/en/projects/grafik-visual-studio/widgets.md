@@ -42,7 +42,7 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Red Number | Number displayed as a colored circle or pin with adjustable radius. |
 | Bool SVG | Selects one of two SVG drawings according to the current state; can control a switchable entity. |
 | SVG shape | Draws an SVG shape with color, stroke, rotation and scaling. |
-| Input val | Bordered text or number input. At runtime it reads and writes a selected `input_number` or `input_text` helper; without an entity it stays local. Auto-set writes after a short typing pause, while withEnter writes only on Enter. |
+| Input val | Text or number input (150 × 70). Numeric mode supports optional min/max; read-only mode also accepts sensors. Enter always submits. Auto-set writes after the configured typing pause (1000 ms default), including withEnter mode. withEnter adds a confirmation button for unsent input. Without auto-set, leaving the field does not write. Writable targets are suitable `input_number`/`input_text` helpers; without an entity input stays local. |
 | View in widget | Embeds a project page while preventing recursive embedding. |
 | View in widget 8 | Selects one of up to 50 pages using the index state. |
 | iFrame | Embeds a URL if the target permits it; offers frame, scrolling and refresh settings. |
@@ -83,6 +83,10 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 ### CSS defaults
 
 From **0.1.154**, **CSS General** is mandatory for every widget, including saved projects and future widget packages. Position and size remain in exports. Earlier notes about disabled CSS groups now apply only to the remaining CSS groups.
+
+### Input val
+
+Styled inputs use prepended HTML as the field label and appended HTML as helper text below the field. **No style** instead renders sanitized HTML before and after a plain input. Variants are standard, outlined and filled. Empty, invalid or out-of-range numbers are not written. New widgets enable only CSS General; migration hints can be disabled centrally.
 
 ### String
 
