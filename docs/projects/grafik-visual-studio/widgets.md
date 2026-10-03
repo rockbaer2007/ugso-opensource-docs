@@ -46,7 +46,7 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | View in widget | Bettet eine Studio-Projektseite ein (Standard 300 × 200); rekursive Einbettung wird verhindert. Für HA-Dashboards gibt es ein eigenes Widget unter Spezial. |
 | View in widget 8 | Wählt eine von bis zu 50 Seiten anhand des Indexzustands. |
 | iFrame | Bettet eine URL ein, sofern die Zielseite dies erlaubt; mit Rahmen-, Scroll- und Aktualisierungsoptionen. |
-| iFrame 8 | Wählt anhand des Indexzustands einen von bis zu 20 konfigurierten Frames. |
+| iFrame 8 | Wählt anhand des Indexzustands einen Frame aus [0] bis [20], mit eigener Sandbox-Einstellung je URL. |
 | Image 8 | Wählt anhand des Indexzustands eines von bis zu 50 Bildern. |
 | AckFlag HTML | Zeigt zwei konfigurierbare HTML-Zustände; Home Assistant hat kein natives ioBroker-`ack`-Flag. |
 | Icon Toggle Button | Schaltfläche mit getrennten Bildern für Ein und Aus; kann eine schaltbare Entität steuern. |
@@ -247,6 +247,18 @@ Neue Widgets haben **600 × 320 px**. Unter **Allgemein** stehen Quelle, Updatez
 Standardmäßig beschränkt eine Sandbox die eingebettete Seite auf Skripte und Formulare. **Kein Sandkasten** entfernt diese Einschränkung. Anmeldung, Cookies und Einbettungsregeln der Zielseite gelten weiterhin; eine Seite kann die Einbettung per Browserrichtlinie verweigern. Scroll X/Y setzen die gewünschten Überlaufoptionen, die tatsächlich verfügbaren Scrollleisten hängen auch vom Browser und Inhalt der Zielseite ab. Bei fremden Domains kann Studio deren interne Scrollachsen nicht erzwingen. **Kein Rahmen** entfernt den iFrame-Rand.
 
 Es wird kein HA-Zustand geschrieben und kein HA-Helfer benötigt. Die optionalen Umsteigerhinweise erklären Sandbox und Aktualisierung. Ein iFrame verweist auch nach einem Export auf seine Quelle; die fremde Website wird nicht als lokale Kopie eingebettet.
+
+### iFrame 8
+
+![iFrame 8 mit URL und Sandbox je Eintrag](/images/grafik-visual-studio/iframe8.png)
+
+*Editor-Beispiel mit lokaler SVG-URL für Frame [0].*
+
+Die zustandsabhängige Variante verwendet die HA-Entität als URL-Index. `false`/`off` wählen [0], `true`/`on` wählen [1]; Zahlen wählen den entsprechenden nummerierten Eintrag. Ohne Entität starten neue Widgets mit Frame [0]. Ungültige, negative oder zu große Indizes sowie leere oder deaktivierte Einträge zeigen keinen Frame. Die Entität wird nur gelesen; ein zusätzlicher HA-Helfer ist nicht nötig.
+
+**Werteanzahl bis** ist der höchste Index, nicht die Anzahl: Standard 2 ergibt [0], [1], [2]; Maximum 20 ergibt **21 Einträge von [0] bis [20]**. Die Gruppen **frames [n]** enthalten **URL falls Wert [n]** und **Kein Sandkasten [n]**. Sie können aktiviert/deaktiviert, kopiert, gelöscht und umgeordnet werden. Beim Reduzieren der höchsten Nummer bleiben ausgeblendete Einträge erhalten. Die Nummern entsprechen direkt dem Entitätswert; Umordnen verändert diese Zuordnung.
+
+Standardgröße ist **600 × 320 px**. Aktualisierungsintervall, Aufwachen, Viewwechsel, unveränderte URL, Scroll X/Y und Rahmen funktionieren wie bei **iFrame**. Die Sandbox wird je Eintrag gewählt. Eine unveränderte URL mit unveränderter Sandbox wird bei Änderungen anderer Widgets nicht erneut geladen. Bei anderer URL oder Sandbox wird die Einbettung ersetzt. **CSS Allgemein** bleibt aktiv; die übrigen CSS-Gruppen starten deaktiviert. Die optionalen Umsteigerhinweise erklären Index, Sandbox und Aktualisierung.
 
 ### Bool Checkbox
 

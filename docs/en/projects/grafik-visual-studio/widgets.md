@@ -46,7 +46,7 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | View in widget | Embeds a Studio project page (300 × 200 default) while preventing recursive embedding. A separate widget under Special embeds HA dashboards. |
 | View in widget 8 | Selects one of up to 50 pages using the index state. |
 | iFrame | Embeds a URL if the target permits it; offers frame, scrolling and refresh settings. |
-| iFrame 8 | Selects one of up to 20 configured frames using the index state. |
+| iFrame 8 | Selects a frame from [0] through [20] using an index state, with a separate sandbox setting per URL. |
 | Image 8 | Selects one of up to 50 images using the index state. |
 | AckFlag HTML | Displays two configurable HTML states; Home Assistant has no native ioBroker `ack` flag. |
 | Icon Toggle Button | Button with separate on/off images; can control a switchable entity. |
@@ -247,6 +247,18 @@ New widgets measure **600 × 320 px**. **General** exposes Source, Update time (
 By default, a sandbox restricts the embedded page to scripts and forms. **No sandbox** removes this restriction. Authentication, cookies and the target page's embedding rules still apply; browser policies may prevent embedding. Scroll X/Y set the requested overflow options; actual scrollbars also depend on the browser and target content. Studio cannot enforce internal scroll axes on a different origin. **No frame** removes the iframe border.
 
 No HA state is written and no HA helper is required. Optional migration hints explain sandbox and refresh behavior. After export, an iframe still references its source; the external website is not embedded as a local copy.
+
+### iFrame 8
+
+![iFrame 8 with per-entry URL and sandbox](/images/grafik-visual-studio/iframe8.png)
+
+*Editor example using a local SVG URL for frame [0].*
+
+The state-dependent variant reads its HA entity as a URL index. `false`/`off` selects [0], `true`/`on` selects [1]; numbers select the corresponding entry. Without an entity, new widgets start with frame [0]. Invalid, negative or oversized indexes, empty URLs and disabled entries display no frame. The entity is read only; no additional HA helper is needed.
+
+**Highest value index** defines the highest index rather than the number of entries: default 2 creates [0], [1], [2]; maximum 20 creates **21 entries from [0] through [20]**. Each **frames [n]** group contains **URL for value [n]** and **No sandbox [n]**. Groups can be enabled/disabled, copied, deleted and reordered. Reducing the highest index preserves hidden entries. Numbers directly correspond to the entity value; reordering changes that mapping.
+
+The default size is **600 × 320 px**. Refresh interval, wake-up, view changes, unchanged URLs, Scroll X/Y and borders behave like **iFrame**. Sandbox is selected per entry. An unchanged URL with unchanged sandbox is retained when other widget values change. Different URLs or sandbox settings replace the embedding. **CSS General** stays enabled; other CSS groups start disabled. Optional migration hints explain indexes, sandbox and refresh behavior.
 
 ### Bool Checkbox
 
