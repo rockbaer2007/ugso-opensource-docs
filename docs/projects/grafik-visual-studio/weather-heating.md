@@ -5,7 +5,7 @@ description: Das optionale Diagramm-Widget-Paket installieren und konfigurieren.
 
 # Wetter und Heizung
 
-Ab **Studio 0.1.189** kannst du das Paket **Wetter und Heizung 1.2.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen** und **Wetter-Widget**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eine eigene SVG-Umsetzung. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
+Ab **Studio 0.1.190** kannst du das Paket **Wetter und Heizung 1.3.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget** und **Übersicht über Heizräume**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
 
 ## Installieren
 
@@ -13,7 +13,7 @@ Lade [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addo
 
 ## Diagramm konfigurieren
 
-Ein installiertes Paket 1.0.0 oder 1.1.0 kannst du über denselben Import auf 1.2.0 aktualisieren. Vorhandene Diagramme und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
+Ein installiertes Paket 1.0.0, 1.1.0 oder 1.2.0 kannst du über denselben Import auf 1.3.0 aktualisieren. Vorhandene Diagramme und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
 
 Unter **Allgemein** findest du Überschrift, Anzahl der Serien (1–10), Legende und Darstellung ohne Karte. Die erste Reihe kann die allgemeine Entität verwenden. Jede Gruppe **Daten [N]** bietet eine eigene Entität, ein optionales Attribut, Vorschau-JSON, X-/Y-Schlüssel, Name, Einheit, Farbe, Linie/Balken, linke/rechte Wertachse und Differenzberechnung. Mit einer Entitätsbindung liest das Diagramm ausschließlich deren Zustand oder Attribut. Fehlen Live-Daten, wird kein Vorschau-JSON eingesetzt. Es schreibt keine HA-Zustände.
 
@@ -60,5 +60,15 @@ Bei `individual` bindest du **Tagesdatum [1–5]** beziehungsweise **Zeitpunkte 
 **Temperatur**, **Regen**, **Wolken** und **Regenwahrscheinlichkeit** sind einzeln aktivierbar. Jede Gruppe hat Farben und eine linke/rechte Wertachse; Regen erscheint als Balken. **Im zweiten Diagramm anzeigen** erzeugt eine eigene Diagrammfläche. Unterschiedliche Einheiten auf derselben Achse werden automatisch getrennt. **Sonne oder Wolken** zeigt Wolkenbedeckung oder deren Gegenanteil in Prozent, keine Sonnenstunden. Fehlende Anbieterwerte werden nicht aus Wetterzuständen geschätzt. Name, optionale Standort-Entität, Legende, Farben, X-Datumsformat, Größe und **Ohne Karte** sind einstellbar.
 
 ![Wetter-Widget mit Temperatur und Regen](/images/grafik-visual-studio/weather-heating-weather.png)
+
+## Übersicht über Heizräume
+
+Ab **0.1.190** zeigt dieses Widget eine fertige HTML-Raumtabelle, entsprechend dem Original-Datenpunkt `RoomStatesHtmlTable`. Unter **Raumtabelle** wählst du eine HA-Entität und optional ein **Tabellenattribut**. Ohne Attribut wird der Zustand gelesen. Bei einer Bindung verwendet das Widget ausschließlich diesen Live-Wert; fehlende oder nicht verfügbare Werte zeigen **Keine Raumtabelle verfügbar**. Ohne Entitätsbindung lässt sich **Vorschau-Raumtabelle (HTML)** bearbeiten, auch über den HTML-Editor.
+
+Das Widget erzeugt keine Raumdaten oder Heizprofile und steuert keine Thermostate. Eine ioBroker-Instanz wie `heatingcontrol.0` wird nicht benötigt; die gewählte HA-Quelle muss die Tabelle bereits als HTML-String bereitstellen. Lange HTML-Inhalte gehören üblicherweise in ein Attribut statt in den Zustand.
+
+**Allgemein → Ohne Karte**, **Farben → Überschriftenfarbe**, Größe und die gemeinsamen CSS-Einstellungen sind verfügbar. Tabellen, Textformatierung, Zellspannen und ausgewählte Farben/Abstände werden übernommen. Skripte, Ereignishandler, Formulare, Einbettungen und externe Ressourcen werden entfernt. Eingaben sind auf 200.000 Zeichen, die Darstellung auf 5.000 Knoten und 40 Verschachtelungsebenen begrenzt. Große Tabellen scrollen innerhalb des Widgets. Alle Einstellungen bleiben im Widget-/Projektexport erhalten.
+
+![Heizraumübersicht mit Vorschautabelle](/images/grafik-visual-studio/weather-heating-rooms.png)
 
 Der reproduzierbare Paketbau und das geprüfte Manifest stehen im [Quellcode](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/weather-heating). Der [Paketvertrag](widget-pakete.md) beschreibt Schnittstelle 0.2.

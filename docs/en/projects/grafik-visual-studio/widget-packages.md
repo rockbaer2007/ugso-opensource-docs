@@ -50,6 +50,8 @@ The ZIP limit is 2 MB, the manifest limit is 200 KB, and each image is limited t
 
 ## Install and manage
 
+From Studio 0.1.190, interface 0.2 also supports `render: {"kind":"room-table","valueKey":"tablePreview"}`. The host reads `entityId` and optional `tableAttribute`, or uses the declared preview value without a binding. It rebuilds passive HTML table elements and selected formatting; executable content and external resources are removed. This mode requires Studio 0.1.190 or later. The optional [Weather and Heating](weather-heating.md) package is the reference implementation.
+
 1. Create a ZIP named, for example, `my-package.wg` with the files above. `my-package.wg.zip` remains supported.
 2. Select the local ZIP under **Settings → Widget packages**.
 3. Review its package ID, version, API version, widget count and license. Use **Reload** to make the set appear in the palette.

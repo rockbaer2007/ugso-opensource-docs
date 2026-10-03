@@ -50,6 +50,8 @@ Die festen Diagrammschlüssel und Grenzen stehen im [Diagrammvertrag](https://gi
 
 ## Installieren und verwalten
 
+Ab Studio 0.1.190 bietet Schnittstelle 0.2 zusätzlich `render: {"kind":"room-table","valueKey":"tablePreview"}`. Der Host liest `entityId` und optional `tableAttribute` oder verwendet ohne Bindung den deklarierten Vorschauwert. Er baut passive HTML-Tabellenelemente und ausgewählte Formatierungen nach; ausführbare Inhalte und externe Ressourcen werden entfernt. Der neue Modus benötigt mindestens Studio 0.1.190. Das optionale Paket [Wetter und Heizung](weather-heating.md) dient als Referenz.
+
 1. Erstelle das ZIP mit dem Dateinamen `mein-paket.wg` und den genannten Dateien. Auch `mein-paket.wg.zip` wird weiter angenommen.
 2. Öffne **Einstellungen → Widget-Pakete** und wähle die lokale ZIP-Datei.
 3. Prüfe den Eintrag mit Paket-ID, Version, API-Version, Widget-Anzahl und Lizenz. Lade die App über **Neuladen** erneut, damit das Set in der Palette erscheint.
