@@ -259,6 +259,12 @@ Entry styles also apply to prepended and appended HTML. Use complete CSS declara
 
 ### Dashboard in widget
 
+::: warning Export to an external runtime
+Intended for visualizations within Home Assistant. If you plan to export to the external runtime, avoid using this widget where possible. The embedded dashboard is not included in the export and still requires Home Assistant and browser authentication.
+
+Since **0.1.159**, this notice is always visible in the widget settings, independently of “Show migration hints”. Exporting selected widgets to JSON also shows the notice if a dashboard is included; owned tab surfaces are checked as well. The dialog lists the affected widgets and offers **Export anyway** or **Cancel**. Only the dashboard binding is exported. Full project export for the external runtime is still planned.
+:::
+
 ![HA dashboard editor preview for lovelace view 0](/images/grafik-visual-studio/dashboard-widget.png)
 
 *Editor preview only: /lovelace/0. This local test image does not show an authenticated HA dashboard.*

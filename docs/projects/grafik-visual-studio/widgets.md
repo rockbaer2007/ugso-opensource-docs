@@ -260,6 +260,12 @@ Der Stil gilt auch für das vorangestellte und angehängte HTML. Verwende vollst
 
 ### Dashboard in widget
 
+::: warning Export in eine externe Runtime
+Für Visualisierungen innerhalb von Home Assistant vorgesehen. Wenn ein Export in die externe Runtime geplant ist, dieses Widget möglichst nicht verwenden. Das eingebundene Dashboard wird nicht mit exportiert und benötigt weiterhin Home Assistant sowie eine Browser-Anmeldung.
+
+Seit **0.1.159** steht dieser Hinweis dauerhaft in den Widget-Einstellungen, unabhängig von „Umsteigerhinweise anzeigen“. Beim JSON-Export ausgewählter Widgets erscheint er ebenfalls, wenn ein Dashboard enthalten ist; eigene Tab-Flächen werden mitgeprüft. Der Dialog nennt die betroffenen Widgets und bietet **Trotzdem exportieren** oder **Abbrechen**. Exportiert wird nur die Dashboard-Bindung. Der vollständige Projekt-Export für die externe Runtime ist weiterhin geplant.
+:::
+
 ![HA-Dashboard-Vorschau im Editor für lovelace Ansicht 0](/images/grafik-visual-studio/dashboard-widget.png)
 
 *Editor-Vorschau für /lovelace/0. Das lokale Testbild zeigt kein angemeldetes HA-Dashboard.*
