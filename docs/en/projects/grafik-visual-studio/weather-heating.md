@@ -5,6 +5,8 @@ description: Install and configure the optional chart widget package.
 
 # Weather and Heating
 
+**Inspired by the ioBroker “Weather and Heating” widgets by [rg-engineering](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating).** The Studio widgets are an independent implementation for Home Assistant.
+
 From **Studio 0.1.194**, you can install **Weather and Heating 1.7.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview**, **METEORED Weather Widget**, **Window Status Overview**, **Inform my landlord** and **General heating parameters**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
 
 ## Install

@@ -5,6 +5,8 @@ description: Das optionale Diagramm-Widget-Paket installieren und konfigurieren.
 
 # Wetter und Heizung
 
+**Inspiriert von den ioBroker-Widgets „Wetter und Heizung“ von [rg-engineering](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating).** Die Studio-Widgets sind eine eigene Umsetzung für Home Assistant.
+
 Ab **Studio 0.1.194** kannst du das Paket **Wetter und Heizung 1.7.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget**, **Übersicht über Heizräume**, **METEORED-Wetter-Widget**, **Fensterstatus-Übersicht**, **Meinen Vermieter informieren** und **Allgemeine Heizparameter**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
 
 ## Installieren
