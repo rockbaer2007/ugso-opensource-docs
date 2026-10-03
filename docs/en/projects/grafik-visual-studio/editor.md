@@ -24,7 +24,9 @@ Runtime centers a page when it fits entirely inside the browser window. Larger p
 
 ## Widget selection, copying and deletion
 
-![Widget selector in front of the editor](/images/grafik-visual-studio/widget-menu.png)
+![Widget selector with ten visible entries](/images/grafik-visual-studio/widget-selector-ten.png)
+
+Starting with Studio **0.1.196**, the list has room for ten compact entries. Additional entries scroll inside the list while the top and bottom actions remain visible. Fewer entries keep the menu shorter. On small screens, the available height determines the number of visible rows.
 
 The checked rows select the same widgets on the canvas. The list stays in front of them; **Copy** and **Delete** act on all checked widgets.
 

@@ -24,7 +24,9 @@ Die Runtime zentriert eine Seite, wenn sie vollständig ins Browserfenster passt
 
 ## Widget-Auswahl, Kopieren und Löschen
 
-![Widget-Auswahlliste vor der Editorfläche](/images/grafik-visual-studio/widget-menu.png)
+![Widget-Auswahlliste mit zehn sichtbaren Einträgen](/images/grafik-visual-studio/widget-selector-ten.png)
+
+Ab Studio **0.1.196** bietet die Liste Platz für zehn kompakte Einträge. Weitere Einträge sind innerhalb der Liste scrollbar; die Aktionen oben und unten bleiben sichtbar. Bei weniger Einträgen bleibt das Menü kürzer. Auf kleinen Bildschirmen richtet sich die Anzahl sichtbarer Zeilen nach der verfügbaren Höhe.
 
 Die angehakten Zeilen wählen dieselben Widgets auf der Arbeitsfläche aus. Die Liste bleibt davor sichtbar; **Kopieren** und **Löschen** betreffen alle angehakten Widgets.
 
