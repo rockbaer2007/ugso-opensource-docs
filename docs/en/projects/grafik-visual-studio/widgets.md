@@ -68,7 +68,7 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Bool HTML | Displays one of two HTML contents for the current Boolean state, with optional prepended/appended HTML. |
 | Bool Select | On/off select control with configurable labels; can control a switchable entity. |
 | Bool HTML (control) | Clickable on/off HTML display; can control a switchable entity. |
-| HTML State | Custom HTML with optional click link and value placeholder. |
+| HTML State | HTML button that writes a fixed value on every click and optionally calls a URL. |
 | Table | Table from JSON with row selection and print action; a bound HA state must contain JSON rows. |
 | Full Screen | Button toggling fullscreen mode for the interface. |
 | Bar | Horizontal or vertical bar based on a numeric value. |
@@ -79,6 +79,14 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Border | Frame with title, title position, header area and colors. |
 | Gauge | Simple value gauge with unit. |
 | Image | Displays a configured image source or a URL from the entity state; live camera binding is not yet available. |
+
+### HTML State
+
+**HTML** supplies the displayed content. **Wert** is a fixed command value: every click sends the same value, independently of the current state. An example with `Hallo` and `off` displays “Hallo” and sends an off command to a compatible controllable HA entity. Sensors are not write targets. Numbers require compatible `input_number` helpers, text requires `input_text`; `switch`, `light`, and `input_boolean` accept compatible on/off values. Unavailable or unsupported targets are not written.
+
+**Call URL on click** optionally sends an HTTP(S) GET request from the browser while keeping the current view open. It also works without an HA write target. Requests do not run through an ioBroker server; browser, HTTPS and network restrictions apply. An opaque browser response does not confirm success in the target system. The editor neither writes values nor calls URLs. Runtime activation supports click, Enter and Space.
+
+New widgets start with empty fields and disabled CSS groups. Existing contents remain; the previous preview state is used as the fixed-value fallback until a new **Wert** is set. HTML is sanitized; `{value}` is not a placeholder here. Entity and URL migration hints can be disabled centrally in Settings.
 
 ### Migration hints
 

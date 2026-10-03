@@ -68,7 +68,7 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Bool HTML | Zeigt je nach Zustand einen von zwei HTML-Inhalten, mit optionalem HTML davor und dahinter. |
 | Bool Select | Ein/Aus-Auswahl mit anpassbaren Beschriftungen; kann eine schaltbare Entität steuern. |
 | Bool HTML (control) | Anklickbare Ein/Aus-HTML-Anzeige; kann eine schaltbare Entität steuern. |
-| HTML State | Eigener HTML-Inhalt mit optionalem Klick-Link und Wertplatzhalter. |
+| HTML State | HTML-Schaltfläche, die bei jedem Klick einen festen Wert schreibt und optional eine URL aufruft. |
 | Table | Tabelle aus JSON-Daten mit Zeilenauswahl und Druckoption; ein gebundener HA-Zustand muss JSON-Zeilen enthalten. |
 | Full Screen | Schaltfläche für den Vollbildmodus der Oberfläche. |
 | Bar | Horizontaler oder vertikaler Balken für einen Zahlenwert. |
@@ -79,6 +79,14 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Border | Rahmen mit Titel, Titelposition, Kopfbereich und Farben. |
 | Gauge | Einfache Messwertanzeige mit Einheit. |
 | Image | Zeigt eine konfigurierbare Bildquelle oder eine URL aus dem Entitätszustand; noch keine Live-Kamera-Anbindung. |
+
+### HTML State
+
+**HTML** ist der angezeigte Inhalt. **Wert** ist ein fester Schreibwert: Bei jedem Klick wird derselbe Wert gesendet, unabhängig vom aktuellen Zustand. Dein Beispiel mit `Hallo` und `off` zeigt „Hallo“ und sendet bei jedem Klick einen Aus-Befehl an eine passende schaltbare HA-Entität. Ein Sensor ist kein Schreibziel. Zahlen benötigen einen passenden `input_number`-Helfer, Text einen `input_text`-Helfer; `switch`, `light` und `input_boolean` unterstützen passende Ein-/Aus-Werte. Nicht verfügbare oder ungeeignete Ziele werden nicht beschrieben.
+
+**Rufe URL bei Klick** sendet optional einen HTTP(S)-GET-Aufruf vom Browser. Die Ansicht bleibt geöffnet. Dieser Aufruf funktioniert auch ohne HA-Schreibziel und wird nicht über einen ioBroker-Server ausgeführt; Browserregeln, HTTPS und Netzwerkzugriff gelten weiterhin. Eine undurchsichtige Browserantwort bestätigt nicht den Erfolg des Zielsystems. Im Editor werden weder Werte geschrieben noch URLs aufgerufen. In der Runtime sind Klick, Enter und Leertaste möglich.
+
+Neue Widgets beginnen mit leeren Feldern und deaktivierten CSS-Bereichen. Bisherige Inhalte bleiben erhalten; der alte Vorschauwert wird als fester Wert übernommen, solange kein neuer **Wert** gesetzt ist. HTML wird bereinigt angezeigt; `{value}` ist hier kein Platzhalter. Umsteigerhinweise an Entität und URL lassen sich zentral in den Einstellungen abschalten.
 
 ### Umsteigerhinweise
 
