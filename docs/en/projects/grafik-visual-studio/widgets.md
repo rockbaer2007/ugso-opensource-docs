@@ -234,6 +234,14 @@ From **0.1.145**, individual **Value [0]** through **Value [n]** sections provid
 
 Entry styles also apply to prepended and appended HTML. Use complete CSS declarations, such as `font-weight: bold; color: #29c8b5; font-size: 20px;`. Plain `bold` has no effect. Studio accepts its approved presentation styles without external CSS URLs. Only CSS General starts enabled on new widgets; individual entry styles remain independently usable.
 
+### View in widget 8
+
+Since **0.1.160**, this widget embeds a **Studio project page** according to an HA entity's state. It only reads; no additional HA helper is required. Assign the available pages under **Page [0]**, **Page [1]**, etc. **Value count up to** is the highest index: `1` creates two entries, `0` one; Studio allows up to index 50.
+
+`false`/`off` selects index 0, `true`/`on` index 1. Integer states select the matching index. Empty, unavailable, fractional, or out-of-range values select no page. New widgets without an entity use index 0. The editor shows a text preview of the selected page; runtime embeds it. An unchanged target is not reloaded during state updates. Missing pages and recursive embedding are rejected.
+
+New widgets use **300 × 200 pixels** with only **CSS General** enabled. Centrally configurable migration hints explain index mapping and page dependencies. Widget JSON exports do not include referenced project pages; the planned full project export must include all required pages. This differs from **Dashboard in widget**, which opens an HA dashboard.
+
 ## HA Grafik – Interaktiv (1)
 
 | Widget | Current behavior |

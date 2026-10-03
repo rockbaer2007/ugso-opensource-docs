@@ -234,6 +234,14 @@ Ab **0.1.145** bietet das Widget einzelne Bereiche **Wert [0]** bis **Wert [n]**
 
 Der Stil gilt auch für das vorangestellte und angehängte HTML. Verwende vollständige CSS-Deklarationen, zum Beispiel `font-weight: bold; color: #29c8b5; font-size: 20px;`. `bold` allein hat keine Wirkung. Studio akzeptiert die freigegebenen Darstellungsstile ohne externe CSS-URLs. Bei neuen Widgets ist nur CSS Allgemein standardmäßig aktiviert; die Stile der einzelnen Werte bleiben davon unabhängig nutzbar.
 
+### View in widget 8
+
+Seit **0.1.160** bettet dieses Widget abhängig vom Zustand einer HA-Entität eine **Studio-Projektseite** ein. Es liest nur; ein zusätzlicher HA-Helfer ist nicht erforderlich. Die auswählbaren Seiten werden unter **Seite [0]**, **Seite [1]** usw. zugeordnet. **Werteanzahl bis** ist der höchste Index: `1` ergibt zwei Einträge, `0` genau einen; Studio erlaubt maximal Index 50.
+
+`false`/`off` wählt Index 0, `true`/`on` Index 1. Ganzzahlige Zustände wählen den entsprechenden Index. Leere, nicht verfügbare, gebrochene oder außerhalb der Liste liegende Werte wählen keine Seite. Ohne Entität gilt bei neuen Widgets Index 0. Der Editor zeigt die gewählte Seite als Textvorschau; die Runtime bettet sie ein. Ein unverändertes Ziel wird bei Zustandsaktualisierungen nicht neu geladen. Fehlende Seiten und rekursive Einbettungen werden verhindert.
+
+Neue Widgets starten mit **300 × 200 Pixeln** und ausschließlich aktiviertem **CSS Allgemein**. Die zentral abschaltbaren Umsteigerhinweise erläutern Index und Seitenabhängigkeit. Im Widget-JSON-Export sind die referenzierten Projektseiten nicht enthalten; für den geplanten vollständigen Projekt-Export müssen sämtliche benötigten Seiten mitgeliefert werden. Das Widget ist von **Dashboard in widget** zu unterscheiden, das ein HA-Dashboard öffnet.
+
 ## HA Grafik – Interaktiv (1)
 
 
