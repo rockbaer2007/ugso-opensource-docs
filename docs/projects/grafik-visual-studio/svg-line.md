@@ -4,7 +4,7 @@ title: SVG-Line – Verbindungslinien zeichnen und animieren
 
 # SVG-Line
 
-Ab Studio 0.1.136 kannst du unter **Animation** den **Teiler automatisch anpassen**: getrennt für die Zahlen-Entität und den SVG-LineBox-Ausgang. Jede Automatik hat eine eigene **Zielgeschwindigkeit** (Standard 1 Zyklus/s, Bereich 0,05–5). Der Teiler wird aus dem Betrag des aktuellen Werts und der Zielgeschwindigkeit berechnet; dadurch bleibt die Bewegung auch bei stark wechselnden Leistungen gleich schnell. Null hält die Animation an, negative Werte kehren die Richtung um. Die Automatik ist standardmäßig aus; der manuelle Teiler bleibt gespeichert und gilt nach dem Ausschalten wieder. Bei aktivierter Übernahme des Hauptlinientakts hat dieser weiterhin Vorrang.
+Ab Studio 0.1.136 gibt es eine **automatische Teileranpassung** für Zahlen-Entitäten und LineBox-Ausgänge. Sie hält die Animation bei wechselnden Leistungen auf einer einstellbaren Geschwindigkeit. Die Einrichtung und Berechnung sind unten unter **Automatische Teileranpassung: wie und warum** erklärt.
 
 **SVG-Line** findest du unter **HA Grafik – Spezial**. Das Widget verbindet andere Widgets optisch, führt Linien über Ecken und kann einen Wertefluss animieren. Eine Linie kann an Widget-Andockpunkten, an einem ausdrücklich aktivierten Sammelpunkt einer anderen SVG-Line oder an freien Koordinaten beginnen und enden. Sie ist selbst keine Home-Assistant-Entität; eine optionale Entität steuert ihre Animation.
 
@@ -46,6 +46,39 @@ Aktiviere **Animation aktivieren** und wähle als **Animationsart** Zweifarbenfl
 | **Bool-Entität** | `on`/`true`/`1` läuft vorwärts, `off`/`false`/`0` rückwärts. **Bool-Richtung umkehren** tauscht die Zuordnung. Die eingestellte **Dauer** bestimmt den Takt. |
 
 Fehlende oder ungültige Entitätszustände halten die Animation an. Die ausgewählte Entität wird im Editor und in der Runtime aktualisiert. Die **SVG LineBox** kann an einem als Ausgang eingerichteten Andockpunkt Vorzeichen und Betrag ihres berechneten Wertes an die Linie übergeben. Diese Übergabe hat Vorrang vor der gewählten Richtungsquelle. Die Ausgangslinie braucht weiterhin **Animation aktivieren**; bei `0` oder ohne gültigen Eingang steht sie still. **SVG LineBox-Teiler (bei Übergabe)** bestimmt dann ihren Takt, während ihre eigenen Farben und Linienart erhalten bleiben. [SVG LineBox ausführlich erklärt](./svg-linebox).
+
+## Automatische Teileranpassung: wie und warum
+
+Bei einem festen Teiler wächst die Geschwindigkeit mit dem Eingangswert. Mit Teiler `100` ergeben beispielsweise `10 W` nur `0,1` Zyklen/s, aber `1500 W` bereits `15` Zyklen/s. Ein größerer Teiler bremst hohe Leistungen von Heizung oder Herd, macht kleine Werte jedoch sehr langsam. Ein kleinerer Teiler beschleunigt kleine Werte und kann große Werte schwer erkennbar animieren.
+
+Die Automatik passt deshalb den Teiler bei jeder Wertänderung an die gewählte **Zielgeschwindigkeit** an. Sie verwendet keine festen Leistungsstufen und funktioniert auch oberhalb von 15.000. Der Zusammenhang lautet:
+
+```text
+Automatischer Teiler = Betrag des Eingangswerts / Zielgeschwindigkeit
+Animationsgeschwindigkeit = Betrag des Eingangswerts / automatischer Teiler
+```
+
+Bei **1 Zyklus/s** ergeben sich folgende Werte:
+
+| Eingangswert | Automatischer Teiler | Geschwindigkeit |
+| --- | --- | --- |
+| 10 | 10 | 1 Zyklus/s |
+| 100 | 100 | 1 Zyklus/s |
+| 1500 | 1500 | 1 Zyklus/s |
+| 15.000 | 15.000 | 1 Zyklus/s |
+
+So bleibt der Fluss bei kleinen und großen Leistungen ähnlich gut erkennbar. Die Geschwindigkeit zeigt bei eingeschalteter Automatik die gewählte Zielgeschwindigkeit; aus ihr lässt sich die Höhe der Leistung nicht mehr ablesen. Das Vorzeichen steuert weiterhin die Richtung. `0`, fehlende Werte und ungültige Zustände halten die Animation an.
+
+### Einrichten
+
+1. Wähle die SVG-Line und aktiviere unter **Animation** **Animation aktivieren**.
+2. Für eine HA-Zahlenquelle wähle **Richtungsquelle → Zahlen-Entität**, trage die Entität ein und aktiviere **Teiler automatisch anpassen (Zahlen-Entität)**.
+3. Für einen verbundenen Ausgang von **SVG LineBox** oder **SVG LineBox Math** aktiviere stattdessen **Teiler automatisch anpassen (SVG LineBox)**. Diese Wertübergabe hat Vorrang vor der gewählten Richtungsquelle.
+4. Stelle die jeweils zugehörige **Zielgeschwindigkeit** ein. Standard ist **1 Zyklus/s**; erlaubt sind **0,05–5 Zyklen/s**. Mit `0,5` dauert ein Zyklus zwei Sekunden, mit `2` eine halbe Sekunde. Beginne mit `1` und passe den Wert anhand deiner Linienart und Strichabstände an.
+
+Beide Automatiken sind unabhängig und zunächst ausgeschaltet. Der jeweilige manuelle **Teiler** bleibt gespeichert; bei ausgeschalteter Automatik wird er wieder verwendet. **Manuell** und **Bool-Entität** verwenden weiterhin ihre eingestellte Dauer. Eine übernommene Hauptlinienanimation gilt weiterhin für normale Nebenlinien; ein aktiv weitergegebener LineBox-Wert bestimmt den Takt der betreffenden Ausgangslinie selbst.
+
+Zyklen pro Sekunde sind die Wiederholungen der Animation, keine Pixelgeschwindigkeit. Linienart, Animationsart und Strichabstände beeinflussen das sichtbare Ergebnis. Die Automatik liefert einen stabilen Takt; die passende Zielgeschwindigkeit lässt sich deshalb je Linie einstellen.
 
 ## Hauptlinie, Kreuzungen und Ebenen
 

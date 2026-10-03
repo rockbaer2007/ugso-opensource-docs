@@ -4,7 +4,7 @@ title: SVG-Line – draw and animate connections
 
 # SVG-Line
 
-From Studio 0.1.136, **Animation** offers independent automatic divisors for the numeric entity and the SVG LineBox output. Each has its own target speed (default 1 cycle/s, range 0.05–5). The divisor is calculated from the current value's magnitude and the target speed, keeping motion at the chosen speed even when power changes substantially. Zero stops motion; negative values reverse direction. Automation starts disabled; the manual divisor remains stored and takes effect again when automation is disabled. Inheriting the main line's timing still takes precedence.
+From Studio 0.1.136, **automatic divisor adjustment** is available for numeric entities and LineBox outputs. It keeps animation at an adjustable speed as power changes. See **Automatic divisor adjustment: how and why** below for setup and calculation details.
 
 Find **SVG-Line** under **HA Grafik – Spezial**. It visually connects widgets, routes paths around corners, and can animate a value flow. A line can start or end at a widget docking point, an explicitly enabled collector point on another SVG-Line, or free coordinates. The line itself is not a Home Assistant entity; an optional entity controls its animation.
 
@@ -46,6 +46,39 @@ Enable **Animation** and choose two-color flow, moving dashes, pulse, or moving 
 | **Boolean entity** | `on`/`true`/`1` runs forward; `off`/`false`/`0` runs backward. **Invert Boolean direction** swaps this mapping. **Duration** sets the rate. |
 
 Unavailable or invalid entity states stop the animation. The selected state refreshes in both editor and runtime. An **SVG LineBox** output can pass its calculated signed value to the line. This overrides the chosen direction source, but the outgoing line still needs **Animation enabled**. A zero or missing input stops it. Its **SVG LineBox divisor (on handoff)** sets the rate; the line keeps its own colors and style. See the [SVG LineBox guide](./svg-linebox).
+
+## Automatic divisor adjustment: how and why
+
+With a fixed divisor, animation speed increases with the input value. For example, divisor `100` turns `10 W` into only `0.1` cycles/s, but `1500 W` into `15` cycles/s. Increasing the divisor slows high-power appliances such as heating or a cooker, while making small values very slow. Reducing it speeds up small values and can make large values difficult to follow visually.
+
+Automation therefore adjusts the divisor whenever the value changes, using the selected **target speed**. It uses no fixed power bands and also works above 15,000. The calculation is:
+
+```text
+Automatic divisor = absolute input value / target speed
+Animation speed = absolute input value / automatic divisor
+```
+
+At **1 cycle/s**, the results are:
+
+| Input value | Automatic divisor | Speed |
+| --- | --- | --- |
+| 10 | 10 | 1 cycle/s |
+| 100 | 100 | 1 cycle/s |
+| 1500 | 1500 | 1 cycle/s |
+| 15,000 | 15,000 | 1 cycle/s |
+
+This keeps motion similarly readable at low and high power. With automation enabled, speed represents the chosen target speed; it no longer indicates power magnitude. The sign still determines direction. Zero, missing values and invalid states stop animation.
+
+### Setup
+
+1. Select SVG-Line and enable animation under **Animation**.
+2. For a Home Assistant numeric source, choose **Direction source → Numeric entity**, enter the entity and enable **Automatically adjust divisor (numeric entity)**.
+3. For a connected **SVG LineBox** or **SVG LineBox Math** output, enable **Automatically adjust divisor (SVG LineBox)** instead. This forwarded value takes precedence over the selected direction source.
+4. Set the corresponding **target speed**. The default is **1 cycle/s**, with a range of **0.05–5 cycles/s**. A target of `0.5` means two seconds per cycle; `2` means half a second. Start at `1` and adjust it for your line style and dash spacing.
+
+Both automation settings are independent and initially disabled. Each manual divisor remains stored and takes effect again when its automation is disabled. **Manual** and **Boolean entity** modes still use their configured duration. Main-line animation inheritance continues to apply to ordinary branches; an actively forwarded LineBox value sets its outgoing line's own timing.
+
+Cycles per second measure animation repetitions, not pixel speed. Line style, animation style and dash spacing affect visible motion. Automation provides a stable rate, while the target speed remains adjustable for each line.
 
 ## Main line, crossings, and stacking
 
