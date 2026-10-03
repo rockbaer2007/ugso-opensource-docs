@@ -19,6 +19,8 @@ Das ZIP enthält eine UTF-8-Datei `manifest.json` im Wurzelverzeichnis und optio
 
 Ab Studio 0.1.197 unterstützt 0.2 `render: {"kind":"technic-window","valueKey":"heading"}`. Der feste Host liest `contactEntityId`, `coverEntityId` (`current_position`, `supported_features`) und `modeEntityId`; `invertContact`, `invertCover`, `invertMode` drehen die Werte um. Runtime-Schreiben ist auf Positionssteuerung einer verfügbaren `cover`-Entität und einen `input_boolean`-/`switch`-Modus begrenzt. Siehe [UGSo Technic](technic.md).
 
+Ab Studio 0.1.198 ergänzt 0.2 `render: {"kind":"technic-switch","valueKey":"heading"}`. `entityId` wird mit `valueType` bool oder number ausgewertet; Runtime-Schreiben ist auf switch/light/input_boolean oder input_number mit 0/1 begrenzt. `readOnly` sperrt die Bedienung. `iconKey`, `iconScale`, `colorAN`/`colorAUS` und Bezeichnungsoptionen steuern die feste Darstellung.
+
 ```json
 {
   "format": "ha-grafik-widget-package",

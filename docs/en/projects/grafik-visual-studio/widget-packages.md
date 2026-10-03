@@ -25,6 +25,8 @@ The ZIP contains a UTF-8 `manifest.json` at its root and optionally referenced S
 
 From Studio 0.1.197, interface 0.2 supports `render: {"kind":"technic-window","valueKey":"heading"}`. The fixed host reads `contactEntityId`, `coverEntityId` (`current_position`, `supported_features`) and `modeEntityId`; `invertContact`, `invertCover`, `invertMode` invert these values. Runtime writes are limited to position control of an available `cover` entity and an `input_boolean`/`switch` mode helper. See [UGSo Technic](technic.md).
 
+From Studio 0.1.198, interface 0.2 adds `render: {"kind":"technic-switch","valueKey":"heading"}`. `entityId` is evaluated using `valueType` bool or number; runtime writes are limited to switch/light/input_boolean or input_number with 0/1. `readOnly` prevents operation. `iconKey`, `iconScale`, `colorAN`/`colorAUS` and caption options configure the fixed renderer.
+
 ```json
 {
   "format": "ha-grafik-widget-package",

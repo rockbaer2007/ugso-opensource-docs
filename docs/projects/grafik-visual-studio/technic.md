@@ -7,7 +7,7 @@ description: Das externe Technic-Widget-Set installieren und Window – Wall mit
 
 **Inspiriert von den [ioBroker-Technic-Widgets von Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** Eigene Umsetzung für Home Assistant.
 
-Ab **Studio 0.1.197** kannst du **UGSo Technic 1.0.0** installieren. Dieses erste Paket enthält **Window – Wall**. Die sechs weiteren Widgets des Originalsets sind noch nicht enthalten.
+Ab **Studio 0.1.198** kannst du **UGSo Technic 1.1.0** installieren. Das Paket enthält **Window – Wall** und **Switch – Boolean**. Die fünf weiteren Widgets des Originalsets sind noch nicht enthalten. Version 1.1.0 kann über die Paketverwaltung als Erweiterung von 1.0.0 installiert werden; das bestehende Fenster-Widget bleibt erhalten.
 
 ## Installieren
 
@@ -38,6 +38,18 @@ In der Runtime öffnet ein Klick auf das Fenster einen Dialog mit Positionsregle
 Der Modus-Helfer bildet nur den Schalter ab: Die eigentliche Rollo-Automatik musst du in Home Assistant einrichten. Es wird keine Automatisierung erzeugt oder deaktiviert. Fehlgeschlagene Aktionen zeigen einen Hinweis und lassen einen erneuten Versuch zu; ausstehende Aktionen werden nicht doppelt gesendet.
 
 ![Runtime-Dialog mit Rolloposition und Moduswechsel](/images/grafik-visual-studio/technic-window-runtime.png)
+
+## Switch – Boolean
+
+Der Schalter entspricht den Einstellmöglichkeiten von `tplTechnicSchalterBoolean`. Standard: **Device**, Bezeichnung sichtbar unten, 120 × 160 Pixel, Power-Symbol bei 80 %, Farbe EIN `#2dd4b0`, Farbe AUS `#5f8f8a`.
+
+**Datenpunkt (EIN/AUS)** bindet die HA-Entität. **Werttyp → Wahr / Falsch** liest `on`/`off` und schaltet verfügbare `switch`, `light` oder `input_boolean` über `turn_on`/`turn_off`. **0 / 1** liest ausschließlich 0 und 1 und schreibt Zahlenwerte an einen `input_number`-Helfer. Dessen Grenzen und Schrittweite müssen beide Werte zulassen. Sensoren bleiben Anzeigen; unbekannte, fehlende oder nicht verfügbare Zustände sind nicht schaltbar.
+
+**Icon auswählen** bietet alle 16 Symbolarten: Auswahl, Desktop-PC, Power, Bettlampe, Hängelampe, runde Hängelampe, Schreibtischlampe, Spots, RGB-LED-Streifen, Tischlampe, Link, Lüfter, Schlüssel, Smartphone, Steckdose und TV. Es sind eigene geometrische SVG-Zeichnungen, keine übernommenen Grafik-Traces. Farbe EIN/AUS und Größe sind einstellbar. „Auswahl“ zeigt den Haken nur bei EIN.
+
+Ein Klick auf das Symbol schaltet in der Runtime; die Bezeichnung bleibt sichtbar. Tastaturbedienung mit Tab und Enter/Leertaste ist möglich. **Schreibgeschützt** sperrt Änderungen. Laufende Aktionen werden nicht doppelt gesendet; Fehler zeigen einen Hinweis und erlauben einen erneuten Versuch. **EIN (Vorschau)** gilt nur ungebunden im Editor. Alle Einstellungen bleiben im Projekt und Export erhalten.
+
+![Schalter nach dem Einschalten mit sichtbarer Beschriftung](/images/grafik-visual-studio/technic-switch-runtime.png)
 
 ## Vorschau und Export
 

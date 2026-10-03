@@ -7,7 +7,7 @@ description: Install the external Technic widget set and connect Window – Wall
 
 **Inspired by the [ioBroker Technic Widgets by Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** An independent implementation for Home Assistant.
 
-From **Studio 0.1.197**, you can install **UGSo Technic 1.0.0**. This first package contains **Window – Wall**. The other six widgets from the original set are not included yet.
+From **Studio 0.1.198**, you can install **UGSo Technic 1.1.0**. The package contains **Window – Wall** and **Switch – Boolean**. The other five widgets from the original set are not included yet. Install 1.1.0 through package management as an additive update to 1.0.0; the existing window widget is preserved.
 
 ## Installation
 
@@ -38,6 +38,18 @@ In runtime, clicking the window opens a dialog with a position slider, quick val
 The mode helper represents the switch only: configure the actual blind automation in Home Assistant. No automation is generated or disabled. Failed actions display a retry message; pending actions are not sent twice.
 
 ![Runtime dialog with blind position and mode controls](/images/grafik-visual-studio/technic-window-runtime.png)
+
+## Switch – Boolean
+
+The switch follows the configuration options of `tplTechnicSchalterBoolean`. Defaults: **Device**, caption visible at the bottom, 120 × 160 pixels, Power symbol at 80%, ON color `#2dd4b0`, OFF color `#5f8f8a`.
+
+**Entity (ON/OFF)** binds the HA entity. **Value type → True / False** reads `on`/`off` and controls available `switch`, `light` or `input_boolean` entities using `turn_on`/`turn_off`. **0 / 1** accepts only 0 and 1 and writes numbers to an `input_number` helper. Its limits and step must allow both values. Sensors remain display-only; unknown, missing or unavailable states cannot be switched.
+
+**Select icon** offers all 16 symbol types: selection, desktop PC, power, bed lamp, hanging lamp, round hanging lamp, desk lamp, spots, RGB LED strip, table lamp, link, fan, key, smartphone, socket and TV. These are original geometric SVG drawings rather than copied graphic traces. ON/OFF colors and size are configurable. Selection shows its check mark only when ON.
+
+Click the symbol in the runtime to toggle; the caption stays visible. Tab and Enter/Space support keyboard operation. **Read-only** blocks changes. Pending actions cannot be sent twice; failures show a message and allow retry. **ON (preview)** applies only to unbound editor widgets. All settings remain in project and widget exports.
+
+![Switch after turning on with its caption still visible](/images/grafik-visual-studio/technic-switch-runtime.png)
 
 ## Preview and export
 
