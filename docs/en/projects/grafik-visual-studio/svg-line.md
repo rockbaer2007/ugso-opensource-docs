@@ -73,7 +73,7 @@ This keeps motion similarly readable at low and high power. With automation enab
 
 1. Select SVG-Line and enable animation under **Animation**.
 2. For a Home Assistant numeric source, choose **Direction source → Numeric entity**, enter the entity and enable **Automatically adjust divisor (numeric entity)**.
-3. For a connected **SVG LineBox** or **SVG LineBox Math** output, enable **Automatically adjust divisor (SVG LineBox)** instead. This forwarded value takes precedence over the selected direction source.
+3. For a connected **SVG LineBox** or [**SVG LineBox Math**](./svg-linebox-math) output, enable **Automatically adjust divisor (SVG LineBox)** instead. This forwarded value takes precedence over the selected direction source.
 4. Set the corresponding **target speed**. The default is **1 cycle/s**, with a range of **0.05–5 cycles/s**. A target of `0.5` means two seconds per cycle; `2` means half a second. Start at `1` and adjust it for your line style and dash spacing.
 
 Both automation settings are independent and initially disabled. Each manual divisor remains stored and takes effect again when its automation is disabled. **Manual** and **Boolean entity** modes still use their configured duration. Main-line animation inheritance continues to apply to ordinary branches; an actively forwarded LineBox value sets its outgoing line's own timing.

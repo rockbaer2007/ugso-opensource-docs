@@ -91,5 +91,5 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Widget | Aktuelle Funktion |
 | --- | --- |
 | [SVG-Line](./svg-line) | Zeichnet und animiert Verbindungen zwischen Widgets, mit Andockpunkten, manuellem Mehrpunktpfad und gezielter Kopplung über Sammelpunkte. |
-| [SVG LineBox Math](./svg-linebox#svg-linebox-math) | Sichtbares Quadrat mit 16 Anschlüssen A–P. Eigene Formel oder Durchschnitt belegter Eingänge; Mehrfachbelegung wird je Anschluss summiert. Interne Wertweitergabe ohne zusätzliche HA-Entität. |
+| [SVG LineBox Math](./svg-linebox-math) | Sichtbares Quadrat mit 16 Anschlüssen A–P. Eigene Formel oder Durchschnitt belegter Eingänge; Mehrfachbelegung wird je Anschluss summiert. Interne Wertweitergabe ohne zusätzliche HA-Entität. |
 | [SVG LineBox](./svg-linebox) | Im Editor sichtbarer Verteiler: Zahlenwerte eingehender Linien summieren und an Ausgangslinien sowie optional an einen HA-Zahlenhelfer weitergeben. Ein einstellbarer Kreis verdeckt in der Runtime die verbundenen Linienenden. |

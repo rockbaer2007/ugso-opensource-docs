@@ -73,7 +73,7 @@ So bleibt der Fluss bei kleinen und großen Leistungen ähnlich gut erkennbar. D
 
 1. Wähle die SVG-Line und aktiviere unter **Animation** **Animation aktivieren**.
 2. Für eine HA-Zahlenquelle wähle **Richtungsquelle → Zahlen-Entität**, trage die Entität ein und aktiviere **Teiler automatisch anpassen (Zahlen-Entität)**.
-3. Für einen verbundenen Ausgang von **SVG LineBox** oder **SVG LineBox Math** aktiviere stattdessen **Teiler automatisch anpassen (SVG LineBox)**. Diese Wertübergabe hat Vorrang vor der gewählten Richtungsquelle.
+3. Für einen verbundenen Ausgang von **SVG LineBox** oder [**SVG LineBox Math**](./svg-linebox-math) aktiviere stattdessen **Teiler automatisch anpassen (SVG LineBox)**. Diese Wertübergabe hat Vorrang vor der gewählten Richtungsquelle.
 4. Stelle die jeweils zugehörige **Zielgeschwindigkeit** ein. Standard ist **1 Zyklus/s**; erlaubt sind **0,05–5 Zyklen/s**. Mit `0,5` dauert ein Zyklus zwei Sekunden, mit `2` eine halbe Sekunde. Beginne mit `1` und passe den Wert anhand deiner Linienart und Strichabstände an.
 
 Beide Automatiken sind unabhängig und zunächst ausgeschaltet. Der jeweilige manuelle **Teiler** bleibt gespeichert; bei ausgeschalteter Automatik wird er wieder verwendet. **Manuell** und **Bool-Entität** verwenden weiterhin ihre eingestellte Dauer. Eine übernommene Hauptlinienanimation gilt weiterhin für normale Nebenlinien; ein aktiv weitergegebener LineBox-Wert bestimmt den Takt der betreffenden Ausgangslinie selbst.

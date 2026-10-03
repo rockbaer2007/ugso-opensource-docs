@@ -91,5 +91,5 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Widget | Current behavior |
 | --- | --- |
 | [SVG-Line](./svg-line) | Draws and animates links between widgets with docking points, manual multi-point paths and intentional collector-point joins. |
-| [SVG LineBox Math](./svg-linebox#svg-linebox-math) | Visible square with 16 ports A–P. Custom formulas or occupied-input averages; multiple connections sum per port. Internal output without an additional HA entity. |
+| [SVG LineBox Math](./svg-linebox-math) | Visible square with 16 ports A–P. Custom formulas or occupied-input averages; multiple connections sum per port. Internal output without an additional HA entity. |
 | [SVG LineBox](./svg-linebox) | Visible in the editor: sums incoming line values and passes the result to outgoing lines and optionally a Home Assistant number helper. A configurable circle covers joined line ends at runtime. |
