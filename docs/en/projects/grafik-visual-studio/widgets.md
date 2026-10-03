@@ -43,7 +43,7 @@ From Studio 0.1.124, active tab contents render directly from the open project, 
 | Bool SVG | Selects one of two SVG drawings according to the current state; can control a switchable entity. |
 | SVG shape | Draws an SVG shape with color, stroke, rotation and scaling. |
 | Input val | Text or number input (150 × 70). Numeric mode supports optional min/max; read-only mode also accepts sensors. Enter always submits. Auto-set writes after the configured typing pause (1000 ms default), including withEnter mode. withEnter adds a confirmation button for unsent input. Without auto-set, leaving the field does not write. Writable targets are suitable `input_number`/`input_text` helpers; without an entity input stays local. |
-| View in widget | Embeds a project page while preventing recursive embedding. |
+| View in widget | Embeds a Studio project page (300 × 200 default) while preventing recursive embedding. A separate widget under Special embeds HA dashboards. |
 | View in widget 8 | Selects one of up to 50 pages using the index state. |
 | iFrame | Embeds a URL if the target permits it; offers frame, scrolling and refresh settings. |
 | iFrame 8 | Selects one of up to 20 configured frames using the index state. |
@@ -194,10 +194,17 @@ Entry styles also apply to prepended and appended HTML. Use complete CSS declara
 | [Value converter](./datenfluss) | Converts numbers, text, switch states and units with a dedicated dialog and type preview; invisible in runtime. |
 | [Value calculation](./datenfluss) | Same four calculations as SVG LineBox Math; invisible in runtime by default. |
 
-## HA Grafik – Spezial (3)
+## HA Grafik – Spezial (4)
 
 | Widget | Current behavior |
 | --- | --- |
+| Dashboard in widget | Embeds an HA dashboard at runtime. Size 32–800 × 32–640 pixels, 300 × 200 default. The editor shows a selectable preview. |
 | [SVG-Line](./svg-line) | Draws and animates links between widgets with docking points, manual multi-point paths and intentional collector-point joins. |
 | [SVG LineBox Math](./svg-linebox-math) | Visible square with 16 ports A–P. Custom formulas or occupied-input averages; multiple connections sum per port. Internal output without an additional HA entity. |
 | [SVG LineBox](./svg-linebox) | Visible in the editor: sums incoming line values and passes the result to outgoing lines and optionally a Home Assistant number helper. A configurable circle covers joined line ends at runtime. |
+
+### Dashboard in widget
+
+**Dashboard** opens the HA dashboard list through “…”. Alternatively enter a path such as `/lovelace` or `/dashboard-solar`. **Dashboard view** optionally selects a view path or number, such as `energy` or `0`. Leave **HA base URL** empty when using HA ingress. For direct Studio access, enter the HA address, for example `https://ha.example.org`.
+
+Authentication uses the normal HA browser session. The widget stores no token; dashboard selection exposes only titles and paths. Other origins may be blocked by browser or embedding rules, and signing in again may be necessary. Normal Studio state updates do not reload an already embedded dashboard. New widgets enable only CSS General; migration hints can be disabled centrally. “View in widget” remains the container for Studio pages.

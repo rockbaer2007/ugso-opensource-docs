@@ -43,7 +43,7 @@ Ab Studio 0.1.124 werden aktive Tab-Inhalte direkt aus dem geöffneten Projekt d
 | Bool SVG | Wählt nach dem aktuellen Zustand eines von zwei SVG-Motiven; kann eine schaltbare Entität steuern. |
 | SVG shape | Zeichnet eine geometrische SVG-Form mit Farbe, Strichbreite, Rotation und Skalierung. |
 | Input val | Text- oder Zahlen-Eingabefeld (150 × 70). Zahlenmodus mit optionalem min/max; Nur-lesend erlaubt auch Sensoren. Enter bestätigt immer. Auto-setzen schreibt nach der einstellbaren Eingabepause (Standard 1000 ms), auch mit withEnter. withEnter ergänzt eine Bestätigungstaste für ungesendete Eingaben. Ohne Auto-setzen schreibt das Verlassen des Feldes nichts. Schreibziele sind passende `input_number`-/`input_text`-Helfer; ohne Entität bleibt die Eingabe lokal. |
-| View in widget | Bettet eine Projektseite ein; rekursive Einbettung wird verhindert. |
+| View in widget | Bettet eine Studio-Projektseite ein (Standard 300 × 200); rekursive Einbettung wird verhindert. Für HA-Dashboards gibt es ein eigenes Widget unter Spezial. |
 | View in widget 8 | Wählt eine von bis zu 50 Seiten anhand des Indexzustands. |
 | iFrame | Bettet eine URL ein, sofern die Zielseite dies erlaubt; mit Rahmen-, Scroll- und Aktualisierungsoptionen. |
 | iFrame 8 | Wählt anhand des Indexzustands einen von bis zu 20 konfigurierten Frames. |
@@ -195,10 +195,17 @@ Der Stil gilt auch für das vorangestellte und angehängte HTML. Verwende vollst
 | [Wert-Konverter](./datenfluss) | Konvertiert Zahlen, Text, Schaltzustände und Einheiten mit eigenem Dialog und Typvorschau; unsichtbar in der Runtime. |
 | [Wert-Berechnung](./datenfluss) | Gleiche vier Rechnungen wie SVG LineBox Math; standardmäßig unsichtbar in der Runtime. |
 
-## HA Grafik – Spezial (3)
+## HA Grafik – Spezial (4)
 
 | Widget | Aktuelle Funktion |
 | --- | --- |
+| Dashboard in widget | Bettet ein HA-Dashboard in der Runtime ein. Größe 32–800 × 32–640 Pixel, Standard 300 × 200. Der Editor zeigt eine auswählbare Vorschau. |
 | [SVG-Line](./svg-line) | Zeichnet und animiert Verbindungen zwischen Widgets, mit Andockpunkten, manuellem Mehrpunktpfad und gezielter Kopplung über Sammelpunkte. |
 | [SVG LineBox Math](./svg-linebox-math) | Sichtbares Quadrat mit 16 Anschlüssen A–P. Eigene Formel oder Durchschnitt belegter Eingänge; Mehrfachbelegung wird je Anschluss summiert. Interne Wertweitergabe ohne zusätzliche HA-Entität. |
 | [SVG LineBox](./svg-linebox) | Im Editor sichtbarer Verteiler: Zahlenwerte eingehender Linien summieren und an Ausgangslinien sowie optional an einen HA-Zahlenhelfer weitergeben. Ein einstellbarer Kreis verdeckt in der Runtime die verbundenen Linienenden. |
+
+### Dashboard in widget
+
+**Dashboard** öffnet über „…“ die Liste der HA-Dashboards. Alternativ lässt sich ein Pfad wie `/lovelace` oder `/dashboard-solar` direkt eingeben. **Dashboard-Ansicht** wählt optional einen Ansichtspfad oder eine Zahl, etwa `energie` oder `0`. Im HA-Ingress bleibt **HA-Basis-URL** leer. Bei direktem Studio-Zugriff wird dort die HA-Adresse eingetragen, beispielsweise `https://ha.example.org`.
+
+Die Anmeldung nutzt die normale HA-Browsersitzung. Das Widget speichert keinen Token; die Dashboard-Auswahl gibt nur Titel und Pfade zurück. Andere Ursprünge können durch Browser- oder Einbettungsregeln blockiert werden. Eine erneute Anmeldung kann erforderlich sein. Normale Studio-Zustandsaktualisierungen laden ein bereits eingebettetes Dashboard nicht neu. Neue Widgets aktivieren nur CSS Allgemein; Umsteigerhinweise sind zentral abschaltbar. „View in widget“ bleibt für Studio-Seiten zuständig.
