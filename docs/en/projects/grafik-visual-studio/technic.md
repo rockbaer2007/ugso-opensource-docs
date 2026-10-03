@@ -7,7 +7,19 @@ description: Install the external Technic widget set and connect Window – Wall
 
 **Inspired by the [ioBroker Technic Widgets by Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** An independent implementation for Home Assistant.
 
-From **Studio 0.1.200**, you can install **UGSo Technic 1.3.0**. The package contains **Window – Wall**, **Switch – Boolean**, **Dimmer – Light** and **Room – Overlay**. The other three widgets from the original set are not included yet. Install 1.3.0 through package management as an additive update to previous versions; existing widgets are preserved.
+From **Studio 0.1.201**, you can install **UGSo Technic 1.4.0**. The package contains **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay** and **Clock – Date**. The other two widgets from the original set are not included yet. Install 1.4.0 through package management as an additive update to previous versions; existing widgets are preserved.
+
+## Clock – Date
+
+![Running clock with seconds and a German date](/images/grafik-visual-studio/technic-clock-runtime.png)
+
+The clock displays the **browser's local time and timezone** without an HA entity. It updates every second without redrawing other widgets; after a paused browser tab resumes, it reads the current time again.
+
+Under **General**, choose side-by-side/stacked layout, left/center/right alignment, gap, optional background, corner radius and padding. Default size is 260 × 90 pixels. Long dates or large fonts require more space; overflowing content remains scrollable.
+
+Under **Time**, configure visibility, 12/24-hour format, seconds, color, font size and bold text. The 12-hour format uses AM/PM. Under **Date**, configure visibility, color, font size and bold text independently.
+
+Date language is independent of the Studio language: German, English, French, Spanish, Italian or Dutch. Choose Day-Month-Year, Month-Day-Year or Year-Month-Day; dot/hyphen/slash/space separators; numeric/short/long months; four/two-digit years; and an optional leading zero for the day. Weekdays can be hidden, short or long. Month and weekday names come from browser locale data. All options remain in project and widget exports.
 
 ## Room – Overlay
 

@@ -5,6 +5,8 @@ description: Create and install local widget packages for HA Grafik Visual Studi
 
 # Widget package interface
 
+From Studio 0.1.201, API 0.2 supports `technic-clock` for browser-local time and independently configured dates. The host updates text with one shared ticker. Date names use `Intl`; the space separator is stored as `separator=space`. No entity binding or executable package file is required.
+
 From Studio 0.1.200, API 0.2 supports the `technic-room` host renderer: up to ten read-only HA status rows, numeric formatting, Boolean AND/OR inputs and a local `targetPage`. Room popups survive live updates; navigation and removal close them. Runtime constrains dialog dimensions and prevents recursive embedding. The package contains no executable scripts.
 
 From Studio 0.1.187, **interface 0.2** adds declarative charts alongside 0.1 text widgets. The optional [Weather and Heating](weather-heating.md) set uses this extension. External sets automatically receive an unused palette color separated from existing hues. Assignments remain in this browser across reloads, removal and reinstallation; Basic and built-in sets retain their colors.

@@ -7,7 +7,19 @@ description: Das externe Technic-Widget-Set installieren und Window – Wall mit
 
 **Inspiriert von den [ioBroker-Technic-Widgets von Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** Eigene Umsetzung für Home Assistant.
 
-Ab **Studio 0.1.200** kannst du **UGSo Technic 1.3.0** installieren. Das Paket enthält **Window – Wall**, **Switch – Boolean**, **Dimmer – Light** und **Room – Overlay**. Die drei weiteren Widgets des Originalsets sind noch nicht enthalten. Version 1.3.0 kann über die Paketverwaltung als Erweiterung der bisherigen Versionen installiert werden; bestehende Widgets bleiben erhalten.
+Ab **Studio 0.1.201** kannst du **UGSo Technic 1.4.0** installieren. Das Paket enthält **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay** und **Clock – Date**. Die zwei weiteren Widgets des Originalsets sind noch nicht enthalten. Version 1.4.0 kann über die Paketverwaltung als Erweiterung der bisherigen Versionen installiert werden; bestehende Widgets bleiben erhalten.
+
+## Clock – Date
+
+![Laufende Uhr mit Sekunden und deutschem Datum](/images/grafik-visual-studio/technic-clock-runtime.png)
+
+Die Uhr zeigt die **lokale Uhrzeit und Zeitzone des Browsers**. Sie benötigt keine HA-Entität. Die Anzeige aktualisiert sich jede Sekunde, ohne andere Widgets neu zu zeichnen; nach einem pausierten Browser-Tab wird die aktuelle Zeit erneut gelesen.
+
+Unter **Allgemein** wählst du Nebeneinander/Untereinander, Ausrichtung links/mittig/rechts, Abstand, optionalen Hintergrund, Eckenradius und Innenabstand. Die Standardgröße beträgt 260 × 90 Pixel. Lange Datumsangaben oder große Schriften benötigen entsprechend mehr Platz; überschüssiger Inhalt bleibt scrollbar.
+
+Unter **Uhrzeit** sind Anzeige, 12-/24-Stundenformat, Sekunden, Farbe, Schriftgröße und Fettdruck einstellbar. Das 12-Stundenformat verwendet AM/PM. Unter **Datum** bestimmst du die Anzeige, Farbe, Schriftgröße und Fettdruck getrennt.
+
+Die Datumssprache ist unabhängig von der Studio-Sprache: Deutsch, Englisch, Französisch, Spanisch, Italienisch oder Niederländisch. Verfügbar sind Tag-Monat-Jahr, Monat-Tag-Jahr und Jahr-Monat-Tag, Punkt/Bindestrich/Schrägstrich/Leerzeichen, numerischer/kurzer/langer Monat, vier-/zweistelliges Jahr und eine optionale führende Null beim Tag. Der Wochentag kann ausgeblendet, kurz oder lang angezeigt werden. Monats- und Tagesnamen stammen aus den Sprachdaten des Browsers. Alle Optionen bleiben im Projekt- und Widget-Export erhalten.
 
 ## Room – Overlay
 
