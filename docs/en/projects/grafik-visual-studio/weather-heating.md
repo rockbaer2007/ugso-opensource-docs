@@ -5,7 +5,7 @@ description: Install and configure the optional chart widget package.
 
 # Weather and Heating
 
-From **Studio 0.1.192**, you can install **Weather and Heating 1.5.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview**, **METEORED Weather Widget** and **Window Status Overview**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
+From **Studio 0.1.193**, you can install **Weather and Heating 1.6.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview**, **METEORED Weather Widget**, **Window Status Overview** and **Inform my landlord**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
 
 ## Install
 
@@ -13,7 +13,19 @@ Download [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-
 
 ## Configure the chart
 
-An installed 1.0.0 through 1.4.0 package can be updated to 1.5.0 through the same import. Existing widgets and saved project values remain intact. Updates may only add widgets; changes to existing definitions and downgrades are rejected.
+An installed 1.0.0 through 1.5.0 package can be updated to 1.6.0 through the same import. Existing widgets and saved project values remain intact. Updates may only add widgets; changes to existing definitions and downgrades are rejected.
+
+## Inform my landlord
+
+The widget provides **Priority** (Information, Important, Urgent), **Message** and **Send**. The editor is a preview. Runtime submits to Home Assistant only on deliberate sending. Empty messages and repeated clicks during a pending submission are blocked. Failure retains the message for retry; HA acceptance clears it. Acceptance does not confirm delivery.
+
+**General** provides **Without card**, **Message type**, **HA notification action**, **Notification entity** and **Subject / message heading**. Example: action `notify.send_message` with your specific entity `notify.landlord`. Alternatively, use a configured named action such as `notify.landlord_email`, leaving the entity field empty. The unspecified `notify.notify` action is rejected. Configure recipients, credentials and providers in HA, not in the widget. See [HA notifications](https://www.home-assistant.io/integrations/notify/).
+
+Email, WhatsApp, Signal, Pushbullet and Jira describe the configured channel. Selecting a type does not install a provider or automatically change the HA destination. Your HA action replaces the original ioBroker `email.0` instance. The original currently implements email sending only; Studio uses the same HA contract for all configured channels.
+
+The heading and priority are prepended as message text, for example `Inform my landlord` and `[urgent]`. Priority is not a provider-specific delivery or alarm level. Limits: 10,000 message characters and 200 heading characters. Drafts survive HA state redraws but remain only in the current form: page changes or reloads discard them. Project/widget exports contain configuration, not entered messages.
+
+![Message form and HA destination configuration in the editor](/images/grafik-visual-studio/weather-heating-landlord.png)
 
 ## Window Status Overview
 

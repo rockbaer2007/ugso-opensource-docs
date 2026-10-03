@@ -5,7 +5,7 @@ description: Das optionale Diagramm-Widget-Paket installieren und konfigurieren.
 
 # Wetter und Heizung
 
-Ab **Studio 0.1.192** kannst du das Paket **Wetter und Heizung 1.5.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget**, **Übersicht über Heizräume**, **METEORED-Wetter-Widget** und **Fensterstatus-Übersicht**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
+Ab **Studio 0.1.193** kannst du das Paket **Wetter und Heizung 1.6.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget**, **Übersicht über Heizräume**, **METEORED-Wetter-Widget**, **Fensterstatus-Übersicht** und **Meinen Vermieter informieren**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
 
 ## Installieren
 
@@ -13,7 +13,19 @@ Lade [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addo
 
 ## Diagramm konfigurieren
 
-Ein installiertes Paket 1.0.0 bis 1.4.0 kannst du über denselben Import auf 1.5.0 aktualisieren. Vorhandene Widgets und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
+Ein installiertes Paket 1.0.0 bis 1.5.0 kannst du über denselben Import auf 1.6.0 aktualisieren. Vorhandene Widgets und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
+
+## Meinen Vermieter informieren
+
+Das Widget bietet **Priorität** (Information, Wichtig, Dringend), **Nachricht** und **Senden**. Im Editor ist es eine Vorschau. In der Runtime wird ausschließlich beim bewussten Senden an Home Assistant übergeben. Leere Nachrichten und wiederholte Klicks während einer laufenden Übergabe werden abgefangen. Bei einem Fehler bleibt die Nachricht zum erneuten Versuch erhalten; bei HA-Annahme wird sie geleert. Die Annahme bestätigt keine Zustellung.
+
+Unter **Allgemein** findest du **Ohne Karte**, **Nachrichtentyp**, **HA-Benachrichtigungsaktion**, **Benachrichtigungs-Entität** und **Betreff / Nachrichtenüberschrift**. Beispiel: Aktion `notify.send_message` mit deiner konkreten Entität `notify.vermieter`. Alternativ kannst du eine eingerichtete benannte Aktion wie `notify.vermieter_email` verwenden; dann bleibt das Entitätsfeld leer. Das unspezifische `notify.notify` wird nicht akzeptiert. Empfänger, Zugangsdaten und Anbieter richtest du in HA ein, nicht im Widget. Siehe [HA-Benachrichtigungen](https://www.home-assistant.io/integrations/notify/).
+
+Die Nachrichtentypen E-Mail, WhatsApp, Signal, Pushbullet und Jira beschreiben den eingerichteten Kanal. Die Auswahl installiert keinen Anbieter und wechselt das HA-Ziel nicht automatisch. Die originale ioBroker-Instanz `email.0` wird durch deine HA-Aktion ersetzt. Im Original ist bisher nur der E-Mail-Versand implementiert; die Studio-Darstellung verwendet für alle eingerichteten Kanäle denselben HA-Vertrag.
+
+Überschrift und Priorität werden als Text vor die Nachricht gesetzt, beispielsweise `Meinen Vermieter informieren` und `[urgent]`. Die Priorität ist keine anbieterspezifische Zustell- oder Alarmstufe. Grenzen: 10.000 Nachrichtenzeichen, 200 Überschriftszeichen. Entwürfe bleiben bei HA-Zustandsaktualisierungen erhalten, jedoch nur im aktuellen Formular: Seitenwechsel oder Neuladen verwirft sie. Projekt-/Widget-Exporte enthalten die Konfiguration, keine eingegebenen Nachrichten.
+
+![Nachrichtenformular und HA-Zielkonfiguration im Editor](/images/grafik-visual-studio/weather-heating-landlord.png)
 
 ## Fensterstatus-Übersicht
 
