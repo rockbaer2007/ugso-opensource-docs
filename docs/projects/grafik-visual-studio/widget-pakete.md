@@ -50,6 +50,8 @@ Die festen Diagrammschlüssel und Grenzen stehen im [Diagrammvertrag](https://gi
 
 ## Installieren und verwalten
 
+Ab Studio 0.1.194 unterstützt 0.2 `render: {"kind":"heating-params","valueKey":"chosenRoomEntityId"}`. Der Host liest acht unabhängige `*EntityId`-Bindungen für Heizperiode, Feiertag, Anwesenheit, Party, Gäste, Urlaub zu Hause/abwesend und Kaminmodus. `chosenRoomEntityId` ist eine optionale Textanzeige. Ungebundene `*Preview`-Boolean-Werte gelten nur im Editor. Runtime-Schalten ist auf verfügbare `input_boolean`/`switch`-Entitäten begrenzt; `readOnly` sperrt alle Zeilen. Siehe [Wetter und Heizung](weather-heating.md).
+
 Ab Studio 0.1.193 unterstützt 0.2 `render: {"kind":"landlord-notification","valueKey":"messageSubject"}`. Der feste Host bietet ein Runtime-Nachrichtenformular. `notificationService` bezeichnet eine konkrete `notify.*`-Aktion; `notify.send_message` benötigt `notifyEntityId`. `messageType` beschreibt den konfigurierten Kanal und `messageSubject` die Textüberschrift. Versand erfolgt nur nach Senden, nie im Editor. Priorität wird als Text mitgegeben; Entwürfe bleiben außerhalb des Projektformats. Siehe [Wetter und Heizung](weather-heating.md).
 
 Ab Studio 0.1.192 unterstützt 0.2 auch `render: {"kind":"window-overview","valueKey":"windowPreview"}`. Der Host liest eine JSON-Raumliste über `entityId` und optional `tableAttribute`. `openCountEntityId` und optional `openCountAttribute` liefern eine separate Anzahl offener Räume. Ohne Listenbindung gilt der Vorschauwert; ohne Anzahlbindung wird nur eine vollständig bekannte, nicht leere Liste gezählt. Unbekannte Werte bleiben unbekannt. Siehe [Wetter und Heizung](weather-heating.md).

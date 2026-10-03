@@ -5,7 +5,7 @@ description: Das optionale Diagramm-Widget-Paket installieren und konfigurieren.
 
 # Wetter und Heizung
 
-Ab **Studio 0.1.193** kannst du das Paket **Wetter und Heizung 1.6.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget**, **Übersicht über Heizräume**, **METEORED-Wetter-Widget**, **Fensterstatus-Übersicht** und **Meinen Vermieter informieren**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
+Ab **Studio 0.1.194** kannst du das Paket **Wetter und Heizung 1.7.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget**, **Übersicht über Heizräume**, **METEORED-Wetter-Widget**, **Fensterstatus-Übersicht**, **Meinen Vermieter informieren** und **Allgemeine Heizparameter**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
 
 ## Installieren
 
@@ -13,7 +13,19 @@ Lade [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addo
 
 ## Diagramm konfigurieren
 
-Ein installiertes Paket 1.0.0 bis 1.5.0 kannst du über denselben Import auf 1.6.0 aktualisieren. Vorhandene Widgets und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
+Ein installiertes Paket 1.0.0 bis 1.6.0 kannst du über denselben Import auf 1.7.0 aktualisieren. Vorhandene Widgets und Projektwerte bleiben erhalten. Updates dürfen ausschließlich neue Widgets ergänzen; Änderungen bestehender Definitionen oder Downgrades werden abgewiesen.
+
+## Allgemeine Heizparameter
+
+Das Widget zeigt acht Zeilen: **Heizperiode aktiv**, **Heute Feiertag**, **Anwesend**, **Jetzt feiern**, **Gäste anwesend**, **Urlaub zu Hause**, **Urlaub abwesend** und **Kaminmodus**. Unter **Heizparameter-Entitäten** weist du jeder Zeile ihre eigene HA-Entität zu. Die optional gewählte Raum-Entität erscheint als Text über den Schaltern; sie wird nicht verändert. Die ursprüngliche `heatingcontrol.0`-Instanz ist nicht erforderlich.
+
+In der Runtime sind verfügbare `input_boolean.*` und `switch.*` mit Zustand `on`/`off` schaltbar. Jede Aktion setzt ausschließlich die angeklickte Entität ein oder aus. Sensoren, beispielsweise `binary_sensor.*`, dienen nur als Anzeige. Während eines Schaltbefehls bleibt die entsprechende Entität gesperrt; Fehler werden über den bestehenden Studio-Schaltstatus gemeldet. **Allgemein → Schreibgeschützt** sperrt alle Schaltaktionen. **Ohne Karte** entfernt den äußeren Kartenhintergrund.
+
+Ungebundene Zeilen sind in der Runtime deaktiviert und als **Ungebunden** markiert. Fehlende oder nicht verfügbare gebundene Werte zeigen **Unbekannt** mit einem gestreiften Schalter. Es wird kein Vorschauwert als Live-Wert eingesetzt. Die Checkboxen unter **Vorschau** gelten ausschließlich im ungebundenen Editor; auch dort werden keine Schaltbefehle gesendet.
+
+Alle neun Entitätsbindungen, Vorschauwerte, Schreibschutz und Darstellungsoptionen bleiben in Projekt und Widget-Export erhalten. Das Widget bündelt deine vorhandenen HA-Entitäten; es berechnet keine Heizzeiten, Feiertage oder Anwesenheit und enthält keine eigene Heizregelung.
+
+![Allgemeine Heizparameter und ihre Entitätsbindungen](/images/grafik-visual-studio/weather-heating-params.png)
 
 ## Meinen Vermieter informieren
 

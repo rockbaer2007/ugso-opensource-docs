@@ -5,7 +5,7 @@ description: Install and configure the optional chart widget package.
 
 # Weather and Heating
 
-From **Studio 0.1.193**, you can install **Weather and Heating 1.6.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview**, **METEORED Weather Widget**, **Window Status Overview** and **Inform my landlord**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
+From **Studio 0.1.194**, you can install **Weather and Heating 1.7.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview**, **METEORED Weather Widget**, **Window Status Overview**, **Inform my landlord** and **General heating parameters**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
 
 ## Install
 
@@ -13,7 +13,19 @@ Download [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-
 
 ## Configure the chart
 
-An installed 1.0.0 through 1.5.0 package can be updated to 1.6.0 through the same import. Existing widgets and saved project values remain intact. Updates may only add widgets; changes to existing definitions and downgrades are rejected.
+An installed 1.0.0 through 1.6.0 package can be updated to 1.7.0 through the same import. Existing widgets and saved project values remain intact. Updates may only add widgets; changes to existing definitions and downgrades are rejected.
+
+## General heating parameters
+
+The widget displays eight rows: **Heating period active**, **Public holiday today**, **Present**, **Party now**, **Guests present**, **Holiday at home**, **Vacation away** and **Fireplace mode**. Under **Heating parameter entities**, assign an independent HA entity to each row. The optional chosen-room entity is displayed as text above the switches and is never modified. The original `heatingcontrol.0` instance is not required.
+
+Available `input_boolean.*` and `switch.*` entities with `on`/`off` states are writable in runtime. Each action turns only the clicked entity on or off. Sensors, such as `binary_sensor.*`, are display-only. A pending command blocks that entity; failures use Studio's existing switch status. **General → Read-only** blocks all writes. **Without card** removes the outer card background.
+
+Unbound runtime rows are disabled and marked **Unbound**. Missing or unavailable bound readings show **Unknown** with a striped switch. Preview values never replace live readings. The **Preview** checkboxes apply only in the unbound editor; the editor sends no commands.
+
+All nine entity bindings, preview values, read-only and display options remain in project and widget exports. This widget groups your existing HA entities; it does not calculate heating schedules, holidays or presence and provides no heating controller of its own.
+
+![General heating parameters and entity bindings](/images/grafik-visual-studio/weather-heating-params.png)
 
 ## Inform my landlord
 

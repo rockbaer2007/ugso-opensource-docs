@@ -50,6 +50,8 @@ The ZIP limit is 2 MB, the manifest limit is 200 KB, and each image is limited t
 
 ## Install and manage
 
+From Studio 0.1.194, interface 0.2 supports `render: {"kind":"heating-params","valueKey":"chosenRoomEntityId"}`. The host reads eight independent `*EntityId` bindings for heating period, holiday, presence, party, guests, holiday at home/vacation away and fireplace mode. `chosenRoomEntityId` is an optional text display. Unbound `*Preview` Boolean values apply only in the editor. Runtime writes are limited to available `input_boolean`/`switch` entities; `readOnly` blocks every row. See [Weather and Heating](weather-heating.md).
+
 From Studio 0.1.193, interface 0.2 supports `render: {"kind":"landlord-notification","valueKey":"messageSubject"}`. The fixed host provides a runtime message form. `notificationService` selects a specific `notify.*` action; `notify.send_message` requires `notifyEntityId`. `messageType` describes the configured channel and `messageSubject` provides the text heading. Submission happens only on Send, never in the editor. Priority is included as text; drafts remain outside the project format. See [Weather and Heating](weather-heating.md).
 
 From Studio 0.1.192, interface 0.2 also supports `render: {"kind":"window-overview","valueKey":"windowPreview"}`. The host reads a JSON room list using `entityId` and optional `tableAttribute`. `openCountEntityId` and optional `openCountAttribute` provide a separate open room count. Without a list binding, the preview value is used; without a count binding, only a fully known, non-empty list is counted. Unknown readings remain unknown. See [Weather and Heating](weather-heating.md).
