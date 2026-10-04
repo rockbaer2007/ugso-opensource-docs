@@ -42,6 +42,7 @@ const navDe = [
   { text: 'ATLAS', link: '/projects/atlas/' },
   { text: 'ATLAS Plugins', link: '/projects/atlas-plugins/' },
   { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
+  { text: 'Paketkatalog', link: 'https://visualstudio.ugso-software.de/?lang=de' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
@@ -77,6 +78,7 @@ const navEn = [
   { text: 'ATLAS', link: '/en/projects/atlas/' },
   { text: 'ATLAS Plugins', link: '/en/projects/atlas-plugins/' },
   { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
+  { text: 'Package catalog', link: 'https://visualstudio.ugso-software.de/?lang=en' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
@@ -113,6 +115,7 @@ const navFr = [
   { text: 'ATLAS', link: '/fr/projects/atlas/' },
   { text: 'ATLAS Plugins', link: '/fr/projects/atlas-plugins/' },
   { text: 'Projets MQTT', link: '/fr/projects-mqtt/' },
+  { text: 'Catalogue de paquets', link: 'https://visualstudio.ugso-software.de/?lang=fr' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
 
