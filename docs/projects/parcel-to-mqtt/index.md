@@ -11,7 +11,7 @@ hero:
       link: https://github.com/SoerenKaiser99/parcel_tracker
     - theme: alt
       text: GitHub
-      link: https://github.com/rockbaer2007/parcel-to-mqtt
+      link: https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/parcel_to_mqtt
 
 features:
   - icon: 📦

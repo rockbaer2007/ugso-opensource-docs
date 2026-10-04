@@ -51,6 +51,7 @@ A Home Assistant app that publishes heating-oil prices from Esyoil and Heizöl24
 A Home Assistant app that publishes parcel tracking data as MQTT Discovery entities. The current version uses DHL account parcel lists, optional DHL tracking numbers and Hermes parcel tracking.
 
 - [Open the Parcel to MQTT documentation](/en/projects/parcel-to-mqtt/)
+- [Open the package in the shared add-on repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/parcel_to_mqtt)
 - [Open the archived single-project repository on GitHub](https://github.com/rockbaer2007/parcel-to-mqtt)
 - Adapted from: [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel)
 
