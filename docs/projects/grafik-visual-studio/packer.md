@@ -22,7 +22,7 @@ Der Packer prüft mit denselben Regeln wie der gebündelte Studio-Importer. Pack
 
 Ab Testversion **0.3.1** zeigt der Packer ein bereits gespeichertes Paket mit identischem Dateiinhalt grün als **Datei gespeichert** an, auch nach einem Neustart. Ein erneuter Export bleibt deaktiviert. Bei abweichendem Inhalt schützt die Prüfung weiterhin vor dem Überschreiben. Der breite Button **GitHub & Katalog …** befindet sich direkt unter der Prüfliste.
 
-Neu in **Packer 0.3.0**: **GitHub & Katalog …** öffnet ein exportiertes `.wg`- oder `.tp`-Paket zur Prüfung und Veröffentlichung. Die neue Version befindet sich im Test; die unten angebotenen signierten Downloads sind weiterhin 0.2.0 und enthalten diese Erweiterung noch nicht.
+Seit **Packer 0.3.0** öffnet **GitHub & Katalog …** ein exportiertes `.wg`- oder `.tp`-Paket zur Prüfung und Veröffentlichung. Die unten angebotene Testversion **0.3.1** enthält diese Erweiterung und die korrigierte Anzeige gespeicherter Dateien.
 
 1. Installiere die [GitHub CLI](https://cli.github.com/) und melde dich im Terminal mit `gh auth login` an. Trage dein öffentliches Repository ein und wähle **Releases laden**.
 2. Wähle den Release-Tag und bestätige **Paket auf GitHub veröffentlichen**. Für einen neuen Release aktiviere **Release für vorhandenen Git-Tag erstellen**; der Tag muss bereits auf GitHub vorhanden sein. Vorhandene Dateien werden nicht überschrieben.
@@ -37,24 +37,24 @@ Die Kontaktadresse geht intern an den Katalog und gegebenenfalls sein Prüfpostf
 
 Die Qt-Oberfläche läuft unter Windows und Linux. Der Button **Endungen registrieren** zeigt zuerst eine Vorschau und richtet nach Bestätigung eigene Icons und „Öffnen mit“-Einträge für `.wg` und `.tp` beim aktuellen Benutzer ein. Eine bestehende Standard-App wird nicht geändert. Der Packer kann ein vorhandenes Paket zur Prüfung öffnen, ohne es zu installieren. Nach dem Verschieben des Programms muss die Dateityp-Registrierung erneut ausgeführt werden.
 
-Version **0.2.0** ist als früher Test-Release im [Paketkatalog](https://visualstudio.ugso-software.de/?kind=helper&lang=de) erhältlich:
+Version **0.3.1** ist als signierter Test-Release für Windows und Linux im [Paketkatalog](https://visualstudio.ugso-software.de/?kind=helper&lang=de) erhältlich:
 
 | System | Download | SHA-256 |
 | --- | --- | --- |
-| Windows x86_64 | [ZIP herunterladen](https://visualstudio.ugso-software.de/downloads/helpertools/HA-Grafik-Packer-0.2.0-windows-x86_64.zip) | `7ab24f0d69fec36e15037edf1e4c3c34c29296be4491f16b65801a3e9fa22b9c` |
-| Linux x86_64 | [TAR.GZ herunterladen](https://visualstudio.ugso-software.de/downloads/helpertools/HA-Grafik-Packer-0.2.0-linux-x86_64.tar.gz) | `baa80a8bbc7c5b78f5d16f59fe3c3bc80c8bd3076cb9a17178f5362a207045c9` |
+| Windows x86_64 | [ZIP herunterladen](https://visualstudio.ugso-software.de/downloads/helpertools/HA-Grafik-Packer-0.3.1-windows-x86_64.zip) | `7047e6ee5bb2327cf80432d2c37e0f82516284c22c0d4910ff3d4d64950efd8a` |
+| Linux x86_64 | [TAR.GZ herunterladen](https://visualstudio.ugso-software.de/downloads/helpertools/HA-Grafik-Packer-0.3.1-linux-x86_64.tar.gz) | `e094331c7281957764dee38a8a117d932a2589581117daf68f1e146b71fd9a19` |
 
-Entpacke das Archiv vollständig und starte `HA-Grafik-Packer.exe` beziehungsweise `HA-Grafik-Packer`. Der Ordner `_internal` muss daneben bleiben; er enthält auch die separat austauschbaren Qt-Bibliotheken. Der Linux-Build wurde zusätzlich in einem frischen Ubuntu-24.04-Docker-Container geprüft und benötigt Qt-Systembibliotheken für EGL/OpenGL. Lizenztexte und Hinweise liegen im Archiv.
+Entpacke das Archiv vollständig und starte `HA-Grafik-Packer.exe` beziehungsweise `HA-Grafik-Packer`. Der Ordner `_internal` muss daneben bleiben; er enthält auch die separat austauschbaren Qt-Bibliotheken. Beide Plattform-Builds wurden mit Tests und einem Selbsttest nach dem Entpacken geprüft. Linux benötigt Qt-Systembibliotheken für EGL/OpenGL. Lizenztexte und Hinweise liegen im Archiv.
 
 ## Download prüfen
 
-Lade aus demselben Release [SHA256SUMS](https://visualstudio.ugso-software.de/downloads/helpertools/SHA256SUMS) und [SHA256SUMS.sig](https://visualstudio.ugso-software.de/downloads/helpertools/SHA256SUMS.sig) herunter. Die [Vertrauensdatei für OpenSSH](https://raw.githubusercontent.com/rockbaer2007/ugso-opensource-docs/main/docs/public/keys/packer-allowed-signers) und der [öffentliche Release-Schlüssel](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/packer-release.pub) werden getrennt vom Release bereitgestellt. Der Ed25519-Fingerabdruck ist `SHA256:W3iUvKedcI4FWS1kMoBrLlrAF2GbsB4sELphG0uITLE`.
+Lade für Version 0.3.1 [SHA256SUMS-0.3.1](https://visualstudio.ugso-software.de/downloads/helpertools/SHA256SUMS-0.3.1) und [SHA256SUMS-0.3.1.sig](https://visualstudio.ugso-software.de/downloads/helpertools/SHA256SUMS-0.3.1.sig) herunter. Die [Vertrauensdatei für OpenSSH](https://raw.githubusercontent.com/rockbaer2007/ugso-opensource-docs/main/docs/public/keys/packer-allowed-signers) und der [öffentliche Release-Schlüssel](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/packer-release.pub) werden getrennt vom Release bereitgestellt. Der Ed25519-Fingerabdruck ist `SHA256:W3iUvKedcI4FWS1kMoBrLlrAF2GbsB4sELphG0uITLE`. Die früheren Prüfsummendateien ohne Versionsnummer gehören zu 0.2.0.
 
 Prüfe zuerst die Signatur. Unter Linux im Downloadordner:
 
 ```sh
-ssh-keygen -Y verify -f packer-allowed-signers -I packer-release -n ha-grafik-visual-studio-packer-release -s SHA256SUMS.sig < SHA256SUMS
-sha256sum -c SHA256SUMS
+ssh-keygen -Y verify -f packer-allowed-signers -I packer-release -n ha-grafik-visual-studio-packer-release -s SHA256SUMS-0.3.1.sig < SHA256SUMS-0.3.1
+sha256sum -c SHA256SUMS-0.3.1
 ```
 
-Unter Windows funktionieren dieselben Signaturparameter in `cmd.exe` mit der gezeigten Eingabeumleitung. Vergleiche danach `certutil -hashfile DATEINAME SHA256` mit dem Wert in `SHA256SUMS`. Lade Schlüssel und Vertrauensdatei vor dem Prüfen von den oben verlinkten Quellen. Der Packer-Quellcode bleibt im privaten Entwicklungs-Repository; die von GitHub automatisch angebotenen „Source code“-Archive dieses Releases gehören zum **Studio**.
+Unter Windows funktionieren dieselben Signaturparameter in `cmd.exe` mit der gezeigten Eingabeumleitung. Vergleiche danach `certutil -hashfile DATEINAME SHA256` mit dem Wert in `SHA256SUMS-0.3.1`. Lade Schlüssel und Vertrauensdatei vor dem Prüfen von den oben verlinkten Quellen. Der Packer-Quellcode bleibt im privaten Entwicklungs-Repository.
