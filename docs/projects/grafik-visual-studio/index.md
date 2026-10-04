@@ -37,6 +37,8 @@ Widget-Pakete, Tool-Pakete und Zusatztools findest du zentral im [UGSo-Paketkata
 
 ## Was derzeit möglich ist
 
+Ab Studio **0.1.218** erscheinen fehlgeschlagene HA-Schaltbefehle als rote Meldung in der Runtime mit Entity-ID und Fehlerursache. Ab **0.1.219** zeigt auch ein Klick auf einen gesperrten Switch den Grund an, beispielsweise einen fehlenden oder nicht verfügbaren HA-Zustand. Schaltbare Widgets bedienen Home Assistant in der Runtime; im Editor dient die Bedienung der Vorschau.
+
 Ab Studio **0.1.217** sucht der Entitäten-Dialog nach Anzeigenamen, benutzerdefinierten und ursprünglichen Entitätsnamen, Entity-IDs sowie Gerätenamen. Mehrere Suchwörter dürfen über Entität und Gerät verteilt sein: **Licht Tv1** findet beispielsweise eine Entität namens „Licht“ am Gerät „TV1“. Die Suche ignoriert Groß-/Kleinschreibung; passende Gerätegruppen werden während der Suche automatisch aufgeklappt.
 
 - Im Dateien-Fenster sucht das Suchfeld in allen Unterordnern von `/config/www/studio`, unabhängig vom geöffneten Ordner. Die Suche ignoriert Groß-/Kleinschreibung und berücksichtigt Dateinamen sowie Pfade. Treffer zeigen eine Bildvorschau und den relativen Pfad; Dateitypfilter und Bildübernahme bleiben nutzbar. Ein leeres Suchfeld zeigt wieder den geöffneten Ordner.
