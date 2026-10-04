@@ -5,6 +5,8 @@ description: Lokale Editor-Tools für HA Grafik Visual Studio erstellen und inst
 
 # Tool-Paket-Schnittstelle 0.1
 
+Pakete und Zusatztools werden zentral auf [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=de) angeboten. Diese Open-Source-Seite enthält Beschreibung und Anleitung; der Download erfolgt über den Paketkatalog.
+
 Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.tp` installieren. Bisherige `.tp.zip`-Dateien bleiben nutzbar; Endung und Manifest müssen zur Tool-Paketart passen.
 
 Über **Einstellungen → Tools** installierst du ein lokales `*.tp.zip`. Installierte Tools erscheinen zusätzlich als Symbole in zwei Reihen der Editor-Werkzeugleiste; das Koffersymbol dort öffnet direkt den Tools-Tab zur Verwaltung. Tool-Pakete ergänzen den Editor, nicht die Widget-Palette oder Runtime. Schnittstelle 0.1 unterstützt eine deklarative Aktion: die Hintergrundfarbe der aktuellen Seite setzen. Ein Klick auf das Tool-Symbol oder **Ausführen** im Tools-Tab zeigt zunächst eine Vorschau; erst **Anwenden** übernimmt die Änderung. Sie lässt sich mit **Rückgängig** zurücknehmen und wird über den normalen Projektweg gespeichert. Bei der Installation wird keine Aktion ausgeführt.
@@ -17,7 +19,7 @@ Ab Studio **0.1.113** behalten Colorpicker und Favoriten beim Tabwechsel dieselb
 
 **Lokale Favoriten übernehmen** führt die bisherigen Browserfavoriten mit der gemeinsamen Liste zusammen. Farben, die nicht mehr hineinpassen, bleiben lokal erhalten. Ein Tool-Update oder eine erneute Tool-Installation löscht die Favoriten nicht. Sichere die Add-on-Daten vor einer Deinstallation oder einem Serverumzug. Falls die Adminprüfung fehlt, öffne Studio erneut über Home Assistant; Favoriten werden dann nicht lokal als Ersatz gespeichert.
 
-[Colorpicker 1.2.0 herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.2.0).
+[Colorpicker 1.2.0 herunterladen](https://visualstudio.ugso-software.de/?kind=tool&lang=de).
 
 Das Zusatztool benötigt **HA Grafik Visual Studio 0.1.112 oder neuer**. Installiere die heruntergeladene `.tp`-Datei unter **Einstellungen → Tools**. Bei bereits installiertem Colorpicker genügt das Studio-Update für den neuen Dialog. Das Farbkreis-Symbol in der Werkzeugleiste oder **Ausführen** öffnet den Colorpicker.
 

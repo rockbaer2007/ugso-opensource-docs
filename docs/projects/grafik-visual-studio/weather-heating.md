@@ -5,13 +5,15 @@ description: Das optionale Diagramm-Widget-Paket installieren und konfigurieren.
 
 # Wetter und Heizung
 
+Pakete und Zusatztools werden zentral auf [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=de) angeboten. Diese Open-Source-Seite enthält Beschreibung und Anleitung; der Download erfolgt über den Paketkatalog.
+
 **Inspiriert von den ioBroker-Widgets „Wetter und Heizung“ von [rg-engineering](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating).** Die Studio-Widgets sind eine eigene Umsetzung für Home Assistant.
 
 Ab **Studio 0.1.194** kannst du das Paket **Wetter und Heizung 1.7.0** nachinstallieren. Es enthält **Allgemeines Diagramm**, **Balkendiagramm für zwei Wochen**, **Wetter-Widget**, **Übersicht über Heizräume**, **METEORED-Wetter-Widget**, **Fensterstatus-Übersicht**, **Meinen Vermieter informieren** und **Allgemeine Heizparameter**. Funktionsreferenz ist [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); das Studio verwendet eigene Darstellungen. Weitere Wetter- und Heizungswidgets sowie ioBroker-spezifische Adapterbindungen sind noch nicht enthalten.
 
 ## Installieren
 
-Lade [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/weather-heating/ugso.weather-heating.wg) herunter. Öffne **Einstellungen → Widget-Pakete → Lokales .wg / .wg.zip installieren** und wähle die Datei. Nach dem Neuladen erscheint ein eigenes Set mit automatisch vergebener Farbe. Die Farbzuordnung bleibt in diesem Browser erhalten, auch bei Entfernen und Neuinstallation. Die 74 integrierten Widgets bleiben verfügbar.
+Lade [ugso.weather-heating.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=de) herunter. Öffne **Einstellungen → Widget-Pakete → Lokales .wg / .wg.zip installieren** und wähle die Datei. Nach dem Neuladen erscheint ein eigenes Set mit automatisch vergebener Farbe. Die Farbzuordnung bleibt in diesem Browser erhalten, auch bei Entfernen und Neuinstallation. Die 74 integrierten Widgets bleiben verfügbar.
 
 ## Diagramm konfigurieren
 

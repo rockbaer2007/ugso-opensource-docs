@@ -5,6 +5,8 @@ description: Create and install local editor tools for HA Grafik Visual Studio.
 
 # Tool package interface 0.1
 
+Packages and helper tools are provided centrally at [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=en). This open-source page provides descriptions and instructions; downloads are provided by the package catalog.
+
 Starting with Studio 0.1.89, you can install ZIP-based packages ending in `.tp`. Existing `.tp.zip` files remain supported; the extension and manifest must both identify a tool package.
 
 Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tools also appear as icons in two rows of the editor toolbar; its toolbox icon opens the Tools tab for management. Tool packages extend the editor, not the widget palette or runtime. Interface 0.1 supports one declarative action: setting the current page's background color. Clicking a toolbar tool icon or **Run** in the Tools tab opens a preview; only **Apply** commits the change. **Undo** can revert it, and normal project saving persists it. Installation itself does not run an action.
@@ -17,7 +19,7 @@ Starting with Studio **0.1.113**, Colorpicker and Favorites retain the same dial
 
 **Import local favorites** merges the previous browser list into the shared list. Colors that do not fit remain locally stored. Tool updates or reinstalls do not delete favorites. Back up add-on data before uninstalling the add-on or migrating servers. If the administrator check is unavailable, reopen Studio through Home Assistant; favorites are not stored locally as a fallback.
 
-[Download Colorpicker 1.2.0](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-colorpicker-v1.2.0).
+[Download Colorpicker 1.2.0](https://visualstudio.ugso-software.de/?kind=tool&lang=en).
 
 This tool requires **HA Grafik Visual Studio 0.1.112 or newer**. Install the downloaded `.tp` file under **Settings → Tools**. Existing Colorpicker installations receive the new dialog by updating Studio. Open the color-wheel toolbar icon or click **Run**.
 

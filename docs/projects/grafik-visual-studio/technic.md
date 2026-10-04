@@ -5,6 +5,8 @@ description: Das externe Technic-Widget-Set installieren und Window – Wall mit
 
 # UGSo Technic
 
+Pakete und Zusatztools werden zentral auf [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=de) angeboten. Diese Open-Source-Seite enthält Beschreibung und Anleitung; der Download erfolgt über den Paketkatalog.
+
 **Inspiriert von den [ioBroker-Technic-Widgets von Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** Eigene Umsetzung für Home Assistant.
 
 Ab **Studio 0.1.203** kannst du **UGSo Technic 1.6.0** installieren. Das Paket enthält alle sieben Widget-Typen: **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date**, **Thermostat – Temperature** und **Status – List**. Version 1.6.0 kann über die Paketverwaltung als Erweiterung der bisherigen Versionen installiert werden; bestehende Widgets bleiben erhalten.
@@ -69,7 +71,7 @@ Popup-Breite und -Höhe, feste X/Y-Position statt Zentrierung, Hintergrund, Rahm
 
 ## Installieren
 
-Lade [ugso.technic.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/technic/ugso.technic.wg) herunter. Öffne **Einstellungen → Widget-Pakete → Lokales .wg / .wg.zip installieren** und wähle die Datei. Nach dem Neuladen erscheint das Set mit einer automatisch vergebenen freien Farbe. Es bleibt unabhängig von den integrierten Widgets und von Wetter und Heizung.
+Lade [ugso.technic.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=de) herunter. Öffne **Einstellungen → Widget-Pakete → Lokales .wg / .wg.zip installieren** und wähle die Datei. Nach dem Neuladen erscheint das Set mit einer automatisch vergebenen freien Farbe. Es bleibt unabhängig von den integrierten Widgets und von Wetter und Heizung.
 
 Der [Quellcode und reproduzierbare Paketbau](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/technic) sind öffentlich. Das Downloadpaket enthält `README.md` und `LICENSE.txt`, einschließlich des vollständigen MIT-Lizenztextes und des Herkunftshinweises `Copyright (c) 2026 Sefina-DS`.
 

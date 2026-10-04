@@ -5,13 +5,15 @@ description: Install and configure the optional chart widget package.
 
 # Weather and Heating
 
+Packages and helper tools are provided centrally at [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=en). This open-source page provides descriptions and instructions; downloads are provided by the package catalog.
+
 **Inspired by the ioBroker “Weather and Heating” widgets by [rg-engineering](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating).** The Studio widgets are an independent implementation for Home Assistant.
 
 From **Studio 0.1.194**, you can install **Weather and Heating 1.7.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview**, **METEORED Weather Widget**, **Window Status Overview**, **Inform my landlord** and **General heating parameters**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
 
 ## Install
 
-Download [ugso.weather-heating.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/weather-heating/ugso.weather-heating.wg). Open **Settings → Widget packages → Install local .wg / .wg.zip** and select the file. After reloading, a separate set appears with an automatically assigned color. This browser remembers its color across removal and reinstallation. The 74 built-in widgets remain available.
+Download [ugso.weather-heating.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=en). Open **Settings → Widget packages → Install local .wg / .wg.zip** and select the file. After reloading, a separate set appears with an automatically assigned color. This browser remembers its color across removal and reinstallation. The 74 built-in widgets remain available.
 
 ## Configure the chart
 

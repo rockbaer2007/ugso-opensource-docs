@@ -5,6 +5,8 @@ description: Install the external Technic widget set and connect Window – Wall
 
 # UGSo Technic
 
+Packages and helper tools are provided centrally at [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=en). This open-source page provides descriptions and instructions; downloads are provided by the package catalog.
+
 **Inspired by the [ioBroker Technic Widgets by Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** An independent implementation for Home Assistant.
 
 From **Studio 0.1.203**, you can install **UGSo Technic 1.6.0**. The package contains all seven widget types: **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date**, **Thermostat – Temperature** and **Status – List**. Install 1.6.0 through package management as an additive update to previous versions; existing widgets are preserved.
@@ -69,7 +71,7 @@ Configure popup width and height, a fixed X/Y position instead of centering, bac
 
 ## Installation
 
-Download [ugso.technic.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/technic/ugso.technic.wg). Open **Settings → Widget packages → Install local .wg / .wg.zip** and select the file. After reloading, the set appears with an automatically assigned unused color. It remains independent of built-in widgets and Weather and Heating.
+Download [ugso.technic.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=en). Open **Settings → Widget packages → Install local .wg / .wg.zip** and select the file. After reloading, the set appears with an automatically assigned unused color. It remains independent of built-in widgets and Weather and Heating.
 
 The [source and reproducible package build](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/technic) are public. The download includes `README.md` and `LICENSE.txt`, including the full MIT license and original attribution `Copyright (c) 2026 Sefina-DS`.
 
