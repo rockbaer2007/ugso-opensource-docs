@@ -5,6 +5,8 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
+New in Studio **0.1.210**: the external [Material Design set](materialdesign.md) starts with **Preview Color Schemes**, 26 palette rows and Classic/Material 3/Project default. Package 0.1.0 is prepared for testing community catalog registration.
+
 ## Package catalog and downloads
 
 Widget packages, tool packages and helper tools are provided centrally in the [UGSo package catalog at visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=en). These include Technic, Weather/Heating, the Colorpicker, and **Widget Test** and **Tools Test** for checking package installation. The **Packer for Windows and Linux** is listed under **Helper tools**. Descriptions and instructions remain on this open-source site; package files are provided through the catalog subdomain.
