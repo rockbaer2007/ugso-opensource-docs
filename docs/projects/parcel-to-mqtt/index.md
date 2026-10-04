@@ -3,12 +3,12 @@ layout: home
 
 hero:
   name: Parcel to MQTT
-  text: Paketverfolgung für Home Assistant
-  tagline: DHL, Hermes und vorbereitete Anbieterbereiche per MQTT Discovery als Paketstatus, Zähler und Paket-Slots in Home Assistant bereitstellen.
+  text: Entwicklung eingestellt
+  tagline: Parcel Tracker ist bereits deutlich weiter entwickelt. Deshalb stellen wir die Weiterentwicklung von Parcel to MQTT ein. Die bisherige Dokumentation bleibt als Archiv erhalten.
   actions:
     - theme: brand
-      text: Installation
-      link: /projects/parcel-to-mqtt/installation
+      text: Parcel Tracker ansehen
+      link: https://github.com/SoerenKaiser99/parcel_tracker
     - theme: alt
       text: GitHub
       link: https://github.com/rockbaer2007/parcel-to-mqtt
@@ -39,6 +39,12 @@ features:
     details: Benachrichtigungen werden über normale Home-Assistant-Automationen auf Basis der erzeugten Entitäten gebaut.
 ---
 
+::: warning Entwicklung eingestellt
+Parcel Tracker ist bereits deutlich weiter entwickelt. Deshalb stellen wir die Weiterentwicklung von Parcel to MQTT ein und empfehlen Interessierten einen Blick auf [Parcel Tracker von SoerenKaiser99](https://github.com/SoerenKaiser99/parcel_tracker).
+
+Quellcode und bisherige Dokumentation bleiben als Archiv erhalten. Die folgenden Funktionen und Anleitungen beschreiben den letzten Stand unseres Pakets.
+:::
+
 ## Überblick
 
 Parcel to MQTT ist eine Home-Assistant-App, die Paketverfolgung per MQTT Discovery in Home Assistant bereitstellt.
@@ -51,9 +57,9 @@ Die Umsetzung ist adaptiert von und inspiriert durch den ioBroker-Adapter [TA2k/
 Das gemeinsame Statusmodell ist inspiriert durch die MIT-lizenzierten Home-Assistant-Paketintegrationen [ha-parcel-integrations](https://github.com/ha-parcel-integrations).
 :::
 
-## Provider-Roadmap
+## Frühere Provider-Roadmap (Archiv)
 
-Die Eingabemasken des ioBroker-Adapters dienen als Referenz für die nächsten Login-Varianten:
+Die folgenden Punkte beschreiben den bisherigen Entwicklungsstand und frühere Pläne. Diese Roadmap wird nicht mehr umgesetzt:
 
 - DHL: aktiv über `dhllogin://` Browser-Login-Code plus optionale manuelle Sendungsnummern
 - Amazon: vorbereitet mit E-Mail, Passwort und optionalem OTP-Token

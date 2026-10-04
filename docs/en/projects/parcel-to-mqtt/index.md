@@ -3,12 +3,12 @@ layout: home
 
 hero:
   name: Parcel to MQTT
-  text: Parcel tracking for Home Assistant
-  tagline: Publish DHL, Hermes and prepared provider sections as parcel status, counters and parcel slots through MQTT Discovery.
+  text: Development discontinued
+  tagline: Parcel Tracker is already much further along. We are therefore discontinuing development of Parcel to MQTT. The existing documentation remains available as an archive.
   actions:
     - theme: brand
-      text: Installation
-      link: /en/projects/parcel-to-mqtt/installation
+      text: View Parcel Tracker
+      link: https://github.com/SoerenKaiser99/parcel_tracker
     - theme: alt
       text: GitHub
       link: https://github.com/rockbaer2007/parcel-to-mqtt
@@ -39,6 +39,12 @@ features:
     details: Notifications are built through normal Home Assistant automations based on the generated entities.
 ---
 
+::: warning Development discontinued
+Parcel Tracker is already much further along. We are therefore discontinuing development of Parcel to MQTT and recommend taking a look at [Parcel Tracker by SoerenKaiser99](https://github.com/SoerenKaiser99/parcel_tracker).
+
+Source code and existing documentation remain available as an archive. The features and instructions below describe the final state of our package.
+:::
+
 ## Overview
 
 Parcel to MQTT is a Home Assistant app that publishes parcel tracking data through MQTT Discovery.
@@ -51,9 +57,9 @@ This implementation is adapted from and inspired by the ioBroker adapter [TA2k/i
 The shared status model is inspired by the MIT licensed Home Assistant parcel integrations [ha-parcel-integrations](https://github.com/ha-parcel-integrations).
 :::
 
-## Provider Roadmap
+## Former Provider Roadmap (Archive)
 
-The ioBroker adapter settings are used as a reference for future provider login flows:
+The following items describe the previous development state and earlier plans. This roadmap will no longer be implemented:
 
 - DHL: active through `dhllogin://` browser login code plus optional manual tracking numbers
 - Amazon: prepared with e-mail, password and optional OTP token

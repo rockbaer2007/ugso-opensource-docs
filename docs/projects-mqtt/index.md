@@ -16,7 +16,7 @@ Enthaltene Add-ons:
 
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
-- Parcel to MQTT
+- Parcel to MQTT (Entwicklung eingestellt)
 - [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client): gezielte Home-Assistant-zu-ioBroker-Übertragung per MQTT. Statt mit dem ioBroker-HASS-Adapter pauschal alle Home-Assistant-Entitäten zu spiegeln, wählst du einzelne Geräte und Werte aus; diese erscheinen in ioBroker als übersichtlicher Gerätebaum. Steuerbare Werte wie Switches, Eingaben, Slider, Selects und Taster können über `/set` wieder zurück nach Home Assistant geschaltet oder gedrückt werden. Version 0.1.14 sendet States und Attribute zuerst in kleinen Häppchen und legt die `/set`-Rückkanäle danach an, damit ioBroker den Gerätebaum sauberer aufbaut. Der bestehende HA-Broker bleibt erhalten.
 
 - [Gemeinsames Add-on-Repository auf GitHub öffnen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
@@ -45,6 +45,8 @@ Eine Home-Assistant-App, die Heizölpreise von Esyoil und Heizöl24 per MQTT Dis
 ## Parcel to MQTT
 
 **Parcel to MQTT**
+
+**Entwicklung eingestellt:** Parcel Tracker ist bereits deutlich weiter entwickelt. Deshalb stellen wir die Weiterentwicklung unseres Pakets ein. Wir empfehlen einen Blick auf [Parcel Tracker von SoerenKaiser99](https://github.com/SoerenKaiser99/parcel_tracker). Unsere bisherige Dokumentation bleibt als Archiv erhalten.
 
 Eine Home-Assistant-App, die Paketverfolgung per MQTT Discovery als Entitäten bereitstellt. Die aktuelle Version nutzt DHL-Konto-Paketlisten, optionale DHL-Sendungsnummern und Hermes-Paketverfolgung.
 

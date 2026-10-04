@@ -16,7 +16,7 @@ Included add-ons:
 
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
-- Parcel to MQTT
+- Parcel to MQTT (development discontinued)
 - [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/mqtt_client/DOCS.en.md): selected Home Assistant to ioBroker transfer via MQTT. Instead of mirroring the full Home Assistant inventory through ioBroker's HASS adapter, you choose specific devices and values; they appear in ioBroker as a clear device tree. Controllable values such as switches, inputs, sliders, selects and buttons can use `/set` topics to switch, write or press back into Home Assistant. Version 0.1.14 publishes states and attributes first in small batches and subscribes `/set` return channels afterwards, so ioBroker can build the device tree more cleanly. The existing HA broker stays in place.
 
 - [Open the shared add-on repository on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
@@ -45,6 +45,8 @@ A Home Assistant app that publishes heating-oil prices from Esyoil and Heizöl24
 ## Parcel to MQTT
 
 **Parcel to MQTT**
+
+**Development discontinued:** Parcel Tracker is already much further along, so we are discontinuing development of our package. We recommend taking a look at [Parcel Tracker by SoerenKaiser99](https://github.com/SoerenKaiser99/parcel_tracker). Our existing documentation remains available as an archive.
 
 A Home Assistant app that publishes parcel tracking data as MQTT Discovery entities. The current version uses DHL account parcel lists, optional DHL tracking numbers and Hermes parcel tracking.
 

@@ -1,5 +1,9 @@
 # Installation
 
+::: warning Archive: development discontinued
+These instructions describe the existing package. Parcel Tracker is already much further along, so we are discontinuing development of Parcel to MQTT. See [Parcel Tracker by SoerenKaiser99](https://github.com/SoerenKaiser99/parcel_tracker) for the alternative and its installation instructions.
+:::
+
 [![Open Parcel to MQTT in Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Fparcel-to-mqtt)
 
 1. Open Home Assistant.
