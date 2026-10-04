@@ -37,6 +37,8 @@ Widget packages, tool packages and helper tools are provided centrally in the [U
 
 ## What works today
 
+Starting with Studio **0.1.220**, new pages open the **VIEW** tab directly. It contains general CSS, background, font and text, options, navigation, app bar and responsive settings. Sections can expand and collapse but have no activation checkboxes: page values are preserved on save. Checkboxes for individual options such as “Default” remain available.
+
 Starting with Studio **0.1.218**, failed HA switch commands show a red runtime alert with the entity ID and error reason. Since **0.1.219**, clicking a blocked Switch also explains the reason, such as a missing or unavailable HA state. Switch widgets control Home Assistant in runtime; editor interaction is a preview.
 
 Starting with Studio **0.1.217**, the entity dialog searches friendly names, custom and original entity names, entity IDs and device names. Multiple search words can match across entity and device metadata: **Licht Tv1**, for example, finds an entity named “Licht” on device “TV1”. Search is case-insensitive; matching device groups automatically expand while searching.

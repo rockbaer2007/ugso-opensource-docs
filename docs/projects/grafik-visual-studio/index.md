@@ -37,6 +37,8 @@ Widget-Pakete, Tool-Pakete und Zusatztools findest du zentral im [UGSo-Paketkata
 
 ## Was derzeit möglich ist
 
+Ab Studio **0.1.220** öffnen neue Seiten direkt den Reiter **ANSICHT**. Dort stehen CSS allgemein, Hintergrund, Schrift und Text, Optionen, Navigation, Anwendungsleiste und responsive Einstellungen zur Verfügung. Die Bereiche lassen sich auf- und zuklappen, haben aber keine Aktivierungscheckboxen: Seitenwerte bleiben beim Speichern erhalten. Die Checkboxen für einzelne Optionen wie „Standard“ bleiben bestehen.
+
 Ab Studio **0.1.218** erscheinen fehlgeschlagene HA-Schaltbefehle als rote Meldung in der Runtime mit Entity-ID und Fehlerursache. Ab **0.1.219** zeigt auch ein Klick auf einen gesperrten Switch den Grund an, beispielsweise einen fehlenden oder nicht verfügbaren HA-Zustand. Schaltbare Widgets bedienen Home Assistant in der Runtime; im Editor dient die Bedienung der Vorschau.
 
 Ab Studio **0.1.217** sucht der Entitäten-Dialog nach Anzeigenamen, benutzerdefinierten und ursprünglichen Entitätsnamen, Entity-IDs sowie Gerätenamen. Mehrere Suchwörter dürfen über Entität und Gerät verteilt sein: **Licht Tv1** findet beispielsweise eine Entität namens „Licht“ am Gerät „TV1“. Die Suche ignoriert Groß-/Kleinschreibung; passende Gerätegruppen werden während der Suche automatisch aufgeklappt.
