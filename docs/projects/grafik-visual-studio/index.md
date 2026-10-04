@@ -9,7 +9,7 @@ Neu ab Studio **0.1.210**: Das externe [Material-Design-Set](materialdesign.md) 
 
 ## Paketkatalog und Downloads
 
-Mit Katalog-Webseite **0.1.8** ist die benötigte Studio-Mindestversion verpflichtend. Die Registrierung fragt nach neuen Studio-Funktionen (Ja/Nein/Unsicher); bei Ja oder Unsicher ist eine Beschreibung erforderlich. Ein optionaler Paket-Upload erkennt die verwendeten Renderer/Aktionen; ohne Datei erfolgt die Analyse in der Administration. Unbekannte Funktionen erhalten „Studio-Anpassung erforderlich“ und bleiben bis zur Umsetzung und erneuten Prüfung außerhalb des öffentlichen Katalogs. Das Webseiten-Update muss vom Betreiber hochgeladen werden.
+Mit Katalog-Webseite **0.1.9** fragt die Registrierung nach neuen Studio-Funktionen (Ja/Nein/Unsicher); bei Ja oder Unsicher ist eine Beschreibung erforderlich und die Mindestversion kann als „Noch unbekannt“ angegeben werden. Bei Nein ist eine konkrete Mindestversion Pflicht. Die Administration legt die Mindestversion bei der Prüfung und nach einer erforderlichen Studio-Anpassung fest; vor der Freigabe muss eine konkrete Version eingetragen sein. Ein optionaler Paket-Upload erkennt die verwendeten Renderer/Aktionen; ohne Datei erfolgt die Analyse in der Administration. Unbekannte Funktionen erhalten „Studio-Anpassung erforderlich“ und bleiben bis zur Umsetzung und erneuten Prüfung außerhalb des öffentlichen Katalogs. Das Webseiten-Update muss vom Betreiber hochgeladen werden.
 
 Ab Studio **0.1.212** kennzeichnet ein rotes `mdi:alert`-Symbol die GitHub-Auswahl und den Installationshinweis bei Widget- und Tool-Paketen. Vor der Installation muss das Installationsrisiko bestätigt werden.
 
