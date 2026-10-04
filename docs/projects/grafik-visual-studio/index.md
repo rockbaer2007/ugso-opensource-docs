@@ -9,6 +9,8 @@ Neu ab Studio **0.1.210**: Das externe [Material-Design-Set](materialdesign.md) 
 
 ## Paketkatalog und Downloads
 
+Ab Katalog-Webseite **0.1.10** akzeptiert die Widget-Registrierung ausschließlich `.wg`, die Tool-Registrierung ausschließlich `.tp`. Die Dateiauswahl zeigt nur die passende Endung. Der Server prüft die Endung von Upload-Dateinamen und Download-Link-Pfaden sowie weiterhin Paketinhalt und Manifest-Typ. Die Upload-Prüfung gilt auch in der Administration.
+
 Mit Katalog-Webseite **0.1.9** fragt die Registrierung nach neuen Studio-Funktionen (Ja/Nein/Unsicher); bei Ja oder Unsicher ist eine Beschreibung erforderlich und die Mindestversion kann als „Noch unbekannt“ angegeben werden. Bei Nein ist eine konkrete Mindestversion Pflicht. Die Administration legt die Mindestversion bei der Prüfung und nach einer erforderlichen Studio-Anpassung fest; vor der Freigabe muss eine konkrete Version eingetragen sein. Ein optionaler Paket-Upload erkennt die verwendeten Renderer/Aktionen; ohne Datei erfolgt die Analyse in der Administration. Unbekannte Funktionen erhalten „Studio-Anpassung erforderlich“ und bleiben bis zur Umsetzung und erneuten Prüfung außerhalb des öffentlichen Katalogs. Das Webseiten-Update muss vom Betreiber hochgeladen werden.
 
 Ab Studio **0.1.212** kennzeichnet ein rotes `mdi:alert`-Symbol die GitHub-Auswahl und den Installationshinweis bei Widget- und Tool-Paketen. Vor der Installation muss das Installationsrisiko bestätigt werden.
