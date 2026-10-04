@@ -5,6 +5,10 @@ description: External Material Design widget package for Grafik Visual Studio.
 
 # Material Design
 
+## Original preview icons (package 1.0.1, Studio 0.1.216 or later)
+
+All 49 widgets now use the original MDI icon mapping as local SVGs: blue symbols on rounded white tiles. No icon fonts or external image requests are required. Pictogrammers/Apache-2.0 notices are included alongside the MIT license. Studio 0.1.216 permits icon-only updates while preserving defaults, property groups and renderer contracts. The registered 1.0.0 version remains unchanged; register package 1.0.1 with minimum Studio version 0.1.216 for the new symbols. No additional catalog website update is needed.
+
 ## Complete widget catalog (package 1.0.0, Studio 0.1.215 or later)
 
 The external package now contains **49 widget entries**. Besides palette preview and dialogs, it includes every button/icon-button variant, Input, Select, Autocomplete, Checkbox, Switch, Slider, Slider Round, Value, HTML Card, Icon, Installed Version, linear/circular progress, List, Icon List, Table, Alerts, four charts, Calendar, Top App Bar, Grid/Masonry Views and both Advanced View variants.

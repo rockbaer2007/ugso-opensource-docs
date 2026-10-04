@@ -5,6 +5,10 @@ description: Externes Material-Design-Widget-Set für Grafik Visual Studio.
 
 # Material Design
 
+## Originalsymbole (Paket 1.0.1, Studio ab 0.1.216)
+
+Alle 49 Widgets verwenden jetzt die ursprüngliche MDI-Symbolzuordnung als lokale SVGs: blau auf einer weißen Kachel mit abgerundeten Ecken. Es werden keine Icon-Fonts oder externen Bildanfragen benötigt. Das Paket enthält die Pictogrammers-/Apache-2.0-Lizenzhinweise zusätzlich zur MIT-Lizenz. Studio 0.1.216 erlaubt reine Icon-Updates; Standardwerte, Eigenschaftsgruppen und Renderer bleiben geschützt. Bereits registrierte Version 1.0.0 bleibt unverändert; für die neuen Symbole Paket 1.0.1 mit Mindestversion 0.1.216 registrieren. Die Katalog-Webseite benötigt kein weiteres Update.
+
 ## Vollständiger Widget-Katalog (Paket 1.0.0, Studio ab 0.1.215)
 
 Das externe Paket enthält **49 Widget-Einträge**. Neben Farbvorschau und Dialogen stehen alle Button-/Icon-Button-Varianten, Input, Select, Autocomplete, Checkbox, Switch, Slider, Slider Round, Value, HTML Card, Icon, Installed Version, linearer/runder Fortschritt, List, Icon List, Table, Alerts, vier Diagramme, Calendar, Top App Bar, Grid/Masonry Views und beide Advanced-View-Varianten bereit.
