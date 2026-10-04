@@ -9,6 +9,8 @@ New in Studio **0.1.210**: the external [Material Design set](materialdesign.md)
 
 ## Package catalog and downloads
 
+Starting with catalog website **0.1.11**, the original package uploaded during registration is stored privately for admin review. Analysis and approval reuse this file without another upload; a replacement file can optionally be uploaded. Administration can download the original. SHA-256 detects changes. The private copy is removed after approval, rejection, deletion or the 90-day retention period. Older submissions require one new upload because previous versions only analyzed the file.
+
 Starting with catalog website **0.1.10**, widget registration only accepts `.wg` and tool registration only accepts `.tp`. The file picker filters by the appropriate extension. The server checks upload filenames and download URL paths, while continuing to validate package contents and manifest type. Upload validation also applies in Administration.
 
 Catalog website **0.1.9** asks whether a package needs new Studio features (Yes/No/Unsure); Yes or Unsure requires a description and allows the minimum version to be marked “Not yet known”. No requires a specific minimum version. Administration determines the minimum version during review and after any required Studio changes; a specific version must be entered before approval. An optional package upload identifies its renderers/actions; without a file, analysis occurs in Administration. Unknown features receive “Studio update required” and remain outside the public catalog until implemented and reviewed again. The operator must upload the website update.
