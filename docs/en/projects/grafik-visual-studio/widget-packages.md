@@ -5,6 +5,10 @@ description: Create and install local widget packages for HA Grafik Visual Studi
 
 # Widget package interface
 
+Since **0.1.205**, catalog packages and locally installed widget packages appear as **two cards side by side**, each with an icon. The installed package icon is used when available; otherwise a widget icon is shown. Refresh and removal actions remain available for installed packages.
+
+Since **0.1.206**, the more compact **Local / Catalog / GitHub** selector stays visible at the top while scrolling. The entire tab uses **one shared scroll area**; catalog and installed package lists no longer have nested scroll areas.
+
 From Studio **0.1.204**, **Settings → Widget packages** offers **Local / Catalog / GitHub** sources. The [UGSo catalog](https://visualstudio.ugso-software.de/?kind=widget&lang=en) shows descriptions, licenses, minimum Studio versions and installed versions. Test packages carry an orange notice. GitHub supports direct public `.wg` file links, including blob, raw and release links; a repository homepage is not sufficient. Installation requires explicit risk confirmation. Catalog downloads verify SHA-256 and the selected package ID/version before the normal package validation. Settings remain open after installation, while the palette and package list refresh. Standalone helper tools such as the Packer are downloaded through the catalog link.
 
 From Studio 0.1.203, API 0.2 supports `technic-status-list`: up to ten read-only HA rows using the bindings and numeric/AND/OR options from `technic-room`. `valueOffset` and `containerPaddingLeft` control columns and padding. Typography inherits CSS; overflowing rows scroll. The package remains declarative. See [Technic](technic.md#status-list).

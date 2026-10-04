@@ -5,6 +5,10 @@ description: Lokale Widget-Pakete für HA Grafik Visual Studio erstellen und ins
 
 # Widget-Paket-Schnittstelle
 
+Seit **0.1.205** erscheinen Katalogpakete und lokal installierte Widget-Pakete als **zwei Karten nebeneinander**, jeweils mit einem Icon. Wenn verfügbar, wird das Icon des installierten Pakets verwendet; sonst erscheint ein Widget-Icon. Aktualisieren und Entfernen bleiben bei den installierten Paketen verfügbar.
+
+Seit **0.1.206** bleibt die flachere Auswahl **Lokal / Katalog / GitHub** beim Scrollen oben sichtbar. Der gesamte Inhalt des Reiters nutzt **eine gemeinsame Scrollfläche**; Katalog und installierte Pakete haben keine verschachtelten Scrollbereiche.
+
 Ab Studio **0.1.204** bietet **Einstellungen → Widget-Pakete** die Quellen **Lokal / Katalog / GitHub**. Der [UGSo-Katalog](https://visualstudio.ugso-software.de/?kind=widget&lang=de) zeigt Beschreibung, Lizenz, benötigte Studio-Version und installierte Version. Testpakete haben einen orangefarbenen Hinweis. GitHub unterstützt direkte öffentliche `.wg`-Dateilinks einschließlich Blob-, Raw- und Release-Links; ein Repository-Startlink genügt nicht. Vor der Installation muss das Risiko ausdrücklich bestätigt werden. Katalogdownloads werden mit SHA-256 sowie der ausgewählten Paket-ID und Version geprüft; anschließend gilt die normale Paketprüfung. Einstellungen bleiben nach der Installation geöffnet, und Palette sowie Paketliste werden aktualisiert. Eigenständige Zusatztools wie der Packer werden über den Kataloglink heruntergeladen.
 
 Ab Studio 0.1.203 unterstützt API 0.2 `technic-status-list`: bis zu zehn lesende HA-Zeilen mit den Bindungen und Zahlen-/UND-/ODER-Optionen von `technic-room`. `valueOffset` und `containerPaddingLeft` steuern die Spalten und den Innenabstand. Die Schrift wird aus CSS geerbt; überlaufende Zeilen scrollen. Das Paket bleibt deklarativ. Siehe [Technic](technic.md#status-list).

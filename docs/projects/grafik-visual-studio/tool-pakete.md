@@ -5,6 +5,10 @@ description: Lokale Editor-Tools für HA Grafik Visual Studio erstellen und inst
 
 # Tool-Paket-Schnittstelle 0.1
 
+Seit **0.1.205** erscheinen Katalogpakete und lokal installierte Tool-Pakete als **zwei Karten nebeneinander**, jeweils mit einem Icon. Wenn verfügbar, wird das Icon des installierten Pakets verwendet; sonst erscheint ein Toolbox-Icon. Aktualisieren, Entfernen und die vorhandenen Tool-Aktionen bleiben verfügbar.
+
+Seit **0.1.206** bleibt die flachere Auswahl **Lokal / Katalog / GitHub** beim Scrollen oben sichtbar. Der gesamte Inhalt des Reiters nutzt **eine gemeinsame Scrollfläche**; Katalog und installierte Pakete haben keine verschachtelten Scrollbereiche.
+
 Ab Studio **0.1.204** bietet **Einstellungen → Tools** die Quellen **Lokal / Katalog / GitHub**. Der Katalog zeigt Lizenz, Beschreibung, benötigte Studio-Version und Installationsstatus, einschließlich Colorpicker und Tools Test. GitHub benötigt einen direkten öffentlichen `.tp`-Dateilink. Die Risikobestätigung ist vor der Installation erforderlich; Katalogdownloads werden mit SHA-256 und ausgewählter Paket-ID/Version geprüft. Einstellungen bleiben geöffnet, Paketliste und Werkzeugleiste aktualisieren sich sofort. Eine ausdrücklich gewählte neuere Tool-Version kann die bestehende ersetzen; gleiche oder ältere Versionen werden abgelehnt. Projekte und Colorpicker-Favoriten bleiben erhalten. Der eigenständige Packer steht unter **Zusatztools** auf der Katalog-Webseite bereit.
 
 Pakete und Zusatztools werden zentral auf [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=de) angeboten. Diese Open-Source-Seite enthält Beschreibung und Anleitung; der Download erfolgt über den Paketkatalog.

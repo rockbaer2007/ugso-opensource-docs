@@ -5,6 +5,10 @@ description: Create and install local editor tools for HA Grafik Visual Studio.
 
 # Tool package interface 0.1
 
+Since **0.1.205**, catalog packages and locally installed tool packages appear as **two cards side by side**, each with an icon. The installed package icon is used when available; otherwise a toolbox icon is shown. Refresh, removal and existing tool actions remain available.
+
+Since **0.1.206**, the more compact **Local / Catalog / GitHub** selector stays visible at the top while scrolling. The entire tab uses **one shared scroll area**; catalog and installed package lists no longer have nested scroll areas.
+
 From Studio **0.1.204**, **Settings → Tools** offers **Local / Catalog / GitHub** sources. The catalog shows licenses, descriptions, minimum Studio versions and installation status, including Colorpicker and Tools Test. GitHub requires a direct public `.tp` file link. Risk confirmation is required before installation; catalog downloads verify SHA-256 and the selected package ID/version. Settings remain open, and the package list and toolbar refresh immediately. An explicitly selected newer tool version can replace the existing version; equal or older versions are rejected. Projects and Colorpicker favorites are retained. The standalone Packer is available under **Helper tools** on the catalog website.
 
 Packages and helper tools are provided centrally at [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=en). This open-source page provides descriptions and instructions; downloads are provided by the package catalog.
