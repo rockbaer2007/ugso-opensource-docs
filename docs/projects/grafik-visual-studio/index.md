@@ -5,6 +5,8 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 # HA Grafik Visual Studio
 
+Neu ab Studio **0.1.215**: Das externe [Material-Design-Set 1.0.0](materialdesign.md) enthält **49 Widget-Einträge**, Autocomplete, Eingaben, Buttons, Anzeigen, Listen, Diagramme, Kalender und Seitenlayouts. Ein Vergleichsprojekt bereitet die Prüfung Widget für Widget vor.
+
 Neu ab Studio **0.1.214**: Material-Design-Paket **0.3.0** ergänzt [Dialog iFrame](materialdesign.md) als drittes Widget mit Quelle, Sandbox, Scrolloptionen und kompaktem/erweitertem Dialoglayout.
 
 Neu ab Studio **0.1.210**: Das externe [Material-Design-Set](materialdesign.md) startet mit **Preview Color Schemes**, 26 Farbreihen und Klassisch/Material 3/Projektstandard. Paket 0.1.0 ist für den Registrierungstest im Community-Katalog vorbereitet.

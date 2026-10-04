@@ -5,6 +5,18 @@ description: External Material Design widget package for Grafik Visual Studio.
 
 # Material Design
 
+## Complete widget catalog (package 1.0.0, Studio 0.1.215 or later)
+
+The external package now contains **49 widget entries**. Besides palette preview and dialogs, it includes every button/icon-button variant, Input, Select, Autocomplete, Checkbox, Switch, Slider, Slider Round, Value, HTML Card, Icon, Installed Version, linear/circular progress, List, Icon List, Table, Alerts, four charts, Calendar, Top App Bar, Grid/Masonry Views and both Advanced View variants.
+
+**Autocomplete:** Choose editor entries, a JSON list, semicolon-separated values or Home Assistant entity options. Write mode accepts free text; select mode rejects unknown entries. Typing filters the menu; arrow keys, Enter and Escape work. Advanced options add input layout, prefix/suffix, helper text, counter, icons and menu colors/fonts. “Refill fields from entity” copies the name, unit, options and available slider limits.
+
+**Data and actions:** Toggles use switch/input_boolean, numeric/text writes use input_number/input_text and selection uses select/input_select. Sensors and attributes stay read-only. Values/actions without an entity work locally for previews. Lists support editor/JSON rows; tables sort from their headers. Alerts acknowledge a local queue, writable JSON entity or separate acknowledgment entity. JSON Chart accepts `axisLabels/graphs`, `labels/datasets` or point lists. History reads HA Recorder for up to ten entities and 1–168 hours. Calendar and page layouts use existing Studio features; recursive page chains are blocked.
+
+An [importable comparison project](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/comparison/materialdesign-widgetvergleich.json) provides nine widget pages plus a reference page without real HA entities. Exact visual parity and detailed options are reviewed widget by widget afterwards. ioBroker theme IDs, adapter states and bindings are not imported automatically; multiple Y axes, stacked bars, ioBroker timed locks and HTML list text are currently absent. HTML cards isolate markup in a sandbox.
+
+Register package **1.0.0**, minimum Studio **0.1.215**, MIT license. The website requires **0.1.13** to recognize `material-widget` and packages with up to 64 widgets, 40 property groups and a 500 KB manifest. Previously published versions stay immutable. The first three definitions remain compatible with additive updates from 0.3.0.
+
 ## Dialog iFrame (package 0.3.0, Studio 0.1.214 or later)
 
 The third widget opens an HTTP/HTTPS source or relative path in a dialog. **General**, **iFrame settings** and **Dialog layout** remain visible in compact mode. Advanced options add button, header and footer layouts; hiding them preserves existing values.

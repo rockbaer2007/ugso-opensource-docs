@@ -5,6 +5,18 @@ description: Externes Material-Design-Widget-Set für Grafik Visual Studio.
 
 # Material Design
 
+## Vollständiger Widget-Katalog (Paket 1.0.0, Studio ab 0.1.215)
+
+Das externe Paket enthält **49 Widget-Einträge**. Neben Farbvorschau und Dialogen stehen alle Button-/Icon-Button-Varianten, Input, Select, Autocomplete, Checkbox, Switch, Slider, Slider Round, Value, HTML Card, Icon, Installed Version, linearer/runder Fortschritt, List, Icon List, Table, Alerts, vier Diagramme, Calendar, Top App Bar, Grid/Masonry Views und beide Advanced-View-Varianten bereit.
+
+**Autocomplete:** Menüpunkte im Editor, JSON-Liste, Semikolon-Werteliste oder Optionen der Home-Assistant-Entität wählen. Schreiben erlaubt freie Eingaben; Auswählen verwirft unbekannte Texte. Die Liste filtert beim Tippen und unterstützt Pfeiltasten, Enter und Escape. Erweiterte Optionen ergänzen Eingabelayout, Anhänge, Untertext, Zähler, Symbole und Menüfarben/-schriften. „Felder neu aus der Entität befüllen“ übernimmt Namen, Einheit, Optionen und verfügbare Reglergrenzen.
+
+**Daten und Aktionen:** Schaltaktionen nutzen switch/input_boolean, Zahlen und Texte input_number/input_text, Auswahl select/input_select. Sensoren und Attribute bleiben Anzeigen. Ohne Entität dienen Werte und Aktionen der lokalen Vorschau. Listen können Editor- oder JSON-Zeilen anzeigen; Tabellen lassen sich über ihre Überschriften sortieren. Alerts quittieren eine lokale Warteschlange, eine schreibbare JSON-Entität oder eine getrennte Quittierungs-Entität. JSON Chart liest `axisLabels/graphs`, `labels/datasets` oder Punktlisten. Der Verlauf liest HA Recorder für bis zu zehn Entitäten und 1–168 Stunden. Kalender und Seitenlayouts verwenden die vorhandenen Studio-Funktionen; rekursive Seitenketten werden verhindert.
+
+Für den gemeinsamen Vergleich steht ein [importierbares Vergleichsprojekt](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/comparison/materialdesign-widgetvergleich.json) mit neun Widget-Seiten und einer Referenzansicht bereit. Es enthält keine echten HA-Entitäten. Die genaue Originaloptik und Detailoptionen werden anschließend Widget für Widget verglichen. ioBroker-Theme-IDs, Adapter-Datenpunkte und Binding-Ausdrücke werden nicht automatisch importiert; mehrere Y-Achsen, gestapelte Balken, ioBroker-Timer-Sperren und HTML in Listentexten fehlen derzeit. HTML-Karten zeigen HTML isoliert in einer Sandbox.
+
+Zur erneuten Registrierung Paket **1.0.0**, Mindestversion **0.1.215** und MIT angeben. Die Webseite benötigt **0.1.13**, das den neuen `material-widget`-Renderer sowie Pakete mit bis zu 64 Widgets/40 Eigenschaftsgruppen und 500 KB Manifest erkennt. Bereits veröffentlichte Versionen bleiben unverändert. Die ersten drei Widget-Definitionen bleiben kompatibel für das Update von 0.3.0.
+
 ## Dialog iFrame (Paket 0.3.0, Studio ab 0.1.214)
 
 Das dritte Widget öffnet eine HTTP-/HTTPS-Quelle oder einen relativen Pfad im Dialog. **Allgemein**, **iFrame Einstellungen** und **Layout Dialog** bleiben im kompakten Modus sichtbar. Erweiterte Optionen zeigen zusätzlich Button-, Kopfzeilen- und Fußzeilenlayout; vorhandene Werte bleiben beim Ausblenden erhalten.
