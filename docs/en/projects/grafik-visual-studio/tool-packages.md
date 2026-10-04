@@ -5,6 +5,8 @@ description: Create and install local editor tools for HA Grafik Visual Studio.
 
 # Tool package interface 0.1
 
+From **0.1.207**, opening this tab automatically reloads the catalog and current installation status. Removing a package listed in the catalog makes it installable again, even if it was originally installed locally. Newly approved packages appear the next time the tab opens.
+
 Since **0.1.205**, catalog packages and locally installed tool packages appear as **two cards side by side**, each with an icon. The installed package icon is used when available; otherwise a toolbox icon is shown. Refresh, removal and existing tool actions remain available.
 
 Since **0.1.206**, the more compact **Local / Catalog / GitHub** selector stays visible at the top while scrolling. The entire tab uses **one shared scroll area**; catalog and installed package lists no longer have nested scroll areas.

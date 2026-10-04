@@ -5,6 +5,8 @@ description: Lokale Editor-Tools für HA Grafik Visual Studio erstellen und inst
 
 # Tool-Paket-Schnittstelle 0.1
 
+Ab **0.1.207** öffnet der Reiter automatisch den frisch geladenen Katalog mit dem aktuellen Installationsstatus. Nach dem Entfernen erscheint ein im Katalog veröffentlichtes Paket wieder als installierbar, auch wenn es zuvor lokal installiert wurde. Neue freigegebene Pakete erscheinen beim nächsten Öffnen.
+
 Seit **0.1.205** erscheinen Katalogpakete und lokal installierte Tool-Pakete als **zwei Karten nebeneinander**, jeweils mit einem Icon. Wenn verfügbar, wird das Icon des installierten Pakets verwendet; sonst erscheint ein Toolbox-Icon. Aktualisieren, Entfernen und die vorhandenen Tool-Aktionen bleiben verfügbar.
 
 Seit **0.1.206** bleibt die flachere Auswahl **Lokal / Katalog / GitHub** beim Scrollen oben sichtbar. Der gesamte Inhalt des Reiters nutzt **eine gemeinsame Scrollfläche**; Katalog und installierte Pakete haben keine verschachtelten Scrollbereiche.
