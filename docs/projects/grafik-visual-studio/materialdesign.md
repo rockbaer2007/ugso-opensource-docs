@@ -5,6 +5,16 @@ description: Externes Material-Design-Widget-Set für Grafik Visual Studio.
 
 # Material Design
 
+## Dialog (Paket 0.2.0, Studio ab 0.1.211)
+
+Das zweite Widget öffnet eine andere lokale Studio-Seite im Dialog. Unter **Allgemein → Ansicht** die Zielseite auswählen. Im Editor dient der Klick zur Auswahl; in der Runtime öffnet er das Fenster. Die aktuelle Seite und rekursive Einbettungen sind gesperrt.
+
+Ohne **Erweiterte Optionen anzeigen** sind nur Allgemein und Layout Dialog sichtbar. Mit dieser Option erscheinen Button Layout, Layout Kopfzeile und Layout der Schaltflächen in der Dialogfußzeile. Ausblenden erhält die eingetragenen Werte. Breite, Höhe, Randabstand, Farben, Überlagerung und die Vollbild-Schwelle lassen sich einstellen. Schließen funktioniert über den Button, Escape und wahlweise Außenklick.
+
+Alternativ öffnet eine boolesche Entität das Fenster. Beim Schließen wird `switch` oder `input_boolean` ausgeschaltet. Andere Entitäten bleiben unverändert; nach lokalem Schließen öffnet erst ein neuer Aus/Ein-Wechsel. Vibration und Klicksound hängen von Browser und Gerät ab. Symbole verwenden Text/Unicode, ohne ioBroker-Bildkatalog oder Theme-Objekte zu importieren.
+
+Für Paket 0.2.0 muss die Katalog-Webseite den Renderer `material-dialog` akzeptieren. Das lokale Update ersetzt ausschließlich `src/package.php`; anschließend Version 0.2.0 mit Mindestversion 0.1.211 über die Registrierungsmaske einreichen und prüfen/freigeben.
+
 Das externe [UGSo Material Design](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign) startet mit **Preview Color Schemes**. Paket **0.1.0** benötigt Studio **0.1.210** oder neuer und steht unter MIT. Es ist inspiriert von [ioBroker VIS2 Material Design](https://github.com/typhosj/ioBroker.vis2-materialdesign); Lizenz und Copyright von typhosj und Scrounger sind enthalten.
 
 Die Vorschau zeigt alle **26 Farbreihen**. Klassisch verwendet eine weiße Oberfläche; Material 3 unterstützt helle und dunkle Oberflächen. Die Farbfelder bleiben in allen Stilen unverändert. Überschrift und Widgetgröße lassen sich einstellen; weitere Reihen und breite Paletten sind per Scrollen erreichbar.
