@@ -56,6 +56,24 @@ The [widget reference](./widgets) now explains the VIS2-inspired value lists, Bo
 
 **Dashboard in widget** under Special embeds an HA dashboard up to 800 × 640 pixels. **View in widget** continues to embed Studio pages. [Data flow](./datenfluss) provides Value connection, Value converter and Value calculation; [LineBox Math](./svg-linebox-math) supports four calculations and configurable presentation.
 
+## Planned extensions
+
+Grafik Visual Studio is intended to support creating, distributing and independently displaying visualizations. The following items are development goals. They do not describe fully available features yet; their scope and order may change based on testing and feedback. The current feature set is listed under **What works today**.
+
+- **Complete project export and import:** Back up and transfer projects, including required images, settings and package information, and restore them on another installation. The planned project package export extends the existing JSON export of individual widgets.
+- **Standalone runtime on a separate device:** Run finished visualizations independently of the editor, for example on a Raspberry Pi used as a wall display or control panel. The Home Assistant connection should be configurable. The existing runtime view provides the foundation; a standalone runtime package for separate devices is a further goal.
+- **Companion app for connecting installations:** An additional application should simplify setup and connections between Studio, the runtime and Home Assistant. Its exact scope is still to be defined.
+- **Extended Packer with GitHub features:** Create widget and tool packages locally, with optional creation of a GitHub repository and publishing of package versions. Local packaging should remain available without GitHub. See [Package packer](./packer) for information about the existing tool.
+- **Direct package registration from the Packer:** Submit packages to the [community catalog](https://visualstudio.ugso-software.de/?lang=en), using the same registration process and information about licenses, authors, privacy and Studio compatibility as the website. Public catalog entries will still require review.
+
+### Information to document alongside these features
+
+- **Portability:** Which resources an export includes, which extension packages are required on the destination, and which connections need to be configured there again.
+- **Credentials:** How Home Assistant tokens and GitHub credentials are handled. Normal project exports should not contain unencrypted secrets.
+- **Runtime requirements:** Supported devices, setup, network connections and behavior when a connection is lost.
+- **Package maintenance and compatibility:** Versioning, updates and compatibility between Studio, the runtime and extension packages.
+- **Getting involved:** Opportunities for testers and developers, plus ways to report problems and suggest improvements. Problems can be reported through [GitHub Issues](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/issues). Readers arriving from a forum post can also contact the author through that forum's chat feature; experience with ioBroker VIS/VIS2 is welcome.
+
 ## Planned: Calendar JSON integration
 
 A dedicated Home Assistant integration is planned to expose HA calendars as JSON event lists for calendar widgets and other consumers. The sensor state will contain the event count; the full list will be stored in the `events` attribute. Date range and refresh interval should be configurable. Event Calendar already supports `calendar.*` directly; the reusable integration has not been implemented yet.

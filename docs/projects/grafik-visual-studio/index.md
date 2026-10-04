@@ -58,6 +58,24 @@ Die [Widget-Übersicht](./widgets) erklärt jetzt die VIS2-inspirierten Wertelis
 
 **Dashboard in widget** unter Spezial bettet ein HA-Dashboard bis 800 × 640 Pixel ein. **View in widget** bleibt für Studio-Seiten zuständig. Unter [Datenfluss](./datenfluss) stehen Wert-Verbindung, Wert-Konverter und Wert-Berechnung bereit; [LineBox Math](./svg-linebox-math) bietet vier Rechnungen und eine einstellbare Darstellung.
 
+## Geplante Erweiterungen
+
+Grafik Visual Studio soll künftig nicht nur zum Erstellen, sondern auch zum Verteilen und unabhängigen Anzeigen von Visualisierungen dienen. Die folgenden Punkte sind Entwicklungsziele. Sie beschreiben noch keine vollständig verfügbaren Funktionen; Umfang und Reihenfolge können sich durch Testergebnisse und Rückmeldungen ändern. Der aktuelle Funktionsumfang steht unter **Was derzeit möglich ist**.
+
+- **Export und Import vollständiger Projekte:** Projekte einschließlich benötigter Bilder, Einstellungen und Paketinformationen sichern, übertragen und auf einer anderen Installation wiederherstellen. Der geplante Projektpaket-Export ergänzt den vorhandenen JSON-Export einzelner Widgets.
+- **Separate Runtime auf einem eigenen Gerät:** Fertige Visualisierungen unabhängig vom Editor betreiben, beispielsweise auf einem Raspberry Pi als Wanddisplay oder Bedienpanel. Die Verbindung zu Home Assistant soll konfigurierbar sein. Die vorhandene Runtime-Ansicht bildet die Grundlage; ein eigenständiges Runtime-Paket für separate Geräte ist ein weiteres Ziel.
+- **Koppel-App:** Eine ergänzende Anwendung soll die Einrichtung und Verbindung zwischen Studio, Runtime und Home Assistant erleichtern. Der genaue Funktionsumfang wird noch festgelegt.
+- **Erweiterter Packer mit GitHub-Funktionen:** Widget- und Tool-Pakete lokal erstellen und optional ein GitHub-Repository anlegen sowie Paketversionen dort veröffentlichen. Lokales Packen soll weiterhin ohne GitHub möglich sein. Weitere Informationen zum vorhandenen Werkzeug stehen unter [Packer für Pakete](./packer).
+- **Direkte Paketregistrierung aus dem Packer:** Pakete beim [Community-Katalog](https://visualstudio.ugso-software.de/?lang=de) einreichen, mit derselben Registrierung und denselben Angaben zu Lizenz, Autor, Datenschutz und Studio-Kompatibilität wie auf der Webseite. Die Aufnahme in den öffentlichen Katalog erfolgt weiterhin nach Prüfung.
+
+### Was dazu dokumentiert werden soll
+
+- **Übertragbarkeit:** Welche Ressourcen ein Export enthält, welche Erweiterungspakete am Ziel benötigt werden und welche Verbindungen dort neu eingerichtet werden müssen.
+- **Zugangsdaten:** Wie Home-Assistant-Tokens und GitHub-Zugangsdaten behandelt werden. Ein normaler Projektexport soll keine unverschlüsselten Geheimnisse enthalten.
+- **Runtime-Voraussetzungen:** Unterstützte Geräte, Einrichtung, Netzwerkverbindung und Verhalten bei einem Verbindungsabbruch.
+- **Paketpflege und Kompatibilität:** Versionierung, Updates und das Zusammenspiel zwischen Studio, Runtime und Erweiterungspaketen.
+- **Mitmachen:** Gesuchte Tester und Entwickler sowie Wege für Fehlerberichte und Vorschläge. Probleme können über die [GitHub-Issues](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/issues) gemeldet werden. Wer über einen Forenbeitrag zum Projekt kommt, kann den Autor auch über die Chatfunktion dieses Forums kontaktieren; Erfahrung mit ioBroker VIS/VIS2 ist willkommen.
+
 ## Vorgemerkt: Kalender-JSON-Integration
 
 Geplant ist eine eigene Home-Assistant-Integration, die HA-Kalender für Kalender-Widgets und andere Verbraucher als JSON-Terminlisten bereitstellt. Die Terminanzahl soll der Sensorzustand sein; die vollständige Liste liegt im Attribut `events`. Zeitraum und Aktualisierung sollen einstellbar sein. Die direkte `calendar.*`-Anbindung des Terminkalenders ist bereits vorhanden; die wiederverwendbare Integration ist noch nicht implementiert.
