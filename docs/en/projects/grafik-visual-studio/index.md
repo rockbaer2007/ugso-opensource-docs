@@ -15,6 +15,8 @@ Catalog website **0.1.9** asks whether a package needs new Studio features (Yes/
 
 Starting with Studio **0.1.212**, a red `mdi:alert` icon marks the GitHub source and installation notice for widget and tool packages. Installation requires accepting the installation risk.
 
+Starting with Studio **0.1.213**, available package updates have a green card border. New compatible packages highlight only the **Install** button in blue. The highlight disappears after successful installation or update.
+
 Studio detects newer approved package versions when opening package settings or choosing **Refresh catalog**, then offers **Update**. Package IDs must match, including packages previously installed locally or from GitHub. Updates are installed deliberately. Arbitrary GitHub repositories are not monitored automatically.
 
 Widget packages, tool packages and helper tools are provided centrally in the [UGSo package catalog at visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=en). These include Technic, Weather/Heating, the Colorpicker, and **Widget Test** and **Tools Test** for checking package installation. The **Packer for Windows and Linux** is listed under **Helper tools**. Descriptions and instructions remain on this open-source site; package files are provided through the catalog subdomain.

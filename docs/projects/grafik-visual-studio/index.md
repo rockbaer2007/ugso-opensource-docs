@@ -15,6 +15,8 @@ Mit Katalog-Webseite **0.1.9** fragt die Registrierung nach neuen Studio-Funktio
 
 Ab Studio **0.1.212** kennzeichnet ein rotes `mdi:alert`-Symbol die GitHub-Auswahl und den Installationshinweis bei Widget- und Tool-Paketen. Vor der Installation muss das Installationsrisiko bestätigt werden.
 
+Ab Studio **0.1.213** erhalten verfügbare Paketupdates einen grünen Kartenrahmen. Bei neuen, kompatiblen Paketen wird nur der **Installieren**-Button blau hervorgehoben. Nach erfolgreicher Installation oder Aktualisierung entfällt die Markierung.
+
 Studio erkennt neue freigegebene Paketversionen beim Öffnen der Paketeinstellungen oder über **Katalog aktualisieren** und bietet **Aktualisieren** an. Dafür müssen die Paket-IDs übereinstimmen; das gilt auch für vorher lokal oder über GitHub installierte Pakete. Updates werden bewusst installiert. Beliebige GitHub-Repositories werden nicht automatisch überwacht.
 
 Widget-Pakete, Tool-Pakete und Zusatztools findest du zentral im [UGSo-Paketkatalog auf visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=de). Dazu gehören Technic, Wetter/Heizung, der Colorpicker sowie **Widget Test** und **Tools Test** für die Prüfung der Paketinstallation. Der **Packer für Windows und Linux** steht dort unter **Zusatztools** bereit. Beschreibung und Anleitung bleiben auf dieser Open-Source-Seite; Paketdateien werden über die Katalog-Subdomain angeboten.
