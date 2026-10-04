@@ -37,6 +37,8 @@ Widget packages, tool packages and helper tools are provided centrally in the [U
 
 ## What works today
 
+Starting with Studio **0.1.217**, the entity dialog searches friendly names, custom and original entity names, entity IDs and device names. Multiple search words can match across entity and device metadata: **Licht Tv1**, for example, finds an entity named “Licht” on device “TV1”. Search is case-insensitive; matching device groups automatically expand while searching.
+
 - Manage multiple projects and named pages, each with its own size, background and widgets. The runtime presents visible pages separately.
 - Place, move, resize and name widgets on a scrollable canvas, and arrange them with z-index. The editor supports multiple selection, alignment, size matching, copy/paste and undo/redo.
 - Use 74 widgets from “HA Grafik – Basis”, “HA Grafik – Interaktiv”, “HA Grafik – Spezial”, “HA Grafik – Datenfluss” and “HA Grafik – Gauges”. These include HTML, images, numbers, controls, tables, calendars, dashboard embedding, SVG lines, calculations, converters and ten measuring instruments. The palette shows a preview or icon appropriate to each type.

@@ -37,6 +37,8 @@ Widget-Pakete, Tool-Pakete und Zusatztools findest du zentral im [UGSo-Paketkata
 
 ## Was derzeit möglich ist
 
+Ab Studio **0.1.217** sucht der Entitäten-Dialog nach Anzeigenamen, benutzerdefinierten und ursprünglichen Entitätsnamen, Entity-IDs sowie Gerätenamen. Mehrere Suchwörter dürfen über Entität und Gerät verteilt sein: **Licht Tv1** findet beispielsweise eine Entität namens „Licht“ am Gerät „TV1“. Die Suche ignoriert Groß-/Kleinschreibung; passende Gerätegruppen werden während der Suche automatisch aufgeklappt.
+
 - Im Dateien-Fenster sucht das Suchfeld in allen Unterordnern von `/config/www/studio`, unabhängig vom geöffneten Ordner. Die Suche ignoriert Groß-/Kleinschreibung und berücksichtigt Dateinamen sowie Pfade. Treffer zeigen eine Bildvorschau und den relativen Pfad; Dateitypfilter und Bildübernahme bleiben nutzbar. Ein leeres Suchfeld zeigt wieder den geöffneten Ordner.
 - Mehrfach ausgewählte Widgets lassen sich durch Ziehen eines ausgewählten Widgets gemeinsam verschieben, auch nach Kopieren und Einfügen. Ausgewählte SVG-Linien und Zwischenpunkte wandern mit; bestehende Andockverbindungen bleiben erhalten. Gesperrte Widgets verhindern das gemeinsame Verschieben. Ein Zug lässt sich als Ganzes rückgängig machen.
 - Die Widget-Auswahlliste bleibt vor allen Widgets sichtbar. Ab **0.1.209** werden die angehakten Widgets über **Kopieren** und **Löschen** in der Werkzeugleiste bearbeitet; die doppelten Buttons unten in der Liste entfallen. Beim Löschen gilt der Bestätigungsdialog.
