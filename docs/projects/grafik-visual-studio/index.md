@@ -9,6 +9,10 @@ Neu ab Studio **0.1.210**: Das externe [Material-Design-Set](materialdesign.md) 
 
 ## Paketkatalog und Downloads
 
+Mit Katalog-Webseite **0.1.7** fragt die Registrierung nach neuen Studio-Funktionen (Ja/Nein/Unsicher) und ihrer Beschreibung. Ein optionaler Paket-Upload erkennt die verwendeten Renderer/Aktionen; ohne Datei erfolgt die Analyse in der Administration. Unbekannte Funktionen erhalten „Studio-Anpassung erforderlich“ und bleiben bis zur Umsetzung und erneuten Prüfung außerhalb des öffentlichen Katalogs. Das Webseiten-Update muss vom Betreiber hochgeladen werden.
+
+Studio erkennt neue freigegebene Paketversionen beim Öffnen der Paketeinstellungen oder über **Katalog aktualisieren** und bietet **Aktualisieren** an. Dafür müssen die Paket-IDs übereinstimmen; das gilt auch für vorher lokal oder über GitHub installierte Pakete. Updates werden bewusst installiert. Beliebige GitHub-Repositories werden nicht automatisch überwacht.
+
 Widget-Pakete, Tool-Pakete und Zusatztools findest du zentral im [UGSo-Paketkatalog auf visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=de). Dazu gehören Technic, Wetter/Heizung, der Colorpicker sowie **Widget Test** und **Tools Test** für die Prüfung der Paketinstallation. Der **Packer für Windows und Linux** steht dort unter **Zusatztools** bereit. Beschreibung und Anleitung bleiben auf dieser Open-Source-Seite; Paketdateien werden über die Katalog-Subdomain angeboten.
 
 **Das etwas andere Dashboard für Home Assistant.** Grafik Visual Studio ist eine experimentelle Home-Assistant-App mit freier Editorfläche und getrennter Runtime. Das Projekt befindet sich in einer frühen Entwicklungsphase; Format und Bedienung können sich ändern. Es ist derzeit nicht für produktive Dashboards gedacht.

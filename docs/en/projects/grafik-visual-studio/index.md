@@ -9,6 +9,10 @@ New in Studio **0.1.210**: the external [Material Design set](materialdesign.md)
 
 ## Package catalog and downloads
 
+Catalog website **0.1.7** asks whether a package needs new Studio features (Yes/No/Unsure) and requests a description. An optional package upload identifies its renderers/actions; without a file, analysis occurs in Administration. Unknown features receive “Studio update required” and remain outside the public catalog until implemented and reviewed again. The operator must upload the website update.
+
+Studio detects newer approved package versions when opening package settings or choosing **Refresh catalog**, then offers **Update**. Package IDs must match, including packages previously installed locally or from GitHub. Updates are installed deliberately. Arbitrary GitHub repositories are not monitored automatically.
+
 Widget packages, tool packages and helper tools are provided centrally in the [UGSo package catalog at visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=en). These include Technic, Weather/Heating, the Colorpicker, and **Widget Test** and **Tools Test** for checking package installation. The **Packer for Windows and Linux** is listed under **Helper tools**. Descriptions and instructions remain on this open-source site; package files are provided through the catalog subdomain.
 
 **A different kind of Home Assistant dashboard.** Grafik Visual Studio is an experimental Home Assistant app with a freeform editing surface and a separate runtime. It is still in early development; its project format and controls may change. It is not yet intended for production dashboards.
