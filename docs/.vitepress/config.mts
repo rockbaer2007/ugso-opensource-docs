@@ -134,6 +134,8 @@ const sidebarDe = {
       { text: 'Tool-Paket-Schnittstelle', link: '/projects/grafik-visual-studio/tool-pakete' },
       { text: 'Packer für Pakete', link: '/projects/grafik-visual-studio/packer' }
     ]
+  }, {
+    items: [{ text: 'Bildergalerie', link: '/projects/grafik-visual-studio/bildergalerie' }]
   }],
   '/sammlung/flex-table-card/': [
     {
@@ -533,6 +535,8 @@ const sidebarEn = {
       { text: 'Tool package interface', link: '/en/projects/grafik-visual-studio/tool-packages' },
       { text: 'Package packer', link: '/en/projects/grafik-visual-studio/packer' }
     ]
+  }, {
+    items: [{ text: 'Image gallery', link: '/en/projects/grafik-visual-studio/bildergalerie' }]
   }],
   '/en/collection/flex-table-card/': [
     {
