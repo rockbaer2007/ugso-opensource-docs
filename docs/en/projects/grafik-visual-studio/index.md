@@ -9,7 +9,9 @@ New in Studio **0.1.210**: the external [Material Design set](materialdesign.md)
 
 ## Package catalog and downloads
 
-Catalog website **0.1.7** asks whether a package needs new Studio features (Yes/No/Unsure) and requests a description. An optional package upload identifies its renderers/actions; without a file, analysis occurs in Administration. Unknown features receive “Studio update required” and remain outside the public catalog until implemented and reviewed again. The operator must upload the website update.
+Catalog website **0.1.8** requires the minimum Studio version. Registration asks whether a package needs new Studio features (Yes/No/Unsure); Yes or Unsure requires a description. An optional package upload identifies its renderers/actions; without a file, analysis occurs in Administration. Unknown features receive “Studio update required” and remain outside the public catalog until implemented and reviewed again. The operator must upload the website update.
+
+Starting with Studio **0.1.212**, a red `mdi:alert` icon marks the GitHub source and installation notice for widget and tool packages. Installation requires accepting the installation risk.
 
 Studio detects newer approved package versions when opening package settings or choosing **Refresh catalog**, then offers **Update**. Package IDs must match, including packages previously installed locally or from GitHub. Updates are installed deliberately. Arbitrary GitHub repositories are not monitored automatically.
 
