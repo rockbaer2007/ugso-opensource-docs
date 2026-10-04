@@ -5,6 +5,8 @@ description: Create and install local widget packages for HA Grafik Visual Studi
 
 # Widget package interface
 
+From **0.1.208**, clicking **Install** without risk confirmation highlights the checkbox in red and scrolls it into view. Checking it clears the highlight.
+
 From **0.1.207**, opening this tab automatically reloads the catalog and current installation status. Removing a package listed in the catalog makes it installable again, even if it was originally installed locally. Newly approved packages appear the next time the tab opens.
 
 Since **0.1.205**, catalog packages and locally installed widget packages appear as **two cards side by side**, each with an icon. The installed package icon is used when available; otherwise a widget icon is shown. Refresh and removal actions remain available for installed packages.
