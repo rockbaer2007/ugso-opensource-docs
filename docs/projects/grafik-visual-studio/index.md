@@ -39,7 +39,9 @@ Widget-Pakete, Tool-Pakete und Zusatztools findest du zentral im [UGSo-Paketkata
 
 ## Was derzeit möglich ist
 
-Ab Studio **0.1.221** folgt die Oberfläche automatisch der Hell-/Dunkel-Einstellung, die der Browser meldet. Werkzeugleiste, Seitenleisten, Dialoge und Eingabefelder wechseln auch während der Nutzung ohne Neuladen. Fest eingestellte Seitenhintergründe und Widgetfarben bleiben erhalten; der Theme-Wechsel verändert keine gespeicherten Projekteinstellungen.
+Ab Studio **0.1.222** ist die Arbeitsfläche im hellen Theme grau mit anthrazitfarbenen Rasterlinien. Im dunklen Theme bleibt der bisherige Hintergrund erhalten; etwas hellere Rasterlinien erleichtern die Orientierung. Diese Darstellung betrifft den Editor. Die Runtime verwendet weiterhin den gespeicherten Seitenhintergrund.
+
+Ab Studio **0.1.221** folgt die Oberfläche automatisch der Hell-/Dunkel-Einstellung, die der Browser meldet. Werkzeugleiste, Seitenleisten, Dialoge und Eingabefelder wechseln auch während der Nutzung ohne Neuladen. Gespeicherte Seitenhintergründe und Widgetfarben bleiben erhalten; der Theme-Wechsel verändert keine gespeicherten Projekteinstellungen.
 
 Ab Studio **0.1.220** öffnen neue Seiten direkt den Reiter **ANSICHT**. Dort stehen CSS allgemein, Hintergrund, Schrift und Text, Optionen, Navigation, Anwendungsleiste und responsive Einstellungen zur Verfügung. Die Bereiche lassen sich auf- und zuklappen, haben aber keine Aktivierungscheckboxen: Seitenwerte bleiben beim Speichern erhalten. Die Checkboxen für einzelne Optionen wie „Standard“ bleiben bestehen.
 

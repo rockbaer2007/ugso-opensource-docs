@@ -39,7 +39,9 @@ Widget packages, tool packages and helper tools are provided centrally in the [U
 
 ## What works today
 
-Starting with Studio **0.1.221**, the interface automatically follows the light/dark preference reported by the browser. The toolbar, sidebars, dialogs and fields also update while Studio is open, without reloading. Explicit page backgrounds and widget colors are preserved; changing the theme does not modify saved project settings.
+Starting with Studio **0.1.222**, the light theme uses a gray editor canvas with anthracite grid lines. The dark theme keeps the existing background with slightly brighter grid lines for easier orientation. This appearance applies to the editor. Runtime continues to use the saved page background.
+
+Starting with Studio **0.1.221**, the interface automatically follows the light/dark preference reported by the browser. The toolbar, sidebars, dialogs and fields also update while Studio is open, without reloading. Saved page backgrounds and widget colors are preserved; changing the theme does not modify saved project settings.
 
 Starting with Studio **0.1.220**, new pages open the **VIEW** tab directly. It contains general CSS, background, font and text, options, navigation, app bar and responsive settings. Sections can expand and collapse but have no activation checkboxes: page values are preserved on save. Checkboxes for individual options such as “Default” remain available.
 
