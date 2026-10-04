@@ -13,6 +13,8 @@ Neu ab Studio **0.1.210**: Das externe [Material-Design-Set](materialdesign.md) 
 
 ## Paketkatalog und Downloads
 
+Das Paket **Wetter und Heizung 1.7.1** zeigt für sieben Widgets die jeweiligen Original-Vorschaubilder aus [ioBroker weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating). „Meinen Vermieter informieren“ erhält ein Briefsymbol, da die im Original referenzierte Bilddatei fehlt. Die MIT-Lizenz der Originalbilder liegt dem Paket bei. Das Update ändert ausschließlich Widget-Bilder; bestehende Einstellungen bleiben erhalten. Für das Bild-Update wird Studio **0.1.216** oder neuer benötigt.
+
 Ab Katalog-Webseite **0.1.11** wird ein bei der Registrierung hochgeladenes Originalpaket privat für die Adminprüfung gespeichert. Analyse und Freigabe verwenden diese Datei ohne erneuten Upload; eine neue Datei kann optional als Ersatz hochgeladen werden. Die Administration kann das Original herunterladen. SHA-256 erkennt Änderungen. Die private Kopie wird nach Freigabe, Ablehnung, Löschung oder Ablauf der 90-Tage-Aufbewahrung entfernt. Bei älteren Einreichungen ist einmalig ein erneuter Upload nötig, weil frühere Versionen die Datei nur analysiert haben.
 
 Ab Katalog-Webseite **0.1.10** akzeptiert die Widget-Registrierung ausschließlich `.wg`, die Tool-Registrierung ausschließlich `.tp`. Die Dateiauswahl zeigt nur die passende Endung. Der Server prüft die Endung von Upload-Dateinamen und Download-Link-Pfaden sowie weiterhin Paketinhalt und Manifest-Typ. Die Upload-Prüfung gilt auch in der Administration.

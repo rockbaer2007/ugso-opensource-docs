@@ -13,6 +13,8 @@ New in Studio **0.1.210**: the external [Material Design set](materialdesign.md)
 
 ## Package catalog and downloads
 
+The **Weather and Heating 1.7.1** package uses the original preview images from [ioBroker weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating) for seven widgets. “Inform my landlord” uses an envelope icon because the image referenced upstream is missing. The original images' MIT license is included. The update only changes widget images and preserves existing settings. Updating the images requires Studio **0.1.216** or newer.
+
 Starting with catalog website **0.1.11**, the original package uploaded during registration is stored privately for admin review. Analysis and approval reuse this file without another upload; a replacement file can optionally be uploaded. Administration can download the original. SHA-256 detects changes. The private copy is removed after approval, rejection, deletion or the 90-day retention period. Older submissions require one new upload because previous versions only analyzed the file.
 
 Starting with catalog website **0.1.10**, widget registration only accepts `.wg` and tool registration only accepts `.tp`. The file picker filters by the appropriate extension. The server checks upload filenames and download URL paths, while continuing to validate package contents and manifest type. Upload validation also applies in Administration.
