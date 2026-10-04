@@ -5,6 +5,16 @@ description: External Material Design widget package for Grafik Visual Studio.
 
 # Material Design
 
+## Dialog iFrame (package 0.3.0, Studio 0.1.214 or later)
+
+The third widget opens an HTTP/HTTPS source or relative path in a dialog. **General**, **iFrame settings** and **Dialog layout** remain visible in compact mode. Advanced options add button, header and footer layouts; hiding them preserves existing values.
+
+Configure the source and horizontal/vertical scrolling under **iFrame settings**. **Seamless** removes the border. The default sandbox allows scripts/forms; **Disable sandbox** explicitly removes the restriction. Cross-origin scrolling depends on the browser and embedded content. The target site's CSP or X-Frame-Options may prevent embedding. Studio does not provide a proxy.
+
+Button or boolean triggers, fullscreen threshold and closing behavior follow the local page dialog. The editor does not open dialogs. Studio's page theme replaces ioBroker theme objects.
+
+Register package **0.3.0** with minimum Studio version **0.1.214**. The catalog requires website update **0.1.12** to recognize `material-iframe-dialog`. The already approved 0.2.0 version remains unchanged.
+
 ## Dialog (package 0.2.0, Studio 0.1.211 or later)
 
 The second widget opens another local Studio page in a modal. Select the target under **General → View**. Editor clicks select the widget; runtime clicks open the dialog. Self-embedding and recursive page chains are blocked.

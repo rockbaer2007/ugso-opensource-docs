@@ -5,6 +5,8 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
+New in Studio **0.1.214**: Material Design package **0.3.0** adds [Dialog iFrame](materialdesign.md) as the third widget, with source, sandbox, scrolling and compact/advanced dialog layout options.
+
 New in Studio **0.1.210**: the external [Material Design set](materialdesign.md) starts with **Preview Color Schemes**, 26 palette rows and Classic/Material 3/Project default. Package 0.1.0 is prepared for testing community catalog registration.
 
 ## Package catalog and downloads

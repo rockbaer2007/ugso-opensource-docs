@@ -5,6 +5,16 @@ description: Externes Material-Design-Widget-Set für Grafik Visual Studio.
 
 # Material Design
 
+## Dialog iFrame (Paket 0.3.0, Studio ab 0.1.214)
+
+Das dritte Widget öffnet eine HTTP-/HTTPS-Quelle oder einen relativen Pfad im Dialog. **Allgemein**, **iFrame Einstellungen** und **Layout Dialog** bleiben im kompakten Modus sichtbar. Erweiterte Optionen zeigen zusätzlich Button-, Kopfzeilen- und Fußzeilenlayout; vorhandene Werte bleiben beim Ausblenden erhalten.
+
+Unter **iFrame Einstellungen** die Quelle und horizontalen/vertikalen Scrolloptionen setzen. **Nahtlos** entfernt den Rahmen. Standardmäßig ist die Sandbox mit Scripts/Formularen aktiv; **Sandbox deaktivieren** entfernt diese Einschränkung ausdrücklich. Scrollverhalten hängt bei fremden Seiten vom Browser und deren Inhalt ab. CSP oder X-Frame-Options der Zielseite können das Einbetten verhindern. Studio stellt dafür keinen Proxy bereit.
+
+Button oder boolesche Entität, Vollbildschwelle und Schließverhalten entsprechen dem Seiten-Dialog. Im Editor wird kein Dialog geöffnet. Die ioBroker-Theme-Objekte werden durch das Studio-Seitenthema ersetzt.
+
+Zur Registrierung von Paket **0.3.0** Mindestversion **0.1.214** angeben. Der Katalog benötigt Webseiten-Update **0.1.12**, das `material-iframe-dialog` als bekannten Renderer erkennt. Die bereits freigegebene Version 0.2.0 bleibt unverändert.
+
 ## Dialog (Paket 0.2.0, Studio ab 0.1.211)
 
 Das zweite Widget öffnet eine andere lokale Studio-Seite im Dialog. Unter **Allgemein → Ansicht** die Zielseite auswählen. Im Editor dient der Klick zur Auswahl; in der Runtime öffnet er das Fenster. Die aktuelle Seite und rekursive Einbettungen sind gesperrt.
