@@ -16,7 +16,20 @@ Der Packer erstellt aus einem Quellordner ein Widget-Paket (`.wg`) oder Tool-Pak
 3. Prüfe die Ergebnisliste sowie Paket-ID, Version, Lizenz und Zielname. **Exportieren** wird erst bei gültigem Paket und freiem Zielnamen aktiv. Der Packer überschreibt keine vorhandene Datei.
 4. Installiere die erzeugte `.wg`- oder `.tp`-Datei im Studio unter **Einstellungen → Widget-Pakete** oder **Einstellungen → Tools**. Die bisherigen Endungen `.wg.zip` und `.tp.zip` bleiben verwendbar.
 
-Ein Widget-Paket kann 1 bis 30 Widgets enthalten; ein Tool-Paket enthält in Schnittstelle 0.1 genau ein Tool. Der Packer prüft mit denselben Regeln wie der Studio-Importer. Das Studio prüft jedes importierte Paket zusätzlich selbst.
+Der Packer prüft mit denselben Regeln wie der gebündelte Studio-Importer. Packer 0.3.0 unterstützt bis zu 64 Widgets pro Paket; ein Tool-Paket enthält in Schnittstelle 0.1 genau ein Tool. Das Studio prüft jedes importierte Paket zusätzlich selbst.
+
+## GitHub und direkte Registrierung
+
+Neu in **Packer 0.3.0**: **GitHub & Katalog …** öffnet ein exportiertes `.wg`- oder `.tp`-Paket zur Prüfung und Veröffentlichung. Die neue Version befindet sich im Test; die unten angebotenen signierten Downloads sind weiterhin 0.2.0 und enthalten diese Erweiterung noch nicht.
+
+1. Installiere die [GitHub CLI](https://cli.github.com/) und melde dich im Terminal mit `gh auth login` an. Trage dein öffentliches Repository ein und wähle **Releases laden**.
+2. Wähle den Release-Tag und bestätige **Paket auf GitHub veröffentlichen**. Für einen neuen Release aktiviere **Release für vorhandenen Git-Tag erstellen**; der Tag muss bereits auf GitHub vorhanden sein. Vorhandene Dateien werden nicht überschrieben.
+3. Der Download-Link wird übernommen. Alternativ kannst du einen bereits veröffentlichten HTTPS-Link zur festen `.wg`- oder `.tp`-Version direkt eingeben und den GitHub-Schritt überspringen.
+4. Ergänze Lizenzlink, Beschreibung, interne Kontaktadresse und benötigte Studio-Mindestversion. Neue Funktionen werden mit **Nein / Ja / Unsicher** angegeben. Bei Ja oder Unsicher ist eine Beschreibung erforderlich; die Mindestversion darf noch unbekannt sein.
+5. Lies die [Registrierungshinweise](https://visualstudio.ugso-software.de/privacy), bestätige Verarbeitung und Verteilungsrechte und wähle **Im Katalog registrieren**. Vor dem Senden zeigt der Packer Empfänger und Angaben an. Das Originalpaket wird zur automatischen Analyse mitgeschickt.
+6. Kopiere den privaten Verwaltungslink nach erfolgreicher Einreichung. Das Paket erscheint nach manueller Prüfung und Freigabe im Katalog. Bei unklarer Netzwerkantwort zuerst prüfen, ob die Version gespeichert wurde; der Packer wiederholt die Einreichung nicht automatisch.
+
+Die Kontaktadresse geht intern an den Katalog und gegebenenfalls sein Prüfpostfach. Name, E-Mail und Webseite werden nicht öffentlich angezeigt. Der Packer speichert nur Repository und Lizenzlink als Komforteinstellung, keine Kontaktadresse, GitHub-Tokens, Einwilligungen oder Verwaltungslinks. Netzwerkaktionen laufen im Hintergrund. Widget-Quellordner können zusätzlich `LICENSE.txt` und `README.md` enthalten.
 
 ## Programm und Dateiendungen
 

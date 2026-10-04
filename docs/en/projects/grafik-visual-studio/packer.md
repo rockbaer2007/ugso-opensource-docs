@@ -16,7 +16,20 @@ The packer creates a widget package (`.wg`) or tool package (`.tp`) for HA Grafi
 3. Review the validation list, package ID, version, license and target name. **Export** becomes available only for a valid package and unused target name. Existing files are not overwritten.
 4. Install the resulting `.wg` or `.tp` file in Studio under **Settings → Widget packages** or **Settings → Tools**. The older `.wg.zip` and `.tp.zip` extensions remain supported.
 
-A widget package may contain 1 to 30 widgets; a tool package contains exactly one tool in interface 0.1. The packer uses the same validation rules as the Studio importer. Studio also validates every imported package independently.
+The packer uses the same validation rules as its bundled Studio importer. Packer 0.3.0 supports up to 64 widgets per package; a tool package contains exactly one tool in interface 0.1. Studio also validates every imported package independently.
+
+## GitHub and direct registration
+
+New in **Packer 0.3.0**: **GitHub & Katalog …** opens an exported `.wg` or `.tp` package for validation and publishing. This version is being tested; the signed downloads below are still 0.2.0 and do not yet include this feature.
+
+1. Install the [GitHub CLI](https://cli.github.com/) and sign in from a terminal with `gh auth login`. Enter your public repository and choose **Releases laden** (load releases).
+2. Select a release tag and confirm **Paket auf GitHub veröffentlichen** (publish package on GitHub). To create a release, enable **Release für vorhandenen Git-Tag erstellen**; the Git tag must already exist on GitHub. Existing assets are never overwritten.
+3. The download link is filled automatically. Alternatively, enter an existing HTTPS download link for a fixed `.wg` or `.tp` version and skip GitHub publishing.
+4. Complete the license link, description, internal contact email and minimum Studio version. Choose **Nein / Ja / Unsicher** (No / Yes / Unsure) for new Studio features. Yes or Unsure requires a description and allows an unknown minimum version.
+5. Read the [registration notice](https://visualstudio.ugso-software.de/privacy?lang=en), confirm processing and distribution rights, then choose **Im Katalog registrieren** (register in catalog). Review the recipient and details before sending. The original package is uploaded for automatic analysis.
+6. Copy the private management link after a successful submission. The package appears in the catalog after manual review and approval. If the network result is uncertain, check whether the version was saved first; the packer never retries automatically.
+
+The contact email goes internally to the catalog and optionally its configured review mailbox. Names, email and website are not published. The packer remembers only the repository and license link, never contact emails, GitHub tokens, consents or management links. Network tasks run in the background. Widget source folders may also contain `LICENSE.txt` and `README.md`.
 
 ## Application and file types
 
