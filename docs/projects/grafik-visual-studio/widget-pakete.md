@@ -5,6 +5,8 @@ description: Lokale Widget-Pakete für HA Grafik Visual Studio erstellen und ins
 
 # Widget-Paket-Schnittstelle
 
+Ab Studio **0.1.204** bietet **Einstellungen → Widget-Pakete** die Quellen **Lokal / Katalog / GitHub**. Der [UGSo-Katalog](https://visualstudio.ugso-software.de/?kind=widget&lang=de) zeigt Beschreibung, Lizenz, benötigte Studio-Version und installierte Version. Testpakete haben einen orangefarbenen Hinweis. GitHub unterstützt direkte öffentliche `.wg`-Dateilinks einschließlich Blob-, Raw- und Release-Links; ein Repository-Startlink genügt nicht. Vor der Installation muss das Risiko ausdrücklich bestätigt werden. Katalogdownloads werden mit SHA-256 sowie der ausgewählten Paket-ID und Version geprüft; anschließend gilt die normale Paketprüfung. Einstellungen bleiben nach der Installation geöffnet, und Palette sowie Paketliste werden aktualisiert. Eigenständige Zusatztools wie der Packer werden über den Kataloglink heruntergeladen.
+
 Ab Studio 0.1.203 unterstützt API 0.2 `technic-status-list`: bis zu zehn lesende HA-Zeilen mit den Bindungen und Zahlen-/UND-/ODER-Optionen von `technic-room`. `valueOffset` und `containerPaddingLeft` steuern die Spalten und den Innenabstand. Die Schrift wird aus CSS geerbt; überlaufende Zeilen scrollen. Das Paket bleibt deklarativ. Siehe [Technic](technic.md#status-list).
 
 Ab Studio 0.1.202 unterstützt API 0.2 `technic-temperature` mit fünf HA-Bindungen, Reglergrenzen, Schrittweite und Farben. Der feste Host prüft aktuelle Fähigkeiten und Werteraster vor `climate.set_temperature` beziehungsweise `input_number.set_value`. Der Verlauf liest HA-Recorder-Daten für höchstens drei Entitäten, 24 Stunden oder sieben Tage und liefert maximal 720 Punkte pro Reihe. Pakete enthalten weiterhin keine ausführbaren Skripte oder HA-Tokens. Siehe [Technic](technic.md#thermostat-temperature).
@@ -19,7 +21,7 @@ Ab Studio 0.1.187 ergänzt **Schnittstelle 0.2** die Text-Widgets aus 0.1 um dek
 
 Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.wg` installieren. Bisherige `.wg.zip`-Dateien bleiben nutzbar; Endung und Manifest müssen zur Widget-Paketart passen.
 
-Über **Einstellungen → Widget-Pakete** installierst du ein lokales `*.wg.zip`. Die Schnittstelle 0.1 nimmt geprüfte, deklarative Text-Widgets auf. Nach dem Neuladen erscheinen sie als eigenes Set in der Widget-Palette und funktionieren im Editor und in der Runtime. Die Installation führt keinen Paket-Code aus.
+Über **Einstellungen → Widget-Pakete → Lokal** installierst du eine lokale `.wg`- oder `.wg.zip`-Datei. Die Schnittstelle 0.1 nimmt geprüfte, deklarative Text-Widgets auf. Ab Studio 0.1.204 erscheinen sie direkt als eigenes Set in der Widget-Palette und funktionieren im Editor und in der Runtime. Die Installation führt keinen Paket-Code aus.
 
 ## Paket aufbauen
 

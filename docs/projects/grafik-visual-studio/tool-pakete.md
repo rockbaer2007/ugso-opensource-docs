@@ -5,6 +5,8 @@ description: Lokale Editor-Tools für HA Grafik Visual Studio erstellen und inst
 
 # Tool-Paket-Schnittstelle 0.1
 
+Ab Studio **0.1.204** bietet **Einstellungen → Tools** die Quellen **Lokal / Katalog / GitHub**. Der Katalog zeigt Lizenz, Beschreibung, benötigte Studio-Version und Installationsstatus, einschließlich Colorpicker und Tools Test. GitHub benötigt einen direkten öffentlichen `.tp`-Dateilink. Die Risikobestätigung ist vor der Installation erforderlich; Katalogdownloads werden mit SHA-256 und ausgewählter Paket-ID/Version geprüft. Einstellungen bleiben geöffnet, Paketliste und Werkzeugleiste aktualisieren sich sofort. Eine ausdrücklich gewählte neuere Tool-Version kann die bestehende ersetzen; gleiche oder ältere Versionen werden abgelehnt. Projekte und Colorpicker-Favoriten bleiben erhalten. Der eigenständige Packer steht unter **Zusatztools** auf der Katalog-Webseite bereit.
+
 Pakete und Zusatztools werden zentral auf [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=de) angeboten. Diese Open-Source-Seite enthält Beschreibung und Anleitung; der Download erfolgt über den Paketkatalog.
 
 Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.tp` installieren. Bisherige `.tp.zip`-Dateien bleiben nutzbar; Endung und Manifest müssen zur Tool-Paketart passen.

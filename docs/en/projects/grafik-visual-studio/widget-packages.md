@@ -5,6 +5,8 @@ description: Create and install local widget packages for HA Grafik Visual Studi
 
 # Widget package interface
 
+From Studio **0.1.204**, **Settings → Widget packages** offers **Local / Catalog / GitHub** sources. The [UGSo catalog](https://visualstudio.ugso-software.de/?kind=widget&lang=en) shows descriptions, licenses, minimum Studio versions and installed versions. Test packages carry an orange notice. GitHub supports direct public `.wg` file links, including blob, raw and release links; a repository homepage is not sufficient. Installation requires explicit risk confirmation. Catalog downloads verify SHA-256 and the selected package ID/version before the normal package validation. Settings remain open after installation, while the palette and package list refresh. Standalone helper tools such as the Packer are downloaded through the catalog link.
+
 From Studio 0.1.203, API 0.2 supports `technic-status-list`: up to ten read-only HA rows using the bindings and numeric/AND/OR options from `technic-room`. `valueOffset` and `containerPaddingLeft` control columns and padding. Typography inherits CSS; overflowing rows scroll. The package remains declarative. See [Technic](technic.md#status-list).
 
 From Studio 0.1.202, API 0.2 supports `technic-temperature` with five HA bindings, dial bounds, step and colors. The fixed host checks live capabilities and step grids before `climate.set_temperature` or `input_number.set_value`. History reads HA Recorder for at most three entities, 24 hours or seven days, returning at most 720 points per series. Packages still contain no executable scripts or HA tokens. See [Technic](technic.md#thermostat-temperature).
@@ -19,7 +21,7 @@ From Studio 0.1.187, **interface 0.2** adds declarative charts alongside 0.1 tex
 
 Starting with Studio 0.1.89, you can install ZIP-based packages ending in `.wg`. Existing `.wg.zip` files remain supported; the extension and manifest must both identify a widget package.
 
-Under **Settings → Widget packages**, you can install a local `*.wg.zip`. Interface 0.1 accepts validated, declarative text widgets. After reloading the app, they appear as a separate set in the palette and work in both editor and runtime. Installation does not execute package code.
+Under **Settings → Widget packages → Local**, you can install a local `.wg` or `.wg.zip` file. Interface 0.1 accepts validated, declarative text widgets. From Studio 0.1.204, they appear directly as a separate set in the palette and work in both editor and runtime. Installation does not execute package code.
 
 ## Interface 0.2: chart
 
