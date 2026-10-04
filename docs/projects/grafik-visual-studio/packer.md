@@ -20,6 +20,8 @@ Der Packer prüft mit denselben Regeln wie der gebündelte Studio-Importer. Pack
 
 ## GitHub und direkte Registrierung
 
+Ab Testversion **0.3.1** zeigt der Packer ein bereits gespeichertes Paket mit identischem Dateiinhalt grün als **Datei gespeichert** an, auch nach einem Neustart. Ein erneuter Export bleibt deaktiviert. Bei abweichendem Inhalt schützt die Prüfung weiterhin vor dem Überschreiben. Der breite Button **GitHub & Katalog …** befindet sich direkt unter der Prüfliste.
+
 Neu in **Packer 0.3.0**: **GitHub & Katalog …** öffnet ein exportiertes `.wg`- oder `.tp`-Paket zur Prüfung und Veröffentlichung. Die neue Version befindet sich im Test; die unten angebotenen signierten Downloads sind weiterhin 0.2.0 und enthalten diese Erweiterung noch nicht.
 
 1. Installiere die [GitHub CLI](https://cli.github.com/) und melde dich im Terminal mit `gh auth login` an. Trage dein öffentliches Repository ein und wähle **Releases laden**.

@@ -20,6 +20,8 @@ The packer uses the same validation rules as its bundled Studio importer. Packer
 
 ## GitHub and direct registration
 
+Starting with test version **0.3.1**, an existing package with identical file contents appears in green as **Datei gespeichert** (file saved), including after restarting the packer. Export remains disabled. Different contents still trigger the overwrite protection. The wide **GitHub & Katalog …** button is directly below the checklist.
+
 New in **Packer 0.3.0**: **GitHub & Katalog …** opens an exported `.wg` or `.tp` package for validation and publishing. This version is being tested; the signed downloads below are still 0.2.0 and do not yet include this feature.
 
 1. Install the [GitHub CLI](https://cli.github.com/) and sign in from a terminal with `gh auth login`. Enter your public repository and choose **Releases laden** (load releases).
