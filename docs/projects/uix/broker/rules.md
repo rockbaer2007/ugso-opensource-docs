@@ -192,7 +192,7 @@ rules:
 
 ### Kompakte Captured-Data-Form
 
-Für kompakte Konfigurationen können ein oder mehrere Captured-Pfade direkt in einer Objekt-Regel abgebildet werden. Jeder Eintrag muss passen. Der Prefix `@captured` bleibt nur in dieser kompakten Form erhalten.
+Für kompakte Konfigurationen können ein oder mehrere Captured-Pfade direkt in einer Objekt-Regel abgebildet werden. Jeder Eintrag muss passen. Der Prefix `@captured` bleibt nur in dieser kompakten Form erhalten. [Direktiven-Regeln](./directives#direktiven-regeln) können ab UIX `8.4.0-beta.9` zusätzlich `@<directive-id>` verwenden, um ein Ergebnis einer früheren `template`- oder `javascript`-Direktive zu prüfen. Für Interaktionsregeln steht diese Ergebnisreferenz nicht zur Verfügung.
 
 ```yaml
 rules:

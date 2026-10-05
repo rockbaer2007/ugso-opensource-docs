@@ -27,6 +27,10 @@ Selon la documentation canonique, le style des frames d'applications de même or
 
 Les pages françaises sur les [entités](./using/entities) et les [images](./using/images) ont été comparées à la révision documentaire canonique [`7d7c95a`](https://github.com/Lint-Free-Technology/uix/commit/7d7c95acb449c1222d8a338e3d9423f91ff0f2a2). Les parts CSS pour les marqueurs de carte depuis Home Assistant 2026.10.0, `hui-map-overview` et la restriction aux surcharges propres à une entité ont été ajoutées. La base stable reste UIX `8.3.1` ; le pied de page indique également les changements documentaires vérifiés jusqu’à UIX `8.4.0-beta.3`.
 
+## Mise à jour de Broker du 5 octobre 2026
+
+Les pages [Directives](./broker/directives#regles-de-la-directive) et [Règles](./broker/rules#formulaire-compact-de-donnees-capturees) ont été comparées aux changements de référence [`105b8cd`](https://github.com/Lint-Free-Technology/uix/commit/105b8cd446ea082553be627530efe8a752d57dec) et [`04d8e14`](https://github.com/Lint-Free-Technology/uix/commit/04d8e14b006f24e795997c68191f9fde3652bd22). Les références aux résultats `@<directive-id>`, l’exemple YAML inchangé et la disponibilité à partir de UIX `8.4.0-beta.9` ont été ajoutés. Ces références sont réservées aux règles de directive. Les pages allemandes correspondantes ont également été mises à jour ; la base stable reste UIX `8.3.1`.
+
 ## Prochaine étape
 
 La documentation française sera révisée au fil des prochaines modifications de la documentation canonique.

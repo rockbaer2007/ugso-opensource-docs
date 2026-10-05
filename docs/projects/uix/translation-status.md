@@ -18,6 +18,10 @@ Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation 
 - Lizenz- und Footer-Hinweise nennen die CC-BY-4.0-Lizenz der originalen UIX-Dokumentation.
 - Die deutsche Fassung wird weiter mit dem englischen Original abgeglichen, sobald neue UIX-Änderungen im Original-Repository verfügbar sind.
 
+## Broker-Abgleich vom 05.10.2026
+
+Die Seiten [Directives](./broker/directives#direktiven-regeln) und [Rules](./broker/rules#kompakte-captured-data-form) wurden gezielt mit den kanonischen Änderungen [`105b8cd`](https://github.com/Lint-Free-Technology/uix/commit/105b8cd446ea082553be627530efe8a752d57dec) und [`04d8e14`](https://github.com/Lint-Free-Technology/uix/commit/04d8e14b006f24e795997c68191f9fde3652bd22) abgeglichen. Ergänzt sind Ergebnisreferenzen `@<directive-id>`, das unveränderte YAML-Beispiel und der Hinweis auf UIX `8.4.0-beta.9`. Diese Referenzen sind nur in Direktiven-Regeln verfügbar. Die entsprechenden französischen Seiten wurden ebenfalls aktualisiert; die stabile Basis bleibt UIX `8.3.1`.
+
 ## Aktualisierung vom 24.09.2026
 
 Der Dokumentationsstand wurde gegen den stabilen UIX-Release `8.3.1` geprüft. Das Release nennt zwei Fehlerbehebungen: Die Map-Spark-Funktion wurde nach Änderungen an Home Assistant 2026.9.0 wiederhergestellt, und ein Ladeproblem von Web Awesome auf älteren Geräten (darunter iOS 15) wird umgangen. Diese Punkte sind Release-Änderungen; sie führen keine neue Konfigurationsoption ein.

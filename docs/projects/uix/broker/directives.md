@@ -22,6 +22,23 @@ Direktiven laufen nacheinander, nachdem alle Regeln einer Interaktion passen. Je
 
 Füge `rules` zu jeder Direktive außer `block` hinzu, um nur diese Direktive zu konditionieren. Die Syntax entspricht den [Interaktionsregeln](./rules). Bei `property`, `event`, `call`, `button`, `tile-icon` und `tooltip` prüfen Host-Element-Regeln standardmäßig den aufgelösten Direktiven-Anchor. Bei `action` und `wait` prüfen sie den Interaction Anchor. Ein eigener `anchor` innerhalb einer Regel bleibt relativ zu diesem Standard-Anchor oder kann wie gewohnt absolut sein.
 
+::: info Verfügbar ab UIX 8.4.0-beta.9
+Kompakte Direktiven-Regeln können Ergebnisse prüfen, die eine frühere `template`- oder `javascript`-Direktive gespeichert hat.
+:::
+
+Nutze dafür die `id` der früheren Direktive mit dem Präfix `@`, optional gefolgt von einem Pfad in Punkt- oder Klammernotation. Das ist ausschließlich in Direktiven-Regeln möglich: Interaktionsregeln werden vor den Direktiven ausgeführt und können deshalb nicht auf deren Ergebnisse zugreifen.
+
+```yaml
+- type: javascript
+  id: permission
+  code: |
+    return { allowed: hass.user.is_admin };
+- type: button
+  rules:
+    - "@permission.allowed": true
+  icon: mdi:shield-check
+```
+
 ```yaml
 directives:
   - type: property

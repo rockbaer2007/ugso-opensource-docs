@@ -211,7 +211,7 @@ rules:
 
 ### Formulaire compact de données capturées
 
-Pour les configurations compactes, mappez un ou plusieurs chemins capturés directement dans une règle d'objet. Chaque entrée doit correspondre. Le préfixe `@captured` est conservé uniquement sous cette forme compacte.
+Pour les configurations compactes, mappez un ou plusieurs chemins capturés directement dans une règle d'objet. Chaque entrée doit correspondre. Le préfixe `@captured` est conservé uniquement sous cette forme compacte. À partir de UIX `8.4.0-beta.9`, les [règles de directive](./directives#regles-de-la-directive) peuvent également utiliser `@<directive-id>` pour vérifier un résultat d’une directive `template` ou `javascript` précédente. Cette référence aux résultats n’est pas disponible dans les règles d’interaction.
 
 ```yaml
 rules:

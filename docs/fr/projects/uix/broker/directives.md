@@ -21,6 +21,23 @@ Les directives s'exécutent une par une après chaque correspondance de règle d
 
 Ajoutez `rules` à n’importe quelle directive à l’exception de `block` pour conditionner uniquement cette directive. La syntaxe est la même que celle des [règles d'interaction](./rules.md). Pour `property`, `event`, `call`, `button` et `tile-icon`, les règles d'élément hôte inspectent par défaut l'ancre de directive résolue. Pour `action` et `wait`, ils inspectent l’ancre d’interaction. Le `anchor` d'une règle reste relatif à cette ancre par défaut, ou peut être absolu comme d'habitude.
 
+::: info Disponible à partir de UIX 8.4.0-beta.9
+Les règles compactes de directive peuvent vérifier un résultat enregistré par une directive `template` ou `javascript` précédente.
+:::
+
+Utilisez son `id` avec le préfixe `@`, éventuellement suivi d’un chemin en notation pointée ou entre crochets. Cette syntaxe est réservée aux règles de directive : les règles d’interaction sont évaluées avant les directives et ne peuvent donc pas accéder à leurs résultats.
+
+```yaml
+- type: javascript
+  id: permission
+  code: |
+    return { allowed: hass.user.is_admin };
+- type: button
+  rules:
+    - "@permission.allowed": true
+  icon: mdi:shield-check
+```
+
 ```yaml
 directives:
   - type: property
