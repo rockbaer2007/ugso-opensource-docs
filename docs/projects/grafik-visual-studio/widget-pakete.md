@@ -17,6 +17,8 @@ Industriestyle ergänzt vier Schraubenköpfe und einen **2-px-CSS-Rand**. Ab Stu
 
 ## Weitere Schnittstellenänderungen
 
+Ab Studio **0.1.227** zeigt **Wert anzeigen** den Messwert einschließlich Einheit. Eine leere Einheit übernimmt `unit_of_measurement` der Home-Assistant-Eingangsentity. Fehlerhafte Farbgrenzen oder Skalen unterdrücken einen geladenen Messwert nicht mehr; die Warnung bleibt im Tooltip. Nach einer Änderung der Skalenlimits müssen die Farbgrenzen passend und aufsteigend eingestellt werden.
+
 Ab Studio **0.1.226** enthält **Größe** beim Gauge/Poti die standardmäßig aktivierte Checkbox **Verhältnis 1:1**. Beim Ziehen und bei der Eingabe bleiben Breite und Höhe gleich; beide Zahlenfelder laufen mit. Ohne Haken sind die Maße unabhängig, jeweils mindestens 64 px. Erneutes Aktivieren übernimmt das größere Maß für beide Seiten. Bestehende Widgets bleiben standardmäßig quadratisch; Paket 0.1.0 bleibt verwendbar.
 
 Ab Studio **0.1.225** gilt die unter **Einstellungen → Allgemein → Editor und Andockpunkte → Ausgangspunkt** gewählte Farbe auch für Ausgänge von Wert-Konverter, LineBox und LineBox Math. Belegte Math-Ausgänge behalten diese Farbe. Signal-Ausgänge und Gehäuse-Snappunkte haben getrennte Farbeinstellungen.
