@@ -53,6 +53,8 @@ Value/unit display was added in Studio 0.1.227; dedicated display settings were 
 
 ## Housing and colors
 
+Studio **0.1.231** adds **Enable screws** directly below **Industrial styling**. Screws are enabled by default and can be disabled independently while industrial styling is active. Turning industrial styling back on also enables the screws again. Without industrial styling, screws are hidden and the checkbox is disabled.
+
 **Industrial styling** adds four corner screws, the housing background and frame. Scale and pointer colors are independently configurable. **General CSS → Corner radius (px)** controls frame rounding.
 
 From Studio 0.1.230, **Customize frame width** works as follows:
