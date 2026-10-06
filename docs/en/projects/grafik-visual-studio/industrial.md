@@ -83,7 +83,7 @@ Package **0.2.0** and Studio **0.1.232** add one to four independently controlle
 
 ![Four industrial toggle switches with small LEDs and three plate legends](/images/grafik-visual-studio/industrial-switches.png)
 
-*Runtime with example data: custom captions, green LEDs and ON/OFF, 1/0 and EIN/AUS plates. The metallic levers and LEDs use original CSS artwork.*
+*Runtime with example data: custom captions, green LEDs and ON/OFF, 1/0 and EIN/AUS plates. Since Studio 0.1.233, the metallic lever uses the transparent PNG supplied by rockbaer2007 and is fully visible in both positions. The LED remains CSS artwork. Updating Studio is sufficient; package 0.2.0 does not need reinstalling.*
 
 Each **Switch 1** through **Switch 4** group has a static **Caption**, **Plate legend** with **ON/OFF**, **1/0** or **EIN/AUS**, initial state and individual LED on/off colors. The LED sits above the caption; entities never change the plate text. Font size and color are available under **Caption**.
 
