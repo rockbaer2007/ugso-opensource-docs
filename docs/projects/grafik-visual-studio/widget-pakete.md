@@ -17,6 +17,8 @@ Industriestyle ergänzt vier Schraubenköpfe und einen **2-px-CSS-Rand**. Ab Stu
 
 ## Weitere Schnittstellenänderungen
 
+Ab Studio **0.1.226** enthält **Größe** beim Gauge/Poti die standardmäßig aktivierte Checkbox **Verhältnis 1:1**. Beim Ziehen und bei der Eingabe bleiben Breite und Höhe gleich; beide Zahlenfelder laufen mit. Ohne Haken sind die Maße unabhängig, jeweils mindestens 64 px. Erneutes Aktivieren übernimmt das größere Maß für beide Seiten. Bestehende Widgets bleiben standardmäßig quadratisch; Paket 0.1.0 bleibt verwendbar.
+
 Ab Studio **0.1.225** gilt die unter **Einstellungen → Allgemein → Editor und Andockpunkte → Ausgangspunkt** gewählte Farbe auch für Ausgänge von Wert-Konverter, LineBox und LineBox Math. Belegte Math-Ausgänge behalten diese Farbe. Signal-Ausgänge und Gehäuse-Snappunkte haben getrennte Farbeinstellungen.
 
 Ab **0.1.208** wird eine fehlende Risikobestätigung beim Klick auf **Installieren** rot markiert und in den sichtbaren Bereich gescrollt. Nach dem Setzen des Hakens verschwindet die Markierung.

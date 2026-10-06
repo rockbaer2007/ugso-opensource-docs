@@ -17,6 +17,8 @@ Industrial styling adds four corner screws and a **2 px CSS border**. Studio **0
 
 ## Further interface changes
 
+Studio **0.1.226** adds a checked-by-default **1:1 aspect ratio** checkbox under **Size** for Gauge/Poti. Width and height stay equal during dragging and typed changes, with both property fields updating. Uncheck it for independent dimensions, each at least 64 px. Re-enabling the lock uses the larger dimension for both sides. Existing widgets remain square by default; package 0.1.0 remains usable.
+
 Studio **0.1.225** applies the color selected in **Settings → General → Editor and dock points → Output point** to Value Converter, LineBox and LineBox Math outputs as well. Occupied Math outputs retain that color. Signal outputs and housing snap points have separate color settings.
 
 From **0.1.208**, clicking **Install** without risk confirmation highlights the checkbox in red and scrolls it into view. Checking it clears the highlight.
