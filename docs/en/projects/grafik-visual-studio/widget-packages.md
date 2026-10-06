@@ -5,25 +5,9 @@ description: Create and install local widget packages for HA Grafik Visual Studi
 
 # Widget package interface
 
-## External Industrial set: Gauge/Poti
-
-Studio **0.1.223** adds the API 0.2 host renderer `industrial-gauge`. The optional **UGSo Industrial 0.1.0** set starts with **Gauge/Poti – 270°**. [Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. It is not installed automatically and contains no executable package code.
-
-The square widget starts at **64 × 64 px**. Without an input, runtime supports rotary control by mouse, touch or keyboard. An entity or enabled signal input selects read-only gauge mode; an unavailable input remains an error. Signal input takes precedence over the entity. Choose ticks with emphasized zero or a color ring with ascending upper limits. Negative bounds, initial value, tick division and an independent control step are configurable. The final band ends at the maximum.
-
-Output to `number.*` or `input_number.*` is committed on release or continuously while dragging; changed gauge values are forwarded. The entity must be available and writable. Input and output entities must differ. Visible and visually hidden value lines use the existing dataflow. Editor interaction and writes are disabled.
-
-Industrial styling adds four corner screws and a **2 px CSS border**. Studio **0.1.224** applies **General CSS → Corner radius (px)** to this frame. **Housing snap points** offers four independently enabled corners and one spacing value for all sides. With 1 px on each neighbor, the gap is 2 px; single widgets snap when dragged. Set the color in **Settings → General → Editor and dock points → Housing snap point color**. Existing package 0.1.0 remains usable. Signal ports stay separate; automatic port relocation follows later. [Source and instructions](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial).
+The external **UGSo Industrial** package, its Gauge/Poti and settings have a [dedicated package page](industrial.md).
 
 ## Further interface changes
-
-Studio **0.1.230** adds **Customize frame width**, **Frame color** and **Frame width (px)** from 1 to 16 px under **Housing and colors**. Unchecked uses the existing 2 px frame width; checked allows a custom width. Disabling the override retains the custom value and keeps the frame visible. Disabling industrial styling hides the housing frame. Package 0.1.0 remains usable.
-
-Studio **0.1.228** groups **Show value**, **Unit**, **Value position**, **Font size (px)** and **Font color** under **Value display**. Choose **Center** or **Bottom**. The bottom position sits below the rotary knob. Defaults are bottom, 12 px and a light font color; font size remains constant when resizing the widget. Existing industrial package 0.1.0 does not need reinstalling.
-
-Studio **0.1.227** makes **Show value** display the reading with its unit. An empty unit uses the Home Assistant input entity's `unit_of_measurement`. Invalid color thresholds or scales no longer hide an available reading; the warning remains in the tooltip. After changing scale limits, adjust the color thresholds to fit the range in ascending order.
-
-Studio **0.1.226** adds a checked-by-default **1:1 aspect ratio** checkbox under **Size** for Gauge/Poti. Width and height stay equal during dragging and typed changes, with both property fields updating. Uncheck it for independent dimensions, each at least 64 px. Re-enabling the lock uses the larger dimension for both sides. Existing widgets remain square by default; package 0.1.0 remains usable.
 
 Studio **0.1.225** applies the color selected in **Settings → General → Editor and dock points → Output point** to Value Converter, LineBox and LineBox Math outputs as well. Occupied Math outputs retain that color. Signal outputs and housing snap points have separate color settings.
 

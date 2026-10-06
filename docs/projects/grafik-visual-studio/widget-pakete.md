@@ -5,25 +5,9 @@ description: Lokale Widget-Pakete für HA Grafik Visual Studio erstellen und ins
 
 # Widget-Paket-Schnittstelle
 
-## Externes Industrie-Set: Gauge/Poti
-
-Ab Studio **0.1.223** unterstützt API 0.2 den Host-Renderer `industrial-gauge`. Das optionale Set **UGSo Industrie 0.1.0** enthält zunächst **Gauge/Poti – 270°**. [Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Es wird nicht automatisch installiert und enthält keinen ausführbaren Paketcode.
-
-Das quadratische Widget beginnt bei **64 × 64 px**. Ohne Eingang wird es in der Runtime per Maus, Touch oder Tastatur zum Poti. Eine Eingangs-Entität oder ein aktivierter Koppelpunkt schaltet es zur Anzeige; ein fehlender Eingang bleibt ein Fehlzustand. Der Koppelpunkt hat Vorrang vor der Entität. Wählbar sind Strichskala mit hervorgehobener Null oder Farbring mit aufsteigenden Bis-Werten. Negative Grenzen, Startwert, Skalenteilung und unabhängige Bedien-Schrittweite sind einstellbar. Die letzte Farbe endet am Maximum.
-
-Ausgabe an `number.*` oder `input_number.*` erfolgt beim Loslassen oder während des Ziehens; Gauge-Werte werden bei Änderung weitergegeben. Die Entität muss verfügbar und schreibbar sein. Ein- und Ausgangsentität dürfen nicht identisch sein. Sichtbare und optisch unsichtbare Wert-Lines nutzen den vorhandenen Datenfluss. Im Editor sind Bedienung und Schreibaktionen gesperrt.
-
-Industriestyle ergänzt vier Schraubenköpfe und einen **2-px-CSS-Rand**. Ab Studio **0.1.224** steuert **CSS Allgemein → Eckenradius (px)** auch diesen Rahmen. Der Widget-Bereich **Gehäuse-Snappunkte** bietet vier einzeln aktivierbare Ecken und einen gemeinsamen Abstand für alle Seiten. Bei je 1 px entsteht eine 2-px-Fuge; einzelne Widgets rasten beim Verschieben ein. Die Farbe liegt unter **Einstellungen → Allgemein → Editor und Andockpunkte → Farbe der Gehäuse-Snappunkte**. Das vorhandene Paket 0.1.0 bleibt verwendbar. Signalanschlüsse bleiben getrennt; automatische Anschlussverlegung folgt separat. [Quellcode und Anleitung](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial).
+Das externe **UGSo Industrie**-Paket mit Gauge/Poti und seinen Einstellungen hat eine [eigene Paketseite](industrial.md).
 
 ## Weitere Schnittstellenänderungen
-
-Ab Studio **0.1.230** bietet **Gehäuse und Farben** die Checkbox **Rahmenbreite anpassen**, **Rahmenfarbe** und **Rahmenbreite (px)** von 1 bis 16 px. Ohne Haken gilt die bisherige 2-px-Rahmenbreite; mit Haken lässt sich eine eigene Breite einstellen. Der eigene Wert bleibt beim Abschalten gespeichert, der Rahmen bleibt sichtbar. Bei ausgeschaltetem Industriestyle wird kein Gehäuserahmen angezeigt. Paket 0.1.0 bleibt verwendbar.
-
-Ab Studio **0.1.228** bündelt **Wertanzeige** die Optionen **Wert anzeigen**, **Einheit**, **Position des Wertes**, **Schriftgröße (px)** und **Schriftfarbe**. Wählbar sind **Mitte** und **Unten**. Die untere Position liegt unterhalb des Poti-Knopfes. Standard sind unten, 12 px und eine helle Schriftfarbe; die Schriftgröße bleibt beim Ändern der Widget-Größe konstant. Das vorhandene Industriepaket 0.1.0 muss nicht neu installiert werden.
-
-Ab Studio **0.1.227** zeigt **Wert anzeigen** den Messwert einschließlich Einheit. Eine leere Einheit übernimmt `unit_of_measurement` der Home-Assistant-Eingangsentity. Fehlerhafte Farbgrenzen oder Skalen unterdrücken einen geladenen Messwert nicht mehr; die Warnung bleibt im Tooltip. Nach einer Änderung der Skalenlimits müssen die Farbgrenzen passend und aufsteigend eingestellt werden.
-
-Ab Studio **0.1.226** enthält **Größe** beim Gauge/Poti die standardmäßig aktivierte Checkbox **Verhältnis 1:1**. Beim Ziehen und bei der Eingabe bleiben Breite und Höhe gleich; beide Zahlenfelder laufen mit. Ohne Haken sind die Maße unabhängig, jeweils mindestens 64 px. Erneutes Aktivieren übernimmt das größere Maß für beide Seiten. Bestehende Widgets bleiben standardmäßig quadratisch; Paket 0.1.0 bleibt verwendbar.
 
 Ab Studio **0.1.225** gilt die unter **Einstellungen → Allgemein → Editor und Andockpunkte → Ausgangspunkt** gewählte Farbe auch für Ausgänge von Wert-Konverter, LineBox und LineBox Math. Belegte Math-Ausgänge behalten diese Farbe. Signal-Ausgänge und Gehäuse-Snappunkte haben getrennte Farbeinstellungen.
 
