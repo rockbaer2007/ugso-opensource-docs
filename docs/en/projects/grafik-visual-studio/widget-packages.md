@@ -17,6 +17,8 @@ Industrial styling adds four corner screws and a **2 px CSS border**. Studio **0
 
 ## Further interface changes
 
+Studio **0.1.225** applies the color selected in **Settings → General → Editor and dock points → Output point** to Value Converter, LineBox and LineBox Math outputs as well. Occupied Math outputs retain that color. Signal outputs and housing snap points have separate color settings.
+
 From **0.1.208**, clicking **Install** without risk confirmation highlights the checkbox in red and scrolls it into view. Checking it clears the highlight.
 
 From **0.1.207**, opening this tab automatically reloads the catalog and current installation status. Removing a package listed in the catalog makes it installable again, even if it was originally installed locally. Newly approved packages appear the next time the tab opens.

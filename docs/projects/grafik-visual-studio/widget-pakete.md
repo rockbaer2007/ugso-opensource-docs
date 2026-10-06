@@ -17,6 +17,8 @@ Industriestyle ergänzt vier Schraubenköpfe und einen **2-px-CSS-Rand**. Ab Stu
 
 ## Weitere Schnittstellenänderungen
 
+Ab Studio **0.1.225** gilt die unter **Einstellungen → Allgemein → Editor und Andockpunkte → Ausgangspunkt** gewählte Farbe auch für Ausgänge von Wert-Konverter, LineBox und LineBox Math. Belegte Math-Ausgänge behalten diese Farbe. Signal-Ausgänge und Gehäuse-Snappunkte haben getrennte Farbeinstellungen.
+
 Ab **0.1.208** wird eine fehlende Risikobestätigung beim Klick auf **Installieren** rot markiert und in den sichtbaren Bereich gescrollt. Nach dem Setzen des Hakens verschwindet die Markierung.
 
 Ab **0.1.207** öffnet der Reiter automatisch den frisch geladenen Katalog mit dem aktuellen Installationsstatus. Nach dem Entfernen erscheint ein im Katalog veröffentlichtes Paket wieder als installierbar, auch wenn es zuvor lokal installiert wurde. Neue freigegebene Pakete erscheinen beim nächsten Öffnen.
