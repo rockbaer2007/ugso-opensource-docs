@@ -13,7 +13,7 @@ The square widget starts at **64 × 64 px**. Without an input, runtime supports 
 
 Output to `number.*` or `input_number.*` is committed on release or continuously while dragging; changed gauge values are forwarded. The entity must be available and writable. Input and output entities must differ. Visible and visually hidden value lines use the existing dataflow. Editor interaction and writes are disabled.
 
-Industrial styling adds four corner screws and a **2 px CSS border**. Housing docking, port relocation and additive spacing follow separately. [Source and instructions](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial).
+Industrial styling adds four corner screws and a **2 px CSS border**. Studio **0.1.224** applies **General CSS → Corner radius (px)** to this frame. **Housing snap points** offers four independently enabled corners and one spacing value for all sides. With 1 px on each neighbor, the gap is 2 px; single widgets snap when dragged. Set the color in **Settings → General → Editor and dock points → Housing snap point color**. Existing package 0.1.0 remains usable. Signal ports stay separate; automatic port relocation follows later. [Source and instructions](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial).
 
 ## Further interface changes
 

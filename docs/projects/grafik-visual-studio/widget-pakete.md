@@ -13,7 +13,7 @@ Das quadratische Widget beginnt bei **64 × 64 px**. Ohne Eingang wird es in der
 
 Ausgabe an `number.*` oder `input_number.*` erfolgt beim Loslassen oder während des Ziehens; Gauge-Werte werden bei Änderung weitergegeben. Die Entität muss verfügbar und schreibbar sein. Ein- und Ausgangsentität dürfen nicht identisch sein. Sichtbare und optisch unsichtbare Wert-Lines nutzen den vorhandenen Datenfluss. Im Editor sind Bedienung und Schreibaktionen gesperrt.
 
-Industriestyle ergänzt vier Schraubenköpfe und einen **2-px-CSS-Rand**. Neue Gehäuse-Andockpunkte, Anschlussverlegung und additive Fugenabstände folgen separat. [Quellcode und Anleitung](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial).
+Industriestyle ergänzt vier Schraubenköpfe und einen **2-px-CSS-Rand**. Ab Studio **0.1.224** steuert **CSS Allgemein → Eckenradius (px)** auch diesen Rahmen. Der Widget-Bereich **Gehäuse-Snappunkte** bietet vier einzeln aktivierbare Ecken und einen gemeinsamen Abstand für alle Seiten. Bei je 1 px entsteht eine 2-px-Fuge; einzelne Widgets rasten beim Verschieben ein. Die Farbe liegt unter **Einstellungen → Allgemein → Editor und Andockpunkte → Farbe der Gehäuse-Snappunkte**. Das vorhandene Paket 0.1.0 bleibt verwendbar. Signalanschlüsse bleiben getrennt; automatische Anschlussverlegung folgt separat. [Quellcode und Anleitung](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial).
 
 ## Weitere Schnittstellenänderungen
 
