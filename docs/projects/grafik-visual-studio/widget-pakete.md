@@ -5,6 +5,18 @@ description: Lokale Widget-Pakete für HA Grafik Visual Studio erstellen und ins
 
 # Widget-Paket-Schnittstelle
 
+## Externes Industrie-Set: Gauge/Poti
+
+Ab Studio **0.1.223** unterstützt API 0.2 den Host-Renderer `industrial-gauge`. Das optionale Set **UGSo Industrie 0.1.0** enthält zunächst **Gauge/Poti – 270°**. [Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Es wird nicht automatisch installiert und enthält keinen ausführbaren Paketcode.
+
+Das quadratische Widget beginnt bei **64 × 64 px**. Ohne Eingang wird es in der Runtime per Maus, Touch oder Tastatur zum Poti. Eine Eingangs-Entität oder ein aktivierter Koppelpunkt schaltet es zur Anzeige; ein fehlender Eingang bleibt ein Fehlzustand. Der Koppelpunkt hat Vorrang vor der Entität. Wählbar sind Strichskala mit hervorgehobener Null oder Farbring mit aufsteigenden Bis-Werten. Negative Grenzen, Startwert, Skalenteilung und unabhängige Bedien-Schrittweite sind einstellbar. Die letzte Farbe endet am Maximum.
+
+Ausgabe an `number.*` oder `input_number.*` erfolgt beim Loslassen oder während des Ziehens; Gauge-Werte werden bei Änderung weitergegeben. Die Entität muss verfügbar und schreibbar sein. Ein- und Ausgangsentität dürfen nicht identisch sein. Sichtbare und optisch unsichtbare Wert-Lines nutzen den vorhandenen Datenfluss. Im Editor sind Bedienung und Schreibaktionen gesperrt.
+
+Industriestyle ergänzt vier Schraubenköpfe und einen **2-px-CSS-Rand**. Neue Gehäuse-Andockpunkte, Anschlussverlegung und additive Fugenabstände folgen separat. [Quellcode und Anleitung](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial).
+
+## Weitere Schnittstellenänderungen
+
 Ab **0.1.208** wird eine fehlende Risikobestätigung beim Klick auf **Installieren** rot markiert und in den sichtbaren Bereich gescrollt. Nach dem Setzen des Hakens verschwindet die Markierung.
 
 Ab **0.1.207** öffnet der Reiter automatisch den frisch geladenen Katalog mit dem aktuellen Installationsstatus. Nach dem Entfernen erscheint ein im Katalog veröffentlichtes Paket wieder als installierbar, auch wenn es zuvor lokal installiert wurde. Neue freigegebene Pakete erscheinen beim nächsten Öffnen.

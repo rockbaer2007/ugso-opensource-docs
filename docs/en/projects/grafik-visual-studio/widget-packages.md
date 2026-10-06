@@ -5,6 +5,18 @@ description: Create and install local widget packages for HA Grafik Visual Studi
 
 # Widget package interface
 
+## External Industrial set: Gauge/Poti
+
+Studio **0.1.223** adds the API 0.2 host renderer `industrial-gauge`. The optional **UGSo Industrial 0.1.0** set starts with **Gauge/Poti – 270°**. [Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. It is not installed automatically and contains no executable package code.
+
+The square widget starts at **64 × 64 px**. Without an input, runtime supports rotary control by mouse, touch or keyboard. An entity or enabled signal input selects read-only gauge mode; an unavailable input remains an error. Signal input takes precedence over the entity. Choose ticks with emphasized zero or a color ring with ascending upper limits. Negative bounds, initial value, tick division and an independent control step are configurable. The final band ends at the maximum.
+
+Output to `number.*` or `input_number.*` is committed on release or continuously while dragging; changed gauge values are forwarded. The entity must be available and writable. Input and output entities must differ. Visible and visually hidden value lines use the existing dataflow. Editor interaction and writes are disabled.
+
+Industrial styling adds four corner screws and a **2 px CSS border**. Housing docking, port relocation and additive spacing follow separately. [Source and instructions](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial).
+
+## Further interface changes
+
 From **0.1.208**, clicking **Install** without risk confirmation highlights the checkbox in red and scrolls it into view. Checking it clears the highlight.
 
 From **0.1.207**, opening this tab automatically reloads the catalog and current installation status. Removing a package listed in the catalog makes it installable again, even if it was originally installed locally. Newly approved packages appear the next time the tab opens.
