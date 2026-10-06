@@ -17,7 +17,7 @@ Industriestyle ergänzt vier Schraubenköpfe und einen **2-px-CSS-Rand**. Ab Stu
 
 ## Weitere Schnittstellenänderungen
 
-Ab Studio **0.1.229** bietet **Gehäuse und Farben** die Checkbox **Rahmen anzeigen**, **Rahmenfarbe** und **Rahmenstärke (px)** von 1 bis 16 px. Standard bleibt der aktivierte 2-px-Rahmen. Ohne Haken bleiben Gehäusehintergrund und Schrauben erhalten; bei ausgeschaltetem Industriestyle wird kein Gehäuserahmen angezeigt. Paket 0.1.0 bleibt verwendbar.
+Ab Studio **0.1.230** bietet **Gehäuse und Farben** die Checkbox **Rahmenbreite anpassen**, **Rahmenfarbe** und **Rahmenbreite (px)** von 1 bis 16 px. Ohne Haken gilt die bisherige 2-px-Rahmenbreite; mit Haken lässt sich eine eigene Breite einstellen. Der eigene Wert bleibt beim Abschalten gespeichert, der Rahmen bleibt sichtbar. Bei ausgeschaltetem Industriestyle wird kein Gehäuserahmen angezeigt. Paket 0.1.0 bleibt verwendbar.
 
 Ab Studio **0.1.228** bündelt **Wertanzeige** die Optionen **Wert anzeigen**, **Einheit**, **Position des Wertes**, **Schriftgröße (px)** und **Schriftfarbe**. Wählbar sind **Mitte** und **Unten**. Die untere Position liegt unterhalb des Poti-Knopfes. Standard sind unten, 12 px und eine helle Schriftfarbe; die Schriftgröße bleibt beim Ändern der Widget-Größe konstant. Das vorhandene Industriepaket 0.1.0 muss nicht neu installiert werden.
 

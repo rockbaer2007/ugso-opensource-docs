@@ -17,7 +17,7 @@ Industrial styling adds four corner screws and a **2 px CSS border**. Studio **0
 
 ## Further interface changes
 
-Studio **0.1.229** adds **Show frame**, **Frame color** and **Frame thickness (px)** from 1 to 16 px under **Housing and colors**. The default remains an enabled 2 px frame. Unchecking it keeps the housing background and screws; disabling industrial styling also hides the housing frame. Package 0.1.0 remains usable.
+Studio **0.1.230** adds **Customize frame width**, **Frame color** and **Frame width (px)** from 1 to 16 px under **Housing and colors**. Unchecked uses the existing 2 px frame width; checked allows a custom width. Disabling the override retains the custom value and keeps the frame visible. Disabling industrial styling hides the housing frame. Package 0.1.0 remains usable.
 
 Studio **0.1.228** groups **Show value**, **Unit**, **Value position**, **Font size (px)** and **Font color** under **Value display**. Choose **Center** or **Bottom**. The bottom position sits below the rotary knob. Defaults are bottom, 12 px and a light font color; font size remains constant when resizing the widget. Existing industrial package 0.1.0 does not need reinstalling.
 
