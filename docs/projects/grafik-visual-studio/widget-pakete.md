@@ -17,6 +17,8 @@ Industriestyle ergänzt vier Schraubenköpfe und einen **2-px-CSS-Rand**. Ab Stu
 
 ## Weitere Schnittstellenänderungen
 
+Ab Studio **0.1.229** bietet **Gehäuse und Farben** die Checkbox **Rahmen anzeigen**, **Rahmenfarbe** und **Rahmenstärke (px)** von 1 bis 16 px. Standard bleibt der aktivierte 2-px-Rahmen. Ohne Haken bleiben Gehäusehintergrund und Schrauben erhalten; bei ausgeschaltetem Industriestyle wird kein Gehäuserahmen angezeigt. Paket 0.1.0 bleibt verwendbar.
+
 Ab Studio **0.1.228** bündelt **Wertanzeige** die Optionen **Wert anzeigen**, **Einheit**, **Position des Wertes**, **Schriftgröße (px)** und **Schriftfarbe**. Wählbar sind **Mitte** und **Unten**. Die untere Position liegt unterhalb des Poti-Knopfes. Standard sind unten, 12 px und eine helle Schriftfarbe; die Schriftgröße bleibt beim Ändern der Widget-Größe konstant. Das vorhandene Industriepaket 0.1.0 muss nicht neu installiert werden.
 
 Ab Studio **0.1.227** zeigt **Wert anzeigen** den Messwert einschließlich Einheit. Eine leere Einheit übernimmt `unit_of_measurement` der Home-Assistant-Eingangsentity. Fehlerhafte Farbgrenzen oder Skalen unterdrücken einen geladenen Messwert nicht mehr; die Warnung bleibt im Tooltip. Nach einer Änderung der Skalenlimits müssen die Farbgrenzen passend und aufsteigend eingestellt werden.

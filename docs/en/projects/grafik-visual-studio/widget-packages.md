@@ -17,6 +17,8 @@ Industrial styling adds four corner screws and a **2 px CSS border**. Studio **0
 
 ## Further interface changes
 
+Studio **0.1.229** adds **Show frame**, **Frame color** and **Frame thickness (px)** from 1 to 16 px under **Housing and colors**. The default remains an enabled 2 px frame. Unchecking it keeps the housing background and screws; disabling industrial styling also hides the housing frame. Package 0.1.0 remains usable.
+
 Studio **0.1.228** groups **Show value**, **Unit**, **Value position**, **Font size (px)** and **Font color** under **Value display**. Choose **Center** or **Bottom**. The bottom position sits below the rotary knob. Defaults are bottom, 12 px and a light font color; font size remains constant when resizing the widget. Existing industrial package 0.1.0 does not need reinstalling.
 
 Studio **0.1.227** makes **Show value** display the reading with its unit. An empty unit uses the Home Assistant input entity's `unit_of_measurement`. Invalid color thresholds or scales no longer hide an available reading; the warning remains in the tooltip. After changing scale limits, adjust the color thresholds to fit the range in ascending order.
