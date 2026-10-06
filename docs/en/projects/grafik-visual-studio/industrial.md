@@ -1,11 +1,11 @@
 ---
-title: UGSo Industrial – Gauge/Poti
+title: UGSo Industrial – Widgets
 description: Installation and settings for the external Industrial package for Grafik Visual Studio.
 ---
 
-# UGSo Industrial – Gauge/Poti
+# UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.1.0** package contains **Gauge/Poti – 270°**: an instrument for displaying readings or controlling values with a virtual rotary knob. Industrial styling adds a housing, corner screws and a frame. **Studio 0.1.230 or newer** is recommended for all settings described here.
+The external **UGSo Industrial 0.2.0** package contains **Gauge/Poti – 270°** and **Toggle switches – 1 to 4**. Industrial styling adds a housing, corner screws and a frame. **Studio 0.1.232 or newer** is required for all settings described here, including the new toggle switches.
 
 ## Images
 
@@ -18,11 +18,13 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. The optional package uses API 0.2 and contains no executable package code. Basic functionality requires Studio 0.1.223; newer settings are provided by Studio updates. Package 0.1.0 does not need reinstalling for these settings.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. The optional package uses API 0.2 and contains no executable package code. Current package 0.2.0 requires Studio 0.1.232 for toggle switches. Users who only need Gauge/Poti may retain package 0.1.0; its basic functionality requires Studio 0.1.223 and newer settings are provided by Studio updates.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
 ## Data and controls
+
+The following scale and value-display sections describe Gauge/Poti. Toggle switches have a dedicated section at the end of this page.
 
 - **No input:** rotary control in runtime with mouse, touch or keyboard. Initial value and control step are configurable.
 - **Entity or signal input:** read-only gauge. An enabled signal input takes precedence over the entity. An unavailable input is shown as a missing reading.
@@ -74,3 +76,22 @@ The widget starts at **64 × 64 px**. The checked-by-default **1:1 aspect ratio*
 Since Studio 0.1.224, **Housing snap points** offers four independently enabled corners and one spacing value for all sides. With 1 px on each neighbor, the gap is 2 px; single widgets snap when dragged.
 
 Set the color in **Settings → General → Editor and dock points → Housing snap point color**. Signal ports stay separate. Automatic port relocation to free housing sides will follow later.
+
+## Toggle switches – 1 to 4
+
+Package **0.2.0** and Studio **0.1.232** add one to four independently controlled switches side by side. **Number of switches** sets the width/height ratio from **1:1 to 4:1**. Minimum height and width per channel are 64 px; typed changes and resizing preserve the ratio.
+
+![Four industrial toggle switches with small LEDs and three plate legends](/images/grafik-visual-studio/industrial-switches.png)
+
+*Runtime with example data: custom captions, green LEDs and ON/OFF, 1/0 and EIN/AUS plates. The metallic levers and LEDs use original CSS artwork.*
+
+Each **Switch 1** through **Switch 4** group has a static **Caption**, **Plate legend** with **ON/OFF**, **1/0** or **EIN/AUS**, initial state and individual LED on/off colors. The LED sits above the caption; entities never change the plate text. Font size and color are available under **Caption**.
+
+| Connection per channel | Behavior |
+| --- | --- |
+| Input entity | Feedback for lever and LED. When no input is configured, the output entity provides feedback. |
+| Input port | Above its channel, independently enabled; takes precedence over the entity. |
+| Output entity | Controls `switch.*`, `light.*` or `input_boolean.*`. Without a separate output, a compatible input entity is controlled. |
+| Output port | Below its channel, independently enabled. Supplies the last command as a boolean value, or the current state before the first command. |
+
+Unbound switches work locally. Missing feedback disables control. The editor never sends commands. Housing, screws, frame and housing snap settings also apply. To add the toggle switches, update the optional package locally to **0.2.0**; existing Gauge/Poti definitions are retained.
