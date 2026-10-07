@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.2.0** package contains **Gauge/Poti – 270°** and **Toggle switches – 1 to 4**. Industrial styling adds a housing, corner screws and a frame. **Studio 0.1.232 or newer** is required for all settings described here, including the new toggle switches.
+The external **UGSo Industrial 0.3.0** package contains **Gauge/Poti – 270°**, **Toggle switches – 1 to 4** and **Rocker switches – 1 to 4**. Industrial styling adds a housing, corner screws and a frame. **Studio 0.1.235 or newer** is required for all settings described here, including rocker switches.
 
 ## Images
 
@@ -18,11 +18,19 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. The optional package uses API 0.2 and contains no executable package code. Current package 0.2.0 requires Studio 0.1.232 for toggle switches. Users who only need Gauge/Poti may retain package 0.1.0; its basic functionality requires Studio 0.1.223 and newer settings are provided by Studio updates.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. The optional package uses API 0.2 and contains no executable package code. Package 0.3.0 requires Studio 0.1.235 for rocker switches. Updating preserves existing Gauge/Poti and toggle definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
-## Data and controls
+## Rocker switches – 1 to 4
+
+Package **0.3.0** and Studio **0.1.235** add rocker switches as a copy of the toggle widget using transparent PNG artwork. Select **White/Gray**, **Red**, **Black** or **Green** for each channel under **Switch 1** through **Switch 4 → Switch color**. A single widget can combine different colors; its artwork follows each channel's on/off state.
+
+![Four rocker switches with independently selected colors](/images/grafik-visual-studio/industrial-rockers.png)
+
+All toggle settings apply: captions, additional ON/OFF, 1/0 or EIN/AUS legends, LED colors, entities, E1–E4/A1–A4, six housing snap points, screws, frame and spacing. Printed O/I symbols remain part of the artwork. Aspect ratio is 1:1 to 4:1 with at least 64 px per channel. Controls are enabled only in runtime.
+
+## Gauge/Poti: data and controls
 
 The following scale and value-display sections describe Gauge/Poti. Toggle switches have a dedicated section at the end of this page.
 

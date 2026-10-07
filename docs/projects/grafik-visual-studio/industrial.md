@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.2.0** enthält **Gauge/Poti – 270°** und **Kippschalter – 1 bis 4**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Für alle hier beschriebenen Einstellungen einschließlich des Kippschalters wird **Studio 0.1.232 oder neuer** benötigt.
+Das externe Widget-Paket **UGSo Industrie 0.3.0** enthält **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4** und **Wippschalter – 1 bis 4**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Für alle hier beschriebenen Einstellungen einschließlich des Wippschalters wird **Studio 0.1.235 oder neuer** benötigt.
 
 ## Bilder
 
@@ -18,11 +18,19 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Das aktuelle Paket 0.2.0 benötigt Studio 0.1.232 für den Kippschalter. Wer weiterhin nur Gauge/Poti nutzt, kann das bisherige Paket 0.1.0 behalten; dessen Grundfunktion benötigt Studio 0.1.223 und neuere Feineinstellungen kommen durch Studio-Updates hinzu.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Paket 0.3.0 benötigt Studio 0.1.235 für den Wippschalter. Bestehende Gauge/Poti- und Kippschalter-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
-## Daten und Bedienung
+## Wippschalter – 1 bis 4
+
+Ab Paket **0.3.0** und Studio **0.1.235** ist der Wippschalter eine Kopie des Kippschalters mit transparenten PNG-Grafiken. Unter **Schalter 1** bis **Schalter 4 → Schalterfarbe** wird **Weiß/Grau**, **Rot**, **Schwarz** oder **Grün** je Kanal gewählt. Ein Widget kann unterschiedliche Farben kombinieren; die Grafik wechselt mit dem Ein-/Aus-Zustand.
+
+![Vier Wippschalter mit unabhängig gewählten Farben](/images/grafik-visual-studio/industrial-rockers.png)
+
+Alle Kippschalter-Eigenschaften gelten auch hier: Beschriftung, zusätzliche Schilder ON/OFF, 1/0 oder EIN/AUS, LED-Farben, Entitäten, E1–E4/A1–A4, sechs Gehäuse-Snappunkte, Schrauben, Rahmen und Abstand. Das aufgedruckte O/I bleibt Bestandteil der Grafik. Größe 1:1 bis 4:1, mindestens 64 px je Kanal. Bedienung erfolgt nur in der Runtime.
+
+## Gauge/Poti: Daten und Bedienung
 
 Die folgenden Abschnitte zu Skala und Wertanzeige beschreiben Gauge/Poti. Der Kippschalter hat einen eigenen Abschnitt am Ende der Seite.
 
