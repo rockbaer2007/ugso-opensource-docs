@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.5.0** enthält **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2** sowie **Linear-Gauge / Schieberegler** in normaler und schmaler Ausführung. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Für die linearen Widgets wird **Studio 0.1.239 oder neuer** benötigt.
+Das externe Widget-Paket **UGSo Industrie 0.6.0** enthält **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2** sowie **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Für das Zählwerk wird **Studio 0.1.240 oder neuer** benötigt.
 
 ## Bilder
 
@@ -18,9 +18,31 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.239 oder neuer** aktualisieren, danach Paket **0.5.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die fünf bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.240 oder neuer** aktualisieren, danach Paket **0.6.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die sieben bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Zählwerk / Odometer
+
+Das Zählwerk ist eine eigenständige, rein lesende Industrieanzeige mit mechanischen Ziffernrollen. Ein Zahlenwert kommt aus einer **Entität** oder über den einzeln aktivierbaren **Eingangs-Koppelpunkt links** (`value-input`). Der aktivierte Koppelpunkt hat Vorrang; ohne Bindung erscheint der Vorschauwert. Sichtbare und unsichtbare Wert-Verbindungen werden unterstützt. Es gibt keinen Ausgang und keine Schreibbefehle.
+
+| Normal 1:3 | Normal 1:4 |
+| --- | --- |
+| ![Zählwerk mit fünf Ganzzahlstellen, zwei Nachkommastellen und kWh](/images/grafik-visual-studio/industrial-odo-normal-3.png) | ![Breites Zählwerk mit Eingang über eine Wert-Verbindung](/images/grafik-visual-studio/industrial-odo-normal-4.png) |
+
+| Schmal 0,5:3 | Schmal 0,5:4 |
+| --- | --- |
+| ![Schmales Zählwerk mit halber Ziffernhöhe](/images/grafik-visual-studio/industrial-odo-slim-3.png) | ![Breites schmales Zählwerk](/images/grafik-visual-studio/industrial-odo-slim-4.png) |
+
+Die Bilder verwenden Beispieldaten. Bei **1 px Abstand rundherum** gelten **196×64 / 262×64 px** für normale und **196×32 / 262×32 px** für schmale Widgets. Die Breite enthält die Lücken zwischen drei beziehungsweise vier Einzelwidgets wie bei den linearen Anzeigen. **Breite in Rastereinheiten**, Eingabe, Ziehen und Änderungen des Abstands berücksichtigen diese Ausrichtung.
+
+Die **Ziffernfensterhöhe** beträgt fest 62,5 % der Widgethöhe: **40 px** bei 64 px, **20 px** bei 32 px. 1:3 und 1:4 nutzen die gleiche Höhe; die schmalen Formate exakt die Hälfte. Mehr Stellen verändern Ziffernbreite und Abstände, nicht die Höhe.
+
+**Ganzzahlstellen** ist fest auf 1–12, **Nachkommastellen** auf 0–6 einstellbar. Das Komma oder der Punkt besitzt einen schmalen Zwischenraum. Beispiel: fünf Ganzzahlstellen und zwei Nachkommastellen ergeben `00123,45`. Ohne **Führende Nullen** bleiben deren Plätze leer. **Platz für Minuszeichen** reserviert dauerhaft eine Position vor den Ziffern; negative Werte ohne diesen Platz werden als Überlauf behandelt.
+
+Eine eingetragene **Einheit** hat Vorrang vor `unit_of_measurement` der Entität beziehungsweise der Einheit der Wert-Verbindung. Die Einheit bleibt rechts neben dem Ziffernfenster. **Schriftfarbe** und **Einheiten-Schriftgröße** sind einstellbar; lange Einheiten werden gekürzt. Industriestyle, standardmäßig aktive Schrauben, Rahmenfarbe, optionale Rahmenbreite, vier einzeln aktive Gehäuse-Ecken und Abstand bleiben verfügbar.
+
+In der Runtime rollen geänderte Ziffern für 350 ms, einschließlich Übertrag von 09 auf 10. Die Browser-Einstellung für reduzierte Bewegung deaktiviert diese Animation. Fehlende oder nicht verfügbare Werte zeigen **Striche**; ein Wert außerhalb der Stellenzahl zeigt **#**. Rundung erfolgt vor der Überlaufprüfung, beispielsweise wird `99999,999` bei fünf Ganzzahl- und zwei Nachkommastellen als Überlauf erkannt. Die Breite bleibt dabei konstant.
 
 ## Linear-Gauge / Schieberegler
 

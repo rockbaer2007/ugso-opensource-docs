@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.5.0** package contains **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2** and normal/slim **Linear gauge / slider** widgets. Industrial styling adds a housing, corner screws and a frame. Linear widgets require **Studio 0.1.239 or newer**.
+The external **UGSo Industrial 0.6.0** package contains **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2** and normal/slim **Linear gauge / slider** and **Odometer** widgets. Industrial styling adds a housing, corner screws and a frame. Odometers require **Studio 0.1.240 or newer**.
 
 ## Images
 
@@ -18,9 +18,31 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.239 or newer** first, then install package **0.5.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves the five existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.240 or newer** first, then install package **0.6.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves the seven existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Odometer
+
+An original read-only industrial display with mechanical digit reels. Input comes from an **entity** or the individually enabled **left input port** (`value-input`). The enabled port takes priority; without a binding, the preview value applies. Visible and hidden value connections work. No output or service writes are provided.
+
+| Normal 1:3 | Normal 1:4 |
+| --- | --- |
+| ![Odometer with five integer digits, two decimals and kWh](/images/grafik-visual-studio/industrial-odo-normal-3.png) | ![Wide odometer receiving a value connection](/images/grafik-visual-studio/industrial-odo-normal-4.png) |
+
+| Slim 0.5:3 | Slim 0.5:4 |
+| --- | --- |
+| ![Slim odometer with half-height digits](/images/grafik-visual-studio/industrial-odo-slim-3.png) | ![Wide slim odometer](/images/grafik-visual-studio/industrial-odo-slim-4.png) |
+
+Images use example data. With **1 px all-side spacing**, normal sizes are **196×64 / 262×64 px** and slim sizes **196×32 / 262×32 px**. Width includes the gaps between three/four individual widgets, as on linear displays. Width in grid units, typing, resizing and spacing edits preserve this alignment.
+
+The fixed **digit window height** is 62.5% of widget height: **40 px** at 64 px and **20 px** at 32 px. Both widths share the same digit height; slim variants use exactly half. Additional digits compress width and spacing, leaving height unchanged.
+
+Choose fixed **1–12 integer digits** and **0–6 decimal places**. The comma/dot uses a narrow separator slot. Five integer digits and two decimals produce `00123,45`. Disabling **Leading zeros** leaves their positions blank. **Reserve minus sign** allocates a permanent sign position; negative readings without it are treated as overflow.
+
+An explicit **unit** overrides the entity's `unit_of_measurement` or connection unit. Units remain to the right of the digit window. **Font color** and **Unit font size** are configurable; long units are clipped. Housing, default screws, frame color, optional frame width, four independent housing corners and spacing remain available.
+
+Changed digits roll for 350 ms in runtime, including the 09→10 carry. Reduced-motion browser preferences disable animation. Missing or unavailable values show **dashes**; readings exceeding the configured digits show **#**. Rounding occurs before overflow detection: `99999.999` overflows five integer digits with two decimals. The housing width stays constant.
 
 ## Linear gauge / slider
 
