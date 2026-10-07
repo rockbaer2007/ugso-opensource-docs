@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.10.3** package contains fifteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, plus **Blank panel**. Industrial styling adds a housing, corner screws and a frame. The blank panel requires **Studio 0.1.247 or newer**.
+The external **UGSo Industrial 0.11.1** package contains sixteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, **Blank panel**, and **Heating – boiler and oil tank**. Industrial styling adds a housing, corner screws and a frame. The heating widget requires **Studio 0.1.251 or newer**.
 
 ## Images
 
@@ -20,9 +20,29 @@ The images show runtime with example data, not live measurements.
 
 Every entity field in the set provides an **…** button opening the **Home Assistant entity picker**. Search, select an entity and use **Insert** to fill the active field. From **Studio 0.1.250**, this also covers each toggle/rocker channel's **Input entity** and **Output entity** fields, assigning the selection to the correct channel. Updating Studio is sufficient with existing packages.
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.250 or newer** first, then install package **0.10.3**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all fifteen existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.251 or newer** first, then install package **0.11.1**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all fifteen existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Heating – boiler and oil tank
+
+![SVG heating widget with temperatures, two pumps, burner, fault and tank level](/images/grafik-visual-studio/industrial-heating.png)
+
+The compact SVG drawing includes a dark-red boiler, two green pumps, a blue burner and a copper tank. **Width:height is 4:6 grid cells**, including additive housing gaps: with 1 px spacing, minimum **262×394 px**, default **518×778 px**. Typed dimensions and resize handles scale both axes together. The image shows local test data.
+
+| Display | Entity and settings |
+| --- | --- |
+| Heating circuit temperature | Numeric entity, optional display, individual text color |
+| Boiler, hot and cold water temperatures | Independent numeric entities and text colors |
+| Heating pump, circulation pump, burner | Independent Boolean entities; each status panel can be hidden |
+| Fault | Boolean entity; warning next to boiler temperature, optional |
+| Tank level | Numeric percentage sensor **0–100 %**, liquid height and reading |
+
+All **nine entity fields** offer the Home Assistant picker. Boolean states `on/off`, `true/false` and `1/0` are recognized; labels can use **EIN/AUS**, **ON/OFF** or **1/0**. Temperature units come from the entity. Default colors match the concept: red temperatures, blue cold water, green active status, yellow fault and orange level.
+
+**Flow arrows** for heating, circulation, hot water, cold water and the thin copper **oil line toward the burner** can be disabled independently. The right pump sits in a straight vertical pipe rising from the boiler; hot and cold water are separate lines. The tank sensor must provide percent, with no automatic litre conversion. Out-of-range readings clamp the column while retaining the original number.
+
+Missing or invalid values show a dash; unknown fault status shows a question mark. No measurement values are invented without entities. Optional **Example data without entities** defaults off. This is a read-only display and sends no switching commands. Only housing docking is available; Industrial styling, screws, frame and background customization follow the other widgets.
 
 ## Blank panel
 

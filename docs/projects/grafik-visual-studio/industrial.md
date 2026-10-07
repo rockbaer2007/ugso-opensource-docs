@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.10.3** enthält fünfzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED** sowie **Blindelement**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Blindelement benötigt **Studio 0.1.247 oder neuer**.
+Das externe Widget-Paket **UGSo Industrie 0.11.1** enthält sechzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED**, **Blindelement** sowie **Heizung – Kessel und Öltank**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Heizungswidget benötigt **Studio 0.1.251 oder neuer**.
 
 ## Bilder
 
@@ -20,9 +20,29 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 Alle Entitätsfelder des Sets besitzen eine **…**-Schaltfläche zum Öffnen der **Home-Assistant-Entitätenauswahl**. Gewünschte Entität suchen, auswählen und mit **Einfügen** in das aktive Feld übernehmen. Ab **Studio 0.1.250** gilt das auch für **Eingang: Entität** und **Ausgang: Entität** in jedem Kipp-/Wippschalterkanal. Die Auswahl wird dem jeweiligen Kanal zugeordnet. Für vorhandene Pakete genügt das Studio-Update.
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.250 oder neuer** aktualisieren, danach Paket **0.10.3** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.251 oder neuer** aktualisieren, danach Paket **0.11.1** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Heizung – Kessel und Öltank
+
+![SVG-Heizungswidget mit Temperaturen, zwei Pumpen, Brenner, Störung und Tankfüllstand](/images/grafik-visual-studio/industrial-heating.png)
+
+Die kompakte SVG-Zeichnung zeigt einen dunkelroten Heizkessel, zwei grüne Pumpen, blauen Brenner und Kupfertank. **Breite:Höhe 4:6 Rasterfelder**, mit den additiven Gehäuseabständen: bei 1 px Abstand mindestens **262×394 px**, voreingestellt **518×778 px**. Größe eingeben oder ziehen skaliert beide Richtungen gemeinsam. Die Abbildung zeigt lokale Testwerte.
+
+| Anzeige | Entität und Einstellungen |
+| --- | --- |
+| Heizkreistemperatur | Numerische Entität, ausblendbar, eigene Textfarbe |
+| Kessel-, Warmwasser-, Kaltwassertemperatur | Je eine numerische Entität und eigene Textfarbe |
+| Heizkreispumpe, Zirkulationspumpe, Brenner | Je eine Boolean-Entität; Statusanzeige separat ausblendbar |
+| Störung | Boolean-Entität; Warnsymbol neben Kesseltemperatur, ausblendbar |
+| Tankfüllstand | Numerischer Sensor in Prozent **0–100 %**, Füllhöhe und Zahlenwert |
+
+Alle **neun Entitäten** besitzen die Home-Assistant-Auswahl. Boolean-Werte `on/off`, `true/false` und `1/0` werden erkannt; die sichtbare Beschriftung ist wählbar als **EIN/AUS**, **ON/OFF** oder **1/0**. Temperaturen übernehmen die Einheit der Entität und lassen sich unabhängig einfärben. Die Grundfarben entsprechen der Vorlage: rot für Temperaturen, blau für Kaltwasser, grün für eingeschalteten Status, gelb für Störung und orange für Füllstand.
+
+**Flusspfeile** für Heizkreis, Zirkulation, Warmwasser, Kaltwasser und die dünne kupferfarbene **Ölleitung zum Brenner** sind einzeln abschaltbar. Die rechte Pumpe befindet sich in einer senkrechten Leitung direkt vom Kessel nach oben. Warm- und Kaltwasser bleiben separate Leitungen. Der Tank-Sensor muss Prozent liefern; Liter werden nicht automatisch umgerechnet. Werte außerhalb 0–100 % begrenzen nur die Füllhöhe, der Originalwert bleibt als Zahl sichtbar.
+
+Fehlende oder ungültige Werte zeigen einen Strich; ein unbekannter Störungszustand zeigt ein Fragezeichen. Ohne Entitäten werden keine Messwerte erfunden. **Beispieldaten ohne Entitäten** sind optional und standardmäßig ausgeschaltet. Das Widget ist eine Anzeige und sendet keine Schaltbefehle. Es besitzt nur Gehäuse-Andockpunkte; Industriestyle, Schrauben, Rahmen und angepasster Hintergrund stehen wie im übrigen Set zur Verfügung.
 
 ## Blindelement
 
