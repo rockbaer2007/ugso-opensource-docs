@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.4.0** package contains **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4** and **LCD – 16×2**. Industrial styling adds a housing, corner screws and a frame. The new LCDs require **Studio 0.1.238 or newer**.
+The external **UGSo Industrial 0.5.0** package contains **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2** and normal/slim **Linear gauge / slider** widgets. Industrial styling adds a housing, corner screws and a frame. Linear widgets require **Studio 0.1.239 or newer**.
 
 ## Images
 
@@ -18,9 +18,36 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.238 or newer** first, then install package **0.4.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves existing Gauge/Poti, toggle and rocker definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.239 or newer** first, then install package **0.5.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves the five existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Linear gauge / slider
+
+With an **input entity** or enabled **dataflow input**, the widget becomes a gauge: a **triangle** marks the value on a **tick scale** or **color bar** with configurable ranges. Without input it becomes a **rectangular-handle slider with ticks only**. Even a previously saved color-bar setting never creates colored ranges in slider mode.
+
+| Slider with ticks | Linear gauge with color ranges |
+| --- | --- |
+| ![Linear slider with a rectangular handle and tick scale](/images/grafik-visual-studio/industrial-linear-slider.png) | ![Linear gauge with a triangle and configured color ranges](/images/grafik-visual-studio/industrial-linear-gauge.png) |
+
+| Slim slider | Slim linear gauge |
+| --- | --- |
+| ![Slim linear control with ticks](/images/grafik-visual-studio/industrial-linear-slim.png) | ![Slim linear gauge with a triangle](/images/grafik-visual-studio/industrial-linear-slim-gauge.png) |
+
+Images use example data. **Size → Width in grid units** offers 2, 3 and 4:
+
+| Variant | Height/width | Minimum sizes (width × height) |
+| --- | --- | --- |
+| Normal | 1:2 / 1:3 / 1:4 | 130×64 / 196×64 / 262×64 px |
+| Slim | 0.5:2 / 0.5:3 / 0.5:4 | 130×32 / 196×32 / 262×32 px |
+
+The table assumes **1 px all-side spacing**. Width includes the gaps between separate widgets: **cell width × span + 2 × spacing × (span − 1)**. Cell width equals the height, doubled for slim widgets. With zero spacing, widths are 128/192/256 px. Outer edges therefore align with two, three or four separate widgets; editing spacing updates the total width automatically.
+
+Typed dimensions and resizing scale both dimensions in the selected ratio. **Minimum**, **maximum**, **scale division** and **control step** are independent. Negative ranges are supported and zero is highlighted. **Show scale values** adds endpoints and zero where space permits. Color bars use the same up to eight ranges as Gauge/Poti. Invalid ranges never invent colors; unavailable input hides the pointer.
+
+Value display uses the same units and font settings as Gauge/Poti. **Center** places it centrally above the linear scale; **Bottom** places it below. Industrial styling, screws, frame color, optional frame width, four individually enabled housing corners, all-side spacing and shared port colors also apply.
+
+In runtime, use mouse, touch or keyboard. Arrow keys move by one step, Page Up/Down by ten steps, and Home/End select the minimum/maximum. Output is sent **on release** or **while dragging**. A `number`/`input_number` entity or an output port with a visible/hidden value connection receives the value. The editor sends no control commands. Enabled dataflow input takes priority over the input entity and remains in gauge mode when its value is unavailable.
 
 ## LCD – 20×4 and 16×2
 

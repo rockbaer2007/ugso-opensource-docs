@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.4.0** enthält **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4** und **LCD – 16×2**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Für die neuen LCDs wird **Studio 0.1.238 oder neuer** benötigt.
+Das externe Widget-Paket **UGSo Industrie 0.5.0** enthält **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2** sowie **Linear-Gauge / Schieberegler** in normaler und schmaler Ausführung. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Für die linearen Widgets wird **Studio 0.1.239 oder neuer** benötigt.
 
 ## Bilder
 
@@ -18,9 +18,36 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.238 oder neuer** aktualisieren, danach Paket **0.4.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Bestehende Gauge/Poti-, Kippschalter- und Wippschalter-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.239 oder neuer** aktualisieren, danach Paket **0.5.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die fünf bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Linear-Gauge / Schieberegler
+
+Mit **Eingangsentität** oder aktiviertem **Datenfluss-Eingang** arbeitet das Widget als Anzeige: ein **Dreieck** markiert den Wert. Wählbar sind **Strichskala** oder **Farbbalken** mit eigenen Farbbereichen. Ohne Eingang wird es zum **Schieberegler mit rechteckigem Griff und ausschließlich Strichskala**. Auch eine zuvor gespeicherte Farbbalken-Einstellung erzeugt im Schieberegler keinen Farbbalken.
+
+| Schieberegler mit Strichskala | Linear-Gauge mit Farbbalken |
+| --- | --- |
+| ![Linearer Schieberegler mit rechteckigem Griff und Strichskala](/images/grafik-visual-studio/industrial-linear-slider.png) | ![Linear-Gauge mit Dreieck und konfigurierten Farbbereichen](/images/grafik-visual-studio/industrial-linear-gauge.png) |
+
+| Schmaler Schieberegler | Schmales Linear-Gauge |
+| --- | --- |
+| ![Schmale lineare Bedienung mit Strichskala](/images/grafik-visual-studio/industrial-linear-slim.png) | ![Schmale lineare Anzeige mit Dreieck](/images/grafik-visual-studio/industrial-linear-slim-gauge.png) |
+
+Die Bilder verwenden Beispieldaten. Unter **Größe → Breite in Rastereinheiten** stehen 2, 3 und 4 zur Auswahl:
+
+| Ausführung | Höhe/Breite | Mindestgrößen (Breite × Höhe) |
+| --- | --- | --- |
+| Normal | 1:2 / 1:3 / 1:4 | 130×64 / 196×64 / 262×64 px |
+| Schmal | 0,5:2 / 0,5:3 / 0,5:4 | 130×32 / 196×32 / 262×32 px |
+
+Die Tabelle gilt für **1 px Abstand rundherum**. Die Gesamtbreite berücksichtigt die Lücken zwischen einzelnen Widgets: **Rasterbreite × Einheiten + 2 × Abstand × (Einheiten − 1)**. Rasterbreite ist die Höhe, bei der schmalen Ausführung die doppelte Höhe. Ohne Abstand ergeben sich 128/192/256 px. Damit fluchten die Außenkanten mit zwei, drei oder vier einzelnen Widgets; Änderungen am Abstand passen die Breite automatisch an.
+
+Beim Eingeben oder Ziehen werden beide Maße im gewählten Verhältnis skaliert. **Minimum**, **Maximum**, **Skalenteilung** und **Bedien-Schrittweite** sind getrennt einstellbar; negative Werte sind erlaubt, Null wird hervorgehoben. **Skalenwerte anzeigen** ergänzt die Endpunkte und bei freiem Platz Null. Für den Farbbalken gelten die gleichen bis zu acht Farbbereiche wie beim Gauge/Poti. Ungültige Bereiche zeigen keine erfundenen Farben; fehlende Eingangswerte zeigen keinen Zeiger.
+
+Die Wertanzeige übernimmt Einheit und Schriftgestaltung wie beim Gauge/Poti. **Mitte** platziert sie mittig oberhalb der linearen Skala, **Unten** unterhalb. Industriestyle, Schrauben, Rahmenfarbe, optionale Rahmenbreite, vier einzeln aktivierbare Gehäuse-Ecken, Abstand und zentrale Koppelpunktfarben gelten ebenfalls.
+
+In der Runtime lässt sich der Griff mit Maus, Touch oder Tastatur bewegen. Pfeiltasten ändern um einen Bedien-Schritt, Bild auf/ab um zehn Schritte, Pos1/Ende springen zum Minimum/Maximum. Ausgabe erfolgt **beim Loslassen** oder **während des Ziehens**. Eine `number`-/`input_number`-Entität oder ein Ausgangspunkt mit sichtbarer/unsichtbarer Wert-Verbindung übernimmt den Wert. Der Editor sendet keine Bedienbefehle. Ein aktivierter Datenfluss-Eingang hat Vorrang vor der Eingangsentität und bleibt auch bei fehlendem Wert im Anzeigemodus.
 
 ## LCD – 20×4 und 16×2
 
