@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.6.0** package contains **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2** and normal/slim **Linear gauge / slider** and **Odometer** widgets. Industrial styling adds a housing, corner screws and a frame. Odometers require **Studio 0.1.240 or newer**.
+The external **UGSo Industrial 0.7.0** package contains twelve widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, plus **7-segment LED**, **16-segment LED** and **16-segment LCD**. Industrial styling adds a housing, corner screws and a frame. Segment displays require **Studio 0.1.243 or newer**.
 
 ## Images
 
@@ -18,9 +18,25 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.242 or newer** first, then install package **0.6.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves the seven existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.243 or newer** first, then install package **0.7.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all nine existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Segment displays: LED and LCD
+
+| 7-segment LED | 16-segment LED | 16-segment LCD |
+| --- | --- | --- |
+| ![Red seven-segment LED reading 647.25 watts](/images/grafik-visual-studio/industrial-segment-0.png) | ![Blue sixteen-segment LED receiving 56.78 with the ampere indicator](/images/grafik-visual-studio/industrial-segment-1.png) | ![Green sixteen-segment LCD reading SOLAR 12.3 with the volt indicator](/images/grafik-visual-studio/industrial-segment-2.png) |
+
+Images use example data. Each display has **1–10 fixed positions**. A minus sign uses one position; decimal points attach to the preceding character. Seven-segment LED supports numeric values, configurable decimal places and optional leading zeros. Rounding happens before capacity checks; overflow and missing readings show dashes. Sixteen-segment displays support numbers and uppercase text. Long text is clipped with its full content in the tooltip; unsupported characters become question marks. Supported characters include A–Z, 0–9, spaces, decimal points, minus, underscore, question mark, plus, slashes, colon, equals and degree sign.
+
+**Content: entity** supplies the value or text. Without a binding, **Preview value / text** applies. The independently enabled **left value input** (`value-input`) takes priority over the entity. A separate **top power input** (`display-power`) or **Display on/off entity** controls the display. The power input takes priority; without a binding, the default power checkbox applies. Missing or unknown power inputs make the display dark. Visible and hidden connections work, including power from toggle switches. Displays have no outputs or service writes.
+
+**W, A and V** are stacked on the right. The unit selection is exclusively **Off / W / A / V**: at most one label lights up. Others remain dim. **Segment and unit color** applies to all active digits, characters and the chosen unit. LED mode adds a subtle glow; LCD uses contrasting segments on an adjustable background. Unit selection is explicit, rather than inferred from entity attributes.
+
+Default dimensions are **262×64 px (1:4)**, with **196×64 px (1:3)** available, at **1 px all-side spacing**. Width = height × grid span + 2 × spacing × (span − 1), matching switch banks and linear displays. Numeric sizing and dragging preserve this ratio. Choose 1:4 for ten readable positions; enlarge the whole widget if needed. Housing, screws, frame color, optional frame thickness, four individually enabled corner snap points and spacing remain available.
+
+Original SVG segment geometry requires no installed font. The supplied **16Segments Basic.otf** permits personal use only according to its embedded license, so it is not redistributed in the public package.
 
 ## Odometer
 

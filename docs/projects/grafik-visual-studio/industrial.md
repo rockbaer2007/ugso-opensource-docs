@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.6.0** enthält **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2** sowie **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Für das Zählwerk wird **Studio 0.1.240 oder neuer** benötigt.
+Das externe Widget-Paket **UGSo Industrie 0.7.0** enthält zwölf Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung sowie **7-Segment – LED**, **16-Segment – LED** und **16-Segment – LCD**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Die Segmentanzeigen benötigen **Studio 0.1.243 oder neuer**.
 
 ## Bilder
 
@@ -18,9 +18,25 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.242 oder neuer** aktualisieren, danach Paket **0.6.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die sieben bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.243 oder neuer** aktualisieren, danach Paket **0.7.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die neun bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Segmentanzeigen: LED und LCD
+
+| 7-Segment-LED | 16-Segment-LED | 16-Segment-LCD |
+| --- | --- | --- |
+| ![Rote 7-Segment-LED mit 647,25 Watt](/images/grafik-visual-studio/industrial-segment-0.png) | ![Blaue 16-Segment-LED mit Eingangswert 56,78 und Ampere-Anzeige](/images/grafik-visual-studio/industrial-segment-1.png) | ![Grüne 16-Segment-LCD mit SOLAR 12.3 und Volt-Anzeige](/images/grafik-visual-studio/industrial-segment-2.png) |
+
+Die Bilder verwenden Beispieldaten. Alle drei Anzeigen haben **1–10 feste Stellen**. Das Minuszeichen belegt eine Stelle, ein Dezimalpunkt wird an die vorherige Stelle angehängt. Die 7-Segment-LED zeigt Zahlen mit einstellbaren Nachkommastellen und optionalen führenden Nullen. Rundung erfolgt vor der Prüfung der Stellenzahl; Überlauf oder fehlende Werte zeigen Striche. Die 16-Segment-Anzeigen zeigen Zahlen und Text in Großbuchstaben. Längere Texte werden gekürzt, der vollständige Inhalt steht im Tooltip; nicht unterstützte Zeichen erscheinen als Fragezeichen. Unterstützt werden A–Z, 0–9, Leerzeichen, Punkt, Minus, Unterstrich, Fragezeichen, Plus, Schrägstriche, Doppelpunkt, Gleichheits- und Gradzeichen.
+
+**Inhalt: Entität** liefert den Messwert beziehungsweise Text. Ohne Bindung gilt **Vorschauwert / Text**. Alternativ wird der **Wert-Eingangs-Koppelpunkt links** (`value-input`) einzeln aktiviert; er hat Vorrang vor der Entität. Ein zweiter, unabhängig aktivierbarer Koppelpunkt **oben** (`display-power`) oder **Display Ein/Aus: Entität** steuert die Anzeige. Der Ein/Aus-Koppelpunkt hat Vorrang; ohne Bindung gilt **Ohne Eingang eingeschaltet**. Fehlende oder unbekannte Ein/Aus-Werte lassen die Anzeige dunkel. Sichtbare und unsichtbare Wert-Verbindungen funktionieren, beispielsweise vom Kippschalter. Diese Anzeigen haben keine Ausgänge oder Schreibbefehle.
+
+Rechts stehen **W, A und V untereinander**. Unter **Einheiten-LED** ist ausschließlich **Aus / W / A / V** wählbar: maximal eine Beschriftung leuchtet. Die übrigen bleiben dunkel sichtbar. **Segment- und Einheitenfarbe** gilt für Ziffern, Text und gewählte Einheit gemeinsam. LED-Modi imitieren leuchtende Segmente mit leichtem Lichtschein, LCD verwendet kontrastierende Segmente auf einem einstellbaren Hintergrund. Die Einheit wird bewusst ausgewählt und nicht automatisch aus Entitätsattributen abgeleitet.
+
+Die Standardgröße beträgt **262×64 px** im **1:4-Raster**, alternativ **196×64 px** im **1:3-Raster**, jeweils bei **1 px Abstand rundherum**. Wie bei Schaltern und linearen Anzeigen gilt: Breite = Höhe × Rastereinheiten + 2 × Abstand × (Rastereinheiten − 1). Eingabe und Ziehen halten das Verhältnis ein. Für zehn gut lesbare Stellen empfiehlt sich 1:4; bei Bedarf lässt sich das ganze Widget vergrößern. Gehäuse, Schrauben, Rahmenfarbe, optionale Rahmenbreite, vier einzeln aktivierbare Gehäuse-Ecken und Abstand bleiben verfügbar.
+
+Die Segmentgeometrie ist eine eigene SVG-Zeichnung und benötigt keine installierte Schrift. Die bereitgestellte **16Segments Basic.otf** ist laut eingebetteter Lizenz nur privat nutzbar und wird deshalb nicht im öffentlichen Paket verteilt.
 
 ## Zählwerk / Odometer
 
