@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.11.5** package contains sixteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, **Blank panel**, and **Heating – boiler and oil tank**. Industrial styling adds a housing, corner screws and a frame. The detailed heating artwork requires **Studio 0.1.253 or newer**.
+The external **UGSo Industrial 0.11.6** package contains sixteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, **Blank panel**, and **Heating – boiler and oil tank**. Industrial styling adds a housing, corner screws and a frame. The detailed heating artwork requires **Studio 0.1.253 or newer**.
 
 **Upgrade note:** Version 0.11.4 could not upgrade existing installations because widget captions changed. Use **0.11.5** as a local `.wg` file instead; it preserves published widget contracts and entity bindings. Studio **0.1.259** displays supply captions without changing persisted group keys.
 
@@ -37,12 +37,15 @@ The detailed transparent PNG reference places a dark-red boiler, two green pumps
 | Display | Entity and settings |
 | --- | --- |
 | Supply temperature | Numeric entity, optional display, individual text color |
+| Return temperature | Numeric entity, optional display, individual text color; panel below the orange pipe |
 | Boiler, hot and cold water temperatures | Independent numeric entities and text colors |
 | Heating pump, circulation pump, burner | Independent Boolean entities; each status panel can be hidden |
 | Fault | Boolean entity; warning next to boiler temperature, optional |
 | Tank level | Numeric percentage sensor **0–100 %**, liquid height and reading |
 
-All **nine entity fields** offer the Home Assistant picker. Boolean states `on/off`, `true/false` and `1/0` are recognized; labels can use **EIN/AUS**, **ON/OFF** or **1/0**. Temperature units come from the entity. Default colors match the concept: red temperatures, blue cold water, green active status, yellow fault and orange level.
+All **ten entity fields** offer the Home Assistant picker. Boolean states `on/off`, `true/false` and `1/0` are recognized; labels can use **EIN/AUS**, **ON/OFF** or **1/0**. Temperature units come from the entity. Default colors match the concept: red temperatures, orange return, blue cold water, green active status, yellow fault and pink level.
+
+Since **Studio 0.1.260**, the left red connection is raised and an orange return pipe runs in front with a slight bend parallel to the boiler connection. Its arrow sits at the left end and points right toward the boiler. **Return** properties provide entity selection, visibility, text color and an independent flow arrow. Existing widgets receive these controls through the Studio update; **Industrial 0.11.6** updates instructions while preserving package contracts. Custom tank colors are retained; the old orange default migrates once to pink.
 
 **Flow arrows** for supply, circulation, hot water, cold water and the thin copper **oil line toward the burner** can be disabled independently. The right pump sits in a straight vertical pipe rising from the boiler; hot and cold water are separate lines. The tank sensor must provide percent, with no automatic litre conversion. Out-of-range readings clamp the column while retaining the original number.
 

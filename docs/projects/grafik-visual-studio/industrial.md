@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.11.5** enthält sechzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED**, **Blindelement** sowie **Heizung – Kessel und Öltank**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Heizungswidget mit der detaillierten Grafik benötigt **Studio 0.1.253 oder neuer**.
+Das externe Widget-Paket **UGSo Industrie 0.11.6** enthält sechzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED**, **Blindelement** sowie **Heizung – Kessel und Öltank**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Heizungswidget mit der detaillierten Grafik benötigt **Studio 0.1.253 oder neuer**.
 
 **Updatehinweis:** Version 0.11.4 konnte wegen geänderter Widgetbeschriftungen nicht über eine bestehende Installation installiert werden. Verwende stattdessen **0.11.5** als lokale `.wg`-Datei; sie bewahrt die veröffentlichten Widgetverträge und Entitätsbindungen. Studio **0.1.259** zeigt die Vorlauf-Einstellungen unter der neuen Bezeichnung an, ohne gespeicherte Gruppenschlüssel zu ändern.
 
@@ -37,12 +37,15 @@ Die detaillierte transparente PNG-Vorlage zeigt einen dunkelroten Heizkessel, zw
 | Anzeige | Entität und Einstellungen |
 | --- | --- |
 | Vorlauftemperatur | Numerische Entität, ausblendbar, eigene Textfarbe |
+| Rücklauftemperatur | Numerische Entität, ausblendbar, eigene Textfarbe; Anzeige unter dem orangefarbenen Rohr |
 | Kessel-, Warmwasser-, Kaltwassertemperatur | Je eine numerische Entität und eigene Textfarbe |
 | Heizkreispumpe, Zirkulationspumpe, Brenner | Je eine Boolean-Entität; Statusanzeige separat ausblendbar |
 | Störung | Boolean-Entität; Warnsymbol neben Kesseltemperatur, ausblendbar |
 | Tankfüllstand | Numerischer Sensor in Prozent **0–100 %**, Füllhöhe und Zahlenwert |
 
-Alle **neun Entitäten** besitzen die Home-Assistant-Auswahl. Boolean-Werte `on/off`, `true/false` und `1/0` werden erkannt; die sichtbare Beschriftung ist wählbar als **EIN/AUS**, **ON/OFF** oder **1/0**. Temperaturen übernehmen die Einheit der Entität und lassen sich unabhängig einfärben. Die Grundfarben entsprechen der Vorlage: rot für Temperaturen, blau für Kaltwasser, grün für eingeschalteten Status, gelb für Störung und orange für Füllstand.
+Alle **zehn Entitäten** besitzen die Home-Assistant-Auswahl. Boolean-Werte `on/off`, `true/false` und `1/0` werden erkannt; die sichtbare Beschriftung ist wählbar als **EIN/AUS**, **ON/OFF** oder **1/0**. Temperaturen übernehmen die Einheit der Entität und lassen sich unabhängig einfärben. Die Grundfarben entsprechen der Vorlage: rot für Temperaturen, orange für Rücklauf, blau für Kaltwasser, grün für eingeschalteten Status, gelb für Störung und rosa für Füllstand.
+
+Ab **Studio 0.1.260** liegt der linke rote Anschluss höher. Der orange Rücklauf verläuft davor mit leichtem Knick parallel zum Anschluss am Kessel; sein Pfeil sitzt links und zeigt nach rechts zum Kessel. Unter **Rücklauf** sind Entität, Anzeige sichtbar, Textfarbe und Flusspfeil einstellbar. Bestehende Widgets erhalten die Eigenschaften durch das Studio-Update; **Industrial 0.11.6** ergänzt die Anleitung und bewahrt die Paketverträge. Vorhandene eigene Füllstandsfarben bleiben erhalten; der alte orange Standard wird einmalig rosa.
 
 **Flusspfeile** für Vorlauf, Zirkulation, Warmwasser, Kaltwasser und die dünne kupferfarbene **Ölleitung zum Brenner** sind einzeln abschaltbar. Die rechte Pumpe befindet sich in einer senkrechten Leitung direkt vom Kessel nach oben. Warm- und Kaltwasser bleiben separate Leitungen. Der Tank-Sensor muss Prozent liefern; Liter werden nicht automatisch umgerechnet. Werte außerhalb 0–100 % begrenzen nur die Füllhöhe, der Originalwert bleibt als Zahl sichtbar.
 
