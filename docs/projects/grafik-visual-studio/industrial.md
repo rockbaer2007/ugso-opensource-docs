@@ -18,7 +18,7 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.240 oder neuer** aktualisieren, danach Paket **0.6.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die sieben bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.242 oder neuer** aktualisieren, danach Paket **0.6.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die sieben bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
@@ -85,7 +85,7 @@ Die Displays imitieren eine **5×8-Punktmatrix-Schrift** mit schwarzem Bildschir
 | --- | --- |
 | ![LCD mit 16 Zeichen je Zeile und zwei Zeilen](/images/grafik-visual-studio/industrial-lcd-small.png) | ![Ausgeschaltetes LCD mit sichtbarem Industriegehäuse](/images/grafik-visual-studio/industrial-lcd-off.png) |
 
-Die Bilder zeigen Beispieldaten. **Beide Größen bieten Gelb/Weiß und Blau/Weiß.** Das feste Verhältnis wird beim Eingeben und Ziehen beibehalten: 20×4 startet bei **192×64 px** (Höhe/Breite **1:3**), 16×2 bei **192×32 px** (**0,5:3**, halbe Rasterhöhe). Größere Darstellungen skalieren den Bildschirm und die Zeichen gemeinsam.
+Die Bilder zeigen Beispieldaten. **Beide Größen bieten Gelb/Weiß und Blau/Weiß.** Ab **Studio 0.1.242** ist das 16×2-Display normal groß mit **192×64 px**; das 20×4-Display doppelt so breit und hoch mit **384×128 px**. Beide behalten Höhe/Breite **1:3** beim Eingeben und Ziehen. Kleinere gespeicherte Displays werden beim Laden auf diese Mindestgrößen angehoben. Größere Darstellungen skalieren den Bildschirm und die Zeichen gemeinsam. Die blauen und gelben Hintergründe sind dunkler, die weißen Bildpunkte kräftiger. Paket 0.6.0 bleibt unverändert; ein Studio-Update genügt.
 
 ### Zeilen und Entitäten
 

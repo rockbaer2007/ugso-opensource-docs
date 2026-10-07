@@ -18,7 +18,7 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.240 or newer** first, then install package **0.6.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves the seven existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.242 or newer** first, then install package **0.6.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves the seven existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
@@ -85,7 +85,7 @@ The displays imitate a **5×8 dot-matrix alphabet** with a black screen bezel. S
 | --- | --- |
 | ![LCD with sixteen characters per row and two rows](/images/grafik-visual-studio/industrial-lcd-small.png) | ![Powered-off LCD with its industrial housing visible](/images/grafik-visual-studio/industrial-lcd-off.png) |
 
-These images use example data. **Both sizes offer Yellow/White and Blue/White.** Dimensions retain their fixed aspect ratio during input and resizing. 20×4 starts at **192×64 px** (height/width **1:3**); 16×2 starts at **192×32 px** (**0.5:3**, half a grid unit high). Larger widgets scale the screen and characters together.
+These images use example data. **Both sizes offer Yellow/White and Blue/White.** Since **Studio 0.1.242**, the normal 16×2 display uses **192×64 px**; the 20×4 display is twice as wide and tall at **384×128 px**. Both retain a **1:3** height/width ratio during input and resizing. Smaller saved displays normalize to these minimum sizes on load. Larger widgets scale the screen and characters together. Darker blue/yellow backgrounds and stronger white dots improve legibility. Package 0.6.0 is unchanged; updating Studio is sufficient.
 
 ### Rows and entities
 
