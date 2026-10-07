@@ -46,6 +46,8 @@ Changed digits roll for 350 ms in runtime, including the 09→10 carry. Reduced-
 
 ## Linear gauge / slider
 
+Since **Studio 0.1.241**, selecting an input entity immediately updates gauge settings: **Scale → Display → Color bar** exposes colored ranges. Without input, only ticks are available. Package 0.6.0 remains compatible.
+
 With an **input entity** or enabled **dataflow input**, the widget becomes a gauge: a **triangle** marks the value on a **tick scale** or **color bar** with configurable ranges. Without input it becomes a **rectangular-handle slider with ticks only**. Even a previously saved color-bar setting never creates colored ranges in slider mode.
 
 | Slider with ticks | Linear gauge with color ranges |

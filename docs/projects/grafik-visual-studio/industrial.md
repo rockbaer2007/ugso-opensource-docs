@@ -46,6 +46,8 @@ In der Runtime rollen geänderte Ziffern für 350 ms, einschließlich Übertrag 
 
 ## Linear-Gauge / Schieberegler
 
+Ab **Studio 0.1.241** aktualisiert die Entitätsauswahl sofort den Anzeigemodus: Unter **Skala → Darstellung → Farbbalken** stehen Farbskala und Farbbereiche bereit. Ohne Eingang bleibt ausschließlich Strichskala. Paket 0.6.0 kann weiterverwendet werden.
+
 Mit **Eingangsentität** oder aktiviertem **Datenfluss-Eingang** arbeitet das Widget als Anzeige: ein **Dreieck** markiert den Wert. Wählbar sind **Strichskala** oder **Farbbalken** mit eigenen Farbbereichen. Ohne Eingang wird es zum **Schieberegler mit rechteckigem Griff und ausschließlich Strichskala**. Auch eine zuvor gespeicherte Farbbalken-Einstellung erzeugt im Schieberegler keinen Farbbalken.
 
 | Schieberegler mit Strichskala | Linear-Gauge mit Farbbalken |
