@@ -18,7 +18,9 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.249 oder neuer** aktualisieren, danach Paket **0.10.3** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
+Alle Entitätsfelder des Sets besitzen eine **…**-Schaltfläche zum Öffnen der **Home-Assistant-Entitätenauswahl**. Gewünschte Entität suchen, auswählen und mit **Einfügen** in das aktive Feld übernehmen. Ab **Studio 0.1.250** gilt das auch für **Eingang: Entität** und **Ausgang: Entität** in jedem Kipp-/Wippschalterkanal. Die Auswahl wird dem jeweiligen Kanal zugeordnet. Für vorhandene Pakete genügt das Studio-Update.
+
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.250 oder neuer** aktualisieren, danach Paket **0.10.3** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 

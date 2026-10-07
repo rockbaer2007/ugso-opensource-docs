@@ -18,7 +18,9 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.249 or newer** first, then install package **0.10.3**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all fifteen existing widget definitions.
+Every entity field in the set provides an **…** button opening the **Home Assistant entity picker**. Search, select an entity and use **Insert** to fill the active field. From **Studio 0.1.250**, this also covers each toggle/rocker channel's **Input entity** and **Output entity** fields, assigning the selection to the correct channel. Updating Studio is sufficient with existing packages.
+
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.250 or newer** first, then install package **0.10.3**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all fifteen existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
