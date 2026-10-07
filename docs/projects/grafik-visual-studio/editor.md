@@ -4,6 +4,14 @@ title: Editor und Tastenkombinationen
 
 # Editor und Tastenkombinationen
 
+## Seiten-Tabs
+
+Ab **Studio 0.1.256** erscheinen die Projektseiten als kompakte **Tabs direkt über der Arbeitsfläche**, zwischen Widget-Palette und Eigenschaften. Ein Klick wechselt die Seite; die aktive Seite ist farbig markiert. Viele Seiten scrollen horizontal, lange Namen werden gekürzt und stehen vollständig im Tooltip. In der Runtime ausgeblendete Seiten bleiben im Editor erreichbar und haben einen gestrichelten Tab-Rand.
+
+![Projektseiten als Tabs über der Editorfläche](/images/grafik-visual-studio/page-tabs.png)
+
+Mit Fokus auf einem Tab wechseln **Pfeil links/rechts** zur benachbarten Seite, **Pos1/Ende** zur ersten/letzten. Ungespeicherte Widgetänderungen bleiben beim Wechsel im Projekt; die Widgetauswahl und offene Widget-Aktionen werden zurückgesetzt. Seitennamen und Reihenfolge folgen dem bestehenden **Seiten**-Menü. Anlegen, Umbenennen, Duplizieren, Sichtbarkeit und Löschen bleiben dort. Die Tabs sind eine Editorhilfe; die Runtime verwendet weiterhin ihre bisherige Seitennavigation.
+
 ## Einstieg
 
 Ab **0.1.184** unterscheiden Hintergrundfarben die Widget-Sets in der Palette: **Interaktiv** ist olivgrün, **Spezial** blau und **Datenfluss** violett. **Basis** behält seine bisherige Darstellung. Zusätzliche installierte Sets erhalten jeweils eine eigene Farbe. Die Farben gelten für die Auswahlknöpfe der Palette; die Gestaltung eingefügter Widgets bleibt unabhängig.

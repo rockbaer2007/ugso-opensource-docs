@@ -4,6 +4,14 @@ title: Editor and keyboard shortcuts
 
 # Editor and keyboard shortcuts
 
+## Page tabs
+
+Starting with **Studio 0.1.256**, project pages appear as compact **tabs above the canvas**, between the widget palette and properties. Click a tab to switch pages; the active page is highlighted. Long tab lists scroll horizontally, and truncated names remain available in tooltips. Pages hidden from runtime are still accessible in the editor with a dashed tab border.
+
+![Project page tabs above the editor canvas](/images/grafik-visual-studio/page-tabs.png)
+
+When a tab has focus, **Left/Right arrows** switch to the adjacent page and **Home/End** switch to the first/last page. Unsaved widget edits remain in the project; selection and open widget actions reset on page changes. Names and order follow the existing **Pages** menu. Creating, renaming, duplicating, visibility and deletion remain in that menu. These tabs are an editor aid; runtime keeps its existing page navigation.
+
 ## Getting started
 
 From **0.1.184**, background colors distinguish palette sets: **Interactive** is olive green, **Special** blue and **Data Flow** violet. **Basic** keeps its existing appearance. Additional installed sets each receive their own color. These colors apply to palette selection buttons; inserted widgets retain their independently configured appearance.
