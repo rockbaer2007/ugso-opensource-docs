@@ -34,7 +34,7 @@ The detailed transparent PNG reference places a dark-red boiler, two green pumps
 
 | Display | Entity and settings |
 | --- | --- |
-| Heating circuit temperature | Numeric entity, optional display, individual text color |
+| Supply temperature | Numeric entity, optional display, individual text color |
 | Boiler, hot and cold water temperatures | Independent numeric entities and text colors |
 | Heating pump, circulation pump, burner | Independent Boolean entities; each status panel can be hidden |
 | Fault | Boolean entity; warning next to boiler temperature, optional |
@@ -42,7 +42,7 @@ The detailed transparent PNG reference places a dark-red boiler, two green pumps
 
 All **nine entity fields** offer the Home Assistant picker. Boolean states `on/off`, `true/false` and `1/0` are recognized; labels can use **EIN/AUS**, **ON/OFF** or **1/0**. Temperature units come from the entity. Default colors match the concept: red temperatures, blue cold water, green active status, yellow fault and orange level.
 
-**Flow arrows** for heating, circulation, hot water, cold water and the thin copper **oil line toward the burner** can be disabled independently. The right pump sits in a straight vertical pipe rising from the boiler; hot and cold water are separate lines. The tank sensor must provide percent, with no automatic litre conversion. Out-of-range readings clamp the column while retaining the original number.
+**Flow arrows** for supply, circulation, hot water, cold water and the thin copper **oil line toward the burner** can be disabled independently. The right pump sits in a straight vertical pipe rising from the boiler; hot and cold water are separate lines. The tank sensor must provide percent, with no automatic litre conversion. Out-of-range readings clamp the column while retaining the original number.
 
 Missing or invalid values show a dash; unknown fault status shows a question mark. No measurement values are invented without entities. Optional **Example data without entities** defaults off. This is a read-only display and sends no switching commands. Only housing docking is available; Industrial styling, screws, frame and background customization follow the other widgets.
 

@@ -34,7 +34,7 @@ Die detaillierte transparente PNG-Vorlage zeigt einen dunkelroten Heizkessel, zw
 
 | Anzeige | Entität und Einstellungen |
 | --- | --- |
-| Heizkreistemperatur | Numerische Entität, ausblendbar, eigene Textfarbe |
+| Vorlauftemperatur | Numerische Entität, ausblendbar, eigene Textfarbe |
 | Kessel-, Warmwasser-, Kaltwassertemperatur | Je eine numerische Entität und eigene Textfarbe |
 | Heizkreispumpe, Zirkulationspumpe, Brenner | Je eine Boolean-Entität; Statusanzeige separat ausblendbar |
 | Störung | Boolean-Entität; Warnsymbol neben Kesseltemperatur, ausblendbar |
@@ -42,7 +42,7 @@ Die detaillierte transparente PNG-Vorlage zeigt einen dunkelroten Heizkessel, zw
 
 Alle **neun Entitäten** besitzen die Home-Assistant-Auswahl. Boolean-Werte `on/off`, `true/false` und `1/0` werden erkannt; die sichtbare Beschriftung ist wählbar als **EIN/AUS**, **ON/OFF** oder **1/0**. Temperaturen übernehmen die Einheit der Entität und lassen sich unabhängig einfärben. Die Grundfarben entsprechen der Vorlage: rot für Temperaturen, blau für Kaltwasser, grün für eingeschalteten Status, gelb für Störung und orange für Füllstand.
 
-**Flusspfeile** für Heizkreis, Zirkulation, Warmwasser, Kaltwasser und die dünne kupferfarbene **Ölleitung zum Brenner** sind einzeln abschaltbar. Die rechte Pumpe befindet sich in einer senkrechten Leitung direkt vom Kessel nach oben. Warm- und Kaltwasser bleiben separate Leitungen. Der Tank-Sensor muss Prozent liefern; Liter werden nicht automatisch umgerechnet. Werte außerhalb 0–100 % begrenzen nur die Füllhöhe, der Originalwert bleibt als Zahl sichtbar.
+**Flusspfeile** für Vorlauf, Zirkulation, Warmwasser, Kaltwasser und die dünne kupferfarbene **Ölleitung zum Brenner** sind einzeln abschaltbar. Die rechte Pumpe befindet sich in einer senkrechten Leitung direkt vom Kessel nach oben. Warm- und Kaltwasser bleiben separate Leitungen. Der Tank-Sensor muss Prozent liefern; Liter werden nicht automatisch umgerechnet. Werte außerhalb 0–100 % begrenzen nur die Füllhöhe, der Originalwert bleibt als Zahl sichtbar.
 
 Fehlende oder ungültige Werte zeigen einen Strich; ein unbekannter Störungszustand zeigt ein Fragezeichen. Ohne Entitäten werden keine Messwerte erfunden. **Beispieldaten ohne Entitäten** sind optional und standardmäßig ausgeschaltet. Das Widget ist eine Anzeige und sendet keine Schaltbefehle. Es besitzt nur Gehäuse-Andockpunkte; Industriestyle, Schrauben, Rahmen und angepasster Hintergrund stehen wie im übrigen Set zur Verfügung.
 
