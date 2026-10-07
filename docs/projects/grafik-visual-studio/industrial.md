@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.11.1** enthält sechzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED**, **Blindelement** sowie **Heizung – Kessel und Öltank**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Heizungswidget benötigt **Studio 0.1.251 oder neuer**.
+Das externe Widget-Paket **UGSo Industrie 0.11.2** enthält sechzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED**, **Blindelement** sowie **Heizung – Kessel und Öltank**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Heizungswidget im Querformat benötigt **Studio 0.1.252 oder neuer**.
 
 ## Bilder
 
@@ -20,7 +20,7 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 Alle Entitätsfelder des Sets besitzen eine **…**-Schaltfläche zum Öffnen der **Home-Assistant-Entitätenauswahl**. Gewünschte Entität suchen, auswählen und mit **Einfügen** in das aktive Feld übernehmen. Ab **Studio 0.1.250** gilt das auch für **Eingang: Entität** und **Ausgang: Entität** in jedem Kipp-/Wippschalterkanal. Die Auswahl wird dem jeweiligen Kanal zugeordnet. Für vorhandene Pakete genügt das Studio-Update.
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.251 oder neuer** aktualisieren, danach Paket **0.11.1** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.252 oder neuer** aktualisieren, danach Paket **0.11.2** installieren. Für das Querformat genügt das Studio-Update mit vorhandenem Paket 0.11.1. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle sechzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
@@ -28,7 +28,7 @@ Alle Entitätsfelder des Sets besitzen eine **…**-Schaltfläche zum Öffnen de
 
 ![SVG-Heizungswidget mit Temperaturen, zwei Pumpen, Brenner, Störung und Tankfüllstand](/images/grafik-visual-studio/industrial-heating.png)
 
-Die kompakte SVG-Zeichnung zeigt einen dunkelroten Heizkessel, zwei grüne Pumpen, blauen Brenner und Kupfertank. **Breite:Höhe 4:6 Rasterfelder**, mit den additiven Gehäuseabständen: bei 1 px Abstand mindestens **262×394 px**, voreingestellt **518×778 px**. Größe eingeben oder ziehen skaliert beide Richtungen gemeinsam. Die Abbildung zeigt lokale Testwerte.
+Die SVG-Zeichnung im Querformat zeigt einen dunkelroten Heizkessel, zwei grüne Pumpen, blauen Brenner und Kupfertank nebeneinander. **Breite:Höhe 6:4 Rasterfelder**, mit den additiven Gehäuseabständen: bei 1 px Abstand mindestens **394×262 px**, voreingestellt **778×518 px**. Größe eingeben oder ziehen skaliert beide Richtungen gemeinsam. Bestehende Hochformat-Widgets wechseln beim Öffnen in das Querformat und behalten ihre Rasterzellengröße und Entitätszuordnungen. Die Wasserleitungen liegen zwischen Kessel und Tank, die Füllstandsskala hat mehr Platz. Die Abbildung zeigt lokale Testwerte.
 
 | Anzeige | Entität und Einstellungen |
 | --- | --- |
