@@ -95,3 +95,9 @@ Each **Switch 1** through **Switch 4** group has a static **Caption**, **Plate l
 | Output port | Below its channel, independently enabled. Supplies the last command as a boolean value, or the current state before the first command. |
 
 Unbound switches work locally. Missing feedback disables control. The editor never sends commands. Housing, screws, frame and housing snap settings also apply. To add the toggle switches, update the optional package locally to **0.2.0**; existing Gauge/Poti definitions are retained.
+
+### Ports E1–E4 and A1–A4
+
+Since **Studio 0.1.234**, editor signal ports are labeled **E1–E4** (input above each switch) and **A1–A4** (output below each switch). Only ports for the configured switch count are shown. Each port is enabled independently and follows the central input/output colors; existing connections are preserved.
+
+The switch has six independent **Housing snap points**: four corners plus **Left center** and **Right center**. Including signal ports, this provides **8 / 10 / 12 / 14 available points** for one to four switches. Housing points snap with the configured spacing and housing color; they do not carry signal values. Points and port labels appear only in the editor. Updating Studio is sufficient; package **0.2.0** remains unchanged.

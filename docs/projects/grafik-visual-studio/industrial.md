@@ -95,3 +95,9 @@ Jeder Bereich **Schalter 1** bis **Schalter 4** enthält eine feste **Beschriftu
 | Ausgangs-Koppelpunkt | Unten in der jeweiligen Schalterspalte, einzeln aktivierbar. Liefert den letzten Bedienbefehl als booleschen Wert; vor der ersten Bedienung den aktuellen Zustand. |
 
 Ohne Bindung arbeitet der Schalter lokal. Fehlende Rückmeldung sperrt die Bedienung. Im Editor werden keine Befehle gesendet. Gehäuse-, Schrauben-, Rahmen- und Gehäuse-Snappunkt-Einstellungen gelten auch für dieses Widget. Für den neuen Kippschalter das Paket lokal auf **0.2.0 aktualisieren**; die bestehenden Gauge/Poti-Definitionen bleiben erhalten.
+
+### Anschlüsse E1–E4 und A1–A4
+
+Ab **Studio 0.1.234** heißen die Signalpunkte im Editor **E1–E4** (Eingang oberhalb des jeweiligen Schalters) und **A1–A4** (Ausgang unterhalb). Bei weniger Schaltern erscheinen nur deren Anschlüsse. Die Punkte sind je Schalter einzeln aktivierbar; Eingangs- und Ausgangsfarbe kommen aus den zentralen Editor-Einstellungen. Bestehende Verbindungen bleiben erhalten.
+
+Unter **Gehäuse-Snappunkte** besitzt der Kippschalter sechs getrennte, einzeln aktivierbare Punkte: vier Ecken sowie **Links Mitte** und **Rechts Mitte**. Zusammen mit den Signalanschlüssen sind damit **8 / 10 / 12 / 14 Punkte** für ein bis vier Schalter verfügbar. Gehäusepunkte dienen dem Einrasten mit dem eingestellten Abstand und verwenden die Gehäuse-Snappunktfarbe; sie übertragen keine Schaltwerte. Punkte und Anschlussbeschriftungen erscheinen nur im Editor. Ein Studio-Update genügt; Paket **0.2.0** bleibt unverändert.
