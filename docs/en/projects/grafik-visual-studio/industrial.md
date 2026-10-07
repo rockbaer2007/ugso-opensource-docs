@@ -24,6 +24,8 @@ The images show runtime with example data, not live measurements.
 
 ## Rocker switches – 1 to 4
 
+Since **Studio 0.1.237**, rocker banks also use **width = height × channel count + 2 × all-side spacing × (channel count − 1)**. At 64 px height and 1 px spacing, widths are **64 / 130 / 196 / 262 px**. Channel centers and E/A ports align with individually docked widgets. Width input and resizing include spacing. Updating Studio is sufficient; package 0.3.0 is unchanged.
+
 Package **0.3.0** and Studio **0.1.235** add rocker switches as a copy of the toggle widget using transparent PNG artwork. Select **White/Gray**, **Red**, **Black** or **Green** for each channel under **Switch 1** through **Switch 4 → Switch color**. A single widget can combine different colors; its artwork follows each channel's on/off state.
 
 ![Four rocker switches with independently selected colors](/images/grafik-visual-studio/industrial-rockers.png)

@@ -24,6 +24,8 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Wippschalter – 1 bis 4
 
+Ab **Studio 0.1.237** gilt auch beim Wippschalter: **Breite = Höhe × Schalteranzahl + 2 × Abstand rundherum × (Schalteranzahl − 1)**. Bei 64 px Höhe und 1 px Abstand sind die Breiten **64 / 130 / 196 / 262 px**. Schaltermitten und E/A-Anschlüsse fluchten mit einzeln angedockten Widgets. Eingabe und Ziehen berücksichtigen den Abstand. Ein Studio-Update genügt; Paket 0.3.0 bleibt unverändert.
+
 Ab Paket **0.3.0** und Studio **0.1.235** ist der Wippschalter eine Kopie des Kippschalters mit transparenten PNG-Grafiken. Unter **Schalter 1** bis **Schalter 4 → Schalterfarbe** wird **Weiß/Grau**, **Rot**, **Schwarz** oder **Grün** je Kanal gewählt. Ein Widget kann unterschiedliche Farben kombinieren; die Grafik wechselt mit dem Ein-/Aus-Zustand.
 
 ![Vier Wippschalter mit unabhängig gewählten Farben](/images/grafik-visual-studio/industrial-rockers.png)
