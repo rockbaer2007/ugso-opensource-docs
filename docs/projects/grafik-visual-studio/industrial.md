@@ -5,7 +5,9 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.11.3** enthält sechzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED**, **Blindelement** sowie **Heizung – Kessel und Öltank**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Heizungswidget mit der detaillierten Grafik benötigt **Studio 0.1.253 oder neuer**.
+Das externe Widget-Paket **UGSo Industrie 0.11.5** enthält sechzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED**, **Blindelement** sowie **Heizung – Kessel und Öltank**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Heizungswidget mit der detaillierten Grafik benötigt **Studio 0.1.253 oder neuer**.
+
+**Updatehinweis:** Version 0.11.4 konnte wegen geänderter Widgetbeschriftungen nicht über eine bestehende Installation installiert werden. Verwende stattdessen **0.11.5** als lokale `.wg`-Datei; sie bewahrt die veröffentlichten Widgetverträge und Entitätsbindungen. Studio **0.1.259** zeigt die Vorlauf-Einstellungen unter der neuen Bezeichnung an, ohne gespeicherte Gruppenschlüssel zu ändern.
 
 ## Bilder
 

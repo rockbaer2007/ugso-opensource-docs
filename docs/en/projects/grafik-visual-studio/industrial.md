@@ -5,7 +5,9 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.11.3** package contains sixteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, **Blank panel**, and **Heating – boiler and oil tank**. Industrial styling adds a housing, corner screws and a frame. The detailed heating artwork requires **Studio 0.1.253 or newer**.
+The external **UGSo Industrial 0.11.5** package contains sixteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, **Blank panel**, and **Heating – boiler and oil tank**. Industrial styling adds a housing, corner screws and a frame. The detailed heating artwork requires **Studio 0.1.253 or newer**.
+
+**Upgrade note:** Version 0.11.4 could not upgrade existing installations because widget captions changed. Use **0.11.5** as a local `.wg` file instead; it preserves published widget contracts and entity bindings. Studio **0.1.259** displays supply captions without changing persisted group keys.
 
 ## Images
 
