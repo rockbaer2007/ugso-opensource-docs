@@ -87,6 +87,8 @@ Set the color in **Settings → General → Editor and dock points → Housing s
 
 ## Toggle switches – 1 to 4
 
+Since **Studio 0.1.236**, toggle bank width includes the space between channels: **height × channel count + 2 × all-side spacing × (channel count − 1)**. At 64 px height and 1 px spacing, widths are **64 / 130 / 196 / 262 px**. Channel centers and E/A ports align with individual widgets below. Width input and resizing include the extra spacing. This change initially applies only to toggle switches; rocker sizing is unchanged. Updating Studio is sufficient; package 0.3.0 is unchanged.
+
 Package **0.2.0** and Studio **0.1.232** add one to four independently controlled switches side by side. **Number of switches** sets the width/height ratio from **1:1 to 4:1**. Minimum height and width per channel are 64 px; typed changes and resizing preserve the ratio.
 
 ![Four industrial toggle switches with small LEDs and three plate legends](/images/grafik-visual-studio/industrial-switches.png)

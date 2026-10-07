@@ -87,6 +87,8 @@ Die Farbe liegt unter **Einstellungen → Allgemein → Editor und Andockpunkte 
 
 ## Kippschalter – 1 bis 4
 
+Ab **Studio 0.1.236** wird beim Kippschalter der Zwischenabstand in die Blockbreite eingerechnet: **Höhe × Schalteranzahl + 2 × Abstand rundherum × (Schalteranzahl − 1)**. Bei 64 px Höhe und 1 px Abstand rundherum sind die Breiten **64 / 130 / 196 / 262 px**. Schaltermitten sowie E/A-Anschlüsse fluchten damit mit einzelnen Widgets darunter. Eingabe und Ziehen berücksichtigen den Zuschlag. Diese Anpassung gilt zunächst nur für den Kippschalter; Wippschalter bleiben unverändert. Ein Studio-Update genügt, Paket 0.3.0 bleibt unverändert.
+
 Ab Paket **0.2.0** und Studio **0.1.232** stehen ein bis vier unabhängig bedienbare Schalter nebeneinander zur Verfügung. **Anzahl Schalter** legt das Verhältnis Breite/Höhe von **1:1 bis 4:1** fest. Minimum sind 64 px Höhe und 64 px Breite je Kanal; die Maße bleiben beim Eingeben und Ziehen proportional.
 
 ![Vier Industrie-Kippschalter mit kleinen LEDs und drei Schildvarianten](/images/grafik-visual-studio/industrial-switches.png)
