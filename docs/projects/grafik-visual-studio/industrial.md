@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.8.0** enthält dreizehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD** sowie **Industrie-Uhr – Nixie / LED / LCD**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Die Uhr benötigt **Studio 0.1.244 oder neuer**.
+Das externe Widget-Paket **UGSo Industrie 0.9.0** enthält vierzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD** sowie **Industrie-Wetter – LCD / LED**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Wetterdisplay benötigt **Studio 0.1.245 oder neuer**.
 
 ## Bilder
 
@@ -18,9 +18,25 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.244 oder neuer** aktualisieren, danach Paket **0.8.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die zwölf bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.245 oder neuer** aktualisieren, danach Paket **0.9.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die dreizehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Industrie-Wetter: LCD / LED
+
+| LCD | LED |
+| --- | --- |
+| ![Industrie-Wetter in LCD-Optik mit 18,6 Grad und Pixelsymbol](/images/grafik-visual-studio/industrial-weather-lcd.png) | ![Industrie-Wetter mit blau leuchtender LED-Pixelanzeige](/images/grafik-visual-studio/industrial-weather-led.png) |
+
+Die Bilder zeigen Beispieldaten aus einer simulierten Wetterentität. **Wetterentität** bindet eine Home-Assistant-Entität `weather.*`: Zustand als eigenes Pixelsymbol und Text, Temperatur groß, darunter Luftfeuchtigkeit und Wind. Symbole decken Sonne, klare Nacht, Wolken, Regen, Schnee/Schneeregen, Hagel, Gewitter, Nebel, Wind und außergewöhnliches Wetter ab. Temperatur- und Windeinheiten stammen aus Home Assistant und werden ohne Umrechnung angezeigt; Groß-/Kleinschreibung der Einheiten bleibt erhalten.
+
+**Regenwahrscheinlichkeit anzeigen** und **Tagesminimum/-maximum anzeigen** ergänzen die unterste Zeile, links Regen, rechts Minimum / Maximum. Diese Angaben kommen aus der täglichen Vorhersage für den aktuellen Tag nach Browser-Ortszeit. Vorhersagen werden über die vorhandene HA-Schnittstelle geladen und fünf Minuten zwischengespeichert. Aktuelle Messwerte und Vorhersagen sind bei Home Assistant getrennt; siehe [HA-Wetterentität und Vorhersagen](https://developers.home-assistant.io/docs/core/entity/weather/). Unterstützt die Integration keine tägliche Vorhersage, zeigen die Zusatzwerte Striche, während aktuelle Werte weiter angezeigt werden.
+
+Unter **Zusätzliche Sensoren** kann jeder Wert durch eine eigene Entität ersetzt werden: Temperatur, Luftfeuchtigkeit, Windgeschwindigkeit, Regenwahrscheinlichkeit, Tagesminimum und Tagesmaximum. Ein eingetragener Sensor hat für diesen Wert Vorrang, auch wenn er nicht verfügbar ist; es wird dann kein anderer Wert untergeschoben. Ohne Sensor gilt die Wetterentität beziehungsweise Tagesvorhersage. Fehlende Werte sind **--**, unbekannter Zustand erhält ein Fragezeichen-Symbol. **Beispieldaten ohne Wetterentität** ist ausdrücklich zuschaltbar und zeigt **DEMO**; bei gebundener Wetterentität wird niemals automatisch auf Beispieldaten umgeschaltet.
+
+**Anzeigeart → LCD / LED**: LCD mit Segment-/Hintergrundfarbe, LED mit frei wählbarer Leuchtfarbe. Der schwarze Bildschirmrand und die Gehäuseeigenschaften entsprechen den übrigen Industrieanzeigen. **2:4-Raster**, standardmäßig **262×130 px** bei **1 px Abstand rundherum**: Höhe = 2 × Rasterzelle + 2 × Abstand, Breite = 4 × Rasterzelle + 6 × Abstand. Die Rasterzelle bleibt mindestens 64 px groß. Eingabe, Ziehen und Abstandsänderungen erhalten die Ausrichtung zu zwei Reihen mit jeweils vier Einzelwidgets. Lange Angaben werden gekürzt; der Tooltip enthält die vollständigen Texte.
+
+Ein/Aus funktioniert über **Display Ein/Aus: Entität** oder einen einzeln aktivierbaren **oberen Koppelpunkt** (`display-power`) mit Vorrang. Ohne Bindung gilt der Vorschauzustand; fehlende oder unbekannte Ein/Aus-Werte lassen den Bildschirm dunkel. Sichtbare und unsichtbare Kippschalter-Verbindungen werden unterstützt. Kein Messwert-Eingang, Ausgang oder Schreibbefehl; vier Gehäuse-Ecken, Abstand, Schrauben, Rahmenfarbe, optionale Rahmenbreite und Eckenradius bleiben verfügbar.
 
 ## Industrie-Uhr: Nixie / LED / LCD
 

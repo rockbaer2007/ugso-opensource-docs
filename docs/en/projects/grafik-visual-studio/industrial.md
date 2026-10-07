@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.8.0** package contains thirteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, plus **Industrial clock – Nixie / LED / LCD**. Industrial styling adds a housing, corner screws and a frame. The clock requires **Studio 0.1.244 or newer**.
+The external **UGSo Industrial 0.9.0** package contains fourteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, plus **Industrial weather – LCD / LED**. Industrial styling adds a housing, corner screws and a frame. The weather panel requires **Studio 0.1.245 or newer**.
 
 ## Images
 
@@ -18,9 +18,25 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.244 or newer** first, then install package **0.8.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all twelve existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.245 or newer** first, then install package **0.9.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all thirteen existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Industrial weather: LCD / LED
+
+| LCD | LED |
+| --- | --- |
+| ![Industrial LCD weather panel with 18.6 degrees and pixel artwork](/images/grafik-visual-studio/industrial-weather-lcd.png) | ![Industrial weather panel with blue LED pixels](/images/grafik-visual-studio/industrial-weather-led.png) |
+
+Images use a simulated weather entity. **Weather entity** binds a Home Assistant `weather.*` entity: original condition icon/text, prominent temperature, humidity and wind below. Icons cover sun, clear night, clouds, rain, snow/sleet, hail, thunderstorms, fog, wind and exceptional weather. Temperature and wind units come from Home Assistant without conversion; unit case is preserved.
+
+**Show rain probability** and **Show daily low/high** add a bottom row: rain on the left, low / high on the right. These come from the daily forecast for the current browser-local day. Forecasts use the existing HA endpoint and a five-minute cache. Current readings and forecasts are separate in Home Assistant; see [HA weather entity and forecasts](https://developers.home-assistant.io/docs/core/entity/weather/). Unsupported daily forecasts show dashes without blocking current readings.
+
+**Additional sensors** may replace each value: temperature, humidity, wind speed, rain probability, daily low and high. A configured sensor takes priority for its value, including when unavailable; no fallback reading is substituted. Without an override, the weather entity or daily forecast applies. Missing values show **--**, unknown conditions use a question mark. **Example data without a weather entity** is explicitly enabled and marked **DEMO**. A bound weather entity never silently switches to example data.
+
+**Display type → LCD / LED** offers LCD segment/background colors or an adjustable LED glow color. Black bezel and housing match other industrial displays. The **2:4 grid** defaults to **262×130 px** with **1 px all-side spacing**: height = 2 × cell + 2 × spacing; width = 4 × cell + 6 × spacing. Cells are at least 64 px. Typing, resizing and spacing changes retain alignment with two rows of four individual widgets. Long readings are clipped with full text in the tooltip.
+
+Power comes from a **Display power entity** or individually enabled **top port** (`display-power`), with port priority. Without a binding, the default power checkbox applies. Missing/unknown power makes the screen dark. Visible or hidden toggle connections work. There is no measurement input, output or service write. Four housing corners, spacing, screws, frame color, optional thickness and corner radius apply.
 
 ## Industrial clock: Nixie / LED / LCD
 
