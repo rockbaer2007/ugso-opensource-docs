@@ -32,6 +32,8 @@ Die Runtime zentriert eine Seite, wenn sie vollständig ins Browserfenster passt
 
 ## Widget-Auswahl, Kopieren und Löschen
 
+Ab **Studio 0.1.257** werden die Toolbar-Icons für **Löschen**, **Kopieren** und **Ausschneiden** direkt mit der Widgetauswahl aktiviert. Ohne ausgewählte Widgets sind diese Aktionen ausgegraut; das gilt auch beim Seitenwechsel. Die Löschbestätigung und Rückgängig bleiben verfügbar.
+
 ![Widget-Auswahlliste mit zehn sichtbaren Einträgen](/images/grafik-visual-studio/widget-selector-ten.png)
 
 Ab Studio **0.1.196** bietet die Liste Platz für zehn kompakte Einträge. Weitere Einträge sind innerhalb der Liste scrollbar; die Aktionen oben und unten bleiben sichtbar. Bei weniger Einträgen bleibt das Menü kürzer. Auf kleinen Bildschirmen richtet sich die Anzahl sichtbarer Zeilen nach der verfügbaren Höhe.

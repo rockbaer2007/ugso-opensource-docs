@@ -32,6 +32,8 @@ Runtime centers a page when it fits entirely inside the browser window. Larger p
 
 ## Widget selection, copying and deletion
 
+Starting with **Studio 0.1.257**, the toolbar **Delete**, **Copy** and **Cut** icons update immediately when widget selection changes. These actions are disabled without a selection, including after switching pages. Delete confirmation and Undo remain available.
+
 ![Widget selector with ten visible entries](/images/grafik-visual-studio/widget-selector-ten.png)
 
 Starting with Studio **0.1.196**, the list has room for ten compact entries. Additional entries scroll inside the list while the top and bottom actions remain visible. Fewer entries keep the menu shorter. On small screens, the available height determines the number of visible rows.
