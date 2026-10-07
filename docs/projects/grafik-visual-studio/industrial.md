@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.10.1** enthält fünfzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD** **Industrie-Wetter – LCD / LED** sowie **Blindelement**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Blindelement benötigt **Studio 0.1.247 oder neuer**.
+Das externe Widget-Paket **UGSo Industrie 0.10.2** enthält fünfzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED** sowie **Blindelement**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Blindelement benötigt **Studio 0.1.247 oder neuer**.
 
 ## Bilder
 
@@ -18,7 +18,7 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.247 oder neuer** aktualisieren, danach Paket **0.10.1** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.248 oder neuer** aktualisieren, danach Paket **0.10.2** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
@@ -26,7 +26,7 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ![Leeres Industriegehäuse mit darüberliegendem Eingabefeld](/images/grafik-visual-studio/industrial-blank-panel.png)
 
-Leeres Gehäuse als Hintergrundebene für unabhängige Eingabe- und Anzeige-Widgets. Unter **Größe** wählen **Abschnitte** und **Abschnitte senkrecht** jeweils **1 bis 12**: maximal **12:12 Rasterfelder**. Eine Rasterzelle ist mindestens 64×64 px groß. Die Gesamtbreite/-höhe enthält die Zwischenabstände der Einzelwidgets: bei 1 px **Abstand rundherum** ergeben sich pro Richtung **64 / 130 / 196 / 262 px**. Eingabe und Ziehen skalieren beide Richtungen zusammen; eine geänderte Abschnittszahl erhält die Rasterzellengröße.
+Universelles Hintergrund-Widget als Gehäuse oder gestaltbare Fläche für Widgets aus **allen Widgetsets**. Darüber lassen sich beispielsweise Eingaben, Schalter, Anzeigen und andere Bedienelemente platzieren. Unter **Größe** wählen **Abschnitte** und **Abschnitte senkrecht** jeweils **1 bis 12**: maximal **12:12 Rasterfelder**. Eine Rasterzelle ist mindestens 64×64 px groß. Die Gesamtbreite/-höhe enthält die Zwischenabstände der Einzelwidgets: bei 1 px **Abstand rundherum** ergeben sich pro Richtung **64 / 130 / 196 / 262 px**. Eingabe und Ziehen skalieren beide Richtungen zusammen; eine geänderte Abschnittszahl erhält die Rasterzellengröße.
 
 Nur die vier einzeln aktivierbaren **Gehäuse-Snappunkte** sind vorhanden. Keine Entität, Wertanzeige oder Daten-Ein-/Ausgänge. Industriestyle, Schrauben, Rahmenfarbe, optional angepasste Rahmenbreite, Eckenradius und CSS stehen wie bei den anderen Industrieelementen zur Verfügung. Der voreingestellte **CSS z-index -1** legt das Blindelement unter normale Widgets. Darübergelegte Elemente bleiben separat bedienbar und verschiebbar; das Blindelement gruppiert sie nicht automatisch. Für eigene Hintergründe lässt sich Industriestyle abschalten und CSS verwenden. Das Bild zeigt ein lokales Beispiel.
 
@@ -204,6 +204,8 @@ Der eigene Eigenschaftenbereich **Wertanzeige** enthält:
 Die Wert-/Einheitenanzeige wurde mit Studio 0.1.227 ergänzt, die eigenen Anzeige-Einstellungen mit 0.1.228.
 
 ## Gehäuse und Farben
+
+Ab **Studio 0.1.248** bieten **alle Industrie-Widgets** die Checkbox **Hintergrund anpassen** mit **Gehäuse-Hintergrundfarbe**. Ohne Haken bleibt der bisherige Standardverlauf von dunkelgrau nach anthrazit erhalten. Mit Haken wird eine einheitliche eigene Farbe verwendet; Vorgabe **#263238**. Die Farbauswahl ist nur bei aktiviertem Haken bedienbar. Nach dem Abschalten kehrt der Standardhintergrund zurück, die gewählte Farbe bleibt für später gespeichert. Das gilt für Editor und Runtime, auch wenn Industriestyle abgeschaltet ist. Bildschirm-, LCD-, Segment-, LED- und Skalenfarben werden weiter separat eingestellt. Das Studio-Update genügt auch mit einem älteren installierten Industriepaket; Paket 0.10.2 aktualisiert die Anleitung.
 
 Ab Studio **0.1.231** steht direkt unter **Industriestyle** die Checkbox **Schrauben aktivieren**. Schrauben sind standardmäßig eingeschaltet und lassen sich bei aktivem Industriestyle separat ausschalten. Erneutes Einschalten von Industriestyle aktiviert auch die Schrauben wieder. Ohne Industriestyle sind keine Schrauben sichtbar und die Checkbox ist deaktiviert.
 
