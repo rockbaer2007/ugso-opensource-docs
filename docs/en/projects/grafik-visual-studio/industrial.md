@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.3.0** package contains **Gauge/Poti – 270°**, **Toggle switches – 1 to 4** and **Rocker switches – 1 to 4**. Industrial styling adds a housing, corner screws and a frame. **Studio 0.1.235 or newer** is required for all settings described here, including rocker switches.
+The external **UGSo Industrial 0.4.0** package contains **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4** and **LCD – 16×2**. Industrial styling adds a housing, corner screws and a frame. The new LCDs require **Studio 0.1.238 or newer**.
 
 ## Images
 
@@ -18,9 +18,37 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. The optional package uses API 0.2 and contains no executable package code. Package 0.3.0 requires Studio 0.1.235 for rocker switches. Updating preserves existing Gauge/Poti and toggle definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.238 or newer** first, then install package **0.4.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves existing Gauge/Poti, toggle and rocker definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## LCD – 20×4 and 16×2
+
+The displays imitate a **5×8 dot-matrix alphabet** with a black screen bezel. Studio draws each pixel dynamically; no external font installation is required. Uppercase and lowercase letters, numbers, punctuation, German umlauts, ß, €, °, µ, Ω, arrows and ✓ are included. Unsupported characters appear as `?`.
+
+| 20×4 Yellow/White | 20×4 Blue/White |
+| --- | --- |
+| ![LCD with a yellow background and white dot-matrix text](/images/grafik-visual-studio/industrial-lcd-yellow.png) | ![LCD with a blue background and white dot-matrix text](/images/grafik-visual-studio/industrial-lcd-blue.png) |
+
+| 16×2 Blue/White | Display off |
+| --- | --- |
+| ![LCD with sixteen characters per row and two rows](/images/grafik-visual-studio/industrial-lcd-small.png) | ![Powered-off LCD with its industrial housing visible](/images/grafik-visual-studio/industrial-lcd-off.png) |
+
+These images use example data. **Both sizes offer Yellow/White and Blue/White.** Dimensions retain their fixed aspect ratio during input and resizing. 20×4 starts at **192×64 px** (height/width **1:3**); 16×2 starts at **192×32 px** (**0.5:3**, half a grid unit high). Larger widgets scale the screen and characters together.
+
+### Rows and entities
+
+Each of the four or two rows has **one entity** with an entity picker. **Text / prefix** precedes its value; without an entity, this field is the entire static row. For example, `Temp: ` + sensor value `-20.24` + automatic unit `°C` becomes `Temp: -20.2 °C` with one decimal place.
+
+**Unit from entity** reads Home Assistant's `unit_of_measurement`. An explicit unit takes priority. **Decimal places** supports `auto` or 0–6 places for numbers; text states remain text. Missing or unavailable values appear as `?`. Text is clipped after 20 or 16 characters; the tooltip contains the complete rows. There is no wrapping and no data port for individual rows.
+
+### Display power and housing
+
+Without a binding, **On without an input** applies. **Display power entity** can use a `switch` or `input_boolean` entity, for example. Alternatively, **Enable power input port** adds one input at the top center (`display-power`), accepting `on/off`, `true/false` or `1/0`. Connect a toggle or rocker output through a visible or hidden value connection.
+
+The enabled port takes priority over the entity. Missing or invalid input keeps the screen dark. When off, text disappears and the housing remains visible. The LCD reads states and sends no service commands. It has **no output**.
+
+**Housing and colors** provides industrial styling, screws enabled by default, frame color and optional frame width. Four **corner housing snap points** can be enabled individually. All-side spacing and the shared input/housing point colors work as on other Industrial widgets. Text size follows the fixed grid; text color remains white in both modes.
 
 ## Rocker switches – 1 to 4
 

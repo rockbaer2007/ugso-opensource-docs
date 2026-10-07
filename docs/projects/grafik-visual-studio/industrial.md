@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.3.0** enthält **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4** und **Wippschalter – 1 bis 4**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Für alle hier beschriebenen Einstellungen einschließlich des Wippschalters wird **Studio 0.1.235 oder neuer** benötigt.
+Das externe Widget-Paket **UGSo Industrie 0.4.0** enthält **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4** und **LCD – 16×2**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Für die neuen LCDs wird **Studio 0.1.238 oder neuer** benötigt.
 
 ## Bilder
 
@@ -18,9 +18,37 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Paket 0.3.0 benötigt Studio 0.1.235 für den Wippschalter. Bestehende Gauge/Poti- und Kippschalter-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.238 oder neuer** aktualisieren, danach Paket **0.4.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Bestehende Gauge/Poti-, Kippschalter- und Wippschalter-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## LCD – 20×4 und 16×2
+
+Die Displays imitieren eine **5×8-Punktmatrix-Schrift** mit schwarzem Bildschirmrand. Die Schrift wird dynamisch aus Bildpunkten aufgebaut und ist Bestandteil von Studio; eine externe Schriftinstallation ist nicht erforderlich. Groß- und Kleinbuchstaben, Zahlen, Satzzeichen, Umlaute, ß, €, °, µ, Ω, Pfeile und ✓ sind enthalten. Nicht unterstützte Zeichen erscheinen als `?`.
+
+| 20×4 Gelb/Weiß | 20×4 Blau/Weiß |
+| --- | --- |
+| ![LCD mit gelbem Hintergrund und weißer Punktmatrix-Schrift](/images/grafik-visual-studio/industrial-lcd-yellow.png) | ![LCD mit blauem Hintergrund und weißer Punktmatrix-Schrift](/images/grafik-visual-studio/industrial-lcd-blue.png) |
+
+| 16×2 Blau/Weiß | Display ausgeschaltet |
+| --- | --- |
+| ![LCD mit 16 Zeichen je Zeile und zwei Zeilen](/images/grafik-visual-studio/industrial-lcd-small.png) | ![Ausgeschaltetes LCD mit sichtbarem Industriegehäuse](/images/grafik-visual-studio/industrial-lcd-off.png) |
+
+Die Bilder zeigen Beispieldaten. **Beide Größen bieten Gelb/Weiß und Blau/Weiß.** Das feste Verhältnis wird beim Eingeben und Ziehen beibehalten: 20×4 startet bei **192×64 px** (Höhe/Breite **1:3**), 16×2 bei **192×32 px** (**0,5:3**, halbe Rasterhöhe). Größere Darstellungen skalieren den Bildschirm und die Zeichen gemeinsam.
+
+### Zeilen und Entitäten
+
+Jede der vier beziehungsweise zwei Zeilen hat **eine eigene Entität** mit Entitätsauswahl. **Text / Präfix** steht vor dem Entitätswert; ohne Entität bildet dieses Feld den gesamten festen Zeileninhalt. Beispiel: `Temp: ` + Sensorwert `-20.24` + automatische Einheit `°C` ergibt mit einer Nachkommastelle `Temp: -20.2 °C`.
+
+**Einheit aus Entität** übernimmt `unit_of_measurement` aus Home Assistant. Eine eingetragene Einheit hat Vorrang. **Nachkommastellen** unterstützt `auto` oder 0–6 Stellen für Zahlen; Textzustände bleiben Text. Fehlende oder nicht verfügbare Entitätswerte erscheinen als `?`. Lange Texte werden nach 20 beziehungsweise 16 Zeichen abgeschnitten; der Tooltip enthält die vollständigen Zeilen. Es gibt keinen Zeilenumbruch und keine eigenen Daten-Koppelpunkte für die Zeilen.
+
+### Display Ein/Aus und Gehäuse
+
+Ohne Bindung gilt **Ohne Eingang eingeschaltet**. **Display Ein/Aus: Entität** kann beispielsweise eine `switch`- oder `input_boolean`-Entität sein. Alternativ **Ein/Aus-Koppelpunkt aktivieren**: Ein einzelner Eingang oben mittig (`display-power`) übernimmt `on/off`, `true/false` oder `1/0`. Verbinde einen Kippschalter- oder Wippschalter-Ausgang über eine sichtbare oder unsichtbare Wert-Verbindung mit diesem Eingang.
+
+Der aktivierte Koppelpunkt hat Vorrang vor der Entität. Ohne gültigen Eingang bleibt der Bildschirm dunkel; ein ausgeschaltetes Display zeigt keine Schrift, das Gehäuse bleibt sichtbar. Das LCD liest Zustände und sendet keine Schaltbefehle. Es besitzt **keinen Ausgang**.
+
+Unter **Gehäuse und Farben** stehen Industriestyle, standardmäßig aktive Schrauben, Rahmenfarbe und optionale Rahmenbreite bereit. Die vier **Gehäuse-Snappunkte an den Ecken** sind einzeln aktivierbar. Abstand rundherum und die zentralen Farben für Eingangs- und Gehäusepunkte gelten wie bei den anderen Industriewidgets. Schriftgröße folgt dem festen Raster; die Schriftfarbe bleibt im gewählten Farbmodus Weiß.
 
 ## Wippschalter – 1 bis 4
 
