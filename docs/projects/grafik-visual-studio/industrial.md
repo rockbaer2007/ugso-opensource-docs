@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.7.0** enthält zwölf Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung sowie **7-Segment – LED**, **16-Segment – LED** und **16-Segment – LCD**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Die Segmentanzeigen benötigen **Studio 0.1.243 oder neuer**.
+Das externe Widget-Paket **UGSo Industrie 0.8.0** enthält dreizehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD** sowie **Industrie-Uhr – Nixie / LED / LCD**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Die Uhr benötigt **Studio 0.1.244 oder neuer**.
 
 ## Bilder
 
@@ -18,9 +18,30 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.243 oder neuer** aktualisieren, danach Paket **0.7.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die neun bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.244 oder neuer** aktualisieren, danach Paket **0.8.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die zwölf bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Industrie-Uhr: Nixie / LED / LCD
+
+![Industrie-Uhr mit sechs Nixieröhren und orange leuchtender Zeit 12:34:58](/images/grafik-visual-studio/industrial-clock-nixie.png)
+
+| LED | LCD |
+| --- | --- |
+| ![Industrie-Uhr mit blauer LED-Leuchtfarbe](/images/grafik-visual-studio/industrial-clock-led.png) | ![Industrie-Uhr mit dunklen LCD-Segmenten auf grünem Hintergrund](/images/grafik-visual-studio/industrial-clock-lcd.png) |
+
+Ein Widget mit **Anzeigeart → Nixieröhre / LED / LCD**. Nixie imitiert Glasröhren, Schutzgitter und übereinanderliegende Drahtziffern mit orangefarbenem Leuchten. LED zeigt leuchtende Siebensegmentziffern mit frei wählbarer **LED-Leuchtfarbe**. LCD bietet **LCD-Segmentfarbe** und **LCD-Hintergrundfarbe**. Die Bilder zeigen eine festgehaltene Beispielzeit.
+
+**Sekunden anzeigen** wechselt zwischen **HH:MM:SS** und **HH:MM**, im 24-Stunden-Format. **Doppelpunkte blinken** lässt die Trennzeichen im Sekundentakt blinken; abschaltbar für ruhige Anzeigen. **Zeitzone** bietet Browser-Ortszeit, UTC oder Europe/Berlin mit automatischer Sommer-/Winterzeit. Zeitquelle ist die Browser-Uhr. Es gibt keine erforderliche Zeit-Entität und keinen Daten-Ausgang. Ein gemeinsamer Takt aktualisiert ausschließlich den Uhrinhalt; Auswahl und Eingabefokus im Editor bleiben erhalten.
+
+| Ansicht | HH:MM:SS | HH:MM | Mindesthöhe |
+| --- | --- | --- | --- |
+| Nixie | 518×128 px | 388×128 px | 64 px |
+| LED / LCD | 262×64 px | 196×64 px | 32 px |
+
+Standardmaße gelten bei **1 px Abstand rundherum**. Die Breite entspricht vier beziehungsweise drei Rastereinheiten einschließlich Zwischenräumen: Breite = Höhe × Rastereinheiten + 2 × Abstand × (Rastereinheiten − 1). Größe bleibt bei Eingabe und Ziehen proportional. Beim Wechsel zu Nixie wird die Höhe verdoppelt, zurück zu LED/LCD halbiert; eine eigene Vergrößerung bleibt relativ erhalten. Sekunden- und Abstandsänderungen passen die Breite an.
+
+Gehäuse, Schrauben, Rahmenfarbe, optionale Rahmenbreite, Eckenradius und vier einzeln aktive Gehäuse-Snappunkte bleiben verfügbar. **Display Ein/Aus: Entität** oder ein einzeln aktivierbarer **oberer Ein/Aus-Koppelpunkt** (`display-power`) steuert die Uhranzeige; der Koppelpunkt hat Vorrang. Ohne Bindung gilt **Ohne Eingang eingeschaltet**. Unbekannte oder fehlende Ein/Aus-Werte lassen sie dunkel, Uhrzeit und Gehäuse bleiben erhalten. Kippschalter-Verbindungen können sichtbar oder unsichtbar sein. Die Nixie-Grafiken sind eigene SVG-Zeichnungen; die bereitgestellte OmniGraffle-Vorlage wird nicht verteilt.
 
 ## Segmentanzeigen: LED und LCD
 

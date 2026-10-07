@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.7.0** package contains twelve widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, plus **7-segment LED**, **16-segment LED** and **16-segment LCD**. Industrial styling adds a housing, corner screws and a frame. Segment displays require **Studio 0.1.243 or newer**.
+The external **UGSo Industrial 0.8.0** package contains thirteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, plus **Industrial clock – Nixie / LED / LCD**. Industrial styling adds a housing, corner screws and a frame. The clock requires **Studio 0.1.244 or newer**.
 
 ## Images
 
@@ -18,9 +18,30 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.243 or newer** first, then install package **0.7.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all nine existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.244 or newer** first, then install package **0.8.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all twelve existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
+
+## Industrial clock: Nixie / LED / LCD
+
+![Industrial clock with six Nixie tubes and an orange 12:34:58 reading](/images/grafik-visual-studio/industrial-clock-nixie.png)
+
+| LED | LCD |
+| --- | --- |
+| ![Industrial clock with a blue LED glow](/images/grafik-visual-studio/industrial-clock-led.png) | ![Industrial clock with dark LCD segments on a green background](/images/grafik-visual-studio/industrial-clock-lcd.png) |
+
+One widget with **Display type → Nixie / LED / LCD**. Nixie imitates glass tubes, protective mesh and stacked wire digits with orange light. LED provides seven-segment digits with an adjustable **LED glow color**. LCD has separate **LCD segment color** and **LCD background color** settings. Images use a frozen example time.
+
+**Show seconds** switches between **HH:MM:SS** and **HH:MM** in 24-hour format. **Blink colons** optionally blinks separators once per second. **Time zone** supports browser-local time, UTC or Europe/Berlin with automatic daylight-saving changes. The browser clock supplies time; no time entity is required and no data output is provided. A shared ticker only changes clock content, retaining editor selection and input focus.
+
+| Mode | HH:MM:SS | HH:MM | Minimum height |
+| --- | --- | --- | --- |
+| Nixie | 518×128 px | 388×128 px | 64 px |
+| LED / LCD | 262×64 px | 196×64 px | 32 px |
+
+Default sizes assume **1 px all-side spacing**. Width follows four or three grid units, including gaps: height × span + 2 × spacing × (span − 1). Typed dimensions and dragging preserve proportions. Switching to Nixie doubles height, switching back halves it, retaining relative custom scaling. Seconds and spacing changes recalculate width.
+
+Housing, screws, frame color, optional frame thickness, corner radius and four individually enabled housing snap points apply. A **Display power entity** or optional **top power input** (`display-power`) controls illumination; the port takes priority. Without a binding, the default power checkbox applies. Missing or unknown power leaves the display dark while the clock and housing remain. Toggle switch connections may be visible or hidden. Nixie artwork is original SVG; the supplied OmniGraffle stencil is not redistributed.
 
 ## Segment displays: LED and LCD
 
