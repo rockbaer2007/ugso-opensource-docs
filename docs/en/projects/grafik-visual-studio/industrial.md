@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.11.2** package contains sixteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, **Blank panel**, and **Heating – boiler and oil tank**. Industrial styling adds a housing, corner screws and a frame. The landscape heating widget requires **Studio 0.1.252 or newer**.
+The external **UGSo Industrial 0.11.3** package contains sixteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, **Blank panel**, and **Heating – boiler and oil tank**. Industrial styling adds a housing, corner screws and a frame. The detailed heating artwork requires **Studio 0.1.253 or newer**.
 
 ## Images
 
@@ -20,15 +20,17 @@ The images show runtime with example data, not live measurements.
 
 Every entity field in the set provides an **…** button opening the **Home Assistant entity picker**. Search, select an entity and use **Insert** to fill the active field. From **Studio 0.1.250**, this also covers each toggle/rocker channel's **Input entity** and **Output entity** fields, assigning the selection to the correct channel. Updating Studio is sufficient with existing packages.
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.252 or newer** first, then install package **0.11.2**. Existing package 0.11.1 only needs the Studio update for the landscape layout. The optional package uses API 0.2 and contains no executable package code. Updating preserves all sixteen existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.253 or newer** first, then install package **0.11.3**. Existing package 0.11.1/0.11.2 only needs the Studio update for the detailed artwork. Reload with **Ctrl+F5** afterwards. The optional package uses API 0.2 and contains no executable package code. Updating preserves all sixteen existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
 ## Heating – boiler and oil tank
 
-![SVG heating widget with temperatures, two pumps, burner, fault and tank level](/images/grafik-visual-studio/industrial-heating.png)
+![Detailed heating artwork with dynamic temperatures, two pumps, burner, fault and tank level](/images/grafik-visual-studio/industrial-heating.png)
 
-The landscape SVG drawing places a dark-red boiler, two green pumps, a blue burner and a copper tank side by side. **Width:height is 6:4 grid cells**, including additive housing gaps: with 1 px spacing, minimum **394×262 px**, default **778×518 px**. Typed dimensions and resize handles scale both axes together. Existing portrait widgets migrate when opened, retaining grid cell size and entity bindings. Water pipes sit between the boiler and tank, leaving more room for the level scale. The image shows local test data.
+The detailed transparent PNG reference places a dark-red boiler, two green pumps, a blue burner and a copper tank side by side. Temperatures, statuses, warning, liquid column and arrows are live SVG elements. The image and overlays share the actual **1683×935** image coordinate space and scale together, retaining their alignment during resizing.
+
+**Width:height is 7:4 grid cells**, including additive housing gaps: with 1 px spacing, minimum **460×262 px**, default **908×518 px**. Existing 4:6 and 6:4 widgets migrate when opened, retaining grid cell size and entity bindings. The image ships locally with Studio. The preview shows local test data.
 
 | Display | Entity and settings |
 | --- | --- |
