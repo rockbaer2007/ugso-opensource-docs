@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.10.2** package contains fifteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, plus **Blank panel**. Industrial styling adds a housing, corner screws and a frame. The blank panel requires **Studio 0.1.247 or newer**.
+The external **UGSo Industrial 0.10.3** package contains fifteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, plus **Blank panel**. Industrial styling adds a housing, corner screws and a frame. The blank panel requires **Studio 0.1.247 or newer**.
 
 ## Images
 
@@ -18,7 +18,7 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.248 or newer** first, then install package **0.10.2**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all fifteen existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.249 or newer** first, then install package **0.10.3**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all fifteen existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
@@ -170,7 +170,7 @@ Package **0.3.0** and Studio **0.1.235** add rocker switches as a copy of the to
 
 ![Four rocker switches with independently selected colors](/images/grafik-visual-studio/industrial-rockers.png)
 
-All toggle settings apply: captions, additional ON/OFF, 1/0 or EIN/AUS legends, LED colors, entities, E1–E4/A1–A4, six housing snap points, screws, frame and spacing. Printed O/I symbols remain part of the artwork. Aspect ratio is 1:1 to 4:1 with at least 64 px per channel. Controls are enabled only in runtime.
+All toggle settings apply: captions, additional ON/OFF, 1/0, EIN/AUS or Custom legends, LED colors, entities, E1–E4/A1–A4, six housing snap points, screws, frame and spacing. Printed O/I symbols remain part of the artwork. Aspect ratio is 1:1 to 4:1 with at least 64 px per channel. Controls are enabled only in runtime.
 
 ## Gauge/Poti: data and controls
 
@@ -205,7 +205,7 @@ Value/unit display was added in Studio 0.1.227; dedicated display settings were 
 
 ## Housing and colors
 
-From **Studio 0.1.248**, **all Industrial widgets** offer **Customize background** and **Housing background color**. Disabled by default, preserving the standard dark-gray/anthracite gradient. Enabling it applies a solid custom color, initially **#263238**. The color picker is enabled only while the checkbox is checked. Disabling customization restores the standard background while retaining the chosen color for later. Works in editor and runtime, including when industrial styling is disabled. Display, LCD, segment, LED and scale colors remain independent. Updating Studio is sufficient with an older installed Industrial package; package 0.10.2 updates the instructions.
+From **Studio 0.1.248**, **all Industrial widgets** offer **Customize background** and **Housing background color**. Disabled by default, preserving the standard dark-gray/anthracite gradient. Enabling it applies a solid custom color, initially **#263238**. The color picker is enabled only while the checkbox is checked. Disabling customization restores the standard background while retaining the chosen color for later. Works in editor and runtime, including when industrial styling is disabled. Display, LCD, segment, LED and scale colors remain independent. Updating Studio is sufficient with an older installed Industrial package; package 0.10.3 updates the instructions.
 
 Studio **0.1.231** adds **Enable screws** directly below **Industrial styling**. Screws are enabled by default and can be disabled independently while industrial styling is active. Turning industrial styling back on also enables the screws again. Without industrial styling, screws are hidden and the checkbox is disabled.
 
@@ -231,6 +231,8 @@ Set the color in **Settings → General → Editor and dock points → Housing s
 
 ## Toggle switches – 1 to 4
 
+From **Studio 0.1.249**, each channel offers **Plate legend → Custom** with **Text when OFF** and **Text when ON**. For example, a **Pump** heading with OFF text **1** and ON text **2**, or **Cold/Warm**. All four channels have independent labels; explicitly empty custom labels remain empty. Long labels are clipped, with the full current state text in the tooltip. Rocker switches share this feature; printed O/I artwork remains unchanged. **Only the labels change:** entity actions and E/A ports retain Boolean (`false`/`true`) values; labels “1”/“2” are not emitted as numeric values and do not automatically select two entities. Existing presets remain available. Updating Studio is sufficient with existing Industrial packages.
+
 Since **Studio 0.1.236**, toggle bank width includes the space between channels: **height × channel count + 2 × all-side spacing × (channel count − 1)**. At 64 px height and 1 px spacing, widths are **64 / 130 / 196 / 262 px**. Channel centers and E/A ports align with individual widgets below. Width input and resizing include the extra spacing. This change initially applies only to toggle switches; rocker sizing is unchanged. Updating Studio is sufficient; package 0.3.0 is unchanged.
 
 Package **0.2.0** and Studio **0.1.232** add one to four independently controlled switches side by side. **Number of switches** sets the width/height ratio from **1:1 to 4:1**. Minimum height and width per channel are 64 px; typed changes and resizing preserve the ratio.
@@ -239,7 +241,7 @@ Package **0.2.0** and Studio **0.1.232** add one to four independently controlle
 
 *Runtime with example data: custom captions, green LEDs and ON/OFF, 1/0 and EIN/AUS plates. Since Studio 0.1.233, the metallic lever uses the transparent PNG supplied by rockbaer2007 and is fully visible in both positions. The LED remains CSS artwork. Updating Studio is sufficient; package 0.2.0 does not need reinstalling.*
 
-Each **Switch 1** through **Switch 4** group has a static **Caption**, **Plate legend** with **ON/OFF**, **1/0** or **EIN/AUS**, initial state and individual LED on/off colors. The LED sits above the caption; entities never change the plate text. Font size and color are available under **Caption**.
+Each **Switch 1** through **Switch 4** group has a static **Caption**, **Plate legend** with **ON/OFF**, **1/0**, **EIN/AUS** or **Custom**, initial state and individual LED on/off colors. The LED sits above the caption; entities never change the plate text. Font size and color are available under **Caption**.
 
 | Connection per channel | Behavior |
 | --- | --- |

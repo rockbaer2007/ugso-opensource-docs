@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.10.2** enthält fünfzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED** sowie **Blindelement**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Blindelement benötigt **Studio 0.1.247 oder neuer**.
+Das externe Widget-Paket **UGSo Industrie 0.10.3** enthält fünfzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD**, **Industrie-Wetter – LCD / LED** sowie **Blindelement**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Blindelement benötigt **Studio 0.1.247 oder neuer**.
 
 ## Bilder
 
@@ -18,7 +18,7 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.248 oder neuer** aktualisieren, danach Paket **0.10.2** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.249 oder neuer** aktualisieren, danach Paket **0.10.3** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
@@ -170,7 +170,7 @@ Ab Paket **0.3.0** und Studio **0.1.235** ist der Wippschalter eine Kopie des Ki
 
 ![Vier Wippschalter mit unabhängig gewählten Farben](/images/grafik-visual-studio/industrial-rockers.png)
 
-Alle Kippschalter-Eigenschaften gelten auch hier: Beschriftung, zusätzliche Schilder ON/OFF, 1/0 oder EIN/AUS, LED-Farben, Entitäten, E1–E4/A1–A4, sechs Gehäuse-Snappunkte, Schrauben, Rahmen und Abstand. Das aufgedruckte O/I bleibt Bestandteil der Grafik. Größe 1:1 bis 4:1, mindestens 64 px je Kanal. Bedienung erfolgt nur in der Runtime.
+Alle Kippschalter-Eigenschaften gelten auch hier: Beschriftung, zusätzliche Schilder ON/OFF, 1/0, EIN/AUS oder Benutzerdefiniert, LED-Farben, Entitäten, E1–E4/A1–A4, sechs Gehäuse-Snappunkte, Schrauben, Rahmen und Abstand. Das aufgedruckte O/I bleibt Bestandteil der Grafik. Größe 1:1 bis 4:1, mindestens 64 px je Kanal. Bedienung erfolgt nur in der Runtime.
 
 ## Gauge/Poti: Daten und Bedienung
 
@@ -205,7 +205,7 @@ Die Wert-/Einheitenanzeige wurde mit Studio 0.1.227 ergänzt, die eigenen Anzeig
 
 ## Gehäuse und Farben
 
-Ab **Studio 0.1.248** bieten **alle Industrie-Widgets** die Checkbox **Hintergrund anpassen** mit **Gehäuse-Hintergrundfarbe**. Ohne Haken bleibt der bisherige Standardverlauf von dunkelgrau nach anthrazit erhalten. Mit Haken wird eine einheitliche eigene Farbe verwendet; Vorgabe **#263238**. Die Farbauswahl ist nur bei aktiviertem Haken bedienbar. Nach dem Abschalten kehrt der Standardhintergrund zurück, die gewählte Farbe bleibt für später gespeichert. Das gilt für Editor und Runtime, auch wenn Industriestyle abgeschaltet ist. Bildschirm-, LCD-, Segment-, LED- und Skalenfarben werden weiter separat eingestellt. Das Studio-Update genügt auch mit einem älteren installierten Industriepaket; Paket 0.10.2 aktualisiert die Anleitung.
+Ab **Studio 0.1.248** bieten **alle Industrie-Widgets** die Checkbox **Hintergrund anpassen** mit **Gehäuse-Hintergrundfarbe**. Ohne Haken bleibt der bisherige Standardverlauf von dunkelgrau nach anthrazit erhalten. Mit Haken wird eine einheitliche eigene Farbe verwendet; Vorgabe **#263238**. Die Farbauswahl ist nur bei aktiviertem Haken bedienbar. Nach dem Abschalten kehrt der Standardhintergrund zurück, die gewählte Farbe bleibt für später gespeichert. Das gilt für Editor und Runtime, auch wenn Industriestyle abgeschaltet ist. Bildschirm-, LCD-, Segment-, LED- und Skalenfarben werden weiter separat eingestellt. Das Studio-Update genügt auch mit einem älteren installierten Industriepaket; Paket 0.10.3 aktualisiert die Anleitung.
 
 Ab Studio **0.1.231** steht direkt unter **Industriestyle** die Checkbox **Schrauben aktivieren**. Schrauben sind standardmäßig eingeschaltet und lassen sich bei aktivem Industriestyle separat ausschalten. Erneutes Einschalten von Industriestyle aktiviert auch die Schrauben wieder. Ohne Industriestyle sind keine Schrauben sichtbar und die Checkbox ist deaktiviert.
 
@@ -231,6 +231,8 @@ Die Farbe liegt unter **Einstellungen → Allgemein → Editor und Andockpunkte 
 
 ## Kippschalter – 1 bis 4
 
+Ab **Studio 0.1.249** gibt es pro Schalter **Schildbeschriftung → Benutzerdefiniert** mit **Text bei AUS** und **Text bei EIN**. Zum Beispiel Überschrift **Pumpe**, AUS-Text **1**, EIN-Text **2**, oder **Kalt/Warm**. Die vier Kanäle haben unabhängige Texte; leere eigene Texte bleiben leer. Lange Schildtexte werden gekürzt, der Tooltip zeigt den vollständigen Text des aktuellen Zustands. Das gilt ebenfalls für den Wippschalter; dessen aufgedruckte O/I-Symbole bleiben in der Grafik. **Nur die Beschriftung ändert sich:** Entitätsaktionen und E-/A-Koppelpunkte bleiben boolesch (`false`/`true`); die Texte „1“/„2“ werden nicht als Zahlenwerte ausgegeben und wählen nicht automatisch zwei Entitäten. Vorhandene Schildvarianten bleiben verfügbar. Das Studio-Update genügt mit bestehenden Industriepaketen.
+
 Ab **Studio 0.1.236** wird beim Kippschalter der Zwischenabstand in die Blockbreite eingerechnet: **Höhe × Schalteranzahl + 2 × Abstand rundherum × (Schalteranzahl − 1)**. Bei 64 px Höhe und 1 px Abstand rundherum sind die Breiten **64 / 130 / 196 / 262 px**. Schaltermitten sowie E/A-Anschlüsse fluchten damit mit einzelnen Widgets darunter. Eingabe und Ziehen berücksichtigen den Zuschlag. Diese Anpassung gilt zunächst nur für den Kippschalter; Wippschalter bleiben unverändert. Ein Studio-Update genügt, Paket 0.3.0 bleibt unverändert.
 
 Ab Paket **0.2.0** und Studio **0.1.232** stehen ein bis vier unabhängig bedienbare Schalter nebeneinander zur Verfügung. **Anzahl Schalter** legt das Verhältnis Breite/Höhe von **1:1 bis 4:1** fest. Minimum sind 64 px Höhe und 64 px Breite je Kanal; die Maße bleiben beim Eingeben und Ziehen proportional.
@@ -239,7 +241,7 @@ Ab Paket **0.2.0** und Studio **0.1.232** stehen ein bis vier unabhängig bedien
 
 *Runtime mit Beispieldaten: eigene Beschriftungen, grüne LEDs und Schilder ON/OFF, 1/0 und EIN/AUS. Ab Studio 0.1.233 stammt der Metallhebel aus der von rockbaer2007 bereitgestellten transparenten PNG und ist in beiden Stellungen vollständig sichtbar. Die LED bleibt eine CSS-Zeichnung. Das Studio-Update genügt; Paket 0.2.0 muss nicht erneut installiert werden.*
 
-Jeder Bereich **Schalter 1** bis **Schalter 4** enthält eine feste **Beschriftung**, **Schildbeschriftung** mit **ON/OFF**, **1/0** oder **EIN/AUS**, Startzustand und eigene LED-Farben für Ein und Aus. Die LED liegt oberhalb der Beschriftung; die Schildtexte ändern sich nicht durch Entitäten. Schriftgröße und Schriftfarbe stehen unter **Beschriftung**.
+Jeder Bereich **Schalter 1** bis **Schalter 4** enthält eine feste **Beschriftung**, **Schildbeschriftung** mit **ON/OFF**, **1/0**, **EIN/AUS** oder **Benutzerdefiniert**, Startzustand und eigene LED-Farben für Ein und Aus. Die LED liegt oberhalb der Beschriftung; die Schildtexte ändern sich nicht durch Entitäten. Schriftgröße und Schriftfarbe stehen unter **Beschriftung**.
 
 | Anschluss je Kanal | Verhalten |
 | --- | --- |
