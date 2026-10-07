@@ -5,7 +5,7 @@ description: Installation and settings for the external Industrial package for G
 
 # UGSo Industrial – Widgets
 
-The external **UGSo Industrial 0.10.0** package contains fifteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, plus **Blank panel**. Industrial styling adds a housing, corner screws and a frame. The blank panel requires **Studio 0.1.246 or newer**.
+The external **UGSo Industrial 0.10.1** package contains fifteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, plus **Blank panel**. Industrial styling adds a housing, corner screws and a frame. The blank panel requires **Studio 0.1.247 or newer**.
 
 ## Images
 
@@ -18,7 +18,7 @@ The images show runtime with example data, not live measurements.
 
 ## Installation
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.246 or newer** first, then install package **0.10.0**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all fourteen existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.247 or newer** first, then install package **0.10.1**. The optional package uses API 0.2 and contains no executable package code. Updating preserves all fifteen existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
@@ -26,7 +26,7 @@ The images show runtime with example data, not live measurements.
 
 ![Empty industrial housing with an independent input placed above it](/images/grafik-visual-studio/industrial-blank-panel.png)
 
-An empty background housing for independent input/display widgets. Under **Size**, **Sections** and **Vertical sections** each select **1 to 4**, up to **4:4 grid cells**. Minimum cell size is 64×64 px. Overall width/height includes the gaps between separate widgets: with 1 px **Space around**, each direction measures **64 / 130 / 196 / 262 px**. Entering dimensions or dragging scales both directions together; changing section counts preserves cell size.
+An empty background housing for independent input/display widgets. Under **Size**, **Sections** and **Vertical sections** each select **1 to 12**, up to **12:12 grid cells**. Minimum cell size is 64×64 px. Overall width/height includes the gaps between separate widgets: with 1 px **Space around**, each direction measures **64 / 130 / 196 / 262 px**. Entering dimensions or dragging scales both directions together; changing section counts preserves cell size.
 
 Only four individually enabled **housing snap points** are available. No entities, readings or data input/output ports. Shared industrial styling, screws, frame color, optional frame width, corner radius and CSS settings are available. Default **CSS z-index -1** places the blank panel below normal widgets. Overlaid controls remain independently movable and usable; the panel does not automatically group them. Disable industrial styling to use a custom CSS background. The image shows a local example.
 

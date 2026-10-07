@@ -5,7 +5,7 @@ description: Installation und Einstellungen des externen Industriepakets für Gr
 
 # UGSo Industrie – Widgets
 
-Das externe Widget-Paket **UGSo Industrie 0.10.0** enthält fünfzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD** **Industrie-Wetter – LCD / LED** sowie **Blindelement**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Blindelement benötigt **Studio 0.1.246 oder neuer**.
+Das externe Widget-Paket **UGSo Industrie 0.10.1** enthält fünfzehn Widgets: **Gauge/Poti – 270°**, **Kippschalter – 1 bis 4**, **Wippschalter – 1 bis 4**, **LCD – 20×4**, **LCD – 16×2**, **Linear-Gauge / Schieberegler** und **Zählwerk** in normaler und schmaler Ausführung, **7-Segment – LED**, **16-Segment – LED**, **16-Segment – LCD**, **Industrie-Uhr – Nixie / LED / LCD** **Industrie-Wetter – LCD / LED** sowie **Blindelement**. Industriestyle ergänzt Gehäuse, Schraubenköpfe und Rahmen. Das Blindelement benötigt **Studio 0.1.247 oder neuer**.
 
 ## Bilder
 
@@ -18,7 +18,7 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ## Installation
 
-[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.246 oder neuer** aktualisieren, danach Paket **0.10.0** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Die vierzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
+[Paketdatei herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) und unter **Einstellungen → Widget-Pakete → Lokal** installieren. Zuerst Studio auf **0.1.247 oder neuer** aktualisieren, danach Paket **0.10.1** installieren. Das Paket ist optional, verwendet API 0.2 und enthält keinen ausführbaren Paketcode. Alle fünfzehn bisherigen Widget-Definitionen bleiben beim Update erhalten.
 
 [Quellcode und Paket-Anleitung auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
@@ -26,7 +26,7 @@ Die Bilder zeigen die Runtime mit Beispieldaten, keine Live-Messungen.
 
 ![Leeres Industriegehäuse mit darüberliegendem Eingabefeld](/images/grafik-visual-studio/industrial-blank-panel.png)
 
-Leeres Gehäuse als Hintergrundebene für unabhängige Eingabe- und Anzeige-Widgets. Unter **Größe** wählen **Abschnitte** und **Abschnitte senkrecht** jeweils **1 bis 4**: maximal **4:4 Rasterfelder**. Eine Rasterzelle ist mindestens 64×64 px groß. Die Gesamtbreite/-höhe enthält die Zwischenabstände der Einzelwidgets: bei 1 px **Abstand rundherum** ergeben sich pro Richtung **64 / 130 / 196 / 262 px**. Eingabe und Ziehen skalieren beide Richtungen zusammen; eine geänderte Abschnittszahl erhält die Rasterzellengröße.
+Leeres Gehäuse als Hintergrundebene für unabhängige Eingabe- und Anzeige-Widgets. Unter **Größe** wählen **Abschnitte** und **Abschnitte senkrecht** jeweils **1 bis 12**: maximal **12:12 Rasterfelder**. Eine Rasterzelle ist mindestens 64×64 px groß. Die Gesamtbreite/-höhe enthält die Zwischenabstände der Einzelwidgets: bei 1 px **Abstand rundherum** ergeben sich pro Richtung **64 / 130 / 196 / 262 px**. Eingabe und Ziehen skalieren beide Richtungen zusammen; eine geänderte Abschnittszahl erhält die Rasterzellengröße.
 
 Nur die vier einzeln aktivierbaren **Gehäuse-Snappunkte** sind vorhanden. Keine Entität, Wertanzeige oder Daten-Ein-/Ausgänge. Industriestyle, Schrauben, Rahmenfarbe, optional angepasste Rahmenbreite, Eckenradius und CSS stehen wie bei den anderen Industrieelementen zur Verfügung. Der voreingestellte **CSS z-index -1** legt das Blindelement unter normale Widgets. Darübergelegte Elemente bleiben separat bedienbar und verschiebbar; das Blindelement gruppiert sie nicht automatisch. Für eigene Hintergründe lässt sich Industriestyle abschalten und CSS verwenden. Das Bild zeigt ein lokales Beispiel.
 
