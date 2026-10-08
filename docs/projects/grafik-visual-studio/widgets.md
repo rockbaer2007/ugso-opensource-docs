@@ -4,6 +4,8 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
+Eigenständiges externes Set: [UGSo Calendar +](calendar-plus.md), ab **Studio 0.1.266**. Erkennt alle Home-Assistant-Kalender automatisch, zunächst alle aktiviert; je Kalender ein-/ausblendbar mit eigener Farbe und Hintergrundfarbe. Terminliste, Tagesgruppen und Detail-Popup, automatische DE/EN-Sprache. Inspiriert von [xBourner/calendar-card-plus](https://github.com/xBourner/calendar-card-plus).
+
 **Autosave ab Studio 0.1.265:** Die eingestellte Verzögerung (z. B. zwei Sekunden) beginnt nach der zuletzt erkannten Änderung. Nach einem Speicherfehler folgt bei aktiviertem Autosave nach fünf Sekunden ein neuer Versuch, auch ohne weitere Bearbeitung. Eine hängende Speicheranfrage wird nach 15 Sekunden mit einer Zeitüberschreitung beendet und blockiert weitere Speicherungen nicht dauerhaft. Änderungen während einer Anfrage bleiben für die nächste Speicherung erhalten. Manuelles Speichern wartet bei Bedarf auf die laufende Anfrage.
 
 Ab **Studio 0.1.264** speichern **Runtime** und **Neuer Tab** das aktuelle Projekt vor dem Öffnen. Dadurch übernimmt die Runtime auch gerade verschobene Widgets ohne vorherigen manuellen Speicherklick. Dies gilt für alle Widgetsets. Laufende Speichervorgänge werden abgewartet; bei einem Speicherfehler bleibt der Editor geöffnet. Bereits geöffnete Runtime-Tabs müssen nach späteren Änderungen neu geladen werden.

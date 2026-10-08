@@ -9,6 +9,8 @@ The external **UGSo Industrial** package, its Gauge/Poti and settings have a [de
 
 ## Further interface changes
 
+From Studio **0.1.266**, API 0.2 supports the fixed `calendar-plus` host renderer for [UGSo Calendar +](calendar-plus.md). Calendars are discovered automatically; visibility and colors are saved by entity ID. The independent set has its own sidebar page.
+
 From Studio **0.1.261**, API 0.2 supports the fixed `printer-widget` host renderer for the independent [UGSo Printer](printer.md) set. It reads a status entity, optional message/power/page entities and up to six active supply entities. Packages contain no executable scripts; the host distributes cartridge graphics across equal-width columns.
 
 Studio **0.1.225** applies the color selected in **Settings → General → Editor and dock points → Output point** to Value Converter, LineBox and LineBox Math outputs as well. Occupied Math outputs retain that color. Signal outputs and housing snap points have separate color settings.
