@@ -20,7 +20,7 @@ Direktiven laufen nacheinander, nachdem alle Regeln einer Interaktion passen. Je
 
 ## Direktiven-Regeln
 
-Füge `rules` zu jeder Direktive außer `block` hinzu, um nur diese Direktive zu konditionieren. Die Syntax entspricht den [Interaktionsregeln](./rules). Bei `property`, `event`, `call`, `button`, `tile-icon` und `tooltip` prüfen Host-Element-Regeln standardmäßig den aufgelösten Direktiven-Anchor. Bei `action` und `wait` prüfen sie den Interaction Anchor. Ein eigener `anchor` innerhalb einer Regel bleibt relativ zu diesem Standard-Anchor oder kann wie gewohnt absolut sein.
+Füge `rules` zu jeder Direktive außer `block` hinzu, um nur diese Direktive zu konditionieren. Die Syntax entspricht den [Interaktionsregeln](./rules). Bei `property`, `event`, `call`, `action-handler`, `button`, `badge`, `text-content`, `tile-icon`, `tooltip` und `lock` prüfen Host-Element-Regeln standardmäßig den aufgelösten Direktiven-Anchor. Bei `action`, `template`, `javascript` und `wait` prüfen sie den Interaction Anchor. Eine `event`-Direktive mit Ziel `window` oder `document` verwendet für diese Regeln ebenfalls den Interaction Anchor. Ein eigener `anchor` innerhalb einer Regel bleibt relativ zu diesem Standard-Anchor oder kann wie gewohnt absolut sein.
 
 ::: info Verfügbar ab UIX 8.4.0-beta.9
 Kompakte Direktiven-Regeln können Ergebnisse prüfen, die eine frühere `template`- oder `javascript`-Direktive gespeichert hat.
@@ -52,7 +52,7 @@ directives:
         match: true
 ```
 
-`panel`-Regeln lesen den aktuellen Panel-Zustand, wenn die Direktive erreicht wird. So kann eine frühere Direktive unabhängig vom aktuellen Panel laufen, während eine spätere Direktive nur bei passendem Panel ausgeführt wird.
+`panel`-Regeln ermitteln den aktuellen Panel-Zustand, wenn er erstmals benötigt wird, und verwenden ihn für den Rest der Interaktion wieder. Hat die Interaktion selbst eine Panel-Regel, verwenden Direktiven-Regeln denselben Zustand. Eine Panel-Regel auf Direktivenebene erlaubt, eine frühere Direktive unabhängig vom Panel auszuführen und eine spätere nur bei passendem Panel.
 
 `block` akzeptiert keine Direktiven-Regeln. Lege die Bedingung in die `rules` der Interaktion, damit das Event nur dann synchron blockiert wird, wenn die komplette Interaktion passt.
 
@@ -337,7 +337,7 @@ Die `tooltip`-Direktive wurde in beta.5 ergänzt; `trigger`, `open` und das Scro
   placement: bottom
 ```
 
-Mit `for: previous` direkt nach einer UI-Direktive erhält deren erzeugtes Element den Tooltip. Das funktioniert mit `button` und `tile-icon` und ist für spätere elementerzeugende Direktiven vorbereitet.
+Mit `for: previous` erhält das zuletzt von einer früheren Direktive derselben Interaktion erzeugte Element den Tooltip. Dies funktioniert mit `button`, `badge`, `text-content`, `tile-icon` und `lock` (dessen Sperr-Overlay). Direktiven, die kein Element erzeugen, lassen diese Referenz unverändert.
 
 ```yaml
 - type: button
@@ -461,7 +461,7 @@ Templates erhalten vorherige Direktiven-Ergebnisse in der Top-Level-Variable `di
 
 ## JavaScript
 
-`javascript` wertet `code` einmal aus und speichert den synchronen Rückgabewert unter `id`. Der Code erhält `hass`, `anchor`, `event`, `captured` und `directive`; `directive` enthält vorherige Direktiven-Ergebnisse derselben Interaktion. Gib einen skalaren Wert, ein Objekt oder ein Array zurück; folgende Direktiven können ihn ohne Konvertierung als `@id` verwenden.
+`javascript` wertet `code` einmal aus und speichert den synchronen Rückgabewert unter `id`. Der Code erhält `hass`, `anchor`, `event`, `captured` und `directive`; `directive` enthält vorherige Direktiven-Ergebnisse derselben Interaktion. Gib einen skalaren Wert, ein Objekt oder ein Array zurück; folgende Direktiven können ihn ohne Konvertierung als `@id` verwenden. Es gelten dieselben [ID-Anforderungen](#template) wie für `template`. Auf ein zurückgegebenes Promise wird nicht gewartet. Verwende eine [`action: javascript`](#javascript-action)-Direktive, die ein Promise zurückgibt, wenn spätere Direktiven auf asynchrone Arbeit warten müssen.
 
 ```yaml
 - type: javascript

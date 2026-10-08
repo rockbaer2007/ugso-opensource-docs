@@ -12,6 +12,7 @@ UIX kann das Hintergrundbild von Entitäten ersetzen, das von folgenden Elemente
 - `ha-user-badge` für Benutzer-Badges
 - `ha-person-badge` für Personen-Badges
 - `hui-entity-badge` für Entity-Badges
+- `hui-map-overview` für Personen und Geräte in der Map-Dashboard-Übersicht
 
 ::: note Entity-Badges
 Aktiviere beim Entity-Badge **Entitätsbild anzeigen** beziehungsweise `show_entity_picture: true` in YAML, damit das Bild-Styling greift.
@@ -39,6 +40,8 @@ uix:
 - Die Variable kann auf jeder übergeordneten Ebene im DOM gesetzt werden. UIX erkennt sie über berechnete Styles am Element. Wenn die Variable nicht gesetzt ist oder die Entität nicht passt, bleibt das ursprüngliche Bild unverändert.
 - Für einen Override im gesamten Home-Assistant-Frontend setze `--uix-image-for-<entity_id>` in den Theme-Variablen `uix-root(-yaml)`, `uix-config(-yaml)` und `uix-more-info(-yaml)`.
 :::
+
+Die Bilder in der Map-Dashboard-Übersicht unterstützen ausschließlich Entity-spezifische Overrides. `--uix-image` gilt dort nicht.
 
 ## Generischer Override
 

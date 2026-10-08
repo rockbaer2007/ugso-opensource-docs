@@ -1,6 +1,6 @@
 ---
 title: Actions UIX
-description: "Découvrez les actions UIX : vider le cache, afficher des informations détaillées ou une notification, protéger une action par un code, exécuter du JavaScript et envoyer des événements du navigateur."
+description: "Découvrez les actions UIX : cache, informations détaillées, notifications, popovers, protection par code, JavaScript et événements du navigateur."
 ---
 # Actions UIX
 
@@ -72,6 +72,8 @@ Par exemple, ce bouton Broker envoie l'événement `toggle-yaml-mode` depuis son
       data:
         source: sidebar-button
 ```
+
+Lorsqu'un spark Formulaire de Forge déclenche l'action `event`, ses valeurs actuelles sont ajoutées aux données de l'action et donc au `detail` de l'événement.
 
 ## `more-info` — afficher les informations détaillées d'une entité
 
@@ -154,6 +156,117 @@ tap_action:
 
 ![Exemple d'action de notification UIX](../assets/page-assets/extras/extra-toast-action.gif)
 
+## `popover` — afficher un popover Home Assistant ancré {#popover}
+
+::: info
+Disponible à partir de UIX 8.4.0-beta.5.
+:::
+
+Affiche un popover adaptatif Home Assistant à côté de l'élément qui a déclenché l'action `ll-custom`. Il inclut le bouton de fermeture accessible standard de Home Assistant et se supprime après sa fermeture.
+
+| Configuration | Paramètre | Valeur par défaut | Description |
+| --- | --- | --- | --- |
+| `action: popover` | — | — | Affiche un popover adaptatif avec les options de `data:`. |
+| `data:` | — | — | Options du popover. |
+| | `target` | Source de l'action | `Element` DOM auquel ancrer le popover. `none` affiche un dialogue adaptatif centré sous le shadow root de Home Assistant. |
+| | `title` | — | Définit `headerTitle`. |
+| | `subtitle` | — | Définit `headerSubtitle`. |
+| | `subtitle_position` | `below` | Définit `header-subtitle-position` : `above` ou `below`. |
+| | `width` | `small` | Largeur : `small`, `large` ou `full`. |
+| | `without_header` | `false` | Masque l'en-tête et son bouton de fermeture. <kbd>Échap</kbd> ferme toujours le popover sauf si `dismissible` vaut `false`. |
+| | `dismissible` | `true` | Autorise le bouton de fermeture, <kbd>Échap</kbd> et le clic à l'extérieur. Avec `false`, un bouton de pied de page est obligatoire. `dismissable` est accepté comme alias. |
+| | `content` | — | Contenu HTML ; incompatible avec `card`. |
+| | `card` | — | Configuration d'une carte Home Assistant ; incompatible avec `content`. |
+| | `style` | — | Objet plat associant des propriétés CSS à des chaînes ou nombres, appliqué directement à `ha-adaptive-popover`. |
+| | `uix` | — | Configuration de style UIX appliquée comme `dialog` avec la classe `type-uix-popover`. |
+| | `icons` | — | Liste de boutons à icône dans l'en-tête. Chaque entrée nécessite `icon`. |
+| | `buttons` | — | Boutons de pied de page facultatifs. Au moins un est obligatoire avec `dismissible: false`. |
+| | `buttons.primary` | — | Bouton à l'extrémité principale du pied de page ; valeurs par défaut : `variant: brand`, `appearance: accent`. |
+| | `buttons.secondary` | — | Bouton avant le bouton principal ; valeurs par défaut : `variant: neutral`, `appearance: filled`. |
+
+`buttons.primary` et `buttons.secondary` utilisent les paramètres du [spark Bouton de Forge](../forge/sparks/button), sauf les paramètres de placement. Ils acceptent `label`, `icon`, `start_icon`, `end_icon`, `entity`, `size`, `variant`, `appearance`, `tap_action`, `hold_action` et `double_tap_action`. Les positions suivent le sens d'écriture : le bouton principal est à droite de gauche à droite, et à gauche de droite à gauche. Un bouton avec une action ferme le popover après l'exécution de l'action ; un bouton sans action le ferme au clic.
+
+Si la carte contient un [spark Formulaire de Forge](../forge/sparks/form), ses valeurs actuelles sont ajoutées aux données des actions des deux boutons de pied de page. Le formulaire peut alors omettre ses propres boutons d'envoi et d'effacement.
+
+Avec `target: none`, le même contenu apparaît dans un dialogue adaptatif centré. Une intégration ou un appelant personnalisé peut fournir un véritable élément DOM comme `target` pour choisir une autre ancre.
+
+Chaque entrée `icons` utilise le bouton rond natif de Home Assistant et doit définir `icon`. `label` fournit son nom accessible. Elle accepte `entity`, `color`, `tap_action`, `hold_action` et `double_tap_action`. Les icônes d'en-tête ne ferment pas le popover ; elles conviennent aux paramètres ou à l'aide.
+
+Utilisez `style` pour les propriétés directes du popover et `uix` pour styliser l'en-tête, le pied de page et les éléments internes avec la navigation DOM habituelle. Les données d'action sont accessibles aux modèles via `config`. Une carte créée avec `card` reçoit la classe `uix-popover-card`. `.uix-popover-card` permet de définir les propriétés CSS personnalisées sur l'hôte de la carte ; `".uix-popover-card $"` cible l'intérieur de son shadow root.
+
+Cet exemple original affiche du contenu HTML lorsque le bouton est activé :
+
+```yaml
+type: button
+show_icon: false
+name: Popover
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: popover
+    data:
+      title: Bed light
+      subtitle: Quick controls
+      subtitle_position: above
+      width: small
+      content: |
+        <p>You can toggle the light using the primary action.</p>
+        <p>You can navigate to config/dashboard with the cog icon.</p>
+      style:
+        "--ha-dialog-border-radius": 12px
+      uix:
+        style:
+          "$": |
+            .content-wrapper {
+              --dialog-content-padding: 0 var(--ha-space-6) var(--ha-space-6);
+            }
+      icons:
+        - icon: mdi:cog
+          label: Settings
+          tap_action:
+            action: navigate
+            navigation_path: /config/dashboard
+      buttons:
+        secondary:
+          label: Cancel
+        primary:
+          label: Toggle
+          entity: light.bed_light
+          tap_action:
+            action: toggle
+```
+
+![Popover avec contenu HTML](../assets/page-assets/extras/extra-popover-action.gif)
+
+Remplacez `content` par `card` pour afficher une carte. Cet exemple original retire aussi la bordure et l'arrière-plan de la carte :
+
+```yaml
+type: button
+show_icon: false
+name: Popover
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: popover
+    data:
+      title: Bed light
+      subtitle: Quick controls
+      subtitle_position: above
+      width: small
+      card:
+        type: entities
+        entities:
+          - light.bed_light
+      uix:
+        style: |
+          .uix-popover-card {
+            --ha-card-border-width: 0px;
+            --ha-card-background: none;
+          }
+```
+
+![Popover avec carte Home Assistant](../assets/page-assets/extras/extra-popover-action-card.gif)
+
 ## `javascript` — exécuter du JavaScript dans la session du navigateur
 
 Exécute du code JavaScript dans la session du navigateur. L'objet `hass` est disponible, ainsi qu'un objet facultatif `variables`.
@@ -185,6 +298,8 @@ tap_action:
         console.log("UIX: Custom javascript action executed!");
         hass.callService("light", "turn_off", {}, { entity_id: variables.entity_id });
 ```
+
+Lorsqu'un spark Formulaire de Forge déclenche l'action `javascript`, ses valeurs actuelles sont ajoutées à `data.variables`. Le code y accède avec `variables.<nom_du_champ>`.
 
 ## `locked_action` — demander un code ou une confirmation avant l'action
 

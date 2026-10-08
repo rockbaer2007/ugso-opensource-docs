@@ -6,20 +6,20 @@ description: "Appliquer des opérations déclaratives UIX Broker à un élément
 
 Les directives s'exécutent une par une après chaque correspondance de règle d'interaction. Chaque directive effectue une opération configurée, en utilisant l'ancre d'interaction par défaut ou une ancre de directive explicitement sélectionnée si elle est prise en charge. À l'exception de `block`, une directive peut également avoir son propre `rules` ; la directive ne s'exécute que lorsque toutes correspondent, sinon Broker l'ignore et passe à la directive suivante.
 
-- [Block](#block) — empêche l'action et la propagation par défaut de l'événement initiateur du navigateur.
-- [Property](#property) — définit ou efface une propriété d'objet JavaScript.
-- [Event](#event) — envoie un `CustomEvent`.
-- [Call](#call) — invoque une méthode d'élément.
-- [Button](#button) — insérez un bouton interactif Home Assistant.
-- [Icône de vignette](#tile-icon) — insérez une icône de vignette interactive Home Assistant.
+- [Block](#bloquer) — empêche l'action et la propagation par défaut de l'événement initiateur du navigateur.
+- [Property](#propriete) — définit ou efface une propriété d'objet JavaScript.
+- [Event](#evenement) — envoie un `CustomEvent`.
+- [Call](#appeler) — invoque une méthode d'élément.
+- [Button](#bouton) — insérez un bouton interactif Home Assistant.
+- [Icône de vignette](#icone-de-tuile) — insérez une icône de vignette interactive Home Assistant.
 - [Action](#action) — exécutez une action Home Assistant, frontend ou UIX.
-- [Template](#template) — affiche un modèle Jinja2 une fois et enregistre son résultat.
+- [Template](#modele) — affiche un modèle Jinja2 une fois et enregistre son résultat.
 - [JavaScript](#javascript) — évalue JavaScript de manière synchrone et enregistre sa valeur de retour.
-- [Wait](#wait) — retarde la prochaine directive.
+- [Wait](#attendez) — retarde la prochaine directive.
 
 ## Règles de la directive
 
-Ajoutez `rules` à n’importe quelle directive à l’exception de `block` pour conditionner uniquement cette directive. La syntaxe est la même que celle des [règles d'interaction](./rules.md). Pour `property`, `event`, `call`, `button` et `tile-icon`, les règles d'élément hôte inspectent par défaut l'ancre de directive résolue. Pour `action` et `wait`, ils inspectent l’ancre d’interaction. Le `anchor` d'une règle reste relatif à cette ancre par défaut, ou peut être absolu comme d'habitude.
+Ajoutez `rules` à n'importe quelle directive sauf `block` pour conditionner uniquement cette directive. La syntaxe correspond aux [règles d'interaction](./rules). Pour `property`, `event`, `call`, `action-handler`, `button`, `badge`, `text-content`, `tile-icon`, `tooltip` et `lock`, les règles d'élément hôte inspectent par défaut l'ancre de directive résolue. Pour `action`, `template`, `javascript` et `wait`, elles inspectent l'ancre d'interaction. Une directive `event` ciblant `window` ou `document` utilise aussi l'ancre d'interaction pour ces règles. L'`anchor` propre à une règle reste relatif à cette ancre par défaut ou peut être absolu.
 
 ::: info Disponible à partir de UIX 8.4.0-beta.9
 Les règles compactes de directive peuvent vérifier un résultat enregistré par une directive `template` ou `javascript` précédente.
@@ -51,7 +51,7 @@ directives:
         match: true
 ```
 
-Les règles `panel` obtiennent l'état actuel du panneau lorsque la directive est atteinte. Cela permet à une directive antérieure de s'exécuter quel que soit le panneau actuel, tandis qu'une directive ultérieure ne s'exécute que sur un panneau correspondant.
+Les règles `panel` obtiennent l'état actuel du panneau lorsqu'il est nécessaire pour la première fois, puis le réutilisent pendant le reste de l'interaction. Si l'interaction possède elle-même une règle de panneau, les règles de directive réutilisent cet état. Une règle de panneau au niveau d'une directive permet d'exécuter une directive antérieure indépendamment du panneau et une directive ultérieure seulement si le panneau correspond.
 
 `block` n'accepte pas les règles de directive. Placez sa condition dans le `rules` de l'interaction afin que l'événement soit bloqué de manière synchrone uniquement lorsque l'interaction complète correspond.
 
@@ -86,9 +86,9 @@ directives:
 
 Utilisez l'assistant de console `uix_broker_path($0)` dans la console du navigateur pour rechercher un chemin d'ancrage de directive relatif.
 
-Voir [Interaction Anchors](./interaction-anchors.md#anchors-in-rules-and-directives) pour les formats de sélection.
+Voir [Interaction Anchors](./interaction-anchors.md#ancres-dans-les-regles-et-directives) pour les formats de sélection.
 
-Voir [Recherche de chemins dans la console du navigateur](./interaction-anchors.md#finding-paths-in-the-browser-console) pour plus d'informations sur les aides de console disponibles.
+Voir [Recherche de chemins dans la console du navigateur](./interaction-anchors.md#rechercher-des-chemins-dans-la-console-du-navigateur) pour plus d'informations sur les aides de console disponibles.
 
 ## Propriété
 
@@ -169,7 +169,7 @@ Définissez `capture_data: deep` lorsque les objets simples imbriqués doivent �
   args: [0, 5]
 ```
 
-Bouton ##
+## Bouton
 
 `button` insère un Home Assistant `ha-button` à côté de l'ancre de directive. Il utilise la même configuration de bouton et la même gestion des actions que le [bouton Forge spark](../forge/sparks/button.md). Le bouton est inséré par défaut après l'ancre de la directive.
 
@@ -323,7 +323,75 @@ Utilisez `uix` pour le style UIX, y compris les styles à l’intérieur de la r
 - Broker ajoute l'attribut `data-uix-broker-tile-icon` à chaque icône de tuile générée, afin qu'il puisse être sélectionné à partir du style UIX.
 
 :::
-##Action
+## Info-bulle {#tooltip}
+
+`tooltip` place une info-bulle Home Assistant `wa-tooltip` à côté de la cible sélectionnée. Ses options et variables CSS correspondent au [spark Info-bulle de Forge](../forge/sparks/tooltip). Par défaut, `for` désigne l'ancre de directive résolue ; un sélecteur est relatif à cette ancre et utilise la syntaxe UIX `select_tree`. La cible doit être un élément, pas un shadow root terminal.
+
+```yaml
+- type: tooltip
+  content: Open the living-room light controls
+  placement: bottom
+```
+
+Avec `for: previous`, l'info-bulle est associée au dernier élément produit par une directive antérieure de la même interaction. Cela fonctionne avec `button`, `badge`, `text-content`, `tile-icon` et `lock` (qui produit la superposition de verrouillage). Les directives qui ne produisent pas d'élément laissent cette référence inchangée.
+
+```yaml
+- type: button
+  icon: mdi:lightbulb
+  tap_action:
+    action: toggle
+- type: tooltip
+  for: previous
+  content: Toggle the light
+  placement: bottom
+```
+
+```yaml
+- type: tooltip
+  for: "$ ha-dialog ha-icon-button"
+  content: Close
+  without_arrow: true
+```
+
+Utilisez `style` pour un objet plat de propriétés CSS, notamment pour définir les variables `--uix-tooltip-*` directement sur l'info-bulle créée.
+
+```yaml
+- type: tooltip
+  for: previous
+  content: Toggle the light
+  style:
+    "--uix-tooltip-background-color": var(--primary-color)
+    "--uix-tooltip-content-color": white
+    "--uix-tooltip-max-width": 24ch
+```
+
+`trigger` accepte les modes Web Awesome `hover`, `focus`, `click` et `manual`, séparés par des espaces. Avec `hover`, l'info-bulle reste ouverte lorsque le pointeur passe de la cible à son contenu, permettant de faire défiler un contenu limité en hauteur. `manual` n'active rien automatiquement ; `open` définit l'état à l'exécution de la directive.
+
+```yaml
+- type: tooltip
+  for: previous
+  trigger: manual
+  open: true
+  content: This tooltip is opened by the directive
+```
+
+| Clé | Type | Valeur par défaut | Description |
+| --- | --- | --- | --- |
+| `for` | string | Ancre de directive | Sélecteur cible, ou `previous` pour le dernier élément produit. |
+| `content` | string ou number | `""` | Contenu HTML de l'info-bulle. Les nombres sont affichés comme texte. |
+| `placement` | string | `"top"` | `top`, `top-start`, `top-end`, `bottom`, `bottom-start`, `bottom-end`, `left`, `left-start`, `left-end`, `right`, `right-start` ou `right-end`. |
+| `distance` | number | `8` | Espace en pixels entre l'info-bulle et la cible. |
+| `skidding` | number | `0` | Décalage en pixels le long de l'axe de la cible. |
+| `show_delay` | number | `150` | Délai d'affichage en millisecondes. |
+| `hide_delay` | number | `150` | Délai de masquage en millisecondes. |
+| `trigger` | string | `"hover focus"` | Modes séparés par des espaces : `hover`, `focus`, `click`, `manual`. |
+| `open` | boolean | `false` | État ouvert à l'exécution de la directive, notamment avec `trigger: manual`. |
+| `without_arrow` | boolean | `false` | Masque la flèche directionnelle. |
+| `style` | object | — | Objet plat de propriétés CSS et de valeurs chaîne ou nombre, appliqué directement à `wa-tooltip`. |
+
+L'info-bulle est insérée comme élément frère de sa cible. Définissez les variables CSS `--uix-tooltip-*` sur le parent de la cible ou un ancêtre pour la personnaliser ; consultez la [référence du spark Info-bulle](../forge/sparks/tooltip).
+
+## Action
 
 `action` exécute un appel de service Home Assistant, une action frontale standard ou l'une des actions spécifiques à UIX Broker.
 
@@ -341,7 +409,7 @@ Utilisez `uix` pour le style UIX, y compris les styles à l’intérieur de la r
       message: Done
 ```
 
-###Action JavaScript
+### Action JavaScript {#javascript-action}
 
 `action: javascript` est une action de courtier UIX. Mettez le code dans `data.code`. UIX Broker transmet automatiquement `hass`, `anchor`, `event` et `captured` en tant que variables. `hass` est l'objet Home Assistant actif, `anchor` est l'élément DOM d'ancrage d'interaction résolu, `event` est l'événement initiateur et `captured` est les données capturées de l'interaction.
 
@@ -389,7 +457,7 @@ Les modèles reçoivent les résultats des directives antérieures dans la varia
 
 ## JavaScript
 
-`javascript` évalue une fois `code` et enregistre sa valeur de retour synchrone sous `id`. Le code reçoit `hass`, `anchor`, `event`, `captured` et `directive` ; `directive` contient des résultats de directives antérieures issus de la même interaction. Renvoie un scalaire, un objet ou un tableau ; les directives suivantes peuvent l'utiliser comme `@id` sans conversion.
+`javascript` évalue une fois `code` et enregistre sa valeur de retour synchrone sous `id`. Le code reçoit `hass`, `anchor`, `event`, `captured` et `directive` ; `directive` contient des résultats de directives antérieures issus de la même interaction. Renvoie un scalaire, un objet ou un tableau ; les directives suivantes peuvent l'utiliser comme `@id` sans conversion. Les mêmes [exigences d'identifiant](#modele) que pour `template` s'appliquent. Une Promise retournée n'est pas attendue. Utilisez une directive [`action: javascript`](#javascript-action) retournant une Promise lorsque les directives suivantes doivent attendre une opération asynchrone.
 
 ```yaml
 - type: javascript

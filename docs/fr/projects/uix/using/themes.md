@@ -32,7 +32,7 @@ Le nom du thème doit figurer sur la première ligne ; le reste doit être inden
 ## Thème UIX de base
 
 ::: info Theme variable
-Le thème DOIT définir une variable `uix-theme` dont la valeur désigne la configuration de thème utilisée par UIX pour ses styles et ses macros. En général, `uix-theme` correspond au nom du thème Home Assistant, mais peut désigner un autre thème si vous souhaitez réutiliser sa configuration UIX.
+Le thème DOIT définir une variable `uix-theme` dont la valeur désigne la configuration de thème utilisée par UIX pour ses styles, ses macros et ses [polices](#fonts). En général, `uix-theme` correspond au nom du thème Home Assistant, mais peut désigner un autre thème si vous souhaitez réutiliser sa configuration UIX.
 
 `uix-theme` correspondant au thème Home Assistant :
 
@@ -67,7 +67,7 @@ red-theme:
 
 Une fois `uix-theme` défini, vous pouvez utiliser les fonctionnalités avancées de UIX.
 
-Pour appliquer globalement les fonctions de base de UIX, utilisez les variables `uix-<thing>`, où `<thing>` correspond à n'importe quelle [variable de thème](#theme-variables).
+Pour appliquer globalement les fonctions de base de UIX, utilisez les variables `uix-<thing>`, où `<thing>` correspond à n'importe quelle [variable de thème](#variables-de-theme).
 
 Par exemple, pour ajouter une bordure autour de chaque ligne d'une carte Entités, vous pouvez procéder ainsi :
 
@@ -302,6 +302,57 @@ red-theme:
 - `uix-persistent-notification-item`
 
 Aussi `<any variable>-yaml`.
+
+## Polices {#fonts}
+
+::: info
+Le chargement via `uix-fonts` est disponible à partir de UIX 8.4.0-beta.2.
+:::
+
+`uix-fonts` charge des polices web lorsqu'un thème global est sélectionné. UIX crée des objets [`FontFace`](https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace) et les enregistre dans `document.fonts`. Les composants Home Assistant peuvent les utiliser, y compris dans les shadow roots. Cette option charge uniquement les polices ; les variables de thème ou les styles UIX déterminent leur utilisation.
+
+Les valeurs des thèmes Home Assistant doivent être des chaînes. Placez la définition dans un bloc `|` :
+
+```yaml
+retro-theme:
+  uix-theme: retro-theme
+  uix-fonts: |
+    ChicagoFLF:
+      source: url("https://cdn.jsdelivr.net/npm/@sakun/system.css@0.1.11/fonts/ChicagoFLF.woff2") format("woff2")
+    dashboard-regular:
+      family: My Dashboard Font
+      source: url("/local/fonts/dashboard-regular.woff2") format("woff2")
+      descriptors:
+        weight: "400"
+        style: normal
+        display: swap
+    dashboard-bold:
+      family: My Dashboard Font
+      source: url("/local/fonts/dashboard-bold.woff2") format("woff2")
+      descriptors:
+        weight: "700"
+
+  ha-font-family-body: '"ChicagoFLF", sans-serif'
+  ha-font-family-heading: '"ChicagoFLF", sans-serif'
+  uix-card: |
+    ha-card {
+      font-family: "ChicagoFLF", sans-serif;
+    }
+```
+
+| Clé | Obligatoire | Description |
+| --- | --- | --- |
+| `family` | Non | Famille CSS ; par défaut, la clé de l'entrée. Plusieurs variantes peuvent partager la même famille. |
+| `source` | Oui | Source CSS, par exemple `url("/local/fonts/example.woff2") format("woff2")`. Accepte des alternatives séparées par des virgules et `local("Font Name")`. Utilisez des fichiers de police, pas l'URL d'une feuille CSS du fournisseur. |
+| `descriptors` | Non | Descripteurs `FontFace` avec leurs noms JavaScript : `weight`, `style`, `stretch`, `display`, `unicodeRange`, `featureSettings`, `variationSettings`, `ascentOverride`, `descentOverride`, `lineGapOverride`. Les valeurs sont des chaînes ; `weight` accepte aussi un nombre. |
+
+Utilisez une entrée distincte pour chaque graisse ou style. Une police variable peut définir une plage comme `weight: "100 900"`. Les fichiers de `/config/www/fonts/` sont servis sous `/local/fonts/`. Les serveurs distants doivent autoriser les requêtes inter-origines. Les descripteurs correspondent à l'API `FontFace` ; la prise en charge de `variationSettings`, `ascentOverride`, `descentOverride` et `lineGapOverride` varie, Safari pouvant ignorer certaines valeurs.
+
+Les polices suivent le **thème global Home Assistant**, y compris `modes.light` et `modes.dark`. Le `uix-fonts` d'un mode remplace la définition de base ; `uix-fonts: "{}"` indique un mode sans police personnalisée. Si `uix-theme` désigne un autre thème, UIX utilise sa définition de polices. Les anciennes références `card-mod-theme` sont prises en charge. Un thème sélectionné uniquement pour une vue, une carte ou via `uix.theme` ne charge pas ses polices.
+
+UIX lance les téléchargements sans retarder les styles et n'enregistre qu'une fois les entrées identiques. Un changement ou rechargement de thème supprime les enregistrements UIX inutiles, y compris les polices en cours de chargement. Les polices de Home Assistant et des autres intégrations sont conservées. Les entrées invalides et échecs de téléchargement produisent des avertissements dans la console sans bloquer les autres polices ou styles. Rechargez les thèmes pour réessayer les téléchargements échoués.
+
+`uix-fonts` accepte une définition YAML statique sans modèles. Il n'insère ni CSS ni éléments `<style>` dans l'en-tête du document.
 
 ## Boîtes de dialogue
 

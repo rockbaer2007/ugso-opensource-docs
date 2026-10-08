@@ -11,7 +11,7 @@ Pour les interactions non `block`, UIX Broker réessaye une ancre de remplacemen
 
 ## Règles des éléments hôtes
 
-Les règles de chaîne compacte utilisent [le chemin d'accès de l'élément hôte UIX](../concepts/dom.md#hostelement-path-selection) correspondant à l'ancre d'interaction ou à une ancre de remplacement.
+Les règles de chaîne compacte utilisent [le chemin d'accès de l'élément hôte UIX](../concepts/dom.md#selection-de-chemin-hote-element) correspondant à l'ancre d'interaction ou à une ancre de remplacement.
 
 Les sélecteurs `Tag`, `class`, `id`, `attribute` et `property` sont pris en charge.
 
@@ -32,7 +32,7 @@ rules:
   - "{!.uixBrokerGuard}"
 ```
 
-Utilisez le formulaire développé lorsqu'une règle doit inspecter un élément d'ancrage différent. Sa configuration `anchor` sélectionne l'élément à tester et son `match` applique le [chemin d'accès à l'élément hôte UIX](../concepts/dom.md#hostelement-path-selection) correspondant à cet élément sélectionné. Une règle `anchor` est relative à l'ancre d'interaction ; préfixez-le avec `&` pour un chemin `select_tree` racine absolue du document. Le formulaire `select_tree` étendu est également disponible et est toujours absolu par rapport à la racine du document.
+Utilisez le formulaire développé lorsqu'une règle doit inspecter un élément d'ancrage différent. Sa configuration `anchor` sélectionne l'élément à tester et son `match` applique le [chemin d'accès à l'élément hôte UIX](../concepts/dom.md#selection-de-chemin-hote-element) correspondant à cet élément sélectionné. Une règle `anchor` est relative à l'ancre d'interaction ; préfixez-le avec `&` pour un chemin `select_tree` racine absolue du document. Le formulaire `select_tree` étendu est également disponible et est toujours absolu par rapport à la racine du document.
 
 ```yaml
 rules:
@@ -51,7 +51,7 @@ rules:
 ```
 
 ::: tip
-Les ancres de règle utilisent la même [syntaxe d'arbre de sélection](./interaction-anchors.md#select-tree-anchors) que les ancres de directive et sont réessayées pendant qu'une interaction non-`block` est en cours d'exécution.
+Les ancres de règle utilisent la même [syntaxe d'arbre de sélection](./interaction-anchors.md#ancres-d-arbre-de-selection) que les ancres de directive et sont réessayées pendant qu'une interaction non-`block` est en cours d'exécution.
 
 :::
 ::: tip
@@ -82,7 +82,7 @@ Utilisez `type: user` pour faire correspondre l'utilisateur Home Assistant conne
 nom d’affichage (`hass.user.name`) ou identifiant d’utilisateur stable (`hass.user.id`). Maison
 Les noms d'utilisateur de l'assistant ne sont pas disponibles dans l'objet utilisateur frontal et ne sont pas
 soutenu par cette règle ; utilisez un nom d’affichage ou un identifiant. `match` et `value` utilisent le
-mêmes syntaxe et opérateurs de correspondance que [règles de données capturées](#captured-data-rules),
+mêmes syntaxe et opérateurs de correspondance que [règles de données capturées](#regles-relatives-aux-donnees-capturees),
 y compris les caractères génériques, les expressions régulières et la composition booléenne. Réglez soit
 `match` ou `value`.
 
@@ -127,7 +127,7 @@ Utilisateur non-administrateur dont le nom ou l'identifiant commence par wall- 
 
 ### Fragment d'URL du navigateur
 
-Utilisez `type: hash` pour faire correspondre le fragment d'URL du navigateur. La valeur est la partie après `#`, donc aucun `path` n'est requis. `match` et `value` utilisent la même syntaxe et les mêmes opérateurs de correspondance que les [règles de données capturées](#captured-data-rules).
+Utilisez `type: hash` pour faire correspondre le fragment d'URL du navigateur. La valeur est la partie après `#`, donc aucun `path` n'est requis. `match` et `value` utilisent la même syntaxe et les mêmes opérateurs de correspondance que les [règles de données capturées](#regles-relatives-aux-donnees-capturees).
 
 ```yaml
 rules:
@@ -139,7 +139,7 @@ Cette règle empêche l'exécution des directives de l'interaction à moins que 
 
 ### Paramètres de recherche du navigateur
 
-Utilisez `type: search` pour faire correspondre un paramètre de recherche d'URL nommé. Définissez `path` sur le nom du paramètre. `match` et `value` utilisent la même syntaxe et les mêmes opérateurs de correspondance que les [règles de données capturées](#captured-data-rules).
+Utilisez `type: search` pour faire correspondre un paramètre de recherche d'URL nommé. Définissez `path` sur le nom du paramètre. `match` et `value` utilisent la même syntaxe et les mêmes opérateurs de correspondance que les [règles de données capturées](#regles-relatives-aux-donnees-capturees).
 
 ```yaml
 rules:
@@ -223,7 +223,7 @@ rules:
 
 Utilisez `type: panel` pour faire correspondre l'objet du panneau UIX actuel. UIX Broker obtient cet objet de manière asynchrone ; il contient les mêmes champs `panel` disponibles pour [modèles](../using/templates.md), tels que `fullUrlPath`, `panelUrlPath`, `viewUrlPath` et `panelComponentName`.
 
-`path` (ou son alias `property`) est un chemin de chaînage facultatif séparé par des points par rapport à cet objet panneau. `match` et `value` utilisent exactement la même syntaxe et les mêmes opérateurs de correspondance que les [règles de données capturées](#captured-data-rules), y compris les caractères génériques, les expressions régulières, les comparaisons numériques, `exists` et la composition `and`/`or`/`not`.
+`path` (ou son alias `property`) est un chemin de chaînage facultatif séparé par des points par rapport à cet objet panneau. `match` et `value` utilisent exactement la même syntaxe et les mêmes opérateurs de correspondance que les [règles de données capturées](#regles-relatives-aux-donnees-capturees), y compris les caractères génériques, les expressions régulières, les comparaisons numériques, `exists` et la composition `and`/`or`/`not`.
 
 ```yaml
 rules:
@@ -243,5 +243,5 @@ rules:
 ```
 
 ::: warning
-L’état du panneau est asynchrone. Une interaction utilisant une règle de panneau ne peut pas utiliser une directive `block`, car le blocage d'un événement doit se terminer dans la pile d'appels synchrones de l'événement. UIX Broker ignore ces interactions et enregistre un avertissement.
+L'état du panneau est asynchrone. Une interaction comportant une règle de panneau dans ses `rules` au niveau de l'interaction ne peut pas utiliser `block`, car le blocage doit se terminer dans la pile d'appels synchrones de l'événement. Broker ignore ces interactions et journalise un avertissement. Les directives ultérieures autres que `block` peuvent avoir leurs propres règles de panneau : celles-ci conditionnent uniquement ces directives après le blocage de l'événement.
 :::

@@ -49,20 +49,23 @@ Oui, consultez le tableau ci-dessous.
 | Charge correctement les variables de thème `...-yaml` | ❌<br>Depuis 2026.8.0 | Oui |
 | Gère correctement la variable de thème `...-more-info(-yaml)` | ❌<br>Depuis 2026.3.0 | Oui |
 | Adapte correctement les dialogues pour la variable de thème `...-dialog(-yaml)` | ❌<br>Depuis 2026.3.0 | Oui |
-| [Outils d'inspection du DOM](./concepts/dom.md#dom-inspection-helpers) | Non | Oui |
-| [Sélection de chemin hôte/élément](./concepts/dom.md#hostelement-path-selection) | Non | Oui |
-| [Sélecteur de recherche rapide](./concepts/dom.md#express-search-selector) | Non | Oui |
+| [Outils d'inspection du DOM](./concepts/dom.md#outils-d-inspection-du-dom) | Non | Oui |
+| [Sélection de chemin hôte/élément](./concepts/dom.md#selection-de-chemin-hote-element) | Non | Oui |
+| [Sélecteur de recherche rapide](./concepts/dom.md#selecteur-de-recherche-rapide) | Non | Oui |
 | [Forge](./forge/index.md) (élément Lovelace personnalisé) | Non | Oui |
 | [Fonderies](./forge/foundries.md) (configurations Forge réutilisables) | Non | Oui |
 | [Macros](./using/templates.md#macros) (modèles Jinja réutilisables) | Non | Oui |
 | [Sparks](./forge/sparks/index.md) (comportements autonomes ajoutés aux éléments Forge) | Non | Oui |
+| [Broker](./broker/) pour les interactions déclaratives du frontend | Non | Oui |
 | [Limitation des mises à jour d'état du frontend](./extras/frontend-states-throttling.md) (facultative) | Non | Oui |
 | [Délai d'application des styles aux dialogues](./extras/dialog-styling-delay.md) (facultatif) | Non | Oui |
 | [Arrière-plans des vues du tableau de bord](./using/view-backgrounds.md) | Non | Oui |
 | [Arrière-plans des sections](./using/section-backgrounds.md) | Non | Oui |
 | [Arrière-plans des vues](./using/view-backgrounds.md) | Non | Oui |
-| [Style des icônes — remplacement par entité](./using/icons.md#specifying-for-an-entity-override) | Non | Oui |
+| [Style des icônes — remplacement par entité](./using/icons.md#definir-une-surcharge-pour-une-entite) | Non | Oui |
 | [Style des images d'entité](./using/images.md) | Non | Oui |
+| [Style des panneaux personnalisés](./using/custom-panels), y compris dans des iFrames | Non | Oui |
+| [Style des panneaux d'applications et d'Ingress](./using/apps), y compris dans des iFrames | Non | Oui |
 | Fenêtre contextuelle pour recharger ou vider le cache | Non | Oui |
 | Documentation détaillée avec exemples visuels | Limitée | Oui |
 | Mod-card | Oui | Oui |

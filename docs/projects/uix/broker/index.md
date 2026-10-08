@@ -5,7 +5,7 @@ description: Deklarative Frontend-Interaktionen für Home Assistant mit UIX Brok
 # UIX Broker
 
 ::: info Versionsstand
-UIX Broker gehört zur stabilen Basis 8.2.0. Zusätzliche Funktionen bis 8.3.0-beta.8 sind auf den jeweiligen Referenzseiten gekennzeichnet.
+UIX Broker gehört zur stabilen Basis 8.2.0. Zusätzliche Funktionen bis 8.3.0-beta.8 sind auf den jeweiligen Referenzseiten gekennzeichnet. Eine Ausnahme ist `block`: Diese Direktive blockiert das auslösende Event synchron, bevor die übrigen Direktiven laufen.
 :::
 
 UIX Broker wandelt Browser-Events, Tastenkürzel und Home-Assistant-Event-Bus-Events in deklarative Interaktionen um. Eine Interaktion wählt ein Browser-Element aus, prüft optionale Regeln und führt anschließend die Direktiven in der konfigurierten Reihenfolge aus.
@@ -14,7 +14,7 @@ UIX Broker wandelt Browser-Events, Tastenkürzel und Home-Assistant-Event-Bus-Ev
 Realm -> Listen -> Interaction Anchor -> Rules (optionale Anchors) -> Directives (optionale Anchors)
 ```
 
-Nutze UIX Broker, wenn ein Verhalten konfiguriert werden kann, ohne dafür eine eigene Karte, ein Script oder einen Patch zu schreiben. Broker kann zum Beispiel auf Klicks reagieren, Events vor dem erneuten Auslösen anpassen, Elemente fokussieren, Objekt-Properties setzen, sichere Methoden eines Elements aufrufen oder JavaScript-Actions mit Interaktionsvariablen ausführen.
+Nutze UIX Broker, wenn sich ein Oberflächenverhalten konfigurieren lässt. Broker kann auf Klicks reagieren, Events vor dem erneuten Auslösen verändern, Elemente fokussieren, Objekteigenschaften aktualisieren und sichere Elementmethoden aufrufen. Es kann Buttons, Badges, Text, Tile-Icons, Tooltips und Entsperr-Abfragen ergänzen, Home-Assistant-Aktionen binden oder ausführen, Templates rendern, JavaScript auswerten und zwischen Operationen pausieren.
 
 ```yaml
 uix_broker:
@@ -36,20 +36,10 @@ uix_broker:
 - [Broker](./broker): Struktur, Konfigurationsquellen, Lebenszyklus und Debugging.
 - [Realms](./realms): Browser-Events, Tastenkürzel und Home-Assistant-Event-Bus-Events.
 - [Interaction Anchors](./interaction-anchors): Auswahl von Elementen über Event-Pfad und `select_tree`.
-- [Rules](./rules): Host-Element-, Captured-Data-, Browser-, Benutzer-, URL- und Panel-Regeln.
-- [Directives](./directives): `block`, `property`, `event`, `call`, `button`, `tile-icon`, `tooltip`, Actions, Templates, JavaScript und Wartezeiten.
+- [Rules](./rules): Host-Elemente, Captured Data, Browser-Identität, Benutzer, Administratorstatus, URL-Fragment, Suchparameter und Panels prüfen.
+- [Directives](./directives): `block`, `property`, `event`, `call`, `button`, `badge`, `text-content`, `tile-icon`, `tooltip`, `lock`, `action-handler`, `action`, `template`, `javascript`, `wait`.
 - [Examples](./examples): Beispiele. Weitere ausführliche Beispiele können zusätzlich in den UIX Guides veröffentlicht werden.
 
 ::: info
 Für Browser-Identity-Matching wird [Browser Mod](https://github.com/thomasloven/hass-browser_mod) benötigt.
 :::
-
-## Geplante Funktionen
-
-UIX Broker ist aktiv in Entwicklung. Bisherige Funktionen und Beispiele entstanden aus Nutzerideen aus dem Community-Forum. Neue Ideen sollten als [GitHub Discussion](https://github.com/Lint-Free-Technology/uix/discussions) gestartet werden. Funktionen mit ausreichend Interesse können später als Feature Request in den UIX-Issue-Tracker wandern.
-
-Geplante Erweiterungen sind unter anderem:
-
-- **JavaScript-Regel**: Führt JavaScript mit dem aktuellen Interaktionszustand als Variablen aus und gibt `{result: <truthy>, [optional] namedObject: <object data>}` zurück. Optionale `namedObject`-Daten stehen späteren Regeln und Direktiven zur Verfügung.
-- **Erweiterte JavaScript-Action-Direktive**: Gibt `{continue: <truthy>, [optional] namedObject: <object data>}` zurück. Bei falschem `continue` werden keine weiteren Direktiven ausgeführt; optionale Objektdaten stehen den übrigen Direktiven zur Verfügung.
-- **Jinja2-Template-Regel**: Rendert ein einmaliges Jinja2-Template und kann ein Wahr/Falsch-Ergebnis sowie optionale Objektdaten liefern.

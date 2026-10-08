@@ -11,6 +11,7 @@ UIX peut remplacer l'image d'entité affichée en arrière-plan par les élémen
 - `ha-user-badge` (badges utilisateur)
 - `ha-person-badge` (badges de personne)
 - `hui-entity-badge` (badge d'entité)
+- `hui-map-overview` (personnes et appareils dans l'aperçu du tableau de bord Carte)
 
 Vous pouvez appliquer le style par une [surcharge propre à une entité](#specifying-for-an-entity-override) ou par une [surcharge générique](#specifying-generic-override).
 
@@ -39,6 +40,8 @@ uix:
 - Pour appliquer une surcharge à toute l'interface Home Assistant, ajoutez `--uix-image-for-<entity_id>` aux variables de thème `uix-root(-yaml)`, `uix-config(-yaml)` et `uix-more-info(-yaml)`.
 
 :::
+Les images de l'aperçu du tableau de bord Carte acceptent uniquement les surcharges propres à une entité. `--uix-image` ne s'y applique pas.
+
 ## Définir une surcharge générique { #specifying-generic-override }
 
 Définissez la variable CSS générique `--uix-image` dans le contexte de l'image à remplacer, par exemple sur un élément contenant `ha-entity-marker` (par exemple une carte), `ha-tile-icon` (par exemple une carte Tuile) ou `state-badge` (par exemple une ligne Entités).

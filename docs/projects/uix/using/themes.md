@@ -34,7 +34,7 @@ Der Theme-Name muss in der ersten Zeile stehen. Alle weiteren Werte werden eine 
 ## Einfaches UIX-Theme
 
 ::: info Theme-Variable
-Das Theme **muss** eine Variable `uix-theme` definieren. Ihr Wert wählt die Theme-Definition, die UIX für Styles und Makros nutzt. Normalerweise entspricht `uix-theme` dem Home-Assistant-Theme-Namen, kann aber auch auf ein anderes Theme zeigen, wenn dessen UIX-Konfiguration wiederverwendet werden soll.
+Das Theme **muss** eine Variable `uix-theme` definieren. Ihr Wert wählt die Theme-Definition, die UIX für Styles, Makros und [Schriftarten](#fonts) nutzt. Normalerweise entspricht `uix-theme` dem Home-Assistant-Theme-Namen, kann aber auch auf ein anderes Theme zeigen, wenn dessen UIX-Konfiguration wiederverwendet werden soll.
 
 ```yaml
 my-awesome-theme:
@@ -287,6 +287,57 @@ red-theme:
 - `uix-persistent-notification-item`
 
 Zusätzlich gibt es jeweils auch `<variable>-yaml`.
+
+## Schriftarten {#fonts}
+
+::: info
+Das Laden über `uix-fonts` ist ab UIX 8.4.0-beta.2 verfügbar.
+:::
+
+`uix-fonts` lädt Webfonts beim Auswählen eines globalen Themes. UIX erstellt [`FontFace`-Objekte](https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace) und registriert sie in `document.fonts`. Die Schriften stehen Home-Assistant-Komponenten auch in Shadow Roots zur Verfügung. Diese Option lädt nur Schriften; Theme-Variablen oder UIX-Styles bestimmen deren Verwendung.
+
+Home-Assistant-Theme-Werte müssen Zeichenketten sein. Schreibe die Zuordnung in einen `|`-Block:
+
+```yaml
+retro-theme:
+  uix-theme: retro-theme
+  uix-fonts: |
+    ChicagoFLF:
+      source: url("https://cdn.jsdelivr.net/npm/@sakun/system.css@0.1.11/fonts/ChicagoFLF.woff2") format("woff2")
+    dashboard-regular:
+      family: My Dashboard Font
+      source: url("/local/fonts/dashboard-regular.woff2") format("woff2")
+      descriptors:
+        weight: "400"
+        style: normal
+        display: swap
+    dashboard-bold:
+      family: My Dashboard Font
+      source: url("/local/fonts/dashboard-bold.woff2") format("woff2")
+      descriptors:
+        weight: "700"
+
+  ha-font-family-body: '"ChicagoFLF", sans-serif'
+  ha-font-family-heading: '"ChicagoFLF", sans-serif'
+  uix-card: |
+    ha-card {
+      font-family: "ChicagoFLF", sans-serif;
+    }
+```
+
+| Schlüssel | Erforderlich | Beschreibung |
+| --- | --- | --- |
+| `family` | Nein | CSS-Schriftfamilie; standardmäßig der Zuordnungsschlüssel. Mehrere Schriftschnitte können denselben Familiennamen verwenden. |
+| `source` | Ja | CSS-Schriftquelle, z. B. `url("/local/fonts/example.woff2") format("woff2")`. Unterstützt kommagetrennte Fallbacks und `local("Font Name")`. Verwende Schriftdateien, keine CSS-Stylesheet-URL eines Anbieters. |
+| `descriptors` | Nein | `FontFace`-Deskriptoren mit JavaScript-Namen: `weight`, `style`, `stretch`, `display`, `unicodeRange`, `featureSettings`, `variationSettings`, `ascentOverride`, `descentOverride`, `lineGapOverride`. Werte sind Zeichenketten; `weight` akzeptiert auch Zahlen. |
+
+Verwende einen eigenen Eintrag je Stärke oder Stil. Variable Fonts können einen Bereich wie `weight: "100 900"` angeben. Dateien unter `/config/www/fonts/` werden unter `/local/fonts/` ausgeliefert. Entfernte Server müssen ursprungsübergreifende Schriftanfragen erlauben. Die Deskriptoren entsprechen der Browser-API `FontFace`; die Unterstützung für `variationSettings`, `ascentOverride`, `descentOverride` und `lineGapOverride` variiert, Safari kann einzelne Werte ignorieren.
+
+Schriften folgen dem **globalen Home-Assistant-Theme**, einschließlich `modes.light` und `modes.dark`. Das `uix-fonts` eines Modus ersetzt die Basiszuordnung; `uix-fonts: "{}"` verwendet keine eigenen Schriften. Zeigt `uix-theme` auf ein anderes Theme, wird dessen Schriftzuordnung verwendet. Alte `card-mod-theme`-Referenzen werden unterstützt. Ein nur für eine View, Karte oder über `uix.theme` gewähltes Theme lädt keine Schriften.
+
+UIX lädt Schriften, ohne die Styles aufzuhalten, und registriert identische Einträge einmal. Theme-Wechsel oder Neuladen entfernen nicht mehr benötigte UIX-Registrierungen, auch noch ladende Schriften. Registrierungen von Home Assistant oder anderen Integrationen bleiben erhalten. Ungültige Einträge und fehlgeschlagene Downloads erzeugen Konsolenwarnungen, ohne andere Schriften oder Styles zu blockieren. Lade die Themes neu, um fehlgeschlagene Downloads erneut zu versuchen.
+
+`uix-fonts` akzeptiert eine statische YAML-Zuordnung ohne Templates. Es fügt weder CSS noch `<style>`-Elemente in den Dokumentkopf ein.
 
 ## Dialoge
 

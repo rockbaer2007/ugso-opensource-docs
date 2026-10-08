@@ -52,7 +52,7 @@ My theme:
     }
 ```
 
-![Beispiel für App-Panel-Styling](/projects/uix/app-panel-example.png)
+![Beispiel für App-Panel-Styling](../assets/page-assets/using/app-panel-example.png)
 
 ## Geltungsbereich
 

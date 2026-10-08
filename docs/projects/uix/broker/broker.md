@@ -40,7 +40,7 @@ Siehe [Realms](./realms), [Interaction Anchors](./interaction-anchors), [Rules](
 | `reentrant` | Standard ist `true`. Mit `false` werden passende Events ignoriert, solange dieselbe Interaktion noch läuft. |
 | `debug` | Mit `true` protokolliert UIX den Ablauf in der Browser-Konsole. |
 
-Jede Interaktion ist unabhängig. Alle Regeln müssen passen, und Direktiven laufen nacheinander in der Reihenfolge der Konfiguration.
+Jede Interaktion ist unabhängig. Alle Regeln müssen passen, und Direktiven laufen nacheinander in der Reihenfolge der Konfiguration. `block` wird unabhängig von seiner Listenposition synchron vor den übrigen Direktiven angewendet.
 
 Nutze eine `listen`-Liste im Browser-Realm, wenn dieselbe Interaktion auf mehrere Browser-Events reagieren soll:
 
@@ -91,11 +91,11 @@ YAML-Dateien nutzen dieselbe Home-Assistant-YAML-Auflösung wie Foundries, inklu
 
 ## Synchrone und asynchrone Ausführung
 
-Captured-Data- und Browser-Identity-Regeln laufen synchron vor der Auflösung des Interaction Anchors. Event-Pfad-Anchors werden ebenfalls synchron aufgelöst. Dadurch kann eine Browser-Interaktion mit `block` ein Event früh genug stoppen.
+Regeln für Captured Data, Browser-Identität, Benutzer, Administratorstatus, URL-Fragment und Suchparameter laufen synchron vor der Auflösung des Interaction Anchors. Event-Pfad-Anchors werden ebenfalls synchron aufgelöst. Dadurch kann eine Browser-Interaktion mit `block` diese Regeln und die bereits im composed path vorhandenen Elemente verwenden.
 
 Da die Direktive `block` synchron laufen muss, benötigen Interaktionen mit `block` sofort verfügbare Interaction Anchors und Host-Element-Regel-Anchors. UIX Broker macht hier nur eine synchrone Suche. Ist ein Anchor nicht verfügbar, wird die Interaktion übersprungen.
 
-Nach einer blockierenden Interaktion verwenden spätere `property`-, `event`-, `call`- und `button`-Direktiven wieder das normale asynchrone Retry-Verhalten.
+Nachdem `block` angewendet wurde, verwenden [Direktiven-Anchors](./directives#direktiven-anchors) und die Anchors ihrer Host-Element-Regeln wieder das normale asynchrone Retry-Verhalten.
 
 Für Interaktionen ohne `block` werden fehlende Interaction Anchors und Host-Element-Regel-Anchors alle 50 ms bis zu zwei Sekunden lang erneut gesucht. Das hilft zum Beispiel bei Dialogen, die erst nach dem auslösenden `show-dialog`-Event gerendert werden.
 

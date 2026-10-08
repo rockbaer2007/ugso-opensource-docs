@@ -33,12 +33,15 @@ Nein. UIX nutzt eine eigene Architektur und eigene Frontend-Patches. Es adressie
 | [Foundries](./forge/foundries) als wiederverwendbare Forges | Nein | Ja |
 | [Makros](./using/templates#makros) für wiederverwendbare Jinja-Templates | Nein | Ja |
 | [Sparks](./forge/sparks/) als gekapselte Erweiterungen für Forge-Elemente | Nein | Ja |
+| [Broker](./broker/) für deklarative Frontend-Interaktionen | Nein | Ja |
 | [Frontend State Throttling](./extras/frontend-states-throttling) optional | Nein | Ja |
 | [Dialog Styling Delay](./extras/dialog-styling-delay) optional | Nein | Ja |
 | [Dashboard View Backgrounds](./using/view-backgrounds) | Nein | Ja |
 | [Section Backgrounds](./using/section-backgrounds) | Nein | Ja |
 | [Icon Styling mit Entity Override](./using/icons#override-fur-eine-entitat) | Nein | Ja |
 | [Entitätsbilder stylen](./using/images) | Nein | Ja |
+| [Custom Panels stylen](./using/custom-panels), auch in iFrames | Nein | Ja |
+| [App- und Ingress-Panels stylen](./using/apps), auch in iFrames | Nein | Ja |
 | Reload-/Clear-Cache-Popup | Nein | Ja |
 | Umfangreiche Doku mit visuellen Beispielen | Begrenzt | Ja |
 | Mod-Card | Ja | Ja |

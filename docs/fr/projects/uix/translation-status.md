@@ -34,3 +34,15 @@ Les pages [Directives](./broker/directives#regles-de-la-directive) et [Règles](
 ## Prochaine étape
 
 La documentation française sera révisée au fil des prochaines modifications de la documentation canonique.
+
+## Vérification du 8 octobre 2026
+
+Les changements de la documentation anglaise à la révision [`c70d1275f1fb`](https://github.com/Lint-Free-Technology/uix/commit/c70d1275f1fb08514291feb4c9181a748408b798), branche `master`, ont été comparés aux versions allemande et française.
+
+- Nouveau [spark Formulaire](./forge/sparks/form) : schéma, Markdown, envoi/effacement, densité, variables CSS et valeurs du formulaire dans les actions.
+- Nouvelle [action Popover](./extras/uix-actions#popover) : cartes, icônes d'en-tête, boutons de pied de page, intégration des formulaires et exemples originaux.
+- Broker : `block` synchrone, ancres des règles, réutilisation de l'état du panneau, référence `previous` des info-bulles, Promises JavaScript et événements du cycle de vie des styles. Suppression des fonctionnalités futures obsolètes.
+- Navigation, aperçus de Forge et FAQ complétés ; six médias originaux nouveaux ou modifiés repris.
+- Les changements déjà présents concernant les panneaux intégrés et d'applications ont été comparés à nouveau. Les changements des images d'entité, des marqueurs de carte et des polices des thèmes ont été ajoutés.
+
+Cette vérification porte sur les changements documentaires signalés. La base stable des métadonnées reste `8.3.1` ; elle ne constitue pas une révision complète de toutes les pages pour une publication stable ultérieure. Les exemples YAML/JavaScript et les médias du nouveau formulaire et du popover proviennent sans modification de la source anglaise. La construction et la vérification des liens contrôlent la publication, sans tests d'exécution dans Home Assistant.

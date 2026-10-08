@@ -52,7 +52,7 @@ My theme:
     }
 ```
 
-![Exemple de style d'un panneau d'application](/projects/uix/app-panel-example.png)
+![Exemple de style d'un panneau d'application](../assets/page-assets/using/app-panel-example.png)
 
 ## Portée
 

@@ -36,7 +36,7 @@ Voir [Domaines](./realms.md), [Ancres d'interaction](./interaction-anchors.md), 
 | `reentrant` | La valeur par défaut est `true`. Définissez sur `false` pour ignorer les événements correspondants pour la même interaction pendant sa résolution ou son exécution. |
 | `debug` | Définissez sur `true` pour enregistrer le cycle de vie des interactions dans la console du développeur du navigateur. |
 
-Chaque interaction est indépendante. Toutes ses règles doivent correspondre avant l'exécution des directives, et les directives s'exécutent une par une dans l'ordre de configuration.
+Chaque interaction est indépendante. Toutes ses règles doivent correspondre avant l'exécution des directives, qui s'exécutent une par une dans l'ordre configuré. La directive `block` est appliquée de manière synchrone avant les autres directives, quelle que soit sa position dans la liste.
 
 Utilisez une liste `listen` du domaine du navigateur lorsque la même interaction doit s'exécuter pour plusieurs événements de navigateur :
 
@@ -59,7 +59,7 @@ Les listes sont prises en charge uniquement dans le domaine `browser` ; Les int
 
 Une fois qu'UIX Broker a appliqué sa configuration, il distribue un événement de navigateur `uix-broker-ready` sur `window`. L'événement se déclenche une fois que Broker a enregistré ses écouteurs du domaine du navigateur, de sorte qu'une interaction peut écouter cet événement pour appliquer une personnalisation initiale de l'interface utilisateur. Il se déclenche également après chaque rechargement de la configuration du courtier.
 
-Voir [Ajouter un bouton d'outils au titre de la barre latérale](./examples.md#add-tools-button-to-sidebar-title) pour un exemple utilisant cet événement.
+Voir [Ajouter un bouton d'outils au titre de la barre latérale](./examples.md#ajouter-un-bouton-d-outils-au-titre-de-la-barre-laterale) pour un exemple utilisant cet événement.
 
 ## Sources de configuration
 
@@ -91,13 +91,13 @@ recharge également les fichiers de courtier enregistrés.
 
 ## Chemins d'exécution des interactions synchrones et asynchrones
 
-Les règles de données capturées et d'identité du navigateur s'exécutent de manière synchrone avant la résolution de l'ancre d'interaction. Les ancres d'interaction événement-chemin sont également résolues de manière synchrone. Cela permet à une interaction navigateur-domaine d'appliquer une directive `block` en utilisant les données capturées, l'identité du navigateur et les éléments déjà présents dans le chemin composé de l'événement.
+Les règles de données capturées, d'identité du navigateur, d'utilisateur, de statut administrateur, de fragment d'URL et de paramètres de recherche s'exécutent de manière synchrone avant la résolution de l'ancre d'interaction. Les ancres de chemin d'événement sont également résolues de manière synchrone. Une interaction du realm `browser` peut donc appliquer `block` avec ces règles et les éléments déjà présents dans le chemin composé de l'événement.
 
-Étant donné que la [directive](directives.md) `block` doit s'exécuter de manière synchrone, les interactions contenant `block` nécessitent que leurs ancres [d'interaction](interaction-anchors.md) et [d'élément hôte](rules.md#host-element-rules) soient immédiatement disponibles. UIX Broker effectue une recherche synchrone ; si l'un ou l'autre n'est pas disponible, il ignore l'interaction.
+Étant donné que la [directive](directives.md) `block` doit s'exécuter de manière synchrone, les interactions contenant `block` nécessitent que leurs ancres [d'interaction](interaction-anchors.md) et [d'élément hôte](rules.md#regles-des-elements-hotes) soient immédiatement disponibles. UIX Broker effectue une recherche synchrone ; si l'un ou l'autre n'est pas disponible, il ignore l'interaction.
 
-Une fois qu'une interaction bloquante a été résolue et appliquée `block`, les ancres fournies par les directives ultérieures `property`, `event`, `call` et `button` utilisent toujours le comportement normal de nouvelle tentative asynchrone.
+Une fois `block` appliqué, les [ancres de directive](./directives#ancres-de-directive) et les ancres de leurs règles d'élément hôte utilisent le comportement normal de nouvelle tentative asynchrone.
 
-Pour les interactions sans `block`, les [ancres d'interaction](interaction-anchors.md) et les [règles d'élément hôte](rules.md#host-element-rules) manquantes sont réessayées toutes les 50 ms pendant deux secondes maximum. Cela permet à une interaction écoutant un événement de navigateur tel que `show-dialog` d'attendre que la boîte de dialogue soit montée avant de sélectionner la boîte de dialogue ou l'un de ses éléments comme ancre d'interaction.
+Pour les interactions sans `block`, les [ancres d'interaction](interaction-anchors.md) et les [règles d'élément hôte](rules.md#regles-des-elements-hotes) manquantes sont réessayées toutes les 50 ms pendant deux secondes maximum. Cela permet à une interaction écoutant un événement de navigateur tel que `show-dialog` d'attendre que la boîte de dialogue soit montée avant de sélectionner la boîte de dialogue ou l'un de ses éléments comme ancre d'interaction.
 
 Voir [Realms](realms.md), [Interaction Anchors](interaction-anchors.md) et [Rules](rules.md)] pour plus d'informations.
 
@@ -150,4 +150,4 @@ Interaction avec le domaine du navigateur :
     #... rules and directives
 ```
 
-Voir [Bouton lumineux sur l'élément de menu du tableau de bord Accueil sur la barre latérale](./examples.md#light-button-on-home-dashboard-menu-item-on-sidebar) pour un exemple complet.
+Voir [Bouton lumineux sur l'élément de menu du tableau de bord Accueil sur la barre latérale](./examples.md#bouton-lumineux-sur-l-element-de-menu-du-tableau-de-bord-accueil-dans-la-barre-laterale) pour un exemple complet.

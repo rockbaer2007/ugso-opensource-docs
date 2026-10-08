@@ -21,3 +21,4 @@ Sparks erweitern ein von UIX Forge erzeugtes Element um einzelne, gekapselte Ver
 - [Overlay Icon](./overlay-icon)
 - [Background](./background)
 - [Theme](./theme)
+- [Formular](./form) - Home-Assistant-Formular mit optionalen Absende- und Leeren-Aktionen.

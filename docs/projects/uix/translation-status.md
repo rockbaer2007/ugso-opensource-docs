@@ -76,3 +76,15 @@ Die Änderungen aus den genannten Benachrichtigungen sind abgeglichen. Eine unab
 Die englische Originaldokumentation bleibt die maßgebliche Quelle:
 
 [https://uix.lf.technology/](https://uix.lf.technology/)
+
+## Abgleich vom 08.10.2026
+
+Die Änderungen der englischen Dokumentation in Revision [`c70d1275f1fb`](https://github.com/Lint-Free-Technology/uix/commit/c70d1275f1fb08514291feb4c9181a748408b798), Branch `master`, wurden mit Deutsch und Französisch abgeglichen.
+
+- Neuer [Form Spark](./forge/sparks/form) mit Schema, Markdown, Submit/Clear, Dichte, CSS-Variablen und Formularwerten in Aktionen.
+- Neue [Popover-Aktion](./extras/uix-actions#popover), einschließlich Karten, Header-Icons, Footer-Buttons, Formularintegration und Originalbeispielen.
+- Broker: synchrones `block`, Regel-Anchors, wiederverwendeter Panel-Zustand, Tooltip-Referenz `previous`, JavaScript-Promises und Styling-Lebenszyklus-Events korrigiert. Veraltete geplante Funktionen entfernt.
+- Navigation, Forge-Übersichten und FAQ ergänzt; sechs neue oder geänderte Originalmedien übernommen.
+- Die bereits vorhandenen Änderungen an Frame-/App-Panels wurden erneut verglichen. Ergänzt wurden die Änderungen an Entitätsbildern, Kartenmarkern und Theme-Schriften.
+
+Dieser Abgleich betrifft die gemeldeten Dokumentationsänderungen. Die stabile Metadatenbasis bleibt `8.3.1`; er ersetzt keine vollständige Prüfung sämtlicher Seiten gegen eine spätere stabile Veröffentlichung. YAML-/JavaScript-Beispiele und Medien des neuen Form-Sparks und der Popover-Aktion stammen unverändert aus der englischen Quelle. Der Doku-Build und die Linkprüfung überprüfen die Veröffentlichung; sie führen keine Home-Assistant-Laufzeittests aus.

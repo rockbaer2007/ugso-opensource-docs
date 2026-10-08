@@ -224,5 +224,5 @@ rules:
 ```
 
 ::: warning Panel-Regeln und Blocking
-Eine Interaktion mit Panel-Regel darf keine `block`-Direktive verwenden. Panel-Zustände werden asynchron ermittelt; das Blockieren eines Browser-Events muss dagegen im synchronen Aufruf erfolgen. Broker überspringt solche Interaktionen und protokolliert eine Warnung.
+Eine Interaktion mit einer Panel-Regel in ihren Interaktions-`rules` darf keine `block`-Direktive verwenden. Panel-Zustände werden asynchron ermittelt; das Blockieren eines Browser-Events muss dagegen im synchronen Aufruf erfolgen. Broker überspringt solche Interaktionen und protokolliert eine Warnung. Spätere Direktiven außer `block` dürfen eigene Panel-Regeln besitzen: Diese steuern nur die jeweilige Direktive, nachdem das Event bereits blockiert wurde.
 :::

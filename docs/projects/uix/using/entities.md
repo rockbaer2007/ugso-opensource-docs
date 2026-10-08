@@ -214,6 +214,39 @@ elements:
 
 ## Entity-Marker auf einer Map stylen
 
+Seit Home Assistant 2026.10.0 können Marker und deren Bilder über CSS-Parts von `ha-map` gestaltet werden. `marker` und `picture` gelten für alle Marker bzw. Bilder. Entitätsspezifische Parts heißen `marker-<css-safe-entity_id>`; ersetze dafür den Punkt in der Entity-ID durch einen Bindestrich.
+
+Alle Marker einer Map-Karte stylen:
+
+```yaml
+  type: map
+  show_all: true
+  auto_fit: true
+  uix:
+    style: |
+      ha-map::part(marker) {
+        border: red solid 4px !important;
+      }
+```
+
+Nur den Marker der Entität `person.dev` stylen:
+
+```yaml
+element:
+  type: map
+  show_all: true
+  auto_fit: true
+  uix:
+    style: |
+      ha-map::part(marker-person-dev) {
+        border: red solid 4px !important;
+      }
+```
+
+## Entity-Marker auf einer Map stylen (bisherige Methode)
+
+Die vor Home Assistant 2026.10.0 verwendete Methode funktioniert weiterhin.
+
 Entity-Marker auf einer Map können individuell über Kartenkonfiguration oder über ein Theme gestylt werden. In beiden Beispielen wird auch das Picture Image gestylt.
 
 Styling über Kartenkonfiguration:

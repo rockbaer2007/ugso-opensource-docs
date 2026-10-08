@@ -44,8 +44,35 @@ Par exemple, exécutez une interaction après le démarrage de Broker et chaque 
       method: requestUpdate
 ```
 
-L'objet `detail` de l'événement de navigateur est la racine des données capturées. Voir [Règles de données capturées](./rules.md#captured-data-rules) et [Directive d'événement](./directives.md#event) pour savoir comment les données capturées sont mises en correspondance et
+L'objet `detail` de l'événement de navigateur est la racine des données capturées. Voir [Règles de données capturées](./rules.md#regles-relatives-aux-donnees-capturees) et [Directive d'événement](./directives.md#evenement) pour savoir comment les données capturées sont mises en correspondance et
 réutilisé.
+
+### Événements du cycle de vie de UIX Styling
+
+UIX Styling émet depuis son `<uix-node>` les événements suivants avec `bubbles: true` et `composed: true` :
+
+- `uix-applied` : après l'application ou la réapplication de UIX à un élément. Peut se répéter lors des mises à jour de l'hôte ou de la configuration ; les directives doivent donc être idempotentes.
+- `uix-styles-update` : lorsque le nœud met à jour son texte CSS rendu, y compris via des modèles. Le dernier texte est disponible dans `detail.uix_node._rendered_styles`, mais Lit n'a pas encore mis à jour l'élément `<style>`. Pour lire ensuite les styles calculés, utilisez d'abord une directive [`action: javascript`](./directives#javascript-action) avec `data.code: "return event.detail.uix_node.updateComplete;"`. L'action attend cette Promise avant d'exécuter la directive suivante.
+- `uix-theme-update` : après le traitement d'une mise à jour du thème, même si le CSS obtenu ne change pas.
+
+Ces trois événements fournissent le `<uix-node>` d'origine dans `detail.uix_node`. L'ancre de chemin d'événement `"< target"` sélectionne son parent, l'élément auquel UIX est appliqué, dans le Light DOM comme dans un shadow root.
+
+Cet exemple original définit `themeMode` lorsque UIX est appliqué à la carte ou que son thème est mis à jour :
+
+```yaml
+- realm: browser
+  listen:
+    - uix-applied
+    - uix-theme-update
+  anchor: "< target"
+  rules:
+    - hui-map-card
+  directives:
+    - type: property
+      anchor: "$ ha-map"
+      set: themeMode
+      value: dark
+```
 
 ## Raccourci
 
@@ -97,7 +124,7 @@ Lorsqu'une liaison de raccourci s'exécute, `block` empêche l'action native par
 :::
 ## Modèles
 
-UIX Broker ne fournit délibérément pas de domaine qui s'abonne directement aux modèles Jinja2. La directive [`template`](./directives.md#template) peut restituer un modèle une fois pendant qu'une interaction est en cours, mais elle n'écoute pas les modifications ultérieures. Pour un comportement réactif, utilisez un script, une automatisation ou une entité modèle avec un déclencheur, puis déclenchez un événement personnalisé sur le bus d'événements Home Assistant et écoutez-le dans le domaine `server`.
+UIX Broker ne fournit délibérément pas de domaine qui s'abonne directement aux modèles Jinja2. La directive [`template`](./directives.md#modele) peut restituer un modèle une fois pendant qu'une interaction est en cours, mais elle n'écoute pas les modifications ultérieures. Pour un comportement réactif, utilisez un script, une automatisation ou une entité modèle avec un déclencheur, puis déclenchez un événement personnalisé sur le bus d'événements Home Assistant et écoutez-le dans le domaine `server`.
 
 ::: tip
 Vous pouvez utiliser l'intégration [`custom_event`](https://github.com/reubn/hass_custom_event) pour déclencher des événements personnalisés sur le bus d'événements Home Assistant, puis les écouter dans le domaine `server`.

@@ -37,6 +37,33 @@ Alle Realms unterstützen [Regeln](./rules) und [Direktiven](./directives). Der 
 
 Das `detail`-Objekt des Browser-Events ist die Wurzel der Captured Data. Siehe [Captured-Data-Regeln](./rules#captured-data-regeln) und [Event-Direktive](./directives#event).
 
+### UIX-Styling-Lebenszyklus-Events
+
+UIX Styling löst am `<uix-node>` folgende Browser-Events mit `bubbles: true` und `composed: true` aus:
+
+- `uix-applied`: Nachdem UIX an ein Element angehängt oder erneut angewendet wurde. Kann bei Host-Updates oder erneut angewendeter Konfiguration wieder auftreten; Direktiven sollten deshalb idempotent sein.
+- `uix-styles-update`: Wenn der UIX-Knoten seinen gerenderten CSS-Text aktualisiert, auch durch Templates. Der aktuelle Text steht in `detail.uix_node._rendered_styles`, Lit hat das `<style>`-Element aber noch nicht übernommen. Um anschließend berechnete Styles auszulesen, verwende zuerst eine [`action: javascript`](./directives#javascript-action)-Direktive mit `data.code: "return event.detail.uix_node.updateComplete;"`. Die Aktion wartet auf dieses Promise, bevor die nächste Direktive läuft.
+- `uix-theme-update`: Nachdem der UIX-Knoten ein Theme-Update verarbeitet hat; auch wenn sich das resultierende CSS nicht geändert hat.
+
+Alle drei Events stellen den ursprünglichen `<uix-node>` als `detail.uix_node` bereit. Der Event-Pfad-Anchor `"< target"` wählt dessen übergeordnetes Element, auf das UIX angewendet wird — sowohl im Light DOM als auch im Shadow Root.
+
+Dieses Originalbeispiel setzt `themeMode` einer Karte, wenn UIX angewendet oder das Theme aktualisiert wird:
+
+```yaml
+- realm: browser
+  listen:
+    - uix-applied
+    - uix-theme-update
+  anchor: "< target"
+  rules:
+    - hui-map-card
+  directives:
+    - type: property
+      anchor: "$ ha-map"
+      set: themeMode
+      value: dark
+```
+
 ## Shortcut
 
 `shortcut` nutzt [Tinykeys](https://jamiebuilds.github.io/tinykeys/) und registriert ein Tastenkürzel auf `window`. `$mod` bedeutet `Meta` auf macOS und `Control` unter Windows und Linux.

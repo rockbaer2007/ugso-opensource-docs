@@ -35,3 +35,4 @@ Verfügbare Sparks:
 - :material-star-four-points-outline: [Overlay Icon](./sparks/overlay-icon) - Icon über ein Element legen.
 - :material-image-outline: [Background](./sparks/background) - Hintergrundfarbe, Bild, Video oder Kamera einfügen.
 - :material-palette: [Theme](./sparks/theme) - Theme auf ein Element anwenden.
+- [Formular](./sparks/form) - Home-Assistant-Formular mit optionalen Absende- und Leeren-Aktionen.

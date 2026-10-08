@@ -197,6 +197,39 @@ type: picture-elements
 :::
 ## Styliser les marqueurs d'entité sur une carte
 
+Depuis Home Assistant 2026.10.0, les marqueurs et leurs images peuvent être stylisés via les parts CSS exportées par `ha-map`. `marker` et `picture` s'appliquent à tous les marqueurs et images. Les parts propres à une entité s'appellent `marker-<css-safe-entity_id>` ; remplacez le point de l'identifiant par un tiret.
+
+Styliser tous les marqueurs d'une carte :
+
+```yaml
+  type: map
+  show_all: true
+  auto_fit: true
+  uix:
+    style: |
+      ha-map::part(marker) {
+        border: red solid 4px !important;
+      }
+```
+
+Styliser uniquement le marqueur de `person.dev` :
+
+```yaml
+element:
+  type: map
+  show_all: true
+  auto_fit: true
+  uix:
+    style: |
+      ha-map::part(marker-person-dev) {
+        border: red solid 4px !important;
+      }
+```
+
+## Styliser les marqueurs d'entité sur une carte (ancienne méthode)
+
+La méthode utilisée avant Home Assistant 2026.10.0 fonctionne toujours.
+
 Les marqueurs d'entité d'une carte peuvent être stylisés individuellement dans la configuration de la carte ou dans un thème. Les deux exemples stylisent également l'image.
 
 Style défini dans la configuration :

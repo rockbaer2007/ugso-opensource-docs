@@ -22,3 +22,4 @@ Sparks disponibles :
 - :material-star-four-points-outline: [Icône superposée](overlay-icon.md) — superpose une `ha-icon` ou une `ha-state-icon` à un élément.
 - :material-image-outline: [Arrière-plan](background.md) — ajoute derrière un élément un arrière-plan coloré, une image, une vidéo ou un flux de caméra.
 - :material-palette: [Thème](theme.md) — applique un thème frontend à l'élément ou à l'un de ses descendants.
+- [Formulaire](./form) — formulaire Home Assistant avec actions facultatives d'envoi et d'effacement.
