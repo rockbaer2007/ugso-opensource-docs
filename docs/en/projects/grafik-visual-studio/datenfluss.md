@@ -21,14 +21,20 @@ Value connection and Value calculation internally reuse the SVG-Line and SVG-Lin
 Since 0.1.154, CSS General remains required for these widgets too; the other CSS groups are optional.
 
 
-From **0.1.143**, undefined; Value calculation also disables **Display** by default. Calculation and conversion remain enabled. Enable these groups when needed; disabled CSS fields are omitted from exports. New Value connections have no arrowheads at either end. Previously saved widgets retain their settings.
+From **0.1.143**, optional CSS groups are disabled by default on new data-flow widgets; Value calculation also disables **Display** by default. Calculation and conversion remain enabled. Enable these groups when needed; disabled CSS fields are omitted from exports. New Value connections have no arrowheads at either end. Previously saved widgets retain their settings.
 
 1. On a widget with an entity or preview value, enable **Enable output point** under **Data flow**. Use the **Top**, **Bottom**, **Right** or **Left** radio buttons to select the center of that edge; right is the default. This single output works independently of **Docking points** and can be disabled. Set its separate color under **Settings → Output point**. The point is visible only in the editor; forwarding stays active in runtime. Widgets without an available value, such as plain borders, provide no value. Existing docking configurations are preserved; LineBox, LineBox Math and converters continue using their own ports.
 2. Add a **Value connection**: start at the source output and end at the converter or receiver input. Values always follow this direction, even without visible arrowheads; animation is disabled.
 3. Open **Edit conversion**, select the converter's input and output, and enable **Enable selected input/output docking points**. New ports remain disabled until explicitly enabled.
-4. Choose a conversion and check the preview. For a regular receiver, enable **Receive value from data flow** and its input port. Number can alternatively use its existing numeric docking input, which continues summing multiple numeric values.
+4. Choose a conversion and check the preview. For **Number** and **String** in the Basic set, select **Enable input point** under **Data flow**. For other regular receivers, enable **Receive value from data flow** and their input port. Number can alternatively use its existing numeric docking input, which continues summing multiple numeric values.
 
 A converter and general data-flow input accept **exactly one source per input**. Multiple outgoing connections can distribute a result to different receivers. The converter does not sum strings or switch states. LineBox Math retains its own summation of multiple numeric connections.
+
+### Input point on Number and String
+
+From Studio **0.1.274**, both Basic widgets offer a dedicated input point under **Data flow**. Like the output, it supports **Top**, **Bottom**, **Right** and **Left**; left is the default. The input works independently of **Docking points**. Enabling it makes the widget receive the connected source value in both editor and runtime. Existing incoming connections follow when you change sides. An additionally enabled output can forward the received value.
+
+Disabling data-flow input restores the widget's entity or preview value. Data-flow points are visible only in the editor.
 
 ## Converter dialog
 

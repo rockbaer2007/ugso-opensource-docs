@@ -26,9 +26,15 @@ Ab **0.1.143** sind bei neuen Datenfluss-Widgets die optionalen CSS-Bereiche sta
 1. Schalte bei einem Widget mit Entitäts- oder Vorschauwert unter **Datenfluss** **Ausgangspunkt aktivieren** ein. Wähle mit den Radiobuttons **Oben**, **Unten**, **Rechts** oder **Links** die Mitte der entsprechenden Seite; standardmäßig rechts. Dieser einzelne Ausgang funktioniert unabhängig vom Bereich **Andockpunkte** und ist abschaltbar. Unter **Einstellungen → Ausgangspunkt** stellst du seine eigene Farbe ein. Der Punkt ist nur im Editor sichtbar; die Wertweitergabe bleibt in der Runtime aktiv. Widgets ohne verfügbaren Wert, etwa reine Rahmen, liefern keinen Wert. Bestehende Andockpunkt-Konfigurationen bleiben erhalten; LineBox, LineBox Math und Konverter verwenden weiterhin ihre eigenen Anschlüsse.
 2. Füge eine **Wert-Verbindung** ein: Start an den Ausgang der Quelle, Ziel an den Eingang des Konverters oder Empfängers. Der Wertfluss folgt immer dieser Richtung, auch ohne sichtbare Pfeilspitzen; Linienanimation ist ausgeschaltet.
 3. Öffne am Konverter **Konvertierung bearbeiten**, wähle Ein- und Ausgang und aktiviere **Gewählte Ein-/Ausgangs-Dockpunkte aktivieren**. Neue Dockpunkte bleiben bis zur ausdrücklichen Aktivierung aus.
-4. Wähle die Konvertierung und prüfe die Vorschau. Für einen normalen Empfänger aktiviere unter **Datenfluss** **Wert vom Datenfluss übernehmen** und dessen Eingangs-Dockpunkt. Number kann alternativ seine bestehende numerische Dockpunktübernahme verwenden; dort werden mehrere Zahlenwerte weiterhin summiert.
+4. Wähle die Konvertierung und prüfe die Vorschau. Bei **Number** und **String** im Basic-Set aktiviere unter **Datenfluss** **Eingangspunkt aktivieren**. Bei anderen normalen Empfängern aktiviere **Wert vom Datenfluss übernehmen** und deren Eingangs-Dockpunkt. Number kann alternativ seine bestehende numerische Dockpunktübernahme verwenden; dort werden mehrere Zahlenwerte weiterhin summiert.
 
 Ein Konverter und die allgemeine Datenflussübernahme erlauben **genau eine Quelle je Eingang**. Mehrere ausgehende Verbindungen dürfen dasselbe Ergebnis an unterschiedliche Empfänger verteilen. Der Konverter summiert keine Texte oder Schaltzustände. LineBox Math behält seine eigene Summierung numerischer Mehrfachbelegungen.
+
+### Eingangspunkt bei Number und String
+
+Ab Studio **0.1.274** bieten beide Basic-Widgets unter **Datenfluss** einen eigenen Eingangspunkt. Wie beim Ausgang wählst du **Oben**, **Unten**, **Rechts** oder **Links**; standardmäßig liegt der Eingang links. Der Eingang funktioniert unabhängig vom Bereich **Andockpunkte**. Mit seiner Aktivierung übernimmt das Widget den Wert der angeschlossenen Quelle im Editor und in der Runtime. Beim Wechsel der Seite wandern bestehende Eingangsverbindungen mit. Ein zusätzlich aktivierter Ausgang kann den übernommenen Wert weitergeben.
+
+Nach dem Abschalten der Datenflussübernahme zeigt das Widget wieder seinen Entitäts- oder Vorschauwert. Die Datenflusspunkte sind nur im Editor sichtbar.
 
 ## Konverterdialog
 
