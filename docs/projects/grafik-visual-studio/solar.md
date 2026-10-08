@@ -5,13 +5,13 @@ description: Neutrale SVG-Module mit bündigen Gehäusekoppelpunkten, Textanzeig
 
 # UGSo Solar
 
-**UGSo Solar 0.1.2** benötigt **Studio 0.1.279 oder neuer**. Das eigenständige Widgetset enthält vier markenunabhängige Module mit transparenten SVG-Grafiken. Aktualisiere zuerst Studio und importiere danach die [Paketdatei ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) über die Paketeinstellungen.
+**UGSo Solar 0.1.3** benötigt **Studio 0.1.280 oder neuer**. Das eigenständige Widgetset enthält vier markenunabhängige Module mit transparenten SVG-Grafiken. Aktualisiere zuerst Studio und importiere danach die [Paketdatei ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) über die Paketeinstellungen.
 
 | Widget | Standardgröße | Gehäusekoppelpunkte | Linienpunkte |
 | --- | --- | --- | --- |
 | Stapel-Kopfteil | 256 × 64 px | Unten mittig | Links/rechts sowie je zwei Solarpanel-Eingänge an beiden Gehäuseseiten |
 | Batteriemodul | 256 × 169 px | Oben und unten mittig | Links, rechts |
-| Wechselrichter Solo | 144 × 103,3 px | Keine | Alle vier Seiten |
+| Wechselrichter Solo | 144 × 103,3 px | Keine | Links/rechts/oben mittig sowie sieben Punkte unten inklusive Ecken |
 | Solarpanel mit Standfuß | 320 × 288 px | Keine | Ein Ausgang: Standrohr oder Widgetkante links/rechts |
 
 Die Kopfteilgrafik sitzt mittig auf der unteren Widgetkante. Die Batterie schließt mit der Grafik oben und unten bündig ab. Batterie und Solo behalten beim Vergrößern oder Verkleinern ihre Proportionen. Das sichtbare Solo-Gehäuse ist etwa ein Drittel schmaler als das Kopfteil.
@@ -43,6 +43,8 @@ Bei der Batterie lässt sich unter **Leistung**, **Temperatur** und **Ladezustan
 Unter **Leistungsrichtung** kannst du ein Richtungssymbol zuschalten. Lege fest, ob positive Leistung **Energie hinein** oder **Energie heraus** bedeutet, und wähle die beiden Symbole über freie Texteingaben. Bei Leistung 0 oder einem unbekannten Wert wird kein Richtungssymbol gezeigt. Das Vorzeichen des Zahlenwerts bleibt erhalten.
 
 ## Ein- und Ausgänge für SVG-Linien
+
+Der **Solo-Wechselrichter** bietet an der Unterkante sieben gleichmäßig verteilte Linienpunkte: die beiden Ecken, den bisherigen Mittelpunkt und je zwei weitere Punkte links/rechts davon. Zusammen mit links/rechts/oben mittig sind zehn Linienpunkte möglich. Unter **Linienanschlüsse** stellst du pro Punkt **Aus**, **Eingang** oder **Ausgang** und den Wert ein. Die sechs neuen unteren Punkte sind zunächst aus; vorhandene Anschlüsse und Verbindungen bleiben erhalten.
 
 Bei der Batterie gibt es links und rechts zusätzlich eine **Position**: **Widgetkante Mitte** oder **Gehäusekante an unterer Naht**. Beide Seiten lassen sich unabhängig umstellen. Vorhandene Verbindungen folgen automatisch; Ein-/Ausgangsrolle und Wertzuordnung bleiben erhalten. Die mittigen Gehäusekoppelpunkte oben/unten für das Stapeln ändern sich dadurch nicht.
 
