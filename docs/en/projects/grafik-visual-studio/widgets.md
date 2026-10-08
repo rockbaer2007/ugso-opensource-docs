@@ -4,6 +4,8 @@ title: Widget catalog
 
 # Widget catalog
 
+From **Studio 0.1.264**, **Runtime** and **New tab** save the current project before opening. Recently moved widgets therefore keep their positions without requiring a separate manual save first. This applies to all widget sets. Pending saves are awaited; if saving fails, the editor stays open. Runtime tabs already open must be reloaded after subsequent changes.
+
 Independent external set: [UGSo Printer](printer.md), with printer status and **1–6 automatically evenly distributed cartridges**, from Studio **0.1.261**. Inspired by [ADNPolymerase/ha-printer-card](https://github.com/ADNPolymerase/ha-printer-card), with original SVG artwork and read-only Home Assistant bindings.
 
 Another external set: [UGSo Technic](technic.md), with **Window – Wall**, from Studio 0.1.197. Inspired by Sefina-DS ioBroker Technic Widgets, with independent HA bindings and MIT licensing included in the package.

@@ -4,6 +4,8 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
+Ab **Studio 0.1.264** speichern **Runtime** und **Neuer Tab** das aktuelle Projekt vor dem Öffnen. Dadurch übernimmt die Runtime auch gerade verschobene Widgets ohne vorherigen manuellen Speicherklick. Dies gilt für alle Widgetsets. Laufende Speichervorgänge werden abgewartet; bei einem Speicherfehler bleibt der Editor geöffnet. Bereits geöffnete Runtime-Tabs müssen nach späteren Änderungen neu geladen werden.
+
 Eigenständiges externes Set: [UGSo Printer](printer.md) mit Druckerstatus und **1–6 automatisch gleichmäßig verteilten Patronen**, ab Studio **0.1.261**. Inspiriert von [ADNPolymerase/ha-printer-card](https://github.com/ADNPolymerase/ha-printer-card), eigene SVG-Zeichnung und lesende Home-Assistant-Anbindung.
 
 Weiteres externes Set: [UGSo Technic](technic.md) mit **Window – Wall**, ab Studio 0.1.197. Inspiriert von den ioBroker-Technic-Widgets von Sefina-DS, mit eigener HA-Anbindung und MIT-Lizenz im Paket.
