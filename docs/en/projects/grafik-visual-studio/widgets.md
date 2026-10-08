@@ -4,6 +4,8 @@ title: Widget catalog
 
 # Widget catalog
 
+**Autosave from Studio 0.1.265:** The configured delay (for example, two seconds) starts after the latest detected change. With autosave enabled, failed saves are retried after five seconds, even without further edits. A hanging save request times out after 15 seconds instead of permanently blocking subsequent saves. Changes during a request remain eligible for the next save. Manual save waits for an ongoing request when necessary.
+
 From **Studio 0.1.264**, **Runtime** and **New tab** save the current project before opening. Recently moved widgets therefore keep their positions without requiring a separate manual save first. This applies to all widget sets. Pending saves are awaited; if saving fails, the editor stays open. Runtime tabs already open must be reloaded after subsequent changes.
 
 Independent external set: [UGSo Printer](printer.md), with printer status and **1–6 automatically evenly distributed cartridges**, from Studio **0.1.261**. Inspired by [ADNPolymerase/ha-printer-card](https://github.com/ADNPolymerase/ha-printer-card), with original SVG artwork and read-only Home Assistant bindings.
