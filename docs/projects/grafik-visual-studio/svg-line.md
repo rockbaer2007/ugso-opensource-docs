@@ -28,13 +28,15 @@ Ab Studio 0.1.136 gibt es eine **automatische Teileranpassung** für Zahlen-Enti
 
 Ab Studio **0.1.275** gibt es als dritten Punkttyp den **Wert-Koppelpunkt**. Er gibt den Wert der SVG-Linie aus, etwa den Zahlenwert ihrer Animationsentität oder den Wert ihrer angeschlossenen Quelle. Im Editor erscheint er als Oktagon; seine Farbe stellst du unter **Einstellungen → Wert-Koppelpunkt** ein. Er ist ein reiner Ausgang und kann nicht als Ziel einer Linie verwendet werden.
 
+Ab **0.1.277** lässt sich der Wert-Koppelpunkt frei verschieben, auch neben die Linie. Er verändert weder den Linienverlauf noch die gewählte Pfadart. Nur Zwischen- und Sammelpunkte formen den Pfad. Die abgehende Anzeigeverbindung folgt nach dem Verschieben der neuen Position.
+
 1. Wähle die SVG-Linie aus, klicke erneut auf die gewünschte Stelle und füge einen **Wert-Koppelpunkt** ein.
 2. Platziere ein **Number**-Widget frei neben, über oder unter der Linie. Aktiviere unter **Datenfluss** seinen **Eingangspunkt** und wähle dessen Seite.
 3. Füge eine Verbindung ein. Wähle unter **Start → Sammel- oder Wert-Koppelpunkt** den neuen Punkt oder ziehe den Anfang darauf. Verbinde das Ziel mit dem Eingang von Number.
 
 Der Punkt und die abgehende Verbindung sind in der Runtime automatisch unsichtbar; die Wertübernahme bleibt aktiv. Die ursprüngliche SVG-Linie bleibt sichtbar. **String** kann auf dieselbe Weise einen Textwert aus dem Datenfluss anzeigen. Über **Linienpunkte** lassen sich Name, Position und Punkttyp später ändern. Unbekannte Werte werden nicht durch eine erfundene Null ersetzt.
 
-Unter **Pfad und Sammelpunkte** gibt es vier **Pfadarten**: **Gerade**, **Automatisch rechtwinklig**, **Kurve** und **Manueller Zickzack-/Mehrpunktpfad**. Der **Eckenradius** rundet Ecken im passenden Verlauf ab. Über **Zwischenpunkte und Sammelpunkte** kannst du Punkte benennen, setzen und bearbeiten. Ein per Klick eingefügter Punkt wechselt die Linie in den manuellen Mehrpunktmodus.
+Unter **Pfad und Sammelpunkte** gibt es vier **Pfadarten**: **Gerade**, **Automatisch rechtwinklig**, **Kurve** und **Manueller Zickzack-/Mehrpunktpfad**. Der **Eckenradius** rundet Ecken im passenden Verlauf ab. Über **Zwischenpunkte und Sammelpunkte** kannst du Punkte benennen, setzen und bearbeiten. Ein per Klick eingefügter Zwischen- oder Sammelpunkt wechselt die Linie in den manuellen Mehrpunktmodus.
 
 Ein **Zwischenpunkt** knickt nur den Pfad. Ein **Sammelpunkt** ist ein möglicher Anschluss für weitere SVG-Lines, wenn er aktiviert ist. Ziehe deren freien Endpunkt auf den sichtbaren Sammelpunkt oder wähle ihn in den Eigenschaften. Mehrere Linien können denselben Sammelpunkt nutzen. Eine bloße Kreuzung oder Berührung koppelt keine Linien. Ein deaktivierter Sammelpunkt nimmt keine neue Verbindung an.
 

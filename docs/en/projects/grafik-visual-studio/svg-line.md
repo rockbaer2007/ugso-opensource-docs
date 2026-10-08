@@ -28,13 +28,15 @@ Find **SVG-Line** under **HA Grafik – Spezial**. It visually connects widgets,
 
 From Studio **0.1.275**, **Value output point** is the third point type. It forwards the SVG line's value, such as its numeric animation entity or connected source value. The editor shows an octagon; configure its color under **Settings → Value output point**. It is output-only and cannot be the destination of another line.
 
+From **0.1.277**, a value output point can move freely, including away from the line. It changes neither the line path nor the selected routing mode. Only intermediate and collector points shape the path. The outgoing display connection follows the new position after moving the point.
+
 1. Select the SVG line, click the desired position again and add a **Value output point**.
 2. Place a **Number** widget beside, above or below the line. Under **Data flow**, enable its **Input point** and choose its side.
 3. Add a connection. Under **Start → Collector or value output point**, select the new point or drag the start onto it. Connect the destination to Number's input.
 
 The point and outgoing connection are automatically hidden in runtime; forwarding remains active. The original SVG line stays visible. **String** can display a text value from data flow in the same way. Use **Line points** to edit names, positions and point types later. Unknown values are not replaced with an invented zero.
 
-Under **Path and collector points**, **Path mode** offers **Straight**, **Automatic orthogonal**, **Curve**, and **Manual zigzag/multi-point path**. **Corner radius** rounds corners where the chosen path supports them. **Intermediate and collector points** lets you name, position, and edit points. Adding a point by clicking changes the path to manual multi-point mode.
+Under **Path and collector points**, **Path mode** offers **Straight**, **Automatic orthogonal**, **Curve**, and **Manual zigzag/multi-point path**. **Corner radius** rounds corners where the chosen path supports them. **Intermediate and collector points** lets you name, position, and edit points. Adding an intermediate or collector point by clicking changes the path to manual multi-point mode.
 
 An **intermediate point** only bends the path. An enabled **collector point** accepts other SVG-Lines. Drag their free endpoint onto the visible collector or select it in the properties. Several lines can share one collector. Crossing or touching lines never join automatically. A disabled collector cannot accept a new connection.
 
