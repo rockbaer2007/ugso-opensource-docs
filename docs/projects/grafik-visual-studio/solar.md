@@ -5,15 +5,24 @@ description: Neutrale SVG-Module mit bündigen Gehäusekoppelpunkten, Textanzeig
 
 # UGSo Solar
 
-**UGSo Solar 0.1.0** benötigt **Studio 0.1.276 oder neuer**. Das eigenständige Widgetset enthält drei markenunabhängige Module mit transparenten SVG-Grafiken. Importiere die [Paketdatei ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) über die Paketeinstellungen.
+**UGSo Solar 0.1.1** benötigt **Studio 0.1.278 oder neuer**. Das eigenständige Widgetset enthält vier markenunabhängige Module mit transparenten SVG-Grafiken. Importiere die [Paketdatei ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) über die Paketeinstellungen.
 
 | Widget | Standardgröße | Gehäusekoppelpunkte | Linienpunkte |
 | --- | --- | --- | --- |
 | Stapel-Kopfteil | 256 × 64 px | Unten mittig | Links, rechts, oben |
 | Batteriemodul | 256 × 169 px | Oben und unten mittig | Links, rechts |
 | Wechselrichter Solo | 144 × 103,3 px | Keine | Alle vier Seiten |
+| Solarpanel mit Standfuß | 320 × 288 px | Keine | Ein Ausgang: Standrohr oder Widgetkante links/rechts |
 
 Die Kopfteilgrafik sitzt mittig auf der unteren Widgetkante. Die Batterie schließt mit der Grafik oben und unten bündig ab. Batterie und Solo behalten beim Vergrößern oder Verkleinern ihre Proportionen. Das sichtbare Solo-Gehäuse ist etwa ein Drittel schmaler als das Kopfteil.
+
+## Solarpanel mit Standrohr und Fuß
+
+Unter **Solar-Modul → Ausrichtung** wählst du **Wie Vorlage** oder **Gespiegelt**. Die SVG-Grafik wird horizontal gespiegelt; Schrift und Wertanzeige bleiben lesbar. Beim Skalieren bleiben die Proportionen erhalten.
+
+Wähle unter **Leistung → Eingangsentität (Leistung)** eine Home-Assistant-Entität. Werte in kW werden in W umgerechnet. **Wert anzeigen** blendet nur den rahmenlosen Text aus; der Ausgang liefert weiter Daten. Ohne Entität gilt der Vorschauwert, bei unbekannter Entität erscheint ein Strich.
+
+Unter **Linienanschluss → Position des Ausgangspunkts** stehen drei Positionen zur Wahl: **Am Standrohr über dem Fuß**, **Widgetkante links** und **Widgetkante rechts**. Die Kantenpositionen liegen auf gleicher Höhe wie der Punkt am Rohr. Es bleibt genau ein Ausgang; bereits angeschlossene SVG-Linien folgen beim Umstellen automatisch. **Ausgangspunkt aktiv** schaltet ihn ab oder an. In der Runtime ist der Punkt unsichtbar, die SVG-Linie bleibt sichtbar. Das Solarpanel hat keine Gehäusekoppelpunkte.
 
 ## Einen Stapel zusammensetzen
 

@@ -5,15 +5,24 @@ description: Neutral SVG modules with flush housing snap points, plain-text read
 
 # UGSo Solar
 
-**UGSo Solar 0.1.0** requires **Studio 0.1.276 or later**. This separate widget set contains three manufacturer-independent modules with transparent SVG graphics. Import [ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) through the package settings.
+**UGSo Solar 0.1.1** requires **Studio 0.1.278 or later**. This separate widget set contains four manufacturer-independent modules with transparent SVG graphics. Import [ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) through the package settings.
 
 | Widget | Default size | Housing snap points | Line ports |
 | --- | --- | --- | --- |
 | Stack inverter head | 256 × 64 px | Bottom center | Left, right, top |
 | Battery module | 256 × 169 px | Top and bottom center | Left, right |
 | Standalone inverter | 144 × 103.3 px | None | All four sides |
+| Solar panel with base | 320 × 288 px | None | One output: pole or left/right widget edge |
 
 The head graphic is centered and touches the bottom widget edge. The battery graphic touches both top and bottom edges. Battery and standalone inverter preserve their proportions when resized. The visible standalone enclosure is about one-third narrower than the head.
+
+## Solar panel with pole and base
+
+Use **Solar module → Orientation** to choose **Original** or **Mirrored**. Only the SVG graphic flips horizontally; text remains readable. Resizing preserves proportions.
+
+Select a Home Assistant entity under **Power → Input entity (power)**. Values in kW are converted to W. **Show reading** hides only the unframed text; the output keeps forwarding data. Without an entity, the preview value applies; unavailable entity values appear as a dash.
+
+Under **Line port → Output point position**, choose **At the pole above the base**, **Left widget edge** or **Right widget edge**. Edge positions use the same height as the pole point. There is always just one output; existing SVG lines follow position changes automatically. **Enable output point** turns it off or on. In runtime, the point disappears while the SVG line remains visible. The panel has no housing snap points.
 
 ## Assemble a stack
 
