@@ -5,6 +5,8 @@ description: Eigenständiges Drucker-Widgetset mit Status und bis zu sechs autom
 
 # UGSo Printer
 
+Ab **Studio 0.1.273** heißt die Auswahl **Eigenschaften → WIDGET → Patronen → Stil → Patronen / Balken**. **Patronen** zeigt die bisherigen Grafiken nebeneinander; **Balken** zeigt 1–6 Zeilen mit Name, horizontalem Füllstand und Prozentwert. Entitäten, Farben und Warnschwelle gelten für beide Stile. Fehlende Werte erscheinen als **—**; die frühere Toner-Auswahl wird als Balken übernommen. Die volle/halbe Patronengröße gilt nur für die Patronengrafiken. **Printer-Paket 0.1.1** enthält die korrigierte Auswahl; vorhandene 0.1.0-Pakete werden vom aktualisierten Studio ebenfalls unterstützt.
+
 **UGSo Printer 0.1.0** ist ein eigenes externes Widgetset von **rockbaer2007** für **Grafik Visual Studio 0.1.261 oder neuer**. Es zeigt einen Drucker mit aktuellem Status und **1–6 Patronen oder Tonern**. Die Patronengrafiken verteilen sich automatisch in gleich breiten Spalten über die verfügbare Widgetbreite, auch nach Größenänderungen.
 
 Das Bild zeigt die Runtime mit Testdaten.

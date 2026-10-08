@@ -5,6 +5,8 @@ description: Independent printer widget set with status and up to six evenly dis
 
 # UGSo Printer
 
+From **Studio 0.1.273**, select **Properties → WIDGET → Cartridges → Style → Cartridges / Bar**. Cartridges keeps the graphics side by side; Bar displays 1–6 rows with a name, horizontal fill and percentage. Both styles use the same entities, colors and warning threshold. Missing values remain **—**; legacy toner selection maps to bars. Full/half cartridge size affects graphics only. **Printer package 0.1.1** includes the corrected selection; existing 0.1.0 packages also work with the updated Studio.
+
 **UGSo Printer 0.1.0** is an independent external widget set by **rockbaer2007** for **Grafik Visual Studio 0.1.261 or newer**. It displays a printer with its current status and **1–6 ink or toner cartridges**. Cartridge graphics automatically occupy equally sized columns across the available widget width, including after resizing.
 
 The screenshot shows the runtime with test data.
