@@ -7,11 +7,19 @@ description: Eigenständiges Drucker-Widgetset mit Status und bis zu sechs autom
 
 Ab **Studio 0.1.273** heißt die Auswahl **Eigenschaften → WIDGET → Patronen → Stil → Patronen / Balken**. **Patronen** zeigt die bisherigen Grafiken nebeneinander; **Balken** zeigt 1–6 Zeilen mit Name, horizontalem Füllstand und Prozentwert. Entitäten, Farben und Warnschwelle gelten für beide Stile. Fehlende Werte erscheinen als **—**; die frühere Toner-Auswahl wird als Balken übernommen. Die volle/halbe Patronengröße gilt nur für die Patronengrafiken. **Printer-Paket 0.1.1** enthält die korrigierte Auswahl; vorhandene 0.1.0-Pakete werden vom aktualisierten Studio ebenfalls unterstützt.
 
-**UGSo Printer 0.1.0** ist ein eigenes externes Widgetset von **rockbaer2007** für **Grafik Visual Studio 0.1.261 oder neuer**. Es zeigt einen Drucker mit aktuellem Status und **1–6 Patronen oder Tonern**. Die Patronengrafiken verteilen sich automatisch in gleich breiten Spalten über die verfügbare Widgetbreite, auch nach Größenänderungen.
+**UGSo Printer 0.1.1** ist ein eigenes externes Widgetset von **rockbaer2007**. Für die hier gezeigte Stilauswahl wird **Grafik Visual Studio 0.1.273 oder neuer** benötigt. Es zeigt einen Drucker mit aktuellem Status und **1–6 Tinten- oder Tonerfüllständen**, wahlweise als Patronengrafiken oder horizontale Balken.
+
+### Stil: Patronen
 
 Das Bild zeigt die Runtime mit Testdaten.
 
 ![UGSo Printer mit sechs Patronen und Warnmarkierung](/images/grafik-visual-studio/printer-six.png)
+
+### Stil: Balken
+
+Unter **Eigenschaften → WIDGET → Patronen → Stil** die Option **Balken** wählen. Das folgende Runtime-Bild zeigt sechs Füllstände mit Testdaten: **Gelb 18 %** liegt unter der Warnschwelle von 20 % und wird markiert. Für **Grau** fehlt ein Messwert; der Balken ist schraffiert und zeigt **—** statt eines erfundenen Prozentwerts.
+
+![UGSo Printer im Balkenstil mit sechs Füllständen, Warnung bei Gelb und unbekanntem Graufüllstand](/images/grafik-visual-studio/printer-bars.png)
 
 ## Originalprojekt
 
@@ -19,7 +27,7 @@ Vorbild ist [HA Printer Card von ADNPolymerase](https://github.com/ADNPolymerase
 
 ## Installieren
 
-1. Grafik Visual Studio auf **0.1.261 oder neuer** aktualisieren.
+1. Grafik Visual Studio auf **0.1.273 oder neuer** aktualisieren.
 2. [ugso.printer.wg herunterladen](https://raw.githubusercontent.com/rockbaer2007/ugso-ha-mqtt-addons/master/ha_grafik_visual_studio/packages/printer/ugso.printer.wg).
 3. Unter **Einstellungen → Widget-Pakete → Lokal** installieren.
 4. **UGSo Printer → Drucker** aus der Palette einfügen und die Status- sowie Füllstandsentitäten mit **…** auswählen.
@@ -33,7 +41,7 @@ Ab Studio **0.1.270** stehen unter **Eigenschaften → WIDGET** auch **CSS Font 
 | Bereich | Einstellung |
 | --- | --- |
 | Drucker | Bezeichnung, Statusentität, Modell `mfp` (Multifunktion), `inkjet` (Tintenstrahl) oder `office` (Bürodrucker). |
-| Patronen | Anzahl **1–6**, Darstellung als Tintenpatrone oder Toner, Warnschwelle **0–100 %**, Standard **20 %**. |
+| Patronen | Anzahl **1–6**, **Stil → Patronen / Balken**, Warnschwelle **0–100 %**, Standard **20 %**. |
 | Patrone 1–6 | Eigene Füllstandsentität in Prozent, Beschriftung und Farbe. Die ersten N Einträge sind aktiv. Spätere Bindungen bleiben gespeichert und werden erst bei erhöhter Anzahl wieder abgefragt. |
 | Statusmeldung | Ausblendbar. Optionale separate Entität, sonst `state_message` bzw. `state_reason` der Druckerentität. |
 | Zusatzwerte | Optionale Entitäten für Leistung und Seitenzähler. |

@@ -7,11 +7,19 @@ description: Independent printer widget set with status and up to six evenly dis
 
 From **Studio 0.1.273**, select **Properties → WIDGET → Cartridges → Style → Cartridges / Bar**. Cartridges keeps the graphics side by side; Bar displays 1–6 rows with a name, horizontal fill and percentage. Both styles use the same entities, colors and warning threshold. Missing values remain **—**; legacy toner selection maps to bars. Full/half cartridge size affects graphics only. **Printer package 0.1.1** includes the corrected selection; existing 0.1.0 packages also work with the updated Studio.
 
-**UGSo Printer 0.1.0** is an independent external widget set by **rockbaer2007** for **Grafik Visual Studio 0.1.261 or newer**. It displays a printer with its current status and **1–6 ink or toner cartridges**. Cartridge graphics automatically occupy equally sized columns across the available widget width, including after resizing.
+**UGSo Printer 0.1.1** is an independent external widget set by **rockbaer2007**. The style selection shown here requires **Grafik Visual Studio 0.1.273 or newer**. It displays a printer with its current status and **1–6 ink or toner levels**, using cartridge graphics or horizontal bars.
+
+### Style: Cartridges
 
 The screenshot shows the runtime with test data.
 
 ![UGSo Printer with six cartridges and a low-level warning](/images/grafik-visual-studio/printer-six.png)
+
+### Style: Bar
+
+Under **Properties → WIDGET → Cartridges → Style**, select **Bar**. The runtime screenshot below uses six supplies with test data: **Yellow at 18%** is below the 20% warning threshold and is highlighted. **Gray** has no reading, so its bar is hatched and displays **—** rather than an invented percentage. This screenshot uses the German interface.
+
+![UGSo Printer with six horizontal bars, a low yellow supply warning and an unknown gray level](/images/grafik-visual-studio/printer-bars.png)
 
 ## Original project
 
@@ -19,7 +27,7 @@ Inspired by [HA Printer Card by ADNPolymerase](https://github.com/ADNPolymerase/
 
 ## Installation
 
-1. Update Grafik Visual Studio to **0.1.261 or newer**.
+1. Update Grafik Visual Studio to **0.1.273 or newer**.
 2. [Download ugso.printer.wg](https://raw.githubusercontent.com/rockbaer2007/ugso-ha-mqtt-addons/master/ha_grafik_visual_studio/packages/printer/ugso.printer.wg).
 3. Install under **Settings → Widget packages → Local**.
 4. Add **UGSo Printer → Drucker** from the palette and select status and supply entities using **…**.
@@ -33,7 +41,7 @@ From Studio **0.1.270**, **Properties → WIDGET** also provides **CSS Font & Te
 | Section | Settings |
 | --- | --- |
 | Printer | Caption, status entity, model `mfp` (multifunction), `inkjet` or `office`. |
-| Cartridges | Count **1–6**, ink or toner appearance, low threshold **0–100 %**, default **20 %**. |
+| Cartridges | Count **1–6**, **Style → Cartridges / Bar**, low threshold **0–100 %**, default **20 %**. |
 | Cartridge 1–6 | Individual percentage entity, caption and color. The first N entries are active. Later bindings remain saved and are polled again when the count is increased. |
 | Status message | Optional display. Separate entity, otherwise the printer entity's `state_message` or `state_reason`. |
 | Additional values | Optional power and page-counter entities. |
