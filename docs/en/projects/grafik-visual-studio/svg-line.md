@@ -28,7 +28,7 @@ Find **SVG-Line** under **HA Grafik – Spezial**. It visually connects widgets,
 
 From Studio **0.1.275**, **Value output point** is the third point type. It forwards the SVG line's value, such as its numeric animation entity or connected source value. The editor shows an octagon; configure its color under **Settings → Value output point**. It is output-only and cannot be the destination of another line.
 
-From **0.1.277**, a value output point can move freely, including away from the line. It changes neither the line path nor the selected routing mode. Only intermediate and collector points shape the path. The outgoing display connection follows the new position after moving the point.
+From **0.1.281**, a value output point can move only **along the visible line path**. Dragging keeps it at the nearest point on the line, including curves and rounded corners. It changes neither the line path nor the selected routing mode. Only intermediate and collector points shape the path. The outgoing display connection follows the new position after moving the point. Older off-path points and manually entered positions are projected onto the path.
 
 1. Select the SVG line, click the desired position again and add a **Value output point**.
 2. Place a **Number** widget beside, above or below the line. Under **Data flow**, enable its **Input point** and choose its side.

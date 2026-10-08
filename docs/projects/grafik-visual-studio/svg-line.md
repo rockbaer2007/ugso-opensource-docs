@@ -28,7 +28,7 @@ Ab Studio 0.1.136 gibt es eine **automatische Teileranpassung** für Zahlen-Enti
 
 Ab Studio **0.1.275** gibt es als dritten Punkttyp den **Wert-Koppelpunkt**. Er gibt den Wert der SVG-Linie aus, etwa den Zahlenwert ihrer Animationsentität oder den Wert ihrer angeschlossenen Quelle. Im Editor erscheint er als Oktagon; seine Farbe stellst du unter **Einstellungen → Wert-Koppelpunkt** ein. Er ist ein reiner Ausgang und kann nicht als Ziel einer Linie verwendet werden.
 
-Ab **0.1.277** lässt sich der Wert-Koppelpunkt frei verschieben, auch neben die Linie. Er verändert weder den Linienverlauf noch die gewählte Pfadart. Nur Zwischen- und Sammelpunkte formen den Pfad. Die abgehende Anzeigeverbindung folgt nach dem Verschieben der neuen Position.
+Ab **0.1.281** lässt sich der Wert-Koppelpunkt ausschließlich **auf dem sichtbaren Linienverlauf** verschieben. Beim Ziehen bleibt er auf dem nächstgelegenen Punkt der Linie, auch bei Kurven und gerundeten Ecken. Er verändert weder den Linienverlauf noch die gewählte Pfadart. Nur Zwischen- und Sammelpunkte formen den Pfad. Die abgehende Anzeigeverbindung folgt nach dem Verschieben der neuen Position. Ältere Punkte neben der Linie sowie manuell eingegebene Positionen werden auf den Pfad gesetzt.
 
 1. Wähle die SVG-Linie aus, klicke erneut auf die gewünschte Stelle und füge einen **Wert-Koppelpunkt** ein.
 2. Platziere ein **Number**-Widget frei neben, über oder unter der Linie. Aktiviere unter **Datenfluss** seinen **Eingangspunkt** und wähle dessen Seite.
