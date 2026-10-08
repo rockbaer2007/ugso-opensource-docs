@@ -5,7 +5,7 @@ description: Eigenes Kalender-Widgetset mit automatischer Kalendererkennung, Ter
 
 # UGSo Calendar +
 
-**UGSo Calendar + 0.1.0** ist ein eigenes externes Widgetset von **rockbaer2007** für **Grafik Visual Studio 0.1.266 oder neuer**. Es erkennt alle verfügbaren Home-Assistant-Kalender automatisch und zeigt kommende Termine als kompakte Karte oder ausgeklappte Liste. Alle Kalender sind zunächst aktiviert.
+**UGSo Calendar + 0.1.1** ist ein eigenes externes Widgetset von **rockbaer2007** für **Grafik Visual Studio 0.1.267 oder neuer**. Es erkennt alle verfügbaren Home-Assistant-Kalender automatisch und zeigt kommende Termine als kompakte Karte oder ausgeklappte Liste. Alle Kalender sind zunächst aktiviert.
 
 Die Runtime mit Beispieldaten:
 
@@ -17,7 +17,7 @@ Vorbild ist **[calendar-card-plus von xBourner](https://github.com/xBourner/cale
 
 ## Installieren
 
-1. Studio auf **0.1.266 oder neuer** aktualisieren.
+1. Studio auf **0.1.267 oder neuer** aktualisieren.
 2. [ugso.calendar-plus.wg herunterladen](https://raw.githubusercontent.com/rockbaer2007/ugso-ha-mqtt-addons/master/ha_grafik_visual_studio/packages/calendar-plus/ugso.calendar-plus.wg).
 3. Unter **Einstellungen → Widget-Pakete → Lokal** installieren.
 4. **UGSo Calendar + → Kalender +** aus der Palette auf die Seite ziehen.
@@ -26,7 +26,9 @@ Das Paket enthält deklarative Daten, ein Symbol, Anleitung und MIT-Lizenz. Der 
 
 ## Meine Kalender
 
-Alle verfügbaren `calendar.*`-Entitäten werden erkannt, einschließlich Kalendern ohne Registry-Eintrag. In Home Assistant deaktivierte Registry-Einträge werden ausgelassen. Unter **Meine Kalender** erscheint für jeden Kalender ein eigener Bereich mit Entitäts-ID, **Einblenden/Ausblenden**, **Farbe** und optionaler **Hintergrundfarbe**. Es gibt keine manuell einzutragende Kalenderanzahl.
+Alle verfügbaren `calendar.*`-Entitäten werden erkannt, einschließlich Kalendern ohne Registry-Eintrag. In Home Assistant deaktivierte Registry-Einträge werden ausgelassen. Unter **Meine Kalender** erscheint für jeden Kalender ein eigener Bereich mit Entitäts-ID, einer **Checkbox rechts oben zum Anzeigen/Ausblenden**, **Farbe** und optionaler **Hintergrundfarbe**. Es gibt keine manuell einzutragende Kalenderanzahl.
+
+Ab Studio **0.1.267** gibt es unter **Farben → Kalenderkachelgröße** drei feste Größen: **Klein 44 × 52 px**, **Mittel 58 × 64 px** (Standard) und **Groß 76 × 82 px**. Die Auswahl gilt für Terminliste und Detail-Popup. Kopftext mindestens **12 px**, Tagesziffer mindestens **24 px**, unabhängig von der allgemeinen Schriftgröße. Auch schmale Widgets behalten die gewählte Größe. Vorhandene Pakete 0.1.0 erhalten die Einstellung mit dem Studio-Update; eine Neuinstallation ist nicht nötig. Der Kalender benötigt keine Datenfluss-Einstellungen oder Ein-/Ausgangspunkte.
 
 Die Auswahl und Farben bleiben anhand der Entitäts-ID gespeichert. Neu hinzugekommene Kalender sind automatisch eingeblendet; ausgeblendete Kalender werden nicht nach Terminen abgefragt. Die Anzahl erkannter Kalender ist nicht begrenzt. Abfragen erfolgen in Gruppen von höchstens 20 Kalendern über die Home-Assistant-Schnittstelle.
 

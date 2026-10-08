@@ -5,7 +5,7 @@ description: Independent calendar widget set with automatic discovery, upcoming 
 
 # UGSo Calendar +
 
-**UGSo Calendar + 0.1.0** is an independent external widget set by **rockbaer2007** for **Grafik Visual Studio 0.1.266 or newer**. It discovers all available Home Assistant calendars automatically and displays upcoming events as a compact card or expanded list. All calendars are enabled initially.
+**UGSo Calendar + 0.1.1** is an independent external widget set by **rockbaer2007** for **Grafik Visual Studio 0.1.267 or newer**. It discovers all available Home Assistant calendars automatically and displays upcoming events as a compact card or expanded list. All calendars are enabled initially.
 
 Runtime with sample data:
 
@@ -17,7 +17,7 @@ Inspired by **[calendar-card-plus by xBourner](https://github.com/xBourner/calen
 
 ## Installation
 
-1. Update Studio to **0.1.266 or newer**.
+1. Update Studio to **0.1.267 or newer**.
 2. [Download ugso.calendar-plus.wg](https://raw.githubusercontent.com/rockbaer2007/ugso-ha-mqtt-addons/master/ha_grafik_visual_studio/packages/calendar-plus/ugso.calendar-plus.wg).
 3. Install under **Settings → Widget packages → Local**.
 4. Drag **UGSo Calendar + → Calendar +** from the palette onto the page.
@@ -26,7 +26,9 @@ The package contains declarative data, an icon, instructions and the MIT license
 
 ## My calendars
 
-All available `calendar.*` entities are discovered, including calendars without a registry entry. Registry entries disabled in Home Assistant are omitted. **My calendars** provides a section for each calendar with its entity ID, **Show/Hide**, **Color** and optional **Background color**. There is no manual calendar count.
+All available `calendar.*` entities are discovered, including calendars without a registry entry. Registry entries disabled in Home Assistant are omitted. **My calendars** provides a section for each calendar with its entity ID, a **top-right checkbox to show/hide**, **Color** and optional **Background color**. There is no manual calendar count.
+
+From Studio **0.1.267**, **Colors → Calendar tile size** offers three fixed sizes: **Small 44 × 52 px**, **Medium 58 × 64 px** (default) and **Large 76 × 82 px**. Applies to the event list and details popup. Header text stays at least **12 px**, day digits at least **24 px**, independently of the general font size. Narrow widgets keep the selected size. Existing 0.1.0 installations receive the setting with the Studio update; reinstalling the package is unnecessary. The calendar has no data-flow settings or input/output points.
 
 Visibility and colors are saved by entity ID. Newly discovered calendars are enabled automatically; hidden calendars are not queried for events. The number of discovered calendars is unlimited. Requests use batches of at most 20 calendars through the Home Assistant interface.
 
