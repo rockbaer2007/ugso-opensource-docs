@@ -16,9 +16,15 @@ description: Neutral SVG modules with flush housing snap points, plain-text read
 
 The head graphic is centered and touches the bottom widget edge. The battery graphic touches both top and bottom edges. Battery and standalone inverter preserve their proportions when resized. The visible standalone enclosure is about one-third narrower than the head.
 
+![UGSo Solar in the editor: battery stack, standalone inverter and both solar panel orientations](/images/grafik-visual-studio/solar-overview.png)
+
+Example with preview readings and visible connection points. Yellow circles are inputs, blue circles are outputs and purple squares are housing snap points. Points disappear in runtime.
+
 ## Solar panel with pole and base
 
 Use **Solar module → Orientation** to choose **Original** or **Mirrored**. Only the SVG graphic flips horizontally; text remains readable. Resizing preserves proportions.
+
+![Solar panels with poles and bases: original on the left, mirrored on the right, both outputs at the pole](/images/grafik-visual-studio/solar-panel-variants.png)
 
 Select a Home Assistant entity under **Power → Input entity (power)**. Values in kW are converted to W. **Show reading** hides only the unframed text; the output keeps forwarding data. Without an entity, the preview value applies; unavailable entity values appear as a dash.
 
@@ -40,11 +46,17 @@ By default, the battery shows all three readings and the standalone inverter sho
 
 For batteries, **Power**, **Temperature** and **State of charge (SoC)** each provide a separate **Reading text color**. Until a separate color is set, the general text color applies. Colors persist when readings are hidden and shown again.
 
+![Stack head with four PV inputs and a battery with colored readings and side ports at the lower seam](/images/grafik-visual-studio/solar-stack-ports.png)
+
 Under **Power direction**, enable an optional direction symbol. Select whether positive power means **Energy in** or **Energy out**, and enter both symbols as text. No symbol appears for zero or an unknown value. The displayed number retains its sign.
 
 ## SVG line inputs and outputs
 
 The **standalone inverter** provides seven evenly spaced bottom line ports: both corners, the existing center and two additional points on either side of the center. Together with the left/right/top center ports, ten ports are available. Under **Line ports**, choose **Off**, **Input** or **Output** and a value for each point. The six new bottom ports start disabled; existing ports and connections remain unchanged.
+
+![Standalone inverter with seven bottom line ports and three more ports at the left, right and top](/images/grafik-visual-studio/solar-solo-ports.png)
+
+All ten points are enabled as outputs in this example; each point's role is configurable in your project.
 
 Battery left and right ports each offer a **Position**: **Widget edge center** or **Enclosure edge at lower seam**. Set each side independently. Existing connections follow automatically; roles and value assignments remain unchanged. This does not affect the top/bottom center housing snap points used for stacking.
 

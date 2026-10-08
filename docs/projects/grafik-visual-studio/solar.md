@@ -16,9 +16,15 @@ description: Neutrale SVG-Module mit bündigen Gehäusekoppelpunkten, Textanzeig
 
 Die Kopfteilgrafik sitzt mittig auf der unteren Widgetkante. Die Batterie schließt mit der Grafik oben und unten bündig ab. Batterie und Solo behalten beim Vergrößern oder Verkleinern ihre Proportionen. Das sichtbare Solo-Gehäuse ist etwa ein Drittel schmaler als das Kopfteil.
 
+![UGSo Solar im Editor: Batteriestapel, Solo-Wechselrichter und beide Solarpanel-Ausrichtungen](/images/grafik-visual-studio/solar-overview.png)
+
+Beispiel mit Vorschauwerten und eingeblendeten Anschlusspunkten. Gelbe Kreise sind Eingänge, blaue Kreise Ausgänge und violette Quadrate Gehäusekoppelpunkte. In der Runtime verschwinden die Punkte.
+
 ## Solarpanel mit Standrohr und Fuß
 
 Unter **Solar-Modul → Ausrichtung** wählst du **Wie Vorlage** oder **Gespiegelt**. Die SVG-Grafik wird horizontal gespiegelt; Schrift und Wertanzeige bleiben lesbar. Beim Skalieren bleiben die Proportionen erhalten.
+
+![Solarpanel mit Standrohr und Fuß: links wie Vorlage, rechts gespiegelt, Ausgang jeweils am Standrohr](/images/grafik-visual-studio/solar-panel-variants.png)
 
 Wähle unter **Leistung → Eingangsentität (Leistung)** eine Home-Assistant-Entität. Werte in kW werden in W umgerechnet. **Wert anzeigen** blendet nur den rahmenlosen Text aus; der Ausgang liefert weiter Daten. Ohne Entität gilt der Vorschauwert, bei unbekannter Entität erscheint ein Strich.
 
@@ -40,11 +46,17 @@ Standardmäßig zeigt die Batterie alle drei Werte und Solo nur die Leistung. Da
 
 Bei der Batterie lässt sich unter **Leistung**, **Temperatur** und **Ladezustand (SoC)** jeweils die **Schriftfarbe des Werts** getrennt einstellen. Ohne eigene Farbe gilt die allgemeine Schriftfarbe. Die Farbe bleibt auch beim Aus- und Wiedereinblenden der Anzeige erhalten.
 
+![Stapel-Kopfteil mit vier Solarpanel-Eingängen und Batterie mit farbigen Werten sowie seitlichen Linienpunkten an der unteren Naht](/images/grafik-visual-studio/solar-stack-ports.png)
+
 Unter **Leistungsrichtung** kannst du ein Richtungssymbol zuschalten. Lege fest, ob positive Leistung **Energie hinein** oder **Energie heraus** bedeutet, und wähle die beiden Symbole über freie Texteingaben. Bei Leistung 0 oder einem unbekannten Wert wird kein Richtungssymbol gezeigt. Das Vorzeichen des Zahlenwerts bleibt erhalten.
 
 ## Ein- und Ausgänge für SVG-Linien
 
 Der **Solo-Wechselrichter** bietet an der Unterkante sieben gleichmäßig verteilte Linienpunkte: die beiden Ecken, den bisherigen Mittelpunkt und je zwei weitere Punkte links/rechts davon. Zusammen mit links/rechts/oben mittig sind zehn Linienpunkte möglich. Unter **Linienanschlüsse** stellst du pro Punkt **Aus**, **Eingang** oder **Ausgang** und den Wert ein. Die sechs neuen unteren Punkte sind zunächst aus; vorhandene Anschlüsse und Verbindungen bleiben erhalten.
+
+![Solo-Wechselrichter mit sieben Linienpunkten unten und drei weiteren Punkten links, rechts und oben](/images/grafik-visual-studio/solar-solo-ports.png)
+
+Für dieses Beispiel sind alle zehn Punkte als Ausgang aktiviert; im eigenen Projekt ist die Rolle pro Punkt wählbar.
 
 Bei der Batterie gibt es links und rechts zusätzlich eine **Position**: **Widgetkante Mitte** oder **Gehäusekante an unterer Naht**. Beide Seiten lassen sich unabhängig umstellen. Vorhandene Verbindungen folgen automatisch; Ein-/Ausgangsrolle und Wertzuordnung bleiben erhalten. Die mittigen Gehäusekoppelpunkte oben/unten für das Stapeln ändern sich dadurch nicht.
 
