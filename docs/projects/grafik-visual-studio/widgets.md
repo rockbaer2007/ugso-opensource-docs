@@ -4,6 +4,8 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
+**CSS-Standard ab Studio 0.1.271:** Alle Widgets außer Industrial erhalten die vollständigen Gruppen **CSS Allgemein**, **CSS Font & Text**, **CSS Hintergrund**, **CSS Ränder** und **CSS Schatten und Abstand**. Das gilt auch für künftig installierte Widgetsets. Vorhandene Einstellungen bleiben erhalten; neu ergänzte optionale Gruppen sind zunächst deaktiviert. Industrial verwendet weiterhin seine eigenen Gehäuse-Einstellungen.
+
 Eigenständiges externes Set: [UGSo Calendar +](calendar-plus.md), ab **Studio 0.1.266**. Erkennt alle Home-Assistant-Kalender automatisch, zunächst alle aktiviert; je Kalender ein-/ausblendbar mit eigener Farbe und Hintergrundfarbe. Terminliste, Tagesgruppen und Detail-Popup, automatische DE/EN-Sprache. Inspiriert von [xBourner/calendar-card-plus](https://github.com/xBourner/calendar-card-plus).
 
 **Autosave ab Studio 0.1.265:** Die eingestellte Verzögerung (z. B. zwei Sekunden) beginnt nach der zuletzt erkannten Änderung. Nach einem Speicherfehler folgt bei aktiviertem Autosave nach fünf Sekunden ein neuer Versuch, auch ohne weitere Bearbeitung. Eine hängende Speicheranfrage wird nach 15 Sekunden mit einer Zeitüberschreitung beendet und blockiert weitere Speicherungen nicht dauerhaft. Änderungen während einer Anfrage bleiben für die nächste Speicherung erhalten. Manuelles Speichern wartet bei Bedarf auf die laufende Anfrage.

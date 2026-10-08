@@ -4,6 +4,8 @@ title: Widget catalog
 
 # Widget catalog
 
+**CSS standard from Studio 0.1.271:** All widgets except Industrial expose the complete general, font/text, background, border, and shadow/spacing CSS groups. This also applies to future installed widget sets. Existing settings are preserved; newly added optional groups start disabled. Industrial retains its own housing controls.
+
 Independent external set: [UGSo Calendar +](calendar-plus.md), from **Studio 0.1.266**. Automatically discovers all Home Assistant calendars, enabled by default; per-calendar show/hide, color and background. Event list, day groups and details popup with automatic DE/EN language. Inspired by [xBourner/calendar-card-plus](https://github.com/xBourner/calendar-card-plus).
 
 **Autosave from Studio 0.1.265:** The configured delay (for example, two seconds) starts after the latest detected change. With autosave enabled, failed saves are retried after five seconds, even without further edits. A hanging save request times out after 15 seconds instead of permanently blocking subsequent saves. Changes during a request remain eligible for the next save. Manual save waits for an ongoing request when necessary.
