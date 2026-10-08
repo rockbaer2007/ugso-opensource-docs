@@ -28,7 +28,7 @@ The package contains declarative data, an icon, instructions and the MIT license
 
 All available `calendar.*` entities are discovered, including calendars without a registry entry. Registry entries disabled in Home Assistant are omitted. **My calendars** provides a section for each calendar with its entity ID, a **top-right checkbox to show/hide**, **Color** and optional **Background color**. There is no manual calendar count.
 
-From Studio **0.1.267**, **Colors → Calendar tile size** offers three fixed sizes: **Small 44 × 52 px**, **Medium 58 × 64 px** (default) and **Large 76 × 82 px**. Applies to the event list and details popup. Header text stays at least **12 px**, day digits at least **24 px**, independently of the general font size. Narrow widgets keep the selected size. Existing 0.1.0 installations receive the setting with the Studio update; reinstalling the package is unnecessary. The calendar has no data-flow settings or input/output points.
+From Studio **0.1.268**, the section is named **Tile settings** (previously “Colors”). **Calendar tile size** offers four fixed sizes: **Extra small 36 × 44 px**, **Small 44 × 52 px**, **Medium 58 × 64 px** (default) and **Large 76 × 82 px**. Applies to the event list and details popup. Header text stays at least **12 px**, day digits at least **24 px**, independently of the general font size. Narrow widgets keep the selected size. Existing 0.1.0/0.1.1 installations receive the settings with the Studio update; reinstalling the package is unnecessary. The calendar has no data-flow settings or input/output points.
 
 Visibility and colors are saved by entity ID. Newly discovered calendars are enabled automatically; hidden calendars are not queried for events. The number of discovered calendars is unlimited. Requests use batches of at most 20 calendars through the Home Assistant interface.
 
@@ -40,14 +40,16 @@ Visibility and colors are saved by entity ID. Newly discovered calendars are ena
 | Grouping | By day, additionally by calendar; optionally show empty days. |
 | Upcoming events | Show/hide relative labels such as “Tomorrow”, “In 2 days” or “In progress”. |
 | Text & visibility | Individually show/hide calendar name, date, location, duration, time and weekday; full/short weekday; swap month and weekday in the date tile. |
-| Colors | Automatic browser theme or fixed light/dark mode, accent color and **10–24 px** font size. Per-calendar colors and backgrounds are configured separately. |
+| Tile settings | Four tile sizes, automatic browser theme or fixed light/dark mode, accent color and **10–24 px** font size. Per-calendar colors and backgrounds are configured separately. |
 | Size | Default **480 × 460 px**, minimum **260 × 180 px**; the event list scrolls when space is limited. |
 
 With the expanded list disabled, one event remains visible. In runtime, clicking an event or **All events** opens the details popup with up to 100 events. Full dates, location and description appear when available. Content is rendered as plain text. **Close**, Escape or clicking outside closes the popup.
 
 ## Data and refresh
 
-Editor and runtime read events through `calendar.get_events`. All-day events respect the exclusive end date; expired events are removed. Refresh runs every 60 seconds while the page is visible and manually through **↻** in runtime. Calendar discovery is refreshed as well.
+Editor and runtime read events through `calendar.get_events`. All-day events respect the exclusive end date; expired events are removed. **Configuration → Refresh automatically (60 s)** disables or enables periodic refresh (default: enabled). Runtime page entry loads fresh calendars and events even with automatic refresh disabled. **↻** still refreshes manually. Calendar discovery is refreshed as well.
+
+Refresh replaces only event lists and preserves scroll positions and an open details popup. Unrelated live widget state changes do not rebuild an unchanged calendar. Leaving the page stops its refresh timer.
 
 “No calendars found”, “All calendars hidden”, “No upcoming events” and a loading error are separate states. An error is not presented as an empty calendar. Language follows the Studio **DE/EN** setting automatically; custom headings and event content stay unchanged.
 

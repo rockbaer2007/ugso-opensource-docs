@@ -28,7 +28,7 @@ Das Paket enthält deklarative Daten, ein Symbol, Anleitung und MIT-Lizenz. Der 
 
 Alle verfügbaren `calendar.*`-Entitäten werden erkannt, einschließlich Kalendern ohne Registry-Eintrag. In Home Assistant deaktivierte Registry-Einträge werden ausgelassen. Unter **Meine Kalender** erscheint für jeden Kalender ein eigener Bereich mit Entitäts-ID, einer **Checkbox rechts oben zum Anzeigen/Ausblenden**, **Farbe** und optionaler **Hintergrundfarbe**. Es gibt keine manuell einzutragende Kalenderanzahl.
 
-Ab Studio **0.1.267** gibt es unter **Farben → Kalenderkachelgröße** drei feste Größen: **Klein 44 × 52 px**, **Mittel 58 × 64 px** (Standard) und **Groß 76 × 82 px**. Die Auswahl gilt für Terminliste und Detail-Popup. Kopftext mindestens **12 px**, Tagesziffer mindestens **24 px**, unabhängig von der allgemeinen Schriftgröße. Auch schmale Widgets behalten die gewählte Größe. Vorhandene Pakete 0.1.0 erhalten die Einstellung mit dem Studio-Update; eine Neuinstallation ist nicht nötig. Der Kalender benötigt keine Datenfluss-Einstellungen oder Ein-/Ausgangspunkte.
+Ab Studio **0.1.268** heißt die Gruppe **Kacheleinstellungen** (zuvor „Farben“). **Kalenderkachelgröße** bietet vier feste Größen: **Sehr klein 36 × 44 px**, **Klein 44 × 52 px**, **Mittel 58 × 64 px** (Standard) und **Groß 76 × 82 px**. Die Auswahl gilt für Terminliste und Detail-Popup. Kopftext mindestens **12 px**, Tagesziffer mindestens **24 px**, unabhängig von der allgemeinen Schriftgröße. Auch schmale Widgets behalten die gewählte Größe. Vorhandene Pakete 0.1.0/0.1.1 erhalten die Einstellungen mit dem Studio-Update; eine Neuinstallation ist nicht nötig. Der Kalender benötigt keine Datenfluss-Einstellungen oder Ein-/Ausgangspunkte.
 
 Die Auswahl und Farben bleiben anhand der Entitäts-ID gespeichert. Neu hinzugekommene Kalender sind automatisch eingeblendet; ausgeblendete Kalender werden nicht nach Terminen abgefragt. Die Anzahl erkannter Kalender ist nicht begrenzt. Abfragen erfolgen in Gruppen von höchstens 20 Kalendern über die Home-Assistant-Schnittstelle.
 
@@ -40,14 +40,16 @@ Die Auswahl und Farben bleiben anhand der Entitäts-ID gespeichert. Neu hinzugek
 | Gruppierung | Nach Tag, zusätzlich nach Kalender; optional leere Tage anzeigen. |
 | Bevorstehende Ereignisse | Relative Zeit wie „Morgen“, „In 2 Tagen“ oder „Läuft“ ein-/ausblenden. |
 | Text & Sichtbarkeit | Kalendername, Datum, Ort, Dauer, Uhrzeit und Wochentag einzeln schaltbar; Wochentag ausgeschrieben oder kurz, Monat/Wochentag in der Datumskachel tauschen. |
-| Farben | Browser-Theme automatisch oder fest Hell/Dunkel, Akzentfarbe und Schriftgröße **10–24 px**. Kalenderfarben und Hintergründe separat je Kalender. |
+| Kacheleinstellungen | Vier Kachelgrößen, Browser-Theme automatisch oder fest Hell/Dunkel, Akzentfarbe und Schriftgröße **10–24 px**. Kalenderfarben und Hintergründe separat je Kalender. |
 | Größe | Vorgabe **480 × 460 px**, mindestens **260 × 180 px**; bei wenig Platz scrollt die Terminliste. |
 
 Ohne ausgeklappte Liste bleibt ein Termin sichtbar. In der Runtime öffnet ein Klick auf einen Termin oder **Alle Termine** das Detail-Popup mit bis zu 100 Terminen. Dort erscheinen vollständiges Datum, Ort und Beschreibung, sofern vorhanden. Texte werden als Klartext dargestellt. **Schließen**, Escape oder ein Klick außerhalb schließen das Popup.
 
 ## Daten und Aktualisierung
 
-Editor und Runtime lesen Termine über `calendar.get_events`. Ganztagstermine berücksichtigen das exklusive Enddatum; abgelaufene Termine werden entfernt. Die Aktualisierung erfolgt alle 60 Sekunden bei sichtbarer Seite sowie über **↻** in der Runtime. Die Kalendererkennung wird dabei ebenfalls erneuert.
+Editor und Runtime lesen Termine über `calendar.get_events`. Ganztagstermine berücksichtigen das exklusive Enddatum; abgelaufene Termine werden entfernt. Unter **Konfiguration → Automatisch aktualisieren (60 s)** lässt sich die regelmäßige Aktualisierung abschalten (Vorgabe: an). Beim Runtime-Seitenaufruf werden Kalender und Termine frisch geladen, auch bei deaktivierter Automatik. **↻** aktualisiert weiterhin manuell. Die Kalendererkennung wird dabei ebenfalls erneuert.
+
+Aktualisierungen ersetzen nur die Terminlisten und erhalten Scrollpositionen sowie ein geöffnetes Detail-Popup. Zustandsänderungen anderer Live-Widgets bauen den unveränderten Kalender nicht neu auf. Beim Verlassen der Seite endet dessen Aktualisierung.
 
 „Keine Kalender gefunden“, „Alle Kalender ausgeblendet“, „Keine kommenden Termine“ und ein Ladefehler sind unterschiedliche Zustände. Ein Fehler wird nicht als leerer Kalender ausgegeben. Die Sprache folgt automatisch der Studio-Einstellung **DE/EN**; eigene Bezeichnungen und Termininhalte bleiben unverändert.
 
