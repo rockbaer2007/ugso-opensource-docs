@@ -4,6 +4,8 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
+Eigenständiges externes Set: [UGSo Printer](printer.md) mit Druckerstatus und **1–6 automatisch gleichmäßig verteilten Patronen**, ab Studio **0.1.261**. Inspiriert von [ADNPolymerase/ha-printer-card](https://github.com/ADNPolymerase/ha-printer-card), eigene SVG-Zeichnung und lesende Home-Assistant-Anbindung.
+
 Weiteres externes Set: [UGSo Technic](technic.md) mit **Window – Wall**, ab Studio 0.1.197. Inspiriert von den ioBroker-Technic-Widgets von Sefina-DS, mit eigener HA-Anbindung und MIT-Lizenz im Paket.
 
 Zusätzlich nachinstallierbar: [Wetter und Heizung](weather-heating.md) mit **Allgemeines Diagramm** (ab 0.1.187), **Balkendiagramm für zwei Wochen** (ab 0.1.188), **Wetter-Widget** (ab 0.1.189), **Übersicht über Heizräume** (ab 0.1.190), **METEORED-Wetter-Widget** (ab 0.1.191), **Fensterstatus-Übersicht** (ab 0.1.192), **Meinen Vermieter informieren** (ab 0.1.193) und **Allgemeine Heizparameter** (ab 0.1.194). Das optionale Paket zählt nicht zu den 74 integrierten Widgets und erhält automatisch eine freie Set-Farbe.

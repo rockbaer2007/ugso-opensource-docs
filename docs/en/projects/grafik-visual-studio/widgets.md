@@ -4,6 +4,8 @@ title: Widget catalog
 
 # Widget catalog
 
+Independent external set: [UGSo Printer](printer.md), with printer status and **1–6 automatically evenly distributed cartridges**, from Studio **0.1.261**. Inspired by [ADNPolymerase/ha-printer-card](https://github.com/ADNPolymerase/ha-printer-card), with original SVG artwork and read-only Home Assistant bindings.
+
 Another external set: [UGSo Technic](technic.md), with **Window – Wall**, from Studio 0.1.197. Inspired by Sefina-DS ioBroker Technic Widgets, with independent HA bindings and MIT licensing included in the package.
 
 Optional: [Weather and Heating](weather-heating.md), with **General Chart** (from 0.1.187), **Two Weeks Bar Chart** (from 0.1.188), **Weather Widget** (from 0.1.189), **Heating Rooms Overview** (from 0.1.190), **METEORED Weather Widget** (from 0.1.191), **Window Status Overview** (from 0.1.192), **Inform my landlord** (from 0.1.193) and **General heating parameters** (from 0.1.194). This package is separate from the 74 built-in widgets and automatically receives an unused set color.
