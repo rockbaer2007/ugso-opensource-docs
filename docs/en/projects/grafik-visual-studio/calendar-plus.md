@@ -34,6 +34,10 @@ Visibility and colors are saved by entity ID. Newly discovered calendars are ena
 
 ## Settings
 
+From Studio **0.1.269**, **Tile settings** also provides **Top font size** (month/weekday, up to 72 px) and **Bottom font size** (day number, up to 120 px). **0 = automatic** uses the selected tile size defaults. Custom values may be smaller and are constrained when space is insufficient. Requested values stay saved, allowing larger tiles to use larger fonts again.
+
+The colored header grows with its text and a little padding, up to **one third of the tile height**. The day number fits the remaining area. Tile dimensions stay unchanged. Settings apply to both event list and details popup; no new widget package is required.
+
 | Section | Setting |
 | --- | --- |
 | Configuration | Heading, **1–90 days** lookahead, **1–20** visible events, expand events, details popup, dividers. |
