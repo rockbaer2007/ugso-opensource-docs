@@ -20,9 +20,19 @@ Ab Studio 0.1.136 gibt es eine **automatische Teileranpassung** für Zahlen-Enti
 | Angedockten Endpunkt mit `Strg` ziehen | Löst die Verbindung und verschiebt den Punkt. `Strg` plus Pfeiltaste funktioniert ebenfalls. |
 | Zwischenpunkt ziehen | Ändert den Verlauf des manuellen Mehrpunktpfads. |
 | Linie mit gedrückter Maustaste ziehen | Verschiebt die ganze Linie und löst dabei bisherige Start-/Ziel-Andockungen. |
-| Linie ohne Ziehen anklicken | Öffnet die Wahl **Zwischenpunkt** oder **Sammelpunkt**; nach **OK** wird der Punkt eingefügt. |
+| Linie ohne Ziehen anklicken | Öffnet die Wahl **Zwischenpunkt**, **Sammelpunkt** oder **Wert-Koppelpunkt**; nach **OK** wird der Punkt eingefügt. |
 
 ## Pfad und Sammelpunkte
+
+### Wert-Koppelpunkt für eine freie Anzeige
+
+Ab Studio **0.1.275** gibt es als dritten Punkttyp den **Wert-Koppelpunkt**. Er gibt den Wert der SVG-Linie aus, etwa den Zahlenwert ihrer Animationsentität oder den Wert ihrer angeschlossenen Quelle. Im Editor erscheint er als Oktagon; seine Farbe stellst du unter **Einstellungen → Wert-Koppelpunkt** ein. Er ist ein reiner Ausgang und kann nicht als Ziel einer Linie verwendet werden.
+
+1. Wähle die SVG-Linie aus, klicke erneut auf die gewünschte Stelle und füge einen **Wert-Koppelpunkt** ein.
+2. Platziere ein **Number**-Widget frei neben, über oder unter der Linie. Aktiviere unter **Datenfluss** seinen **Eingangspunkt** und wähle dessen Seite.
+3. Füge eine Verbindung ein. Wähle unter **Start → Sammel- oder Wert-Koppelpunkt** den neuen Punkt oder ziehe den Anfang darauf. Verbinde das Ziel mit dem Eingang von Number.
+
+Der Punkt und die abgehende Verbindung sind in der Runtime automatisch unsichtbar; die Wertübernahme bleibt aktiv. Die ursprüngliche SVG-Linie bleibt sichtbar. **String** kann auf dieselbe Weise einen Textwert aus dem Datenfluss anzeigen. Über **Linienpunkte** lassen sich Name, Position und Punkttyp später ändern. Unbekannte Werte werden nicht durch eine erfundene Null ersetzt.
 
 Unter **Pfad und Sammelpunkte** gibt es vier **Pfadarten**: **Gerade**, **Automatisch rechtwinklig**, **Kurve** und **Manueller Zickzack-/Mehrpunktpfad**. Der **Eckenradius** rundet Ecken im passenden Verlauf ab. Über **Zwischenpunkte und Sammelpunkte** kannst du Punkte benennen, setzen und bearbeiten. Ein per Klick eingefügter Punkt wechselt die Linie in den manuellen Mehrpunktmodus.
 
