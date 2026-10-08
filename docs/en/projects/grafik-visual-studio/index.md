@@ -5,6 +5,8 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
+New in Studio **0.1.276**: [UGSo Solar 0.1.0](./solar) adds a stack inverter head, a reusable battery module for 1–6 batteries and a smaller standalone inverter. Includes center housing snap points, unframed text readings and configurable line inputs/outputs.
+
 New in Studio **0.1.215**: The external [Material Design 1.0.0 package](materialdesign.md) contains **49 widget entries**, including autocomplete, inputs, buttons, displays, lists, charts, calendar and page layouts. A comparison project prepares the widget-by-widget review.
 
 New in Studio **0.1.214**: Material Design package **0.3.0** adds [Dialog iFrame](materialdesign.md) as the third widget, with source, sandbox, scrolling and compact/advanced dialog layout options.
