@@ -35,14 +35,26 @@ The package contains one declarative widget definition, an original palette icon
 | Additional values | Optional power and page-counter entities. |
 | Colors and size | Background, text and printing-state color. Default **480 × 440 px**, minimum **240 × 280 px**. |
 
-The count determines distribution; individual cartridge X positions are unnecessary. Long captions are truncated when space is limited. Tooltips retain full names and values. All six property groups remain available so further cartridges can be prepared.
+The count determines distribution; individual cartridge X positions are unnecessary. Long captions are truncated when space is limited. Tooltips retain full names and values. From **Studio 0.1.263**, properties only show the selected cartridges: a count of 4 shows groups **Cartridge 1–4**, a count of 5 shows **Cartridge 1–5**. Hidden cartridge settings remain saved and reappear when the count increases.
 
 ## Status and readings
+
+Language follows the Studio **DE/EN** setting automatically, including automatic selection from Home Assistant. There is no separate widget language selector. Status labels, hints and properties are translated; custom captions, model names and entity messages remain unchanged.
 
 Common states map to ready, printing, sleep, warning, stopped, offline or unknown. While printing, the sheet moves and the LED blinks. Browser reduced-motion preferences disable these animations. Errors and jams take priority; a supply warning alone does not stop the printing animation.
 
 Editor and runtime read the same current Home Assistant values. Missing or invalid levels display **—**, rather than 0 %. Valid numbers are clamped to **0–100 %**. At or below the threshold, the cartridge and its reading are highlighted, with affected names listed below.
 
+## Custom printer photo and cartridge size
+
+**Studio 0.1.262** adds a model name, **Standard graphic / Custom image** selection and a printer photo field accepting a URL or `/local/...` path. Entering an image path automatically enables the custom photo, including URLs without a file extension. **Upload image** embeds a PNG, JPEG, WebP, GIF or SVG file up to 2 MB in the saved project. URL and `/local/...` sources must also be accessible in the runtime.
+
+The photo keeps its aspect ratio and falls back to the standard drawing if missing or unavailable. Status and supplies remain active; the sheet animation belongs to the standard drawing. **Cartridge size** offers **Full size / Half size**, defaulting to half size. Labels and percentages retain their size. Existing Printer packages receive these settings when Studio is updated; reinstalling the package is unnecessary.
+
+## Printer web interface
+
+The web interface URL field displays a **Web ↗** link. A manually entered URL takes priority. `auto` uses the first HTTP/HTTPS address in the status entity's `configuration_url`, `web_url`, `url`, `device_url` or `printer_uri` attribute. Without a matching address the link stays hidden; no device discovery is performed. An empty field also hides it. The web interface opens in a new tab.
+
 ## Scope of this version
 
-This first version uses explicitly selected entities. It has no automatic device/supply discovery, wear parts, socket control, test printing or printer web links. All bindings are read-only. The separately available original card offers further features.
+This first version uses explicitly selected entities. It has no automatic device/supply discovery, wear parts, socket control or test printing. All bindings are read-only. The separately available original card offers further features.

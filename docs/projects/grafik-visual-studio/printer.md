@@ -35,14 +35,26 @@ Das Paket enthält eine deklarative Widgetdefinition, ein eigenes Palettensymbol
 | Zusatzwerte | Optionale Entitäten für Leistung und Seitenzähler. |
 | Farben und Größe | Hintergrund-, Schrift- und Druckstatusfarbe. Standard **480 × 440 px**, Mindestgröße **240 × 280 px**. |
 
-Die Anzahl bestimmt die Verteilung; es sind keine manuellen X-Positionen je Patrone nötig. Bei knappem Platz werden lange Namen gekürzt. Vollständige Namen und Werte stehen im Tooltip. Die sechs Eigenschaftsgruppen bleiben verfügbar, damit sich weitere Patronen vorbereiten lassen.
+Die Anzahl bestimmt die Verteilung; es sind keine manuellen X-Positionen je Patrone nötig. Bei knappem Platz werden lange Namen gekürzt. Vollständige Namen und Werte stehen im Tooltip. Ab **Studio 0.1.263** erscheinen nur die gewählten Patronen in den Eigenschaften: bei 4 die Gruppen **Patrone 1–4**, bei 5 **Patrone 1–5**. Einstellungen ausgeblendeter Patronen bleiben gespeichert und erscheinen wieder, wenn die Anzahl erhöht wird.
+
+## Eigenes Druckerfoto und Patronengröße
+
+Ab **Studio 0.1.262** stehen unter **Druckermodell und Bild** zusätzlich eine freie Modellbezeichnung, die Auswahl **Standardgrafik / Eigenes Bild** und **Foto Ihres Druckers (URL oder /local/... Pfad)** bereit. Das Eintragen eines Bildpfads aktiviert das eigene Foto automatisch; auch Bild-URLs ohne Dateiendung werden unterstützt. Alternativ lädt **Bild hochladen** eine PNG-, JPEG-, WebP-, GIF- oder SVG-Datei bis 2 MB direkt ins Projekt. Hochgeladene Bilder sind im gespeicherten Projekt enthalten. Bei URLs und `/local/...`-Pfaden muss die Bildquelle auch in der Runtime erreichbar sein.
+
+Das Foto wird proportional eingepasst. Bei fehlendem Bild oder Ladefehler erscheint die Standardgrafik. Status und Patronen bleiben unabhängig vom Foto aktiv; die Blattanimation gehört zur Standardgrafik. **Patronengröße** bietet **Volle Größe / Halbe Größe**, mit **Halbe Größe** als Vorgabe. Nur die Grafiken werden verkleinert, Beschriftungen und Prozentwerte behalten ihre Größe. Diese Einstellungen erscheinen auch bei bereits installiertem Printer-Paket; eine Neuinstallation des Pakets ist nicht nötig.
 
 ## Status und Messwerte
+
+Die Sprache folgt automatisch der Studio-Einstellung **DE/EN**, einschließlich automatischer Übernahme aus Home Assistant. Eine separate Widget-Sprachauswahl gibt es nicht. Status, Hinweise und Eigenschaften werden übersetzt; eigene Beschriftungen, Modellnamen und Meldungen der Entität bleiben unverändert.
 
 Bereit, Drucken, Ruhezustand, Hinweis, Gestoppt, Offline und unbekannt werden aus gängigen Statuswerten erkannt. Beim Drucken bewegt sich ein Blatt und die LED blinkt. Die Browseroption für reduzierte Bewegung schaltet diese Animationen ab. Fehler und Papierstau haben Vorrang; eine reine Füllstandswarnung beendet die Druckanimation nicht.
 
 Editor und Runtime lesen dieselben aktuellen Home-Assistant-Werte. Fehlende oder ungültige Füllstände erscheinen als **—**, nicht als 0 %. Gültige Zahlen werden auf **0–100 %** begrenzt. Bei Werten kleiner oder gleich der Warnschwelle werden die betreffende Patrone und ihr Wert markiert; darunter erscheinen die betroffenen Namen.
 
+## Weboberfläche
+
+**URL der Weboberfläche (auto = vom Drucker)** blendet einen **Web ↗**-Link ein. Eine manuell eingetragene URL hat Vorrang. `auto` verwendet die erste HTTP-/HTTPS-Adresse aus `configuration_url`, `web_url`, `url`, `device_url` oder `printer_uri` der Statusentität. Fehlt eine solche Adresse, bleibt der Link verborgen; es erfolgt keine Gerätesuche. Ein leeres Feld blendet ihn ebenfalls aus. Die Weboberfläche öffnet sich in einem neuen Tab.
+
 ## Umfang dieser Version
 
-Diese erste Version verwendet ausdrücklich ausgewählte Entitäten. Sie bietet keine automatische Geräte-/Patronensuche, Verschleißteile, Steckdosensteuerung, Testdruck oder Drucker-Weblinks. Alle Anbindungen sind lesend. Die separat nutzbare Originalkarte bietet weitere Funktionen.
+Diese erste Version verwendet ausdrücklich ausgewählte Entitäten. Sie bietet keine automatische Geräte-/Patronensuche, Verschleißteile, Steckdosensteuerung oder Testdruck. Alle Anbindungen sind lesend. Die separat nutzbare Originalkarte bietet weitere Funktionen.
