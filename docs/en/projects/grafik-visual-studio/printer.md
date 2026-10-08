@@ -26,6 +26,8 @@ The package contains one declarative widget definition, an original palette icon
 
 ## Settings
 
+From Studio **0.1.270**, **Properties → WIDGET** also provides **CSS Font & Text**, **CSS background**, **CSS borders**, and **CSS shadow and spacing**, alongside **General CSS**. New groups start disabled. Enable their checkbox to configure fonts, background/image, border color/width/style, one radius for all corners (**0 = square**), shadows and spacing. CSS styles the visible printer card rather than a hidden surface behind it. Status and supply colors retain their own settings. Existing packages remain compatible.
+
 | Section | Settings |
 | --- | --- |
 | Printer | Caption, status entity, model `mfp` (multifunction), `inkjet` or `office`. |

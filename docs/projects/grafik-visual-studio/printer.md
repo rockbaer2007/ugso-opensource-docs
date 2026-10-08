@@ -26,6 +26,8 @@ Das Paket enthält eine deklarative Widgetdefinition, ein eigenes Palettensymbol
 
 ## Einstellungen
 
+Ab Studio **0.1.270** stehen unter **Eigenschaften → WIDGET** auch **CSS Font & Text**, **CSS Hintergrund**, **CSS Ränder** und **CSS Schatten und Abstand** bereit, zusätzlich zu **CSS Allgemein**. Die neuen Gruppen sind zunächst ausgeschaltet. Über ihren Haken einschalten und Schrift, Hintergrund/Bild, Rahmenfarbe/-breite/-stil, einen Radius für alle Ecken (**0 = eckig**), Schatten und Abstände festlegen. CSS wirkt auf die sichtbare Druckerkarte statt hinter deren Hintergrund. Status- und Patronenfarben behalten ihre eigenen Einstellungen. Bestehendes Paket weiterverwenden.
+
 | Bereich | Einstellung |
 | --- | --- |
 | Drucker | Bezeichnung, Statusentität, Modell `mfp` (Multifunktion), `inkjet` (Tintenstrahl) oder `office` (Bürodrucker). |

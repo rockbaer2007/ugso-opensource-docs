@@ -34,6 +34,10 @@ Visibility and colors are saved by entity ID. Newly discovered calendars are ena
 
 ## Settings
 
+From Studio **0.1.270**, **Tile settings → Tile corner radius (px)** controls all four date-tile corners together: **0 = square**, default **10 px**, maximum **100 px**. Also applies to the details popup.
+
+Calendar and Printer now expose all CSS sections under **Properties → WIDGET**: **General CSS**, **CSS Font & Text**, **CSS background**, **CSS borders**, and **CSS shadow and spacing**. The four additional groups start disabled to preserve the existing appearance. Enable a group's checkbox to configure fonts, background/image, borders, radius, shadows and spacing. Values style the actual card surface; the outer radius under **CSS borders** is separate from the small date-tile radius. Semantic colors such as calendar and printer status colors remain separate settings. **General CSS** stays active for position, size and visibility. No new package required.
+
 From Studio **0.1.269**, **Tile settings** also provides **Top font size** (month/weekday, up to 72 px) and **Bottom font size** (day number, up to 120 px). **0 = automatic** uses the selected tile size defaults. Custom values may be smaller and are constrained when space is insufficient. Requested values stay saved, allowing larger tiles to use larger fonts again.
 
 The colored header grows with its text and a little padding, up to **one third of the tile height**. The day number fits the remaining area. Tile dimensions stay unchanged. Settings apply to both event list and details popup; no new widget package is required.

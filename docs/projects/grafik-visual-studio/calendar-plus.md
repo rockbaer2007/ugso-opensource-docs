@@ -34,6 +34,10 @@ Die Auswahl und Farben bleiben anhand der Entitäts-ID gespeichert. Neu hinzugek
 
 ## Einstellungen
 
+Ab Studio **0.1.270** lässt sich unter **Kacheleinstellungen → Kachel-Eckenradius (px)** ein gemeinsamer Radius für alle vier Ecken der Datumskachel einstellen: **0 = eckig**, Vorgabe **10 px**, maximal **100 px**. Gilt auch im Detail-Popup.
+
+Kalender und Drucker bieten unter **Eigenschaften → WIDGET** jetzt alle CSS-Bereiche: **CSS Allgemein**, **CSS Font & Text**, **CSS Hintergrund**, **CSS Ränder** und **CSS Schatten und Abstand**. Die vier zusätzlichen Gruppen sind zunächst ausgeschaltet, um die bisherige Darstellung zu erhalten. Den Haken der jeweiligen Gruppe einschalten, dann Schrift, Hintergrund/Bild, Rahmen, Radius, Schatten und Abstände einstellen. Diese Werte gestalten die sichtbare Kartenfläche; der äußere Radius unter **CSS Ränder** ist unabhängig vom Radius der kleinen Datumskacheln. Fachfarben wie Kalenderfarben und Druckerstatus bleiben eigene Einstellungen. **CSS Allgemein** bleibt für Position, Größe und Sichtbarkeit aktiv. Kein neues Paket nötig.
+
 Ab Studio **0.1.269** bieten die **Kacheleinstellungen** zusätzlich **Schriftgröße oben** (Monat/Wochentag, bis 72 px) und **Schriftgröße unten** (Tageszahl, bis 120 px). **0 = automatisch** verwendet die Vorgaben der gewählten Kachelgröße. Eigene Werte dürfen kleiner sein und werden bei Platzmangel automatisch begrenzt. Die gespeicherten Wunschwerte bleiben erhalten, sodass größere Kacheln wieder größere Schrift nutzen können.
 
 Der farbige Kopfbereich wächst mit der oberen Schrift und etwas Innenabstand, bleibt jedoch auf **höchstens ein Drittel der Kachelhöhe** begrenzt. Die Tageszahl wird in den restlichen Bereich eingepasst. Die Kachelgröße bleibt unverändert. Diese Einstellungen gelten für Terminliste und Detail-Popup und benötigen kein neues Widget-Paket.
