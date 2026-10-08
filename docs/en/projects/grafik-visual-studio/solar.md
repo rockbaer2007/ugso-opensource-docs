@@ -5,11 +5,11 @@ description: Neutral SVG modules with flush housing snap points, plain-text read
 
 # UGSo Solar
 
-**UGSo Solar 0.1.1** requires **Studio 0.1.278 or later**. This separate widget set contains four manufacturer-independent modules with transparent SVG graphics. Import [ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) through the package settings.
+**UGSo Solar 0.1.2** requires **Studio 0.1.279 or later**. This separate widget set contains four manufacturer-independent modules with transparent SVG graphics. Update Studio first, then import [ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) through the package settings.
 
 | Widget | Default size | Housing snap points | Line ports |
 | --- | --- | --- | --- |
-| Stack inverter head | 256 × 64 px | Bottom center | Left, right, top |
+| Stack inverter head | 256 × 64 px | Bottom center | Left/right plus two PV inputs on each enclosure side |
 | Battery module | 256 × 169 px | Top and bottom center | Left, right |
 | Standalone inverter | 144 × 103.3 px | None | All four sides |
 | Solar panel with base | 320 × 288 px | None | One output: pole or left/right widget edge |
@@ -36,11 +36,17 @@ Use **Housing snap points** to configure snapping, individual points, spacing an
 
 **Show reading** hides only that text display. The entity continues updating and outputs still provide its value. Battery readings start immediately below the first-third seam and stack vertically without blank rows for hidden readings. There are no frames or display boxes. The order is power, temperature, SoC. Text color and maximum font size are configurable; text shrinks when space is limited.
 
-By default, the battery shows all three readings, the head shows none and the standalone inverter shows power only. Each module allows all three displays to be toggled individually.
+By default, the battery shows all three readings and the standalone inverter shows power only. The head has no readings or settings groups for power, temperature, SoC or power direction. The standalone inverter retains these settings.
+
+For batteries, **Power**, **Temperature** and **State of charge (SoC)** each provide a separate **Reading text color**. Until a separate color is set, the general text color applies. Colors persist when readings are hidden and shown again.
 
 Under **Power direction**, enable an optional direction symbol. Select whether positive power means **Energy in** or **Energy out**, and enter both symbols as text. No symbol appears for zero or an unknown value. The displayed number retains its sign.
 
 ## SVG line inputs and outputs
+
+Battery left and right ports each offer a **Position**: **Widget edge center** or **Enclosure edge at lower seam**. Set each side independently. Existing connections follow automatically; roles and value assignments remain unchanged. This does not affect the top/bottom center housing snap points used for stacking.
+
+The head has four visible PV input sockets: upper/lower left and upper/lower right. All four start enabled and can be disabled separately under **Line ports**. They follow the bottom-aligned graphic even if widget height changes. Connect a solar panel's SVG line to one of these sockets. They are separate line destinations without automatic value summation. The former top line port is removed; existing left/right ports remain available.
 
 Under **Line ports**, each available side has two settings:
 

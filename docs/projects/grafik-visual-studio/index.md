@@ -5,7 +5,7 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 # HA Grafik Visual Studio
 
-Neu ab Studio **0.1.278**: [UGSo Solar 0.1.1](./solar) enthält ein Stapel-Kopfteil, ein wiederverwendbares Batteriemodul für 1–6 Akkus, einen kleineren Solo-Wechselrichter und ein Solarpanel mit Standfuß. Das Panel ist auch gespiegelt darstellbar; sein SVG-Linienausgang lässt sich am Rohr oder an der linken/rechten Widgetkante platzieren. Mit mittigen Gehäusekoppelpunkten für den Stapel und rahmenlosen Textwerten.
+Neu ab Studio **0.1.279**: [UGSo Solar 0.1.2](./solar) ergänzt vier Solarpanel-Eingänge am Stapel-Kopfteil, seitliche Batterieanschlüsse an der Gehäusenaht und getrennte Farben für die Batterie-Werte. Enthält außerdem Solo-Wechselrichter und ein spiegelbares Solarpanel mit Standfuß sowie wählbarer Ausgangsposition.
 
 Neu ab Studio **0.1.215**: Das externe [Material-Design-Set 1.0.0](materialdesign.md) enthält **49 Widget-Einträge**, Autocomplete, Eingaben, Buttons, Anzeigen, Listen, Diagramme, Kalender und Seitenlayouts. Ein Vergleichsprojekt bereitet die Prüfung Widget für Widget vor.
 

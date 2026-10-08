@@ -5,11 +5,11 @@ description: Neutrale SVG-Module mit bündigen Gehäusekoppelpunkten, Textanzeig
 
 # UGSo Solar
 
-**UGSo Solar 0.1.1** benötigt **Studio 0.1.278 oder neuer**. Das eigenständige Widgetset enthält vier markenunabhängige Module mit transparenten SVG-Grafiken. Importiere die [Paketdatei ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) über die Paketeinstellungen.
+**UGSo Solar 0.1.2** benötigt **Studio 0.1.279 oder neuer**. Das eigenständige Widgetset enthält vier markenunabhängige Module mit transparenten SVG-Grafiken. Aktualisiere zuerst Studio und importiere danach die [Paketdatei ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) über die Paketeinstellungen.
 
 | Widget | Standardgröße | Gehäusekoppelpunkte | Linienpunkte |
 | --- | --- | --- | --- |
-| Stapel-Kopfteil | 256 × 64 px | Unten mittig | Links, rechts, oben |
+| Stapel-Kopfteil | 256 × 64 px | Unten mittig | Links/rechts sowie je zwei Solarpanel-Eingänge an beiden Gehäuseseiten |
 | Batteriemodul | 256 × 169 px | Oben und unten mittig | Links, rechts |
 | Wechselrichter Solo | 144 × 103,3 px | Keine | Alle vier Seiten |
 | Solarpanel mit Standfuß | 320 × 288 px | Keine | Ein Ausgang: Standrohr oder Widgetkante links/rechts |
@@ -36,11 +36,17 @@ Für **Leistung**, **Temperatur** und **Ladezustand (SoC)** gibt es jeweils eine
 
 **Wert anzeigen** schaltet ausschließlich die jeweilige Textanzeige ab. Die Entität wird weiterhin aktualisiert, und Ausgänge liefern weiterhin ihren Wert. Bei der Batterie beginnen die aktiven Anzeigen direkt unter der Trennlinie nach dem ersten Drittel und stehen automatisch untereinander, ohne Leerzeilen für ausgeblendete Werte. Es gibt keine Rahmen oder Anzeigekästchen. Die Reihenfolge ist Leistung, Temperatur, SoC. Schriftfarbe und maximale Schriftgröße sind einstellbar; bei wenig Platz wird die Schrift verkleinert.
 
-Standardmäßig zeigt die Batterie alle drei Werte, das Kopfteil keine Werte und Solo nur die Leistung. Die drei Anzeigen lassen sich bei jedem Modul separat aktivieren.
+Standardmäßig zeigt die Batterie alle drei Werte und Solo nur die Leistung. Das Kopfteil zeigt keine Werte und bietet keine Gruppen für Leistung, Temperatur, SoC oder Leistungsrichtung. Beim Solo-Wechselrichter bleiben diese Einstellungen erhalten.
+
+Bei der Batterie lässt sich unter **Leistung**, **Temperatur** und **Ladezustand (SoC)** jeweils die **Schriftfarbe des Werts** getrennt einstellen. Ohne eigene Farbe gilt die allgemeine Schriftfarbe. Die Farbe bleibt auch beim Aus- und Wiedereinblenden der Anzeige erhalten.
 
 Unter **Leistungsrichtung** kannst du ein Richtungssymbol zuschalten. Lege fest, ob positive Leistung **Energie hinein** oder **Energie heraus** bedeutet, und wähle die beiden Symbole über freie Texteingaben. Bei Leistung 0 oder einem unbekannten Wert wird kein Richtungssymbol gezeigt. Das Vorzeichen des Zahlenwerts bleibt erhalten.
 
 ## Ein- und Ausgänge für SVG-Linien
+
+Bei der Batterie gibt es links und rechts zusätzlich eine **Position**: **Widgetkante Mitte** oder **Gehäusekante an unterer Naht**. Beide Seiten lassen sich unabhängig umstellen. Vorhandene Verbindungen folgen automatisch; Ein-/Ausgangsrolle und Wertzuordnung bleiben erhalten. Die mittigen Gehäusekoppelpunkte oben/unten für das Stapeln ändern sich dadurch nicht.
+
+Das Kopfteil besitzt vier optische Solarpanel-Anschlussbuchsen: links oben/unten und rechts oben/unten. Diese vier Eingänge sind standardmäßig aktiv und unter **Linienanschlüsse** einzeln abschaltbar. Sie folgen der unten bündigen Grafik auch bei anderer Widgethöhe. Verbinde die SVG-Linie eines Solarpanels mit einer solchen Buchse. Die Eingänge sind getrennte Linienziele; Werte werden nicht automatisch summiert. Der frühere obere Linienanschluss entfällt; die bisherigen linken/rechten Linienpunkte bleiben verfügbar.
 
 Unter **Linienanschlüsse** hat jede verfügbare Seite zwei Einstellungen:
 
