@@ -4,6 +4,8 @@ description: Premiers pas avec UI eXtension pour Home Assistant.
 ---
 # Démarrage rapide
 
+UIX **8.4.0** nécessite **Home Assistant 2026.10.0 ou ultérieur**. Voir la [version 8.4.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0).
+
 ::: note Utilisateurs de Card-mod
 Si vous migrez depuis Card-mod, consultez la [FAQ](./faq.md), qui répond à la plupart des questions. Pour toute autre question, utilisez les [discussions GitHub](https://github.com/Lint-Free-Technology/uix/discussions).
 

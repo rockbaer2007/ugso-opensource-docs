@@ -239,7 +239,7 @@ Wenn ein Forge-Form-Spark die Aktion `javascript` auslöst, werden seine aktuell
 ## `locked_action`: Aktion erst nach Code oder Bestätigung ausführen
 
 ::: info Verfügbar ab UIX 8.3.0-beta.2
-Diese Ergänzung gehört zur 8.3-Vorabversion, nicht zur stabilen Basis 8.2.0.
+Seit 8.3.0-beta.2 verfügbar und in der stabilen Version UIX 8.4.0 enthalten.
 :::
 
 `locked_action` führt eine normale Home-Assistant-Action erst aus, nachdem der aktuelle Benutzer die konfigurierte Sperre passiert hat. Das eignet sich beispielsweise für Neustarts, Tore oder wichtige Einstellungen, ohne die gesamte Karte in einen Forge Lock zu hüllen.

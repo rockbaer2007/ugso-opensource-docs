@@ -24,6 +24,8 @@ Les paramètres de l'objet `data:` d'une action UIX dépendent de l'événement 
 `action: clear_cache` et `action: more_info` sont également acceptés et correspondent respectivement à `action: clear-cache` et `action: more-info`.
 
 :::
+<span id="clear-cache-clearing-home-assistant-frontend-cache"></span>
+
 ## `clear-cache` — vider le cache du frontend Home Assistant
 
 Cette action vide le cache de l'application frontend Home Assistant et recharge le navigateur, sans toucher à `localStorage`. Elle est pratique lorsque l'option est cachée dans un menu de débogage. Elle vide également d'autres données du cache de l'application ; `localStorage`, qui contient notamment l'identifiant du navigateur Browser Mod, reste intact.

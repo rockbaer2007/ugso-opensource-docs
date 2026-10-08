@@ -8,7 +8,7 @@ Der Tooltip Spark hängt einen gestylten Tooltip an ein Element im Forge-Ergebni
 Er verwendet Home Assistants `wa-tooltip`, unterstützt zwölf Positionen und liegt durch die Popover-API des Browsers über anderen Oberflächenebenen. `for` verwendet die [DOM-Navigation](../../concepts/dom), einschließlich `$` für Shadow Roots. Nur das erste passende Element erhält den Tooltip. Ohne `for` wird die Wurzel des erzeugten Elements verwendet; bei einer Blank Card ist dies `uix-forge-blank-card $ div.content`.
 
 ::: info Versionsstand
-Die Grundfunktion gehört zur stabilen Basis UIX 8.2.0. Die nachfolgend gekennzeichneten Ergänzungen wurden bis UIX 8.3.0-beta.8 abgeglichen.
+Versionsstand: UIX 8.4.0. Die nachfolgend gekennzeichneten Ergänzungen aus 8.3-Beta-Versionen sind in dieser stabilen Version enthalten.
 :::
 
 ## Grundnutzung

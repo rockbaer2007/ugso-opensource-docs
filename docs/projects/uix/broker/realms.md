@@ -5,7 +5,7 @@ description: Festlegen, wo eine UIX-Broker-Interaktion auf Events lauscht.
 # Realms
 
 ::: info Versionsstand
-UIX Broker gehört zur stabilen Basis 8.2.0; zusätzliche 8.3-Beta-Funktionen sind auf den jeweiligen Referenzseiten gekennzeichnet.
+Versionsstand: UIX 8.4.0. Frühere Beta-Versionshinweise kennzeichnen die Einführung einzelner Funktionen; diese sind in der stabilen Version enthalten.
 :::
 
 Der `realm` einer Interaktion legt fest, wo Broker lauscht und wie `listen` interpretiert wird.

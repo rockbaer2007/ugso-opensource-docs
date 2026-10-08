@@ -477,6 +477,7 @@ const sidebarDe = {
         { text: 'Theme', link: '/projects/uix/forge/sparks/theme' },
         { text: 'Tile Icon', link: '/projects/uix/forge/sparks/tile-icon' },
         { text: 'State Badge', link: '/projects/uix/forge/sparks/state-badge' },
+        { text: 'Badge', link: '/projects/uix/forge/sparks/badge' },
         { text: 'Search', link: '/projects/uix/forge/sparks/search' }
       ]
     },
@@ -944,6 +945,7 @@ const sidebarFr = {
         { text: 'Thème', link: '/fr/projects/uix/forge/sparks/theme' },
         { text: 'Icône de tuile', link: '/fr/projects/uix/forge/sparks/tile-icon' },
         { text: 'Badge d’état', link: '/fr/projects/uix/forge/sparks/state-badge' },
+        { text: 'Badge', link: '/fr/projects/uix/forge/sparks/badge' },
         { text: 'Recherche', link: '/fr/projects/uix/forge/sparks/search' }
       ] },
       { text: 'Concepts et aide', collapsed: true, items: [

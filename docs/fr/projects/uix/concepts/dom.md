@@ -92,6 +92,8 @@ UIX pourra alors réessayer plus tard la recherche à partir de `ha-map $`, ce q
 Si le résultat est intermittent, essayez de diviser la chaîne en plusieurs étapes.
 
 :::
+<span id="express-search-selector"></span>
+
 ## Sélecteur de recherche rapide `$$`
 
 Pour les éléments profondément imbriqués — notamment les fonctionnalités de carte et les commandes de la fenêtre « Plus d'informations » — décrire tous les passages intermédiaires dans les DOM fantômes peut être verbeux. Le **sélecteur de recherche rapide** `$$` est une notation abrégée : il effectue une **recherche récursive traversant les DOM fantômes** parmi tous les descendants du contexte actuel, quel que soit le nombre de limites rencontrées.
@@ -299,6 +301,8 @@ uix:
 Les mêmes opérateurs que pour les sélecteurs d'attribut sont pris en charge (`=`, `~=`, `^=`, `$=`, `*=`, `|=`). Les segments entiers servent d'index de tableau si la valeur actuelle est un `Array` ; les clés nommées (chaînes) accèdent toujours directement aux propriétés, sur les tableaux comme sur les objets ordinaires.
 
 :::
+<span id="dom-inspection-helpers"></span>
+
 ## Outils d'inspection du DOM
 
 UIX fournit des outils pour la console du navigateur qui facilitent la découverte des chemins de style valides, des chemins des sparks Forge, des ancres de directives Broker et de la hiérarchie des éléments UIX pendant l'exécution. Ouvrez la console des outils de développement, sélectionnez un élément dans le panneau **Éléments** (il devient `$0`), puis appelez l'une des fonctions suivantes.
@@ -392,6 +396,8 @@ Après avoir sélectionné le titre `<h3>` d'une carte Markdown et exécuté `ui
 La ligne **Path** indique la clé YAML avec le `:` requis. Le **Suggested CSS selector** est suivi d'une référence cliquable qui affiche l'élément dans les outils de développement.
 
 :::
+<span id="uix_forge_path0-forge-helper"></span>
+
 ### `uix_forge_path($0)` — outil Forge
 
 Indique le chemin entre l'élément `uix-forge` le plus proche et l'élément sélectionné. Utilisez ce chemin comme valeur de `for`, `before` ou `after` dans la configuration d'un spark Forge.
@@ -432,6 +438,8 @@ forge:
 ```
 
 :::
+<span id="uix_broker_path0-broker-directive-anchor-helper"></span>
+
 ### `uix_broker_path($0)` — outil pour les ancres de directive Broker
 
 Après avoir déclenché une interaction Broker, sélectionnez un élément à l'intérieur

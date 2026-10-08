@@ -102,6 +102,8 @@ dissolve_target:
 dissolve_target: opacity_50
 ```
 
+<span id="media-source-uris"></span>
+
 ### URI de sources multimédias
 
 `video_url` et `image_url` acceptent les URI de [source multimédia](https://www.home-assistant.io/integrations/media_source/) Home Assistant au format `media-source://media_source/local/<filename>`. UIX les résout automatiquement avant de définir l'arrière-plan à l'aide de la commande WebSocket HA `media_source/resolve_media` : aucune signature manuelle de l'URL n'est nécessaire.
@@ -121,6 +123,8 @@ Les fichiers du répertoire `/media` de votre instance HA sont accessibles à l'
 ```
 
 ---
+
+<span id="card-ha-card-adapter"></span>
 
 ## Adaptateur Card (ha-card)
 

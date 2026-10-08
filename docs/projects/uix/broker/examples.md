@@ -5,7 +5,7 @@ description: UIX-Broker-Beispiele.
 # Beispiele
 
 ::: info Versionsstand
-UIX Broker gehört zur stabilen Basis 8.2.0; zusätzliche 8.3-Beta-Funktionen sind auf den jeweiligen Referenzseiten gekennzeichnet.
+Versionsstand: UIX 8.4.0. Frühere Beta-Versionshinweise kennzeichnen die Einführung einzelner Funktionen; diese sind in der stabilen Version enthalten.
 :::
 
 ## Card-Tab im Add-Card-Dialog als Standard setzen

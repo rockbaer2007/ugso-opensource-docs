@@ -15,9 +15,10 @@ https://uix.lf.technology/
 Authoritative UIX repository:
 https://github.com/Lint-Free-Technology/uix
 
-Tracked UIX versions for the German translation:
-- Stable base: UIX 8.2.0, source revision f9eb8fa571dbce6cd771c53ca11dcf2401c8a933
-- Canonical documentation changes reviewed through c33ff7995b757d5e7ead0cf8fd5fd85ed4d791ab (8.3.0-beta.8) on 2026-09-13; prerelease additions are marked on the affected pages.
+Tracked UIX versions for the German and French translations:
+- Stable base: UIX 8.4.0, released 2026-10-07, source revision 71b8ccd38202257c070ae9970a7aac12a68a6389.
+- Requires Home Assistant 2026.10.0 or newer.
+- Reviewed on 2026-10-08. Canonical docs/source and docs/mkdocs.yml are unchanged between the previously reviewed c70d1275f1fb08514291feb4c9181a748408b798 and v8.4.0. Historical beta notices describe introduction versions; these features are now included in stable 8.4.0.
 
 License attribution:
 - Original UIX documentation by Lint-Free-Technology/uix is licensed under CC BY 4.0.

@@ -5,7 +5,7 @@ description: UIX-Broker-Interaktionen gegen Elemente, Captured Data und Browser-
 # Rules
 
 ::: info Versionsstand
-UIX Broker gehört zur stabilen Basis 8.2.0. Die Regeln `user` und `user_is_admin` sind ab 8.3.0-beta.1 verfügbar.
+Versionsstand: UIX 8.4.0. Die Regeln `user` und `user_is_admin` sind seit 8.3.0-beta.1 verfügbar und in der stabilen Version enthalten.
 :::
 
 Alle Regeln einer Interaktion müssen passen, bevor Broker die Direktiven ausführt. Regeln nutzen standardmäßig den Interaction Anchor, können aber einen relativen oder absoluten Override-Anchor definieren.

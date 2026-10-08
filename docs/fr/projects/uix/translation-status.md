@@ -6,6 +6,17 @@ description: État de la documentation UIX française.
 
 Cette documentation française est maintenue à partir de la documentation UIX canonique en anglais. Les pages principales, le démarrage rapide et les aperçus de UIX Styling, Forge, Broker et Extras sont déjà disponibles en français. La section complète **UIX Broker** est également disponible en français.
 
+## Version actuelle : UIX 8.4.0
+
+- Comparaison le **8 octobre 2026** avec la version stable [`v8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) du 7 octobre 2026, révision [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389).
+- **Home Assistant 2026.10.0 ou ultérieur est requis.**
+- Aucun changement de `docs/source` ni de `docs/mkdocs.yml` entre la révision déjà vérifiée `c70d1275f1fb08514291feb4c9181a748408b798` et `v8.4.0`.
+- Formulaire, Popover, runtime interne des frames, `uix-fonts`, images d'entité dans les aperçus de carte et références aux résultats Broker sont couverts. L'option des frames reste expérimentale et désactivée par défaut.
+- La [référence Badge](./forge/sparks/badge), auparavant absente, est ajoutée. Les versions française et allemande couvrent désormais les 64 chemins Markdown canoniques, avec une page de statut supplémentaire. La page Badge est une référence compacte avec les tableaux complets des options et variables CSS ; les autres exemples originaux sont liés.
+- Vue d'ensemble, pied de page, lien de publication, métadonnées JSON allemandes et `llms.txt` sont actualisés. Les mentions bêta historiques indiquent les versions d'introduction ; les rapports datés ci-dessous décrivent les vérifications précédentes.
+- Ajout de 17 ancres compatibles avec les liens anglais existants : 36 liens internes vers des sections françaises sont rétablis sans modifier leurs titres ni leurs ancres françaises.
+- Vérification des sources, de la couverture, de la construction, des liens, des langues et des exemples copiables ; sans nouvelle révision phrase par phrase de toutes les traductions antérieures ni tests d'exécution Home Assistant.
+
 ## Référence canonique
 
 La [documentation UIX anglaise](https://uix.lf.technology/) reste la référence pour la syntaxe, le comportement lié à une version et les nouveaux changements. Certaines pages détaillées peuvent encore nécessiter une vérification éditoriale.

@@ -201,5 +201,5 @@ Au moment d'une publication, UIX vérifie les URL du site et des métadonnées. 
 - **N'incluez pas** `uix.js` dans les commits d'une pull request. Ce fichier de ressource est généré lors d'une publication. UIX étant une intégration, elle ne peut pas utiliser les ressources de publication : `uix.js` doit se trouver dans `custom_components/uix`.
 - **Ajoutez** des tests pour toute nouvelle composante visuelle de UIX. Consultez le fichier `README.MD` du dossier `tests` du dépôt.
 - Utilisez si possible la convention Conventional Commits pour nommer les commits. Ce n'est pas obligatoire, car les PR sont fusionnées et leur titre peut être renommé selon cette convention.
-- En cas de changement incompatible, ajoutez `BREAKING CHANGE: ...` au pied du commit ou dans la PR.
+- En cas de changement incompatible, utilisez `feat!:` ou ajoutez `BREAKING CHANGE: ...` au pied du commit ou dans la PR. Les deux formes produisent une nouvelle version majeure.
 - Ajoutez au pied du commit ou dans la PR les références aux tickets résolus, par exemple `fixes #1234`.

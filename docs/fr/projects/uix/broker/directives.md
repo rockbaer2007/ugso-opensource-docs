@@ -55,6 +55,8 @@ Les règles `panel` obtiennent l'état actuel du panneau lorsqu'il est nécessai
 
 `block` n'accepte pas les règles de directive. Placez sa condition dans le `rules` de l'interaction afin que l'événement soit bloqué de manière synchrone uniquement lorsque l'interaction complète correspond.
 
+<span id="block"></span>
+
 ## Bloquer
 
 `block` appelle `preventDefault()` et `stopImmediatePropagation()` sur l'événement de navigateur initiateur.

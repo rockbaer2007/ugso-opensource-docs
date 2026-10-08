@@ -6,7 +6,7 @@ title: Übersicht
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
-> Basis: GitHub-Release `v8.3.1` vom 22.09.2026. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`add5557`](https://github.com/Lint-Free-Technology/uix/commit/add5557c0ee13a98c9fe249bed06d215606f2507).
+> Basis: GitHub-Release [`v8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) vom 07.10.2026. Benötigt **Home Assistant 2026.10.0 oder neuer**. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389).
 > Die Übersetzungen wurden mit dem bis zu diesem Release abgeglichenen Dokumentationsstand geprüft. Einzelheiten und bekannte Grenzen stehen im [Übersetzungsstatus](./translation-status).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
@@ -29,6 +29,15 @@ UIX besteht aus drei großen Bereichen:
 - [UIX Forge](./forge/index) für dynamisch erzeugte Elemente, wiederverwendbare Vorlagen und erweiterte Sparks.
 - [UIX Broker](./broker/index) für deklarative Interaktionen: Browser-Events, Tastenkürzel und Home-Assistant-Events wählen ein Element aus, prüfen Regeln und führen Direktiven in ihrer Reihenfolge aus.
 
+## Neu in UIX 8.4.0
+
+- [Form Spark](./forge/sparks/form) und [Popover-Aktion](./extras/uix-actions#popover) für Formulare und eingeblendete Inhalte.
+- [Frame-Panels stylen](./extras/style-frame-panels) mit interner Frame-Laufzeit; diese experimentelle Option bleibt standardmäßig deaktiviert.
+- [Theme-Schriften mit `uix-fonts`](./using/themes) und [Entitätsbilder in Kartenübersichten](./using/images), einschließlich der Anpassung an Home Assistant 2026.10.
+- [Broker-Direktiven-Regeln](./broker/directives#direktiven-regeln) können Ergebnisse früherer JavaScript- oder Template-Direktiven verwenden.
+
+Die zuvor beschriebenen 8.4-Beta-Ergänzungen gehören damit zur stabilen Version. Historische Versionshinweise kennzeichnen weiterhin die Einführung einzelner Funktionen.
+
 ## Schnell loslegen
 
 Der beste Einstieg ist der [Schnellstart](./quick-start). Dort findest du Installation, Einrichtung als Home-Assistant-Dienst und je ein erstes Beispiel für UIX Styling und UIX Forge.
@@ -43,4 +52,4 @@ Der beste Einstieg ist der [Schnellstart](./quick-start). Dort findest du Instal
 - [FAQ](./faq)
 
 > **Stand dieser deutschen Doku**
-> Geprüft gegen UIX `8.3.1`. Bei Unklarheiten gilt immer die englische Originaldokumentation.
+> Am 08.10.2026 mit dem Dokumentationsstand von UIX `8.4.0` abgeglichen. Bei Unklarheiten gilt immer die englische Originaldokumentation.

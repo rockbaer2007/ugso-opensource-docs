@@ -14,6 +14,7 @@ Sparks disponibles :
 - :zap: [Événement](event.md) — reçoit les événements DOM des actions `fire-dom-event` et expose leurs données sous forme de variables de modèle.
 - :star: [Icône de tuile](tile-icon.md) — insère un élément `ha-tile-icon` avant ou après un élément cible.
 - :shield: [Badge d'état](state-badge.md) — insère un élément `state-badge` avant ou après un élément cible.
+- [Badge](./badge) — badge texte/icône avec couleurs du thème et placement facultatif.
 - :material-grid: [Grille](grid.md) — applique une disposition CSS Grid à un conteneur.
 - :mag: [Recherche](search.md) — recherche des éléments par sélecteur CSS et filtre textuel facultatif, puis modifie leurs classes, attributs ou contenu textuel.
 - :material-map: [Carte](map.md) — conserve le niveau de zoom et le centre d'une carte lors des mises à jour d'état de Home Assistant.

@@ -32,6 +32,8 @@ Le correctif de style de `ha-drawer` contrôle également l'arrière-plan de la 
 Il n'est pas nécessaire d'entourer de `url()` les variables CSS d'entité caméra, d'entité image, de vidéo ou d'image pour les arrière-plans de vue. UIX ajoute `url()` si nécessaire. Vous **devez** toutefois le fournir si vous utilisez `--uix-view-background`.
 
 :::
+<span id="coverage-modes"></span>
+
 ## Modes de couverture
 
 La variable `--uix-view-background-cover` contrôle la partie de la fenêtre occupée par l'arrière-plan.
@@ -165,6 +167,8 @@ Pour ajuster la position ou d'autres propriétés de l'arrière-plan de la vue, 
 | Image | `div.uix-bg-image` |
 | Background shorthand | `div.uix-bg-image` |
 
+<span id="camera-positioning"></span>
+
 ### Positionnement de la caméra
 
 Par défaut, les arrière-plans de caméra sont **centrés** : le flux remplit le conteneur et le débordement dû au rapport hauteur/largeur est rogné symétriquement de chaque côté. Utilisez `--uix-camera-position` pour modifier le point d'ancrage du flux en cas de débordement :
@@ -188,6 +192,8 @@ Par défaut, les arrière-plans de caméra sont **centrés** : le flux remplit l
       --uix-camera-position: top;
     }
 ```
+
+<span id="camera-zoom-and-pan"></span>
 
 ### Zoom et déplacement de la caméra
 

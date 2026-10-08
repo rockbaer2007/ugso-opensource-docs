@@ -6,7 +6,18 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 
 Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation mit der englischen Originaldokumentation.
 
-## Stand
+## Stand: UIX 8.4.0
+
+- Abgleich am **08.10.2026** gegen den stabilen Release [`v8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) vom 07.10.2026, Revision [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389).
+- Benötigt **Home Assistant 2026.10.0 oder neuer**.
+- `git diff c70d1275f1fb08514291feb4c9181a748408b798 v8.4.0 -- docs/source docs/mkdocs.yml` zeigt keine Änderungen. Der zuletzt abgeglichene kanonische Dokumentationsstand ist damit auch der Stand des stabilen Releases.
+- Berücksichtigt sind Form Spark, Popover-Aktion, interne Frame-Laufzeit, `uix-fonts`, Entitätsbild-Overrides in Kartenübersichten und Broker-Ergebnisreferenzen. Die Frame-Option bleibt experimentell und standardmäßig aus.
+- Die bislang fehlende [Badge-Spark-Referenz](./forge/sparks/badge) wurde ergänzt. Deutsch und Französisch haben nun Gegenstücke zu allen 64 kanonischen Markdown-Pfaden sowie eine eigene Statusseite. Die Badge-Seite ist eine kompakte Referenz mit vollständigen Options- und CSS-Tabellen; weitere Originalbeispiele sind verlinkt.
+- Übersicht, Footer, Release-Link, JSON-Metadaten und `llms.txt` nennen 8.4.0. Versionshinweise auf einzelnen Seiten kennzeichnen die Einführung der Funktionen; frühere Prüfberichte unten sind historische Stände.
+- In Französisch wurden 17 englische Kompatibilitäts-Anchors ergänzt und damit 36 bestehende Abschnittslinks repariert; französische Titel und Abschnittsadressen bleiben erhalten.
+- Die Prüfung umfasst Quellenvergleich, Seitenabdeckung, Build, Links, Sprachverweise und kopierbare Beispiele. Sie ersetzt keine erneute Satz-für-Satz-Prüfung aller Altübersetzungen und keine Home-Assistant-Laufzeittests.
+
+## Historischer Stand: UIX 8.3.1
 
 - Alle 61 Markdown-Seiten des abgeglichenen englischen Stands haben deutsche Gegenstücke.
 - Geprüft gegen den stabilen UIX-Release `8.3.1` vom 22.09.2026, Revision [`add5557`](https://github.com/Lint-Free-Technology/uix/commit/add5557c0ee13a98c9fe249bed06d215606f2507).

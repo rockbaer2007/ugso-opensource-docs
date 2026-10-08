@@ -108,6 +108,8 @@ Méthode :
             name: toggle-yaml-mode
 ```
 
+<span id="allow-toggle-yaml-mode-in-automation-editor"></span>
+
 ### Autoriser le basculement du mode YAML dans l'éditeur d'automatisation
 
 Utilisez cet exemple avec le précédent et l'exemple suivant (un raccourci clavier pour basculer en mode YAML).
@@ -261,6 +263,8 @@ Méthode :
         set: _selectedGroup
         value: entity
 ```
+
+<span id="add-tools-button-to-sidebar-title"></span>
 
 ## Ajouter un bouton d'outils au titre de la barre latérale
 

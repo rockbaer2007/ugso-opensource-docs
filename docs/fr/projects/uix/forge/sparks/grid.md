@@ -87,6 +87,8 @@ element:
 | `elements` | `list[string]` | | `[]` | Liste ordonnée des noms `grid-area` à affecter aux enfants directs du conteneur cible. Le premier nom est affecté au premier enfant, le deuxième au suivant, et ainsi de suite. Voir l'[exemple des zones de modèle et des éléments](#exemples). |
 | `media_queries` | `list` | | `[]` | Liste de blocs de remplacement adaptatifs. Voir [Requêtes média](#media-queries). |
 
+<span id="media-queries"></span>
+
 ### Requêtes média
 
 Chaque entrée de `media_queries` doit contenir la clé `query` et peut définir une partie des propriétés de grille ci-dessus, y compris `areas`.

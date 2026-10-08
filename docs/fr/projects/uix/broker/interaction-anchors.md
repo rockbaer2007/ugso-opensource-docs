@@ -15,6 +15,8 @@ Pour un YAML concis, la configuration `anchor` est généralement écrite sous f
 | Une chaîne commençant par `&` | Utilise la sélection `select_tree` de `document`. Il est disponible dans tous les [realms](realms.md). |
 | `{ select_tree: <path> }` | Utilise la sélection longue `select_tree` de `document`. Il est disponible dans tous les domaines. |
 
+<span id="event-path-anchors"></span>
+
 ## Ancres de chemin d'événement
 
 Les expressions de chemin d'événement sont évaluées de droite à gauche à partir du `target` implicite, où `target` est l'élément le plus interne renvoyé par [`event.composedPath()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath).

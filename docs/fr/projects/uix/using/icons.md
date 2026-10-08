@@ -149,6 +149,8 @@ Les modèles sont pris en charge.
 ![Icon generic override example](../assets/page-assets/using/icons-direct-icon-color-entity.png)
 
 :::
+<span id="full-theme-example"></span>
+
 ## Exemple complet de thème
 
 Cet exemple définit deux macros dans un thème UIX et les utilise pour styliser les variables de thème `uix-root-yaml` et `uix-more-info-yaml`. Il n'utilise que le sélecteur racine `.:`, mais choisit les variantes `-yaml`, que vous avez peut-être déjà définies dans votre [thème](./themes.md).

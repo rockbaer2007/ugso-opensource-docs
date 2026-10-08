@@ -3,6 +3,7 @@
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
+import json
 import sys
 
 
@@ -72,10 +73,29 @@ def main():
                 if not any(link.get("rel") == "alternate" and link.get("hreflang") == language and link.get("href") == href for link in page.links):
                     errors.append(f"Wrong or missing hreflang={language}: {relative}")
 
+    # French section links previously escaped the German-only check.
+    french_source = ROOT / "docs/fr/projects/uix"
+    for source in sorted(french_source.rglob("*.md")):
+        relative = source.relative_to(french_source).as_posix()
+        built = DIST / "fr/projects/uix" / Path(relative).with_suffix(".html")
+        if not built.is_file():
+            errors.append(f"Missing French built page: {relative}")
+            continue
+        pages[page_url(relative).replace("/projects/uix/", "/fr/projects/uix/")] = Page(built.read_text(encoding="utf-8"))
+
+    metadata = json.loads((ROOT / "docs/public/projects/uix/uix-docs.json").read_text(encoding="utf-8"))
+    if metadata["docs_version"] != metadata["stable_version"]:
+        errors.append("UIX stable and documentation metadata versions differ")
+    release = f"https://github.com/Lint-Free-Technology/uix/releases/tag/v{metadata['stable_version']}"
+    revision = f"https://github.com/Lint-Free-Technology/uix/commit/{metadata['source_revision']}"
     for url, page in pages.items():
+        if release not in page.hrefs or revision not in page.hrefs:
+            errors.append(f"Version footer does not match release metadata: {url}")
+        if any(entity in "".join(page.code) for entity in ("&#123;", "&#125;")):
+            errors.append(f"Escaped Jinja delimiters in copyable code: {url}")
         for href in page.hrefs:
             target = urlsplit(urljoin(url, href))
-            if target.netloc != urlsplit(SITE).netloc or not target.path.startswith("/projects/uix/"):
+            if target.netloc != urlsplit(SITE).netloc or not target.path.startswith(("/projects/uix/", "/fr/projects/uix/")):
                 continue
             target_url = SITE + target.path.removesuffix(".html")
             target_url = target_url.removesuffix("index") if target_url.endswith("/index") else target_url

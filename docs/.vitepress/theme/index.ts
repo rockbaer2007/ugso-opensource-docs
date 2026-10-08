@@ -239,8 +239,8 @@ const UgsoLayout = defineComponent({
                   h(
                     'span',
                     isFrench
-                      ? 'Base stable : UIX 8.3.1. Changements documentaires signalés à la révision c70d127 vérifiés le 08/10/2026. La documentation originale en anglais reste la référence.'
-                      : 'Stabile Basis: UIX 8.3.1. Gemeldete Dokumentationsänderungen der Revision c70d127 abgeglichen, Stand 08.10.2026. Maßgeblich bleibt die englische Originaldokumentation.'
+                      ? 'Base stable : UIX 8.4.0, Home Assistant 2026.10.0 minimum. Documentation comparée à la version publiée, révision 71b8ccd, le 08/10/2026. La documentation originale en anglais reste la référence.'
+                      : 'Stabile Basis: UIX 8.4.0, benötigt Home Assistant ab 2026.10.0. Doku mit dem Release-Stand 71b8ccd abgeglichen, Stand 08.10.2026. Maßgeblich bleibt die englische Originaldokumentation.'
                   ),
                   h('span', [
                     h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),
@@ -248,14 +248,14 @@ const UgsoLayout = defineComponent({
                     h(
                       'a',
                       {
-                        href: 'https://github.com/Lint-Free-Technology/uix/releases/tag/v8.3.1',
+                        href: 'https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0',
                         target: '_blank',
                         rel: 'noopener'
                       },
-                      isFrench ? 'Base stable 8.3.1' : 'Stabile Basis 8.3.1'
+                      isFrench ? 'Version stable 8.4.0' : 'Stabile Version 8.4.0'
                     ),
                     ' · ',
-                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/c70d1275f1fb08514291feb4c9181a748408b798', target: '_blank', rel: 'noopener' }, isFrench ? 'Révision documentaire c70d127' : 'Doku-Revision c70d127'),
+                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389', target: '_blank', rel: 'noopener' }, isFrench ? 'Révision publiée 71b8ccd' : 'Release-Revision 71b8ccd'),
                     ' · ',
                     h('a', { href: isFrench ? '/fr/projects/uix/translation-status' : '/projects/uix/translation-status' }, isFrench ? 'État de la traduction' : 'Übersetzungsstatus')
                   ]),

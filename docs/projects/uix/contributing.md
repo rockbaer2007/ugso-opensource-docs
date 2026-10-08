@@ -42,7 +42,7 @@ Bitte beachte für Pull Requests:
 - Füge `uix.js` nicht zu Commits hinzu. Diese Ressourcendatei wird beim Release gebaut. UIX kann hier nicht einfach Release-Assets nutzen, weil `uix.js` im Ordner `custom_components/uix` liegen muss.
 - Füge Tests für neue visuelle Komponenten hinzu. Hinweise stehen in der `README.MD` im Testordner des Repositories.
 - Verwende nach Möglichkeit Conventional-Commit-Namen. Das ist nicht zwingend, weil Pull Requests beim Mergen zusammengefasst und der Titel angepasst werden kann, hilft aber bei der Einordnung.
-- Wenn es sich um eine Breaking Change handelt, erwähne im Commit-Footer oder Pull Request `BREAKING CHANGE: ...`.
+- Bei einer inkompatiblen Änderung verwende `feat!:` oder `BREAKING CHANGE: ...` im Commit-Footer oder Pull Request. Beide Formen lösen eine neue Hauptversion aus.
 - Verweise im Commit-Footer oder Pull Request auf behobene Issues, zum Beispiel `fixes #1234`.
 
 ## Externe Dokumentationsübersetzungen

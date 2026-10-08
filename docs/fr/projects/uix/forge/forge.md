@@ -89,6 +89,8 @@ element:
 
 ![Exemple de configuration des entités de l'élément](../assets/page-assets/forge/basic-element-entities.png)
 
+<span id="blank-card-config"></span>
+
 ### Configuration de la carte vide
 
 Avec les types `card`, `card_as_row` ou `card_as_badge`, si `element` ou `element.type` n'est pas défini, UIX Forge utilise la carte vide par défaut `custom:uix-forge-blank-card`. Vous pouvez ainsi appliquer directement des [sparks](./sparks/index.md) à une carte vide.

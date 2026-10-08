@@ -13,6 +13,7 @@ Sparks erweitern ein von UIX Forge erzeugtes Element um einzelne, gekapselte Ver
 - [Event](./event)
 - [Tile Icon](./tile-icon)
 - [State Badge](./state-badge)
+- [Badge](./badge) - Text-/Symbol-Badge mit Theme-Farben und optionaler Platzierung.
 - [Grid](./grid)
 - [Search](./search)
 - [Map](./map)
