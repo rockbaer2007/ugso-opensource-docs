@@ -4,7 +4,7 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.5 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+**Version 0.1.6 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -25,7 +25,7 @@ Editor: `http://127.0.0.1:4180/`. Preview, copy, download and reopen supported Y
 
 ## ioBroker / our Blocks: existing features
 
-14 block types including the automation root:
+18 block types including the automation root:
 
 | ioBroker concept | UGSo Blocks for HA | HA output |
 | --- | --- | --- |
@@ -43,8 +43,29 @@ Editor: `http://127.0.0.1:4180/`. Preview, copy, download and reopen supported Y
 | Pause | Wait seconds | `delay` |
 | If/else if/else | Extensible if block | `if` or `choose` |
 | Number | Number value block, also used as a shadow default | Constant threshold or delay |
+| Text | Text value block with shadow | Log message |
+| Debug output | Log with severity | `system_log.write` |
+| Control script | Start/stop/call and wait | `script.turn_on`, `script.turn_off` or direct call |
+| Update state, different semantics | Refresh entity | `homeassistant.update_entity` |
 
 Name, description, ID and `single`, `restart`, `queued`, `parallel` modes are available. Queued/parallel support a maximum count. Three examples cover light, battery and evening light.
+
+## System blocks added in version 0.1.6
+
+The **System** category contains three new action blocks. **Values** also includes a green **Text** block with a String output for the log message input. Numbers and conditions cannot connect to this input.
+
+| ioBroker | Our block | Controls and HA behavior |
+| --- | --- | --- |
+| Debug output | Log | Editable text shadow or text block; Info, Warning, Error, Debug or Critical dropdown. Generates `system_log.write`. |
+| Control script | HA script | Enter script ID; choose start without waiting, stop, or call and wait. |
+| Update state | Refresh entity | Requests a refresh through `homeassistant.update_entity`. Does not set state and has no ioBroker `ack` semantics. |
+| Text | Text value block | Editable log message, retained in projects and YAML. |
+
+**Start without waiting** generates `script.turn_on` and lets the automation continue. **Stop** generates `script.turn_off`. **Call and wait** generates a direct `script.name` call: the automation waits for completion and errors can propagate to the caller. Script parameters still use the generic HA action.
+
+YAML import recognizes exact supported System action shapes. Additional data such as a custom logger or script variables remains in the generic HA action. Refresh behavior depends on integration support. Log messages are written when HA executes the automation; Info and Debug may be filtered by HA logging configuration.
+
+References: [HA system log](https://www.home-assistant.io/integrations/system_log/), [HA scripts](https://www.home-assistant.io/integrations/script/), [HA Core actions](https://www.home-assistant.io/integrations/homeassistant/).
 
 ## Gear icon: extend branches
 
@@ -65,7 +86,7 @@ The category menu is dark and the block flyout is light. Values are green, trigg
 - **Left output / right value input:** Conditions produce Boolean values for the automation condition slot, if/else-if and AND/OR/NOT. Numbers produce Number values for thresholds and delays. Type checks reject incompatible connections.
 - **Previous / next:** Triggers and actions each form their own statement chains and cannot be mixed.
 - **Statement cavity:** Then/else slots accept action sequences. Conditions belong in value inputs.
-- **Shadow numbers:** Thresholds and delays have editable defaults that can be replaced by number blocks. Removing a replacement restores the default. Sensor values, text and entity value blocks are not implemented yet.
+- **Shadow numbers:** Thresholds and delays have editable defaults that can be replaced by number blocks. Removing a replacement restores the default. Log messages use String text blocks with editable shadows. Sensor and entity value blocks are not implemented yet.
 - **Context menu:** Right-click or long-press for Blockly actions such as duplicate, comment, collapse, disable, delete and help. Help links to the documentation. Comments remain in JSON projects; YAML comment export is not implemented.
 - **Disable:** Disabled actions, triggers and conditions are omitted from export. Required content remains required: missing triggers, empty if conditions or empty action branches prevent export.
 - **Trash:** Delete blocks, open the trash and drag deleted blocks back to the workspace. History lasts for the current session. Undo/redo is also available.
@@ -79,11 +100,11 @@ We already use the original **Blockly 13.3.0** library rather than building a se
 
 The [original workspace and block-parts documentation](https://docs.blockly.com/guides/get-started/workspace-anatomy/) and [Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/) guide familiar interaction patterns. Library updates require connection, import/export and browser checks.
 
-| Task | Status in 0.1.5 / next step |
+| Task | Status in 0.1.6 / next step |
 | --- | --- |
 | Connection geometry and type checks | Boolean conditions and Number values use side connections; triggers/actions use separate statement chains |
 | Extensible blocks | If and AND/OR/NOT implemented; visual action-data fields planned |
-| Default values | Shadow numbers implemented; text and entity value blocks pending |
+| Default values | Shadow numbers and text blocks implemented; entity value blocks pending |
 | Sensor values and attributes | Pending; include appropriate HA template output and type conversion |
 | Editor controls | Context menu, help, disable, trash recovery, zoom and insertion markers available |
 | Comments | Retained in projects; YAML comments and dedicated comment block pending |
@@ -96,7 +117,7 @@ This page tracks implemented features and outstanding tasks together and is main
 
 ## System: status and next steps
 
-Control, toggle, delay and generic actions are available. Dedicated comment, debug, entity picker, state/attribute value, existence/availability, helper and script-control blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
+Control, toggle, delay, generic actions, logging, script control and entity refresh are available. Dedicated comment, entity picker, state/attribute value, existence/availability and helper blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
 
 The full [comparison and implementation status](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.en.md) is updated with every feature. Catalog and declarative plugins are planned.
 

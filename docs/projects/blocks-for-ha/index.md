@@ -4,7 +4,7 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.5 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
+**Version 0.1.6 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
 
 Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -25,7 +25,7 @@ Editor: `http://127.0.0.1:4180/`. YAML kann angezeigt, kopiert, als Datei gespei
 
 ## ioBroker / unsere Blocks: vorhandene Funktionen
 
-14 Blocktypen einschließlich des Automationsrahmens:
+18 Blocktypen einschließlich des Automationsrahmens:
 
 | ioBroker-Konzept | UGSo Blocks für HA | HA-Ausgabe |
 | --- | --- | --- |
@@ -43,8 +43,29 @@ Editor: `http://127.0.0.1:4180/`. YAML kann angezeigt, kopiert, als Datei gespei
 | Pause | Warte Sekunden | `delay` |
 | Falls/sonst falls/sonst | Erweiterbarer Falls-Block | `if` oder `choose` |
 | Zahl | Zahlen-Wertblock, auch als Shadow-Standardwert | Konstante für Grenze oder Wartezeit |
+| Text | Text-Wertblock mit Shadow | Logmeldung |
+| Debug-Ausgabe | Log mit Schweregrad | `system_log.write` |
+| Script steuern | Starten/stoppen/aufrufen und warten | `script.turn_on`, `script.turn_off` oder direkter Aufruf |
+| Aktualisiere State, andere Bedeutung | Entität aktualisieren | `homeassistant.update_entity` |
 
 Name, Beschreibung, ID und Ausführungsmodi `single`, `restart`, `queued`, `parallel` sind vorhanden. Für queued/parallel lässt sich die maximale Anzahl festlegen. Drei Beispiele zeigen Licht, Batterie und Abendlicht.
+
+## System-Blocks ab Version 0.1.6
+
+Die Kategorie **System** enthält drei neue Aktionsblocks. Unter **Werte** steht zusätzlich ein grüner **Text**-Block bereit. Er besitzt einen String-Output und passt in den Meldungseingang des Log-Blocks; Zahlen und Bedingungen passen dort nicht hinein.
+
+| ioBroker | Unser Block | Bedienung und HA-Verhalten |
+| --- | --- | --- |
+| Debug-Ausgabe | Log | Meldung als Text-Shadow oder eigener Textblock; Dropdown Info, Warnung, Fehler, Debug oder Kritisch. Erzeugt `system_log.write`. |
+| Script steuern | HA-Script | Script-ID eingeben; starten ohne Warten, stoppen oder aufrufen und warten wählen. |
+| Aktualisiere State | Entität aktualisieren | Fordert mit `homeassistant.update_entity` eine Aktualisierung an. Setzt keinen Zustand und besitzt keine ioBroker-`ack`-Semantik. |
+| Text | Text-Wertblock | Editierbarer Text für Logmeldungen, im Projekt und YAML erhalten. |
+
+**Starten ohne Warten** erzeugt `script.turn_on`; die Automation läuft anschließend weiter. **Stoppen** erzeugt `script.turn_off`. **Aufrufen und warten** erzeugt einen direkten `script.name`-Aufruf: Die Automation wartet auf dessen Abschluss; Fehler können an den Aufrufer weitergegeben werden. Script-Parameter werden weiterhin über die generische HA-Aktion eingegeben.
+
+Beim YAML-Import werden genau passende Systemaktionen als eigene Blocks erkannt. Zusätzliche Daten, etwa ein eigener Logger oder Script-Variablen, bleiben in der generischen HA-Aktion erhalten. Die Aktualisierung wird von der jeweiligen Integration unterstützt oder begrenzt. Logmeldungen entstehen erst bei Ausführung in HA; Info und Debug können durch die HA-Logkonfiguration ausgefiltert werden.
+
+Referenzen: [HA-Systemprotokoll](https://www.home-assistant.io/integrations/system_log/), [HA-Scripts](https://www.home-assistant.io/integrations/script/), [HA-Core-Aktionen](https://www.home-assistant.io/integrations/homeassistant/).
 
 ## Zahnrad: Falls erweitern
 
@@ -65,7 +86,7 @@ Das Kategorienmenü ist dunkel, die aufgeklappte Blockauswahl hell. Werte sind g
 - **Output links / Werteingang rechts:** Bedingungen liefern Boolean-Werte. Sie passen in „Nur wenn“, „Falls“, „sonst falls“ und UND/ODER/NICHT. Zahlen liefern Number-Werte und passen in Grenzen oder Wartezeiten. Die Typprüfung verhindert unpassende Verbindungen.
 - **Previous oben / Next unten:** Auslöser und Aktionen bilden jeweils eigene Ketten; sie können nicht miteinander vertauscht werden.
 - **Statement-Innenraum:** „mache“ und „sonst“ nehmen Aktionsfolgen auf. Bedingungen gehören an die seitlichen Werteingänge.
-- **Shadow-Zahlen:** Grenzen und Wartezeiten haben editierbare Standardwerte. Ein herausgezogener Zahlenblock kann sie ersetzen. Wird dieser entfernt, erscheint der Standardwert wieder. Sensorwerte, Text- und Entitäts-Wertblocks sind noch nicht umgesetzt.
+- **Shadow-Zahlen:** Grenzen und Wartezeiten haben editierbare Standardwerte. Ein herausgezogener Zahlenblock kann sie ersetzen. Wird dieser entfernt, erscheint der Standardwert wieder. Logmeldungen nutzen String-Textblocks mit editierbarem Shadow. Sensor- und Entitäts-Wertblocks sind noch nicht umgesetzt.
 - **Kontextmenü:** Rechtsklick beziehungsweise langes Drücken bietet die Blockly-Funktionen, etwa Duplizieren, Kommentar, Einklappen, Deaktivieren, Löschen und Hilfe. Hilfe führt hierher. Kommentare bleiben im JSON-Projekt; sie werden noch nicht als YAML-Kommentare exportiert.
 - **Deaktivieren:** Deaktivierte Aktionen und Auslöser werden beim Export übersprungen. Deaktivierte Bedingungen werden ausgelassen. Pflichtinhalte bleiben erforderlich; fehlende Auslöser, leere Falls-Bedingungen oder leere Aktionszweige verhindern den Export.
 - **Papierkorb:** Blocks löschen, den Papierkorb öffnen und gelöschte Blocks zurück auf die Arbeitsfläche ziehen. Der Verlauf ist auf die aktuelle Sitzung begrenzt. Rückgängig/Wiederholen steht zusätzlich bereit.
@@ -79,11 +100,11 @@ Wir verwenden bereits **Blockly 13.3.0**, die originale Bibliothek, statt eine e
 
 Die [Originaldokumentation zur Arbeitsfläche und zu Blockteilen](https://docs.blockly.com/guides/get-started/workspace-anatomy/) und die [Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/) dienen als Referenz für vertraute Bedienmuster. Bibliotheksupdates werden bewusst mit Verbindungs-, Import-/Export- und Browserprüfungen übernommen.
 
-| Aufgabe | Stand in 0.1.5 / nächster Schritt |
+| Aufgabe | Stand in 0.1.6 / nächster Schritt |
 | --- | --- |
 | Anschlussgeometrie und Typprüfung | Boolean-Bedingungen und Number-Werte seitlich; Auslöser/Aktionen als getrennte Statement-Ketten umgesetzt |
 | Erweiterbare Blocks | Falls und UND/ODER/NICHT umgesetzt; Aktionsdaten später als visuelle Felder |
-| Standardwerte | Shadow-Zahlen umgesetzt; Text- und Entitäts-Wertblocks offen |
+| Standardwerte | Shadow-Zahlen und Textblocks umgesetzt; Entitäts-Wertblocks offen |
 | Sensorwerte und Attribute | Offen; passende HA-Template-Ausgabe und Typumwandlung mitplanen |
 | Editorbedienung | Kontextmenü, Hilfe, Deaktivieren, Papierkorb-Wiederherstellung, Zoom und Einfügemarkierung vorhanden |
 | Kommentare | Im Projekt erhalten; YAML-Kommentare und eigener Kommentarblock offen |
@@ -96,7 +117,7 @@ Diese Seite hält umgesetzte Funktionen und offene Aufgaben zusammen fest und wi
 
 ## System: Stand und nächste Schritte
 
-Steuern, Umschalten, Wartezeit und generische Aktionen sind vorhanden. Eigene Blocks für Kommentar, Debug, Entitätsauswahl, Zustand/Attribute als Werte, Existenz/Verfügbarkeit, Helfer und Script-Steuerung folgen schrittweise. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.
+Steuern, Umschalten, Wartezeit, generische Aktionen, Log-Ausgabe, Script-Steuerung und Entität aktualisieren sind vorhanden. Eigene Blocks für Kommentar, Entitätsauswahl, Zustand/Attribute als Werte, Existenz/Verfügbarkeit und Helfer folgen schrittweise. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.
 
 Die vollständige [Gegenüberstellung mit Umsetzungsstatus](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.de.md) wird bei jeder Erweiterung aktualisiert. Katalog und deklarative Plugins sind geplant.
 
