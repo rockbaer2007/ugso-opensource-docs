@@ -4,7 +4,9 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.3 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+**Version 0.1.4 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+
+Blocks use classic Blockly puzzle shapes (Geras) with compact text. Triggers, conditions and actions use statement connections; type checks prevent incompatible connections. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
 ## Install from the HA app store
 
