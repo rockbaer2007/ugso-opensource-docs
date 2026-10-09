@@ -4,9 +4,9 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.4 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
+**Version 0.1.5 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
 
-Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Auslöser, Bedingungen und Aktionen besitzen passende Statement-Andockpunkte; ihre Typprüfung verhindert falsche Verbindungen. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
+Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
 
 ## Im HA-App-Store installieren
 
@@ -25,7 +25,7 @@ Editor: `http://127.0.0.1:4180/`. YAML kann angezeigt, kopiert, als Datei gespei
 
 ## ioBroker / unsere Blocks: vorhandene Funktionen
 
-13 Blocktypen einschließlich des Automationsrahmens:
+14 Blocktypen einschließlich des Automationsrahmens:
 
 | ioBroker-Konzept | UGSo Blocks für HA | HA-Ausgabe |
 | --- | --- | --- |
@@ -42,6 +42,7 @@ Editor: `http://127.0.0.1:4180/`. YAML kann angezeigt, kopiert, als Datei gespei
 | Adapteraktion | Generische HA-Aktion | `action`, optional Entitätsziel und JSON-Daten |
 | Pause | Warte Sekunden | `delay` |
 | Falls/sonst falls/sonst | Erweiterbarer Falls-Block | `if` oder `choose` |
+| Zahl | Zahlen-Wertblock, auch als Shadow-Standardwert | Konstante für Grenze oder Wartezeit |
 
 Name, Beschreibung, ID und Ausführungsmodi `single`, `restart`, `queued`, `parallel` sind vorhanden. Für queued/parallel lässt sich die maximale Anzahl festlegen. Drei Beispiele zeigen Licht, Batterie und Abendlicht.
 
@@ -55,7 +56,22 @@ Wie beim vertrauten ioBroker-Editor öffnet das Zahnrad eine kleine Arbeitsfläc
 - Entfernte Zweige lösen ihre verbundenen Blocks ab. Diese müssen wieder verbunden oder entfernt werden, bevor exportiert werden kann.
 - YAML-Import und JSON-Projekte erhalten die Verzweigungen. Alte Projekte behalten ihre bisherigen Sonst-Aktionen.
 
-UND/ODER/NICHT unterstützt bereits mehrere angehängte Bedingungen. Auslöser und Aktionen lassen sich ebenfalls als Ketten erweitern. Ein zusätzlicher Mutator ist dort nicht nötig. Zahlen-, Sonnen- und Schaltblocks bieten ihre Auswahl direkt im Dropdown. Die generische HA-Aktion verwendet zunächst JSON-Daten; ein visueller Datenfeld-Mutator ist noch geplant.
+UND/ODER/NICHT besitzt ein eigenes Zahnrad für 1–100 seitliche Bedingungseingänge. Auslöser und Aktionen lassen sich als Ketten erweitern. Sonnen-, Vergleichs- und Schaltvarianten werden direkt im Dropdown gewählt. Die generische HA-Aktion verwendet zunächst JSON-Daten; ein visueller Datenfeld-Mutator ist noch geplant.
+
+## Andocken und Bedienung
+
+Das Kategorienmenü ist dunkel, die aufgeklappte Blockauswahl hell. Werte sind grün, Auslöser orange, Bedingungen violett und Aktionen blau. Die Kategorienmarkierungen zeigen die jeweilige Blockgruppe; die ausgewählte Kategorie ist zusätzlich hervorgehoben.
+
+- **Output links / Werteingang rechts:** Bedingungen liefern Boolean-Werte. Sie passen in „Nur wenn“, „Falls“, „sonst falls“ und UND/ODER/NICHT. Zahlen liefern Number-Werte und passen in Grenzen oder Wartezeiten. Die Typprüfung verhindert unpassende Verbindungen.
+- **Previous oben / Next unten:** Auslöser und Aktionen bilden jeweils eigene Ketten; sie können nicht miteinander vertauscht werden.
+- **Statement-Innenraum:** „mache“ und „sonst“ nehmen Aktionsfolgen auf. Bedingungen gehören an die seitlichen Werteingänge.
+- **Shadow-Zahlen:** Grenzen und Wartezeiten haben editierbare Standardwerte. Ein herausgezogener Zahlenblock kann sie ersetzen. Wird dieser entfernt, erscheint der Standardwert wieder. Sensorwerte, Text- und Entitäts-Wertblocks sind noch nicht umgesetzt.
+- **Kontextmenü:** Rechtsklick beziehungsweise langes Drücken bietet die Blockly-Funktionen, etwa Duplizieren, Kommentar, Einklappen, Deaktivieren, Löschen und Hilfe. Hilfe führt hierher. Kommentare bleiben im JSON-Projekt; sie werden noch nicht als YAML-Kommentare exportiert.
+- **Deaktivieren:** Deaktivierte Aktionen und Auslöser werden beim Export übersprungen. Deaktivierte Bedingungen werden ausgelassen. Pflichtinhalte bleiben erforderlich; fehlende Auslöser, leere Falls-Bedingungen oder leere Aktionszweige verhindern den Export.
+- **Papierkorb:** Blocks löschen, den Papierkorb öffnen und gelöschte Blocks zurück auf die Arbeitsfläche ziehen. Der Verlauf ist auf die aktuelle Sitzung begrenzt. Rückgängig/Wiederholen steht zusätzlich bereit.
+- **Einfügemarkierung:** Blockly zeigt beim Ziehen die mögliche Andockposition an.
+
+Projektdateien aus Version 0.1.4 und früher werden automatisch auf die neue Anschlussstruktur umgestellt. Alte Bedingungsketten werden als UND-Gruppen mit derselben YAML-Bedeutung erhalten. Die bestehenden YAML-Dateien bleiben importierbar.
 
 ## System: Stand und nächste Schritte
 
