@@ -4,7 +4,7 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 ---
 # Block catalog
 
-Version **0.1.8**: 27 block types. Images show actual UGSo editor blocks. Dropdown variants do not count as additional types.
+Version **0.1.9**: 33 block types. Images show actual UGSo editor blocks. Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are currently entered manually.
 
@@ -40,7 +40,7 @@ Minus or disabling else detaches connected blocks instead of deleting them. Reco
 
 | Block | Editor image | Function |
 | --- | --- | --- |
-| **Set variable**<br><code>ugso_variable_set</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_set.png" alt="Set variable" style="max-width:280px;max-height:180px"> | Action block: assign a number, text or template to the selected variable. Generates native HA `variables`. Place before subsequent reads. |
+| **Set variable**<br><code>ugso_variable_set</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_set.png" alt="Set variable" style="max-width:280px;max-height:180px"> | Action block: assign a number, text/template, Boolean or null to the selected variable. Generates native HA `variables`. Place before subsequent reads. |
 | **Read variable**<br><code>ugso_variable_get</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_get.png" alt="Read variable" style="max-width:280px;max-height:180px"> | Side String connector; generates <code v-pre>{{ name }}</code> for log messages and further assignments. Dropdown supports rename/delete. |
 | **Template value**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template.png" alt="Template value" style="max-width:280px;max-height:180px"> | Multiline Jinja template with String connector for log messages or variable assignments. HA evaluates the template during execution; Blocks does not execute it. |
 | **Template condition**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template_condition.png" alt="Template condition" style="max-width:280px;max-height:180px"> | Boolean connector for Only if, If and logical groups. Generates `condition: template` with `value_template`. HA must evaluate it as true; not a trigger. |
@@ -51,7 +51,24 @@ Choose **Variablen → Variable erstellen …** in the German editor to create, 
 
 Example: **Set leistung to Template** containing <code v-pre>{{ states('sensor.leistung') | float(0) }}</code>, followed by **Log Info message Read leistung**. HA reads the sensor during assignment and uses that value in the next step. A template condition can check <code v-pre>{{ states('sensor.leistung') | float(0) > 100 }}</code>.
 
-Renaming updates variable blocks. References in free-form Jinja text must be changed manually. Action variables become available after assignment, not in preceding automation conditions. Blocks validates structure and YAML, not Jinja syntax or HA entities. Import supports one text/template or number per variable action. Multiple entries, lists/objects and automation-level variables are not yet supported and are rejected during import. [Native HA variables and scope](https://www.home-assistant.io/docs/scripts/#define-variables).
+Renaming updates variable blocks. References in free-form Jinja text must be changed manually. Action variables become available after assignment, not in preceding automation conditions. Blocks validates structure and YAML, not Jinja syntax or HA entities. Import supports one text/template, number, Boolean or null per variable action. Multiple entries, lists/objects and automation-level variables are not yet supported and are rejected during import. [Native HA variables and scope](https://www.home-assistant.io/docs/scripts/#define-variables).
+
+## Logic blocks added in 0.1.9
+
+| Block | Editor image | Function |
+| --- | --- | --- |
+| **Compare**<br><code>ugso_compare</code> | <img src="/assets/blocks-for-ha/blocks/ugso_compare.png" alt="Compare" style="max-width:280px;max-height:180px"> | Compares two values using =, ≠, &lt;, ≤, &gt; or ≥. Accepts numbers, text, variables and single template expressions. Boolean result exported as an HA template condition or variable value. |
+| **Compact AND / OR**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/ugso_binary_logic.png" alt="Compact AND OR" style="max-width:280px;max-height:180px"> | Two Boolean inputs. Generates native HA `and`/`or` groups as conditions and parenthesized Jinja as variable values. Expandable groups remain available. |
+| **NOT**<br><code>ugso_not</code> | <img src="/assets/blocks-for-ha/blocks/ugso_not.png" alt="NOT" style="max-width:280px;max-height:180px"> | Negates a Boolean condition. Native HA `not` group as condition, Jinja `not` as variable value. |
+| **true / false**<br><code>ugso_boolean</code> | <img src="/assets/blocks-for-ha/blocks/ugso_boolean.png" alt="true false" style="max-width:280px;max-height:180px"> | Boolean constant with dropdown for conditions and variables. Assignments retain native YAML Boolean types. |
+| **null**<br><code>ugso_null</code> | <img src="/assets/blocks-for-ha/blocks/ugso_null.png" alt="null" style="max-width:280px;max-height:180px"> | No value: YAML `null` in assignments, Jinja `none` in expressions. Different from `0` and `false`; not a Boolean condition. |
+| **If → value → otherwise value**<br><code>ugso_ternary</code> | <img src="/assets/blocks-for-ha/blocks/ugso_ternary.png" alt="Conditional value" style="max-width:280px;max-height:180px"> | Selects one of two values using a Boolean condition. For variables, log messages and comparisons; generates a Jinja expression, not an action sequence. |
+
+**Example:** Assign `leistung` first. Then use **Set meldung to If**, with **Compare Variable leistung &gt; Number 100** as test, text **High power** as true value and **Low power** as false value. Follow with **Log Info message Variable meldung**. HA evaluates the choice during execution.
+
+Comparisons do not automatically convert types: number `20` differs from text `"20"`. Convert sensor states with `float` or `int` where appropriate. Expression inputs accept a single Jinja output, for example <code v-pre>{{ states('sensor.leistung') | float(0) }}</code>. Multiline statements and mixed text remain supported in standalone template value blocks. Dynamic choices are not supported as fixed numeric thresholds or delays.
+
+JSON projects preserve block shapes and connections. YAML preserves native meaning: reopening maps comparisons and value choices to template blocks and AND/OR/NOT to condition groups. [HA logical conditions](https://www.home-assistant.io/docs/scripts/conditions/#logical-conditions).
 
 ## Original plugins and integration
 

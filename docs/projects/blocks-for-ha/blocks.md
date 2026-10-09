@@ -4,7 +4,7 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 ---
 # Liste der Blocks
 
-Stand **0.1.8**: 27 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen.
+Stand **0.1.9**: 33 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen.
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden derzeit manuell eingegeben.
 
@@ -40,7 +40,7 @@ Bei Minus oder ausgeschaltetem Sonst werden angeschlossene Blocks abgelöst, nic
 
 | Block | Bild im Editor | Funktionsbeschreibung |
 | --- | --- | --- |
-| **Variable setzen**<br><code>ugso_variable_set</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_set.png" alt="Variable setzen" style="max-width:280px;max-height:180px"> | Aktionsblock: ausgewählte Variable auf Zahl, Text oder Template setzen. Erzeugt eine native HA-`variables`-Aktion. Vor späteren Lesezugriffen platzieren. |
+| **Variable setzen**<br><code>ugso_variable_set</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_set.png" alt="Variable setzen" style="max-width:280px;max-height:180px"> | Aktionsblock: ausgewählte Variable auf Zahl, Text/Template, Boolean oder null setzen. Erzeugt eine native HA-`variables`-Aktion. Vor späteren Lesezugriffen platzieren. |
 | **Variable lesen**<br><code>ugso_variable_get</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_get.png" alt="Variable lesen" style="max-width:280px;max-height:180px"> | Seitlicher String-Anschluss; erzeugt <code v-pre>{{ name }}</code> für Log-Meldungen und weitere Variablenzuweisungen. Dropdown bietet Umbenennen/Löschen. |
 | **Template-Wert**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template.png" alt="Template-Wert" style="max-width:280px;max-height:180px"> | Mehrzeiliges Jinja-Template mit String-Anschluss für Log-Meldungen oder Variablenzuweisungen. HA wertet die Vorlage bei Ausführung aus; Blocks führt sie nicht aus. |
 | **Template-Bedingung**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template_condition.png" alt="Template-Bedingung" style="max-width:280px;max-height:180px"> | Boolean-Anschluss für Nur wenn, Falls und logische Gruppen. Erzeugt `condition: template` mit `value_template`. Ergebnis muss in HA wahr sein; kein eigener Auslöser. |
@@ -51,7 +51,24 @@ Im Menü **Variablen → Variable erstellen …** beispielsweise `leistung` anle
 
 Beispiel: **Setze leistung auf Template** mit <code v-pre>{{ states('sensor.leistung') | float(0) }}</code>, danach **Log Info Meldung Variable leistung**. HA liest den Sensor beim Setzen und verwendet den Wert im folgenden Schritt. Eine Template-Bedingung kann beispielsweise <code v-pre>{{ states('sensor.leistung') | float(0) > 100 }}</code> prüfen.
 
-Umbenennen aktualisiert die verbundenen Variablen-Blocks. Namen in frei eingegebenen Jinja-Texten müssen manuell geändert werden. Aktionsvariablen stehen erst nach ihrer Zuweisung bereit, nicht in vorgelagerten Automationsbedingungen. Blocks prüft Struktur und YAML, keine Jinja-Syntax oder vorhandenen HA-Entitäten. Der Import unterstützt pro Variablen-Aktion einen Text/Template oder eine Zahl. Mehrere Einträge, Listen/Objekte sowie Variablen auf Automationsebene sind noch nicht unterstützt und werden beim Import abgelehnt. [Native HA-Variablen und Gültigkeit](https://www.home-assistant.io/docs/scripts/#define-variables).
+Umbenennen aktualisiert die verbundenen Variablen-Blocks. Namen in frei eingegebenen Jinja-Texten müssen manuell geändert werden. Aktionsvariablen stehen erst nach ihrer Zuweisung bereit, nicht in vorgelagerten Automationsbedingungen. Blocks prüft Struktur und YAML, keine Jinja-Syntax oder vorhandenen HA-Entitäten. Der Import unterstützt pro Variablen-Aktion einen Text/Template, eine Zahl, Boolean oder null. Mehrere Einträge, Listen/Objekte sowie Variablen auf Automationsebene sind noch nicht unterstützt und werden beim Import abgelehnt. [Native HA-Variablen und Gültigkeit](https://www.home-assistant.io/docs/scripts/#define-variables).
+
+## Logik-Blocks seit 0.1.9
+
+| Block | Bild im Editor | Funktionsbeschreibung |
+| --- | --- | --- |
+| **Vergleich**<br><code>ugso_compare</code> | <img src="/assets/blocks-for-ha/blocks/ugso_compare.png" alt="Vergleich" style="max-width:280px;max-height:180px"> | Vergleicht zwei Werte mit =, ≠, &lt;, ≤, &gt; oder ≥. Zahlen, Texte, Variablen und einzelne Template-Ausdrücke anschließen. Liefert Boolean; Ausgabe als HA-Template-Bedingung oder Variablenwert. |
+| **UND / ODER kompakt**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/ugso_binary_logic.png" alt="UND ODER kompakt" style="max-width:280px;max-height:180px"> | Zwei Boolean-Eingänge. Als Bedingung native HA-`and`/`or`-Gruppe; als Variablenwert geklammerter Jinja-Ausdruck. Die erweiterbare Gruppe bleibt für mehr Eingänge verfügbar. |
+| **NICHT**<br><code>ugso_not</code> | <img src="/assets/blocks-for-ha/blocks/ugso_not.png" alt="NICHT" style="max-width:280px;max-height:180px"> | Negiert eine Boolean-Bedingung. Als Bedingung native HA-`not`-Gruppe, als Variablenwert Jinja-`not`. |
+| **wahr / falsch**<br><code>ugso_boolean</code> | <img src="/assets/blocks-for-ha/blocks/ugso_boolean.png" alt="wahr falsch" style="max-width:280px;max-height:180px"> | Boolean-Konstante mit Dropdown. Für Bedingungen und Variablen; die Zuweisung erzeugt echte YAML-Boolean-Werte. |
+| **null**<br><code>ugso_null</code> | <img src="/assets/blocks-for-ha/blocks/ugso_null.png" alt="null" style="max-width:280px;max-height:180px"> | Kein Wert. Variablen erhalten YAML `null`, Ausdrücke Jinja `none`. Weder `0` noch `falsch`; kein Boolean-Bedingungsblock. |
+| **Wenn → dann Wert → sonst Wert**<br><code>ugso_ternary</code> | <img src="/assets/blocks-for-ha/blocks/ugso_ternary.png" alt="Bedingte Wertauswahl" style="max-width:280px;max-height:180px"> | Wählt anhand einer Boolean-Bedingung einen von zwei Werten. Für Variablen, Log-Meldungen und Vergleiche; erzeugt einen Jinja-Ausdruck und enthält keine Aktionskette. |
+
+**Beispiel:** In der Aktionskette zuerst `leistung` setzen. Dann **Setze meldung auf Wenn**, mit **Vergleich Variable leistung &gt; Zahl 100** als Test, Text **Hohe Leistung** als Dann-Wert und Text **Geringe Leistung** als Sonst-Wert. Danach **Log Info Meldung Variable meldung** verwenden. HA entscheidet bei Ausführung.
+
+Vergleiche konvertieren Typen nicht automatisch: Zahl `20` unterscheidet sich von Text `"20"`. Sensorzustände gegebenenfalls im Template mit `float` oder `int` umwandeln. In einem Ausdruckseingang ist nur eine einzelne Jinja-Ausgabe zulässig, beispielsweise <code v-pre>{{ states('sensor.leistung') | float(0) }}</code>. Mehrzeilige Anweisungen und gemischter Text bleiben im eigenständigen Template-Wertblock nutzbar. Dynamische Wertauswahlen sind nicht als feste Zahlen-Grenzen oder Wartezeiten vorgesehen.
+
+JSON-Projekte bewahren die Blockformen und Anschlüsse. YAML speichert die native Bedeutung: Beim Wiederöffnen erscheinen Vergleiche und Wertauswahlen als Template-Blocks, UND/ODER/NICHT als Bedingungsgruppen. [HA-Logikbedingungen](https://www.home-assistant.io/docs/scripts/conditions/#logical-conditions).
 
 ## Originalplugins und Einbindung
 
