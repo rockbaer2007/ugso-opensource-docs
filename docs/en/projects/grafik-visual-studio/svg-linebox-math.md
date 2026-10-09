@@ -4,7 +4,49 @@ title: SVG LineBox Math
 
 # SVG LineBox Math
 
-## Example: battery charging and discharging
+## Practical example: Combining two positive power readings
+
+An inverter may expose charging and discharging power as **two separate, positive readings**. A single power display needs a signed result that distinguishes the direction of flow. **SVG LineBox Math** calculates their difference locally in the display browser. No additional Home Assistant template sensors or automations are needed: Home Assistant supplies the readings and the display computer performs the calculation. The existing connection and value transfer still generate load.
+
+### Editor: Read and calculate values
+
+![Editor with colored Number widgets, Value connections and a Math box beside the battery display](/images/grafik-visual-studio/battery-math-editor.png)
+
+*Colored helper widgets make the processing easier to follow. Red and blue distinguish the two positive inputs; the gray Math box displays the result. Port letters and handles are editor aids.*
+
+| Widget | Purpose in this example |
+| --- | --- |
+| Two **Number widgets**, red and blue | Read one charging or discharging sensor each and forward its value through the enabled data flow output point. Colors distinguish sources; they do not assign a sign. |
+| **Value connections** | Connect the Number outputs to Math inputs **O** and **M**, then forward output **A** to the power display. These connections are invisible in runtime. |
+| **SVG LineBox Math**, gray | Subtract the two positive inputs and provide the signed power result at **A**. |
+| **Industrial battery display** | Show the calculated power. Temperature and charge level remain separate readings and are not part of this subtraction. |
+| **SVG lines** | Show energy flow between the solar modules and battery. They can be animated; their direction must match their start/end assignment and sign convention. |
+| **Number displays beside the solar lines** | Show each solar power reading; these are separate from the two battery calculation inputs. |
+| **Industrial solar modules** | Represent the two PV sources graphically. |
+
+The editor screenshot connects **O = 1249** and **M = 0**, with **1249** shown in the Math box. The corresponding difference is **`O - M`**. Set **O** and **M** to Input and **A** to Output. Enable calculation 1, select **Custom formula**, enter `O - M`, and set **Outputs** to `A`. Leave **Pass result internally to input** disabled. Enable both Number output points and connect those exact ports.
+
+Sensor assignments define the sign convention. If **O supplies charging power** and **M supplies discharging power**:
+
+| Charging O | Discharging M | Result O − M | Meaning |
+| --- | --- | --- | --- |
+| 1249 W | 0 W | +1249 W | Charging |
+| 0 W | 420 W | −420 W | Discharging |
+| 0 W | 0 W | 0 W | No net flow |
+
+Swapping the sensor assignments reverses the meaning of the sign. Use `M - O` for the opposite convention. When both inputs are positive, the difference represents **net flow**, not both individual readings. An actual **zero** is valid; missing or invalid readings are not automatically replaced with zero.
+
+### Runtime: Display without helper widgets
+
+![Runtime with solar lines and battery display, while colored helper widgets and the Math box are hidden](/images/grafik-visual-studio/battery-math-runtime.png)
+
+*Runtime presents the finished visualization. Battery power is blue, temperature magenta and charge level green. The direction arrow helps identify energy flow. The screenshots were captured at different times, so their readings need not match.*
+
+From **Studio 0.1.287**, check **In Runtime verstecken** (Hide in runtime) at the top of the **WIDGET** tab for both helper Number widgets and the Math box, then save the project. They remain visible and editable in the editor but disappear from the display. **Calculations and value forwarding remain active.** The visible power displays, battery elements and SVG lines remain enabled.
+
+Each open display calculates locally in its own browser. Local value forwarding creates no additional HA entity and does not automatically write the result back to Home Assistant. Closing the display or its browser stops that local calculation.
+
+## Alternative assignment: Battery → inverter
 
 A **Number** widget can supply an entity or preview value to Math. Enable its **output point** under **Data flow**, then connect that exact port to an active Math input. Use Value connections or, from **0.1.285**, SVG lines with explicit **z-index −100 or lower** for invisible runtime wiring. Hiding the line does not stop value forwarding.
 

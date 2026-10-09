@@ -4,7 +4,49 @@ title: SVG LineBox Math
 
 # SVG LineBox Math
 
-## Beispiel: Batterie laden und entladen
+## Praxisbeispiel: Zwei positive Leistungswerte zusammenführen
+
+Ein Wechselrichter kann Lade- und Entladeleistung als **zwei getrennte, jeweils positive Werte** bereitstellen. Für eine gemeinsame Leistungsanzeige muss daraus ein Wert entstehen, dessen Vorzeichen die Flussrichtung unterscheidet. **SVG LineBox Math** berechnet diese Differenz direkt im Browser des Displays. Zusätzliche Home-Assistant-Template-Sensoren oder Automationen sind dafür nicht erforderlich: Home Assistant liefert die Sensorwerte, der Display-Computer übernimmt die Rechnung. Die bestehende Verbindung und Werteübertragung verursachen weiterhin Last.
+
+### Editor: Werte erfassen und berechnen
+
+![Editor mit farbigen Number-Widgets, Wert-Verbindungen und MathBox neben der Batterieanzeige](/images/grafik-visual-studio/battery-math-editor.png)
+
+*Die farbigen Hilfswidgets machen die Verarbeitung im Editor nachvollziehbar. Rot und Blau unterscheiden die beiden positiven Eingangswerte; die graue MathBox zeigt das berechnete Ergebnis. Die Anschlussbuchstaben und Griffe sind Editor-Hilfen.*
+
+| Widget | Aufgabe im Beispiel |
+| --- | --- |
+| Zwei **Number-Widgets**, rot und blau | Je einen Sensorwert für Laden beziehungsweise Entladen einlesen und über den aktivierten Datenfluss-Ausgangspunkt weitergeben. Die Farben dienen der Unterscheidung, sie bestimmen kein Vorzeichen. |
+| **Wert-Verbindungen** | Die Number-Ausgänge mit den Math-Eingängen **O** und **M** verbinden und das berechnete Ergebnis vom Ausgang **A** an die Leistungsanzeige weitergeben. Diese Leitungen sind in der Runtime unsichtbar. |
+| **SVG LineBox Math**, grau | Beide positiven Eingänge voneinander abziehen und die resultierende Leistung samt Vorzeichen über **A** ausgeben. |
+| **Industrial-Batterieanzeige** | Die berechnete Leistung darstellen. Temperatur und Ladezustand bleiben separate Messwerte; sie sind nicht Bestandteil dieser Differenzrechnung. |
+| **SVG-Lines** | Den dargestellten Energiefluss zwischen Solarmodulen und Batterie sichtbar machen. Sie können animiert werden; ihre Richtung muss zur jeweiligen Start-/Zielzuordnung und Vorzeichenkonvention passen. |
+| **Number-Anzeigen an den Solarleitungen** | Die jeweilige Solarleistung anzeigen; diese Werte gehören nicht zu den beiden Eingängen der Batterie-Differenzrechnung. |
+| **Industrial-Solarmodule** | Die beiden PV-Quellen grafisch darstellen. |
+
+Im Editorbild sind **O = 1249** und **M = 0** angeschlossen; die MathBox zeigt **1249**. Für diese Zuordnung lautet die Differenz **`O - M`**. Richte **O** und **M** als Eingänge und **A** als Ausgang ein. Aktiviere Rechnung 1, wähle **Eigene Formel**, trage `O - M` und unter **Ausgänge** `A` ein. **Ergebnis intern an Eingang übergeben** bleibt ausgeschaltet. Aktiviere bei beiden Number-Widgets den Ausgangspunkt und verbinde jeweils genau diesen Punkt.
+
+Die Bedeutung des Vorzeichens legst du durch die Sensorzuordnung fest. Wenn **O die Ladeleistung** und **M die Entladeleistung** liefert, gilt:
+
+| Ladeleistung O | Entladeleistung M | Ergebnis O − M | Bedeutung |
+| --- | --- | --- | --- |
+| 1249 W | 0 W | +1249 W | Laden |
+| 0 W | 420 W | −420 W | Entladen |
+| 0 W | 0 W | 0 W | Kein Nettofluss |
+
+Sind die Sensoren umgekehrt angeschlossen, kehrt sich die Bedeutung des Vorzeichens um. Für die entgegengesetzte Konvention verwende `M - O`. Bei gleichzeitig positiven Werten zeigt die Differenz den **Nettofluss**, nicht beide Einzelleistungen. Eine echte **0** ist ein gültiger Eingangswert; ein fehlender oder ungültiger Sensorwert wird nicht automatisch durch null ersetzt.
+
+### Runtime: Anzeige ohne Hilfswidgets
+
+![Runtime mit Solarleitungen und Batterieanzeige; die farbigen Hilfswidgets und MathBox sind verborgen](/images/grafik-visual-studio/battery-math-runtime.png)
+
+*Die Runtime zeigt die fertige Visualisierung. Die Batterie-Leistung erscheint blau, die Temperatur magenta und der Ladezustand grün. Der Richtungspfeil unterstützt die Zuordnung des Energieflusses. Die Aufnahmen stammen aus unterschiedlichen Momenten; die Messwerte müssen daher nicht übereinstimmen.*
+
+Ab **Studio 0.1.287** setzt du bei den beiden Hilfs-Number-Widgets und der MathBox oben im Reiter **WIDGET** die Checkbox **In Runtime verstecken** und speicherst das Projekt. Sie bleiben im Editor sichtbar und bearbeitbar, erscheinen aber nicht auf dem Display. **Ihre Werteübergaben und Rechnungen laufen weiter.** Die sichtbaren Leistungsanzeigen, Batterieelemente und SVG-Lines bleiben eingeblendet.
+
+Die Berechnung läuft pro geöffnetem Display im jeweiligen Browser. Sie erzeugt durch die lokale Wertübergabe keine zusätzliche HA-Entität und schreibt das Ergebnis nicht automatisch nach Home Assistant zurück. Wenn das Display beziehungsweise sein Browser geschlossen ist, läuft dort auch diese Berechnung nicht weiter.
+
+## Alternative Zuordnung: Batterie → Wechselrichter
 
 Ein **Number**-Widget kann einen Entitäts- oder Vorschauwert an Math liefern. Aktiviere seinen **Ausgangspunkt** unter **Datenfluss** und verbinde genau diesen Punkt mit einem aktiven Math-Eingang. Für unsichtbare Leitungen nutze Wert-Verbindungen oder ab **0.1.285** SVG-Lines mit explizitem **Z-Index −100 oder kleiner**. Die Darstellung verschwindet in der Runtime, die Werte bleiben aktiv.
 
