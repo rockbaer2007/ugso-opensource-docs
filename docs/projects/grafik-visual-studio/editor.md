@@ -4,6 +4,10 @@ title: Editor und Tastenkombinationen
 
 # Editor und Tastenkombinationen
 
+## Widgets nur in der Runtime ausblenden
+
+Ab **Studio 0.1.286** blendet ein expliziter **Z-Index −100 oder kleiner** jeden Widgettyp in der Runtime aus. Im Editor bleibt das Widget sichtbar und bearbeitbar. Berechnungen und Datenfluss bleiben aktiv; so lassen sich Number-Widgets, MathBoxen und ihre Leitungen als unsichtbare Verarbeitungskette nutzen. Bei −99 oder höher greift diese spezielle Ausblendregel nicht. Ein verborgenes Bedienelement lässt sich in der Runtime nicht anklicken.
+
 ## Seiten-Tabs
 
 Ab **Studio 0.1.256** erscheinen die Projektseiten als kompakte **Tabs direkt über der Arbeitsfläche**, zwischen Widget-Palette und Eigenschaften. Ein Klick wechselt die Seite; die aktive Seite ist farbig markiert. Viele Seiten scrollen horizontal, lange Namen werden gekürzt und stehen vollständig im Tooltip. In der Runtime ausgeblendete Seiten bleiben im Editor erreichbar und haben einen gestrichelten Tab-Rand.

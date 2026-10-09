@@ -5,7 +5,9 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
-Current documented version: **Studio 0.1.285**. [SVG lines](./svg-line) and Value connections support vertical starting positions and vertical-first orthogonal routes, less sensitive point dragging, and invisible runtime lines at z-index −100. [Rotary outputs](./industrial) directly control line animation. The [Number-to-Math example](./svg-linebox-math) explains battery net flow using `O - P`; the [gallery](./bildergalerie) shows the editor setup before the animated demo.
+From **Studio 0.1.286**, **z-index −100 or lower applies to all widgets**: invisible in runtime and editable in the editor. Calculations and data flow remain active, including hidden Number widgets and Math boxes.
+
+Other changes through **Studio 0.1.285**: [SVG lines](./svg-line) and Value connections support vertical starting positions, vertical-first orthogonal routes and less sensitive point dragging. [Rotary outputs](./industrial) directly control line animation. The [Number-to-Math example](./svg-linebox-math) explains battery net flow using `O - P`; the [gallery](./bildergalerie) shows the editor setup before the animated demo.
 
 New in Studio **0.1.280**: [UGSo Solar 0.1.3](./solar) offers seven bottom line ports on the standalone inverter. Also includes four PV inputs on the stack head, battery ports at the enclosure seam, separate battery reading colors and a mirrored solar panel with base.
 

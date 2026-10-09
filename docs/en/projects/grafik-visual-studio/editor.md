@@ -4,6 +4,10 @@ title: Editor and keyboard shortcuts
 
 # Editor and keyboard shortcuts
 
+## Hide widgets only in runtime
+
+From **Studio 0.1.286**, explicit **z-index −100 or lower** hides every widget type in runtime. The widget stays visible and editable in the editor. Calculations and data flow remain active, allowing Number widgets, Math boxes and connecting lines to form an invisible processing chain. This special hiding rule does not apply at −99 or higher. Hidden controls cannot be clicked in runtime.
+
 ## Page tabs
 
 Starting with **Studio 0.1.256**, project pages appear as compact **tabs above the canvas**, between the widget palette and properties. Click a tab to switch pages; the active page is highlighted. Long tab lists scroll horizontally, and truncated names remain available in tooltips. Pages hidden from runtime are still accessible in the editor with a dashed tab border.
