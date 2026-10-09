@@ -10,6 +10,6 @@ import StudioGallery from '../../../.vitepress/theme/StudioGallery.vue'
 
 # Image gallery
 
-An overview of the editor, followed by the collected toolbar, settings and widget palette screenshots. Click an image to open it at full resolution. Screenshots show the development version at the time they were taken; the interface shown is in German.
+An overview of the editor, followed by the collected toolbar, settings and widget palette screenshots, plus an animated rotary-control demo. Click an image to open it at full resolution. Recordings show the development version at the time they were taken; the interface shown is in German.
 
 <StudioGallery locale="en" />

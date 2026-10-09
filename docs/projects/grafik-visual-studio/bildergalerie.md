@@ -10,6 +10,6 @@ import StudioGallery from '../../.vitepress/theme/StudioGallery.vue'
 
 # Bildergalerie
 
-Die Editor-Oberfläche im Überblick und darunter die bisher gesammelten Ansichten von Werkzeugleiste, Einstellungen und Widget-Paletten. Klicke auf ein Bild, um es in voller Auflösung zu öffnen. Die Bilder zeigen den Entwicklungsstand zum Zeitpunkt der Aufnahme.
+Die Editor-Oberfläche im Überblick und darunter die bisher gesammelten Ansichten von Werkzeugleiste, Einstellungen und Widget-Paletten sowie eine animierte Poti-Demo. Klicke auf ein Bild, um es in voller Auflösung zu öffnen. Die Aufnahmen zeigen den Entwicklungsstand zum Zeitpunkt der Aufnahme.
 
 <StudioGallery locale="de" />

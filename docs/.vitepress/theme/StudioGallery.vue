@@ -19,7 +19,7 @@ const imageUrl = (file: string) => withBase(`/images/grafik-visual-studio/galler
     </figure>
     <div class="studio-gallery-grid">
       <figure v-for="image in images.slice(1)" :key="image.file"
-        :class="{ 'studio-gallery-wide': image.file.includes('toolbar') }">
+        :class="{ 'studio-gallery-wide': image.wide || image.file.includes('toolbar') }">
         <a :href="imageUrl(image.file)" :aria-label="image.title[props.locale]">
           <img :src="imageUrl(image.file)" :alt="image.title[props.locale]" loading="lazy" decoding="async">
         </a>

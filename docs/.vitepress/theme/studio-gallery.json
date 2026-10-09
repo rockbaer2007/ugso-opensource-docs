@@ -165,6 +165,18 @@
     }
   },
   {
+    "file": "17-poti-line-animation.webp",
+    "wide": true,
+    "title": {
+      "de": "Poti, Linienanimation und Wertanzeige",
+      "en": "Rotary control, line animation and value display"
+    },
+    "caption": {
+      "de": "Animierte Runtime-Demo: Das Poti liefert einen Zahlenwert für die SVG-Line und die verbundenen Wertanzeigen. Die laufenden Striche veranschaulichen den Fluss. Die Aufnahme verwendet eine reduzierte Bildrate; einzelne Zwischenstände der Anzeigen können dadurch versetzt erscheinen.",
+      "en": "Animated runtime demo: the rotary control supplies a numeric value to the SVG line and connected value displays. Moving dashes visualize the flow. The recording uses a reduced frame rate, so intermediate display updates may appear out of sync."
+    }
+  },
+  {
     "file": "16-widgets-interactive.png",
     "title": {
       "de": "Widgets – HA Grafik Interaktiv",
