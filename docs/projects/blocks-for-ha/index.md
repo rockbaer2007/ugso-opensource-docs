@@ -4,9 +4,19 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.6 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
+**Version 0.1.7 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
 
 Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
+
+## Liste der Blocks und Originalplugins
+
+Die [Liste aller 23 Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsbeschreibung. Die Tabelle der Originalplugins verlinkt direkt auf die jeweiligen Quellen.
+
+Neu in 0.1.7: **Suche am Menüende**, mehrzeilige Texte, Prozent-Slider, Farbe und Lichtaktion, Datum heute und abhängige Helfer-Dropdowns. Plus/Minus ergänzt oder entfernt den letzten Eingang beziehungsweise sonst-falls-Zweig; **S** schaltet Sonst um. Entfernte Eingänge lösen ihre Blocks ab, löschen sie nicht. Das Zahnrad bleibt zum Umordnen.
+
+Der Datumsvergleich einschließlich Jahr wird in HA mit `now().strftime('%Y-%m-%d')` ausgewertet; er verwendet die HA-Zeitzone und ist eine Bedingung, kein Auslöser. Nur diese unterstützte Template-Form wird importiert. Die Lichtaktion erzeugt RGB-Farbe und Helligkeit in Prozent. Timer nutzen ihre konfigurierte Dauer; zusätzliche Parameter bleiben in der generischen HA-Aktion. Die tatsächlichen Gerätefähigkeiten müssen in HA geprüft werden.
+
+Das eigene UGSo-Icon verbindet Haus und Puzzle-Baustein und wird in Oberfläche, Browser und HA-App verwendet. Sechs Originalplugins werden lokal ausgeliefert. Farbmischung, Zufallsfarben, automatisch wachsende Anschlüsse, Textverknüpfung, Listen und Live-Entitätsauswahl bleiben offen.
 
 ## Im HA-App-Store installieren
 
@@ -25,7 +35,7 @@ Editor: `http://127.0.0.1:4180/`. YAML kann angezeigt, kopiert, als Datei gespei
 
 ## ioBroker / unsere Blocks: vorhandene Funktionen
 
-18 Blocktypen einschließlich des Automationsrahmens:
+23 Blocktypen einschließlich des Automationsrahmens:
 
 | ioBroker-Konzept | UGSo Blocks für HA | HA-Ausgabe |
 | --- | --- | --- |
@@ -44,6 +54,11 @@ Editor: `http://127.0.0.1:4180/`. YAML kann angezeigt, kopiert, als Datei gespei
 | Falls/sonst falls/sonst | Erweiterbarer Falls-Block | `if` oder `choose` |
 | Zahl | Zahlen-Wertblock, auch als Shadow-Standardwert | Konstante für Grenze oder Wartezeit |
 | Text | Text-Wertblock mit Shadow | Logmeldung |
+| Prozent | Slider-Wert 0–100 | Number-Konstante |
+| Farbe | Farb-Wertblock | Colour-Wert |
+| Lichtfarbe | Licht mit Farbe/Helligkeit | `rgb_color`, `brightness_pct` |
+| Datum | Datum heute ist/ab/bis | HA-Template-Bedingung |
+| Helfer steuern | Abhängige Aktionsauswahl | Schalter/Zähler/Timer |
 | Debug-Ausgabe | Log mit Schweregrad | `system_log.write` |
 | Script steuern | Starten/stoppen/aufrufen und warten | `script.turn_on`, `script.turn_off` oder direkter Aufruf |
 | Aktualisiere State, andere Bedeutung | Entität aktualisieren | `homeassistant.update_entity` |
@@ -100,7 +115,7 @@ Wir verwenden bereits **Blockly 13.3.0**, die originale Bibliothek, statt eine e
 
 Die [Originaldokumentation zur Arbeitsfläche und zu Blockteilen](https://docs.blockly.com/guides/get-started/workspace-anatomy/) und die [Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/) dienen als Referenz für vertraute Bedienmuster. Bibliotheksupdates werden bewusst mit Verbindungs-, Import-/Export- und Browserprüfungen übernommen.
 
-| Aufgabe | Stand in 0.1.6 / nächster Schritt |
+| Aufgabe | Stand in 0.1.7 / nächster Schritt |
 | --- | --- |
 | Anschlussgeometrie und Typprüfung | Boolean-Bedingungen und Number-Werte seitlich; Auslöser/Aktionen als getrennte Statement-Ketten umgesetzt |
 | Erweiterbare Blocks | Falls und UND/ODER/NICHT umgesetzt; Aktionsdaten später als visuelle Felder |
@@ -117,7 +132,7 @@ Diese Seite hält umgesetzte Funktionen und offene Aufgaben zusammen fest und wi
 
 ## System: Stand und nächste Schritte
 
-Steuern, Umschalten, Wartezeit, generische Aktionen, Log-Ausgabe, Script-Steuerung und Entität aktualisieren sind vorhanden. Eigene Blocks für Kommentar, Entitätsauswahl, Zustand/Attribute als Werte, Existenz/Verfügbarkeit und Helfer folgen schrittweise. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.
+Steuern, Umschalten, Wartezeit, generische Aktionen, Log-Ausgabe, Script-Steuerung, Entität aktualisieren und Helfer steuern sind vorhanden. Eigene Blocks für Kommentar, Entitätsauswahl, Zustand/Attribute als Werte, Existenz/Verfügbarkeit und Zahlen-/Texthelfer folgen schrittweise. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.
 
 Die vollständige [Gegenüberstellung mit Umsetzungsstatus](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.de.md) wird bei jeder Erweiterung aktualisiert. Katalog und deklarative Plugins sind geplant.
 

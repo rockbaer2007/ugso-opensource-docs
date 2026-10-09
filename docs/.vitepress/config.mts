@@ -125,6 +125,7 @@ const sidebarDe = {
   '/projects/blocks-for-ha/': [{ text: 'UGSo HA Apps', items: [
     { text: 'Übersicht', link: '/projects-mqtt/' },
     { text: 'UGSo Blocks for HA', link: '/projects/blocks-for-ha/' },
+    { text: 'Liste der Blocks', link: '/projects/blocks-for-ha/blocks' },
     { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' }
   ] }],
   '/projects/grafik-visual-studio/': [{
@@ -540,6 +541,7 @@ const sidebarEn = {
   '/en/projects/blocks-for-ha/': [{ text: 'UGSo HA Apps', items: [
     { text: 'Overview', link: '/en/projects-mqtt/' },
     { text: 'UGSo Blocks for HA', link: '/en/projects/blocks-for-ha/' },
+    { text: 'Block catalog', link: '/en/projects/blocks-for-ha/blocks' },
     { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' }
   ] }],
   '/en/projects/grafik-visual-studio/': [{

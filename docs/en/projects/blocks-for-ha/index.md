@@ -4,9 +4,19 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.6 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+**Version 0.1.7 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
+
+## Block catalog and original plugins
+
+The [catalog of all 23 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
+
+New in 0.1.7: **search at the bottom of the menu**, multiline text, percentage slider, colour/light action, today’s date and dependent helper dropdowns. Plus/minus adds or removes the last input or else-if branch; **S** toggles else. Removing inputs detaches blocks without deleting them. The gear remains for reordering.
+
+The date comparison includes the year and uses HA’s `now().strftime('%Y-%m-%d')`, evaluated in HA’s time zone. It is a condition, not a trigger; only this supported template shape can be imported. The light action generates RGB colour and percentage brightness. Timers use their configured duration; additional parameters stay in the generic HA action. Actual device capabilities must be checked in HA.
+
+Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Six original plugins are bundled locally. Colour blending, random colours, automatic growing connections, text joining, lists and live entity selection remain pending.
 
 ## Install from the HA app store
 
@@ -25,7 +35,7 @@ Editor: `http://127.0.0.1:4180/`. Preview, copy, download and reopen supported Y
 
 ## ioBroker / our Blocks: existing features
 
-18 block types including the automation root:
+23 block types including the automation root:
 
 | ioBroker concept | UGSo Blocks for HA | HA output |
 | --- | --- | --- |
@@ -44,6 +54,11 @@ Editor: `http://127.0.0.1:4180/`. Preview, copy, download and reopen supported Y
 | If/else if/else | Extensible if block | `if` or `choose` |
 | Number | Number value block, also used as a shadow default | Constant threshold or delay |
 | Text | Text value block with shadow | Log message |
+| Percentage | Slider value 0–100 | Number constant |
+| Colour | Colour value | Colour constant |
+| Light colour | Light with colour/brightness | `rgb_color`, `brightness_pct` |
+| Date | Today equals/on-or-after/on-or-before | HA template condition |
+| Control helper | Dependent action dropdown | Switch/counter/timer |
 | Debug output | Log with severity | `system_log.write` |
 | Control script | Start/stop/call and wait | `script.turn_on`, `script.turn_off` or direct call |
 | Update state, different semantics | Refresh entity | `homeassistant.update_entity` |
@@ -100,7 +115,7 @@ We already use the original **Blockly 13.3.0** library rather than building a se
 
 The [original workspace and block-parts documentation](https://docs.blockly.com/guides/get-started/workspace-anatomy/) and [Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/) guide familiar interaction patterns. Library updates require connection, import/export and browser checks.
 
-| Task | Status in 0.1.6 / next step |
+| Task | Status in 0.1.7 / next step |
 | --- | --- |
 | Connection geometry and type checks | Boolean conditions and Number values use side connections; triggers/actions use separate statement chains |
 | Extensible blocks | If and AND/OR/NOT implemented; visual action-data fields planned |
@@ -117,7 +132,7 @@ This page tracks implemented features and outstanding tasks together and is main
 
 ## System: status and next steps
 
-Control, toggle, delay, generic actions, logging, script control and entity refresh are available. Dedicated comment, entity picker, state/attribute value, existence/availability and helper blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
+Control, toggle, delay, generic actions, logging, script control, entity refresh and helper control are available. Dedicated comment, entity picker, state/attribute value, existence/availability and number/text helper blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
 
 The full [comparison and implementation status](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.en.md) is updated with every feature. Catalog and declarative plugins are planned.
 
