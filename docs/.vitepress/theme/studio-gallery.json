@@ -165,6 +165,18 @@
     }
   },
   {
+    "file": "17-poti-line-editor.png",
+    "wide": true,
+    "title": {
+      "de": "Poti und Wert-Verbindungen im Editor",
+      "en": "Rotary control and value connections in the editor"
+    },
+    "caption": {
+      "de": "Aufbau der folgenden Runtime-Demo: Das Poti ist mit der SVG-Line verbunden. Ein Wert-Koppelpunkt versorgt die zusätzliche Anzeige über eine Wert-Verbindung. Im Editor sind die Anschlüsse und der Verlauf der Verbindungen sichtbar.",
+      "en": "Editor setup for the following runtime demo: the rotary control connects to the SVG line. A value output point supplies the additional display through a value connection. The editor shows the ports and connection routes."
+    }
+  },
+  {
     "file": "17-poti-line-animation.webp",
     "wide": true,
     "title": {
