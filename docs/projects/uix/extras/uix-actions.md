@@ -100,10 +100,6 @@ tap_action:
 
 ## `popover` — verankertes Home-Assistant-Popover anzeigen {#popover}
 
-::: info
-Verfügbar ab UIX 8.4.0-beta.5.
-:::
-
 Zeigt ein adaptives Home-Assistant-Popover neben dem Element an, das die Aktion `ll-custom` ausgelöst hat. Es enthält den standardmäßigen barrierefreien Schließen-Button von Home Assistant und entfernt sich nach dem Schließen.
 
 | Konfiguration | Einstellung | Standard | Beschreibung |

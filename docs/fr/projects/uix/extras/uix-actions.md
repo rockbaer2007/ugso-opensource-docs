@@ -160,10 +160,6 @@ tap_action:
 
 ## `popover` — afficher un popover Home Assistant ancré {#popover}
 
-::: info
-Disponible à partir de UIX 8.4.0-beta.5.
-:::
-
 Affiche un popover adaptatif Home Assistant à côté de l'élément qui a déclenché l'action `ll-custom`. Il inclut le bouton de fermeture accessible standard de Home Assistant et se supprime après sa fermeture.
 
 | Configuration | Paramètre | Valeur par défaut | Description |

@@ -31,6 +31,10 @@ UIX besteht aus drei großen Bereichen:
 
 ## Neu in UIX 8.4.0
 
+::: info Vorschau separat abgeglichen
+Die Änderungen auf `dev` bis **9.0.0-beta.0** wurden am 09.10.2026 in DE/FR übernommen. Die [geschichtete Forge-Konfiguration](./forge/forge#layered-configuration) und das neue Verhalten beim Update vor einem Home-Assistant-Neustart sind Vorschaufunktionen. Die stabile Basis bleibt 8.4.0. Details im [Übersetzungsstatus](./translation-status).
+:::
+
 - [Form Spark](./forge/sparks/form) und [Popover-Aktion](./extras/uix-actions#popover) für Formulare und eingeblendete Inhalte.
 - [Frame-Panels stylen](./extras/style-frame-panels) mit interner Frame-Laufzeit; diese experimentelle Option bleibt standardmäßig deaktiviert.
 - [Theme-Schriften mit `uix-fonts`](./using/themes) und [Entitätsbilder in Kartenübersichten](./using/images), einschließlich der Anpassung an Home Assistant 2026.10.

@@ -305,10 +305,6 @@ Aussi `<any variable>-yaml`.
 
 ## Polices {#fonts}
 
-::: info
-Le chargement via `uix-fonts` est disponible à partir de UIX 8.4.0-beta.2.
-:::
-
 `uix-fonts` charge des polices web lorsqu'un thème global est sélectionné. UIX crée des objets [`FontFace`](https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace) et les enregistre dans `document.fonts`. Les composants Home Assistant peuvent les utiliser, y compris dans les shadow roots. Cette option charge uniquement les polices ; les variables de thème ou les styles UIX déterminent leur utilisation.
 
 Les valeurs des thèmes Home Assistant doivent être des chaînes. Placez la définition dans un bloc `|` :

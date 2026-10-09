@@ -2,15 +2,15 @@
 title: UIX Forge
 description: Découvrez UIX Forge, un élément personnalisé puissant qui combine modèles, sparks et styles UIX.
 ---
-UIX Forge permet de créer des éléments Home Assistant avec des modèles pour toute leur configuration, ainsi que des extensions avancées grâce aux [Sparks UIX Forge](./sparks/).
+UIX Forge crée des éléments Home Assistant avec des modèles dans la configuration qu'il contrôle et des extensions grâce aux [Sparks UIX Forge](./sparks/). À partir de **UIX 9.0.0-beta.0**, la [configuration en couches](./forge#layered-configuration) permet de conserver les modèles natifs de l'élément et d'appliquer une surcouche Forge séparée, sans éditeur visuel.
 
-Les éléments Home Assistant pris en charge sont les cartes, badges, lignes, sections et éléments image. Les moules intercontextes permettent d'intégrer un type d'élément dans un autre contexte parent, par exemple une carte utilisée comme ligne dans une carte Entités ; consultez les [moules intercontextes](./forge.md#cross-context-molds).
+Forge prend en charge les moules `card`, `badge`, `row`, `picture-element`, `section`, `footer` et `card-feature`. Les moules intercontextes permettent d'intégrer un type d'élément dans un autre contexte parent, par exemple une carte utilisée comme ligne dans une carte Entités ; consultez les [moules intercontextes](./forge.md#cross-context-molds). La configuration en couches est disponible pour tous les moules.
 
 Consultez [Forge](./forge.md) pour la référence complète de la configuration.
 
 ## Fonderies
 
-Une **fonderie** est un modèle UIX Forge enregistré sur le serveur. Elle permet de définir une seule fois des configurations `forge`, `element` et `uix` réutilisables sur plusieurs cartes. Référencez une fonderie avec la clé `foundry:` et ne remplacez localement que ce qui est nécessaire.
+Une **fonderie** est une configuration UIX Forge réutilisable. Elle permet de définir une seule fois des fragments `forge`, `element` et `uix` pour plusieurs cartes. À partir de UIX 9.0.0-beta.0, elle peut aussi fournir `element_base` : une base résolue active la configuration en couches. `element_disabled_paths` reste local à l'instance Forge qui utilise la fonderie.
 
 Consultez [Fonderies](./foundries.md) pour un guide complet sur la fusion, les fonderies imbriquées et leur gestion dans les options de l'intégration.
 

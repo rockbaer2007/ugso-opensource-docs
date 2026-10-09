@@ -6,7 +6,7 @@ description: "Configuration de UIX Forge : macros, billets, imbrication des mod�
 
 UIX Forge (`custom:uix-forge`) est un élément Lovelace personnalisé qui associe une configuration basée sur des modèles à des comportements supplémentaires appelés **sparks**. Utilisez-le pour :
 
-- **Créer** n'importe quel élément Home Assistant standard à partir de modèles, afin que toute sa configuration réagisse aux états des entités, à l'utilisateur, au navigateur et aux autres variables de modèle.
+- **Créer** des éléments Home Assistant à partir de modèles, afin que la configuration contrôlée par Forge réagisse aux états des entités, à l'utilisateur, au navigateur et aux autres variables de modèle.
 - **Ajouter des sparks** — des comportements autonomes qui enrichissent l'élément créé.
 - **Appliquer des styles UIX** à l'élément créé, comme à tout autre élément. Les variables des sparks sont également accessibles dans la variable de modèle `uixForge`.
 
@@ -50,7 +50,7 @@ Utilisez les [fonderies globales](./foundries.md#global-foundries) de UIX Forge 
 :::
 ## Configuration de l'élément
 
-Toute configuration Lovelace valide est acceptée. Chaque valeur de type chaîne dans `element` est traitée comme un modèle et dispose des mêmes variables que les [modèles UIX](../using/templates.md) : `config`, `user`, `browser`, `hash` et `panel`.
+Toute configuration Lovelace valide est acceptée. Sans couches, `element` contient la configuration complète de l'élément et Forge traite ses chaînes comme des modèles. En [configuration en couches](#layered-configuration), `element` contient la surcouche contrôlée par Forge ; `element_base` contient la base appartenant à l'élément.
 
 La clé `uix` de `element` est transmise telle quelle à [UIX Styling](../using/index.md), qui traite les modèles. Utilisez-la pour styliser l'élément créé comme n'importe quel autre élément :
 
@@ -148,6 +148,104 @@ entities:
 Sans autre contenu ajouté par un spark — comme élément frère ou enfant de la `div` — le contenu de la carte vide prend une hauteur de `var(--row-height, 56px)`. Si un élément frère existe mais reste vide, sa hauteur est `0px`. Dans tous les cas, vous pouvez définir explicitement cette hauteur avec la variable CSS `--uix-forge-blank-card-height`, comme dans l'exemple `card_as_row`.
 
 :::
+<a id="layered-configuration"></a>
+## Configuration en couches
+
+::: info Aperçu : disponible à partir de UIX 9.0.0-beta.0
+Cette fonction appartient à la branche `dev` actuelle, pas à la version stable 8.4.0.
+:::
+
+La configuration en couches encapsule un élément possédant ses propres modèles. Elle fonctionne avec tous les moules Forge et ne nécessite pas d'éditeur visuel. Toute configuration résolue contenant `element_base` utilise ce mode.
+
+`template_nesting` reste utile dans un `element` sans couches ou dans la surcouche Forge lorsqu'un modèle Forge doit produire de la syntaxe Jinja pour l'élément. Les modèles natifs de `element_base` n'en ont pas besoin.
+
+`element_base` contient la base complète appartenant à l'élément. Forge transmet ses chaînes de modèle sans les détecter, les évaluer, les réécrire ni demander de caractères d'échappement. `element` contient la surcouche Forge, dont les valeurs actives suivent les règles habituelles des modèles Forge.
+
+```yaml
+type: custom:uix-forge
+entity: light.kitchen
+forge:
+  mold: card
+element_base:
+  type: markdown
+  # Ce modèle appartient à la carte Markdown.
+  content: |
+    ## Temp: {{ states('sensor.kitchen_sensor') }}
+element:
+  title: "{{ config.entity }}"
+```
+
+Les mappings de `element` sont fusionnés récursivement sur `element_base` ; les valeurs simples et les tableaux remplacent la valeur à leur chemin. `null` est une valeur ordinaire, pas une instruction de suppression. Un tableau vide efface explicitement le tableau de base. `type` appartient à `element_base` et ne peut pas être remplacé. Un modèle Forge renvoyant un objet ou un tableau remplace entièrement sa cible au lieu de fusionner avec la base. Émettez du JSON, par exemple avec `| tojson`, pour les résultats structurels.
+
+| Clé de premier niveau | Rôle en couches |
+| --- | --- |
+| `element_base` | Base obligatoire appartenant à l'élément, avec `type`. Ses modèles sont transmis sans modification. |
+| `element` | Surcouche Forge facultative sous forme de mapping. Ses chaînes actives sont traitées comme des modèles, puis composées sur la base. Elle ne peut pas définir `type`. |
+| `element_disabled_paths` | Liste facultative, uniquement locale, de chemins de surcouche inactifs. Elle conserve les sources pour l'édition et est interdite dans les fonderies. |
+
+::: tip Modèles de visibilité natifs
+Placez la configuration native `visibility` d'une carte dans `element_base`. Ses conditions de modèle sont transmises à Home Assistant sans modification et ne nécessitent ni imbrication ni marqueur ignore. Cela reste distinct de `forge.hidden`.
+:::
+
+```yaml
+element_base:
+  type: entities
+  entities:
+    - light.kitchen
+    - light.dining_room
+element:
+  # Le résultat remplace le tableau complet.
+  entities: "{{ integration_entities('light') | list | tojson }}"
+```
+
+### Remplacements désactivés
+
+Toutes les valeurs de `element` sont actives par défaut. `element_disabled_paths` conserve une valeur source sans l'appliquer. Chaque chemin est une liste de clés de mapping, ce qui évite toute ambiguïté pour les clés contenant `.`. Désactiver un parent désactive tout son sous-arbre ; les sélections enfants restent enregistrées et redeviennent applicables si le chemin parent est retiré de la liste.
+
+```yaml
+element:
+  name: "{{ states('sensor.room_label') }}"
+  tap_action:
+    action: more-info
+    confirmation:
+      text: Confirm
+element_disabled_paths:
+  - [name]
+  - [tap_action, action]
+```
+
+Les sources sont conservées, mais l'élément utilise le `name` et le `tap_action.action` de la base. Le mapping actif `tap_action.confirmation` continue à se composer avec la base. Chaque chemin désactivé doit désigner une valeur de la surcouche résolue. Les entrées de tableau sont des unités de remplacement et ne peuvent pas être désactivées individuellement.
+
+### Fonderies et contexte des modèles
+
+Les fonderies peuvent fournir des fragments `element_base` et `element`, jamais `element_disabled_paths`. Les fonderies globales et nommées suivent le même ordre :
+
+```text
+global → global_<mold> → fonderie héritée/nommée → configuration locale
+```
+
+Les fragments `element_base` des fonderies et de la configuration locale forment la base résolue. Leurs fragments `element` forment séparément la surcouche Forge résolue. Les `element_disabled_paths` locaux sont appliqués ensuite : une carte peut ainsi désactiver une valeur provenant d'une fonderie sans modifier celle-ci.
+
+```yaml
+uix_foundries:
+  kitchen_tile:
+    forge:
+      mold: card
+    element_base:
+      type: markdown
+      content: |
+        ## {{ states('sensor.room_label') }}
+    element:
+      title: "{{ config.entity }}"
+
+# Carte du tableau de bord : les deux couches viennent de la fonderie.
+type: custom:uix-forge
+foundry: kitchen_tile
+entity: light.kitchen
+```
+
+Dans les modèles Forge, `config.element_base` contient la base résolue et `config.element` la source de la surcouche résolue avant évaluation. Forge les compose en configuration finale de l'élément. Les mappings `uix` des deux couches sont fusionnés durant cette composition ; UIX Styling reçoit ce résultat et traite ses modèles selon ses règles habituelles.
+
 <a id="template-variables-and-macros"></a>
 ## Variables de modèle et macros
 
@@ -159,8 +257,9 @@ Les modèles s'exécutent dans des contextes différents selon qu'ils servent à
 <!-- markdownlint-disable MD046 -->
 | Contexte | Variables de modèle |
 | - | - |
-| Modèles dans `forge` et `element`, sauf dans les styles `uix` | **Configuration Forge** : `config.forge`<br/> **Configuration de l'élément** : `config.element`<br/>`config.entity` est disponible si l'entité est définie dans la configuration globale `uix-forge`. |
-| Modèles dans les styles `uix` de Forge | **Configuration Forge** : `config.forge`<br/>**Configuration de l'élément** : `config.element`<br/>`config.entity` est disponible si l'entité est définie dans la configuration globale `uix-forge`. |
+| Modèles dans `forge` et `element` sans couches, sauf les styles `uix` | `config.forge`, `config.element` ; `config.entity` si l'entité est définie dans la configuration globale `uix-forge`. |
+| Modèles dans `element` en couches, sauf les styles `uix` | `config.forge` ; base résolue : `config.element_base` ; source de la surcouche : `config.element` ; `config.entity` si définie. |
+| Modèles dans les styles `uix` de Forge | `config.forge` ; `config.element` contient la configuration complète résolue, ou la surcouche résolue en mode couches ; dans ce mode, `config.element_base` est aussi disponible ; `config.entity` si définie. |
 | Modèles dans les styles `uix` de l'élément. Le modèle s'exécute dans le contexte UIX Styling habituel de l'élément créé. | **Configuration Forge** : indisponible<br/>**Configuration de l'élément** : `config`<br/>`config.entity` est disponible si l'entité est définie dans la configuration globale `uix-forge`. |
 
 ::: tip
@@ -353,7 +452,7 @@ Voir [Billets dans les fonderies](./foundries.md#billets-in-foundries) pour appr
 
 `{# uix-forge.ignore #}`
 
-Si vous devez transmettre un modèle entier tel quel à l'élément créé, vous pouvez demander à UIX Forge de ne pas le traiter. Utilisez cette option lorsque l'élément accepte des modèles dans sa configuration et que l'imbrication n'est pas nécessaire.
+Sans couches, ou dans la surcouche `element`, vous pouvez demander à UIX Forge d'ignorer un modèle entier pour le transmettre tel quel à l'élément créé. Dans `element_base`, les modèles natifs sont déjà transmis sans modification et n'ont besoin ni d'imbrication ni de marqueur ignore.
 
 UIX Forge ignore les modèles qui contiennent `{# uix-forge.ignore #}`.
 
@@ -587,7 +686,7 @@ card_param: cards
 :::
 ## UIX Styling
 
-Ajoutez une clé `uix` sous `forge` pour appliquer [UIX Styling](../using/index.md) à l'enveloppe de l'élément Forge. Les variables `config.forge`, `config.element` et `uixForge` sont disponibles dans les modèles de style : `config.forge` et `config.element` contiennent les configurations résolues, et `uixForge` contient les variables de modèle des [sparks](./sparks/tooltip.md). `config.entity` est également disponible si l'entité est définie dans la configuration globale `uix-forge`.
+Ajoutez une clé `uix` sous `forge` pour appliquer [UIX Styling](../using/index.md) à l'enveloppe Forge. Les variables `config.forge`, `config.element` et `uixForge` sont disponibles. En mode couches, `config.element` est la surcouche Forge résolue et `config.element_base` contient la base résolue ; sinon, `config.element` contient la configuration complète résolue. `uixForge` contient les variables des [sparks](./sparks/tooltip.md). `config.entity` est aussi disponible si elle est définie dans la configuration globale `uix-forge`.
 
 ```yaml
 type: custom:uix-forge

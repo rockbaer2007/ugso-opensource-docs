@@ -6,6 +6,8 @@ description: Wiederverwendbare UIX-Forge-Konfigurationen mit Global Foundries, Y
 
 Foundries sind wiederverwendbare Forge-Vorlagen. Eine Foundry beschreibt ein Muster aus `forge`, `element`, `uix`, Makros und Billets. Einzelne Forge-Instanzen können diese Vorlage verwenden und gezielt Werte überschreiben.
 
+Ab **UIX 9.0.0-beta.0** kann eine Foundry zusätzlich `element_base` bereitstellen. Diese elementeigene Basis und das Forge-Overlay `element` werden unabhängig aufgelöst. Enthält die aufgelöste Konfiguration `element_base`, aktiviert sie die [geschichtete Konfiguration](./forge#layered-configuration). Diese Vorschau gehört nicht zur stabilen Version 8.4.0.
+
 ## Global Foundries
 
 Global Foundries stehen dashboardweit zur Verfügung. Sie eignen sich für wiederkehrende Kacheln, Standardstile, Lock-Muster, Badge-Layouts oder Kombinationen aus Sparks.
@@ -92,6 +94,8 @@ forge:
 
 ## Struktur einer Foundry-Konfiguration
 
+Eine Foundry kann `foundry`, `forge`, `element` und ab UIX 9.0.0-beta.0 `element_base` enthalten. `element_disabled_paths` ist ausschließlich lokal an der nutzenden Forge-Instanz erlaubt, auch nicht in `global` oder `global_<mold>`.
+
 ```yaml
 foundries:
   my_foundry:
@@ -157,6 +161,8 @@ pin: "!secret my_pin"
 ## Merge-Verhalten
 
 Foundry-Konfigurationen werden mit der Instanzkonfiguration zusammengeführt. Dadurch kannst du Defaults in der Foundry definieren und nur die abweichenden Werte im Dashboard setzen.
+
+Die Reihenfolge lautet `global` → `global_<mold>` → geerbte Foundries → benannte Foundry → lokale Konfiguration. Mappings wie `forge`, `element` und `element_base` werden rekursiv zusammengeführt; Arrays und Skalare werden ersetzt. `element_base` und `element` bleiben während der Foundry-Auflösung getrennt und werden erst danach als Schichten zusammengesetzt. Lokale `element_disabled_paths` greifen auf das aufgelöste Overlay zu.
 
 ### Merge-Beispiel
 

@@ -21,9 +21,7 @@ Les directives s'exécutent une par une après chaque correspondance de règle d
 
 Ajoutez `rules` à n'importe quelle directive sauf `block` pour conditionner uniquement cette directive. La syntaxe correspond aux [règles d'interaction](./rules). Pour `property`, `event`, `call`, `action-handler`, `button`, `badge`, `text-content`, `tile-icon`, `tooltip` et `lock`, les règles d'élément hôte inspectent par défaut l'ancre de directive résolue. Pour `action`, `template`, `javascript` et `wait`, elles inspectent l'ancre d'interaction. Une directive `event` ciblant `window` ou `document` utilise aussi l'ancre d'interaction pour ces règles. L'`anchor` propre à une règle reste relatif à cette ancre par défaut ou peut être absolu.
 
-::: info Disponible à partir de UIX 8.4.0-beta.9
 Les règles compactes de directive peuvent vérifier un résultat enregistré par une directive `template` ou `javascript` précédente.
-:::
 
 Utilisez son `id` avec le préfixe `@`, éventuellement suivi d’un chemin en notation pointée ou entre crochets. Cette syntaxe est réservée aux règles de directive : les règles d’interaction sont évaluées avant les directives et ne peuvent donc pas accéder à leurs résultats.
 

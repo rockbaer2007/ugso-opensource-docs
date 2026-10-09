@@ -290,10 +290,6 @@ Zusätzlich gibt es jeweils auch `<variable>-yaml`.
 
 ## Schriftarten {#fonts}
 
-::: info
-Das Laden über `uix-fonts` ist ab UIX 8.4.0-beta.2 verfügbar.
-:::
-
 `uix-fonts` lädt Webfonts beim Auswählen eines globalen Themes. UIX erstellt [`FontFace`-Objekte](https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace) und registriert sie in `document.fonts`. Die Schriften stehen Home-Assistant-Komponenten auch in Shadow Roots zur Verfügung. Diese Option lädt nur Schriften; Theme-Variablen oder UIX-Styles bestimmen deren Verwendung.
 
 Home-Assistant-Theme-Werte müssen Zeichenketten sein. Schreibe die Zuordnung in einen `|`-Block:

@@ -57,10 +57,20 @@ UIX wird als Integration bereitgestellt und muss normalerweise nicht als manuell
 
 ## Muss nach einem Upgrade manuell der Cache geleert werden?
 
-UIX erkennt typische Situationen, in denen Frontend-Cache oder Companion-App-Cache alte Ressourcen verwenden. In solchen Fällen kann UIX eine Reload-/Clear-Cache-Meldung anzeigen.
+UIX zeigt eine Meldung mit der Schaltfläche `Reload Now`, wenn ein Neuladen zum Aktualisieren des Caches nötig ist. Nach 60 Sekunden wird die Seite automatisch neu geladen, damit auch unbeaufsichtigte Kiosks ihr Frontend aktualisieren.
 
 ::: info
 Wenn eine Änderung nach einem Update nicht sichtbar wird, hilft ein harter Browser-Reload oder das Leeren des Companion-App-Caches trotzdem als erster Test.
+:::
+
+## Kann die Reload-Meldung unterdrückt werden?
+
+Nein. Die Meldung stellt sicher, dass der UIX-JavaScript-Code im Frontend zur Version der UIX-Integration passt. Sie erscheint, wenn UIX geändert und Home Assistant neu gestartet wurde, der Browser aber noch ein zwischengespeichertes UIX-Bundle einer anderen Version verwendet.
+
+Nach 60 Sekunden wird die Seite automatisch neu geladen.
+
+::: info Vorschau: UIX 9.0.0-beta.0
+Der aktuelle `dev`-Stand liefert bis zum nächsten Home-Assistant-Neustart weiterhin die beim Start geladene UIX-Version aus. Nach einem Update kannst du Home Assistant neu starten, sobald du die neue Version aktivieren möchtest. Die frühere Aufforderung an Administratoren, wegen eines vorzeitigen Frontend-Updates sofort neu zu starten, entfällt. Dieses Verhalten ist nicht Bestandteil der stabilen Basis 8.4.0.
 :::
 
 ## Wie deinstalliere ich UI eXtension?

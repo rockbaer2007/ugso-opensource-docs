@@ -56,10 +56,6 @@ My theme:
 
 ## Portée
 
-::: info
-Le style des frames d'applications de même origine est disponible à partir de UIX 3.4.0-beta.1.
-:::
-
 `uix-app` continue de styliser l'habillage du panneau Home Assistant et peut superposer son iframe. UIX installe également son moteur interne dans les frames d'applications de même origine. Le style du contenu de la frame nécessite l'option expérimentale [Styliser les panneaux intégrés dans un frame](../extras/style-frame-panels) ; le style de l'élément hôte n'en dépend pas.
 
 Pour le contenu de la frame, utilisez `uix-<app-slug>` ou sa variante `-yaml`. UIX vérifie d'abord le slug complet de l'application Home Assistant, puis un slug indépendant du dépôt après suppression de `core_`, `local_` ou d'un hash de dépôt de huit caractères. Par exemple, `uix-a0d7b954_nodered` est prioritaire sur `uix-nodered`.

@@ -6,13 +6,15 @@ description: Überblick über UIX Forge, Molds, Foundries und Sparks.
 
 UIX Forge erzeugt Home-Assistant-Elemente dynamisch. Du definierst eine `forge`-Konfiguration, ein Ziel-`element` und optional zusätzliche `sparks`, die Verhalten oder Darstellung erweitern.
 
-Unterstützte Elementtypen sind unter anderem Karten, Badges, Zeilen, Abschnitte und Picture-Elements. Cross-Context-Molds erlauben, ein Element in einem anderen Kontext zu verwenden, zum Beispiel eine Karte als Zeile in einer Entities-Karte.
+Unterstützt werden die Molds `card`, `badge`, `row`, `picture-element`, `section`, `footer` und `card-feature`. Cross-Context-Molds erlauben, ein Element in einem anderen Kontext zu verwenden, zum Beispiel eine Karte als Zeile in einer Entities-Karte.
+
+Ab **UIX 9.0.0-beta.0** ermöglicht die [geschichtete Konfiguration](./forge#layered-configuration), native Templates des eingebetteten Elements unverändert zu erhalten und darüber eine separate Forge-Konfiguration zu legen. Sie gilt für alle Molds und benötigt keinen visuellen Editor.
 
 Für die vollständige Konfigurationsreferenz siehe [Forge-Referenz](./forge).
 
 ## Foundries
 
-Eine **Foundry** ist eine servergespeicherte UIX-Forge-Vorlage. Damit kannst du `forge`, `element` und `uix` einmal definieren und an vielen Stellen wiederverwenden. Lokal überschreibst du nur die Werte, die sich unterscheiden.
+Eine **Foundry** ist eine wiederverwendbare UIX-Forge-Konfiguration. Damit kannst du `forge`, `element` und `uix` einmal definieren und an vielen Stellen wiederverwenden. Ab UIX 9.0.0-beta.0 können Foundries auch `element_base` bereitstellen; eine aufgelöste Basis aktiviert die geschichtete Konfiguration. `element_disabled_paths` bleibt ausschließlich lokal an der jeweiligen Forge-Instanz.
 
 Mehr dazu: [Foundries](./foundries)
 

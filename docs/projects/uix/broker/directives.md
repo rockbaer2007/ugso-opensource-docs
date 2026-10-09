@@ -22,9 +22,7 @@ Direktiven laufen nacheinander, nachdem alle Regeln einer Interaktion passen. Je
 
 Füge `rules` zu jeder Direktive außer `block` hinzu, um nur diese Direktive zu konditionieren. Die Syntax entspricht den [Interaktionsregeln](./rules). Bei `property`, `event`, `call`, `action-handler`, `button`, `badge`, `text-content`, `tile-icon`, `tooltip` und `lock` prüfen Host-Element-Regeln standardmäßig den aufgelösten Direktiven-Anchor. Bei `action`, `template`, `javascript` und `wait` prüfen sie den Interaction Anchor. Eine `event`-Direktive mit Ziel `window` oder `document` verwendet für diese Regeln ebenfalls den Interaction Anchor. Ein eigener `anchor` innerhalb einer Regel bleibt relativ zu diesem Standard-Anchor oder kann wie gewohnt absolut sein.
 
-::: info Verfügbar ab UIX 8.4.0-beta.9
 Kompakte Direktiven-Regeln können Ergebnisse prüfen, die eine frühere `template`- oder `javascript`-Direktive gespeichert hat.
-:::
 
 Nutze dafür die `id` der früheren Direktive mit dem Präfix `@`, optional gefolgt von einem Pfad in Punkt- oder Klammernotation. Das ist ausschließlich in Direktiven-Regeln möglich: Interaktionsregeln werden vor den Direktiven ausgeführt und können deshalb nicht auf deren Ergebnisse zugreifen.
 

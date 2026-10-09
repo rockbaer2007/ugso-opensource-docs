@@ -4,10 +4,6 @@ description: Home-Assistant-Formulare mit Absende- und Leeren-Aktionen in UIX Fo
 ---
 # Form Spark
 
-::: info
-Verfügbar ab UIX 8.4.0-beta.7, Bestandteil von UIX 8.4.0.
-:::
-
 Der Spark `form` bettet Home Assistants `<ha-form>` in ein Forge-Element ein. Sein `schema` entspricht dem Home-Assistant-Formularschema: Jedes Feld erhält einen eindeutigen `name`, optional `label` und `default` sowie einen Home-Assistant-`selector`.
 
 Die optionalen Schaltflächen `submit` und `clear` führen Home-Assistant-Aktionen aus. Aktuelle Formularwerte werden in deren `data` übernommen und haben bei gleichen Schlüsseln Vorrang vor statischen Aktionsdaten. Die Schaltflächen können entfallen: In einer [Popover-Aktion](../../extras/uix-actions#popover) werden Formularwerte automatisch an `tap_action`, `hold_action` oder `double_tap_action` beider Fußzeilen-Schaltflächen übergeben.

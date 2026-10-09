@@ -87,6 +87,16 @@ Non. Lorsque UI eXtension détecte qu'un rechargement est nécessaire pour vider
 Le code de rechargement automatique est inclus depuis la version 8.1.0, mais il ne sera disponible qu'après votre prochaine mise à jour. Lors de l'installation de la version 8.1.0, l'appareil utilise encore le code de la version 8.0.1, qui ne comporte pas cette fonction.
 
 :::
+## Peut-on désactiver le message de rechargement ?
+
+Non. Le message garantit que le code JavaScript UIX du frontend correspond à la version de l'intégration. Il apparaît lorsque UIX a changé et que Home Assistant a redémarré, mais que le navigateur utilise encore un bundle UIX en cache d'une autre version.
+
+La page se recharge automatiquement après 60 secondes, afin que les kiosques sans surveillance actualisent aussi leur frontend.
+
+::: info Aperçu : UIX 9.0.0-beta.0
+La branche `dev` actuelle continue à servir la version UIX chargée au démarrage jusqu'au prochain redémarrage de Home Assistant. Après une mise à jour, redémarrez Home Assistant lorsque vous souhaitez activer la nouvelle version. L'ancienne demande de redémarrage immédiat adressée aux administrateurs en raison d'un frontend mis à jour trop tôt disparaît. Ce comportement ne fait pas partie de la base stable 8.4.0.
+:::
+
 ## Comment désinstaller UI eXtension ?
 
 La désinstallation de UI eXtension se déroule en deux étapes. Supprimez d'abord son entrée de service dans **Appareils et services**. Désinstallez ensuite l'intégration avec HACS ou, si vous l'avez installée manuellement, en supprimant le dossier `uix` du répertoire `custom_components`.

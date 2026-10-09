@@ -56,10 +56,6 @@ My theme:
 
 ## Geltungsbereich
 
-::: info
-Das Styling gleichursprünglicher App-Frames ist ab UIX 3.4.0-beta.1 verfügbar.
-:::
-
 `uix-app` stylt weiterhin die Oberfläche des Home-Assistant-Panels und kann dessen iframe überlagern. Zusätzlich installiert UIX seine interne Frame-Laufzeit in gleichursprünglichen App-Frames. Das Styling der Frame-Inhalte erfordert die experimentelle Option [Frame-Panels stylen](../extras/style-frame-panels); das Styling des Host-Elements nicht.
 
 Für Frame-Inhalte verwendest du `uix-<app-slug>` oder die Variante mit `-yaml`. UIX prüft zuerst den vollständigen Home-Assistant-App-Slug und danach einen vom Repository unabhängigen Slug, bei dem `core_`, `local_` oder ein achtstelliger Repository-Hash entfernt wurde. `uix-a0d7b954_nodered` hat beispielsweise Vorrang vor `uix-nodered`.

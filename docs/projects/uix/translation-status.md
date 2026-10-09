@@ -6,6 +6,15 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 
 Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation mit der englischen Originaldokumentation.
 
+## Abgleich vom 09.10.2026: stabile Basis 8.4.0, Vorschau 9.0.0-beta.0
+
+Die kanonischen Meldungen zu `2db023d236c9`, `c800e607f23d`, `9b5858f57678` und `22f8d93f0131` wurden in Deutsch und Französisch abgeglichen. Der geprüfte `dev`-Stand ist [`e2e0701`](https://github.com/Lint-Free-Technology/uix/commit/e2e070193b3f77b251dcfe05104a4d791a8e9a03), Version **9.0.0-beta.0**. Das Original nennt weiterhin **8.4.0** als stabile Version auf `master`; Release-Link, Footer und stabile Metadaten behalten diesen Stand.
+
+- Veraltete Beta-Hinweise in Broker-Direktiven, Popover-Aktion, Form Spark, App-Panels und Theme-Schriften entfernt.
+- FAQ zur nicht unterdrückbaren Reload-Meldung und zum automatischen Neuladen nach 60 Sekunden ergänzt. Die neue Auslieferung der beim Home-Assistant-Start geladenen Version ist als Vorschau gekennzeichnet.
+- Forge-Referenz, Foundries und Übersicht um die geschichtete Konfiguration ergänzt: `element_base`, Forge-Overlay `element`, lokale `element_disabled_paths`, Merge-Regeln, native Sichtbarkeit und Template-Kontexte. Verfügbarkeit ausdrücklich ab **9.0.0-beta.0**, nicht 8.4.0 oder 8.4.1.
+- Die Originalanimation `forge-auto-entities.gif` aus `9b5858f57678` für DE/FR übernommen. Die stabile `source_revision` bleibt unverändert; Vorschauversion, Branch und Revision werden separat in den Metadaten erfasst.
+
 ## Stand: UIX 8.4.0
 
 - Abgleich am **08.10.2026** gegen den stabilen Release [`v8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) vom 07.10.2026, Revision [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389).

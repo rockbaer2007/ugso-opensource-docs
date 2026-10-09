@@ -43,7 +43,7 @@ Nicht jede Option ist in jedem Mold sinnvoll. `grid_options` wird zum Beispiel n
 :::
 ## Element-Konfiguration
 
-`element` ist die YAML-Konfiguration des Home-Assistant-Elements, das Forge erzeugen soll.
+Ohne Schichten enthält `element` die vollständige YAML-Konfiguration des Home-Assistant-Elements. Forge verarbeitet deren Zeichenketten als Templates. In der [geschichteten Konfiguration](#layered-configuration) enthält `element` dagegen nur die von Forge verarbeitete Überlagerung; die elementeigene Basis steht in `element_base`.
 
 ::: details Forge-Beispiel
 ```yaml
@@ -122,12 +122,109 @@ element:
 Bei Blank Cards zeigen viele Sparks standardmäßig auf `uix-forge-blank-card $ div.content`.
 
 :::
+<a id="layered-configuration"></a>
+## Geschichtete Konfiguration
+
+::: info Vorschau: verfügbar ab UIX 9.0.0-beta.0
+Diese Funktion gehört zum aktuellen `dev`-Stand und nicht zur stabilen Version 8.4.0.
+:::
+
+Die geschichtete Konfiguration bettet ein Element ein, das eigene Templates besitzt. Sie funktioniert mit allen Forge-Molds und benötigt keinen visuellen Editor. Sobald die aufgelöste Konfiguration `element_base` enthält, verwendet Forge diesen Modus.
+
+`element_base` enthält die vollständige elementeigene Basis. Forge reicht ihre Template-Zeichenketten unverändert weiter, ohne sie zu erkennen, auszuwerten, umzuschreiben oder Escape-Zeichen zu verlangen. `element` enthält die Forge-Überlagerung; deren aktive Werte werden nach den üblichen Forge-Template-Regeln verarbeitet.
+
+```yaml
+type: custom:uix-forge
+entity: light.kitchen
+forge:
+  mold: card
+element_base:
+  type: markdown
+  # Dieses Template gehört der Markdown-Karte.
+  content: |
+    ## Temp: {{ states('sensor.kitchen_sensor') }}
+element:
+  title: "{{ config.entity }}"
+```
+
+Mappings in `element` werden rekursiv über `element_base` gelegt. Skalare und Arrays ersetzen den Wert an ihrem Pfad. `null` ist ein normaler Wert und kein Löschbefehl; ein leeres Array leert das Basis-Array ausdrücklich. `type` gehört in `element_base` und darf nicht überschrieben werden. Ein Forge-Template, das ein Objekt oder Array zurückgibt, ersetzt sein vollständiges Ziel, statt es mit der Basis zusammenzuführen. Für strukturelle Ergebnisse gib JSON aus, beispielsweise mit `| tojson`.
+
+| Schlüssel auf oberster Ebene | Rolle im Schichtenmodus |
+| --- | --- |
+| `element_base` | Erforderliche elementeigene Basis mit `type`; ihre Templates gehen unverändert an das eingebettete Element. |
+| `element` | Optionale Forge-Überlagerung als Mapping. Aktive Zeichenketten werden als Forge-Templates verarbeitet und über die Basis gelegt. Sie darf `type` nicht setzen. |
+| `element_disabled_paths` | Optionale, nur lokal erlaubte Liste inaktiver Overlay-Pfade. Sie erhält Quellen für die UI-Bearbeitung und ist in Foundries nicht erlaubt. |
+
+::: tip Native Sichtbarkeits-Templates
+Lege die native `visibility`-Konfiguration einer Karte in `element_base` ab. Ihre Template-Bedingungen gehen unverändert an Home Assistant und benötigen weder Nesting noch Ignore-Markierungen. Das ist unabhängig von `forge.hidden`.
+:::
+
+```yaml
+element_base:
+  type: entities
+  entities:
+    - light.kitchen
+    - light.dining_room
+element:
+  # Das Template-Ergebnis ersetzt das komplette Array.
+  entities: "{{ integration_entities('light') | list | tojson }}"
+```
+
+### Deaktivierte Overrides
+
+Alle `element`-Werte sind standardmäßig aktiv. `element_disabled_paths` erhält einen Quellwert, ohne ihn anzuwenden. Jeder Pfad ist eine Liste von Mapping-Schlüsseln; dadurch bleiben Schlüssel mit `.` eindeutig. Ein deaktivierter Elternpfad deaktiviert den ganzen Teilbaum. Gespeicherte Kind-Auswahlen wirken wieder, sobald der Elternpfad aus der Liste entfernt wird.
+
+```yaml
+element:
+  name: "{{ states('sensor.room_label') }}"
+  tap_action:
+    action: more-info
+    confirmation:
+      text: Confirm
+element_disabled_paths:
+  - [name]
+  - [tap_action, action]
+```
+
+Die Quellen bleiben erhalten, das erzeugte Element verwendet aber `name` und `tap_action.action` aus der Basis. Das aktive Mapping `tap_action.confirmation` wird weiterhin mit der Basis zusammengeführt. Jeder deaktivierte Pfad muss auf einen Wert im aufgelösten Overlay zeigen. Array-Einträge sind Ersetzungseinheiten und können nicht einzeln deaktiviert werden.
+
+### Foundries und Template-Kontext
+
+Foundries dürfen `element_base` und `element` bereitstellen, niemals `element_disabled_paths`. Globale und benannte Foundries folgen derselben Reihenfolge:
+
+```text
+global → global_<mold> → geerbte/benannte Foundry → lokale Konfiguration
+```
+
+Foundry- und lokale `element_base`-Fragmente ergeben die aufgelöste Basis; ihre `element`-Fragmente ergeben separat die aufgelöste Forge-Überlagerung. Die lokalen `element_disabled_paths` werden erst danach angewendet. So kann eine Karte einen Foundry-Wert deaktivieren, ohne die Foundry zu ändern.
+
+```yaml
+uix_foundries:
+  kitchen_tile:
+    forge:
+      mold: card
+    element_base:
+      type: markdown
+      content: |
+        ## {{ states('sensor.room_label') }}
+    element:
+      title: "{{ config.entity }}"
+
+# Dashboard-Karte: beide Schichten stammen aus der Foundry.
+type: custom:uix-forge
+foundry: kitchen_tile
+entity: light.kitchen
+```
+
+In Forge-Templates enthält `config.element_base` die aufgelöste Basis und `config.element` die aufgelöste Overlay-Quelle vor der Auswertung. Forge setzt daraus die endgültige Elementkonfiguration zusammen. Die `uix`-Mappings beider Schichten werden dabei zusammengeführt; UIX Styling verarbeitet ihre Templates anschließend nach seinen üblichen Regeln.
+
 ## Template-Variablen und Makros
 
 | Kontext | Template-Variablen |
 | --- | --- |
-| Templates in Forge und Element, außer `uix`-Styling | Forge-Konfiguration: `config.forge`; Element-Konfiguration: `config.element`; `config.entity`, falls in globaler `uix-forge`-Konfiguration enthalten. |
-| Templates im Forge-`uix`-Styling | Forge-Konfiguration: `config.forge`; Element-Konfiguration: `config.element`; `config.entity`, falls enthalten. |
+| Templates in Forge und ungeschichtetem `element`, außer `uix`-Styling | Forge-Konfiguration: `config.forge`; Element-Konfiguration: `config.element`; `config.entity`, falls in globaler `uix-forge`-Konfiguration enthalten. |
+| Templates im geschichteten `element`, außer `uix`-Styling | `config.forge`; aufgelöste Basis: `config.element_base`; Overlay-Quelle: `config.element`; `config.entity`, falls enthalten. |
+| Templates im Forge-`uix`-Styling | `config.forge`; `config.element` ist die vollständige aufgelöste Elementkonfiguration oder im Schichtenmodus die aufgelöste Forge-Überlagerung; im Schichtenmodus zusätzlich `config.element_base`; `config.entity`, falls enthalten. |
 | Templates im `uix`-Styling des Elements | Forge-Konfiguration nicht verfügbar; Element-Konfiguration als `config`; `config.entity`, falls enthalten. |
 
 ::: tip
@@ -229,7 +326,7 @@ Foundries können Billets definieren, die einzelne Forge-Instanzen überschreibe
 
 ## Templates im Element ignorieren
 
-Manche erzeugten Elemente enthalten selbst Jinja-ähnliche Syntax. Dann musst du verschachtelte Templates escapen, damit Forge sie nicht zu früh auswertet.
+Manche erzeugten Elemente enthalten selbst Jinja-ähnliche Syntax. Ohne Schichten oder im Forge-Overlay musst du diese Templates ignorieren oder verschachteln, damit Forge sie nicht zu früh auswertet. In `element_base` gehen native Templates unverändert weiter und benötigen weder `template_nesting` noch Ignore-Markierungen.
 
 ```yaml
 type: custom:uix-forge
@@ -323,9 +420,15 @@ filter:
 Bei Auto-Entities ist es besonders wichtig, mit Fallbacks zu arbeiten, weil nicht jede Entity dieselben Attribute besitzt.
 
 :::
+Die aktualisierte Originalanimation zeigt eine Auto-Entities-Karte mit Forge und Tooltip:
+
+![Originalbeispiel für Forge mit Auto-Entities](../assets/page-assets/forge/forge-auto-entities.gif)
+
 ## UIX-Styling
 
 Forge kann sowohl die erzeugte Karte als auch deren innere Elemente mit UIX stylen.
+
+Mit `forge.uix` stylst du den Forge-Wrapper. Seine Templates erhalten `config.forge`, `config.element` und `uixForge`. Im Schichtenmodus ist `config.element` die aufgelöste Forge-Überlagerung und `config.element_base` die aufgelöste Basis; ansonsten enthält `config.element` die vollständige aufgelöste Elementkonfiguration. `uixForge` enthält die Spark-Variablen. Im `uix`-Styling des erzeugten Elements steht dagegen die endgültige Elementkonfiguration als `config` bereit.
 
 ```yaml
 type: custom:uix-forge

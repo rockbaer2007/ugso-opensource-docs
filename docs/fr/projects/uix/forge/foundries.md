@@ -6,6 +6,8 @@ description: "Les fonderies sont des configurations UIX Forge enregistrées sur 
 
 Une **fonderie** est une configuration UIX Forge nommée et enregistrée dans Home Assistant. Elle sert de base réutilisable : définissez une fois les configurations `forge` et `element`, attribuez-leur un nom, puis référencez-les dans autant d'éléments que nécessaire avec la clé `foundry:`. La configuration locale de l'élément est fusionnée avec cette base ; vous pouvez donc remplacer chaque valeur pour une instance donnée.
 
+À partir de **UIX 9.0.0-beta.0**, une fonderie peut aussi fournir un fragment `element_base`. La base appartenant à l'élément et la surcouche Forge `element` sont résolues séparément. Une base résolue active la [configuration en couches](./forge#layered-configuration). Cet aperçu ne fait pas partie de la version stable 8.4.0.
+
 <a id="global-foundries"></a>
 ## Fonderies globales
 
@@ -132,7 +134,7 @@ type: custom:uix-forge
 foundry: my_tile
 ```
 
-Les configurations `forge` et `element` de la fonderie sont appliquées comme si elles figuraient directement dans la configuration UIX Forge.
+Les configurations `forge`, `element` et, lorsqu'elle est fournie, `element_base` de la fonderie sont appliquées comme si elles figuraient directement dans la configuration UIX Forge.
 
 Vous pouvez ajouter ou remplacer localement n'importe quelle clé ; les valeurs locales sont prioritaires sur celles de la fonderie :
 
@@ -145,7 +147,7 @@ element:
 
 ## Structure de la configuration d'une fonderie
 
-Une fonderie est un objet YAML qui peut contenir les clés `forge` et `element`, seules ou ensemble :
+Une fonderie est un objet YAML qui peut contenir `foundry`, `forge`, `element` et, à partir de UIX 9.0.0-beta.0, `element_base` :
 
 ```yaml
 forge:
@@ -161,7 +163,7 @@ element:
   entity: "{{ 'sun.sun' }}"
 ```
 
-Les mêmes clés sont disponibles que dans un élément `uix-forge` classique. Consultez la page [UIX Forge](./index.md) pour connaître les options `forge` et `element`.
+`element_base` et `element` sont résolus indépendamment, puis composés si une base est présente. `element_disabled_paths` reste local à l'instance Forge : les fonderies, y compris `global` et `global_<mold>`, ne peuvent pas le définir. Consultez la [configuration en couches](./forge#layered-configuration) et [UIX Forge](./index.md) pour les autres options.
 
 ## Inclure des fichiers externes et des secrets
 
@@ -255,7 +257,7 @@ Lorsqu'une configuration Forge est résolue, ses paramètres sont fusionnés à 
 4. **Fonderie** — la configuration de la fonderie explicitement nommée.
 5. **Locale** — les clés définies directement dans la configuration Forge.
 
-Pour les **objets** (par exemple `forge` et `element`), la fusion est récursive : les clés imbriquées sont fusionnées individuellement au lieu de remplacer l'objet entier. Pour les **tableaux et les valeurs simples**, la valeur locale remplace entièrement celle de la fonderie. `forge.sparks` fait exception :
+Pour les **objets** (par exemple `forge`, `element` et `element_base`), la fusion est récursive : les clés imbriquées sont fusionnées individuellement. `element_base` et `element` restent séparés pendant la résolution des fonderies, puis sont composés en couches si une base est présente. Pour les **tableaux et les valeurs simples**, la valeur locale remplace entièrement celle de la fonderie. `forge.sparks` fait exception :
 
 - Par défaut, les sparks locaux sont **ajoutés** à la liste héritée.
 - Pour remplacer ou fusionner un spark, attribuez le même `id` (ou `spark_id`) aux deux entrées.

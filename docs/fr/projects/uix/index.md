@@ -19,6 +19,10 @@ UI eXtension comprend [UIX Styling](./using/index.md), [UIX Forge](./forge/index
 
 ## Nouveautés de UIX 8.4.0
 
+::: info Aperçu comparé séparément
+Les changements de `dev` jusqu'à **9.0.0-beta.0** ont été intégrés en DE/FR le 9 octobre 2026. La [configuration Forge en couches](./forge/forge#layered-configuration) et le nouveau comportement après une mise à jour avant le redémarrage de Home Assistant sont des fonctions d'aperçu. La base stable reste 8.4.0. Consultez l'[état de la traduction](./translation-status).
+:::
+
 - [Spark Formulaire](./forge/sparks/form) et [action Popover](./extras/uix-actions#popover) pour les formulaires et les contenus superposés.
 - [Style des panneaux intégrés dans un frame](./extras/style-frame-panels) avec un runtime interne ; cette option expérimentale reste désactivée par défaut.
 - [Polices de thème avec `uix-fonts`](./using/themes) et [images d'entité dans les aperçus de carte](./using/images), avec adaptation à Home Assistant 2026.10.

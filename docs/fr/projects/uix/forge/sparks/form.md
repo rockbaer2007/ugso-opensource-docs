@@ -4,10 +4,6 @@ description: Intégrer un formulaire Home Assistant avec actions d’envoi et d�
 ---
 # Spark Formulaire
 
-::: info
-Disponible depuis UIX 8.4.0-beta.7, inclus dans UIX 8.4.0.
-:::
-
 Le spark `form` intègre le composant Home Assistant `<ha-form>` dans un élément Forge. Son `schema` utilise le schéma standard des formulaires Home Assistant : chaque champ possède un `name` unique, éventuellement `label` et `default`, ainsi qu’un `selector` Home Assistant.
 
 Les boutons facultatifs `submit` et `clear` exécutent des actions Home Assistant. Les valeurs actuelles sont fusionnées dans leur `data` et prennent la priorité sur les données statiques de même nom. Les boutons peuvent être omis : dans une [action Popover](../../extras/uix-actions#popover), les valeurs sont automatiquement transmises à `tap_action`, `hold_action` ou `double_tap_action` des deux boutons de pied de page.

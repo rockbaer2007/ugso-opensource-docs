@@ -6,6 +6,15 @@ description: État de la documentation UIX française.
 
 Cette documentation française est maintenue à partir de la documentation UIX canonique en anglais. Les pages principales, le démarrage rapide et les aperçus de UIX Styling, Forge, Broker et Extras sont déjà disponibles en français. La section complète **UIX Broker** est également disponible en français.
 
+## Comparaison du 9 octobre 2026 : base stable 8.4.0, aperçu 9.0.0-beta.0
+
+Les notifications canoniques `2db023d236c9`, `c800e607f23d`, `9b5858f57678` et `22f8d93f0131` ont été comparées aux pages allemandes et françaises. La branche `dev` vérifiée est [`e2e0701`](https://github.com/Lint-Free-Technology/uix/commit/e2e070193b3f77b251dcfe05104a4d791a8e9a03), version **9.0.0-beta.0**. La version stable de l'original sur `master` reste **8.4.0** ; les liens de publication, le pied de page et les métadonnées stables restent associés à cette version.
+
+- Suppression des anciennes mentions bêta pour les règles de directive, l'action Popover, le formulaire, les panneaux d'applications et les polices des thèmes.
+- FAQ sur le message de rechargement obligatoire et le rechargement automatique après 60 secondes. La nouvelle conservation des fichiers frontend chargés au démarrage de Home Assistant est présentée comme un aperçu.
+- Référence Forge, fonderies et aperçu : `element_base`, surcouche `element`, `element_disabled_paths` locaux, fusion, visibilité native et contextes des modèles. Disponibilité explicitement à partir de **9.0.0-beta.0**, pas de 8.4.0 ni de 8.4.1.
+- Animation originale `forge-auto-entities.gif` de `9b5858f57678` synchronisée pour DE/FR. La `source_revision` stable reste inchangée ; la version, la branche et la révision d'aperçu sont enregistrées séparément.
+
 ## Version actuelle : UIX 8.4.0
 
 - Comparaison le **8 octobre 2026** avec la version stable [`v8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) du 7 octobre 2026, révision [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389).
