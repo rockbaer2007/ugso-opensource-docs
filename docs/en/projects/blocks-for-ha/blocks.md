@@ -4,7 +4,7 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 ---
 # Block catalog
 
-Version **0.1.7**: 23 block types. Images show actual UGSo editor blocks. Dropdown variants do not count as additional types.
+Version **0.1.8**: 27 block types. Images show actual UGSo editor blocks. Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are currently entered manually.
 
@@ -35,6 +35,23 @@ Triggers are orange, conditions purple, values green and actions blue. Side conn
 | **Light with colour**<br><code>ugso_colour_action</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour_action.png" alt="Light with colour" style="max-width:280px;max-height:180px"> | Light entity, Colour input and brightness 0–100. Generates `light.turn_on` with `rgb_color` and `brightness_pct`. Device must support colours. |
 
 Minus or disabling else detaches connected blocks instead of deleting them. Reconnect or remove them before YAML export. Undo restores inputs and connections. Shadow values reappear when a replacement value block is removed.
+
+## Variable and template blocks added in 0.1.8
+
+| Block | Editor image | Function |
+| --- | --- | --- |
+| **Set variable**<br><code>ugso_variable_set</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_set.png" alt="Set variable" style="max-width:280px;max-height:180px"> | Action block: assign a number, text or template to the selected variable. Generates native HA `variables`. Place before subsequent reads. |
+| **Read variable**<br><code>ugso_variable_get</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_get.png" alt="Read variable" style="max-width:280px;max-height:180px"> | Side String connector; generates <code v-pre>{{ name }}</code> for log messages and further assignments. Dropdown supports rename/delete. |
+| **Template value**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template.png" alt="Template value" style="max-width:280px;max-height:180px"> | Multiline Jinja template with String connector for log messages or variable assignments. HA evaluates the template during execution; Blocks does not execute it. |
+| **Template condition**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template_condition.png" alt="Template condition" style="max-width:280px;max-height:180px"> | Boolean connector for Only if, If and logical groups. Generates `condition: template` with `value_template`. HA must evaluate it as true; not a trigger. |
+
+## Using variables and templates
+
+Choose **Variablen → Variable erstellen …** in the German editor to create, for example, `leistung`. Names use ASCII letters, digits and `_`, with no leading digit. Place Set variable in **Dann** and connect a number or template. Connect Read variable to a subsequent log message. Creating a name alone does not assign a value. Variables belong to the HA automation run; they are not persistent helpers.
+
+Example: **Set leistung to Template** containing <code v-pre>{{ states('sensor.leistung') | float(0) }}</code>, followed by **Log Info message Read leistung**. HA reads the sensor during assignment and uses that value in the next step. A template condition can check <code v-pre>{{ states('sensor.leistung') | float(0) > 100 }}</code>.
+
+Renaming updates variable blocks. References in free-form Jinja text must be changed manually. Action variables become available after assignment, not in preceding automation conditions. Blocks validates structure and YAML, not Jinja syntax or HA entities. Import supports one text/template or number per variable action. Multiple entries, lists/objects and automation-level variables are not yet supported and are rejected during import. [Native HA variables and scope](https://www.home-assistant.io/docs/scripts/#define-variables).
 
 ## Original plugins and integration
 

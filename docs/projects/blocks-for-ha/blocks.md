@@ -4,7 +4,7 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 ---
 # Liste der Blocks
 
-Stand **0.1.7**: 23 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen.
+Stand **0.1.8**: 27 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen.
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden derzeit manuell eingegeben.
 
@@ -35,6 +35,23 @@ Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitl
 | **Licht mit Farbe**<br><code>ugso_colour_action</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour_action.png" alt="Licht mit Farbe" style="max-width:280px;max-height:180px"> | Lichtentität, Colour-Eingang und Helligkeit 0–100. Erzeugt `light.turn_on` mit `rgb_color` und `brightness_pct`. Farbunterstützung des Geräts erforderlich. |
 
 Bei Minus oder ausgeschaltetem Sonst werden angeschlossene Blocks abgelöst, nicht gelöscht. Wieder verbinden oder entfernen, bevor YAML exportiert wird. Rückgängig stellt Anschlüsse und Verbindungen wieder her. Shadow-Werte kehren zurück, wenn ein ersetzender Wertblock entfernt wird.
+
+## Variablen- und Template-Blocks seit 0.1.8
+
+| Block | Bild im Editor | Funktionsbeschreibung |
+| --- | --- | --- |
+| **Variable setzen**<br><code>ugso_variable_set</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_set.png" alt="Variable setzen" style="max-width:280px;max-height:180px"> | Aktionsblock: ausgewählte Variable auf Zahl, Text oder Template setzen. Erzeugt eine native HA-`variables`-Aktion. Vor späteren Lesezugriffen platzieren. |
+| **Variable lesen**<br><code>ugso_variable_get</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_get.png" alt="Variable lesen" style="max-width:280px;max-height:180px"> | Seitlicher String-Anschluss; erzeugt <code v-pre>{{ name }}</code> für Log-Meldungen und weitere Variablenzuweisungen. Dropdown bietet Umbenennen/Löschen. |
+| **Template-Wert**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template.png" alt="Template-Wert" style="max-width:280px;max-height:180px"> | Mehrzeiliges Jinja-Template mit String-Anschluss für Log-Meldungen oder Variablenzuweisungen. HA wertet die Vorlage bei Ausführung aus; Blocks führt sie nicht aus. |
+| **Template-Bedingung**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template_condition.png" alt="Template-Bedingung" style="max-width:280px;max-height:180px"> | Boolean-Anschluss für Nur wenn, Falls und logische Gruppen. Erzeugt `condition: template` mit `value_template`. Ergebnis muss in HA wahr sein; kein eigener Auslöser. |
+
+## Variablen und Templates verwenden
+
+Im Menü **Variablen → Variable erstellen …** beispielsweise `leistung` anlegen. Namen verwenden Buchstaben, Ziffern und `_`, keine führende Ziffer. Den Setzen-Block in **Dann** platzieren und eine Zahl oder ein Template anschließen. Danach den Lesen-Block in eine Log-Meldung stecken. Erstellen allein weist noch keinen Wert zu. Variablen gelten für den HA-Automationslauf; sie ersetzen keine dauerhaft gespeicherten Helfer.
+
+Beispiel: **Setze leistung auf Template** mit <code v-pre>{{ states('sensor.leistung') | float(0) }}</code>, danach **Log Info Meldung Variable leistung**. HA liest den Sensor beim Setzen und verwendet den Wert im folgenden Schritt. Eine Template-Bedingung kann beispielsweise <code v-pre>{{ states('sensor.leistung') | float(0) > 100 }}</code> prüfen.
+
+Umbenennen aktualisiert die verbundenen Variablen-Blocks. Namen in frei eingegebenen Jinja-Texten müssen manuell geändert werden. Aktionsvariablen stehen erst nach ihrer Zuweisung bereit, nicht in vorgelagerten Automationsbedingungen. Blocks prüft Struktur und YAML, keine Jinja-Syntax oder vorhandenen HA-Entitäten. Der Import unterstützt pro Variablen-Aktion einen Text/Template oder eine Zahl. Mehrere Einträge, Listen/Objekte sowie Variablen auf Automationsebene sind noch nicht unterstützt und werden beim Import abgelehnt. [Native HA-Variablen und Gültigkeit](https://www.home-assistant.io/docs/scripts/#define-variables).
 
 ## Originalplugins und Einbindung
 

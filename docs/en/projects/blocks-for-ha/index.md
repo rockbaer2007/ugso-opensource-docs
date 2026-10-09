@@ -4,17 +4,19 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.7 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+**Version 0.1.8 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
 ## Block catalog and original plugins
 
-The [catalog of all 23 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
+The [catalog of all 27 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
+
+New in **0.1.8**: **Variablen → Variable erstellen …**, Set/Read variable blocks and a **Templates** category with dedicated value and condition blocks. Variables generate native HA `variables` actions; reads produce <code v-pre>{{ name }}</code>. Jinja is evaluated in HA. [Usage, example and import limits](./blocks#using-variables-and-templates).
 
 New in 0.1.7: **search at the bottom of the menu**, multiline text, percentage slider, colour/light action, today’s date and dependent helper dropdowns. Plus/minus adds or removes the last input or else-if branch; **S** toggles else. Removing inputs detaches blocks without deleting them. The gear remains for reordering.
 
-The date comparison includes the year and uses HA’s `now().strftime('%Y-%m-%d')`, evaluated in HA’s time zone. It is a condition, not a trigger; only this supported template shape can be imported. The light action generates RGB colour and percentage brightness. Timers use their configured duration; additional parameters stay in the generic HA action. Actual device capabilities must be checked in HA.
+The date comparison includes the year and uses HA’s `now().strftime('%Y-%m-%d')`, evaluated in HA’s time zone. It is a condition, not a trigger. Import maps this shape to the date block and other template conditions to the general template block. The light action generates RGB colour and percentage brightness. Timers use their configured duration; additional parameters stay in the generic HA action. Actual device capabilities must be checked in HA.
 
 Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Six original plugins are bundled locally. Colour blending, random colours, automatic growing connections, text joining, lists and live entity selection remain pending.
 
@@ -35,7 +37,7 @@ Editor: `http://127.0.0.1:4180/`. Preview, copy, download and reopen supported Y
 
 ## ioBroker / our Blocks: existing features
 
-23 block types including the automation root:
+27 block types including the automation root; the four variable/template additions are described in the catalog:
 
 | ioBroker concept | UGSo Blocks for HA | HA output |
 | --- | --- | --- |
@@ -115,7 +117,7 @@ We already use the original **Blockly 13.3.0** library rather than building a se
 
 The [original workspace and block-parts documentation](https://docs.blockly.com/guides/get-started/workspace-anatomy/) and [Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/) guide familiar interaction patterns. Library updates require connection, import/export and browser checks.
 
-| Task | Status in 0.1.7 / next step |
+| Task | Status in 0.1.8 / next step |
 | --- | --- |
 | Connection geometry and type checks | Boolean conditions and Number values use side connections; triggers/actions use separate statement chains |
 | Extensible blocks | If and AND/OR/NOT implemented; visual action-data fields planned |

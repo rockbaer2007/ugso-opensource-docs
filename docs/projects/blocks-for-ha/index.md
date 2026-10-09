@@ -4,17 +4,19 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.7 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
+**Version 0.1.8 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
 
 Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
 
 ## Liste der Blocks und Originalplugins
 
-Die [Liste aller 23 Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsbeschreibung. Die Tabelle der Originalplugins verlinkt direkt auf die jeweiligen Quellen.
+Die [Liste aller 27 Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsbeschreibung. Die Tabelle der Originalplugins verlinkt direkt auf die jeweiligen Quellen.
+
+Neu in **0.1.8**: **Variablen → Variable erstellen …**, Setzen-/Lesen-Blocks und die Kategorie **Templates** mit eigenen Wert- und Bedingungsblocks. Variablen erzeugen native HA-`variables`-Aktionen; Lesen erzeugt <code v-pre>{{ name }}</code>. Jinja wird erst in HA ausgewertet. [Anleitung, Beispiel und Importgrenzen](./blocks#variablen-und-templates-verwenden).
 
 Neu in 0.1.7: **Suche am Menüende**, mehrzeilige Texte, Prozent-Slider, Farbe und Lichtaktion, Datum heute und abhängige Helfer-Dropdowns. Plus/Minus ergänzt oder entfernt den letzten Eingang beziehungsweise sonst-falls-Zweig; **S** schaltet Sonst um. Entfernte Eingänge lösen ihre Blocks ab, löschen sie nicht. Das Zahnrad bleibt zum Umordnen.
 
-Der Datumsvergleich einschließlich Jahr wird in HA mit `now().strftime('%Y-%m-%d')` ausgewertet; er verwendet die HA-Zeitzone und ist eine Bedingung, kein Auslöser. Nur diese unterstützte Template-Form wird importiert. Die Lichtaktion erzeugt RGB-Farbe und Helligkeit in Prozent. Timer nutzen ihre konfigurierte Dauer; zusätzliche Parameter bleiben in der generischen HA-Aktion. Die tatsächlichen Gerätefähigkeiten müssen in HA geprüft werden.
+Der Datumsvergleich einschließlich Jahr wird in HA mit `now().strftime('%Y-%m-%d')` ausgewertet; er verwendet die HA-Zeitzone und ist eine Bedingung, kein Auslöser. Diese Form erhält beim Import den Datumsblock; andere Template-Bedingungen erhalten den allgemeinen Template-Block. Die Lichtaktion erzeugt RGB-Farbe und Helligkeit in Prozent. Timer nutzen ihre konfigurierte Dauer; zusätzliche Parameter bleiben in der generischen HA-Aktion. Die tatsächlichen Gerätefähigkeiten müssen in HA geprüft werden.
 
 Das eigene UGSo-Icon verbindet Haus und Puzzle-Baustein und wird in Oberfläche, Browser und HA-App verwendet. Sechs Originalplugins werden lokal ausgeliefert. Farbmischung, Zufallsfarben, automatisch wachsende Anschlüsse, Textverknüpfung, Listen und Live-Entitätsauswahl bleiben offen.
 
@@ -35,7 +37,7 @@ Editor: `http://127.0.0.1:4180/`. YAML kann angezeigt, kopiert, als Datei gespei
 
 ## ioBroker / unsere Blocks: vorhandene Funktionen
 
-23 Blocktypen einschließlich des Automationsrahmens:
+27 Blocktypen einschließlich des Automationsrahmens; die vier neuen Variablen-/Template-Blocks sind im Katalog beschrieben:
 
 | ioBroker-Konzept | UGSo Blocks für HA | HA-Ausgabe |
 | --- | --- | --- |
@@ -115,7 +117,7 @@ Wir verwenden bereits **Blockly 13.3.0**, die originale Bibliothek, statt eine e
 
 Die [Originaldokumentation zur Arbeitsfläche und zu Blockteilen](https://docs.blockly.com/guides/get-started/workspace-anatomy/) und die [Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/) dienen als Referenz für vertraute Bedienmuster. Bibliotheksupdates werden bewusst mit Verbindungs-, Import-/Export- und Browserprüfungen übernommen.
 
-| Aufgabe | Stand in 0.1.7 / nächster Schritt |
+| Aufgabe | Stand in 0.1.8 / nächster Schritt |
 | --- | --- |
 | Anschlussgeometrie und Typprüfung | Boolean-Bedingungen und Number-Werte seitlich; Auslöser/Aktionen als getrennte Statement-Ketten umgesetzt |
 | Erweiterbare Blocks | Falls und UND/ODER/NICHT umgesetzt; Aktionsdaten später als visuelle Felder |
