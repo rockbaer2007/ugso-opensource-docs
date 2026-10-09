@@ -5,7 +5,7 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 # HA Grafik Visual Studio
 
-Ab **Studio 0.1.286** gilt **Z-Index −100 oder kleiner für alle Widgets**: in der Runtime unsichtbar, im Editor bearbeitbar. Berechnungen und Datenfluss bleiben aktiv, auch bei ausgeblendeten Number-Widgets und MathBoxen.
+Ab **Studio 0.1.287** haben **alle Widgets** oben im Reiter **WIDGET** die Checkbox **In Runtime verstecken**. Sie blendet das Widget unabhängig vom Z-Index in der Runtime aus; im Editor bleibt es bearbeitbar. Berechnungen und Datenfluss bleiben aktiv, auch bei ausgeblendeten Number-Widgets und MathBoxen. Das Projekt nach der Änderung speichern.
 
 Weitere Änderungen bis **Studio 0.1.285**: [SVG-Line](./svg-line) und Wert-Verbindung erhalten vertikale Startpositionen und senkrechte rechtwinklige Pfadführung sowie weniger empfindliches Punktziehen. [Poti-Ausgänge](./industrial) steuern die Linienanimation direkt. Das [Number→Math-Beispiel](./svg-linebox-math) erklärt `O - P` für den Batterie-Nettofluss; [Galerie](./bildergalerie) mit Editorbild vor der animierten Demo.
 

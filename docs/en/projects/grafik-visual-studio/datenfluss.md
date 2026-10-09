@@ -4,7 +4,7 @@ title: Data flow – values, conversion and calculation
 
 # HA Grafik – Data flow
 
-From **0.1.286**, explicit **z-index −100 or lower hides all widgets in runtime**, not just lines. A hidden Number widget still supplies Math inputs; a hidden Math box still calculates. The rule does not disable value sources. Everything remains editable in the editor.
+From **0.1.287**, **all widgets** can be hidden using **WIDGET → In Runtime verstecken** (Hide in runtime). Save the project afterwards. A hidden Number widget still supplies Math inputs; a hidden Math box still calculates. The checkbox does not disable value sources and works independently of z-index. Everything remains editable in the editor.
 
 Updates through Studio **0.1.285**: SVG lines and Value connections support **Line → Vertical starting position**. Vertical orthogonal lines first run vertically, then turn left or right at target height. Point handles use a 6 px drag threshold and do not move a multi-selection. Hold **Alt** to move a docked line as a whole. Regular SVG lines at **z-index −100 or lower** are also invisible in runtime while retaining their values. They can connect **Number → Math**; see the setup and zero-value example in [LineBox Math](./svg-linebox-math).
 

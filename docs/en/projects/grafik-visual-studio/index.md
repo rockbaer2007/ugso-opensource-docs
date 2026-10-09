@@ -5,7 +5,7 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
-From **Studio 0.1.286**, **z-index −100 or lower applies to all widgets**: invisible in runtime and editable in the editor. Calculations and data flow remain active, including hidden Number widgets and Math boxes.
+From **Studio 0.1.287**, **every widget** has an **In Runtime verstecken** (Hide in runtime) checkbox at the top of its **WIDGET** tab. It hides the widget in runtime independently of z-index while retaining editor visibility. Calculations and data flow remain active, including hidden Number widgets and Math boxes. Save the project after changing it.
 
 Other changes through **Studio 0.1.285**: [SVG lines](./svg-line) and Value connections support vertical starting positions, vertical-first orthogonal routes and less sensitive point dragging. [Rotary outputs](./industrial) directly control line animation. The [Number-to-Math example](./svg-linebox-math) explains battery net flow using `O - P`; the [gallery](./bildergalerie) shows the editor setup before the animated demo.
 

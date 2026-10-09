@@ -6,6 +6,8 @@ title: Editor und Tastenkombinationen
 
 ## Widgets nur in der Runtime ausblenden
 
+Ab **Studio 0.1.287** gibt es für **alle Widgets** direkt oben im Reiter **WIDGET** die Checkbox **In Runtime verstecken**. Haken setzen und das Projekt speichern: Das Widget bleibt im Editor sichtbar, wird aber in der Runtime ausgeblendet. Berechnungen und Werteübergaben bleiben aktiv, beispielsweise von einem versteckten Number-Widget zu Math. Die Checkbox funktioniert unabhängig vom Z-Index. Ohne Haken gilt wieder die normale Sichtbarkeit; spezielle Datenfluss-Widgets bleiben grundsätzlich verborgen. Versteckte Bedienelemente können in der Runtime nicht angeklickt werden.
+
 Ab **Studio 0.1.286** blendet ein expliziter **Z-Index −100 oder kleiner** jeden Widgettyp in der Runtime aus. Im Editor bleibt das Widget sichtbar und bearbeitbar. Berechnungen und Datenfluss bleiben aktiv; so lassen sich Number-Widgets, MathBoxen und ihre Leitungen als unsichtbare Verarbeitungskette nutzen. Bei −99 oder höher greift diese spezielle Ausblendregel nicht. Ein verborgenes Bedienelement lässt sich in der Runtime nicht anklicken.
 
 ## Seiten-Tabs

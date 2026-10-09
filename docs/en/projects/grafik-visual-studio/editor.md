@@ -6,6 +6,8 @@ title: Editor and keyboard shortcuts
 
 ## Hide widgets only in runtime
 
+From **Studio 0.1.287**, **every widget** has an **In Runtime verstecken** (Hide in runtime) checkbox at the top of its **WIDGET** tab. Check it and save the project: the widget remains visible in the editor but is hidden in runtime. Calculations and value forwarding stay active, for example from a hidden Number widget into Math. The checkbox works independently of z-index. Unchecking restores normal visibility; dedicated data flow widgets remain inherently hidden. Hidden controls cannot be clicked in runtime.
+
 From **Studio 0.1.286**, explicit **z-index −100 or lower** hides every widget type in runtime. The widget stays visible and editable in the editor. Calculations and data flow remain active, allowing Number widgets, Math boxes and connecting lines to form an invisible processing chain. This special hiding rule does not apply at −99 or higher. Hidden controls cannot be clicked in runtime.
 
 ## Page tabs
