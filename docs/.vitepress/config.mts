@@ -41,6 +41,7 @@ const navDe = [
   },
   { text: 'ATLAS', link: '/projects/atlas/' },
   { text: 'ATLAS Plugins', link: '/projects/atlas-plugins/' },
+  { text: 'UGSo HA Apps', link: '/projects-mqtt/' },
   { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
   { text: 'Paketkatalog', link: 'https://visualstudio.ugso-software.de/?lang=de' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
@@ -77,6 +78,7 @@ const navEn = [
   },
   { text: 'ATLAS', link: '/en/projects/atlas/' },
   { text: 'ATLAS Plugins', link: '/en/projects/atlas-plugins/' },
+  { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' },
   { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
   { text: 'Package catalog', link: 'https://visualstudio.ugso-software.de/?lang=en' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
@@ -120,6 +122,11 @@ const navFr = [
 ]
 
 const sidebarDe = {
+  '/projects/blocks-for-ha/': [{ text: 'UGSo HA Apps', items: [
+    { text: 'Übersicht', link: '/projects-mqtt/' },
+    { text: 'UGSo Blocks for HA', link: '/projects/blocks-for-ha/' },
+    { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' }
+  ] }],
   '/projects/grafik-visual-studio/': [{
     text: 'Grafik Visual Studio', collapsed: false, items: [
       { text: 'Überblick', link: '/projects/grafik-visual-studio/' },
@@ -267,10 +274,12 @@ const sidebarDe = {
 
   '/projects-mqtt/': [
     {
-      text: 'MQTT Projekte',
+      text: 'UGSo HA Apps',
       collapsed: false,
       items: [
         { text: 'Übersicht', link: '/projects-mqtt/' },
+        { text: 'UGSo Blocks for HA', link: '/projects/blocks-for-ha/' },
+        { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
         { text: 'FRITZ!Box to MQTT', link: '/projects/fritzbox-to-mqtt/' },
         { text: 'Heizöl to MQTT', link: '/projects/heizoel-to-mqtt/' },
         { text: 'Parcel to MQTT', link: '/projects/parcel-to-mqtt/' }
@@ -528,6 +537,11 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects/blocks-for-ha/': [{ text: 'UGSo HA Apps', items: [
+    { text: 'Overview', link: '/en/projects-mqtt/' },
+    { text: 'UGSo Blocks for HA', link: '/en/projects/blocks-for-ha/' },
+    { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' }
+  ] }],
   '/en/projects/grafik-visual-studio/': [{
     text: 'Grafik Visual Studio', collapsed: false, items: [
       { text: 'Overview', link: '/en/projects/grafik-visual-studio/' },
@@ -632,10 +646,12 @@ const sidebarEn = {
 
   '/en/projects-mqtt/': [
     {
-      text: 'MQTT Projects',
+      text: 'UGSo HA Apps',
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/projects-mqtt/' },
+        { text: 'UGSo Blocks for HA', link: '/en/projects/blocks-for-ha/' },
+        { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
         { text: 'FRITZ!Box to MQTT', link: '/en/projects/fritzbox-to-mqtt/' },
         { text: 'Heizöl to MQTT', link: '/en/projects/heizoel-to-mqtt/' },
         { text: 'Parcel to MQTT', link: '/en/projects/parcel-to-mqtt/' }

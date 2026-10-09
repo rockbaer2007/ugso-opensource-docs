@@ -1,6 +1,15 @@
-# MQTT Projekte
+# UGSo HA Apps
 
-Diese Seite sammelt die Home-Assistant-Apps von UGSo Software für MQTT Discovery und den Datenaustausch mit externen MQTT-Brokern.
+Das gemeinsame Repository ist die zentrale Veröffentlichung für alle Home-Assistant-Apps von UGSo Software: MQTT-Apps, Grafik Visual Studio, Blocks for HA und zukünftige Projekte. Jede App hat ein eigenes Unterverzeichnis, eine eigene Version und Dokumentation. Die bestehende Repository-URL bleibt erhalten.
+
+## UGSo HA Apps und weitere Projekte
+
+| Projekt | Dokumentation |
+| --- | --- |
+| [UGSo Blocks for HA](/projects/blocks-for-ha/) | Visuelle Blocks für native HA-Automationen, YAML-Import/-Export und erweiterbare Falls-Zweige. Version 0.1.2: lokaler Prototyp, noch kein installierbares HA-Add-on. |
+| [Grafik Visual Studio](/projects/grafik-visual-studio/) | Grafischer Editor und Runtime für HA-Visualisierungen. |
+
+Beide Projekte liegen im selben Repository wie die folgenden MQTT-Apps.
 
 ## Gemeinsames Add-on-Repository
 
