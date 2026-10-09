@@ -76,7 +76,7 @@ Die Auswahl gilt nur in diesem Browser und bleibt nach einem Neuladen erhalten. 
 | Freien Anfangs- oder Endpunkt einer Verbindung verschieben | Punkt mit der Maus ziehen; fokussierten Punkt mit den Pfeiltasten in 1-Pixel-Schritten bewegen |
 | Linienpunkt schneller bewegen | Beim Drücken einer Pfeiltaste zusätzlich `Umschalt` halten: 10 Pixel pro Schritt |
 | Angedockten Linienpunkt lösen | `Strg` halten und den Punkt ziehen; mit `Strg` plus Pfeiltaste ebenfalls möglich |
-| Ganze Verbindungslinie verschieben | Auf die Linie drücken und mit gedrückter Maustaste ziehen; bestehende Andockverbindungen werden dabei gelöst |
+| Ganze Verbindungslinie verschieben | Freie Linie ziehen; bei angedockter Linie `Alt` halten und ziehen. Bestehende Andockverbindungen werden dabei gelöst. Einzelne Punktgriffe bewegen keine Mehrfachauswahl; Ziehen startet ab 6 px Bewegung. |
 | Zwischen- oder Sammelpunkt einfügen | Linie anklicken, „Zwischenpunkt“ oder „Sammelpunkt“ wählen und mit **OK** bestätigen |
 
 Die Kürzel für Rückgängig/Wiederholen gelten, wenn der Fokus nicht in einem Eingabefeld, Textbereich oder Auswahlfeld liegt. Für Ausschneiden, Kopieren und Einfügen stehen Schaltflächen bereit; dafür sind derzeit keine globalen `Strg+X/C/V`-Kürzel eingerichtet.

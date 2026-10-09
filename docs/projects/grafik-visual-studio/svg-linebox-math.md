@@ -4,6 +4,24 @@ title: SVG LineBox Math
 
 # SVG LineBox Math
 
+## Beispiel: Batterie laden und entladen
+
+Ein **Number**-Widget kann einen Entitäts- oder Vorschauwert an Math liefern. Aktiviere seinen **Ausgangspunkt** unter **Datenfluss** und verbinde genau diesen Punkt mit einem aktiven Math-Eingang. Für unsichtbare Leitungen nutze Wert-Verbindungen oder ab **0.1.285** SVG-Lines mit explizitem **Z-Index −100 oder kleiner**. Die Darstellung verschwindet in der Runtime, die Werte bleiben aktiv.
+
+Wenn **P zur Batterie** und **O aus der Batterie** fließt, gilt für eine Linie Batterie → Wechselrichter:
+
+| Einstellung | Wert |
+| --- | --- |
+| O | Eingang; `sensor.hyper_2000_eg_1_output_pack_power` |
+| P | Eingang; `sensor.hyper_2000_eg_1_pack_input_power` |
+| A | Ausgang |
+| Rechnung 1 | Aktivieren; Eigene Formel |
+| Formel | `O - P` |
+| Ausgänge | `A` |
+| Interne Übergabe | Aus |
+
+Beide Sensoren dürfen positive Zahlen liefern: O = 0, P = 1252 ergibt **−1252 W** (Laden); O = 150, P = 0 ergibt **+150 W** (Entladen). Bei gleichzeitig aktiven Werten ergibt sich der Nettofluss. Eine echte **0 ist gültig**. „Eingang O: Wert fehlt …“ bedeutet, dass kein gültiger Wert über die Verbindung ankommt: Ausgang aktivieren, passenden Ausgangspunkt prüfen und das Linienziel dem Eingang O zuordnen. Fehlende Werte werden nicht als Null behandelt.
+
 Ab **0.1.141** blendet **In Runtime ausblenden** unter Berechnung nur die Darstellung aus; alle Rechnungen und Wertübergaben bleiben aktiv. Die Variante **Wert-Berechnung** in [HA Grafik – Datenfluss](./datenfluss) verwendet dieselbe Logik und startet mit dieser Option eingeschaltet. Wert-Konverter und unsichtbare Wert-Verbindungen können vorgeschaltet werden.
 
 Ab Studio **0.1.138** enthält der vergrößerte Dialog **vier getrennte Rechnungen**. Jede hat eine eigene Aktivierung, Formel beziehungsweise Durchschnittsberechnung, Ausgangsliste und Ergebnisvorschau. Rechnung 1 übernimmt bei älteren Projekten die bisherige Berechnung und ihre Ausgänge; Rechnungen 2–4 sowie alle internen Eingangsübergaben sind zunächst aus.

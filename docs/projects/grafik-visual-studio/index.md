@@ -5,6 +5,8 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 # HA Grafik Visual Studio
 
+Aktueller dokumentierter Stand: **Studio 0.1.285**. [SVG-Line](./svg-line) und Wert-Verbindung erhalten vertikale Startpositionen und senkrechte rechtwinklige Pfadführung, weniger empfindliches Punktziehen sowie unsichtbare Runtime-Linien bei Z-Index −100. [Poti-Ausgänge](./industrial) steuern die Linienanimation direkt. Das [Number→Math-Beispiel](./svg-linebox-math) erklärt `O - P` für den Batterie-Nettofluss; [Galerie](./bildergalerie) mit Editorbild vor der animierten Demo.
+
 Neu ab Studio **0.1.280**: [UGSo Solar 0.1.3](./solar) bietet sieben Linienpunkte an der Unterkante des Solo-Wechselrichters. Enthält außerdem vier Solarpanel-Eingänge am Stapel-Kopfteil, Batterieanschlüsse an der Gehäusenaht, getrennte Batterie-Wertfarben und ein spiegelbares Solarpanel mit Standfuß.
 
 Neu ab Studio **0.1.215**: Das externe [Material-Design-Set 1.0.0](materialdesign.md) enthält **49 Widget-Einträge**, Autocomplete, Eingaben, Buttons, Anzeigen, Listen, Diagramme, Kalender und Seitenlayouts. Ein Vergleichsprojekt bereitet die Prüfung Widget für Widget vor.

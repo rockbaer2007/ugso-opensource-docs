@@ -76,7 +76,7 @@ The choice is stored only in this browser and survives a reload. Other users and
 | Move a free connection endpoint | Drag the endpoint; use arrow keys on a focused endpoint for 1-pixel steps |
 | Move a connection endpoint faster | Hold `Shift` with an arrow key for 10-pixel steps |
 | Detach a connected endpoint | Hold `Ctrl` and drag it; `Ctrl` plus an arrow key also works |
-| Move an entire connection line | Press and drag the line; this detaches its existing docked endpoints |
+| Move an entire connection line | Drag a free line; hold `Alt` to drag a docked line. This detaches its endpoints. Individual point handles do not move a multi-selection; dragging starts after 6 px of movement. |
 | Add an intermediate or collector point | Click the line, choose “Intermediate point” or “Collector point”, then confirm with **OK** |
 
 Undo/redo shortcuts apply when focus is outside input, text area and select controls. Cut, copy and paste are available as buttons; global `Ctrl+X/C/V` shortcuts are not currently implemented.

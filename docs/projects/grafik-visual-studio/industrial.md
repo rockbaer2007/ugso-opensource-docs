@@ -203,6 +203,10 @@ Alle Kippschalter-Eigenschaften gelten auch hier: Beschriftung, zusätzliche Sch
 
 ## Gauge/Poti: Daten und Bedienung
 
+Ab **Studio 0.1.282** steuert der aktive Datenfluss-Ausgang auch Tempo und Richtung einer angeschlossenen SVG-Line. Eine zusätzliche Home-Assistant-Ausgangsentität ist dafür nicht nötig: Das Feld **Ausgang: number/input_number-Entität** bleibt bei rein lokalen Verbindungen leer; ein Startwert wie `0` gehört ins Vorschauwertfeld. Für Home-Assistant-Schreibaktionen wähle dagegen eine verfügbare `number.*`- oder `input_number.*`-Entität.
+
+Für sichtbar wertabhängiges Tempo: Animation einschalten, **Poti / SVG LineBox-Teiler** beispielsweise auf **10** setzen und automatische Poti-/LineBox-Teileranpassung ausschalten. 10 ergibt 1 Zyklus/s, 20 ergibt 2; 0 steht still, negative Werte laufen rückwärts. Mit Teiler 1 erreichen alle Beträge ab 20 die Höchstgeschwindigkeit. Weitere Details unter [SVG-Line](./svg-line); [Editorbild und Animation](./bildergalerie) zeigen den Aufbau.
+
 Die folgenden Abschnitte zu Skala und Wertanzeige beschreiben Gauge/Poti. Der Kippschalter hat einen eigenen Abschnitt am Ende der Seite.
 
 - **Ohne Eingang:** Poti-Bedienung in der Runtime per Maus, Touch oder Tastatur. Startwert und Bedien-Schrittweite sind einstellbar.

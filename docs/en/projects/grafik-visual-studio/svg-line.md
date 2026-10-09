@@ -4,6 +4,15 @@ title: SVG-Line – draw and animate connections
 
 # SVG-Line
 
+## Changes through Studio 0.1.285
+
+- **Vertical starting position** under **Line** applies to SVG lines and Value connections. Unchecked means a horizontal free starting position. Vertical automatic orthogonal routes leave the start vertically and turn left or right at target height. Docked lines support this routing too; explicit intermediate points retain priority.
+- Point drags start after **6 screen pixels** of movement. Individual handles do not initiate group movement or jump to the pointer. The other endpoint retains its binding. **Ctrl + drag** detaches a single docked endpoint; **Alt + drag on the line** moves a docked line as a whole and detaches both endpoints.
+- Explicit **z-index −100 or lower** hides an SVG line only in runtime. It remains editable and continues forwarding values, including Number-to-Math inputs. Editor stacking is independent.
+- From **0.1.282**, active industrial rotary/linear outputs directly control the connected SVG line's speed and direction without an extra numeric entity. Use the **rotary / SVG LineBox divisor**: 10 / 10 = 1 cycle/s; 20 / 10 = 2 cycles/s. Zero stops animation; negatives reverse direction. With divisor 1, magnitudes of 20 or greater reach the 20 cycles/s limit. Disable automatic rotary/LineBox divisor adjustment for value-dependent speed; enabling it deliberately maintains the target speed. Value connections themselves are not animated.
+
+See the editor setup and animated runtime demo in the [gallery](./bildergalerie).
+
 From Studio 0.1.136, **automatic divisor adjustment** is available for numeric entities and LineBox outputs. It keeps animation at an adjustable speed as power changes. See **Automatic divisor adjustment: how and why** below for setup and calculation details.
 
 Find **SVG-Line** under **HA Grafik – Spezial**. It visually connects widgets, routes paths around corners, and can animate a value flow. A line can start or end at a widget docking point, an explicitly enabled collector point on another SVG-Line, or free coordinates. The line itself is not a Home Assistant entity; an optional entity controls its animation.
@@ -19,7 +28,7 @@ Find **SVG-Line** under **HA Grafik – Spezial**. It visually connects widgets,
 | Drag a free endpoint | Moves the start or end. Arrow keys move a focused point by 1 pixel, or 10 pixels with `Shift`. |
 | Hold `Ctrl` and drag a docked endpoint | Detaches and moves it. `Ctrl` plus an arrow key also works. |
 | Drag an intermediate point | Changes a manual multi-point path. |
-| Drag the line itself | Moves the entire line and detaches its existing start/target docking. |
+| Drag the line itself | Drag free lines directly; hold `Alt` for docked lines. Moves the entire line and detaches its existing start/target docking. |
 | Click the line without dragging | Opens the **Intermediate point**, **Collector point** or **Value output point** choice; **OK** inserts the point. |
 
 ## Paths and collector points

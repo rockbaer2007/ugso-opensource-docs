@@ -4,6 +4,15 @@ title: SVG-Line – Verbindungslinien zeichnen und animieren
 
 # SVG-Line
 
+## Änderungen bis Studio 0.1.285
+
+- **Vertikale Startposition** unter **Linie** gilt für SVG-Line und Wert-Verbindung. Ohne Haken startet eine freie Linie horizontal. Bei automatisch rechtwinkligem Pfad läuft eine vertikale Linie zuerst senkrecht und biegt auf Zielhöhe nach rechts oder links ab. Auch angedockte Linien unterstützen diese Pfadführung; manuelle Zwischenpunkte behalten Vorrang.
+- Punktbewegungen beginnen erst nach **6 Pixeln Mausbewegung**. Einzelne Griffe lösen keinen Gruppen-Drag aus und springen nicht zur Mausposition. Der jeweils andere Anschluss bleibt gebunden. **Strg + Ziehen** löst gezielt einen angedockten Endpunkt; **Alt + Ziehen auf der Linie** verschiebt eine angedockte Linie als Ganzes und löst beide Anschlüsse.
+- Ein expliziter **Z-Index −100 oder kleiner** blendet eine SVG-Line nur in der Runtime aus. Sie bleibt im Editor bearbeitbar und überträgt weiterhin Werte, etwa von Number zu Math. Das ist unabhängig von ihrer Zeichenreihenfolge im Editor.
+- Ab **0.1.282** liefert ein aktiver Gauge/Poti- oder Linear-Ausgang direkt Tempo und Richtung der angeschlossenen SVG-Line, ohne zusätzliche Zahlen-Entität. Nutze **Poti / SVG LineBox-Teiler (bei Übergabe)**: Wert 10 / Teiler 10 = 1 Zyklus/s; Wert 20 / Teiler 10 = 2 Zyklen/s. Null stoppt die Animation, negative Werte kehren sie um. Bei Teiler 1 erreichen Beträge ab 20 die Höchstgeschwindigkeit von 20 Zyklen/s. Für wertabhängiges Tempo die automatische Poti-/LineBox-Teileranpassung ausschalten; eingeschaltet hält sie bewusst die Zielgeschwindigkeit konstant. Wert-Verbindungen selbst haben keine Animation.
+
+Den Aufbau und die animierte Runtime-Demo findest du in der [Galerie](./bildergalerie).
+
 Ab Studio 0.1.136 gibt es eine **automatische Teileranpassung** für Zahlen-Entitäten und LineBox-Ausgänge. Sie hält die Animation bei wechselnden Leistungen auf einer einstellbaren Geschwindigkeit. Die Einrichtung und Berechnung sind unten unter **Automatische Teileranpassung: wie und warum** erklärt.
 
 **SVG-Line** findest du unter **HA Grafik – Spezial**. Das Widget verbindet andere Widgets optisch, führt Linien über Ecken und kann einen Wertefluss animieren. Eine Linie kann an Widget-Andockpunkten, an einem ausdrücklich aktivierten Sammelpunkt einer anderen SVG-Line oder an freien Koordinaten beginnen und enden. Sie ist selbst keine Home-Assistant-Entität; eine optionale Entität steuert ihre Animation.
@@ -19,7 +28,7 @@ Ab Studio 0.1.136 gibt es eine **automatische Teileranpassung** für Zahlen-Enti
 | Freien Endpunkt ziehen | Ändert Anfang oder Ende der Linie. Mit den Pfeiltasten verschiebst du einen fokussierten Punkt um 1 Pixel, mit `Umschalt` um 10 Pixel. |
 | Angedockten Endpunkt mit `Strg` ziehen | Löst die Verbindung und verschiebt den Punkt. `Strg` plus Pfeiltaste funktioniert ebenfalls. |
 | Zwischenpunkt ziehen | Ändert den Verlauf des manuellen Mehrpunktpfads. |
-| Linie mit gedrückter Maustaste ziehen | Verschiebt die ganze Linie und löst dabei bisherige Start-/Ziel-Andockungen. |
+| Ganze Linie ziehen | Freie Linie direkt ziehen; angedockte Linie mit `Alt` ziehen. Verschiebt die ganze Linie und löst dabei bisherige Start-/Ziel-Andockungen. |
 | Linie ohne Ziehen anklicken | Öffnet die Wahl **Zwischenpunkt**, **Sammelpunkt** oder **Wert-Koppelpunkt**; nach **OK** wird der Punkt eingefügt. |
 
 ## Pfad und Sammelpunkte

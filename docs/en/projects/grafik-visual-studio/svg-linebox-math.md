@@ -4,6 +4,24 @@ title: SVG LineBox Math
 
 # SVG LineBox Math
 
+## Example: battery charging and discharging
+
+A **Number** widget can supply an entity or preview value to Math. Enable its **output point** under **Data flow**, then connect that exact port to an active Math input. Use Value connections or, from **0.1.285**, SVG lines with explicit **z-index −100 or lower** for invisible runtime wiring. Hiding the line does not stop value forwarding.
+
+For **P into the battery** and **O out of the battery**, with a battery → inverter line:
+
+| Setting | Value |
+| --- | --- |
+| O | Input; `sensor.hyper_2000_eg_1_output_pack_power` |
+| P | Input; `sensor.hyper_2000_eg_1_pack_input_power` |
+| A | Output |
+| Calculation 1 | Enabled; Custom expression |
+| Expression | `O - P` |
+| Outputs | `A` |
+| Internal handoff | Disabled |
+
+Both sensors may provide positive numbers: O = 0, P = 1252 gives **−1252 W** (charging); O = 150, P = 0 gives **+150 W** (discharging). Simultaneous readings produce net flow. A real **zero is valid**. “Input O: value missing …” means no valid value reaches that input: enable the source output, verify its selected port and connect the line target to O. Missing values are not silently replaced with zero.
+
 From **0.1.141**, **Hide in runtime** under Calculation hides only the display; all calculations and output handoffs remain active. **Value calculation** in [HA Grafik – Data flow](./datenfluss) uses the same logic with this option enabled by default. Value converters and invisible Value connections can supply its inputs.
 
 From Studio **0.1.138**, the enlarged dialog contains **four independent calculations**. Each has its own enabled state, formula or average mode, output list and result preview. Existing projects retain their previous calculation and outputs as calculation 1; calculations 2–4 and all internal input handoffs start disabled.

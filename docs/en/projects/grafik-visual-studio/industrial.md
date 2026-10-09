@@ -203,6 +203,10 @@ All toggle settings apply: captions, additional ON/OFF, 1/0, EIN/AUS or Custom l
 
 ## Gauge/Poti: data and controls
 
+From **Studio 0.1.282**, the active data-flow output also controls the speed and direction of a connected SVG line. No additional Home Assistant output entity is required: leave **Output: number/input_number entity** empty for local connections; put a starting value such as `0` in the preview-value field. For Home Assistant writes, select an available `number.*` or `input_number.*` entity instead.
+
+For visibly value-dependent speed, enable animation, set the **rotary / SVG LineBox divisor** to **10**, for example, and disable automatic rotary/LineBox divisor adjustment. Value 10 gives 1 cycle/s, 20 gives 2; zero stops and negatives reverse direction. Divisor 1 reaches the maximum speed for all magnitudes of 20 or higher. See [SVG-Line](./svg-line) for details and the [editor screenshot and animation](./bildergalerie) for the setup.
+
 The following scale and value-display sections describe Gauge/Poti. Toggle switches have a dedicated section at the end of this page.
 
 - **No input:** rotary control in runtime with mouse, touch or keyboard. Initial value and control step are configurable.

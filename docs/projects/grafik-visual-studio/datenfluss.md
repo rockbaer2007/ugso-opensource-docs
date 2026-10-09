@@ -4,6 +4,8 @@ title: Datenfluss – Werte, Konvertierung und Berechnung
 
 # HA Grafik – Datenfluss
 
+Bis Studio **0.1.285** ergänzt: SVG-Line und Wert-Verbindung unterstützen **Linie → Vertikale Startposition**. Rechtwinklige vertikale Linien laufen erst senkrecht, dann auf Zielhöhe nach links oder rechts. Punktgriffe starten nach 6 px Bewegung und verschieben keine Mehrfachauswahl. Angedockte Linien als Ganzes mit **Alt** ziehen. Eine normale SVG-Line mit **Z-Index −100 oder kleiner** bleibt ebenfalls in der Runtime unsichtbar, ohne ihre Werte zu verlieren. Sie kann **Number → Math** verbinden; Anleitung und Nullwert-Beispiel unter [LineBox Math](./svg-linebox-math).
+
 Ab Studio **0.1.141** enthält die eigene Palette **HA Grafik – Datenfluss** drei Widgets. Alle Berechnungen und Konvertierungen laufen im Browser des jeweiligen Display-Computers. Home Assistant liefert die Entitätswerte; zusätzliche HA-Entitäten sind für die interne Verarbeitung nicht nötig. Die Visualisierung muss dafür geöffnet sein.
 
 | Widget | Im Editor | In der Runtime |
