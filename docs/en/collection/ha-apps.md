@@ -14,7 +14,7 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 
 | Project | Description |
 | --- | --- |
-| [UGSo Blocks for HA](/en/projects/blocks-for-ha/) | Build native HA automations with visual Blocks; local prototype with YAML export/import and extensible branches. |
+| [UGSo Blocks for HA](/en/projects/blocks-for-ha/) | Experimental HA app: build native automations with visual Blocks; ingress, YAML export/import and extensible branches. |
 | [FRITZ!Box to MQTT](/en/projects/fritzbox-to-mqtt/) | FRITZ!Box data through MQTT Discovery for Home Assistant. |
 | [Heizöl to MQTT](/en/projects/heizoel-to-mqtt/) | Heating-oil prices through MQTT Discovery for Home Assistant. |
 | [Parcel to MQTT](/en/projects/parcel-to-mqtt/) | Development discontinued. Alternative: [Parcel Tracker](https://github.com/SoerenKaiser99/parcel_tracker). Documentation retained as an archive. |

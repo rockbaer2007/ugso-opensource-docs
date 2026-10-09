@@ -4,7 +4,11 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.2 · local prototype.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. A live HA connection and installable HA add-on are still planned.
+**Version 0.1.3 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+
+## Install from the HA app store
+
+Add or refresh `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` in the app store. Install **UGSo Blocks for HA**, start it and select **Open Web UI**. The app supports amd64 and aarch64 and serves the editor through HA ingress. No additional token is needed to open it. It does not yet access HA entities or write HA system files.
 
 ## Start and files
 

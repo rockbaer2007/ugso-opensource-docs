@@ -4,7 +4,11 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.2 · lokaler Prototyp.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Eine Live-HA-Verbindung und ein installierbares HA-Add-on sind noch geplant.
+**Version 0.1.3 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
+
+## Im HA-App-Store installieren
+
+Das gemeinsame Repository `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` hinzufügen beziehungsweise über die Repository-Aktualisierung neu laden. **UGSo Blocks for HA** installieren, starten und **Weboberfläche öffnen** wählen. Die App unterstützt amd64 und aarch64 und öffnet den Editor über HA-Ingress. Zum Öffnen ist keine zusätzliche Token-Eingabe nötig. Die App greift noch nicht auf HA-Entitäten zu und schreibt keine HA-Systemdateien.
 
 ## Start und Dateien
 

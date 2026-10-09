@@ -6,7 +6,7 @@ Das gemeinsame Repository ist die zentrale Veröffentlichung für alle Home-Assi
 
 | Projekt | Dokumentation |
 | --- | --- |
-| [UGSo Blocks for HA](/projects/blocks-for-ha/) | Visuelle Blocks für native HA-Automationen, YAML-Import/-Export und erweiterbare Falls-Zweige. Version 0.1.2: lokaler Prototyp, noch kein installierbares HA-Add-on. |
+| [UGSo Blocks for HA](/projects/blocks-for-ha/) | Experimentelle HA-App 0.1.3: visuelle Blocks für native Automationen, YAML-Import/-Export und erweiterbare Falls-Zweige; Editor über HA-Ingress. |
 | [Grafik Visual Studio](/projects/grafik-visual-studio/) | Grafischer Editor und Runtime für HA-Visualisierungen. |
 
 Beide Projekte liegen im selben Repository wie die folgenden MQTT-Apps.

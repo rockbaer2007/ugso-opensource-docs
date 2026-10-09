@@ -6,7 +6,7 @@ The shared repository is the central publishing location for all UGSo Software H
 
 | Project | Documentation |
 | --- | --- |
-| [UGSo Blocks for HA](/en/projects/blocks-for-ha/) | Visual Blocks for native HA automations, YAML import/export and extensible branches. Version 0.1.2: local prototype, not yet an installable HA add-on. |
+| [UGSo Blocks for HA](/en/projects/blocks-for-ha/) | Experimental HA app 0.1.3: visual Blocks for native automations, YAML import/export and extensible branches; editor through HA ingress. |
 | [Grafik Visual Studio](/en/projects/grafik-visual-studio/) | Graphical editor and runtime for HA visualizations. |
 
 Both projects live in the same repository as the MQTT apps below.
