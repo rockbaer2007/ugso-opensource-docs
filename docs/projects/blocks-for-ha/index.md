@@ -73,6 +73,27 @@ Das Kategorienmenü ist dunkel, die aufgeklappte Blockauswahl hell. Werte sind g
 
 Projektdateien aus Version 0.1.4 und früher werden automatisch auf die neue Anschlussstruktur umgestellt. Alte Bedingungsketten werden als UND-Gruppen mit derselben YAML-Bedeutung erhalten. Die bestehenden YAML-Dateien bleiben importierbar.
 
+## Blockly-Bibliothek und verbindlicher Entwicklungsstand
+
+Wir verwenden bereits **Blockly 13.3.0**, die originale Bibliothek, statt eine eigene Block-Engine zu entwickeln. Blockly übernimmt Arbeitsfläche, Kategorie-Toolbox und Flyouts, Verbindungen mit Typprüfung, Shadow-Blocks, Mutatoren, Kontextmenü, Zoom, Papierkorb und Einfügemarkierungen. Unsere HA-Blocks, Strukturvalidierung, Projektmigration und der YAML-Generator sind eigener UGSo-Code. Es wird kein ioBroker-JavaScript ausgeführt.
+
+Die [Originaldokumentation zur Arbeitsfläche und zu Blockteilen](https://docs.blockly.com/guides/get-started/workspace-anatomy/) und die [Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/) dienen als Referenz für vertraute Bedienmuster. Bibliotheksupdates werden bewusst mit Verbindungs-, Import-/Export- und Browserprüfungen übernommen.
+
+| Aufgabe | Stand in 0.1.5 / nächster Schritt |
+| --- | --- |
+| Anschlussgeometrie und Typprüfung | Boolean-Bedingungen und Number-Werte seitlich; Auslöser/Aktionen als getrennte Statement-Ketten umgesetzt |
+| Erweiterbare Blocks | Falls und UND/ODER/NICHT umgesetzt; Aktionsdaten später als visuelle Felder |
+| Standardwerte | Shadow-Zahlen umgesetzt; Text- und Entitäts-Wertblocks offen |
+| Sensorwerte und Attribute | Offen; passende HA-Template-Ausgabe und Typumwandlung mitplanen |
+| Editorbedienung | Kontextmenü, Hilfe, Deaktivieren, Papierkorb-Wiederherstellung, Zoom und Einfügemarkierung vorhanden |
+| Kommentare | Im Projekt erhalten; YAML-Kommentare und eigener Kommentarblock offen |
+| Menü und Blockfarben | Dunkles Kategorienmenü, helle Blockauswahl, getrennte Gruppenfarben umgesetzt |
+| ioBroker-Kategorien | Schrittweise prüfen, zunächst System; Gegenüberstellung bei jeder Funktion aktualisieren |
+| Veröffentlichung und Updates | Jede neue HA-App von Anfang an im gemeinsamen Repository mit installierbarem Paket; Paket- und Oberflächenversion gemeinsam anheben |
+| HA-Verbindung, Katalog und Plugins | Offen; verwaltete Verbindung und deklarative Erweiterungen vorgesehen |
+
+Diese Seite hält umgesetzte Funktionen und offene Aufgaben zusammen fest und wird mit jeder Erweiterung gepflegt.
+
 ## System: Stand und nächste Schritte
 
 Steuern, Umschalten, Wartezeit und generische Aktionen sind vorhanden. Eigene Blocks für Kommentar, Debug, Entitätsauswahl, Zustand/Attribute als Werte, Existenz/Verfügbarkeit, Helfer und Script-Steuerung folgen schrittweise. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.

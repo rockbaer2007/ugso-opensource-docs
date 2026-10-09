@@ -73,6 +73,27 @@ The category menu is dark and the block flyout is light. Values are green, trigg
 
 Projects from version 0.1.4 and earlier are upgraded automatically. Old condition chains become AND groups preserving their YAML meaning. Existing supported YAML files remain importable.
 
+## Blockly library and tracked development status
+
+We already use the original **Blockly 13.3.0** library rather than building a separate block engine. Blockly provides the workspace, category toolbox and flyouts, typed connections, shadow blocks, mutators, context menu, zoom, trash and insertion markers. HA block definitions, structural validation, project migration and the YAML generator are UGSo code. No ioBroker JavaScript is executed.
+
+The [original workspace and block-parts documentation](https://docs.blockly.com/guides/get-started/workspace-anatomy/) and [Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/) guide familiar interaction patterns. Library updates require connection, import/export and browser checks.
+
+| Task | Status in 0.1.5 / next step |
+| --- | --- |
+| Connection geometry and type checks | Boolean conditions and Number values use side connections; triggers/actions use separate statement chains |
+| Extensible blocks | If and AND/OR/NOT implemented; visual action-data fields planned |
+| Default values | Shadow numbers implemented; text and entity value blocks pending |
+| Sensor values and attributes | Pending; include appropriate HA template output and type conversion |
+| Editor controls | Context menu, help, disable, trash recovery, zoom and insertion markers available |
+| Comments | Retained in projects; YAML comments and dedicated comment block pending |
+| Menu and block colors | Dark category menu, light flyout and distinct group colors implemented |
+| ioBroker categories | Review progressively, starting with System; update comparison for every feature |
+| Publishing and updates | Every new HA app starts in the shared repository with installable packaging; bump package and UI versions together |
+| HA connection, catalog and plugins | Pending; managed connection and declarative extensions planned |
+
+This page tracks implemented features and outstanding tasks together and is maintained with each extension.
+
 ## System: status and next steps
 
 Control, toggle, delay and generic actions are available. Dedicated comment, debug, entity picker, state/attribute value, existence/availability, helper and script-control blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
