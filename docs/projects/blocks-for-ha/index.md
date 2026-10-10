@@ -10,7 +10,7 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.23 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
+**Version 0.1.24 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
 
 Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -188,3 +188,5 @@ Der Knopf **?** öffnet die Tastaturhilfe. Blockly 13.3 bringt Navigation mit: T
 Originalquellen: [workspace-search-Plugin](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/workspace-search), [Blockly-Tastaturnavigation](https://docs.blockly.com/guides/configure/keyboard-nav/).
 
 Seit **0.1.23** benötigen Einleitung und Automationseinstellungen weniger Höhe: kleinere Überschrift und Abstände sowie 32 Pixel hohe Projektfelder und Knöpfe geben der Arbeitsfläche mehr Platz. HA-Verbindungsstatus und Entitätsanzahl stehen jetzt ebenfalls in der Einstellungsleiste und sind auch auf schmalen Bildschirmen sichtbar.
+
+Seit **0.1.24** klappt der Pfeil rechts oben die HA-Ausgabe nach rechts ein. Blockly erweitert sich in den frei werdenden Platz. Die schmale Leiste **HA-Ausgabe** öffnet das Panel wieder; der Zustand wird lokal gespeichert. Auf Mobilgeräten bleibt eine kompakte Zeile unter dem Editor. Das Einklappen verändert weder YAML noch Projekte.
