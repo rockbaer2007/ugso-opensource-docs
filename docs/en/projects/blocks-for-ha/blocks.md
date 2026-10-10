@@ -7,7 +7,7 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 119 block types and output formats remain unchanged.
 
-Version **0.1.37**: 119 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.38**: 119 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -318,3 +318,12 @@ The LCD automation with four `input_text.set_value` actions and `mode: restart` 
 | ![Time pattern (JSON)](/assets/blocks-for-ha/blocks/en/ugso_time_pattern_trigger.png) | `ugso_time_pattern_trigger` |
 
 [Home Assistant: time_pattern](https://www.home-assistant.io/triggers/time_pattern/).
+
+
+## Dynamic target entities
+
+Since **0.1.38**, **Target** in the generic **HA action** accepts a static entity ID or an HA template, such as `{{ ziel_tv }}`. Its entity dialog supports multiline input. The JSON target list can also combine static IDs and templates. Jinja remains unchanged and is evaluated by Home Assistant at execution time. Imported dynamic targets use the generic HA action because specialized switching blocks cannot reliably determine the domain.
+
+The bedroom-TV automation with a multiline summer-mode variable, 21:30 and 00:30 triggers and two choose branches is verified. Target templates, variable text and time conditions survive import, project reload and export. Entity fields in triggers and conditions still require static IDs.
+
+[Home Assistant: templates in action targets](https://www.home-assistant.io/docs/scripts/perform-actions/#setting-targets-and-options-with-a-template).

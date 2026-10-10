@@ -7,7 +7,7 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 119 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.37**: 119 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.38**: 119 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -318,3 +318,12 @@ Die LCD-Automation mit vier `input_text.set_value`-Aktionen und `mode: restart` 
 | ![Zeitmuster (JSON)](/assets/blocks-for-ha/blocks/de/ugso_time_pattern_trigger.png) | `ugso_time_pattern_trigger` |
 
 [Home Assistant: time_pattern](https://www.home-assistant.io/triggers/time_pattern/).
+
+
+## Dynamische Zielentitäten
+
+Seit **0.1.38** akzeptiert das Feld **Ziel** in der allgemeinen **HA-Aktion** eine feste Entitäts-ID oder ein HA-Template, zum Beispiel `{{ ziel_tv }}`. Der Entitätsdialog bietet dafür ein mehrzeiliges Eingabefeld. Auch die JSON-Zielliste darf feste IDs und Templates enthalten. Jinja bleibt unverändert erhalten und wird erst von Home Assistant ausgewertet. Dynamische Ziele werden beim Import in der allgemeinen HA-Aktion dargestellt; spezialisierte Schaltblöcke würden die Domain nicht zuverlässig bestimmen können.
+
+Die Schlafzimmer-TV-Automation mit einer mehrzeiligen Sommerbetrieb-Variable, 21:30 und 00:30 Uhr und zwei choose-Zweigen ist geprüft. Zielvorlagen, Variableninhalt und Uhrzeitbedingungen bleiben beim Import, Projekt-Neuladen und Export erhalten. Auslöser- und Bedingungsfelder für Entitäts-IDs verlangen weiterhin feste IDs.
+
+[Home Assistant: templates in action targets](https://www.home-assistant.io/docs/scripts/perform-actions/#setting-targets-and-options-with-a-template).

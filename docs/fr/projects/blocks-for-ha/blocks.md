@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.37 · 119 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.38 · 119 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -329,3 +329,12 @@ L’automatisation LCD avec quatre actions `input_text.set_value` et `mode: rest
 | ![Motif horaire (JSON)](/assets/blocks-for-ha/blocks/fr/ugso_time_pattern_trigger.png) | `ugso_time_pattern_trigger` |
 
 [Home Assistant: time_pattern](https://www.home-assistant.io/triggers/time_pattern/).
+
+
+## Entités cibles dynamiques
+
+Depuis **0.1.38**, **Cible** dans le bloc générique **Action HA** accepte un ID fixe ou un modèle HA, par exemple `{{ ziel_tv }}`. Le dialogue de sélection propose un champ multiligne. La liste JSON des cibles peut mélanger IDs fixes et modèles. Jinja est conservé et évalué par Home Assistant lors de l’exécution. Les cibles dynamiques importées utilisent le bloc générique, car les blocs spécialisés ne peuvent pas déterminer leur domaine de façon fiable.
+
+L’automatisation TV de la chambre avec variable multiligne du mode été, horaires 21:30 et 00:30 et deux branches choose est vérifiée. Modèles de cible, texte de variable et conditions horaires restent inchangés après import, rechargement et export. Les champs d’entité des déclencheurs et conditions exigent toujours des IDs fixes.
+
+[Home Assistant: templates in action targets](https://www.home-assistant.io/docs/scripts/perform-actions/#setting-targets-and-options-with-a-template).
