@@ -4,6 +4,8 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
+New in **0.1.42**: three compact, equally sized YAML import buttons, with two-line labels when needed. **Eingabefeld leeren** on the right clears the pasted text and import error. The current automation and replacement checkbox remain unchanged.
+
 New in **0.1.41**: 15 nested Jinja block types, 163 types in total. Edit entities, filters, comparisons, calculations and simple if/else/for templates. Exact originals remain until editing; unsupported templates remain original blocks. [Decomposition and limits](./advanced#jinja-experimental).
 
 Since **0.1.40**, all themes use **16 px block text**. The block menu stays at **100%**: fitting, mouse wheel and zoom controls affect only the workspace. Initial zoom 100%, fitting 85–120%, manual zoom 50–240%. Large automations remain scrollable; fitting never shrinks below 85% to preserve readability. Verified at Full HD, 2560 px and HiDPI.
@@ -18,7 +20,7 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.41 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.42 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Since **0.1.25**, select **YAML → Code importieren**, paste YAML and click **Importieren** instead of Save. Without the checkbox, triggers, conditions and actions are added; the current name, settings and block shapes are preserved. Conditions are combined with AND; additional triggers may start more runs. To replace everything, select **Aktuelle Automation vollständig ersetzen** and confirm. One supported automation as an object or single-item list is accepted, up to 1 MB. Invalid code or cancellation leaves the current blocks unchanged. Switching modes retains pasted text for this page session; successful import returns to output. Adding requires a valid current automation; complete replacement also works with incomplete blocks. File import through **Öffnen** remains available.
 
