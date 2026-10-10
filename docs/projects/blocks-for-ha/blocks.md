@@ -5,9 +5,9 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 114 Blocktypen und Ausgabeformate bleiben erhalten.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 115 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.17**: 114 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.17**: 115 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -221,7 +221,7 @@ Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dr
 
 [Zur Übersicht](/projects/blocks-for-ha/)
 
-Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 114 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 115 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
 
 ## Trigger-IDs und mehrere Ziele
 
@@ -245,3 +245,13 @@ Seit **0.1.30**: Ein Zeit-Auslöser akzeptiert über **Uhrzeiten als JSON-Liste*
 | **Native HA-Zeitbedingung**<br><code>ugso_native_time_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_native_time_condition.png" alt="Native HA-Zeitbedingung" style="max-width:280px;max-height:180px"> | `condition: time` · `before` · `after` |
 
 [Home Assistant: triggers](https://www.home-assistant.io/docs/automation/trigger/) · [Time condition](https://www.home-assistant.io/docs/scripts/conditions/#time-condition)
+
+## Temperatur geändert
+
+Seit **0.1.31** unterstützt der neue Block den nativen Auslöser temperature.changed. Ziel (JSON): entity_id als Text oder Liste. Schwelle (JSON): type any, above, below, between oder outside. any benötigt nur type; above/below benötigen value, between/outside value_min und value_max. Zahlen: number plus unit_of_measurement (°C/°F). Referenzen: entity (sensor, number oder input_number). Optional ist eine Trigger-ID. Andere Zielarten (Bereich/Gerät/Label) sind noch nicht importierbar. MQTT-Topics, qos/retain/evaluate_payload und mehrzeilige JSON-/Jinja-Payloads bleiben erhalten.
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Temperatur geändert**<br><code>ugso_temperature_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_temperature_trigger.png" alt="Temperatur geändert" style="max-width:280px;max-height:180px"> | temperature.changed |
+
+[Home Assistant: temperature.changed](https://www.home-assistant.io/triggers/temperature.changed/)

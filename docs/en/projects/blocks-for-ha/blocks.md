@@ -5,9 +5,9 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 114 block types and output formats remain unchanged.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 115 block types and output formats remain unchanged.
 
-Version **0.1.17**: 114 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.17**: 115 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -221,7 +221,7 @@ The colour field also uses the transitive dependency [field-grid-dropdown](https
 
 [Back to overview](/en/projects/blocks-for-ha/)
 
-Custom blocks since 0.1.18 extend the 114 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+Custom blocks since 0.1.18 extend the 115 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
 
 ## Trigger IDs and multiple targets
 
@@ -245,3 +245,13 @@ Since **0.1.30**: enable **Times as JSON list** for several fixed times, e.g. `[
 | **Native HA time condition**<br><code>ugso_native_time_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_native_time_condition.png" alt="Native HA time condition" style="max-width:280px;max-height:180px"> | `condition: time` · `before` · `after` |
 
 [Home Assistant: triggers](https://www.home-assistant.io/docs/automation/trigger/) · [Time condition](https://www.home-assistant.io/docs/scripts/conditions/#time-condition)
+
+## Temperature changed
+
+Since **0.1.31**, the new block supports native temperature.changed. Target (JSON): entity_id string or list. Threshold (JSON): type any, above, below, between or outside. any requires only type; above/below require value, between/outside value_min and value_max. Numbers: number plus unit_of_measurement (°C/°F). References: entity (sensor, number or input_number). Optional trigger ID. Other targets (area/device/label) remain unsupported. MQTT topics, qos/retain/evaluate_payload and multiline JSON/Jinja payloads are preserved.
+
+| Block | Image | Description |
+| --- | --- | --- |
+| **Temperature changed**<br><code>ugso_temperature_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_temperature_trigger.png" alt="Temperature changed" style="max-width:280px;max-height:180px"> | temperature.changed |
+
+[Home Assistant: temperature.changed](https://www.home-assistant.io/triggers/temperature.changed/)

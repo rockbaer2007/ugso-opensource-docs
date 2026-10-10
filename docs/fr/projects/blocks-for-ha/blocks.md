@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.28 · 114 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.28 · 115 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -256,3 +256,13 @@ Depuis **0.1.30** : activer **Heures en liste JSON** pour plusieurs heures fixes
 | **Condition horaire HA native**<br><code>ugso_native_time_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_native_time_condition.png" alt="Condition horaire HA native" style="max-width:280px;max-height:180px"> | `condition: time` · `before` · `after` |
 
 [Home Assistant: triggers](https://www.home-assistant.io/docs/automation/trigger/) · [Time condition](https://www.home-assistant.io/docs/scripts/conditions/#time-condition)
+
+## Température modifiée
+
+Depuis **0.1.31**, le nouveau bloc prend en charge temperature.changed natif. Cible (JSON) : entity_id texte ou liste. Seuil (JSON) : type any, above, below, between ou outside. any exige seulement type ; above/below exigent value, between/outside value_min et value_max. Nombres : number et unit_of_measurement (°C/°F). Références : entity (sensor, number ou input_number). ID facultatif. Autres cibles (zone/appareil/étiquette) non prises en charge. Les topics MQTT, qos/retain/evaluate_payload et contenus JSON/Jinja multilignes restent présents.
+
+| Block | Image | Description |
+| --- | --- | --- |
+| **Température modifiée**<br><code>ugso_temperature_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_temperature_trigger.png" alt="Température modifiée" style="max-width:280px;max-height:180px"> | temperature.changed |
+
+[Home Assistant: temperature.changed](https://www.home-assistant.io/triggers/temperature.changed/)
