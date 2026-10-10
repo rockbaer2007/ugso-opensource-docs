@@ -5,7 +5,15 @@ description: Triggers, conditions, targets, action groups and experimental Jinja
 
 # Extended HA automations and Jinja
 
-Since **0.1.41**, there are 163 block types. **HA extended** and **Jinja (experimental)** complement the simple blocks. Simple imported steps retain their existing shapes. Additional fields appear as editable JSON in extended blocks. Import checks the supported structure; verify integrations, device IDs, templates and execution in Home Assistant.
+Since **0.1.43**, extended HA blocks offer labelled inputs instead of one large JSON object. There are still 163 block types; **HA extended** and **Jinja (experimental)** complement simple blocks. Import checks the supported structure; verify integrations, device IDs, templates and execution in Home Assistant.
+
+All 15 classic extended triggers, general conditions and steps, integration targets/options, calendars, temperature thresholds, time patterns, variables and wait/step options use structured fields. **numeric_state**, for example, provides entity, above, below, attribute, template, duration and ID. Empty optional fields are omitted; both bounds can be edited independently. Entity fields support HA search, manual IDs, JSON lists and templates. When changing the type of a general block, add any further fields through its options if needed.
+
+Enter lists and objects as JSON; `null` is an explicit null, `"null"` is text. States and payloads remain text. Unchanged values retain their original types and exact Jinja source. **Additional options (JSON)** retains extra properties. Complex data and nested branches remain separate JSON fields; they are not automatically decomposed into connected branches. Older JSON projects automatically load the new fields; YAML import/export and saved projects remain compatible.
+
+![Numeric-state trigger with separate inputs](/assets/blocks-for-ha/blocks/en/ugso_ha_numeric_state_trigger.png)
+
+Original specification: [HA triggers](https://www.home-assistant.io/docs/automation/trigger/), [HA conditions](https://www.home-assistant.io/docs/scripts/conditions/), [HA steps](https://www.home-assistant.io/docs/scripts/).
 
 ## Triggers and conditions
 
@@ -25,7 +33,7 @@ The integration block provides a dropdown for power, motion and timers. Enter ta
 
 **HA action with target type** offers `entity_id`, `device_id`, `area_id`, `floor_id` and `label_id`. Enter an ID, JSON list or HA template. Use **HA step (extended)** for multiple target types together. Action data may be an object or a complete HA template; import preserves either form.
 
-Variables also support lists and nested objects. Common step options `alias`, `enabled` and `continue_on_error` are preserved, as are response variables and metadata. Extended blocks provide JSON fields for these. `enabled` accepts a Boolean or HA template; `continue_on_error` accepts a Boolean.
+Variables also support lists and nested objects. Existing variables have individual value fields; add new names through additional options. Common step options `alias`, `enabled`, `continue_on_error`, response variables and metadata have separate inputs. `enabled` accepts a Boolean or HA template; `continue_on_error` accepts a Boolean.
 
 Under **Projekt & Beschreibung → HA options**, edit `variables`, `trigger_variables`, `initial_state`, `trace.stored_traces` and `max_exceeded`. **Apply** accepts valid options only. Omitted options are removed; `{}` removes every option managed by this field. Name and execution mode remain separate. An automation without `alias` can be imported; its filename falls back to `automation.yaml`. The surrounding app controls currently remain German.
 

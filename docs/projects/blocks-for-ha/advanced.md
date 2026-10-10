@@ -5,7 +5,15 @@ description: Auslöser, Bedingungen, Ziele, Ablaufgruppen und experimentelle Jin
 
 # Erweiterte HA-Automationen und Jinja
 
-Seit **0.1.41** gibt es 163 Blocktypen. Die Kategorien **HA erweitert** und **Jinja (experimentell)** ergänzen die einfachen Blocks. Einfache importierte Schritte behalten ihre bisherigen Formen. Zusätzliche Felder erscheinen in erweiterten Blocks als bearbeitbares JSON. Der Import prüft die unterstützte Struktur; Integration, Geräte-IDs, Templates und Ausführung müssen anschließend in Home Assistant geprüft werden.
+Seit **0.1.43** bieten die erweiterten HA-Blöcke beschriftete Eingaben statt eines großen JSON-Objekts. Weiterhin 163 Blocktypen: die Kategorien **HA erweitert** und **Jinja (experimentell)** ergänzen die einfachen Blocks. Der Import prüft die unterstützte Struktur; Integration, Geräte-IDs, Templates und Ausführung anschließend in Home Assistant prüfen.
+
+Alle 15 klassischen erweiterten Auslöser, allgemeine Bedingungen und Schritte sowie Integrationsziele/-optionen, Kalender, Temperaturgrenzen, Zeitmuster, Variablen und Warte-/Schrittoptionen sind umgestellt. **numeric_state** bietet etwa Entität, Über, Unter, Attribut, Template, Dauer und ID. Leere optionale Felder werden nicht ausgegeben; beide Zahlengrenzen sind unabhängig bearbeitbar. Entitätsfelder erlauben HA-Suche, manuelle IDs, JSON-Listen und Templates. Bei Typwechsel in allgemeinen Blöcken zusätzliche Felder gegebenenfalls über die Optionen ergänzen.
+
+Listen und Objekte als JSON eingeben; `null` ist ein expliziter Nullwert, `"null"` der Text. Zustände und Payloads bleiben Text. Unveränderte Werte behalten ihre ursprünglichen Typen und den vollständigen Jinja-Text. **Weitere Optionen (JSON)** erhält zusätzliche Angaben. Komplexe Daten und verschachtelte Zweige bleiben in getrennten JSON-Feldern; sie werden nicht beliebig in anschließbare Zweige zerlegt. Alte JSON-Projekte laden die neuen Felder automatisch; YAML-Import/-Export und gespeicherte Projekte bleiben kompatibel.
+
+![Numeric-state-Auslöser mit einzelnen Eingaben](/assets/blocks-for-ha/blocks/de/ugso_ha_numeric_state_trigger.png)
+
+Originalspezifikation: [HA-Auslöser](https://www.home-assistant.io/docs/automation/trigger/), [HA-Bedingungen](https://www.home-assistant.io/docs/scripts/conditions/), [HA-Schritte](https://www.home-assistant.io/docs/scripts/).
 
 ## Auslöser und Bedingungen
 
@@ -25,7 +33,7 @@ Der Integrationsblock bietet ein Dropdown für Leistung, Bewegung und Timer. Zie
 
 **HA-Aktion mit Zielart** bietet `entity_id`, `device_id`, `area_id`, `floor_id` und `label_id`. Eine ID, JSON-Liste oder ein HA-Template ist möglich. Mehrere Zielarten gleichzeitig lassen sich im **HA-Schritt (erweitert)** eingeben. Aktionsdaten dürfen Objekte oder ein vollständiges HA-Template sein; der Import erhält beide Formen.
 
-Variablen unterstützen zusätzlich Listen und verschachtelte Objekte. Gemeinsame Schrittoptionen `alias`, `enabled` und `continue_on_error` werden erhalten, ebenso Antwortvariablen und Metadaten. Erweiterte Blocks bieten dafür JSON-Felder. `enabled` akzeptiert Boolean oder HA-Template, `continue_on_error` einen Boolean.
+Variablen unterstützen zusätzlich Listen und verschachtelte Objekte. Vorhandene Variablen haben einzelne Wertfelder; neue Namen können über die zusätzlichen Optionen ergänzt werden. Gemeinsame Schrittoptionen `alias`, `enabled`, `continue_on_error`, Antwortvariablen und Metadaten haben eigene Eingaben. `enabled` akzeptiert Boolean oder HA-Template, `continue_on_error` einen Boolean.
 
 Unter **Projekt & Beschreibung → HA-Optionen** bearbeiten: `variables`, `trigger_variables`, `initial_state`, `trace.stored_traces` und `max_exceeded`. **Anwenden** übernimmt nur gültige Optionen. Nicht mehr enthaltene Optionen werden entfernt; `{}` entfernt alle Optionen dieses Feldes. Name und Ausführungsmodus bleiben separat. Eine Automation ohne `alias` kann importiert werden; der Dateiname fällt auf `automation.yaml` zurück.
 

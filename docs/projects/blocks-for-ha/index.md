@@ -4,6 +4,8 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
+Neu in **0.1.43**: erweiterte HA-Blöcke mit beschrifteten Eingaben, Entitätsauswahl und getrennten Optionen. Alte JSON-Projekte bleiben kompatibel. [Bedienung und Grenzen](./advanced).
+
 Neu in **0.1.42**: drei kompakte, gleich große Buttons beim YAML-Import, bei Bedarf mit zweizeiligen Beschriftungen. Rechts entfernt **Eingabefeld leeren** den Einfügetext und die Importfehlermeldung. Die aktuelle Automation und der Ersetzen-Haken bleiben erhalten.
 
 Neu in **0.1.41**: 15 verschachtelte Jinja-Blocktypen, insgesamt 163 Typen. Entitäten, Filter, Vergleiche, Berechnungen und einfache if/else-/for-Templates bearbeiten. Originaltext bleibt unverändert bis zur Bearbeitung; nicht unterstützte Templates bleiben Originalblocks. [Zerlegung und Grenzen](./advanced#jinja-experimentell).
@@ -20,7 +22,7 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.42 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
+**Version 0.1.43 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
 
 Seit **0.1.25** rechts **YAML → Code importieren** wählen, YAML einfügen und **Importieren** statt Speichern klicken. Ohne Haken werden Auslöser, Bedingungen und Aktionen ergänzt; Name, Einstellungen und bestehende Blockformen bleiben erhalten. Bedingungen werden gemeinsam als UND geprüft; zusätzliche Auslöser können weitere Starts verursachen. Zum vollständigen Ersetzen **Aktuelle Automation vollständig ersetzen** aktivieren und die Abfrage bestätigen. Unterstützt wird eine Automation als Objekt oder Liste mit einem Eintrag, maximal 1 MB. Ungültiger Code oder Abbruch lässt die aktuellen Blocks erhalten. Einfügetext bleibt beim Moduswechsel für diese Seite erhalten; nach Erfolg erscheint wieder die Ausgabe. Zum Ergänzen muss die aktuelle Automation gültig sein; vollständiger Ersatz funktioniert auch bei unvollständigen Blocks. Dateiimport über **Öffnen** bleibt verfügbar.
 

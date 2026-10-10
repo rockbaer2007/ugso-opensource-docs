@@ -5,7 +5,15 @@ description: Déclencheurs, conditions, cibles, groupes d’actions et reconnais
 
 # Automatisations HA avancées et Jinja
 
-Depuis **0.1.41**, 163 types de blocs sont disponibles. **HA avancé** et **Jinja (expérimental)** complètent les blocs simples. Les étapes simples importées gardent leurs formes. Les champs supplémentaires apparaissent en JSON modifiable dans les blocs avancés. L’import vérifie la structure prise en charge ; vérifier ensuite intégrations, IDs d’appareils, modèles et exécution dans Home Assistant.
+Depuis **0.1.43**, les blocs HA avancés proposent des champs nommés au lieu d’un grand objet JSON. Toujours 163 types ; **HA avancé** et **Jinja (expérimental)** complètent les blocs simples. L’import vérifie la structure ; vérifier ensuite intégrations, IDs d’appareils, modèles et exécution dans Home Assistant.
+
+Les 15 déclencheurs classiques avancés, conditions et étapes générales, cibles/options d’intégration, calendriers, seuils de température, motifs horaires, variables et options d’attente/étape utilisent des champs structurés. **numeric_state** propose entité, seuil supérieur, seuil inférieur, attribut, modèle, durée et ID. Les champs facultatifs vides sont omis ; les deux seuils sont indépendants. Les entités acceptent recherche HA, IDs manuels, listes JSON et modèles. Après changement du type d’un bloc général, ajouter si nécessaire les autres champs dans ses options.
+
+Saisir listes et objets en JSON ; `null` est une valeur nulle explicite, `"null"` du texte. États et payloads restent du texte. Les valeurs inchangées conservent leurs types et le texte Jinja exact. **Options supplémentaires (JSON)** conserve les propriétés complémentaires. Données complexes et branches imbriquées restent des champs JSON séparés ; elles ne sont pas automatiquement décomposées en branches connectées. Les anciens projets JSON chargent automatiquement les nouveaux champs ; import/export YAML et projets restent compatibles.
+
+![Déclencheur numeric-state avec champs séparés](/assets/blocks-for-ha/blocks/fr/ugso_ha_numeric_state_trigger.png)
+
+Spécification originale : [Déclencheurs HA](https://www.home-assistant.io/docs/automation/trigger/), [Conditions HA](https://www.home-assistant.io/docs/scripts/conditions/), [Étapes HA](https://www.home-assistant.io/docs/scripts/).
 
 ## Déclencheurs et conditions
 
@@ -25,7 +33,7 @@ Le bloc d’intégration propose un menu puissance, mouvement et minuteur. Saisi
 
 **Action HA avec type de cible** propose `entity_id`, `device_id`, `area_id`, `floor_id` et `label_id`. Saisir un ID, une liste JSON ou un modèle HA. **Étape HA avancée** accepte plusieurs types de cibles simultanément. Les données d’action peuvent être un objet ou un modèle HA complet ; l’import conserve les deux formes.
 
-Les variables acceptent également listes et objets imbriqués. Les options communes `alias`, `enabled` et `continue_on_error`, les variables de réponse et les métadonnées sont conservées dans les champs JSON. `enabled` accepte un booléen ou modèle HA ; `continue_on_error` un booléen.
+Les variables acceptent listes et objets imbriqués. Chaque variable existante dispose d’un champ ; ajouter de nouveaux noms dans les options supplémentaires. Les options `alias`, `enabled`, `continue_on_error`, variables de réponse et métadonnées disposent de champs séparés. `enabled` accepte un booléen ou modèle HA ; `continue_on_error` un booléen.
 
 Sous **Projekt & Beschreibung → Options HA**, modifier `variables`, `trigger_variables`, `initial_state`, `trace.stored_traces` et `max_exceeded`. **Appliquer** accepte uniquement des options valides. Les options omises sont supprimées ; `{}` supprime toutes les options gérées par ce champ. Nom et mode restent séparés. Sans `alias`, le nom de fichier devient `automation.yaml`. Les commandes générales de l’application restent actuellement allemandes.
 
