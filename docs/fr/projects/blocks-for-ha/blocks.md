@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.36 · 118 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.37 · 119 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -316,3 +316,16 @@ Depuis **0.1.36**, le premier champ du bloc **Action HA** accepte un nom d’act
 L’exemple Shelly conserve le préfixe `input_boolean.turn_` avec la lecture de l’état et les branches choose imbriquées. Home Assistant évalue le nom à l’exécution ; il doit alors produire un service disponible. Blocks vérifie les noms fixes et délimiteurs de modèle, pas la syntaxe Jinja ni le résultat à l’exécution. Les cibles restent des IDs fixes ; les modèles pour un objet data complet ne font pas partie de cette extension.
 
 [Home Assistant: choosing the action with a template](https://www.home-assistant.io/docs/scripts/perform-actions/#choosing-the-action-with-a-template)
+
+
+## Déclencheur de motif horaire
+
+Depuis **0.1.37**, **Déclencheurs** propose un bloc natif `time_pattern`. Le champ JSON accepte par exemple `{"seconds":"/30"}` pour les secondes 0 et 30 de chaque minute. Clés facultatives : `hours`, `minutes`, `seconds` ; au moins une est requise. Valeurs fixes : heures 0–23, minutes/secondes 0–59, nombres ou textes sans zéro initial. `*` correspond à toute valeur, `/n` aux valeurs divisibles par n (n > 0 dans la plage du champ). Les unités omises et les types nombre/texte restent inchangés ; Home Assistant applique ses valeurs par défaut lors de l’exécution. Un ID de déclencheur facultatif est disponible.
+
+L’automatisation LCD avec quatre actions `input_text.set_value` et `mode: restart` conserve ses modèles Jinja, formatage, découpage, remplissage et sauts de ligne après import, rechargement et export. Home Assistant exécute les modèles et le planning.
+
+| Block | Type |
+| --- | --- |
+| ![Motif horaire (JSON)](/assets/blocks-for-ha/blocks/fr/ugso_time_pattern_trigger.png) | `ugso_time_pattern_trigger` |
+
+[Home Assistant: time_pattern](https://www.home-assistant.io/triggers/time_pattern/).

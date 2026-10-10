@@ -5,9 +5,9 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 118 block types and output formats remain unchanged.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 119 block types and output formats remain unchanged.
 
-Version **0.1.36**: 118 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.37**: 119 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -221,7 +221,7 @@ The colour field also uses the transitive dependency [field-grid-dropdown](https
 
 [Back to overview](/en/projects/blocks-for-ha/)
 
-Custom blocks since 0.1.18 extend the 118 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+Custom blocks since 0.1.18 extend the 119 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
 
 ## Trigger IDs and multiple targets
 
@@ -305,3 +305,16 @@ Since **0.1.36**, the first field in **HA action** accepts a static action name 
 The Shelly example retains the action prefix `input_boolean.turn_` combined with the state lookup and the nested choose branches. Home Assistant evaluates the action name at runtime; it must then resolve to an available service name. Blocks checks static names and template delimiters, not Jinja syntax or runtime results. Target entities must still be fixed IDs; templating the entire data object is outside this extension.
 
 [Home Assistant: choosing the action with a template](https://www.home-assistant.io/docs/scripts/perform-actions/#choosing-the-action-with-a-template)
+
+
+## Time pattern trigger
+
+Since **0.1.37**, **Triggers** includes a native `time_pattern` block. Its JSON field can contain `{"seconds":"/30"}` to match seconds 0 and 30 of each minute. Optional keys are `hours`, `minutes` and `seconds`; at least one is required. Fixed values: hours 0–23, minutes/seconds 0–59, as numbers or strings without leading zeroes. `*` matches every value; `/n` matches values divisible by n (n > 0 within the field range). Omitted units and number/string types remain unchanged; Home Assistant applies its runtime defaults. An optional trigger ID is supported.
+
+The LCD automation with four `input_text.set_value` actions and `mode: restart` passes full round-trip checks: Jinja, formatting, slicing, padding and line breaks are preserved. Home Assistant executes the templates and schedule.
+
+| Block | Type |
+| --- | --- |
+| ![Time pattern (JSON)](/assets/blocks-for-ha/blocks/en/ugso_time_pattern_trigger.png) | `ugso_time_pattern_trigger` |
+
+[Home Assistant: time_pattern](https://www.home-assistant.io/triggers/time_pattern/).

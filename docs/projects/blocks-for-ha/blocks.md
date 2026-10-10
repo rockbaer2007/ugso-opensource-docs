@@ -5,9 +5,9 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 118 Blocktypen und Ausgabeformate bleiben erhalten.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 119 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.36**: 118 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.37**: 119 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -221,7 +221,7 @@ Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dr
 
 [Zur Übersicht](/projects/blocks-for-ha/)
 
-Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 118 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 119 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
 
 ## Trigger-IDs und mehrere Ziele
 
@@ -305,3 +305,16 @@ Seit **0.1.36** akzeptiert das erste Feld im Block **HA-Aktion** einen statische
 Beim Shelly-Beispiel bleibt die zusammengesetzte Aktion `input_boolean.turn_` plus Zustandsabfrage erhalten, ebenso die verschachtelten choose-Zweige. Home Assistant wertet den Aktionsnamen erst beim Ausführen aus; er muss dann einen vorhandenen Dienstnamen ergeben. Blocks prüft statische Aktionsnamen und vorhandene Template-Klammern, keine Jinja-Syntax oder Laufzeitergebnisse. Zielentitäten müssen weiterhin feste IDs sein; Templates für ganze Datenobjekte sind nicht Teil dieser Erweiterung.
 
 [Home Assistant: choosing the action with a template](https://www.home-assistant.io/docs/scripts/perform-actions/#choosing-the-action-with-a-template)
+
+
+## Zeitmuster-Auslöser
+
+Unter **Auslöser** steht seit **0.1.37** ein nativer `time_pattern`-Block. Das JSON-Feld enthält beispielsweise `{"seconds":"/30"}` für die Sekunden 0 und 30 jeder Minute. Optional sind `hours`, `minutes` und `seconds`; mindestens ein Feld ist erforderlich. Feste Werte: Stunden 0–23, Minuten/Sekunden 0–59, als Zahl oder Text ohne führende Nullen. `*` passt auf jeden Wert, `/n` auf durch n teilbare Werte (n > 0 innerhalb des Wertebereichs). Fehlende Einheiten und Zahl/Text-Typen bleiben unverändert; Home Assistant ergänzt seine Standardwerte zur Laufzeit. Optional ist eine Auslöser-ID.
+
+Die LCD-Automation mit vier `input_text.set_value`-Aktionen und `mode: restart` wurde vollständig geprüft: Jinja, Formatierung, Textkürzung, Auffüllen und Zeilenumbrüche bleiben erhalten. Home Assistant führt die Templates und den Zeitplan aus.
+
+| Block | Type |
+| --- | --- |
+| ![Zeitmuster (JSON)](/assets/blocks-for-ha/blocks/de/ugso_time_pattern_trigger.png) | `ugso_time_pattern_trigger` |
+
+[Home Assistant: time_pattern](https://www.home-assistant.io/triggers/time_pattern/).
