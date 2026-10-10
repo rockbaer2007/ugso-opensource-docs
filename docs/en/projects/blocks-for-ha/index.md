@@ -4,11 +4,13 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
+New in **0.1.18**: [Custom block/template editor](./custom-blocks) in a 95% dialog, custom category, multiple blocks per package, copyable JSON and ZIP import/export. [Block-package catalog](./catalog/).
+
 New in **0.1.17**: Load entities from HA and search existing block fields by name/ID. Light/script/helper filters, manual IDs offline and server-side credentials. [Usage, image and limits](./entities).
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.17 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.18 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -143,28 +145,21 @@ The [original workspace and block-parts documentation](https://docs.blockly.com/
 | ioBroker categories | System, date/time, conversion, timeouts, objects and logic reviewed; HA execution differences documented |
 | JSONata | Planned; evaluate native object/list access and an optional HA runtime adapter |
 | Publishing and updates | Every new HA app starts in the shared repository with installable packaging; bump package and UI versions together |
-| HA connection, catalog and plugins | Pending; managed connection and declarative extensions planned |
+| HA connection, catalog and plugins | Read-only entity integration and declarative block packages available; live action selection and package updates pending |
 
 This page tracks implemented features and outstanding tasks together and is maintained with each extension.
 
-## Planned: custom blocks and template packages
+## Custom blocks: implemented and roadmap
 
-Recorded on **October 10, 2026**; not implemented yet. The original [Blockly Developer Tools](https://raspberrypifoundation.github.io/blockly-samples/examples/developer-tools/index.html) should provide the design tool.
+Since 0.1.18 the HA form editor, Blockly preview, value/condition/action/trigger blocks, typed fields and value inputs, package import/export and embedded project definitions are available. [Usage and limits](./custom-blocks).
 
-- Four UGSo starting templates: **value**, **Boolean condition**, **HA action** and **container with an action body**.
-- Accept JSON definitions for fields, dropdowns, checkboxes, variables, numeric limits, images, colours and value/statement/dummy/end-of-row inputs.
-- Map fields and inputs to our own **HA YAML/Jinja generator**. JavaScript/Python/PHP/Dart/Lua selection supplies a generator stub, not a complete HA function.
-- Explicitly map connections to Boolean, Number, String, Value, RuntimeNumber, Time, Action and Trigger; align array/object connections with the existing type model. Keep connection checks separate from HA runtime validation.
-- Plan an **import dialog with block and output previews**, field/input mapping and validation. Do not run imported JavaScript generators without review.
-- Bundle multiple blocks into **versioned catalog/plugin packages** with unique package/block IDs, categories, descriptions, help, licences, examples and documentation. Account for dependencies, naming conflicts, updates, import/export and project migration.
-- Mutators and dynamic inputs require additional implementation. The original tool designs one block type at a time; packages combine separately designed definitions.
-- During future implementation, preserve existing projects, check JSON/YAML behavior, bump the applicable package version and update public DE/EN documentation with upstream references.
+Embedding the original Blockly Developer Tools, dropdowns, images, variable fields, statement containers, mutators, dynamic inputs, package updates and uninstall remain planned.
 
 ## System: status and next steps
 
 Control, toggle, delay, generic actions, logging, script control, entity refresh and helper control are available. Entity selection is available since 0.1.17. Dedicated comment, state/attribute value, existence/availability and number/text helper blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
 
-The full [comparison and implementation status](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.en.md) is updated with every feature. Catalog and declarative plugins are planned.
+The full [comparison and implementation status](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.en.md) is updated with every feature. Declarative block packages and a sample catalog are available since 0.1.18.
 
 ## Validation and origin
 

@@ -219,3 +219,5 @@ Die sechs bisherigen Originalplugins sind auf **13.2.0**, die vier Theme-/Zoom-P
 Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dropdown](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-grid-dropdown). HA-Ausgabe wird von uns erzeugt; die mitgelieferten JavaScript-Generatoren werden nicht verwendet.
 
 [Zur Übersicht](/projects/blocks-for-ha/)
+
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 111 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
