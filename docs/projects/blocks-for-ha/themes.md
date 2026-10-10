@@ -4,7 +4,7 @@ description: Gespeicherte Theme-Auswahl und zusätzlicher Einpassen-Knopf im Blo
 ---
 # Themes und Zoom
 
-Seit **0.1.16** enthält die Werkzeugleiste über der Arbeitsfläche eine **Theme-Auswahl**. Sie betrifft den Blockly-Bereich einschließlich Kategorien, Blockauswahl und Blocks. Die übrige App-Oberfläche bleibt unverändert. Es bleiben 111 Blocktypen.
+Seit **0.1.16** enthält die Werkzeugleiste über der Arbeitsfläche eine **Theme-Auswahl**. Sie betrifft den Blockly-Bereich einschließlich Kategorien, Blockauswahl und Blocks. Die Blockly-Palette ist unabhängig von der App-Darstellung. Es bleiben 111 Blocktypen.
 
 | Auswahl | Darstellung | Originalquelle |
 | --- | --- | --- |
@@ -34,3 +34,9 @@ Der obere Button **Einpassen** bleibt bestehen und begrenzt die Vergrößerung a
 Alle vier zusätzlichen Originalplugins sind auf **13.3.0** festgelegt, mit Blockly **13.3.0** eingebunden und unter Apache-2.0 lizenziert. Die sechs bisherigen Originalplugins bleiben auf 13.2.0. Die Pakete werden lokal ausgeliefert; keine externen Theme-Dateien oder CDN-Abhängigkeit. Originalquellen und Lizenzhinweise stehen auch im [Blockkatalog](./blocks).
 
 Geprüft: vier Themes, Schrift auf hellen Tritanopia-Blocks, unveränderte Projekt-/YAML-Ausgabe, gespeicherte Auswahl, unbekannte/gesperrte Speichereinstellungen, Einpassen und mobile Breite. Die HA-Ausführung wird durch diese Anzeigeänderung nicht verändert.
+
+## App-Darstellung: Hell, Dunkel oder System
+
+Seit **0.1.22** bietet **Darstellung** im Kopfbereich **Hell**, **Dunkel** und **System** für die gesamte umgebende App-Oberfläche: Kopfbereich, Panels, Formulare, YAML-Ausgabe, Dialoge, Entitätsauswahl und eigenen Block-/Template-Editor. Standard ist System; Änderungen der Betriebssystem-/Browser-Farbpräferenz werden sofort übernommen. Eine manuelle Auswahl überschreibt die Systemvorgabe. Die Einstellung wird lokal in diesem Browser gespeichert; bei gesperrtem Browser-Speicher funktioniert die Umschaltung weiterhin für die aktuelle Seite.
+
+Die Blockly-Themes bleiben separat in der Werkzeugleiste wählbar, einschließlich Modern und Tritanopia. Darstellung verändert weder Blocks noch erzeugtes YAML oder Projekte. Das originale Built-with-Blockly-Badge wechselt automatisch zur passenden hellen/dunklen Variante.

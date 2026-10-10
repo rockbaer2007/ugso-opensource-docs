@@ -4,7 +4,7 @@ description: Saved theme selection and an additional fit control in the Blockly 
 ---
 # Themes and zoom
 
-Since **0.1.16**, the toolbar above the workspace includes a **Theme selector**. It affects Blockly categories, flyouts and blocks. The surrounding application UI remains unchanged. There are still 111 block types.
+Since **0.1.16**, the toolbar above the workspace includes a **Theme selector**. It affects Blockly categories, flyouts and blocks. The Blockly palette is independent of the app appearance. There are still 111 block types.
 
 | Choice | Appearance | Upstream source |
 | --- | --- | --- |
@@ -34,3 +34,9 @@ The existing upper **Einpassen** button remains and caps enlargement at the comp
 All four additional original plugins are pinned to **13.3.0**, integrated with Blockly **13.3.0**, and licensed under Apache-2.0. The six existing plugins remain on 13.2.0. Packages are bundled locally without external theme files or CDN dependencies. Upstream links and notices are also in the [block catalog](./blocks).
 
 Verified: four themes, labels on light Tritanopia blocks, unchanged project/YAML output, saved choice, unknown/blocked storage preferences, fitting and mobile width. This display change does not alter HA execution.
+
+## App appearance: Light, Dark or System
+
+Since **0.1.22**, **Darstellung** in the header offers **Hell** (Light), **Dunkel** (Dark) and **System** for the entire surrounding application: header, panels, forms, YAML output, dialogs, entity selection and the custom block/template editor. System is the default and follows changes to the operating-system/browser colour preference immediately. A manual choice overrides the system setting. The preference is saved locally in this browser; if browser storage is unavailable, switching still works for the current page.
+
+Blockly themes remain independently selectable in the workspace toolbar, including Modern and Tritanopia. Appearance changes do not alter blocks, generated YAML or projects. The original Built-with-Blockly badge automatically uses the matching light/dark variant.
