@@ -12,7 +12,7 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.28 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
+**Version 0.1.29 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
 
 Seit **0.1.25** rechts **YAML → Code importieren** wählen, YAML einfügen und **Importieren** statt Speichern klicken. Ohne Haken werden Auslöser, Bedingungen und Aktionen ergänzt; Name, Einstellungen und bestehende Blockformen bleiben erhalten. Bedingungen werden gemeinsam als UND geprüft; zusätzliche Auslöser können weitere Starts verursachen. Zum vollständigen Ersetzen **Aktuelle Automation vollständig ersetzen** aktivieren und die Abfrage bestätigen. Unterstützt wird eine Automation als Objekt oder Liste mit einem Eintrag, maximal 1 MB. Ungültiger Code oder Abbruch lässt die aktuellen Blocks erhalten. Einfügetext bleibt beim Moduswechsel für diese Seite erhalten; nach Erfolg erscheint wieder die Ausgabe. Zum Ergänzen muss die aktuelle Automation gültig sein; vollständiger Ersatz funktioniert auch bei unvollständigen Blocks. Dateiimport über **Öffnen** bleibt verfügbar.
 
@@ -200,3 +200,5 @@ Seit **0.1.28**: Zustandslisten über **Zustände als JSON-Liste**, z. B. `["1_s
 **Einzelne Automation · HA-Editor** gibt keine oberste `id` aus. Trigger-IDs bleiben erhalten. Projekt und **automations.yaml-Liste** behalten eine vorhandene Automations-ID.
 
 [Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)
+
+Seit **0.1.29** nutzt die Blockly-Arbeitsfläche die vollständige Höhe des Editorbereichs bis zur Legende. Eine höhere YAML-Spalte vergrößert auch die Arbeitsfläche; die Ausgabe bleibt einklappbar.
