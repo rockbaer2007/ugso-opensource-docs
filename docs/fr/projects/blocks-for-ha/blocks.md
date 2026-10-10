@@ -7,16 +7,19 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 ## Messages depuis 0.1.48
 
-Nouvelle catégorie **Messages**, deux blocs DE/EN/FR. [Configuration, clés et envoi](../callmebot/).
+Nouvelle catégorie **Messages**, trois blocs DE/EN/FR. [Configuration, clés et envoi](../callmebot/).
+
+Depuis **0.1.50**, également **Signal · CallMeBot** avec sa propre sélection de profil. [Configurer l’application Signal](../callmebot-signal/).
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
-| **WhatsApp · CallMeBot**<br><code>ugso_callmebot_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_callmebot_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Profil, texte/Jinja et journal. Envoi MQTT via l’application UGSo CallMeBot. Clés conservées dans le backend. |
+| **WhatsApp · CallMeBot**<br><code>ugso_callmebot_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_callmebot_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Profil, texte/Jinja et journal. Envoi MQTT via l’application UGSo CallMeBot Whatsapp. Clés conservées dans le backend. |
+| **Signal · CallMeBot**<br><code>ugso_callmebot_signal_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_callmebot_signal_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Profil, texte/Jinja et journal. Envoi MQTT via l’application UGSo CallMeBot Signal. Clés conservées dans le backend. |
 | **Intégration WhatsApp**<br><code>ugso_whatsapp_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_whatsapp_action.png" alt="Intégration WhatsApp" style="max-width:360px;max-height:180px"> | whatsapp.send_message avec number ou target, ou notify.whatsapp. Destinataire sans +, message et compte facultatif. Configurer le jeton une fois dans HA. |
 
 ## Fonctions depuis 0.1.47
 
-Le catalogue actuel contient **168 types de blocs**. [Paramètres, export et limites](./blockly-audit).
+Le catalogue actuel contient **169 types de blocs**. [Paramètres, export et limites](./blockly-audit).
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
@@ -260,6 +263,8 @@ Ces plugins fournissent des champs ou commandes, sans être des types de blocs s
 Depuis **0.1.28** : **États en liste JSON**, par exemple `["1_single","1_double"]` ; IDs facultatifs dans tous les déclencheurs standard ; **Déclenché par ID** comme condition native (ID individuel ou liste JSON). Les actions HA génériques acceptent **Cibles en liste JSON**, des métadonnées facultatives et conservent explicitement les données vides. Les automatisations à quatre boutons et quatre branches `choose` sont entièrement importables.
 
 La sortie **Automatisation individuelle · Éditeur HA** omet l’`id` principal. Les IDs des déclencheurs restent présents. Les projets et la sortie **liste automations.yaml** conservent l’ID existant de l’automatisation.
+
+Depuis **0.1.50**, également **Signal · CallMeBot** avec sa propre sélection de profil. [Configurer l’application Signal](../callmebot-signal/).
 
 | Block | Image | Description |
 | --- | --- | --- |

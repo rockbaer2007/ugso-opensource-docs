@@ -1,10 +1,12 @@
 ---
-title: UGSo CallMeBot
+title: UGSo CallMeBot Whatsapp
 description: Messages texte WhatsApp depuis Home Assistant avec profils de destinataire et Blockly.
 ---
-# UGSo CallMeBot
+# UGSo CallMeBot Whatsapp
 
-**Application HA expérimentale 0.1.2** dans le [même dépôt que Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Interface et blocs complets en **DE/EN/FR**, langue système et apparence claire/sombre/système. Inspiré de [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb) ; implémentation UGSo originale sans ioBroker.
+Depuis 0.1.4, l’application s’appelle **UGSo CallMeBot Whatsapp**. Profils, sujets MQTT et IDs existants sont conservés. [UGSo CallMeBot Signal](../callmebot-signal/) utilise ses propres profils et clés.
+
+**Application HA expérimentale 0.1.4** dans le [même dépôt que Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Interface et blocs complets en **DE/EN/FR**, langue système et apparence claire/sombre/système. Inspiré de [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb) ; implémentation UGSo originale sans ioBroker.
 
 **Correction 0.1.1 :** L’envoi fonctionne sans `crypto.randomUUID`, notamment avec Ingress en HTTP. Redémarrer l’application et recharger la page après la mise à jour. Les identifiants utilisent des octets aléatoires disponibles ou un horodatage avec compteur ; ils détectent les doublons et ne servent pas à l’authentification.
 
@@ -13,7 +15,7 @@ description: Messages texte WhatsApp depuis Home Assistant avec profils de desti
 ## Installation et configuration
 
 1. Ajouter `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` au magasin d’applications HA.
-2. Installer **UGSo CallMeBot**, configurer le courtier MQTT et démarrer l’application.
+2. Installer **UGSo CallMeBot Whatsapp**, configurer le courtier MQTT et démarrer l’application.
 3. Ouvrir l’interface Ingress. Les identifiants MQTT du Supervisor sont prioritaires ; les options de l’application servent de secours.
 4. Activer son propre destinataire avec le numéro actuel du bot dans le [guide officiel](https://www.callmebot.com/blog/free-api-whatsapp-messages/). Envoyer exactement `I allow callmebot to send me messages`.
 5. Enregistrer l’ID du profil, son nom, le numéro activé **avec + et indicatif international**, ainsi que sa clé API. Choisir un profil par défaut. Maximum 16 profils.

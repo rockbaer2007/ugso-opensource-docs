@@ -6,7 +6,8 @@ Das gemeinsame Repository ist die zentrale Veröffentlichung für alle Home-Assi
 
 | Projekt | Dokumentation |
 | --- | --- |
-| [UGSo CallMeBot](/projects/callmebot/) | Experimentelle HA-App 0.1.0: Empfängerprofile, WhatsApp-Texte über MQTT, DE/EN/FR und passende Blockly-Bausteine. |
+| [UGSo CallMeBot Whatsapp](/projects/callmebot/) | Experimentelle HA-App 0.1.4: Empfängerprofile, WhatsApp-Texte über MQTT, DE/EN/FR und passende Blockly-Bausteine. |
+| [UGSo CallMeBot Signal](/projects/callmebot-signal/) | Experimentelle HA-App 0.1.0: Signal-Texte, Telefon-/UUID-Profile, eigener MQTT-Namensraum und Blockly mit Profilauswahl in DE/EN/FR. |
 | [UGSo Blocks for HA](/projects/blocks-for-ha/) | Experimentelle HA-App 0.1.3: visuelle Blocks für native Automationen, YAML-Import/-Export und erweiterbare Falls-Zweige; Editor über HA-Ingress. |
 | [Grafik Visual Studio](/projects/grafik-visual-studio/) | Grafischer Editor und Runtime für HA-Visualisierungen. |
 

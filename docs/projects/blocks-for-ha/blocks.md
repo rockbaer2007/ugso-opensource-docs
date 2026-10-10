@@ -7,16 +7,19 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 ## Nachrichten seit 0.1.48
 
-Neue Kategorie **Nachrichten**, zwei DE/EN/FR-Bausteine. [Einrichtung, Schlüsselverwaltung und Versand](../callmebot/).
+Neue Kategorie **Nachrichten**, drei DE/EN/FR-Bausteine. [Einrichtung, Schlüsselverwaltung und Versand](../callmebot/).
+
+Seit **0.1.50** zusätzlich **Signal · CallMeBot** mit eigener Profilauswahl. [Signal-App einrichten](../callmebot-signal/).
 
 | Block | Bild | Funktion |
 | --- | --- | --- |
-| **WhatsApp · CallMeBot**<br><code>ugso_callmebot_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_callmebot_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Empfängerprofil, Text/Jinja und Protokollstufe. MQTT-Versand über die UGSo CallMeBot-App. Schlüssel bleiben im Backend. |
+| **WhatsApp · CallMeBot**<br><code>ugso_callmebot_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_callmebot_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Empfängerprofil, Text/Jinja und Protokollstufe. MQTT-Versand über die UGSo CallMeBot Whatsapp-App. Schlüssel bleiben im Backend. |
+| **Signal · CallMeBot**<br><code>ugso_callmebot_signal_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_callmebot_signal_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Empfängerprofil, Text/Jinja und Protokollstufe. MQTT-Versand über die UGSo CallMeBot Signal-App. Schlüssel bleiben im Backend. |
 | **WhatsApp-Integration**<br><code>ugso_whatsapp_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_whatsapp_action.png" alt="WhatsApp-Integration" style="max-width:360px;max-height:180px"> | whatsapp.send_message mit number oder target sowie notify.whatsapp. Empfänger ohne +, Nachricht, optionales Konto. Token einmal in der HA-Integration einrichten. |
 
 ## Funktionen seit 0.1.47
 
-Der aktuelle Katalog enthält **168 Blocktypen**. [Parameter, Export und Grenzen](./blockly-audit).
+Der aktuelle Katalog enthält **169 Blocktypen**. [Parameter, Export und Grenzen](./blockly-audit).
 
 | Block | Bild | Funktion |
 | --- | --- | --- |
