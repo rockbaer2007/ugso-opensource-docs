@@ -1,17 +1,17 @@
 <script setup>
 import { ref } from 'vue'
-const props = defineProps({ code: { type: String, required: true }, english: Boolean })
+const props = defineProps({ code: { type: String, required: true }, english: Boolean, french: Boolean })
 const message = ref('')
 const field = ref(null)
 async function copy() {
-  try { await navigator.clipboard.writeText(props.code); message.value = props.english ? 'Code copied.' : 'Code kopiert.' }
-  catch { field.value.focus(); field.value.select(); message.value = props.english ? 'Press Ctrl+C to copy.' : 'Mit Strg+C kopieren.' }
+  try { await navigator.clipboard.writeText(props.code); message.value = props.french ? 'Code copié.' : props.english ? 'Code copied.' : 'Code kopiert.' }
+  catch { field.value.focus(); field.value.select(); message.value = props.french ? 'Appuyer sur Ctrl+C pour copier.' : props.english ? 'Press Ctrl+C to copy.' : 'Mit Strg+C kopieren.' }
 }
 </script>
 <template>
   <div class="block-package-code">
-    <button type="button" @click="copy">{{ english ? 'Copy JSON code' : 'JSON-Code kopieren' }}</button>
-    <textarea ref="field" :value="code" readonly spellcheck="false" :aria-label="english ? 'Importable package JSON' : 'Importierbares Paket-JSON'"></textarea>
+    <button type="button" @click="copy">{{ french ? 'Copier le code JSON' : english ? 'Copy JSON code' : 'JSON-Code kopieren' }}</button>
+    <textarea ref="field" :value="code" readonly spellcheck="false" :aria-label="french ? 'JSON du paquet importable' : english ? 'Importable package JSON' : 'Importierbares Paket-JSON'"></textarea>
     <p role="status">{{ message }}</p>
   </div>
 </template>

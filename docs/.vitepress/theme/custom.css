@@ -414,3 +414,6 @@ body.uix-doc-route .vp-doc :not(pre) > code {
 .blockly-attribution .badge-dark{display:none}
 .dark .blockly-attribution .badge-light{display:none}
 .dark .blockly-attribution .badge-dark{display:block}
+
+/* Block catalogs keep their image columns inside a scrollable table on phones. */
+.vp-doc[class*="projects_blocks-for-ha"] table{display:block;max-width:100%;overflow-x:auto}

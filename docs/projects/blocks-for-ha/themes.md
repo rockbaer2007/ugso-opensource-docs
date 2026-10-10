@@ -15,9 +15,9 @@ Seit **0.1.16** enthält die Werkzeugleiste über der Arbeitsfläche eine **Them
 
 Tritanopia ist für Menschen mit entsprechender Farbsehschwäche gedacht. Auch eigene UGSo-Blocks und Kategorien verwenden jetzt Theme-Stile statt fest gesetzter Farben. Helle Blocks erhalten dunkle Beschriftungen, dunkle Blocks helle; Eingabefelder bleiben separat lesbar. Die ausgewählte Kategorie hat unabhängig von der Palette einen dunklen Hintergrund mit heller Schrift. Kategorienamen und Blocktexte bleiben zur Orientierung sichtbar. Dies ist keine vollständige Barrierefreiheitszertifizierung.
 
-![Dark im UGSo-Editor](/assets/blocks-for-ha/themes/dark.png)
+![Dark im UGSo-Editor](/assets/blocks-for-ha/themes/de/dark.png)
 
-![Tritanopia im UGSo-Editor](/assets/blocks-for-ha/themes/tritanopia.png)
+![Tritanopia im UGSo-Editor](/assets/blocks-for-ha/themes/de/tritanopia.png)
 
 ## Wechseln und speichern
 

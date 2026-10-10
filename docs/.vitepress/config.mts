@@ -826,6 +826,19 @@ const sidebarEn = {
 }
 
 const sidebarFr = {
+  '/fr/projects/blocks-for-ha/': [{ text: 'UGSo Blocks for HA', items: [
+    { text: 'Vue d’ensemble', link: '/fr/projects/blocks-for-ha/' },
+    { text: 'Catalogue des blocs', link: '/fr/projects/blocks-for-ha/blocks' },
+    { text: 'Date et heure', link: '/fr/projects/blocks-for-ha/time' },
+    { text: 'Conversion', link: '/fr/projects/blocks-for-ha/conversion' },
+    { text: 'Délais, objets et logique', link: '/fr/projects/blocks-for-ha/flow' },
+    { text: 'Mathématiques, textes, listes et boucles', link: '/fr/projects/blocks-for-ha/collections' },
+    { text: 'Comparaison, couleurs et fonctions', link: '/fr/projects/blocks-for-ha/blockly-audit' },
+    { text: 'Thèmes et zoom', link: '/fr/projects/blocks-for-ha/themes' },
+    { text: 'Entités Home Assistant', link: '/fr/projects/blocks-for-ha/entities' },
+    { text: 'Blocs et modèles personnalisés', link: '/fr/projects/blocks-for-ha/custom-blocks' },
+    { text: 'Paquets personnalisés', link: '/fr/projects/blocks-for-ha/catalog/' }
+  ] }],
   '/fr/collection/dashboard-layout-card-v2/': [
     { text: 'Dashboard Layout Card V2', items: [{ text: 'Vue d’ensemble', link: '/fr/collection/dashboard-layout-card-v2/' }] }
   ],

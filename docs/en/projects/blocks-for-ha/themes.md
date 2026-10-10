@@ -15,9 +15,9 @@ Since **0.1.16**, the toolbar above the workspace includes a **Theme selector**.
 
 Tritanopia is intended for people with this colour-vision deficiency. Own UGSo blocks and categories now use theme styles instead of fixed colours. Light blocks get dark labels, dark blocks light labels; editable fields remain separately readable. Selected categories have a dark background and light text across palettes. Category names and block labels remain available for orientation. This does not certify complete accessibility.
 
-![Dark in the UGSo editor](/assets/blocks-for-ha/themes/dark.png)
+![Dark in the UGSo editor](/assets/blocks-for-ha/themes/en/dark.png)
 
-![Tritanopia in the UGSo editor](/assets/blocks-for-ha/themes/tritanopia.png)
+![Tritanopia in the UGSo editor](/assets/blocks-for-ha/themes/en/tritanopia.png)
 
 ## Switching and saving
 

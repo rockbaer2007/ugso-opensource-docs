@@ -4,13 +4,15 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
+New in **0.1.26**: **Block language → System language / DE / EN / FR**. System follows preferred browser languages, with English as the fallback for unsupported languages. Labels, dropdowns, help, categories and native Blockly dialogs are translated. Other app controls and diagnostics currently remain German. Switching saves the valid project and reloads Blockly; incomplete blocks or unavailable storage keep the current view. Technical IDs, variable names, user text, templates and YAML are unchanged. Packages retain their authors’ language. [French documentation](/fr/projects/blocks-for-ha/); the catalog uses separate DE/EN/FR block images.
+
 New in **0.1.18**: [Custom block/template editor](./custom-blocks) in a 95% dialog, custom category, multiple blocks per package, copyable JSON and ZIP import/export. [Block-package catalog](./catalog/).
 
 New in **0.1.17**: Load entities from HA and search existing block fields by name/ID. Light/script/helper filters, manual IDs offline and server-side credentials. [Usage, image and limits](./entities).
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.25 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.26 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Since **0.1.25**, select **YAML → Code importieren**, paste YAML and click **Importieren** instead of Save. Without the checkbox, triggers, conditions and actions are added; the current name, settings and block shapes are preserved. Conditions are combined with AND; additional triggers may start more runs. To replace everything, select **Aktuelle Automation vollständig ersetzen** and confirm. One supported automation as an object or single-item list is accepted, up to 1 MB. Invalid code or cancellation leaves the current blocks unchanged. Switching modes retains pasted text for this page session; successful import returns to output. Adding requires a valid current automation; complete replacement also works with incomplete blocks. File import through **Öffnen** remains available.
 
