@@ -4,6 +4,16 @@ description: All standard categories compared with ioBroker and our Home Assista
 ---
 # Blockly comparison, colours and functions
 
+## Action functions and conditional results since 0.1.47
+
+In **Functions**, define an action function beside the automation. Use a valid name without spaces, add up to eight distinct ASCII parameters with the cog, and insert HA actions into the body. Its call block appears automatically in the same category; connect every argument. Read parameters using variable blocks from **Variables**, for example as a log message, pause duration or variable assignment value.
+
+Export produces a native HA `sequence`. Each call receives its own internal parameter bindings; arguments are evaluated at the call. Nested calls are supported; recursion and empty bodies are rejected. Parameter bindings do not overwrite equally named HA variables. Other assignments in the body remain normal HA assignments. Free Jinja/JSON text fields keep their normal HA context and are not rewritten to local parameters; connect variable blocks instead. **Stop** still stops the entire HA run.
+
+**If / return / otherwise** produces a conditional Jinja value. Only the selected branch is evaluated. Connect it to a value function’s return socket or another value input. Both branches and the condition are required. This is not an early return from an action sequence.
+
+JSON projects retain definitions, parameters, calls and layout. YAML contains expanded steps or expressions; importing YAML reconstructs those steps, not the original function definitions. [Block images](./blocks#functions-since-0-1-47). The tables below also document the historical 0.1.15 comparison.
+
 Version **0.1.15**, October 10, 2026: **111 supported block types**. Three colour calculations and three original Blockly types for value functions/parameters are new. Function definitions may sit beside the automation; other disconnected blocks still prevent export.
 
 ## Sources and method

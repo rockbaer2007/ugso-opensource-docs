@@ -4,6 +4,8 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
+New in **0.1.47**: [Action functions with parameters and conditional return values](./blockly-audit). The complete catalogue now supports 166 block types.
+
 New in **0.1.46**: **Language → System / DE / EN / FR** now applies to the entire interface, dialogs, status, confirmations and validation messages. User names, entity data, package labels and YAML/Jinja are not translated automatically.
 
 ![English interface; test data and user names retain their original language](/assets/blocks-for-ha/ui/en.png)
@@ -28,7 +30,7 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.46 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Actions and targets are selectable from read-only HA catalogues.
+**Version 0.1.47 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Actions and targets are selectable from read-only HA catalogues.
 
 Since **0.1.25**, select **YAML → Code importieren**, paste YAML and click **Importieren** instead of Save. Without the checkbox, triggers, conditions and actions are added; the current name, settings and block shapes are preserved. Conditions are combined with AND; additional triggers may start more runs. To replace everything, select **Aktuelle Automation vollständig ersetzen** and confirm. One supported automation as an object or single-item list is accepted, up to 1 MB. Invalid code or cancellation leaves the current blocks unchanged. Switching modes retains pasted text for this page session; successful import returns to output. Adding requires a valid current automation; complete replacement also works with incomplete blocks. File import through **Öffnen** remains available.
 

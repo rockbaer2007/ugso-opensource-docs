@@ -5,9 +5,19 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
+## Functions since 0.1.47
+
+The current catalogue contains **166 block types**. [Parameters, export and limits](./blockly-audit).
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Define action function**<br><code>procedures_defnoreturn</code> | <img src="/assets/blocks-for-ha/blocks/en/procedures_defnoreturn.png" alt="Define action function" style="max-width:280px;max-height:180px"> | Reusable HA action sequence; up to eight parameters via the cog. Definition beside the automation. |
+| **Call action function**<br><code>procedures_callnoreturn</code> | <img src="/assets/blocks-for-ha/blocks/en/procedures_callnoreturn.png" alt="Call action function" style="max-width:280px;max-height:180px"> | Dynamic call with argument inputs. Export as an HA sequence with separate parameter bindings. |
+| **Conditional return value**<br><code>ugso_function_result</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_function_result.png" alt="If return otherwise" style="max-width:280px;max-height:180px"> | If / value / otherwise; HA evaluates only the selected value branch. No action sequence. |
+
 Since **0.1.45**, duplicate toolbox entries are removed: number under **Mathematics**, text under **Text**, colour under **Colour**, and expandable AND/OR/NOT under **Logic**. **Values** contains percentage only. All 163 block types and existing projects remain supported.
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The current catalog contains 163 types.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities).
 
 Version **0.1.44**: 163 block types, all audited for matching HA selection fields. Images show actual UGSo editor blocks. Guides: [HA selection](./entities), [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 

@@ -5,9 +5,19 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
+## Funktionen seit 0.1.47
+
+Der aktuelle Katalog enthält **166 Blocktypen**. [Parameter, Export und Grenzen](./blockly-audit).
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Aktionsfunktion definieren**<br><code>procedures_defnoreturn</code> | <img src="/assets/blocks-for-ha/blocks/de/procedures_defnoreturn.png" alt="Aktionsfunktion definieren" style="max-width:280px;max-height:180px"> | Wiederverwendbarer HA-Ablauf; bis zu acht Parameter über das Zahnrad. Definition neben der Automation. |
+| **Aktionsfunktion aufrufen**<br><code>procedures_callnoreturn</code> | <img src="/assets/blocks-for-ha/blocks/de/procedures_callnoreturn.png" alt="Aktionsfunktion aufrufen" style="max-width:280px;max-height:180px"> | Dynamischer Aufruf mit Argumenteingängen. Export als HA-Ablaufgruppe mit eigenen Parameterbindungen. |
+| **Bedingter Rückgabewert**<br><code>ugso_function_result</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_function_result.png" alt="Falls gib zurück sonst" style="max-width:280px;max-height:180px"> | Falls / Wert / Sonst; nur der ausgewählte Wert wird in HA ausgewertet. Keine Aktionsfolge. |
+
 Seit **0.1.45** enthält die Toolbox keine doppelten Einträge mehr: Zahl unter **Mathematik**, Text unter **Text**, Farbe unter **Farbe** und erweiterbares UND/ODER/NICHT unter **Logik**. **Werte** enthält nur Prozent. Die 163 Blocktypen und bestehende Projekte bleiben erhalten.
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Der aktuelle Katalog enthält 163 Typen.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities).
 
 Stand **0.1.44**: 163 Blocktypen. Alle Blocktypen wurden auf passende HA-Auswahlfelder geprüft. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen: [HA-Auswahl](./entities), [Datum und Zeit](./time), [Konvertierung](./conversion).
 

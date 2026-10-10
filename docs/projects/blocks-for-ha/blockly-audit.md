@@ -4,6 +4,16 @@ description: Abgleich aller Standardkategorien mit ioBroker und eigener Home-Ass
 ---
 # Blockly-Abgleich, Farben und Funktionen
 
+## Aktionsfunktionen und bedingte Rückgaben seit 0.1.47
+
+Unter **Funktionen** kann eine Aktionsfunktion neben der Automation definiert werden. Einen gültigen Namen ohne Leerzeichen eingeben, über das Zahnrad bis zu acht unterschiedliche ASCII-Parameter hinzufügen und HA-Aktionen in den Körper einsetzen. Der passende Aufruf erscheint automatisch in derselben Kategorie; alle Argumente müssen angeschlossen werden. Parameter mit Variablenblöcken aus **Variablen** lesen, beispielsweise als Log-Nachricht, Pause oder Wert einer Variablenzuweisung.
+
+Beim Export entsteht eine native HA-`sequence`. Jeder Aufruf erhält eigene interne Parameterbindungen; Argumente werden beim Aufruf ausgewertet. Verschachtelte Aufrufe bleiben möglich, Rekursion und leere Aktionskörper nicht. Gleichnamige HA-Variablen werden durch die Parameterbindung nicht überschrieben. Andere Variablenzuweisungen im Körper sind normale HA-Zuweisungen. Freie Jinja-/JSON-Textfelder bleiben im normalen HA-Kontext und werden nicht auf lokale Parameter umgeschrieben; dafür Variablenblöcke anschließen. **Stop** beendet weiterhin den gesamten HA-Lauf.
+
+Der Wertblock **Falls / gib zurück / sonst** liefert den passenden Wert als Jinja-Ausdruck. Nur der ausgewählte Zweig wird ausgewertet; er kann an den Rückgabeeingang einer Wertfunktion oder an andere Werteingänge angeschlossen werden. Beide Wertzweige und die Bedingung sind erforderlich. Er ist kein vorzeitiges `return` aus einer Aktionsfolge.
+
+JSON-Projekte bewahren Definitionen, Parameter, Aufrufe und Anordnung. YAML enthält aufgelöste Schritte bzw. Ausdrücke; ein YAML-Reimport rekonstruiert diese Schritte, nicht die ursprünglichen Funktionsdefinitionen. [Blockbilder](./blocks#funktionen-seit-0-1-47). Die folgenden Tabellen dokumentieren zusätzlich den historischen Vergleich von 0.1.15.
+
 Stand **0.1.15**, 10. Oktober 2026: **111 unterstützte Blocktypen**. Drei Farbberechnungen und drei originale Blockly-Typen für Wertfunktionen/Parameter sind neu. Eine Funktionsdefinition ist neben der Automation erlaubt; andere unverbundene Blocks verhindern weiterhin den Export.
 
 ## Quellen und Vorgehen

@@ -5,6 +5,16 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
+## Fonctions depuis 0.1.47
+
+Le catalogue actuel contient **166 types de blocs**. [Paramètres, export et limites](./blockly-audit).
+
+| Bloc | Image | Fonction |
+| --- | --- | --- |
+| **Définir une fonction d’action**<br><code>procedures_defnoreturn</code> | <img src="/assets/blocks-for-ha/blocks/fr/procedures_defnoreturn.png" alt="Définir une fonction d’action" style="max-width:280px;max-height:180px"> | Suite d’actions HA réutilisable ; jusqu’à huit paramètres via l’engrenage. Définition à côté de l’automatisation. |
+| **Appeler une fonction d’action**<br><code>procedures_callnoreturn</code> | <img src="/assets/blocks-for-ha/blocks/fr/procedures_callnoreturn.png" alt="Appeler une fonction d’action" style="max-width:280px;max-height:180px"> | Appel dynamique avec entrées d’argument. Export en groupe HA avec ses propres variables de paramètre. |
+| **Valeur de retour conditionnelle**<br><code>ugso_function_result</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_function_result.png" alt="Si renvoyer sinon" style="max-width:280px;max-height:180px"> | Si / valeur / sinon ; seule la branche choisie est évaluée dans HA. Sans suite d’actions. |
+
 Depuis **0.1.45**, la boîte à outils ne contient plus de doublons : nombre dans **Mathématiques**, texte dans **Texte**, couleur dans **Couleur** et groupe ET/OU/NON dans **Logique**. **Valeurs** contient uniquement le pourcentage. Les 163 types et projets existants restent pris en charge.
 
 **0.1.44 · 163 types**. Tous les types ont été vérifiés pour les champs de sélection HA appropriés. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine. [Sélection HA](./entities).

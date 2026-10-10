@@ -4,6 +4,8 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
+Neu in **0.1.47**: [Aktionsfunktionen mit Parametern und bedingte Rückgabewerte](./blockly-audit). Der Gesamtkatalog enthält jetzt 166 unterstützte Blocktypen.
+
 Neu in **0.1.46**: **Sprache → System / DE / EN / FR** gilt jetzt für die gesamte Oberfläche, Dialoge, Status, Bestätigungen und Validierungshinweise. Eigene Namen, Entitätsdaten, Paketbeschriftungen und YAML/Jinja werden nicht automatisch übersetzt.
 
 ![Deutsche Oberfläche; Testdaten und eigene Namen bleiben im Original](/assets/blocks-for-ha/ui/de.png)
@@ -28,7 +30,7 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.46 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. HA-Aktionen und Ziele lassen sich aus lesenden Katalogen auswählen.
+**Version 0.1.47 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. HA-Aktionen und Ziele lassen sich aus lesenden Katalogen auswählen.
 
 Seit **0.1.25** rechts **YAML → Code importieren** wählen, YAML einfügen und **Importieren** statt Speichern klicken. Ohne Haken werden Auslöser, Bedingungen und Aktionen ergänzt; Name, Einstellungen und bestehende Blockformen bleiben erhalten. Bedingungen werden gemeinsam als UND geprüft; zusätzliche Auslöser können weitere Starts verursachen. Zum vollständigen Ersetzen **Aktuelle Automation vollständig ersetzen** aktivieren und die Abfrage bestätigen. Unterstützt wird eine Automation als Objekt oder Liste mit einem Eintrag, maximal 1 MB. Ungültiger Code oder Abbruch lässt die aktuellen Blocks erhalten. Einfügetext bleibt beim Moduswechsel für diese Seite erhalten; nach Erfolg erscheint wieder die Ausgabe. Zum Ergänzen muss die aktuelle Automation gültig sein; vollständiger Ersatz funktioniert auch bei unvollständigen Blocks. Dateiimport über **Öffnen** bleibt verfügbar.
 
