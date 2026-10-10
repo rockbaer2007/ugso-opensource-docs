@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.28 · 116 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.33 · 116 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -259,7 +259,7 @@ Depuis **0.1.30** : activer **Heures en liste JSON** pour plusieurs heures fixes
 
 ## Température modifiée
 
-Depuis **0.1.32**, le nouveau bloc prend en charge temperature.changed natif. Cible (JSON) : entity_id texte ou liste. Seuil (JSON) : type any, above, below, between ou outside. any exige seulement type ; above/below exigent value, between/outside value_min et value_max. Nombres : number et unit_of_measurement (°C/°F). Références : entity (sensor, number ou input_number). ID facultatif. Autres cibles (zone/appareil/étiquette) non prises en charge. Les topics MQTT, qos/retain/evaluate_payload et contenus JSON/Jinja multilignes restent présents.
+Depuis **0.1.31**, le nouveau bloc prend en charge temperature.changed natif. Cible (JSON) : entity_id texte ou liste. Seuil (JSON) : type any, above, below, between ou outside. any exige seulement type ; above/below exigent value, between/outside value_min et value_max. Nombres : number et unit_of_measurement (°C/°F). Références : entity (sensor, number ou input_number). ID facultatif. Autres cibles (zone/appareil/étiquette) non prises en charge. Les topics MQTT, qos/retain/evaluate_payload et contenus JSON/Jinja multilignes restent présents.
 
 | Block | Image | Description |
 | --- | --- | --- |
@@ -278,3 +278,9 @@ Le champ **Variable de réponse (facultative)** du bloc **Action HA** génère `
 | **Début/fin d’un événement calendrier**<br><code>ugso_calendar_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_calendar_trigger.png" alt="Début/fin d’un événement calendrier" style="max-width:280px;max-height:180px"> | calendar.event_started / calendar.event_ended |
 
 [Home Assistant: calendar.event_started](https://www.home-assistant.io/triggers/calendar.event_started/) · [calendar.event_ended](https://www.home-assistant.io/triggers/calendar.event_ended/) · [calendar.get_events](https://www.home-assistant.io/actions/calendar.get_events/)
+
+## Déclencheurs numériques avec durée de maintien
+
+Depuis **0.1.33**, le déclencheur numérique accepte plusieurs entités : activer **Entités en liste JSON** et saisir par exemple `["sensor.temp_1","sensor.temp_2"]`. Sans cette case, l’entité unique reste active. **Durée de maintien (JSON)** avec **activée** génère le champ facultatif `for` : par exemple `{"hours":0,"minutes":1,"seconds":0}`, `60` ou `"00:01:00"`. Les unités days/hours/minutes/seconds/milliseconds combinées, les zéros et les modèles de sortie HA sont conservés. Décocher omet `for`. Toujours exactement un seuil numérique fixe (above ou below) ; les IDs et branches choose sont conservés.
+
+Home Assistant déclenche après le franchissement du seuil lorsque la valeur reste de ce côté du seuil pendant toute la durée. Un redémarrage HA ou le rechargement des automations réinitialise le maintien en cours. [Home Assistant: numeric_state](https://www.home-assistant.io/triggers/numeric_state/).

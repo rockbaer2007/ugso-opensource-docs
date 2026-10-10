@@ -12,7 +12,7 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.32 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.33 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Since **0.1.25**, select **YAML → Code importieren**, paste YAML and click **Importieren** instead of Save. Without the checkbox, triggers, conditions and actions are added; the current name, settings and block shapes are preserved. Conditions are combined with AND; additional triggers may start more runs. To replace everything, select **Aktuelle Automation vollständig ersetzen** and confirm. One supported automation as an object or single-item list is accepted, up to 1 MB. Invalid code or cancellation leaves the current blocks unchanged. Switching modes retains pasted text for this page session; successful import returns to output. Adding requires a valid current automation; complete replacement also works with incomplete blocks. File import through **Öffnen** remains available.
 
@@ -212,3 +212,5 @@ Since **0.1.31**, the new block supports native temperature.changed. Target (JSO
 [Home Assistant: temperature.changed](https://www.home-assistant.io/triggers/temperature.changed/)
 
 **0.1.32:** Calendars and response variables. [→](./blocks)
+
+**0.1.33:** Numeric triggers with hold duration. [→](./blocks)

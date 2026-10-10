@@ -7,7 +7,7 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 116 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.17**: 116 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.33**: 116 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -248,7 +248,7 @@ Seit **0.1.30**: Ein Zeit-Auslöser akzeptiert über **Uhrzeiten als JSON-Liste*
 
 ## Temperatur geändert
 
-Seit **0.1.32** unterstützt der neue Block den nativen Auslöser temperature.changed. Ziel (JSON): entity_id als Text oder Liste. Schwelle (JSON): type any, above, below, between oder outside. any benötigt nur type; above/below benötigen value, between/outside value_min und value_max. Zahlen: number plus unit_of_measurement (°C/°F). Referenzen: entity (sensor, number oder input_number). Optional ist eine Trigger-ID. Andere Zielarten (Bereich/Gerät/Label) sind noch nicht importierbar. MQTT-Topics, qos/retain/evaluate_payload und mehrzeilige JSON-/Jinja-Payloads bleiben erhalten.
+Seit **0.1.31** unterstützt der neue Block den nativen Auslöser temperature.changed. Ziel (JSON): entity_id als Text oder Liste. Schwelle (JSON): type any, above, below, between oder outside. any benötigt nur type; above/below benötigen value, between/outside value_min und value_max. Zahlen: number plus unit_of_measurement (°C/°F). Referenzen: entity (sensor, number oder input_number). Optional ist eine Trigger-ID. Andere Zielarten (Bereich/Gerät/Label) sind noch nicht importierbar. MQTT-Topics, qos/retain/evaluate_payload und mehrzeilige JSON-/Jinja-Payloads bleiben erhalten.
 
 | Block | Bild | Funktion |
 | --- | --- | --- |
@@ -267,3 +267,9 @@ Das Feld **Antwortvariable (optional)** im Block **HA-Aktion** erzeugt `response
 | **Kalendertermin beginnt/endet**<br><code>ugso_calendar_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_calendar_trigger.png" alt="Kalendertermin beginnt/endet" style="max-width:280px;max-height:180px"> | calendar.event_started / calendar.event_ended |
 
 [Home Assistant: calendar.event_started](https://www.home-assistant.io/triggers/calendar.event_started/) · [calendar.event_ended](https://www.home-assistant.io/triggers/calendar.event_ended/) · [calendar.get_events](https://www.home-assistant.io/actions/calendar.get_events/)
+
+## Numerische Auslöser mit Haltezeit
+
+Seit **0.1.33** unterstützt **Zahl über/unter Grenze** mehrere Entitäten: **Entitäten als JSON-Liste** einschalten und etwa `["sensor.temp_1","sensor.temp_2"]` eintragen. Ohne Haken bleibt die einzelne Entität aktiv. **Haltezeit (JSON)** mit **verwenden** erzeugt das optionale `for`: etwa `{"hours":0,"minutes":1,"seconds":0}`, `60` oder `"00:01:00"`. Kombinierte days/hours/minutes/seconds/milliseconds, Nulleinträge und HA-Ausgabetemplates bleiben erhalten. Ein deaktivierter Haken lässt `for` weg. Weiterhin genau eine feste Zahlen-Grenze (above oder below); Trigger-ID und choose-Zweige bleiben erhalten.
+
+Home Assistant löst nach dem Grenzübertritt aus, sobald der Wert die gesamte Haltezeit auf dieser Seite der Grenze bleibt. Ein HA-Neustart oder Neuladen der Automationen setzt die laufende Haltezeit zurück. [Home Assistant: numeric_state](https://www.home-assistant.io/triggers/numeric_state/).

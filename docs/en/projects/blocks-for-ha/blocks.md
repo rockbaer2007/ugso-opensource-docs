@@ -248,7 +248,7 @@ Since **0.1.30**: enable **Times as JSON list** for several fixed times, e.g. `[
 
 ## Temperature changed
 
-Since **0.1.32**, the new block supports native temperature.changed. Target (JSON): entity_id string or list. Threshold (JSON): type any, above, below, between or outside. any requires only type; above/below require value, between/outside value_min and value_max. Numbers: number plus unit_of_measurement (°C/°F). References: entity (sensor, number or input_number). Optional trigger ID. Other targets (area/device/label) remain unsupported. MQTT topics, qos/retain/evaluate_payload and multiline JSON/Jinja payloads are preserved.
+Since **0.1.31**, the new block supports native temperature.changed. Target (JSON): entity_id string or list. Threshold (JSON): type any, above, below, between or outside. any requires only type; above/below require value, between/outside value_min and value_max. Numbers: number plus unit_of_measurement (°C/°F). References: entity (sensor, number or input_number). Optional trigger ID. Other targets (area/device/label) remain unsupported. MQTT topics, qos/retain/evaluate_payload and multiline JSON/Jinja payloads are preserved.
 
 | Block | Image | Description |
 | --- | --- | --- |
@@ -267,3 +267,9 @@ The **Response variable (optional)** field in **HA action** generates `response_
 | **Calendar event starts/ends**<br><code>ugso_calendar_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_calendar_trigger.png" alt="Calendar event starts/ends" style="max-width:280px;max-height:180px"> | calendar.event_started / calendar.event_ended |
 
 [Home Assistant: calendar.event_started](https://www.home-assistant.io/triggers/calendar.event_started/) · [calendar.event_ended](https://www.home-assistant.io/triggers/calendar.event_ended/) · [calendar.get_events](https://www.home-assistant.io/actions/calendar.get_events/)
+
+## Numeric triggers with hold duration
+
+Since **0.1.33**, **Number above/below threshold** accepts multiple entities: enable **Entities as JSON list** and enter, for example, `["sensor.temp_1","sensor.temp_2"]`. Without the checkbox, the single entity remains active. **Hold duration (JSON)** with **enabled** generates optional `for`: for example `{"hours":0,"minutes":1,"seconds":0}`, `60` or `"00:01:00"`. Combined days/hours/minutes/seconds/milliseconds, zero entries and HA output templates are retained. Disabling the checkbox omits `for`. Still exactly one fixed numeric threshold (above or below); trigger IDs and choose branches are preserved.
+
+Home Assistant fires after a threshold crossing once the value has remained on that side of the threshold for the whole duration. Restarting HA or reloading automations resets a running hold timer. [Home Assistant: numeric_state](https://www.home-assistant.io/triggers/numeric_state/).
