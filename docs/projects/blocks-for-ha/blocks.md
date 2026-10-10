@@ -7,7 +7,7 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 118 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.35**: 118 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.36**: 118 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -297,3 +297,11 @@ Das Timer-Reset-Beispiel schaltet zunächst timer_reset aus, wartet zwei Sekunde
 | **Warte Zeittext / Template**<br><code>ugso_delay_text</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_delay_text.png" alt="Warte Zeittext / Template" style="max-width:280px;max-height:180px"> | Nativer delay-Zeittext / HA-Template. |
 
 [Home Assistant: delay](https://www.home-assistant.io/docs/scripts/#wait-for-time-to-pass-delay)
+
+## Dynamische HA-Aktionsnamen
+
+Seit **0.1.36** akzeptiert das erste Feld im Block **HA-Aktion** einen statischen Aktionsnamen oder eine Jinja-Vorlage. Das Feld lässt sich mehrzeilig bearbeiten. Beispiele: `input_boolean.turn_on`, `input_boolean.turn_` mit angehängtem Jinja-Ausdruck oder ein vollständiges if/else-Template. Ziel, Daten, Metadaten und Antwortvariable bleiben in ihren bisherigen Feldern. Die Vorlage und ihre Zeilenumbrüche bleiben bei Import, Projekt-Speicherung und YAML-Export erhalten.
+
+Beim Shelly-Beispiel bleibt die zusammengesetzte Aktion `input_boolean.turn_` plus Zustandsabfrage erhalten, ebenso die verschachtelten choose-Zweige. Home Assistant wertet den Aktionsnamen erst beim Ausführen aus; er muss dann einen vorhandenen Dienstnamen ergeben. Blocks prüft statische Aktionsnamen und vorhandene Template-Klammern, keine Jinja-Syntax oder Laufzeitergebnisse. Zielentitäten müssen weiterhin feste IDs sein; Templates für ganze Datenobjekte sind nicht Teil dieser Erweiterung.
+
+[Home Assistant: choosing the action with a template](https://www.home-assistant.io/docs/scripts/perform-actions/#choosing-the-action-with-a-template)

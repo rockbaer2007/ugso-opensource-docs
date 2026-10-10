@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.35 · 118 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.36 · 118 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -308,3 +308,11 @@ L’exemple de réinitialisation désactive d’abord timer_reset, attend deux s
 | **Attendre durée en texte / modèle**<br><code>ugso_delay_text</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_delay_text.png" alt="Attendre durée en texte / modèle" style="max-width:280px;max-height:180px"> | Texte de durée delay natif / modèle HA. |
 
 [Home Assistant: delay](https://www.home-assistant.io/docs/scripts/#wait-for-time-to-pass-delay)
+
+## Noms d’action HA dynamiques
+
+Depuis **0.1.36**, le premier champ du bloc **Action HA** accepte un nom d’action fixe ou un modèle Jinja. Il est éditable sur plusieurs lignes. Exemples : `input_boolean.turn_on`, `input_boolean.turn_` suivi d’une expression Jinja ou un modèle if/else complet. Cible, données, métadonnées et variable de réponse conservent leurs champs existants. Modèles et sauts de ligne sont conservés à l’import, dans le projet et à l’export YAML.
+
+L’exemple Shelly conserve le préfixe `input_boolean.turn_` avec la lecture de l’état et les branches choose imbriquées. Home Assistant évalue le nom à l’exécution ; il doit alors produire un service disponible. Blocks vérifie les noms fixes et délimiteurs de modèle, pas la syntaxe Jinja ni le résultat à l’exécution. Les cibles restent des IDs fixes ; les modèles pour un objet data complet ne font pas partie de cette extension.
+
+[Home Assistant: choosing the action with a template](https://www.home-assistant.io/docs/scripts/perform-actions/#choosing-the-action-with-a-template)

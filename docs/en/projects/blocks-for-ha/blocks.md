@@ -7,7 +7,7 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 118 block types and output formats remain unchanged.
 
-Version **0.1.35**: 118 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.36**: 118 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -297,3 +297,11 @@ The timer-reset example first turns off timer_reset, waits two seconds and then 
 | **Wait duration text / template**<br><code>ugso_delay_text</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_delay_text.png" alt="Wait duration text / template" style="max-width:280px;max-height:180px"> | Native delay duration string / HA template. |
 
 [Home Assistant: delay](https://www.home-assistant.io/docs/scripts/#wait-for-time-to-pass-delay)
+
+## Dynamic HA action names
+
+Since **0.1.36**, the first field in **HA action** accepts a static action name or a Jinja template. The field supports multiline editing. Examples: `input_boolean.turn_on`, `input_boolean.turn_` followed by a Jinja expression, or a full if/else template. Target, data, metadata and response variable retain their existing fields. Templates and line breaks survive import, project storage and YAML export.
+
+The Shelly example retains the action prefix `input_boolean.turn_` combined with the state lookup and the nested choose branches. Home Assistant evaluates the action name at runtime; it must then resolve to an available service name. Blocks checks static names and template delimiters, not Jinja syntax or runtime results. Target entities must still be fixed IDs; templating the entire data object is outside this extension.
+
+[Home Assistant: choosing the action with a template](https://www.home-assistant.io/docs/scripts/perform-actions/#choosing-the-action-with-a-template)
