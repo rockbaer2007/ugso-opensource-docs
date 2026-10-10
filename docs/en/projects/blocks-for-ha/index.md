@@ -12,7 +12,7 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.29 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.30 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Since **0.1.25**, select **YAML → Code importieren**, paste YAML and click **Importieren** instead of Save. Without the checkbox, triggers, conditions and actions are added; the current name, settings and block shapes are preserved. Conditions are combined with AND; additional triggers may start more runs. To replace everything, select **Aktuelle Automation vollständig ersetzen** and confirm. One supported automation as an object or single-item list is accepted, up to 1 MB. Invalid code or cancellation leaves the current blocks unchanged. Switching modes retains pasted text for this page session; successful import returns to output. Adding requires a valid current automation; complete replacement also works with incomplete blocks. File import through **Öffnen** remains available.
 
@@ -202,3 +202,7 @@ Since **0.1.28**: **States as JSON list**, e.g. `["1_single","1_double"]`; optio
 [Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)
 
 Since **0.1.29**, the Blockly workspace fills the editor panel down to the legend. A taller YAML panel also expands the workspace; output remains collapsible.
+
+Since **0.1.30**: enable **Times as JSON list** for several fixed times, e.g. `["10:00:00","13:00:00","19:00:00"]`. **Any change** omits `to`; **Entities as JSON list** watches multiple entities. Without `to`, HA also reacts to attribute changes. Event triggers support e.g. `timer.finished` with an optional JSON data filter. Native time conditions preserve `before`/`after`: fixed times, after inclusive and before exclusive, including overnight windows. Equal bounds mean all day. Time helpers, time templates and weekday filters remain outside the supported import. The full pool-pump automation retains multiline timer templates and nested `choose` branches.
+
+[Home Assistant: triggers](https://www.home-assistant.io/docs/automation/trigger/) · [Time condition](https://www.home-assistant.io/docs/scripts/conditions/#time-condition)

@@ -5,9 +5,9 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 112 block types and output formats remain unchanged.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 114 block types and output formats remain unchanged.
 
-Version **0.1.17**: 112 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.17**: 114 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -221,7 +221,7 @@ The colour field also uses the transitive dependency [field-grid-dropdown](https
 
 [Back to overview](/en/projects/blocks-for-ha/)
 
-Custom blocks since 0.1.18 extend the 112 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+Custom blocks since 0.1.18 extend the 114 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
 
 ## Trigger IDs and multiple targets
 
@@ -234,3 +234,14 @@ Since **0.1.28**: **States as JSON list**, e.g. `["1_single","1_double"]`; optio
 | **Triggered by ID**<br><code>ugso_trigger_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_trigger_condition.png" alt="Triggered by ID" style="max-width:280px;max-height:180px"> | `condition: trigger` · `id` |
 
 [Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)
+
+## Pool pumps, events and multiple times
+
+Since **0.1.30**: enable **Times as JSON list** for several fixed times, e.g. `["10:00:00","13:00:00","19:00:00"]`. **Any change** omits `to`; **Entities as JSON list** watches multiple entities. Without `to`, HA also reacts to attribute changes. Event triggers support e.g. `timer.finished` with an optional JSON data filter. Native time conditions preserve `before`/`after`: fixed times, after inclusive and before exclusive, including overnight windows. Equal bounds mean all day. Time helpers, time templates and weekday filters remain outside the supported import. The full pool-pump automation retains multiline timer templates and nested `choose` branches.
+
+| Block | Image | Description |
+| --- | --- | --- |
+| **Event trigger**<br><code>ugso_event_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_event_trigger.png" alt="Event trigger" style="max-width:280px;max-height:180px"> | `trigger: event` · `event_type` · `event_data` |
+| **Native HA time condition**<br><code>ugso_native_time_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_native_time_condition.png" alt="Native HA time condition" style="max-width:280px;max-height:180px"> | `condition: time` · `before` · `after` |
+
+[Home Assistant: triggers](https://www.home-assistant.io/docs/automation/trigger/) · [Time condition](https://www.home-assistant.io/docs/scripts/conditions/#time-condition)

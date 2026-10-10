@@ -5,9 +5,9 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 112 Blocktypen und Ausgabeformate bleiben erhalten.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 114 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.17**: 112 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.17**: 114 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -221,7 +221,7 @@ Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dr
 
 [Zur Übersicht](/projects/blocks-for-ha/)
 
-Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 112 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 114 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
 
 ## Trigger-IDs und mehrere Ziele
 
@@ -234,3 +234,14 @@ Seit **0.1.28**: Zustandslisten über **Zustände als JSON-Liste**, z. B. `["1_s
 | **Ausgelöst durch ID**<br><code>ugso_trigger_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_trigger_condition.png" alt="Ausgelöst durch ID" style="max-width:280px;max-height:180px"> | `condition: trigger` · `id` |
 
 [Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)
+
+## Poolpumpen, Ereignisse und mehrere Uhrzeiten
+
+Seit **0.1.30**: Ein Zeit-Auslöser akzeptiert über **Uhrzeiten als JSON-Liste** mehrere feste Uhrzeiten, z. B. `["10:00:00","13:00:00","19:00:00"]`. **Jede Änderung** im Zustandsauslöser lässt `to` weg; **Entitäten als JSON-Liste** überwacht mehrere Entitäten. Ohne `to` reagiert HA auch auf Attributänderungen. Der Ereignis-Auslöser unterstützt z. B. `timer.finished` und einen optionalen JSON-Datenfilter. Die native Zeitbedingung erhält `before`/`after` unverändert; feste Uhrzeiten, nach inklusive und vor exklusiv, auch über Mitternacht. Gleiche Grenzen entsprechen ganztägig. Zeithelfer, Zeit-Templates und Wochentagsfilter bleiben hier noch außerhalb des unterstützten Imports. Die vollständige Poolpumpen-Automation bleibt einschließlich mehrzeiligem Timer-Template und verschachteltem `choose` erhalten.
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Ereignis-Auslöser**<br><code>ugso_event_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_event_trigger.png" alt="Ereignis-Auslöser" style="max-width:280px;max-height:180px"> | `trigger: event` · `event_type` · `event_data` |
+| **Native HA-Zeitbedingung**<br><code>ugso_native_time_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_native_time_condition.png" alt="Native HA-Zeitbedingung" style="max-width:280px;max-height:180px"> | `condition: time` · `before` · `after` |
+
+[Home Assistant: triggers](https://www.home-assistant.io/docs/automation/trigger/) · [Time condition](https://www.home-assistant.io/docs/scripts/conditions/#time-condition)

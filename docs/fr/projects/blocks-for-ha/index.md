@@ -7,7 +7,7 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 UGSo Blocks for HA assemble des automatisations Home Assistant avec des blocs visuels. Les déclencheurs, conditions et actions produisent du YAML natif ; les expressions utilisent Jinja dans Home Assistant. Blockly fournit l’éditeur, pas le moteur d’exécution de HA.
 
-**Version 0.1.29 · 111 types de blocs · code source Apache-2.0**
+**Version 0.1.30 · 111 types de blocs · code source Apache-2.0**
 
 [Code source sur GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/blocks_for_ha) · [Documentation DE](/projects/blocks-for-ha/) · [Documentation EN](/en/projects/blocks-for-ha/)
 
@@ -89,3 +89,7 @@ La sortie **Automatisation individuelle · Éditeur HA** omet l’`id` principal
 [Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)
 
 Depuis **0.1.29**, l’espace Blockly occupe toute la hauteur du panneau jusqu’à la légende. Un panneau YAML plus haut agrandit aussi l’espace de travail ; la sortie reste repliable.
+
+Depuis **0.1.30** : activer **Heures en liste JSON** pour plusieurs heures fixes, par exemple `["10:00:00","13:00:00","19:00:00"]`. **Tout changement** omet `to` ; **Entités en liste JSON** surveille plusieurs entités. Sans `to`, HA réagit aussi aux changements d’attributs. Les événements acceptent par exemple `timer.finished` avec un filtre de données JSON facultatif. Les conditions horaires natives conservent `before`/`after` : heures fixes, après inclusif et avant exclusif, même à travers minuit. Des bornes identiques couvrent toute la journée. Assistants horaires, modèles horaires et filtres de jours restent hors de l’import pris en charge. L’automatisation complète conserve le modèle multiligne du minuteur et les branches `choose` imbriquées.
+
+[Home Assistant: triggers](https://www.home-assistant.io/docs/automation/trigger/) · [Time condition](https://www.home-assistant.io/docs/scripts/conditions/#time-condition)

@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.28 · 112 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.28 · 114 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -245,3 +245,14 @@ La sortie **Automatisation individuelle · Éditeur HA** omet l’`id` principal
 | **Déclenché par ID**<br><code>ugso_trigger_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_trigger_condition.png" alt="Déclenché par ID" style="max-width:280px;max-height:180px"> | `condition: trigger` · `id` |
 
 [Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)
+
+## Pompes de piscine, événements et heures multiples
+
+Depuis **0.1.30** : activer **Heures en liste JSON** pour plusieurs heures fixes, par exemple `["10:00:00","13:00:00","19:00:00"]`. **Tout changement** omet `to` ; **Entités en liste JSON** surveille plusieurs entités. Sans `to`, HA réagit aussi aux changements d’attributs. Les événements acceptent par exemple `timer.finished` avec un filtre de données JSON facultatif. Les conditions horaires natives conservent `before`/`after` : heures fixes, après inclusif et avant exclusif, même à travers minuit. Des bornes identiques couvrent toute la journée. Assistants horaires, modèles horaires et filtres de jours restent hors de l’import pris en charge. L’automatisation complète conserve le modèle multiligne du minuteur et les branches `choose` imbriquées.
+
+| Block | Image | Description |
+| --- | --- | --- |
+| **Déclencheur événement**<br><code>ugso_event_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_event_trigger.png" alt="Déclencheur événement" style="max-width:280px;max-height:180px"> | `trigger: event` · `event_type` · `event_data` |
+| **Condition horaire HA native**<br><code>ugso_native_time_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_native_time_condition.png" alt="Condition horaire HA native" style="max-width:280px;max-height:180px"> | `condition: time` · `before` · `after` |
+
+[Home Assistant: triggers](https://www.home-assistant.io/docs/automation/trigger/) · [Time condition](https://www.home-assistant.io/docs/scripts/conditions/#time-condition)
