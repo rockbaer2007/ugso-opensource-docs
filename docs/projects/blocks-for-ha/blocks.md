@@ -4,9 +4,34 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 ---
 # Liste der Blocks
 
-Stand **0.1.12**: 50 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.13**: 68 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden derzeit manuell eingegeben.
+
+## Abläufe, Objekte und Listen seit 0.1.13
+
+[ioBroker / Original-Blockly / native HA: Gegenüberstellung und Grenzen](./flow).
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Pause**<br><code>ugso_pause</code> | <img src="/assets/blocks-for-ha/blocks/ugso_pause.png" alt="Pause" style="max-width:280px;max-height:180px"> | Dauer mit ms/Sekunden/Minuten/Stunden; konstante oder berechnete Zahl. Native HA-Wartezeit. |
+| **Warte bis**<br><code>ugso_wait</code> | <img src="/assets/blocks-for-ha/blocks/ugso_wait.png" alt="Warte bis" style="max-width:280px;max-height:180px"> | Boolean-Bedingung mit Timeout und Haken zum Fortsetzen; ohne Haken endet der Lauf bei Timeout. |
+| **Diesen Lauf stoppen**<br><code>ugso_stop</code> | <img src="/assets/blocks-for-ha/blocks/ugso_stop.png" alt="Diesen Lauf stoppen" style="max-width:280px;max-height:180px"> | Grund und optionaler Fehler-Haken. Beendet den gesamten Lauf, auch in Schleifen. |
+| **Wiederhole Anzahl**<br><code>ugso_repeat</code> | <img src="/assets/blocks-for-ha/blocks/ugso_repeat.png" alt="Wiederhole Anzahl" style="max-width:280px;max-height:180px"> | C-Körper für HA-repeat.count; repeat.index ist der 1-basierte Index. |
+| **Wiederhole solange/bis**<br><code>ugso_repeat_while</code> | <img src="/assets/blocks-for-ha/blocks/ugso_repeat_while.png" alt="Wiederhole solange/bis" style="max-width:280px;max-height:180px"> | Boolean-Eingang und Aktionskörper. Solange prüft vorher, bis danach. Pause im Körper verwenden. |
+| **Für jeden Eintrag**<br><code>ugso_foreach</code> | <img src="/assets/blocks-for-ha/blocks/ugso_foreach.png" alt="Für jeden Eintrag" style="max-width:280px;max-height:180px"> | Liste durchlaufen; aktueller Wert über Template repeat.item, Index über repeat.index. |
+| **Neues Objekt**<br><code>ugso_object_new</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_new.png" alt="Neues Objekt" style="max-width:280px;max-height:180px"> | 0–100 benannte Attribute mit Zahnrad/+−. Dictionary-Wert, keine HA-Entität. |
+| **Attribut von Objekt**<br><code>ugso_object_get</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_get.png" alt="Attribut von Objekt" style="max-width:280px;max-height:180px"> | Schlüssel lesen; fehlender Schlüssel ergibt null. Dictionary erforderlich. |
+| **Objekt hat Attribut**<br><code>ugso_object_has</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_has.png" alt="Objekt hat Attribut" style="max-width:280px;max-height:180px"> | Boolean-Test auf einen Dictionary-Schlüssel. |
+| **Attribute des Objekts**<br><code>ugso_object_keys</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_keys.png" alt="Attribute des Objekts" style="max-width:280px;max-height:180px"> | Schlüsselliste für Listen- und Für-jeden-Eintrag-Blocks. |
+| **Setze Attribut in Variable**<br><code>ugso_object_set</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_set.png" alt="Setze Attribut in Variable" style="max-width:280px;max-height:180px"> | Variablenauswahl und Wertanschluss; weist eine Dictionary-Kopie mit geändertem Schlüssel zu. Vorher als Objekt setzen. |
+| **Entferne Attribut aus Variable**<br><code>ugso_object_remove</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_remove.png" alt="Entferne Attribut aus Variable" style="max-width:280px;max-height:180px"> | Neue Zuweisung ohne Schlüssel. Keine Mutation anderer Variablen oder Entity-Attribute. |
+| **Bereichsvergleich**<br><code>ugso_logic_range</code> | <img src="/assets/blocks-for-ha/blocks/ugso_logic_range.png" alt="Bereichsvergleich" style="max-width:280px;max-height:180px"> | Unabhängig &lt; oder ≤ für Unter- und Obergrenze; Zahl und Laufzeitzahl. |
+| **Ersatzwert**<br><code>ugso_logic_default</code> | <img src="/assets/blocks-for-ha/blocks/ugso_logic_default.png" alt="Ersatzwert" style="max-width:280px;max-height:180px"> | Auswahl null/nicht gesetzt oder leer/falsch/0; null-Modus erhält gültige 0 und falsch. |
+| **Der Fall ist**<br><code>ugso_case</code> | <img src="/assets/blocks-for-ha/blocks/ugso_case.png" alt="Der Fall ist" style="max-width:280px;max-height:180px"> | 1–100 Fallwerte mit Zahnrad/+− und Aktionskörpern. Erste Übereinstimmung, sonst optionaler Standardkörper. |
+| **Liste erstellen**<br><code>ugso_list_new</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_new.png" alt="Liste erstellen" style="max-width:280px;max-height:180px"> | 0–100 beliebige Einträge mit Zahnrad/+−, auch verschachtelte Werte. |
+| **Listenlänge**<br><code>ugso_list_length</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_length.png" alt="Listenlänge" style="max-width:280px;max-height:180px"> | Länge einer Liste als Laufzeitzahl. Texte und Dictionaries sind keine Listen. |
+| **Liste ist leer**<br><code>ugso_list_empty</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_empty.png" alt="Liste ist leer" style="max-width:280px;max-height:180px"> | Boolean-Prüfung auf eine Liste ohne Einträge. |
 
 ## Konvertierung seit 0.1.12
 

@@ -4,9 +4,34 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 ---
 # Block catalog
 
-Version **0.1.12**: 50 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.13**: 68 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are currently entered manually.
+
+## Flow, objects and lists added in 0.1.13
+
+[ioBroker / original Blockly / native HA comparison and limitations](./flow).
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Pause**<br><code>ugso_pause</code> | <img src="/assets/blocks-for-ha/blocks/ugso_pause.png" alt="Pause" style="max-width:280px;max-height:180px"> | Explicit duration unit, constant or runtime number. Native HA delay. |
+| **Wait until**<br><code>ugso_wait</code> | <img src="/assets/blocks-for-ha/blocks/ugso_wait.png" alt="Wait until" style="max-width:280px;max-height:180px"> | Boolean condition with timeout and continuation checkbox; stops on timeout when unchecked. |
+| **Stop this run**<br><code>ugso_stop</code> | <img src="/assets/blocks-for-ha/blocks/ugso_stop.png" alt="Stop this run" style="max-width:280px;max-height:180px"> | Reason and optional error checkbox. Ends the whole run, including outer loops. |
+| **Repeat count**<br><code>ugso_repeat</code> | <img src="/assets/blocks-for-ha/blocks/ugso_repeat.png" alt="Repeat count" style="max-width:280px;max-height:180px"> | C-shaped body for HA repeat.count; repeat.index is the 1-based index. |
+| **Repeat while/until**<br><code>ugso_repeat_while</code> | <img src="/assets/blocks-for-ha/blocks/ugso_repeat_while.png" alt="Repeat while/until" style="max-width:280px;max-height:180px"> | Boolean input and action body. While checks before; until after. Include a pause in the body. |
+| **For each item**<br><code>ugso_foreach</code> | <img src="/assets/blocks-for-ha/blocks/ugso_foreach.png" alt="For each item" style="max-width:280px;max-height:180px"> | Iterate a list; current value through template repeat.item, index through repeat.index. |
+| **New object**<br><code>ugso_object_new</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_new.png" alt="New object" style="max-width:280px;max-height:180px"> | 0–100 named attributes using gear/+−. Dictionary value, not an HA entity. |
+| **Attribute of object**<br><code>ugso_object_get</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_get.png" alt="Attribute of object" style="max-width:280px;max-height:180px"> | Read a dictionary key; missing key returns null. Requires a dictionary. |
+| **Object has attribute**<br><code>ugso_object_has</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_has.png" alt="Object has attribute" style="max-width:280px;max-height:180px"> | Boolean test for a dictionary key. |
+| **Object attributes**<br><code>ugso_object_keys</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_keys.png" alt="Object attributes" style="max-width:280px;max-height:180px"> | Key list for list operations and for-each. |
+| **Set attribute in variable**<br><code>ugso_object_set</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_set.png" alt="Set attribute in variable" style="max-width:280px;max-height:180px"> | Variable selector and value socket; assigns a dictionary copy with the changed key. Initialize as an object first. |
+| **Remove attribute from variable**<br><code>ugso_object_remove</code> | <img src="/assets/blocks-for-ha/blocks/ugso_object_remove.png" alt="Remove attribute from variable" style="max-width:280px;max-height:180px"> | Reassigns without the key. Does not mutate other variables or entity attributes. |
+| **Range comparison**<br><code>ugso_logic_range</code> | <img src="/assets/blocks-for-ha/blocks/ugso_logic_range.png" alt="Range comparison" style="max-width:280px;max-height:180px"> | Independent &lt; or ≤ for each bound; numbers and runtime numbers. |
+| **Fallback value**<br><code>ugso_logic_default</code> | <img src="/assets/blocks-for-ha/blocks/ugso_logic_default.png" alt="Fallback value" style="max-width:280px;max-height:180px"> | Select null/undefined or empty/false/zero; null mode preserves valid zero and false. |
+| **Case selection**<br><code>ugso_case</code> | <img src="/assets/blocks-for-ha/blocks/ugso_case.png" alt="Case selection" style="max-width:280px;max-height:180px"> | 1–100 cases using gear/+− and action bodies. First match wins; optional populated default body. |
+| **Create list**<br><code>ugso_list_new</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_new.png" alt="Create list" style="max-width:280px;max-height:180px"> | 0–100 arbitrary items using gear/+−, including nested values. |
+| **List length**<br><code>ugso_list_length</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_length.png" alt="List length" style="max-width:280px;max-height:180px"> | List length as a runtime number. Strings and dictionaries are not lists. |
+| **List is empty**<br><code>ugso_list_empty</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_empty.png" alt="List is empty" style="max-width:280px;max-height:180px"> | Boolean test for a list with no items. |
 
 ## Conversion added in 0.1.12
 

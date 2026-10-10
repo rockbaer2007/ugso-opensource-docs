@@ -4,11 +4,13 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.12 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
+**Version 0.1.13 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
 
 Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
 
 ## Liste der Blocks und Originalplugins
+
+Neu in **0.1.13**: 18 Blocks für **Timeouts, Objekt, Logik, Schleifen und Listen**. Native HA-Pausen mit Einheiten/Laufzeitwerten, Warten bis mit Timeout, Lauf stoppen, Wiederholungen, Dictionary-Zugriffe und -Zuweisungen, Fallauswahl, Bereichsvergleich, Ersatzwert und Listen. [ioBroker / Original-Blockly / UGSo: Zuordnung und Grenzen](./flow).
 
 Neu in **0.1.12**: **Konvertierung** mit neun Blocks für Zahl, Boolean, String, Typ, Datum/Zeit, Datumsformat/-bestandteile, Zeitdifferenz und JSON. Dynamische Formatauswahl und JSON-Formatierung per Checkbox. JSONata bleibt als Erweiterung vorgemerkt. [Anleitung und ioBroker-Gegenüberstellung](./conversion).
 
@@ -18,7 +20,7 @@ Neu in **0.1.10**: **Erhöhe Variable um …** im Variablen-Menü mit Schritt `1
 
 Neu in **0.1.9**: Kategorie **Logik** mit Vergleich, kompaktem UND/ODER, NICHT, wahr/falsch, null und bedingter Wertauswahl. Variablen unterstützen jetzt auch Boolean und null. [Alle sechs neuen Blocks mit Bildern und Beispiel](./blocks#logik-blocks-seit-0-1-9).
 
-Die [Liste aller 50 Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsbeschreibung. Die Tabelle der Originalplugins verlinkt direkt auf die jeweiligen Quellen.
+Die [Liste aller 68 Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsbeschreibung. Die Tabelle der Originalplugins verlinkt direkt auf die jeweiligen Quellen.
 
 Neu in **0.1.8**: **Variablen → Variable erstellen …**, Setzen-/Lesen-Blocks und die Kategorie **Templates** mit eigenen Wert- und Bedingungsblocks. Variablen erzeugen native HA-`variables`-Aktionen; Lesen erzeugt <code v-pre>{{ name }}</code>. Jinja wird erst in HA ausgewertet. [Anleitung, Beispiel und Importgrenzen](./blocks#variablen-und-templates-verwenden).
 
@@ -45,7 +47,7 @@ Editor: `http://127.0.0.1:4180/`. YAML kann angezeigt, kopiert, als Datei gespei
 
 ## ioBroker / unsere Blocks: vorhandene Funktionen
 
-50 Blocktypen einschließlich des Automationsrahmens; Variablen, Templates, Datum/Zeit und Konvertierung sind im Katalog beschrieben:
+68 Blocktypen einschließlich des Automationsrahmens; Variablen, Templates, Datum/Zeit und Konvertierung sind im Katalog beschrieben:
 
 | ioBroker-Konzept | UGSo Blocks für HA | HA-Ausgabe |
 | --- | --- | --- |
@@ -125,16 +127,16 @@ Wir verwenden bereits **Blockly 13.3.0**, die originale Bibliothek, statt eine e
 
 Die [Originaldokumentation zur Arbeitsfläche und zu Blockteilen](https://docs.blockly.com/guides/get-started/workspace-anatomy/) und die [Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/) dienen als Referenz für vertraute Bedienmuster. Bibliotheksupdates werden bewusst mit Verbindungs-, Import-/Export- und Browserprüfungen übernommen.
 
-| Aufgabe | Stand in 0.1.12 / nächster Schritt |
+| Aufgabe | Stand in 0.1.13 / nächster Schritt |
 | --- | --- |
 | Anschlussgeometrie und Typprüfung | Boolean-Bedingungen und Number-Werte seitlich; Auslöser/Aktionen als getrennte Statement-Ketten umgesetzt |
-| Erweiterbare Blocks | Falls und UND/ODER/NICHT umgesetzt; Aktionsdaten später als visuelle Felder |
+| Erweiterbare Blocks | Falls, UND/ODER/NICHT, Fallauswahl, Objekte und Listen umgesetzt; Aktionsdaten später als visuelle Felder |
 | Standardwerte | Shadow-Zahlen und Textblocks umgesetzt; Entitäts-Wertblocks offen |
 | Sensorwerte und Attribute | Eigene Wert-Blocks offen; über Templates bereits nutzbar. Typumwandlung als Konvertierungs-Blocks vorhanden |
 | Editorbedienung | Kontextmenü, Hilfe, Deaktivieren, Papierkorb-Wiederherstellung, Zoom und Einfügemarkierung vorhanden |
 | Kommentare | Im Projekt erhalten; YAML-Kommentare und eigener Kommentarblock offen |
 | Menü und Blockfarben | Dunkles Kategorienmenü, helle Blockauswahl, getrennte Gruppenfarben umgesetzt |
-| ioBroker-Kategorien | System, Datum/Zeit und Konvertierung geprüft; Gegenüberstellung bei jeder Funktion aktualisieren |
+| ioBroker-Kategorien | System, Datum/Zeit, Konvertierung, Timeouts, Objekt und Logik geprüft; Unterschiede zur HA-Ausführung dokumentiert |
 | JSONata | Vorgemerkt; native Objekt-/Listen-Zugriffe und optionalen HA-Runtimeadapter prüfen |
 | Veröffentlichung und Updates | Jede neue HA-App von Anfang an im gemeinsamen Repository mit installierbarem Paket; Paket- und Oberflächenversion gemeinsam anheben |
 | HA-Verbindung, Katalog und Plugins | Offen; verwaltete Verbindung und deklarative Erweiterungen vorgesehen |
