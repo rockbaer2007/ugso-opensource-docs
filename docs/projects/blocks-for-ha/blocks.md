@@ -5,9 +5,9 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 119 Blocktypen und Ausgabeformate bleiben erhalten.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Der aktuelle Katalog enthält 148 Typen.
 
-Stand **0.1.38**: 119 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.39**: 148 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -221,7 +221,7 @@ Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dr
 
 [Zur Übersicht](/projects/blocks-for-ha/)
 
-Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 119 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 148 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
 
 ## Trigger-IDs und mehrere Ziele
 
@@ -248,7 +248,7 @@ Seit **0.1.30**: Ein Zeit-Auslöser akzeptiert über **Uhrzeiten als JSON-Liste*
 
 ## Temperatur geändert
 
-Seit **0.1.31** unterstützt der neue Block den nativen Auslöser temperature.changed. Ziel (JSON): entity_id als Text oder Liste. Schwelle (JSON): type any, above, below, between oder outside. any benötigt nur type; above/below benötigen value, between/outside value_min und value_max. Zahlen: number plus unit_of_measurement (°C/°F). Referenzen: entity (sensor, number oder input_number). Optional ist eine Trigger-ID. Andere Zielarten (Bereich/Gerät/Label) sind noch nicht importierbar. MQTT-Topics, qos/retain/evaluate_payload und mehrzeilige JSON-/Jinja-Payloads bleiben erhalten.
+Seit **0.1.31** unterstützt der neue Block den nativen Auslöser temperature.changed. Ziel (JSON): entity_id als Text oder Liste. Schwelle (JSON): type any, above, below, between oder outside. any benötigt nur type; above/below benötigen value, between/outside value_min und value_max. Zahlen: number plus unit_of_measurement (°C/°F). Referenzen: entity (sensor, number oder input_number). Optional ist eine Trigger-ID. Seit 0.1.39 sind auch Bereich, Gerät, Etage und Label importierbar. MQTT-Topics, qos/retain/evaluate_payload und mehrzeilige JSON-/Jinja-Payloads bleiben erhalten.
 
 | Block | Bild | Funktion |
 | --- | --- | --- |
@@ -276,7 +276,7 @@ Home Assistant löst nach dem Grenzübertritt aus, sobald der Wert die gesamte H
 
 ## Mehrere Variablen in einer Aktion
 
-Seit **0.1.34** steht im Menü **Variablen** ein gemeinsamer Block **Variablen setzen (JSON)** bereit. Das JSON-Objekt enthält 1–100 Variablennamen mit Text, HA-Template, Zahl, Boolean oder null. Mehrere Einträge bleiben eine einzige native `variables`-Aktion, einschließlich ihrer Reihenfolge. Einzelne Zuweisungen verwenden weiterhin den bisherigen Setzen-Block. Listen/Objekte als Variablenwerte und Variablen auf Automationsebene bleiben nicht unterstützt. Namen und Templates im JSON müssen dort direkt bearbeitet werden; Umbenennen über den Blockly-Dialog ändert diesen freien JSON-Text nicht. Beim Import werden die Namen auch in Blockly registriert.
+Seit **0.1.34** steht im Menü **Variablen** ein gemeinsamer Block **Variablen setzen (JSON)** bereit. Das JSON-Objekt enthält 1–100 Variablennamen mit Text, HA-Template, Zahl, Boolean oder null. Mehrere Einträge bleiben eine einzige native `variables`-Aktion, einschließlich ihrer Reihenfolge. Einzelne Zuweisungen verwenden weiterhin den bisherigen Setzen-Block. Seit 0.1.39 sind auch Listen/Objekte und Variablen auf Automationsebene unterstützt; siehe [HA erweitert und Jinja](./advanced). Namen und Templates im JSON müssen dort direkt bearbeitet werden; Umbenennen über den Blockly-Dialog ändert diesen freien JSON-Text nicht. Beim Import werden die Namen auch in Blockly registriert.
 
 Das Timer-Beispiel erhält h/m, beide überwachten Entitäten, die Bedingung und den restart-Modus. Fehlende conditions werden als leere Liste ergänzt.
 
@@ -322,8 +322,45 @@ Die LCD-Automation mit vier `input_text.set_value`-Aktionen und `mode: restart` 
 
 ## Dynamische Zielentitäten
 
-Seit **0.1.38** akzeptiert das Feld **Ziel** in der allgemeinen **HA-Aktion** eine feste Entitäts-ID oder ein HA-Template, zum Beispiel `{{ ziel_tv }}`. Der Entitätsdialog bietet dafür ein mehrzeiliges Eingabefeld. Auch die JSON-Zielliste darf feste IDs und Templates enthalten. Jinja bleibt unverändert erhalten und wird erst von Home Assistant ausgewertet. Dynamische Ziele werden beim Import in der allgemeinen HA-Aktion dargestellt; spezialisierte Schaltblöcke würden die Domain nicht zuverlässig bestimmen können.
+Seit **0.1.39** akzeptiert das Feld **Ziel** in der allgemeinen **HA-Aktion** eine feste Entitäts-ID oder ein HA-Template, zum Beispiel `{{ ziel_tv }}`. Der Entitätsdialog bietet dafür ein mehrzeiliges Eingabefeld. Auch die JSON-Zielliste darf feste IDs und Templates enthalten. Jinja bleibt unverändert erhalten und wird erst von Home Assistant ausgewertet. Dynamische Ziele werden beim Import in der allgemeinen HA-Aktion dargestellt; spezialisierte Schaltblöcke würden die Domain nicht zuverlässig bestimmen können.
 
 Die Schlafzimmer-TV-Automation mit einer mehrzeiligen Sommerbetrieb-Variable, 21:30 und 00:30 Uhr und zwei choose-Zweigen ist geprüft. Zielvorlagen, Variableninhalt und Uhrzeitbedingungen bleiben beim Import, Projekt-Neuladen und Export erhalten. Auslöser- und Bedingungsfelder für Entitäts-IDs verlangen weiterhin feste IDs.
 
 [Home Assistant: templates in action targets](https://www.home-assistant.io/docs/scripts/perform-actions/#setting-targets-and-options-with-a-template).
+
+
+## HA erweitert und Jinja seit 0.1.39
+
+[Anleitung / Guide](./advanced).
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **HA state**<br><code>ugso_ha_state_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_state_trigger.png" alt="HA state" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA numeric_state**<br><code>ugso_ha_numeric_state_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_numeric_state_trigger.png" alt="HA numeric_state" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA time**<br><code>ugso_ha_time_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_time_trigger.png" alt="HA time" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA sun**<br><code>ugso_ha_sun_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_sun_trigger.png" alt="HA sun" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA homeassistant**<br><code>ugso_ha_homeassistant_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_homeassistant_trigger.png" alt="HA homeassistant" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA mqtt**<br><code>ugso_ha_mqtt_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_mqtt_trigger.png" alt="HA mqtt" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA template**<br><code>ugso_ha_template_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_template_trigger.png" alt="HA template" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA webhook**<br><code>ugso_ha_webhook_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_webhook_trigger.png" alt="HA webhook" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA zone**<br><code>ugso_ha_zone_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_zone_trigger.png" alt="HA zone" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA device**<br><code>ugso_ha_device_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_device_trigger.png" alt="HA device" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA tag**<br><code>ugso_ha_tag_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_tag_trigger.png" alt="HA tag" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA conversation**<br><code>ugso_ha_conversation_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_conversation_trigger.png" alt="HA conversation" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA geo_location**<br><code>ugso_ha_geo_location_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_geo_location_trigger.png" alt="HA geo_location" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA calendar**<br><code>ugso_ha_calendar_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_calendar_trigger.png" alt="HA calendar" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA event**<br><code>ugso_ha_event_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_event_trigger.png" alt="HA event" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA-Auslöser (erweitert)**<br><code>ugso_ha_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_trigger.png" alt="HA-Auslöser (erweitert)" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA-Bedingung (erweitert)**<br><code>ugso_ha_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_condition.png" alt="HA-Bedingung (erweitert)" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA-Schritt (erweitert)**<br><code>ugso_ha_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_ha_action.png" alt="HA-Schritt (erweitert)" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA-Aktion Zielart Ziel Daten Schrittoptionen**<br><code>ugso_target_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_target_action.png" alt="HA-Aktion Zielart Ziel Daten Schrittoptionen" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **HA-Integration Ziel Optionen verwenden**<br><code>ugso_integration_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_integration_trigger.png" alt="HA-Integration Ziel Optionen verwenden" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **Aktionsgruppe**<br><code>ugso_sequence</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_sequence.png" alt="Aktionsgruppe" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **Parallel Zweig 1 Zweig 2**<br><code>ugso_parallel</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_parallel.png" alt="Parallel Zweig 1 Zweig 2" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **Warte auf Auslöser Optionen**<br><code>ugso_wait_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_wait_trigger.png" alt="Warte auf Auslöser Optionen" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **Nur weiter wenn**<br><code>ugso_condition_step</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_condition_step.png" alt="Nur weiter wenn" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **Ereignis auslösen Daten**<br><code>ugso_fire_event</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_fire_event.png" alt="Ereignis auslösen Daten" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **Assist antwortet**<br><code>ugso_assist_response</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_assist_response.png" alt="Assist antwortet" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **Szene aktivieren**<br><code>ugso_scene</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_scene.png" alt="Szene aktivieren" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **Jinja (experimentell)**<br><code>ugso_jinja_value</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_value.png" alt="Jinja (experimentell)" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+| **Jinja-Bedingung (experimentell)**<br><code>ugso_jinja_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_condition.png" alt="Jinja-Bedingung (experimentell)" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |

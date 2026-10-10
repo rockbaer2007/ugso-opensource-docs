@@ -126,6 +126,7 @@ const sidebarDe = {
     { text: 'Übersicht', link: '/projects-mqtt/' },
     { text: 'UGSo Blocks for HA', link: '/projects/blocks-for-ha/' },
     { text: 'Liste der Blocks', link: '/projects/blocks-for-ha/blocks' },
+    { text: 'HA erweitert und Jinja', link: '/projects/blocks-for-ha/advanced' },
     { text: 'Datum und Zeit', link: '/projects/blocks-for-ha/time' },
     { text: 'Konvertierung', link: '/projects/blocks-for-ha/conversion' },
     { text: 'Timeouts, Objekt und Logik', link: '/projects/blocks-for-ha/flow' },
@@ -551,6 +552,7 @@ const sidebarEn = {
     { text: 'Overview', link: '/en/projects-mqtt/' },
     { text: 'UGSo Blocks for HA', link: '/en/projects/blocks-for-ha/' },
     { text: 'Block catalog', link: '/en/projects/blocks-for-ha/blocks' },
+    { text: 'Extended HA and Jinja', link: '/en/projects/blocks-for-ha/advanced' },
     { text: 'Date and time', link: '/en/projects/blocks-for-ha/time' },
     { text: 'Conversion', link: '/en/projects/blocks-for-ha/conversion' },
     { text: 'Timeouts, objects and logic', link: '/en/projects/blocks-for-ha/flow' },
@@ -829,6 +831,7 @@ const sidebarFr = {
   '/fr/projects/blocks-for-ha/': [{ text: 'UGSo Blocks for HA', items: [
     { text: 'Vue d’ensemble', link: '/fr/projects/blocks-for-ha/' },
     { text: 'Catalogue des blocs', link: '/fr/projects/blocks-for-ha/blocks' },
+    { text: 'HA avancé et Jinja', link: '/fr/projects/blocks-for-ha/advanced' },
     { text: 'Date et heure', link: '/fr/projects/blocks-for-ha/time' },
     { text: 'Conversion', link: '/fr/projects/blocks-for-ha/conversion' },
     { text: 'Délais, objets et logique', link: '/fr/projects/blocks-for-ha/flow' },

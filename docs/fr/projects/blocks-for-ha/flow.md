@@ -37,3 +37,5 @@ Comparaison, ET/OU, NON, booléens, null et choix de valeur sont disponibles. Le
 Le choix conditionnel de **valeur** ne contient pas d’actions. Une condition seule ne déclenche aucune automatisation.
 
 [Scripts HA](https://www.home-assistant.io/docs/scripts/) · [Sources ioBroker](https://github.com/ioBroker/ioBroker.javascript) · [Blockly](https://github.com/RaspberryPiFoundation/blockly).
+
+Depuis **0.1.39** : unités de durée combinées, listes for_each littérales, options HA, attente de déclencheur, timer.finished, branches parallèles et groupes d’actions. [Guide HA avancé et Jinja](./advanced).

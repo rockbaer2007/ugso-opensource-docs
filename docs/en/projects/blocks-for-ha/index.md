@@ -4,6 +4,8 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
+New in **0.1.39**: 148 block types, extended HA triggers/conditions, targets/variables/options, waits, parallel branches, action groups and **Jinja (experimental)** with recognition and preserved originals. [Guide, limits and sources](./advanced).
+
 New in **0.1.26**: **Block language → System language / DE / EN / FR**. System follows preferred browser languages, with English as the fallback for unsupported languages. Labels, dropdowns, help, categories and native Blockly dialogs are translated. Other app controls and diagnostics currently remain German. Switching saves the valid project and reloads Blockly; incomplete blocks or unavailable storage keep the current view. Technical IDs, variable names, user text, templates and YAML are unchanged. Packages retain their authors’ language. [French documentation](/fr/projects/blocks-for-ha/); the catalog uses separate DE/EN/FR block images.
 
 New in **0.1.18**: [Custom block/template editor](./custom-blocks) in a 95% dialog, custom category, multiple blocks per package, copyable JSON and ZIP import/export. [Block-package catalog](./catalog/).
@@ -12,7 +14,7 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.38 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.39 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Since **0.1.25**, select **YAML → Code importieren**, paste YAML and click **Importieren** instead of Save. Without the checkbox, triggers, conditions and actions are added; the current name, settings and block shapes are preserved. Conditions are combined with AND; additional triggers may start more runs. To replace everything, select **Aktuelle Automation vollständig ersetzen** and confirm. One supported automation as an object or single-item list is accepted, up to 1 MB. Invalid code or cancellation leaves the current blocks unchanged. Switching modes retains pasted text for this page session; successful import returns to output. Adding requires a valid current automation; complete replacement also works with incomplete blocks. File import through **Öffnen** remains available.
 
@@ -30,7 +32,7 @@ New in **0.1.10**: **Change variable by …** in the variables menu, with defaul
 
 New in **0.1.9**: **Logik** category with comparison, compact AND/OR, NOT, true/false, null and conditional value selection. Variables now accept Boolean and null too. [Six new blocks with images and example](./blocks#logic-blocks-added-in-0-1-9).
 
-The [catalog of all 111 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
+The [catalog of all 148 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
 
 New in **0.1.8**: **Variablen → Variable erstellen …**, Set/Read variable blocks and a **Templates** category with dedicated value and condition blocks. Variables generate native HA `variables` actions; reads produce <code v-pre>{{ name }}</code>. Jinja is evaluated in HA. [Usage, example and import limits](./blocks#using-variables-and-templates).
 

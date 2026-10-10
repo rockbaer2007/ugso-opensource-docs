@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.38 · 119 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.39 · 148 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -259,7 +259,7 @@ Depuis **0.1.30** : activer **Heures en liste JSON** pour plusieurs heures fixes
 
 ## Température modifiée
 
-Depuis **0.1.31**, le nouveau bloc prend en charge temperature.changed natif. Cible (JSON) : entity_id texte ou liste. Seuil (JSON) : type any, above, below, between ou outside. any exige seulement type ; above/below exigent value, between/outside value_min et value_max. Nombres : number et unit_of_measurement (°C/°F). Références : entity (sensor, number ou input_number). ID facultatif. Autres cibles (zone/appareil/étiquette) non prises en charge. Les topics MQTT, qos/retain/evaluate_payload et contenus JSON/Jinja multilignes restent présents.
+Depuis **0.1.31**, le nouveau bloc prend en charge temperature.changed natif. Cible (JSON) : entity_id texte ou liste. Seuil (JSON) : type any, above, below, between ou outside. any exige seulement type ; above/below exigent value, between/outside value_min et value_max. Nombres : number et unit_of_measurement (°C/°F). Références : entity (sensor, number ou input_number). ID facultatif. Depuis 0.1.39, cibles zone, appareil, étage et étiquette prises en charge. Les topics MQTT, qos/retain/evaluate_payload et contenus JSON/Jinja multilignes restent présents.
 
 | Block | Image | Description |
 | --- | --- | --- |
@@ -287,7 +287,7 @@ Home Assistant déclenche après le franchissement du seuil lorsque la valeur re
 
 ## Plusieurs variables dans une action
 
-Depuis **0.1.34**, le menu **Variables** propose **Définir les variables (JSON)**. L’objet JSON contient 1–100 noms de variables avec texte, modèle HA, nombre, booléen ou null. Plusieurs entrées restent une seule action native `variables`, avec leur ordre. Les affectations uniques conservent le bloc existant. Les valeurs liste/objet et les variables au niveau automation restent non prises en charge. Modifier noms et modèles directement dans le JSON ; le dialogue de renommage Blockly ne modifie pas ce texte JSON libre. Les noms importés sont également enregistrés dans Blockly.
+Depuis **0.1.34**, le menu **Variables** propose **Définir les variables (JSON)**. L’objet JSON contient 1–100 noms de variables avec texte, modèle HA, nombre, booléen ou null. Plusieurs entrées restent une seule action native `variables`, avec leur ordre. Les affectations uniques conservent le bloc existant. Depuis 0.1.39, listes/objets et variables au niveau automation sont pris en charge ; voir [HA avancé et Jinja](./advanced). Modifier noms et modèles directement dans le JSON ; le dialogue de renommage Blockly ne modifie pas ce texte JSON libre. Les noms importés sont également enregistrés dans Blockly.
 
 L’exemple de minuterie conserve h/m, les deux entités surveillées, la condition et le mode restart. Les conditions absentes deviennent une liste vide.
 
@@ -333,8 +333,45 @@ L’automatisation LCD avec quatre actions `input_text.set_value` et `mode: rest
 
 ## Entités cibles dynamiques
 
-Depuis **0.1.38**, **Cible** dans le bloc générique **Action HA** accepte un ID fixe ou un modèle HA, par exemple `{{ ziel_tv }}`. Le dialogue de sélection propose un champ multiligne. La liste JSON des cibles peut mélanger IDs fixes et modèles. Jinja est conservé et évalué par Home Assistant lors de l’exécution. Les cibles dynamiques importées utilisent le bloc générique, car les blocs spécialisés ne peuvent pas déterminer leur domaine de façon fiable.
+Depuis **0.1.39**, **Cible** dans le bloc générique **Action HA** accepte un ID fixe ou un modèle HA, par exemple `{{ ziel_tv }}`. Le dialogue de sélection propose un champ multiligne. La liste JSON des cibles peut mélanger IDs fixes et modèles. Jinja est conservé et évalué par Home Assistant lors de l’exécution. Les cibles dynamiques importées utilisent le bloc générique, car les blocs spécialisés ne peuvent pas déterminer leur domaine de façon fiable.
 
 L’automatisation TV de la chambre avec variable multiligne du mode été, horaires 21:30 et 00:30 et deux branches choose est vérifiée. Modèles de cible, texte de variable et conditions horaires restent inchangés après import, rechargement et export. Les champs d’entité des déclencheurs et conditions exigent toujours des IDs fixes.
 
 [Home Assistant: templates in action targets](https://www.home-assistant.io/docs/scripts/perform-actions/#setting-targets-and-options-with-a-template).
+
+
+## HA avancé et Jinja depuis 0.1.39
+
+[Anleitung / Guide](./advanced).
+
+| Bloc | Image | Fonction |
+| --- | --- | --- |
+| **HA state**<br><code>ugso_ha_state_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_state_trigger.png" alt="HA state" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA numeric_state**<br><code>ugso_ha_numeric_state_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_numeric_state_trigger.png" alt="HA numeric_state" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA time**<br><code>ugso_ha_time_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_time_trigger.png" alt="HA time" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA sun**<br><code>ugso_ha_sun_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_sun_trigger.png" alt="HA sun" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA homeassistant**<br><code>ugso_ha_homeassistant_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_homeassistant_trigger.png" alt="HA homeassistant" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA mqtt**<br><code>ugso_ha_mqtt_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_mqtt_trigger.png" alt="HA mqtt" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA template**<br><code>ugso_ha_template_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_template_trigger.png" alt="HA template" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA webhook**<br><code>ugso_ha_webhook_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_webhook_trigger.png" alt="HA webhook" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA zone**<br><code>ugso_ha_zone_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_zone_trigger.png" alt="HA zone" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA device**<br><code>ugso_ha_device_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_device_trigger.png" alt="HA device" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA tag**<br><code>ugso_ha_tag_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_tag_trigger.png" alt="HA tag" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA conversation**<br><code>ugso_ha_conversation_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_conversation_trigger.png" alt="HA conversation" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA geo_location**<br><code>ugso_ha_geo_location_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_geo_location_trigger.png" alt="HA geo_location" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA calendar**<br><code>ugso_ha_calendar_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_calendar_trigger.png" alt="HA calendar" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **HA event**<br><code>ugso_ha_event_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_event_trigger.png" alt="HA event" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Déclencheur HA (avancé)**<br><code>ugso_ha_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_trigger.png" alt="Déclencheur HA (avancé)" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Condition HA (avancée)**<br><code>ugso_ha_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_condition.png" alt="Condition HA (avancée)" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Étape HA (avancée)**<br><code>ugso_ha_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_ha_action.png" alt="Étape HA (avancée)" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Action HA type de cible cible données options d’étape**<br><code>ugso_target_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_target_action.png" alt="Action HA type de cible cible données options d’étape" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Intégration HA cible options activées**<br><code>ugso_integration_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_integration_trigger.png" alt="Intégration HA cible options activées" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Groupe d’actions**<br><code>ugso_sequence</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_sequence.png" alt="Groupe d’actions" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Parallèle branche 1 branche 2**<br><code>ugso_parallel</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_parallel.png" alt="Parallèle branche 1 branche 2" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Attendre un déclencheur options**<br><code>ugso_wait_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_wait_trigger.png" alt="Attendre un déclencheur options" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Continuer seulement si**<br><code>ugso_condition_step</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_condition_step.png" alt="Continuer seulement si" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Émettre un événement données**<br><code>ugso_fire_event</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_fire_event.png" alt="Émettre un événement données" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Réponse Assist**<br><code>ugso_assist_response</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_assist_response.png" alt="Réponse Assist" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Activer la scène**<br><code>ugso_scene</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_scene.png" alt="Activer la scène" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Jinja (expérimental)**<br><code>ugso_jinja_value</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_value.png" alt="Jinja (expérimental)" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+| **Condition Jinja (expérimentale)**<br><code>ugso_jinja_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_condition.png" alt="Condition Jinja (expérimentale)" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |

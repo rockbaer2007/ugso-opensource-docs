@@ -5,9 +5,9 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 119 block types and output formats remain unchanged.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The current catalog contains 148 types.
 
-Version **0.1.38**: 119 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.39**: 148 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -221,7 +221,7 @@ The colour field also uses the transitive dependency [field-grid-dropdown](https
 
 [Back to overview](/en/projects/blocks-for-ha/)
 
-Custom blocks since 0.1.18 extend the 119 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+Custom blocks since 0.1.18 extend the 148 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
 
 ## Trigger IDs and multiple targets
 
@@ -248,7 +248,7 @@ Since **0.1.30**: enable **Times as JSON list** for several fixed times, e.g. `[
 
 ## Temperature changed
 
-Since **0.1.31**, the new block supports native temperature.changed. Target (JSON): entity_id string or list. Threshold (JSON): type any, above, below, between or outside. any requires only type; above/below require value, between/outside value_min and value_max. Numbers: number plus unit_of_measurement (°C/°F). References: entity (sensor, number or input_number). Optional trigger ID. Other targets (area/device/label) remain unsupported. MQTT topics, qos/retain/evaluate_payload and multiline JSON/Jinja payloads are preserved.
+Since **0.1.31**, the new block supports native temperature.changed. Target (JSON): entity_id string or list. Threshold (JSON): type any, above, below, between or outside. any requires only type; above/below require value, between/outside value_min and value_max. Numbers: number plus unit_of_measurement (°C/°F). References: entity (sensor, number or input_number). Optional trigger ID. Since 0.1.39, area, device, floor and label targets are supported. MQTT topics, qos/retain/evaluate_payload and multiline JSON/Jinja payloads are preserved.
 
 | Block | Image | Description |
 | --- | --- | --- |
@@ -276,7 +276,7 @@ Home Assistant fires after a threshold crossing once the value has remained on t
 
 ## Multiple variables in one action
 
-Since **0.1.34**, the **Variables** menu includes **Set variables (JSON)**. The JSON object contains 1–100 variable names with text, HA template, number, Boolean or null values. Multiple entries remain a single native `variables` action, including their order. Single assignments still use the existing Set block. List/object values and automation-level variables remain unsupported. Edit names and templates directly in JSON; the Blockly rename dialog does not change this free-form JSON text. Imported names are also registered in Blockly.
+Since **0.1.34**, the **Variables** menu includes **Set variables (JSON)**. The JSON object contains 1–100 variable names with text, HA template, number, Boolean or null values. Multiple entries remain a single native `variables` action, including their order. Single assignments still use the existing Set block. Since 0.1.39, list/object values and automation-level variables are supported; see [Extended HA and Jinja](./advanced). Edit names and templates directly in JSON; the Blockly rename dialog does not change this free-form JSON text. Imported names are also registered in Blockly.
 
 The timer example retains h/m, both watched entities, the condition and restart mode. Omitted conditions become an empty list.
 
@@ -322,8 +322,45 @@ The LCD automation with four `input_text.set_value` actions and `mode: restart` 
 
 ## Dynamic target entities
 
-Since **0.1.38**, **Target** in the generic **HA action** accepts a static entity ID or an HA template, such as `{{ ziel_tv }}`. Its entity dialog supports multiline input. The JSON target list can also combine static IDs and templates. Jinja remains unchanged and is evaluated by Home Assistant at execution time. Imported dynamic targets use the generic HA action because specialized switching blocks cannot reliably determine the domain.
+Since **0.1.39**, **Target** in the generic **HA action** accepts a static entity ID or an HA template, such as `{{ ziel_tv }}`. Its entity dialog supports multiline input. The JSON target list can also combine static IDs and templates. Jinja remains unchanged and is evaluated by Home Assistant at execution time. Imported dynamic targets use the generic HA action because specialized switching blocks cannot reliably determine the domain.
 
 The bedroom-TV automation with a multiline summer-mode variable, 21:30 and 00:30 triggers and two choose branches is verified. Target templates, variable text and time conditions survive import, project reload and export. Entity fields in triggers and conditions still require static IDs.
 
 [Home Assistant: templates in action targets](https://www.home-assistant.io/docs/scripts/perform-actions/#setting-targets-and-options-with-a-template).
+
+
+## Extended HA and Jinja since 0.1.39
+
+[Anleitung / Guide](./advanced).
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **HA state**<br><code>ugso_ha_state_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_state_trigger.png" alt="HA state" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA numeric_state**<br><code>ugso_ha_numeric_state_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_numeric_state_trigger.png" alt="HA numeric_state" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA time**<br><code>ugso_ha_time_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_time_trigger.png" alt="HA time" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA sun**<br><code>ugso_ha_sun_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_sun_trigger.png" alt="HA sun" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA homeassistant**<br><code>ugso_ha_homeassistant_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_homeassistant_trigger.png" alt="HA homeassistant" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA mqtt**<br><code>ugso_ha_mqtt_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_mqtt_trigger.png" alt="HA mqtt" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA template**<br><code>ugso_ha_template_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_template_trigger.png" alt="HA template" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA webhook**<br><code>ugso_ha_webhook_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_webhook_trigger.png" alt="HA webhook" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA zone**<br><code>ugso_ha_zone_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_zone_trigger.png" alt="HA zone" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA device**<br><code>ugso_ha_device_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_device_trigger.png" alt="HA device" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA tag**<br><code>ugso_ha_tag_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_tag_trigger.png" alt="HA tag" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA conversation**<br><code>ugso_ha_conversation_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_conversation_trigger.png" alt="HA conversation" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA geo_location**<br><code>ugso_ha_geo_location_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_geo_location_trigger.png" alt="HA geo_location" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA calendar**<br><code>ugso_ha_calendar_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_calendar_trigger.png" alt="HA calendar" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA event**<br><code>ugso_ha_event_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_event_trigger.png" alt="HA event" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA trigger (extended)**<br><code>ugso_ha_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_trigger.png" alt="HA trigger (extended)" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA condition (extended)**<br><code>ugso_ha_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_condition.png" alt="HA condition (extended)" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA step (extended)**<br><code>ugso_ha_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_ha_action.png" alt="HA step (extended)" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA action target type target data step options**<br><code>ugso_target_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_target_action.png" alt="HA action target type target data step options" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **HA integration target options enabled**<br><code>ugso_integration_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_integration_trigger.png" alt="HA integration target options enabled" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **Action group**<br><code>ugso_sequence</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_sequence.png" alt="Action group" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **Parallel branch 1 branch 2**<br><code>ugso_parallel</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_parallel.png" alt="Parallel branch 1 branch 2" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **Wait for trigger options**<br><code>ugso_wait_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_wait_trigger.png" alt="Wait for trigger options" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **Continue only if**<br><code>ugso_condition_step</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_condition_step.png" alt="Continue only if" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **Fire event data**<br><code>ugso_fire_event</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_fire_event.png" alt="Fire event data" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **Assist responds**<br><code>ugso_assist_response</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_assist_response.png" alt="Assist responds" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **Activate scene**<br><code>ugso_scene</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_scene.png" alt="Activate scene" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **Jinja (experimental)**<br><code>ugso_jinja_value</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_value.png" alt="Jinja (experimental)" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+| **Jinja condition (experimental)**<br><code>ugso_jinja_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_condition.png" alt="Jinja condition (experimental)" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |

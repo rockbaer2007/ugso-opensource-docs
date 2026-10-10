@@ -4,6 +4,8 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
+Neu in **0.1.39**: 148 Blocktypen, erweiterte HA-Auslöser und Bedingungen, Ziele/Variablen/Optionen, Warten auf Auslöser, Parallelzweige und Aktionsgruppen sowie **Jinja (experimentell)** mit Erkennung und unverändertem Originaltext. [Anleitung, Beispiele, Grenzen und Quellen](./advanced).
+
 Neu in **0.1.26**: **Blocks-Sprache → Systemsprache / DE / EN / FR**. Systemsprache nutzt die bevorzugten Browsersprachen; nicht unterstützte Sprachen fallen auf Englisch zurück. Beschriftungen, Dropdowns, Hilfetexte, Kategorien und originale Blockly-Dialoge werden übersetzt. Die übrigen App-Bedienelemente und Diagnosen bleiben derzeit deutsch. Der Wechsel sichert das gültige Projekt und lädt Blockly neu; bei unvollständigen Blocks oder gesperrtem Speicher bleibt die aktuelle Ansicht erhalten. Technische IDs, Variablennamen, eigene Texte, Templates und YAML bleiben unverändert. Blockpakete behalten die Sprache ihrer Autoren. [Französische Dokumentation](/fr/projects/blocks-for-ha/); Blockbilder im Katalog sind jeweils DE/EN/FR.
 
 Neu in **0.1.18**: [Eigener Block-/Template-Editor](./custom-blocks) als 95%-Dialog, Kategorie Benutzerdefiniert, mehrere Blocks pro Paket, kopierbarer JSON-Code und ZIP-Import/Export. [Blockpaket-Katalog](./catalog/).
@@ -12,7 +14,7 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.38 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
+**Version 0.1.39 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
 
 Seit **0.1.25** rechts **YAML → Code importieren** wählen, YAML einfügen und **Importieren** statt Speichern klicken. Ohne Haken werden Auslöser, Bedingungen und Aktionen ergänzt; Name, Einstellungen und bestehende Blockformen bleiben erhalten. Bedingungen werden gemeinsam als UND geprüft; zusätzliche Auslöser können weitere Starts verursachen. Zum vollständigen Ersetzen **Aktuelle Automation vollständig ersetzen** aktivieren und die Abfrage bestätigen. Unterstützt wird eine Automation als Objekt oder Liste mit einem Eintrag, maximal 1 MB. Ungültiger Code oder Abbruch lässt die aktuellen Blocks erhalten. Einfügetext bleibt beim Moduswechsel für diese Seite erhalten; nach Erfolg erscheint wieder die Ausgabe. Zum Ergänzen muss die aktuelle Automation gültig sein; vollständiger Ersatz funktioniert auch bei unvollständigen Blocks. Dateiimport über **Öffnen** bleibt verfügbar.
 
@@ -30,7 +32,7 @@ Neu in **0.1.10**: **Erhöhe Variable um …** im Variablen-Menü mit Schritt `1
 
 Neu in **0.1.9**: Kategorie **Logik** mit Vergleich, kompaktem UND/ODER, NICHT, wahr/falsch, null und bedingter Wertauswahl. Variablen unterstützen jetzt auch Boolean und null. [Alle sechs neuen Blocks mit Bildern und Beispiel](./blocks#logik-blocks-seit-0-1-9).
 
-Die [Liste aller 111 Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsbeschreibung. Die Tabelle der Originalplugins verlinkt direkt auf die jeweiligen Quellen.
+Die [Liste aller 148 Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsbeschreibung. Die Tabelle der Originalplugins verlinkt direkt auf die jeweiligen Quellen.
 
 Neu in **0.1.8**: **Variablen → Variable erstellen …**, Setzen-/Lesen-Blocks und die Kategorie **Templates** mit eigenen Wert- und Bedingungsblocks. Variablen erzeugen native HA-`variables`-Aktionen; Lesen erzeugt <code v-pre>{{ name }}</code>. Jinja wird erst in HA ausgewertet. [Anleitung, Beispiel und Importgrenzen](./blocks#variablen-und-templates-verwenden).
 
