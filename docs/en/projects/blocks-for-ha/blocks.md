@@ -7,7 +7,7 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The current catalog contains 148 types.
 
-Version **0.1.39**: 148 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.40**: 148 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 

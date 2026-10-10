@@ -4,6 +4,8 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
+Since **0.1.40**, all themes use **16 px block text**. The block menu stays at **100%**: fitting, mouse wheel and zoom controls affect only the workspace. Initial zoom 100%, fitting 85–120%, manual zoom 50–240%. Large automations remain scrollable; fitting never shrinks below 85% to preserve readability. Verified at Full HD, 2560 px and HiDPI.
+
 New in **0.1.39**: 148 block types, extended HA triggers/conditions, targets/variables/options, waits, parallel branches, action groups and **Jinja (experimental)** with recognition and preserved originals. [Guide, limits and sources](./advanced).
 
 New in **0.1.26**: **Block language → System language / DE / EN / FR**. System follows preferred browser languages, with English as the fallback for unsupported languages. Labels, dropdowns, help, categories and native Blockly dialogs are translated. Other app controls and diagnostics currently remain German. Switching saves the valid project and reloads Blockly; incomplete blocks or unavailable storage keep the current view. Technical IDs, variable names, user text, templates and YAML are unchanged. Packages retain their authors’ language. [French documentation](/fr/projects/blocks-for-ha/); the catalog uses separate DE/EN/FR block images.
@@ -14,11 +16,11 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.39 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.40 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Since **0.1.25**, select **YAML → Code importieren**, paste YAML and click **Importieren** instead of Save. Without the checkbox, triggers, conditions and actions are added; the current name, settings and block shapes are preserved. Conditions are combined with AND; additional triggers may start more runs. To replace everything, select **Aktuelle Automation vollständig ersetzen** and confirm. One supported automation as an object or single-item list is accepted, up to 1 MB. Invalid code or cancellation leaves the current blocks unchanged. Switching modes retains pasted text for this page session; successful import returns to output. Adding requires a valid current automation; complete replacement also works with incomplete blocks. File import through **Öffnen** remains available.
 
-Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
+Blocks use classic Blockly puzzle shapes (Geras) with 16 px text. The menu stays at 100% independently of editor zoom. Workspace fitting uses 85–120%; large automations remain scrollable. [Themes, zoom and readability](./themes).
 
 ## Block catalog and original plugins
 

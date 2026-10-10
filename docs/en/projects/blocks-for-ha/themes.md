@@ -31,7 +31,7 @@ The existing **Geras renderer** remains active for all themes, preserving connec
 
 Original [zoom-to-fit](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/zoom-to-fit) adds the four-arrow icon next to the zoom controls. Clicking fits blocks to the available workspace. The control is reachable with Tab and works with Enter/Space. Zoom changes the view, not the automation.
 
-The existing upper **Einpassen** button remains and caps enlargement at the compact default scale. The plugin uses ordinary Blockly fitting within existing zoom limits. On small screens, the theme toolbar may wrap; the workspace remains scrollable.
+Since **0.1.40**, all themes use **16 px block text**. The block menu stays at **100%**: fitting, mouse wheel and zoom controls affect only the workspace. Initial zoom 100%, fitting 85–120%, manual zoom 50–240%. Large automations remain scrollable; fitting never shrinks below 85% to preserve readability. Verified at Full HD, 2560 px and HiDPI.
 
 All four additional original plugins are pinned to **13.3.0**, integrated with Blockly **13.3.0**, and licensed under Apache-2.0. The six existing plugins remain on 13.2.0. Packages are bundled locally without external theme files or CDN dependencies. Upstream links and notices are also in the [block catalog](./blocks).
 

@@ -27,7 +27,7 @@ Le choix est sauvegardé localement. Une préférence inconnue revient au standa
 
 ## Zoom
 
-[zoom-to-fit](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/zoom-to-fit) ajoute l’icône à quatre flèches aux commandes de zoom. Accessible avec Tab puis Entrée/Espace, elle ajuste les blocs à l’espace disponible. Le bouton supérieur **Einpassen** limite l’agrandissement à l’échelle compacte par défaut. La vue reste défilable sur petit écran.
+Depuis **0.1.40**, tous les thèmes utilisent une **police de 16 px**. Le menu de blocs reste à **100 %** : ajustement, molette et zoom modifient uniquement l’espace de travail. Zoom initial 100 %, ajustement 85–120 %, zoom manuel 50–240 %. Les grandes automatisations restent défilables ; l’ajustement ne descend pas sous 85 % afin de préserver la lisibilité. Vérifié en Full HD, 2560 px et HiDPI.
 
 ## Apparence de l’application
 

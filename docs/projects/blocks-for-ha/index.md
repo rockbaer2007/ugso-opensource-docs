@@ -4,6 +4,8 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
+Seit **0.1.40** haben Blocks in allen Themes **16-px-Schrift**. Das Blockmenü bleibt fest bei **100 Prozent**: Einpassen, Mausrad und Zoomregler verändern nur den Arbeitsbereich. Startzoom 100 Prozent, Einpassen 85–120 Prozent, manueller Zoom 50–240 Prozent. Große Automationen bleiben verschiebbar; Einpassen verkleinert sie höchstens auf 85 Prozent, damit die Schrift lesbar bleibt. Geprüft in Full HD, 2560 px und HiDPI.
+
 Neu in **0.1.39**: 148 Blocktypen, erweiterte HA-Auslöser und Bedingungen, Ziele/Variablen/Optionen, Warten auf Auslöser, Parallelzweige und Aktionsgruppen sowie **Jinja (experimentell)** mit Erkennung und unverändertem Originaltext. [Anleitung, Beispiele, Grenzen und Quellen](./advanced).
 
 Neu in **0.1.26**: **Blocks-Sprache → Systemsprache / DE / EN / FR**. Systemsprache nutzt die bevorzugten Browsersprachen; nicht unterstützte Sprachen fallen auf Englisch zurück. Beschriftungen, Dropdowns, Hilfetexte, Kategorien und originale Blockly-Dialoge werden übersetzt. Die übrigen App-Bedienelemente und Diagnosen bleiben derzeit deutsch. Der Wechsel sichert das gültige Projekt und lädt Blockly neu; bei unvollständigen Blocks oder gesperrtem Speicher bleibt die aktuelle Ansicht erhalten. Technische IDs, Variablennamen, eigene Texte, Templates und YAML bleiben unverändert. Blockpakete behalten die Sprache ihrer Autoren. [Französische Dokumentation](/fr/projects/blocks-for-ha/); Blockbilder im Katalog sind jeweils DE/EN/FR.
@@ -14,11 +16,11 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.39 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
+**Version 0.1.40 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
 
 Seit **0.1.25** rechts **YAML → Code importieren** wählen, YAML einfügen und **Importieren** statt Speichern klicken. Ohne Haken werden Auslöser, Bedingungen und Aktionen ergänzt; Name, Einstellungen und bestehende Blockformen bleiben erhalten. Bedingungen werden gemeinsam als UND geprüft; zusätzliche Auslöser können weitere Starts verursachen. Zum vollständigen Ersetzen **Aktuelle Automation vollständig ersetzen** aktivieren und die Abfrage bestätigen. Unterstützt wird eine Automation als Objekt oder Liste mit einem Eintrag, maximal 1 MB. Ungültiger Code oder Abbruch lässt die aktuellen Blocks erhalten. Einfügetext bleibt beim Moduswechsel für diese Seite erhalten; nach Erfolg erscheint wieder die Ausgabe. Zum Ergänzen muss die aktuelle Automation gültig sein; vollständiger Ersatz funktioniert auch bei unvollständigen Blocks. Dateiimport über **Öffnen** bleibt verfügbar.
 
-Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
+Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit 16-px-Schrift. Das Menü bleibt unabhängig vom Editorzoom bei 100 Prozent. Einpassen im Arbeitsbereich nutzt 85–120 Prozent; große Automationen bleiben verschiebbar. [Themes, Zoom und Lesbarkeit](./themes).
 
 ## Liste der Blocks und Originalplugins
 

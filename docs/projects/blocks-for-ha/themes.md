@@ -31,7 +31,7 @@ Der vorhandene **Geras-Renderer** bleibt für alle Themes aktiv, damit Anschluss
 
 Das originale [zoom-to-fit](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/zoom-to-fit) ergänzt das Vier-Pfeile-Symbol neben den Zoom-Reglern. Ein Klick passt die Blocks an die verfügbare Arbeitsfläche an. Der Knopf ist auch mit Tab erreichbar und per Enter/Leertaste bedienbar. Zoom verändert die Ansicht, nicht die Automation.
 
-Der obere Button **Einpassen** bleibt bestehen und begrenzt die Vergrößerung auf die kompakte Standardgröße. Das Plugin verwendet das normale Blockly-Einpassen innerhalb der vorhandenen Zoomgrenzen. Auf kleinen Bildschirmen kann die Theme-Werkzeugleiste umbrechen; die Arbeitsfläche lässt sich weiter verschieben.
+Seit **0.1.40** haben Blocks in allen Themes **16-px-Schrift**. Das Blockmenü bleibt fest bei **100 Prozent**: Einpassen, Mausrad und Zoomregler verändern nur den Arbeitsbereich. Startzoom 100 Prozent, Einpassen 85–120 Prozent, manueller Zoom 50–240 Prozent. Große Automationen bleiben verschiebbar; Einpassen verkleinert sie höchstens auf 85 Prozent, damit die Schrift lesbar bleibt. Geprüft in Full HD, 2560 px und HiDPI.
 
 Alle vier zusätzlichen Originalplugins sind auf **13.3.0** festgelegt, mit Blockly **13.3.0** eingebunden und unter Apache-2.0 lizenziert. Die sechs bisherigen Originalplugins bleiben auf 13.2.0. Die Pakete werden lokal ausgeliefert; keine externen Theme-Dateien oder CDN-Abhängigkeit. Originalquellen und Lizenzhinweise stehen auch im [Blockkatalog](./blocks).
 
