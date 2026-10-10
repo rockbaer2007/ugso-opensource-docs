@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.33 · 116 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.34 · 117 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -284,3 +284,15 @@ Le champ **Variable de réponse (facultative)** du bloc **Action HA** génère `
 Depuis **0.1.33**, le déclencheur numérique accepte plusieurs entités : activer **Entités en liste JSON** et saisir par exemple `["sensor.temp_1","sensor.temp_2"]`. Sans cette case, l’entité unique reste active. **Durée de maintien (JSON)** avec **activée** génère le champ facultatif `for` : par exemple `{"hours":0,"minutes":1,"seconds":0}`, `60` ou `"00:01:00"`. Les unités days/hours/minutes/seconds/milliseconds combinées, les zéros et les modèles de sortie HA sont conservés. Décocher omet `for`. Toujours exactement un seuil numérique fixe (above ou below) ; les IDs et branches choose sont conservés.
 
 Home Assistant déclenche après le franchissement du seuil lorsque la valeur reste de ce côté du seuil pendant toute la durée. Un redémarrage HA ou le rechargement des automations réinitialise le maintien en cours. [Home Assistant: numeric_state](https://www.home-assistant.io/triggers/numeric_state/).
+
+## Plusieurs variables dans une action
+
+Depuis **0.1.34**, le menu **Variables** propose **Définir les variables (JSON)**. L’objet JSON contient 1–100 noms de variables avec texte, modèle HA, nombre, booléen ou null. Plusieurs entrées restent une seule action native `variables`, avec leur ordre. Les affectations uniques conservent le bloc existant. Les valeurs liste/objet et les variables au niveau automation restent non prises en charge. Modifier noms et modèles directement dans le JSON ; le dialogue de renommage Blockly ne modifie pas ce texte JSON libre. Les noms importés sont également enregistrés dans Blockly.
+
+L’exemple de minuterie conserve h/m, les deux entités surveillées, la condition et le mode restart. Les conditions absentes deviennent une liste vide.
+
+| Bloc | Image | Fonction |
+| --- | --- | --- |
+| **Définir les variables (JSON)**<br><code>ugso_variables_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_variables_action.png" alt="Définir les variables (JSON)" style="max-width:280px;max-height:180px"> | Variables HA natives dans un objet JSON. |
+
+[Home Assistant: variables](https://www.home-assistant.io/docs/scripts/#variables)

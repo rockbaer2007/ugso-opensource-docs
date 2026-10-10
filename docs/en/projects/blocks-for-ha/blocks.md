@@ -5,9 +5,9 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 116 block types and output formats remain unchanged.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 117 block types and output formats remain unchanged.
 
-Version **0.1.17**: 116 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.34**: 117 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -178,7 +178,7 @@ Choose **Variablen → Variable erstellen …** in the German editor to create, 
 
 Example: **Set leistung to Template** containing <code v-pre>{{ states('sensor.leistung') | float(0) }}</code>, followed by **Log Info message Read leistung**. HA reads the sensor during assignment and uses that value in the next step. A template condition can check <code v-pre>{{ states('sensor.leistung') | float(0) > 100 }}</code>.
 
-Renaming updates variable blocks. References in free-form Jinja text must be changed manually. Action variables become available after assignment, not in preceding automation conditions. Blocks validates structure and YAML, not Jinja syntax or HA entities. Import supports one text/template, number, Boolean or null per variable action. Multiple entries, lists/objects and automation-level variables are not yet supported and are rejected during import. [Native HA variables and scope](https://www.home-assistant.io/docs/scripts/#define-variables).
+Renaming updates variable blocks. References in free-form Jinja text must be changed manually. Action variables become available after assignment, not in preceding automation conditions. Blocks validates structure and YAML, not Jinja syntax or HA entities. Import supports text/template, number, Boolean or null for each variable value. Multiple entries are supported since 0.1.34 in the grouped JSON block; list/object values and automation-level variables remain rejected. [Native HA variables and scope](https://www.home-assistant.io/docs/scripts/#define-variables).
 
 ## Logic blocks added in 0.1.9
 
@@ -221,7 +221,7 @@ The colour field also uses the transitive dependency [field-grid-dropdown](https
 
 [Back to overview](/en/projects/blocks-for-ha/)
 
-Custom blocks since 0.1.18 extend the 116 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+Custom blocks since 0.1.18 extend the 117 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
 
 ## Trigger IDs and multiple targets
 
@@ -273,3 +273,15 @@ The **Response variable (optional)** field in **HA action** generates `response_
 Since **0.1.33**, **Number above/below threshold** accepts multiple entities: enable **Entities as JSON list** and enter, for example, `["sensor.temp_1","sensor.temp_2"]`. Without the checkbox, the single entity remains active. **Hold duration (JSON)** with **enabled** generates optional `for`: for example `{"hours":0,"minutes":1,"seconds":0}`, `60` or `"00:01:00"`. Combined days/hours/minutes/seconds/milliseconds, zero entries and HA output templates are retained. Disabling the checkbox omits `for`. Still exactly one fixed numeric threshold (above or below); trigger IDs and choose branches are preserved.
 
 Home Assistant fires after a threshold crossing once the value has remained on that side of the threshold for the whole duration. Restarting HA or reloading automations resets a running hold timer. [Home Assistant: numeric_state](https://www.home-assistant.io/triggers/numeric_state/).
+
+## Multiple variables in one action
+
+Since **0.1.34**, the **Variables** menu includes **Set variables (JSON)**. The JSON object contains 1–100 variable names with text, HA template, number, Boolean or null values. Multiple entries remain a single native `variables` action, including their order. Single assignments still use the existing Set block. List/object values and automation-level variables remain unsupported. Edit names and templates directly in JSON; the Blockly rename dialog does not change this free-form JSON text. Imported names are also registered in Blockly.
+
+The timer example retains h/m, both watched entities, the condition and restart mode. Omitted conditions become an empty list.
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Set variables (JSON)**<br><code>ugso_variables_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_variables_action.png" alt="Set variables (JSON)" style="max-width:280px;max-height:180px"> | Native HA variables as a JSON object. |
+
+[Home Assistant: variables](https://www.home-assistant.io/docs/scripts/#variables)

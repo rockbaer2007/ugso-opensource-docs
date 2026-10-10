@@ -5,9 +5,9 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 116 Blocktypen und Ausgabeformate bleiben erhalten.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 117 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.33**: 116 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.34**: 117 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -178,7 +178,7 @@ Im Menü **Variablen → Variable erstellen …** beispielsweise `leistung` anle
 
 Beispiel: **Setze leistung auf Template** mit <code v-pre>{{ states('sensor.leistung') | float(0) }}</code>, danach **Log Info Meldung Variable leistung**. HA liest den Sensor beim Setzen und verwendet den Wert im folgenden Schritt. Eine Template-Bedingung kann beispielsweise <code v-pre>{{ states('sensor.leistung') | float(0) > 100 }}</code> prüfen.
 
-Umbenennen aktualisiert die verbundenen Variablen-Blocks. Namen in frei eingegebenen Jinja-Texten müssen manuell geändert werden. Aktionsvariablen stehen erst nach ihrer Zuweisung bereit, nicht in vorgelagerten Automationsbedingungen. Blocks prüft Struktur und YAML, keine Jinja-Syntax oder vorhandenen HA-Entitäten. Der Import unterstützt pro Variablen-Aktion einen Text/Template, eine Zahl, Boolean oder null. Mehrere Einträge, Listen/Objekte sowie Variablen auf Automationsebene sind noch nicht unterstützt und werden beim Import abgelehnt. [Native HA-Variablen und Gültigkeit](https://www.home-assistant.io/docs/scripts/#define-variables).
+Umbenennen aktualisiert die verbundenen Variablen-Blocks. Namen in frei eingegebenen Jinja-Texten müssen manuell geändert werden. Aktionsvariablen stehen erst nach ihrer Zuweisung bereit, nicht in vorgelagerten Automationsbedingungen. Blocks prüft Struktur und YAML, keine Jinja-Syntax oder vorhandenen HA-Entitäten. Der Import unterstützt pro Variablenwert Text/Template, Zahl, Boolean oder null. Mehrere Einträge werden seit 0.1.34 im gemeinsamen JSON-Block unterstützt. Listen/Objekte als Werte und Variablen auf Automationsebene werden weiterhin abgelehnt. [Native HA-Variablen und Gültigkeit](https://www.home-assistant.io/docs/scripts/#define-variables).
 
 ## Logik-Blocks seit 0.1.9
 
@@ -221,7 +221,7 @@ Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dr
 
 [Zur Übersicht](/projects/blocks-for-ha/)
 
-Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 116 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 117 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
 
 ## Trigger-IDs und mehrere Ziele
 
@@ -273,3 +273,15 @@ Das Feld **Antwortvariable (optional)** im Block **HA-Aktion** erzeugt `response
 Seit **0.1.33** unterstützt **Zahl über/unter Grenze** mehrere Entitäten: **Entitäten als JSON-Liste** einschalten und etwa `["sensor.temp_1","sensor.temp_2"]` eintragen. Ohne Haken bleibt die einzelne Entität aktiv. **Haltezeit (JSON)** mit **verwenden** erzeugt das optionale `for`: etwa `{"hours":0,"minutes":1,"seconds":0}`, `60` oder `"00:01:00"`. Kombinierte days/hours/minutes/seconds/milliseconds, Nulleinträge und HA-Ausgabetemplates bleiben erhalten. Ein deaktivierter Haken lässt `for` weg. Weiterhin genau eine feste Zahlen-Grenze (above oder below); Trigger-ID und choose-Zweige bleiben erhalten.
 
 Home Assistant löst nach dem Grenzübertritt aus, sobald der Wert die gesamte Haltezeit auf dieser Seite der Grenze bleibt. Ein HA-Neustart oder Neuladen der Automationen setzt die laufende Haltezeit zurück. [Home Assistant: numeric_state](https://www.home-assistant.io/triggers/numeric_state/).
+
+## Mehrere Variablen in einer Aktion
+
+Seit **0.1.34** steht im Menü **Variablen** ein gemeinsamer Block **Variablen setzen (JSON)** bereit. Das JSON-Objekt enthält 1–100 Variablennamen mit Text, HA-Template, Zahl, Boolean oder null. Mehrere Einträge bleiben eine einzige native `variables`-Aktion, einschließlich ihrer Reihenfolge. Einzelne Zuweisungen verwenden weiterhin den bisherigen Setzen-Block. Listen/Objekte als Variablenwerte und Variablen auf Automationsebene bleiben nicht unterstützt. Namen und Templates im JSON müssen dort direkt bearbeitet werden; Umbenennen über den Blockly-Dialog ändert diesen freien JSON-Text nicht. Beim Import werden die Namen auch in Blockly registriert.
+
+Das Timer-Beispiel erhält h/m, beide überwachten Entitäten, die Bedingung und den restart-Modus. Fehlende conditions werden als leere Liste ergänzt.
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Variablen setzen (JSON)**<br><code>ugso_variables_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_variables_action.png" alt="Variablen setzen (JSON)" style="max-width:280px;max-height:180px"> | Native HA-Variablen als JSON-Objekt. |
+
+[Home Assistant: variables](https://www.home-assistant.io/docs/scripts/#variables)
