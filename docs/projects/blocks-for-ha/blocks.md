@@ -199,10 +199,11 @@ JSON-Projekte bewahren die Blockformen und Anschlüsse. YAML speichert die nativ
 
 ## Originalplugins und Einbindung
 
-Die sechs bisherigen Originalplugins sind auf **13.2.0**, die vier Theme-/Zoom-Plugins auf **13.3.0** festgelegt und werden lokal mit Blockly **13.3.0** ausgeliefert. Lizenz: Apache-2.0. Die folgenden Links führen direkt zu den Original-Repositories. Unsere HA-Blocks, YAML-Adapter und Plus/Minus-Steuerung sind eigener UGSo-Code.
+Die sechs bisherigen Originalplugins sind auf **13.2.0**, die vier Theme-/Zoom-Plugins und die Arbeitsbereichssuche auf **13.3.0** festgelegt und werden lokal mit Blockly **13.3.0** ausgeliefert. Lizenz: Apache-2.0. Die folgenden Links führen direkt zu den Original-Repositories. Unsere HA-Blocks, YAML-Adapter und Plus/Minus-Steuerung sind eigener UGSo-Code.
 
 | Originalplugin | Nutzung / Stand |
 | --- | --- |
+| [workspace-search](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/workspace-search) | Findet platzierte Blocks im Arbeitsbereich; getrennt von der Toolboxsuche. Seit 0.1.21 verfügbar. |
 | [toolbox-search](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/toolbox-search) | Blocksuche am Menüende, deutsche Suchhinweise; Treffer behalten Dropdowns und Shadows. |
 | [field-multilineinput](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-multilineinput) | Im Textblock; Zeilenumbrüche bleiben im Projekt und YAML erhalten. |
 | [field-slider](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-slider) | Im Prozentblock; 0–100 mit genauer Zahleneingabe. |

@@ -10,7 +10,7 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.20 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.21 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -176,3 +176,13 @@ Blockly is an open-source developer library from the Raspberry Pi Foundation, or
 ## Home Assistant sidebar
 
 Since **0.1.20**, the sidebar entry uses the monochrome building-block icon `mdi:toy-brick-outline`. Update and restart the app, enable **Show in sidebar**, and reload Home Assistant if the previous icon persists. Native app configuration uses MDI icons; the colourful UGSo icon remains in the app store and editor. [HA configuration](https://developers.home-assistant.io/docs/apps/configuration/) · [Original icon](https://pictogrammers.com/library/mdi/icon/toy-brick-outline/).
+
+## Workspace search and keyboard navigation
+
+Since **0.1.21**, **Suchen** in the workspace toolbar finds blocks already placed on the canvas, including HA and custom blocks. The search at the bottom of the toolbox still finds available blocks to add. Search changes the view, not YAML or the saved project.
+
+With focus in the workspace, **Ctrl/Cmd+F** opens search. **Enter** selects the next match, **Shift+Enter** the previous match, and **Escape** closes search and focuses the current block. Search buttons have German accessible labels, matching the editor UI.
+
+The **?** button opens keyboard help. Blockly 13.3 provides navigation: Tab enters the workspace; arrow keys move through blocks and fields, Enter edits fields, T focuses the toolbox, and M picks up a block. Extra navigation shortcuts are enabled: Home/End within a block, Page Up/Down within a stack, Ctrl/Cmd+Home/End between first and last blocks, and Ctrl/Cmd+arrows to scroll. Text inputs and dialogs retain their normal editing behavior. Screen-reader behavior has not been independently verified.
+
+Original sources: [workspace-search plugin](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/workspace-search), [Blockly keyboard navigation](https://docs.blockly.com/guides/configure/keyboard-nav/).

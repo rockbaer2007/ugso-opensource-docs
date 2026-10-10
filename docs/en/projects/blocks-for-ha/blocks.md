@@ -199,10 +199,11 @@ JSON projects preserve block shapes and connections. YAML preserves native meani
 
 ## Original plugins and integration
 
-The six existing plugins are pinned to **13.2.0**, the four theme/zoom plugins to **13.3.0**, all bundled locally with Blockly **13.3.0**. License: Apache-2.0. Links below lead directly to upstream repositories. HA blocks, YAML adapters and plus/minus controls are UGSo code.
+The six existing plugins are pinned to **13.2.0**, the four theme/zoom plugins and workspace search to **13.3.0**, all bundled locally with Blockly **13.3.0**. License: Apache-2.0. Links below lead directly to upstream repositories. HA blocks, YAML adapters and plus/minus controls are UGSo code.
 
 | Originalplugin | Usage / status |
 | --- | --- |
+| [workspace-search](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/workspace-search) | Finds placed blocks in the workspace; separate from toolbox search. Available since 0.1.21. |
 | [toolbox-search](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/toolbox-search) | Search at the bottom of the menu, German search hints; results preserve dropdowns and shadows. |
 | [field-multilineinput](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-multilineinput) | Used by Text; newlines remain in projects and YAML. |
 | [field-slider](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-slider) | Used by Percentage; 0–100 with exact numeric entry. |
