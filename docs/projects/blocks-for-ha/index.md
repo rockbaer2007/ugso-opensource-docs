@@ -143,6 +143,19 @@ Die [Originaldokumentation zur Arbeitsfläche und zu Blockteilen](https://docs.b
 
 Diese Seite hält umgesetzte Funktionen und offene Aufgaben zusammen fest und wird mit jeder Erweiterung gepflegt.
 
+## Vorgemerkt: eigene Blocks und Template-Pakete
+
+Am **10. Oktober 2026** vorgemerkt; noch nicht umgesetzt. Die originalen [Blockly Developer Tools](https://raspberrypifoundation.github.io/blockly-samples/examples/developer-tools/index.html) sollen zum Gestalten eigener Blocks dienen.
+
+- Vier UGSo-Vorlagen: **Wertblock**, **Boolean-Bedingung**, **HA-Aktion** und **Container mit Aktionskörper**.
+- JSON-Definitionen für Felder, Dropdowns, Checkboxen, Variablen, Zahlenbegrenzungen, Bilder, Farben und Value-/Statement-/Dummy-/Zeilenumbruch-Inputs übernehmen.
+- Feld-/Eingangszuordnung zum eigenen **HA-YAML-/Jinja-Generator** ergänzen. Die Auswahl JavaScript/Python/PHP/Dart/Lua liefert nur ein Generatorgerüst, keine fertige HA-Funktion.
+- Anschlüsse explizit auf Boolean, Number, String, Value, RuntimeNumber, Time, Action und Trigger abbilden; Array-/Objektanschlüsse mit dem vorhandenen Typmodell abstimmen. Andockprüfung und HA-Laufzeitprüfung getrennt behandeln.
+- **Importdialog mit Block- und Ausgabevorschau**, Feld-/Eingangszuordnung und Validierung planen. Importierte JavaScript-Generatoren nicht ungeprüft ausführen.
+- Mehrere Blocks als **versioniertes Katalog-/Pluginpaket** bündeln: eindeutige Paket-/Block-IDs, Kategorie, Beschreibung, Hilfe, Lizenz, Beispiele und Dokumentation. Abhängigkeiten, Namenskonflikte, Updates, Import/Export und Projektmigration berücksichtigen.
+- Zahnrad/Mutatoren und dynamische Eingänge benötigen zusätzliche Implementierung. Der Originaleditor gestaltet jeweils einen Blocktyp; Pakete bündeln separat erstellte Definitionen.
+- Bei späterer Umsetzung bestehende Projekte erhalten, JSON-/YAML-Verhalten prüfen, passende Paketversion anheben und öffentliche DE/EN-Dokumentation mit Originalquellen aktualisieren.
+
 ## System: Stand und nächste Schritte
 
 Steuern, Umschalten, Wartezeit, generische Aktionen, Log-Ausgabe, Script-Steuerung, Entität aktualisieren und Helfer steuern sind vorhanden. Eigene Blocks für Kommentar, Entitätsauswahl, Zustand/Attribute als Werte, Existenz/Verfügbarkeit und Zahlen-/Texthelfer folgen schrittweise. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.

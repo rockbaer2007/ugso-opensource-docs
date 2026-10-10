@@ -143,6 +143,19 @@ The [original workspace and block-parts documentation](https://docs.blockly.com/
 
 This page tracks implemented features and outstanding tasks together and is maintained with each extension.
 
+## Planned: custom blocks and template packages
+
+Recorded on **October 10, 2026**; not implemented yet. The original [Blockly Developer Tools](https://raspberrypifoundation.github.io/blockly-samples/examples/developer-tools/index.html) should provide the design tool.
+
+- Four UGSo starting templates: **value**, **Boolean condition**, **HA action** and **container with an action body**.
+- Accept JSON definitions for fields, dropdowns, checkboxes, variables, numeric limits, images, colours and value/statement/dummy/end-of-row inputs.
+- Map fields and inputs to our own **HA YAML/Jinja generator**. JavaScript/Python/PHP/Dart/Lua selection supplies a generator stub, not a complete HA function.
+- Explicitly map connections to Boolean, Number, String, Value, RuntimeNumber, Time, Action and Trigger; align array/object connections with the existing type model. Keep connection checks separate from HA runtime validation.
+- Plan an **import dialog with block and output previews**, field/input mapping and validation. Do not run imported JavaScript generators without review.
+- Bundle multiple blocks into **versioned catalog/plugin packages** with unique package/block IDs, categories, descriptions, help, licences, examples and documentation. Account for dependencies, naming conflicts, updates, import/export and project migration.
+- Mutators and dynamic inputs require additional implementation. The original tool designs one block type at a time; packages combine separately designed definitions.
+- During future implementation, preserve existing projects, check JSON/YAML behavior, bump the applicable package version and update public DE/EN documentation with upstream references.
+
 ## System: status and next steps
 
 Control, toggle, delay, generic actions, logging, script control, entity refresh and helper control are available. Dedicated comment, entity picker, state/attribute value, existence/availability and number/text helper blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
