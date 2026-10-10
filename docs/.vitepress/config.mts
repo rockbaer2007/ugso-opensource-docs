@@ -122,6 +122,7 @@ const navFr = [
 ]
 
 const sidebarDe = {
+  '/projects/callmebot/': [{ text: 'UGSo CallMeBot', items: [{ text: 'Einrichtung und Blockly', link: '/projects/callmebot/' }, { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
   '/projects/blocks-for-ha/': [{ text: 'UGSo HA Apps', items: [
     { text: 'Übersicht', link: '/projects-mqtt/' },
     { text: 'UGSo Blocks for HA', link: '/projects/blocks-for-ha/' },
@@ -291,6 +292,7 @@ const sidebarDe = {
         { text: 'Übersicht', link: '/projects-mqtt/' },
         { text: 'UGSo Blocks for HA', link: '/projects/blocks-for-ha/' },
         { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
+        { text: 'UGSo CallMeBot', link: '/projects/callmebot/' },
         { text: 'FRITZ!Box to MQTT', link: '/projects/fritzbox-to-mqtt/' },
         { text: 'Heizöl to MQTT', link: '/projects/heizoel-to-mqtt/' },
         { text: 'Parcel to MQTT', link: '/projects/parcel-to-mqtt/' }
@@ -548,6 +550,7 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects/callmebot/': [{ text: 'UGSo CallMeBot', items: [{ text: 'Setup and Blockly', link: '/en/projects/callmebot/' }, { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
   '/en/projects/blocks-for-ha/': [{ text: 'UGSo HA Apps', items: [
     { text: 'Overview', link: '/en/projects-mqtt/' },
     { text: 'UGSo Blocks for HA', link: '/en/projects/blocks-for-ha/' },
@@ -674,6 +677,7 @@ const sidebarEn = {
         { text: 'Overview', link: '/en/projects-mqtt/' },
         { text: 'UGSo Blocks for HA', link: '/en/projects/blocks-for-ha/' },
         { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
+        { text: 'UGSo CallMeBot', link: '/en/projects/callmebot/' },
         { text: 'FRITZ!Box to MQTT', link: '/en/projects/fritzbox-to-mqtt/' },
         { text: 'Heizöl to MQTT', link: '/en/projects/heizoel-to-mqtt/' },
         { text: 'Parcel to MQTT', link: '/en/projects/parcel-to-mqtt/' }
@@ -828,6 +832,7 @@ const sidebarEn = {
 }
 
 const sidebarFr = {
+  '/fr/projects/callmebot/': [{ text: 'UGSo CallMeBot', items: [{ text: 'Configuration et Blockly', link: '/fr/projects/callmebot/' }, { text: 'Blocks for HA', link: '/fr/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/fr/projects-mqtt/' }] }],
   '/fr/projects/blocks-for-ha/': [{ text: 'UGSo Blocks for HA', items: [
     { text: 'Vue d’ensemble', link: '/fr/projects/blocks-for-ha/' },
     { text: 'Catalogue des blocs', link: '/fr/projects/blocks-for-ha/blocks' },

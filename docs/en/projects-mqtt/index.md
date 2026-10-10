@@ -6,10 +6,11 @@ The shared repository is the central publishing location for all UGSo Software H
 
 | Project | Documentation |
 | --- | --- |
+| [UGSo CallMeBot](/en/projects/callmebot/) | Experimental HA App 0.1.0: recipient profiles, WhatsApp texts via MQTT, DE/EN/FR and matching Blockly blocks. |
 | [UGSo Blocks for HA](/en/projects/blocks-for-ha/) | Experimental HA app 0.1.3: visual Blocks for native automations, YAML import/export and extensible branches; editor through HA ingress. |
 | [Grafik Visual Studio](/en/projects/grafik-visual-studio/) | Graphical editor and runtime for HA visualizations. |
 
-Both projects live in the same repository as the MQTT apps below.
+These projects live in the same repository as the MQTT apps below.
 
 ## Shared Add-on Repository
 

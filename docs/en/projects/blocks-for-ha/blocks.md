@@ -5,9 +5,18 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
+## Messages since 0.1.48
+
+New **Messages** category, two DE/EN/FR blocks. [Setup, credentials and sending](../callmebot/).
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **WhatsApp · CallMeBot**<br><code>ugso_callmebot_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_callmebot_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Recipient profile, text/Jinja and logging. MQTT sends through the UGSo CallMeBot app. Keys remain in the backend. |
+| **WhatsApp integration**<br><code>ugso_whatsapp_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_whatsapp_action.png" alt="WhatsApp integration" style="max-width:360px;max-height:180px"> | whatsapp.send_message with number or target, or notify.whatsapp. Recipient without +, message and optional account. Configure its token once in HA. |
+
 ## Functions since 0.1.47
 
-The current catalogue contains **166 block types**. [Parameters, export and limits](./blockly-audit).
+The current catalogue contains **168 block types**. [Parameters, export and limits](./blockly-audit).
 
 | Block | Image | Function |
 | --- | --- | --- |

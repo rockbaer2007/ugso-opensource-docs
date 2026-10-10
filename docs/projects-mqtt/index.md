@@ -6,10 +6,11 @@ Das gemeinsame Repository ist die zentrale Veröffentlichung für alle Home-Assi
 
 | Projekt | Dokumentation |
 | --- | --- |
+| [UGSo CallMeBot](/projects/callmebot/) | Experimentelle HA-App 0.1.0: Empfängerprofile, WhatsApp-Texte über MQTT, DE/EN/FR und passende Blockly-Bausteine. |
 | [UGSo Blocks for HA](/projects/blocks-for-ha/) | Experimentelle HA-App 0.1.3: visuelle Blocks für native Automationen, YAML-Import/-Export und erweiterbare Falls-Zweige; Editor über HA-Ingress. |
 | [Grafik Visual Studio](/projects/grafik-visual-studio/) | Grafischer Editor und Runtime für HA-Visualisierungen. |
 
-Beide Projekte liegen im selben Repository wie die folgenden MQTT-Apps.
+Diese Projekte liegen im selben Repository wie die folgenden MQTT-Apps.
 
 ## Gemeinsames Add-on-Repository
 
