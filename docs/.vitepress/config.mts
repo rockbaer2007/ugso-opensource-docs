@@ -127,6 +127,7 @@ const sidebarDe = {
     { text: 'UGSo Blocks for HA', link: '/projects/blocks-for-ha/' },
     { text: 'Liste der Blocks', link: '/projects/blocks-for-ha/blocks' },
     { text: 'Datum und Zeit', link: '/projects/blocks-for-ha/time' },
+    { text: 'Konvertierung', link: '/projects/blocks-for-ha/conversion' },
     { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' }
   ] }],
   '/projects/grafik-visual-studio/': [{
@@ -544,6 +545,7 @@ const sidebarEn = {
     { text: 'UGSo Blocks for HA', link: '/en/projects/blocks-for-ha/' },
     { text: 'Block catalog', link: '/en/projects/blocks-for-ha/blocks' },
     { text: 'Date and time', link: '/en/projects/blocks-for-ha/time' },
+    { text: 'Conversion', link: '/en/projects/blocks-for-ha/conversion' },
     { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' }
   ] }],
   '/en/projects/grafik-visual-studio/': [{

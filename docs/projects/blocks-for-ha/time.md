@@ -37,6 +37,6 @@ Sonnenwerte kommen aus den Attributen der [HA-Sun-Integration](https://www.home-
 
 Ein Zeitvergleich prüft die Uhrzeit **beim Durchlaufen der Bedingung**. Er startet die Automation nicht und wartet nicht bis zur passenden Uhrzeit. Dafür einen Uhrzeit- oder Sonnen-Auslöser verwenden. Der neue Sonnenwert-Block ersetzt keinen Sonnen-Auslöser.
 
-**Blocks-Projekt (JSON)** erhält Form, Auswahl und dynamische Eingänge. Beim **YAML-Öffnen** bleiben diese Zeittemplates inhaltlich erhalten, erscheinen aber als allgemeine Template-Blocks. Ein zuvor in einer HA-Variable gespeicherter Datumswert kann als Text vorliegen; unser Variablen-Leseblock hat deshalb keinen Time-Anschluss. Datumswerte direkt verschachteln, bei Bedarf mit einem eigenen HA-Template konvertieren.
+**Blocks-Projekt (JSON)** erhält Form, Auswahl und dynamische Eingänge. Beim **YAML-Öffnen** bleiben diese Zeittemplates inhaltlich erhalten, erscheinen aber als allgemeine Template-Blocks. Ein zuvor in einer HA-Variable gespeicherter Datumswert kann als Text vorliegen; unser Variablen-Leseblock hat deshalb keinen Time-Anschluss. Datumswerte direkt verschachteln oder seit **0.1.12** den Variablen-Leseblock über **Nach Datum/Zeit** konvertieren. [Konvertierung und Einheiten](./conversion). Konvertierte Laufzeitzahlen können jetzt auch in Betrag und Sonnenoffset andocken.
 
 Prüfung: Blockly-/YAML-Rundläufe, typisierte Anschlüsse, dynamische Felder sowie Jinja-Prüfungen für Nachtgrenzen und Sommerzeit. Eine Ausführung auf einem echten HA-System ist noch nicht verifiziert.

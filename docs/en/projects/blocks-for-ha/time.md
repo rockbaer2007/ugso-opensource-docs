@@ -37,6 +37,6 @@ Sun values come from [HA Sun integration attributes](https://www.home-assistant.
 
 A comparison checks the clock **when its condition is evaluated**. It does not start the automation or wait for the target time. Use a time or sun trigger for that. The new sun value block does not replace a sun trigger.
 
-**Blocks project JSON** preserves block shapes, selections and dynamic sockets. **Opening YAML** retains the time templates but displays them as general template blocks. A datetime previously assigned to an HA variable may become text; our variable getter therefore has no Time connection. Nest datetime blocks directly or use a custom HA template for conversion.
+**Blocks project JSON** preserves block shapes, selections and dynamic sockets. **Opening YAML** retains the time templates but displays them as general template blocks. A datetime previously assigned to an HA variable may become text; our variable getter therefore has no Time connection. Nest datetime blocks directly or, since **0.1.12**, connect the getter through **To datetime**. [Conversion and units](./conversion). Converted runtime numbers now also fit datetime amounts and sun offsets.
 
 Verification covers Blockly/YAML roundtrips, typed connections, dynamic fields and Jinja checks for overnight boundaries and DST. Execution on a real HA system has not been verified.

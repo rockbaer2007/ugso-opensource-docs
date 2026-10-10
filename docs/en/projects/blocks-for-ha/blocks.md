@@ -4,9 +4,25 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 ---
 # Block catalog
 
-Version **0.1.11**: 41 block types. Images show actual UGSo editor blocks. Dropdown variants do not count as additional types. [Date and time: guide and ioBroker comparison](./time).
+Version **0.1.12**: 50 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are currently entered manually.
+
+## Conversion added in 0.1.12
+
+[Guide, ioBroker comparison and pending JSONata](./conversion).
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **To number**<br><code>ugso_convert_number</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_number.png" alt="To number" style="max-width:280px;max-height:180px"> | HA float without fallback; complete numeric input with decimal point. Runtime number for variables, comparisons and time calculations. |
+| **To Boolean**<br><code>ugso_convert_boolean</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_boolean.png" alt="To Boolean" style="max-width:280px;max-height:180px"> | HA bool for recognized Boolean/text values. Boolean output for conditions and logic. |
+| **To string**<br><code>ugso_convert_string</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_string.png" alt="To string" style="max-width:280px;max-height:180px"> | Jinja text representation of a value; not JSON serialization. |
+| **Type of**<br><code>ugso_convert_type</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_type.png" alt="Type of" style="max-width:280px;max-height:180px"> | HA typeof returns Python names such as str, float, bool, dict. HA 2023.4 or newer. |
+| **To datetime**<br><code>ugso_convert_datetime</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_datetime.png" alt="To datetime" style="max-width:280px;max-height:180px"> | ISO text or Unix seconds/milliseconds to HA local datetime. Typed Time output. |
+| **Datetime to …**<br><code>ugso_convert_date_format</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_date_format.png" alt="Datetime to …" style="max-width:280px;max-height:180px"> | Datetime, formatted text, Unix number or date component. Selection changes output type; custom format shows a field. |
+| **Format duration**<br><code>ugso_convert_duration</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_duration.png" alt="Format duration" style="max-width:280px;max-height:180px"> | Duration in milliseconds or seconds to hh:mm:ss, hh:mm, mm:ss. Preserves sign and total hours/minutes. |
+| **JSON to value**<br><code>ugso_convert_from_json</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_from_json.png" alt="JSON to value" style="max-width:280px;max-height:180px"> | JSON text to object, list or scalar. Invalid JSON causes an HA error. |
+| **Value to JSON**<br><code>ugso_convert_to_json</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_to_json.png" alt="Value to JSON" style="max-width:280px;max-height:180px"> | JSON serialization with indentation checkbox. Format datetimes first. |
 
 ## Date and time added in 0.1.11
 

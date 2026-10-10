@@ -4,11 +4,13 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.11 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+**Version 0.1.12 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
 ## Block catalog and original plugins
+
+New in **0.1.12**: **Conversion** with nine blocks for number, Boolean, string, type, datetime, date formatting/components, duration and JSON. Dynamic format fields and a JSON pretty-print checkbox. JSONata remains a planned extension. [Guide and ioBroker comparison](./conversion).
 
 New in **0.1.11**: seven **Date and time** blocks: clock comparisons, overnight periods, datetimes, calendar starts, next sun events, time calculations and formatting. [Guide and ioBroker comparison](./time).
 
@@ -16,7 +18,7 @@ New in **0.1.10**: **Change variable by …** in the variables menu, with defaul
 
 New in **0.1.9**: **Logik** category with comparison, compact AND/OR, NOT, true/false, null and conditional value selection. Variables now accept Boolean and null too. [Six new blocks with images and example](./blocks#logic-blocks-added-in-0-1-9).
 
-The [catalog of all 41 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
+The [catalog of all 50 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
 
 New in **0.1.8**: **Variablen → Variable erstellen …**, Set/Read variable blocks and a **Templates** category with dedicated value and condition blocks. Variables generate native HA `variables` actions; reads produce <code v-pre>{{ name }}</code>. Jinja is evaluated in HA. [Usage, example and import limits](./blocks#using-variables-and-templates).
 
@@ -43,7 +45,7 @@ Editor: `http://127.0.0.1:4180/`. Preview, copy, download and reopen supported Y
 
 ## ioBroker / our Blocks: existing features
 
-41 block types including the automation root; variables, templates and date/time are described in the catalog:
+50 block types including the automation root; variables, templates, date/time and conversion are described in the catalog:
 
 | ioBroker concept | UGSo Blocks for HA | HA output |
 | --- | --- | --- |
@@ -123,16 +125,17 @@ We already use the original **Blockly 13.3.0** library rather than building a se
 
 The [original workspace and block-parts documentation](https://docs.blockly.com/guides/get-started/workspace-anatomy/) and [Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/) guide familiar interaction patterns. Library updates require connection, import/export and browser checks.
 
-| Task | Status in 0.1.10 / next step |
+| Task | Status in 0.1.12 / next step |
 | --- | --- |
 | Connection geometry and type checks | Boolean conditions and Number values use side connections; triggers/actions use separate statement chains |
 | Extensible blocks | If and AND/OR/NOT implemented; visual action-data fields planned |
 | Default values | Shadow numbers and text blocks implemented; entity value blocks pending |
-| Sensor values and attributes | Pending; include appropriate HA template output and type conversion |
+| Sensor values and attributes | Dedicated blocks pending; already usable through templates. Conversion blocks now provide type conversion |
 | Editor controls | Context menu, help, disable, trash recovery, zoom and insertion markers available |
 | Comments | Retained in projects; YAML comments and dedicated comment block pending |
 | Menu and block colors | Dark category menu, light flyout and distinct group colors implemented |
-| ioBroker categories | Review progressively, starting with System; update comparison for every feature |
+| ioBroker categories | System, date/time and conversion reviewed; update comparison for every feature |
+| JSONata | Planned; evaluate native object/list access and an optional HA runtime adapter |
 | Publishing and updates | Every new HA app starts in the shared repository with installable packaging; bump package and UI versions together |
 | HA connection, catalog and plugins | Pending; managed connection and declarative extensions planned |
 

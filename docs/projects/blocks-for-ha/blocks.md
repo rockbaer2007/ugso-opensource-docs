@@ -4,9 +4,25 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 ---
 # Liste der Blocks
 
-Stand **0.1.11**: 41 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. [Datum und Zeit: Anleitung und ioBroker-Gegenüberstellung](./time).
+Stand **0.1.12**: 50 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden derzeit manuell eingegeben.
+
+## Konvertierung seit 0.1.12
+
+[Anleitung, ioBroker-Gegenüberstellung und vorgemerktes JSONata](./conversion).
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Nach Zahl**<br><code>ugso_convert_number</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_number.png" alt="Nach Zahl" style="max-width:280px;max-height:180px"> | HA float ohne Ersatzwert; vollständige Zahl mit Dezimalpunkt. Laufzeitzahl für Variablen, Vergleiche und Zeitrechnung. |
+| **Nach Logikwert**<br><code>ugso_convert_boolean</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_boolean.png" alt="Nach Logikwert" style="max-width:280px;max-height:180px"> | HA bool; erkannte Boolean-/Textwerte. Boolean-Ausgang für Bedingungen und Logik. |
+| **Nach String**<br><code>ugso_convert_string</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_string.png" alt="Nach String" style="max-width:280px;max-height:180px"> | Jinja-Textdarstellung eines Werts; keine JSON-Serialisierung. |
+| **Typ von**<br><code>ugso_convert_type</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_type.png" alt="Typ von" style="max-width:280px;max-height:180px"> | HA typeof liefert Python-Typnamen, z. B. str, float, bool, dict. Ab HA 2023.4. |
+| **Nach Datum/Zeit**<br><code>ugso_convert_datetime</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_datetime.png" alt="Nach Datum/Zeit" style="max-width:280px;max-height:180px"> | ISO-Text oder Unix-Sekunden/-Millisekunden nach HA-Ortszeit. Typisierter Time-Ausgang. |
+| **Datum/Zeit nach …**<br><code>ugso_convert_date_format</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_date_format.png" alt="Datum/Zeit nach …" style="max-width:280px;max-height:180px"> | Datumswert, Format, Unix-Zahl oder Datumsbestandteil. Auswahl wechselt den Ausgangstyp; eigenes Format zeigt ein Textfeld. |
+| **Zeitdifferenz formatieren**<br><code>ugso_convert_duration</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_duration.png" alt="Zeitdifferenz formatieren" style="max-width:280px;max-height:180px"> | Dauer in Millisekunden oder Sekunden nach hh:mm:ss, hh:mm, mm:ss. Vorzeichen und große Stunden/Minuten bleiben erhalten. |
+| **JSON nach Wert**<br><code>ugso_convert_from_json</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_from_json.png" alt="JSON nach Wert" style="max-width:280px;max-height:180px"> | JSON-Text nach Objekt, Liste oder Einzelwert. Ungültiges JSON erzeugt einen HA-Fehler. |
+| **Wert nach JSON**<br><code>ugso_convert_to_json</code> | <img src="/assets/blocks-for-ha/blocks/ugso_convert_to_json.png" alt="Wert nach JSON" style="max-width:280px;max-height:180px"> | JSON-Serialisierung mit Checkbox für Einrückung. Datumswerte vorher formatieren. |
 
 ## Datum und Zeit seit 0.1.11
 
