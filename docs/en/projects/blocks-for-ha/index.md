@@ -4,9 +4,9 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
-New in **0.1.14**: 37 additional math, text, list and loop blocks, 105 in total. New Math/Text categories, list editing by new variable assignment, fixed integer counting loops, named For-each variables and additional original Blockly atan2/text reverse. [Mapping, examples and limitations](./collections).
+New in **0.1.15**: random/RGB/blend colours and original Blockly parameter value functions; 111 block types in total. [All standard categories, usage and remaining variants](./blockly-audit).
 
-**Version 0.1.14 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+**Version 0.1.15 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -22,7 +22,7 @@ New in **0.1.10**: **Change variable by …** in the variables menu, with defaul
 
 New in **0.1.9**: **Logik** category with comparison, compact AND/OR, NOT, true/false, null and conditional value selection. Variables now accept Boolean and null too. [Six new blocks with images and example](./blocks#logic-blocks-added-in-0-1-9).
 
-The [catalog of all 105 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
+The [catalog of all 111 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
 
 New in **0.1.8**: **Variablen → Variable erstellen …**, Set/Read variable blocks and a **Templates** category with dedicated value and condition blocks. Variables generate native HA `variables` actions; reads produce <code v-pre>{{ name }}</code>. Jinja is evaluated in HA. [Usage, example and import limits](./blocks#using-variables-and-templates).
 
@@ -30,7 +30,7 @@ New in 0.1.7: **search at the bottom of the menu**, multiline text, percentage s
 
 The date comparison includes the year and uses HA’s `now().strftime('%Y-%m-%d')`, evaluated in HA’s time zone. It is a condition, not a trigger. Import maps this shape to the date block and other template conditions to the general template block. The light action generates RGB colour and percentage brightness. Timers use their configured duration; additional parameters stay in the generic HA action. Actual device capabilities must be checked in HA.
 
-Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Six original plugins are bundled locally. Colour blending, random colours, automatic growing connections and live entity selection remain pending. Text joining and list editing are implemented.
+Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Six original plugins are bundled locally. Colour blending and random colours are implemented since 0.1.15; automatic growing connections and live entity selection remain pending. Text joining and list editing are implemented.
 
 ## Install from the HA app store
 
@@ -49,7 +49,7 @@ Editor: `http://127.0.0.1:4180/`. Preview, copy, download and reopen supported Y
 
 ## ioBroker / our Blocks: existing features
 
-105 block types including the automation root; variables, templates, date/time and conversion are described in the catalog:
+111 block types including the automation root; variables, templates, date/time and conversion are described in the catalog:
 
 | ioBroker concept | UGSo Blocks for HA | HA output |
 | --- | --- | --- |
@@ -129,7 +129,7 @@ We already use the original **Blockly 13.3.0** library rather than building a se
 
 The [original workspace and block-parts documentation](https://docs.blockly.com/guides/get-started/workspace-anatomy/) and [Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/) guide familiar interaction patterns. Library updates require connection, import/export and browser checks.
 
-| Task | Status in 0.1.14 / next step |
+| Task | Status in 0.1.15 / next step |
 | --- | --- |
 | Connection geometry and type checks | Boolean conditions and Number values use side connections; triggers/actions use separate statement chains |
 | Extensible blocks | If, AND/OR/NOT, cases, objects and lists implemented; visual action-data fields planned |

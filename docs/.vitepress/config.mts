@@ -130,6 +130,7 @@ const sidebarDe = {
     { text: 'Konvertierung', link: '/projects/blocks-for-ha/conversion' },
     { text: 'Timeouts, Objekt und Logik', link: '/projects/blocks-for-ha/flow' },
     { text: 'Mathematik, Text, Listen und Schleifen', link: '/projects/blocks-for-ha/collections' },
+    { text: 'Blockly-Abgleich, Farben und Funktionen', link: '/projects/blocks-for-ha/blockly-audit' },
     { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' }
   ] }],
   '/projects/grafik-visual-studio/': [{
@@ -550,6 +551,7 @@ const sidebarEn = {
     { text: 'Conversion', link: '/en/projects/blocks-for-ha/conversion' },
     { text: 'Timeouts, objects and logic', link: '/en/projects/blocks-for-ha/flow' },
     { text: 'Math, text, lists and loops', link: '/en/projects/blocks-for-ha/collections' },
+    { text: 'Blockly comparison, colours and functions', link: '/en/projects/blocks-for-ha/blockly-audit' },
     { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' }
   ] }],
   '/en/projects/grafik-visual-studio/': [{

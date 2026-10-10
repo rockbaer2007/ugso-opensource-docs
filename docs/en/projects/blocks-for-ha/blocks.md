@@ -4,9 +4,22 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 ---
 # Block catalog
 
-Version **0.1.14**: 105 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.15**: 111 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are currently entered manually.
+
+## Colours and value functions since 0.1.15
+
+[Usage, HA output and full source comparison](./blockly-audit).
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Random colour**<br><code>ugso_colour_random</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour_random.png" alt="Random colour" style="max-width:280px;max-height:180px"> | Three random RGB channels in 0–255. New on each evaluation; not cryptographic. |
+| **RGB colour**<br><code>ugso_colour_rgb</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour_rgb.png" alt="RGB colour" style="max-width:280px;max-height:180px"> | Clamp percentages to 0–100 and convert to RGB channels. 100/50/0 gives [255,128,0]. |
+| **Blend colours**<br><code>ugso_colour_blend</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour_blend.png" alt="Blend colours" style="max-width:280px;max-height:180px"> | Linear RGB blend, 0–1 share of colour 2. Red/blue at 0.5 gives [128,0,128], without gamma correction. |
+| **Define value function**<br><code>procedures_defreturn</code> | <img src="/assets/blocks-for-ha/blocks/procedures_defreturn.png" alt="Define value function" style="max-width:280px;max-height:180px"> | Original Blockly editor, cog for up to eight parameters, return required. No actions. Jinja expansion during export. |
+| **Call value function**<br><code>procedures_callreturn</code> | <img src="/assets/blocks-for-ha/blocks/procedures_callreturn.png" alt="Call value function" style="max-width:280px;max-height:180px"> | Appears dynamically in Functions. Argument inputs follow parameters. Result as value or Boolean condition; no recursion. |
+| **Original parameter getter**<br><code>variables_get</code> | <img src="/assets/blocks-for-ha/blocks/variables_get.png" alt="Original parameter getter" style="max-width:280px;max-height:180px"> | Original Blockly getter, e.g. from definition context menu. Reads parameters inside functions, HA variables otherwise. Own getter remains usable. |
 
 ## Math, text, lists and counting loops since 0.1.14
 
@@ -124,7 +137,7 @@ Purple time blocks use a typed datetime socket. [Usage, boundary rules and compa
 | **Number**<br><code>ugso_number</code> | <img src="/assets/blocks-for-ha/blocks/ugso_number.png" alt="Number" style="max-width:280px;max-height:180px"> | General numeric value. Fits thresholds and delays; destination-specific validation still applies. |
 | **Percentage**<br><code>ugso_percent</code> | <img src="/assets/blocks-for-ha/blocks/ugso_percent.png" alt="Percentage" style="max-width:280px;max-height:180px"> | Slider and exact input for integers 0–100. Number output, e.g. charge level or brightness. |
 | **Multiline text**<br><code>ugso_text</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text.png" alt="Multiline text" style="max-width:280px;max-height:180px"> | String value for logs. Enter inserts a newline; Shift+Enter commits. Three visible lines; full text is retained. |
-| **Colour**<br><code>ugso_colour</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour.png" alt="Colour" style="max-width:280px;max-height:180px"> | Hex colour picker with Colour output for the light action. Dedicated type rejects text and number connections. |
+| **Colour**<br><code>ugso_colour</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour.png" alt="Colour" style="max-width:280px;max-height:180px"> | Hex colour picker; exports an RGB list to lights, variables or colour calculations. Colour/Value output; fixed numeric inputs remain incompatible. |
 | **On / off / toggle**<br><code>ugso_switch_action</code> | <img src="/assets/blocks-for-ha/blocks/ugso_switch_action.png" alt="On / off / toggle" style="max-width:280px;max-height:180px"> | Entity-domain action: `turn_on`, `turn_off` or `toggle`. Entity must support the action. |
 | **Generic HA action**<br><code>ugso_service_action</code> | <img src="/assets/blocks-for-ha/blocks/ugso_service_action.png" alt="Generic HA action" style="max-width:280px;max-height:180px"> | Action name, optional single entity target, JSON object data. Supports parameters not exposed by dedicated blocks. |
 | **Wait seconds**<br><code>ugso_delay_action</code> | <img src="/assets/blocks-for-ha/blocks/ugso_delay_action.png" alt="Wait seconds" style="max-width:280px;max-height:180px"> | Delay of 0–86400 integer seconds. Number input with shadow default. |
@@ -190,7 +203,7 @@ The six integrated original plugins are pinned to **13.2.0** and bundled locally
 | [toolbox-search](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/toolbox-search) | Search at the bottom of the menu, German search hints; results preserve dropdowns and shadows. |
 | [field-multilineinput](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-multilineinput) | Used by Text; newlines remain in projects and YAML. |
 | [field-slider](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-slider) | Used by Percentage; 0–100 with exact numeric entry. |
-| [field-colour](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-colour) | Used by Colour; converts hex to RGB for lights. Blend/random remain pending. |
+| [field-colour](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-colour) | Used by Colour; converts hex to RGB for lights. Random/RGB/blend use own HA generators since 0.1.15. |
 | [field-date](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-date) | Used by date comparison; UGSo subclass guards the deferred picker call. |
 | [field-dependent-dropdown](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-dependent-dropdown) | Used by Helper; type determines actions. No live HA selection. |
 | [block-plus-minus](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/block-plus-minus) | Interaction implemented in our HA blocks; original plugin is not installed. Gear remains available. |

@@ -4,9 +4,22 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 ---
 # Liste der Blocks
 
-Stand **0.1.14**: 105 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.15**: 111 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden derzeit manuell eingegeben.
+
+## Farben und Wertfunktionen seit 0.1.15
+
+[Bedienung, HA-Ausgabe und vollständiger Quellenvergleich](./blockly-audit).
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Zufällige Farbe**<br><code>ugso_colour_random</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour_random.png" alt="Zufällige Farbe" style="max-width:280px;max-height:180px"> | Drei zufällige RGB-Kanäle 0–255. Bei jeder Auswertung neu; nicht kryptografisch. |
+| **Farbe aus RGB**<br><code>ugso_colour_rgb</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour_rgb.png" alt="Farbe aus RGB" style="max-width:280px;max-height:180px"> | Prozentanteile auf 0–100 begrenzen und in RGB-Kanäle umrechnen. 100/50/0 ergibt [255,128,0]. |
+| **Farben mischen**<br><code>ugso_colour_blend</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour_blend.png" alt="Farben mischen" style="max-width:280px;max-height:180px"> | Lineare RGB-Mischung. Anteil Farbe 2 von 0–1. Rot/Blau bei 0,5 ergibt [128,0,128], ohne Gamma-Korrektur. |
+| **Wertfunktion definieren**<br><code>procedures_defreturn</code> | <img src="/assets/blocks-for-ha/blocks/procedures_defreturn.png" alt="Wertfunktion definieren" style="max-width:280px;max-height:180px"> | Originaler Blockly-Editor, Zahnrad für bis zu acht Parameter, Rückgabewert erforderlich. Keine Aktionen. Jinja-Expansion beim Export. |
+| **Wertfunktion aufrufen**<br><code>procedures_callreturn</code> | <img src="/assets/blocks-for-ha/blocks/procedures_callreturn.png" alt="Wertfunktion aufrufen" style="max-width:280px;max-height:180px"> | Erscheint dynamisch in Funktionen. Argumenteingänge folgen den Parametern. Ergebnis als Wert oder Boolean-Bedingung; keine Rekursion. |
+| **Originaler Parameter-Getter**<br><code>variables_get</code> | <img src="/assets/blocks-for-ha/blocks/variables_get.png" alt="Originaler Parameter-Getter" style="max-width:280px;max-height:180px"> | Original-Blockly-Getter, etwa aus dem Kontextmenü der Definition. Liest im Funktionskörper den Parameter, sonst eine HA-Variable. Eigener Getter bleibt nutzbar. |
 
 ## Mathematik, Text, Listen und Zählschleifen seit 0.1.14
 
@@ -124,7 +137,7 @@ Die violetten Zeit-Blocks verwenden einen eigenen typisierten Datumswert-Anschlu
 | **Zahl**<br><code>ugso_number</code> | <img src="/assets/blocks-for-ha/blocks/ugso_number.png" alt="Zahl" style="max-width:280px;max-height:180px"> | Unbegrenzter Zahlen-Wertblock. Passt in Grenzen und Wartezeiten; deren eigene Validierung gilt weiterhin. |
 | **Prozent**<br><code>ugso_percent</code> | <img src="/assets/blocks-for-ha/blocks/ugso_percent.png" alt="Prozent" style="max-width:280px;max-height:180px"> | Slider und genaue Eingabe für ganze Werte 0–100. Number-Output, beispielsweise für Ladezustand oder Helligkeit. |
 | **Mehrzeiliger Text**<br><code>ugso_text</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text.png" alt="Mehrzeiliger Text" style="max-width:280px;max-height:180px"> | String-Wert für Logmeldungen. Enter: neue Zeile; Shift+Enter: übernehmen. Drei sichtbare Zeilen, vollständiger Text bleibt gespeichert. |
-| **Farbe**<br><code>ugso_colour</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour.png" alt="Farbe" style="max-width:280px;max-height:180px"> | Farbfeld mit Hexwert und Colour-Output für die Lichtaktion. Eigener Anschluss schützt vor Verwechslung mit Text oder Zahlen. |
+| **Farbe**<br><code>ugso_colour</code> | <img src="/assets/blocks-for-ha/blocks/ugso_colour.png" alt="Farbe" style="max-width:280px;max-height:180px"> | Hex-Farbauswahl; als RGB-Liste für Licht, Variablen oder Farbberechnungen. Colour/Value-Ausgang, nicht an feste Zahlenanschlüsse. |
 | **Ein / Aus / Umschalten**<br><code>ugso_switch_action</code> | <img src="/assets/blocks-for-ha/blocks/ugso_switch_action.png" alt="Ein / Aus / Umschalten" style="max-width:280px;max-height:180px"> | Aktion der Entitätsdomain: `turn_on`, `turn_off` oder `toggle`. Die Entität muss die Aktion unterstützen. |
 | **Generische HA-Aktion**<br><code>ugso_service_action</code> | <img src="/assets/blocks-for-ha/blocks/ugso_service_action.png" alt="Generische HA-Aktion" style="max-width:280px;max-height:180px"> | Aktionsname, optional eine Zielentität, Daten als JSON-Objekt. Für Parameter, die Komfortblocks noch nicht anbieten. |
 | **Warte Sekunden**<br><code>ugso_delay_action</code> | <img src="/assets/blocks-for-ha/blocks/ugso_delay_action.png" alt="Warte Sekunden" style="max-width:280px;max-height:180px"> | Pause von 0–86400 ganzen Sekunden. Number-Eingang mit Shadow-Standardwert. |
@@ -190,7 +203,7 @@ Alle sechs eingebundenen Originalplugins sind auf **13.2.0** festgelegt und werd
 | [toolbox-search](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/toolbox-search) | Blocksuche am Menüende, deutsche Suchhinweise; Treffer behalten Dropdowns und Shadows. |
 | [field-multilineinput](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-multilineinput) | Im Textblock; Zeilenumbrüche bleiben im Projekt und YAML erhalten. |
 | [field-slider](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-slider) | Im Prozentblock; 0–100 mit genauer Zahleneingabe. |
-| [field-colour](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-colour) | Im Farbblock; Hex wird für die Lichtaktion nach RGB umgewandelt. Mischen/Zufall noch offen. |
+| [field-colour](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-colour) | Im Farbblock; Hex wird für die Lichtaktion nach RGB umgewandelt. Zufall/RGB/Mischung seit 0.1.15 mit eigenen HA-Generatoren. |
 | [field-date](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-date) | Im Datumsvergleich; UGSo-Unterklasse sichert den verzögerten Kalenderaufruf ab. |
 | [field-dependent-dropdown](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-dependent-dropdown) | Im Helferblock; Helfertyp bestimmt Aktionen. Keine Live-HA-Auswahl. |
 | [block-plus-minus](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/block-plus-minus) | Bedienprinzip in eigenen HA-Blocks umgesetzt; Originalplugin nicht installiert. Zahnrad bleibt verfügbar. |
