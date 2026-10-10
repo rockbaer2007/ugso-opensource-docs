@@ -4,6 +4,8 @@ description: Gespeicherte Theme-Auswahl und zusätzlicher Einpassen-Knopf im Blo
 ---
 # Themes und Zoom
 
+Seit **0.1.27** erhalten UGSo-Blocks in Standard/Dark weiße Beschriftungen. Mittlere blaue und braune Flächen werden dafür etwas dunkler, mit mindestens **4,5:1** Kontrast. Bei originalen hellen Modern-/Tritanopia-Farben wird passend kontrastreiche dunkle Schrift verwendet. Eingabefelder bleiben separat lesbar. Die Blockbilder im Katalog sind für DE/EN/FR mit dieser Korrektur neu erzeugt.
+
 Seit **0.1.16** enthält die Werkzeugleiste über der Arbeitsfläche eine **Theme-Auswahl**. Sie betrifft den Blockly-Bereich einschließlich Kategorien, Blockauswahl und Blocks. Die Blockly-Palette ist unabhängig von der App-Darstellung. Es bleiben 111 Blocktypen.
 
 | Auswahl | Darstellung | Originalquelle |

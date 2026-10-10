@@ -4,6 +4,8 @@ description: Saved theme selection and an additional fit control in the Blockly 
 ---
 # Themes and zoom
 
+Since **0.1.27**, UGSo blocks in Standard/Dark use white labels. Medium blue and brown backgrounds are slightly darker to provide at least **4.5:1** contrast. Original light Modern/Tritanopia colours use sufficiently contrasting dark labels. Editable fields retain separate readable surfaces. The DE/EN/FR catalog images have been regenerated with this correction.
+
 Since **0.1.16**, the toolbar above the workspace includes a **Theme selector**. It affects Blockly categories, flyouts and blocks. The Blockly palette is independent of the app appearance. There are still 111 block types.
 
 | Choice | Appearance | Upstream source |
