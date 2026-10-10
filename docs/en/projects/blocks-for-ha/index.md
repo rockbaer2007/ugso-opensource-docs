@@ -10,7 +10,7 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.19 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.20 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -172,3 +172,7 @@ Built with [Blockly](https://www.blockly.com/). Original HA blocks, not an ioBro
 Blockly is an open-source developer library from the Raspberry Pi Foundation, originally developed at Google. The app uses the unmodified official attribution badge since **0.1.19**, at 32px height with surrounding space and a link to Blockly. Both SVG variants are bundled locally. [Original attribution guidance](https://docs.blockly.com/guides/app-integration/attribution/).
 
 <a class="blockly-attribution" href="https://www.blockly.com/" target="_blank" rel="noopener noreferrer"><img class="badge-light" src="/assets/blocks-for-ha/branding/built-with-blockly-badge-white.svg" alt="Built with Blockly" width="87" height="32"><img class="badge-dark" src="/assets/blocks-for-ha/branding/built-with-blockly-badge-black.svg" alt="Built with Blockly" width="87" height="32"></a>
+
+## Home Assistant sidebar
+
+Since **0.1.20**, the sidebar entry uses the monochrome building-block icon `mdi:toy-brick-outline`. Update and restart the app, enable **Show in sidebar**, and reload Home Assistant if the previous icon persists. Native app configuration uses MDI icons; the colourful UGSo icon remains in the app store and editor. [HA configuration](https://developers.home-assistant.io/docs/apps/configuration/) · [Original icon](https://pictogrammers.com/library/mdi/icon/toy-brick-outline/).
