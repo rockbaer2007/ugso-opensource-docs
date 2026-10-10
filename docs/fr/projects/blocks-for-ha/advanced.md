@@ -5,7 +5,7 @@ description: Déclencheurs, conditions, cibles, groupes d’actions et reconnais
 
 # Automatisations HA avancées et Jinja
 
-Depuis **0.1.39**, 148 types de blocs sont disponibles. **HA avancé** et **Jinja (expérimental)** complètent les blocs simples. Les étapes simples importées gardent leurs formes. Les champs supplémentaires apparaissent en JSON modifiable dans les blocs avancés. L’import vérifie la structure prise en charge ; vérifier ensuite intégrations, IDs d’appareils, modèles et exécution dans Home Assistant.
+Depuis **0.1.41**, 163 types de blocs sont disponibles. **HA avancé** et **Jinja (expérimental)** complètent les blocs simples. Les étapes simples importées gardent leurs formes. Les champs supplémentaires apparaissent en JSON modifiable dans les blocs avancés. L’import vérifie la structure prise en charge ; vérifier ensuite intégrations, IDs d’appareils, modèles et exécution dans Home Assistant.
 
 ## Déclencheurs et conditions
 
@@ -41,14 +41,28 @@ Ces blocs exportent les séquences natives HA. L’exécution se fait dans HA, s
 
 ## Jinja (expérimental)
 
-**Jinja einlesen** au-dessus de l’espace ouvre un dialogue. Coller le modèle, vérifier l’aperçu, choisir éventuellement **Als Bedingung**, puis **Block erstellen**. Le nouveau bloc apparaît à côté de l’automatisation et doit être connecté. On peut aussi déplacer les blocs valeur/condition depuis la catégorie. Les valeurs et conditions de modèle importées utilisent également Jinja lorsqu’aucune forme simple plus spécifique ne correspond.
+Depuis **0.1.41**, **Jinja einlesen** peut décomposer les modèles en blocs imbriqués modifiables. Coller le modèle, vérifier l’aperçu, laisser **Décomposer en blocs modifiables** activé et choisir éventuellement **Als Bedingung**. **Block erstellen** place la structure connectée à côté de l’automatisation. Relier le bloc valeur extérieur à une affectation de variable ou une entrée de valeur ; relier le bloc condition à une entrée booléenne. Désactiver la décomposition crée un bloc de texte original.
 
-![Bloc valeur Jinja expérimental](/assets/blocks-for-ha/blocks/fr/ugso_jinja_value.png)
+![Bloc valeur Jinja composé](/assets/blocks-for-ha/blocks/fr/ugso_jinja_composed_value.png)
 
-L’analyse reconnaît états et attributs d’entités, date/heure, variables, filtres, `if/else` et `for`. Le bloc affiche entités et filtres reconnus. Commentaires, chaînes littérales et sections `raw` sont ignorés lors de la recherche de références. L’aperçu signale les structures de contrôle incomplètes.
+Exemple : <code v-pre>Eau: {{ states('sensor.water') | float(0) | round(1) }} °C</code> devient des parties de texte et une sortie contenant une fonction d’entité, `float` et `round`. Le champ d’entité ouvre la recherche existante. Modifier séparément entité, filtres, arguments et précision. L’import YAML décompose les valeurs correspondantes, par exemple dans une affectation unique de variable, et les conditions de modèle. Les formes existantes plus spécifiques sont conservées. Les modèles dans le JSON de données/options restent dans le champ JSON.
 
-::: warning Limites de reconnaissance
-Analyse prudente de motifs : ce n’est ni un analyseur Jinja complet, ni une décomposition automatique en sous-blocs exécutables, ni une garantie syntaxique. Fonctions inconnues et modèles complexes conservent leur texte original modifiable. Aucun texte n’est réécrit ou exécuté localement. Tester dans HA. Une expression composée accepte uniquement une expression Jinja unique ; un modèle `if/for` complet appartient au bloc valeur autonome.
+![Structure modifiable de l’exemple](/assets/blocks-for-ha/jinja/fr.png)
+
+| Parties prises en charge | Représentation |
+| --- | --- |
+| `states`, `state_attr`, `is_state`, `is_state_attr` avec ID d’entité fixe | Fonction d’entité avec recherche et entrées d’arguments |
+| `now()`, noms simples de variables, nombres, chaînes entre guillemets, booléens et `none` | Blocs d’expression ; noms de variables Jinja dans des champs texte |
+| `float`, `int`, `round`, `default`, `abs`, `lower`, `upper`, `trim`, `length`, `string`, `list`, `join`, `replace` | Filtres imbriqués avec 0–3 arguments positionnels |
+| `+`, `-`, `*`, `/`, `//`, `%`, `~`, comparaisons, `and`, `or`, `not` | Calculs/comparaisons avec parenthèses explicites |
+| `valeur if condition else autre_valeur` | Sélection conditionnelle de valeur |
+| Texte, <code v-pre>{{ ... }}</code>, simples `{% if ... %}...{% else %}...{% endif %}` | Blocs texte, sortie, liaison et si/sinon |
+| `{% for item in items %}...{% else %}...{% endfor %}` | Boucle simple sur une expression, cas vide facultatif et parties imbriquées |
+
+**Conserver l’original :** Les structures inchangées gardent le texte exact, espaces compris, après rechargement et annulation/rétablissement. Les modifications génèrent du Jinja reformatté ; restaurer les champs à la même structure rétablit l’original. Les projets Blockly sauvegardent structure et original. YAML sauvegarde le texte, analysé à nouveau lors de l’import.
+
+::: warning Limites de décomposition
+Analyseur original d’un sous-ensemble limité de Jinja. Dès qu’une partie n’est pas prise en charge, le **modèle entier** reste un bloc original modifiable. Exemples : `set`, `namespace`, accès aux objets/listes, littéraux liste/objet, tests `is defined`, comparaisons en chaîne, `elif`, arguments nommés, fonctions/filtres inconnus, commentaires et marqueurs de contrôle des espaces. Pas de décomposition partielle, de garantie syntaxique ni d’exécution locale. Le bloc valeur extérieur accepte des modèles entiers ; seul un affichage Jinja unique s’intègre dans un autre calcul. Entrées manquantes ou littéraux invalides empêchent l’export. Limites : 10000 caractères, 100 parties et imbrication bornée. Les noms de variables Jinja ne sont pas renommés automatiquement avec les autres variables Blockly. Home Assistant évalue le modèle ; y tester.
 :::
 
 Les projets Blockly conservent aussi formes et positions. YAML → Blockly → export conserve les valeurs prises en charge, y compris les champs facultatifs absents. Limites : 100 entrées/branches, 10 niveaux d’imbrication et tailles de données/modèles limitées. Les options spécifiques aux appareils ne sont pas exhaustives ; un champ refusé n’est jamais supprimé silencieusement.

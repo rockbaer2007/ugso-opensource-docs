@@ -5,9 +5,9 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Der aktuelle Katalog enthält 148 Typen.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Der aktuelle Katalog enthält 163 Typen.
 
-Stand **0.1.40**: 148 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.41**: 163 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -221,7 +221,7 @@ Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dr
 
 [Zur Übersicht](/projects/blocks-for-ha/)
 
-Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 148 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 163 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
 
 ## Trigger-IDs und mehrere Ziele
 
@@ -322,7 +322,7 @@ Die LCD-Automation mit vier `input_text.set_value`-Aktionen und `mode: restart` 
 
 ## Dynamische Zielentitäten
 
-Seit **0.1.39** akzeptiert das Feld **Ziel** in der allgemeinen **HA-Aktion** eine feste Entitäts-ID oder ein HA-Template, zum Beispiel `{{ ziel_tv }}`. Der Entitätsdialog bietet dafür ein mehrzeiliges Eingabefeld. Auch die JSON-Zielliste darf feste IDs und Templates enthalten. Jinja bleibt unverändert erhalten und wird erst von Home Assistant ausgewertet. Dynamische Ziele werden beim Import in der allgemeinen HA-Aktion dargestellt; spezialisierte Schaltblöcke würden die Domain nicht zuverlässig bestimmen können.
+Seit **0.1.39** akzeptiert das Feld **Ziel** in der allgemeinen **HA-Aktion** eine feste Entitäts-ID oder ein HA-Template, zum Beispiel <code v-pre>{{ ziel_tv }}</code>. Der Entitätsdialog bietet dafür ein mehrzeiliges Eingabefeld. Auch die JSON-Zielliste darf feste IDs und Templates enthalten. Jinja bleibt unverändert erhalten und wird erst von Home Assistant ausgewertet. Dynamische Ziele werden beim Import in der allgemeinen HA-Aktion dargestellt; spezialisierte Schaltblöcke würden die Domain nicht zuverlässig bestimmen können.
 
 Die Schlafzimmer-TV-Automation mit einer mehrzeiligen Sommerbetrieb-Variable, 21:30 und 00:30 Uhr und zwei choose-Zweigen ist geprüft. Zielvorlagen, Variableninhalt und Uhrzeitbedingungen bleiben beim Import, Projekt-Neuladen und Export erhalten. Auslöser- und Bedingungsfelder für Entitäts-IDs verlangen weiterhin feste IDs.
 
@@ -364,3 +364,25 @@ Die Schlafzimmer-TV-Automation mit einer mehrzeiligen Sommerbetrieb-Variable, 21
 | **Szene aktivieren**<br><code>ugso_scene</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_scene.png" alt="Szene aktivieren" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
 | **Jinja (experimentell)**<br><code>ugso_jinja_value</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_value.png" alt="Jinja (experimentell)" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
 | **Jinja-Bedingung (experimentell)**<br><code>ugso_jinja_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_condition.png" alt="Jinja-Bedingung (experimentell)" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
+
+## Jinja-Strukturen (experimentell)
+
+15 neue Typen seit 0.1.41. Die äußeren Wert-/Bedingungsblocks verbinden die verschachtelten Teile mit HA. Jinja-Ausdrücke und Template-Teile haben eigene typisierte Anschlüsse. [Einlesen, Bearbeiten und Grenzen](./advanced#jinja-experimentell).
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Jinja zusammengesetzt**<br><code>ugso_jinja_composed_value</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_composed_value.png" alt="Jinja zusammengesetzt" style="max-width:280px;max-height:180px"> | Äußerer Wertblock: zusammenhängendes Template; Original bleibt bis zur Bearbeitung erhalten. |
+| **Jinja-Bedingung zusammengesetzt**<br><code>ugso_jinja_composed_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_composed_condition.png" alt="Jinja-Bedingung zusammengesetzt" style="max-width:280px;max-height:180px"> | Äußerer Boolean-Block für eine HA-Template-Bedingung. |
+| **Entität Funktion**<br><code>ugso_jinja_entity</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_entity.png" alt="Entität Funktion" style="max-width:280px;max-height:180px"> | Entität suchen und states/state_attr/is_state/is_state_attr wählen; zusätzliche Argumente anschließen. |
+| **Filter Argumente Wert**<br><code>ugso_jinja_filter</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_filter.png" alt="Filter Argumente Wert" style="max-width:280px;max-height:180px"> | Filter auswählen; 0–3 Positionsargumente und einen Jinja-Ausdruck anschließen. |
+| **Literal (Jinja)**<br><code>ugso_jinja_literal</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_literal.png" alt="Literal (Jinja)" style="max-width:280px;max-height:180px"> | Zahl, String in Anführungszeichen, true/false oder none in Jinja-Schreibweise. |
+| **Jinja-Variable**<br><code>ugso_jinja_variable</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_variable.png" alt="Jinja-Variable" style="max-width:280px;max-height:180px"> | Einfacher Jinja-Variablenname als Text; keine automatische Blockly-Umbenennung. |
+| **Jetzt (Jinja)**<br><code>ugso_jinja_now</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_now.png" alt="Jetzt (Jinja)" style="max-width:280px;max-height:180px"> | now() erzeugen; Home Assistant liefert den Zeitpunkt bei der Auswertung. |
+| **Ausdruck**<br><code>ugso_jinja_binary</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_binary.png" alt="Ausdruck" style="max-width:280px;max-height:180px"> | Zwei Jinja-Ausdrücke berechnen, vergleichen oder mit and/or verbinden. |
+| **Ausdruck**<br><code>ugso_jinja_unary</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_unary.png" alt="Ausdruck" style="max-width:280px;max-height:180px"> | not, negatives oder positives Vorzeichen für einen Jinja-Ausdruck. |
+| **Wert wenn sonst**<br><code>ugso_jinja_select</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_select.png" alt="Wert wenn sonst" style="max-width:280px;max-height:180px"> | Wert wählen: yes if test else no. Alle drei Ausdruckseingänge sind erforderlich. |
+| **Ausgeben**<br><code>ugso_jinja_output</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_output.png" alt="Ausgeben" style="max-width:280px;max-height:180px"> | Einen Ausdruck als <code v-pre>{{ ... }}</code> innerhalb eines Templates ausgeben. |
+| **Jinja-Text**<br><code>ugso_jinja_text</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_text.png" alt="Jinja-Text" style="max-width:280px;max-height:180px"> | Wörtlicher Text einschließlich Leerraum; Jinja-Steuerzeichen hier nicht einfügen. |
+| **Template-Teile danach**<br><code>ugso_jinja_join</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_join.png" alt="Template-Teile danach" style="max-width:280px;max-height:180px"> | Zwei Template-Teile in der dargestellten Reihenfolge verbinden. |
+| **Wenn Text sonst**<br><code>ugso_jinja_if</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_if.png" alt="Wenn Text sonst" style="max-width:280px;max-height:180px"> | if/else mit Bedingung und verschachtelten Text-/Ausgabeteilen. |
+| **Für in Text wenn leer**<br><code>ugso_jinja_for</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_for.png" alt="Für in Text wenn leer" style="max-width:280px;max-height:180px"> | Einfache for-Schleife: Variable, Ausdruck, Template-Inhalt und optionaler Leerfall. |

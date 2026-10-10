@@ -5,7 +5,7 @@ description: Auslöser, Bedingungen, Ziele, Ablaufgruppen und experimentelle Jin
 
 # Erweiterte HA-Automationen und Jinja
 
-Seit **0.1.39** gibt es 148 Blocktypen. Die Kategorien **HA erweitert** und **Jinja (experimentell)** ergänzen die einfachen Blocks. Einfache importierte Schritte behalten ihre bisherigen Formen. Zusätzliche Felder erscheinen in erweiterten Blocks als bearbeitbares JSON. Der Import prüft die unterstützte Struktur; Integration, Geräte-IDs, Templates und Ausführung müssen anschließend in Home Assistant geprüft werden.
+Seit **0.1.41** gibt es 163 Blocktypen. Die Kategorien **HA erweitert** und **Jinja (experimentell)** ergänzen die einfachen Blocks. Einfache importierte Schritte behalten ihre bisherigen Formen. Zusätzliche Felder erscheinen in erweiterten Blocks als bearbeitbares JSON. Der Import prüft die unterstützte Struktur; Integration, Geräte-IDs, Templates und Ausführung müssen anschließend in Home Assistant geprüft werden.
 
 ## Auslöser und Bedingungen
 
@@ -41,14 +41,28 @@ Diese Blocks exportieren native HA-Abläufe. Es gibt keine lokale Ausführung un
 
 ## Jinja (experimentell)
 
-**Jinja einlesen** über dem Arbeitsbereich öffnet einen Dialog. Template einfügen, die Vorschau prüfen, optional **Als Bedingung** auswählen und **Block erstellen** klicken. Der neue Block wird neben der Automation angelegt und muss anschließend verbunden werden. Alternativ die Wert-/Bedingungsblocks aus der Kategorie ziehen. Importierte Template-Werte und Template-Bedingungen werden ebenfalls als Jinja-Blocks dargestellt, soweit keine spezifischere einfache Form passt.
+Seit **0.1.41** kann **Jinja einlesen** Templates in bearbeitbare, verschachtelte Blocks zerlegen. Template einfügen, die Vorschau prüfen, **Als bearbeitbare Blocks zerlegen** aktiviert lassen und bei Bedarf **Als Bedingung** auswählen. **Block erstellen** legt die zusammenhängende Struktur neben der Automation an. Anschließend den äußeren Wertblock mit einer Variablenzuweisung oder einem Werteingang verbinden; den Bedingungsblock mit einem Boolean-Eingang verbinden. Ohne Zerlegung entsteht ein Originaltextblock.
 
-![Experimenteller Jinja-Wertblock](/assets/blocks-for-ha/blocks/de/ugso_jinja_value.png)
+![Zusammengesetzter Jinja-Wertblock](/assets/blocks-for-ha/blocks/de/ugso_jinja_composed_value.png)
 
-Die Analyse erkennt häufige Muster: Entitätszustände und Attribute, Datum/Zeit, Variablen, Filterketten sowie `if/else` und `for`. Sie zeigt die erkannten Entitäten und Filter im Block an. Kommentare, Stringliterale und `raw`-Abschnitte werden bei der Referenzsuche übersprungen. Unvollständige Kontrollstrukturen werden in der Vorschau markiert.
+Beispiel: <code v-pre>Wasser: {{ states('sensor.water') | float(0) | round(1) }} °C</code> wird zu Textteilen und einer Ausgabe mit Entitätsfunktion, `float`- und `round`-Block. Das Entitätsfeld öffnet die vorhandene Suche. Entität, Filter, Argumente und Rundungsstellen lassen sich einzeln ändern. Der YAML-Import zerlegt passende Template-Werte, beispielsweise in einer einzelnen Variablenzuweisung, und Template-Bedingungen. Vorhandene spezifischere Blockformen bleiben erhalten. Templates innerhalb von Aktionsdaten-/Options-JSON bleiben im JSON-Feld.
 
-::: warning Grenzen der Erkennung
-Dies ist eine konservative Musteranalyse, kein vollständiger Jinja-Parser, keine automatische Zerlegung in ausführbare Teilblocks und keine Syntaxgarantie. Unbekannte Funktionen und komplexe Templates bleiben als editierbarer Originaltext erhalten. Der Text wird weder umgeschrieben noch lokal ausgeführt. In HA testen. Innerhalb eines zusammengesetzten Ausdrucks ist nur ein einzelner Jinja-Ausdruck möglich; ganze `if/for`-Templates gehören in den eigenständigen Wertblock.
+![Bearbeitbare Struktur des Beispiels](/assets/blocks-for-ha/jinja/de.png)
+
+| Unterstützte Teile | Darstellung |
+| --- | --- |
+| `states`, `state_attr`, `is_state`, `is_state_attr` mit fester Entitäts-ID | Entitätsfunktion mit Suchfeld und Argumentanschlüssen |
+| `now()`, einfache Variablennamen, Zahlen, Strings in Anführungszeichen, Boolean und `none` | Ausdrucksblocks; Jinja-Variablennamen sind Textfelder |
+| `float`, `int`, `round`, `default`, `abs`, `lower`, `upper`, `trim`, `length`, `string`, `list`, `join`, `replace` | Verschachtelte Filter mit 0–3 Positionsargumenten |
+| `+`, `-`, `*`, `/`, `//`, `%`, `~`, Vergleiche, `and`, `or`, `not` | Berechnungen/Vergleiche mit expliziter Klammerung |
+| `wert if bedingung else anderer_wert` | Bedingte Wertauswahl |
+| Text, <code v-pre>{{ ... }}</code>, einfache `{% if ... %}...{% else %}...{% endif %}` | Text-, Ausgabe-, Verbindungs- und Wenn-/Sonst-Blocks |
+| `{% for item in items %}...{% else %}...{% endfor %}` | Einfache Schleife über einen Ausdruck, optionaler Leerfall und verschachtelte Teile |
+
+**Original erhalten:** Unveränderte Strukturen behalten den genauen Originaltext einschließlich Leerraum, auch nach Projekt-Reload und Undo/Redo. Änderungen erzeugen neu formatiertes Jinja. Zurückgesetzte Felder stellen bei gleicher Struktur wieder das Original her. Blockly-Projekte sichern Struktur und Original; YAML sichert den Template-Text, der beim Import wieder analysiert wird.
+
+::: warning Grenzen der Zerlegung
+Dies ist ein eigener Parser für einen begrenzten Jinja-Umfang. Sobald ein Teil nicht unterstützt wird, bleibt das **gesamte Template** als editierbarer Originalblock erhalten. Dazu gehören etwa `set`, `namespace`, Objekt-/Listenzugriffe, Listen-/Objektliterale, Tests wie `is defined`, Vergleichsketten, `elif`, benannte Argumente, unbekannte Funktionen/Filter, Kommentare und Whitespace-Steuerzeichen. Keine teilweise Zerlegung, Syntaxgarantie oder lokale Ausführung. Der äußere Wertblock kann ganze Templates enthalten; innerhalb einer anderen Berechnung ist nur eine einzelne Jinja-Ausgabe möglich. Fehlende Anschlüsse oder ungültige Literale verhindern den Export. Grenzen: 10000 Zeichen, 100 Template-Teile und begrenzte Verschachtelung. Jinja-Variablennamen werden nicht automatisch mit anderen Blockly-Variablen umbenannt. Home Assistant übernimmt die Auswertung; dort testen.
 :::
 
 Blockly-Projekte sichern auch Blockformen und Anordnung. YAML-Import → Blockly → Export erhält die unterstützten Werte einschließlich ausgelassener Optionalfelder. Grenzen: höchstens 100 Ketteneinträge bzw. Zweige, 10 Ebenen Ablauf-/Bedingungsverschachtelung und begrenzte Daten-/Templategröße. Nicht jede integrationsabhängige Geräteoption wird bereits unterstützt; eine abgelehnte Option wird nicht stillschweigend entfernt.

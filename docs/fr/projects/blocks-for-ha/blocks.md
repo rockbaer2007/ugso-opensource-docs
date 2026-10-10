@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.40 · 148 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.41 · 163 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -333,7 +333,7 @@ L’automatisation LCD avec quatre actions `input_text.set_value` et `mode: rest
 
 ## Entités cibles dynamiques
 
-Depuis **0.1.39**, **Cible** dans le bloc générique **Action HA** accepte un ID fixe ou un modèle HA, par exemple `{{ ziel_tv }}`. Le dialogue de sélection propose un champ multiligne. La liste JSON des cibles peut mélanger IDs fixes et modèles. Jinja est conservé et évalué par Home Assistant lors de l’exécution. Les cibles dynamiques importées utilisent le bloc générique, car les blocs spécialisés ne peuvent pas déterminer leur domaine de façon fiable.
+Depuis **0.1.39**, **Cible** dans le bloc générique **Action HA** accepte un ID fixe ou un modèle HA, par exemple <code v-pre>{{ ziel_tv }}</code>. Le dialogue de sélection propose un champ multiligne. La liste JSON des cibles peut mélanger IDs fixes et modèles. Jinja est conservé et évalué par Home Assistant lors de l’exécution. Les cibles dynamiques importées utilisent le bloc générique, car les blocs spécialisés ne peuvent pas déterminer leur domaine de façon fiable.
 
 L’automatisation TV de la chambre avec variable multiligne du mode été, horaires 21:30 et 00:30 et deux branches choose est vérifiée. Modèles de cible, texte de variable et conditions horaires restent inchangés après import, rechargement et export. Les champs d’entité des déclencheurs et conditions exigent toujours des IDs fixes.
 
@@ -375,3 +375,25 @@ L’automatisation TV de la chambre avec variable multiligne du mode été, hora
 | **Activer la scène**<br><code>ugso_scene</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_scene.png" alt="Activer la scène" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
 | **Jinja (expérimental)**<br><code>ugso_jinja_value</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_value.png" alt="Jinja (expérimental)" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
 | **Condition Jinja (expérimentale)**<br><code>ugso_jinja_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_condition.png" alt="Condition Jinja (expérimentale)" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
+
+## Structures Jinja (expérimental)
+
+15 nouveaux types depuis 0.1.41. Les blocs valeur/condition extérieurs relient les parties imbriquées à HA. Expressions Jinja et parties du modèle ont des connexions typées distinctes. [Import, édition et limites](./advanced#jinja-experimental).
+
+| Bloc | Image | Fonction |
+| --- | --- | --- |
+| **Jinja composé**<br><code>ugso_jinja_composed_value</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_composed_value.png" alt="Jinja composé" style="max-width:280px;max-height:180px"> | Bloc valeur extérieur : modèle complet, original conservé jusqu’à modification. |
+| **Condition Jinja composée**<br><code>ugso_jinja_composed_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_composed_condition.png" alt="Condition Jinja composée" style="max-width:280px;max-height:180px"> | Bloc booléen extérieur pour une condition de modèle HA. |
+| **Entité fonction**<br><code>ugso_jinja_entity</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_entity.png" alt="Entité fonction" style="max-width:280px;max-height:180px"> | Rechercher une entité et choisir states/state_attr/is_state/is_state_attr ; relier les arguments. |
+| **Filtre arguments valeur**<br><code>ugso_jinja_filter</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_filter.png" alt="Filtre arguments valeur" style="max-width:280px;max-height:180px"> | Choisir un filtre ; relier 0–3 arguments positionnels et une expression Jinja. |
+| **Littéral (Jinja)**<br><code>ugso_jinja_literal</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_literal.png" alt="Littéral (Jinja)" style="max-width:280px;max-height:180px"> | Nombre, chaîne entre guillemets, true/false ou none en syntaxe Jinja. |
+| **Variable Jinja**<br><code>ugso_jinja_variable</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_variable.png" alt="Variable Jinja" style="max-width:280px;max-height:180px"> | Nom simple de variable Jinja en texte ; sans renommage automatique Blockly. |
+| **Maintenant (Jinja)**<br><code>ugso_jinja_now</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_now.png" alt="Maintenant (Jinja)" style="max-width:280px;max-height:180px"> | Générer now() ; Home Assistant fournit l’heure lors de l’évaluation. |
+| **Expression**<br><code>ugso_jinja_binary</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_binary.png" alt="Expression" style="max-width:280px;max-height:180px"> | Calculer, comparer ou combiner deux expressions Jinja avec and/or. |
+| **Expression**<br><code>ugso_jinja_unary</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_unary.png" alt="Expression" style="max-width:280px;max-height:180px"> | Appliquer not, un signe négatif ou positif à une expression Jinja. |
+| **Valeur si sinon**<br><code>ugso_jinja_select</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_select.png" alt="Valeur si sinon" style="max-width:280px;max-height:180px"> | Choisir une valeur : yes if test else no. Trois entrées obligatoires. |
+| **Afficher**<br><code>ugso_jinja_output</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_output.png" alt="Afficher" style="max-width:280px;max-height:180px"> | Afficher une expression comme <code v-pre>{{ ... }}</code> dans un modèle. |
+| **Texte Jinja**<br><code>ugso_jinja_text</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_text.png" alt="Texte Jinja" style="max-width:280px;max-height:180px"> | Texte littéral, espaces compris ; ne pas insérer de délimiteurs Jinja. |
+| **Parties du modèle puis**<br><code>ugso_jinja_join</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_join.png" alt="Parties du modèle puis" style="max-width:280px;max-height:180px"> | Relier deux parties de modèle dans l’ordre affiché. |
+| **Si texte sinon**<br><code>ugso_jinja_if</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_if.png" alt="Si texte sinon" style="max-width:280px;max-height:180px"> | if/else avec condition et parties texte/sortie imbriquées. |
+| **Pour dans texte si vide**<br><code>ugso_jinja_for</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_for.png" alt="Pour dans texte si vide" style="max-width:280px;max-height:180px"> | Boucle for simple : variable, expression, contenu et cas vide facultatif. |

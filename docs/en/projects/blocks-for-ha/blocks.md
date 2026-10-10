@@ -5,9 +5,9 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The current catalog contains 148 types.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The current catalog contains 163 types.
 
-Version **0.1.40**: 148 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.41**: 163 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -221,7 +221,7 @@ The colour field also uses the transitive dependency [field-grid-dropdown](https
 
 [Back to overview](/en/projects/blocks-for-ha/)
 
-Custom blocks since 0.1.18 extend the 148 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+Custom blocks since 0.1.18 extend the 163 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
 
 ## Trigger IDs and multiple targets
 
@@ -322,7 +322,7 @@ The LCD automation with four `input_text.set_value` actions and `mode: restart` 
 
 ## Dynamic target entities
 
-Since **0.1.39**, **Target** in the generic **HA action** accepts a static entity ID or an HA template, such as `{{ ziel_tv }}`. Its entity dialog supports multiline input. The JSON target list can also combine static IDs and templates. Jinja remains unchanged and is evaluated by Home Assistant at execution time. Imported dynamic targets use the generic HA action because specialized switching blocks cannot reliably determine the domain.
+Since **0.1.39**, **Target** in the generic **HA action** accepts a static entity ID or an HA template, such as <code v-pre>{{ ziel_tv }}</code>. Its entity dialog supports multiline input. The JSON target list can also combine static IDs and templates. Jinja remains unchanged and is evaluated by Home Assistant at execution time. Imported dynamic targets use the generic HA action because specialized switching blocks cannot reliably determine the domain.
 
 The bedroom-TV automation with a multiline summer-mode variable, 21:30 and 00:30 triggers and two choose branches is verified. Target templates, variable text and time conditions survive import, project reload and export. Entity fields in triggers and conditions still require static IDs.
 
@@ -364,3 +364,25 @@ The bedroom-TV automation with a multiline summer-mode variable, 21:30 and 00:30
 | **Activate scene**<br><code>ugso_scene</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_scene.png" alt="Activate scene" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
 | **Jinja (experimental)**<br><code>ugso_jinja_value</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_value.png" alt="Jinja (experimental)" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
 | **Jinja condition (experimental)**<br><code>ugso_jinja_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_condition.png" alt="Jinja condition (experimental)" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
+
+## Jinja structures (experimental)
+
+15 new types since 0.1.41. Outer value/condition blocks connect nested parts to HA. Jinja expressions and template parts have separate typed sockets. [Import, editing and limits](./advanced#jinja-experimental).
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Composed Jinja**<br><code>ugso_jinja_composed_value</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_composed_value.png" alt="Composed Jinja" style="max-width:280px;max-height:180px"> | Outer value block: complete template; retains the original until editing. |
+| **Composed Jinja condition**<br><code>ugso_jinja_composed_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_composed_condition.png" alt="Composed Jinja condition" style="max-width:280px;max-height:180px"> | Outer Boolean block for an HA template condition. |
+| **Entity function**<br><code>ugso_jinja_entity</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_entity.png" alt="Entity function" style="max-width:280px;max-height:180px"> | Search an entity and choose states/state_attr/is_state/is_state_attr; connect additional arguments. |
+| **Filter arguments value**<br><code>ugso_jinja_filter</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_filter.png" alt="Filter arguments value" style="max-width:280px;max-height:180px"> | Choose a filter; connect 0–3 positional arguments and a Jinja expression. |
+| **Literal (Jinja)**<br><code>ugso_jinja_literal</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_literal.png" alt="Literal (Jinja)" style="max-width:280px;max-height:180px"> | Number, quoted string, true/false or none in Jinja syntax. |
+| **Jinja variable**<br><code>ugso_jinja_variable</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_variable.png" alt="Jinja variable" style="max-width:280px;max-height:180px"> | Simple Jinja variable name as text; no automatic Blockly renaming. |
+| **Now (Jinja)**<br><code>ugso_jinja_now</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_now.png" alt="Now (Jinja)" style="max-width:280px;max-height:180px"> | Generate now(); Home Assistant provides the time when evaluating. |
+| **Expression**<br><code>ugso_jinja_binary</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_binary.png" alt="Expression" style="max-width:280px;max-height:180px"> | Calculate, compare or combine two Jinja expressions with and/or. |
+| **Expression**<br><code>ugso_jinja_unary</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_unary.png" alt="Expression" style="max-width:280px;max-height:180px"> | Apply not, a negative or positive sign to a Jinja expression. |
+| **Value if else**<br><code>ugso_jinja_select</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_select.png" alt="Value if else" style="max-width:280px;max-height:180px"> | Select a value: yes if test else no. All three expression inputs are required. |
+| **Output**<br><code>ugso_jinja_output</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_output.png" alt="Output" style="max-width:280px;max-height:180px"> | Output an expression as <code v-pre>{{ ... }}</code> inside a template. |
+| **Jinja text**<br><code>ugso_jinja_text</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_text.png" alt="Jinja text" style="max-width:280px;max-height:180px"> | Literal text including whitespace; do not insert Jinja delimiters here. |
+| **Template parts then**<br><code>ugso_jinja_join</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_join.png" alt="Template parts then" style="max-width:280px;max-height:180px"> | Join two template parts in the displayed order. |
+| **If text else**<br><code>ugso_jinja_if</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_if.png" alt="If text else" style="max-width:280px;max-height:180px"> | if/else with a condition and nested text/output parts. |
+| **For in text when empty**<br><code>ugso_jinja_for</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_for.png" alt="For in text when empty" style="max-width:280px;max-height:180px"> | Simple for loop: variable, expression, template body and optional empty case. |

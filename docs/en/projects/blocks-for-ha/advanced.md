@@ -5,7 +5,7 @@ description: Triggers, conditions, targets, action groups and experimental Jinja
 
 # Extended HA automations and Jinja
 
-Since **0.1.39**, there are 148 block types. **HA extended** and **Jinja (experimental)** complement the simple blocks. Simple imported steps retain their existing shapes. Additional fields appear as editable JSON in extended blocks. Import checks the supported structure; verify integrations, device IDs, templates and execution in Home Assistant.
+Since **0.1.41**, there are 163 block types. **HA extended** and **Jinja (experimental)** complement the simple blocks. Simple imported steps retain their existing shapes. Additional fields appear as editable JSON in extended blocks. Import checks the supported structure; verify integrations, device IDs, templates and execution in Home Assistant.
 
 ## Triggers and conditions
 
@@ -41,14 +41,28 @@ These blocks export native HA flows. Execution takes place in HA; there is no lo
 
 ## Jinja (experimental)
 
-**Jinja einlesen** above the workspace opens a dialog. Paste the template, check the preview, optionally choose **Als Bedingung**, then click **Block erstellen**. The new block appears beside the automation and must be connected. Alternatively, drag value/condition blocks from the category. Imported template values and conditions also use Jinja blocks unless a more specific simple shape matches.
+Since **0.1.41**, **Jinja einlesen** can decompose templates into editable nested blocks. Paste the template, check the preview, leave **Decompose into editable blocks** selected and optionally choose **Als Bedingung**. **Block erstellen** places the connected structure beside the automation. Connect the outer value block to a variable assignment or value input; connect the condition block to a Boolean input. Disabling decomposition creates an original-text block.
 
-![Experimental Jinja value block](/assets/blocks-for-ha/blocks/en/ugso_jinja_value.png)
+![Composed Jinja value block](/assets/blocks-for-ha/blocks/en/ugso_jinja_composed_value.png)
 
-Analysis recognizes common patterns: entity states and attributes, date/time, variables, filter chains, `if/else` and `for`. The block shows recognized entities and filters. Comments, string literals and `raw` sections are skipped when searching for references. The preview flags incomplete control structures.
+Example: <code v-pre>Water: {{ states('sensor.water') | float(0) | round(1) }} °C</code> becomes text parts and an output containing an entity function, `float` and `round` blocks. The entity field opens the existing search. Edit entities, filters, arguments and rounding precision separately. YAML import decomposes matching template values, for example in a single variable assignment, and template conditions. More specific existing shapes are retained. Templates inside action-data/options JSON remain in the JSON field.
 
-::: warning Recognition limits
-This is conservative pattern analysis, not a complete Jinja parser, automatic decomposition into executable sub-blocks or a syntax guarantee. Unknown functions and complex templates retain their editable original text. Text is neither rewritten nor executed locally. Test in HA. Within a composed expression, only a single Jinja expression is supported; complete `if/for` templates belong in a standalone value block.
+![Editable structure of the example](/assets/blocks-for-ha/jinja/en.png)
+
+| Supported parts | Representation |
+| --- | --- |
+| `states`, `state_attr`, `is_state`, `is_state_attr` with a fixed entity ID | Entity function with search field and argument sockets |
+| `now()`, simple variable names, numbers, quoted strings, Boolean and `none` | Expression blocks; Jinja variable names are text fields |
+| `float`, `int`, `round`, `default`, `abs`, `lower`, `upper`, `trim`, `length`, `string`, `list`, `join`, `replace` | Nested filters with 0–3 positional arguments |
+| `+`, `-`, `*`, `/`, `//`, `%`, `~`, comparisons, `and`, `or`, `not` | Calculations/comparisons with explicit parentheses |
+| `value if condition else other_value` | Conditional value selection |
+| Text, <code v-pre>{{ ... }}</code>, simple `{% if ... %}...{% else %}...{% endif %}` | Text, output, join and if/else blocks |
+| `{% for item in items %}...{% else %}...{% endfor %}` | Simple loop over an expression, optional empty case and nested parts |
+
+**Preserving originals:** Unchanged structures retain exact original text, including whitespace, after project reload and undo/redo. Editing generates newly formatted Jinja; restoring fields to the same structure restores the original. Blockly projects save the structure and original. YAML saves the template text, which is analysed again on import.
+
+::: warning Decomposition limits
+This is an original parser for a limited Jinja subset. If any part is unsupported, the **entire template** remains an editable original block. Examples include `set`, `namespace`, object/list access, list/object literals, tests such as `is defined`, chained comparisons, `elif`, named arguments, unknown functions/filters, comments and whitespace-control markers. No partial decomposition, syntax guarantee or local execution. Outer value blocks accept complete templates; only a single Jinja output can be embedded in another calculation. Missing inputs or invalid literals prevent export. Limits: 10000 characters, 100 template parts and bounded nesting. Jinja variable names are not automatically renamed with other Blockly variables. Home Assistant evaluates the template; test there.
 :::
 
 Blockly projects also retain shapes and positions. YAML → Blockly → export preserves supported values, including omitted optional fields. Limits: 100 chain entries/branches, 10 flow/condition nesting levels and bounded data/template sizes. Integration-specific device options are not exhaustive; rejected fields are never silently removed.
