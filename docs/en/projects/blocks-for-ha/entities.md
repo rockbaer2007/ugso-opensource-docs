@@ -4,7 +4,7 @@ description: Load, search and select HA entities in Blocks.
 ---
 # Select entities
 
-Since **0.1.17**, entity fields in existing blocks open a search dialog. The HA app loads the current entity list when the editor opens. **Entitäten laden** in the toolbar and **Neu laden** in the dialog refresh it.
+Since **0.1.44**, matching action and target fields in simple and extended blocks open a searchable picker. A small arrow marks these fields. **HA-Auswahl laden** in the toolbar and **Neu laden** in the dialog refresh the read-only catalogues.
 
 ![Entity picker with a search result](/assets/blocks-for-ha/entity-picker.png)
 
@@ -27,19 +27,23 @@ Results show the name, ID and current state with unit. States are a **snapshot**
 | Helper | Current helper type: `input_boolean`, `counter` or `timer` |
 | On/off/toggle, refresh entity, generic HA action | All loaded entities; still check action support in HA |
 
-An empty target is allowed only for the generic HA action. The dialog selects one entity ID. Area/device selection, multiple targets and live selection of installed actions remain future work. Changing an ID does not rewrite manually entered references in Jinja or JSON data.
+Action fields show actions reported by HA. Entity targets use domains from action metadata or the action name. Target selection follows `entity_id`, `device_id`, `area_id`, `floor_id` or `label_id`: entities, devices, areas, floors or labels. The last four catalogues are not filtered by action. **Mehrere Ziele auswählen** enables lists in supported fields. Manual IDs, JSON lists and supported Jinja templates remain available; multiline Jinja text is preserved in full. Changing target type does not rewrite existing IDs.
+
+Scenes and helpers use matching entity domains; extended numeric thresholds offer sensors and numeric helpers, time fields offer time helpers and sensors. Manual numbers/clocks remain possible. Existing operation dropdowns remain available. Variable names, trigger IDs, attributes, free text and complex data do not receive generic HA selection. Changing an ID does not rewrite references within Jinja or JSON data. Without an action catalogue, common examples are explicitly identified as examples; unavailable target catalogues permit manual IDs.
 
 ## HA app and data
 
-Refresh the repository in the HA app store, install **0.1.17** and restart the app. The app requires `homeassistant_api: true` and uses the server-side `SUPERVISOR_TOKEN` for a read request to `http://supervisor/core/api/states`. No token entry is required in the editor. [Official HA app communication](https://developers.home-assistant.io/docs/apps/communication/), [REST API](https://developers.home-assistant.io/docs/api/rest/).
+Refresh the repository in the HA app store, install **0.1.44** and restart the app. The app requires `homeassistant_api: true` and uses the server-side `SUPERVISOR_TOKEN`. Entities and actions are read through the [REST API](https://developers.home-assistant.io/docs/api/rest/), target registries through the [WebSocket API](https://developers.home-assistant.io/docs/api/websocket/). Missing registry permissions affect the respective list. No token entry is required in the editor.
 
-The browser receives only ID, display name, domain, state and unit. Other attributes, credentials and HA configuration are not forwarded. The endpoint only reads the entity list and executes no HA actions. The server does not follow redirects carrying credentials.
+The browser receives selection metadata only: IDs, names, domains and entity state/unit. Other attributes and credentials are not forwarded. The endpoints read catalogues only and execute no HA actions. The server does not follow redirects carrying credentials.
 
 The list comes from HA states, not the complete entity registry. Disabled or not-yet-available entities without a state may be absent. `unknown`/`unavailable` states are displayed when present. A refresh failure clears the previous list; existing block IDs remain intact.
 
-JSON projects and YAML still contain only the selected ID. The catalog, names, state previews and credentials are not persisted in browser storage or exported. There are still 111 block types. Download your browser project through **Projekt sichern** before updating; a source backup does not include browser sessions.
+JSON projects and YAML contain the selected field values. Catalogues, names, state previews and credentials are not persisted or exported. All 163 block types remain available. Download your browser project through **Projekt sichern** before updating; a source backup does not include browser sessions.
 
 ## Local development
+
+Install the Python dependency once with `python -m pip install --require-hashes -r requirements.txt`. Docker installs it automatically.
 
 `npm run dev` alone uses manual IDs. For a connection, additionally start Python 3 with `npm run entities`. Set `BLOCKS_HA_URL` (base address without `/api`, for example `http://homeassistant.local:8123`) and `BLOCKS_HA_TOKEN` only in the server environment. Vite at `127.0.0.1:4180` proxies requests to the bridge at `127.0.0.1:9001`. Never put credentials in source or project files.
 

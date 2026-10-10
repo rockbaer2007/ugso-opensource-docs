@@ -4,7 +4,7 @@ description: Entitäten aus HA laden, suchen und in Blocks übernehmen.
 ---
 # Entitäten auswählen
 
-Seit **0.1.17** öffnen die Entitätsfelder der vorhandenen Blocks einen Suchdialog. Die HA-App lädt beim Öffnen des Editors die aktuelle Entitätsliste. **Entitäten laden** in der Werkzeugleiste und **Neu laden** im Dialog aktualisieren sie.
+Seit **0.1.44** öffnen passende Aktions- und Zielfelder der einfachen und erweiterten Blocks eine durchsuchbare Auswahl. Ein kleiner Pfeil markiert diese Felder. **HA-Auswahl laden** in der Werkzeugleiste und **Neu laden** im Dialog aktualisieren die lesenden Kataloge.
 
 ![Entitätsauswahl mit Suchergebnis](/assets/blocks-for-ha/entity-picker.png)
 
@@ -27,19 +27,23 @@ Die Liste zeigt Name, ID und aktuellen Zustand mit Einheit. Diese Zustände sind
 | Helfer | Aktuell gewählter Typ: `input_boolean`, `counter` oder `timer` |
 | Ein/Aus/Umschalten, Entität aktualisieren, generische HA-Aktion | Alle geladenen Entitäten; Unterstützung der Aktion weiterhin in HA prüfen |
 
-Ein leerer Zielwert ist ausschließlich bei der generischen HA-Aktion erlaubt. Der Dialog übernimmt eine einzelne Entitäts-ID. Bereichs-/Geräteauswahl, Mehrfachziele und eine Live-Auswahl installierter Aktionen folgen später. Ein ID-Wechsel ersetzt keine frei eingegebenen IDs in Jinja oder JSON-Daten.
+Aktionsfelder zeigen die von HA gemeldeten Aktionen. Entitätsziele berücksichtigen die Domains der Aktionsbeschreibung oder des Aktionsnamens. Die Zielauswahl folgt `entity_id`, `device_id`, `area_id`, `floor_id` oder `label_id`: Entitäten, Geräte, Bereiche, Etagen oder Labels. Die letzten vier Kataloge werden nicht anhand der Aktion gefiltert. **Mehrere Ziele auswählen** erlaubt Listen in unterstützten Feldern. Freie IDs, JSON-Listen und unterstützte Jinja-Templates bleiben möglich; mehrzeiliger Jinja-Text wird vollständig erhalten. Ein Zielartwechsel schreibt vorhandene IDs nicht um.
+
+Szenen und Helfer bieten passende Entitätsdomains; erweiterte numerische Grenzen zusätzlich Sensoren und Zahlenhelfer, Zeitfelder Zeithelfer und Sensoren. Manuelle Zahlen/Uhrzeiten bleiben möglich. Fachliche Dropdowns bleiben erhalten. Variablennamen, Trigger-IDs, Attribute, freier Text und komplexe Daten erhalten keine pauschale HA-Auswahl. Ein ID-Wechsel ersetzt keine Referenzen in frei eingegebenen Jinja- oder JSON-Daten. Ohne Aktionskatalog erscheinen ausdrücklich gekennzeichnete gängige Beispiele; fehlende Zielkataloge erlauben manuelle IDs.
 
 ## HA-App und Daten
 
-Repository im HA-App-Store aktualisieren, **Version 0.1.17** installieren und die App neu starten. Die App benötigt `homeassistant_api: true` und verwendet den serverseitigen `SUPERVISOR_TOKEN` für einen lesenden Aufruf an `http://supervisor/core/api/states`. Im Editor ist keine Token-Eingabe nötig. [Offizielle HA-App-Kommunikation](https://developers.home-assistant.io/docs/apps/communication/), [REST-API](https://developers.home-assistant.io/docs/api/rest/).
+Repository im HA-App-Store aktualisieren, **Version 0.1.44** installieren und die App neu starten. Die App benötigt `homeassistant_api: true` und verwendet den serverseitigen `SUPERVISOR_TOKEN`. Entitäten und Aktionen werden über die [REST-API](https://developers.home-assistant.io/docs/api/rest/) gelesen, Zielregistrierungen über die [WebSocket-API](https://developers.home-assistant.io/docs/api/websocket/). Fehlende Registry-Berechtigungen betreffen nur die jeweilige Liste. Im Editor ist keine Token-Eingabe nötig.
 
-Der Browser erhält nur ID, Anzeigename, Domain, Zustand und Einheit. Weitere Attribute, Zugangsdaten und HA-Konfiguration werden nicht weitergegeben. Der Endpunkt erlaubt nur das Lesen der Entitätsliste und führt keine HA-Aktionen aus. Der Server folgt keinen Weiterleitungen mit Zugangsdaten.
+Der Browser erhält nur Auswahlmetadaten: ID, Anzeigename, Domains und bei Entitäten Zustand/Einheit. Weitere Attribute und Zugangsdaten werden nicht weitergegeben. Die Endpunkte lesen ausschließlich Kataloge und führen keine HA-Aktionen aus. Der Server folgt keinen Weiterleitungen mit Zugangsdaten.
 
 Die Liste stammt aus der HA-Zustandsliste, nicht aus der gesamten Entitätsregistrierung. Deaktivierte oder noch nicht verfügbare Entitäten ohne Zustand können fehlen. `unknown`/`unavailable` werden angezeigt, wenn sie in der Liste vorhanden sind. Bei einem Ladefehler wird die bisherige Liste verworfen; bestehende Block-IDs bleiben erhalten.
 
-Im JSON-Projekt und im YAML steht weiterhin nur die ausgewählte ID. Katalog, Namen, Zustandsvorschau und Zugangsdaten werden nicht im Browser gespeichert oder exportiert. 111 Blocktypen bleiben erhalten. Vor einem Update das eigene Browserprojekt über **Projekt sichern** herunterladen; ein Quellcode-Backup enthält keine Browsersitzung.
+Im JSON-Projekt und im YAML stehen die gewählten Feldwerte. Katalog, Namen, Zustandsvorschau und Zugangsdaten werden nicht gespeichert oder exportiert. Alle 163 Blocktypen bleiben erhalten. Vor einem Update das eigene Browserprojekt über **Projekt sichern** herunterladen; ein Quellcode-Backup enthält keine Browsersitzung.
 
 ## Lokale Entwicklung
+
+Die Python-Abhängigkeit einmal mit `python -m pip install --require-hashes -r requirements.txt` installieren. Docker installiert sie automatisch.
 
 `npm run dev` allein arbeitet mit manuellen IDs. Für eine Verbindung zusätzlich Python 3 starten: `npm run entities`. Nur im Serverprozess die Umgebungsvariablen `BLOCKS_HA_URL` (Basisadresse ohne `/api`, etwa `http://homeassistant.local:8123`) und `BLOCKS_HA_TOKEN` setzen. Der Vite-Server auf `127.0.0.1:4180` leitet die Abfrage an die lokale Bridge auf `127.0.0.1:9001` weiter. Keine Zugangsdaten in Quellcode oder Projektdateien eintragen.
 
