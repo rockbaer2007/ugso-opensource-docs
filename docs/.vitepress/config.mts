@@ -126,6 +126,7 @@ const sidebarDe = {
     { text: 'Übersicht', link: '/projects-mqtt/' },
     { text: 'UGSo Blocks for HA', link: '/projects/blocks-for-ha/' },
     { text: 'Liste der Blocks', link: '/projects/blocks-for-ha/blocks' },
+    { text: 'Datum und Zeit', link: '/projects/blocks-for-ha/time' },
     { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' }
   ] }],
   '/projects/grafik-visual-studio/': [{
@@ -542,6 +543,7 @@ const sidebarEn = {
     { text: 'Overview', link: '/en/projects-mqtt/' },
     { text: 'UGSo Blocks for HA', link: '/en/projects/blocks-for-ha/' },
     { text: 'Block catalog', link: '/en/projects/blocks-for-ha/blocks' },
+    { text: 'Date and time', link: '/en/projects/blocks-for-ha/time' },
     { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' }
   ] }],
   '/en/projects/grafik-visual-studio/': [{

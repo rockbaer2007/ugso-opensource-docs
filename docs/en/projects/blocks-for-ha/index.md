@@ -4,17 +4,19 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
-**Version 0.1.10 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+**Version 0.1.11 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
 ## Block catalog and original plugins
 
+New in **0.1.11**: seven **Date and time** blocks: clock comparisons, overnight periods, datetimes, calendar starts, next sun events, time calculations and formatting. [Guide and ioBroker comparison](./time).
+
 New in **0.1.10**: **Change variable by …** in the variables menu, with default step `1`, negative and fractional steps. [Image, example and prerequisites](./blocks#increment-and-decrement-added-in-0-1-10).
 
 New in **0.1.9**: **Logik** category with comparison, compact AND/OR, NOT, true/false, null and conditional value selection. Variables now accept Boolean and null too. [Six new blocks with images and example](./blocks#logic-blocks-added-in-0-1-9).
 
-The [catalog of all 34 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
+The [catalog of all 41 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
 
 New in **0.1.8**: **Variablen → Variable erstellen …**, Set/Read variable blocks and a **Templates** category with dedicated value and condition blocks. Variables generate native HA `variables` actions; reads produce <code v-pre>{{ name }}</code>. Jinja is evaluated in HA. [Usage, example and import limits](./blocks#using-variables-and-templates).
 
@@ -41,7 +43,7 @@ Editor: `http://127.0.0.1:4180/`. Preview, copy, download and reopen supported Y
 
 ## ioBroker / our Blocks: existing features
 
-34 block types including the automation root; the four variable/template additions are described in the catalog:
+41 block types including the automation root; variables, templates and date/time are described in the catalog:
 
 | ioBroker concept | UGSo Blocks for HA | HA output |
 | --- | --- | --- |

@@ -4,9 +4,25 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 ---
 # Block catalog
 
-Version **0.1.10**: 34 block types. Images show actual UGSo editor blocks. Dropdown variants do not count as additional types.
+Version **0.1.11**: 41 block types. Images show actual UGSo editor blocks. Dropdown variants do not count as additional types. [Date and time: guide and ioBroker comparison](./time).
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are currently entered manually.
+
+## Date and time added in 0.1.11
+
+Purple time blocks use a typed datetime socket. [Usage, boundary rules and comparison](./time).
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Clock comparison**<br><code>ugso_time_compare</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_compare.png" alt="Clock comparison" style="max-width:280px;max-height:180px"> | Fixed HH:mm/HH:mm:ss; comparison or period. End field appears for between/outside. |
+| **Clock comparison with inputs**<br><code>ugso_time_compare_input</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_compare_input.png" alt="Clock comparison with inputs" style="max-width:280px;max-height:180px"> | Text boundaries; uncheck current time to expose a datetime socket. Overnight periods supported. |
+| **Current datetime**<br><code>ugso_time_now</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_now.png" alt="Current datetime" style="max-width:280px;max-height:180px"> | HA local date, time and timezone. Typed Time output. |
+| **Calendar start**<br><code>ugso_time_boundary</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_boundary.png" alt="Calendar start" style="max-width:280px;max-height:180px"> | Start of today, tomorrow, week (Monday), month or year. |
+| **Next sun event**<br><code>ugso_time_sun</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_sun.png" alt="Next sun event" style="max-width:280px;max-height:180px"> | Rise, set, dawn, dusk, solar noon or midnight from sun.sun, with minute offset. May be tomorrow. |
+| **Shift datetime**<br><code>ugso_time_shift</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_shift.png" alt="Shift datetime" style="max-width:280px;max-height:180px"> | Datetime plus/minus number in milliseconds, seconds, minutes, hours or days. |
+| **Format datetime**<br><code>ugso_time_format</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_format.png" alt="Format datetime" style="max-width:280px;max-height:180px"> | Clock time, date, date/time, ISO with timezone or Unix seconds. |
+
+## Other blocks
 
 | Block | Editor image | Function |
 | --- | --- | --- |

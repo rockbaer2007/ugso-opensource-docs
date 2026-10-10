@@ -4,9 +4,25 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 ---
 # Liste der Blocks
 
-Stand **0.1.10**: 34 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen.
+Stand **0.1.11**: 41 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. [Datum und Zeit: Anleitung und ioBroker-Gegenüberstellung](./time).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden derzeit manuell eingegeben.
+
+## Datum und Zeit seit 0.1.11
+
+Die violetten Zeit-Blocks verwenden einen eigenen typisierten Datumswert-Anschluss. [Bedienung, Grenzfälle und Gegenüberstellung](./time).
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Uhrzeitvergleich**<br><code>ugso_time_compare</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_compare.png" alt="Uhrzeitvergleich" style="max-width:280px;max-height:180px"> | Feste Uhrzeit HH:mm/HH:mm:ss; kleiner, größer, gleich oder Zeitraum. Ende erscheint nur bei zwischen/nicht zwischen. |
+| **Uhrzeitvergleich mit Eingängen**<br><code>ugso_time_compare_input</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_compare_input.png" alt="Uhrzeitvergleich mit Eingängen" style="max-width:280px;max-height:180px"> | Uhrzeitgrenzen als Text-Blocks. Haken aus: eigener Datumswert-Eingang erscheint. Zeiträume auch über Mitternacht. |
+| **Aktuelle Zeit als Datumswert**<br><code>ugso_time_now</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_now.png" alt="Aktuelle Zeit als Datumswert" style="max-width:280px;max-height:180px"> | HA-Ortszeit mit Datum und Zeitzone, Time-Ausgang für Berechnung oder Formatierung. |
+| **Berechnete Zeit**<br><code>ugso_time_boundary</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_boundary.png" alt="Berechnete Zeit" style="max-width:280px;max-height:180px"> | Beginn von Tag, nächstem Tag, Woche (Montag), Monat oder Jahr in HA-Ortszeit. |
+| **Nächste Sonnenzeit**<br><code>ugso_time_sun</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_sun.png" alt="Nächste Sonnenzeit" style="max-width:280px;max-height:180px"> | Aufgang, Untergang, Dämmerung, Höchststand oder Sonnenmitternacht aus sun.sun. Minutenoffset; kann morgen sein. |
+| **Zeit berechnen**<br><code>ugso_time_shift</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_shift.png" alt="Zeit berechnen" style="max-width:280px;max-height:180px"> | Datumswert plus/minus Zahl in Millisekunden, Sekunden, Minuten, Stunden oder Tagen. |
+| **Zeit formatieren**<br><code>ugso_time_format</code> | <img src="/assets/blocks-for-ha/blocks/ugso_time_format.png" alt="Zeit formatieren" style="max-width:280px;max-height:180px"> | Datumswert als Uhrzeit, Datum, Datum/Uhrzeit, ISO mit Zeitzone oder Unix-Sekunden. |
+
+## Weitere Blocks
 
 | Block | Bild im Editor | Funktionsbeschreibung |
 | --- | --- | --- |
