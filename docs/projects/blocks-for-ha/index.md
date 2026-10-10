@@ -10,7 +10,7 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.18 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
+**Version 0.1.19 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
 
 Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -166,3 +166,9 @@ Die vollständige [Gegenüberstellung mit Umsetzungsstatus](https://github.com/r
 Der Editor prüft die unterstützte Struktur. Entitäts-IDs werden gesucht oder manuell eingegeben; installierte Aktionen und echte HA-Ausführung sind damit nicht verifiziert. Vor Verwendung Beispiel-Entitäten ersetzen und Aktionen in HA prüfen. Der Editor schreibt keine HA-Systemdateien.
 
 Built with [Blockly](https://www.blockly.com/). Eigene HA-Blocks, kein ioBroker-Fork. Eigener Code und Blockly: Apache-2.0; YAML-Bibliothek: ISC. Lizenztexte werden mitgeliefert.
+
+## Built with Blockly
+
+Blockly ist eine Open-Source-Entwicklerbibliothek der Raspberry Pi Foundation, ursprünglich bei Google entwickelt. Seit **0.1.19** verwendet die App das unveränderte offizielle Badge mit 32 Pixel Höhe, Freiraum und Link zu Blockly. Beide SVG-Varianten werden lokal ausgeliefert. [Originalhinweise zur Attribution](https://docs.blockly.com/guides/app-integration/attribution/).
+
+<a class="blockly-attribution" href="https://www.blockly.com/" target="_blank" rel="noopener noreferrer"><img class="badge-light" src="/assets/blocks-for-ha/branding/built-with-blockly-badge-white.svg" alt="Built with Blockly" width="87" height="32"><img class="badge-dark" src="/assets/blocks-for-ha/branding/built-with-blockly-badge-black.svg" alt="Built with Blockly" width="87" height="32"></a>

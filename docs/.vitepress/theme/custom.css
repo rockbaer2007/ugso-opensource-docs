@@ -408,3 +408,9 @@ body.uix-doc-route .vp-doc :not(pre) > code {
     flex-direction: column;
   }
 }
+
+.blockly-attribution{display:inline-flex;align-items:center;padding:12px 16px;line-height:0}
+.blockly-attribution img{display:block;height:32px;width:auto;max-width:none}
+.blockly-attribution .badge-dark{display:none}
+.dark .blockly-attribution .badge-light{display:none}
+.dark .blockly-attribution .badge-dark{display:block}
