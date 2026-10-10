@@ -10,7 +10,7 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.22 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
+**Version 0.1.23 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
 
 Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -186,3 +186,5 @@ Bei Fokus im Arbeitsbereich öffnet **Strg/Cmd+F** die Suche. **Enter** wählt d
 Der Knopf **?** öffnet die Tastaturhilfe. Blockly 13.3 bringt Navigation mit: Tab führt in den Arbeitsbereich, Pfeiltasten bewegen den Fokus durch Blocks und Felder, Enter bearbeitet Felder, T fokussiert die Toolbox und M nimmt einen Block auf. Zusätzlich aktiviert: Pos1/Ende innerhalb eines Blocks, Bild auf/ab innerhalb eines Stapels, Strg/Cmd+Pos1/Ende zum ersten/letzten Block und Strg/Cmd+Pfeiltasten zum Scrollen. Eingabefelder und Dialoge behalten ihre normale Textbearbeitung. Die Screenreader-Bedienung ist noch nicht unabhängig geprüft.
 
 Originalquellen: [workspace-search-Plugin](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/workspace-search), [Blockly-Tastaturnavigation](https://docs.blockly.com/guides/configure/keyboard-nav/).
+
+Seit **0.1.23** benötigen Einleitung und Automationseinstellungen weniger Höhe: kleinere Überschrift und Abstände sowie 32 Pixel hohe Projektfelder und Knöpfe geben der Arbeitsfläche mehr Platz. HA-Verbindungsstatus und Entitätsanzahl stehen jetzt ebenfalls in der Einstellungsleiste und sind auch auf schmalen Bildschirmen sichtbar.
