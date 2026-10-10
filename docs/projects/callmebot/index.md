@@ -4,7 +4,7 @@ description: WhatsApp-Textnachrichten aus Home Assistant mit Empfängerprofilen 
 ---
 # UGSo CallMeBot
 
-Experimentelle **HA-App 0.1.1** im [gemeinsamen Repository mit Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Oberfläche und Bausteine sind vollständig in **DE/EN/FR**, mit Systemsprache und Hell/Dunkel/System. Inspiration: [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); eigenständige UGSo-Implementierung ohne ioBroker.
+Experimentelle **HA-App 0.1.2** im [gemeinsamen Repository mit Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Oberfläche und Bausteine sind vollständig in **DE/EN/FR**, mit Systemsprache und Hell/Dunkel/System. Inspiration: [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); eigenständige UGSo-Implementierung ohne ioBroker.
 
 **Korrektur 0.1.1:** Der Versandbutton funktioniert auch ohne `crypto.randomUUID`, etwa bei HTTP-Ingress. Nach dem Update die App neu starten und die Seite neu laden. Anfrage-IDs verwenden verfügbare Zufallsbytes oder einen Zeitstempel mit Zähler; sie dienen der Dublettenprüfung, nicht der Anmeldung.
 
@@ -22,6 +22,18 @@ Experimentelle **HA-App 0.1.1** im [gemeinsamen Repository mit Blocks for HA](ht
 Ein leeres Schlüsselfeld beim Speichern behält den vorhandenen Schlüssel. Die Oberfläche erhält den Schlüssel niemals zurück. Er liegt in `/data/profiles.json`, nicht in Blockly, MQTT-Nachrichten, Browser-Speicher oder Protokollen. Die Backend-Datei ist nicht verschlüsselt und wird in HA-Sicherungen aufgenommen.
 
 ## Blockly: CallMeBot
+
+### Gespeicherte Profile auswählen
+
+Ab **CallMeBot 0.1.2 und Blocks for HA 0.1.49** öffnet das Profilfeld eine durchsuchbare Auswahl mit Profilnamen, Profil-ID und Standardempfänger. **Neu laden** aktualisiert die Liste. Im Block steht der Profilname, im Projekt und YAML bleibt die unveränderte ID gespeichert. Eine leere ID verwendet den aktuellen Standardempfänger.
+
+![CallMeBot-Profilauswahl auf Deutsch](/assets/callmebot/profiles-de.png)
+
+Beide Apps aktualisieren und neu starten, dann die Blocks-Seite neu laden. HA muss mit dem MQTT-Broker verbunden sein und MQTT-Discovery mit dem Standardpräfix `homeassistant` erlauben. CallMeBot veröffentlicht einen Diagnose-Sensor, standardmäßig `sensor.ugso_callmebot_profiles`, über den Blocks den Katalog mit seiner vorhandenen HA-Verbindung liest. Eine Umbenennung des Sensors ist möglich; er wird anhand seiner Katalog-Kennung gefunden. Technische Grundlage: [HA MQTT-Sensoren und JSON-Attribute](https://www.home-assistant.io/integrations/sensor.mqtt/).
+
+Der retained Katalog `ugso/callmebot/profiles` enthält nur IDs, Namen, Standardprofil, Anzahl und Kennung. Telefonnummern, Nachrichten und API-Schlüssel werden nicht veröffentlicht. Änderungen und MQTT-Neuverbindungen aktualisieren den Katalog. Profilnamen sind in MQTT und HA sichtbar.
+
+Wenn App, MQTT, Discovery oder HA-Verbindung fehlen, bleiben manuelle Profil-ID und Standardempfänger nutzbar. Gelöschte IDs werden im Projekt nicht automatisch ersetzt; die App lehnt einen Versand an ein fehlendes Profil ab.
 
 Seit **Blocks for HA 0.1.48** unter **Nachrichten → WhatsApp · CallMeBot**.
 
