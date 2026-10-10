@@ -4,6 +4,8 @@ description: Comparing ioBroker, original Blockly and native HA control flow.
 ---
 # Timeouts, objects, logic and loops
 
+This page describes the 18 additions in 0.1.13 (68 block types at that time). The current total is **105**, including the additional [math, text, list and loop blocks in 0.1.14](./collections).
+
 Version **0.1.13** adds 18 blocks, bringing the total to **68 block types**. [Images and functions](./blocks#flow-objects-and-lists-added-in-0-1-13). The comparison uses the actual ioBroker JavaScript adapter [timeout](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_timeout.ts), [object](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_object.ts), [logic](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_logic.ts) and [switch](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_switch.ts) definitions. Similar appearance does not imply identical execution. ioBroker JavaScript is not imported.
 
 ## Timeouts
@@ -82,6 +84,6 @@ actions:
 
 Project JSON preserves block shapes, row order and attribute names. YAML opens pauses, waits, stop and repeat directly as dedicated blocks. Cases reopen as the existing If/choose block. Complex object/list/logic values reopen as general templates. YAML behavior is preserved; original block shapes cannot be reconstructed uniquely. Mixed duration mappings, raw for_each lists and additional HA option fields are currently rejected rather than silently removed.
 
-Pending: persistent named timers with timer.finished triggers, periodic HA triggers, parallel branches, Blockly from/to/step loops, local break/continue semantics, list indexing/random/sublist and further list operations. **Stop this run** is explicitly not exported as break/continue. Dedicated entity state/attribute value blocks remain separate tasks. Original Blockly core has no ioBroker timeout engine or the corresponding ioBroker object blocks; these are adapter extensions.
+Pending: persistent named timers with timer.finished triggers, periodic HA triggers, parallel branches and local break/continue semantics. Fixed integer counting loops and list editing are added in [0.1.14](./collections). **Stop this run** is explicitly not exported as break/continue. Dedicated entity state/attribute value blocks remain separate tasks. Original Blockly core has no ioBroker timeout engine or the corresponding ioBroker object blocks; these are adapter extensions.
 
 Verified: model/YAML/project round trips, invalid input rejection, runtime values in an immutable Jinja sandbox, browser categories, mutator and undo. Testing against a real HA instance remains pending.

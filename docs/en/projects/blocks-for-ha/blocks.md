@@ -4,9 +4,53 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 ---
 # Block catalog
 
-Version **0.1.13**: 68 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.14**: 105 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are currently entered manually.
+
+## Math, text, lists and counting loops since 0.1.14
+
+[Original Blockly / ioBroker / HA: mapping, examples and limitations](./collections).
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Arithmetic**<br><code>ugso_math_arithmetic</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_arithmetic.png" alt="Arithmetic" style="max-width:280px;max-height:180px"> | Add, subtract, multiply, divide or raise to a power; numeric values required. |
+| **Single-number math**<br><code>ugso_math_single</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_single.png" alt="Single-number math" style="max-width:280px;max-height:180px"> | Square root, absolute value, negation, natural/base-10 log and powers of e/10. |
+| **Trigonometry**<br><code>ugso_math_trig</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_trig.png" alt="Trigonometry" style="max-width:280px;max-height:180px"> | sin/cos/tan use degrees; inverse functions return degrees. |
+| **Constants**<br><code>ugso_math_constant</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_constant.png" alt="Constants" style="max-width:280px;max-height:180px"> | Pi, e, golden ratio, square root of 2 and of one half. |
+| **Number property**<br><code>ugso_math_property</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_property.png" alt="Number property" style="max-width:280px;max-height:180px"> | Even, odd, whole, positive, negative or divisible by a nonzero divisor. |
+| **Round**<br><code>ugso_math_round</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_round.png" alt="Round" style="max-width:280px;max-height:180px"> | Round normally/up/down to 0–10 decimal places. Half ties follow HA/Jinja even rounding. |
+| **Math on list**<br><code>ugso_math_list</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_list.png" alt="Math on list" style="max-width:280px;max-height:180px"> | Sum, min, max, mean, median or random element; empty sum is 0, other empty results null. |
+| **Modulo**<br><code>ugso_math_modulo</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_modulo.png" alt="Modulo" style="max-width:280px;max-height:180px"> | Remainder with Jinja rules; negative results may differ from JavaScript. |
+| **Constrain**<br><code>ugso_math_clamp</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_clamp.png" alt="Constrain" style="max-width:280px;max-height:180px"> | Clamp between two limits; reversed limits are sorted. |
+| **Random integer**<br><code>ugso_math_random_int</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_random_int.png" alt="Random integer" style="max-width:280px;max-height:180px"> | Inclusive integer limits, at most 10000 choices. |
+| **Random fraction**<br><code>ugso_math_random_fraction</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_random_fraction.png" alt="Random fraction" style="max-width:280px;max-height:180px"> | 0 up to but excluding 1, in increments of 0.00001; evaluated anew each time. |
+| **atan2 angle**<br><code>ugso_math_atan2</code> | <img src="/assets/blocks-for-ha/blocks/ugso_math_atan2.png" alt="atan2 angle" style="max-width:280px;max-height:180px"> | Additional Blockly standard operation; four-quadrant angle in degrees. |
+| **Newline**<br><code>ugso_text_newline</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_newline.png" alt="Newline" style="max-width:280px;max-height:180px"> | Actual LF, CRLF or CR newline value. |
+| **Join text**<br><code>ugso_text_join</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_join.png" alt="Join text" style="max-width:280px;max-height:180px"> | 0–100 inputs combined as text; gear or +/− controls the input count. |
+| **Append text**<br><code>ugso_text_append</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_append.png" alt="Append text" style="max-width:280px;max-height:180px"> | Assign a new value to an already initialized text variable. |
+| **Text length**<br><code>ugso_text_length</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_length.png" alt="Text length" style="max-width:280px;max-height:180px"> | Count Unicode code points rather than JavaScript UTF-16 units. |
+| **Text empty**<br><code>ugso_text_empty</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_empty.png" alt="Text empty" style="max-width:280px;max-height:180px"> | Check whether text has length zero. |
+| **Contains text**<br><code>ugso_text_contains</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_contains.png" alt="Contains text" style="max-width:280px;max-height:180px"> | Case-sensitive literal substring check. |
+| **Find text**<br><code>ugso_text_index</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_index.png" alt="Find text" style="max-width:280px;max-height:180px"> | First/last position, counted from 1; missing result is 0. |
+| **Get character**<br><code>ugso_text_char</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_char.png" alt="Get character" style="max-width:280px;max-height:180px"> | From start/end, first/last/random character; out of range returns empty text. |
+| **Substring**<br><code>ugso_text_slice</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_slice.png" alt="Substring" style="max-width:280px;max-height:180px"> | Inclusive bounds, counted from 1; reversed/invalid bounds return empty text. |
+| **Text case**<br><code>ugso_text_case</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_case.png" alt="Text case" style="max-width:280px;max-height:180px"> | Upper/lower/title case using Unicode rules. |
+| **Trim text**<br><code>ugso_text_trim</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_trim.png" alt="Trim text" style="max-width:280px;max-height:180px"> | Remove leading/trailing/both whitespace, including tabs and newlines. |
+| **Count text**<br><code>ugso_text_count</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_count.png" alt="Count text" style="max-width:280px;max-height:180px"> | Non-overlapping matches; empty search returns 0. |
+| **Replace text**<br><code>ugso_text_replace</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_replace.png" alt="Replace text" style="max-width:280px;max-height:180px"> | Replace all literal matches; empty search leaves input unchanged. |
+| **Reverse text**<br><code>ugso_text_reverse</code> | <img src="/assets/blocks-for-ha/blocks/ugso_text_reverse.png" alt="Reverse text" style="max-width:280px;max-height:180px"> | Additional standard operation; reverses code points, not grapheme clusters. |
+| **Repeat list item**<br><code>ugso_list_repeat</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_repeat.png" alt="Repeat list item" style="max-width:280px;max-height:180px"> | Create a list with 0–10000 repetitions. |
+| **Find list item**<br><code>ugso_list_index</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_index.png" alt="Find list item" style="max-width:280px;max-height:180px"> | First/last occurrence, counted from 1; missing result is 0. Uses Python equality. |
+| **Get list item**<br><code>ugso_list_get</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_get.png" alt="Get list item" style="max-width:280px;max-height:180px"> | From start/end, first/last/random item; out of range or empty returns null. |
+| **Set/insert list item**<br><code>ugso_list_set</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_set.png" alt="Set/insert list item" style="max-width:280px;max-height:180px"> | Assign a new list value. Index starts at 1; insertion allows length+1. Invalid index leaves list unchanged. |
+| **Remove list item**<br><code>ugso_list_remove</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_remove.png" alt="Remove list item" style="max-width:280px;max-height:180px"> | Assign a new list without the item at the 1-based index. Invalid index leaves list unchanged. |
+| **Sublist**<br><code>ugso_list_slice</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_slice.png" alt="Sublist" style="max-width:280px;max-height:180px"> | Copy inclusive 1-based bounds; invalid/reversed bounds return an empty list. |
+| **Split/join**<br><code>ugso_list_split</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_split.png" alt="Split/join" style="max-width:280px;max-height:180px"> | Split text by a literal delimiter or join list as text; empty delimiter splits code points. |
+| **Sort list**<br><code>ugso_list_sort</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_sort.png" alt="Sort list" style="max-width:280px;max-height:180px"> | New numeric/text/case-insensitive sorted list, ascending/descending; numeric mode requires numbers. |
+| **Reverse list**<br><code>ugso_list_reverse</code> | <img src="/assets/blocks-for-ha/blocks/ugso_list_reverse.png" alt="Reverse list" style="max-width:280px;max-height:180px"> | New reversed list; original stays unchanged. |
+| **Count with variable**<br><code>ugso_for_range</code> | <img src="/assets/blocks-for-ha/blocks/ugso_for_range.png" alt="Count with variable" style="max-width:280px;max-height:180px"> | Fixed integer limits and nonzero step, ascending/descending, at most 10000 iterations; native HA repeat.for_each. |
+| **For each with variable**<br><code>ugso_foreach_variable</code> | <img src="/assets/blocks-for-ha/blocks/ugso_foreach_variable.png" alt="For each with variable" style="max-width:280px;max-height:180px"> | Assign the named variable from repeat.item before each iteration body. |
 
 ## Flow, objects and lists added in 0.1.13
 

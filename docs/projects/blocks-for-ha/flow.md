@@ -4,6 +4,8 @@ description: ioBroker, Original-Blockly und native HA-Abläufe gegenübergestell
 ---
 # Timeouts, Objekt, Logik und Schleifen
 
+Diese Seite beschreibt die 18 Ergänzungen von 0.1.13 (damals 68 Blocktypen). Aktuell sind es **105** mit den weiteren [Mathematik-, Text-, Listen- und Schleifenblocks aus 0.1.14](./collections).
+
 Seit **0.1.13** ergänzen 18 neue Blocks den Editor, insgesamt **68 Blocktypen**. [Bilder und Funktionen aller Blocks](./blocks#ablaufe-objekte-und-listen-seit-0-1-13). Grundlage sind die tatsächlichen [Timeout-](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_timeout.ts), [Objekt-](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_object.ts), [Logik-](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_logic.ts) und [Switch-Blocks](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_switch.ts) des ioBroker-JavaScript-Adapters. Die folgende Zuordnung erklärt Ähnlichkeiten und Grenzen; ioBroker-JavaScript wird nicht importiert.
 
 ## Timeouts
@@ -82,6 +84,6 @@ actions:
 
 Projekt-JSON bewahrt Blockformen, Reihenfolge und Attributnamen. YAML öffnet Pausen, waits, Stop und Wiederholungen direkt als entsprechende Blocks. Fallauswahl öffnet als bestehender Falls/choose-Block; komplexe Objekt-/Listen-/Logikwerte öffnen als allgemeine Templates. Das YAML-Verhalten bleibt erhalten, die ursprüngliche Form lässt sich daraus nicht eindeutig rekonstruieren. Gemischte Dauermappings, rohe for_each-Listen und zusätzliche HA-Optionsfelder sind noch nicht unterstützt und werden beim Import abgelehnt, statt still entfernt zu werden.
 
-Vorgemerkt: benannte persistente Timer mit timer.finished-Auslöser, periodische HA-Auslöser, parallele Zweige, Blockly-Zählschleifen von/bis/Schritt, lokale break/continue-Semantik, Listenindex/Zufall/Subliste und weitere Listenbearbeitung. **Diesen Lauf stoppen** wird ausdrücklich nicht als break/continue ausgegeben. Eigene Entitätszustands-/Attribut-Wertblocks bleiben getrennte Aufgaben. Der Original-Blockly-Grundumfang enthält selbst keine ioBroker-Timeout-Engine und keine entsprechenden ioBroker-Objektblocks; das sind Erweiterungen des Adapters.
+Vorgemerkt: benannte persistente Timer mit timer.finished-Auslöser, periodische HA-Auslöser, parallele Zweige und lokale break/continue-Semantik. Feste ganzzahlige Zählschleifen und Listenbearbeitung sind seit [0.1.14](./collections) ergänzt. **Diesen Lauf stoppen** wird ausdrücklich nicht als break/continue ausgegeben. Eigene Entitätszustands-/Attribut-Wertblocks bleiben getrennte Aufgaben. Der Original-Blockly-Grundumfang enthält selbst keine ioBroker-Timeout-Engine und keine entsprechenden ioBroker-Objektblocks; das sind Erweiterungen des Adapters.
 
 Verifiziert: Modell-/YAML-/Projekt-Rundläufe, Eingabefehler, unveränderliche Jinja-Sandbox mit Laufzeitwerten sowie Browserbedienung, Mutator und Undo. Ein Test gegen eine echte HA-Instanz ist noch offen.
