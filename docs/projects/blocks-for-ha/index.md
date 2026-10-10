@@ -4,9 +4,11 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
+Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach Name/ID suchen. Passende Licht-/Script-/Helferfilter, manuelle IDs ohne Verbindung und serverseitige Zugangsdaten. [Anleitung mit Bild und Grenzen](./entities).
+
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.16 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
+**Version 0.1.17 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
 
 Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -30,11 +32,11 @@ Neu in 0.1.7: **Suche am Menüende**, mehrzeilige Texte, Prozent-Slider, Farbe u
 
 Der Datumsvergleich einschließlich Jahr wird in HA mit `now().strftime('%Y-%m-%d')` ausgewertet; er verwendet die HA-Zeitzone und ist eine Bedingung, kein Auslöser. Diese Form erhält beim Import den Datumsblock; andere Template-Bedingungen erhalten den allgemeinen Template-Block. Die Lichtaktion erzeugt RGB-Farbe und Helligkeit in Prozent. Timer nutzen ihre konfigurierte Dauer; zusätzliche Parameter bleiben in der generischen HA-Aktion. Die tatsächlichen Gerätefähigkeiten müssen in HA geprüft werden.
 
-Das eigene UGSo-Icon verbindet Haus und Puzzle-Baustein und wird in Oberfläche, Browser und HA-App verwendet. Zehn Originalplugins werden lokal ausgeliefert. Farbmischung und Zufallsfarben sind seit 0.1.15 umgesetzt; automatisch wachsende Anschlüsse und Live-Entitätsauswahl bleiben offen. Textverknüpfung und Listenbearbeitung sind umgesetzt.
+Das eigene UGSo-Icon verbindet Haus und Puzzle-Baustein und wird in Oberfläche, Browser und HA-App verwendet. Zehn Originalplugins werden lokal ausgeliefert. Farbmischung und Zufallsfarben sind seit 0.1.15 umgesetzt; automatisch wachsende Anschlüsse und Live-Aktionsauswahl bleiben offen. Textverknüpfung und Listenbearbeitung sind umgesetzt.
 
 ## Im HA-App-Store installieren
 
-Das gemeinsame Repository `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` hinzufügen beziehungsweise über die Repository-Aktualisierung neu laden. **UGSo Blocks for HA** installieren, starten und **Weboberfläche öffnen** wählen. Die App unterstützt amd64 und aarch64 und öffnet den Editor über HA-Ingress. Zum Öffnen ist keine zusätzliche Token-Eingabe nötig. Die App greift noch nicht auf HA-Entitäten zu und schreibt keine HA-Systemdateien.
+Das gemeinsame Repository `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` hinzufügen beziehungsweise über die Repository-Aktualisierung neu laden. **UGSo Blocks for HA** installieren, starten und **Weboberfläche öffnen** wählen. Die App unterstützt amd64 und aarch64 und öffnet den Editor über HA-Ingress. Zum Öffnen ist keine zusätzliche Token-Eingabe nötig. Die App lädt Entitäten lesend über den Supervisor und schreibt keine HA-Systemdateien.
 
 ## Start und Dateien
 
@@ -160,12 +162,12 @@ Am **10. Oktober 2026** vorgemerkt; noch nicht umgesetzt. Die originalen [Blockl
 
 ## System: Stand und nächste Schritte
 
-Steuern, Umschalten, Wartezeit, generische Aktionen, Log-Ausgabe, Script-Steuerung, Entität aktualisieren und Helfer steuern sind vorhanden. Eigene Blocks für Kommentar, Entitätsauswahl, Zustand/Attribute als Werte, Existenz/Verfügbarkeit und Zahlen-/Texthelfer folgen schrittweise. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.
+Steuern, Umschalten, Wartezeit, generische Aktionen, Log-Ausgabe, Script-Steuerung, Entität aktualisieren und Helfer steuern sind vorhanden. Entitätsauswahl ist seit 0.1.17 umgesetzt. Eigene Blocks für Kommentar, Zustand/Attribute als Werte, Existenz/Verfügbarkeit und Zahlen-/Texthelfer folgen schrittweise. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.
 
 Die vollständige [Gegenüberstellung mit Umsetzungsstatus](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.de.md) wird bei jeder Erweiterung aktualisiert. Katalog und deklarative Plugins sind geplant.
 
 ## Prüfung und Original
 
-Der Editor prüft die unterstützte Struktur. Entitäts-IDs werden derzeit eingegeben; installierte Aktionen und echte HA-Ausführung sind damit nicht verifiziert. Vor Verwendung Beispiel-Entitäten ersetzen und Aktionen in HA prüfen. Der Editor schreibt keine HA-Systemdateien.
+Der Editor prüft die unterstützte Struktur. Entitäts-IDs werden gesucht oder manuell eingegeben; installierte Aktionen und echte HA-Ausführung sind damit nicht verifiziert. Vor Verwendung Beispiel-Entitäten ersetzen und Aktionen in HA prüfen. Der Editor schreibt keine HA-Systemdateien.
 
 Built with [Blockly](https://www.blockly.com/). Eigene HA-Blocks, kein ioBroker-Fork. Eigener Code und Blockly: Apache-2.0; YAML-Bibliothek: ISC. Lizenztexte werden mitgeliefert.

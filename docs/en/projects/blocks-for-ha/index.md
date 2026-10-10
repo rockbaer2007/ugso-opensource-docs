@@ -4,9 +4,11 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
+New in **0.1.17**: Load entities from HA and search existing block fields by name/ID. Light/script/helper filters, manual IDs offline and server-side credentials. [Usage, image and limits](./entities).
+
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.16 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+**Version 0.1.17 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -30,11 +32,11 @@ New in 0.1.7: **search at the bottom of the menu**, multiline text, percentage s
 
 The date comparison includes the year and uses HA’s `now().strftime('%Y-%m-%d')`, evaluated in HA’s time zone. It is a condition, not a trigger. Import maps this shape to the date block and other template conditions to the general template block. The light action generates RGB colour and percentage brightness. Timers use their configured duration; additional parameters stay in the generic HA action. Actual device capabilities must be checked in HA.
 
-Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Ten original plugins are bundled locally. Colour blending and random colours are implemented since 0.1.15; automatic growing connections and live entity selection remain pending. Text joining and list editing are implemented.
+Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Ten original plugins are bundled locally. Colour blending and random colours are implemented since 0.1.15; automatic growing connections and live action selection remain pending. Text joining and list editing are implemented.
 
 ## Install from the HA app store
 
-Add or refresh `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` in the app store. Install **UGSo Blocks for HA**, start it and select **Open Web UI**. The app supports amd64 and aarch64 and serves the editor through HA ingress. No additional token is needed to open it. It does not yet access HA entities or write HA system files.
+Add or refresh `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` in the app store. Install **UGSo Blocks for HA**, start it and select **Open Web UI**. The app supports amd64 and aarch64 and serves the editor through HA ingress. No additional token is needed to open it. It reads HA entities through the Supervisor and does not write HA system files.
 
 ## Start and files
 
@@ -160,12 +162,12 @@ Recorded on **October 10, 2026**; not implemented yet. The original [Blockly Dev
 
 ## System: status and next steps
 
-Control, toggle, delay, generic actions, logging, script control, entity refresh and helper control are available. Dedicated comment, entity picker, state/attribute value, existence/availability and number/text helper blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
+Control, toggle, delay, generic actions, logging, script control, entity refresh and helper control are available. Entity selection is available since 0.1.17. Dedicated comment, state/attribute value, existence/availability and number/text helper blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
 
 The full [comparison and implementation status](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.en.md) is updated with every feature. Catalog and declarative plugins are planned.
 
 ## Validation and origin
 
-The editor validates supported structure. Entity IDs are entered manually; installed actions and execution in real HA are not verified. Replace example entities and check actions in HA before use. The editor does not write HA system files.
+The editor validates supported structure. Entity IDs are searched or entered manually; installed actions and execution in real HA are not verified. Replace example entities and check actions in HA before use. The editor does not write HA system files.
 
 Built with [Blockly](https://www.blockly.com/). Original HA blocks, not an ioBroker fork. Our code and Blockly: Apache-2.0; YAML library: ISC. License texts are included.

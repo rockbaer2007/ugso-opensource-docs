@@ -2,11 +2,14 @@
 title: Block catalog
 description: All UGSo Blocks for HA with images, functionality and original plugins.
 ---
+
 # Block catalog
 
-Version **0.1.16**: 111 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 111 block types and output formats remain unchanged.
 
-Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are currently entered manually.
+Version **0.1.17**: 111 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+
+Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
 ## Colours and value functions since 0.1.15
 
