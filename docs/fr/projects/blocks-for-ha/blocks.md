@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.34 · 117 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.35 · 118 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -296,3 +296,15 @@ L’exemple de minuterie conserve h/m, les deux entités surveillées, la condit
 | **Définir les variables (JSON)**<br><code>ugso_variables_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_variables_action.png" alt="Définir les variables (JSON)" style="max-width:280px;max-height:180px"> | Variables HA natives dans un objet JSON. |
 
 [Home Assistant: variables](https://www.home-assistant.io/docs/scripts/#variables)
+
+## Délai en texte ou modèle
+
+Depuis **0.1.35**, Blocks importe les textes natifs `delay` dans le nouveau bloc sous **Délais**. Exemples : `00:00:02`, `01:30` (une heure et 30 minutes), `00:00:00.250` ou un modèle de sortie HA. La durée reste un texte dans le YAML et le projet sauvegardé. L’exécution HA attend avant de poursuivre les actions suivantes. Les blocs existants en secondes et unités restent disponibles. Cette extension concerne `delay`, pas le délai maximal du bloc attendre-jusqu’à.
+
+L’exemple de réinitialisation désactive d’abord timer_reset, attend deux secondes puis désactive les deux cibles. L’ID input_boolean.timer_runing est conservé exactement comme fourni.
+
+| Bloc | Image | Fonction |
+| --- | --- | --- |
+| **Attendre durée en texte / modèle**<br><code>ugso_delay_text</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_delay_text.png" alt="Attendre durée en texte / modèle" style="max-width:280px;max-height:180px"> | Texte de durée delay natif / modèle HA. |
+
+[Home Assistant: delay](https://www.home-assistant.io/docs/scripts/#wait-for-time-to-pass-delay)

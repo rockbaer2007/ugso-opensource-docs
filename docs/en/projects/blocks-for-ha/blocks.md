@@ -5,9 +5,9 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 117 block types and output formats remain unchanged.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 118 block types and output formats remain unchanged.
 
-Version **0.1.34**: 117 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.35**: 118 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -221,7 +221,7 @@ The colour field also uses the transitive dependency [field-grid-dropdown](https
 
 [Back to overview](/en/projects/blocks-for-ha/)
 
-Custom blocks since 0.1.18 extend the 117 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+Custom blocks since 0.1.18 extend the 118 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
 
 ## Trigger IDs and multiple targets
 
@@ -285,3 +285,15 @@ The timer example retains h/m, both watched entities, the condition and restart 
 | **Set variables (JSON)**<br><code>ugso_variables_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_variables_action.png" alt="Set variables (JSON)" style="max-width:280px;max-height:180px"> | Native HA variables as a JSON object. |
 
 [Home Assistant: variables](https://www.home-assistant.io/docs/scripts/#variables)
+
+## Delay as duration text or template
+
+Since **0.1.35**, Blocks imports native `delay` duration strings into the new block under **Timeouts**. Examples: `00:00:02`, `01:30` (one hour and 30 minutes), `00:00:00.250` or an HA output template. The duration remains a string in YAML and the saved project. The current HA run waits before continuing with subsequent actions. Existing seconds and unit blocks remain available. This extension applies to `delay`, not the wait-until block timeout.
+
+The timer-reset example first turns off timer_reset, waits two seconds and then turns off both targets. The entity ID input_boolean.timer_runing is preserved exactly as provided.
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Wait duration text / template**<br><code>ugso_delay_text</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_delay_text.png" alt="Wait duration text / template" style="max-width:280px;max-height:180px"> | Native delay duration string / HA template. |
+
+[Home Assistant: delay](https://www.home-assistant.io/docs/scripts/#wait-for-time-to-pass-delay)

@@ -5,9 +5,9 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 117 Blocktypen und Ausgabeformate bleiben erhalten.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 118 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.34**: 117 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.35**: 118 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -221,7 +221,7 @@ Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dr
 
 [Zur Übersicht](/projects/blocks-for-ha/)
 
-Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 117 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 118 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
 
 ## Trigger-IDs und mehrere Ziele
 
@@ -285,3 +285,15 @@ Das Timer-Beispiel erhält h/m, beide überwachten Entitäten, die Bedingung und
 | **Variablen setzen (JSON)**<br><code>ugso_variables_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_variables_action.png" alt="Variablen setzen (JSON)" style="max-width:280px;max-height:180px"> | Native HA-Variablen als JSON-Objekt. |
 
 [Home Assistant: variables](https://www.home-assistant.io/docs/scripts/#variables)
+
+## Wartezeit als Zeittext oder Template
+
+Seit **0.1.35** importiert Blocks native `delay`-Zeittexte in den neuen Block unter **Timeouts**. Beispiele: `00:00:02`, `01:30` (eine Stunde und 30 Minuten), `00:00:00.250` oder ein HA-Ausgabetemplate. Der Zeittext bleibt ein Text im YAML und im gespeicherten Projekt. Eine Wartezeit verlängert den aktuellen HA-Lauf; nachfolgende Aktionen folgen danach. Bestehende Sekunden- und Einheiten-Blocks bleiben verfügbar. Diese Erweiterung betrifft `delay`, nicht den Timeout des Warte-bis-Blocks.
+
+Das Timer-Reset-Beispiel schaltet zunächst timer_reset aus, wartet zwei Sekunden und schaltet anschließend beide Zielentitäten aus. Die Entitäts-ID input_boolean.timer_runing bleibt genau wie im Original erhalten.
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Warte Zeittext / Template**<br><code>ugso_delay_text</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_delay_text.png" alt="Warte Zeittext / Template" style="max-width:280px;max-height:180px"> | Nativer delay-Zeittext / HA-Template. |
+
+[Home Assistant: delay](https://www.home-assistant.io/docs/scripts/#wait-for-time-to-pass-delay)
