@@ -35,7 +35,7 @@ Le bloc d’intégration propose un menu puissance, mouvement et minuteur. Saisi
 
 Les variables acceptent listes et objets imbriqués. Chaque variable existante dispose d’un champ ; ajouter de nouveaux noms dans les options supplémentaires. Les options `alias`, `enabled`, `continue_on_error`, variables de réponse et métadonnées disposent de champs séparés. `enabled` accepte un booléen ou modèle HA ; `continue_on_error` un booléen.
 
-Sous **Projekt & Beschreibung → Options HA**, modifier `variables`, `trigger_variables`, `initial_state`, `trace.stored_traces` et `max_exceeded`. **Appliquer** accepte uniquement des options valides. Les options omises sont supprimées ; `{}` supprime toutes les options gérées par ce champ. Nom et mode restent séparés. Sans `alias`, le nom de fichier devient `automation.yaml`. Les commandes générales de l’application restent actuellement allemandes.
+Sous **Projet et description → Options HA**, modifier `variables`, `trigger_variables`, `initial_state`, `trace.stored_traces` et `max_exceeded`. **Appliquer** accepte uniquement des options valides. Les options omises sont supprimées ; `{}` supprime toutes les options gérées par ce champ. Nom et mode restent séparés. Sans `alias`, le nom de fichier devient `automation.yaml`. Depuis 0.1.46, toutes les commandes suivent la langue choisie.
 
 ## Attente et groupes d’actions
 

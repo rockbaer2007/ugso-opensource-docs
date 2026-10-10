@@ -8,7 +8,7 @@ Seit **0.1.44** öffnen passende Aktions- und Zielfelder der einfachen und erwei
 
 ![Entitätsauswahl mit Suchergebnis](/assets/blocks-for-ha/entity-picker.png)
 
-Das Bild verwendet simulierte Testentitäten. Die Oberfläche bleibt deutsch; die Entitätsnamen kommen aus deiner HA-Installation.
+Das Bild verwendet simulierte Testentitäten und die deutsche Oberfläche. Seit 0.1.46 folgt die Oberfläche der gewählten App-Sprache DE/EN/FR. Entitätsnamen kommen unverändert aus deiner HA-Installation.
 
 ## Bedienung
 

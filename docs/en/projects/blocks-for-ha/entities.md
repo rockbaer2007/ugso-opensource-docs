@@ -8,7 +8,7 @@ Since **0.1.44**, matching action and target fields in simple and extended block
 
 ![Entity picker with a search result](/assets/blocks-for-ha/entity-picker.png)
 
-The image uses simulated test entities. The editor UI remains German; entity names come from your HA installation.
+The image uses simulated test entities and the German interface. Since 0.1.46, the interface follows the selected DE/EN/FR app language. Entity names retain their original HA installation language.
 
 ## Usage
 

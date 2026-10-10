@@ -35,7 +35,7 @@ The integration block provides a dropdown for power, motion and timers. Enter ta
 
 Variables also support lists and nested objects. Existing variables have individual value fields; add new names through additional options. Common step options `alias`, `enabled`, `continue_on_error`, response variables and metadata have separate inputs. `enabled` accepts a Boolean or HA template; `continue_on_error` accepts a Boolean.
 
-Under **Projekt & Beschreibung → HA options**, edit `variables`, `trigger_variables`, `initial_state`, `trace.stored_traces` and `max_exceeded`. **Apply** accepts valid options only. Omitted options are removed; `{}` removes every option managed by this field. Name and execution mode remain separate. An automation without `alias` can be imported; its filename falls back to `automation.yaml`. The surrounding app controls currently remain German.
+Under **Project & description → HA options**, edit `variables`, `trigger_variables`, `initial_state`, `trace.stored_traces` and `max_exceeded`. **Apply** accepts valid options only. Omitted options are removed; `{}` removes every option managed by this field. Name and execution mode remain separate. An automation without `alias` can be imported; its filename falls back to `automation.yaml`. All app controls follow the selected language since 0.1.46.
 
 ## Waiting and action groups
 
