@@ -5,9 +5,9 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 115 block types and output formats remain unchanged.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 116 block types and output formats remain unchanged.
 
-Version **0.1.17**: 115 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.17**: 116 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -221,7 +221,7 @@ The colour field also uses the transitive dependency [field-grid-dropdown](https
 
 [Back to overview](/en/projects/blocks-for-ha/)
 
-Custom blocks since 0.1.18 extend the 115 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+Custom blocks since 0.1.18 extend the 116 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
 
 ## Trigger IDs and multiple targets
 
@@ -248,10 +248,22 @@ Since **0.1.30**: enable **Times as JSON list** for several fixed times, e.g. `[
 
 ## Temperature changed
 
-Since **0.1.31**, the new block supports native temperature.changed. Target (JSON): entity_id string or list. Threshold (JSON): type any, above, below, between or outside. any requires only type; above/below require value, between/outside value_min and value_max. Numbers: number plus unit_of_measurement (°C/°F). References: entity (sensor, number or input_number). Optional trigger ID. Other targets (area/device/label) remain unsupported. MQTT topics, qos/retain/evaluate_payload and multiline JSON/Jinja payloads are preserved.
+Since **0.1.32**, the new block supports native temperature.changed. Target (JSON): entity_id string or list. Threshold (JSON): type any, above, below, between or outside. any requires only type; above/below require value, between/outside value_min and value_max. Numbers: number plus unit_of_measurement (°C/°F). References: entity (sensor, number or input_number). Optional trigger ID. Other targets (area/device/label) remain unsupported. MQTT topics, qos/retain/evaluate_payload and multiline JSON/Jinja payloads are preserved.
 
 | Block | Image | Description |
 | --- | --- | --- |
 | **Temperature changed**<br><code>ugso_temperature_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_temperature_trigger.png" alt="Temperature changed" style="max-width:280px;max-height:180px"> | temperature.changed |
 
 [Home Assistant: temperature.changed](https://www.home-assistant.io/triggers/temperature.changed/)
+
+## Calendars and response variables
+
+**0.1.32:** `calendar.event_started` / `calendar.event_ended`. Target: JSON object with `entity_id` as text or a list. Options are optional: `offset` with combined days, hours, minutes and seconds or `HH:MM:SS`; `offset_type` is `before` or `after`. Zero offsets, omitted options and optional trigger IDs are retained.
+
+The **Response variable (optional)** field in **HA action** generates `response_variable`, for example `termine` for `calendar.get_events`. An empty field omits it from YAML. The full holiday automation retains both calendars, HA startup, zeitpunkt/termin_aktiv variables, multiline Jinja templates, choose/default and queued mode. Home Assistant processes calendars and templates.
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Calendar event starts/ends**<br><code>ugso_calendar_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_calendar_trigger.png" alt="Calendar event starts/ends" style="max-width:280px;max-height:180px"> | calendar.event_started / calendar.event_ended |
+
+[Home Assistant: calendar.event_started](https://www.home-assistant.io/triggers/calendar.event_started/) · [calendar.event_ended](https://www.home-assistant.io/triggers/calendar.event_ended/) · [calendar.get_events](https://www.home-assistant.io/actions/calendar.get_events/)

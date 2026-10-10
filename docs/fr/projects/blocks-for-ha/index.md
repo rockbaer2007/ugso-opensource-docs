@@ -7,7 +7,7 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 UGSo Blocks for HA assemble des automatisations Home Assistant avec des blocs visuels. Les déclencheurs, conditions et actions produisent du YAML natif ; les expressions utilisent Jinja dans Home Assistant. Blockly fournit l’éditeur, pas le moteur d’exécution de HA.
 
-**Version 0.1.31 · 111 types de blocs · code source Apache-2.0**
+**Version 0.1.32 · 111 types de blocs · code source Apache-2.0**
 
 [Code source sur GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/blocks_for_ha) · [Documentation DE](/projects/blocks-for-ha/) · [Documentation EN](/en/projects/blocks-for-ha/)
 
@@ -97,3 +97,5 @@ Depuis **0.1.30** : activer **Heures en liste JSON** pour plusieurs heures fixes
 Depuis **0.1.31**, le nouveau bloc prend en charge temperature.changed natif. Cible (JSON) : entity_id texte ou liste. Seuil (JSON) : type any, above, below, between ou outside. any exige seulement type ; above/below exigent value, between/outside value_min et value_max. Nombres : number et unit_of_measurement (°C/°F). Références : entity (sensor, number ou input_number). ID facultatif. Autres cibles (zone/appareil/étiquette) non prises en charge. Les topics MQTT, qos/retain/evaluate_payload et contenus JSON/Jinja multilignes restent présents.
 
 [Home Assistant: temperature.changed](https://www.home-assistant.io/triggers/temperature.changed/)
+
+**0.1.32:** Calendriers et variables de réponse. [→](./blocks)

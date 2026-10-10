@@ -5,9 +5,9 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 115 Blocktypen und Ausgabeformate bleiben erhalten.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 116 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.17**: 115 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.17**: 116 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -221,7 +221,7 @@ Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dr
 
 [Zur Übersicht](/projects/blocks-for-ha/)
 
-Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 115 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 116 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
 
 ## Trigger-IDs und mehrere Ziele
 
@@ -248,10 +248,22 @@ Seit **0.1.30**: Ein Zeit-Auslöser akzeptiert über **Uhrzeiten als JSON-Liste*
 
 ## Temperatur geändert
 
-Seit **0.1.31** unterstützt der neue Block den nativen Auslöser temperature.changed. Ziel (JSON): entity_id als Text oder Liste. Schwelle (JSON): type any, above, below, between oder outside. any benötigt nur type; above/below benötigen value, between/outside value_min und value_max. Zahlen: number plus unit_of_measurement (°C/°F). Referenzen: entity (sensor, number oder input_number). Optional ist eine Trigger-ID. Andere Zielarten (Bereich/Gerät/Label) sind noch nicht importierbar. MQTT-Topics, qos/retain/evaluate_payload und mehrzeilige JSON-/Jinja-Payloads bleiben erhalten.
+Seit **0.1.32** unterstützt der neue Block den nativen Auslöser temperature.changed. Ziel (JSON): entity_id als Text oder Liste. Schwelle (JSON): type any, above, below, between oder outside. any benötigt nur type; above/below benötigen value, between/outside value_min und value_max. Zahlen: number plus unit_of_measurement (°C/°F). Referenzen: entity (sensor, number oder input_number). Optional ist eine Trigger-ID. Andere Zielarten (Bereich/Gerät/Label) sind noch nicht importierbar. MQTT-Topics, qos/retain/evaluate_payload und mehrzeilige JSON-/Jinja-Payloads bleiben erhalten.
 
 | Block | Bild | Funktion |
 | --- | --- | --- |
 | **Temperatur geändert**<br><code>ugso_temperature_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_temperature_trigger.png" alt="Temperatur geändert" style="max-width:280px;max-height:180px"> | temperature.changed |
 
 [Home Assistant: temperature.changed](https://www.home-assistant.io/triggers/temperature.changed/)
+
+## Kalender und Antwortvariablen
+
+**0.1.32:** `calendar.event_started` / `calendar.event_ended`. Ziel: JSON-Objekt mit `entity_id` als Text oder Liste. Optionen sind optional: `offset` mit Tagen, Stunden, Minuten und Sekunden (kombinierbar) oder `HH:MM:SS`; `offset_type` ist `before` oder `after`. Null-Offset, ausgelassene Optionen und optionale Auslöser-ID bleiben erhalten.
+
+Das Feld **Antwortvariable (optional)** im Block **HA-Aktion** erzeugt `response_variable`, zum Beispiel `termine` für `calendar.get_events`. Leer lässt das Feld im YAML weg. Die vollständige Feiertage-/Ferien-Automation erhält beide Kalender, den HA-Start, Variablen zeitpunkt/termin_aktiv, mehrzeilige Jinja-Templates, choose/default und queued. Home Assistant verarbeitet die Kalender und Templates.
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Kalendertermin beginnt/endet**<br><code>ugso_calendar_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_calendar_trigger.png" alt="Kalendertermin beginnt/endet" style="max-width:280px;max-height:180px"> | calendar.event_started / calendar.event_ended |
+
+[Home Assistant: calendar.event_started](https://www.home-assistant.io/triggers/calendar.event_started/) · [calendar.event_ended](https://www.home-assistant.io/triggers/calendar.event_ended/) · [calendar.get_events](https://www.home-assistant.io/actions/calendar.get_events/)

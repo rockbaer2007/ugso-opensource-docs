@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.28 · 115 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.28 · 116 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -259,10 +259,22 @@ Depuis **0.1.30** : activer **Heures en liste JSON** pour plusieurs heures fixes
 
 ## Température modifiée
 
-Depuis **0.1.31**, le nouveau bloc prend en charge temperature.changed natif. Cible (JSON) : entity_id texte ou liste. Seuil (JSON) : type any, above, below, between ou outside. any exige seulement type ; above/below exigent value, between/outside value_min et value_max. Nombres : number et unit_of_measurement (°C/°F). Références : entity (sensor, number ou input_number). ID facultatif. Autres cibles (zone/appareil/étiquette) non prises en charge. Les topics MQTT, qos/retain/evaluate_payload et contenus JSON/Jinja multilignes restent présents.
+Depuis **0.1.32**, le nouveau bloc prend en charge temperature.changed natif. Cible (JSON) : entity_id texte ou liste. Seuil (JSON) : type any, above, below, between ou outside. any exige seulement type ; above/below exigent value, between/outside value_min et value_max. Nombres : number et unit_of_measurement (°C/°F). Références : entity (sensor, number ou input_number). ID facultatif. Autres cibles (zone/appareil/étiquette) non prises en charge. Les topics MQTT, qos/retain/evaluate_payload et contenus JSON/Jinja multilignes restent présents.
 
 | Block | Image | Description |
 | --- | --- | --- |
 | **Température modifiée**<br><code>ugso_temperature_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_temperature_trigger.png" alt="Température modifiée" style="max-width:280px;max-height:180px"> | temperature.changed |
 
 [Home Assistant: temperature.changed](https://www.home-assistant.io/triggers/temperature.changed/)
+
+## Calendriers et variables de réponse
+
+**0.1.32:** `calendar.event_started` / `calendar.event_ended`. Cible : objet JSON avec `entity_id` en texte ou liste. Options facultatives : `offset` avec jours, heures, minutes et secondes combinés ou `HH:MM:SS` ; `offset_type` vaut `before` ou `after`. Décalage nul, options absentes et ID de déclencheur facultatif sont conservés.
+
+Le champ **Variable de réponse (facultative)** du bloc **Action HA** génère `response_variable`, par exemple `termine` pour `calendar.get_events`. Vide, il omet ce champ du YAML. L’automation complète de jours fériés/vacances conserve les deux calendriers, le démarrage HA, les variables zeitpunkt/termin_aktiv, les modèles Jinja multilignes, choose/default et le mode queued. Home Assistant traite les calendriers et les modèles.
+
+| Bloc | Image | Fonction |
+| --- | --- | --- |
+| **Début/fin d’un événement calendrier**<br><code>ugso_calendar_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_calendar_trigger.png" alt="Début/fin d’un événement calendrier" style="max-width:280px;max-height:180px"> | calendar.event_started / calendar.event_ended |
+
+[Home Assistant: calendar.event_started](https://www.home-assistant.io/triggers/calendar.event_started/) · [calendar.event_ended](https://www.home-assistant.io/triggers/calendar.event_ended/) · [calendar.get_events](https://www.home-assistant.io/actions/calendar.get_events/)
