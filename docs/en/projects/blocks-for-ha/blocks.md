@@ -4,7 +4,7 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 ---
 # Block catalog
 
-Version **0.1.9**: 33 block types. Images show actual UGSo editor blocks. Dropdown variants do not count as additional types.
+Version **0.1.10**: 34 block types. Images show actual UGSo editor blocks. Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are currently entered manually.
 
@@ -46,6 +46,16 @@ Minus or disabling else detaches connected blocks instead of deleting them. Reco
 | **Template condition**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template_condition.png" alt="Template condition" style="max-width:280px;max-height:180px"> | Boolean connector for Only if, If and logical groups. Generates `condition: template` with `value_template`. HA must evaluate it as true; not a trigger. |
 
 ## Using variables and templates
+
+### Increment and decrement added in 0.1.10
+
+| Block | Editor image | Function |
+| --- | --- | --- |
+| **Change variable by …**<br><code>ugso_variable_change</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_change.png" alt="Change variable by" style="max-width:280px;max-height:180px"> | Variable dropdown and Number input with default step `1`. Adds the step to a previously assigned numeric variable. Negative steps decrease; `0` and fractional steps are supported. Native HA variable assignment using Jinja. |
+
+The **Variablen** menu dynamically offers **Set**, **Change by** and **Read** for each created variable. Example action chain: **Set test to 10 → Change test by 1 → Log Info message Read test**. The message then uses `11`; a step of `-2` changes `10` to `8`.
+
+Assign a number before incrementing. Undefined variables, text (including `"10"`), Boolean and null are not automatically converted or initialized as `0`; Jinja evaluation in HA fails for those values. Creating a variable alone does not assign it. JSON retains the increment block; importing our exact YAML output recreates it. Other calculation templates remain template blocks. The planned typed-variable dialog is still pending.
 
 Choose **Variablen → Variable erstellen …** in the German editor to create, for example, `leistung`. Names use ASCII letters, digits and `_`, with no leading digit. Place Set variable in **Dann** and connect a number or template. Connect Read variable to a subsequent log message. Creating a name alone does not assign a value. Variables belong to the HA automation run; they are not persistent helpers.
 

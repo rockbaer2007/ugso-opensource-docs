@@ -4,7 +4,7 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 ---
 # Liste der Blocks
 
-Stand **0.1.9**: 33 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen.
+Stand **0.1.10**: 34 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen.
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden derzeit manuell eingegeben.
 
@@ -46,6 +46,16 @@ Bei Minus oder ausgeschaltetem Sonst werden angeschlossene Blocks abgelöst, nic
 | **Template-Bedingung**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/ugso_template_condition.png" alt="Template-Bedingung" style="max-width:280px;max-height:180px"> | Boolean-Anschluss für Nur wenn, Falls und logische Gruppen. Erzeugt `condition: template` mit `value_template`. Ergebnis muss in HA wahr sein; kein eigener Auslöser. |
 
 ## Variablen und Templates verwenden
+
+### Erhöhen und Verringern seit 0.1.10
+
+| Block | Bild im Editor | Funktionsbeschreibung |
+| --- | --- | --- |
+| **Erhöhe Variable um …**<br><code>ugso_variable_change</code> | <img src="/assets/blocks-for-ha/blocks/ugso_variable_change.png" alt="Erhöhe Variable um" style="max-width:280px;max-height:180px"> | Dropdown für die Variable, Number-Eingang mit Standard-Schritt `1`. Addiert den Schritt zur zuvor gesetzten Zahlenvariable. Negative Schritte verringern; `0` und Dezimalschritte sind möglich. Native HA-Variablenzuweisung mit Jinja. |
+
+Im Menü **Variablen** erscheinen für jede erstellte Variable **Setze**, **Erhöhe** und **Variable lesen**. Beispiel in der Aktionskette: **Setze test auf 10 → Erhöhe test um 1 → Log Info Meldung Variable test**. Die Meldung verwendet anschließend den Wert `11`. Mit Schritt `-2` würde aus `10` der Wert `8`.
+
+Vor dem Erhöhen die Variable als Zahl setzen. Fehlende Variablen, Text (auch `"10"`), Boolean oder null werden nicht automatisch konvertiert oder mit `0` initialisiert; die Jinja-Auswertung in HA schlägt dann fehl. Erstellen allein weist keinen Wert zu. JSON erhält den Erhöhen-Block; unser genaues YAML-Ausgabeformat wird beim Import wieder als Erhöhen-Block erkannt. Andere Rechenvorlagen bleiben Template-Blocks. Der geplante Dialog für typisierte Variablen bleibt offen.
 
 Im Menü **Variablen → Variable erstellen …** beispielsweise `leistung` anlegen. Namen verwenden Buchstaben, Ziffern und `_`, keine führende Ziffer. Den Setzen-Block in **Dann** platzieren und eine Zahl oder ein Template anschließen. Danach den Lesen-Block in eine Log-Meldung stecken. Erstellen allein weist noch keinen Wert zu. Variablen gelten für den HA-Automationslauf; sie ersetzen keine dauerhaft gespeicherten Helfer.
 
