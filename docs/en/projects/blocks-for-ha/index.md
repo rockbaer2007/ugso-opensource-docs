@@ -4,9 +4,9 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # UGSo Blocks for HA
 
-New in **0.1.15**: random/RGB/blend colours and original Blockly parameter value functions; 111 block types in total. [All standard categories, usage and remaining variants](./blockly-audit).
+New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.15 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
+**Version 0.1.16 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Direct HA entity/action selection is still planned.
 
 Blocks use classic Blockly puzzle shapes (Geras) with compact text. Initial fitting and the fit button cap small automations at 80 percent. Manual zoom can enlarge the view further. Reference: [Original Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -30,7 +30,7 @@ New in 0.1.7: **search at the bottom of the menu**, multiline text, percentage s
 
 The date comparison includes the year and uses HA’s `now().strftime('%Y-%m-%d')`, evaluated in HA’s time zone. It is a condition, not a trigger. Import maps this shape to the date block and other template conditions to the general template block. The light action generates RGB colour and percentage brightness. Timers use their configured duration; additional parameters stay in the generic HA action. Actual device capabilities must be checked in HA.
 
-Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Six original plugins are bundled locally. Colour blending and random colours are implemented since 0.1.15; automatic growing connections and live entity selection remain pending. Text joining and list editing are implemented.
+Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Ten original plugins are bundled locally. Colour blending and random colours are implemented since 0.1.15; automatic growing connections and live entity selection remain pending. Text joining and list editing are implemented.
 
 ## Install from the HA app store
 
@@ -129,7 +129,7 @@ We already use the original **Blockly 13.3.0** library rather than building a se
 
 The [original workspace and block-parts documentation](https://docs.blockly.com/guides/get-started/workspace-anatomy/) and [Blockly examples](https://raspberrypifoundation.github.io/blockly-samples/) guide familiar interaction patterns. Library updates require connection, import/export and browser checks.
 
-| Task | Status in 0.1.15 / next step |
+| Task | Status in 0.1.16 / next step |
 | --- | --- |
 | Connection geometry and type checks | Boolean conditions and Number values use side connections; triggers/actions use separate statement chains |
 | Extensible blocks | If, AND/OR/NOT, cases, objects and lists implemented; visual action-data fields planned |

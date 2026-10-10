@@ -4,7 +4,7 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 ---
 # Liste der Blocks
 
-Stand **0.1.15**: 111 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.16**: 111 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden derzeit manuell eingegeben.
 
@@ -196,7 +196,7 @@ JSON-Projekte bewahren die Blockformen und Anschlüsse. YAML speichert die nativ
 
 ## Originalplugins und Einbindung
 
-Alle sechs eingebundenen Originalplugins sind auf **13.2.0** festgelegt und werden lokal mit Blockly **13.3.0** ausgeliefert. Lizenz: Apache-2.0. Die folgenden Links führen direkt zu den Original-Repositories. Unsere HA-Blocks, YAML-Adapter und Plus/Minus-Steuerung sind eigener UGSo-Code.
+Die sechs bisherigen Originalplugins sind auf **13.2.0**, die vier Theme-/Zoom-Plugins auf **13.3.0** festgelegt und werden lokal mit Blockly **13.3.0** ausgeliefert. Lizenz: Apache-2.0. Die folgenden Links führen direkt zu den Original-Repositories. Unsere HA-Blocks, YAML-Adapter und Plus/Minus-Steuerung sind eigener UGSo-Code.
 
 | Originalplugin | Nutzung / Stand |
 | --- | --- |
@@ -204,6 +204,10 @@ Alle sechs eingebundenen Originalplugins sind auf **13.2.0** festgelegt und werd
 | [field-multilineinput](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-multilineinput) | Im Textblock; Zeilenumbrüche bleiben im Projekt und YAML erhalten. |
 | [field-slider](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-slider) | Im Prozentblock; 0–100 mit genauer Zahleneingabe. |
 | [field-colour](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-colour) | Im Farbblock; Hex wird für die Lichtaktion nach RGB umgewandelt. Zufall/RGB/Mischung seit 0.1.15 mit eigenen HA-Generatoren. |
+| [theme-dark](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/theme-dark) | Dunkle Arbeitsfläche und Blockauswahl; Teil der gespeicherten Theme-Auswahl. |
+| [theme-modern](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/theme-modern) | Originalpalette mit kräftigeren Rändern; eigene Blocks über Theme-Stile. |
+| [theme-tritanopia](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/theme-tritanopia) | Originalpalette für Standardgruppen, passende UGSo-Erweiterungsfarben und adaptive Schriftkontraste. |
+| [zoom-to-fit](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/zoom-to-fit) | Zusätzlicher Einpassen-Knopf neben den Zoom-Reglern; auch per Tastatur. |
 | [field-date](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-date) | Im Datumsvergleich; UGSo-Unterklasse sichert den verzögerten Kalenderaufruf ab. |
 | [field-dependent-dropdown](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-dependent-dropdown) | Im Helferblock; Helfertyp bestimmt Aktionen. Keine Live-HA-Auswahl. |
 | [block-plus-minus](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/block-plus-minus) | Bedienprinzip in eigenen HA-Blocks umgesetzt; Originalplugin nicht installiert. Zahnrad bleibt verfügbar. |

@@ -4,9 +4,9 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
-Neu in **0.1.15**: Farbe mit Zufall/RGB/Mischung und originale Blockly-Wertfunktionen mit Parametern; insgesamt 111 Blocktypen. [Abgleich aller Standardkategorien, Bedienung und offene Varianten](./blockly-audit).
+Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.15 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
+**Version 0.1.16 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Direkte Entitäts-/Aktionsauswahl aus HA ist noch geplant.
 
 Die Blocks verwenden die klassischen Blockly-Puzzleformen (Geras) mit kompakter Schrift. Startansicht und Einpassen vergrößern kleine Automationen höchstens auf 80 Prozent. Über die Zoomsteuerung lässt sich die Ansicht weiter vergrößern. Referenz: [Original-Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/).
 
@@ -30,7 +30,7 @@ Neu in 0.1.7: **Suche am Menüende**, mehrzeilige Texte, Prozent-Slider, Farbe u
 
 Der Datumsvergleich einschließlich Jahr wird in HA mit `now().strftime('%Y-%m-%d')` ausgewertet; er verwendet die HA-Zeitzone und ist eine Bedingung, kein Auslöser. Diese Form erhält beim Import den Datumsblock; andere Template-Bedingungen erhalten den allgemeinen Template-Block. Die Lichtaktion erzeugt RGB-Farbe und Helligkeit in Prozent. Timer nutzen ihre konfigurierte Dauer; zusätzliche Parameter bleiben in der generischen HA-Aktion. Die tatsächlichen Gerätefähigkeiten müssen in HA geprüft werden.
 
-Das eigene UGSo-Icon verbindet Haus und Puzzle-Baustein und wird in Oberfläche, Browser und HA-App verwendet. Sechs Originalplugins werden lokal ausgeliefert. Farbmischung und Zufallsfarben sind seit 0.1.15 umgesetzt; automatisch wachsende Anschlüsse und Live-Entitätsauswahl bleiben offen. Textverknüpfung und Listenbearbeitung sind umgesetzt.
+Das eigene UGSo-Icon verbindet Haus und Puzzle-Baustein und wird in Oberfläche, Browser und HA-App verwendet. Zehn Originalplugins werden lokal ausgeliefert. Farbmischung und Zufallsfarben sind seit 0.1.15 umgesetzt; automatisch wachsende Anschlüsse und Live-Entitätsauswahl bleiben offen. Textverknüpfung und Listenbearbeitung sind umgesetzt.
 
 ## Im HA-App-Store installieren
 
@@ -129,7 +129,7 @@ Wir verwenden bereits **Blockly 13.3.0**, die originale Bibliothek, statt eine e
 
 Die [Originaldokumentation zur Arbeitsfläche und zu Blockteilen](https://docs.blockly.com/guides/get-started/workspace-anatomy/) und die [Blockly-Beispiele](https://raspberrypifoundation.github.io/blockly-samples/) dienen als Referenz für vertraute Bedienmuster. Bibliotheksupdates werden bewusst mit Verbindungs-, Import-/Export- und Browserprüfungen übernommen.
 
-| Aufgabe | Stand in 0.1.15 / nächster Schritt |
+| Aufgabe | Stand in 0.1.16 / nächster Schritt |
 | --- | --- |
 | Anschlussgeometrie und Typprüfung | Boolean-Bedingungen und Number-Werte seitlich; Auslöser/Aktionen als getrennte Statement-Ketten umgesetzt |
 | Erweiterbare Blocks | Falls, UND/ODER/NICHT, Fallauswahl, Objekte und Listen umgesetzt; Aktionsdaten später als visuelle Felder |
