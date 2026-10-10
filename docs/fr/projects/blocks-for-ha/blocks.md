@@ -5,6 +5,8 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
+Depuis **0.1.45**, la boîte à outils ne contient plus de doublons : nombre dans **Mathématiques**, texte dans **Texte**, couleur dans **Couleur** et groupe ET/OU/NON dans **Logique**. **Valeurs** contient uniquement le pourcentage. Les 163 types et projets existants restent pris en charge.
+
 **0.1.44 · 163 types**. Tous les types ont été vérifiés pour les champs de sélection HA appropriés. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine. [Sélection HA](./entities).
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
@@ -22,10 +24,7 @@ Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec 
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
-| **Nombre**<br><code>ugso_number</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_number.png" alt="Nombre" style="max-width:280px;max-height:180px"> | Nombre fixe éditable. Utilisable pour valeurs et seuils de déclencheurs numériques. |
 | **Pourcentage**<br><code>ugso_percent</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_percent.png" alt="Pourcentage" style="max-width:280px;max-height:180px"> | Curseur de 0 à 100, valeur numérique en pourcentage. |
-| **Texte …**<br><code>ugso_text</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text.png" alt="Texte …" style="max-width:280px;max-height:180px"> | Texte multiligne éditable ; contenu conservé exactement sans traduction automatique. |
-| **Couleur …**<br><code>ugso_colour</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_colour.png" alt="Couleur …" style="max-width:280px;max-height:180px"> | Sélectionner une couleur ; conversion en liste de canaux RGB pour HA. |
 
 ## Date et heure
 
@@ -89,7 +88,6 @@ Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec 
 | --- | --- | --- |
 | **… est …**<br><code>ugso_state_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_state_condition.png" alt="… est …" style="max-width:280px;max-height:180px"> | Vérifier si l’entité possède l’état indiqué. Les valeurs on/off restent les IDs HA. |
 | **… est … …**<br><code>ugso_numeric_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_numeric_condition.png" alt="… est … …" style="max-width:280px;max-height:180px"> | Comparer l’état numérique d’une entité avec une borne fixe, au-dessus ou en dessous. |
-| **Groupe de conditions**<br><code>ugso_logic_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_logic_condition.png" alt="Groupe de conditions" style="max-width:280px;max-height:180px"> | Groupe ET, OU ou NON extensible jusqu’à 100 conditions. Engrenage ou +/− pour modifier les entrées. |
 
 ## Actions
 
@@ -105,6 +103,7 @@ Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec 
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
+| **Groupe de conditions**<br><code>ugso_logic_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_logic_condition.png" alt="Groupe de conditions" style="max-width:280px;max-height:180px"> | Groupe ET, OU ou NON extensible jusqu’à 100 conditions. Engrenage ou +/− pour modifier les entrées. |
 | **Comparaison**<br><code>ugso_compare</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_compare.png" alt="Comparaison" style="max-width:280px;max-height:180px"> | Compare deux valeurs HA. Nombres et textes ont des types différents ; convertir explicitement les valeurs de capteurs dans les modèles. |
 | **ET / OU compact**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_binary_logic.png" alt="ET / OU compact" style="max-width:280px;max-height:180px"> | Combiner deux booléens avec ET/OU ; groupe natif HA ou expression Jinja selon l’usage. |
 | **NON …**<br><code>ugso_not</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_not.png" alt="NON …" style="max-width:280px;max-height:180px"> | Nier une condition : groupe not natif HA ou expression not Jinja lorsqu’utilisé comme valeur. |
@@ -129,6 +128,7 @@ Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec 
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
+| **Nombre**<br><code>ugso_number</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_number.png" alt="Nombre" style="max-width:280px;max-height:180px"> | Nombre fixe éditable. Utilisable pour valeurs et seuils de déclencheurs numériques. |
 | **Calcul arithmétique**<br><code>ugso_math_arithmetic</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_math_arithmetic.png" alt="Calcul arithmétique" style="max-width:280px;max-height:180px"> | Addition, soustraction, multiplication, division ou puissance de nombres. Aucune conversion automatique des textes/booléens. |
 | **Fonction numérique**<br><code>ugso_math_single</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_math_single.png" alt="Fonction numérique" style="max-width:280px;max-height:180px"> | Racine carrée, valeur absolue, négation, logarithmes et exponentielles. Valeurs invalides : erreur de modèle. |
 | **Trigonométrie**<br><code>ugso_math_trig</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_math_trig.png" alt="Trigonométrie" style="max-width:280px;max-height:180px"> | Angles en degrés ; fonctions inverses en degrés. HA utilise des radians en interne. |
@@ -146,6 +146,7 @@ Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec 
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
+| **Texte …**<br><code>ugso_text</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text.png" alt="Texte …" style="max-width:280px;max-height:180px"> | Texte multiligne éditable ; contenu conservé exactement sans traduction automatique. |
 | **Saut de ligne …**<br><code>ugso_text_newline</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_newline.png" alt="Saut de ligne …" style="max-width:280px;max-height:180px"> | Un véritable saut de ligne pour assembler du texte. |
 | **Créer du texte avec …**<br><code>ugso_text_join</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_join.png" alt="Créer du texte avec …" style="max-width:280px;max-height:180px"> | Assemble 0–100 valeurs en texte. Engrenage et +/− modifient le nombre d’entrées. |
 | **Ajouter le texte … à la variable …**<br><code>ugso_text_append</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_append.png" alt="Ajouter le texte … à la variable …" style="max-width:280px;max-height:180px"> | Affecte un nouveau texte à une variable textuelle déjà initialisée. N’écrit pas dans une entité HA. |
@@ -182,6 +183,7 @@ Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec 
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
+| **Couleur …**<br><code>ugso_colour</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_colour.png" alt="Couleur …" style="max-width:280px;max-height:180px"> | Sélectionner une couleur ; conversion en liste de canaux RGB pour HA. |
 | **Couleur aléatoire**<br><code>ugso_colour_random</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_colour_random.png" alt="Couleur aléatoire" style="max-width:280px;max-height:180px"> | Nouvelle liste RGB de trois canaux aléatoires de 0 à 255 à chaque évaluation. |
 | **Couleur rouge … % vert … % bleu … %**<br><code>ugso_colour_rgb</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_colour_rgb.png" alt="Couleur rouge … % vert … % bleu … %" style="max-width:280px;max-height:180px"> | Pourcentages RGB limités à 0–100, convertis en 0–255 et arrondis à la moitié supérieure. |
 | **Mélanger la couleur … avec … part de la couleur 2 …**<br><code>ugso_colour_blend</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_colour_blend.png" alt="Mélanger la couleur … avec … part de la couleur 2 …" style="max-width:280px;max-height:180px"> | Mélange RGB linéaire. Part 0 = première couleur, 1 = seconde. Sans correction gamma ; résultat : liste RGB. |

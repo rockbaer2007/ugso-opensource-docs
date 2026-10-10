@@ -5,6 +5,8 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
+Since **0.1.45**, duplicate toolbox entries are removed: number under **Mathematics**, text under **Text**, colour under **Colour**, and expandable AND/OR/NOT under **Logic**. **Values** contains percentage only. All 163 block types and existing projects remain supported.
+
 Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The current catalog contains 163 types.
 
 Version **0.1.44**: 163 block types, all audited for matching HA selection fields. Images show actual UGSo editor blocks. Guides: [HA selection](./entities), [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.

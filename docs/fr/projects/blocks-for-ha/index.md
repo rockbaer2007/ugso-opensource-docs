@@ -5,6 +5,8 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 # UGSo Blocks for HA
 
+Nouveau en **0.1.45** : quatre doublons retirés de la boîte à outils. Nombre uniquement dans Mathématiques, texte dans Texte, couleur dans Couleur, groupe ET/OU/NON dans Logique. Valeurs contient le pourcentage ; projets existants compatibles.
+
 Nouveau en **0.1.44** : sélection avec recherche des actions et cibles, cinq types de cibles, choix multiple et saisie Jinja. [Utilisation et limites](./entities).
 
 Nouveau en **0.1.42** : trois boutons compacts de même taille pour l’import YAML, avec des libellés sur deux lignes si nécessaire. **Eingabefeld leeren**, à droite, efface le texte collé et l’erreur d’import. L’automatisation actuelle et la case de remplacement sont conservées.
@@ -17,7 +19,7 @@ Nouveau en **0.1.39** : 148 types, déclencheurs/conditions HA avancés, cibles/
 
 UGSo Blocks for HA assemble des automatisations Home Assistant avec des blocs visuels. Les déclencheurs, conditions et actions produisent du YAML natif ; les expressions utilisent Jinja dans Home Assistant. Blockly fournit l’éditeur, pas le moteur d’exécution de HA.
 
-**Version 0.1.44 · 163 types de blocs · code source Apache-2.0**
+**Version 0.1.45 · 163 types de blocs · code source Apache-2.0**
 
 [Code source sur GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/blocks_for_ha) · [Documentation DE](/projects/blocks-for-ha/) · [Documentation EN](/en/projects/blocks-for-ha/)
 

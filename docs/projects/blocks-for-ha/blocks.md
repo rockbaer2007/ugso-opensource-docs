@@ -5,6 +5,8 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
+Seit **0.1.45** enthält die Toolbox keine doppelten Einträge mehr: Zahl unter **Mathematik**, Text unter **Text**, Farbe unter **Farbe** und erweiterbares UND/ODER/NICHT unter **Logik**. **Werte** enthält nur Prozent. Die 163 Blocktypen und bestehende Projekte bleiben erhalten.
+
 Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Der aktuelle Katalog enthält 163 Typen.
 
 Stand **0.1.44**: 163 Blocktypen. Alle Blocktypen wurden auf passende HA-Auswahlfelder geprüft. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen: [HA-Auswahl](./entities), [Datum und Zeit](./time), [Konvertierung](./conversion).
