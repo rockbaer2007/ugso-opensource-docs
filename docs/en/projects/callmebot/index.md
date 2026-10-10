@@ -4,7 +4,9 @@ description: WhatsApp text messages from Home Assistant with recipient profiles 
 ---
 # UGSo CallMeBot
 
-Experimental **HA App 0.1.0** in the [same repository as Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Complete **DE/EN/FR** interface and blocks, system language and light/dark/system appearance. Inspired by [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); original UGSo implementation without ioBroker.
+Experimental **HA App 0.1.1** in the [same repository as Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Complete **DE/EN/FR** interface and blocks, system language and light/dark/system appearance. Inspired by [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); original UGSo implementation without ioBroker.
+
+**Fix in 0.1.1:** Sending works without `crypto.randomUUID`, including HTTP Ingress. Restart the app and reload the page after updating. Request IDs use random bytes when available or a timestamp/counter fallback; they deduplicate requests and are not authentication tokens.
 
 ![English CallMeBot interface](/assets/callmebot/en.png)
 
