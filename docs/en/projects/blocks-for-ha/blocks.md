@@ -5,9 +5,9 @@ description: All UGSo Blocks for HA with images, functionality and original plug
 
 # Block catalog
 
-Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 111 block types and output formats remain unchanged.
+Since 0.1.17, entity fields open a search dialog. [Load, select and manually enter entities](./entities). The 112 block types and output formats remain unchanged.
 
-Version **0.1.17**: 111 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
+Version **0.1.17**: 112 block types. Images show actual UGSo editor blocks. Guides and ioBroker comparison: [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
 Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
@@ -221,4 +221,16 @@ The colour field also uses the transitive dependency [field-grid-dropdown](https
 
 [Back to overview](/en/projects/blocks-for-ha/)
 
-Custom blocks since 0.1.18 extend the 111 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+Custom blocks since 0.1.18 extend the 112 native types. [Editor](./custom-blocks) and [package catalog](./catalog/).
+
+## Trigger IDs and multiple targets
+
+Since **0.1.28**: **States as JSON list**, e.g. `["1_single","1_double"]`; optional trigger IDs on every standard trigger; **Triggered by ID** as a native trigger condition (single ID or JSON list). Generic HA actions support **Targets as JSON list**, optional metadata and explicitly preserved empty data objects. Four-button automations with four `choose` branches can be fully imported.
+
+**Single automation · HA editor** output omits the top-level `id`. Trigger IDs remain. Projects and **automations.yaml list** output retain an existing automation ID.
+
+| Block | Image | Description |
+| --- | --- | --- |
+| **Triggered by ID**<br><code>ugso_trigger_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_trigger_condition.png" alt="Triggered by ID" style="max-width:280px;max-height:180px"> | `condition: trigger` · `id` |
+
+[Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)

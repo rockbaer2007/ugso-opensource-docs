@@ -12,7 +12,7 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.27 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
+**Version 0.1.28 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. HA entity selection is available since 0.1.17; live action selection remains planned.
 
 Since **0.1.25**, select **YAML → Code importieren**, paste YAML and click **Importieren** instead of Save. Without the checkbox, triggers, conditions and actions are added; the current name, settings and block shapes are preserved. Conditions are combined with AND; additional triggers may start more runs. To replace everything, select **Aktuelle Automation vollständig ersetzen** and confirm. One supported automation as an object or single-item list is accepted, up to 1 MB. Invalid code or cancellation leaves the current blocks unchanged. Switching modes retains pasted text for this page session; successful import returns to output. Adding requires a valid current automation; complete replacement also works with incomplete blocks. File import through **Öffnen** remains available.
 
@@ -194,3 +194,9 @@ Original sources: [workspace-search plugin](https://github.com/raspberrypifounda
 Since **0.1.23**, the introduction and automation settings use less vertical space: smaller heading and spacing, with 32-pixel project controls. This leaves more room for the workspace. The HA connection status and entity count are now displayed in the settings bar, including on narrow screens.
 
 Since **0.1.24**, the arrow at the upper right of the HA output panel collapses it to the right. Blockly expands into the free space. The narrow **HA-Ausgabe** rail reopens the panel, with the state saved locally. On mobile, a compact row remains below the editor. Collapsing changes neither YAML nor projects.
+
+Since **0.1.28**: **States as JSON list**, e.g. `["1_single","1_double"]`; optional trigger IDs on every standard trigger; **Triggered by ID** as a native trigger condition (single ID or JSON list). Generic HA actions support **Targets as JSON list**, optional metadata and explicitly preserved empty data objects. Four-button automations with four `choose` branches can be fully imported.
+
+**Single automation · HA editor** output omits the top-level `id`. Trigger IDs remain. Projects and **automations.yaml list** output retain an existing automation ID.
+
+[Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)

@@ -5,7 +5,7 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
-**0.1.27 · 111 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
+**0.1.28 · 112 types**. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine.
 
 Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
@@ -233,3 +233,15 @@ Ces plugins fournissent des champs ou commandes, sans être des types de blocs s
 | zoom-to-fit | Ajuster les blocs à la vue. | [Dépôt original](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/zoom-to-fit) |
 | workspace-search | Chercher les blocs déjà placés, Ctrl/Cmd+F. | [Dépôt original](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/workspace-search) |
 
+
+## IDs des déclencheurs et cibles multiples
+
+Depuis **0.1.28** : **États en liste JSON**, par exemple `["1_single","1_double"]` ; IDs facultatifs dans tous les déclencheurs standard ; **Déclenché par ID** comme condition native (ID individuel ou liste JSON). Les actions HA génériques acceptent **Cibles en liste JSON**, des métadonnées facultatives et conservent explicitement les données vides. Les automatisations à quatre boutons et quatre branches `choose` sont entièrement importables.
+
+La sortie **Automatisation individuelle · Éditeur HA** omet l’`id` principal. Les IDs des déclencheurs restent présents. Les projets et la sortie **liste automations.yaml** conservent l’ID existant de l’automatisation.
+
+| Block | Image | Description |
+| --- | --- | --- |
+| **Déclenché par ID**<br><code>ugso_trigger_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_trigger_condition.png" alt="Déclenché par ID" style="max-width:280px;max-height:180px"> | `condition: trigger` · `id` |
+
+[Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)

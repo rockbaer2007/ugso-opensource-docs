@@ -12,7 +12,7 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.27 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
+**Version 0.1.28 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. Entitätsauswahl aus HA ist seit 0.1.17 vorhanden; Live-Aktionsauswahl bleibt geplant.
 
 Seit **0.1.25** rechts **YAML → Code importieren** wählen, YAML einfügen und **Importieren** statt Speichern klicken. Ohne Haken werden Auslöser, Bedingungen und Aktionen ergänzt; Name, Einstellungen und bestehende Blockformen bleiben erhalten. Bedingungen werden gemeinsam als UND geprüft; zusätzliche Auslöser können weitere Starts verursachen. Zum vollständigen Ersetzen **Aktuelle Automation vollständig ersetzen** aktivieren und die Abfrage bestätigen. Unterstützt wird eine Automation als Objekt oder Liste mit einem Eintrag, maximal 1 MB. Ungültiger Code oder Abbruch lässt die aktuellen Blocks erhalten. Einfügetext bleibt beim Moduswechsel für diese Seite erhalten; nach Erfolg erscheint wieder die Ausgabe. Zum Ergänzen muss die aktuelle Automation gültig sein; vollständiger Ersatz funktioniert auch bei unvollständigen Blocks. Dateiimport über **Öffnen** bleibt verfügbar.
 
@@ -194,3 +194,9 @@ Originalquellen: [workspace-search-Plugin](https://github.com/raspberrypifoundat
 Seit **0.1.23** benötigen Einleitung und Automationseinstellungen weniger Höhe: kleinere Überschrift und Abstände sowie 32 Pixel hohe Projektfelder und Knöpfe geben der Arbeitsfläche mehr Platz. HA-Verbindungsstatus und Entitätsanzahl stehen jetzt ebenfalls in der Einstellungsleiste und sind auch auf schmalen Bildschirmen sichtbar.
 
 Seit **0.1.24** klappt der Pfeil rechts oben die HA-Ausgabe nach rechts ein. Blockly erweitert sich in den frei werdenden Platz. Die schmale Leiste **HA-Ausgabe** öffnet das Panel wieder; der Zustand wird lokal gespeichert. Auf Mobilgeräten bleibt eine kompakte Zeile unter dem Editor. Das Einklappen verändert weder YAML noch Projekte.
+
+Seit **0.1.28**: Zustandslisten über **Zustände als JSON-Liste**, z. B. `["1_single","1_double"]`; optionale Trigger-IDs in allen Standardauslösern; **Ausgelöst durch ID** als native Trigger-Bedingung (einzelne ID oder JSON-Liste). Allgemeine HA-Aktionen unterstützen **Ziele als JSON-Liste**, optionale Metadaten und erhalten ausdrücklich leere Datenobjekte. Vierfach-Taster mit vier `choose`-Zweigen sind vollständig importierbar.
+
+**Einzelne Automation · HA-Editor** gibt keine oberste `id` aus. Trigger-IDs bleiben erhalten. Projekt und **automations.yaml-Liste** behalten eine vorhandene Automations-ID.
+
+[Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)

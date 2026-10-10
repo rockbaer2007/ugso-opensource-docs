@@ -5,9 +5,9 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
-Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 111 Blocktypen und Ausgabeformate bleiben erhalten.
+Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswählen und manuell eingeben](./entities). Die 112 Blocktypen und Ausgabeformate bleiben erhalten.
 
-Stand **0.1.17**: 111 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
+Stand **0.1.17**: 112 Blocktypen. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen und ioBroker-Gegenüberstellung: [Datum und Zeit](./time), [Konvertierung](./conversion).
 
 Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
@@ -221,4 +221,16 @@ Die Farbauswahl verwendet zusätzlich die indirekte Abhängigkeit [field-grid-dr
 
 [Zur Übersicht](/projects/blocks-for-ha/)
 
-Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 111 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+Benutzerdefinierte Blocks seit 0.1.18 ergänzen die 112 nativen Typen. [Editor](./custom-blocks) und [Paketkatalog](./catalog/).
+
+## Trigger-IDs und mehrere Ziele
+
+Seit **0.1.28**: Zustandslisten über **Zustände als JSON-Liste**, z. B. `["1_single","1_double"]`; optionale Trigger-IDs in allen Standardauslösern; **Ausgelöst durch ID** als native Trigger-Bedingung (einzelne ID oder JSON-Liste). Allgemeine HA-Aktionen unterstützen **Ziele als JSON-Liste**, optionale Metadaten und erhalten ausdrücklich leere Datenobjekte. Vierfach-Taster mit vier `choose`-Zweigen sind vollständig importierbar.
+
+**Einzelne Automation · HA-Editor** gibt keine oberste `id` aus. Trigger-IDs bleiben erhalten. Projekt und **automations.yaml-Liste** behalten eine vorhandene Automations-ID.
+
+| Block | Bild | Funktion |
+| --- | --- | --- |
+| **Ausgelöst durch ID**<br><code>ugso_trigger_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_trigger_condition.png" alt="Ausgelöst durch ID" style="max-width:280px;max-height:180px"> | `condition: trigger` · `id` |
+
+[Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)

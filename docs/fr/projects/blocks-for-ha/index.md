@@ -7,7 +7,7 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 UGSo Blocks for HA assemble des automatisations Home Assistant avec des blocs visuels. Les déclencheurs, conditions et actions produisent du YAML natif ; les expressions utilisent Jinja dans Home Assistant. Blockly fournit l’éditeur, pas le moteur d’exécution de HA.
 
-**Version 0.1.27 · 111 types de blocs · code source Apache-2.0**
+**Version 0.1.28 · 111 types de blocs · code source Apache-2.0**
 
 [Code source sur GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/blocks_for_ha) · [Documentation DE](/projects/blocks-for-ha/) · [Documentation EN](/en/projects/blocks-for-ha/)
 
@@ -81,3 +81,9 @@ Les prochaines possibilités comprennent la sélection des services et appareils
 Projet communautaire indépendant, sans affiliation officielle à Home Assistant ou Blockly. Blockly est une bibliothèque de la Raspberry Pi Foundation, initialement développée chez Google. Les dépendances sont intégrées localement ; aucune bibliothèque Blockly n’est chargée depuis un CDN. Blockly et ses plugins : Apache-2.0 ; YAML : ISC ; fflate : MIT. Les notices sont incluses dans l’application.
 
 <a class="blockly-attribution" href="https://www.blockly.com/" target="_blank" rel="noopener noreferrer"><img class="badge-light" src="/assets/blocks-for-ha/branding/built-with-blockly-badge-white.svg" alt="Built with Blockly" width="87" height="32"><img class="badge-dark" src="/assets/blocks-for-ha/branding/built-with-blockly-badge-black.svg" alt="Built with Blockly" width="87" height="32"></a>
+
+Depuis **0.1.28** : **États en liste JSON**, par exemple `["1_single","1_double"]` ; IDs facultatifs dans tous les déclencheurs standard ; **Déclenché par ID** comme condition native (ID individuel ou liste JSON). Les actions HA génériques acceptent **Cibles en liste JSON**, des métadonnées facultatives et conservent explicitement les données vides. Les automatisations à quatre boutons et quatre branches `choose` sont entièrement importables.
+
+La sortie **Automatisation individuelle · Éditeur HA** omet l’`id` principal. Les IDs des déclencheurs restent présents. Les projets et la sortie **liste automations.yaml** conservent l’ID existant de l’automatisation.
+
+[Home Assistant: Trigger IDs](https://www.home-assistant.io/docs/automation/trigger/#trigger-id) · [Trigger condition](https://www.home-assistant.io/docs/scripts/conditions/#trigger-condition)
