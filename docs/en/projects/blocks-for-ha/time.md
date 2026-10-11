@@ -4,6 +4,36 @@ description: Time blocks, HA timezone and ioBroker comparison.
 ---
 # Date and time
 
+## Schedules and triggers since 0.1.60
+
+Click the CRON field in **Triggers → Schedule**. The popup offers **Wizard / Simple / CRON**, following the ioBroker dialogs. Simple builds intervals; Wizard also offers a specific time with numeric weekdays. CRON provides component tabs and optional seconds. **OK** applies a valid rule; **Cancel** and Escape preserve the previous value. Light/dark appearance and all DE/EN/FR dialog texts are supported.
+
+![Schedule](/assets/blocks-for-ha/blocks/en/ugso_schedule_trigger.png)
+
+![CRON dialog](/assets/blocks-for-ha/schedule-en.png)
+
+![Dark CRON dialog](/assets/blocks-for-ha/schedule-dark-en.png)
+
+Five fields: minute, hour, day of month, month, weekday. Six fields start with seconds. Numbers, lists, ranges and steps are supported. Examples: `*/5 * * * *` every five minutes; `*/30 * * * * *` every 30 seconds; `30 7 * * 1-5` weekdays at 07:30. Sunday is 0 or 7. Home Assistant executes in its local time; no browser timer. Steps apply to clock fields: `*/7` minutes starts again at minute 0 each hour.
+
+Output uses native `time_pattern` or `time` triggers with `weekday`. Month and day of month must be `*`. Dates, validity ranges, one-off events and astronomical day/night windows are not yet implemented in the dialog. Unsupported rules are explicitly rejected. Weekday rules expand to at most 2000 individual times; more frequent rules are rejected. Calendar triggers and HA conditions remain available separately. Project JSON retains the CRON rule; YAML retains its equivalent native HA structure.
+
+| ioBroker trigger | Blocks for HA / HA equivalent |
+| --- | --- |
+| If object / If objects | State trigger with one or multiple entities; from/to, attribute and hold time. No ioBroker object IDs. |
+| Triggered by / acknowledge value | HA has no ioBroker `ack` equivalent here. No artificial acknowledgement block. |
+| ↪ Value / Message | New trigger-data value block: current/previous state, entity ID, trigger ID/type, MQTT payload/JSON and event data. Missing data returns `none`; convert numbers as needed. |
+| Astro with offset | Sunrise/sunset with optional minute offset. Other sun conditions via native HA blocks. |
+| Schedule / CRON | Dialog above, native HA execution. No dynamic registration of named ioBroker schedules. |
+| Message received | MQTT or HA event trigger with filters; no direct ioBroker script-message receiver. |
+| Log message | HA event trigger for `system_log_event`, when HA is configured to provide those events. No dedicated ioBroker log listener. |
+| File/enum events | No direct implementation. Use an available HA integration and its events/entities. |
+| Further native HA triggers | MQTT, template, webhook, device, tag, conversation, zone and geolocation are now directly in **Triggers**, without duplicates in HA advanced. |
+
+![Trigger data](/assets/blocks-for-ha/blocks/en/ugso_trigger_value.png)
+
+References: [original ioBroker trigger blocks](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_trigger.ts), [native HA triggers](https://www.home-assistant.io/docs/automation/trigger/). Appearance follows the original; execution and data remain specific to HA.
+
 Since **0.1.11**, the category includes seven additional blocks. [All blocks with images](./blocks#date-and-time-added-in-0-1-11). The editor uses the original Blockly library; HA Jinja generation is an original UGSo implementation. References: [ioBroker JavaScript adapter time blocks](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_time.ts) and [Blockly block definitions](https://docs.blockly.com/guides/create-custom-blocks/define/block-definitions/).
 
 ## ioBroker / Blocks for HA

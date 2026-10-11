@@ -5,6 +5,15 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
+## Horaire et données du déclencheur depuis 0.1.60
+
+| Bloc | Image | Fonction |
+| --- | --- | --- |
+| **Horaire** · Déclencheurs<br><code>ugso_schedule_trigger</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_schedule_trigger.png" alt="Horaire" style="max-width:280px;max-height:180px"> | Champ CRON avec dialogue Assistant/Simple/CRON et secondes. Motifs horaires et heures avec jours HA natifs. [Règles et limites](./time). |
+| **↪ Données du déclencheur** · Déclencheurs<br><code>ugso_trigger_value</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_trigger_value.png" alt="Données du déclencheur" style="max-width:280px;max-height:180px"> | État actuel/précédent, ID d’entité, ID/type du déclencheur, message MQTT/JSON et données d’événement. Donnée absente : `none`. |
+
+Les déclencheurs HA avancés sont directement dans **Déclencheurs**. Le déclencheur solaire dispose aussi d’un décalage facultatif en minutes. [Comparaison des déclencheurs ioBroker](./time).
+
 ## Libellés, commentaires et MQTT depuis 0.1.59
 
 Les libellés standard et les éditeurs par engrenage suivent maintenant ioBroker/Blockly en DE/EN/FR : **Attributs / Attribut**, **Liste / Élément**, **joindre / Élément** et **selon / dans le cas de / default**. Les noms d’attributs sont modifiables dans l’éditeur ; la branche default peut être ajoutée ou supprimée. Les libellés de texte, listes, mathématiques et logique sont harmonisés. Les entrées HA supplémentaires, les affectations immuables, les formats de date Python et le prochain événement solaire restent explicites.

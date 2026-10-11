@@ -4,6 +4,8 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # Blocks for HA
 
+Neu in **0.1.60**: **Zeitplan** mit Wizard/Einfach/CRON-Popup, Feldreitern und optionalen Sekunden, Wochentage, Auslöserdaten und Sonnenversatz. Erweiterte native HA-Auslöser direkt unter **Auslöser**. DE/EN/FR. [ioBroker-Vergleich und Grenzen](./time).
+
 Neu in **0.1.59**: ioBroker-nahe Beschriftungen und Zahnrad-Popups, **Kommentar** unter System mit YAML-Kommentaren und **MQTT-Nachricht** unter Nachrichten ohne Instanzauswahl. Alle Texte und Blockbilder in DE/EN/FR. [Details und Bilder](./blocks).
 
 ## Leerer Start seit 0.1.52

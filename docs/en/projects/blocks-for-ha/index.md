@@ -4,6 +4,8 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # Blocks for HA
 
+New in **0.1.60**: **Schedule** with Wizard/Simple/CRON popup, component tabs and optional seconds, weekdays, trigger data and sun offsets. Extended native HA triggers directly in **Triggers**. DE/EN/FR. [ioBroker comparison and limits](./time).
+
 New in **0.1.59**: ioBroker-style labels and gear builders, **Comment** in System with YAML comments, and **MQTT message** in Messages without an instance selector. Labels and block images in DE/EN/FR. [Details and images](./blocks).
 
 ## Empty start since 0.1.52

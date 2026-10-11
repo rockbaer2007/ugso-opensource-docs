@@ -5,6 +5,8 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 # Blocks for HA
 
+Nouveau en **0.1.60** : **Horaire** avec dialogue Assistant/Simple/CRON, onglets et secondes facultatives, jours, données du déclencheur et décalage solaire. Déclencheurs HA natifs avancés directement dans **Déclencheurs**. DE/EN/FR. [Comparaison ioBroker et limites](./time).
+
 Nouveau en **0.1.59** : libellés et éditeurs proches d’ioBroker, **Commentaire** dans Système avec commentaires YAML et **Message MQTT** dans Messages sans sélection d’instance. Textes et images en DE/EN/FR. [Détails et images](./blocks).
 
 ## Démarrage vide depuis 0.1.52

@@ -5,6 +5,15 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
+## Zeitplan und Auslöserdaten seit 0.1.60
+
+| Baustein | Bild | Funktion |
+| --- | --- | --- |
+| **Zeitplan** · Auslöser<br><code>ugso_schedule_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_schedule_trigger.png" alt="Zeitplan" style="max-width:280px;max-height:180px"> | CRON-Feld mit Wizard/Einfach/CRON-Dialog und Sekunden. Native HA-Zeitmuster und Uhrzeiten mit Wochentagen. [Unterstützte Regeln und Grenzen](./time). |
+| **↪ Auslöserdaten** · Auslöser<br><code>ugso_trigger_value</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_trigger_value.png" alt="Auslöserdaten" style="max-width:280px;max-height:180px"> | Wert/alter Wert, Entitäts-ID, Auslöser-ID/-typ, MQTT-Meldung/JSON und Ereignisdaten. Fehlende Daten: `none`. |
+
+Erweiterte native HA-Auslöser sind direkt unter **Auslöser** einsortiert. Der Sonnenauslöser hat zusätzlich einen optionalen Minutenversatz. [Gegenüberstellung der ioBroker-Trigger](./time).
+
 ## Beschriftungen, Kommentar und MQTT seit 0.1.59
 
 Standardbeschriftungen und Zahnrad-Popups folgen jetzt ioBroker/Blockly in DE/EN/FR: **Attribute / Attribut**, **Liste / Element**, **verbinden / Element** und **der Fall ist / im Falle von / default**. Attributnamen sind im Popup editierbar; der default-Zweig ist hinzufügbar und entfernbar. Text-, Listen-, Mathematik- und Logikbeschriftungen wurden angeglichen. Zusätzliche HA-Eingaben, unveränderliche Variablenzuweisungen, Python-Datumsformate und die nächste Sonnenzeit bleiben ausdrücklich erkennbar.

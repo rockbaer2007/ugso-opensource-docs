@@ -4,6 +4,36 @@ description: Zeit-Blocks, HA-Zeitzone und Gegenüberstellung mit ioBroker.
 ---
 # Datum und Zeit
 
+## Zeitplan und Auslöser seit 0.1.60
+
+Unter **Auslöser → Zeitplan** die CRON-Regel anklicken. Der Dialog bietet **Wizard / Einfach / CRON**, entsprechend den ioBroker-Popups. Einfach erzeugt Intervalle; der Wizard zusätzlich eine feste Uhrzeit mit numerischen Wochentagen. CRON hat Feldreiter und optional Sekunden. **OK** übernimmt eine gültige Regel; **Abbrechen** und Escape bewahren den bisherigen Wert. Die Darstellung folgt Hell/Dunkel. Alle Dialogtexte sind in DE/EN/FR verfügbar.
+
+![Zeitplan](/assets/blocks-for-ha/blocks/de/ugso_schedule_trigger.png)
+
+![CRON-Dialog](/assets/blocks-for-ha/schedule-de.png)
+
+![CRON-Dialog dunkel](/assets/blocks-for-ha/schedule-dark-de.png)
+
+Fünf Felder: Minute, Stunde, Monatstag, Monat, Wochentag. Sechs Felder beginnen mit Sekunden. Zahlen, Listen, Bereiche und Schritte sind möglich. Beispiele: `*/5 * * * *` alle fünf Minuten; `*/30 * * * * *` alle 30 Sekunden; `30 7 * * 1-5` werktags um 07:30. Sonntag ist 0 oder 7. Home Assistant führt die Automation in seiner Ortszeit aus; kein Browser-Timer. `/Schritte` beziehen sich auf das jeweilige Uhrzeitfeld: `*/7` Minuten beginnt in jeder Stunde wieder bei Minute 0.
+
+Die Ausgabe verwendet native `time_pattern` oder `time`-Auslöser mit `weekday`. Monat und Monatstag müssen `*` sein. Datum, Gültigkeitsbereich, einmalige Termine und astronomische Tages-/Nachtfenster sind im Dialog noch nicht umgesetzt. Diese Regeln werden nicht stillschweigend ignoriert. Wochentagsregeln werden höchstens in 2000 einzelne Uhrzeiten aufgelöst; häufigere Regeln sind ausdrücklich abgewiesen. Kalender-Auslöser und HA-Bedingungen bleiben separat verfügbar. Projekt-JSON erhält die CRON-Regel, YAML die gleichwertige native HA-Struktur.
+
+| ioBroker-Auslöser | Blocks for HA / HA-Umsetzung |
+| --- | --- |
+| Falls Objekt / Falls Objekte | Zustandsauslöser mit einer oder mehreren Entitäten; von/nach, Attribut und Haltezeit. Keine ioBroker-Objekt-IDs. |
+| Auslösung durch / ack bestätigen | HA besitzt hier kein ioBroker-`ack`. Kein künstlicher Bestätigungsblock. |
+| ↪ Wert / Meldung | Neuer Auslöserdatenblock: Wert, alter Wert, Entitäts-ID, Auslöser-ID/-typ, MQTT-Meldung/JSON und Ereignisdaten. Fehlende Daten ergeben `none`; Zahlen bei Bedarf umwandeln. |
+| Astro mit Versatz | Sonnenauf-/untergang mit optionalem Minutenversatz. Weitere Sonnenbedingungen über native HA-Blöcke. |
+| Zeitplan / CRON | Dialog wie oben, native HA-Ausführung. Keine dynamische Registrierung benannter ioBroker-Zeitpläne. |
+| Nachricht empfangen | MQTT- oder HA-Ereignisauslöser mit Filter; kein direkter Empfang von ioBroker-Skriptnachrichten. |
+| Log-Nachricht | HA-Ereignisauslöser mit `system_log_event`, sofern HA diese Ereignisse entsprechend bereitstellt. Kein eigenständiger ioBroker-Loglistener. |
+| Datei-/Enum-Ereignisse | Keine direkte Umsetzung. Vorhandene HA-Integration bzw. deren Ereignisse/Entitäten verwenden. |
+| Weitere native HA-Auslöser | MQTT, Template, Webhook, Gerät, Tag, Gespräch, Zone und Geolocation stehen jetzt direkt unter **Auslöser**, ohne Doppelung unter HA erweitert. |
+
+![Auslöserdaten](/assets/blocks-for-ha/blocks/de/ugso_trigger_value.png)
+
+Referenzen: [Originale ioBroker-Triggerblöcke](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_trigger.ts), [native HA-Auslöser](https://www.home-assistant.io/docs/automation/trigger/). Die Oberfläche orientiert sich am Original; Ausführung und Daten bleiben HA-spezifisch.
+
 Seit **0.1.11** enthält die Kategorie sieben zusätzliche Blocks. [Alle Blocks mit Bildern](./blocks#datum-und-zeit-seit-0-1-11). Die Oberfläche verwendet die originale Blockly-Library; die Übersetzung nach HA-Jinja ist eine eigene UGSo-Implementierung. Referenz sind die [Zeit-Blocks des ioBroker-JavaScript-Adapters](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_time.ts) und die [Blockly-Blockdefinitionen](https://docs.blockly.com/guides/create-custom-blocks/define/block-definitions/).
 
 ## ioBroker / UGSo Blocks für HA

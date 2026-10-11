@@ -5,6 +5,15 @@ description: All Blocks for HA with images, functionality and original plugins.
 
 # Block catalog
 
+## Schedule and trigger data since 0.1.60
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Schedule** · Triggers<br><code>ugso_schedule_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_schedule_trigger.png" alt="Schedule" style="max-width:280px;max-height:180px"> | CRON field with Wizard/Simple/CRON dialog and seconds. Native HA time patterns and times with weekdays. [Supported rules and limits](./time). |
+| **↪ Trigger data** · Triggers<br><code>ugso_trigger_value</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_trigger_value.png" alt="Trigger data" style="max-width:280px;max-height:180px"> | Current/previous state, entity ID, trigger ID/type, MQTT payload/JSON and event data. Missing data: `none`. |
+
+Extended native HA triggers are directly in **Triggers**. The sun trigger also provides an optional minute offset. [ioBroker trigger comparison](./time).
+
 ## Labels, comments and MQTT since 0.1.59
 
 Standard labels and gear builders now follow ioBroker/Blockly in DE/EN/FR: **Attributes / Attribute**, **List / Item**, **join / Item** and **switch / in case of / default**. Attribute names are editable inside the builder; default branches can be added or removed. Text, list, math and logic wording is aligned. Additional HA inputs, immutable variable assignments, Python date formats and the next sun event remain explicit.
