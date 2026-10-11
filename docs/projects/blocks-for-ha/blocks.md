@@ -5,6 +5,15 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
+## Beschriftungen, Kommentar und MQTT seit 0.1.59
+
+Standardbeschriftungen und Zahnrad-Popups folgen jetzt ioBroker/Blockly in DE/EN/FR: **Attribute / Attribut**, **Liste / Element**, **verbinden / Element** und **der Fall ist / im Falle von / default**. Attributnamen sind im Popup editierbar; der default-Zweig ist hinzufügbar und entfernbar. Text-, Listen-, Mathematik- und Logikbeschriftungen wurden angeglichen. Zusätzliche HA-Eingaben, unveränderliche Variablenzuweisungen, Python-Datumsformate und die nächste Sonnenzeit bleiben ausdrücklich erkennbar.
+
+| Baustein | Bild | Funktion |
+| --- | --- | --- |
+| **Kommentar** · System<br><code>ugso_comment</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_comment.png" alt="Kommentar" style="max-width:280px;max-height:180px"> | Gelbe Notiz, frei oder in einer Aktionskette. Projekt-JSON erhält Text und Position. Aktive Kommentare werden im YAML als `#`-Zeilen vor der Automation gesammelt und beim Import wieder als freie Kommentarblöcke übernommen, auch beim Ergänzen. Ursprüngliche YAML-Kommentarpositionen werden nicht bewahrt. Keine Aktion. |
+| **MQTT-Nachricht** · Nachrichten<br><code>ugso_mqtt_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_mqtt_action.png" alt="MQTT-Nachricht" style="max-width:280px;max-height:180px"> | Thema (Topic), Nachricht, Retain und QoS 0/1/2. Text- oder Jinja-Eingänge; native Ausgabe `mqtt.publish`. Keine Instanzauswahl. Die MQTT-Integration von HA muss eingerichtet sein; HA führt das Senden aus. |
+
 Seit **0.1.58** orientiert sich die Bedienung möglichst eng an ioBroker: Erweiterungen ausschließlich über das Zahnrad, ohne zusätzliche +/−/S-Knöpfe. Dies gilt auch für Objekte, Listen, Text, Fallauswahl und Parallel. Der kompakte UND-/ODER-Block ist aus dem Menü entfernt; alte Projekte bleiben lesbar. HA-Felder, Verbindungen und YAML-Funktionen bleiben erhalten. Ziel ist vertraute ioBroker-Optik bei umfassender HA-Automationsunterstützung.
 
 ## Nachrichten seit 0.1.48

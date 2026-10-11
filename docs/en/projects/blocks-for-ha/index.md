@@ -4,6 +4,8 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # Blocks for HA
 
+New in **0.1.59**: ioBroker-style labels and gear builders, **Comment** in System with YAML comments, and **MQTT message** in Messages without an instance selector. Labels and block images in DE/EN/FR. [Details and images](./blocks).
+
 ## Empty start since 0.1.52
 
 Since **0.1.54**, **New automation** offers **Save and start new**, **Start new without saving** or **Cancel**. Before clearing, the backup downloads as `.blocks.json`, including blocks, automation metadata and pasted YAML. Restore it with **Open project**. Cancel or Escape preserves the current work. Starting new resets blocks, undo history, name, description and inputs. Language, appearance, HA connection and installed block packages remain available.

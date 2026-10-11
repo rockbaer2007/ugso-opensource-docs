@@ -5,6 +5,8 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 # Blocks for HA
 
+Nouveau en **0.1.59** : libellés et éditeurs proches d’ioBroker, **Commentaire** dans Système avec commentaires YAML et **Message MQTT** dans Messages sans sélection d’instance. Textes et images en DE/EN/FR. [Détails et images](./blocks).
+
 ## Démarrage vide depuis 0.1.52
 
 Depuis **0.1.54**, **Nouvelle automatisation** propose **Enregistrer et recommencer**, **Recommencer sans enregistrer** ou **Annuler**. Avant de vider l’éditeur, la sauvegarde est téléchargée au format `.blocks.json` avec les blocs, les données d’automatisation et le YAML collé. **Ouvrir le projet** permet de la restaurer. Annuler ou Échap conserve le travail actuel. Recommencer réinitialise les blocs, l’historique d’annulation, le nom, la description et les champs. La langue, l’apparence, la connexion HA et les paquets de blocs installés restent disponibles.

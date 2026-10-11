@@ -5,6 +5,15 @@ description: All Blocks for HA with images, functionality and original plugins.
 
 # Block catalog
 
+## Labels, comments and MQTT since 0.1.59
+
+Standard labels and gear builders now follow ioBroker/Blockly in DE/EN/FR: **Attributes / Attribute**, **List / Item**, **join / Item** and **switch / in case of / default**. Attribute names are editable inside the builder; default branches can be added or removed. Text, list, math and logic wording is aligned. Additional HA inputs, immutable variable assignments, Python date formats and the next sun event remain explicit.
+
+| Block | Image | Function |
+| --- | --- | --- |
+| **Comment** · System<br><code>ugso_comment</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_comment.png" alt="Comment" style="max-width:280px;max-height:180px"> | Yellow note, standalone or inside an action chain. Project JSON retains text and position. Enabled notes export as `#` lines before the automation and return as standalone comment blocks on YAML import, including append mode. Original YAML comment positions are not preserved. No action is executed. |
+| **MQTT message** · Messages<br><code>ugso_mqtt_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_mqtt_action.png" alt="MQTT message" style="max-width:280px;max-height:180px"> | Topic, message, retain and QoS 0/1/2. Text or Jinja inputs; native `mqtt.publish` output. No instance selector. Requires the configured HA MQTT integration; HA performs the actual send. |
+
 Since **0.1.58**, controls follow ioBroker as closely as possible: expansion uses the gear only, without additional +/minus/S buttons. This also applies to objects, lists, text, cases and parallel branches. Compact AND/OR is removed from the toolbox; existing projects remain readable. HA fields, connections and YAML features remain supported. The design goal is familiar ioBroker appearance with comprehensive HA automation support.
 
 ## Messages since 0.1.48

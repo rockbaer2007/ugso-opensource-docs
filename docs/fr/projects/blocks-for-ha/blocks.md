@@ -5,6 +5,15 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
+## Libellés, commentaires et MQTT depuis 0.1.59
+
+Les libellés standard et les éditeurs par engrenage suivent maintenant ioBroker/Blockly en DE/EN/FR : **Attributs / Attribut**, **Liste / Élément**, **joindre / Élément** et **selon / dans le cas de / default**. Les noms d’attributs sont modifiables dans l’éditeur ; la branche default peut être ajoutée ou supprimée. Les libellés de texte, listes, mathématiques et logique sont harmonisés. Les entrées HA supplémentaires, les affectations immuables, les formats de date Python et le prochain événement solaire restent explicites.
+
+| Bloc | Image | Fonction |
+| --- | --- | --- |
+| **Commentaire** · Système<br><code>ugso_comment</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_comment.png" alt="Commentaire" style="max-width:280px;max-height:180px"> | Note jaune, libre ou dans une chaîne d’actions. Le projet JSON conserve texte et position. Les notes actives sont regroupées en lignes `#` avant l’automatisation YAML et redeviennent des blocs libres à l’import, aussi en mode ajout. Les positions originales des commentaires YAML ne sont pas conservées. Aucune action exécutée. |
+| **Message MQTT** · Messages<br><code>ugso_mqtt_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_mqtt_action.png" alt="Message MQTT" style="max-width:280px;max-height:180px"> | Sujet (Topic), message, conserver et QoS 0/1/2. Entrées texte ou Jinja ; sortie native `mqtt.publish`. Sans sélection d’instance. L’intégration MQTT de HA doit être configurée ; HA effectue l’envoi. |
+
 Depuis **0.1.58**, les commandes suivent autant que possible ioBroker : extension uniquement par l’engrenage, sans boutons +/−/S supplémentaires. Cela concerne aussi objets, listes, texte, cas et branches parallèles. ET/OU compact est retiré du menu ; les projets existants restent lisibles. Les champs HA, connexions et fonctions YAML sont conservés. L’objectif est une apparence familière d’ioBroker avec une prise en charge complète des automatisations HA.
 
 ## Messages depuis 0.1.48
