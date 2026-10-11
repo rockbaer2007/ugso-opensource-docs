@@ -4,6 +4,8 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # Blocks for HA
 
+Neu in **0.1.66**: Unnötige Beispieltexte in allen Kategorien entfernt, auch MQTT, Objekte, Listen, Umwandlungen und Ersatzwerte. Assist-Antwort und Jinja-Text starten leer und einzeilig. Trennzeichen, gültige JSON-Grundstrukturen und technische Einstellungen bleiben erhalten; ebenso vorhandene Projektwerte.
+
 Neu in **0.1.65**: Einzeiliger Textblock ohne Zusatzzeile, neue Textfelder leer und keine vorbelegte „Hallo“-Verbindung bei „Erstelle Text aus“. Bestehende Texte bleiben erhalten.
 
 Neu in **0.1.64**: Zweckbezogene Templates für Text, Uhrzeitbereich, Wertänderung und typisierte falls/sonst-Werte. Freier Jinja-Code steht einmal unter Templates. App-/Automationssteuerung zweizeilig wie bei ioBroker. Vollständig DE/EN/FR. [Anleitung und Bilder](./system-template).

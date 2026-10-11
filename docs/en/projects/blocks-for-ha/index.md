@@ -4,6 +4,8 @@ description: Create native Home Assistant automations with visual Blocks.
 ---
 # Blocks for HA
 
+New in **0.1.66**: unnecessary sample text removed across all categories, including MQTT, objects, lists, conversions and fallbacks. Assist responses and literal Jinja text start empty with single-line inputs. Separators, valid JSON structures and technical settings remain, as do existing project values.
+
 New in **0.1.65**: single-line text block without an extra hint row, empty new text fields and no preconnected Hello block in Create text from. Existing text is retained.
 
 New in **0.1.64**: purpose-specific Templates for text, time periods, value changes and typed if/else results. Free Jinja code appears once in Templates. App/automation controls use two rows like ioBroker. Complete DE/EN/FR. [Guide and images](./system-template).

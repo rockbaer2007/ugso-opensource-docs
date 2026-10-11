@@ -5,6 +5,8 @@ description: All Blocks for HA with images, functionality and original plugins.
 
 # Block catalog
 
+Since **0.1.66**, simple text values start empty across categories: MQTT topic/message, object/list contents, conversions and fallbacks contain no sample text. Assist responses and literal Jinja text also use single-line inputs. Enter required values before exporting. Separators, valid JSON structures and numeric, time and action settings remain. Opening a saved project retains its text, including existing line breaks. Multiline Jinja code and JSON editors remain available.
+
 ## Separate logic blocks and HA gears since 0.1.61
 
 **and** (`ugso_and`) and **or** (`ugso_or`) are separate expandable blocks; **not** has one input. Combined `ugso_logic_condition` remains supported for old projects. Optional HA inputs can be added, removed and reordered individually through the gear. [Reviewed block groups and images](./advanced).

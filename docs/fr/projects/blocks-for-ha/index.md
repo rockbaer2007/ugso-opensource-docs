@@ -5,6 +5,8 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 # Blocks for HA
 
+Nouveau en **0.1.66** : textes d’exemple inutiles supprimés dans toutes les catégories, notamment MQTT, objets, listes, conversions et valeurs de remplacement. Réponses Assist et texte Jinja vides sur une ligne. Séparateurs, structures JSON valides, réglages techniques et valeurs des projets existants conservés.
+
 Nouveau en **0.1.65** : champ texte sur une ligne sans ligne d’aide, nouveaux textes vides et aucun bloc Bonjour prébranché dans Créer du texte avec. Texte existant conservé.
 
 Nouveau en **0.1.64** : Templates par usage pour texte, plage horaire, variation et résultats si/sinon typés. Code Jinja libre une seule fois dans Templates. Commandes d’applications et d’automatisations sur deux lignes comme ioBroker. DE/EN/FR complets. [Guide et images](./system-template).

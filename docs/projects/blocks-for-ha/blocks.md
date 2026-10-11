@@ -5,6 +5,8 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
+Seit **0.1.66** starten einfache Textwerte kategorienweit leer: MQTT-Topic und Nachricht, Objekt-/Listeninhalte, Umwandlungen und Ersatzwerte enthalten keine Beispieltexte. Assist-Antwort und Jinja-Text verwenden ebenfalls einzeilige Textfelder. Erforderliche Inhalte vor dem Export selbst eintragen. Trennzeichen, gültige JSON-Grundstrukturen sowie Zahlen-, Zeit- und Aktionseinstellungen bleiben erhalten. Gespeicherte Texte werden beim Öffnen nicht geleert, auch vorhandene Zeilenumbrüche bleiben erhalten. Mehrzeilige Jinja-Code- und JSON-Editoren bleiben verfügbar.
+
 ## Einzelne Logikblöcke und HA-Zahnräder seit 0.1.61
 
 **und** (`ugso_and`) und **oder** (`ugso_or`) sind eigene erweiterbare Blöcke; **nicht** bleibt ein einzelner Eingang. Der kombinierte `ugso_logic_condition` ist nur für alte Projekte unterstützt. Optionale HA-Eingaben lassen sich im Zahnrad einzeln hinzufügen, entfernen und anordnen. [Vollständige Gegenüberstellung der geprüften Blockgruppen und Bilder](./advanced).

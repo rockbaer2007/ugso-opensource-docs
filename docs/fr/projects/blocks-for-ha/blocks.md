@@ -5,6 +5,8 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
+Depuis **0.1.66**, les valeurs de texte simples sont vides dans toutes les catégories : sujet/message MQTT, contenus d’objets/listes, conversions et valeurs de remplacement sans exemples. Réponses Assist et texte Jinja utilisent aussi des champs sur une ligne. Saisir les valeurs requises avant l’export. Séparateurs, structures JSON valides et réglages numériques, horaires et d’actions conservés. L’ouverture d’un projet conserve ses textes, y compris les sauts de ligne existants. Les éditeurs multilignes de code Jinja et JSON restent disponibles.
+
 ## Blocs logiques séparés et engrenages HA depuis 0.1.61
 
 **et** (`ugso_and`) et **ou** (`ugso_or`) sont des blocs extensibles séparés ; **non** a une entrée. Le bloc combiné `ugso_logic_condition` reste pris en charge pour les anciens projets. Ajouter, retirer et ordonner les entrées HA facultatives par engrenage. [Groupes examinés et images](./advanced).
