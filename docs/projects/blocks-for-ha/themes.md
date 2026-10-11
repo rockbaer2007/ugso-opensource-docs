@@ -6,7 +6,7 @@ description: Gespeicherte Theme-Auswahl und zusätzlicher Einpassen-Knopf im Blo
 
 ## Logik und Objekte seit 0.1.56
 
-In Standard/Dark sind Logik-Blocks blau und Objekt-Blocks braun, jeweils mit lesbarer weißer Schrift. Modern und Tritanopia behalten ihre eigenen Paletten. **Falls / sonst falls / sonst** steht jetzt direkt in **Logik**: Das Zahnrad öffnet den Baukasten für weitere Zweige; **+ / −** ergänzt oder entfernt einen sonst-falls-Zweig, **S** schaltet Sonst um. Bedingungen und Aktionsketten werden als native HA-Verzweigung ausgegeben. Bestehende Projekte bleiben kompatibel.
+In Standard/Dark sind Logik-Blocks blau und Objekt-Blocks braun, jeweils mit lesbarer weißer Schrift. Modern und Tritanopia behalten ihre eigenen Paletten. **Falls / sonst falls / sonst** steht jetzt direkt in **Logik**: Das Zahnrad öffnet den Baukasten für weitere Zweige; weitere Zweige und Sonst werden dort hinzugefügt oder entfernt. Bedingungen und Aktionsketten werden als native HA-Verzweigung ausgegeben. Bestehende Projekte bleiben kompatibel.
 
 ## Punktraster seit 0.1.51
 

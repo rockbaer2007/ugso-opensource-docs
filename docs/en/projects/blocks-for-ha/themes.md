@@ -6,7 +6,7 @@ description: Saved theme selection and an additional fit control in the Blockly 
 
 ## Logic and Objects since 0.1.56
 
-In Standard/Dark, logic blocks are blue and object blocks brown, with readable white labels. Modern and Tritanopia retain their own palettes. **If / else if / else** is now directly available in **Logic**: the gear opens the branch builder; **+ / −** adds or removes an else-if branch, and **S** toggles Else. Conditions and action sequences produce native HA branching. Existing projects remain compatible.
+In Standard/Dark, logic blocks are blue and object blocks brown, with readable white labels. Modern and Tritanopia retain their own palettes. **If / else if / else** is now directly available in **Logic**: the gear opens the branch builder; additional branches and Else are added or removed there. Conditions and action sequences produce native HA branching. Existing projects remain compatible.
 
 ## Dot grid since 0.1.51
 

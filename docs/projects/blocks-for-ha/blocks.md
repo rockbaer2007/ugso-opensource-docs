@@ -5,6 +5,8 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
+Seit **0.1.58** orientiert sich die Bedienung möglichst eng an ioBroker: Erweiterungen ausschließlich über das Zahnrad, ohne zusätzliche +/−/S-Knöpfe. Dies gilt auch für Objekte, Listen, Text, Fallauswahl und Parallel. Der kompakte UND-/ODER-Block ist aus dem Menü entfernt; alte Projekte bleiben lesbar. HA-Felder, Verbindungen und YAML-Funktionen bleiben erhalten. Ziel ist vertraute ioBroker-Optik bei umfassender HA-Automationsunterstützung.
+
 ## Nachrichten seit 0.1.48
 
 Neue Kategorie **Nachrichten**, drei DE/EN/FR-Bausteine. [Einrichtung, Schlüsselverwaltung und Versand](../callmebot/).
@@ -67,7 +69,7 @@ In Standard/Dark sind Auslöser orange, Bedingungen und Logik blau, Werte grün,
 | **Zufallsbruch**<br><code>ugso_math_random_fraction</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_math_random_fraction.png" alt="Zufallsbruch" style="max-width:280px;max-height:180px"> | Zufallswert in Schritten von 0,00001. Kein kryptografischer Zufall; bei jeder Auswertung neu. |
 | **Winkel atan2**<br><code>ugso_math_atan2</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_math_atan2.png" alt="Winkel atan2" style="max-width:280px;max-height:180px"> | Vierquadranten-Winkelfunktion aus dem Blockly-Standard, zusätzlich zu den gezeigten Bildern. |
 | **Zeilenumbruch**<br><code>ugso_text_newline</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_text_newline.png" alt="Zeilenumbruch" style="max-width:280px;max-height:180px"> | Liefert einen echten Zeilenumbruch für Textverknüpfung. |
-| **Text verknüpfen**<br><code>ugso_text_join</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_text_join.png" alt="Text verknüpfen" style="max-width:280px;max-height:180px"> | Verknüpft 0–100 Werte als Text. Zahnrad und +/− ändern die Anzahl der Eingänge. |
+| **Text verknüpfen**<br><code>ugso_text_join</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_text_join.png" alt="Text verknüpfen" style="max-width:280px;max-height:180px"> | Verknüpft 0–100 Werte als Text. Zahnrad ändern die Anzahl der Eingänge. |
 | **Text anhängen**<br><code>ugso_text_append</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_text_append.png" alt="Text anhängen" style="max-width:280px;max-height:180px"> | Weist der vorher initialisierten Textvariable einen neuen Text zu. Kein Schreiben einer HA-Entität. |
 | **Textlänge**<br><code>ugso_text_length</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_text_length.png" alt="Textlänge" style="max-width:280px;max-height:180px"> | Anzahl Unicode-Codepunkte, nicht JavaScript-UTF-16-Codeeinheiten. |
 | **Text ist leer**<br><code>ugso_text_empty</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_text_empty.png" alt="Text ist leer" style="max-width:280px;max-height:180px"> | Prüft einen Text auf Länge 0. |
@@ -144,7 +146,7 @@ Die violetten Zeit-Blocks verwenden einen eigenen typisierten Datumswert-Anschlu
 | **Aktuelle Zeit als Datumswert**<br><code>ugso_time_now</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_time_now.png" alt="Aktuelle Zeit als Datumswert" style="max-width:280px;max-height:180px"> | HA-Ortszeit mit Datum und Zeitzone, Time-Ausgang für Berechnung oder Formatierung. |
 | **Berechnete Zeit**<br><code>ugso_time_boundary</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_time_boundary.png" alt="Berechnete Zeit" style="max-width:280px;max-height:180px"> | Beginn von Tag, nächstem Tag, Woche (Montag), Monat oder Jahr in HA-Ortszeit. |
 | **Nächste Sonnenzeit**<br><code>ugso_time_sun</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_time_sun.png" alt="Nächste Sonnenzeit" style="max-width:280px;max-height:180px"> | Aufgang, Untergang, Dämmerung, Höchststand oder Sonnenmitternacht aus sun.sun. Minutenoffset; kann morgen sein. |
-| **Zeit berechnen**<br><code>ugso_time_shift</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_time_shift.png" alt="Zeit berechnen" style="max-width:280px;max-height:180px"> | Datumswert plus/minus Zahl in Millisekunden, Sekunden, Minuten, Stunden oder Tagen. |
+| **Zeit berechnen**<br><code>ugso_time_shift</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_time_shift.png" alt="Zeit berechnen" style="max-width:280px;max-height:180px"> | Datumswert gear Zahl in Millisekunden, Sekunden, Minuten, Stunden oder Tagen. |
 | **Zeit formatieren**<br><code>ugso_time_format</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_time_format.png" alt="Zeit formatieren" style="max-width:280px;max-height:180px"> | Datumswert als Uhrzeit, Datum, Datum/Uhrzeit, ISO mit Zeitzone oder Unix-Sekunden. |
 
 ## Weitere Blocks
@@ -159,7 +161,7 @@ Die violetten Zeit-Blocks verwenden einen eigenen typisierten Datumswert-Anschlu
 | **HA startet**<br><code>ugso_start_trigger</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_start_trigger.png" alt="HA startet" style="max-width:280px;max-height:180px"> | Startet beim Home-Assistant-Start; `trigger: homeassistant`. |
 | **Zustand ist**<br><code>ugso_state_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_state_condition.png" alt="Zustand ist" style="max-width:280px;max-height:180px"> | Boolean-Bedingung: Entität hat den angegebenen Zustand; `condition: state`. |
 | **Zahlenvergleich**<br><code>ugso_numeric_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_numeric_condition.png" alt="Zahlenvergleich" style="max-width:280px;max-height:180px"> | Boolean-Bedingung über/unter einer Grenze; `condition: numeric_state`. |
-| **UND / ODER / NICHT**<br><code>ugso_logic_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_logic_condition.png" alt="UND / ODER / NICHT" style="max-width:280px;max-height:180px"> | Verknüpft 1–100 Bedingungen. Plus/Minus ergänzt oder entfernt den letzten Eingang; Zahnrad ordnet um. `and`, `or`, `not`. |
+| **UND / ODER / NICHT**<br><code>ugso_logic_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_logic_condition.png" alt="UND / ODER / NICHT" style="max-width:280px;max-height:180px"> | Verknüpft 1–100 Bedingungen. Das Zahnrad ergänzt, entfernt und ordnet Eingänge um. `and`, `or`, `not`. |
 | **Datum heute**<br><code>ugso_date_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_date_condition.png" alt="Datum heute" style="max-width:280px;max-height:180px"> | Datumsauswahl mit ist/ab/bis einschließlich Jahr. HA-Template vergleicht das heutige Datum in der HA-Zeitzone. Kein eigener Auslöser. |
 | **Zahl**<br><code>ugso_number</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_number.png" alt="Zahl" style="max-width:280px;max-height:180px"> | Unbegrenzter Zahlen-Wertblock. Passt in Grenzen und Wartezeiten; deren eigene Validierung gilt weiterhin. |
 | **Prozent**<br><code>ugso_percent</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_percent.png" alt="Prozent" style="max-width:280px;max-height:180px"> | Slider und genaue Eingabe für ganze Werte 0–100. Number-Output, beispielsweise für Ladezustand oder Helligkeit. |
@@ -211,9 +213,9 @@ Seit **0.1.56** steht hier auch der erweiterbare Falls-Block. Logik ist in Stand
 
 | Block | Bild im Editor | Funktionsbeschreibung |
 | --- | --- | --- |
-| **Falls / sonst falls / sonst**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_if_action.png" alt="Falls / sonst falls / sonst" style="max-width:280px;max-height:180px"> | Plus/Minus ergänzt oder entfernt den letzten sonst-falls-Zweig; S schaltet Sonst um. Zahnrad zum Umordnen. `if` oder `choose`, erster passender Zweig. |
+| **Falls / sonst falls / sonst**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_if_action.png" alt="Falls / sonst falls / sonst" style="max-width:280px;max-height:180px"> | Das Zahnrad ergänzt, entfernt und ordnet sonst-falls-Zweige um und fügt Sonst hinzu. `if` oder `choose`, erster passender Zweig. |
 | **Vergleich**<br><code>ugso_compare</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_compare.png" alt="Vergleich" style="max-width:280px;max-height:180px"> | Vergleicht zwei Werte mit =, ≠, &lt;, ≤, &gt; oder ≥. Zahlen, Texte, Variablen und einzelne Template-Ausdrücke anschließen. Liefert Boolean; Ausgabe als HA-Template-Bedingung oder Variablenwert. |
-| **UND / ODER kompakt**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_binary_logic.png" alt="UND ODER kompakt" style="max-width:280px;max-height:180px"> | Zwei Boolean-Eingänge. Als Bedingung native HA-`and`/`or`-Gruppe; als Variablenwert geklammerter Jinja-Ausdruck. Die erweiterbare Gruppe bleibt für mehr Eingänge verfügbar. |
+| **UND / ODER kompakt**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_binary_logic.png" alt="UND ODER kompakt" style="max-width:280px;max-height:180px"> | Nur für bestehende Projekte; aus der Blockauswahl entfernt. Stattdessen die erweiterbare UND-/ODER-Gruppe verwenden. |
 | **NICHT**<br><code>ugso_not</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_not.png" alt="NICHT" style="max-width:280px;max-height:180px"> | Negiert eine Boolean-Bedingung. Als Bedingung native HA-`not`-Gruppe, als Variablenwert Jinja-`not`. |
 | **wahr / falsch**<br><code>ugso_boolean</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_boolean.png" alt="wahr falsch" style="max-width:280px;max-height:180px"> | Boolean-Konstante mit Dropdown. Für Bedingungen und Variablen; die Zuweisung erzeugt echte YAML-Boolean-Werte. |
 | **null**<br><code>ugso_null</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_null.png" alt="null" style="max-width:280px;max-height:180px"> | Kein Wert. Variablen erhalten YAML `null`, Ausdrücke Jinja `none`. Weder `0` noch `falsch`; kein Boolean-Bedingungsblock. |
@@ -227,7 +229,7 @@ JSON-Projekte bewahren die Blockformen und Anschlüsse. YAML speichert die nativ
 
 ## Originalplugins und Einbindung
 
-Die sechs bisherigen Originalplugins sind auf **13.2.0**, die vier Theme-/Zoom-Plugins und die Arbeitsbereichssuche auf **13.3.0** festgelegt und werden lokal mit Blockly **13.3.0** ausgeliefert. Lizenz: Apache-2.0. Die folgenden Links führen direkt zu den Original-Repositories. Unsere HA-Blocks, YAML-Adapter und Plus/Minus-Steuerung sind eigener UGSo-Code.
+Die sechs bisherigen Originalplugins sind auf **13.2.0**, die vier Theme-/Zoom-Plugins und die Arbeitsbereichssuche auf **13.3.0** festgelegt und werden lokal mit Blockly **13.3.0** ausgeliefert. Lizenz: Apache-2.0. Die folgenden Links führen direkt zu den Original-Repositories. Unsere HA-Blocks, YAML-Adapter und Zahnrad-Baukästen sind eigener UGSo-Code.
 
 | Originalplugin | Nutzung / Stand |
 | --- | --- |

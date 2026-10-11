@@ -60,7 +60,7 @@ The [catalog of all 163 blocks](./blocks) shows an image and description for eac
 
 New in **0.1.8**: **Variablen → Variable erstellen …**, Set/Read variable blocks and a **Templates** category with dedicated value and condition blocks. Variables generate native HA `variables` actions; reads produce <code v-pre>{{ name }}</code>. Jinja is evaluated in HA. [Usage, example and import limits](./blocks#using-variables-and-templates).
 
-New in 0.1.7: **search at the bottom of the menu**, multiline text, percentage slider, colour/light action, today’s date and dependent helper dropdowns. Plus/minus adds or removes the last input or else-if branch; **S** toggles else. Removing inputs detaches blocks without deleting them. The gear remains for reordering.
+New in 0.1.7: **search at the bottom of the menu**, multiline text, percentage slider, colour/light action, today’s date and dependent helper dropdowns. The gear adds or removes the last input or else-if branch; **S** toggles else. Removing inputs detaches blocks without deleting them. The gear remains for reordering.
 
 The date comparison includes the year and uses HA’s `now().strftime('%Y-%m-%d')`, evaluated in HA’s time zone. It is a condition, not a trigger. Import maps this shape to the date block and other template conditions to the general template block. The light action generates RGB colour and percentage brightness. Timers use their configured duration; additional parameters stay in the generic HA action. Actual device capabilities must be checked in HA.
 

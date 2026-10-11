@@ -41,7 +41,7 @@ Sous **Projet et description → Options HA**, modifier `variables`, `trigger_va
 
 - **Attendre un déclencheur** relie une chaîne de déclencheurs ; `timeout` / `continue_on_timeout` se règlent dans les options.
 - **Groupe d’actions** produit une `sequence` native avec étapes connectables.
-- **Parallèle** lance des branches natives. **+ / −** permet 1–100 branches. Supprimer une branche occupée laisse ses blocs déconnectés ; les reconnecter ou supprimer.
+- **Parallèle** lance des branches natives. **L’engrenage** permet 1–100 branches. Supprimer une branche occupée laisse ses blocs déconnectés ; les reconnecter ou supprimer.
 - **Continuer seulement si** produit une condition comme étape d’action. Événement, réponse Assist et scène ont leurs blocs.
 - Les répétitions acceptent aussi des listes/objets littéraux pour `for_each` ; les délais acceptent unités combinées et fractions. Les formes complexes ou mixtes restent des étapes JSON.
 

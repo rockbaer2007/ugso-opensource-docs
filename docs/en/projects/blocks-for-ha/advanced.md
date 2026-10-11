@@ -41,7 +41,7 @@ Under **Project & description → HA options**, edit `variables`, `trigger_varia
 
 - **Wait for trigger** connects a trigger chain and offers `timeout` / `continue_on_timeout` in its options field.
 - **Action group** generates a native `sequence` with connectable steps.
-- **Parallel** starts native parallel branches. **+ / −** allows 1–100 branches. Removing an occupied branch leaves its contents disconnected; reconnect or delete them.
+- **Parallel** starts native parallel branches. The **gear** allows 1–100 branches. Removing an occupied branch leaves its contents disconnected; reconnect or delete them.
 - **Continue only if** generates a condition as an action step. Event, Assist response and scene have dedicated blocks.
 - Repeats also support literal lists/objects for `for_each`; delays accept combined units and fractions. Extended or mixed branch shapes remain JSON steps.
 

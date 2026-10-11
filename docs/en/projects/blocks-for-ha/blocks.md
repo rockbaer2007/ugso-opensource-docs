@@ -5,6 +5,8 @@ description: All Blocks for HA with images, functionality and original plugins.
 
 # Block catalog
 
+Since **0.1.58**, controls follow ioBroker as closely as possible: expansion uses the gear only, without additional +/minus/S buttons. This also applies to objects, lists, text, cases and parallel branches. Compact AND/OR is removed from the toolbox; existing projects remain readable. HA fields, connections and YAML features remain supported. The design goal is familiar ioBroker appearance with comprehensive HA automation support.
+
 ## Messages since 0.1.48
 
 New **Messages** category, three DE/EN/FR blocks. [Setup, credentials and sending](../callmebot/).
@@ -67,7 +69,7 @@ In Standard/Dark, triggers are orange, conditions and logic blue, values green, 
 | **Random fraction**<br><code>ugso_math_random_fraction</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_math_random_fraction.png" alt="Random fraction" style="max-width:280px;max-height:180px"> | 0 up to but excluding 1, in increments of 0.00001; evaluated anew each time. |
 | **atan2 angle**<br><code>ugso_math_atan2</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_math_atan2.png" alt="atan2 angle" style="max-width:280px;max-height:180px"> | Additional Blockly standard operation; four-quadrant angle in degrees. |
 | **Newline**<br><code>ugso_text_newline</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_text_newline.png" alt="Newline" style="max-width:280px;max-height:180px"> | Actual LF, CRLF or CR newline value. |
-| **Join text**<br><code>ugso_text_join</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_text_join.png" alt="Join text" style="max-width:280px;max-height:180px"> | 0–100 inputs combined as text; gear or +/− controls the input count. |
+| **Join text**<br><code>ugso_text_join</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_text_join.png" alt="Join text" style="max-width:280px;max-height:180px"> | 0–100 inputs combined as text; the gear controls the input count. |
 | **Append text**<br><code>ugso_text_append</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_text_append.png" alt="Append text" style="max-width:280px;max-height:180px"> | Assign a new value to an already initialized text variable. |
 | **Text length**<br><code>ugso_text_length</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_text_length.png" alt="Text length" style="max-width:280px;max-height:180px"> | Count Unicode code points rather than JavaScript UTF-16 units. |
 | **Text empty**<br><code>ugso_text_empty</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_text_empty.png" alt="Text empty" style="max-width:280px;max-height:180px"> | Check whether text has length zero. |
@@ -144,7 +146,7 @@ Purple time blocks use a typed datetime socket. [Usage, boundary rules and compa
 | **Current datetime**<br><code>ugso_time_now</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_now.png" alt="Current datetime" style="max-width:280px;max-height:180px"> | HA local date, time and timezone. Typed Time output. |
 | **Calendar start**<br><code>ugso_time_boundary</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_boundary.png" alt="Calendar start" style="max-width:280px;max-height:180px"> | Start of today, tomorrow, week (Monday), month or year. |
 | **Next sun event**<br><code>ugso_time_sun</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_sun.png" alt="Next sun event" style="max-width:280px;max-height:180px"> | Rise, set, dawn, dusk, solar noon or midnight from sun.sun, with minute offset. May be tomorrow. |
-| **Shift datetime**<br><code>ugso_time_shift</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_shift.png" alt="Shift datetime" style="max-width:280px;max-height:180px"> | Datetime plus/minus number in milliseconds, seconds, minutes, hours or days. |
+| **Shift datetime**<br><code>ugso_time_shift</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_shift.png" alt="Shift datetime" style="max-width:280px;max-height:180px"> | Datetime gear number in milliseconds, seconds, minutes, hours or days. |
 | **Format datetime**<br><code>ugso_time_format</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_format.png" alt="Format datetime" style="max-width:280px;max-height:180px"> | Clock time, date, date/time, ISO with timezone or Unix seconds. |
 
 ## Other blocks
@@ -159,7 +161,7 @@ Purple time blocks use a typed datetime socket. [Usage, boundary rules and compa
 | **HA starts**<br><code>ugso_start_trigger</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_start_trigger.png" alt="HA starts" style="max-width:280px;max-height:180px"> | Starts when Home Assistant starts; `trigger: homeassistant`. |
 | **State is**<br><code>ugso_state_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_state_condition.png" alt="State is" style="max-width:280px;max-height:180px"> | Boolean condition: entity has the specified state; `condition: state`. |
 | **Numeric condition**<br><code>ugso_numeric_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_numeric_condition.png" alt="Numeric condition" style="max-width:280px;max-height:180px"> | Boolean above/below threshold condition; `condition: numeric_state`. |
-| **AND / OR / NOT**<br><code>ugso_logic_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_logic_condition.png" alt="AND / OR / NOT" style="max-width:280px;max-height:180px"> | Combines 1–100 conditions. Plus/minus adds or removes the last input; gear reorders. `and`, `or`, `not`. |
+| **AND / OR / NOT**<br><code>ugso_logic_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_logic_condition.png" alt="AND / OR / NOT" style="max-width:280px;max-height:180px"> | Combines 1–100 conditions. The gear adds, removes and reorders inputs. `and`, `or`, `not`. |
 | **Today’s date**<br><code>ugso_date_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_date_condition.png" alt="Today’s date" style="max-width:280px;max-height:180px"> | Date picker with equals/on-or-after/on-or-before, including year. HA template compares today in HA’s time zone. Not a trigger. |
 | **Number**<br><code>ugso_number</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_number.png" alt="Number" style="max-width:280px;max-height:180px"> | General numeric value. Fits thresholds and delays; destination-specific validation still applies. |
 | **Percentage**<br><code>ugso_percent</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_percent.png" alt="Percentage" style="max-width:280px;max-height:180px"> | Slider and exact input for integers 0–100. Number output, e.g. charge level or brightness. |
@@ -211,9 +213,9 @@ Since **0.1.56**, the expandable If block is available here. Logic is blue and O
 
 | Block | Editor image | Function |
 | --- | --- | --- |
-| **If / else if / else**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_if_action.png" alt="If / else if / else" style="max-width:280px;max-height:180px"> | Plus/minus adds or removes the last else-if branch; S toggles else. Gear reorders. `if` or `choose`, first matching branch. |
+| **If / else if / else**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_if_action.png" alt="If / else if / else" style="max-width:280px;max-height:180px"> | The gear adds, removes and reorders else-if branches and adds Else. `if` or `choose`, first matching branch. |
 | **Compare**<br><code>ugso_compare</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_compare.png" alt="Compare" style="max-width:280px;max-height:180px"> | Compares two values using =, ≠, &lt;, ≤, &gt; or ≥. Accepts numbers, text, variables and single template expressions. Boolean result exported as an HA template condition or variable value. |
-| **Compact AND / OR**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_binary_logic.png" alt="Compact AND OR" style="max-width:280px;max-height:180px"> | Two Boolean inputs. Generates native HA `and`/`or` groups as conditions and parenthesized Jinja as variable values. Expandable groups remain available. |
+| **Compact AND / OR**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_binary_logic.png" alt="Compact AND OR" style="max-width:280px;max-height:180px"> | Existing projects only; removed from the toolbox. Use the expandable AND/OR group instead. |
 | **NOT**<br><code>ugso_not</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_not.png" alt="NOT" style="max-width:280px;max-height:180px"> | Negates a Boolean condition. Native HA `not` group as condition, Jinja `not` as variable value. |
 | **true / false**<br><code>ugso_boolean</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_boolean.png" alt="true false" style="max-width:280px;max-height:180px"> | Boolean constant with dropdown for conditions and variables. Assignments retain native YAML Boolean types. |
 | **null**<br><code>ugso_null</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_null.png" alt="null" style="max-width:280px;max-height:180px"> | No value: YAML `null` in assignments, Jinja `none` in expressions. Different from `0` and `false`; not a Boolean condition. |
@@ -227,7 +229,7 @@ JSON projects preserve block shapes and connections. YAML preserves native meani
 
 ## Original plugins and integration
 
-The six existing plugins are pinned to **13.2.0**, the four theme/zoom plugins and workspace search to **13.3.0**, all bundled locally with Blockly **13.3.0**. License: Apache-2.0. Links below lead directly to upstream repositories. HA blocks, YAML adapters and plus/minus controls are UGSo code.
+The six existing plugins are pinned to **13.2.0**, the four theme/zoom plugins and workspace search to **13.3.0**, all bundled locally with Blockly **13.3.0**. License: Apache-2.0. Links below lead directly to upstream repositories. HA blocks, YAML adapters and gear controls are UGSo code.
 
 | Originalplugin | Usage / status |
 | --- | --- |

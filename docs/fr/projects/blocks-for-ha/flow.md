@@ -22,13 +22,13 @@ Ajouter une pause si une boucle risque de tourner continuellement. Une condition
 
 ## Objets et listes
 
-Un nouvel objet est un dictionnaire local. L’engrenage ou +/− ajoute jusqu’à 100 clés. On peut lire un attribut, vérifier sa présence et obtenir la liste des clés. Clé absente : `null` ; objet invalide : erreur de modèle HA.
+Un nouvel objet est un dictionnaire local. L’engrenage ajoute jusqu’à 100 clés. On peut lire un attribut, vérifier sa présence et obtenir la liste des clés. Clé absente : `null` ; objet invalide : erreur de modèle HA.
 
 Modifier/supprimer un attribut affecte un **nouveau dictionnaire** à la variable. Initialiser la variable comme objet auparavant. Ces opérations ne modifient ni une autre variable ni les attributs d’une entité HA. Les listes sont aussi des valeurs locales ; les changements produisent de nouvelles listes compatibles avec le bac à sable Jinja immuable.
 
 ## Logique et choix
 
-Comparaison, ET/OU, NON, booléens, null et choix de valeur sont disponibles. Les groupes ET/OU/NON peuvent être étendus avec +/− ou l’engrenage. Utilisés comme conditions, ils génèrent les groupes natifs HA ; utilisés comme valeurs, ils génèrent des expressions Jinja.
+Comparaison, ET/OU, NON, booléens, null et choix de valeur sont disponibles. Les groupes ET/OU/NON peuvent être étendus avec l’engrenage. Utilisés comme conditions, ils génèrent les groupes natifs HA ; utilisés comme valeurs, ils génèrent des expressions Jinja.
 
 **Si / sinon si / sinon** crée des branches d’actions. **Selon la valeur** compare des cas, exécute seulement le premier cas correspondant puis utilise la branche par défaut si nécessaire. Il génère `choose`, sans passage automatique aux cas suivants de JavaScript.
 

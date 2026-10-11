@@ -5,6 +5,8 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
+Depuis **0.1.58**, les commandes suivent autant que possible ioBroker : extension uniquement par l’engrenage, sans boutons +/−/S supplémentaires. Cela concerne aussi objets, listes, texte, cas et branches parallèles. ET/OU compact est retiré du menu ; les projets existants restent lisibles. Les champs HA, connexions et fonctions YAML sont conservés. L’objectif est une apparence familière d’ioBroker avec une prise en charge complète des automatisations HA.
+
 ## Messages depuis 0.1.48
 
 Nouvelle catégorie **Messages**, trois blocs DE/EN/FR. [Configuration, clés et envoi](../callmebot/).
@@ -87,7 +89,7 @@ Dans Standard/Dark, les déclencheurs sont orange, les conditions et la logique 
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
-| **Nouvel objet …**<br><code>ugso_object_new</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_object_new.png" alt="Nouvel objet …" style="max-width:280px;max-height:180px"> | Dictionnaire local à attributs nommés. Ajouter des entrées avec l’engrenage ou +/−. Ce n’est ni une entité HA ni un point de données ioBroker. |
+| **Nouvel objet …**<br><code>ugso_object_new</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_object_new.png" alt="Nouvel objet …" style="max-width:280px;max-height:180px"> | Dictionnaire local à attributs nommés. Ajouter des entrées avec l’engrenage. Ce n’est ni une entité HA ni un point de données ioBroker. |
 | **Attribut … de l’objet …**<br><code>ugso_object_get</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_object_get.png" alt="Attribut … de l’objet …" style="max-width:280px;max-height:180px"> | Lit une clé du dictionnaire, y compris keys/items. Clé absente : null ; type d’objet invalide : erreur de modèle HA. |
 | **L’objet … possède l’attribut …**<br><code>ugso_object_has</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_object_has.png" alt="L’objet … possède l’attribut …" style="max-width:280px;max-height:180px"> | Vérifier la présence d’une clé dans un dictionnaire, y compris une clé dont la valeur est null. |
 | **Attributs de l’objet …**<br><code>ugso_object_keys</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_object_keys.png" alt="Attributs de l’objet …" style="max-width:280px;max-height:180px"> | Liste des clés du dictionnaire, pour parcourir les éléments ou produire du JSON. |
@@ -128,10 +130,10 @@ Depuis **0.1.56**, le bloc Si extensible est disponible ici. Logique est bleu et
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
-| **Si … faire …**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_if_action.png" alt="Si … faire …" style="max-width:280px;max-height:180px"> | Branche if native HA avec actions, sinon si et sinon. Engrenage et +/− pour étendre les branches. |
-| **Groupe de conditions**<br><code>ugso_logic_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_logic_condition.png" alt="Groupe de conditions" style="max-width:280px;max-height:180px"> | Groupe ET, OU ou NON extensible jusqu’à 100 conditions. Engrenage ou +/− pour modifier les entrées. |
+| **Si … faire …**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_if_action.png" alt="Si … faire …" style="max-width:280px;max-height:180px"> | Branche if native HA avec actions, sinon si et sinon. Engrenage pour étendre les branches. |
+| **Groupe de conditions**<br><code>ugso_logic_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_logic_condition.png" alt="Groupe de conditions" style="max-width:280px;max-height:180px"> | Groupe ET, OU ou NON extensible jusqu’à 100 conditions. Engrenage pour modifier les entrées. |
 | **Comparaison**<br><code>ugso_compare</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_compare.png" alt="Comparaison" style="max-width:280px;max-height:180px"> | Compare deux valeurs HA. Nombres et textes ont des types différents ; convertir explicitement les valeurs de capteurs dans les modèles. |
-| **ET / OU compact**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_binary_logic.png" alt="ET / OU compact" style="max-width:280px;max-height:180px"> | Combiner deux booléens avec ET/OU ; groupe natif HA ou expression Jinja selon l’usage. |
+| **ET / OU compact**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_binary_logic.png" alt="ET / OU compact" style="max-width:280px;max-height:180px"> | Projets existants uniquement ; retiré du menu. Utiliser le groupe ET/OU extensible. |
 | **NON …**<br><code>ugso_not</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_not.png" alt="NON …" style="max-width:280px;max-height:180px"> | Nier une condition : groupe not natif HA ou expression not Jinja lorsqu’utilisé comme valeur. |
 | **Vrai / faux**<br><code>ugso_boolean</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_boolean.png" alt="Vrai / faux" style="max-width:280px;max-height:180px"> | Constante vrai/faux, pour conditions et variables. L’export conserve le type booléen YAML. |
 | **aucune valeur (null)**<br><code>ugso_null</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_null.png" alt="aucune valeur (null)" style="max-width:280px;max-height:180px"> | YAML null ou Jinja none, ni zéro ni faux. |
@@ -174,7 +176,7 @@ Depuis **0.1.56**, le bloc Si extensible est disponible ici. Logique est bleu et
 | --- | --- | --- |
 | **Texte …**<br><code>ugso_text</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text.png" alt="Texte …" style="max-width:280px;max-height:180px"> | Texte multiligne éditable ; contenu conservé exactement sans traduction automatique. |
 | **Saut de ligne …**<br><code>ugso_text_newline</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_newline.png" alt="Saut de ligne …" style="max-width:280px;max-height:180px"> | Un véritable saut de ligne pour assembler du texte. |
-| **Créer du texte avec …**<br><code>ugso_text_join</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_join.png" alt="Créer du texte avec …" style="max-width:280px;max-height:180px"> | Assemble 0–100 valeurs en texte. Engrenage et +/− modifient le nombre d’entrées. |
+| **Créer du texte avec …**<br><code>ugso_text_join</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_join.png" alt="Créer du texte avec …" style="max-width:280px;max-height:180px"> | Assemble 0–100 valeurs en texte. L’engrenage modifie le nombre d’entrées. |
 | **Ajouter le texte … à la variable …**<br><code>ugso_text_append</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_append.png" alt="Ajouter le texte … à la variable …" style="max-width:280px;max-height:180px"> | Affecte un nouveau texte à une variable textuelle déjà initialisée. N’écrit pas dans une entité HA. |
 | **Longueur du texte …**<br><code>ugso_text_length</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_length.png" alt="Longueur du texte …" style="max-width:280px;max-height:180px"> | Nombre de points de code Unicode, pas d’unités UTF-16 JavaScript. |
 | **Le texte … est vide**<br><code>ugso_text_empty</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_empty.png" alt="Le texte … est vide" style="max-width:280px;max-height:180px"> | Vérifie si la longueur du texte est zéro. |
@@ -192,7 +194,7 @@ Depuis **0.1.56**, le bloc Si extensible est disponible ici. Logique est bleu et
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
-| **Liste …**<br><code>ugso_list_new</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_list_new.png" alt="Liste …" style="max-width:280px;max-height:180px"> | Créer une liste de 0–100 valeurs ; l’engrenage ou +/− modifie le nombre d’entrées. |
+| **Liste …**<br><code>ugso_list_new</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_list_new.png" alt="Liste …" style="max-width:280px;max-height:180px"> | Créer une liste de 0–100 valeurs ; l’engrenage modifie le nombre d’entrées. |
 | **Longueur de la liste …**<br><code>ugso_list_length</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_list_length.png" alt="Longueur de la liste …" style="max-width:280px;max-height:180px"> | Nombre d’éléments, utilisable comme nombre à l’exécution. L’entrée doit être une liste. |
 | **La liste … est vide**<br><code>ugso_list_empty</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_list_empty.png" alt="La liste … est vide" style="max-width:280px;max-height:180px"> | Vérifie la longueur d’une liste, pas une valeur fausse générale de JavaScript. |
 | **Liste avec … copies de …**<br><code>ugso_list_repeat</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_list_repeat.png" alt="Liste avec … copies de …" style="max-width:280px;max-height:180px"> | Nouvelle liste avec 0–10000 répétitions d’une valeur. |

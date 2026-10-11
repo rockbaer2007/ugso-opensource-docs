@@ -31,7 +31,7 @@ Konstante Dauer: 0–86400 Sekunden mit expliziter Einheit. Konstante Wiederholu
 
 | ioBroker | UGSo Block | Verhalten |
 | --- | --- | --- |
-| Neues Objekt mit Zahnrad | **Neues Objekt** mit Zahnrad und +/− | 0–100 Attribute, eindeutige frei benannte Schlüssel, beliebige Werte einschließlich verschachtelter Objekte/Listen. |
+| Neues Objekt mit Zahnrad | **Neues Objekt** mit Zahnrad | 0–100 Attribute, eindeutige frei benannte Schlüssel, beliebige Werte einschließlich verschachtelter Objekte/Listen. |
 | Setze Attribut des Objekts auf Wert | **Setze Attribut in Variable auf** | Neue HA-Variablenzuweisung an eine vorher gesetzte Objektvariable. Andere Variablenkopien bleiben unverändert. |
 | Entferne Attribut | **Entferne Attribut aus Variable** | Neues Dictionary ohne den Schlüssel; fehlt er, bleibt der Inhalt gleich. |
 | Objekt hat Attribut | **Objekt hat Attribut** | Boolean-Test auf einen eigenen Dictionary-Schlüssel. |
@@ -48,8 +48,8 @@ Die originalen [Blockly-Logikdefinitionen](https://github.com/RaspberryPiFoundat
 
 | ioBroker-Erweiterung | UGSo | Semantik |
 | --- | --- | --- |
-| UND/ODER mit Zahnrad | Bestehende erweiterbare Gruppe, auch unter Logik | 1–100 Boolean-Eingänge; +/− und Zahnrad zum Umordnen. |
-| der Fall ist / im Falle von / machen | **Der Fall ist** | 1–100 Fälle mit +/− und Zahnrad, optional belegter sonst-Körper. Erste Übereinstimmung gewinnt; kein JavaScript-Fallthrough. |
+| UND/ODER mit Zahnrad | Bestehende erweiterbare Gruppe, auch unter Logik | 1–100 Boolean-Eingänge; Zahnrad zum Umordnen. |
+| der Fall ist / im Falle von / machen | **Der Fall ist** | 1–100 Fälle mit Zahnrad, optional belegter sonst-Körper. Erste Übereinstimmung gewinnt; kein JavaScript-Fallthrough. |
 | min ≤ wert ≤ max | **Bereichsvergleich** | Beide Grenzen separat strikt oder einschließlich. Keine automatische Text-in-Zahl-Konvertierung; **Nach Zahl** bei Sensor-/Templatewerten einsetzen. |
 | wenn leer … dann … | **Ersatzwert** mit Modusauswahl | Standard null/nicht gesetzt erhält 0/falsch/leeren Text. „leer/falsch/0“ ersetzt auch leere Listen und Dictionaries. |
 

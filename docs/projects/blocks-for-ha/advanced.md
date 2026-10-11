@@ -41,7 +41,7 @@ Unter **Projekt & Beschreibung → HA-Optionen** bearbeiten: `variables`, `trigg
 
 - **Warte auf Auslöser** verbindet eine Auslöserkette und bietet `timeout` / `continue_on_timeout` im Optionsfeld.
 - **Aktionsgruppe** erzeugt eine native `sequence` mit anschließbaren Schritten.
-- **Parallel** startet native parallele Zweige. Mit **+ / −** sind 1–100 Zweige möglich. Beim Entfernen eines belegten Zweigs bleibt dessen Inhalt als unverbundener Block erhalten; anschließend verbinden oder löschen.
+- **Parallel** startet native parallele Zweige. Mit dem **Zahnrad** sind 1–100 Zweige möglich. Beim Entfernen eines belegten Zweigs bleibt dessen Inhalt als unverbundener Block erhalten; anschließend verbinden oder löschen.
 - **Nur weiter wenn** erzeugt eine Bedingung als Aktionsschritt. Ereignis, Assist-Antwort und Szene haben eigene Blocks.
 - Wiederholungen unterstützen auch echte Listen/Objekte bei `for_each`; Pausen erlauben kombinierte Einheiten und Bruchteile. Erweiterte oder gemischte Zweigformen bleiben als JSON-Schritt erhalten.
 

@@ -31,7 +31,7 @@ Constant duration: 0–86400 seconds with an explicit unit. Constant count: 1–
 
 | ioBroker | UGSo block | Behavior |
 | --- | --- | --- |
-| New object with gear | **New object** with gear and +/− | 0–100 attributes, unique names, arbitrary values including nested objects/lists. |
+| New object with gear | **New object** with gear | 0–100 attributes, unique names, arbitrary values including nested objects/lists. |
 | Set object attribute | **Set attribute in variable** | Reassigns a previously initialized HA object variable to a new dictionary. Other variable copies are unchanged. |
 | Delete attribute | **Remove attribute from variable** | New dictionary without the key; an absent key leaves the contents unchanged. |
 | Object has attribute | **Object has attribute** | Boolean test for a dictionary key. |
@@ -48,8 +48,8 @@ Original [Blockly logic definitions](https://github.com/RaspberryPiFoundation/bl
 
 | ioBroker extension | UGSo | Semantics |
 | --- | --- | --- |
-| Expandable AND/OR | Existing group, also under Logic | 1–100 Boolean inputs, +/− and gear for reordering. |
-| Switch/case/action | **Case selection** | 1–100 cases with +/− and gear, optional populated default body. First match wins; no JavaScript fallthrough. |
+| Expandable AND/OR | Existing group, also under Logic | 1–100 Boolean inputs, gear for reordering. |
+| Switch/case/action | **Case selection** | 1–100 cases with the gear, optional populated default body. First match wins; no JavaScript fallthrough. |
 | min ≤ value ≤ max | **Range comparison** | Independently strict/inclusive bounds. No automatic string-to-number conversion; use **To number** for sensor/template values. |
 | If empty, fallback | **Fallback value**, two modes | Default null/undefined preserves zero, false and empty text. Empty/false/zero mode also replaces empty lists/dictionaries. |
 

@@ -6,7 +6,7 @@ title: Thèmes et zoom
 
 ## Logique et Objets depuis 0.1.56
 
-Dans Standard/Dark, les blocs logiques sont bleus et les objets bruns, avec des libellés blancs lisibles. Modern et Tritanopia conservent leurs propres palettes. **Si / sinon si / sinon** est désormais disponible dans **Logique** : l’engrenage ouvre le constructeur de branches ; **+ / −** ajoute ou retire une branche sinon si, et **S** active ou désactive Sinon. Les conditions et séquences d’actions produisent une branche native HA. Les projets existants restent compatibles.
+Dans Standard/Dark, les blocs logiques sont bleus et les objets bruns, avec des libellés blancs lisibles. Modern et Tritanopia conservent leurs propres palettes. **Si / sinon si / sinon** est désormais disponible dans **Logique** : l’engrenage ouvre le constructeur de branches ; les branches sinon si et Sinon peuvent y être ajoutées ou retirées. Les conditions et séquences d’actions produisent une branche native HA. Les projets existants restent compatibles.
 
 ## Grille de points depuis 0.1.51
 

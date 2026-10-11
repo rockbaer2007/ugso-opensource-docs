@@ -60,7 +60,7 @@ Die [Liste aller 163 Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsb
 
 Neu in **0.1.8**: **Variablen → Variable erstellen …**, Setzen-/Lesen-Blocks und die Kategorie **Templates** mit eigenen Wert- und Bedingungsblocks. Variablen erzeugen native HA-`variables`-Aktionen; Lesen erzeugt <code v-pre>{{ name }}</code>. Jinja wird erst in HA ausgewertet. [Anleitung, Beispiel und Importgrenzen](./blocks#variablen-und-templates-verwenden).
 
-Neu in 0.1.7: **Suche am Menüende**, mehrzeilige Texte, Prozent-Slider, Farbe und Lichtaktion, Datum heute und abhängige Helfer-Dropdowns. Plus/Minus ergänzt oder entfernt den letzten Eingang beziehungsweise sonst-falls-Zweig; **S** schaltet Sonst um. Entfernte Eingänge lösen ihre Blocks ab, löschen sie nicht. Das Zahnrad bleibt zum Umordnen.
+Neu in 0.1.7: **Suche am Menüende**, mehrzeilige Texte, Prozent-Slider, Farbe und Lichtaktion, Datum heute und abhängige Helfer-Dropdowns. Seit 0.1.58 erfolgen Erweiterungen ausschließlich über das Zahnrad, einschließlich Sonst. Entfernte Eingänge lösen ihre Blocks ab, löschen sie nicht. Das Zahnrad bleibt zum Umordnen.
 
 Der Datumsvergleich einschließlich Jahr wird in HA mit `now().strftime('%Y-%m-%d')` ausgewertet; er verwendet die HA-Zeitzone und ist eine Bedingung, kein Auslöser. Diese Form erhält beim Import den Datumsblock; andere Template-Bedingungen erhalten den allgemeinen Template-Block. Die Lichtaktion erzeugt RGB-Farbe und Helligkeit in Prozent. Timer nutzen ihre konfigurierte Dauer; zusätzliche Parameter bleiben in der generischen HA-Aktion. Die tatsächlichen Gerätefähigkeiten müssen in HA geprüft werden.
 
