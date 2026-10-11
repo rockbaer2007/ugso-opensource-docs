@@ -250,8 +250,8 @@ Depuis **0.1.56**, le bloc Si extensible est disponible ici. Logique est bleu et
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
-| **Modèle …**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_template.png" alt="Modèle …" style="max-width:280px;max-height:180px"> | Modèle Jinja comprenant &#123;&#123; ... &#125;&#125; ou &#123;% ... %&#125;. Évalué uniquement dans Home Assistant. |
-| **Le modèle est vrai …**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_template_condition.png" alt="Le modèle est vrai …" style="max-width:280px;max-height:180px"> | HA évalue ce modèle Jinja comme condition. Ne déclenche pas une automatisation. |
+| **Jinja – code personnalisé**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_template.png" alt="Jinja – code personnalisé" style="max-width:280px;max-height:180px"> | Modèle Jinja comprenant &#123;&#123; ... &#125;&#125; ou &#123;% ... %&#125;. Évalué uniquement dans Home Assistant. |
+| **Jinja – condition personnalisée**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_template_condition.png" alt="Jinja – condition personnalisée" style="max-width:280px;max-height:180px"> | HA évalue ce modèle Jinja comme condition. Ne déclenche pas une automatisation. |
 
 ## Autres blocs
 
@@ -431,6 +431,8 @@ L’automatisation TV de la chambre avec variable multiligne du mode été, hora
 | **Condition Jinja (expérimentale)**<br><code>ugso_jinja_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_jinja_condition.png" alt="Condition Jinja (expérimentale)" style="max-width:280px;max-height:180px"> | Champs HA avancés ou Jinja original. Structure prise en charge vérifiée ; vérifier intégration et exécution dans HA. |
 
 ## Structures Jinja (expérimental)
+
+Depuis **0.1.64**, les blocs de code libre figurent uniquement dans **Templates** sous **Jinja – code personnalisé** et **Jinja – condition personnalisée**. Les anciens types `ugso_jinja_value` et `ugso_jinja_condition` restent lisibles pour les projets et imports ; les images suivantes documentent ces anciens types. [Templates par usage](./system-template).
 
 15 nouveaux types depuis 0.1.41. Les blocs valeur/condition extérieurs relient les parties imbriquées à HA. Expressions Jinja et parties du modèle ont des connexions typées distinctes. [Import, édition et limites](./advanced#jinja-experimental).
 

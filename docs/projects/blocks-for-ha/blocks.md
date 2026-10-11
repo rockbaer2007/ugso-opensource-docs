@@ -206,8 +206,8 @@ Bei Minus oder ausgeschaltetem Sonst werden angeschlossene Blocks abgelöst, nic
 | --- | --- | --- |
 | **Variable setzen**<br><code>ugso_variable_set</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_variable_set.png" alt="Variable setzen" style="max-width:280px;max-height:180px"> | Aktionsblock: ausgewählte Variable auf Zahl, Text/Template, Boolean oder null setzen. Erzeugt eine native HA-`variables`-Aktion. Vor späteren Lesezugriffen platzieren. |
 | **Variable lesen**<br><code>ugso_variable_get</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_variable_get.png" alt="Variable lesen" style="max-width:280px;max-height:180px"> | Seitlicher String-Anschluss; erzeugt <code v-pre>{{ name }}</code> für Log-Meldungen und weitere Variablenzuweisungen. Dropdown bietet Umbenennen/Löschen. |
-| **Template-Wert**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_template.png" alt="Template-Wert" style="max-width:280px;max-height:180px"> | Mehrzeiliges Jinja-Template mit String-Anschluss für Log-Meldungen oder Variablenzuweisungen. HA wertet die Vorlage bei Ausführung aus; Blocks führt sie nicht aus. |
-| **Template-Bedingung**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_template_condition.png" alt="Template-Bedingung" style="max-width:280px;max-height:180px"> | Boolean-Anschluss für Nur wenn, Falls und logische Gruppen. Erzeugt `condition: template` mit `value_template`. Ergebnis muss in HA wahr sein; kein eigener Auslöser. |
+| **Jinja – eigener Code**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_template.png" alt="Jinja – eigener Code" style="max-width:280px;max-height:180px"> | Mehrzeiliges Jinja-Template mit String-Anschluss für Log-Meldungen oder Variablenzuweisungen. HA wertet die Vorlage bei Ausführung aus; Blocks führt sie nicht aus. |
+| **Jinja – eigene Bedingung**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_template_condition.png" alt="Jinja – eigene Bedingung" style="max-width:280px;max-height:180px"> | Boolean-Anschluss für Nur wenn, Falls und logische Gruppen. Erzeugt `condition: template` mit `value_template`. Ergebnis muss in HA wahr sein; kein eigener Auslöser. |
 
 ## Variablen und Templates verwenden
 
@@ -418,6 +418,8 @@ Die Schlafzimmer-TV-Automation mit einer mehrzeiligen Sommerbetrieb-Variable, 21
 | **Jinja-Bedingung (experimentell)**<br><code>ugso_jinja_condition</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_jinja_condition.png" alt="Jinja-Bedingung (experimentell)" style="max-width:280px;max-height:180px"> | Erweiterte HA-Felder oder Original-Jinja. Unterstützte Struktur wird geprüft; Integration und Ausführung in HA prüfen. |
 
 ## Jinja-Strukturen (experimentell)
+
+Seit **0.1.64** stehen die Freicode-Blöcke nur unter **Templates** als **Jinja – eigener Code** und **Jinja – eigene Bedingung**. Die älteren Typen `ugso_jinja_value` und `ugso_jinja_condition` bleiben für gespeicherte Projekte und den Import lesbar; die folgenden Bilder dokumentieren diese alten Typen. [Zweckbezogene Templates](./system-template).
 
 15 neue Typen seit 0.1.41. Die äußeren Wert-/Bedingungsblocks verbinden die verschachtelten Teile mit HA. Jinja-Ausdrücke und Template-Teile haben eigene typisierte Anschlüsse. [Einlesen, Bearbeiten und Grenzen](./advanced#jinja-experimentell).
 

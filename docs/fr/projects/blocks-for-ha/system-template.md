@@ -9,7 +9,38 @@ Depuis **0.1.62**, entièrement traduit en DE/EN/FR. Les blocs Système fourniss
 
 Depuis **0.1.63**, Template possède des entrées de valeurs directes sur des lignes verticales, comme Écrire un fichier dans ioBroker. Tous les blocs Template sont sans engrenage ; les entrées correspondent à leur type.
 
+## Templates par usage depuis 0.1.64
+
+Ces blocs sont dans **Templates**, sans engrenage. **Composer du texte** produit du texte pour les messages. **Heure dans la plage** et **Vérifier la variation** renvoient un booléen et se branchent directement sur « Seulement si », « si », « et » ou « ou ». **Choisir une valeur – si/sinon** propose des types de résultat avec les entrées adaptées.
+
+### Heure dans la plage
+
+Saisir début et fin en `HH:MM` ou `HH:MM:SS`. L’heure locale actuelle de HA est vérifiée : **début inclus**, **fin exclue**. Avec 10:00 et 13:00, cela correspond à `'10:00:00' <= now().strftime('%H:%M:%S') < '13:00:00'`. De 22:00 à 06:00 fonctionne en passant minuit. Des bornes égales donnent faux. C’est une condition, pas un déclencheur horaire.
+
+![Heure dans la plage](/assets/blocks-for-ha/blocks/fr/ugso_template_time_window.png)
+
+### Vérifier la variation
+
+**Hausse supérieure à 10**, **baisse supérieure à 20** vérifie `nouvelle valeur - ancienne valeur > 10` ou `< -20`. Saisir la baisse comme une amplitude positive. Exactement +10 ou −20 ne satisfait pas la condition.
+
+Laisser Ancienne valeur et Nouvelle valeur vides utilise `trigger.from_state.state` et `trigger.to_state.state`, pour les déclencheurs d’état. Un déclencheur ou ancien état absent donne faux, comme un ancien état `unknown`, `unavailable` ou `none`. On peut aussi brancher des variables enregistrées ou des valeurs d’entités Système. Les deux valeurs utilisent `float(0)`, comme l’exemple : le texte non numérique vaut 0. Une nouvelle valeur absente vaut aussi 0. Vérifier séparément la nouvelle valeur si ce comportement ne convient pas.
+
+![Vérifier la variation](/assets/blocks-for-ha/blocks/fr/ugso_template_change.png)
+
+### Code Jinja personnalisé
+
+**Jinja – code personnalisé** accepte un template complet pour une entrée de valeur ; **Jinja – condition personnalisée** accepte un template booléen complet. Les instructions multilignes `{% if %}`, `{% set %}` et `{% else %}` sont conservées. Seule une expression unique <code v-pre>{{ ... }}</code> peut constituer une partie de Composer du texte ; brancher les templates avec instructions directement sur leur destination.
+
+![Code personnalisé](/assets/blocks-for-ha/blocks/fr/ugso_template.png)
+![Condition personnalisée](/assets/blocks-for-ha/blocks/fr/ugso_template_condition.png)
+
+Les entrées de code libre équivalentes ont été retirées de **Jinja (expérimental)** et figurent une seule fois dans **Templates**. La catégorie expérimentale garde le constructeur Jinja décomposable. Ses parties modifient des expressions Jinja et ne sont pas des actions HA supplémentaires. Les anciens blocs de projet et le code original importé restent lisibles.
+
+**Contrôler l’application** et **Contrôler l’automatisation** sont dans **Système**. Depuis 0.1.64, ils ont deux lignes comme Contrôler l’instance dans ioBroker : sélection en haut, Action en dessous. Les applications HA et entités d’automatisation remplacent les instances ioBroker.
+
 ## Système
+
+Les changements dans l’engrenage modifient immédiatement le bloc principal : ajouter affiche une ligne, retirer la masque et adapte la taille, même avec le dialogue ouvert.
 
 | Bloc | Utilisation |
 | --- | --- |
@@ -34,7 +65,7 @@ L’engrenage de **Contrôler l’automatisation** ajoute **Brancher l’ID d’
 
 ## Construire un Template
 
-1. Brancher **Templates → Template** sur une entrée de valeur, par exemple « Message ».
+1. Brancher **Templates → Composer du texte** sur une entrée texte, par exemple « Message ».
 2. Brancher un **Texte** normal directement sur **Partie 1**.
 3. Brancher une **Valeur d’entité de Système** ou un **Format du nombre** directement sur **Partie 2**.
 4. Remplir la dernière entrée ajoute automatiquement une autre entrée. L’ordre de haut en bas détermine la sortie. Les entrées vides sont ignorées et conservent leur position pour annuler/rétablir.
@@ -51,7 +82,7 @@ Exemple : texte `Température : ` → valeur de `sensor.temperature` via **Forma
 | Format du nombre | 0–10 décimales avec un point décimal. Utiliser un nombre mathématique pour leur quantité. Brancher le remplacement directement sur son entrée facultative ; sinon texte vide pour les nombres invalides. |
 | Valeur sinon | Remplacement pour `unknown`, `unavailable`, `none` et texte vide. Conserve `0` et `false`. |
 | Nouvelle ligne | Commencer une nouvelle ligne à cet endroit. |
-| si / alors / sinon | Brancher une condition booléenne sur « si » et les valeurs sur « alors » et « sinon ». Brancher un autre Template pour plusieurs parties dans une branche. Une branche vide produit un texte vide. |
+| Choisir une valeur – si/sinon | Choisir le type : Valeur, Texte, Nombre ou Booléen. Brancher un booléen sur « si » et des valeurs adaptées sur « alors » et « sinon ». Utiliser Composer du texte pour plusieurs parties. Une branche vide produit du texte vide pour Valeur/Texte ; Nombre/Booléen exigent les deux branches. |
 
 Brancher le formatage directement autour de la valeur concernée. Texte, nombres, valeurs d’entités, nouvelles lignes et valeurs conditionnelles utilisent des connexions de valeurs ; « si » accepte uniquement les blocs booléens. Les chaînes d’actions ne se branchent pas sur ces entrées. Les caractères Jinja d’un texte normal restent littéraux. Les anciennes chaînes Afficher sont converties automatiquement lors du chargement dans l’éditeur, en conservant branches et parties désactivées. Les anciens types restent lisibles pour la compatibilité mais ne figurent plus dans le menu.
 

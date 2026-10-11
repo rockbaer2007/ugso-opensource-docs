@@ -5,6 +5,8 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 # Blocks for HA
 
+Nouveau en **0.1.64** : Templates par usage pour texte, plage horaire, variation et résultats si/sinon typés. Code Jinja libre une seule fois dans Templates. Commandes d’applications et d’automatisations sur deux lignes comme ioBroker. DE/EN/FR complets. [Guide et images](./system-template).
+
 Nouveau en **0.1.63** : entrées de valeurs typées directes dans Template, comme Écrire un fichier dans ioBroker, avec ajout automatique d’une entrée. Sans engrenages sur les blocs Template. Les anciennes chaînes sont converties au chargement. [Guide](./system-template).
 
 Nouveau en **0.1.62** : ID et valeurs d’entités partagées dans Système, instantané unique, commandes d’applications et d’automatisations, constructeur visuel de Templates. Relier texte, mathématiques, variables et valeurs système ; ajouter formatage, remplacement, nouvelle ligne et sortie conditionnelle. Clic droit pour Jinja et aperçu HA. DE/EN/FR. [Guide](./system-template).

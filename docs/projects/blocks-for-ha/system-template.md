@@ -9,7 +9,38 @@ Seit **0.1.62**, vollständig in DE/EN/FR. Die neuen Systemblocks sind auch die 
 
 Seit **0.1.63** hat Template direkte Werte-Andockpunkte in untereinander angeordneten Zeilen, ähnlich „Datei schreiben“ bei ioBroker. Alle Template-Bausteine sind ohne Zahnrad; die Eingänge passen zum jeweiligen Typ.
 
+## Zweckbezogene Templates seit 0.1.64
+
+Alle folgenden Bausteine stehen unter **Templates**, ohne Zahnrad. **Text zusammenstellen** erzeugt Text für Nachrichten; **Uhrzeit im Zeitraum** und **Wertänderung prüfen** liefern einen Logikwert und passen direkt an „Nur wenn“, „falls“, „und“ oder „oder“. **Wert auswählen – falls/sonst** hat einen wählbaren Ergebnistyp und dazu passende Andockpunkte.
+
+### Uhrzeit im Zeitraum
+
+Beginn und Ende als `HH:MM` oder `HH:MM:SS` eingeben. Die aktuelle Ortszeit von HA wird geprüft: **ab einschließlich**, **bis ausschließlich**. Mit 10:00 und 13:00 entspricht das deinem Beispiel `'10:00:00' <= now().strftime('%H:%M:%S') < '13:00:00'`. 22:00 bis 06:00 funktioniert über Mitternacht. Gleiche Grenzen ergeben falsch. Dieser Block ist eine Bedingung, kein Zeit-Auslöser.
+
+![Uhrzeit im Zeitraum](/assets/blocks-for-ha/blocks/de/ugso_template_time_window.png)
+
+### Wertänderung prüfen
+
+**Anstieg über 10**, **Abfall über 20** prüft `neuer Wert - alter Wert > 10` oder `< -20`. Die Abfallschwelle wird als positive Größe eingegeben. Genau +10 oder −20 erfüllt die Bedingung nicht.
+
+„Alter Wert“ und „Neuer Wert“ dürfen leer bleiben: dann werden `trigger.from_state.state` und `trigger.to_state.state` benutzt. Das ist für Zustandsauslöser geeignet. Ohne Auslöser oder ohne alten Zustand ist das Ergebnis falsch; ebenso bei altem `unknown`, `unavailable` oder `none`. Alternativ passende Werte anschließen, etwa gespeicherte Variablen und System-Entitätswerte. Beide Werte werden wie im Beispiel mit `float(0)` umgewandelt: nicht numerischer Text zählt als 0. Leere neue Auslöserwerte zählen ebenfalls als 0. Wer das vermeiden möchte, muss den neuen Wert zusätzlich prüfen.
+
+![Wertänderung prüfen](/assets/blocks-for-ha/blocks/de/ugso_template_change.png)
+
+### Eigener Jinja-Code
+
+**Jinja – eigener Code** nimmt eine vollständige Vorlage für einen Werteingang auf; **Jinja – eigene Bedingung** nimmt eine vollständige boolesche Vorlage auf. Auch mehrzeilige `{% if %}`, `{% set %}` und `{% else %}` bleiben unverändert erhalten. Für einen Teil von „Text zusammenstellen“ ist nur ein einzelner Ausdruck <code v-pre>{{ ... }}</code> geeignet; vollständige Anweisungsblöcke direkt am Ziel verwenden.
+
+![Eigener Code](/assets/blocks-for-ha/blocks/de/ugso_template.png)
+![Eigene Bedingung](/assets/blocks-for-ha/blocks/de/ugso_template_condition.png)
+
+Die bisher gleichwertigen Freicode-Einträge sind aus **Jinja (experimentell)** entfernt; sie stehen einmal unter **Templates**. Die experimentelle Kategorie behält den zerlegbaren Jinja-Baukasten. Dessen Teile bearbeiten Jinja-Ausdrücke; sie sind keine zusätzlichen HA-Aktionen. Alte Projekt-Blöcke und importierter Originalcode bleiben lesbar.
+
+Unter **System** heißen die Steuerblöcke **App steuern** und **Automation steuern**. Seit 0.1.64 sind sie zweizeilig wie „Instanz steuern“ in ioBroker: Auswahl oben, „Aktion“ darunter. HA-Apps und Automation-Entitäten ersetzen dort ioBroker-Instanzen.
+
 ## System
+
+Änderungen im Zahnrad wirken sofort auf den Hauptblock: Hinzufügen zeigt die Zeile, Entfernen blendet sie aus und passt die Größe an, auch bei geöffnetem Popup.
 
 | Baustein | Verwendung |
 | --- | --- |
@@ -34,7 +65,7 @@ Bei **Automation steuern** ergänzt das Zahnrad: **Entitäts-ID anschließen**, 
 
 ## Template zusammenstecken
 
-1. **Templates → Template** in einen Werteingang stecken, etwa „Nachricht“.
+1. **Templates → Text zusammenstellen** in einen Texteingang stecken, etwa „Nachricht“.
 2. Normalen **Text** direkt an **Teil 1** anschließen.
 3. Einen **Entitätswert aus System** oder ein **Zahlenformat** direkt an **Teil 2** anschließen.
 4. Wird der letzte Eingang belegt, erscheint automatisch ein weiterer Andockpunkt. Die Reihenfolge von oben nach unten ist die Ausgabereihenfolge. Leere Eingänge werden ausgelassen und behalten ihre Position für Rückgängig/Wiederholen.
@@ -51,7 +82,7 @@ Beispiel: Text `Temperatur: ` → Entitätswert `sensor.temperatur` über **Zahl
 | Zahlenformat | 0–10 Nachkommastellen, immer mit Dezimalpunkt. Mathematik-Zahl für die Anzahl verwenden. Ersatzwert direkt am optionalen Werteingang anschließen; sonst leerer Text bei ungültiger Zahl. |
 | Wert sonst | Ersatz für `unknown`, `unavailable`, `none` und leeren Text. `0` und `false` bleiben erhalten. |
 | Zeilenumbruch | Neue Zeile an dieser Stelle. |
-| falls / dann / sonst | An „falls“ eine boolesche Bedingung anschließen; an „dann“ und „sonst“ die entsprechenden Werte. Für mehrere Teile im Zweig ein weiteres Template anschließen. Leere Zweige geben leeren Text aus. |
+| Wert auswählen – falls/sonst | Ergebnistyp wählen: Wert, Text, Zahl oder Logikwert. An „falls“ eine boolesche Bedingung anschließen; an „dann“ und „sonst“ passende Werte. Für mehrere Textteile ein „Text zusammenstellen“ anschließen. Leere Zweige ergeben bei Wert/Text leeren Text; Zahl/Logikwert benötigen beide Zweige. |
 
 Formatierung wird direkt um den betroffenen Wert gesteckt. Text, Zahlen, Entitätswerte, Zeilenumbruch und bedingte Werte verwenden Werteanschlüsse; „falls“ akzeptiert nur boolesche Blocks. Aktionsketten passen nicht in diese Eingänge. Jinja-Zeichen in einem normalen Textblock bleiben wörtlicher Text. Ältere Ausgeben-Ketten werden beim Laden im Editor automatisch in direkte Werte umgewandelt, einschließlich Zweigen und deaktivierten Teilen. Die alten Blocktypen bleiben für die Projektkompatibilität lesbar, erscheinen aber nicht mehr im Menü.
 

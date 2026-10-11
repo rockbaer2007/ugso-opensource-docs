@@ -206,8 +206,8 @@ Minus or disabling else detaches connected blocks instead of deleting them. Reco
 | --- | --- | --- |
 | **Set variable**<br><code>ugso_variable_set</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_variable_set.png" alt="Set variable" style="max-width:280px;max-height:180px"> | Action block: assign a number, text/template, Boolean or null to the selected variable. Generates native HA `variables`. Place before subsequent reads. |
 | **Read variable**<br><code>ugso_variable_get</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_variable_get.png" alt="Read variable" style="max-width:280px;max-height:180px"> | Side String connector; generates <code v-pre>{{ name }}</code> for log messages and further assignments. Dropdown supports rename/delete. |
-| **Template value**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_template.png" alt="Template value" style="max-width:280px;max-height:180px"> | Multiline Jinja template with String connector for log messages or variable assignments. HA evaluates the template during execution; Blocks does not execute it. |
-| **Template condition**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_template_condition.png" alt="Template condition" style="max-width:280px;max-height:180px"> | Boolean connector for Only if, If and logical groups. Generates `condition: template` with `value_template`. HA must evaluate it as true; not a trigger. |
+| **Jinja – custom code**<br><code>ugso_template</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_template.png" alt="Jinja – custom code" style="max-width:280px;max-height:180px"> | Multiline Jinja template with String connector for log messages or variable assignments. HA evaluates the template during execution; Blocks does not execute it. |
+| **Jinja – custom condition**<br><code>ugso_template_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_template_condition.png" alt="Jinja – custom condition" style="max-width:280px;max-height:180px"> | Boolean connector for Only if, If and logical groups. Generates `condition: template` with `value_template`. HA must evaluate it as true; not a trigger. |
 
 ## Using variables and templates
 
@@ -418,6 +418,8 @@ The bedroom-TV automation with a multiline summer-mode variable, 21:30 and 00:30
 | **Jinja condition (experimental)**<br><code>ugso_jinja_condition</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_jinja_condition.png" alt="Jinja condition (experimental)" style="max-width:280px;max-height:180px"> | Extended HA fields or original Jinja. Supported structure is checked; verify integration and execution in HA. |
 
 ## Jinja structures (experimental)
+
+Since **0.1.64**, free-code blocks appear only in **Templates** as **Jinja – custom code** and **Jinja – custom condition**. Older `ugso_jinja_value` and `ugso_jinja_condition` types remain readable for saved projects and imports; the following images document these old types. [Purpose-specific Templates](./system-template).
 
 15 new types since 0.1.41. Outer value/condition blocks connect nested parts to HA. Jinja expressions and template parts have separate typed sockets. [Import, editing and limits](./advanced#jinja-experimental).
 
