@@ -205,6 +205,8 @@ Renaming updates variable blocks. References in free-form Jinja text must be cha
 
 ## Logic blocks added in 0.1.9
 
+Since **0.1.57**, expandable AND/OR groups have inline inputs with “and” or “or” between them. The selector contains only “and / or / not”. Gear-popup items use the same operator instead of “Condition”, including DE/FR. HA logic remains unchanged.
+
 Since **0.1.56**, the expandable If block is available here. Logic is blue and Objects brown in Standard/Dark. [Colours and branch builder](./themes).
 
 | Block | Editor image | Function |

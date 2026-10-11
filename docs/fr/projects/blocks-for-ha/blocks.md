@@ -122,6 +122,8 @@ Dans Standard/Dark, les déclencheurs sont orange, les conditions et la logique 
 
 ## Logique
 
+Depuis **0.1.57**, les entrées des groupes ET/OU extensibles sont alignées horizontalement, avec « et » ou « ou » entre elles. Le sélecteur contient uniquement « et / ou / non ». Les blocs de l’engrenage portent le même opérateur au lieu de « Condition », également en DE/EN. La logique HA reste inchangée.
+
 Depuis **0.1.56**, le bloc Si extensible est disponible ici. Logique est bleu et Objets brun dans Standard/Dark. [Couleurs et branches](./themes).
 
 | Bloc | Image | Fonction |

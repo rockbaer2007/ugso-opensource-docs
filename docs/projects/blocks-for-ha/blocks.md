@@ -205,6 +205,8 @@ Umbenennen aktualisiert die verbundenen Variablen-Blocks. Namen in frei eingegeb
 
 ## Logik-Blocks seit 0.1.9
 
+Seit **0.1.57** stehen die Eingänge der erweiterbaren UND-/ODER-Gruppe nebeneinander, mit „und“ bzw. „oder“ dazwischen. Das Auswahlfeld enthält nur „und / oder / nicht“. Im Zahnrad-Popup tragen die Zweigbausteine denselben Operator statt „Bedingung“, auch in EN/FR. Die HA-Verknüpfung bleibt unverändert.
+
 Seit **0.1.56** steht hier auch der erweiterbare Falls-Block. Logik ist in Standard/Dark blau, Objekte braun. [Farben und Erweiterbarkeit](./themes).
 
 | Block | Bild im Editor | Funktionsbeschreibung |
