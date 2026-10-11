@@ -4,6 +4,12 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # UGSo Blocks for HA
 
+## Leerer Start seit 0.1.52
+
+Ohne gespeichertes Projekt startet der Editor vollständig leer. Ziehe **Automation** aus der Kategorie **System** auf die Arbeitsfläche oder importiere YAML. Beim Import in einen leeren Editor ist „Aktuelle Automation vollständig ersetzen“ nicht erforderlich. Beispiele werden ausschließlich über **Beispiel laden** geöffnet.
+
+Gespeicherte Projekte werden beim nächsten Start wiederhergestellt. Auch ein leeres Projekt bleibt beim Neuladen und Sprachwechsel leer. Kann der Browserstand nicht geladen werden, öffnet sich ein leerer Editor mit Hinweis, ohne Beispiel.
+
 Neu in **0.1.47**: [Aktionsfunktionen mit Parametern und bedingte Rückgabewerte](./blockly-audit). Der Gesamtkatalog enthält jetzt 166 unterstützte Blocktypen.
 
 Neu in **0.1.46**: **Sprache → System / DE / EN / FR** gilt jetzt für die gesamte Oberfläche, Dialoge, Status, Bestätigungen und Validierungshinweise. Eigene Namen, Entitätsdaten, Paketbeschriftungen und YAML/Jinja werden nicht automatisch übersetzt.

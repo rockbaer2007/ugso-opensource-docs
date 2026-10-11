@@ -5,6 +5,12 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 # UGSo Blocks for HA
 
+## Démarrage vide depuis 0.1.52
+
+Sans projet enregistré, l’éditeur démarre entièrement vide. Glisser **Automation** depuis **Système** dans l’espace de travail ou importer du YAML. L’import dans un éditeur vide ne nécessite pas « Remplacer complètement l’automatisation actuelle ». Les exemples s’ouvrent uniquement avec **Charger l’exemple**.
+
+Les projets enregistrés sont restaurés au démarrage suivant. Un projet vide reste vide après rechargement ou changement de langue. Si le projet local ne peut pas être chargé, l’éditeur s’ouvre vide avec un avertissement, sans exemple.
+
 Nouveau en **0.1.47** : [fonctions d’action avec paramètres et valeurs de retour conditionnelles](./blockly-audit). Le catalogue prend désormais en charge 166 types de blocs.
 
 Nouveau en **0.1.46** : **Langue → Système / DE / EN / FR** concerne toute l’interface, les dialogues, états, confirmations et messages de validation. Noms personnels, données d’entités, libellés des paquets et YAML/Jinja ne sont pas traduits automatiquement.
