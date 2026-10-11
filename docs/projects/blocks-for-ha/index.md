@@ -4,6 +4,8 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
 # Blocks for HA
 
+Neu in **0.1.63**: Template mit direkten Werte-Andockpunkten wie „Datei schreiben“ bei ioBroker, automatischem zusätzlichem Eingang und passenden Typen. Keine Zahnräder an Template-Bausteinen. Alte Ketten werden beim Laden umgewandelt. [Anleitung](./system-template).
+
 Neu in **0.1.62**: Entitäts-ID und gemeinsame Entitätswerte unter System, einmalige Momentaufnahme, App- und Automationssteuerung sowie ein visueller Template-Baukasten. Text, Mathematik, Variablen und Systemwerte zusammenstecken; Zahlenformat, Ersatzwert, Zeilenumbruch und bedingte Ausgabe ergänzen. Jinja und HA-Vorschau per Rechtsklick. DE/EN/FR. [Anleitung](./system-template).
 
 Neu in **0.1.61**: **und / oder / nicht** als getrennte Blöcke. Optionale HA-Felder einzeln über das Zahnrad ergänzen, entfernen und anordnen. Pflichtfelder und importierte Werte bleiben erhalten. DE/EN/FR. [Geprüfte Blöcke und Bedienung](./advanced).

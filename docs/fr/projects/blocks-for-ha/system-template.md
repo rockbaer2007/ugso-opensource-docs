@@ -7,6 +7,8 @@ description: Valeurs d’entités partagées, commandes d’applications et d’
 
 Depuis **0.1.62**, entièrement traduit en DE/EN/FR. Les blocs Système fournissent aussi les valeurs des Templates. Réutiliser les blocs texte, mathématiques et variables existants.
 
+Depuis **0.1.63**, Template possède des entrées de valeurs directes sur des lignes verticales, comme Écrire un fichier dans ioBroker. Tous les blocs Template sont sans engrenage ; les entrées correspondent à leur type.
+
 ## Système
 
 | Bloc | Utilisation |
@@ -33,25 +35,25 @@ L’engrenage de **Contrôler l’automatisation** ajoute **Brancher l’ID d’
 ## Construire un Template
 
 1. Brancher **Templates → Template** sur une entrée de valeur, par exemple « Message ».
-2. Placer **Afficher** dans le bloc Template de base.
-3. Brancher un **Texte** normal ou une **Valeur d’entité de Système** sur Afficher.
-4. Ajouter d’autres blocs Afficher dessous. L’ordre de haut en bas détermine l’ordre de sortie.
+2. Brancher un **Texte** normal directement sur **Partie 1**.
+3. Brancher une **Valeur d’entité de Système** ou un **Format du nombre** directement sur **Partie 2**.
+4. Remplir la dernière entrée ajoute automatiquement une autre entrée. L’ordre de haut en bas détermine la sortie. Les entrées vides sont ignorées et conservent leur position pour annuler/rétablir.
 
 Exemple : texte `Température : ` → valeur de `sensor.temperature` via **Format du nombre**, avec le nombre mathématique `1` pour les décimales → texte ` °C`. Résultat possible : `Température : 21.6 °C`.
 
 ![Template](/assets/blocks-for-ha/blocks/fr/ugso_template_builder.png)
-![Afficher](/assets/blocks-for-ha/blocks/fr/ugso_template_output.png)
+![Nouvelle ligne comme valeur](/assets/blocks-for-ha/blocks/fr/ugso_template_linebreak.png)
 ![Format du nombre](/assets/blocks-for-ha/blocks/fr/ugso_number_format.png)
-![Sortie conditionnelle](/assets/blocks-for-ha/blocks/fr/ugso_template_if.png)
+![Sortie conditionnelle](/assets/blocks-for-ha/blocks/fr/ugso_template_conditional.png)
 
 | Complément | Signification |
 | --- | --- |
-| Format du nombre | 0–10 décimales avec un point décimal. Utiliser un nombre mathématique pour leur quantité. Remplacement facultatif dans l’engrenage ; sinon texte vide pour les nombres invalides. |
+| Format du nombre | 0–10 décimales avec un point décimal. Utiliser un nombre mathématique pour leur quantité. Brancher le remplacement directement sur son entrée facultative ; sinon texte vide pour les nombres invalides. |
 | Valeur sinon | Remplacement pour `unknown`, `unavailable`, `none` et texte vide. Conserve `0` et `false`. |
 | Nouvelle ligne | Commencer une nouvelle ligne à cet endroit. |
-| si | Brancher une condition booléenne et les parties à afficher dans la branche. « sinon » facultatif dans l’engrenage. |
+| si / alors / sinon | Brancher une condition booléenne sur « si » et les valeurs sur « alors » et « sinon ». Brancher un autre Template pour plusieurs parties dans une branche. Une branche vide produit un texte vide. |
 
-Brancher le formatage directement autour de la valeur concernée. Les parties de sortie s’insèrent uniquement dans les branches Template, pas dans les chaînes d’actions HA. Les caractères Jinja d’un texte normal restent littéraux.
+Brancher le formatage directement autour de la valeur concernée. Texte, nombres, valeurs d’entités, nouvelles lignes et valeurs conditionnelles utilisent des connexions de valeurs ; « si » accepte uniquement les blocs booléens. Les chaînes d’actions ne se branchent pas sur ces entrées. Les caractères Jinja d’un texte normal restent littéraux. Les anciennes chaînes Afficher sont converties automatiquement lors du chargement dans l’éditeur, en conservant branches et parties désactivées. Les anciens types restent lisibles pour la compatibilité mais ne figurent plus dans le menu.
 
 **Clic droit → Aperçu du template / Jinja** affiche le code produit et demande à HA le rendu des valeurs actuelles. Cet instantané n’exécute aucune action et nécessite une connexion HA accessible. Sans connexion, l’aperçu est explicitement indisponible. Les identifiants d’accès restent sur le serveur. Le JSON du projet conserve les blocs, connexions et options d’engrenage. Le YAML contient du Jinja natif ; son import peut produire un bloc template libre. HA peut interpréter les nombres ou listes purs d’un résultat comme des valeurs natives.
 
