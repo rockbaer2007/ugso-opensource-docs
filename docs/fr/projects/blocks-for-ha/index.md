@@ -7,7 +7,7 @@ description: Créer visuellement des automatisations Home Assistant avec Blockly
 
 ## Démarrage vide depuis 0.1.52
 
-Depuis **0.1.53**, **Nouvelle automatisation** ouvre un éditeur vide après confirmation. Les blocs, l’historique d’annulation, le nom, la description, les options d’automatisation et le YAML collé sont réinitialisés. **Annuler** conserve le travail actuel. Enregistrer le projet avant de confirmer. La langue, l’apparence, la connexion HA et les paquets de blocs installés restent disponibles ; le projet vide est enregistré dans le navigateur.
+Depuis **0.1.54**, **Nouvelle automatisation** propose **Enregistrer et recommencer**, **Recommencer sans enregistrer** ou **Annuler**. Avant de vider l’éditeur, la sauvegarde est téléchargée au format `.blocks.json` avec les blocs, les données d’automatisation et le YAML collé. **Ouvrir le projet** permet de la restaurer. Annuler ou Échap conserve le travail actuel. Recommencer réinitialise les blocs, l’historique d’annulation, le nom, la description et les champs. La langue, l’apparence, la connexion HA et les paquets de blocs installés restent disponibles.
 
 Sans projet enregistré, l’éditeur démarre entièrement vide. Glisser **Automation** depuis **Système** dans l’espace de travail ou importer du YAML. L’import dans un éditeur vide ne nécessite pas « Remplacer complètement l’automatisation actuelle ». Les exemples s’ouvrent uniquement avec **Charger l’exemple**.
 

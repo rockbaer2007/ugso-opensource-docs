@@ -6,7 +6,7 @@ description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 
 ## Leerer Start seit 0.1.52
 
-Seit **0.1.53** beginnt **Neue Automation** nach einer Bestätigungsabfrage mit einem leeren Editor. Blocks, Rückgängig-Verlauf, Name, Beschreibung, Automationsoptionen und eingefügter YAML-Code werden zurückgesetzt. **Abbrechen** erhält den aktuellen Stand. Sichere dein Projekt vor dem Bestätigen. Sprache, Darstellung, HA-Verbindung und installierte Blockpakete bleiben erhalten; der leere Stand wird im Browser gespeichert.
+Seit **0.1.54** bietet **Neue Automation** drei Optionen: **Sichern und neu beginnen**, **Ohne Sicherung neu beginnen** oder **Abbrechen**. Die Sicherung wird vor dem Leeren als `.blocks.json` heruntergeladen und enthält Blocks, Automationsdaten und eingefügten YAML-Code. Über **Projekt öffnen** lässt sie sich wiederherstellen. Abbrechen oder Escape erhält den aktuellen Stand. Beim Neubeginn werden Blocks, Rückgängig-Verlauf, Name, Beschreibung und Eingaben zurückgesetzt. Sprache, Darstellung, HA-Verbindung und installierte Blockpakete bleiben erhalten.
 
 Ohne gespeichertes Projekt startet der Editor vollständig leer. Ziehe **Automation** aus der Kategorie **System** auf die Arbeitsfläche oder importiere YAML. Beim Import in einen leeren Editor ist „Aktuelle Automation vollständig ersetzen“ nicht erforderlich. Beispiele werden ausschließlich über **Beispiel laden** geöffnet.
 
