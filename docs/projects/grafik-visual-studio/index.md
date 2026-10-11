@@ -5,6 +5,8 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 # HA Grafik Visual Studio
 
+Seit **0.1.289** wechselt **Speichern** während des Speicherns kurz die Farbe: **Orange** bei laufender Anfrage, **Grün** nach Erfolg und **Rot** bei einem Fehler. Nach 1,4 Sekunden kehrt die normale Farbe zurück. Das gilt auch für Autospeichern und funktioniert bei heller und dunkler Darstellung.
+
 Ab **Studio 0.1.287** haben **alle Widgets** oben im Reiter **WIDGET** die Checkbox **In Runtime verstecken**. Sie blendet das Widget unabhängig vom Z-Index in der Runtime aus; im Editor bleibt es bearbeitbar. Berechnungen und Datenfluss bleiben aktiv, auch bei ausgeblendeten Number-Widgets und MathBoxen. Das Projekt nach der Änderung speichern.
 
 Weitere Änderungen bis **Studio 0.1.285**: [SVG-Line](./svg-line) und Wert-Verbindung erhalten vertikale Startpositionen und senkrechte rechtwinklige Pfadführung sowie weniger empfindliches Punktziehen. [Poti-Ausgänge](./industrial) steuern die Linienanimation direkt. Das [Number→Math-Beispiel](./svg-linebox-math) erklärt `O - P` für den Batterie-Nettofluss; [Galerie](./bildergalerie) mit Editorbild vor der animierten Demo.
