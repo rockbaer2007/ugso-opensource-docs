@@ -28,7 +28,7 @@ Included add-ons:
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
 - Parcel to MQTT (development discontinued)
-- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/mqtt_client/DOCS.en.md): selected Home Assistant to ioBroker transfer via MQTT. Instead of mirroring the full Home Assistant inventory through ioBroker's HASS adapter, you choose specific devices and values; they appear in ioBroker as a clear device tree. Controllable values such as switches, inputs, sliders, selects and buttons can use `/set` topics to switch, write or press back into Home Assistant. Version 0.1.14 publishes states and attributes first in small batches and subscribes `/set` return channels afterwards, so ioBroker can build the device tree more cleanly. The existing HA broker stays in place.
+- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/mqtt_client/DOCS.en.md): selected Home Assistant to ioBroker transfer via MQTT. Instead of mirroring the full Home Assistant inventory through ioBroker's HASS adapter, you choose specific devices and values; they appear in ioBroker as a clear device tree. Controllable values such as switches, inputs, sliders, selects and buttons can use `/set` topics to switch, write or press back into Home Assistant. Version 0.1.14 publishes states and attributes first in small batches and subscribes `/set` return channels afterwards, so ioBroker can build the device tree more cleanly. The existing HA broker stays in place. Since **0.1.15**, the app uses the [MQTT.org](https://mqtt.org/) symbol in the app store, header and browser tab.
 
 - [Open the shared add-on repository on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
 
