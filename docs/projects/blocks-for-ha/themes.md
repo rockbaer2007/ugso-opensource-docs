@@ -4,6 +4,16 @@ description: Gespeicherte Theme-Auswahl und zusätzlicher Einpassen-Knopf im Blo
 ---
 # Themes und Zoom
 
+## Punktraster seit 0.1.51
+
+Die Arbeitsfläche zeigt ein gut sichtbares natives Blockly-Punktraster mit 25 Einheiten Abstand und Einrasten, angelehnt an [ioBrokers Blockly-Editor](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/BlocklyEditor.tsx). Hintergrund und Punkte folgen der App-Darstellung **Hell / Dunkel / System** sofort, einschließlich Änderungen der Systemeinstellung. Die Blockly-Auswahl legt weiterhin die Farben von Blocks und Menüs fest; die Arbeitsfläche folgt der App-Darstellung auch bei der Palette Dark.
+
+Zoom und Verschieben bewegen das Raster mit der Arbeitsfläche. Einpassen verändert die Größe der Menü-Blocks nicht. Darstellung und Palette ändern weder Automation noch YAML.
+
+![Helles Punktraster](/assets/blocks-for-ha/grid/de/light.png)
+
+![Dunkles Punktraster](/assets/blocks-for-ha/grid/de/dark.png)
+
 Seit **0.1.27** erhalten UGSo-Blocks in Standard/Dark weiße Beschriftungen. Mittlere blaue und braune Flächen werden dafür etwas dunkler, mit mindestens **4,5:1** Kontrast. Bei originalen hellen Modern-/Tritanopia-Farben wird passend kontrastreiche dunkle Schrift verwendet. Eingabefelder bleiben separat lesbar. Die Blockbilder im Katalog sind für DE/EN/FR mit dieser Korrektur neu erzeugt.
 
 Seit **0.1.16** enthält die Werkzeugleiste über der Arbeitsfläche eine **Theme-Auswahl**. Sie betrifft den Blockly-Bereich einschließlich Kategorien, Blockauswahl und Blocks. Die Blockly-Palette ist unabhängig von der App-Darstellung. Es bleiben 111 Blocktypen.

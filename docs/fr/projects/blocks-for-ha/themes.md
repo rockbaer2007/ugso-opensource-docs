@@ -4,6 +4,16 @@ title: Thèmes et zoom
 
 # Thèmes et zoom
 
+## Grille de points depuis 0.1.51
+
+L’espace de travail affiche une grille native Blockly bien visible, avec un espacement de 25 unités et l’alignement automatique, inspirée de [l’éditeur Blockly d’ioBroker](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/BlocklyEditor.tsx). Le fond et les points suivent immédiatement l’apparence **Clair / Sombre / Système**, y compris les changements du système. La palette Blockly détermine toujours les couleurs des blocs et des menus ; le fond suit l’application même avec la palette Dark.
+
+Le zoom et le déplacement font suivre la grille. Ajuster ne modifie pas la taille des blocs du menu. L’apparence et la palette ne changent ni l’automatisation ni le YAML.
+
+![Grille claire](/assets/blocks-for-ha/grid/fr/light.png)
+
+![Grille sombre](/assets/blocks-for-ha/grid/fr/dark.png)
+
 Depuis **0.1.27**, les blocs UGSo Standard/Dark utilisent des libellés blancs. Les fonds bleus et bruns intermédiaires sont légèrement assombris pour un contraste d’au moins **4,5:1**. Les couleurs claires originales de Modern/Tritanopia utilisent une écriture sombre suffisamment contrastée. Les champs éditables restent distincts et lisibles. Les images DE/EN/FR du catalogue ont été régénérées avec cette correction.
 
 Le thème de l’application et la palette Blockly sont **indépendants**. La langue des blocs est également un réglage distinct. Ni thèmes ni zoom ni langue ne modifient le YAML.

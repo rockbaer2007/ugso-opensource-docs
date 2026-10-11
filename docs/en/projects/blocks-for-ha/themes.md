@@ -4,6 +4,16 @@ description: Saved theme selection and an additional fit control in the Blockly 
 ---
 # Themes and zoom
 
+## Dot grid since 0.1.51
+
+The workspace has a clear native Blockly dot grid with 25-unit spacing and snapping, inspired by [ioBroker's Blockly editor](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/BlocklyEditor.tsx). The background and dots immediately follow **Light / Dark / System** app appearance, including changes to the system setting. The Blockly selector still determines block and menu colours; workspace appearance follows the app even with the Dark palette.
+
+Zooming and panning move the grid with the workspace. Fit does not resize palette blocks. Appearance and palette do not change the automation or YAML.
+
+![Light dot grid](/assets/blocks-for-ha/grid/en/light.png)
+
+![Dark dot grid](/assets/blocks-for-ha/grid/en/dark.png)
+
 Since **0.1.27**, UGSo blocks in Standard/Dark use white labels. Medium blue and brown backgrounds are slightly darker to provide at least **4.5:1** contrast. Original light Modern/Tritanopia colours use sufficiently contrasting dark labels. Editable fields retain separate readable surfaces. The DE/EN/FR catalog images have been regenerated with this correction.
 
 Since **0.1.16**, the toolbar above the workspace includes a **Theme selector**. It affects Blockly categories, flyouts and blocks. The Blockly palette is independent of the app appearance. There are still 111 block types.
