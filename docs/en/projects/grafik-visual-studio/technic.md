@@ -1,15 +1,15 @@
 ---
-title: UGSo Technic
+title: Technic
 description: Install the external Technic widget set and connect Window – Wall to Home Assistant.
 ---
 
-# UGSo Technic
+# Technic
 
 Packages and helper tools are provided centrally at [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=en). This open-source page provides descriptions and instructions; downloads are provided by the package catalog.
 
 **Inspired by the [ioBroker Technic Widgets by Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** An independent implementation for Home Assistant.
 
-From **Studio 0.1.203**, you can install **UGSo Technic 1.6.0**. The package contains all seven widget types: **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date**, **Thermostat – Temperature** and **Status – List**. Install 1.6.0 through package management as an additive update to previous versions; existing widgets are preserved.
+From **Studio 0.1.203**, you can install **Technic 1.6.0**. The package contains all seven widget types: **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date**, **Thermostat – Temperature** and **Status – List**. Install 1.6.0 through package management as an additive update to previous versions; existing widgets are preserved.
 
 ## Status – List
 

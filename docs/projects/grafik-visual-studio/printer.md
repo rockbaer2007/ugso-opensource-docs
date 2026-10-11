@@ -1,36 +1,36 @@
 ---
-title: UGSo Printer – Drucker und Patronen
+title: Printer – Drucker und Patronen
 description: Eigenständiges Drucker-Widgetset mit Status und bis zu sechs automatisch gleichmäßig verteilten Patronen.
 ---
 
-# UGSo Printer
+# Printer
 
 Ab **Studio 0.1.273** heißt die Auswahl **Eigenschaften → WIDGET → Patronen → Stil → Patronen / Balken**. **Patronen** zeigt die bisherigen Grafiken nebeneinander; **Balken** zeigt 1–6 Zeilen mit Name, horizontalem Füllstand und Prozentwert. Entitäten, Farben und Warnschwelle gelten für beide Stile. Fehlende Werte erscheinen als **—**; die frühere Toner-Auswahl wird als Balken übernommen. Die volle/halbe Patronengröße gilt nur für die Patronengrafiken. **Printer-Paket 0.1.1** enthält die korrigierte Auswahl; vorhandene 0.1.0-Pakete werden vom aktualisierten Studio ebenfalls unterstützt.
 
-**UGSo Printer 0.1.1** ist ein eigenes externes Widgetset von **rockbaer2007**. Für die hier gezeigte Stilauswahl wird **Grafik Visual Studio 0.1.273 oder neuer** benötigt. Es zeigt einen Drucker mit aktuellem Status und **1–6 Tinten- oder Tonerfüllständen**, wahlweise als Patronengrafiken oder horizontale Balken.
+**Printer 0.1.1** ist ein eigenes externes Widgetset von **rockbaer2007**. Für die hier gezeigte Stilauswahl wird **Grafik Visual Studio 0.1.273 oder neuer** benötigt. Es zeigt einen Drucker mit aktuellem Status und **1–6 Tinten- oder Tonerfüllständen**, wahlweise als Patronengrafiken oder horizontale Balken.
 
 ### Stil: Patronen
 
 Das Bild zeigt die Runtime mit Testdaten.
 
-![UGSo Printer mit sechs Patronen und Warnmarkierung](/images/grafik-visual-studio/printer-six.png)
+![Printer mit sechs Patronen und Warnmarkierung](/images/grafik-visual-studio/printer-six.png)
 
 ### Stil: Balken
 
 Unter **Eigenschaften → WIDGET → Patronen → Stil** die Option **Balken** wählen. Das folgende Runtime-Bild zeigt sechs Füllstände mit Testdaten: **Gelb 18 %** liegt unter der Warnschwelle von 20 % und wird markiert. Für **Grau** fehlt ein Messwert; der Balken ist schraffiert und zeigt **—** statt eines erfundenen Prozentwerts.
 
-![UGSo Printer im Balkenstil mit sechs Füllständen, Warnung bei Gelb und unbekanntem Graufüllstand](/images/grafik-visual-studio/printer-bars.png)
+![Printer im Balkenstil mit sechs Füllständen, Warnung bei Gelb und unbekanntem Graufüllstand](/images/grafik-visual-studio/printer-bars.png)
 
 ## Originalprojekt
 
-Vorbild ist [HA Printer Card von ADNPolymerase](https://github.com/ADNPolymerase/ha-printer-card), veröffentlicht unter der [MIT-Lizenz](https://github.com/ADNPolymerase/ha-printer-card/blob/main/LICENSE). Das Original ist eine Lovelace-Karte. UGSo Printer verwendet eine eigene SVG-Zeichnung, einen eigenen Studio-Renderer und ausdrücklich gewählte Home-Assistant-Entitäten. Originalcode und Originalgrafiken sind nicht eingebunden. Es gehört zu einem eigenen Set in der Palette und nicht zu Industrial.
+Vorbild ist [HA Printer Card von ADNPolymerase](https://github.com/ADNPolymerase/ha-printer-card), veröffentlicht unter der [MIT-Lizenz](https://github.com/ADNPolymerase/ha-printer-card/blob/main/LICENSE). Das Original ist eine Lovelace-Karte. Printer verwendet eine eigene SVG-Zeichnung, einen eigenen Studio-Renderer und ausdrücklich gewählte Home-Assistant-Entitäten. Originalcode und Originalgrafiken sind nicht eingebunden. Es gehört zu einem eigenen Set in der Palette und nicht zu Industrial.
 
 ## Installieren
 
 1. Grafik Visual Studio auf **0.1.273 oder neuer** aktualisieren.
 2. [ugso.printer.wg herunterladen](https://raw.githubusercontent.com/rockbaer2007/ugso-ha-mqtt-addons/master/ha_grafik_visual_studio/packages/printer/ugso.printer.wg).
 3. Unter **Einstellungen → Widget-Pakete → Lokal** installieren.
-4. **UGSo Printer → Drucker** aus der Palette einfügen und die Status- sowie Füllstandsentitäten mit **…** auswählen.
+4. **Printer → Drucker** aus der Palette einfügen und die Status- sowie Füllstandsentitäten mit **…** auswählen.
 
 Das Paket enthält eine deklarative Widgetdefinition, ein eigenes Palettensymbol, Anleitung und MIT-Lizenz. Ausführbarer Paketcode ist nicht enthalten. [Quellcode und Paket-Anleitung](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/printer).
 

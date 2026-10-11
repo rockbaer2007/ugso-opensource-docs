@@ -1,26 +1,26 @@
 ---
-title: UGSo Calendar +
+title: Calendar +
 description: Eigenes Kalender-Widgetset mit automatischer Kalendererkennung, Terminliste und Detail-Popup.
 ---
 
-# UGSo Calendar +
+# Calendar +
 
-**UGSo Calendar + 0.1.1** ist ein eigenes externes Widgetset von **rockbaer2007** für **Grafik Visual Studio 0.1.267 oder neuer**. Es erkennt alle verfügbaren Home-Assistant-Kalender automatisch und zeigt kommende Termine als kompakte Karte oder ausgeklappte Liste. Alle Kalender sind zunächst aktiviert.
+**Calendar + 0.1.1** ist ein eigenes externes Widgetset von **rockbaer2007** für **Grafik Visual Studio 0.1.267 oder neuer**. Es erkennt alle verfügbaren Home-Assistant-Kalender automatisch und zeigt kommende Termine als kompakte Karte oder ausgeklappte Liste. Alle Kalender sind zunächst aktiviert.
 
 Die Runtime mit Beispieldaten:
 
-![UGSo Calendar + mit farbigen Kalenderkacheln, Tagesgruppen und Terminliste](/images/grafik-visual-studio/calendar-plus.png)
+![Calendar + mit farbigen Kalenderkacheln, Tagesgruppen und Terminliste](/images/grafik-visual-studio/calendar-plus.png)
 
 ## Originalprojekt
 
-Vorbild ist **[calendar-card-plus von xBourner](https://github.com/xBourner/calendar-card-plus)**, veröffentlicht unter der [MIT-Lizenz](https://github.com/xBourner/calendar-card-plus/blob/main/LICENSE), Copyright (c) 2026 xBourner. UGSo Calendar + verwendet eine eigene Studio-Implementierung und ein eigenes Palettensymbol. Originalcode und Originalgrafiken sind nicht eingebunden. Das Set ist unabhängig von Industrial und der separat nutzbaren Lovelace-Originalkarte.
+Vorbild ist **[calendar-card-plus von xBourner](https://github.com/xBourner/calendar-card-plus)**, veröffentlicht unter der [MIT-Lizenz](https://github.com/xBourner/calendar-card-plus/blob/main/LICENSE), Copyright (c) 2026 xBourner. Calendar + verwendet eine eigene Studio-Implementierung und ein eigenes Palettensymbol. Originalcode und Originalgrafiken sind nicht eingebunden. Das Set ist unabhängig von Industrial und der separat nutzbaren Lovelace-Originalkarte.
 
 ## Installieren
 
 1. Studio auf **0.1.267 oder neuer** aktualisieren.
 2. [ugso.calendar-plus.wg herunterladen](https://raw.githubusercontent.com/rockbaer2007/ugso-ha-mqtt-addons/master/ha_grafik_visual_studio/packages/calendar-plus/ugso.calendar-plus.wg).
 3. Unter **Einstellungen → Widget-Pakete → Lokal** installieren.
-4. **UGSo Calendar + → Kalender +** aus der Palette auf die Seite ziehen.
+4. **Calendar + → Kalender +** aus der Palette auf die Seite ziehen.
 
 Das Paket enthält deklarative Daten, ein Symbol, Anleitung und MIT-Lizenz. Der feste Host-Renderer `calendar-plus` wird von Studio bereitgestellt; keine ausführbaren Paketskripte. [Quellcode und Paket-Anleitung](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/calendar-plus).
 

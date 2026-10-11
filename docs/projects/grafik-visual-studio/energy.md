@@ -1,17 +1,17 @@
 ---
-title: UGSo Energy – Widgets
+title: Energy – Widgets
 description: Energiefluss, Verbrauch, Batteriespeicher und Preise als externes Widgetset für Home Assistant.
 ---
 
-# UGSo Energy – Widgets
+# Energy – Widgets
 
-**UGSo Energy 0.1.0** ist ein eigenes externes Set für **Grafik Visual Studio 0.1.255 oder neuer**. Es gehört nicht zum Industrial-Paket. Entitätenauswahl und Livewerte funktionieren im Editor und in der Runtime; die Zeitraumwahl bedient die Runtime lokal, ohne Zustände in Home Assistant zu schreiben.
+**Energy 0.1.0** ist ein eigenes externes Set für **Grafik Visual Studio 0.1.255 oder neuer**. Es gehört nicht zum Industrial-Paket. Entitätenauswahl und Livewerte funktionieren im Editor und in der Runtime; die Zeitraumwahl bedient die Runtime lokal, ohne Zustände in Home Assistant zu schreiben.
 
 ## Originalprojekt und Herkunft
 
 Vorbild ist [ioBroker.vis-2-widgets-energy](https://github.com/ioBroker/ioBroker.vis-2-widgets-energy) von **bluefox / GermanBluefox und Mitwirkenden**, veröffentlicht unter der **MIT-Lizenz**. Die [Originaldokumentation](https://github.com/ioBroker/ioBroker.vis-2-widgets-energy/tree/main/docs/de) erklärt die ioBroker-Version. Geprüfter Quellstand: [d0a53871](https://github.com/ioBroker/ioBroker.vis-2-widgets-energy/commit/d0a53871ea7e57c5100de2a1f2ef7b2ee82059c7), 7. Oktober 2026.
 
-UGSo Energy ist eine **eigenständige Home-Assistant-Anpassung von rockbaer2007**, keine unveränderte Portierung oder offizielle ioBroker-Veröffentlichung. Renderer, Symbole und HA-Anbindung sind neu implementiert; React-/vis-2-Quellcode und Originalbilder werden nicht eingebunden. Quelle und Lizenz stehen auch in der Paket-Anleitung.
+Energy ist eine **eigenständige Home-Assistant-Anpassung von rockbaer2007**, keine unveränderte Portierung oder offizielle ioBroker-Veröffentlichung. Renderer, Symbole und HA-Anbindung sind neu implementiert; React-/vis-2-Quellcode und Originalbilder werden nicht eingebunden. Quelle und Lizenz stehen auch in der Paket-Anleitung.
 
 ## Bilder
 
@@ -27,7 +27,7 @@ Die Bilder zeigen die Runtime mit **Testdaten**, keine Live-Messungen.
 
 1. Studio auf **0.1.255 oder neuer** aktualisieren und mit **Strg+F5** neu laden.
 2. [ugso.energy.wg herunterladen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/energy/ugso.energy.wg).
-3. Unter **Einstellungen → Widget-Pakete → Lokal** installieren. Das Set erscheint als **UGSo Energy** in der Widgetpalette.
+3. Unter **Einstellungen → Widget-Pakete → Lokal** installieren. Das Set erscheint als **Energy** in der Widgetpalette.
 4. Widget einfügen und die Messquellen mit **…** aus der Home-Assistant-Entitätenauswahl übernehmen.
 
 Die Datei enthält acht deklarative Widgets, eigene SVG-Palettensymbole und Lizenz/Anleitung. Ausführbarer Paketcode ist nicht enthalten. [Quellcode und Paket-Anleitung](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/energy).

@@ -1,36 +1,36 @@
 ---
-title: UGSo Printer – Printer and cartridges
+title: Printer – Printer and cartridges
 description: Independent printer widget set with status and up to six evenly distributed cartridges.
 ---
 
-# UGSo Printer
+# Printer
 
 From **Studio 0.1.273**, select **Properties → WIDGET → Cartridges → Style → Cartridges / Bar**. Cartridges keeps the graphics side by side; Bar displays 1–6 rows with a name, horizontal fill and percentage. Both styles use the same entities, colors and warning threshold. Missing values remain **—**; legacy toner selection maps to bars. Full/half cartridge size affects graphics only. **Printer package 0.1.1** includes the corrected selection; existing 0.1.0 packages also work with the updated Studio.
 
-**UGSo Printer 0.1.1** is an independent external widget set by **rockbaer2007**. The style selection shown here requires **Grafik Visual Studio 0.1.273 or newer**. It displays a printer with its current status and **1–6 ink or toner levels**, using cartridge graphics or horizontal bars.
+**Printer 0.1.1** is an independent external widget set by **rockbaer2007**. The style selection shown here requires **Grafik Visual Studio 0.1.273 or newer**. It displays a printer with its current status and **1–6 ink or toner levels**, using cartridge graphics or horizontal bars.
 
 ### Style: Cartridges
 
 The screenshot shows the runtime with test data.
 
-![UGSo Printer with six cartridges and a low-level warning](/images/grafik-visual-studio/printer-six.png)
+![Printer with six cartridges and a low-level warning](/images/grafik-visual-studio/printer-six.png)
 
 ### Style: Bar
 
 Under **Properties → WIDGET → Cartridges → Style**, select **Bar**. The runtime screenshot below uses six supplies with test data: **Yellow at 18%** is below the 20% warning threshold and is highlighted. **Gray** has no reading, so its bar is hatched and displays **—** rather than an invented percentage. This screenshot uses the German interface.
 
-![UGSo Printer with six horizontal bars, a low yellow supply warning and an unknown gray level](/images/grafik-visual-studio/printer-bars.png)
+![Printer with six horizontal bars, a low yellow supply warning and an unknown gray level](/images/grafik-visual-studio/printer-bars.png)
 
 ## Original project
 
-Inspired by [HA Printer Card by ADNPolymerase](https://github.com/ADNPolymerase/ha-printer-card), published under the [MIT license](https://github.com/ADNPolymerase/ha-printer-card/blob/main/LICENSE). The original is a Lovelace card. UGSo Printer uses original SVG artwork, its own Studio renderer and explicitly selected Home Assistant entities. No upstream source or artwork is bundled. It appears as a separate palette set and does not belong to Industrial.
+Inspired by [HA Printer Card by ADNPolymerase](https://github.com/ADNPolymerase/ha-printer-card), published under the [MIT license](https://github.com/ADNPolymerase/ha-printer-card/blob/main/LICENSE). The original is a Lovelace card. Printer uses original SVG artwork, its own Studio renderer and explicitly selected Home Assistant entities. No upstream source or artwork is bundled. It appears as a separate palette set and does not belong to Industrial.
 
 ## Installation
 
 1. Update Grafik Visual Studio to **0.1.273 or newer**.
 2. [Download ugso.printer.wg](https://raw.githubusercontent.com/rockbaer2007/ugso-ha-mqtt-addons/master/ha_grafik_visual_studio/packages/printer/ugso.printer.wg).
 3. Install under **Settings → Widget packages → Local**.
-4. Add **UGSo Printer → Drucker** from the palette and select status and supply entities using **…**.
+4. Add **Printer → Drucker** from the palette and select status and supply entities using **…**.
 
 The package contains one declarative widget definition, an original palette icon, instructions and an MIT license. It contains no executable package code. [Source and package instructions](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/printer).
 

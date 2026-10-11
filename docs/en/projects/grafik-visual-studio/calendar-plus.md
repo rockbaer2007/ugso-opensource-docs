@@ -1,26 +1,26 @@
 ---
-title: UGSo Calendar +
+title: Calendar +
 description: Independent calendar widget set with automatic discovery, upcoming events and a details popup.
 ---
 
-# UGSo Calendar +
+# Calendar +
 
-**UGSo Calendar + 0.1.1** is an independent external widget set by **rockbaer2007** for **Grafik Visual Studio 0.1.267 or newer**. It discovers all available Home Assistant calendars automatically and displays upcoming events as a compact card or expanded list. All calendars are enabled initially.
+**Calendar + 0.1.1** is an independent external widget set by **rockbaer2007** for **Grafik Visual Studio 0.1.267 or newer**. It discovers all available Home Assistant calendars automatically and displays upcoming events as a compact card or expanded list. All calendars are enabled initially.
 
 Runtime with sample data:
 
-![UGSo Calendar + with colored date tiles, day groups and upcoming events](/images/grafik-visual-studio/calendar-plus.png)
+![Calendar + with colored date tiles, day groups and upcoming events](/images/grafik-visual-studio/calendar-plus.png)
 
 ## Original project
 
-Inspired by **[calendar-card-plus by xBourner](https://github.com/xBourner/calendar-card-plus)**, published under the [MIT license](https://github.com/xBourner/calendar-card-plus/blob/main/LICENSE), Copyright (c) 2026 xBourner. UGSo Calendar + uses an independent Studio implementation and its own palette icon. No original source code or images are included. This set is independent of Industrial and the separately usable original Lovelace card.
+Inspired by **[calendar-card-plus by xBourner](https://github.com/xBourner/calendar-card-plus)**, published under the [MIT license](https://github.com/xBourner/calendar-card-plus/blob/main/LICENSE), Copyright (c) 2026 xBourner. Calendar + uses an independent Studio implementation and its own palette icon. No original source code or images are included. This set is independent of Industrial and the separately usable original Lovelace card.
 
 ## Installation
 
 1. Update Studio to **0.1.267 or newer**.
 2. [Download ugso.calendar-plus.wg](https://raw.githubusercontent.com/rockbaer2007/ugso-ha-mqtt-addons/master/ha_grafik_visual_studio/packages/calendar-plus/ugso.calendar-plus.wg).
 3. Install under **Settings → Widget packages → Local**.
-4. Drag **UGSo Calendar + → Calendar +** from the palette onto the page.
+4. Drag **Calendar + → Calendar +** from the palette onto the page.
 
 The package contains declarative data, an icon, instructions and the MIT license. Studio provides the fixed `calendar-plus` host renderer; there are no executable package scripts. [Source and package instructions](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/calendar-plus).
 

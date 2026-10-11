@@ -5,13 +5,15 @@ description: Lokale Widget-Pakete für HA Grafik Visual Studio erstellen und ins
 
 # Widget-Paket-Schnittstelle
 
-Das externe **UGSo Industrie**-Paket mit Gauge/Poti und seinen Einstellungen hat eine [eigene Paketseite](industrial.md).
+Seit **Studio 0.1.288** heißen die Pakete **Industrie**, **Technic**, **Energy**, **Solar**, **Printer** und **Calendar +** ohne UGSo-Präfix. Bereits installierte Pakete werden mit den neuen Namen angezeigt. Technische Paket-IDs und Widgetdefinitionen bleiben erhalten; vorhandene Projekte und Paketupdates bleiben kompatibel. Die neuen Downloads enthalten ebenfalls die Namen ohne Präfix.
+
+Das externe **Industrie**-Paket mit Gauge/Poti und seinen Einstellungen hat eine [eigene Paketseite](industrial.md).
 
 ## Weitere Schnittstellenänderungen
 
-Ab Studio **0.1.266** unterstützt API 0.2 den festen Host-Renderer `calendar-plus` für [UGSo Calendar +](calendar-plus.md). Kalender werden automatisch erkannt; Sichtbarkeit und Farben bleiben pro Entitäts-ID gespeichert. Das eigene Set hat eine eigene Seite in der Seitenleiste.
+Ab Studio **0.1.266** unterstützt API 0.2 den festen Host-Renderer `calendar-plus` für [Calendar +](calendar-plus.md). Kalender werden automatisch erkannt; Sichtbarkeit und Farben bleiben pro Entitäts-ID gespeichert. Das eigene Set hat eine eigene Seite in der Seitenleiste.
 
-Ab Studio **0.1.261** unterstützt API 0.2 den festen Host-Renderer `printer-widget` für das eigenständige Set [UGSo Printer](printer.md). Er liest eine Statusentität, optionale Meldungs-/Leistungs-/Seitenentitäten sowie höchstens sechs aktive Füllstandsentitäten. Das Paket enthält keine ausführbaren Skripte; der Host verteilt Patronengrafiken automatisch über gleich breite Spalten.
+Ab Studio **0.1.261** unterstützt API 0.2 den festen Host-Renderer `printer-widget` für das eigenständige Set [Printer](printer.md). Er liest eine Statusentität, optionale Meldungs-/Leistungs-/Seitenentitäten sowie höchstens sechs aktive Füllstandsentitäten. Das Paket enthält keine ausführbaren Skripte; der Host verteilt Patronengrafiken automatisch über gleich breite Spalten.
 
 Ab Studio **0.1.225** gilt die unter **Einstellungen → Allgemein → Editor und Andockpunkte → Ausgangspunkt** gewählte Farbe auch für Ausgänge von Wert-Konverter, LineBox und LineBox Math. Belegte Math-Ausgänge behalten diese Farbe. Signal-Ausgänge und Gehäuse-Snappunkte haben getrennte Farbeinstellungen.
 
@@ -45,7 +47,7 @@ Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.wg` in
 
 Das ZIP enthält eine UTF-8-Datei `manifest.json` im Wurzelverzeichnis und optional darin referenzierte SVG- oder PNG-Bilder unter `icons/`. Ab Studio 0.1.197 sind zusätzlich `LICENSE.txt` und `README.md` als UTF-8-Text mit jeweils höchstens 50 KB erlaubt. Diese Dokumente werden nicht ausgeführt oder im Studio als HTML angezeigt. Andere Dateien sind nicht zulässig. Eine Paket-ID ist punktgetrennt, zum Beispiel `beispiel.widgets`; Widget-Typen liegen in ihrem Namensraum, etwa `beispiel.widgets/label`. Die Paketversion hat das Format `x.y.z`. Ein Paket enthält 1 bis 30 Widgets; jedes erscheint als eigener Eintrag im Paket-Set der Palette.
 
-Ab Studio 0.1.197 unterstützt 0.2 `render: {"kind":"technic-window","valueKey":"heading"}`. Der feste Host liest `contactEntityId`, `coverEntityId` (`current_position`, `supported_features`) und `modeEntityId`; `invertContact`, `invertCover`, `invertMode` drehen die Werte um. Runtime-Schreiben ist auf Positionssteuerung einer verfügbaren `cover`-Entität und einen `input_boolean`-/`switch`-Modus begrenzt. Siehe [UGSo Technic](technic.md).
+Ab Studio 0.1.197 unterstützt 0.2 `render: {"kind":"technic-window","valueKey":"heading"}`. Der feste Host liest `contactEntityId`, `coverEntityId` (`current_position`, `supported_features`) und `modeEntityId`; `invertContact`, `invertCover`, `invertMode` drehen die Werte um. Runtime-Schreiben ist auf Positionssteuerung einer verfügbaren `cover`-Entität und einen `input_boolean`-/`switch`-Modus begrenzt. Siehe [Technic](technic.md).
 
 Ab Studio 0.1.198 ergänzt 0.2 `render: {"kind":"technic-switch","valueKey":"heading"}`. `entityId` wird mit `valueType` bool oder number ausgewertet; Runtime-Schreiben ist auf switch/light/input_boolean oder input_number mit 0/1 begrenzt. `readOnly` sperrt die Bedienung. `iconKey`, `iconScale`, `colorAN`/`colorAUS` und Bezeichnungsoptionen steuern die feste Darstellung.
 

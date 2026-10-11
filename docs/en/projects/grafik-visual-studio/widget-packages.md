@@ -5,13 +5,15 @@ description: Create and install local widget packages for HA Grafik Visual Studi
 
 # Widget package interface
 
-The external **UGSo Industrial** package, its Gauge/Poti and settings have a [dedicated package page](industrial.md).
+Since **Studio 0.1.288**, the package names are **Industrial**, **Technic**, **Energy**, **Solar**, **Printer** and **Calendar +**, without the UGSo prefix. Installed packages also display the new names. Technical package IDs and widget definitions remain unchanged, preserving existing projects and package updates. New downloads use the same names without the prefix.
+
+The external **Industrial** package, its Gauge/Poti and settings have a [dedicated package page](industrial.md).
 
 ## Further interface changes
 
-From Studio **0.1.266**, API 0.2 supports the fixed `calendar-plus` host renderer for [UGSo Calendar +](calendar-plus.md). Calendars are discovered automatically; visibility and colors are saved by entity ID. The independent set has its own sidebar page.
+From Studio **0.1.266**, API 0.2 supports the fixed `calendar-plus` host renderer for [Calendar +](calendar-plus.md). Calendars are discovered automatically; visibility and colors are saved by entity ID. The independent set has its own sidebar page.
 
-From Studio **0.1.261**, API 0.2 supports the fixed `printer-widget` host renderer for the independent [UGSo Printer](printer.md) set. It reads a status entity, optional message/power/page entities and up to six active supply entities. Packages contain no executable scripts; the host distributes cartridge graphics across equal-width columns.
+From Studio **0.1.261**, API 0.2 supports the fixed `printer-widget` host renderer for the independent [Printer](printer.md) set. It reads a status entity, optional message/power/page entities and up to six active supply entities. Packages contain no executable scripts; the host distributes cartridge graphics across equal-width columns.
 
 Studio **0.1.225** applies the color selected in **Settings → General → Editor and dock points → Output point** to Value Converter, LineBox and LineBox Math outputs as well. Occupied Math outputs retain that color. Signal outputs and housing snap points have separate color settings.
 
@@ -51,7 +53,7 @@ The fixed property keys and limits are listed in the [chart contract](https://gi
 
 The ZIP contains a UTF-8 `manifest.json` at its root and optionally referenced SVG or PNG images under `icons/`. From Studio 0.1.197, optional `LICENSE.txt` and `README.md` UTF-8 files of at most 50 KB each are also accepted. They are never executed or displayed as HTML in Studio. No other files are allowed. Package IDs use dot-separated parts, such as `example.widgets`; widget types use the package namespace, such as `example.widgets/label`. Package versions have the form `x.y.z`. A package contains 1 to 30 widgets; each appears as its own entry in the package's palette set.
 
-From Studio 0.1.197, interface 0.2 supports `render: {"kind":"technic-window","valueKey":"heading"}`. The fixed host reads `contactEntityId`, `coverEntityId` (`current_position`, `supported_features`) and `modeEntityId`; `invertContact`, `invertCover`, `invertMode` invert these values. Runtime writes are limited to position control of an available `cover` entity and an `input_boolean`/`switch` mode helper. See [UGSo Technic](technic.md).
+From Studio 0.1.197, interface 0.2 supports `render: {"kind":"technic-window","valueKey":"heading"}`. The fixed host reads `contactEntityId`, `coverEntityId` (`current_position`, `supported_features`) and `modeEntityId`; `invertContact`, `invertCover`, `invertMode` invert these values. Runtime writes are limited to position control of an available `cover` entity and an `input_boolean`/`switch` mode helper. See [Technic](technic.md).
 
 From Studio 0.1.198, interface 0.2 adds `render: {"kind":"technic-switch","valueKey":"heading"}`. `entityId` is evaluated using `valueType` bool or number; runtime writes are limited to switch/light/input_boolean or input_number with 0/1. `readOnly` prevents operation. `iconKey`, `iconScale`, `colorAN`/`colorAUS` and caption options configure the fixed renderer.
 

@@ -1,11 +1,11 @@
 ---
-title: UGSo Solar – inverters and stackable batteries
+title: Solar – inverters and stackable batteries
 description: Neutral SVG modules with flush housing snap points, plain-text readings and configurable data-flow ports.
 ---
 
-# UGSo Solar
+# Solar
 
-**UGSo Solar 0.1.3** requires **Studio 0.1.280 or later**. This separate widget set contains four manufacturer-independent modules with transparent SVG graphics. Update Studio first, then import [ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) through the package settings.
+**Solar 0.1.3** requires **Studio 0.1.280 or later**. This separate widget set contains four manufacturer-independent modules with transparent SVG graphics. Update Studio first, then import [ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) through the package settings.
 
 | Widget | Default size | Housing snap points | Line ports |
 | --- | --- | --- | --- |
@@ -16,7 +16,7 @@ description: Neutral SVG modules with flush housing snap points, plain-text read
 
 The head graphic is centered and touches the bottom widget edge. The battery graphic touches both top and bottom edges. Battery and standalone inverter preserve their proportions when resized. The visible standalone enclosure is about one-third narrower than the head.
 
-![UGSo Solar in the editor: battery stack, standalone inverter and both solar panel orientations](/images/grafik-visual-studio/solar-overview.png)
+![Solar in the editor: battery stack, standalone inverter and both solar panel orientations](/images/grafik-visual-studio/solar-overview.png)
 
 Example with preview readings and visible connection points. Yellow circles are inputs, blue circles are outputs and purple squares are housing snap points. Points disappear in runtime.
 

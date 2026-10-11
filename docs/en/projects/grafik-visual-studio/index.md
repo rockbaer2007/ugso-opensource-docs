@@ -9,7 +9,7 @@ From **Studio 0.1.287**, **every widget** has an **In Runtime verstecken** (Hide
 
 Other changes through **Studio 0.1.285**: [SVG lines](./svg-line) and Value connections support vertical starting positions, vertical-first orthogonal routes and less sensitive point dragging. [Rotary outputs](./industrial) directly control line animation. The [Number-to-Math example](./svg-linebox-math) explains battery net flow using `O - P`; the [gallery](./bildergalerie) shows the editor setup before the animated demo.
 
-New in Studio **0.1.280**: [UGSo Solar 0.1.3](./solar) offers seven bottom line ports on the standalone inverter. Also includes four PV inputs on the stack head, battery ports at the enclosure seam, separate battery reading colors and a mirrored solar panel with base.
+New in Studio **0.1.280**: [Solar 0.1.3](./solar) offers seven bottom line ports on the standalone inverter. Also includes four PV inputs on the stack head, battery ports at the enclosure seam, separate battery reading colors and a mirrored solar panel with base.
 
 New in Studio **0.1.215**: The external [Material Design 1.0.0 package](materialdesign.md) contains **49 widget entries**, including autocomplete, inputs, buttons, displays, lists, charts, calendar and page layouts. A comparison project prepares the widget-by-widget review.
 

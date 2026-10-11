@@ -1,11 +1,11 @@
 ---
-title: UGSo Solar – Wechselrichter und stapelbare Akkus
+title: Solar – Wechselrichter und stapelbare Akkus
 description: Neutrale SVG-Module mit bündigen Gehäusekoppelpunkten, Textanzeigen und frei zugeordneten Datenflussanschlüssen.
 ---
 
-# UGSo Solar
+# Solar
 
-**UGSo Solar 0.1.3** benötigt **Studio 0.1.280 oder neuer**. Das eigenständige Widgetset enthält vier markenunabhängige Module mit transparenten SVG-Grafiken. Aktualisiere zuerst Studio und importiere danach die [Paketdatei ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) über die Paketeinstellungen.
+**Solar 0.1.3** benötigt **Studio 0.1.280 oder neuer**. Das eigenständige Widgetset enthält vier markenunabhängige Module mit transparenten SVG-Grafiken. Aktualisiere zuerst Studio und importiere danach die [Paketdatei ugso.solar.wg](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/refs/heads/master/ha_grafik_visual_studio/packages/solar/ugso.solar.wg) über die Paketeinstellungen.
 
 | Widget | Standardgröße | Gehäusekoppelpunkte | Linienpunkte |
 | --- | --- | --- | --- |
@@ -16,7 +16,7 @@ description: Neutrale SVG-Module mit bündigen Gehäusekoppelpunkten, Textanzeig
 
 Die Kopfteilgrafik sitzt mittig auf der unteren Widgetkante. Die Batterie schließt mit der Grafik oben und unten bündig ab. Batterie und Solo behalten beim Vergrößern oder Verkleinern ihre Proportionen. Das sichtbare Solo-Gehäuse ist etwa ein Drittel schmaler als das Kopfteil.
 
-![UGSo Solar im Editor: Batteriestapel, Solo-Wechselrichter und beide Solarpanel-Ausrichtungen](/images/grafik-visual-studio/solar-overview.png)
+![Solar im Editor: Batteriestapel, Solo-Wechselrichter und beide Solarpanel-Ausrichtungen](/images/grafik-visual-studio/solar-overview.png)
 
 Beispiel mit Vorschauwerten und eingeblendeten Anschlusspunkten. Gelbe Kreise sind Eingänge, blaue Kreise Ausgänge und violette Quadrate Gehäusekoppelpunkte. In der Runtime verschwinden die Punkte.
 

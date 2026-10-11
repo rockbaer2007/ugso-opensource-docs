@@ -6,15 +6,15 @@ title: Widget-Übersicht
 
 **CSS-Standard ab Studio 0.1.271:** Alle Widgets außer Industrial erhalten die vollständigen Gruppen **CSS Allgemein**, **CSS Font & Text**, **CSS Hintergrund**, **CSS Ränder** und **CSS Schatten und Abstand**. Das gilt auch für künftig installierte Widgetsets. Vorhandene Einstellungen bleiben erhalten; neu ergänzte optionale Gruppen sind zunächst deaktiviert. Industrial verwendet weiterhin seine eigenen Gehäuse-Einstellungen.
 
-Eigenständiges externes Set: [UGSo Calendar +](calendar-plus.md), ab **Studio 0.1.266**. Erkennt alle Home-Assistant-Kalender automatisch, zunächst alle aktiviert; je Kalender ein-/ausblendbar mit eigener Farbe und Hintergrundfarbe. Terminliste, Tagesgruppen und Detail-Popup, automatische DE/EN-Sprache. Inspiriert von [xBourner/calendar-card-plus](https://github.com/xBourner/calendar-card-plus).
+Eigenständiges externes Set: [Calendar +](calendar-plus.md), ab **Studio 0.1.266**. Erkennt alle Home-Assistant-Kalender automatisch, zunächst alle aktiviert; je Kalender ein-/ausblendbar mit eigener Farbe und Hintergrundfarbe. Terminliste, Tagesgruppen und Detail-Popup, automatische DE/EN-Sprache. Inspiriert von [xBourner/calendar-card-plus](https://github.com/xBourner/calendar-card-plus).
 
 **Autosave ab Studio 0.1.265:** Die eingestellte Verzögerung (z. B. zwei Sekunden) beginnt nach der zuletzt erkannten Änderung. Nach einem Speicherfehler folgt bei aktiviertem Autosave nach fünf Sekunden ein neuer Versuch, auch ohne weitere Bearbeitung. Eine hängende Speicheranfrage wird nach 15 Sekunden mit einer Zeitüberschreitung beendet und blockiert weitere Speicherungen nicht dauerhaft. Änderungen während einer Anfrage bleiben für die nächste Speicherung erhalten. Manuelles Speichern wartet bei Bedarf auf die laufende Anfrage.
 
 Ab **Studio 0.1.264** speichern **Runtime** und **Neuer Tab** das aktuelle Projekt vor dem Öffnen. Dadurch übernimmt die Runtime auch gerade verschobene Widgets ohne vorherigen manuellen Speicherklick. Dies gilt für alle Widgetsets. Laufende Speichervorgänge werden abgewartet; bei einem Speicherfehler bleibt der Editor geöffnet. Bereits geöffnete Runtime-Tabs müssen nach späteren Änderungen neu geladen werden.
 
-Eigenständiges externes Set: [UGSo Printer](printer.md) mit Druckerstatus und **1–6 automatisch gleichmäßig verteilten Patronen**, ab Studio **0.1.261**. Inspiriert von [ADNPolymerase/ha-printer-card](https://github.com/ADNPolymerase/ha-printer-card), eigene SVG-Zeichnung und lesende Home-Assistant-Anbindung.
+Eigenständiges externes Set: [Printer](printer.md) mit Druckerstatus und **1–6 automatisch gleichmäßig verteilten Patronen**, ab Studio **0.1.261**. Inspiriert von [ADNPolymerase/ha-printer-card](https://github.com/ADNPolymerase/ha-printer-card), eigene SVG-Zeichnung und lesende Home-Assistant-Anbindung.
 
-Weiteres externes Set: [UGSo Technic](technic.md) mit **Window – Wall**, ab Studio 0.1.197. Inspiriert von den ioBroker-Technic-Widgets von Sefina-DS, mit eigener HA-Anbindung und MIT-Lizenz im Paket.
+Weiteres externes Set: [Technic](technic.md) mit **Window – Wall**, ab Studio 0.1.197. Inspiriert von den ioBroker-Technic-Widgets von Sefina-DS, mit eigener HA-Anbindung und MIT-Lizenz im Paket.
 
 Zusätzlich nachinstallierbar: [Wetter und Heizung](weather-heating.md) mit **Allgemeines Diagramm** (ab 0.1.187), **Balkendiagramm für zwei Wochen** (ab 0.1.188), **Wetter-Widget** (ab 0.1.189), **Übersicht über Heizräume** (ab 0.1.190), **METEORED-Wetter-Widget** (ab 0.1.191), **Fensterstatus-Übersicht** (ab 0.1.192), **Meinen Vermieter informieren** (ab 0.1.193) und **Allgemeine Heizparameter** (ab 0.1.194). Das optionale Paket zählt nicht zu den 74 integrierten Widgets und erhält automatisch eine freie Set-Farbe.
 
