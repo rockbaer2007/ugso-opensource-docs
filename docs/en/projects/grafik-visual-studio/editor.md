@@ -4,6 +4,8 @@ title: Editor and keyboard shortcuts
 
 # Editor and keyboard shortcuts
 
+From **Studio 0.1.290**, **Delete** opens the same confirmation dialog as the trash button for selected widgets, including multiple selection. Cancel or Escape keeps the widgets; Undo restores confirmed deletions. The optional five-minute suppression also applies to Delete. Text fields, open dialogs and runtime do not trigger widget deletion; holding down the key does not open further prompts.
+
 ## Hide widgets only in runtime
 
 From **Studio 0.1.287**, **every widget** has an **In Runtime verstecken** (Hide in runtime) checkbox at the top of its **WIDGET** tab. Check it and save the project: the widget remains visible in the editor but is hidden in runtime. Calculations and value forwarding stay active, for example from a hidden Number widget into Math. The checkbox works independently of z-index. Unchecking restores normal visibility; dedicated data flow widgets remain inherently hidden. Hidden controls cannot be clicked in runtime.

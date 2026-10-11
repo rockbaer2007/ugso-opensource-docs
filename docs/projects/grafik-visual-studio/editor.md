@@ -4,6 +4,8 @@ title: Editor und Tastenkombinationen
 
 # Editor und Tastenkombinationen
 
+Ab **Studio 0.1.290** öffnet **Entf** für ausgewählte Widgets denselben Löschdialog wie der Papierkorb. Das gilt auch bei Mehrfachauswahl. Abbrechen oder Escape behält die Widgets; nach bestätigtem Löschen kann Rückgängig sie wiederherstellen. Die freiwillige Unterdrückung weiterer Fragen für fünf Minuten gilt auch für Entf. In Textfeldern, offenen Dialogen und der Runtime löscht die Taste keine Widgets; gedrückt gehaltene Tasten lösen keine weiteren Abfragen aus.
+
 ## Widgets nur in der Runtime ausblenden
 
 Ab **Studio 0.1.287** gibt es für **alle Widgets** direkt oben im Reiter **WIDGET** die Checkbox **In Runtime verstecken**. Haken setzen und das Projekt speichern: Das Widget bleibt im Editor sichtbar, wird aber in der Runtime ausgeblendet. Berechnungen und Werteübergaben bleiben aktiv, beispielsweise von einem versteckten Number-Widget zu Math. Die Checkbox funktioniert unabhängig vom Z-Index. Ohne Haken gilt wieder die normale Sichtbarkeit; spezielle Datenfluss-Widgets bleiben grundsätzlich verborgen. Versteckte Bedienelemente können in der Runtime nicht angeklickt werden.
