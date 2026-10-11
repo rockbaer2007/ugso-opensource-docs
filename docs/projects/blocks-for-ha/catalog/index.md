@@ -3,7 +3,7 @@ title: Benutzerdefinierte Blockpakete
 ---
 # Benutzerdefinierte Blockpakete
 
-Für **UGSo Blocks for HA ab 0.1.18**. Hier stehen Beschreibung, kopierbarer Code und Downloads. Installation über [Block-/Template-Editor](../custom-blocks): JSON einfügen oder ZIP einlesen, prüfen und übernehmen.
+Für **Blocks for HA ab 0.1.18**. Hier stehen Beschreibung, kopierbarer Code und Downloads. Installation über [Block-/Template-Editor](../custom-blocks): JSON einfügen oder ZIP einlesen, prüfen und übernehmen.
 
 | Paket | Inhalt | Code und Download |
 | --- | --- | --- |

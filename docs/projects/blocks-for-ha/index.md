@@ -1,8 +1,8 @@
 ---
-title: UGSo Blocks for HA
+title: Blocks for HA
 description: Native Home-Assistant-Automationen mit visuellen Blocks erstellen.
 ---
-# UGSo Blocks for HA
+# Blocks for HA
 
 ## Leerer Start seit 0.1.52
 
@@ -68,7 +68,7 @@ Das eigene UGSo-Icon verbindet Haus und Puzzle-Baustein und wird in Oberfläche,
 
 ## Im HA-App-Store installieren
 
-Das gemeinsame Repository `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` hinzufügen beziehungsweise über die Repository-Aktualisierung neu laden. **UGSo Blocks for HA** installieren, starten und **Weboberfläche öffnen** wählen. Die App unterstützt amd64 und aarch64 und öffnet den Editor über HA-Ingress. Zum Öffnen ist keine zusätzliche Token-Eingabe nötig. Die App lädt Entitäten lesend über den Supervisor und schreibt keine HA-Systemdateien.
+Das gemeinsame Repository `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` hinzufügen beziehungsweise über die Repository-Aktualisierung neu laden. **Blocks for HA** installieren, starten und **Weboberfläche öffnen** wählen. Die App unterstützt amd64 und aarch64 und öffnet den Editor über HA-Ingress. Zum Öffnen ist keine zusätzliche Token-Eingabe nötig. Die App lädt Entitäten lesend über den Supervisor und schreibt keine HA-Systemdateien.
 
 ## Start und Dateien
 

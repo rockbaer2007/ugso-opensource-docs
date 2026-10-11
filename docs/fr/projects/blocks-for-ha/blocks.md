@@ -13,8 +13,8 @@ Depuis **0.1.50**, également **Signal · CallMeBot** avec sa propre sélection 
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
-| **WhatsApp · CallMeBot**<br><code>ugso_callmebot_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_callmebot_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Profil, texte/Jinja et journal. Envoi MQTT via l’application UGSo CallMeBot Whatsapp. Clés conservées dans le backend. |
-| **Signal · CallMeBot**<br><code>ugso_callmebot_signal_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_callmebot_signal_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Profil, texte/Jinja et journal. Envoi MQTT via l’application UGSo CallMeBot Signal. Clés conservées dans le backend. |
+| **WhatsApp · CallMeBot**<br><code>ugso_callmebot_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_callmebot_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Profil, texte/Jinja et journal. Envoi MQTT via l’application CallMeBot Whatsapp. Clés conservées dans le backend. |
+| **Signal · CallMeBot**<br><code>ugso_callmebot_signal_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_callmebot_signal_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Profil, texte/Jinja et journal. Envoi MQTT via l’application CallMeBot Signal. Clés conservées dans le backend. |
 | **Intégration WhatsApp**<br><code>ugso_whatsapp_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_whatsapp_action.png" alt="Intégration WhatsApp" style="max-width:360px;max-height:180px"> | whatsapp.send_message avec number ou target, ou notify.whatsapp. Destinataire sans +, message et compte facultatif. Configurer le jeton une fois dans HA. |
 
 ## Fonctions depuis 0.1.47

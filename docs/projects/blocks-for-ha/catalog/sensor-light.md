@@ -9,7 +9,7 @@ const code = JSON.stringify(pkg, null, 2)
 
 # Sensor und Licht
 
-**1.0.0 · rockbaer2007 · Apache-2.0 · UGSo Blocks for HA ≥ 0.1.18**
+**1.0.0 · rockbaer2007 · Apache-2.0 · Blocks for HA ≥ 0.1.18**
 
 | Block | Funktion |
 | --- | --- |

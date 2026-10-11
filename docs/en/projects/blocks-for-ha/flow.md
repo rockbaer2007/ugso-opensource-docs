@@ -10,7 +10,7 @@ Version **0.1.13** adds 18 blocks, bringing the total to **68 block types**. [Im
 
 ## Timeouts
 
-| ioBroker | UGSo Blocks for HA | Difference |
+| ioBroker | Blocks for HA | Difference |
 | --- | --- | --- |
 | Pause with ms/sec/min | **Pause**, ms/seconds/minutes/hours and connected duration | Native HA delay; the current sequence waits. No browser blocking. |
 | Execute named timeout, fixed/calculated delay | **Pause**, followed by actions | Sequential HA steps; no independent callback or named JavaScript handle. |

@@ -1,12 +1,12 @@
 ---
-title: UGSo CallMeBot Whatsapp
+title: CallMeBot Whatsapp
 description: WhatsApp text messages from Home Assistant with recipient profiles and Blockly.
 ---
-# UGSo CallMeBot Whatsapp
+# CallMeBot Whatsapp
 
-Since 0.1.4 the app is named **UGSo CallMeBot Whatsapp**. Existing profiles, MQTT topics and entity IDs are preserved. The separate [UGSo CallMeBot Signal](../callmebot-signal/) uses its own profiles and keys.
+Since 0.1.5 the app is named **CallMeBot Whatsapp**. Existing profiles, MQTT topics and entity IDs are preserved. The separate [CallMeBot Signal](../callmebot-signal/) uses its own profiles and keys.
 
-Experimental **HA App 0.1.4** in the [same repository as Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Complete **DE/EN/FR** interface and blocks, system language and light/dark/system appearance. Inspired by [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); original UGSo implementation without ioBroker.
+Experimental **HA App 0.1.5** in the [same repository as Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Complete **DE/EN/FR** interface and blocks, system language and light/dark/system appearance. Inspired by [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); original UGSo implementation without ioBroker.
 
 **Fix in 0.1.1:** Sending works without `crypto.randomUUID`, including HTTP Ingress. Restart the app and reload the page after updating. Request IDs use random bytes when available or a timestamp/counter fallback; they deduplicate requests and are not authentication tokens.
 
@@ -15,7 +15,7 @@ Experimental **HA App 0.1.4** in the [same repository as Blocks for HA](https://
 ## Installation and setup
 
 1. Add `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` to the HA App Store.
-2. Install **UGSo CallMeBot Whatsapp**, configure the MQTT broker and start the app.
+2. Install **CallMeBot Whatsapp**, configure the MQTT broker and start the app.
 3. Open the Ingress UI. Supervisor MQTT credentials take priority; app options are the fallback.
 4. Activate your own recipient using the current bot number from the [official activation guide](https://www.callmebot.com/blog/free-api-whatsapp-messages/). Send exactly `I allow callmebot to send me messages`.
 5. Save a profile ID, name, activated phone number **with + and country code**, and its matching API key. Select a default. Up to 16 profiles.
@@ -27,7 +27,7 @@ A blank key field preserves the stored key. Keys are never returned to the UI. T
 
 ### Select saved profiles
 
-With **CallMeBot 0.1.2 and Blocks for HA 0.1.49**, the profile field opens a searchable list of names, IDs and the default recipient. **Refresh** reloads the list. The block displays the name while projects and YAML retain the original ID. An empty ID uses the current default recipient.
+With **CallMeBot 0.1.2 and Blocks for HA 0.1.59**, the profile field opens a searchable list of names, IDs and the default recipient. **Refresh** reloads the list. The block displays the name while projects and YAML retain the original ID. An empty ID uses the current default recipient.
 
 ![English CallMeBot profile picker](/assets/callmebot/profiles-en.png)
 
@@ -37,7 +37,7 @@ The retained `ugso/callmebot/profiles` catalog contains IDs, names, default prof
 
 If the app, MQTT, discovery or HA connection is unavailable, manual IDs and the default recipient remain usable. Deleted IDs are never silently replaced in projects; the app rejects sending to a missing profile.
 
-Since **Blocks for HA 0.1.48**, under **Messages → WhatsApp · CallMeBot**.
+Since **Blocks for HA 0.1.58**, under **Messages → WhatsApp · CallMeBot**.
 
 ![CallMeBot block](/assets/blocks-for-ha/blocks/en/ugso_callmebot_action.png)
 

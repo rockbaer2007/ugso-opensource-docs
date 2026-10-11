@@ -1,6 +1,6 @@
 ---
 title: Block catalog
-description: All UGSo Blocks for HA with images, functionality and original plugins.
+description: All Blocks for HA with images, functionality and original plugins.
 ---
 
 # Block catalog
@@ -13,8 +13,8 @@ Since **0.1.50**, also **Signal · CallMeBot** with separate profile selection. 
 
 | Block | Image | Function |
 | --- | --- | --- |
-| **WhatsApp · CallMeBot**<br><code>ugso_callmebot_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_callmebot_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Recipient profile, text/Jinja and logging. MQTT sends through the UGSo CallMeBot Whatsapp app. Keys remain in the backend. |
-| **Signal · CallMeBot**<br><code>ugso_callmebot_signal_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_callmebot_signal_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Recipient profile, text/Jinja and logging. MQTT sends through the UGSo CallMeBot Signal app. Keys remain in the backend. |
+| **WhatsApp · CallMeBot**<br><code>ugso_callmebot_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_callmebot_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Recipient profile, text/Jinja and logging. MQTT sends through the CallMeBot Whatsapp app. Keys remain in the backend. |
+| **Signal · CallMeBot**<br><code>ugso_callmebot_signal_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_callmebot_signal_action.png" alt="CallMeBot" style="max-width:360px;max-height:180px"> | Recipient profile, text/Jinja and logging. MQTT sends through the CallMeBot Signal app. Keys remain in the backend. |
 | **WhatsApp integration**<br><code>ugso_whatsapp_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_whatsapp_action.png" alt="WhatsApp integration" style="max-width:360px;max-height:180px"> | whatsapp.send_message with number or target, or notify.whatsapp. Recipient without +, message and optional account. Configure its token once in HA. |
 
 ## Functions since 0.1.47

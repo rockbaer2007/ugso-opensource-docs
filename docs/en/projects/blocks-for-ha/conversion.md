@@ -6,7 +6,7 @@ description: Value conversion, datetime and JSON with ioBroker comparison.
 
 Since **0.1.12**, the category includes nine new blocks. [Conversion blocks with images](./blocks#conversion-added-in-0-1-12). The UI reference is [ioBroker conversion blocks](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_convert.ts). We use the original Blockly library with an original UGSo generator for HA Jinja. Values are converted when the automation runs in Home Assistant.
 
-## ioBroker / UGSo Blocks for HA
+## ioBroker / Blocks for HA
 
 | ioBroker | Our block | Behavior / difference |
 | --- | --- | --- |

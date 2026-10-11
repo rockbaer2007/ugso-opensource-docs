@@ -6,7 +6,7 @@ description: Time blocks, HA timezone and ioBroker comparison.
 
 Since **0.1.11**, the category includes seven additional blocks. [All blocks with images](./blocks#date-and-time-added-in-0-1-11). The editor uses the original Blockly library; HA Jinja generation is an original UGSo implementation. References: [ioBroker JavaScript adapter time blocks](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_time.ts) and [Blockly block definitions](https://docs.blockly.com/guides/create-custom-blocks/define/block-definitions/).
 
-## ioBroker / UGSo Blocks for HA
+## ioBroker / Blocks for HA
 
 | ioBroker | Our block / implementation |
 | --- | --- |

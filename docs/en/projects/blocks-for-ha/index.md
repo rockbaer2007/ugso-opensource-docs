@@ -1,8 +1,8 @@
 ---
-title: UGSo Blocks for HA
+title: Blocks for HA
 description: Create native Home Assistant automations with visual Blocks.
 ---
-# UGSo Blocks for HA
+# Blocks for HA
 
 ## Empty start since 0.1.52
 
@@ -68,7 +68,7 @@ Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Ten o
 
 ## Install from the HA app store
 
-Add or refresh `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` in the app store. Install **UGSo Blocks for HA**, start it and select **Open Web UI**. The app supports amd64 and aarch64 and serves the editor through HA ingress. No additional token is needed to open it. It reads HA entities through the Supervisor and does not write HA system files.
+Add or refresh `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` in the app store. Install **Blocks for HA**, start it and select **Open Web UI**. The app supports amd64 and aarch64 and serves the editor through HA ingress. No additional token is needed to open it. It reads HA entities through the Supervisor and does not write HA system files.
 
 ## Start and files
 
@@ -85,7 +85,7 @@ Editor: `http://127.0.0.1:4180/`. Preview, copy, download and reopen supported Y
 
 111 block types including the automation root; variables, templates, date/time and conversion are described in the catalog:
 
-| ioBroker concept | UGSo Blocks for HA | HA output |
+| ioBroker concept | Blocks for HA | HA output |
 | --- | --- | --- |
 | Script container | Automation | `triggers`, `conditions`, `actions` |
 | State trigger | State reached | `trigger: state` |

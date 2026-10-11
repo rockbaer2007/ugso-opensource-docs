@@ -3,7 +3,7 @@ title: Custom block packages
 ---
 # Custom block packages
 
-For **UGSo Blocks for HA 0.1.18 or later**. Descriptions, copyable JSON and downloads are available here. Use the [block/template editor](../custom-blocks): paste JSON or read ZIP, review and apply.
+For **Blocks for HA 0.1.18 or later**. Descriptions, copyable JSON and downloads are available here. Use the [block/template editor](../custom-blocks): paste JSON or read ZIP, review and apply.
 
 | Package | Contents | Code and download |
 | --- | --- | --- |

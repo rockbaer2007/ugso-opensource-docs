@@ -4,10 +4,10 @@ description: Page française préparée pour MQTT Projets dans la documentation 
 ---
 # MQTT Projets
 
-[UGSo CallMeBot Whatsapp : application HA, profils de destinataire et blocs WhatsApp en DE/EN/FR](/fr/projects/callmebot/).
-[UGSo CallMeBot Signal : textes Signal, profils numéro/UUID et Blockly avec sélection de profil en DE/EN/FR](/fr/projects/callmebot-signal/).
+[CallMeBot Whatsapp : application HA, profils de destinataire et blocs WhatsApp en DE/EN/FR](/fr/projects/callmebot/).
+[CallMeBot Signal : textes Signal, profils numéro/UUID et Blockly avec sélection de profil en DE/EN/FR](/fr/projects/callmebot-signal/).
 
-[UGSo Blocks for HA : documentation française, catalogue illustré et paquets personnalisés](/fr/projects/blocks-for-ha/).
+[Blocks for HA : documentation française, catalogue illustré et paquets personnalisés](/fr/projects/blocks-for-ha/).
 
 Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
 

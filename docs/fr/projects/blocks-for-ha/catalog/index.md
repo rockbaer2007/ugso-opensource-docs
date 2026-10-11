@@ -4,7 +4,7 @@ title: Paquets de blocs personnalisés
 
 # Paquets de blocs personnalisés
 
-Pour **UGSo Blocks for HA ≥ 0.1.18**. Cette section fournit les descriptions, du JSON copiable et les téléchargements. Importer dans l’[éditeur de blocs et modèles](../custom-blocks), vérifier puis appliquer.
+Pour **Blocks for HA ≥ 0.1.18**. Cette section fournit les descriptions, du JSON copiable et les téléchargements. Importer dans l’[éditeur de blocs et modèles](../custom-blocks), vérifier puis appliquer.
 
 | Paquet | Contenu | Code et téléchargement |
 | --- | --- | --- |

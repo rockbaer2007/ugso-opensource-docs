@@ -1,16 +1,16 @@
 ---
-title: UGSo CallMeBot Signal
+title: CallMeBot Signal
 description: Messages texte Signal depuis Home Assistant avec profils et Blockly.
 ---
-# UGSo CallMeBot Signal
+# CallMeBot Signal
 
-**Application HA 0.1.0 expérimentale** dans le [dépôt commun de Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal). Entièrement **DE/EN/FR**, langue système et apparence claire/sombre/système. Implémentation UGSo originale inspirée de [ioBroker.signal-cmb](https://github.com/derAlff/ioBroker.signal-cmb).
+**Application HA 0.1.1 expérimentale** dans le [dépôt commun de Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal). Entièrement **DE/EN/FR**, langue système et apparence claire/sombre/système. Implémentation UGSo originale inspirée de [ioBroker.signal-cmb](https://github.com/derAlff/ioBroker.signal-cmb).
 
 ![Interface Signal en français](/assets/callmebot-signal/fr.png)
 
 ## Configuration
 
-1. Ajouter `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` au magasin HA et installer **UGSo CallMeBot Signal**.
+1. Ajouter `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` au magasin HA et installer **CallMeBot Signal**.
 2. Configurer MQTT dans HA, démarrer l’application et ouvrir son interface Ingress. Les identifiants MQTT du Supervisor sont prioritaires ; les options servent de secours.
 3. Utiliser le contact actuel du bot indiqué dans le [guide officiel Signal](https://www.callmebot.com/blog/free-api-signal-send-messages/). Envoyer la phrase d’activation dans **Signal** et attendre la **clé API Signal**.
 4. Enregistrer l’ID du profil, son nom, votre numéro international **avec +** ou **UUID Signal**, et la clé correspondante. Si le numéro est masqué, le bot peut fournir un UUID. Copier le destinataire du lien d’activation sans le modifier.
