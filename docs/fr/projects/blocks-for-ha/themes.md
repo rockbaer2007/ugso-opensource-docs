@@ -4,6 +4,10 @@ title: Thèmes et zoom
 
 # Thèmes et zoom
 
+## Logique et Objets depuis 0.1.56
+
+Dans Standard/Dark, les blocs logiques sont bleus et les objets bruns, avec des libellés blancs lisibles. Modern et Tritanopia conservent leurs propres palettes. **Si / sinon si / sinon** est désormais disponible dans **Logique** : l’engrenage ouvre le constructeur de branches ; **+ / −** ajoute ou retire une branche sinon si, et **S** active ou désactive Sinon. Les conditions et séquences d’actions produisent une branche native HA. Les projets existants restent compatibles.
+
 ## Grille de points depuis 0.1.51
 
 L’espace de travail affiche une grille native Blockly bien visible, avec un espacement de 25 unités et l’alignement automatique, inspirée de [l’éditeur Blockly d’ioBroker](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/BlocklyEditor.tsx). Le fond et les points suivent immédiatement l’apparence **Clair / Sombre / Système**, y compris les changements du système. La palette Blockly détermine toujours les couleurs des blocs et des menus ; le fond suit l’application même avec la palette Dark.

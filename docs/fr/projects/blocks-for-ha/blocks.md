@@ -31,7 +31,7 @@ Depuis **0.1.45**, la boîte à outils ne contient plus de doublons : nombre dan
 
 **0.1.44 · 163 types**. Tous les types ont été vérifiés pour les champs de sélection HA appropriés. Les images montrent les vrais blocs Blockly en français. Les variantes des menus déroulants ne sont pas des types supplémentaires. Les IDs techniques restent identiques en DE/EN/FR. Les textes et entités d’exemple gardent leurs valeurs d’origine. [Sélection HA](./entities).
 
-Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec le thème UGSo Standard. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
+Dans Standard/Dark, les déclencheurs sont orange, les conditions et la logique bleues, les valeurs vertes, les actions bleu turquoise et les objets bruns. Les autres palettes adaptent les couleurs. [Usage et import](./) · [Paquets personnalisés](./custom-blocks).
 
 ## Système
 
@@ -118,13 +118,15 @@ Déclencheurs orange, conditions violettes, valeurs vertes, actions bleues avec 
 | **Allumer / éteindre / basculer**<br><code>ugso_switch_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_switch_action.png" alt="Allumer / éteindre / basculer" style="max-width:280px;max-height:180px"> | Action du domaine de l’entité choisie. Vérifier sa disponibilité dans HA. |
 | **Action HA … cible … données (JSON) …**<br><code>ugso_service_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_service_action.png" alt="Action HA … cible … données (JSON) …" style="max-width:280px;max-height:180px"> | Cible facultative. Données sous forme d’objet JSON ; l’intégration doit être présente dans HA. |
 | **Attendre … secondes**<br><code>ugso_delay_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_delay_action.png" alt="Attendre … secondes" style="max-width:280px;max-height:180px"> | Attendre un nombre de secondes via une action delay native HA. |
-| **Si … faire …**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_if_action.png" alt="Si … faire …" style="max-width:280px;max-height:180px"> | Branche if native HA avec actions, sinon si et sinon. Engrenage et +/− pour étendre les branches. |
 | **Lampe … couleur … luminosité … %**<br><code>ugso_colour_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_colour_action.png" alt="Lampe … couleur … luminosité … %" style="max-width:280px;max-height:180px"> | Action light.turn_on avec couleur RGB et brightness_pct. Lampe compatible et luminosité 0–100 requises. |
 
 ## Logique
 
+Depuis **0.1.56**, le bloc Si extensible est disponible ici. Logique est bleu et Objets brun dans Standard/Dark. [Couleurs et branches](./themes).
+
 | Bloc | Image | Fonction |
 | --- | --- | --- |
+| **Si … faire …**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_if_action.png" alt="Si … faire …" style="max-width:280px;max-height:180px"> | Branche if native HA avec actions, sinon si et sinon. Engrenage et +/− pour étendre les branches. |
 | **Groupe de conditions**<br><code>ugso_logic_condition</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_logic_condition.png" alt="Groupe de conditions" style="max-width:280px;max-height:180px"> | Groupe ET, OU ou NON extensible jusqu’à 100 conditions. Engrenage ou +/− pour modifier les entrées. |
 | **Comparaison**<br><code>ugso_compare</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_compare.png" alt="Comparaison" style="max-width:280px;max-height:180px"> | Compare deux valeurs HA. Nombres et textes ont des types différents ; convertir explicitement les valeurs de capteurs dans les modèles. |
 | **ET / OU compact**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_binary_logic.png" alt="ET / OU compact" style="max-width:280px;max-height:180px"> | Combiner deux booléens avec ET/OU ; groupe natif HA ou expression Jinja selon l’usage. |

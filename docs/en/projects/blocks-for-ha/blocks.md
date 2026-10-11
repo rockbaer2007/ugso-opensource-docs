@@ -33,7 +33,7 @@ Since 0.1.17, entity fields open a search dialog. [Load, select and manually ent
 
 Version **0.1.44**: 163 block types, all audited for matching HA selection fields. Images show actual UGSo editor blocks. Guides: [HA selection](./entities), [Date and time](./time), [Conversion](./conversion). Dropdown variants do not count as additional types.
 
-Triggers are orange, conditions purple, values green and actions blue. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
+In Standard/Dark, triggers are orange, conditions and logic blue, values green, actions turquoise blue and objects brown. Side connections are typed; triggers and actions form separate vertical chains. Entity IDs are searched or entered manually.
 
 ## Colours and value functions since 0.1.15
 
@@ -168,7 +168,6 @@ Purple time blocks use a typed datetime socket. [Usage, boundary rules and compa
 | **On / off / toggle**<br><code>ugso_switch_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_switch_action.png" alt="On / off / toggle" style="max-width:280px;max-height:180px"> | Entity-domain action: `turn_on`, `turn_off` or `toggle`. Entity must support the action. |
 | **Generic HA action**<br><code>ugso_service_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_service_action.png" alt="Generic HA action" style="max-width:280px;max-height:180px"> | Action name, optional single entity target, JSON object data. Supports parameters not exposed by dedicated blocks. |
 | **Wait seconds**<br><code>ugso_delay_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_delay_action.png" alt="Wait seconds" style="max-width:280px;max-height:180px"> | Delay of 0–86400 integer seconds. Number input with shadow default. |
-| **If / else if / else**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_if_action.png" alt="If / else if / else" style="max-width:280px;max-height:180px"> | Plus/minus adds or removes the last else-if branch; S toggles else. Gear reorders. `if` or `choose`, first matching branch. |
 | **Log output**<br><code>ugso_log_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_log_action.png" alt="Log output" style="max-width:280px;max-height:180px"> | Text message and severity dropdown; `system_log.write`. HA may filter Info/Debug. |
 | **Control HA script**<br><code>ugso_script_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_script_action.png" alt="Control HA script" style="max-width:280px;max-height:180px"> | Start without waiting, stop, or call and wait. `script.turn_on`, `script.turn_off` or `script.name`. |
 | **Refresh entity**<br><code>ugso_update_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_update_action.png" alt="Refresh entity" style="max-width:280px;max-height:180px"> | `homeassistant.update_entity` requests a refresh. Does not set state; support depends on integration. |
@@ -206,8 +205,11 @@ Renaming updates variable blocks. References in free-form Jinja text must be cha
 
 ## Logic blocks added in 0.1.9
 
+Since **0.1.56**, the expandable If block is available here. Logic is blue and Objects brown in Standard/Dark. [Colours and branch builder](./themes).
+
 | Block | Editor image | Function |
 | --- | --- | --- |
+| **If / else if / else**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_if_action.png" alt="If / else if / else" style="max-width:280px;max-height:180px"> | Plus/minus adds or removes the last else-if branch; S toggles else. Gear reorders. `if` or `choose`, first matching branch. |
 | **Compare**<br><code>ugso_compare</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_compare.png" alt="Compare" style="max-width:280px;max-height:180px"> | Compares two values using =, ≠, &lt;, ≤, &gt; or ≥. Accepts numbers, text, variables and single template expressions. Boolean result exported as an HA template condition or variable value. |
 | **Compact AND / OR**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_binary_logic.png" alt="Compact AND OR" style="max-width:280px;max-height:180px"> | Two Boolean inputs. Generates native HA `and`/`or` groups as conditions and parenthesized Jinja as variable values. Expandable groups remain available. |
 | **NOT**<br><code>ugso_not</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_not.png" alt="NOT" style="max-width:280px;max-height:180px"> | Negates a Boolean condition. Native HA `not` group as condition, Jinja `not` as variable value. |

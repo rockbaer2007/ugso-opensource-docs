@@ -4,6 +4,10 @@ description: Saved theme selection and an additional fit control in the Blockly 
 ---
 # Themes and zoom
 
+## Logic and Objects since 0.1.56
+
+In Standard/Dark, logic blocks are blue and object blocks brown, with readable white labels. Modern and Tritanopia retain their own palettes. **If / else if / else** is now directly available in **Logic**: the gear opens the branch builder; **+ / −** adds or removes an else-if branch, and **S** toggles Else. Conditions and action sequences produce native HA branching. Existing projects remain compatible.
+
 ## Dot grid since 0.1.51
 
 The workspace has a clear native Blockly dot grid with 25-unit spacing and snapping, inspired by [ioBroker's Blockly editor](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/BlocklyEditor.tsx). The background and dots immediately follow **Light / Dark / System** app appearance, including changes to the system setting. The Blockly selector still determines block and menu colours; workspace appearance follows the app even with the Dark palette.

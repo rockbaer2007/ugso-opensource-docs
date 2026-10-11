@@ -4,6 +4,10 @@ description: Gespeicherte Theme-Auswahl und zusätzlicher Einpassen-Knopf im Blo
 ---
 # Themes und Zoom
 
+## Logik und Objekte seit 0.1.56
+
+In Standard/Dark sind Logik-Blocks blau und Objekt-Blocks braun, jeweils mit lesbarer weißer Schrift. Modern und Tritanopia behalten ihre eigenen Paletten. **Falls / sonst falls / sonst** steht jetzt direkt in **Logik**: Das Zahnrad öffnet den Baukasten für weitere Zweige; **+ / −** ergänzt oder entfernt einen sonst-falls-Zweig, **S** schaltet Sonst um. Bedingungen und Aktionsketten werden als native HA-Verzweigung ausgegeben. Bestehende Projekte bleiben kompatibel.
+
 ## Punktraster seit 0.1.51
 
 Die Arbeitsfläche zeigt ein gut sichtbares natives Blockly-Punktraster mit 25 Einheiten Abstand und Einrasten, angelehnt an [ioBrokers Blockly-Editor](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/BlocklyEditor.tsx). Hintergrund und Punkte folgen der App-Darstellung **Hell / Dunkel / System** sofort, einschließlich Änderungen der Systemeinstellung. Die Blockly-Auswahl legt weiterhin die Farben von Blocks und Menüs fest; die Arbeitsfläche folgt der App-Darstellung auch bei der Palette Dark.

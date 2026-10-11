@@ -33,7 +33,7 @@ Entitätsfelder öffnen seit 0.1.17 einen Suchdialog. [Entitäten laden, auswäh
 
 Stand **0.1.44**: 163 Blocktypen. Alle Blocktypen wurden auf passende HA-Auswahlfelder geprüft. Die Bilder zeigen die tatsächlichen UGSo-Blocks im Editor. Dropdown-Varianten zählen nicht als zusätzliche Blocktypen. Anleitungen: [HA-Auswahl](./entities), [Datum und Zeit](./time), [Konvertierung](./conversion).
 
-Auslöser sind orange, Bedingungen violett, Werte grün und Aktionen blau. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
+In Standard/Dark sind Auslöser orange, Bedingungen und Logik blau, Werte grün, Aktionen türkisblau und Objekte braun. Seitliche Anschlüsse sind typisiert; Auslöser und Aktionen bilden getrennte vertikale Ketten. Entitäts-IDs werden gesucht oder manuell eingegeben.
 
 ## Farben und Wertfunktionen seit 0.1.15
 
@@ -168,7 +168,6 @@ Die violetten Zeit-Blocks verwenden einen eigenen typisierten Datumswert-Anschlu
 | **Ein / Aus / Umschalten**<br><code>ugso_switch_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_switch_action.png" alt="Ein / Aus / Umschalten" style="max-width:280px;max-height:180px"> | Aktion der Entitätsdomain: `turn_on`, `turn_off` oder `toggle`. Die Entität muss die Aktion unterstützen. |
 | **Generische HA-Aktion**<br><code>ugso_service_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_service_action.png" alt="Generische HA-Aktion" style="max-width:280px;max-height:180px"> | Aktionsname, optional eine Zielentität, Daten als JSON-Objekt. Für Parameter, die Komfortblocks noch nicht anbieten. |
 | **Warte Sekunden**<br><code>ugso_delay_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_delay_action.png" alt="Warte Sekunden" style="max-width:280px;max-height:180px"> | Pause von 0–86400 ganzen Sekunden. Number-Eingang mit Shadow-Standardwert. |
-| **Falls / sonst falls / sonst**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_if_action.png" alt="Falls / sonst falls / sonst" style="max-width:280px;max-height:180px"> | Plus/Minus ergänzt oder entfernt den letzten sonst-falls-Zweig; S schaltet Sonst um. Zahnrad zum Umordnen. `if` oder `choose`, erster passender Zweig. |
 | **Log-Ausgabe**<br><code>ugso_log_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_log_action.png" alt="Log-Ausgabe" style="max-width:280px;max-height:180px"> | Textmeldung und Schweregrad-Dropdown; `system_log.write`. Info/Debug können in HA gefiltert sein. |
 | **HA-Script steuern**<br><code>ugso_script_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_script_action.png" alt="HA-Script steuern" style="max-width:280px;max-height:180px"> | Starten ohne Warten, stoppen oder direkt aufrufen und warten. `script.turn_on`, `script.turn_off` oder `script.name`. |
 | **Entität aktualisieren**<br><code>ugso_update_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_update_action.png" alt="Entität aktualisieren" style="max-width:280px;max-height:180px"> | `homeassistant.update_entity` fordert ein Update an. Setzt keinen Zustand; Unterstützung hängt von der Integration ab. |
@@ -206,8 +205,11 @@ Umbenennen aktualisiert die verbundenen Variablen-Blocks. Namen in frei eingegeb
 
 ## Logik-Blocks seit 0.1.9
 
+Seit **0.1.56** steht hier auch der erweiterbare Falls-Block. Logik ist in Standard/Dark blau, Objekte braun. [Farben und Erweiterbarkeit](./themes).
+
 | Block | Bild im Editor | Funktionsbeschreibung |
 | --- | --- | --- |
+| **Falls / sonst falls / sonst**<br><code>ugso_if_action</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_if_action.png" alt="Falls / sonst falls / sonst" style="max-width:280px;max-height:180px"> | Plus/Minus ergänzt oder entfernt den letzten sonst-falls-Zweig; S schaltet Sonst um. Zahnrad zum Umordnen. `if` oder `choose`, erster passender Zweig. |
 | **Vergleich**<br><code>ugso_compare</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_compare.png" alt="Vergleich" style="max-width:280px;max-height:180px"> | Vergleicht zwei Werte mit =, ≠, &lt;, ≤, &gt; oder ≥. Zahlen, Texte, Variablen und einzelne Template-Ausdrücke anschließen. Liefert Boolean; Ausgabe als HA-Template-Bedingung oder Variablenwert. |
 | **UND / ODER kompakt**<br><code>ugso_binary_logic</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_binary_logic.png" alt="UND ODER kompakt" style="max-width:280px;max-height:180px"> | Zwei Boolean-Eingänge. Als Bedingung native HA-`and`/`or`-Gruppe; als Variablenwert geklammerter Jinja-Ausdruck. Die erweiterbare Gruppe bleibt für mehr Eingänge verfügbar. |
 | **NICHT**<br><code>ugso_not</code> | <img src="/assets/blocks-for-ha/blocks/de/ugso_not.png" alt="NICHT" style="max-width:280px;max-height:180px"> | Negiert eine Boolean-Bedingung. Als Bedingung native HA-`not`-Gruppe, als Variablenwert Jinja-`not`. |
