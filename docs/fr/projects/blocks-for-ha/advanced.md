@@ -5,6 +5,32 @@ description: Déclencheurs, conditions, cibles, groupes d’actions et reconnais
 
 # Automatisations HA avancées et Jinja
 
+## Options HA par engrenage depuis 0.1.61
+
+Glisser une option de gauche dans la liste du dialogue. Chaque option ajoute sa propre ligne sous les champs obligatoires. Ordre et lignes vides sélectionnées sont enregistrés dans le projet. Retirer une option réinitialise sa valeur. Les options importées, y compris `false`, `0`, listes et modèles, apparaissent automatiquement et restent inchangées au chargement. Tous les libellés sont disponibles en DE/EN/FR.
+
+![Étape HA compacte](/assets/blocks-for-ha/blocks/fr/ugso_ha_action.png)
+
+| Blocs HA examinés | Champs obligatoires / options par engrenage |
+| --- | --- |
+| Tous les déclencheurs avancés et déclencheur général | Type et champs essentiels restent. Limites, filtres d’état, durée, attributs, modèles, filtres d’événement, appareil, ID, nom, activation et variables selon le déclencheur. |
+| Condition HA avancée | Type et champs essentiels ; limites horaires, jours, attributs, durée, nom et activation facultatifs. |
+| Étape HA avancée | Action et entité ; appareil, zone, étage, label, données, variable de réponse, nom, activation, gestion d’erreur et métadonnées ajoutables séparément. |
+| Action avec cible, action générale, émission d’événement | Nom et cible nécessaires conservés ; données, variable de réponse, listes, métadonnées ou options d’étape. |
+| Attente de déclencheurs, motif horaire | Chaîne conservée ; délai maximal, comportement à expiration et options d’étape. Champs horaires sélectionnables séparément ; au moins un est nécessaire pour un YAML valide. |
+| Calendrier, température, intégration | Champs essentiels et seuils obligatoires conservés ; autres cibles, options et ID. |
+| Déclencheurs simples | ID, plusieurs entités/états/heures, tout changement, durée, décalage solaire et filtre d’événement selon le bloc. |
+| Actions/valeurs simples, variables | Aucun engrenage inutile pour les seuls champs essentiels. Noms et valeurs des variables restent modifiables directement. |
+| Si, choix, parallèle, objets, listes et fonctions | Éditeurs spécialisés existants conservés. |
+
+**et**, **ou** et **non** sont des blocs séparés. et/ou possèdent un éditeur extensible sans sélection d’opérateur ; non a une entrée. Les groupes combinés existants restent lisibles, y compris avec plusieurs entrées de négation. L’import YAML utilise les variantes séparées lorsqu’elles sont exactement équivalentes.
+
+![et](/assets/blocks-for-ha/blocks/fr/ugso_and.png)
+
+![ou](/assets/blocks-for-ha/blocks/fr/ugso_or.png)
+
+Vérification : rendu de toutes les définitions DE/EN/FR, compatibilité projet/YAML et ajout/retrait des options. Entités, intégrations et données d’exécution restent à vérifier dans HA.
+
 Depuis **0.1.43**, les blocs HA avancés proposent des champs nommés au lieu d’un grand objet JSON. Toujours 163 types ; **HA avancé** et **Jinja (expérimental)** complètent les blocs simples. L’import vérifie la structure ; vérifier ensuite intégrations, IDs d’appareils, modèles et exécution dans Home Assistant.
 
 Les 15 déclencheurs classiques avancés, conditions et étapes générales, cibles/options d’intégration, calendriers, seuils de température, motifs horaires, variables et options d’attente/étape utilisent des champs structurés. **numeric_state** propose entité, seuil supérieur, seuil inférieur, attribut, modèle, durée et ID. Les champs facultatifs vides sont omis ; les deux seuils sont indépendants. Les entités acceptent recherche HA, IDs manuels, listes JSON et modèles. Après changement du type d’un bloc général, ajouter si nécessaire les autres champs dans ses options.

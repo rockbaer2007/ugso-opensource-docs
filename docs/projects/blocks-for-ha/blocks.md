@@ -5,6 +5,10 @@ description: Alle UGSo Blocks für HA mit Bild, Funktion und Originalplugins.
 
 # Liste der Blocks
 
+## Einzelne Logikblöcke und HA-Zahnräder seit 0.1.61
+
+**und** (`ugso_and`) und **oder** (`ugso_or`) sind eigene erweiterbare Blöcke; **nicht** bleibt ein einzelner Eingang. Der kombinierte `ugso_logic_condition` ist nur für alte Projekte unterstützt. Optionale HA-Eingaben lassen sich im Zahnrad einzeln hinzufügen, entfernen und anordnen. [Vollständige Gegenüberstellung der geprüften Blockgruppen und Bilder](./advanced).
+
 ## Zeitplan und Auslöserdaten seit 0.1.60
 
 | Baustein | Bild | Funktion |

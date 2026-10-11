@@ -5,6 +5,32 @@ description: Triggers, conditions, targets, action groups and experimental Jinja
 
 # Extended HA automations and Jinja
 
+## HA options through the gear since 0.1.61
+
+Drag an option from the left into the gear popup list. Each option adds its own row below required fields. Order and deliberately selected empty rows are saved in the project. Removing an option resets its value. Imported options, including `false`, `0`, lists and templates, appear automatically and remain unchanged on load. All labels are available in DE/EN/FR.
+
+![Compact HA step](/assets/blocks-for-ha/blocks/en/ugso_ha_action.png)
+
+| Reviewed HA blocks | Required fields / gear options |
+| --- | --- |
+| All extended triggers and generic HA trigger | Type and core fields remain. Additional limits, state filters, duration, attributes, templates, event filters, device association, ID, name, enabled and variables depend on the trigger. |
+| Extended HA condition | Type and core fields; optional time limits, weekdays, attributes, duration, name and enabled. |
+| Extended HA step | Action and entity; device, area, floor, label, data, response variable, name, enabled, error handling and metadata added individually. |
+| Target action, generic action, fire event | Required name and target remain; data, response variable, lists, metadata or step options. |
+| Wait for triggers, time pattern | Trigger chain remains; timeout, timeout handling and step options. Time fields selected individually; valid YAML needs at least one. |
+| Calendar, temperature, integration triggers | Core fields and required thresholds remain; additional targets, options and ID. |
+| Simple triggers | ID, multiple entities/states/times, any change, hold time, sun offset and event filter depending on the block. |
+| Simple actions/values, variables | No unnecessary gear for core-only inputs. Variable names and values remain directly editable. |
+| If, case, parallel, objects, lists and functions | Existing specialized gear editors remain available. |
+
+**and**, **or** and **not** are separate palette blocks. and/or have expandable gear editors without an operator selector; not has one input. Existing combined groups remain readable, including multiple negation inputs. YAML import uses separate variants where exactly equivalent.
+
+![and](/assets/blocks-for-ha/blocks/en/ugso_and.png)
+
+![or](/assets/blocks-for-ha/blocks/en/ugso_or.png)
+
+Verification covers rendering every block definition in DE/EN/FR, project/YAML compatibility and adding/removing options. Entities, integrations and runtime data still need verification in HA.
+
 Since **0.1.43**, extended HA blocks offer labelled inputs instead of one large JSON object. There are still 163 block types; **HA extended** and **Jinja (experimental)** complement simple blocks. Import checks the supported structure; verify integrations, device IDs, templates and execution in Home Assistant.
 
 All 15 classic extended triggers, general conditions and steps, integration targets/options, calendars, temperature thresholds, time patterns, variables and wait/step options use structured fields. **numeric_state**, for example, provides entity, above, below, attribute, template, duration and ID. Empty optional fields are omitted; both bounds can be edited independently. Entity fields support HA search, manual IDs, JSON lists and templates. When changing the type of a general block, add any further fields through its options if needed.

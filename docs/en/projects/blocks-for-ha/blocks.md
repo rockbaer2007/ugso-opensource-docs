@@ -5,6 +5,10 @@ description: All Blocks for HA with images, functionality and original plugins.
 
 # Block catalog
 
+## Separate logic blocks and HA gears since 0.1.61
+
+**and** (`ugso_and`) and **or** (`ugso_or`) are separate expandable blocks; **not** has one input. Combined `ugso_logic_condition` remains supported for old projects. Optional HA inputs can be added, removed and reordered individually through the gear. [Reviewed block groups and images](./advanced).
+
 ## Schedule and trigger data since 0.1.60
 
 | Block | Image | Function |

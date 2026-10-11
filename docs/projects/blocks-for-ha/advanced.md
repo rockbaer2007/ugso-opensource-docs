@@ -5,6 +5,32 @@ description: Auslöser, Bedingungen, Ziele, Ablaufgruppen und experimentelle Jin
 
 # Erweiterte HA-Automationen und Jinja
 
+## HA-Optionen über das Zahnrad seit 0.1.61
+
+Im Zahnrad-Popup eine Option von links in die Liste ziehen. Jede Option ergänzt eine eigene Zeile unter den Pflichtfeldern. Reihenfolge und bewusst ausgewählte leere Zeilen werden im Projekt gespeichert. Entfernen setzt den Wert zurück. Importierte Optionen einschließlich `false`, `0`, Listen und Templates erscheinen automatisch und bleiben beim Laden erhalten. Alle Beschriftungen sind in DE/EN/FR verfügbar.
+
+![Kompakter HA-Schritt](/assets/blocks-for-ha/blocks/de/ugso_ha_action.png)
+
+| Geprüfte HA-Blöcke | Pflichtfelder / Zahnrad-Optionen |
+| --- | --- |
+| Alle erweiterten Auslöser und allgemeiner HA-Auslöser | Typ und Kerneingaben bleiben. Weitere Grenzen, Zustandsfilter, Dauer, Attribute, Templates, Ereignisfilter, Gerätezuordnung, ID, Name, Aktiv und Variablen je nach Auslöser im Zahnrad. |
+| Erweiterte HA-Bedingung | Typ und Kerneingaben; optionale Zeitgrenzen, Wochentage, Attribute, Dauer, Name und Aktiv. |
+| Erweiterter HA-Schritt | Aktion und Entität; Gerät, Bereich, Etage, Label, Daten, Antwortvariable, Name, Aktiv, Fehlerbehandlung und Metadaten einzeln ergänzbar. |
+| Zielaktion, allgemeine Aktion, Ereignis senden | Aktions-/Ereignisname und Ziel bleiben; Daten, Antwortvariable, Listen, Metadaten bzw. Schrittoptionen ergänzbar. |
+| Warte-Auslöser, Zeitmuster | Auslöserkette bleibt; Zeitlimit, Verhalten bei Zeitlimit und Schrittoptionen. Zeitfelder einzeln auswählbar; mindestens eines muss für gültiges YAML gesetzt sein. |
+| Kalender, Temperatur, Integrationsauslöser | Kerneingaben und erforderliche Schwellenwerte bleiben; weitere Zielarten, Optionen und ID ergänzbar. |
+| Einfache Auslöser | ID, mehrere Entitäten/Zustände/Uhrzeiten, jede Änderung, Haltezeit, Sonnenversatz und Ereignisfilter je nach Block. |
+| Einfache Aktionen/Werte, Variablen | Kein unnötiges Zahnrad für reine Kerneingaben. Variablennamen und Werte bleiben direkt bearbeitbar. |
+| Falls, Auswahl, Parallel, Objekte, Listen und Funktionen | Vorhandene spezialisierte Zahnrad-Editoren bleiben erhalten. |
+
+**und**, **oder** und **nicht** sind getrennte Menüblöcke. und/oder haben jeweils einen erweiterbaren Zahnrad-Editor ohne Operatorauswahl; nicht hat einen Eingang. Alte kombinierte Gruppen bleiben lesbar, auch mit mehreren Negationseingängen. YAML-Import verwendet die getrennten Varianten, soweit sie exakt gleichwertig sind.
+
+![und](/assets/blocks-for-ha/blocks/de/ugso_and.png)
+
+![oder](/assets/blocks-for-ha/blocks/de/ugso_or.png)
+
+Geprüft wurden das Rendern sämtlicher Blockdefinitionen in DE/EN/FR, Projekt-/YAML-Kompatibilität und das Hinzufügen/Entfernen von Optionen. Entitäten, Integrationen und Laufzeitdaten sind weiterhin in HA zu prüfen.
+
 Seit **0.1.43** bieten die erweiterten HA-Blöcke beschriftete Eingaben statt eines großen JSON-Objekts. Weiterhin 163 Blocktypen: die Kategorien **HA erweitert** und **Jinja (experimentell)** ergänzen die einfachen Blocks. Der Import prüft die unterstützte Struktur; Integration, Geräte-IDs, Templates und Ausführung anschließend in Home Assistant prüfen.
 
 Alle 15 klassischen erweiterten Auslöser, allgemeine Bedingungen und Schritte sowie Integrationsziele/-optionen, Kalender, Temperaturgrenzen, Zeitmuster, Variablen und Warte-/Schrittoptionen sind umgestellt. **numeric_state** bietet etwa Entität, Über, Unter, Attribut, Template, Dauer und ID. Leere optionale Felder werden nicht ausgegeben; beide Zahlengrenzen sind unabhängig bearbeitbar. Entitätsfelder erlauben HA-Suche, manuelle IDs, JSON-Listen und Templates. Bei Typwechsel in allgemeinen Blöcken zusätzliche Felder gegebenenfalls über die Optionen ergänzen.

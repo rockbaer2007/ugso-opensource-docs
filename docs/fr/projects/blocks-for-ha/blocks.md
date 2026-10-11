@@ -5,6 +5,10 @@ description: Tous les blocs UGSo avec images françaises et fonctions.
 
 # Catalogue des blocs
 
+## Blocs logiques séparés et engrenages HA depuis 0.1.61
+
+**et** (`ugso_and`) et **ou** (`ugso_or`) sont des blocs extensibles séparés ; **non** a une entrée. Le bloc combiné `ugso_logic_condition` reste pris en charge pour les anciens projets. Ajouter, retirer et ordonner les entrées HA facultatives par engrenage. [Groupes examinés et images](./advanced).
+
 ## Horaire et données du déclencheur depuis 0.1.60
 
 | Bloc | Image | Fonction |
