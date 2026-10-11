@@ -6,6 +6,8 @@ description: Create native Home Assistant automations with visual Blocks.
 
 ## Empty start since 0.1.52
 
+Since **0.1.53**, **New automation** opens an empty editor after confirmation. Blocks, undo history, name, description, automation options and pasted YAML are reset. **Cancel** preserves the current work. Save your project before confirming. Language, appearance, HA connection and installed block packages remain available; the empty project is saved in the browser.
+
 Without a saved project, the editor starts completely empty. Drag **Automation** from **System** onto the workspace or import YAML. Importing into an empty editor does not require “Completely replace current automation”. Examples open only through **Load example**.
 
 Saved projects resume on the next start. Empty projects stay empty after reload or language changes. If the saved browser project cannot be loaded, an empty editor opens with a notice, without an example.
