@@ -196,7 +196,7 @@ Depuis **0.1.56**, le bloc Si extensible est disponible ici. Logique est bleu et
 
 | Bloc | Image | Fonction |
 | --- | --- | --- |
-| **Texte …**<br><code>ugso_text</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text.png" alt="Texte …" style="max-width:280px;max-height:180px"> | Texte multiligne éditable ; contenu conservé exactement sans traduction automatique. |
+| **Texte**<br><code>ugso_text</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text.png" alt="Texte" style="max-width:280px;max-height:180px"> | Depuis 0.1.65, champ vide sur une ligne entre guillemets, sans ligne d’aide supplémentaire. Entrée valide. Le texte existant reste intact à l’import de projet/YAML, y compris les sauts de ligne. |
 | **Saut de ligne …**<br><code>ugso_text_newline</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_newline.png" alt="Saut de ligne …" style="max-width:280px;max-height:180px"> | Un véritable saut de ligne pour assembler du texte. |
 | **Créer du texte avec …**<br><code>ugso_text_join</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_join.png" alt="Créer du texte avec …" style="max-width:280px;max-height:180px"> | Assemble 0–100 valeurs en texte. L’engrenage modifie le nombre d’entrées. |
 | **Ajouter le texte … à la variable …**<br><code>ugso_text_append</code> | <img src="/assets/blocks-for-ha/blocks/fr/ugso_text_append.png" alt="Ajouter le texte … à la variable …" style="max-width:280px;max-height:180px"> | Affecte un nouveau texte à une variable textuelle déjà initialisée. N’écrit pas dans une entité HA. |
