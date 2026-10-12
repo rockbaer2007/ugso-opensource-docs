@@ -5,6 +5,8 @@ description: Material Design 1.1.0 pour Studio 0.1.292 avec DE/EN/FR et mises à
 
 # Material Design
 
+Depuis **Studio 0.1.295**, les icônes et leur symbole remplissent le cadre de la barre latérale et du sélecteur. Graphiques et réglages conservés ; aucune mise à jour du paquet nécessaire. [Nouveautés interactives](/fr/projects/grafik-visual-studio/interaktiv).
+
 **Paquet 1.1.0 · Studio 0.1.292 ou plus récent · 49 widgets · MIT.** Moteurs indépendants inspirés de [ioBroker VIS2 Material Design de typhosj/Scrounger](https://github.com/typhosj/ioBroker.vis2-materialdesign). Les icônes MDI originales restent des SVG locaux. Identifiant technique : <code>ugso.materialdesign</code>.
 
 [Deutsch](/projects/grafik-visual-studio/materialdesign) · [English](/en/projects/grafik-visual-studio/materialdesign) · [Code source](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign)

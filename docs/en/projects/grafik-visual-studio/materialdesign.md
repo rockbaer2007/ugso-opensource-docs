@@ -5,6 +5,8 @@ description: Material Design 1.1.0 for Studio 0.1.292 with DE/EN/FR and compatib
 
 # Material Design
 
+From **Studio 0.1.295**, package icons and their symbol area fill the sidebar/selector frame. Existing graphics and settings are retained; no package update is required. [Interactive additions](/en/projects/grafik-visual-studio/interaktiv).
+
 **Package 1.1.0 · Studio 0.1.292 or newer · 49 widgets · MIT.** Independent renderers inspired by [ioBroker VIS2 Material Design by typhosj/Scrounger](https://github.com/typhosj/ioBroker.vis2-materialdesign). Original MDI assignments remain local SVGs. Technical package ID: <code>ugso.materialdesign</code>.
 
 [Deutsch](/projects/grafik-visual-studio/materialdesign) · [Français](/fr/projects/grafik-visual-studio/materialdesign) · [Source](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign)

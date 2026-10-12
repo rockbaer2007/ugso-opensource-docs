@@ -4,6 +4,8 @@ title: Editor und Tastenkombinationen
 
 # Editor und Tastenkombinationen
 
+Ab **Studio 0.1.295** sind zusätzliche [Universal-Funktionen, radiale Farbverläufe und größere Material-Icons](/projects/grafik-visual-studio/interaktiv) verfügbar. Einstellungen und bisheriges Tasterverhalten bleiben erhalten; neue Optionen sind bewusst wählbar.
+
 Ab **Studio 0.1.294** füllen die Vorschaubilder aller elf **Interaktiv-Widgets** den vorhandenen Rahmen in Seitenleiste und Widget-Auswahl, passend zu Hell/Dunkel. Einstellungen und Runtime-Verhalten bleiben erhalten. Der [Quellcodevergleich mit Inventwo VIS-2 1.10.0](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/inventwo-interactive-audit-2026-10-12.md) dokumentiert die Unterschiede: Besonders Universal fehlen noch zusätzliche Aktionen/Inhalte und dem radialen Schieberegler Farbverläufe. Vollständige 1:1-Gleichheit ist damit nicht erreicht.
 
 Ab **Studio 0.1.293** sind die [Basic-Ergänzungen aus dem VIS-2-Vergleich](/projects/grafik-visual-studio/basic) verfügbar, einschließlich separat wählbarer DE/EN/FR-Eigenschaften. Alte Widget-Einstellungen bleiben erhalten.
