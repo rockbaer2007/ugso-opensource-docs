@@ -4,6 +4,8 @@ title: Editor und Tastenkombinationen
 
 # Editor und Tastenkombinationen
 
+Ab **Studio 0.1.291** funktionieren **Strg+C** (Kopieren), **Strg+X** (Ausschneiden) und **Strg+V** (Einfügen) für einzelne und mehrere ausgewählte Widgets. Auf macOS gilt entsprechend Cmd. Sie verwenden dieselbe interne Widget-Zwischenablage wie Toolbar und Kontextmenü; eingefügte Widgets erhalten neue IDs, ihre Werte bleiben erhalten. Rückgängig kann Ausschneiden und Einfügen zurücknehmen. In Textfeldern bleiben die normalen Text-Tastenkürzel aktiv; offene Dialoge und Runtime lösen keine Widget-Aktionen aus.
+
 Ab **Studio 0.1.290** öffnet **Entf** für ausgewählte Widgets denselben Löschdialog wie der Papierkorb. Das gilt auch bei Mehrfachauswahl. Abbrechen oder Escape behält die Widgets; nach bestätigtem Löschen kann Rückgängig sie wiederherstellen. Die freiwillige Unterdrückung weiterer Fragen für fünf Minuten gilt auch für Entf. In Textfeldern, offenen Dialogen und der Runtime löscht die Taste keine Widgets; gedrückt gehaltene Tasten lösen keine weiteren Abfragen aus.
 
 ## Widgets nur in der Runtime ausblenden

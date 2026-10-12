@@ -4,6 +4,8 @@ title: Editor and keyboard shortcuts
 
 # Editor and keyboard shortcuts
 
+From **Studio 0.1.291**, **Ctrl+C** (Copy), **Ctrl+X** (Cut) and **Ctrl+V** (Paste) work with single and multiple selected widgets. Use Cmd on macOS. They share the internal widget clipboard with the toolbar and context menu; pasted widgets receive new IDs and retain their values. Undo restores cuts and reverses pastes. Text fields keep native text shortcuts; open dialogs and runtime do not trigger widget actions.
+
 From **Studio 0.1.290**, **Delete** opens the same confirmation dialog as the trash button for selected widgets, including multiple selection. Cancel or Escape keeps the widgets; Undo restores confirmed deletions. The optional five-minute suppression also applies to Delete. Text fields, open dialogs and runtime do not trigger widget deletion; holding down the key does not open further prompts.
 
 ## Hide widgets only in runtime
