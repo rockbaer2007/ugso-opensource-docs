@@ -18,4 +18,4 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 | [FRITZ!Box to MQTT](/en/projects/fritzbox-to-mqtt/) | FRITZ!Box data through MQTT Discovery for Home Assistant. |
 | [Heizöl to MQTT](/en/projects/heizoel-to-mqtt/) | Heating-oil prices through MQTT Discovery for Home Assistant. |
 | [Parcel to MQTT](/en/projects/parcel-to-mqtt/) | Development discontinued. Alternative: [Parcel Tracker](https://github.com/SoerenKaiser99/parcel_tracker). Documentation retained as an archive. |
-| [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/mqtt_client/DOCS.en.md) | Export selected HA states to an external broker such as ioBroker, with optional ON/OFF commands. The HA broker stays in place. |
+| [MQTT-Client](/en/projects/mqtt-client/) | Transfer selected HA values live to an external broker and control supported entities. Since 0.1.16: detailed status, confirmed retained-topic cleanup, settings backup and custom TLS certificates; existing settings remain valid. |

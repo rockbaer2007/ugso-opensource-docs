@@ -28,7 +28,7 @@ Enthaltene Add-ons:
 - FRITZ!Box to MQTT
 - Heizöl to MQTT
 - Parcel to MQTT (Entwicklung eingestellt)
-- [MQTT-Client](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client): gezielte Home-Assistant-zu-ioBroker-Übertragung per MQTT. Statt mit dem ioBroker-HASS-Adapter pauschal alle Home-Assistant-Entitäten zu spiegeln, wählst du einzelne Geräte und Werte aus; diese erscheinen in ioBroker als übersichtlicher Gerätebaum. Steuerbare Werte wie Switches, Eingaben, Slider, Selects und Taster können über `/set` wieder zurück nach Home Assistant geschaltet oder gedrückt werden. Version 0.1.14 sendet States und Attribute zuerst in kleinen Häppchen und legt die `/set`-Rückkanäle danach an, damit ioBroker den Gerätebaum sauberer aufbaut. Der bestehende HA-Broker bleibt erhalten. Seit **0.1.15** verwendet die App das MQTT-Symbol von [MQTT.org](https://mqtt.org/) im App-Store, in der Kopfzeile und als Browser-Icon.
+- [MQTT-Client](/projects/mqtt-client/): ausgewählte Home-Assistant-Geräte und Werte an ioBroker oder einen externen MQTT-Broker übertragen. **0.1.16** ergänzt Live-Zustandsänderungen mit Abfrage-Fallback, detaillierten Status, bestätigte Bereinigung eigener veralteter Retain-Topics, zusätzliche Steuerbefehle, JSON-Einstellungssicherung und eigene TLS-Zertifikate. Bestehende Einstellungen bleiben gültig; Retain-Daten werden nicht automatisch gelöscht. Der vorhandene HA-Broker bleibt bestehen.
 
 - [Gemeinsames Add-on-Repository auf GitHub öffnen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons)
 

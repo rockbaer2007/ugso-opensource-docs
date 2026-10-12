@@ -122,6 +122,7 @@ const navFr = [
 ]
 
 const sidebarDe = {
+  '/projects/mqtt-client/': [{ text: 'MQTT-Client', items: [{ text: 'Einrichtung und Neuerungen', link: '/projects/mqtt-client/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
   '/projects/callmebot/': [{ text: 'CallMeBot Whatsapp', items: [{ text: 'Einrichtung und Blockly', link: '/projects/callmebot/' }, { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
   '/projects/callmebot-signal/': [{ text: 'CallMeBot Signal', items: [{ text: 'Einrichtung und Blockly', link: '/projects/callmebot-signal/' }, { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
   '/projects/blocks-for-ha/': [{ text: 'UGSo HA Apps', items: [
@@ -292,6 +293,7 @@ const sidebarDe = {
       collapsed: false,
       items: [
         { text: 'Übersicht', link: '/projects-mqtt/' },
+        { text: 'MQTT-Client', link: '/projects/mqtt-client/' },
         { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' },
         { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
         { text: 'CallMeBot Whatsapp', link: '/projects/callmebot/' },
@@ -553,6 +555,7 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects/mqtt-client/': [{ text: 'MQTT-Client', items: [{ text: 'Setup and updates', link: '/en/projects/mqtt-client/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
   '/en/projects/callmebot/': [{ text: 'CallMeBot Whatsapp', items: [{ text: 'Setup and Blockly', link: '/en/projects/callmebot/' }, { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
   '/en/projects/callmebot-signal/': [{ text: 'CallMeBot Signal', items: [{ text: 'Setup and Blockly', link: '/en/projects/callmebot-signal/' }, { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
   '/en/projects/blocks-for-ha/': [{ text: 'UGSo HA Apps', items: [
@@ -680,6 +683,7 @@ const sidebarEn = {
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/projects-mqtt/' },
+        { text: 'MQTT-Client', link: '/en/projects/mqtt-client/' },
         { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' },
         { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
         { text: 'CallMeBot Whatsapp', link: '/en/projects/callmebot/' },
