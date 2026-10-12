@@ -5,6 +5,8 @@ description: Install the external Technic widget set and connect Window – Wall
 
 # Technic
 
+From **Studio 0.1.296**, the thermostat offers initially disabled [Climate controls](./ha-quellen-climate): two targets, HVAC modes, presets, fan, swing, humidity and power according to device capabilities. Widget properties and runtime messages support DE/EN/FR; existing settings remain valid.
+
 Packages and helper tools are provided centrally at [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=en). This open-source page provides descriptions and instructions; downloads are provided by the package catalog.
 
 **Inspired by the [ioBroker Technic Widgets by Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** An independent implementation for Home Assistant.

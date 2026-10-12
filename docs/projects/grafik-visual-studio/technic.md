@@ -5,6 +5,8 @@ description: Das externe Technic-Widget-Set installieren und Window – Wall mit
 
 # Technic
 
+Ab **Studio 0.1.296** bietet der Thermostat zusätzlich eine zunächst deaktivierte [Climate-Steuerung](./ha-quellen-climate): zwei Sollwerte, Betriebsarten, Presets, Lüfter, Schwenken, Feuchtigkeit und Ein/Aus nach Gerätefähigkeit. Die Widget-Eigenschaften und Laufzeitmeldungen sind DE/EN/FR wählbar; bestehende Einstellungen bleiben gültig.
+
 Pakete und Zusatztools werden zentral auf [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=de) angeboten. Diese Open-Source-Seite enthält Beschreibung und Anleitung; der Download erfolgt über den Paketkatalog.
 
 **Inspiriert von den [ioBroker-Technic-Widgets von Sefina-DS](https://github.com/Sefina-DS/ioBroker.vis-2-widgets-technic).** Eigene Umsetzung für Home Assistant.

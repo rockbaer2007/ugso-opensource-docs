@@ -5,7 +5,7 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
-**Studio 0.1.295 review:** The remaining **62 widget types** (Special, gauges, data flow and seven packages) were checked for HA bindings, properties and runtime behavior. 383 JavaScript tests, 105 Python tests and browser checks pass. No new blocking defect was found; real devices/Companion are not verified by these tests. [Report and limits](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md). Complete French for remaining packages, additional Climate features and device-specific source/unit mappings remain open. [Universal and Material previews from 0.1.295](./interaktiv).
+**Studio 0.1.296:** The remaining **62 widget types** gain DE/EN/FR properties and runtime messages, optional Climate controls and source/attribute/unit checks. Existing projects and package versions remain valid; new groups start disabled. [Guide and limits](./ha-quellen-climate). Mocked tests do not verify real devices/Companion. [Audit report](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md).
 
 Since **0.1.289**, **Save** changes colour during saving: **amber** while the request is pending, **green** after success and **red** on failure. The original colour returns after 1.4 seconds. This also applies to autosave in both light and dark appearance.
 

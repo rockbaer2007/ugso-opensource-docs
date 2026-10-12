@@ -5,7 +5,7 @@ description: Universal, curseur radial et comparaison Inventwo depuis Studio 0.1
 
 # Widgets interactifs
 
-**Revue des autres widgets, Studio 0.1.295 :** Les **62 types restants** ont été vérifiés (liaisons HA, propriétés, exécution). Les 383 tests JavaScript, 105 tests Python et contrôles navigateur passent, sans nouveau défaut bloquant détecté. Les appareils réels/Companion ne sont pas validés. Restent la traduction française complète des autres paquets, certaines fonctions Climate et les associations de sources/unités propres aux appareils. [Rapport et limites](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md).
+**Studio 0.1.296 :** Les **62 types restants** proposent des propriétés/messages DE/EN/FR, des commandes climatiques facultatives et une vérification des sources, attributs et unités. Projets et versions de paquet existants restent valides ; les nouveaux groupes sont initialement désactivés. [Guide et limites](./ha-quellen-climate). Les tests simulés ne valident pas les appareils réels/Companion. [Rapport](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md).
 
 **Studio 0.1.295** ajoute les grandes fonctions de la [comparaison Inventwo VIS-2](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/inventwo-interactive-audit-2026-10-12.md). [Deutsch](/projects/grafik-visual-studio/interaktiv) · [English](/en/projects/grafik-visual-studio/interaktiv).
 
