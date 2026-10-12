@@ -5,6 +5,8 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 # HA Grafik Visual Studio
 
+**Prüfstand Studio 0.1.295:** Auch die übrigen **62 Widgettypen** (Spezial, Messinstrumente, Datenfluss und sieben Pakete) wurden auf HA-Anbindung, Eigenschaften und Runtime geprüft. 383 JavaScript-, 105 Python- und die Browserprüfungen bestehen. Kein neuer blockierender Fehler wurde gefunden; echte Geräte/Companion sind damit noch nicht bestätigt. [Prüfbericht und Grenzen](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md). Offen bleiben vollständiges Französisch der übrigen Pakete, zusätzliche Climate-Funktionen und gerätespezifische Quellen-/Einheitenzuordnungen. [Universal und Material-Vorschauen ab 0.1.295](./interaktiv).
+
 Seit **0.1.289** wechselt **Speichern** während des Speicherns kurz die Farbe: **Orange** bei laufender Anfrage, **Grün** nach Erfolg und **Rot** bei einem Fehler. Nach 1,4 Sekunden kehrt die normale Farbe zurück. Das gilt auch für Autospeichern und funktioniert bei heller und dunkler Darstellung.
 
 Ab **Studio 0.1.287** haben **alle Widgets** oben im Reiter **WIDGET** die Checkbox **In Runtime verstecken**. Sie blendet das Widget unabhängig vom Z-Index in der Runtime aus; im Editor bleibt es bearbeitbar. Berechnungen und Datenfluss bleiben aktiv, auch bei ausgeblendeten Number-Widgets und MathBoxen. Das Projekt nach der Änderung speichern.

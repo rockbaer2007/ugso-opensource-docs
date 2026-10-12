@@ -5,6 +5,8 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
+**Studio 0.1.295 review:** The remaining **62 widget types** (Special, gauges, data flow and seven packages) were checked for HA bindings, properties and runtime behavior. 383 JavaScript tests, 105 Python tests and browser checks pass. No new blocking defect was found; real devices/Companion are not verified by these tests. [Report and limits](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md). Complete French for remaining packages, additional Climate features and device-specific source/unit mappings remain open. [Universal and Material previews from 0.1.295](./interaktiv).
+
 Since **0.1.289**, **Save** changes colour during saving: **amber** while the request is pending, **green** after success and **red** on failure. The original colour returns after 1.4 seconds. This also applies to autosave in both light and dark appearance.
 
 From **Studio 0.1.287**, **every widget** has an **In Runtime verstecken** (Hide in runtime) checkbox at the top of its **WIDGET** tab. It hides the widget in runtime independently of z-index while retaining editor visibility. Calculations and data flow remain active, including hidden Number widgets and Math boxes. Save the project after changing it.
