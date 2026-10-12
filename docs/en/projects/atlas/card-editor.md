@@ -10,6 +10,16 @@ application in the ATLAS environment. It is used to design Home Assistant cards
 visually, import existing YAML cards and prepare exportable card packages or
 HACS-oriented bundles.
 
+Since HA app **0.1.286**, reload and JSON/HACS import preserve template IDs and
+resize reference dimensions. HACS bundles can be reimported when the project
+name differs from the first card title: the two package manifest names are
+compared. Card contents and existing settings remain intact.
+
+The Administration → Plugin Hub → HA connection → Expert editor → export/import
+workflow was verified in DE/EN/FR using a mock HA endpoint, an isolated browser
+profile and a test plugin, including reload and container restart. This does
+not replace verification against a live Home Assistant installation.
+
 The local demo uses:
 
 ```text

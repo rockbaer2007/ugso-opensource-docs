@@ -10,6 +10,17 @@ Referenzanwendung im ATLAS-Umfeld. Er dient dazu, Home-Assistant-Cards visuell
 zu entwerfen, vorhandene YAML-Cards zu importieren und exportierbare Card-Pakete
 oder HACS-nahe Bundles vorzubereiten.
 
+Seit HA-App **0.1.286** bleiben beim Neuladen und beim JSON-/HACS-Import auch
+Template-Zuordnung und Bezugsgrößen für die Größenänderung erhalten. Ein
+HACS-Paket lässt sich wieder importieren, wenn der Projektname vom Titel der
+ersten Karte abweicht: Verglichen werden die Namen der beiden Paket-Manifeste.
+Der Inhalt der Karten und die bestehenden Einstellungen bleiben erhalten.
+
+Der Ablauf Administration → Plugin Hub → HA-Verbindung → Expert-Editor →
+Export/Wiederimport wurde in DE/EN/FR mit einem simulierten HA-Endpunkt,
+isoliertem Browserprofil und Testplugin geprüft, einschließlich Neuladen und
+Container-Neustart. Das ersetzt keine Prüfung an einer echten HA-Installation.
+
 Die lokale Demo läuft standardmäßig auf:
 
 ```text
