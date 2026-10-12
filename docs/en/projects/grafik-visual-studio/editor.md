@@ -4,6 +4,8 @@ title: Editor and keyboard shortcuts
 
 # Editor and keyboard shortcuts
 
+From **Studio 0.1.294**, previews for all eleven **Interactive widgets** fill their existing sidebar/selector frames in light and dark themes. Settings and runtime behavior are preserved. The [source comparison against Inventwo VIS-2 1.10.0](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/inventwo-interactive-audit-2026-10-12.md) documents remaining differences, especially additional Universal actions/content and radial slider gradients. Complete 1:1 parity has not been reached.
+
 From **Studio 0.1.293**, the [Basic additions following the VIS-2 review](/en/projects/grafik-visual-studio/basic) are available, including independently selected DE/EN/FR properties. Existing widget settings are retained.
 
 From **Studio 0.1.291**, **Ctrl+C** (Copy), **Ctrl+X** (Cut) and **Ctrl+V** (Paste) work with single and multiple selected widgets. Use Cmd on macOS. They share the internal widget clipboard with the toolbar and context menu; pasted widgets receive new IDs and retain their values. Undo restores cuts and reverses pastes. Text fields keep native text shortcuts; open dialogs and runtime do not trigger widget actions.
