@@ -4,7 +4,7 @@ description: Signal-Textnachrichten aus Home Assistant mit Empfängerprofilen un
 ---
 # CallMeBot Signal
 
-Experimentelle **HA-App 0.1.1** im [gemeinsamen Repository mit Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal). Vollständig **DE/EN/FR**, Systemsprache und Hell/Dunkel/System. Eigenständige UGSo-Implementierung, inspiriert von [ioBroker.signal-cmb](https://github.com/derAlff/ioBroker.signal-cmb).
+Beta **HA-App 0.1.2** im [gemeinsamen Repository mit Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal). Vollständig **DE/EN/FR**, Systemsprache und Hell/Dunkel/System. Eigenständige UGSo-Implementierung, inspiriert von [ioBroker.signal-cmb](https://github.com/derAlff/ioBroker.signal-cmb).
 
 ![Signal-Oberfläche auf Deutsch](/assets/callmebot-signal/de.png)
 
@@ -49,3 +49,15 @@ Schlüssel bleiben in der privaten Backend-Datei `/data/profiles.json`, werden n
 Backend, UUID-/Nummernvalidierung, MQTT-Protokoll, Blockly/Jinja-Export, DE/EN/FR und mobile Ansicht sind mit Testdaten geprüft. Echte Signal-Zustellung und Installation unter HA-Supervisor sind mit der eigenen Einrichtung zu prüfen. Automatisierte Tests senden keine echten Nachrichten.
 
 [Quellcode](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal) · Apache-2.0 · Unabhängiges Community-Projekt.
+
+## Beta: Historie, Profilsicherung und MQTT-TLS
+
+Die Historie enthält bis zu 200 dauerhaft gespeicherte Einträge mit Zeitpunkt, Profil-ID, Quelle und Ergebnis. Filter nach Profil oder Fehlerstatus und bestätigtes Löschen sind verfügbar. Nachrichten, Telefonnummern, API-Schlüssel und Anfrage-IDs werden nicht in der Historie gespeichert. „Angenommen“ bestätigt weiterhin nur die Annahme durch CallMeBot, keine Zustellung. Bei Speicherfehlern wird der Versand nicht wiederholt.
+
+Die Profilsicherung verschlüsselt Profile einschließlich Telefonnummern, API-Schlüsseln und Standardempfänger mit AES-GCM und einem aus dem Sicherungspasswort abgeleiteten Schlüssel (scrypt). Mindestens 12 Zeichen; Passwort separat aufbewahren. Es wird nicht gespeichert. Ohne Passwort ist keine Wiederherstellung möglich. Wiederherstellen ersetzt die Profile erst nach Bestätigung und erfolgreicher Prüfung; falsches Passwort, beschädigte Dateien oder Sicherungen der anderen CallMeBot-App ändern nichts. Bei wartenden Versandversuchen wird die Wiederherstellung abgewiesen. MQTT-Zugangsdaten und Historie sind nicht enthalten; für diese weiterhin die vollständige HA-App-Sicherung verwenden.
+
+Unter MQTT-Verbindung bleibt „HA-Broker automatisch verwenden“ der bisherige Standard. Für einen externen Broker die Automatik deaktivieren und Host, Port, Benutzer und Passwort angeben. TLS prüft Zertifikat und Hostname; eigene CA und Client-Zertifikat/Schlüssel sind als PEM-Datei oder Text möglich. TLS-Port passend wählen, häufig 8883. Leere Geheimnisfelder behalten gespeicherte Werte. HA/Blocks müssen diesen Broker verwenden oder die Send-/Result-/Profil-/Discovery-Topics zwischen den Brokern weiterleiten; eine externe Verbindung allein ersetzt keine Broker-Bridge.
+
+Bestehende profiles.json, Profile, Schlüssel, MQTT-Themen und Entitäts-IDs bleiben erhalten. Neue Historie: /data/history.json; ausdrücklich gespeicherte MQTT-Einstellungen: /data/mqtt.json. Die Konfiguration wird beim Update nicht automatisch umgeschrieben. Alle neuen Oberflächentexte sind DE/EN/FR.
+
+Die Oberfläche und Beschreibung heißen Beta. Home Assistant unterstützt keinen nativen stage-Wert beta; der gültige technische Status experimental bleibt deshalb bestehen. [HA-Konfiguration](https://developers.home-assistant.io/docs/apps/configuration/).

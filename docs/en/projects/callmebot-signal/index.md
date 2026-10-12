@@ -4,7 +4,7 @@ description: Signal text messages from Home Assistant with recipient profiles an
 ---
 # CallMeBot Signal
 
-Experimental **HA app 0.1.1** in the [shared Blocks for HA repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal). Complete **DE/EN/FR**, system language and light/dark/system appearance. Original UGSo implementation inspired by [ioBroker.signal-cmb](https://github.com/derAlff/ioBroker.signal-cmb).
+Beta **HA app 0.1.2** in the [shared Blocks for HA repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal). Complete **DE/EN/FR**, system language and light/dark/system appearance. Original UGSo implementation inspired by [ioBroker.signal-cmb](https://github.com/derAlff/ioBroker.signal-cmb).
 
 ![Signal interface in English](/assets/callmebot-signal/en.png)
 
@@ -49,3 +49,15 @@ Keys stay in the private backend file `/data/profiles.json`, are never returned 
 Backend, UUID/number validation, MQTT protocol, Blockly/Jinja export, DE/EN/FR and mobile layout are verified with test data. Real Signal delivery and HA Supervisor installation require your own setup. Automated tests never send real messages.
 
 [Source](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal) · Apache-2.0 · Independent community project.
+
+## Beta: history, profile backup and MQTT TLS
+
+History persists up to 200 entries with timestamp, profile ID, source and result. Filter by profile/error status and explicitly confirm clearing. It contains no messages, numbers, API keys or request IDs. Accepted still means provider acceptance, not confirmed delivery. A storage error never causes automatic resending.
+
+Profile backups encrypt numbers, API keys and the default profile using AES-GCM and a password-derived key (scrypt). Choose at least 12 characters and keep the password separately; it is not stored. Restoration requires it, explicit confirmation and valid authenticated content. Wrong passwords, damaged files or backups from the other CallMeBot app leave profiles untouched. Pending sends block restoration. MQTT credentials and history are excluded; use a full HA app backup for those.
+
+Automatic HA broker selection remains the existing default. Disable it to configure an external host, port, username and password. TLS always checks certificates and hostname; custom PEM CA and client certificate/key uploads are supported. Choose the broker TLS port, often 8883. Empty secret fields preserve saved values. HA/Blocks must use this broker or forward send/result/profile/discovery topics between brokers; this is not an automatic broker bridge.
+
+Existing profiles.json, recipient keys, MQTT topics and entity IDs remain unchanged. History uses /data/history.json; explicitly saved MQTT settings use /data/mqtt.json. No automatic configuration rewrite. All new UI labels support DE/EN/FR.
+
+Beta is displayed in the UI and description. HA has no native beta stage, so the valid experimental configuration stage remains. [HA configuration](https://developers.home-assistant.io/docs/apps/configuration/).

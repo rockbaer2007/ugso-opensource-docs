@@ -6,7 +6,7 @@ description: Messages texte WhatsApp depuis Home Assistant avec profils de desti
 
 Depuis 0.1.5, l’application s’appelle **CallMeBot Whatsapp**. Profils, sujets MQTT et IDs existants sont conservés. [CallMeBot Signal](../callmebot-signal/) utilise ses propres profils et clés.
 
-**Application HA expérimentale 0.1.5** dans le [même dépôt que Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Interface et blocs complets en **DE/EN/FR**, langue système et apparence claire/sombre/système. Inspiré de [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb) ; implémentation UGSo originale sans ioBroker.
+**Application HA bêta 0.1.6** dans le [même dépôt que Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Interface et blocs complets en **DE/EN/FR**, langue système et apparence claire/sombre/système. Inspiré de [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb) ; implémentation UGSo originale sans ioBroker.
 
 **Correction 0.1.1 :** L’envoi fonctionne sans `crypto.randomUUID`, notamment avec Ingress en HTTP. Redémarrer l’application et recharger la page après la mise à jour. Les identifiants utilisent des octets aléatoires disponibles ou un horodatage avec compteur ; ils détectent les doublons et ne servent pas à l’authentification.
 
@@ -27,7 +27,7 @@ Un champ de clé vide conserve la clé enregistrée. Les clés ne sont jamais re
 
 ### Choisir les profils enregistrés
 
-Avec **CallMeBot 0.1.2 et Blocks for HA 0.1.59**, le champ de profil ouvre une liste consultable des noms, identifiants et du destinataire par défaut. **Actualiser** recharge la liste. Le bloc affiche le nom ; projets et YAML conservent l’ID original. Un ID vide utilise le destinataire par défaut actuel.
+Avec **CallMeBot 0.1.2 et Blocks for HA 0.1.69**, le champ de profil ouvre une liste consultable des noms, identifiants et du destinataire par défaut. **Actualiser** recharge la liste. Le bloc affiche le nom ; projets et YAML conservent l’ID original. Un ID vide utilise le destinataire par défaut actuel.
 
 ![Sélecteur de profil CallMeBot en français](/assets/callmebot/profiles-fr.png)
 
@@ -37,7 +37,7 @@ Le catalogue retenu `ugso/callmebot/profiles` contient uniquement IDs, noms, pro
 
 Si l’application, MQTT, la découverte ou la connexion HA est indisponible, la saisie manuelle et le destinataire par défaut restent utilisables. Les IDs supprimés ne sont jamais remplacés automatiquement ; l’application refuse l’envoi vers un profil absent.
 
-Depuis **Blocks for HA 0.1.58**, dans **Messages → WhatsApp · CallMeBot**.
+Depuis **Blocks for HA 0.1.68**, dans **Messages → WhatsApp · CallMeBot**.
 
 ![Bloc CallMeBot](/assets/blocks-for-ha/blocks/fr/ugso_callmebot_action.png)
 
@@ -64,7 +64,7 @@ Cette alternative ne nécessite ni application CallMeBot ni clé CallMeBot. L’
 - Disponibilité : `ugso/callmebot/availability`, `online`/`offline` retenu pour la connexion au courtier.
 - Maximum 4000 caractères, file de 20 commandes, au moins 10 secondes entre les tentatives par profil. Les commandes trop rapides sont refusées, sans délai.
 - Sans répétition automatique ni reprise après redémarrage. Les commandes d’envoi retenues sont refusées.
-- Un espace MQTT et un ID client : une instance par courtier. Limiter les droits d’écriture sur le sujet d’envoi. Cette version utilise le courtier interne ; configuration TLS externe non incluse.
+- Un espace MQTT et un ID client : une instance par courtier. Limiter les droits d’écriture sur le sujet d’envoi. Le broker interne reste le réglage par défaut ; MQTT externe avec TLS vérifié est facultatif.
 
 CallMeBot Free est destiné aux textes personnels vers ses propres numéros activés. Sans groupes, médias, réponses ni confirmation de livraison. `accepted` confirme seulement l’acceptation API. Numéro, clé et texte sont transmis par HTTPS à CallMeBot. Source : [activation et API CallMeBot](https://www.callmebot.com/blog/free-api-whatsapp-messages/).
 
@@ -73,3 +73,15 @@ CallMeBot Free est destiné aux textes personnels vers ses propres numéros acti
 Build et démarrage Docker, backend avec fournisseur simulé, protocole MQTT, interface DE/EN/FR, affichage mobile et export Blockly vérifiés. Livraison WhatsApp réelle et installation sous HA Supervisor restent à vérifier avec sa propre configuration. Aucun message réel n’a été envoyé.
 
 [Code source et commandes de test](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot) · Apache-2.0 · Projet communautaire indépendant.
+
+## Bêta : historique, sauvegarde des profils et MQTT TLS
+
+L’historique conserve jusqu’à 200 entrées : date, ID du profil, source et résultat. Filtrer par profil/erreur et confirmer l’effacement. Sans messages, numéros, clés API ni ID de requête. Acceptée signifie acceptation par le fournisseur, pas confirmation de livraison. Une erreur de stockage ne provoque aucun renvoi automatique.
+
+La sauvegarde chiffre les profils, numéros, clés API et destinataire par défaut avec AES-GCM et une clé dérivée du mot de passe (scrypt). Au moins 12 caractères ; conserver le mot de passe séparément. Il n’est pas enregistré. Restaurer nécessite le mot de passe, une confirmation et un contenu valide. Mot de passe incorrect, fichier altéré ou sauvegarde de l’autre application : profils inchangés. Les envois en attente bloquent la restauration. Identifiants MQTT et historique exclus ; utiliser une sauvegarde complète HA pour ceux-ci.
+
+Le broker HA automatique reste le réglage existant. Désactiver l’automatisme pour définir un broker externe, son port et ses identifiants. TLS vérifie certificat et nom d’hôte ; import PEM de CA et certificat/clé client possible. Choisir le port TLS, souvent 8883. Champs secrets vides : valeurs enregistrées conservées. HA/Blocks doit utiliser ce broker ou transférer les topics d’envoi/résultat/profils/discovery entre brokers ; aucune passerelle automatique.
+
+profiles.json, profils, clés, topics MQTT et ID d’entités conservés. Historique : /data/history.json ; réglages MQTT explicitement enregistrés : /data/mqtt.json. Aucune réécriture automatique lors de la mise à jour. Interface DE/EN/FR.
+
+L’interface et la description portent Bêta. HA n’accepte pas beta comme stage natif ; experimental reste donc la valeur technique valide. [Configuration HA](https://developers.home-assistant.io/docs/apps/configuration/).

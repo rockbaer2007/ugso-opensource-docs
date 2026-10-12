@@ -6,7 +6,7 @@ description: WhatsApp text messages from Home Assistant with recipient profiles 
 
 Since 0.1.5 the app is named **CallMeBot Whatsapp**. Existing profiles, MQTT topics and entity IDs are preserved. The separate [CallMeBot Signal](../callmebot-signal/) uses its own profiles and keys.
 
-Experimental **HA App 0.1.5** in the [same repository as Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Complete **DE/EN/FR** interface and blocks, system language and light/dark/system appearance. Inspired by [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); original UGSo implementation without ioBroker.
+Beta **HA App 0.1.6** in the [same repository as Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Complete **DE/EN/FR** interface and blocks, system language and light/dark/system appearance. Inspired by [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); original UGSo implementation without ioBroker.
 
 **Fix in 0.1.1:** Sending works without `crypto.randomUUID`, including HTTP Ingress. Restart the app and reload the page after updating. Request IDs use random bytes when available or a timestamp/counter fallback; they deduplicate requests and are not authentication tokens.
 
@@ -27,7 +27,7 @@ A blank key field preserves the stored key. Keys are never returned to the UI. T
 
 ### Select saved profiles
 
-With **CallMeBot 0.1.2 and Blocks for HA 0.1.59**, the profile field opens a searchable list of names, IDs and the default recipient. **Refresh** reloads the list. The block displays the name while projects and YAML retain the original ID. An empty ID uses the current default recipient.
+With **CallMeBot 0.1.2 and Blocks for HA 0.1.69**, the profile field opens a searchable list of names, IDs and the default recipient. **Refresh** reloads the list. The block displays the name while projects and YAML retain the original ID. An empty ID uses the current default recipient.
 
 ![English CallMeBot profile picker](/assets/callmebot/profiles-en.png)
 
@@ -37,7 +37,7 @@ The retained `ugso/callmebot/profiles` catalog contains IDs, names, default prof
 
 If the app, MQTT, discovery or HA connection is unavailable, manual IDs and the default recipient remain usable. Deleted IDs are never silently replaced in projects; the app rejects sending to a missing profile.
 
-Since **Blocks for HA 0.1.58**, under **Messages → WhatsApp · CallMeBot**.
+Since **Blocks for HA 0.1.68**, under **Messages → WhatsApp · CallMeBot**.
 
 ![CallMeBot block](/assets/blocks-for-ha/blocks/en/ugso_callmebot_action.png)
 
@@ -64,7 +64,7 @@ This alternative requires neither the CallMeBot app nor a CallMeBot key. The exi
 - Availability: `ugso/callmebot/availability`, retained `online`/`offline` for the broker connection.
 - Maximum 4000 characters, queue of 20, at least 10 seconds between attempts per profile. Faster commands are rejected, not delayed.
 - No automatic provider retries or replay after restart. Retained send commands are rejected.
-- One MQTT namespace/client ID: one app instance per broker. Restrict send-topic write permissions. This preview uses the internal broker; external TLS configuration is not included.
+- One MQTT namespace/client ID: one app instance per broker. Restrict send-topic write permissions. The internal broker remains default; external MQTT with verified TLS is optional.
 
 CallMeBot Free is for personal texts to your own activated numbers. No groups, media, replies or delivery confirmation. `accepted` confirms API acceptance only. Phone, key and text are transmitted over HTTPS to CallMeBot. Source: [CallMeBot activation and API](https://www.callmebot.com/blog/free-api-whatsapp-messages/).
 
@@ -73,3 +73,15 @@ CallMeBot Free is for personal texts to your own activated numbers. No groups, m
 Docker build/start, mock-provider backend tests, MQTT protocol, DE/EN/FR UI, mobile layout and Blockly export were checked. Real WhatsApp delivery and HA Supervisor installation still require verification with your own setup. No real messages were sent.
 
 [Source and local test commands](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot) · Apache-2.0 · Independent community project.
+
+## Beta: history, profile backup and MQTT TLS
+
+History persists up to 200 entries with timestamp, profile ID, source and result. Filter by profile/error status and explicitly confirm clearing. It contains no messages, numbers, API keys or request IDs. Accepted still means provider acceptance, not confirmed delivery. A storage error never causes automatic resending.
+
+Profile backups encrypt numbers, API keys and the default profile using AES-GCM and a password-derived key (scrypt). Choose at least 12 characters and keep the password separately; it is not stored. Restoration requires it, explicit confirmation and valid authenticated content. Wrong passwords, damaged files or backups from the other CallMeBot app leave profiles untouched. Pending sends block restoration. MQTT credentials and history are excluded; use a full HA app backup for those.
+
+Automatic HA broker selection remains the existing default. Disable it to configure an external host, port, username and password. TLS always checks certificates and hostname; custom PEM CA and client certificate/key uploads are supported. Choose the broker TLS port, often 8883. Empty secret fields preserve saved values. HA/Blocks must use this broker or forward send/result/profile/discovery topics between brokers; this is not an automatic broker bridge.
+
+Existing profiles.json, recipient keys, MQTT topics and entity IDs remain unchanged. History uses /data/history.json; explicitly saved MQTT settings use /data/mqtt.json. No automatic configuration rewrite. All new UI labels support DE/EN/FR.
+
+Beta is displayed in the UI and description. HA has no native beta stage, so the valid experimental configuration stage remains. [HA configuration](https://developers.home-assistant.io/docs/apps/configuration/).

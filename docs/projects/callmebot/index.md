@@ -6,7 +6,7 @@ description: WhatsApp-Textnachrichten aus Home Assistant mit Empfängerprofilen 
 
 Seit 0.1.5 heißt die App **CallMeBot Whatsapp**. Bestehende Profile, MQTT-Themen und Entitäts-IDs bleiben erhalten. Die separate [CallMeBot Signal](../callmebot-signal/) verwendet eigene Profile und Schlüssel.
 
-Experimentelle **HA-App 0.1.5** im [gemeinsamen Repository mit Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Oberfläche und Bausteine sind vollständig in **DE/EN/FR**, mit Systemsprache und Hell/Dunkel/System. Inspiration: [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); eigenständige UGSo-Implementierung ohne ioBroker.
+Beta **HA-App 0.1.6** im [gemeinsamen Repository mit Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot). Oberfläche und Bausteine sind vollständig in **DE/EN/FR**, mit Systemsprache und Hell/Dunkel/System. Inspiration: [ioBroker.whatsapp-cmb](https://github.com/ioBroker/ioBroker.whatsapp-cmb); eigenständige UGSo-Implementierung ohne ioBroker.
 
 **Korrektur 0.1.1:** Der Versandbutton funktioniert auch ohne `crypto.randomUUID`, etwa bei HTTP-Ingress. Nach dem Update die App neu starten und die Seite neu laden. Anfrage-IDs verwenden verfügbare Zufallsbytes oder einen Zeitstempel mit Zähler; sie dienen der Dublettenprüfung, nicht der Anmeldung.
 
@@ -27,7 +27,7 @@ Ein leeres Schlüsselfeld beim Speichern behält den vorhandenen Schlüssel. Die
 
 ### Gespeicherte Profile auswählen
 
-Ab **CallMeBot 0.1.2 und Blocks for HA 0.1.59** öffnet das Profilfeld eine durchsuchbare Auswahl mit Profilnamen, Profil-ID und Standardempfänger. **Neu laden** aktualisiert die Liste. Im Block steht der Profilname, im Projekt und YAML bleibt die unveränderte ID gespeichert. Eine leere ID verwendet den aktuellen Standardempfänger.
+Ab **CallMeBot 0.1.2 und Blocks for HA 0.1.69** öffnet das Profilfeld eine durchsuchbare Auswahl mit Profilnamen, Profil-ID und Standardempfänger. **Neu laden** aktualisiert die Liste. Im Block steht der Profilname, im Projekt und YAML bleibt die unveränderte ID gespeichert. Eine leere ID verwendet den aktuellen Standardempfänger.
 
 ![CallMeBot-Profilauswahl auf Deutsch](/assets/callmebot/profiles-de.png)
 
@@ -37,7 +37,7 @@ Der retained Katalog `ugso/callmebot/profiles` enthält nur IDs, Namen, Standard
 
 Wenn App, MQTT, Discovery oder HA-Verbindung fehlen, bleiben manuelle Profil-ID und Standardempfänger nutzbar. Gelöschte IDs werden im Projekt nicht automatisch ersetzt; die App lehnt einen Versand an ein fehlendes Profil ab.
 
-Seit **Blocks for HA 0.1.58** unter **Nachrichten → WhatsApp · CallMeBot**.
+Seit **Blocks for HA 0.1.68** unter **Nachrichten → WhatsApp · CallMeBot**.
 
 ![CallMeBot-Block](/assets/blocks-for-ha/blocks/de/ugso_callmebot_action.png)
 
@@ -64,7 +64,7 @@ Diese Variante benötigt keine CallMeBot-App und keinen CallMeBot-Schlüssel. In
 - Verfügbarkeit: `ugso/callmebot/availability`, retained `online`/`offline`, zeigt die Broker-Verbindung.
 - Maximal 4000 Zeichen, Warteschlange 20, mindestens 10 Sekunden zwischen Versandversuchen je Profil. Schnellere Befehle werden abgelehnt, nicht verzögert.
 - Keine automatischen Wiederholungen oder Wiedergabe nach Neustart. Retained-Versandbefehle werden abgelehnt.
-- Ein MQTT-Namensraum und eine Client-ID: eine App-Instanz pro Broker. Schreibrechte für Versandbefehle im Broker beschränken. Diese Vorschau verwendet den internen Broker; externe TLS-Konfiguration ist nicht enthalten.
+- Ein MQTT-Namensraum und eine Client-ID: eine App-Instanz pro Broker. Schreibrechte für Versandbefehle im Broker beschränken. Der interne Broker bleibt Standard; externe MQTT-Verbindungen mit geprüftem TLS sind optional.
 
 CallMeBot Free ist für persönliche Texte an eigene aktivierte Nummern gedacht. Keine Gruppen, Medien, Antworten oder Zustellbestätigung. `accepted` bestätigt nur die API-Annahme. Telefonnummer, Schlüssel und Text gehen per HTTPS an CallMeBot. Quelle: [CallMeBot-Aktivierung und API](https://www.callmebot.com/blog/free-api-whatsapp-messages/).
 
@@ -73,3 +73,15 @@ CallMeBot Free ist für persönliche Texte an eigene aktivierte Nummern gedacht.
 Docker-Build und Start, Backend-Tests mit Mock-Anbieter, MQTT-Protokoll, DE/EN/FR-Oberfläche, mobile Ansicht und Blockly-Export sind geprüft. Echte WhatsApp-Zustellung und Installation unter HA-Supervisor müssen mit der eigenen Einrichtung geprüft werden. Es wurden keine realen Nachrichten verschickt.
 
 [Quellcode und lokale Testbefehle](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot) · Apache-2.0 · Unabhängiges Community-Projekt.
+
+## Beta: Historie, Profilsicherung und MQTT-TLS
+
+Die Historie enthält bis zu 200 dauerhaft gespeicherte Einträge mit Zeitpunkt, Profil-ID, Quelle und Ergebnis. Filter nach Profil oder Fehlerstatus und bestätigtes Löschen sind verfügbar. Nachrichten, Telefonnummern, API-Schlüssel und Anfrage-IDs werden nicht in der Historie gespeichert. „Angenommen“ bestätigt weiterhin nur die Annahme durch CallMeBot, keine Zustellung. Bei Speicherfehlern wird der Versand nicht wiederholt.
+
+Die Profilsicherung verschlüsselt Profile einschließlich Telefonnummern, API-Schlüsseln und Standardempfänger mit AES-GCM und einem aus dem Sicherungspasswort abgeleiteten Schlüssel (scrypt). Mindestens 12 Zeichen; Passwort separat aufbewahren. Es wird nicht gespeichert. Ohne Passwort ist keine Wiederherstellung möglich. Wiederherstellen ersetzt die Profile erst nach Bestätigung und erfolgreicher Prüfung; falsches Passwort, beschädigte Dateien oder Sicherungen der anderen CallMeBot-App ändern nichts. Bei wartenden Versandversuchen wird die Wiederherstellung abgewiesen. MQTT-Zugangsdaten und Historie sind nicht enthalten; für diese weiterhin die vollständige HA-App-Sicherung verwenden.
+
+Unter MQTT-Verbindung bleibt „HA-Broker automatisch verwenden“ der bisherige Standard. Für einen externen Broker die Automatik deaktivieren und Host, Port, Benutzer und Passwort angeben. TLS prüft Zertifikat und Hostname; eigene CA und Client-Zertifikat/Schlüssel sind als PEM-Datei oder Text möglich. TLS-Port passend wählen, häufig 8883. Leere Geheimnisfelder behalten gespeicherte Werte. HA/Blocks müssen diesen Broker verwenden oder die Send-/Result-/Profil-/Discovery-Topics zwischen den Brokern weiterleiten; eine externe Verbindung allein ersetzt keine Broker-Bridge.
+
+Bestehende profiles.json, Profile, Schlüssel, MQTT-Themen und Entitäts-IDs bleiben erhalten. Neue Historie: /data/history.json; ausdrücklich gespeicherte MQTT-Einstellungen: /data/mqtt.json. Die Konfiguration wird beim Update nicht automatisch umgeschrieben. Alle neuen Oberflächentexte sind DE/EN/FR.
+
+Die Oberfläche und Beschreibung heißen Beta. Home Assistant unterstützt keinen nativen stage-Wert beta; der gültige technische Status experimental bleibt deshalb bestehen. [HA-Konfiguration](https://developers.home-assistant.io/docs/apps/configuration/).

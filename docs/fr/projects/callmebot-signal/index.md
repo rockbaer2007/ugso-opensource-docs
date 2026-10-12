@@ -4,7 +4,7 @@ description: Messages texte Signal depuis Home Assistant avec profils et Blockly
 ---
 # CallMeBot Signal
 
-**Application HA 0.1.1 expérimentale** dans le [dépôt commun de Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal). Entièrement **DE/EN/FR**, langue système et apparence claire/sombre/système. Implémentation UGSo originale inspirée de [ioBroker.signal-cmb](https://github.com/derAlff/ioBroker.signal-cmb).
+**Application HA 0.1.2 bêta** dans le [dépôt commun de Blocks for HA](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal). Entièrement **DE/EN/FR**, langue système et apparence claire/sombre/système. Implémentation UGSo originale inspirée de [ioBroker.signal-cmb](https://github.com/derAlff/ioBroker.signal-cmb).
 
 ![Interface Signal en français](/assets/callmebot-signal/fr.png)
 
@@ -49,3 +49,15 @@ Les clés restent dans le fichier privé `/data/profiles.json`, ne sont jamais r
 Backend, validation UUID/numéro, protocole MQTT, export Blockly/Jinja, DE/EN/FR et affichage mobile sont vérifiés avec des données de test. Livraison Signal réelle et installation HA Supervisor nécessitent votre propre configuration. Les tests automatisés n’envoient aucun message réel.
 
 [Code source](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/callmebot_signal) · Apache-2.0 · Projet communautaire indépendant.
+
+## Bêta : historique, sauvegarde des profils et MQTT TLS
+
+L’historique conserve jusqu’à 200 entrées : date, ID du profil, source et résultat. Filtrer par profil/erreur et confirmer l’effacement. Sans messages, numéros, clés API ni ID de requête. Acceptée signifie acceptation par le fournisseur, pas confirmation de livraison. Une erreur de stockage ne provoque aucun renvoi automatique.
+
+La sauvegarde chiffre les profils, numéros, clés API et destinataire par défaut avec AES-GCM et une clé dérivée du mot de passe (scrypt). Au moins 12 caractères ; conserver le mot de passe séparément. Il n’est pas enregistré. Restaurer nécessite le mot de passe, une confirmation et un contenu valide. Mot de passe incorrect, fichier altéré ou sauvegarde de l’autre application : profils inchangés. Les envois en attente bloquent la restauration. Identifiants MQTT et historique exclus ; utiliser une sauvegarde complète HA pour ceux-ci.
+
+Le broker HA automatique reste le réglage existant. Désactiver l’automatisme pour définir un broker externe, son port et ses identifiants. TLS vérifie certificat et nom d’hôte ; import PEM de CA et certificat/clé client possible. Choisir le port TLS, souvent 8883. Champs secrets vides : valeurs enregistrées conservées. HA/Blocks doit utiliser ce broker ou transférer les topics d’envoi/résultat/profils/discovery entre brokers ; aucune passerelle automatique.
+
+profiles.json, profils, clés, topics MQTT et ID d’entités conservés. Historique : /data/history.json ; réglages MQTT explicitement enregistrés : /data/mqtt.json. Aucune réécriture automatique lors de la mise à jour. Interface DE/EN/FR.
+
+L’interface et la description portent Bêta. HA n’accepte pas beta comme stage natif ; experimental reste donc la valeur technique valide. [Configuration HA](https://developers.home-assistant.io/docs/apps/configuration/).
