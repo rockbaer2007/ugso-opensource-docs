@@ -1,58 +1,69 @@
 ---
 title: Material Design
-description: External Material Design widget package for Grafik Visual Studio.
+description: Material Design 1.1.0 for Studio 0.1.292 with DE/EN/FR and compatible updates.
 ---
 
 # Material Design
 
-## Original preview icons (package 1.0.1, Studio 0.1.216 or later)
+**Package 1.1.0 · Studio 0.1.292 or newer · 49 widgets · MIT.** Independent renderers inspired by [ioBroker VIS2 Material Design by typhosj/Scrounger](https://github.com/typhosj/ioBroker.vis2-materialdesign). Original MDI assignments remain local SVGs. Technical package ID: <code>ugso.materialdesign</code>.
 
-All 49 widgets now use the original MDI icon mapping as local SVGs: blue symbols on rounded white tiles. No icon fonts or external image requests are required. Pictogrammers/Apache-2.0 notices are included alongside the MIT license. Studio 0.1.216 permits icon-only updates while preserving defaults, property groups and renderer contracts. The registered 1.0.0 version remains unchanged; register package 1.0.1 with minimum Studio version 0.1.216 for the new symbols. No additional catalog website update is needed.
+[Deutsch](/projects/grafik-visual-studio/materialdesign) · [Français](/fr/projects/grafik-visual-studio/materialdesign) · [Source](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign)
 
-## Complete widget catalog (package 1.0.0, Studio 0.1.215 or later)
+## Installation and preserved settings
 
-The external package now contains **49 widget entries**. Besides palette preview and dialogs, it includes every button/icon-button variant, Input, Select, Autocomplete, Checkbox, Switch, Slider, Slider Round, Value, HTML Card, Icon, Installed Version, linear/circular progress, List, Icon List, Table, Alerts, four charts, Calendar, Top App Bar, Grid/Masonry Views and both Advanced View variants.
+1. Export the existing Studio project as JSON.
+2. Update Studio to **0.1.292 or newer** and restart.
+3. [Download Material Design 1.1.0](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/dist/ugso.materialdesign-1.1.0.wg). Install through **Settings → Widget packages → Local**, or use the direct GitHub file URL.
+4. The package updates additively. Reload the page and check the existing project.
 
-**Autocomplete:** Choose editor entries, a JSON list, semicolon-separated values or Home Assistant entity options. Write mode accepts free text; select mode rejects unknown entries. Typing filters the menu; arrow keys, Enter and Escape work. Advanced options add input layout, prefix/suffix, helper text, counter, icons and menu colors/fonts. “Refill fields from entity” copies the name, unit, options and available slider limits.
+Installation **never rewrites project files**. Existing fields, defaults, order and technical IDs remain protected. New fields/groups and choices are appended. Colors, text, dimensions, entity assignments and disabled groups stay saved. Older published packages remain available.
 
-**Data and actions:** Toggles use switch/input_boolean, numeric/text writes use input_number/input_text and selection uses select/input_select. Sensors and attributes stay read-only. Values/actions without an entity work locally for previews. Lists support editor/JSON rows; tables sort from their headers. Alerts acknowledge a local queue, writable JSON entity or separate acknowledgment entity. JSON Chart accepts `axisLabels/graphs`, `labels/datasets` or point lists. History reads HA Recorder for up to ten entities and 1–168 hours. Calendar and page layouts use existing Studio features; recursive page chains are blocked.
+Old **State Multi** widgets retain their value cycle. Multiple-target writing is an explicitly selected mode. Old Advanced Views retain mapped values; page name/ID and numeric index are additional modes. New widgets include the corresponding original modes. Design style changes never alter targets.
 
-An [importable comparison project](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/comparison/materialdesign-widgetvergleich.json) provides nine widget pages plus a reference page without real HA entities. Exact visual parity and detailed options are reviewed widget by widget afterwards. ioBroker theme IDs, adapter states and bindings are not imported automatically; multiple Y axes, stacked bars, ioBroker timed locks and HTML list text are currently absent. HTML cards isolate markup in a sandbox.
+## Languages and appearance
 
-Register package **1.0.0**, minimum Studio **0.1.215**, MIT license. The website requires **0.1.13** to recognize `material-widget` and packages with up to 64 widgets, 40 property groups and a 500 KB manifest. Previously published versions stay immutable. The first three definitions remain compatible with additive updates from 0.3.0.
+**Material language** follows Studio or selects **German, English or French** for the widget and its Material properties. User text, page IDs and entity IDs are never translated. The overall Studio interface remains DE/EN; French is offered for Material here.
 
-## Dialog iFrame (package 0.3.0, Studio 0.1.214 or later)
+**Classic**, **Material 3** and **Project default** remain selectable. Color scheme follows the page or forces Light/Dark. Explicit colors, font sizes and spacing take precedence. The preview retains 26 palettes and the original white Classic background.
 
-The third widget opens an HTTP/HTTPS source or relative path in a dialog. **General**, **iFrame settings** and **Dialog layout** remain visible in compact mode. Advanced options add button, header and footer layouts; hiding them preserves existing values.
+## Widgets and original-style features
 
-Configure the source and horizontal/vertical scrolling under **iFrame settings**. **Seamless** removes the border. The default sandbox allows scripts/forms; **Disable sandbox** explicitly removes the restriction. Cross-origin scrolling depends on the browser and embedded content. The target site's CSP or X-Frame-Options may prevent embedding. Studio does not provide a proxy.
+| Family | Features and controls |
+| --- | --- |
+| Buttons / Icon Buttons | State labels/colors/icons, pressed color, momentary mode, bounded addition, new window, navigation and timed unlock |
+| State Multi | Previous cycle or multiple entities with separate values and delays |
+| Checkbox / Switch | Custom ON/OFF or boolean mode, label position and actual switch track/thumb |
+| Input / Select / Autocomplete | Input shapes, affixes, hints/counters, icons, hover/selection colors, keyboard and mask: # = digit, A = letter, * = letter/digit |
+| Slider / Slider Round | Effective handle/track sizes, limits/step, ticks, working entity, write during interaction or on release, arc/start angle |
+| Progress | Linear/circular, determinate/indeterminate, size/rotation, threshold colors and value text |
+| Value / Icon / Version | Number/boolean/text/date/duration, factor/offset, conditions, link and change effect; static or state icon; actual package version |
+| HTML Card | Title/subtitle, image, card layouts, colors, image refresh and isolated HTML |
+| List / Icon List / Table / Alerts | Subtexts, navigation/links/controls, JSON status bars, image columns, column formatting, fixed header, sorting and acknowledgement |
+| Four charts | Bars, pie/doughnut, JSON and Recorder; up to four Y axes, stacks, filled/stepped lines, tooltips, labels, palettes and legend positions |
+| Calendar | Month/week/day/year/list, week numbers, colors and time grid in DE/EN/FR |
+| Top App Bar | Modal/permanent/automatic drawer, child entries and selected index; previous page links remain a separate mode |
+| Grid/Masonry / Advanced Views | Responsive columns, per-view visibility, mappings/name/index, boolean indices 0/1, preload and retained child views |
 
-Button or boolean triggers, fullscreen threshold and closing behavior follow the local page dialog. The editor does not open dialogs. Studio's page theme replaces ioBroker theme objects.
+**Show advanced options** reveals details without deleting hidden values. Set counts for targets, views, series or menu items.
 
-Register package **0.3.0** with minimum Studio version **0.1.214**. The catalog requires website update **0.1.12** to recognize `material-iframe-dialog`. The already approved 0.2.0 version remains unchanged.
+## Home Assistant and data
 
-## Dialog (package 0.2.0, Studio 0.1.211 or later)
+Validated HA actions support <code>switch/input_boolean</code>, <code>number/input_number</code>, <code>text/input_text</code>, <code>select/input_select</code>, <code>button/input_button</code> with <code>PRESS</code>, light brightness, fan percentage and cover position. States, options and ranges are checked. Sensors, attributes and unavailable entities remain displays.
 
-The second widget opens another local Studio page in a modal. Select the target under **General → View**. Editor clicks select the widget; runtime clicks open the dialog. Self-embedding and recursive page chains are blocked.
+Multiple-target actions are sequential and stop on errors or page changes. Completed actions are not rolled back. Arbitrary HA services and executable ioBroker bindings are unsupported.
 
-Without **Show advanced options**, only General and Dialog layout are visible. Enabling it reveals Button layout, Header layout and Dialog footer button layout. Hiding these groups preserves their values. Size, edge spacing, colors, backdrop and fullscreen threshold are configurable. Close using the button, Escape or optional outside click.
+Top App Bar **State mode** writes its index to its entity. **Advanced View in Widget 8**, sharing that entity and using **Index mode**, displays the corresponding local Studio page. Without an entity, use existing Studio data flow; separate local preview values are not shared automatically.
 
-A boolean entity can also open the dialog. Closing turns off `switch` or `input_boolean` triggers. Other entities remain unchanged and require a new off/on transition to reopen after local dismissal. Vibration and click sound depend on browser/device support. Symbols use text/Unicode without importing ioBroker's image catalog or theme objects.
+Lists read editor rows or JSON; tables use configured column keys. Optional list HTML is sanitized: no scripts, event handlers or active embeds. HTML cards remain sandboxed. External sites may block iframes.
 
-The catalog website must accept the `material-dialog` renderer for package 0.2.0. The local website update replaces only `src/package.php`. Submit version 0.2.0 with minimum Studio version 0.1.211 through the registration form, then review and approve it.
+Charts accept <code>axisLabels/graphs</code>, <code>labels/datasets</code> or point lists. Recorder is limited to **ten entities and 1–168 hours**. The X axis respects actual time spacing. Aggregation: none, average, minimum, maximum, sum or last value, with a minute interval. Missing states are not invented.
 
-The external [UGSo Material Design](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign) starts with **Preview Color Schemes**. Package **0.1.0** requires Studio **0.1.210** or newer and uses MIT. It is inspired by [ioBroker VIS2 Material Design](https://github.com/typhosj/ioBroker.vis2-materialdesign); the typhosj and Scrounger copyright and license are included.
+No automatic ioBroker project import: HA entities, Recorder and Studio pages replace object IDs, history adapters and VIS views. SVG charts and renderers are independent implementations; universal pixel identity is not claimed.
 
-The preview displays all **26 palette rows**. Classic uses a white surface; Material 3 supports light and dark surfaces. Swatches remain identical across styles. The heading and widget size are configurable; scroll to reach additional rows and wide palettes.
+## Checks and publishing
 
-- **Design style:** Classic, Material 3 or Project default.
-- **Project default:** select the style under Settings → General → Material Design.
-- **Color theme:** Project default follows the page's light/dark theme; Light and Dark override it for this widget.
+Browser checks cover all 49 entries in DE/EN/FR, Classic/Material 3 and Light/Dark plus interaction. Real package upgrades retain old project files byte-identically. Check actual HA device functions in your own installation.
 
-The widget reads no Home Assistant entity and writes no states. Studio's page theme replaces ioBroker's `__mdwThemeDark` binding. The ioBroker “Use theme” button is not a Studio theme import.
+[Comparison project](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/comparison/materialdesign-widgetvergleich.json) · [Initial audit](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/comparison/AUDIT-2026-10-12.md)
 
-## Test package registration
-
-The `.wg` file and SHA-256 are in the repository's `dist/` folder. Submit through **Widget registration** in the [package catalog](https://visualstudio.ugso-software.de/?lang=en), with ID `ugso.materialdesign`, version `0.1.0`, MIT license, repository URL and minimum Studio version `0.1.210`. The package appears in Studio only after review and approval. It is not automatically seeded as a bundled package.
-
-For local testing, use Settings → Widget packages → Local. For GitHub installation, use the direct `.wg` file URL. Further widgets will be added progressively using screenshots and exports.
+Register **1.1.0**, minimum Studio **0.1.292**, ID <code>ugso.materialdesign</code> and MIT in the [package catalog](https://visualstudio.ugso-software.de/?lang=en). Publishing to GitHub does not automatically approve a catalog entry. Checksum: <code>dist/SHA256SUMS</code>.

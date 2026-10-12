@@ -1,58 +1,69 @@
 ---
 title: Material Design
-description: Externes Material-Design-Widget-Set für Grafik Visual Studio.
+description: Material Design 1.1.0 für Studio 0.1.292 mit DE/EN/FR und kompatiblen Updates.
 ---
 
 # Material Design
 
-## Originalsymbole (Paket 1.0.1, Studio ab 0.1.216)
+**Paket 1.1.0 · Studio ab 0.1.292 · 49 Widgets · MIT.** Eigenständige Renderer, angelehnt an [ioBroker VIS2 Material Design von typhosj/Scrounger](https://github.com/typhosj/ioBroker.vis2-materialdesign). Die originalen MDI-Zuordnungen bleiben als lokale SVGs enthalten. Technische Paket-ID: <code>ugso.materialdesign</code>.
 
-Alle 49 Widgets verwenden jetzt die ursprüngliche MDI-Symbolzuordnung als lokale SVGs: blau auf einer weißen Kachel mit abgerundeten Ecken. Es werden keine Icon-Fonts oder externen Bildanfragen benötigt. Das Paket enthält die Pictogrammers-/Apache-2.0-Lizenzhinweise zusätzlich zur MIT-Lizenz. Studio 0.1.216 erlaubt reine Icon-Updates; Standardwerte, Eigenschaftsgruppen und Renderer bleiben geschützt. Bereits registrierte Version 1.0.0 bleibt unverändert; für die neuen Symbole Paket 1.0.1 mit Mindestversion 0.1.216 registrieren. Die Katalog-Webseite benötigt kein weiteres Update.
+[English](/en/projects/grafik-visual-studio/materialdesign) · [Français](/fr/projects/grafik-visual-studio/materialdesign) · [Quellcode](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign)
 
-## Vollständiger Widget-Katalog (Paket 1.0.0, Studio ab 0.1.215)
+## Installation und erhaltene Einstellungen
 
-Das externe Paket enthält **49 Widget-Einträge**. Neben Farbvorschau und Dialogen stehen alle Button-/Icon-Button-Varianten, Input, Select, Autocomplete, Checkbox, Switch, Slider, Slider Round, Value, HTML Card, Icon, Installed Version, linearer/runder Fortschritt, List, Icon List, Table, Alerts, vier Diagramme, Calendar, Top App Bar, Grid/Masonry Views und beide Advanced-View-Varianten bereit.
+1. Das vorhandene Studio-Projekt als JSON sichern.
+2. Studio auf **0.1.292 oder neuer** aktualisieren und neu starten.
+3. [Material Design 1.1.0 herunterladen](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/dist/ugso.materialdesign-1.1.0.wg). Unter **Einstellungen → Widget-Pakete → Lokal** installieren oder den direkten GitHub-Dateilink verwenden.
+4. Das Paket wird additiv aktualisiert. Danach die Seite neu laden und das bestehende Projekt prüfen.
 
-**Autocomplete:** Menüpunkte im Editor, JSON-Liste, Semikolon-Werteliste oder Optionen der Home-Assistant-Entität wählen. Schreiben erlaubt freie Eingaben; Auswählen verwirft unbekannte Texte. Die Liste filtert beim Tippen und unterstützt Pfeiltasten, Enter und Escape. Erweiterte Optionen ergänzen Eingabelayout, Anhänge, Untertext, Zähler, Symbole und Menüfarben/-schriften. „Felder neu aus der Entität befüllen“ übernimmt Namen, Einheit, Optionen und verfügbare Reglergrenzen.
+Die Installation schreibt **keine Projektdatei um**. Vorhandene Felder, Standardwerte, Reihenfolge und technische IDs bleiben geschützt. Neue Felder/Gruppen und Auswahlwerte werden ergänzt. Farben, Texte, Größen, Entitätszuordnungen und deaktivierte Gruppen bleiben gespeichert. Ältere veröffentlichte Paketdateien bleiben verfügbar.
 
-**Daten und Aktionen:** Schaltaktionen nutzen switch/input_boolean, Zahlen und Texte input_number/input_text, Auswahl select/input_select. Sensoren und Attribute bleiben Anzeigen. Ohne Entität dienen Werte und Aktionen der lokalen Vorschau. Listen können Editor- oder JSON-Zeilen anzeigen; Tabellen lassen sich über ihre Überschriften sortieren. Alerts quittieren eine lokale Warteschlange, eine schreibbare JSON-Entität oder eine getrennte Quittierungs-Entität. JSON Chart liest `axisLabels/graphs`, `labels/datasets` oder Punktlisten. Der Verlauf liest HA Recorder für bis zu zehn Entitäten und 1–168 Stunden. Kalender und Seitenlayouts verwenden die vorhandenen Studio-Funktionen; rekursive Seitenketten werden verhindert.
+Alte **State-Multi**-Widgets behalten den Wertezyklus. Mehrziel-Schreiben wird ausdrücklich als eigener Modus gewählt. Alte Advanced-Views behalten ihre Wertzuordnung; Seitenname/ID und numerischer Index sind zusätzliche Modi. Neue Widgets enthalten die entsprechenden Originalmodi. Ein Stilwechsel ändert keine Schreibziele.
 
-Für den gemeinsamen Vergleich steht ein [importierbares Vergleichsprojekt](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/comparison/materialdesign-widgetvergleich.json) mit neun Widget-Seiten und einer Referenzansicht bereit. Es enthält keine echten HA-Entitäten. Die genaue Originaloptik und Detailoptionen werden anschließend Widget für Widget verglichen. ioBroker-Theme-IDs, Adapter-Datenpunkte und Binding-Ausdrücke werden nicht automatisch importiert; mehrere Y-Achsen, gestapelte Balken, ioBroker-Timer-Sperren und HTML in Listentexten fehlen derzeit. HTML-Karten zeigen HTML isoliert in einer Sandbox.
+## Sprachen und Gestaltung
 
-Zur erneuten Registrierung Paket **1.0.0**, Mindestversion **0.1.215** und MIT angeben. Die Webseite benötigt **0.1.13**, das den neuen `material-widget`-Renderer sowie Pakete mit bis zu 64 Widgets/40 Eigenschaftsgruppen und 500 KB Manifest erkennt. Bereits veröffentlichte Versionen bleiben unverändert. Die ersten drei Widget-Definitionen bleiben kompatibel für das Update von 0.3.0.
+**Material-Sprache** folgt Studio oder wählt **Deutsch, Englisch oder Französisch** für Widget und Material-Eigenschaften. Benutzertexte sowie Seiten- und Entitäts-IDs werden nicht übersetzt. Die Studio-Gesamtoberfläche bleibt DE/EN; Französisch wird hier für Material angeboten.
 
-## Dialog iFrame (Paket 0.3.0, Studio ab 0.1.214)
+**Klassisch**, **Material 3** und **Projektstandard** bleiben wählbar. Das Farbschema folgt der Seite oder wird auf Hell/Dunkel festgelegt. Explizite Farben, Schriftgrößen und Abstände haben Vorrang. Die Vorschau enthält unverändert 26 Paletten; ihr klassischer weißer Hintergrund entspricht dem Original.
 
-Das dritte Widget öffnet eine HTTP-/HTTPS-Quelle oder einen relativen Pfad im Dialog. **Allgemein**, **iFrame Einstellungen** und **Layout Dialog** bleiben im kompakten Modus sichtbar. Erweiterte Optionen zeigen zusätzlich Button-, Kopfzeilen- und Fußzeilenlayout; vorhandene Werte bleiben beim Ausblenden erhalten.
+## Widgets und Originalfunktionen
 
-Unter **iFrame Einstellungen** die Quelle und horizontalen/vertikalen Scrolloptionen setzen. **Nahtlos** entfernt den Rahmen. Standardmäßig ist die Sandbox mit Scripts/Formularen aktiv; **Sandbox deaktivieren** entfernt diese Einschränkung ausdrücklich. Scrollverhalten hängt bei fremden Seiten vom Browser und deren Inhalt ab. CSP oder X-Frame-Options der Zielseite können das Einbetten verhindern. Studio stellt dafür keinen Proxy bereit.
+| Familie | Ergänzungen und Bedienung |
+| --- | --- |
+| Buttons / Icon Buttons | Zustandstexte/-farben/-symbole, Druckfarbe, Taster, begrenzte Addition, neues Fenster, Navigation und zeitliche Entsperrung |
+| State Multi | Bisheriger Zyklus oder mehrere Entitäten mit eigenem Wert und Verzögerung |
+| Checkbox / Switch | Eigene Ein-/Aus-Werte oder boolescher Modus, Labelposition und echter Switch mit Spur/Griff |
+| Input / Select / Autocomplete | Eingabeformen, Anhänge, Untertext/Zähler, Icons, Hover-/Auswahlfarben, Tastatur und Maske: # = Ziffer, A = Buchstabe, * = Buchstabe/Ziffer |
+| Slider / Slider Round | Wirksame Griff-/Spurgröße, Grenzen/Schritt, Skala, Working-Entität, Schreiben während Bedienung oder beim Loslassen, Bogen/Startwinkel |
+| Progress | Linear/rund, bestimmt/unbestimmt, Größe/Drehung, Schwellenfarben und Werttext |
+| Value / Icon / Version | Zahl/Bool/Text/Datum/Dauer, Faktor/Offset, Bedingungen, Link und Änderungseffekt; statisches oder Zustandsicon; tatsächliche Paketversion |
+| HTML Card | Titel/Untertitel, Bild, Kartenlayouts, Farben, Bildaktualisierung und isoliertes HTML |
+| List / Icon List / Table / Alerts | Subtexte, Navigation/Links/Bedienung, JSON-Statusleisten, Bildspalten, Spaltenformatierung, feste Kopfzeile, Sortierung und Quittierung |
+| Vier Diagramme | Balken, Pie/Donut, JSON und Recorder; bis zu vier Y-Achsen, Stacks, Füllung/Stufenlinien, Tooltips, Wertlabels, Paletten und Legendenposition |
+| Calendar | Monat/Woche/Tag/Jahr/Liste, Kalenderwochen, Farben und Zeitraster in DE/EN/FR |
+| Top App Bar | Modal/permanent/automatisch öffnender Drawer, Untereinträge und ausgewählter Index; bisherige Seitenlinks bleiben ein eigener Modus |
+| Grid/Masonry / Advanced Views | Responsive Spalten, Sichtbarkeit je Ansicht, Wertzuordnung/Name/Index, boolesche Indizes 0/1, Vorladen und Erhalten geladener Ansichten |
 
-Button oder boolesche Entität, Vollbildschwelle und Schließverhalten entsprechen dem Seiten-Dialog. Im Editor wird kein Dialog geöffnet. Die ioBroker-Theme-Objekte werden durch das Studio-Seitenthema ersetzt.
+**Erweiterte Optionen anzeigen** blendet Details ein, ohne beim Ausblenden Werte zu löschen. Für Ziele, Ansichten, Datenreihen oder Menüpunkte die Anzahl setzen.
 
-Zur Registrierung von Paket **0.3.0** Mindestversion **0.1.214** angeben. Der Katalog benötigt Webseiten-Update **0.1.12**, das `material-iframe-dialog` als bekannten Renderer erkennt. Die bereits freigegebene Version 0.2.0 bleibt unverändert.
+## Home Assistant und Daten
 
-## Dialog (Paket 0.2.0, Studio ab 0.1.211)
+Geprüfte HA-Aktionen unterstützen <code>switch/input_boolean</code>, <code>number/input_number</code>, <code>text/input_text</code>, <code>select/input_select</code>, <code>button/input_button</code> mit <code>PRESS</code>, Leuchten-Helligkeit, Lüfter-Prozent und Cover-Position. Zustände, Auswahloptionen und Wertebereiche werden geprüft. Sensoren, Attribute und nicht verfügbare Entitäten bleiben Anzeigen.
 
-Das zweite Widget öffnet eine andere lokale Studio-Seite im Dialog. Unter **Allgemein → Ansicht** die Zielseite auswählen. Im Editor dient der Klick zur Auswahl; in der Runtime öffnet er das Fenster. Die aktuelle Seite und rekursive Einbettungen sind gesperrt.
+Mehrziel-Aktionen laufen nacheinander und stoppen bei Fehler oder Seitenwechsel. Bereits ausgeführte Aktionen werden nicht zurückgerollt. Frei eingebbare HA-Dienste und ausführbare ioBroker-Bindings werden nicht übernommen.
 
-Ohne **Erweiterte Optionen anzeigen** sind nur Allgemein und Layout Dialog sichtbar. Mit dieser Option erscheinen Button Layout, Layout Kopfzeile und Layout der Schaltflächen in der Dialogfußzeile. Ausblenden erhält die eingetragenen Werte. Breite, Höhe, Randabstand, Farben, Überlagerung und die Vollbild-Schwelle lassen sich einstellen. Schließen funktioniert über den Button, Escape und wahlweise Außenklick.
+Die Top App Bar im **State-Modus** schreibt den Index in ihre Entität. Eine **Advanced View in Widget 8** mit derselben Entität und **Index-Modus** zeigt die zugehörige lokale Studio-Seite. Ohne Entität kann der vorhandene Studio-Datenfluss verbunden werden; getrennte lokale Vorschauwerte werden nicht automatisch geteilt.
 
-Alternativ öffnet eine boolesche Entität das Fenster. Beim Schließen wird `switch` oder `input_boolean` ausgeschaltet. Andere Entitäten bleiben unverändert; nach lokalem Schließen öffnet erst ein neuer Aus/Ein-Wechsel. Vibration und Klicksound hängen von Browser und Gerät ab. Symbole verwenden Text/Unicode, ohne ioBroker-Bildkatalog oder Theme-Objekte zu importieren.
+Listen lesen Editorzeilen oder JSON; Tabellen nutzen die konfigurierten Spaltenschlüssel. Optionales HTML in Listentexten wird bereinigt: keine Skripte, Event-Handler oder aktiven Einbettungen. HTML-Karten bleiben in einer Sandbox. Zielseiten können fremde iFrames blockieren.
 
-Für Paket 0.2.0 muss die Katalog-Webseite den Renderer `material-dialog` akzeptieren. Das lokale Update ersetzt ausschließlich `src/package.php`; anschließend Version 0.2.0 mit Mindestversion 0.1.211 über die Registrierungsmaske einreichen und prüfen/freigeben.
+Diagramme lesen <code>axisLabels/graphs</code>, <code>labels/datasets</code> oder Punktlisten. Recorder ist auf **zehn Entitäten und 1–168 Stunden** begrenzt. Die X-Achse berücksichtigt tatsächliche Zeitabstände. Aggregation: keine, Durchschnitt, Minimum, Maximum, Summe oder letzter Wert; Intervall in Minuten. Fehlende Zustände werden nicht erfunden.
 
-Das externe [UGSo Material Design](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign) startet mit **Preview Color Schemes**. Paket **0.1.0** benötigt Studio **0.1.210** oder neuer und steht unter MIT. Es ist inspiriert von [ioBroker VIS2 Material Design](https://github.com/typhosj/ioBroker.vis2-materialdesign); Lizenz und Copyright von typhosj und Scrounger sind enthalten.
+Keine automatische ioBroker-Projektübernahme: HA-Entitäten, Recorder und Studio-Seiten ersetzen Objekt-IDs, History-Adapter und VIS-Views. SVG-Diagramme und Renderer sind eigene Umsetzungen; universelle Pixelgleichheit wird nicht zugesichert.
 
-Die Vorschau zeigt alle **26 Farbreihen**. Klassisch verwendet eine weiße Oberfläche; Material 3 unterstützt helle und dunkle Oberflächen. Die Farbfelder bleiben in allen Stilen unverändert. Überschrift und Widgetgröße lassen sich einstellen; weitere Reihen und breite Paletten sind per Scrollen erreichbar.
+## Prüfung und Veröffentlichung
 
-- **Gestaltungsstil:** Klassisch, Material 3 oder Projektstandard.
-- **Projektstandard:** unter Einstellungen → Allgemein → Material Design auswählen.
-- **Farbschema:** Projektstandard folgt dem hellen/dunklen Seitenthema; Hell und Dunkel überschreiben es für dieses Widget.
+Browserprüfungen umfassen alle 49 Einträge in DE/EN/FR, Klassisch/Material 3 und Hell/Dunkel sowie Bedienabläufe. Ein Update mit echten Paketdateien erhält alte Projekte bytegenau. Tatsächliche HA-Gerätefunktionen zusätzlich in der eigenen Installation prüfen.
 
-Das Widget liest keine Home-Assistant-Entität und schreibt keine Zustände. Die ioBroker-Bindung `__mdwThemeDark` wird durch das Studio-Seitenthema ersetzt. „Thema verwenden“ aus ioBroker ist kein Theme-Import in Studio.
+[Vergleichsprojekt](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/comparison/materialdesign-widgetvergleich.json) · [Ausgangsaudit](https://github.com/rockbaer2007/ha-grafik-visual-studio-materialdesign/blob/main/comparison/AUDIT-2026-10-12.md)
 
-## Paketregistrierung testen
-
-Das fertige `.wg` und SHA-256 liegen im Repository unter `dist/`. Über **Registrierung Widget** im [Paketkatalog](https://visualstudio.ugso-software.de/?lang=de) das Paket mit ID `ugso.materialdesign`, Version `0.1.0`, Lizenz MIT, Repository-Link und Mindestversion `0.1.210` einreichen. Erst nach Prüfung und Freigabe erscheint es im Studio-Katalog. Es wird nicht als mitgeliefertes Paket automatisch eingetragen.
-
-Für die lokale Prüfung: Einstellungen → Widget-Pakete → Lokal. Für GitHub: den direkten Link zur `.wg`-Datei verwenden. Weitere Widgets folgen schrittweise anhand der Screenshots und Exporte.
+Im [Paketkatalog](https://visualstudio.ugso-software.de/?lang=de) **1.1.0**, Mindest-Studio **0.1.292**, ID <code>ugso.materialdesign</code> und MIT registrieren. GitHub-Veröffentlichung bedeutet keine automatische Katalogfreigabe. Prüfsumme: <code>dist/SHA256SUMS</code>.
