@@ -148,6 +148,7 @@ const sidebarDe = {
       { text: 'Editor und Tastenkombinationen', link: '/projects/grafik-visual-studio/editor' },
       { text: 'Widget-Übersicht', link: '/projects/grafik-visual-studio/widgets' },
       { text: 'Material Design', link: '/projects/grafik-visual-studio/materialdesign' },
+      { text: 'Basic-Widgets', link: '/projects/grafik-visual-studio/basic' },
       { text: 'UGSo Industrie', link: '/projects/grafik-visual-studio/industrial' },
       { text: 'UGSo Energy', link: '/projects/grafik-visual-studio/energy' },
       { text: 'UGSo Printer', link: '/projects/grafik-visual-studio/printer' },
@@ -582,6 +583,7 @@ const sidebarEn = {
       { text: 'Editor and keyboard shortcuts', link: '/en/projects/grafik-visual-studio/editor' },
       { text: 'Widget catalog', link: '/en/projects/grafik-visual-studio/widgets' },
       { text: 'Material Design', link: '/en/projects/grafik-visual-studio/materialdesign' },
+      { text: 'Basic widgets', link: '/en/projects/grafik-visual-studio/basic' },
       { text: 'UGSo Industrial', link: '/en/projects/grafik-visual-studio/industrial' },
       { text: 'UGSo Energy', link: '/en/projects/grafik-visual-studio/energy' },
       { text: 'UGSo Printer', link: '/en/projects/grafik-visual-studio/printer' },
@@ -844,7 +846,7 @@ const sidebarEn = {
 }
 
 const sidebarFr = {
-  '/fr/projects/grafik-visual-studio/': [{text:'Material Design',items:[{text:'Widgets et mise à jour',link:'/fr/projects/grafik-visual-studio/materialdesign'},{text:'Studio (anglais)',link:'/en/projects/grafik-visual-studio/'}]}],
+  '/fr/projects/grafik-visual-studio/': [{text:'Grafik Visual Studio',items:[{text:'Widgets Material Design',link:'/fr/projects/grafik-visual-studio/materialdesign'},{text:'Widgets Basic',link:'/fr/projects/grafik-visual-studio/basic'},{text:'Studio (anglais)',link:'/en/projects/grafik-visual-studio/'}]}],
   '/fr/projects/callmebot/': [{ text: 'CallMeBot Whatsapp', items: [{ text: 'Configuration et Blockly', link: '/fr/projects/callmebot/' }, { text: 'Blocks for HA', link: '/fr/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/fr/projects-mqtt/' }] }],
   '/fr/projects/callmebot-signal/': [{ text: 'CallMeBot Signal', items: [{ text: 'Configuration et Blockly', link: '/fr/projects/callmebot-signal/' }, { text: 'Blocks for HA', link: '/fr/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/fr/projects-mqtt/' }] }],
   '/fr/projects/blocks-for-ha/': [{ text: 'Blocks for HA', items: [
