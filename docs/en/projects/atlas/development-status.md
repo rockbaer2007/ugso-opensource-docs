@@ -2,18 +2,24 @@
 
 ## Current State
 
-As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.287**. All four
+As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.288**. All four
 agreed stabilization items are complete. Acceptance checks cover 870 workspace
 tests, five additional tests, all type checks and builds, and 15 isolated browser
 checkpoints in DE/EN/FR. The tested migration preserves older Admin preferences,
 repositories, theme and active plugin IDs while moving secrets into encrypted
 storage.
 
-The final increment changes tests and documentation only. Runtime behavior, HA
-configuration options and plugin contracts remain unchanged. The Card Editor is
-the integrated ATLAS reference plugin; standalone plugins are maintained
-separately. Real Supervisor upgrades, hardware actions, mobile browsers and
-ARM64 execution have not been verified.
+A1 has been verified on the real HA installation: Supervisor upgrade from
+0.1.287 to 0.1.288, a separate restart and Ingress for all six installed plugins.
+Administration settings, active plugins and the complete editor configuration
+match before and after the upgrade and restart, excluding export timestamps.
+A local encrypted HA backup was created first. Version 0.1.288 fixes the
+Administration runtime version display; HA options and plugin contracts remain
+unchanged. The editor reconnects and loads real entities and Lovelace resources.
+The existing Expert canvas was empty; larger populated projects remain A5.
+Hardware actions, mobile browsers, ARM64 and every plugin-owned project format
+have not been verified. The Card Editor is the integrated ATLAS reference
+plugin; standalone plugins are maintained separately.
 
 The basic repository and documentation structure is in place.
 
@@ -60,9 +66,8 @@ The current development focus is:
 ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 ```
 
-The next priority is verification on a real HA installation while preserving
-existing settings, projects and plugins.
-The current Home Assistant App/Add-on version is `0.1.287`. Administration and
+The next priority is A2: ARM64/Raspberry Pi and mobile browser verification.
+The current Home Assistant App/Add-on version is `0.1.288`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 
@@ -82,14 +87,13 @@ Prepared topics include:
 
 Open ATLAS priorities:
 
-1. **A1 – Real HA verification:** test Supervisor updates, Ingress, real entities and installed plugins while retaining settings and projects.
-2. **A2 – ARM64 and mobile browsers:** verify Raspberry Pi and mobile layout, dialogs and import/export.
-3. **A3 – Simple/Expert requirement:** reconcile the intended visible switch with the existing Expert startup behavior; preserve projects.
-4. **A5 – Production readiness:** verify and expand Renderer, Theme and plugin APIs with larger real projects, live updates, reconnection and compatibility.
-5. **A6 – French documentation:** complete unfinished FR pages and align DE/EN/FR structure and content.
-6. **A7 – Further deployment paths:** prepare a Linux/systemd installer and native ATLAS HA/HACS integration using the same runtime.
+1. **A2 – ARM64 and mobile browsers:** verify Raspberry Pi and mobile layout, dialogs and import/export.
+2. **A3 – Simple/Expert requirement:** reconcile the intended visible switch with the existing Expert startup behavior; preserve projects.
+3. **A5 – Production readiness:** verify and expand Renderer, Theme and plugin APIs with larger real projects, live updates, reconnection and compatibility.
+4. **A6 – French documentation:** complete unfinished FR pages and align DE/EN/FR structure and content.
+5. **A7 – Further deployment paths:** prepare a Linux/systemd installer and native ATLAS HA/HACS integration using the same runtime.
 
-**A4 – Roadmap cleanup is complete.** Finished features remain documented in
+**A1 – Real HA verification and A4 – Roadmap cleanup are complete.** Finished features remain documented in
 history and are not open tasks. Standalone plugins maintain their implementation
 backlogs in their own projects.
 The authoritative open list is the [ATLAS roadmap](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md).
