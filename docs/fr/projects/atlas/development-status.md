@@ -30,11 +30,17 @@ paramètre `language` d'une URL reste prioritaire pour la page ouverte.
 
 ## Suite du travail
 
-- Étendre progressivement la traduction aux interfaces de plugins qui déclarent
-  leurs propres textes localisés.
-- Continuer à intégrer les fonctions Renderer et Theme dans des parcours visibles
-  de l'application.
-- Stabiliser les API et les contrats avant une version de production.
+1. **A1 – Installation HA réelle :** vérifier la mise à jour Supervisor, Ingress, les entités et les plugins installés en conservant les réglages et projets.
+2. **A2 – ARM64 et mobile :** vérifier Raspberry Pi, les dispositions, dialogues et imports/exports sur mobile.
+3. **A3 – Simple/Expert :** clarifier le sélecteur prévu avec le démarrage Expert actuel, sans perdre les projets.
+4. **A5 – Production :** vérifier et améliorer Renderer, Theme et les API des plugins avec des projets réels plus grands, les mises à jour et reconnexions.
+5. **A6 – Documentation française :** compléter les pages FR et aligner la structure et le contenu DE/EN/FR.
+6. **A7 – Déploiement :** préparer l'installateur Linux/systemd et l'intégration native ATLAS HA/HACS avec le même runtime.
+
+**A4 – Le nettoyage de la feuille de route est terminé.** Les fonctions achevées
+restent dans l'historique et ne sont plus des tâches ouvertes. Les plugins
+indépendants conservent leurs propres listes de travaux.
+La liste de référence se trouve dans la [feuille de route ATLAS](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md).
 
 ::: info État évolutif
 La feuille de route évolue avec le développement. Consultez les pages ATLAS et

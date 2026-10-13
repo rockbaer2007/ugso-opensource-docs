@@ -58,9 +58,9 @@ Der aktuelle Entwicklungsschwerpunkt ist:
 ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 ```
 
-Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,
-versionierten Add-on-Veröffentlichungen und nachvollziehbaren Plugin-Updates.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.262`. Administration und
+Die nächste Priorität ist die Prüfung an einer echten HA-Installation mit
+Erhalt vorhandener Einstellungen, Projekte und Plugins.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.287`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 
@@ -77,19 +77,19 @@ Zu den vorbereiteten Themen gehören:
 
 ## Nächste Ziele
 
-Geplant sind:
+Offen sind die folgenden ATLAS-Punkte:
 
-1. Runtime Foundation stabilisieren
-2. Service-Lebenszyklen definieren
-3. Dependency Injection vervollständigen
-4. Diagnose- und Fehlerpfade ausbauen
-5. Plugin-Verträge vorbereiten
-6. Separate Plugin-Dokumentation für Erstellung, Lebenszyklus, Extension APIs, Beispiele und Veröffentlichung vorbereiten
-7. Home-Assistant-Anbindung entwickeln
-8. Renderer- und Theme-Schichten erweitern
-9. ATLAS File Studio als installierbares Plugin weiter ausbauen, insbesondere spätere echte Home-Assistant-Reload-Aktionen
-10. ATLAS Automation Exporter / Editor als weiteres Plugin ausbauen: System-`automations.yaml`, YAML-Upload, Exportuebersicht und File-Studio-Bearbeitung
-11. File Studio soll bei installiertem Automation Exporter / Editor zwischen `/config` und dem Automation-Export-Ordner umschalten können
+1. **A1 – Echtes HA prüfen:** Supervisor-Update, Ingress, echte Entitäten und installierte Plugins mit erhaltenen Einstellungen und Projekten testen.
+2. **A2 – ARM64 und Mobilbrowser:** Raspberry Pi und mobile Bedienung einschließlich Layout, Dialogen und Import/Export prüfen.
+3. **A3 – Simple/Expert klären:** Den vorgesehenen sichtbaren Wechsel mit dem bisherigen Expert-Start abgleichen; bestehende Projekte erhalten.
+4. **A5 – Produktionsreife:** Renderer, Theme und Plugin-APIs mit größeren realen Projekten, Live-Updates, Wiederverbindung und Kompatibilität prüfen und ausbauen.
+5. **A6 – Französische Doku:** Unvollständige FR-Seiten übersetzen und DE/EN/FR strukturell und fachlich abgleichen.
+6. **A7 – Weitere Bereitstellung:** Linux-/systemd-Installer und native ATLAS-Integration in HA/HACS auf derselben Laufzeit vorbereiten.
+
+**A4 – Roadmap bereinigen ist erledigt.** Abgeschlossene Funktionen bleiben in
+der Historie dokumentiert und sind keine offenen Aufgaben. Eigenständige Plugins
+führen ihre Implementierungsaufgaben in ihren eigenen Projekten.
+Die verbindliche offene Liste steht in der [ATLAS-Roadmap](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md).
 
 ## Langfristige Perspektive
 

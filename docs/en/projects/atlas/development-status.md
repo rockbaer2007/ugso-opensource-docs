@@ -60,9 +60,9 @@ The current development focus is:
 ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 ```
 
-The work currently expands safe Home Assistant file workflows, versioned
-add-on releases and traceable plugin updates.
-The current Home Assistant App/Add-on version is `0.1.262`. Administration and
+The next priority is verification on a real HA installation while preserving
+existing settings, projects and plugins.
+The current Home Assistant App/Add-on version is `0.1.287`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 
@@ -80,19 +80,19 @@ Prepared topics include:
 
 ## Next Goals
 
-Planned next goals:
+Open ATLAS priorities:
 
-1. Stabilize the Runtime Foundation.
-2. Define service lifecycles.
-3. Complete dependency injection flows.
-4. Expand diagnostics and error paths.
-5. Prepare plugin contracts.
-6. Prepare separate plugin documentation for authoring, lifecycle, extension APIs, examples and publishing.
-7. Continue the Home Assistant integration.
-8. Expand Renderer and Theme layers.
-9. Continue expanding ATLAS File Studio as an installable plugin, especially later real Home Assistant reload actions.
-10. Expand ATLAS Automation Exporter / Editor as another plugin: system `automations.yaml`, YAML upload, export overview and File Studio editing.
-11. Let File Studio switch between `/config` and the Automation Exporter output folder when Automation Exporter / Editor is installed.
+1. **A1 – Real HA verification:** test Supervisor updates, Ingress, real entities and installed plugins while retaining settings and projects.
+2. **A2 – ARM64 and mobile browsers:** verify Raspberry Pi and mobile layout, dialogs and import/export.
+3. **A3 – Simple/Expert requirement:** reconcile the intended visible switch with the existing Expert startup behavior; preserve projects.
+4. **A5 – Production readiness:** verify and expand Renderer, Theme and plugin APIs with larger real projects, live updates, reconnection and compatibility.
+5. **A6 – French documentation:** complete unfinished FR pages and align DE/EN/FR structure and content.
+6. **A7 – Further deployment paths:** prepare a Linux/systemd installer and native ATLAS HA/HACS integration using the same runtime.
+
+**A4 – Roadmap cleanup is complete.** Finished features remain documented in
+history and are not open tasks. Standalone plugins maintain their implementation
+backlogs in their own projects.
+The authoritative open list is the [ATLAS roadmap](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md).
 
 ## Long-Term Perspective
 
