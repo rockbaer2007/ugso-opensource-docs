@@ -30,6 +30,17 @@ emulated on an x86 host; native Raspberry Pi performance, Android/iOS,
 touch drag/resize, virtual keyboards and native file/download dialogs remain
 open. The real HA installation is not modified for these isolated checks.
 
+The native A2 check on a **Raspberry Pi 5 / rpi5-64** also passes: HA OS 18.3,
+ATLAS 0.1.289, `aarch64` and Node `arm64`. All six plugin surfaces open through
+Ingress; Terminal, approved File Studio paths and the MDI catalog work. A local
+encrypted HA backup is created before restarting ATLAS. Administration
+settings, plugin metadata and the complete editor export match afterwards,
+excluding export timestamps. The editor reconnects with 27 real entities.
+The existing canvas is empty. Desktop Chrome views at 390×844 and 844×390
+fit the real Pi Ingress without page overflow. Physical mobile browsers,
+larger populated projects and load/performance are not established by this
+check; no ARM64 Supervisor upgrade is performed on this fresh installation.
+
 The basic repository and documentation structure is in place.
 
 Completed work includes:
@@ -96,7 +107,7 @@ Prepared topics include:
 
 Open ATLAS priorities:
 
-1. **A2 – Physical ARM64/mobile devices:** after successful emulation, verify Raspberry Pi and Android/iOS, touch drag/resize, keyboards, native file/download dialogs and Ingress.
+1. **A2 – Physical mobile devices:** native Pi 5 verification passes. Android/iOS, touch drag/resize, keyboards, native file/download dialogs and Ingress remain to be verified.
 2. **A3 – Simple/Expert requirement:** reconcile the intended visible switch with the existing Expert startup behavior; preserve projects.
 3. **A5 – Production readiness:** verify and expand Renderer, Theme and plugin APIs with larger real projects, live updates, reconnection and compatibility.
 4. **A6 – French documentation:** complete unfinished FR pages and align DE/EN/FR structure and content.

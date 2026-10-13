@@ -34,6 +34,17 @@ Pi natif, Android/iOS, glisser/redimensionner au toucher, clavier virtuel et
 dialogues natifs de fichiers/téléchargements restent à vérifier. Ces tests
 isolés ne modifient pas l'installation HA réelle.
 
+Le test A2 natif sur **Raspberry Pi 5 / rpi5-64** réussit également : HA OS
+18.3, ATLAS 0.1.289, `aarch64` et Node `arm64`. Les six plugins s'ouvrent via
+Ingress ; Terminal, chemins File Studio autorisés et catalogue MDI fonctionnent.
+Une sauvegarde HA locale chiffrée précède le redémarrage d'ATLAS. Les réglages
+Admin, métadonnées des plugins et export complet de l'éditeur restent identiques,
+sauf l'horodatage d'export. L'éditeur se reconnecte avec 27 entités réelles.
+Le canevas existant est vide. Les vues Chrome de bureau à 390×844 et 844×390
+s'adaptent à l'Ingress réel du Pi sans débordement. Les navigateurs mobiles
+physiques, projets plus grands et mesures de charge/performance restent à
+vérifier ; aucune mise à jour Supervisor ARM64 n'est effectuée ici.
+
 ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
@@ -46,7 +57,7 @@ paramètre `language` d'une URL reste prioritaire pour la page ouverte.
 
 ## Suite du travail
 
-1. **A2 – Appareils ARM64/mobiles réels :** après l'émulation, vérifier Raspberry Pi, Android/iOS, gestes tactiles, clavier, dialogues natifs de fichiers/téléchargements et Ingress.
+1. **A2 – Appareils mobiles réels :** le test Pi 5 natif réussit. Android/iOS, gestes tactiles, clavier, dialogues natifs de fichiers/téléchargements et Ingress restent à vérifier.
 2. **A3 – Simple/Expert :** clarifier le sélecteur prévu avec le démarrage Expert actuel, sans perdre les projets.
 3. **A5 – Production :** vérifier et améliorer Renderer, Theme et les API des plugins avec des projets réels plus grands, les mises à jour et reconnexions.
 4. **A6 – Documentation française :** compléter les pages FR et aligner la structure et le contenu DE/EN/FR.

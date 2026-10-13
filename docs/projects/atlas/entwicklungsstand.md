@@ -32,6 +32,18 @@ Raspberry-Pi-Leistung sowie Android/iOS, Touch-Drag/Resize, Bildschirmtastatur
 und native Datei-/Download-Dialoge bleiben offen. Die reale HA-Installation
 wurde für diese isolierten Prüfungen nicht verändert.
 
+Der native A2-Test auf einem **Raspberry Pi 5 / rpi5-64** ist ebenfalls
+bestanden: HA OS 18.3, ATLAS 0.1.289, `aarch64` und Node `arm64`. Alle sechs
+Plugins öffnen über Ingress; Terminal, File-Studio-Pfade und MDI-Katalog
+funktionieren. Vor dem ATLAS-Neustart wurde ein lokales verschlüsseltes
+HA-Backup erstellt. Danach stimmen Administrationseinstellungen,
+Plugin-Metadaten und vollständiger Editor-Export weiterhin überein, abgesehen
+vom Exportzeitpunkt. Der Editor verbindet sich mit 27 echten Entitäten.
+Der vorhandene Arbeitsbereich war leer. Desktop-Chrome-Ansichten mit 390×844
+und 844×390 passen über den echten Pi-Ingress ohne Seitenüberlauf. Physische
+Mobilbrowser, größere gefüllte Projekte und Last-/Leistungsmessungen sind
+damit nicht geprüft; ein ARM64-Supervisor-Update wurde hier nicht durchgeführt.
+
 Die grundlegende Repository- und Dokumentationsstruktur ist eingerichtet.
 
 Abgeschlossen sind unter anderem:
@@ -95,7 +107,7 @@ Zu den vorbereiteten Themen gehören:
 
 Offen sind die folgenden ATLAS-Punkte:
 
-1. **A2 – Echte ARM64-/Mobilgeräte:** Nach erfolgreicher Emulation Raspberry Pi und Android/iOS einschließlich Touch-Drag/Resize, Tastatur, nativen Datei-/Download-Dialogen und Ingress prüfen.
+1. **A2 – Echte Mobilgeräte:** Der native Pi-5-Test ist bestanden. Android/iOS einschließlich Touch-Drag/Resize, Tastatur, nativen Datei-/Download-Dialogen und Ingress noch prüfen.
 2. **A3 – Simple/Expert klären:** Den vorgesehenen sichtbaren Wechsel mit dem bisherigen Expert-Start abgleichen; bestehende Projekte erhalten.
 3. **A5 – Produktionsreife:** Renderer, Theme und Plugin-APIs mit größeren realen Projekten, Live-Updates, Wiederverbindung und Kompatibilität prüfen und ausbauen.
 4. **A6 – Französische Doku:** Unvollständige FR-Seiten übersetzen und DE/EN/FR strukturell und fachlich abgleichen.
