@@ -14,11 +14,16 @@ entries and prepare further editing through File Studio.
 - GitHub: `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Install page: `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Repository file: `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- current installable plugin version: `0.1.25`
+- current installable plugin version: `0.1.28`
 - User interface in German, English and French; the saved ATLAS language is applied when the plugin opens.
 
 ATLAS Administration accepts the GitHub URL directly. During preview, ATLAS
 converts it to the matching `repository.json` address automatically.
+
+Since 0.1.28, analysis counts actual YAML trigger, condition and action entries.
+Section headers and nested steps do not add root entries. Modern and classic
+syntax are supported. Settings and source automations are unchanged; reading
+the system file still creates a safety backup first.
 
 - read `/config/automations.yaml` through the approved File Studio path
 - create a safety backup before reading the real `/config/automations.yaml`,

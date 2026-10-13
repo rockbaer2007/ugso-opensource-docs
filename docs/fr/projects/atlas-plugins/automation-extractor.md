@@ -15,10 +15,16 @@ Le plugin analyse les automatisations Home Assistant, exporte les éléments sé
 - GitHub : `https://github.com/rockbaer2007/atlas-automation-exporter-editor-plugin`
 - Page d’installation : `https://rockbaer2007.github.io/atlas-automation-exporter-editor-plugin/install.html`
 - Fichier du dépôt : `https://raw.githubusercontent.com/rockbaer2007/atlas-automation-exporter-editor-plugin/main/repository.json`
-- Version installable actuelle : `0.1.25`
+- Version installable actuelle : `0.1.28`
 - Interface en allemand, anglais et français ; la langue ATLAS enregistrée est appliquée à l’ouverture du plugin.
 
 Dans l’Administration ATLAS, vous pouvez saisir directement l’URL GitHub. Lors de la vérification, ATLAS la convertit automatiquement en adresse `repository.json` correspondante.
+
+Depuis 0.1.28, l'analyse compte les véritables éléments YAML des déclencheurs,
+conditions et actions. Les en-têtes et étapes imbriquées n'ajoutent pas
+d'éléments principaux. Les syntaxes moderne et classique sont prises en charge.
+Paramètres et automatisations sources restent inchangés ; une sauvegarde
+précède toujours la lecture du fichier système.
 
 - lire `/config/automations.yaml` via le chemin File Studio autorisé ;
 - créer une sauvegarde avant de lire le véritable `/config/automations.yaml`, dans `/config/atlas_backups/automations/<date-heure>/automations.yaml` ;
