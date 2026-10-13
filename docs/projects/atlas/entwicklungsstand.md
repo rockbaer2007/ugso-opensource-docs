@@ -15,7 +15,11 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 0.1.290 verkürzt die Tablet-Card-Liste auf ein scrollbares Fenster mit zwei
 Cards nebeneinander und ordnet die zugehörigen Aktionsbuttons in zwei Spalten an.
 
-Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.290**. Die vier
+0.1.291 klappt „Raster & Zoom“ mobil standardmäßig ein und stellt die
+Titelbedienung auf Tablets in eine Reihe; auf Smartphones stehen beide
+Titelbuttons nebeneinander unter dem Feld. Alle Werte bleiben erhalten.
+
+Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.291**. Die vier
 vereinbarten Stabilisierungspunkte sind abgeschlossen. Die Abschlussprüfung
 umfasst 870 Workspace-Tests, fünf ergänzende Tests, alle Typprüfungen und Builds
 sowie 15 isolierte Browser-Prüfpunkte in DE/EN/FR. Ältere Admin-Einstellungen,

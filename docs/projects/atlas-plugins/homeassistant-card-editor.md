@@ -19,6 +19,17 @@ eine Spalte; die Desktop-Seitenleiste bleibt unverändert. Entscheidend ist die
 Breite des eingebetteten Editors, nicht der Gerätename. Bestehende Projekte,
 Favoriten und Einstellungen bleiben erhalten.
 
+## Mobile Raster- und Titelbedienung
+
+Ab HA-App **0.1.291** ist „Raster & Zoom“ bei Editorbreiten bis 1180 Pixeln
+standardmäßig eingeklappt. Ein Antippen öffnet die X-, Y- und Zoom-Slider;
+Ein- und Ausklappen verändert keine Werte oder Cards. Beim Wechsel auf eine
+Desktopbreite werden die Slider wieder direkt angezeigt.
+
+Auf Tablets stehen Titelfeld, „Titel übernehmen“ und „Entitätsname nutzen“ in
+einer Reihe. Auf schmalen Smartphones steht das Titelfeld über den beiden
+gleich breiten Buttons. Diese Anordnung gilt in DE/EN/FR.
+
 ## Extension Points
 
 Der Editor nutzt aktuell diese ATLAS-Extension-Points:

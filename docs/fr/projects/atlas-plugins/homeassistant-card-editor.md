@@ -19,6 +19,17 @@ conservent une colonne ; la barre latérale de bureau reste inchangée. La large
 de l'éditeur intégré détermine la présentation, pas le nom de l'appareil.
 Les projets, favoris et réglages existants sont conservés.
 
+## Commandes mobiles de grille et de titre
+
+À partir de l'application HA **0.1.291**, Grille et zoom est replié par défaut
+jusqu'à une largeur d'éditeur de 1180 pixels. Touchez le titre pour afficher les
+curseurs X, Y et zoom ; ouvrir ou fermer ce groupe ne modifie aucune valeur ou
+carte. À la largeur de bureau, les curseurs s'affichent à nouveau directement.
+
+Sur tablette, le champ du titre et les deux boutons d'application du titre et
+du nom d'entité partagent une rangée. Sur téléphone étroit, le champ se trouve
+au-dessus des deux boutons de même largeur. Cela s'applique en DE/EN/FR.
+
 ## Statut
 
 - Le chemin de langue existe.

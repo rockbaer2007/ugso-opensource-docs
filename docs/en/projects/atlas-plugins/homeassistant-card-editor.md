@@ -18,6 +18,17 @@ phones keep one column; the desktop sidebar remains unchanged. The embedded
 editor width determines the layout, not the device name. Existing projects,
 favorites and settings are preserved.
 
+## Mobile grid and title controls
+
+Starting with HA app **0.1.291**, Grid & zoom is collapsed by default at editor
+widths up to 1180 pixels. Tap to show the X, Y and zoom sliders; opening or
+closing the group changes no values or cards. Switching to desktop width shows
+the sliders directly again.
+
+On tablets, the title field, Apply title and Use entity name share one row.
+On narrow phones, the title field sits above the two equal-width buttons.
+This layout applies in DE/EN/FR.
+
 ## Extension Points
 
 The editor currently uses these ATLAS extension points:
