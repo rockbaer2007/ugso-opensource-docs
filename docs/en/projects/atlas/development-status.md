@@ -2,7 +2,7 @@
 
 ## Current State
 
-As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.288**. All four
+As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.289**. All four
 agreed stabilization items are complete. Acceptance checks cover 870 workspace
 tests, five additional tests, all type checks and builds, and 15 isolated browser
 checkpoints in DE/EN/FR. The tested migration preserves older Admin preferences,
@@ -20,6 +20,15 @@ The existing Expert canvas was empty; larger populated projects remain A5.
 Hardware actions, mobile browsers, ARM64 and every plugin-owned project format
 have not been verified. The Card Editor is the integrated ATLAS reference
 plugin; standalone plugins are maintained separately.
+
+A2 is verified in emulation: amd64 and ARM64 HA images plus a mobile Chromium
+touch context at 360×800, 390×844, 844×390 and 768×1024 in DE/EN/FR. Version
+0.1.289 fixes Administration/editor overflow and fits problem-report, YAML-import
+and export dialogs to narrow screens. Settings, populated test projects and
+plugin data survive locale changes, JSON/HACS imports and restart. ARM64 is
+emulated on an x86 host; native Raspberry Pi performance, Android/iOS,
+touch drag/resize, virtual keyboards and native file/download dialogs remain
+open. The real HA installation is not modified for these isolated checks.
 
 The basic repository and documentation structure is in place.
 
@@ -67,7 +76,7 @@ ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 ```
 
 The next priority is A2: ARM64/Raspberry Pi and mobile browser verification.
-The current Home Assistant App/Add-on version is `0.1.288`. Administration and
+The current Home Assistant App/Add-on version is `0.1.289`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 
@@ -87,7 +96,7 @@ Prepared topics include:
 
 Open ATLAS priorities:
 
-1. **A2 – ARM64 and mobile browsers:** verify Raspberry Pi and mobile layout, dialogs and import/export.
+1. **A2 – Physical ARM64/mobile devices:** after successful emulation, verify Raspberry Pi and Android/iOS, touch drag/resize, keyboards, native file/download dialogs and Ingress.
 2. **A3 – Simple/Expert requirement:** reconcile the intended visible switch with the existing Expert startup behavior; preserve projects.
 3. **A5 – Production readiness:** verify and expand Renderer, Theme and plugin APIs with larger real projects, live updates, reconnection and compatibility.
 4. **A6 – French documentation:** complete unfinished FR pages and align DE/EN/FR structure and content.

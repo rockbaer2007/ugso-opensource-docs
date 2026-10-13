@@ -2,7 +2,7 @@
 
 ## Aktueller Stand
 
-Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.288**. Die vier
+Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.289**. Die vier
 vereinbarten Stabilisierungspunkte sind abgeschlossen. Die Abschlussprüfung
 umfasst 870 Workspace-Tests, fünf ergänzende Tests, alle Typprüfungen und Builds
 sowie 15 isolierte Browser-Prüfpunkte in DE/EN/FR. Ältere Admin-Einstellungen,
@@ -21,6 +21,16 @@ war leer; größere gefüllte Projekte bleiben A5. Hardware-Aktionen, Mobilbrows
 ARM64 und sämtliche plugininternen Projektformate sind damit nicht geprüft.
 Nur der Card Editor ist das integrierte ATLAS-Referenzplugin; eigenständige
 Plugins werden separat gepflegt.
+
+A2 ist in Emulation geprüft: HA-Images für amd64 und ARM64 sowie ein mobiler
+Chromium-Touch-Kontext mit 360×800, 390×844, 844×390 und 768×1024 Pixeln in
+DE/EN/FR. 0.1.289 behebt Überläufe in Administration und Editor und passt die
+Problembericht-, YAML-Import- und Exportdialoge an schmale Bildschirme an.
+Einstellungen, gefüllte Testprojekte und Plugin-Daten bleiben durch Sprachwechsel,
+JSON/HACS-Import und Neustart erhalten. Ein x86-Host emuliert ARM64; echte
+Raspberry-Pi-Leistung sowie Android/iOS, Touch-Drag/Resize, Bildschirmtastatur
+und native Datei-/Download-Dialoge bleiben offen. Die reale HA-Installation
+wurde für diese isolierten Prüfungen nicht verändert.
 
 Die grundlegende Repository- und Dokumentationsstruktur ist eingerichtet.
 
@@ -66,7 +76,7 @@ ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 ```
 
 Die nächste Priorität ist A2: ARM64/Raspberry Pi und Mobilbrowser prüfen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.288`. Administration und
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.289`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 
@@ -85,7 +95,7 @@ Zu den vorbereiteten Themen gehören:
 
 Offen sind die folgenden ATLAS-Punkte:
 
-1. **A2 – ARM64 und Mobilbrowser:** Raspberry Pi und mobile Bedienung einschließlich Layout, Dialogen und Import/Export prüfen.
+1. **A2 – Echte ARM64-/Mobilgeräte:** Nach erfolgreicher Emulation Raspberry Pi und Android/iOS einschließlich Touch-Drag/Resize, Tastatur, nativen Datei-/Download-Dialogen und Ingress prüfen.
 2. **A3 – Simple/Expert klären:** Den vorgesehenen sichtbaren Wechsel mit dem bisherigen Expert-Start abgleichen; bestehende Projekte erhalten.
 3. **A5 – Produktionsreife:** Renderer, Theme und Plugin-APIs mit größeren realen Projekten, Live-Updates, Wiederverbindung und Kompatibilität prüfen und ausbauen.
 4. **A6 – Französische Doku:** Unvollständige FR-Seiten übersetzen und DE/EN/FR strukturell und fachlich abgleichen.
