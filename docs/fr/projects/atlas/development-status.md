@@ -52,7 +52,7 @@ inchangé.
 
 Ces tests utilisent des dispositions d'entités préparées dans un navigateur
 de bureau. Les projets utilisateurs variés, les mesures de charge du backend
-natif, les coupures réseau forcées et les tests plus larges du cycle de vie des
+natif, la reprise après fermeture du transport natif et les tests plus larges du cycle de vie des
 plugins restent ouverts dans A5. Le rendu sur ordinateur n'est pas un benchmark
 du Pi ; le redémarrage natif et les fermetures de socket simulées constituent
 des preuves distinctes.
@@ -62,7 +62,18 @@ tentatives continuent au-delà des trois premiers essais, avec un délai limité
 à 30 secondes. Les erreurs d'authentification ou de protocole arrêtent les
 tentatives jusqu'à la correction de la connexion. Un test isolé avec huit
 secondes d'indisponibilité confirme la reprise sans rechargement et conserve
-le projet. Un test de coupure LAN réelle est préparé séparément.
+le projet. Pendant le test LAN réel, le câble du Pi a été débranché environ
+douze secondes. Les 100 champs de test sont conservés et les données en direct
+reprennent sans rechargement. La socket observée reste connectée ; cela ne
+prouve pas une nouvelle connexion native. Les deux systèmes utilisent 0.1.294.
+Les exports finaux confirment la conservation des paramètres Admin, des
+métadonnées de chiffrement, des identifiants des plugins actifs et des projets
+initiaux. Seul Icon Studio externe, mis à jour volontairement, change de version.
+Un build Docker isolé et /health vérifient aussi la runtime commune
+Administration/éditeur.
+L'utilisateur confirme aussi le fonctionnement dans une VM macOS Ventura directement sur Proxmox,
+mais signale une grande lenteur. Ce test fonctionnel comporte une limite de
+performance ; la cause n'a pas encore été mesurée ou déterminée.
 
 Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.294**.
 Les quatre étapes de stabilisation sont terminées. La vérification couvre

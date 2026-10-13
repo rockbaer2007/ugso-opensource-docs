@@ -46,7 +46,7 @@ aktiv. Nach einem vom Benutzer ausgeführten Proxmox-Neustart verbindet sich der
 Editor erneut und das Originalprojekt bleibt unverändert.
 
 Getestet wurden vorbereitete Entitäts-Layouts im Desktop-Browser. Vielfältige
-Nutzerprojekte, native Backend-Lastmessungen, erzwungene Netzwerkabbrüche und
+Nutzerprojekte, native Backend-Lastmessungen, Wiederverbindung nach geschlossenem Transport und
 breitere Plugin-Lebenszyklusprüfungen bleiben in A5 offen. Desktop-Rendering
 ist kein Pi-Leistungsbenchmark; native Neustartprüfung und simulierte
 Socket-Abbrüche sind getrennte Nachweise.
@@ -56,8 +56,18 @@ Editor versucht es nach den bisherigen drei Versuchen weiter, mit höchstens
 30 Sekunden Abstand. Authentifizierungs- und Protokollfehler stoppen die
 automatischen Versuche, bis die Verbindung korrigiert wird. Ein isolierter
 Test mit acht Sekunden nicht erreichbarem Endpunkt bestätigt die Erholung
-ohne Neuladen und mit unverändertem Projekt. Der echte LAN-Abbruch-Test ist
-als nächster separater Nachweis vorbereitet.
+ohne Neuladen und mit unverändertem Projekt. Beim echten LAN-Test wurde das
+Pi-Kabel für etwa zwölf Sekunden getrennt. Alle 100 Testfelder blieben erhalten;
+anschließend kamen Live-Daten ohne Neuladen wieder an. Die beobachtete
+WebSocket-Verbindung blieb verbunden; eine neu aufgebaute native Verbindung
+ist damit nicht nachgewiesen. Beide Systeme laufen mit 0.1.294. Der abschließende
+Exportvergleich bestätigt unveränderte Admin-Einstellungen, Verschlüsselungsdaten,
+aktive Plugin-IDs und Originalprojekte. Nur das bewusst aktualisierte externe
+Icon Studio hat eine neue Version. Ein isolierter Docker-Build und /health
+bestätigen außerdem die gemeinsame Administration-/Editor-Laufzeit.
+Der Nutzer bestätigt außerdem die Funktion in einer macOS-Ventura-VM direkt auf Proxmox, meldet
+aber sehr träges Verhalten. Das ist ein Funktionstest mit Leistungseinschränkung;
+die Ursache wurde noch nicht gemessen oder geklärt.
 
 Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.294**. Die vier
 vereinbarten Stabilisierungspunkte sind abgeschlossen. Die Abschlussprüfung

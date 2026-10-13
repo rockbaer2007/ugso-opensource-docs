@@ -44,7 +44,7 @@ active. Following a user-initiated Proxmox restart, the editor reconnects and
 the original project remains unchanged.
 
 These checks use prepared entity layouts in a desktop browser. Diverse user
-projects, native backend load measurements, forced network loss and broader
+projects, native backend load measurements, recovery after native transport closure and broader
 plugin lifecycle checks remain open in A5. Desktop rendering is not a Pi
 performance benchmark; native restart verification and simulated socket
 closures are separate evidence.
@@ -53,8 +53,17 @@ closures are separate evidence.
 beyond the previous three retries, with a delay capped at 30 seconds.
 Authentication and protocol failures stop automatic retries until the
 connection is corrected. An isolated eight-second unreachable-endpoint test
-confirms recovery without reloading and preserves the project. A real LAN
-interruption test is prepared as the next separate verification.
+confirms recovery without reloading and preserves the project. During the real
+LAN test, the Pi cable was disconnected for about twelve seconds. All 100 test
+fields remained and live data resumed without reloading. The observed socket
+stayed connected; this does not demonstrate a new native socket connection.
+Both systems run 0.1.294. Final exports confirm unchanged Admin settings,
+encryption metadata, active plugin IDs and original projects. Only the
+deliberately updated external Icon Studio has a new version. An isolated
+Docker build and /health also verify the combined Administration/editor runtime.
+The user also confirms functional operation in a macOS Ventura VM directly on Proxmox, but reports
+very sluggish behavior. This is functional evidence with a performance
+limitation; the cause has not been measured or established.
 
 As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.294**. All four
 agreed stabilization items are complete. Acceptance checks cover 870 workspace
