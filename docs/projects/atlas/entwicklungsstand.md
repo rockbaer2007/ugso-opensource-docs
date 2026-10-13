@@ -1,5 +1,15 @@
 # Entwicklungsstand
 
+## Getestete Hardwarevarianten
+
+| Variante | Testumgebung |
+| --- | --- |
+| amd64 | Home Assistant in einer virtuellen Maschine unter Proxmox |
+| ARM64 | Home Assistant auf einem echten Raspberry Pi 5 mit 8 GB RAM |
+
+Diese Angaben beschreiben die getesteten Installationen; der Umfang und die
+noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
+
 ## Aktueller Stand
 
 Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.289**. Die vier

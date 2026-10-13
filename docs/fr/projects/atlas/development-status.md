@@ -4,6 +4,16 @@ description: État actuel du développement d'ATLAS.
 ---
 # État du développement
 
+## Variantes matérielles testées
+
+| Variante | Environnement de test |
+| --- | --- |
+| amd64 | Home Assistant dans une machine virtuelle sous Proxmox |
+| ARM64 | Home Assistant sur un Raspberry Pi 5 réel avec 8 Go de RAM |
+
+Ces indications décrivent les installations testées ; le périmètre et les
+vérifications restantes sont documentés dans l'état du développement ci-dessous.
+
 ## État actuel
 
 Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.289**.
