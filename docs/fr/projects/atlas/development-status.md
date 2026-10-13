@@ -16,7 +16,10 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.289**.
+0.1.290 réduit la liste sur tablette à une fenêtre défilante avec deux cartes
+côte à côte et dispose les boutons associés en deux colonnes.
+
+Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.290**.
 Les quatre étapes de stabilisation sont terminées. La vérification couvre
 870 tests des paquets, cinq tests supplémentaires, les contrôles de types et
 les builds, ainsi que 15 étapes dans un navigateur isolé en DE/EN/FR. La migration
@@ -68,7 +71,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.289`.
+La version actuelle de l'application Home Assistant est `0.1.290`.
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le

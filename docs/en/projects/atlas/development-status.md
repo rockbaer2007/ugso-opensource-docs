@@ -12,7 +12,10 @@ are documented in the development status below.
 
 ## Current State
 
-As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.289**. All four
+0.1.290 shortens the tablet card list to a scrollable window with two cards side
+by side and arranges its action buttons in two columns.
+
+As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.290**. All four
 agreed stabilization items are complete. Acceptance checks cover 870 workspace
 tests, five additional tests, all type checks and builds, and 15 isolated browser
 checkpoints in DE/EN/FR. The tested migration preserves older Admin preferences,

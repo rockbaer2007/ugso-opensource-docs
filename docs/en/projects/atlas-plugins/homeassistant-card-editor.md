@@ -8,6 +8,16 @@ The plugin provides an editor for Home Assistant cards. It supports the Expert w
 
 In the Expert workflow, the background grid stays square. The number of columns is controlled by a horizontal slider above the surface, while the number of rows is controlled by a vertical slider on the left. A separate Zoom slider changes only the cell size and scales width and height together. The previous stretch behavior is now split into field count and zoom.
 
+## Card list on tablets
+
+Starting with HA app **0.1.290**, editor widths from 521 to 1180 pixels show
+two cards side by side in a scrollable window. Its height follows the first
+card row and is capped on short screens. Scroll to reach the remaining cards.
+The action buttons above the list also use two equal-width columns. Narrow
+phones keep one column; the desktop sidebar remains unchanged. The embedded
+editor width determines the layout, not the device name. Existing projects,
+favorites and settings are preserved.
+
 ## Extension Points
 
 The editor currently uses these ATLAS extension points:

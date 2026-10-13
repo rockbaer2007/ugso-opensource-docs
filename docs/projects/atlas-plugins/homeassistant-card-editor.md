@@ -8,6 +8,17 @@ Das Plugin stellt einen Editor für Home-Assistant-Cards bereit. Es unterstützt
 
 Im Expert-Workflow bleibt das Hintergrundraster quadratisch. Die Anzahl der Spalten wird oben über einen horizontalen Slider gesteuert, die Anzahl der Zeilen links über einen vertikalen Slider. Ein eigener Zoom-Slider verändert nur die Zellgröße und skaliert Breite und Höhe gemeinsam. Die frühere Streckfunktion ist damit in Feldanzahl und Zoom getrennt.
 
+## Card-Liste auf Tablets
+
+Ab HA-App **0.1.290** stehen bei einer Editorbreite von 521 bis 1180 Pixeln
+zwei Cards nebeneinander in einem scrollbaren Fenster. Die Höhe passt sich an
+die erste Card-Zeile an und bleibt auf kleinen Bildschirmhöhen begrenzt.
+Weitere Cards sind durch Scrollen erreichbar. Die Aktionsbuttons über der Liste
+stehen ebenfalls in zwei gleich breiten Spalten. Auf schmalen Smartphones bleibt
+eine Spalte; die Desktop-Seitenleiste bleibt unverändert. Entscheidend ist die
+Breite des eingebetteten Editors, nicht der Gerätename. Bestehende Projekte,
+Favoriten und Einstellungen bleiben erhalten.
+
 ## Extension Points
 
 Der Editor nutzt aktuell diese ATLAS-Extension-Points:
