@@ -41,6 +41,15 @@ fit the real Pi Ingress without page overflow. Physical mobile browsers,
 larger populated projects and load/performance are not established by this
 check; no ARM64 Supervisor upgrade is performed on this fresh installation.
 
+The user additionally confirms on a **physical Android tablet**: Hub and
+Administration work in portrait and landscape and in DE/EN/FR. Changing the
+HA URL from `homeassistant.local:80` to the reachable IP address restores the
+connection; the YAML dialog and Problem report are also reported as OK.
+This is user-reported evidence, not an automated device test.
+[Mobile connection advice](./homeassistant#connecting-from-tablets-and-phones).
+Touch drag/resize, virtual keyboards, native file/download dialogs and iOS
+remain open.
+
 The basic repository and documentation structure is in place.
 
 Completed work includes:
@@ -107,7 +116,7 @@ Prepared topics include:
 
 Open ATLAS priorities:
 
-1. **A2 – Physical mobile devices:** native Pi 5 verification passes. Android/iOS, touch drag/resize, keyboards, native file/download dialogs and Ingress remain to be verified.
+1. **A2 – Physical mobile devices:** Pi 5 and initial Android tablet checks pass. Touch drag/resize, keyboards, native file/download dialogs and iOS remain to be verified.
 2. **A3 – Simple/Expert requirement:** reconcile the intended visible switch with the existing Expert startup behavior; preserve projects.
 3. **A5 – Production readiness:** verify and expand Renderer, Theme and plugin APIs with larger real projects, live updates, reconnection and compatibility.
 4. **A6 – French documentation:** complete unfinished FR pages and align DE/EN/FR structure and content.

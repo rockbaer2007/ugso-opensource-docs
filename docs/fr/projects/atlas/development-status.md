@@ -45,6 +45,15 @@ s'adaptent à l'Ingress réel du Pi sans débordement. Les navigateurs mobiles
 physiques, projets plus grands et mesures de charge/performance restent à
 vérifier ; aucune mise à jour Supervisor ARM64 n'est effectuée ici.
 
+L'utilisateur confirme aussi sur une **tablette Android réelle** : le Hub et
+l'Administration fonctionnent en portrait et paysage et en DE/EN/FR. Remplacer
+l'URL HA `homeassistant.local:80` par l'adresse IP accessible rétablit la
+connexion ; le dialogue YAML et le rapport de problème sont également signalés
+comme OK. Il s'agit d'une confirmation utilisateur, pas d'un test automatisé
+sur appareil. [Conseils de connexion mobile](./homeassistant#connexion-sur-tablette-et-smartphone).
+Les gestes de déplacement/redimensionnement, le clavier virtuel, les dialogues
+natifs de fichiers/téléchargements et iOS restent à vérifier.
+
 ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
@@ -57,7 +66,7 @@ paramètre `language` d'une URL reste prioritaire pour la page ouverte.
 
 ## Suite du travail
 
-1. **A2 – Appareils mobiles réels :** le test Pi 5 natif réussit. Android/iOS, gestes tactiles, clavier, dialogues natifs de fichiers/téléchargements et Ingress restent à vérifier.
+1. **A2 – Appareils mobiles réels :** les tests Pi 5 et les premiers tests sur tablette Android réussissent. Déplacement/redimensionnement tactile, clavier, dialogues natifs de fichiers/téléchargements et iOS restent à vérifier.
 2. **A3 – Simple/Expert :** clarifier le sélecteur prévu avec le démarrage Expert actuel, sans perdre les projets.
 3. **A5 – Production :** vérifier et améliorer Renderer, Theme et les API des plugins avec des projets réels plus grands, les mises à jour et reconnexions.
 4. **A6 – Documentation française :** compléter les pages FR et aligner la structure et le contenu DE/EN/FR.

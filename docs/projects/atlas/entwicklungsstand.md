@@ -44,6 +44,15 @@ und 844×390 passen über den echten Pi-Ingress ohne Seitenüberlauf. Physische
 Mobilbrowser, größere gefüllte Projekte und Last-/Leistungsmessungen sind
 damit nicht geprüft; ein ARM64-Supervisor-Update wurde hier nicht durchgeführt.
 
+Ergänzend bestätigt der Benutzer auf einem **echten Android-Tablet**: Hub und
+Administration funktionieren hoch und quer sowie in DE/EN/FR. Nach dem Wechsel
+der HA-URL von `homeassistant.local:80` zur erreichbaren IP-Adresse funktioniert
+auch die Verbindung; YAML-Dialog und „Problem melden“ wurden als OK gemeldet.
+Dies ist eine Benutzerbestätigung, kein automatisierter Gerätetest.
+[Verbindungshinweis für Mobilgeräte](./homeassistant#verbindung-auf-tablet-und-smartphone).
+Touch-Drag/Resize, Bildschirmtastatur, native Datei-/Download-Dialoge und iOS
+bleiben offen.
+
 Die grundlegende Repository- und Dokumentationsstruktur ist eingerichtet.
 
 Abgeschlossen sind unter anderem:
@@ -107,7 +116,7 @@ Zu den vorbereiteten Themen gehören:
 
 Offen sind die folgenden ATLAS-Punkte:
 
-1. **A2 – Echte Mobilgeräte:** Der native Pi-5-Test ist bestanden. Android/iOS einschließlich Touch-Drag/Resize, Tastatur, nativen Datei-/Download-Dialogen und Ingress noch prüfen.
+1. **A2 – Echte Mobilgeräte:** Pi 5 und erste Android-Tablet-Prüfungen sind bestanden. Touch-Drag/Resize, Tastatur, native Datei-/Download-Dialoge und iOS noch prüfen.
 2. **A3 – Simple/Expert klären:** Den vorgesehenen sichtbaren Wechsel mit dem bisherigen Expert-Start abgleichen; bestehende Projekte erhalten.
 3. **A5 – Produktionsreife:** Renderer, Theme und Plugin-APIs mit größeren realen Projekten, Live-Updates, Wiederverbindung und Kompatibilität prüfen und ausbauen.
 4. **A6 – Französische Doku:** Unvollständige FR-Seiten übersetzen und DE/EN/FR strukturell und fachlich abgleichen.

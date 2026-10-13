@@ -7,6 +7,27 @@ Assistant cards, live entities and later HACS-oriented usage.
 The detailed user and feature documentation for the editor now lives in the
 plugin section: [Home Assistant Card Editor](/en/projects/atlas-plugins/homeassistant-card-editor).
 
+## Connecting from tablets and phones
+
+The Home Assistant URL must be reachable from each browser. If
+`homeassistant.local` works on a PC but not on a tablet, local name resolution
+may be unavailable. First open the HA installation's IP address on the affected
+device, for example `http://192.168.178.177:80`. Replace this example IP with
+your own address.
+
+If HA is reachable there, enter this address as `home_assistant_url` in the
+ATLAS app configuration, save and restart ATLAS. Keep the existing access token
+unchanged. For standalone ATLAS, change the URL in Administration instead and
+save the settings.
+
+**Port 80 is supported.** `http://HOST:80` and `http://HOST` are equivalent;
+`ws://HOST/api/websocket` also uses port 80. ATLAS does not require port 8123.
+Use the port actually configured and an appropriate HTTPS address when using
+HTTPS. `WebSocket closed with code 1006` alone does not prove that the token is
+invalid: also check reachability, name resolution and any proxy. In the Android
+tablet test, switching from `.local` to the reachable IP address restored the
+connection.
+
 ## Plugin links in the Home Assistant sidebar
 
 Starting with ATLAS App/Add-on `0.1.236`, the sidebar dialog generates a stable
