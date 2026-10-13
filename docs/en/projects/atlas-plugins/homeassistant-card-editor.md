@@ -36,6 +36,14 @@ On tablets, the title field, Apply title and Use entity name share one row.
 On narrow phones, the title field sits above the two equal-width buttons.
 This layout applies in DE/EN/FR.
 
+## Live connection with large entity catalogs
+
+Starting with HA app **0.1.293**, ATLAS processes entity snapshots and live
+events in arrival order. An ongoing snapshot can no longer finish after a
+subsequently received event and overwrite it with older values. Queued messages
+from a closed connection are ignored; a failed replacement socket reports its
+own failure status. Saved cards, positions and credentials remain unchanged.
+
 ## Extension Points
 
 The editor currently uses these ATLAS extension points:

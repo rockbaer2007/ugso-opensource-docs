@@ -38,6 +38,15 @@ Sur tablette, le champ du titre et les deux boutons d'application du titre et
 du nom d'entité partagent une rangée. Sur téléphone étroit, le champ se trouve
 au-dessus des deux boutons de même largeur. Cela s'applique en DE/EN/FR.
 
+## Connexion avec de grands catalogues d'entités
+
+À partir de l'application HA **0.1.293**, ATLAS traite les instantanés d'entités
+et les événements en direct dans leur ordre d'arrivée. Un instantané en cours
+ne peut plus terminer après un événement reçu ensuite et remplacer sa valeur
+par une ancienne. Les messages en attente d'une connexion fermée sont ignorés ;
+l'échec d'un nouveau socket affiche son propre état d'erreur. Cartes enregistrées,
+positions et identifiants restent inchangés.
+
 ## Statut
 
 - Le chemin de langue existe.

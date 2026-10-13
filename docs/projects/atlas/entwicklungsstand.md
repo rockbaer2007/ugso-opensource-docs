@@ -28,7 +28,15 @@ Titelbuttons nebeneinander unter dem Feld. Alle Werte bleiben erhalten.
 0.1.292 entfernt die verbliebene Startmodus-Auswahl aus HA-Konfiguration und
 Administration und übernimmt alte Simple-Einstellungen als Expert.
 
-Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.292**. Die vier
+A5 ist gestartet: **0.1.293** korrigiert die Reihenfolge von Snapshots und
+Live-Ereignissen sowie den Fehlerstatus beim Socket-Wechsel. Eine isolierte
+PC-Prüfung mit HA-Mock bestätigt 100 dargestellte Test-Cards, 2.001 Entitäten,
+drei Wiederverbindungen, 150 Live-Updates, Theme-Wechsel und Projekt-Roundtrips
+in DE/EN/FR. 162 HA-Tests sind bestanden. Das sind synthetische Tests;
+gefüllte reale Projekte, native Pi-Lastmessungen und breitere Plugin-Prüfungen
+bleiben Teil von A5.
+
+Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.293**. Die vier
 vereinbarten Stabilisierungspunkte sind abgeschlossen. Die Abschlussprüfung
 umfasst 870 Workspace-Tests, fünf ergänzende Tests, alle Typprüfungen und Builds
 sowie 15 isolierte Browser-Prüfpunkte in DE/EN/FR. Ältere Admin-Einstellungen,
@@ -125,7 +133,7 @@ ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 
 Die nächste Priorität ist A5: Produktionsreife mit größeren realen Projekten,
 Live-Updates, Wiederverbindung und Plugin-Kompatibilität prüfen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.292`. Administration und
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.293`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 

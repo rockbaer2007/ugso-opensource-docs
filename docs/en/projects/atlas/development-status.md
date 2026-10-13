@@ -28,7 +28,14 @@ All values are preserved.
 0.1.292 removes the remaining start-mode selector from HA configuration and
 Administration and treats older Simple preferences as Expert.
 
-As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.292**. All four
+A5 has started: **0.1.293** fixes snapshot/live-event ordering and failure status
+when replacing a socket. An isolated PC check with mock HA verifies 100 rendered
+test cards, 2001 entities, three reconnects, 150 live updates, theme changes and
+DE/EN/FR project roundtrips. All 162 HA tests pass. These are synthetic checks;
+populated real projects, native Pi load measurements and broader plugin checks
+remain part of A5.
+
+As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.293**. All four
 agreed stabilization items are complete. Acceptance checks cover 870 workspace
 tests, five additional tests, all type checks and builds, and 15 isolated browser
 checkpoints in DE/EN/FR. The tested migration preserves older Admin preferences,
@@ -124,7 +131,7 @@ ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 
 The next priority is A5: production readiness with larger real projects,
 live updates, reconnection and plugin compatibility.
-The current Home Assistant App/Add-on version is `0.1.292`. Administration and
+The current Home Assistant App/Add-on version is `0.1.293`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 

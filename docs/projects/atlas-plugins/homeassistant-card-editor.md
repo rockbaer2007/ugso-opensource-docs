@@ -38,6 +38,15 @@ Auf Tablets stehen Titelfeld, „Titel übernehmen“ und „Entitätsname nutze
 einer Reihe. Auf schmalen Smartphones steht das Titelfeld über den beiden
 gleich breiten Buttons. Diese Anordnung gilt in DE/EN/FR.
 
+## Live-Verbindung bei großen Entitätskatalogen
+
+Ab HA-App **0.1.293** verarbeitet ATLAS Entitätsabfragen und Live-Ereignisse
+in der Reihenfolge ihres Empfangs. Eine noch laufende Abfrage kann dadurch
+ein danach empfangenes Ereignis nicht mehr mit alten Snapshot-Werten überholen.
+Nach einem Verbindungsabbruch werden wartende Nachrichten der alten Verbindung
+ignoriert; schlägt der neue Socket fehl, wird dessen Fehlerstatus angezeigt.
+Gespeicherte Cards, Positionen und Zugangsdaten werden dabei nicht verändert.
+
 ## Extension Points
 
 Der Editor nutzt aktuell diese ATLAS-Extension-Points:

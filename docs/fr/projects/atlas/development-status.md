@@ -32,7 +32,14 @@ le champ. Toutes les valeurs sont conservées.
 0.1.292 supprime le choix du mode de démarrage dans la configuration HA et
 l'Administration et traite les anciens réglages Simple comme Expert.
 
-Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.292**.
+A5 a commencé : **0.1.293** corrige l'ordre des instantanés/événements et l'état
+d'erreur lors du remplacement d'un socket. Un test PC isolé avec HA simulé valide
+100 cartes affichées, 2001 entités, trois reconnexions, 150 mises à jour,
+les changements de thème et les imports/exports de projets DE/EN/FR.
+Les 162 tests HA réussissent. Ces tests sont synthétiques ; projets réels remplis,
+mesures de charge sur Pi natif et tests de plugins plus larges restent dans A5.
+
+Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.293**.
 Les quatre étapes de stabilisation sont terminées. La vérification couvre
 870 tests des paquets, cinq tests supplémentaires, les contrôles de types et
 les builds, ainsi que 15 étapes dans un navigateur isolé en DE/EN/FR. La migration
@@ -86,7 +93,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.292`.
+La version actuelle de l'application Home Assistant est `0.1.293`.
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le
