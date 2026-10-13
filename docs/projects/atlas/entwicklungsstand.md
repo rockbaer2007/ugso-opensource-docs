@@ -2,6 +2,19 @@
 
 ## Aktueller Stand
 
+Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.287**. Die vier
+vereinbarten Stabilisierungspunkte sind abgeschlossen. Die Abschlussprüfung
+umfasst 870 Workspace-Tests, fünf ergänzende Tests, alle Typprüfungen und Builds
+sowie 15 isolierte Browser-Prüfpunkte in DE/EN/FR. Ältere Admin-Einstellungen,
+Repository-Einträge, Darstellung und aktive Plugin-IDs bleiben bei der geprüften
+Migration erhalten; Geheimnisse werden verschlüsselt übernommen.
+
+Die abschließende Änderung betrifft Tests und Dokumentation. Die Laufzeit,
+HA-Konfigurationsoptionen und Plugin-Verträge bleiben unverändert. Nur der
+Card Editor ist das integrierte ATLAS-Referenzplugin; eigenständige Plugins werden
+separat gepflegt. Eine echte Supervisor-Aktualisierung, Hardware-Aktionen,
+Mobilbrowser und ARM64-Ausführung wurden nicht geprüft.
+
 Die grundlegende Repository- und Dokumentationsstruktur ist eingerichtet.
 
 Abgeschlossen sind unter anderem:
@@ -37,12 +50,12 @@ Abgeschlossen sind unter anderem:
   `action: domain.service` erkannt, die Detail-YAML wird farbig dargestellt und
   lange Automationslisten scrollen intern
 
-## Aktueller Sprint
+## Aktueller Schwerpunkt
 
 Der aktuelle Entwicklungsschwerpunkt ist:
 
 ```text
-ATLAS File Studio, Automation Exporter / Editor und Home-Assistant-App/Add-on-Workflow
+ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 ```
 
 Der Schwerpunkt liegt auf sicheren Home-Assistant-Dateiworkflows,

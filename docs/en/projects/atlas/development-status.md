@@ -2,6 +2,19 @@
 
 ## Current State
 
+As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.287**. All four
+agreed stabilization items are complete. Acceptance checks cover 870 workspace
+tests, five additional tests, all type checks and builds, and 15 isolated browser
+checkpoints in DE/EN/FR. The tested migration preserves older Admin preferences,
+repositories, theme and active plugin IDs while moving secrets into encrypted
+storage.
+
+The final increment changes tests and documentation only. Runtime behavior, HA
+configuration options and plugin contracts remain unchanged. The Card Editor is
+the integrated ATLAS reference plugin; standalone plugins are maintained
+separately. Real Supervisor upgrades, hardware actions, mobile browsers and
+ARM64 execution have not been verified.
+
 The basic repository and documentation structure is in place.
 
 Completed work includes:
@@ -44,7 +57,7 @@ Completed work includes:
 The current development focus is:
 
 ```text
-ATLAS File Studio, Automation Exporter / Editor and Home Assistant App/Add-on workflow
+ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 ```
 
 The work currently expands safe Home Assistant file workflows, versioned
