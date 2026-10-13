@@ -36,8 +36,26 @@ A5 a commencé : **0.1.293** corrige l'ordre des instantanés/événements et l'
 d'erreur lors du remplacement d'un socket. Un test PC isolé avec HA simulé valide
 100 cartes affichées, 2001 entités, trois reconnexions, 150 mises à jour,
 les changements de thème et les imports/exports de projets DE/EN/FR.
-Les 162 tests HA réussissent. Ces tests sont synthétiques ; projets réels remplis,
-mesures de charge sur Pi natif et tests de plugins plus larges restent dans A5.
+Les 162 tests HA réussissent. Ces mesures sont synthétiques.
+
+La vérification native A5 charge 100 cartes compactes et 24 cartes plus grandes
+sur Pi 5 et Proxmox, sans chevauchement. Les thèmes, rechargements et langues
+DE/EN/FR conservent les champs. Les changements réels d'état des sauvegardes
+arrivent en direct sur Pi ; Proxmox charge initialement 3711 entités et
+143 ressources Lovelace. La valeur CPU observée sur la VM reste constante ;
+un changement de valeur en direct n'y est donc pas établi. Des sauvegardes HA
+locales chiffrées sont créées auparavant. Les configurations initiales de
+l'éditeur et de l'Administration sont restaurées à l'identique, sauf les dates
+d'export ; les six plugins restent actifs. Après un redémarrage de Proxmox
+effectué par l'utilisateur, l'éditeur se reconnecte et le projet initial reste
+inchangé.
+
+Ces tests utilisent des dispositions d'entités préparées dans un navigateur
+de bureau. Les projets utilisateurs variés, les mesures de charge du backend
+natif, les coupures réseau forcées et les tests plus larges du cycle de vie des
+plugins restent ouverts dans A5. Le rendu sur ordinateur n'est pas un benchmark
+du Pi ; le redémarrage natif et les fermetures de socket simulées constituent
+des preuves distinctes.
 
 Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.293**.
 Les quatre étapes de stabilisation sont terminées. La vérification couvre

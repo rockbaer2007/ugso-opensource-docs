@@ -31,9 +31,23 @@ Administration and treats older Simple preferences as Expert.
 A5 has started: **0.1.293** fixes snapshot/live-event ordering and failure status
 when replacing a socket. An isolated PC check with mock HA verifies 100 rendered
 test cards, 2001 entities, three reconnects, 150 live updates, theme changes and
-DE/EN/FR project roundtrips. All 162 HA tests pass. These are synthetic checks;
-populated real projects, native Pi load measurements and broader plugin checks
-remain part of A5.
+DE/EN/FR project roundtrips. All 162 HA tests pass. These measurements are synthetic.
+
+The native A5 follow-up loads 100 compact and 24 larger entity cards without
+overlaps on both Pi 5 and Proxmox. Theme changes, reloads and DE/EN/FR preserve
+the fields. Real backup-state changes arrive live on Pi; Proxmox initially
+loads 3711 entities and 143 Lovelace resources. The observed VM CPU value stays
+constant, so a changing live value is not established there. Local encrypted
+HA backups are created first. The original editor and Admin configurations
+are restored exactly, excluding export timestamps; all six plugins remain
+active. Following a user-initiated Proxmox restart, the editor reconnects and
+the original project remains unchanged.
+
+These checks use prepared entity layouts in a desktop browser. Diverse user
+projects, native backend load measurements, forced network loss and broader
+plugin lifecycle checks remain open in A5. Desktop rendering is not a Pi
+performance benchmark; native restart verification and simulated socket
+closures are separate evidence.
 
 As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.293**. All four
 agreed stabilization items are complete. Acceptance checks cover 870 workspace

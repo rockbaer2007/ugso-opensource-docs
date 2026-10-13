@@ -32,9 +32,24 @@ A5 ist gestartet: **0.1.293** korrigiert die Reihenfolge von Snapshots und
 Live-Ereignissen sowie den Fehlerstatus beim Socket-Wechsel. Eine isolierte
 PC-Prüfung mit HA-Mock bestätigt 100 dargestellte Test-Cards, 2.001 Entitäten,
 drei Wiederverbindungen, 150 Live-Updates, Theme-Wechsel und Projekt-Roundtrips
-in DE/EN/FR. 162 HA-Tests sind bestanden. Das sind synthetische Tests;
-gefüllte reale Projekte, native Pi-Lastmessungen und breitere Plugin-Prüfungen
-bleiben Teil von A5.
+in DE/EN/FR. 162 HA-Tests sind bestanden. Diese Messungen sind synthetisch.
+
+Die native A5-Folgeprüfung lädt auf Pi 5 und Proxmox jeweils 100 kompakte und
+24 größere Entitäts-Cards ohne Überlappungen. Theme-Wechsel, Neuladen und
+DE/EN/FR erhalten die Felder. Auf dem Pi kommen echte Backup-Statuswechsel
+live an; auf Proxmox werden zunächst 3.711 Entitäten und 143 Lovelace-Ressourcen
+geladen. Der beobachtete VM-CPU-Wert bleibt konstant, eine Wertänderung ist dort
+damit nicht nachgewiesen. Vorher wurden lokale verschlüsselte HA-Backups erstellt.
+Die ursprünglichen Editor- und Admin-Konfigurationen sind anschließend exakt
+wiederhergestellt, abgesehen vom Exportzeitpunkt; alle sechs Plugins bleiben
+aktiv. Nach einem vom Benutzer ausgeführten Proxmox-Neustart verbindet sich der
+Editor erneut und das Originalprojekt bleibt unverändert.
+
+Getestet wurden vorbereitete Entitäts-Layouts im Desktop-Browser. Vielfältige
+Nutzerprojekte, native Backend-Lastmessungen, erzwungene Netzwerkabbrüche und
+breitere Plugin-Lebenszyklusprüfungen bleiben in A5 offen. Desktop-Rendering
+ist kein Pi-Leistungsbenchmark; native Neustartprüfung und simulierte
+Socket-Abbrüche sind getrennte Nachweise.
 
 Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.293**. Die vier
 vereinbarten Stabilisierungspunkte sind abgeschlossen. Die Abschlussprüfung
