@@ -51,7 +51,15 @@ breitere Plugin-Lebenszyklusprüfungen bleiben in A5 offen. Desktop-Rendering
 ist kein Pi-Leistungsbenchmark; native Neustartprüfung und simulierte
 Socket-Abbrüche sind getrennte Nachweise.
 
-Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.293**. Die vier
+**0.1.294** behebt die Wiederverbindung nach längeren Netzwerkausfällen: Der
+Editor versucht es nach den bisherigen drei Versuchen weiter, mit höchstens
+30 Sekunden Abstand. Authentifizierungs- und Protokollfehler stoppen die
+automatischen Versuche, bis die Verbindung korrigiert wird. Ein isolierter
+Test mit acht Sekunden nicht erreichbarem Endpunkt bestätigt die Erholung
+ohne Neuladen und mit unverändertem Projekt. Der echte LAN-Abbruch-Test ist
+als nächster separater Nachweis vorbereitet.
+
+Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.294**. Die vier
 vereinbarten Stabilisierungspunkte sind abgeschlossen. Die Abschlussprüfung
 umfasst 870 Workspace-Tests, fünf ergänzende Tests, alle Typprüfungen und Builds
 sowie 15 isolierte Browser-Prüfpunkte in DE/EN/FR. Ältere Admin-Einstellungen,
@@ -148,7 +156,7 @@ ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 
 Die nächste Priorität ist A5: Produktionsreife mit größeren realen Projekten,
 Live-Updates, Wiederverbindung und Plugin-Kompatibilität prüfen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.293`. Administration und
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.294`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 

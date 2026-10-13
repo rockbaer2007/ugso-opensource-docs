@@ -49,7 +49,14 @@ plugin lifecycle checks remain open in A5. Desktop rendering is not a Pi
 performance benchmark; native restart verification and simulated socket
 closures are separate evidence.
 
-As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.293**. All four
+**0.1.294** fixes recovery after longer network outages: the editor continues
+beyond the previous three retries, with a delay capped at 30 seconds.
+Authentication and protocol failures stop automatic retries until the
+connection is corrected. An isolated eight-second unreachable-endpoint test
+confirms recovery without reloading and preserves the project. A real LAN
+interruption test is prepared as the next separate verification.
+
+As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.294**. All four
 agreed stabilization items are complete. Acceptance checks cover 870 workspace
 tests, five additional tests, all type checks and builds, and 15 isolated browser
 checkpoints in DE/EN/FR. The tested migration preserves older Admin preferences,
@@ -145,7 +152,7 @@ ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 
 The next priority is A5: production readiness with larger real projects,
 live updates, reconnection and plugin compatibility.
-The current Home Assistant App/Add-on version is `0.1.293`. Administration and
+The current Home Assistant App/Add-on version is `0.1.294`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 

@@ -57,7 +57,14 @@ plugins restent ouverts dans A5. Le rendu sur ordinateur n'est pas un benchmark
 du Pi ; le redémarrage natif et les fermetures de socket simulées constituent
 des preuves distinctes.
 
-Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.293**.
+**0.1.294** corrige la reconnexion après une coupure réseau prolongée : les
+tentatives continuent au-delà des trois premiers essais, avec un délai limité
+à 30 secondes. Les erreurs d'authentification ou de protocole arrêtent les
+tentatives jusqu'à la correction de la connexion. Un test isolé avec huit
+secondes d'indisponibilité confirme la reprise sans rechargement et conserve
+le projet. Un test de coupure LAN réelle est préparé séparément.
+
+Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.294**.
 Les quatre étapes de stabilisation sont terminées. La vérification couvre
 870 tests des paquets, cinq tests supplémentaires, les contrôles de types et
 les builds, ainsi que 15 étapes dans un navigateur isolé en DE/EN/FR. La migration
@@ -111,7 +118,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.293`.
+La version actuelle de l'application Home Assistant est `0.1.294`.
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le
