@@ -33,6 +33,21 @@ Die Verbindungseinstellungen werden über die Atlas Administration verwaltet:
 http://127.0.0.1:4175/
 ```
 
+## Problem melden (ab 0.1.287)
+
+„Problem melden“ erstellt zunächst lokal eine Vorschau. „Bericht kopieren“
+übernimmt den geprüften Text; bei fehlender Zwischenablage bleibt die Vorschau
+zum manuellen Kopieren erhalten. Der GitHub-Knopf öffnet nur das Issue-Formular
+mit einer Anleitung. Der Bericht wird nicht automatisch übertragen und steht
+nicht in der GitHub-URL.
+
+Der Filter entfernt Geheimnisse in strukturierten Feldern, zitierter JSON-/YAML-
+Ausgabe, URL-Zugangsdaten und Token-Fragmenten sowie den bekannten HA-Sitzungstoken
+in anderem Berichtstext. Cookies und Browser-Speicher werden nicht ausgelesen;
+Statusangaben zu konfigurierten Schlüsseln sind ausschließlich Ja/Nein-Werte.
+Prüfe vor dem Teilen dennoch Kartentexte, Entitäten und persönliche Angaben.
+Das Öffnen des Berichts ändert keine Projekte, Einstellungen oder Plugins.
+
 ## Expert-Workflow
 
 Der Editor startet direkt im Expert-Workflow. Der frühere sichtbare

@@ -4,6 +4,20 @@ description: Page française préparée pour Accueil Assistant Card Editor dans 
 ---
 # Accueil Assistant Card Editor
 
+## Signaler un problème (depuis 0.1.287)
+
+Le bouton crée d'abord un aperçu local. La copie utilise le texte vérifié ; si
+le presse-papiers échoue, l'aperçu reste disponible pour une copie manuelle.
+Le bouton GitHub ouvre seulement le formulaire avec des instructions. Le rapport
+n'est ni envoyé automatiquement ni placé dans l'URL GitHub.
+
+Le filtre masque les identifiants dans les champs structurés, le JSON/YAML entre
+guillemets, les URL et leurs fragments, ainsi que le jeton HA de session connu
+dans le reste du texte. Les cookies et le stockage du navigateur ne sont pas lus.
+Les indicateurs de clés configurées sont uniquement booléens. Vérifiez quand même
+les textes, entités et données personnelles avant de partager. L'ouverture du
+rapport ne modifie ni les projets, ni les réglages, ni les plugins.
+
 ## Mise à jour 0.1.286
 
 Le rechargement et l'import JSON/HACS conservent les identifiants des modèles

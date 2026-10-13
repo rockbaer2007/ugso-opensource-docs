@@ -5,6 +5,19 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+## Report a problem (since 0.1.287)
+
+Report a problem first creates a local preview. Copy report copies the reviewed
+text; if clipboard access fails, the preview remains available for manual copying.
+The GitHub button opens only the issue form with instructions. The report is
+neither sent automatically nor embedded in the GitHub URL.
+
+The filter removes credentials from structured fields, quoted JSON/YAML, URL
+userinfo and token fragments, and removes the known HA session token from other
+report text. Cookies and browser storage are not read; configured-key flags
+contain only booleans. Still review card text, entities and personal information
+before sharing. Opening the report does not change projects, settings or plugins.
+
 The **ATLAS Home Assistant Card Editor** is the first visible reference
 application in the ATLAS environment. It is used to design Home Assistant cards
 visually, import existing YAML cards and prepare exportable card packages or
