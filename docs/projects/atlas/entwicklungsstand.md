@@ -12,6 +12,12 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
+**A2 und A3 sind abgeschlossen (13.10.2026).** Der Benutzer hat die aktuellen
+ARM64-/Mobilprüfungen als ausreichend akzeptiert. Echte iOS-/Safari-Geräte wurden
+nicht getestet; Chrome-Simulatoren sind separat dokumentiert. Der Card Editor
+bleibt ausschließlich im Expert-Workflow. Simple-Modus und Umschalter werden
+nicht wieder eingeführt; unterstützte ältere Projektimporte bleiben erhalten.
+
 0.1.290 verkürzt die Tablet-Card-Liste auf ein scrollbares Fenster mit zwei
 Cards nebeneinander und ordnet die zugehörigen Aktionsbuttons in zwei Spalten an.
 
@@ -68,7 +74,8 @@ auch die Verbindung; YAML-Dialog und „Problem melden“ wurden als OK gemeldet
 Dies ist eine Benutzerbestätigung, kein automatisierter Gerätetest.
 [Verbindungshinweis für Mobilgeräte](./homeassistant#verbindung-auf-tablet-und-smartphone).
 Touch-Drag/Resize, Bildschirmtastatur, native Datei-/Download-Dialoge und iOS
-bleiben offen.
+wurden damit nicht unabhängig auf allen Geräten geprüft. A2 ist dennoch mit
+der Benutzerfreigabe abgeschlossen; diese Grenzen sind keine offenen A2-Aufgaben.
 
 Die grundlegende Repository- und Dokumentationsstruktur ist eingerichtet.
 
@@ -113,8 +120,9 @@ Der aktuelle Entwicklungsschwerpunkt ist:
 ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 ```
 
-Die nächste Priorität ist A2: ARM64/Raspberry Pi und Mobilbrowser prüfen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.289`. Administration und
+Die nächste Priorität ist A5: Produktionsreife mit größeren realen Projekten,
+Live-Updates, Wiederverbindung und Plugin-Kompatibilität prüfen.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.291`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 
@@ -133,11 +141,9 @@ Zu den vorbereiteten Themen gehören:
 
 Offen sind die folgenden ATLAS-Punkte:
 
-1. **A2 – Echte Mobilgeräte:** Pi 5 und erste Android-Tablet-Prüfungen sind bestanden. Touch-Drag/Resize, Tastatur, native Datei-/Download-Dialoge und iOS noch prüfen.
-2. **A3 – Simple/Expert klären:** Den vorgesehenen sichtbaren Wechsel mit dem bisherigen Expert-Start abgleichen; bestehende Projekte erhalten.
-3. **A5 – Produktionsreife:** Renderer, Theme und Plugin-APIs mit größeren realen Projekten, Live-Updates, Wiederverbindung und Kompatibilität prüfen und ausbauen.
-4. **A6 – Französische Doku:** Unvollständige FR-Seiten übersetzen und DE/EN/FR strukturell und fachlich abgleichen.
-5. **A7 – Weitere Bereitstellung:** Linux-/systemd-Installer und native ATLAS-Integration in HA/HACS auf derselben Laufzeit vorbereiten.
+1. **A5 – Produktionsreife:** Renderer, Theme und Plugin-APIs mit größeren realen Projekten, Live-Updates, Wiederverbindung und Kompatibilität prüfen und ausbauen.
+2. **A6 – Französische Doku:** Unvollständige FR-Seiten übersetzen und DE/EN/FR strukturell und fachlich abgleichen.
+3. **A7 – Weitere Bereitstellung:** Linux-/systemd-Installer und native ATLAS-Integration in HA/HACS auf derselben Laufzeit vorbereiten.
 
 **A1 – Echtes HA prüfen und A4 – Roadmap bereinigen sind erledigt.** Abgeschlossene Funktionen bleiben in
 der Historie dokumentiert und sind keine offenen Aufgaben. Eigenständige Plugins

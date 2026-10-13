@@ -16,6 +16,12 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
+**A2 et A3 sont terminés (13/10/2026).** L'utilisateur accepte le périmètre actuel
+des tests ARM64/mobiles. Les appareils iOS/Safari réels n'ont pas été testés ;
+les simulateurs Chrome sont documentés séparément. Le Card Editor conserve
+uniquement le workflow Expert. Le mode Simple et son sélecteur ne seront pas
+réintroduits ; les imports de projets anciens pris en charge restent disponibles.
+
 0.1.290 réduit la liste sur tablette à une fenêtre défilante avec deux cartes
 côte à côte et dispose les boutons associés en deux colonnes.
 
@@ -69,7 +75,9 @@ connexion ; le dialogue YAML et le rapport de problème sont également signalé
 comme OK. Il s'agit d'une confirmation utilisateur, pas d'un test automatisé
 sur appareil. [Conseils de connexion mobile](./homeassistant#connexion-sur-tablette-et-smartphone).
 Les gestes de déplacement/redimensionnement, le clavier virtuel, les dialogues
-natifs de fichiers/téléchargements et iOS restent à vérifier.
+natifs de fichiers/téléchargements et iOS n'ont pas été vérifiés indépendamment
+sur chaque appareil. A2 est néanmoins terminé avec l'accord de l'utilisateur ;
+ces limites ne sont plus des tâches A2 ouvertes.
 
 ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
@@ -83,11 +91,9 @@ paramètre `language` d'une URL reste prioritaire pour la page ouverte.
 
 ## Suite du travail
 
-1. **A2 – Appareils mobiles réels :** les tests Pi 5 et les premiers tests sur tablette Android réussissent. Déplacement/redimensionnement tactile, clavier, dialogues natifs de fichiers/téléchargements et iOS restent à vérifier.
-2. **A3 – Simple/Expert :** clarifier le sélecteur prévu avec le démarrage Expert actuel, sans perdre les projets.
-3. **A5 – Production :** vérifier et améliorer Renderer, Theme et les API des plugins avec des projets réels plus grands, les mises à jour et reconnexions.
-4. **A6 – Documentation française :** compléter les pages FR et aligner la structure et le contenu DE/EN/FR.
-5. **A7 – Déploiement :** préparer l'installateur Linux/systemd et l'intégration native ATLAS HA/HACS avec le même runtime.
+1. **A5 – Production :** vérifier et améliorer Renderer, Theme et les API des plugins avec des projets réels plus grands, les mises à jour et reconnexions.
+2. **A6 – Documentation française :** compléter les pages FR et aligner la structure et le contenu DE/EN/FR.
+3. **A7 – Déploiement :** préparer l'installateur Linux/systemd et l'intégration native ATLAS HA/HACS avec le même runtime.
 
 **A1 – Installation HA réelle et A4 – Nettoyage de la feuille de route sont terminés.** Les fonctions achevées
 restent dans l'historique et ne sont plus des tâches ouvertes. Les plugins

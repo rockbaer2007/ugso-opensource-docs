@@ -12,6 +12,12 @@ are documented in the development status below.
 
 ## Current State
 
+**A2 and A3 are complete (2026-10-13).** The user accepts the current ARM64/mobile
+verification scope. Physical iOS/Safari devices were not tested; Chrome simulator
+checks are documented separately. The Card Editor remains Expert-only.
+Simple mode and its switch will not return; supported legacy project imports
+remain available.
+
 0.1.290 shortens the tablet card list to a scrollable window with two cards side
 by side and arranges its action buttons in two columns.
 
@@ -65,7 +71,8 @@ connection; the YAML dialog and Problem report are also reported as OK.
 This is user-reported evidence, not an automated device test.
 [Mobile connection advice](./homeassistant#connecting-from-tablets-and-phones).
 Touch drag/resize, virtual keyboards, native file/download dialogs and iOS
-remain open.
+were not independently verified on every device. A2 is nevertheless complete
+with user acceptance; these limits are not open A2 tasks.
 
 The basic repository and documentation structure is in place.
 
@@ -112,8 +119,9 @@ The current development focus is:
 ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 ```
 
-The next priority is A2: ARM64/Raspberry Pi and mobile browser verification.
-The current Home Assistant App/Add-on version is `0.1.289`. Administration and
+The next priority is A5: production readiness with larger real projects,
+live updates, reconnection and plugin compatibility.
+The current Home Assistant App/Add-on version is `0.1.291`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 
@@ -133,11 +141,9 @@ Prepared topics include:
 
 Open ATLAS priorities:
 
-1. **A2 – Physical mobile devices:** Pi 5 and initial Android tablet checks pass. Touch drag/resize, keyboards, native file/download dialogs and iOS remain to be verified.
-2. **A3 – Simple/Expert requirement:** reconcile the intended visible switch with the existing Expert startup behavior; preserve projects.
-3. **A5 – Production readiness:** verify and expand Renderer, Theme and plugin APIs with larger real projects, live updates, reconnection and compatibility.
-4. **A6 – French documentation:** complete unfinished FR pages and align DE/EN/FR structure and content.
-5. **A7 – Further deployment paths:** prepare a Linux/systemd installer and native ATLAS HA/HACS integration using the same runtime.
+1. **A5 – Production readiness:** verify and expand Renderer, Theme and plugin APIs with larger real projects, live updates, reconnection and compatibility.
+2. **A6 – French documentation:** complete unfinished FR pages and align DE/EN/FR structure and content.
+3. **A7 – Further deployment paths:** prepare a Linux/systemd installer and native ATLAS HA/HACS integration using the same runtime.
 
 **A1 – Real HA verification and A4 – Roadmap cleanup are complete.** Finished features remain documented in
 history and are not open tasks. Standalone plugins maintain their implementation

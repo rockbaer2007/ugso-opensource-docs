@@ -4,6 +4,10 @@ description: Page française préparée pour Accueil Assistant Card Editor dans 
 ---
 # Accueil Assistant Card Editor
 
+Décision du 13/10/2026 : l'éditeur conserve uniquement le workflow Expert. Le
+mode Simple et son sélecteur ne seront pas réintroduits. Les imports de projets
+anciens pris en charge restent compatibles.
+
 Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
 
 La page anglaise correspondante est actuellement la référence de structure : [`en/projects/atlas-plugins/homeassistant-card-editor.md`](/en/projects/atlas-plugins/homeassistant-card-editor).

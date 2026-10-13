@@ -4,6 +4,10 @@ Der Home Assistant Card Editor ist das erste offizielle ATLAS-Referenz-Plugin. E
 
 ## Aufgabe
 
+Produktentscheidung vom 13.10.2026: Der Editor bleibt ausschließlich Expert.
+Simple-Modus und Umschalter werden nicht wieder eingeführt. Unterstützte ältere
+Projektimporte bleiben kompatibel.
+
 Das Plugin stellt einen Editor für Home-Assistant-Cards bereit. Es unterstützt den Expert-Workflow, Entity-Auswahl, Ressourcenprüfung, YAML/JSON-Import, HACS-nahe Bundle-Exporte und mehrsprachige Card-Pakete. Der frühere sichtbare Simple-Modus wurde entfernt; der Editor startet direkt im Expert-Workflow.
 
 Im Expert-Workflow bleibt das Hintergrundraster quadratisch. Die Anzahl der Spalten wird oben über einen horizontalen Slider gesteuert, die Anzahl der Zeilen links über einen vertikalen Slider. Ein eigener Zoom-Slider verändert nur die Zellgröße und skaliert Breite und Höhe gemeinsam. Die frühere Streckfunktion ist damit in Feldanzahl und Zoom getrennt.
