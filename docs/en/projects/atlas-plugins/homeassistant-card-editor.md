@@ -7,6 +7,10 @@ The Home Assistant Card Editor is the first official ATLAS reference plugin. It 
 Product decision on 2026-10-13: the editor remains Expert-only. Simple mode and
 its switch will not return. Supported legacy project imports remain compatible.
 
+Starting with HA app **0.1.292**, the start-mode selector is also removed from
+HA app configuration and Administration. Older saved Simple values are treated
+as Expert; credentials and other settings are preserved.
+
 The plugin provides an editor for Home Assistant cards. It supports the Expert workflow, entity selection, resource checks, YAML/JSON import, HACS-oriented bundle exports and multilingual card packages. The former visible Simple mode has been removed; the editor now opens directly in the Expert workflow.
 
 In the Expert workflow, the background grid stays square. The number of columns is controlled by a horizontal slider above the surface, while the number of rows is controlled by a vertical slider on the left. A separate Zoom slider changes only the cell size and scales width and height together. The previous stretch behavior is now split into field count and zoom.

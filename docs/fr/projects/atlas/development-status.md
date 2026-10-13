@@ -29,7 +29,10 @@ côte à côte et dispose les boutons associés en deux colonnes.
 titre sur tablette ; sur téléphone, les deux boutons partagent une rangée sous
 le champ. Toutes les valeurs sont conservées.
 
-Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.291**.
+0.1.292 supprime le choix du mode de démarrage dans la configuration HA et
+l'Administration et traite les anciens réglages Simple comme Expert.
+
+Au **13/10/2026** : framework **0.2.0-alpha.88**, application HA **0.1.292**.
 Les quatre étapes de stabilisation sont terminées. La vérification couvre
 870 tests des paquets, cinq tests supplémentaires, les contrôles de types et
 les builds, ainsi que 15 étapes dans un navigateur isolé en DE/EN/FR. La migration
@@ -83,7 +86,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.291`.
+La version actuelle de l'application Home Assistant est `0.1.292`.
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le

@@ -25,7 +25,10 @@ Cards nebeneinander und ordnet die zugehörigen Aktionsbuttons in zwei Spalten a
 Titelbedienung auf Tablets in eine Reihe; auf Smartphones stehen beide
 Titelbuttons nebeneinander unter dem Feld. Alle Werte bleiben erhalten.
 
-Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.291**. Die vier
+0.1.292 entfernt die verbliebene Startmodus-Auswahl aus HA-Konfiguration und
+Administration und übernimmt alte Simple-Einstellungen als Expert.
+
+Stand **13.10.2026**: Framework **0.2.0-alpha.88**, HA-App **0.1.292**. Die vier
 vereinbarten Stabilisierungspunkte sind abgeschlossen. Die Abschlussprüfung
 umfasst 870 Workspace-Tests, fünf ergänzende Tests, alle Typprüfungen und Builds
 sowie 15 isolierte Browser-Prüfpunkte in DE/EN/FR. Ältere Admin-Einstellungen,
@@ -122,7 +125,7 @@ ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 
 Die nächste Priorität ist A5: Produktionsreife mit größeren realen Projekten,
 Live-Updates, Wiederverbindung und Plugin-Kompatibilität prüfen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.291`. Administration und
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.292`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 

@@ -25,7 +25,10 @@ by side and arranges its action buttons in two columns.
 controls in one row; phone title buttons share a row below the field.
 All values are preserved.
 
-As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.291**. All four
+0.1.292 removes the remaining start-mode selector from HA configuration and
+Administration and treats older Simple preferences as Expert.
+
+As of **2026-10-13**: framework **0.2.0-alpha.88**, HA app **0.1.292**. All four
 agreed stabilization items are complete. Acceptance checks cover 870 workspace
 tests, five additional tests, all type checks and builds, and 15 isolated browser
 checkpoints in DE/EN/FR. The tested migration preserves older Admin preferences,
@@ -121,7 +124,7 @@ ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 
 The next priority is A5: production readiness with larger real projects,
 live updates, reconnection and plugin compatibility.
-The current Home Assistant App/Add-on version is `0.1.291`. Administration and
+The current Home Assistant App/Add-on version is `0.1.292`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 
