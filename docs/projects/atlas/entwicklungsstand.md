@@ -12,6 +12,8 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
+**Renderer/Themes in 0.1.296:** Fehler- und Wartestatus bleiben im Dunkelmodus rot beziehungsweise gelb; die Expert-Feldliste und Löschknöpfe sind in beiden Themes lesbar. Eine isolierte Chrome-Prüfung mit 36 vorbereiteten Entity-/Button-/Sensor-/Thermostat-/Bubble-/Mushroom-Vorschauen bestätigt DE/EN/FR, Hell/Dunkel/Auto, Neuladen sowie vier Bildschirmgrößen ohne Überlappung oder seitlichen Seitenüberlauf. Feldobjekte und Flächengröße bleiben unverändert. Automatische Systemwechsel wurden simuliert; echte HA/HACS-Ausführung und vielfältige Nutzerprojekte bleiben getrennte A5-Prüfungen.
+
 Die nachgeholten Docker-Prüfungen vom 14.10.2026 bestehen für Standalone und HA-Paket auf Linux amd64: Build, echte Administration-/Editor-Laufzeit, Health-Checks, Container-Neustart und Plugin-Update/-Wiederherstellung mit getrennten Testdaten. Neun Backend-/Origin-Regressionsprüfungen bestehen zusätzlich im Linux-Image. Das ersetzt keine echte Supervisor-/Ingress-, ARM64- oder Browserprüfung; bestehende HA-Installationen wurden nicht verändert.
 
 **A5-Fortsetzung vom 14.10.2026:** 0.1.295 berücksichtigt den im Browser gespeicherten Administrationsstatus auch bei direkten Plugin-Startlinks. Deaktivierte oder noch nicht aktivierte Plugins werden über diesen Weg nicht gestartet. Das ist eine Bedienpräferenz, keine Zugriffssperre für Plugin-Dateien. Isolierte Prüfungen des echten App-Servers bestätigen Installation, abgewiesene Updates, Austausch, Neustart, Deinstallation und Paket-Wiederherstellung; andere Plugin-Einträge und Testdaten bleiben erhalten. Die Testumgebung ersetzt keine echte HA-Installation. A5 bleibt für Renderer/Themes, vielfältige Projekte, native Last und geschlossene Verbindungen offen.
@@ -170,7 +172,7 @@ ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 
 Die nächste Priorität ist A5: Produktionsreife mit größeren realen Projekten,
 Live-Updates, Wiederverbindung und Plugin-Kompatibilität prüfen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.295`. Administration und
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.296`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 

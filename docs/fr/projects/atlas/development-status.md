@@ -16,6 +16,8 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
+**Renderer/thèmes dans la version 0.1.296 :** les états bloqué et en attente restent rouges et jaunes en mode sombre ; les lignes de champs Expert et les boutons de suppression restent lisibles dans les deux thèmes. Une vérification Chrome isolée avec 36 aperçus préparés Entity/Button/Sensor/Thermostat/Bubble/Mushroom confirme DE/EN/FR, clair/sombre/auto, rechargement et quatre tailles d’écran sans chevauchement ni débordement horizontal de la page. Les champs et les dimensions restent inchangés. Les événements de thème système sont simulés ; l’exécution native HA/HACS et les projets utilisateurs variés restent des vérifications A5 distinctes.
+
 Les vérifications Docker effectuées le 14/10/2026 réussissent pour les images autonomes et du paquet HA sous Linux amd64 : compilation, véritable Administration/Card Editor, contrôles de santé, redémarrage du conteneur et mise à jour/restauration de plugins avec des données isolées. Neuf tests de régression backend/origin réussissent aussi dans l’image Linux. Cela ne remplace pas les vérifications natives Supervisor/Ingress, ARM64 ou navigateur ; les installations HA existantes n’ont pas été modifiées.
 
 **Suite d’A5 du 14/10/2026 :** la version 0.1.295 respecte aussi l’état Administration enregistré dans le navigateur lors de l’ouverture des liens directs de lancement. Les plugins désactivés ou pas encore actifs ne sont pas lancés par cette voie. Il s’agit d’une préférence d’interface, pas d’un contrôle d’accès aux fichiers. Des tests isolés du véritable serveur vérifient installation, mises à jour refusées, remplacement, redémarrage, désinstallation et restauration du paquet ; les autres entrées et les données de test sont conservées. Ces tests ne remplacent pas une vérification native HA. A5 reste ouvert pour Renderer/Theme, les projets variés, la charge native et la reconnexion après fermeture du transport.
@@ -133,7 +135,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.295`.
+La version actuelle de l'application Home Assistant est `0.1.296`.
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le
