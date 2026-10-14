@@ -51,6 +51,36 @@ the status then changed to **Pending restart**. This confirms the download;
 setup after restarting HA is a separate step. Other “Unknown error” causes
 require their corresponding log entry.
 
+## Shared plugin management since 0.1.300
+
+App/Ingress and Runtime can store repository lists, imported plugin metadata and
+activation state in the same ATLAS server. Update the **ATLAS App/runtime** to
+0.1.300 first; updating only the HACS integration is insufficient.
+
+1. Open the original **ATLAS App access** containing all your plugins.
+2. Open Administration → Plugin Manager → **Shared plugin management**.
+3. Choose **Adopt local state** and review repository/plugin/activation counts
+   and listed conflicts.
+4. Conflicts keep server values by default. Choose local values only when you
+   deliberately want them adopted.
+5. Click **Back up and adopt**. A download backs up plugin metadata; the server
+   also backs up its previous state and incoming metadata before an atomic save.
+6. Reopen Runtime or use **Load server state**. Subsequent changes are saved to
+   the server; open Administration pages check every 15 seconds. Concurrent
+   writes using an outdated revision are rejected.
+
+Empty adoption never removes existing server entries. Legacy local management
+remains valid until the first confirmed adoption, which does not delete old
+browser data. Unsaved changes receive a separate local recovery copy and can
+be previewed for adoption again. **Inspect backup** previews a metadata export
+or server snapshot; adoption merges entries.
+
+State is stored at `ATLAS_PLUGIN_DATA_ROOT/.management/state.json`, with backups
+in `.management/backups/`. App/Add-on and Docker use the persistent plugin data
+directory. Include it in runtime backups. No packages are automatically installed
+or removed. HA tokens, provider keys, filesystem permissions, editor projects
+and settings owned by external plugins are outside this migration.
+
 ## Manual installation and updates
 
 Copy only `custom_components/atlas_frontend` from the repository into

@@ -53,6 +53,40 @@ Cela confirme le téléchargement ; la configuration après le redémarrage HA
 reste une étape distincte. Les autres causes de « Unknown error » nécessitent
 leur entrée de journal correspondante.
 
+## Gestion partagée des plugins depuis 0.1.300
+
+L’application/Ingress et le Runtime peuvent conserver dépôts, métadonnées des
+plugins importés et états d’activation sur le même serveur ATLAS. Mettez d’abord
+**l’application/le Runtime ATLAS** à jour vers 0.1.300 ; une mise à jour HACS
+seule ne suffit pas.
+
+1. Ouvrez l’**accès habituel de l’application ATLAS**, contenant tous vos plugins.
+2. Ouvrez Administration → Gestionnaire de plugins → **Gestion partagée des plugins**.
+3. Choisissez **Reprendre l’état local** et vérifiez les nombres de dépôts,
+   plugins, activations et les conflits affichés.
+4. Les conflits conservent les valeurs du serveur par défaut. Choisissez l’état
+   local uniquement si vous souhaitez reprendre ses valeurs.
+5. Cliquez sur **Sauvegarder et reprendre**. Un téléchargement sauvegarde les
+   métadonnées ; le serveur sauvegarde aussi son état précédent et les données
+   reçues avant l’enregistrement atomique.
+6. Rouvrez le Runtime ou utilisez **Charger l’état serveur**. Les modifications
+   suivantes sont partagées ; les Administrations ouvertes vérifient l’état toutes
+   les 15 secondes. Une écriture concurrente avec une ancienne révision est refusée.
+
+Une reprise vide ne supprime aucune entrée du serveur. La gestion locale reste
+valide jusqu’à la première reprise confirmée, qui ne supprime pas les anciennes
+données du navigateur. Les modifications non enregistrées disposent d’une copie
+locale de récupération et peuvent être vérifiées à nouveau. **Vérifier une sauvegarde**
+affiche l’aperçu d’un export de métadonnées ou d’un instantané serveur ; la reprise
+fusionne les entrées.
+
+L’état se trouve dans `ATLAS_PLUGIN_DATA_ROOT/.management/state.json`, les
+sauvegardes dans `.management/backups/`. L’application/add-on et Docker utilisent
+le répertoire persistant des plugins. Incluez-le dans les sauvegardes du Runtime.
+Aucun package n’est installé ou supprimé automatiquement. Jetons HA, clés de
+fournisseurs, permissions de fichiers, projets Editor et paramètres propres
+aux plugins externes restent hors de cette reprise.
+
 ## Installation manuelle et mises à jour
 
 Copiez uniquement `custom_components/atlas_frontend` depuis le dépôt vers

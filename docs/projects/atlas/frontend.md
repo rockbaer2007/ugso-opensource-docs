@@ -56,6 +56,39 @@ Diese Meldung bestätigt den Download; die Einrichtung nach dem HA-Neustart
 ist ein weiterer Schritt. Andere „Unknown error“-Ursachen benötigen den
 jeweiligen Protokolleintrag.
 
+## Gemeinsame Plugin-Verwaltung ab 0.1.300
+
+App/Ingress und Runtime können die Repository-Liste, importierte Plugin-Metadaten
+und Aktivierungszustände im selben ATLAS-Server speichern. Aktualisiere zuerst
+die **ATLAS-App/Laufzeit** auf 0.1.300; allein ein HACS-Update genügt dafür nicht.
+
+1. Öffne den bisherigen **ATLAS-App-Zugang**, in dem alle Plugins vorhanden sind.
+2. Öffne Administration → Plugin-Manager → **Gemeinsame Plugin-Verwaltung**.
+3. Wähle **Lokalen Stand übernehmen** und prüfe Repository-, Plugin- und
+   Aktivierungszahlen sowie angezeigte Konflikte.
+4. Standardmäßig bleiben bei Konflikten die Serverwerte erhalten. Wähle den
+   lokalen Stand nur, wenn dessen Werte bewusst übernommen werden sollen.
+5. Klicke **Gesichert übernehmen**. Ein Download sichert die Plugin-Metadaten;
+   der Server sichert zusätzlich den bisherigen Stand und die Übernahmedaten,
+   bevor er atomar speichert.
+6. Öffne die Runtime erneut oder nutze **Serverstand laden**. Weitere Änderungen
+   werden gemeinsam gespeichert; offene Administrationen prüfen den Stand alle
+   15 Sekunden. Gleichzeitige Änderungen mit veraltetem Stand werden abgewiesen.
+
+Eine leere Übernahme entfernt keine vorhandenen Servereinträge. Bis zur ersten
+bestätigten Übernahme bleibt die bisherige lokale Verwaltung gültig. Die alten
+Browserdaten werden durch die Übernahme nicht gelöscht. Nicht gespeicherte
+Änderungen erhalten eine eigene lokale Wiederherstellungskopie und können erneut
+zur Übernahme geprüft werden. **Sicherung prüfen** liest einen Metadatenexport
+oder eine Server-Sicherung mit Vorschau; die Übernahme führt Einträge zusammen.
+
+Der Serverstand liegt unter `ATLAS_PLUGIN_DATA_ROOT/.management/state.json`,
+die Sicherungen unter `.management/backups/`. Beim App/Add-on und in Docker
+liegt dies im dauerhaften Plugin-Datenverzeichnis. Sichere dieses Verzeichnis
+mit der Laufzeit. Es werden keine Pakete automatisch installiert oder entfernt.
+HA-Tokens, Provider-Schlüssel, Dateiberechtigungen, Editor-Projekte und eigene
+Einstellungen externer Plugins bleiben außerhalb dieser Übernahme.
+
 ## Manuelle Installation und Updates
 
 Kopiere ausschließlich `custom_components/atlas_frontend` aus dem Repository
