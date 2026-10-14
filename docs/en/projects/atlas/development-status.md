@@ -12,6 +12,8 @@ are documented in the development status below.
 
 ## Current State
 
+**Native HA/HACS check on 2026-10-14:** Pi 5 and Proxmox run ATLAS 0.1.296 after updates with the HA backup option enabled. Unchanged ATLAS YAML exports execute in the real unsaved HA card preview: Core on Pi and Core/Bubble/Mushroom on Proxmox, without configuration errors. Original projects and Administration exports then match exactly except for export timestamps; all six plugins remain active. HACS is not configured on Pi, so native HACS execution on ARM64 remains open. These previews do not verify full bundle installation, physical control actions or performance under load.
+
 **Renderer/themes in 0.1.296:** blocked and pending states remain red and yellow in dark mode, and Expert field rows/delete controls remain readable in both themes. An isolated Chrome check with 36 prepared Entity/Button/Sensor/Thermostat/Bubble/Mushroom previews verifies DE/EN/FR, light/dark/auto, reload and four viewport sizes without overlapping fields or page horizontal overflow. Field objects and surface dimensions remain unchanged. System theme events are simulated; native HA/HACS execution and diverse user projects remain separate A5 checks.
 
 The deferred Docker checks on 2026-10-14 pass for standalone and HA-package Linux amd64 images: build, real Administration/Card Editor runtime, health checks, container restart and plugin update/restoration with isolated data. Nine backend/origin regression checks also pass inside the Linux image. This does not replace native Supervisor/Ingress, ARM64 or browser verification; existing HA installations were not changed.
