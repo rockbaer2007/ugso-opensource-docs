@@ -12,6 +12,8 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
+**Expert-Bundle-Korrektur in 0.1.297:** Generierte Kartenscripte und HACS-Bundles übernehmen jetzt das strukturierte Expert-Layout statt lediglich eine Entitätsliste anzuzeigen. Home-Assistant-Kartenhelfer erzeugen die enthaltenen Core-/Community-Karten; konfigurierte Entitäten werden ersetzt und laufende Zustandsänderungen weitergegeben, ohne die Karten neu aufzubauen. Bestehende Projekte und ältere Scriptexporte bleiben kompatibel. Die Veröffentlichung als HACS-Repository mit Release-Verteilung bleibt ein separater Schritt.
+
 **Native HA-/HACS-Prüfung vom 14.10.2026:** Pi 5 und Proxmox laufen nach Updates mit aktivierter HA-Sicherung auf ATLAS 0.1.296. Nach der HACS-/Bubble-/Mushroom-Installation auf dem Pi werden unveränderte ATLAS-YAML-Exporte mit Core/Bubble/Mushroom auf beiden Systemen in der echten, ungespeicherten HA-Kartenvorschau ohne Konfigurationsfehler ausgeführt. Eine zusätzliche Mushroom-Jinja-Vorschau auf dem Pi wertet den echten HA-Zustand aus. Originalprojekte und Administrationsexporte sind anschließend bis auf die Exportzeitstempel identisch; alle sechs Plugins bleiben aktiv. Testdashboards wurden nach Bestätigung entfernt. Die Vorschauen prüfen keine vollständige Bundle-Installation, Geräte-Schaltaktionen oder Leistung unter Last.
 
 **Renderer/Themes in 0.1.296:** Fehler- und Wartestatus bleiben im Dunkelmodus rot beziehungsweise gelb; die Expert-Feldliste und Löschknöpfe sind in beiden Themes lesbar. Eine isolierte Chrome-Prüfung mit 36 vorbereiteten Entity-/Button-/Sensor-/Thermostat-/Bubble-/Mushroom-Vorschauen bestätigt DE/EN/FR, Hell/Dunkel/Auto, Neuladen sowie vier Bildschirmgrößen ohne Überlappung oder seitlichen Seitenüberlauf. Feldobjekte und Flächengröße bleiben unverändert. Automatische Systemwechsel wurden simuliert; echte HA/HACS-Ausführung und vielfältige Nutzerprojekte bleiben getrennte A5-Prüfungen.
@@ -174,7 +176,7 @@ ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 
 Die nächste Priorität ist A5: Produktionsreife mit größeren realen Projekten,
 Live-Updates, Wiederverbindung und Plugin-Kompatibilität prüfen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.296`. Administration und
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.297`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 

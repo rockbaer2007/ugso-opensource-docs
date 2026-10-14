@@ -16,6 +16,8 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
+**Correction des bundles Expert dans 0.1.297 :** les scripts générés et les bundles HACS conservent maintenant la disposition Expert structurée au lieu d’afficher uniquement une liste d’entités. Les helpers de cartes Home Assistant créent les cartes Core/Community intégrées ; les entités configurées sont remplacées et les changements d’état sont transmis sans recréer les cartes. Les projets existants et les anciens exports de scripts restent compatibles. La publication d’un dépôt HACS avec distribution des versions reste une étape distincte.
+
 **Vérification native HA/HACS du 14 octobre 2026 :** Pi 5 et Proxmox exécutent ATLAS 0.1.296 après des mises à jour avec l’option de sauvegarde HA activée. Après l’installation HACS/Bubble/Mushroom sur Pi, les exports YAML ATLAS inchangés avec Core/Bubble/Mushroom s’exécutent sur les deux systèmes dans le véritable aperçu HA non enregistré, sans erreur de configuration. Un aperçu Mushroom Jinja supplémentaire sur Pi évalue l’état HA réel. Les projets d’origine et les exports Administration sont ensuite identiques, sauf les horodatages ; les six plugins restent actifs. Les tableaux de bord de test sont supprimés après confirmation. Ces aperçus ne vérifient ni l’installation complète des bundles, ni les commandes physiques, ni les performances sous charge.
 
 **Renderer/thèmes dans la version 0.1.296 :** les états bloqué et en attente restent rouges et jaunes en mode sombre ; les lignes de champs Expert et les boutons de suppression restent lisibles dans les deux thèmes. Une vérification Chrome isolée avec 36 aperçus préparés Entity/Button/Sensor/Thermostat/Bubble/Mushroom confirme DE/EN/FR, clair/sombre/auto, rechargement et quatre tailles d’écran sans chevauchement ni débordement horizontal de la page. Les champs et les dimensions restent inchangés. Les événements de thème système sont simulés ; l’exécution native HA/HACS et les projets utilisateurs variés restent des vérifications A5 distinctes.
@@ -137,7 +139,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.296`.
+La version actuelle de l'application Home Assistant est `0.1.297`.
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le

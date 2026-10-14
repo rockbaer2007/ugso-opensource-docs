@@ -12,6 +12,8 @@ are documented in the development status below.
 
 ## Current State
 
+**Expert bundle correction in 0.1.297:** Generated card scripts and HACS bundles now preserve the structured Expert layout instead of showing only an entity list. Home Assistant card helpers create the embedded Core/Community cards; configured entities are replaced and live state updates are forwarded without rebuilding cards. Existing projects and legacy script exports stay compatible. Publishing a HACS repository with release distribution remains a separate step.
+
 **Native HA/HACS check on 2026-10-14:** Pi 5 and Proxmox run ATLAS 0.1.296 after updates with the HA backup option enabled. After HACS/Bubble/Mushroom installation on Pi, unchanged ATLAS YAML exports with Core/Bubble/Mushroom execute on both systems in the real unsaved HA card preview without configuration errors. An additional Mushroom Jinja preview on Pi evaluates actual HA state. Original projects and Administration exports then match exactly except for export timestamps; all six plugins remain active. Test dashboards are removed after confirmation. These previews do not verify full bundle installation, physical control actions or performance under load.
 
 **Renderer/themes in 0.1.296:** blocked and pending states remain red and yellow in dark mode, and Expert field rows/delete controls remain readable in both themes. An isolated Chrome check with 36 prepared Entity/Button/Sensor/Thermostat/Bubble/Mushroom previews verifies DE/EN/FR, light/dark/auto, reload and four viewport sizes without overlapping fields or page horizontal overflow. Field objects and surface dimensions remain unchanged. System theme events are simulated; native HA/HACS execution and diverse user projects remain separate A5 checks.
@@ -169,7 +171,7 @@ ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 
 The next priority is A5: production readiness with larger real projects,
 live updates, reconnection and plugin compatibility.
-The current Home Assistant App/Add-on version is `0.1.296`. Administration and
+The current Home Assistant App/Add-on version is `0.1.297`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 
