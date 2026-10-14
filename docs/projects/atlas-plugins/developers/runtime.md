@@ -6,6 +6,16 @@ description: Runtime-Plugin-Vertrag und Modullebenszyklus in ATLAS.
 
 ATLAS Runtime stellt in TypeScript einen Plugin-Vertrag bereit. Ein Plugin enthält ein Manifest und eine asynchrone `activate`-Methode. `createRuntimeModuleFromPlugin()` bildet diesen Vertrag auf ein Runtime-Modul ab.
 
+## Geprüfter Vertrag und Kompatibilität
+
+Stand der A5-Abschlussprüfung: HA-App `0.1.297`, Runtime `0.2.0-alpha.38`. Die Regressionen prüfen Aktivierung, Stop/Dispose, Katalog, Paketparser und isolierte Backend-Installation/-Wiederherstellung. Sie garantieren keine stabile 1.0-API oder beliebige Host-/HA-Versionen.
+
+- Runtime-Hooks gelten für im Host registrierte Runtime-Plugins. Ein installiertes statisches Webplugin erhält dadurch keine automatische `activate`-/`deactivate`-/`dispose`-Ausführung.
+- Extension Points und bereitgestellte Funktionen dienen der Beschreibung und Katalogsuche. Fähigkeitsangaben sind keine Sandbox und gewähren keinen Zugriff auf Dateien oder Geheimnisse.
+- Der gespeicherte Aktivierungsstatus steuert Hub und Startlinks. Er sperrt den Zugriff auf rohe Plugin-Assets nicht.
+
+Halte veröffentlichte Plugin-IDs stabil und erhöhe bei veröffentlichten Änderungen die Paketversion. Prüfe bei Vertragsänderungen unterstützte Paket-/Importformate, Lebenszyklus und den Erhalt vorhandener Daten; dokumentiere notwendige Migrationen und Auswirkungen in Release-Hinweisen. Eine umfassende Versions-/Kompatibilitätsmatrix bleibt Folgequalifikation. Runtime-Vertrag und Repository/Webpaketformat sind getrennt zu bewerten.
+
 ## Minimales Runtime-Plugin
 
 ```ts

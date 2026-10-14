@@ -6,6 +6,16 @@ description: The ATLAS Runtime plugin contract and module lifecycle.
 
 ATLAS Runtime provides a TypeScript plugin contract. A plugin has a manifest and an asynchronous `activate` method. `createRuntimeModuleFromPlugin()` adapts that contract to a Runtime module.
 
+## Verified contract and compatibility
+
+A5 review baseline: HA app `0.1.297`, Runtime `0.2.0-alpha.38`. Regressions cover activation, stop/dispose, catalog, package parsing and isolated backend installation/restoration. They do not guarantee a stable 1.0 API or arbitrary host/HA versions.
+
+- Runtime hooks apply to Runtime plugins registered in the host. Installing a static web plugin does not automatically execute `activate`/`deactivate`/`dispose`.
+- Extension points and provided features describe plugins and support catalog lookup. Capability declarations are not a sandbox and grant no file or secret access.
+- Saved activation status controls Hub and launch links. It does not block raw plugin assets.
+
+Keep published plugin IDs stable and increment package versions for published changes. When contracts change, verify supported package/import formats, lifecycle and preservation of existing data; document required migrations and effects in release notes. A comprehensive version/compatibility matrix remains follow-up qualification. Assess the Runtime contract separately from repository/web package formats.
+
 ## Minimal Runtime plugin
 
 ```ts
