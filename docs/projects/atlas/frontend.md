@@ -44,6 +44,18 @@ allgemeinen HACS-Katalog wird nicht behauptet. Der Repositorytyp ist
 **Integration**, nicht Dashboard. Exportierte HACS-Kartenpakete sind ein
 separater Workflow.
 
+### HACS meldet „Unknown error“
+
+Prüfe den zugehörigen Eintrag unter **Einstellungen → System → Protokolle**.
+Beim ersten Proxmox-Download wurde in `hacs_repository_download` der Fehler
+`AttributeError: 'NoneType' object has no attribute 'data'` beobachtet:
+HACS fand seinen Repository-Eintrag nicht, noch bevor der Paketdownload begann.
+Lade die HACS-Seite neu, öffne **ATLAS Runtime** erneut und wiederhole den
+Download. Im geprüften Fall erschien danach **Ausstehender Neustart**.
+Diese Meldung bestätigt den Download; die Einrichtung nach dem HA-Neustart
+ist ein weiterer Schritt. Andere „Unknown error“-Ursachen benötigen den
+jeweiligen Protokolleintrag.
+
 ## Manuelle Installation und Updates
 
 Kopiere ausschließlich `custom_components/atlas_frontend` aus dem Repository
@@ -84,8 +96,10 @@ es ist keine zusätzliche Lovelace-Ressource unter `/hacsfiles/atlas/`.
 Isolierte Prüfungen verwenden Home Assistant Core **2026.10.1**, eine eigene
 ATLAS-Laufzeit und Testdaten. Konfigurations-/Optionsdialog, Admin-Panel,
 Neuladen, Neustart, statisches Modul und Erhalt anderer Panels werden geprüft.
-Weitere HA-Versionen, echte ARM64-Installation und der vollständige Download
-über HACS auf Pi/Proxmox bleiben separate Qualifikationsschritte.
+Der HACS-Download von **0.1.299** auf Proxmox ist bis **Ausstehender Neustart**
+bestätigt. Einrichtung und Einbettung auf diesem System, Updates, weitere
+HA-Versionen und die native HACS-Installation auf ARM64/Pi bleiben separate
+Qualifikationsschritte.
 
 Grundlagen: [HA-Custom-Panels](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 und [HACS-Integrationsstruktur](https://www.hacs.xyz/docs/publish/integration/).

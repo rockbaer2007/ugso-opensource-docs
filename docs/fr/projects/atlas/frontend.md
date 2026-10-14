@@ -41,6 +41,18 @@ Il s’agit d’un dépôt HACS personnalisé ; aucune inclusion au catalogue g�
 HACS n’est annoncée. Choisissez **Intégration**, pas Dashboard. Les packages
 de cartes HACS exportés restent un processus distinct.
 
+### HACS affiche « Unknown error »
+
+Consultez l’entrée correspondante dans **Paramètres → Système → Journaux**.
+Lors du premier téléchargement sur Proxmox, `hacs_repository_download` a signalé
+`AttributeError: 'NoneType' object has no attribute 'data'` : HACS ne retrouvait
+pas son entrée de dépôt, avant même le téléchargement du package. Rechargez
+la page HACS, ouvrez à nouveau **ATLAS Runtime** et relancez le téléchargement.
+Dans le cas vérifié, le statut est ensuite passé à **Redémarrage en attente**.
+Cela confirme le téléchargement ; la configuration après le redémarrage HA
+reste une étape distincte. Les autres causes de « Unknown error » nécessitent
+leur entrée de journal correspondante.
+
 ## Installation manuelle et mises à jour
 
 Copiez uniquement `custom_components/atlas_frontend` depuis le dépôt vers
@@ -80,8 +92,10 @@ ce n’est pas une ressource Lovelace supplémentaire sous `/hacsfiles/atlas/`.
 Les vérifications isolées utilisent Home Assistant Core **2026.10.1**, un Runtime
 ATLAS séparé et des données de test. Elles couvrent configuration/options,
 panneau administrateur, rechargement, redémarrage, module statique et conservation
-des autres panneaux. Les autres versions HA, l’installation ARM64 native et le
-téléchargement complet par HACS sur Pi/Proxmox restent à qualifier séparément.
+des autres panneaux. Le téléchargement HACS de **0.1.299** sur Proxmox est
+confirmé jusqu’au statut **Redémarrage en attente**. Configuration et intégration
+sur ce système, mises à jour, autres versions HA et installation HACS native
+sur ARM64/Pi restent à qualifier séparément.
 
 Références : [panneaux personnalisés HA](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 et [structure des intégrations HACS](https://www.hacs.xyz/docs/publish/integration/).

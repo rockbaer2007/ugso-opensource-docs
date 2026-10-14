@@ -40,6 +40,17 @@ This is a custom HACS repository; general HACS catalog inclusion is not claimed.
 Select repository type **Integration**, not Dashboard. Exported HACS card
 packages remain a separate workflow.
 
+### HACS reports “Unknown error”
+
+Check the corresponding entry in **Settings → System → Logs**. During the first
+Proxmox download, `hacs_repository_download` raised
+`AttributeError: 'NoneType' object has no attribute 'data'`: HACS could not find
+its repository entry before the package download began. Reload the HACS page,
+open **ATLAS Runtime** again and retry the download. In the verified case,
+the status then changed to **Pending restart**. This confirms the download;
+setup after restarting HA is a separate step. Other “Unknown error” causes
+require their corresponding log entry.
+
 ## Manual installation and updates
 
 Copy only `custom_components/atlas_frontend` from the repository into
@@ -75,9 +86,10 @@ Lovelace resource under `/hacsfiles/atlas/`.
 
 Isolated checks use Home Assistant Core **2026.10.1**, a separate ATLAS runtime
 and fixture data. They cover config/options flows, the admin panel, reload,
-restart, static module and preservation of unrelated panels. Further HA versions,
-native ARM64 installation and complete HACS download on Pi/Proxmox remain
-separate qualification steps.
+restart, static module and preservation of unrelated panels. HACS download of
+**0.1.299** on Proxmox is confirmed up to **Pending restart**. Setup and embedding
+on that system, updates, further HA versions and native ARM64/Pi HACS installation
+remain separate qualification steps.
 
 References: [HA custom panels](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 and [HACS integration structure](https://www.hacs.xyz/docs/publish/integration/).
