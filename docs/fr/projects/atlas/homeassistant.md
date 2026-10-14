@@ -300,8 +300,9 @@ Mushroom ou Bubble :
 
 Le modèle peut vérifier la ressource ATLAS, les dépendances des cartes et
 les déclarations JSON/YAML nécessaires. L’hébergement ATLAS autonome Docker
-et l’application HA existent ; l’intégration frontend native ATLAS/HACS
-et l’installateur Linux/systemd restent la priorité A7.
+et l’application HA existent. L’[installateur Linux/systemd](/fr/projects/atlas/linux)
+est implémenté et vérifié sous Debian 12 amd64 LXC ; l’intégration frontend
+native ATLAS/HACS reste la priorité A7.
 Exporter une carte HACS ne signifie pas installer ATLAS lui-même via HACS.
 
 ## Démonstration actuelle

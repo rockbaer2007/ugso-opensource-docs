@@ -1,5 +1,10 @@
 # ATLAS and Home Assistant
 
+ATLAS 0.1.298 also provides an optional [Linux/systemd installer](/en/projects/atlas/linux)
+for standalone hosting. Installation, update, backup and rollback are verified
+on Debian 12 amd64 LXC. Native ATLAS HA/HACS frontend integration remains a
+separate open step.
+
 ATLAS includes its own `@atlas/homeassistant` package for Home-Assistant-oriented
 integration. The current focus is an editor and export workflow for Home
 Assistant cards, live entities and later HACS-oriented usage.

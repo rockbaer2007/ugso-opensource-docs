@@ -1,5 +1,10 @@
 # ATLAS und Home Assistant
 
+ATLAS 0.1.298 bietet außerdem einen optionalen [Linux/systemd-Installer](/projects/atlas/linux)
+für den eigenständigen Betrieb. Installation, Update, Sicherung und Rückwechsel
+sind auf Debian 12 amd64 LXC geprüft. Die native ATLAS-HA/HACS-Frontend-Integration
+bleibt ein separater offener Schritt.
+
 ATLAS besitzt mit `@atlas/homeassistant` ein eigenes Paket für die
 Home-Assistant-nahe Integration. Der aktuelle Schwerpunkt liegt auf einem
 Editor- und Export-Workflow für Home-Assistant-Karten, Live-Entitäten und
