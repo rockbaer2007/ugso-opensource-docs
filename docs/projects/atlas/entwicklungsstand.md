@@ -12,6 +12,8 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
+**A5-Fortsetzung vom 14.10.2026:** 0.1.295 berücksichtigt den im Browser gespeicherten Administrationsstatus auch bei direkten Plugin-Startlinks. Deaktivierte oder noch nicht aktivierte Plugins werden über diesen Weg nicht gestartet. Das ist eine Bedienpräferenz, keine Zugriffssperre für Plugin-Dateien. Isolierte Prüfungen des echten App-Servers bestätigen Installation, abgewiesene Updates, Austausch, Neustart, Deinstallation und Paket-Wiederherstellung; andere Plugin-Einträge und Testdaten bleiben erhalten. Die Testumgebung ersetzt keine echte HA-Installation. A5 bleibt für Renderer/Themes, vielfältige Projekte, native Last und geschlossene Verbindungen offen.
+
 **A2 und A3 sind abgeschlossen (13.10.2026).** Der Benutzer hat die aktuellen
 ARM64-/Mobilprüfungen als ausreichend akzeptiert. Echte iOS-/Safari-Geräte wurden
 nicht getestet; Chrome-Simulatoren sind separat dokumentiert. Der Card Editor
@@ -166,7 +168,7 @@ ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 
 Die nächste Priorität ist A5: Produktionsreife mit größeren realen Projekten,
 Live-Updates, Wiederverbindung und Plugin-Kompatibilität prüfen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.294`. Administration und
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.295`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 

@@ -12,6 +12,8 @@ are documented in the development status below.
 
 ## Current State
 
+**A5 follow-up on 2026-10-14:** 0.1.295 also respects the browser-held Administration status when opening direct plugin launch links. Disabled or not-yet-active plugins do not launch through this route. This is a UI preference, not access control for plugin files. Isolated tests of the real app server verify installation, rejected updates, replacement, restart, uninstall and package restoration while retaining other catalog entries and fixture data. These tests do not replace native HA verification. A5 remains open for Renderer/Theme compatibility, diverse projects, native load and closed-transport recovery.
+
 **A2 and A3 are complete (2026-10-13).** The user accepts the current ARM64/mobile
 verification scope. Physical iOS/Safari devices were not tested; Chrome simulator
 checks are documented separately. The Card Editor remains Expert-only.
@@ -161,7 +163,7 @@ ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 
 The next priority is A5: production readiness with larger real projects,
 live updates, reconnection and plugin compatibility.
-The current Home Assistant App/Add-on version is `0.1.294`. Administration and
+The current Home Assistant App/Add-on version is `0.1.295`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 

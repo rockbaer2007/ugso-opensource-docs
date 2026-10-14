@@ -16,6 +16,8 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
+**Suite d’A5 du 14/10/2026 :** la version 0.1.295 respecte aussi l’état Administration enregistré dans le navigateur lors de l’ouverture des liens directs de lancement. Les plugins désactivés ou pas encore actifs ne sont pas lancés par cette voie. Il s’agit d’une préférence d’interface, pas d’un contrôle d’accès aux fichiers. Des tests isolés du véritable serveur vérifient installation, mises à jour refusées, remplacement, redémarrage, désinstallation et restauration du paquet ; les autres entrées et les données de test sont conservées. Ces tests ne remplacent pas une vérification native HA. A5 reste ouvert pour Renderer/Theme, les projets variés, la charge native et la reconnexion après fermeture du transport.
+
 **A2 et A3 sont terminés (13/10/2026).** L'utilisateur accepte le périmètre actuel
 des tests ARM64/mobiles. Les appareils iOS/Safari réels n'ont pas été testés ;
 les simulateurs Chrome sont documentés séparément. Le Card Editor conserve
@@ -129,7 +131,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.294`.
+La version actuelle de l'application Home Assistant est `0.1.295`.
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le
