@@ -12,6 +12,8 @@ are documented in the development status below.
 
 ## Current State
 
+The deferred Docker checks on 2026-10-14 pass for standalone and HA-package Linux amd64 images: build, real Administration/Card Editor runtime, health checks, container restart and plugin update/restoration with isolated data. Nine backend/origin regression checks also pass inside the Linux image. This does not replace native Supervisor/Ingress, ARM64 or browser verification; existing HA installations were not changed.
+
 **A5 follow-up on 2026-10-14:** 0.1.295 also respects the browser-held Administration status when opening direct plugin launch links. Disabled or not-yet-active plugins do not launch through this route. This is a UI preference, not access control for plugin files. Isolated tests of the real app server verify installation, rejected updates, replacement, restart, uninstall and package restoration while retaining other catalog entries and fixture data. These tests do not replace native HA verification. A5 remains open for Renderer/Theme compatibility, diverse projects, native load and closed-transport recovery.
 
 **A2 and A3 are complete (2026-10-13).** The user accepts the current ARM64/mobile

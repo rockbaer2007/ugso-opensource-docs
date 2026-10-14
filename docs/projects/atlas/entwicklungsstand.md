@@ -12,6 +12,8 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
+Die nachgeholten Docker-Prüfungen vom 14.10.2026 bestehen für Standalone und HA-Paket auf Linux amd64: Build, echte Administration-/Editor-Laufzeit, Health-Checks, Container-Neustart und Plugin-Update/-Wiederherstellung mit getrennten Testdaten. Neun Backend-/Origin-Regressionsprüfungen bestehen zusätzlich im Linux-Image. Das ersetzt keine echte Supervisor-/Ingress-, ARM64- oder Browserprüfung; bestehende HA-Installationen wurden nicht verändert.
+
 **A5-Fortsetzung vom 14.10.2026:** 0.1.295 berücksichtigt den im Browser gespeicherten Administrationsstatus auch bei direkten Plugin-Startlinks. Deaktivierte oder noch nicht aktivierte Plugins werden über diesen Weg nicht gestartet. Das ist eine Bedienpräferenz, keine Zugriffssperre für Plugin-Dateien. Isolierte Prüfungen des echten App-Servers bestätigen Installation, abgewiesene Updates, Austausch, Neustart, Deinstallation und Paket-Wiederherstellung; andere Plugin-Einträge und Testdaten bleiben erhalten. Die Testumgebung ersetzt keine echte HA-Installation. A5 bleibt für Renderer/Themes, vielfältige Projekte, native Last und geschlossene Verbindungen offen.
 
 **A2 und A3 sind abgeschlossen (13.10.2026).** Der Benutzer hat die aktuellen

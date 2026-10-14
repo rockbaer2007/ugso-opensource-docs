@@ -16,6 +16,8 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
+Les vérifications Docker effectuées le 14/10/2026 réussissent pour les images autonomes et du paquet HA sous Linux amd64 : compilation, véritable Administration/Card Editor, contrôles de santé, redémarrage du conteneur et mise à jour/restauration de plugins avec des données isolées. Neuf tests de régression backend/origin réussissent aussi dans l’image Linux. Cela ne remplace pas les vérifications natives Supervisor/Ingress, ARM64 ou navigateur ; les installations HA existantes n’ont pas été modifiées.
+
 **Suite d’A5 du 14/10/2026 :** la version 0.1.295 respecte aussi l’état Administration enregistré dans le navigateur lors de l’ouverture des liens directs de lancement. Les plugins désactivés ou pas encore actifs ne sont pas lancés par cette voie. Il s’agit d’une préférence d’interface, pas d’un contrôle d’accès aux fichiers. Des tests isolés du véritable serveur vérifient installation, mises à jour refusées, remplacement, redémarrage, désinstallation et restauration du paquet ; les autres entrées et les données de test sont conservées. Ces tests ne remplacent pas une vérification native HA. A5 reste ouvert pour Renderer/Theme, les projets variés, la charge native et la reconnexion après fermeture du transport.
 
 **A2 et A3 sont terminés (13/10/2026).** L'utilisateur accepte le périmètre actuel
