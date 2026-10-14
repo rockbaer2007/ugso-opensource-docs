@@ -10,6 +10,8 @@ Der MDI-Katalog ist im Plugin enthalten und wird in der Quellenanzeige als integ
 
 ## Iconsets laden
 
+Seit 0.1.9 werden Größenänderungen des Rasters zusammengefasst, um eine beobachtete ResizeObserver-Rückkopplung in WebKit zu vermeiden. Die teilweise fehlende Darstellung in einer Safari-16.6-Ventura-VM ist noch nicht als behoben bestätigt. Gespeicherte Iconsets bleiben erhalten.
+
 Das Plugin-Paket enthält den MDI-Katalog. Icon-Studio-Sammlungen und unterstützte statische Home-Assistant-Iconsets können als JavaScript-Datei vom PC importiert oder über File Studio aus `/config/www/` geladen werden. Der Scanner durchsucht auch Unterordner, darunter `/config/www/community/` (in Home Assistant als `/local/community/` erreichbar). Er berücksichtigt unterstützte JavaScript-Iconsets, wenn „icon“ im Datei- oder Ordnernamen vorkommt, und fasst Dateien mit gleichem Präfix zusammen. Beispielsweise werden Hue, Selfh.st, BHA, Yandex, Custom Icons, KNX, Thermal Comfort und Custom Brand Icons unterstützt. Die JavaScript-Dateien werden als Daten gelesen, nicht ausgeführt. Importierte Sammlungen werden lokal im Browser gespeichert.
 
 Einige ältere Home-Assistant-Iconsets stellen über `window.customIcons` eine Icon-Namensliste bereit und können damit angezeigt werden. Die neuere `window.customIconsets`-Schnittstelle bietet keinen allgemeinen Mechanismus, um alle Icon-Namen eines beliebigen Sets aufzulisten. Solche Sets lassen sich nur anzeigen, wenn sie zusätzlich eine lesbare Namensliste bereitstellen.

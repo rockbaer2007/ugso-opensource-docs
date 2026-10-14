@@ -10,6 +10,8 @@ Le catalogue MDI est inclus dans le plugin et le champ source l’identifie comm
 
 ## Charger des jeux d’icônes
 
+Depuis la version 0.1.9, les changements de taille de la grille sont regroupés pour éviter une rétroaction ResizeObserver observée dans WebKit. L’affichage incomplet dans une VM Ventura avec Safari 16.6 n’est pas encore confirmé comme corrigé. Les jeux d’icônes enregistrés sont conservés.
+
 Le paquet du plugin inclut le catalogue MDI. Les collections Icon Studio et les jeux d’icônes statiques Home Assistant compatibles peuvent être importés depuis l’ordinateur sous forme de fichiers JavaScript ou chargés depuis `/config/www/` avec File Studio. Le scanner parcourt également les sous-dossiers, notamment `/config/www/community/` (accessible dans Home Assistant sous `/local/community/`). Il recherche les jeux d’icônes JavaScript compatibles lorsque le nom du fichier ou d’un dossier contient « icon », puis regroupe ceux qui utilisent le même préfixe. Il prend notamment en charge Hue, Selfh.st, BHA, Yandex, Custom Icons, KNX, Thermal Comfort et Custom Brand Icons. Les fichiers JavaScript sont analysés comme des données et ne sont jamais exécutés. Les collections importées sont enregistrées localement dans le navigateur.
 
 Certains anciens jeux d’icônes Home Assistant exposent leurs noms via `window.customIcons` et peuvent être affichés ainsi. La nouvelle interface `window.customIconsets` ne fournit pas de mécanisme général pour lister tous les noms d’un jeu quelconque. Ces jeux ne peuvent être affichés que s’ils fournissent également une liste de noms lisible.

@@ -10,6 +10,8 @@ The MDI catalog is bundled with the plugin and is identified as an integrated so
 
 ## Loading icon sets
 
+Since 0.1.9, grid size changes are coalesced to avoid an observed ResizeObserver feedback in WebKit. Partial rendering in a Safari 16.6 Ventura VM has not yet been confirmed fixed. Saved icon sets are preserved.
+
 The plugin package includes the MDI catalog. Icon Studio collections and supported static Home Assistant icon sets can be imported as JavaScript files from the computer or loaded through File Studio from `/config/www/`. The scanner also searches subfolders, including `/config/www/community/` (available in Home Assistant as `/local/community/`). It considers supported JavaScript icon sets when “icon” appears in a filename or folder name, and combines files that use the same prefix. Examples include Hue, Selfh.st, BHA, Yandex, Custom Icons, KNX, Thermal Comfort and Custom Brand Icons. JavaScript files are parsed as data and never executed. Imported collections are stored locally in the browser.
 
 Some legacy Home Assistant icon sets expose icon names through `window.customIcons` and can be displayed this way. The newer `window.customIconsets` interface has no general mechanism for listing every icon name in an arbitrary set. Such sets can only be displayed when they also provide a readable name list.
