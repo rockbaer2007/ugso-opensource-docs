@@ -87,6 +87,36 @@ Aucun package n’est installé ou supprimé automatiquement. Jetons HA, clés d
 fournisseurs, permissions de fichiers, projets Editor et paramètres propres
 aux plugins externes restent hors de cette reprise.
 
+## Projets Editor partagés depuis 0.1.301
+
+Mettez l’application/le Runtime ATLAS à jour vers **0.1.301**. Ouvrez l’éditeur
+habituel de l’application avec votre projet. Dans **Projets Editor partagés**,
+choisissez **Nouveau projet serveur → Vérifier et enregistrer**, vérifiez nom
+et nombre de champs, puis **Sauvegarder et reprendre**. Choisissez à nouveau
+**Nouveau projet serveur** pour un autre projet local. Les noms identiques sont
+acceptés et ne remplacent jamais automatiquement un autre projet.
+
+Dans le Runtime : **Charger les projets**, sélectionner, **Vérifier l’ouverture**,
+vérifier l’aperçu et **Sauvegarder et reprendre**. Champs Expert et configurations
+des cartes, noms du projet/script, taille de surface et de grille sont conservés.
+Enregistrez explicitement les modifications avec **Vérifier et enregistrer**.
+Les révisions détectent les modifications concurrentes du même projet. Un autre
+navigateur ne remplace jamais automatiquement votre espace de travail.
+
+Avant ouverture/enregistrement, l’espace de travail est sauvegardé sous
+`ATLAS_PLUGIN_DATA_ROOT/.projects/workspaces/` et téléchargé. Les anciens états
+serveur sont dans `.projects/backups/`, les projets dans `.projects/projects.json`.
+Sauvegardez le répertoire persistant des plugins. **Vérifier une sauvegarde**
+prévisualise un téléchargement de sauvegarde. **Vérifier le brouillon local**
+récupère un travail partagé non enregistré dans ce navigateur ; après rechargement,
+il n’est pas ouvert automatiquement.
+
+Le projet local d’origine reste dans son stockage navigateur. Le travail partagé
+utilise un brouillon distinct. Paramètres, identifiants HA, gestion des plugins,
+favoris de palette et projets des plugins externes ne sont pas transférés. Un
+fichier serveur endommagé n’est jamais remplacé. Limites : 100 projets, 4 MiB
+par projet et 64 MiB pour le fichier de stockage.
+
 ## Installation manuelle et mises à jour
 
 Copiez uniquement `custom_components/atlas_frontend` depuis le dépôt vers

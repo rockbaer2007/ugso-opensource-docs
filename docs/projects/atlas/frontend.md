@@ -89,6 +89,36 @@ mit der Laufzeit. Es werden keine Pakete automatisch installiert oder entfernt.
 HA-Tokens, Provider-Schlüssel, Dateiberechtigungen, Editor-Projekte und eigene
 Einstellungen externer Plugins bleiben außerhalb dieser Übernahme.
 
+## Gemeinsame Editor-Projekte ab 0.1.301
+
+Aktualisiere die ATLAS-App/Laufzeit auf **0.1.301**. Öffne zuerst den bisherigen
+App-Editor mit deinem vorhandenen Projekt. Unter **Gemeinsame Editor-Projekte**
+wähle **Neues Serverprojekt → Prüfen und speichern**. Prüfe Name und Feldanzahl,
+dann **Gesichert übernehmen**. Zum Übernehmen eines weiteren lokalen Projekts
+wähle erneut **Neues Serverprojekt**; gleiche Namen sind erlaubt und ersetzen
+keine anderen Projekte automatisch.
+
+In der Runtime: **Projektliste laden**, Projekt auswählen, **Öffnen prüfen**,
+Vorschau prüfen und **Gesichert übernehmen**. Gespeichert werden Expert-Felder
+mit ihren Card-Konfigurationen, Projektname, Scriptname, Fläche und Rastergröße.
+Änderungen werden ausdrücklich über **Prüfen und speichern** gespeichert.
+Gleichzeitige Änderungen desselben Projekts werden per Versionsprüfung erkannt.
+Die Arbeitsfläche wird nicht automatisch aus einem anderen Browser ersetzt.
+
+Vor dem Öffnen oder Speichern wird die aktuelle Arbeitsfläche serverseitig unter
+`ATLAS_PLUGIN_DATA_ROOT/.projects/workspaces/` und als Download gesichert.
+Vorherige Serverstände liegen unter `.projects/backups/`, benannte Projekte in
+`.projects/projects.json`. Sichere das dauerhafte Plugin-Datenverzeichnis mit.
+**Sicherung prüfen** öffnet einen Arbeitsflächen-Backup-Download mit Vorschau.
+**Lokalen Entwurf prüfen** stellt einen ungespeicherten gemeinsamen Entwurf aus
+diesem Browser wieder bereit; nach einem Neuladen wird er nicht automatisch geöffnet.
+
+Der ursprüngliche lokale Projektstand bleibt im alten Browserspeicher erhalten.
+Gemeinsame Arbeitsflächen erhalten einen separaten lokalen Entwurf. Einstellungen,
+HA-Zugangsdaten, Plugin-Verwaltung, Palettenfavoriten und externe Plugin-Projekte
+werden nicht mitübertragen. Eine beschädigte Serverdatei wird nicht ersetzt.
+Grenzen: 100 Projekte, 4 MiB je Projekt und 64 MiB für die Projektdatei.
+
 ## Manuelle Installation und Updates
 
 Kopiere ausschließlich `custom_components/atlas_frontend` aus dem Repository

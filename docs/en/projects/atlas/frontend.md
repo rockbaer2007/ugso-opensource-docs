@@ -81,6 +81,32 @@ directory. Include it in runtime backups. No packages are automatically installe
 or removed. HA tokens, provider keys, filesystem permissions, editor projects
 and settings owned by external plugins are outside this migration.
 
+## Shared editor projects since 0.1.301
+
+Update the ATLAS App/runtime to **0.1.301**. Open the original App editor containing
+your project. Under **Shared editor projects**, choose **New server project →
+Preview and save**, review name and field count, then **Back up and apply**.
+Choose **New server project** again for another local project. Identical names
+are allowed and never automatically replace other projects.
+
+In Runtime: **Load project list**, select the project, **Preview opening**, review
+and **Back up and apply**. Snapshots contain Expert fields and their Card
+configurations, project/script names, surface size and grid size. Save edits
+explicitly with **Preview and save**. Revision checks detect concurrent edits
+to the same project. Another browser never automatically replaces your workspace.
+
+Before opening/saving, the current workspace is backed up to
+`ATLAS_PLUGIN_DATA_ROOT/.projects/workspaces/` and downloaded. Previous server
+states are in `.projects/backups/`; named projects use `.projects/projects.json`.
+Include the persistent plugin data directory in backups. **Inspect backup**
+previews a downloaded workspace backup. **Inspect local draft** recovers unsaved
+shared work from this browser; it is not automatically opened after a reload.
+
+The original local project remains in its existing browser storage. Shared work
+uses a separate local draft. Settings, HA credentials, plugin management, palette
+favorites and external plugin projects are not transferred. Damaged server files
+are never replaced. Limits: 100 projects, 4 MiB per project and 64 MiB store size.
+
 ## Manual installation and updates
 
 Copy only `custom_components/atlas_frontend` from the repository into
