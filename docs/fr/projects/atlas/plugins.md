@@ -1,15 +1,12 @@
 ---
-title: Plugin Documentation
-description: Page française préparée pour Plugin Documentation dans la documentation UGSo Open Source.
+title: Documentation des plugins
+description: Accès à la documentation des plugins ATLAS et aux guides de développement.
 ---
-# Plugin Documentation
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Documentation des plugins
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/atlas/plugins.md`](/en/projects/atlas/plugins).
+La documentation des plugins dispose de sa propre rubrique :
 
-## Statut
+[Ouvrir la documentation des plugins ATLAS](/fr/projects/atlas-plugins/).
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+Cette page conserve les anciens liens vers la documentation des plugins.

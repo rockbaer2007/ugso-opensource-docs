@@ -1,42 +1,229 @@
 ---
-title: Accueil Assistant Card Editor
-description: Page française préparée pour Accueil Assistant Card Editor dans la documentation UGSo Open Source.
+title: Home Assistant Card Editor
+description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneurs, import, export et styles Tabbed Card V2."
 ---
-# Accueil Assistant Card Editor
+
+# Home Assistant Card Editor
+
+Le **Home Assistant Card Editor** est le premier plugin de référence intégré
+à ATLAS. Il permet de concevoir visuellement des cartes, d’importer le YAML
+existant et de préparer des packages ou bundles destinés à HACS.
+
+L’éditeur local utilise `http://127.0.0.1:4174/` ; les connexions sont gérées
+par l’Administration sur `http://127.0.0.1:4175/`.
+
+Depuis l’application HA **0.1.286**, le rechargement et l’import JSON/HACS
+préservent les identifiants de modèles et les dimensions de référence du
+redimensionnement. Le réimport d’un bundle compare les deux noms de manifeste,
+même si le nom du projet diffère du titre de la première carte. Les contenus
+et paramètres existants sont conservés.
+
+Le parcours Administration → Hub → connexion HA → Expert → export/import a été
+vérifié en DE/EN/FR avec un endpoint simulé, un profil isolé et un plugin de test,
+y compris rechargement et redémarrage du conteneur. A5 ajoute des vérifications
+natives sur Pi 5 et Proxmox ; leur périmètre et leurs limites sont consignés
+dans l’[état du développement](/fr/projects/atlas/development-status).
 
 ## Signaler un problème (depuis 0.1.287)
 
-Le bouton crée d'abord un aperçu local. La copie utilise le texte vérifié ; si
-le presse-papiers échoue, l'aperçu reste disponible pour une copie manuelle.
-Le bouton GitHub ouvre seulement le formulaire avec des instructions. Le rapport
-n'est ni envoyé automatiquement ni placé dans l'URL GitHub.
+Le signalement crée d’abord un aperçu local. Le bouton de copie utilise
+le texte vérifié ; si le presse-papiers échoue, vous pouvez le copier
+manuellement. Le bouton GitHub ouvre seulement le formulaire avec des
+instructions. Le rapport n’est ni envoyé automatiquement ni intégré dans l’URL.
 
-Le filtre masque les identifiants dans les champs structurés, le JSON/YAML entre
-guillemets, les URL et leurs fragments, ainsi que le jeton HA de session connu
-dans le reste du texte. Les cookies et le stockage du navigateur ne sont pas lus.
-Les indicateurs de clés configurées sont uniquement booléens. Vérifiez quand même
-les textes, entités et données personnelles avant de partager. L'ouverture du
-rapport ne modifie ni les projets, ni les réglages, ni les plugins.
+Le filtre retire les identifiants sensibles des champs structurés, du JSON/YAML,
+des URL et des fragments de jeton, ainsi que le jeton HA connu dans le reste
+du texte. Il ne lit ni cookies ni stockage du navigateur ; les indicateurs de
+clé configurée sont des booléens. Relisez néanmoins les textes des cartes,
+entités et informations personnelles avant partage. L’ouverture du rapport
+ne modifie pas les projets, paramètres ou plugins.
 
-## Mise à jour 0.1.286
+## Workflow Expert
 
-Le rechargement et l'import JSON/HACS conservent les identifiants des modèles
-et les dimensions de référence du redimensionnement. Un paquet HACS peut être
-réimporté lorsque le nom du projet diffère du titre de la première carte : les
-noms des deux manifestes sont comparés. Le contenu des cartes et les réglages
-existants sont conservés.
+L’éditeur ouvre directement le workflow Expert. Le mode Simple et le sélecteur
+Simple/Expert ont été supprimés ; les imports anciens pris en charge restent
+compatibles. Import HA, collage YAML, diagnostic des ressources et sélection
+des entités restent disponibles.
 
-Le parcours Administration → Plugin Hub → connexion HA → éditeur Expert →
-export/import a été vérifié en DE/EN/FR avec un serveur HA simulé, un profil de
-navigateur isolé et un plugin de test, y compris le rechargement et le redémarrage
-du conteneur. Cela ne remplace pas une vérification sur une installation HA réelle.
+Déposez les cartes depuis la palette gauche sur une grille semblable à celle
+de Home Assistant. Vous pouvez les déplacer, redimensionner, imbriquer et
+exporter en YAML. Les cellules restent carrées ; X et Y règlent les colonnes
+et lignes, tandis que Zoom modifie leur taille sans déformer la grille.
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+## Connexion Home Assistant
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/atlas/card-editor.md`](/en/projects/atlas/card-editor).
+L’éditeur reçoit l’URL et le jeton uniquement comme transmission de session
+depuis l’Administration ; il n’enregistre pas durablement le jeton lui-même.
 
-## Statut
+Il prend en charge :
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+- l’API WebSocket Home Assistant ;
+- les entités via `get_states` ;
+- le cache local des entités et domaines ;
+- l’état de synchronisation sous l’état de connexion ;
+- la recherche par domaine, nom et identifiant ;
+- la vérification Lovelace via le WebSocket du navigateur et le proxy Admin.
+
+Le diagnostic des ressources permet d’identifier un blocage dans le WebSocket,
+le proxy ou le mécanisme de repli. Pour les URL mobiles, le port 80 et l’erreur
+1006, voir le [guide de connexion](/fr/projects/atlas/homeassistant).
+
+## Liste des cartes
+
+La palette Expert contient les cartes Core, les modèles locaux et les cartes
+Community détectées :
+
+- Entity, Entities et Overview / Glance ;
+- Button, Grid et Sensor ;
+- Vertical stack et Horizontal stack ;
+- Thermostat, Link et Webpage ;
+- Mushroom Template, Bubble Card et Tabbed Card V2.
+
+Les ressources sans correspondance intégrée restent des informations de scan.
+Une correspondance locale avec un type `custom:*` les rend déplaçables et
+conserve leur chemin de ressource dans les exports. Les ressources auxiliaires
+peuvent être masquées ; la liste complète permet de les rétablir.
+La déduction automatique d’un type depuis le nom du fichier JavaScript est
+facultative et affiche un avertissement rouge.
+
+Les favoris enregistrés masquent les autres cartes. Une carte favorite ne peut
+pas être masquée ; afficher toutes les cartes conserve les favoris.
+Les tailles et favoris peuvent être réinitialisés séparément.
+
+## Cartes conteneurs
+
+Les conteneurs pris en charge sont `vertical-stack`, `horizontal-stack`
+et `custom:tabbed-card-v2`. Ils acceptent des cartes par glisser-déposer.
+Tabbed Card V2 gère ses onglets et leurs cartes ; les piles conservent leurs
+enfants séparément et les présentent dans la boîte d’information.
+
+## Import
+
+Les sources prises en charge sont les fichiers YAML, le YAML collé,
+le JSON, les packages ATLAS et les bundles HACS intégrant
+`atlas/*.atlas-card.json`.
+
+ATLAS détecte les styles `card_mod` et `uix`. Les styles d’entité sont
+associés à leur entité ; les styles globaux restent visibles à part.
+Le YAML d’origine est conservé autant que possible et évolue lorsque la carte
+est modifiée. La conservation de toutes les options de cartes tierces n’est
+pas garantie.
+
+Les cartes `custom:tabbed-card-v2` écrites manuellement avec
+`tabs[].card`, des piles imbriquées et des cartes personnalisées brutes
+prises en charge ouvrent une structure de conteneurs Expert.
+
+## Export
+
+Les sorties comprennent le YAML Home Assistant, le YAML Expert, le script
+de carte, le package ATLAS, le bundle HACS et la liste des ressources.
+
+Lors de l’export HA, choisissez le format de styles `card_mod` ou `uix`.
+Les noms de téléchargements peuvent recevoir un compteur afin de distinguer
+les fichiers ; le comportement final dépend aussi du navigateur.
+
+La langue de la carte exportée est indépendante de la langue ATLAS.
+`en` est obligatoire comme repli. Les langues supplémentaires non traduites
+sont identifiées comme replis à traduire et à vérifier. Le chemin réel
+ChatGPT/OpenAI passe par l’Administration et nécessite Internet ; les fichiers
+traduits automatiquement restent à relire. Voir le
+[modèle d’export et les secrets](/fr/projects/atlas/homeassistant#feuille-de-route-et-langues-exportees).
+
+## Tabbed Card V2
+
+Cette carte ATLAS est exportée sous le type :
+
+```yaml
+type: custom:tabbed-card-v2
+```
+
+Ressource attendue :
+
+```text
+/hacsfiles/tabbed-card-v2/tabbed-card-v2.js
+```
+
+**ATLAS Tabbed Card V2 doit être installé dans Home Assistant** avant
+utilisation. Il appartient à la famille de cartes ATLAS, fournie via le dépôt
+`https://github.com/rockbaer2007/atlas`. Il s’inspire de
+`kinghat/tabbed-card` et reste une variante ATLAS séparée.
+
+Son éditeur Home Assistant accepte YAML ou JSON. Les blocs multilignes
+`>-` et `|-` restent des valeurs multilignes afin de conserver les
+expressions Jinja, les modèles Mushroom et les styles `card_mod`.
+Les opacités des arrière-plans actifs et inactifs sont calculées en valeurs
+de couleur stables avant le changement d’onglet.
+
+### Styles Tabbed Card V2
+
+Les variables Material sont complétées par celles des arrière-plans, des
+arrondis et des espacements :
+
+| Nom | Valeur par défaut | Description |
+| --- | --- | --- |
+| `--mdc-theme-primary` | `--primary-color` | Texte actif, indicateur et couleur d’accent. |
+| `--mdc-tab-text-label-color-default` | `--secondary-text-color` | Texte inactif ; une valeur `rgba(...)` permet la transparence. |
+| `--mdc-typography-button-font-size` | `14px` | Taille du texte des onglets. |
+| `--tabbed-card-v2-card-background` | Arrière-plan de carte HA | Fond extérieur ; `transparent` permet une superposition. |
+| `--tabbed-card-v2-card-border` | Bordure de carte HA | Bordure extérieure. |
+| `--tabbed-card-v2-card-border-radius` | Rayon de carte HA | Arrondi extérieur. |
+| `--tabbed-card-v2-content-padding-side` | `0` | Espacement intérieur gauche et droit. |
+| `--tabbed-card-v2-content-padding-bottom` | `0` | Espacement intérieur inférieur. |
+| `--tabbed-card-v2-tabbar-background` | `transparent` | Fond de toute la barre d’onglets. |
+| `--tabbed-card-v2-active-background` | `transparent` | Fond de l’onglet actif. |
+| `--tabbed-card-v2-active-background-opacity` | `100` | Opacité active de `0` à `100`. |
+| `--tabbed-card-v2-inactive-background` | `transparent` | Fond des onglets inactifs. |
+| `--tabbed-card-v2-inactive-background-opacity` | `100` | Opacité inactive de `0` à `100`. |
+| `--tabbed-card-v2-hover-background` | `--secondary-background-color` | Fond au survol ou à la focalisation. |
+| `--tabbed-card-v2-tab-border-radius-top` | `0` | Arrondi supérieur gauche et droit. |
+| `--tabbed-card-v2-tab-border-radius-bottom` | `0` | Arrondi inférieur gauche et droit. |
+| `--tabbed-card-v2-tabs-padding-left` | `0` | Espacement avant le premier onglet. |
+| `--tabbed-card-v2-tabs-padding-top` | `0` | Espacement au-dessus des onglets. |
+| `--tabbed-card-v2-tabs-gap` | `0` | Espacement entre onglets. |
+| `--tabbed-card-v2-indicator-inset` | `0` | Retrait horizontal de l’indicateur actif. |
+| `--tabbed-card-v2-indicator-border-radius` | `0` | Arrondi de l’indicateur actif. |
+
+![Styles Tabbed Card V2 dans l’éditeur Home Assistant](/images/atlas/tabbed-card-v2-0.1.7.png)
+
+![Résultat avec onglets arrondis](/images/atlas/tabbed-card-v2-result-0.1.7.png)
+
+Exemple :
+
+```yaml
+type: custom:tabbed-card-v2
+styles:
+  --mdc-theme-primary: "#ff9800"
+  --mdc-tab-text-label-color-default: "rgba(255,255,255,0.75)"
+  --tabbed-card-v2-card-background: "transparent"
+  --tabbed-card-v2-card-border: "0.2px solid var(--primary-color)"
+  --tabbed-card-v2-card-border-radius: "12px"
+  --tabbed-card-v2-content-padding-side: "16px"
+  --tabbed-card-v2-content-padding-bottom: "16px"
+  --tabbed-card-v2-tabbar-background: "rgba(0,0,0,0.18)"
+  --tabbed-card-v2-active-background: "#ff9800"
+  --tabbed-card-v2-active-background-opacity: 35
+  --tabbed-card-v2-inactive-background: "#ffffff"
+  --tabbed-card-v2-inactive-background-opacity: 8
+  --tabbed-card-v2-hover-background: "rgba(255,255,255,0.12)"
+  --tabbed-card-v2-tab-border-radius-top: "12px"
+  --tabbed-card-v2-tab-border-radius-bottom: "6px"
+  --tabbed-card-v2-tabs-padding-left: "8px"
+  --tabbed-card-v2-tabs-padding-top: "8px"
+  --tabbed-card-v2-tabs-gap: "6px"
+  --tabbed-card-v2-indicator-inset: "10px"
+  --tabbed-card-v2-indicator-border-radius: "999px"
+tabs:
+  - attributes:
+      label: Light
+    card:
+      type: button
+      entity: light.bed_light
+```
+
+## État actuel
+
+L’éditeur reste en développement actif. Le workflow Expert, l’import/export,
+les entités, les vérifications de ressources, les conteneurs et les
+correspondances locales sont utilisables. Des correspondances personnalisées
+vérifiées seront ajoutées progressivement. L’[état du développement](/fr/projects/atlas/development-status)
+distingue les essais isolés des vérifications natives et des limites ouvertes.

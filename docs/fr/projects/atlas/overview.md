@@ -1,15 +1,50 @@
 ---
 title: Architecture
-description: Page française préparée pour Architecture dans la documentation UGSo Open Source.
+description: Packages, événements, services et principes de l’architecture modulaire ATLAS.
 ---
+
 # Architecture
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+ATLAS est un monorepo TypeScript modulaire. Les contrats communs séparent les
+services, la présentation et l’intégration avec l’environnement hôte.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/atlas/overview.md`](/en/projects/atlas/overview).
+## Packages
 
-## Statut
+| Package | Rôle |
+| --- | --- |
+| `@atlas/core` | Contrats et types centraux. |
+| `@atlas/foundation` | Infrastructure et composants communs. |
+| `@atlas/runtime` | Services d’exécution et conteneur de services. |
+| `@atlas/renderer` | Présentation et abstractions du moteur de rendu. |
+| `@atlas/homeassistant` | Intégration et workflows Home Assistant. |
+| `@atlas/theme` | Thèmes et conception visuelle partagés. |
+| `@atlas/devtools` | Diagnostics et outils de développement. |
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## Principes d’architecture
+
+- Séparer les contrats de leurs implémentations.
+- Utiliser de petits modules remplaçables.
+- Concevoir des composants testables.
+- Définir explicitement les interfaces et les dépendances.
+- Fournir des implémentations de référence.
+- Préparer l’extension par des plugins à long terme.
+
+## Événements
+
+Les contrats comprennent `Event`, `EventBus`, `Handler`, `Subscription`,
+`Filter`, `Publisher` et `Subscriber`. `DefaultEventBus` fournit
+l’implémentation de référence.
+
+## Services et injection de dépendances
+
+Les descripteurs et l’enregistrement des services, l’injection de dépendances
+et les conteneurs permettent de résoudre les services de manière contrôlée.
+
+## Utilisations prévues
+
+ATLAS vise les outils Home Assistant, les composants de tableaux de bord,
+les applications de diagnostic et les applications web ou de bureau basées
+sur des plugins. La carte Lovelace UV reste un projet ultérieur.
+
+Les contrats sont encore en développement : cette architecture ne constitue
+pas une promesse d’API de plugin stable. Voir l’[état du développement](/fr/projects/atlas/development-status).

@@ -46,9 +46,9 @@ L'adaptateur Runtime constitue le point d'entrée actuel. `createRuntimeModuleFr
 
 Le Hub suit une règle de démarrage simple : sans plugin installé, il renvoie vers l'Administration ; avec un seul plugin actif, il ouvre directement celui-ci ; avec deux plugins actifs ou plus, il affiche la page de sélection. Les plugins planifiés ou désactivés peuvent être affichés, mais ne démarrent pas automatiquement.
 
-Le Hub peut aussi préparer des entrées de barre latérale Home Assistant. La fenêtre affiche dynamiquement le nom, l'URL, la version, l'état et l'icône proposée, puis copie l'URL seule ou un bloc `panel_iframe` prêt à utiliser dans `configuration.yaml`. Les listes de capacités et les URL restent repliées par défaut afin de garder le Hub compact.
+Le Hub peut aussi préparer des entrées de barre latérale Home Assistant. La fenêtre affiche dynamiquement le nom, l'URL, la version, l'état et l'icône proposée, puis copie l'URL seule ou un bloc `panel_iframe` prêt à utiliser dans `configuration.yaml`. L’URL seule peut servir à un tableau de bord Home Assistant de type `Webpage`. Les listes de capacités et les URL restent repliées par défaut afin de garder le Hub compact.
 
-En mode App/Add-on, Card Editor, Administration et les ressources locales des plugins sont servies par les routes de l'application ATLAS. Les chemins de base Home Assistant Ingress sont ainsi conservés dans le Hub et les liens de barre latérale.
+En mode App/Add-on, Card Editor, Administration et les ressources locales des plugins sont servies par les routes de l'application ATLAS. Les chemins de base Home Assistant Ingress sont ainsi conservés dans le Hub et les liens de barre latérale ; les autres clients réseau n’ont pas besoin d’accéder directement aux ports de développement.
 
 ### Préférence de langue partagée
 
@@ -57,6 +57,10 @@ et le français. La langue choisie dans l'une des interfaces est mémorisée et
 utilisée dans l'autre, même si elles fonctionnent sur des ports différents. Un
 paramètre `language` explicite dans l'URL d'un plugin reste prioritaire pour la
 visite en cours.
+
+Pour File Studio, le Hub prépare `/plugin-assets/file-studio/index.html` sur
+le port de l’application ATLAS ou à travers l’adresse Ingress/Webpage,
+même si les anciennes données du plugin ne contiennent pas encore d’URL.
 
 Les nouveaux plugins locaux reçoivent une URL de lancement automatique si leur dossier contient `index.html` et que le manifeste ne définit pas `entry`. ATLAS publie alors `/plugin-assets/<dossier-du-plugin>/index.html`.
 

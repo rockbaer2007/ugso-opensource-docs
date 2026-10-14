@@ -60,4 +60,5 @@ The editor currently uses these ATLAS extension points:
 
 ## Hub Description
 
-Hub and Administration can display localized descriptions from the plugin repository. When German is selected, `descriptions.de` is preferred. English remains the fallback.
+Hub and Administration can display localized descriptions from the plugin repository. The selected language prefers `descriptions.de`, `descriptions.en` or
+`descriptions.fr` when available. English remains the fallback.

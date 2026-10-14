@@ -63,4 +63,5 @@ Der Editor nutzt aktuell diese ATLAS-Extension-Points:
 
 ## Beschreibung im Hub
 
-Hub und Administration können lokalisierte Beschreibungen aus dem Plugin-Repository anzeigen. Wenn Deutsch gewählt ist, wird bevorzugt `descriptions.de` verwendet. Englisch bleibt der Fallback.
+Hub und Administration können lokalisierte Beschreibungen aus dem Plugin-Repository anzeigen. Die gewählte Sprache bevorzugt `descriptions.de`, `descriptions.en` oder
+`descriptions.fr`, sofern vorhanden. Englisch bleibt der Fallback.

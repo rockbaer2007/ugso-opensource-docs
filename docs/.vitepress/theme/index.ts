@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import './custom.css'
 import '../blog.css'
+import { atlasLocaleTargets } from '../atlas-locales'
 
 declare global {
   interface Window {
@@ -141,7 +142,7 @@ function collectionLocaleTargets(path: string): Partial<Record<'DE' | 'EN' | 'FR
 }
 
 function applyLocaleLinks(path: string) {
-  const targets = collectionLocaleTargets(path)
+  const targets = atlasLocaleTargets(path) ?? collectionLocaleTargets(path)
 
   if (!targets) {
     return

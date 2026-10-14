@@ -58,3 +58,6 @@ ATLAS is intended to support:
 - diagnostics applications
 - plugin-based desktop or web applications
 - the planned **Lovelace UV Card**
+
+The contracts are still in development; this architecture does not promise a
+stable plugin API. See [Development Status](/en/projects/atlas/development-status).

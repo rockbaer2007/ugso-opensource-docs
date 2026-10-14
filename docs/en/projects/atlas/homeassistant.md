@@ -196,7 +196,7 @@ the first HACS bundle roundtrip.
     "target": "bubble",
     "layout": "single"
   },
-  "content": "type: \"custom:bubble-card\"\n..."
+  "content": "type: \"custom:bubble-card\"\ncard_type: button\nbutton_type: state\nentity: light.office\n"
 }
 ```
 
@@ -317,7 +317,7 @@ buttons are hidden as well because the editor surface directly defines the card
 structure that will be exported. The editor uses its own `Expert card name`
 field for copy, export and package filenames.
 
-For the UI, a sidebar template palette is planned. It can offer visual building
+The UI provides a sidebar template palette. It can offer visual building
 blocks such as Entity List, State Button, Switch Button, `vertical-stack` and
 `horizontal-stack`. In the demo this is already a left-hand palette without a
 mode switch: the user can click a building block or drag it into the editor
@@ -406,8 +406,8 @@ both directions while keeping the current size as the default. A reset button
 returns the editor surface to the default footprint.
 Placed Expert fields, the selected field and the resized editor surface are
 saved in local browser storage and restored after a reload.
-The demo UI is now bilingual: the language switcher in the header toggles
-between English and German. The selected language is saved locally and restored
+The editor UI supports German, English and French (DE/EN/FR). The language
+switcher in the header selects the interface language. The selected language is saved locally and restored
 the next time the editor opens. Static labels, entity picker feedback, stack
 summaries, dependency hints and key import/export status messages all use the
 same translation table.
@@ -543,20 +543,17 @@ When exporting Card Packages and HACS bundles, the Card Editor asks for Card
 languages separately from the Atlas UI language. This affects only the exported
 Card, not Atlas itself. `en` is always included as the required fallback, and
 additional European languages plus `ru` for Russian-speaking users can be
-selected with checkboxes. Until automatic translation is available, ATLAS
+selected with checkboxes. When automatic translation is not active, ATLAS
 generates English fallback files for additional languages and marks the
 corresponding `locales/*.json` files as needing translation and review before
 publishing.
 
-Atlas Administration owns the planned translation module choice. The first
-options are `none`, `chatgpt`, `gemini`, `deepl-free`, `deepl-pro` and
-`custom-ai`. The selection should use a clear radio-list layout with API-key
-fields for each provider. In the Card Editor, automatic translation can be
-requested during export with a checkbox and a visible progress indicator. Until
-real provider adapters and API keys are connected, exported files remain
-explicitly marked as fallbacks so untranslated files are not mistaken for
-completed machine translations. A later real automatic translation option must
-clearly state that it requires an internet connection.
+Atlas Administration owns the translation module choice: `none`, `chatgpt`,
+`gemini`, `deepl-free`, `deepl-pro` and `custom-ai`. The selection does not imply
+that every provider adapter is implemented. In the Card Editor, automatic translation can be
+requested during export with a checkbox and a visible progress indicator. Files not actually translated by a configured provider remain explicitly
+marked as fallbacks. The connected ChatGPT/OpenAI path requires an internet
+connection; machine-translated files still need review.
 For DeepL, `https://www.deepl.com/de/pro#api` is kept as the reference for
 Free/Pro API options.
 The prepared DeepL translate endpoint is `https://api.deepl.com/v2/translate`;
@@ -598,10 +595,9 @@ is not code reuse, but product direction: UV-index sensor handling,
 color-coded risk display, WHO-style protection recommendations,
 Mushroom-compatible presentation and optional notification automations.
 
-The Home Assistant Card Editor is treated as the first official ATLAS reference
-plugin. It should later show how a plugin combines entity selection, card
-targets, import/export, HACS-oriented packages and administration in a real
-workflow.
+The Home Assistant Card Editor is the first official integrated ATLAS reference
+plugin. It combines entity selection, card targets, import/export, HACS-oriented
+packages and Administration in a real workflow.
 
 In the Atlas package, this step is already prepared through
 `createHomeAssistantCardEditorPlugin()`. This lets the editor activate through

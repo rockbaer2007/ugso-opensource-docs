@@ -1,41 +1,124 @@
 ---
 title: ATLAS File Studio
-description: Page française préparée pour ATLAS File Studio dans la documentation UGSo Open Source.
+description: "Plugin externe de fichiers : édition, transferts, archives, sauvegardes et autorisations des chemins Home Assistant."
 ---
+
 # ATLAS File Studio
 
-ATLAS File Studio est un plugin indépendant pour parcourir et modifier les fichiers Home Assistant dans les chemins autorisés. Il comprend un éditeur, la validation YAML, l’aperçu d’images et d’archives, ainsi que des fonctions de transfert et de sauvegarde.
+ATLAS File Studio est le deuxième plugin indépendant de l’écosystème ATLAS.
+Il permet de parcourir et modifier les fichiers dans les chemins approuvés,
+sans accès libre à la racine par défaut.
 
-## Dépôt et installation
+## Dépôt
 
-- GitHub : [rockbaer2007/atlas-file-studio-plugin](https://github.com/rockbaer2007/atlas-file-studio-plugin)
-- Page d’installation : [Ajouter ATLAS File Studio](https://rockbaer2007.github.io/atlas-file-studio-plugin/install.html)
-- Fichier du dépôt : [repository.json](https://raw.githubusercontent.com/rockbaer2007/atlas-file-studio-plugin/main/repository.json)
+- GitHub : `https://github.com/rockbaer2007/atlas-file-studio-plugin`
+- Installation : `https://rockbaer2007.github.io/atlas-file-studio-plugin/install.html`
+- Catalogue : `https://raw.githubusercontent.com/rockbaer2007/atlas-file-studio-plugin/main/repository.json`
 
-## Langue française
+## État actuel
 
-Le sélecteur DE/EN/FR permet de choisir le français. Cette version traduit l’en-tête, les principaux contrôles de la barre d’outils et les messages relatifs à la limite d’envoi. Les dialogues et les autres messages des workflows de fichiers ne sont pas encore entièrement traduits.
+Le plugin est installable via le dépôt de démonstration dans l’Administration
+et le Hub. Version documentée du plugin : **0.1.51** ; application HA ATLAS :
+**0.1.297** au 14/10/2026. Ce sont deux versions distinctes.
 
-## Versions actuelles
+Le sélecteur DE/EN/FR traduit l’en-tête, les principaux contrôles et les avis
+de limite d’envoi. Les dialogues et les autres messages ne sont pas encore
+entièrement traduits ; une documentation française complète ne signifie pas
+que toute l’interface du plugin l’est.
 
-- Version du plugin : `0.1.51`
-- Version de l’application/extension Home Assistant : `0.1.280`
+Fonctions documentées :
 
-## Intégration avec Icon Studio
+- Arborescence de `/config` et surface flexible à deux colonnes avec limites
+  facultatives de largeur et hauteur.
+- Barre compacte sous l’arborescence ; création de fichier/dossier, actualisation
+  et fermeture de tous les dossiers près du chemin.
+- Éditeur CodeMirror 6 embarqué, avec défilement interne des grands fichiers
+  conservant la ligne de statut visible.
+- Liens directs vers les fichiers, même hors des branches initialement chargées,
+  notamment les sorties de l’Automation Exporter.
+- Coloration YAML, JSON, JavaScript, TypeScript et Markdown.
+- Validation YAML avant sauvegarde avec indications Home Assistant pour
+  `configuration.yaml`, `automations.yaml`, `scripts.yaml` et packages :
+  clés racines usuelles, structure d’automatisation/script et secrets saisis directement.
+- Enregistrement du fichier ouvert, sauvegarde automatique avant écriture,
+  historique, comparaison et restauration d’une sauvegarde sélectionnée.
+- Sauvegarde locale, envoi par glisser-déposer, envoi multiple et téléchargement.
+- Enregistrement des envois dans le dossier sélectionné et actualisation de
+  l’arborescence sans ouverture automatique du fichier.
+- Noms de téléchargements numérotés dans le navigateur, par exemple
+  `configuration.yaml`, `configuration-1.yaml`, `configuration-2.yaml`.
+- Dialogue de conflits proposant remplacement, renommage ou annulation.
+- Suppression, copie et déplacement avec sélection multiple.
+- Corbeille et restauration ; son icône est grise quand elle est vide et rouge
+  lorsqu’elle contient des entrées.
+- Favoris de fichiers/dossiers, icônes de type colorées et badges compacts.
+- Recherche avec filtres, recherche facultative dans le contenu, ligne trouvée
+  et aperçu du résultat.
+- Signalement facultatif avec aperçu et lien GitHub préparé ; sans jetons HA,
+  clés de fournisseurs ou contenu de fichiers.
+- Envoi binaire de fichiers de 64 Mio maximum vers un dossier autorisé.
+  Au-delà, l’envoi est arrêté avant transfert et le plugin recommande
+  l’[extension Samba](https://github.com/home-assistant/addons/tree/master/samba).
+- Aperçu ZIP, TAR, TAR.GZ et TGZ ; extraction d’un fichier individuel sans
+  décompresser toute l’archive.
+- Extraction TAR complète avec validation des chemins et limites par fichier
+  et taille totale.
+- Autorisations supplémentaires pour `www`, `custom_components`,
+  `addons` et `parent-of-config`.
+- Encadré d’accès compact avec typographie normale et couleur distincte
+  pour chaque chemin. `/addons` reste verrouillé sans autorisation explicite.
 
-Depuis l’aperçu d’image, les fichiers SVG, PNG, JPG/JPEG et WebP peuvent être transmis à ATLAS Icon Studio, installé séparément. Les images matricielles s’ouvrent en aperçu ; les fichiers SVG simples contenant des chemins sont importés dans son jeu d’icônes monochromes. Les deux plugins doivent être installés sur le même serveur ATLAS. Le transfert utilise une clé temporaire dans le navigateur et l’accès aux fichiers autorisé de File Studio ; le fichier n’est ni envoyé ni dupliqué.
+CodeMirror est livré avec le plugin : aucun CDN n’est nécessaire pour l’éditeur.
 
-## Archives
+Les aperçus SVG, PNG, JPG/JPEG et WebP peuvent s’ouvrir dans Icon Studio,
+installé séparément. Les images matricielles deviennent des aperçus ; les
+SVG simples composés de chemins sont importés dans son jeu monochrome.
+Les plugins doivent être sur le même serveur ATLAS. Le transfert utilise
+une clé temporaire locale au navigateur et l’accès approuvé de File Studio ;
+le fichier n’est ni téléversé ni dupliqué.
 
-File Studio permet de prévisualiser les archives ZIP, TAR, TAR.GZ et TGZ, puis d'en extraire un fichier sélectionné sans décompresser l'ensemble de l'archive. L'extraction complète TAR vérifie les chemins et limite la taille de chaque fichier à 64 Mio ainsi que la taille totale à 512 Mio. Les liens symboliques et les types d'entrée non pris en charge sont ignorés. RAR et RAR5 restent une option ultérieure, sous réserve de trouver un outil librement utilisable.
+Les limites de l’extraction TAR sont de 64 Mio par fichier et 512 Mio au total ;
+les liens symboliques et les types non pris en charge sont ignorés.
 
-Les fichiers de 64 Mio maximum peuvent être téléversés directement vers un dossier autorisé. Le transfert utilise les données binaires et contourne ainsi la limite de taille des requêtes JSON.
+## Modèle de sécurité
 
-Les fichiers téléversés sont enregistrés dans le dossier actuellement sélectionné.
-Après le téléversement, l'arborescence est actualisée sans ouvrir automatiquement le fichier.
+| Chemin | Par défaut | Autorisation |
+| --- | --- | --- |
+| `/config` | Actif. | Sans autorisation supplémentaire. |
+| `/config/www` | Visible comme capacité. | Administration ou option de l’application HA. |
+| `/config/custom_components` | Visible comme capacité. | Administration ou option de l’application HA. |
+| `/addons` | Désactivé. | Administration ou option de l’application HA. |
+| `parent-of-config` | Désactivé. | Accord explicite de l’administrateur. |
+| `/` | Désactivé. | Accès libre interdit par défaut. |
 
-Au-delà de cette limite, aucun téléversement n'est lancé. File Studio invite à utiliser l'[extension Samba de Home Assistant](https://github.com/home-assistant/addons/tree/master/samba) pour les fichiers volumineux.
+`/config` contient normalement la configuration HA, automatisations,
+tableaux de bord, thèmes, blueprints, scripts et fichiers web locaux sous `www`.
 
-## Indication des accès
+`/addons` peut contenir des extensions HA locales avec `config.yaml`,
+`Dockerfile`, scripts de démarrage, icônes et documentation. Les modifications
+peuvent affecter les extensions installables ; ce chemin nécessite une autorisation.
 
-L'espace File Studio affiche les autorisations de fichiers actives dans un encadré compact, avec une typographie normale et légèrement plus petite. Chaque chemin autorisé possède une couleur distincte, ce qui facilite la lecture de chemins tels que `/config/www`, `/addons` et `/parent-of-config`.
+Dans l’application HA, les autorisations viennent de sa configuration.
+Dans Docker ou une installation Linux, l’Administration contrôle les mêmes
+capacités. Les plugins reçoivent les chemins approuvés, sans secrets bruts
+de longue durée.
+
+## Mise à jour Home Assistant
+
+Chaque mise à jour visible du package ATLAS augmente la version de
+l’application HA. Home Assistant compare `old` (installée) et `target`
+(dépôt). Le dernier package documenté est **0.1.297**. Si une ancienne version
+cible apparaît, actualisez les informations du dépôt dans le magasin
+d’extensions, puis mettez ATLAS à jour ou redémarrez-le.
+
+Le plugin File Studio et l’application ATLAS ont des versions distinctes ;
+la mise à jour de la documentation ne modifie pas les fichiers HA.
+
+## Extensions ultérieures
+
+- Aide YAML plus avancée, avec vérification des schémas et services depuis HA.
+- Prise en charge RAR/RAR5 si un outil librement utilisable est disponible.
+- Enregistrement d’icônes SVG sous `/config/www/custom_local_icons/` avec
+  l’intégration HA correspondante.
+- Choix entre `/config` et le dossier de sortie Automation Exporter lorsque
+  ce plugin externe est installé.

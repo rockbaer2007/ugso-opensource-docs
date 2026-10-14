@@ -201,7 +201,7 @@ ein erster HACS-Bundle-Roundtrip möglich.
     "target": "bubble",
     "layout": "single"
   },
-  "content": "type: \"custom:bubble-card\"\n..."
+  "content": "type: \"custom:bubble-card\"\ncard_type: button\nbutton_type: state\nentity: light.office\n"
 }
 ```
 
@@ -430,8 +430,8 @@ setzt die Editorfläche wieder auf die Standardgröße zurück.
 Platzierte Expert-Felder, das ausgewählte Feld und die vergrößerte
 Editorfläche werden lokal im Browser gespeichert und nach einem Neuladen
 wiederhergestellt.
-Die Demo-Oberfläche ist jetzt zweisprachig: Über den Sprachumschalter im Kopf
-kann zwischen Deutsch und Englisch gewechselt werden. Die Auswahl wird ebenfalls
+Die Editor-Oberfläche unterstützt Deutsch, Englisch und Französisch (DE/EN/FR).
+Der Sprachumschalter im Kopf wählt die Sprache der Oberfläche. Die Auswahl wird ebenfalls
 lokal gespeichert und beim nächsten Öffnen wiederhergestellt. Neben statischen
 Labels werden auch Entity-Picker-Rückmeldungen, Stack-Zusammenfassungen,
 Dependency-Hinweise sowie wichtige Import-/Export-Statusmeldungen über die
@@ -576,25 +576,21 @@ englische Fallback-Dateien mit einem Hinweis, dass die entsprechenden
 `locales/*.json` Dateien vor einer Veröffentlichung übersetzt und geprüft
 werden müssen.
 
-Die Atlas Administration verwaltet die geplante Auswahl des
-Übersetzungsmoduls. Vorgesehen sind zunächst `none`, `chatgpt`, `gemini`,
-`deepl-free`, `deepl-pro` und `custom-ai`. Die Auswahl soll als klare
-Radio-Liste mit API-Key-Feldern für die jeweiligen Provider erfolgen. Im Card
+Die Atlas Administration verwaltet die Auswahl des Übersetzungsmoduls:
+`none`, `chatgpt`, `gemini`, `deepl-free`, `deepl-pro` und `custom-ai`.
+Die Auswahl bedeutet nicht, dass jeder Provider-Adapter bereits umgesetzt ist. Im Card
 Editor kann beim Export eine Checkbox für automatische Übersetzung aktiviert
-werden. Die Oberfläche zeigt dabei einen Fortschritt an. Bis echte
-Provider-Adapter und API-Schlüssel angebunden sind, bleibt das Ergebnis
-bewusst als Fallback markiert, damit keine unübersetzten Dateien versehentlich
-als maschinell übersetzt gelten. Eine spätere echte automatische Übersetzung
-muss klar darauf hinweisen, dass dafür eine Internetverbindung erforderlich
-ist.
-Fuer DeepL ist `https://www.deepl.com/de/pro#api` als Referenz fuer die
+werden. Die Oberfläche zeigt dabei einen Fortschritt an. Dateien, die kein konfigurierter Provider tatsächlich übersetzt hat, bleiben
+als Fallback markiert. Der angebundene ChatGPT/OpenAI-Pfad benötigt eine
+Internetverbindung; maschinell übersetzte Dateien müssen weiterhin geprüft werden.
+Für DeepL ist `https://www.deepl.com/de/pro#api` als Referenz für die
 Free/Pro-API-Optionen vorgemerkt.
 Der vorbereitete DeepL-Translate-Endpunkt ist
-`https://api.deepl.com/v2/translate`; die Request-Details werden ueber
+`https://api.deepl.com/v2/translate`; die Request-Details werden über
 `https://developers.deepl.com/api-reference/translate/request-translation`
 nachgehalten. Dieser Endpunkt ist interne Konfiguration und soll nicht als
 normales Eingabefeld in der Atlas Administration erscheinen.
-Fuer Gemini ist `https://ai.google.dev/gemini-api/docs/api-key` als Referenz
+Für Gemini ist `https://ai.google.dev/gemini-api/docs/api-key` als Referenz
 für API-Key- und Sicherheitshinweise vorgemerkt. Provider-API-Keys gehören in
 die Atlas Administration oder spätere Backend-Adapter; der Card Editor soll
 nur Provider, Endpunkt und Key-konfiguriert-Status erhalten.
@@ -633,10 +629,9 @@ sind dabei nicht Code-Übernahme, sondern Produktideen: UV-Index-Sensor,
 farbcodierte Risikoanzeige, WHO-nahe Schutzempfehlungen,
 Mushroom-kompatible Darstellung und optionale Benachrichtigungs-Automationen.
 
-Der Home-Assistant-Card-Editor wird dabei als erstes offizielles
-ATLAS-Referenz-Plugin betrachtet. Er soll später zeigen, wie ein Plugin
-Entitätenauswahl, Card-Targets, Import/Export, HACS-nahe Pakete und
-Administration in einem echten Workflow verbindet.
+Der Home-Assistant-Card-Editor ist das erste offiziell integrierte
+ATLAS-Referenz-Plugin. Er verbindet Entitätenauswahl, Card-Targets,
+Import/Export, HACS-nahe Pakete und Administration in einem echten Workflow.
 
 Im Atlas-Paket wird dieser Schritt bereits durch
 `createHomeAssistantCardEditorPlugin()` vorbereitet. Damit kann der Editor über
@@ -649,7 +644,7 @@ Dieser Plugin-Schritt ist bereits sichtbar: Die minimale Atlas Administration
 läuft als eigene Oberfläche auf Port `4175`, getrennt vom Card Editor auf Port
 `4174`. Sie zeigt den Card Editor als installiertes Referenz-Plugin und
 exportiert das Plugin-Paket als `.atlas-plugin.json`. Die Admin-Fläche markiert
-zugleich die spätere Sicherheitsgrenze: Tokens und Verbindungseinstellungen
+zugleich die Sicherheitsgrenze: Tokens und Verbindungseinstellungen
 liegen zentral in Atlas. Der Editor erhält den Token nur als Sitzungsübergabe
 aus der Administration, während Plugins nur freigegebene Pfade, URLs und
 Fähigkeiten erhalten.

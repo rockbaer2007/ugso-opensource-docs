@@ -16,6 +16,8 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
+**A6 – Documentation harmonisée (14/10/2026) :** les 21 pages ATLAS et plugins par langue ont été comparées en DE/EN/FR. Les pages françaises provisoires sont remplacées par des guides ; navigation, changement de langue, chemins de ressources, packages d’exemple et indications sur traduction et identifiants sont corrigés. Certains plugins externes conservent une interface française partielle, signalée explicitement. A7 est la prochaine priorité convenue : Linux/systemd et intégration frontend native ATLAS HA/HACS. Aucune modification du Runtime, des installations HA ou des données des plugins.
+
 **Phase de vérification A5 terminée (14/10/2026, application HA 0.1.297) :** la revue finale couvre renderer/thèmes, grands projets préparés, exécution native Core/Bubble/Mushroom, templates actifs, observations courtes CPU/RAM et reconnexion dans chaque périmètre documenté. Les tests renouvelés réussissent : Runtime 55, Renderer 532, Theme 12, HA 163 et application/cycle de vie 11, soit 773 régressions ; les builds du workspace et de la documentation réussissent. Ce n’est ni une approbation de production ni une promesse d’API plugin stable. Restent ouverts : projets utilisateurs variés, tests longs et instrumentés de pannes sous charge, politique API/versions stable, distribution des releases HACS et vérification complète des langues des cartes. A6 est la prochaine priorité convenue : réviser et compléter la documentation française. Les paragraphes historiques ci-dessous conservent leur périmètre et leurs limites d’origine.
 
 **Interruption réseau d’environ trois minutes confirmée (14/10/2026) :** l’utilisateur confirme avoir déconnecté le LAN du Pi et l’interface réseau de la VM Proxmox pendant environ trois minutes chacun. Il observe une reconnexion automatique des deux éditeurs ATLAS, sans rechargement ni connexion manuelle. Les vérifications indépendantes après récupération confirment de nouvelles données HA, des projets d’origine et exports Administration identiques sauf les horodatages, ainsi que six plugins actifs par système. Les 100 champs de test prévus n’étaient pas chargés avant l’interruption ; aucune trace Console des états du socket ou du nombre de tentatives n’est disponible. Ce scénario de trois minutes observé par l’utilisateur est terminé ; les répétitions instrumentées sous charge projet restent un périmètre distinct.
@@ -145,7 +147,7 @@ l'Administration fonctionnent en portrait et paysage et en DE/EN/FR. Remplacer
 l'URL HA `homeassistant.local:80` par l'adresse IP accessible rétablit la
 connexion ; le dialogue YAML et le rapport de problème sont également signalés
 comme OK. Il s'agit d'une confirmation utilisateur, pas d'un test automatisé
-sur appareil. [Conseils de connexion mobile](./homeassistant#connexion-sur-tablette-et-smartphone).
+sur appareil. [Conseils de connexion mobile](./homeassistant#connexion-depuis-une-tablette-ou-un-telephone).
 Les gestes de déplacement/redimensionnement, le clavier virtuel, les dialogues
 natifs de fichiers/téléchargements et iOS n'ont pas été vérifiés indépendamment
 sur chaque appareil. A2 est néanmoins terminé avec l'accord de l'utilisateur ;

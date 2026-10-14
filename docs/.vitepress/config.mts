@@ -1,4 +1,5 @@
 import { defineConfig, type HeadConfig } from 'vitepress'
+import { atlasLocaleTargets } from './atlas-locales'
 
 const siteBaseUrl = 'https://opensource.ugso-software.de'
 
@@ -403,7 +404,9 @@ const sidebarDe = {
         { text: 'Übersicht', link: '/projects/atlas/' },
         { text: 'Architektur', link: '/projects/atlas/uebersicht' },
         { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' },
-        { text: 'Home Assistant', link: '/projects/atlas/homeassistant' }
+        { text: 'Home Assistant', link: '/projects/atlas/homeassistant' },
+        { text: 'Card Editor', link: '/projects/atlas/card-editor' },
+        { text: 'Plugin-Dokumentation', link: '/projects/atlas/plugins' }
       ]
     }
   ],
@@ -797,7 +800,9 @@ const sidebarEn = {
         { text: 'Overview', link: '/en/projects/atlas/' },
         { text: 'Architecture', link: '/en/projects/atlas/overview' },
         { text: 'Development Status', link: '/en/projects/atlas/development-status' },
-        { text: 'Home Assistant', link: '/en/projects/atlas/homeassistant' }
+        { text: 'Home Assistant', link: '/en/projects/atlas/homeassistant' },
+        { text: 'Card Editor', link: '/en/projects/atlas/card-editor' },
+        { text: 'Plugin Documentation', link: '/en/projects/atlas/plugins' }
       ]
     }
   ],
@@ -946,11 +951,11 @@ const sidebarFr = {
       collapsed: false,
       items: [
         { text: 'Vue d’ensemble', link: '/fr/projects/atlas/' },
-        { text: 'Aperçu', link: '/fr/projects/atlas/overview' },
+        { text: 'Architecture', link: '/fr/projects/atlas/overview' },
         { text: 'État du développement', link: '/fr/projects/atlas/development-status' },
         { text: 'Home Assistant', link: '/fr/projects/atlas/homeassistant' },
         { text: 'Card Editor', link: '/fr/projects/atlas/card-editor' },
-        { text: 'Plugins', link: '/fr/projects/atlas/plugins' }
+        { text: 'Documentation des plugins', link: '/fr/projects/atlas/plugins' }
       ]
     }
   ],
@@ -1088,6 +1093,20 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
 
+  // VitePress normally copies the current slug into other locales. ATLAS has
+  // three established translated German slugs; fix the static links as well
+  // as the client-side language menu without renaming public routes.
+  transformHtml(code) {
+    return code.replace(/href="([^"]+)"/g, (original, href: string) => {
+      if (!href.startsWith('/')) return original
+      const targets = atlasLocaleTargets(href)
+      if (!targets) return original
+      const locale = href.startsWith('/en/') ? 'EN' : href.startsWith('/fr/') ? 'FR' : 'DE'
+      const target = targets[locale]
+      return href.split('#', 1)[0] === target ? original : 'href="' + target + '"'
+    })
+  },
+
   markdown: {
     lineNumbers: true
   },
@@ -1130,7 +1149,33 @@ export default defineConfig({
     ],
 
     search: {
-      provider: 'local'
+      provider: 'local',
+      options: {
+        locales: {
+          root: { translations: {
+            button: { buttonText: 'Suchen', buttonAriaLabel: 'Dokumentation durchsuchen' },
+            modal: {
+              displayDetails: 'Details anzeigen', resetButtonTitle: 'Suche zurücksetzen',
+              backButtonTitle: 'Zurück', noResultsText: 'Keine Ergebnisse für',
+              footer: { selectText: 'Auswählen', selectKeyAriaLabel: 'Eingabetaste',
+                navigateText: 'Navigieren', navigateUpKeyAriaLabel: 'Pfeil nach oben',
+                navigateDownKeyAriaLabel: 'Pfeil nach unten', closeText: 'Schließen',
+                closeKeyAriaLabel: 'Escape' }
+            }
+          } },
+          fr: { translations: {
+            button: { buttonText: 'Rechercher', buttonAriaLabel: 'Rechercher dans la documentation' },
+            modal: {
+              displayDetails: 'Afficher les détails', resetButtonTitle: 'Réinitialiser la recherche',
+              backButtonTitle: 'Retour', noResultsText: 'Aucun résultat pour',
+              footer: { selectText: 'Sélectionner', selectKeyAriaLabel: 'Entrée',
+                navigateText: 'Naviguer', navigateUpKeyAriaLabel: 'Flèche vers le haut',
+                navigateDownKeyAriaLabel: 'Flèche vers le bas', closeText: 'Fermer',
+                closeKeyAriaLabel: 'Échap' }
+            }
+          } }
+        }
+      }
     },
 
     footer: {
@@ -1157,7 +1202,14 @@ export default defineConfig({
       lang: 'de-DE',
       themeConfig: {
         nav: navDe,
-        sidebar: sidebarDe
+        sidebar: sidebarDe,
+        langMenuLabel: 'Sprache wechseln',
+        skipToContentLabel: 'Zum Inhalt springen',
+        darkModeSwitchLabel: 'Darstellung',
+        lightModeSwitchTitle: 'Helles Design verwenden',
+        darkModeSwitchTitle: 'Dunkles Design verwenden',
+        sidebarMenuLabel: 'Menü',
+        returnToTopLabel: 'Nach oben'
       }
     },
     en: {
@@ -1169,6 +1221,13 @@ export default defineConfig({
       themeConfig: {
         nav: navEn,
         sidebar: sidebarEn,
+        langMenuLabel: 'Change language',
+        skipToContentLabel: 'Skip to content',
+        darkModeSwitchLabel: 'Appearance',
+        lightModeSwitchTitle: 'Switch to light theme',
+        darkModeSwitchTitle: 'Switch to dark theme',
+        sidebarMenuLabel: 'Menu',
+        returnToTopLabel: 'Return to top',
         outline: false,
         lastUpdated: {
           text: 'Last updated'
@@ -1188,6 +1247,13 @@ export default defineConfig({
       themeConfig: {
         nav: navFr,
         sidebar: sidebarFr,
+        langMenuLabel: 'Changer de langue',
+        skipToContentLabel: 'Aller au contenu',
+        darkModeSwitchLabel: 'Apparence',
+        lightModeSwitchTitle: 'Utiliser le thème clair',
+        darkModeSwitchTitle: 'Utiliser le thème sombre',
+        sidebarMenuLabel: 'Menu',
+        returnToTopLabel: 'Retour en haut',
         outline: false,
         lastUpdated: {
           text: 'Dernière mise à jour'

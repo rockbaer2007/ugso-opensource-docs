@@ -10,7 +10,7 @@ ATLAS wird als modulares TypeScript-Monorepo entwickelt.
 | `foundation` | Allgemeine Basiskomponenten und gemeinsame Infrastruktur |
 | `runtime` | Laufzeitumgebung, Services und Service-Container |
 | `renderer` | Darstellungsschicht und Renderer-Abstraktionen |
-| `homeassistant` | Geplante Integration mit Home Assistant |
+| `homeassistant` | Integration und Workflows für Home Assistant |
 | `theme` | Gemeinsame Theme- und Design-Grundlagen |
 | `devtools` | Diagnose- und Entwicklungswerkzeuge |
 
@@ -58,3 +58,6 @@ ATLAS soll später als Basis dienen für:
 - Diagnoseanwendungen
 - Plugin-basierte Desktop- oder Webanwendungen
 - die geplante **Lovelace UV Card**
+
+Die Verträge sind noch in Entwicklung; diese Architektur ist keine Zusage einer
+stabilen Plugin-API. Siehe [Entwicklungsstand](/projects/atlas/entwicklungsstand).
