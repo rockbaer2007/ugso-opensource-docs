@@ -3,7 +3,8 @@
 ATLAS 0.1.298 bietet außerdem einen optionalen [Linux/systemd-Installer](/projects/atlas/linux)
 für den eigenständigen Betrieb. Installation, Update, Sicherung und Rückwechsel
 sind auf Debian 12 amd64 LXC geprüft. Die native ATLAS-HA/HACS-Frontend-Integration
-bleibt ein separater offener Schritt.
+ist als optionale [Integration ATLAS Runtime](/projects/atlas/frontend) ab 0.1.299
+umgesetzt. Ihre native HACS-Installation bleibt separat zu qualifizieren.
 
 ATLAS besitzt mit `@atlas/homeassistant` ein eigenes Paket für die
 Home-Assistant-nahe Integration. Der aktuelle Schwerpunkt liegt auf einem

@@ -1,0 +1,83 @@
+# ATLAS in the Home Assistant frontend
+
+Since **0.1.299**, ATLAS provides the optional **ATLAS Runtime** integration.
+It registers its own HA administrator sidebar panel, opening Plugin Hub,
+Expert Card Editor and Administration from the existing runtime. The panel
+follows HA's DE/EN/FR language and light/dark appearance.
+
+## Requirements and data preservation
+
+ATLAS must already run as an App/Add-on, Docker container or
+[Linux/systemd service](/en/projects/atlas/linux). HACS installs the HA integration;
+the Node server and external plugins stay in their existing runtime.
+The add-on's existing Ingress entry is not replaced.
+
+Back up HA before installing. Also export ATLAS projects and Administration
+settings in ATLAS. Keep the runtime's existing browser address: browser projects,
+cookies and encrypted settings are bound to the address or installation identity.
+Changing hostname, scheme or port does not automatically migrate data.
+
+Browsers may also separate storage for an externally embedded runtime from
+its separately opened storage. If existing projects or encrypted settings
+are absent in the panel, use **Open separately** at the previous address
+and export them there; the integration does not move or delete those data.
+[Storage partitioning reference](https://privacysandbox.google.com/cookies/storage-partitioning).
+
+## HACS installation
+
+1. Open HACS and its custom repositories.
+2. Add `https://github.com/rockbaer2007/atlas` with type **Integration**.
+3. Download **ATLAS Runtime** and restart Home Assistant.
+4. Open **Settings → Devices & services → Add integration → ATLAS Runtime**.
+5. Enter the existing browser-accessible runtime base URL, for example
+   `http://atlas-server:4176/` or `https://atlas.example.org/atlas/`.
+
+The integration does not request HA tokens or provider keys. Configure the HA
+connection in ATLAS Administration. Panel code does not send HA authentication
+or entity data to the embedded window. Ordinary HA state updates do not reload it.
+
+This is a custom HACS repository; general HACS catalog inclusion is not claimed.
+Select repository type **Integration**, not Dashboard. Exported HACS card
+packages remain a separate workflow.
+
+## Manual installation and updates
+
+Copy only `custom_components/atlas_frontend` from the repository into
+`/config/custom_components/atlas_frontend`. Back up an existing directory before
+replacing it; retain other components. Restart HA and add the integration as above.
+`manifest.json` contains the version.
+
+For HACS updates, update this integration and restart HA. Its runtime URL remains
+in the HA config entry. Update the ATLAS server independently through its existing
+deployment path. The integration's **Configure** action changes the address;
+export ATLAS data before a deliberate address change. Removing the integration
+removes its own panel access, not the ATLAS runtime, plugins or projects.
+
+## HTTP, HTTPS and embedding
+
+HTTPS HA needs an HTTPS runtime for embedding. An HTTP target displays guidance
+and **Open separately** instead. The base URL must not contain credentials,
+query parameters or fragments. Port 80 is valid; reverse-proxy prefixes are retained.
+
+A reverse proxy must forward ATLAS subpaths correctly and permit framing from
+the HA origin. For a blank view, check **Open separately**, reachability, proxy
+routing and frame protection headers. Automatic discovery or persistent storage
+of an Ingress session address is outside this integration; continue using the
+add-on's existing Ingress access.
+
+The panel's HA administrator requirement does not protect direct access to an
+external ATLAS server. Keep its existing access restrictions. The new panel uses
+`atlas-runtime` and does not replace another sidebar entry. Its module is served
+at `/atlas_frontend/frontend/atlas-homeassistant-panel.js`; it is not an additional
+Lovelace resource under `/hacsfiles/atlas/`.
+
+## Verified scope
+
+Isolated checks use Home Assistant Core **2026.10.1**, a separate ATLAS runtime
+and fixture data. They cover config/options flows, the admin panel, reload,
+restart, static module and preservation of unrelated panels. Further HA versions,
+native ARM64 installation and complete HACS download on Pi/Proxmox remain
+separate qualification steps.
+
+References: [HA custom panels](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
+and [HACS integration structure](https://www.hacs.xyz/docs/publish/integration/).

@@ -302,7 +302,8 @@ Le modèle peut vérifier la ressource ATLAS, les dépendances des cartes et
 les déclarations JSON/YAML nécessaires. L’hébergement ATLAS autonome Docker
 et l’application HA existent. L’[installateur Linux/systemd](/fr/projects/atlas/linux)
 est implémenté et vérifié sous Debian 12 amd64 LXC ; l’intégration frontend
-native ATLAS/HACS reste la priorité A7.
+native ATLAS/HACS est disponible sous forme d’[intégration ATLAS Runtime](/fr/projects/atlas/frontend)
+depuis 0.1.299. Son installation HACS native reste à qualifier dans A7.
 Exporter une carte HACS ne signifie pas installer ATLAS lui-même via HACS.
 
 ## Démonstration actuelle

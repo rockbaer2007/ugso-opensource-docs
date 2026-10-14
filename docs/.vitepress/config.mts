@@ -406,6 +406,7 @@ const sidebarDe = {
         { text: 'Entwicklungsstand', link: '/projects/atlas/entwicklungsstand' },
         { text: 'Home Assistant', link: '/projects/atlas/homeassistant' },
         { text: 'Linux/systemd', link: '/projects/atlas/linux' },
+          { text: 'HA-Frontend / HACS', link: '/projects/atlas/frontend' },
         { text: 'Card Editor', link: '/projects/atlas/card-editor' },
         { text: 'Plugin-Dokumentation', link: '/projects/atlas/plugins' }
       ]
@@ -803,6 +804,7 @@ const sidebarEn = {
         { text: 'Development Status', link: '/en/projects/atlas/development-status' },
         { text: 'Home Assistant', link: '/en/projects/atlas/homeassistant' },
         { text: 'Linux/systemd', link: '/en/projects/atlas/linux' },
+          { text: 'HA frontend / HACS', link: '/en/projects/atlas/frontend' },
         { text: 'Card Editor', link: '/en/projects/atlas/card-editor' },
         { text: 'Plugin Documentation', link: '/en/projects/atlas/plugins' }
       ]
@@ -957,6 +959,7 @@ const sidebarFr = {
         { text: 'État du développement', link: '/fr/projects/atlas/development-status' },
         { text: 'Home Assistant', link: '/fr/projects/atlas/homeassistant' },
         { text: 'Linux/systemd', link: '/fr/projects/atlas/linux' },
+          { text: 'Frontend HA / HACS', link: '/fr/projects/atlas/frontend' },
         { text: 'Card Editor', link: '/fr/projects/atlas/card-editor' },
         { text: 'Documentation des plugins', link: '/fr/projects/atlas/plugins' }
       ]
