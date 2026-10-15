@@ -13,7 +13,7 @@ The interface is available in German, English and French. The language choice is
 - GitHub: [rockbaer2007/atlas-terminal-plugin](https://github.com/rockbaer2007/atlas-terminal-plugin)
 - Install page: [Add ATLAS Terminal](https://rockbaer2007.github.io/atlas-terminal-plugin/install.html)
 - Repository manifest: [repository.json](https://raw.githubusercontent.com/rockbaer2007/atlas-terminal-plugin/main/repository.json)
-- Plugin version: `0.1.7`
+- Plugin version: `0.1.10`
 
 In ATLAS Administration, open **Plugins → Add repository**, choose **Plugin**, and enter the manifest URL. Review the repository and install the plugin package. The ATLAS host must provide a compatible Terminal backend.
 
@@ -35,7 +35,9 @@ Place `MesloLGMNerdFontMono-Regular.ttf` and `MesloLGMNerdFontMono-Bold.ttf` in 
 
 ## Requirements and Security
 
-The repository contains the plugin frontend, but it is **not a standalone SSH server or a Home Assistant add-on**. The ATLAS host provides the shell, Supervisor and WebSocket functions. Its compatibility declaration lists ATLAS `>=0.2.0-alpha.79` and Home Assistant `>=2026.8`. Loading the Meslo font from Home Assistant requires App/Add-on `0.1.214` or newer; the root working directory and collapsible token settings require `0.1.215` or newer.
+The repository contains the plugin frontend, but it is **not a standalone SSH server or a Home Assistant add-on**. The ATLAS host provides the shell, Supervisor and WebSocket functions. Since plugin `0.1.10`, catalog, package and manifest declare App/runtime `>=0.1.215 <0.2.0`, host `administration-local` and Home Assistant `>=2026.8`. The previous `>=0.2.0-alpha.79` referred to a framework version and was incorrect in `compatibility.atlas`. App and framework have separate version identities.
+
+Existing shared Terminal descriptors may retain the old requirement. Back up HA and shared plugin state first, then correct only the proven version-identity error with a current revision check. Preserve activation, other requirements and all other entries. Refreshing the repository alone does not change saved state. Existing recovery snapshots keep their requirements; do not rewrite them without review or bypass compatibility checks. Correcting metadata migrates neither tokens nor plugin data. Loading the Meslo font requires App/Add-on `0.1.214`; the root working directory and collapsible token settings require `0.1.215` or newer.
 
 The terminal is disabled by default. Enable it only after configuring a strong, random access token of at least 32 URL-safe characters on the ATLAS host. The local shell runs with the permissions of the ATLAS process. In Home Assistant App/Add-on mode, Supervisor permissions may also enable administrative `ha` commands. Treat terminal access as administrative access.
 

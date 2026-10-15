@@ -13,7 +13,7 @@ Die Oberfläche ist auf Deutsch, Englisch und Französisch verfügbar. Die Sprac
 - GitHub: [rockbaer2007/atlas-terminal-plugin](https://github.com/rockbaer2007/atlas-terminal-plugin)
 - Installationsseite: [ATLAS Terminal hinzufügen](https://rockbaer2007.github.io/atlas-terminal-plugin/install.html)
 - Repository-Manifest: [repository.json](https://raw.githubusercontent.com/rockbaer2007/atlas-terminal-plugin/main/repository.json)
-- Plugin-Version: `0.1.7`
+- Plugin-Version: `0.1.10`
 
 Füge in ATLAS Administration unter **Plugins → Repository hinzufügen** den Typ **Plugin** hinzu und verwende die Manifest-URL. Prüfe das Repository und installiere anschließend das Plugin-Paket. Der ATLAS-Host muss ein kompatibles Terminal-Backend enthalten.
 
@@ -35,7 +35,9 @@ Lege `MesloLGMNerdFontMono-Regular.ttf` und `MesloLGMNerdFontMono-Bold.ttf` in `
 
 ## Voraussetzungen und Sicherheit
 
-Das Repository enthält das Plugin-Frontend, ist aber **kein eigenständiger SSH-Server und kein Home-Assistant-Add-on**. Shell-, Supervisor- und WebSocket-Funktionen stellt der ATLAS-Host bereit. Die Kompatibilitätserklärung nennt ATLAS `>=0.2.0-alpha.79` und Home Assistant `>=2026.8`. Das Laden der Meslo-Schrift aus Home Assistant benötigt mindestens App/Add-on `0.1.214`; das Root-Startverzeichnis und die einklappbaren Token-Einstellungen benötigen `0.1.215` oder neuer.
+Das Repository enthält das Plugin-Frontend, ist aber **kein eigenständiger SSH-Server und kein Home-Assistant-Add-on**. Shell-, Supervisor- und WebSocket-Funktionen stellt der ATLAS-Host bereit. Ab Plugin `0.1.10` nennen Katalog, Paket und Manifest die App/Runtime `>=0.1.215 <0.2.0`, Host `administration-local` und Home Assistant `>=2026.8`. Die frühere Angabe `>=0.2.0-alpha.79` bezeichnete eine Framework-Version und war im Feld `compatibility.atlas` falsch. App- und Framework-Versionen sind getrennte Versionsreihen.
+
+Bestehende gemeinsame Terminal-Einträge können die alte Angabe weiterhin enthalten. Sichere zuerst HA und den gemeinsamen Plugin-Stand; korrigiere nur den nachgewiesenen Versionsfehler mit Prüfung der aktuellen Revision. Aktivierungen, andere Anforderungen und übrige Einträge bleiben erhalten. Ein Repository-Refresh allein ändert den gespeicherten Stand nicht. Vorhandene Rücksicherungen behalten ihre Anforderungen; sie dürfen nicht ungeprüft umgeschrieben oder durch Umgehen der Kompatibilitätsprüfung eingespielt werden. Die korrigierten Angaben migrieren weder Tokens noch Plugin-Daten. Das Laden der Meslo-Schrift benötigt App/Add-on `0.1.214`; Root-Startverzeichnis und einklappbare Token-Einstellungen benötigen `0.1.215` oder neuer.
 
 Das Terminal ist standardmäßig deaktiviert. Aktiviere es erst, nachdem auf dem ATLAS-Host ein starkes, zufälliges Zugriffstoken mit mindestens 32 URL-sicheren Zeichen eingerichtet wurde. Die lokale Shell läuft mit den Berechtigungen des ATLAS-Prozesses. Im Home-Assistant-App/Add-on-Betrieb können Supervisor-Berechtigungen auch administrative `ha`-Befehle ermöglichen. Behandle den Terminalzugriff daher wie administrativen Zugriff.
 
