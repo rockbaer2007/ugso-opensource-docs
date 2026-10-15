@@ -140,6 +140,22 @@ Erstinstallation bietet zusätzlich die Wiederherstellung des vollständigen Hos
 
 ## Netzwerk und Plugins
 
+Ab ATLAS 0.1.305 speichert die Linux-Administration beim Speichern der
+Einstellungen den gemerkten HA-Zugang zusätzlich serverseitig mit AES-GCM.
+Damit funktioniert die Wiederherstellung nach Dienst- und Host-Neustarts auch
+beim HTTP-LAN-Zugriff ohne Browser-Web-Crypto. Nach dem Update den vorhandenen
+Token einmal in der Administration eingeben und speichern; ältere Versionen
+haben ihn unter Umständen nur im Arbeitsspeicher gehalten.
+
+Die verschlüsselte Datei `admin-connection.enc.json` und der private Schlüssel
+`admin-connection.enc.json.key` liegen neben `admin-device.json` im privaten
+ATLAS-Datenverzeichnis. Dateien haben unter Linux Modus `0600`; die Daten sind
+an die Installationsidentität gebunden. Ein vollständiges Datenbackup muss alle
+drei Dateien erhalten und vertraulich behandelt werden. Eine Kopie nur des
+Programmverzeichnisses oder des Browserexports enthält diesen Schlüssel nicht.
+„Token vergessen“ entfernt den gemerkten HA-Token auch aus dem serverseitigen
+Stand. Unlesbare verschlüsselte Daten werden nicht automatisch überschrieben.
+
 Standardmäßig sind alle Oberflächen nur über Loopback erreichbar, Terminal
 ist deaktiviert. Der Installer öffnet keine Firewall. Für einen bewussten
 LAN-Betrieb kann der Administrator `ATLAS_APP_HOST` ändern und den Zugriff

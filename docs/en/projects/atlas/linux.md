@@ -132,6 +132,21 @@ allows recovery of the entire host.
 
 ## Network and plugins
 
+Since ATLAS 0.1.305, saving Linux Administration settings also persists the
+remembered HA connection server-side using AES-GCM. Restoration after service
+and host restarts therefore works over LAN HTTP without browser Web Crypto.
+After updating, enter the existing token once in Administration and save;
+earlier versions may have retained it only in memory.
+
+The encrypted `admin-connection.enc.json` file and private
+`admin-connection.enc.json.key` reside beside `admin-device.json` in the private
+ATLAS data directory. Files use Linux mode `0600`; encrypted data is bound to
+the installation identity. A complete data backup must retain all three files
+and be treated as confidential. Copying only the runtime directory or browser
+export does not include this key. “Forget token” also removes the remembered
+HA token from server-side state. Unreadable encrypted data is not overwritten
+automatically.
+
 All surfaces default to loopback; Terminal is disabled. The installer opens
 no firewall. An administrator may deliberately change `ATLAS_APP_HOST` for
 LAN access and restrict that access; internal ports remain local.

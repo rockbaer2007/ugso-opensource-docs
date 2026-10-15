@@ -139,6 +139,22 @@ Un snapshot VM/LXC avant installation permet aussi de restaurer l’hôte entier
 
 ## Réseau et plugins
 
+Depuis ATLAS 0.1.305, l’enregistrement des paramètres de l’administration Linux
+conserve aussi la connexion HA mémorisée sur le serveur avec AES-GCM. La
+restauration après redémarrage du service ou de l’hôte fonctionne donc en HTTP
+sur le réseau local sans Web Crypto dans le navigateur. Après la mise à jour,
+saisissez une fois le jeton existant dans l’administration puis enregistrez ;
+les versions précédentes peuvent l’avoir conservé uniquement en mémoire.
+
+Le fichier chiffré `admin-connection.enc.json` et la clé privée
+`admin-connection.enc.json.key` se trouvent à côté de `admin-device.json` dans
+le répertoire privé des données ATLAS. Les fichiers utilisent le mode Linux
+`0600` ; les données sont liées à l’identité de l’installation. Une sauvegarde
+complète doit conserver ces trois fichiers et rester confidentielle. Copier
+uniquement le répertoire du programme ou l’export du navigateur n’inclut pas
+cette clé. « Oublier le jeton » retire aussi le jeton HA mémorisé du serveur.
+Des données chiffrées illisibles ne sont pas remplacées automatiquement.
+
 Toutes les interfaces utilisent loopback par défaut ; Terminal est désactivé.
 L’installateur n’ouvre aucun pare-feu. L’administrateur peut modifier délibérément
 `ATLAS_APP_HOST` pour le LAN et limiter cet accès ; les ports internes restent
