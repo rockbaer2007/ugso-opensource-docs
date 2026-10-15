@@ -4,7 +4,7 @@ description: Numérotation, migrations de données et mises à jour sûres pour 
 ---
 # Versions et compatibilité
 
-Ces règles de publication s'appliquent à partir du 15 octobre 2026. L'App 0.1.302 ajoute un contrôle automatique avant installation et mise à jour des plugins. Les installations et formats existants ne sont pas migrés.
+Ces règles de publication s'appliquent à partir du 15 octobre 2026. L'App 0.1.302 ajoute un contrôle automatique avant installation et mise à jour des plugins ; 0.1.303 détecte aussi la version HA connectée. Les installations et formats existants ne sont pas migrés.
 
 ## Quelle version utiliser ?
 
@@ -28,7 +28,9 @@ Les versions alpha désignent explicitement des versions de test. Un paquet publ
 
 Les champs de dépôt `compatibility.atlas`, `host` et `homeAssistant` décrivent la compatibilité annoncée. `atlas` désigne l'App/runtime. Depuis 0.1.302, le serveur contrôle ensemble les déclarations du catalogue, du paquet et du manifeste inclus avant remplacement. Les plages SemVer comme `>=0.1.302 <0.2.0` sont évaluées. Une incompatibilité connue ou une condition invalide bloque le paquet et conserve la version installée. Une information absente signifie **non vérifié** et exige une confirmation explicite. Les plugins installés ne sont pas désactivés.
 
-`host` accepte un nom ou une liste d'alternatives. `administration-local` conserve son sens historique d'installateur Node commun ; `docker`, `linux` et `homeassistant` correspondent à la cible configurée. Une version HA inconnue n'est pas devinée : les conditions HA et champs inconnus exigent actuellement une vérification manuelle. La confirmation ne contourne pas une incompatibilité connue. L'aperçu n'écrit aucun fichier ; le serveur vérifie à nouveau lors de l'installation. Les imports locaux sont aussi contrôlés.
+`host` accepte un nom ou une liste d'alternatives. `administration-local` conserve son sens historique d'installateur Node commun ; `docker`, `linux` et `homeassistant` correspondent à la cible configurée. La confirmation ne contourne pas une incompatibilité connue. L'aperçu n'écrit aucun fichier ; le serveur vérifie à nouveau lors de l'installation. Les imports locaux sont aussi contrôlés.
+
+Depuis 0.1.303, l'Administration détecte la version HA via la réponse authentifiée `/api/config` de la connexion configurée. Les jetons et toute autre configuration HA restent sur le serveur. Une condition HA déclenche une nouvelle requête avant l'aperçu et l'installation ; les versions fournies par le navigateur sont ignorées. Des identifiants absents, délais dépassés, redirections, accès refusés ou réponses invalides restent **inconnus** et exigent une vérification explicite. Une ancienne valeur valide n'est jamais réutilisée. Les versions bêta, RC et de développement restent des préversions. Les champs inconnus exigent toujours une vérification. L'endpoint en lecture seule `/api/homeassistant/version` retourne uniquement les métadonnées de version filtrées ou une raison fixe d'échec ; il ne modifie ni paramètres ni projets.
 
 La recherche de mises à jour compare numériquement les textes des versions ; ce n'est pas un résolveur SemVer complet. Séparément, les dépendances des modules du noyau acceptent les triplets numériques exacts, `^` et `*`, mais pas les plages générales ni les préversions. Pour une version majeure zéro, le contrôle caret actuel conserve la même version MINOR ; `^0.0.3` accepte aussi `0.0.4`. Préférer des versions exactes pour ces modules.
 

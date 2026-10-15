@@ -4,7 +4,7 @@ description: Release numbering, data migrations and safe ATLAS/plugin updates.
 ---
 # Versions and Compatibility
 
-These release rules apply from 15 October 2026. App 0.1.302 adds automatic checks before plugin installs and updates. Existing installations and data formats are not migrated.
+These release rules apply from 15 October 2026. App 0.1.302 adds automatic checks before plugin installs and updates; 0.1.303 also discovers the connected HA version. Existing installations and data formats are not migrated.
 
 ## Which version matters?
 
@@ -28,7 +28,9 @@ Alpha versions explicitly identify test builds. Changed published package conten
 
 Repository fields `compatibility.atlas`, `host` and `homeAssistant` describe claimed compatibility. `atlas` refers to the App/runtime. Since 0.1.302, the server checks catalog, package descriptor and embedded manifest declarations together before replacement. SemVer ranges such as `>=0.1.302 <0.2.0` are evaluated. A known mismatch or malformed requirement blocks the candidate and preserves the installed version. Missing metadata means **unverified** and requires explicit confirmation. Installed plugins are not disabled.
 
-`host` accepts one name or a list of alternatives. `administration-local` retains its historic meaning of the common Node installer; `docker`, `linux` and `homeassistant` match the configured deployment target. An unknown HA version is not guessed: HA requirements and unknown metadata fields currently need manual review. Confirmation cannot override a known incompatibility. Preview writes no files; installation rechecks on the server. Local package imports are checked too.
+`host` accepts one name or a list of alternatives. `administration-local` retains its historic meaning of the common Node installer; `docker`, `linux` and `homeassistant` match the configured deployment target. Confirmation cannot override a known incompatibility. Preview writes no files; installation rechecks on the server. Local package imports are checked too.
+
+Since 0.1.303, Administration discovers the HA version from the configured connection's authenticated `/api/config` response. Tokens and all other HA configuration stay on the server. HA requirements trigger a fresh request before preview and installation; browser-supplied versions are ignored. Missing credentials, timeouts, redirects, denied access and invalid responses stay **unknown** and require explicit review. A previous successful value is never reused. Beta, RC and development versions remain prereleases. Unknown metadata fields still require review. The read-only `/api/homeassistant/version` endpoint returns sanitized version metadata or a fixed failure reason; it changes no settings or projects.
 
 Update discovery compares version text numerically; it is not a complete SemVer resolver. Separately, kernel module dependencies support exact numeric triples, `^` and `*`, but not general ranges or prereleases. Current caret matching keeps the same MINOR for major zero; `^0.0.3` also accepts `0.0.4`. Use exact versions for those modules.
 
