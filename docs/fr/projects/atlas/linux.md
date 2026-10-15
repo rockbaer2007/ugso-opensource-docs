@@ -18,9 +18,18 @@ L’intégration frontend native ATLAS HA/HACS est une autre tâche A7.
 - Assez d’espace pour deux versions du Runtime au moins et les sauvegardes de données.
 
 La construction prend en charge AMD64 et ARM64 et utilise Debian Bookworm/glibc.
-Un package Alpine/musl n’est pas interchangeable. Les autres distributions et
-installations Linux ARM64 natives nécessitent une qualification séparée ;
-les vérifications HA ARM64 ne la remplacent pas.
+Un package Alpine/musl n’est pas interchangeable. La préparation native est
+également vérifiée sous Raspberry Pi OS / Debian 13.7 Trixie avec glibc sur un
+Raspberry Pi 4 (`aarch64`, 4 Go de RAM).
+
+État des vérifications au 15.10.2026 : Debian 12 AMD64 en LXC et le Pi 4 natif avec
+Node.js 22.23.3 et ATLAS 0.1.303/0.1.304. Sur le Pi, les 17 tests de
+l’installateur, l’installation, la mise à jour, le retour à la version précédente,
+la sauvegarde, le redémarrage du service et la récupération automatique après
+une mise à jour défaillante réussissent. Les données synthétiques de plugin/projet
+et la configuration sont conservées. Les ports restent locaux ; aucun redémarrage
+du système d’exploitation n’est testé. Les autres distributions et matériels
+nécessitent une qualification séparée.
 
 L’installateur utilise le compte système `atlas`. Il refuse un compte existant
 avec un autre répertoire personnel ou groupe principal et ne reprend pas

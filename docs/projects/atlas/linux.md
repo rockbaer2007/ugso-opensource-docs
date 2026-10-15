@@ -19,8 +19,16 @@ ATLAS-HA/HACS-Frontend-Integration ist eine weitere A7-Aufgabe.
 
 AMD64 und ARM64 werden beim Paketbau unterstützt. Der Paketbau verwendet
 Debian Bookworm/glibc; ein Alpine/musl-Paket ist dafür nicht austauschbar.
-Andere Distributionen und native ARM64-Linux-Installationen benötigen eigene
-Qualifikation. Die HA-ARM64-Tests ersetzen diese Prüfung nicht.
+Zusätzlich ist der native Paketbau auf Raspberry Pi OS / Debian 13.7 Trixie
+mit glibc auf einem Raspberry Pi 4 (`aarch64`, 4 GB RAM) geprüft.
+
+Prüfstand vom 15.10.2026: Debian 12 AMD64 im LXC sowie der native Pi 4 mit
+Node.js 22.23.3 und ATLAS 0.1.303/0.1.304. Auf dem Pi bestanden alle 17
+Installer-Tests sowie Installation, Versionsupdate, Rollback, Backup,
+Dienstneustart und automatische Rückkehr nach einem fehlerhaften Update.
+Künstliche Plugin-/Projektdaten und Konfiguration blieben erhalten.
+Die Ports blieben lokal gebunden; ein Betriebssystem-Neustart wurde nicht geprüft.
+Weitere Distributionen und Hardware benötigen eigene Qualifikation.
 
 Der Installer verwendet den Systembenutzer `atlas`. Existiert dieser schon
 mit einem anderen Home-Verzeichnis oder einer anderen Hauptgruppe, bricht er

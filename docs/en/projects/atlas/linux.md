@@ -18,9 +18,16 @@ integration is a separate A7 task.
 - Space for at least two runtime releases and data backups.
 
 The builder supports AMD64 and ARM64 and uses Debian Bookworm/glibc.
-Alpine/musl packages are not interchangeable. Other distributions and native
-ARM64 Linux installations need separate qualification; HA ARM64 checks do not
-replace that qualification.
+Alpine/musl packages are not interchangeable. Native package preparation is also
+verified on Raspberry Pi OS / Debian 13.7 Trixie with glibc on a Raspberry Pi 4
+(`aarch64`, 4 GB RAM).
+
+Qualification as of 2026-10-15: Debian 12 AMD64 LXC and the native Pi 4 with
+Node.js 22.23.3 and ATLAS 0.1.303/0.1.304. On the Pi, all 17 installer tests,
+installation, version update, rollback, backup, service restart and automatic
+recovery after an unhealthy update pass. Synthetic plugin/project data and
+configuration are preserved. Ports remain loopback-only; no OS reboot is tested.
+Further distributions and hardware require separate qualification.
 
 The installer uses the `atlas` system account. It refuses an existing account
 with a different home or primary group and does not silently adopt another
