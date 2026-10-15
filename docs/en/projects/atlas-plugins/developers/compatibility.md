@@ -45,7 +45,9 @@ Package and manifest ID/version are checked before replacement; repository updat
 
 Future migrations require a read-only preview, original backup, validated transformation of a copy, explicit apply, conflict checks and atomic replacement. Unknown or damaged formats must not be replaced with empty data. Retries and failures must preserve data. These are requirements, not a claim that universal migration already exists.
 
-The package installer restores the previous directory when a swap fails; after success it does not retain that directory as a rollback archive. Shared plugin backups contain metadata, not every package file or plugin's data.
+Since ATLAS 0.1.304, replacement retains a checked package recovery snapshot under `<ATLAS_PLUGIN_DATA_ROOT>/.recovery`, inside the existing persistent mount and excluded from public plugin assets. In Plugin Manager, Import package replaces an existing plugin only after a preview and Back up and apply. Restore lists saved versions. Version direction and capabilities are visible; unknown compatibility requires explicit review, and known incompatibility blocks applying. Stale previews are rejected. Files and the shared plugin entry are updated together, preserving activation and repositories. Restoring also backs up the currently installed version.
+
+This restores plugin code. Credentials, editor projects, browser collections and plugin data formats are not reset or migrated. Full backups and matching data snapshots remain necessary. Limits per plugin: 300 files/20 MB per snapshot, 256 MiB and 200 snapshots total. Backups are never auto-purged; full or unreadable recovery storage blocks replacement. The bundled Card Editor is still updated with ATLAS only. Native qualification of the new UI on Pi and Proxmox is pending.
 
 ## Verified scope
 

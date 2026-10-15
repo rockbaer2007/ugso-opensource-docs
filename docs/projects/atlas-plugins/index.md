@@ -20,6 +20,17 @@ Die Plugin-Schnittstellen sind noch in Arbeit. Die Seiten dokumentieren den aktu
 - [ATLAS Automation Exporter / Editor](./automation-extractor): neues Plugin zum Analysieren, sicheren Sichern und Exportieren von Home-Assistant-Automationen.
 - [Demo-Repository](./demo-repository): öffentliches Test-Repository für Administration, Hub und Installationsfluss.
 
+## Plugin-Version sichern und wiederherstellen
+
+Ab ATLAS 0.1.304:
+
+1. Zuerst HA/ATLAS und eigene Plugin-Daten vollständig sichern.
+2. Im Plugin-Manager ein vorhandenes Plugin-Paket importieren und die Vorschau mit alter/neuer Version und Fähigkeiten prüfen.
+3. „Sichern und übernehmen“ erstellt vor dem Ersetzen eine serverseitige Rücksicherung. Ungeklärte Kompatibilität ausdrücklich prüfen; inkompatible Pakete bleiben gesperrt.
+4. Für eine Rückkehr beim Plugin „Wiederherstellen“ wählen, Sicherung und Versionsrichtung prüfen und übernehmen. Auch der gerade installierte Stand wird dabei gesichert.
+
+Browserdaten und Datenformate werden damit nicht zurückgesetzt. Ein älteres Plugin muss zum vorhandenen Datenformat passen. [Grenzen und Sicherungspfad](./developers/compatibility#daten-erhalten-und-wiederherstellen). Die neue Oberfläche ist isoliert geprüft; native Prüfungen auf Pi und Proxmox stehen aus.
+
 ## Ziel
 
 ATLAS-Plugins sollen die Plattform erweitern, ohne Kernpakete direkt zu verändern. Dazu gehören Home-Assistant-nahe Werkzeuge, Card-Editoren, Diagnoseflächen, Renderer, Themes, Provider und später auch Community-Erweiterungen.

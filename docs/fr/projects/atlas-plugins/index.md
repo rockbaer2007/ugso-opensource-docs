@@ -4,6 +4,17 @@ description: Documentation des extensions installables pour ATLAS.
 ---
 # Plugins ATLAS
 
+## Sauvegarder et restaurer une version de plugin
+
+Depuis ATLAS 0.1.304 :
+
+1. Sauvegarder d’abord HA/ATLAS et les données propres au plugin.
+2. Importer un paquet de plugin existant dans le gestionnaire et vérifier les anciennes/nouvelles versions et capacités.
+3. Sauvegarder et appliquer conserve une sauvegarde serveur avant remplacement. Vérifier explicitement toute compatibilité inconnue ; les paquets incompatibles restent bloqués.
+4. Pour revenir, choisir Restaurer sur le plugin, vérifier la version sauvegardée et appliquer. La version installée est également sauvegardée.
+
+Les données du navigateur et leurs formats ne sont pas réinitialisés. Un ancien plugin doit accepter le format existant. Voir [limites et emplacement](./developers/compatibility#préserver-et-restaurer-les-données). La nouvelle interface est vérifiée isolément ; les tests natifs Pi/Proxmox restent à effectuer.
+
 Cette rubrique présente les extensions installables d'ATLAS : format des dépôts, publication, mises à jour et pages consacrées à chaque plugin.
 
 ::: warning État du développement

@@ -1,5 +1,16 @@
 # ATLAS Plugins
 
+## Back up and restore a plugin version
+
+Since ATLAS 0.1.304:
+
+1. Back up HA/ATLAS and the plugin's own data first.
+2. Import an existing plugin package in Plugin Manager and review the old/new versions and capabilities.
+3. Back up and apply retains a server recovery snapshot before replacement. Review unknown compatibility explicitly; incompatible packages remain blocked.
+4. To return, choose Restore on the plugin, review the saved version and apply. The currently installed version is backed up too.
+
+Browser data and data formats are not reset. An older plugin must support the existing data format. See [limits and backup location](./developers/compatibility#preserve-and-recover-data). The new UI is verified in isolation; native Pi/Proxmox qualification is pending.
+
 This section collects everything that describes installable extensions rather than the ATLAS core itself: plugin contracts, repository format, publishing, update behavior and individual plugin pages.
 
 ::: warning Development status

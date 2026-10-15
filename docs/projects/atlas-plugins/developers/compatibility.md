@@ -45,7 +45,9 @@ Paket- und Manifest-ID sowie Version werden vor dem Ersetzen geprüft; beim Repo
 
 Für künftige Datenmigrationen gelten: Vorschau ohne Schreibzugriff, Original sichern, Kopie umwandeln und validieren, ausdrücklich übernehmen, Konflikte prüfen und atomar ersetzen. Unbekannte oder beschädigte Formate dürfen nicht durch leere Daten ersetzt werden. Wiederholungen und Fehler müssen ohne Datenverlust behandelt werden. Diese Regeln sind Anforderungen, keine Behauptung einer bereits vorhandenen universellen Migration.
 
-Der Paketinstaller stellt bei einem fehlgeschlagenen Verzeichnistausch den vorherigen Stand wieder her; nach Erfolg behält er ihn nicht als Rückkehrarchiv. Die gemeinsame Plugin-Sicherung enthält Metadaten, nicht alle Paketdateien und Plugin-Daten.
+Ab ATLAS 0.1.304 bleibt vor jedem Ersetzen eine geprüfte Paket-Rücksicherung unter `<ATLAS_PLUGIN_DATA_ROOT>/.recovery` im vorhandenen persistenten Datenpfad erhalten. Dieser Bereich ist nicht als öffentliche Plugin-Datei erreichbar. Im Plugin-Manager ersetzt „Paket importieren“ ein vorhandenes Plugin erst nach Vorschau und „Sichern und übernehmen“. „Wiederherstellen“ zeigt gespeicherte Versionen zur Auswahl. Versionsrichtung und Fähigkeiten sind sichtbar; ungeklärte Kompatibilität braucht eine bewusste Bestätigung, bekannte Inkompatibilität sperrt die Übernahme. Veraltete Vorschauen werden abgewiesen. Dateien und gemeinsamer Plugin-Eintrag werden zusammen übernommen; Aktivierung und Repositories bleiben erhalten. Auch vor einer Wiederherstellung wird die gerade installierte Version gesichert.
+
+Diese Funktion stellt Plugin-Code wieder her. Zugangsdaten, Editor-Projekte, Browser-Sammlungen und Plugin-Datenformate werden nicht zurückgesetzt oder migriert. Vollständige Backups und passende Datenstände bleiben erforderlich. Grenzen je Plugin: 300 Dateien/20 MB pro Sicherung, insgesamt 256 MiB und 200 Sicherungen. Es gibt keine automatische Bereinigung; bei vollen oder unlesbaren Sicherungen wird das Ersetzen gesperrt. Der integrierte Card Editor wird weiterhin nur mit ATLAS aktualisiert. Native Prüfungen der neuen Oberfläche auf Pi und Proxmox stehen noch aus.
 
 ## Geprüfter Umfang
 

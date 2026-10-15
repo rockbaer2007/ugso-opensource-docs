@@ -45,7 +45,9 @@ L'identifiant et la version du paquet sont comparés au manifeste avant remplace
 
 Les futures migrations exigent un aperçu sans écriture, la sauvegarde de l'original, la transformation et validation d'une copie, une application explicite, le contrôle des conflits et un remplacement atomique. Ne jamais remplacer un format inconnu ou corrompu par des données vides. Répétitions et échecs doivent préserver les données. Ce sont des exigences, pas une migration universelle déjà disponible.
 
-L'installateur restaure l'ancien dossier si son remplacement échoue ; après succès, il ne le conserve pas comme archive de retour arrière. Les sauvegardes partagées des plugins contiennent les métadonnées, pas tous leurs fichiers et données.
+Depuis ATLAS 0.1.304, chaque remplacement conserve une sauvegarde vérifiée du paquet sous `<ATLAS_PLUGIN_DATA_ROOT>/.recovery`, dans le volume persistant existant et exclue des fichiers publics des plugins. Dans le gestionnaire, Importer un paquet remplace un plugin existant seulement après un aperçu et Sauvegarder et appliquer. Restaurer propose les versions sauvegardées. Le sens du changement de version et les capacités sont visibles ; une compatibilité inconnue exige une confirmation, une incompatibilité connue bloque l’application. Les aperçus périmés sont refusés. Fichiers et métadonnées partagées sont repris ensemble, en conservant activation et dépôts. Une restauration sauvegarde aussi la version actuellement installée.
+
+Cette fonction restaure le code du plugin. Identifiants, projets, collections du navigateur et formats de données des plugins ne sont ni réinitialisés ni migrés. Des sauvegardes complètes et des données correspondantes restent nécessaires. Limites par plugin : 300 fichiers/20 MB par sauvegarde, 256 MiB et 200 sauvegardes au total. Aucune suppression automatique ; un stockage plein ou illisible bloque le remplacement. Le Card Editor intégré reste mis à jour avec ATLAS. La vérification native de cette interface sur Pi et Proxmox reste à effectuer.
 
 ## Périmètre vérifié
 
