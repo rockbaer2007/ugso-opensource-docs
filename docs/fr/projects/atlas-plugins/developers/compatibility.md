@@ -4,7 +4,7 @@ description: Numérotation, migrations de données et mises à jour sûres pour 
 ---
 # Versions et compatibilité
 
-Ces règles de publication s'appliquent à partir du 15 octobre 2026. Elles ne modifient ni les installations existantes ni les formats de données. Le contrôle automatique bloquant de compatibilité n'est pas encore implémenté.
+Ces règles de publication s'appliquent à partir du 15 octobre 2026. L'App 0.1.302 ajoute un contrôle automatique avant installation et mise à jour des plugins. Les installations et formats existants ne sont pas migrés.
 
 ## Quelle version utiliser ?
 
@@ -26,11 +26,13 @@ Les versions alpha désignent explicitement des versions de test. Un paquet publ
 
 ## Que vérifie ATLAS aujourd'hui ?
 
-Les champs de dépôt `compatibility.atlas`, `host` et `homeAssistant` décrivent la compatibilité annoncée. `atlas` désigne l'App/runtime. Ces valeurs sont affichées mais ne bloquent pas l'installation. Une information absente signifie **non vérifié**. Les plugins existants restent utilisables.
+Les champs de dépôt `compatibility.atlas`, `host` et `homeAssistant` décrivent la compatibilité annoncée. `atlas` désigne l'App/runtime. Depuis 0.1.302, le serveur contrôle ensemble les déclarations du catalogue, du paquet et du manifeste inclus avant remplacement. Les plages SemVer comme `>=0.1.302 <0.2.0` sont évaluées. Une incompatibilité connue ou une condition invalide bloque le paquet et conserve la version installée. Une information absente signifie **non vérifié** et exige une confirmation explicite. Les plugins installés ne sont pas désactivés.
+
+`host` accepte un nom ou une liste d'alternatives. `administration-local` conserve son sens historique d'installateur Node commun ; `docker`, `linux` et `homeassistant` correspondent à la cible configurée. Une version HA inconnue n'est pas devinée : les conditions HA et champs inconnus exigent actuellement une vérification manuelle. La confirmation ne contourne pas une incompatibilité connue. L'aperçu n'écrit aucun fichier ; le serveur vérifie à nouveau lors de l'installation. Les imports locaux sont aussi contrôlés.
 
 La recherche de mises à jour compare numériquement les textes des versions ; ce n'est pas un résolveur SemVer complet. Séparément, les dépendances des modules du noyau acceptent les triplets numériques exacts, `^` et `*`, mais pas les plages générales ni les préversions. Pour une version majeure zéro, le contrôle caret actuel conserve la même version MINOR ; `^0.0.3` accepte aussi `0.0.4`. Préférer des versions exactes pour ces modules.
 
-L'identifiant et la version du paquet sont comparés au manifeste avant remplacement. Les capacités déclarées ne sont ni des autorisations automatiques ni un bac à sable. Un futur contrôle doit aussi s'effectuer côté serveur avant remplacement et prendre en compte les paquets existants sans nouvelles métadonnées.
+L'identifiant et la version du paquet sont comparés au manifeste avant remplacement ; les mises à jour par dépôt doivent aussi correspondre à la version du catalogue. Les capacités déclarées ne sont ni des autorisations automatiques ni un bac à sable. Des versions compatibles ne remplacent ni les tests fonctionnels ni l'évaluation de confiance d'un plugin.
 
 ## Préserver et restaurer les données
 

@@ -4,7 +4,7 @@ description: Release numbering, data migrations and safe ATLAS/plugin updates.
 ---
 # Versions and Compatibility
 
-These release rules apply from 15 October 2026. They do not change existing installations or data formats. An automatic compatibility gate is not implemented yet.
+These release rules apply from 15 October 2026. App 0.1.302 adds automatic checks before plugin installs and updates. Existing installations and data formats are not migrated.
 
 ## Which version matters?
 
@@ -26,11 +26,13 @@ Alpha versions explicitly identify test builds. Changed published package conten
 
 ## What does ATLAS check today?
 
-Repository fields `compatibility.atlas`, `host` and `homeAssistant` describe claimed compatibility. `atlas` refers to the App/runtime. These values are displayed but not enforced as installation gates. Missing metadata means **unverified**. Existing plugins remain usable.
+Repository fields `compatibility.atlas`, `host` and `homeAssistant` describe claimed compatibility. `atlas` refers to the App/runtime. Since 0.1.302, the server checks catalog, package descriptor and embedded manifest declarations together before replacement. SemVer ranges such as `>=0.1.302 <0.2.0` are evaluated. A known mismatch or malformed requirement blocks the candidate and preserves the installed version. Missing metadata means **unverified** and requires explicit confirmation. Installed plugins are not disabled.
+
+`host` accepts one name or a list of alternatives. `administration-local` retains its historic meaning of the common Node installer; `docker`, `linux` and `homeassistant` match the configured deployment target. An unknown HA version is not guessed: HA requirements and unknown metadata fields currently need manual review. Confirmation cannot override a known incompatibility. Preview writes no files; installation rechecks on the server. Local package imports are checked too.
 
 Update discovery compares version text numerically; it is not a complete SemVer resolver. Separately, kernel module dependencies support exact numeric triples, `^` and `*`, but not general ranges or prereleases. Current caret matching keeps the same MINOR for major zero; `^0.0.3` also accepts `0.0.4`. Use exact versions for those modules.
 
-Package and manifest ID/version are checked before replacement. Declared capabilities are neither automatic permissions nor a sandbox. A future compatibility gate must also validate server-side before replacement and account for existing packages without new metadata.
+Package and manifest ID/version are checked before replacement; repository updates must also match the catalog version. Declared capabilities are neither automatic permissions nor a sandbox. Matching version constraints do not replace functional testing or trust review of a plugin.
 
 ## Preserve and recover data
 

@@ -4,7 +4,7 @@ description: Versionsregeln, Datenmigrationen und sichere Updates für ATLAS und
 ---
 # Versionen und Kompatibilität
 
-Diese Veröffentlichungsregeln gelten seit dem 15. Oktober 2026. Sie ändern keine vorhandenen Installationen oder Datenformate. Eine automatische Kompatibilitätssperre ist noch nicht implementiert.
+Diese Veröffentlichungsregeln gelten seit dem 15. Oktober 2026. App 0.1.302 ergänzt die automatische Prüfung vor Plugin-Installationen und Updates. Bestehende Installationen und Datenformate werden nicht migriert.
 
 ## Welche Version zählt?
 
@@ -26,11 +26,13 @@ Alpha-Versionen sind ausdrücklich Teststände. Geänderte veröffentlichte Pake
 
 ## Was prüft ATLAS heute?
 
-Repository-Angaben `compatibility.atlas`, `host` und `homeAssistant` beschreiben beanspruchte Kompatibilität. `atlas` bezieht sich auf die App/Runtime. Diese Angaben werden angezeigt, aber noch nicht als Installationssperre durchgesetzt. Fehlende Angaben bedeuten **ungeprüft**. Bestehende Plugins bleiben verwendbar.
+Repository-Angaben `compatibility.atlas`, `host` und `homeAssistant` beschreiben beanspruchte Kompatibilität. `atlas` bezieht sich auf die App/Runtime. Seit 0.1.302 prüft der Server die Angaben aus Katalog, Paket und enthaltenem Manifest vor dem Ersetzen gemeinsam. SemVer-Bereiche wie `>=0.1.302 <0.2.0` werden ausgewertet. Ein bekannter Widerspruch oder eine ungültige Voraussetzung blockiert das Paket; die installierte Version bleibt erhalten. Fehlende Angaben bedeuten **ungeprüft** und erfordern eine ausdrückliche Bestätigung. Bestehende Plugins werden nicht deaktiviert.
+
+`host` akzeptiert einen Namen oder eine Liste von Alternativen. `administration-local` bleibt der historische Name für den gemeinsamen Node-Installer; `docker`, `linux` und `homeassistant` passen zum konfigurierten Bereitstellungsziel. Eine unbekannte HA-Version wird nicht geraten: Anforderungen an HA und unbekannte Metadatenfelder erfordern derzeit manuelle Prüfung. Die Bestätigung kann bekannte Inkompatibilität nicht übergehen. Die Vorschau schreibt keine Dateien; beim tatsächlichen Installieren prüft der Server erneut. Auch lokale Paketimporte werden geprüft.
 
 Die Update-Anzeige vergleicht Versionstexte numerisch; sie ist kein vollständiger SemVer-Prüfer. Kernel-Modulabhängigkeiten unterstützen separat exakte Zahlentripel, `^` und `*`, aber keine allgemeinen Bereiche oder Vorabversionen. Der aktuelle Caret-Abgleich hält bei Version 0 die MINOR-Version gleich; `^0.0.3` akzeptiert dabei auch `0.0.4`. Nutze für solche Module exakte Versionen.
 
-Paket- und Manifest-ID sowie Version werden vor dem Ersetzen geprüft. Deklarierte Fähigkeiten sind keine automatischen Berechtigungen und keine Sandbox. Eine spätere Kompatibilitätsprüfung muss auch serverseitig vor dem Ersetzen greifen und bestehende Pakete ohne neue Metadaten berücksichtigen.
+Paket- und Manifest-ID sowie Version werden vor dem Ersetzen geprüft; beim Repository-Update muss auch die Katalogversion stimmen. Deklarierte Fähigkeiten sind keine automatischen Berechtigungen und keine Sandbox. Eine passende Versionsangabe ersetzt keinen Funktionstest oder eine Vertrauensprüfung des Plugins.
 
 ## Daten erhalten und wiederherstellen
 
