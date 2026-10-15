@@ -120,6 +120,14 @@ deployment path. The integration's **Configure** action changes the address;
 export ATLAS data before a deliberate address change. Removing the integration
 removes its own panel access, not the ATLAS runtime, plugins or projects.
 
+From integration **0.1.306**, migration checks reject unknown configuration
+schemas without rewriting the entry. The existing schema **1.1** is unchanged;
+package versions are independent of schema versions. Returning to an older
+integration is only qualified with a compatible schema. Back up HA configuration
+and ATLAS data before updates; a later schema change requires its matching data
+backup for recovery. An invalid stored runtime URL produces a setup error and
+can be corrected through **Configure**.
+
 ## HTTP, HTTPS and embedding
 
 HTTPS HA needs an HTTPS runtime for embedding. An HTTP target displays guidance
@@ -142,10 +150,15 @@ Lovelace resource under `/hacsfiles/atlas/`.
 
 Isolated checks use Home Assistant Core **2026.10.1**, a separate ATLAS runtime
 and fixture data. They cover config/options flows, the admin panel, reload,
-restart, static module and preservation of unrelated panels. HACS download of
-**0.1.299** on Proxmox is confirmed up to **Pending restart**. Setup and embedding
-on that system, updates, further HA versions and native ARM64/Pi HACS installation
-remain separate qualification steps.
+restart, static module and preservation of unrelated panels. HACS setup and
+embedding are verified on Proxmox/x86_64 and Pi 5/ARM64. The isolated integration
+cycle **0.1.301 → 0.1.306**, rollback to 0.1.301 and re-update preserve the same
+config entry and unrelated panels across real HA restarts. An unknown fixture
+schema is rejected without modifying its entry. On Pi 5 and Proxmox, the HACS
+update to 0.1.306, HA restart, panel, live entities and data preservation pass.
+The separate ATLAS App stays on 0.1.305 during this integration qualification.
+Further HA versions and actual conversion between different data schemas remain
+separate qualification steps.
 
 References: [HA custom panels](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 and [HACS integration structure](https://www.hacs.xyz/docs/publish/integration/).

@@ -133,6 +133,15 @@ wird unabhängig über seinen vorhandenen Installationsweg aktualisiert.
 vor einem bewussten Wechsel. Entfernen der Integration entfernt ihren eigenen
 Panelzugang, nicht die ATLAS-Laufzeit, ihre Plugins oder ihre Projekte.
 
+Ab Integration **0.1.306** werden unbekannte Konfigurationsformate beim
+Migrationsversuch abgewiesen, ohne den Eintrag umzuschreiben. Die bisherige
+Version **1.1** des Konfigurationsformats bleibt unverändert; die Paketversion
+ist davon unabhängig. Eine Rückkehr zu einer älteren Integration ist nur bei
+kompatiblem Datenformat geprüft. Sichere vor Updates HA-Konfiguration und
+ATLAS-Daten; bei einer späteren Formatänderung gehört die passende Datensicherung
+zur Wiederherstellung. Eine ungültige gespeicherte Laufzeitadresse wird als
+Einrichtungsfehler gemeldet und kann über **Konfigurieren** korrigiert werden.
+
 ## HTTP, HTTPS und Einbettung
 
 Wenn HA über HTTPS erreichbar ist, benötigt die eingebettete Laufzeit ebenfalls
@@ -159,10 +168,15 @@ es ist keine zusätzliche Lovelace-Ressource unter `/hacsfiles/atlas/`.
 Isolierte Prüfungen verwenden Home Assistant Core **2026.10.1**, eine eigene
 ATLAS-Laufzeit und Testdaten. Konfigurations-/Optionsdialog, Admin-Panel,
 Neuladen, Neustart, statisches Modul und Erhalt anderer Panels werden geprüft.
-Der HACS-Download von **0.1.299** auf Proxmox ist bis **Ausstehender Neustart**
-bestätigt. Einrichtung und Einbettung auf diesem System, Updates, weitere
-HA-Versionen und die native HACS-Installation auf ARM64/Pi bleiben separate
-Qualifikationsschritte.
+Einrichtung und Einbettung über HACS sind auf Proxmox/x86_64 und Pi 5/ARM64
+geprüft. Der isolierte Integrationswechsel **0.1.301 → 0.1.306**, Rückkehr zu
+0.1.301 und erneutes Update erhalten denselben Konfigurationseintrag und die
+anderen Panels über echte HA-Neustarts. Ein unbekanntes Testformat wird ohne
+Änderung des Eintrags abgewiesen. Auf Pi 5 und Proxmox ist das HACS-Update auf
+0.1.306 samt HA-Neustart, Panel, Live-Entitäten und Datenerhalt geprüft. Die
+separate ATLAS-App bleibt bei dieser Integrationsprüfung auf 0.1.305.
+Weitere HA-Versionen und echte Umwandlungen zwischen unterschiedlichen
+Datenformaten bleiben separate Qualifikationsschritte.
 
 Grundlagen: [HA-Custom-Panels](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 und [HACS-Integrationsstruktur](https://www.hacs.xyz/docs/publish/integration/).

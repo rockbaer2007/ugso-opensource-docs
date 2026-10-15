@@ -131,6 +131,15 @@ permet de changer l’adresse ; exportez les données ATLAS avant un changement
 volontaire. Retirer l’intégration supprime son propre accès au panneau,
 pas le Runtime ATLAS, ses plugins ou ses projets.
 
+Depuis l’intégration **0.1.306**, les vérifications de migration refusent les
+formats de configuration inconnus sans réécrire l’entrée. Le format existant
+**1.1** reste inchangé ; la version du paquet est indépendante du format.
+Le retour à une intégration antérieure est vérifié uniquement avec un format
+compatible. Sauvegardez la configuration HA et les données ATLAS avant la mise
+à jour ; un futur changement de format exige la sauvegarde correspondante pour
+la restauration. Une adresse Runtime enregistrée invalide produit une erreur
+de configuration et peut être corrigée via **Configurer**.
+
 ## HTTP, HTTPS et intégration dans la page
 
 HA en HTTPS nécessite un Runtime HTTPS pour l’intégration. Une cible HTTP
@@ -156,10 +165,15 @@ ce n’est pas une ressource Lovelace supplémentaire sous `/hacsfiles/atlas/`.
 Les vérifications isolées utilisent Home Assistant Core **2026.10.1**, un Runtime
 ATLAS séparé et des données de test. Elles couvrent configuration/options,
 panneau administrateur, rechargement, redémarrage, module statique et conservation
-des autres panneaux. Le téléchargement HACS de **0.1.299** sur Proxmox est
-confirmé jusqu’au statut **Redémarrage en attente**. Configuration et intégration
-sur ce système, mises à jour, autres versions HA et installation HACS native
-sur ARM64/Pi restent à qualifier séparément.
+des autres panneaux. Installation HACS et affichage intégré sont vérifiés sur
+Proxmox/x86_64 et Pi 5/ARM64. Le cycle isolé **0.1.301 → 0.1.306**, retour à
+0.1.301 puis nouvelle mise à jour conserve l’entrée et les autres panneaux après
+de vrais redémarrages HA. Un format de test inconnu est refusé sans modifier
+l’entrée. Sur Pi 5 et Proxmox, mise à jour HACS vers 0.1.306, redémarrage HA,
+panneau, entités en direct et conservation des données sont vérifiés.
+L’App ATLAS séparée reste en 0.1.305 pendant cette vérification de l’intégration.
+Les autres versions HA et les conversions réelles entre formats de données
+différents restent à qualifier séparément.
 
 Références : [panneaux personnalisés HA](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 et [structure des intégrations HACS](https://www.hacs.xyz/docs/publish/integration/).
