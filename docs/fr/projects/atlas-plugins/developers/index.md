@@ -16,6 +16,7 @@ Cette rubrique présente le parcours de création d'un plugin ATLAS autonome, du
 
 ## Guides
 
+- [Versions et compatibilité](./compatibility) : règles de publication, limites vérifiées, sauvegardes et migrations.
 - [Manifeste et capacités](./manifest) : métadonnées, identifiants, versions, ressources et déclarations.
 - [Runtime et cycle de vie](./runtime) : contrat Runtime et activation, désactivation et nettoyage.
 - [Construire, valider et publier](./publishing) : générateur de paquet, catalogue, GitHub Actions et liste de contrôle.

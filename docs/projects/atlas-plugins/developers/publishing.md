@@ -17,6 +17,8 @@ Der Build erzeugt aus dem Manifest das installierbare Paket und synchronisiert d
 
 ## Veröffentlichungsschritte
 
+Beachte die [Versions- und Kompatibilitätsregeln](./compatibility) einschließlich Sicherung, Migrationsgrenzen und Wiederherstellung.
+
 1. Erhöhe `version` im Manifest bei jeder funktionalen oder sichtbaren Veröffentlichung.
 2. Führe `npm run build` und `npm run check` aus.
 3. Prüfe, ob Manifest, Katalog und erzeugtes Paket dieselbe ID und Version enthalten.

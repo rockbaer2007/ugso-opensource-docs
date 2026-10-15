@@ -16,6 +16,7 @@ This section follows the development path for standalone ATLAS plugins, from the
 
 ## Guides
 
+- [Versions and compatibility](./compatibility): release rules, verified boundaries, backups and data migration.
 - [Manifest and capabilities](./manifest): metadata, IDs, versions, assets and declarations.
 - [Runtime and lifecycle](./runtime): the Runtime plugin contract and activation, deactivation and cleanup.
 - [Build, validate and publish](./publishing): package builder, catalog, GitHub Actions and release checklist.

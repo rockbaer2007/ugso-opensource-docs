@@ -17,6 +17,8 @@ La génération crée un paquet installable à partir du manifeste et synchronis
 
 ## Étapes de publication
 
+Respecter les [règles de version et de compatibilité](./compatibility), notamment les sauvegardes, limites de migration et procédures de restauration.
+
 1. Augmentez la valeur `version` du manifeste à chaque publication fonctionnelle ou visible.
 2. Exécutez `npm run build` et `npm run check`.
 3. Vérifiez que le manifeste, le catalogue et le paquet généré indiquent le même identifiant et la même version.

@@ -442,6 +442,7 @@ const sidebarDe = {
         { text: 'Manifest und Fähigkeiten', link: '/projects/atlas-plugins/developers/manifest' },
         { text: 'Runtime und Lebenszyklus', link: '/projects/atlas-plugins/developers/runtime' },
         { text: 'Bauen und veröffentlichen', link: '/projects/atlas-plugins/developers/publishing' },
+        { text: 'Versionen und Kompatibilität', link: '/projects/atlas-plugins/developers/compatibility' },
         { text: 'Plugin-Vorlage', link: '/projects/atlas-plugins/plugin-template' },
         { text: 'Repository-Format', link: '/projects/atlas-plugins/repository-format' }
       ]
@@ -840,6 +841,7 @@ const sidebarEn = {
         { text: 'Manifest and Capabilities', link: '/en/projects/atlas-plugins/developers/manifest' },
         { text: 'Runtime and Lifecycle', link: '/en/projects/atlas-plugins/developers/runtime' },
         { text: 'Build and Publish', link: '/en/projects/atlas-plugins/developers/publishing' },
+        { text: 'Versions and Compatibility', link: '/en/projects/atlas-plugins/developers/compatibility' },
         { text: 'Plugin Template', link: '/en/projects/atlas-plugins/plugin-template' },
         { text: 'Repository Format', link: '/en/projects/atlas-plugins/repository-format' }
       ]
@@ -944,6 +946,7 @@ const sidebarFr = {
         { text: 'Manifeste et capacités', link: '/fr/projects/atlas-plugins/developers/manifest' },
         { text: 'Runtime et cycle de vie', link: '/fr/projects/atlas-plugins/developers/runtime' },
         { text: 'Construire et publier', link: '/fr/projects/atlas-plugins/developers/publishing' },
+        { text: 'Versions et compatibilité', link: '/fr/projects/atlas-plugins/developers/compatibility' },
         { text: 'Modèle de plugin', link: '/fr/projects/atlas-plugins/plugin-template' },
         { text: 'Format du dépôt', link: '/fr/projects/atlas-plugins/repository-format' }
       ]

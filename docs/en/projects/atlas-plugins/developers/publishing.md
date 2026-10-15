@@ -17,6 +17,8 @@ The build creates an installable package from the manifest and synchronizes the 
 
 ## Release steps
 
+Follow the [version and compatibility rules](./compatibility), including backups, migration boundaries and recovery.
+
 1. Increment the manifest `version` for every functional or visible release.
 2. Run `npm run build` and `npm run check`.
 3. Confirm the manifest, catalog and generated package use the same ID and version.

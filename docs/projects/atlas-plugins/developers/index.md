@@ -16,6 +16,7 @@ Dieser Bereich führt durch den Entwicklungsweg für eigenständige ATLAS-Plugin
 
 ## Leitfäden
 
+- [Versionen und Kompatibilität](./compatibility): Veröffentlichungsregeln, geprüfte Grenzen, Sicherung und Datenmigration.
 - [Manifest und Fähigkeiten](./manifest): Metadaten, IDs, Versionen, Assets und Deklarationen.
 - [Runtime und Lebenszyklus](./runtime): Runtime-Plugin-Vertrag sowie Aktivieren, Deaktivieren und Aufräumen.
 - [Bauen, prüfen und veröffentlichen](./publishing): Paketgenerator, Katalog, GitHub Actions und Release-Checkliste.
