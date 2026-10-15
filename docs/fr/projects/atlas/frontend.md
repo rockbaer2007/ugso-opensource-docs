@@ -172,8 +172,21 @@ de vrais redémarrages HA. Un format de test inconnu est refusé sans modifier
 l’entrée. Sur Pi 5 et Proxmox, mise à jour HACS vers 0.1.306, redémarrage HA,
 panneau, entités en direct et conservation des données sont vérifiés.
 L’App ATLAS séparée reste en 0.1.305 pendant cette vérification de l’intégration.
-Les autres versions HA et les conversions réelles entre formats de données
-différents restent à qualifier séparément.
+
+La version stable supplémentaire **2026.9.4** est vérifiée avec l’intégration et
+le Runtime **0.1.306** dans une installation amd64 isolée et neuve :
+configuration/options, rechargement de l’intégration, redémarrage complet de HA,
+Hub, Administration et Editor intégrés, détection authentifiée de la version
+et sélection d’entités en direct. L’entrée, les autres panneaux, le projet de
+test, les données du plugin et le fichier de configuration sont conservés.
+Pi 5 et Proxmox restent inchangés pour cette vérification supplémentaire.
+Téléchargement HACS, Supervisor, ARM64 et retour à une ancienne intégration
+n’ont pas été revérifiés sous 2026.9.4.
+
+La matrice CI vérifie onze contrats d’intégration avec **2026.9.4** et
+**2026.10.1**. Cela ne remplace pas les tests séparés avec HA en fonctionnement
+et ne valide pas toutes les versions intermédiaires. Les autres versions HA et
+les conversions réelles entre formats de données restent à qualifier séparément.
 
 Références : [panneaux personnalisés HA](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 et [structure des intégrations HACS](https://www.hacs.xyz/docs/publish/integration/).

@@ -175,8 +175,20 @@ anderen Panels über echte HA-Neustarts. Ein unbekanntes Testformat wird ohne
 Änderung des Eintrags abgewiesen. Auf Pi 5 und Proxmox ist das HACS-Update auf
 0.1.306 samt HA-Neustart, Panel, Live-Entitäten und Datenerhalt geprüft. Die
 separate ATLAS-App bleibt bei dieser Integrationsprüfung auf 0.1.305.
-Weitere HA-Versionen und echte Umwandlungen zwischen unterschiedlichen
-Datenformaten bleiben separate Qualifikationsschritte.
+
+Die zusätzliche stabile Version **2026.9.4** ist mit Integration und Laufzeit
+**0.1.306** in einer frischen isolierten amd64-Installation geprüft:
+Einrichtung/Optionen, Integrations-Neuladen, vollständiger HA-Neustart,
+eingebetteter Hub, Administration und Editor, authentifizierte Versionserkennung
+und Live-Entitätsauswahl. Konfigurationseintrag, andere Panels sowie Testprojekt,
+Plugin-Daten und Konfigurationsdatei bleiben erhalten. Pi 5 und Proxmox wurden
+für diese zusätzliche Prüfung nicht verändert. HACS-Download, Supervisor,
+ARM64 und Integrations-Rollback wurden unter 2026.9.4 nicht erneut geprüft.
+
+Die CI-Matrix prüft elf Integrationsverträge gegen **2026.9.4** und **2026.10.1**.
+Das ersetzt die gesonderten Prüfungen mit laufendem HA nicht und bestätigt keinen
+durchgehenden Versionsbereich. Weitere HA-Versionen und echte Umwandlungen
+zwischen unterschiedlichen Datenformaten bleiben separate Qualifikationsschritte.
 
 Grundlagen: [HA-Custom-Panels](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 und [HACS-Integrationsstruktur](https://www.hacs.xyz/docs/publish/integration/).

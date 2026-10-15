@@ -157,8 +157,19 @@ config entry and unrelated panels across real HA restarts. An unknown fixture
 schema is rejected without modifying its entry. On Pi 5 and Proxmox, the HACS
 update to 0.1.306, HA restart, panel, live entities and data preservation pass.
 The separate ATLAS App stays on 0.1.305 during this integration qualification.
-Further HA versions and actual conversion between different data schemas remain
-separate qualification steps.
+
+The additional stable version **2026.9.4** is verified with integration and runtime
+**0.1.306** in a fresh isolated amd64 installation: config/options, integration
+reload, full HA restart, embedded Hub, Administration and Editor, authenticated
+version discovery and live entity selection. The config entry, unrelated panels,
+fixture project, plugin data and configuration file are preserved. Pi 5 and
+Proxmox were unchanged for this additional check. HACS download, Supervisor,
+ARM64 and integration rollback were not repeated on 2026.9.4.
+
+The CI matrix checks eleven integration contracts against **2026.9.4** and
+**2026.10.1**. This does not replace separate running-HA checks or establish an
+inclusive version range. Further HA versions and actual conversion between
+different data schemas remain separate qualification steps.
 
 References: [HA custom panels](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 and [HACS integration structure](https://www.hacs.xyz/docs/publish/integration/).
