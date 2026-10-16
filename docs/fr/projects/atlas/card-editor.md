@@ -144,10 +144,29 @@ les métadonnées de grille conservées ne garantissent pas une géométrie iden
 au pixel près. Les ressources isolées sont servies via `/local/` ; cela ne
 valide pas le téléchargement depuis un dépôt HACS.
 
-Les exports EN/DE/FR sont indépendants de la langue de l’éditeur. Sans adaptateur
-de traduction, DE/FR contiennent des replis anglais identifiés. Le script Expert
-généré ne charge pas encore ces fichiers lui-même. Les libellés d’état HA et
-communautaires suivent leur propre langue ; les noms personnalisés restent tels quels.
+### Fichiers de langue du script exporté
+
+Depuis l’App **0.1.308**, le script Card charge `locales/en.json` et la langue
+choisie relativement à sa propre URL. Déployer le JavaScript et le dossier
+voisin `locales/` ensemble sur la même origine HA ; déclarer la ressource
+Lovelace avec le type `module`. La Card suit la langue HA. `language: de` ou
+`language: fr` dans sa configuration permet de la fixer ; les variantes
+`de-DE` et `fr-FR` utilisent leur langue de base.
+
+Le titre, l’aide pour les entités de démonstration et le message d’erreur du
+script utilisent ces textes. Chaque texte absent, invalide ou incomplet utilise
+`en.json`, puis l’anglais intégré. Le script fonctionne aussi sans fichiers de
+langue. Un `title` ou `replacement_hint` personnalisé distinct reste prioritaire.
+Les noms des champs et identifiants d’entités restent intacts ; HA traduit ses
+propres libellés et ceux des cartes communautaires. Chaque langue est chargée
+une fois par visite. Recharger après modification ; après une mise à jour du
+script, ajouter si nécessaire une nouvelle version à l’URL de la ressource.
+
+Les exports EN/DE/FR sont indépendants de la langue de l’éditeur. Sans exécution
+d’un adaptateur de traduction, DE/FR contiennent des replis anglais identifiés,
+à traduire et vérifier. Un manifeste HACS limité à `filename` ne garantit pas la
+livraison des JSON : déployer explicitement `locales/`. La distribution automatique
+depuis un dépôt HACS reste à vérifier séparément.
 
 ## Tabbed Card V2
 

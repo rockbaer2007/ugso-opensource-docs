@@ -169,10 +169,27 @@ The exported script renders in real HA with Bubble **3.4.2** and Mushroom
 metadata does not guarantee identical pixel geometry. The isolated resources
 were served through `/local/`; this does not qualify HACS repository downloads.
 
-EN/DE/FR exports are independent of the editor language. Without a translation
-adapter, DE/FR contain marked English fallbacks. The generated Expert script
-does not currently load these files itself. HA/community state labels follow
-their own language; user-defined card names remain unchanged.
+### Language files in the exported script
+
+From App **0.1.308**, generated Card scripts load `locales/en.json` and the
+selected language relative to their own script URL. Deploy JavaScript and its
+sibling `locales/` folder together on the same HA origin; register the Lovelace
+resource as type `module`. Cards follow the HA language. Override it with
+`language: de` or `language: fr` in the Card configuration; regional values such
+as `de-DE` and `fr-FR` use their base language.
+
+The title, demo-entity hint and script-owned error message use the locale file.
+Missing, invalid or partial translations fall back per field to `en.json`, then
+embedded EN. The script also works without language files. A distinct explicit
+`title` or `replacement_hint` takes priority. Authored field names and entity IDs
+remain unchanged; HA translates HA/community labels. Each language loads once
+per page visit. Reload after editing files; after script updates, use a new
+version query on the resource URL if necessary.
+
+EN/DE/FR exports are independent of the editor language. Without an executed
+translation adapter, DE/FR contain marked English fallbacks requiring translation
+and review. A filename-only HACS manifest does not guarantee JSON delivery:
+deploy `locales/` explicitly. Automatic HACS repository delivery needs separate verification.
 
 ## Tabbed Card V2
 

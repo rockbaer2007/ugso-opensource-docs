@@ -178,10 +178,29 @@ verwendet generierte Stacks; erhaltene Rasterdaten garantieren keine identische
 Pixelgeometrie. Die isolierte Bereitstellung erfolgte über `/local/`; ein
 HACS-Repository-Download wird dadurch nicht bestätigt.
 
+### Sprachdateien im exportierten Script
+
+Ab App **0.1.308** lädt das generierte Card-Script `locales/en.json` und die
+gewählte Sprache relativ zur eigenen Script-Adresse. JavaScript und den
+benachbarten Ordner `locales/` gemeinsam auf derselben HA-Adresse bereitstellen;
+die Lovelace-Ressource muss vom Typ `module` sein. Die Card folgt der HA-Sprache.
+Mit `language: de` oder `language: fr` in der Card-Konfiguration lässt sich diese
+Wahl überschreiben; `de-DE` und `fr-FR` verwenden die jeweilige Basissprache.
+
+Titel, Demo-Entitäten-Hinweis und eigene Fehlermeldung verwenden die Sprachdatei.
+Fehlende, ungültige oder unvollständige Texte fallen einzeln auf `en.json`, dann
+auf eingebautes EN zurück. Das Script funktioniert auch ohne Sprachdateien.
+Ein abweichender eigener `title` oder `replacement_hint` hat Vorrang. Eigene
+Feldnamen und Entitäts-IDs bleiben erhalten; HA-/Community-Texte übersetzt HA.
+Dateien werden pro Sprache einmal je Seitenaufruf geladen. Nach Änderungen
+die Seite neu laden; nach Script-Updates gegebenenfalls den Ressourcen-URL mit
+einer neuen Versionsabfrage versehen.
+
 EN/DE/FR werden unabhängig von der Editor-Sprache exportiert. DE/FR enthalten
-ohne Übersetzungsadapter gekennzeichnete englische Fallbacks. Das generierte
-Expert-Script lädt diese Dateien derzeit nicht selbst. HA-/Community-Zustandstexte
-folgen ihrer eigenen Sprache; selbst vergebene Card-Namen bleiben unverändert.
+ohne ausgeführten Übersetzungsadapter gekennzeichnete englische Fallbacks und
+benötigen Übersetzung/Prüfung. Das HACS-Manifest mit `filename` allein sichert
+die Auslieferung der JSON-Dateien nicht: den Ordner `locales/` ausdrücklich
+mit bereitstellen. Eine automatische HACS-Repository-Auslieferung ist separat zu prüfen.
 
 ## Tabbed Card V2
 
