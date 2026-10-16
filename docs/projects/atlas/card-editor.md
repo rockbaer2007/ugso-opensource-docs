@@ -274,9 +274,21 @@ bleiben mit dem bisherigen Sprach-Fallback nutzbar.
 In HACS das vollständige Card-Paket erneut herunterladen, dann den Browser neu
 laden; bei Bedarf die Sicherung wiederherstellen. Nach erfolgreicher Reparatur
 und Neuladen verschwindet der Hinweis. Alte bereits installierte Scripts müssen
-neu exportiert und ausgeliefert werden. Die Prüfung erkennt fehlende/unlesbare
-Dateien, aber keine vertauschten Releases mit weiterhin gültigen Sprachdateien;
-sie ist keine kryptografische Integritätsprüfung und repariert nichts automatisch.
+neu exportiert und ausgeliefert werden.
+
+Ab **0.1.311** tragen neu exportierte Scripts und Sprachdateien zusätzlich eine
+gemeinsame deterministische Paketkennung (`_meta.packageId` in den Sprachdateien).
+Eine fremde oder fehlende Kennung löst ebenfalls den Reparaturhinweis aus;
+betroffene Texte werden nicht angewendet, EN beziehungsweise eingebautes Englisch
+bleibt als Fallback verfügbar. Beim Übersetzen die Kennung beibehalten. Keine
+Kennungen aus anderen Paketen übernehmen, um einen Hinweis zu unterdrücken.
+Die Prüfung erkennt versehentlich gemischte Exporte, ist aber keine Signatur
+und erkennt keine Textänderungen mit unveränderter Kennung. Identische Exporte
+haben dieselbe Kennung. Alte Scripts werden nicht nachträglich geändert.
+Es gibt keine automatische Reparatur oder Wiederherstellung.
+Die neue Paketprüfung ist zuerst isoliert mit HA 2026.10.1/HACS 2.0.5 geprüft:
+gemischtes EN/FR, fehlende Kennung, weiter gerenderte Cards und Reparatur nach
+Neuladen. Pi 5 und Proxmox bleiben bei dieser Prüfung unverändert auf 0.1.310.
 
 Das Update auf 0.1.310 und diese Prüfung sind auch auf Proxmox und Pi 5 nach
 frischen Backups getestet: eigene neue Test-Cards, fehlendes FR sowie EN und

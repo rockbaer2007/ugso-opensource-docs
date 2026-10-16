@@ -258,8 +258,19 @@ files. Cards and live states remain usable with the existing language fallback.
 In HACS, redownload the complete Card package and reload the browser; restore
 your backup if needed. The notice disappears after successful repair and reload.
 Existing installed scripts need re-exporting and redistribution. This detects
-missing/unreadable files, not mixed releases whose locale files remain valid;
-it is not cryptographic integrity verification and does not repair automatically.
+missing/unreadable files.
+
+From **0.1.311**, newly exported scripts and locales also share a deterministic
+package marker (`_meta.packageId` in locale files). A different or missing marker
+also triggers the repair notice; affected text is ignored, retaining EN or embedded
+English fallback. Keep the marker when translating. Do not copy markers between
+packages to suppress warnings. This detects accidental mixed exports, not tampering
+or text changes retaining the marker; it is not a signature. Identical exports
+have the same marker. Old scripts are not retroactively changed. There is no
+automatic repair or recovery.
+The new package check is first verified in isolated HA 2026.10.1/HACS 2.0.5:
+mixed EN/FR, missing markers, continued Card rendering and repair after reload.
+Pi 5 and Proxmox remain unchanged at 0.1.310 during this qualification.
 
 The 0.1.310 update and this check are also tested on Proxmox and Pi 5 after fresh
 backups: separate newly generated test Cards, missing FR and EN, then restoration

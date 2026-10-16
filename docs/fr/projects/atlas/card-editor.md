@@ -237,9 +237,20 @@ en direct restent utilisables avec le repli linguistique existant.
 Dans HACS, retélécharger le paquet Card complet et recharger le navigateur ;
 restaurer la sauvegarde si nécessaire. L’avis disparaît après réparation et
 rechargement. Les scripts déjà installés doivent être réexportés et redistribués.
-Ce contrôle détecte les fichiers absents/illisibles, pas un mélange de releases
-dont les fichiers de langue restent valides ; il ne s’agit ni d’une vérification
-cryptographique ni d’une réparation automatique.
+Ce contrôle détecte les fichiers absents/illisibles.
+
+À partir de **0.1.311**, les scripts et langues nouvellement exportés partagent
+aussi un identifiant de paquet déterministe (`_meta.packageId` dans les langues).
+Un identifiant différent ou absent déclenche également l’avis ; les textes
+concernés sont ignorés, avec repli EN ou anglais intégré. Conserver cet identifiant
+lors de la traduction ; ne pas copier celui d’un autre paquet pour masquer l’avis.
+Ce contrôle détecte les mélanges accidentels, pas les modifications de texte avec
+un identifiant inchangé ; ce n’est pas une signature. Des exports identiques ont
+le même identifiant. Les anciens scripts ne sont pas modifiés rétroactivement.
+Il n’y a ni réparation ni restauration automatique.
+Le nouveau contrôle est d’abord vérifié dans HA 2026.10.1/HACS 2.0.5 isolé :
+EN/FR mélangés, identifiant absent, Cards toujours affichées et réparation après
+rechargement. Pi 5 et Proxmox restent inchangés en 0.1.310 pendant ce contrôle.
 
 La mise à jour 0.1.310 et ce contrôle sont aussi testés sur Proxmox et Pi 5 après
 de nouvelles sauvegardes : Cards de test distinctes nouvellement générées, FR et
