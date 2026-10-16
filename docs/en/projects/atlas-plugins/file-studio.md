@@ -30,7 +30,12 @@ persistent store too, then replace the container. A migration marker prevents
 restored entries from being imported again on restart.
 
 Files already discarded with an old container still require an existing backup.
-The correction is first qualified in isolation; Pi 5 and Proxmox remain unchanged.
+After isolated qualification, the 0.1.311 to 0.1.312 update was also verified on
+Proxmox and Pi 5 on 2026-10-16: fresh HA backups, migration inside the old
+container and PC backups of both old and prepared stores first. Both original
+trash entries and all twelve history files survive on each host, together with
+settings, active files, projects and plugins. This is not a full HAOS backup
+restoration test.
 
 ## Repository
 

@@ -35,7 +35,12 @@ la sauvegarde. Sauvegarder ensuite les données persistantes, puis remplacer le
 conteneur. Un marqueur empêche de réimporter les éléments déjà restaurés au redémarrage.
 
 Les fichiers déjà perdus avec un ancien conteneur nécessitent toujours une sauvegarde.
-La correction est d’abord vérifiée isolément ; Pi 5 et Proxmox restent inchangés.
+Après la vérification isolée, la mise à jour de 0.1.311 vers 0.1.312 a aussi été
+vérifiée sur Proxmox et Pi 5 le 16/10/2026 : sauvegardes HA récentes, migration
+dans l’ancien conteneur et copies PC des données initiales et préparées avant
+la mise à jour. Les deux anciens éléments de corbeille et les douze fichiers
+d’historique sont conservés sur chaque hôte, ainsi que paramètres, fichiers
+actifs, projets et plugins. Ce n’est pas un test de restauration HAOS complète.
 
 ## Dépôt
 

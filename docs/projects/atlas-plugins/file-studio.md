@@ -30,8 +30,13 @@ sichern, dann den Container ersetzen. Ein Übernahmemarker verhindert, dass
 wiederhergestellte Einträge beim Neustart erneut importiert werden.
 
 Bereits mit einem alten Container verlorene Dateien werden dadurch nicht
-zurückgeholt; dafür ist eine vorhandene Sicherung nötig. Die Korrektur wird
-zuerst isoliert geprüft; Pi 5 und Proxmox bleiben dabei unverändert.
+zurückgeholt; dafür ist eine vorhandene Sicherung nötig. Nach der isolierten
+Prüfung wurde am 16.10.2026 auch der Wechsel von 0.1.311 auf 0.1.312 auf
+Proxmox und Pi 5 geprüft: vorher frische HA-Backups, Übernahme im alten Container
+und PC-Sicherung der alten sowie vorbereiteten Ablagen. Je Host bleiben beide
+alten Papierkorbeinträge und alle zwölf Historien-Dateien erhalten, ebenso
+Einstellungen, aktive Dateien, Projekte und Plugins. Dies ist kein Test einer
+vollständigen HAOS-Backup-Wiederherstellung.
 
 ## Repository
 
