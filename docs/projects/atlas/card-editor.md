@@ -439,6 +439,22 @@ tabs:
 
 ## Aktueller Status
 
+::: info Größeres Projekt isoliert geprüft am 16.10.2026
+Mit ATLAS 0.1.312 und HA 2026.10.1 wurden 36 Expert-Felder geprüft: je zwölf
+Core-, Bubble- und Mushroom-Karten mit zwei lokalen Testentitäten. Speichern,
+Neuladen und Öffnen des Serverprojekts sowie HACS-Bundle-Export/Import erhalten
+alle Felder und die Kartenkonfiguration; wiederholte Exporte mit gleicher
+Sprachauswahl sind bytegleich. HA rendert alle 36 Karten ohne Fehlkarte.
+Während 360 Zustandswechseln in gut drei Minuten verbinden sich Editor und,
+beim längsten Ausfall, auch die HA-Ansicht nach Transportabbrüchen von rund
+12, 24 und 62 Sekunden automatisch wieder. Vorhandene Testdaten bleiben erhalten.
+Pi 5 und Proxmox wurden nicht abgefragt oder verändert. Das ist ein begrenzter
+Funktionstest, kein Hardware-Benchmark oder Nachweis für beliebige Projektgrößen.
+Der tatsächliche Browserexport wurde vollständig an einem neuen Ressourcenpfad
+geprüft; beim manuellen Austausch unter derselben URL kann ein altes Script im
+Browsercache mit neuen Sprachdateien kollidieren und den Reparaturhinweis auslösen.
+:::
+
 Der Card Editor ist ein aktiver Entwicklungsstand. Expert-Workflow,
 Import/Export, Entity-Auswahl, Ressourcenprüfung, Container-Cards und lokale
 Custom-Card-Mappings für gescannte Lovelace-Ressourcen sind bereits testbar.

@@ -415,6 +415,22 @@ tabs:
 
 ## Current Status
 
+::: info Larger project qualified in isolation on 2026-10-16
+ATLAS 0.1.312 and HA 2026.10.1 passed a 36-field Expert project: twelve each of
+Core, Bubble and Mushroom cards using two local fixture entities. Saving,
+reloading and opening the server project, plus HACS-bundle export/import, retain
+all fields and card configuration. Repeated exports with identical language
+options are byte-identical. HA renders all 36 cards without error cards.
+During 360 state changes over just above three minutes, the Editor and, for the
+longest outage, the HA view reconnect automatically after transport outages of
+about 12, 24 and 62 seconds. Existing fixture data remains intact. Pi 5 and
+Proxmox were neither queried nor changed. This is a bounded functional test,
+not a hardware benchmark or proof of arbitrary project sizes.
+The actual browser export was checked as a complete package at a fresh resource
+path. Manual replacement at the same URL may mix a cached old script with new
+locale files and trigger the repair notice.
+:::
+
 The Card Editor is in active development. Expert workflow, import/export,
 entity selection, resource checks, container cards and local custom-card
 mappings for scanned Lovelace resources are already testable. Additional

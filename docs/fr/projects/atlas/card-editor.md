@@ -392,6 +392,23 @@ tabs:
 
 ## État actuel
 
+::: info Grand projet vérifié en isolation le 16/10/2026
+ATLAS 0.1.312 et HA 2026.10.1 ont validé 36 champs Expert : douze cartes Core,
+douze Bubble et douze Mushroom avec deux entités de test locales. Enregistrement,
+rechargement et ouverture du projet serveur, puis export/import du bundle HACS,
+conservent tous les champs et la configuration. Les exports avec les mêmes
+langues sont identiques octet par octet. HA affiche les 36 cartes sans carte d’erreur.
+Pendant 360 changements d’état sur un peu plus de trois minutes, l’éditeur et,
+pour la coupure la plus longue, la vue HA se reconnectent automatiquement après
+des interruptions de transport d’environ 12, 24 et 62 secondes. Les données de test
+existantes sont conservées. Pi 5 et Proxmox n’ont été ni interrogés ni modifiés.
+Cet essai fonctionnel limité ne constitue pas un benchmark matériel ni une
+validation de toutes les tailles de projet.
+Le véritable export du navigateur a été vérifié au complet à un nouveau chemin
+de ressource. Un remplacement manuel sous la même URL peut mélanger un ancien
+script en cache avec de nouveaux fichiers de langue et afficher l’avis de réparation.
+:::
+
 L’éditeur reste en développement actif. Le workflow Expert, l’import/export,
 les entités, les vérifications de ressources, les conteneurs et les
 correspondances locales sont utilisables. Des correspondances personnalisées
