@@ -84,9 +84,27 @@ exports, project, another plugin, trash and history remained exact. DE/EN/FR
 analysis, byte-identical safety backups, export/import pairs with/without ID and
 opening exports in File Studio passed. HA version metadata came from a local
 test endpoint; this does not qualify real HA authentication, GitHub updates or
-data-format migration. **Pi 5 and Proxmox were neither queried nor changed.**
-Native qualification remains open.
+data-format migration. **Pi 5 and Proxmox were unchanged during this isolated check.**
 :::
+
+::: info Subsequent Pi 5 and Proxmox qualification on 2026-10-16
+After fresh local HA backups and additional PC copies, both hosts passed
+**installed 0.1.28 → 0.1.27 → original 0.1.28**. The actual older package was
+applied through the backend compatibility preview; cancellation and recovery
+from the new backup used Administration. Both retain ATLAS 0.1.312 and HA 2026.10.1.
+
+All nine original plugin assets were restored exactly. Checked source automations,
+existing exports and automation backups, settings, server projects, other plugins,
+trash and history were preserved. Analysis of an uploaded synthetic YAML fixture
+was identical before and after recovery. No user automation was exported, executed
+or written back to HA; no HA/App restart was needed. This does not qualify a
+complete HA restore, data-format migration or a new GitHub release.
+:::
+
+Reload Administration and the plugin page after recovery. During testing, the
+open Administration briefly reported unsaved shared changes although server
+recovery was correct. Reloading showed the shared server state again. Do not
+adopt an old local state solely because of that message.
 
 Language and appearance are stored locally. Loaded analysis, selection, filters,
 the entered export folder and export overview belong to the current session.

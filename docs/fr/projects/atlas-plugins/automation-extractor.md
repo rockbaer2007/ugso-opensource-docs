@@ -71,8 +71,30 @@ restent identiques. Analyse DE/EN/FR, sauvegardes identiques à la source, paire
 d’export/import avec/sans ID et ouverture dans File Studio réussissent. La version
 HA provient d’un serveur de test local : ni authentification HA réelle, ni mise
 à jour GitHub, ni migration de format ne sont qualifiées.
-**Pi 5 et Proxmox n’ont été ni interrogés ni modifiés.** Les essais natifs restent ouverts.
+**Pi 5 et Proxmox sont restés inchangés pendant cet essai isolé.**
 :::
+
+::: info Vérification native ultérieure sur Pi 5 et Proxmox le 16/10/2026
+Après de nouvelles sauvegardes HA locales et des copies supplémentaires sur PC,
+les deux hôtes passent **0.1.28 installée → 0.1.27 → 0.1.28 d’origine**. Le vrai
+ancien paquet est appliqué via l’aperçu de compatibilité du serveur ; annulation
+et restauration de la nouvelle sauvegarde utilisent l’administration. Les hôtes
+conservent ATLAS 0.1.312 et HA 2026.10.1.
+
+Les neuf fichiers du plugin d’origine sont restaurés exactement. Automatisations
+sources contrôlées, exports et sauvegardes d’automatisations existants, paramètres,
+projets serveur, autres plugins, corbeille et historique sont conservés. L’analyse
+d’un YAML de test importé est identique avant et après restauration. Aucune
+automatisation utilisateur n’est exportée, exécutée ou réécrite dans HA ; aucun
+redémarrage HA/App n’est nécessaire. Ce contrôle ne qualifie ni restauration HA
+complète, ni migration de format, ni nouvelle publication GitHub.
+:::
+
+Après restauration, recharger l’administration et la page du plugin. Pendant
+l’essai, l’administration ouverte signalait brièvement des changements non
+enregistrés alors que l’état serveur était correctement restauré. Le rechargement
+affichait de nouveau l’état partagé. Ne pas adopter un ancien état local pour
+cette seule raison.
 
 Langue et apparence sont enregistrées localement. Analyse chargée, sélection,
 filtres, dossier d’export saisi et liste des exports appartiennent à la session.

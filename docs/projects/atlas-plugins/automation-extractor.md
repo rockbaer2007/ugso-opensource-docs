@@ -92,8 +92,31 @@ blieben beim Dateivergleich erhalten. Analyse in DE/EN/FR, bytegleiche
 Sicherheitskopien, Exportpaare mit/ohne ID und Öffnen im File Studio bestanden.
 Die HA-Version kam von einem lokalen Testendpunkt; das ist kein Test einer echten
 HA-Verbindung, eines GitHub-Updates oder einer Datenformat-Migration.
-**Pi 5 und Proxmox wurden weder abgefragt noch verändert.** Native Tests bleiben offen.
+**Pi 5 und Proxmox wurden bei dieser isolierten Prüfung nicht verändert.**
 :::
+
+::: info Anschließend auf Pi 5 und Proxmox geprüft am 16.10.2026
+Nach neuen lokalen HA-Backups und zusätzlichen PC-Sicherungen wurde auf beiden
+Hosts **die installierte 0.1.28 → 0.1.27 → ursprüngliche 0.1.28** geprüft. Der
+Wechsel auf das echte ältere Paket nutzte die Kompatibilitätsvorschau des
+Backends; Abbruch und Wiederherstellung der neu erzeugten Sicherung liefen über
+die Administration. Beide Hosts behalten ATLAS 0.1.312 und HA 2026.10.1.
+
+Alle neun ursprünglichen Plugin-Dateien wurden exakt wiederhergestellt. Geprüfte
+Quellautomationen, vorhandene Exporte und Automations-Backups, Einstellungen,
+Server-Projekte, andere Plugins, Papierkorb und Historie blieben erhalten.
+Die Analyse einer eigenen hochgeladenen Test-YAML war vor und nach der
+Wiederherstellung identisch. Dafür wurden keine Nutzerautomationen exportiert,
+ausgeführt oder in HA zurückgeschrieben; ein HA-/App-Neustart war nicht nötig.
+Die nativen Prüfungen ersetzen keinen vollständigen HA-Restoretest und prüfen
+keine Datenformat-Migration oder neue GitHub-Veröffentlichung.
+:::
+
+Nach der Wiederherstellung Administration und Plugin-Seite neu laden. Im Test
+zeigte die noch offene Administration kurz „Änderungen noch nicht gemeinsam
+gespeichert“, obwohl der Serverstand korrekt wiederhergestellt war. Nach dem
+Neuladen wurde wieder der gemeinsame Serverstand angezeigt. Nicht allein wegen
+dieser Meldung einen alten lokalen Stand übernehmen.
 
 Sprache und Darstellung werden lokal gespeichert. Geladene Analyse, Auswahl,
 Filter, eingegebener Export-Ordner und Exportübersicht gehören zur aktuellen
