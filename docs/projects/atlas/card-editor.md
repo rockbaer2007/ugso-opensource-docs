@@ -439,6 +439,24 @@ tabs:
 
 ## Aktueller Status
 
+::: info 36-Karten-Durchlauf auf Proxmox und Pi 5 am 16.10.2026
+Nach frischen HA-Sicherungen wurden mit ATLAS 0.1.312 und HA 2026.10.1 auf
+beiden Hosts je zwölf Core-, Bubble- und Mushroom-Karten geprüft. Speichern,
+Neuladen und Wiederöffnen sowie Import des tatsächlichen Browserexports erhalten
+alle 36 Felder und die Kartenkonfiguration. Die beiden Exporte pro Host sind
+bei gleicher EN/DE/FR-Auswahl bytegleich. Bestehende lokale Editor-Konfigurationen
+wurden anschließend vollständig wiederhergestellt und verglichen.
+Nach einem echten Proxmox-VM-Neustart und einer vom Benutzer ausgeführten
+Pi-LAN-Unterbrechung verbinden sich die geöffneten Editoren ohne Neuladen wieder;
+die HA-Ansichten zeigen weiterhin alle 36 Karten ohne Fehlkarte.
+Diese Hostprüfung verwendet passive vorhandene Sensoren und umfasst keine
+360 künstlichen Zustandswechsel. Die Karten rendert Chrome auf dem PC;
+das ist kein ARM64-Browser- oder CPU/RAM-Benchmark. Bestehende ATLAS-Dateien,
+Projekte, Plugins, Papierkorb und Historie bleiben erhalten. Beim VM-Neustart
+wurde separat ein geänderter HACS-Abfrageparameter der vorhandenen
+selfhst-Ressource beobachtet und beibehalten.
+:::
+
 ::: info Größeres Projekt isoliert geprüft am 16.10.2026
 Mit ATLAS 0.1.312 und HA 2026.10.1 wurden 36 Expert-Felder geprüft: je zwölf
 Core-, Bubble- und Mushroom-Karten mit zwei lokalen Testentitäten. Speichern,

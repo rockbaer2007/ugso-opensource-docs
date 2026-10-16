@@ -415,6 +415,23 @@ tabs:
 
 ## Current Status
 
+::: info Native 36-card workflow on Proxmox and Pi 5 on 2026-10-16
+After fresh HA backups, ATLAS 0.1.312 and HA 2026.10.1 passed twelve Core,
+twelve Bubble and twelve Mushroom cards on each host. Saving, reloading,
+reopening and importing the actual browser export retain all 36 fields and
+the card configuration. Both exports per host are byte-identical with the same
+EN/DE/FR selection. Original local Editor configurations were restored and
+compared in full afterwards.
+Following a real Proxmox VM reboot and a user-performed Pi LAN interruption,
+the existing Editors reconnect without reload; the HA views still show all
+36 cards without error cards. This host check uses passive existing sensors,
+without the isolated test's 360 synthetic state changes. Chrome on the PC
+renders the cards; this is not an ARM64 browser or CPU/RAM benchmark.
+Existing ATLAS files, projects, plugins, trash and history remain intact.
+A changed HACS query parameter on the existing selfhst resource was separately
+observed after the VM reboot and retained.
+:::
+
 ::: info Larger project qualified in isolation on 2026-10-16
 ATLAS 0.1.312 and HA 2026.10.1 passed a 36-field Expert project: twelve each of
 Core, Bubble and Mushroom cards using two local fixture entities. Saving,

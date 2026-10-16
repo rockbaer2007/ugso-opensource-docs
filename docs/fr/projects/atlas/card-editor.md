@@ -392,6 +392,25 @@ tabs:
 
 ## État actuel
 
+::: info Parcours de 36 cartes sur Proxmox et Pi 5 le 16/10/2026
+Après de nouvelles sauvegardes HA, ATLAS 0.1.312 et HA 2026.10.1 ont validé
+douze cartes Core, douze Bubble et douze Mushroom sur chaque hôte.
+Enregistrement, rechargement, réouverture et import du véritable export du
+navigateur conservent les 36 champs et la configuration. Les deux exports par
+hôte sont identiques octet par octet avec la même sélection EN/DE/FR.
+Les configurations locales initiales ont ensuite été restaurées et comparées
+intégralement.
+Après un redémarrage réel de la VM Proxmox et une interruption LAN du Pi
+effectuée par l’utilisateur, les éditeurs ouverts se reconnectent sans
+rechargement ; les vues HA affichent toujours les 36 cartes sans carte d’erreur.
+Ce contrôle utilise des capteurs existants passifs, sans les 360 changements
+d’état artificiels du test isolé. Chrome sur le PC effectue le rendu ; ce
+n’est pas un benchmark de navigateur ARM64 ni de CPU/RAM. Fichiers ATLAS,
+projets, plugins, corbeille et historique existants sont conservés.
+Un paramètre HACS modifié sur la ressource selfhst existante a été observé
+séparément après le redémarrage de la VM et conservé.
+:::
+
 ::: info Grand projet vérifié en isolation le 16/10/2026
 ATLAS 0.1.312 et HA 2026.10.1 ont validé 36 champs Expert : douze cartes Core,
 douze Bubble et douze Mushroom avec deux entités de test locales. Enregistrement,
