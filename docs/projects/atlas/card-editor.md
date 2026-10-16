@@ -264,6 +264,20 @@ HACS-Standardliste. Pi 5 und Proxmox wurden für diese Prüfung nicht verändert
 
 ### Fehlgeschlagene und unterbrochene Updates
 
+Ab ATLAS **0.1.310** prüfen neu generierte Card-Scripts EN und alle beim Export
+ausgewählten Sprachdateien, auch inaktive Sprachen. Fehlt eine Datei oder ist
+sie nicht lesbar bzw. ungültiges JSON mit unpassenden Sprachmetadaten, erscheint
+ein kompakter Hinweis mit den betroffenen Dateipfaden. Der Reparaturtext ist
+unabhängig von diesen Dateien fest in DE/EN/FR eingebaut. Card und Live-Zustände
+bleiben mit dem bisherigen Sprach-Fallback nutzbar.
+
+In HACS das vollständige Card-Paket erneut herunterladen, dann den Browser neu
+laden; bei Bedarf die Sicherung wiederherstellen. Nach erfolgreicher Reparatur
+und Neuladen verschwindet der Hinweis. Alte bereits installierte Scripts müssen
+neu exportiert und ausgeliefert werden. Die Prüfung erkennt fehlende/unlesbare
+Dateien, aber keine vertauschten Releases mit weiterhin gültigen Sprachdateien;
+sie ist keine kryptografische Integritätsprüfung und repariert nichts automatisch.
+
 Unter isoliertem HA 2026.10.1/HACS 2.0.5 wurden Fehler gezielt in einer eigenen
 Testkopie ausgelöst: Das neue Script wurde echt von GitHub geladen und geschrieben,
 danach wurden Sprachdownloads als fehlgeschlagen gemeldet oder der Prozess vor

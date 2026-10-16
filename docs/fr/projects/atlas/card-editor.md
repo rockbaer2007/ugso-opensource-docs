@@ -227,6 +227,20 @@ défaut. Pi 5 et Proxmox restent inchangés.
 
 ### Mises à jour échouées ou interrompues
 
+À partir d’ATLAS **0.1.310**, les scripts Card nouvellement générés vérifient EN
+et toutes les langues sélectionnées pour l’export, y compris les langues inactives.
+Les fichiers absents, illisibles ou JSON invalides avec des métadonnées de langue
+incorrectes produisent un avis compact indiquant les chemins concernés. Le texte
+de réparation EN/DE/FR est intégré indépendamment de ces fichiers. Cards et états
+en direct restent utilisables avec le repli linguistique existant.
+
+Dans HACS, retélécharger le paquet Card complet et recharger le navigateur ;
+restaurer la sauvegarde si nécessaire. L’avis disparaît après réparation et
+rechargement. Les scripts déjà installés doivent être réexportés et redistribués.
+Ce contrôle détecte les fichiers absents/illisibles, pas un mélange de releases
+dont les fichiers de langue restent valides ; il ne s’agit ni d’une vérification
+cryptographique ni d’une réparation automatique.
+
 Des pannes ont été injectées dans une copie isolée HA 2026.10.1/HACS 2.0.5 :
 le nouveau script a réellement été téléchargé depuis GitHub et écrit, puis les
 téléchargements des langues ont signalé un échec ou le processus a été arrêté
