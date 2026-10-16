@@ -223,9 +223,34 @@ HACS propose ensuite toujours `v0.1.1` comme mise à jour ; le choix de l’anci
 version ne la verrouille pas définitivement.
 
 Il s’agit d’un dépôt personnalisé, pas d’une inclusion dans la liste HACS par
-défaut. Pi 5 et Proxmox restent inchangés. La restauration automatique après
-un téléchargement échoué ou interrompu et les autres versions HACS restent
-à vérifier séparément.
+défaut. Pi 5 et Proxmox restent inchangés.
+
+### Mises à jour échouées ou interrompues
+
+Des pannes ont été injectées dans une copie isolée HA 2026.10.1/HACS 2.0.5 :
+le nouveau script a réellement été téléchargé depuis GitHub et écrit, puis les
+téléchargements des langues ont signalé un échec ou le processus a été arrêté
+brutalement avant leur fin. Seule cette copie HACS contenait l’instrumentation de test.
+
+Lors d’un échec signalé, HACS affiche une erreur et restaure automatiquement
+l’ancienne Card avec EN/DE/FR. Un arrêt brutal laisse en revanche le nouveau
+script sans les fichiers de langue, même après redémarrage. HACS peut encore
+afficher l’ancienne version installée. Le repli EN intégré peut maintenir la
+Card visible ; l’affichage et le numéro de version ne prouvent donc pas que
+l’installation est complète.
+
+Après suppression de la panne, **Retélécharger** avec l’ancienne release connue
+a été vérifié avec succès. Recharger ensuite le navigateur et contrôler le script,
+tous les fichiers de langue, la ressource et l’affichage. Une sauvegarde complète
+distincte de la configuration Docker HA a aussi été restaurée dans un nouveau
+volume de test vide : les 2 500 fichiers étaient identiques avant démarrage ;
+HACS, les Cards et les états en direct fonctionnaient ensuite. Paramètres,
+tableau de bord et dépendances ont été conservés.
+
+La sauvegarde temporaire HACS ne remplace pas votre propre sauvegarde. La réparation
+automatique après arrêt brutal n’est pas garantie. Ce test contrôlé et cette
+restauration de volume Docker ne couvrent pas toutes les pannes réseau/disque,
+la restauration des sauvegardes HAOS ni les autres versions HACS.
 
 ## Tabbed Card V2
 

@@ -245,8 +245,32 @@ HACS still offers `v0.1.1` as an update afterwards; selecting the old version
 does not permanently pin it.
 
 This is custom registration, not inclusion in the central HACS default list.
-Pi 5 and Proxmox were unchanged. Automatic recovery after failed or interrupted
-downloads and further HACS versions still require separate verification.
+Pi 5 and Proxmox were unchanged.
+
+### Failed and interrupted updates
+
+Failures were injected into a dedicated isolated HA 2026.10.1/HACS 2.0.5 clone:
+the new script was really downloaded from GitHub and written, then locale
+downloads reported failure or the process was killed before they completed.
+Only this HACS test clone contained the test instrumentation.
+
+On a reported download error, HACS shows an error and automatically restores
+the old Card including EN/DE/FR. A hard process interruption instead leaves the
+new script with missing locale files, even after restart. HACS can still show
+the old installed version. Embedded EN fallback can keep the Card visible;
+rendering and the version label alone do not prove a complete installation.
+
+After removing the fault, **Redownload** with the known old release was verified
+successfully. Reload the browser afterwards and check the script, every locale
+file, resource registration and rendering. A separate full Docker HA configuration
+snapshot was also restored into a new empty test volume: all 2,500 saved files
+matched before startup; HACS, Cards and live states worked again afterwards.
+Settings, dashboard and dependencies remained intact.
+
+The temporary HACS backup does not replace your own backup. Automatic repair
+after process interruption is not guaranteed. This is a controlled fault test
+and Docker volume restoration, not proof for every network/storage failure,
+HAOS backup restoration or other HACS versions.
 
 ## Tabbed Card V2
 

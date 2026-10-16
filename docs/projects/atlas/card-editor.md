@@ -261,8 +261,33 @@ Updates nicht dauerhaft.
 
 Das ist eine benutzerdefinierte Registrierung, kein Eintrag in der zentralen
 HACS-Standardliste. Pi 5 und Proxmox wurden für diese Prüfung nicht verändert.
-Automatische Wiederherstellung nach fehlgeschlagenen oder unterbrochenen Downloads
-und weitere HACS-Versionen sind damit noch nicht geprüft.
+
+### Fehlgeschlagene und unterbrochene Updates
+
+Unter isoliertem HA 2026.10.1/HACS 2.0.5 wurden Fehler gezielt in einer eigenen
+Testkopie ausgelöst: Das neue Script wurde echt von GitHub geladen und geschrieben,
+danach wurden Sprachdownloads als fehlgeschlagen gemeldet oder der Prozess vor
+deren Abschluss hart beendet. Nur diese HACS-Testkopie enthielt die Testinstrumentierung.
+
+Bei einem gemeldeten Downloadfehler zeigt HACS einen Fehler und stellt die alte
+Card einschließlich EN/DE/FR automatisch wieder her. Beim harten Prozessabbruch
+bleiben dagegen das neue Script und fehlende Sprachdateien zurück, auch nach
+Neustart. HACS kann dabei noch die alte installierte Version anzeigen. Der
+eingebaute EN-Fallback lässt die Card trotzdem erscheinen; sichtbare Darstellung
+und Versionsanzeige allein beweisen daher keine vollständige Installation.
+
+Nach Beheben der Fehlerursache wurde **Erneut herunterladen** mit dem bekannten
+alten Release erfolgreich geprüft. Danach den Browser neu laden und Script,
+alle Sprachdateien, Ressourcenregistrierung und Darstellung kontrollieren.
+Eine eigene vollständige Docker-HA-Konfigurationssicherung wurde zusätzlich in
+ein neues leeres Testvolume zurückgespielt: alle 2.500 gesicherten Dateien vor
+dem Start bytegleich, danach HACS, Cards und Live-Zustände wieder funktionsfähig.
+Einstellungen, Dashboard und Abhängigkeiten blieben erhalten.
+
+Die temporäre HACS-Sicherung ersetzt kein eigenes Backup. Automatische Reparatur
+nach Prozessabbruch wird nicht zugesichert. Das ist ein kontrollierter Fehlertest
+und eine Docker-Volume-Wiederherstellung, kein Nachweis für jeden Netz-/Datenträgerfehler,
+eine HAOS-Backup-Wiederherstellung oder andere HACS-Versionen.
 
 ## Tabbed Card V2
 
