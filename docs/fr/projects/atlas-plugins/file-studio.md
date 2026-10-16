@@ -69,7 +69,7 @@ un autre matériel ; ARM64 et appareils physiques restent à vérifier séparém
 ## État actuel
 
 Le plugin est installable via le dépôt de démonstration dans l’Administration
-et le Hub. Version documentée du plugin : **0.1.51** ; application HA ATLAS :
+et le Hub. Version documentée du plugin : **0.1.52** ; application HA ATLAS :
 **0.1.312** au 16/10/2026. Ce sont deux versions distinctes.
 
 Le sélecteur DE/EN/FR traduit l’en-tête, les principaux contrôles et les avis
@@ -133,12 +133,14 @@ les liens symboliques et les types non pris en charge sont ignorés.
 
 ## Modèle de sécurité
 
-::: info État de publication au 16/10/2026
-Le manifeste et le paquet File Studio indiquent **0.1.51**, mais son catalogue
-indique encore **0.1.50**. Les fonctions ci-dessus décrivent 0.1.51. Une mise à
-jour par dépôt nécessite des versions identiques dans catalogue, paquet et
-manifeste ; ne pas contourner la vérification pour masquer cet écart. Cette
-revue documentaire ne change ni les paquets ni les installations existantes.
+::: info Cohérence des versions depuis 0.1.52
+Catalogue, manifeste, paquet et manifeste intégré indiquent **0.1.52**. La
+génération synchronise aussi le catalogue ; CI détecte les fichiers périmés en
+lecture seule avant publication. L’ancien écart catalogue 0.1.50/paquet 0.1.51 est
+corrigé sans modifier interface ni formats de données. Mise à jour, restauration
+du paquet, nouvelle mise à jour et redémarrage réussissent isolément, en
+conservant paramètres, fichiers, projet, autre plugin, corbeille et historique.
+Pi 5 et Proxmox restent inchangés ; ce n’est pas une qualification native de 0.1.52.
 :::
 
 | Chemin | Par défaut | Autorisation |

@@ -66,7 +66,7 @@ produktiven Backups auf anderer Hardware; ARM64 und physische Geräte bleiben of
 
 File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über das Demo-Repository in Administration und Hub getestet werden.
 
-- aktueller Plugin-Stand: `0.1.51`
+- aktueller Plugin-Stand: `0.1.52`
 - französische Oberfläche: DE/EN/FR-Auswahl, Kopfzeile, zentrale Werkzeugleisten-Steuerelemente und Hinweise zur Upload-Grenze; Dialoge und weitere Ablaufmeldungen sind noch nicht vollständig übersetzt
 - Upload-Hinweis: Dateien bis 64 MiB können direkt hochgeladen werden; bei größeren Dateien verweist File Studio auf die Samba-App
 - dokumentierter Home-Assistant-App/Add-on-Stand: `0.1.312` (16.10.2026)
@@ -115,13 +115,15 @@ Die Editor-Bibliothek wird lokal mit dem Plugin ausgeliefert. Dadurch braucht Fi
 
 ## Sicherheitsmodell
 
-::: info Veröffentlichungsstand am 16.10.2026
-Im externen File-Studio-Repository nennen Manifest und Paket **0.1.51**, der
-Repository-Katalog jedoch noch **0.1.50**. Die oben beschriebenen Funktionen
-beziehen sich auf 0.1.51. Bei einem Repository-Update müssen Katalog, Paket und
-Manifest dieselbe Version nennen; eine Versionsabweichung nicht durch Umgehen
-der Kompatibilitätsprüfung übergehen. Dieser Dokumentationsabgleich ändert keine
-Plugin-Artefakte oder vorhandenen Installationen.
+::: info Versionskonsistenz ab 0.1.52
+Katalog, Manifest, Paket und eingebettetes Manifest nennen einheitlich **0.1.52**.
+Der Paketgenerator synchronisiert nun auch den Katalog; eine lesende CI-Prüfung
+erkennt veraltete Artefakte vor der Veröffentlichung. Die frühere Abweichung
+Katalog 0.1.50 / Paket 0.1.51 ist behoben. Oberfläche und Datenformate bleiben
+unverändert. Update, Paket-Wiederherstellung, erneutes Update und Neustart sind
+isoliert mit erhaltenen Testeinstellungen, Dateien, Projekt, anderem Plugin,
+Papierkorb und Historie geprüft. Pi 5 und Proxmox wurden dabei nicht verändert;
+ein nativer Test von 0.1.52 ist damit nicht behauptet.
 :::
 
 Der erste Plugin-Vertrag beschreibt eine feste Zugriffspolitik:

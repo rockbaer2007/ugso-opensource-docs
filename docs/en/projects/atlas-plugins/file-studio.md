@@ -63,7 +63,7 @@ different hardware; ARM64 and physical devices remain separate qualification.
 
 File Studio is published as an installable ATLAS plugin and can be tested through the demo repository in Administration and Hub.
 
-- current plugin version: `0.1.51`
+- current plugin version: `0.1.52`
 - French UI coverage: DE/EN/FR selector, header, main toolbar controls and upload-limit notices; dialogs and other workflow messages are not fully translated yet
 - upload limit: files up to 64 MiB can be uploaded directly; larger files are directed to the Samba add-on
 - documented Home Assistant App/Add-on version: `0.1.312` (2026-10-16)
@@ -110,12 +110,14 @@ The editor library is shipped with the plugin. File Studio therefore does not ne
 
 ## Security Model
 
-::: info Publication state on 2026-10-16
-The external File Studio manifest and package report **0.1.51**, but its
-repository catalog still reports **0.1.50**. Features above describe 0.1.51.
-Repository updates require catalog, package and manifest versions to agree;
-do not bypass compatibility checks to override this mismatch. This documentation
-review changes no plugin artifacts or existing installations.
+::: info Version consistency from 0.1.52
+Catalog, manifest, package and embedded manifest all report **0.1.52**. The
+builder now synchronizes the catalog; a read-only CI check detects stale
+artifacts before publication. The previous catalog 0.1.50/package 0.1.51 mismatch
+is fixed without UI or data-format changes. Update, package recovery, re-update
+and restart pass in isolation with test settings, files, project, another plugin,
+trash and history preserved. Pi 5 and Proxmox are untouched; this does not claim
+native qualification of 0.1.52.
 :::
 
 The first plugin contract describes a fixed access policy:
