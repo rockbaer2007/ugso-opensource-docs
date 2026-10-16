@@ -185,11 +185,24 @@ pas un paquet d’installation `zip_release`. HACS 2.0.5 peut omettre des langue
 si le nom du script commence par `dist` ; ATLAS bloque cet export avec un message.
 Choisir un autre nom de script HACS. Les projets existants restent intacts.
 
-Vérifié isolément avec les méthodes de téléchargement inchangées de HACS 2.0.5
-et le véritable point d’accès `/hacsfiles/` sous HA 2026.10.1. Le transport des
-fichiers GitHub utilise une source locale de test ; l’authentification GitHub et
-l’enregistrement réel du dépôt ne sont pas validés. Les anciens bundles ATLAS
-avec script à la racine restent importables.
+Le parcours réel GitHub/HACS est aussi vérifié sous HA 2026.10.1 isolé avec
+HACS 2.0.5 : autorisation GitHub de l’appareil par l’utilisateur, enregistrement
+comme dépôt Dashboard personnalisé et téléchargement depuis `main`. Le script
+et EN/DE/FR sont installés avec les octets exacts de GitHub ; HACS enregistre
+automatiquement le module. Les anciens bundles ATLAS restent importables.
+
+Le [dépôt public d’export Card](https://github.com/rockbaer2007/atlas-hacs-delivery-card)
+est explicitement un exemple de test. Dans le menu principal HACS, ouvrir
+**Dépôts personnalisés**, saisir cette adresse GitHub, choisir **Dashboard** puis
+**Ajouter**. Ouvrir **Locale test card**, confirmer **Télécharger** et recharger
+le navigateur. La ressource est
+`/hacsfiles/atlas-hacs-delivery-card/atlas-hacs-delivery-card.js`.
+DE/FR sont des replis anglais identifiés. Bubble Card et Mushroom sont aussi
+nécessaires pour cet exemple de Card mixte.
+
+Il s’agit d’un dépôt personnalisé, pas d’une inclusion dans la liste HACS par
+défaut. Pi 5 et Proxmox restent inchangés. Les releases étiquetées, mises à jour,
+restaurations et autres versions HACS restent à vérifier séparément.
 
 ## Tabbed Card V2
 
