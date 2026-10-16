@@ -4,6 +4,34 @@ The interface language selector includes French. In this release, French covers 
 
 ATLAS File Studio is the second independent ATLAS plugin. It is intended to edit files in approved Home Assistant paths without allowing free root access by default.
 
+## Trash and history across App updates
+
+From ATLAS **0.1.312**, backend-managed stores default to
+`ATLAS_PLUGIN_DATA_ROOT/.file-studio/{trash,history}`. Docker must retain the
+plugin-data volume; the HA App uses `/data/atlas-plugins`. Existing Linux
+installer paths and `ATLAS_FILE_STUDIO_TRASH_ROOT` / `ATLAS_FILE_STUDIO_HISTORY_ROOT`
+overrides remain valid. Custom paths also need persistent mounts and backups.
+
+**First upgrade from an older container:** Back up its old trash/history folders
+and persistent data first. Pause File Studio writes until the update. Copy the
+standalone helper from the reviewed ATLAS release into the still-existing old
+container:
+
+```sh
+docker cp scripts/atlas-file-studio-retention.mjs OLD_CONTAINER:/tmp/atlas-file-studio-retention.mjs
+docker exec OLD_CONTAINER node /tmp/atlas-file-studio-retention.mjs --app-root /app --plugin-root /data/atlas-plugins
+```
+
+These paths apply to the standard image; check custom installations. For the HA
+App, run the same helper in its existing App terminal before updating. It adopts
+accessible legacy stores once, retains sources/entry IDs and refuses differing
+destination files. Review conflicts using the backup. After success, back up the
+persistent store too, then replace the container. A migration marker prevents
+restored entries from being imported again on restart.
+
+Files already discarded with an old container still require an existing backup.
+The correction is first qualified in isolation; Pi 5 and Proxmox remain unchanged.
+
 ## Repository
 
 - GitHub: `https://github.com/rockbaer2007/atlas-file-studio-plugin`

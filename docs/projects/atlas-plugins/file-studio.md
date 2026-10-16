@@ -2,6 +2,37 @@
 
 ATLAS File Studio ist das zweite unabhängige ATLAS-Plugin. Es soll Dateien in freigegebenen Home-Assistant-Pfaden bearbeiten, ohne standardmäßig freien Root-Zugriff zu erlauben.
 
+## Papierkorb und Historie über App-Updates
+
+Ab ATLAS **0.1.312** liegen die vom ATLAS-Backend verwalteten Ablagen standardmäßig
+unter `ATLAS_PLUGIN_DATA_ROOT/.file-studio/{trash,history}`. Docker muss die
+Plugin-Datenablage als Volume behalten; in der HA-App liegt sie unter
+`/data/atlas-plugins`. Vorhandene Linux-Installer-Pfade und die Overrides
+`ATLAS_FILE_STUDIO_TRASH_ROOT` / `ATLAS_FILE_STUDIO_HISTORY_ROOT` bleiben gültig.
+Bei eigenen Pfaden müssen auch diese dauerhaft eingebunden und gesichert werden.
+
+**Erster Wechsel von einer älteren Container-Version:** Zuerst die alten
+Papierkorb-/Historienordner und die persistenten Daten sichern. File-Studio-
+Schreibaktionen bis zum Update pausieren. Den eigenständig ausführbaren Helfer
+aus dem geprüften ATLAS-Release in den noch vorhandenen alten Container kopieren:
+
+```sh
+docker cp scripts/atlas-file-studio-retention.mjs ALTER_CONTAINER:/tmp/atlas-file-studio-retention.mjs
+docker exec ALTER_CONTAINER node /tmp/atlas-file-studio-retention.mjs --app-root /app --plugin-root /data/atlas-plugins
+```
+
+Die Pfade gelten für das Standard-Image; bei eigenen Installationen prüfen.
+Bei der HA-App denselben Helfer im bisherigen App-Terminal vor dem Update
+ausführen. Er übernimmt erreichbare Altbestände einmalig, erhält Quellen und
+Eintragskennungen und überschreibt keine abweichenden Zieldateien. Konflikte
+zuerst anhand der Sicherung prüfen. Nach Erfolg auch die persistente Ablage
+sichern, dann den Container ersetzen. Ein Übernahmemarker verhindert, dass
+wiederhergestellte Einträge beim Neustart erneut importiert werden.
+
+Bereits mit einem alten Container verlorene Dateien werden dadurch nicht
+zurückgeholt; dafür ist eine vorhandene Sicherung nötig. Die Korrektur wird
+zuerst isoliert geprüft; Pi 5 und Proxmox bleiben dabei unverändert.
+
 ## Repository
 
 - GitHub: `https://github.com/rockbaer2007/atlas-file-studio-plugin`

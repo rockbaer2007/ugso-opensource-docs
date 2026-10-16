@@ -275,10 +275,13 @@ Pi 5 and Proxmox remained at 0.1.310 during that isolated qualification.
 The App update and package check are subsequently tested on both hosts with
 0.1.311: own `/local/` Cards, mixed EN/FR, missing FR marker and repair after
 reload. Existing settings, projects and checked files remain intact. Separate
-finding: File Studio trash currently lives in the replaceable App container.
+historical finding: File Studio trash lived in the replaceable App container.
 Only our previous test folders existed there; they were reconstructed from PC
-copies with original metadata. Persistent trash/history storage still needs
-correction. This is not another native HACS repository installation test.
+copies with original metadata. App 0.1.312 corrects storage, with isolated
+container replacement and backup recovery verified. Before the first update,
+copy the legacy stores inside the old container and back up the prepared data;
+see [File Studio](../atlas-plugins/file-studio.md). Pi 5 and Proxmox remain
+unchanged in that qualification. This is not another native HACS repository installation test.
 
 The 0.1.310 update and this check are also tested on Proxmox and Pi 5 after fresh
 backups: separate newly generated test Cards, missing FR and EN, then restoration

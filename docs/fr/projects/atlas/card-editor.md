@@ -255,10 +255,13 @@ rechargement. Pi 5 et Proxmox sont restés en 0.1.310 pendant ce contrôle isol�
 La mise à jour et le contrôle sont ensuite testés sur les deux hôtes en 0.1.311 :
 Cards `/local/` propres au test, EN/FR mélangés, identifiant FR absent et réparation
 après rechargement. Paramètres, projets et fichiers vérifiés restent intacts.
-Constat distinct : la corbeille File Studio réside actuellement dans le conteneur
+Constat historique distinct : la corbeille File Studio résidait dans le conteneur
 App remplaçable. Seuls nos anciens dossiers de test y figuraient ; ils ont été
-reconstitués depuis les copies PC avec leurs métadonnées initiales. Le stockage
-persistant de la corbeille/historique reste à corriger. Il ne s’agit pas d’un
+reconstitués depuis les copies PC avec leurs métadonnées initiales. App 0.1.312
+corrige le stockage ; remplacement du conteneur et restauration sont vérifiés
+en isolation. Avant la première mise à jour, transférer les anciennes données
+dans l’ancien conteneur et sauvegarder le résultat ; voir [File Studio](../atlas-plugins/file-studio.md).
+Pi 5 et Proxmox restent inchangés pour ce contrôle. Il ne s’agit pas d’un
 nouveau test d’installation native d’un dépôt HACS.
 
 La mise à jour 0.1.310 et ce contrôle sont aussi testés sur Proxmox et Pi 5 après

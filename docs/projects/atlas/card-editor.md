@@ -293,10 +293,13 @@ Neuladen. Pi 5 und Proxmox blieben bei dieser isolierten Prüfung auf 0.1.310.
 Anschließend sind App-Update und Paketprüfung auf beiden Hosts mit 0.1.311
 getestet: eigene `/local/`-Cards, gemischtes EN/FR, fehlende FR-Kennung und
 Reparatur nach Neuladen. Bestehende Einstellungen, Projekte und geprüfte Dateien
-bleiben erhalten. Separater Befund: Der File-Studio-Papierkorb liegt derzeit im
+bleiben erhalten. Separater damaliger Befund: Der File-Studio-Papierkorb lag im
 austauschbaren App-Container. Ausschließlich unsere alten Testordner waren dort
 vorhanden; sie wurden aus PC-Kopien mit ursprünglichen Metadaten rekonstruiert.
-Die dauerhafte Papierkorb-/Historienablage ist noch zu korrigieren. Dies ist kein
+App 0.1.312 korrigiert die Ablage; Containerwechsel und Sicherungsrückkehr sind
+isoliert geprüft. Vor dem ersten Update müssen die alten Ablagen noch im alten
+Container übernommen und gesichert werden; siehe [File Studio](../atlas-plugins/file-studio.md).
+Pi 5 und Proxmox wurden dafür nicht verändert. Dies ist kein
 erneuter nativer HACS-Repository-Installationstest.
 
 Das Update auf 0.1.310 und diese Prüfung sind auch auf Proxmox und Pi 5 nach

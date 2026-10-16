@@ -9,6 +9,34 @@ ATLAS File Studio est le deuxième plugin indépendant de l’écosystème ATLAS
 Il permet de parcourir et modifier les fichiers dans les chemins approuvés,
 sans accès libre à la racine par défaut.
 
+## Corbeille et historique après une mise à jour
+
+À partir d’ATLAS **0.1.312**, les données gérées par le backend résident par défaut
+dans `ATLAS_PLUGIN_DATA_ROOT/.file-studio/{trash,history}`. Docker doit conserver
+le volume des plugins ; l’App HA utilise `/data/atlas-plugins`. Les chemins Linux
+existants et `ATLAS_FILE_STUDIO_TRASH_ROOT` / `ATLAS_FILE_STUDIO_HISTORY_ROOT`
+restent valides. Les chemins personnalisés doivent aussi être persistants et sauvegardés.
+
+**Premier passage depuis un ancien conteneur :** sauvegarder d’abord ses anciens
+dossiers corbeille/historique et les données persistantes. Suspendre les écritures
+File Studio jusqu’à la mise à jour. Copier l’outil autonome de la version ATLAS
+vérifiée dans l’ancien conteneur encore présent :
+
+```sh
+docker cp scripts/atlas-file-studio-retention.mjs ANCIEN_CONTENEUR:/tmp/atlas-file-studio-retention.mjs
+docker exec ANCIEN_CONTENEUR node /tmp/atlas-file-studio-retention.mjs --app-root /app --plugin-root /data/atlas-plugins
+```
+
+Ces chemins concernent l’image standard ; vérifier les installations personnalisées.
+Pour l’App HA, exécuter le même outil dans son terminal existant avant la mise à
+jour. Il reprend une fois les anciens dossiers accessibles, conserve sources et
+identifiants et refuse les fichiers cibles différents. Examiner les conflits avec
+la sauvegarde. Sauvegarder ensuite les données persistantes, puis remplacer le
+conteneur. Un marqueur empêche de réimporter les éléments déjà restaurés au redémarrage.
+
+Les fichiers déjà perdus avec un ancien conteneur nécessitent toujours une sauvegarde.
+La correction est d’abord vérifiée isolément ; Pi 5 et Proxmox restent inchangés.
+
 ## Dépôt
 
 - GitHub : `https://github.com/rockbaer2007/atlas-file-studio-plugin`
