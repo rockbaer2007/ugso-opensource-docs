@@ -270,7 +270,15 @@ have the same marker. Old scripts are not retroactively changed. There is no
 automatic repair or recovery.
 The new package check is first verified in isolated HA 2026.10.1/HACS 2.0.5:
 mixed EN/FR, missing markers, continued Card rendering and repair after reload.
-Pi 5 and Proxmox remain unchanged at 0.1.310 during this qualification.
+Pi 5 and Proxmox remained at 0.1.310 during that isolated qualification.
+
+The App update and package check are subsequently tested on both hosts with
+0.1.311: own `/local/` Cards, mixed EN/FR, missing FR marker and repair after
+reload. Existing settings, projects and checked files remain intact. Separate
+finding: File Studio trash currently lives in the replaceable App container.
+Only our previous test folders existed there; they were reconstructed from PC
+copies with original metadata. Persistent trash/history storage still needs
+correction. This is not another native HACS repository installation test.
 
 The 0.1.310 update and this check are also tested on Proxmox and Pi 5 after fresh
 backups: separate newly generated test Cards, missing FR and EN, then restoration

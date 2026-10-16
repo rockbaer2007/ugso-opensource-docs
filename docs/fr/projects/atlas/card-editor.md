@@ -250,7 +250,16 @@ le même identifiant. Les anciens scripts ne sont pas modifiés rétroactivement
 Il n’y a ni réparation ni restauration automatique.
 Le nouveau contrôle est d’abord vérifié dans HA 2026.10.1/HACS 2.0.5 isolé :
 EN/FR mélangés, identifiant absent, Cards toujours affichées et réparation après
-rechargement. Pi 5 et Proxmox restent inchangés en 0.1.310 pendant ce contrôle.
+rechargement. Pi 5 et Proxmox sont restés en 0.1.310 pendant ce contrôle isolé.
+
+La mise à jour et le contrôle sont ensuite testés sur les deux hôtes en 0.1.311 :
+Cards `/local/` propres au test, EN/FR mélangés, identifiant FR absent et réparation
+après rechargement. Paramètres, projets et fichiers vérifiés restent intacts.
+Constat distinct : la corbeille File Studio réside actuellement dans le conteneur
+App remplaçable. Seuls nos anciens dossiers de test y figuraient ; ils ont été
+reconstitués depuis les copies PC avec leurs métadonnées initiales. Le stockage
+persistant de la corbeille/historique reste à corriger. Il ne s’agit pas d’un
+nouveau test d’installation native d’un dépôt HACS.
 
 La mise à jour 0.1.310 et ce contrôle sont aussi testés sur Proxmox et Pi 5 après
 de nouvelles sauvegardes : Cards de test distinctes nouvellement générées, FR et
