@@ -122,8 +122,13 @@ erkennt veraltete Artefakte vor der Veröffentlichung. Die frühere Abweichung
 Katalog 0.1.50 / Paket 0.1.51 ist behoben. Oberfläche und Datenformate bleiben
 unverändert. Update, Paket-Wiederherstellung, erneutes Update und Neustart sind
 isoliert mit erhaltenen Testeinstellungen, Dateien, Projekt, anderem Plugin,
-Papierkorb und Historie geprüft. Pi 5 und Proxmox wurden dabei nicht verändert;
-ein nativer Test von 0.1.52 ist damit nicht behauptet.
+Papierkorb und Historie geprüft. Anschließend wurden am 16.10.2026 nach lokalen
+HA-Backups auch die nativen Abläufe geprüft: Proxmox **0.1.50 → 0.1.52 → 0.1.50 →
+0.1.52**, Pi 5 **0.1.51 → 0.1.52 → 0.1.51 → 0.1.52**. Die sichere Wiederherstellung
+über die Administration und das erneute Repository-Update bestanden auf ATLAS
+0.1.312 mit HA 2026.10.1. Vorhandene Dateien, Projekte, andere Plugins, Papierkorb
+und Historie blieben erhalten; Dateieditor und YAML-Basisprüfung funktionierten.
+Dabei war kein App-/HA-Neustart nötig. Das ist kein vollständiger HA-Restoretest.
 :::
 
 Der erste Plugin-Vertrag beschreibt eine feste Zugriffspolitik:

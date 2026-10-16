@@ -116,8 +116,13 @@ builder now synchronizes the catalog; a read-only CI check detects stale
 artifacts before publication. The previous catalog 0.1.50/package 0.1.51 mismatch
 is fixed without UI or data-format changes. Update, package recovery, re-update
 and restart pass in isolation with test settings, files, project, another plugin,
-trash and history preserved. Pi 5 and Proxmox are untouched; this does not claim
-native qualification of 0.1.52.
+trash and history preserved. Native checks followed on 2026-10-16 after fresh
+local HA backups: Proxmox **0.1.50 → 0.1.52 → 0.1.50 → 0.1.52**, Pi 5 **0.1.51 →
+0.1.52 → 0.1.51 → 0.1.52**. Guarded Administration recovery and another repository
+update passed on ATLAS 0.1.312 with HA 2026.10.1. Existing files, projects, other
+plugins, trash and history were preserved; the file editor and YAML basic
+validation worked. No App/HA restart was needed. This is not a complete HA
+restore test.
 :::
 
 The first plugin contract describes a fixed access policy:

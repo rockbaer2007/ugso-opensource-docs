@@ -140,7 +140,13 @@ lecture seule avant publication. L’ancien écart catalogue 0.1.50/paquet 0.1.5
 corrigé sans modifier interface ni formats de données. Mise à jour, restauration
 du paquet, nouvelle mise à jour et redémarrage réussissent isolément, en
 conservant paramètres, fichiers, projet, autre plugin, corbeille et historique.
-Pi 5 et Proxmox restent inchangés ; ce n’est pas une qualification native de 0.1.52.
+Des essais natifs ont suivi le 16/10/2026 après sauvegardes HA locales : Proxmox
+**0.1.50 → 0.1.52 → 0.1.50 → 0.1.52**, Pi 5 **0.1.51 → 0.1.52 → 0.1.51 → 0.1.52**.
+La restauration sécurisée dans l’administration et la nouvelle mise à jour du
+dépôt réussissent avec ATLAS 0.1.312 et HA 2026.10.1. Fichiers, projets, autres
+plugins, corbeille et historique sont conservés ; éditeur et validation YAML
+de base fonctionnent. Aucun redémarrage App/HA n’était nécessaire. Ce contrôle
+n’est pas une restauration HA complète.
 :::
 
 | Chemin | Par défaut | Autorisation |
