@@ -221,12 +221,32 @@ is explicitly a test example. In the HACS main menu, open **Custom repositories*
 enter that GitHub address, select **Dashboard** and choose **Add**. Open
 **Locale test card**, confirm **Download**, then reload the browser. Its resource is
 `/hacsfiles/atlas-hacs-delivery-card/atlas-hacs-delivery-card.js`.
-DE/FR in this example are marked English fallbacks. Bubble Card and Mushroom
-are additionally required for its mixed example Card.
+In `v0.1.0`, DE/FR are marked English fallbacks. `v0.1.1` contains manually
+translated test strings: “Wohnzimmer 0.1.1” and “Salon 0.1.1”. This does not
+demonstrate automatic translation. Bubble Card and Mushroom are additionally
+required for its mixed example Card.
+
+The tagged cycle `v0.1.0` → `v0.1.1` → `v0.1.0` is also verified in isolated
+HA 2026.10.1/HACS 2.0.5. Save a full backup first. In the repository menu, choose
+**Update information**. HACS detects the new version as a pending update;
+use **Redownload** to install the offered version, then reload the browser.
+For the verified manual reinstallation of the old version, open **Redownload**,
+expand **Need a different version?**, choose `v0.1.0` under **Release**,
+download and reload again. HACS explicitly recommends restoring a backup rather
+than using this version selector to roll back. Reinstallation replaces Card
+files; it does not restore migrated data from a backup.
+
+Both releases use `dist/` without a standalone JavaScript release asset.
+The script and all three locale files match the selected tag exactly after
+each step. The module resource retains its ID; HACS changes its `hacstag`.
+Other resources, settings, projects and dependencies remain intact. The old
+version also works after restarting the test system.
+HACS still offers `v0.1.1` as an update afterwards; selecting the old version
+does not permanently pin it.
 
 This is custom registration, not inclusion in the central HACS default list.
-Pi 5 and Proxmox were unchanged. Tagged releases, update/rollback distribution
-and further HACS versions require separate verification.
+Pi 5 and Proxmox were unchanged. Automatic recovery after failed or interrupted
+downloads and further HACS versions still require separate verification.
 
 ## Tabbed Card V2
 

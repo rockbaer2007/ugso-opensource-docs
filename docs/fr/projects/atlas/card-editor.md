@@ -197,12 +197,35 @@ est explicitement un exemple de test. Dans le menu principal HACS, ouvrir
 **Ajouter**. Ouvrir **Locale test card**, confirmer **Télécharger** et recharger
 le navigateur. La ressource est
 `/hacsfiles/atlas-hacs-delivery-card/atlas-hacs-delivery-card.js`.
-DE/FR sont des replis anglais identifiés. Bubble Card et Mushroom sont aussi
-nécessaires pour cet exemple de Card mixte.
+Dans `v0.1.0`, DE/FR sont des replis anglais identifiés. `v0.1.1` contient des
+textes de test traduits manuellement : « Wohnzimmer 0.1.1 » et « Salon 0.1.1 ».
+Cela ne démontre pas une traduction automatique. Bubble Card et Mushroom sont
+aussi nécessaires pour cet exemple de Card mixte.
+
+Le cycle étiqueté `v0.1.0` → `v0.1.1` → `v0.1.0` est également vérifié sous
+HA 2026.10.1/HACS 2.0.5 isolé. Enregistrer d’abord une sauvegarde complète.
+Dans le menu du dépôt, choisir **Actualiser les informations**. HACS détecte
+la nouvelle version comme mise à jour en attente ; utiliser **Retélécharger**
+pour installer la version proposée, puis recharger le navigateur.
+Pour la réinstallation manuelle vérifiée de l’ancienne version, ouvrir
+**Retélécharger**, développer **Besoin d'une version différente ?**, choisir
+`v0.1.0` dans **Version**, télécharger et recharger. HACS recommande explicitement
+de restaurer une sauvegarde plutôt que d’utiliser ce sélecteur pour revenir
+en arrière. La réinstallation remplace les fichiers Card ; elle ne restaure
+pas les données migrées à partir d’une sauvegarde.
+
+Les deux releases utilisent `dist/` sans pièce jointe JavaScript séparée.
+Le script et les trois fichiers de langue correspondent exactement au tag
+choisi à chaque étape. La ressource module conserve son identifiant ; HACS
+modifie son `hacstag`. Les autres ressources, paramètres, projets et dépendances
+sont conservés. L’ancienne version fonctionne aussi après redémarrage du test.
+HACS propose ensuite toujours `v0.1.1` comme mise à jour ; le choix de l’ancienne
+version ne la verrouille pas définitivement.
 
 Il s’agit d’un dépôt personnalisé, pas d’une inclusion dans la liste HACS par
-défaut. Pi 5 et Proxmox restent inchangés. Les releases étiquetées, mises à jour,
-restaurations et autres versions HACS restent à vérifier séparément.
+défaut. Pi 5 et Proxmox restent inchangés. La restauration automatique après
+un téléchargement échoué ou interrompu et les autres versions HACS restent
+à vérifier séparément.
 
 ## Tabbed Card V2
 

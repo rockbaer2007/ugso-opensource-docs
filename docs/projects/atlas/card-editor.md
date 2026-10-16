@@ -234,12 +234,35 @@ GitHub-Adresse eintragen, Typ **Dashboard** wählen und **hinzufügen** klicken.
 Danach **Locale test card** öffnen, **Herunterladen** bestätigen und den Browser
 neu laden. Die Ressource ist
 `/hacsfiles/atlas-hacs-delivery-card/atlas-hacs-delivery-card.js`.
-DE/FR in diesem Beispiel sind gekennzeichnete englische Fallbacks. Bubble Card
-und Mushroom werden für dessen gemischte Beispiel-Card zusätzlich benötigt.
+In `v0.1.0` sind DE/FR gekennzeichnete englische Fallbacks. `v0.1.1` enthält
+manuell übersetzte Testtexte: „Wohnzimmer 0.1.1“ und „Salon 0.1.1“.
+Das ist kein Nachweis einer automatischen Übersetzung. Bubble Card und Mushroom
+werden für dessen gemischte Beispiel-Card zusätzlich benötigt.
+
+Auch der getaggte Durchlauf `v0.1.0` → `v0.1.1` → `v0.1.0` ist unter
+HA 2026.10.1/HACS 2.0.5 isoliert geprüft. Vorher ein vollständiges Backup sichern.
+Im Repository-Menü **Informationen aktualisieren** wählen. HACS erkennt die
+neue Version als ausstehende Aktualisierung; über **Erneut herunterladen** die
+angebotene Version installieren und anschließend den Browser neu laden.
+Für die geprüfte manuelle Neuinstallation der alten Version unter
+**Erneut herunterladen** den Abschnitt **Benötigst du eine andere Version?**
+öffnen, bei **Release** `v0.1.0` wählen, herunterladen und erneut laden.
+HACS empfiehlt dort ausdrücklich die Wiederherstellung eines Backups statt
+dieser Versionsauswahl zum Zurücksetzen. Die Neuinstallation ersetzt nur die
+Card-Dateien; sie stellt keine migrierten Daten aus einem Backup wieder her.
+
+Beide Releases verwenden `dist/` ohne einzelnen JavaScript-Release-Anhang.
+Script und alle drei Sprachdateien entsprechen nach jedem Schritt exakt dem
+gewählten Tag. Die Modulressource behält ihre ID; HACS ändert ihren `hacstag`.
+Andere Ressourcen, Einstellungen, Projekte und Abhängigkeiten bleiben erhalten.
+Die alte Version funktioniert auch nach einem Neustart des Testsystems.
+HACS bietet `v0.1.1` danach weiterhin als Update an; die Auswahl sperrt spätere
+Updates nicht dauerhaft.
 
 Das ist eine benutzerdefinierte Registrierung, kein Eintrag in der zentralen
 HACS-Standardliste. Pi 5 und Proxmox wurden für diese Prüfung nicht verändert.
-Getaggte Releases, Update/Rollback und weitere HACS-Versionen sind separat zu prüfen.
+Automatische Wiederherstellung nach fehlgeschlagenen oder unterbrochenen Downloads
+und weitere HACS-Versionen sind damit noch nicht geprüft.
 
 ## Tabbed Card V2
 
