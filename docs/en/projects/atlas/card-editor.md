@@ -280,8 +280,9 @@ Only our previous test folders existed there; they were reconstructed from PC
 copies with original metadata. App 0.1.312 corrects storage, with isolated
 container replacement and backup recovery verified. Before the first update,
 copy the legacy stores inside the old container and back up the prepared data;
-see [File Studio](../atlas-plugins/file-studio.md). Pi 5 and Proxmox remain
-unchanged in that qualification. This is not another native HACS repository installation test.
+see [File Studio](../atlas-plugins/file-studio.md). Subsequent native legacy
+adoption and the 0.1.312 upgrade also pass on Pi 5 and Proxmox with data preserved.
+This is not another native HACS repository installation test.
 
 The 0.1.310 update and this check are also tested on Proxmox and Pi 5 after fresh
 backups: separate newly generated test Cards, missing FR and EN, then restoration

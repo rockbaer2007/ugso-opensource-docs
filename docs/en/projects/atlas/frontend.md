@@ -7,6 +7,11 @@ follows HA's DE/EN/FR language and light/dark appearance.
 
 ## Requirements and data preservation
 
+As of 2026-10-16: **App 0.1.312**, **integration 0.1.306**, versioned independently.
+Introduction and test versions below are not instructions to downgrade a newer
+App. Full HAOS recovery and deliberate address changes are covered in the
+[backup guide](../atlas-plugins/file-studio); browser-local data still needs its own export.
+
 ATLAS must already run as an App/Add-on, Docker container or
 [Linux/systemd service](/en/projects/atlas/linux). HACS installs the HA integration;
 the Node server and external plugins stay in their existing runtime.

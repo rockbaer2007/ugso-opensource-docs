@@ -7,6 +7,12 @@ existant. Le panneau suit la langue HA DE/EN/FR et le thème clair ou sombre.
 
 ## Prérequis et préservation des données
 
+Au 16/10/2026 : **App 0.1.312**, **intégration 0.1.306**, versions indépendantes.
+Les versions d’introduction et de test ci-dessous ne demandent pas de rétrograder
+une App plus récente. Restauration HAOS complète et changement volontaire
+d’adresse sont décrits dans le [guide de sauvegarde](../atlas-plugins/file-studio) ;
+les données locales du navigateur nécessitent toujours leur propre export.
+
 ATLAS doit déjà fonctionner comme application/add-on, conteneur Docker ou
 [service Linux/systemd](/fr/projects/atlas/linux). HACS installe l’intégration HA ;
 le serveur Node et les plugins externes restent dans leur Runtime existant.

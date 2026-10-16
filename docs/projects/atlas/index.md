@@ -52,6 +52,12 @@ ATLAS befindet sich aktuell in aktiver Entwicklung.
 Der derzeitige Schwerpunkt liegt auf der **Home-Assistant-nahen ATLAS-App** mit
 Administration, Plugin-Hub, Card Editor und File Studio.
 
+Stand 16.10.2026: **App 0.1.312**, **HACS-Integration 0.1.306**.
+Der Card Editor ist das einzige integrierte Referenz-Plugin. File Studio,
+Terminal, Icon Studio, Icon Bibliothek und Automation Exporter / Editor werden
+als externe Plugins separat gepflegt. Den geprüften Umfang und offene Aufgaben
+zeigt der [Entwicklungsstand](./entwicklungsstand).
+
 Administration und Plugin-Hub unterstützen Deutsch, Englisch und Französisch.
 Die Sprachauswahl wird zwischen beiden Oberflächen gespeichert und gilt auch
 über ihre getrennten App-Ports hinweg. Ein Sprachparameter in einer Plugin-URL

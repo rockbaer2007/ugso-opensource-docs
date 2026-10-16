@@ -19,6 +19,10 @@ services, la présentation et l’intégration avec l’environnement hôte.
 | `@atlas/homeassistant` | Intégration et workflows Home Assistant. |
 | `@atlas/theme` | Thèmes et conception visuelle partagés. |
 | `@atlas/devtools` | Diagnostics et outils de développement. |
+| `@atlas/kernel` | Contrats des modules, conteneur de services et infrastructure. |
+| `@atlas/workspace` | Contrats de préparation des espaces de travail. |
+| `@atlas/file-studio` | Contrats et adaptateur Runtime internes ; le plugin web installable reste externe. |
+| `@atlas/notifyarchive` | Contrats internes des archives de notifications. |
 
 ## Principes d’architecture
 

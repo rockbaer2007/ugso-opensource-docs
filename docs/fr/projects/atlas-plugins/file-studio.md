@@ -70,7 +70,7 @@ un autre matériel ; ARM64 et appareils physiques restent à vérifier séparém
 
 Le plugin est installable via le dépôt de démonstration dans l’Administration
 et le Hub. Version documentée du plugin : **0.1.51** ; application HA ATLAS :
-**0.1.297** au 14/10/2026. Ce sont deux versions distinctes.
+**0.1.312** au 16/10/2026. Ce sont deux versions distinctes.
 
 Le sélecteur DE/EN/FR traduit l’en-tête, les principaux contrôles et les avis
 de limite d’envoi. Les dialogues et les autres messages ne sont pas encore
@@ -133,6 +133,14 @@ les liens symboliques et les types non pris en charge sont ignorés.
 
 ## Modèle de sécurité
 
+::: info État de publication au 16/10/2026
+Le manifeste et le paquet File Studio indiquent **0.1.51**, mais son catalogue
+indique encore **0.1.50**. Les fonctions ci-dessus décrivent 0.1.51. Une mise à
+jour par dépôt nécessite des versions identiques dans catalogue, paquet et
+manifeste ; ne pas contourner la vérification pour masquer cet écart. Cette
+revue documentaire ne change ni les paquets ni les installations existantes.
+:::
+
 | Chemin | Par défaut | Autorisation |
 | --- | --- | --- |
 | `/config` | Actif. | Sans autorisation supplémentaire. |
@@ -158,7 +166,8 @@ de longue durée.
 
 Chaque mise à jour visible du package ATLAS augmente la version de
 l’application HA. Home Assistant compare `old` (installée) et `target`
-(dépôt). Le dernier package documenté est **0.1.297**. Si une ancienne version
+(dépôt). Le package App documenté est **0.1.312** ; l’intégration HACS publiée
+indépendamment reste en **0.1.306**. Si une ancienne version
 cible apparaît, actualisez les informations du dépôt dans le magasin
 d’extensions, puis mettez ATLAS à jour ou redémarrez-le.
 

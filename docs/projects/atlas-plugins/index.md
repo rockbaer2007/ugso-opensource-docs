@@ -29,7 +29,7 @@ Ab ATLAS 0.1.304:
 3. „Sichern und übernehmen“ erstellt vor dem Ersetzen eine serverseitige Rücksicherung. Ungeklärte Kompatibilität ausdrücklich prüfen; inkompatible Pakete bleiben gesperrt.
 4. Für eine Rückkehr beim Plugin „Wiederherstellen“ wählen, Sicherung und Versionsrichtung prüfen und übernehmen. Auch der gerade installierte Stand wird dabei gesichert.
 
-Browserdaten und Datenformate werden damit nicht zurückgesetzt. Ein älteres Plugin muss zum vorhandenen Datenformat passen. [Grenzen und Sicherungspfad](./developers/compatibility#daten-erhalten-und-wiederherstellen). Die neue Oberfläche ist isoliert geprüft; native Prüfungen auf Pi und Proxmox stehen aus.
+Browserdaten und Datenformate werden damit nicht zurückgesetzt. Ein älteres Plugin muss zum vorhandenen Datenformat passen. [Grenzen und Sicherungspfad](./developers/compatibility#daten-erhalten-und-wiederherstellen). Die Oberfläche ist isoliert und auf Pi 5 und Proxmox mit Icon Bibliothek, File Studio und Terminal geprüft; andere Plugins und Datenmigrationen brauchen eigene Prüfungen.
 
 ## Ziel
 

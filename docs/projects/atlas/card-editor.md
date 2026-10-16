@@ -299,7 +299,8 @@ vorhanden; sie wurden aus PC-Kopien mit ursprünglichen Metadaten rekonstruiert.
 App 0.1.312 korrigiert die Ablage; Containerwechsel und Sicherungsrückkehr sind
 isoliert geprüft. Vor dem ersten Update müssen die alten Ablagen noch im alten
 Container übernommen und gesichert werden; siehe [File Studio](../atlas-plugins/file-studio.md).
-Pi 5 und Proxmox wurden dafür nicht verändert. Dies ist kein
+Anschließend sind Übernahme und Update auf 0.1.312 auch auf Pi 5 und Proxmox
+mit Datenerhalt geprüft. Dies ist kein
 erneuter nativer HACS-Repository-Installationstest.
 
 Das Update auf 0.1.310 und diese Prüfung sind auch auf Proxmox und Pi 5 nach

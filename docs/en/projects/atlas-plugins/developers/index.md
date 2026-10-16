@@ -27,4 +27,4 @@ This section follows the development path for standalone ATLAS plugins, from the
 
 Declare only capabilities your plugin actually uses. A declaration documents the plugin's intent; it is not a sandbox and does not automatically grant access to Home Assistant or Atlas internals. Do not request credentials in plugin files or publish tokens and API keys.
 
-The generic repository installer currently stores package files locally and does not execute arbitrary downloaded code. Treat tests as package and integration checks, not as proof of an isolated execution environment.
+The App server installs validated repository and imported packages in persistent plugin storage and serves static web files under `/plugin-assets/<slug>/`. Opening them runs their JavaScript in the browser; arbitrary Node modules or Runtime hooks are not automatically registered. Installation is not a sandbox: review package contents and browser code before opening.

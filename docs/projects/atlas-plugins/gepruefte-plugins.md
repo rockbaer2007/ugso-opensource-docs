@@ -14,6 +14,8 @@ ATLAS befindet sich in Entwicklung. Auch geprüfte Plugins ersetzen keine eigene
 | 🗂️ | ATLAS File Studio | geprüft | <a class="atlas-plugin-table-button" href="/projects/atlas-plugins/file-studio">Details</a> |
 | 🖥️ | ATLAS Terminal | experimentell | <a class="atlas-plugin-table-button" href="/projects/atlas-plugins/terminal">Details</a> |
 | ⚙️ | ATLAS Automation Exporter / Editor | experimentell | <a class="atlas-plugin-table-button" href="/projects/atlas-plugins/automation-extractor">Details</a> |
+| 🎨 | ATLAS Icon Studio | experimentell | <a class="atlas-plugin-table-button" href="/projects/atlas-plugins/icon-studio">Details</a> |
+| 🔎 | ATLAS Icon Library | experimentell | <a class="atlas-plugin-table-button" href="/projects/atlas-plugins/icon-library">Details</a> |
 
 ## Neue/ungeprüfte Plugins
 

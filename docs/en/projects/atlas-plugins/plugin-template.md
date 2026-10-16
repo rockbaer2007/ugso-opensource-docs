@@ -8,7 +8,7 @@ The [official ATLAS Plugin Template on GitHub](https://github.com/rockbaer2007/a
 
 ## Plugin generator in Administration
 
-ATLAS Administration includes a plugin generator. In addition to the plugin ID, name, description, version, entry path and capabilities, you can choose between an MDI icon from the locally bundled catalog and a custom PNG icon. Search the MDI catalog and select an icon; its SVG and license notices are included in the install package. Custom PNG files can be up to 512 KiB. Their colors and transparency are preserved, and the image data is embedded in the generated package. This applies to the plugin icon, not to arbitrary binary files used by the plugin itself. Host those files separately and reference them by URL. The generator also creates an editable HTML/CSS/JavaScript starter, a `repository.json` catalog file and a localized `README.md` with metadata, capabilities, a file list, and installation, publishing and development guidance. You can also download the documentation on its own. Review the generated content and paths and add the files to your repository; the generator does not create a GitHub repository or publish anything automatically. Manually imported packages appear in the Plugin Hub, but their files are not yet served or executed as plugin pages. To launch a plugin, make it available through a repository or a locally served plugin folder.
+ATLAS Administration includes a plugin generator for ID, name, description, version, entry path and capabilities. Choose an MDI icon from the locally bundled catalog or a custom PNG up to 512 KiB; the package includes the graphic and required license notices. PNG colors and transparency survive. It generates an editable HTML/CSS/JavaScript starter, package, `repository.json` and localized `README.md`, also downloadable separately. Review contents and paths before publication. The generator creates no GitHub repository and publishes nothing automatically. Supported manually imported packages are installed on the App server after compatibility checks and served under `/plugin-assets/<slug>/`. Their UI runs when opened in the browser; Runtime hooks are not automatically registered. Keep `entry` and package paths consistent.
 
 Plugins with their own language selector inherit the saved ATLAS language preference when launched. A `language` parameter in the plugin URL takes precedence. If a plugin does not support the selected language, it uses its configured fallback language.
 
@@ -25,7 +25,7 @@ Plugins with their own language selector inherit the saved ATLAS language prefer
    ```
 
 5. Update `repository.json` and `install.html` for your repository. The package builder copies the ID, name, version, descriptions and asset paths from the manifest and keeps the catalog in sync.
-6. Enable GitHub Pages for the `main` branch. The catalog will then be available at `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json`.
+6. After pushing, the catalog is available at `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json` without GitHub Pages. Enable GitHub Pages separately if you want to publish `install.html`.
 7. Add the catalog URL in ATLAS Administration and install the plugin for testing.
 
 ## Included
@@ -36,6 +36,6 @@ Bump the plugin version for every release and run `npm run build` afterwards. Ke
 
 ## Current installation scope
 
-The generic repository installer currently stores package files locally. It does not automatically execute arbitrary plugin code downloaded from a repository. The package format stores plugin files as text; larger binary assets should be hosted separately and referenced by URL.
+The App server installs validated repository and imported packages in persistent plugin storage and serves static web files under `/plugin-assets/<slug>/`. Opening them runs their JavaScript in the browser; arbitrary Node modules or Runtime hooks are not automatically registered. Installation is not a sandbox: review package contents and browser code before opening. Package files contain text or explicitly marked Base64 assets; up to 300 files and 20 MB per package. Host larger binary assets separately.
 
 See [Repository Format](./repository-format) for catalog and package details. Template repository: [rockbaer2007/atlas-plugin-template](https://github.com/rockbaer2007/atlas-plugin-template).

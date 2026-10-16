@@ -12,6 +12,11 @@ l’import/export et la création de packages. Son
 
 ## Objectif
 
+Au 16/10/2026 : plugin de référence **0.2.0-alpha.108** dans l’App **0.1.312**.
+Il est mis à jour avec ATLAS, pas comme un plugin externe à remplacer.
+Voir le [guide de l’éditeur](../atlas/card-editor) et les
+[projets App/Runtime](../atlas/frontend) pour projets partagés et parcours HACS.
+
 Décision du 13/10/2026 : l’éditeur conserve uniquement le workflow Expert.
 Le mode Simple et son sélecteur ne seront pas réintroduits. Les imports de
 projets anciens pris en charge restent compatibles.

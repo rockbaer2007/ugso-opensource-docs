@@ -13,6 +13,10 @@ ATLAS wird als modulares TypeScript-Monorepo entwickelt.
 | `homeassistant` | Integration und Workflows für Home Assistant |
 | `theme` | Gemeinsame Theme- und Design-Grundlagen |
 | `devtools` | Diagnose- und Entwicklungswerkzeuge |
+| `kernel` | Modulverträge, Dienstcontainer und Infrastruktur |
+| `workspace` | Verträge zur Bereitschaft von Arbeitsumgebungen |
+| `file-studio` | Interne File-Studio-Verträge und Runtime-Adapter; das installierbare Webplugin bleibt extern |
+| `notifyarchive` | Interne Verträge für Benachrichtigungsarchive |
 
 ## Architekturprinzipien
 

@@ -261,7 +261,8 @@ reconstitués depuis les copies PC avec leurs métadonnées initiales. App 0.1.3
 corrige le stockage ; remplacement du conteneur et restauration sont vérifiés
 en isolation. Avant la première mise à jour, transférer les anciennes données
 dans l’ancien conteneur et sauvegarder le résultat ; voir [File Studio](../atlas-plugins/file-studio.md).
-Pi 5 et Proxmox restent inchangés pour ce contrôle. Il ne s’agit pas d’un
+La reprise des anciens dossiers et la mise à jour 0.1.312 sont ensuite vérifiées
+sur Pi 5 et Proxmox avec conservation des données. Il ne s’agit pas d’un
 nouveau test d’installation native d’un dépôt HACS.
 
 La mise à jour 0.1.310 et ce contrôle sont aussi testés sur Proxmox et Pi 5 après

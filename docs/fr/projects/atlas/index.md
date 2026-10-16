@@ -48,6 +48,12 @@ ATLAS est en cours de développement. L'effort porte actuellement sur
 l'application ATLAS pour Home Assistant, qui comprend l'Administration, le Hub
 des plugins, Card Editor et File Studio.
 
+Au 16/10/2026 : **App 0.1.312**, **intégration HACS 0.1.306**.
+Card Editor est le seul plugin de référence intégré. File Studio, Terminal,
+Icon Studio, Icon Library et Automation Exporter / Editor sont maintenus
+séparément comme plugins externes. Consulter l’[état du développement](./development-status)
+pour le périmètre vérifié et les tâches ouvertes.
+
 L'Administration et le Hub des plugins prennent en charge l'allemand, l'anglais
 et le français. Le choix de langue est mémorisé et partagé entre les deux
 interfaces, même lorsqu'elles utilisent des ports d'application différents. Un

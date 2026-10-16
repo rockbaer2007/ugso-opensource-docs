@@ -66,7 +66,7 @@ File Studio is published as an installable ATLAS plugin and can be tested throug
 - current plugin version: `0.1.51`
 - French UI coverage: DE/EN/FR selector, header, main toolbar controls and upload-limit notices; dialogs and other workflow messages are not fully translated yet
 - upload limit: files up to 64 MiB can be uploaded directly; larger files are directed to the Samba add-on
-- documented Home Assistant App/Add-on version: `0.1.297` (2026-10-14)
+- documented Home Assistant App/Add-on version: `0.1.312` (2026-10-16)
 - image preview: open SVG, PNG, JPG/JPEG and WebP files directly in the separately installed ATLAS Icon Studio. Raster files open as previews; simple SVG path files import into its monochrome icon set.
 - The handoff uses a short-lived browser-local key and File Studio's approved file access. Both plugins must be installed on the same ATLAS server; the file is not uploaded or duplicated.
 - file tree for the approved `/config` area
@@ -110,6 +110,14 @@ The editor library is shipped with the plugin. File Studio therefore does not ne
 
 ## Security Model
 
+::: info Publication state on 2026-10-16
+The external File Studio manifest and package report **0.1.51**, but its
+repository catalog still reports **0.1.50**. Features above describe 0.1.51.
+Repository updates require catalog, package and manifest versions to agree;
+do not bypass compatibility checks to override this mismatch. This documentation
+review changes no plugin artifacts or existing installations.
+:::
+
 The first plugin contract describes a fixed access policy:
 
 | Path | Default | Approval |
@@ -129,7 +137,7 @@ In Home Assistant App/Add-on mode, these approvals come from the Add-on configur
 
 ## Home Assistant Update Note
 
-Every visible ATLAS update bumps the Home Assistant App/Add-on version. Home Assistant compares the installed version (`old`) with the repository version (`target`). For this build, `target` should be at least `0.1.297`. If Home Assistant still shows an older target version, reload repository information in the Add-on Store and then update or restart ATLAS.
+Every visible ATLAS update bumps the Home Assistant App/Add-on version. Home Assistant compares the installed version (`old`) with the repository version (`target`). This documented App version is `0.1.312`. If Home Assistant still shows an older target version, reload repository information in the App/Add-on Store and then update or restart ATLAS. The independently released HACS integration remains `0.1.306`.
 
 The plugin and the ATLAS app have separate versions. Documentation changes do not modify Home Assistant files.
 

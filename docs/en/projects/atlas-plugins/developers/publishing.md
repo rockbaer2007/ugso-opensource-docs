@@ -23,11 +23,11 @@ Follow the [version and compatibility rules](./compatibility), including backups
 2. Run `npm run build` and `npm run check`.
 3. Confirm the manifest, catalog and generated package use the same ID and version.
 4. Review package files, asset paths, external requests and declared capabilities.
-5. Enable GitHub Pages for `main` if the catalog should be available through Pages. The raw file will then be available at `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json`.
+5. Publish the catalog by pushing to `main`: `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json`. GitHub Pages is not required for the raw file; optionally enable it to publish `install.html`.
 6. Add the catalog URL in ATLAS Administration and test the preview and package installation.
 
 Keep the plugin ID stable after the first publication. Large binary assets do not belong in the text-based package format; host them separately and reference them by URL.
 
 ## Installation status
 
-The generic ATLAS repository installer currently stores downloaded package files locally. It does not automatically execute arbitrary plugin code in the package. A successful package build therefore confirms package structure, not executable installation or a security review of the plugin code.
+The App server installs validated repository and imported packages in persistent plugin storage and serves static web files under `/plugin-assets/<slug>/`. Opening them runs their JavaScript in the browser; arbitrary Node modules or Runtime hooks are not automatically registered. Installation is not a sandbox: review package contents and browser code before opening. Building a package alone does not replace runtime or security testing.

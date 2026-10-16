@@ -40,4 +40,4 @@ The manifest in a plugin package is distinct from `repository.json`: the catalog
 
 ## Keep capabilities narrow
 
-Capabilities should be specific and justified. Do not add placeholder or broad administrator permissions. The current installation does not execute downloaded plugin code, so a capability declaration is not an access-control boundary or sandbox.
+Capabilities should be specific and justified. Static plugin pages execute JavaScript in the browser when opened. A capability declaration is not an access-control boundary or sandbox; Runtime hooks require explicit host integration.

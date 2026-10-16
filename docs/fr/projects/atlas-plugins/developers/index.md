@@ -27,4 +27,4 @@ Cette rubrique présente le parcours de création d'un plugin ATLAS autonome, du
 
 Déclarez uniquement les capacités réellement utilisées par votre plugin. Une déclaration décrit son objectif ; ce n'est ni une sandbox ni un accès automatique à Home Assistant ou aux composants internes d'Atlas. Ne demandez pas d'identifiants dans les fichiers du plugin et ne publiez jamais de jeton ni de clé API.
 
-L'installateur générique stocke actuellement les fichiers du paquet localement et n'exécute pas le code téléchargé. Les tests ne prouvent donc pas que le plugin s'exécute dans un environnement isolé.
+Le serveur App installe les paquets validés, depuis un dépôt ou un import, dans le stockage persistant et sert les fichiers web sous `/plugin-assets/<slug>/`. Leur JavaScript s’exécute dans le navigateur à l’ouverture ; les modules Node ou hooks Runtime ne sont pas enregistrés automatiquement. Ce n’est pas une sandbox : vérifier paquet et code avant ouverture.

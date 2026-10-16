@@ -8,6 +8,11 @@ ATLAS Runtime stellt in TypeScript einen Plugin-Vertrag bereit. Ein Plugin enth�
 
 ## Gepr체fter Vertrag und Kompatibilit채t
 
+Aktueller Stand am 16.10.2026: App **0.1.312**, Paket `@atlas/runtime`
+**0.2.0-alpha.39**. Die folgende A5-Basis ist historisch. Erg채nzende native
+Paket-Wiederherstellungen und HA-Versionen sind unter
+[Versionen und Kompatibilit채t](./compatibility) dokumentiert.
+
 Stand der A5-Abschlusspr체fung: HA-App `0.1.297`, Runtime `0.2.0-alpha.38`. Die Regressionen pr체fen Aktivierung, Stop/Dispose, Katalog, Paketparser und isolierte Backend-Installation/-Wiederherstellung. Sie garantieren keine stabile 1.0-API oder beliebige Host-/HA-Versionen.
 
 - Runtime-Hooks gelten f체r im Host registrierte Runtime-Plugins. Ein installiertes statisches Webplugin erh채lt dadurch keine automatische `activate`-/`deactivate`-/`dispose`-Ausf체hrung.

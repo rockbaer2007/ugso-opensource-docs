@@ -23,11 +23,11 @@ Respecter les [règles de version et de compatibilité](./compatibility), notamm
 2. Exécutez `npm run build` et `npm run check`.
 3. Vérifiez que le manifeste, le catalogue et le paquet généré indiquent le même identifiant et la même version.
 4. Contrôlez les fichiers, les chemins des ressources, les requêtes externes et les capacités déclarées.
-5. Activez GitHub Pages pour `main` si le catalogue doit être accessible via Pages. Le fichier brut sera disponible à l'adresse `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json`.
+5. Publier le catalogue par push vers `main` : `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json`. GitHub Pages n’est pas nécessaire pour ce fichier brut ; l’activer éventuellement pour `install.html`.
 6. Ajoutez l'URL du catalogue dans l'Administration ATLAS et testez l'aperçu et l'installation du paquet.
 
 Conservez l'identifiant du plugin après sa première publication. Le format de paquet étant textuel, hébergez séparément les gros fichiers binaires et référencez-les par URL.
 
 ## État de l'installation
 
-L'installateur générique de dépôts ATLAS stocke actuellement les paquets téléchargés localement. Il n'exécute pas automatiquement le code arbitraire inclus. Une génération réussie confirme donc la structure du paquet, pas une installation exécutable ni un audit de sécurité du code.
+Le serveur App installe les paquets validés, depuis un dépôt ou un import, dans le stockage persistant et sert les fichiers web sous `/plugin-assets/<slug>/`. Leur JavaScript s’exécute dans le navigateur à l’ouverture ; les modules Node ou hooks Runtime ne sont pas enregistrés automatiquement. Ce n’est pas une sandbox : vérifier paquet et code avant ouverture. La génération seule ne remplace pas les contrôles d’exécution et de sécurité.

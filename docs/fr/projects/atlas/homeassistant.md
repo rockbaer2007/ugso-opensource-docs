@@ -290,18 +290,25 @@ des cartes. Les états sont :
 
 ## ATLAS comme interface Home Assistant
 
-Les cibles préparées pour le panneau ATLAS sont distinctes des dépendances
-Mushroom ou Bubble :
+L’[intégration ATLAS Runtime](/fr/projects/atlas/frontend) installe un panneau
+qui intègre le Runtime existant. Le type de dépôt HACS est **Integration** ;
+le module utilise `/atlas_frontend/frontend/atlas-homeassistant-panel.js`.
+Ne pas enregistrer ce module comme ressource Lovelace supplémentaire. Les cartes
+exportées utilisent leur propre dépôt Dashboard et nom de script.
+
+Les anciennes cibles de ressources de l’éditeur sont des métadonnées de
+diagnostic ou de planification, distinctes des dépendances Mushroom ou Bubble :
 
 | Usage | Chemin prévu |
 | --- | --- |
 | Serveur ATLAS | `/local/atlas/atlas-homeassistant-panel.js` |
-| Intégration HACS ATLAS prévue | `/hacsfiles/atlas/atlas-homeassistant-panel.js` |
+| Ancienne cible HACS, pas le chemin d’installation de l’intégration | `/hacsfiles/atlas/atlas-homeassistant-panel.js` |
 
 Le modèle peut vérifier la ressource ATLAS, les dépendances des cartes et
 les déclarations JSON/YAML nécessaires. L’hébergement ATLAS autonome Docker
 et l’application HA existent. L’[installateur Linux/systemd](/fr/projects/atlas/linux)
-est implémenté et vérifié sous Debian 12 amd64 LXC ; l’intégration frontend
+est implémenté et vérifié sous Debian 12 amd64 LXC et Raspberry Pi OS aarch64
+sur Pi 4 ; l’intégration frontend
 native ATLAS/HACS est disponible sous forme d’[intégration ATLAS Runtime](/fr/projects/atlas/frontend)
 depuis 0.1.299. Son installation HACS native et les mises à jour vers 0.1.306,
 avec redémarrage HA et conservation des données, sont vérifiées sur Pi 5 et Proxmox.

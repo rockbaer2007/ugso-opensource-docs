@@ -69,7 +69,7 @@ File Studio ist als installierbares ATLAS-Plugin veröffentlicht und kann über 
 - aktueller Plugin-Stand: `0.1.51`
 - französische Oberfläche: DE/EN/FR-Auswahl, Kopfzeile, zentrale Werkzeugleisten-Steuerelemente und Hinweise zur Upload-Grenze; Dialoge und weitere Ablaufmeldungen sind noch nicht vollständig übersetzt
 - Upload-Hinweis: Dateien bis 64 MiB können direkt hochgeladen werden; bei größeren Dateien verweist File Studio auf die Samba-App
-- dokumentierter Home-Assistant-App/Add-on-Stand: `0.1.297` (14.10.2026)
+- dokumentierter Home-Assistant-App/Add-on-Stand: `0.1.312` (16.10.2026)
 - Bildvorschau: SVG-, PNG-, JPG/JPEG- und WebP-Dateien direkt an das separat installierte ATLAS Icon Studio übergeben. Rasterdateien öffnen sich dort als Vorschau; einfache SVG-Pfaddateien werden in das monochrome Iconset importiert.
 - Die Übergabe verwendet einen kurzlebigen Schlüssel im lokalen Browser und den freigegebenen File-Studio-Dateizugriff. Beide Plugins müssen auf demselben ATLAS-Server installiert sein; die Datei wird nicht hochgeladen oder dupliziert.
 - Dateibaum für den freigegebenen `/config`-Bereich
@@ -115,6 +115,15 @@ Die Editor-Bibliothek wird lokal mit dem Plugin ausgeliefert. Dadurch braucht Fi
 
 ## Sicherheitsmodell
 
+::: info Veröffentlichungsstand am 16.10.2026
+Im externen File-Studio-Repository nennen Manifest und Paket **0.1.51**, der
+Repository-Katalog jedoch noch **0.1.50**. Die oben beschriebenen Funktionen
+beziehen sich auf 0.1.51. Bei einem Repository-Update müssen Katalog, Paket und
+Manifest dieselbe Version nennen; eine Versionsabweichung nicht durch Umgehen
+der Kompatibilitätsprüfung übergehen. Dieser Dokumentationsabgleich ändert keine
+Plugin-Artefakte oder vorhandenen Installationen.
+:::
+
 Der erste Plugin-Vertrag beschreibt eine feste Zugriffspolitik:
 
 | Pfad | Standard | Freigabe |
@@ -134,7 +143,7 @@ Im Home-Assistant-App/Add-on-Betrieb kommen diese Freigaben aus der Add-on-Konfi
 
 ## Home-Assistant-Update-Hinweis
 
-Nach jedem sichtbaren ATLAS-Update wird die Home-Assistant-App/Add-on-Version angehoben. Home Assistant vergleicht die installierte Version (`old`) mit der Repository-Version (`target`). Für diesen Stand sollte `target` mindestens `0.1.297` anzeigen. Wenn weiter eine alte Zielversion erscheint, im Add-on Store die Repository-Informationen neu laden und anschließend ATLAS aktualisieren oder neu starten.
+Nach jedem sichtbaren ATLAS-Update wird die Home-Assistant-App/Add-on-Version angehoben. Home Assistant vergleicht die installierte Version (`old`) mit der Repository-Version (`target`). Für diesen dokumentierten Stand lautet die App-Version `0.1.312`. Wenn weiter eine alte Zielversion erscheint, im App/Add-on-Store die Repository-Informationen neu laden und anschließend ATLAS aktualisieren oder neu starten. Die unabhängig veröffentlichte HACS-Integration bleibt bei `0.1.306`.
 
 Plugin und ATLAS-App haben getrennte Versionen. Dokumentationsänderungen
 verändern keine Home-Assistant-Dateien.

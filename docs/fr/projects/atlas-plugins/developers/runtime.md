@@ -8,6 +8,10 @@ ATLAS Runtime fournit un contrat de plugin en TypeScript. Un plugin possède un 
 
 ## Contrat vérifié et compatibilité
 
+Au 16/10/2026 : App **0.1.312**, package `@atlas/runtime` **0.2.0-alpha.39**.
+La référence A5 ci-dessous est historique. Restaurations natives complémentaires
+et versions HA sont décrites dans [Versions et compatibilité](./compatibility).
+
 Référence de la revue A5 : application HA `0.1.297`, Runtime `0.2.0-alpha.38`. Les régressions couvrent activation, arrêt/libération, catalogue, lecture des paquets et installation/restauration isolée du backend. Elles ne garantissent ni une API 1.0 stable ni toutes les versions d’hôte/HA.
 
 - Les hooks Runtime concernent les plugins Runtime enregistrés dans l’hôte. Installer un plugin web statique n’exécute pas automatiquement `activate`/`deactivate`/`dispose`.

@@ -40,4 +40,4 @@ Le manifeste du paquet est distinct de `repository.json` : le catalogue comprend
 
 ## Limiter les capacités
 
-Chaque capacité doit être précise et justifiée. N'ajoutez ni valeur provisoire ni autorisation générale d'administrateur. L'installation actuelle n'exécute pas le code téléchargé ; une capacité ne constitue donc pas une limite d'accès ni une sandbox.
+Chaque capacité doit être précise et justifiée. Les pages statiques exécutent leur JavaScript dans le navigateur à l’ouverture. Une capacité n’est ni une limite d’accès ni une sandbox ; les hooks Runtime nécessitent une intégration explicite de l’hôte.

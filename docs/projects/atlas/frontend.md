@@ -8,6 +8,12 @@ und der hellen oder dunklen Darstellung.
 
 ## Voraussetzungen und Datenerhalt
 
+Stand 16.10.2026: **App 0.1.312**, **Integration 0.1.306**. Die Versionsnummern
+sind unabhängig. Die unten genannten Einführungs- und Prüfversionen sind keine
+Aufforderung, eine vorhandene neuere App zurückzusetzen. Vollständiger HAOS-Restore
+und ein bewusster Adresswechsel sind im [Sicherungsleitfaden](../atlas-plugins/file-studio)
+beschrieben; browserlokale Daten brauchen weiterhin einen eigenen Export.
+
 ATLAS muss bereits als App/Add-on, Docker-Container oder
 [Linux/systemd-Dienst](/projects/atlas/linux) laufen. HACS installiert die
 HA-Integration; der Node-Server und externe Plugins bleiben in ihrer Laufzeit.

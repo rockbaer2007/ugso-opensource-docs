@@ -43,4 +43,4 @@ Das Manifest im Pluginpaket ist von `repository.json` zu unterscheiden: Der Kata
 
 ## Fähigkeiten sparsam angeben
 
-Fähigkeiten müssen konkret begründet sein. Füge keine Platzhalter- oder pauschalen Admin-Berechtigungen hinzu. Die aktuelle Installation führt heruntergeladenen Plugin-Code noch nicht aus; eine Fähigkeitsangabe stellt daher keine technische Zugriffssperre oder Sandbox dar.
+Fähigkeiten müssen konkret begründet sein. Statische Plugin-Seiten führen beim Öffnen JavaScript im Browser aus. Eine Fähigkeitsangabe ist keine Zugriffssperre oder Sandbox; Runtime-Hooks brauchen eine ausdrückliche Hostintegration.

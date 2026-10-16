@@ -8,7 +8,7 @@ Die [offizielle ATLAS Plugin-Vorlage auf GitHub](https://github.com/rockbaer2007
 
 ## Plugin-Generator in der Administration
 
-Die ATLAS-Administration bietet einen Plugin-Generator. Neben ID, Name, Beschreibung, Version, Einstiegspfad und Fähigkeiten kannst du zwischen einem MDI-Icon aus dem lokal gebündelten Katalog und einem eigenen PNG-Icon wählen. Suche ein MDI-Icon und wähle es per Klick aus; das SVG und die zugehörigen Lizenzhinweise kommen ins Installationspaket. Eigene PNG-Dateien dürfen höchstens 512 KiB groß sein. Farben und Transparenz bleiben erhalten; die Bilddaten werden in das erzeugte Paket eingebettet. Das gilt für das Plugin-Icon, nicht für beliebige Binärdateien, die das Plugin selbst benötigt. Solche Dateien müssen separat bereitgestellt und per URL referenziert werden. Der Generator erstellt außerdem ein bearbeitbares HTML/CSS/JavaScript-Grundgerüst, eine `repository.json`-Katalogdatei und eine lokalisierte `README.md` mit Metadaten, Fähigkeiten, Dateiliste sowie Hinweisen zu Installation, Veröffentlichung und Entwicklung. Die Dokumentation kann zusätzlich einzeln heruntergeladen werden. Prüfe die erzeugten Inhalte und Pfade und ergänze die Dateien in deinem Repository; der Generator legt kein GitHub-Repository an und veröffentlicht nichts automatisch. Manuell importierte Pakete erscheinen im Plugin Hub. Ihre Dateien werden derzeit jedoch nicht als Plugin-Seite bereitgestellt oder ausgeführt; dafür muss das Plugin über ein Repository beziehungsweise einen lokal bereitgestellten Plugin-Ordner verfügbar sein.
+Die ATLAS-Administration bietet einen Plugin-Generator für ID, Name, Beschreibung, Version, Einstiegspfad und Fähigkeiten. Wähle ein MDI-Icon aus dem lokal gebündelten Katalog oder ein eigenes PNG bis 512 KiB; das Paket enthält die Grafik samt nötigen Lizenzhinweisen. Farben und Transparenz eigener PNGs bleiben erhalten. Erzeugt werden ein bearbeitbares HTML/CSS/JavaScript-Grundgerüst, Paket, `repository.json` und eine lokalisierte `README.md`, die auch einzeln heruntergeladen werden kann. Prüfe Inhalte und Pfade vor der Veröffentlichung. Der Generator erstellt kein GitHub-Repository und veröffentlicht nichts automatisch. Unterstützte manuell importierte Pakete werden nach der Kompatibilitätsprüfung auf dem App-Server installiert und unter `/plugin-assets/<slug>/` bereitgestellt. Die Oberfläche läuft erst beim Öffnen im Browser; Runtime-Hooks werden nicht automatisch registriert. Halte `entry` und Paketpfade konsistent.
 
 Plugins mit eigener Sprachauswahl übernehmen die gespeicherte ATLAS-Sprachwahl beim Öffnen. Ein `language`-Parameter in der Plugin-URL hat Vorrang. Unterstützt ein Plugin die gewählte Sprache nicht, verwendet es seine konfigurierte Rückfallsprache.
 
@@ -25,7 +25,7 @@ Plugins mit eigener Sprachauswahl übernehmen die gespeicherte ATLAS-Sprachwahl 
    ```
 
 5. Passe `repository.json` und `install.html` an dein Repository an. Der Paketgenerator übernimmt ID, Name, Version, Beschreibungen und Asset-Pfade aus dem Manifest und hält den Katalog synchron.
-6. Aktiviere GitHub Pages für den Branch `main`. Der Katalog ist dann unter `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json` erreichbar.
+6. Der Katalog ist nach dem Push ohne GitHub Pages unter `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json` erreichbar. Aktiviere GitHub Pages zusätzlich für die öffentliche `install.html`, falls gewünscht.
 7. Füge die Katalog-URL in der ATLAS-Administration hinzu und installiere das Plugin zum Testen.
 
 ## Was enthalten ist
@@ -36,6 +36,6 @@ Erhöhe bei jeder Veröffentlichung die Plugin-Version und führe anschließend 
 
 ## Aktueller Installationsumfang
 
-Der generische Repository-Installer speichert Paketdateien derzeit lokal. Er führt beliebigen heruntergeladenen Plugin-Code noch nicht automatisch aus. Das Paketformat speichert Plugin-Dateien als Text; größere Binärdateien sollten separat gehostet und per URL referenziert werden.
+Der App-Server installiert geprüfte Repository- und Importpakete im persistenten Plugin-Verzeichnis und stellt statische Webdateien unter `/plugin-assets/<slug>/` bereit. Beim Öffnen läuft deren JavaScript im Browser; beliebige Node-Module oder Runtime-Hooks werden nicht automatisch registriert. Die Installation ist keine Sandbox: Prüfe Paket und Browsercode vor dem Öffnen. Paketdateien enthalten Text oder ausdrücklich gekennzeichnete Base64-Assets; maximal 300 Dateien und 20 MB pro Paket. Größere Binärdateien separat bereitstellen.
 
 Weitere Details zum Katalog und Paketformat stehen unter [Repository-Format](./repository-format). Die Vorlage: [rockbaer2007/atlas-plugin-template](https://github.com/rockbaer2007/atlas-plugin-template).

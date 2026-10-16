@@ -14,8 +14,10 @@ Grafiken, Paketgenerator und Validierung. Nach Änderungen am Manifest erzeugt
 `npm run build` das installierbare Paket und synchronisiert die Katalogdaten;
 `npm run check` prüft die Konsistenz. GitHub Actions führt beide Prüfungen aus.
 
-Der aktuelle generische Repository-Installer speichert Paketdateien lokal. Er
-führt heruntergeladenen Plugin-Code noch nicht automatisch aus.
+Der App-Server installiert geprüfte Pakete persistent und stellt ihre statischen
+Webdateien bereit. JavaScript läuft beim Öffnen im Browser; Node-Module und
+Runtime-Hooks werden dadurch nicht automatisch registriert. Die Installation
+ist keine Sandbox; siehe [Runtime-Vertrag](./developers/runtime).
 
 ## Struktur
 
@@ -59,6 +61,9 @@ Relative Pfade werden relativ zur geladenen `repository.json` aufgelöst. `packa
 
 ## Beispiel
 
+Schema-Beispiel für ein eigenes Plugin, keine aktuelle Version des integrierten
+Card Editors. Die ID muss nach Veröffentlichung stabil bleiben.
+
 ```json
 {
   "kind": "atlas.plugin.repository",
@@ -70,26 +75,26 @@ Relative Pfade werden relativ zur geladenen `repository.json` aufgelöst. `packa
   "version": "0.1.0",
   "plugins": [
     {
-      "id": "atlas-homeassistant-card-editor",
+      "id": "atlas.plugin.example",
       "atlas": {
         "type": "plugin",
         "schemaVersion": 1
       },
-      "name": "Home Assistant Card Editor",
-      "version": "0.1.54",
-      "description": "Referenz-Plugin für Home-Assistant-Cards.",
+      "name": "Example Plugin",
+      "version": "0.1.0",
+      "description": "Example static ATLAS web plugin.",
       "descriptions": {
-        "de": "Referenz-Plugin für Home-Assistant-Cards.",
-        "en": "Reference plugin for Home Assistant cards."
+        "de": "Statisches ATLAS-Beispielplugin.",
+        "en": "Static ATLAS example plugin."
       },
-      "icon": "plugins/card-editor/icon.svg",
-      "preview": "plugins/card-editor/preview.png",
-      "package": "plugins/card-editor/atlas-plugin.json",
-      "manifest": "plugins/card-editor/plugin.atlas-plugin.json",
-      "capabilities": ["homeassistant.card-editor"],
+      "icon": "plugins/example/icon.svg",
+      "preview": "plugins/example/preview.png",
+      "package": "plugins/example/package.atlas-plugin.json",
+      "manifest": "plugins/example/atlas-plugin.json",
+      "capabilities": ["atlas.example"],
       "compatibility": {
-        "atlas": ">=0.1.54",
-        "host": ["administration", "hub", "homeassistant-addon"]
+        "atlas": ">=0.1.312 <0.2.0",
+        "host": ["docker", "linux", "homeassistant"]
       }
     }
   ]

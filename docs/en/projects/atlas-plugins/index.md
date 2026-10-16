@@ -9,7 +9,7 @@ Since ATLAS 0.1.304:
 3. Back up and apply retains a server recovery snapshot before replacement. Review unknown compatibility explicitly; incompatible packages remain blocked.
 4. To return, choose Restore on the plugin, review the saved version and apply. The currently installed version is backed up too.
 
-Browser data and data formats are not reset. An older plugin must support the existing data format. See [limits and backup location](./developers/compatibility#preserve-and-recover-data). The new UI is verified in isolation; native Pi/Proxmox qualification is pending.
+Browser data and data formats are not reset. An older plugin must support the existing data format. See [limits and backup location](./developers/compatibility#preserve-and-recover-data). The UI is verified in isolation and on Pi 5 and Proxmox with Icon Library, File Studio and Terminal; other plugins and data migrations require separate qualification.
 
 This section collects everything that describes installable extensions rather than the ATLAS core itself: plugin contracts, repository format, publishing, update behavior and individual plugin pages.
 

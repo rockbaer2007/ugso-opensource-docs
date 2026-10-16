@@ -8,7 +8,7 @@ Le [modèle officiel ATLAS Plugin Template sur GitHub](https://github.com/rockba
 
 ## Générateur de plugins dans l'Administration
 
-L'Administration ATLAS propose un générateur de plugins. En plus de l'identifiant, du nom, de la description, de la version, du chemin d'entrée et des capacités, vous pouvez rechercher une icône MDI et la sélectionner d'un clic. Le catalogue est intégré localement ; le SVG choisi et ses mentions de licence sont inclus dans le paquet d'installation. Le générateur crée également une base HTML/CSS/JavaScript modifiable, un catalogue `repository.json` et un fichier `README.md` localisé contenant les métadonnées, les capacités, la liste des fichiers ainsi que des conseils d'installation, de publication et de développement. La documentation peut aussi être téléchargée séparément. Vérifiez le contenu et les chemins générés, puis ajoutez les fichiers à votre dépôt ; le générateur ne crée pas de dépôt GitHub et ne publie rien automatiquement. Les paquets importés manuellement apparaissent dans le Plugin Hub, mais leurs fichiers ne sont pas encore servis ni exécutés comme pages de plugin. Pour lancer un plugin, rendez-le disponible via un dépôt ou un dossier de plugin servi localement.
+L’Administration ATLAS propose un générateur pour identifiant, nom, description, version, chemin d’entrée et capacités. Choisir une icône MDI du catalogue local ou un PNG personnel jusqu’à 512 KiB ; le paquet inclut image et mentions de licence nécessaires. Couleurs et transparence du PNG sont conservées. Il génère une base HTML/CSS/JavaScript modifiable, un paquet, `repository.json` et un `README.md` localisé, également téléchargeable séparément. Vérifier contenus et chemins avant publication. Aucun dépôt GitHub ni publication automatique n’est créé. Les paquets importés pris en charge sont installés sur le serveur App après contrôle de compatibilité et servis sous `/plugin-assets/<slug>/`. Leur interface s’exécute à l’ouverture dans le navigateur ; les hooks Runtime ne sont pas enregistrés automatiquement. Garder `entry` et chemins du paquet cohérents.
 
 Les plugins qui proposent leur propre choix de langue reprennent la préférence ATLAS enregistrée à leur ouverture. Le paramètre `language` de l'URL du plugin est prioritaire. Si un plugin ne prend pas en charge la langue choisie, il utilise sa langue de repli configurée.
 
@@ -25,7 +25,7 @@ Les plugins qui proposent leur propre choix de langue reprennent la préférence
    ```
 
 5. Adaptez `repository.json` et `install.html` à votre dépôt. Le générateur reprend l'identifiant, le nom, la version, les descriptions et les chemins des ressources du manifeste afin de synchroniser le catalogue.
-6. Activez GitHub Pages pour la branche `main`. Le catalogue sera alors disponible à l'adresse `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json`.
+6. Après le push, le catalogue est accessible à `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json` sans GitHub Pages. Activer Pages séparément pour publier `install.html` si souhaité.
 7. Ajoutez l'URL du catalogue dans l'Administration ATLAS et installez le plugin pour le tester.
 
 ## Contenu du modèle
@@ -36,6 +36,6 @@ Augmentez la version du plugin pour chaque publication, puis exécutez `npm run 
 
 ## Limites actuelles de l'installation
 
-L'installateur générique de dépôts stocke actuellement les fichiers du paquet localement. Il n'exécute pas automatiquement le code arbitraire téléchargé depuis un dépôt. Le format du paquet stocke les fichiers du plugin sous forme de texte ; les fichiers binaires volumineux doivent être hébergés séparément et référencés par URL.
+Le serveur App installe les paquets validés, depuis un dépôt ou un import, dans le stockage persistant et sert les fichiers web sous `/plugin-assets/<slug>/`. Leur JavaScript s’exécute dans le navigateur à l’ouverture ; les modules Node ou hooks Runtime ne sont pas enregistrés automatiquement. Ce n’est pas une sandbox : vérifier paquet et code avant ouverture. Les fichiers contiennent du texte ou des ressources Base64 explicitement marquées ; maximum 300 fichiers et 20 MB par paquet. Héberger séparément les gros fichiers binaires.
 
 Consultez [Format du dépôt](./repository-format) pour les détails du catalogue et du paquet. Dépôt du modèle : [rockbaer2007/atlas-plugin-template](https://github.com/rockbaer2007/atlas-plugin-template).

@@ -13,7 +13,7 @@ Depuis ATLAS 0.1.304 :
 3. Sauvegarder et appliquer conserve une sauvegarde serveur avant remplacement. Vérifier explicitement toute compatibilité inconnue ; les paquets incompatibles restent bloqués.
 4. Pour revenir, choisir Restaurer sur le plugin, vérifier la version sauvegardée et appliquer. La version installée est également sauvegardée.
 
-Les données du navigateur et leurs formats ne sont pas réinitialisés. Un ancien plugin doit accepter le format existant. Voir [limites et emplacement](./developers/compatibility#préserver-et-restaurer-les-données). La nouvelle interface est vérifiée isolément ; les tests natifs Pi/Proxmox restent à effectuer.
+Les données du navigateur et leurs formats ne sont pas réinitialisés. Un ancien plugin doit accepter le format existant. Voir [limites et emplacement](./developers/compatibility#préserver-et-restaurer-les-données). L’interface est vérifiée isolément puis sur Pi 5 et Proxmox avec Icon Library, File Studio et Terminal ; autres plugins et migrations nécessitent des vérifications séparées.
 
 Cette rubrique présente les extensions installables d'ATLAS : format des dépôts, publication, mises à jour et pages consacrées à chaque plugin.
 

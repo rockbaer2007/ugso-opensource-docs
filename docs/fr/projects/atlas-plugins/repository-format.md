@@ -16,8 +16,10 @@ illustrations, le constructeur de package et la validation. Après modification
 du manifeste, `npm run build` génère le package et synchronise le catalogue ;
 `npm run check` vérifie leur cohérence. GitHub Actions exécute les deux contrôles.
 
-L’installateur générique enregistre les fichiers du package localement.
-Il n’exécute pas arbitrairement le code téléchargé depuis un dépôt.
+Le serveur App installe les paquets validés dans le stockage persistant et sert
+leurs fichiers web. JavaScript s’exécute à l’ouverture dans le navigateur ;
+modules Node et hooks Runtime ne sont pas enregistrés automatiquement. Ce n’est
+pas une sandbox ; voir le [contrat Runtime](./developers/runtime).
 
 ## Structure
 
@@ -77,26 +79,26 @@ la version actuelle d’ATLAS.
   "version": "0.1.0",
   "plugins": [
     {
-      "id": "atlas-homeassistant-card-editor",
+      "id": "atlas.plugin.example",
       "atlas": {
         "type": "plugin",
         "schemaVersion": 1
       },
-      "name": "Home Assistant Card Editor",
-      "version": "0.1.54",
-      "description": "Reference plugin for Home Assistant cards.",
+      "name": "Example Plugin",
+      "version": "0.1.0",
+      "description": "Example static ATLAS web plugin.",
       "descriptions": {
-        "de": "Referenz-Plugin für Home-Assistant-Cards.",
-        "en": "Reference plugin for Home Assistant cards."
+        "de": "Statisches ATLAS-Beispielplugin.",
+        "en": "Static ATLAS example plugin."
       },
-      "icon": "plugins/card-editor/icon.svg",
-      "preview": "plugins/card-editor/preview.png",
-      "package": "plugins/card-editor/atlas-plugin.json",
-      "manifest": "plugins/card-editor/plugin.atlas-plugin.json",
-      "capabilities": ["homeassistant.card-editor"],
+      "icon": "plugins/example/icon.svg",
+      "preview": "plugins/example/preview.png",
+      "package": "plugins/example/package.atlas-plugin.json",
+      "manifest": "plugins/example/atlas-plugin.json",
+      "capabilities": ["atlas.example"],
       "compatibility": {
-        "atlas": ">=0.1.54",
-        "host": ["administration", "hub", "homeassistant-addon"]
+        "atlas": ">=0.1.312 <0.2.0",
+        "host": ["docker", "linux", "homeassistant"]
       }
     }
   ]

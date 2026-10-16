@@ -4,6 +4,11 @@ The Home Assistant Card Editor is the first official ATLAS reference plugin. It 
 
 ## Purpose
 
+As of 2026-10-16: reference plugin **0.2.0-alpha.108** in App **0.1.312**.
+It updates with ATLAS, not by replacement as an external plugin. See the
+[Editor guide](../atlas/card-editor) and [App/Runtime projects](../atlas/frontend)
+for shared projects and complete HACS Card export/import instructions.
+
 Product decision on 2026-10-13: the editor remains Expert-only. Simple mode and
 its switch will not return. Supported legacy project imports remain compatible.
 

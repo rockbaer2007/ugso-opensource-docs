@@ -2,14 +2,17 @@
 
 ATLAS 0.1.298 bietet außerdem einen optionalen [Linux/systemd-Installer](/projects/atlas/linux)
 für den eigenständigen Betrieb. Installation, Update, Sicherung und Rückwechsel
-sind auf Debian 12 amd64 LXC geprüft. Die native ATLAS-HA/HACS-Frontend-Integration
+sind auf Debian 12 amd64 LXC und Raspberry Pi OS aarch64 auf Pi 4 geprüft.
+Die native ATLAS-HA/HACS-Frontend-Integration
 ist als optionale [Integration ATLAS Runtime](/projects/atlas/frontend) ab 0.1.299
-umgesetzt. Ihre native HACS-Installation bleibt separat zu qualifizieren.
+umgesetzt. HACS-Installation, Update auf Integration 0.1.306 und HA-Neustart
+sind auf Pi 5 und Proxmox mit Datenerhalt geprüft. Die App hat unabhängig davon
+den Stand 0.1.312.
 
 ATLAS besitzt mit `@atlas/homeassistant` ein eigenes Paket für die
 Home-Assistant-nahe Integration. Der aktuelle Schwerpunkt liegt auf einem
 Editor- und Export-Workflow für Home-Assistant-Karten, Live-Entitäten und
-spätere HACS-Nutzung.
+HACS-Card-Pakete.
 
 Die ausführliche Bedien- und Funktionsdoku zum Editor liegt jetzt in der
 Plugin-Rubrik: [Home Assistant Card Editor](/projects/atlas-plugins/homeassistant-card-editor).
@@ -524,15 +527,21 @@ Mögliche Zustände:
 
 ## ATLAS als Home-Assistant-Frontend
 
-ATLAS unterscheidet jetzt auch die Resource, die ATLAS selbst in Home Assistant
-verfügbar macht. Das ist getrennt von der gewählten Card-Abhängigkeit.
+Die installierbare [Integration ATLAS Runtime](/projects/atlas/frontend) bindet
+die vorhandene Laufzeit als eigenes HA-Panel ein. HACS-Repositorytyp ist
+**Integration**, der Modulpfad lautet
+`/atlas_frontend/frontend/atlas-homeassistant-panel.js`. Diesen Pfad nicht als
+zusätzliche Lovelace-Ressource registrieren. Exportierte Cards verwenden dagegen
+ihr eigenes Dashboard-Repository und den jeweils erzeugten Script-Dateinamen.
+
+Die älteren Resource-Targets im Editor bleiben Diagnose-/Planungsmetadaten:
 
 | Nutzungsart | Zweck | Erwarteter Ressourcenpfad |
 |---|---|---|
 | ATLAS Server | selbst gehosteter ATLAS-Editor oder Panel | `/local/atlas/atlas-homeassistant-panel.js` |
-| ATLAS HACS | geplante HACS-Frontend-Integration | `/hacsfiles/atlas/atlas-homeassistant-panel.js` |
+| ATLAS HACS | historischer Resource-Target, nicht der Installationspfad der Integration | `/hacsfiles/atlas/atlas-homeassistant-panel.js` |
 
-Die neue Integrationsplanung kann dadurch gemeinsam prüfen:
+Die Ressourcenprüfung kann diese getrennten Angaben anzeigen:
 
 - ist die ATLAS-Frontend-Resource registriert?
 - ist die gewählte Card-Resource installiert?
@@ -540,8 +549,8 @@ Die neue Integrationsplanung kann dadurch gemeinsam prüfen:
 - ist der gesamte Export bereit für Home Assistant?
 - welche JSON- oder YAML-Resources sollen in Home Assistant registriert werden?
 
-Damit ist der nächste Schritt in Richtung “ATLAS direkt in Home Assistant
-nutzen oder als HACS-nahe Integration installieren” vorbereitet.
+Für die echte Panelinstallation gilt ausschließlich die oben verlinkte
+Integrationsanleitung. Ein Resource-Target allein installiert keine Integration.
 
 ## Aktuelle Demo
 
@@ -567,10 +576,11 @@ Eingaben nebeneinander statt über die gesamte Seitenbreite laufen.
 Die Home-Assistant-Integration zielt auf zwei Nutzungsarten:
 
 - ATLAS als eigenständiger Server oder Editor
-- ATLAS als Home-Assistant-Frontend-Integration, später auch HACS-nah
+- ATLAS als Home-Assistant-Frontend über die optionale HACS-Integration
 
-Die aktuellen Card Packages sind ein Zwischenschritt auf dem Weg zu einem
-installierbaren und wieder importierbaren HA-Card-Editor.
+Card-Pakete und HACS-Bundles lassen sich exportieren und wieder importieren.
+Der echte HACS-Repository-/Release-/Update-/Wiederherstellungsdurchlauf ist
+isoliert geprüft; Anleitung und Grenzen stehen im [Card Editor](./card-editor).
 
 Beim Export von Card Packages und HACS-Bundles fragt der Card Editor die
 gewünschten Card-Sprachen separat ab. Das betrifft nur die exportierte Card,

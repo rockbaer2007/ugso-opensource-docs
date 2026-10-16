@@ -8,6 +8,24 @@ ATLAS Icon Studio est un plugin installé séparément pour créer et gérer des
 
 ## Gestion des icônes
 
+Version actuelle du plugin : **0.1.16**. Elle corrige un échec au démarrage du
+sélecteur de format d’export et conserve les collections enregistrées.
+
+La collection est dans IndexedDB local au navigateur. Les anciennes données
+sont reprises ; exporter en JSON avant de changer de navigateur ou d’adresse.
+
+## Dessin et aperçu d’images
+
+Une zone séparée crée des SVG en couleur avec formes, dessin libre et texte,
+ordre des calques et dix étapes d’annulation/rétablissement au maximum.
+Enregistrer sous exporte SVG, PNG ou WebP, avec fond transparent en option.
+Les images matricielles peuvent être affichées et vectorisées en option, mais
+ne deviennent pas directement des icônes `atlas:` ; le jeu HA nécessite des
+chemins SVG. File Studio transmet les images prises en charge à Icon Studio sur
+le même serveur ATLAS. Les téléchargements ne sont pas copiés automatiquement dans HA.
+
+## Modifier la collection
+
 Sélectionnez une icône dans la collection et utilisez **Supprimer l’icône**. Icon Studio sélectionne ensuite automatiquement la prochaine icône supprimable. Vous pouvez ainsi en supprimer plusieurs à la suite sans devoir en sélectionner une après chaque suppression. L’icône de référence `atlas:home` est protégée et ne peut pas être supprimée. La collection conserve toujours au moins une icône.
 
 La recherche, la navigation au clavier et l’export portent sur toute la collection, même si seule une petite partie est affichée. Les collections peuvent être sauvegardées et restaurées au format JSON ; les conflits de noms peuvent être remplacés, ignorés ou renommés automatiquement.

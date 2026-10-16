@@ -23,11 +23,11 @@ Beachte die [Versions- und Kompatibilitätsregeln](./compatibility) einschließl
 2. Führe `npm run build` und `npm run check` aus.
 3. Prüfe, ob Manifest, Katalog und erzeugtes Paket dieselbe ID und Version enthalten.
 4. Kontrolliere Paketdateien, Asset-Pfade, externe Anfragen und deklarierte Fähigkeiten.
-5. Aktiviere GitHub Pages für `main`, wenn dein Katalog über GitHub Pages erreichbar sein soll. Die Rohdatei ist dann unter `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json` verfügbar.
+5. Veröffentliche den Katalog durch Push nach `main`: `https://raw.githubusercontent.com/<owner>/<repo>/main/repository.json`. GitHub Pages ist dafür nicht nötig; es dient optional zur Veröffentlichung der `install.html`.
 6. Füge die Katalog-URL in ATLAS Administration hinzu und teste Vorschau und Paketinstallation.
 
 Halte die Plugin-ID nach der ersten Veröffentlichung stabil. Größere Binärdateien gehören nicht in das textbasierte Paketformat; hoste sie separat und referenziere sie über eine URL.
 
 ## Installationsstatus
 
-Der generische ATLAS-Repository-Installer speichert heruntergeladene Paketdateien derzeit lokal. Er führt den enthaltenen beliebigen Plugin-Code noch nicht automatisch aus. Ein erfolgreicher Paketbuild bestätigt deshalb die Paketstruktur, aber keine ausführbare Installation oder Sicherheitsprüfung des Plugin-Codes.
+Der App-Server installiert geprüfte Repository- und Importpakete im persistenten Plugin-Verzeichnis und stellt statische Webdateien unter `/plugin-assets/<slug>/` bereit. Beim Öffnen läuft deren JavaScript im Browser; beliebige Node-Module oder Runtime-Hooks werden nicht automatisch registriert. Die Installation ist keine Sandbox: Prüfe Paket und Browsercode vor dem Öffnen. Ein Paketbuild allein ersetzt keine Laufzeit- oder Sicherheitsprüfung.

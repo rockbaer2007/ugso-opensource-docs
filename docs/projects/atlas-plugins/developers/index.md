@@ -27,4 +27,4 @@ Dieser Bereich führt durch den Entwicklungsweg für eigenständige ATLAS-Plugin
 
 Deklariere nur Fähigkeiten, die dein Plugin wirklich verwendet. Eine Deklaration dokumentiert den Zweck des Plugins; sie ist keine Sandbox und gewährt keinen automatischen Zugriff auf Home Assistant oder Atlas-Interna. Fordere Zugangsdaten nicht in Plugin-Dateien an und veröffentliche keine Tokens oder API-Schlüssel.
 
-Der generische Repository-Installer speichert Paketdateien aktuell lokal und führt beliebigen heruntergeladenen Code nicht automatisch aus. Behandle Tests und Veröffentlichungen entsprechend als Paket- und Integrationsprüfung, nicht als Nachweis einer isolierten Ausführungsumgebung.
+Der App-Server installiert geprüfte Repository- und Importpakete im persistenten Plugin-Verzeichnis und stellt statische Webdateien unter `/plugin-assets/<slug>/` bereit. Beim Öffnen läuft deren JavaScript im Browser; beliebige Node-Module oder Runtime-Hooks werden nicht automatisch registriert. Die Installation ist keine Sandbox: Prüfe Paket und Browsercode vor dem Öffnen.

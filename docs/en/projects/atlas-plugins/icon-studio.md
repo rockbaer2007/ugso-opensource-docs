@@ -8,6 +8,23 @@ ATLAS Icon Studio is a separately installed plugin for creating and managing Hom
 
 ## Managing icons
 
+Current plugin version: **0.1.16**. It corrects a startup failure in the export
+format selector while preserving saved collections.
+
+The collection is stored in browser-local IndexedDB. Older local data is
+adopted; export the collection as JSON before changing browser or address.
+
+## Drawing and image previews
+
+A separate drawing area supports colored SVGs with shapes, freehand and text,
+layer ordering and up to ten undo/redo steps. Save as exports SVG, PNG or WebP,
+optionally with a transparent background. Raster images can be previewed and
+optionally traced, but do not directly become `atlas:` icons; HA icon sets need
+SVG paths. File Studio can hand supported images directly to Icon Studio on the
+same ATLAS server. Downloads are not automatically copied to HA.
+
+## Editing a collection
+
 Select an icon in the collection and use **Delete icon** to remove it. Icon Studio automatically selects the next deletable icon, so you can remove several icons in succession without selecting each one again. The reference icon `atlas:home` is protected and cannot be deleted. At least one icon remains in the collection.
 
 Search, keyboard navigation and export cover the full collection, even when only a small portion is visible. Collections can be backed up and restored as JSON; name conflicts can be replaced, skipped or renamed automatically.
