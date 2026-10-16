@@ -129,6 +129,26 @@ ChatGPT/OpenAI passe par l’Administration et nécessite Internet ; les fichier
 traduits automatiquement restent à relire. Voir le
 [modèle d’export et les secrets](/fr/projects/atlas/homeassistant#feuille-de-route-et-langues-exportees).
 
+### Aller-retour du bundle HACS vérifié
+
+L’App **0.1.307** vérifie un projet mixte Core/Bubble/Mushroom dans HA Core
+**2026.10.1** isolé : import ZIP, téléchargement réel dans le navigateur,
+réimport et nouvel export conservent champs, grille et configuration des cartes.
+Le ZIP réexporté est identique octet par octet dans ce test. Les contrôles
+comparent le nom du projet au nom vérifié du package ; les noms différents
+des cartes internes ne provoquent plus de faux conflits de titre.
+
+Le script exporté fonctionne dans HA réel avec Bubble **3.4.2** et Mushroom
+**5.2.3**, avec mise à jour des états en direct. HA utilise des piles générées ;
+les métadonnées de grille conservées ne garantissent pas une géométrie identique
+au pixel près. Les ressources isolées sont servies via `/local/` ; cela ne
+valide pas le téléchargement depuis un dépôt HACS.
+
+Les exports EN/DE/FR sont indépendants de la langue de l’éditeur. Sans adaptateur
+de traduction, DE/FR contiennent des replis anglais identifiés. Le script Expert
+généré ne charge pas encore ces fichiers lui-même. Les libellés d’état HA et
+communautaires suivent leur propre langue ; les noms personnalisés restent tels quels.
+
 ## Tabbed Card V2
 
 Cette carte ATLAS est exportée sous le type :

@@ -163,6 +163,26 @@ Beim HA-Card-Export kann gewählt werden, ob Styles als `card_mod` oder als
 `uix` ausgegeben werden. Exportdateien erhalten bei Namenskollisionen wie in
 Windows automatisch eine Zählung.
 
+### Geprüfter HACS-Bundle-Durchlauf
+
+Mit App **0.1.307** ist ein gemischtes Core-/Bubble-/Mushroom-Projekt unter
+HA Core **2026.10.1** isoliert geprüft: ZIP-Import, echter Browser-Download,
+Wiederimport und erneuter Export erhalten Felder, Rasterdaten und
+Card-Konfiguration. Das erneut exportierte ZIP ist im Test bytegleich.
+Die Bundle-Prüfung vergleicht den Projektnamen mit dem geprüften Paketnamen;
+abweichende Namen innerer Cards erzeugen keine falschen Titelkonflikte mehr.
+
+Das exportierte Script wurde mit Bubble **3.4.2** und Mushroom **5.2.3** in
+echtem HA dargestellt, einschließlich Live-Zustandswechsel. Die HA-Darstellung
+verwendet generierte Stacks; erhaltene Rasterdaten garantieren keine identische
+Pixelgeometrie. Die isolierte Bereitstellung erfolgte über `/local/`; ein
+HACS-Repository-Download wird dadurch nicht bestätigt.
+
+EN/DE/FR werden unabhängig von der Editor-Sprache exportiert. DE/FR enthalten
+ohne Übersetzungsadapter gekennzeichnete englische Fallbacks. Das generierte
+Expert-Script lädt diese Dateien derzeit nicht selbst. HA-/Community-Zustandstexte
+folgen ihrer eigenen Sprache; selbst vergebene Card-Namen bleiben unverändert.
+
 ## Tabbed Card V2
 
 Tabbed Card V2 wird im Editor als eigene ATLAS-Card behandelt und exportiert
