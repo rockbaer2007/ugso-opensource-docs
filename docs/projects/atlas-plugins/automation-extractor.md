@@ -1,6 +1,6 @@
 # ATLAS Automation Exporter / Editor
 
-ATLAS Automation Exporter / Editor ist das nächste eigenständige ATLAS-Plugin.
+ATLAS Automation Exporter / Editor ist ein eigenständiges, extern gepflegtes ATLAS-Plugin.
 Die Idee basiert auf dem bisherigen Windows-Werkzeug zum Aufteilen von
 `automations.yaml`, wandert aber direkt in die ATLAS-Plugin-Architektur.
 
@@ -25,10 +25,10 @@ Seit 0.1.28 zählt die Analyse die tatsächlichen YAML-Einträge von Triggern,
 Bedingungen und Aktionen. Abschnittsköpfe und verschachtelte Schritte zählen
 nicht als zusätzliche Haupteinträge. Moderne und klassische Schreibweisen
 werden unterstützt. Einstellungen und Quellautomationen bleiben unverändert;
-vor dem Lesen der Systemdatei wird weiterhin eine Sicherheitskopie angelegt.
+beim Laden wird vor der Analyse weiterhin eine Sicherheitskopie angelegt.
 
 - `/config/automations.yaml` automatisch über den freigegebenen File-Studio-Pfad lesen
-- beim Lesen der echten `/config/automations.yaml` zuerst eine Sicherheitskopie
+- beim Laden der echten `/config/automations.yaml` vor der Analyse eine Sicherheitskopie
   unter `/config/atlas_backups/automations/<datum-zeit>/automations.yaml`
   anlegen
 - fremde `.yaml`- und `.yml`-Dateien per Upload analysieren
@@ -67,6 +67,39 @@ System-YAML oder hochgeladene YAML-Dateien, legt beim Öffnen der echten
 `automations.yaml` eine Sicherheitskopie an, analysiert die Automationen und
 exportiert getrennte YAML-Dateien. Manuelle Wiederherstellung und spätere
 Bearbeitung laufen über File Studio und die Home-Assistant-YAML-Werkzeuge.
+
+## Sichere Plugin-Wiederherstellung
+
+In **Administration → Plugin-Manager → Automation Exporter / Editor →
+Wiederherstellen** eine vorhandene Sicherung auswählen. Version, Richtung und
+Kompatibilität in der Vorschau prüfen und erst dann **Sichern und übernehmen**
+ausführen. ATLAS sichert dabei auch die aktuell installierte Plugin-Version.
+**Abbrechen** lässt die Installation unverändert. Nach einer zwischenzeitlichen
+Änderung am Plugin-/Verwaltungsstand muss eine neue Vorschau erstellt werden.
+
+Damit wird das **Plugin-Paket** wiederhergestellt. Quellautomationen, exportierte
+Dateien, Editor-Projekte sowie Papierkorb und Historie werden dadurch nicht auf
+einen früheren Datenstand zurückgesetzt. Es gibt keinen automatischen Import
+nach Home Assistant und kein Zurückschreiben in `automations.yaml`.
+
+::: info Isoliert geprüft am 16.10.2026
+Mit ATLAS 0.1.312 wurden echte Pakete **0.1.27 → 0.1.28 → 0.1.27 → 0.1.28**
+geprüft, einschließlich Neustart, UI-Vorschau, Abbruch und Übernahme. Eine
+veraltete Vorschau wurde nach einer echten Verwaltungsänderung zurückgewiesen.
+Vorher wurden Repositories und die vollständigen isolierten Testdaten gesichert.
+Quell-YAML, vorhandene Exporte, Projekt, anderes Plugin, Papierkorb und Historie
+blieben beim Dateivergleich erhalten. Analyse in DE/EN/FR, bytegleiche
+Sicherheitskopien, Exportpaare mit/ohne ID und Öffnen im File Studio bestanden.
+Die HA-Version kam von einem lokalen Testendpunkt; das ist kein Test einer echten
+HA-Verbindung, eines GitHub-Updates oder einer Datenformat-Migration.
+**Pi 5 und Proxmox wurden weder abgefragt noch verändert.** Native Tests bleiben offen.
+:::
+
+Sprache und Darstellung werden lokal gespeichert. Geladene Analyse, Auswahl,
+Filter, eingegebener Export-Ordner und Exportübersicht gehören zur aktuellen
+Sitzung. Nach Neuladen die Quelle erneut laden und den Zielordner bei Bedarf
+erneut wählen. Bereits gespeicherte Exportdateien bleiben erhalten und können
+im File Studio geöffnet werden.
 
 ## Einordnung
 

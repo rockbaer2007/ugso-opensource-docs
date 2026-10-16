@@ -1,13 +1,13 @@
 # ATLAS Automation Exporter / Editor
 
-ATLAS Automation Exporter / Editor is the next independent ATLAS plugin. The
+ATLAS Automation Exporter / Editor is an independently maintained external ATLAS plugin. The
 idea comes from the existing Windows tool for splitting `automations.yaml`, but
 moves directly into the ATLAS plugin architecture.
 
 ## Goal
 
-The plugin should analyze Home Assistant automations safely, export selected
-entries and prepare further editing through File Studio.
+The plugin analyzes Home Assistant automations safely, exports selected
+entries and prepares further editing through File Studio.
 
 ## Repository
 
@@ -23,10 +23,10 @@ converts it to the matching `repository.json` address automatically.
 Since 0.1.28, analysis counts actual YAML trigger, condition and action entries.
 Section headers and nested steps do not add root entries. Modern and classic
 syntax are supported. Settings and source automations are unchanged; reading
-the system file still creates a safety backup first.
+the system file still creates a safety backup before analysis.
 
 - read `/config/automations.yaml` through the approved File Studio path
-- create a safety backup before reading the real `/config/automations.yaml`,
+- create a safety backup before analyzing the loaded `/config/automations.yaml`,
   stored as `/config/atlas_backups/automations/<date-time>/automations.yaml`
 - analyze external `.yaml` and `.yml` uploads
 - show id, alias, description, triggers, conditions and actions
@@ -62,6 +62,36 @@ YAML or uploaded YAML files, creates a safety backup when opening the real
 `automations.yaml`, analyzes the automations and exports separate YAML files.
 Manual restore and further editing should continue through File Studio and Home
 Assistant's own YAML tools.
+
+## Safe plugin recovery
+
+In **Administration → Plugin Manager → Automation Exporter / Editor → Restore**,
+select an existing backup. Review version, direction and compatibility, then use
+the action that backs up the current plugin and applies the selected version.
+Cancel leaves the installation unchanged. A concurrent change to plugin or
+management state requires a fresh preview.
+
+This restores the **plugin package**. It does not roll source automations,
+exports, editor projects, trash or history back to earlier data. It neither
+imports into Home Assistant automatically nor writes back to `automations.yaml`.
+
+::: info Isolated qualification on 2026-10-16
+Actual packages **0.1.27 → 0.1.28 → 0.1.27 → 0.1.28** passed on ATLAS 0.1.312,
+including restart, UI preview, cancellation and recovery. A stale preview was
+rejected after a real management change. Repository bundles and a complete
+isolated fixture archive were retained before changes. Source YAML, existing
+exports, project, another plugin, trash and history remained exact. DE/EN/FR
+analysis, byte-identical safety backups, export/import pairs with/without ID and
+opening exports in File Studio passed. HA version metadata came from a local
+test endpoint; this does not qualify real HA authentication, GitHub updates or
+data-format migration. **Pi 5 and Proxmox were neither queried nor changed.**
+Native qualification remains open.
+:::
+
+Language and appearance are stored locally. Loaded analysis, selection, filters,
+the entered export folder and export overview belong to the current session.
+After reloading, load the source again and select the target folder if needed.
+Previously saved export files remain available in File Studio.
 
 ## Positioning
 

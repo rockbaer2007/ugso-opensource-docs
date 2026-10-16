@@ -24,10 +24,10 @@ Depuis 0.1.28, l'analyse compte les véritables éléments YAML des déclencheur
 conditions et actions. Les en-têtes et étapes imbriquées n'ajoutent pas
 d'éléments principaux. Les syntaxes moderne et classique sont prises en charge.
 Paramètres et automatisations sources restent inchangés ; une sauvegarde
-précède toujours la lecture du fichier système.
+précède toujours l’analyse du fichier système chargé.
 
 - lire `/config/automations.yaml` via le chemin File Studio autorisé ;
-- créer une sauvegarde avant de lire le véritable `/config/automations.yaml`, dans `/config/atlas_backups/automations/<date-heure>/automations.yaml` ;
+- sauvegarder le contenu chargé de `/config/automations.yaml` avant son analyse, dans `/config/atlas_backups/automations/<date-heure>/automations.yaml` ;
 - analyser les fichiers `.yaml` et `.yml` importés ;
 - afficher l’ID, l’alias, la description, les déclencheurs, les conditions et les actions ;
 - détecter les appels de service au format classique `service:` et au format moderne `action: domain.service` ;
@@ -47,6 +47,37 @@ précède toujours la lecture du fichier système.
 ## Sécurité
 
 Le plugin n’écrit pas dans les fichiers système de Home Assistant. Il lit les fichiers YAML système ou importés, crée une sauvegarde avant d’ouvrir le véritable `automations.yaml`, analyse les automatisations et exporte des fichiers YAML séparés. La restauration manuelle et la modification ultérieure se font dans File Studio et avec les outils YAML de Home Assistant.
+
+## Restauration sécurisée du plugin
+
+Dans **Administration → Gestionnaire de plugins → Automation Exporter / Editor →
+Restaurer**, choisir une sauvegarde existante. Vérifier version, direction et
+compatibilité, puis utiliser l’action qui sauvegarde le plugin actuel et applique
+la version choisie. Annuler conserve l’installation. Une modification simultanée
+du plugin ou de sa gestion impose un nouvel aperçu.
+
+Cette opération restaure le **paquet du plugin**. Elle ne rétablit pas un ancien
+état des automatisations sources, exports, projets, corbeille ou historique. Elle
+n’importe rien automatiquement dans Home Assistant et n’écrit pas dans
+`automations.yaml`.
+
+::: info Vérification isolée du 16/10/2026
+Les vrais paquets **0.1.27 → 0.1.28 → 0.1.27 → 0.1.28** ont été vérifiés avec
+ATLAS 0.1.312 : redémarrage, aperçu, annulation et restauration dans l’interface.
+Un aperçu périmé est refusé après une modification effective de la gestion.
+Dépôts et données de test isolées ont été sauvegardés avant les changements.
+YAML source, exports existants, projet, autre plugin, corbeille et historique
+restent identiques. Analyse DE/EN/FR, sauvegardes identiques à la source, paires
+d’export/import avec/sans ID et ouverture dans File Studio réussissent. La version
+HA provient d’un serveur de test local : ni authentification HA réelle, ni mise
+à jour GitHub, ni migration de format ne sont qualifiées.
+**Pi 5 et Proxmox n’ont été ni interrogés ni modifiés.** Les essais natifs restent ouverts.
+:::
+
+Langue et apparence sont enregistrées localement. Analyse chargée, sélection,
+filtres, dossier d’export saisi et liste des exports appartiennent à la session.
+Après rechargement, charger de nouveau la source et choisir le dossier si
+nécessaire. Les fichiers déjà exportés restent disponibles dans File Studio.
 
 ## Rôle
 
