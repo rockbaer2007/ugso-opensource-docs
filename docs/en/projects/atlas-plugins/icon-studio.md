@@ -8,8 +8,9 @@ ATLAS Icon Studio is a separately installed plugin for creating and managing Hom
 
 ## Managing icons
 
-Current plugin version: **0.1.16**. It corrects a startup failure in the export
-format selector while preserving saved collections.
+Current plugin version: **0.1.17**. It fixes a missing validator import when
+creating drawing text. Version 0.1.16 previously fixed export-selector startup.
+Storage formats remain unchanged.
 
 The collection is stored in browser-local IndexedDB. Older local data is
 adopted; export the collection as JSON before changing browser or address.
@@ -34,3 +35,29 @@ Search, keyboard navigation and export cover the full collection, even when only
 Icon sets can be exported locally as `atlas-iconset.js` or read directly from `/config/www/atlas-iconset.js` through File Studio. When saving, you can replace the existing file; File Studio creates a backup first. Alternatively, Icon Studio creates a new numbered file and displays its `/local/...` resource path for registration in Home Assistant. Direct access requires `/config/www` to be approved in File Studio.
 
 See the [plugin README](https://github.com/rockbaer2007/atlas-icon-studio-plugin#readme) for installation, format and path details.
+
+## Safe plugin recovery
+
+Back up the collection as JSON, export the iconset and save drawings separately
+as SVG. In **Administration → Plugin Manager → Icon Studio → Restore**, select
+a backup, review version/compatibility and use the action that backs up the
+current plugin and applies the selected version. Cancel leaves it unchanged.
+
+::: info Isolated qualification on 2026-10-16
+ATLAS 0.1.312 passed **0.1.16 → 0.1.17** and recovery **0.1.17 → 0.1.16 → saved
+0.1.17**, including App restart. All twelve assets matched their actual packages.
+A collection of 131 icons and a drawing with two text objects survived on the same
+browser origin/profile. Re-exported JSON, iconset JavaScript and SVG were
+byte-identical. New text creation, duplicate and undo worked. Test files,
+existing iconset, project, another plugin, trash and history remained intact.
+Repositories, server data and browser exports were backed up beforehand.
+**Pi 5 and Proxmox were neither queried nor changed.** Native qualification
+and data-format migrations remain separate.
+:::
+
+Package recovery does not restore deleted browser data. IndexedDB and the local
+drawing draft belong to the browser profile and origin (scheme, host and port).
+HA/server backups do not contain those browser stores. Collection JSON and
+iconset JavaScript exclude colored drawings; an exported SVG is not a complete
+editable-draft/undo backup. Current draft shapes and filename persist locally;
+tool selection, search and undo/redo history belong to the session.

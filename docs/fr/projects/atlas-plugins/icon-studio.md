@@ -8,8 +8,9 @@ ATLAS Icon Studio est un plugin installé séparément pour créer et gérer des
 
 ## Gestion des icônes
 
-Version actuelle du plugin : **0.1.16**. Elle corrige un échec au démarrage du
-sélecteur de format d’export et conserve les collections enregistrées.
+Version actuelle du plugin : **0.1.17**. Elle corrige un import de validation
+manquant lors de la création de texte dans le dessin. La version 0.1.16 avait
+corrigé le démarrage du sélecteur d’export. Les formats de stockage restent inchangés.
 
 La collection est dans IndexedDB local au navigateur. Les anciennes données
 sont reprises ; exporter en JSON avant de changer de navigateur ou d’adresse.
@@ -35,3 +36,30 @@ La recherche, la navigation au clavier et l’export portent sur toute la collec
 Les jeux d’icônes peuvent être exportés localement sous `atlas-iconset.js` ou lus directement depuis `/config/www/atlas-iconset.js` avec File Studio. Lors de l’enregistrement, vous pouvez remplacer le fichier existant ; File Studio crée d’abord une sauvegarde. Icon Studio peut aussi créer un nouveau fichier numéroté et afficher son chemin de ressource `/local/...` à enregistrer dans Home Assistant. L’accès direct nécessite que `/config/www` soit autorisé dans File Studio.
 
 Consultez le [README du plugin](https://github.com/rockbaer2007/atlas-icon-studio-plugin#readme) pour les détails d’installation, de formats et de chemins.
+
+## Restauration sécurisée du plugin
+
+Sauvegarder la collection en JSON, exporter le jeu d’icônes et enregistrer
+séparément les dessins en SVG. Dans **Administration → Gestionnaire de plugins →
+Icon Studio → Restaurer**, choisir une sauvegarde et vérifier version/compatibilité.
+L’action d’application sauvegarde aussi le plugin actuel. Annuler le conserve.
+
+::: info Vérification isolée du 16/10/2026
+Avec ATLAS 0.1.312 : **0.1.16 → 0.1.17**, puis **0.1.17 → 0.1.16 → 0.1.17
+sauvegardée**, redémarrage compris. Les douze fichiers correspondent aux paquets.
+Une collection de 131 icônes et un dessin avec deux textes sont conservés dans
+le même profil et à la même origine. Les nouveaux exports JSON, JavaScript et
+SVG sont identiques octet par octet. Création de texte, duplication et annulation
+fonctionnent. Fichiers de test, jeu existant, projet, autre plugin, corbeille et
+historique sont conservés. Dépôts, données serveur et exports du navigateur ont
+été sauvegardés avant les changements. **Pi 5 et Proxmox n’ont été ni interrogés
+ni modifiés.** Les essais natifs et migrations de format restent distincts.
+:::
+
+Restaurer le paquet ne restaure pas les données supprimées du navigateur.
+IndexedDB et le brouillon local dépendent du profil et de l’origine (protocole,
+hôte et port). Une sauvegarde HA/serveur ne contient pas ces données. JSON de
+collection et JavaScript d’icônes excluent les dessins en couleur ; le SVG
+exporté n’est pas une sauvegarde complète du brouillon modifiable et des annulations.
+Formes et nom du fichier courant persistent localement ; outils, recherche et
+historique d’annulation/rétablissement appartiennent à la session.
