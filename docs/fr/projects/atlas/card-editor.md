@@ -241,6 +241,15 @@ Ce contrôle détecte les fichiers absents/illisibles, pas un mélange de releas
 dont les fichiers de langue restent valides ; il ne s’agit ni d’une vérification
 cryptographique ni d’une réparation automatique.
 
+La mise à jour 0.1.310 et ce contrôle sont aussi testés sur Proxmox et Pi 5 après
+de nouvelles sauvegardes : Cards de test distinctes nouvellement générées, FR et
+EN absents, puis restauration après rechargement, avec paramètres, projets et
+plugins externes conservés. La vérification native utilise des ressources de
+test `/local/` distinctes, pas une nouvelle installation GitHub/HACS. Un échec
+de lecture temporaire peut aussi déclencher l’avis ; un premier avis dans
+l’aperçu Proxmox a disparu après rechargement. Un avis seul ne prouve pas une
+corruption permanente.
+
 Des pannes ont été injectées dans une copie isolée HA 2026.10.1/HACS 2.0.5 :
 le nouveau script a réellement été téléchargé depuis GitHub et écrit, puis les
 téléchargements des langues ont signalé un échec ou le processus a été arrêté

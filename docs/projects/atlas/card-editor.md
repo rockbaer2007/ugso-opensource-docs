@@ -278,6 +278,15 @@ neu exportiert und ausgeliefert werden. Die Prüfung erkennt fehlende/unlesbare
 Dateien, aber keine vertauschten Releases mit weiterhin gültigen Sprachdateien;
 sie ist keine kryptografische Integritätsprüfung und repariert nichts automatisch.
 
+Das Update auf 0.1.310 und diese Prüfung sind auch auf Proxmox und Pi 5 nach
+frischen Backups getestet: eigene neue Test-Cards, fehlendes FR sowie EN und
+Wiederherstellung nach Neuladen, bei erhaltenen Einstellungen, Projekten und
+externen Plugins. Die native Prüfung verwendet separate `/local/`-Testressourcen,
+keine erneute GitHub-/HACS-Installation. Ein vorübergehender Lesefehler kann
+ebenfalls einen Hinweis auslösen; auf Proxmox verschwand ein solcher erster
+Vorschauhinweis nach frischem Neuladen. Ein Hinweis allein beweist keinen
+dauerhaften Dateidefekt.
+
 Unter isoliertem HA 2026.10.1/HACS 2.0.5 wurden Fehler gezielt in einer eigenen
 Testkopie ausgelöst: Das neue Script wurde echt von GitHub geladen und geschrieben,
 danach wurden Sprachdownloads als fehlgeschlagen gemeldet oder der Prozess vor

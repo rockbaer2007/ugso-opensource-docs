@@ -261,6 +261,14 @@ Existing installed scripts need re-exporting and redistribution. This detects
 missing/unreadable files, not mixed releases whose locale files remain valid;
 it is not cryptographic integrity verification and does not repair automatically.
 
+The 0.1.310 update and this check are also tested on Proxmox and Pi 5 after fresh
+backups: separate newly generated test Cards, missing FR and EN, then restoration
+after reload, with settings, projects and external plugins preserved. Native
+verification uses separate `/local/` test resources, not another GitHub/HACS
+installation. Temporary read failures can also trigger the notice; an initial
+preview notice on Proxmox cleared after a fresh reload. A notice alone does not
+prove permanent file corruption.
+
 Failures were injected into a dedicated isolated HA 2026.10.1/HACS 2.0.5 clone:
 the new script was really downloaded from GitHub and written, then locale
 downloads reported failure or the process was killed before they completed.
