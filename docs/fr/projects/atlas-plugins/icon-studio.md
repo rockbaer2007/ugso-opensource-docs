@@ -53,7 +53,22 @@ SVG sont identiques octet par octet. Création de texte, duplication et annulati
 fonctionnent. Fichiers de test, jeu existant, projet, autre plugin, corbeille et
 historique sont conservés. Dépôts, données serveur et exports du navigateur ont
 été sauvegardés avant les changements. **Pi 5 et Proxmox n’ont été ni interrogés
-ni modifiés.** Les essais natifs et migrations de format restent distincts.
+ni modifiés pendant cet essai isolé.** Les migrations de format restent distinctes.
+:::
+
+::: info Vérification sur Pi 5 et Proxmox le 16/10/2026
+Après sauvegardes HA locales, copies de fichiers sur PC et exports du navigateur,
+l’administration a validé **0.1.16 → 0.1.17 → 0.1.16 d’origine → 0.1.17**.
+Les douze fichiers du paquet correspondent ; paramètres, fichiers existants,
+six plugins actifs, projet, corbeille et historique sont conservés. ATLAS 0.1.312
+et HA 2026.10.1 ne nécessitent aucun redémarrage. Les deux systèmes terminent
+avec Icon Studio 0.1.17. Si un aperçu de mise à jour périmé est refusé après une
+restauration, recharger l’administration puis sélectionner à nouveau la mise à jour.
+Accès direct et HA Ingress vérifiés sur chaque hôte : trois icônes de référence
+et un brouillon vide par contexte. Le JSON de collection reste identique octet
+par octet et le brouillon est inchangé après rechargement. Création de texte et
+annulation fonctionnent. Les grandes collections et dessins remplis ont été
+vérifiés dans l’essai isolé.
 :::
 
 Restaurer le paquet ne restaure pas les données supprimées du navigateur.

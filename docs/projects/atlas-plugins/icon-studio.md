@@ -55,7 +55,21 @@ danach bytegleich. Neue Texteingabe, Duplizieren und Rückgängig funktionierten
 Testdateien, bestehendes Iconset, Projekt, anderes Plugin, Papierkorb und Historie
 blieben erhalten. Vorher wurden Repositories, Serverdaten und Browser-Exporte
 gesichert. **Pi 5 und Proxmox wurden weder abgefragt noch verändert.**
-Native Tests und Datenformat-Migrationen sind damit nicht geprüft.
+Datenformat-Migrationen sind damit nicht geprüft.
+:::
+
+::: info Auf Pi 5 und Proxmox geprüft am 16.10.2026
+Nach neuen lokalen HA-Sicherungen, PC-Dateikopien und Browser-Exporten wurde
+**0.1.16 → 0.1.17 → ursprüngliche 0.1.16 → 0.1.17** über die Administration
+geprüft. Alle zwölf Paketdateien stimmen; Einstellungen, vorhandene Dateien,
+sechs aktive Plugins, Projekt, Papierkorb und Historie bleiben erhalten.
+ATLAS 0.1.312 und HA 2026.10.1 benötigten keinen Neustart. Beide Systeme enden
+mit Icon Studio 0.1.17. Bei einer abgewiesenen veralteten Update-Vorschau nach
+Wiederherstellung die Administration neu laden und das Update erneut wählen.
+Direkter Zugang und HA-Ingress wurden je Host geprüft: jeweils drei Referenzicons
+und ein leerer Zeichnungsentwurf. Sammlungs-JSON bleibt bytegleich, der Entwurf
+nach Neuladen unverändert. Text anlegen und rückgängig machen funktioniert.
+Größere Sammlungen und gefüllte Zeichnungen wurden im isolierten Test geprüft.
 :::
 
 Die Paket-Wiederherstellung stellt keine gelöschten Browserdaten wieder her.

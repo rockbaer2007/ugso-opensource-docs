@@ -51,8 +51,21 @@ browser origin/profile. Re-exported JSON, iconset JavaScript and SVG were
 byte-identical. New text creation, duplicate and undo worked. Test files,
 existing iconset, project, another plugin, trash and history remained intact.
 Repositories, server data and browser exports were backed up beforehand.
-**Pi 5 and Proxmox were neither queried nor changed.** Native qualification
-and data-format migrations remain separate.
+**Pi 5 and Proxmox were neither queried nor changed in this isolated test.**
+Data-format migrations remain separate.
+:::
+
+::: info Pi 5 and Proxmox qualification on 2026-10-16
+After fresh local HA backups, PC file copies and browser exports, Administration
+passed **0.1.16 → 0.1.17 → original 0.1.16 → 0.1.17**. All twelve package assets
+match; settings, existing files, six active plugins, project, trash and history
+remain intact. ATLAS 0.1.312 and HA 2026.10.1 needed no restart. Both hosts finish
+with Icon Studio 0.1.17. If a stale update preview is rejected after recovery,
+reload Administration and select the update again.
+Direct access and HA Ingress were checked on each host: three reference icons
+and an empty drawing draft in each context. Collection JSON stays byte-identical,
+and the draft is unchanged after reload. Text creation and undo work.
+Larger collections and populated drawings were covered by the isolated test.
 :::
 
 Package recovery does not restore deleted browser data. IndexedDB and the local
