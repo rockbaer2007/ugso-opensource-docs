@@ -47,8 +47,18 @@ nos propres données de test : sauvegarde complète chiffrée conservée sur PC,
 transférée dans une instance HAOS Hyper-V vierge et restaurée via Supervisor.
 Paramètres, projet, six plugins, corbeille, historique et 154 fichiers vérifiés
 sont conservés. L’adresse de test reste identique ; Pi 5 et Proxmox ne changent
-pas. Cela ne remplace pas un test de sauvegarde de production sur un autre
-matériel ou avec une adresse réseau différente.
+pas. Une seconde cible HAOS vierge a aussi été vérifiée avec une autre adresse
+IP : les 154 fichiers et les identifiants existants sont conservés. Les adresses
+enregistrées ne sont pas réécrites automatiquement. Après restauration, modifier
+uniquement l’URL Home Assistant dans la **configuration de l’App ATLAS**, puis
+redémarrer l’App. Dans **Paramètres → Appareils et services → ATLAS Runtime →
+Configurer**, saisir la nouvelle adresse Runtime avec le port `4176`. Le jeton
+HA existant ne nécessite pas de remplacement dans cette restauration complète
+vérifiée. Les liens des plugins utilisent automatiquement la nouvelle adresse
+ATLAS. Vérifier ensuite connexion, projets, corbeille et historique.
+
+Ces contrôles isolés ne remplacent pas un test de sauvegarde de production sur
+un autre matériel ; ARM64 et appareils physiques restent à vérifier séparément.
 
 ## Dépôt
 

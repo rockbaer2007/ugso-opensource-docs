@@ -41,8 +41,17 @@ A separate full HAOS restore was subsequently verified with owned test data:
 save the encrypted full backup on the PC, upload it to a fresh Hyper-V HAOS
 instance and restore through Supervisor. Settings, project, six plugins, trash,
 history and 154 checked files survive. The test address was retained; Pi 5 and
-Proxmox remain untouched. This does not replace recovery testing of a production
-backup on different hardware or with a changed network address.
+Proxmox remain untouched. A second fresh HAOS target was also verified at a
+different IP address: all154 files and existing credentials survive. Stored
+addresses are not rewritten automatically. After restoration, change only the
+Home Assistant URL in the **ATLAS App configuration** and restart the App. Under
+**Settings → Devices & services → ATLAS Runtime → Configure**, enter the new
+Runtime address including port `4176`. The existing HA token does not need
+replacement in this qualified full restore. Plugin links automatically use the
+new ATLAS address. Then check connectivity, projects, trash and history.
+
+These isolated checks do not replace recovery testing of a production backup on
+different hardware; ARM64 and physical devices remain separate qualification.
 
 ## Repository
 

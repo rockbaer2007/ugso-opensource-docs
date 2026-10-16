@@ -43,8 +43,18 @@ geprüft: verschlüsseltes Vollbackup auf dem PC sichern, in eine frische Hyper-
 HAOS-Instanz hochladen und über den Supervisor wiederherstellen. Einstellungen,
 Projekt, sechs Plugins, Papierkorb und Historie sowie 154 geprüfte Dateien bleiben
 erhalten. Die Testadresse wurde beibehalten; Pi 5 und Proxmox bleiben unverändert.
-Diese Prüfung ersetzt keinen Wiederherstellungstest eines produktiven Backups
-auf anderer Hardware oder mit geänderter Netzwerkadresse.
+Ein zweiter frischer HAOS-Test wurde unter einer anderen IP-Adresse geprüft:
+Alle 154 Dateien und die bisherigen Zugangsdaten bleiben erhalten. Gespeicherte
+Adressen werden nicht automatisch umgeschrieben. Nach der Wiederherstellung in
+der **Konfiguration der ATLAS-App** nur die Home-Assistant-URL ändern und die App
+neu starten. Unter **Einstellungen → Geräte & Dienste → ATLAS Runtime →
+Konfigurieren** die neue Runtime-Adresse einschließlich Port `4176` eintragen.
+Der bestehende HA-Token muss in diesem geprüften vollständigen Restore nicht
+ersetzt werden. Plugin-Links verwenden automatisch die neue ATLAS-Adresse.
+Anschließend Verbindung, Projekte, Papierkorb und Historie prüfen.
+
+Diese isolierten Prüfungen ersetzen keinen Wiederherstellungstest eines
+produktiven Backups auf anderer Hardware; ARM64 und physische Geräte bleiben offen.
 
 ## Repository
 
