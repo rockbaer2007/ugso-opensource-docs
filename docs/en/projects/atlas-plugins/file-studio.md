@@ -37,6 +37,13 @@ trash entries and all twelve history files survive on each host, together with
 settings, active files, projects and plugins. This is not a full HAOS backup
 restoration test.
 
+A separate full HAOS restore was subsequently verified with owned test data:
+save the encrypted full backup on the PC, upload it to a fresh Hyper-V HAOS
+instance and restore through Supervisor. Settings, project, six plugins, trash,
+history and 154 checked files survive. The test address was retained; Pi 5 and
+Proxmox remain untouched. This does not replace recovery testing of a production
+backup on different hardware or with a changed network address.
+
 ## Repository
 
 - GitHub: `https://github.com/rockbaer2007/atlas-file-studio-plugin`

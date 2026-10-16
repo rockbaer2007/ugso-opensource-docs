@@ -42,6 +42,14 @@ la mise à jour. Les deux anciens éléments de corbeille et les douze fichiers
 d’historique sont conservés sur chaque hôte, ainsi que paramètres, fichiers
 actifs, projets et plugins. Ce n’est pas un test de restauration HAOS complète.
 
+Un contrôle distinct de restauration HAOS complète a ensuite été réalisé avec
+nos propres données de test : sauvegarde complète chiffrée conservée sur PC,
+transférée dans une instance HAOS Hyper-V vierge et restaurée via Supervisor.
+Paramètres, projet, six plugins, corbeille, historique et 154 fichiers vérifiés
+sont conservés. L’adresse de test reste identique ; Pi 5 et Proxmox ne changent
+pas. Cela ne remplace pas un test de sauvegarde de production sur un autre
+matériel ou avec une adresse réseau différente.
+
 ## Dépôt
 
 - GitHub : `https://github.com/rockbaer2007/atlas-file-studio-plugin`

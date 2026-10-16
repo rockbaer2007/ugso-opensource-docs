@@ -38,6 +38,14 @@ alten Papierkorbeinträge und alle zwölf Historien-Dateien erhalten, ebenso
 Einstellungen, aktive Dateien, Projekte und Plugins. Dies ist kein Test einer
 vollständigen HAOS-Backup-Wiederherstellung.
 
+Ein separater vollständiger HAOS-Restore wurde anschließend mit eigenen Testdaten
+geprüft: verschlüsseltes Vollbackup auf dem PC sichern, in eine frische Hyper-V-
+HAOS-Instanz hochladen und über den Supervisor wiederherstellen. Einstellungen,
+Projekt, sechs Plugins, Papierkorb und Historie sowie 154 geprüfte Dateien bleiben
+erhalten. Die Testadresse wurde beibehalten; Pi 5 und Proxmox bleiben unverändert.
+Diese Prüfung ersetzt keinen Wiederherstellungstest eines produktiven Backups
+auf anderer Hardware oder mit geänderter Netzwerkadresse.
+
 ## Repository
 
 - GitHub: `https://github.com/rockbaer2007/atlas-file-studio-plugin`
