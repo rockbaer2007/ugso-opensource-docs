@@ -198,9 +198,33 @@ einer neuen Versionsabfrage versehen.
 
 EN/DE/FR werden unabhängig von der Editor-Sprache exportiert. DE/FR enthalten
 ohne ausgeführten Übersetzungsadapter gekennzeichnete englische Fallbacks und
-benötigen Übersetzung/Prüfung. Das HACS-Manifest mit `filename` allein sichert
-die Auslieferung der JSON-Dateien nicht: den Ordner `locales/` ausdrücklich
-mit bereitstellen. Eine automatische HACS-Repository-Auslieferung ist separat zu prüfen.
+benötigen Übersetzung/Prüfung.
+
+### Gemeinsame HACS-Auslieferung ab 0.1.309
+
+Das exportierte ZIP enthält `hacs.json` im Hauptverzeichnis sowie Script und
+Sprachdateien unter `dist/`, beispielsweise `dist/energy-kitchen.js` und
+`dist/locales/en.json`. Das vollständige ZIP in ein eigenes GitHub-Repository
+namens `energy-kitchen` entpacken und dieses in HACS als Dashboard-Repository
+hinzufügen. Script-Dateiname ohne `.js` und Repository-Name stimmen dabei überein.
+Nicht das ATLAS-Integrationsrepository dafür verwenden.
+
+HACS installiert den Inhalt von `dist/` nach `www/community/energy-kitchen/`.
+Die Ressource lautet `/hacsfiles/energy-kitchen/energy-kitchen.js`; die JSON-Dateien
+liegen daneben in `locales/`. HACS registriert die Modulressource im Speicher-Modus;
+im YAML-Modus die im Bundle dokumentierte Ressource selbst eintragen.
+
+Das Script nicht zusätzlich ins Repository-Hauptverzeichnis kopieren und keinen
+einzelnen JavaScript-Release-Anhang veröffentlichen: HACS kann diesen statt
+`dist/` auswählen. Das Export-ZIP ist kein `zip_release`-Installationspaket.
+HACS 2.0.5 kann bei Script-Dateinamen, die mit `dist` beginnen, Sprachdateien
+auslassen; ATLAS stoppt diesen Export mit einer Meldung. Einen anderen
+HACS-Script-Dateinamen wählen. Vorhandene Projekte bleiben erhalten.
+
+Isoliert mit den unveränderten Downloadmethoden von HACS 2.0.5 und dem echten
+`/hacsfiles/`-Endpunkt unter HA 2026.10.1 geprüft. GitHub-Dateitransport war eine
+lokale Testquelle; eine echte GitHub-Anmeldung oder Repository-Freigabe wurde
+dabei nicht geprüft. Ältere ATLAS-Bundles mit Script im Hauptverzeichnis bleiben importierbar.
 
 ## Tabbed Card V2
 

@@ -164,9 +164,32 @@ script, ajouter si nécessaire une nouvelle version à l’URL de la ressource.
 
 Les exports EN/DE/FR sont indépendants de la langue de l’éditeur. Sans exécution
 d’un adaptateur de traduction, DE/FR contiennent des replis anglais identifiés,
-à traduire et vérifier. Un manifeste HACS limité à `filename` ne garantit pas la
-livraison des JSON : déployer explicitement `locales/`. La distribution automatique
-depuis un dépôt HACS reste à vérifier séparément.
+à traduire et vérifier.
+
+### Distribution HACS commune depuis 0.1.309
+
+Le ZIP exporté contient `hacs.json` à la racine, le script et les langues sous
+`dist/`, par exemple `dist/energy-kitchen.js` et `dist/locales/en.json`.
+Extraire le ZIP complet dans un dépôt GitHub dédié nommé `energy-kitchen`,
+puis l’ajouter dans HACS comme dépôt Dashboard. Le nom du dépôt correspond au
+nom du script sans `.js` ; utiliser un dépôt distinct de l’intégration ATLAS.
+
+HACS installe le contenu de `dist/` dans `www/community/energy-kitchen/`.
+La ressource module est `/hacsfiles/energy-kitchen/energy-kitchen.js` et les JSON
+sont voisins dans `locales/`. HACS enregistre le module en mode stockage ; en
+mode YAML, ajouter soi-même la ressource documentée dans le bundle.
+
+Ne pas placer aussi le script à la racine ni publier de pièce jointe JavaScript
+seule dans une release : HACS peut la préférer à `dist/`. Le ZIP exporté n’est
+pas un paquet d’installation `zip_release`. HACS 2.0.5 peut omettre des langues
+si le nom du script commence par `dist` ; ATLAS bloque cet export avec un message.
+Choisir un autre nom de script HACS. Les projets existants restent intacts.
+
+Vérifié isolément avec les méthodes de téléchargement inchangées de HACS 2.0.5
+et le véritable point d’accès `/hacsfiles/` sous HA 2026.10.1. Le transport des
+fichiers GitHub utilise une source locale de test ; l’authentification GitHub et
+l’enregistrement réel du dépôt ne sont pas validés. Les anciens bundles ATLAS
+avec script à la racine restent importables.
 
 ## Tabbed Card V2
 

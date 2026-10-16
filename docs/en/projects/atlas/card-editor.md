@@ -188,8 +188,32 @@ version query on the resource URL if necessary.
 
 EN/DE/FR exports are independent of the editor language. Without an executed
 translation adapter, DE/FR contain marked English fallbacks requiring translation
-and review. A filename-only HACS manifest does not guarantee JSON delivery:
-deploy `locales/` explicitly. Automatic HACS repository delivery needs separate verification.
+and review.
+
+### Combined HACS delivery from 0.1.309
+
+The export ZIP contains root `hacs.json`, with script and languages under
+`dist/`, for example `dist/energy-kitchen.js` and `dist/locales/en.json`.
+Extract the complete ZIP into a dedicated GitHub repository named
+`energy-kitchen` and add it to HACS as a Dashboard repository. Match the
+repository name to the script filename without `.js`; use a separate repository
+from the ATLAS integration.
+
+HACS installs `dist/` contents into `www/community/energy-kitchen/`. The module
+resource is `/hacsfiles/energy-kitchen/energy-kitchen.js`, with JSON files in its
+sibling `locales/` folder. HACS registers the module in storage mode; in YAML
+mode, add the resource documented in the bundle yourself.
+
+Do not also place the script at repository root or attach a standalone JavaScript
+release asset: HACS can prefer it over `dist/`. The export ZIP is not a
+`zip_release` installation asset. HACS 2.0.5 can omit language files when the
+script filename begins with `dist`; ATLAS blocks that export with a message.
+Choose another HACS script filename. Existing projects remain intact.
+
+Verified in isolation with unmodified HACS 2.0.5 download methods and the real
+`/hacsfiles/` endpoint on HA 2026.10.1. GitHub file transport used a local fixture;
+live GitHub authentication and repository registration were not verified.
+Legacy ATLAS bundles with root scripts remain importable.
 
 ## Tabbed Card V2
 
