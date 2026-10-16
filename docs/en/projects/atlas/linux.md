@@ -7,8 +7,9 @@ description: Install, update and back up ATLAS on Linux.
 
 The Linux installer introduced in ATLAS **0.1.298** uses the same combined app
 server as Docker and the HA app. Administration and Card Editor run together;
-external plugins remain separately installable. Native ATLAS HA/HACS frontend
-integration is a separate A7 task.
+external plugins remain separately installable. The optional native
+[ATLAS Runtime integration](/en/projects/atlas/frontend) is also implemented
+and verified through a custom HACS repository on Pi 5 and Proxmox.
 
 ## Requirements
 
@@ -26,7 +27,9 @@ Qualification as of 2026-10-15: Debian 12 AMD64 LXC and the native Pi 4 with
 Node.js 22.23.3 and ATLAS 0.1.303/0.1.304. On the Pi, all 17 installer tests,
 installation, version update, rollback, backup, service restart and automatic
 recovery after an unhealthy update pass. Synthetic plugin/project data and
-configuration are preserved. Ports remain loopback-only; no OS reboot is tested.
+configuration are preserved. Ports remained loopback-only during that first
+check. Subsequent qualification passes LAN access on4176, an actual Pi 4 OS
+reboot, autostart and persistent HA connection recovery from 0.1.305.
 Further distributions and hardware require separate qualification.
 
 The installer uses the `atlas` system account. It refuses an existing account

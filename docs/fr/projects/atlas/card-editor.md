@@ -20,8 +20,8 @@ et paramètres existants sont conservés.
 
 Le parcours Administration → Hub → connexion HA → Expert → export/import a été
 vérifié en DE/EN/FR avec un endpoint simulé, un profil isolé et un plugin de test,
-y compris rechargement et redémarrage du conteneur. A5 ajoute des vérifications
-natives sur Pi 5 et Proxmox ; leur périmètre et leurs limites sont consignés
+y compris rechargement et redémarrage du conteneur. Les vérifications natives
+complémentaires sur Pi 5 et Proxmox sont terminées ; leur périmètre et leurs limites sont consignés
 dans l’[état du développement](/fr/projects/atlas/development-status).
 
 ## Signaler un problème (depuis 0.1.287)

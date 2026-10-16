@@ -12,6 +12,40 @@ are documented in the development status below.
 
 ## Current State
 
+**As of 2026-10-16 · HA App 0.1.312 · HACS integration 0.1.306.**
+App and integration version numbers are maintained independently.
+
+| Work package | Current status |
+| --- | --- |
+| A5 – Stabilization and verification | Complete within its documented scope. Diverse user projects and longer measurements remain follow-up qualification. |
+| A6 – French documentation | Complete; DE/EN/FR are maintained together. Partial external plugin interface translations remain marked separately. |
+| A7 – Deployment and compatibility | Linux/systemd and native HA/HACS integration implemented and verified. Further HA versions, platforms and data-format migrations when needed remain open. |
+
+- Linux installation, update, rollback and recovery pass on Debian 12 amd64 LXC
+  and Raspberry Pi OS aarch64 on Pi 4. Pi 4 also passes OS reboot, autostart and
+  persistent HA connection recovery from 0.1.305.
+- Shared plugin management, server projects and HACS integration updates with
+  HA restarts pass on Pi 5 and Proxmox. The HA compatibility matrix covers
+  2026.10.1 and additionally isolated 2026.9.4, not every HA release.
+- Card export/import, real HACS repository registration, tagged releases,
+  updates and recovery pass in isolation. Missing locale files and mixed package
+  versions are detected; the 0.1.310/0.1.311 checks also pass on Pi 5 and Proxmox.
+- 0.1.312 retains trash and history across App updates; legacy adoption and
+  upgrades pass on both hosts. Encrypted full HAOS recovery into fresh separate
+  amd64 test instances passes with the same and a changed IP. All 154 checked
+  files, project, six plugins, trash and history survive. A new IP requires
+  explicit changes to the App HA URL and integration Runtime URL; stored
+  addresses are not rewritten automatically.
+
+Details: [ATLAS roadmap](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md)
+and [recovery guide](/en/projects/atlas-plugins/file-studio).
+
+## Historical checkpoints through 2026-10-14
+
+The following reports retain their original scope. Statements such as “open” or
+“next priority” apply to their date. For ongoing work, use the current status
+above and next goals below.
+
 **A7 – HA frontend in 0.1.299 (2026-10-14):** The optional [ATLAS Runtime integration](/en/projects/atlas/frontend) is implemented with a HACS-compatible layout, config/options flows and its own administrator sidebar panel. It embeds the existing runtime without forwarding HA credentials and retains the frame during ordinary state updates. Isolated real HA Core 2026.10.1 verifies setup, options, panel registration, reload, restart and unrelated panels remaining unchanged; browser checks verify editor interaction and project preservation. Six frontend and seven Python checks pass, along with HA/app regressions and builds. Existing Pi/VM/LXC installations are unchanged. HACS download/update on the real Pi/Proxmox systems and further HA versions remain the next A7 qualification.
 
 **A7 – Linux/systemd (2026-10-14, ATLAS 0.1.298):** The optional [Linux installer](/en/projects/atlas/linux) is implemented. Native Debian 12 amd64 LXC on Proxmox passes installation, update, rollback, backup, service restart and automatic recovery after an unhealthy update. Configuration, installation identity and plugin/project fixture bytes are preserved; existing disabled FHEM and its files remain unchanged. Administration and the Expert Editor are checked over LAN in DE/EN/FR. All 17 installer and 163 HA tests pass, along with app, workspace, Docker and documentation checks. Native ARM64 Linux installation, other distributions and bare metal are not yet qualified. Native ATLAS HA/HACS frontend integration remains open under A7. Existing HA installations are unchanged.
@@ -191,9 +225,9 @@ The current development focus is:
 ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 ```
 
-The next priority is A5: production readiness with larger real projects,
-live updates, reconnection and plugin compatibility.
-The current Home Assistant App/Add-on version is `0.1.297`. Administration and
+The focus is realistic projects, endurance under load and remaining platform
+and compatibility qualification.
+The current Home Assistant App/Add-on version is `0.1.312`. Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 
@@ -213,11 +247,11 @@ Prepared topics include:
 
 Open ATLAS priorities:
 
-1. **A5 – Production readiness:** verify and expand Renderer, Theme and plugin APIs with larger real projects, live updates, reconnection and compatibility.
-2. **A6 – French documentation:** complete unfinished FR pages and align DE/EN/FR structure and content.
-3. **A7 – Further deployment paths:** prepare a Linux/systemd installer and native ATLAS HA/HACS integration using the same runtime.
+1. **Real projects and endurance:** diverse entities, Custom Cards and themes, longer CPU/RAM measurements and instrumented network outages under project load.
+2. **Recovery on further hardware:** extend isolated amd64 HAOS recovery to physical or ARM64 hardware using separate test systems and backups.
+3. **Further compatibility:** qualify additional HA releases, Linux distributions, plugin/API contracts and data-format migrations when required.
 
-**A1 – Real HA verification and A4 – Roadmap cleanup are complete.** Finished features remain documented in
+**A1, A4, A5 and A6 are complete; the A7 deployment paths are implemented.** Finished features remain documented in
 history and are not open tasks. Standalone plugins maintain their implementation
 backlogs in their own projects.
 The authoritative open list is the [ATLAS roadmap](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md).

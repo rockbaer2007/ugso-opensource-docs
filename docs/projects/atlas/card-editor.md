@@ -19,8 +19,8 @@ Der Inhalt der Karten und die bestehenden Einstellungen bleiben erhalten.
 Der Ablauf Administration → Plugin Hub → HA-Verbindung → Expert-Editor →
 Export/Wiederimport wurde in DE/EN/FR mit einem simulierten HA-Endpunkt,
 isoliertem Browserprofil und Testplugin geprüft, einschließlich Neuladen und
-Container-Neustart. Das ersetzt keine Prüfung an einer echten HA-Installation. A5 ergänzt native
-Prüfungen auf Pi 5 und Proxmox; Umfang und Grenzen stehen im
+Container-Neustart. Ergänzende native Prüfungen auf Pi 5 und Proxmox sind
+inzwischen abgeschlossen; Umfang und verbleibende Grenzen stehen im
 [Entwicklungsstand](/projects/atlas/entwicklungsstand).
 
 Die lokale Demo läuft standardmäßig auf:

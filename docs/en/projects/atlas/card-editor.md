@@ -31,8 +31,8 @@ compared. Card contents and existing settings remain intact.
 The Administration → Plugin Hub → HA connection → Expert editor → export/import
 workflow was verified in DE/EN/FR using a mock HA endpoint, an isolated browser
 profile and a test plugin, including reload and container restart. This does
-not replace verification against a live Home Assistant installation. A5 adds
-native checks on Pi 5 and Proxmox; scope and limits are recorded in
+not replace verification against a live Home Assistant installation. Additional
+native checks on Pi 5 and Proxmox are now complete; scope and remaining limits are recorded in
 [Development Status](/en/projects/atlas/development-status).
 
 The local demo uses:

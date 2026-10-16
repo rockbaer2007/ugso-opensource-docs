@@ -16,6 +16,43 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
+**État au 16/10/2026 · App HA 0.1.312 · intégration HACS 0.1.306.**
+Les numéros de version de l’App et de l’intégration sont indépendants.
+
+| Lot | État actuel |
+| --- | --- |
+| A5 – Stabilisation et vérification | Terminé dans son périmètre documenté. Les projets utilisateurs variés et mesures longues restent des vérifications complémentaires. |
+| A6 – Documentation française | Terminée ; DE/EN/FR sont maintenus ensemble. Les traductions partielles des interfaces de plugins externes restent signalées séparément. |
+| A7 – Déploiement et compatibilité | Linux/systemd et intégration native HA/HACS implémentés et vérifiés. Autres versions HA, plateformes et migrations de formats si nécessaires restent ouvertes. |
+
+- Installation Linux, mise à jour, retour arrière et récupération vérifiés sous
+  Debian 12 amd64 LXC et Raspberry Pi OS aarch64 sur Pi 4. Le Pi 4 valide aussi
+  redémarrage du système, démarrage automatique et connexion HA persistante
+  depuis 0.1.305.
+- Gestion partagée des plugins, projets serveur et mises à jour HACS de
+  l’intégration avec redémarrage HA vérifiés sur Pi 5 et Proxmox. La matrice HA
+  couvre 2026.10.1 et aussi 2026.9.4 isolément, pas toutes les versions HA.
+- Export/import des cartes, enregistrement réel du dépôt HACS, releases
+  étiquetées, mises à jour et récupération vérifiés isolément. Fichiers de langue
+  manquants et versions mélangées sont détectés ; les contrôles de 0.1.310/0.1.311
+  réussissent aussi sur Pi 5 et Proxmox.
+- 0.1.312 conserve corbeille et historique après les mises à jour de l’App ;
+  reprise des anciens dossiers et mise à jour vérifiées sur les deux hôtes.
+  Une restauration HAOS complète chiffrée dans des instances amd64 vierges
+  séparées réussit avec la même IP et une autre IP. Les 154 fichiers vérifiés,
+  projet, six plugins, corbeille et historique sont conservés. Une nouvelle IP
+  nécessite des changements explicites des URL HA de l’App et Runtime de
+  l’intégration ; les adresses ne sont pas réécrites automatiquement.
+
+Détails : [feuille de route ATLAS](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md)
+et [guide de récupération](/fr/projects/atlas-plugins/file-studio).
+
+## Vérifications historiques jusqu’au 14/10/2026
+
+Les rapports suivants conservent leur périmètre d’origine. Les mentions
+« ouvert » ou « prochaine priorité » concernent leur date. Consulter l’état
+actuel ci-dessus et les prochaines étapes ci-dessous pour les tâches actuelles.
+
 **A7 – Frontend HA en 0.1.299 (14/10/2026) :** l’[intégration ATLAS Runtime](/fr/projects/atlas/frontend) facultative est implémentée : structure compatible HACS, dialogues configuration/options et panneau administrateur propre. Elle intègre le Runtime existant sans transmettre d’identifiants HA et conserve la fenêtre pendant les mises à jour ordinaires des états. Un véritable HA Core 2026.10.1 isolé valide installation, options, panneau, rechargement, redémarrage et conservation des autres panneaux ; le navigateur confirme l’utilisation de l’éditeur et la conservation du projet. Six tests frontend et sept tests Python réussissent, ainsi que les régressions HA/application et les builds. Les installations Pi/VM/LXC existantes sont inchangées. Téléchargement/mise à jour HACS sur les véritables systèmes Pi/Proxmox et autres versions HA restent la prochaine qualification A7.
 
 **A7 – Linux/systemd (14/10/2026, ATLAS 0.1.298) :** l’[installateur Linux](/fr/projects/atlas/linux) facultatif est implémenté. Les vérifications natives sous Debian 12 amd64 LXC sur Proxmox réussissent : installation, mise à jour, retour arrière, sauvegarde, redémarrage du service et récupération automatique après une mise à jour défectueuse. Configuration, identité d’installation et octets des données de test plugin/projet sont conservés ; FHEM reste désactivé et ses fichiers inchangés. Administration et éditeur Expert sont vérifiés sur le LAN en DE/EN/FR. Les 17 tests de l’installateur et les 163 tests HA réussissent, ainsi que les vérifications application, workspace, Docker et documentation. L’installation Linux ARM64 native, les autres distributions et Bare Metal restent à qualifier. L’intégration frontend native ATLAS HA/HACS reste ouverte sous A7. Les installations HA existantes sont inchangées.
@@ -161,7 +198,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.297`.
+La version actuelle de l'application Home Assistant est `0.1.312`.
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le
@@ -169,11 +206,11 @@ paramètre `language` d'une URL reste prioritaire pour la page ouverte.
 
 ## Suite du travail
 
-1. **A5 – Production :** vérifier et améliorer Renderer, Theme et les API des plugins avec des projets réels plus grands, les mises à jour et reconnexions.
-2. **A6 – Documentation française :** compléter les pages FR et aligner la structure et le contenu DE/EN/FR.
-3. **A7 – Déploiement :** préparer l'installateur Linux/systemd et l'intégration native ATLAS HA/HACS avec le même runtime.
+1. **Projets réels et endurance :** entités, Custom Cards et thèmes variés, mesures CPU/RAM longues et pannes réseau instrumentées sous charge de projets.
+2. **Récupération sur d’autres matériels :** étendre la restauration HAOS amd64 isolée aux appareils physiques ou ARM64, avec systèmes de test séparés et sauvegardes.
+3. **Compatibilité complémentaire :** qualifier autres versions HA, distributions Linux, contrats plugin/API et migrations de formats si nécessaires.
 
-**A1 – Installation HA réelle et A4 – Nettoyage de la feuille de route sont terminés.** Les fonctions achevées
+**A1, A4, A5 et A6 sont terminés ; les déploiements A7 sont implémentés.** Les fonctions achevées
 restent dans l'historique et ne sont plus des tâches ouvertes. Les plugins
 indépendants conservent leurs propres listes de travaux.
 La liste de référence se trouve dans la [feuille de route ATLAS](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md).

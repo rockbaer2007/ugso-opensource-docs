@@ -12,6 +12,41 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
+**Stand: 16.10.2026 · HA-App 0.1.312 · HACS-Integration 0.1.306.**
+App und Integration haben unabhängige Versionsnummern.
+
+| Arbeitspaket | Heutiger Status |
+| --- | --- |
+| A5 – Stabilisierung und Prüfphase | Im dokumentierten Umfang abgeschlossen. Weitere Nutzerprojekte und Langzeitmessungen sind Folgeprüfungen. |
+| A6 – Französische Dokumentation | Abgeschlossen; DE/EN/FR werden gemeinsam gepflegt. Teilübersetzungen externer Plugin-Oberflächen bleiben separat gekennzeichnet. |
+| A7 – Bereitstellung und Kompatibilität | Linux/systemd und native HA/HACS-Integration umgesetzt und geprüft. Weitere HA-Versionen, Plattformen und bei Bedarf Datenformatmigrationen bleiben offen. |
+
+- Linux-Installation, Update, Rückwechsel und Wiederherstellung sind auf Debian
+  12 amd64 im LXC und Raspberry Pi OS aarch64 auf Pi 4 geprüft. Auf Pi 4 bestehen
+  auch Betriebssystem-Neustart, Autostart und dauerhafte HA-Verbindung ab 0.1.305.
+- Gemeinsame Plugin-Verwaltung, Serverprojekte und HACS-Integrationsupdates mit
+  HA-Neustart sind auf Pi 5 und Proxmox geprüft. Die HA-Kompatibilitätsmatrix
+  umfasst 2026.10.1 und zusätzlich isoliert 2026.9.4, nicht jede HA-Version.
+- Card-Export/-Import, echte HACS-Repository-Registrierung, getaggte Releases,
+  Updates und Wiederherstellung sind isoliert geprüft. Fehlende Sprachdateien
+  und gemischte Paketversionen werden erkannt; die Prüfungen aus 0.1.310/0.1.311
+  bestehen auch auf Pi 5 und Proxmox.
+- 0.1.312 erhält Papierkorb und Historie über App-Updates hinweg; die Übernahme
+  alter Ablagen und das Update sind auf beiden Hosts geprüft. Ein vollständiger
+  verschlüsselter HAOS-Restore in frische getrennte amd64-Testinstanzen besteht
+  mit gleicher und geänderter IP. 154 geprüfte Dateien, Projekt, sechs Plugins,
+  Papierkorb und Historie bleiben erhalten. Bei neuer IP werden HA-URL der App
+  und Runtime-URL ausdrücklich angepasst, nicht automatisch umgeschrieben.
+
+Details: [ATLAS-Roadmap](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md)
+und [Wiederherstellungsanleitung](/projects/atlas-plugins/file-studio).
+
+## Historische Prüfstände bis 14.10.2026
+
+Die folgenden Berichte bewahren ihren damaligen Umfang. Angaben wie „offen“ oder
+„nächste Priorität“ gelten für das jeweilige Datum. Für heutige Aufgaben gelten
+der aktuelle Stand oben und die nächsten Ziele unten.
+
 **A7 – HA-Frontend in 0.1.299 (14.10.2026):** Die optionale [Integration ATLAS Runtime](/projects/atlas/frontend) mit HACS-kompatibler Struktur, Konfigurations-/Optionsdialog und eigenem Admin-Seitenleistenpanel ist umgesetzt. Sie bettet die vorhandene Laufzeit ein und überträgt keine HA-Zugangsdaten. Normale Zustandsupdates erhalten das Fenster. Ein isolierter echter HA Core 2026.10.1 bestätigt Einrichtung, Optionen, Panelregistrierung, Neuladen, Neustart und unveränderte andere Panels; die Browserprüfung bestätigt Editorbedienung und Projekterhalt. Sechs Frontend- und sieben Python-Prüfungen bestehen, ebenso HA-/App-Regressionen und Builds. Bestehende Pi-/VM-/LXC-Installationen bleiben unverändert. Download und Update durch HACS auf den realen Pi-/Proxmox-Systemen sowie weitere HA-Versionen bleiben die nächste A7-Qualifikation.
 
 **A7 – Linux/systemd (14.10.2026, ATLAS 0.1.298):** Der optionale [Linux-Installer](/projects/atlas/linux) ist umgesetzt. Auf einem echten Debian-12-amd64-LXC unter Proxmox bestehen Installation, Update, Rückwechsel, Sicherung, Dienstneustart und automatische Rückkehr nach einem fehlerhaften Update. Konfiguration, Installationsidentität und Plugin-/Projekttestdaten bleiben bytegenau erhalten; das vorhandene deaktivierte FHEM und seine Dateien bleiben unverändert. Administration und Expert-Editor sind im LAN in DE/EN/FR geprüft. 17 Installer- und 163 HA-Prüfungen bestehen; App-, Workspace-, Docker- und Dokumentationsprüfungen bestehen. Native ARM64-Linux-Installation, andere Distributionen und Bare Metal sind noch nicht qualifiziert. Die native ATLAS-HA/HACS-Frontend-Integration bleibt als A7 offen. Bestehende HA-Installationen wurden nicht verändert.
@@ -196,9 +231,9 @@ Der aktuelle Entwicklungsschwerpunkt ist:
 ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 ```
 
-Die nächste Priorität ist A5: Produktionsreife mit größeren realen Projekten,
-Live-Updates, Wiederverbindung und Plugin-Kompatibilität prüfen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.297`. Administration und
+Der Schwerpunkt liegt auf realistischen Projekten, Dauerlast und den noch
+offenen Plattform- und Kompatibilitätsprüfungen.
+Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.312`. Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 
@@ -217,11 +252,11 @@ Zu den vorbereiteten Themen gehören:
 
 Offen sind die folgenden ATLAS-Punkte:
 
-1. **A5 – Produktionsreife:** Renderer, Theme und Plugin-APIs mit größeren realen Projekten, Live-Updates, Wiederverbindung und Kompatibilität prüfen und ausbauen.
-2. **A6 – Französische Doku:** Unvollständige FR-Seiten übersetzen und DE/EN/FR strukturell und fachlich abgleichen.
-3. **A7 – Weitere Bereitstellung:** Linux-/systemd-Installer und native ATLAS-Integration in HA/HACS auf derselben Laufzeit vorbereiten.
+1. **Reale Projekte und Dauerlast:** vielfältige Entitäten, Custom Cards und Themes sowie längere CPU-/RAM-Messungen und instrumentierte Netzausfälle unter Projektlast prüfen.
+2. **Wiederherstellung auf weiterer Hardware:** den isolierten amd64-HAOS-Restore um physische beziehungsweise ARM64-Hardware erweitern, mit separaten Testsystemen und Sicherungen.
+3. **Weitere Kompatibilität:** zusätzliche HA-Versionen, Linux-Distributionen, Plugin-/API-Verträge und bei Bedarf Datenformatmigrationen qualifizieren.
 
-**A1 – Echtes HA prüfen und A4 – Roadmap bereinigen sind erledigt.** Abgeschlossene Funktionen bleiben in
+**A1, A4, A5 und A6 sind abgeschlossen; die A7-Bereitstellungswege sind umgesetzt.** Abgeschlossene Funktionen bleiben in
 der Historie dokumentiert und sind keine offenen Aufgaben. Eigenständige Plugins
 führen ihre Implementierungsaufgaben in ihren eigenen Projekten.
 Die verbindliche offene Liste steht in der [ATLAS-Roadmap](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md).

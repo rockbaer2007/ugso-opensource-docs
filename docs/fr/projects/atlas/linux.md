@@ -8,7 +8,8 @@ description: Installer, mettre à jour et sauvegarder ATLAS sous Linux.
 L’installateur Linux, introduit dans ATLAS **0.1.298**, utilise le même serveur
 combiné que Docker et l’application HA. Administration et Card Editor fonctionnent
 ensemble ; les plugins externes restent installables séparément.
-L’intégration frontend native ATLAS HA/HACS est une autre tâche A7.
+L’[intégration ATLAS Runtime](/fr/projects/atlas/frontend) native facultative est
+également implémentée et vérifiée via un dépôt HACS personnalisé sur Pi 5 et Proxmox.
 
 ## Prérequis
 
@@ -27,8 +28,10 @@ Node.js 22.23.3 et ATLAS 0.1.303/0.1.304. Sur le Pi, les 17 tests de
 l’installateur, l’installation, la mise à jour, le retour à la version précédente,
 la sauvegarde, le redémarrage du service et la récupération automatique après
 une mise à jour défaillante réussissent. Les données synthétiques de plugin/projet
-et la configuration sont conservées. Les ports restent locaux ; aucun redémarrage
-du système d’exploitation n’est testé. Les autres distributions et matériels
+et la configuration sont conservées. Les ports restaient locaux lors de cette
+première vérification. Les tests suivants valident accès LAN sur4176, véritable
+redémarrage du Pi 4, démarrage automatique et récupération persistante de la
+connexion HA depuis 0.1.305. Les autres distributions et matériels
 nécessitent une qualification séparée.
 
 L’installateur utilise le compte système `atlas`. Il refuse un compte existant
