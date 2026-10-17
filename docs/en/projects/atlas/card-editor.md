@@ -415,16 +415,19 @@ tabs:
 
 ## Current Status
 
-::: warning Combined project check: conditional import defect in 0.1.316
-An isolated nested Core/Bubble/Mushroom project exposes a defect: numeric-state
-conditions lose bounds such as `above: -1` during YAML/JSON import. The exported
-conditional section reports a HA configuration error despite 112/112 package
-checks. Keep these conditions in the original HA source for now and inspect
-imported exports. A fix remains open. Saving and separate state-condition
-packages are checked; the complete visible HACS re-import, combined live theme
-switches and reconnection for this project remain unfinished after a browser-tool
-failure. Pi 5 and Proxmox were untouched. Earlier individual qualifications
-retain their stated scope.
+::: info Combined project qualification passes in isolation with 0.1.317
+Conditional imports retain complete condition data, including numeric bounds
+such as `above: -1` and `below: 0`, state lists and nested logical conditions,
+through YAML/JSON and HACS. Missing or invalid numeric bounds block import and
+package readiness with an explanation. The combined project passes save/reopen,
+actual HACS re-import with byte-identical re-export, dynamic Jinja text/icons/
+colors, conditional hide/show, eight live theme transitions and 972 CSS
+comparisons. Both Editors reconnect without page reload after HA shutdown/start;
+fresh template updates work. Card-Mod 4.2.1 and UIX 8.4.0 are tested separately
+with HA 2026.10.1, Bubble 3.4.2 and Mushroom 5.2.3 in Chrome on the PC. Existing
+data is preserved; Pi 5 and Proxmox remain unchanged at 0.1.316. Previously lost
+bounds require the original source/backup; regenerate existing scripts.
+This is not a complete validator for every HA condition type.
 :::
 
 ::: info Live theme switches verified on Proxmox and Pi 5 on 2026-10-17

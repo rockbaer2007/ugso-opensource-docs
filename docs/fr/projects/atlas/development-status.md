@@ -16,8 +16,14 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 17/10/2026 · App HA 0.1.316 · intégration HACS 0.1.306.**
+**État au 17/10/2026 · App HA 0.1.317 · intégration HACS 0.1.306.**
 Les numéros de version de l’App et de l’intégration sont indépendants.
+
+0.1.317 corrige l’import conditionnel et bloque les conditions numériques sans
+seuils valides. Le projet combiné isolé réussit sauvegarde, cycle HACS, Jinja,
+thèmes et reconnexion, avec 972 comparaisons CSS identiques.
+Pi 5 et Proxmox restent inchangés en 0.1.316.
+Voir le [Card Editor](./card-editor#état-actuel).
 
 Après de nouvelles sauvegardes, les changements de thème sans rechargement passent
 aussi sur Proxmox et Pi 5 : Card-Mod/UIX séparément, 28 transitions,

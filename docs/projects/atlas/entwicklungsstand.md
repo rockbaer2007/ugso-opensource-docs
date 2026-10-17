@@ -12,8 +12,14 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 17.10.2026 · HA-App 0.1.316 · HACS-Integration 0.1.306.**
+**Stand: 17.10.2026 · HA-App 0.1.317 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+0.1.317 korrigiert den Conditional-Import und blockiert numerische Bedingungen
+ohne gültige Grenzen. Der isolierte Gesamtprojekt-Test mit Speichern, HACS-Rundlauf,
+Jinja, Theme-Wechseln und Wiederverbindung besteht; 972 CSS-Vergleiche stimmen
+überein. Pi 5 und Proxmox bleiben unverändert bei 0.1.316.
+Details: [Card Editor](./card-editor#aktueller-status).
 
 Die Theme-Wechsel ohne Neuladen sind nach frischen Sicherungen auch auf Proxmox
 und Pi 5 bestanden: Card-Mod und UIX getrennt, 28 Wechsel, 1.920 CSS-Vergleiche

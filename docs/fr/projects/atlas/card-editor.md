@@ -392,16 +392,20 @@ tabs:
 
 ## État actuel
 
-::: warning Projet combiné : défaut d’import conditionnel en 0.1.316
-Un projet isolé Core/Bubble/Mushroom imbriqué révèle une perte des seuils comme
-`above: -1` des conditions `numeric_state` à l’import YAML/JSON. La section
-conditionnelle exportée affiche une erreur HA malgré 112/112 contrôles du paquet.
-Conserver provisoirement ces conditions dans la source HA d’origine et vérifier
-les exports importés. La correction reste ouverte. Sauvegarde du projet et
-paquets à condition d’état sont vérifiés ; le réimport HACS visible complet,
-les changements de thème combinés et la reconnexion restent inachevés après une
-panne de l’outil navigateur. Pi 5 et Proxmox sont restés inchangés. Les
-qualifications individuelles précédentes conservent leur périmètre déclaré.
+::: info Projet combiné validé isolément avec 0.1.317
+Les imports conditionnels conservent toutes les données des conditions : seuils
+comme `above: -1` et `below: 0`, listes d’états et conditions logiques imbriquées,
+en YAML/JSON et HACS. Les seuils numériques absents ou invalides bloquent l’import
+et la validation du paquet avec une explication. Le projet combiné réussit
+sauvegarde/réouverture, réimport HACS réel avec réexport identique, textes/icônes/
+couleurs Jinja dynamiques, masquage conditionnel, huit changements de thème sans
+rechargement et 972 comparaisons CSS. Après arrêt/démarrage HA, les deux éditeurs
+se reconnectent sans rechargement et reçoivent de nouvelles mises à jour des
+modèles. Card-Mod 4.2.1 et UIX 8.4.0 sont testés séparément avec HA 2026.10.1,
+Bubble 3.4.2 et Mushroom 5.2.3 dans Chrome sur le PC. Données existantes
+conservées ; Pi 5 et Proxmox restent inchangés en 0.1.316. Les seuils déjà perdus
+nécessitent la source/sauvegarde d’origine ; réexporter les scripts existants.
+Il ne s’agit pas d’un validateur complet de tous les types de conditions HA.
 :::
 
 ::: info Changements de thème vérifiés sur Proxmox et Pi 5 le 17/10/2026

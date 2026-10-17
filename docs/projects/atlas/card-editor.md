@@ -439,17 +439,21 @@ tabs:
 
 ## Aktueller Status
 
-::: warning Gesamtprojekt-Prüfung: Conditional-Importfehler in 0.1.316
-Die isolierte Kombination verschachtelter Core-, Bubble- und Mushroom-Karten
-zeigt einen Fehler: Bei `numeric_state`-Bedingungen geht beispielsweise
-`above: -1` beim YAML-/JSON-Import verloren. Der exportierte bedingte Abschnitt
-meldet in HA einen Konfigurationsfehler, obwohl die Paketprüfung 112/112 meldet.
-Diese Bedingungen vorerst im ursprünglichen HA-Code belassen und importierte
-Exporte kontrollieren. Eine Korrektur ist noch offen. Speichern und separate
-Zustandsbedingungen sind geprüft; der vollständige sichtbare HACS-Rückimport,
-kombinierte Theme-Wechsel und Wiederverbindung dieses Projekts sind nach einem
-Browserwerkzeug-Ausfall noch nicht abgeschlossen. Pi 5 und Proxmox blieben dabei
-unverändert. Die zuvor einzeln bestandenen Prüfungen gelten in ihrem Umfang.
+::: info Gesamtprojekt-Durchlauf mit 0.1.317 isoliert bestanden
+Conditional-Importe erhalten vollständige Bedingungsdaten: numerische Grenzen
+wie `above: -1` und `below: 0`, Zustandslisten und verschachtelte logische
+Bedingungen bleiben in YAML/JSON und HACS erhalten. Fehlende oder ungültige
+numerische Grenzen blockieren Import und Paketfreigabe mit einem Fehlerhinweis.
+Der geprüfte Gesamtprojekt-Durchlauf umfasst Speichern/Wiederöffnen, echte
+HACS-Rückimporte mit bytegleichen Rückexporten, dynamische Jinja-Texte/Symbole/
+Farben, bedingtes Aus-/Einblenden, acht Theme-Wechsel ohne Neuladen und 972
+CSS-Vergleiche. Nach HA-Ausfall verbinden sich beide Editoren ohne Neuladen
+erneut; frische Template-Updates funktionieren. Card-Mod 4.2.1 und UIX 8.4.0
+wurden getrennt mit HA 2026.10.1, Bubble 3.4.2 und Mushroom 5.2.3 in Chrome auf
+dem PC geprüft. Vorhandene Daten bleiben erhalten; Pi 5 und Proxmox sind
+unverändert bei 0.1.316. Bereits verlorene Grenzen lassen sich nur aus der
+ursprünglichen Quelle/Sicherung wiederherstellen. Bestehende Scripts neu exportieren.
+Die Prüfung ersetzt keine vollständige Validierung aller HA-Bedingungstypen.
 :::
 
 ::: info Theme-Wechsel auf Proxmox und Pi 5 geprüft am 17.10.2026
