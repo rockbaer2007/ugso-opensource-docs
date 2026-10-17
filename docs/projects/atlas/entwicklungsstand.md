@@ -17,8 +17,10 @@ App und Integration haben unabhängige Versionsnummern.
 
 0.1.313 korrigiert isoliert geprüfte Mushroom-Importverluste bei YAML/JSON und
 Einzelkarten: Texte, Symbole und Farbvorlagen bleiben erhalten. Details und
-Grenzen stehen beim [Card Editor](./card-editor#aktueller-status). Pi 5 und
-Proxmox bleiben bei diesem Schritt unverändert; ihr Update ist separat offen.
+Grenzen stehen beim [Card Editor](./card-editor#aktueller-status). Das Update
+auf Proxmox und Pi 5 ist nach frischen Backups ebenfalls geprüft: alle vier
+Importwege, Live-Ausgaben und Datenerhalt bestehen. Eigene Testprojekte bleiben
+separat; vorhandene lokale Editor-Konfigurationen sind exakt wiederhergestellt.
 
 | Arbeitspaket | Heutiger Status |
 | --- | --- |

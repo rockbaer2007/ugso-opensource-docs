@@ -432,7 +432,23 @@ YAML/JSON files.
 This qualifies the named properties and fixtures, not arbitrary Mushroom options
 or Jinja programs. Legacy `icon_color` is checked for preservation; runtime tests
 use current `color`. No Jinja authoring controls are added. Existing data remains
-intact; Pi 5 and Proxmox were unchanged. Their 0.1.313 update needs a separate check.
+intact; the isolated correction check left Pi 5 and Proxmox unchanged.
+:::
+
+::: info Native 0.1.313 update verified on Proxmox and Pi 5, 2026-10-17
+After fresh HA backups and PC file mirrors, all four import paths pass on both
+hosts: YAML/JSON, single cards and stacks. Text, icon and color templates retain
+their exact source, including blank lines. Save/open and actual HACS export/import
+pass; each re-export is byte-identical and JSON package readiness passes 112/112.
+
+Real unsaved HA previews change text, icon glyphs and computed colors on natural
+Jinja minute boundaries without reload. Only passive sensor states are read;
+no devices are switched. Original 225/229 ATLAS files, two existing server
+projects per host, six plugins, settings, trash and history remain intact.
+Both complete local Editor configurations with 36 fields are restored exactly
+except for the export timestamp. Own test projects remain separate. Integration
+stays 0.1.306; this check requires no HA restart. This does not qualify arbitrary
+Mushroom options or Jinja programs.
 :::
 
 ::: info Isolated 60-minute soak on 2026-10-17

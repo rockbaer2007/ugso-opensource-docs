@@ -409,8 +409,26 @@ original pour être récupérées. Conserver les YAML/JSON originaux.
 La vérification couvre les propriétés et cas cités, pas toutes les options
 Mushroom ni tous les programmes Jinja. `icon_color` est vérifié pour sa
 conservation ; le test d’exécution utilise `color`. Aucun champ de saisie Jinja
-n’est ajouté. Les données existantes sont conservées ; Pi 5 et Proxmox restent
-inchangés. Leur mise à jour 0.1.313 nécessite une vérification distincte.
+n’est ajouté. Les données existantes sont conservées ; la vérification isolée
+de la correction laisse Pi 5 et Proxmox inchangés.
+:::
+
+::: info Mise à jour native 0.1.313 vérifiée sur Proxmox et Pi 5, 17/10/2026
+Après de nouvelles sauvegardes HA et des copies de fichiers sur PC, les quatre
+imports réussissent sur chaque hôte : YAML/JSON, cartes seules et piles. Textes,
+icônes et modèles de couleur conservent leur code exact, lignes vides comprises.
+Enregistrement, réouverture et véritable export/import HACS réussissent ; chaque
+réexport est identique octet par octet et le contrôle JSON obtient 112/112.
+
+Les aperçus HA réels non enregistrés changent textes, formes d’icônes et couleurs
+calculées lors du changement naturel de minute Jinja, sans rechargement. Seuls
+des capteurs passifs sont lus ; aucun appareil n’est commandé. Les 225/229 fichiers
+ATLAS initiaux, deux projets serveur existants par hôte, six plugins, réglages,
+corbeille et historique sont conservés. Les deux configurations locales complètes
+de 36 champs sont restaurées exactement, sauf l’horodatage d’export. Les projets
+de test restent séparés. L’intégration reste 0.1.306 ; aucun redémarrage HA n’est
+nécessaire. Toutes les options Mushroom et tous les programmes Jinja ne sont
+pas qualifiés par ce contrôle.
 :::
 
 ::: info Test d’endurance isolé de 60 minutes le 17/10/2026

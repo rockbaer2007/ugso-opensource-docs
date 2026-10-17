@@ -17,8 +17,10 @@ App and integration version numbers are maintained independently.
 
 0.1.313 fixes Mushroom YAML/JSON and single-card import losses, checked in
 isolation: text, icon and color templates remain intact. See the
-[Card Editor](./card-editor#current-status) for scope. Pi 5 and Proxmox were
-unchanged; their update remains a separate follow-up.
+[Card Editor](./card-editor#current-status) for scope. After fresh backups,
+the update also passes on Proxmox and Pi 5: all four import paths, live output
+and preservation pass. Own test projects remain separate; existing complete
+local Editor configurations are restored exactly.
 
 | Work package | Current status |
 | --- | --- |

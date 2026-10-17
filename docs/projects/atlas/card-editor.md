@@ -456,8 +456,26 @@ sich nur aus dem Original wiederherstellen. Original-YAML/JSON deshalb behalten.
 Die Prüfung bestätigt die genannten Eigenschaften und Testfälle, keine
 beliebigen Mushroom-Optionen oder Jinja-Programme. `icon_color` ist auf Erhalt
 geprüft; der Laufzeittest verwendet das aktuelle `color`. Es gibt keine neuen
-Jinja-Eingabefelder. Vorhandene Daten bleiben erhalten; Pi 5 und Proxmox wurden
-nicht verändert. Das dortige Update auf 0.1.313 ist separat zu prüfen.
+Jinja-Eingabefelder. Die isolierte Korrekturprüfung veränderte Pi 5 und Proxmox
+nicht.
+:::
+
+::: info Update auf 0.1.313 auch auf Proxmox und Pi 5 geprüft, 17.10.2026
+Nach frischen HA-Backups und PC-Abzügen bestehen auf beiden Hosts alle vier
+Importwege: YAML/JSON, jeweils Einzelkarte und Stapel. Texte, Symbole und
+Farbvorlagen einschließlich Leerzeilen bleiben exakt erhalten. Speichern,
+Wiederöffnen und tatsächlicher HACS-Export/Import bestehen; die jeweiligen
+Rückexporte sind bytegleich und die JSON-Paketprüfung besteht mit 112/112.
+
+In echten, ungespeicherten HA-Kartenvorschauen wechseln Texte, Symbolformen
+und berechnete Farben durch Jinja-Minutenwechsel ohne Neuladen. Es werden nur
+passive Sensorwerte gelesen, keine Geräte geschaltet. Die bisherigen 225/229
+ATLAS-Dateien, jeweils zwei ursprüngliche Serverprojekte, sechs Plugins,
+Einstellungen, Papierkorb und Historie bleiben erhalten. Beide vollständigen
+lokalen Editor-Konfigurationen mit je 36 Feldern sind anschließend bis auf den
+Exportzeitstempel exakt wiederhergestellt. Eigene Testprojekte bleiben separat.
+Die HACS-Integration bleibt 0.1.306; diese Prüfung erfordert keinen HA-Neustart.
+Beliebige Mushroom-Optionen oder Jinja-Programme sind damit nicht qualifiziert.
 :::
 
 ::: info Isolierter 60-Minuten-Dauertest am 17.10.2026
