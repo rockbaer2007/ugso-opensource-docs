@@ -19,6 +19,14 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 **État au 17/10/2026 · App HA 0.1.315 · intégration HACS 0.1.306.**
 Les numéros de version de l’App et de l’intégration sont indépendants.
 
+Après de nouvelles sauvegardes, la vérification CSS native réussit aussi sur
+Proxmox et Pi 5 avec Card-Mod 4.2.1 et UIX 8.4.0 : scripts générés et références
+natives concordent pour les règles dynamiques et statiques testées. Extensions
+séparées, capteurs passifs et aucune commande d’appareil. La configuration
+d’origine des extensions est rétablie ; quatre anciens projets par hôte et
+six plugins sont conservés. Voir le [Card Editor](./card-editor#état-actuel)
+pour le détail et les limites de version.
+
 Le rendu CSS est également vérifié isolément avec HA 2026.10.1, Mushroom
 5.2.3, Card-Mod 4.2.1 et séparément UIX 8.4.0 : scripts générés et références
 natives concordent pour couleurs/bordures dynamiques, styles Shadow DOM et

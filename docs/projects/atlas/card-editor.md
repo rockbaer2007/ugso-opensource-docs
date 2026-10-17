@@ -439,6 +439,30 @@ tabs:
 
 ## Aktueller Status
 
+::: info Native CSS-Prüfung auf Proxmox und Pi 5, 17.10.2026
+Nach frischen HA-Sicherungen und zusätzlichen ATLAS-Dateikopien wurden
+Card-Mod 4.2.1 und UIX 8.4.0 auch auf beiden echten Hosts getrennt geprüft:
+HA 2026.10.1, Mushroom 5.2.3, ATLAS-App 0.1.315. Erzeugtes ATLAS-Script und
+native Referenz stimmen bei dynamischen Jinja-Farben/Rahmen, 3-Pixel-
+Shadow-DOM-Abstand, Hintergrund und Rundungen überein. Die Farben wechseln
+beim natürlichen Minutenwechsel ohne Neuladen. Es werden nur passive Sensoren
+gelesen und eigene Testkarten verwendet; keine Geräte werden geschaltet.
+
+UIX wendet den 17-Pixel-Radius an und bevorzugt bei konkurrierenden Blöcken
+`uix` (37 statt 31 Pixel). Card-Mod ignoriert `uix`. `uix_style` bewirkt bei
+beiden Erweiterungen weiterhin keine 7-Pixel-Innenabstände. Neuladen ist mit
+beiden Erweiterungen geprüft. Die vorhandene Browser-Skalierung kann berechnete
+Rahmenbreiten auf physische Pixel runden; Export und Referenz bleiben identisch.
+
+Der Erweiterungswechsel benötigte HA-Neustarts. Vorhandenes UIX auf Proxmox ist
+wieder aktiviert; zusätzliche Pi-Integration und eigene Testressourcen sind
+nach der Prüfung entfernt. Eigene Testdateien liegen im Papierkorb.
+Einstellungen, ursprüngliche
+Dateien, jeweils vier vorhandene ATLAS-Projekte und sechs Plugins bleiben
+erhalten. Es gibt keine neue ATLAS-Version. Die Prüfung gilt für die genannten
+Versionen und Regeln, nicht für beliebiges CSS oder alle Themes.
+:::
+
 ::: info CSS-Darstellung isoliert geprüft, 17.10.2026
 Mit App 0.1.315, HA 2026.10.1 und Mushroom 5.2.3 wurden **Card-Mod 4.2.1**
 und **UIX 8.4.0** in getrennten HA-Testinstanzen geprüft. Die erzeugten ATLAS-

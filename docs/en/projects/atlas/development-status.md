@@ -15,6 +15,13 @@ are documented in the development status below.
 **As of 2026-10-17 · HA App 0.1.315 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
+After fresh backups, native CSS qualification also passes on Proxmox and Pi 5
+with Card-Mod 4.2.1 and UIX 8.4.0: generated scripts match native references
+for the tested dynamic and static rules. Engines are tested separately using
+passive sensors and no device commands. Original extension configuration is
+restored; four existing projects per host and six plugins are preserved. See
+the [Card Editor](./card-editor#current-status) for details and version limits.
+
 Actual CSS rendering also passes in isolation with HA 2026.10.1, Mushroom
 5.2.3, Card-Mod 4.2.1 and UIX 8.4.0 separately: generated scripts match native
 references for dynamic colors/borders, shadow DOM styles and UIX radii.
