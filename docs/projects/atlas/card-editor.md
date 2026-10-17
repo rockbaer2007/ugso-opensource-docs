@@ -439,6 +439,23 @@ tabs:
 
 ## Aktueller Status
 
+::: warning Dynamische Mushroom-Vorlagen: Importgrenze, geprüft am 17.10.2026
+Mit ATLAS 0.1.312 und Mushroom 5.2.3 wechseln die beiden geprüften Jinja-Karten
+in HA ihre Texte, Symbole und Symbolfarben korrekt. Ein vorbereitetes
+ATLAS-Projektpaket mit bereits eingebetteten Mushroom-Rohdaten erhält die
+Ausdrücke beim Speichern, Wiederöffnen und HACS-Bundle-Export/Import;
+die wiederholten Exporte sind bytegleich. Nach Transportabbrüchen aktualisieren
+sich die Ansichten ohne Neuladen wieder auf die währenddessen geänderten Werte.
+
+Der normale HA-YAML-/JSON-Import ist dafür derzeit **nicht verlustfrei**:
+Der Parser entfernt `icon` und `color`. Beim geprüften Stack bleiben die
+Textvorlagen erhalten; die einzeln importierte Mushroom-Karte wird im Editor
+zur Core-Entitätskarte. Original-YAML/JSON deshalb behalten und diesen Import
+für dynamische Mushroom-Karten bis zur Korrektur nicht als vollständige
+Übernahme verwenden. Die Prüfung fügt keine Jinja-Eingabefelder hinzu.
+Vorhandene Testdaten bleiben erhalten; Pi 5 und Proxmox wurden nicht verändert.
+:::
+
 ::: info Isolierter 60-Minuten-Dauertest am 17.10.2026
 ATLAS 0.1.312 mit HA 2026.10.1 hat einen vollständigen Stundenlauf mit 36
 unterschiedlichen lokalen Testentitäten bestanden: je zwölf Core-, Bubble-

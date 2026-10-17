@@ -415,6 +415,23 @@ tabs:
 
 ## Current Status
 
+::: warning Dynamic Mushroom templates: import boundary checked on 2026-10-17
+With ATLAS 0.1.312 and Mushroom 5.2.3, both tested Jinja cards correctly change
+their text, icons and icon colors in HA. A prepared ATLAS project package with
+embedded Mushroom raw entries retains the expressions through save/reopen and
+HACS-bundle export/import; repeated exports are byte-identical. After transport
+outages, both views reconnect without reload and display the values changed
+while offline.
+
+Normal HA YAML/JSON import currently **loses configuration**: normalization
+removes `icon` and `color`. The tested stack retains its text templates;
+the individually imported Mushroom card becomes a Core entity card in the
+Editor. Keep original YAML/JSON and avoid treating this import as a complete
+transfer of dynamic Mushroom cards until corrected. This check adds no Jinja
+authoring controls. Existing fixture data remains intact; Pi 5 and Proxmox
+were unchanged.
+:::
+
 ::: info Isolated 60-minute soak on 2026-10-17
 ATLAS 0.1.312 with HA 2026.10.1 passed a full hour using 36 distinct local
 fixture entities: twelve Core, twelve Bubble and twelve Mushroom cards.
