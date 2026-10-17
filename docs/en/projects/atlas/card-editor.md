@@ -415,6 +415,18 @@ tabs:
 
 ## Current Status
 
+::: warning Combined project check: conditional import defect in 0.1.316
+An isolated nested Core/Bubble/Mushroom project exposes a defect: numeric-state
+conditions lose bounds such as `above: -1` during YAML/JSON import. The exported
+conditional section reports a HA configuration error despite 112/112 package
+checks. Keep these conditions in the original HA source for now and inspect
+imported exports. A fix remains open. Saving and separate state-condition
+packages are checked; the complete visible HACS re-import, combined live theme
+switches and reconnection for this project remain unfinished after a browser-tool
+failure. Pi 5 and Proxmox were untouched. Earlier individual qualifications
+retain their stated scope.
+:::
+
 ::: info Live theme switches verified on Proxmox and Pi 5 on 2026-10-17
 After fresh HA backups, switches without reload also pass on both hosts with
 ATLAS 0.1.316 and HA 2026.10.1: Card-Mod 4.2.1 and UIX 8.4.0 separately,

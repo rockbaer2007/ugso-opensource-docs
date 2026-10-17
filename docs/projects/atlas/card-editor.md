@@ -439,6 +439,19 @@ tabs:
 
 ## Aktueller Status
 
+::: warning Gesamtprojekt-Prüfung: Conditional-Importfehler in 0.1.316
+Die isolierte Kombination verschachtelter Core-, Bubble- und Mushroom-Karten
+zeigt einen Fehler: Bei `numeric_state`-Bedingungen geht beispielsweise
+`above: -1` beim YAML-/JSON-Import verloren. Der exportierte bedingte Abschnitt
+meldet in HA einen Konfigurationsfehler, obwohl die Paketprüfung 112/112 meldet.
+Diese Bedingungen vorerst im ursprünglichen HA-Code belassen und importierte
+Exporte kontrollieren. Eine Korrektur ist noch offen. Speichern und separate
+Zustandsbedingungen sind geprüft; der vollständige sichtbare HACS-Rückimport,
+kombinierte Theme-Wechsel und Wiederverbindung dieses Projekts sind nach einem
+Browserwerkzeug-Ausfall noch nicht abgeschlossen. Pi 5 und Proxmox blieben dabei
+unverändert. Die zuvor einzeln bestandenen Prüfungen gelten in ihrem Umfang.
+:::
+
 ::: info Theme-Wechsel auf Proxmox und Pi 5 geprüft am 17.10.2026
 Nach frischen HA-Sicherungen ist der Wechsel ohne Neuladen auch auf beiden
 Hosts mit ATLAS 0.1.316 und HA 2026.10.1 geprüft: Card-Mod 4.2.1 und UIX 8.4.0

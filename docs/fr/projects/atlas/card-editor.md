@@ -392,6 +392,18 @@ tabs:
 
 ## État actuel
 
+::: warning Projet combiné : défaut d’import conditionnel en 0.1.316
+Un projet isolé Core/Bubble/Mushroom imbriqué révèle une perte des seuils comme
+`above: -1` des conditions `numeric_state` à l’import YAML/JSON. La section
+conditionnelle exportée affiche une erreur HA malgré 112/112 contrôles du paquet.
+Conserver provisoirement ces conditions dans la source HA d’origine et vérifier
+les exports importés. La correction reste ouverte. Sauvegarde du projet et
+paquets à condition d’état sont vérifiés ; le réimport HACS visible complet,
+les changements de thème combinés et la reconnexion restent inachevés après une
+panne de l’outil navigateur. Pi 5 et Proxmox sont restés inchangés. Les
+qualifications individuelles précédentes conservent leur périmètre déclaré.
+:::
+
 ::: info Changements de thème vérifiés sur Proxmox et Pi 5 le 17/10/2026
 Après de nouvelles sauvegardes HA, les changements sans rechargement passent
 aussi sur les deux hôtes avec ATLAS 0.1.316 et HA 2026.10.1 : Card-Mod 4.2.1
