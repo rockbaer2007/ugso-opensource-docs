@@ -415,18 +415,32 @@ tabs:
 
 ## Current Status
 
-::: warning Theme qualification pending: Bubble CSS import in 0.1.315
-Preparing the isolated light/dark fixture exposes data loss: Bubble CSS supplied
+::: warning Theme test completed: two open CSS limitations in 0.1.315
+The isolated light/dark test confirms data loss: Bubble CSS supplied
 as a string under `styles: |` is dropped by normal YAML/JSON card import. Direct
 server API storage of the original project preserves that string; the loss
 occurs in card import. A subsequent HACS bundle can still pass 112/112 package
 checks because they inspect the already-normalized package. Retain original
 files; this CSS form is not yet qualified for a lossless roundtrip.
 
-Core/Mushroom and parent `uix` objects survive the data check. That does not yet
-verify theme rendering. Visible light/dark, CSS inheritance and the full Editor
-UI roundtrip remain pending after a local update/restart broke browser control.
-Pi 5 and Proxmox remain untouched. No fix release is available for this finding yet.
+Browser qualification resumed after the restart: HA 2026.10.1, Bubble 3.4.2,
+Mushroom 5.2.3 and UIX 8.4.0. Default/custom themes in light/dark, switching back
+and reload were checked. Core/Mushroom with their own `uix` rules and Bubble
+without custom CSS match native references. Fixed Core/Mushroom overrides
+survive. Bubble with string CSS loses its background, border and radius.
+
+A second limitation affects `uix` on the root stack: it remains in the script,
+but its CSS variable does not reach descendants inside the exported script.
+An identical fallback color can hide this. A distinct parent accent produces
+green reference borders versus blue exported borders. Rules directly attached
+to child cards work in the tested case; lossless root-stack inheritance is
+not qualified.
+
+Save/reopen and the HACS UI export/reimport/re-export were exercised. ZIPs are
+byte-identical even though the import loss is already present. Theme changes
+used the profile followed by dashboard navigation, not continuously mounted
+cards. Pi 5 and Proxmox remain untouched. No fix release in this qualification;
+retain original files and backups.
 :::
 
 ::: info Native CSS qualification on Proxmox and Pi 5, 2026-10-17

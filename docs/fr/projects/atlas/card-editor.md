@@ -392,8 +392,8 @@ tabs:
 
 ## État actuel
 
-::: warning Vérification des thèmes en attente : import CSS Bubble dans 0.1.315
-La préparation du test clair/sombre isolé révèle une perte de données : le CSS
+::: warning Test des thèmes terminé : deux limites CSS ouvertes dans 0.1.315
+Le test clair/sombre isolé confirme une perte de données : le CSS
 Bubble fourni comme chaîne sous `styles: |` est supprimé à l’import normal
 YAML/JSON. La sauvegarde directe du projet original par l’API serveur conserve
 cette chaîne ; la perte se situe dans l’import des cartes. Le paquet HACS créé
@@ -401,11 +401,25 @@ ensuite peut réussir 112/112 contrôles, car ceux-ci examinent le paquet déjà
 normalisé. Conserver les fichiers originaux ; ce format CSS n’est pas encore
 validé pour un parcours sans perte.
 
-Les objets `uix` Core/Mushroom et parent sont conservés dans le contrôle des
-données. Cela ne valide pas le rendu des thèmes. Le test visuel clair/sombre,
-l’héritage CSS et le parcours complet dans l’éditeur restent en attente après
-une mise à jour/redémarrage local ayant interrompu la commande du navigateur.
-Pi 5 et Proxmox restent inchangés. Aucune version corrective pour ce cas à ce stade.
+Le contrôle visuel a repris après le redémarrage : HA 2026.10.1, Bubble 3.4.2,
+Mushroom 5.2.3 et UIX 8.4.0. Thèmes standard/personnalisé en clair/sombre,
+retour au thème précédent et rechargement sont vérifiés. Core/Mushroom avec
+leurs propres règles `uix` et Bubble sans CSS personnalisé correspondent aux
+références natives. Les surcharges fixes Core/Mushroom sont conservées. Bubble
+avec du CSS texte perd son fond, sa bordure et son rayon après import.
+
+Deuxième limite : `uix` sur la pile racine reste dans le script, mais sa variable
+CSS n’atteint pas les cartes enfants du script exporté. Une couleur de repli
+identique peut masquer cela. Une couleur parent distincte donne des bordures
+vertes dans la référence, bleues dans l’export. Les règles directement posées
+sur les enfants fonctionnent dans le cas testé. L’héritage de la pile racine
+n’est donc pas validé sans perte.
+
+Sauvegarde/ouverture et export/réimport/réexport HACS dans l’interface sont
+vérifiés : ZIP identiques, malgré les pertes déjà présentes. Les changements
+de thème passent par le profil puis le tableau de bord, pas par des cartes
+continuellement montées. Pi 5 et Proxmox restent inchangés. Aucune correction
+publiée dans cette étape ; conserver les originaux et sauvegardes.
 :::
 
 ::: info Vérification CSS native sur Proxmox et Pi 5, 17/10/2026

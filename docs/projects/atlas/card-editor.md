@@ -439,8 +439,8 @@ tabs:
 
 ## Aktueller Status
 
-::: warning Theme-Prüfung offen: Bubble-CSS-Import in 0.1.315
-Die Vorbereitung des isolierten Hell/Dunkel-Tests zeigt einen Datenverlust:
+::: warning Theme-Test durchgeführt: zwei offene CSS-Grenzen in 0.1.315
+Der isolierte Hell/Dunkel-Test bestätigt einen Datenverlust:
 Bubble-CSS als Zeichenkette unter `styles: |` wird beim normalen YAML-/JSON-
 Kartenimport verworfen. Direkte Speicherung des ursprünglichen Projekts über
 die Server-API erhält diese Zeichenkette; der Fehler liegt im Kartenimport.
@@ -448,11 +448,25 @@ Ein danach erzeugtes HACS-Paket kann trotzdem 112/112 Paketprüfungen bestehen,
 weil diese das bereits normalisierte Paket prüfen. Originaldateien aufbewahren;
 diese CSS-Form ist damit noch nicht für einen verlustfreien Rundlauf freigegeben.
 
-Core-/Mushroom- und übergeordnete `uix`-Objekte bleiben im Datencheck erhalten.
-Das bestätigt noch keine korrekte Theme-Darstellung. Die sichtbare Prüfung von
-Hell/Dunkel, CSS-Vererbung und dem vollständigen Editor-UI-Rundlauf ist nach
-einem lokalen Update/Neustart wegen ausgefallener Browsersteuerung noch offen.
-Pi 5 und Proxmox bleiben unverändert. Es gibt hierfür noch keine Korrekturversion.
+Die Browserprüfung ist nach dem Neustart fortgesetzt: HA 2026.10.1, Bubble
+3.4.2, Mushroom 5.2.3 und UIX 8.4.0. Standard- und eigenes Theme jeweils in
+Hell/Dunkel, Rückwechsel und Neuladen sind geprüft. Core/Mushroom mit eigenen
+`uix`-Regeln sowie Bubble ohne eigenes CSS stimmen mit der nativen Referenz
+überein. Feste Core-/Mushroom-Überschreibungen bleiben erhalten. Bei Bubble mit
+CSS-Zeichenkette fehlen nach Import Hintergrund, Rahmen und Radius.
+
+Zweite Grenze: `uix` am Wurzel-Stack bleibt im Script enthalten, seine
+CSS-Variable erreicht die Unterkarten im exportierten Script jedoch nicht.
+Eine gleiche Ersatzfarbe kann das verdecken. Mit abweichender Elternfarbe
+zeigt die Referenz grüne, der Export blaue Rahmen. Regeln unmittelbar an den
+Unterkarten funktionieren im geprüften Fall. Eine verlustfreie Vererbung am
+Wurzel-Stack ist damit nicht freigegeben.
+
+Speichern/Öffnen und HACS-UI-Export/Rückimport/Rückexport wurden durchgeführt;
+die ZIPs sind bytegleich, obwohl die Importverluste bereits darin stecken.
+Theme-Wechsel erfolgten im Profil mit Rückkehr zum Dashboard, nicht an dauerhaft
+montierten Karten. Pi 5 und Proxmox bleiben unverändert. Keine Korrekturversion
+in diesem Prüfschritt; Originaldateien und Sicherungen behalten.
 :::
 
 ::: info Native CSS-Prüfung auf Proxmox und Pi 5, 17.10.2026
