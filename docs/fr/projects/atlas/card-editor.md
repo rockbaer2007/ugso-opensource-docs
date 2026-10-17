@@ -392,6 +392,24 @@ tabs:
 
 ## État actuel
 
+::: info Parcours HACS YAML/JSON à partir de 0.1.314, vérifié isolément le 17/10/2026
+Choisir YAML ou JSON dans **Card format**, exporter le bundle HACS, puis
+réimporter le `.hacs.zip` complet via **Import HA card**. Les deux formats
+réussissent les mêmes 112 contrôles. Le format choisi, les champs de l’éditeur
+et les modèles Mushroom de texte, icône et couleur, y compris les valeurs
+multilignes, sont conservés ; le nouvel export est identique octet par octet
+pour chaque format.
+
+Le conteneur `atlas/*.atlas-card.json` et les fichiers de langue restent JSON ;
+`manifest.format` décrit le code de carte YAML ou JSON qu’il contient. Le script
+généré reste JavaScript. Les anciens bundles YAML valides ne nécessitent aucune
+conversion. Le code de diagnostic `package-format-supported` remplace
+`package-format-json`. Les contenus invalides et langues manquantes restent
+refusés. Les styles `card_mod` importés sont détectés comme métadonnées d’aperçu
+mais absents du paquet exporté ; leur conservation demande une correction
+séparée. Pi 5 et Proxmox sont inchangés ; leur mise à jour 0.1.314 reste à vérifier.
+:::
+
 ::: info Correction Mushroom dans 0.1.313, vérifiée isolément le 17/10/2026
 Les imports YAML/JSON habituels conservent `primary`, `secondary`, `icon`,
 `color` et l’ancien `icon_color` pour les cartes Mushroom Template seules et

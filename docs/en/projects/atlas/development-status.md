@@ -12,8 +12,15 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-17 · HA App 0.1.313 · HACS integration 0.1.306.**
+**As of 2026-10-17 · HA App 0.1.314 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+0.1.314 aligns YAML/JSON HACS export, package checks and re-import. Both formats
+pass the isolated browser roundtrip with 112/112 checks and byte-identical
+re-export. Existing fixture data remain intact. Pi 5 and Proxmox were untouched;
+0.1.313 remains their qualified version. See the
+[Card Editor](./card-editor#current-status) for limits, including the outstanding
+preservation of imported `card_mod` styles.
 
 0.1.313 fixes Mushroom YAML/JSON and single-card import losses, checked in
 isolation: text, icon and color templates remain intact. See the

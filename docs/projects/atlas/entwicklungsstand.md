@@ -12,8 +12,15 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 17.10.2026 · HA-App 0.1.313 · HACS-Integration 0.1.306.**
+**Stand: 17.10.2026 · HA-App 0.1.314 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+0.1.314 vereinheitlicht YAML-/JSON-HACS-Export, Paketprüfung und Rückimport.
+Beide Formate bestehen isoliert den Browser-Rundlauf mit 112/112 Prüfungen
+und bytegleichem Rückexport. Vorhandene Testdaten bleiben erhalten.
+Pi 5 und Proxmox wurden dabei nicht verändert; dort ist 0.1.313 geprüft.
+Grenzen, einschließlich der noch offenen Übernahme importierter `card_mod`-Stile,
+stehen beim [Card Editor](./card-editor#aktueller-status).
 
 0.1.313 korrigiert isoliert geprüfte Mushroom-Importverluste bei YAML/JSON und
 Einzelkarten: Texte, Symbole und Farbvorlagen bleiben erhalten. Details und
