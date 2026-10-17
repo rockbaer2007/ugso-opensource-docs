@@ -439,6 +439,27 @@ tabs:
 
 ## Aktueller Status
 
+::: info Isolierter 60-Minuten-Dauertest am 17.10.2026
+ATLAS 0.1.312 mit HA 2026.10.1 hat einen vollständigen Stundenlauf mit 36
+unterschiedlichen lokalen Testentitäten bestanden: je zwölf Core-, Bubble-
+und Mushroom-Karten. 720 Aktualisierungsrunden mit 10.080 Serviceaufrufen und
+25.920 angeforderten Zielaktualisierungen liefen ohne Servicefehler.
+Nach Transportabbrüchen von 15, 45 und 90 Sekunden verbinden sich beide
+Browseransichten automatisch wieder, ohne Neuladen während der Stunde.
+Alle Felder und Karten bleiben erhalten; die 36 HA-Endzustände stimmen.
+Speichern, Wiederöffnen und tatsächlicher Browserexport/-import sind geprüft;
+die beiden Exporte sind bytegleich. Ursprüngliche Testdateien, Projekte,
+Plugin-Einstellungen, Papierkorb und Historie bleiben erhalten.
+Die vollständige ATLAS-Prozessgruppe lag in den ab Minute sechs erfassten
+Stichproben bei 168,1–168,6 MiB, der HA-Container während der Stunde bei
+652–681 MiB. Chrome wurde nur insgesamt einschließlich anderer Tabs gemessen;
+daraus folgt keine Aussage zum Speicherverbrauch einzelner Karten.
+Die Stunde nutzt ein generiertes Testpaket; der tatsächliche Browserexport wird
+anschließend gesondert verglichen. Dynamische eigene Mushroom-Jinja-Texte,
+ARM64-Leistung und Produktionskapazität sind damit nicht geprüft.
+Pi 5 und Proxmox wurden weder abgefragt noch verändert.
+:::
+
 ::: info 36-Karten-Durchlauf auf Proxmox und Pi 5 am 16.10.2026
 Nach frischen HA-Sicherungen wurden mit ATLAS 0.1.312 und HA 2026.10.1 auf
 beiden Hosts je zwölf Core-, Bubble- und Mushroom-Karten geprüft. Speichern,

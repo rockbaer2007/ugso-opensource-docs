@@ -415,6 +415,25 @@ tabs:
 
 ## Current Status
 
+::: info Isolated 60-minute soak on 2026-10-17
+ATLAS 0.1.312 with HA 2026.10.1 passed a full hour using 36 distinct local
+fixture entities: twelve Core, twelve Bubble and twelve Mushroom cards.
+720 update batches made 10,080 successful service calls and requested 25,920
+target updates without service failures. Both browser views reconnect
+automatically after 15-, 45- and 90-second transport outages without reloading
+during the hour. All fields/cards remain; all 36 final HA states match.
+Saving, reopening and actual browser export/import pass; both exports are
+byte-identical. Original fixture files, projects, plugin settings, trash and
+history remain intact. Full ATLAS process-group samples, starting during minute
+six, range from 168.1 to 168.6 MiB; HA container samples over the hour range
+from 652 to 681 MiB. Chrome was measured globally, including other tabs;
+these results do not establish per-card browser memory usage.
+The hour uses a generated fixture package; the actual browser export is compared
+separately afterwards. Authored dynamic Mushroom Jinja text, ARM64 performance
+and production capacity remain outside this check. Pi 5 and Proxmox were
+neither queried nor changed.
+:::
+
 ::: info Native 36-card workflow on Proxmox and Pi 5 on 2026-10-16
 After fresh HA backups, ATLAS 0.1.312 and HA 2026.10.1 passed twelve Core,
 twelve Bubble and twelve Mushroom cards on each host. Saving, reloading,

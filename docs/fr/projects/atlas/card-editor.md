@@ -392,6 +392,27 @@ tabs:
 
 ## État actuel
 
+::: info Test d’endurance isolé de 60 minutes le 17/10/2026
+ATLAS 0.1.312 avec HA 2026.10.1 a validé une heure complète avec 36 entités
+locales distinctes : douze cartes Core, douze Bubble et douze Mushroom.
+720 cycles ont effectué 10 080 appels de service réussis et demandé 25 920
+mises à jour de cibles sans erreur de service. Les deux vues du navigateur se
+reconnectent automatiquement après des interruptions de transport de 15, 45
+et 90 secondes, sans rechargement pendant l’heure. Tous les champs et cartes
+restent présents ; les 36 états HA finaux correspondent aux valeurs attendues.
+Enregistrement, réouverture et véritable export/import du navigateur sont
+validés ; les deux exports sont identiques octet par octet. Fichiers de test,
+projets, réglages des plugins, corbeille et historique initiaux sont conservés.
+Les échantillons du groupe complet de processus ATLAS, à partir de la sixième
+minute, vont de 168,1 à 168,6 MiB ; ceux du conteneur HA sur l’heure vont de
+652 à 681 MiB. Chrome est mesuré globalement, avec les autres onglets ; ces
+valeurs ne mesurent pas la mémoire de chaque carte.
+L’heure utilise un paquet de test généré ; le véritable export du navigateur est
+comparé séparément ensuite. Textes Jinja Mushroom dynamiques personnalisés,
+performances ARM64 et capacité en production restent hors de ce contrôle.
+Pi 5 et Proxmox n’ont été ni interrogés ni modifiés.
+:::
+
 ::: info Parcours de 36 cartes sur Proxmox et Pi 5 le 16/10/2026
 Après de nouvelles sauvegardes HA, ATLAS 0.1.312 et HA 2026.10.1 ont validé
 douze cartes Core, douze Bubble et douze Mushroom sur chaque hôte.
