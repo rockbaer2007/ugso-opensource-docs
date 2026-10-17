@@ -462,9 +462,16 @@ korrekt vererbt. Bubble-Überschreibungen behalten Hintergrund, 3-px-Rahmen und
 exportieren und Script sowie zugehörige Sprachdateien gemeinsam ersetzen.
 Bereits verlorenes Bubble-CSS aus Original-YAML/JSON oder einer Sicherung neu
 importieren; das Update kann verworfenen Inhalt nicht rekonstruieren. Gespeicherte
-Projekte und Dateien werden nicht automatisch umgeschrieben. Pi 5 und Proxmox
-bleiben bei dieser Prüfung unverändert auf 0.1.315. Die Freigabe gilt für den
-genannten isolierten UIX-Aufbau; andere HA-/Styling-Versionen und dauerhaft
+Projekte und Dateien werden nicht automatisch umgeschrieben.
+
+Nach frischen HA-Sicherungen ist auch das Update von 0.1.315 auf 0.1.316 auf
+Proxmox und Pi 5 geprüft: je sechs Core-/Bubble-/Mushroom-Karten mit UIX 8.4.0,
+HA 2026.10.1, Mushroom 5.2.3 und Bubble 3.4.2 (Proxmox) bzw. 3.4.1 (Pi).
+240 berechnete CSS-Vergleiche einschließlich Neuladen bestehen; YAML-/JSON-Stile
+bleiben erhalten, HACS-Rückexporte sind bytegleich und bestehen je 112/112
+Paketprüfungen. Die ursprünglichen lokalen Editorstände sind vollständig
+wiederhergestellt. Geprüft wird im vorhandenen dunklen Theme mit passiven Sensoren;
+andere HA-/Styling-Versionen und dauerhaft
 montierte Karten bei Theme-Wechseln benötigen eigene Prüfungen.
 :::
 

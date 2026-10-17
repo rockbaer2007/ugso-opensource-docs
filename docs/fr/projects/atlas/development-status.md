@@ -20,10 +20,13 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 Les numéros de version de l’App et de l’intégration sont indépendants.
 
 0.1.316 corrige la perte de CSS Bubble à l’import et l’héritage UIX à la racine
-des scripts exportés, vérifiés isolément. YAML/JSON, parcours HACS et 180 comparaisons
-CSS en clair/sombre avec rechargement passent. Réexporter les cartes existantes ;
-récupérer le CSS déjà perdu dans les originaux/sauvegardes. Pi 5 et Proxmox restent
-à 0.1.315. Voir [Card Editor](./card-editor#état-actuel).
+des scripts exportés. Après les essais isolés, les mises à jour sur Proxmox et
+Pi 5 passent aussi après de nouvelles sauvegardes HA : YAML/JSON, parcours HACS
+identiques avec 112/112 contrôles chacun et 240 comparaisons CSS supplémentaires
+dans le thème sombre existant, rechargement inclus. Les configurations locales
+initiales des éditeurs sont restaurées. Réexporter les cartes existantes ;
+récupérer le CSS déjà perdu dans les originaux/sauvegardes.
+Voir [Card Editor](./card-editor#état-actuel).
 
 Après de nouvelles sauvegardes, la vérification CSS native réussit aussi sur
 Proxmox et Pi 5 avec Card-Mod 4.2.1 et UIX 8.4.0 : scripts générés et références

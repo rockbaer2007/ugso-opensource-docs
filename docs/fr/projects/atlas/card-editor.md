@@ -415,9 +415,16 @@ Sauvegarde/ouverture et réimport/réexport HACS dans l’interface passent ;
 remplacer le script avec ses fichiers de langue correspondants. Réimporter
 le CSS Bubble déjà perdu depuis le YAML/JSON original ou une sauvegarde ;
 la mise à jour ne peut pas recréer un contenu supprimé. Projets/fichiers stockés
-ne sont pas réécrits automatiquement. Pi 5 et Proxmox restent à 0.1.315 pendant
-ce test. Seul le montage UIX isolé indiqué est qualifié ; autres versions
-HA/styles et changements de thème sur cartes continuellement montées demandent
+ne sont pas réécrits automatiquement.
+
+Après de nouvelles sauvegardes HA, la mise à jour de 0.1.315 vers 0.1.316 est
+aussi validée sur Proxmox et Pi 5 : six cartes Core/Bubble/Mushroom par hôte,
+UIX 8.4.0, HA 2026.10.1, Mushroom 5.2.3 et Bubble 3.4.2 (Proxmox) ou 3.4.1 (Pi).
+240 comparaisons CSS calculées, rechargement inclus, passent. Les styles YAML/JSON
+sont conservés ; réexports HACS identiques et 112/112 contrôles par paquet.
+Les configurations locales initiales des éditeurs sont entièrement restaurées.
+Les essais natifs utilisent le thème sombre existant et des capteurs passifs.
+Autres versions HA/styles et changements de thème sur cartes continuellement montées demandent
 des vérifications séparées.
 :::
 

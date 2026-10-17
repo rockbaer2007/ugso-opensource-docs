@@ -438,8 +438,13 @@ the visible verification.
 the script together with its matching locales. Reimport previously lost Bubble
 CSS from the original YAML/JSON or a backup; the update cannot reconstruct
 discarded content. Stored projects/files are not rewritten automatically.
-Pi 5 and Proxmox remain unchanged at 0.1.315 during this test. Qualification
-covers the specified isolated UIX setup; other HA/styling versions and theme
+After fresh HA backups, the 0.1.315 to 0.1.316 update also passes on Proxmox
+and Pi 5: six Core/Bubble/Mushroom cards per host with UIX 8.4.0, HA 2026.10.1,
+Mushroom 5.2.3 and Bubble 3.4.2 (Proxmox) or 3.4.1 (Pi). 240 computed-CSS
+comparisons including reload pass. YAML/JSON styles are preserved; HACS
+re-exports are byte-identical and each passes 112/112 package checks.
+Original complete local Editor configurations are restored. Native checks use
+the existing dark theme and passive sensors. Other HA/styling versions and theme
 changes on continuously mounted cards need separate checks.
 :::
 

@@ -15,11 +15,13 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 **Stand: 17.10.2026 · HA-App 0.1.316 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
-0.1.316 korrigiert isoliert geprüft den Bubble-CSS-Importverlust und die
-UIX-Vererbung am Wurzel-Stack exportierter Scripts. YAML/JSON, HACS-Rundlauf und
-180 berechnete CSS-Vergleiche in Hell/Dunkel samt Neuladen bestehen. Vorhandene
-Cards erneut exportieren; bereits verlorenes CSS aus Original oder Sicherung
-neu importieren. Pi 5 und Proxmox bleiben unverändert auf 0.1.315. Details:
+0.1.316 korrigiert den Bubble-CSS-Importverlust und die UIX-Vererbung am
+Wurzel-Stack exportierter Scripts. Nach isolierter Prüfung ist auch das Update
+auf Proxmox und Pi 5 mit vorherigen HA-Sicherungen bestanden: YAML/JSON,
+bytegleicher HACS-Rundlauf mit je 112/112 Paketprüfungen und 240 zusätzliche
+CSS-Vergleiche im vorhandenen dunklen Theme samt Neuladen. Ursprüngliche lokale
+Editorstände sind wiederhergestellt. Vorhandene Cards erneut exportieren;
+bereits verlorenes CSS aus Original oder Sicherung neu importieren. Details:
 [Card Editor](./card-editor#aktueller-status).
 
 Die CSS-Prüfung ist nach frischen Sicherungen auch nativ auf Proxmox und Pi 5

@@ -16,10 +16,12 @@ are documented in the development status below.
 App and integration version numbers are maintained independently.
 
 0.1.316 fixes Bubble CSS import loss and root-stack UIX inheritance in exported
-scripts, verified in isolation. YAML/JSON, HACS roundtrip and 180 computed-CSS
-comparisons in light/dark including reload pass. Re-export existing Cards;
-recover previously lost CSS from original sources or backups. Pi 5 and Proxmox
-remain unchanged at 0.1.315. See [Card Editor](./card-editor#current-status).
+scripts. Following isolated checks, updates on Proxmox and Pi 5 also pass after
+fresh HA backups: YAML/JSON, byte-identical HACS roundtrips with 112/112 checks
+each and 240 additional CSS comparisons in the existing dark theme including
+reload. Original local Editor configurations are restored. Re-export existing
+Cards; recover previously lost CSS from original sources or backups.
+See [Card Editor](./card-editor#current-status).
 
 After fresh backups, native CSS qualification also passes on Proxmox and Pi 5
 with Card-Mod 4.2.1 and UIX 8.4.0: generated scripts match native references
