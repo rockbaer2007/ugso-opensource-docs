@@ -12,8 +12,14 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-17 · HA App 0.1.315 · HACS integration 0.1.306.**
+**As of 2026-10-17 · HA App 0.1.316 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+0.1.316 fixes Bubble CSS import loss and root-stack UIX inheritance in exported
+scripts, verified in isolation. YAML/JSON, HACS roundtrip and 180 computed-CSS
+comparisons in light/dark including reload pass. Re-export existing Cards;
+recover previously lost CSS from original sources or backups. Pi 5 and Proxmox
+remain unchanged at 0.1.315. See [Card Editor](./card-editor#current-status).
 
 After fresh backups, native CSS qualification also passes on Proxmox and Pi 5
 with Card-Mod 4.2.1 and UIX 8.4.0: generated scripts match native references

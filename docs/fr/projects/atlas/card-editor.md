@@ -392,34 +392,33 @@ tabs:
 
 ## État actuel
 
-::: warning Test des thèmes terminé : deux limites CSS ouvertes dans 0.1.315
-Le test clair/sombre isolé confirme une perte de données : le CSS
-Bubble fourni comme chaîne sous `styles: |` est supprimé à l’import normal
-YAML/JSON. La sauvegarde directe du projet original par l’API serveur conserve
-cette chaîne ; la perte se situe dans l’import des cartes. Le paquet HACS créé
-ensuite peut réussir 112/112 contrôles, car ceux-ci examinent le paquet déjà
-normalisé. Conserver les fichiers originaux ; ce format CSS n’est pas encore
-validé pour un parcours sans perte.
+::: info CSS Bubble et héritage UIX corrigés dans 0.1.316
+0.1.315 supprimait le CSS Bubble texte sous `styles: |` à l’import YAML/JSON.
+0.1.316 conserve texte, espaces, retours à la ligne et chaîne vide dans les
+cartes seules/imbriquées, l’export HACS et le réimport. Les objets `styles`
+existants restent pris en charge.
 
-Le contrôle visuel a repris après le redémarrage : HA 2026.10.1, Bubble 3.4.2,
-Mushroom 5.2.3 et UIX 8.4.0. Thèmes standard/personnalisé en clair/sombre,
-retour au thème précédent et rechargement sont vérifiés. Core/Mushroom avec
-leurs propres règles `uix` et Bubble sans CSS personnalisé correspondent aux
-références natives. Les surcharges fixes Core/Mushroom sont conservées. Bubble
-avec du CSS texte perd son fond, sa bordure et son rayon après import.
+Les nouveaux scripts utilisent le wrapper natif Home Assistant pour les racines
+avec `uix`/`card_mod`. UIX peut alors appliquer le style à une pile racine sans
+`ha-card` et transmettre ses variables CSS aux enfants. Les blocs ne sont ni
+aplatis ni copiés sur d’autres cartes.
 
-Deuxième limite : `uix` sur la pile racine reste dans le script, mais sa variable
-CSS n’atteint pas les cartes enfants du script exporté. Une couleur de repli
-identique peut masquer cela. Une couleur parent distincte donne des bordures
-vertes dans la référence, bleues dans l’export. Les règles directement posées
-sur les enfants fonctionnent dans le cas testé. L’héritage de la pile racine
-n’est donc pas validé sans perte.
+Vérification isolée : HA 2026.10.1, Bubble 3.4.2, Mushroom 5.2.3 et UIX 8.4.0.
+Core/Bubble/Mushroom correspondent aux références natives en clair/sombre et
+après rechargement (180 comparaisons CSS calculées). Les couleurs parent
+vertes/violettes distinctes de la couleur de repli sont maintenant héritées.
+Les surcharges Bubble conservent fond, bordure de 3 px et rayon de 9 px.
+Sauvegarde/ouverture et réimport/réexport HACS dans l’interface passent ;
+112/112 contrôles de paquet et ZIP identiques complètent le contrôle visuel.
 
-Sauvegarde/ouverture et export/réimport/réexport HACS dans l’interface sont
-vérifiés : ZIP identiques, malgré les pertes déjà présentes. Les changements
-de thème passent par le profil puis le tableau de bord, pas par des cartes
-continuellement montées. Pi 5 et Proxmox restent inchangés. Aucune correction
-publiée dans cette étape ; conserver les originaux et sauvegardes.
+**Cartes existantes :** après mise à jour, réexporter le projet original puis
+remplacer le script avec ses fichiers de langue correspondants. Réimporter
+le CSS Bubble déjà perdu depuis le YAML/JSON original ou une sauvegarde ;
+la mise à jour ne peut pas recréer un contenu supprimé. Projets/fichiers stockés
+ne sont pas réécrits automatiquement. Pi 5 et Proxmox restent à 0.1.315 pendant
+ce test. Seul le montage UIX isolé indiqué est qualifié ; autres versions
+HA/styles et changements de thème sur cartes continuellement montées demandent
+des vérifications séparées.
 :::
 
 ::: info Vérification CSS native sur Proxmox et Pi 5, 17/10/2026

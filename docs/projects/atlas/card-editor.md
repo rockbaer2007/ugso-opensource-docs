@@ -439,34 +439,33 @@ tabs:
 
 ## Aktueller Status
 
-::: warning Theme-Test durchgeführt: zwei offene CSS-Grenzen in 0.1.315
-Der isolierte Hell/Dunkel-Test bestätigt einen Datenverlust:
-Bubble-CSS als Zeichenkette unter `styles: |` wird beim normalen YAML-/JSON-
-Kartenimport verworfen. Direkte Speicherung des ursprünglichen Projekts über
-die Server-API erhält diese Zeichenkette; der Fehler liegt im Kartenimport.
-Ein danach erzeugtes HACS-Paket kann trotzdem 112/112 Paketprüfungen bestehen,
-weil diese das bereits normalisierte Paket prüfen. Originaldateien aufbewahren;
-diese CSS-Form ist damit noch nicht für einen verlustfreien Rundlauf freigegeben.
+::: info Bubble-CSS und UIX-Vererbung korrigiert in 0.1.316
+0.1.315 verlor Bubble-CSS als Zeichenkette unter `styles: |` beim normalen
+YAML-/JSON-Kartenimport. 0.1.316 erhält diesen Text samt Leerraum, Zeilenumbrüchen
+und leerer Zeichenkette bei Einzelkarten, verschachtelten Karten, HACS-Export
+und Rückimport. Bisherige `styles`-Objekte bleiben unterstützt.
 
-Die Browserprüfung ist nach dem Neustart fortgesetzt: HA 2026.10.1, Bubble
-3.4.2, Mushroom 5.2.3 und UIX 8.4.0. Standard- und eigenes Theme jeweils in
-Hell/Dunkel, Rückwechsel und Neuladen sind geprüft. Core/Mushroom mit eigenen
-`uix`-Regeln sowie Bubble ohne eigenes CSS stimmen mit der nativen Referenz
-überein. Feste Core-/Mushroom-Überschreibungen bleiben erhalten. Bei Bubble mit
-CSS-Zeichenkette fehlen nach Import Hintergrund, Rahmen und Radius.
+Neu erzeugte Scripts verwenden für Wurzelkarten mit `uix`/`card_mod` den normalen
+Home-Assistant-Kartenwrapper. Dadurch kann UIX auch den Wurzel-Stack ohne eigenes
+`ha-card` gestalten; seine CSS-Variablen werden an die Unterkarten vererbt.
+Style-Blöcke werden weder flach zusammengeführt noch auf andere Karten kopiert.
 
-Zweite Grenze: `uix` am Wurzel-Stack bleibt im Script enthalten, seine
-CSS-Variable erreicht die Unterkarten im exportierten Script jedoch nicht.
-Eine gleiche Ersatzfarbe kann das verdecken. Mit abweichender Elternfarbe
-zeigt die Referenz grüne, der Export blaue Rahmen. Regeln unmittelbar an den
-Unterkarten funktionieren im geprüften Fall. Eine verlustfreie Vererbung am
-Wurzel-Stack ist damit nicht freigegeben.
+Isoliert geprüft mit HA 2026.10.1, Bubble 3.4.2, Mushroom 5.2.3 und UIX 8.4.0:
+Core/Bubble/Mushroom stimmen in Hell, Dunkel und nach Neuladen mit der nativen
+Referenz überein (180 Vergleiche berechneter CSS-Werte). Die Elternfarbe ist
+absichtlich anders als die Ersatzfarbe: grüne/violette Rahmen werden jetzt
+korrekt vererbt. Bubble-Überschreibungen behalten Hintergrund, 3-px-Rahmen und
+9-px-Radius. Speichern/Öffnen und HACS-UI-Rückimport/Rückexport sind geprüft;
+112/112 Paketprüfungen und bytegleiche ZIPs ergänzen die sichtbare Prüfung.
 
-Speichern/Öffnen und HACS-UI-Export/Rückimport/Rückexport wurden durchgeführt;
-die ZIPs sind bytegleich, obwohl die Importverluste bereits darin stecken.
-Theme-Wechsel erfolgten im Profil mit Rückkehr zum Dashboard, nicht an dauerhaft
-montierten Karten. Pi 5 und Proxmox bleiben unverändert. Keine Korrekturversion
-in diesem Prüfschritt; Originaldateien und Sicherungen behalten.
+**Für vorhandene Cards:** Nach dem Update das ursprüngliche Projekt erneut
+exportieren und Script sowie zugehörige Sprachdateien gemeinsam ersetzen.
+Bereits verlorenes Bubble-CSS aus Original-YAML/JSON oder einer Sicherung neu
+importieren; das Update kann verworfenen Inhalt nicht rekonstruieren. Gespeicherte
+Projekte und Dateien werden nicht automatisch umgeschrieben. Pi 5 und Proxmox
+bleiben bei dieser Prüfung unverändert auf 0.1.315. Die Freigabe gilt für den
+genannten isolierten UIX-Aufbau; andere HA-/Styling-Versionen und dauerhaft
+montierte Karten bei Theme-Wechseln benötigen eigene Prüfungen.
 :::
 
 ::: info Native CSS-Prüfung auf Proxmox und Pi 5, 17.10.2026

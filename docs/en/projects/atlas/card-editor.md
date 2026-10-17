@@ -415,32 +415,32 @@ tabs:
 
 ## Current Status
 
-::: warning Theme test completed: two open CSS limitations in 0.1.315
-The isolated light/dark test confirms data loss: Bubble CSS supplied
-as a string under `styles: |` is dropped by normal YAML/JSON card import. Direct
-server API storage of the original project preserves that string; the loss
-occurs in card import. A subsequent HACS bundle can still pass 112/112 package
-checks because they inspect the already-normalized package. Retain original
-files; this CSS form is not yet qualified for a lossless roundtrip.
+::: info Bubble CSS and UIX inheritance fixed in 0.1.316
+0.1.315 dropped Bubble CSS supplied as a string under `styles: |` on normal
+YAML/JSON import. 0.1.316 preserves the text, whitespace, newlines and empty
+strings through single/nested cards, HACS export and reimport. Existing `styles`
+objects remain supported.
 
-Browser qualification resumed after the restart: HA 2026.10.1, Bubble 3.4.2,
-Mushroom 5.2.3 and UIX 8.4.0. Default/custom themes in light/dark, switching back
-and reload were checked. Core/Mushroom with their own `uix` rules and Bubble
-without custom CSS match native references. Fixed Core/Mushroom overrides
-survive. Bubble with string CSS loses its background, border and radius.
+Newly generated scripts use the native Home Assistant card wrapper for roots
+with `uix`/`card_mod`. UIX can then style a root stack without its own `ha-card`
+and its CSS variables reach child cards. Style blocks are neither flattened
+nor copied onto unrelated cards.
 
-A second limitation affects `uix` on the root stack: it remains in the script,
-but its CSS variable does not reach descendants inside the exported script.
-An identical fallback color can hide this. A distinct parent accent produces
-green reference borders versus blue exported borders. Rules directly attached
-to child cards work in the tested case; lossless root-stack inheritance is
-not qualified.
+Isolated verification: HA 2026.10.1, Bubble 3.4.2, Mushroom 5.2.3, UIX 8.4.0.
+Core/Bubble/Mushroom match native references in light/dark and after reload
+(180 computed-CSS comparisons). Distinct green/purple parent accents now
+inherit correctly instead of falling back to a different color. Bubble overrides
+retain background, 3-px border and 9-px radius. Save/reopen and HACS UI
+reimport/re-export pass; 112/112 package checks and byte-identical ZIPs supplement
+the visible verification.
 
-Save/reopen and the HACS UI export/reimport/re-export were exercised. ZIPs are
-byte-identical even though the import loss is already present. Theme changes
-used the profile followed by dashboard navigation, not continuously mounted
-cards. Pi 5 and Proxmox remain untouched. No fix release in this qualification;
-retain original files and backups.
+**Existing Cards:** after updating, export the original project again and replace
+the script together with its matching locales. Reimport previously lost Bubble
+CSS from the original YAML/JSON or a backup; the update cannot reconstruct
+discarded content. Stored projects/files are not rewritten automatically.
+Pi 5 and Proxmox remain unchanged at 0.1.315 during this test. Qualification
+covers the specified isolated UIX setup; other HA/styling versions and theme
+changes on continuously mounted cards need separate checks.
 :::
 
 ::: info Native CSS qualification on Proxmox and Pi 5, 2026-10-17
