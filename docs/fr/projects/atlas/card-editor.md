@@ -392,6 +392,23 @@ tabs:
 
 ## État actuel
 
+::: info Mise à jour native 0.1.315 vérifiée sur Proxmox et Pi 5, 17/10/2026
+Après de nouvelles sauvegardes HA, les deux hôtes valident la mise à jour
+0.1.313 vers 0.1.315 et l’export/réimportation : YAML/Card-Mod et JSON avec
+export UIX réussissent chacun 112/112 contrôles avec un nouvel export identique
+octet par octet. Styles racine et par carte, CSS multiligne, sélecteurs shadow
+DOM, Jinja et `uix_style` restent correctement associés. Les objets de style
+du script généré correspondent au contenu du paquet.
+
+Paramètres, fichiers, trois anciens projets serveur par hôte, six plugins
+actifs, corbeille et historique sont conservés. Les configurations locales
+complètes de l’éditeur sont restaurées exactement ; les nouveaux projets de
+test restent séparés. Hub direct et panneau Runtime intégré affichent toujours
+six plugins actifs. HA reste 2026.10.1 et l’intégration 0.1.306. Aucun dashboard,
+ressource HA ou test d’appareil n’a été créé. L’exécution de CSS arbitraire
+par Card-Mod/UIX reste une validation séparée selon les extensions installées.
+:::
+
 ::: info Styles Card-Mod/UIX importés depuis 0.1.315, vérifiés isolément le 17/10/2026
 Les objets `card_mod`, `uix` et `uix_style` importés restent sur leur propre
 carte dans l’éditeur, le YAML/JSON, le paquet HACS et le script généré. Les
@@ -411,8 +428,8 @@ configurée dans HA.
 
 Fichiers, projets et plugins existants restent inchangés. Les styles déjà
 perdus par une ancienne version nécessitent un nouvel import du fichier
-original ou d’une sauvegarde. Pi 5 et Proxmox sont inchangés ; la validation
-native de 0.1.315 reste à effectuer.
+original ou d’une sauvegarde. Ce test isolé laissait Pi 5 et Proxmox inchangés ;
+la validation native suivante est documentée séparément ci-dessus.
 :::
 
 ::: info Parcours HACS YAML/JSON à partir de 0.1.314, vérifié isolément le 17/10/2026

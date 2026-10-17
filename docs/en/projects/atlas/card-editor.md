@@ -415,6 +415,22 @@ tabs:
 
 ## Current Status
 
+::: info Native 0.1.315 update verified on Proxmox and Pi 5, 2026-10-17
+After fresh HA backups, both hosts pass the 0.1.313 to 0.1.315 update and
+export/re-import checks: YAML/Card-Mod and JSON with UIX export each achieve
+112/112 package checks and byte-identical re-export. Root and card styles,
+multiline CSS, shadow DOM selectors, Jinja and `uix_style` retain their exact
+ownership. Style objects in the generated script match package contents.
+
+Existing settings, files, three previous server projects per host, six active
+plugins, trash and history are preserved. Complete local Editor configurations
+are restored exactly; new test projects remain separate. Direct Hub and embedded
+Runtime panel still show six active plugins. HA remains 2026.10.1 and the
+integration 0.1.306. No HA dashboards, resources or device tests were created.
+Arbitrary CSS execution by Card-Mod/UIX remains separate qualification against
+the installed styling extensions.
+:::
+
 ::: info Imported Card-Mod/UIX styles from 0.1.315, checked in isolation on 2026-10-17
 Imported `card_mod`, `uix` and `uix_style` objects remain on their own cards
 in the Editor, YAML/JSON, HACS package and generated script. Nested cards,
@@ -432,7 +448,8 @@ Card-Mod/UIX version. Configure the required styling extension in HA.
 
 Existing files, projects and plugins remain unchanged. Styles already discarded
 by older versions require re-importing the original file or a backup.
-Pi 5 and Proxmox remain untouched; native 0.1.315 qualification is still pending.
+That isolated check left Pi 5 and Proxmox untouched; the subsequent native
+qualification is documented separately above.
 :::
 
 ::: info YAML/JSON HACS roundtrip from 0.1.314, checked in isolation on 2026-10-17

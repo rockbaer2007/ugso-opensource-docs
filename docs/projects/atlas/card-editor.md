@@ -439,6 +439,24 @@ tabs:
 
 ## Aktueller Status
 
+::: info Update auf 0.1.315 auf Proxmox und Pi 5 geprüft, 17.10.2026
+Nach frischen HA-Sicherungen bestehen auf beiden Hosts das Update von 0.1.313
+auf 0.1.315 und die Export-/Rückimportprüfung: YAML/Card-Mod sowie JSON mit
+UIX-Auswahl erreichen jeweils 112/112 Paketprüfungen und einen bytegleichen
+Rückexport. Root- und Kartenstile, mehrzeiliges CSS, Shadow-DOM-Selektoren,
+Jinja und `uix_style` bleiben korrekt zugeordnet. Auch die Stilobjekte im
+erzeugten Script stimmen mit dem Paketinhalt überein.
+
+Vorhandene Einstellungen, Dateien, drei bisherige Serverprojekte je Host,
+sechs aktive Plugins, Papierkorb und Historie bleiben erhalten. Die lokalen
+Editorstände sind exakt wiederhergestellt; die neuen Testprojekte liegen
+separat vor. Direkter Hub und eingebettetes Runtime-Panel zeigen weiterhin
+sechs aktive Plugins. HA bleibt 2026.10.1, die Integration 0.1.306.
+Es wurden keine HA-Dashboards, Ressourcen oder Gerätetests angelegt.
+Die Ausführung beliebiger CSS-Regeln durch Card-Mod/UIX bleibt eine separate
+Prüfung mit den jeweils installierten Erweiterungen.
+:::
+
 ::: info Importierte Card-Mod-/UIX-Stile ab 0.1.315, isoliert geprüft am 17.10.2026
 Importierte `card_mod`-, `uix`- und `uix_style`-Objekte bleiben an ihrer
 jeweiligen Karte: im Editor, in YAML/JSON, im HACS-Paket und im erzeugten Script.
@@ -457,8 +475,8 @@ Die benötigte Stil-Erweiterung muss in HA eingerichtet sein.
 
 Bestandsdateien, Projekte und Plugins bleiben unverändert. Stile, die frühere
 Versionen bereits verworfen haben, benötigen einen erneuten Import der
-Originaldatei oder einer Sicherung. Pi 5 und Proxmox bleiben unverändert;
-das native Update auf 0.1.315 steht noch aus.
+Originaldatei oder einer Sicherung. Die isolierte Prüfung ließ Pi 5 und Proxmox
+unverändert; der anschließende native Folgetest ist oben separat dokumentiert.
 :::
 
 ::: info YAML-/JSON-HACS-Rundlauf ab 0.1.314, isoliert geprüft am 17.10.2026

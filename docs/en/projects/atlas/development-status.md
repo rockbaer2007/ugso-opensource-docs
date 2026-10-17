@@ -20,10 +20,17 @@ Editor, YAML/JSON, HACS packages and scripts. UIX export conversion, style
 ownership, re-import and preservation pass in isolation. See the
 [Card Editor](./card-editor#current-status) for scope and limits.
 
+After fresh backups, the 0.1.313 → 0.1.315 update also passes on Proxmox and
+Pi 5. YAML/Card-Mod and JSON/UIX each pass 112/112 checks and byte-identical
+re-export there. Existing data, three previous projects per host and six active
+plugins are preserved; complete original local Editor configurations are
+restored exactly. CSS execution by installed styling extensions remains a
+separate check.
+
 0.1.314 aligns YAML/JSON HACS export, package checks and re-import. Both formats
 pass the isolated browser roundtrip with 112/112 checks and byte-identical
-re-export. Existing fixture data remain intact. Pi 5 and Proxmox were untouched;
-0.1.313 remains their qualified version. The missing style preservation found
+re-export. Existing fixture data remain intact. That earlier isolated check
+left Pi 5 and Proxmox untouched. The missing style preservation found
 then is fixed from 0.1.315.
 
 0.1.313 fixes Mushroom YAML/JSON and single-card import losses, checked in
