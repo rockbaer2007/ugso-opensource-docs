@@ -415,6 +415,20 @@ tabs:
 
 ## Current Status
 
+::: info Live theme switches verified on Proxmox and Pi 5 on 2026-10-17
+After fresh HA backups, switches without reload also pass on both hosts with
+ATLAS 0.1.316 and HA 2026.10.1: Card-Mod 4.2.1 and UIX 8.4.0 separately,
+Mushroom 5.2.3, Bubble 3.4.2 on Proxmox or 3.4.1 on Pi. Twelve native/generated
+Core, Bubble and Mushroom cards per host/engine make seven custom/default
+theme transitions. 1,920 computed-CSS comparisons pass; document and Card
+instances remain unchanged. Inherited colors/radii follow the theme while
+fixed overrides remain intact. Fixture buttons use HA's native theme handler.
+Setup and engine changes are outside the measured sequences without reload.
+Original default themes and extension configuration are restored; existing
+files, projects and plugins remain intact. Native checks use passive sensors
+and Chrome on the PC, not an ARM64 browser benchmark.
+:::
+
 ::: info Live theme switches qualified in isolation on 2026-10-17
 With ATLAS 0.1.316 and HA 2026.10.1, mounted Core, Bubble and Mushroom cards
 switch between light and dark without reloading or rebuilding the cards.

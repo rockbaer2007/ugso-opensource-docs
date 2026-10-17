@@ -15,6 +15,11 @@ are documented in the development status below.
 **As of 2026-10-17 · HA App 0.1.316 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
+Following fresh backups, live theme switches without reload also pass on Proxmox
+and Pi 5: Card-Mod/UIX separately, 28 transitions, 1,920 CSS comparisons and stable
+Card/document identities. Original themes and extension settings are restored;
+existing data remains intact. See the [Card Editor](./card-editor#current-status).
+
 Live light/dark switches without reload now pass in isolation for Core, Bubble
 and Mushroom: Card-Mod 4.2.1 and UIX 8.4.0 tested separately, seven transitions
 each, 960 CSS comparisons and stable Card/document identities. Fixed overrides

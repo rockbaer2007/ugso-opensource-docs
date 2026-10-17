@@ -15,6 +15,12 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 **Stand: 17.10.2026 · HA-App 0.1.316 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
+Die Theme-Wechsel ohne Neuladen sind nach frischen Sicherungen auch auf Proxmox
+und Pi 5 bestanden: Card-Mod und UIX getrennt, 28 Wechsel, 1.920 CSS-Vergleiche
+und unveränderte Karten-/Dokumentidentitäten. Ursprüngliche Themes und
+Erweiterungseinstellungen sind wiederhergestellt; Bestandsdaten bleiben erhalten.
+Details: [Card Editor](./card-editor#aktueller-status).
+
 Hell-/Dunkel-Wechsel ohne Neuladen sind jetzt isoliert mit Core-, Bubble- und
 Mushroom-Karten geprüft: getrennt mit Card-Mod 4.2.1 und UIX 8.4.0, je sieben
 Theme-Wechsel, 960 CSS-Vergleiche und unveränderte Karten-/Dokumentidentitäten.

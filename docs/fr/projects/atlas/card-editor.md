@@ -392,6 +392,21 @@ tabs:
 
 ## État actuel
 
+::: info Changements de thème vérifiés sur Proxmox et Pi 5 le 17/10/2026
+Après de nouvelles sauvegardes HA, les changements sans rechargement passent
+aussi sur les deux hôtes avec ATLAS 0.1.316 et HA 2026.10.1 : Card-Mod 4.2.1
+et UIX 8.4.0 séparément, Mushroom 5.2.3, Bubble 3.4.2 sur Proxmox ou 3.4.1 sur Pi.
+Douze cartes Core/Bubble/Mushroom natives/générées par hôte/moteur effectuent
+sept transitions entre thèmes personnalisés/par défaut. 1 920 comparaisons CSS
+passent ; document et instances des cartes restent identiques. Couleurs/rayons
+hérités suivent le thème, les surcharges fixes sont conservées.
+Les boutons de test utilisent le gestionnaire de thème natif HA. Installation
+et changements de moteur sont hors des séquences mesurées sans rechargement.
+Thèmes par défaut et configuration des extensions initiaux sont rétablis ;
+fichiers, projets et plugins existants sont conservés. Capteurs passifs et Chrome
+sur le PC sont utilisés ; ce n’est pas un benchmark de navigateur ARM64.
+:::
+
 ::: info Changements de thème sans rechargement vérifiés isolément le 17/10/2026
 Avec ATLAS 0.1.316 et HA 2026.10.1, les cartes Core, Bubble et Mushroom déjà
 affichées passent du clair au sombre sans rechargement ni reconstruction.

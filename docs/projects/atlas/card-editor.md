@@ -439,6 +439,21 @@ tabs:
 
 ## Aktueller Status
 
+::: info Theme-Wechsel auf Proxmox und Pi 5 geprüft am 17.10.2026
+Nach frischen HA-Sicherungen ist der Wechsel ohne Neuladen auch auf beiden
+Hosts mit ATLAS 0.1.316 und HA 2026.10.1 geprüft: Card-Mod 4.2.1 und UIX 8.4.0
+jeweils getrennt, mit Mushroom 5.2.3 und Bubble 3.4.2 auf Proxmox bzw. 3.4.1
+auf dem Pi. Je Engine und Host wechseln zwölf native/exportierte Core-, Bubble-
+und Mushroom-Karten siebenmal zwischen benutzerdefiniertem und Standardtheme.
+1.920 CSS-Vergleiche bestehen; Dokument und Karteninstanzen bleiben gleich.
+Vererbte Farben/Radien folgen dem Theme, feste Überschreibungen bleiben erhalten.
+Die Prüfschaltflächen nutzen den nativen HA-Theme-Handler. Einrichtung und
+Engine-Wechsel liegen außerhalb der Messfolgen ohne Neuladen. Die ursprünglichen
+Standardthemes und Erweiterungseinstellungen sind wiederhergestellt; vorhandene
+Dateien, Projekte und Plugins bleiben erhalten. Native Prüfungen verwenden
+passive Sensoren und Chrome auf dem PC, keinen ARM64-Browser-Benchmark.
+:::
+
 ::: info Theme-Wechsel ohne Neuladen isoliert geprüft am 17.10.2026
 Mit ATLAS 0.1.316 und HA 2026.10.1 wechseln bereits angezeigte Core-, Bubble-
 und Mushroom-Karten zwischen Hell und Dunkel, ohne Seite oder Karten neu aufzubauen.
