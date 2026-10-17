@@ -415,6 +415,26 @@ tabs:
 
 ## Current Status
 
+::: info Imported Card-Mod/UIX styles from 0.1.315, checked in isolation on 2026-10-17
+Imported `card_mod`, `uix` and `uix_style` objects remain on their own cards
+in the Editor, YAML/JSON, HACS package and generated script. Nested cards,
+multiline CSS, shadow DOM selectors and Jinja values survive. Cards sharing an
+entity do not receive each other's styles. YAML and JSON HACS roundtrips pass
+112/112 checks and byte-identical re-export; direct JSON single-card import
+also passes in the browser.
+
+The **uix:** export choice converts `card_mod` properties structurally to `uix`,
+including JSON and scripts. Existing `uix`/`uix_style` objects are preserved.
+If a card already has `uix`, both blocks are retained without overwriting or
+merging. **card-mod** preserves imported keys; it does not convert UIX back.
+This verifies data preservation, not arbitrary CSS execution in every
+Card-Mod/UIX version. Configure the required styling extension in HA.
+
+Existing files, projects and plugins remain unchanged. Styles already discarded
+by older versions require re-importing the original file or a backup.
+Pi 5 and Proxmox remain untouched; native 0.1.315 qualification is still pending.
+:::
+
 ::: info YAML/JSON HACS roundtrip from 0.1.314, checked in isolation on 2026-10-17
 Choose YAML or JSON under **Card format**, export the HACS bundle, then import
 the complete `.hacs.zip` through **Import HA card**. Both formats pass the same
@@ -427,8 +447,8 @@ The `atlas/*.atlas-card.json` envelope and locale files remain JSON;
 script remains JavaScript. Existing valid YAML bundles need no conversion.
 The diagnostic code is now `package-format-supported`, replacing
 `package-format-json`. Malformed contents and missing locales are still rejected.
-Imported `card_mod` styles were detected only as preview metadata in this test
-and are absent from the exported package; preserving them needs a separate fix.
+The missing imported `card_mod` styles found in that test are fixed from
+0.1.315, as described above.
 Pi 5 and Proxmox were untouched; their 0.1.314 update remains unqualified.
 :::
 

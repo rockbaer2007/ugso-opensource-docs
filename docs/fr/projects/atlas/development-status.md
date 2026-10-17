@@ -16,15 +16,19 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 17/10/2026 · App HA 0.1.314 · intégration HACS 0.1.306.**
+**État au 17/10/2026 · App HA 0.1.315 · intégration HACS 0.1.306.**
 Les numéros de version de l’App et de l’intégration sont indépendants.
+
+0.1.315 conserve les objets `card_mod`, `uix` et `uix_style` importés dans
+l’éditeur, le YAML/JSON, les paquets HACS et scripts. Conversion UIX, attribution
+des styles, réimportation et conservation sont vérifiées isolément. Voir le
+[Card Editor](./card-editor) pour le périmètre et les limites.
 
 0.1.314 harmonise export HACS YAML/JSON, contrôle du paquet et réimportation.
 Les deux formats réussissent le parcours navigateur isolé avec 112/112 contrôles
 et un nouvel export identique octet par octet. Les données existantes sont
-conservées. Pi 5 et Proxmox restent inchangés, qualifiés en 0.1.313. Voir le
-[Card Editor](./card-editor) pour les limites, dont la conservation encore à
-corriger des styles `card_mod` importés.
+conservées. Pi 5 et Proxmox restent inchangés, qualifiés en 0.1.313.
+La perte de styles constatée alors est corrigée depuis 0.1.315.
 
 0.1.313 corrige les pertes lors de l’import Mushroom YAML/JSON et de cartes
 seules, vérifiées isolément : textes, icônes et modèles de couleur sont conservés.

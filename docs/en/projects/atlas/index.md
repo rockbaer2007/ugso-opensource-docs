@@ -52,7 +52,7 @@ ATLAS is currently in active development.
 The current focus is the **Home-Assistant-oriented ATLAS app** with
 Administration, Plugin Hub, Card Editor and File Studio.
 
-As of 2026-10-17: **App 0.1.314**, **HACS integration 0.1.306**.
+As of 2026-10-17: **App 0.1.315**, **HACS integration 0.1.306**.
 The Card Editor is the only integrated reference plugin. File Studio, Terminal,
 Icon Studio, Icon Library and Automation Exporter / Editor are maintained
 separately as external plugins. See [Development Status](./development-status)

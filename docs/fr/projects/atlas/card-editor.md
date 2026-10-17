@@ -392,6 +392,29 @@ tabs:
 
 ## État actuel
 
+::: info Styles Card-Mod/UIX importés depuis 0.1.315, vérifiés isolément le 17/10/2026
+Les objets `card_mod`, `uix` et `uix_style` importés restent sur leur propre
+carte dans l’éditeur, le YAML/JSON, le paquet HACS et le script généré. Les
+cartes imbriquées, CSS multiligne, sélecteurs shadow DOM et valeurs Jinja sont
+conservés. Des cartes partageant une entité ne reçoivent pas les styles des
+autres. Les parcours HACS YAML et JSON réussissent 112/112 contrôles avec un
+nouvel export identique octet par octet ; l’import JSON d’une carte seule est
+également vérifié dans le navigateur.
+
+L’option **uix:** convertit structurellement les propriétés `card_mod` en `uix`,
+y compris en JSON et dans les scripts. Les objets `uix`/`uix_style` existants
+sont conservés. Si `uix` existe déjà sur une carte, les deux blocs restent
+présents sans écrasement ni fusion. **card-mod** conserve les clés importées,
+sans conversion inverse de UIX. Cela vérifie les données, pas l’exécution de
+tout CSS dans chaque version Card-Mod/UIX. L’extension de style doit être
+configurée dans HA.
+
+Fichiers, projets et plugins existants restent inchangés. Les styles déjà
+perdus par une ancienne version nécessitent un nouvel import du fichier
+original ou d’une sauvegarde. Pi 5 et Proxmox sont inchangés ; la validation
+native de 0.1.315 reste à effectuer.
+:::
+
 ::: info Parcours HACS YAML/JSON à partir de 0.1.314, vérifié isolément le 17/10/2026
 Choisir YAML ou JSON dans **Card format**, exporter le bundle HACS, puis
 réimporter le `.hacs.zip` complet via **Import HA card**. Les deux formats
@@ -405,9 +428,8 @@ Le conteneur `atlas/*.atlas-card.json` et les fichiers de langue restent JSON ;
 généré reste JavaScript. Les anciens bundles YAML valides ne nécessitent aucune
 conversion. Le code de diagnostic `package-format-supported` remplace
 `package-format-json`. Les contenus invalides et langues manquantes restent
-refusés. Les styles `card_mod` importés sont détectés comme métadonnées d’aperçu
-mais absents du paquet exporté ; leur conservation demande une correction
-séparée. Pi 5 et Proxmox sont inchangés ; leur mise à jour 0.1.314 reste à vérifier.
+refusés. La perte des styles `card_mod` constatée dans ce test est corrigée
+depuis 0.1.315, voir ci-dessus. Pi 5 et Proxmox restent inchangés.
 :::
 
 ::: info Correction Mushroom dans 0.1.313, vérifiée isolément le 17/10/2026

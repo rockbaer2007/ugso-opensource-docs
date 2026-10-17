@@ -439,6 +439,28 @@ tabs:
 
 ## Aktueller Status
 
+::: info Importierte Card-Mod-/UIX-Stile ab 0.1.315, isoliert geprüft am 17.10.2026
+Importierte `card_mod`-, `uix`- und `uix_style`-Objekte bleiben an ihrer
+jeweiligen Karte: im Editor, in YAML/JSON, im HACS-Paket und im erzeugten Script.
+Das gilt auch für verschachtelte Karten, mehrzeiliges CSS, Shadow-DOM-Selektoren
+und Jinja-Werte. Karten mit derselben Entität erhalten keine fremden Stilblöcke.
+YAML- und JSON-HACS-Rundläufe bestehen mit 112/112 Prüfungen und bytegleichem
+Rückexport; auch der JSON-Einzelkartenimport ist im Browser geprüft.
+
+Die Exportwahl **uix:** wandelt `card_mod` strukturell in `uix` um, auch für
+JSON und Scripts. Vorhandene `uix`-/`uix_style`-Objekte bleiben erhalten.
+Ist an derselben Karte bereits `uix` vorhanden, werden beide Blöcke behalten;
+ATLAS überschreibt oder vereinigt sie nicht. **card-mod** erhält die importierten
+Schlüssel, konvertiert UIX also nicht zurück. Das bestätigt den Datenerhalt,
+nicht die Ausführung beliebiger CSS-Regeln durch jede Card-Mod-/UIX-Version.
+Die benötigte Stil-Erweiterung muss in HA eingerichtet sein.
+
+Bestandsdateien, Projekte und Plugins bleiben unverändert. Stile, die frühere
+Versionen bereits verworfen haben, benötigen einen erneuten Import der
+Originaldatei oder einer Sicherung. Pi 5 und Proxmox bleiben unverändert;
+das native Update auf 0.1.315 steht noch aus.
+:::
+
 ::: info YAML-/JSON-HACS-Rundlauf ab 0.1.314, isoliert geprüft am 17.10.2026
 Wähle unter **Card-Format** YAML oder JSON, exportiere das HACS-Bundle und
 importiere die vollständige `.hacs.zip` über **HA-Card importieren** zurück.
@@ -451,9 +473,8 @@ Der Container `atlas/*.atlas-card.json` und die Sprachdateien bleiben JSON;
 Das erzeugte Script bleibt JavaScript. Vorhandene gültige YAML-Bundles brauchen
 keine Konvertierung. Die Diagnosekennung heißt jetzt `package-format-supported`
 statt `package-format-json`. Beschädigte Inhalte und fehlende Sprachdateien
-werden weiterhin abgewiesen. Importierte `card_mod`-Stile wurden in dieser
-Prüfung nur als Vorschau-Metadaten erkannt und fehlen im exportierten Paket;
-deren Übernahme bleibt eine separate Korrektur. Pi 5 und Proxmox wurden bei
+werden weiterhin abgewiesen. Die damals fehlende Übernahme importierter
+`card_mod`-Stile ist ab 0.1.315 korrigiert, siehe oben. Pi 5 und Proxmox wurden bei
 dieser isolierten Prüfung nicht verändert; ihr Update auf 0.1.314 steht noch aus.
 :::
 
