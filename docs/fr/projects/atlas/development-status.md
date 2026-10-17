@@ -16,8 +16,13 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 16/10/2026 · App HA 0.1.312 · intégration HACS 0.1.306.**
+**État au 17/10/2026 · App HA 0.1.313 · intégration HACS 0.1.306.**
 Les numéros de version de l’App et de l’intégration sont indépendants.
+
+0.1.313 corrige les pertes lors de l’import Mushroom YAML/JSON et de cartes
+seules, vérifiées isolément : textes, icônes et modèles de couleur sont conservés.
+Voir le [Card Editor](./card-editor) pour le périmètre. Pi 5 et
+Proxmox restent inchangés ; leur mise à jour nécessite un contrôle distinct.
 
 | Lot | État actuel |
 | --- | --- |

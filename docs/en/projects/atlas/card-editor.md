@@ -415,21 +415,24 @@ tabs:
 
 ## Current Status
 
-::: warning Dynamic Mushroom templates: import boundary checked on 2026-10-17
-With ATLAS 0.1.312 and Mushroom 5.2.3, both tested Jinja cards correctly change
-their text, icons and icon colors in HA. A prepared ATLAS project package with
-embedded Mushroom raw entries retains the expressions through save/reopen and
-HACS-bundle export/import; repeated exports are byte-identical. After transport
-outages, both views reconnect without reload and display the values changed
-while offline.
+::: info Mushroom import fix in 0.1.313, checked in isolation on 2026-10-17
+Normal YAML/JSON imports preserve `primary`, `secondary`, `icon`, `color` and
+legacy `icon_color` for single and nested Mushroom Template Cards. Single cards
+retain their Mushroom type. Multiline YAML retains indentation and blank lines;
+malformed YAML is rejected.
 
-Normal HA YAML/JSON import currently **loses configuration**: normalization
-removes `icon` and `color`. The tested stack retains its text templates;
-the individually imported Mushroom card becomes a Core entity card in the
-Editor. Keep original YAML/JSON and avoid treating this import as a complete
-transfer of dynamic Mushroom cards until corrected. This check adds no Jinja
-authoring controls. Existing fixture data remains intact; Pi 5 and Proxmox
-were unchanged.
+Saving, reloading and HACS-bundle export/import retain the tested expressions.
+In HA 2026.10.1 with Mushroom 5.2.3, exported cards change their text, icons and
+colors with fixture states and reconnect automatically after a transport outage.
+HA evaluates Jinja; ATLAS preserves its source. Apply title deliberately replaces
+`primary`; changing the entity preserves the other templates. Values already
+lost through older imports require the original source to recover. Keep original
+YAML/JSON files.
+
+This qualifies the named properties and fixtures, not arbitrary Mushroom options
+or Jinja programs. Legacy `icon_color` is checked for preservation; runtime tests
+use current `color`. No Jinja authoring controls are added. Existing data remains
+intact; Pi 5 and Proxmox were unchanged. Their 0.1.313 update needs a separate check.
 :::
 
 ::: info Isolated 60-minute soak on 2026-10-17

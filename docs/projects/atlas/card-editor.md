@@ -439,21 +439,25 @@ tabs:
 
 ## Aktueller Status
 
-::: warning Dynamische Mushroom-Vorlagen: Importgrenze, geprüft am 17.10.2026
-Mit ATLAS 0.1.312 und Mushroom 5.2.3 wechseln die beiden geprüften Jinja-Karten
-in HA ihre Texte, Symbole und Symbolfarben korrekt. Ein vorbereitetes
-ATLAS-Projektpaket mit bereits eingebetteten Mushroom-Rohdaten erhält die
-Ausdrücke beim Speichern, Wiederöffnen und HACS-Bundle-Export/Import;
-die wiederholten Exporte sind bytegleich. Nach Transportabbrüchen aktualisieren
-sich die Ansichten ohne Neuladen wieder auf die währenddessen geänderten Werte.
+::: info Mushroom-Importkorrektur in 0.1.313, isoliert geprüft am 17.10.2026
+Normale YAML-/JSON-Importe erhalten bei Einzelkarten und verschachtelten
+Mushroom-Template-Karten `primary`, `secondary`, `icon`, `color` und das ältere
+`icon_color`. Einzelkarten bleiben Mushroom-Karten. Mehrzeilige YAML-Werte
+behalten Einrückungen und Leerzeilen; fehlerhaftes YAML wird abgewiesen.
 
-Der normale HA-YAML-/JSON-Import ist dafür derzeit **nicht verlustfrei**:
-Der Parser entfernt `icon` und `color`. Beim geprüften Stack bleiben die
-Textvorlagen erhalten; die einzeln importierte Mushroom-Karte wird im Editor
-zur Core-Entitätskarte. Original-YAML/JSON deshalb behalten und diesen Import
-für dynamische Mushroom-Karten bis zur Korrektur nicht als vollständige
-Übernahme verwenden. Die Prüfung fügt keine Jinja-Eingabefelder hinzu.
-Vorhandene Testdaten bleiben erhalten; Pi 5 und Proxmox wurden nicht verändert.
+Speichern, Neuladen und HACS-Bundle-Export/Import erhalten die geprüften
+Ausdrücke. In HA 2026.10.1 mit Mushroom 5.2.3 ändern die exportierten Karten
+Texte, Symbole und Farben mit den Testzuständen und verbinden sich nach einem
+Transportabbruch automatisch wieder. HA wertet Jinja aus; ATLAS erhält den Code.
+„Titel übernehmen“ ersetzt bewusst `primary`, eine Entitätsänderung erhält
+die übrigen Vorlagen. Bereits durch ältere Importe verlorene Angaben lassen
+sich nur aus dem Original wiederherstellen. Original-YAML/JSON deshalb behalten.
+
+Die Prüfung bestätigt die genannten Eigenschaften und Testfälle, keine
+beliebigen Mushroom-Optionen oder Jinja-Programme. `icon_color` ist auf Erhalt
+geprüft; der Laufzeittest verwendet das aktuelle `color`. Es gibt keine neuen
+Jinja-Eingabefelder. Vorhandene Daten bleiben erhalten; Pi 5 und Proxmox wurden
+nicht verändert. Das dortige Update auf 0.1.313 ist separat zu prüfen.
 :::
 
 ::: info Isolierter 60-Minuten-Dauertest am 17.10.2026

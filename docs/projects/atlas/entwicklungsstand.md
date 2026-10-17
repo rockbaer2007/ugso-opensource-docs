@@ -12,8 +12,13 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 16.10.2026 · HA-App 0.1.312 · HACS-Integration 0.1.306.**
+**Stand: 17.10.2026 · HA-App 0.1.313 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+0.1.313 korrigiert isoliert geprüfte Mushroom-Importverluste bei YAML/JSON und
+Einzelkarten: Texte, Symbole und Farbvorlagen bleiben erhalten. Details und
+Grenzen stehen beim [Card Editor](./card-editor#aktueller-status). Pi 5 und
+Proxmox bleiben bei diesem Schritt unverändert; ihr Update ist separat offen.
 
 | Arbeitspaket | Heutiger Status |
 | --- | --- |

@@ -12,8 +12,13 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-16 · HA App 0.1.312 · HACS integration 0.1.306.**
+**As of 2026-10-17 · HA App 0.1.313 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+0.1.313 fixes Mushroom YAML/JSON and single-card import losses, checked in
+isolation: text, icon and color templates remain intact. See the
+[Card Editor](./card-editor#current-status) for scope. Pi 5 and Proxmox were
+unchanged; their update remains a separate follow-up.
 
 | Work package | Current status |
 | --- | --- |

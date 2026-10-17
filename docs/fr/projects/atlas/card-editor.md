@@ -392,22 +392,25 @@ tabs:
 
 ## État actuel
 
-::: warning Modèles Mushroom dynamiques : limite d’import vérifiée le 17/10/2026
-Avec ATLAS 0.1.312 et Mushroom 5.2.3, les deux cartes Jinja testées changent
-correctement leurs textes, icônes et couleurs d’icônes dans HA. Un paquet de
-projet ATLAS préparé avec des entrées Mushroom brutes intégrées conserve les
-expressions lors de l’enregistrement, de la réouverture et de l’export/import
-HACS ; les exports répétés sont identiques octet par octet. Après les coupures
-de transport, les deux vues se reconnectent sans rechargement et affichent
-les valeurs modifiées pendant l’interruption.
+::: info Correction Mushroom dans 0.1.313, vérifiée isolément le 17/10/2026
+Les imports YAML/JSON habituels conservent `primary`, `secondary`, `icon`,
+`color` et l’ancien `icon_color` pour les cartes Mushroom Template seules et
+imbriquées. Les cartes seules restent de type Mushroom. Le YAML multiligne
+conserve retraits et lignes vides ; le YAML incorrect est refusé.
 
-L’import HA YAML/JSON habituel **perd actuellement des réglages** : le parseur
-supprime `icon` et `color`. La pile testée conserve les modèles de texte ;
-la carte Mushroom importée seule devient une carte d’entité Core dans l’éditeur.
-Conserver les YAML/JSON originaux et ne pas considérer cet import comme un
-transfert complet de cartes Mushroom dynamiques avant correction.
-Ce contrôle n’ajoute pas de champs de saisie Jinja. Les données de test
-existantes sont conservées ; Pi 5 et Proxmox restent inchangés.
+Enregistrement, rechargement et export/import HACS conservent les expressions
+testées. Avec HA 2026.10.1 et Mushroom 5.2.3, les cartes exportées changent leurs
+textes, icônes et couleurs selon les états de test et se reconnectent après une
+coupure de transport. HA évalue Jinja ; ATLAS conserve son code. Appliquer un
+titre remplace volontairement `primary` ; changer l’entité conserve les autres
+modèles. Les valeurs déjà perdues par un ancien import nécessitent le fichier
+original pour être récupérées. Conserver les YAML/JSON originaux.
+
+La vérification couvre les propriétés et cas cités, pas toutes les options
+Mushroom ni tous les programmes Jinja. `icon_color` est vérifié pour sa
+conservation ; le test d’exécution utilise `color`. Aucun champ de saisie Jinja
+n’est ajouté. Les données existantes sont conservées ; Pi 5 et Proxmox restent
+inchangés. Leur mise à jour 0.1.313 nécessite une vérification distincte.
 :::
 
 ::: info Test d’endurance isolé de 60 minutes le 17/10/2026
