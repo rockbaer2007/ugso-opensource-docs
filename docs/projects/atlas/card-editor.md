@@ -439,6 +439,22 @@ tabs:
 
 ## Aktueller Status
 
+::: warning Theme-Prüfung offen: Bubble-CSS-Import in 0.1.315
+Die Vorbereitung des isolierten Hell/Dunkel-Tests zeigt einen Datenverlust:
+Bubble-CSS als Zeichenkette unter `styles: |` wird beim normalen YAML-/JSON-
+Kartenimport verworfen. Direkte Speicherung des ursprünglichen Projekts über
+die Server-API erhält diese Zeichenkette; der Fehler liegt im Kartenimport.
+Ein danach erzeugtes HACS-Paket kann trotzdem 112/112 Paketprüfungen bestehen,
+weil diese das bereits normalisierte Paket prüfen. Originaldateien aufbewahren;
+diese CSS-Form ist damit noch nicht für einen verlustfreien Rundlauf freigegeben.
+
+Core-/Mushroom- und übergeordnete `uix`-Objekte bleiben im Datencheck erhalten.
+Das bestätigt noch keine korrekte Theme-Darstellung. Die sichtbare Prüfung von
+Hell/Dunkel, CSS-Vererbung und dem vollständigen Editor-UI-Rundlauf ist nach
+einem lokalen Update/Neustart wegen ausgefallener Browsersteuerung noch offen.
+Pi 5 und Proxmox bleiben unverändert. Es gibt hierfür noch keine Korrekturversion.
+:::
+
 ::: info Native CSS-Prüfung auf Proxmox und Pi 5, 17.10.2026
 Nach frischen HA-Sicherungen und zusätzlichen ATLAS-Dateikopien wurden
 Card-Mod 4.2.1 und UIX 8.4.0 auch auf beiden echten Hosts getrennt geprüft:

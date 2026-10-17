@@ -415,6 +415,20 @@ tabs:
 
 ## Current Status
 
+::: warning Theme qualification pending: Bubble CSS import in 0.1.315
+Preparing the isolated light/dark fixture exposes data loss: Bubble CSS supplied
+as a string under `styles: |` is dropped by normal YAML/JSON card import. Direct
+server API storage of the original project preserves that string; the loss
+occurs in card import. A subsequent HACS bundle can still pass 112/112 package
+checks because they inspect the already-normalized package. Retain original
+files; this CSS form is not yet qualified for a lossless roundtrip.
+
+Core/Mushroom and parent `uix` objects survive the data check. That does not yet
+verify theme rendering. Visible light/dark, CSS inheritance and the full Editor
+UI roundtrip remain pending after a local update/restart broke browser control.
+Pi 5 and Proxmox remain untouched. No fix release is available for this finding yet.
+:::
+
 ::: info Native CSS qualification on Proxmox and Pi 5, 2026-10-17
 After fresh HA backups and additional ATLAS file copies, Card-Mod 4.2.1 and
 UIX 8.4.0 were also tested separately on both real hosts: HA 2026.10.1,

@@ -392,6 +392,22 @@ tabs:
 
 ## État actuel
 
+::: warning Vérification des thèmes en attente : import CSS Bubble dans 0.1.315
+La préparation du test clair/sombre isolé révèle une perte de données : le CSS
+Bubble fourni comme chaîne sous `styles: |` est supprimé à l’import normal
+YAML/JSON. La sauvegarde directe du projet original par l’API serveur conserve
+cette chaîne ; la perte se situe dans l’import des cartes. Le paquet HACS créé
+ensuite peut réussir 112/112 contrôles, car ceux-ci examinent le paquet déjà
+normalisé. Conserver les fichiers originaux ; ce format CSS n’est pas encore
+validé pour un parcours sans perte.
+
+Les objets `uix` Core/Mushroom et parent sont conservés dans le contrôle des
+données. Cela ne valide pas le rendu des thèmes. Le test visuel clair/sombre,
+l’héritage CSS et le parcours complet dans l’éditeur restent en attente après
+une mise à jour/redémarrage local ayant interrompu la commande du navigateur.
+Pi 5 et Proxmox restent inchangés. Aucune version corrective pour ce cas à ce stade.
+:::
+
 ::: info Vérification CSS native sur Proxmox et Pi 5, 17/10/2026
 Après de nouvelles sauvegardes HA et des copies des fichiers ATLAS, Card-Mod
 4.2.1 et UIX 8.4.0 sont également testés séparément sur les deux hôtes réels :
