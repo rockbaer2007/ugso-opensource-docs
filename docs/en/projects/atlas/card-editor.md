@@ -415,6 +415,24 @@ tabs:
 
 ## Current Status
 
+::: info Native 0.1.317 update and combined project verified on Proxmox and Pi 5
+Following fresh HA backups, both native updates and the nested Core/Bubble/
+Mushroom project pass save/reopen, YAML/JSON, actual HACS re-import and
+byte-identical re-export with 112/112 package checks per host. Missing numeric
+Conditional bounds are rejected; `above: -1`, Jinja and CSS survive. Conditional
+rows hide at -2 and return at 18. Text, SVG icons and colors change live.
+756 computed-CSS comparisons match native reference cards. Two light/dark
+switches per host preserve all 19 observed instances without reload. Editors
+reconnect automatically after ordered HA Core restarts; fresh Jinja updates work
+without reload. The Pi's brief intermediate connection state was not sampled;
+its subsequent connection and updates are verified. Scope: Chrome on the PC,
+HA 2026.10.1, Mushroom 5.2.3, existing UIX 8.4.0/Bubble 3.4.2 on Proxmox and
+separate temporary Card-Mod 4.2.1/Bubble 3.4.1 on Pi. Regular card views provide
+the CSS reference; HA panel views may override radii. Original local Editor
+states and default themes are restored; test files remain recoverable in Trash.
+Regenerate earlier exported scripts to include the correction.
+:::
+
 ::: info Combined project qualification passes in isolation with 0.1.317
 Conditional imports retain complete condition data, including numeric bounds
 such as `above: -1` and `below: 0`, state lists and nested logical conditions,
@@ -425,7 +443,7 @@ colors, conditional hide/show, eight live theme transitions and 972 CSS
 comparisons. Both Editors reconnect without page reload after HA shutdown/start;
 fresh template updates work. Card-Mod 4.2.1 and UIX 8.4.0 are tested separately
 with HA 2026.10.1, Bubble 3.4.2 and Mushroom 5.2.3 in Chrome on the PC. Existing
-data is preserved; Pi 5 and Proxmox remain unchanged at 0.1.316. Previously lost
+data is preserved; that isolated check left Pi 5 and Proxmox at 0.1.316. Previously lost
 bounds require the original source/backup; regenerate existing scripts.
 This is not a complete validator for every HA condition type.
 :::

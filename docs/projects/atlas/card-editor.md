@@ -439,6 +439,26 @@ tabs:
 
 ## Aktueller Status
 
+::: info Update und Gesamtprojekt auf Proxmox und Pi 5 mit 0.1.317 geprüft
+Nach frischen HA-Sicherungen bestehen auch die nativen Updates und der
+Gesamtprojekt-Durchlauf mit verschachtelten Core-, Bubble- und Mushroom-Karten:
+Speichern/Wiederöffnen, YAML/JSON, echte HACS-Rückimporte mit bytegleichen
+Rückexporten und je 112/112 Paketprüfungen. Fehlende numerische Conditional-Grenzen
+werden abgelehnt; `above: -1`, Jinja und CSS bleiben erhalten. Conditional blendet
+bei -2 aus und bei 18 wieder ein. Texte, SVG-Symbole und Farben ändern sich live.
+756 CSS-Vergleiche stimmen mit nativen Referenzkarten überein. Je zwei
+Hell-/Dunkel-Wechsel ohne Neuladen erhalten alle 19 beobachteten Instanzen.
+Nach geordneten HA-Core-Neustarts verbinden sich die Editoren automatisch;
+frische Jinja-Updates funktionieren ohne Neuladen. Auf dem Pi wurde der kurze
+Zwischenstatus nicht erfasst; die anschließende Verbindung und Aktualisierung
+sind geprüft. Umfang: Chrome auf dem PC, HA 2026.10.1, Mushroom 5.2.3,
+Proxmox mit vorhandenem UIX 8.4.0/Bubble 3.4.2, Pi mit getrenntem temporärem
+Card-Mod 4.2.1/Bubble 3.4.1. Die reguläre Kartenansicht dient als CSS-Referenz;
+eine HA-Panelansicht kann eigene Radien überschreiben. Lokale Editorstände und
+ursprüngliche Standardthemes sind wiederhergestellt; die Testdateien bleiben
+im Papierkorb wiederherstellbar. Frühere Exporte müssen neu erzeugt werden.
+:::
+
 ::: info Gesamtprojekt-Durchlauf mit 0.1.317 isoliert bestanden
 Conditional-Importe erhalten vollständige Bedingungsdaten: numerische Grenzen
 wie `above: -1` und `below: 0`, Zustandslisten und verschachtelte logische
@@ -450,8 +470,8 @@ Farben, bedingtes Aus-/Einblenden, acht Theme-Wechsel ohne Neuladen und 972
 CSS-Vergleiche. Nach HA-Ausfall verbinden sich beide Editoren ohne Neuladen
 erneut; frische Template-Updates funktionieren. Card-Mod 4.2.1 und UIX 8.4.0
 wurden getrennt mit HA 2026.10.1, Bubble 3.4.2 und Mushroom 5.2.3 in Chrome auf
-dem PC geprüft. Vorhandene Daten bleiben erhalten; Pi 5 und Proxmox sind
-unverändert bei 0.1.316. Bereits verlorene Grenzen lassen sich nur aus der
+dem PC geprüft. Vorhandene Daten bleiben erhalten; bei dieser isolierten Prüfung
+blieben Pi 5 und Proxmox noch bei 0.1.316. Bereits verlorene Grenzen lassen sich nur aus der
 ursprünglichen Quelle/Sicherung wiederherstellen. Bestehende Scripts neu exportieren.
 Die Prüfung ersetzt keine vollständige Validierung aller HA-Bedingungstypen.
 :::

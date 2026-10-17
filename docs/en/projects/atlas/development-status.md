@@ -18,7 +18,11 @@ App and integration version numbers are maintained independently.
 0.1.317 fixes conditional import and blocks numeric conditions without valid
 bounds. The isolated combined-project check passes saving, HACS roundtrip,
 Jinja, live themes and reconnection, including 972 matching CSS comparisons.
-Pi 5 and Proxmox remain unchanged at 0.1.316.
+Following fresh backups, the native update also passes on Proxmox and Pi 5:
+112/112 package checks each, byte-identical HACS roundtrips, 756 additional CSS
+comparisons, Conditional/Jinja, theme switches and automatic connection after
+HA Core restarts. This check uses existing UIX on Proxmox and temporary Card-Mod
+on Pi. Original local Editor states are restored.
 Details: [Card Editor](./card-editor#current-status).
 
 Following fresh backups, live theme switches without reload also pass on Proxmox

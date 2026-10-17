@@ -392,6 +392,25 @@ tabs:
 
 ## État actuel
 
+::: info Mise à jour 0.1.317 et projet combiné vérifiés sur Proxmox et Pi 5
+Après de nouvelles sauvegardes HA, les mises à jour natives et le projet
+Core/Bubble/Mushroom imbriqué réussissent sauvegarde/réouverture, YAML/JSON,
+réimport HACS réel et réexport identique, avec 112/112 contrôles par hôte.
+Les seuils numériques absents sont refusés ; `above: -1`, Jinja et CSS sont
+conservés. Les lignes conditionnelles disparaissent à -2 et reviennent à 18.
+Textes, icônes SVG et couleurs changent en direct. 756 comparaisons CSS
+correspondent aux références natives. Deux changements clair/sombre par hôte
+préservent les 19 instances observées sans rechargement. Les éditeurs se
+reconnectent après un redémarrage ordonné de HA Core ; de nouvelles mises à jour
+Jinja fonctionnent sans rechargement. L’état intermédiaire bref du Pi n’a pas été
+échantillonné ; sa connexion et ses mises à jour ultérieures sont vérifiées.
+Périmètre : Chrome sur le PC, HA 2026.10.1, Mushroom 5.2.3, UIX 8.4.0 existant/
+Bubble 3.4.2 sur Proxmox et Card-Mod 4.2.1 temporaire séparé/Bubble 3.4.1 sur Pi.
+La vue de cartes normale sert de référence CSS ; une vue panneau HA peut
+remplacer les rayons. Projets locaux et thèmes par défaut sont rétablis ; les
+fichiers de test restent récupérables dans la corbeille. Régénérer les anciens scripts.
+:::
+
 ::: info Projet combiné validé isolément avec 0.1.317
 Les imports conditionnels conservent toutes les données des conditions : seuils
 comme `above: -1` et `below: 0`, listes d’états et conditions logiques imbriquées,
@@ -403,7 +422,7 @@ rechargement et 972 comparaisons CSS. Après arrêt/démarrage HA, les deux édi
 se reconnectent sans rechargement et reçoivent de nouvelles mises à jour des
 modèles. Card-Mod 4.2.1 et UIX 8.4.0 sont testés séparément avec HA 2026.10.1,
 Bubble 3.4.2 et Mushroom 5.2.3 dans Chrome sur le PC. Données existantes
-conservées ; Pi 5 et Proxmox restent inchangés en 0.1.316. Les seuils déjà perdus
+conservées ; cet essai isolé avait laissé Pi 5 et Proxmox en 0.1.316. Les seuils déjà perdus
 nécessitent la source/sauvegarde d’origine ; réexporter les scripts existants.
 Il ne s’agit pas d’un validateur complet de tous les types de conditions HA.
 :::

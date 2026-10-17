@@ -18,7 +18,11 @@ App und Integration haben unabhängige Versionsnummern.
 0.1.317 korrigiert den Conditional-Import und blockiert numerische Bedingungen
 ohne gültige Grenzen. Der isolierte Gesamtprojekt-Test mit Speichern, HACS-Rundlauf,
 Jinja, Theme-Wechseln und Wiederverbindung besteht; 972 CSS-Vergleiche stimmen
-überein. Pi 5 und Proxmox bleiben unverändert bei 0.1.316.
+überein. Auch das Update auf Proxmox und Pi 5 ist nach frischen Sicherungen
+geprüft: je 112/112 Paketprüfungen, bytegleiche HACS-Rundläufe, 756 zusätzliche
+CSS-Vergleiche, Conditional/Jinja, Theme-Wechsel und automatische Verbindung nach
+HA-Core-Neustarts. Proxmox nutzt dabei vorhandenes UIX, der Pi temporäres Card-Mod.
+Die ursprünglichen lokalen Editorstände sind wiederhergestellt.
 Details: [Card Editor](./card-editor#aktueller-status).
 
 Die Theme-Wechsel ohne Neuladen sind nach frischen Sicherungen auch auf Proxmox
