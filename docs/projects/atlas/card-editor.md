@@ -439,6 +439,21 @@ tabs:
 
 ## Aktueller Status
 
+::: info Theme-Wechsel ohne Neuladen isoliert geprüft am 17.10.2026
+Mit ATLAS 0.1.316 und HA 2026.10.1 wechseln bereits angezeigte Core-, Bubble-
+und Mushroom-Karten zwischen Hell und Dunkel, ohne Seite oder Karten neu aufzubauen.
+Card-Mod 4.2.1 und UIX 8.4.0 wurden getrennt mit Bubble 3.4.2 und Mushroom 5.2.3
+geprüft: je sieben Wechsel zwischen benutzerdefiniertem und Standardtheme,
+insgesamt 960 Vergleiche berechneter CSS-Werte. Vererbte Farben und Radien wechseln;
+feste Kartenüberschreibungen bleiben unverändert. Native Referenz und exportiertes
+Script stimmen überein; Dokument- und Kartenidentitäten bleiben durchgehend gleich.
+Die isolierten Prüfschaltflächen verwenden den nativen HA-Theme-Handler;
+Profilnavigation oder Neuladen gehören nicht zur Messfolge. Vorherige Daten,
+neun Projekte und bestehende Dateien bleiben erhalten. Pi 5 und Proxmox wurden
+nicht abgefragt oder verändert. Andere Themes, Browser und Versionen benötigen
+eigene Prüfungen; ein erneuter HACS-UI-Rundlauf ist nicht Teil dieser Prüfung.
+:::
+
 ::: info Bubble-CSS und UIX-Vererbung korrigiert in 0.1.316
 0.1.315 verlor Bubble-CSS als Zeichenkette unter `styles: |` beim normalen
 YAML-/JSON-Kartenimport. 0.1.316 erhält diesen Text samt Leerraum, Zeilenumbrüchen
@@ -471,8 +486,8 @@ HA 2026.10.1, Mushroom 5.2.3 und Bubble 3.4.2 (Proxmox) bzw. 3.4.1 (Pi).
 bleiben erhalten, HACS-Rückexporte sind bytegleich und bestehen je 112/112
 Paketprüfungen. Die ursprünglichen lokalen Editorstände sind vollständig
 wiederhergestellt. Geprüft wird im vorhandenen dunklen Theme mit passiven Sensoren;
-andere HA-/Styling-Versionen und dauerhaft
-montierte Karten bei Theme-Wechseln benötigen eigene Prüfungen.
+andere HA-/Styling-Versionen benötigen eigene Prüfungen. Die isolierte Prüfung
+bereits angezeigter Karten bei Theme-Wechseln ist oben gesondert beschrieben.
 :::
 
 ::: info Native CSS-Prüfung auf Proxmox und Pi 5, 17.10.2026

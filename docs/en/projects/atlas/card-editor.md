@@ -415,6 +415,21 @@ tabs:
 
 ## Current Status
 
+::: info Live theme switches qualified in isolation on 2026-10-17
+With ATLAS 0.1.316 and HA 2026.10.1, mounted Core, Bubble and Mushroom cards
+switch between light and dark without reloading or rebuilding the cards.
+Card-Mod 4.2.1 and UIX 8.4.0 are tested separately with Bubble 3.4.2 and
+Mushroom 5.2.3: seven transitions per engine across custom/default themes,
+960 computed-CSS comparisons in total. Inherited colors/radii change while
+explicit child overrides stay fixed. Native references and generated scripts
+match; document and Card identities remain stable throughout.
+Isolated fixture controls use HA's native theme handler; profile navigation
+and reload are outside the measurement sequence. Existing data, nine projects
+and original files remain intact. Pi 5 and Proxmox were neither queried nor
+changed. Other themes, browsers and versions need separate checks; this does
+not repeat the actual Editor/HACS UI roundtrip.
+:::
+
 ::: info Bubble CSS and UIX inheritance fixed in 0.1.316
 0.1.315 dropped Bubble CSS supplied as a string under `styles: |` on normal
 YAML/JSON import. 0.1.316 preserves the text, whitespace, newlines and empty
@@ -444,8 +459,8 @@ Mushroom 5.2.3 and Bubble 3.4.2 (Proxmox) or 3.4.1 (Pi). 240 computed-CSS
 comparisons including reload pass. YAML/JSON styles are preserved; HACS
 re-exports are byte-identical and each passes 112/112 package checks.
 Original complete local Editor configurations are restored. Native checks use
-the existing dark theme and passive sensors. Other HA/styling versions and theme
-changes on continuously mounted cards need separate checks.
+the existing dark theme and passive sensors. Other HA/styling versions need
+separate checks. Isolated mounted-Card theme switches are documented above.
 :::
 
 ::: info Native CSS qualification on Proxmox and Pi 5, 2026-10-17

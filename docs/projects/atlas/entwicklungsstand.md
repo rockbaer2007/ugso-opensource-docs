@@ -15,6 +15,13 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 **Stand: 17.10.2026 · HA-App 0.1.316 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
+Hell-/Dunkel-Wechsel ohne Neuladen sind jetzt isoliert mit Core-, Bubble- und
+Mushroom-Karten geprüft: getrennt mit Card-Mod 4.2.1 und UIX 8.4.0, je sieben
+Theme-Wechsel, 960 CSS-Vergleiche und unveränderte Karten-/Dokumentidentitäten.
+Feste Überschreibungen bleiben erhalten; vererbte Farben und Radien wechseln mit.
+Pi 5 und Proxmox bleiben bei dieser zusätzlichen Prüfung unverändert. Details
+und Versionsgrenzen: [Card Editor](./card-editor#aktueller-status).
+
 0.1.316 korrigiert den Bubble-CSS-Importverlust und die UIX-Vererbung am
 Wurzel-Stack exportierter Scripts. Nach isolierter Prüfung ist auch das Update
 auf Proxmox und Pi 5 mit vorherigen HA-Sicherungen bestanden: YAML/JSON,

@@ -15,6 +15,13 @@ are documented in the development status below.
 **As of 2026-10-17 · HA App 0.1.316 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
+Live light/dark switches without reload now pass in isolation for Core, Bubble
+and Mushroom: Card-Mod 4.2.1 and UIX 8.4.0 tested separately, seven transitions
+each, 960 CSS comparisons and stable Card/document identities. Fixed overrides
+remain intact while inherited colors/radii follow the theme. Pi 5 and Proxmox
+remain untouched in this additional check. See the
+[Card Editor](./card-editor#current-status) for scope and version limits.
+
 0.1.316 fixes Bubble CSS import loss and root-stack UIX inheritance in exported
 scripts. Following isolated checks, updates on Proxmox and Pi 5 also pass after
 fresh HA backups: YAML/JSON, byte-identical HACS roundtrips with 112/112 checks

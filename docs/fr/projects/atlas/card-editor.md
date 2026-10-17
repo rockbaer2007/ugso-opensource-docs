@@ -392,6 +392,22 @@ tabs:
 
 ## État actuel
 
+::: info Changements de thème sans rechargement vérifiés isolément le 17/10/2026
+Avec ATLAS 0.1.316 et HA 2026.10.1, les cartes Core, Bubble et Mushroom déjà
+affichées passent du clair au sombre sans rechargement ni reconstruction.
+Card-Mod 4.2.1 et UIX 8.4.0 sont testés séparément avec Bubble 3.4.2 et
+Mushroom 5.2.3 : sept transitions par moteur entre thèmes personnalisés/par défaut,
+960 comparaisons CSS calculées au total. Couleurs/rayons hérités changent ; les
+surcharges explicites restent fixes. Références natives et scripts générés
+concordent ; identités du document et des cartes restent stables.
+Les commandes de test isolées utilisent le gestionnaire de thème natif HA ;
+navigation de profil et rechargement sont hors de la séquence mesurée.
+Données initiales, neuf projets et fichiers existants sont conservés.
+Pi 5 et Proxmox n’ont été ni interrogés ni modifiés. Autres thèmes, navigateurs
+et versions nécessitent leurs propres contrôles ; le parcours UI HACS n’est
+pas répété dans cet essai.
+:::
+
 ::: info CSS Bubble et héritage UIX corrigés dans 0.1.316
 0.1.315 supprimait le CSS Bubble texte sous `styles: |` à l’import YAML/JSON.
 0.1.316 conserve texte, espaces, retours à la ligne et chaîne vide dans les
@@ -424,8 +440,8 @@ UIX 8.4.0, HA 2026.10.1, Mushroom 5.2.3 et Bubble 3.4.2 (Proxmox) ou 3.4.1 (Pi).
 sont conservés ; réexports HACS identiques et 112/112 contrôles par paquet.
 Les configurations locales initiales des éditeurs sont entièrement restaurées.
 Les essais natifs utilisent le thème sombre existant et des capteurs passifs.
-Autres versions HA/styles et changements de thème sur cartes continuellement montées demandent
-des vérifications séparées.
+Les autres versions HA/styles demandent des vérifications séparées. Les changements
+de thème sur cartes déjà montées sont vérifiés isolément comme décrit ci-dessus.
 :::
 
 ::: info Vérification CSS native sur Proxmox et Pi 5, 17/10/2026
