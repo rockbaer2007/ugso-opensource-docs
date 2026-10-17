@@ -392,6 +392,53 @@ tabs:
 
 ## État actuel
 
+::: info Rendu CSS vérifié isolément, 17/10/2026
+Avec App 0.1.315, HA 2026.10.1 et Mushroom 5.2.3, **Card-Mod 4.2.1** et
+**UIX 8.4.0** ont été testés dans deux instances HA distinctes. Les scripts
+ATLAS générés reproduisent les styles calculés des cartes natives équivalentes :
+couleur Jinja et bordure de 4 px passent du bleu au rouge puis au bleu sans
+rechargement ; l’espacement dans le Shadow DOM est de 3 px. Le rayon UIX vaut
+17 px. Une référence Core confirme fond, bordure de 6 px et rayon de 23 px.
+Rechargement et redémarrage réussissent ; les cartes sans style partageant
+l’entité restent inchangées. Pi 5 et Proxmox n’ont pas été modifiés pour ce test.
+
+**Limites :** `uix_style` est conservé à l’import mais ne produit aucun effet
+CSS dans ces versions. Utiliser `uix: { style: ... }` pour UIX. Si `card_mod`
+et `uix` coexistent, UIX privilégie `uix` ; ATLAS ne fusionne pas les blocs.
+Card-Mod n’exécute pas `uix`. L’export UIX convertit la structure, pas les
+sélecteurs CSS ni les variables Jinja. L’ancien nom de test « UIX legacy »
+était une étiquette de carte, pas la preuve d’un alias reconnu.
+
+Dans les **modèles CSS** de ces extensions, utiliser `config.entity` ; les
+modèles de texte/icône/couleur propres à Mushroom peuvent utiliser `entity`.
+`mushroom-state-info$` ne correspond pas à cette version Mushroom. Le sélecteur
+testé est `ha-tile-info$` ; les structures DOM internes peuvent changer.
+
+```yaml
+type: custom:mushroom-template-card
+entity: input_boolean.votre_entite_test
+primary: "{{ 'Allumé' if is_state(entity, 'on') else 'Éteint' }}"
+card_mod: # Avec UIX, utiliser uix: à la place
+  style:
+    .: |
+      ha-card {
+        border: 4px solid {{ 'red' if is_state(config.entity, 'on') else 'blue' }};
+      }
+    ha-tile-info$: |
+      .info { letter-spacing: 3px; }
+```
+
+Charger Card-Mod comme module frontend. Installer UIX comme intégration,
+l’ajouter dans **Appareils et services**, puis recharger la page. Ne pas charger
+les deux extensions : voir la
+[migration UIX](https://github.com/Lint-Free-Technology/uix/blob/v8.4.0/docs/source/faq.md),
+l’[installation UIX](https://github.com/Lint-Free-Technology/uix/blob/v8.4.0/docs/source/quick-start.md)
+et [Card-Mod](https://github.com/thomasloven/lovelace-card-mod/tree/v4.2.1).
+Seules les règles citées sont couvertes, pas tout CSS ni tous les thèmes.
+Modèles originaux et données existantes sont sauvegardés ; seules les copies
+de test ont été adaptées. Aucune modification du code d’exécution ATLAS.
+:::
+
 ::: info Mise à jour native 0.1.315 vérifiée sur Proxmox et Pi 5, 17/10/2026
 Après de nouvelles sauvegardes HA, les deux hôtes valident la mise à jour
 0.1.313 vers 0.1.315 et l’export/réimportation : YAML/Card-Mod et JSON avec

@@ -15,6 +15,13 @@ are documented in the development status below.
 **As of 2026-10-17 · HA App 0.1.315 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
+Actual CSS rendering also passes in isolation with HA 2026.10.1, Mushroom
+5.2.3, Card-Mod 4.2.1 and UIX 8.4.0 separately: generated scripts match native
+references for dynamic colors/borders, shadow DOM styles and UIX radii.
+`uix_style` has no CSS effect; CSS Jinja requires `config.entity`. See the
+[Card Editor](./card-editor#current-status) for setup, examples and limits.
+Pi 5 and Proxmox remain untouched; there is no new App release.
+
 0.1.315 preserves imported `card_mod`, `uix` and `uix_style` objects in the
 Editor, YAML/JSON, HACS packages and scripts. UIX export conversion, style
 ownership, re-import and preservation pass in isolation. See the
