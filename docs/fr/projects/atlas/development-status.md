@@ -21,8 +21,14 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 L’App 0.1.319 corrige les pertes des cartes seules lors du transfert réel vers
 l’éditeur : conditions Conditional et noms Entity sont conservés. Les 259 tests
 locaux réussissent, dont 19 nouveaux contrôles éditeur/brouillon/export. Les
-données enregistrées ne changent pas. Les hôtes .177/.68 restent en 0.1.318 ;
-leur mise à jour native reste à vérifier.
+données enregistrées ne changent pas. La mise à jour native de .177/.68 avec
+HA 2026.10.2 est vérifiée après sauvegardes complètes : 32 cas JSON/YAML par
+fichier/collage conservent la source après rechargement et huit paquets Card réels
+passent l’export/réimport. Données, sept projets et six plugins par hôte ainsi que
+les deux éditeurs locaux d’origine sont conservés. Seize contrôles supplémentaires
+révèlent une limite : noms Entity vides remplacés et espaces extérieurs supprimés.
+Les anciens tests locaux comparaient après normalisation ; leur affirmation trop
+large est corrigée. Voir [Card Editor](./card-editor) pour le périmètre et les limites.
 
 L’App 0.1.318 aligne la prévisualisation d’import sur l’analyseur réel et refuse
 les cartes Markdown non prises en charge, même imbriquées. Les 240 tests locaux

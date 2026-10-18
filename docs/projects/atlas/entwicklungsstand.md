@@ -18,8 +18,14 @@ App und Integration haben unabhängige Versionsnummern.
 App 0.1.319 korrigiert die Einzelkartenverluste im tatsächlichen Editor-
 Übernahmepfad. Conditional-Bedingungen und eigene Entity-Namen bleiben erhalten;
 259 lokale Pakettests mit 19 neuen Editor-/Entwurfs-/Exportprüfungen bestehen.
-Gespeicherte Daten werden nicht verändert. Die Testhosts .177/.68 bleiben bei
-0.1.318; das native Update und die erneute sichtbare Prüfung stehen noch aus.
+Das native Update auf .177/.68 mit HA 2026.10.2 ist nach Vollsicherungen geprüft:
+32 originalgetreue JSON/YAML-Datei-/Einfügefälle samt Neuladen und acht echte
+Card-Paket-Exporte mit Rückimport bestehen. Bestandsdaten, sieben Projekte und
+sechs Plugins je Host sowie beide ursprünglichen lokalen Editorstände bleiben
+erhalten. 16 zusätzliche Kontrollen zeigen eine offene Grenze: Leere Entity-Namen
+werden ersetzt, äußere Leerzeichen entfernt. Frühere lokale Tests verglichen
+erst nach dieser Normalisierung; deren weitergehende Aussage ist korrigiert.
+Details und Umfang im [Card Editor](./card-editor).
 
 App 0.1.318 gleicht Import-Vorprüfung und tatsächlichen Parser an: nicht
 unterstützte Markdown-Karten werden auch in verschachtelten Strukturen frühzeitig

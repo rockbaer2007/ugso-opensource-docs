@@ -11,18 +11,19 @@ cards intact. Standalone Entity cards retain their custom names; explicit renami
 and entity selection still work. All 259 local package tests pass, including 19
 new checks of the actual Editor conversion, draft restoration and JSON/YAML/HACS
 export. Stored data is unchanged. Recover previously lost content by reimporting
-its original source or backup. Native updates on .177/.68 remain a separate check;
-these test hosts still run 0.1.318.
+its original source or backup. Native updates on .177/.68 pass with HA 2026.10.2
+after full backups: 32 cases retain original structure through JSON/YAML file/paste
+imports and reload. Eight actual Card packages pass export, reimport and reload.
+Existing data and both original local Editor configurations remain unchanged.
 :::
 
-::: warning Limitation while App 0.1.318 is still installed
-On .177 and .68 with App 0.1.318, a standalone Conditional card is accepted but
-its conditions disappear from actual Editor output. A standalone Entity card
-replaces its custom name with an entity-derived name. Both reproduce in JSON
-and YAML. As a temporary workaround, wrap the same Conditional in a
-`vertical-stack`: this checked path retains conditions and names. Inspect imported
-output before saving. The 0.1.319 fix passes locally; native standalone-card
-qualification remains open until the update check.
+::: warning Remaining boundary: empty names and outer whitespace
+The parser still replaces `name: ''` with `Imported entity card` and trims outer
+whitespace from Entity names. Sixteen additional controls confirm this behavior
+on both hosts; they do not prove literal source-name preservation. Earlier local
+tests compared values only after normalization. Normal custom names and Conditional
+conditions pass on 0.1.319, correcting the corresponding 0.1.318 losses. This
+increment includes no new native HACS ZIP or HA rendering test.
 :::
 
 ::: info Import preview from App 0.1.318
@@ -34,7 +35,8 @@ structurally. All 240 local package tests pass, including 27 new parity tests.
 Native updates on .177/.68 pass after full backups:24 Markdown rejections through
 file/paste import retain Editor code, and eight nested JSON/YAML imports preserve
 structure. Existing data and original local Editors are preserved, including
-after reload. The standalone losses above remain a separate open limitation.
+after reload. The earlier standalone losses pass retesting on 0.1.319;
+name normalization remains a separate open boundary.
 :::
 
 ::: info Extended Conditional rendering checked on 2026-10-18

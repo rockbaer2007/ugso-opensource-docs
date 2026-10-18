@@ -12,19 +12,21 @@ le renommage explicite et le choix d’entité restent possibles. Les 259 tests 
 réussissent, dont 19 nouveaux contrôles de la conversion réelle de l’éditeur, de la
 restauration des brouillons et de l’export JSON/YAML/HACS. Les données enregistrées
 ne changent pas. Réimporter la source ou une sauvegarde pour récupérer un contenu
-déjà perdu. La mise à jour native de .177/.68 reste à vérifier séparément ; ces
-hôtes de test restent en 0.1.318.
+déjà perdu. La mise à jour native de .177/.68 est vérifiée avec HA 2026.10.2 après
+sauvegardes complètes : 32 cas conservent la structure d’origine par import
+JSON/YAML, fichier/collage et rechargement. Huit paquets Card réels passent
+l’export, le réimport et le rechargement. Les données et les deux configurations
+locales d’origine de l’éditeur restent inchangées.
 :::
 
-::: warning Limite tant que l’App 0.1.318 reste installée
-Sur .177 et .68 avec l’App 0.1.318, une carte Conditional seule est acceptée,
-mais ses conditions disparaissent du code réel de l’éditeur. Une carte Entity
-seule remplace son nom personnalisé par un nom dérivé de l’entité. Les deux
-défauts sont reproduits en JSON et YAML. En attendant, inclure la même carte
-Conditional dans un `vertical-stack` : ce chemin vérifié conserve conditions et
-noms. Contrôler la sortie importée avant d’enregistrer ; la validation générale
-des cartes seules reste ouverte jusqu’au contrôle natif de la correction 0.1.319,
-déjà vérifiée localement.
+::: warning Limite restante : noms vides et espaces extérieurs
+L’analyseur remplace encore `name: ''` par `Imported entity card` et supprime
+les espaces extérieurs des noms Entity. Seize contrôles supplémentaires confirment
+cette normalisation sur les deux hôtes ; ils ne prouvent pas une conservation
+littérale du nom source. Les anciens tests locaux comparaient après normalisation.
+Les noms personnalisés ordinaires et les conditions Conditional sont vérifiés en
+0.1.319, corrigeant les pertes correspondantes de 0.1.318. Ce cycle ne comprend
+pas de nouveau test natif HACS ZIP ni de rendu HA.
 :::
 
 ::: info Prévisualisation d’import dès l’App 0.1.318
@@ -37,8 +39,8 @@ structurée. Les 240 tests locaux réussissent, dont 27 nouveaux tests de parit�
 La mise à jour native de .177/.68 est vérifiée après sauvegardes complètes :
 24 refus Markdown par fichier/collage conservent le code et huit imports
 JSON/YAML imbriqués conservent la structure. Les données et les éditeurs locaux
-d’origine sont conservés, même après rechargement. Les pertes des cartes seules
-ci-dessus restent une limite ouverte distincte.
+d’origine sont conservés, même après rechargement. Les anciennes pertes des cartes
+seules sont corrigées et revérifiées en 0.1.319 ; la normalisation des noms reste ouverte.
 :::
 
 ::: info Affichage Conditional vérifié le 18/10/2026

@@ -13,18 +13,20 @@ ihren eigenen Namen; bewusstes Umbenennen und die Entity-Auswahl bleiben möglic
 Editor-Umwandlungscodes, der Entwurfswiederherstellung und des JSON/YAML-/HACS-Exports.
 Gespeicherte Daten werden nicht verändert. Bereits verlorene Inhalte aus der
 Originalquelle oder Sicherung erneut importieren. Das native Update auf .177/.68
-ist noch separat zu prüfen; dort bleibt vorerst 0.1.318 installiert.
+ist mit HA 2026.10.2 nach Vollsicherungen geprüft: 32 Fälle erhalten die
+Originalstruktur über JSON/YAML-Datei-/Einfügeimport und Neuladen. Acht echte
+Card-Pakete bestehen Export, Rückimport und Neuladen. Bestandsdaten und beide
+ursprünglichen lokalen Editorstände sind unverändert.
 :::
 
-::: warning Einschränkung bei noch installierter App 0.1.318
-Auf .177 und .68 mit App 0.1.318 wird eine einzeln importierte Conditional-Karte
-zwar angenommen, ihre Bedingung fehlt danach aber im tatsächlichen Editorcode.
-Bei einer einzelnen Entity-Karte wird der eigene Name durch einen aus der
-Entität abgeleiteten Namen ersetzt. Beides ist mit JSON und YAML reproduziert.
-Vorläufig dieselbe Conditional-Karte in einen `vertical-stack` einschließen:
-Dieser geprüfte Pfad erhält Bedingungen und Namen. Importierte Ausgabe vor dem
-Speichern kontrollieren. Die Korrektur in 0.1.319 ist lokal geprüft; ihre native
-Einzelkarten-Freigabe bleibt bis zur Updateprüfung offen.
+::: warning Offene Grenze: leere Namen und äußere Leerzeichen
+Der Parser ersetzt `name: ''` weiterhin durch `Imported entity card` und entfernt
+äußere Leerzeichen eines Entity-Namens. 16 zusätzliche Kontrollen bestätigen
+diese Normalisierung auf beiden Hosts; sie gelten nicht als unveränderter Erhalt
+des Originalnamens. Frühere lokale Tests verglichen erst nach der Normalisierung.
+Normale eigene Namen und Conditional-Bedingungen sind mit 0.1.319 geprüft;
+die entsprechenden Verluste unter 0.1.318 sind behoben. Dieser Durchlauf enthält
+keinen neuen nativen HACS-ZIP- oder HA-Darstellungstest.
 :::
 
 ::: info Import-Vorprüfung ab App 0.1.318
@@ -38,7 +40,8 @@ Paritätsprüfungen. Das native Update auf .177/.68 ist nach Vollsicherungen
 geprüft: 24 Markdown-Ablehnungen über Datei-/Einfügeimport erhalten den Editorcode,
 acht verschachtelte JSON/YAML-Importe erhalten die Struktur. Vorhandene Daten und
 ursprüngliche lokale Editorstände bleiben erhalten, auch nach Neuladen. Die oben
-genannten Einzelkartenverluste bleiben eine getrennte offene Einschränkung.
+genannten alten Einzelkartenverluste sind mit 0.1.319 erneut geprüft und behoben;
+die Namensnormalisierung bleibt separat offen.
 :::
 
 ::: info Erweiterte Conditional-Anzeige geprüft am 18.10.2026
