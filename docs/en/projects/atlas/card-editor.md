@@ -5,6 +5,17 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Literal Entity names from App 0.1.320
+Explicit Entity names remain unchanged during import: `name: ''`, whitespace-only
+names and outer spaces/tabs. Only a missing name retains the previous fallback.
+All 296 local package tests pass, including 37 new checks against the unparsed
+original source, JSON/YAML, nested Conditionals, draft restoration, Card packages
+and HACS. Deliberate renaming and entity selection remain available. Stored data
+is not rewritten; recover previously normalized names from the original or backup.
+The .177/.68 test hosts remain on 0.1.319; native updates to 0.1.320 require a
+separate qualification after fresh backups.
+:::
+
 ::: info Standalone Card correction from App 0.1.319
 Conditional cards become complete Expert fields with their conditions and nested
 cards intact. Standalone Entity cards retain their custom names; explicit renaming
@@ -17,7 +28,7 @@ imports and reload. Eight actual Card packages pass export, reimport and reload.
 Existing data and both original local Editor configurations remain unchanged.
 :::
 
-::: warning Remaining boundary: empty names and outer whitespace
+::: warning Boundary through App 0.1.319
 The parser still replaces `name: ''` with `Imported entity card` and trims outer
 whitespace from Entity names. Sixteen additional controls confirm this behavior
 on both hosts; they do not prove literal source-name preservation. Earlier local
@@ -36,7 +47,7 @@ Native updates on .177/.68 pass after full backups:24 Markdown rejections throug
 file/paste import retain Editor code, and eight nested JSON/YAML imports preserve
 structure. Existing data and original local Editors are preserved, including
 after reload. The earlier standalone losses pass retesting on 0.1.319;
-name normalization remains a separate open boundary.
+name normalization is fixed locally from 0.1.320, with native qualification pending.
 :::
 
 ::: info Extended Conditional rendering checked on 2026-10-18

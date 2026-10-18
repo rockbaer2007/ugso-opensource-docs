@@ -5,6 +5,18 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Noms Entity littéraux dès l’App 0.1.320
+Les noms Entity explicites restent inchangés à l’import : `name: ''`, noms composés
+d’espaces et espaces/tabulations extérieurs. Seul un nom absent conserve le nom
+de remplacement existant. Les 296 tests locaux réussissent, dont 37 nouveaux
+contrôles contre la source originale avant analyse, JSON/YAML, Conditional
+imbriquées, restauration des brouillons, paquets Card et HACS. Renommage volontaire
+et choix d’entité restent possibles. Aucune donnée enregistrée n’est réécrite ;
+réimporter la source ou une sauvegarde pour récupérer les noms déjà normalisés.
+Les hôtes .177/.68 restent en 0.1.319 ; la mise à jour native vers 0.1.320 reste
+à vérifier séparément après de nouvelles sauvegardes.
+:::
+
 ::: info Correction des cartes seules dès l’App 0.1.319
 Les cartes Conditional deviennent des champs Expert complets avec leurs conditions
 et cartes imbriquées. Les cartes Entity seules conservent leur nom personnalisé ;
@@ -19,7 +31,7 @@ l’export, le réimport et le rechargement. Les données et les deux configurat
 locales d’origine de l’éditeur restent inchangées.
 :::
 
-::: warning Limite restante : noms vides et espaces extérieurs
+::: warning Limite jusqu’à l’App 0.1.319 incluse
 L’analyseur remplace encore `name: ''` par `Imported entity card` et supprime
 les espaces extérieurs des noms Entity. Seize contrôles supplémentaires confirment
 cette normalisation sur les deux hôtes ; ils ne prouvent pas une conservation
@@ -40,7 +52,8 @@ La mise à jour native de .177/.68 est vérifiée après sauvegardes complètes 
 24 refus Markdown par fichier/collage conservent le code et huit imports
 JSON/YAML imbriqués conservent la structure. Les données et les éditeurs locaux
 d’origine sont conservés, même après rechargement. Les anciennes pertes des cartes
-seules sont corrigées et revérifiées en 0.1.319 ; la normalisation des noms reste ouverte.
+seules sont corrigées et revérifiées en 0.1.319 ; la normalisation est corrigée
+localement dès 0.1.320, avec validation native encore à effectuer.
 :::
 
 ::: info Affichage Conditional vérifié le 18/10/2026

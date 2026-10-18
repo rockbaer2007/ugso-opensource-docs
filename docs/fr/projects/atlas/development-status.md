@@ -16,7 +16,14 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 18/10/2026 · App HA 0.1.319 · intégration HACS 0.1.306.**
+**État au 18/10/2026 · App HA 0.1.320 · intégration HACS 0.1.306.**
+
+L’App 0.1.320 conserve littéralement les noms Entity vides et les espaces ou
+tabulations extérieurs. Les 296 tests locaux réussissent ; 37 nouveaux contrôles
+comparent à la source originale avant analyse : JSON/YAML, brouillons, paquets
+Card et HACS. Un nom absent conserve son remplacement. Aucune donnée enregistrée
+n’est modifiée. La mise à jour native reste à vérifier sur .177/.68, qui restent
+en 0.1.319.
 
 L’App 0.1.319 corrige les pertes des cartes seules lors du transfert réel vers
 l’éditeur : conditions Conditional et noms Entity sont conservés. Les 259 tests
@@ -26,7 +33,7 @@ HA 2026.10.2 est vérifiée après sauvegardes complètes : 32 cas JSON/YAML par
 fichier/collage conservent la source après rechargement et huit paquets Card réels
 passent l’export/réimport. Données, sept projets et six plugins par hôte ainsi que
 les deux éditeurs locaux d’origine sont conservés. Seize contrôles supplémentaires
-révèlent une limite : noms Entity vides remplacés et espaces extérieurs supprimés.
+ont révélé une limite en 0.1.319 : noms Entity vides remplacés et espaces extérieurs supprimés.
 Les anciens tests locaux comparaient après normalisation ; leur affirmation trop
 large est corrigée. Voir [Card Editor](./card-editor) pour le périmètre et les limites.
 

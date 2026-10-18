@@ -12,8 +12,14 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-18 · HA App 0.1.319 · HACS integration 0.1.306.**
+**As of 2026-10-18 · HA App 0.1.320 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+App 0.1.320 preserves empty Entity names and outer spaces/tabs literally.
+All 296 local package tests pass; 37 new checks compare against the original
+unparsed source through JSON/YAML, drafts, Card packages and HACS. Missing names
+retain their fallback. Stored data is unchanged. Native updates on .177/.68
+remain pending; both test hosts stay on 0.1.319.
 
 App 0.1.319 fixes standalone losses in the actual Editor application path:
 Conditional conditions and Entity custom names survive. All 259 local package
@@ -21,8 +27,8 @@ tests pass, including 19 new Editor/draft/export checks. Stored data is unchange
 Native updates on .177/.68 with HA 2026.10.2 pass after full backups: 32
 source-exact JSON/YAML file/paste cases with reload and eight actual Card package
 exports/reimports. Existing data, seven projects and six plugins per host, and
-both original local Editors remain intact. Sixteen additional controls expose a
-remaining boundary: empty Entity names are replaced and outer whitespace is
+both original local Editors remain intact. Sixteen additional controls exposed a
+boundary in 0.1.319: empty Entity names are replaced and outer whitespace is
 trimmed. Earlier local tests compared after normalization; their broader claim
 has been corrected. See [Card Editor](./card-editor) for scope and limits.
 

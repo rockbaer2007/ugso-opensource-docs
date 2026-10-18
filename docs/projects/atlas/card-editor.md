@@ -5,6 +5,18 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Wörtliche Entity-Namen ab App 0.1.320
+Ausdrücklich gesetzte Entity-Namen bleiben beim Import unverändert: `name: ''`,
+reine Leerzeichen sowie äußere Leerzeichen und Tabulatoren. Nur ein fehlender
+Name erhält weiterhin den bisherigen Ersatznamen. 296 lokale Pakettests bestehen,
+darunter 37 neue Prüfungen gegen die unveränderte Originalquelle, JSON/YAML,
+verschachtelte Conditionals, Entwurfswiederherstellung, Card-Pakete und HACS.
+Bewusstes Umbenennen und Entity-Auswahl bleiben möglich. Bestandsdaten werden
+nicht umgeschrieben; früher normalisierte Namen aus Original oder Backup neu
+importieren. Die Testhosts .177/.68 bleiben auf 0.1.319; das native Update auf
+0.1.320 ist noch separat nach frischen Sicherungen zu prüfen.
+:::
+
 ::: info Einzelkarten-Korrektur ab App 0.1.319
 Conditional-Karten werden als vollständiges Expert-Feld übernommen, einschließlich
 aller Bedingungen und verschachtelten Karten. Einzelne Entity-Karten behalten
@@ -19,7 +31,7 @@ Card-Pakete bestehen Export, Rückimport und Neuladen. Bestandsdaten und beide
 ursprünglichen lokalen Editorstände sind unverändert.
 :::
 
-::: warning Offene Grenze: leere Namen und äußere Leerzeichen
+::: warning Grenze bis einschließlich App 0.1.319
 Der Parser ersetzt `name: ''` weiterhin durch `Imported entity card` und entfernt
 äußere Leerzeichen eines Entity-Namens. 16 zusätzliche Kontrollen bestätigen
 diese Normalisierung auf beiden Hosts; sie gelten nicht als unveränderter Erhalt
@@ -41,7 +53,7 @@ geprüft: 24 Markdown-Ablehnungen über Datei-/Einfügeimport erhalten den Edito
 acht verschachtelte JSON/YAML-Importe erhalten die Struktur. Vorhandene Daten und
 ursprüngliche lokale Editorstände bleiben erhalten, auch nach Neuladen. Die oben
 genannten alten Einzelkartenverluste sind mit 0.1.319 erneut geprüft und behoben;
-die Namensnormalisierung bleibt separat offen.
+die Namensnormalisierung ist lokal ab 0.1.320 korrigiert und bleibt nativ noch zu prüfen.
 :::
 
 ::: info Erweiterte Conditional-Anzeige geprüft am 18.10.2026

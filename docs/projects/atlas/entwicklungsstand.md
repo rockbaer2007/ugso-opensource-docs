@@ -12,8 +12,15 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 18.10.2026 · HA-App 0.1.319 · HACS-Integration 0.1.306.**
+**Stand: 18.10.2026 · HA-App 0.1.320 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+App 0.1.320 erhält leere Entity-Namen und äußere Leerzeichen/Tabulatoren
+unverändert. 296 lokale Pakettests bestehen; 37 neue Prüfungen vergleichen mit
+der unveränderten Originalquelle statt erst nach Normalisierung, einschließlich
+JSON/YAML, Entwürfen, Card-Paketen und HACS. Fehlende Namen behalten ihren
+Ersatznamen. Bestandsdaten werden nicht verändert. Das native Update auf .177/.68
+ist noch offen; beide Testhosts bleiben auf 0.1.319.
 
 App 0.1.319 korrigiert die Einzelkartenverluste im tatsächlichen Editor-
 Übernahmepfad. Conditional-Bedingungen und eigene Entity-Namen bleiben erhalten;
@@ -22,7 +29,7 @@ Das native Update auf .177/.68 mit HA 2026.10.2 ist nach Vollsicherungen geprüf
 32 originalgetreue JSON/YAML-Datei-/Einfügefälle samt Neuladen und acht echte
 Card-Paket-Exporte mit Rückimport bestehen. Bestandsdaten, sieben Projekte und
 sechs Plugins je Host sowie beide ursprünglichen lokalen Editorstände bleiben
-erhalten. 16 zusätzliche Kontrollen zeigen eine offene Grenze: Leere Entity-Namen
+erhalten. 16 zusätzliche Kontrollen zeigten unter 0.1.319 eine Grenze: Leere Entity-Namen
 werden ersetzt, äußere Leerzeichen entfernt. Frühere lokale Tests verglichen
 erst nach dieser Normalisierung; deren weitergehende Aussage ist korrigiert.
 Details und Umfang im [Card Editor](./card-editor).
