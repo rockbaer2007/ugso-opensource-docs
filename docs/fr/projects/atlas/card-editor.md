@@ -5,13 +5,31 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
-::: warning Paquets HACS ambigus : défaut d’import dans l’App 0.1.323
+::: info Import HACS sécurisé dès l’App 0.1.324
+Plusieurs projets ATLAS ou scripts intégrés sont refusés avant toute sélection.
+Les noms de scripts HACS, du paquet et du plan doivent correspondre ; les noms
+des ressources, le Custom Element et les types de carte sont vérifiés. Les anciens
+préfixes restent valides s’ils désignent le même fichier. Lecteur et import réel
+exigent une vérification entièrement approuvée. Un rapport bloqué ou incomplet
+ne peut plus remplacer l’éditeur. JSON/YAML valides, racine/dist et noms simples
+comme temperature.js restent pris en charge. Les 418 tests, dont 40 nouvelles
+régressions du gestionnaire livré, réussissent. Les données existantes ne sont
+ni migrées ni réécrites automatiquement.
+
+Les mises à jour sur .177/.68 avec HA 2026.10.2 réussissent après sauvegardes
+complètes : 60 imports réels, 52 refus corrects et huit témoins valides à 112/112.
+Les 14 anciens imports incorrects sont bloqués. Après chaque cas, rechargement
+et exports complets des éditeurs d’origine correspondent aux sauvegardes.
+Données contrôlées, sept projets et six plugins par hôte sont conservés.
+:::
+
+::: warning Constat historique : paquets HACS ambigus jusqu’à l’App 0.1.323
 La vérification native sur .177/.68 avec HA 2026.10.2 trouve 14 imports incorrects
 sur 46 cas. Six paquets par hôte contenant plusieurs projets ou scripts sont
 adoptés malgré un rapport bloqué à 111/112. Pour des projets de même identité,
 l’ordre des entrées ZIP détermine le contenu. Un nom de script contradictoire
 dans le plan de l’éditeur est même accepté à 112/112 sur chaque hôte et repris
-dans l’éditeur. Ces cas ne sont pas encore corrigés.
+dans l’éditeur. Ces cas sont corrigés dès 0.1.324.
 
 Les chemins identiques, les alias racine/dist et les conflits directs HACS/script
 sont refusés correctement : 26 refus au total ; six témoins valides restent
@@ -19,7 +37,7 @@ importables. Les contrôles CRC et le diagnostic ZIP restent valides. Un rapport
 bloqué ne protège pas à lui seul l’éditeur contre ces ambiguïtés. Utiliser des
 exports non ambigus ; restaurer un brouillon remplacé depuis sa source ou sa
 sauvegarde. Les tests restaurent les éditeurs complets après chaque cas et
-préservent les données contrôlées. ATLAS reste à 0.1.323.
+préservent les données contrôlées. Cette ancienne vérification conservait 0.1.323.
 :::
 
 ::: info Diagnostic ZIP précis dès l’App 0.1.323

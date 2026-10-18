@@ -5,13 +5,30 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
-::: warning Ambiguous HACS packages: import gap in App 0.1.323
+::: info Safe HACS package adoption from App 0.1.324
+Multiple embedded ATLAS projects or scripts are rejected before package selection.
+HACS, package and Editor plan script filenames must agree; resource filenames,
+custom element and Card types are cross-checked. Legacy resource prefixes remain
+valid when they identify the same script file. Both the Reader and actual Editor
+handler require fully approved readiness. A blocked or incomplete report cannot
+overwrite the Editor. Valid JSON/YAML, root/dist layouts and single-word filenames
+such as temperature.js remain supported. All 418 package tests, including 40 new
+shipped-handler regressions, pass. Existing stored data is not migrated or rewritten.
+
+Updates on .177/.68 with HA 2026.10.2 pass after fresh full backups: 60 actual
+imports, 52 correct rejections and eight valid controls at 112/112. All 14 earlier
+incorrect adoptions are blocked. After every case, reload and complete original
+Editor exports match the backups; checked existing data, seven projects and six
+plugins per host remain intact.
+:::
+
+::: warning Historical finding: ambiguous HACS packages through App 0.1.323
 Native qualification on .177/.68 with HA 2026.10.2 finds 14 incorrect adoptions
 among 46 imports. Six packages per host with multiple projects or extra scripts
 are adopted despite a blocked report at 111/112. With same-identity projects,
 ZIP entry order selects the content. A conflicting script name in the Editor
 plan is even accepted at 112/112 on each host and copied into the Editor.
-These cases are not fixed yet.
+These cases are fixed from 0.1.324.
 
 Exact duplicate paths, root/dist aliases and direct HACS/script mismatches are
 correctly rejected: 26 rejections total; six valid controls remain importable.
@@ -19,7 +36,7 @@ CRC checks and accurate ZIP failure diagnostics remain intact. A blocked report
 alone currently does not protect the Editor from these ambiguities. Use only
 unambiguous exports; restore an overwritten draft from its original or backup.
 Tests restore complete original Editors after every case and preserve checked
-existing data. ATLAS remains at 0.1.323.
+existing data. That earlier qualification kept ATLAS at 0.1.323.
 :::
 
 ::: info Accurate ZIP failure diagnostics from App 0.1.323

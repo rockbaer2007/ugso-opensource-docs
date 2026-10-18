@@ -5,13 +5,32 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
-::: warning Mehrdeutige HACS-Pakete: Importlücke in App 0.1.323
+::: info Sichere HACS-Paketübernahme ab App 0.1.324
+Mehrere eingebettete ATLAS-Projekte oder Scripts werden vor der Paketauswahl
+abgewiesen. HACS-, Paket- und Editorplan-Scriptnamen müssen übereinstimmen;
+Ressourcen-Dateinamen, Custom Element und Card-Typen werden abgeglichen.
+Legacy-Ressourcenpräfixe bleiben erlaubt, wenn sie dieselbe Scriptdatei nennen.
+Der Paketleser und der tatsächliche Editorimport verlangen eine vollständig
+freigegebene Vorprüfung. Ein blockierter oder unvollständiger Bericht kann den
+Editor nicht mehr überschreiben. Gültige JSON/YAML-, Root-/dist-Pakete und
+einteilige Namen wie temperature.js bleiben unterstützt. 418 Pakettests,
+darunter 40 neue Regressionen des ausgelieferten Import-Handlers, bestehen.
+Bestehende Daten werden nicht migriert oder automatisch umgeschrieben.
+
+Das Update auf .177/.68 mit HA 2026.10.2 besteht nach frischen Vollbackups:
+60 echte Importe, 52 korrekte Ablehnungen und acht gültige Kontrollen mit 112/112.
+Alle 14 früheren Fehlübernahmen sind gesperrt. Nach jedem Fall stimmen Neuladen
+und vollständiger Originaleditor mit der Sicherung überein; geprüfte Bestandsdaten,
+sieben Projekte und sechs Plugins je Host sind erhalten.
+:::
+
+::: warning Historischer Befund: mehrdeutige HACS-Pakete bis App 0.1.323
 Die native Prüfung auf .177/.68 mit HA 2026.10.2 findet 14 falsche Übernahmen
 unter 46 Importfällen. Je Host werden sechs Pakete mit mehreren Projekten oder
 zusätzlichen Scripts trotz „blocked“ und 111/112 übernommen. Bei Projekten mit
 gleicher Identität entscheidet die Reihenfolge im ZIP über den Inhalt. Ein
 abweichender Scriptname im Editorplan wird je Host sogar mit 112/112 angenommen
-und in den Editor übernommen. Diese Fälle sind noch nicht korrigiert.
+und in den Editor übernommen. Diese Fälle sind ab 0.1.324 korrigiert.
 
 Exakte doppelte Pfade, Root-/dist-Pfadaliasse und direkte HACS-/Script-Konflikte
 werden korrekt abgewiesen: insgesamt 26 Ablehnungen; sechs gültige Kontrollen
@@ -20,7 +39,7 @@ Ein blockierter Bericht allein schützt bei den genannten Mehrdeutigkeiten den
 Editor derzeit nicht. Nur eindeutige Exporte verwenden; einen bereits ersetzten
 Entwurf aus seiner Originalquelle oder Sicherung wiederherstellen. Im Test wurden
 nach jedem Fall die vollständigen Originaleditoren wiederhergestellt und alle
-geprüften Bestandsdaten erhalten. ATLAS bleibt bei 0.1.323.
+geprüften Bestandsdaten erhalten. Diese frühere Prüfung blieb bei 0.1.323.
 :::
 
 ::: info Präzise ZIP-Fehlerdiagnose ab App 0.1.323

@@ -12,16 +12,25 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 18.10.2026 · HA-App 0.1.323 · HACS-Integration 0.1.306.**
+**Stand: 18.10.2026 · HA-App 0.1.324 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
-**Offener Befund: mehrdeutige HACS-Pakete.** Auf .177/.68 mit HA 2026.10.2
+**App 0.1.324 korrigiert die mehrdeutige HACS-Übernahme.** Projekt-/Scriptanzahl,
+sämtliche Scriptidentitäten und vollständige Vorprüfung sperren vor der tatsächlichen
+Editorübernahme. 418 Pakettests und 40 neue Handler-/Identitätsregressionen bestehen.
+Gültige Exporte und bestehende gespeicherte Daten bleiben erhalten.
+Das native Update auf .177/.68 mit HA 2026.10.2 ist nach Vollbackups bestanden:
+60 Fälle, 52 korrekte Ablehnungen, acht gültige Importe mit 112/112 und alle
+14 früheren Fehlübernahmen gesperrt. Vollständige Originaleditoren und geprüfte
+Bestandsdaten sind erhalten.
+
+**Historischer Befund unter 0.1.323: mehrdeutige HACS-Pakete.** Auf .177/.68 mit HA 2026.10.2
 werden 46 echte Importe geprüft: 26 korrekte Ablehnungen, sechs gültige Kontrollen,
 aber 14 falsche Übernahmen. Mehrere Projekte oder Scripts können trotz blockiertem
 Bericht übernommen werden; ein widersprüchlicher Editorplan-Scriptname besteht
 sogar mit 112/112. Die Auswahl kann von der ZIP-Reihenfolge abhängen. Original-
 editoren und geprüfte Bestandsdaten sind wiederhergestellt bzw. unverändert;
-App 0.1.323 wurde nicht geändert. Korrektur noch offen, siehe [Card Editor](./card-editor).
+App 0.1.323 wurde damals nicht geändert. Ab 0.1.324 korrigiert, siehe [Card Editor](./card-editor).
 
 App 0.1.322 prüft CRC32 aller gespeicherten ZIP-Einträge und die Header-/
 Verzeichniskonsistenz vor der HACS-Übernahme. Beschädigte oder nicht unterstützte
