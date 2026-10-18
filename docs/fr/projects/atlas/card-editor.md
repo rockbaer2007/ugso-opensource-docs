@@ -13,8 +13,12 @@ contrôles contre la source originale avant analyse, JSON/YAML, Conditional
 imbriquées, restauration des brouillons, paquets Card et HACS. Renommage volontaire
 et choix d’entité restent possibles. Aucune donnée enregistrée n’est réécrite ;
 réimporter la source ou une sauvegarde pour récupérer les noms déjà normalisés.
-Les hôtes .177/.68 restent en 0.1.319 ; la mise à jour native vers 0.1.320 reste
-à vérifier séparément après de nouvelles sauvegardes.
+La mise à jour native de 0.1.319 vers 0.1.320 est vérifiée sur .177/.68 avec
+HA 2026.10.2 après sauvegardes complètes : 64 cas JSON/YAML par fichier/collage,
+128 sorties capturées après import et rechargement, puis 16 cycles de paquets Card
+réels conservent exactement les valeurs originales, même dans des Conditional
+imbriquées. Données et deux éditeurs locaux d’origine restent inchangés. Ce cycle
+ne comprend pas de nouveau test natif HACS ZIP ni de rendu HA.
 :::
 
 ::: info Correction des cartes seules dès l’App 0.1.319
@@ -53,7 +57,7 @@ La mise à jour native de .177/.68 est vérifiée après sauvegardes complètes 
 JSON/YAML imbriqués conservent la structure. Les données et les éditeurs locaux
 d’origine sont conservés, même après rechargement. Les anciennes pertes des cartes
 seules sont corrigées et revérifiées en 0.1.319 ; la normalisation est corrigée
-localement dès 0.1.320, avec validation native encore à effectuer.
+dès 0.1.320 et sa validation native réussit sur .177/.68.
 :::
 
 ::: info Affichage Conditional vérifié le 18/10/2026

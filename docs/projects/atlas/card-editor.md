@@ -13,8 +13,12 @@ darunter 37 neue Prüfungen gegen die unveränderte Originalquelle, JSON/YAML,
 verschachtelte Conditionals, Entwurfswiederherstellung, Card-Pakete und HACS.
 Bewusstes Umbenennen und Entity-Auswahl bleiben möglich. Bestandsdaten werden
 nicht umgeschrieben; früher normalisierte Namen aus Original oder Backup neu
-importieren. Die Testhosts .177/.68 bleiben auf 0.1.319; das native Update auf
-0.1.320 ist noch separat nach frischen Sicherungen zu prüfen.
+importieren. Das native Update von 0.1.319 auf 0.1.320 ist auf .177/.68 mit
+HA 2026.10.2 nach Vollsicherungen bestanden: 64 JSON/YAML-Datei-/Einfügefälle
+mit 128 Codeproben nach Import und Neuladen sowie 16 echte Card-Paket-Rundläufe
+erhalten die Originalwerte exakt, auch in verschachtelten Conditionals.
+Bestandsdaten und beide ursprünglichen lokalen Editorstände sind unverändert.
+Dieser Durchlauf enthält keinen neuen nativen HACS-ZIP- oder HA-Darstellungstest.
 :::
 
 ::: info Einzelkarten-Korrektur ab App 0.1.319
@@ -53,7 +57,7 @@ geprüft: 24 Markdown-Ablehnungen über Datei-/Einfügeimport erhalten den Edito
 acht verschachtelte JSON/YAML-Importe erhalten die Struktur. Vorhandene Daten und
 ursprüngliche lokale Editorstände bleiben erhalten, auch nach Neuladen. Die oben
 genannten alten Einzelkartenverluste sind mit 0.1.319 erneut geprüft und behoben;
-die Namensnormalisierung ist lokal ab 0.1.320 korrigiert und bleibt nativ noch zu prüfen.
+die Namensnormalisierung ist ab 0.1.320 korrigiert und auf .177/.68 nativ geprüft.
 :::
 
 ::: info Erweiterte Conditional-Anzeige geprüft am 18.10.2026

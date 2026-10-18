@@ -22,8 +22,11 @@ L’App 0.1.320 conserve littéralement les noms Entity vides et les espaces ou
 tabulations extérieurs. Les 296 tests locaux réussissent ; 37 nouveaux contrôles
 comparent à la source originale avant analyse : JSON/YAML, brouillons, paquets
 Card et HACS. Un nom absent conserve son remplacement. Aucune donnée enregistrée
-n’est modifiée. La mise à jour native reste à vérifier sur .177/.68, qui restent
-en 0.1.319.
+n’est modifiée. La mise à jour native de .177/.68 réussit avec HA 2026.10.2 après
+de nouvelles sauvegardes complètes : 64 cas d’import, 128 sorties identiques à la
+source et 16 cycles de paquets Card réels. Paramètres, fichiers, sept projets et
+six plugins par hôte, corbeille et éditeurs locaux d’origine sont conservés.
+Les deux hôtes sont maintenant en 0.1.320. Voir [Card Editor](./card-editor).
 
 L’App 0.1.319 corrige les pertes des cartes seules lors du transfert réel vers
 l’éditeur : conditions Conditional et noms Entity sont conservés. Les 259 tests

@@ -12,8 +12,11 @@ All 296 local package tests pass, including 37 new checks against the unparsed
 original source, JSON/YAML, nested Conditionals, draft restoration, Card packages
 and HACS. Deliberate renaming and entity selection remain available. Stored data
 is not rewritten; recover previously normalized names from the original or backup.
-The .177/.68 test hosts remain on 0.1.319; native updates to 0.1.320 require a
-separate qualification after fresh backups.
+Native updates from 0.1.319 to 0.1.320 pass on .177/.68 with HA 2026.10.2 after
+full backups: 64 JSON/YAML file/paste cases with 128 captured outputs after import
+and reload, plus 16 actual Card package roundtrips, retain original values exactly,
+including nested Conditionals. Existing data and both original local Editors
+remain unchanged. This increment includes no new native HACS ZIP or HA rendering test.
 :::
 
 ::: info Standalone Card correction from App 0.1.319
@@ -47,7 +50,7 @@ Native updates on .177/.68 pass after full backups:24 Markdown rejections throug
 file/paste import retain Editor code, and eight nested JSON/YAML imports preserve
 structure. Existing data and original local Editors are preserved, including
 after reload. The earlier standalone losses pass retesting on 0.1.319;
-name normalization is fixed locally from 0.1.320, with native qualification pending.
+name normalization is fixed from 0.1.320 and passes native qualification on .177/.68.
 :::
 
 ::: info Extended Conditional rendering checked on 2026-10-18

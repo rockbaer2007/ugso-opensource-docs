@@ -18,8 +18,11 @@ App and integration version numbers are maintained independently.
 App 0.1.320 preserves empty Entity names and outer spaces/tabs literally.
 All 296 local package tests pass; 37 new checks compare against the original
 unparsed source through JSON/YAML, drafts, Card packages and HACS. Missing names
-retain their fallback. Stored data is unchanged. Native updates on .177/.68
-remain pending; both test hosts stay on 0.1.319.
+retain their fallback. Native updates on .177/.68 pass with HA 2026.10.2 after
+fresh full backups: 64 import cases, 128 source-exact output samples and 16 actual
+Card package roundtrips. Settings, files, seven projects and six plugins per host,
+trash and original local Editors remain intact. Both hosts now run 0.1.320.
+See [Card Editor](./card-editor) for scope and limits.
 
 App 0.1.319 fixes standalone losses in the actual Editor application path:
 Conditional conditions and Entity custom names survive. All 259 local package
