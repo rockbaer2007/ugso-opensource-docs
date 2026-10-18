@@ -13,8 +13,15 @@ Originalnamen und Archive werden nicht verändert. Alle 324 lokalen Pakettests
 bestehen, darunter 28 neue Prüfungen für JSON/YAML, einzelne Karten, Stapel,
 Conditionals und ungültige Manifestnamen. Die vier gesicherten Fehler-ZIPs und
 vier Kontrollpakete bestehen unverändert mit 112/112; ihr Rückexport ist bytegleich.
-Fehlende oder widersprüchliche Manifestnamen bleiben gesperrt. Die Testhosts
-.177/.68 bleiben auf 0.1.320; das native Update auf 0.1.321 steht noch aus.
+Fehlende oder widersprüchliche Manifestnamen bleiben gesperrt. Das native Update
+von 0.1.320 auf 0.1.321 ist auf .177/.68 mit HA 2026.10.2 nach frischen
+Vollsicherungen bestanden. Die vier ursprünglichen JSON/YAML-Fehler-ZIPs ohne
+Kontrollkarte erreichen im echten Editor jeweils 112/112; ihre Rückexporte sind
+bytegleich. Alle acht Karten behalten Namen und Conditional-Bedingungen nach
+Import und Neuladen exakt. Bestandsdaten, sieben Projekte und sechs Plugins je
+Host sowie beide ursprünglichen lokalen Editorstände sind erhalten. Diese
+Prüfung ergänzt die frühere HA-Darstellungsprüfung; neue HA-Ressourcen oder
+Dashboards wurden dafür nicht angelegt.
 :::
 
 ::: info Wörtliche Entity-Namen ab App 0.1.320
@@ -46,7 +53,7 @@ eigenem Paketnamen fehl. Das betrifft auch ein Paket, dessen erste Karte einen
 Namen nur aus Leerzeichen hat. Die gespeicherten Namenswerte bleiben erhalten;
 der Bereitschaftsbericht ist hier aber nicht zuverlässig. Mit benannter
 Kontrollkarte davor bestehen die acht unveränderten Namensfälle. Die Titelprüfung
-ist ab 0.1.321 lokal korrigiert; ihre native Updateprüfung bleibt offen.
+ist ab 0.1.321 korrigiert und auf .177/.68 mit den Original-ZIPs nativ bestätigt.
 Die native Fehlanzeige unter 0.1.320 ist mit leerem String reproduziert;
 die Leerzeichenvariante ergibt sich aus der Verwendung von `trim()` im Prüfcode.
 :::

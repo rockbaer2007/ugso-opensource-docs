@@ -13,8 +13,14 @@ Les 324 tests locaux réussissent, dont 28 nouveaux contrôles JSON/YAML, cartes
 seules, piles, Conditional et manifestes invalides. Les quatre ZIP en échec
 sauvegardés et quatre paquets témoins passent sans modification à 112/112 et
 leur réexport est identique octet par octet. Les noms de manifeste absents ou
-contradictoires restent refusés. Les hôtes .177/.68 restent en 0.1.320 ; leur mise
-à jour native vers 0.1.321 reste à vérifier.
+contradictoires restent refusés. La mise à jour native de 0.1.320 vers 0.1.321
+réussit sur .177/.68 avec HA 2026.10.2 après de nouvelles sauvegardes complètes.
+Les quatre ZIP JSON/YAML originaux en échec, sans carte témoin, atteignent chacun
+112/112 dans le véritable éditeur et se réexportent à l’identique octet par octet.
+Les huit cartes conservent exactement noms et conditions Conditional après import
+et rechargement. Données, sept projets et six plugins par hôte ainsi que les deux
+éditeurs locaux d’origine sont conservés. Ce contrôle complète la comparaison de
+rendu HA précédente ; aucune ressource HA ni aucun tableau de bord n’est créé.
 :::
 
 ::: info Noms Entity littéraux dès l’App 0.1.320
@@ -45,7 +51,7 @@ Si le paquet commence par un nom Entity vide, la validation affiche 110/112 :
 du paquet. Un premier nom composé d’espaces échoue aussi au contrôle du titre.
 Les noms restent intacts, mais la validation n’est pas fiable dans ce cas. Une
 carte témoin nommée avant les huit cas permet la réussite. Le contrôle est corrigé
-localement dès 0.1.321 ; la validation native de la mise à jour reste ouverte.
+dès 0.1.321 et confirmé nativement sur .177/.68 avec les ZIP originaux.
 L’échec natif en 0.1.320 avec une chaîne vide est reproduit ; le cas des espaces
 découle de `trim()` dans le code du contrôle.
 :::

@@ -19,8 +19,12 @@ App 0.1.321 korrigiert die falschen HACS-Titelfehler bei leerem ersten
 Entity-Namen, ohne die Namen zu verändern. Beide Prüfungen nutzen den Paketnamen.
 324 lokale Pakettests bestehen; die acht gesicherten Original-/Kontrollarchive
 erreichen unverändert 112/112 und bytegleiche Rückexporte. Ungültige Manifestnamen
-bleiben gesperrt. Das native Update auf .177/.68 ist noch zu prüfen; dort bleibt
-0.1.320 installiert. Details im [Card Editor](./card-editor).
+bleiben gesperrt. Das native Update von 0.1.320 auf 0.1.321 ist auf .177/.68
+mit HA 2026.10.2 nach Vollsicherungen bestanden: vier ursprüngliche JSON/YAML-
+Fehler-ZIPs ohne Kontrollkarte erreichen je 112/112 und bytegleiche Rückexporte.
+Originalnamen und Bedingungen bleiben nach Import und Neuladen exakt erhalten;
+Bestandsdaten und ursprüngliche lokale Editorstände sind unverändert.
+Details im [Card Editor](./card-editor).
 
 App 0.1.320 erhält leere Entity-Namen und äußere Leerzeichen/Tabulatoren
 unverändert. 296 lokale Pakettests bestehen; 37 neue Prüfungen vergleichen mit
@@ -30,14 +34,14 @@ Ersatznamen. Das native Update auf .177/.68 ist mit HA 2026.10.2 nach frischen
 Vollsicherungen bestanden: 64 Importfälle, 128 quellgetreue Codeproben und 16 echte
 Card-Paket-Rundläufe. Einstellungen, Dateien, sieben Projekte und sechs Plugins
 je Host sowie Papierkorb und ursprüngliche lokale Editorstände bleiben erhalten.
-Beide Testhosts laufen jetzt mit 0.1.320. Details im [Card Editor](./card-editor).
+Das anschließende Update auf 0.1.321 ist oben dokumentiert. Details im [Card Editor](./card-editor).
 
 Der anschließende native HACS-/HA-Vergleich besteht mit benannter Kontrollkarte:
 vier ZIP-Rundläufe mit 112/112 und bytegleichen Rückexporten, 72 passende
-Export-/Referenzpaare vor/nach Neuladen. Offen bleibt ein neuer Prüfberichtfehler:
+Export-/Referenzpaare vor/nach Neuladen. Dabei wurde ein Prüfberichtfehler gefunden:
 Ein leerer erster Entity-Name führt trotz Paketname zu 110/112 wegen zweier
-Titelprüfungen. Die Namensdaten bleiben erhalten; diese HACS-Prüflücke ist lokal
-in 0.1.321 korrigiert. Umfang und CSS-Verhalten stehen im [Card Editor](./card-editor).
+Titelprüfungen. Die Namensdaten bleiben erhalten; diese HACS-Prüflücke ist
+in 0.1.321 korrigiert und nativ bestätigt. Umfang und CSS-Verhalten stehen im [Card Editor](./card-editor).
 
 App 0.1.319 korrigiert die Einzelkartenverluste im tatsächlichen Editor-
 Übernahmepfad. Conditional-Bedingungen und eigene Entity-Namen bleiben erhalten;

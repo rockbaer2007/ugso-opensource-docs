@@ -19,7 +19,10 @@ App 0.1.321 fixes false HACS title failures with an empty first Entity name,
 without modifying names. Both checks use package identity. All 324 local package
 tests pass; the eight saved original/control archives pass unchanged at 112/112
 and reexport byte-identically. Invalid manifest names remain rejected. Native
-updates on .177/.68 remain pending; both hosts stay on 0.1.320.
+updates from 0.1.320 to 0.1.321 pass on .177/.68 with HA 2026.10.2 after full
+backups: four original failing JSON/YAML ZIPs without a control card each reach
+112/112 and reexport byte-identically. Original names and conditions remain exact
+after import and reload; existing data and original local Editors stay unchanged.
 See [Card Editor](./card-editor) for scope.
 
 App 0.1.320 preserves empty Entity names and outer spaces/tabs literally.
@@ -28,14 +31,14 @@ unparsed source through JSON/YAML, drafts, Card packages and HACS. Missing names
 retain their fallback. Native updates on .177/.68 pass with HA 2026.10.2 after
 fresh full backups: 64 import cases, 128 source-exact output samples and 16 actual
 Card package roundtrips. Settings, files, seven projects and six plugins per host,
-trash and original local Editors remain intact. Both hosts now run 0.1.320.
+trash and original local Editors remain intact. The subsequent 0.1.321 update is documented above.
 See [Card Editor](./card-editor) for scope and limits.
 
 The subsequent native HACS/HA comparison passes with a named control card:
 four ZIP roundtrips at 112/112, byte-identical reexports and 72 matching
-exported/native pairs before/after reload. A new readiness defect remains:
+exported/native pairs before/after reload. That test found a readiness defect:
 an empty first Entity name causes two title failures (110/112) despite a named
-package. Name data remains intact; this readiness gap is fixed locally in 0.1.321.
+package. Name data remains intact; this readiness gap is fixed in 0.1.321 and confirmed natively.
 See [Card Editor](./card-editor) for scope and CSS behavior.
 
 App 0.1.319 fixes standalone losses in the actual Editor application path:

@@ -22,8 +22,12 @@ L’App 0.1.321 corrige les faux échecs de titre HACS avec un premier nom Entit
 vide sans changer les noms. Les deux contrôles utilisent le nom du paquet.
 Les 324 tests locaux réussissent ; les huit archives originales/témoins sauvegardées
 passent sans modification à 112/112 et se réexportent à l’identique. Les manifestes
-invalides restent refusés. La mise à jour native de .177/.68 reste à vérifier ;
-ces hôtes restent en 0.1.320. Voir [Card Editor](./card-editor).
+invalides restent refusés. La mise à jour native de 0.1.320 vers 0.1.321 réussit
+sur .177/.68 avec HA 2026.10.2 après sauvegardes complètes : les quatre ZIP
+JSON/YAML originaux en échec sans carte témoin atteignent chacun 112/112 et se
+réexportent à l’identique. Noms et conditions restent exacts après import et
+rechargement ; données et éditeurs locaux d’origine sont inchangés.
+Voir [Card Editor](./card-editor).
 
 L’App 0.1.320 conserve littéralement les noms Entity vides et les espaces ou
 tabulations extérieurs. Les 296 tests locaux réussissent ; 37 nouveaux contrôles
@@ -33,13 +37,13 @@ n’est modifiée. La mise à jour native de .177/.68 réussit avec HA 2026.10.2
 de nouvelles sauvegardes complètes : 64 cas d’import, 128 sorties identiques à la
 source et 16 cycles de paquets Card réels. Paramètres, fichiers, sept projets et
 six plugins par hôte, corbeille et éditeurs locaux d’origine sont conservés.
-Les deux hôtes sont maintenant en 0.1.320. Voir [Card Editor](./card-editor).
+La mise à jour suivante vers 0.1.321 est documentée ci-dessus. Voir [Card Editor](./card-editor).
 
 Le test HACS/HA natif suivant réussit avec une carte témoin nommée : quatre
 cycles ZIP à 112/112, réexports identiques et 72 paires export/référence concordantes
-avant/après rechargement. Un nouveau défaut reste ouvert : un premier nom Entity
+avant/après rechargement. Ce test a révélé un défaut : un premier nom Entity
 vide provoque deux échecs de titre (110/112), malgré le nom du paquet. Les noms
-restent intacts ; ce défaut est corrigé localement en 0.1.321. Périmètre et
+restent intacts ; ce défaut est corrigé en 0.1.321 et confirmé nativement. Périmètre et
 comportement CSS dans [Card Editor](./card-editor).
 
 L’App 0.1.319 corrige les pertes des cartes seules lors du transfert réel vers

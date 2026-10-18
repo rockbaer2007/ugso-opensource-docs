@@ -12,8 +12,14 @@ causes a false title failure. Original names and archives stay unchanged. All
 324 local package tests pass, including 28 new JSON/YAML, standalone, stack,
 Conditional and invalid-manifest checks. The four saved failing ZIPs and four
 control packages pass unchanged at 112/112 and reexport byte-identically. Missing
-or mismatched manifest names remain rejected. The .177/.68 test hosts remain on
-0.1.320; native update qualification for 0.1.321 is pending.
+or mismatched manifest names remain rejected. Native updates from 0.1.320 to
+0.1.321 pass on .177/.68 with HA 2026.10.2 after fresh full backups. The four
+original failing JSON/YAML ZIPs without a control card each reach 112/112 in the
+actual Editor and reexport byte-identically. All eight cards retain exact names
+and Conditional conditions after import and reload. Existing data, seven projects
+and six plugins per host, and both original local Editors remain intact. This
+check supplements the earlier HA rendering comparison; it creates no new HA
+resources or dashboards.
 :::
 
 ::: info Literal Entity names from App 0.1.320
@@ -41,8 +47,8 @@ When the package starts with an empty Entity name, readiness reports 110/112:
 `package-title-present` and `import-summary-title-present` fail despite a named
 package. A whitespace-only first name also fails the title check. Name data stays
 intact, but readiness is unreliable here. A named control card before the same
-eight cases passes. The title check is fixed locally from 0.1.321; native update
-qualification is pending. The native empty-string failure on 0.1.320 is reproduced;
+eight cases passes. The title check is fixed from 0.1.321 and confirmed natively
+on .177/.68 with the original ZIPs. The native empty-string failure on 0.1.320 is reproduced;
 the whitespace case follows from `trim()` in the check implementation.
 :::
 
