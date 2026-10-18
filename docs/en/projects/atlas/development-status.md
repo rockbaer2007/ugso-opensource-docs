@@ -12,14 +12,19 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-18 · HA App 0.1.318 · HACS integration 0.1.306.**
+**As of 2026-10-18 · HA App 0.1.319 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+App 0.1.319 fixes standalone losses in the actual Editor application path:
+Conditional conditions and Entity custom names survive. All 259 local package
+tests pass, including 19 new Editor/draft/export checks. Stored data is unchanged.
+The .177/.68 test hosts remain on 0.1.318; native update qualification is pending.
 
 App 0.1.318 aligns import preview with the actual parser, rejecting unsupported
 Markdown even inside nested cards. All 240 local package tests pass, including
 27 new parity tests. Native updates on .177/.68 with HA 2026.10.2 pass after
 full backups:24 Markdown rejections retain the Editor, eight nested imports
-preserve structure, and existing data/local Editors remain intact. Open defects:
+preserve structure, and existing data/local Editors remain intact. Findings on 0.1.318:
 standalone Conditional cards lose conditions during Editor application, and
 standalone Entity cards lose custom names (JSON/YAML on both hosts).
 

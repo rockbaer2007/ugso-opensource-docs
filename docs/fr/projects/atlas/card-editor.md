@@ -5,14 +5,26 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
-::: warning Défauts ouverts d’import de cartes seules (contrôle natif du 18/10/2026)
+::: info Correction des cartes seules dès l’App 0.1.319
+Les cartes Conditional deviennent des champs Expert complets avec leurs conditions
+et cartes imbriquées. Les cartes Entity seules conservent leur nom personnalisé ;
+le renommage explicite et le choix d’entité restent possibles. Les 259 tests locaux
+réussissent, dont 19 nouveaux contrôles de la conversion réelle de l’éditeur, de la
+restauration des brouillons et de l’export JSON/YAML/HACS. Les données enregistrées
+ne changent pas. Réimporter la source ou une sauvegarde pour récupérer un contenu
+déjà perdu. La mise à jour native de .177/.68 reste à vérifier séparément ; ces
+hôtes de test restent en 0.1.318.
+:::
+
+::: warning Limite tant que l’App 0.1.318 reste installée
 Sur .177 et .68 avec l’App 0.1.318, une carte Conditional seule est acceptée,
 mais ses conditions disparaissent du code réel de l’éditeur. Une carte Entity
 seule remplace son nom personnalisé par un nom dérivé de l’entité. Les deux
 défauts sont reproduits en JSON et YAML. En attendant, inclure la même carte
 Conditional dans un `vertical-stack` : ce chemin vérifié conserve conditions et
 noms. Contrôler la sortie importée avant d’enregistrer ; la validation générale
-des cartes seules reste ouverte.
+des cartes seules reste ouverte jusqu’au contrôle natif de la correction 0.1.319,
+déjà vérifiée localement.
 :::
 
 ::: info Prévisualisation d’import dès l’App 0.1.318

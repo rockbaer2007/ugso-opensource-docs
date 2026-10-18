@@ -5,14 +5,26 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
-::: warning Offene Einzelkarten-Importfehler (native Prüfung 18.10.2026)
+::: info Einzelkarten-Korrektur ab App 0.1.319
+Conditional-Karten werden als vollständiges Expert-Feld übernommen, einschließlich
+aller Bedingungen und verschachtelten Karten. Einzelne Entity-Karten behalten
+ihren eigenen Namen; bewusstes Umbenennen und die Entity-Auswahl bleiben möglich.
+259 lokale Pakettests bestehen, darunter 19 neue Prüfungen des tatsächlichen
+Editor-Umwandlungscodes, der Entwurfswiederherstellung und des JSON/YAML-/HACS-Exports.
+Gespeicherte Daten werden nicht verändert. Bereits verlorene Inhalte aus der
+Originalquelle oder Sicherung erneut importieren. Das native Update auf .177/.68
+ist noch separat zu prüfen; dort bleibt vorerst 0.1.318 installiert.
+:::
+
+::: warning Einschränkung bei noch installierter App 0.1.318
 Auf .177 und .68 mit App 0.1.318 wird eine einzeln importierte Conditional-Karte
 zwar angenommen, ihre Bedingung fehlt danach aber im tatsächlichen Editorcode.
 Bei einer einzelnen Entity-Karte wird der eigene Name durch einen aus der
 Entität abgeleiteten Namen ersetzt. Beides ist mit JSON und YAML reproduziert.
 Vorläufig dieselbe Conditional-Karte in einen `vertical-stack` einschließen:
 Dieser geprüfte Pfad erhält Bedingungen und Namen. Importierte Ausgabe vor dem
-Speichern kontrollieren; die allgemeine Einzelkarten-Freigabe bleibt offen.
+Speichern kontrollieren. Die Korrektur in 0.1.319 ist lokal geprüft; ihre native
+Einzelkarten-Freigabe bleibt bis zur Updateprüfung offen.
 :::
 
 ::: info Import-Vorprüfung ab App 0.1.318

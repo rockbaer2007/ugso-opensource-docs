@@ -12,15 +12,21 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 18.10.2026 · HA-App 0.1.318 · HACS-Integration 0.1.306.**
+**Stand: 18.10.2026 · HA-App 0.1.319 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+App 0.1.319 korrigiert die Einzelkartenverluste im tatsächlichen Editor-
+Übernahmepfad. Conditional-Bedingungen und eigene Entity-Namen bleiben erhalten;
+259 lokale Pakettests mit 19 neuen Editor-/Entwurfs-/Exportprüfungen bestehen.
+Gespeicherte Daten werden nicht verändert. Die Testhosts .177/.68 bleiben bei
+0.1.318; das native Update und die erneute sichtbare Prüfung stehen noch aus.
 
 App 0.1.318 gleicht Import-Vorprüfung und tatsächlichen Parser an: nicht
 unterstützte Markdown-Karten werden auch in verschachtelten Strukturen frühzeitig
 abgelehnt. 240 lokale Pakettests inklusive 27 neuer Paritätsprüfungen bestehen.
 Das Update auf .177/.68 ist mit HA 2026.10.2 nach Vollsicherungen geprüft:
 24 Markdown-Ablehnungen erhalten den Editorstand, acht verschachtelte Importe
-die Struktur. Bestandsdaten und lokale Editorstände bleiben erhalten. Offen:
+die Struktur. Bestandsdaten und lokale Editorstände bleiben erhalten. Befund unter 0.1.318:
 Einzelne Conditional-Karten verlieren beim Übernehmen in den Editor Bedingungen,
 einzelne Entity-Karten ihren eigenen Namen (JSON/YAML auf beiden Hosts).
 

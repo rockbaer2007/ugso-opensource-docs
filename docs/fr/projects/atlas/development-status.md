@@ -16,14 +16,20 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 18/10/2026 · App HA 0.1.318 · intégration HACS 0.1.306.**
+**État au 18/10/2026 · App HA 0.1.319 · intégration HACS 0.1.306.**
+
+L’App 0.1.319 corrige les pertes des cartes seules lors du transfert réel vers
+l’éditeur : conditions Conditional et noms Entity sont conservés. Les 259 tests
+locaux réussissent, dont 19 nouveaux contrôles éditeur/brouillon/export. Les
+données enregistrées ne changent pas. Les hôtes .177/.68 restent en 0.1.318 ;
+leur mise à jour native reste à vérifier.
 
 L’App 0.1.318 aligne la prévisualisation d’import sur l’analyseur réel et refuse
 les cartes Markdown non prises en charge, même imbriquées. Les 240 tests locaux
 réussissent, dont 27 nouveaux tests de parité. La mise à jour native de .177/.68
 avec HA 2026.10.2 est vérifiée après sauvegardes complètes :24 refus Markdown
 conservent l’éditeur et huit imports imbriqués conservent la structure. Les données
-et éditeurs locaux sont conservés. Défauts ouverts : les cartes Conditional seules
+et éditeurs locaux sont conservés. Défauts constatés en 0.1.318 : les cartes Conditional seules
 perdent leurs conditions lors du transfert vers l’éditeur ; les cartes Entity
 seules perdent leur nom personnalisé (JSON/YAML sur les deux hôtes).
 

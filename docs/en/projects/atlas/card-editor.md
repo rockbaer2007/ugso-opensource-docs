@@ -5,13 +5,24 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
-::: warning Open standalone import defects (native check 2026-10-18)
+::: info Standalone Card correction from App 0.1.319
+Conditional cards become complete Expert fields with their conditions and nested
+cards intact. Standalone Entity cards retain their custom names; explicit renaming
+and entity selection still work. All 259 local package tests pass, including 19
+new checks of the actual Editor conversion, draft restoration and JSON/YAML/HACS
+export. Stored data is unchanged. Recover previously lost content by reimporting
+its original source or backup. Native updates on .177/.68 remain a separate check;
+these test hosts still run 0.1.318.
+:::
+
+::: warning Limitation while App 0.1.318 is still installed
 On .177 and .68 with App 0.1.318, a standalone Conditional card is accepted but
 its conditions disappear from actual Editor output. A standalone Entity card
 replaces its custom name with an entity-derived name. Both reproduce in JSON
 and YAML. As a temporary workaround, wrap the same Conditional in a
 `vertical-stack`: this checked path retains conditions and names. Inspect imported
-output before saving; general standalone-card qualification remains open.
+output before saving. The 0.1.319 fix passes locally; native standalone-card
+qualification remains open until the update check.
 :::
 
 ::: info Import preview from App 0.1.318
