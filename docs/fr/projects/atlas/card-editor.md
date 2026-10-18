@@ -5,6 +5,23 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: warning Paquets HACS ambigus : défaut d’import dans l’App 0.1.323
+La vérification native sur .177/.68 avec HA 2026.10.2 trouve 14 imports incorrects
+sur 46 cas. Six paquets par hôte contenant plusieurs projets ou scripts sont
+adoptés malgré un rapport bloqué à 111/112. Pour des projets de même identité,
+l’ordre des entrées ZIP détermine le contenu. Un nom de script contradictoire
+dans le plan de l’éditeur est même accepté à 112/112 sur chaque hôte et repris
+dans l’éditeur. Ces cas ne sont pas encore corrigés.
+
+Les chemins identiques, les alias racine/dist et les conflits directs HACS/script
+sont refusés correctement : 26 refus au total ; six témoins valides restent
+importables. Les contrôles CRC et le diagnostic ZIP restent valides. Un rapport
+bloqué ne protège pas à lui seul l’éditeur contre ces ambiguïtés. Utiliser des
+exports non ambigus ; restaurer un brouillon remplacé depuis sa source ou sa
+sauvegarde. Les tests restaurent les éditeurs complets après chaque cas et
+préservent les données contrôlées. ATLAS reste à 0.1.323.
+:::
+
 ::: info Diagnostic ZIP précis dès l’App 0.1.323
 Les erreurs CRC, d’en-têtes et de lecture ZIP font du contrôle ZIP le premier
 blocage. Un inventaire écarté ne produit plus de faux fichiers absents : les

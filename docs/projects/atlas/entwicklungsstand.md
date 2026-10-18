@@ -15,6 +15,14 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 **Stand: 18.10.2026 · HA-App 0.1.323 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
+**Offener Befund: mehrdeutige HACS-Pakete.** Auf .177/.68 mit HA 2026.10.2
+werden 46 echte Importe geprüft: 26 korrekte Ablehnungen, sechs gültige Kontrollen,
+aber 14 falsche Übernahmen. Mehrere Projekte oder Scripts können trotz blockiertem
+Bericht übernommen werden; ein widersprüchlicher Editorplan-Scriptname besteht
+sogar mit 112/112. Die Auswahl kann von der ZIP-Reihenfolge abhängen. Original-
+editoren und geprüfte Bestandsdaten sind wiederhergestellt bzw. unverändert;
+App 0.1.323 wurde nicht geändert. Korrektur noch offen, siehe [Card Editor](./card-editor).
+
 App 0.1.322 prüft CRC32 aller gespeicherten ZIP-Einträge und die Header-/
 Verzeichniskonsistenz vor der HACS-Übernahme. Beschädigte oder nicht unterstützte
 Archive bleiben außerhalb des Editors. 376 Pakettests, darunter 52 neue

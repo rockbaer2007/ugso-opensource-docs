@@ -5,6 +5,24 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: warning Mehrdeutige HACS-Pakete: Importlücke in App 0.1.323
+Die native Prüfung auf .177/.68 mit HA 2026.10.2 findet 14 falsche Übernahmen
+unter 46 Importfällen. Je Host werden sechs Pakete mit mehreren Projekten oder
+zusätzlichen Scripts trotz „blocked“ und 111/112 übernommen. Bei Projekten mit
+gleicher Identität entscheidet die Reihenfolge im ZIP über den Inhalt. Ein
+abweichender Scriptname im Editorplan wird je Host sogar mit 112/112 angenommen
+und in den Editor übernommen. Diese Fälle sind noch nicht korrigiert.
+
+Exakte doppelte Pfade, Root-/dist-Pfadaliasse und direkte HACS-/Script-Konflikte
+werden korrekt abgewiesen: insgesamt 26 Ablehnungen; sechs gültige Kontrollen
+bleiben importierbar. CRC-Prüfung und korrekte ZIP-Fehlerdiagnose bleiben erhalten.
+Ein blockierter Bericht allein schützt bei den genannten Mehrdeutigkeiten den
+Editor derzeit nicht. Nur eindeutige Exporte verwenden; einen bereits ersetzten
+Entwurf aus seiner Originalquelle oder Sicherung wiederherstellen. Im Test wurden
+nach jedem Fall die vollständigen Originaleditoren wiederhergestellt und alle
+geprüften Bestandsdaten erhalten. ATLAS bleibt bei 0.1.323.
+:::
+
 ::: info Präzise ZIP-Fehlerdiagnose ab App 0.1.323
 Bei CRC-, Header- oder ZIP-Lesefehlern ist die ZIP-Prüfung der erste Blocker.
 Das verworfene Dateiinventar liefert keine angeblich fehlenden Pflichtdateien:

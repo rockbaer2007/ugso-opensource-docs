@@ -18,6 +18,14 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 **État au 18/10/2026 · App HA 0.1.323 · intégration HACS 0.1.306.**
 
+**Constat ouvert : paquets HACS ambigus.** Sur .177/.68 avec HA 2026.10.2,
+46 imports réels donnent 26 refus corrects, six témoins valides et 14 imports
+incorrects. Plusieurs projets/scripts peuvent être adoptés malgré un rapport
+bloqué ; un nom de script contradictoire du plan passe même à 112/112. L’ordre
+ZIP peut déterminer le choix. Éditeurs d’origine restaurés et données contrôlées
+inchangées ; l’App 0.1.323 reste inchangée. Correction à faire ; voir
+[Card Editor](./card-editor).
+
 L’App 0.1.322 vérifie le CRC32 de chaque entrée ZIP stockée et la cohérence des
 en-têtes/répertoires avant l’import HACS. Les archives endommagées ou non prises
 en charge restent hors de l’éditeur. Les 376 tests, dont 52 nouveaux cas

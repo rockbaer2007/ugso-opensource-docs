@@ -15,6 +15,14 @@ are documented in the development status below.
 **As of 2026-10-18 · HA App 0.1.323 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
+**Open finding: ambiguous HACS packages.** On .177/.68 with HA 2026.10.2,
+46 actual imports produce 26 correct rejections, six valid controls and
+14 incorrect adoptions. Multiple projects/scripts may be adopted despite a
+blocked report; a conflicting Editor plan script name even passes 112/112.
+Selection can depend on ZIP order. Original Editors are restored and checked
+existing data is unchanged; App 0.1.323 stays unchanged. The fix remains open;
+see [Card Editor](./card-editor).
+
 App 0.1.322 validates every stored ZIP entry's CRC32 and header/directory
 consistency before HACS adoption. Corrupt or unsupported archives stay outside
 the Editor. All 376 package tests, including 52 new integrity cases, and four
