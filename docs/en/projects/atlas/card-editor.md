@@ -5,6 +5,16 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Import preview from App 0.1.318
+Preview now uses the actual import parser, including nested cards and package/
+export payload contents. Unsupported Markdown cards are rejected before the
+Editor state changes; Markdown support is not added. Supported standalone
+Entity and Conditional cards are also recognized as JSON, and YAML is checked
+structurally. All 240 local package tests pass, including 27 new parity tests.
+Existing stored data is not rewritten. Native updates on the approved .177/.68
+test hosts still require separate verification.
+:::
+
 ::: info Extended Conditional rendering checked on 2026-10-18
 With ATLAS 0.1.317 and HA 2026.10.2, native references and scripts exported
 from JSON and YAML agree in 1,008 visibility decisions: 14 variants, six state

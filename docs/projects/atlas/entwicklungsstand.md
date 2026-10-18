@@ -12,14 +12,19 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 18.10.2026 · HA-App 0.1.317 · HACS-Integration 0.1.306.**
+**Stand: 18.10.2026 · HA-App 0.1.318 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+App 0.1.318 gleicht Import-Vorprüfung und tatsächlichen Parser an: nicht
+unterstützte Markdown-Karten werden auch in verschachtelten Strukturen frühzeitig
+abgelehnt. 240 lokale Pakettests inklusive 27 neuer Paritätsprüfungen bestehen.
+Die Testhosts .177/.68 bleiben bei 0.1.317; ihr Update ist noch separat zu prüfen.
 
 Die erweiterten Conditionals sind mit HA 2026.10.2 auf den freigegebenen
 Testsystemen .177 und .68 geprüft: 1.008 Sichtbarkeitsprüfungen, JSON/YAML,
 Speichern/Wiederöffnen und bytegleiche HACS-Rundläufe mit je 112/112 Prüfungen.
 Bestandsdaten und ursprüngliche lokale Editorstände bleiben erhalten. Die
-gefundene Markdown-Vorprüflücke bleibt offen. Details und Grenzen stehen im
+gefundene Markdown-Vorprüflücke ist lokal in 0.1.318 korrigiert. Details und Grenzen stehen im
 [Card Editor](./card-editor). Neue Netzwerktests sind nur auf diesen beiden
 Adressen zulässig; die nachfolgenden Berichte anderer Hosts sind historisch.
 

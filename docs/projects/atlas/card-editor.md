@@ -5,6 +5,17 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Import-Vorprüfung ab App 0.1.318
+Die Vorprüfung verwendet jetzt denselben Parser wie der tatsächliche Import,
+einschließlich verschachtelter Karten und Paket-/Exportpayload-Inhalte.
+Nicht unterstützte Markdown-Karten werden bereits vor einer Änderung des
+Editorstands abgelehnt. Dies ergänzt keine Markdown-Unterstützung. Unterstützte
+einzelne Entity- und Conditional-Karten werden auch als JSON erkannt; YAML wird
+strukturiert geprüft. 240 lokale Pakettests bestehen, darunter 27 neue
+Paritätsprüfungen. Vorhandene Daten werden nicht umgeschrieben. Das native
+Update auf den freigegebenen Testhosts .177/.68 ist noch separat zu prüfen.
+:::
+
 ::: info Erweiterte Conditional-Anzeige geprüft am 18.10.2026
 Mit ATLAS 0.1.317 und HA 2026.10.2 stimmen native Referenzen sowie aus JSON
 und YAML exportierte Scripts in 1.008 Sichtbarkeitsprüfungen überein: 14 Varianten,

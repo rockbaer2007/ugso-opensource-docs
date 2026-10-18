@@ -5,6 +5,17 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Prévisualisation d’import dès l’App 0.1.318
+La prévisualisation utilise le même analyseur que l’import réel, y compris les
+cartes imbriquées et le contenu des paquets et exports. Les cartes Markdown
+non prises en charge sont refusées avant toute modification de l’éditeur ;
+cette correction n’ajoute pas le support de Markdown. Les cartes Entity et
+Conditional seules sont aussi reconnues en JSON ; le YAML est analysé de façon
+structurée. Les 240 tests locaux réussissent, dont 27 nouveaux tests de parité.
+Les données existantes ne sont pas réécrites. La mise à jour native des hôtes
+de test autorisés .177/.68 reste à vérifier séparément.
+:::
+
 ::: info Affichage Conditional vérifié le 18/10/2026
 Avec ATLAS 0.1.317 et HA 2026.10.2, les références natives et les scripts
 exportés depuis JSON et YAML concordent dans 1 008 décisions de visibilité :

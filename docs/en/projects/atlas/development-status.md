@@ -12,13 +12,18 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-18 · HA App 0.1.317 · HACS integration 0.1.306.**
+**As of 2026-10-18 · HA App 0.1.318 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+App 0.1.318 aligns import preview with the actual parser, rejecting unsupported
+Markdown even inside nested cards. All 240 local package tests pass, including
+27 new parity tests. The .177/.68 test hosts remain on0.1.317; native update
+verification is still pending.
 
 Extended Conditionals pass on the approved .177 and .68 test systems with
 HA 2026.10.2: 1,008 visibility decisions, JSON/YAML, save/reopen and byte-identical
 HACS roundtrips with 112/112 checks each. Existing data and original local
-Editors are preserved. The Markdown preview mismatch remains open; see the
+Editors are preserved. The Markdown preview mismatch is fixed locally in0.1.318; see the
 [Card Editor](./card-editor) for scope and limits. New network tests are restricted
 to these two addresses; reports below involving other hosts are historical.
 
