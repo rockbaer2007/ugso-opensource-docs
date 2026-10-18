@@ -5,6 +5,23 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Diagnostic ZIP précis dès l’App 0.1.323
+Les erreurs CRC, d’en-têtes et de lecture ZIP font du contrôle ZIP le premier
+blocage. Un inventaire écarté ne produit plus de faux fichiers absents : les
+contrôles de fichiers et de contenu restent explicitement non vérifiés jusqu’à
+la fourniture d’une archive intacte. L’import reste refusé et l’éditeur inchangé.
+Les fichiers réellement absents d’un ZIP vérifié restent signalés. La liste
+conserve 112 contrôles ; les 378 tests, dont 54 cas d’intégrité, réussissent.
+
+Les mises à jour sur .177/.68 avec HA 2026.10.2 réussissent après sauvegardes
+complètes : 60 refus et quatre témoins JSON/YAML valides sont confirmés. Les
+26 cas sans inventaire ZIP vérifiable indiquent la cause ZIP en premier sans
+faux fichiers absents. Les absences réelles restent détectées. Les configurations
+complètes des éditeurs correspondent aux sauvegardes après refus/rechargement
+et restauration des témoins valides. Données contrôlées, sept projets et six
+plugins par hôte restent inchangés.
+:::
+
 ::: info Contrôle de l’intégrité ZIP dès l’App 0.1.322
 Avant l’import HACS, ATLAS vérifie le CRC32 de chaque entrée ZIP stockée, y compris
 README, langues et fichiers supplémentaires. Les en-têtes locaux et centraux
@@ -23,10 +40,9 @@ sont conservés.
 L’import prend en charge les entrées stockées (STORE). Compression, chiffrement,
 descripteurs de données, archives multi-disques et ZIP64 sont refusés. Les
 commentaires ZIP normaux restent valides. CRC32 détecte une corruption sans
-authentifier le paquet ni sa source. Limite du diagnostic : après une erreur CRC,
-le rapport peut aussi indiquer des fichiers absents, car l’inventaire invalide a
-été écarté. L’avis CRC/intégrité indique la cause ; ces avis secondaires ne prouvent
-pas une absence réelle et leur classement reste à préciser.
+authentifier le paquet ni sa source. En 0.1.322, l’inventaire écarté pouvait
+produire de faux avis de fichiers absents après une erreur CRC. Dès 0.1.323,
+ces contrôles dépendants sont indiqués comme non vérifiés.
 :::
 
 ::: warning Constat CRC historique jusqu’à l’App 0.1.321 incluse

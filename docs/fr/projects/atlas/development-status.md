@@ -16,7 +16,7 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 18/10/2026 · App HA 0.1.322 · intégration HACS 0.1.306.**
+**État au 18/10/2026 · App HA 0.1.323 · intégration HACS 0.1.306.**
 
 L’App 0.1.322 vérifie le CRC32 de chaque entrée ZIP stockée et la cohérence des
 en-têtes/répertoires avant l’import HACS. Les archives endommagées ou non prises
@@ -25,8 +25,15 @@ d’intégrité, et quatre cycles d’archives originales identiques réussissen
 La mise à jour native sur .177/.68 avec HA 2026.10.2 réussit après sauvegardes
 complètes : 60 refus corrects préservent les éditeurs complets après rechargement
 et quatre témoins JSON/YAML valides atteignent 112/112. Éditeurs d’origine et
-données restent inchangés. Le classement précis des avis de fichiers absents
-suivant une erreur d’intégrité reste ouvert ; voir [Card Editor](./card-editor).
+données restent inchangés. L’App 0.1.323 corrige ensuite les faux avis de fichiers
+absents : les erreurs ZIP bloquent en premier et les contrôles dépendants restent
+non vérifiés. Les absences réelles dans un ZIP vérifié restent des erreurs.
+Les 378 tests réussissent ; voir [Card Editor](./card-editor).
+
+La qualification native 0.1.323 sur .177/.68 réussit après sauvegardes complètes :
+64 cas, dont 26 ZIP non vérifiables sans faux fichiers absents, 60 refus sûrs et
+quatre imports valides à 112/112. Éditeurs d’origine complets et données contrôlées
+restent conservés.
 
 La qualification négative HACS native sur .177/.68 est terminée avec 21 paquets
 par hôte après sauvegardes complètes : 38 refus corrects préservent les éditeurs

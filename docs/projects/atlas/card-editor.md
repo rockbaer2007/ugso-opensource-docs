@@ -5,6 +5,24 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Präzise ZIP-Fehlerdiagnose ab App 0.1.323
+Bei CRC-, Header- oder ZIP-Lesefehlern ist die ZIP-Prüfung der erste Blocker.
+Das verworfene Dateiinventar liefert keine angeblich fehlenden Pflichtdateien:
+Datei- und Inhaltsprüfungen bleiben ausdrücklich „nicht geprüft“, bis ein
+intaktes Archiv vorliegt. Das Paket bleibt abgewiesen und der Editorstand
+unverändert. Bei erfolgreich verifizierten ZIPs werden tatsächlich fehlende
+Dateien weiterhin als Fehler gemeldet. Die Prüfliste bleibt bei 112 Einträgen;
+378 Pakettests einschließlich 54 Integritätsfälle bestehen.
+
+Das Update auf .177/.68 mit HA 2026.10.2 ist nach frischen Vollbackups geprüft:
+60 Ablehnungen und vier gültige JSON/YAML-Kontrollen bestehen. Alle 26 Fälle mit
+unverifizierbarem ZIP-Inventar zeigen die ZIP-Ursache zuerst und keine erfundenen
+Dateifehler. Tatsächlich fehlende Dateien bleiben erkennbar. Nach Ablehnung und
+Neuladen sowie nach Wiederherstellung der gültigen Importkontrollen stimmen die
+vollständigen Editorstände mit der Sicherung überein. Geprüfte Bestandsdaten,
+sieben Projekte und sechs Plugins je Host bleiben unverändert.
+:::
+
 ::: info ZIP-Integritätsprüfung ab App 0.1.322
 Vor der HACS-Übernahme prüft ATLAS die CRC32 jedes gespeicherten ZIP-Eintrags,
 einschließlich README, Sprachdateien und Zusatzdateien. Lokale und zentrale
@@ -23,11 +41,9 @@ Bestandsdaten einschließlich sieben Projekten und sechs Plugins je Host sind er
 Der Import unterstützt gespeicherte ZIP-Einträge (STORE). Komprimierte Einträge,
 Verschlüsselung, Data Descriptors, Multi-Disk und ZIP64 werden abgewiesen.
 Normale ZIP-Kommentare bleiben erlaubt. CRC32 erkennt Beschädigung, bestätigt
-aber weder Herkunft noch Vertrauenswürdigkeit eines Pakets. Diagnosegrenze:
-Nach einem CRC-Fehler kann der Bericht zusätzlich generische Hinweise auf
-fehlende Dateien anzeigen, weil das ungültige Inventar verworfen wurde. Der
-CRC-/Integritätshinweis ist die Ursache; diese Folgehinweise belegen keine
-tatsächlich fehlende Datei und müssen noch präziser abgegrenzt werden.
+aber weder Herkunft noch Vertrauenswürdigkeit eines Pakets. In 0.1.322 konnten
+nach CRC-Fehlern zusätzliche irreführende Dateifehlt-Hinweise erscheinen.
+Ab 0.1.323 werden diese Folgeprüfungen als nicht geprüft gekennzeichnet.
 :::
 
 ::: warning Historischer CRC-Befund bis einschließlich App 0.1.321

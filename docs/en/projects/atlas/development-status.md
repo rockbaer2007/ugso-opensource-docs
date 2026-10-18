@@ -12,7 +12,7 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-18 · HA App 0.1.322 · HACS integration 0.1.306.**
+**As of 2026-10-18 · HA App 0.1.323 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
 App 0.1.322 validates every stored ZIP entry's CRC32 and header/directory
@@ -21,9 +21,16 @@ the Editor. All 376 package tests, including 52 new integrity cases, and four
 byte-identical original archive roundtrips pass. Native updates on .177/.68 with
 HA 2026.10.2 pass after full backups: 60 correct rejections preserve complete
 Editors through reload, and four valid JSON/YAML controls pass at 112/112.
-Original Editors and existing data remain unchanged. More precise classification
-of generic missing-file notices following integrity errors remains open; see
+Original Editors and existing data remain unchanged. App 0.1.323 then corrects
+generic missing-file follow-up notices: ZIP errors block first and dependent
+file/content checks remain unverified. Actual missing files in verified ZIPs
+remain errors. All 378 package tests pass; see
 [Card Editor](./card-editor).
+
+Native 0.1.323 qualification on .177/.68 passes after fresh full backups:
+64 package cases, including 26 unverifiable ZIPs without misleading missing-file
+claims, 60 safe rejections and four valid imports at 112/112. Complete original
+Editors and checked existing data remain intact.
 
 Native HACS negative qualification on .177/.68 is complete with 21 packages per
 host after full backups: 38 correct rejections preserve complete Editor states

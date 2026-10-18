@@ -5,6 +5,22 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Accurate ZIP failure diagnostics from App 0.1.323
+CRC, header and ZIP readability errors make ZIP verification the first blocker.
+A discarded inventory no longer produces invented missing-file claims. Dependent
+file/content checks remain explicitly unverified until an intact archive is
+available. Import stays blocked and the Editor state is unchanged. Actually
+missing files in verified ZIPs still produce errors. The stable list retains
+112 checks; all 378 package tests, including 54 integrity cases, pass.
+
+Updates on .177/.68 with HA 2026.10.2 pass after fresh full backups: 60 rejections
+and four valid JSON/YAML controls succeed. All 26 cases with unavailable ZIP
+inventories show the ZIP cause first without invented missing-file claims.
+Actually missing files remain detectable. Complete Editor configurations match
+their backups after rejection/reload and after restoring valid import controls.
+Checked existing data, seven projects and six plugins per host remain unchanged.
+:::
+
 ::: info ZIP integrity checks from App 0.1.322
 Before HACS adoption, ATLAS validates every stored ZIP entry's CRC32, including
 README, locales and extra files. Local and central headers must agree on names,
@@ -22,10 +38,8 @@ per host, remain intact.
 Import supports stored ZIP entries (STORE). Compressed entries, encryption, data
 descriptors, multi-disk and ZIP64 are rejected. Normal ZIP comments remain valid.
 CRC32 detects corruption; it does not authenticate a package or its source.
-Diagnostic limit: after a CRC failure, the report may also list generic missing
-files because the invalid inventory was discarded. The CRC/integrity notice
-identifies the cause; these follow-up notices do not prove files are actually
-absent and still need more precise classification.
+In 0.1.322, discarded inventories could produce misleading missing-file notices
+after CRC failures. From 0.1.323, these dependent checks are marked unverified.
 :::
 
 ::: warning Historical CRC finding through App 0.1.321

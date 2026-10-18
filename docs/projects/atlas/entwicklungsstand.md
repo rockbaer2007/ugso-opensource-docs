@@ -12,7 +12,7 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 18.10.2026 · HA-App 0.1.322 · HACS-Integration 0.1.306.**
+**Stand: 18.10.2026 · HA-App 0.1.323 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
 App 0.1.322 prüft CRC32 aller gespeicherten ZIP-Einträge und die Header-/
@@ -22,9 +22,16 @@ Integritätsfälle, und vier bytegleiche Originalarchiv-Rundläufe bestehen.
 Das native Update auf .177/.68 mit HA 2026.10.2 besteht nach Vollbackups:
 60 korrekte Ablehnungen erhalten die vollständigen Editorstände auch nach
 Neuladen; vier gültige JSON/YAML-Kontrollen bestehen mit 112/112. Originaleditoren
-und Bestandsdaten sind unverändert. Offen bleibt die präzise Abgrenzung
-generischer Dateifehlt-Folgehinweise nach einem Integritätsfehler, siehe
+und Bestandsdaten sind unverändert. App 0.1.323 korrigiert anschließend die
+generischen Dateifehlt-Folgehinweise: ZIP-Fehler blockieren zuerst, abhängige
+Datei-/Inhaltsprüfungen bleiben nicht geprüft. Tatsächlich fehlende Dateien in
+verifizierten ZIPs bleiben Fehler. Alle 378 Pakettests bestehen; siehe
 [Card Editor](./card-editor).
+
+Die native 0.1.323-Qualifikation auf .177/.68 besteht nach frischen Vollbackups:
+64 Paketfälle, darunter 26 unverifizierbare ZIPs ohne irreführende Dateifehler,
+60 sichere Ablehnungen und vier gültige Importe mit 112/112. Vollständige
+Originaleditoren und geprüfte Bestandsdaten sind erhalten.
 
 Die native HACS-Negativprüfung auf .177/.68 ist mit 21 Paketen je Host nach
 Vollbackups abgeschlossen: 38 korrekte Ablehnungen erhalten die vollständigen
