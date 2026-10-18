@@ -18,7 +18,11 @@ App und Integration haben unabhängige Versionsnummern.
 App 0.1.318 gleicht Import-Vorprüfung und tatsächlichen Parser an: nicht
 unterstützte Markdown-Karten werden auch in verschachtelten Strukturen frühzeitig
 abgelehnt. 240 lokale Pakettests inklusive 27 neuer Paritätsprüfungen bestehen.
-Die Testhosts .177/.68 bleiben bei 0.1.317; ihr Update ist noch separat zu prüfen.
+Das Update auf .177/.68 ist mit HA 2026.10.2 nach Vollsicherungen geprüft:
+24 Markdown-Ablehnungen erhalten den Editorstand, acht verschachtelte Importe
+die Struktur. Bestandsdaten und lokale Editorstände bleiben erhalten. Offen:
+Einzelne Conditional-Karten verlieren beim Übernehmen in den Editor Bedingungen,
+einzelne Entity-Karten ihren eigenen Namen (JSON/YAML auf beiden Hosts).
 
 Die erweiterten Conditionals sind mit HA 2026.10.2 auf den freigegebenen
 Testsystemen .177 und .68 geprüft: 1.008 Sichtbarkeitsprüfungen, JSON/YAML,

@@ -17,8 +17,11 @@ App and integration version numbers are maintained independently.
 
 App 0.1.318 aligns import preview with the actual parser, rejecting unsupported
 Markdown even inside nested cards. All 240 local package tests pass, including
-27 new parity tests. The .177/.68 test hosts remain on0.1.317; native update
-verification is still pending.
+27 new parity tests. Native updates on .177/.68 with HA 2026.10.2 pass after
+full backups:24 Markdown rejections retain the Editor, eight nested imports
+preserve structure, and existing data/local Editors remain intact. Open defects:
+standalone Conditional cards lose conditions during Editor application, and
+standalone Entity cards lose custom names (JSON/YAML on both hosts).
 
 Extended Conditionals pass on the approved .177 and .68 test systems with
 HA 2026.10.2: 1,008 visibility decisions, JSON/YAML, save/reopen and byte-identical

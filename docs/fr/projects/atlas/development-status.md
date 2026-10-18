@@ -20,8 +20,12 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 L’App 0.1.318 aligne la prévisualisation d’import sur l’analyseur réel et refuse
 les cartes Markdown non prises en charge, même imbriquées. Les 240 tests locaux
-réussissent, dont 27 nouveaux tests de parité. Les hôtes de test .177/.68 restent
-en0.1.317 ; leur mise à jour native reste à vérifier.
+réussissent, dont 27 nouveaux tests de parité. La mise à jour native de .177/.68
+avec HA 2026.10.2 est vérifiée après sauvegardes complètes :24 refus Markdown
+conservent l’éditeur et huit imports imbriqués conservent la structure. Les données
+et éditeurs locaux sont conservés. Défauts ouverts : les cartes Conditional seules
+perdent leurs conditions lors du transfert vers l’éditeur ; les cartes Entity
+seules perdent leur nom personnalisé (JSON/YAML sur les deux hôtes).
 
 Les conditions étendues sont vérifiées sur les systèmes de test autorisés .177
 et .68 avec HA 2026.10.2 : 1 008 décisions de visibilité, JSON/YAML,
