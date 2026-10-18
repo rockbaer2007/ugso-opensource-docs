@@ -12,15 +12,26 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-18 · HA App 0.1.321 · HACS integration 0.1.306.**
+**As of 2026-10-18 · HA App 0.1.322 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+App 0.1.322 validates every stored ZIP entry's CRC32 and header/directory
+consistency before HACS adoption. Corrupt or unsupported archives stay outside
+the Editor. All 376 package tests, including 52 new integrity cases, and four
+byte-identical original archive roundtrips pass. Native updates on .177/.68 with
+HA 2026.10.2 pass after full backups: 60 correct rejections preserve complete
+Editors through reload, and four valid JSON/YAML controls pass at 112/112.
+Original Editors and existing data remain unchanged. More precise classification
+of generic missing-file notices following integrity errors remains open; see
+[Card Editor](./card-editor).
 
 Native HACS negative qualification on .177/.68 is complete with 21 packages per
 host after full backups: 38 correct rejections preserve complete Editor states
-through reload, and two valid controls pass. A CRC gap remains: a damaged README
+through reload, and two valid controls pass. App 0.1.321 had a CRC gap: a damaged README
 inside the ZIP is falsely accepted at 112/112 twice and replaces local Editor
 state. Both original Editors are restored exactly and existing data is unchanged.
-This is not complete integrity qualification; see [Card Editor](./card-editor).
+This was not complete integrity qualification for 0.1.321; the finding is fixed
+from 0.1.322. See [Card Editor](./card-editor).
 
 App 0.1.321 fixes false HACS title failures with an empty first Entity name,
 without modifying names. Both checks use package identity. All 324 local package

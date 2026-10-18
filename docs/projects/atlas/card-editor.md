@@ -5,7 +5,32 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
-::: warning Native Negativprüfung mit App 0.1.321: CRC-Lücke offen
+::: info ZIP-Integritätsprüfung ab App 0.1.322
+Vor der HACS-Übernahme prüft ATLAS die CRC32 jedes gespeicherten ZIP-Eintrags,
+einschließlich README, Sprachdateien und Zusatzdateien. Lokale und zentrale
+Header müssen bei Namen, Flags, Methode, CRC und Größen übereinstimmen;
+Verzeichnisgrenzen, Dateianzahl und überlappende Einträge werden kontrolliert.
+Beschädigte Archive geben keine importierbaren Paketdaten an den Editor weiter.
+52 neue Integritätsfälle und insgesamt 376 Pakettests bestehen. Gültige Original-
+archive bleiben bytegleich; leere Namen und äußere Leerzeichen bleiben erhalten.
+Das Update von 0.1.321 auf 0.1.322 ist nach Vollbackups auf .177/.68 mit
+HA 2026.10.2 bestanden: je 30 beschädigte/ungültige Pakete werden abgelehnt,
+je zwei gültige JSON/YAML-Originale bestehen mit 112/112. Nach jeder Ablehnung
+und Neuladen ist die vollständige Editor-Konfiguration unverändert. Auch der
+ursprüngliche CRC-Fehlerfall wird sicher abgewiesen. Originaleditoren und
+Bestandsdaten einschließlich sieben Projekten und sechs Plugins je Host sind erhalten.
+
+Der Import unterstützt gespeicherte ZIP-Einträge (STORE). Komprimierte Einträge,
+Verschlüsselung, Data Descriptors, Multi-Disk und ZIP64 werden abgewiesen.
+Normale ZIP-Kommentare bleiben erlaubt. CRC32 erkennt Beschädigung, bestätigt
+aber weder Herkunft noch Vertrauenswürdigkeit eines Pakets. Diagnosegrenze:
+Nach einem CRC-Fehler kann der Bericht zusätzlich generische Hinweise auf
+fehlende Dateien anzeigen, weil das ungültige Inventar verworfen wurde. Der
+CRC-/Integritätshinweis ist die Ursache; diese Folgehinweise belegen keine
+tatsächlich fehlende Datei und müssen noch präziser abgegrenzt werden.
+:::
+
+::: warning Historischer CRC-Befund bis einschließlich App 0.1.321
 Auf .177/.68 mit HA 2026.10.2 sind nach frischen Vollbackups je 21 echte
 Editorimporte geprüft. Fehlende, leere, nur aus Leerzeichen bestehende oder
 widersprüchliche Namen in HACS-/Paketmanifesten, sieben fehlende Pflichtdateien
@@ -17,9 +42,9 @@ jeweils mit 112/112.
 
 Ein ZIP mit verändertem README-Inhalt und dadurch falscher CRC-Prüfsumme wird
 jedoch auf beiden Hosts fälschlich mit 112/112 angenommen und ersetzt den lokalen
-Editorstand. Ein unabhängiger ZIP-Leser bestätigt den CRC-Fehler. Die vorhandene
-Prüfung belegt daher keine vollständige ZIP-Integrität. Die CRC-Prüfung ist noch
-zu korrigieren; beschädigte Pakete aus dem unveränderten Original neu erzeugen.
+Editorstand. Ein unabhängiger ZIP-Leser bestätigt den CRC-Fehler. Die Prüfung in
+0.1.321 belegte daher keine vollständige ZIP-Integrität. Ab 0.1.322 ist die
+CRC-Prüfung korrigiert und auf .177/.68 bestätigt; beschädigte Pakete aus einem intakten Original neu erzeugen.
 Beide ursprünglichen Editorstände wurden aus den Sicherungen exakt
 wiederhergestellt; Bestandsdateien, Projekte, Plugins und Papierkorb sind erhalten.
 :::

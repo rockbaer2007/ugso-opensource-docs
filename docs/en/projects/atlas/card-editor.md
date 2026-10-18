@@ -5,7 +5,30 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
-::: warning Native negative checks with App 0.1.321: CRC gap remains open
+::: info ZIP integrity checks from App 0.1.322
+Before HACS adoption, ATLAS validates every stored ZIP entry's CRC32, including
+README, locales and extra files. Local and central headers must agree on names,
+flags, method, CRC and sizes; directory bounds, counts and overlapping entries
+are checked. Corrupted archives expose no importable package data to the Editor.
+All 52 new integrity cases and 376 package tests pass. Valid original archives
+remain byte-identical, preserving empty names and outer whitespace. Native
+updates from 0.1.321 to 0.1.322 pass on .177/.68 with HA 2026.10.2 after full
+backups: 30 corrupt/invalid packages per host are rejected and two valid JSON/YAML
+originals each pass at 112/112. After each rejection and reload, the complete
+Editor configuration stays unchanged. The original CRC failure is rejected.
+Original Editors and existing data, including seven projects and six plugins
+per host, remain intact.
+
+Import supports stored ZIP entries (STORE). Compressed entries, encryption, data
+descriptors, multi-disk and ZIP64 are rejected. Normal ZIP comments remain valid.
+CRC32 detects corruption; it does not authenticate a package or its source.
+Diagnostic limit: after a CRC failure, the report may also list generic missing
+files because the invalid inventory was discarded. The CRC/integrity notice
+identifies the cause; these follow-up notices do not prove files are actually
+absent and still need more precise classification.
+:::
+
+::: warning Historical CRC finding through App 0.1.321
 After fresh full backups, 21 actual Editor imports per host are checked on
 .177/.68 with HA 2026.10.2. Missing, empty, whitespace-only or conflicting names
 in HACS/package manifests, seven missing required files including declared
@@ -16,8 +39,8 @@ package passes at 112/112 on both hosts.
 
 A ZIP with modified README bytes and an invalid stored CRC is nevertheless
 accepted at 112/112 on both hosts and replaces the local Editor state. An
-independent ZIP reader confirms the CRC error. Current readiness does not prove
-complete ZIP integrity. CRC validation still needs correction; regenerate damaged
+independent ZIP reader confirms the CRC error. Readiness in 0.1.321 did not prove
+complete ZIP integrity. CRC validation is corrected from 0.1.322 and confirmed on .177/.68; regenerate damaged
 packages from an intact original. Both original Editors were restored exactly
 from backups; existing files, projects, plugins and trash remain intact.
 :::

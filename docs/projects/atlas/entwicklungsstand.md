@@ -12,16 +12,28 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 18.10.2026 · HA-App 0.1.321 · HACS-Integration 0.1.306.**
+**Stand: 18.10.2026 · HA-App 0.1.322 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+App 0.1.322 prüft CRC32 aller gespeicherten ZIP-Einträge und die Header-/
+Verzeichniskonsistenz vor der HACS-Übernahme. Beschädigte oder nicht unterstützte
+Archive bleiben außerhalb des Editors. 376 Pakettests, darunter 52 neue
+Integritätsfälle, und vier bytegleiche Originalarchiv-Rundläufe bestehen.
+Das native Update auf .177/.68 mit HA 2026.10.2 besteht nach Vollbackups:
+60 korrekte Ablehnungen erhalten die vollständigen Editorstände auch nach
+Neuladen; vier gültige JSON/YAML-Kontrollen bestehen mit 112/112. Originaleditoren
+und Bestandsdaten sind unverändert. Offen bleibt die präzise Abgrenzung
+generischer Dateifehlt-Folgehinweise nach einem Integritätsfehler, siehe
+[Card Editor](./card-editor).
 
 Die native HACS-Negativprüfung auf .177/.68 ist mit 21 Paketen je Host nach
 Vollbackups abgeschlossen: 38 korrekte Ablehnungen erhalten die vollständigen
-Editorstände auch nach Neuladen; zwei gültige Kontrollen bestehen. Offen bleibt
-eine CRC-Lücke: Ein beschädigtes README im ZIP wird zweimal fälschlich mit
+Editorstände auch nach Neuladen; zwei gültige Kontrollen bestehen. Unter 0.1.321
+bestand eine CRC-Lücke: Ein beschädigtes README im ZIP wird zweimal fälschlich mit
 112/112 angenommen und ersetzt den lokalen Editorstand. Beide Originalstände
 sind exakt wiederhergestellt, Bestandsdaten sind unverändert. Keine vollständige
-Integritätsfreigabe; Details im [Card Editor](./card-editor).
+Integritätsfreigabe für 0.1.321; ab 0.1.322 ist dieser Befund behoben.
+Details im [Card Editor](./card-editor).
 
 App 0.1.321 korrigiert die falschen HACS-Titelfehler bei leerem ersten
 Entity-Namen, ohne die Namen zu verändern. Beide Prüfungen nutzen den Paketnamen.

@@ -5,7 +5,31 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
-::: warning Tests négatifs natifs avec l’App 0.1.321 : défaut CRC ouvert
+::: info Contrôle de l’intégrité ZIP dès l’App 0.1.322
+Avant l’import HACS, ATLAS vérifie le CRC32 de chaque entrée ZIP stockée, y compris
+README, langues et fichiers supplémentaires. Les en-têtes locaux et centraux
+doivent concorder : noms, indicateurs, méthode, CRC et tailles. Limites du
+répertoire, nombre de fichiers et chevauchements sont contrôlés. Aucune donnée
+de paquet endommagé n’est transmise à l’éditeur pour import. Les 52 nouveaux cas
+d’intégrité et les 376 tests réussissent. Les archives originales valides restent
+identiques, avec noms vides et espaces extérieurs préservés. La mise à jour native
+de 0.1.321 vers 0.1.322 réussit sur .177/.68 avec HA 2026.10.2 après sauvegardes
+complètes : 30 paquets endommagés/invalides par hôte sont refusés et deux originaux
+JSON/YAML valides atteignent chacun 112/112. Après chaque refus et rechargement,
+la configuration complète de l’éditeur reste inchangée. Le cas CRC initial est
+refusé. Éditeurs d’origine et données, dont sept projets et six plugins par hôte,
+sont conservés.
+
+L’import prend en charge les entrées stockées (STORE). Compression, chiffrement,
+descripteurs de données, archives multi-disques et ZIP64 sont refusés. Les
+commentaires ZIP normaux restent valides. CRC32 détecte une corruption sans
+authentifier le paquet ni sa source. Limite du diagnostic : après une erreur CRC,
+le rapport peut aussi indiquer des fichiers absents, car l’inventaire invalide a
+été écarté. L’avis CRC/intégrité indique la cause ; ces avis secondaires ne prouvent
+pas une absence réelle et leur classement reste à préciser.
+:::
+
+::: warning Constat CRC historique jusqu’à l’App 0.1.321 incluse
 Après de nouvelles sauvegardes complètes, 21 imports réels par hôte sont vérifiés
 sur .177/.68 avec HA 2026.10.2. Les noms absents, vides, composés d’espaces ou
 contradictoires dans les manifestes HACS/paquet, sept fichiers obligatoires absents
@@ -16,8 +40,8 @@ inchangée, hormis la date d’export. Le paquet témoin valide atteint 112/112.
 
 Un ZIP dont le README est modifié avec une somme CRC désormais incorrecte est
 pourtant accepté à 112/112 sur les deux hôtes et remplace l’éditeur local. Un
-lecteur ZIP indépendant confirme l’erreur CRC. La validation actuelle ne prouve
-donc pas l’intégrité complète du ZIP. Le contrôle CRC reste à corriger ; régénérer
+lecteur ZIP indépendant confirme l’erreur CRC. La validation de 0.1.321 ne prouvait
+donc pas l’intégrité complète du ZIP. Le contrôle CRC est corrigé dès 0.1.322 et confirmé sur .177/.68 ; régénérer
 les paquets endommagés depuis un original intact. Les deux éditeurs d’origine
 sont restaurés exactement ; fichiers, projets, plugins et corbeille sont conservés.
 :::
