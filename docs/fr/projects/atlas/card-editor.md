@@ -5,6 +5,23 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: warning Tests négatifs natifs avec l’App 0.1.321 : défaut CRC ouvert
+Après de nouvelles sauvegardes complètes, 21 imports réels par hôte sont vérifiés
+sur .177/.68 avec HA 2026.10.2. Les noms absents, vides, composés d’espaces ou
+contradictoires dans les manifestes HACS/paquet, sept fichiers obligatoires absents
+y compris des langues déclarées, les ZIP illisibles/tronqués et le JSON invalide
+des manifestes/paquets sont correctement refusés dans 19 cas par hôte. Après
+chaque refus et rechargement, la configuration complète de l’éditeur reste
+inchangée, hormis la date d’export. Le paquet témoin valide atteint 112/112.
+
+Un ZIP dont le README est modifié avec une somme CRC désormais incorrecte est
+pourtant accepté à 112/112 sur les deux hôtes et remplace l’éditeur local. Un
+lecteur ZIP indépendant confirme l’erreur CRC. La validation actuelle ne prouve
+donc pas l’intégrité complète du ZIP. Le contrôle CRC reste à corriger ; régénérer
+les paquets endommagés depuis un original intact. Les deux éditeurs d’origine
+sont restaurés exactement ; fichiers, projets, plugins et corbeille sont conservés.
+:::
+
 ::: info Contrôles du titre HACS dès l’App 0.1.321
 Les deux contrôles utilisent désormais le même nom de paquet que la cohérence
 manifeste/script. Un premier nom Entity vide ou composé d’espaces ne provoque

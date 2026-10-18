@@ -15,6 +15,13 @@ are documented in the development status below.
 **As of 2026-10-18 · HA App 0.1.321 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
+Native HACS negative qualification on .177/.68 is complete with 21 packages per
+host after full backups: 38 correct rejections preserve complete Editor states
+through reload, and two valid controls pass. A CRC gap remains: a damaged README
+inside the ZIP is falsely accepted at 112/112 twice and replaces local Editor
+state. Both original Editors are restored exactly and existing data is unchanged.
+This is not complete integrity qualification; see [Card Editor](./card-editor).
+
 App 0.1.321 fixes false HACS title failures with an empty first Entity name,
 without modifying names. Both checks use package identity. All 324 local package
 tests pass; the eight saved original/control archives pass unchanged at 112/112

@@ -15,6 +15,14 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 **Stand: 18.10.2026 · HA-App 0.1.321 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
+Die native HACS-Negativprüfung auf .177/.68 ist mit 21 Paketen je Host nach
+Vollbackups abgeschlossen: 38 korrekte Ablehnungen erhalten die vollständigen
+Editorstände auch nach Neuladen; zwei gültige Kontrollen bestehen. Offen bleibt
+eine CRC-Lücke: Ein beschädigtes README im ZIP wird zweimal fälschlich mit
+112/112 angenommen und ersetzt den lokalen Editorstand. Beide Originalstände
+sind exakt wiederhergestellt, Bestandsdaten sind unverändert. Keine vollständige
+Integritätsfreigabe; Details im [Card Editor](./card-editor).
+
 App 0.1.321 korrigiert die falschen HACS-Titelfehler bei leerem ersten
 Entity-Namen, ohne die Namen zu verändern. Beide Prüfungen nutzen den Paketnamen.
 324 lokale Pakettests bestehen; die acht gesicherten Original-/Kontrollarchive

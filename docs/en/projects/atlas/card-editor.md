@@ -5,6 +5,23 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: warning Native negative checks with App 0.1.321: CRC gap remains open
+After fresh full backups, 21 actual Editor imports per host are checked on
+.177/.68 with HA 2026.10.2. Missing, empty, whitespace-only or conflicting names
+in HACS/package manifests, seven missing required files including declared
+locales, unreadable/truncated ZIPs and broken manifest/package JSON are correctly
+rejected in 19 cases per host. After each rejection and reload, the complete
+Editor configuration is unchanged except its export timestamp. The valid control
+package passes at 112/112 on both hosts.
+
+A ZIP with modified README bytes and an invalid stored CRC is nevertheless
+accepted at 112/112 on both hosts and replaces the local Editor state. An
+independent ZIP reader confirms the CRC error. Current readiness does not prove
+complete ZIP integrity. CRC validation still needs correction; regenerate damaged
+packages from an intact original. Both original Editors were restored exactly
+from backups; existing files, projects, plugins and trash remain intact.
+:::
+
 ::: info HACS title checks from App 0.1.321
 Both title-presence checks now use the same package identity as manifest/script
 consistency checks. An empty or whitespace-only first Entity name no longer

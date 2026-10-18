@@ -5,6 +5,25 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: warning Native Negativprüfung mit App 0.1.321: CRC-Lücke offen
+Auf .177/.68 mit HA 2026.10.2 sind nach frischen Vollbackups je 21 echte
+Editorimporte geprüft. Fehlende, leere, nur aus Leerzeichen bestehende oder
+widersprüchliche Namen in HACS-/Paketmanifesten, sieben fehlende Pflichtdateien
+einschließlich deklarierter Sprachdateien, unlesbare/abgeschnittene ZIPs und
+kaputtes Manifest-/Paket-JSON werden in 19 Fällen je Host korrekt abgelehnt.
+Nach jeder Ablehnung und nach Neuladen ist die vollständige Editor-Konfiguration
+bis auf den Exportzeitstempel unverändert. Das gültige Kontrollpaket besteht
+jeweils mit 112/112.
+
+Ein ZIP mit verändertem README-Inhalt und dadurch falscher CRC-Prüfsumme wird
+jedoch auf beiden Hosts fälschlich mit 112/112 angenommen und ersetzt den lokalen
+Editorstand. Ein unabhängiger ZIP-Leser bestätigt den CRC-Fehler. Die vorhandene
+Prüfung belegt daher keine vollständige ZIP-Integrität. Die CRC-Prüfung ist noch
+zu korrigieren; beschädigte Pakete aus dem unveränderten Original neu erzeugen.
+Beide ursprünglichen Editorstände wurden aus den Sicherungen exakt
+wiederhergestellt; Bestandsdateien, Projekte, Plugins und Papierkorb sind erhalten.
+:::
+
 ::: info HACS-Titelprüfung ab App 0.1.321
 Die beiden Titelprüfungen verwenden jetzt denselben Paketnamen wie die
 Manifest-/Script-Prüfungen. Ein leerer oder nur aus Leerzeichen bestehender Name

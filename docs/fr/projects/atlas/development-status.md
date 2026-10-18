@@ -18,6 +18,14 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 **État au 18/10/2026 · App HA 0.1.321 · intégration HACS 0.1.306.**
 
+La qualification négative HACS native sur .177/.68 est terminée avec 21 paquets
+par hôte après sauvegardes complètes : 38 refus corrects préservent les éditeurs
+complets après rechargement et deux témoins valides réussissent. Un défaut CRC
+reste ouvert : un README endommagé dans le ZIP est accepté deux fois à 112/112
+et remplace l’éditeur local. Les deux éditeurs d’origine sont restaurés exactement
+et les données existantes sont inchangées. L’intégrité complète n’est pas validée ;
+voir [Card Editor](./card-editor).
+
 L’App 0.1.321 corrige les faux échecs de titre HACS avec un premier nom Entity
 vide sans changer les noms. Les deux contrôles utilisent le nom du paquet.
 Les 324 tests locaux réussissent ; les huit archives originales/témoins sauvegardées
