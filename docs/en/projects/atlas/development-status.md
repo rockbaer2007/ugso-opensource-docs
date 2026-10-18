@@ -24,6 +24,13 @@ Card package roundtrips. Settings, files, seven projects and six plugins per hos
 trash and original local Editors remain intact. Both hosts now run 0.1.320.
 See [Card Editor](./card-editor) for scope and limits.
 
+The subsequent native HACS/HA comparison passes with a named control card:
+four ZIP roundtrips at 112/112, byte-identical reexports and 72 matching
+exported/native pairs before/after reload. A new readiness defect remains:
+an empty first Entity name causes two title failures (110/112) despite a named
+package. Name data remains intact; this readiness gap still needs fixing.
+See [Card Editor](./card-editor) for scope and CSS behavior.
+
 App 0.1.319 fixes standalone losses in the actual Editor application path:
 Conditional conditions and Entity custom names survive. All 259 local package
 tests pass, including 19 new Editor/draft/export checks. Stored data is unchanged.

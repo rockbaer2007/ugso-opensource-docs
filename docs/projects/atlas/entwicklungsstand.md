@@ -25,6 +25,13 @@ Card-Paket-Rundläufe. Einstellungen, Dateien, sieben Projekte und sechs Plugins
 je Host sowie Papierkorb und ursprüngliche lokale Editorstände bleiben erhalten.
 Beide Testhosts laufen jetzt mit 0.1.320. Details im [Card Editor](./card-editor).
 
+Der anschließende native HACS-/HA-Vergleich besteht mit benannter Kontrollkarte:
+vier ZIP-Rundläufe mit 112/112 und bytegleichen Rückexporten, 72 passende
+Export-/Referenzpaare vor/nach Neuladen. Offen bleibt ein neuer Prüfberichtfehler:
+Ein leerer erster Entity-Name führt trotz Paketname zu 110/112 wegen zweier
+Titelprüfungen. Die Namensdaten bleiben erhalten; diese HACS-Prüflücke ist noch
+zu korrigieren. Umfang und CSS-Verhalten stehen im [Card Editor](./card-editor).
+
 App 0.1.319 korrigiert die Einzelkartenverluste im tatsächlichen Editor-
 Übernahmepfad. Conditional-Bedingungen und eigene Entity-Namen bleiben erhalten;
 259 lokale Pakettests mit 19 neuen Editor-/Entwurfs-/Exportprüfungen bestehen.

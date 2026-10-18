@@ -18,7 +18,25 @@ HA 2026.10.2 nach Vollsicherungen bestanden: 64 JSON/YAML-Datei-/Einfügefälle
 mit 128 Codeproben nach Import und Neuladen sowie 16 echte Card-Paket-Rundläufe
 erhalten die Originalwerte exakt, auch in verschachtelten Conditionals.
 Bestandsdaten und beide ursprünglichen lokalen Editorstände sind unverändert.
-Dieser Durchlauf enthält keinen neuen nativen HACS-ZIP- oder HA-Darstellungstest.
+Der anschließende native HACS-Test auf beiden Hosts besteht mit einer benannten
+Kontrollkarte vor den acht Namensfällen: vier JSON/YAML-ZIP-Rundläufe mit jeweils
+112/112 Prüfungen und bytegleichen Rückexporten. 72 Export-/Referenzpaare in HA
+stimmen vor und nach Neuladen überein (144 gerenderte Kartenproben). DOM-Texte
+erhalten auch äußere Leerzeichen/Tabulatoren; HA fasst diese visuell durch normales
+CSS zusammen, genauso bei nativen Referenzen. Die Scripts und Sprachdateien wurden
+aus den echten ZIPs unverändert lokal geladen; keine neue HACS-Repository-Installation.
+:::
+
+::: warning HACS-Prüflücke bei leerem ersten Kartennamen
+Beginnt das Paket direkt mit einem leeren Entity-Namen, meldet die Prüfung
+110/112: `package-title-present` und `import-summary-title-present` schlagen trotz
+eigenem Paketnamen fehl. Das betrifft auch ein Paket, dessen erste Karte einen
+Namen nur aus Leerzeichen hat. Die gespeicherten Namenswerte bleiben erhalten;
+der Bereitschaftsbericht ist hier aber nicht zuverlässig. Mit benannter
+Kontrollkarte davor bestehen die acht unveränderten Namensfälle. Die Korrektur
+der Titelprüfung bleibt offen; keine uneingeschränkte HACS-Freigabe für leere
+erste Kartennamen. Die native Fehlanzeige ist mit leerem String reproduziert;
+die Leerzeichenvariante ergibt sich aus der Verwendung von `trim()` im Prüfcode.
 :::
 
 ::: info Einzelkarten-Korrektur ab App 0.1.319

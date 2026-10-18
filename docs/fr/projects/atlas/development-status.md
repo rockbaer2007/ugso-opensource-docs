@@ -28,6 +28,13 @@ source et 16 cycles de paquets Card réels. Paramètres, fichiers, sept projets 
 six plugins par hôte, corbeille et éditeurs locaux d’origine sont conservés.
 Les deux hôtes sont maintenant en 0.1.320. Voir [Card Editor](./card-editor).
 
+Le test HACS/HA natif suivant réussit avec une carte témoin nommée : quatre
+cycles ZIP à 112/112, réexports identiques et 72 paires export/référence concordantes
+avant/après rechargement. Un nouveau défaut reste ouvert : un premier nom Entity
+vide provoque deux échecs de titre (110/112), malgré le nom du paquet. Les noms
+restent intacts ; ce défaut de validation doit encore être corrigé. Périmètre et
+comportement CSS dans [Card Editor](./card-editor).
+
 L’App 0.1.319 corrige les pertes des cartes seules lors du transfert réel vers
 l’éditeur : conditions Conditional et noms Entity sont conservés. Les 259 tests
 locaux réussissent, dont 19 nouveaux contrôles éditeur/brouillon/export. Les

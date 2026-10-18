@@ -18,7 +18,24 @@ HA 2026.10.2 après sauvegardes complètes : 64 cas JSON/YAML par fichier/collag
 128 sorties capturées après import et rechargement, puis 16 cycles de paquets Card
 réels conservent exactement les valeurs originales, même dans des Conditional
 imbriquées. Données et deux éditeurs locaux d’origine restent inchangés. Ce cycle
-ne comprend pas de nouveau test natif HACS ZIP ni de rendu HA.
+est complété par un test HACS natif sur les deux hôtes avec une carte témoin nommée
+avant les huit cas : quatre cycles ZIP JSON/YAML, chacun à 112/112 et réexports
+identiques octet par octet. Les 72 paires export/référence HA concordent avant et
+après rechargement (144 cartes observées). Le texte DOM conserve espaces et
+tabulations ; le CSS HA les réduit visuellement comme dans les cartes natives.
+Scripts et langues sont chargés sans modification depuis les vrais ZIP ; aucune
+nouvelle installation de dépôt HACS n’est comprise.
+:::
+
+::: warning Défaut de validation HACS avec un premier nom vide
+Si le paquet commence par un nom Entity vide, la validation affiche 110/112 :
+`package-title-present` et `import-summary-title-present` échouent malgré le nom
+du paquet. Un premier nom composé d’espaces échoue aussi au contrôle du titre.
+Les noms restent intacts, mais la validation n’est pas fiable dans ce cas. Une
+carte témoin nommée avant les huit cas permet la réussite. La correction du
+contrôle reste ouverte ; les premiers noms vides ne sont pas entièrement validés
+pour HACS. L’échec natif avec une chaîne vide est reproduit ; le cas des espaces
+découle de `trim()` dans le code du contrôle.
 :::
 
 ::: info Correction des cartes seules dès l’App 0.1.319

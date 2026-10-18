@@ -16,7 +16,23 @@ Native updates from 0.1.319 to 0.1.320 pass on .177/.68 with HA 2026.10.2 after
 full backups: 64 JSON/YAML file/paste cases with 128 captured outputs after import
 and reload, plus 16 actual Card package roundtrips, retain original values exactly,
 including nested Conditionals. Existing data and both original local Editors
-remain unchanged. This increment includes no new native HACS ZIP or HA rendering test.
+remain unchanged. The subsequent native HACS check on both hosts passes with a
+named control card before the eight name cases: four JSON/YAML ZIP roundtrips,
+112/112 checks each and byte-identical reexports. Seventy-two exported/native HA
+pairs match before and after reload (144 rendered card samples). DOM text retains
+outer spaces/tabs; normal HA CSS visually collapses them, matching native cards.
+Scripts and locales are loaded unchanged from the actual ZIPs; no new HACS
+repository installation is included.
+:::
+
+::: warning HACS readiness gap with an empty first Card name
+When the package starts with an empty Entity name, readiness reports 110/112:
+`package-title-present` and `import-summary-title-present` fail despite a named
+package. A whitespace-only first name also fails the title check. Name data stays
+intact, but readiness is unreliable here. A named control card before the same
+eight cases passes. Fixing the title check remains open; empty first names do not
+have unrestricted HACS qualification. The native empty-string failure is reproduced;
+the whitespace case follows from `trim()` in the check implementation.
 :::
 
 ::: info Standalone Card correction from App 0.1.319
