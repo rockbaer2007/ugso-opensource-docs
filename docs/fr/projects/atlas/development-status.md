@@ -16,7 +16,15 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 17/10/2026 · App HA 0.1.317 · intégration HACS 0.1.306.**
+**État au 18/10/2026 · App HA 0.1.317 · intégration HACS 0.1.306.**
+
+Les conditions étendues sont vérifiées sur les systèmes de test autorisés .177
+et .68 avec HA 2026.10.2 : 1 008 décisions de visibilité, JSON/YAML,
+enregistrement/réouverture et cycles HACS identiques octet par octet avec 112/112
+contrôles chacun. Les données existantes et les éditeurs locaux sont conservés.
+La divergence de prévisualisation Markdown reste ouverte ; voir le
+[Card Editor](./card-editor) pour les limites. Les nouveaux tests réseau sont
+limités à ces deux adresses ; les rapports sur d’autres hôtes sont historiques.
 Les numéros de version de l’App et de l’intégration sont indépendants.
 
 0.1.317 corrige l’import conditionnel et bloque les conditions numériques sans

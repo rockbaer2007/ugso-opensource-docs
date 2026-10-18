@@ -5,6 +5,26 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Affichage Conditional vérifié le 18/10/2026
+Avec ATLAS 0.1.317 et HA 2026.10.2, les références natives et les scripts
+exportés depuis JSON et YAML concordent dans 1 008 décisions de visibilité :
+14 variantes, six cas d’état et des largeurs de 898 et 2560 pixels CSS sur les
+deux systèmes de test autorisés. Le contrôle couvre ET implicite, ET/OU/NON
+imbriqués, listes `state`/`state_not`, `entity_id`, bornes numériques strictes
+avec zéro et références d’entité, conditions d’écran/utilisateur et cartes
+Conditional imbriquées. L’enregistrement et la réouverture conservent exactement
+JSON et YAML. Les conditions utilisateur incluent l’utilisateur connecté et un
+identifiant de test exclu. Les deux formats réussissent aussi le réimport HACS
+réel sur les deux hôtes : 112/112 contrôles par paquet et réexport identique octet
+par octet. Les éditeurs locaux et les données existantes capturées sont conservés ;
+les éléments de test sont nettoyés et les fichiers restent récupérables dans la
+corbeille. Ce contrôle ne valide pas tous les types de cartes ou
+conditions : les feuilles sont des cartes Core Entity. L’import réel a refusé une
+feuille Markdown malgré une prévisualisation la déclarant importable. Les nouveaux
+tests réseau sont limités à 192.168.178.177 et 192.168.178.68 ; les rapports sur
+d’autres hôtes constituent des preuves historiques.
+:::
+
 Le **Home Assistant Card Editor** est le premier plugin de référence intégré
 à ATLAS. Il permet de concevoir visuellement des cartes, d’importer le YAML
 existant et de préparer des packages ou bundles destinés à HACS.

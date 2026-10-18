@@ -5,6 +5,24 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Extended Conditional rendering checked on 2026-10-18
+With ATLAS 0.1.317 and HA 2026.10.2, native references and scripts exported
+from JSON and YAML agree in 1,008 visibility decisions: 14 variants, six state
+cases and browser widths of 898 and 2560 CSS pixels on the two approved test
+systems. Coverage includes implicit AND, nested AND/OR/NOT, `state`/`state_not`
+lists, `entity_id`, strict numeric bounds including zero and entity references,
+screen/user conditions and nested Conditional cards. Saving and reopening retain
+JSON and YAML exactly. User checks cover the actual signed-in user and an excluded
+test ID. Both formats also pass actual HACS reimport on both hosts: 112/112 package
+checks each and byte-identical re-export. Original local Editors and captured
+existing data are preserved; owned test artifacts are cleaned up and test files
+remain recoverable in trash. This does not qualify every card or condition type:
+this matrix uses Core
+Entity leaves. An actual import rejected a Markdown leaf even though its preview
+reported it as importable. New network tests are restricted to 192.168.178.177
+and 192.168.178.68; earlier reports involving other hosts are historical evidence.
+:::
+
 ## Report a problem (since 0.1.287)
 
 Report a problem first creates a local preview. Copy report copies the reviewed

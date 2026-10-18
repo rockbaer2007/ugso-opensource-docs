@@ -12,8 +12,15 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-17 · HA App 0.1.317 · HACS integration 0.1.306.**
+**As of 2026-10-18 · HA App 0.1.317 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+Extended Conditionals pass on the approved .177 and .68 test systems with
+HA 2026.10.2: 1,008 visibility decisions, JSON/YAML, save/reopen and byte-identical
+HACS roundtrips with 112/112 checks each. Existing data and original local
+Editors are preserved. The Markdown preview mismatch remains open; see the
+[Card Editor](./card-editor) for scope and limits. New network tests are restricted
+to these two addresses; reports below involving other hosts are historical.
 
 0.1.317 fixes conditional import and blocks numeric conditions without valid
 bounds. The isolated combined-project check passes saving, HACS roundtrip,

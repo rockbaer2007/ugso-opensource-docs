@@ -5,6 +5,26 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Erweiterte Conditional-Anzeige geprüft am 18.10.2026
+Mit ATLAS 0.1.317 und HA 2026.10.2 stimmen native Referenzen sowie aus JSON
+und YAML exportierte Scripts in 1.008 Sichtbarkeitsprüfungen überein: 14 Varianten,
+sechs Zustandsfälle und Browserbreiten von 898 und 2560 CSS-Pixeln auf den beiden
+freigegebenen Testsystemen. Geprüft sind implizites UND, verschachteltes UND/ODER/
+NICHT, `state`-/`state_not`-Listen, `entity_id`, strikte numerische Grenzen mit
+Null und Entitätsbezug, Bildschirm- und Benutzerbedingungen sowie verschachtelte
+Conditional-Karten. Speichern und Wiederöffnen erhalten JSON und YAML exakt.
+Beide Formate bestehen auf beiden Hosts den echten HACS-Rückimport mit je
+112/112 Paketprüfungen und bytegleichem Rückexport. Ursprüngliche lokale
+Editorstände und erfasste Bestandsdaten sind erhalten; eigene Testartefakte sind
+bereinigt, Testdateien bleiben im Papierkorb wiederherstellbar.
+Die Benutzerprüfung umfasst die tatsächlich angemeldete und eine ausgeschlossene
+Test-ID. Das ist keine Freigabe aller Karten- oder Bedingungstypen; die Blätter
+dieser Matrix sind Core-Entity-Karten. Ein Markdown-Blatt wurde vom tatsächlichen
+Import abgelehnt, obwohl die Vorprüfung es als importierbar bezeichnete.
+Neue Netzwerktests sind ausschließlich auf 192.168.178.177 und 192.168.178.68
+zulässig; frühere Berichte über andere Hosts sind historische Nachweise.
+:::
+
 Der **ATLAS Home Assistant Card Editor** ist die erste sichtbare
 Referenzanwendung im ATLAS-Umfeld. Er dient dazu, Home-Assistant-Cards visuell
 zu entwerfen, vorhandene YAML-Cards zu importieren und exportierbare Card-Pakete
