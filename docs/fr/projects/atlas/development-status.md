@@ -16,7 +16,14 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 18/10/2026 · App HA 0.1.320 · intégration HACS 0.1.306.**
+**État au 18/10/2026 · App HA 0.1.321 · intégration HACS 0.1.306.**
+
+L’App 0.1.321 corrige les faux échecs de titre HACS avec un premier nom Entity
+vide sans changer les noms. Les deux contrôles utilisent le nom du paquet.
+Les 324 tests locaux réussissent ; les huit archives originales/témoins sauvegardées
+passent sans modification à 112/112 et se réexportent à l’identique. Les manifestes
+invalides restent refusés. La mise à jour native de .177/.68 reste à vérifier ;
+ces hôtes restent en 0.1.320. Voir [Card Editor](./card-editor).
 
 L’App 0.1.320 conserve littéralement les noms Entity vides et les espaces ou
 tabulations extérieurs. Les 296 tests locaux réussissent ; 37 nouveaux contrôles
@@ -32,7 +39,7 @@ Le test HACS/HA natif suivant réussit avec une carte témoin nommée : quatre
 cycles ZIP à 112/112, réexports identiques et 72 paires export/référence concordantes
 avant/après rechargement. Un nouveau défaut reste ouvert : un premier nom Entity
 vide provoque deux échecs de titre (110/112), malgré le nom du paquet. Les noms
-restent intacts ; ce défaut de validation doit encore être corrigé. Périmètre et
+restent intacts ; ce défaut est corrigé localement en 0.1.321. Périmètre et
 comportement CSS dans [Card Editor](./card-editor).
 
 L’App 0.1.319 corrige les pertes des cartes seules lors du transfert réel vers

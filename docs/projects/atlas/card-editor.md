@@ -5,6 +5,18 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info HACS-Titelprüfung ab App 0.1.321
+Die beiden Titelprüfungen verwenden jetzt denselben Paketnamen wie die
+Manifest-/Script-Prüfungen. Ein leerer oder nur aus Leerzeichen bestehender Name
+der ersten Entity-Karte löst dadurch keinen falschen Titelfehler mehr aus.
+Originalnamen und Archive werden nicht verändert. Alle 324 lokalen Pakettests
+bestehen, darunter 28 neue Prüfungen für JSON/YAML, einzelne Karten, Stapel,
+Conditionals und ungültige Manifestnamen. Die vier gesicherten Fehler-ZIPs und
+vier Kontrollpakete bestehen unverändert mit 112/112; ihr Rückexport ist bytegleich.
+Fehlende oder widersprüchliche Manifestnamen bleiben gesperrt. Die Testhosts
+.177/.68 bleiben auf 0.1.320; das native Update auf 0.1.321 steht noch aus.
+:::
+
 ::: info Wörtliche Entity-Namen ab App 0.1.320
 Ausdrücklich gesetzte Entity-Namen bleiben beim Import unverändert: `name: ''`,
 reine Leerzeichen sowie äußere Leerzeichen und Tabulatoren. Nur ein fehlender
@@ -27,15 +39,15 @@ CSS zusammen, genauso bei nativen Referenzen. Die Scripts und Sprachdateien wurd
 aus den echten ZIPs unverändert lokal geladen; keine neue HACS-Repository-Installation.
 :::
 
-::: warning HACS-Prüflücke bei leerem ersten Kartennamen
+::: warning HACS-Prüflücke bis einschließlich App 0.1.320
 Beginnt das Paket direkt mit einem leeren Entity-Namen, meldet die Prüfung
 110/112: `package-title-present` und `import-summary-title-present` schlagen trotz
 eigenem Paketnamen fehl. Das betrifft auch ein Paket, dessen erste Karte einen
 Namen nur aus Leerzeichen hat. Die gespeicherten Namenswerte bleiben erhalten;
 der Bereitschaftsbericht ist hier aber nicht zuverlässig. Mit benannter
-Kontrollkarte davor bestehen die acht unveränderten Namensfälle. Die Korrektur
-der Titelprüfung bleibt offen; keine uneingeschränkte HACS-Freigabe für leere
-erste Kartennamen. Die native Fehlanzeige ist mit leerem String reproduziert;
+Kontrollkarte davor bestehen die acht unveränderten Namensfälle. Die Titelprüfung
+ist ab 0.1.321 lokal korrigiert; ihre native Updateprüfung bleibt offen.
+Die native Fehlanzeige unter 0.1.320 ist mit leerem String reproduziert;
 die Leerzeichenvariante ergibt sich aus der Verwendung von `trim()` im Prüfcode.
 :::
 

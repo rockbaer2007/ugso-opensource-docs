@@ -5,6 +5,17 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info HACS title checks from App 0.1.321
+Both title-presence checks now use the same package identity as manifest/script
+consistency checks. An empty or whitespace-only first Entity name no longer
+causes a false title failure. Original names and archives stay unchanged. All
+324 local package tests pass, including 28 new JSON/YAML, standalone, stack,
+Conditional and invalid-manifest checks. The four saved failing ZIPs and four
+control packages pass unchanged at 112/112 and reexport byte-identically. Missing
+or mismatched manifest names remain rejected. The .177/.68 test hosts remain on
+0.1.320; native update qualification for 0.1.321 is pending.
+:::
+
 ::: info Literal Entity names from App 0.1.320
 Explicit Entity names remain unchanged during import: `name: ''`, whitespace-only
 names and outer spaces/tabs. Only a missing name retains the previous fallback.
@@ -25,13 +36,13 @@ Scripts and locales are loaded unchanged from the actual ZIPs; no new HACS
 repository installation is included.
 :::
 
-::: warning HACS readiness gap with an empty first Card name
+::: warning HACS readiness gap through App 0.1.320
 When the package starts with an empty Entity name, readiness reports 110/112:
 `package-title-present` and `import-summary-title-present` fail despite a named
 package. A whitespace-only first name also fails the title check. Name data stays
 intact, but readiness is unreliable here. A named control card before the same
-eight cases passes. Fixing the title check remains open; empty first names do not
-have unrestricted HACS qualification. The native empty-string failure is reproduced;
+eight cases passes. The title check is fixed locally from 0.1.321; native update
+qualification is pending. The native empty-string failure on 0.1.320 is reproduced;
 the whitespace case follows from `trim()` in the check implementation.
 :::
 

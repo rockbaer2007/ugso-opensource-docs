@@ -5,6 +5,18 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Contrôles du titre HACS dès l’App 0.1.321
+Les deux contrôles utilisent désormais le même nom de paquet que la cohérence
+manifeste/script. Un premier nom Entity vide ou composé d’espaces ne provoque
+plus de faux échec de titre. Noms originaux et archives restent inchangés.
+Les 324 tests locaux réussissent, dont 28 nouveaux contrôles JSON/YAML, cartes
+seules, piles, Conditional et manifestes invalides. Les quatre ZIP en échec
+sauvegardés et quatre paquets témoins passent sans modification à 112/112 et
+leur réexport est identique octet par octet. Les noms de manifeste absents ou
+contradictoires restent refusés. Les hôtes .177/.68 restent en 0.1.320 ; leur mise
+à jour native vers 0.1.321 reste à vérifier.
+:::
+
 ::: info Noms Entity littéraux dès l’App 0.1.320
 Les noms Entity explicites restent inchangés à l’import : `name: ''`, noms composés
 d’espaces et espaces/tabulations extérieurs. Seul un nom absent conserve le nom
@@ -27,14 +39,14 @@ Scripts et langues sont chargés sans modification depuis les vrais ZIP ; aucune
 nouvelle installation de dépôt HACS n’est comprise.
 :::
 
-::: warning Défaut de validation HACS avec un premier nom vide
+::: warning Défaut de validation HACS jusqu’à l’App 0.1.320 incluse
 Si le paquet commence par un nom Entity vide, la validation affiche 110/112 :
 `package-title-present` et `import-summary-title-present` échouent malgré le nom
 du paquet. Un premier nom composé d’espaces échoue aussi au contrôle du titre.
 Les noms restent intacts, mais la validation n’est pas fiable dans ce cas. Une
-carte témoin nommée avant les huit cas permet la réussite. La correction du
-contrôle reste ouverte ; les premiers noms vides ne sont pas entièrement validés
-pour HACS. L’échec natif avec une chaîne vide est reproduit ; le cas des espaces
+carte témoin nommée avant les huit cas permet la réussite. Le contrôle est corrigé
+localement dès 0.1.321 ; la validation native de la mise à jour reste ouverte.
+L’échec natif en 0.1.320 avec une chaîne vide est reproduit ; le cas des espaces
 découle de `trim()` dans le code du contrôle.
 :::
 

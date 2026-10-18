@@ -12,8 +12,15 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-18 · HA App 0.1.320 · HACS integration 0.1.306.**
+**As of 2026-10-18 · HA App 0.1.321 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+App 0.1.321 fixes false HACS title failures with an empty first Entity name,
+without modifying names. Both checks use package identity. All 324 local package
+tests pass; the eight saved original/control archives pass unchanged at 112/112
+and reexport byte-identically. Invalid manifest names remain rejected. Native
+updates on .177/.68 remain pending; both hosts stay on 0.1.320.
+See [Card Editor](./card-editor) for scope.
 
 App 0.1.320 preserves empty Entity names and outer spaces/tabs literally.
 All 296 local package tests pass; 37 new checks compare against the original
@@ -28,7 +35,7 @@ The subsequent native HACS/HA comparison passes with a named control card:
 four ZIP roundtrips at 112/112, byte-identical reexports and 72 matching
 exported/native pairs before/after reload. A new readiness defect remains:
 an empty first Entity name causes two title failures (110/112) despite a named
-package. Name data remains intact; this readiness gap still needs fixing.
+package. Name data remains intact; this readiness gap is fixed locally in 0.1.321.
 See [Card Editor](./card-editor) for scope and CSS behavior.
 
 App 0.1.319 fixes standalone losses in the actual Editor application path:

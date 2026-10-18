@@ -12,8 +12,15 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 18.10.2026 · HA-App 0.1.320 · HACS-Integration 0.1.306.**
+**Stand: 18.10.2026 · HA-App 0.1.321 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+App 0.1.321 korrigiert die falschen HACS-Titelfehler bei leerem ersten
+Entity-Namen, ohne die Namen zu verändern. Beide Prüfungen nutzen den Paketnamen.
+324 lokale Pakettests bestehen; die acht gesicherten Original-/Kontrollarchive
+erreichen unverändert 112/112 und bytegleiche Rückexporte. Ungültige Manifestnamen
+bleiben gesperrt. Das native Update auf .177/.68 ist noch zu prüfen; dort bleibt
+0.1.320 installiert. Details im [Card Editor](./card-editor).
 
 App 0.1.320 erhält leere Entity-Namen und äußere Leerzeichen/Tabulatoren
 unverändert. 296 lokale Pakettests bestehen; 37 neue Prüfungen vergleichen mit
@@ -29,8 +36,8 @@ Der anschließende native HACS-/HA-Vergleich besteht mit benannter Kontrollkarte
 vier ZIP-Rundläufe mit 112/112 und bytegleichen Rückexporten, 72 passende
 Export-/Referenzpaare vor/nach Neuladen. Offen bleibt ein neuer Prüfberichtfehler:
 Ein leerer erster Entity-Name führt trotz Paketname zu 110/112 wegen zweier
-Titelprüfungen. Die Namensdaten bleiben erhalten; diese HACS-Prüflücke ist noch
-zu korrigieren. Umfang und CSS-Verhalten stehen im [Card Editor](./card-editor).
+Titelprüfungen. Die Namensdaten bleiben erhalten; diese HACS-Prüflücke ist lokal
+in 0.1.321 korrigiert. Umfang und CSS-Verhalten stehen im [Card Editor](./card-editor).
 
 App 0.1.319 korrigiert die Einzelkartenverluste im tatsächlichen Editor-
 Übernahmepfad. Conditional-Bedingungen und eigene Entity-Namen bleiben erhalten;
