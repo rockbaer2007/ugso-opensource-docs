@@ -27,8 +27,10 @@ abschalten und die laufende Stream-Deck-Konfiguration nicht ersetzen.
 ## Kleiner Einstieg
 
 Nur wenn die Prüfseite flüssig läuft, dort „Kleinen HA-Einstieg öffnen“ wählen.
-Die eigenen Dashboards sind nur für Administratoren freigegeben und nicht in
-der Seitenleiste. Bei Bedarf selbst mit dem bestehenden HA-Konto anmelden;
+Die ersten Testdashboards wurden nur für Administratoren und ohne
+Seitenleisteneintrag angelegt. Der Nutzer hat sie für den Tablet-Zugriff in der
+Seitenleiste eingeblendet. Künftige eigene Testdashboards sollen ohne
+„Admin-only“ und mit Seitenleisteneintrag erstellt werden. Bei Bedarf selbst mit dem bestehenden HA-Konto anmelden;
 Zugangsdaten oder Tokens nicht weitergeben.
 
 1. **Start:** „Testzustand 18“ wählen; „HA verbunden“ kontrollieren.

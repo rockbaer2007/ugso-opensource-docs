@@ -23,7 +23,9 @@ arrêter. Ne pas effacer les données, désactiver la sécurité ou remplacer St
 ## Petit test initial
 
 Seulement si la page reste fluide, choisir « Kleinen HA-Einstieg öffnen ».
-Les tableaux séparés sont réservés aux administrateurs, hors barre latérale.
+Les premiers tableaux étaient réservés aux administrateurs, hors barre latérale.
+L’utilisateur les a ajoutés à cette barre pour la tablette. Les futurs tableaux
+propres au test doivent être créés sans « Admin-only » et visibles dans cette barre.
 Se connecter soi-même avec le compte HA existant si nécessaire ; ne pas partager
 identifiants ni jetons.
 

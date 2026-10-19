@@ -20,10 +20,15 @@ age, Android version and browser version are different; exact versions of this
 tablet are still unconfirmed. Stop if a feature is missing or the page is slow.
 Do not clear browser data, disable security checks or replace the Stream Deck setup.
 
+The first test dashboards were created admin-only and hidden from the sidebar.
+The user has enabled their sidebar entries for tablet access. Future owned test
+dashboards should be created without Admin-only and shown in the sidebar.
+
 ## Small entry test
 
 Only when the check is responsive, choose “Kleinen HA-Einstieg öffnen”. These
-separate dashboards are admin-only and hidden from the sidebar. Sign in yourself
+separate initial dashboards retain their original admin restriction unless changed.
+Sign in yourself
 with an existing HA account if needed; do not share credentials or tokens.
 
 1. **Start:** choose “Testzustand 18”; check “HA verbunden”.
