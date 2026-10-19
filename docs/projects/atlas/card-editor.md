@@ -8,6 +8,8 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 Tablet-Ergebnis: [12-/360-/720-Karten-Test](tablet-test.md) auf Galaxy Tab A6,
 Android 11 / LineageOS, Chrome Mobile 155. Nutzerbestätigung für 720 Karten auf
 beiden Testhosts samt Theme-Wechsel und Wiederverbindung.
+Zusätzlich bestätigt der Nutzer je [60 Minuten mit UIX und 720 Karten](tablet-uix-dauertest.md)
+auf .177/.68. Testobjekte sind bereinigt, Bestandsdaten erhalten und je drei Vollbackups vorhanden.
 
 ::: info Begrenzter und abbrechbarer HACS-Import mit App 0.1.327
 Vor dem Lesen gilt eine feste ZIP-Grenze von **32 MiB**. Das ZIP-Inventar ist

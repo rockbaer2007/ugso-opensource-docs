@@ -1,6 +1,7 @@
 # Tablet-Dauertest mit UIX: 720 Karten
 
-Stand: 19.10.2026. **Vorbereitet, noch kein bestandener 60-Minuten-Tablet-Test.**
+Stand: 19.10.2026. **Nutzerbestätigung: je 60 Minuten auf .177 und .68 bestanden,
+einschließlich Theme-Wechsel und Wiederverbindung.**
 App 0.1.327, HA 2026.10.2, UIX 8.4.0; Card-Mod wird nicht geladen.
 Gerät laut Nutzer: Samsung Galaxy Tab A6, Android 11 / LineageOS,
 Chrome Mobile 155.
@@ -9,12 +10,17 @@ Frische vollständige HA-Sicherungen und Bestandsabzüge sind vorhanden. Eigene
 Dashboards sind ohne Admin-only in der Seitenleiste sichtbar. Bestehende
 Editoren, Projekte, Plugins und Einstellungen bleiben erhalten.
 
-## Auf dem Tablet
+Dies ist eine funktionale Nutzerrückmeldung. Es liegen keine separat erhobenen
+Tablet-JSON-Protokolle, FPS-/Speicherwerte oder detaillierten Dreh-/Scrollresultate vor.
+PC-Vorprüfung und lokale Simulation bleiben davon getrennt.
+
+## Historischer Prüfablauf
 
 Je Host einen eigenen vollständigen 60-Minuten-Lauf durchführen, nacheinander:
 
-- [.177: UIX-Dauertest öffnen](http://192.168.178.177/atlas-tablet-uix-soak-20261019/720)
-- [.68: UIX-Dauertest öffnen](http://192.168.178.68/atlas-tablet-uix-soak-20261019/720)
+Die eigenen Ansichten unter `/atlas-tablet-uix-soak-20261019/720` sind nach
+dem Abschluss entfernt. Sie sind keine aktiven Testlinks mehr. Für eine spätere
+Wiederholung zuerst neue Sicherungen und eigene Testansichten vorbereiten.
 
 1. Tablet ans Ladegerät anschließen, Bildschirm wach halten, andere Apps wie
    beim bisherigen Test schließen. Nur die jeweilige Testseite im Vordergrund
@@ -42,10 +48,11 @@ Darstellungszeitmessung. Schlafmodus/Hintergrundpausen als Unterbrechung melden.
 Die automatische Theme-Wiederherstellung am Ende beziehungsweise beim Stoppen
 erhält die ursprüngliche Auswahl. Ein Neuladen startet den Lauf nicht automatisch neu.
 
-## Abschluss nach Rückmeldung
+## Abschluss
 
-Die PC-Vorprüfung ersetzt den Tablet-Dauerlauf nicht. Nach den Ergebnissen eigene
-Testobjekte und temporäres UIX entfernen, WWW-Dateien in den wiederherstellbaren
-Papierkorb verschieben, Originaldaten erneut vergleichen und je drei neueste
-erfolgreiche HA-Vollbackups behalten. PC-Sicherungen und installierte Updates
-bleiben erhalten. Card-Mod und UIX niemals parallel laden.
+Eigene Dashboards, Ressourcen, synthetische Zustände sowie temporäres UIX sind
+entfernt; WWW-Dateien liegen im wiederherstellbaren File-Studio-Papierkorb. Alle
+sieben Projekte, sechs Plugins je Host, 551 erfasste Bestandsdateien auf .177 und
+neun auf .68 sowie ursprüngliche Einstellungen und alte Papierkorbeinträge sind
+unverändert. Auf jedem Host bleiben drei Vollbackups. PC-Sicherungen und
+installierte Updates bleiben erhalten. Card-Mod und UIX niemals parallel laden.

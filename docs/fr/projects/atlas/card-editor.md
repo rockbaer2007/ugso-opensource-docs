@@ -8,6 +8,8 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 Résultat tablette : [test 12/360/720 cartes](tablet-test.md) sur Galaxy Tab A6,
 Android 11 / LineageOS, Chrome Mobile 155. L’utilisateur confirme 720 cartes
 sur les deux hôtes, avec thèmes et reconnexion.
+L’utilisateur confirme aussi [60 minutes avec UIX et 720 cartes](tablet-uix-dauertest.md)
+par hôte. Objets propres retirés, données conservées et trois sauvegardes complètes par hôte.
 
 ::: info Import HACS limité et annulable avec l’App 0.1.327
 La limite ZIP fixe est de **32 MiB**, vérifiée avant lecture : **2 048 entrées**,

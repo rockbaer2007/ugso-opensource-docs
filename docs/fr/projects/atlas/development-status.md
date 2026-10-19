@@ -47,7 +47,13 @@ Voir le [guide Card Editor](card-editor.md). L’utilisateur confirme 720 cartes
 les deux hôtes, thèmes et reconnexion : Galaxy Tab A6, Android 11 / LineageOS,
 Chrome Mobile 155. Fluide après arrêt d’autres applications. Objets propres retirés,
 données conservées, trois sauvegardes complètes par hôte. Sans mesure FPS/longue
-durée ; UIX tablette reste ouvert. Voir le [résultat tablette](tablet-test.md).
+durée pour cette première étape. Voir le [résultat tablette](tablet-test.md).
+
+**Test prolongé UIX tablette terminé :** l’utilisateur confirme 60 minutes par
+hôte avec 720 cartes, thèmes et reconnexion sur .177/.68, UIX 8.4.0 seul.
+Objets propres et UIX temporaire retirés, comparaison des données réussie et trois
+sauvegardes complètes par hôte. Sans mesure indépendante FPS/mémoire/fuite.
+Voir le [résultat prolongé](tablet-uix-dauertest.md).
 
 **Constat historique des tailles avec l’App 0.1.324.**
 24 imports réels sur .177/.68 : 16 adoptions à 112/112 jusqu’à 30 008 fichiers

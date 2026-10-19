@@ -1,6 +1,7 @@
 # UIX tablet soak: 720 Cards
 
-As of 19 October 2026. **Prepared, not a completed 60-minute tablet result.**
+As of 19 October 2026. **User confirms 60 minutes on each host, .177 and .68,
+with working theme changes and reconnection.**
 App 0.1.327, HA 2026.10.2, UIX 8.4.0; Card-Mod is not loaded.
 User-reported device: Samsung Galaxy Tab A6, Android 11 / LineageOS,
 Chrome Mobile 155.
@@ -9,12 +10,17 @@ Fresh full backups and existing-data captures precede setup. Owned dashboards
 are sidebar-visible without Admin-only; existing Editors, projects, plugins and
 settings are preserved.
 
-## On the tablet
+This is user-reported functional qualification. No separately collected tablet
+JSON logs, FPS/memory measurements or detailed rotation/scrolling results are
+supplied. Desktop preflight and local simulation remain separate.
+
+## Historical procedure
 
 Run a complete 60 minutes per host, sequentially:
 
-- [.177 UIX soak](http://192.168.178.177/atlas-tablet-uix-soak-20261019/720)
-- [.68 UIX soak](http://192.168.178.68/atlas-tablet-uix-soak-20261019/720)
+Owned views at `/atlas-tablet-uix-soak-20261019/720` are removed after completion
+and are no longer active test links. Prepare new backups and owned views before
+any future repeat.
 
 1. Connect power, keep the screen awake and close other Apps as in the earlier
    test. Keep only the current test page in the foreground. Sign in yourself
@@ -38,9 +44,10 @@ and HA request times do not measure FPS/rendering latency. Report screen sleep
 or background pauses as interruptions. Finish/Stop restores the original theme.
 Reload does not automatically resume the run.
 
-## After the report
+## Completion
 
-Desktop preflight is not the tablet soak. Afterwards remove owned objects and
-temporary UIX, move WWW files into recoverable Trash, compare original data again
-and retain the three newest successful full HA backups per host. Preserve PC
-backups and installed updates. Never load Card-Mod and UIX in parallel.
+Owned dashboards, resources, synthetic states and temporary UIX are removed;
+WWW files are in recoverable File Studio Trash. All seven projects and six plugins
+per host, 551 captured existing files on .177 and nine on .68, original settings
+and old trash entries are unchanged. Three full backups remain per host. PC
+backups and installed updates are preserved. Never load Card-Mod and UIX together.

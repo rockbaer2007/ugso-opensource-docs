@@ -42,7 +42,13 @@ are preserved; owned test objects are removed. See the [Card Editor guide](card-
 The user confirms 720 Cards on both hosts, themes and reconnection: Galaxy Tab
 A6, Android 11 / LineageOS, Chrome Mobile 155. Responsive after stopping other
 Apps. Owned objects removed, existing data preserved, three full backups each.
-No FPS/long-term measurement; tablet UIX remains open. See [tablet result](tablet-test.md).
+This earlier run has no FPS/long-term measurement. See [tablet result](tablet-test.md).
+
+**UIX tablet soak completed:** The user confirms 60 minutes per host with 720
+Cards, themes and reconnection on .177/.68, UIX 8.4.0 alone. Owned objects and
+temporary UIX are removed, existing data comparisons pass and three full backups
+remain per host. No independent FPS/memory/leak measurement is claimed.
+See the [soak result](tablet-uix-dauertest.md).
 
 **Historical size finding with App 0.1.324.**
 24 actual import cases on .177/.68: 16 adoptions at 112/112 up to 30,008 files

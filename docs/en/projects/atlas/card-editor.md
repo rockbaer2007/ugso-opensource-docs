@@ -8,6 +8,8 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 Tablet result: [12/360/720-Card test](tablet-test.md) on Galaxy Tab A6,
 Android 11 / LineageOS, Chrome Mobile 155. The user confirms 720 Cards on both
 hosts, including theme changes and reconnection.
+The user also confirms [60 minutes with UIX and 720 Cards](tablet-uix-dauertest.md)
+on each host. Test objects are removed, existing data preserved and three full backups retained each.
 
 ::: info Bounded, cancellable HACS import with App 0.1.327
 The fixed ZIP limit is **32 MiB**, checked before reading. Inventory budgets

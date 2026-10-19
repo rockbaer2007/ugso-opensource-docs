@@ -44,7 +44,13 @@ Der Nutzer bestätigt 720 Karten auf beiden Hosts samt Theme-Wechsel und
 Wiederverbindung: Galaxy Tab A6, Android 11 / LineageOS, Chrome Mobile 155.
 Nach Stoppen anderer Apps läuft der Browser flüssig. Testobjekte bereinigt,
 Bestandsdaten erhalten, je drei Vollbackups. Keine FPS-/Langzeitmessung;
-Tablet-UIX bleibt offen. Siehe [Tablet-Ergebnis](tablet-test.md).
+Der frühere Card-Mod-Lauf prüft UIX noch nicht. Siehe [Tablet-Ergebnis](tablet-test.md).
+
+**UIX-Tablet-Dauertest abgeschlossen:** Der Nutzer bestätigt je 60 Minuten mit
+720 Karten auf .177/.68 samt Themes und Wiederverbindung. UIX 8.4.0 lief allein.
+Testobjekte und temporäres UIX sind entfernt, Bestandsvergleich bestanden und
+je drei Vollbackups erhalten. Keine unabhängige FPS-/Speicher- oder Leckmessung.
+Siehe [Dauertest-Ergebnis](tablet-uix-dauertest.md).
 
 **Historischer Größenbefund mit App 0.1.324.**
 24 echte Importfälle auf .177/.68: 16 Annahmen mit 112/112 bis 30.008 Dateien
