@@ -5,6 +5,10 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+Tablet-Vorbereitung (noch kein Tablet-Ergebnis): [Browsercheck und gestufter
+12-/360-/720-Karten-Test](tablet-test.md). Bei bereits trägen Geräten zuerst klein
+prüfen; vorhandene Stream-Deck-Einrichtungen erhalten.
+
 ::: info Begrenzter und abbrechbarer HACS-Import mit App 0.1.327
 Vor dem Lesen gilt eine feste ZIP-Grenze von **32 MiB**. Das ZIP-Inventar ist
 auf **2.048 Einträge**, **8 MiB pro Eintrag**, **24 MiB Gesamtinhalt** und

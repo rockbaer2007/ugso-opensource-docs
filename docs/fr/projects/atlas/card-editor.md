@@ -5,6 +5,9 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+Préparation tablette, sans résultat tablette : [navigateur et test progressif
+12/360/720 cartes](tablet-test.md). Commencer petit et conserver Stream Deck.
+
 ::: info Import HACS limité et annulable avec l’App 0.1.327
 La limite ZIP fixe est de **32 MiB**, vérifiée avant lecture : **2 048 entrées**,
 **8 MiB par entrée**, **24 MiB au total** et **1 024 octets UTF-8 par chemin**.

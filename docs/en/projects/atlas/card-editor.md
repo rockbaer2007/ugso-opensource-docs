@@ -5,6 +5,9 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+Tablet preparation, not a tablet result: [browser check and staged 12/360/720
+Card test](tablet-test.md). Start small on slow devices; preserve Stream Deck setups.
+
 ::: info Bounded, cancellable HACS import with App 0.1.327
 The fixed ZIP limit is **32 MiB**, checked before reading. Inventory budgets
 are **2,048 entries**, **8 MiB per entry**, **24 MiB total content** and
