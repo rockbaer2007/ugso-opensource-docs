@@ -34,9 +34,29 @@ sont préservés.
 
 La portée est l’import dans Chrome sous Windows. Les mesures de mémoire couvrent
 aussi les autres onglets et ne prouvent pas la stabilité mémoire isolée d’ATLAS.
-Le rendu HA des 720 cartes et une durée supérieure restent à vérifier. Chaque
+Le rendu HA a ensuite été vérifié séparément ci-dessous ; une durée supérieure
+reste hors périmètre. Chaque
 import confirmé crée un groupe local ; les groupes de test ont été retirés en
 restaurant la configuration originale complète.
+:::
+
+::: info Rendu HA de 360/720 cartes sur .177/.68
+Vérifié le 19/10/2026 avec l’App 0.1.327 inchangée et HA 2026.10.2 : projets
+exportés originaux et copies dynamiques propres au test, avec Core, Bubble 3.4.2
+et Mushroom 5.2.3. **Card-Mod 4.2.1 et UIX 8.4.0 fonctionnent séparément.** UIX
+traite `card_mod` et les styles natifs `uix`. 62 relevés stabilisés réussissent
+33 120 comparaisons avec les cartes natives de référence, sans carte d’erreur :
+clair/sombre, héritage CSS, bordures/arrondis et opacité Bubble. Mushroom Jinja
+change texte, icône et couleur avec les états de test 18/28. Huit fermetures
+WebSocket se reconnectent automatiquement sans recharger la page ; HA peut
+reconstruire sa vue de cartes pendant la reprise.
+
+Sauvegardes complètes avant le test ; les éditeurs existants ne sont ni ouverts
+ni modifiés. Fichiers contrôlés, sept projets et six plugins par hôte sont
+préservés. Les objets de test sont retirés et les fichiers WWW placés dans la
+corbeille. Le navigateur testé est Chrome sous Windows ; FPS, performances du
+navigateur tablette/ARM64, absence de fuite mémoire et longue durée ne sont pas
+démontrés. Les mesures suivent la fin des transitions et du chargement des modules.
 :::
 
 ::: warning Constat historique des tailles avec l’App 0.1.324

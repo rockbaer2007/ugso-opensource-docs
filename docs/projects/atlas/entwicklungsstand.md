@@ -31,7 +31,17 @@ verschachtelten Karten, zusammen 238 Abbrüche und 116 gleiche Datei-Wiederholun
 Vier tatsächliche HACS-Rundläufe sind bytegleich; je drei Neuladetests und die
 Prüfung eines gültigen 24-MiB-Pakets bestehen. Originaleditoren und erfasste
 Bestandsdaten bleiben erhalten. Browserweite Speicherwerte sind kein isolierter
-ATLAS-Speichernachweis; HA-Darstellung aller 720 Karten bleibt ein eigener Test.
+ATLAS-Speichernachweis; die HA-Darstellung ist separat geprüft, siehe unten.
+
+**HA-Darstellung großer Projekte bestanden.** Auf .177/.68 mit App 0.1.327 und
+HA 2026.10.2: ursprüngliche und dynamische 360-/720-Karten-Projekte, Card-Mod
+4.2.1 und UIX 8.4.0 strikt getrennt. UIX verarbeitet auch `card_mod`. Hell/Dunkel,
+CSS-Vererbung, Mushroom-Jinja und acht automatische Wiederverbindungen bestehen:
+62 Aufnahmen, 33.120 Vergleiche mit nativen Referenzen, keine Fehlerkarten.
+Vorhandene Editoren und erfasste Daten bleiben erhalten; eigene Testobjekte
+werden bereinigt. Details und Grenzen im [Card-Editor-Handbuch](card-editor.md).
+Als Nächstes: Bedienbarkeit auf einem schwächeren Browsergerät und responsive
+Breiten prüfen; Windows Chrome belegt keine Tablet-/ARM64-Browserleistung.
 
 **Historischer Größenbefund mit App 0.1.324.**
 24 echte Importfälle auf .177/.68: 16 Annahmen mit 112/112 bis 30.008 Dateien

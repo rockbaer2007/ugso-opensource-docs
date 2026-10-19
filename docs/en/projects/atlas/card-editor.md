@@ -33,10 +33,28 @@ total content completes validation. Three reload checkpoints per host pass;
 original Editors and captured existing data are preserved.
 
 This qualifies import in Windows Chrome. Browser-wide process memory includes
-other tabs and does not establish isolated ATLAS memory stability. Actual HA
-rendering of all 720 Cards and longer operation remain separate scopes.
+other tabs and does not establish isolated ATLAS memory stability. HA rendering
+was subsequently checked separately below; longer operation remains outside scope.
 Each confirmed import creates a local group; test groups were removed by
 restoring the original complete configuration.
+:::
+
+::: info HA rendering of 360/720 Cards on .177/.68
+Checked on 19 October 2026 with unchanged App 0.1.327 and HA 2026.10.2:
+original exported projects and owned dynamic copies with Core, Bubble 3.4.2
+and Mushroom 5.2.3. **Card-Mod 4.2.1 and UIX 8.4.0 run separately.** UIX handles
+both `card_mod` and native `uix` styles. 62 settled snapshots pass 33,120
+comparisons against native reference Cards, with no error Card: light/dark,
+CSS inheritance, borders/radii and Bubble opacity. Mushroom Jinja changes text,
+icon and color with owned states 18/28. Eight WebSocket closures reconnect
+automatically without page reload; HA may rebuild its Card view during recovery.
+
+Full backups precede testing; existing Editors are neither opened nor modified.
+Captured files, seven projects and six plugins per host are preserved. Owned
+test setup is removed and WWW files moved to Trash. Windows Chrome is the tested
+browser; FPS, tablet/ARM64-browser performance, leak freedom and long-term use
+are not established. Measurements follow completed theme transitions and module
+loading, rather than intermediate states.
 :::
 
 ::: warning Historical size finding with App 0.1.324

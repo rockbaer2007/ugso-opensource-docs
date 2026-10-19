@@ -34,9 +34,28 @@ Originaleditoren und erfasste Bestandsdaten bleiben erhalten.
 
 Geprüft wurde der Import in Windows Chrome. Die Gesamtprozess-Speicherwerte
 umfassen andere Tabs und belegen keine isolierte ATLAS-Speicherstabilität.
-Die tatsächliche HA-Darstellung aller 720 Karten und längerer Betrieb sind
-damit nicht freigegeben. Jeder bestätigte Import legt eine lokale Gruppe an;
+Die HA-Darstellung wurde anschließend separat geprüft, siehe unten; längerer
+Betrieb ist damit nicht freigegeben. Jeder bestätigte Import legt eine lokale Gruppe an;
 die Testgruppen wurden durch Wiederherstellen der Originalkonfiguration entfernt.
+:::
+
+::: info HA-Darstellung von 360/720 Karten auf .177/.68
+Am 19.10.2026 mit unveränderter App 0.1.327 und HA 2026.10.2 geprüft:
+ursprüngliche exportierte Projekte sowie eigene dynamische Varianten mit Core,
+Bubble 3.4.2 und Mushroom 5.2.3. **Card-Mod 4.2.1 und UIX 8.4.0 laufen getrennt.**
+UIX verarbeitet sowohl `card_mod` als auch native `uix`-Stile. 62 abgeschlossene
+Aufnahmen bestehen mit 33.120 Vergleichen gegen native Referenzkarten und ohne
+Fehlerkarte: Hell/Dunkel, CSS-Vererbung, Rahmen/Rundungen und Bubble-Deckkraft.
+Mushroom-Jinja wechselt Text, Symbol und Farbe bei eigenen Testzuständen 18/28.
+Acht WebSocket-Abbrüche verbinden automatisch wieder, ohne die Browserseite
+neu zu laden; HA darf dabei seine Kartenansicht neu aufbauen.
+
+Vorher Vollbackups; bestehende Editoren werden nicht geöffnet oder verändert.
+Erfasste Dateien, sieben Projekte und sechs Plugins je Host bleiben erhalten.
+Eigene Testeinrichtungen werden bereinigt, WWW-Dateien in den Papierkorb verschoben.
+Windows Chrome ist der geprüfte Browser. Bildrate, Tablet-/ARM64-Browserleistung,
+Leckfreiheit und Langzeitbetrieb sind damit nicht nachgewiesen. Gemessen wird nach
+Theme-Übergängen und abgeschlossenem Modulladen, nicht während Zwischenzuständen.
 :::
 
 ::: warning Historischer Größenbefund mit App 0.1.324

@@ -34,8 +34,18 @@ projets et plugins vérifiés sont conservés ; les deux hôtes exécutent 0.1.3
 fichier au total. Quatre cycles HACS réels sont identiques octet par octet ;
 trois rechargements par hôte et un paquet valide de 24 MiB réussissent. Les
 éditeurs originaux et données contrôlées sont préservés. La mémoire globale du
-navigateur n’est pas une mesure isolée d’ATLAS ; le rendu HA des 720 cartes
-reste une vérification distincte.
+navigateur n’est pas une mesure isolée d’ATLAS ; le rendu HA est vérifié
+séparément ci-dessous.
+
+**Le rendu HA des grands projets réussit.** Sur .177/.68 avec l’App 0.1.327 et
+HA 2026.10.2 : projets originaux et dynamiques de 360/720 cartes, Card-Mod 4.2.1
+et UIX 8.4.0 strictement séparés. UIX traite aussi `card_mod`. Clair/sombre,
+héritage CSS, Mushroom Jinja et huit reconnexions automatiques réussissent :
+62 relevés, 33 120 comparaisons aux références natives, aucune carte d’erreur.
+Éditeurs existants et données contrôlées sont préservés ; objets de test retirés.
+Voir le [guide Card Editor](card-editor.md). Ensuite : ergonomie sur un appareil
+moins puissant et largeurs adaptatives ; Chrome sous Windows ne démontre pas
+les performances d’un navigateur tablette/ARM64.
 
 **Constat historique des tailles avec l’App 0.1.324.**
 24 imports réels sur .177/.68 : 16 adoptions à 112/112 jusqu’à 30 008 fichiers

@@ -30,8 +30,17 @@ on .177/.68: 60 series adoptions per host, 36 fields with 360/720 nested Cards,
 238 cancellations and 116 identical-file retries in total. Four actual HACS
 round trips are byte-identical; three reload checkpoints per host and a valid
 24-MiB package pass. Original Editors and captured existing data are preserved.
-Browser-wide memory is not isolated ATLAS memory evidence; actual HA rendering
-of all 720 Cards remains a separate test.
+Browser-wide memory is not isolated ATLAS memory evidence; HA rendering is
+qualified separately below.
+
+**Large-project HA rendering passes.** On .177/.68 with App 0.1.327 and HA
+2026.10.2: original and dynamic 360/720-Card projects, Card-Mod 4.2.1 and UIX
+8.4.0 strictly separated. UIX also handles `card_mod`. Light/dark, CSS inheritance,
+Mushroom Jinja and eight automatic reconnections pass: 62 snapshots, 33,120
+native-reference comparisons, no error Cards. Existing Editors and captured data
+are preserved; owned test objects are removed. See the [Card Editor guide](card-editor.md).
+Next: usability on a weaker browser device and responsive widths; Windows Chrome
+does not establish tablet/ARM64-browser performance.
 
 **Historical size finding with App 0.1.324.**
 24 actual import cases on .177/.68: 16 adoptions at 112/112 up to 30,008 files
