@@ -5,6 +5,22 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: warning Große HACS-Pakete: geprüfter Umfang und offene Grenzen
+Am 19.10.2026 mit App 0.1.324 und HA 2026.10.2 auf .177/.68 geprüft:
+24 echte Importfälle, davon 16 gültige Übernahmen mit 112/112 und acht
+Ablehnungen. Bis zu 30.008 Dateien, 64 MiB gespeicherter Zusatzinhalt und
+16 MiB README-Text werden angenommen. Deflate-Pakete mit 128 MiB Inhalt oder
+fast 4 GiB deklarierter Eintragsgröße sowie abgeschnittene ZIPs werden abgewiesen.
+Die Kompressionsablehnung ist kein Größenlimit und keine ZIP-Bomben-Freigabe.
+
+Explizite Größen-/Dateianzahlgrenzen und ein zuverlässig abbrechbarer laufender
+Import fehlen noch. Die Datei wird vollständig gelesen; die Prüfung läuft
+synchron im UI-Thread. Neuladen unmittelbar nach Dateiauswahl erhält in je einem
+Versuch den Originalentwurf, belegt aber keinen Abbruch während laufender CRC-
+Arbeit. Beide vollständigen Originaleditoren und geprüfte Bestandsdaten sind
+erhalten. Die Prüfung nutzt Windows Chrome, keinen Browser auf dem Pi.
+:::
+
 ::: info Sichere HACS-Paketübernahme ab App 0.1.324
 Mehrere eingebettete ATLAS-Projekte oder Scripts werden vor der Paketauswahl
 abgewiesen. HACS-, Paket- und Editorplan-Scriptnamen müssen übereinstimmen;

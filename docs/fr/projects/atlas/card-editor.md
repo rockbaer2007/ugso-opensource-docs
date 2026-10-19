@@ -5,6 +5,22 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: warning Grands paquets HACS : périmètre vérifié et limites restantes
+Vérification du 19/10/2026 avec l’App 0.1.324 et HA 2026.10.2 sur .177/.68 :
+24 imports réels, dont 16 adoptions valides à 112/112 et huit refus.
+Jusqu’à 30 008 fichiers, 64 MiB de contenu supplémentaire stocké et un README
+de 16 MiB sont acceptés. Les ZIP tronqués et les archives Deflate avec 128 MiB
+de contenu ou une taille déclarée de presque 4 GiB sont refusés. Le refus de
+compression ne constitue pas une limite de taille ni une protection ZIP-bombe.
+
+Les limites explicites de taille/nombre de fichiers et l’annulation fiable d’un
+import actif restent à réaliser. Le fichier entier est lu avant la vérification
+synchrone dans le thread UI. Un rechargement immédiat après sélection conserve
+le brouillon original lors d’un essai par hôte, sans prouver une annulation
+pendant le calcul CRC. Les deux éditeurs originaux complets et les données
+vérifiées sont conservés. Tests dans Chrome Windows, pas dans un navigateur du Pi.
+:::
+
 ::: info Import HACS sécurisé dès l’App 0.1.324
 Plusieurs projets ATLAS ou scripts intégrés sont refusés avant toute sélection.
 Les noms de scripts HACS, du paquet et du plan doivent correspondre ; les noms

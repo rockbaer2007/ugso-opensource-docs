@@ -5,6 +5,22 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: warning Large HACS packages: tested scope and remaining limits
+Checked on 19 October 2026 with App 0.1.324 and HA 2026.10.2 on .177/.68:
+24 actual imports, including 16 valid adoptions at 112/112 and eight rejections.
+Up to 30,008 files, 64 MiB of extra stored content and a 16-MiB README are
+accepted. Deflate archives with 128 MiB of content or an almost 4-GiB declared
+entry size, and truncated ZIPs, are rejected. Compression rejection is not a
+size limit or a claim of zip-bomb protection.
+
+Explicit byte/file-count limits and reliable cancellation of an active import
+are still missing. The complete file is read before synchronous UI-thread
+validation. Reload immediately after file selection preserves the original
+draft in one attempt per host, but does not prove cancellation during CRC work.
+Both complete original Editors and checked existing data are preserved.
+Testing uses Windows Chrome, not a browser running on the Pi.
+:::
+
 ::: info Safe HACS package adoption from App 0.1.324
 Multiple embedded ATLAS projects or scripts are rejected before package selection.
 HACS, package and Editor plan script filenames must agree; resource filenames,

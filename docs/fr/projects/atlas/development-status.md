@@ -16,7 +16,15 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 18/10/2026 · App HA 0.1.324 · intégration HACS 0.1.306.**
+**État au 19/10/2026 · App HA 0.1.324 · intégration HACS 0.1.306.**
+
+**Grands ZIP HACS vérifiés ; limites et annulation active restent ouvertes.**
+24 imports réels sur .177/.68 : 16 adoptions à 112/112 jusqu’à 30 008 fichiers
+ou 64 MiB de contenu supplémentaire, et huit refus corrects de ZIP compressés
+ou tronqués. Éditeurs originaux et données vérifiées sont conservés. Recharger
+juste après sélection conserve les deux originaux, sans qualifier l’annulation
+du traitement synchrone ou la réactivité générale de l’interface.
+Voir le [guide Card Editor](card-editor.md).
 
 **L’App 0.1.324 corrige l’import HACS ambigu.** Nombre de projets/scripts,
 identités de scripts et vérification complète bloquent avant toute adoption.
