@@ -5,8 +5,9 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
-Tablet preparation, not a tablet result: [browser check and staged 12/360/720
-Card test](tablet-test.md). Start small on slow devices; preserve Stream Deck setups.
+Tablet result: [12/360/720-Card test](tablet-test.md) on Galaxy Tab A6,
+Android 11 / LineageOS, Chrome Mobile 155. The user confirms 720 Cards on both
+hosts, including theme changes and reconnection.
 
 ::: info Bounded, cancellable HACS import with App 0.1.327
 The fixed ZIP limit is **32 MiB**, checked before reading. Inventory budgets

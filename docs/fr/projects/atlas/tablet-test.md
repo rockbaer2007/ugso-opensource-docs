@@ -1,62 +1,17 @@
-# Test tablette : commencer petit
+# Test tablette : résultat et procédure
 
-Au 19/10/2026, App 0.1.327 et HA 2026.10.2. **Préparé, pas encore validé sur
-tablette.** Les contrôles sur PC ne prouvent pas les performances de la tablette.
-Hôtes autorisés : `192.168.178.177` et `192.168.178.68` uniquement.
+2026-10-19 · App 0.1.327 · HA 2026.10.2 · `192.168.178.177` / `192.168.178.68`.
 
-## Vérifier d’abord le navigateur
+L’utilisateur confirme 12 et 360 cartes, puis **720 cartes sur les deux hôtes**, avec thèmes et reconnexion.
 
-Sur un ancien Galaxy Tab A qui réagit déjà mal aux tableaux de bord ordinaires,
-ne pas commencer par une forte charge. Conserver sa configuration Stream Deck.
-Ouvrir dans un onglet séparé la page temporaire légère :
+Samsung Galaxy Tab A6, Android 11 / LineageOS, Chrome Mobile 155. Après arrêt d’autres applications, le navigateur est jugé fluide. Stream Deck reste inchangé.
 
-- [Vérification navigateur .177](http://192.168.178.177/local/atlas-tablet-20261019/index.html)
-- [Vérification navigateur .68](http://192.168.178.68/local/atlas-tablet-20261019/index.html)
+Résultat fonctionnel rapporté, sans mesure FPS/mémoire ni longue durée. Les résultats détaillés séparés portrait/paysage ne sont pas rapportés. Card-Mod 4.2.1 seul avec Bubble 3.4.2 et Mushroom 5.2.3 ; UIX sur tablette reste ouvert.
 
-Ces pages ne chargent ni HA ni grandes cartes. Elles affichent fonctions et
-identification du navigateur, sans télémétrie ni modification des réglages.
-Une fonction disponible ne garantit ni compatibilité HA complète ni performances.
-Âge du matériel, version Android et version du navigateur sont distincts ; les
-versions exactes restent inconnues ici. Si une fonction manque ou la page ralentit,
-arrêter. Ne pas effacer les données, désactiver la sécurité ou remplacer Stream Deck.
+Sauvegardes complètes avant le test. Tableaux, ressources et états propres retirés ; fichiers WWW dans la corbeille récupérable File Studio. Les anciens liens temporaires sont retirés et ne sont plus actifs.
 
-## Petit test initial
+Sept projets et six plugins par hôte, 531 fichiers existants capturés sur .177 et neuf sur .68 conservés, avec thèmes initiaux et anciennes entrées de corbeille. Trois sauvegardes complètes récentes par hôte ; sauvegardes PC conservées.
 
-Seulement si la page reste fluide, choisir « Kleinen HA-Einstieg öffnen ».
-Les premiers tableaux étaient réservés aux administrateurs, hors barre latérale.
-L’utilisateur les a ajoutés à cette barre pour la tablette. Les futurs tableaux
-propres au test doivent être créés sans « Admin-only » et visibles dans cette barre.
-Se connecter soi-même avec le compte HA existant si nécessaire ; ne pas partager
-identifiants ni jetons.
+Pour les futurs tests : vérification légère du navigateur, puis 12, 360 et 720 cartes. Augmenter seulement si fluide ; vérifier portrait/paysage, défilement, états synthétiques, thèmes et reconnexion sans rechargement. Restaurer le thème initial. Créer les tableaux propres visibles dans la barre latérale sans Admin-only. Ne jamais charger Card-Mod et UIX en parallèle.
 
-1. **Start** : choisir « Testzustand 18 », vérifier « HA verbunden ».
-2. **12 Karten** : portrait/paysage, défiler jusqu’en bas puis remonter ; vérifier
-   chevauchements, boutons coupés et retard des commandes.
-3. « Testzustand 28 », « Hell », « Dunkel », puis « Theme zurück » après les
-   transitions. L’état initial capturé est le thème standard en mode automatique.
-4. « Wiederverbindung testen » une fois, sans recharger. Attendre « HA verbunden »,
-   un compteur augmenté et « alter Socket geschlossen » ; réessayer l’état 18.
-
-Arrêter si l’interaction bloque. Pour Stream Deck, cette petite étape est plus
-pertinente qu’une forte charge imposée à cet appareil.
-
-## Grandes étapes facultatives
-
-Uniquement après une étape légère fluide : **360 Karten**, puis **720 Karten**.
-Répéter rotation, défilement, états 18/28, clair/sombre et reconnexion. Mushroom
-change Kühl/Warm, flocon/feu et bleu/rouge. Seule une entité synthétique propre
-au test change ; aucun appareil réel n’est commandé. Cette préparation utilise
-**Card-Mod 4.2.1 seul**, sans UIX ; elle ne valide pas UIX sur tablette.
-
-## Résultats et nettoyage
-
-Indiquer hôte/étape, portrait/paysage, défilement, thèmes, reconnexion et commandes
-fluides, retardées ou bloquées. Ne pas extrapoler aux étapes non testées. Les
-versions Android/navigateur sont utiles ; un blocage ne démontre pas sa cause
-ni un défaut ATLAS.
-
-Sauvegardes complètes et captures des données avant préparation ; éditeurs
-existants inchangés. Vues temporaires conservées jusqu’au retour tablette.
-Ensuite retirer états/ressources/tableaux propres au test, placer les fichiers
-WWW dans la corbeille File Studio et garder les trois sauvegardes complètes
-réussies les plus récentes par hôte. Conserver les sauvegardes PC.
+Ouvert : fonctionnement prolongé avec temps de réponse mesurés et test UIX séparé.

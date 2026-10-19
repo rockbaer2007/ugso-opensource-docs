@@ -40,8 +40,11 @@ CSS-Vererbung, Mushroom-Jinja und acht automatische Wiederverbindungen bestehen:
 62 Aufnahmen, 33.120 Vergleiche mit nativen Referenzen, keine Fehlerkarten.
 Vorhandene Editoren und erfasste Daten bleiben erhalten; eigene Testobjekte
 werden bereinigt. Details und Grenzen im [Card-Editor-Handbuch](card-editor.md).
-Als Nächstes: Bedienbarkeit auf einem schwächeren Browsergerät und responsive
-Breiten prüfen; Windows Chrome belegt keine Tablet-/ARM64-Browserleistung.
+Der Nutzer bestätigt 720 Karten auf beiden Hosts samt Theme-Wechsel und
+Wiederverbindung: Galaxy Tab A6, Android 11 / LineageOS, Chrome Mobile 155.
+Nach Stoppen anderer Apps läuft der Browser flüssig. Testobjekte bereinigt,
+Bestandsdaten erhalten, je drei Vollbackups. Keine FPS-/Langzeitmessung;
+Tablet-UIX bleibt offen. Siehe [Tablet-Ergebnis](tablet-test.md).
 
 **Historischer Größenbefund mit App 0.1.324.**
 24 echte Importfälle auf .177/.68: 16 Annahmen mit 112/112 bis 30.008 Dateien

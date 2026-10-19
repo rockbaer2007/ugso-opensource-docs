@@ -43,9 +43,11 @@ et UIX 8.4.0 strictement séparés. UIX traite aussi `card_mod`. Clair/sombre,
 héritage CSS, Mushroom Jinja et huit reconnexions automatiques réussissent :
 62 relevés, 33 120 comparaisons aux références natives, aucune carte d’erreur.
 Éditeurs existants et données contrôlées sont préservés ; objets de test retirés.
-Voir le [guide Card Editor](card-editor.md). Ensuite : ergonomie sur un appareil
-moins puissant et largeurs adaptatives ; Chrome sous Windows ne démontre pas
-les performances d’un navigateur tablette/ARM64.
+Voir le [guide Card Editor](card-editor.md). L’utilisateur confirme 720 cartes sur
+les deux hôtes, thèmes et reconnexion : Galaxy Tab A6, Android 11 / LineageOS,
+Chrome Mobile 155. Fluide après arrêt d’autres applications. Objets propres retirés,
+données conservées, trois sauvegardes complètes par hôte. Sans mesure FPS/longue
+durée ; UIX tablette reste ouvert. Voir le [résultat tablette](tablet-test.md).
 
 **Constat historique des tailles avec l’App 0.1.324.**
 24 imports réels sur .177/.68 : 16 adoptions à 112/112 jusqu’à 30 008 fichiers

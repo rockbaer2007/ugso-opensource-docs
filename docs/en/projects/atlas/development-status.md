@@ -39,8 +39,10 @@ qualified separately below.
 Mushroom Jinja and eight automatic reconnections pass: 62 snapshots, 33,120
 native-reference comparisons, no error Cards. Existing Editors and captured data
 are preserved; owned test objects are removed. See the [Card Editor guide](card-editor.md).
-Next: usability on a weaker browser device and responsive widths; Windows Chrome
-does not establish tablet/ARM64-browser performance.
+The user confirms 720 Cards on both hosts, themes and reconnection: Galaxy Tab
+A6, Android 11 / LineageOS, Chrome Mobile 155. Responsive after stopping other
+Apps. Owned objects removed, existing data preserved, three full backups each.
+No FPS/long-term measurement; tablet UIX remains open. See [tablet result](tablet-test.md).
 
 **Historical size finding with App 0.1.324.**
 24 actual import cases on .177/.68: 16 adoptions at 112/112 up to 30,008 files
