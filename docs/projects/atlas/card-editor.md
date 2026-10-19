@@ -23,6 +23,22 @@ Die Abbrechen-Schaltfläche behält beim Wechsel zum fertigen Prüfergebnis ihre
 Für größere Projekte kleinere Pakete erstellen; die Grenzen sind nicht abschaltbar.
 :::
 
+::: info Wiederholte Großprojekt-Importe auf .177/.68
+Am 19.10.2026 mit App 0.1.327 und HA 2026.10.2 rund 25 Minuten geprüft:
+je 60 Serienübernahmen mit 36 Feldern und 360 beziehungsweise 720 verschachtelten
+Core-/Bubble-/Mushroom-Karten. Insgesamt 238 Abbrüche beim Lesen, Prüfen oder nach
+fertigem Ergebnis erhalten den geladenen Entwurf; 116 Wiederholungen derselben
+Datei bestehen. Vier echte HACS-Rundläufe sind bytegleich. Ein gültiges Paket mit
+24 MiB Gesamtinhalt wird vollständig geprüft. Je drei Neuladetests bestehen;
+Originaleditoren und erfasste Bestandsdaten bleiben erhalten.
+
+Geprüft wurde der Import in Windows Chrome. Die Gesamtprozess-Speicherwerte
+umfassen andere Tabs und belegen keine isolierte ATLAS-Speicherstabilität.
+Die tatsächliche HA-Darstellung aller 720 Karten und längerer Betrieb sind
+damit nicht freigegeben. Jeder bestätigte Import legt eine lokale Gruppe an;
+die Testgruppen wurden durch Wiederherstellen der Originalkonfiguration entfernt.
+:::
+
 ::: warning Historischer Größenbefund mit App 0.1.324
 Am 19.10.2026 mit App 0.1.324 und HA 2026.10.2 auf .177/.68 geprüft:
 24 echte Importfälle, davon 16 gültige Übernahmen mit 112/112 und acht

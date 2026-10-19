@@ -28,6 +28,15 @@ complètes : 20 cas limites, six annulations, deux nouvelles sélections du mêm
 fichier et deux adoptions explicites. Éditeurs originaux complets, fichiers,
 projets et plugins vérifiés sont conservés ; les deux hôtes exécutent 0.1.327.
 
+**Imports répétés de grands projets avec l’App 0.1.327 inchangée.** Environ
+25 minutes sur .177/.68 : 60 adoptions en série par hôte, 36 champs contenant
+360/720 cartes imbriquées, 238 annulations et 116 nouvelles sélections du même
+fichier au total. Quatre cycles HACS réels sont identiques octet par octet ;
+trois rechargements par hôte et un paquet valide de 24 MiB réussissent. Les
+éditeurs originaux et données contrôlées sont préservés. La mémoire globale du
+navigateur n’est pas une mesure isolée d’ATLAS ; le rendu HA des 720 cartes
+reste une vérification distincte.
+
 **Constat historique des tailles avec l’App 0.1.324.**
 24 imports réels sur .177/.68 : 16 adoptions à 112/112 jusqu’à 30 008 fichiers
 ou 64 MiB de contenu supplémentaire, et huit refus corrects de ZIP compressés

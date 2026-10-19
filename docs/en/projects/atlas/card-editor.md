@@ -23,6 +23,22 @@ these budgets cannot be disabled.
 Cancel stays in the same position when validation completes and Apply appears.
 :::
 
+::: info Repeated large-project imports on .177/.68
+Checked for about 25 minutes on 19 October 2026 with App 0.1.327 and HA 2026.10.2:
+60 series adoptions per host, with 36 fields and 360 or 720 nested Core/Bubble/
+Mushroom Cards. Across both hosts, 238 cancellations during reading/checking or
+after validation preserve the loaded draft; 116 identical-file retries pass.
+Four actual HACS round trips are byte-identical. A valid package with 24 MiB of
+total content completes validation. Three reload checkpoints per host pass;
+original Editors and captured existing data are preserved.
+
+This qualifies import in Windows Chrome. Browser-wide process memory includes
+other tabs and does not establish isolated ATLAS memory stability. Actual HA
+rendering of all 720 Cards and longer operation remain separate scopes.
+Each confirmed import creates a local group; test groups were removed by
+restoring the original complete configuration.
+:::
+
 ::: warning Historical size finding with App 0.1.324
 Checked on 19 October 2026 with App 0.1.324 and HA 2026.10.2 on .177/.68:
 24 actual imports, including 16 valid adoptions at 112/112 and eight rejections.

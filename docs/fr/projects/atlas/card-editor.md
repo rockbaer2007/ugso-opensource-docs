@@ -22,6 +22,23 @@ Pour les grands projets, créer des paquets plus petits ; les limites sont fixes
 Annuler conserve sa position quand la vérification se termine et Appliquer apparaît.
 :::
 
+::: info Imports répétés de grands projets sur .177/.68
+Vérification d’environ 25 minutes le 19/10/2026 avec l’App 0.1.327 et HA 2026.10.2 :
+60 adoptions en série par hôte, avec 36 champs et 360 ou 720 cartes imbriquées
+Core/Bubble/Mushroom. Au total, 238 annulations pendant la lecture/vérification
+ou après validation préservent le brouillon ; 116 nouvelles sélections du même
+fichier réussissent. Quatre cycles HACS réels produisent des archives identiques.
+Un paquet valide de 24 MiB de contenu total est entièrement vérifié. Trois
+rechargements par hôte réussissent ; éditeurs originaux et données contrôlées
+sont préservés.
+
+La portée est l’import dans Chrome sous Windows. Les mesures de mémoire couvrent
+aussi les autres onglets et ne prouvent pas la stabilité mémoire isolée d’ATLAS.
+Le rendu HA des 720 cartes et une durée supérieure restent à vérifier. Chaque
+import confirmé crée un groupe local ; les groupes de test ont été retirés en
+restaurant la configuration originale complète.
+:::
+
 ::: warning Constat historique des tailles avec l’App 0.1.324
 Vérification du 19/10/2026 avec l’App 0.1.324 et HA 2026.10.2 sur .177/.68 :
 24 imports réels, dont 16 adoptions valides à 112/112 et huit refus.

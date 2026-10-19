@@ -25,6 +25,14 @@ Native qualification on .177/.68 with HA 2026.10.2 passes after full backups:
 adoptions. Complete original Editors and captured files, projects and plugins
 are preserved; both hosts run 0.1.327.
 
+**Repeated large-project imports with unchanged App 0.1.327.** About 25 minutes
+on .177/.68: 60 series adoptions per host, 36 fields with 360/720 nested Cards,
+238 cancellations and 116 identical-file retries in total. Four actual HACS
+round trips are byte-identical; three reload checkpoints per host and a valid
+24-MiB package pass. Original Editors and captured existing data are preserved.
+Browser-wide memory is not isolated ATLAS memory evidence; actual HA rendering
+of all 720 Cards remains a separate test.
+
 **Historical size finding with App 0.1.324.**
 24 actual import cases on .177/.68: 16 adoptions at 112/112 up to 30,008 files
 or 64 MiB of extra stored content, and eight correct rejections of compressed

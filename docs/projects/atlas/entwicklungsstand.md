@@ -25,6 +25,14 @@ Die native Prüfung auf .177/.68 mit HA 2026.10.2 besteht nach Vollbackups:
 ausdrückliche Übernahmen. Vollständige Originaleditoren und erfasste Dateien,
 Projekte und Plugins sind erhalten; beide Hosts laufen mit 0.1.327.
 
+**Großprojekt-Import unter wiederholter Last mit unveränderter App 0.1.327.**
+Rund 25 Minuten auf .177/.68: je 60 Serienübernahmen von 36 Feldern mit 360/720
+verschachtelten Karten, zusammen 238 Abbrüche und 116 gleiche Datei-Wiederholungen.
+Vier tatsächliche HACS-Rundläufe sind bytegleich; je drei Neuladetests und die
+Prüfung eines gültigen 24-MiB-Pakets bestehen. Originaleditoren und erfasste
+Bestandsdaten bleiben erhalten. Browserweite Speicherwerte sind kein isolierter
+ATLAS-Speichernachweis; HA-Darstellung aller 720 Karten bleibt ein eigener Test.
+
 **Historischer Größenbefund mit App 0.1.324.**
 24 echte Importfälle auf .177/.68: 16 Annahmen mit 112/112 bis 30.008 Dateien
 beziehungsweise 64 MiB Zusatzinhalt und acht korrekte Ablehnungen komprimierter
