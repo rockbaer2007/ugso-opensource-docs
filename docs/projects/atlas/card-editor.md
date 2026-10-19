@@ -5,7 +5,25 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
-::: warning Große HACS-Pakete: geprüfter Umfang und offene Grenzen
+::: info Begrenzter und abbrechbarer HACS-Import mit App 0.1.327
+Vor dem Lesen gilt eine feste ZIP-Grenze von **32 MiB**. Das ZIP-Inventar ist
+auf **2.048 Einträge**, **8 MiB pro Eintrag**, **24 MiB Gesamtinhalt** und
+**1.024 UTF-8-Bytes pro Pfad** begrenzt. Inventargrenzen werden vor CRC-Arbeit
+geprüft, auch bei nur deklarierten Entpackgrößen. Komprimierte ZIP-Einträge
+bleiben nicht unterstützt; CRC32 ist keine Herkunftssignatur.
+
+Lesen und Prüfung laufen in einem eigenen Worker. **Import abbrechen** beendet
+ihn während des Lesens oder Prüfens und verwirft auch ein fertiges Ergebnis.
+Ein Prüfwächter beendet den Auftrag nach 15 Sekunden; seine Ausführung hängt
+von den Browser-Timern ab. Bei Worker-/Ladefehlern gibt es keinen synchronen
+Ersatzimport. Der Editor bleibt bis **Geprüftes Paket übernehmen** unverändert.
+Die abschließende bestätigte Übernahme ist kein weiterer abbrechbarer Prüfschritt.
+Nach Abbruch darf dieselbe Datei ohne Neuladen erneut gewählt werden.
+Die Abbrechen-Schaltfläche behält beim Wechsel zum fertigen Prüfergebnis ihre Position.
+Für größere Projekte kleinere Pakete erstellen; die Grenzen sind nicht abschaltbar.
+:::
+
+::: warning Historischer Größenbefund mit App 0.1.324
 Am 19.10.2026 mit App 0.1.324 und HA 2026.10.2 auf .177/.68 geprüft:
 24 echte Importfälle, davon 16 gültige Übernahmen mit 112/112 und acht
 Ablehnungen. Bis zu 30.008 Dateien, 64 MiB gespeicherter Zusatzinhalt und
@@ -14,7 +32,8 @@ fast 4 GiB deklarierter Eintragsgröße sowie abgeschnittene ZIPs werden abgewie
 Die Kompressionsablehnung ist kein Größenlimit und keine ZIP-Bomben-Freigabe.
 
 Explizite Größen-/Dateianzahlgrenzen und ein zuverlässig abbrechbarer laufender
-Import fehlen noch. Die Datei wird vollständig gelesen; die Prüfung läuft
+Import fehlten in 0.1.324; jetzt gilt der oben beschriebene Worker-Ablauf.
+Die alte Datei wird vollständig gelesen; die damalige Prüfung läuft
 synchron im UI-Thread. Neuladen unmittelbar nach Dateiauswahl erhält in je einem
 Versuch den Originalentwurf, belegt aber keinen Abbruch während laufender CRC-
 Arbeit. Beide vollständigen Originaleditoren und geprüfte Bestandsdaten sind

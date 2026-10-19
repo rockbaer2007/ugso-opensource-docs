@@ -12,10 +12,20 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 19.10.2026 · HA-App 0.1.324 · HACS-Integration 0.1.306.**
+**Stand: 19.10.2026 · HA-App 0.1.327 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
-**Große HACS-Pakete geprüft; Größenlimits und laufender Abbruch bleiben offen.**
+**App 0.1.327 begrenzt und entkoppelt die HACS-Prüfung.** Feste Grenzen vor
+Dateilesen/CRC, Worker mit Abbrechen und 15-Sekunden-Prüfwächter sowie eine
+ausdrückliche Übernahme erhalten den Editor bis zur Bestätigung. Dieselbe Datei
+ist nach Abbruch erneut auswählbar. Alle 431 Pakettests und der Workspace-Build
+bestehen. Details und Grenzwerte: [Card-Editor-Handbuch](card-editor.md).
+Die native Prüfung auf .177/.68 mit HA 2026.10.2 besteht nach Vollbackups:
+20 Grenzfälle, sechs Abbrüche, zwei Wiederholungen derselben Datei und zwei
+ausdrückliche Übernahmen. Vollständige Originaleditoren und erfasste Dateien,
+Projekte und Plugins sind erhalten; beide Hosts laufen mit 0.1.327.
+
+**Historischer Größenbefund mit App 0.1.324.**
 24 echte Importfälle auf .177/.68: 16 Annahmen mit 112/112 bis 30.008 Dateien
 beziehungsweise 64 MiB Zusatzinhalt und acht korrekte Ablehnungen komprimierter
 oder abgeschnittener Archive. Originaleditoren und geprüfte Bestandsdaten bleiben

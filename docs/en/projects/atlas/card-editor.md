@@ -5,7 +5,25 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
-::: warning Large HACS packages: tested scope and remaining limits
+::: info Bounded, cancellable HACS import with App 0.1.327
+The fixed ZIP limit is **32 MiB**, checked before reading. Inventory budgets
+are **2,048 entries**, **8 MiB per entry**, **24 MiB total content** and
+**1,024 UTF-8 bytes per path**. Metadata budgets precede CRC work, including
+declared expanded sizes. Compressed entries remain unsupported; CRC32 is not
+an authenticity signature.
+
+Reading and validation run in a dedicated worker. **Cancel import** terminates
+it during reading/checking and also discards an already checked result.
+A 15-second watchdog stops the job, subject to browser timer scheduling.
+Worker/load errors never fall back to synchronous import. The Editor stays
+unchanged until **Apply checked package**; final confirmed adoption is not
+another cancellable validation step. After cancelling, the identical file can
+be selected again without reload. Split larger projects into smaller packages;
+these budgets cannot be disabled.
+Cancel stays in the same position when validation completes and Apply appears.
+:::
+
+::: warning Historical size finding with App 0.1.324
 Checked on 19 October 2026 with App 0.1.324 and HA 2026.10.2 on .177/.68:
 24 actual imports, including 16 valid adoptions at 112/112 and eight rejections.
 Up to 30,008 files, 64 MiB of extra stored content and a 16-MiB README are
@@ -14,7 +32,8 @@ entry size, and truncated ZIPs, are rejected. Compression rejection is not a
 size limit or a claim of zip-bomb protection.
 
 Explicit byte/file-count limits and reliable cancellation of an active import
-are still missing. The complete file is read before synchronous UI-thread
+were missing in 0.1.324; the worker flow above now applies.
+That old implementation reads the complete file before synchronous UI-thread
 validation. Reload immediately after file selection preserves the original
 draft in one attempt per host, but does not prove cancellation during CRC work.
 Both complete original Editors and checked existing data are preserved.

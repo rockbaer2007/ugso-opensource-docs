@@ -16,9 +16,19 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 19/10/2026 · App HA 0.1.324 · intégration HACS 0.1.306.**
+**État au 19/10/2026 · App HA 0.1.327 · intégration HACS 0.1.306.**
 
-**Grands ZIP HACS vérifiés ; limites et annulation active restent ouvertes.**
+**L’App 0.1.327 limite les vérifications HACS et utilise un worker dédié.**
+Limites avant lecture/CRC, annulation, surveillance de 15 secondes et adoption
+explicite préservent l’éditeur jusqu’à confirmation. Le même fichier peut être
+sélectionné après annulation. Les 431 tests et la compilation du workspace
+réussissent. Voir le [guide Card Editor](card-editor.md).
+La vérification native sur .177/.68 avec HA 2026.10.2 réussit après sauvegardes
+complètes : 20 cas limites, six annulations, deux nouvelles sélections du même
+fichier et deux adoptions explicites. Éditeurs originaux complets, fichiers,
+projets et plugins vérifiés sont conservés ; les deux hôtes exécutent 0.1.327.
+
+**Constat historique des tailles avec l’App 0.1.324.**
 24 imports réels sur .177/.68 : 16 adoptions à 112/112 jusqu’à 30 008 fichiers
 ou 64 MiB de contenu supplémentaire, et huit refus corrects de ZIP compressés
 ou tronqués. Éditeurs originaux et données vérifiées sont conservés. Recharger

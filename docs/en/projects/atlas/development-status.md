@@ -12,10 +12,20 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-19 · HA App 0.1.324 · HACS integration 0.1.306.**
+**As of 2026-10-19 · HA App 0.1.327 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
-**Large HACS archives tested; size limits and active cancellation remain open.**
+**App 0.1.327 bounds HACS checks and runs them off the UI thread.** Fixed budgets
+before reads/CRC, a cancellable worker with a 15-second watchdog and explicit
+adoption preserve the Editor until confirmation. The identical file can be
+selected again after cancellation. All 431 package tests and the workspace build
+pass. See the [Card Editor guide](card-editor.md) for limits and behavior.
+Native qualification on .177/.68 with HA 2026.10.2 passes after full backups:
+20 boundary cases, six cancellations, two same-file retries and two explicit
+adoptions. Complete original Editors and captured files, projects and plugins
+are preserved; both hosts run 0.1.327.
+
+**Historical size finding with App 0.1.324.**
 24 actual import cases on .177/.68: 16 adoptions at 112/112 up to 30,008 files
 or 64 MiB of extra stored content, and eight correct rejections of compressed
 or truncated archives. Original Editors and checked existing data are preserved.

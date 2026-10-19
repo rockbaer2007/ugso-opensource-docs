@@ -5,7 +5,24 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
-::: warning Grands paquets HACS : périmètre vérifié et limites restantes
+::: info Import HACS limité et annulable avec l’App 0.1.327
+La limite ZIP fixe est de **32 MiB**, vérifiée avant lecture : **2 048 entrées**,
+**8 MiB par entrée**, **24 MiB au total** et **1 024 octets UTF-8 par chemin**.
+Les limites des métadonnées précèdent le CRC, y compris les tailles décompressées
+déclarées. La compression reste non prise en charge ; CRC32 n’est pas une signature.
+
+Lecture et vérification utilisent un worker dédié. **Annuler l’import** le
+termine pendant la lecture/vérification ou abandonne un résultat déjà prêt.
+Un délai de surveillance de 15 secondes dépend de la planification du navigateur.
+Une erreur de chargement/worker ne déclenche aucun import synchrone de secours.
+L’éditeur reste inchangé jusqu’à **Appliquer le paquet vérifié** ; cette adoption
+finale confirmée n’est pas une nouvelle étape de vérification annulable.
+Après annulation, le même fichier peut être choisi sans rechargement.
+Pour les grands projets, créer des paquets plus petits ; les limites sont fixes.
+Annuler conserve sa position quand la vérification se termine et Appliquer apparaît.
+:::
+
+::: warning Constat historique des tailles avec l’App 0.1.324
 Vérification du 19/10/2026 avec l’App 0.1.324 et HA 2026.10.2 sur .177/.68 :
 24 imports réels, dont 16 adoptions valides à 112/112 et huit refus.
 Jusqu’à 30 008 fichiers, 64 MiB de contenu supplémentaire stocké et un README
@@ -14,7 +31,8 @@ de contenu ou une taille déclarée de presque 4 GiB sont refusés. Le refus de
 compression ne constitue pas une limite de taille ni une protection ZIP-bombe.
 
 Les limites explicites de taille/nombre de fichiers et l’annulation fiable d’un
-import actif restent à réaliser. Le fichier entier est lu avant la vérification
+import actif manquaient en 0.1.324 ; le worker décrit ci-dessus s’applique désormais.
+L’ancienne version lit le fichier entier avant la vérification
 synchrone dans le thread UI. Un rechargement immédiat après sélection conserve
 le brouillon original lors d’un essai par hôte, sans prouver une annulation
 pendant le calcul CRC. Les deux éditeurs originaux complets et les données
