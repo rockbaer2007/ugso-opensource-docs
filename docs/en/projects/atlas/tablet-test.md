@@ -1,5 +1,7 @@
 # Tablet test: result and procedure
 
+Next prepared step: [60-minute UIX tablet soak](tablet-uix-dauertest.md).
+
 2026-10-19 · App 0.1.327 · HA 2026.10.2 · `192.168.178.177` / `192.168.178.68`.
 
 The user confirms 12 and 360 Cards, then **720 Cards on both hosts**, including theme changes and reconnection.

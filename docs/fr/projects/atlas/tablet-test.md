@@ -1,5 +1,7 @@
 # Test tablette : résultat et procédure
 
+Étape suivante préparée : [test UIX tablette de 60 minutes](tablet-uix-dauertest.md).
+
 2026-10-19 · App 0.1.327 · HA 2026.10.2 · `192.168.178.177` / `192.168.178.68`.
 
 L’utilisateur confirme 12 et 360 cartes, puis **720 cartes sur les deux hôtes**, avec thèmes et reconnexion.

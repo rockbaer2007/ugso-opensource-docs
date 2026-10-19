@@ -1,5 +1,7 @@
 # Tablet-Test: Ergebnis und Prüfablauf
 
+Nächster vorbereiteter Schritt: [60-Minuten-Dauertest mit UIX](tablet-uix-dauertest.md).
+
 2026-10-19 · App 0.1.327 · HA 2026.10.2 · `192.168.178.177` / `192.168.178.68`.
 
 Der Nutzer bestätigt 12 und 360 Karten sowie **720 Karten auf beiden Hosts** samt Theme-Wechsel und Wiederverbindung.
