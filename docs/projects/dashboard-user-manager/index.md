@@ -77,6 +77,8 @@ Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` er
 
 ## Prüfstand und Grenzen
 
+**Nutzerbestätigung vom 20.10.2026 für 0.1.6:** Das Update auf der betroffenen Installation ist erfolgreich. „Übersicht aktuell“ wird nur noch einmal angezeigt; die zuvor gespeicherte Dashboard-Vorauswahl ist erhalten. Diese Rückmeldung bestätigt die Korrektur im ursprünglich gemeldeten Fall und ergänzt die automatisierten Alias-/Dublettenprüfungen sowie den Update-Test auf .177. Es wurde dafür kein zusätzlicher Zugriff durch den Agenten auf das Produktivsystem ausgeführt.
+
 0.1.5 auf .177 nach frischem Vollbackup geprüft: leere Karte ausgeblendet, Fehler der nicht konfigurierten Übersicht getrennt angezeigt, Abbrechen und gespeicherte leere/erneut aktivierte Vorauswahl nach Neuladen bestätigt. Dialog in DE/EN/FR sichtbar geprüft. Keine Benutzerzuordnung gespeichert; die vier Lovelace-Dateien bleiben unverändert. 26 Python- und zehn Node-Prüfungen sowie amd64-/aarch64-Docker-Builds bestanden.
 
 0.1.3 wurde vom Nutzer mit Sammel-/Einzelauswahl, Speichern und Neuladen erfolgreich geprüft. 0.1.4 wurde nach Vollbackup als lokale App auf .177 aktualisiert. Die automatische Sprachwahl folgt dort Deutsch → Englisch → Französisch → Deutsch ohne Neuladen der App. Namen und Zuordnungen bleiben erhalten; alle vier Lovelace-Dateien einschließlich „Test für APP“ sind nach der Prüfung SHA-256-identisch zur Sicherung. Ergänzend bestehen Offline-Frontend-, API-, Datenerhalt- und Konflikttests. Kein Produktivsystem wurde verändert. Die vollständige HA-Backup-Wiederherstellung der App ist noch offen. Eine nicht konfigurierte Standardübersicht kann `config_not_found` melden; ein vorhandenes manuelles Dashboard auswählen.

@@ -77,6 +77,8 @@ Once `version_latest` shows the new version, update the app in HA. `touch` chang
 
 ## Verification and limits
 
+**User confirmation on 20 October 2026 for 0.1.6:** The update on the affected installation succeeded. “Übersicht aktuell” now appears only once, and the previously saved dashboard selection is preserved. This confirms the fix in the originally reported case, complementing automated alias/duplicate tests and the update test on .177. No additional agent access to the production system was performed for this confirmation.
+
 Version 0.1.5 tested on .177 after a fresh full backup: empty map hidden, unconfigured overview error shown separately, cancellation and persisted empty/re-enabled selection verified after reload. Dialog visually checked in DE/EN/FR. No user assignments saved; all four Lovelace files unchanged. All 26 Python and ten Node checks and amd64/aarch64 Docker builds passed.
 
 The user successfully tested bulk and individual assignments, saving and reloading in 0.1.3. After a full backup, the local app on .177 was updated to 0.1.4. Automatic language selection follows German → English → French → German without reloading the app. Names and assignments are preserved; all four Lovelace files, including “Test für APP”, have the same SHA-256 hashes as the backup after testing. Offline frontend, API, preservation and conflict tests also pass. No production system was modified. Full HA backup restoration of the app remains unverified. An unconfigured default dashboard may return `config_not_found`; select an existing manually managed dashboard instead.
