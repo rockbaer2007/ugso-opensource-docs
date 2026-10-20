@@ -97,6 +97,14 @@ Once `version_latest` shows the new version, update the app in HA. `touch` chang
 
 ## Verification and limits
 
+**0.1.10 – Interruption during HA write acknowledgement checked on .177:** After a fresh full backup, the app’s real WebSocket connection to HA was aborted for exactly one save command targeting its own test dashboard, immediately after sending and before receiving the result message. No successful write status reached the app and the commit did not perform its subsequent read-back. HA nevertheless saved the two intended user lists, independently verified from its stored configuration.
+
+The app reported **Unknown save outcome**, preserved the complete checkbox draft and blocked another save. **Check server state** established over a new connection: **Already saved; no additional write.** Exactly one additional private dashboard backup was created and all 13 existing backups remained; checking the server left the HA file byte-identical. Cards, names, paths and the subview were unchanged. Temporary instrumentation was then removed, the original app rebuilt and the test dashboard cleaned up. Existing data including “Test für APP” and the original dashboard selection are preserved; the package remains version 0.1.10.
+
+![Draft preserved after the HA WebSocket was aborted before write acknowledgement, shown in German](/images/dashboard-user-manager/ha-177-ws-ack-draft-0.1.10.png)
+
+![New server connection identifies the saved draft without a duplicate write, shown in German](/images/dashboard-user-manager/ha-177-ws-ack-checked-0.1.10.png)
+
 **0.1.10 – Lost confirmation checked on .177:** After a fresh full backup, temporary one-shot instrumentation was scoped to a separate test dashboard only. The app actually wrote two assignments to HA, successfully read them back and then aborted the real HTTP response transport to Ingress before the interface received confirmation. This is a targeted response-channel failure with real HA data, not just a mocked test or physically unplugging a network cable.
 
 The interface reported an unknown save outcome, preserved every checkbox selection and disabled repeat saving. **Check server state** recognized the already saved draft without another write. Exactly one additional dashboard backup was created; the HA file remained byte-identical after reconciliation. Cards, names, paths and subview were unchanged. Instrumentation was fully removed, the original app rebuilt and the separate dashboard deleted: all 23 checked HA files including “Test für APP” and all 19 app source files match their originals byte-for-byte; seven ATLAS projects, plugins, trash, selection and automatic language were preserved. Version and published package files remain unchanged at 0.1.10.
@@ -109,7 +117,7 @@ The interface reported an unknown save outcome, preserved every checkbox selecti
 
 After restart, 21 HA files including all existing Lovelace files are byte-identical. The two other checked registries retain all 22 devices and 73 entities with their settings; only runtime modification timestamps and the app version recorded by HA update. Seven ATLAS projects, plugin management and trash state are unchanged. The existing ATLAS-HA connection works without entering credentials again. Full recovery removes the test dashboard created after the backup. This is restoration on the existing test installation, not rebuilding empty hardware. 33 Python and 19 Node tests and amd64/aarch64 Docker builds pass. 0.1.10 only removes the experimental package label and updates version/evidence; save logic and permissions are unchanged. .68 and production systems were not used.
 
-The HTTP response-channel abort above occurs after successful HA read-back. This does not claim a live disconnect within HA’s WebSocket write acknowledgement or a physical LAN/power outage; those scenarios retain automated fault coverage. Guidance for uncertain writes still applies.
+The two checks cover different boundaries: aborting the HA WebSocket before receiving write acknowledgement, and aborting the HTTP response channel after successful HA read-back. The WebSocket test establishes the observed outcome “HA saved, acknowledgement missing”; it does not guarantee every possible timing or the “not saved” outcome. No physical LAN/power outage was triggered. Guidance for uncertain writes still applies.
 
 ![App after full HA restoration on .177 with original dashboard preserved, shown in German](/images/dashboard-user-manager/ha-177-full-restore-0.1.9.png)
 
