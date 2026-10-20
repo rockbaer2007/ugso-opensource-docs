@@ -81,6 +81,14 @@ Once `version_latest` shows the new version, update the app in HA. `touch` chang
 
 ## Verification and limits
 
+**Saving and restoring with 0.1.7 passed on .177 on 20 October 2026:** After a fresh full HA backup, a separate temporary dashboard with six views was tested. Bulk selection/deselection for webuser and an individual correction changed exactly three views. After saving and reloading, only the intended user lists had changed. Untouched visibility values (`true`, `false`, `[]`), cards including nested content, paths, the subview and original names with surrounding whitespace were preserved.
+
+The downloaded automatic backup contained exactly the complete original dashboard configuration. Restore first created a counter-backup of the modified state, then restored the original storage file byte for byte. The temporary dashboard was removed, the original selection restored and all four existing Lovelace files, including “Test für APP” and the dashboard catalog, remained byte-identical. Three full backups remain on .177; private recovery records and PC backups are preserved. .68 and production systems were not modified.
+
+![Successful restoration of the separate test dashboard on .177 with 0.1.7, shown in German](/images/dashboard-user-manager/ha-177-restore-0.1.7.png)
+
+Full app/HA backup restoration and real conflict/interruption testing remain open. Minor known display issue in 0.1.7: the save success message may contain an English sentence within the German interface; the restore message appeared correctly in German. Functional verification passed.
+
 Version 0.1.7 updated on .177 after a fresh full backup: icon visible in the HA app tile and interface header, with DE/EN/FR headers visually checked and captured. Selection, 18 views, four users and the existing private dashboard backup preserved. No assignments saved; all four Lovelace files unchanged against the backup. All 28 Python and eleven Node checks, PNG delivery, ZIP icon comparison and amd64/aarch64 Docker builds passed. Language preference restored to automatic.
 
 **User confirmation on 20 October 2026 for 0.1.6:** The update on the affected installation succeeded. “Übersicht aktuell” now appears only once, and the previously saved dashboard selection is preserved. This confirms the fix in the originally reported case, complementing automated alias/duplicate tests and the update test on .177. No additional agent access to the production system was performed for this confirmation.

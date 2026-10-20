@@ -81,6 +81,14 @@ Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` er
 
 ## Prüfstand und Grenzen
 
+**Speichern und Wiederherstellen mit 0.1.7 am 20.10.2026 auf .177 bestanden:** Nach frischem HA-Vollbackup wurde ein eigenes temporäres Dashboard mit sechs Ansichten geprüft. Sammelauswahl/-abwahl für webuser und eine Einzelkorrektur änderten genau drei Ansichten. Nach Speichern und erneutem Laden waren nur die vorgesehenen Benutzerlisten geändert. Unberührte Sichtbarkeitswerte (`true`, `false`, `[]`), Karten einschließlich verschachtelter Inhalte, Pfade, Unteransicht und Originalnamen mit äußeren Leerzeichen blieben erhalten.
+
+Die heruntergeladene automatische Sicherung enthielt exakt die ursprüngliche vollständige Dashboard-Konfiguration. Wiederherstellen erzeugte zuerst eine Gegensicherung des geänderten Standes und stellte danach die ursprüngliche Storage-Datei bytegleich wieder her. Das temporäre Dashboard wurde entfernt, die ursprüngliche Vorauswahl wiederhergestellt und alle vier vorhandenen Lovelace-Dateien einschließlich „Test für APP“ und Dashboard-Katalog blieben bytegleich. Auf .177 bleiben drei Vollbackups; private Wiederherstellungsnachweise und PC-Sicherungen bleiben erhalten. .68 und Produktivsysteme wurden nicht verändert.
+
+![Erfolgreiche Wiederherstellung des eigenen Testdashboards auf .177 mit 0.1.7](/images/dashboard-user-manager/ha-177-restore-0.1.7.png)
+
+Offen bleiben die vollständige App-/HA-Backup-Wiederherstellung und die reale Konflikt-/Abbruchprüfung. Kleine bekannte Darstellungsabweichung in 0.1.7: Die Speichern-Erfolgsmeldung kann einen englischen Satzteil in der deutschen Oberfläche enthalten; die Wiederherstellungsmeldung erschien korrekt deutsch. Die funktionale Prüfung ist bestanden.
+
 0.1.7 nach frischem Vollbackup auf .177 aktualisiert: Icon in der HA-App-Kachel und im App-Kopf sichtbar, Kopfbereich in DE/EN/FR geprüft und fotografiert. Vorauswahl, 18 Ansichten, vier Benutzer und bestehende private Dashboard-Sicherung erhalten. Keine Zuordnung gespeichert; alle vier Lovelace-Dateien zur Sicherung unverändert. 28 Python- und elf Node-Prüfungen, korrekte PNG-Auslieferung, ZIP-Iconvergleich und amd64-/aarch64-Docker-Builds bestanden. Die persönliche Sprachwahl ist wieder auf automatisch gesetzt.
 
 **Nutzerbestätigung vom 20.10.2026 für 0.1.6:** Das Update auf der betroffenen Installation ist erfolgreich. „Übersicht aktuell“ wird nur noch einmal angezeigt; die zuvor gespeicherte Dashboard-Vorauswahl ist erhalten. Diese Rückmeldung bestätigt die Korrektur im ursprünglich gemeldeten Fall und ergänzt die automatisierten Alias-/Dublettenprüfungen sowie den Update-Test auf .177. Es wurde dafür kein zusätzlicher Zugriff durch den Agenten auf das Produktivsystem ausgeführt.

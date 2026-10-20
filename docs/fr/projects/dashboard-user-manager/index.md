@@ -81,6 +81,14 @@ Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans 
 
 ## Vérification et limites
 
+**Enregistrement et restauration avec 0.1.7 validés sur .177 le 20 octobre 2026 :** Après une sauvegarde HA complète, un tableau de bord temporaire distinct comportant six vues a été testé. La sélection/désélection globale de webuser et une correction individuelle ont modifié exactement trois vues. Après enregistrement et rechargement, seules les listes d’utilisateurs prévues avaient changé. Les valeurs de visibilité non modifiées (`true`, `false`, `[]`), les cartes et leur contenu imbriqué, les chemins, la sous-vue et les noms d’origine avec espaces périphériques ont été conservés.
+
+La sauvegarde automatique téléchargée contenait exactement la configuration complète d’origine. La restauration a d’abord créé une sauvegarde de l’état modifié, puis rétabli le fichier de stockage d’origine à l’octet près. Le tableau de bord temporaire a été supprimé, la présélection initiale rétablie et les quatre fichiers Lovelace existants, dont « Test für APP » et le catalogue, sont restés identiques. Trois sauvegardes complètes restent sur .177 ; les preuves privées de restauration et les sauvegardes PC sont conservées. .68 et les systèmes de production n’ont pas été modifiés.
+
+![Restauration réussie du tableau de bord de test distinct sur .177 avec 0.1.7, interface allemande](/images/dashboard-user-manager/ha-177-restore-0.1.7.png)
+
+La restauration complète de l’application depuis une sauvegarde HA et les tests réels de conflits/interruption restent à vérifier. Petit défaut d’affichage connu en 0.1.7 : le message de réussite de l’enregistrement peut contenir une phrase anglaise dans l’interface allemande ; celui de restauration était correctement en allemand. La vérification fonctionnelle est réussie.
+
 Version 0.1.7 mise à jour sur .177 après une sauvegarde complète : icône visible dans la vignette HA et l’en-tête, contrôlé et photographié en DE/EN/FR. Présélection, 18 vues, quatre utilisateurs et sauvegarde privée existante conservés. Aucune affectation enregistrée ; les quatre fichiers Lovelace restent identiques à la sauvegarde. Les 28 tests Python, onze tests Node, la livraison PNG, la comparaison des icônes ZIP et les builds Docker amd64/aarch64 réussissent. Préférence de langue remise sur automatique.
 
 **Confirmation de l’utilisateur du 20 octobre 2026 pour 0.1.6 :** La mise à jour sur l’installation concernée a réussi. « Übersicht aktuell » n’apparaît plus qu’une fois et la présélection enregistrée des tableaux de bord est conservée. Ce retour confirme la correction du cas signalé et complète les tests automatisés des alias/doublons ainsi que le test de mise à jour sur .177. Aucun accès supplémentaire de l’agent au système de production n’a été effectué pour cette confirmation.
