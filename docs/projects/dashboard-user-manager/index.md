@@ -4,13 +4,15 @@ description: Benutzer für alle HA-Ansichten oder einzeln per Checkbox zuordnen,
 ---
 # Dashboard-Benutzerverwaltung
 
-**Version 0.1.10 · DE / EN / FR · MIT · stabil**
+**Version 0.1.11 · DE / EN / FR · MIT · stabil**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App-Icon mit Dashboard-Matrix, Benutzern und Häkchen" />
 
 Ab 0.1.7 ist das eigene PNG-Icon in der HA-App-Kachel, im Kopf der Oberfläche und als App-Favicon enthalten. Das freigegebene Motiv ist in ZIP und UGSo-Paket vollständig enthalten und benötigt keinen externen Bilddienst. Die HA-Seitenleiste behält ihr konfiguriertes MDI-Symbol. Einstellungen, gespeicherte Vorauswahl und Dashboard-Daten bleiben beim Icon-Update erhalten.
 
-Eine eigenständige HA-App: Dashboards auswählen, Benutzer als Spalten und Ansichten als Zeilen anzeigen und die Zuordnung per Checkbox bearbeiten. Kein ATLAS erforderlich. Die breite Oberfläche nutzt 90 vw und 90 vh; Namen stehen hochkant, Benutzerspalten sind schmal und bei Bedarf horizontal scrollbar.
+Eine eigenständige HA-App: Dashboards auswählen, Benutzer als Spalten und Ansichten als Zeilen anzeigen und die Zuordnung per Checkbox bearbeiten. Kein ATLAS erforderlich. Die breite Oberfläche nutzt 90 vw und 90 vh; die Checkbox-Tabelle hat eine eigene begrenzte Höhe und scrollt vertikal sowie bei Bedarf horizontal. Innerhalb der Tabelle wischen oder den Scrollbereich fokussieren und Pfeiltasten/Bild auf/Bild ab verwenden. Ansichtennamen und Benutzerköpfe bleiben fixiert; niedrige Displays verwenden kürzere Köpfe. Außerhalb der Tabelle scrollt die übrige Seite.
+
+![Vertikale und horizontale Scrollfläche in 0.1.11 auf .177 bei 390 × 844 Pixeln](/images/dashboard-user-manager/ha-177-scroll-mobile-0.1.11.png)
 
 ![Stabile Dashboard-Benutzerverwaltung 0.1.10 nach Wiederherstellung auf .177](/images/dashboard-user-manager/ha-177-de-0.1.10.png)
 
@@ -96,6 +98,10 @@ ha apps info local_dashboard_user_manager
 Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` erneuert nur den Zeitstempel und hilft bei älteren ZIPs, deren erhaltene Zeitstempel Supervisor sonst nicht als Änderung erkennt. Nicht deinstallieren. Repository-Apps werden über ihr Repository aktualisiert.
 
 ## Prüfstand und Grenzen
+
+**0.1.11 – Scrollkorrektur:** Nutzerbefund: fehlende vertikale Bedienbarkeit auf BV6200 Pro mit Android 14/DokeOS 4.0, Samsung Tablet A6 mit Android 11, Companion-App und Chrome. Die Tabelle hat nun eine ausdrücklich vertikal scrollbar begrenzte Höhe, eine horizontale Scrollrichtung bei Platzmangel, Touch-Gesten und getrenntes Scrollen gegenüber der umgebenden Seite. Die Beschriftung nennt beide Richtungen in DE/EN/FR.
+
+Nach frischem Vollbackup auf .177 von 0.1.10 auf 0.1.11 aktualisiert. Chrome-Prüfung mit 390 × 844, 844 × 390, 768 × 1024 und 1024 × 768 Pixeln: vertikales Scrollen bis zur letzten Ansicht möglich, im schmalen Handyformat auch horizontal. Köpfe und erste Spalte bleiben fixiert; sämtliche Checkbox-Zustände, 18 Ansichten, vier Benutzer, Vorauswahl und 17 private Sicherungen erhalten. Kein Speichern von Zuordnungen ausgeführt. Alle 23 geprüften ursprünglichen HA-Dateien bytegleich; Projekte, Plugins und Papierkorb unverändert. 33 Python- und 19 Node-Prüfungen sowie Docker-Builds amd64/arm64 bestanden. Die Bildschirmgrößenprüfung ersetzt keinen erneuten Finger-Scrolltest in den tatsächlichen Android-Companion-Apps: App nach Update vollständig neu öffnen und beide Richtungen innerhalb der Tabelle prüfen.
 
 **0.1.10 – Serverausgänge „nicht gespeichert“ und „Konflikt“ auf .177 geprüft:** Nach frischem Vollbackup wurde ausschließlich für das eigene Testdashboard der erste und dritte Schreibauftrag vor dem Senden an HA durch einen echten Socket-Abbruch verhindert. Die unveränderte App behandelte beide Ausgänge zunächst als unklar; alle Checkboxen des Entwurfs blieben erhalten. Kein Eingriff in Bestandsdashboards oder Zugriffsrechte.
 

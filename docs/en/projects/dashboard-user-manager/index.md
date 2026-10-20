@@ -4,13 +4,15 @@ description: Assign users to all HA views or individual views with checkboxes, b
 ---
 # Dashboard User Manager
 
-**Version 0.1.10 · DE / EN / FR · MIT · stable**
+**Version 0.1.11 · DE / EN / FR · MIT · stable**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App icon with dashboard matrix, users and checkmarks" />
 
 Since 0.1.7, the bundled PNG icon appears in the HA app tile and interface header and is provided as the app favicon. The approved artwork is included in the ZIP and UGSo package without external image services. The HA sidebar retains its configured MDI symbol. Settings, saved dashboard selection and dashboard data are preserved during the icon update.
 
-A standalone HA app: select a dashboard, display users as columns and views as rows, and edit assignments using checkboxes. ATLAS is not required. The interface uses 90 vw and 90 vh, with rotated names, narrow user columns and horizontal scrolling when needed.
+A standalone HA app: select a dashboard, display users as columns and views as rows, and edit assignments using checkboxes. ATLAS is not required. The interface uses 90 vw and 90 vh; the bounded checkbox table scrolls vertically and horizontally when needed. Swipe inside it or focus the region and use arrow/Page Up/Page Down keys. View names and user headers stay fixed; shorter displays use compact headers. Scroll outside the table to move the surrounding page.
+
+![Vertical and horizontal scrolling in 0.1.11 on .177 at 390 × 844 pixels, shown in German](/images/dashboard-user-manager/ha-177-scroll-mobile-0.1.11.png)
 
 ![Stable Dashboard User Manager 0.1.10 after restoration on .177](/images/dashboard-user-manager/ha-177-en-0.1.10.png)
 
@@ -96,6 +98,10 @@ ha apps info local_dashboard_user_manager
 Once `version_latest` shows the new version, update the app in HA. `touch` changes the timestamp only, helping Supervisor detect files extracted from older ZIPs with preserved timestamps. Do not uninstall. Repository apps update through their repository.
 
 ## Verification and limits
+
+**0.1.11 – Scrolling correction:** User-reported issue: vertical operation was unavailable on a BV6200 Pro running Android 14/DokeOS 4.0, a Samsung Tablet A6 running Android 11, the Companion app and Chrome. The table now has an explicitly vertically scrollable bounded height, horizontal scrolling when needed, touch gestures and scroll containment relative to the surrounding page. DE/EN/FR accessibility labels name both directions.
+
+Updated .177 from 0.1.10 to 0.1.11 after a fresh full backup. Chrome checks at 390 × 844, 844 × 390, 768 × 1024 and 1024 × 768 pixels: vertical scrolling reaches the last view, with horizontal scrolling in the narrow phone format. Headers and the first column stay fixed; all checkbox states, 18 views, four users, selection and 17 private backups are retained. No assignments were saved. All 23 checked original HA files remain byte-identical; projects, plugins and trash are unchanged. 33 Python and 19 Node checks plus amd64/arm64 Docker builds passed. Viewport checks do not replace another finger-scrolling test in the actual Android Companion apps: fully reopen the app after updating and check both directions inside the table.
 
 **0.1.10 – “Not saved” and “conflict” server outcomes checked on .177:** After a fresh full backup, a real socket abort prevented the first and third save commands for the separate test dashboard from being sent to HA. The unchanged application initially treated both outcomes as uncertain and preserved every draft checkbox. Existing dashboards and access permissions were untouched.
 

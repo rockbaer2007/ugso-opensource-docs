@@ -4,13 +4,15 @@ description: Affecter des utilisateurs à toutes les vues HA ou individuellement
 ---
 # Gestion des utilisateurs des tableaux de bord
 
-**Version 0.1.10 · DE / EN / FR · MIT · stable**
+**Version 0.1.11 · DE / EN / FR · MIT · stable**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="Icône avec tableau, utilisateurs et coches" />
 
 Depuis 0.1.7, l’icône PNG intégrée apparaît dans la vignette HA et l’en-tête de l’interface et sert de favicon de l’application. Le motif approuvé est inclus dans le ZIP et le paquet UGSo sans service d’images externe. La barre latérale HA conserve son symbole MDI configuré. Paramètres, présélection enregistrée et données des tableaux de bord sont conservés pendant la mise à jour de l’icône.
 
-Une application HA indépendante : choisissez un tableau de bord, affichez les utilisateurs en colonnes et les vues en lignes, puis modifiez les affectations par cases à cocher. ATLAS n’est pas nécessaire. L’interface utilise 90 vw et 90 vh, des noms verticaux, des colonnes étroites et un défilement horizontal si nécessaire.
+Une application HA indépendante : choisissez un tableau de bord, affichez les utilisateurs en colonnes et les vues en lignes, puis modifiez les affectations par cases à cocher. ATLAS n’est pas nécessaire. L’interface utilise 90 vw et 90 vh ; le tableau de hauteur limitée défile verticalement et horizontalement si nécessaire. Balayez dans le tableau ou placez-y le focus puis utilisez les flèches/Page précédente/Page suivante. Noms des vues et en-têtes restent fixes ; les écrans bas utilisent des en-têtes compacts. Faites défiler hors du tableau pour déplacer le reste de la page.
+
+![Défilement vertical et horizontal de 0.1.11 sur .177 à 390 × 844 pixels, en allemand](/images/dashboard-user-manager/ha-177-scroll-mobile-0.1.11.png)
 
 ![Version stable 0.1.10 après restauration sur .177](/images/dashboard-user-manager/ha-177-fr-0.1.10.png)
 
@@ -96,6 +98,10 @@ ha apps info local_dashboard_user_manager
 Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans HA. `touch` modifie uniquement l’horodatage et aide Supervisor à détecter les fichiers issus d’anciens ZIP. Ne désinstallez pas l’application. Les applications issues d’un dépôt se mettent à jour via leur dépôt.
 
 ## Vérification et limites
+
+**0.1.11 – Correction du défilement :** Problème signalé par l’utilisateur : défilement vertical indisponible sur BV6200 Pro sous Android 14/DokeOS 4.0, Samsung Tablet A6 sous Android 11, application Companion et Chrome. Le tableau dispose désormais d’une hauteur limitée avec défilement vertical explicite, défilement horizontal si nécessaire, gestes tactiles et défilement séparé du reste de la page. Les libellés d’accessibilité DE/EN/FR indiquent les deux directions.
+
+Après sauvegarde complète récente, .177 a été mis à jour de 0.1.10 vers 0.1.11. Vérifications Chrome à 390 × 844, 844 × 390, 768 × 1024 et 1024 × 768 pixels : dernière vue accessible verticalement, défilement horizontal au format téléphone étroit. En-têtes et première colonne fixes ; cases, 18 vues, quatre utilisateurs, présélection et 17 sauvegardes privées conservés. Aucune affectation enregistrée. Les 23 fichiers HA d’origine vérifiés restent identiques octet par octet ; projets, extensions et corbeille inchangés. 33 tests Python, 19 tests Node et constructions Docker amd64/arm64 réussis. Ces formats d’écran ne remplacent pas un nouvel essai au doigt dans les véritables applications Companion Android : rouvrir complètement après mise à jour et vérifier les deux directions dans le tableau.
 
 **0.1.10 – Résultats serveur « non enregistré » et « conflit » vérifiés sur .177 :** Après une sauvegarde complète récente, une véritable interruption de socket a empêché l’envoi à HA des première et troisième commandes d’enregistrement du tableau de test distinct. L’application inchangée a d’abord traité les deux résultats comme incertains et conservé toutes les cases du brouillon. Tableaux existants et droits d’accès inchangés.
 
