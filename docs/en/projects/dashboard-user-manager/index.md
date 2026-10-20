@@ -4,7 +4,7 @@ description: Assign users to all HA views or individual views with checkboxes, b
 ---
 # Dashboard User Manager
 
-**Version 0.1.8 · DE / EN / FR · MIT · experimental**
+**Version 0.1.9 · DE / EN / FR · MIT · experimental**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App icon with dashboard matrix, users and checkmarks" />
 
@@ -53,6 +53,14 @@ Adding the repository does not change an existing **local app**. Local and repos
 This app controls view tab visibility. Direct URLs remain accessible; it does not replace HA access permissions. See the [official HA documentation](https://www.home-assistant.io/dashboards/views/#visible).
 :::
 
+## Timeout, cancellation and draft
+
+From 0.1.9, waiting for a save ends after at most 30 seconds. **Stop waiting** ends it sooner. Checkbox selections remain intact; **Download draft** saves the planned assignments as a local JSON file. This is a draft record, not a full dashboard backup or an automatically importable project. Download it before closing the tab.
+
+If no write request was sent, saving can be retried after fixing the cause. With **Save outcome unknown**, saving stays disabled: **Check server state** reads the actual state and fences any unused save plan against delayed execution. It distinguishes an already saved draft, an unchanged server and intervening changes, without writing again. Verification also has a timeout and cancellation control. In a conflict, download the draft before deliberately reloading.
+
+Cancellation only stops local waiting; a write already received by the server can still finish. Do not retry blindly. An app restart may require a new session: download the draft first, reload the session and deliberately reapply the intended changes. There is no automatic replay; closing/reloading does not preserve the draft unless you downloaded the file.
+
 ## Automatic language
 
 **Automatic (Home Assistant)** follows the HA interface language. If the surrounding HA frame cannot be read, the preferred browser language is used. Unsupported languages fall back to English. You can also select DE, EN or FR at the top; this preference is stored for that browser only.
@@ -85,7 +93,11 @@ Once `version_latest` shows the new version, update the app in HA. `touch` chang
 
 During a controlled app stop, an ongoing save completed fully and was confirmed. The next save attempt against the stopped app changed no data. After restart, the reachability/session error appeared, the unsaved draft remained and no automatic retry wrote data. After comparing the server state and reloading, a deliberate save worked again. Cards, names and the subview were preserved; the separate test dashboard was then removed.
 
-**Open finding:** During the outage, the interface initially remained busy saving. A local timeout or cancellation control is still missing, so interruption handling is not fully approved. A hard network cut precisely between the HA write and confirmation was not generated in this real test; that unconfirmed-write path has automated coverage only. Full app/HA backup restoration also remains open. Experimental status remains.
+**0.1.9 – Timeout/cancellation finding fixed:** Installed on .177 after a fresh full backup. With the app fully stopped, the local 30-second limit works; manual cancellation and connectivity errors also preserve both changed rows. No write request; server file byte-identical. The downloaded draft contains both planned assignments and no tokens. After restarting the app and renewing the session, deliberate saving succeeds; cards, names, paths and subview remain intact. The separate test dashboard was removed, original selection and automatic language restored; the four existing Lovelace files including “Test für APP” are byte-identical to the backup.
+
+33 Python and 19 Node checks pass, covering fetch/body timeout, late responses, cancellation, uncertain writes, read-only server reconciliation, conflicts and lost confirmation after a completed HA write. Docker builds for amd64/aarch64 and UGSo app CI pass. A hard network cut precisely between the HA write and confirmation remains unproven live; that path has automated coverage. Full app/HA backup restoration remains open, so experimental status stays. .68 and production systems were unchanged.
+
+![Timeout reached and draft preserved – real 0.1.9 test on .177, shown in German](/images/dashboard-user-manager/ha-177-timeout-0.1.9.png)
 
 ![Stale save rejected and draft preserved – real .177 test shown in German](/images/dashboard-user-manager/ha-177-conflict-0.1.8.png)
 

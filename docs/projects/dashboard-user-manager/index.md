@@ -4,7 +4,7 @@ description: Benutzer für alle HA-Ansichten oder einzeln per Checkbox zuordnen,
 ---
 # Dashboard-Benutzerverwaltung
 
-**Version 0.1.8 · DE / EN / FR · MIT · experimentell**
+**Version 0.1.9 · DE / EN / FR · MIT · experimentell**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App-Icon mit Dashboard-Matrix, Benutzern und Häkchen" />
 
@@ -53,6 +53,14 @@ Bleibt das aktuelle Dashboard ausgewählt, bleiben auch ungespeicherte Zuordnung
 Die App steuert die Sichtbarkeit der Ansichts-Tabs. Direkte URLs bleiben erreichbar; das ersetzt keine HA-Zugriffsrechte. Siehe [offizielle HA-Dokumentation](https://www.home-assistant.io/dashboards/views/#visible).
 :::
 
+## Zeitlimit, Abbruch und Entwurf
+
+Ab 0.1.9 endet das Warten beim Speichern spätestens nach 30 Sekunden. **Warten abbrechen** beendet es früher. Die Checkbox-Auswahl bleibt erhalten; **Entwurf sichern** lädt die geplanten Zuordnungen als lokale JSON-Datei herunter. Diese Datei ist ein Entwurfsnachweis, kein vollständiges Dashboard-Backup und kein automatisch rückimportierbares Projekt. Vor dem Schließen des Tabs sichern.
+
+Wurde noch kein Schreibauftrag gesendet, kann nach Behebung der Ursache erneut gespeichert werden. Bei **Speicherergebnis unklar** bleibt Speichern gesperrt: **Serverstand prüfen** liest den tatsächlichen Stand und verhindert die spätere Ausführung eines noch unbenutzten Speicherplans. Bereits gespeicherter Entwurf, unveränderter Server und zwischenzeitliche Änderungen werden unterschieden; die Prüfung schreibt nicht erneut. Auch sie ist zeitlich begrenzt und abbrechbar. Bei einem Konflikt zuerst den Entwurf sichern und anschließend bewusst neu laden.
+
+Abbrechen beendet nur das lokale Warten; ein bereits beim Server eingegangener Schreibauftrag kann noch fertig werden. Deshalb nicht blind wiederholen. Nach einem App-Neustart kann eine neue Sitzung nötig sein: Entwurf zuerst sichern, anschließend die Sitzung neu laden und die gewünschten Änderungen gezielt übernehmen. Der Entwurf wird nicht automatisch nachgespeichert und überlebt ein Schließen/Neuladen nicht ohne die heruntergeladene Datei.
+
 ## Automatische Sprache
 
 **Automatisch (Home Assistant)** übernimmt die HA-Oberflächensprache. Ist der umgebende HA-Rahmen nicht lesbar, gilt die bevorzugte Browsersprache. Nicht unterstützte Sprachen verwenden Englisch. Oben lässt sich zusätzlich DE, EN oder FR auswählen; die Präferenz gilt nur für diesen Browser.
@@ -85,7 +93,11 @@ Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` er
 
 Beim kontrollierten Stoppen der App wurde ein noch laufender Speichervorgang vollständig abgeschlossen und bestätigt. Der anschließende Speicherversuch gegen die gestoppte App änderte keine Daten. Nach Wiederstart erschien die Fehlermeldung zur Erreichbarkeit/Sitzung, der ungespeicherte Entwurf blieb erhalten und es erfolgte kein automatisches Nachspeichern. Nach Serververgleich und erneutem Laden war gezieltes Speichern wieder möglich. Karten, Namen und Unteransicht blieben erhalten; das eigene Testdashboard wurde anschließend entfernt.
 
-**Offener Befund:** Während des Ausfalls blieb die Oberfläche zunächst im Speichern-Zustand. Eine lokale Zeitbegrenzung beziehungsweise Abbruchmöglichkeit fehlt noch. Deshalb ist die Abbruchbedienung noch nicht vollständig freigegeben. Ein harter Netzabbruch exakt zwischen HA-Schreiben und Bestätigung wurde hierbei nicht real erzeugt; dieser unbestätigte Schreibpfad ist bislang automatisiert geprüft. Auch die vollständige App-/HA-Backup-Wiederherstellung bleibt offen. Der experimentelle Status bleibt bestehen.
+**0.1.9 – Timeout-/Abbruchbefund behoben:** Nach frischem Vollbackup auf .177 installiert. Bei vollständig gestoppter App greift das lokale 30-Sekunden-Limit; manueller Abbruch und Erreichbarkeitsfehler erhalten ebenfalls beide geänderten Zeilen. Kein Schreibauftrag, Serverdatei bytegleich. Der heruntergeladene Entwurf enthält beide geplanten Zuordnungen und keine Tokens. Nach App-Neustart und erneuerter Sitzung ist gezieltes Speichern erfolgreich; Karten, Namen, Pfade und Unteransicht bleiben erhalten. Eigenes Testdashboard entfernt, ursprüngliche Vorauswahl und automatische Sprache wiederhergestellt; die vier vorhandenen Lovelace-Dateien einschließlich „Test für APP“ sind bytegleich zur Sicherung.
+
+33 Python- und 19 Node-Prüfungen bestehen, einschließlich Fetch-/Antwort-Timeout, später Antworten, Abbruch, unklarem Schreibausgang, Serververgleich ohne erneutes Schreiben, Konflikten und verloren gegangener Bestätigung nach erfolgtem HA-Schreiben. Docker-Builds amd64/aarch64 und UGSo-App-CI erfolgreich. Ein harter Netzabbruch exakt zwischen HA-Schreiben und Bestätigung bleibt real unbewiesen; dieser Pfad ist automatisiert geprüft. Die vollständige App-/HA-Backup-Wiederherstellung bleibt offen, der experimentelle Status erhalten. .68 und Produktivsysteme unverändert.
+
+![Zeitlimit erreicht, Entwurf erhalten – echte Prüfung 0.1.9 auf .177](/images/dashboard-user-manager/ha-177-timeout-0.1.9.png)
 
 ![Veralteten Speicherstand abgelehnt, Entwurf erhalten – echte Prüfung auf .177](/images/dashboard-user-manager/ha-177-conflict-0.1.8.png)
 

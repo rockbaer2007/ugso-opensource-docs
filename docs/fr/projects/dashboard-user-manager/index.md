@@ -4,7 +4,7 @@ description: Affecter des utilisateurs à toutes les vues HA ou individuellement
 ---
 # Gestion des utilisateurs des tableaux de bord
 
-**Version 0.1.8 · DE / EN / FR · MIT · expérimental**
+**Version 0.1.9 · DE / EN / FR · MIT · expérimental**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="Icône avec tableau, utilisateurs et coches" />
 
@@ -53,6 +53,14 @@ L’ajout du dépôt ne modifie pas une **application locale** existante. Les ap
 L’application contrôle la visibilité des onglets. Les URL directes restent accessibles ; elle ne remplace pas les droits HA. Voir la [documentation officielle HA](https://www.home-assistant.io/dashboards/views/#visible).
 :::
 
+## Délai, annulation et brouillon
+
+Depuis 0.1.9, l’attente d’un enregistrement se termine au plus tard après 30 secondes. **Arrêter l’attente** l’interrompt plus tôt. Les cases cochées restent intactes ; **Télécharger le brouillon** conserve les affectations prévues dans un fichier JSON local. Il s’agit d’un relevé du brouillon, pas d’une sauvegarde complète ni d’un projet automatiquement réimportable. Le télécharger avant de fermer l’onglet.
+
+Si aucune demande d’écriture n’a été envoyée, il est possible de réessayer après correction de la cause. Si le résultat est incertain, l’enregistrement reste bloqué : **Vérifier l’état du serveur** lit l’état réel et empêche l’exécution tardive d’un plan encore inutilisé. La vérification distingue le brouillon déjà enregistré, le serveur inchangé et les modifications concurrentes, sans réécrire. Elle est également limitée dans le temps et annulable. En cas de conflit, télécharger le brouillon avant de recharger volontairement.
+
+L’annulation arrête uniquement l’attente locale ; une écriture déjà reçue par le serveur peut encore se terminer. Ne pas réessayer aveuglément. Un redémarrage de l’application peut nécessiter une nouvelle session : télécharger d’abord le brouillon, recharger la session puis reprendre volontairement les changements. Aucune réécriture automatique ; la fermeture/le rechargement ne conserve pas le brouillon sans le fichier téléchargé.
+
 ## Langue automatique
 
 **Automatique (Home Assistant)** suit la langue de l’interface HA. Si le cadre HA ne peut pas être lu, la langue préférée du navigateur est utilisée. Les langues non prises en charge utilisent l’anglais. Vous pouvez aussi choisir DE, EN ou FR en haut ; cette préférence est enregistrée uniquement dans ce navigateur.
@@ -85,7 +93,11 @@ Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans 
 
 Lors de l’arrêt contrôlé de l’application, un enregistrement en cours s’est terminé entièrement et a été confirmé. La tentative suivante, application arrêtée, n’a modifié aucune donnée. Après redémarrage, le message d’erreur de connexion/session est apparu, le brouillon a été conservé et aucune nouvelle écriture automatique n’a eu lieu. Après comparaison du serveur et rechargement, l’enregistrement volontaire fonctionnait à nouveau. Cartes, noms et sous-vue ont été conservés ; le tableau de bord de test a ensuite été supprimé.
 
-**Point encore ouvert :** Pendant l’interruption, l’interface est d’abord restée occupée par l’enregistrement. Il manque une limite de temps locale ou une commande d’annulation ; cette gestion n’est donc pas entièrement validée. Une coupure réseau brutale exactement entre l’écriture HA et sa confirmation n’a pas été provoquée dans ce test réel ; ce scénario n’est couvert que par les tests automatisés. La restauration complète application/sauvegarde HA reste également à vérifier. Le statut expérimental est conservé.
+**0.1.9 – Défaut de délai/annulation corrigé :** Installation sur .177 après une sauvegarde complète. Application totalement arrêtée, la limite locale de 30 secondes fonctionne ; l’annulation manuelle et les erreurs de connexion conservent aussi les deux lignes modifiées. Aucune demande d’écriture ; fichier serveur identique. Le brouillon téléchargé contient les deux affectations prévues, sans jeton. Après redémarrage et renouvellement de session, l’enregistrement volontaire réussit ; cartes, noms, chemins et sous-vue sont conservés. Tableau de test supprimé, présélection et langue automatique rétablies ; les quatre fichiers Lovelace existants, dont « Test für APP », sont identiques à la sauvegarde.
+
+33 tests Python et 19 tests Node réussis : délai de requête/lecture de réponse, réponses tardives, annulation, écriture incertaine, comparaison serveur sans réécriture, conflits et confirmation perdue après une écriture HA terminée. Builds Docker amd64/aarch64 et CI UGSo réussis. Une coupure brutale exactement entre l’écriture HA et sa confirmation reste non démontrée en situation réelle ; ce scénario est testé automatiquement. La restauration complète application/sauvegarde HA reste ouverte ; le statut expérimental est conservé. .68 et les systèmes de production sont inchangés.
+
+![Délai atteint et brouillon conservé – test réel 0.1.9 sur .177 en allemand](/images/dashboard-user-manager/ha-177-timeout-0.1.9.png)
 
 ![Enregistrement périmé refusé et brouillon conservé – test réel .177 en allemand](/images/dashboard-user-manager/ha-177-conflict-0.1.8.png)
 
