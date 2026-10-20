@@ -63,6 +63,6 @@ Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans 
 
 L’utilisateur a validé les affectations globales et individuelles, l’enregistrement et le rechargement de 0.1.3. La version 0.1.4 ajoute des catalogues et les vrais scripts d’interface testés hors ligne en DE/EN/FR, ainsi que des tests API, de conservation et de conflits. Aucun système de production n’a été modifié pour cette traduction. La restauration complète d’une sauvegarde HA de l’application reste à vérifier. Une vue d’ensemble par défaut non configurée peut renvoyer `config_not_found` ; choisissez un tableau de bord manuel existant.
 
-- [Code et paquet de l’application sur GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/main/dashboard_user_manager)
+- [Code et paquet de l’application sur GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/dashboard_user_manager)
 - [UGSo HA Apps](/fr/projects-mqtt/)
 - [Deutsch](/projects/dashboard-user-manager/) · [English](/en/projects/dashboard-user-manager/)

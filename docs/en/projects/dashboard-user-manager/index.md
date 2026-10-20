@@ -63,6 +63,6 @@ Once `version_latest` shows the new version, update the app in HA. `touch` chang
 
 The user successfully tested bulk and individual assignments, saving and reloading in 0.1.3. Version 0.1.4 adds offline-tested language catalogs, real frontend scripts exercised in DE/EN/FR, and API, preservation and conflict tests. No production system was modified for this language change. Full HA backup restoration of the app remains unverified. An unconfigured default dashboard may return `config_not_found`; select an existing manually managed dashboard instead.
 
-- [App source and package on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/main/dashboard_user_manager)
+- [App source and package on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/dashboard_user_manager)
 - [UGSo HA Apps](/en/projects-mqtt/)
 - [Deutsch](/projects/dashboard-user-manager/) · [Français](/fr/projects/dashboard-user-manager/)

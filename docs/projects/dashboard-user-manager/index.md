@@ -63,6 +63,6 @@ Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` er
 
 0.1.3 wurde vom Nutzer mit Sammel-/Einzelauswahl, Speichern und Neuladen erfolgreich geprüft. 0.1.4 ergänzt offline geprüfte Sprachkataloge, echte Frontend-Skripte in DE/EN/FR sowie API-, Datenerhalt- und Konflikttests. Kein Produktivsystem wurde für die Sprachänderung verändert. Die vollständige HA-Backup-Wiederherstellung der App ist noch offen. Eine nicht konfigurierte Standardübersicht kann `config_not_found` melden; ein vorhandenes manuelles Dashboard auswählen.
 
-- [App-Quellcode und Paket auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/main/dashboard_user_manager)
+- [App-Quellcode und Paket auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/dashboard_user_manager)
 - [UGSo HA Apps](/projects-mqtt/)
 - [English](/en/projects/dashboard-user-manager/) · [Français](/fr/projects/dashboard-user-manager/)
