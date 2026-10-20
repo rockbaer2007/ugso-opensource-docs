@@ -4,13 +4,23 @@ description: Assign users to all HA views or individual views with checkboxes, b
 ---
 # Dashboard User Manager
 
-**Version 0.1.4 · DE / EN / FR · MIT · experimental**
+**Version 0.1.5 · DE / EN / FR · MIT · experimental**
 
 A standalone HA app: select a dashboard, display users as columns and views as rows, and edit assignments using checkboxes. ATLAS is not required. The interface uses 90 vw and 90 vh, with rotated names, narrow user columns and horizontal scrolling when needed.
 
 ![Dashboard User Manager 0.1.4 on HA test host .177 using automatic English](/images/dashboard-user-manager/ha-177-en-0.1.4.png)
 
 Actual screenshot from test host .177, 20 October 2026: automatic HA language, 18 views and four users. The existing dashboard was not changed for this screenshot.
+
+## Filter and preselect dashboards
+
+![Dashboard selection 0.1.5 with checkboxes on .177](/images/dashboard-user-manager/selection-177-en-0.1.5.png)
+
+The dropdown contains only successfully loaded dashboards with at least one view. Confirmed empty entries and app panels without views are hidden. Load errors are listed separately by dashboard name and are not treated as empty; retry with **Reload**. YAML or generated dashboards with views remain marked **read-only**.
+
+**Dashboard selection** opens a dialog with a checkbox for each available dashboard, **Select all**, **Clear all**, **Cancel** and **Apply selection**. Only checked entries appear in the dropdown. Preferences are stored per browser and HA address without changing dashboards or user assignments. An empty selection is valid. Add new dashboards to an existing saved selection when needed. Previously selected entries retain their preference during load errors.
+
+Keeping the current dashboard preserves unsaved assignments. Excluding it asks for confirmation before discarding unsaved changes. If browser storage is blocked, an error is shown and the app does not pretend that the selection was saved.
 
 ## Install through UGSo HA Apps
 
@@ -64,6 +74,8 @@ ha apps info local_dashboard_user_manager
 Once `version_latest` shows the new version, update the app in HA. `touch` changes the timestamp only, helping Supervisor detect files extracted from older ZIPs with preserved timestamps. Do not uninstall. Repository apps update through their repository.
 
 ## Verification and limits
+
+Version 0.1.5 tested on .177 after a fresh full backup: empty map hidden, unconfigured overview error shown separately, cancellation and persisted empty/re-enabled selection verified after reload. Dialog visually checked in DE/EN/FR. No user assignments saved; all four Lovelace files unchanged. All 26 Python and ten Node checks and amd64/aarch64 Docker builds passed.
 
 The user successfully tested bulk and individual assignments, saving and reloading in 0.1.3. After a full backup, the local app on .177 was updated to 0.1.4. Automatic language selection follows German → English → French → German without reloading the app. Names and assignments are preserved; all four Lovelace files, including “Test für APP”, have the same SHA-256 hashes as the backup after testing. Offline frontend, API, preservation and conflict tests also pass. No production system was modified. Full HA backup restoration of the app remains unverified. An unconfigured default dashboard may return `config_not_found`; select an existing manually managed dashboard instead.
 

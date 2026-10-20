@@ -4,7 +4,7 @@ description: Benutzer für alle HA-Ansichten oder einzeln per Checkbox zuordnen,
 ---
 # Dashboard-Benutzerverwaltung
 
-**Version 0.1.4 · DE / EN / FR · MIT · experimentell**
+**Version 0.1.5 · DE / EN / FR · MIT · experimentell**
 
 Eine eigenständige HA-App: Dashboards auswählen, Benutzer als Spalten und Ansichten als Zeilen anzeigen und die Zuordnung per Checkbox bearbeiten. Kein ATLAS erforderlich. Die breite Oberfläche nutzt 90 vw und 90 vh; Namen stehen hochkant, Benutzerspalten sind schmal und bei Bedarf horizontal scrollbar.
 
@@ -23,6 +23,16 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 Die **Dashboard-Benutzerverwaltung** installieren, starten und über HA Ingress öffnen. Die Oberfläche ist ausschließlich für aktive HA-Administratoren zugänglich. Kein zusätzlicher LAN-Port, kein manuell einzutragender Token. Benötigt Home Assistant mit Supervisor und ein manuell verwaltetes Dashboard. YAML- und automatisch erzeugte Dashboards sind nur lesbar.
 
 Eine vorhandene **lokale App** bleibt beim Hinzufügen des Repositorys unverändert. Lokale und Repository-App besitzen verschiedene Kennungen und getrennte private App-Daten. Vor einem bewussten Quellenwechsel Vollbackup einschließlich der bisherigen App und deren JSON-Sicherungen herunterladen. Die lokale App nicht ungeprüft deinstallieren; nur eine App gleichzeitig zum Bearbeiten verwenden.
+
+## Dashboards filtern und vorauswählen
+
+![Dashboard-Vorauswahl 0.1.5 mit Checkboxen auf .177](/images/dashboard-user-manager/selection-177-de-0.1.5.png)
+
+Die Dropdownliste enthält nur erfolgreich geladene Dashboards mit mindestens einer Ansicht. Bestätigte leere Einträge und App-Seiten ohne Ansichten werden ausgeblendet. Ladefehler erscheinen getrennt mit Dashboard-Namen und gelten nicht als leer; über **Neu laden** erneut prüfen. YAML- oder generierte Dashboards mit Ansichten bleiben als **nur lesbar** gekennzeichnet.
+
+**Dashboard-Vorauswahl** öffnet ein Fenster mit einer Checkbox je verfügbarem Dashboard, **Alle auswählen**, **Alle abwählen**, **Abbrechen** und **Vorauswahl übernehmen**. Nur angehakte Einträge erscheinen anschließend im Dropdown. Die Auswahl wird pro Browser und HA-Adresse gespeichert; sie ändert keine Dashboards oder Benutzerzuordnungen. Auch eine leere Auswahl ist erlaubt. Nach einer gespeicherten Vorauswahl neue Dashboards bei Bedarf dort ergänzen. Bei Ladefehlern bleiben frühere Auswahlpräferenzen erhalten.
+
+Bleibt das aktuelle Dashboard ausgewählt, bleiben auch ungespeicherte Zuordnungen erhalten. Wird es abgewählt, fragt die App vor dem Verwerfen ungespeicherter Änderungen nach. Bei gesperrtem Browser-Speicher zeigt sie einen Fehler und übernimmt die Vorauswahl nicht scheinbar erfolgreich.
 
 ## Benutzer zuordnen
 
@@ -64,6 +74,8 @@ ha apps info local_dashboard_user_manager
 Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` erneuert nur den Zeitstempel und hilft bei älteren ZIPs, deren erhaltene Zeitstempel Supervisor sonst nicht als Änderung erkennt. Nicht deinstallieren. Repository-Apps werden über ihr Repository aktualisiert.
 
 ## Prüfstand und Grenzen
+
+0.1.5 auf .177 nach frischem Vollbackup geprüft: leere Karte ausgeblendet, Fehler der nicht konfigurierten Übersicht getrennt angezeigt, Abbrechen und gespeicherte leere/erneut aktivierte Vorauswahl nach Neuladen bestätigt. Dialog in DE/EN/FR sichtbar geprüft. Keine Benutzerzuordnung gespeichert; die vier Lovelace-Dateien bleiben unverändert. 26 Python- und zehn Node-Prüfungen sowie amd64-/aarch64-Docker-Builds bestanden.
 
 0.1.3 wurde vom Nutzer mit Sammel-/Einzelauswahl, Speichern und Neuladen erfolgreich geprüft. 0.1.4 wurde nach Vollbackup als lokale App auf .177 aktualisiert. Die automatische Sprachwahl folgt dort Deutsch → Englisch → Französisch → Deutsch ohne Neuladen der App. Namen und Zuordnungen bleiben erhalten; alle vier Lovelace-Dateien einschließlich „Test für APP“ sind nach der Prüfung SHA-256-identisch zur Sicherung. Ergänzend bestehen Offline-Frontend-, API-, Datenerhalt- und Konflikttests. Kein Produktivsystem wurde verändert. Die vollständige HA-Backup-Wiederherstellung der App ist noch offen. Eine nicht konfigurierte Standardübersicht kann `config_not_found` melden; ein vorhandenes manuelles Dashboard auswählen.
 
