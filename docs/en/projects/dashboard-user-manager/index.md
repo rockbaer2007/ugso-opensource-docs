@@ -97,6 +97,17 @@ Once `version_latest` shows the new version, update the app in HA. `touch` chang
 
 ## Verification and limits
 
+**0.1.10 – “Not saved” and “conflict” server outcomes checked on .177:** After a fresh full backup, a real socket abort prevented the first and third save commands for the separate test dashboard from being sent to HA. The unchanged application initially treated both outcomes as uncertain and preserved every draft checkbox. Existing dashboards and access permissions were untouched.
+
+- **Not saved:** The HA file remained exactly equal to its initial state before and after **Check server state**. The interface reported that the server was unchanged, the draft was preserved and saving could be retried. Saving was enabled again; the deliberately started second attempt then saved exactly the two intended user lists and successfully read them back.
+- **Conflict:** After the third save command was also prevented, a second HA session edited one card’s content in the test dashboard. Server verification detected the difference, blocked saving and retained the complete draft. **Download draft** produced a verified JSON containing both planned assignments without credentials. The second session’s change remained byte-identical through verification; no additional HA write occurred.
+
+All 14 existing private dashboard backups were preserved; each prevented attempt and the deliberately successful attempt created one new backup. Conflict verification created none. Before cleanup, the draft was saved privately; the original dashboard selection and automatic language were restored, instrumentation removed and the original app rebuilt. The separate dashboard was removed, “Test für APP” and all existing data preserved; still version 0.1.10 with three full HA backups on .177. Together with earlier checks, all three server outcomes have now been checked live: **already saved, not saved, conflict**.
+
+![Unchanged HA state detected, draft retained and retry enabled, shown in German](/images/dashboard-user-manager/ha-177-outcome-before-0.1.10.png)
+
+![Conflict detected, draft retained and overwrite blocked, shown in German](/images/dashboard-user-manager/ha-177-outcome-conflict-0.1.10.png)
+
 **0.1.10 – Interruption during HA write acknowledgement checked on .177:** After a fresh full backup, the app’s real WebSocket connection to HA was aborted for exactly one save command targeting its own test dashboard, immediately after sending and before receiving the result message. No successful write status reached the app and the commit did not perform its subsequent read-back. HA nevertheless saved the two intended user lists, independently verified from its stored configuration.
 
 The app reported **Unknown save outcome**, preserved the complete checkbox draft and blocked another save. **Check server state** established over a new connection: **Already saved; no additional write.** Exactly one additional private dashboard backup was created and all 13 existing backups remained; checking the server left the HA file byte-identical. Cards, names, paths and the subview were unchanged. Temporary instrumentation was then removed, the original app rebuilt and the test dashboard cleaned up. Existing data including “Test für APP” and the original dashboard selection are preserved; the package remains version 0.1.10.
@@ -117,7 +128,7 @@ The interface reported an unknown save outcome, preserved every checkbox selecti
 
 After restart, 21 HA files including all existing Lovelace files are byte-identical. The two other checked registries retain all 22 devices and 73 entities with their settings; only runtime modification timestamps and the app version recorded by HA update. Seven ATLAS projects, plugin management and trash state are unchanged. The existing ATLAS-HA connection works without entering credentials again. Full recovery removes the test dashboard created after the backup. This is restoration on the existing test installation, not rebuilding empty hardware. 33 Python and 19 Node tests and amd64/aarch64 Docker builds pass. 0.1.10 only removes the experimental package label and updates version/evidence; save logic and permissions are unchanged. .68 and production systems were not used.
 
-The two checks cover different boundaries: aborting the HA WebSocket before receiving write acknowledgement, and aborting the HTTP response channel after successful HA read-back. The WebSocket test establishes the observed outcome “HA saved, acknowledgement missing”; it does not guarantee every possible timing or the “not saved” outcome. No physical LAN/power outage was triggered. Guidance for uncertain writes still applies.
+The checks cover prevented save commands, an intervening change by a second session, aborting the HA WebSocket before write acknowledgement and aborting the HTTP response channel after successful HA read-back. All three server outcomes were observed using separate test data, without guaranteeing every possible interruption timing. No physical LAN/power outage was triggered. Guidance for uncertain writes still applies.
 
 ![App after full HA restoration on .177 with original dashboard preserved, shown in German](/images/dashboard-user-manager/ha-177-full-restore-0.1.9.png)
 
