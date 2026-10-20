@@ -4,6 +4,8 @@ description: Page française préparée pour MQTT Projets dans la documentation 
 ---
 # MQTT Projets
 
+[Gestion des utilisateurs des tableaux de bord 0.1.4](/fr/projects/dashboard-user-manager/) : colonnes de cases à cocher, affectations globales ou individuelles, langue automatique DE/EN/FR et sauvegarde avant enregistrement. Disponible dans le dépôt [UGSo HA Apps](https://github.com/rockbaer2007/ugso-ha-mqtt-addons).
+
 [CallMeBot Whatsapp : application HA, profils de destinataire et blocs WhatsApp en DE/EN/FR](/fr/projects/callmebot/).
 [CallMeBot Signal : textes Signal, profils numéro/UUID et Blockly avec sélection de profil en DE/EN/FR](/fr/projects/callmebot-signal/).
 

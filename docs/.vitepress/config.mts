@@ -123,6 +123,7 @@ const navFr = [
 ]
 
 const sidebarDe = {
+  '/projects/dashboard-user-manager/': [{text:'Dashboard-Benutzerverwaltung',items:[{text:'Einrichtung und Bedienung',link:'/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
   '/projects/mqtt-client/': [{ text: 'MQTT-Client', items: [{ text: 'Einrichtung und Neuerungen', link: '/projects/mqtt-client/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
   '/projects/callmebot/': [{ text: 'CallMeBot Whatsapp', items: [{ text: 'Einrichtung und Blockly', link: '/projects/callmebot/' }, { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
   '/projects/callmebot-signal/': [{ text: 'CallMeBot Signal', items: [{ text: 'Einrichtung und Blockly', link: '/projects/callmebot-signal/' }, { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
@@ -298,6 +299,7 @@ const sidebarDe = {
       collapsed: false,
       items: [
         { text: 'Übersicht', link: '/projects-mqtt/' },
+        { text: 'Dashboard-Benutzerverwaltung', link: '/projects/dashboard-user-manager/' },
         { text: 'MQTT-Client', link: '/projects/mqtt-client/' },
         { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' },
         { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
@@ -565,6 +567,7 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects/dashboard-user-manager/': [{text:'Dashboard User Manager',items:[{text:'Setup and usage',link:'/en/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
   '/en/projects/mqtt-client/': [{ text: 'MQTT-Client', items: [{ text: 'Setup and updates', link: '/en/projects/mqtt-client/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
   '/en/projects/callmebot/': [{ text: 'CallMeBot Whatsapp', items: [{ text: 'Setup and Blockly', link: '/en/projects/callmebot/' }, { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
   '/en/projects/callmebot-signal/': [{ text: 'CallMeBot Signal', items: [{ text: 'Setup and Blockly', link: '/en/projects/callmebot-signal/' }, { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
@@ -697,6 +700,7 @@ const sidebarEn = {
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/projects-mqtt/' },
+        { text: 'Dashboard User Manager', link: '/en/projects/dashboard-user-manager/' },
         { text: 'MQTT-Client', link: '/en/projects/mqtt-client/' },
         { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' },
         { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
@@ -861,6 +865,8 @@ const sidebarEn = {
 }
 
 const sidebarFr = {
+  '/fr/projects/dashboard-user-manager/': [{text:'Utilisateurs des tableaux de bord',items:[{text:'Installation et utilisation',link:'/fr/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
+  '/fr/projects-mqtt/': [{text:'UGSo HA Apps',items:[{text:'Vue d’ensemble',link:'/fr/projects-mqtt/'},{text:'Utilisateurs des tableaux de bord',link:'/fr/projects/dashboard-user-manager/'}]}],
   '/fr/projects/grafik-visual-studio/': [{text:'Grafik Visual Studio',items:[{text:'Widgets Material Design',link:'/fr/projects/grafik-visual-studio/materialdesign'},{text:'Widgets interactifs',link:'/fr/projects/grafik-visual-studio/interaktiv'},{text:'Langues, sources HA et Climate',link:'/fr/projects/grafik-visual-studio/ha-quellen-climate'},{text:'Widgets Basic',link:'/fr/projects/grafik-visual-studio/basic'},{text:'Studio (anglais)',link:'/en/projects/grafik-visual-studio/'}]}],
   '/fr/projects/callmebot/': [{ text: 'CallMeBot Whatsapp', items: [{ text: 'Configuration et Blockly', link: '/fr/projects/callmebot/' }, { text: 'Blocks for HA', link: '/fr/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/fr/projects-mqtt/' }] }],
   '/fr/projects/callmebot-signal/': [{ text: 'CallMeBot Signal', items: [{ text: 'Configuration et Blockly', link: '/fr/projects/callmebot-signal/' }, { text: 'Blocks for HA', link: '/fr/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/fr/projects-mqtt/' }] }],

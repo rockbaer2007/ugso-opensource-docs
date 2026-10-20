@@ -6,6 +6,7 @@ The shared repository is the central publishing location for all UGSo Software H
 
 | Project | Documentation |
 | --- | --- |
+| [Dashboard User Manager](/en/projects/dashboard-user-manager/) | 0.1.4: user checkbox columns, bulk/individual assignments, automatic DE/EN/FR interface and dashboard backup before saving. |
 | [CallMeBot Whatsapp](/en/projects/callmebot/) | Experimental HA App 0.1.4: recipient profiles, WhatsApp texts via MQTT, DE/EN/FR and matching Blockly blocks. |
 | [CallMeBot Signal](/en/projects/callmebot-signal/) | Experimental HA app 0.1.0: Signal texts, phone/UUID profiles, separate MQTT namespace and Blockly profile selection in DE/EN/FR. |
 | [Blocks for HA](/en/projects/blocks-for-ha/) | Experimental HA app 0.1.3: visual Blocks for native automations, YAML import/export and extensible branches; editor through HA ingress. |
