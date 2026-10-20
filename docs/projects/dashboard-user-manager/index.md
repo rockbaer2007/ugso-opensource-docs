@@ -8,6 +8,10 @@ description: Benutzer für alle HA-Ansichten oder einzeln per Checkbox zuordnen,
 
 Eine eigenständige HA-App: Dashboards auswählen, Benutzer als Spalten und Ansichten als Zeilen anzeigen und die Zuordnung per Checkbox bearbeiten. Kein ATLAS erforderlich. Die breite Oberfläche nutzt 90 vw und 90 vh; Namen stehen hochkant, Benutzerspalten sind schmal und bei Bedarf horizontal scrollbar.
 
+![Dashboard-Benutzerverwaltung 0.1.4 auf dem HA-Testsystem .177 mit automatischer deutscher Sprache](/images/dashboard-user-manager/ha-177-de-0.1.4.png)
+
+Echte Aufnahme vom Testsystem .177, 20.10.2026: automatische HA-Sprache, 18 Ansichten und vier Benutzer. Das vorhandene Dashboard wurde für die Aufnahme nicht geändert.
+
 ## Installation über UGSo HA Apps
 
 Zuerst ein vollständiges HA-Backup erstellen. Unter **Einstellungen → Apps → App-Store → Repositorys** hinzufügen:
@@ -61,7 +65,7 @@ Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` er
 
 ## Prüfstand und Grenzen
 
-0.1.3 wurde vom Nutzer mit Sammel-/Einzelauswahl, Speichern und Neuladen erfolgreich geprüft. 0.1.4 ergänzt offline geprüfte Sprachkataloge, echte Frontend-Skripte in DE/EN/FR sowie API-, Datenerhalt- und Konflikttests. Kein Produktivsystem wurde für die Sprachänderung verändert. Die vollständige HA-Backup-Wiederherstellung der App ist noch offen. Eine nicht konfigurierte Standardübersicht kann `config_not_found` melden; ein vorhandenes manuelles Dashboard auswählen.
+0.1.3 wurde vom Nutzer mit Sammel-/Einzelauswahl, Speichern und Neuladen erfolgreich geprüft. 0.1.4 wurde nach Vollbackup als lokale App auf .177 aktualisiert. Die automatische Sprachwahl folgt dort Deutsch → Englisch → Französisch → Deutsch ohne Neuladen der App. Namen und Zuordnungen bleiben erhalten; alle vier Lovelace-Dateien einschließlich „Test für APP“ sind nach der Prüfung SHA-256-identisch zur Sicherung. Ergänzend bestehen Offline-Frontend-, API-, Datenerhalt- und Konflikttests. Kein Produktivsystem wurde verändert. Die vollständige HA-Backup-Wiederherstellung der App ist noch offen. Eine nicht konfigurierte Standardübersicht kann `config_not_found` melden; ein vorhandenes manuelles Dashboard auswählen.
 
 - [App-Quellcode und Paket auf GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/dashboard_user_manager)
 - [UGSo HA Apps](/projects-mqtt/)

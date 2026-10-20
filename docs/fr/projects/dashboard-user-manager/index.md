@@ -8,6 +8,10 @@ description: Affecter des utilisateurs à toutes les vues HA ou individuellement
 
 Une application HA indépendante : choisissez un tableau de bord, affichez les utilisateurs en colonnes et les vues en lignes, puis modifiez les affectations par cases à cocher. ATLAS n’est pas nécessaire. L’interface utilise 90 vw et 90 vh, des noms verticaux, des colonnes étroites et un défilement horizontal si nécessaire.
 
+![Gestion des utilisateurs 0.1.4 sur le système HA de test .177 en français automatique](/images/dashboard-user-manager/ha-177-fr-0.1.4.png)
+
+Capture réelle du système de test .177, le 20 octobre 2026 : langue HA automatique, 18 vues et quatre utilisateurs. Le tableau de bord existant n’a pas été modifié pour cette capture.
+
 ## Installation via UGSo HA Apps
 
 Créez d’abord une sauvegarde HA complète. Ajoutez ce dépôt dans **Paramètres → Applications → Boutique d’applications → Dépôts** :
@@ -61,7 +65,7 @@ Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans 
 
 ## Vérification et limites
 
-L’utilisateur a validé les affectations globales et individuelles, l’enregistrement et le rechargement de 0.1.3. La version 0.1.4 ajoute des catalogues et les vrais scripts d’interface testés hors ligne en DE/EN/FR, ainsi que des tests API, de conservation et de conflits. Aucun système de production n’a été modifié pour cette traduction. La restauration complète d’une sauvegarde HA de l’application reste à vérifier. Une vue d’ensemble par défaut non configurée peut renvoyer `config_not_found` ; choisissez un tableau de bord manuel existant.
+L’utilisateur a validé les affectations globales et individuelles, l’enregistrement et le rechargement de 0.1.3. Après une sauvegarde complète, l’application locale sur .177 a été mise à jour vers 0.1.4. La langue automatique suit allemand → anglais → français → allemand sans recharger l’application. Noms et affectations sont conservés ; les quatre fichiers Lovelace, dont « Test für APP », ont les mêmes empreintes SHA-256 que la sauvegarde après le test. Les tests hors ligne d’interface, d’API, de conservation et de conflits réussissent également. Aucun système de production n’a été modifié. La restauration complète d’une sauvegarde HA de l’application reste à vérifier. Une vue d’ensemble par défaut non configurée peut renvoyer `config_not_found` ; choisissez un tableau de bord manuel existant.
 
 - [Code et paquet de l’application sur GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/dashboard_user_manager)
 - [UGSo HA Apps](/fr/projects-mqtt/)

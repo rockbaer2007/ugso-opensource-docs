@@ -8,6 +8,10 @@ description: Assign users to all HA views or individual views with checkboxes, b
 
 A standalone HA app: select a dashboard, display users as columns and views as rows, and edit assignments using checkboxes. ATLAS is not required. The interface uses 90 vw and 90 vh, with rotated names, narrow user columns and horizontal scrolling when needed.
 
+![Dashboard User Manager 0.1.4 on HA test host .177 using automatic English](/images/dashboard-user-manager/ha-177-en-0.1.4.png)
+
+Actual screenshot from test host .177, 20 October 2026: automatic HA language, 18 views and four users. The existing dashboard was not changed for this screenshot.
+
 ## Install through UGSo HA Apps
 
 Create a full HA backup first. Add this repository under **Settings → Apps → App store → Repositories**:
@@ -61,7 +65,7 @@ Once `version_latest` shows the new version, update the app in HA. `touch` chang
 
 ## Verification and limits
 
-The user successfully tested bulk and individual assignments, saving and reloading in 0.1.3. Version 0.1.4 adds offline-tested language catalogs, real frontend scripts exercised in DE/EN/FR, and API, preservation and conflict tests. No production system was modified for this language change. Full HA backup restoration of the app remains unverified. An unconfigured default dashboard may return `config_not_found`; select an existing manually managed dashboard instead.
+The user successfully tested bulk and individual assignments, saving and reloading in 0.1.3. After a full backup, the local app on .177 was updated to 0.1.4. Automatic language selection follows German → English → French → German without reloading the app. Names and assignments are preserved; all four Lovelace files, including “Test für APP”, have the same SHA-256 hashes as the backup after testing. Offline frontend, API, preservation and conflict tests also pass. No production system was modified. Full HA backup restoration of the app remains unverified. An unconfigured default dashboard may return `config_not_found`; select an existing manually managed dashboard instead.
 
 - [App source and package on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/dashboard_user_manager)
 - [UGSo HA Apps](/en/projects-mqtt/)
