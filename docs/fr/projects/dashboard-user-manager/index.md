@@ -81,6 +81,14 @@ Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans 
 
 ## Vérification et limites
 
+**Conflits et interruption de connexion vérifiés avec 0.1.8 sur .177 :** Après une sauvegarde complète, deux onglets ont ouvert le même tableau de bord de test distinct. L’onglet A a enregistré une modification ; le brouillon périmé de B a été refusé avec un message de conflit. Sa sélection est restée visible et l’état serveur de A est resté identique. Après réinitialisation/rechargement volontaire, la seconde modification a pu être enregistrée sans écraser la première.
+
+Lors de l’arrêt contrôlé de l’application, un enregistrement en cours s’est terminé entièrement et a été confirmé. La tentative suivante, application arrêtée, n’a modifié aucune donnée. Après redémarrage, le message d’erreur de connexion/session est apparu, le brouillon a été conservé et aucune nouvelle écriture automatique n’a eu lieu. Après comparaison du serveur et rechargement, l’enregistrement volontaire fonctionnait à nouveau. Cartes, noms et sous-vue ont été conservés ; le tableau de bord de test a ensuite été supprimé.
+
+**Point encore ouvert :** Pendant l’interruption, l’interface est d’abord restée occupée par l’enregistrement. Il manque une limite de temps locale ou une commande d’annulation ; cette gestion n’est donc pas entièrement validée. Une coupure réseau brutale exactement entre l’écriture HA et sa confirmation n’a pas été provoquée dans ce test réel ; ce scénario n’est couvert que par les tests automatisés. La restauration complète application/sauvegarde HA reste également à vérifier. Le statut expérimental est conservé.
+
+![Enregistrement périmé refusé et brouillon conservé – test réel .177 en allemand](/images/dashboard-user-manager/ha-177-conflict-0.1.8.png)
+
 **0.1.8 – Traduction de la confirmation corrigée :** La phrase complète et le nombre de vues utilisent une traduction unique DE/EN/FR, indépendamment de la langue de l’API. Le message déjà affiché suit les changements de langue sans rechargement. Le défaut de langue mixte signalé ci-dessous pour 0.1.7 est ainsi corrigé.
 
 Mise à jour sur .177 après une sauvegarde complète, puis vérification avec un tableau de bord distinct de deux vues : trois enregistrements réels en DE/EN/FR et les changements de langue ultérieurs réussissent. Chaque enregistrement a modifié deux affectations sans toucher aux cartes ni aux noms. Langue automatique et présélection initiale rétablies ; sauvegardes existantes conservées. Les 28 tests Python et douze tests Node, dont une réponse API anglaise, les changements de langue ultérieurs et un résultat inchangé, réussissent. Builds Docker amd64/aarch64 et CI de l’application UGSo validés. .68 et systèmes de production inchangés. Le statut expérimental reste jusqu’à la fin des vérifications de restauration/conflits encore ouvertes.

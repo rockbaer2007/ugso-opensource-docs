@@ -81,6 +81,14 @@ Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` er
 
 ## Prüfstand und Grenzen
 
+**Konflikte und Verbindungsunterbrechung mit 0.1.8 auf .177 geprüft:** Nach frischem Vollbackup wurden zwei App-Tabs mit demselben eigenen Testdashboard geöffnet. Eine Änderung in Tab A wurde gespeichert; der veraltete Entwurf aus Tab B wurde mit Konflikthinweis abgelehnt. Seine Auswahl blieb sichtbar, der Serverstand aus Tab A blieb bytegleich. Nach bewusstem Zurücksetzen/Neuladen ließ sich die zweite Änderung speichern, ohne die erste zu überschreiben.
+
+Beim kontrollierten Stoppen der App wurde ein noch laufender Speichervorgang vollständig abgeschlossen und bestätigt. Der anschließende Speicherversuch gegen die gestoppte App änderte keine Daten. Nach Wiederstart erschien die Fehlermeldung zur Erreichbarkeit/Sitzung, der ungespeicherte Entwurf blieb erhalten und es erfolgte kein automatisches Nachspeichern. Nach Serververgleich und erneutem Laden war gezieltes Speichern wieder möglich. Karten, Namen und Unteransicht blieben erhalten; das eigene Testdashboard wurde anschließend entfernt.
+
+**Offener Befund:** Während des Ausfalls blieb die Oberfläche zunächst im Speichern-Zustand. Eine lokale Zeitbegrenzung beziehungsweise Abbruchmöglichkeit fehlt noch. Deshalb ist die Abbruchbedienung noch nicht vollständig freigegeben. Ein harter Netzabbruch exakt zwischen HA-Schreiben und Bestätigung wurde hierbei nicht real erzeugt; dieser unbestätigte Schreibpfad ist bislang automatisiert geprüft. Auch die vollständige App-/HA-Backup-Wiederherstellung bleibt offen. Der experimentelle Status bleibt bestehen.
+
+![Veralteten Speicherstand abgelehnt, Entwurf erhalten – echte Prüfung auf .177](/images/dashboard-user-manager/ha-177-conflict-0.1.8.png)
+
 **0.1.8 – Speichern-Erfolgsmeldung korrigiert:** Der vollständige Satz samt Ansichtenanzahl wird als eine Übersetzung in DE/EN/FR angezeigt, unabhängig von der Sprache der API-Antwort. Eine bereits angezeigte Erfolgsmeldung folgt auch nach dem Speichern der aktuellen Sprachwahl ohne Neuladen. Der Hinweis auf gemischte Sprache in 0.1.7 weiter unten ist damit behoben.
 
 Auf .177 nach frischem Vollbackup aktualisiert und mit einem eigenen Dashboard aus zwei Ansichten geprüft: drei echte Speichervorgänge in DE/EN/FR und Sprachwechsel nach dem Speichern bestanden. Jeweils zwei Zuordnungen geändert, keine Karten oder Namen. Automatische Sprache und ursprüngliche Vorauswahl wiederhergestellt; vorhandene Sicherungen erhalten. 28 Python- und zwölf Node-Prüfungen einschließlich englischer API-Antwort, nachträglichem Sprachwechsel und unverändertem Ergebnis bestanden; Docker-Builds für amd64/aarch64 und UGSo-App-CI erfolgreich. .68 und Produktivsysteme unverändert. Der experimentelle Status bleibt bis zum Abschluss der offenen Wiederherstellungs-/Konfliktprüfungen erhalten.

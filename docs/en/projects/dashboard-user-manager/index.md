@@ -81,6 +81,14 @@ Once `version_latest` shows the new version, update the app in HA. `touch` chang
 
 ## Verification and limits
 
+**Conflicts and interrupted connectivity tested with 0.1.8 on .177:** After a fresh full backup, two app tabs opened the same separate test dashboard. Tab A saved a change; the stale draft in tab B was rejected with a conflict message. Its selection remained visible and tab A’s server state stayed byte-identical. After deliberately resetting/reloading, the second change could be saved without overwriting the first.
+
+During a controlled app stop, an ongoing save completed fully and was confirmed. The next save attempt against the stopped app changed no data. After restart, the reachability/session error appeared, the unsaved draft remained and no automatic retry wrote data. After comparing the server state and reloading, a deliberate save worked again. Cards, names and the subview were preserved; the separate test dashboard was then removed.
+
+**Open finding:** During the outage, the interface initially remained busy saving. A local timeout or cancellation control is still missing, so interruption handling is not fully approved. A hard network cut precisely between the HA write and confirmation was not generated in this real test; that unconfirmed-write path has automated coverage only. Full app/HA backup restoration also remains open. Experimental status remains.
+
+![Stale save rejected and draft preserved – real .177 test shown in German](/images/dashboard-user-manager/ha-177-conflict-0.1.8.png)
+
 **0.1.8 – Save confirmation localization fixed:** The complete sentence and view count use a single DE/EN/FR translation, regardless of the API response language. An already displayed success message follows later language changes without reloading. This resolves the mixed-language issue recorded below for 0.1.7.
 
 Updated on .177 after a fresh full backup and tested using a separate two-view dashboard: three real saves in DE/EN/FR and subsequent language changes passed. Each save changed two assignments without altering cards or names. Automatic language and the original selection restored; existing backups preserved. All 28 Python and twelve Node checks passed, including an English API reply, later language changes and an unchanged result. amd64/aarch64 Docker builds and the UGSo app CI passed. .68 and production systems unchanged. Experimental status remains until the outstanding recovery/conflict checks are complete.
