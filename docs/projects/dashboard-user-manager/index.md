@@ -4,13 +4,17 @@ description: Benutzer für alle HA-Ansichten oder einzeln per Checkbox zuordnen,
 ---
 # Dashboard-Benutzerverwaltung
 
-**Version 0.1.6 · DE / EN / FR · MIT · experimentell**
+**Version 0.1.7 · DE / EN / FR · MIT · experimentell**
+
+<img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App-Icon mit Dashboard-Matrix, Benutzern und Häkchen" />
+
+Ab 0.1.7 ist das eigene PNG-Icon in der HA-App-Kachel, im Kopf der Oberfläche und als App-Favicon enthalten. Das freigegebene Motiv ist in ZIP und UGSo-Paket vollständig enthalten und benötigt keinen externen Bilddienst. Die HA-Seitenleiste behält ihr konfiguriertes MDI-Symbol. Einstellungen, gespeicherte Vorauswahl und Dashboard-Daten bleiben beim Icon-Update erhalten.
 
 Eine eigenständige HA-App: Dashboards auswählen, Benutzer als Spalten und Ansichten als Zeilen anzeigen und die Zuordnung per Checkbox bearbeiten. Kein ATLAS erforderlich. Die breite Oberfläche nutzt 90 vw und 90 vh; Namen stehen hochkant, Benutzerspalten sind schmal und bei Bedarf horizontal scrollbar.
 
-![Dashboard-Benutzerverwaltung 0.1.4 auf dem HA-Testsystem .177 mit automatischer deutscher Sprache](/images/dashboard-user-manager/ha-177-de-0.1.4.png)
+![Dashboard-Benutzerverwaltung 0.1.7 mit eigenem Icon auf dem HA-Testsystem .177](/images/dashboard-user-manager/ha-177-de-0.1.7.png)
 
-Echte Aufnahme vom Testsystem .177, 20.10.2026: automatische HA-Sprache, 18 Ansichten und vier Benutzer. Das vorhandene Dashboard wurde für die Aufnahme nicht geändert.
+Echte Aufnahme vom Testsystem .177, 20.10.2026: eigenes Icon, deutsche Oberfläche, 18 Ansichten und vier Benutzer. Das vorhandene Dashboard wurde für die Aufnahme nicht geändert.
 
 ## Installation über UGSo HA Apps
 
@@ -76,6 +80,8 @@ ha apps info local_dashboard_user_manager
 Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` erneuert nur den Zeitstempel und hilft bei älteren ZIPs, deren erhaltene Zeitstempel Supervisor sonst nicht als Änderung erkennt. Nicht deinstallieren. Repository-Apps werden über ihr Repository aktualisiert.
 
 ## Prüfstand und Grenzen
+
+0.1.7 nach frischem Vollbackup auf .177 aktualisiert: Icon in der HA-App-Kachel und im App-Kopf sichtbar, Kopfbereich in DE/EN/FR geprüft und fotografiert. Vorauswahl, 18 Ansichten, vier Benutzer und bestehende private Dashboard-Sicherung erhalten. Keine Zuordnung gespeichert; alle vier Lovelace-Dateien zur Sicherung unverändert. 28 Python- und elf Node-Prüfungen, korrekte PNG-Auslieferung, ZIP-Iconvergleich und amd64-/aarch64-Docker-Builds bestanden. Die persönliche Sprachwahl ist wieder auf automatisch gesetzt.
 
 **Nutzerbestätigung vom 20.10.2026 für 0.1.6:** Das Update auf der betroffenen Installation ist erfolgreich. „Übersicht aktuell“ wird nur noch einmal angezeigt; die zuvor gespeicherte Dashboard-Vorauswahl ist erhalten. Diese Rückmeldung bestätigt die Korrektur im ursprünglich gemeldeten Fall und ergänzt die automatisierten Alias-/Dublettenprüfungen sowie den Update-Test auf .177. Es wurde dafür kein zusätzlicher Zugriff durch den Agenten auf das Produktivsystem ausgeführt.
 

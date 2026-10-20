@@ -4,13 +4,17 @@ description: Affecter des utilisateurs à toutes les vues HA ou individuellement
 ---
 # Gestion des utilisateurs des tableaux de bord
 
-**Version 0.1.6 · DE / EN / FR · MIT · expérimental**
+**Version 0.1.7 · DE / EN / FR · MIT · expérimental**
+
+<img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="Icône avec tableau, utilisateurs et coches" />
+
+Depuis 0.1.7, l’icône PNG intégrée apparaît dans la vignette HA et l’en-tête de l’interface et sert de favicon de l’application. Le motif approuvé est inclus dans le ZIP et le paquet UGSo sans service d’images externe. La barre latérale HA conserve son symbole MDI configuré. Paramètres, présélection enregistrée et données des tableaux de bord sont conservés pendant la mise à jour de l’icône.
 
 Une application HA indépendante : choisissez un tableau de bord, affichez les utilisateurs en colonnes et les vues en lignes, puis modifiez les affectations par cases à cocher. ATLAS n’est pas nécessaire. L’interface utilise 90 vw et 90 vh, des noms verticaux, des colonnes étroites et un défilement horizontal si nécessaire.
 
-![Gestion des utilisateurs 0.1.4 sur le système HA de test .177 en français automatique](/images/dashboard-user-manager/ha-177-fr-0.1.4.png)
+![Gestion des utilisateurs 0.1.7 avec son icône sur le système HA de test .177](/images/dashboard-user-manager/ha-177-fr-0.1.7.png)
 
-Capture réelle du système de test .177, le 20 octobre 2026 : langue HA automatique, 18 vues et quatre utilisateurs. Le tableau de bord existant n’a pas été modifié pour cette capture.
+Capture réelle du système de test .177, le 20 octobre 2026 : icône intégrée, interface française, 18 vues et quatre utilisateurs. Le tableau de bord existant n’a pas été modifié pour cette capture.
 
 ## Filtrer et présélectionner les tableaux de bord
 
@@ -76,6 +80,8 @@ ha apps info local_dashboard_user_manager
 Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans HA. `touch` modifie uniquement l’horodatage et aide Supervisor à détecter les fichiers issus d’anciens ZIP. Ne désinstallez pas l’application. Les applications issues d’un dépôt se mettent à jour via leur dépôt.
 
 ## Vérification et limites
+
+Version 0.1.7 mise à jour sur .177 après une sauvegarde complète : icône visible dans la vignette HA et l’en-tête, contrôlé et photographié en DE/EN/FR. Présélection, 18 vues, quatre utilisateurs et sauvegarde privée existante conservés. Aucune affectation enregistrée ; les quatre fichiers Lovelace restent identiques à la sauvegarde. Les 28 tests Python, onze tests Node, la livraison PNG, la comparaison des icônes ZIP et les builds Docker amd64/aarch64 réussissent. Préférence de langue remise sur automatique.
 
 **Confirmation de l’utilisateur du 20 octobre 2026 pour 0.1.6 :** La mise à jour sur l’installation concernée a réussi. « Übersicht aktuell » n’apparaît plus qu’une fois et la présélection enregistrée des tableaux de bord est conservée. Ce retour confirme la correction du cas signalé et complète les tests automatisés des alias/doublons ainsi que le test de mise à jour sur .177. Aucun accès supplémentaire de l’agent au système de production n’a été effectué pour cette confirmation.
 

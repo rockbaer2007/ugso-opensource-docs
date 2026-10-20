@@ -4,13 +4,17 @@ description: Assign users to all HA views or individual views with checkboxes, b
 ---
 # Dashboard User Manager
 
-**Version 0.1.6 · DE / EN / FR · MIT · experimental**
+**Version 0.1.7 · DE / EN / FR · MIT · experimental**
+
+<img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App icon with dashboard matrix, users and checkmarks" />
+
+Since 0.1.7, the bundled PNG icon appears in the HA app tile and interface header and is provided as the app favicon. The approved artwork is included in the ZIP and UGSo package without external image services. The HA sidebar retains its configured MDI symbol. Settings, saved dashboard selection and dashboard data are preserved during the icon update.
 
 A standalone HA app: select a dashboard, display users as columns and views as rows, and edit assignments using checkboxes. ATLAS is not required. The interface uses 90 vw and 90 vh, with rotated names, narrow user columns and horizontal scrolling when needed.
 
-![Dashboard User Manager 0.1.4 on HA test host .177 using automatic English](/images/dashboard-user-manager/ha-177-en-0.1.4.png)
+![Dashboard User Manager 0.1.7 with its own icon on HA test host .177](/images/dashboard-user-manager/ha-177-en-0.1.7.png)
 
-Actual screenshot from test host .177, 20 October 2026: automatic HA language, 18 views and four users. The existing dashboard was not changed for this screenshot.
+Actual screenshot from test host .177, 20 October 2026: bundled icon, English interface, 18 views and four users. The existing dashboard was not changed for this screenshot.
 
 ## Filter and preselect dashboards
 
@@ -76,6 +80,8 @@ ha apps info local_dashboard_user_manager
 Once `version_latest` shows the new version, update the app in HA. `touch` changes the timestamp only, helping Supervisor detect files extracted from older ZIPs with preserved timestamps. Do not uninstall. Repository apps update through their repository.
 
 ## Verification and limits
+
+Version 0.1.7 updated on .177 after a fresh full backup: icon visible in the HA app tile and interface header, with DE/EN/FR headers visually checked and captured. Selection, 18 views, four users and the existing private dashboard backup preserved. No assignments saved; all four Lovelace files unchanged against the backup. All 28 Python and eleven Node checks, PNG delivery, ZIP icon comparison and amd64/aarch64 Docker builds passed. Language preference restored to automatic.
 
 **User confirmation on 20 October 2026 for 0.1.6:** The update on the affected installation succeeded. “Übersicht aktuell” now appears only once, and the previously saved dashboard selection is preserved. This confirms the fix in the originally reported case, complementing automated alias/duplicate tests and the update test on .177. No additional agent access to the production system was performed for this confirmation.
 
