@@ -4,7 +4,7 @@ description: Affecter des utilisateurs à toutes les vues HA ou individuellement
 ---
 # Gestion des utilisateurs des tableaux de bord
 
-**Version 0.1.9 · DE / EN / FR · MIT · expérimental**
+**Version 0.1.10 · DE / EN / FR · MIT · stable**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="Icône avec tableau, utilisateurs et coches" />
 
@@ -12,9 +12,9 @@ Depuis 0.1.7, l’icône PNG intégrée apparaît dans la vignette HA et l’en-
 
 Une application HA indépendante : choisissez un tableau de bord, affichez les utilisateurs en colonnes et les vues en lignes, puis modifiez les affectations par cases à cocher. ATLAS n’est pas nécessaire. L’interface utilise 90 vw et 90 vh, des noms verticaux, des colonnes étroites et un défilement horizontal si nécessaire.
 
-![Gestion des utilisateurs 0.1.7 avec son icône sur le système HA de test .177](/images/dashboard-user-manager/ha-177-fr-0.1.7.png)
+![Version stable 0.1.10 après restauration sur .177](/images/dashboard-user-manager/ha-177-fr-0.1.10.png)
 
-Capture réelle du système de test .177, le 20 octobre 2026 : icône intégrée, interface française, 18 vues et quatre utilisateurs. Le tableau de bord existant n’a pas été modifié pour cette capture.
+Capture réelle sur .177 le 20 octobre 2026, après restauration complète et mise à jour 0.1.10 : interface française, 18 vues et quatre utilisateurs. Le tableau de bord existant est inchangé.
 
 ## Filtrer et présélectionner les tableaux de bord
 
@@ -75,6 +75,14 @@ L’application compare le tableau de bord et les utilisateurs à l’état char
 
 La restauration crée d’abord une nouvelle sauvegarde et est bloquée si le tableau de bord a été modifié depuis l’opération correspondante. Si l’enregistrement n’est pas confirmé, ne réessayez pas sans vérifier ; comparez l’état actuel avec la sauvegarde.
 
+## Restaurer l’application ou une sauvegarde HA complète
+
+Une sauvegarde HA complète doit inclure **Gestion des utilisateurs des tableaux de bord** dans les applications : elle contient les sauvegardes privées des tableaux. Les tableaux de bord eux-mêmes font partie de la configuration HA. Créer une sauvegarde complète récente avant toute restauration et éviter les changements concurrents.
+
+Dans **Paramètres → Système → Sauvegardes**, ouvrir la sauvegarde choisie. Sélectionner uniquement l’application pour restaurer celle-ci et ses sauvegardes privées, sans changer la configuration actuelle des tableaux HA. Pour une restauration complète, sélectionner **Home Assistant**, paramètres/historique, dossiers concernés et toutes les applications nécessaires. Tout le périmètre sélectionné revient à l’instant de la sauvegarde, y compris la suppression des objets de test créés ensuite. HA est indisponible pendant son redémarrage.
+
+Après la restauration, rouvrir l’application par la barre latérale HA. Vérifier sa version, les sauvegardes existantes, le nombre de vues/utilisateurs et la présélection du navigateur. Reprendre les modifications uniquement après confirmation du serveur. Conserver les sauvegardes complètes et JSON privés de manière confidentielle ; une présélection du navigateur ne remplace pas une sauvegarde.
+
 ## Mettre à jour une installation ZIP locale
 
 Après une sauvegarde complète, copiez tous les nouveaux fichiers dans `/addons/dashboard_user_manager/`, puis exécutez dans le terminal HA :
@@ -88,6 +96,16 @@ ha apps info local_dashboard_user_manager
 Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans HA. `touch` modifie uniquement l’horodatage et aide Supervisor à détecter les fichiers issus d’anciens ZIP. Ne désinstallez pas l’application. Les applications issues d’un dépôt se mettent à jour via leur dépôt.
 
 ## Vérification et limites
+
+**0.1.10 – Restauration vérifiée, mention expérimentale retirée :** Sauvegarde complète récente créée sur .177 le 20 octobre 2026. La restauration de l’application seule récupère les douze sauvegardes privées d’origine et retire le marqueur de test supplémentaire, sans changer la configuration HA actuelle. La restauration complète de HA 2026.10.2 inclut ensuite paramètres/historique, share, médias, SSL et toutes les applications. HA et l’application redémarrent ; « Test für APP » conserve 18 vues, quatre utilisateurs, la langue automatique et la présélection.
+
+Après redémarrage, 21 fichiers HA, dont tous les fichiers Lovelace existants, sont identiques. Les deux autres registres vérifiés conservent les 22 appareils et 73 entités avec leurs réglages ; seuls les horodatages de modification et la version de l’application relevée par HA sont actualisés. Sept projets ATLAS, la gestion des plugins et la corbeille sont inchangés. La connexion ATLAS-HA existante fonctionne sans ressaisir les identifiants. La restauration complète retire le tableau de test créé après la sauvegarde. Ce test restaure l’installation existante ; il ne reconstruit pas un matériel vierge. 33 tests Python, 19 tests Node et les builds Docker amd64/aarch64 réussissent. 0.1.10 retire uniquement la mention expérimentale et actualise version/preuves ; logique d’enregistrement et droits inchangés. .68 et les systèmes de production n’ont pas été utilisés.
+
+Une coupure exactement entre l’écriture HA et sa confirmation reste couverte uniquement par les tests automatisés ; aucune coupure réseau réelle à cet instant précis n’a été provoquée. Les consignes relatives aux écritures incertaines restent applicables.
+
+![Application après restauration HA complète sur .177, tableau d’origine conservé, en allemand](/images/dashboard-user-manager/ha-177-full-restore-0.1.9.png)
+
+### Vérifications précédentes – état à cette date
 
 **Conflits et interruption de connexion vérifiés avec 0.1.8 sur .177 :** Après une sauvegarde complète, deux onglets ont ouvert le même tableau de bord de test distinct. L’onglet A a enregistré une modification ; le brouillon périmé de B a été refusé avec un message de conflit. Sa sélection est restée visible et l’état serveur de A est resté identique. Après réinitialisation/rechargement volontaire, la seconde modification a pu être enregistrée sans écraser la première.
 

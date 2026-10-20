@@ -4,7 +4,7 @@ description: Assign users to all HA views or individual views with checkboxes, b
 ---
 # Dashboard User Manager
 
-**Version 0.1.9 · DE / EN / FR · MIT · experimental**
+**Version 0.1.10 · DE / EN / FR · MIT · stable**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App icon with dashboard matrix, users and checkmarks" />
 
@@ -12,9 +12,9 @@ Since 0.1.7, the bundled PNG icon appears in the HA app tile and interface heade
 
 A standalone HA app: select a dashboard, display users as columns and views as rows, and edit assignments using checkboxes. ATLAS is not required. The interface uses 90 vw and 90 vh, with rotated names, narrow user columns and horizontal scrolling when needed.
 
-![Dashboard User Manager 0.1.7 with its own icon on HA test host .177](/images/dashboard-user-manager/ha-177-en-0.1.7.png)
+![Stable Dashboard User Manager 0.1.10 after restoration on .177](/images/dashboard-user-manager/ha-177-en-0.1.10.png)
 
-Actual screenshot from test host .177, 20 October 2026: bundled icon, English interface, 18 views and four users. The existing dashboard was not changed for this screenshot.
+Actual screenshot from .177, 20 October 2026, after full restoration and the 0.1.10 update: English interface, 18 views and four users. The existing dashboard was unchanged.
 
 ## Filter and preselect dashboards
 
@@ -75,6 +75,14 @@ The app compares the dashboard and user list with the loaded state and reads the
 
 Restore first creates another backup and is blocked if the dashboard was edited after the corresponding change. If a save is unconfirmed, do not retry blindly; compare the current state with the backup.
 
+## Restore the app or a full HA backup
+
+A full HA backup must include **Dashboard User Manager** under apps: that contains its private dashboard backups. The actual dashboards belong to HA configuration. Create a fresh complete backup before restoring and avoid concurrent changes.
+
+Under **Settings → System → Backups**, open the intended backup. Select only **Dashboard User Manager** to restore the app and its private backups while leaving the current HA dashboard configuration intact. For full restoration, select **Home Assistant**, settings/history, the relevant folders and all required apps. The entire selected scope returns to the backup timestamp, including removal of later test objects. HA is unavailable during its restart.
+
+After completion, reopen the app through the HA sidebar. Check its version, existing dashboard backups, dashboard/user counts and browser selection. Resume editing only after confirming the server state. Keep full backups and private dashboard JSON confidential; browser selection is not a data backup.
+
 ## Update a local ZIP installation
 
 After a full backup, copy all new source files into `/addons/dashboard_user_manager/` and run in the HA terminal:
@@ -88,6 +96,16 @@ ha apps info local_dashboard_user_manager
 Once `version_latest` shows the new version, update the app in HA. `touch` changes the timestamp only, helping Supervisor detect files extracted from older ZIPs with preserved timestamps. Do not uninstall. Repository apps update through their repository.
 
 ## Verification and limits
+
+**0.1.10 – Recovery verified, experimental label removed:** A fresh full backup was created on .177 on 20 October 2026. App-only restoration recovered the twelve original private dashboard backups and removed the extra test marker while preserving the current HA test configuration. Full HA 2026.10.2 restoration then included settings/history, share, media, SSL and all apps. HA and the app start again; “Test für APP” retains 18 views and four users, automatic language and saved selection.
+
+After restart, 21 HA files including all existing Lovelace files are byte-identical. The two other checked registries retain all 22 devices and 73 entities with their settings; only runtime modification timestamps and the app version recorded by HA update. Seven ATLAS projects, plugin management and trash state are unchanged. The existing ATLAS-HA connection works without entering credentials again. Full recovery removes the test dashboard created after the backup. This is restoration on the existing test installation, not rebuilding empty hardware. 33 Python and 19 Node tests and amd64/aarch64 Docker builds pass. 0.1.10 only removes the experimental package label and updates version/evidence; save logic and permissions are unchanged. .68 and production systems were not used.
+
+A hard disconnect precisely between the HA write and confirmation still has automated fault coverage only; no real network cut at that exact point was generated. Guidance for uncertain writes still applies.
+
+![App after full HA restoration on .177 with original dashboard preserved, shown in German](/images/dashboard-user-manager/ha-177-full-restore-0.1.9.png)
+
+### Earlier checks – status at that time
 
 **Conflicts and interrupted connectivity tested with 0.1.8 on .177:** After a fresh full backup, two app tabs opened the same separate test dashboard. Tab A saved a change; the stale draft in tab B was rejected with a conflict message. Its selection remained visible and tab A’s server state stayed byte-identical. After deliberately resetting/reloading, the second change could be saved without overwriting the first.
 

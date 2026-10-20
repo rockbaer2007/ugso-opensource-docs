@@ -4,7 +4,7 @@ description: Benutzer für alle HA-Ansichten oder einzeln per Checkbox zuordnen,
 ---
 # Dashboard-Benutzerverwaltung
 
-**Version 0.1.9 · DE / EN / FR · MIT · experimentell**
+**Version 0.1.10 · DE / EN / FR · MIT · stabil**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App-Icon mit Dashboard-Matrix, Benutzern und Häkchen" />
 
@@ -12,9 +12,9 @@ Ab 0.1.7 ist das eigene PNG-Icon in der HA-App-Kachel, im Kopf der Oberfläche u
 
 Eine eigenständige HA-App: Dashboards auswählen, Benutzer als Spalten und Ansichten als Zeilen anzeigen und die Zuordnung per Checkbox bearbeiten. Kein ATLAS erforderlich. Die breite Oberfläche nutzt 90 vw und 90 vh; Namen stehen hochkant, Benutzerspalten sind schmal und bei Bedarf horizontal scrollbar.
 
-![Dashboard-Benutzerverwaltung 0.1.7 mit eigenem Icon auf dem HA-Testsystem .177](/images/dashboard-user-manager/ha-177-de-0.1.7.png)
+![Stabile Dashboard-Benutzerverwaltung 0.1.10 nach Wiederherstellung auf .177](/images/dashboard-user-manager/ha-177-de-0.1.10.png)
 
-Echte Aufnahme vom Testsystem .177, 20.10.2026: eigenes Icon, deutsche Oberfläche, 18 Ansichten und vier Benutzer. Das vorhandene Dashboard wurde für die Aufnahme nicht geändert.
+Echte Aufnahme vom Testsystem .177, 20.10.2026, nach vollständiger Wiederherstellung und Update auf 0.1.10: deutsche Oberfläche, 18 Ansichten und vier Benutzer. Das vorhandene Dashboard wurde nicht geändert.
 
 ## Installation über UGSo HA Apps
 
@@ -75,6 +75,14 @@ Die App vergleicht Dashboard und Benutzerliste mit dem geladenen Stand und prüf
 
 Eine Wiederherstellung sichert zuvor erneut und wird gesperrt, wenn das Dashboard nach der betreffenden Änderung weiter bearbeitet wurde. Bei unbestätigtem Speichern nicht blind wiederholen, sondern aktuellen Stand und Sicherung prüfen.
 
+## App oder vollständiges HA-Backup wiederherstellen
+
+Ein HA-Vollbackup muss die **Dashboard-Benutzerverwaltung** unter Apps enthalten: Dort liegen die privaten Dashboard-Sicherungen. Die eigentlichen Dashboards gehören zum HA-Konfigurationsanteil. Vor dem Rücksetzen eine frische vollständige Sicherung erstellen und keine parallelen Änderungen vornehmen.
+
+Unter **Einstellungen → System → Backups** die passende Sicherung öffnen. Nur **Dashboard-Benutzerverwaltung** auswählen, um die App einschließlich ihrer privaten Sicherungen zurückzusetzen; die aktuelle HA-Dashboard-Konfiguration bleibt dabei bestehen. Für eine vollständige Wiederherstellung **Home Assistant**, Einstellungen/Verlauf, vorhandene Ordner und alle benötigten Apps auswählen. Dabei wird der gesamte ausgewählte Umfang auf den Sicherungszeitpunkt zurückgesetzt, einschließlich später angelegter Testobjekte. HA ist während seines Neustarts nicht erreichbar.
+
+Nach Abschluss die App erneut über die HA-Seitenleiste öffnen. Version, vorhandene Dashboard-Sicherungen, Dashboard-/Benutzerzahl und Browser-Vorauswahl kontrollieren. Erst bei bestätigtem Serverstand weiter bearbeiten. Vollbackups und private Dashboard-JSON vertraulich aufbewahren; eine Browser-Vorauswahl ersetzt keine Datensicherung.
+
 ## Lokale ZIP-Installation aktualisieren
 
 Nach Vollbackup die vollständigen neuen Quelldateien nach `/addons/dashboard_user_manager/` kopieren und im HA-Terminal ausführen:
@@ -88,6 +96,16 @@ ha apps info local_dashboard_user_manager
 Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` erneuert nur den Zeitstempel und hilft bei älteren ZIPs, deren erhaltene Zeitstempel Supervisor sonst nicht als Änderung erkennt. Nicht deinstallieren. Repository-Apps werden über ihr Repository aktualisiert.
 
 ## Prüfstand und Grenzen
+
+**0.1.10 – Wiederherstellung geprüft, „Experimentell“ entfernt:** Am 20.10.2026 auf .177 zunächst frisch vollständig gesichert. Reine App-Wiederherstellung aus diesem Backup: Die zwölf ursprünglichen privaten Dashboard-Sicherungen sind wieder vorhanden, der zusätzliche Prüfmarker ist entfernt und die aktuelle HA-Testkonfiguration bleibt unverändert. Anschließend vollständige Wiederherstellung von HA 2026.10.2 einschließlich Einstellungen/Verlauf, Share, Medien, SSL und sämtlichen Apps ausgeführt. HA und die App starten wieder; „Test für APP“ zeigt unverändert 18 Ansichten und vier Benutzer, automatische Sprache und Vorauswahl bleiben erhalten.
+
+Nach dem Neustart sind 21 HA-Dateien einschließlich aller vorhandenen Lovelace-Dateien bytegleich. Die zwei übrigen geprüften Register behalten sämtliche 22 Geräte und 73 Entitäten samt Einstellungen; nur Laufzeit-Änderungszeitstempel und die von HA erfasste App-Version aktualisieren sich. Sieben ATLAS-Projekte, Pluginverwaltung und Papierkorbstand sind unverändert. Die bestehende ATLAS-HA-Verbindung funktioniert ohne erneute Zugangsdaten. Das erst nach dem Backup angelegte Testdashboard wird durch die Vollwiederherstellung entfernt. Es handelt sich um eine Rücksicherung auf der vorhandenen Testinstallation, keinen Neuaufbau auf leerer Hardware. 33 Python- und 19 Node-Tests sowie Docker-Builds amd64/aarch64 bestanden. 0.1.10 entfernt nur die experimentelle Paketkennzeichnung und aktualisiert Version/Nachweise; Speicherlogik und Berechtigungen bleiben unverändert. .68 und Produktivsysteme wurden nicht verwendet.
+
+Ein harter Verbindungsabbruch exakt zwischen HA-Schreiben und Bestätigung bleibt durch automatisierte Fehlertests abgedeckt; ein realer Netzschnitt an genau diesem Zeitpunkt wurde nicht erzeugt. Die Anleitung zu unklaren Schreibausgängen gilt weiterhin.
+
+![App nach vollständiger HA-Wiederherstellung auf .177 mit erhaltenem Originaldashboard](/images/dashboard-user-manager/ha-177-full-restore-0.1.9.png)
+
+### Frühere Prüfungen – damaliger Stand
 
 **Konflikte und Verbindungsunterbrechung mit 0.1.8 auf .177 geprüft:** Nach frischem Vollbackup wurden zwei App-Tabs mit demselben eigenen Testdashboard geöffnet. Eine Änderung in Tab A wurde gespeichert; der veraltete Entwurf aus Tab B wurde mit Konflikthinweis abgelehnt. Seine Auswahl blieb sichtbar, der Serverstand aus Tab A blieb bytegleich. Nach bewusstem Zurücksetzen/Neuladen ließ sich die zweite Änderung speichern, ohne die erste zu überschreiben.
 
