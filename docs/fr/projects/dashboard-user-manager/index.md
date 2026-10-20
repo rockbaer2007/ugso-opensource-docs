@@ -97,11 +97,19 @@ Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans 
 
 ## Vérification et limites
 
+**0.1.10 – Confirmation interrompue vérifiée sur .177 :** Après une sauvegarde complète récente, une instrumentation temporaire à usage unique a été limitée à un tableau de test distinct. L’application a réellement écrit deux affectations dans HA, les a relues avec succès puis a interrompu le transport de la réponse HTTP vers Ingress avant réception de la confirmation par l’interface. Il s’agit d’un défaut ciblé du canal de retour avec de vraies données HA, pas seulement d’un test simulé ni d’un débranchement physique du câble réseau.
+
+L’interface a signalé un résultat inconnu, conservé toutes les cases et bloqué un nouvel enregistrement. **Vérifier l’état du serveur** a reconnu le brouillon déjà enregistré, sans nouvelle écriture. Une seule sauvegarde de tableau supplémentaire ; fichier HA identique après vérification. Cartes, noms, chemins et sous-vue inchangés. Instrumentation entièrement retirée, application d’origine reconstruite et tableau de test supprimé : les 23 fichiers HA vérifiés, dont « Test für APP », et les 19 fichiers source de l’application sont identiques aux originaux ; sept projets ATLAS, plugins, corbeille, présélection et langue automatique conservés. Version et fichiers du paquet publié restent inchangés en 0.1.10.
+
+![Résultat inconnu après interruption de la confirmation HTTP, brouillon conservé sur .177, en allemand](/images/dashboard-user-manager/ha-177-lost-ack-draft-0.1.10.png)
+
+![Vérification du serveur reconnaissant le brouillon enregistré sans réécriture, en allemand](/images/dashboard-user-manager/ha-177-lost-ack-checked-0.1.10.png)
+
 **0.1.10 – Restauration vérifiée, mention expérimentale retirée :** Sauvegarde complète récente créée sur .177 le 20 octobre 2026. La restauration de l’application seule récupère les douze sauvegardes privées d’origine et retire le marqueur de test supplémentaire, sans changer la configuration HA actuelle. La restauration complète de HA 2026.10.2 inclut ensuite paramètres/historique, share, médias, SSL et toutes les applications. HA et l’application redémarrent ; « Test für APP » conserve 18 vues, quatre utilisateurs, la langue automatique et la présélection.
 
 Après redémarrage, 21 fichiers HA, dont tous les fichiers Lovelace existants, sont identiques. Les deux autres registres vérifiés conservent les 22 appareils et 73 entités avec leurs réglages ; seuls les horodatages de modification et la version de l’application relevée par HA sont actualisés. Sept projets ATLAS, la gestion des plugins et la corbeille sont inchangés. La connexion ATLAS-HA existante fonctionne sans ressaisir les identifiants. La restauration complète retire le tableau de test créé après la sauvegarde. Ce test restaure l’installation existante ; il ne reconstruit pas un matériel vierge. 33 tests Python, 19 tests Node et les builds Docker amd64/aarch64 réussissent. 0.1.10 retire uniquement la mention expérimentale et actualise version/preuves ; logique d’enregistrement et droits inchangés. .68 et les systèmes de production n’ont pas été utilisés.
 
-Une coupure exactement entre l’écriture HA et sa confirmation reste couverte uniquement par les tests automatisés ; aucune coupure réseau réelle à cet instant précis n’a été provoquée. Les consignes relatives aux écritures incertaines restent applicables.
+La coupure du canal HTTP ci-dessus intervient après la relecture HA réussie. Ce test ne démontre pas une interruption réelle pendant l’acquittement WebSocket de HA ni une panne physique du LAN/de l’alimentation ; ces scénarios conservent leur couverture automatisée. Les consignes relatives aux écritures incertaines restent applicables.
 
 ![Application après restauration HA complète sur .177, tableau d’origine conservé, en allemand](/images/dashboard-user-manager/ha-177-full-restore-0.1.9.png)
 

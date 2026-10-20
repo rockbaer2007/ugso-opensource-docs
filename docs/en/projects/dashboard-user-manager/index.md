@@ -97,11 +97,19 @@ Once `version_latest` shows the new version, update the app in HA. `touch` chang
 
 ## Verification and limits
 
+**0.1.10 – Lost confirmation checked on .177:** After a fresh full backup, temporary one-shot instrumentation was scoped to a separate test dashboard only. The app actually wrote two assignments to HA, successfully read them back and then aborted the real HTTP response transport to Ingress before the interface received confirmation. This is a targeted response-channel failure with real HA data, not just a mocked test or physically unplugging a network cable.
+
+The interface reported an unknown save outcome, preserved every checkbox selection and disabled repeat saving. **Check server state** recognized the already saved draft without another write. Exactly one additional dashboard backup was created; the HA file remained byte-identical after reconciliation. Cards, names, paths and subview were unchanged. Instrumentation was fully removed, the original app rebuilt and the separate dashboard deleted: all 23 checked HA files including “Test für APP” and all 19 app source files match their originals byte-for-byte; seven ATLAS projects, plugins, trash, selection and automatic language were preserved. Version and published package files remain unchanged at 0.1.10.
+
+![Unknown outcome after an interrupted HTTP confirmation with draft preserved on .177, shown in German](/images/dashboard-user-manager/ha-177-lost-ack-draft-0.1.10.png)
+
+![Server reconciliation recognizes the saved draft without another write, shown in German](/images/dashboard-user-manager/ha-177-lost-ack-checked-0.1.10.png)
+
 **0.1.10 – Recovery verified, experimental label removed:** A fresh full backup was created on .177 on 20 October 2026. App-only restoration recovered the twelve original private dashboard backups and removed the extra test marker while preserving the current HA test configuration. Full HA 2026.10.2 restoration then included settings/history, share, media, SSL and all apps. HA and the app start again; “Test für APP” retains 18 views and four users, automatic language and saved selection.
 
 After restart, 21 HA files including all existing Lovelace files are byte-identical. The two other checked registries retain all 22 devices and 73 entities with their settings; only runtime modification timestamps and the app version recorded by HA update. Seven ATLAS projects, plugin management and trash state are unchanged. The existing ATLAS-HA connection works without entering credentials again. Full recovery removes the test dashboard created after the backup. This is restoration on the existing test installation, not rebuilding empty hardware. 33 Python and 19 Node tests and amd64/aarch64 Docker builds pass. 0.1.10 only removes the experimental package label and updates version/evidence; save logic and permissions are unchanged. .68 and production systems were not used.
 
-A hard disconnect precisely between the HA write and confirmation still has automated fault coverage only; no real network cut at that exact point was generated. Guidance for uncertain writes still applies.
+The HTTP response-channel abort above occurs after successful HA read-back. This does not claim a live disconnect within HA’s WebSocket write acknowledgement or a physical LAN/power outage; those scenarios retain automated fault coverage. Guidance for uncertain writes still applies.
 
 ![App after full HA restoration on .177 with original dashboard preserved, shown in German](/images/dashboard-user-manager/ha-177-full-restore-0.1.9.png)
 

@@ -97,11 +97,19 @@ Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` er
 
 ## Prüfstand und Grenzen
 
+**0.1.10 – Bestätigungsabbruch auf .177 geprüft:** Nach frischem Vollbackup wurde eine einmalige, ausschließlich auf ein eigenes Testdashboard begrenzte Instrumentierung verwendet: Die App schrieb zwei Zuordnungen tatsächlich nach HA, las sie erfolgreich zurück und brach dann die echte HTTP-Antwortverbindung zum Ingress ab, bevor die Oberfläche die Bestätigung erhielt. Dies ist ein gezielter Rückkanalfehler mit realen HA-Daten, kein nur gemockter Test und kein physisches Ziehen eines Netzwerkkabels.
+
+Die Oberfläche meldete **Speicherergebnis unklar**, behielt sämtliche Checkbox-Auswahlen und sperrte erneutes Speichern. **Serverstand prüfen** erkannte den bereits gespeicherten Entwurf ohne weiteren Schreibvorgang. Genau eine zusätzliche Dashboard-Sicherung; die HA-Datei blieb nach der Prüfung bytegleich. Karten, Namen, Pfade und Unteransicht unverändert. Anschließend Testinstrumentierung vollständig entfernt, Original-App neu aufgebaut und eigenes Dashboard gelöscht: alle 23 geprüften HA-Dateien einschließlich „Test für APP“ und alle 19 App-Quelldateien bytegleich zum Ausgangsstand; sieben ATLAS-Projekte, Plugins, Papierkorb, Vorauswahl und automatische Sprache erhalten. Version und veröffentlichte Paketdateien bleiben unverändert bei 0.1.10.
+
+![Unklarer Ausgang nach unterbrochener HTTP-Bestätigung, Entwurf erhalten auf .177](/images/dashboard-user-manager/ha-177-lost-ack-draft-0.1.10.png)
+
+![Serverprüfung erkennt bereits gespeicherten Entwurf ohne erneutes Schreiben](/images/dashboard-user-manager/ha-177-lost-ack-checked-0.1.10.png)
+
 **0.1.10 – Wiederherstellung geprüft, „Experimentell“ entfernt:** Am 20.10.2026 auf .177 zunächst frisch vollständig gesichert. Reine App-Wiederherstellung aus diesem Backup: Die zwölf ursprünglichen privaten Dashboard-Sicherungen sind wieder vorhanden, der zusätzliche Prüfmarker ist entfernt und die aktuelle HA-Testkonfiguration bleibt unverändert. Anschließend vollständige Wiederherstellung von HA 2026.10.2 einschließlich Einstellungen/Verlauf, Share, Medien, SSL und sämtlichen Apps ausgeführt. HA und die App starten wieder; „Test für APP“ zeigt unverändert 18 Ansichten und vier Benutzer, automatische Sprache und Vorauswahl bleiben erhalten.
 
 Nach dem Neustart sind 21 HA-Dateien einschließlich aller vorhandenen Lovelace-Dateien bytegleich. Die zwei übrigen geprüften Register behalten sämtliche 22 Geräte und 73 Entitäten samt Einstellungen; nur Laufzeit-Änderungszeitstempel und die von HA erfasste App-Version aktualisieren sich. Sieben ATLAS-Projekte, Pluginverwaltung und Papierkorbstand sind unverändert. Die bestehende ATLAS-HA-Verbindung funktioniert ohne erneute Zugangsdaten. Das erst nach dem Backup angelegte Testdashboard wird durch die Vollwiederherstellung entfernt. Es handelt sich um eine Rücksicherung auf der vorhandenen Testinstallation, keinen Neuaufbau auf leerer Hardware. 33 Python- und 19 Node-Tests sowie Docker-Builds amd64/aarch64 bestanden. 0.1.10 entfernt nur die experimentelle Paketkennzeichnung und aktualisiert Version/Nachweise; Speicherlogik und Berechtigungen bleiben unverändert. .68 und Produktivsysteme wurden nicht verwendet.
 
-Ein harter Verbindungsabbruch exakt zwischen HA-Schreiben und Bestätigung bleibt durch automatisierte Fehlertests abgedeckt; ein realer Netzschnitt an genau diesem Zeitpunkt wurde nicht erzeugt. Die Anleitung zu unklaren Schreibausgängen gilt weiterhin.
+Der oben geprüfte HTTP-Rückkanalabbruch erfolgt nach erfolgreichem HA-Rücklesen. Eine Trennung innerhalb der HA-WebSocket-Schreibbestätigung oder ein physischer LAN-/Stromausfall ist damit nicht als real getestet behauptet; solche Fehlerszenarien behalten ihre automatisierte Abdeckung. Die Anleitung zu unklaren Schreibausgängen gilt weiterhin.
 
 ![App nach vollständiger HA-Wiederherstellung auf .177 mit erhaltenem Originaldashboard](/images/dashboard-user-manager/ha-177-full-restore-0.1.9.png)
 
