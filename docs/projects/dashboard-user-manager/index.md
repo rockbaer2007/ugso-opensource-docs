@@ -4,7 +4,7 @@ description: Benutzer für alle HA-Ansichten oder einzeln per Checkbox zuordnen,
 ---
 # Dashboard-Benutzerverwaltung
 
-**Version 0.1.7 · DE / EN / FR · MIT · experimentell**
+**Version 0.1.8 · DE / EN / FR · MIT · experimentell**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App-Icon mit Dashboard-Matrix, Benutzern und Häkchen" />
 
@@ -80,6 +80,12 @@ ha apps info local_dashboard_user_manager
 Sobald `version_latest` die neue Version meldet, in HA aktualisieren. `touch` erneuert nur den Zeitstempel und hilft bei älteren ZIPs, deren erhaltene Zeitstempel Supervisor sonst nicht als Änderung erkennt. Nicht deinstallieren. Repository-Apps werden über ihr Repository aktualisiert.
 
 ## Prüfstand und Grenzen
+
+**0.1.8 – Speichern-Erfolgsmeldung korrigiert:** Der vollständige Satz samt Ansichtenanzahl wird als eine Übersetzung in DE/EN/FR angezeigt, unabhängig von der Sprache der API-Antwort. Eine bereits angezeigte Erfolgsmeldung folgt auch nach dem Speichern der aktuellen Sprachwahl ohne Neuladen. Der Hinweis auf gemischte Sprache in 0.1.7 weiter unten ist damit behoben.
+
+Auf .177 nach frischem Vollbackup aktualisiert und mit einem eigenen Dashboard aus zwei Ansichten geprüft: drei echte Speichervorgänge in DE/EN/FR und Sprachwechsel nach dem Speichern bestanden. Jeweils zwei Zuordnungen geändert, keine Karten oder Namen. Automatische Sprache und ursprüngliche Vorauswahl wiederhergestellt; vorhandene Sicherungen erhalten. 28 Python- und zwölf Node-Prüfungen einschließlich englischer API-Antwort, nachträglichem Sprachwechsel und unverändertem Ergebnis bestanden; Docker-Builds für amd64/aarch64 und UGSo-App-CI erfolgreich. .68 und Produktivsysteme unverändert. Der experimentelle Status bleibt bis zum Abschluss der offenen Wiederherstellungs-/Konfliktprüfungen erhalten.
+
+![Vollständig deutsche Speichern-Erfolgsmeldung auf .177 mit 0.1.8](/images/dashboard-user-manager/ha-177-save-de-0.1.8.png)
 
 **Speichern und Wiederherstellen mit 0.1.7 am 20.10.2026 auf .177 bestanden:** Nach frischem HA-Vollbackup wurde ein eigenes temporäres Dashboard mit sechs Ansichten geprüft. Sammelauswahl/-abwahl für webuser und eine Einzelkorrektur änderten genau drei Ansichten. Nach Speichern und erneutem Laden waren nur die vorgesehenen Benutzerlisten geändert. Unberührte Sichtbarkeitswerte (`true`, `false`, `[]`), Karten einschließlich verschachtelter Inhalte, Pfade, Unteransicht und Originalnamen mit äußeren Leerzeichen blieben erhalten.
 

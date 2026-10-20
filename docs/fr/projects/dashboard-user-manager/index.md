@@ -4,7 +4,7 @@ description: Affecter des utilisateurs à toutes les vues HA ou individuellement
 ---
 # Gestion des utilisateurs des tableaux de bord
 
-**Version 0.1.7 · DE / EN / FR · MIT · expérimental**
+**Version 0.1.8 · DE / EN / FR · MIT · expérimental**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="Icône avec tableau, utilisateurs et coches" />
 
@@ -80,6 +80,12 @@ ha apps info local_dashboard_user_manager
 Quand `version_latest` indique la nouvelle version, lancez la mise à jour dans HA. `touch` modifie uniquement l’horodatage et aide Supervisor à détecter les fichiers issus d’anciens ZIP. Ne désinstallez pas l’application. Les applications issues d’un dépôt se mettent à jour via leur dépôt.
 
 ## Vérification et limites
+
+**0.1.8 – Traduction de la confirmation corrigée :** La phrase complète et le nombre de vues utilisent une traduction unique DE/EN/FR, indépendamment de la langue de l’API. Le message déjà affiché suit les changements de langue sans rechargement. Le défaut de langue mixte signalé ci-dessous pour 0.1.7 est ainsi corrigé.
+
+Mise à jour sur .177 après une sauvegarde complète, puis vérification avec un tableau de bord distinct de deux vues : trois enregistrements réels en DE/EN/FR et les changements de langue ultérieurs réussissent. Chaque enregistrement a modifié deux affectations sans toucher aux cartes ni aux noms. Langue automatique et présélection initiale rétablies ; sauvegardes existantes conservées. Les 28 tests Python et douze tests Node, dont une réponse API anglaise, les changements de langue ultérieurs et un résultat inchangé, réussissent. Builds Docker amd64/aarch64 et CI de l’application UGSo validés. .68 et systèmes de production inchangés. Le statut expérimental reste jusqu’à la fin des vérifications de restauration/conflits encore ouvertes.
+
+![Confirmation d’enregistrement entièrement française sur .177 avec 0.1.8](/images/dashboard-user-manager/ha-177-save-fr-0.1.8.png)
 
 **Enregistrement et restauration avec 0.1.7 validés sur .177 le 20 octobre 2026 :** Après une sauvegarde HA complète, un tableau de bord temporaire distinct comportant six vues a été testé. La sélection/désélection globale de webuser et une correction individuelle ont modifié exactement trois vues. Après enregistrement et rechargement, seules les listes d’utilisateurs prévues avaient changé. Les valeurs de visibilité non modifiées (`true`, `false`, `[]`), les cartes et leur contenu imbriqué, les chemins, la sous-vue et les noms d’origine avec espaces périphériques ont été conservés.
 

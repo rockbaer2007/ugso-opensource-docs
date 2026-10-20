@@ -4,7 +4,7 @@ description: Assign users to all HA views or individual views with checkboxes, b
 ---
 # Dashboard User Manager
 
-**Version 0.1.7 · DE / EN / FR · MIT · experimental**
+**Version 0.1.8 · DE / EN / FR · MIT · experimental**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App icon with dashboard matrix, users and checkmarks" />
 
@@ -80,6 +80,12 @@ ha apps info local_dashboard_user_manager
 Once `version_latest` shows the new version, update the app in HA. `touch` changes the timestamp only, helping Supervisor detect files extracted from older ZIPs with preserved timestamps. Do not uninstall. Repository apps update through their repository.
 
 ## Verification and limits
+
+**0.1.8 – Save confirmation localization fixed:** The complete sentence and view count use a single DE/EN/FR translation, regardless of the API response language. An already displayed success message follows later language changes without reloading. This resolves the mixed-language issue recorded below for 0.1.7.
+
+Updated on .177 after a fresh full backup and tested using a separate two-view dashboard: three real saves in DE/EN/FR and subsequent language changes passed. Each save changed two assignments without altering cards or names. Automatic language and the original selection restored; existing backups preserved. All 28 Python and twelve Node checks passed, including an English API reply, later language changes and an unchanged result. amd64/aarch64 Docker builds and the UGSo app CI passed. .68 and production systems unchanged. Experimental status remains until the outstanding recovery/conflict checks are complete.
+
+![Fully English save confirmation on .177 with 0.1.8](/images/dashboard-user-manager/ha-177-save-en-0.1.8.png)
 
 **Saving and restoring with 0.1.7 passed on .177 on 20 October 2026:** After a fresh full HA backup, a separate temporary dashboard with six views was tested. Bulk selection/deselection for webuser and an individual correction changed exactly three views. After saving and reloading, only the intended user lists had changed. Untouched visibility values (`true`, `false`, `[]`), cards including nested content, paths, the subview and original names with surrounding whitespace were preserved.
 
