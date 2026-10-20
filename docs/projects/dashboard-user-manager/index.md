@@ -4,7 +4,7 @@ description: Benutzer für alle HA-Ansichten oder einzeln per Checkbox zuordnen,
 ---
 # Dashboard-Benutzerverwaltung
 
-**Version 0.1.5 · DE / EN / FR · MIT · experimentell**
+**Version 0.1.6 · DE / EN / FR · MIT · experimentell**
 
 Eine eigenständige HA-App: Dashboards auswählen, Benutzer als Spalten und Ansichten als Zeilen anzeigen und die Zuordnung per Checkbox bearbeiten. Kein ATLAS erforderlich. Die breite Oberfläche nutzt 90 vw und 90 vh; Namen stehen hochkant, Benutzerspalten sind schmal und bei Bedarf horizontal scrollbar.
 
@@ -25,6 +25,8 @@ Die **Dashboard-Benutzerverwaltung** installieren, starten und über HA Ingress 
 Eine vorhandene **lokale App** bleibt beim Hinzufügen des Repositorys unverändert. Lokale und Repository-App besitzen verschiedene Kennungen und getrennte private App-Daten. Vor einem bewussten Quellenwechsel Vollbackup einschließlich der bisherigen App und deren JSON-Sicherungen herunterladen. Die lokale App nicht ungeprüft deinstallieren; nur eine App gleichzeitig zum Bearbeiten verwenden.
 
 ## Dashboards filtern und vorauswählen
+
+Ab 0.1.6 erscheint eine von HA migrierte Übersicht nur einmal: Der Eintrag `lovelace` und sein alter Standardzugang werden zusammengeführt. Eine zuvor über einen der beiden Einträge gespeicherte Vorauswahl bleibt erhalten. Gleichnamige Dashboards mit verschiedenen tatsächlichen Pfaden bleiben getrennt; Titel allein sind kein Dublettenkriterium. Ältere Dashboard-Sicherungen bleiben verwendbar. Grundlage ist die [HA-Zuordnung des Standardzugangs](https://github.com/home-assistant/core/blob/2026.10.2/homeassistant/components/lovelace/websocket.py).
 
 ![Dashboard-Vorauswahl 0.1.5 mit Checkboxen auf .177](/images/dashboard-user-manager/selection-177-de-0.1.5.png)
 

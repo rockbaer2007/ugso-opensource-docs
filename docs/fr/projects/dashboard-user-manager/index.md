@@ -4,7 +4,7 @@ description: Affecter des utilisateurs à toutes les vues HA ou individuellement
 ---
 # Gestion des utilisateurs des tableaux de bord
 
-**Version 0.1.5 · DE / EN / FR · MIT · expérimental**
+**Version 0.1.6 · DE / EN / FR · MIT · expérimental**
 
 Une application HA indépendante : choisissez un tableau de bord, affichez les utilisateurs en colonnes et les vues en lignes, puis modifiez les affectations par cases à cocher. ATLAS n’est pas nécessaire. L’interface utilise 90 vw et 90 vh, des noms verticaux, des colonnes étroites et un défilement horizontal si nécessaire.
 
@@ -13,6 +13,8 @@ Une application HA indépendante : choisissez un tableau de bord, affichez les u
 Capture réelle du système de test .177, le 20 octobre 2026 : langue HA automatique, 18 vues et quatre utilisateurs. Le tableau de bord existant n’a pas été modifié pour cette capture.
 
 ## Filtrer et présélectionner les tableaux de bord
+
+Depuis 0.1.6, une vue d’ensemble HA migrée n’apparaît qu’une fois : l’entrée `lovelace` et son ancien accès par défaut sont fusionnés. La présélection enregistrée par l’une des entrées est conservée. Les tableaux portant le même titre mais des chemins distincts restent séparés ; le titre seul n’identifie pas un doublon. Les anciennes sauvegardes restent compatibles. Cette logique suit la [correspondance de l’accès par défaut dans HA](https://github.com/home-assistant/core/blob/2026.10.2/homeassistant/components/lovelace/websocket.py).
 
 ![Présélection 0.1.5 avec cases à cocher sur .177](/images/dashboard-user-manager/selection-177-fr-0.1.5.png)
 

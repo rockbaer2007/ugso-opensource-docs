@@ -4,7 +4,7 @@ description: Assign users to all HA views or individual views with checkboxes, b
 ---
 # Dashboard User Manager
 
-**Version 0.1.5 · DE / EN / FR · MIT · experimental**
+**Version 0.1.6 · DE / EN / FR · MIT · experimental**
 
 A standalone HA app: select a dashboard, display users as columns and views as rows, and edit assignments using checkboxes. ATLAS is not required. The interface uses 90 vw and 90 vh, with rotated names, narrow user columns and horizontal scrolling when needed.
 
@@ -13,6 +13,8 @@ A standalone HA app: select a dashboard, display users as columns and views as r
 Actual screenshot from test host .177, 20 October 2026: automatic HA language, 18 views and four users. The existing dashboard was not changed for this screenshot.
 
 ## Filter and preselect dashboards
+
+Since 0.1.6, a migrated HA overview appears once: the `lovelace` entry and its legacy default access are merged. Preferences previously saved through either entry are preserved. Equal titles with different actual dashboard paths remain separate; titles alone do not identify duplicates. Older dashboard backups remain compatible. This follows [HA’s default access mapping](https://github.com/home-assistant/core/blob/2026.10.2/homeassistant/components/lovelace/websocket.py).
 
 ![Dashboard selection 0.1.5 with checkboxes on .177](/images/dashboard-user-manager/selection-177-en-0.1.5.png)
 
