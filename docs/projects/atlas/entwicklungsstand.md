@@ -12,18 +12,25 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 21.10.2026 · HA-App 0.1.330 · HACS-Integration 0.1.306.**
+**Stand: 21.10.2026 · HA-App 0.1.331 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
-**Offener Befund aus dem frischen Browserprofil:** Zwei vollständige JSON-
-Editor-Konfigurationen lassen sich auf .68 exakt importieren und aus ihren
-Dateien wiederherstellen. Ohne geöffnetes gemeinsames Projekt legt der normale
-Dateiimport jedoch keine getrennten Tab-Entwürfe an. Nach Neuladen zeigen beide
-Tabs den letzten Import, in beiden Reihenfolgen reproduziert. Die Dateien sind
-erhalten; 46 alte Entwurfsquellen und Bestandsdaten bleiben unverändert. Editorstände
-in beiden Profilen wiederhergestellt, Testobjekte bereinigt, drei Vollbackups behalten, .177 unverändert.
-App 0.1.330 bleibt unverändert; der nächste Fix betrifft die Tab-Sicherung nach
-Gesamtkonfigurations-Import. Details und sicherer Zwischenweg: [Card Editor](card-editor.md).
+**App 0.1.331 sichert Dateiimporte als eigene Tab-Entwürfe.** Bestätigte JSON-
+Gesamtkonfigurations-Importe benötigen dafür kein vorher geöffnetes gemeinsames
+Projekt mehr. Ein erneuter Import erzeugt eine neue Quelle und erhält den
+Vorgänger. Nach Neuladen wird die eigene Quelle vorausgewählt; Prüfung und
+gesicherte Übernahme bleiben ausdrücklich. Die globale Arbeitsfläche ist davon
+getrennt und kann den letzten Import zeigen. Einstellungsübernahme und die
+getrennten Hinweise für lokale und Sitzungsfehler bleiben erhalten. Der Befund
+aus dem frischen Profil unter 0.1.330 ist damit korrigiert; damalige Quelldateien
+und 46 alte Quellen waren erhalten. Details: [Card Editor](card-editor.md).
+
+Das Update auf .68 (HA 2026.10.2) und der gezielte native Import-/Neulade-Durchlauf
+bestehen in beiden Reihenfolgen, mit erneutem Import, Abbrechen/ungültiger Datei
+und blockierten lokalen/Sitzungs-Schreibzugriffen samt sicheren Folgeversuchen.
+Vollständige Exportvergleiche und alle 48 alten Quellen bestehen, Ausgangsstände
+und Daten sind erhalten, Testdateien bereinigt und drei Vollbackups behalten.
+.177 unverändert. Die Übernahme des vorausgewählten Entwurfs bleibt ausdrücklich.
 
 **Kombinierter Zwei-Tab-Test bestanden:** Auf .68 bleiben bei blockierten
 Sitzungsmethoden zwei unterschiedliche Entwürfe während eines echten HA-Neustarts

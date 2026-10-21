@@ -5,19 +5,31 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
-::: warning Whole-configuration import: separate tabs after reload still open
-In a fresh Chrome profile on .68 with App 0.1.330, two full Editor configurations
-saved with **Export** are transferred correctly through **Import**. Each complete
-return export matches its source except export time. However, without previously
-opening a shared project, this import creates no per-tab draft: after reload,
-both tabs show the last imported configuration. Reversing the order confirms it.
+::: info Independent tab drafts after file import – App 0.1.331
+A confirmed JSON whole-configuration **Import** now also saves its Editor project
+as a separate local tab draft, even without opening a shared project first.
+Another file import in the same tab creates a new source and retains its
+predecessor. Ordinary edits then update only the new draft. Existing settings
+import behavior for the first import into a normal workspace is retained.
 
-**Keep the two source files separately.** Explicitly importing the matching file
-again fully restores that version. Until fixed, do not rely on separate automatic
-tab recovery for this path. This is normal JSON whole-configuration import, not
-a demonstrated HACS defect. All 46 previous sources and existing data remained
-unchanged; Editor states in both profiles were restored, owned fixtures cleaned and three full
-backups retained. .177 untouched. Per-tab draft saving after file import is open.
+**After reload, inspect the preselected Local draft and use Back up and apply.**
+The global profile workspace can still show the last import; it does not replace
+the tab source requiring explicit recovery. No draft is applied automatically,
+and credentials are excluded from draft records. Full local or blocked session
+storage retains the distinct failure/export notices. Keep the source files too.
+
+This corrects the fresh-profile finding in 0.1.330, where no tab sources were
+created and both tabs showed only the last import after reload. The fix concerns
+normal JSON whole-configuration import; it is not a new HACS qualification.
+
+Update and native qualification on .68 with HA 2026.10.2 pass: both original
+failure files, reverse order, repeated identical import, own-source selection
+after reload and complete recoveries. Cancellation and invalid input change
+neither workspace nor sources. Blocked local/session writes show the correct
+notices; export and safe retries preserve predecessors. All 48 previous sources
+remain byte-identical, original Editors/global workspace are restored, fixtures
+cleaned and three full backups retained. New owned draft sources and PC exports
+remain as recovery material. .177 is untouched.
 :::
 
 ::: info Two tabs qualified with blocked session storage and a HA outage

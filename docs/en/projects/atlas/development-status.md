@@ -12,17 +12,23 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-21 · HA App 0.1.330 · HACS integration 0.1.306.**
+**As of 2026-10-21 · HA App 0.1.331 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
-**Open finding from the fresh browser profile:** Two complete JSON Editor
-configurations import exactly on .68 and recover from their files. Without an
-opened shared project, normal file import creates no separate per-tab drafts.
-After reload both tabs show the last import, reproduced in both orders. The files
-are intact; all 46 previous sources and existing data remain unchanged. Editor
-states in both profiles restored, fixtures cleaned, three full backups retained, .177 untouched. App
-0.1.330 is unchanged; the next fix is per-tab saving after whole-configuration
-import. Details and interim recovery: [Card Editor](card-editor.md).
+**App 0.1.331 saves file imports as independent tab drafts.** Confirmed JSON
+whole-configuration imports no longer need a previously opened shared project.
+Another import creates a new source and retains its predecessor. Reload selects
+the matching source; preview and backed-up apply remain explicit. The global
+workspace is separate and can show the last import. Settings import and distinct
+local/session error notices are retained. This corrects the 0.1.330 fresh-profile
+finding; its source files and 46 earlier sources were preserved. Details:
+[Card Editor](card-editor.md).
+
+The .68 update (HA 2026.10.2) and native import/reload qualification pass in both
+orders, with repeat import, cancellation/invalid input and blocked local/session
+writes followed by safe retries. Complete export comparisons and all 48 old
+sources pass; original states/data are retained, fixtures cleaned and three full
+backups kept. .177 untouched. Applying the preselected draft remains explicit.
 
 **Combined two-tab qualification passes:** On .68 with blocked session methods,
 two distinct drafts remain editable/exportable during a real HA restart.

@@ -5,21 +5,32 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
-::: warning Import de configuration complète : séparation après recharge à corriger
-Dans un nouveau profil Chrome sur .68 avec l’App 0.1.330, deux configurations
-Editor complètes sauvegardées par **Exporter** sont correctement transférées par
-**Importer**. Chaque réexport complet correspond à sa source, sauf date d’export.
-Mais sans projet partagé ouvert au préalable, cet import ne crée pas de brouillon
-par onglet : après recharge, les deux onglets affichent la dernière configuration
-importée. L’ordre inverse confirme aussi ce comportement.
+::: info Brouillons par onglet après import de fichier – App 0.1.331
+Un **Importer** JSON de configuration complète confirmé sauvegarde aussi le projet
+Editor comme brouillon local distinct par onglet, sans projet partagé préalable.
+Un autre import dans le même onglet crée une nouvelle source et garde la précédente.
+Les modifications ordinaires ne mettent ensuite à jour que le nouveau brouillon.
+La reprise des réglages du premier import dans un espace normal reste conservée.
 
-**Conserver séparément les deux fichiers sources.** Réimporter explicitement le
-bon fichier rétablit entièrement cette version. Avant correction, ne pas compter
-sur une reprise automatique séparée pour ce chemin. Il s’agit de l’import JSON de
-configuration complète, pas d’un défaut HACS démontré. Les 46 anciennes sources
-et les données restent inchangées ; états Editor rétablis dans les deux profils, objets de test nettoyés
-et trois sauvegardes complètes conservées. .177 inchangé. Sauvegarde par onglet
-après import de fichier encore à corriger.
+**Après recharge, vérifier le Brouillon local présélectionné puis Sauvegarder et
+reprendre.** L’espace global du profil peut encore montrer le dernier import ;
+il ne remplace pas la source propre à l’onglet, dont la reprise reste explicite.
+Aucune application automatique ni donnée d’authentification dans les brouillons.
+Stockage local plein ou session bloquée gardent leurs messages distincts et le
+conseil d’export. Conserver aussi les fichiers sources.
+
+Cela corrige le défaut 0.1.330 du nouveau profil : aucune source par onglet n’était
+créée, et les deux affichaient seulement le dernier import après recharge.
+Ce correctif concerne l’import JSON complet, pas une nouvelle qualification HACS.
+
+Mise à jour et qualification native sur .68 avec HA 2026.10.2 réussies : fichiers
+originaux en défaut, ordre inverse, même fichier répété, présélection propre après
+recharge et reprises complètes. Annulation et fichier invalide ne modifient ni
+espace ni sources. Écritures locales/de session bloquées affichent les bons
+messages ; export et nouveaux essais conservent les versions précédentes. Les
+48 anciennes sources restent identiques octet par octet, éditeurs et espace global
+rétablis, fichiers de test nettoyés et trois sauvegardes complètes gardées. Nouvelles
+sources de test et exports PC restent disponibles pour reprise. .177 inchangé.
 :::
 
 ::: info Deux onglets vérifiés avec session bloquée et interruption HA

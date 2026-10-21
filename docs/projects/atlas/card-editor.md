@@ -5,21 +5,35 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
-::: warning Gesamtkonfigurations-Import: getrennte Tabs nach Neuladen noch offen
-Im frischen Chrome-Profil auf .68 mit App 0.1.330 lassen sich zwei über **Export**
-gesicherte Editor-Gesamtkonfigurationen über **Import** vollständig übernehmen.
-Der vollständige Rückexport stimmt jeweils mit der Quelldatei überein, abgesehen
-vom Exportzeitpunkt. Ohne zuvor geöffnetes gemeinsames Projekt erzeugt dieser
-Import aber keinen eigenen Tab-Entwurf: Nach Neuladen zeigen beide Tabs den
-zuletzt importierten Stand. Auch die umgekehrte Reihenfolge bestätigt das.
+::: info Eigene Tab-Entwürfe nach Dateiimport – App 0.1.331
+Ein bestätigter JSON-Gesamtkonfigurations-Import über **Import** sichert das
+Editor-Projekt jetzt zusätzlich als eigenen lokalen Tab-Entwurf, auch ohne zuvor
+geöffnetes gemeinsames Projekt. Ein weiterer Dateiimport im selben Tab erzeugt
+eine neue Quelle und erhält den Vorgänger. Reguläre Änderungen aktualisieren
+anschließend nur den neuen Entwurf. Die bisherige Einstellungsübernahme beim
+ersten Import in eine normale Arbeitsfläche bleibt erhalten.
 
-**Die beiden Quelldateien getrennt aufbewahren.** Ein erneuter gezielter Import
-stellt den jeweiligen Stand vollständig wieder her. Bis zur Korrektur hier nicht
-auf getrennte automatische Tab-Wiederherstellung vertrauen. Dies betrifft den
-normalen JSON-Gesamtkonfigurations-Import, nicht einen nachgewiesenen HACS-Fehler.
-Alle 46 bisherigen Quellen und Bestandsdaten blieben unverändert; die Editorstände
-in beiden Profilen wurden wiederhergestellt, eigene Testobjekte bereinigt und drei Vollbackups behalten.
-.177 blieb unverändert. Die Tab-Entwurfssicherung nach Dateiimport ist offen.
+**Nach Neuladen unter Lokale Entwürfe den vorausgewählten Stand prüfen und
+gesichert übernehmen.** Die globale Profil-Arbeitsfläche kann noch den letzten
+Import zeigen; sie ersetzt nicht die ausdrücklich zu übernehmende Tab-Quelle.
+Es gibt keine automatische Übernahme und keine Übertragung von Zugangsdaten in
+Entwurfsdatensätze. Bei voller lokaler oder blockierter Sitzungsablage gelten
+weiter die getrennten Fehler-/Exporthinweise. Quelldateien separat aufbewahren.
+
+Damit wird der Befund aus der 0.1.330-Prüfung im frischen Profil korrigiert:
+Damals entstanden keine Tab-Quellen, und beide Tabs zeigten nach Neuladen nur
+den letzten Import. Die Korrektur betrifft den normalen JSON-Gesamtkonfigurations-
+Import; sie ist keine neue HACS-Qualifikation.
+
+Das Update und die native Prüfung auf .68 mit HA 2026.10.2 bestehen: beide
+ursprünglichen Fehlerdateien, umgekehrte Importreihenfolge, erneuter gleicher
+Dateiimport, eigene Vorauswahl nach Neuladen und vollständige Wiederherstellungen.
+Abbrechen und eine ungültige Datei ändern weder Arbeitsfläche noch Quellen.
+Blockierte lokale/Sitzungs-Schreibzugriffe zeigen die richtigen Hinweise;
+Export und sichere Folgeversuche erhalten die Vorgänger. Alle 48 vorherigen
+Quellen sind bytegleich erhalten, Originaleditoren und Profil-Arbeitsfläche
+wiederhergestellt, Testdateien bereinigt und drei Vollbackups behalten. Eigene
+neue Entwurfsquellen und PC-Exporte bleiben als Sicherung erhalten. .177 unverändert.
 :::
 
 ::: info Zwei Tabs bei gesperrter Sitzung und HA-Ausfall geprüft

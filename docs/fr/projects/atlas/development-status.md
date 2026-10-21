@@ -16,16 +16,23 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 21/10/2026 · App HA 0.1.330 · intégration HACS 0.1.306.**
+**État au 21/10/2026 · App HA 0.1.331 · intégration HACS 0.1.306.**
 
-**Défaut ouvert dans le nouveau profil navigateur :** deux configurations Editor
-JSON complètes sont importées exactement sur .68 et reprises depuis leurs fichiers.
-Sans projet partagé ouvert, l’import normal ne crée pas de brouillons séparés par
-onglet. Après recharge, les deux affichent le dernier import, dans les deux ordres.
-Fichiers intacts ; les 46 anciennes sources et les données restent inchangées.
-États Editor rétablis dans les deux profils, objets de test nettoyés, trois sauvegardes complètes conservées,
-.177 inchangé. L’App 0.1.330 ne change pas ; prochain correctif : sauvegarde par
-onglet après import de configuration complète. Détails : [Card Editor](card-editor.md).
+**L’App 0.1.331 sauvegarde les imports par onglet.** Les imports JSON complets
+confirmés ne nécessitent plus de projet partagé préalable. Un autre import crée
+une nouvelle source et garde la précédente. Après recharge, la bonne source est
+présélectionnée ; aperçu et reprise sauvegardée restent explicites. L’espace global
+est distinct et peut montrer le dernier import. Réglages importés et messages
+distincts pour erreurs locales/de session restent conservés. Cela corrige le défaut
+0.1.330 du nouveau profil ; ses fichiers et 46 anciennes sources étaient préservés.
+Détails : [Card Editor](card-editor.md).
+
+Mise à jour sur .68 (HA 2026.10.2) et qualification native import/recharge réussies
+dans les deux ordres : import répété, annulation/fichier invalide et écritures
+locales/de session bloquées avec nouveaux essais sûrs. Comparaisons complètes des
+exports et 48 anciennes sources conformes ; états et données conservés, fichiers
+de test nettoyés et trois sauvegardes complètes gardées. .177 inchangé. La reprise
+du brouillon présélectionné reste explicite.
 
 **Qualification combinée de deux onglets réussie :** sur .68, avec méthodes de
 session bloquées, deux brouillons distincts restent modifiables/exportables pendant
