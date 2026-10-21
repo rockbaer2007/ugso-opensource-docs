@@ -5,6 +5,19 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Two tabs qualified with blocked session storage and a HA outage
+On .68 with App 0.1.330 and HA 2026.10.2, two different drafts remain editable
+and exportable with blocked session methods during a real HA restart. Both tabs
+reconnect automatically. Reloading while the session remains blocked never
+auto-applies a source: explicitly inspect and back up/apply the matching draft.
+Each complete recovery export matches its own outage state except export time.
+Only a confirmed subsequent save clears the session notice; afterwards the tab
+pointers remain separate across reloads. All 40 previous sources and existing
+data are preserved, both original Editors restored, owned fixtures cleaned and
+three full backups retained. .177 remains untouched. This run does not qualify
+Wi-Fi loss or forced browser-process termination.
+:::
+
 ::: info Distinct local and session failure notices – App 0.1.330
 Native qualification on .68 with HA 2026.10.2 passes: real full session storage
 with and without an existing tab pointer, blocked session methods and getter,

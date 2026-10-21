@@ -18,6 +18,15 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 **État au 21/10/2026 · App HA 0.1.330 · intégration HACS 0.1.306.**
 
+**Qualification combinée de deux onglets réussie :** sur .68, avec méthodes de
+session bloquées, deux brouillons distincts restent modifiables/exportables pendant
+un vrai redémarrage HA. Reconnexion automatique, reprises explicites séparées après
+recharge et sauvegardes ultérieures confirmées réussissent avec comparaison des
+exports complets. Les 40 anciennes sources et les données sont conservées, deux
+éditeurs originaux rétablis, objets de test nettoyés et trois sauvegardes complètes
+gardées. .177 inchangé. L’App 0.1.330 ne change pas ; utilisation et limites dans
+[Card Editor](card-editor.md).
+
 **L’App 0.1.330 corrige l’avertissement de session absent.** Après écriture locale,
 marque de reprise et pointeur d’onglet sont confirmés. En cas d’échec, un message
 DE/EN/FR distinct indique que le brouillon est enregistré localement, mais sa

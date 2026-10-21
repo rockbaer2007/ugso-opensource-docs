@@ -5,6 +5,20 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Zwei Tabs bei gesperrter Sitzung und HA-Ausfall geprüft
+Auf .68 mit App 0.1.330 und HA 2026.10.2 bleiben zwei unterschiedliche Entwürfe
+bei blockierten Sitzungsmethoden auch während eines echten HA-Neustarts editier-
+und exportierbar. Beide Tabs verbinden sich ohne manuelles Eingreifen wieder.
+Nach Neuladen unter weiter blockierter Sitzung wird kein Entwurf automatisch
+übernommen: den passenden Stand ausdrücklich prüfen und gesichert übernehmen.
+Die vollständigen Wiederherstellungs-Exporte entsprechen jeweils dem eigenen
+Ausfallstand, abgesehen vom Exportzeitpunkt. Erst bestätigtes Folgespeichern
+entfernt die Sitzungswarnung; danach bleiben die Tab-Zeiger beim Neuladen getrennt.
+Alle 40 vorherigen Quellen und Bestandsdaten sind erhalten, beide Originaleditoren
+wiederhergestellt, Testobjekte bereinigt und drei Vollbackups behalten. .177 bleibt
+unverändert. Dieser Lauf prüft weder WLAN-Ausfall noch Browser-Prozessabbruch.
+:::
+
 ::: info Getrennte Hinweise für lokale und Sitzungsfehler – App 0.1.330
 Ein lokal geschriebener Entwurf ist erhalten, auch wenn seine Zuordnung zum Tab
 nicht zuverlässig gesichert werden kann. Bei voller oder gesperrter Sitzungsablage

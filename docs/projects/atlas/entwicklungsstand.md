@@ -15,6 +15,15 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 **Stand: 21.10.2026 · HA-App 0.1.330 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
+**Kombinierter Zwei-Tab-Test bestanden:** Auf .68 bleiben bei blockierten
+Sitzungsmethoden zwei unterschiedliche Entwürfe während eines echten HA-Neustarts
+editier- und exportierbar. Automatische Wiederverbindung, ausdrückliche getrennte
+Wiederherstellung nach Neuladen und bestätigte Folgesicherung bestehen mit
+vollständigem Exportvergleich. Alle 40 vorherigen Quellen und Bestandsdaten sind
+erhalten, beide Originaleditoren wiederhergestellt, Testobjekte bereinigt und drei
+Vollbackups behalten. .177 unverändert. App 0.1.330 bleibt unverändert; Grenzen
+und Bedienhinweise stehen im [Card Editor](card-editor.md).
+
 **App 0.1.330 behebt den fehlenden Hinweis bei Sitzungsfehlern.** Nach erfolgreichem
 lokalem Schreiben werden Schreibmarkierung und Tab-Zeiger bestätigt. Schlägt dies
 fehl, zeigt der Editor einen eigenen DE/EN/FR-Hinweis: Entwurf lokal gespeichert,

@@ -5,6 +5,20 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Deux onglets vérifiés avec session bloquée et interruption HA
+Sur .68 avec l’App 0.1.330 et HA 2026.10.2, deux brouillons différents restent
+modifiables et exportables avec méthodes de session bloquées pendant un vrai
+redémarrage HA. Les deux onglets se reconnectent automatiquement. Après recharge
+sous blocage, aucune source n’est appliquée automatiquement : vérifier puis
+reprendre explicitement le bon brouillon avec sauvegarde. Chaque export complet
+de reprise correspond à son propre état pendant l’interruption, sauf date d’export.
+Seule une sauvegarde ultérieure confirmée retire le message ; ensuite les pointeurs
+restent distincts après recharge. Les 40 anciennes sources et les données sont
+conservées, deux éditeurs originaux rétablis, objets de test nettoyés et trois
+sauvegardes complètes gardées. .177 inchangé. Ni coupure Wi-Fi ni arrêt forcé du
+processus navigateur ne sont qualifiés dans ce passage.
+:::
+
 ::: info Messages distincts pour erreurs locales et de session – App 0.1.330
 La qualification sur .68 avec HA 2026.10.2 réussit : quota réel de session avec
 et sans pointeur existant, méthodes et accès de session bloqués, export, reprise

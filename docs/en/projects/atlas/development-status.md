@@ -15,6 +15,14 @@ are documented in the development status below.
 **As of 2026-10-21 · HA App 0.1.330 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
+**Combined two-tab qualification passes:** On .68 with blocked session methods,
+two distinct drafts remain editable/exportable during a real HA restart.
+Automatic reconnection, explicit separate recovery after reload and confirmed
+subsequent saves pass with complete export comparisons. All 40 previous sources
+and existing data are preserved, both original Editors restored, owned fixtures
+cleaned and three full backups retained. .177 untouched. App 0.1.330 is unchanged;
+see [Card Editor](card-editor.md) for instructions and qualification boundaries.
+
 **App 0.1.330 fixes the missing session-failure notice.** After a local write,
 both recovery intent and tab pointer are confirmed. If this fails, a separate
 DE/EN/FR notice says the draft is saved locally but tab recovery is not secured:
