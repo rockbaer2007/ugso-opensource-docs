@@ -5,6 +5,27 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: warning Browserablagen geprüft – Hinweis bei Sitzungsfehlern noch offen
+Mit App 0.1.329 auf .68 / HA 2026.10.2 sind echte volle lokale und Sitzungsablagen
+sowie gezielt blockierte Zugriffe geprüft. Lokale Schreibfehler zeigen den
+Exporthinweis in DE/EN/FR; der aktuelle Stand bleibt exportierbar. Nach Freigabe
+funktionieren Speichern beziehungsweise Wiederherstellung aus dem Export wieder.
+
+**Bei voller oder für Methoden gesperrter Sitzungsablage fehlt derzeit ein
+Hinweis:** Der Entwurf kann vollständig lokal gespeichert sein, während
+Tab-Zeiger und Wiederherstellungsmarkierung fehlen. Nach Neuladen den richtigen
+Stand unter **Lokale Entwürfe** anhand von Name/Zeit auswählen, prüfen und
+gesichert übernehmen. Nicht darauf verlassen, dass er vorausgewählt ist.
+Bei vollständig verweigertem Storage-Zugang warnt der Sicherungsversuch; dann
+vor Schließen/Neuladen exportieren und nach Freigabe aus der Datei wiederherstellen.
+
+Alle 20 vorherigen Entwurfsquellen sind bytegleich erhalten, Originaleditoren und
+Bestandsdaten wiederhergestellt, Testobjekte/Fülleinträge bereinigt, drei
+Vollbackups auf .68; .177 unberührt. Sperren wurden in eigenen Testseiten simuliert,
+keine Chrome-Berechtigungen geändert. Dies ist keine vollständige Freigabe aller
+Browser-Speicherfehler; die präzise Sitzungswarnung bleibt offen.
+:::
+
 ::: info Neueren Entwurf nach Schreibabbruch wiederherstellen – App 0.1.329
 Vor dem Datensatzschreiben merkt sich der Editor im Tab den beabsichtigten
 Entwurf. Wird die Sicherung nach dem Schreiben und vor dem Aktualisieren des
@@ -47,7 +68,7 @@ Lokale Entwürfe gehören zum Browserprofil und zur jeweiligen ATLAS-Adresse.
 Sie sind kein Bestandteil eines HA-Vollbackups. Bei gelöschtem Browserspeicher
 oder Gerätewechsel ist ein eigener **Export** nötig. Die lokale Sicherung
 funktioniert auch bei App-Ausfall; Vorschau und Übernahme benötigen den wieder
-erreichbaren Server. Speicherfehler werden angezeigt: dann vor Neuladen oder
+erreichbaren Server. Fehler beim lokalen Datensatzschreiben werden angezeigt: dann vor Neuladen oder
 Schließen exportieren. Alte Wiederherstellungsquellen werden nicht automatisch
 gelöscht. Pro Entwurf gelten höchstens 5.000 Felder und 4 MiB Projektdaten.
 

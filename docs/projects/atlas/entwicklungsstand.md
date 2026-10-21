@@ -15,6 +15,17 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 **Stand: 21.10.2026 · HA-App 0.1.329 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
+**Browserablagen-Prüfung auf .68 abgeschlossen, Sitzungswarnung noch offen:**
+Acht Fälle mit echter lokaler/Sitzungs-Quota sowie blockierten Methoden und
+Storage-Zugängen erhalten alle 20 vorhandenen Entwürfe. Lokale Schreibfehler
+warnen, Export und Wiederherstellung funktionieren. Volle oder methodenseitig
+gesperrte Sitzungsablagen können hingegen Zeiger/Markierung ohne Hinweis verlieren,
+während der lokale Datensatz erhalten bleibt; nach Neuladen ist manuelle Quellenwahl
+nötig. Dies ist ein offener Befund, keine vollständige Speicherfehlerfreigabe.
+Originaleditoren und Bestandsdaten erhalten, Testobjekte/Füllwerte bereinigt,
+drei Vollbackups auf .68; .177 unverändert. App 0.1.329 bleibt unverändert.
+Details und Handlungsschritte: [Card Editor](card-editor.md).
+
 **App 0.1.329 bietet den neueren Entwurf nach unterbrochener Sicherung an.**
 Eine vorab gespeicherte tabgebundene Schreibmarkierung erkennt den vollständigen
 Datensatz, falls die Aktualisierung des Tab-Zeigers ausbleibt. Vorschau und

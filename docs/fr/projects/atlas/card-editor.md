@@ -5,6 +5,28 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: warning Stockage du navigateur vérifié – avertissement de session encore absent
+L’App 0.1.329 sur .68 / HA 2026.10.2 est vérifiée avec stockages local et de session
+réellement pleins et blocages d’accès contrôlés. Les échecs d’écriture locale
+affichent l’avertissement d’export DE/EN/FR ; l’espace actuel reste exportable.
+Enregistrement ou reprise depuis l’export fonctionnent après rétablissement de
+l’accès ou de l’espace disponible.
+
+**Une session pleine ou dont les méthodes sont bloquées n’affiche actuellement
+aucun avertissement :** le brouillon complet peut exister localement sans pointeur
+d’onglet ni marque de reprise. Après rechargement, choisir le bon nom/la bonne date
+dans **Brouillons locaux**, vérifier puis **Sauvegarder et reprendre**. Ne pas
+compter sur la présélection. Si l’objet Storage lui-même est inaccessible,
+l’enregistrement avertit : exporter avant de fermer/recharger puis reprendre
+depuis ce fichier après rétablissement de l’accès.
+
+Les 20 anciennes sources restent identiques octet par octet ; éditeurs/données
+initiaux restaurés, objets propres/remplissage retirés et trois sauvegardes complètes
+conservées sur .68 ; .177 inchangé. Blocages simulés dans des pages propres,
+sans changer les permissions Chrome. Tous les échecs de stockage ne sont pas
+qualifiés ; l’avertissement précis de session reste à corriger.
+:::
+
 ::: info Reprendre un brouillon plus récent après interruption – App 0.1.329
 Avant d’écrire l’enregistrement, l’éditeur mémorise le brouillon prévu dans la
 session de cet onglet. Si la sauvegarde s’arrête après l’écriture et avant la
@@ -48,7 +70,7 @@ Les brouillons locaux appartiennent au profil du navigateur et à l’adresse AT
 Ils ne font pas partie d’une sauvegarde HA complète. Conservez un **Export**
 avant d’effacer le stockage du navigateur ou de changer d’appareil. La sauvegarde
 locale fonctionne pendant l’arrêt de l’App ; aperçu et restauration nécessitent
-le retour du serveur. Les erreurs de stockage sont signalées : exportez alors
+le retour du serveur. Les erreurs d’écriture locale sont signalées : exportez alors
 avant de recharger ou fermer. Les anciennes sources ne sont pas supprimées
 automatiquement. Limites par brouillon : 5 000 champs et 4 Mio de données projet.
 

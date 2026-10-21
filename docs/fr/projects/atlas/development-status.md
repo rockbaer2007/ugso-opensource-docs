@@ -18,6 +18,16 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 **État au 21/10/2026 · App HA 0.1.329 · intégration HACS 0.1.306.**
 
+**Vérification du stockage sur .68 terminée ; avertissement de session encore
+absent :** huit cas avec quotas local/session réels et accès/méthodes bloqués
+conservent les 20 brouillons existants. Les échecs locaux avertissent ; export et
+reprise fonctionnent. Une session pleine ou aux méthodes bloquées peut perdre
+pointeur/marque sans avertissement tout en conservant l’enregistrement local ;
+sélection manuelle nécessaire après rechargement. Il s’agit d’un défaut ouvert,
+pas d’une qualification complète des pannes de stockage. Éditeurs/données initiaux
+conservés, objets propres/remplissage retirés, trois sauvegardes complètes sur .68 ;
+.177 inchangé. App 0.1.329 inchangée. Voir [Card Editor](card-editor.md).
+
 **L’App 0.1.329 propose le brouillon plus récent après sauvegarde interrompue.**
 Une intention d’écriture propre à l’onglet, enregistrée au préalable, identifie
 l’enregistrement complet si le pointeur n’a pas été mis à jour. Aperçu et reprise

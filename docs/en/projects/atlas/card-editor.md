@@ -5,6 +5,26 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: warning Browser storage checked – session-failure notice still missing
+App 0.1.329 on .68 / HA 2026.10.2 has been checked with genuinely full local and
+session storage and controlled access blocks. Local write failures show the
+DE/EN/FR export warning; the current workspace remains exportable. Saving or
+recovery from the export works again after access/space is restored.
+
+**Full or method-blocked session storage currently lacks a warning:** a complete
+draft may exist locally while its tab pointer and recovery intent are missing.
+After reloading, select the correct name/time under **Local drafts**, inspect it
+and use **Back up and apply**. Do not rely on preselection. When the Storage
+object itself is inaccessible, saving warns: export before closing/reloading
+and recover from that file after access is restored.
+
+All 20 previous draft sources remain byte-identical; original Editors/data are
+restored, owned fixtures/filler removed and three full backups retained on .68;
+.177 untouched. Access blocks were simulated in owned pages, without changing
+Chrome permissions. This does not qualify every browser storage failure; the
+precise session warning remains open.
+:::
+
 ::: info Recover a newer draft after an interrupted save – App 0.1.329
 Before writing the record, the Editor stores the intended draft in this tab's
 session. If saving stops after the record write but before the tab-pointer
@@ -45,7 +65,7 @@ Local drafts belong to the browser profile and the particular ATLAS address.
 They are not included in a full HA backup. Keep a separate **Export** before
 clearing browser storage or switching devices. Local saving works during an
 App outage; preview and recovery require the server to be reachable again.
-Storage failures are displayed: export before reloading or closing if one
+Local record-write failures are displayed: export before reloading or closing if one
 occurs. Old recovery sources are not automatically deleted. Each draft permits
 at most 5,000 fields and 4 MiB of project data.
 

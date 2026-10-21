@@ -15,6 +15,16 @@ are documented in the development status below.
 **As of 2026-10-21 · HA App 0.1.329 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
+**Browser-storage qualification on .68 is complete; a session warning remains
+open:** eight cases with actual local/session quota and blocked methods/Storage
+access preserve all 20 existing drafts. Local write failures warn, and export/
+recovery work. Full or method-blocked session storage can lose its pointer/intent
+without a notice while retaining the local record; manual selection is then
+needed after reload. This is an unresolved finding, not full storage-failure
+approval. Original Editors/data preserved, owned fixtures/filler cleaned, three
+full backups on .68; .177 untouched. App 0.1.329 is unchanged. See
+[Card Editor](card-editor.md) for details and recovery steps.
+
 **App 0.1.329 offers the newer draft after interrupted saving.** A tab-scoped
 write intent stored beforehand identifies the complete record if its tab-pointer
 update is missed. Preview and backed-up recovery remain explicit; the workspace
