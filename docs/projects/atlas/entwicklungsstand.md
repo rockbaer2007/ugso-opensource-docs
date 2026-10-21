@@ -15,6 +15,16 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 **Stand: 21.10.2026 · HA-App 0.1.330 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
+**Offener Befund aus dem frischen Browserprofil:** Zwei vollständige JSON-
+Editor-Konfigurationen lassen sich auf .68 exakt importieren und aus ihren
+Dateien wiederherstellen. Ohne geöffnetes gemeinsames Projekt legt der normale
+Dateiimport jedoch keine getrennten Tab-Entwürfe an. Nach Neuladen zeigen beide
+Tabs den letzten Import, in beiden Reihenfolgen reproduziert. Die Dateien sind
+erhalten; 46 alte Entwurfsquellen und Bestandsdaten bleiben unverändert. Editorstände
+in beiden Profilen wiederhergestellt, Testobjekte bereinigt, drei Vollbackups behalten, .177 unverändert.
+App 0.1.330 bleibt unverändert; der nächste Fix betrifft die Tab-Sicherung nach
+Gesamtkonfigurations-Import. Details und sicherer Zwischenweg: [Card Editor](card-editor.md).
+
 **Kombinierter Zwei-Tab-Test bestanden:** Auf .68 bleiben bei blockierten
 Sitzungsmethoden zwei unterschiedliche Entwürfe während eines echten HA-Neustarts
 editier- und exportierbar. Automatische Wiederverbindung, ausdrückliche getrennte

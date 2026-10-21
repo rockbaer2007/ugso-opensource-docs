@@ -15,6 +15,15 @@ are documented in the development status below.
 **As of 2026-10-21 · HA App 0.1.330 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
+**Open finding from the fresh browser profile:** Two complete JSON Editor
+configurations import exactly on .68 and recover from their files. Without an
+opened shared project, normal file import creates no separate per-tab drafts.
+After reload both tabs show the last import, reproduced in both orders. The files
+are intact; all 46 previous sources and existing data remain unchanged. Editor
+states in both profiles restored, fixtures cleaned, three full backups retained, .177 untouched. App
+0.1.330 is unchanged; the next fix is per-tab saving after whole-configuration
+import. Details and interim recovery: [Card Editor](card-editor.md).
+
 **Combined two-tab qualification passes:** On .68 with blocked session methods,
 two distinct drafts remain editable/exportable during a real HA restart.
 Automatic reconnection, explicit separate recovery after reload and confirmed

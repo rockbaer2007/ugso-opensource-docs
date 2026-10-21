@@ -5,6 +5,23 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: warning Gesamtkonfigurations-Import: getrennte Tabs nach Neuladen noch offen
+Im frischen Chrome-Profil auf .68 mit App 0.1.330 lassen sich zwei über **Export**
+gesicherte Editor-Gesamtkonfigurationen über **Import** vollständig übernehmen.
+Der vollständige Rückexport stimmt jeweils mit der Quelldatei überein, abgesehen
+vom Exportzeitpunkt. Ohne zuvor geöffnetes gemeinsames Projekt erzeugt dieser
+Import aber keinen eigenen Tab-Entwurf: Nach Neuladen zeigen beide Tabs den
+zuletzt importierten Stand. Auch die umgekehrte Reihenfolge bestätigt das.
+
+**Die beiden Quelldateien getrennt aufbewahren.** Ein erneuter gezielter Import
+stellt den jeweiligen Stand vollständig wieder her. Bis zur Korrektur hier nicht
+auf getrennte automatische Tab-Wiederherstellung vertrauen. Dies betrifft den
+normalen JSON-Gesamtkonfigurations-Import, nicht einen nachgewiesenen HACS-Fehler.
+Alle 46 bisherigen Quellen und Bestandsdaten blieben unverändert; die Editorstände
+in beiden Profilen wurden wiederhergestellt, eigene Testobjekte bereinigt und drei Vollbackups behalten.
+.177 blieb unverändert. Die Tab-Entwurfssicherung nach Dateiimport ist offen.
+:::
+
 ::: info Zwei Tabs bei gesperrter Sitzung und HA-Ausfall geprüft
 Auf .68 mit App 0.1.330 und HA 2026.10.2 bleiben zwei unterschiedliche Entwürfe
 bei blockierten Sitzungsmethoden auch während eines echten HA-Neustarts editier-

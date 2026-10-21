@@ -5,6 +5,23 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: warning Import de configuration complète : séparation après recharge à corriger
+Dans un nouveau profil Chrome sur .68 avec l’App 0.1.330, deux configurations
+Editor complètes sauvegardées par **Exporter** sont correctement transférées par
+**Importer**. Chaque réexport complet correspond à sa source, sauf date d’export.
+Mais sans projet partagé ouvert au préalable, cet import ne crée pas de brouillon
+par onglet : après recharge, les deux onglets affichent la dernière configuration
+importée. L’ordre inverse confirme aussi ce comportement.
+
+**Conserver séparément les deux fichiers sources.** Réimporter explicitement le
+bon fichier rétablit entièrement cette version. Avant correction, ne pas compter
+sur une reprise automatique séparée pour ce chemin. Il s’agit de l’import JSON de
+configuration complète, pas d’un défaut HACS démontré. Les 46 anciennes sources
+et les données restent inchangées ; états Editor rétablis dans les deux profils, objets de test nettoyés
+et trois sauvegardes complètes conservées. .177 inchangé. Sauvegarde par onglet
+après import de fichier encore à corriger.
+:::
+
 ::: info Deux onglets vérifiés avec session bloquée et interruption HA
 Sur .68 avec l’App 0.1.330 et HA 2026.10.2, deux brouillons différents restent
 modifiables et exportables avec méthodes de session bloquées pendant un vrai

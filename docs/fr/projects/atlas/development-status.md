@@ -18,6 +18,15 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 **État au 21/10/2026 · App HA 0.1.330 · intégration HACS 0.1.306.**
 
+**Défaut ouvert dans le nouveau profil navigateur :** deux configurations Editor
+JSON complètes sont importées exactement sur .68 et reprises depuis leurs fichiers.
+Sans projet partagé ouvert, l’import normal ne crée pas de brouillons séparés par
+onglet. Après recharge, les deux affichent le dernier import, dans les deux ordres.
+Fichiers intacts ; les 46 anciennes sources et les données restent inchangées.
+États Editor rétablis dans les deux profils, objets de test nettoyés, trois sauvegardes complètes conservées,
+.177 inchangé. L’App 0.1.330 ne change pas ; prochain correctif : sauvegarde par
+onglet après import de configuration complète. Détails : [Card Editor](card-editor.md).
+
 **Qualification combinée de deux onglets réussie :** sur .68, avec méthodes de
 session bloquées, deux brouillons distincts restent modifiables/exportables pendant
 un vrai redémarrage HA. Reconnexion automatique, reprises explicites séparées après

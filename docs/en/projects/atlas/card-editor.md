@@ -5,6 +5,21 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: warning Whole-configuration import: separate tabs after reload still open
+In a fresh Chrome profile on .68 with App 0.1.330, two full Editor configurations
+saved with **Export** are transferred correctly through **Import**. Each complete
+return export matches its source except export time. However, without previously
+opening a shared project, this import creates no per-tab draft: after reload,
+both tabs show the last imported configuration. Reversing the order confirms it.
+
+**Keep the two source files separately.** Explicitly importing the matching file
+again fully restores that version. Until fixed, do not rely on separate automatic
+tab recovery for this path. This is normal JSON whole-configuration import, not
+a demonstrated HACS defect. All 46 previous sources and existing data remained
+unchanged; Editor states in both profiles were restored, owned fixtures cleaned and three full
+backups retained. .177 untouched. Per-tab draft saving after file import is open.
+:::
+
 ::: info Two tabs qualified with blocked session storage and a HA outage
 On .68 with App 0.1.330 and HA 2026.10.2, two different drafts remain editable
 and exportable with blocked session methods during a real HA restart. Both tabs
