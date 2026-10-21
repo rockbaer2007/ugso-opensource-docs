@@ -171,10 +171,26 @@ fixture project, plugin data and configuration file are preserved. Pi 5 and
 Proxmox were unchanged for this additional check. HACS download, Supervisor,
 ARM64 and integration rollback were not repeated on 2026.9.4.
 
-The CI matrix checks eleven integration contracts against **2026.9.4** and
-**2026.10.1**. This does not replace separate running-HA checks or establish an
+On **2026-10-21**, the exact **HA 2026.10.2**, **integration 0.1.306 / App
+0.1.327** combination is also qualified on test clone **.68**: embedded Hub,
+Administration and Editor, live connection/entity search, browser-local
+save/reload and JSON/YAML HACS bundles with **112/112** each and byte-identical
+export/import/re-export. After a real HA Core restart, the open Editor reconnects
+automatically without reloading. The original Editor, seven server projects,
+six plugins and captured settings/files are preserved; the temporary Runtime
+URL is restored. **.177 is unchanged and was not accessed.** Three full backups
+remain on .68. This is not an HA update, schema conversion or repeated HACS
+repository-installation/ARM64 qualification. HA retains the original URL as an
+explicit option; only administrative timestamps change otherwise.
+
+The CI matrix includes eleven integration contracts per version for **2026.9.4**,
+**2026.10.1** and, since 2026-10-21, **2026.10.2**. This does not replace separate running-HA checks or establish an
 inclusive version range. Further HA versions and actual conversion between
 different data schemas remain separate qualification steps.
+All three CI rows pass; the 2026.10.2 contracts also pass locally in the official
+container with networking disabled. See the
+[version matrix](https://github.com/rockbaer2007/atlas/blob/main/docs/deployment/HA_COMPATIBILITY_MATRIX.md)
+for details and boundaries.
 
 References: [HA custom panels](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 and [HACS integration structure](https://www.hacs.xyz/docs/publish/integration/).

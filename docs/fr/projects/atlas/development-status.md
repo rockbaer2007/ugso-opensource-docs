@@ -16,7 +16,15 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 19/10/2026 · App HA 0.1.327 · intégration HACS 0.1.306.**
+**État au 21/10/2026 · App HA 0.1.327 · intégration HACS 0.1.306.**
+
+La [matrice de compatibilité HA](frontend.md) comprend aussi HA **2026.10.2**
+avec l’intégration 0.1.306 et l’App 0.1.327 sur **.68** : affichage intégré,
+connexion en direct, enregistrement local/rechargement, cycles HACS JSON/YAML
+identiques octet par octet et reconnexion automatique après redémarrage HA.
+L’éditeur initial et les données capturées sont conservés, l’URL du Runtime est
+rétablie et trois sauvegardes complètes restent disponibles. .177 n’a été ni
+contacté ni modifié. Les trois versions CI réussissent.
 
 **L’App 0.1.327 limite les vérifications HACS et utilise un worker dédié.**
 Limites avant lecture/CRC, annulation, surveillance de 15 secondes et adoption
@@ -249,7 +257,8 @@ existantes sont restaurées exactement.
   depuis 0.1.305.
 - Gestion partagée des plugins, projets serveur et mises à jour HACS de
   l’intégration avec redémarrage HA vérifiés sur Pi 5 et Proxmox. La matrice HA
-  couvre 2026.10.1 et aussi 2026.9.4 isolément, pas toutes les versions HA.
+  couvre 2026.10.1, 2026.9.4 isolément et la combinaison exacte 2026.10.2
+  sur .68, pas toutes les versions HA.
 - Export/import des cartes, enregistrement réel du dépôt HACS, releases
   étiquetées, mises à jour et récupération vérifiés isolément. Fichiers de langue
   manquants et versions mélangées sont détectés ; les contrôles de 0.1.310/0.1.311

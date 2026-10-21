@@ -12,8 +12,15 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-19 · HA App 0.1.327 · HACS integration 0.1.306.**
+**As of 2026-10-21 · HA App 0.1.327 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+The [HA compatibility matrix](frontend.md) now also includes HA **2026.10.2**
+with integration 0.1.306 and App 0.1.327 on **.68**: embedding, live connection,
+local save/reload, byte-identical JSON/YAML HACS roundtrips and automatic
+reconnection after an HA restart pass. The original Editor and captured data
+are preserved, the Runtime URL is restored and three full backups remain.
+.177 was neither accessed nor changed. All three CI versions pass.
 
 **App 0.1.327 bounds HACS checks and runs them off the UI thread.** Fixed budgets
 before reads/CRC, a cancellable worker with a 15-second watchdog and explicit
@@ -231,7 +238,8 @@ local Editor configurations are restored exactly.
   persistent HA connection recovery from 0.1.305.
 - Shared plugin management, server projects and HACS integration updates with
   HA restarts pass on Pi 5 and Proxmox. The HA compatibility matrix covers
-  2026.10.1 and additionally isolated 2026.9.4, not every HA release.
+  2026.10.1, isolated 2026.9.4 and the exact 2026.10.2 combination on .68,
+  not every HA release.
 - Card export/import, real HACS repository registration, tagged releases,
   updates and recovery pass in isolation. Missing locale files and mixed package
   versions are detected; the 0.1.310/0.1.311 checks also pass on Pi 5 and Proxmox.

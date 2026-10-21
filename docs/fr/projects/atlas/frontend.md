@@ -189,10 +189,28 @@ Pi 5 et Proxmox restent inchangés pour cette vérification supplémentaire.
 Téléchargement HACS, Supervisor, ARM64 et retour à une ancienne intégration
 n’ont pas été revérifiés sous 2026.9.4.
 
-La matrice CI vérifie onze contrats d’intégration avec **2026.9.4** et
-**2026.10.1**. Cela ne remplace pas les tests séparés avec HA en fonctionnement
+Le **21/10/2026**, la combinaison exacte **HA 2026.10.2**, **intégration 0.1.306 /
+App 0.1.327** est également vérifiée sur le clone de test **.68** : Hub,
+Administration et Editor intégrés, connexion/recherche d’entités en direct,
+enregistrement local/rechargement et paquets HACS JSON/YAML avec **112/112**
+chacun et export/import/réexport identiques octet par octet. Après un véritable
+redémarrage de HA Core, l’éditeur ouvert se reconnecte automatiquement sans
+rechargement. L’éditeur initial, sept projets serveur, six plugins et les
+paramètres/fichiers capturés sont conservés ; l’URL temporaire du Runtime est
+rétablie. **.177 reste inchangé et n’a pas été contacté.** Trois sauvegardes
+complètes restent sur .68. Ce test ne constitue ni une mise à jour HA, ni une
+conversion de schéma, ni une nouvelle validation d’installation HACS/ARM64.
+HA conserve l’URL initiale comme option explicite ; seuls les horodatages
+administratifs changent par ailleurs.
+
+La matrice CI comprend onze contrats d’intégration par version pour **2026.9.4**,
+**2026.10.1** et, depuis le 21/10/2026, **2026.10.2**. Cela ne remplace pas les tests séparés avec HA en fonctionnement
 et ne valide pas toutes les versions intermédiaires. Les autres versions HA et
 les conversions réelles entre formats de données restent à qualifier séparément.
+Les trois lignes CI réussissent ; les contrats 2026.10.2 réussissent également
+localement dans le conteneur officiel sans réseau. Voir la
+[matrice des versions](https://github.com/rockbaer2007/atlas/blob/main/docs/deployment/HA_COMPATIBILITY_MATRIX.md)
+pour le détail et les limites.
 
 Références : [panneaux personnalisés HA](https://developers.home-assistant.io/docs/frontend/custom-ui/creating-custom-panels/)
 et [structure des intégrations HACS](https://www.hacs.xyz/docs/publish/integration/).
