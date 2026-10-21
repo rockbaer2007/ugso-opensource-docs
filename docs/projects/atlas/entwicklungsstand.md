@@ -12,17 +12,19 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 21.10.2026 · HA-App 0.1.327 · HACS-Integration 0.1.306.**
+**Stand: 21.10.2026 · HA-App 0.1.328 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
-**Mehrtab-Prüfung auf .68 (21.10.2026):** Server-Konflikte, veraltete
-Öffnen-Vorschauen, geänderte Speichervorschauen und der Wiederholungsweg nach
-echtem App-Ausfall bestehen. **Offen bleibt eine gemeinsame lokale Entwurfsablage
-statt getrennter Entwürfe je Tab.** Nach Neuladen kann Tab A nur den zuletzt von
-B gesicherten Entwurf finden. Bis zur Korrektur jeden abweichenden Entwurf vor
-Neuladen/Schließen separat speichern oder exportieren. Siehe den
-[Card-Editor-Hinweis](card-editor.md). Testprojekt bereinigt, Originaldaten
-erhalten, drei Vollbackups auf .68; .177 unverändert. Keine neue App-Version.
+**Entwurfskollision mit App 0.1.328 behoben (21.10.2026, .68):** Zwei Tabs
+sichern unabhängig und finden nach Neuladen jeweils ihren eigenen Entwurf.
+Vollständige Exporte stimmen vor/nach Wiederherstellung überein, ebenso nach
+lokalen Änderungen während eines echten App-Ausfalls. Ein geschlossener Entwurf
+lässt sich im neuen Tab gezielt auswählen. Alte Quellen und der bisherige globale
+Entwurf bleiben erhalten; veraltetes Serverspeichern bleibt gesperrt.
+DE/EN/FR-Auswahl und Vorschau sind geprüft. Siehe [Card Editor](card-editor.md)
+für Verwendung und Grenzen. Testprojekt bereinigt, Originaleditoren und erfasste
+Daten erhalten, drei Vollbackups auf .68; .177 unverändert. Vollständiger
+Browser-Neustart und Sitzungswiederherstellung sind noch separat zu prüfen.
 
 Die [HA-Kompatibilitätsmatrix](frontend.md) enthält jetzt auch HA **2026.10.2**
 mit Integration 0.1.306 und App 0.1.327 auf **.68**: Einbettung, Live-Verbindung,

@@ -5,26 +5,36 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
-::: warning Plusieurs onglets Editor : brouillons locaux non séparés
-Vérifié le **21/10/2026 sur .68**, App **0.1.327** / HA **2026.10.2** :
-les enregistrements serveur et aperçus d’ouverture périmés sont refusés comme
-conflits ; une modification après aperçu d’enregistrement exige un nouvel aperçu.
-Les brouillons ouverts sont conservés pendant l’arrêt de l’App ATLAS. Après son
-redémarrage, la révision serveur reste inchangée et une nouvelle confirmation
-explicite de l’enregistrement réussit.
+::: info Brouillons locaux indépendants depuis l’App 0.1.328
+Les projets Editor partagés disposent d’un brouillon local indépendant par
+onglet. Après rechargement, le brouillon précédent de cet onglet est présélectionné.
+**Brouillons locaux** propose aussi les versions conservées par nom et date.
+**Vérifier le brouillon local** affiche l’aperçu ; **Sauvegarder et reprendre**
+le restaure explicitement en sauvegardant l’espace actuel. La source sélectionnée
+reste disponible.
 
-**Problème ouvert :** Vérifier le brouillon local utilise un emplacement commun
-à tous les onglets d’une même session de navigateur. Après rechargement de A,
-le brouillon enregistré en dernier par B est proposé ; A n’a pas d’entrée de
-restauration indépendante. Enregistrez explicitement chaque onglet différent
-sur le serveur ou conservez son propre **Export** avant rechargement/fermeture.
-La protection des révisions serveur ne remplace pas la sauvegarde des brouillons.
-La correction n’a pas encore été publiée.
+L’ancien brouillon commun reste lisible comme « ancien brouillon ».
+Les nouveaux enregistrements ne le remplacent pas. Les onglets dupliqués créent
+aussi de nouvelles entrées lors de l’écriture ; un nouvel onglet n’applique pas
+automatiquement le brouillon d’un autre. Les conflits de révision serveur restent
+bloqués.
 
-Le test utilise un projet propre dans une session séparée. Projet actif et
-espaces de test sont nettoyés, les deux brouillons sont sauvegardés séparément
-sur PC, les sept projets initiaux et données capturées sont conservés. Trois
-sauvegardes complètes restent sur .68 ; .177 n’a été ni contacté ni modifié.
+Les brouillons locaux appartiennent au profil du navigateur et à l’adresse ATLAS.
+Ils ne font pas partie d’une sauvegarde HA complète. Conservez un **Export**
+avant d’effacer le stockage du navigateur ou de changer d’appareil. La sauvegarde
+locale fonctionne pendant l’arrêt de l’App ; aperçu et restauration nécessitent
+le retour du serveur. Les erreurs de stockage sont signalées : exportez alors
+avant de recharger ou fermer. Les anciennes sources ne sont pas supprimées
+automatiquement. Limites par brouillon : 5 000 champs et 4 Mio de données projet.
+
+**Vérifié sur .68 avec HA 2026.10.2 le 21/10/2026 :** restauration complète
+de deux brouillons différents après rechargement d’onglet et arrêt de l’App ;
+exports identiques sauf leur date de création. Un nouvel onglet reprend
+explicitement le brouillon d’un onglet fermé. Les anciennes sources restent
+sélectionnables et les conflits serveur bloqués. DE/EN/FR réussissent. Éditeurs
+initiaux, sept projets serveur, six plugins et dix fichiers capturés sont conservés.
+Projet propre retiré, trois sauvegardes complètes sur .68 ; .177 inchangé.
+Redémarrage complet du navigateur et restauration de session restent à vérifier.
 :::
 
 Résultat tablette : [test 12/360/720 cartes](tablet-test.md) sur Galaxy Tab A6,

@@ -5,25 +5,35 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
-::: warning Mehrere Editor-Tabs: lokale Entwürfe noch nicht getrennt
-Prüfung vom **21.10.2026 auf .68**, App **0.1.327** / HA **2026.10.2**:
-Veraltete Server-Speicherstände und Öffnen-Vorschauen werden als Konflikt
-abgewiesen; Änderungen nach einer Speichervorschau verlangen eine neue Prüfung.
-Bei gestoppter ATLAS-App bleiben die geöffneten Entwürfe erhalten. Nach dem
-App-Neustart bleibt der Serverstand unverändert und ein ausdrücklich wiederholter
-Speicherversuch gelingt.
+::: info Getrennte lokale Entwürfe ab App 0.1.328
+Gemeinsame Editor-Projekte erhalten pro Tab eine unabhängige lokale Ablage.
+Nach Neuladen ist der bisherige Entwurf dieses Tabs vorausgewählt. Unter
+**Lokale Entwürfe** lassen sich auch andere erhaltene Stände anhand von Name
+und Zeitpunkt auswählen. **Lokalen Entwurf prüfen** zeigt die Vorschau;
+**Gesichert übernehmen** stellt ihn ausdrücklich wieder her und sichert die
+aktuelle Arbeitsfläche. Dabei bleibt die gewählte Quelle erhalten.
 
-**Offen:** „Lokalen Entwurf prüfen“ verwendet eine gemeinsame Ablage für alle
-Tabs derselben Browser-Sitzung. Nach Neuladen von Tab A wird der zuletzt von Tab B
-gesicherte Entwurf angeboten; A hat keinen getrennten Wiederherstellungseintrag.
-Deshalb jeden abweichenden Tab vor Neuladen oder Schließen ausdrücklich auf dem
-Server speichern oder über **Export** separat sichern. Die Server-Konfliktsperre
-ersetzt diese Entwurfssicherung nicht. Die Korrektur ist noch nicht ausgeliefert.
+Der bisherige gemeinsame Entwurf bleibt als „bisheriger Entwurf“ lesbar.
+Neue Schreibvorgänge überschreiben ihn nicht. Auch duplizierte Tabs verwenden
+beim Schreiben neue Ablagen; ein neuer Tab übernimmt keinen fremden Entwurf
+automatisch. Server-Revisionskonflikte bleiben gesperrt.
 
-Der Test verwendete ein eigenes Projekt in einer getrennten Browser-Sitzung.
-Testprojekt und Arbeitsflächen sind bereinigt, beide Testentwürfe separat auf dem
-PC gesichert, alle sieben Originalprojekte und erfassten Daten erhalten. Auf .68
-bleiben drei Vollbackups; .177 wurde nicht aufgerufen oder verändert.
+Lokale Entwürfe gehören zum Browserprofil und zur jeweiligen ATLAS-Adresse.
+Sie sind kein Bestandteil eines HA-Vollbackups. Bei gelöschtem Browserspeicher
+oder Gerätewechsel ist ein eigener **Export** nötig. Die lokale Sicherung
+funktioniert auch bei App-Ausfall; Vorschau und Übernahme benötigen den wieder
+erreichbaren Server. Speicherfehler werden angezeigt: dann vor Neuladen oder
+Schließen exportieren. Alte Wiederherstellungsquellen werden nicht automatisch
+gelöscht. Pro Entwurf gelten höchstens 5.000 Felder und 4 MiB Projektdaten.
+
+**Auf .68 mit HA 2026.10.2 am 21.10.2026 geprüft:** zwei unterschiedliche
+Entwürfe vor/nach Tab-Neuladen und App-Ausfall vollständig wiederhergestellt;
+die Exporte stimmen bis auf den Erstellungszeitpunkt überein. Ein neuer Tab
+kann den Entwurf eines geschlossenen Tabs gezielt übernehmen. Alte Quellen
+bleiben auswählbar, Server-Konflikte gesperrt. DE/EN/FR bestehen. Originaleditoren,
+sieben Serverprojekte, sechs Plugins und zehn erfasste Dateien sind erhalten.
+Eigenes Testprojekt bereinigt, drei Vollbackups auf .68; .177 unverändert.
+Vollständiger Browser-Neustart und Sitzungswiederherstellung sind noch offen.
 :::
 
 Tablet-Ergebnis: [12-/360-/720-Karten-Test](tablet-test.md) auf Galaxy Tab A6,

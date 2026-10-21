@@ -16,17 +16,19 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 21/10/2026 · App HA 0.1.327 · intégration HACS 0.1.306.**
+**État au 21/10/2026 · App HA 0.1.328 · intégration HACS 0.1.306.**
 
-**Test multi-onglets sur .68 (21/10/2026) :** conflits serveur, aperçus d’ouverture
-périmés, aperçus d’enregistrement modifiés et nouvelle confirmation après arrêt
-réel de l’App réussissent. **L’emplacement local unique des brouillons reste un
-problème ouvert : pas de restauration indépendante par onglet.** Après
-rechargement, A ne trouve que le brouillon enregistré en dernier par B. Avant
-rechargement/fermeture, sauvegardez/exportez donc chaque brouillon séparément.
-Voir l’[avertissement Card Editor](card-editor.md). Projet de test retiré, données
-initiales conservées, trois sauvegardes complètes sur .68 ; .177 inchangé.
-Aucune nouvelle version de l’App.
+**Collision corrigée dans l’App 0.1.328 (21/10/2026, .68) :** deux onglets
+sauvegardent indépendamment et retrouvent chacun leur brouillon après
+rechargement. Les exports complets correspondent avant/après restauration,
+y compris après des modifications locales pendant l’arrêt réel de l’App.
+Le brouillon d’un onglet fermé se sélectionne explicitement dans un nouvel
+onglet. Anciennes sources et brouillon commun restent disponibles ; les
+enregistrements serveur périmés restent bloqués. Sélection et aperçu DE/EN/FR
+sont vérifiés. Voir [Card Editor](card-editor.md) pour utilisation et limites.
+Projet de test retiré, éditeurs initiaux/données capturées conservés, trois
+sauvegardes complètes sur .68 ; .177 inchangé. Le redémarrage complet du
+navigateur et la restauration de session restent à vérifier séparément.
 
 La [matrice de compatibilité HA](frontend.md) comprend aussi HA **2026.10.2**
 avec l’intégration 0.1.306 et l’App 0.1.327 sur **.68** : affichage intégré,

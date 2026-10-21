@@ -5,23 +5,33 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
-::: warning Multiple Editor tabs: local drafts are not yet separated
-Checked on **2026-10-21 on .68**, App **0.1.327** / HA **2026.10.2**:
-Stale server saves and opening previews are rejected as conflicts; workspace
-changes after a save preview require a new preview. Open drafts survive a
-stopped ATLAS App. After restarting the App, the server revision remains
-unchanged and an explicitly repeated save succeeds.
+::: info Independent local drafts from App 0.1.328
+Shared Editor projects keep an independent local draft for each tab.
+After reloading, that tab's previous draft is preselected. **Local drafts**
+also lists retained versions by name and time. **Inspect local draft** shows
+the preview; **Back up and apply** explicitly restores it and backs up the
+current workspace. The selected source remains available.
 
-**Open issue:** Inspect local draft uses one shared slot for all tabs in the
-same browser session. After reloading tab A it offers the draft last stored by
-tab B; A has no separate recovery entry. Explicitly save each different tab to
-the server or keep its own **Export** before reloading/closing. Server revision
-protection does not replace draft backup. The correction has not been shipped.
+The old shared draft remains readable as the "previous legacy draft".
+New writes do not overwrite it. Duplicated tabs also allocate fresh records
+when writing; a new tab does not automatically apply another tab's draft.
+Server revision conflicts remain blocked.
 
-The check used an owned project in a separate browser session. The active test
-project/workspaces are cleaned, both test drafts are backed up separately on PC,
-and all seven original projects/captured data are preserved. Three full backups
-remain on .68; .177 was neither accessed nor changed.
+Local drafts belong to the browser profile and the particular ATLAS address.
+They are not included in a full HA backup. Keep a separate **Export** before
+clearing browser storage or switching devices. Local saving works during an
+App outage; preview and recovery require the server to be reachable again.
+Storage failures are displayed: export before reloading or closing if one
+occurs. Old recovery sources are not automatically deleted. Each draft permits
+at most 5,000 fields and 4 MiB of project data.
+
+**Checked on .68 with HA 2026.10.2 on 2026-10-21:** two different drafts fully
+recover after tab reload and App outage; exports match except their creation
+time. A new tab explicitly recovers a closed tab's draft. Old sources remain
+selectable and server conflicts blocked. DE/EN/FR pass. Original Editors,
+seven server projects, six plugins and ten captured files are preserved.
+Owned project cleaned, three full backups on .68; .177 unchanged.
+Full browser restart and session restoration are still pending.
 :::
 
 Tablet result: [12/360/720-Card test](tablet-test.md) on Galaxy Tab A6,

@@ -12,16 +12,18 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-21 · HA App 0.1.327 · HACS integration 0.1.306.**
+**As of 2026-10-21 · HA App 0.1.328 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
-**Multitab check on .68 (2026-10-21):** server conflicts, stale opening previews,
-changed save previews and explicit retry after a real App outage pass.
-**The shared local draft slot remains an open issue; tabs do not have separate
-draft recovery.** After reload A can find only the draft last stored by B.
-Until corrected, save/export each different draft separately before reload/close.
-See the [Card Editor warning](card-editor.md). Owned project cleaned, originals
-preserved, three full backups on .68; .177 unchanged. No new App version.
+**Draft collision fixed in App 0.1.328 (2026-10-21, .68):** Two tabs save
+independently and recover their own drafts after reloading. Full exports match
+before/after recovery, including local edits made during a real App outage.
+A closed tab's draft can be selected explicitly in a new tab. Old sources and
+the legacy shared draft remain available; stale server saves remain blocked.
+DE/EN/FR selection and preview pass. See [Card Editor](card-editor.md) for use
+and limits. Owned project cleaned, original Editors/captured data preserved,
+three full backups on .68; .177 unchanged. Full browser restart and session
+restoration still require a separate check.
 
 The [HA compatibility matrix](frontend.md) now also includes HA **2026.10.2**
 with integration 0.1.306 and App 0.1.327 on **.68**: embedding, live connection,
