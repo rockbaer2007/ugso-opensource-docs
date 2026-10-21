@@ -15,6 +15,15 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 **Stand: 21.10.2026 · HA-App 0.1.327 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
+**Mehrtab-Prüfung auf .68 (21.10.2026):** Server-Konflikte, veraltete
+Öffnen-Vorschauen, geänderte Speichervorschauen und der Wiederholungsweg nach
+echtem App-Ausfall bestehen. **Offen bleibt eine gemeinsame lokale Entwurfsablage
+statt getrennter Entwürfe je Tab.** Nach Neuladen kann Tab A nur den zuletzt von
+B gesicherten Entwurf finden. Bis zur Korrektur jeden abweichenden Entwurf vor
+Neuladen/Schließen separat speichern oder exportieren. Siehe den
+[Card-Editor-Hinweis](card-editor.md). Testprojekt bereinigt, Originaldaten
+erhalten, drei Vollbackups auf .68; .177 unverändert. Keine neue App-Version.
+
 Die [HA-Kompatibilitätsmatrix](frontend.md) enthält jetzt auch HA **2026.10.2**
 mit Integration 0.1.306 und App 0.1.327 auf **.68**: Einbettung, Live-Verbindung,
 lokales Speichern/Neuladen, bytegleiche JSON-/YAML-HACS-Rundläufe und automatische

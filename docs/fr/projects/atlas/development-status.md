@@ -18,6 +18,16 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 **État au 21/10/2026 · App HA 0.1.327 · intégration HACS 0.1.306.**
 
+**Test multi-onglets sur .68 (21/10/2026) :** conflits serveur, aperçus d’ouverture
+périmés, aperçus d’enregistrement modifiés et nouvelle confirmation après arrêt
+réel de l’App réussissent. **L’emplacement local unique des brouillons reste un
+problème ouvert : pas de restauration indépendante par onglet.** Après
+rechargement, A ne trouve que le brouillon enregistré en dernier par B. Avant
+rechargement/fermeture, sauvegardez/exportez donc chaque brouillon séparément.
+Voir l’[avertissement Card Editor](card-editor.md). Projet de test retiré, données
+initiales conservées, trois sauvegardes complètes sur .68 ; .177 inchangé.
+Aucune nouvelle version de l’App.
+
 La [matrice de compatibilité HA](frontend.md) comprend aussi HA **2026.10.2**
 avec l’intégration 0.1.306 et l’App 0.1.327 sur **.68** : affichage intégré,
 connexion en direct, enregistrement local/rechargement, cycles HACS JSON/YAML

@@ -5,6 +5,25 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: warning Multiple Editor tabs: local drafts are not yet separated
+Checked on **2026-10-21 on .68**, App **0.1.327** / HA **2026.10.2**:
+Stale server saves and opening previews are rejected as conflicts; workspace
+changes after a save preview require a new preview. Open drafts survive a
+stopped ATLAS App. After restarting the App, the server revision remains
+unchanged and an explicitly repeated save succeeds.
+
+**Open issue:** Inspect local draft uses one shared slot for all tabs in the
+same browser session. After reloading tab A it offers the draft last stored by
+tab B; A has no separate recovery entry. Explicitly save each different tab to
+the server or keep its own **Export** before reloading/closing. Server revision
+protection does not replace draft backup. The correction has not been shipped.
+
+The check used an owned project in a separate browser session. The active test
+project/workspaces are cleaned, both test drafts are backed up separately on PC,
+and all seven original projects/captured data are preserved. Three full backups
+remain on .68; .177 was neither accessed nor changed.
+:::
+
 Tablet result: [12/360/720-Card test](tablet-test.md) on Galaxy Tab A6,
 Android 11 / LineageOS, Chrome Mobile 155. The user confirms 720 Cards on both
 hosts, including theme changes and reconnection.

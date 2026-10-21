@@ -5,6 +5,27 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: warning Mehrere Editor-Tabs: lokale Entwürfe noch nicht getrennt
+Prüfung vom **21.10.2026 auf .68**, App **0.1.327** / HA **2026.10.2**:
+Veraltete Server-Speicherstände und Öffnen-Vorschauen werden als Konflikt
+abgewiesen; Änderungen nach einer Speichervorschau verlangen eine neue Prüfung.
+Bei gestoppter ATLAS-App bleiben die geöffneten Entwürfe erhalten. Nach dem
+App-Neustart bleibt der Serverstand unverändert und ein ausdrücklich wiederholter
+Speicherversuch gelingt.
+
+**Offen:** „Lokalen Entwurf prüfen“ verwendet eine gemeinsame Ablage für alle
+Tabs derselben Browser-Sitzung. Nach Neuladen von Tab A wird der zuletzt von Tab B
+gesicherte Entwurf angeboten; A hat keinen getrennten Wiederherstellungseintrag.
+Deshalb jeden abweichenden Tab vor Neuladen oder Schließen ausdrücklich auf dem
+Server speichern oder über **Export** separat sichern. Die Server-Konfliktsperre
+ersetzt diese Entwurfssicherung nicht. Die Korrektur ist noch nicht ausgeliefert.
+
+Der Test verwendete ein eigenes Projekt in einer getrennten Browser-Sitzung.
+Testprojekt und Arbeitsflächen sind bereinigt, beide Testentwürfe separat auf dem
+PC gesichert, alle sieben Originalprojekte und erfassten Daten erhalten. Auf .68
+bleiben drei Vollbackups; .177 wurde nicht aufgerufen oder verändert.
+:::
+
 Tablet-Ergebnis: [12-/360-/720-Karten-Test](tablet-test.md) auf Galaxy Tab A6,
 Android 11 / LineageOS, Chrome Mobile 155. Nutzerbestätigung für 720 Karten auf
 beiden Testhosts samt Theme-Wechsel und Wiederverbindung.
