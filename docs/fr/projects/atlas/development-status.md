@@ -37,6 +37,16 @@ projet propre retiré, trois sauvegardes complètes. Arrêt après sauvegarde lo
 terminée ; aucune validation d’écriture interrompue, coupure électrique ou panne
 de disque. .177 reste inchangé.
 
+Une interruption ciblée pendant la sauvegarde locale, après l’écriture de
+l’enregistrement et avant la mise à jour du pointeur, conserve ensuite le nouveau
+brouillon complet pour sélection manuelle ; la version précédente confirmée
+reste présélectionnée. L’onglet B et huit anciennes sources correspondent à leurs
+sauvegardes. La sonde propre laisse les fichiers installés de l’App inchangés.
+Éditeurs initiaux/données conservés, objets de test actifs retirés, trois sauvegardes
+complètes sur .68 ; .177 inchangé. Aucun arrêt dans l’appel natif atomique ni test
+de coupure électrique/panne de disque. Voir [Card Editor](card-editor.md) pour
+la reprise et les limites du test.
+
 La [matrice de compatibilité HA](frontend.md) comprend aussi HA **2026.10.2**
 avec l’intégration 0.1.306 et l’App 0.1.327 sur **.68** : affichage intégré,
 connexion en direct, enregistrement local/rechargement, cycles HACS JSON/YAML

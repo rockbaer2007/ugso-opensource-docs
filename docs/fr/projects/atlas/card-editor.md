@@ -56,6 +56,20 @@ vérifiées inchangées après le test. Éditeurs initiaux et données conservé
 projet serveur propre retiré, trois sauvegardes complètes sur .68 ; .177 inchangé.
 L’arrêt suit une sauvegarde locale terminée, pas une écriture en cours.
 Aucun test de coupure électrique ou panne de disque.
+
+**Vérifié aussi pendant la sauvegarde locale (21/10/2026, .68) :** une sonde
+de test propre suspend l’éditeur installé inchangé après l’écriture du nouvel
+enregistrement, avant la mise à jour du pointeur d’onglet. L’utilisateur termine
+Chrome de force ; aucun processus Chrome ne reste avant sa réouverture. Après
+restauration de session, la version précédente confirmée reste présélectionnée.
+**Sélectionner manuellement la nouvelle version complète dans Brouillons locaux,
+la vérifier puis choisir Sauvegarder et reprendre.** Ses données projet, y compris
+le nouveau titre de carte, correspondent exactement à la sauvegarde préalable.
+L’onglet B et huit anciennes sources restent inchangés. Éditeurs initiaux et
+données conservés, objets de test actifs retirés, trois sauvegardes complètes
+sur .68 ; .177 inchangé. Ce test vise la frontière entre enregistrement et
+pointeur, pas une interruption dans l’appel natif atomique, une coupure électrique
+ou une panne de disque.
 :::
 
 Résultat tablette : [test 12/360/720 cartes](tablet-test.md) sur Galaxy Tab A6,

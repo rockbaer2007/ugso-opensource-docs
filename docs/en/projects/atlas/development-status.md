@@ -31,6 +31,15 @@ Originals preserved, owned project removed, three full backups retained. The
 abort follows completed local saving; interrupted writes, power and disk
 failures are not qualified. .177 remains untouched.
 
+A subsequent targeted interruption during local saving, after the record write
+and before the tab-pointer update, preserves the complete new draft for manual
+selection; the confirmed predecessor stays preselected. Tab B and eight older
+sources match their backups. The owned test probe leaves installed App files
+unchanged. Original Editors/data are preserved, active test objects cleaned,
+three full backups on .68; .177 untouched. This does not interrupt an atomic
+native storage call or qualify power/disk failure. See [Card Editor](card-editor.md)
+for the recovery steps and test limits.
+
 The [HA compatibility matrix](frontend.md) now also includes HA **2026.10.2**
 with integration 0.1.306 and App 0.1.327 on **.68**: embedding, live connection,
 local save/reload, byte-identical JSON/YAML HACS roundtrips and automatic

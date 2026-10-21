@@ -50,6 +50,18 @@ their project data checked unchanged afterwards. Original Editors and existing
 data are preserved, the owned server project removed and three full backups
 retained on .68; .177 untouched. Termination follows completed local saving,
 not an in-progress write. This does not qualify power or disk failures.
+
+**Also checked during local saving (2026-10-21, .68):** an owned test probe
+pauses the unchanged installed Editor after writing the new record but before
+updating the tab pointer. The user forcibly terminates Chrome; no Chrome
+processes remain before reopening it. After session restoration, the confirmed
+predecessor stays preselected. **Manually select the new complete version under
+Local drafts, inspect it and use Back up and apply.** Its project data, including
+the new Card title, exactly matches the pre-test backup. Tab B and eight older
+sources remain unchanged. Original Editors and existing data are preserved,
+owned active test objects cleaned, three full backups on .68; .177 untouched.
+This qualifies the boundary between record and tab pointer, not interruption
+inside the atomic native storage call, power loss or disk failure.
 :::
 
 Tablet result: [12/360/720-Card test](tablet-test.md) on Galaxy Tab A6,

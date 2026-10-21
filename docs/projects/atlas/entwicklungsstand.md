@@ -32,6 +32,16 @@ vollständig wiederhergestellt, vier ältere Entwurfsquellen unverändert. Origi
 erhalten, Testprojekt entfernt, drei Vollbackups. Abbruch nach lokaler Sicherung;
 kein Schreibabbruch-, Stromausfall- oder Datenträgertest. .177 bleibt unberührt.
 
+Anschließend ist der Abbruch innerhalb der lokalen Sicherung nach Schreiben
+des Datensatzes und vor Aktualisierung des Tab-Zeigers gezielt geprüft: der
+vollständige neue Entwurf bleibt manuell auswählbar, der bestätigte Vorgänger
+bleibt vorausgewählt. Tab B und acht ältere Quellen stimmen mit den Sicherungen
+überein. Die eigene Testinstrumentierung lässt installierte App-Dateien unverändert.
+Originaleditoren und Bestandsdaten erhalten, aktive Testobjekte bereinigt, drei
+Vollbackups auf .68; .177 unverändert. Kein Abbruch innerhalb eines atomaren
+nativen Speicheraufrufs, kein Stromausfall-/Datenträgertest. Anleitung und
+Testgrenzen stehen im [Card Editor](card-editor.md).
+
 Die [HA-Kompatibilitätsmatrix](frontend.md) enthält jetzt auch HA **2026.10.2**
 mit Integration 0.1.306 und App 0.1.327 auf **.68**: Einbettung, Live-Verbindung,
 lokales Speichern/Neuladen, bytegleiche JSON-/YAML-HACS-Rundläufe und automatische

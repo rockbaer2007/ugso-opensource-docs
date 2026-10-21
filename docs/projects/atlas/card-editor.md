@@ -54,6 +54,19 @@ zusätzlich exportiert und ihre Projektdaten danach unverändert geprüft.
 Originaleditoren und Bestandsdaten erhalten, eigenes Server-Testprojekt entfernt,
 drei Vollbackups auf .68; .177 unverändert. Der Abbruch erfolgt nach der lokalen
 Sicherung, nicht während des Schreibens. Kein Stromausfall-/Datenträgertest.
+
+**Zusätzlich während der lokalen Sicherung geprüft (21.10.2026, .68):** Eine
+eigene Testinstrumentierung hält den unveränderten installierten Editor nach
+dem Schreiben des neuen Datensatzes, aber vor dem Aktualisieren des Tab-Zeigers
+an. Der Nutzer beendet Chrome erzwungen; vor dem erneuten Öffnen sind keine
+Chrome-Prozesse vorhanden. Nach Sitzungswiederherstellung bleibt der bestätigte
+Vorgänger vorausgewählt. **Den neuen vollständigen Entwurf manuell unter Lokale
+Entwürfe auswählen, prüfen und gesichert übernehmen.** Seine Projektdaten samt
+neuem Kartentitel entsprechen exakt der Vorabsicherung. Tab B und acht ältere
+Quellen bleiben unverändert. Originaleditoren und Bestandsdaten sind erhalten,
+eigene aktive Testobjekte bereinigt, drei Vollbackups auf .68; .177 unberührt.
+Dies prüft die Grenze zwischen Datensatz und Tab-Zeiger, keinen Abbruch innerhalb
+des atomaren nativen Speicheraufrufs und keinen Stromausfall oder Datenträgerfehler.
 :::
 
 Tablet-Ergebnis: [12-/360-/720-Karten-Test](tablet-test.md) auf Galaxy Tab A6,
