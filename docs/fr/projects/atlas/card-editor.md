@@ -5,26 +5,37 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
-::: warning Stockage du navigateur vérifié – avertissement de session encore absent
-L’App 0.1.329 sur .68 / HA 2026.10.2 est vérifiée avec stockages local et de session
-réellement pleins et blocages d’accès contrôlés. Les échecs d’écriture locale
-affichent l’avertissement d’export DE/EN/FR ; l’espace actuel reste exportable.
-Enregistrement ou reprise depuis l’export fonctionnent après rétablissement de
-l’accès ou de l’espace disponible.
+::: info Messages distincts pour erreurs locales et de session – App 0.1.330
+La qualification sur .68 avec HA 2026.10.2 réussit : quota réel de session avec
+et sans pointeur existant, méthodes et accès de session bloqués, export, reprise
+manuelle et messages DE/EN/FR. Stockage local plein et écritures locales bloquées
+gardent leur erreur distincte. Les 31 anciennes sources restent identiques octet
+par octet ; cinq éditeurs originaux et les données sont rétablis. Objets de test
+nettoyés, trois sauvegardes complètes conservées, .177 inchangé. Ce passage ne
+comprend ni nouvel arrêt forcé du navigateur ni remplissage du disque système.
 
-**Une session pleine ou dont les méthodes sont bloquées n’affiche actuellement
-aucun avertissement :** le brouillon complet peut exister localement sans pointeur
-d’onglet ni marque de reprise. Après rechargement, choisir le bon nom/la bonne date
-dans **Brouillons locaux**, vérifier puis **Sauvegarder et reprendre**. Ne pas
-compter sur la présélection. Si l’objet Storage lui-même est inaccessible,
-l’enregistrement avertit : exporter avant de fermer/recharger puis reprendre
-depuis ce fichier après rétablissement de l’accès.
+Un brouillon écrit localement reste conservé même si son association à cet onglet
+ne peut être garantie. Une session pleine ou bloquée affiche maintenant
+**« Brouillon enregistré localement »** et signale que sa reprise par onglet
+n’a pas pu être confirmée. Même un accès `sessionStorage` entièrement bloqué
+n’empêche plus la sauvegarde locale du brouillon.
 
-Les 20 anciennes sources restent identiques octet par octet ; éditeurs/données
-initiaux restaurés, objets propres/remplissage retirés et trois sauvegardes complètes
-conservées sur .68 ; .177 inchangé. Blocages simulés dans des pages propres,
-sans changer les permissions Chrome. Tous les échecs de stockage ne sont pas
-qualifiés ; l’avertissement précis de session reste à corriger.
+**Exporter avant de recharger ou fermer.** Ensuite, choisir le bon nom/la bonne
+date dans **Brouillons locaux**, vérifier puis **Sauvegarder et reprendre**, sans
+compter sur la présélection. Le message reste présent lors des changements de
+langue DE/EN/FR et du rechargement des projets. Seule une sauvegarde confirmant
+marque d’écriture et pointeur d’onglet le retire.
+
+Un échec d’écriture locale reste une erreur distincte avec conseil d’export ;
+seule la version locale précédente est alors sauvegardée. Aucune source existante
+n’est supprimée ou appliquée automatiquement. Si l’accès local est entièrement
+bloqué, exporter l’espace actuel et le reprendre depuis le fichier après
+rétablissement de l’accès. Les sauvegardes HA ne contiennent pas les brouillons
+du navigateur.
+
+Le message de session absent découvert dans 0.1.329 est ainsi corrigé. Ce test
+précédent a conservé les 20 sources existantes et leurs données. Il ne s’agit pas
+d’une qualification générale de toutes les pannes de navigateur ou de disque.
 :::
 
 ::: info Reprendre un brouillon plus récent après interruption – App 0.1.329

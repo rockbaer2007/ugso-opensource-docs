@@ -12,19 +12,26 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 21.10.2026 · HA-App 0.1.329 · HACS-Integration 0.1.306.**
+**Stand: 21.10.2026 · HA-App 0.1.330 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
-**Browserablagen-Prüfung auf .68 abgeschlossen, Sitzungswarnung noch offen:**
-Acht Fälle mit echter lokaler/Sitzungs-Quota sowie blockierten Methoden und
-Storage-Zugängen erhalten alle 20 vorhandenen Entwürfe. Lokale Schreibfehler
-warnen, Export und Wiederherstellung funktionieren. Volle oder methodenseitig
-gesperrte Sitzungsablagen können hingegen Zeiger/Markierung ohne Hinweis verlieren,
-während der lokale Datensatz erhalten bleibt; nach Neuladen ist manuelle Quellenwahl
-nötig. Dies ist ein offener Befund, keine vollständige Speicherfehlerfreigabe.
-Originaleditoren und Bestandsdaten erhalten, Testobjekte/Füllwerte bereinigt,
-drei Vollbackups auf .68; .177 unverändert. App 0.1.329 bleibt unverändert.
-Details und Handlungsschritte: [Card Editor](card-editor.md).
+**App 0.1.330 behebt den fehlenden Hinweis bei Sitzungsfehlern.** Nach erfolgreichem
+lokalem Schreiben werden Schreibmarkierung und Tab-Zeiger bestätigt. Schlägt dies
+fehl, zeigt der Editor einen eigenen DE/EN/FR-Hinweis: Entwurf lokal gespeichert,
+Tab-Wiederherstellung nicht zuverlässig gesichert, vor Neuladen/Schließen exportieren
+und später manuell auswählen. Sprachwechsel und Projektlisten-Aktualisierung
+erhalten die Meldung; erst vollständig bestätigtes Speichern entfernt sie.
+Ein blockierter Sitzungs-Getter verhindert lokale Sicherung nicht mehr.
+Lokale Datensatzfehler bleiben getrennt. Der Befund aus der 0.1.329-Prüfung mit
+20 erhaltenen Quellen ist damit korrigiert. Details: [Card Editor](card-editor.md).
+
+Die native Nachprüfung auf .68 (HA 2026.10.2) besteht mit voller Sitzungsablage,
+blockierten Methoden/Getter, Export und manueller Wiederherstellung. Sprachwechsel
+und Listenaktualisierung erhalten die Warnung; bestätigtes Folgespeichern entfernt
+sie. Lokale Fehler bleiben getrennt. Alle 31 alten Entwurfsquellen sind bytegleich,
+fünf Originaleditoren und Bestandsdaten wiederhergestellt. Testobjekte bereinigt,
+drei Vollbackups erhalten, .177 unverändert. Kein erneuter Prozessabbruch oder
+Betriebssystem-Datenträgerfülltest; die Grenzen stehen im Card-Editor-Abschnitt.
 
 **App 0.1.329 bietet den neueren Entwurf nach unterbrochener Sicherung an.**
 Eine vorab gespeicherte tabgebundene Schreibmarkierung erkennt den vollständigen

@@ -5,24 +5,34 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
-::: warning Browser storage checked – session-failure notice still missing
-App 0.1.329 on .68 / HA 2026.10.2 has been checked with genuinely full local and
-session storage and controlled access blocks. Local write failures show the
-DE/EN/FR export warning; the current workspace remains exportable. Saving or
-recovery from the export works again after access/space is restored.
+::: info Distinct local and session failure notices – App 0.1.330
+Native qualification on .68 with HA 2026.10.2 passes: real full session storage
+with and without an existing tab pointer, blocked session methods and getter,
+export, manual recovery and DE/EN/FR notices. Full local storage and blocked local
+writes retain their distinct failure notice. All 31 previous draft sources remain
+byte-identical; five original Editors and existing data are restored. Owned test
+objects are cleaned, three full backups retained and .177 untouched. This run
+does not include another forced browser crash or operating-system disk-fill test.
 
-**Full or method-blocked session storage currently lacks a warning:** a complete
-draft may exist locally while its tab pointer and recovery intent are missing.
-After reloading, select the correct name/time under **Local drafts**, inspect it
-and use **Back up and apply**. Do not rely on preselection. When the Storage
-object itself is inaccessible, saving warns: export before closing/reloading
-and recover from that file after access is restored.
+A locally written draft survives even if its association with this tab cannot be
+saved reliably. Full or blocked session storage now explicitly reports **“Draft
+saved locally”** and warns that tab recovery could not be confirmed. Even a
+completely blocked `sessionStorage` getter no longer disables local draft saving.
 
-All 20 previous draft sources remain byte-identical; original Editors/data are
-restored, owned fixtures/filler removed and three full backups retained on .68;
-.177 untouched. Access blocks were simulated in owned pages, without changing
-Chrome permissions. This does not qualify every browser storage failure; the
-precise session warning remains open.
+**Export before reloading or closing.** Afterwards select the matching name/time
+under **Local drafts**, inspect it and use **Back up and apply**; do not rely on
+preselection. The notice survives DE/EN/FR language changes and project-list
+refreshes. Only another save confirming both write intent and tab pointer clears it.
+
+A failed local record write remains a separate error with an export warning;
+only the previous local version is then secured. Existing sources are neither
+deleted nor applied automatically. If local access is completely blocked, export
+the current workspace and recover from the file after access returns. Full HA
+backups do not contain browser drafts.
+
+This fixes the missing session warning found in 0.1.329. That earlier browser
+qualification preserved all 20 existing sources and data. This is not general
+approval of every browser or disk failure scenario.
 :::
 
 ::: info Recover a newer draft after an interrupted save – App 0.1.329

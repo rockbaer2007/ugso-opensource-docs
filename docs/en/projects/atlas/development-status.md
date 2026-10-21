@@ -12,18 +12,25 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-21 · HA App 0.1.329 · HACS integration 0.1.306.**
+**As of 2026-10-21 · HA App 0.1.330 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
-**Browser-storage qualification on .68 is complete; a session warning remains
-open:** eight cases with actual local/session quota and blocked methods/Storage
-access preserve all 20 existing drafts. Local write failures warn, and export/
-recovery work. Full or method-blocked session storage can lose its pointer/intent
-without a notice while retaining the local record; manual selection is then
-needed after reload. This is an unresolved finding, not full storage-failure
-approval. Original Editors/data preserved, owned fixtures/filler cleaned, three
-full backups on .68; .177 untouched. App 0.1.329 is unchanged. See
-[Card Editor](card-editor.md) for details and recovery steps.
+**App 0.1.330 fixes the missing session-failure notice.** After a local write,
+both recovery intent and tab pointer are confirmed. If this fails, a separate
+DE/EN/FR notice says the draft is saved locally but tab recovery is not secured:
+export before reloading/closing, then select the matching draft manually. Language
+changes and project-list refreshes preserve the notice; only a fully confirmed
+save clears it. A blocked session getter no longer disables local saving.
+Local record errors remain distinct. This fixes the finding from the 0.1.329
+qualification with 20 preserved sources. See [Card Editor](card-editor.md).
+
+Native requalification on .68 (HA 2026.10.2) passes with full session storage,
+blocked methods/getter, export and manual recovery. Language/list refreshes keep
+the notice; a fully confirmed subsequent save clears it. Local errors remain
+distinct. All 31 old draft sources are byte-identical; five original Editors and
+existing data are restored. Owned fixtures are cleaned, three full backups kept,
+.177 untouched. No further process crash or operating-system disk-fill test;
+see the Card Editor section for boundaries.
 
 **App 0.1.329 offers the newer draft after interrupted saving.** A tab-scoped
 write intent stored beforehand identifies the complete record if its tab-pointer

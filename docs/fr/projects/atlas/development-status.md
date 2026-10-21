@@ -16,17 +16,25 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 21/10/2026 · App HA 0.1.329 · intégration HACS 0.1.306.**
+**État au 21/10/2026 · App HA 0.1.330 · intégration HACS 0.1.306.**
 
-**Vérification du stockage sur .68 terminée ; avertissement de session encore
-absent :** huit cas avec quotas local/session réels et accès/méthodes bloqués
-conservent les 20 brouillons existants. Les échecs locaux avertissent ; export et
-reprise fonctionnent. Une session pleine ou aux méthodes bloquées peut perdre
-pointeur/marque sans avertissement tout en conservant l’enregistrement local ;
-sélection manuelle nécessaire après rechargement. Il s’agit d’un défaut ouvert,
-pas d’une qualification complète des pannes de stockage. Éditeurs/données initiaux
-conservés, objets propres/remplissage retirés, trois sauvegardes complètes sur .68 ;
-.177 inchangé. App 0.1.329 inchangée. Voir [Card Editor](card-editor.md).
+**L’App 0.1.330 corrige l’avertissement de session absent.** Après écriture locale,
+marque de reprise et pointeur d’onglet sont confirmés. En cas d’échec, un message
+DE/EN/FR distinct indique que le brouillon est enregistré localement, mais sa
+reprise par onglet n’est pas garantie : exporter avant de recharger/fermer puis
+choisir manuellement la bonne version. Langue et rechargement des projets conservent
+le message ; seule une sauvegarde entièrement confirmée le retire. Un accès de
+session bloqué n’empêche plus la sauvegarde locale. Les erreurs locales restent
+distinctes. Le défaut du test 0.1.329 avec 20 sources conservées est corrigé.
+Voir [Card Editor](card-editor.md).
+
+La nouvelle qualification sur .68 (HA 2026.10.2) réussit avec quota réel de session,
+méthodes/accès bloqués, export et reprise manuelle. Les changements de langue/liste
+conservent le message ; une sauvegarde entièrement confirmée le retire. Les erreurs
+locales restent distinctes. Les 31 anciennes sources restent identiques octet par
+octet ; cinq éditeurs et les données sont rétablis. Objets de test nettoyés, trois
+sauvegardes complètes conservées, .177 inchangé. Aucun nouvel arrêt de processus
+ni remplissage du disque système ; limites dans la section Card Editor.
 
 **L’App 0.1.329 propose le brouillon plus récent après sauvegarde interrompue.**
 Une intention d’écriture propre à l’onglet, enregistrée au préalable, identifie

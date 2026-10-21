@@ -5,25 +5,36 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
-::: warning Browserablagen geprüft – Hinweis bei Sitzungsfehlern noch offen
-Mit App 0.1.329 auf .68 / HA 2026.10.2 sind echte volle lokale und Sitzungsablagen
-sowie gezielt blockierte Zugriffe geprüft. Lokale Schreibfehler zeigen den
-Exporthinweis in DE/EN/FR; der aktuelle Stand bleibt exportierbar. Nach Freigabe
-funktionieren Speichern beziehungsweise Wiederherstellung aus dem Export wieder.
+::: info Getrennte Hinweise für lokale und Sitzungsfehler – App 0.1.330
+Ein lokal geschriebener Entwurf ist erhalten, auch wenn seine Zuordnung zum Tab
+nicht zuverlässig gesichert werden kann. Bei voller oder gesperrter Sitzungsablage
+meldet der Editor jetzt ausdrücklich **„Entwurf lokal gespeichert“** und weist
+auf die nicht bestätigte Tab-Wiederherstellung hin. Auch ein vollständig gesperrter
+`sessionStorage`-Zugang verhindert die lokale Entwurfssicherung nicht mehr.
 
-**Bei voller oder für Methoden gesperrter Sitzungsablage fehlt derzeit ein
-Hinweis:** Der Entwurf kann vollständig lokal gespeichert sein, während
-Tab-Zeiger und Wiederherstellungsmarkierung fehlen. Nach Neuladen den richtigen
-Stand unter **Lokale Entwürfe** anhand von Name/Zeit auswählen, prüfen und
-gesichert übernehmen. Nicht darauf verlassen, dass er vorausgewählt ist.
-Bei vollständig verweigertem Storage-Zugang warnt der Sicherungsversuch; dann
-vor Schließen/Neuladen exportieren und nach Freigabe aus der Datei wiederherstellen.
+**Vor Neuladen oder Schließen exportieren.** Danach den passenden Namen/Zeitpunkt
+unter **Lokale Entwürfe** auswählen, prüfen und gesichert übernehmen; nicht auf
+die Vorauswahl verlassen. Die Warnung bleibt beim Sprachwechsel DE/EN/FR und
+erneuten Laden der Projektliste erhalten. Erst eine weitere Sicherung, die
+Schreibmarkierung und Tab-Zeiger bestätigt, entfernt sie.
 
-Alle 20 vorherigen Entwurfsquellen sind bytegleich erhalten, Originaleditoren und
-Bestandsdaten wiederhergestellt, Testobjekte/Fülleinträge bereinigt, drei
-Vollbackups auf .68; .177 unberührt. Sperren wurden in eigenen Testseiten simuliert,
-keine Chrome-Berechtigungen geändert. Dies ist keine vollständige Freigabe aller
-Browser-Speicherfehler; die präzise Sitzungswarnung bleibt offen.
+Ein fehlgeschlagenes lokales Datensatzschreiben bleibt ein eigener Fehler mit
+Exporthinweis. Dann ist nur der bisherige lokale Stand gesichert. Vorhandene
+Quellen werden weder gelöscht noch automatisch übernommen. Ist der lokale
+Zugang vollständig blockiert, den aktuellen Stand exportieren und nach Freigabe
+aus der Datei wiederherstellen. HA-Vollbackups enthalten keine Browserentwürfe.
+
+Der in 0.1.329 gefundene fehlende Sitzungswarnhinweis ist damit korrigiert.
+Die damalige Browserprüfung erhielt alle 20 vorhandenen Quellen und Bestandsdaten.
+Die neue Prüfung auf .68 mit HA 2026.10.2 besteht: echte volle Sitzungsablage mit
+und ohne vorhandenen Tab-Zeiger, blockierte Sitzungsmethoden und blockierter
+Getter, Export, manuelle Wiederherstellung sowie Warnung DE/EN/FR. Volle lokale
+Ablage und lokale Schreibsperre melden weiterhin einen eigenen Fehler. Alle
+31 vorherigen Entwurfsquellen bleiben bytegleich; fünf Originaleditoren und die
+Bestandsdaten sind wiederhergestellt. Eigene Testobjekte sind bereinigt, drei
+Vollbackups bleiben erhalten, .177 bleibt unverändert. Kein erneuter erzwungener
+Browserabbruch und kein Betriebssystem-Datenträgerfülltest in diesem Durchlauf.
+Eine allgemeine Freigabe sämtlicher Browser- oder Datenträgerfehler ist das nicht.
 :::
 
 ::: info Neueren Entwurf nach Schreibabbruch wiederherstellen – App 0.1.329
