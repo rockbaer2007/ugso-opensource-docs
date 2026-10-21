@@ -43,6 +43,17 @@ Quellen bleiben manuell auswählbar. Serverstand, Originaleditoren und erfasste
 Daten bleiben erhalten; eigenes Testprojekt entfernt, drei Vollbackups vorhanden.
 .177 bleibt unberührt. Dies prüft einen geordneten Neustart, keinen Browserabsturz
 oder Stromausfall und keine Wiederherstellung gelöschten Browserspeichers.
+
+**Harter Browserabbruch ebenfalls bestanden (21.10.2026, .68):** Chrome 155
+wird vom Nutzer erzwungen beendet. Vor dem erneuten Öffnen sind keine
+Chrome-Prozesse mehr vorhanden. Nach Wiederherstellung der Sitzung behalten
+beide Tabs ihre eigene Entwurfskennung. Die ausdrücklich übernommenen Entwürfe
+stimmen einschließlich unterschiedlicher Kartentitel vollständig mit den
+Vorabexporten überein, abgesehen vom Exportzeitpunkt. Vier ältere Entwürfe sind
+zusätzlich exportiert und ihre Projektdaten danach unverändert geprüft.
+Originaleditoren und Bestandsdaten erhalten, eigenes Server-Testprojekt entfernt,
+drei Vollbackups auf .68; .177 unverändert. Der Abbruch erfolgt nach der lokalen
+Sicherung, nicht während des Schreibens. Kein Stromausfall-/Datenträgertest.
 :::
 
 Tablet-Ergebnis: [12-/360-/720-Karten-Test](tablet-test.md) auf Galaxy Tab A6,

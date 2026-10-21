@@ -40,6 +40,16 @@ Other retained sources remain manually selectable. Server revision, original
 Editors and captured data are preserved; owned project removed and three full
 backups retained. .177 is untouched. This qualifies an orderly restart, not a
 browser crash, power failure or recovery of deleted browser storage.
+
+**Forced browser termination also passes (2026-10-21, .68):** the user forcibly
+terminates Chrome 155. No Chrome processes remain before reopening it. After
+session recovery, both tabs retain their own draft IDs. The explicitly restored
+drafts, including their different Card titles, match the complete pre-abort
+exports except the export time. Four older drafts are separately exported and
+their project data checked unchanged afterwards. Original Editors and existing
+data are preserved, the owned server project removed and three full backups
+retained on .68; .177 untouched. Termination follows completed local saving,
+not an in-progress write. This does not qualify power or disk failures.
 :::
 
 Tablet result: [12/360/720-Card test](tablet-test.md) on Galaxy Tab A6,

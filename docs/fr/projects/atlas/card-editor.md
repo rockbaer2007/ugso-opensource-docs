@@ -45,6 +45,17 @@ sources conservées restent sélectionnables manuellement. Révision serveur,
 trois sauvegardes complètes gardées. .177 reste inchangé. Il s’agit d’un
 redémarrage normal, pas d’un plantage, d’une coupure électrique ou de la
 restauration d’un stockage de navigateur effacé.
+
+**L’arrêt forcé du navigateur réussit aussi (21/10/2026, .68) :** l’utilisateur
+termine Chrome 155 de force. Aucun processus Chrome ne reste avant sa réouverture.
+Après restauration de session, chaque onglet garde son propre identifiant de
+brouillon. Les brouillons repris explicitement, avec leurs titres de carte
+différents, correspondent aux exports complets précédents, sauf leur date.
+Quatre anciens brouillons sont exportés séparément et leurs données projet
+vérifiées inchangées après le test. Éditeurs initiaux et données conservés,
+projet serveur propre retiré, trois sauvegardes complètes sur .68 ; .177 inchangé.
+L’arrêt suit une sauvegarde locale terminée, pas une écriture en cours.
+Aucun test de coupure électrique ou panne de disque.
 :::
 
 Résultat tablette : [test 12/360/720 cartes](tablet-test.md) sur Galaxy Tab A6,

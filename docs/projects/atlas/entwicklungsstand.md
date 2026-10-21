@@ -26,7 +26,11 @@ für Verwendung und Grenzen. Testprojekt bereinigt, Originaleditoren und erfasst
 Daten erhalten, drei Vollbackups auf .68; .177 unverändert. Der anschließende
 vollständige Chrome-Neustart mit Sitzungswiederherstellung besteht ebenfalls:
 neuer Hauptprozess, getrennte wiederhergestellte Tab-Zeiger, vollständige
-Entwurfsvergleiche und manuelle Quellenwahl. Kein Crash-/Stromausfalltest.
+Entwurfsvergleiche und manuelle Quellenwahl. Auch der anschließende harte Abbruch
+aller Chrome-Prozesse besteht: beide Entwürfe samt unterschiedlichen Kartentiteln
+vollständig wiederhergestellt, vier ältere Entwurfsquellen unverändert. Originale
+erhalten, Testprojekt entfernt, drei Vollbackups. Abbruch nach lokaler Sicherung;
+kein Schreibabbruch-, Stromausfall- oder Datenträgertest. .177 bleibt unberührt.
 
 Die [HA-Kompatibilitätsmatrix](frontend.md) enthält jetzt auch HA **2026.10.2**
 mit Integration 0.1.306 und App 0.1.327 auf **.68**: Einbettung, Live-Verbindung,

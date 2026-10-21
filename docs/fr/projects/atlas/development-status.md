@@ -30,7 +30,12 @@ Projet de test retiré, éditeurs initiaux/données capturées conservés, trois
 sauvegardes complètes sur .68 ; .177 inchangé. Le redémarrage complet de Chrome
 avec restauration de session réussit ensuite : nouveau processus principal,
 pointeurs d’onglets distincts restaurés, comparaison complète des brouillons et
-sélection manuelle des sources. Aucun test de plantage ou coupure électrique.
+sélection manuelle des sources. L’arrêt forcé de tous les processus Chrome
+réussit ensuite : les deux brouillons complets avec titres de carte différents
+sont restaurés, quatre anciennes sources restent inchangées. Originaux conservés,
+projet propre retiré, trois sauvegardes complètes. Arrêt après sauvegarde locale
+terminée ; aucune validation d’écriture interrompue, coupure électrique ou panne
+de disque. .177 reste inchangé.
 
 La [matrice de compatibilité HA](frontend.md) comprend aussi HA **2026.10.2**
 avec l’intégration 0.1.306 et l’App 0.1.327 sur **.68** : affichage intégré,
