@@ -12,8 +12,23 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-21 · HA App 0.1.328 · HACS integration 0.1.306.**
+**As of 2026-10-21 · HA App 0.1.329 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+**App 0.1.329 offers the newer draft after interrupted saving.** A tab-scoped
+write intent stored beforehand identifies the complete record if its tab-pointer
+update is missed. Preview and backed-up recovery remain explicit; the workspace
+is never replaced automatically. Other tabs, predecessors and older sources remain
+available. Invalid markers do not change selection; older versions still require
+manual source selection. See [Card Editor](card-editor.md) for use and limits.
+
+The update and targeted interruption after the record write/before the tab pointer
+pass on .68 with HA 2026.10.2: DE/EN/FR offer/preview, cancellation without changes,
+exact confirmed recovery and no confusion with a newer foreign draft. All 13
+existing sources and both original Editors are unchanged; data comparison passes,
+owned test objects are cleaned and three full backups retained. .177 untouched.
+This run uses a controlled exception at the write boundary, not another forced
+browser-process termination.
 
 **Draft collision fixed in App 0.1.328 (2026-10-21, .68):** Two tabs save
 independently and recover their own drafts after reloading. Full exports match

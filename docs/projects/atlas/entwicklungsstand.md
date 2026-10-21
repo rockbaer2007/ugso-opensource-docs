@@ -12,8 +12,24 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 21.10.2026 · HA-App 0.1.328 · HACS-Integration 0.1.306.**
+**Stand: 21.10.2026 · HA-App 0.1.329 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+**App 0.1.329 bietet den neueren Entwurf nach unterbrochener Sicherung an.**
+Eine vorab gespeicherte tabgebundene Schreibmarkierung erkennt den vollständigen
+Datensatz, falls die Aktualisierung des Tab-Zeigers ausbleibt. Vorschau und
+gesicherte Übernahme bleiben ausdrücklich; die Arbeitsfläche wird nicht automatisch
+ersetzt. Fremde Tabs, Vorgänger und ältere Quellen bleiben erhalten. Fehlerhafte
+Markierungen ändern die Auswahl nicht; ältere Versionen benötigen weiter manuelle
+Quellenwahl. Verwendung und Grenzen: [Card Editor](card-editor.md).
+
+Update und gezielte Unterbrechung nach Datensatzschreiben/vor Tab-Zeiger bestehen
+auf .68 mit HA 2026.10.2: Angebot/Vorschau in DE/EN/FR, Abbrechen ohne Änderung,
+exakte bestätigte Wiederherstellung und keine Verwechslung mit einem neueren
+fremden Entwurf. Alle 13 vorhandenen Quellen und beide Originaleditoren sind
+unverändert; Bestandsvergleich bestanden, eigene Testobjekte bereinigt und drei
+Vollbackups erhalten. .177 unberührt. Dieser Lauf nutzt eine kontrollierte
+Ausnahme an der Schreibgrenze, keinen neuen Browserprozessabbruch.
 
 **Entwurfskollision mit App 0.1.328 behoben (21.10.2026, .68):** Zwei Tabs
 sichern unabhängig und finden nach Neuladen jeweils ihren eigenen Entwurf.

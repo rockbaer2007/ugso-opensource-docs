@@ -5,6 +5,31 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Neueren Entwurf nach Schreibabbruch wiederherstellen – App 0.1.329
+Vor dem Datensatzschreiben merkt sich der Editor im Tab den beabsichtigten
+Entwurf. Wird die Sicherung nach dem Schreiben und vor dem Aktualisieren des
+Tab-Zeigers unterbrochen, erkennt der Editor beim nächsten Laden den exakt
+passenden neuen Datensatz. Er wird vorausgewählt; **Neueren Entwurf prüfen**
+bietet die normale Vorschau und **Gesichert übernehmen** an. Bis zur bestätigten
+Übernahme bleibt die aktuelle Arbeitsfläche unverändert und wird vorher gesichert.
+
+Bestätigter Vorgänger, andere Tabs und ältere Quellen bleiben erhalten. Weder
+ähnliche Namen noch der neueste globale Zeitstempel bestimmen die Zuordnung.
+Fehlende, beschädigte oder unpassende Markierungen lösen kein Angebot aus.
+Alte Entwürfe aus Versionen vor 0.1.329 sowie Entwürfe ohne verfügbare
+Tab-Sitzungsablage bleiben manuell auswählbar. Die Erkennung ersetzt keinen
+Export bei gelöschtem Browserspeicher oder Gerätewechsel.
+
+**Auf .68 mit HA 2026.10.2 am 21.10.2026 geprüft:** Nach dem Update wird eine
+eigene Sicherung gezielt nach dem Datensatzschreiben und vor dem Tab-Zeiger
+unterbrochen. Nach Neuladen werden der richtige Nachfolger und das Angebot in
+DE/EN/FR angezeigt. Vorschau/Abbrechen ändern die Arbeitsfläche nicht; bestätigte
+Übernahme stellt alle Projektdaten exakt wieder her. Ein neuerer fremder Entwurf
+wird nicht verwechselt; nach Bestätigung erscheint kein erneutes Angebot.
+Der Test nutzt eine eigene Ausnahme an dieser Grenze, keinen erneuten harten
+Browserprozessabbruch und keinen Stromausfall-/Datenträgertest.
+:::
+
 ::: info Getrennte lokale Entwürfe ab App 0.1.328
 Gemeinsame Editor-Projekte erhalten pro Tab eine unabhängige lokale Ablage.
 Nach Neuladen ist der bisherige Entwurf dieses Tabs vorausgewählt. Unter

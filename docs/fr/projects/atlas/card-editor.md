@@ -5,6 +5,31 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Reprendre un brouillon plus récent après interruption – App 0.1.329
+Avant d’écrire l’enregistrement, l’éditeur mémorise le brouillon prévu dans la
+session de cet onglet. Si la sauvegarde s’arrête après l’écriture et avant la
+mise à jour du pointeur, le chargement suivant détecte le nouvel enregistrement
+correspondant exactement. Il est présélectionné ; **Vérifier le brouillon plus
+récent** propose l’aperçu habituel puis **Sauvegarder et reprendre**. L’espace
+actuel reste inchangé jusqu’à confirmation explicite et est sauvegardé avant reprise.
+
+Version précédente confirmée, autres onglets et anciennes sources sont conservés.
+L’association ne repose ni sur des noms similaires ni sur la date globale la plus
+récente. Aucun signalement si la marque est absente, corrompue ou incohérente.
+Les brouillons antérieurs à 0.1.329 et ceux sans stockage de session disponible
+restent sélectionnables manuellement. Cette détection ne remplace pas un Export
+avant d’effacer le stockage du navigateur ou de changer d’appareil.
+
+**Vérifié sur .68 avec HA 2026.10.2 le 21/10/2026 :** après mise à jour, une
+sauvegarde propre est interrompue précisément après l’écriture et avant le
+pointeur. Le rechargement affiche le bon successeur et l’offre en DE/EN/FR.
+Aperçu/annulation laissent l’espace inchangé ; la reprise confirmée restaure
+exactement toutes les données projet. Aucun mélange avec un brouillon étranger
+plus récent, aucune nouvelle offre après confirmation. Ce test utilise une
+exception propre à cette frontière, pas un nouvel arrêt forcé du navigateur
+ni un test de coupure électrique ou de panne de disque.
+:::
+
 ::: info Brouillons locaux indépendants depuis l’App 0.1.328
 Les projets Editor partagés disposent d’un brouillon local indépendant par
 onglet. Après rechargement, le brouillon précédent de cet onglet est présélectionné.

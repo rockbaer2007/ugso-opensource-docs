@@ -16,7 +16,23 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 21/10/2026 · App HA 0.1.328 · intégration HACS 0.1.306.**
+**État au 21/10/2026 · App HA 0.1.329 · intégration HACS 0.1.306.**
+
+**L’App 0.1.329 propose le brouillon plus récent après sauvegarde interrompue.**
+Une intention d’écriture propre à l’onglet, enregistrée au préalable, identifie
+l’enregistrement complet si le pointeur n’a pas été mis à jour. Aperçu et reprise
+sauvegardée restent explicites ; l’espace actuel n’est jamais remplacé automatiquement.
+Autres onglets, versions précédentes et anciennes sources restent disponibles.
+Les marques invalides ne changent pas la sélection ; les anciennes versions
+nécessitent encore une sélection manuelle. Voir [Card Editor](card-editor.md).
+
+Mise à jour et interruption ciblée après écriture/avant pointeur réussies sur .68
+avec HA 2026.10.2 : offre/aperçu DE/EN/FR, annulation sans changement, reprise
+confirmée exacte et aucun mélange avec un brouillon étranger plus récent. Les 13
+sources existantes et les deux éditeurs initiaux sont inchangés ; comparaison des
+données réussie, objets de test propres retirés et trois sauvegardes complètes
+conservées. .177 inchangé. Ce test utilise une exception contrôlée à la frontière
+d’écriture, pas un nouvel arrêt forcé du navigateur.
 
 **Collision corrigée dans l’App 0.1.328 (21/10/2026, .68) :** deux onglets
 sauvegardent indépendamment et retrouvent chacun leur brouillon après

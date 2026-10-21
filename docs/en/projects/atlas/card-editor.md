@@ -5,6 +5,30 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Recover a newer draft after an interrupted save – App 0.1.329
+Before writing the record, the Editor stores the intended draft in this tab's
+session. If saving stops after the record write but before the tab-pointer
+update, the next load detects the exact matching new record. It is preselected;
+**Inspect newer draft** offers the normal preview and **Back up and apply** flow.
+The current workspace stays unchanged until explicit confirmation and is backed
+up before applying the draft.
+
+The confirmed predecessor, other tabs and older sources remain available.
+Matching does not rely on similar names or the latest global timestamp.
+Missing, broken or mismatched markers produce no offer. Drafts from versions
+before 0.1.329 and drafts without available tab session storage remain manually
+selectable. Detection does not replace an Export before clearing browser storage
+or switching devices.
+
+**Checked on .68 with HA 2026.10.2 on 2026-10-21:** after the update, an owned
+save is interrupted precisely after its record write and before its tab pointer.
+Reloading shows the correct successor and offer in DE/EN/FR. Preview/cancellation
+leave the workspace unchanged; confirmed recovery restores all project data
+exactly. A newer foreign draft is not confused with it; no repeated offer appears
+after confirmation. This uses an owned exception at that boundary, not another
+forced browser-process termination or a power/disk failure test.
+:::
+
 ::: info Independent local drafts from App 0.1.328
 Shared Editor projects keep an independent local draft for each tab.
 After reloading, that tab's previous draft is preselected. **Local drafts**
