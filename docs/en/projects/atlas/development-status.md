@@ -22,8 +22,10 @@ A closed tab's draft can be selected explicitly in a new tab. Old sources and
 the legacy shared draft remain available; stale server saves remain blocked.
 DE/EN/FR selection and preview pass. See [Card Editor](card-editor.md) for use
 and limits. Owned project cleaned, original Editors/captured data preserved,
-three full backups on .68; .177 unchanged. Full browser restart and session
-restoration still require a separate check.
+three full backups on .68; .177 unchanged. The subsequent full Chrome restart
+with session restoration also passes: new main process, separate restored tab
+pointers, complete draft comparisons and manual source selection. This does not
+qualify browser crashes or power failures.
 
 The [HA compatibility matrix](frontend.md) now also includes HA **2026.10.2**
 with integration 0.1.306 and App 0.1.327 on **.68**: embedding, live connection,

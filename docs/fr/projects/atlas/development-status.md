@@ -27,8 +27,10 @@ onglet. Anciennes sources et brouillon commun restent disponibles ; les
 enregistrements serveur périmés restent bloqués. Sélection et aperçu DE/EN/FR
 sont vérifiés. Voir [Card Editor](card-editor.md) pour utilisation et limites.
 Projet de test retiré, éditeurs initiaux/données capturées conservés, trois
-sauvegardes complètes sur .68 ; .177 inchangé. Le redémarrage complet du
-navigateur et la restauration de session restent à vérifier séparément.
+sauvegardes complètes sur .68 ; .177 inchangé. Le redémarrage complet de Chrome
+avec restauration de session réussit ensuite : nouveau processus principal,
+pointeurs d’onglets distincts restaurés, comparaison complète des brouillons et
+sélection manuelle des sources. Aucun test de plantage ou coupure électrique.
 
 La [matrice de compatibilité HA](frontend.md) comprend aussi HA **2026.10.2**
 avec l’intégration 0.1.306 et l’App 0.1.327 sur **.68** : affichage intégré,

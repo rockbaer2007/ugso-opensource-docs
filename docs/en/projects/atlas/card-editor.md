@@ -31,7 +31,15 @@ time. A new tab explicitly recovers a closed tab's draft. Old sources remain
 selectable and server conflicts blocked. DE/EN/FR pass. Original Editors,
 seven server projects, six plugins and ten captured files are preserved.
 Owned project cleaned, three full backups on .68; .177 unchanged.
-Full browser restart and session restoration are still pending.
+
+**Full Chrome restart with session restoration also passes (2026-10-21, .68):**
+The user restarts Chrome and its main process is replaced. Both restored tabs
+preselect their own previous draft IDs. After explicit recovery, both complete
+exports match their respective pre-restart versions except the export time.
+Other retained sources remain manually selectable. Server revision, original
+Editors and captured data are preserved; owned project removed and three full
+backups retained. .177 is untouched. This qualifies an orderly restart, not a
+browser crash, power failure or recovery of deleted browser storage.
 :::
 
 Tablet result: [12/360/720-Card test](tablet-test.md) on Galaxy Tab A6,

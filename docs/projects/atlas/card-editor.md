@@ -33,7 +33,16 @@ kann den Entwurf eines geschlossenen Tabs gezielt übernehmen. Alte Quellen
 bleiben auswählbar, Server-Konflikte gesperrt. DE/EN/FR bestehen. Originaleditoren,
 sieben Serverprojekte, sechs Plugins und zehn erfasste Dateien sind erhalten.
 Eigenes Testprojekt bereinigt, drei Vollbackups auf .68; .177 unverändert.
-Vollständiger Browser-Neustart und Sitzungswiederherstellung sind noch offen.
+
+**Vollständiger Chrome-Neustart mit Sitzungswiederherstellung ebenfalls bestanden
+(21.10.2026, .68):** Der Nutzer startet Chrome neu; der Hauptprozess wird ersetzt.
+Beide wiederhergestellten Tabs wählen jeweils ihre bisherige Entwurfskennung vor.
+Nach ausdrücklicher Übernahme entsprechen beide vollständigen Exporte dem
+jeweiligen Stand vor dem Neustart, abgesehen vom Exportzeitpunkt. Andere erhaltene
+Quellen bleiben manuell auswählbar. Serverstand, Originaleditoren und erfasste
+Daten bleiben erhalten; eigenes Testprojekt entfernt, drei Vollbackups vorhanden.
+.177 bleibt unberührt. Dies prüft einen geordneten Neustart, keinen Browserabsturz
+oder Stromausfall und keine Wiederherstellung gelöschten Browserspeichers.
 :::
 
 Tablet-Ergebnis: [12-/360-/720-Karten-Test](tablet-test.md) auf Galaxy Tab A6,

@@ -23,8 +23,10 @@ lässt sich im neuen Tab gezielt auswählen. Alte Quellen und der bisherige glob
 Entwurf bleiben erhalten; veraltetes Serverspeichern bleibt gesperrt.
 DE/EN/FR-Auswahl und Vorschau sind geprüft. Siehe [Card Editor](card-editor.md)
 für Verwendung und Grenzen. Testprojekt bereinigt, Originaleditoren und erfasste
-Daten erhalten, drei Vollbackups auf .68; .177 unverändert. Vollständiger
-Browser-Neustart und Sitzungswiederherstellung sind noch separat zu prüfen.
+Daten erhalten, drei Vollbackups auf .68; .177 unverändert. Der anschließende
+vollständige Chrome-Neustart mit Sitzungswiederherstellung besteht ebenfalls:
+neuer Hauptprozess, getrennte wiederhergestellte Tab-Zeiger, vollständige
+Entwurfsvergleiche und manuelle Quellenwahl. Kein Crash-/Stromausfalltest.
 
 Die [HA-Kompatibilitätsmatrix](frontend.md) enthält jetzt auch HA **2026.10.2**
 mit Integration 0.1.306 und App 0.1.327 auf **.68**: Einbettung, Live-Verbindung,

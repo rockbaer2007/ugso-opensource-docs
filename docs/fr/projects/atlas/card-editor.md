@@ -34,7 +34,17 @@ explicitement le brouillon d’un onglet fermé. Les anciennes sources restent
 sélectionnables et les conflits serveur bloqués. DE/EN/FR réussissent. Éditeurs
 initiaux, sept projets serveur, six plugins et dix fichiers capturés sont conservés.
 Projet propre retiré, trois sauvegardes complètes sur .68 ; .177 inchangé.
-Redémarrage complet du navigateur et restauration de session restent à vérifier.
+
+**Le redémarrage complet de Chrome avec restauration de session réussit aussi
+(21/10/2026, .68) :** l’utilisateur redémarre Chrome ; son processus principal
+est remplacé. Chaque onglet restauré présélectionne son propre identifiant de
+brouillon précédent. Après reprise explicite, les exports complets correspondent
+aux versions respectives avant redémarrage, sauf la date d’export. Les autres
+sources conservées restent sélectionnables manuellement. Révision serveur,
+éditeurs initiaux et données capturées sont conservés ; projet propre retiré,
+trois sauvegardes complètes gardées. .177 reste inchangé. Il s’agit d’un
+redémarrage normal, pas d’un plantage, d’une coupure électrique ou de la
+restauration d’un stockage de navigateur effacé.
 :::
 
 Résultat tablette : [test 12/360/720 cartes](tablet-test.md) sur Galaxy Tab A6,
