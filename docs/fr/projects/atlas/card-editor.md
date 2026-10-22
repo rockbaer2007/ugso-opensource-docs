@@ -5,8 +5,15 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+Depuis l’App **0.1.333**, **Brouillons locaux** propose un bouton **Rechercher**
+visible. Entrée et filtrage immédiat restent disponibles ; effacer la recherche
+réinitialise le filtre. Avec **0 source locale**, ouvrir et appliquer explicitement
+un projet serveur ou importer une configuration. La recherche filtre uniquement
+les brouillons de ce navigateur, pas les projets serveur. Des zones de test de
+320/390/768 pixels sont vérifiées ; le test réel sur téléphone/tablette reste ouvert.
+
 ::: info Qualification mobile préparée – résultats utilisateur attendus
-Le test réel de l’App 0.1.332 dans **Chrome sur téléphone et tablette** est préparé
+Le test réel de l’App 0.1.333 dans **Chrome sur téléphone et tablette** est préparé
 sur .68. Sauvegarde complète récente et preuves PC conservées. Deux projets serveur
 de test : **MOB68 Mobilprüfung A Sonne** et **MOB68 Mobilprüfung B Sonne**. Les sept
 projets existants restent intacts ; .177 inchangé. Le test n’est pas encore validé.

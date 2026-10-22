@@ -5,8 +5,15 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+From App **0.1.333**, **Local drafts** includes a visible **Search** button.
+Enter and live filtering remain available; **Clear search** resets the filter.
+With **0 local sources**, first open and safely apply a server project or import
+a configuration. Search only filters this browser's drafts, not server projects.
+Narrow 320/390/768-pixel test containers pass; real phone/tablet qualification
+remains pending.
+
 ::: info Mobile qualification prepared – user results pending
-Real **Chrome on phone and tablet** qualification of App 0.1.332 is prepared on
+Real **Chrome on phone and tablet** qualification of App 0.1.333 is prepared on
 .68. A fresh full backup and PC evidence are retained. Two owned server projects
 are **MOB68 Mobilprüfung A Sonne** and **MOB68 Mobilprüfung B Sonne**; all seven
 existing projects remain intact. .177 is untouched. This is not yet a passed test.

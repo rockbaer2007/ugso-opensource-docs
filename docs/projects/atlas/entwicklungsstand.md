@@ -1,5 +1,10 @@
 # Entwicklungsstand
 
+**App 0.1.333: sichtbarer Suchen-Button für lokale Entwürfe.** Enter und
+Livefilter bleiben erhalten. Ein eigener Hinweis erklärt 0 lokale Quellen und
+den nötigen ersten Projektimport. DE/EN/FR, Suchen/Enter und schmale Testbereiche
+sind geprüft; echte Mobilgeräte bleiben gesondert offen. .177 unverändert.
+
 ## Getestete Hardwarevarianten
 
 | Variante | Testumgebung |
@@ -12,7 +17,7 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 22.10.2026 · HA-App 0.1.332 · HACS-Integration 0.1.306.**
+**Stand: 22.10.2026 · HA-App 0.1.333 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
 **App 0.1.332 ergänzt die durchsuchbare Entwurfsübersicht.** Projekt, Scriptdatei,

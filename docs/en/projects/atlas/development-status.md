@@ -1,5 +1,10 @@
 # Development Status
 
+**App 0.1.333: explicit Search button for local drafts.** Enter and live
+filtering remain available. A distinct message explains zero local sources and
+the initial project import. DE/EN/FR, Search/Enter and narrow test containers are
+checked; actual mobile-device qualification remains pending. .177 is untouched.
+
 ## Tested hardware variants
 
 | Variant | Test environment |
@@ -12,7 +17,7 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-22 · HA App 0.1.332 · HACS integration 0.1.306.**
+**As of 2026-10-22 · HA App 0.1.333 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
 **App 0.1.332 adds the searchable draft overview.** Project, script filename,

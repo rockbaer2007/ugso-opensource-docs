@@ -4,6 +4,11 @@ description: État actuel du développement d'ATLAS.
 ---
 # État du développement
 
+**App 0.1.333 : bouton Rechercher pour les brouillons locaux.** Entrée et
+filtrage immédiat restent disponibles. Un message distingue l’absence de sources
+locales et indique d’abord d’importer un projet. DE/EN/FR, Rechercher/Entrée et
+zones étroites sont vérifiés ; le test mobile réel reste ouvert. .177 inchangé.
+
 ## Variantes matérielles testées
 
 | Variante | Environnement de test |
@@ -16,7 +21,7 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 22/10/2026 · App HA 0.1.332 · intégration HACS 0.1.306.**
+**État au 22/10/2026 · App HA 0.1.333 · intégration HACS 0.1.306.**
 
 **L’App 0.1.332 ajoute la recherche des brouillons.** Projet, fichier de script,
 date, association explicite à l’onglet et identifiant facilitent la sélection.

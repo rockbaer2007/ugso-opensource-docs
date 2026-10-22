@@ -5,8 +5,15 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+Die Suche unter **Lokale Entwürfe** bietet ab App **0.1.333** einen sichtbaren
+Button **Suchen**; Enter und laufende Filterung bleiben verfügbar. **Suche leeren**
+setzt den Filter zurück. Bei **0 lokalen Quellen** zuerst ein Serverprojekt öffnen
+und gesichert übernehmen oder eine Konfiguration importieren. Die Suche betrifft
+nur Entwürfe dieses Browsers und lädt keine Serverprojekte. Schmale Testbereiche
+mit 320/390/768 Pixeln sind geprüft; die echte Handy-/Tablet-Prüfung bleibt offen.
+
 ::: info Mobilprüfung vorbereitet – Rückmeldung noch offen
-Für App 0.1.332 ist die echte Prüfung in **Chrome auf Handy und Tablet** über .68
+Für App 0.1.333 ist die echte Prüfung in **Chrome auf Handy und Tablet** über .68
 vorbereitet. Vollbackup und PC-Sicherungen sind vorhanden; zwei eigene Server-
 Testprojekte heißen **MOB68 Mobilprüfung A Sonne** und **MOB68 Mobilprüfung B Sonne**.
 Die sieben bisherigen Serverprojekte bleiben erhalten. .177 wird nicht verändert.
