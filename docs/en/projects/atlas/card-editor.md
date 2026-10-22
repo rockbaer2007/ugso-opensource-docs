@@ -5,6 +5,23 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Browser termination during repeated file import qualified – 2026-10-22
+On .68 with App 0.1.331 and HA 2026.10.2, forced Chrome process termination passes
+after the new local draft record is written, before updating its tab pointer.
+Session restoration explicitly offers A's newer draft; B keeps its independent
+source. Cancelling the preview leaves the workspace unchanged. New A, predecessor
+A and B recover with unchanged content and settings; apply selects the first card.
+The global workspace can initially still show B: recovery remains an explicit
+action rather than automatic application.
+
+All 20 previous sources in the test profile remain byte-identical. Original
+Editors and global configuration are restored, including after reload; owned
+fixture files are in trash and three full backups retained on .68. .177 is untouched.
+The controlled halt is between two writes; it does not qualify power loss,
+deleted browser storage or interruption inside the atomic Storage operation.
+Continue exporting browser drafts separately.
+:::
+
 ::: info Independent tab drafts after file import – App 0.1.331
 A confirmed JSON whole-configuration **Import** now also saves its Editor project
 as a separate local tab draft, even without opening a shared project first.

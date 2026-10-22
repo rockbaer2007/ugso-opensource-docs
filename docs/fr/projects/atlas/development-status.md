@@ -16,7 +16,18 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 21/10/2026 · App HA 0.1.331 · intégration HACS 0.1.306.**
+**État au 22/10/2026 · App HA 0.1.331 · intégration HACS 0.1.306.**
+
+**Arrêt du navigateur pendant un nouvel import réussi sur .68.** L’arrêt forcé
+des processus Chrome après écriture locale, avant mise à jour du pointeur,
+conserve le nouveau A avec proposition explicite de reprise et la source B
+distincte. Annuler l’aperçu ne change rien ; nouveau A, prédécesseur et B retrouvent
+leurs contenus et réglages (la reprise sélectionne la première carte). Les 20
+anciennes sources du profil de test restent identiques octet par octet ; éditeurs
+et configuration globale sont rétablis, même après recharge. Fichiers de test
+dans la corbeille et trois sauvegardes complètes sur .68 ; .177 inchangé.
+Ce contrôle couvre une limite entre deux écritures, pas une panne électrique
+ni une interruption dans l’opération Storage atomique. Aucune nouvelle version.
 
 **L’App 0.1.331 sauvegarde les imports par onglet.** Les imports JSON complets
 confirmés ne nécessitent plus de projet partagé préalable. Un autre import crée

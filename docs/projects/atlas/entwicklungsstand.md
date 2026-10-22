@@ -12,8 +12,19 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 21.10.2026 · HA-App 0.1.331 · HACS-Integration 0.1.306.**
+**Stand: 22.10.2026 · HA-App 0.1.331 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+**Browserabbruch während erneutem Dateiimport auf .68 bestanden.** Ein echter
+Chrome-Prozessabbruch nach lokalem Datensatzschreiben, vor dem Tab-Zeiger,
+erhält den neueren A-Entwurf samt Wiederherstellungsangebot und die getrennte
+B-Quelle. Vorschau-Abbrechen ändert nichts; neuer A-Stand, Vorgänger und B
+lassen sich mit identischen Inhalten und Einstellungen übernehmen (erste Karte
+wird ausgewählt). Alle 20 alten Quellen des Testprofils bleiben bytegleich,
+Originaleditoren und globale Konfiguration sind auch nach Neuladen hergestellt.
+Testdateien liegen im Papierkorb, drei Vollbackups bleiben auf .68; .177 unverändert.
+Das prüft eine kontrollierte Grenze zwischen Schreibvorgängen, keinen Stromausfall
+oder Abbruch innerhalb der atomaren Storage-Operation. Keine neue App-Version.
 
 **App 0.1.331 sichert Dateiimporte als eigene Tab-Entwürfe.** Bestätigte JSON-
 Gesamtkonfigurations-Importe benötigen dafür kein vorher geöffnetes gemeinsames

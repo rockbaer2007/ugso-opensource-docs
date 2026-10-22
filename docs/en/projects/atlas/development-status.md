@@ -12,8 +12,19 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-21 · HA App 0.1.331 · HACS integration 0.1.306.**
+**As of 2026-10-22 · HA App 0.1.331 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+**Browser termination during repeated file import passes on .68.** Forced Chrome
+process termination after the local record write, before the tab pointer update,
+preserves newer A with an explicit recovery offer and B's independent source.
+Cancelling preview changes nothing; new A, predecessor A and B recover identical
+content and settings (apply selects the first card). All 20 old test-profile
+sources remain byte-identical, original Editors and global configuration are
+restored including after reload. Fixture files are in trash and three full backups
+remain on .68; .177 is untouched. This qualifies one controlled boundary between
+writes, not power loss or interruption inside the atomic Storage operation.
+No new App version is needed.
 
 **App 0.1.331 saves file imports as independent tab drafts.** Confirmed JSON
 whole-configuration imports no longer need a previously opened shared project.

@@ -5,6 +5,24 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Browserabbruch bei erneutem Dateiimport geprüft – 22.10.2026
+Auf .68 mit App 0.1.331 und HA 2026.10.2 besteht der echte Chrome-Prozessabbruch
+nach dem Schreiben des neuen lokalen Entwurfs, vor Aktualisierung des Tab-Zeigers.
+Nach Sitzungswiederherstellung bietet Tab A seinen neueren Entwurf ausdrücklich
+an; Tab B behält seine getrennte Quelle. Vorschau-Abbrechen ändert die Arbeitsfläche
+nicht. Neuer A-Stand, Vorgänger A und B werden mit unveränderten Inhalten und
+Einstellungen wiederhergestellt; die Übernahme wählt jeweils die erste Karte aus.
+Die globale Arbeitsfläche kann zunächst weiter B zeigen: Wiederherstellung bleibt
+eine bewusste Aktion, keine automatische Übernahme.
+
+Alle 20 vorherigen Quellen im Testprofil sind bytegleich erhalten. Originaleditoren
+und globale Konfiguration sind auch nach Neuladen wiederhergestellt, eigene
+Testdateien im Papierkorb und drei Vollbackups auf .68 behalten. .177 unverändert.
+Der kontrollierte Halt liegt zwischen zwei Schreibvorgängen; Stromausfall,
+gelöschte Browserablage und Abbruch innerhalb der atomaren Storage-Operation
+sind damit nicht geprüft. Browserentwürfe weiterhin separat exportieren.
+:::
+
 ::: info Eigene Tab-Entwürfe nach Dateiimport – App 0.1.331
 Ein bestätigter JSON-Gesamtkonfigurations-Import über **Import** sichert das
 Editor-Projekt jetzt zusätzlich als eigenen lokalen Tab-Entwurf, auch ohne zuvor

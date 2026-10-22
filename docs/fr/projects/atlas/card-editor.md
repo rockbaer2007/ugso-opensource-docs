@@ -5,6 +5,23 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Arrêt du navigateur pendant un nouvel import vérifié – 22/10/2026
+Sur .68 avec l’App 0.1.331 et HA 2026.10.2, l’arrêt forcé des processus Chrome
+réussit après écriture du nouveau brouillon local, avant mise à jour du pointeur
+de l’onglet. La session restaurée propose explicitement le nouveau brouillon A ;
+B conserve sa source distincte. Annuler l’aperçu ne modifie pas l’espace de travail.
+Le nouveau A, son prédécesseur et B retrouvent leurs contenus et réglages ; la
+reprise sélectionne la première carte. L’espace global peut encore afficher B :
+la reprise reste une action explicite, jamais automatique.
+
+Les 20 sources précédentes du profil de test restent identiques octet par octet.
+Éditeurs et configuration globale sont rétablis, y compris après recharge ;
+fichiers de test dans la corbeille et trois sauvegardes complètes gardées sur .68.
+.177 reste inchangé. L’arrêt contrôlé est entre deux écritures : panne électrique,
+stockage du navigateur supprimé ou interruption dans l’opération Storage atomique
+ne sont pas vérifiés. Continuer à exporter séparément les brouillons du navigateur.
+:::
+
 ::: info Brouillons par onglet après import de fichier – App 0.1.331
 Un **Importer** JSON de configuration complète confirmé sauvegarde aussi le projet
 Editor comme brouillon local distinct par onglet, sans projet partagé préalable.
