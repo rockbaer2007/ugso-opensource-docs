@@ -7,7 +7,7 @@ description: État actuel du développement d'ATLAS.
 **App 0.1.333 : bouton Rechercher pour les brouillons locaux.** Entrée et
 filtrage immédiat restent disponibles. Un message distingue l’absence de sources
 locales et indique d’abord d’importer un projet. DE/EN/FR, Rechercher/Entrée et
-zones étroites sont vérifiés ; le test mobile réel reste ouvert. .177 inchangé.
+zones étroites sont vérifiés. L’utilisateur confirme les deux appareils réels. .177 inchangé.
 
 ## Variantes matérielles testées
 
@@ -30,11 +30,12 @@ après effacement du filtre sont disponibles en DE/EN/FR. Les sources enregistr�
 ne sont ni réécrites ni supprimées ; la reprise reste explicite.
 La vérification native sur .68 réussit : 32 sources anciennes identiques octet par
 octet, homonymes, reprises distinctes et données conservées. Trois sauvegardes
-complètes restent ; .177 inchangé. La qualification mobile réelle reste ouverte.
-Le test Chrome téléphone/tablette sur .68 est préparé avec sauvegarde récente,
-deux projets serveur propres au test et page temporaire de sauvegarde/instructions.
-L’utilisateur vérifiera recherche, sélection, orientation/clavier et reprises
-distinctes sur les deux appareils ; résultats réels encore attendus.
+complètes restent ; .177 inchangé. Le 22/10/2026, l’utilisateur confirme Chrome sur
+Blackview BV6200 Pro (Android 14/DokeOS 4.0) et Samsung Tab A6 (Android 11/LineageOS) :
+sélection, recherche, association aux onglets, portrait/paysage et reprises A/B
+distinctes fonctionnent. Projets serveur, page et entrée latérale propres au test
+sont nettoyés ; données initiales conservées. Zéro source avant la première reprise
+explicite d’un projet ne signifiait pas une perte de données.
 
 **Arrêt du navigateur pendant un nouvel import réussi sur .68.** L’arrêt forcé
 des processus Chrome après écriture locale, avant mise à jour du pointeur,

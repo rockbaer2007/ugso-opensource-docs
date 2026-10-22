@@ -10,15 +10,18 @@ visible. Entrée et filtrage immédiat restent disponibles ; effacer la recherch
 réinitialise le filtre. Avec **0 source locale**, ouvrir et appliquer explicitement
 un projet serveur ou importer une configuration. La recherche filtre uniquement
 les brouillons de ce navigateur, pas les projets serveur. Des zones de test de
-320/390/768 pixels sont vérifiées ; le test réel sur téléphone/tablette reste ouvert.
+320/390/768 pixels et le test réel sur téléphone/tablette sont validés.
 
-::: info Qualification mobile préparée – résultats utilisateur attendus
-Le test réel de l’App 0.1.333 dans **Chrome sur téléphone et tablette** est préparé
-sur .68. Sauvegarde complète récente et preuves PC conservées. Deux projets serveur
-de test : **MOB68 Mobilprüfung A Sonne** et **MOB68 Mobilprüfung B Sonne**. Les sept
-projets existants restent intacts ; .177 inchangé. Le test n’est pas encore validé.
+::: info Qualification mobile réussie – confirmation utilisateur du 22/10/2026
+L’utilisateur confirme l’App 0.1.333 dans **Chrome sur téléphone et tablette** via
+.68 : sélection, bouton Rechercher, association aux onglets, portrait/paysage et
+reprises distinctes A/B fonctionnent. Appareils : Blackview BV6200 Pro sous
+Android 14/DokeOS 4.0 et Samsung Tab A6 sous Android 11/LineageOS.
+Projets serveur temporaires, page de test et entrée latérale propre au test sont
+nettoyés ; les sept projets initiaux et données restent intacts. .177 inchangé.
+Les résultats sur appareils réels sont rapportés par l’utilisateur.
 
-Sur **chaque appareil séparément** :
+Procédure validée sur **chaque appareil séparément** :
 
 1. Télécharger les sources locales avec le bouton de sauvegarde de la page de test
    temporaire. Avant de charger un projet, utiliser aussi **Exporter** dans l’éditeur
@@ -41,8 +44,8 @@ Sur **chaque appareil séparément** :
    et sources ; fermer les onglets de test ou y réimporter la configuration initiale.
 
 Les brouillons sont distincts par appareil/profil, hors sauvegarde complète HA.
-Les objets de test restent disponibles jusqu’au retour utilisateur ; nettoyage et
-conservation de trois sauvegardes complètes suivront les deux tests réels.
+Liens et projets temporaires sont retirés après les tests. Les preuves PC restent
+conservées ; .68 garde ses trois sauvegardes complètes les plus récentes.
 :::
 
 ::: info Vue des brouillons avec recherche – App 0.1.332

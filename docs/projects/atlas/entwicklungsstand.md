@@ -3,7 +3,7 @@
 **App 0.1.333: sichtbarer Suchen-Button für lokale Entwürfe.** Enter und
 Livefilter bleiben erhalten. Ein eigener Hinweis erklärt 0 lokale Quellen und
 den nötigen ersten Projektimport. DE/EN/FR, Suchen/Enter und schmale Testbereiche
-sind geprüft; echte Mobilgeräte bleiben gesondert offen. .177 unverändert.
+sind geprüft. Der Nutzer bestätigt auch beide echten Mobilgeräte. .177 unverändert.
 
 ## Getestete Hardwarevarianten
 
@@ -27,11 +27,12 @@ der Auswahl nach Filterende sind in DE/EN/FR verfügbar. Gespeicherte Quellen
 werden weder umgeschrieben noch gelöscht; die Wiederherstellung bleibt ausdrücklich.
 Die native Prüfung auf .68 besteht mit 32 bytegleich erhaltenen alten Quellen,
 gleichnamigen Projekten, getrennter Wiederherstellung und erhaltenen Bestandsdaten.
-Drei Vollbackups bleiben, .177 unverändert. Echte Mobilprüfung bleibt offen.
-Die Chrome-Prüfung auf Handy und Tablet über .68 ist jetzt mit frischem Backup,
-zwei eigenen Server-Testprojekten und einer temporären Sicherungs-/Anleitungsseite
-vorbereitet. Suche, Auswahl, Orientierung/Tastatur und getrennte Wiederherstellung
-sind vom Nutzer auf beiden Geräten zu prüfen; Ergebnisse stehen noch aus.
+Drei Vollbackups bleiben, .177 unverändert. Am 22.10.2026 bestätigt der Nutzer
+die Chrome-Prüfung auf Blackview BV6200 Pro (Android 14/DokeOS 4.0) und Samsung
+Tab A6 (Android 11/LineageOS): Auswahl, Suche, Tab-Zuordnung, Hoch-/Querformat und
+getrennte A/B-Wiederherstellung funktionieren. Die eigenen Serverprojekte,
+Startseite und der Seitenleisteneintrag sind bereinigt; Bestandsdaten erhalten.
+Null Quellen vor der ersten ausdrücklichen Projektübernahme war kein Datenverlust.
 
 **Browserabbruch während erneutem Dateiimport auf .68 bestanden.** Ein echter
 Chrome-Prozessabbruch nach lokalem Datensatzschreiben, vor dem Tab-Zeiger,

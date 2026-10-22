@@ -9,16 +9,17 @@ From App **0.1.333**, **Local drafts** includes a visible **Search** button.
 Enter and live filtering remain available; **Clear search** resets the filter.
 With **0 local sources**, first open and safely apply a server project or import
 a configuration. Search only filters this browser's drafts, not server projects.
-Narrow 320/390/768-pixel test containers pass; real phone/tablet qualification
-remains pending.
+Narrow 320/390/768-pixel test containers and real phone/tablet qualification pass.
 
-::: info Mobile qualification prepared – user results pending
-Real **Chrome on phone and tablet** qualification of App 0.1.333 is prepared on
-.68. A fresh full backup and PC evidence are retained. Two owned server projects
-are **MOB68 Mobilprüfung A Sonne** and **MOB68 Mobilprüfung B Sonne**; all seven
-existing projects remain intact. .177 is untouched. This is not yet a passed test.
+::: info Mobile qualification passed – user confirmation on 2026-10-22
+The user confirms App 0.1.333 in **Chrome on phone and tablet** through .68:
+selection, Search button, tab association, portrait/landscape and separate A/B
+recovery work. Devices: Blackview BV6200 Pro, Android 14/DokeOS 4.0, and Samsung
+Tab A6, Android 11/LineageOS. Temporary server projects, guide and owned sidebar
+entry are cleaned up; seven original projects and existing data remain intact.
+.177 is untouched. Actual-device results are user-reported.
 
-On **each device separately**:
+The qualified procedure on **each device separately**:
 
 1. Use the temporary test guide's backup button to download local draft sources.
    Before loading a test project, also use the normal Editor **Export** and retain
@@ -41,8 +42,8 @@ On **each device separately**:
    sources; close the owned test tabs or import the original configuration there.
 
 Browser drafts are separate per device/profile and are outside HA full backups.
-Fixtures remain available until user feedback; cleanup and retention of three
-full backups follow completion of both device tests.
+Temporary links and projects are removed after completion. PC evidence is retained;
+.68 retains its three newest full backups.
 :::
 
 ::: info Searchable draft overview – App 0.1.332

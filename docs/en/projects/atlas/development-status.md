@@ -3,7 +3,7 @@
 **App 0.1.333: explicit Search button for local drafts.** Enter and live
 filtering remain available. A distinct message explains zero local sources and
 the initial project import. DE/EN/FR, Search/Enter and narrow test containers are
-checked; actual mobile-device qualification remains pending. .177 is untouched.
+checked. The user also confirms both actual mobile devices. .177 is untouched.
 
 ## Tested hardware variants
 
@@ -27,11 +27,11 @@ clearing the filter are available in DE/EN/FR. Stored sources are neither rewrit
 nor deleted; recovery remains explicit.
 Native .68 qualification passes with 32 byte-identical original sources, duplicate
 names, independent recoveries and preserved data. Three full backups remain;
-.177 is untouched. Real mobile qualification remains open.
-Chrome phone/tablet qualification on .68 is now prepared with a fresh backup,
-two owned server test projects and a temporary backup/instruction page. The user
-will check search, selection, orientation/keyboard and separate recovery on both
-devices; actual device results are still pending.
+.177 is untouched. On 2026-10-22 the user confirms Chrome qualification on
+Blackview BV6200 Pro (Android 14/DokeOS 4.0) and Samsung Tab A6 (Android 11/LineageOS):
+selection, search, tab association, portrait/landscape and separate A/B recovery
+work. Owned server projects, guide and sidebar entry are cleaned up; existing data
+is retained. Zero sources before the first explicit project apply was not data loss.
 
 **Browser termination during repeated file import passes on .68.** Forced Chrome
 process termination after the local record write, before the tab pointer update,

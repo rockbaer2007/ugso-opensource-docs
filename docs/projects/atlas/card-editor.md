@@ -10,16 +10,18 @@ Button **Suchen**; Enter und laufende Filterung bleiben verfügbar. **Suche leer
 setzt den Filter zurück. Bei **0 lokalen Quellen** zuerst ein Serverprojekt öffnen
 und gesichert übernehmen oder eine Konfiguration importieren. Die Suche betrifft
 nur Entwürfe dieses Browsers und lädt keine Serverprojekte. Schmale Testbereiche
-mit 320/390/768 Pixeln sind geprüft; die echte Handy-/Tablet-Prüfung bleibt offen.
+mit 320/390/768 Pixeln sind geprüft; die echte Handy-/Tablet-Prüfung ist bestanden.
 
-::: info Mobilprüfung vorbereitet – Rückmeldung noch offen
-Für App 0.1.333 ist die echte Prüfung in **Chrome auf Handy und Tablet** über .68
-vorbereitet. Vollbackup und PC-Sicherungen sind vorhanden; zwei eigene Server-
-Testprojekte heißen **MOB68 Mobilprüfung A Sonne** und **MOB68 Mobilprüfung B Sonne**.
-Die sieben bisherigen Serverprojekte bleiben erhalten. .177 wird nicht verändert.
-Die Mobilprüfung ist damit noch nicht bestanden.
+::: info Mobilprüfung bestanden – Nutzerbestätigung vom 22.10.2026
+Der Nutzer bestätigt App 0.1.333 in **Chrome auf Handy und Tablet** über .68:
+Auswahl, Suche mit Button, Tab-Zuordnung, Hoch-/Querformat und getrennte
+Wiederherstellung von A/B funktionieren. Geräte: Blackview BV6200 Pro mit
+Android 14/DokeOS 4.0 und Samsung Tab A6 mit Android 11/LineageOS.
+Die temporären Serverprojekte, Startseite und der eigene Seitenleisteneintrag
+sind bereinigt; sieben bestehende Projekte und vorhandene Daten bleiben erhalten.
+.177 unverändert. Geräteergebnisse beruhen auf der Nutzerprüfung.
 
-Auf **jedem Gerät getrennt**:
+Der geprüfte Ablauf auf **jedem Gerät getrennt**:
 
 1. Die lokalen Browserquellen über den Sicherungsknopf der temporären Teststartseite
    herunterladen. Im normalen Editor vor dem Laden eines Testprojekts zusätzlich
@@ -43,8 +45,8 @@ Auf **jedem Gerät getrennt**:
    eigene Testtabs schließen oder die Originalkonfiguration darin zurückimportieren.
 
 Browserentwürfe sind pro Gerät/Profil getrennt und nicht Teil eines HA-Vollbackups.
-Die Testobjekte bleiben bis zur Rückmeldung verfügbar. Bereinigung und Begrenzung
-auf drei Vollbackups erfolgen nach Abschluss beider Geräteprüfungen.
+Die temporären Links und Testprojekte sind nach Abschluss entfernt. Sicherungen
+bleiben auf dem PC erhalten; auf .68 werden die drei neuesten Vollbackups behalten.
 :::
 
 ::: info Durchsuchbare Entwurfsübersicht – App 0.1.332
