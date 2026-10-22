@@ -5,8 +5,19 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info App 0.1.334 – confirmation de projet visible
+L’aperçu avec **Sauvegarder et reprendre** apparaît directement sous les actions
+de projet, avant les brouillons locaux. Il reçoit le focus et devient visible
+par défilement, avec message de disponibilité. Chargement, conseil de sélection
+et limite de 15 secondes des requêtes de lecture rendent les erreurs visibles.
+Écritures et contrôles de révision inchangés. Zones étroites, DE/EN/FR, erreur de
+lecture, délai et nouvel essai sont vérifiés. Nouvelle vérification réelle sur
+téléphone et conflit mobile encore attendus. Exporter les modifications avant
+rechargement. .177 inchangé.
+:::
+
 ::: info Préparé : conflit d’enregistrement entre appareils sur .68
-App 0.1.333 : un seul projet serveur propre au test est ouvert dans Chrome sur
+App 0.1.334 : un seul projet serveur propre au test est ouvert dans Chrome sur
 téléphone et tablette. Sauvegarde complète récente et preuves PC conservées ;
 sept projets initiaux intacts. Le guide temporaire **ATLAS Mobilkonflikt** figure
 dans la barre latérale HA, sans restriction administrateur. Résultats réels attendus.

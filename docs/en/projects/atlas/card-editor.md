@@ -5,8 +5,18 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info App 0.1.334 – visible project confirmation
+The preview containing **Back up and apply** now sits directly below project
+actions, before local drafts. Opening focuses and scrolls it into view, with an
+explicit ready message. Loading feedback, a selection hint and a 15-second limit
+for read-only project requests expose failures. Writes and revision checks are
+unchanged. Narrow containers, DE/EN/FR, read failure, timeout and retry pass.
+Real phone rechecking and the mobile conflict test remain pending. Export own
+changes before reloading. .177 is untouched.
+:::
+
 ::: info Prepared: cross-device save conflict on .68
-App 0.1.333: one owned shared server project is opened in Chrome on phone and
+App 0.1.334: one owned shared server project is opened in Chrome on phone and
 tablet. A fresh full backup and PC evidence are retained; seven original projects
 remain intact. The temporary guide is available as **ATLAS Mobilkonflikt** in
 the HA sidebar, without admin-only. Actual-device results are pending.

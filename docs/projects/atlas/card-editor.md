@@ -5,8 +5,19 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info App 0.1.334 – sichtbare Projektbestätigung
+Die Vorschau mit **Gesichert übernehmen** steht jetzt direkt unter den
+Projektbuttons, vor den lokalen Entwürfen. Beim Öffnen wird sie fokussiert und
+in den sichtbaren Bereich gescrollt; eine Meldung bestätigt die Bereitschaft.
+Ladeanzeige, Auswahlhinweis und ein 15-Sekunden-Limit für lesende Projektanfragen
+machen Fehler sichtbar. Schreibanfragen und Konfliktprüfungen bleiben unverändert.
+Schmale Testbereiche, DE/EN/FR, Lesefehler, Zeitlimit und erneutes Öffnen sind
+geprüft. Die erneute echte Handyprüfung und der Mobilkonflikttest bleiben offen.
+Vor einem Neuladen eigene Änderungen exportieren. .177 bleibt unverändert.
+:::
+
 ::: info Vorbereitet: geräteübergreifender Speicherkonflikt auf .68
-App 0.1.333: Ein eigenes gemeinsames Serverprojekt wird in Chrome auf Handy
+App 0.1.334: Ein eigenes gemeinsames Serverprojekt wird in Chrome auf Handy
 und Tablet geöffnet. Frisches Vollbackup und PC-Sicherungen sind vorhanden;
 sieben Bestandsprojekte bleiben erhalten. Die temporäre Anleitung ist in der
 HA-Seitenleiste als **ATLAS Mobilkonflikt** erreichbar, ohne Admin-only.

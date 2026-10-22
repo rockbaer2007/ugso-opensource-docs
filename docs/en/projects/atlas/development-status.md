@@ -1,10 +1,16 @@
 # Development Status
 
+**App 0.1.334:** project preview and confirmation appear beside project actions,
+before local drafts. Focus/scroll, loading feedback and bounded read requests
+address invisible or indefinitely pending opening previews. Checked on .68 with
+existing data retained; real phone rechecking and shared save conflict remain
+pending. .177 is untouched.
+
 **Next device qualification prepared:** one shared server project on phone and
 tablet through .68, stale save preview and Wi-Fi loss before apply.
 Full backup dbc776c2, PC evidence and an owned guide/sidebar are available.
 Existing data and .177 remain intact; actual results are pending. Cleanup and
-three full backups follow completion. App 0.1.333 remains unchanged.
+three full backups follow completion. Continue with App 0.1.334 and visible confirmation.
 
 **App 0.1.333: explicit Search button for local drafts.** Enter and live
 filtering remain available. A distinct message explains zero local sources and
@@ -23,7 +29,7 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-22 · HA App 0.1.333 · HACS integration 0.1.306.**
+**As of 2026-10-22 · HA App 0.1.334 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
 **App 0.1.332 adds the searchable draft overview.** Project, script filename,

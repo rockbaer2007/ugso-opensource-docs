@@ -1,10 +1,16 @@
 # Entwicklungsstand
 
+**App 0.1.334:** Projektvorschau und Bestätigung stehen vor den lokalen Entwürfen
+direkt bei den Projektbuttons. Fokus/Scrollen, Ladeanzeige und begrenzte lesende
+Anfragen verhindern eine unsichtbare oder dauerhaft wartende Öffnungsprüfung.
+Auf .68 geprüft, Bestandsdaten erhalten; erneute Handyprüfung und gemeinsamer
+Speicherkonflikt noch offen. .177 unverändert.
+
 **Nächste Geräteprüfung vorbereitet:** Gemeinsames Serverprojekt auf Handy und
 Tablet über .68, veraltete Speichervorschau und WLAN-Abbruch vor der Übernahme.
 Vollbackup dbc776c2, PC-Sicherung und eigene Anleitung/Seitenleiste sind vorhanden.
 Bestandsdaten und .177 unverändert; Ergebnisse noch offen. Bereinigung und drei
-Vollbackups nach Abschluss. App 0.1.333 bleibt unverändert.
+Vollbackups nach Abschluss. Fortsetzung mit App 0.1.334 und sichtbarer Bestätigung.
 
 **App 0.1.333: sichtbarer Suchen-Button für lokale Entwürfe.** Enter und
 Livefilter bleiben erhalten. Ein eigener Hinweis erklärt 0 lokale Quellen und
@@ -23,7 +29,7 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 22.10.2026 · HA-App 0.1.333 · HACS-Integration 0.1.306.**
+**Stand: 22.10.2026 · HA-App 0.1.334 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
 **App 0.1.332 ergänzt die durchsuchbare Entwurfsübersicht.** Projekt, Scriptdatei,
