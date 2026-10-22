@@ -1,15 +1,7 @@
----
-title: Leitfäden
-description: English placeholder page for Leitfäden in the UGSo Open Source documentation.
----
-# Leitfäden
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.2**, revision [26e54e6](https://github.com/Lint-Free-Technology/uix/commit/26e54e6d4973231a393933e6479ed1b03cc86cd3), reviewed 22 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
-This English page has been added so the Open Source documentation has a complete language path. The detailed English translation is still being expanded.
+# UIX Guides
 
-The German source page is currently the reference: [projects/uix/guides.md](/projects/uix/guides).
+[![light-logo-icon](/projects/uix/assets/images/mixed.png)](https://uix-guides.lf.technology)
 
-## Status
-
-- Language path exists.
-- Navigation and builds can resolve this page.
-- Detailed translation can be refined in a later documentation pass.
+The UIX community curates a resource of UIX guides. These are available at <https://uix-guides.lf.technology>. UIX Guides are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0).

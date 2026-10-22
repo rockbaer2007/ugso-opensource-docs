@@ -1,15 +1,56 @@
 ---
-title: Abschnittshintergründe
-description: English placeholder page for Abschnittshintergründe in the UGSo Open Source documentation.
+description: Learn all about styling section background color and opacity
 ---
-# Abschnittshintergründe
 
-This English page has been added so the Open Source documentation has a complete language path. The detailed English translation is still being expanded.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.2**, revision [26e54e6](https://github.com/Lint-Free-Technology/uix/commit/26e54e6d4973231a393933e6479ed1b03cc86cd3), reviewed 22 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
-The German source page is currently the reference: [projects/uix/using/section-backgrounds.md](/projects/uix/using/section-backgrounds).
+# Styling section backgrounds
 
-## Status
+Section backgrounds are a sibling to a section element so cannot be targeted by section UI eXtension directly. Two options are available to style section backgrounds. One is a simple method using special UIX vars for color and opacity, building on from the options provided by Home Assistant. The second option allows for styling the background directly using UIX styling.
 
-- Language path exists.
-- Navigation and builds can resolve this page.
-- Detailed translation can be refined in a later documentation pass.
+## Option 1: use UIX CSS variables
+
+UIX can style a section background color and opacity using the CSS variables `--uix-section-background-color` and `--uix-section-background-opacity` as applied to the section or parent. As usual for UIX CSS styling, templates are supported.
+
+::: info
+The section background `hui-section-background` is a sibling to the section, so setting `--ha-section-background-color` in section UIX styling will not apply. UIX applies direct styling of `--section-background-color` and `--section-background-opacity` to `hui-section-background` on each update.
+
+:::
+
+To apply the background, the section background config must be set. Minimal shorthand background config supported by Home Assistant is `background: true`, which will include the `hui-section-background`  using defaults for background color and opacity.
+
+::: tip
+```yaml
+type: grid
+cards: []
+background: true
+uix:
+  style: |
+    :host {
+        --uix-section-background-color: {{ 'red' if is_state('input_boolean.test_boolean', 'on') else 'green' }};
+        --uix-section-background-opacity: {{ states('input_number.increment_test') | float / 100 }};
+    }
+```
+
+:::
+
+## Option 2: add UIX styling to section background config
+
+You can add UIX styling options to the background config and it will target the background element. The whole section config is available in templates.
+
+For background and opacity you are best to set `--ha-section-background-color` and `--ha-section-background-opacity`. You can style the background and opacity directly but you would need to use `!important`.
+
+::: tip
+```yaml
+type: grid
+cards: []
+background:
+  uix:
+    style: |
+      :host {
+        --ha-section-background-color: yellow;
+        border: 2px solid red;
+        box-shadow: 10px 5px 5px red;
+      }
+```
+:::

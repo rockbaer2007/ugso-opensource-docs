@@ -19,8 +19,8 @@ UI eXtension comprend [UIX Styling](./using/index.md), [UIX Forge](./forge/index
 
 ## Nouveautés de UIX 8.4.0
 
-::: info Éditeur Forge : comparaison ciblée du 22 octobre 2026
-L’[éditeur visuel de cartes et badges](./forge/forge#visual-editor-cards-and-badges) est annoncé dès **9.0.0-beta.2**. Sa section a été ajoutée en DE/EN/FR. Cette comparaison ciblée de l’aperçu ne change pas la base stable.
+::: info Revue complète du 22 octobre 2026
+Les 64 sources ont été comparées à **dev 26e54e6 / 9.0.0-beta.2**. EN reprend les textes originaux complets ; DE/FR ajoutent les contenus manquants et corrigent les exemples. La base stable reste 8.4.0. Voir l’[état de la traduction](./translation-status) pour le périmètre et les preuves.
 :::
 
 ::: info Aperçu comparé séparément

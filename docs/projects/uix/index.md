@@ -31,8 +31,8 @@ UIX besteht aus drei großen Bereichen:
 
 ## Neu in UIX 8.4.0
 
-::: info Forge-Editor: gezielter Abgleich vom 22.10.2026
-Der [visuelle Editor für Karten und Badges](./forge/forge#visual-editor-cards-and-badges) ist laut kanonischer Meldung ab **9.0.0-beta.2** verfügbar. Sein Abschnitt wurde in DE/EN/FR ergänzt. Das ist ein gezielter Vorschau-Abgleich, keine neue stabile Versionsbasis.
+::: info Gesamtprüfung vom 22.10.2026
+Alle 64 Originalseiten wurden mit `dev`-Revision **26e54e6 / 9.0.0-beta.2** abgeglichen. EN enthält jetzt die vollständigen Originaltexte; DE/FR ergänzen fehlende Inhalte und korrigierte Beispiele. Die stabile Basis bleibt 8.4.0. Umfang und Nachweise stehen im [Übersetzungsstatus](./translation-status).
 :::
 
 ::: info Vorschau separat abgeglichen

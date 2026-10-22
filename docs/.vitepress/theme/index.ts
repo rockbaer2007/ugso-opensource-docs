@@ -204,7 +204,7 @@ const UgsoLayout = defineComponent({
     let observer: MutationObserver | undefined
 
     const updateRouteClass = () => {
-      document.body.classList.toggle('uix-doc-route', /^\/(?:fr\/)?projects\/uix\//.test(route.path))
+      document.body.classList.toggle('uix-doc-route', /^\/(?:(?:en|fr)\/)?projects\/uix\//.test(route.path))
       document.body.classList.toggle('ugso-hide-locale-switch', !hasVisibleLocaleSwitch(route.path))
     }
 
@@ -232,19 +232,22 @@ const UgsoLayout = defineComponent({
     return () =>
       h(DefaultTheme.Layout, null, {
         'doc-after': () =>
-          /^\/(?:fr\/)?projects\/uix\//.test(route.path)
+          /^\/(?:(?:en|fr)\/)?projects\/uix\//.test(route.path)
             ? (() => {
                 const isFrench = route.path.startsWith('/fr/')
+                const isEnglish = route.path.startsWith('/en/')
                 return h('div', { class: 'uix-version-footer' }, [
-                  h('strong', isFrench ? 'Traduction française d’UIX' : 'UIX deutsche Übersetzung'),
+                  h('strong', isEnglish ? 'UIX English source mirror' : isFrench ? 'Traduction française d’UIX' : 'UIX deutsche Übersetzung'),
                   h(
                     'span',
-                    isFrench
+                    isEnglish
+                      ? 'Stable baseline: UIX 8.4.0, Home Assistant 2026.10.0 minimum, revision 71b8ccd. Canonical documentation reviewed on 22 October 2026; Forge preview follows dev 26e54e6 / 9.0.0-beta.2. The original English documentation remains authoritative.'
+                      : isFrench
                       ? 'Base stable : UIX 8.4.0, Home Assistant 2026.10.0 minimum. Documentation comparée à la version publiée, révision 71b8ccd, le 08/10/2026. La documentation originale en anglais reste la référence.'
                       : 'Stabile Basis: UIX 8.4.0, benötigt Home Assistant ab 2026.10.0. Doku mit dem Release-Stand 71b8ccd abgeglichen, Stand 08.10.2026. Maßgeblich bleibt die englische Originaldokumentation.'
                   ),
                   h('span', [
-                    h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),
+                    h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical English documentation' : isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),
                     ' · ',
                     h(
                       'a',
@@ -253,17 +256,17 @@ const UgsoLayout = defineComponent({
                         target: '_blank',
                         rel: 'noopener'
                       },
-                      isFrench ? 'Version stable 8.4.0' : 'Stabile Version 8.4.0'
+                      isEnglish ? 'Stable release 8.4.0' : isFrench ? 'Version stable 8.4.0' : 'Stabile Version 8.4.0'
                     ),
                     ' · ',
-                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389', target: '_blank', rel: 'noopener' }, isFrench ? 'Révision publiée 71b8ccd' : 'Release-Revision 71b8ccd'),
+                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389', target: '_blank', rel: 'noopener' }, isEnglish ? 'Release revision 71b8ccd' : isFrench ? 'Révision publiée 71b8ccd' : 'Release-Revision 71b8ccd'),
                     ' · ',
-                    h('a', { href: isFrench ? '/fr/projects/uix/translation-status' : '/projects/uix/translation-status' }, isFrench ? 'État de la traduction' : 'Übersetzungsstatus')
+                    h('a', { href: isEnglish ? '/en/projects/uix/translation-status' : isFrench ? '/fr/projects/uix/translation-status' : '/projects/uix/translation-status' }, isEnglish ? 'Translation status' : isFrench ? 'État de la traduction' : 'Übersetzungsstatus')
                   ]),
                   h('span', [
-                    isFrench ? 'Documentation originale d’UIX par ' : 'Originale UIX-Dokumentation von ',
+                    isEnglish ? 'Original UIX documentation by ' : isFrench ? 'Documentation originale d’UIX par ' : 'Originale UIX-Dokumentation von ',
                     h('a', { href: 'https://github.com/Lint-Free-Technology/uix', target: '_blank', rel: 'noopener' }, 'Lint-Free-Technology/uix'),
-                    isFrench ? ', publiée sous licence ' : ', lizenziert unter ',
+                    isEnglish ? ', licensed under ' : isFrench ? ', publiée sous licence ' : ', lizenziert unter ',
                     h('a', { href: 'https://creativecommons.org/licenses/by/4.0/', target: '_blank', rel: 'noopener' }, 'CC BY 4.0'),
                     '.'
                   ])

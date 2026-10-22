@@ -1,382 +1,262 @@
 ---
 title: Foundries
-description: Wiederverwendbare UIX-Forge-Konfigurationen mit Global Foundries, YAML-Dateien und Billets
+description: Wiederverwendbare Forge-Konfigurationen, native Basis, Vererbung, YAML-Dateien, Billets und Styling.
 ---
 # Foundries
 
-Foundries sind wiederverwendbare Forge-Vorlagen. Eine Foundry beschreibt ein Muster aus `forge`, `element`, `uix`, Makros und Billets. Einzelne Forge-Instanzen können diese Vorlage verwenden und gezielt Werte überschreiben.
+Eine **Foundry** ist eine benannte Forge-Konfiguration in Home Assistant. Definiere `forge`, `element` und bei vom Forge-Editor exportierten nativen Einstellungen optional `element_base` einmal und verwende sie mit dem obersten Schlüssel `foundry:` mehrfach. Lokale Werte überschreiben die Vorlage.
 
-Ab **UIX 9.0.0-beta.0** kann eine Foundry zusätzlich `element_base` bereitstellen. Diese elementeigene Basis und das Forge-Overlay `element` werden unabhängig aufgelöst. Enthält die aufgelöste Konfiguration `element_base`, aktiviert sie die [geschichtete Konfiguration](./forge#layered-configuration). Diese Vorschau gehört nicht zur stabilen Version 8.4.0.
+::: info Versionsstand
+Abgeglichen mit [UIX dev `26e54e6`](https://github.com/Lint-Free-Technology/uix/blob/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source/forge/foundries.md), 9.0.0-beta.2. Native Basis und visueller Editor gehören zur Vorschau; die stabile Basis dieser Dokumentation bleibt 8.4.0.
+:::
 
-## Global Foundries
+## Global Foundries {#global-foundries}
 
-Global Foundries stehen dashboardweit zur Verfügung. Sie eignen sich für wiederkehrende Kacheln, Standardstile, Lock-Muster, Badge-Layouts oder Kombinationen aus Sparks.
+Die reservierte Foundry `global` wird automatisch auf alle Forges angewendet. Danach folgt `global_<mold>`, etwa `global_card`, `global_badge` oder `global_row`. Der Mold ergibt sich aus der lokalen Konfiguration oder der ausdrücklich ausgewählten Foundry. Damit lassen sich gemeinsame Makros, Sparks und Standardstile festlegen, ohne jede Karte mit einer Foundry-Referenz zu versehen.
 
 ## Foundries verwalten
 
 ### UI Foundries
 
-UI Foundries werden in der Home-Assistant-Oberfläche gepflegt. Sie sind bequem für kleinere Vorlagen und schnelle Anpassungen.
+Öffne **Einstellungen → Geräte & Dienste → UI eXtension → Konfigurieren → UI-Foundries verwalten**. Dort kannst du Foundries hinzufügen, bearbeiten oder nach Bestätigung löschen. Vergib einen eindeutigen Namen und ein YAML-Konfigurationsobjekt. Eine einzelne UI Foundry enthält direkt `forge`, `element` usw., keinen Dateicontainer `uix_foundries`.
 
 ### YAML File Foundries
 
-YAML File Foundries liegen in Dateien und sind besser für größere oder versionierte Konfigurationen geeignet.
+Dateien im oder erreichbar vom HA-Konfigurationsverzeichnis eignen sich für größere Sammlungen, Versionsverwaltung, Texteditoren, YAML-Anker, `!include` und `!secret`. Sie werden mit dem nativen HA-YAML-Loader geladen.
 
 #### Dateiformat
 
+Der Dateicontainer heißt **`uix_foundries`**, nicht `foundries`. Sein Wert ist eine Zuordnung von Namen auf Konfigurationen:
+
 ```yaml
-foundries:
-  living_room_tile:
+uix_foundries:
+  light_tile:
     forge:
       mold: card
     element:
       type: tile
-      entity: "{{ entity }}"
-    billets:
-      entity: light.living_room
+      entity: light.bed_light
+  switch_tile:
+    forge:
+      mold: card
+    element:
+      type: tile
+      entity: switch.living_room
 ```
 
 #### YAML-Anker
 
-YAML-Anker können gemeinsame Teile wiederverwenden.
+Anker `&name` und Merge-Keys `<<: *name` können Optionen auf derselben Ebene teilen, etwa Formatierungen mehrerer Entity-Zeilen. YAML-Merge-Keys sind **flach**: am Foundry-Wurzelobjekt würden sie ein komplettes `element` ersetzen. Für die tiefe Kombination von `forge` und `element` verwende [verschachtelte Foundries](#verschachtelte-foundries).
 
-```yaml
-defaults: &tile_defaults
-  forge:
-    mold: card
-  element:
-    type: tile
-
-foundries:
-  light_tile:
-    <<: *tile_defaults
-    billets:
-      entity: light.living_room
-```
-
-::: warning YAML-Merge-Keys sind flach
-YAML-Merge-Keys mergen nur die aktuelle Ebene. Verschachtelte Maps werden nicht tief zusammengeführt. Für tiefe Kombinationen nutze lieber Foundry-Merge-Verhalten.
-
-:::
 #### Datei registrieren
 
-Eine YAML-Datei muss in UIX registriert werden, damit ihre Foundries geladen werden. Der genaue Ort hängt von deiner Home-Assistant-Konfiguration ab, typisch ist ein Pfad unter `/config/uix/`.
+Unter **Konfigurieren → Foundry-Dateien verwalten → Datei hinzufügen** den Pfad angeben, beispielsweise `/config/uix/foundries.yaml`. Ein Pfad relativ zum Konfigurationsverzeichnis funktioniert ebenfalls.
+
+Vor dem Speichern prüft UIX Existenz, YAML-Syntax und den erforderlichen Schlüssel `uix_foundries`; Fehler verhindern die Registrierung.
 
 #### Dateien neu laden
 
-Nach Änderungen an YAML-Dateien müssen die Foundries neu geladen werden. Danach greifen neue Forge-Instanzen auf die aktualisierte Vorlage zu.
+Nach Dateiänderungen **Foundry-Dateien neu laden** wählen. UIX lädt die registrierten Dateien erneut und aktualisiert die Konfiguration; ein HA-Neustart ist nicht erforderlich.
+
+Dateien werden beim ersten Abruf durch den Browser und bei Foundry-Aktualisierungen gelesen. Das Neuladen aktualisiert alle verbundenen Browser. Bei YAML-Dashboards liest auch der normale **Aktualisieren**-Button über `config-refresh` die Dateien neu. Im YAML-Reiter der Home-Assistant-Entwicklerwerkzeuge gibt es außerdem **UIX Foundries** zum Neuladen mit Fehleranzeige.
 
 #### Registrierung entfernen
 
-Nicht mehr benötigte Dateien können aus der Foundry-Registrierung entfernt werden. Bereits konfigurierte Dashboards sollten danach keine Foundries aus dieser Datei mehr referenzieren.
+**Datei entfernen** entfernt die Registrierung und die aus dieser Datei geladenen Foundries, nicht die Datei auf dem Datenträger. Karten, die solche Foundries referenzieren, müssen danach angepasst werden.
 
 #### Vorrang
 
-Wenn Foundries denselben Namen verwenden, entscheidet die UIX-Ladereihenfolge. Halte Namen eindeutig, damit keine unbeabsichtigte Vorlage eine andere überschreibt.
+Bei gleichem Namen gewinnt eine UI Foundry gegenüber einer Datei-Foundry. Bei mehreren Dateien gewinnt die später geladene Definition. Verwende eindeutige Namen, um unbeabsichtigte Überschreibungen zu vermeiden.
 
 ## Foundry verwenden
 
-```yaml
-type: custom:uix-forge
-forge:
-  foundry: living_room_tile
-```
-
-Mit Überschreibung:
+`foundry` steht neben `type`, nicht innerhalb von `forge`:
 
 ```yaml
 type: custom:uix-forge
-forge:
-  foundry: living_room_tile
-  billets:
-    entity: light.kitchen
+foundry: light_tile
+element:
+  entity: light.kitchen
 ```
+
+Die Foundry-Fragmente werden angewendet, als stünden sie direkt in der Forge-Konfiguration. Lokale Werte haben Vorrang.
 
 ## Struktur einer Foundry-Konfiguration
 
-Eine Foundry kann `foundry`, `forge`, `element` und ab UIX 9.0.0-beta.0 `element_base` enthalten. `element_disabled_paths` ist ausschließlich lokal an der nutzenden Forge-Instanz erlaubt, auch nicht in `global` oder `global_<mold>`.
+Eine Foundry kann `foundry`, `forge`, `element` und optional `element_base` enthalten. `element` enthält die von Forge verarbeiteten Werte. Foundry-`element_base` wird durch die Vererbung und dann mit einer lokalen Basis zusammengeführt; ihre Templates verarbeitet HA bzw. das eingebettete Element, nicht Forge. Erzeuge oder aktualisiere diese native Quelle über das YAML des **Export**-Reiters und erhalte sie für künftige Unterstützung im visuellen Editor. `element_disabled_paths` bleibt ausschließlich lokal; auch `global` und `global_<mold>` dürfen es nicht setzen.
+
+### Foundry-Typ mit dem nativen Editor verwenden
+
+Eine Foundry kann einen konkreten `element.type` liefern. Ohne native Basis bleibt das eine gewöhnliche vollständige Forge-Konfiguration. Für den Native-Editor muss die lokale Basis denselben konkreten Typ wiederholen:
 
 ```yaml
-foundries:
-  my_foundry:
-    forge:
-      mold: card
-      sparks: []
-    element:
-      type: tile
-      entity: "{{ entity }}"
-    uix:
-      style: |
-        ha-card {
-          border: 1px solid var(--primary-color);
-        }
-    macros: {}
-    billets:
-      entity: light.living_room
+# Foundry room_tile
+forge:
+  mold: card
+element:
+  type: tile
+  name: "{{ config.entity }}"
 ```
+
+```yaml
+# Dashboard-Karte
+type: custom:uix-forge
+foundry: room_tile
+element_base:
+  type: tile
+  entity: light.kitchen
+```
+
+Die beiden Typen müssen dieselbe konkrete Zeichenkette sein. Dynamische oder abweichende Typen und ein lokales `element.type` sind bei vorhandener Basis ungültig. Nur der passende **geerbte** Typ wird als nativer Anker verwendet und vor dem Zusammensetzen aus der Überlagerung entfernt. Siehe [native Basis](./forge#keep-the-elements-configuration-in-element_base).
 
 ## Externe Dateien und Secrets einbinden
 
-::: warning Quotes in UI Foundries erforderlich
-In UI Foundries müssen `!include` und `!secret` als String gequotet werden. In YAML File Foundries können sie als YAML-Tags geschrieben werden.
-
-:::
-### `!include`
+In UI Foundries müssen `!include` und `!secret` gequotete Strings sein, weil HA ihre Konfiguration als JSON speichert. In YAML-Dateien sind es normale ungequotete YAML-Tags. Beide Varianten werden vor Template-Auswertung und Merge aufgelöst; eingebundene Dateien können weitere Includes enthalten.
 
 ```yaml
-# /config/uix/my_forge_styles.yaml
-style: |
-  ha-card {
-    border-radius: 12px;
-  }
+# YAML-Datei
+forge:
+  uix: !include /config/uix/styles.yaml
 ```
 
 ```yaml
-# In einer YAML File Foundry - keine Quotes noetig
-uix: !include /config/uix/my_forge_styles.yaml
+# Entsprechende UI Foundry
+forge:
+  uix: "!include /config/uix/styles.yaml"
 ```
 
 ```yaml
-# In einer UI Foundry - Quotes erforderlich
-uix: "!include /config/uix/my_forge_styles.yaml"
+# In secrets.yaml: gate_pin: "1234"
+forge:
+  billets:
+    gate_pin: !secret gate_pin
 ```
 
-### `!secret`
-
-```yaml
-# /config/secrets.yaml
-my_pin: 1234
-```
-
-```yaml
-# In einer YAML File Foundry - keine Quotes noetig
-pin: !secret my_pin
-```
-
-```yaml
-# In einer UI Foundry - Quotes erforderlich
-pin: "!secret my_pin"
-```
+In einer UI Foundry schreibe stattdessen `gate_pin: "!secret gate_pin"`. Achte darauf, Secrets nicht versehentlich in öffentliche Beispiele zu übernehmen.
 
 ## Merge-Verhalten
 
-Foundry-Konfigurationen werden mit der Instanzkonfiguration zusammengeführt. Dadurch kannst du Defaults in der Foundry definieren und nur die abweichenden Werte im Dashboard setzen.
+Die Reihenfolge lautet **`global` → `global_<mold>` → geerbte Foundries → benannte Foundry → lokale Konfiguration**. Objekte werden rekursiv zusammengeführt; lokale Arrays und Skalare ersetzen geerbte Werte. Foundry-`element_base` wird vor lokaler Basis aufgelöst; danach wird `element` unter Beachtung der Typregel aufgelegt.
 
-Die Reihenfolge lautet `global` → `global_<mold>` → geerbte Foundries → benannte Foundry → lokale Konfiguration. Mappings wie `forge`, `element` und `element_base` werden rekursiv zusammengeführt; Arrays und Skalare werden ersetzt. `element_base` und `element` bleiben während der Foundry-Auflösung getrennt und werden erst danach als Schichten zusammengesetzt. Lokale `element_disabled_paths` greifen auf das aufgelöste Overlay zu.
+Für `forge.sparks` gelten Ausnahmen:
+
+- Lokale Einträge werden standardmäßig angehängt.
+- Gleiche `id` oder `spark_id` **und gleicher Spark-`type`** erlauben gezieltes Überschreiben/Zusammenführen.
+- `forge.sparks: []` leert geerbte Sparks ausdrücklich. Der visuelle Editor bietet dieses Leeren geerbter Arrays nicht an; dafür YAML verwenden.
 
 ### Merge-Beispiel
 
-Foundry:
-
-```yaml
-foundries:
-  base_tile:
-    forge:
-      mold: card
-      sparks:
-        - type: tooltip
-          content: "{{ tooltip }}"
-    element:
-      type: tile
-      entity: "{{ entity }}"
-    billets:
-      tooltip: Details anzeigen
-```
-
-Instanz:
+Liefert `weather_tile` ein `weather-forecast` mit `show_current: true` und `show_forecast: false`, behält die folgende Instanz die aktuelle Anzeige und ersetzt nur Vorschau und Entität:
 
 ```yaml
 type: custom:uix-forge
-forge:
-  foundry: base_tile
-  billets:
-    entity: light.kitchen
-    tooltip: Kuechenlicht
+foundry: weather_tile
+element:
+  entity: weather.home
+  show_forecast: true
 ```
 
-Ergebnisgedanke:
+<a id="verschachtelte-foundries"></a>
+## Verschachtelte Foundries {#nested-foundries}
+
+Eine Foundry kann mit dem eigenen obersten `foundry`-Schlüssel eine andere referenzieren. Beispiel für `light_tile`, das `base_tile` erweitert:
+
+```yaml
+foundry: base_tile
+element:
+  vertical: false
+  features_position: inline
+  features:
+    - type: light-brightness
+```
+
+Eine Karte mit `foundry: light_tile` erhält dann `base_tile` → `light_tile` → lokale Werte. Zirkuläre Referenzen werden erkannt und erzeugen einen Fehler; die Kette muss eindeutig enden.
+
+## Billets in Foundries {#billets-in-foundries}
+
+[Billets](./forge#billets) sind benannte Slots unter **`forge.billets`**, nicht direkt an der Foundry-Wurzel. Zwei Muster ergänzen sich:
+
+### Muster 1: Defaults in der Foundry definieren, pro Instanz überschreiben
+
+Foundry `accent_tile`:
 
 ```yaml
 forge:
   mold: card
-  sparks:
-    - type: tooltip
-      content: Kuechenlicht
-element:
-  type: tile
-  entity: light.kitchen
-```
-
-## Verschachtelte Foundries
-
-Foundries können auf anderen Foundries aufbauen.
-
-```yaml
-foundries:
-  base_tile:
-    forge:
-      mold: card
-    element:
-      type: tile
-```
-
-```yaml
-foundries:
-  locked_tile:
-    forge:
-      foundry: base_tile
-      sparks:
-        - type: lock
-          locks:
-            - pin: 1234
-```
-
-```yaml
-type: custom:uix-forge
-forge:
-  foundry: locked_tile
-element:
-  entity: light.living_room
-```
-
-::: warning Zirkuläre Referenzen
-Foundries dürfen sich nicht gegenseitig endlos referenzieren. Achte darauf, dass die Kette eindeutig endet.
-
-:::
-## Billets in Foundries
-
-Billets sind der wichtigste Weg, um Foundries flexibel zu halten.
-
-### Muster 1: Defaults in der Foundry definieren, pro Instanz überschreiben
-
-```yaml
-foundries:
-  room_tile:
-    billets:
-      entity: light.living_room
-      name: Wohnzimmer
-    element:
-      type: tile
-      entity: "{{ entity }}"
-      name: "{{ name }}"
-```
-
-```yaml
-type: custom:uix-forge
-forge:
-  foundry: room_tile
   billets:
-    entity: light.kitchen
-    name: Kueche
+    accent: teal
+element:
+  type: tile
+  entity: "{{ config.entity }}"
+  uix:
+    style: |
+      ha-card {
+        --tile-color: {{ accent }} !important;
+      }
 ```
 
 ```yaml
-element:
-  type: tile
-  entity: light.kitchen
-  name: Kueche
+type: custom:uix-forge
+foundry: accent_tile
+entity: light.bed_light
+forge:
+  billets:
+    accent: blue
 ```
+
+Ohne lokale Überschreibung bleibt `teal` erhalten.
 
 ### Muster 2: Leere Billet-Slots in der Foundry definieren
 
-```yaml
-foundries:
-  required_entity_tile:
-    billets:
-      entity: ~
-    element:
-      type: tile
-      entity: "{{ entity }}"
-```
-
-```yaml
-type: custom:uix-forge
-forge:
-  foundry: required_entity_tile
-  billets:
-    entity: sensor.outdoor_temperature
-```
+Eine Foundry kann `accent: ~` und `label: ~` unter `forge.billets` definieren. Ihre Templates müssen den `none`-Fall behandeln, etwa mit `or`, `default()` oder `{% if %}`. Beispiel für die Beschriftung:
 
 ```yaml
 element:
-  type: tile
-  entity: sensor.outdoor_temperature
+  name: "{{ label or state_attr(config.entity, 'friendly_name') }}"
 ```
 
-::: note UI Foundries: Kommentare werden entfernt
-In UI Foundries bleiben YAML-Kommentare nicht erhalten. Wenn Kommentare wichtig sind, nutze eine YAML-Datei im Repository.
+Instanzen setzen nur benötigte Werte unter `forge.billets`. Aussagekräftige Namen wie `accent_color` und `card_label` erleichtern die Pflege: UI Foundries verlieren YAML-Kommentare bei der JSON-Speicherung; Datei-Foundries behalten sie.
 
-:::
 ## UIX-Styling aus einer Foundry
 
-Foundries können eigene `uix`-Styles enthalten. Die Instanz kann diese Styles ergänzen.
-
-::: tip Styles kombinieren
-Lege gemeinsame Struktur und Theme-Variablen in die Foundry und instanzspezifische Abweichungen direkt in die Forge-Instanz.
-
-:::
-```yaml
-# Foundry: "styled_tile"
-foundries:
-  styled_tile:
-    forge:
-      mold: card
-    element:
-      type: tile
-      entity: "{{ entity }}"
-    uix:
-      style: |
-        ha-card {
-          border: 1px solid var(--primary-color);
-        }
-```
+`forge.uix` gestaltet den Forge-Wrapper. Lokales `forge.uix` wird mit der Foundry zusammengeführt und gewinnt bei gleichem Schlüssel. Für Root- und Shadow-Root-Stile eine YAML-Selektorzuordnung verwenden; Root-Stile stehen im Schlüssel `.`. Ein reiner Textwert für `style` ersetzt dagegen die ganze geerbte Zuordnung.
 
 ```yaml
-# Forge - fuegt eigenes UIX-Styling hinzu
 type: custom:uix-forge
+foundry: styled_tile
 forge:
-  foundry: styled_tile
-  billets:
-    entity: light.living_room
-uix:
-  style: |
-    ha-card {
-      box-shadow: var(--ha-card-box-shadow);
-    }
+  uix:
+    style:
+      .: |
+        :host { --ha-card-border-radius: 20px; }
+element:
+  entity: light.bed_light
 ```
 
-## Beispiel: Global Foundry mit Makro
+## Beispiel: Global Foundry mit Makro {#example-global-foundry-using-macro}
 
-::: tip
-Makros in Foundries halten wiederkehrende Template-Logik an einer Stelle.
+Ein boolesches Makro benötigt das Format `returns`; gewöhnliche Makros liefern Strings und können sonst unerwartet als wahr ausgewertet werden. Foundry mit dem Namen `global`:
 
-:::
 ```yaml
-foundries:
-  state_colored_tile:
-    macros:
-      active_color: |
-        {% macro active_color(entity) -%}
-        {{ 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' }}
-        {%- endmacro %}
-    billets:
-      entity: light.living_room
-    forge:
-      mold: card
-    element:
-      type: tile
-      entity: "{{ entity }}"
-    uix:
-      style: |
-        ha-card {
-          border-color: {{ active_color(entity) }};
-        }
+forge:
+  macros:
+    is_festive_day:
+      returns: true
+      template: "{% do returns(is_state('input_boolean.festive_day','on')) %}"
 ```
+
+Eine Forge-Picture-Karte kann damit das Bild wählen:
 
 ```yaml
 type: custom:uix-forge
 forge:
-  foundry: state_colored_tile
-  billets:
-    entity: light.kitchen
+  mold: card
+  grid_options:
+    columns: full
+    rows: 4
+element:
+  type: picture
+  image:
+    media_content_id: |
+      media-source://media_source/local/{{ 'birthday.jpg' if is_festive_day() else 'kitchen.jpg' }}
 ```

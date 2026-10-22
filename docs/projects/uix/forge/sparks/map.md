@@ -122,6 +122,16 @@ Bedienelemente ohne konfigurierte Position oder mit der expliziten Position `{bo
 | `--uix-map-slider-indicator-color` | `var(--primary-color)` | Farbe der aktiven Anzeige. |
 | `--uix-map-slider-thumb-color` | `var(--uix-map-slider-indicator-color)` | Thumb-Farbe. |
 | `--uix-map-slider-tooltip-background-color` | `var(--secondary-background-color)` | Hintergrund des Tooltips. |
+| `--uix-map-slider-thumb-hover-opacity` | `0.08` | Deckkraft des Hover-Bereichs am Thumb. |
+| `--uix-map-slider-thumb-pressed-opacity` | `0.12` | Deckkraft des Halos beim Drücken. |
+| `--uix-map-slider-thumb-box-shadow` | `inherit` | Eigener Schatten des interaktiven Thumbs. |
+| `--uix-map-slider-tooltip-color` | `var(--primary-text-color)` | Textfarbe im Thumb-Tooltip. |
+| `--uix-map-slider-tooltip-font-size` | `var(--ha-font-size-s)` | Schriftgröße im Tooltip. |
+| `--uix-map-slider-tooltip-font-weight` | `var(--ha-font-weight-normal)` | Schriftgewicht im Tooltip. |
+| `--uix-map-slider-tooltip-border-radius` | `var(--ha-border-radius-sm)` | Eckenradius des Tooltips. |
+| `--uix-map-slider-tooltip-border-width` | `0px` | Rahmenbreite des Tooltips. |
+| `--uix-map-slider-tooltip-border-color` | `currentColor` | Rahmenfarbe des Tooltips. |
+| `--uix-map-slider-tooltip-border-style` | `none` | Rahmenstil des Tooltips. |
 
 ### Entity Filter
 

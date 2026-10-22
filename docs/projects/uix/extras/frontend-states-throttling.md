@@ -8,6 +8,8 @@ Frontend States Throttling reduziert, wie häufig State-Updates im Browser zu Re
 
 ::: info Was wird gedrosselt?
 Gedrosselt werden Frontend-State-Update-Verarbeitungen im Browser. Home Assistant selbst, Automationen und Backend-State-Änderungen werden dadurch nicht verlangsamt.
+
+Nur Änderungen von `hass.states` werden gedrosselt. Andere `hass`-Änderungen wie Theme, Sprache und angemeldeter Benutzer werden sofort durchgereicht; die Oberfläche bleibt dafür unmittelbar reaktionsfähig.
 :::
 
 ## Aktivierung über die Integrations-UI

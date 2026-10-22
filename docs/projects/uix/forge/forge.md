@@ -171,7 +171,12 @@ element:
 Bei Blank Cards zeigen viele Sparks standardmäßig auf `uix-forge-blank-card $ div.content`.
 
 :::
+### Blank-Badge-Konfiguration {#blank-badge-config}
+
+In der Vorschau mit `mold: badge` und ohne Elementtyp verwendet Forge automatisch `uix-forge-blank-badge`. `element.icon` und `element.label` liefern den Inhalt; nur ein Icon ergibt ein Badge ohne Beschriftung. Ohne beides erscheint ein Hinweis zum Ergänzen von Icon, Label oder `forge.sparks`. Bei konfigurierten Sparks entfällt der Hinweis; sie adressieren eine leere `div` im Standard-Slot. Die automatisch gewählte Typangabe wird nicht im Dashboard gespeichert.
+
 <a id="layered-configuration"></a>
+<a id="keep-the-elements-configuration-in-element_base"></a>
 ## Geschichtete Konfiguration
 
 ::: info Vorschau: verfügbar ab UIX 9.0.0-beta.0
@@ -179,6 +184,8 @@ Diese Funktion gehört zum aktuellen `dev`-Stand und nicht zur stabilen Version 
 :::
 
 Die geschichtete Konfiguration bettet ein Element ein, das eigene Templates besitzt. Sie funktioniert mit allen Forge-Molds und benötigt keinen visuellen Editor. Sobald die aufgelöste Konfiguration `element_base` enthält, verwendet Forge diesen Modus.
+
+Die aktuelle Vorschau 9.0.0-beta.2 präzisiert die Typregel: Ein konkreter **geerbter** Foundry-`element.type` darf als Typanker dienen, wenn die lokale `element_base.type` exakt dieselbe Zeichenkette ist. Forge entfernt diesen passenden geerbten Typ vor dem Auflegen der übrigen Werte. Ein lokales `element.type`, dynamische Typen oder Abweichungen bleiben ungültig. Entfernen eines Element-Templates fragt vor dem Löschen der Quelle nach.
 
 `element_base` enthält die vollständige elementeigene Basis. Forge reicht ihre Template-Zeichenketten unverändert weiter, ohne sie zu erkennen, auszuwerten, umzuschreiben oder Escape-Zeichen zu verlangen. `element` enthält die Forge-Überlagerung; deren aktive Werte werden nach den üblichen Forge-Template-Regeln verarbeitet.
 
@@ -252,17 +259,19 @@ uix_foundries:
   kitchen_tile:
     forge:
       mold: card
-    element_base:
-      type: markdown
-      content: |
-        ## {{ states('sensor.room_label') }}
     element:
+      type: markdown
       title: "{{ config.entity }}"
 
-# Dashboard-Karte: beide Schichten stammen aus der Foundry.
+# Dashboard-Karte: native Einstellungen lokal, Forge-Werte aus der Foundry.
 type: custom:uix-forge
 foundry: kitchen_tile
-entity: light.kitchen
+element_base:
+  type: markdown
+  content: |
+    ## {{ states('sensor.room_label') }}
+element:
+  entity: light.kitchen
 ```
 
 In Forge-Templates enthält `config.element_base` die aufgelöste Basis und `config.element` die aufgelöste Overlay-Quelle vor der Auswertung. Forge setzt daraus die endgültige Elementkonfiguration zusammen. Die `uix`-Mappings beider Schichten werden dabei zusammengeführt; UIX Styling verarbeitet ihre Templates anschließend nach seinen üblichen Regeln.

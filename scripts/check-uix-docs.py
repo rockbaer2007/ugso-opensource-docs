@@ -3,6 +3,7 @@
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
+import hashlib
 import json
 import sys
 
@@ -22,6 +23,7 @@ class Page(HTMLParser):
         self.hrefs = []
         self.links = []
         self.code = []
+        self.images = []
         self.in_pre = False
         self.feed(text)
 
@@ -33,6 +35,8 @@ class Page(HTMLParser):
             self.hrefs.append(attrs["href"])
         if tag == "link":
             self.links.append(attrs)
+        if tag == "img" and "src" in attrs:
+            self.images.append(attrs["src"])
         if tag == "pre":
             self.in_pre = True
 
@@ -67,21 +71,36 @@ def main():
             errors.append(f"Escaped Jinja delimiters in copyable code: {relative}")
         if not any(link.get("rel") == "canonical" and link.get("href") == url for link in page.links):
             errors.append(f"Wrong or missing self-canonical: {relative}")
-        if relative not in TRANSLATION_ONLY:
+        if relative not in TRANSLATION_ONLY | {"extras/style-custom-panels.md"}:
             english_path = relative.removesuffix("index.md") if relative.endswith("index.md") else relative.removesuffix(".md") + "/"
             for language, href in (("de", url), ("en", ENGLISH + english_path)):
                 if not any(link.get("rel") == "alternate" and link.get("hreflang") == language and link.get("href") == href for link in page.links):
                     errors.append(f"Wrong or missing hreflang={language}: {relative}")
 
-    # French section links previously escaped the German-only check.
-    french_source = ROOT / "docs/fr/projects/uix"
-    for source in sorted(french_source.rglob("*.md")):
-        relative = source.relative_to(french_source).as_posix()
-        built = DIST / "fr/projects/uix" / Path(relative).with_suffix(".html")
-        if not built.is_file():
-            errors.append(f"Missing French built page: {relative}")
-            continue
-        pages[page_url(relative).replace("/projects/uix/", "/fr/projects/uix/")] = Page(built.read_text(encoding="utf-8"))
+    for locale in ("en", "fr"):
+        locale_source = ROOT / f"docs/{locale}/projects/uix"
+        for source in sorted(locale_source.rglob("*.md")):
+            relative = source.relative_to(locale_source).as_posix()
+            built = DIST / f"{locale}/projects/uix" / Path(relative).with_suffix(".html")
+            if not built.is_file():
+                errors.append(f"Missing {locale} built page: {relative}")
+                continue
+            page = Page(built.read_text(encoding="utf-8"))
+            url = page_url(relative).replace("/projects/uix/", f"/{locale}/projects/uix/")
+            pages[url] = page
+            if not any(link.get("rel") == "canonical" and link.get("href") == url for link in page.links):
+                errors.append(f"Wrong self-canonical: {url}")
+
+    manifest = json.loads((ROOT / "docs/public/projects/uix/canonical-review.json").read_text(encoding="utf-8"))
+    if len(manifest["pages"]) != 64:
+        errors.append("Canonical review does not cover all 64 source pages")
+    for entry in manifest["pages"]:
+        for prefix in ("projects/uix", "en/projects/uix", "fr/projects/uix"):
+            if not (ROOT / "docs" / prefix / entry["path"]).is_file():
+                errors.append(f"Canonical page missing in {prefix}: {entry['path']}")
+        english = ROOT / "docs/en/projects/uix" / entry["path"]
+        if hashlib.sha256(english.read_text(encoding="utf-8").encode()).hexdigest() != entry["english_sha256"]:
+            errors.append(f"Canonical English adaptation changed without resync: {entry['path']}")
 
     metadata = json.loads((ROOT / "docs/public/projects/uix/uix-docs.json").read_text(encoding="utf-8"))
     if metadata["docs_version"] != metadata["stable_version"]:
@@ -89,13 +108,29 @@ def main():
     release = f"https://github.com/Lint-Free-Technology/uix/releases/tag/v{metadata['stable_version']}"
     revision = f"https://github.com/Lint-Free-Technology/uix/commit/{metadata['source_revision']}"
     for url, page in pages.items():
+        relative = url.split('/projects/uix/', 1)[1]
+        if relative == 'extras/style-custom-panels':
+            relative = 'extras/style-frame-panels'
+        if relative != 'translation-status':
+            english_path = relative if not relative or relative.endswith('/') else relative+'/'
+            for language, href in (
+                ('en', ENGLISH+english_path),
+                ('de', SITE+'/projects/uix/'+relative),
+                ('fr', SITE+'/fr/projects/uix/'+relative),
+            ):
+                if not any(link.get('rel') == 'alternate' and link.get('hreflang') == language and link.get('href') == href for link in page.links):
+                    errors.append(f'Wrong hreflang={language}: {url}')
         if release not in page.hrefs or revision not in page.hrefs:
             errors.append(f"Version footer does not match release metadata: {url}")
         if any(entity in "".join(page.code) for entity in ("&#123;", "&#125;")):
             errors.append(f"Escaped Jinja delimiters in copyable code: {url}")
+        for src in page.images:
+            target = urlsplit(urljoin(url, src))
+            if target.netloc == urlsplit(SITE).netloc and not (DIST / unquote(target.path.lstrip('/'))).is_file():
+                errors.append(f"Missing image: {url} -> {src}")
         for href in page.hrefs:
             target = urlsplit(urljoin(url, href))
-            if target.netloc != urlsplit(SITE).netloc or not target.path.startswith(("/projects/uix/", "/fr/projects/uix/")):
+            if target.netloc != urlsplit(SITE).netloc or not target.path.startswith(("/projects/uix/", "/fr/projects/uix/", "/en/projects/uix/")):
                 continue
             target_url = SITE + target.path.removesuffix(".html")
             target_url = target_url.removesuffix("index") if target_url.endswith("/index") else target_url

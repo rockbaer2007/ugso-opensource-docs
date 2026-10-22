@@ -1,15 +1,90 @@
 ---
-title: Theme Spark
-description: English placeholder page for Theme Spark in the UGSo Open Source documentation.
+description: Apply a frontend theme to a forged element or one of its descendants.
+icon: material/palette
 ---
+
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.2**, revision [26e54e6](https://github.com/Lint-Free-Technology/uix/commit/26e54e6d4973231a393933e6479ed1b03cc86cd3), reviewed 22 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+
 # Theme Spark
 
-This English page has been added so the Open Source documentation has a complete language path. The detailed English translation is still being expanded.
+The `theme` spark applies a frontend theme to a target element.
 
-The German source page is currently the reference: [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme).
+Use it when you want a forged element to pick up an existing theme without adding extra UIX styling config.
 
-## Status
+## Configuration
 
-- Language path exists.
-- Navigation and builds can resolve this page.
-- Detailed translation can be refined in a later documentation pass.
+| Key | Type | Required | Default | Description |
+|-----|------|----------|---------|-------------|
+| `type` | string | ✅ | — | Must be `theme`. |
+| `for` | string | | `element` | UIX selector path for the element to apply the theme to. When the UIX Forge element is using [Blank card config](../forge.md#blank-card-config), the default is `uix-forge-blank-card $ div.content`. Otherwise, the default of `element` refers to the root of the forged element. |
+| `theme` | string | | — | Theme name to apply. Supports templates. |
+
+::: tip
+`theme` config supports templates. To revert the theme back to the main theme, have your template return an empty string `""`. This will apply the main theme to `for`. As themes are applied by setting inline style properties to the element, your override theme should include the same theme elements, or be a subset of elements of the main theme. If you are using theme sparks on a cascade of forged elements, it is best to have each theme override be a subset of the prior theme override, or unexpected results may occur.
+
+:::
+
+## Example - basic
+
+Theme:
+
+```yaml
+my-theme:
+  primary-text-color: red
+  ha-card-border-radius: 20px
+  ha-card-background: antiquewhite
+```
+
+UIX Forge:
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: theme
+      for: element
+      theme: my-theme
+element:
+  type: tile
+  entity: light.bed_light
+```
+
+![Theme spark basic example](/projects/uix/assets/page-assets/forge/sparks/theme-basic.png)
+
+## Example - template
+
+Themes:
+
+```yaml
+my-blue-theme:
+  primary-text-color: blue
+  ha-card-border-radius: 20px
+  ha-card-background: lightpink
+
+my-red-theme:
+  primary-text-color: red
+  ha-card-border-radius: 20px
+  ha-card-background: antiquewhite
+```
+
+UIX Forge:
+
+```yaml
+type: "custom:uix-forge"
+forge:
+  mold: card
+  sparks:
+    - type: theme
+      for: element
+      theme: "{{ 'uix-doc-spark-theme-template-red' if is_state(config.element.entity, 'on') else 'uix-doc-spark-theme-template-blue' }}"
+element:
+  type: tile
+  entity: light.bed_light
+```
+
+![Theme spark template example](/projects/uix/assets/page-assets/forge/sparks/theme-template.gif)
+
+::: tip
+You can use the [`uix_forge_path()`](../../concepts/dom.md#uix_forge_path0-forge-helper) DOM helper to take the guesswork out of finding the right path for `for`.
+:::

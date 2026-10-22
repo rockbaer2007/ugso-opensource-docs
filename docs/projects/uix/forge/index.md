@@ -12,6 +12,8 @@ Ab **UIX 9.0.0-beta.0** ermöglicht die [geschichtete Konfiguration](./forge#lay
 
 Für die vollständige Konfigurationsreferenz siehe [Forge-Referenz](./forge).
 
+Die Vorschau **9.0.0-beta.2** ergänzt den [visuellen Editor für Karten und Badges](./forge#visual-editor-cards-and-badges). Für unverändert durchzureichende native Einstellungen und Templates steht `element_base`; nur von Forge geänderte Werte gehören nach `element`. Das gilt weiterhin für jeden Mold. Foundry-`element_base` ist editorerhaltener Quelltext: über den Export-Reiter erzeugen und bei späterem Bearbeiten erhalten. Die genaue Typanker-Regel steht unter [Foundries](./foundries#foundry-typ-mit-dem-nativen-editor-verwenden).
+
 ## Foundries
 
 Eine **Foundry** ist eine wiederverwendbare UIX-Forge-Konfiguration. Damit kannst du `forge`, `element` und `uix` einmal definieren und an vielen Stellen wiederverwenden. Ab UIX 9.0.0-beta.0 können Foundries auch `element_base` bereitstellen; eine aufgelöste Basis aktiviert die geschichtete Konfiguration. `element_disabled_paths` bleibt ausschließlich lokal an der jeweiligen Forge-Instanz.

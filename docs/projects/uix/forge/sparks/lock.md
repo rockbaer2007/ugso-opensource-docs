@@ -267,6 +267,8 @@ forge:
 | `--uix-lock-border-radius` | `inherit` | Rundung des Overlays. |
 | `--uix-lock-icon-size` | `24px`, bei `ha-tile-icon` `12px` | Größe des Schlossicons. |
 | `--uix-lock-icon-background` | `none` | Hintergrund des Iconelements. |
+| `--uix-lock-icon-background-unlocked` | `--uix-lock-icon-background` | Icon-Hintergrund im entsperrten Zustand; fällt auf den allgemeinen Wert zurück. |
+| `--uix-lock-icon-background-blocked` | `--uix-lock-icon-background` | Icon-Hintergrund bei dauerhafter Blockierung; fällt auf den allgemeinen Wert zurück. |
 | `--uix-lock-icon-border-radius` | `none`, bei `ha-tile-icon` `50%` | Rundung des Iconelements. |
 | `--uix-lock-icon-padding` | `0`, bei `ha-tile-info` `2px` | Innenabstand um das Icon. |
 | `--uix-lock-icon-position` | `none` | CSS-`translate`, z. B. `30px 6px`. |

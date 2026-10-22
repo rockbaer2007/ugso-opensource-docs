@@ -5,7 +5,11 @@ title: FAQ
 
 ## Wie migriere ich am besten von Card-mod?
 
-Für eine saubere Migration sollte UI eXtension als Service installiert werden. Danach können bestehende Card-mod-Konfigurationen schrittweise geprüft und in UIX-Strukturen überführt werden. Beginne mit einzelnen Karten oder Views, prüfe das Ergebnis im Browser und migriere dann Theme-Variablen und komplexere Shadow-DOM-Pfade.
+Deinstalliere zuerst Card-mod. Falls dessen Ressource über `extra_module_url` geladen wird, entferne auch diesen Eintrag und starte HA neu. Folge anschließend dem [UIX-Schnellstart](./quick-start), einschließlich des Hinzufügens der Integration als Dienst. Beide Ressourcen sollen nicht parallel geladen werden.
+
+::: warning UI Lovelace Minimalist kann Card-mod nachladen
+Deaktiviere dort die Option `Include custom card resources it's depending on` und lade benötigte Custom Cards über HACS oder manuell. Durch die Ladereihenfolge kann UIX diesen Konflikt nicht selbst erkennen.
+:::
 
 ::: tip UI eXtension als Service hinzufügen
 Wenn UIX als Home-Assistant-Integration installiert ist, kümmert sich UIX selbst um die Frontend-Ressource. Dadurch entfallen typische Probleme mit manuell gepflegten Ressourcen-URLs.
@@ -13,7 +17,7 @@ Wenn UIX als Home-Assistant-Integration installiert ist, kümmert sich UIX selbs
 
 ## Ist UI eXtension ein direkter Ersatz für Card-mod?
 
-UIX unterstützt viele Card-mod-artige Styling-Situationen und kann in vielen Dashboards als Ersatz verwendet werden. Es ist aber nicht nur ein identischer Drop-in-Ersatz, weil UIX eigene Patches, Theme-Variablen, Forge, Foundries, Sparks und Debug-Hilfen mitbringt.
+Ja. Laut englischem Original ist UIX ein direkter Ersatz für Card-mod bis **4.2.1** und unterstützt dessen Karten- und Theme-Konfigurationen. Die Umstellung auf `uix:` und `uix-<thing>(-yaml)` ist empfohlen, aber nicht erforderlich. Bei gleichzeitig vorhandenen Konfigurationsschlüsseln hat `uix:` Vorrang. Das bedeutet Kompatibilität der Konfiguration, nicht paralleles Laden beider Ressourcen.
 
 ## Ist UI eXtension nur Card-mod mit anderer Dokumentation?
 
@@ -54,6 +58,8 @@ Nein. UIX nutzt eine eigene Architektur und eigene Frontend-Patches. Es adressie
 ## Hat UI eXtension Ressourcen-URL-Probleme?
 
 UIX wird als Integration bereitgestellt und muss normalerweise nicht als manuelle Lovelace-Ressource gepflegt werden. Dadurch werden viele Fehler vermieden, die bei falscher Ressourcen-URL, Browsercache oder HACS-Pfad entstehen können.
+
+UIX registriert `uix.js` als zusätzliches Frontend-Modul und für CAST auch als Dashboard-Ressource. Beim Laden der Integration werden die Ressourcen automatisch mit ihrer Version versehen.
 
 ## Muss nach einem Upgrade manuell der Cache geleert werden?
 

@@ -1137,14 +1137,16 @@ export default defineConfig({
     const links: HeadConfig[] = [
       ['link', { rel: 'canonical', href: canonicalHref(pageData.relativePath) }]
     ]
-    if (pageData.relativePath.startsWith('projects/uix/')) {
-      const relativeSource = pageData.relativePath.slice('projects/uix/'.length)
+    const uixPage = pageData.relativePath.match(/^(?:(en|fr)\/)?projects\/uix\/(.*)$/)
+    if (uixPage) {
+      const relativeSource = uixPage[2] === 'extras/style-custom-panels.md' ? 'extras/style-frame-panels.md' : uixPage[2]
       // The status page belongs to the translation rather than the English source.
       if (relativeSource !== 'translation-status.md') {
         const englishPath = relativeSource.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '/')
         links.push(
           ['link', { rel: 'alternate', hreflang: 'en', href: new URL(englishPath, 'https://uix.lf.technology/').href }],
-          ['link', { rel: 'alternate', hreflang: 'de', href: canonicalHref(pageData.relativePath) }]
+          ['link', { rel: 'alternate', hreflang: 'de', href: canonicalHref(`projects/uix/${relativeSource}`) }],
+          ['link', { rel: 'alternate', hreflang: 'fr', href: canonicalHref(`fr/projects/uix/${relativeSource}`) }]
         )
       }
     }

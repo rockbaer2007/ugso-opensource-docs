@@ -1,15 +1,29 @@
 ---
 title: Sparks
-description: English placeholder page for Sparks in the UGSo Open Source documentation.
+description: Sparks are self-contained behaviours that augment an element forged with UIX Forge.
 ---
+
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.2**, revision [26e54e6](https://github.com/Lint-Free-Technology/uix/commit/26e54e6d4973231a393933e6479ed1b03cc86cd3), reviewed 22 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+
 # Sparks
 
-This English page has been added so the Open Source documentation has a complete language path. The detailed English translation is still being expanded.
+Sparks are optional behaviours added to a [UIX Forge](../index.md) forged element via the `forge.sparks` list. Each spark has a `type` key and its own configuration options.
 
-The German source page is currently the reference: [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/).
+Available sparks:
 
-## Status
-
-- Language path exists.
-- Navigation and builds can resolve this page.
-- Detailed translation can be refined in a later documentation pass.
+- :speech_balloon: [Tooltip](./tooltip.md) — attach a styled tooltip to any element within the forged element.
+- :material-button-cursor: [Button](button.md) — insert an interactive `ha-button` element as a sibling after any element within the forged element.
+- :material-badge-account-horizontal-outline: [Badge](badge.md) — insert a Web Awesome-styled `uix-badge` as a sibling before or after any element within the forged element.
+- :label: [Attribute](attribute.md) — add, replace or remove an attribute of any element within the forged element.
+- :zap: [Event](event.md) — receive DOM events from `fire-dom-event` actions and expose their data as template variables.
+- :star: [Tile Icon](tile-icon.md) — insert a `ha-tile-icon` element as a sibling before or after any element within the forged element.
+- :shield: [State Badge](state-badge.md) — insert a `state-badge` element as a sibling before or after any element within the forged element.
+- :material-grid: [Grid](grid.md) — apply CSS Grid layout to any container element within the forged element.
+- :mag: [Search](search.md) — find elements within a container by CSS selector and optional text filter, then apply class, attribute, or text mutations to all matches.
+- :material-map: [Map](map.md) — preserve the zoom level and centre of a map card across Home Assistant state updates.
+- :material-lock: [Lock](lock.md) — overlay a lock icon on any element to block interaction until the user passes a PIN, passphrase, or confirmation challenge.
+- :material-information-outline: [More-info](more-info.md) — embed Home Assistant more-info content for an entity inside a forged element.
+- :material-form-select: [Form](form.md) — add a Home Assistant form and optional submit and clear actions to a forged element.
+- :material-star-four-points-outline: [Overlay Icon](overlay-icon.md) — overlay a `ha-icon`/`ha-state-icon` on any element inside the forged element.
+- :material-image-outline: [Background](background.md) — inject a background layer (colour, image, video, or live camera) behind any element within the forged element.
+- :material-palette: [Theme](theme.md) — apply a Frontend theme to the forged element or one of its descendants.

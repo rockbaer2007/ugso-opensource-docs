@@ -6,6 +6,17 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 
 Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation mit der englischen Originaldokumentation.
 
+## Gesamtprüfung vom 22.10.2026
+
+Alle **64 kanonischen Markdown-Seiten** wurden gegen den eingefrorenen [englischen Stand `26e54e6`](https://github.com/Lint-Free-Technology/uix/tree/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source) geprüft. Gegenüber dem letzten Vorschau-Abgleich `e2e0701` sind Forge-Referenz, Foundries und Forge-Übersicht geändert; die übrigen 61 Originalseiten sind unverändert. Die stabile Veröffentlichung bleibt **8.4.0**, die geprüfte Vorschau ist **9.0.0-beta.2**.
+
+- **EN:** Alle 64 Seiten enthalten jetzt den englischen Originalinhalt statt Platzhaltern, mit angepassten Hinweiskästen, Abschnittsankern, Links, Medienpfaden und CC-BY-4.0-Quellenangabe. Original- und Ausgabedateien sind im [Prüfmanifest](/projects/uix/canonical-review.json) durch Hashes zugeordnet; Codeblöcke werden mit normalisierter äußerer Einrückung, entfernten Leerzeichen am Zeilenende und vereinheitlichten Zeilenenden verglichen.
+- **DE/FR:** Ergänzt sind Broker-Badge, Text content, Lock und Action handler; die Forge-Vorschau umfasst nun auch Typanker, native Basis in Foundries und Blank Badges. Französisch erhält fehlende Tooltip-Optionen, Scrollverhalten und aktuelle CSS-Standardwerte.
+- **DE:** Foundry-Beispiele korrigiert (`uix_foundries`, oberstes `foundry`, `forge.billets`, native Typregel, Spark-Merge und Makro-`returns`). FAQ zur Card-mod-Kompatibilität bis 4.2.1 und zur Migration berichtigt; Browser-Event-Action, Cache-Erhalt, Integrationsabhängigkeit, State-Throttling, Billet-Priorität und fehlende Spark-CSS-Optionen ergänzt.
+- Alle kanonischen Seiten besitzen DE/EN/FR-Gegenstücke. Der alte englische Pfad `style-custom-panels` verweist auf `style-frame-panels`. Fehlende Originalmedien wurden ergänzt; Sprach-/Quellenverweise und lokale Bilder werden mitgeprüft.
+
+Das ist ein Quellen-, Inhalts- und Dokumentationsabgleich; die DE/FR-Texte bleiben redaktionell übersetzte Fassungen, keine zeilenidentischen Kopien und keine unabhängig zertifizierte Übersetzung. Es wurden keine HA-Systeme aufgerufen oder verändert. Release-Metadaten bleiben 8.4.0; Vorschauversion und -revision werden separat geführt. Der zuvor veröffentlichte gezielte Forge-Abgleich bleibt unten als Historie erhalten.
+
 ## Forge-Abgleich vom 22.10.2026
 
 Die [kanonische Änderung `1badf70befb9`](https://github.com/Lint-Free-Technology/uix/commit/1badf70befb9c9d3d7b06c0eced75af7d552aff1) auf `dev` ergänzt den Verfügbarkeitshinweis für den visuellen Forge-Editor ab **9.0.0-beta.2**. Der dazugehörige Abschnitt fehlte bisher auf unseren Seiten. Eine mit der Quelle abgeglichene Zusammenfassung ist jetzt in **DE/EN/FR** verfügbar: Native, Forge, Element, Foundry und Export; außerdem `element_base`/`element`, Typanker, Null-/Deaktivierungssemantik und YAML-Grenzen.

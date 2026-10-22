@@ -9,6 +9,8 @@ UIX-Dokumentation ist ein Bereich, in dem jede Nutzerin und jeder Nutzer helfen 
 
 ## Dokumentation aktualisieren
 
+Für einen eigenen Frontend-Entwicklungsstand zuerst die Version in `package.json` mit einem Entwicklungszusatz setzen, etwa `9.0.0-mydev.1`. `npm run build` aktualisiert die Integrationsversion in `manifest.json` und erzeugt `uix.js`. Das erzeugte Bundle nicht committen. Neue visuelle Komponenten benötigen Tests; Hinweise stehen in der README im Verzeichnis `tests` des Originals.
+
 Die UIX-Dokumentation wird aus Markdown-Dateien mit Zensical gebaut. So startest du die Dokumentationsseite lokal:
 
 1. Repository klonen.

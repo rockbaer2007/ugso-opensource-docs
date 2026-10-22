@@ -1,15 +1,28 @@
 ---
-title: Icon-Styling deaktivieren
-description: English placeholder page for Icon-Styling deaktivieren in the UGSo Open Source documentation.
+title: Disable icon styling patching
+description: Learn how to disable icon styling patching and when to use this performance option
 ---
-# Icon-Styling deaktivieren
 
-This English page has been added so the Open Source documentation has a complete language path. The detailed English translation is still being expanded.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.2**, revision [26e54e6](https://github.com/Lint-Free-Technology/uix/commit/26e54e6d4973231a393933e6479ed1b03cc86cd3), reviewed 22 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
-The German source page is currently the reference: [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling).
+# Disable icon styling patching
 
-## Status
+By default, UIX patches standard Home Assistant icon elements (`ha-icon`, `ha-state-icon`, `ha-svg-icon`) to allow custom styling and overrides (such as `--uix-icon`, `--uix-icon-color`, `--uix-icon-dim`, or `--uix-icon-for-<entity_id>`). UIX provides an option to disable this icon patching behavior to improve rendering performance and reduce CPU overhead on low-power devices.
 
-- Language path exists.
-- Navigation and builds can resolve this page.
-- Detailed translation can be refined in a later documentation pass.
+## Setting via the integration UI
+
+The option is **unset by default**. To set the option:
+
+1. In Home Assistant, go to **Settings → Devices & Services → UI eXtension → Configure**.
+2. Select **Performance settings** from the menu.
+3. Toggle **Disable icon styling patching** on.
+4. Save.
+
+The setting takes effect immediately across all connected browser sessions — no page reload required.
+
+## Behavior when set
+
+When this option is set:
+
+- Standard Home Assistant icon elements are **not patched** or monitored for custom icon properties.
+- Existing custom icon or icon color overrides via CSS variables (e.g. `--uix-icon`, `--uix-icon-color`, `--uix-icon-dim`, `--uix-icon-for-*`) will **not** be applied to standard icon elements.

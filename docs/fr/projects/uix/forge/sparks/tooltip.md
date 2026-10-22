@@ -56,6 +56,8 @@ L'infobulle est ajoutée uniquement au **premier** élément correspondant à `f
 | `skidding` | number | | `0` | Décalage, en pixels, le long de l'axe de l'élément cible. |
 | `show_delay` | number | | `150` | Délai en millisecondes avant l'affichage de l'infobulle. |
 | `hide_delay` | number | | `150` | Délai en millisecondes avant le masquage de l'infobulle. |
+| `trigger` | string | | `"hover focus"` | Modes séparés par espaces : `hover`, `focus`, `click`, `manual`. |
+| `open` | boolean | | `false` | État ouvert lors d’un changement de configuration ; particulièrement utile avec `manual`. |
 | `without_arrow` | boolean | | `false` | Définissez cette option sur `true` pour masquer la flèche directionnelle. |
 
 ::: tip
@@ -63,6 +65,17 @@ Le helper DOM [`uix_forge_path()`](../../concepts/dom.md#uix_forge_path0-forge-h
 
 :::
 ## Modèles dans le contenu
+
+Avec `hover`, l’infobulle reste ouverte lorsque le pointeur entre dans son contenu, permettant le défilement avec `--uix-tooltip-max-height` et `--uix-tooltip-overflow: auto`. `manual` ne s’active pas tout seul : définir `open: true`.
+
+```yaml
+forge:
+  sparks:
+    - type: tooltip
+      trigger: manual
+      open: true
+      content: Infobulle ouverte par la configuration
+```
 
 La valeur de `content` fait partie de la configuration `forge` et est donc traitée comme un modèle. Vous pouvez accéder aux états des entités, à l'objet `config` et aux autres [variables de modèle UIX](../../using/templates.md) :
 
@@ -139,23 +152,25 @@ element:
 
 | Variable CSS | Valeur par défaut | Description |
 | ------------ | ------- | ----------- |
-| `--uix-tooltip-background-color` | `--secondary-background-color` | Couleur d'arrière-plan de l'infobulle. |
-| `--uix-tooltip-content-color` | `--primary-text-color` | Couleur du texte de l'infobulle. |
+| `--uix-tooltip-background-color` | `var(--ha-tooltip-background-color, var(--ha-color-surface-default))` | Couleur d’arrière-plan. |
+| `--uix-tooltip-content-color` | `var(--ha-tooltip-text-color, var(--primary-text-color))` | Couleur du texte. |
 | `--uix-tooltip-font-family` | `--ha-font-family-body` | Famille de polices. |
-| `--uix-tooltip-font-size` | `--ha-font-size-s` | Taille de police. |
-| `--uix-tooltip-font-weight` | `--ha-font-weight-normal` | Graisse de police. |
+| `--uix-tooltip-font-size` | `--ha-font-size-m` | Taille de police. |
+| `--uix-tooltip-font-weight` | `--ha-font-weight-medium` | Graisse de police. |
 | `--uix-tooltip-line-height` | `--ha-line-height-condensed` | Hauteur de ligne. |
-| `--uix-tooltip-padding` | `8px` | Marge intérieure de l'infobulle. |
-| `--uix-tooltip-border-radius` | `--ha-border-radius-sm` | Rayon des angles. |
+| `--uix-tooltip-padding` | `var(--ha-tooltip-padding, var(--ha-space-2))` | Marge intérieure, 8 px par défaut. |
+| `--uix-tooltip-border-radius` | `--ha-border-radius-md` | Rayon des angles. |
 | `--uix-tooltip-arrow-size` | `8px` | Taille de la flèche directionnelle. |
 | `--uix-tooltip-border-width` | — | Épaisseur de la bordure (non définie par défaut). |
 | `--uix-tooltip-border-color` | — | Couleur de la bordure (non définie par défaut). |
 | `--uix-tooltip-border-style` | — | Style de la bordure (non défini par défaut). |
 | `--uix-tooltip-max-width` | `30ch` | Largeur maximale de l'infobulle. |
+| `--uix-tooltip-max-height` | `none` | Hauteur maximale du contenu. |
+| `--uix-tooltip-overflow` | `visible` | Débordement ; `auto` permet le défilement d’un contenu limité. |
 | `--uix-tooltip-show-duration` | `100ms` | Durée de l'animation d'apparition. |
 | `--uix-tooltip-hide-duration` | `100ms` | Durée de l'animation de disparition. |
 | `--uix-tooltip-opacity` | `1` | Opacité de l'infobulle. |
-| `--uix-tooltip-box-shadow` | `--ha-card-box-shadow` | Ombre portée. |
+| `--uix-tooltip-box-shadow` | `var(--ha-tooltip-box-shadow, var(--ha-box-shadow-m))` | Ombre portée. |
 | `--uix-tooltip-text-align` | `center` | Alignement du texte. |
 | `--uix-tooltip-text-decoration` | `none` | Décoration du texte. |
 | `--uix-tooltip-text-transform` | `none` | Transformation du texte. |

@@ -247,6 +247,8 @@ forge:
 
 ## Fehlerquellen
 
+Bei `media_queries` oder `elements` wird ein begrenztes `<style>`-Element in die nächste Shadow Root oder `document.head` eingefügt. Es enthält die `:nth-child()`- und `@media`-Regeln und wird beim Trennen des Elements entfernt. Für eine Grid-Karte in einer Section empfiehlt das Original `column_span: 4` an der Section und `forge.grid_options.columns: full` an der Forge.
+
 | Problem | Ursache | Lösung |
 | --- | --- | --- |
 | Grid wirkt nicht | `for` trifft kein Container-Element | DOM mit Inspektor prüfen |

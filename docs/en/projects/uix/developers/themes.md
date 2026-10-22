@@ -1,15 +1,13 @@
 ---
-title: Themes entwickeln
-description: English placeholder page for Themes entwickeln in the UGSo Open Source documentation.
+description: Information for developers of themes and integrations.
 ---
-# Themes entwickeln
 
-This English page has been added so the Open Source documentation has a complete language path. The detailed English translation is still being expanded.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.2**, revision [26e54e6](https://github.com/Lint-Free-Technology/uix/commit/26e54e6d4973231a393933e6479ed1b03cc86cd3), reviewed 22 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
-The German source page is currently the reference: [projects/uix/developers/themes.md](/projects/uix/developers/themes).
+# Developers - Themes & Integrations
 
-## Status
+When using UI eXtension in a theme please **DO NOT** attempt to ship any part of the UI eXtension integration standalone. Always guide your theme users to the UI eXtension Quick Start Guide to install the integration.
 
-- Language path exists.
-- Navigation and builds can resolve this page.
-- Detailed translation can be refined in a later documentation pass.
+When using UI eXtension alongside another custom integration, please set UI eXtension as a dependency in your `manifest.json`. That way users will be required to install UI eXtension before they can use your integration.
+
+If you have any question please start a [GitHub discussion](https://github.com/Lint-Free-Technology/uix/discussions).

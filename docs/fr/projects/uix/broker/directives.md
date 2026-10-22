@@ -11,6 +11,10 @@ Les directives s'exécutent une par une après chaque correspondance de règle d
 - [Event](#evenement) — envoie un `CustomEvent`.
 - [Call](#appeler) — invoque une méthode d'élément.
 - [Button](#bouton) — insérez un bouton interactif Home Assistant.
+- [Badge](#badge) — insérer ou positionner un badge de texte/icône.
+- [Texte](#text-content) — ajouter du texte après l’ancre.
+- [Verrou](#lock) — protéger l’élément par une superposition.
+- [Gestionnaire d’actions](#action-handler) — attacher les actions HA à l’ancre.
 - [Icône de vignette](#icone-de-tuile) — insérez une icône de vignette interactive Home Assistant.
 - [Action](#action) — exécutez une action Home Assistant, frontend ou UIX.
 - [Template](#modele) — affiche un modèle Jinja2 une fois et enregistre son résultat.
@@ -390,6 +394,103 @@ Utilisez `style` pour un objet plat de propriétés CSS, notamment pour définir
 | `style` | object | — | Objet plat de propriétés CSS et de valeurs chaîne ou nombre, appliqué directement à `wa-tooltip`. |
 
 L'info-bulle est insérée comme élément frère de sa cible. Définissez les variables CSS `--uix-tooltip-*` sur le parent de la cible ou un ancêtre pour la personnaliser ; consultez la [référence du spark Info-bulle](../forge/sparks/tooltip).
+
+## Verrou {#lock}
+
+`lock` superpose une protection à l’ancre jusqu’à ce que l’utilisateur termine la vérification PIN, phrase secrète ou confirmation. Correspondance d’accès, tentatives, icônes et variables `--uix-lock-*` sont celles du [Lock Spark](../forge/sparks/lock).
+
+```yaml
+- type: lock
+  action: tap
+  duration: 5s
+  entity: light.living_room
+  unlocked_action:
+    action: toggle
+  locks:
+    - code: 1234
+      admins: true
+```
+
+La cible par défaut est l’ancre de directive. `for` choisit un descendant relatif ; `for: previous` reprend l’élément créé immédiatement avant par `button`, `badge` ou `tile-icon`. `anchor` change la racine de recherche de `for`.
+
+`locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position` et `icon_size` ont le même sens que dans le Spark. `unlocked_action` est facultatif : les actions HA normales utilisent `entity` ; `element_tap`, `element_hold` et `element_double_tap` déclenchent l’action correspondante depuis la `config` de l’élément lorsqu’elle existe.
+
+`style` est une table plate de propriétés CSS sur le verrou généré. Les variables CSS sont généralement préférables car elles restent actives pendant les transitions verrouillé, déverrouillé et bloqué. `uix` applique UIX Styling à l’overlay de type `uix-broker-lock` ; les réglages résolus sont disponibles comme `config`, les résultats précédents comme `directive`.
+
+```yaml
+- type: button
+  icon: mdi:account
+- type: lock
+  for: previous
+  locks:
+    - confirmation: true
+      admins: true
+  style:
+    "--uix-lock-background": rgba(0, 0, 0, 0.25)
+    "--uix-lock-icon-size": 20px
+    z-index: 2
+```
+
+## Gestionnaire d’actions {#action-handler}
+
+`action-handler` attache le gestionnaire HA normal à l’ancre. Il accepte `tap_action`, `hold_action` et `double_tap_action` et les transmet comme événements `hass-action`. Broker prend possession de chaque type d’action configuré : son événement `action` n’atteint pas les autres écouteurs de l’ancre ou de ses ancêtres. Cela remplace le comportement existant, sans combiner les actions. Omettre un type ou définir `action: none` le laisse intact.
+
+```yaml
+- type: action-handler
+  anchor: "$ div.menu div.title"
+  cursor: default
+  entity: light.living_room
+  tap_action:
+    action: toggle
+  hold_action:
+    action: more-info
+  double_tap_action:
+    action: navigate
+    navigation_path: /dashboard-lights
+```
+
+`entity` fournit l’ID pour les actions telles que `toggle` et `more-info`. `cursor` ne concerne que cette ancre et vaut `pointer` par défaut ; d’autres valeurs CSS comme `default` ou `auto` sont possibles.
+
+## Badge {#badge}
+
+`badge` insère un `uix-badge`. Sans `after`/`before`, l’ancre de directive sert de référence ; sinon les sélecteurs UIX sont relatifs à celle-ci. `for: previous` reprend l’élément créé immédiatement avant et ne peut pas être combiné avec `after` ou `before`.
+
+```yaml
+- type: button
+  label: Salon
+  end_icon: mdi:lightbulb-fluorescent-tube-outline
+  tap_action:
+    action: toggle
+- type: badge
+  for: previous
+  content: 3
+  variant: danger
+  pill: true
+```
+
+`content` est du texte ou un nombre, jamais du HTML. `variant` accepte `brand` (défaut), `neutral`, `success`, `warning`, `danger` ; `appearance` accepte `accent` (défaut), `filled`, `outlined`, `filled-outlined`. `pill` vaut `false` par défaut ; `attention` accepte `none` (défaut), `pulse`, `bounce`. `start_icon` et `end_icon` ajoutent des icônes MDI. `style` est une table CSS plate ; `uix` applique les styles au type `uix-broker-badge`.
+
+Seuls `ha-button` et `ha-tile-icon` reçoivent automatiquement le badge directement, en `top-end` par défaut. Un wrapper de bouton UIX est reconnu comme son `ha-button` interne. Sur les autres cibles, sans `placement`, le badge est un frère normal. Avec `placement`, il est positionné sur le **parent**, sans mesurer ni modifier la cible ; cela convient surtout à une cible remplissant son parent.
+
+`placement` accepte `top`, `bottom`, `left`, `right` et leurs variantes `-start`/`-end`. Le placement utilise `--ha-font-size-xs` et un padding `0.25em 0.5em`. Les [variables CSS du badge](../forge/sparks/badge#variables-css) s’appliquent aussi ; `--uix-badge-offset-x` et `--uix-badge-offset-y` déplacent vers la droite/le bas si positifs. Définir au maximum l’un de `after` et `before`.
+
+## Texte {#text-content}
+
+`text-content` insère un `<span>` réutilisé, marqué `data-uix-broker-text-content`, immédiatement après l’ancre. `content` est une chaîne ou un nombre, vide par défaut ; les données capturées et résultats Template/JavaScript antérieurs sont acceptés. Le contenu est toujours du texte, jamais du HTML. `style` applique des propriétés CSS plates avec valeurs textuelles ou numériques.
+
+```yaml
+- type: text-content
+  content: Sécurisé
+  style:
+    display: block
+    font-size: var(--ha-font-size-s)
+    color: var(--success-color)
+- type: tooltip
+  for: previous
+  content: Toutes les zones d’alarme sont sécurisées
+```
+
+Pour un slot nommé, choisir le vrai élément `<slot>` ou un élément du Light DOM déjà affecté à ce slot. Dans ce dernier cas, UIX copie son attribut `slot` au span. La directive n’a pas d’option `slot` propre.
 
 ## Action
 

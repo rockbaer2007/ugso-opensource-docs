@@ -5,6 +5,8 @@ title: Event Spark
 
 Der Event Spark verbindet Forge-Elemente über `fire-dom-event`. Daten aus passenden Events werden in `uixForge.event` abgelegt und können danach in Templates verwendet werden.
 
+Aufeinanderfolgende Event-Daten werden **tief zusammengeführt**, nicht ersetzt: Auf `score: 10` folgendes `count: 2` lässt beide Werte bestehen. Bei anderen Forge-IDs gilt derselbe Merge innerhalb des jeweiligen ID-Namensraums.
+
 ## Konfiguration
 
 | Schlüssel | Typ | Pflicht | Standard | Beschreibung |

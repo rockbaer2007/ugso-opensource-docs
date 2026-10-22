@@ -197,7 +197,12 @@ entities:
 Sans autre contenu ajouté par un spark — comme élément frère ou enfant de la `div` — le contenu de la carte vide prend une hauteur de `var(--row-height, 56px)`. Si un élément frère existe mais reste vide, sa hauteur est `0px`. Dans tous les cas, vous pouvez définir explicitement cette hauteur avec la variable CSS `--uix-forge-blank-card-height`, comme dans l'exemple `card_as_row`.
 
 :::
+### Configuration de badge vide {#blank-badge-config}
+
+Dans l’aperçu, `mold: badge` sans type utilise automatiquement `uix-forge-blank-badge`. `element.icon` et `element.label` fournissent le contenu ; une icône seule donne un badge sans texte. Sans les deux, un message demande d’ajouter une icône, un libellé ou `forge.sparks`. Avec des Sparks, ce message disparaît ; les Sparks ciblent une `div` vide dans le slot par défaut. Le type choisi automatiquement n’est pas enregistré dans le tableau de bord.
+
 <a id="layered-configuration"></a>
+<a id="keep-the-elements-configuration-in-element_base"></a>
 ## Configuration en couches
 
 ::: info Aperçu : disponible à partir de UIX 9.0.0-beta.0
@@ -205,6 +210,8 @@ Cette fonction appartient à la branche `dev` actuelle, pas à la version stable
 :::
 
 La configuration en couches encapsule un élément possédant ses propres modèles. Elle fonctionne avec tous les moules Forge et ne nécessite pas d'éditeur visuel. Toute configuration résolue contenant `element_base` utilise ce mode.
+
+L’aperçu 9.0.0-beta.2 précise la règle de type : un `element.type` concret **hérité** d’une Foundry peut servir d’ancrage si `element_base.type` local est exactement la même chaîne. Forge retire ce type hérité avant d’appliquer les autres valeurs. Un `element.type` local, dynamique ou incompatible reste invalide. Supprimer un modèle Element demande confirmation avant d’effacer sa source.
 
 `template_nesting` reste utile dans un `element` sans couches ou dans la surcouche Forge lorsqu'un modèle Forge doit produire de la syntaxe Jinja pour l'élément. Les modèles natifs de `element_base` n'en ont pas besoin.
 
@@ -280,17 +287,19 @@ uix_foundries:
   kitchen_tile:
     forge:
       mold: card
-    element_base:
-      type: markdown
-      content: |
-        ## {{ states('sensor.room_label') }}
     element:
+      type: markdown
       title: "{{ config.entity }}"
 
-# Carte du tableau de bord : les deux couches viennent de la fonderie.
+# Carte : réglages natifs locaux, valeurs Forge héritées.
 type: custom:uix-forge
 foundry: kitchen_tile
-entity: light.kitchen
+element_base:
+  type: markdown
+  content: |
+    ## {{ states('sensor.room_label') }}
+element:
+  entity: light.kitchen
 ```
 
 Dans les modèles Forge, `config.element_base` contient la base résolue et `config.element` la source de la surcouche résolue avant évaluation. Forge les compose en configuration finale de l'élément. Les mappings `uix` des deux couches sont fusionnés durant cette composition ; UIX Styling reçoit ce résultat et traite ses modèles selon ses règles habituelles.

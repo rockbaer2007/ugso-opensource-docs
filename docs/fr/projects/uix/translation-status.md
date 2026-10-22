@@ -6,6 +6,17 @@ description: État de la documentation UIX française.
 
 Cette documentation française est maintenue à partir de la documentation UIX canonique en anglais. Les pages principales, le démarrage rapide et les aperçus de UIX Styling, Forge, Broker et Extras sont déjà disponibles en français. La section complète **UIX Broker** est également disponible en français.
 
+## Revue complète du 22 octobre 2026
+
+Les **64 pages Markdown canoniques** ont été comparées à la [révision anglaise figée `26e54e6`](https://github.com/Lint-Free-Technology/uix/tree/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source). Depuis `e2e0701`, seules la référence Forge, les Foundries et l’aperçu Forge ont changé ; les 61 autres sources sont identiques. La version stable reste **8.4.0** ; l’aperçu vérifié est **9.0.0-beta.2**.
+
+- **EN :** les 64 pages reprennent désormais tout le contenu anglais original plutôt que des espaces réservés. Encadrés, ancres, liens et médias sont adaptés au site, avec attribution CC BY 4.0. Le [manifeste](/projects/uix/canonical-review.json) conserve les empreintes des sources et sorties ; les blocs de code sont comparés après normalisation de l’indentation externe, des espaces en fin de ligne et des fins de ligne.
+- **DE/FR :** ajout des directives Broker Badge, Text content, Lock et Action handler, des ancrages de type Forge, de la base native des Foundries et des badges vides. La version française reçoit les options Tooltip manquantes, le défilement et les valeurs CSS actuelles.
+- **DE :** correction des exemples Foundry (`uix_foundries`, `foundry` racine, `forge.billets`, type natif, fusion des Sparks, macro `returns`) et de la FAQ Card-mod jusqu’à 4.2.1. Compléments sur événement navigateur, cache, dépendances, limitation des états, priorité des billets et options CSS des Sparks.
+- Chaque page canonique possède un équivalent DE/EN/FR. L’ancien chemin anglais `style-custom-panels` renvoie vers `style-frame-panels`. Médias originaux manquants ajoutés ; liens de langue, références et images locales sont vérifiés.
+
+Cette revue porte sur les sources, le contenu et la documentation. Les traductions DE/FR restent des adaptations rédactionnelles, sans identité ligne par ligne ni certification indépendante. Aucun système HA n’a été appelé ou modifié. Métadonnées stables maintenues en 8.4.0 ; version et révision d’aperçu restent séparées. La comparaison Forge ciblée publiée auparavant est conservée ci-dessous comme historique.
+
 ## Comparaison Forge du 22 octobre 2026
 
 La [modification canonique `1badf70befb9`](https://github.com/Lint-Free-Technology/uix/commit/1badf70befb9c9d3d7b06c0eced75af7d552aff1) sur `dev` ajoute la disponibilité de l’éditeur visuel Forge dès **9.0.0-beta.2**. La section correspondante manquait sur nos pages. Un résumé comparé à la source est désormais disponible en **DE/EN/FR** : Native, Forge, Element, Foundry et Export, ainsi que `element_base`/`element`, ancrages de type, null/désactivation et limites YAML.

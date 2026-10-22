@@ -8,6 +8,8 @@ Forge prend en charge les moules `card`, `badge`, `row`, `picture-element`, `sec
 
 Consultez [Forge](./forge.md) pour la référence complète de la configuration.
 
+L’aperçu **9.0.0-beta.2** ajoute l’[éditeur visuel de cartes et badges](./forge#visual-editor-cards-and-badges). `element_base` conserve les réglages et modèles natifs inchangés ; seules les valeurs modifiées par Forge vont dans `element`, pour tous les moules. Le `element_base` d’une Foundry est une source native préservée : le générer depuis Export et le conserver lors des modifications. Voir la [règle d’ancrage du type](./foundries#type-de-foundry-et-editeur-native).
+
 ## Fonderies
 
 Une **fonderie** est une configuration UIX Forge réutilisable. Elle permet de définir une seule fois des fragments `forge`, `element` et `uix` pour plusieurs cartes. À partir de UIX 9.0.0-beta.0, elle peut aussi fournir `element_base` : une base résolue active la configuration en couches. `element_disabled_paths` reste local à l'instance Forge qui utilise la fonderie.

@@ -42,6 +42,24 @@ tap_action:
 
 Wenn ein Forge-Form-Spark die Aktion `event` auslöst, werden seine aktuellen Formularwerte den Aktionsdaten und damit dem `detail` des Events hinzugefügt.
 
+## `event`: Browser-Event auslösen {#event}
+
+Diese Action sendet ein `CustomEvent` auf `window`. Damit können Dashboard-Aktionen Broker-Interaktionen im Realm `browser` auslösen, ohne einen weiteren `fire-dom-event`-Listener zu entpacken. `name` ist erforderlich, `data` ist das Event-`detail` und standardmäßig `{}`.
+
+```yaml
+type: button
+name: YAML umschalten
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: event
+    name: toggle-yaml-mode
+    data:
+      source: dashboard-button
+```
+
+Bei einer Broker-`button`-Direktive wird stattdessen automatisch vom Platzierungsbezug (`after`, `before` oder Direktiven-Anchor) mit `bubbles: true` und `composed: true` gesendet. Empfangende Interaktionen können dadurch `target`, `<` oder `<$` aus dem Eventpfad verwenden, statt absolute `select_tree`-Pfade erneut zu suchen. Bei Auslösung durch den [Form Spark](../forge/sparks/form) werden aktuelle Formularwerte an `data` angehängt und Eigenschaften von `detail`.
+
 ## `more-info`: More-info für eine Entität mit Startansicht öffnen
 
 | Konfiguration | Einstellung | Standard | Beschreibung |
@@ -206,6 +224,8 @@ tap_action:
 ![Popover mit Home-Assistant-Karte](../assets/page-assets/extras/extra-popover-action-card.gif)
 
 ## `javascript`: JavaScript in der Browser-Session ausführen
+
+Die Aktion erhält `hass` sowie das optionale Objekt `variables`. Beispielsweise kann Code über `hass.callService(...)` einen Dienst aufrufen. Er läuft mit den im aktuellen Browser verfügbaren HA-Daten und Berechtigungen.
 
 ::: warning
 Führe JavaScript nur aus vertrauenswürdigen UIX-Konfigurationen aus. JavaScript läuft im Browserkontext.

@@ -8,6 +8,34 @@ Une **fonderie** est une configuration UIX Forge nommée et enregistrée dans Ho
 
 À partir de **UIX 9.0.0-beta.0**, une fonderie peut aussi fournir un fragment `element_base`. La base appartenant à l'élément et la surcouche Forge `element` sont résolues séparément. Une base résolue active la [configuration en couches](./forge#layered-configuration). Cet aperçu ne fait pas partie de la version stable 8.4.0.
 
+::: info Précisions de l’aperçu 9.0.0-beta.2
+`element_base` d’une Foundry est une source native préservée par l’éditeur : la créer ou la modifier depuis le YAML du **Export** de Forge, puis la conserver pour une future prise en charge visuelle. Elle est fusionnée par héritage avant la base locale ; ses modèles sont évalués par HA ou l’élément enveloppé, pas par Forge. Les valeurs `element` s’appliquent ensuite. Le sélecteur visuel ne choisit pas encore une Foundry héritant `element_base`.
+:::
+
+### Type de Foundry et éditeur Native
+
+Une Foundry peut définir un `element.type` concret. Pour le Native editor, répéter exactement ce type dans `element_base.type` local :
+
+```yaml
+# Foundry room_tile
+forge:
+  mold: card
+element:
+  type: tile
+  name: "{{ config.entity }}"
+```
+
+```yaml
+# Carte
+type: custom:uix-forge
+foundry: room_tile
+element_base:
+  type: tile
+  entity: light.kitchen
+```
+
+Les deux types doivent être la même chaîne concrète. Avec une base, un type dynamique, incompatible ou un `element.type` local est invalide. Le type hérité correspondant sert seulement d’ancrage Native et est retiré de la surcouche avant composition. Voir la [base native](./forge#keep-the-elements-configuration-in-element_base).
+
 <a id="global-foundries"></a>
 ## Fonderies globales
 

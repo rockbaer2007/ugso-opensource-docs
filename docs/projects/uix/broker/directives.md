@@ -11,6 +11,10 @@ Direktiven laufen nacheinander, nachdem alle Regeln einer Interaktion passen. Je
 - [Event](#event): Ein `CustomEvent` auslösen.
 - [Call](#call): Eine Element-Methode aufrufen.
 - [Button](#button): Einen interaktiven Home-Assistant-Button einfügen.
+- [Badge](#badge): Text-/Icon-Badge einfügen oder platzieren.
+- [Text content](#text-content): Reinen Text hinter dem Anchor ergänzen.
+- [Lock](#lock): Element mit einer Sperre überlagern.
+- [Action handler](#action-handler): HA-Aktionen an den Anchor binden.
 - [Tile icon](#tile-icon): Ein interaktives Home-Assistant-Tile-Icon einfügen.
 - [Tooltip](#tooltip): Einen gestalteten Tooltip an ein Element hängen.
 - [Action](#action): Home-Assistant-, Frontend- oder UIX-Action ausführen.
@@ -249,6 +253,47 @@ Nutze `uix` für UIX-Styling, einschließlich Styles innerhalb des Shadow Root d
 - Weitere CSS-Variablen des Forge button spark gelten ebenfalls.
 :::
 
+## Badge {#badge}
+
+`badge` fügt ein `uix-badge` ein. Ohne `after`/`before` dient der Direktiven-Anchor als Bezug; sonst gelten relative UIX-Selektoren. `for: previous` verwendet das unmittelbar vorher erzeugte Element und darf nicht mit `after` oder `before` kombiniert werden.
+
+```yaml
+- type: button
+  label: Wohnzimmer
+  end_icon: mdi:lightbulb-fluorescent-tube-outline
+  tap_action:
+    action: toggle
+- type: badge
+  for: previous
+  content: 3
+  variant: danger
+  pill: true
+```
+
+`content` ist Text oder Zahl, niemals HTML. `variant` ist `brand` (Standard), `neutral`, `success`, `warning` oder `danger`; `appearance` ist `accent` (Standard), `filled`, `outlined` oder `filled-outlined`. `pill` ist standardmäßig `false`; `attention` erlaubt `none` (Standard), `pulse` und `bounce`. `start_icon` und `end_icon` setzen MDI-Symbole. `style` ist ein flaches CSS-Mapping; `uix` gestaltet den Typ `uix-broker-badge`.
+
+Nur `ha-button` und `ha-tile-icon` erhalten das Badge automatisch direkt am Element, standardmäßig bei `top-end`. Ein UIX-Button-Wrapper wird als enthaltener `ha-button` erkannt. Für andere Ziele erfolgt ohne `placement` eine normale Einfügung als Geschwisterelement. Mit `placement` wird das Badge am **Elternelement** positioniert, ohne das Ziel zu vermessen oder zu ändern. Das eignet sich besonders, wenn das Ziel den Elterncontainer ausfüllt.
+
+`placement` unterstützt wie Tooltip `top`, `bottom`, `left`, `right` und jeweils `-start`/`-end`. Platzierte Badges verwenden `--ha-font-size-xs` und `0.25em 0.5em` Padding. Die [Badge-CSS-Variablen](../forge/sparks/badge#css-variablen) gelten auch hier; `--uix-badge-offset-x` und `--uix-badge-offset-y` verschieben nach rechts/unten bei positiven Werten. Setze höchstens eines von `after` und `before`.
+
+## Text content {#text-content}
+
+`text-content` fügt einen wiederverwendeten `<span>` mit `data-uix-broker-text-content` unmittelbar hinter dem Direktiven-Anchor ein. `content` ist eine Zeichenkette oder Zahl, standardmäßig leer; Captured Data und vorherige Template-/JavaScript-Ergebnisse sind möglich. Inhalt wird immer als Text eingefügt, niemals als HTML. `style` setzt flache CSS-Eigenschaften mit String- oder Zahlenwerten inline.
+
+```yaml
+- type: text-content
+  content: Gesichert
+  style:
+    display: block
+    font-size: var(--ha-font-size-s)
+    color: var(--success-color)
+- type: tooltip
+  for: previous
+  content: Alle Alarmzonen sind gesichert
+```
+
+Für benannte Slots entweder das tatsächliche `<slot>` als Anchor wählen oder ein Light-DOM-Element, das bereits diesem Slot zugewiesen ist. Im zweiten Fall kopiert UIX dessen `slot`-Attribut auf den Span. Die Direktive besitzt keine eigene `slot`-Option.
+
 ## Tile icon
 
 ::: info Verfügbar ab UIX 8.3.0-beta.3
@@ -392,6 +437,62 @@ Mit `for: previous` erhält das zuletzt von einer früheren Direktive derselben 
 | `style` | object | — | Flaches Mapping von CSS-Eigenschaften auf String- oder Zahlenwerte, inline auf `wa-tooltip` gesetzt. |
 
 Da der Tooltip neben dem Ziel liegt, müssen vererbte CSS-Variablen auf dem Eltern- oder einem Vorfahrenelement gesetzt werden. Siehe [CSS-Variablen des Tooltip Sparks](../forge/sparks/tooltip#css-variablen).
+
+## Lock {#lock}
+
+`lock` legt eine Sperre über den Direktiven-Anchor, bis der aktuelle Benutzer die konfigurierte PIN-, Passphrase- oder Bestätigungsprüfung abgeschlossen hat. Zugriffsabgleich, Fehlversuche, Icons und CSS-Variablen `--uix-lock-*` entsprechen dem [Lock Spark](../forge/sparks/lock).
+
+```yaml
+- type: lock
+  action: tap
+  duration: 5s
+  entity: light.living_room
+  unlocked_action:
+    action: toggle
+  locks:
+    - code: 1234
+      admins: true
+```
+
+Standardziel ist der Direktiven-Anchor. `for` wählt ein relativ dazu gelegenes Element; `for: previous` verwendet das unmittelbar zuvor durch `button`, `badge` oder `tile-icon` erzeugte Element. `anchor` ändert den Ausgangspunkt der `for`-Suche.
+
+`locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position` und `icon_size` haben dieselbe Bedeutung wie beim Spark. `unlocked_action` ist optional: normale HA-Aktionen verwenden `entity`; `element_tap`, `element_hold` und `element_double_tap` lösen die entsprechende Aktion aus der vorhandenen Element-`config` aus.
+
+`style` ist eine flache Zuordnung von CSS-Namen zu Werten auf der erzeugten Sperre. Die CSS-Variablen sind meist besser geeignet, weil sie auch beim Wechsel zwischen gesperrt, entsperrt und blockiert gelten. Mit `uix` lässt sich das Overlay als UIX-Typ `uix-broker-lock` gestalten; die aufgelösten Sperreinstellungen stehen als `config`, vorherige Ergebnisse als `directive` bereit.
+
+```yaml
+- type: button
+  icon: mdi:account
+- type: lock
+  for: previous
+  locks:
+    - confirmation: true
+      admins: true
+  style:
+    "--uix-lock-background": rgba(0, 0, 0, 0.25)
+    "--uix-lock-icon-size": 20px
+    z-index: 2
+```
+
+## Action handler {#action-handler}
+
+`action-handler` bindet den normalen HA-Aktionshandler an den Direktiven-Anchor. Es unterstützt `tap_action`, `hold_action` und `double_tap_action` und sendet sie als `hass-action`-Event. Broker übernimmt jede konfigurierte Aktionsart vollständig: deren `action`-Event erreicht keine anderen Listener am Anchor oder seinen Vorfahren. Damit wird bestehendes Verhalten ersetzt, nicht kombiniert. Eine ausgelassene Aktionsart oder `action: none` bleibt unangetastet.
+
+```yaml
+- type: action-handler
+  anchor: "$ div.menu div.title"
+  cursor: default
+  entity: light.living_room
+  tap_action:
+    action: toggle
+  hold_action:
+    action: more-info
+  double_tap_action:
+    action: navigate
+    navigation_path: /dashboard-lights
+```
+
+`entity` liefert die ID für entitätsbezogene Aktionen wie `toggle` und `more-info`. `cursor` gilt nur für diesen Anchor und ist standardmäßig `pointer`; andere CSS-Werte wie `default` oder `auto` sind erlaubt.
 
 ## Action
 

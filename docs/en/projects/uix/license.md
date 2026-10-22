@@ -1,24 +1,19 @@
 ---
-title: UIX Documentation License
-head:
-  - - meta
-    - http-equiv: refresh
-      content: "0; url=https://uix.lf.technology/license/"
-  - - link
-    - rel: canonical
-      href: https://uix.lf.technology/license/
+hide:
+  - toc
+  - navigation
 ---
 
-# UIX Documentation License
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.2**, revision [26e54e6](https://github.com/Lint-Free-Technology/uix/commit/26e54e6d4973231a393933e6479ed1b03cc86cd3), reviewed 22 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
-The English UIX documentation license is maintained by the original UIX project.
+# Documentation license
 
-You are being redirected to:
+UIX documentation prose and original documentation media are licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).
 
-[https://uix.lf.technology/license/](https://uix.lf.technology/license/)
+CC BY 4.0 lets you share and adapt this material for any purpose, including commercially, provided that you give appropriate credit, link to the license, and indicate changes.
 
-<script setup>
-if (typeof window !== 'undefined') {
-  window.location.replace('https://uix.lf.technology/license/')
-}
-</script>
+UIX source code, documentation tooling, stylesheets, templates, code blocks, and configuration examples remain licensed under the [MIT License](https://github.com/Lint-Free-Technology/uix/blob/master/LICENSE.txt). Third-party material, including trademarks, remains subject to its own license or terms.
+
+Documentation previously published under the repository-wide MIT License remains available under that license. CC BY 4.0 is an additional permission for the documentation material described above.
+
+For the repository-source notice, see [`docs/LICENSE.md`](https://github.com/Lint-Free-Technology/uix/blob/master/docs/LICENSE.md).

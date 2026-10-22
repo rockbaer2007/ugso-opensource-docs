@@ -4,6 +4,10 @@ description: Templates in UIX verwenden.
 ---
 # Templates
 
+::: info Forge-Billets und lokale Werte
+`forge.billets` steht in Forge-Templates sowie in `uix`-Stilen der Forge und des erzeugten Elements zur Verfügung. Direkt unter `uix` definierte Billets werden damit zusammengeführt; die lokalen `uix`-Werte haben Vorrang.
+:::
+
 Alle Styles können [Jinja2-Templates](https://www.home-assistant.io/docs/configuration/templating/) enthalten, die vom Home-Assistant-Backend verarbeitet werden.
 
 UI eXtension stellt Templates zusätzlich diese Variablen bereit:

@@ -7,6 +7,8 @@ Der Overlay Icon Spark legt ein Icon, ein Bild oder ein zustandsgetriebenes Enti
 
 ## Grundnutzung
 
+Die Standardfarbe eines Entity-Icons folgt `state`, `domain` und `device_class`. `color: none` verwendet bei Ziel `ha-tile-icon` `var(--white-color)`, sonst `var(--primary-color)`. Overlay-Sparks setzen am Ziel `position: relative`, wenn dessen berechnete Position `static` ist. CSS-Variablen können über `uix.style` oder ein Theme gesetzt werden.
+
 ```yaml
 type: custom:uix-forge
 forge:
