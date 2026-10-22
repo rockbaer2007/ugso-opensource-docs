@@ -12,8 +12,17 @@ noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 
-**Stand: 22.10.2026 · HA-App 0.1.331 · HACS-Integration 0.1.306.**
+**Stand: 22.10.2026 · HA-App 0.1.332 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
+
+**App 0.1.332 ergänzt die durchsuchbare Entwurfsübersicht.** Projekt, Scriptdatei,
+Speicherzeit, ehrliche Tab-Zuordnung und Quellenkennung erleichtern die Auswahl.
+Suche mit mehreren Begriffen, Trefferzahl, leere Treffer und das Wiederherstellen
+der Auswahl nach Filterende sind in DE/EN/FR verfügbar. Gespeicherte Quellen
+werden weder umgeschrieben noch gelöscht; die Wiederherstellung bleibt ausdrücklich.
+Die native Prüfung auf .68 besteht mit 32 bytegleich erhaltenen alten Quellen,
+gleichnamigen Projekten, getrennter Wiederherstellung und erhaltenen Bestandsdaten.
+Drei Vollbackups bleiben, .177 unverändert. Echte Mobilprüfung bleibt offen.
 
 **Browserabbruch während erneutem Dateiimport auf .68 bestanden.** Ein echter
 Chrome-Prozessabbruch nach lokalem Datensatzschreiben, vor dem Tab-Zeiger,

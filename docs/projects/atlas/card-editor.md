@@ -5,6 +5,33 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Durchsuchbare Entwurfsübersicht – App 0.1.332
+**Lokale Entwürfe** ist jetzt ein eigener Bereich mit Suche, Trefferzahl und
+Quelldetails. Suchen nach Projektname, Scriptdatei, Datum oder Quellenkennung
+können mehrere Begriffe kombinieren. **Suche leeren** zeigt alle Quellen und
+stellt die vorherige Auswahl wieder her. Ohne Treffer ist die Prüfung gesperrt.
+
+Die Liste zeigt Projekt, lokalisierte Speicherzeit, Tab-Zuordnung und eine kurze
+Quellenkennung; darunter stehen Scriptdatei und vollständige Kennung. Nur eine
+sicher zugeordnete Quelle heißt **dieser Tab**. Für andere Quellen steht
+**anderer oder früherer Tab**; alte Datensätze erhalten keine erfundenen Tab-Namen.
+Die Projektbezeichnung ist der im Entwurf gespeicherte Karten-/Projektname.
+Gleiche Namen bleiben über Script und Quellenkennung unterscheidbar.
+
+Suche, Auswahl und Sprachwechsel DE/EN/FR verändern keine Quellen. Ein Entwurf
+wird weiterhin erst geprüft und ausdrücklich gesichert übernommen. Ein Angebot
+für einen neueren Entwurf nach Schreibabbruch kann auch bei aktiver Suche geöffnet
+werden; dafür wird der Filter geleert. Keine automatische Übernahme oder Löschung.
+
+Die native Prüfung auf .68 mit HA 2026.10.2 besteht: gleichnamige Projekte in zwei
+Tabs, Projekt-/Script-/Quellensuche, leere Treffer, Auswahl nach Filterende,
+Vorschau-Abbrechen, DE/EN/FR und getrennte Wiederherstellung nach Neuladen.
+Alle 32 alten Quellen bleiben bytegleich; Originaleditoren und Daten sind
+wiederhergestellt, Testdateien bereinigt, drei Vollbackups behalten. .177 bleibt
+unverändert. Desktopdarstellung geprüft; die Chrome-Fensterverkleinerung greift
+nicht, deshalb ist die schmale/mobile Darstellung noch nicht qualifiziert.
+:::
+
 ::: info Browserabbruch bei erneutem Dateiimport geprüft – 22.10.2026
 Auf .68 mit App 0.1.331 und HA 2026.10.2 besteht der echte Chrome-Prozessabbruch
 nach dem Schreiben des neuen lokalen Entwurfs, vor Aktualisierung des Tab-Zeigers.

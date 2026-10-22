@@ -5,6 +5,33 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Vue des brouillons avec recherche – App 0.1.332
+**Brouillons locaux** dispose d’un espace de recherche, d’un nombre de résultats et
+de détails de source. Rechercher par nom de projet, fichier de script, date ou
+identifiant ; plusieurs termes peuvent être combinés. **Effacer la recherche**
+affiche toutes les sources et rétablit la sélection précédente. Sans résultat,
+la vérification est désactivée.
+
+La liste affiche projet, date localisée, association à l’onglet et identifiant court ;
+les détails ajoutent fichier de script et identifiant complet. Seule une source
+associée avec certitude porte **cet onglet**. Les autres indiquent **autre onglet
+ou onglet précédent**, sans inventer de noms pour les anciennes sources. Le projet
+est le nom de carte/projet enregistré. Script et identifiant distinguent les homonymes.
+
+Recherche, sélection et changement DE/EN/FR ne modifient aucune source. La reprise
+exige toujours vérification et confirmation avec sauvegarde. Une proposition de
+brouillon plus récent reste accessible pendant une recherche en effaçant le filtre.
+Aucune application ni suppression automatique.
+
+Qualification native sur .68 avec HA 2026.10.2 réussie : projets homonymes dans
+deux onglets, recherche projet/script/source, résultats vides, retour à la sélection,
+annulation d’aperçu, DE/EN/FR et reprises distinctes après recharge. Les 32 anciennes
+sources restent identiques octet par octet ; éditeurs/données rétablis, fichiers
+de test nettoyés et trois sauvegardes complètes conservées. .177 inchangé.
+Affichage bureau vérifié ; le redimensionnement Chrome reste sans effet, donc
+l’affichage étroit/mobile n’est pas encore qualifié.
+:::
+
 ::: info Arrêt du navigateur pendant un nouvel import vérifié – 22/10/2026
 Sur .68 avec l’App 0.1.331 et HA 2026.10.2, l’arrêt forcé des processus Chrome
 réussit après écriture du nouveau brouillon local, avant mise à jour du pointeur

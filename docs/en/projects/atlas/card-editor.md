@@ -5,6 +5,32 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Searchable draft overview – App 0.1.332
+**Local drafts** now has its own search area, result count and source details.
+Search by project name, script filename, date or source identifier; multiple
+terms can be combined. **Clear search** shows all sources and restores the previous
+selection. Inspection is disabled when there are no matching sources.
+
+The list shows project, localized save time, tab association and a short source
+identifier; details include the script filename and full identifier. Only a
+confirmed associated source is labelled **this tab**. Others show **other or previous
+tab**; existing records are not assigned invented tab names. Project is the saved
+card/project name. Script and source identifier distinguish identical names.
+
+Search, selection and DE/EN/FR language changes do not alter sources. Recovery
+still requires explicit inspection and backed-up apply. A newer-draft recovery
+offer also works during a search by clearing the filter. No automatic application
+or deletion is introduced.
+
+Native qualification on .68 with HA 2026.10.2 passes: duplicate project names in
+two tabs, project/script/source search, empty results, selection after clearing,
+preview cancellation, DE/EN/FR and separate recovery after reload. All 32 original
+sources remain byte-identical; original Editors/data are restored, fixtures
+cleaned and three full backups retained. .177 remains untouched. Desktop rendering
+is checked; Chrome's viewport override has no effect, so narrow/mobile rendering
+is not yet qualified.
+:::
+
 ::: info Browser termination during repeated file import qualified – 2026-10-22
 On .68 with App 0.1.331 and HA 2026.10.2, forced Chrome process termination passes
 after the new local draft record is written, before updating its tab pointer.

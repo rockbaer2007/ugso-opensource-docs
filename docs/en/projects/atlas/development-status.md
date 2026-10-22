@@ -12,8 +12,17 @@ are documented in the development status below.
 
 ## Current State
 
-**As of 2026-10-22 · HA App 0.1.331 · HACS integration 0.1.306.**
+**As of 2026-10-22 · HA App 0.1.332 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+**App 0.1.332 adds the searchable draft overview.** Project, script filename,
+save time, explicit tab association and source identifier simplify selection.
+Multi-term search, result counts, empty results and selection restoration when
+clearing the filter are available in DE/EN/FR. Stored sources are neither rewritten
+nor deleted; recovery remains explicit.
+Native .68 qualification passes with 32 byte-identical original sources, duplicate
+names, independent recoveries and preserved data. Three full backups remain;
+.177 is untouched. Real mobile qualification remains open.
 
 **Browser termination during repeated file import passes on .68.** Forced Chrome
 process termination after the local record write, before the tab pointer update,

@@ -16,7 +16,16 @@ vérifications restantes sont documentés dans l'état du développement ci-dess
 
 ## État actuel
 
-**État au 22/10/2026 · App HA 0.1.331 · intégration HACS 0.1.306.**
+**État au 22/10/2026 · App HA 0.1.332 · intégration HACS 0.1.306.**
+
+**L’App 0.1.332 ajoute la recherche des brouillons.** Projet, fichier de script,
+date, association explicite à l’onglet et identifiant facilitent la sélection.
+Recherche multiterme, nombre de résultats, résultats vides et retour à la sélection
+après effacement du filtre sont disponibles en DE/EN/FR. Les sources enregistrées
+ne sont ni réécrites ni supprimées ; la reprise reste explicite.
+La vérification native sur .68 réussit : 32 sources anciennes identiques octet par
+octet, homonymes, reprises distinctes et données conservées. Trois sauvegardes
+complètes restent ; .177 inchangé. La qualification mobile réelle reste ouverte.
 
 **Arrêt du navigateur pendant un nouvel import réussi sur .68.** L’arrêt forcé
 des processus Chrome après écriture locale, avant mise à jour du pointeur,
