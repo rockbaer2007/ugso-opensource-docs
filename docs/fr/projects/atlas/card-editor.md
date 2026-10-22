@@ -11,31 +11,28 @@ de projet, avant les brouillons locaux. Il reçoit le focus et devient visible
 par défilement, avec message de disponibilité. Chargement, conseil de sélection
 et limite de 15 secondes des requêtes de lecture rendent les erreurs visibles.
 Écritures et contrôles de révision inchangés. Zones étroites, DE/EN/FR, erreur de
-lecture, délai et nouvel essai sont vérifiés. Nouvelle vérification réelle sur
-téléphone et conflit mobile encore attendus. Exporter les modifications avant
-rechargement. .177 inchangé.
+lecture, délai et nouvel essai sont vérifiés. L’utilisateur confirme la confirmation
+visible sur les deux appareils et le test conflit/Wi-Fi ci-dessous. Exporter les
+modifications avant rechargement. .177 inchangé.
 :::
 
-::: info Préparé : conflit d’enregistrement entre appareils sur .68
-App 0.1.334 : un seul projet serveur propre au test est ouvert dans Chrome sur
-téléphone et tablette. Sauvegarde complète récente et preuves PC conservées ;
-sept projets initiaux intacts. Le guide temporaire **ATLAS Mobilkonflikt** figure
-dans la barre latérale HA, sans restriction administrateur. Résultats réels attendus.
+::: info Réussi : conflit entre appareils et coupure Wi-Fi
+Le 22/10/2026, l’utilisateur confirme l’App 0.1.334 dans Chrome sur téléphone
+et tablette : même projet serveur ouvert sur les deux appareils. Le téléphone
+enregistre ; l’ancien aperçu de la tablette signale un conflit et conserve son
+brouillon `mobil-konflikt-tablet.js`. Comparaison serveur indépendante : révision 2,
+script `mobil-konflikt-handy.js`.
 
-Chaque appareil exporte sa configuration initiale et ses sources locales, puis
-reprend explicitement **MOB68 Gemeinsamer Speicherkonflikt**. Téléphone/tablette :
-scripts `mobil-konflikt-handy.js` et `mobil-konflikt-tablet.js`. La tablette
-ouvre d’abord **Vérifier et enregistrer**, sans confirmer. Le téléphone enregistre
-complètement ; la tablette confirme ensuite son ancien aperçu. Attendu : conflit,
-état serveur du téléphone et brouillon de la tablette conservés.
+Le téléphone perd ensuite le Wi-Fi entre aperçu et reprise. Un message d’erreur
+apparaît, `mobil-konflikt-handy-offline.js` reste local et le téléphone se reconnecte
+après réactivation du Wi-Fi. Le serveur conserve exactement l’état confirmé du
+téléphone. Ce test précède l’écriture ; il ne simule pas précisément une coupure
+après écriture avant confirmation.
 
-Après analyse seulement, couper le Wi-Fi du téléphone entre aperçu et reprise,
-avec export préalable du brouillon hors ligne. Aucun succès d’enregistrement
-ne doit être annoncé hors ligne. Sans réponse après 30 secondes, ne plus cliquer
-et signaler l’état ; après reconnexion vérifier le serveur avant de réessayer.
-Ce n’est pas une interruption précisément contrôlée après écriture serveur.
-Objets de test conservés jusqu’au retour ; nettoyage et trois sauvegardes
-complètes après les tests. .177 inchangé.
+Résultats réels rapportés par l’utilisateur ; états serveur comparés séparément.
+Projet, page et entrée latérale propres au test nettoyés ; sept projets initiaux
+et données conservés. Trois sauvegardes complètes récentes et preuves PC gardées ;
+brouillons/téléchargements mobiles non effacés. .177 inchangé.
 :::
 
 Depuis l’App **0.1.333**, **Brouillons locaux** propose un bouton **Rechercher**

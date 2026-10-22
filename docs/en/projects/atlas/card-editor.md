@@ -11,29 +11,25 @@ actions, before local drafts. Opening focuses and scrolls it into view, with an
 explicit ready message. Loading feedback, a selection hint and a 15-second limit
 for read-only project requests expose failures. Writes and revision checks are
 unchanged. Narrow containers, DE/EN/FR, read failure, timeout and retry pass.
-Real phone rechecking and the mobile conflict test remain pending. Export own
-changes before reloading. .177 is untouched.
+The user confirms visible confirmation on both devices and the mobile
+conflict/Wi-Fi test below. Export own changes before reloading. .177 is untouched.
 :::
 
-::: info Prepared: cross-device save conflict on .68
-App 0.1.334: one owned shared server project is opened in Chrome on phone and
-tablet. A fresh full backup and PC evidence are retained; seven original projects
-remain intact. The temporary guide is available as **ATLAS Mobilkonflikt** in
-the HA sidebar, without admin-only. Actual-device results are pending.
+::: info Passed: cross-device save conflict and Wi-Fi interruption
+On 2026-10-22 the user confirms App 0.1.334 in Chrome on phone and tablet:
+both open the same server project. The phone saves; the stale tablet preview
+reports a conflict and retains draft `mobil-konflikt-tablet.js`. Independent
+server comparison confirms revision 2 with `mobil-konflikt-handy.js`.
 
-Both devices first export their original configuration and local sources, then
-explicitly apply **MOB68 Gemeinsamer Speicherkonflikt**. Phone/tablet use script
-names `mobil-konflikt-handy.js` and `mobil-konflikt-tablet.js`. The tablet opens
-**Preview and save** first but waits before applying. The phone saves completely;
-then the tablet confirms its stale preview. Expected: conflict, retained phone
-server state and retained tablet draft.
+The phone then loses Wi-Fi between save preview and apply. An error appears,
+draft `mobil-konflikt-handy-offline.js` remains local and the phone reconnects
+after Wi-Fi is restored. The server exactly retains the confirmed phone state.
+This tests transport loss before writing, not a controlled post-write/pre-ack loss.
 
-Only after review, disconnect the phone's Wi-Fi between save preview and apply,
-with an exported offline draft. No successful save should be claimed offline.
-If no response appears within 30 seconds, stop clicking and report the state;
-after reconnection inspect the server before retrying. This is not a precisely
-controlled interruption after a server write. Fixtures remain until feedback;
-cleanup and retention of three full backups follow completion. .177 is untouched.
+Actual-device outcomes are user-reported; server states are independently compared.
+The owned project, guide and sidebar entry are cleaned up; seven original projects
+and existing data remain intact. The newest three full backups and PC evidence
+are retained; mobile drafts/downloads are not cleared. .177 is untouched.
 :::
 
 From App **0.1.333**, **Local drafts** includes a visible **Search** button.

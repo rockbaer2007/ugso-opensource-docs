@@ -3,14 +3,16 @@
 **App 0.1.334:** project preview and confirmation appear beside project actions,
 before local drafts. Focus/scroll, loading feedback and bounded read requests
 address invisible or indefinitely pending opening previews. Checked on .68 with
-existing data retained; real phone rechecking and shared save conflict remain
-pending. .177 is untouched.
+existing data retained; the user now confirms visible confirmation on both devices
+and the shared save conflict. .177 is untouched.
 
-**Next device qualification prepared:** one shared server project on phone and
-tablet through .68, stale save preview and Wi-Fi loss before apply.
-Full backup dbc776c2, PC evidence and an owned guide/sidebar are available.
-Existing data and .177 remain intact; actual results are pending. Cleanup and
-three full backups follow completion. Continue with App 0.1.334 and visible confirmation.
+**Cross-device conflict/Wi-Fi test passed:** user confirmation on 2026-10-22,
+Chrome on phone and tablet. Phone saved, stale tablet preview rejected and tablet
+draft retained. Wi-Fi loss before phone apply reports an error, keeps its offline
+draft and reconnects. Independent server comparison retains exact revision 2 with
+the phone script before/after the offline attempt. Owned fixtures cleaned up,
+seven original projects and existing data retained; three newest full backups
+remain. .177 is untouched. This does not test post-write/pre-ack interruption.
 
 **App 0.1.333: explicit Search button for local drafts.** Enter and live
 filtering remain available. A distinct message explains zero local sources and

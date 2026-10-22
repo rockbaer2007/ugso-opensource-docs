@@ -12,31 +12,28 @@ in den sichtbaren Bereich gescrollt; eine Meldung bestätigt die Bereitschaft.
 Ladeanzeige, Auswahlhinweis und ein 15-Sekunden-Limit für lesende Projektanfragen
 machen Fehler sichtbar. Schreibanfragen und Konfliktprüfungen bleiben unverändert.
 Schmale Testbereiche, DE/EN/FR, Lesefehler, Zeitlimit und erneutes Öffnen sind
-geprüft. Die erneute echte Handyprüfung und der Mobilkonflikttest bleiben offen.
+geprüft. Der Nutzer bestätigt die sichtbare Bestätigung auf beiden Geräten und
+den unten dokumentierten Mobilkonflikt-/WLAN-Test.
 Vor einem Neuladen eigene Änderungen exportieren. .177 bleibt unverändert.
 :::
 
-::: info Vorbereitet: geräteübergreifender Speicherkonflikt auf .68
-App 0.1.334: Ein eigenes gemeinsames Serverprojekt wird in Chrome auf Handy
-und Tablet geöffnet. Frisches Vollbackup und PC-Sicherungen sind vorhanden;
-sieben Bestandsprojekte bleiben erhalten. Die temporäre Anleitung ist in der
-HA-Seitenleiste als **ATLAS Mobilkonflikt** erreichbar, ohne Admin-only.
-Die echte Geräteprüfung ist noch offen.
+::: info Bestanden: geräteübergreifender Speicherkonflikt und WLAN-Abbruch
+Am 22.10.2026 bestätigt der Nutzer App 0.1.334 in Chrome auf Handy und Tablet:
+Beide öffnen dasselbe Serverprojekt. Das Handy speichert, die ältere Tablet-
+Vorschau meldet einen Konflikt; `mobil-konflikt-tablet.js` bleibt als Entwurf
+erhalten. Der Serververgleich bestätigt Revision 2 mit `mobil-konflikt-handy.js`.
 
-Beide Geräte sichern zunächst Originalkonfiguration und lokale Quellen und
-übernehmen **MOB68 Gemeinsamer Speicherkonflikt** ausdrücklich. Handy/Tablet
-erhalten die Scriptnamen `mobil-konflikt-handy.js` und `mobil-konflikt-tablet.js`.
-Das Tablet öffnet zuerst **Prüfen und speichern**, bestätigt aber noch nicht.
-Das Handy speichert anschließend vollständig; danach bestätigt das Tablet seine
-alte Vorschau. Erwartet: Konflikt, Handy-Serverstand und Tablet-Entwurf erhalten.
+Beim anschließenden WLAN-Abbruch am Handy zwischen Speichervorschau und Übernahme
+erscheint eine Fehlermeldung. `mobil-konflikt-handy-offline.js` bleibt lokal
+erhalten; nach WLAN-Aktivierung verbindet sich das Handy wieder. Der Server bleibt
+exakt auf dem zuvor bestätigten Handy-Stand. Das ist eine Prüfung vor dem Schreiben,
+kein exakt gesteuerter Abbruch nach dem Schreiben vor dessen Bestätigung.
 
-Erst nach Auswertung folgt der WLAN-Abbruch am Handy zwischen Speichervorschau
-und Übernahme, mit exportiertem Offline-Entwurf. Ohne Verbindung darf kein
-Speichererfolg behauptet werden. Nach 30 Sekunden ohne Rückmeldung nichts weiter
-anklicken und den Zustand melden; nach Wiederverbindung zunächst Serverstand
-prüfen. Das ist kein exakt gesteuerter Abbruch nach einem HA-/Server-Schreiben.
-Testobjekte bleiben bis zur Rückmeldung; danach bereinigen und drei Vollbackups
-behalten. .177 bleibt unverändert.
+Geräteergebnisse beruhen auf der Nutzerprüfung; Serverstände wurden separat
+verglichen. Eigenes Testprojekt, Startseite und Seitenleisteneintrag sind bereinigt;
+sieben Originalprojekte und vorhandene Daten bleiben erhalten. Drei neueste
+Vollbackups und PC-Sicherungen bleiben; mobile Entwürfe/Downloads werden nicht
+gelöscht. .177 unverändert.
 :::
 
 Die Suche unter **Lokale Entwürfe** bietet ab App **0.1.333** einen sichtbaren

@@ -7,14 +7,17 @@ description: État actuel du développement d'ATLAS.
 **App 0.1.334 :** aperçu et confirmation près des actions de projet, avant les
 brouillons locaux. Focus/défilement, chargement et lectures à durée limitée
 évitent un aperçu invisible ou une attente illimitée de lecture. Vérifié sur .68,
-données conservées ; nouvelle vérification réelle sur téléphone et conflit
-d’enregistrement commun encore attendus. .177 inchangé.
+données conservées ; confirmation visible sur les deux appareils et conflit
+d’enregistrement commun désormais confirmés par l’utilisateur. .177 inchangé.
 
-**Prochain test réel préparé :** projet serveur commun sur téléphone et tablette
-via .68, ancien aperçu d’enregistrement et coupure Wi-Fi avant reprise.
-Sauvegarde complète dbc776c2, preuves PC et guide/entrée latérale propres au test
-disponibles. Données initiales et .177 inchangés ; résultats attendus. Nettoyage
-et trois sauvegardes complètes après les tests. Reprise avec App 0.1.334 et confirmation visible.
+**Test conflit/Wi-Fi entre appareils réussi :** confirmation utilisateur du
+22/10/2026, Chrome sur téléphone et tablette. Téléphone enregistré, ancien aperçu
+tablette rejeté et brouillon tablette conservé. Coupure Wi-Fi avant reprise sur
+téléphone : erreur, brouillon hors ligne conservé et reconnexion réussie.
+Comparaison serveur indépendante : même révision 2 et script téléphone avant/après
+la tentative hors ligne. Objets propres au test nettoyés, sept projets initiaux et
+données conservés ; trois sauvegardes complètes récentes gardées. .177 inchangé.
+Cela ne teste pas une coupure après écriture serveur avant confirmation.
 
 **App 0.1.333 : bouton Rechercher pour les brouillons locaux.** Entrée et
 filtrage immédiat restent disponibles. Un message distingue l’absence de sources
