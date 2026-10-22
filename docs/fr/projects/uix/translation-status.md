@@ -6,6 +6,12 @@ description: État de la documentation UIX française.
 
 Cette documentation française est maintenue à partir de la documentation UIX canonique en anglais. Les pages principales, le démarrage rapide et les aperçus de UIX Styling, Forge, Broker et Extras sont déjà disponibles en français. La section complète **UIX Broker** est également disponible en français.
 
+## Comparaison Forge du 22 octobre 2026
+
+La [modification canonique `1badf70befb9`](https://github.com/Lint-Free-Technology/uix/commit/1badf70befb9c9d3d7b06c0eced75af7d552aff1) sur `dev` ajoute la disponibilité de l’éditeur visuel Forge dès **9.0.0-beta.2**. La section correspondante manquait sur nos pages. Un résumé comparé à la source est désormais disponible en **DE/EN/FR** : Native, Forge, Element, Foundry et Export, ainsi que `element_base`/`element`, ancrages de type, null/désactivation et limites YAML.
+
+La page Forge anglaise n’est plus un emplacement réservé pour cette section. La référence canonique complète reste liée. Il ne s’agit pas d’une nouvelle traduction intégrale de toutes les pages UIX ni de tous les changements de `dev`. Base stable, métadonnées et pied de page restent inchangés ; la comparaison générale antérieure jusqu’à 9.0.0-beta.0 est distincte de cette comparaison ciblée. Modification documentaire sans installation HA ni test d’exécution.
+
 ## Comparaison du 9 octobre 2026 : base stable 8.4.0, aperçu 9.0.0-beta.0
 
 Les notifications canoniques `2db023d236c9`, `c800e607f23d`, `9b5858f57678` et `22f8d93f0131` ont été comparées aux pages allemandes et françaises. La branche `dev` vérifiée est [`e2e0701`](https://github.com/Lint-Free-Technology/uix/commit/e2e070193b3f77b251dcfe05104a4d791a8e9a03), version **9.0.0-beta.0**. La version stable de l'original sur `master` reste **8.4.0** ; les liens de publication, le pied de page et les métadonnées stables restent associés à cette version.

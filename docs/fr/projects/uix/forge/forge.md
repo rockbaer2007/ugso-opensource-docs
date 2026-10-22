@@ -14,6 +14,55 @@ UIX Forge (`custom:uix-forge`) est un élément Lovelace personnalisé qui assoc
 Dans les éditeurs YAML des cartes, badges, lignes, picture-elements et fonctionnalités de carte, cherchez l'icône :bulb: pour encapsuler rapidement le code de l'élément existant dans UIX Forge.
 
 :::
+## Éditeur visuel – Cartes et badges {#visual-editor-cards-and-badges}
+
+::: info Aperçu à partir de UIX 9.0.0-beta.2
+Selon la [révision canonique `1badf70`](https://github.com/Lint-Free-Technology/uix/blob/1badf70befb9c9d3d7b06c0eced75af7d552aff1/docs/source/forge/forge.md), l’éditeur visuel Forge est disponible à partir de **9.0.0-beta.2**. Ce résumé décrit l’aperçu, pas la base documentaire stable 8.4.0.
+:::
+
+Choisissez une carte ou un badge HA, modifiez-le avec son éditeur HA habituel, puis ajoutez des modèles Forge, Sparks, styles UIX et Foundries. Sans sélection, Forge utilise sa carte ou son badge vide intégré. Ce choix automatique de type et l’onglet sélectionné ne sont pas enregistrés dans la configuration du tableau de bord.
+
+### Native
+
+**Choose/Change native element** sélectionne ou remplace explicitement l’élément natif en conservant les modèles Forge. Annuler le sélecteur ne choisit rien ; après sélection, l’annulation HA habituelle et celle du tableau de bord restent disponibles. Le choix incomplet **Manual** n’est enregistré qu’après sélection d’un type concret. Le changement code/visuel est désactivé sans éditeur visuel HA adapté.
+
+La section de style repliée modifie le contenu de `element_base.uix`, sans clé externe `uix:`. Pour les cartes, les contrôles externes HA de visibilité et de disposition sont bloqués ; utiliser `forge.hidden` et `forge.grid_options`. Pour reprendre une carte existante, la copier dans HA puis choisir **Paste configuration** dans le sélecteur natif de Forge. Toute sa configuration, y compris ses modèles et styles UIX, reste dans `element_base` ; seules les valeurs modifiées par Forge appartiennent à `element`.
+
+### Forge
+
+L’éditeur de code conserve la configuration YAML complète. Le mode visuel contient :
+
+- **General :** `mold` fixé à `card`/`badge`, `hidden` et lignes/colonnes de grille. Les modèles restent du texte source ; nombres et booléens littéraux gardent leur type. Un modèle couvrant tout `grid_options` reste intact jusqu’à son remplacement explicite par des lignes/colonnes. **Control** contient `show_error`, `template_nesting`, `delayed_hass` ; la section de style modifie le contenu de `forge.uix`.
+- **Billets :** noms locaux et valeurs scalaires ; `~` signifie `null`. Les billets résolus de la Foundry sont affichés séparément et peuvent être surchargés. Tables et listes restent dans le code.
+- **Macros :** nom, statut de retour, paramètres avec valeurs par défaut scalaires facultatives et source du modèle. Nombres, booléens et `null` sont conservés. Les imports `custom_templates` restent dans le code ; les macros résolues de la Foundry sont affichées séparément.
+- **Sparks :** choisir un Spark enregistré et ses options prises en charge. Les sources restent du texte de modèle/code, un objet/une liste YAML ou explicitement `null`. Les nouvelles options commencent à `null` ; remplacer une source existante par un objet ou `null` demande confirmation. Configuration complète et suppression restent possibles dans le code.
+
+Les éditeurs YAML Forge, Native et de style conservent le texte saisi, les commentaires et le YAML temporairement invalide. Le YAML invalide n’est pas transmis à la configuration.
+
+### Element
+
+Cet onglet modifie la surcouche `element` ; la base native reste dans `element_base`. La table de chemins permet de modifier, activer/désactiver ou supprimer. Les nouveaux chemins personnalisés commencent avec un `null` actif. La section de style distincte modifie le contenu de `element.uix`.
+
+**Apply** applique un brouillon valide, active un modèle désactivé et garde l’éditeur ouvert. **Apply & exit** applique puis revient à la table ; sans changement, il revient directement. **Exit** demande confirmation pour les changements non appliqués. Le YAML invalide reste modifiable mais désactive les deux actions d’application. Les modèles de chaîne utilisent l’éditeur HA et son test ; saisir la source sans guillemets YAML supplémentaires.
+
+**Convert to object mapping** crée un objet vide après confirmation. **Set to null** efface explicitement la valeur de base correspondante. Pour utiliser la base, choisir **Disable** ou **Remove**. Une chaîne vide constitue un remplacement distinct de `null` et de la suppression. Désactiver garde la source dans `element` et son chemin dans `element_disabled_paths`. Un parent désactivé masque son sous-arbre en conservant les états enregistrés des enfants. Les tableaux et modèles structurels sont modifiés comme des remplacements complets.
+
+En présence d’une base, son `type` racine n’est pas un champ de modèle. Activer/désactiver exige une sélection native ; les chemins désactivés hérités valides restent conservés. Convertir une Forge directe de carte/badge déplace uniquement `element.type` vers `element_base.type`.
+
+### Foundry
+
+Le sélecteur affiche `forge.mold` et `element.type` résolus. Un mold incompatible est rouge, désactivé et placé en dernier. Un type incompatible demande confirmation puis efface la configuration native locale ; les valeurs Element restent intactes. Les chaînes d’héritage invalides, manquantes ou cycliques sont omises. Les types dynamiques ou non textuels et `element_base` hérité restent dans l’éditeur YAML.
+
+Une vue YAML en lecture seule de 200 pixels montre la Foundry nommée résolue et ses ancêtres nommés, sans Foundries globales ni valeurs locales de carte. Un type concret de Foundry définit et verrouille le type natif. Modifier ou retirer la Foundry pour changer ce type. Les ancrages globaux sont également protégés ; une modification exposant un type global incompatible est refusée.
+
+Une notice sous les onglets nomme la Foundry active. Des références directes à `config.entity` dans les modèles Forge/Element ou la Foundry sélectionnée font apparaître **Global Forge entity (in use)** pour l’entité externe de Forge. Elle n’est pas transmise à l’élément enveloppé. Les références accessibles seulement via des macros ne sont pas détectables ; définir alors l’`entity` externe en YAML.
+
+### Export
+
+Cet onglet fournit du YAML à copier dans une Foundry et conserve `foundry: <name>`, la base native locale `element_base` et les valeurs Element actives, dont les modèles natifs inchangés. Il n’évalue pas les modèles et n’enregistre aucune Foundry. Foundries globales, `entity` externe et chemins désactivés sont exclus ; une liste `forge.sparks` vide est omise. Reprendre `element_base` uniquement depuis cet export, sans le rédiger manuellement. Le mode visuel ne permet pas de vider les tableaux Forge hérités.
+
+Le YAML reste nécessaire pour les lignes, picture-elements, fonctionnalités de carte, molds inter-contextes, types dynamiques et configurations non représentables en toute sécurité. La référence anglaise complète figure dans la révision liée ci-dessus.
+
 ## Structure de base
 
 ```yaml

@@ -6,6 +6,12 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 
 Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation mit der englischen Originaldokumentation.
 
+## Forge-Abgleich vom 22.10.2026
+
+Die [kanonische Änderung `1badf70befb9`](https://github.com/Lint-Free-Technology/uix/commit/1badf70befb9c9d3d7b06c0eced75af7d552aff1) auf `dev` ergänzt den Verfügbarkeitshinweis für den visuellen Forge-Editor ab **9.0.0-beta.2**. Der dazugehörige Abschnitt fehlte bisher auf unseren Seiten. Eine mit der Quelle abgeglichene Zusammenfassung ist jetzt in **DE/EN/FR** verfügbar: Native, Forge, Element, Foundry und Export; außerdem `element_base`/`element`, Typanker, Null-/Deaktivierungssemantik und YAML-Grenzen.
+
+Die englische Forge-Seite ist für diesen Abschnitt kein Platzhalter mehr. Die vollständige kanonische Referenz bleibt verlinkt. Dies ist keine vollständige Neuübersetzung aller UIX-Seiten oder aller `dev`-Änderungen. Stabile Basis, Release-Metadaten und Footer bleiben unverändert; der frühere umfassendere Vorschau-Abgleich bis 9.0.0-beta.0 ist vom neuen gezielten Forge-Abgleich getrennt. Reine Dokumentationsänderung ohne HA-Installation oder Laufzeittest.
+
 ## Abgleich vom 09.10.2026: stabile Basis 8.4.0, Vorschau 9.0.0-beta.0
 
 Die kanonischen Meldungen zu `2db023d236c9`, `c800e607f23d`, `9b5858f57678` und `22f8d93f0131` wurden in Deutsch und Französisch abgeglichen. Der geprüfte `dev`-Stand ist [`e2e0701`](https://github.com/Lint-Free-Technology/uix/commit/e2e070193b3f77b251dcfe05104a4d791a8e9a03), Version **9.0.0-beta.0**. Das Original nennt weiterhin **8.4.0** als stabile Version auf `master`; Release-Link, Footer und stabile Metadaten behalten diesen Stand.

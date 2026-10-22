@@ -19,6 +19,10 @@ UI eXtension comprend [UIX Styling](./using/index.md), [UIX Forge](./forge/index
 
 ## Nouveautés de UIX 8.4.0
 
+::: info Éditeur Forge : comparaison ciblée du 22 octobre 2026
+L’[éditeur visuel de cartes et badges](./forge/forge#visual-editor-cards-and-badges) est annoncé dès **9.0.0-beta.2**. Sa section a été ajoutée en DE/EN/FR. Cette comparaison ciblée de l’aperçu ne change pas la base stable.
+:::
+
 ::: info Aperçu comparé séparément
 Les changements de `dev` jusqu'à **9.0.0-beta.0** ont été intégrés en DE/FR le 9 octobre 2026. La [configuration Forge en couches](./forge/forge#layered-configuration) et le nouveau comportement après une mise à jour avant le redémarrage de Home Assistant sont des fonctions d'aperçu. La base stable reste 8.4.0. Consultez l'[état de la traduction](./translation-status).
 :::

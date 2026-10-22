@@ -31,6 +31,10 @@ UIX besteht aus drei großen Bereichen:
 
 ## Neu in UIX 8.4.0
 
+::: info Forge-Editor: gezielter Abgleich vom 22.10.2026
+Der [visuelle Editor für Karten und Badges](./forge/forge#visual-editor-cards-and-badges) ist laut kanonischer Meldung ab **9.0.0-beta.2** verfügbar. Sein Abschnitt wurde in DE/EN/FR ergänzt. Das ist ein gezielter Vorschau-Abgleich, keine neue stabile Versionsbasis.
+:::
+
 ::: info Vorschau separat abgeglichen
 Die Änderungen auf `dev` bis **9.0.0-beta.0** wurden am 09.10.2026 in DE/FR übernommen. Die [geschichtete Forge-Konfiguration](./forge/forge#layered-configuration) und das neue Verhalten beim Update vor einem Home-Assistant-Neustart sind Vorschaufunktionen. Die stabile Basis bleibt 8.4.0. Details im [Übersetzungsstatus](./translation-status).
 :::

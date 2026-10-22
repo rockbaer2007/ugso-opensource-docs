@@ -10,6 +10,55 @@ UIX Forge erzeugt Home-Assistant-Frontend-Elemente aus YAML und erweitert sie op
 Forge ist besonders nützlich, wenn eine bestehende Karte fast passt, aber ein Button, Tooltip, Lock, Hintergrund, More-info-Bereich oder ein anderes Zusatzverhalten fehlt.
 
 :::
+## Visueller Editor – Karten und Badges {#visual-editor-cards-and-badges}
+
+::: info Vorschau ab UIX 9.0.0-beta.2
+Laut [kanonischer Revision `1badf70`](https://github.com/Lint-Free-Technology/uix/blob/1badf70befb9c9d3d7b06c0eced75af7d552aff1/docs/source/forge/forge.md) ist der visuelle Forge-Editor ab **9.0.0-beta.2** verfügbar. Diese Zusammenfassung beschreibt die Vorschau, nicht die stabile Dokumentationsbasis 8.4.0.
+:::
+
+Wähle eine HA-Karte oder ein Badge, bearbeite es im normalen HA-Editor und ergänze Forge-Templates, Sparks, UIX-Styling und Foundries. Ohne Auswahl verwendet Forge seine integrierte leere Karte bzw. sein leeres Badge. Diese automatische Typwahl und der ausgewählte Editor-Reiter werden nicht in der Dashboard-Konfiguration gespeichert.
+
+### Native
+
+**Choose/Change native element** wählt oder ersetzt das native Element ausdrücklich und erhält die Forge-Templatewerte. Abbrechen im Auswahlfenster wählt nichts aus; nach einer Auswahl stehen der normale HA-Abbruch und Dashboard-Rückgängig zur Verfügung. Die unvollständige Auswahl **Manual** wird erst mit einem konkreten Typ gespeichert. Der Wechsel Code/visuell ist ohne passenden visuellen HA-Editor deaktiviert.
+
+Der eingeklappte Styling-Bereich bearbeitet den Inhalt von `element_base.uix`, ohne äußeren Schlüssel `uix:`. Äußere HA-Sichtbarkeits- und Layoutregler sind bei Karten gesperrt; verwende `forge.hidden` und `forge.grid_options`. Eine vorhandene Karte lässt sich über HA kopieren und mit **Paste configuration** im nativen Forge-Auswahldialog übernehmen. Ihre vollständige Konfiguration einschließlich eigener Templates und UIX-Stile bleibt in `element_base`; nur durch Forge veränderte Werte gehören nach `element`.
+
+### Forge
+
+Die vollständige Forge-YAML-Konfiguration bleibt im Code-Editor verfügbar. Die visuelle Ansicht enthält:
+
+- **General:** auf `card`/`badge` festgelegtes `mold`, `hidden` und Grid-Zeilen/-Spalten. Templates bleiben Quelltext, Zahlen und boolesche Literale behalten ihren Typ. Ein Template für ganz `grid_options` bleibt bis zum ausdrücklichen Ersetzen durch Zeilen-/Spaltenwerte erhalten. **Control** enthält `show_error`, `template_nesting`, `delayed_hass`; der Styling-Bereich bearbeitet den Inhalt von `forge.uix`.
+- **Billets:** lokale Namen mit skalaren Werten; `~` bedeutet `null`. Aufgelöste Foundry-Billets werden separat angezeigt und können überschrieben werden. Zuordnungen und Listen bleiben im Code-Editor.
+- **Macros:** Name, Rückgabestatus, Parameter mit optionalen skalaren Standardwerten und Templatequelle. Zahlen, boolesche Werte und `null` bleiben erhalten. `custom_templates`-Importe bleiben im Code-Editor; aufgelöste Foundry-Makros werden separat angezeigt.
+- **Sparks:** registrierten Spark und unterstützte Optionen wählen. Quellen bleiben Template-/Code-Text, YAML-Objekt/-Liste oder ausdrücklich `null`. Neue Optionen beginnen als `null`; vor dem Ersetzen vorhandener Quellen durch eine Objektzuordnung oder `null` wird nachgefragt. Vollständige Konfiguration und Entfernen bleiben im Code-Editor möglich.
+
+Forge-, Native- und Styling-YAML-Editoren behalten den eingegebenen Text einschließlich Kommentaren und vorübergehend ungültigem YAML. Ungültiges YAML wird nicht in die Konfiguration übernommen.
+
+### Element
+
+Dieser Reiter bearbeitet die Überlagerung `element`; die native Basis bleibt in `element_base`. Die Pfadtabelle bietet Bearbeiten, Aktivieren/Deaktivieren und Entfernen. Neue benutzerdefinierte Pfade beginnen als aktives `null`. Der eigene Styling-Bereich bearbeitet den Inhalt von `element.uix`.
+
+**Apply** übernimmt einen gültigen Entwurf, aktiviert ein deaktiviertes Template und lässt den Editor offen. **Apply & exit** übernimmt Änderungen und kehrt zur Tabelle zurück; ohne Änderungen kehrt es direkt zurück. **Exit** fragt bei nicht übernommenen Änderungen nach. Ungültiges YAML bleibt bearbeitbar, sperrt aber beide Übernahmeaktionen. Zeichenketten-Templates verwenden den HA-Templateeditor samt Testfunktion; die Quelle ohne zusätzliche YAML-Anführungszeichen eingeben.
+
+**Convert to object mapping** beginnt nach Bestätigung eine leere Objektzuordnung. **Set to null** löscht den entsprechenden Basiswert ausdrücklich. Für „Basiswert verwenden“ stattdessen **Disable** oder **Remove** wählen. Eine leere Zeichenkette ist ein eigener Ersatzwert und weder `null` noch Entfernen. Deaktivieren erhält die Quelle in `element` und speichert den Pfad in `element_disabled_paths`. Ein deaktivierter Elternpfad unterdrückt den Teilbaum und bewahrt die gespeicherten Kinderzustände. Arrays und strukturerzeugende Templates werden als ganze Ersatzwerte bearbeitet.
+
+Bei vorhandener Basis ist der oberste `type` kein Templatefeld. Aktivieren/Deaktivieren erfordert eine native Elementauswahl; gültige geerbte deaktivierte Pfade bleiben erhalten. Die Konvertierung bestehender direkter Karten-/Badge-Forges verschiebt nur `element.type` nach `element_base.type`.
+
+### Foundry
+
+Die Auswahl zeigt den aufgelösten `forge.mold` und `element.type`. Ein abweichender Mold ist rot, gesperrt und zuletzt gelistet. Ein abweichender Elementtyp erfordert Bestätigung und leert dann die lokale native Konfiguration; Elementwerte bleiben erhalten. Fehlerhafte, fehlende oder zyklische Vererbungsketten werden ausgelassen. Dynamische oder nicht als Zeichenkette definierte Typen sowie geerbtes `element_base` bleiben im YAML-Editor.
+
+Eine schreibgeschützte, 200 Pixel hohe YAML-Ansicht zeigt die aufgelöste benannte Foundry einschließlich benannter Vorfahren, aber ohne globale Foundries oder lokale Kartenwerte. Ein konkreter Foundry-Typ setzt und sperrt den nativen Typ. Für einen anderen Typ die Foundry ändern oder entfernen. Globale Typanker werden ebenfalls geschützt; eine Änderung, die einen inkompatiblen globalen Typ freilegen würde, wird abgelehnt.
+
+Ein Hinweis unter den Reitern nennt die aktive Foundry. Direkte `config.entity`-Referenzen in Forge-/Element-Templates oder der ausgewählten Foundry zeigen **Global Forge entity (in use)** für die äußere Forge-Entität. Sie wird nicht an das umhüllte Element weitergereicht. Nur über Makros erreichbare Referenzen sind nicht erkennbar; dafür die äußere `entity` in YAML setzen.
+
+### Export
+
+Der Reiter liefert kopierbares Foundry-YAML und erhält `foundry: <name>`, die lokale native Basis `element_base` und aktive Elementwerte einschließlich unveränderter nativer Templates. Er wertet keine Templates aus und speichert keine Foundry. Globale Foundries, äußere `entity` und deaktivierte Pfade sind ausgeschlossen; eine leere `forge.sparks`-Liste entfällt. Für Foundries `element_base` nur aus diesem Export übernehmen, nicht von Hand erzeugen. Geerbte Forge-Arrays lassen sich im visuellen Editor nicht leeren.
+
+Zeilen, Picture-Elements, Card-Features, Cross-Context-Molds, dynamische Typen und nicht sicher visuell darstellbare Konfigurationen erfordern weiterhin YAML. Die vollständige englische Referenz steht in der oben verlinkten Revision.
+
 ## Grundstruktur
 
 ```yaml
