@@ -46,6 +46,14 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
+      - name: Identischen Build für zweite Domain sichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: mirror-site
+          path: docs/.vitepress/dist
+          include-hidden-files: true
+          retention-days: 3
+
   deploy:
     environment:
       name: github-pages
@@ -58,3 +66,20 @@ jobs:
       - name: GitHub Pages bereitstellen
         id: deployment
         uses: actions/deploy-pages@v4
+
+  mirror:
+    name: ugso-opensource.net synchronisieren
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: mirror-site
+          path: mirror-site
+      - name: Geprüften Build auf zweite Domain veröffentlichen
+        env:
+          MIRROR_DEPLOY_KEY: ${{ secrets.NET_MIRROR_DEPLOY_KEY }}
+        run: bash scripts/publish-net-mirror.sh mirror-site
