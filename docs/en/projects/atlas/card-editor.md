@@ -5,6 +5,39 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Mobile qualification prepared – user results pending
+Real **Chrome on phone and tablet** qualification of App 0.1.332 is prepared on
+.68. A fresh full backup and PC evidence are retained. Two owned server projects
+are **MOB68 Mobilprüfung A Sonne** and **MOB68 Mobilprüfung B Sonne**; all seven
+existing projects remain intact. .177 is untouched. This is not yet a passed test.
+
+On **each device separately**:
+
+1. Use the temporary test guide's backup button to download local draft sources.
+   Before loading a test project, also use the normal Editor **Export** and retain
+   the complete original configuration.
+2. Open two Editor tabs. In **Shared editor projects**, select A or B respectively,
+   then **Preview opening → Back up and apply**. Do not overwrite the server project
+   using **Preview and save**.
+3. Search **Local drafts** for `MOB68`. Names, script, time and source identifiers
+   distinguish A/B. Only the associated source says **this tab**. Selecting a source
+   alone must not change the workspace.
+4. Search for `mobil-b-68.js`, then clear: the previous selection must return.
+   `MOB68 kein-treffer` must show no matches and disable inspection.
+5. Check portrait/landscape and the visible keyboard: search, list, details and
+   buttons must remain reachable by scrolling.
+6. Inspect the own source and first cancel. Reload the tab, then explicitly inspect
+   and back up/apply its preselected source. A must recover `mobil-a-68.js` and
+   **MOB68 A Sonne**; B must recover `mobil-b-68.js` and **MOB68 B Sonne**.
+   The global workspace may initially show another state; no draft is auto-applied.
+7. Report each device's result or exact failing step. Keep original exports and
+   sources; close the owned test tabs or import the original configuration there.
+
+Browser drafts are separate per device/profile and are outside HA full backups.
+Fixtures remain available until user feedback; cleanup and retention of three
+full backups follow completion of both device tests.
+:::
+
 ::: info Searchable draft overview – App 0.1.332
 **Local drafts** now has its own search area, result count and source details.
 Search by project name, script filename, date or source identifier; multiple

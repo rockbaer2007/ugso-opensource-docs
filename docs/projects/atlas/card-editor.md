@@ -5,6 +5,41 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Mobilprüfung vorbereitet – Rückmeldung noch offen
+Für App 0.1.332 ist die echte Prüfung in **Chrome auf Handy und Tablet** über .68
+vorbereitet. Vollbackup und PC-Sicherungen sind vorhanden; zwei eigene Server-
+Testprojekte heißen **MOB68 Mobilprüfung A Sonne** und **MOB68 Mobilprüfung B Sonne**.
+Die sieben bisherigen Serverprojekte bleiben erhalten. .177 wird nicht verändert.
+Die Mobilprüfung ist damit noch nicht bestanden.
+
+Auf **jedem Gerät getrennt**:
+
+1. Die lokalen Browserquellen über den Sicherungsknopf der temporären Teststartseite
+   herunterladen. Im normalen Editor vor dem Laden eines Testprojekts zusätzlich
+   **Export** wählen und die vollständige Originalkonfiguration behalten.
+2. Zwei Editor-Tabs öffnen. In **Gemeinsame Editor-Projekte** A beziehungsweise B
+   auswählen, dann **Öffnen prüfen → Gesichert übernehmen**. Nicht das Serverprojekt
+   mit **Prüfen und speichern** überschreiben.
+3. Unter **Lokale Entwürfe** nach `MOB68` suchen. A und B sollen sichtbar und über
+   Name, Script, Zeit und Quellenkennung unterscheidbar sein. Nur die eigene Quelle
+   trägt **dieser Tab**. Auswahl allein darf die Arbeitsfläche nicht ändern.
+4. Nach `mobil-b-68.js` suchen, danach die Suche leeren: die vorherige Auswahl muss
+   zurückkehren. `MOB68 kein-treffer` muss eine leere Liste und gesperrte Prüfung zeigen.
+5. Hoch-/Querformat und geöffnete Bildschirmtastatur prüfen: Suchfeld, Liste,
+   Quelldetails und Schaltflächen müssen per Scrollen erreichbar bleiben.
+6. Die eigene Quelle prüfen und zuerst abbrechen. Danach den Tab neu laden und
+   die eigene vorausgewählte Quelle **prüfen und gesichert übernehmen**. A muss
+   `mobil-a-68.js` und **MOB68 A Sonne**, B entsprechend `mobil-b-68.js` und
+   **MOB68 B Sonne** wiederherstellen. Die globale Arbeitsfläche darf vorher einen
+   anderen Stand zeigen; es gibt keine automatische Entwurfsübernahme.
+7. Pro Gerät Ergebnis oder Fehler melden. Originalexporte und Quellen behalten;
+   eigene Testtabs schließen oder die Originalkonfiguration darin zurückimportieren.
+
+Browserentwürfe sind pro Gerät/Profil getrennt und nicht Teil eines HA-Vollbackups.
+Die Testobjekte bleiben bis zur Rückmeldung verfügbar. Bereinigung und Begrenzung
+auf drei Vollbackups erfolgen nach Abschluss beider Geräteprüfungen.
+:::
+
 ::: info Durchsuchbare Entwurfsübersicht – App 0.1.332
 **Lokale Entwürfe** ist jetzt ein eigener Bereich mit Suche, Trefferzahl und
 Quelldetails. Suchen nach Projektname, Scriptdatei, Datum oder Quellenkennung

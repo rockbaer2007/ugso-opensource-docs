@@ -23,6 +23,10 @@ werden weder umgeschrieben noch gelöscht; die Wiederherstellung bleibt ausdrüc
 Die native Prüfung auf .68 besteht mit 32 bytegleich erhaltenen alten Quellen,
 gleichnamigen Projekten, getrennter Wiederherstellung und erhaltenen Bestandsdaten.
 Drei Vollbackups bleiben, .177 unverändert. Echte Mobilprüfung bleibt offen.
+Die Chrome-Prüfung auf Handy und Tablet über .68 ist jetzt mit frischem Backup,
+zwei eigenen Server-Testprojekten und einer temporären Sicherungs-/Anleitungsseite
+vorbereitet. Suche, Auswahl, Orientierung/Tastatur und getrennte Wiederherstellung
+sind vom Nutzer auf beiden Geräten zu prüfen; Ergebnisse stehen noch aus.
 
 **Browserabbruch während erneutem Dateiimport auf .68 bestanden.** Ein echter
 Chrome-Prozessabbruch nach lokalem Datensatzschreiben, vor dem Tab-Zeiger,

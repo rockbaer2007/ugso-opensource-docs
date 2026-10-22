@@ -23,6 +23,10 @@ nor deleted; recovery remains explicit.
 Native .68 qualification passes with 32 byte-identical original sources, duplicate
 names, independent recoveries and preserved data. Three full backups remain;
 .177 is untouched. Real mobile qualification remains open.
+Chrome phone/tablet qualification on .68 is now prepared with a fresh backup,
+two owned server test projects and a temporary backup/instruction page. The user
+will check search, selection, orientation/keyboard and separate recovery on both
+devices; actual device results are still pending.
 
 **Browser termination during repeated file import passes on .68.** Forced Chrome
 process termination after the local record write, before the tab pointer update,

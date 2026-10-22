@@ -5,6 +5,39 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Qualification mobile préparée – résultats utilisateur attendus
+Le test réel de l’App 0.1.332 dans **Chrome sur téléphone et tablette** est préparé
+sur .68. Sauvegarde complète récente et preuves PC conservées. Deux projets serveur
+de test : **MOB68 Mobilprüfung A Sonne** et **MOB68 Mobilprüfung B Sonne**. Les sept
+projets existants restent intacts ; .177 inchangé. Le test n’est pas encore validé.
+
+Sur **chaque appareil séparément** :
+
+1. Télécharger les sources locales avec le bouton de sauvegarde de la page de test
+   temporaire. Avant de charger un projet, utiliser aussi **Exporter** dans l’éditeur
+   normal et conserver la configuration originale complète.
+2. Ouvrir deux onglets Editor. Dans **Projets Editor partagés**, choisir A ou B,
+   puis **Vérifier l’ouverture → Sauvegarder et reprendre**. Ne pas écraser le projet
+   serveur avec **Vérifier et enregistrer**.
+3. Rechercher `MOB68` dans **Brouillons locaux**. Noms, script, date et identifiants
+   distinguent A/B ; seule la source associée indique **cet onglet**. La sélection
+   seule ne doit pas changer l’espace de travail.
+4. Rechercher `mobil-b-68.js`, puis effacer : la sélection précédente doit revenir.
+   `MOB68 kein-treffer` doit donner zéro résultat et désactiver la vérification.
+5. Tester portrait/paysage avec clavier affiché : recherche, liste, détails et
+   boutons doivent rester accessibles par défilement.
+6. Vérifier la source propre puis annuler. Recharger l’onglet, vérifier et reprendre
+   explicitement sa source présélectionnée. A doit retrouver `mobil-a-68.js` et
+   **MOB68 A Sonne**, B `mobil-b-68.js` et **MOB68 B Sonne**. L’espace global peut
+   d’abord montrer un autre état ; aucune reprise automatique.
+7. Signaler le résultat ou l’étape en défaut par appareil. Garder exports originaux
+   et sources ; fermer les onglets de test ou y réimporter la configuration initiale.
+
+Les brouillons sont distincts par appareil/profil, hors sauvegarde complète HA.
+Les objets de test restent disponibles jusqu’au retour utilisateur ; nettoyage et
+conservation de trois sauvegardes complètes suivront les deux tests réels.
+:::
+
 ::: info Vue des brouillons avec recherche – App 0.1.332
 **Brouillons locaux** dispose d’un espace de recherche, d’un nombre de résultats et
 de détails de source. Rechercher par nom de projet, fichier de script, date ou

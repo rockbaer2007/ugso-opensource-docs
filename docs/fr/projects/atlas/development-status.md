@@ -26,6 +26,10 @@ ne sont ni réécrites ni supprimées ; la reprise reste explicite.
 La vérification native sur .68 réussit : 32 sources anciennes identiques octet par
 octet, homonymes, reprises distinctes et données conservées. Trois sauvegardes
 complètes restent ; .177 inchangé. La qualification mobile réelle reste ouverte.
+Le test Chrome téléphone/tablette sur .68 est préparé avec sauvegarde récente,
+deux projets serveur propres au test et page temporaire de sauvegarde/instructions.
+L’utilisateur vérifiera recherche, sélection, orientation/clavier et reprises
+distinctes sur les deux appareils ; résultats réels encore attendus.
 
 **Arrêt du navigateur pendant un nouvel import réussi sur .68.** L’arrêt forcé
 des processus Chrome après écriture locale, avant mise à jour du pointeur,
