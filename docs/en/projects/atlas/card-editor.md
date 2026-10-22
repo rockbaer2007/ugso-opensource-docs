@@ -5,6 +5,27 @@ description: Dedicated documentation for the ATLAS Home Assistant Card Editor wi
 
 # Home Assistant Card Editor
 
+::: info Prepared: cross-device save conflict on .68
+App 0.1.333: one owned shared server project is opened in Chrome on phone and
+tablet. A fresh full backup and PC evidence are retained; seven original projects
+remain intact. The temporary guide is available as **ATLAS Mobilkonflikt** in
+the HA sidebar, without admin-only. Actual-device results are pending.
+
+Both devices first export their original configuration and local sources, then
+explicitly apply **MOB68 Gemeinsamer Speicherkonflikt**. Phone/tablet use script
+names `mobil-konflikt-handy.js` and `mobil-konflikt-tablet.js`. The tablet opens
+**Preview and save** first but waits before applying. The phone saves completely;
+then the tablet confirms its stale preview. Expected: conflict, retained phone
+server state and retained tablet draft.
+
+Only after review, disconnect the phone's Wi-Fi between save preview and apply,
+with an exported offline draft. No successful save should be claimed offline.
+If no response appears within 30 seconds, stop clicking and report the state;
+after reconnection inspect the server before retrying. This is not a precisely
+controlled interruption after a server write. Fixtures remain until feedback;
+cleanup and retention of three full backups follow completion. .177 is untouched.
+:::
+
 From App **0.1.333**, **Local drafts** includes a visible **Search** button.
 Enter and live filtering remain available; **Clear search** resets the filter.
 With **0 local sources**, first open and safely apply a server project or import

@@ -5,6 +5,29 @@ description: Eigene Dokumentation zum ATLAS Home Assistant Card Editor mit Exper
 
 # Home Assistant Card Editor
 
+::: info Vorbereitet: geräteübergreifender Speicherkonflikt auf .68
+App 0.1.333: Ein eigenes gemeinsames Serverprojekt wird in Chrome auf Handy
+und Tablet geöffnet. Frisches Vollbackup und PC-Sicherungen sind vorhanden;
+sieben Bestandsprojekte bleiben erhalten. Die temporäre Anleitung ist in der
+HA-Seitenleiste als **ATLAS Mobilkonflikt** erreichbar, ohne Admin-only.
+Die echte Geräteprüfung ist noch offen.
+
+Beide Geräte sichern zunächst Originalkonfiguration und lokale Quellen und
+übernehmen **MOB68 Gemeinsamer Speicherkonflikt** ausdrücklich. Handy/Tablet
+erhalten die Scriptnamen `mobil-konflikt-handy.js` und `mobil-konflikt-tablet.js`.
+Das Tablet öffnet zuerst **Prüfen und speichern**, bestätigt aber noch nicht.
+Das Handy speichert anschließend vollständig; danach bestätigt das Tablet seine
+alte Vorschau. Erwartet: Konflikt, Handy-Serverstand und Tablet-Entwurf erhalten.
+
+Erst nach Auswertung folgt der WLAN-Abbruch am Handy zwischen Speichervorschau
+und Übernahme, mit exportiertem Offline-Entwurf. Ohne Verbindung darf kein
+Speichererfolg behauptet werden. Nach 30 Sekunden ohne Rückmeldung nichts weiter
+anklicken und den Zustand melden; nach Wiederverbindung zunächst Serverstand
+prüfen. Das ist kein exakt gesteuerter Abbruch nach einem HA-/Server-Schreiben.
+Testobjekte bleiben bis zur Rückmeldung; danach bereinigen und drei Vollbackups
+behalten. .177 bleibt unverändert.
+:::
+
 Die Suche unter **Lokale Entwürfe** bietet ab App **0.1.333** einen sichtbaren
 Button **Suchen**; Enter und laufende Filterung bleiben verfügbar. **Suche leeren**
 setzt den Filter zurück. Bei **0 lokalen Quellen** zuerst ein Serverprojekt öffnen

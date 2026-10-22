@@ -1,5 +1,11 @@
 # Development Status
 
+**Next device qualification prepared:** one shared server project on phone and
+tablet through .68, stale save preview and Wi-Fi loss before apply.
+Full backup dbc776c2, PC evidence and an owned guide/sidebar are available.
+Existing data and .177 remain intact; actual results are pending. Cleanup and
+three full backups follow completion. App 0.1.333 remains unchanged.
+
 **App 0.1.333: explicit Search button for local drafts.** Enter and live
 filtering remain available. A distinct message explains zero local sources and
 the initial project import. DE/EN/FR, Search/Enter and narrow test containers are

@@ -5,6 +5,28 @@ description: "Guide de l’éditeur Expert ATLAS : connexion, palette, conteneur
 
 # Home Assistant Card Editor
 
+::: info Préparé : conflit d’enregistrement entre appareils sur .68
+App 0.1.333 : un seul projet serveur propre au test est ouvert dans Chrome sur
+téléphone et tablette. Sauvegarde complète récente et preuves PC conservées ;
+sept projets initiaux intacts. Le guide temporaire **ATLAS Mobilkonflikt** figure
+dans la barre latérale HA, sans restriction administrateur. Résultats réels attendus.
+
+Chaque appareil exporte sa configuration initiale et ses sources locales, puis
+reprend explicitement **MOB68 Gemeinsamer Speicherkonflikt**. Téléphone/tablette :
+scripts `mobil-konflikt-handy.js` et `mobil-konflikt-tablet.js`. La tablette
+ouvre d’abord **Vérifier et enregistrer**, sans confirmer. Le téléphone enregistre
+complètement ; la tablette confirme ensuite son ancien aperçu. Attendu : conflit,
+état serveur du téléphone et brouillon de la tablette conservés.
+
+Après analyse seulement, couper le Wi-Fi du téléphone entre aperçu et reprise,
+avec export préalable du brouillon hors ligne. Aucun succès d’enregistrement
+ne doit être annoncé hors ligne. Sans réponse après 30 secondes, ne plus cliquer
+et signaler l’état ; après reconnexion vérifier le serveur avant de réessayer.
+Ce n’est pas une interruption précisément contrôlée après écriture serveur.
+Objets de test conservés jusqu’au retour ; nettoyage et trois sauvegardes
+complètes après les tests. .177 inchangé.
+:::
+
 Depuis l’App **0.1.333**, **Brouillons locaux** propose un bouton **Rechercher**
 visible. Entrée et filtrage immédiat restent disponibles ; effacer la recherche
 réinitialise le filtre. Avec **0 source locale**, ouvrir et appliquer explicitement

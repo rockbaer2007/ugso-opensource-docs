@@ -1,5 +1,11 @@
 # Entwicklungsstand
 
+**Nächste Geräteprüfung vorbereitet:** Gemeinsames Serverprojekt auf Handy und
+Tablet über .68, veraltete Speichervorschau und WLAN-Abbruch vor der Übernahme.
+Vollbackup dbc776c2, PC-Sicherung und eigene Anleitung/Seitenleiste sind vorhanden.
+Bestandsdaten und .177 unverändert; Ergebnisse noch offen. Bereinigung und drei
+Vollbackups nach Abschluss. App 0.1.333 bleibt unverändert.
+
 **App 0.1.333: sichtbarer Suchen-Button für lokale Entwürfe.** Enter und
 Livefilter bleiben erhalten. Ein eigener Hinweis erklärt 0 lokale Quellen und
 den nötigen ersten Projektimport. DE/EN/FR, Suchen/Enter und schmale Testbereiche

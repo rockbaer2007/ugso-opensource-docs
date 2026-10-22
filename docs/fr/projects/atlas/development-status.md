@@ -4,6 +4,12 @@ description: État actuel du développement d'ATLAS.
 ---
 # État du développement
 
+**Prochain test réel préparé :** projet serveur commun sur téléphone et tablette
+via .68, ancien aperçu d’enregistrement et coupure Wi-Fi avant reprise.
+Sauvegarde complète dbc776c2, preuves PC et guide/entrée latérale propres au test
+disponibles. Données initiales et .177 inchangés ; résultats attendus. Nettoyage
+et trois sauvegardes complètes après les tests. App 0.1.333 inchangée.
+
 **App 0.1.333 : bouton Rechercher pour les brouillons locaux.** Entrée et
 filtrage immédiat restent disponibles. Un message distingue l’absence de sources
 locales et indique d’abord d’importer un projet. DE/EN/FR, Rechercher/Entrée et
