@@ -5,7 +5,7 @@ description: Fonctions de l’éditeur Windows de fichiers INI de modèles EEP e
 
 # INI Edit Translate 2026
 
-**Version 2.1.37.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.38.0 · Windows 11 · .NET Framework 4.8**
 
 Modifier les descriptions de modèles EEP et leurs fichiers d’installation. Développé
 par Uwe Grimm / UGSo Software et publié sous licence MIT.
@@ -16,7 +16,7 @@ par Uwe Grimm / UGSo Software et publié sous licence MIT.
 
 ## Téléchargement
 
-[Télécharger le ZIP Windows v2.1.37](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.37/INI-Edit-Translate-2026-v2.1.37-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.37)
+[Télécharger le ZIP Windows v2.1.38](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.38/INI-Edit-Translate-2026-v2.1.38-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.38)
 
 Extraire tout le ZIP et lancer `INI Edit Translate 2026.exe`. Windows 11 et
 .NET Framework 4.8 sont requis. Conserver les DLL et dossiers de langues ensemble.
@@ -80,8 +80,27 @@ rapports : `%LOCALAPPDATA%/UGSo/IET2026/updates/<identifiant>/`.
 
 Aucun identifiant de serveur nécessaire. Les sommes de contrôle vérifient l’intégrité ;
 aucune signature numérique de paquet supplémentaire n’est implémentée.
-32 tests isolés couvrent le téléchargement, l’annulation, les chemins, la conservation
+36 tests isolés couvrent le téléchargement, l’annulation, les chemins, la conservation
 des données, les fichiers verrouillés et la restauration après une écriture partielle.
+
+### Correction du programme de mise à jour 2.1.38
+
+Le transfert utilise désormais un handle de processus Windows stable au lieu de
+lire les modules de l’éditeur en cours de fermeture. Quatre tests supplémentaires
+couvrent x86/x64, les processus terminés, les identités incorrectes et les délais
+d’attente. Si l’ancien programme 2.1.37 échoue avant l’installation, extraire
+d’abord le ZIP 2.1.38 complet dans un nouveau dossier. Sauvegarder ses données et
+ne pas remplacer les bases et dictionnaires existants par ceux du paquet.
+
+Le parcours complet de la version publiée 2.1.37 vers 2.1.38 a réussi sur une
+copie de test sauvegardée : téléchargement GitHub, installation et redémarrage
+automatique. Les 32 valeurs de configuration précédentes, 17 fichiers de données
+et de modèles contrôlés et 18 configurations utilisateur existantes ont été
+conservés. Une clé de test DPAPI synthétique est restée identique et déchiffrable ;
+l’état initial sans clé a ensuite été rétabli. Aucun appel OpenAI n’a été effectué.
+Le redémarrage a été confirmé par l’identifiant du processus, les versions, les
+empreintes et la configuration ; la capture de fenêtre Windows a échoué ensuite.
+Un nouveau test du dialogue GitHub en lecture seule a bien détecté 2.1.38.
 
 ## Second programme : Info_trans
 

@@ -17,8 +17,8 @@ le moteur Firebird et le dictionnaire DE/EN/FR corrigé de 2 428 entrées.
 ChatGPT via l’API OpenAI. Modifier les noms, descriptions, axes de mouvement et
 fonctions des signaux dans plusieurs langues.
 
-- [Télécharger le ZIP Windows v2.1.37](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.37/INI-Edit-Translate-2026-v2.1.37-windows.zip)
-- [Version GitHub](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.37)
+- [Télécharger le ZIP Windows v2.1.38](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.38/INI-Edit-Translate-2026-v2.1.38-windows.zip)
+- [Version GitHub](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.38)
 - [Fonctions et utilisation](./ini-edit-translate-2026/)
 - [Dépôt GitHub public](https://github.com/rockbaer2007/ini-edit-translate-2026)
 

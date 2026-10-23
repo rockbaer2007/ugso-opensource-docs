@@ -17,8 +17,8 @@ Bewegungsachsen und Signalfunktionen können für mehrere Sprachen bearbeitet we
 Das vollständige Release 2.1.37 enthält zusätzlich Info_trans mit Originaldatenbank,
 Firebird-Laufzeit und dem korrigierten Wörterbuch DE/EN/FR mit 2.428 Einträgen.
 
-- [Windows-ZIP v2.1.37 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.37/INI-Edit-Translate-2026-v2.1.37-windows.zip)
-- [GitHub-Release](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.37)
+- [Windows-ZIP v2.1.38 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.38/INI-Edit-Translate-2026-v2.1.38-windows.zip)
+- [GitHub-Release](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.38)
 - [Funktionsbeschreibung und Bedienung](./ini-edit-translate-2026/)
 - [Öffentliches GitHub-Repository](https://github.com/rockbaer2007/ini-edit-translate-2026)
 
