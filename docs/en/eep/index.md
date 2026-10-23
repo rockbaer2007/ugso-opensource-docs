@@ -13,6 +13,8 @@ Windows editor for EEP model INI files and `Installation.eep`, with ChatGPT tran
 through the OpenAI API. Edit model names, descriptions, movement axes and signal
 functions in multiple languages.
 
+- [Download Windows ZIP v2.1.35](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.35/INI-Edit-Translate-2026-v2.1.35-windows.zip)
+- [GitHub release](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.35)
 - [Features and usage](./ini-edit-translate-2026/)
 - [Public GitHub repository](https://github.com/rockbaer2007/ini-edit-translate-2026)
 

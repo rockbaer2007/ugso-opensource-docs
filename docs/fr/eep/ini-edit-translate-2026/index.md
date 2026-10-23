@@ -14,6 +14,14 @@ par Uwe Grimm / UGSo Software et publié sous licence MIT.
 
 ![Interface française vérifiée, sans données personnelles](/eep/ini-edit-translate-2026/editor-fr.png)
 
+## Téléchargement
+
+[Télécharger le ZIP Windows v2.1.35](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.35/INI-Edit-Translate-2026-v2.1.35-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.35)
+
+Extraire tout le ZIP et lancer `INI Edit Translate 2026.exe`. Windows 11 et
+.NET Framework 4.8 sont requis. Conserver les DLL et dossiers de langues ensemble.
+Visual Studio sert uniquement à compiler les sources. Aucun installateur nécessaire.
+
 ## Fonctions
 
 | Domaine | Possibilités |
@@ -43,9 +51,8 @@ messages mélangés. Les clés INI techniques telles que `Name_GER` sont conserv
 
 ## Installation et utilisation
 
-1. Compiler avec Visual Studio 2026, le développement de bureau .NET et le Developer Pack
-   .NET Framework 4.8. Les commandes figurent dans la README.
-2. Lancer `INI Edit Translate 2026.exe` depuis Release en conservant ses DLL et dossiers de langues.
+1. Télécharger le ZIP Windows ci-dessus et extraire tous les fichiers.
+2. Lancer `INI Edit Translate 2026.exe` depuis le dossier extrait en conservant ses DLL et dossiers de langues.
 3. Ouvrir **À propos → Paramètres → Traduction OpenAI** et saisir sa propre clé API et le modèle ; `gpt-4.1-mini` par défaut.
 4. Ouvrir d’abord une copie sauvegardée en mode **Lecture seule**.
 5. Utiliser **Lire et traduire** ou un bouton de traduction. Choisir la langue source des axes et fonctions des signaux.
