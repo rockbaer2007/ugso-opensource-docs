@@ -5,7 +5,7 @@ description: Funktionsbeschreibung des Windows-Editors für EEP-Modell-INI-Datei
 
 # INI Edit Translate 2026
 
-**Version 2.1.35.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.37.0 · Windows 11 · .NET Framework 4.8**
 
 INI Edit Translate 2026 bearbeitet Modellbeschreibungen und Installationsdateien für
 EEP. Die Anwendung wird von Uwe Grimm / UGSo Software entwickelt und unter der
@@ -13,11 +13,11 @@ MIT-Lizenz veröffentlicht.
 
 [Quellcode und README auf GitHub](https://github.com/rockbaer2007/ini-edit-translate-2026)
 
-![Geprüfte deutsche Programmoberfläche ohne private Inhalte](/eep/ini-edit-translate-2026/editor-de.png)
+![Aktuelles Design von Version 2.1.37 mit Lime-Menüleiste, ohne private Inhalte](/eep/ini-edit-translate-2026/editor-v2-1-37-de.png)
 
 ## Download
 
-[Windows-ZIP v2.1.35 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.35/INI-Edit-Translate-2026-v2.1.35-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.35)
+[Windows-ZIP v2.1.37 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.37/INI-Edit-Translate-2026-v2.1.37-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.37)
 
 ZIP vollständig entpacken und `INI Edit Translate 2026.exe` starten. Windows 11 und
 .NET Framework 4.8 werden benötigt. DLLs und Sprachordner zusammen lassen.
@@ -62,6 +62,62 @@ und Sprachmischungen geprüft. Technische INI-Schlüssel wie `Name_GER` bleiben 
    verwenden. Bei Bewegungsachsen und Signalfunktionen die Ausgangssprache auswählen.
 6. Vorschau und Modelltexte prüfen und anschließend ausdrücklich speichern.
 
+Der Info-Dialog wählt die geprüfte Hilfe `Info.de.rtf`, `Info.en.rtf` oder `Info.fr.rtf` passend zur Oberflächensprache. Die historische `Info.rtf` bleibt unverändert als Original erhalten. Die aktuellen Hilfetexte beschreiben OpenAI und die wiederhergestellte Nachschlagehilfe.
+
+## GitHub-Updates
+
+Unter **Über → Nach Updates suchen** wird das neueste öffentliche GitHub-Release
+abgefragt. Es gibt keine automatische Prüfung beim Programmstart. Nur eine neuere
+stabile Version wird angeboten; Versionsnummer und Release-Notizen werden angezeigt.
+
+**Herunterladen und installieren** lädt die Windows-ZIP samt SHA-256-Prüfsumme.
+Download und Paketprüfung sind abbrechbar und erfolgen vor dem Schließen der Anwendung.
+Vor der Installation müssen offene Dateien gespeichert und Info_trans geschlossen sein.
+Die Installation startet erst nach Bestätigung. Ein separates Hilfsprogramm wartet auf
+das Ende des Editors, sichert die bisherigen Dateien und installiert das Paket.
+
+Einstellungen und der verschlüsselte OpenAI-Schlüssel bleiben erhalten. Vorhandene
+IET2.FDB-, CSV-, DAT- und Konfigurationsdateien der Nachschlagehilfe sowie die ursprüngliche
+Info.rtf werden gesichert und nicht ersetzt. Eigene Modelldateien bleiben unangetastet.
+Bei einem Installationsfehler wird die Wiederherstellung der bereits ersetzten Dateien
+versucht; ein Bericht nennt das Ergebnis. Sicherungen und Berichte liegen unter
+`%LOCALAPPDATA%/UGSo/IET2026/updates/<Kennung>/`.
+
+Der Updater benötigt keine Serverzugangsdaten. Prüfsummen dienen der Integritätsprüfung;
+es ist keine zusätzliche digitale Paketsignatur implementiert.
+32 isolierte Updateprüfungen decken Download, Abbruch, Paketpfade, Datenerhalt,
+gesperrte Dateien und Rücknahme nach einem teilweisen Schreibfehler ab.
+
+## Zweites Programm: Info_trans
+
+Das Paket enthält auch `help/Info_trans.exe`. **Nachschlagehilfe** im Haupteditor
+öffnet dieses separate Programm in der gewählten Sprache. Die echte `IET2.FDB`
+und die zugehörige native Firebird-2.5.8-Laufzeit wurden aus dem Archiv von 2019
+übernommen. Eine separate Firebird-Serverinstallation ist nicht nötig.
+
+Die Datenbank enthält 5 Immobilien- und 2 Gütereinträge sowie 2 Updateeinträge.
+Die Tabellen für Signale, Rollmaterial, Gleisobjekte und Landschaft sind im
+Original leer. Zusätzlich sind 236 Iconeinträge, 369 technische Begriffe und
+2.428 bereinigte Einträge im **Wörterbuch DE/EN/FR** enthalten. Englisch ist die
+Referenz; bestätigte deutsche Korrekturen und französische Übersetzungen sind eingearbeitet.
+Abgetrennte Zeilen wurden zusammengeführt und vermischte Begriffe getrennt.
+Amerikanische und britische Fachbegriffe bleiben mit ihren Kennzeichnungen erhalten.
+Alle Rückfragen zur Wörterbuchprüfung sind geklärt. Die ursprüngliche DE/EN-Datei
+und die Quelldatenbank bleiben unverändert im vollständigen Paket erhalten.
+
+![Info_trans 2.1.37 mit Lime-Registerkarten und geladener Originaldatenbank](/eep/ini-edit-translate-2026/info-trans-v2-1-37-de.png)
+
+![Dreisprachiges Wörterbuch in Info_trans mit gut lesbaren DE-, EN- und FR-Spalten](/eep/ini-edit-translate-2026/dictionary-v2-1-37-de.png)
+
+`Info_trans` wird passend zu den nativen DLLs für x86 gebaut. Die verwaltete DLL
+FirebirdSql.Data.FirebirdClient 7.5.0.0 wurde mit der echten Firebird-2.5.8-Datenbank
+geprüft. Tests lesen nur getrennte Datenbankkopien und vergleichen alle sieben
+Tabellen mit der Anzeige in DE/EN/FR. Das Paket enthält die unveränderte Quelldatenbank.
+
+Fehlende oder nicht ladbare Bestandteile werden angezeigt. SQL-Import bleibt dann
+gesperrt; vor einem verfügbaren manuellen SQL-Import wird die Datenbank lokal gesichert.
+Die automatische Programmaktualisierung bleibt deaktiviert.
+
 ## Daten und Datenschutz
 
 Die neue Fassung importiert keine alten Registrierungen oder privaten Datenbanken.
@@ -75,12 +131,18 @@ ersetzt die API-Abrechnung nicht.
 
 ## Updatefunktion und Prüfstand
 
-**Die Updatefunktion ist vorerst vollständig deaktiviert.** Weder eine automatische
-Verbindung zum bisherigen Updateserver noch ein Update-Menüpunkt ist enthalten.
+**GitHub-Updates werden manuell gestartet und vor der Installation bestätigt.** Der alte Updateserver wird nicht verwendet.
 Google, LEO, Linguee und DeepL werden nicht mehr angeboten.
 
-30 lokale Prüfungen mit simulierten API-Antworten sowie Debug- und Release-Builds
+41 lokale Prüfungen mit simulierten API-Antworten sowie Debug- und Release-Builds
 prüfen Fehlerfälle, Abbruch, Wiederherstellung, Tabellenexport und die gerenderten
 Oberflächen in DE/EN/FR. Die Tests senden keine Texte an OpenAI. Ein echter API-Aufruf
 und die Qualität erzeugter Modellübersetzungen sind mit dem eigenen Zugang noch zu prüfen.
 Nicht jedes denkbare INI-Schema wird unterstützt; die inhaltliche Prüfung bleibt notwendig.
+
+Das vollständige lokale Release 2.1.37 wurde vor der Veröffentlichung vom Nutzer
+kontrolliert und als funktionsfähig bestätigt. Das ZIP enthält beide Programme,
+die native Firebird-Laufzeit, die Originaldatenbank und das korrigierte Wörterbuch.
+ZIP-Integrität und SHA-256 wurden geprüft, alle sieben Datenbanktabellen wurden
+auf getrennten Kopien mit der Anzeige in DE/EN/FR verglichen. Die Bilder zeigen
+das aktuelle Design mit neutralen Daten und ohne private Einstellungen.
