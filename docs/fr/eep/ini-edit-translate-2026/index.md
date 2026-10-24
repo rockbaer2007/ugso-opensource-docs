@@ -5,6 +5,24 @@ description: Fonctions de l’éditeur Windows de fichiers INI de modèles EEP e
 
 # INI Edit Translate 2026
 
+## Version 2.1.54 : abréviations ferroviaires dans Info_trans
+
+Info_trans ajoute l’onglet **Abréviations ferroviaires** avec 14 entrées :
+Bf, Hbf, Hp, Gbf, Rbf, Abzw, BÜ, Stw, EG, OL, Gl., Bstg., DWW et Kr.
+Le tableau présente l’allemand, l’anglais, le français et le polonais, avec les
+abréviations étrangères attestées. La ligne Kr., auparavant vide, est complétée
+pour une traversée de voies. Cliquer sur une cellule copie son contenu, comme
+dans les autres tableaux de référence. Le tableau est en lecture seule, les colonnes
+peuvent être triées et les textes longs passent à la ligne.
+L’onglet allemand s’appelle **Bahnabkürzung**, l’anglais **Railway abbreviations**.
+Le paquet complet inclut `help/railway-abbreviations.csv`. Ce tableau de référence
+ne modifie pas les règles de traduction automatique. Sauvegarde effectuée avant
+modification ; dictionnaire, base de données, paramètres, identifiants d’accès et
+liste externe des constructeurs sont conservés.
+114 vérifications locales réussies : contenu du tableau et affichage DE/EN/FR
+aux échelles 100 et 150 %, sans appel réel aux API.
+
+
 ## Version 2.1.53 : abréviations ferroviaires et codes de constructeurs
 
 20 abréviations ferroviaires utilisent désormais une correspondance locale fixe
@@ -149,7 +167,7 @@ et identifiants existants sont conservés. 94 vérifications locales réussies, 
 enregistrement/relecture, désactivation, dossier indisponible et affichage DE/EN/FR
 aux échelles 100/150 %.
 
-**Version 2.1.53.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.54.0 · Windows 11 · .NET Framework 4.8**
 
 Modifier les descriptions de modèles EEP et leurs fichiers d’installation. Développé
 par Uwe Grimm / UGSo Software et publié sous licence MIT.
@@ -177,7 +195,7 @@ Le fichier de l’ordinateur de jeu distant n’a pas été modifié.
 
 ## Téléchargement
 
-[Télécharger le ZIP Windows v2.1.53](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.53/INI-Edit-Translate-2026-v2.1.53-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.53)
+[Télécharger le ZIP Windows v2.1.54](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.54/INI-Edit-Translate-2026-v2.1.54-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.54)
 
 Extraire tout le ZIP et lancer `INI Edit Translate 2026.exe`. Windows 11 et
 .NET Framework 4.8 sont requis. Conserver les DLL et dossiers de langues ensemble.

@@ -5,6 +5,22 @@ description: Features of the Windows editor for EEP model INI files and Installa
 
 # INI Edit Translate 2026
 
+## Version 2.1.54: railway abbreviations in Info_trans
+
+Info_trans adds the **Railway abbreviations** tab with 14 entries:
+Bf, Hbf, Hp, Gbf, Rbf, Abzw, BÜ, Stw, EG, OL, Gl., Bstg., DWW and Kr.
+The table shows German, English, French and Polish, including documented foreign
+abbreviations. The previously empty Kr. row is completed for a track crossing.
+Clicking a cell copies its contents, as in the existing reference tables.
+The table is read-only, columns can be sorted and long text wraps.
+The German tab name is **Bahnabkürzung**; the French name is **Abréviations ferroviaires**.
+The complete package includes `help/railway-abbreviations.csv`. This reference table
+does not change automatic translation rules. Backup created before changes;
+dictionary, database, settings, credentials and the external constructor list are retained.
+114 local checks passed, including table contents and DE/EN/FR layout at
+100 and 150 percent scaling, without live API calls.
+
+
 ## Version 2.1.53: railway abbreviations and constructor identifiers
 
 20 railway abbreviations now use a fixed local mapping in model names and in
@@ -144,7 +160,7 @@ a message is shown and the path is retained for the next start. Existing data an
 credentials are retained. 94 local checks passed, including save/reload, opt-out,
 unavailable folders and DE/EN/FR layout at 100/150 percent scaling.
 
-**Version 2.1.53.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.54.0 · Windows 11 · .NET Framework 4.8**
 
 Edit EEP model descriptions and installation files. Developed by Uwe Grimm / UGSo
 Software and published under the MIT licence.
@@ -171,7 +187,7 @@ the remote gaming computer was not modified.
 
 ## Download
 
-[Download Windows ZIP v2.1.53](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.53/INI-Edit-Translate-2026-v2.1.53-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.53)
+[Download Windows ZIP v2.1.54](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.54/INI-Edit-Translate-2026-v2.1.54-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.54)
 
 Extract the complete ZIP and run `INI Edit Translate 2026.exe`. Requires Windows 11
 and .NET Framework 4.8. Keep DLLs and language folders together.
