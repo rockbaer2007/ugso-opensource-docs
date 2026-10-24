@@ -25,5 +25,13 @@ Firebird-Laufzeit und dem korrigierten Wörterbuch DE/EN/FR mit 2.428 Einträgen
 Die Oberfläche ist in Deutsch, Englisch und Französisch verfügbar. Für Modelltexte
 werden Englisch, Deutsch, Französisch und Polnisch unterstützt. GitHub-Updates werden manuell geprüft und nach Bestätigung installiert.
 
+## Projektduplicator 2026
+
+EEP-Modellprojekte duplizieren und bearbeiten, mit Oberfläche in DE/EN/FR/NL,
+Google-Webübersetzung, ZIP-Snapshots und manuellen GitHub-Updates.
+
+- [Download und Bedienung](./projektduplicator-2026/)
+- [GitHub-Release 4.6.6.59](https://github.com/rockbaer2007/projektduplicator-2026/releases/tag/v4.6.6.59)
+
 EEP ist ein Produkt seines jeweiligen Rechteinhabers. Die hier vorgestellten
 UGSo-Werkzeuge sind unabhängige Entwicklungen.

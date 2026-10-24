@@ -25,4 +25,12 @@ fonctions des signaux dans plusieurs langues.
 L’interface est disponible en allemand, anglais et français. Les textes de modèles
 prennent en charge l’anglais, l’allemand, le français et le polonais. Les mises à jour GitHub sont vérifiées manuellement et installées après confirmation.
 
+## Projektduplicator 2026
+
+Dupliquer et modifier des projets de modèles EEP, avec interface DE/EN/FR/NL,
+traduction Web Google, sauvegardes ZIP et mises à jour GitHub manuelles.
+
+- [Téléchargement et utilisation](./projektduplicator-2026/)
+- [Version GitHub 4.6.6.59](https://github.com/rockbaer2007/projektduplicator-2026/releases/tag/v4.6.6.59)
+
 EEP appartient à son titulaire respectif. Les outils UGSo présentés ici sont des développements indépendants.

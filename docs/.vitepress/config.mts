@@ -16,7 +16,8 @@ const navDe = [
   { text: 'Startseite', link: '/' },
   { text: 'EEP', items: [
     { text: 'Übersicht', link: '/eep/' },
-    { text: 'INI Edit Translate 2026', link: '/eep/ini-edit-translate-2026/' }
+    { text: 'INI Edit Translate 2026', link: '/eep/ini-edit-translate-2026/' },
+    { text: 'Projektduplicator 2026', link: '/eep/projektduplicator-2026/' }
   ] },
   {
     text: 'Sammlung',
@@ -57,7 +58,8 @@ const navEn = [
   { text: 'Home', link: '/en/' },
   { text: 'EEP', items: [
     { text: 'Overview', link: '/en/eep/' },
-    { text: 'INI Edit Translate 2026', link: '/en/eep/ini-edit-translate-2026/' }
+    { text: 'INI Edit Translate 2026', link: '/en/eep/ini-edit-translate-2026/' },
+    { text: 'Projektduplicator 2026', link: '/en/eep/projektduplicator-2026/' }
   ] },
   {
     text: 'Collection',
@@ -99,7 +101,8 @@ const navFr = [
   { text: 'Accueil', link: '/fr/' },
   { text: 'EEP', items: [
     { text: 'Vue d’ensemble', link: '/fr/eep/' },
-    { text: 'INI Edit Translate 2026', link: '/fr/eep/ini-edit-translate-2026/' }
+    { text: 'INI Edit Translate 2026', link: '/fr/eep/ini-edit-translate-2026/' },
+    { text: 'Projektduplicator 2026', link: '/fr/eep/projektduplicator-2026/' }
   ] },
   {
     text: 'Collection',
@@ -137,7 +140,8 @@ const navFr = [
 const sidebarDe = {
   '/eep/': [{ text: 'EEP', items: [
     { text: 'Übersicht', link: '/eep/' },
-    { text: 'INI Edit Translate 2026', link: '/eep/ini-edit-translate-2026/' }
+    { text: 'INI Edit Translate 2026', link: '/eep/ini-edit-translate-2026/' },
+    { text: 'Projektduplicator 2026', link: '/eep/projektduplicator-2026/' }
   ] }],
   '/projects/dashboard-user-manager/': [{text:'Dashboard-Benutzerverwaltung',items:[{text:'Einrichtung und Bedienung',link:'/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
   '/projects/mqtt-client/': [{ text: 'MQTT-Client', items: [{ text: 'Einrichtung und Neuerungen', link: '/projects/mqtt-client/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
@@ -585,7 +589,8 @@ const sidebarDe = {
 const sidebarEn = {
   '/en/eep/': [{ text: 'EEP', items: [
     { text: 'Overview', link: '/en/eep/' },
-    { text: 'INI Edit Translate 2026', link: '/en/eep/ini-edit-translate-2026/' }
+    { text: 'INI Edit Translate 2026', link: '/en/eep/ini-edit-translate-2026/' },
+    { text: 'Projektduplicator 2026', link: '/en/eep/projektduplicator-2026/' }
   ] }],
   '/en/projects/dashboard-user-manager/': [{text:'Dashboard User Manager',items:[{text:'Setup and usage',link:'/en/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
   '/en/projects/mqtt-client/': [{ text: 'MQTT-Client', items: [{ text: 'Setup and updates', link: '/en/projects/mqtt-client/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
@@ -887,7 +892,8 @@ const sidebarEn = {
 const sidebarFr = {
   '/fr/eep/': [{ text: 'EEP', items: [
     { text: 'Vue d’ensemble', link: '/fr/eep/' },
-    { text: 'INI Edit Translate 2026', link: '/fr/eep/ini-edit-translate-2026/' }
+    { text: 'INI Edit Translate 2026', link: '/fr/eep/ini-edit-translate-2026/' },
+    { text: 'Projektduplicator 2026', link: '/fr/eep/projektduplicator-2026/' }
   ] }],
   '/fr/projects/dashboard-user-manager/': [{text:'Utilisateurs des tableaux de bord',items:[{text:'Installation et utilisation',link:'/fr/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
   '/fr/projects-mqtt/': [{text:'UGSo HA Apps',items:[{text:'Vue d’ensemble',link:'/fr/projects-mqtt/'},{text:'Utilisateurs des tableaux de bord',link:'/fr/projects/dashboard-user-manager/'}]}],

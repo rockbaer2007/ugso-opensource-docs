@@ -24,4 +24,12 @@ functions in multiple languages.
 The interface is available in German, English and French. Model texts support English,
 German, French and Polish. GitHub updates are checked manually and installed after confirmation.
 
+## Projektduplicator 2026
+
+Duplicate and edit EEP model projects, with a DE/EN/FR/NL interface, Google web
+translation, ZIP snapshots and manual GitHub updates.
+
+- [Download and usage](./projektduplicator-2026/)
+- [GitHub release 4.6.6.59](https://github.com/rockbaer2007/projektduplicator-2026/releases/tag/v4.6.6.59)
+
 EEP belongs to its respective rights holder. The UGSo tools presented here are independent developments.
