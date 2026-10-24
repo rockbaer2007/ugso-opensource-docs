@@ -5,7 +5,20 @@ description: Funktionsbeschreibung des Windows-Editors für EEP-Modell-INI-Datei
 
 # INI Edit Translate 2026
 
-**Version 2.1.48.0 · Windows 11 · .NET Framework 4.8**
+## Version 2.1.49: letzten Pfad erhalten
+
+Unter **Über → Einstellungen** kann **Letzten Pfad erhalten** aktiviert werden.
+Nach **Speichern** bleibt der zuletzt gewählte Ordner über Neustarts und Updates
+erhalten. Die Ordnerliste sowie die Dialoge für Modell-INI und Installation.eep
+beginnen wieder dort. Dateien werden dabei nicht automatisch geöffnet oder übersetzt.
+
+Die Option ist standardmäßig ausgeschaltet. Ist ein gespeicherter Ordner oder ein
+Netzlaufwerk nicht erreichbar, erscheint ein Hinweis; der gespeicherte Pfad bleibt
+für den nächsten Start erhalten. Vorhandene Daten und Zugangsdaten bleiben erhalten.
+94 lokale Prüfungen einschließlich Speicherung/erneutem Laden, Opt-out,
+fehlendem Ordner und Oberfläche DE/EN/FR bei 100/150 Prozent bestanden.
+
+**Version 2.1.49.0 · Windows 11 · .NET Framework 4.8**
 
 INI Edit Translate 2026 bearbeitet Modellbeschreibungen und Installationsdateien für
 EEP. Die Anwendung wird von Uwe Grimm / UGSo Software entwickelt und unter der
@@ -35,7 +48,7 @@ nicht verändert.
 
 ## Download
 
-[Windows-ZIP v2.1.48 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.48/INI-Edit-Translate-2026-v2.1.48-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.48)
+[Windows-ZIP v2.1.49 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.49/INI-Edit-Translate-2026-v2.1.49-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.49)
 
 ZIP vollständig entpacken und `INI Edit Translate 2026.exe` starten. Windows 11 und
 .NET Framework 4.8 werden benötigt. DLLs und Sprachordner zusammen lassen.

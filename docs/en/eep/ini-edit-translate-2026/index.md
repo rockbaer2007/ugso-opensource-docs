@@ -5,7 +5,19 @@ description: Features of the Windows editor for EEP model INI files and Installa
 
 # INI Edit Translate 2026
 
-**Version 2.1.48.0 · Windows 11 · .NET Framework 4.8**
+## Version 2.1.49: keep the last folder
+
+Enable **Keep last folder** under **About → Settings**, then **Save**.
+The last selected directory is retained across restarts and updates.
+The folder tree and the model INI / Installation.eep file dialogs start there again.
+No file is opened or translated automatically.
+
+The option is disabled by default. If a saved folder or network drive is unavailable,
+a message is shown and the path is retained for the next start. Existing data and
+credentials are retained. 94 local checks passed, including save/reload, opt-out,
+unavailable folders and DE/EN/FR layout at 100/150 percent scaling.
+
+**Version 2.1.49.0 · Windows 11 · .NET Framework 4.8**
 
 Edit EEP model descriptions and installation files. Developed by Uwe Grimm / UGSo
 Software and published under the MIT licence.
@@ -32,7 +44,7 @@ the remote gaming computer was not modified.
 
 ## Download
 
-[Download Windows ZIP v2.1.48](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.48/INI-Edit-Translate-2026-v2.1.48-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.48)
+[Download Windows ZIP v2.1.49](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.49/INI-Edit-Translate-2026-v2.1.49-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.49)
 
 Extract the complete ZIP and run `INI Edit Translate 2026.exe`. Requires Windows 11
 and .NET Framework 4.8. Keep DLLs and language folders together.

@@ -5,7 +5,20 @@ description: Fonctions de l’éditeur Windows de fichiers INI de modèles EEP e
 
 # INI Edit Translate 2026
 
-**Version 2.1.48.0 · Windows 11 · .NET Framework 4.8**
+## Version 2.1.49 : conserver le dernier dossier
+
+Activer **Conserver le dernier dossier** dans **À propos → Paramètres**, puis
+**Enregistrer**. Le dernier dossier choisi est conservé après redémarrage et mise à jour.
+L’arborescence et les sélecteurs de fichiers INI / Installation.eep repartent de ce dossier.
+Aucun fichier n’est ouvert ni traduit automatiquement.
+
+L’option est désactivée par défaut. Si un dossier ou lecteur réseau est indisponible,
+un message apparaît et le chemin est conservé pour le prochain démarrage. Les données
+et identifiants existants sont conservés. 94 vérifications locales réussies, dont
+enregistrement/relecture, désactivation, dossier indisponible et affichage DE/EN/FR
+aux échelles 100/150 %.
+
+**Version 2.1.49.0 · Windows 11 · .NET Framework 4.8**
 
 Modifier les descriptions de modèles EEP et leurs fichiers d’installation. Développé
 par Uwe Grimm / UGSo Software et publié sous licence MIT.
@@ -33,7 +46,7 @@ Le fichier de l’ordinateur de jeu distant n’a pas été modifié.
 
 ## Téléchargement
 
-[Télécharger le ZIP Windows v2.1.48](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.48/INI-Edit-Translate-2026-v2.1.48-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.48)
+[Télécharger le ZIP Windows v2.1.49](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.49/INI-Edit-Translate-2026-v2.1.49-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.49)
 
 Extraire tout le ZIP et lancer `INI Edit Translate 2026.exe`. Windows 11 et
 .NET Framework 4.8 sont requis. Conserver les DLL et dossiers de langues ensemble.
