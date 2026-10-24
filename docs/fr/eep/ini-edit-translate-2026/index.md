@@ -40,6 +40,12 @@ ZIP complet et la conservation des entrées personnelles. Aucun appel réel aux 
 L’éditeur INI utilise le concepteur Framework classique ; une nouvelle vérification
 directement dans Visual Studio reste attendue.
 
+### Vérification utilisateur de la version 2.1.55
+
+Le 24 octobre 2026, l’utilisateur a confirmé que la mise à jour vers la version
+2.1.55 s’était déroulée correctement. Le processus de mise à jour est ainsi confirmé
+en utilisation réelle, en complément des vérifications automatisées.
+
 ## Version 2.1.54 : abréviations ferroviaires dans Info_trans
 
 Info_trans ajoute l’onglet **Abréviations ferroviaires** avec 14 entrées :

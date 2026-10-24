@@ -37,6 +37,12 @@ and preservation of custom dictionary entries. No live API calls. The INI editor
 the classic Framework designer; renewed verification directly in Visual Studio
 is still pending.
 
+### User verification of 2.1.55
+
+On 24 October 2026, the user confirmed that the update to 2.1.55 completed
+successfully. This confirms the update workflow in actual use in addition to the
+automated checks.
+
 ## Version 2.1.54: railway abbreviations in Info_trans
 
 Info_trans adds the **Railway abbreviations** tab with 14 entries:

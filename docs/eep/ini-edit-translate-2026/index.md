@@ -40,6 +40,12 @@ Release-ZIP und des Erhalts eigener Wörterbucheinträge. Keine echten API-Anfra
 Der INI-Editor verwendet den klassischen Framework-Designer; die erneute Bestätigung
 direkt in Visual Studio steht weiterhin aus.
 
+### Nutzerprüfung von 2.1.55
+
+Am 24.10.2026 hat der Nutzer das erfolgreich durchgelaufene Update auf 2.1.55
+bestätigt („Update sauber gelaufen“). Damit ist der Updateablauf zusätzlich zu den
+automatischen Prüfungen im praktischen Einsatz bestätigt.
+
 ## Version 2.1.54: Bahnabkürzung in Info_trans
 
 Info_trans enthält den zusätzlichen Tab **Bahnabkürzung** mit den 14 Einträgen
