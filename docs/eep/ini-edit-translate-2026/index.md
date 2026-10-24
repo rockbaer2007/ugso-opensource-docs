@@ -5,7 +5,7 @@ description: Funktionsbeschreibung des Windows-Editors für EEP-Modell-INI-Datei
 
 # INI Edit Translate 2026
 
-**Version 2.1.38.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.47.0 · Windows 11 · .NET Framework 4.8**
 
 INI Edit Translate 2026 bearbeitet Modellbeschreibungen und Installationsdateien für
 EEP. Die Anwendung wird von Uwe Grimm / UGSo Software entwickelt und unter der
@@ -17,7 +17,7 @@ MIT-Lizenz veröffentlicht.
 
 ## Download
 
-[Windows-ZIP v2.1.38 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.38/INI-Edit-Translate-2026-v2.1.38-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.38)
+[Windows-ZIP v2.1.47 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.47/INI-Edit-Translate-2026-v2.1.47-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.47)
 
 ZIP vollständig entpacken und `INI Edit Translate 2026.exe` starten. Windows 11 und
 .NET Framework 4.8 werden benötigt. DLLs und Sprachordner zusammen lassen.
@@ -35,28 +35,43 @@ Visual Studio ist nur zum Bauen der Quellen nötig. Kein Installer erforderlich.
 | Tabellenexport | Vollständige Tabellen als tabulatorgetrennte UTF-8-Dateien mit BOM exportieren |
 | Sicherungen | Vor dem Überschreiben vorhandener INI-Dateien eine Kopie mit Originaldateinamen anlegen |
 
-## ChatGPT-Übersetzung
+## Übersetzungsanbieter
 
-Die Anwendung verwendet ausschließlich die OpenAI Responses API. Pro Originaltext
-werden die drei anderen Zielsprachen gemeinsam angefordert. Es gibt keine
-Zwischenübersetzung über Englisch. Wiederholte Texte innerhalb derselben Aktion
-verwenden einen flüchtigen Cache.
+Unter **Optionen → Übersetzungseinstellungen** stehen OpenAI-API, ChatGPT-Abo
+und **MyMemory** zur Wahl. MyMemory benötigt Internet, aber keinen Schlüssel und kein
+Konto. Eine optionale E-Mail-Adresse wird mit jeder Anfrage an MyMemory gesendet:
+laut Anbieter 5.000 Zeichen täglich anonym, bis zu 50.000 mit gültiger E-Mail.
+Jede Zielsprache zählt separat; längere Texte werden in Abschnitte mit höchstens
+500 UTF-8-Bytes zerlegt. Ein flüchtiger Cache vermeidet Wiederholungen innerhalb einer Aktion.
 
-Ein Fortschrittsdialog bietet **Abbrechen**. Das Anfragezeitlimit beträgt 60 Sekunden;
-maximal 24.000 Zeichen werden je Text akzeptiert. Unvollständige Antworten, fehlende
-Zielsprachen und veränderte Platzhalter wie `{0}`, `%s` oder `[e]` werden abgelehnt.
-Bei einem Fehler bleiben die vor der Übersetzung vorhandenen Texte und Tabellen erhalten.
+Deutsch ist die Voreinstellung. Die ausgewählte Oberfläche bestimmt die anfängliche
+Ausgangssprache; die Quellwahl für Achsen/Signalfunktionen bleibt bedienbar.
+Deutsch und Französisch werden zuerst nach Englisch übersetzt; weitere Zielsprachen
+entstehen aus diesem englischen Zwischenstand. Die gewählte Ausgangssprache bleibt erhalten.
+Das gilt für alle Anbieter. Modellnamen werden weiterhin nicht übersetzt.
 
-Die Oberfläche wurde in DE/EN/FR auf beschädigte Zeichen, falsche Sprachzuordnungen
-und Sprachmischungen geprüft. Technische INI-Schlüssel wie `Name_GER` bleiben erhalten.
+MyMemory kann übermittelte Texte langfristig speichern. Die App ruft ausschließlich
+die Übersetzungsabfrage auf und veröffentlicht keine zusätzlichen Wörterbucheinträge.
+Es gibt keinen automatischen Anbieterwechsel. Bereits gespeicherte API-Schlüssel,
+ChatGPT-Verbindungen, Modelle und Wörterbücher bleiben erhalten.
+Polnische Sonderzeichen werden beim INI-Speichern über Unicode erhalten; wenn nötig
+wird die gesicherte Ausgabedatei in UTF-16 mit BOM gespeichert. Die reale EEP-Verarbeitung
+einer solchen Datei wurde hier nicht geprüft.
+
+90 lokale Prüfungen sowie Einlesen, echte MyMemory-Übersetzung und Speichern einer
+Kopie der bereitgestellten Beispiel-INI wurden geprüft. Die Originaldatei bleibt unverändert.
+Maschinelle Fachübersetzungen vor Verwendung prüfen.
+
+[MyMemory API](https://mymemory.translated.net/doc/spec.php) ·
+[Kontingente](https://mymemory.translated.net/doc/usagelimits.php) ·
+[Datennutzung](https://mymemory.translated.net/terms-and-conditions)
 
 ## Einrichtung und Bedienung
 
 1. Die Windows-ZIP über den Downloadlink herunterladen und vollständig entpacken.
 2. `INI Edit Translate 2026.exe` aus dem entpackten Ordner starten. DLLs und Sprachordner
    müssen bei der Anwendung bleiben.
-3. Unter **Über → Einstellungen → OpenAI-Übersetzung** den eigenen API-Schlüssel
-   und das Modell eintragen. Voreinstellung ist `gpt-4.1-mini`.
+3. Unter **Über → Einstellungen → Übersetzungseinstellungen** MyMemory, OpenAI-API oder ChatGPT-Abo wählen. Für MyMemory ist keine Anmeldung nötig; die E-Mail-Adresse ist optional.
 4. Eine gesicherte eigene Datei zunächst im Modus **Nur einlesen** öffnen.
 5. Für die Übersetzung **Einlesen und übersetzen** oder eine Übersetzungsschaltfläche
    verwenden. Bei Bewegungsachsen und Signalfunktionen die Ausgangssprache auswählen.
@@ -88,16 +103,16 @@ es ist keine zusätzliche digitale Paketsignatur implementiert.
 36 isolierte Updateprüfungen decken Download, Abbruch, Paketpfade, Datenerhalt,
 gesperrte Dateien und Rücknahme nach einem teilweisen Schreibfehler ab.
 
-### Updater-Korrektur 2.1.38
+### Updater-Korrektur 2.1.47
 
 Die Prozessübergabe verwendet jetzt einen stabilen Windows-Prozesshandle statt
 Modulzugriffen auf den bereits schließenden Editor. Vier zusätzliche Prüfungen
 decken x86/x64, bereits beendete Prozesse, falsche Identität und Zeitüberschreitungen ab.
 Falls der alte 2.1.37-Helfer vor der Installation scheitert, das vollständige
-2.1.38-ZIP zuerst in einen neuen Ordner entpacken. Eigene Daten vorher sichern
+2.1.47-ZIP zuerst in einen neuen Ordner entpacken. Eigene Daten vorher sichern
 und vorhandene Datenbanken sowie Wörterbücher nicht durch Paketdateien ersetzen.
 
-Der vollständige Ablauf von der veröffentlichten 2.1.37 zur 2.1.38 wurde an
+Der vollständige Ablauf von der veröffentlichten 2.1.37 zur 2.1.47 wurde an
 einer gesicherten Testkopie erfolgreich geprüft: GitHub-Download, Installation
 und automatischer Neustart. Alle 32 bisherigen Einstellungswerte, 17 geprüfte
 Daten-/Modelldateien und 18 vorhandene Benutzerkonfigurationen blieben erhalten.
@@ -105,7 +120,7 @@ Ein synthetischer DPAPI-Testschlüssel blieb unverändert und entschlüsselbar;
 anschließend wurde der ursprüngliche Zustand ohne Schlüssel wiederhergestellt.
 Es erfolgte kein OpenAI-Aufruf. Der Neustart wurde über Prozess-ID, Dateiversionen,
 Hashes und Konfiguration bestätigt; die Windows-Fenstersteuerung meldete danach
-einen Erfassungsfehler. Der erneute lesende GitHub-Dialogtest erkannte 2.1.38 korrekt.
+einen Erfassungsfehler. Der erneute lesende GitHub-Dialogtest erkannte 2.1.47 korrekt.
 
 ## Zweites Programm: Info_trans
 

@@ -5,7 +5,7 @@ description: Features of the Windows editor for EEP model INI files and Installa
 
 # INI Edit Translate 2026
 
-**Version 2.1.38.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.47.0 · Windows 11 · .NET Framework 4.8**
 
 Edit EEP model descriptions and installation files. Developed by Uwe Grimm / UGSo
 Software and published under the MIT licence.
@@ -16,7 +16,7 @@ Software and published under the MIT licence.
 
 ## Download
 
-[Download Windows ZIP v2.1.38](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.38/INI-Edit-Translate-2026-v2.1.38-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.38)
+[Download Windows ZIP v2.1.47](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.47/INI-Edit-Translate-2026-v2.1.47-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.47)
 
 Extract the complete ZIP and run `INI Edit Translate 2026.exe`. Requires Windows 11
 and .NET Framework 4.8. Keep DLLs and language folders together.
@@ -34,25 +34,38 @@ Visual Studio is only needed to build from source. No installer is required.
 | Table export | Export complete tables as tab-separated UTF-8 files with a BOM |
 | Backups | Copy existing INI files before overwriting them, retaining their original filename |
 
-## ChatGPT translation
+## Translation providers
 
-The application uses only the OpenAI Responses API. Each source text is translated
-into the three other target languages in one request, without an English intermediate
-translation. Repeated texts share a temporary cache within the same operation.
+Select OpenAI API, ChatGPT plan or **MyMemory** under **Options → Translation settings**.
+MyMemory requires internet access but no key or account. An optional email address is
+sent with each request: the provider allows 5,000 characters daily anonymously, up to
+50,000 with a valid email. Each target language counts separately. Long text is split
+into sections up to 500 UTF-8 bytes. A temporary cache avoids repeats within one operation.
 
-The progress dialog provides **Cancel**. The request timeout is 60 seconds; each text
-is limited to 24,000 characters. Incomplete responses, missing languages and changed
-placeholders such as `{0}`, `%s` or `[e]` are rejected. Existing texts and tables are
-preserved on failure.
+German is the default. The selected interface language sets the initial source language;
+axes/signal functions retain their source selector. German and French are translated
+to English first; other target languages use that English intermediate text.
+This applies to all providers. The selected source text and model names are retained.
 
-DE/EN/FR interface texts have been reviewed for broken characters, wrong-language
-entries and mixed messages. Technical INI keys such as `Name_GER` are retained.
+MyMemory may store submitted texts long term. The application uses only the translation
+query and does not submit additional dictionary entries. There is no automatic provider
+switch. Existing API keys, ChatGPT connections, models and dictionaries are retained.
+INI saving retains Polish characters through Unicode; when necessary, the backed-up
+output is saved as UTF-16 with BOM. Actual EEP processing of this encoding was not tested.
+
+90 local checks passed. The supplied sample INI was imported, translated through real
+MyMemory calls and saved as a copy; the original remains unchanged. Review machine
+translations of technical terminology before use.
+
+[MyMemory API](https://mymemory.translated.net/doc/spec.php) ·
+[Usage limits](https://mymemory.translated.net/doc/usagelimits.php) ·
+[Data usage](https://mymemory.translated.net/terms-and-conditions)
 
 ## Setup and workflow
 
 1. Download the Windows ZIP above and extract all files.
 2. Start `INI Edit Translate 2026.exe` from the extracted directory, keeping its DLLs and language directories together.
-3. Open **About → Settings → OpenAI translation**. Enter your own API key and model; the default is `gpt-4.1-mini`.
+3. Open **About → Settings → Translation settings**. Select MyMemory, OpenAI API or ChatGPT plan. MyMemory needs no login; email is optional.
 4. Open a backed-up file in **Read only** mode first.
 5. Use **Read and translate** or a translation button. Select the source language for axes and signal functions.
 6. Review the preview and model texts, then save explicitly.
@@ -80,23 +93,23 @@ No server credentials are needed. Checksums verify integrity; no additional digi
 package signature is implemented. 36 isolated update checks cover downloads,
 cancellation, package paths, retained data, locked files and rollback after partial writes.
 
-### Updater fix in 2.1.38
+### Updater fix in 2.1.47
 
 Process handoff now uses a stable Windows process handle instead of reading
 modules from an editor that is already closing. Four additional checks cover
 x86/x64, exited processes, identity mismatches and timeouts. If the old 2.1.37
-helper fails before installation, extract the complete 2.1.38 ZIP into a new
+helper fails before installation, extract the complete 2.1.47 ZIP into a new
 folder first. Back up your data and do not replace existing databases or
 dictionaries with package files.
 
-The complete update from published 2.1.37 to 2.1.38 passed in a backed-up test
+The complete update from published 2.1.37 to 2.1.47 passed in a backed-up test
 copy: GitHub download, installation and automatic restart. All 32 previous
 setting values, 17 checked data/model files and 18 existing user configurations
 were preserved. A synthetic DPAPI test key remained unchanged and decryptable;
 the original state without a key was restored afterwards. No OpenAI request was
 made. Restart was confirmed through process ID, versions, hashes and configuration;
 Windows window capture failed afterwards. A fresh read-only GitHub dialog test
-correctly detected 2.1.38.
+correctly detected 2.1.47.
 
 ## Second program: Info_trans
 
