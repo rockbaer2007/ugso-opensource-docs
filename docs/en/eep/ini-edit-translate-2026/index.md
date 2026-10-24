@@ -29,6 +29,21 @@ Visual Studio itself was not controlled remotely.
 114 local checks passed, including table contents and DE/EN/FR layout at
 100 and 150 percent scaling, without live API calls.
 
+### User verification of 2.1.54
+
+On 24 October 2026, the user confirmed a successful update to 2.1.54 and the visible
+**Railway abbreviations** tab. Opening the Visual Studio designer was initially
+confirmed as well. A subsequent report for the INI editor stated that the designer
+could not be displayed because none of the classes in the file could be designed.
+Designer verification is therefore open again; the successful update and tab checks
+remain confirmed.
+
+The project classification of the logic files `Form1.Update.cs` and
+`Form1.Translation.cs` was subsequently corrected to “Code”. Open only `Form1.cs`
+with “View Designer” for the form layout, rather than its nested logic files.
+Reload the solution after updating. The build and DesignSurface checks for both
+main forms passed; verification directly in Visual Studio is still pending.
+
 
 ## Version 2.1.53: railway abbreviations and constructor identifiers
 

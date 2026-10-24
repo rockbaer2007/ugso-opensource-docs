@@ -31,6 +31,23 @@ WinForms DesignSurface vérifiés ; Visual Studio lui-même n’a pas été pilo
 114 vérifications locales réussies : contenu du tableau et affichage DE/EN/FR
 aux échelles 100 et 150 %, sans appel réel aux API.
 
+### Vérification utilisateur de la version 2.1.54
+
+Le 24 octobre 2026, l’utilisateur a confirmé la réussite de la mise à jour vers
+2.1.54 et la présence de l’onglet **Abréviations ferroviaires**. L’ouverture du
+concepteur Visual Studio avait également été confirmée dans un premier temps.
+Un signalement ultérieur concernant l’éditeur INI indique que le concepteur ne peut
+pas être affiché, car aucune des classes du fichier ne peut être prise en charge.
+La vérification du concepteur est donc de nouveau ouverte ; la mise à jour et
+l’affichage de l’onglet restent confirmés.
+
+La classification des fichiers de logique `Form1.Update.cs` et `Form1.Translation.cs`
+dans le projet a ensuite été corrigée en « Code ». Pour modifier la disposition,
+ouvrir uniquement `Form1.cs` avec « Afficher le concepteur », et non les fichiers de
+logique imbriqués. Recharger la solution après actualisation. La compilation et les
+vérifications DesignSurface des deux formulaires principaux ont réussi ; la nouvelle
+vérification directement dans Visual Studio reste à effectuer.
+
 
 ## Version 2.1.53 : abréviations ferroviaires et codes de constructeurs
 

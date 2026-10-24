@@ -29,6 +29,21 @@ WinForms-DesignSurface wurden geprüft; Visual Studio selbst wurde nicht fernges
 114 lokale Prüfungen bestanden, einschließlich Tabelleninhalt und Oberfläche
 DE/EN/FR bei 100 und 150 Prozent Skalierung. Keine echten API-Anfragen.
 
+### Nutzerprüfung von 2.1.54
+
+Am 24.10.2026 wurde das erfolgreiche Update auf 2.1.54 sowie der sichtbare Tab
+**Bahnabkürzung** vom Nutzer bestätigt. Zunächst wurde auch das Öffnen des
+Visual-Studio-Designers bestätigt. Anschließend wurde für den INI-Editor erneut
+„Der Designer konnte für diese Datei nicht angezeigt werden, da keine der enthaltenen
+Klassen entworfen werden kann“ gemeldet. Die Designerprüfung ist deshalb wieder
+offen; die erfolgreiche Update- und Tab-Prüfung bleibt bestätigt.
+
+Die Projektzuordnung der Logikdateien `Form1.Update.cs` und `Form1.Translation.cs`
+wurde anschließend auf „Code“ korrigiert. Für die Oberfläche ausschließlich
+`Form1.cs` mit „Designer anzeigen“ öffnen, nicht die untergeordneten Logikdateien.
+Die Projektmappe nach Aktualisierung neu laden. Build und DesignSurface-Prüfung
+beider Hauptformulare bestanden; die erneute Prüfung direkt in Visual Studio steht aus.
+
 
 ## Version 2.1.53: Bahn-Abkürzungen und Konstrukteurskennungen
 
