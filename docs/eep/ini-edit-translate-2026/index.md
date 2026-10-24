@@ -21,8 +21,8 @@ Zugangsdaten und die externe Konstrukteursliste bleiben erhalten.
 Das Update-ZIP verwendet nur Dateipfade, die auch der Updater aus 2.1.53 akzeptiert.
 Download und Paketprüfung sind getrennte Schritte; 100 % wird erst nach erfolgreicher
 Prüfung angezeigt. Fehlerdetails stehen im Dialog, ein erneuter Versuch ist möglich.
-Für Visual Studio bleibt .NET Framework 4.8 erhalten. Beide Projekte verwenden den
-Framework-Designer außerhalb des VS-Prozesses; Info_trans referenziert System.Configuration.
+Für Visual Studio bleibt .NET Framework 4.8 erhalten. Beide Projekte verwenden
+einen Framework-Designer; Info_trans referenziert System.Configuration.
 Nach der Änderung die Projektmappe einmal neu laden. Entwurfszeit-Build und
 WinForms-DesignSurface wurden geprüft; Visual Studio selbst wurde nicht ferngesteuert.
 
@@ -43,6 +43,13 @@ wurde anschließend auf „Code“ korrigiert. Für die Oberfläche ausschließl
 `Form1.cs` mit „Designer anzeigen“ öffnen, nicht die untergeordneten Logikdateien.
 Die Projektmappe nach Aktualisierung neu laden. Build und DesignSurface-Prüfung
 beider Hauptformulare bestanden; die erneute Prüfung direkt in Visual Studio steht aus.
+
+Eine weitere Nutzermeldung nennt konkret den nicht aus `VsHierarchy` abrufbaren
+`assemblyOutputPath`. Der Ausgabepfad ist bei MSBuild vorhanden. Als gezielte
+Umgehung verwendet der AnyCPU-INI-Editor wieder den klassischen Framework-Designer
+(`UseWinFormsOutOfProcDesigner=False`); Info_trans behält seinen bisherigen Modus.
+Projektmappe nach Aktualisierung schließen und erneut öffnen, neu erstellen und
+`Form1.cs` im Designer öffnen. Die Bestätigung dieser Umgehung in Visual Studio steht aus.
 
 
 ## Version 2.1.53: Bahn-Abkürzungen und Konstrukteurskennungen

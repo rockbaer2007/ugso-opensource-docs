@@ -21,7 +21,7 @@ dictionary, database, settings, credentials and the external constructor list ar
 The update ZIP uses only paths accepted by the 2.1.53 updater. Download and package
 validation are separate phases; 100% is shown only after successful validation.
 The dialog shows failure details and allows retrying. Both projects retain .NET
-Framework 4.8 and use its out-of-process Visual Studio designer. Info_trans explicitly
+Framework 4.8 and use a Framework Visual Studio designer. Info_trans explicitly
 references System.Configuration. Reload the solution after these changes.
 Design-time compilation and WinForms DesignSurface loading were checked;
 Visual Studio itself was not controlled remotely.
@@ -43,6 +43,13 @@ The project classification of the logic files `Form1.Update.cs` and
 with “View Designer” for the form layout, rather than its nested logic files.
 Reload the solution after updating. The build and DesignSurface checks for both
 main forms passed; verification directly in Visual Studio is still pending.
+
+A further user report specifically states that `assemblyOutputPath` cannot be
+retrieved from `VsHierarchy`. MSBuild does resolve the output path. As a targeted
+workaround, the AnyCPU INI editor now uses the classic Framework designer again
+(`UseWinFormsOutOfProcDesigner=False`); Info_trans retains its existing mode.
+After updating, close and reopen the solution, rebuild it and open `Form1.cs` in
+the designer. Confirmation of this workaround in Visual Studio is still pending.
 
 
 ## Version 2.1.53: railway abbreviations and constructor identifiers

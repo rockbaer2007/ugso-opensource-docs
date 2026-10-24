@@ -24,7 +24,7 @@ Le ZIP de mise à jour utilise uniquement les chemins acceptés par le programme
 de mise à jour 2.1.53. Téléchargement et validation sont distincts ; 100 % n’est affiché
 qu’après validation. Les détails d’erreur sont visibles et une nouvelle tentative est possible.
 Les deux projets conservent .NET Framework 4.8 et utilisent son concepteur Visual Studio
-hors processus. Info_trans référence explicitement System.Configuration.
+adapté à chaque projet. Info_trans référence explicitement System.Configuration.
 Recharger la solution après modification. Compilation de conception et chargement
 WinForms DesignSurface vérifiés ; Visual Studio lui-même n’a pas été piloté à distance.
 
@@ -47,6 +47,13 @@ ouvrir uniquement `Form1.cs` avec « Afficher le concepteur », et non les fichi
 logique imbriqués. Recharger la solution après actualisation. La compilation et les
 vérifications DesignSurface des deux formulaires principaux ont réussi ; la nouvelle
 vérification directement dans Visual Studio reste à effectuer.
+
+Un nouveau signalement précise que `assemblyOutputPath` ne peut pas être récupéré
+depuis `VsHierarchy`. MSBuild résout pourtant le chemin de sortie. Pour contourner
+ce problème, l’éditeur INI AnyCPU utilise de nouveau le concepteur Framework classique
+(`UseWinFormsOutOfProcDesigner=False`) ; Info_trans conserve son mode actuel.
+Après actualisation, fermer puis rouvrir la solution, la régénérer et ouvrir
+`Form1.cs` dans le concepteur. La confirmation de ce contournement dans Visual Studio reste attendue.
 
 
 ## Version 2.1.53 : abréviations ferroviaires et codes de constructeurs
