@@ -5,6 +5,33 @@ description: Features of the Windows editor for EEP model INI files and Installa
 
 # INI Edit Translate 2026
 
+## Version 2.1.50: protect EEP controls, constructor codes and versions
+
+`[e]` remains an EEP line-break control, never a translated word or an actual newline.
+Exact spelling, count and order of protected markers are validated.
+
+Constructor codes are recognized by letter/digit patterns without a fixed name list,
+including `(GK3)`, `(AG3)`, `(DL1)` and legacy bare codes at the start, middle or end.
+No code is added when none exists. Ordinary additions such as `(Winter)` remain
+translatable. Unusual letter-only codes cannot reliably be distinguished from
+ordinary words without an additional list.
+
+Game versions such as `EEP16.2`, `eep16.2` and `EEP 16.2` retain their case and punctuation.
+MyMemory never receives protected segments for translation; changed or invented codes
+and controls in OpenAI/ChatGPT results are rejected. Existing rollback remains active.
+
+A configuration entry introduced in 2.1.49 could prevent application startup.
+This is fixed and covered by a test of the shipped configuration.
+**If 2.1.49 does not start:** Back up `INI Edit Translate 2026.exe.config`,
+download the additional configuration asset from release 2.1.50, rename it to
+`INI Edit Translate 2026.exe.config` and replace the file beside the EXE.
+Start the editor and install the normal 2.1.50 update. Do not replace INI files,
+databases or personal settings.
+
+99 local checks passed. An isolated installation test containing a leading code,
+game version, parenthesized code and two `[e]` controls was translated through real
+MyMemory calls, saved and reloaded. Original files and credentials are retained.
+
 ## Version 2.1.49: keep the last folder
 
 Enable **Keep last folder** under **About → Settings**, then **Save**.
@@ -17,7 +44,7 @@ a message is shown and the path is retained for the next start. Existing data an
 credentials are retained. 94 local checks passed, including save/reload, opt-out,
 unavailable folders and DE/EN/FR layout at 100/150 percent scaling.
 
-**Version 2.1.49.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.50.0 · Windows 11 · .NET Framework 4.8**
 
 Edit EEP model descriptions and installation files. Developed by Uwe Grimm / UGSo
 Software and published under the MIT licence.
@@ -44,7 +71,7 @@ the remote gaming computer was not modified.
 
 ## Download
 
-[Download Windows ZIP v2.1.49](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.49/INI-Edit-Translate-2026-v2.1.49-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.49)
+[Download Windows ZIP v2.1.50](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.50/INI-Edit-Translate-2026-v2.1.50-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.50)
 
 Extract the complete ZIP and run `INI Edit Translate 2026.exe`. Requires Windows 11
 and .NET Framework 4.8. Keep DLLs and language folders together.

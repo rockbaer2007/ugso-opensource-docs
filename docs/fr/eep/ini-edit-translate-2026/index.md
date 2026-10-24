@@ -5,6 +5,34 @@ description: Fonctions de l’éditeur Windows de fichiers INI de modèles EEP e
 
 # INI Edit Translate 2026
 
+## Version 2.1.50 : protéger les contrôles EEP, identifiants et versions
+
+`[e]` reste un code de saut de ligne EEP : il n’est ni traduit ni remplacé par un vrai
+saut de ligne. L’écriture exacte, le nombre et l’ordre des marqueurs protégés sont vérifiés.
+
+Les identifiants de constructeurs sont reconnus par des motifs lettres/chiffres, sans
+liste de noms fixe : `(GK3)`, `(AG3)`, `(DL1)`, mais aussi les anciens codes sans
+parenthèses au début, au milieu ou à la fin. Aucun code n’est ajouté s’il est absent.
+Les ajouts ordinaires tels que `(Winter)` restent traduisibles. Sans liste supplémentaire,
+les codes particuliers composés uniquement de lettres ne peuvent pas être distingués
+de façon fiable des mots ordinaires.
+
+Les versions comme `EEP16.2`, `eep16.2` et `EEP 16.2` gardent leur casse et ponctuation.
+MyMemory ne reçoit pas les segments protégés ; les codes ou contrôles modifiés ou
+inventés par OpenAI/ChatGPT sont rejetés. La protection par restauration reste active.
+
+Une entrée de configuration ajoutée en 2.1.49 pouvait empêcher le démarrage.
+Elle est corrigée et la configuration distribuée est désormais vérifiée.
+**Si 2.1.49 ne démarre plus :** sauvegarder `INI Edit Translate 2026.exe.config`,
+télécharger le fichier de configuration supplémentaire de la version 2.1.50,
+le renommer `INI Edit Translate 2026.exe.config` et remplacer celui situé à côté
+de l’EXE. Démarrer puis installer normalement la mise à jour 2.1.50.
+Ne pas remplacer les fichiers INI, bases de données ou paramètres personnels.
+
+99 vérifications locales réussies. Un test d’installation avec code initial, version,
+code entre parenthèses et deux contrôles `[e]` a réellement été traduit via MyMemory,
+enregistré et relu. Fichiers originaux et identifiants conservés.
+
 ## Version 2.1.49 : conserver le dernier dossier
 
 Activer **Conserver le dernier dossier** dans **À propos → Paramètres**, puis
@@ -18,7 +46,7 @@ et identifiants existants sont conservés. 94 vérifications locales réussies, 
 enregistrement/relecture, désactivation, dossier indisponible et affichage DE/EN/FR
 aux échelles 100/150 %.
 
-**Version 2.1.49.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.50.0 · Windows 11 · .NET Framework 4.8**
 
 Modifier les descriptions de modèles EEP et leurs fichiers d’installation. Développé
 par Uwe Grimm / UGSo Software et publié sous licence MIT.
@@ -46,7 +74,7 @@ Le fichier de l’ordinateur de jeu distant n’a pas été modifié.
 
 ## Téléchargement
 
-[Télécharger le ZIP Windows v2.1.49](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.49/INI-Edit-Translate-2026-v2.1.49-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.49)
+[Télécharger le ZIP Windows v2.1.50](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.50/INI-Edit-Translate-2026-v2.1.50-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.50)
 
 Extraire tout le ZIP et lancer `INI Edit Translate 2026.exe`. Windows 11 et
 .NET Framework 4.8 sont requis. Conserver les DLL et dossiers de langues ensemble.

@@ -5,6 +5,36 @@ description: Funktionsbeschreibung des Windows-Editors für EEP-Modell-INI-Datei
 
 # INI Edit Translate 2026
 
+## Version 2.1.50: EEP-Steuerzeichen, Kennungen und Versionen schützen
+
+`[e]` bleibt ein EEP-Zeilenumbruch-Steuerzeichen und wird weder übersetzt noch in
+einen echten Zeilenumbruch umgewandelt. Schreibweise, Anzahl und Reihenfolge der
+geschützten Markierungen werden geprüft.
+
+Konstrukteurskennungen werden nach Buchstaben-/Zahlenmustern erkannt, ohne feste
+Namensliste. Geschützt sind beispielsweise `(GK3)`, `(AG3)`, `(DL1)` und auch
+ältere Schreibweisen ohne Klammern am Anfang, mitten im Text oder am Ende.
+Es wird keine Kennung ergänzt, wenn keine vorhanden ist. Normale Zusätze wie
+`(Winter)` bleiben übersetzbar. Rein aus Buchstaben bestehende Sonderkennungen
+lassen sich ohne eine zusätzliche Liste nicht zuverlässig von normalen Wörtern unterscheiden.
+
+Spielversionen wie `EEP16.2`, `eep16.2` oder `EEP 16.2` bleiben einschließlich
+Groß-/Kleinschreibung und Satzzeichen erhalten. MyMemory erhält diese geschützten
+Teile nicht zur Übersetzung; bei OpenAI/ChatGPT werden veränderte oder zusätzlich
+erfundene Kennungen und Steuerzeichen abgelehnt. Der bestehende Rücksetzschutz bleibt aktiv.
+
+Ein Konfigurationseintrag aus 2.1.49 verursachte beim echten App-Start einen Lesefehler.
+Das ist behoben und wird nun mit der ausgelieferten Konfiguration geprüft.
+**Falls 2.1.49 nicht mehr startet:** Die bisherige `INI Edit Translate 2026.exe.config`
+sichern. Die zusätzliche Konfigurationsdatei aus Release 2.1.50 herunterladen, in
+`INI Edit Translate 2026.exe.config` umbenennen und neben der EXE ersetzen.
+Danach starten und das normale Update auf 2.1.50 installieren. Keine INI-Dateien,
+Datenbanken oder persönlichen Einstellungen ersetzen.
+
+99 lokale Prüfungen bestanden. Ein eigener Installation.eep-Test mit Kennung am Anfang,
+Version, Klammerkennung und zwei `[e]` wurde tatsächlich über MyMemory übersetzt,
+gespeichert und erneut eingelesen. Originaldateien und Zugangsdaten bleiben erhalten.
+
 ## Version 2.1.49: letzten Pfad erhalten
 
 Unter **Über → Einstellungen** kann **Letzten Pfad erhalten** aktiviert werden.
@@ -18,7 +48,7 @@ für den nächsten Start erhalten. Vorhandene Daten und Zugangsdaten bleiben erh
 94 lokale Prüfungen einschließlich Speicherung/erneutem Laden, Opt-out,
 fehlendem Ordner und Oberfläche DE/EN/FR bei 100/150 Prozent bestanden.
 
-**Version 2.1.49.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.50.0 · Windows 11 · .NET Framework 4.8**
 
 INI Edit Translate 2026 bearbeitet Modellbeschreibungen und Installationsdateien für
 EEP. Die Anwendung wird von Uwe Grimm / UGSo Software entwickelt und unter der
@@ -48,7 +78,7 @@ nicht verändert.
 
 ## Download
 
-[Windows-ZIP v2.1.49 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.49/INI-Edit-Translate-2026-v2.1.49-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.49)
+[Windows-ZIP v2.1.50 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.50/INI-Edit-Translate-2026-v2.1.50-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.50)
 
 ZIP vollständig entpacken und `INI Edit Translate 2026.exe` starten. Windows 11 und
 .NET Framework 4.8 werden benötigt. DLLs und Sprachordner zusammen lassen.
