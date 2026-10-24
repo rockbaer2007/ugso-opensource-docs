@@ -5,6 +5,22 @@ description: Funktionsbeschreibung des Windows-Editors für EEP-Modell-INI-Datei
 
 # INI Edit Translate 2026
 
+## Version 2.1.51: Hinweis bei Ordnerauswahl
+
+Beim Auswählen eines Ordners im Dateibaum erscheint **„Bitte eine INI-Datei auswählen.“**
+Die bereits geladenen Modelltexte, Tabellen, Vorschau und ausgewählte Datei bleiben
+erhalten. Ein Ordner wird nicht mehr als Datei gelesen; es startet keine Übersetzung.
+
+Das gilt für den Hauptordner und beliebig benannte Unterordner, auch für Ordner mit
+`.ini` im Namen. Gelöscht gewordene Dateien und andere Dateitypen erhalten ebenfalls
+den Auswahlhinweis. Nur eine vorhandene INI-Datei wird geöffnet; `.INI` wird ebenfalls erkannt.
+Die Auswahl verwendet den ausgewählten Baumknoten statt der Mausposition und funktioniert
+damit auch bei Tastaturbedienung. Hinweis in Deutsch, Englisch und Französisch.
+
+101 lokale Prüfungen bestanden, einschließlich Datenerhalt bei Ordnerauswahl in
+allen drei Sprachen sowie Öffnen einer INI-Datei ohne Mauspositionsprüfung.
+Vorher Backup erstellt; persönliche Daten und Zugangsdaten bleiben erhalten.
+
 ## Version 2.1.50: EEP-Steuerzeichen, Kennungen und Versionen schützen
 
 `[e]` bleibt ein EEP-Zeilenumbruch-Steuerzeichen und wird weder übersetzt noch in
@@ -48,7 +64,7 @@ für den nächsten Start erhalten. Vorhandene Daten und Zugangsdaten bleiben erh
 94 lokale Prüfungen einschließlich Speicherung/erneutem Laden, Opt-out,
 fehlendem Ordner und Oberfläche DE/EN/FR bei 100/150 Prozent bestanden.
 
-**Version 2.1.50.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.51.0 · Windows 11 · .NET Framework 4.8**
 
 INI Edit Translate 2026 bearbeitet Modellbeschreibungen und Installationsdateien für
 EEP. Die Anwendung wird von Uwe Grimm / UGSo Software entwickelt und unter der
@@ -78,7 +94,7 @@ nicht verändert.
 
 ## Download
 
-[Windows-ZIP v2.1.50 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.50/INI-Edit-Translate-2026-v2.1.50-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.50)
+[Windows-ZIP v2.1.51 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.51/INI-Edit-Translate-2026-v2.1.51-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.51)
 
 ZIP vollständig entpacken und `INI Edit Translate 2026.exe` starten. Windows 11 und
 .NET Framework 4.8 werden benötigt. DLLs und Sprachordner zusammen lassen.

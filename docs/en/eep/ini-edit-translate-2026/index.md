@@ -5,6 +5,22 @@ description: Features of the Windows editor for EEP model INI files and Installa
 
 # INI Edit Translate 2026
 
+## Version 2.1.51: folder-selection hint
+
+Selecting a folder in the tree shows **“Please select an INI file.”** Loaded model
+texts, tables, preview and selected file are retained. A directory is no longer
+read as a file and no translation is started.
+
+This applies to the root and arbitrary subfolders, including folders named with
+an `.ini` extension. Missing files and other file types show the same selection hint.
+Only an existing INI file is opened; uppercase `.INI` is supported too.
+The selected tree node is used instead of the pointer position, including keyboard
+navigation. The hint is available in German, English and French.
+
+101 local checks passed, including retained data on folder selection in all three
+languages and opening an INI without pointer hit testing. Backup created;
+personal data and credentials are retained.
+
 ## Version 2.1.50: protect EEP controls, constructor codes and versions
 
 `[e]` remains an EEP line-break control, never a translated word or an actual newline.
@@ -44,7 +60,7 @@ a message is shown and the path is retained for the next start. Existing data an
 credentials are retained. 94 local checks passed, including save/reload, opt-out,
 unavailable folders and DE/EN/FR layout at 100/150 percent scaling.
 
-**Version 2.1.50.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.51.0 · Windows 11 · .NET Framework 4.8**
 
 Edit EEP model descriptions and installation files. Developed by Uwe Grimm / UGSo
 Software and published under the MIT licence.
@@ -71,7 +87,7 @@ the remote gaming computer was not modified.
 
 ## Download
 
-[Download Windows ZIP v2.1.50](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.50/INI-Edit-Translate-2026-v2.1.50-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.50)
+[Download Windows ZIP v2.1.51](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.51/INI-Edit-Translate-2026-v2.1.51-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.51)
 
 Extract the complete ZIP and run `INI Edit Translate 2026.exe`. Requires Windows 11
 and .NET Framework 4.8. Keep DLLs and language folders together.
