@@ -5,6 +5,38 @@ description: Features of the Windows editor for EEP model INI files and Installa
 
 # INI Edit Translate 2026
 
+## Version 2.1.55: external CSV dictionary with read priority
+
+The default dictionary includes the user's 30 reference terms in German, English,
+French and Polish, with corrected accents and special characters. The first start
+creates an external semicolon-separated UTF-8 CSV:
+`%LOCALAPPDATA%\UGSo\IET2026\translation-dictionary.csv`.
+
+```csv
+Deutsch;ENG;FRA;POL
+Arbeiter;Worker;Ouvrier;Robotnik
+```
+
+Add rows or correct translations. Each new translation reloads the file. Matching
+external entries take priority over the embedded seed list, existing model vocabulary
+and the selected online provider. Whole phrases work in all four source languages.
+Fully covered texts require no online request. Unknown proper names in model names
+remain unchanged. Empty target cells use the fallback. Missing, unreadable or malformed
+files remain untouched; the embedded seed list remains available. Online results are
+never automatically written to the CSV. Files up to 1 MiB and 2,000 data rows are
+read; each cell allows up to 200 characters without control characters.
+
+Updates never overwrite an existing user CSV. Settings, credentials, custom entries,
+the Info_trans database and reference tables are retained. DR, DB, constructor codes,
+technical types, underscore identifiers, version notes and `[e]` remain protected,
+even against conflicting CSV entries. The seed list is embedded and written externally
+only at startup, keeping the update ZIP compatible with older updaters.
+
+116 local checks and 43 update checks passed, including the complete release ZIP
+and preservation of custom dictionary entries. No live API calls. The INI editor uses
+the classic Framework designer; renewed verification directly in Visual Studio
+is still pending.
+
 ## Version 2.1.54: railway abbreviations in Info_trans
 
 Info_trans adds the **Railway abbreviations** tab with 14 entries:
@@ -191,7 +223,7 @@ a message is shown and the path is retained for the next start. Existing data an
 credentials are retained. 94 local checks passed, including save/reload, opt-out,
 unavailable folders and DE/EN/FR layout at 100/150 percent scaling.
 
-**Version 2.1.54.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.55.0 · Windows 11 · .NET Framework 4.8**
 
 Edit EEP model descriptions and installation files. Developed by Uwe Grimm / UGSo
 Software and published under the MIT licence.
@@ -218,7 +250,7 @@ the remote gaming computer was not modified.
 
 ## Download
 
-[Download Windows ZIP v2.1.54](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.54/INI-Edit-Translate-2026-v2.1.54-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.54)
+[Download Windows ZIP v2.1.55](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.55/INI-Edit-Translate-2026-v2.1.55-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.55)
 
 Extract the complete ZIP and run `INI Edit Translate 2026.exe`. Requires Windows 11
 and .NET Framework 4.8. Keep DLLs and language folders together.

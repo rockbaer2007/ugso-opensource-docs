@@ -5,6 +5,41 @@ description: Funktionsbeschreibung des Windows-Editors für EEP-Modell-INI-Datei
 
 # INI Edit Translate 2026
 
+## Version 2.1.55: externes CSV-Wörterbuch mit Lesevorrang
+
+Das neue Standard-Wörterbuch enthält die 30 Begriffe der Nutzervorlage in Deutsch,
+Englisch, Französisch und Polnisch, mit korrigierten Akzenten und Sonderzeichen.
+Beim ersten Start wird eine externe UTF-8-CSV mit Semikolon angelegt:
+`%LOCALAPPDATA%\UGSo\IET2026\translation-dictionary.csv`.
+
+```csv
+Deutsch;ENG;FRA;POL
+Arbeiter;Worker;Ouvrier;Robotnik
+```
+
+Eigene Zeilen ergänzen oder vorhandene Übersetzungen korrigieren. Jede neue
+Übersetzung liest die Datei erneut. Passende externe Einträge haben Vorrang vor
+der eingebetteten Startliste, den bisherigen Modellbegriffen und dem gewählten
+Online-Anbieter. Mehrwortbegriffe werden als Ganzes erkannt, in allen vier
+Ausgangssprachen. Vollständig abgedeckte Texte benötigen keine Online-Anfrage.
+Unbekannte Eigennamen in Modellnamen bleiben erhalten. Leere Zielzellen verwenden
+die Rückfallebene. Fehlende, unlesbare oder fehlerhafte Dateien werden nicht verändert;
+die eingebettete Startliste bleibt verfügbar. Online-Ergebnisse werden nicht
+automatisch in die CSV geschrieben. Dateien bis 1 MiB und 2.000 Datenzeilen werden
+gelesen; pro Zelle sind bis zu 200 Zeichen ohne Steuerzeichen erlaubt.
+
+Updates überschreiben keine vorhandene Benutzer-CSV. Einstellungen, Zugangsdaten,
+eigene Einträge, Info_trans-Datenbank und Nachschlagetabellen bleiben erhalten.
+DR, DB, Konstrukteurskennungen, technische Typen, Unterstrich-Kennungen,
+Versionshinweise und `[e]` bleiben auch bei widersprechenden CSV-Einträgen geschützt.
+Die Startliste ist im Programm eingebettet und wird erst beim Start extern angelegt,
+damit das Update-ZIP mit älteren Updatern kompatibel bleibt.
+
+116 lokale Prüfungen und 43 Updateprüfungen bestanden, einschließlich des vollständigen
+Release-ZIP und des Erhalts eigener Wörterbucheinträge. Keine echten API-Anfragen.
+Der INI-Editor verwendet den klassischen Framework-Designer; die erneute Bestätigung
+direkt in Visual Studio steht weiterhin aus.
+
 ## Version 2.1.54: Bahnabkürzung in Info_trans
 
 Info_trans enthält den zusätzlichen Tab **Bahnabkürzung** mit den 14 Einträgen
@@ -209,7 +244,7 @@ für den nächsten Start erhalten. Vorhandene Daten und Zugangsdaten bleiben erh
 94 lokale Prüfungen einschließlich Speicherung/erneutem Laden, Opt-out,
 fehlendem Ordner und Oberfläche DE/EN/FR bei 100/150 Prozent bestanden.
 
-**Version 2.1.54.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.55.0 · Windows 11 · .NET Framework 4.8**
 
 INI Edit Translate 2026 bearbeitet Modellbeschreibungen und Installationsdateien für
 EEP. Die Anwendung wird von Uwe Grimm / UGSo Software entwickelt und unter der
@@ -239,7 +274,7 @@ nicht verändert.
 
 ## Download
 
-[Windows-ZIP v2.1.54 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.54/INI-Edit-Translate-2026-v2.1.54-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.54)
+[Windows-ZIP v2.1.55 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.55/INI-Edit-Translate-2026-v2.1.55-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.55)
 
 ZIP vollständig entpacken und `INI Edit Translate 2026.exe` starten. Windows 11 und
 .NET Framework 4.8 werden benötigt. DLLs und Sprachordner zusammen lassen.
