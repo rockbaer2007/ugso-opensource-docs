@@ -5,7 +5,7 @@ description: Funktionsbeschreibung des Windows-Editors für EEP-Modell-INI-Datei
 
 # INI Edit Translate 2026
 
-**Version 2.1.47.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.48.0 · Windows 11 · .NET Framework 4.8**
 
 INI Edit Translate 2026 bearbeitet Modellbeschreibungen und Installationsdateien für
 EEP. Die Anwendung wird von Uwe Grimm / UGSo Software entwickelt und unter der
@@ -15,9 +15,27 @@ MIT-Lizenz veröffentlicht.
 
 ![Aktuelles Design von Version 2.1.37 mit Lime-Menüleiste, ohne private Inhalte](/eep/ini-edit-translate-2026/editor-v2-1-37-de.png)
 
+## Version 2.1.48: Teilset-Namen wieder übersetzen
+
+Die Namen und Beschreibungen der fünf Teilsets `Install_00` bis `Install_04`
+werden wieder übersetzt. Geschützt bleiben ausschließlich die Modellnamen im
+Modellbereich. Ausgangstexte bleiben erhalten; Deutsch und Französisch nutzen
+weiterhin Englisch als Zwischensprache.
+
+Alle fünf Übersetzungsbuttons und der automatische Import verwenden dieselbe
+geprüfte Zuordnung. Der Button des zweiten Teilsets bearbeitet wieder dessen
+eigene Felder. Ein Teilset wird erst nach vollständiger Übersetzung übernommen;
+bei Fehler oder Abbruch bleiben seine Namen und Beschreibungen erhalten.
+
+91 lokale Prüfungen bestanden. Ein eigener Installations-Test mit dem Namen
+„Detailmodell Großdiesellokomotive V140 001 DRG“ wurde tatsächlich über MyMemory
+übersetzt, gespeichert und erneut eingelesen; Modellnamen und ein zusätzliches
+INI-Feld blieben erhalten. Die Datei auf dem entfernten Spielerechner wurde dabei
+nicht verändert.
+
 ## Download
 
-[Windows-ZIP v2.1.47 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.47/INI-Edit-Translate-2026-v2.1.47-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.47)
+[Windows-ZIP v2.1.48 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.48/INI-Edit-Translate-2026-v2.1.48-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.48)
 
 ZIP vollständig entpacken und `INI Edit Translate 2026.exe` starten. Windows 11 und
 .NET Framework 4.8 werden benötigt. DLLs und Sprachordner zusammen lassen.
@@ -103,16 +121,16 @@ es ist keine zusätzliche digitale Paketsignatur implementiert.
 36 isolierte Updateprüfungen decken Download, Abbruch, Paketpfade, Datenerhalt,
 gesperrte Dateien und Rücknahme nach einem teilweisen Schreibfehler ab.
 
-### Updater-Korrektur 2.1.47
+### Updater-Korrektur 2.1.48
 
 Die Prozessübergabe verwendet jetzt einen stabilen Windows-Prozesshandle statt
 Modulzugriffen auf den bereits schließenden Editor. Vier zusätzliche Prüfungen
 decken x86/x64, bereits beendete Prozesse, falsche Identität und Zeitüberschreitungen ab.
 Falls der alte 2.1.37-Helfer vor der Installation scheitert, das vollständige
-2.1.47-ZIP zuerst in einen neuen Ordner entpacken. Eigene Daten vorher sichern
+2.1.48-ZIP zuerst in einen neuen Ordner entpacken. Eigene Daten vorher sichern
 und vorhandene Datenbanken sowie Wörterbücher nicht durch Paketdateien ersetzen.
 
-Der vollständige Ablauf von der veröffentlichten 2.1.37 zur 2.1.47 wurde an
+Der vollständige Ablauf von der veröffentlichten 2.1.37 zur 2.1.48 wurde an
 einer gesicherten Testkopie erfolgreich geprüft: GitHub-Download, Installation
 und automatischer Neustart. Alle 32 bisherigen Einstellungswerte, 17 geprüfte
 Daten-/Modelldateien und 18 vorhandene Benutzerkonfigurationen blieben erhalten.
@@ -120,7 +138,7 @@ Ein synthetischer DPAPI-Testschlüssel blieb unverändert und entschlüsselbar;
 anschließend wurde der ursprüngliche Zustand ohne Schlüssel wiederhergestellt.
 Es erfolgte kein OpenAI-Aufruf. Der Neustart wurde über Prozess-ID, Dateiversionen,
 Hashes und Konfiguration bestätigt; die Windows-Fenstersteuerung meldete danach
-einen Erfassungsfehler. Der erneute lesende GitHub-Dialogtest erkannte 2.1.47 korrekt.
+einen Erfassungsfehler. Der erneute lesende GitHub-Dialogtest erkannte 2.1.48 korrekt.
 
 ## Zweites Programm: Info_trans
 

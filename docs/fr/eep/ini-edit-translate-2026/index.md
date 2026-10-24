@@ -5,7 +5,7 @@ description: Fonctions de l’éditeur Windows de fichiers INI de modèles EEP e
 
 # INI Edit Translate 2026
 
-**Version 2.1.47.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.48.0 · Windows 11 · .NET Framework 4.8**
 
 Modifier les descriptions de modèles EEP et leurs fichiers d’installation. Développé
 par Uwe Grimm / UGSo Software et publié sous licence MIT.
@@ -14,9 +14,26 @@ par Uwe Grimm / UGSo Software et publié sous licence MIT.
 
 ![Interface de la version 2.1.37 avec barre de menus Lime, sans données personnelles](/eep/ini-edit-translate-2026/editor-v2-1-37-fr.png)
 
+## Version 2.1.48 : rétablir la traduction des noms de sous-ensembles
+
+Les noms et descriptions des cinq sous-ensembles `Install_00` à `Install_04` sont
+de nouveau traduits. Seuls les noms de modèles dans la section des modèles restent
+protégés. Les textes sources sont conservés ; l’allemand et le français utilisent
+toujours l’anglais comme langue intermédiaire.
+
+Les cinq boutons et l’importation automatique utilisent la même correspondance
+vérifiée des champs. Le bouton du deuxième sous-ensemble traite désormais ses propres
+champs. Les résultats ne sont appliqués qu’après traduction complète ; une erreur
+ou une annulation conserve les noms et descriptions du sous-ensemble.
+
+91 vérifications locales réussies. Un sous-ensemble de test nommé « Detailmodell
+Großdiesellokomotive V140 001 DRG » a réellement été traduit via MyMemory, enregistré
+et relu ; les noms de modèles et un champ INI supplémentaire ont été conservés.
+Le fichier de l’ordinateur de jeu distant n’a pas été modifié.
+
 ## Téléchargement
 
-[Télécharger le ZIP Windows v2.1.47](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.47/INI-Edit-Translate-2026-v2.1.47-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.47)
+[Télécharger le ZIP Windows v2.1.48](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.48/INI-Edit-Translate-2026-v2.1.48-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.48)
 
 Extraire tout le ZIP et lancer `INI Edit Translate 2026.exe`. Windows 11 et
 .NET Framework 4.8 sont requis. Conserver les DLL et dossiers de langues ensemble.
@@ -98,16 +115,16 @@ aucune signature numérique de paquet supplémentaire n’est implémentée.
 36 tests isolés couvrent le téléchargement, l’annulation, les chemins, la conservation
 des données, les fichiers verrouillés et la restauration après une écriture partielle.
 
-### Correction du programme de mise à jour 2.1.47
+### Correction du programme de mise à jour 2.1.48
 
 Le transfert utilise désormais un handle de processus Windows stable au lieu de
 lire les modules de l’éditeur en cours de fermeture. Quatre tests supplémentaires
 couvrent x86/x64, les processus terminés, les identités incorrectes et les délais
 d’attente. Si l’ancien programme 2.1.37 échoue avant l’installation, extraire
-d’abord le ZIP 2.1.47 complet dans un nouveau dossier. Sauvegarder ses données et
+d’abord le ZIP 2.1.48 complet dans un nouveau dossier. Sauvegarder ses données et
 ne pas remplacer les bases et dictionnaires existants par ceux du paquet.
 
-Le parcours complet de la version publiée 2.1.37 vers 2.1.47 a réussi sur une
+Le parcours complet de la version publiée 2.1.37 vers 2.1.48 a réussi sur une
 copie de test sauvegardée : téléchargement GitHub, installation et redémarrage
 automatique. Les 32 valeurs de configuration précédentes, 17 fichiers de données
 et de modèles contrôlés et 18 configurations utilisateur existantes ont été
@@ -115,7 +132,7 @@ conservés. Une clé de test DPAPI synthétique est restée identique et déchif
 l’état initial sans clé a ensuite été rétabli. Aucun appel OpenAI n’a été effectué.
 Le redémarrage a été confirmé par l’identifiant du processus, les versions, les
 empreintes et la configuration ; la capture de fenêtre Windows a échoué ensuite.
-Un nouveau test du dialogue GitHub en lecture seule a bien détecté 2.1.47.
+Un nouveau test du dialogue GitHub en lecture seule a bien détecté 2.1.48.
 
 ## Second programme : Info_trans
 

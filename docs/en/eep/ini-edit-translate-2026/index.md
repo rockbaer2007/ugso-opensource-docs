@@ -5,7 +5,7 @@ description: Features of the Windows editor for EEP model INI files and Installa
 
 # INI Edit Translate 2026
 
-**Version 2.1.47.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.48.0 · Windows 11 · .NET Framework 4.8**
 
 Edit EEP model descriptions and installation files. Developed by Uwe Grimm / UGSo
 Software and published under the MIT licence.
@@ -14,9 +14,25 @@ Software and published under the MIT licence.
 
 ![Version 2.1.37 design with Lime menu bar and no personal data](/eep/ini-edit-translate-2026/editor-v2-1-37-en.png)
 
+## Version 2.1.48: translate installation set titles again
+
+Names and descriptions for all five installation sets, `Install_00` through
+`Install_04`, are translated again. Only model names in the model section remain
+protected. Source texts are retained; German and French still use English as the
+intermediate language.
+
+All five translation buttons and automatic import share the verified field mapping.
+The second set button now edits its own fields. A set is applied only after its
+complete translation; errors and cancellation retain its names and descriptions.
+
+91 local checks passed. An isolated installation set named “Detailmodell
+Großdiesellokomotive V140 001 DRG” was translated through real MyMemory calls,
+saved and reloaded; model names and an extra INI field were retained. The file on
+the remote gaming computer was not modified.
+
 ## Download
 
-[Download Windows ZIP v2.1.47](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.47/INI-Edit-Translate-2026-v2.1.47-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.47)
+[Download Windows ZIP v2.1.48](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.48/INI-Edit-Translate-2026-v2.1.48-windows.zip) · [GitHub release and SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.48)
 
 Extract the complete ZIP and run `INI Edit Translate 2026.exe`. Requires Windows 11
 and .NET Framework 4.8. Keep DLLs and language folders together.
@@ -93,23 +109,23 @@ No server credentials are needed. Checksums verify integrity; no additional digi
 package signature is implemented. 36 isolated update checks cover downloads,
 cancellation, package paths, retained data, locked files and rollback after partial writes.
 
-### Updater fix in 2.1.47
+### Updater fix in 2.1.48
 
 Process handoff now uses a stable Windows process handle instead of reading
 modules from an editor that is already closing. Four additional checks cover
 x86/x64, exited processes, identity mismatches and timeouts. If the old 2.1.37
-helper fails before installation, extract the complete 2.1.47 ZIP into a new
+helper fails before installation, extract the complete 2.1.48 ZIP into a new
 folder first. Back up your data and do not replace existing databases or
 dictionaries with package files.
 
-The complete update from published 2.1.37 to 2.1.47 passed in a backed-up test
+The complete update from published 2.1.37 to 2.1.48 passed in a backed-up test
 copy: GitHub download, installation and automatic restart. All 32 previous
 setting values, 17 checked data/model files and 18 existing user configurations
 were preserved. A synthetic DPAPI test key remained unchanged and decryptable;
 the original state without a key was restored afterwards. No OpenAI request was
 made. Restart was confirmed through process ID, versions, hashes and configuration;
 Windows window capture failed afterwards. A fresh read-only GitHub dialog test
-correctly detected 2.1.47.
+correctly detected 2.1.48.
 
 ## Second program: Info_trans
 
