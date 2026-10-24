@@ -5,6 +5,38 @@ description: Funktionsbeschreibung des Windows-Editors für EEP-Modell-INI-Datei
 
 # INI Edit Translate 2026
 
+## Version 2.1.52: beschreibende Wörter in Modellnamen
+
+Beschreibende Wörter werden jetzt auch in Modellnamen übersetzt, selbst wenn die
+Modellbeschreibung leer ist. Beispiel:
+
+| DE | EN | FR | PL |
+| --- | --- | --- | --- |
+| Haus Helios Typ4 UD1 | House Helios Typ4 UD1 | Maison Helios Typ4 UD1 | Dom Helios Typ4 UD1 |
+
+Zum Schutz der Eigennamen arbeitet die Namensübersetzung lokal mit einer begrenzten,
+geprüften Wortliste. Unbekannte Wörter und Namensbestandteile werden unverändert
+übernommen und nicht zur Namensübersetzung an einen Online-Dienst geschickt.
+Das ist keine allgemeine automatische Eigennamenerkennung: weitere beschreibende
+Wörter müssen geprüft ergänzt werden. Vorhandene Namen ohne erkannten beschreibenden
+Anteil werden nicht überschrieben. Typbezeichnungen, Konstrukteurskennungen,
+EEP-Versionen, `[e]`, Trennzeichen und Schreibweise geschützter Bestandteile bleiben erhalten.
+Die noch gesammelten Fachabkürzungen sind in dieser Änderung nicht vorweggenommen.
+
+Beschreibungen verwenden weiterhin den gewählten Übersetzungsanbieter. Namen und
+Beschreibungen werden zusammen erst nach erfolgreichem Abschluss übernommen.
+Bei einem Fehler bleiben die bisherigen Inhalte erhalten. Der Button heißt jetzt
+anbieterneutral **Texte übersetzen**.
+
+**MyMemory/translated.net ist die Voreinstellung für neue Konfigurationen.**
+Eine bereits gespeicherte Anbieterwahl sowie API-Schlüssel, Konten und Modelle
+werden erhalten. Zum bewussten Wechsel **Über → Einstellungen → Übersetzungseinstellungen
+→ MyMemory → Speichern** wählen.
+
+105 lokale Prüfungen bestanden, einschließlich DE/EN/FR/PL, leerer Beschreibung,
+Schutz von `Helios Typ4 UD1 (GK3) EEP16.2[e]`, Fehlerverhalten und Speichern/erneutem Einlesen.
+Vorher Backup erstellt; Originaldateien und Zugangsdaten bleiben erhalten.
+
 ## Version 2.1.51: Hinweis bei Ordnerauswahl
 
 Beim Auswählen eines Ordners im Dateibaum erscheint **„Bitte eine INI-Datei auswählen.“**
@@ -64,7 +96,7 @@ für den nächsten Start erhalten. Vorhandene Daten und Zugangsdaten bleiben erh
 94 lokale Prüfungen einschließlich Speicherung/erneutem Laden, Opt-out,
 fehlendem Ordner und Oberfläche DE/EN/FR bei 100/150 Prozent bestanden.
 
-**Version 2.1.51.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.52.0 · Windows 11 · .NET Framework 4.8**
 
 INI Edit Translate 2026 bearbeitet Modellbeschreibungen und Installationsdateien für
 EEP. Die Anwendung wird von Uwe Grimm / UGSo Software entwickelt und unter der
@@ -94,7 +126,7 @@ nicht verändert.
 
 ## Download
 
-[Windows-ZIP v2.1.51 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.51/INI-Edit-Translate-2026-v2.1.51-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.51)
+[Windows-ZIP v2.1.52 herunterladen](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.52/INI-Edit-Translate-2026-v2.1.52-windows.zip) · [GitHub-Release und SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.52)
 
 ZIP vollständig entpacken und `INI Edit Translate 2026.exe` starten. Windows 11 und
 .NET Framework 4.8 werden benötigt. DLLs und Sprachordner zusammen lassen.

@@ -5,6 +5,32 @@ description: Fonctions de l’éditeur Windows de fichiers INI de modèles EEP e
 
 # INI Edit Translate 2026
 
+## Version 2.1.52 : mots descriptifs dans les noms de modèles
+
+Les mots descriptifs sont désormais traduits dans les noms de modèles, même si leur
+description est vide. « Haus Helios Typ4 UD1 » devient **House / Maison / Dom Helios Typ4 UD1**.
+
+La traduction des noms utilise une liste locale limitée de mots vérifiés pour protéger
+les noms propres. Les mots inconnus et éléments de noms sont conservés sans être
+envoyés à un service en ligne pour traduire le nom. Ce n’est pas une reconnaissance
+générale automatique des noms propres : les autres mots descriptifs doivent être
+ajoutés après vérification. Les noms existants sans mot descriptif reconnu ne sont
+pas écrasés. Types, codes de constructeurs, versions EEP, `[e]`, séparateurs et
+écriture des éléments protégés sont conservés. Les abréviations ferroviaires encore
+en cours de collecte ne sont pas ajoutées dans cette modification.
+
+Les descriptions utilisent toujours le fournisseur choisi. Noms et descriptions ne
+sont appliqués ensemble qu’après réussite ; une erreur conserve les contenus existants.
+Le bouton indépendant du fournisseur s’appelle **Traduire les textes**.
+
+**MyMemory/translated.net est le choix par défaut des nouvelles configurations.**
+Les choix, clés API, comptes et modèles déjà enregistrés sont conservés.
+Pour changer volontairement : **À propos → Paramètres → Paramètres de traduction → MyMemory → Enregistrer**.
+
+105 vérifications locales réussies : DE/EN/FR/PL, descriptions vides, protection des
+noms et codes, erreurs, enregistrement et relecture. Sauvegarde effectuée ;
+fichiers originaux et identifiants conservés.
+
 ## Version 2.1.51 : message lors de la sélection d’un dossier
 
 Sélectionner un dossier dans l’arborescence affiche **« Veuillez sélectionner un fichier INI. »**
@@ -62,7 +88,7 @@ et identifiants existants sont conservés. 94 vérifications locales réussies, 
 enregistrement/relecture, désactivation, dossier indisponible et affichage DE/EN/FR
 aux échelles 100/150 %.
 
-**Version 2.1.51.0 · Windows 11 · .NET Framework 4.8**
+**Version 2.1.52.0 · Windows 11 · .NET Framework 4.8**
 
 Modifier les descriptions de modèles EEP et leurs fichiers d’installation. Développé
 par Uwe Grimm / UGSo Software et publié sous licence MIT.
@@ -90,7 +116,7 @@ Le fichier de l’ordinateur de jeu distant n’a pas été modifié.
 
 ## Téléchargement
 
-[Télécharger le ZIP Windows v2.1.51](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.51/INI-Edit-Translate-2026-v2.1.51-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.51)
+[Télécharger le ZIP Windows v2.1.52](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/download/v2.1.52/INI-Edit-Translate-2026-v2.1.52-windows.zip) · [Version GitHub et SHA-256](https://github.com/rockbaer2007/ini-edit-translate-2026/releases/tag/v2.1.52)
 
 Extraire tout le ZIP et lancer `INI Edit Translate 2026.exe`. Windows 11 et
 .NET Framework 4.8 sont requis. Conserver les DLL et dossiers de langues ensemble.
