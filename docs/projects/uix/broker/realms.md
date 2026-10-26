@@ -120,3 +120,18 @@ Die [`template`-Direktive](./directives#template) kann während einer Interaktio
 ::: tip
 Die Integration `custom_event` kann eigene Events auf dem Home-Assistant-Event-Bus auslösen, auf die UIX Broker im `server`-Realm reagieren kann.
 :::
+
+### Browser: Start und Panel-Updates gemeinsam behandeln
+
+`listen` akzeptiert mehrere Events. Dieselbe Interaktion läuft hier nach `uix-broker-ready` und bei `uix-update`.
+
+```yaml
+- realm: browser
+  listen:
+    - uix-broker-ready
+    - uix-update
+  anchor: '&home-assistant'
+  directives:
+    - type: call
+      method: requestUpdate
+```

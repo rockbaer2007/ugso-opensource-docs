@@ -72,3 +72,7 @@ element:
 ::: note
 Der Spark wirkt auf das erste Element, das vom Selektor gefunden wird. Bei mehreren gleichen Elementen musst du den Pfad genauer machen.
 :::
+
+## Leerer Attributwert ist keine Entfernung
+
+Bei `action: replace` setzt `value: ""` ein leeres Attribut, beispielsweise `title=""`. Zum vollständigen Entfernen ist ausdrücklich `action: remove` nötig. Der DOM-Helfer [`uix_forge_path()`](../../concepts/dom#uix_forge_path0-forge-helper) unterstützt die Wahl des `for`-Pfads.

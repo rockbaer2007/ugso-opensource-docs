@@ -3,6 +3,10 @@ title: Übersicht
 ---
 # UI eXtension für Home Assistant
 
+::: info Übersetzungen am 26.10.2026 geprüft
+DE/FR wurden erneut mit allen 64 englischen Quellseiten abgeglichen. Korrigierte Section-Beispiele, Standardwerte und ergänzte Forge-/Broker-Beispiele sind im [Prüfbericht](./translation-status) beschrieben.
+:::
+
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >

@@ -23,3 +23,9 @@ uix:
 ```
 
 Wenn ein Template nichts ausgibt, entsteht oft ungültiges CSS. Dann sollte ein Fallback-Wert ergänzt werden.
+
+## UIX-Debug-Marker und Cache
+
+Setze den Jinja2-Kommentar <code v-pre>{# uix.debug #}</code> an einer beliebigen Stelle im Template. UIX protokolliert dann das Binden, Wertänderungen, die Wiederverwendung, das Lösen der Bindung und das endgültige Abbestellen der Aktualisierungen.
+
+Ein nicht mehr verwendetes Template bleibt für eine Abkühlphase von **20 Sekunden** im Cache abonniert. Das erleichtert die erneute Anwendung und kann Wechsel zwischen Ansichten oder die Wiederverwendung desselben Templates auf mehreren Ansichten beschleunigen.

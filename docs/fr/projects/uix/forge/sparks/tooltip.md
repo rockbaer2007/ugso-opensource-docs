@@ -160,7 +160,7 @@ element:
 | `--uix-tooltip-line-height` | `--ha-line-height-condensed` | Hauteur de ligne. |
 | `--uix-tooltip-padding` | `var(--ha-tooltip-padding, var(--ha-space-2))` | Marge intérieure, 8 px par défaut. |
 | `--uix-tooltip-border-radius` | `--ha-border-radius-md` | Rayon des angles. |
-| `--uix-tooltip-arrow-size` | `8px` | Taille de la flèche directionnelle. |
+| `--uix-tooltip-arrow-size` | `var(--ha-tooltip-arrow-size, 8px)` | Taille de la flèche directionnelle ; reprend la variable du thème lorsqu’elle est définie. |
 | `--uix-tooltip-border-width` | — | Épaisseur de la bordure (non définie par défaut). |
 | `--uix-tooltip-border-color` | — | Couleur de la bordure (non définie par défaut). |
 | `--uix-tooltip-border-style` | — | Style de la bordure (non défini par défaut). |
@@ -175,3 +175,7 @@ element:
 | `--uix-tooltip-text-decoration` | `none` | Décoration du texte. |
 | `--uix-tooltip-text-transform` | `none` | Transformation du texte. |
 | `--uix-tooltip-overflow-wrap` | `normal` | Comportement de retour à la ligne du texte. |
+
+## Flèche et dimensions héritées
+
+`without_arrow: true` masque explicitement la flèche. Sa taille hérite sinon de `var(--ha-tooltip-arrow-size, 8px)`. Vous pouvez également définir `--uix-tooltip-arrow-size: 0px` pour ce spark ou `--ha-tooltip-arrow-size: 0px` au niveau du thème. Ces possibilités ne modifient pas la valeur par défaut de `without_arrow`, qui reste `false`.

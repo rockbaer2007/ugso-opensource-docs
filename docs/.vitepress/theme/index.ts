@@ -253,8 +253,8 @@ const UgsoLayout = defineComponent({
                     isEnglish
                       ? 'Stable baseline: UIX 8.4.0, Home Assistant 2026.10.0 minimum, revision 71b8ccd. Canonical documentation reviewed on 22 October 2026; Forge preview follows dev 26e54e6 / 9.0.0-beta.2. The original English documentation remains authoritative.'
                       : isFrench
-                      ? 'Base stable : UIX 8.4.0, Home Assistant 2026.10.0 minimum. Documentation comparée à la version publiée, révision 71b8ccd, le 08/10/2026. La documentation originale en anglais reste la référence.'
-                      : 'Stabile Basis: UIX 8.4.0, benötigt Home Assistant ab 2026.10.0. Doku mit dem Release-Stand 71b8ccd abgeglichen, Stand 08.10.2026. Maßgeblich bleibt die englische Originaldokumentation.'
+                      ? 'Base stable : UIX 8.4.0, Home Assistant 2026.10.0 minimum. Traduction vérifiée le 26/10/2026 avec la source 26e54e6 / 9.0.0-beta.2 ; fonctions d’aperçu indiquées séparément. La documentation originale en anglais reste la référence.'
+                      : 'Stabile Basis: UIX 8.4.0, benötigt Home Assistant ab 2026.10.0. Übersetzung am 26.10.2026 mit Quelle 26e54e6 / 9.0.0-beta.2 geprüft; Vorschaufunktionen separat gekennzeichnet. Maßgeblich bleibt die englische Originaldokumentation.'
                   ),
                   h('span', [
                     h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical English documentation' : isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),

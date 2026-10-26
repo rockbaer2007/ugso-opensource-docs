@@ -109,3 +109,137 @@ element:
 ```
 
 Weitere Originalbeispiele zeigen Status-Badges neben `ha-tile-info` mit `flex: 1`, Template-gesteuerte Aufmerksamkeit, Badges an Button Sparks und eine zentrierte Blank Card.
+
+## Ergänzte Originalbeispiele
+
+### Versatz am Tile-Icon
+
+Ein Versatz von je zwei Pixeln verschiebt das platzierte Badge nach innen.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: badge
+      after: hui-tile-card $ ha-tile-icon
+      content: 3
+      variant: danger
+      pill: true
+      style:
+        "--uix-badge-offset-x": -2px
+        "--uix-badge-offset-y": -2px
+element:
+  type: tile
+  entity: light.bed_light
+```
+
+![Versatz am Tile-Icon](/projects/uix/assets/page-assets/forge/sparks/badge-offsets.png)
+
+### Status neben dem Titel
+
+`ha-tile-info` erhält `flex: 1`, damit es für das benachbarte Badge Platz freigibt.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: badge
+      after: hui-tile-card $ ha-tile-info
+      content: Experimental
+      variant: warning
+      appearance: outlined
+      start_icon: mdi:flask-outline
+element:
+  type: tile
+  entity: light.bed_light
+  uix:
+    style: |
+      ha-tile-info {
+        flex: 1;
+      }
+```
+
+![Status neben dem Titel](/projects/uix/assets/page-assets/forge/sparks/badge-status.png)
+
+### Aufmerksamkeit per Template
+
+Inhalt, Variante und Pulsieren folgen dem Zustand des Fensters.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: badge
+      after: hui-tile-card $ ha-tile-icon
+      content: |
+        {{ '!' if is_state('cover.hall_window', 'open') else '⎷' }}
+      variant: |
+        {{ 'danger' if is_state('cover.hall_window', 'open') else 'success' }}
+      pill: true
+      attention: |
+        {{ 'pulse' if is_state('cover.hall_window', 'open') else 'none' }}
+element:
+  type: tile
+  entity: cover.hall_window
+```
+
+![Aufmerksamkeit per Template](/projects/uix/assets/page-assets/forge/sparks/badge-attention.gif)
+
+### Badge an einem Button Spark
+
+Der Button-Wrapper verwendet `display: contents`. UIX erkennt den enthaltenen `ha-button` und setzt das Badge an diesen Button, nicht neben den Wrapper.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: button
+      after: hui-tile-card $ ha-tile-icon
+      label: Living Room
+    - type: badge
+      after: "hui-tile-card $ div[data-uix-forge-button-id]"
+      content: 3
+      variant: danger
+      pill: true
+element:
+  type: tile
+  entity: light.bed_light
+```
+
+![Badge an einem Button Spark](/projects/uix/assets/page-assets/forge/sparks/badge-button-spark.png)
+
+### Badge als Blank Card
+
+Die Blank Card wird ohne Kartenrahmen und Hintergrund dargestellt. Das Styling zentriert das Badge horizontal.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  grid_options:
+    columns: 3
+  sparks:
+    - type: badge
+      after: uix-forge-blank-card $ div.content
+      content: Badge Spark
+      variant: brand
+      start_icon: mdi:badge-account-horizontal-outline
+  uix:
+    style:
+      .: |
+        :host {
+          --ha-card-border-width: 0px;
+          --ha-card-background: none;
+        }
+      uix-forge-blank-card $: |
+        ha-card {
+          display: flex;
+          justify-content: center;
+        }
+```
+
+![Badge als Blank Card](/projects/uix/assets/page-assets/forge/sparks/badge-blank-card.png)

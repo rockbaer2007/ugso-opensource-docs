@@ -138,3 +138,24 @@ element:
   type: tile
   entity: sensor.room_mode
 ```
+
+### Tief verschachtelte Ziele erreichen
+
+Der UIX-Selektor kann mit `$` Shadow-Root-Grenzen überqueren. Der DOM-Helfer `uix_forge_path()` unterstützt die Pfadsuche.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: tile-icon
+      before: hui-alarm-panel-card $$ ha-input
+      icon: mdi:star
+      color: red
+element:
+  type: alarm-panel
+  states: []
+  entity: alarm_control_panel.security
+```
+
+![Tief verschachtelte Ziele erreichen](/projects/uix/assets/page-assets/forge/sparks/tile-icon-nested.png)

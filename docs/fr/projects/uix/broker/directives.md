@@ -603,3 +603,88 @@ directives:
   - type: action
     action: light.turn_on
 ```
+
+## Exemples de directives complétés
+
+### Badge après l’ancre
+
+Sans `after`/`before`, le badge est inséré après l’ancre de la directive.
+
+```yaml
+- type: badge
+  content: 3
+  variant: danger
+  appearance: filled
+  pill: true
+```
+
+### Style du badge et configuration résolue
+
+`style` est une table CSS plate ; `uix` stylise `uix-broker-badge`. Les valeurs résolues du badge y sont disponibles dans `config`.
+
+```yaml
+- type: badge
+  anchor: "$ div.title"
+  before: ".label"
+  content: Experimental
+  variant: warning
+  appearance: outlined
+  start_icon: mdi:flask-outline
+  style:
+    margin-inline-start: 8px
+```
+
+### Placement sur un bouton
+
+`ha-button` et `ha-tile-icon` prennent en charge le placement direct. Les autres cibles utilisent leur parent lorsque `placement` est défini.
+
+```yaml
+- type: badge
+  after: "$ ha-button"
+  content: 3
+  variant: danger
+  pill: true
+  placement: bottom-end
+```
+
+### Verrouiller le bouton créé précédemment
+
+`for: previous` désigne l’élément qui vient d’être créé par une directive.
+
+```yaml
+- type: button
+  icon: mdi:account
+- type: lock
+  for: previous
+  locks:
+    - confirmation: true
+      admins: true
+```
+
+### Styliser la superposition de verrouillage
+
+Le type UIX est `uix-broker-lock`. Les paramètres résolus sont disponibles dans `config` ; les résultats des directives Template ou JavaScript précédentes restent accessibles.
+
+```yaml
+- type: lock
+  locks:
+    - confirmation: true
+      admins: true
+  uix:
+    style: |
+      :host {
+        --uix-lock-background: {{ 'rgba(0, 0, 0, 0.35)' if config.locks else 'transparent' }};
+      }
+```
+
+### Action Handler sur une autre ancre
+
+Le gestionnaire attache l’action uniquement à l’ancre indiquée ; le curseur par défaut est `pointer`.
+
+```yaml
+- type: action-handler
+  anchor: "$ div.menu div.title"
+  tap_action:
+    action: navigate
+    navigation_path: /home
+```

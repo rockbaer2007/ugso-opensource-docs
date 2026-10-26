@@ -339,6 +339,7 @@ uix_style_path($0)
 
 `uix_path($0)` ist ein Kurz-Alias für `uix_style_path($0)`.
 
+<a id="uix_forge_path0-forge-helper"></a>
 ### `uix_forge_path($0)`: Forge-Helfer
 
 Zeigt den Pfad vom nächsten `uix-forge`-Element zum ausgewählten Element. Der Pfad kann als Wert für `for`, `before` oder `after` in einer Forge-Spark-Konfiguration genutzt werden.

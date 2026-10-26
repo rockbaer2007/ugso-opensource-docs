@@ -1,53 +1,44 @@
 ---
 title: Abschnittshintergründe
-description: Section-Hintergründe in Home Assistant mit UIX stylen.
+description: Hintergrundfarbe und Deckkraft von Home-Assistant-Abschnitten mit UIX gestalten.
 ---
 # Abschnittshintergründe stylen
 
-UIX kann Hintergründe für Dashboard-Abschnitte setzen. Das ist besonders für Section-Views nützlich, bei denen Home Assistant einzelne Bereiche als eigene Container rendert.
+Der Hintergrund eines Abschnitts ist ein Geschwisterelement des Abschnitts und lässt sich deshalb nicht direkt über dessen normale Styles erreichen. Das Original beschreibt zwei Wege: UIX-Variablen für Farbe und Deckkraft oder UIX-Styling direkt in der Hintergrundkonfiguration.
 
 ## Option 1: UIX-CSS-Variablen verwenden
 
-UIX stellt Variablen bereit, die direkt in einem Theme gesetzt werden können. Sie werden auf den Section-Hintergrund angewendet und können Farben, Gradients oder Bilder enthalten.
+Setze `--uix-section-background-color` und `--uix-section-background-opacity` am Abschnitt oder einem Vorfahren. Templates sind möglich. Die Hintergrundkonfiguration muss aktiviert sein; `background: true` ist die von Home Assistant unterstützte Kurzform mit Standardfarbe und Standarddeckkraft.
 
 ::: info
-Diese Methode eignet sich gut, wenn derselbe Stil für viele Abschnitte gelten soll oder wenn ein Theme zentral gesteuert wird.
+`hui-section-background` ist ein Geschwisterelement. `--ha-section-background-color` im normalen Abschnitts-Styling erreicht es deshalb nicht. UIX überträgt bei jeder Aktualisierung `--section-background-color` und `--section-background-opacity` direkt auf dieses Hintergrundelement.
 :::
 
-::: details Beispiel
-
 ```yaml
-my-theme:
-  uix-theme: my-theme
-  uix-grid-section: |
-    :host {
-      --uix-section-background: linear-gradient(135deg, #1b263b, #415a77);
-    }
-```
-
-:::
-
-## Option 2: UIX-Styling direkt an der Section-Konfiguration
-
-Wenn nur ein einzelner Abschnitt angepasst werden soll, kann UIX direkt in der Section-Konfiguration genutzt werden.
-
-::: details Beispiel
-
-```yaml
-type: section
-title: Klima
+type: grid
+cards: []
+background: true
 uix:
   style: |
     :host {
-      background: rgba(0, 0, 0, 0.18);
-      border-radius: 16px;
-      padding: 8px;
+        --uix-section-background-color: {{ 'red' if is_state('input_boolean.test_boolean', 'on') else 'green' }};
+        --uix-section-background-opacity: {{ states('input_number.increment_test') | float / 100 }};
     }
-cards:
-  - type: tile
-    entity: climate.living_room
 ```
 
-:::
+## Option 2: UIX-Styling in der Hintergrundkonfiguration
 
-Nutze direkte Section-Styles sparsam, wenn dieselbe Gestaltung mehrfach gebraucht wird. Für wiederkehrende Gestaltung ist ein Theme leichter zu warten.
+`background.uix` gestaltet das Hintergrundelement selbst. Die gesamte Abschnittskonfiguration steht Templates zur Verfügung. Für Farbe und Deckkraft verwende dort `--ha-section-background-color` und `--ha-section-background-opacity`. Direkte CSS-Eigenschaften für Hintergrund und Deckkraft benötigen andernfalls `!important`.
+
+```yaml
+type: grid
+cards: []
+background:
+  uix:
+    style: |
+      :host {
+        --ha-section-background-color: yellow;
+        border: 2px solid red;
+        box-shadow: 10px 5px 5px red;
+      }
+```

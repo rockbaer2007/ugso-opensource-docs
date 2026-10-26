@@ -6,6 +6,17 @@ description: État de la documentation UIX française.
 
 Cette documentation française est maintenue à partir de la documentation UIX canonique en anglais. Les pages principales, le démarrage rapide et les aperçus de UIX Styling, Forge, Broker et Extras sont déjà disponibles en français. La section complète **UIX Broker** est également disponible en français.
 
+## Vérification du contenu du 26 octobre 2026
+
+Les **64 pages canoniques** ont été vérifiées à nouveau avec la [source anglaise `26e54e6`](https://github.com/Lint-Free-Technology/uix/tree/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source). La branche `dev` n’a pas changé depuis la revue précédente ; le site original indique toujours **9.0.0-beta.2**. La base stable reste **8.4.0**.
+
+- **Corrections DE :** variables et configuration des arrière-plans de sections, avertissement `custom:mod-card`, marqueur de débogage des modèles et délai de conservation de 20 secondes.
+- **Compléments DE/FR :** exemples complets du spark Badge et des directives Broker Badge, Lock et Action Handler. En français, correction de la taille de flèche Tooltip héritée du thème et ajout du contexte de débogage du thème.
+- **Compléments DE :** ancres YAML, includes, secrets, résultats de fusion et billets vides dans les Foundries ; limitation des états, sections/footers, adaptateurs Background, filtre Map, fusion des événements et More-info intégré. Les positions Lock/Overlay et le rayon de bordure Overlay indiquent les valeurs exactes.
+- Le [relevé de vérification](/projects/uix/translation-review.json) enregistre les sources et les traductions page par page. Les clés de tableaux, les pages correspondantes et les exemples ajoutés ont été vérifiés. Le build contrôle aussi les liens, médias et métadonnées linguistiques. Les identifiants et les exemples techniques repris gardent leur écriture originale.
+
+DE/FR restent des traductions rédactionnelles, parfois plus compactes. Cette vérification n’est ni une certification indépendante ni un test d’exécution Home Assistant. Le lien de langue EN continue d’ouvrir la documentation originale dans un nouvel onglet.
+
 ## Revue complète du 22 octobre 2026
 
 Les **64 pages Markdown canoniques** ont été comparées à la [révision anglaise figée `26e54e6`](https://github.com/Lint-Free-Technology/uix/tree/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source). Depuis `e2e0701`, seules la référence Forge, les Foundries et l’aperçu Forge ont changé ; les 61 autres sources sont identiques. La version stable reste **8.4.0** ; l’aperçu vérifié est **9.0.0-beta.2**.

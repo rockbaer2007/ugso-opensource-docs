@@ -605,3 +605,88 @@ directives:
   - type: action
     action: light.turn_on
 ```
+
+## Ergänzte Direktiven-Beispiele
+
+### Badge hinter dem Anchor
+
+Ohne `after`/`before` wird das Badge hinter dem Direktiven-Anchor eingefügt.
+
+```yaml
+- type: badge
+  content: 3
+  variant: danger
+  appearance: filled
+  pill: true
+```
+
+### Badge-Styling und aufgelöste Konfiguration
+
+`style` ist eine flache CSS-Zuordnung; `uix` gestaltet `uix-broker-badge`. Die aufgelösten Badge-Werte stehen dort als `config` zur Verfügung.
+
+```yaml
+- type: badge
+  anchor: "$ div.title"
+  before: ".label"
+  content: Experimental
+  variant: warning
+  appearance: outlined
+  start_icon: mdi:flask-outline
+  style:
+    margin-inline-start: 8px
+```
+
+### Platzierung am Button
+
+`ha-button` und `ha-tile-icon` unterstützen die direkte Platzierung. Andere Ziele verwenden bei gesetztem `placement` ihren Elterncontainer.
+
+```yaml
+- type: badge
+  after: "$ ha-button"
+  content: 3
+  variant: danger
+  pill: true
+  placement: bottom-end
+```
+
+### Zuvor erzeugten Button sperren
+
+`for: previous` verwendet das unmittelbar zuvor durch eine Direktive erzeugte Element.
+
+```yaml
+- type: button
+  icon: mdi:account
+- type: lock
+  for: previous
+  locks:
+    - confirmation: true
+      admins: true
+```
+
+### Sperr-Overlay mit UIX stylen
+
+Der UIX-Typ ist `uix-broker-lock`. Aufgelöste Einstellungen stehen als `config` bereit; Ergebnisse früherer Template- oder JavaScript-Direktiven bleiben zugänglich.
+
+```yaml
+- type: lock
+  locks:
+    - confirmation: true
+      admins: true
+  uix:
+    style: |
+      :host {
+        --uix-lock-background: {{ 'rgba(0, 0, 0, 0.35)' if config.locks else 'transparent' }};
+      }
+```
+
+### Action Handler an einem anderen Anchor
+
+Der Handler bindet die Aktion nur an den angegebenen Anchor; die Standard-Cursorform ist `pointer`.
+
+```yaml
+- type: action-handler
+  anchor: "$ div.menu div.title"
+  tap_action:
+    action: navigate
+    navigation_path: /home
+```

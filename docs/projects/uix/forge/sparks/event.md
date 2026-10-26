@@ -280,3 +280,9 @@ name: "{{ uixForge.event.room_picker.name | default('Wohnzimmer') }}"
 | Template ist beim Laden leer | Default-Wert ergänzen |
 | Falsches Element reagiert | IDs eindeutiger machen |
 | Daten liegen unter anderem Pfad | `other_forge_ids` oder eigene `forge_id` prüfen |
+
+## Ereignisdaten: fehlende Werte und Zusammenführung
+
+`uixForge.event` ist als Templatevariable vorhanden, aber `uixForge.event.<forge_id>` existiert vor dem ersten passenden Ereignis möglicherweise noch nicht. Prüfe deshalb den Schlüssel oder verwende `default(...)`; für die Diagnose eignet sich <code v-pre>{# uix.debug #}</code>.
+
+Aufeinanderfolgende Ereignisdaten werden rekursiv zusammengeführt. Ein erstes Ereignis mit `score: 10` und ein zweites mit `count: 2` behalten beide Werte. Nur `replace: true` ersetzt den bisherigen Datenbestand vollständig. `other_forge_ids` macht Daten anderer Forge-IDs unter deren Schlüssel zugänglich. Der Spark lauscht ab der DOM-Verbindung und beendet den Listener beim Entfernen des Elements.

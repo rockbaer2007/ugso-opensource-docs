@@ -18,3 +18,7 @@ Diese Option verhindert, dass UIX Icon-Styling-Patches anwendet. Sie ist hilfrei
 - UIX überschreibt keine Icons über `--uix-icon` oder `--uix-icon-for-<entity_id>`.
 - UIX überschreibt keine Icon-Farben über `--uix-icon-color` oder `--uix-icon-color-for-<entity_id>`.
 - Andere UIX-Styling-Funktionen bleiben verfügbar.
+
+## Welche Anpassungen entfallen?
+
+Die Option ist standardmäßig nicht gesetzt. Nach dem Speichern gilt sie sofort für alle verbundenen Browser, ohne Neuladen. Die Standardelemente `ha-icon`, `ha-state-icon` und `ha-svg-icon` werden dann nicht mehr für Icon-Styling gepatcht oder überwacht. Überschreibungen mit `--uix-icon`, `--uix-icon-color`, `--uix-icon-dim` und `--uix-icon-for-*` greifen dort nicht mehr.

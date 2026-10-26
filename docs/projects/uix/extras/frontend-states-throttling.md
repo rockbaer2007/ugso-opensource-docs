@@ -130,3 +130,83 @@ Gedrosselt wird nur, wie oft das Frontend State-Änderungen an UI-Elemente weite
 5. Schrittweise auf 500 ms oder 1000 ms erhöhen, wenn es noch ruckelt.
 
 Wenn wichtige Anzeigen zu langsam reagieren, reduziere das Intervall wieder oder nutze einen Session-Override nur auf dem betroffenen Gerät.
+
+### Browser-Override der Drosselung
+
+`setThrottleOverride()` überschreibt die Integrationsvorgabe nur für diese Browsersitzung. Die einzelnen Felder können unabhängig überschrieben werden.
+
+```js
+// Enable throttle with a 500 ms interval for this browser session:
+window.uixCoordinator.setThrottleOverride({ enable: true, ms: 500 });
+
+// Override only the interval (inherits the server enable/disable flag):
+window.uixCoordinator.setThrottleOverride({ ms: 1000 });
+
+// Remove the override and revert to server-configured defaults:
+window.uixCoordinator.setThrottleOverride(null);
+```
+
+### Drosselung mit einer Button Card einschalten
+
+Die Button Card aktiviert für diesen Browser ein Intervall von 500 Millisekunden.
+
+```yaml
+# Enable throttling at 500 ms for this browser session:
+type: custom:button-card
+name: Enable Throttle
+icon: mdi:speedometer
+tap_action:
+  action: javascript
+  javascript: |
+    [[[ window.uixCoordinator?.setThrottleOverride({ enable: true, ms: 500 }); ]]]
+
+---
+
+# Disable throttling (clear override) for this browser session:
+type: custom:button-card
+name: Disable Throttle
+icon: mdi:speedometer-slow
+tap_action:
+  action: javascript
+  javascript: |
+    [[[ window.uixCoordinator?.setThrottleOverride(null); ]]]
+```
+
+### Vollständiger Umschalter mit Statusanzeige
+
+Das Beispiel liest den aktuellen Zustand, schaltet die Drosselung um und zeigt den effektiven Zustand auf der Karte an.
+
+```yaml
+type: custom:button-card
+grid_options:
+  rows: 2
+  columns: 6
+section_mode: true
+update_timer: 500ms
+variables:
+  throttle: |
+    [[[ return window.uixCoordinator?.hassThrottleEnable; ]]]
+  throttleMs: |
+    [[[ return window.uixCoordinator?.hassThrottleMs; ]]]
+styles:
+  card:
+    - "--throttle-icon-color": >
+        [[[ return variables.throttle ? "var(--state-active-color)" :
+        "var(--state-inactive-color)"; ]]]
+    - "--ha-ripple-hover-color": >
+        [[[ return variables.throttle ? "var(--state-active-color)" :
+        "var(--state-inactive-color)"; ]]]
+name: >
+  [[[ return variables.throttle ? `Throttle ON (${variables.throttleMs}ms)` :
+  "Throttle OFF"; ]]]
+icon: >
+  [[[ return variables.throttle ? "mdi:speedometer" : "mdi:speedometer-slow";
+  ]]]
+color: var(--throttle-icon-color)
+tap_action:
+  action: javascript
+  javascript: >
+    [[[ variables.throttle ? window.uixCoordinator?.setThrottleOverride({
+    enable: false }) : window.uixCoordinator?.setThrottleOverride({ enable: true
+    }); ]]]
+```

@@ -70,7 +70,7 @@ Nutze keine PINs für echte Sicherheitsgrenzen. UIX läuft im Browser und kann B
 | `icon_unlocked` | string | - | Icon im entsperrten Zustand. Ohne Wert blendet das Schloss aus. |
 | `icon_locked_color` | string | `--error-color` | Farbe des gesperrten Icons. |
 | `icon_unlocked_color` | string | `--success-color` | Farbe des entsperrten Icons. |
-| `icon_position` | object | je nach Ziel | Pixel-Offsets des Icons. Erlaubt `top` oder `bottom` und `left` oder `right`. |
+| `icon_position` | object | Bei Row-Mold `{top: 6, left: 30}`; am `ha-tile-icon` `{top: 3, left: 3}` | Pixel-Offsets des Icons. Erlaubt `top` oder `bottom` und `left` oder `right`. |
 | `icon_size` | number oder string | `24px`, bei `ha-tile-icon` `12px` | Icongröße. `--uix-lock-icon-size` hat Vorrang. |
 | `permissive` | boolean | `false` | Bei `true` bleiben Elemente zugänglich, wenn kein Lock-Eintrag zum aktuellen Nutzer passt. |
 | `entity` | string | - | Entity-ID für einfache HA-Aktionen in `unlocked_action`. |

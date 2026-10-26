@@ -249,3 +249,7 @@ Home Assistant stellt verschiedene Kombinationen aus `variant` und `appearance` 
 ::: info Button-Varianten und Darstellungen
 `outlined` ist seit UIX `8.2.0` als Home-Assistant-Button-Darstellung dokumentiert.
 :::
+
+## Blank Card: vor statt nach dem Inhalt einfügen
+
+Bei einer Blank Card besitzt `after` bereits den Standardwert `uix-forge-blank-card $ div.content`. Wenn du stattdessen `before` verwenden möchtest, setze deshalb `after: ""` ausdrücklich. Es muss genau eine der beiden Bezugsrichtungen wirksam sein.

@@ -383,3 +383,11 @@ uix:
 | `tour` | Für Übersichten mehrerer Personen, Fahrzeuge oder Orte |
 | `hours_to_show` | Für Tracker-Verlauf direkt in der Karte |
 | `entity_filter` | Wenn viele Entities in einer Map liegen |
+
+## Grenzen der Map-Modi
+
+Der Spark benötigt `hui-map-card` und dessen `ha-map`; ein Wrapper ohne zugängliches `hui-map-card` wird nicht unterstützt. Verwendet wird MapLibre, soweit verfügbar, mit Leaflet-Rückfall für ältere Frontends.
+
+`fit_map` wartet auf die Aktualisierung des Elements und eine nutzbare Kartengröße, bevor es `ha-map.fitMap()` aufruft. Das ist insbesondere für Karten nützlich, die anfangs durch einen äußeren Container verborgen sind.
+
+Der Verlaufsregler verwendet `ha-slider` und aktualisiert `_config.hours_to_show` der `hui-map-card`. Der Entitätsfilter verwendet `ha-dropdown` mit `ha-button`; die letzte sichtbare Entität kann nicht abgewählt werden. Bei `show_all: true` steht zusätzlich „Show All“ zur Verfügung. Während ein Filter aktiv ist, erscheinen neue Kartenentitäten erst nach dieser Auswahl. Filteränderungen starten eine aktive Tour erneut; Standardpositionen der Bedienelemente werden gegeneinander versetzt, um Überlappungen zu vermeiden.

@@ -115,3 +115,9 @@ window.uixCoordinator.setDialogApplyAfterShowOverride(null)
 ```
 
 Danach gilt wieder der globale Wert aus der Integration.
+
+## Zeitpunkt und Reichweite
+
+Die standardmäßig deaktivierte Option wartet auf das Dialogereignis `after-show`. Dadurch vermeidet sie ein erneutes Zeichnen mitten in der Öffnungsanimation. Das Problem hängt vom Browser ab und kann besonders Safari/WebKit auf iOS betreffen. Die gespeicherte Integrationsoption gilt sofort in allen verbundenen Browsern, ohne Seitenneuladen.
+
+`setDialogApplyAfterShowOverride()` hat dagegen für die jeweilige Browsersitzung Vorrang vor der serverseitigen Einstellung. `true` aktiviert die Verzögerung, `false` deaktiviert sie und `null` entfernt den Override und verwendet wieder die Integrationsvorgabe.

@@ -4,6 +4,17 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Translation content review — 26 October 2026
+
+All **64 canonical pages** were checked again against [English source `26e54e6`](https://github.com/Lint-Free-Technology/uix/tree/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source). The `dev` source has not changed since the previous review; the original website still identifies **9.0.0-beta.2**. The stable baseline remains **8.4.0**.
+
+- Corrected German section-background variables/configuration, the `custom:mod-card` fallback warning, template-debug marker and 20-second cache cooldown.
+- Added full Badge and Broker Badge/Lock/Action Handler examples in DE/FR. Corrected the French Tooltip arrow-size theme fallback and added its theme-debugging context.
+- Expanded German Foundry anchors/includes/secrets/merge and empty-billet examples, throttling, section/footer constraints, Background adapters, Map filtering, Event merging and embedded More-info. Corrected Lock/Overlay position defaults and Overlay border radius.
+- The [page review record](/projects/uix/translation-review.json) preserves source and translation hashes. Page counterparts, table keys and the added examples were checked; build/link/media/language checks run separately. Copied technical examples and configuration identifiers retain their original spelling.
+
+DE/FR remain editorial translations with some condensed sections. This is not independent translation certification or a Home Assistant runtime test. EN language navigation continues to open the original documentation in a separate tab.
+
 ## Full review — 22 October 2026
 
 All **64 canonical Markdown pages** were compared against frozen [English revision `26e54e6`](https://github.com/Lint-Free-Technology/uix/tree/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source). Since the previous `e2e0701` preview review, only the Forge reference, Foundries and Forge overview changed; the other 61 source pages are unchanged. The stable release remains **8.4.0**; the reviewed preview is **9.0.0-beta.2**.

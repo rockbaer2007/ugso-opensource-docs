@@ -39,7 +39,7 @@ element:
 | `value` | string | - | Überschreibt den State-Wert, der für das Entity-Icon verwendet wird. |
 | `color` | string | `state` | Iconfarbe für aktive Entity-Zustände. Erlaubt `state`, `none`, Home-Assistant-Farbtoken oder Hexcode. |
 | `icon_color` | string | Bei `ha-tile-icon` `var(--white-color)`, sonst `var(--primary-color)` | CSS-Farbe des Icons. Überschreibt `color`. |
-| `icon_position` | object | je nach Ziel | Position des Icons innerhalb des Overlays. Zahlen werden als Pixel behandelt. |
+| `icon_position` | object | Bei `hui-generic-entity-row`: `{top: '8px', left: '30px'}`; bei `ha-tile-icon`: `{top: '2px', left: '30px'}`; sonst nicht gesetzt | Position des Icons innerhalb des Overlays. Zahlen werden als Pixel behandelt. |
 | `icon_size` | number oder string | Bei `ha-tile-icon` `12px`, sonst `24px` | Größe des Icons. |
 | `icon_background` | CSS background | Bei `ha-tile-icon` `var(--primary-color)`, sonst nicht gesetzt | Expliziter CSS-Hintergrund des Icons. |
 
@@ -50,7 +50,7 @@ element:
 | `--uix-overlay-icon-z-index` | `1` | Stapelreihenfolge des Overlays. |
 | `--uix-overlay-icon-display` | `block` | CSS-Display des Overlays. |
 | `--uix-overlay-icon-opacity` | Bei `ha-tile-icon` `1`, sonst `0.5` | Deckkraft von Icon und Hintergrund. |
-| `--uix-overlay-icon-border-radius` | `inherit` | Rundung des Overlays. |
+| `--uix-overlay-icon-border-radius` | `none`; bei `ha-tile-icon` `50%` | Rundung des Overlays. |
 | `--uix-overlay-icon-row-border-radius` | `--uix-overlay-icon-border-radius` | Rundung bei `row`-Mold. |
 | `--uix-overlay-icon-border` | `unset` | CSS-Border. |
 | `--uix-overlay-icon-size` | `24px`, bei `ha-tile-icon` `12px` | Icontextgröße, überschreibt `icon_size`. |

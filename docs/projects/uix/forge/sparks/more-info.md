@@ -195,3 +195,9 @@ element:
 - Wenn keine Entity gefunden wird, prüfe `entity` oder `element.entity`.
 - Wenn der Inhalt an falscher Stelle erscheint, setze `after` oder `before` explizit.
 - Wenn Details zu groß werden, begrenze die Höhe mit `--uix-more-info-details-max-height`.
+
+## Eingebettete HA-Elemente und Theme-Pfade
+
+Die Details verwenden Home Assistants `<ha-more-info-info>` und `<ha-more-info-details>`. Der ausklappbare Inhalt ist in `ha-card` eingeschlossen und übernimmt dessen Rahmen, Hintergrund und Schatten. UIX setzt das interne `inDialog`-Kennzeichen nach dem Rendern, damit der Vollbildknopf der YAML-Details auch außerhalb des normalen Dialogs funktioniert.
+
+Theme-Styling über `uix-more-info-yaml` erreicht den Wrapper und den eingebetteten Inhalt. Der Express-Pfad `ha-more-info-info $$ more-info-weather $` ist die verkürzte Form von `ha-more-info-info $ more-info-content $ more-info-weather $`. Den recht großen Details-Innenabstand kannst du im Shadow Root beispielsweise von `--ha-space-6` auf `--ha-space-3` reduzieren.

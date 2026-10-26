@@ -6,6 +6,17 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 
 Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation mit der englischen Originaldokumentation.
 
+## Inhaltsprüfung vom 26.10.2026
+
+Alle **64 kanonischen Seiten** wurden erneut gegen die englische Quelle [`26e54e6`](https://github.com/Lint-Free-Technology/uix/tree/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source) geprüft. `dev` ist seit dem letzten Abgleich unverändert; die Originalwebsite nennt weiterhin **9.0.0-beta.2**. Stabile Basis bleibt **8.4.0**.
+
+- **Korrigiert:** Die deutschen Abschnittshintergründe verwenden jetzt die dokumentierten Variablen für Farbe/Deckkraft und `background.uix` statt eines abweichenden Beispiels. Der seltene `custom:mod-card`-Ausweg, seine Warnung und der Template-Debug-Marker samt 20-Sekunden-Cachefrist sind ergänzt.
+- **DE/FR ergänzt:** vollständige Badge-Beispiele und Broker-Direktiven für Badge, Lock und Action Handler. Französisch erhält den korrekten geerbten Standard der Tooltip-Pfeilgröße und den Theme-Debugging-Kontext.
+- **DE vertieft:** YAML-Anker, Includes, Secrets, Merge-Ergebnisse und leere Billet-Slots in Foundries; außerdem Throttling, Section-/Footer-Molds, Background-Adapter, Map-Filter, Event-Zusammenführung und eingebettetes More-info. Lock-/Overlay-Positionen und der Overlay-Rahmenradius nennen die tatsächlichen Standardwerte.
+- Die [Prüfübersicht](/projects/uix/translation-review.json) hält Quellen- und Übersetzungsstände pro Seite fest. Tabellen-Schlüssel, Gegenstücke und ergänzte Beispiele wurden geprüft; Build, Links, Medien und Sprachmetadaten werden separat mitgeprüft. Technische Schlüssel und übernommene Codebeispiele bleiben in Originalschreibweise.
+
+DE/FR bleiben redaktionelle Übersetzungen mit teils kompakterem Aufbau. Der Abgleich ist keine unabhängige Übersetzungszertifizierung und kein Home-Assistant-Laufzeittest. Die EN-Sprachwahl öffnet weiterhin die Originalseite in einem neuen Tab.
+
 ## Gesamtprüfung vom 22.10.2026
 
 Alle **64 kanonischen Markdown-Seiten** wurden gegen den eingefrorenen [englischen Stand `26e54e6`](https://github.com/Lint-Free-Technology/uix/tree/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source) geprüft. Gegenüber dem letzten Vorschau-Abgleich `e2e0701` sind Forge-Referenz, Foundries und Forge-Übersicht geändert; die übrigen 61 Originalseiten sind unverändert. Die stabile Veröffentlichung bleibt **8.4.0**, die geprüfte Vorschau ist **9.0.0-beta.2**.

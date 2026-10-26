@@ -435,3 +435,15 @@ uix:
       --uix-room-background: rgba(25, 118, 210, 0.12);
     }
 ```
+
+## Adapter, Bildquellen und Abschnittsabstände
+
+`media-source://media_source/local/<filename>` verweist auf Dateien unter `/media`. UIX löst solche Quellen mit dem Home-Assistant-WebSocket-Befehl `media_source/resolve_media` auf; manuelles Signieren einer URL ist nicht nötig.
+
+Der `ha-card`-Adapter setzt den Hintergrund in den Shadow Root von `ha-card`, verwendet `border-radius: var(--ha-card-border-radius, var(--ha-border-radius-lg))` und gleicht den Kartenrahmen mit `margin: calc(-1 * var(--ha-card-border-width, 1px))` aus.
+
+Bei `mold: section` erreicht `for: element` standardmäßig `hui-section`. Der Section-Adapter verwendet den Abschnittsradius, setzt `padding: var(--ha-space-2)` am Kind `hui-grid-section` und `padding: 0` am nächsten `div.section-container`, damit HA-Hintergrund und Spark nicht zu doppeltem Innenabstand führen. Er setzt außerdem `--ha-card-background: none` am Abschnitt, damit die enthaltenen Karten den Hintergrund durchscheinen lassen. Beim Trennen des Sparks werden zuvor vorhandene Padding-Werte wiederhergestellt.
+
+Zusammen mit `image_url` oder `image_entity` ergänzen nur Objekt-Unterfelder von `background`, etwa `position` oder `size`, das Bild. Ein String wie `background: red` ersetzt die gesamte CSS-Hintergrund-Kurzform und entfernt dadurch auch `background-image`.
+
+Der vollständige Sections-Header aus Titel und Badges kann nicht als Einheit geschmiedet werden. Die Markdown-Karte unter `header.card` kann dagegen durch eine Forge-Karte ersetzt werden; ein Stack mit passenden Karten und optional `custom:badge-horizontal-container-card` kann einen vollständigen Header nachbilden.

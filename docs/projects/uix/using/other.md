@@ -1,37 +1,25 @@
 ---
-title: Weitere Optionen
-description: Weitere UIX-Styling-Funktionen und Randfälle.
+title: Weitere Styling-Optionen
+description: custom:mod-card als selten benötigten Ausweg für spezielle Karten verwenden.
 ---
 # Weitere Styling-Optionen
 
-Diese Seite sammelt kleinere Styling-Funktionen und Randfälle, die nicht in die anderen UIX-Styling-Kategorien passen.
+Karten ohne `<ha-element>` lassen sich mit der mitgelieferten Karte `custom:mod-card` umschließen. Das ist nur in sehr wenigen Fällen notwendig und kann mehr Probleme verursachen, als es löst. Oft enthält die Karte eine andere Karte; dann sollte das Styling auf diese innere Karte angewendet werden.
 
-UIX kann neben Karten, Rows, Badges, Bildern und Views auch andere Home-Assistant-Frontend-Bereiche über passende Theme-Variablen erreichen. Dazu gehören zum Beispiel Dialoge, Toasts, Sidebars, Konfigurationsseiten, Kalender, To-do-Ansichten, History-Ansichten und Persistent Notifications.
+::: warning custom:mod-card mit Vorsicht verwenden
+Der Wrapper erzeugt ein `<ha-card>` und setzt die eigentliche Karte hinein. Die eingeschlossene Karte wird transparent und ohne Rahmen oder Hintergrund gestaltet.
+:::
 
-Wichtig ist immer, das DOM-Ziel zu prüfen und den passenden UIX-Kontext zu wählen:
+```yaml
+type: custom:mod-card
+card:
+  type: custom:beloved-custom-card
+  ...
+uix:
+  style: |
+    ha-card {
+      ...
+    }
+```
 
-- Für lokale Kartenänderungen: `uix:` direkt in der Karte.
-- Für wiederverwendbare globale Regeln: UIX-Theme-Variablen wie `uix-card`, `uix-row`, `uix-dialog` oder `uix-config`.
-- Für Shadow-DOM-Pfade: die jeweilige `-yaml`-Variante.
-- Für dynamische Werte: Jinja2-Templates, Makros oder Billets.
-
-Wenn ein Element nicht zuverlässig gefunden wird, prüfe zuerst [DOM-Navigation](../concepts/dom), Lade-Reihenfolge und mögliche Shadow-Root-Grenzen.
-
-## Häufige Zielbereiche
-
-| Bereich | Möglicher UIX-Kontext |
-| --- | --- |
-| Dialoge | `uix-dialog` oder passende Dialog-spezifische Regeln |
-| Konfigurationsseiten | `uix-config` |
-| Sidebar | Theme- oder Panel-Kontext |
-| Toasts und Hinweise | passender Frontend-Kontext, abhängig vom DOM |
-| Kalender und To-do | Karten- oder Panel-Kontext |
-
-Nicht jeder Home-Assistant-Bereich ist gleich stabil. Prüfe daher bei Randfällen immer mit den DOM-Helfern, ob UIX den gewünschten Bereich tatsächlich erreicht.
-
-## Vorgehen bei unbekannten Elementen
-
-1. Element im Browser-Inspektor auswählen.
-2. `uix_tree($0)` oder `uix_style_path($0)` in der Konsole ausführen.
-3. Den vorgeschlagenen Pfad in einer kleinen Testregel verwenden.
-4. Erst danach komplexes Styling ergänzen.
+Die Auslassungspunkte im Originalbeispiel sind Platzhalter für deine Kartenkonfiguration und CSS-Regeln; sie bilden keine direkt ausführbare Beispielkonfiguration.

@@ -41,6 +41,9 @@ jobs:
       - name: UIX-Codebeispiele und Sprachverweise prüfen
         run: python scripts/check-uix-docs.py
 
+      - name: UIX-Übersetzungsstand prüfen
+        run: python scripts/check-uix-translations.py
+
       - name: GitHub-Pages-Artefakt hochladen
         uses: actions/upload-pages-artifact@v4
         with:

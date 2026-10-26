@@ -18,3 +18,7 @@ Diese Option verhindert, dass UIX Entitätsbilder ersetzt. Das ist nützlich, we
 - UIX wendet `--uix-image` und `--uix-image-for-<entity_id>` nicht mehr als Bild-Override an.
 - Bestehende Kartenbilder und Entitätsbilder bleiben unverändert.
 - Andere UIX-Styling- und Theme-Funktionen bleiben verfügbar.
+
+## Betroffene Elemente und CSS-Variablen
+
+Die standardmäßig nicht gesetzte Option wirkt nach dem Speichern sofort auf alle verbundenen Browser, ohne Neuladen. Sie deaktiviert das Patching für `ha-entity-marker`, `ha-tile-icon`, `state-badge`, `ha-user-badge` und `ha-person-badge`. Die Bildüberschreibungen über `--uix-image` und `--uix-image-for-*` werden dann nicht mehr auf diese Badges und Marker angewendet.

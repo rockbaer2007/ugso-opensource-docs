@@ -57,3 +57,18 @@ my-awesome-theme:
 
       uix-theme: theme-mods
     ```
+
+### Définir le débogage dans le thème actif
+
+Les variables de débogage doivent être placées dans le thème Home Assistant actuellement appliqué, et non dans une carte isolée.
+
+```yaml
+theme-mods:
+  ... UIX theme variables, styles, macros go here ...
+
+my-awesome-theme:
+  uix-card-type-energy-sankey-debug: true # Debug card which has uix class 'type-energy-sankey'
+  uix-badge-my-class-debug: true # Debug badges which have my-class set by uix config
+
+  uix-theme: theme-mods
+```

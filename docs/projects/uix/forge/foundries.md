@@ -260,3 +260,233 @@ element:
     media_content_id: |
       media-source://media_source/local/{{ 'birthday.jpg' if is_festive_day() else 'kitchen.jpg' }}
 ```
+
+## Weitere vollständige Konfigurationsbeispiele
+
+Die folgenden Beispiele ergänzen die zuvor verkürzten Muster. YAML-Kommentare und technische Bezeichner sind wie im englischen Original belassen.
+
+### YAML-Anker innerhalb einer Entity-Liste
+
+Der erste Entity-Eintrag definiert `&width`; der zweite übernimmt die Formatierung mit `<<: *width`. Das ist ein flacher YAML-Merge, kein Ersatz für die rekursive Foundry-Vererbung.
+
+```yaml
+uix_foundries:
+  browser_multiple_entity_anchors:
+    forge:
+      mold: row
+      billets:
+        id: my_browser_id
+    element:
+      type: custom:multiple-entity-row
+      entity: binary_sensor.{{ id }}
+      entities:
+        - entity: sensor.{{ id }}_browser_battery
+          <<: &width                    # define anchor inline on first use
+            format: precision2
+            styles:
+              text-align: center
+        - entity: sensor.{{ id }}_browser_height
+          <<: *width                    # reuse the same formatting options
+```
+
+### Vollständige Foundry-Struktur
+
+`forge.uix` gestaltet den Wrapper, während `element` den erzeugten Kartentyp und seine Eigenschaften festlegt.
+
+```yaml
+forge:
+  mold: card
+  uix:
+    style:
+      hui-tile-card $: |
+        ha-card {
+          --tile-color: red !important;
+        }
+element:
+  type: tile
+  entity: "{{ 'sun.sun' }}"
+```
+
+### Inhalt der eingebundenen Styling-Datei
+
+Die eingebundene Datei liefert den vollständigen Wert für den Schlüssel, den `!include` ersetzt. Im Beispiel ist das die Zuordnung mit `style`.
+
+```yaml
+# /config/uix/my_forge_styles.yaml
+style: "ha-card { background: teal; }"
+```
+
+### Include in einer Datei-Foundry
+
+Datei-Foundries verwenden den nativen Home-Assistant-YAML-Loader; `!include` benötigt dort keine Anführungszeichen.
+
+```yaml
+# In a YAML File Foundry — no quoting needed
+uix_foundries:
+  my_tile:
+    forge:
+      mold: card
+    element:
+      type: tile
+      entity: "{{ config.entity }}"
+      uix: !include uix/my_forge_styles.yaml
+```
+
+### Secrets als Ausgangsdatei
+
+Die Datei `secrets.yaml` liegt im HA-Konfigurationsverzeichnis. Die hier gezeigten Werte sind nur Demonstrationswerte.
+
+```yaml
+# /config/secrets.yaml
+accent_colour: teal
+lock_pin: "1234"
+```
+
+### Secret in einer Datei-Foundry
+
+Die Datei-Foundry liest `accent_colour` mit einem ungequoteten `!secret`-Tag in ein Billet ein. In einer UI Foundry muss der Tag dagegen als String gequotet sein.
+
+```yaml
+# In a YAML File Foundry — no quoting needed
+uix_foundries:
+  my_tile:
+    forge:
+      mold: card
+      billets:
+        accent: !secret accent_colour
+    element:
+      type: tile
+      entity: "{{ config.entity }}"
+```
+
+### Ausgangs-Foundry für das Merge-Beispiel
+
+Die Foundry definiert Makroimport, Kartentyp und Standardwerte.
+
+```yaml
+forge:
+  mold: card
+  macros:
+    entity_color: "my_macros.jinja"
+element:
+  type: weather-forecast
+  show_current: true
+  show_forecast: false
+```
+
+### Aufgelöstes Merge-Ergebnis
+
+Die lokale Entität und `show_forecast` überschreiben die Vorlage; `show_current` und der Makroimport bleiben erhalten.
+
+```yaml
+forge:
+  mold: card
+  macros:
+    entity_color: "my_macros.jinja"
+element:
+  type: weather-forecast
+  entity: weather.home        # from element
+  show_current: true          # from foundry
+  show_forecast: true         # overridden by element
+```
+
+### Basis einer verschachtelten Foundry
+
+`base_tile` enthält das gemeinsame Styling und den Kartentyp; die oben gezeigte Foundry `light_tile` erweitert diese Basis.
+
+```yaml
+forge:
+  mold: card
+  uix:
+    style:
+      hui-tile-card $: |
+        ha-card {
+          border-radius: 20px;
+        }
+element:
+  type: tile
+```
+
+### Billet-Standard unverändert übernehmen
+
+Ohne lokales Billet bleibt der in `accent_tile` definierte Wert `teal` erhalten.
+
+```yaml
+type: custom:uix-forge
+foundry: accent_tile
+entity: light.bed_light
+```
+
+![Billet-Standard unverändert übernehmen](/projects/uix/assets/page-assets/forge/foundries-billets.png)
+
+### Vollständige Foundry mit leeren Slots
+
+`~` definiert leere Billets. Der Name verwendet einen Fallback; das Styling wird nur bei gesetztem `accent` ausgegeben.
+
+```yaml
+forge:
+  mold: card
+  billets:
+    accent: ~          # empty slot — instance is expected to override this
+    label: ~           # optional label, templates handle none gracefully
+element:
+  type: tile
+  entity: "{{ config.entity }}"
+  name: "{{ label or state_attr(config.entity, 'friendly_name') }}"
+  uix:
+    style: |
+      ha-card {
+        {%- if accent %}
+        --tile-color: {{ accent }} !important;
+        {%- endif %}
+      }
+```
+
+### Nur den Akzent setzen
+
+Die Instanz belegt den Akzent, lässt `label` leer und verwendet damit den Friendly Name der Entität.
+
+```yaml
+type: custom:uix-forge
+foundry: flexible_tile
+entity: light.bed_light
+forge:
+  billets:
+    accent: teal
+```
+
+![Nur den Akzent setzen](/projects/uix/assets/page-assets/forge/foundries-billets-empty.png)
+
+### Akzent und Beschriftung setzen
+
+Beide Slots werden lokal belegt; die Foundry selbst bleibt unverändert.
+
+```yaml
+type: custom:uix-forge
+foundry: flexible_tile
+entity: light.bed_light
+forge:
+  billets:
+    accent: pink
+    label: Bed sconce
+```
+
+![Akzent und Beschriftung setzen](/projects/uix/assets/page-assets/forge/foundries-billets-empty2.png)
+
+### Styling-Basis für styled_tile
+
+Die Foundry liefert die Selektorzuordnung. Das bereits gezeigte lokale Styling im Schlüssel `.` ergänzt diese Basis.
+
+```yaml
+# Foundry: "styled_tile"
+forge:
+  mold: card
+  uix:
+    style:
+      hui-tile-card $: |
+        ha-card {
+          --tile-color: red !important;
+        }
+element:
+  type: tile
+```
