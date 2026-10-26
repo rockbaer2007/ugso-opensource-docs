@@ -75,7 +75,7 @@ const navEn = [
       { text: 'HA Apps', link: '/en/collection/ha-apps' },
       { text: 'HACS Docs', link: '/en/collection/hacs-docs' },
       { text: 'Interesting Examples', link: '/en/collection/interesting-examples' },
-      { text: 'UIX Docs (separate)', link: 'https://uix.lf.technology/' }
+      { text: 'UIX Docs (separate)', link: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener noreferrer' }
     ]
   },
   {

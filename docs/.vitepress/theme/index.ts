@@ -5,6 +5,7 @@ import type { Theme } from 'vitepress'
 import './custom.css'
 import '../blog.css'
 import { atlasLocaleTargets } from '../atlas-locales'
+import { uixLocaleTargets } from '../uix-locales'
 
 declare global {
   interface Window {
@@ -142,17 +143,26 @@ function collectionLocaleTargets(path: string): Partial<Record<'DE' | 'EN' | 'FR
 }
 
 function applyLocaleLinks(path: string) {
-  const targets = atlasLocaleTargets(path) ?? collectionLocaleTargets(path)
-
-  if (!targets) {
-    return
-  }
+  const uixTargets = uixLocaleTargets(path)
+  const targets = uixTargets ?? atlasLocaleTargets(path) ?? collectionLocaleTargets(path)
 
   document.querySelectorAll<HTMLAnchorElement>(
-    '.VPNavBarTranslations a.link, .VPNavBarExtra .translations a.link'
+    '.VPNavBarTranslations a.link, .VPNavBarExtra .translations a.link, .VPNavScreenTranslations a'
   ).forEach((link) => {
     const code = link.textContent?.trim().match(/^(DE|EN|FR)\b/)?.[1] as 'DE' | 'EN' | 'FR' | undefined
-    const target = code ? targets[code] : undefined
+    const target = code ? targets?.[code] : undefined
+
+    if (uixTargets && code === 'EN') {
+      link.setAttribute('target', '_blank')
+      link.setAttribute('rel', 'noopener noreferrer')
+      link.dataset.ugsoUixExternal = 'true'
+    } else if (link.dataset.ugsoUixExternal) {
+      link.removeAttribute('target')
+      link.removeAttribute('rel')
+      delete link.dataset.ugsoUixExternal
+    }
+
+    if (!targets) return
 
     if (target) {
       link.hidden = false
