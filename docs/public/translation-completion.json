@@ -1620,7 +1620,7 @@
       "target": "fr/projects/atlas/homeassistant.md",
       "mode": "supplement",
       "source_sha256": "892952c7cde0f28e3f06a65ef053ca335239c5988eee3609a010292f69a8affd",
-      "target_sha256": "da325ee7fadc7e62a89056cb8dd42fe472a3b9c4fd43492aa0708482bacc81bd",
+      "target_sha256": "b4e8bffc8634865272b143814b34fb7a70fe2a8466fa8509b7e0e2c304337831",
       "source_code_blocks": 7,
       "target_code_blocks": 13,
       "source_table_rows": 23,

@@ -2360,8 +2360,8 @@
         "fr": {
           "path": "fr/projects/atlas/homeassistant.md",
           "status": "content-present",
-          "sha256": "da325ee7fadc7e62a89056cb8dd42fe472a3b9c4fd43492aa0708482bacc81bd",
-          "words": 5868,
+          "sha256": "b4e8bffc8634865272b143814b34fb7a70fe2a8466fa8509b7e0e2c304337831",
+          "words": 5859,
           "headings": 36,
           "examples": 13,
           "versions": [

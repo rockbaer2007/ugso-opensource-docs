@@ -667,11 +667,10 @@ ATLAS s'appuie sur la grille interne réelle et conserve le point précis où la
 cela permet de déplacer les champs vers le haut sans qu'ils ne sautent latéralement.
 La grille visible se situe sur la même surface interne que les tuiles, avec
 un espacement réduit entre les tuiles pour un empilement plus dense. Les tuiles sélectionnées peuvent
-en outre être déplacées d'une cellule de la grille à l'aide des touches fléchées ; dans
-En mode édition, `Shift` plus une touche fléchée modifie la taille de l’élément sélectionné
-par pas de 1. Chaque composant de la
-La palette peut définir ses propres colonnes de 1 à 12 ou `full`, ainsi que des lignes `auto` ou
-de 1 à 8. Entity List, State Button, Switch Button, `horizontal-stack` et
+également être déplacées d’une cellule avec les touches fléchées. En mode édition,
+`Shift` plus une touche fléchée redimensionne le champ sélectionné par pas de 1.
+Chaque composant de la palette de gauche peut définir ses propres colonnes de 1 à 12 ou `full`,
+ainsi que des lignes `auto` ou de 1 à 8. Entity List, State Button, Switch Button, `horizontal-stack` et
 `vertical-stack` commencent avec la même surface par défaut ; les piles horizontales peuvent
 s’élargir lorsque plusieurs entités sont sélectionnées. La palette
 peut utiliser les ressources Lovelace chargées pour indiquer si les familles de cartes personnalisées sont
@@ -746,7 +745,7 @@ Un bouton de réinitialisation permet d'afficher à nouveau la liste complète. 
 dotée d'une barre de défilement et utilise des lignes de modèle compactes à deux colonnes : le nom de la carte et
 le statut de favori figurent à gauche, tandis que les détails de mise en page et les commandes de taille se trouvent à droite.
 Les paramètres de colonnes et de lignes des modèles sont enregistrés avec la
-configuration locale de démonstration et peuvent être réinitialisées avec `Reset sizes` aux
+configuration locale de démonstration et peuvent être réinitialisés avec `Reset sizes` aux
 valeurs par défaut.
 Les champs de l'éditeur sélectionnés peuvent être redimensionnés à la souris, ou en ajustant leur largeur et leur hauteur par
 incréments unitaires, jusqu'à cinq cellules de grille au-delà de la
