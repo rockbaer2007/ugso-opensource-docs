@@ -12,7 +12,7 @@ Cette section rassemble des « blueprints » (modèles) pour Home Assistant ains
 
 | Projet | Description |
 | --- | --- |
-| [Ultimate Timer](/fr/projects/ultimate-timer/) | Blueprint Home Assistant pour des minuteurs réutilisables. |
+| <img class="package-icon" src="/images/packages/projects-ultimate-timer.png" width="32" height="32" alt="" aria-hidden="true"> [Ultimate Timer](/fr/projects/ultimate-timer/) | Blueprint Home Assistant pour des minuteurs réutilisables. |
 
 ## Objectif pour la documentation des blueprints {#ziel-fur-blueprint-dokus}
 

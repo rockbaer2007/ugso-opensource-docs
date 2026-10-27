@@ -295,3 +295,214 @@ Cet exemple ajoute un badge à l'en-tête du tableau de bord. Il ouvre ou ferme 
 - Si aucun événement correspondant n'a encore été reçu, `uixForge.event` est vide ou absent. Utilisez `| default(...)` dans vos modèles pour gérer ce cas.
 - Les données des événements successifs sont **fusionnées en profondeur**, et non remplacées. Après un premier événement `{ forge_id: "my_card", data: { score: 10 } }`, l'envoi de `{ forge_id: "my_card", data: { count: 2 } }` laisse `count` et `score` dans `uixForge.event`.
 :::
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/event). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Déclencher un événement {#reference-example-1}
+
+```yaml
+tap_action:
+  action: fire-dom-event
+  browser_mod:
+    service: browser_mod.sequence
+    data:
+      sequence:
+        - service: browser_mod.javascript
+          data:
+            code: |
+              this.dispatchEvent(new CustomEvent("uix-forge-event", {
+                bubbles: true,
+                composed: true,
+                detail: {
+                  forge_id: "demo",
+                  selected: "light.living_room"
+                }
+              }));
+```
+
+### 2. Bouton actualisant une carte {#reference-example-2}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: button
+  name: Wohnzimmer
+  tap_action:
+    action: fire-dom-event
+    uix_forge:
+      forge_id: room_picker
+      room: living_room
+```
+
+### 3. Bouton actualisant une carte {#reference-example-3}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: event
+      forge_id: room_picker
+element:
+  type: tile
+  entity: "light.{{ uixForge.event.room | default('living_room') }}"
+```
+
+### 4. Écouter les événements d’un autre élément Forge {#reference-example-4}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: event
+      other_forge_ids:
+        - room_picker
+element:
+  type: tile
+  entity: "light.{{ uixForge.event.room_picker.room | default('living_room') }}"
+```
+
+### 5. Combiner les identifiants propres et externes {#reference-example-5}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: event
+      forge_id: detail_card
+      other_forge_ids:
+        - room_picker
+        - mode_picker
+element:
+  type: tile
+  entity: "light.{{ uixForge.event.room_picker.room | default('living_room') }}"
+```
+
+### 6. Envoyer des données à plusieurs éléments Forge {#reference-example-6}
+
+```yaml
+tap_action:
+  action: fire-dom-event
+  uix_forge:
+    forge_id: shared_filter
+    value: climate
+```
+
+### 7. Badge de raccourci pour l’état d’un élément dépliable {#reference-example-7}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: badge
+  sparks:
+    - type: event
+      forge_id: expander_shortcut
+element:
+  type: entity
+  entity: input_boolean.show_energy
+```
+
+### 8. Structure des données transmises {#reference-example-8}
+
+```yaml
+tap_action:
+  action: fire-dom-event
+  uix_forge:
+    forge_id: room_picker
+    room: kitchen
+    label: Kueche
+    icon: mdi:silverware-fork-knife
+```
+
+### 9. Structure des données transmises {#reference-example-9}
+
+```yaml
+element:
+  type: tile
+  entity: "light.{{ uixForge.event.room | default('living_room') }}"
+  name: "{{ uixForge.event.label | default('Wohnzimmer') }}"
+```
+
+### 10. Valeurs par défaut dans les modèles {#reference-example-10}
+
+```yaml
+entity: "light.{{ uixForge.event.room | default('living_room') }}"
+icon: "{{ uixForge.event.icon | default('mdi:lightbulb') }}"
+```
+
+### 11. Plusieurs destinataires {#reference-example-11}
+
+```yaml
+forge:
+  mold: card
+  sparks:
+    - type: event
+      forge_id: shared_room
+```
+
+### 12. Plusieurs destinataires {#reference-example-12}
+
+```yaml
+forge:
+  mold: badge
+  sparks:
+    - type: event
+      forge_id: shared_room
+```
+
+### 13. Identifiant propre et identifiants externes {#reference-example-13}
+
+```yaml
+forge:
+  sparks:
+    - type: event
+      forge_id: detail_panel
+      other_forge_ids:
+        - room_picker
+        - floor_picker
+```
+
+### 14. Identifiant propre et identifiants externes {#reference-example-14}
+
+```yaml
+name: "{{ uixForge.event.title | default('Details') }}"
+entity: "light.{{ uixForge.event.room_picker.room | default('living_room') }}"
+```
+
+### 15. Afficher les données d’événement {#reference-example-15}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: event
+      forge_id: debug_event
+element:
+  type: markdown
+  content: |
+    ```json
+    {{ uixForge.event | tojson }}
+    ```
+```
+
+### 16. Interaction avec les modèles {#reference-example-16}
+
+```yaml
+name: "{{ uixForge.event.name | default('Keine Auswahl') }}"
+```
+
+### 17. Interaction avec les modèles {#reference-example-17}
+
+```yaml
+name: "{{ uixForge.event.room_picker.name | default('Wohnzimmer') }}"
+```
+
+::::

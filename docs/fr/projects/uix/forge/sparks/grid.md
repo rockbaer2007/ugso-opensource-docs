@@ -272,3 +272,186 @@ element:
 - Tous les styles de grille appliqués par ce spark sont **supprimés** lorsque l'élément Forge est déconnecté ou que sa configuration change. Ils ne se propagent donc pas au reste de la mise en page.
 - Seules les propriétés explicitement configurées sont écrites ; les autres restent inchangées.
 :::
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/grid). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Utilisation de base {#reference-example-1}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: grid
+      for: hui-tile-card
+      columns: 2
+      gap: 8px
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 2. Deux colonnes {#reference-example-2}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: grid
+      for: hui-tile-card
+      columns: 2
+      gap: 12px
+element:
+  type: entities
+  entities:
+    - light.living_room
+    - sensor.living_room_temperature
+```
+
+### 3. Colonnes fixes et flexibles {#reference-example-3}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: grid
+      for: hui-tile-card
+      columns: "64px 1fr auto"
+      align_items: center
+      column_gap: 12px
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 4. Zones nommées {#reference-example-4}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: grid
+      for: uix-forge-blank-card $ div.content
+      areas: '"icon name" "icon state"'
+      columns: "48px 1fr"
+      rows: "auto auto"
+      gap: 4px 12px
+      elements:
+        - icon
+        - name
+        - state
+element:
+  type: custom:uix-forge-blank-card
+  cards:
+    - type: tile
+      entity: light.living_room
+```
+
+### 5. Basculement adaptatif {#reference-example-5}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: grid
+      for: uix-forge-blank-card $ div.content
+      columns: 1
+      gap: 8
+      media_queries:
+        - query: "(min-width: 768px)"
+          columns: 2
+          gap: 12px
+        - query: "(min-width: 1200px)"
+          columns: "1fr 1fr 1fr"
+          gap: 16px
+element:
+  type: custom:uix-forge-blank-card
+  cards:
+    - type: tile
+      entity: light.kitchen
+    - type: tile
+      entity: light.living_room
+    - type: tile
+      entity: light.office
+```
+
+### 6. Alignement {#reference-example-6}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: grid
+      for: hui-tile-card
+      columns: "auto 1fr"
+      place_items: "center / stretch"
+      gap: 10px
+element:
+  type: tile
+  entity: sensor.energy_today
+```
+
+### 7. Formes abrégées `columns` et `rows` {#reference-example-7}
+
+```yaml
+forge:
+  sparks:
+    - type: grid
+      columns: 3
+      rows: 2
+```
+
+### 8. Formes abrégées `columns` et `rows` {#reference-example-8}
+
+```css
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+```
+
+### 9. Formes abrégées `columns` et `rows` {#reference-example-9}
+
+```yaml
+forge:
+  sparks:
+    - type: grid
+      columns: "minmax(80px, 160px) 1fr auto"
+      rows: "auto minmax(120px, 1fr)"
+```
+
+### 10. `elements` et ordre {#reference-example-10}
+
+```yaml
+forge:
+  sparks:
+    - type: grid
+      areas: '"title actions" "content content"'
+      columns: "1fr auto"
+      elements:
+        - title
+        - actions
+        - content
+```
+
+### 11. Zones adaptatives {#reference-example-11}
+
+```yaml
+forge:
+  sparks:
+    - type: grid
+      areas: '"title" "content" "actions"'
+      columns: 1
+      media_queries:
+        - query: "(min-width: 900px)"
+          areas: '"title actions" "content content"'
+          columns: "1fr auto"
+```
+
+::::

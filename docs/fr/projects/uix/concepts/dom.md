@@ -473,3 +473,146 @@ par `&` et prêt à être utilisé comme `anchor` d'interaction :
 ```yaml
 anchor: "&home-assistant $ hui-dialog-create-card"
 ```
+
+## Conseils complémentaires pour les chemins
+
+Les critères d’un jeton, par exemple nom, classe, attribut et propriété, doivent tous correspondre. Les espaces hors de `[...]` et `{...}` séparent les étapes du chemin ; dans ces crochets, espaces et `$` sont des caractères ordinaires.
+
+`uix_broker_path($0)` produit un chemin relatif adapté aux ancres de directive. `uix_broker_absolute_path($0)` affiche et renvoie un chemin absolu depuis `document`, avec le préfixe `&`, utilisable comme ancre d’interaction. Si un sélecteur ne trouve rien, vérifier la racine UIX, les frontières Shadow DOM et une règle visible simple comme `outline`, puis recréer le chemin avec le helper approprié.
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Configurations techniques de la [référence allemande](/projects/uix/concepts/dom). Les clés, expressions et valeurs de démonstration restent inchangées ; remplacez les entités par les vôtres.
+
+### 1. Navigation DOM {#reference-example-1}
+
+```yaml
+type: markdown
+content: |-
+  # Example
+  ## A teal markdown card where h3 tags are purple
+  ### Like this
+```
+
+### 2. Navigation DOM {#reference-example-2}
+
+```yaml
+ha-markdown $:
+```
+
+### 3. Navigation DOM {#reference-example-3}
+
+```yaml
+.:
+```
+
+### 4. Navigation DOM {#reference-example-4}
+
+```yaml
+uix:
+  style:
+    ha-markdown $: |
+      h3 {
+        color: purple;
+      }
+    .: |
+      ha-card {
+        background: teal;
+      }
+```
+
+### 5. Navigation DOM {#reference-example-5}
+
+```yaml
+ha-map $ ha-entity-marker $ div: |
+```
+
+### 6. Navigation DOM {#reference-example-6}
+
+```yaml
+ha-map $ ha-entity-marker $:
+  div: |
+```
+
+### 7. Navigation DOM {#reference-example-7}
+
+```yaml
+ha-map $:
+  ha-entity-marker $:
+    div: |
+```
+
+### 8. Sélecteur de recherche express `$$` {#reference-example-8}
+
+```text
+A $$ B $
+```
+
+### 9. Sélecteur de recherche express `$$` {#reference-example-9}
+
+```text
+A $ <zwischen-1> $ <zwischen-2> $ ... B $
+```
+
+### 10. Sélection des chemins d’hôte et d’élément {#reference-example-10}
+
+```yaml
+uix-dialog-yaml: |
+  "&(.type-hui-dialog-web-browser-play-media) $ ha-dialog-header $": |
+    section.header-content {
+      display: none;
+    }
+```
+
+### 11. Sélection des chemins d’hôte et d’élément {#reference-example-11}
+
+```yaml
+uix:
+  style:
+    "&{.notification}":
+      ".": |
+        ha-card { opacity: 0.5; }
+
+    "&{.notification.notification_id='1234567'}":
+      ".": |
+        ha-card { border: 2px solid red; }
+
+    "&{.type^=light}":
+      ".": |
+        ha-card { background: yellow; }
+
+    "&{.items.0.name='foo'}":
+      ".": |
+        ha-card { background: teal; }
+```
+
+### 12. `uix_broker_path($0)` : helper pour les ancres de directive {#reference-example-12}
+
+```javascript
+uix_broker_path($0)
+```
+
+### 13. `uix_broker_path($0)` : helper pour les ancres de directive {#reference-example-13}
+
+```javascript
+uix_broker_path($0, $1)
+```
+
+### 14. `uix_broker_absolute_path($0)` : helper pour les ancres d’interaction {#reference-example-14}
+
+```javascript
+uix_broker_absolute_path($0)
+```
+
+### 15. Si un sélecteur ne trouve rien {#reference-example-15}
+
+```yaml
+uix:
+  style:
+    "hui-tile-card $ ha-tile-icon":
+      ".": |
+        outline: 2px solid red;
+```
+
+::::

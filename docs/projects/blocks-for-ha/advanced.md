@@ -5,6 +5,8 @@ description: Auslöser, Bedingungen, Ziele, Ablaufgruppen und experimentelle Jin
 
 # Erweiterte HA-Automationen und Jinja
 
+Seit **0.1.46** folgen alle App-Beschriftungen, Dialoge und Validierungshinweise der gewählten Oberfläche in DE/EN/FR. Eigene Texte, technische IDs und YAML/Jinja werden nicht automatisch übersetzt.
+
 ## HA-Optionen über das Zahnrad seit 0.1.61
 
 Im Zahnrad-Popup eine Option von links in die Liste ziehen. Jede Option ergänzt eine eigene Zeile unter den Pflichtfeldern. Reihenfolge und bewusst ausgewählte leere Zeilen werden im Projekt gespeichert. Entfernen setzt den Wert zurück. Importierte Optionen einschließlich `false`, `0`, Listen und Templates erscheinen automatisch und bleiben beim Laden erhalten. Alle Beschriftungen sind in DE/EN/FR verfügbar.

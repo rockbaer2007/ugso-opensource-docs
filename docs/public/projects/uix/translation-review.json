@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-10-26",
+  "reviewed_at": "2026-10-27",
   "source_revision": "26e54e6d4973231a393933e6479ed1b03cc86cd3",
   "scope": "Editorial technical-reference review; page coverage, table identifiers, defaults and selected missing examples",
   "limitations": "Translations retain editorial summaries. Not sentence-by-sentence identity, independent linguistic certification or a Home Assistant runtime test.",
@@ -124,8 +124,8 @@
       "table_identifiers": [],
       "de_sha256": "e1a4eee8158c23266e82632074ec6d46f1bb17d9b4aa99b01aad50e4a2bda76b",
       "de_example_blocks": 14,
-      "fr_sha256": "29c66e3877b6f4625c52bbbfe339ae456fc4c08e6cf0d3d2bde48c21fc652a4d",
-      "fr_example_blocks": 12
+      "fr_sha256": "7a73524ed1f0cf000e8a213c5239013e1d9717b5af1f8aecb6fe258d9a8426c3",
+      "fr_example_blocks": 16
     },
     {
       "path": "concepts/application.md",
@@ -160,8 +160,8 @@
       ],
       "de_sha256": "9d1d866f62656a2000d2b4f58cd07382d5c9ff8f72f4ddb52e38c0a1c988d399",
       "de_example_blocks": 26,
-      "fr_sha256": "d40ba108a75354ea45a6374f33dc70d7ab2fbb4ac66de1724546ac727dd975d8",
-      "fr_example_blocks": 28
+      "fr_sha256": "6569703360d48b1febd46dc3d2b2a6cd456f66fcd3bbe4e93c678ae406ca79c7",
+      "fr_example_blocks": 43
     },
     {
       "path": "concepts/index.md",
@@ -178,7 +178,7 @@
       "table_identifiers": [],
       "de_sha256": "9552f75e36ca61cc795d39146580c63fe65ffe7fb80b208b8eac25f303a72108",
       "de_example_blocks": 6,
-      "fr_sha256": "9caa35bf8750d366878e1f9b0aa29d8c2b511e6916f203722aa4139a69af3f54",
+      "fr_sha256": "aff12af332b2b92196dc0f6af92ce635643d465a931a1499f63222bd16ad93dc",
       "fr_example_blocks": 5
     },
     {
@@ -187,7 +187,7 @@
       "table_identifiers": [],
       "de_sha256": "d1d50ace07e6941040ca56b1e550e56f350dc6674ca3a460be72f819b0686bf5",
       "de_example_blocks": 0,
-      "fr_sha256": "33c063f1fbaf8ff1673e7971a36a8ddd8776f2a30c79c9e4c90b0488eb73da6f",
+      "fr_sha256": "2057acc2a83b33d41e59bc87caa5f679995d127e997bf783c82fdd5424e9877f",
       "fr_example_blocks": 0
     },
     {
@@ -214,8 +214,8 @@
       "table_identifiers": [],
       "de_sha256": "88f722aa0105346ef57bcc980f443295536770d4e7f1eb0082423bb43207ed95",
       "de_example_blocks": 1,
-      "fr_sha256": "713f19ae95a20c7423e867f37116bb3a8f97a9ecd612b571e165021a050e676a",
-      "fr_example_blocks": 0
+      "fr_sha256": "c30edbfa53f290e5b9c7d88876de5b6f3d68e523726765d5f09e70dfdd9567c2",
+      "fr_example_blocks": 1
     },
     {
       "path": "developers/cards.md",
@@ -241,8 +241,8 @@
       "table_identifiers": [],
       "de_sha256": "b1555002744fe70a6a904639db40afce3565565c27f1b6f951f34239601bfd52",
       "de_example_blocks": 1,
-      "fr_sha256": "ca58408b54406bdcb55d80d4dcedfd3add533e8e9c838716a92cec525cc74fe1",
-      "fr_example_blocks": 0
+      "fr_sha256": "6a2f22415d006e6febda62c57692cced4a7cbb864931125dcf30c652abc19b23",
+      "fr_example_blocks": 1
     },
     {
       "path": "extras/always-patch-ha-card.md",
@@ -259,8 +259,8 @@
       "table_identifiers": [],
       "de_sha256": "aebb6b5aa29fe223ea63f45392819f8c79da1ddf18cf151aed1793971113cfe9",
       "de_example_blocks": 4,
-      "fr_sha256": "a8973eacb0c1d99147f1c5e8aa63d16baa33f02a68fb40df5655030d20342c27",
-      "fr_example_blocks": 4
+      "fr_sha256": "0690f8046dfc47ae4ab93283986da0a980c8df7b21b2db17e6495695e63c909d",
+      "fr_example_blocks": 8
     },
     {
       "path": "extras/disable-entity-picture-image-override.md",
@@ -277,7 +277,7 @@
       "table_identifiers": [],
       "de_sha256": "cde67ad767edbaea46806437a283121eab6cd690a8bc8e98d046fe60dff793df",
       "de_example_blocks": 0,
-      "fr_sha256": "6f28278aa7feb3c24dc3199b34b1dda714363a7fb95f940c027432b0521af1b2",
+      "fr_sha256": "fab4b421845df50d535414d5f25470f1d6c3a6193aa70d125d4f88931db93f40",
       "fr_example_blocks": 0
     },
     {
@@ -286,8 +286,8 @@
       "table_identifiers": [],
       "de_sha256": "099b947501ecec076cb1f8853b05e99d14234d91bf1ed9724f8750876cf8d03b",
       "de_example_blocks": 6,
-      "fr_sha256": "0ab4c7a86b1cce2fea11676651e120da0c1167e8f5d16dae67821caac6f8aa2d",
-      "fr_example_blocks": 4
+      "fr_sha256": "af4a2c6acbb0cb7781e417732f9a024ebf824718d04c6952b9e1a15f84fef629",
+      "fr_example_blocks": 7
     },
     {
       "path": "extras/hash-template-variable-updates.md",
@@ -401,8 +401,8 @@
       ],
       "de_sha256": "b60604d617c6157e87a07e7a2b7508a27b2e1756747b53e3c8df336f02b89b54",
       "de_example_blocks": 39,
-      "fr_sha256": "c05864e45e018ee7b2603db7572ef240618a14423e6bbd708c2bcff934ed99f0",
-      "fr_example_blocks": 37
+      "fr_sha256": "706d83493829dfb4c7952e5e214dc59a3e9a98c1266bd52a546c60514c3ab4bc",
+      "fr_example_blocks": 75
     },
     {
       "path": "forge/foundries.md",
@@ -410,8 +410,8 @@
       "table_identifiers": [],
       "de_sha256": "2b5450d9a0c811a21aab42ef725d49e847f8a612c9a0ac0f3f11fe57d547aa17",
       "de_example_blocks": 29,
-      "fr_sha256": "d41369e0a89d33d6d5db37d92916ec753d8454632ffbe125d39d322f2cbc1e8a",
-      "fr_example_blocks": 29
+      "fr_sha256": "71e3640eb7b627f806e947dc55a07e7e5431c6f4b89affefc2aac0600602c2b1",
+      "fr_example_blocks": 44
     },
     {
       "path": "forge/index.md",
@@ -467,8 +467,8 @@
       ],
       "de_sha256": "9935009fbd0074306ae13ebb871a1081a6bb8cd08f4d54726a64fec55a1330f1",
       "de_example_blocks": 23,
-      "fr_sha256": "f30d2846a95c195ba3a320f55e58edbc2d24dcddf7344c15672ea66f94af6363",
-      "fr_example_blocks": 16
+      "fr_sha256": "bd78c0b931cc57e356d3dd0bf32a6f89a8f77e0a71d7b02ea302157898ef7500",
+      "fr_example_blocks": 39
     },
     {
       "path": "forge/sparks/badge.md",
@@ -558,8 +558,8 @@
       ],
       "de_sha256": "70b735b540f3e6be5fc35395b3943c9f104d52e5a2113217a0aefa4adb7315a0",
       "de_example_blocks": 17,
-      "fr_sha256": "6e36474668865f22de2c526288e140881771a900aed28e568f5c9d7427180a86",
-      "fr_example_blocks": 14
+      "fr_sha256": "6045aea7b0e3220e9dc303679e2419228c4cae776414a4f66b5f00168bfe7f8d",
+      "fr_example_blocks": 31
     },
     {
       "path": "forge/sparks/form.md",
@@ -627,8 +627,8 @@
       ],
       "de_sha256": "b5e5404045ade1cd48203b534c0c0ad4232febecea69712a499e656af736b55b",
       "de_example_blocks": 11,
-      "fr_sha256": "4ed7311f81c0be5d3c59cc2192dc6f47437c8fb0f5ef661b17cde93927d3c98b",
-      "fr_example_blocks": 7
+      "fr_sha256": "290fc72e3defa2851c84c9aa0b89ddcae657541b65e4442e7a69bd3d7e233f6f",
+      "fr_example_blocks": 18
     },
     {
       "path": "forge/sparks/index.md",
@@ -781,8 +781,8 @@
       ],
       "de_sha256": "c6efc29acf4f3f897d128f6abef0b3ef994027e4fc8ff0e1ec70c5c3b8fc0afb",
       "de_example_blocks": 14,
-      "fr_sha256": "360218827f76a10942f7d41d3e02a2a528c1719cac6eef470368636983f78bf5",
-      "fr_example_blocks": 9
+      "fr_sha256": "05cc694b6daa07f7bf66b98205a700f468dc3021a235f0c1b789cfe3f52e9b9e",
+      "fr_example_blocks": 23
     },
     {
       "path": "forge/sparks/more-info.md",
@@ -806,8 +806,8 @@
       ],
       "de_sha256": "cce0f15325273964acf7136f065077db8c6ec6836ea2bf1b8f38acb56489234e",
       "de_example_blocks": 9,
-      "fr_sha256": "030507b317648dacecc559042be31ff5b22e897b58fccecd470d8c6a808db1c8",
-      "fr_example_blocks": 6
+      "fr_sha256": "7add0a7abd043cef822d82c61ca8690edf6edc8219890c4c527a7ff9b20d7e3b",
+      "fr_example_blocks": 15
     },
     {
       "path": "forge/sparks/overlay-icon.md",
@@ -838,8 +838,8 @@
       ],
       "de_sha256": "0b2b4fc6206cb214b3a08d1ca17fb7426f115048af675dcca685956796133cae",
       "de_example_blocks": 12,
-      "fr_sha256": "f6e047c0237abfd3da7d25bbe927b2d6b1c30e12ca4f5c683c8a6c9c26f00771",
-      "fr_example_blocks": 7
+      "fr_sha256": "7b318b580821421483170b429629e42c970bc58c261ea52754582ef91a6393e9",
+      "fr_example_blocks": 19
     },
     {
       "path": "forge/sparks/search.md",
@@ -860,8 +860,8 @@
       ],
       "de_sha256": "c0e0591252960d17f3b91037fb4ad4569c7df080e253bff88937e2461adb1152",
       "de_example_blocks": 10,
-      "fr_sha256": "93e58f8ccff52c2353e1cacdd040631f022d4e519631e0566f8d754f75afa5fc",
-      "fr_example_blocks": 5
+      "fr_sha256": "a57e29755ab562297e1626ca1c47b2b09c881d97f18c6bf220395785d3d117d8",
+      "fr_example_blocks": 15
     },
     {
       "path": "forge/sparks/state-badge.md",
@@ -877,8 +877,8 @@
       ],
       "de_sha256": "af68cd350506a6f839146c78406c2216785b94b843db6aa3e5c9338340b8ff27",
       "de_example_blocks": 8,
-      "fr_sha256": "935b137c264ef7f285b62de82b529cef20c81154c5adf9caed3090b532920a02",
-      "fr_example_blocks": 6
+      "fr_sha256": "182370fe1060f1224065341107526e7df271d7328de9715197e7eb462bd3cd52",
+      "fr_example_blocks": 14
     },
     {
       "path": "forge/sparks/theme.md",
@@ -955,7 +955,7 @@
       ],
       "de_sha256": "7fb3d8c99dc27b8ff61aa552204421e675fcda366b44eb51c17cbd7b202653d7",
       "de_example_blocks": 6,
-      "fr_sha256": "a9e98bdfa9eb134d406fa3a3a9ba05fb9997a85918e9f46abf6926764bb6285e",
+      "fr_sha256": "d6f1801f1f94855b17bc03d400755a9cf95b254bc636b8b8324fec5944417af0",
       "fr_example_blocks": 6
     },
     {
@@ -1054,8 +1054,8 @@
       "table_identifiers": [],
       "de_sha256": "8da5e47a10bf5606ccde757ef36db73960c6e317a3abe4d3fdeb0d5f82895fda",
       "de_example_blocks": 1,
-      "fr_sha256": "de6891b9bf62b4d80a051bddfdd4f14970be4e7de99facb1d175a63231071b71",
-      "fr_example_blocks": 0
+      "fr_sha256": "119b28c69956efb04a9057234817198a3742fdb70fce4b73fe40ad92c204206f",
+      "fr_example_blocks": 1
     },
     {
       "path": "using/other.md",
@@ -1098,8 +1098,8 @@
       ],
       "de_sha256": "0aa36c5fd0b58096b824c70c3e9ea03b2f2861717bd64df0506367833861ca62",
       "de_example_blocks": 19,
-      "fr_sha256": "8a114a767adf881fa7ab8f1bda5c35038f7e71adf98f895b155ed7ee58638f04",
-      "fr_example_blocks": 19
+      "fr_sha256": "ce9ff794ce85a1d89104430a6f990498eea5ef7fa9849087826b11c95ebce54b",
+      "fr_example_blocks": 32
     },
     {
       "path": "using/view-backgrounds.md",

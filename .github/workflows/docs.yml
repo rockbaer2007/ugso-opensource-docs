@@ -47,6 +47,9 @@ jobs:
       - name: Ergänzte Übersetzungen und technische Beispiele prüfen
         run: python scripts/check-translation-completion.py
 
+      - name: Geprüfte Inhaltsunterschiede und Paketübersichten prüfen
+        run: python scripts/check-documentation-review.py
+
       - name: UIX-Codebeispiele und Sprachverweise prüfen
         run: python scripts/check-uix-docs.py
 

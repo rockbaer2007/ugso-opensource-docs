@@ -4,6 +4,12 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Revue du contenu du 27 octobre 2026
+
+Les points restants de l’inventaire DE/EN/FR ont reçu une [évaluation individuelle](/documentation-review.json). L’aperçu anglais canonique est conservé. Deux paragraphes contradictoires sur le cache ont été corrigés d’après l’implémentation : `clear-cache` conserve `localStorage` et l’identifiant Browser Mod. Le relevé des sources et du code indique explicitement ces corrections rédactionnelles.
+
+Dix-huit pages françaises contiennent 199 configurations complémentaires issues des exemples allemands, avec des titres français et des valeurs techniques inchangées. Les explications manquantes sur les thèmes, Foundries, chemins DOM et surcharges par navigateur ont été ajoutées ; un paragraphe de thème encore anglais a été traduit. Les versions historiques et structures rédactionnelles différentes sont classées comme différences examinées. Base stable et aperçu canonique restent distincts. Cette revue documentaire n’est pas un nouveau test d’exécution Home Assistant.
+
 Cette documentation française est maintenue à partir de la documentation UIX canonique en anglais. Les pages principales, le démarrage rapide et les aperçus de UIX Styling, Forge, Broker et Extras sont déjà disponibles en français. La section complète **UIX Broker** est également disponible en français.
 
 ## Vérification du contenu du 26 octobre 2026

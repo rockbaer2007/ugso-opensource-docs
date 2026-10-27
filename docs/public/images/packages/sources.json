@@ -1,0 +1,128 @@
+{
+  "projects/dashboard-user-manager": {
+    "asset": "/images/packages/projects-dashboard-user-manager.png",
+    "source": "ugso-ha-mqtt-addons/dashboard_user_manager/icon.png",
+    "hash_format": "bytes",
+    "sha256": "634e2f227b2d1a344bb388c1802349ed9f77f42300bc231a6863c78aeab0528b"
+  },
+  "projects/callmebot": {
+    "asset": "/images/packages/projects-callmebot.png",
+    "source": "ugso-ha-mqtt-addons/callmebot/icon.png",
+    "hash_format": "bytes",
+    "sha256": "0e8da0bc10b6578c255cf1e02579291db413a328aada7fca5cdc8579142d7330"
+  },
+  "projects/callmebot-signal": {
+    "asset": "/images/packages/projects-callmebot-signal.png",
+    "source": "ugso-ha-mqtt-addons/callmebot_signal/icon.png",
+    "hash_format": "bytes",
+    "sha256": "81cdc8780178de58947ccf5e8e1b138d5f3eb22cfa9435ff942bd26f5c65cfd7"
+  },
+  "projects/blocks-for-ha": {
+    "asset": "/images/packages/projects-blocks-for-ha.png",
+    "source": "ugso-ha-mqtt-addons/blocks_for_ha/icon.png",
+    "hash_format": "bytes",
+    "sha256": "d23b02176cc320867008c9a578a7606213ab5e56763a830bf2abe574d23383b8"
+  },
+  "projects/grafik-visual-studio": {
+    "asset": "/images/packages/projects-grafik-visual-studio.png",
+    "source": "ugso-ha-mqtt-addons/ha_grafik_visual_studio/icon.png",
+    "hash_format": "bytes",
+    "sha256": "e686e7f48fb4ecf6bb316b3dec134a7412fb58f9c69322812df70d271a8c22cb"
+  },
+  "projects/mqtt-client": {
+    "asset": "/images/packages/projects-mqtt-client.png",
+    "source": "ugso-ha-mqtt-addons/mqtt_client/icon.png",
+    "hash_format": "bytes",
+    "sha256": "04d2b3add2d21db89f3ea3cf29fb6a3d0c571bfadb8f366ca2fda83e7a5d19cc"
+  },
+  "projects/fritzbox-to-mqtt": {
+    "asset": "/images/packages/projects-fritzbox-to-mqtt.png",
+    "source": "ugso-ha-mqtt-addons/fritzbox_tr064_tam/icon.png",
+    "hash_format": "bytes",
+    "sha256": "784d44a517fadf6f2ed58186da5420e4e95a620e54de71c8e030b8cff19aef85"
+  },
+  "projects/heizoel-to-mqtt": {
+    "asset": "/images/packages/projects-heizoel-to-mqtt.png",
+    "source": "ugso-ha-mqtt-addons/heizoel_to_mqtt/icon.png",
+    "hash_format": "bytes",
+    "sha256": "12ec1b027c4bcd1ec7fb42f6f1d51c03dc3b2a2e800b334d494572900ae716bf"
+  },
+  "projects/parcel-to-mqtt": {
+    "asset": "/images/packages/projects-parcel-to-mqtt.png",
+    "source": "ugso-ha-mqtt-addons/parcel_to_mqtt/icon.png",
+    "hash_format": "bytes",
+    "sha256": "65e7fbb6831a2a54255181fe9cd130def2169d1fc5c0e689490b79cb09bb9dfe"
+  },
+  "eep/ini-edit-translate-2026": {
+    "asset": "/images/packages/eep-ini-edit-translate-2026.ico",
+    "source": "ini-edit-translate-2026/Ini Edit - Translate/iniedit.ico",
+    "hash_format": "bytes",
+    "sha256": "629f9a10bfa0605576decc5e15a3b7e052067cd2a5babaff33eca4de3d550681"
+  },
+  "eep/projektduplicator-2026": {
+    "asset": "/images/packages/eep-projektduplicator-2026.ico",
+    "source": "projektduplicator-2026/Projektduplicator_2017/HN_Duplicator.ico",
+    "hash_format": "bytes",
+    "sha256": "a28a8ff70f2d7db0c801dae86aca472c98c5e60f9983257e773d9ef1a2f13416"
+  },
+  "projects/atlas": {
+    "asset": "/images/packages/projects-atlas.png",
+    "source": "atlas-homeassistant-addon-repository/atlas/icon.png",
+    "hash_format": "bytes",
+    "sha256": "5c334bedf30636df46d02c27a290b26145a2fbc40507246d28f00afddcfcc4c5"
+  },
+  "projects/ultimate-timer": {
+    "asset": "/images/packages/projects-ultimate-timer.png",
+    "source": "ha-ultimate-timer-blueprint/icon.png",
+    "hash_format": "bytes",
+    "sha256": "22c8e35c0255744da13cf0e8ee78da547e208b88d1637f15487b3f6f9ab00f52"
+  },
+  "projects/hadash": {
+    "asset": "/images/packages/projects-hadash.png",
+    "source": "HADash/src/HADash.App/Resources/dashboards.png",
+    "hash_format": "bytes",
+    "sha256": "a4a86f1b2df5742ee9f1036f28ef21e3fcce1ba9d0e447907140fa74efabfe4e"
+  },
+  "sammlung/ha-automation-exporter": {
+    "asset": "/images/packages/sammlung-ha-automation-exporter.ico",
+    "source": "ha-automation-exporter/assets/ha-automation-exporter.ico",
+    "hash_format": "bytes",
+    "sha256": "57be800cfe09bd84bc20335e049d4683a8642fd0c6a61f6a2454a0335536c888"
+  },
+  "projects/atlas-plugins/icon-library": {
+    "asset": "/images/packages/projects-atlas-plugins-icon-library.svg",
+    "source": "atlas-icon-library-plugin/plugins/atlas-plugin/icon.svg",
+    "hash_format": "UTF-8 with normalized LF",
+    "sha256": "985c425ff77f5194516155cf06a2d7fa65093a735ef1462072ff6eeeddf2c256"
+  },
+  "projects/atlas-plugins/icon-studio": {
+    "asset": "/images/packages/projects-atlas-plugins-icon-studio.svg",
+    "source": "atlas-icon-studio-plugin/plugins/icon-studio/icon.svg",
+    "hash_format": "UTF-8 with normalized LF",
+    "sha256": "58678c161f7baf577cef4ac2ce4552c12ef0c2a416291fad41caf1617825d22f"
+  },
+  "projects/atlas-plugins/homeassistant-card-editor": {
+    "asset": "/images/packages/projects-atlas-plugins-homeassistant-card-editor.svg",
+    "source": "atlas/atlas-plugins/homeassistant-card-editor/icon.svg",
+    "hash_format": "UTF-8 with normalized LF",
+    "sha256": "e098ce5ca8cf6e5742751c987ff86247385c7e6b933947a4f0864d3a33f59b49"
+  },
+  "projects/atlas-plugins/terminal": {
+    "asset": "/images/packages/projects-atlas-plugins-terminal.svg",
+    "source": "atlas/atlas-plugins/terminal/icon.svg",
+    "hash_format": "UTF-8 with normalized LF",
+    "sha256": "a671027de753e34900da74411af2cba2c90518156ea7e020c1ff1434448853e9"
+  },
+  "projects/atlas-plugins/file-studio": {
+    "asset": "/images/packages/projects-atlas-plugins-file-studio.svg",
+    "source": "atlas/atlas-plugins/file-studio/icon.svg",
+    "hash_format": "UTF-8 with normalized LF",
+    "sha256": "10d249a061811180928f67b99be826a0ff8f3199e9b25707fb9423274512f819"
+  },
+  "projects/atlas-plugins/automation-extractor": {
+    "asset": "/images/packages/projects-atlas-plugins-automation-extractor.svg",
+    "source": "atlas/atlas-plugins/automation-exporter-editor/icon.svg",
+    "hash_format": "UTF-8 with normalized LF",
+    "sha256": "7200eb40fa4d3e38dc011bf7290aa08654d900e0fafd3f5f41abc632bfe24272"
+  }
+}

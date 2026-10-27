@@ -421,3 +421,237 @@ element:
 ```
 
 ![Exemple de groupes du filtre d'entités du spark Map](../../assets/page-assets/forge/sparks/map-entity-filter-groups.png)
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/map). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Utilisation de base {#reference-example-1}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: map
+      memory: true
+      fit_map: true
+element:
+  type: map
+  entities:
+    - person.max
+    - device_tracker.phone
+```
+
+### 2. `fit_map` avec Auto-Entities {#reference-example-2}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: map
+      fit_map: true
+element:
+  type: custom:auto-entities
+  card:
+    type: map
+  filter:
+    include:
+      - domain: person
+```
+
+### 3. Visite avec les valeurs par défaut {#reference-example-3}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: map
+      tour: true
+element:
+  type: map
+  entities:
+    - person.max
+    - person.erika
+```
+
+### 4. Visite avec une liste personnalisée de points d’intérêt {#reference-example-4}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: map
+      tour:
+        period: 20s
+        zoom: 15
+        poi:
+          - entity: person.max
+          - latitude: 50.356
+            longitude: 7.589
+            zoom: 13
+element:
+  type: map
+  entities:
+    - person.max
+```
+
+### 5. Styles du bouton de visite {#reference-example-5}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: map
+      tour: true
+element:
+  type: map
+  entities:
+    - person.max
+uix:
+  style: |
+    :host {
+      --uix-map-tour-icon-background: var(--card-background-color);
+      --uix-map-tour-icon-color: var(--primary-color);
+    }
+```
+
+### 6. Curseur d’historique {#reference-example-6}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: map
+      hours_to_show:
+        min: 0
+        max: 48
+        step: 1
+element:
+  type: map
+  hours_to_show: 6
+  entities:
+    - device_tracker.phone
+```
+
+### 7. Filtre d’entités {#reference-example-7}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: map
+      entity_filter:
+        label: Filter
+        group:
+          persons: Personen
+          trackers: Tracker
+          zones: Zonen
+element:
+  type: map
+  entities:
+    - person.max
+    - device_tracker.phone
+    - zone.home
+```
+
+### 8. Détails de `memory` {#reference-example-8}
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      memory: true
+```
+
+### 9. Détails de `fit_map` {#reference-example-9}
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      fit_map: true
+```
+
+### 10. Visite avec entités et coordonnées {#reference-example-10}
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      tour:
+        period: 15s
+        zoom: 14
+        poi:
+          - entity: person.max
+          - entity: device_tracker.car
+            zoom: 16
+          - latitude: 50.356
+            longitude: 7.589
+            zoom: 13
+```
+
+### 11. Positionner le curseur {#reference-example-11}
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      hours_to_show:
+        min: 0
+        max: 72
+        step: 6
+        position:
+          bottom: 12
+          left: 12
+```
+
+### 12. Filtre sans libellé {#reference-example-12}
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      entity_filter:
+        label: ""
+        icon: mdi:filter
+        position:
+          top: 12
+          right: 12
+```
+
+### 13. Libellés allemands des groupes de filtres {#reference-example-13}
+
+```yaml
+forge:
+  sparks:
+    - type: map
+      entity_filter:
+        group:
+          persons: Personen
+          trackers: Geraete
+          zones: Zonen
+```
+
+### 14. Styles de toutes les surimpressions {#reference-example-14}
+
+```yaml
+uix:
+  style: |
+    :host {
+      --uix-map-tour-icon-background: var(--card-background-color);
+      --uix-map-slider-background: var(--card-background-color);
+      --uix-map-entity-filter-background: var(--card-background-color);
+      --uix-map-slider-box-shadow: var(--ha-card-box-shadow);
+      --uix-map-entity-filter-box-shadow: var(--ha-card-box-shadow);
+    }
+```
+
+::::

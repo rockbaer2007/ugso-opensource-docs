@@ -31,7 +31,9 @@ UIX action `data:` object parameters are as required by the Home Assistant event
 
 ## `clear-cache` - clearing Home Assistant Frontend cache
 
-Clears the Home Assistant Frontend Application cache and reloads the Browser - localStorage remains untouched. This can be very convenient especially for devices where the option is hidden in a debugging menu and will also clear more than just the Frontend Application cache (e.g. localStorage which clears out many stored items like Browser Mod Browser ID).
+Clears the Home Assistant frontend application cache and reloads the browser. **`localStorage` remains untouched**, including the Browser Mod browser ID. This is useful on devices where the cache control is hidden in a debugging menu; it does not delete all browser or app data.
+
+Editorial clarification of contradictory upstream prose: verified against the [reviewed `clear_cache()` implementation](https://github.com/Lint-Free-Technology/uix/blob/26e54e6d4973231a393933e6479ed1b03cc86cd3/src/ll-custom-actions.ts#L224-L242).
 
 | config | setting | default | description |
 | --- | --- | --- | --- |

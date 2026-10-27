@@ -10,11 +10,11 @@ Dieser Bereich sammelt Home-Assistant-Add-ons, Apps, MQTT-Brücken und laufende 
 
 | Projekt | Beschreibung |
 | --- | --- |
-| [Blocks for HA](/projects/blocks-for-ha/) | Experimentelle HA-App: native Automationen mit visuellen Blocks erstellen; Ingress, YAML-Export/-Import und erweiterbare Verzweigungen. |
-| [FRITZ!Box to MQTT](/projects/fritzbox-to-mqtt/) | FRITZ!Box-Daten per MQTT Discovery in Home Assistant. |
-| [Heizöl to MQTT](/projects/heizoel-to-mqtt/) | Heizölpreise per MQTT Discovery in Home Assistant. |
-| [Parcel to MQTT](/projects/parcel-to-mqtt/) | Entwicklung eingestellt. Alternative: [Parcel Tracker](https://github.com/SoerenKaiser99/parcel_tracker). Dokumentation als Archiv erhalten. |
-| [MQTT-Client](/projects/mqtt-client/) | Ausgewählte HA-Werte live an einen externen Broker senden und unterstützte Entitäten steuern. Seit 0.1.16 mit Status, bestätigter Retain-Bereinigung, Einstellungssicherung und eigenen TLS-Zertifikaten; alte Einstellungen bleiben gültig. |
+| <img class="package-icon" src="/images/packages/projects-blocks-for-ha.png" width="32" height="32" alt="" aria-hidden="true"> [Blocks for HA](/projects/blocks-for-ha/) | Experimentelle HA-App: native Automationen mit visuellen Blocks erstellen; Ingress, YAML-Export/-Import und erweiterbare Verzweigungen. |
+| <img class="package-icon" src="/images/packages/projects-fritzbox-to-mqtt.png" width="32" height="32" alt="" aria-hidden="true"> [FRITZ!Box to MQTT](/projects/fritzbox-to-mqtt/) | FRITZ!Box-Daten per MQTT Discovery in Home Assistant. |
+| <img class="package-icon" src="/images/packages/projects-heizoel-to-mqtt.png" width="32" height="32" alt="" aria-hidden="true"> [Heizöl to MQTT](/projects/heizoel-to-mqtt/) | Heizölpreise per MQTT Discovery in Home Assistant. |
+| <img class="package-icon" src="/images/packages/projects-parcel-to-mqtt.png" width="32" height="32" alt="" aria-hidden="true"> [Parcel to MQTT](/projects/parcel-to-mqtt/) | Entwicklung eingestellt. Alternative: [Parcel Tracker](https://github.com/SoerenKaiser99/parcel_tracker). Dokumentation als Archiv erhalten. |
+| <img class="package-icon" src="/images/packages/projects-mqtt-client.png" width="32" height="32" alt="" aria-hidden="true"> [MQTT-Client](/projects/mqtt-client/) | Ausgewählte HA-Werte live an einen externen Broker senden und unterstützte Entitäten steuern. Seit 0.1.16 mit Status, bestätigter Retain-Bereinigung, Einstellungssicherung und eigenen TLS-Zertifikaten; alte Einstellungen bleiben gültig. |
 
 ## Add-on-Repository
 

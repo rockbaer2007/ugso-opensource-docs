@@ -17,4 +17,12 @@ This section is for Lovelace and HACS cards that are maintained with examples.
 | bar-card | review later | Repository is available locally and can be evaluated next. |
 | sidebar-card | review later | Repository is available locally and can be evaluated next. |
 
+## Separate UIX reference
+
 UIX is not listed as a regular HA Cards entry here. It remains a separate documentation area.
+
+- [UIX English reference](/en/projects/uix/)
+
+## Documentation checklist
+
+A card guide should include HACS and manual installation, a quick start, a complete configuration reference, practical Home Assistant examples, version/source/license information and a clear unofficial-documentation notice for external projects.

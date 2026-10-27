@@ -10,7 +10,7 @@ This section collects Home Assistant blueprints and reusable automation template
 
 | Project | Description |
 | --- | --- |
-| [Ultimate Timer](/en/projects/ultimate-timer/) | Home Assistant blueprint for reusable timers. |
+| <img class="package-icon" src="/images/packages/projects-ultimate-timer.png" width="32" height="32" alt="" aria-hidden="true"> [Ultimate Timer](/en/projects/ultimate-timer/) | Home Assistant blueprint for reusable timers. |
 
 ## Documentation Goals
 

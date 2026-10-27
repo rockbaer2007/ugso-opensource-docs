@@ -8,19 +8,25 @@
       "content-present": 229,
       "existing_pages": 229,
       "unmatched_pages": 0,
-      "review_signals": 0
+      "review_signals": 0,
+      "reviewed_findings": 0,
+      "open_review_signals": 0
     },
     "en": {
       "content-present": 229,
       "existing_pages": 229,
       "unmatched_pages": 0,
-      "review_signals": 74
+      "review_signals": 65,
+      "reviewed_findings": 74,
+      "open_review_signals": 0
     },
     "fr": {
       "content-present": 229,
       "existing_pages": 229,
       "unmatched_pages": 0,
-      "review_signals": 47
+      "review_signals": 30,
+      "reviewed_findings": 47,
+      "open_review_signals": 0
     }
   },
   "unmatched_pages": {
@@ -537,26 +543,28 @@
         "de": {
           "path": "eep/index.md",
           "status": "content-present",
-          "sha256": "5877d55e919113a1d9f75c587800001a5fa447067caf65b9b34826b3e4c61bb9",
-          "words": 222,
-          "headings": 3,
+          "sha256": "cf1202bbcfd6744faa774ad153886025471e85a842f1cb5f18d9e87a406199e7",
+          "words": 441,
+          "headings": 4,
           "examples": 0,
           "versions": [
             "2.1.37",
-            "2.1.38"
+            "2.1.38",
+            "2.1.55"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/eep/index.md",
           "status": "content-present",
-          "sha256": "b1eda2fd75c39f4d4410bf2efe3a75e9913b3c132cd023b89b47e7a530953786",
-          "words": 220,
-          "headings": 3,
+          "sha256": "0450eb0a654a7d038b0f0855c2fe871d15a7158abad0de42047ff5bd24d1265c",
+          "words": 445,
+          "headings": 4,
           "examples": 0,
           "versions": [
             "2.1.37",
-            "2.1.38"
+            "2.1.38",
+            "2.1.55"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -570,13 +578,14 @@
         "fr": {
           "path": "fr/eep/index.md",
           "status": "content-present",
-          "sha256": "e0cf5d1317277560751991372d28cf18d55989eb2aeff7bf488c2668d62d6a08",
-          "words": 246,
-          "headings": 3,
+          "sha256": "c5abf4b84cecf65a0f5154ebe0eeeae7841d1db7343b5110b71c9b40372c2504",
+          "words": 492,
+          "headings": 4,
           "examples": 0,
           "versions": [
             "2.1.37",
-            "2.1.38"
+            "2.1.38",
+            "2.1.55"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -824,7 +833,7 @@
         "de": {
           "path": "projects-diverse/index.md",
           "status": "content-present",
-          "sha256": "5200ea1a02ff40319c4596cbddeb43b88004e7274d782888a2a18f42e8b8292a",
+          "sha256": "5a90406efb51bfa48711d031cb871a7226d6f162edf10db90f8a586e5cf7b665",
           "words": 204,
           "headings": 4,
           "examples": 0,
@@ -834,7 +843,7 @@
         "en": {
           "path": "en/projects-diverse/index.md",
           "status": "content-present",
-          "sha256": "be41ae8c32cb94bbef758185fef90bb88676b54cbce1253ef4ce4589077de2fc",
+          "sha256": "ae78e86ebac73806d6f03aa872212acef232f30aa6c659e7a044ccb77e38b6ac",
           "words": 225,
           "headings": 4,
           "examples": 0,
@@ -851,7 +860,7 @@
         "fr": {
           "path": "fr/projects-diverse/index.md",
           "status": "content-present",
-          "sha256": "7ea261f537151ffdd290055a88b6b0bbd8c274a53c50b7707243f88407f11fd5",
+          "sha256": "209e7239085acf3fd4f25862f770077443661a9c1e9cb52c232575f18fd4115f",
           "words": 287,
           "headings": 4,
           "examples": 0,
@@ -873,7 +882,7 @@
         "de": {
           "path": "projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "b4f62ae8d58933d8ec3e7164215966d5704ffbd877ad2a63556c9bbd328868b4",
+          "sha256": "b5bd044e22fc398c3e134b3346228e6b000531500b60ab9963e55e18fff9bfde",
           "words": 594,
           "headings": 7,
           "examples": 1,
@@ -888,7 +897,7 @@
         "en": {
           "path": "en/projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "62207c166ca1028c8189d7ccd765b71e7ca8b2a56250eb1d6c09abdb223f96e2",
+          "sha256": "ed0d91042304485184f0e51300fbe804e9322949f248c5f4cd7ebffa4d1e63dc",
           "words": 631,
           "headings": 7,
           "examples": 1,
@@ -910,7 +919,7 @@
         "fr": {
           "path": "fr/projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "f524f756377a1c6ccbeb20d5aa68a0ad3c473acf07888bba480489c44c4dfbfd",
+          "sha256": "1c1077d1bc064b3b15e727bd48fd9b332aee12115fbbebcec9bdc1a633a1384b",
           "words": 813,
           "headings": 7,
           "examples": 1,
@@ -1660,7 +1669,7 @@
         "de": {
           "path": "projects/atlas-plugins/index.md",
           "status": "content-present",
-          "sha256": "23563be954dbc331206ff7f904530b44c964c8bd8224faec0ea720bd722e571d",
+          "sha256": "5fbefbec2ee3695ea43e9b32ff9993f97bbf3d96a3d0805c4cd7963c0bae61df",
           "words": 815,
           "headings": 9,
           "examples": 0,
@@ -1672,7 +1681,7 @@
         "en": {
           "path": "en/projects/atlas-plugins/index.md",
           "status": "content-present",
-          "sha256": "4fde2f028a7b9698633e1bf8e9aada67e121842ae52a6bc9b505caa9552edd3c",
+          "sha256": "805c8221d8b0499d126a155d5d88cf47e09a6c4c8d4d9586a094a086fd330452",
           "words": 849,
           "headings": 9,
           "examples": 0,
@@ -1691,7 +1700,7 @@
         "fr": {
           "path": "fr/projects/atlas-plugins/index.md",
           "status": "content-present",
-          "sha256": "78cc19587052b3a8db0cc31f4ac70d198d48a4176ba97d4dd5048669836f2558",
+          "sha256": "e88d464304563aed50afd9f0051da5e62e3872048b7d44234225c61d578dc606",
           "words": 915,
           "headings": 9,
           "examples": 0,
@@ -2042,6 +2051,11 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content."
           }
         }
       }
@@ -2171,9 +2185,9 @@
         "fr": {
           "path": "fr/projects/atlas/development-status.md",
           "status": "content-present",
-          "sha256": "c60bc3db56e7d7326eb97de3ef8a1db19f405681c3cb01967e5e512280717494",
-          "words": 7476,
-          "headings": 5,
+          "sha256": "0ac6e46982558b8aed159eb1aabd5c1439f8d23dd106f3ca9fcd6c8d4fdd3c04",
+          "words": 7596,
+          "headings": 7,
           "examples": 0,
           "versions": [
             "0.1.287",
@@ -2229,6 +2243,11 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content."
           }
         }
       }
@@ -2388,7 +2407,7 @@
         "de": {
           "path": "projects/atlas/index.md",
           "status": "content-present",
-          "sha256": "4a79c50b0bd0b812aef022d72ace144a562627648c814a03d2002048ecfe491b",
+          "sha256": "3f24431973b4dc933a0b987a44f028383effbc4e868decc7d140aae77536a78b",
           "words": 182,
           "headings": 2,
           "examples": 0,
@@ -2401,7 +2420,7 @@
         "en": {
           "path": "en/projects/atlas/index.md",
           "status": "content-present",
-          "sha256": "881dfbc5cbda31a9f68bfd08076c1236704a0459cdec7c2718d83a9edaff0941",
+          "sha256": "f3d27e2cfc5d305b8c53861a5ce0c39c652ad16815602f59b37768b3152fcc0f",
           "words": 188,
           "headings": 2,
           "examples": 0,
@@ -2421,7 +2440,7 @@
         "fr": {
           "path": "fr/projects/atlas/index.md",
           "status": "content-present",
-          "sha256": "7a0f6c88e4b8b74c7a790d736d2b8fdb5471df122e87256f2b9ddfa9804524c1",
+          "sha256": "a3bd88d52a93b8e7e498d6fd56c5548e4c8c3da99fbfcfdb2675904975926b58",
           "words": 226,
           "headings": 2,
           "examples": 0,
@@ -2739,13 +2758,14 @@
         "de": {
           "path": "projects/blocks-for-ha/advanced.md",
           "status": "content-present",
-          "sha256": "6fd2aebca4f60a1b7bd3ebae1a2b0431f64fadf30555b4bf888c76ff218db61a",
-          "words": 1565,
+          "sha256": "f40456006bf2ab0574ce26dd1017e9dd89463eb3b989196036506ac90537d0d3",
+          "words": 1594,
           "headings": 7,
           "examples": 0,
           "versions": [
             "0.1.41",
             "0.1.43",
+            "0.1.46",
             "0.1.61"
           ],
           "unresolved_local_references": []
@@ -2766,12 +2786,15 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
-            "versions_only_in_translation": [
-              "0.1.46"
-            ],
+            "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "reference-completed",
+            "reason": "English/French already documented full UI locale handling since 0.1.46. Added the missing matching note to the German reference instead of deleting valid translation content."
           }
         },
         "fr": {
@@ -2790,12 +2813,15 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
-            "versions_only_in_translation": [
-              "0.1.46"
-            ],
+            "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "reference-completed",
+            "reason": "English/French already documented full UI locale handling since 0.1.46. Added the missing matching note to the German reference instead of deleting valid translation content."
           }
         }
       }
@@ -3494,8 +3520,8 @@
         "en": {
           "path": "en/projects/blocks-for-ha/index.md",
           "status": "content-present",
-          "sha256": "6197b13c33ed08160b89ac2e1496ea23f886bdb7398ed050823a2a5e81364c22",
-          "words": 3923,
+          "sha256": "527bed5d3dd91d1f8a4bb9ed449987ab0fe0980d61ba3d2ed05bd202c8c979f1",
+          "words": 3922,
           "headings": 16,
           "examples": 1,
           "versions": [
@@ -3535,6 +3561,7 @@
             "0.1.47",
             "0.1.52",
             "0.1.54",
+            "0.1.58",
             "0.1.59",
             "0.1.6",
             "0.1.60",
@@ -3551,23 +3578,40 @@
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.58"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "corrected",
+            "reason": "Replaced obsolete S-button instructions with gear-only extension since 0.1.58 in EN. Added missing historical FR capabilities, compatibility/migration, Blockly 13.3.0 and local-start commands; recent release notes remain first."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/index.md",
           "status": "content-present",
-          "sha256": "55a6c4ae5d6ccf7322f3f9431831d42fd0d334959e1e9eb734a06128145b29c2",
-          "words": 2292,
-          "headings": 10,
-          "examples": 0,
+          "sha256": "e72ad2cd4de9688b091655cb536c236e830c8b306dfbe0bc7d8b678fd4056bfd",
+          "words": 3100,
+          "headings": 12,
+          "examples": 1,
           "versions": [
+            "0.1.10",
+            "0.1.11",
+            "0.1.12",
+            "0.1.13",
+            "0.1.15",
+            "0.1.16",
+            "0.1.17",
+            "0.1.18",
+            "0.1.19",
+            "0.1.20",
+            "0.1.21",
+            "0.1.23",
+            "0.1.24",
+            "0.1.25",
             "0.1.28",
             "0.1.29",
             "0.1.30",
@@ -3580,6 +3624,7 @@
             "0.1.37",
             "0.1.38",
             "0.1.39",
+            "0.1.4",
             "0.1.40",
             "0.1.41",
             "0.1.42",
@@ -3589,44 +3634,33 @@
             "0.1.47",
             "0.1.52",
             "0.1.54",
+            "0.1.58",
             "0.1.59",
+            "0.1.6",
             "0.1.60",
             "0.1.61",
             "0.1.62",
             "0.1.63",
             "0.1.64",
             "0.1.65",
-            "0.1.66"
+            "0.1.66",
+            "0.1.7",
+            "0.1.8",
+            "0.1.9",
+            "13.3.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.10",
-              "0.1.11",
-              "0.1.12",
-              "0.1.13",
-              "0.1.15",
-              "0.1.16",
-              "0.1.17",
-              "0.1.18",
-              "0.1.19",
-              "0.1.20",
-              "0.1.21",
-              "0.1.23",
-              "0.1.24",
-              "0.1.25",
-              "0.1.4",
-              "0.1.58",
-              "0.1.6",
-              "0.1.7",
-              "0.1.8",
-              "0.1.9",
-              "13.3.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "corrected",
+            "reason": "Replaced obsolete S-button instructions with gear-only extension since 0.1.58 in EN. Added missing historical FR capabilities, compatibility/migration, Blockly 13.3.0 and local-start commands; recent release notes remain first."
           }
         }
       }
@@ -5080,26 +5114,28 @@
         "de": {
           "path": "projects/grafik-visual-studio/interaktiv.md",
           "status": "content-present",
-          "sha256": "1b8620b1e02d863ef26ea2dcca0bd8916da1ff7f9d1126a7c196070137f021c3",
-          "words": 370,
+          "sha256": "59362be5b528426afb01f4566741fd1e09a174b230abf8e76c3eb173215ec334",
+          "words": 429,
           "headings": 4,
           "examples": 0,
           "versions": [
             "0.1.294",
-            "0.1.295"
+            "0.1.295",
+            "0.1.296"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/grafik-visual-studio/interaktiv.md",
           "status": "content-present",
-          "sha256": "0adf6adbbbe1e05512c349b1cdd0b4c5d39cb24f25b7a8644ea31ffd974710fc",
-          "words": 380,
+          "sha256": "68ddb731fc18f29865971cf0a21fa6daa511eda4fad7e19a058837051b2018c1",
+          "words": 438,
           "headings": 4,
           "examples": 0,
           "versions": [
             "0.1.294",
-            "0.1.295"
+            "0.1.295",
+            "0.1.296"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -5125,12 +5161,15 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
-            "versions_only_in_translation": [
-              "0.1.296"
-            ],
+            "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "reference-completed",
+            "reason": "French already contained the documented 0.1.296 support note. Added corresponding German and English notes while preserving real-device testing limits."
           }
         }
       }
@@ -6704,7 +6743,7 @@
         "de": {
           "path": "projects/index.md",
           "status": "content-present",
-          "sha256": "b592ec10e42d2149c9fd2c29e0d0fe04ea65a0a303f4ad266188472bd5a0466d",
+          "sha256": "848a9e03d24ea8f93827ede7c946824fbbad38cfe7e75408b968c9d051b51d2b",
           "words": 191,
           "headings": 5,
           "examples": 0,
@@ -6716,9 +6755,9 @@
         "en": {
           "path": "en/projects/index.md",
           "status": "content-present",
-          "sha256": "ab1a86223502be3387ba36c0f22f6ba53ef65100f86769d29f59f71f93a8f872",
-          "words": 147,
-          "headings": 4,
+          "sha256": "c8f4a6b7b6ae4711d09623a793f3dff7385cd09136f5fc964f5f1a886b741f0d",
+          "words": 206,
+          "headings": 5,
           "examples": 0,
           "versions": [
             "0.3.4"
@@ -6729,13 +6768,18 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained."
           }
         },
         "fr": {
           "path": "fr/projects/index.md",
           "status": "content-present",
-          "sha256": "404d50d18eca67de2233e3bce0f2452dbd6bdb952780dadccc0c0032bd9ababb",
+          "sha256": "d4f08dd1c16e7862472b9ecbcee01984f6c638c98295a3a1e85281d96ca70fa6",
           "words": 244,
           "headings": 5,
           "examples": 0,
@@ -7091,6 +7135,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7110,6 +7159,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -7154,6 +7208,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7175,6 +7234,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -7214,6 +7278,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7233,6 +7302,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -7272,6 +7346,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7291,6 +7370,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -7330,6 +7414,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7349,6 +7438,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -7388,6 +7482,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7407,6 +7506,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -7451,15 +7555,20 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/broker/rules.md",
           "status": "content-present",
-          "sha256": "29c66e3877b6f4625c52bbbfe339ae456fc4c08e6cf0d3d2bde48c21fc652a4d",
-          "words": 1260,
-          "headings": 11,
-          "examples": 12,
+          "sha256": "7a73524ed1f0cf000e8a213c5239013e1d9717b5af1f8aecb6fe258d9a8426c3",
+          "words": 1353,
+          "headings": 16,
+          "examples": 16,
           "versions": [
             "8.3.0-beta.1",
             "8.4.0-beta.9"
@@ -7470,9 +7579,14 @@
               "8.4.0"
             ],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 4 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -7511,6 +7625,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7528,6 +7647,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -7566,15 +7690,20 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/concepts/dom.md",
           "status": "content-present",
-          "sha256": "d40ba108a75354ea45a6374f33dc70d7ab2fbb4ac66de1724546ac727dd975d8",
-          "words": 2258,
-          "headings": 9,
-          "examples": 28,
+          "sha256": "6569703360d48b1febd46dc3d2b2a6cd456f66fcd3bbe4e93c678ae406ca79c7",
+          "words": 2522,
+          "headings": 26,
+          "examples": 43,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
@@ -7582,7 +7711,12 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 15 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -7621,6 +7755,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7686,31 +7825,40 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/contributing.md",
           "status": "content-present",
-          "sha256": "9caa35bf8750d366878e1f9b0aa29d8c2b511e6916f203722aa4139a69af3f54",
-          "words": 1952,
-          "headings": 11,
+          "sha256": "aff12af332b2b92196dc0f6af92ce635643d465a931a1499f63222bd16ad93dc",
+          "words": 2126,
+          "headings": 12,
           "examples": 6,
           "versions": [
             "5.0.1-mydev.1",
             "8.3.0",
-            "8.3.0-beta.1"
+            "8.3.0-beta.1",
+            "9.0.0-mydev.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "9.0.0-mydev.1"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [
               "5.0.1-mydev.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added translation-fork directories, publication metadata, warning semantics and development-version explanation. Different mydev version numbers are illustrative examples, not different supported releases."
           }
         }
       }
@@ -7731,8 +7879,8 @@
         "en": {
           "path": "en/projects/uix/debugging/cache.md",
           "status": "content-present",
-          "sha256": "42be9a21d0f9a4b34d29da9b714ae3bf0a5b756bd3e7eca846dc9ec443d71929",
-          "words": 180,
+          "sha256": "217dd71b2505be7be109499e7f3dad7fb26627be53d4a017c8c6e3e29a2dc7d2",
+          "words": 202,
           "headings": 1,
           "examples": 0,
           "versions": [
@@ -7749,13 +7897,18 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "corrected",
+            "reason": "Incorrect/contradictory cache-deletion claim corrected against the reviewed implementation; localStorage and Browser Mod identity are preserved."
           }
         },
         "fr": {
           "path": "fr/projects/uix/debugging/cache.md",
           "status": "content-present",
-          "sha256": "33c063f1fbaf8ff1673e7971a36a8ddd8776f2a30c79c9e4c90b0488eb73da6f",
-          "words": 93,
+          "sha256": "2057acc2a83b33d41e59bc87caa5f679995d127e997bf783c82fdd5424e9877f",
+          "words": 118,
           "headings": 1,
           "examples": 0,
           "versions": [],
@@ -7766,6 +7919,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "corrected",
+            "reason": "Incorrect/contradictory cache-deletion claim corrected against the reviewed implementation; localStorage and Browser Mod identity are preserved."
           }
         }
       }
@@ -7804,6 +7962,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7859,6 +8022,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -7914,23 +8082,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/debugging/templates.md",
           "status": "content-present",
-          "sha256": "713f19ae95a20c7423e867f37116bb3a8f97a9ecd612b571e165021a050e676a",
-          "words": 94,
-          "headings": 1,
-          "examples": 0,
+          "sha256": "c30edbfa53f290e5b9c7d88876de5b6f3d68e523726765d5f09e70dfdd9567c2",
+          "words": 162,
+          "headings": 3,
+          "examples": 1,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 1 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -7969,6 +8147,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8024,6 +8207,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8079,23 +8267,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/developers/themes.md",
           "status": "content-present",
-          "sha256": "ca58408b54406bdcb55d80d4dcedfd3add533e8e9c838716a92cec525cc74fe1",
-          "words": 92,
-          "headings": 1,
-          "examples": 0,
+          "sha256": "6a2f22415d006e6febda62c57692cced4a7cbb864931125dcf30c652abc19b23",
+          "words": 191,
+          "headings": 4,
+          "examples": 1,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 1 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -8138,6 +8336,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8157,6 +8360,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -8195,15 +8403,20 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/extras/dialog-styling-delay.md",
           "status": "content-present",
-          "sha256": "a8973eacb0c1d99147f1c5e8aa63d16baa33f02a68fb40df5655030d20342c27",
-          "words": 548,
-          "headings": 11,
-          "examples": 4,
+          "sha256": "0690f8046dfc47ae4ab93283986da0a980c8df7b21b2db17e6495695e63c909d",
+          "words": 693,
+          "headings": 20,
+          "examples": 8,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
@@ -8211,7 +8424,12 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 4 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -8250,6 +8468,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8267,6 +8490,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -8305,13 +8533,18 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/extras/disable-icon-styling.md",
           "status": "content-present",
-          "sha256": "6f28278aa7feb3c24dc3199b34b1dda714363a7fb95f940c027432b0521af1b2",
-          "words": 195,
+          "sha256": "fab4b421845df50d535414d5f25470f1d6c3a6193aa70d125d4f88931db93f40",
+          "words": 238,
           "headings": 3,
           "examples": 0,
           "versions": [],
@@ -8322,6 +8555,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Clarified per-entity colour variable, disabled-by-default setting and immediate effect without page reload."
           }
         }
       }
@@ -8360,23 +8598,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/extras/frontend-states-throttling.md",
           "status": "content-present",
-          "sha256": "0ab4c7a86b1cce2fea11676651e120da0c1167e8f5d16dae67821caac6f8aa2d",
-          "words": 800,
-          "headings": 12,
-          "examples": 4,
+          "sha256": "af4a2c6acbb0cb7781e417732f9a024ebf824718d04c6952b9e1a15f84fef629",
+          "words": 891,
+          "headings": 19,
+          "examples": 7,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 3 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -8415,6 +8663,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8470,6 +8723,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8487,6 +8745,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -8575,6 +8838,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8617,8 +8885,8 @@
         "en": {
           "path": "en/projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "0ce838a9695bede0e35877cae6d526cc73c208ffec31982fb5b04b1b730a36f0",
-          "words": 1675,
+          "sha256": "bcd6b4a5e0b2c8d4c6e5180b00fe59ecf7a97abe0fbe0e436a57ac09a31e8e63",
+          "words": 1691,
           "headings": 14,
           "examples": 10,
           "versions": [
@@ -8636,6 +8904,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "corrected",
+            "reason": "Incorrect/contradictory cache-deletion claim corrected against the reviewed implementation; localStorage and Browser Mod identity are preserved."
           }
         },
         "fr": {
@@ -8657,6 +8930,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -8709,6 +8987,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8737,6 +9020,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -8778,15 +9066,20 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "c05864e45e018ee7b2603db7572ef240618a14423e6bbd708c2bcff934ed99f0",
-          "words": 5859,
-          "headings": 40,
-          "examples": 37,
+          "sha256": "706d83493829dfb4c7952e5e214dc59a3e9a98c1266bd52a546c60514c3ab4bc",
+          "words": 6210,
+          "headings": 81,
+          "examples": 75,
           "versions": [
             "8.4.0",
             "9.0.0-beta.0",
@@ -8796,9 +9089,14 @@
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 38 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -8837,15 +9135,20 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/foundries.md",
           "status": "content-present",
-          "sha256": "d41369e0a89d33d6d5db37d92916ec753d8454632ffbe125d39d322f2cbc1e8a",
-          "words": 1789,
-          "headings": 35,
-          "examples": 29,
+          "sha256": "71e3640eb7b627f806e947dc55a07e7e5431c6f4b89affefc2aac0600602c2b1",
+          "words": 2132,
+          "headings": 59,
+          "examples": 44,
           "versions": [
             "8.4.0",
             "9.0.0-beta.0",
@@ -8859,7 +9162,12 @@
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 15 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -8902,6 +9210,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8922,6 +9235,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -8960,6 +9278,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -8977,6 +9300,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -9015,23 +9343,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/background.md",
           "status": "content-present",
-          "sha256": "f30d2846a95c195ba3a320f55e58edbc2d24dcddf7344c15672ea66f94af6363",
-          "words": 2022,
-          "headings": 24,
-          "examples": 16,
+          "sha256": "bd78c0b931cc57e356d3dd0bf32a6f89a8f77e0a71d7b02ea302157898ef7500",
+          "words": 2273,
+          "headings": 48,
+          "examples": 39,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 23 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -9071,6 +9409,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -9132,6 +9475,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -9151,6 +9499,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -9189,23 +9542,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/event.md",
           "status": "content-present",
-          "sha256": "6e36474668865f22de2c526288e140881771a900aed28e568f5c9d7427180a86",
-          "words": 695,
-          "headings": 10,
-          "examples": 14,
+          "sha256": "6045aea7b0e3220e9dc303679e2419228c4cae776414a4f66b5f00168bfe7f8d",
+          "words": 902,
+          "headings": 28,
+          "examples": 32,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 17 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -9244,6 +9607,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -9299,23 +9667,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/grid.md",
           "status": "content-present",
-          "sha256": "4ed7311f81c0be5d3c59cc2192dc6f47437c8fb0f5ef661b17cde93927d3c98b",
-          "words": 1001,
-          "headings": 6,
-          "examples": 7,
+          "sha256": "290fc72e3defa2851c84c9aa0b89ddcae657541b65e4442e7a69bd3d7e233f6f",
+          "words": 1143,
+          "headings": 18,
+          "examples": 18,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 11 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -9354,6 +9732,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -9371,6 +9754,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -9409,6 +9797,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -9470,15 +9863,20 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/map.md",
           "status": "content-present",
-          "sha256": "360218827f76a10942f7d41d3e02a2a528c1719cac6eef470368636983f78bf5",
-          "words": 2706,
-          "headings": 18,
-          "examples": 9,
+          "sha256": "05cc694b6daa07f7bf66b98205a700f468dc3021a235f0c1b789cfe3f52e9b9e",
+          "words": 2887,
+          "headings": 33,
+          "examples": 23,
           "versions": [
             "2026.9.0",
             "8.3.1"
@@ -9487,9 +9885,14 @@
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 14 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -9528,23 +9931,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/more-info.md",
           "status": "content-present",
-          "sha256": "030507b317648dacecc559042be31ff5b22e897b58fccecd470d8c6a808db1c8",
-          "words": 1125,
-          "headings": 12,
-          "examples": 6,
+          "sha256": "7add0a7abd043cef822d82c61ca8690edf6edc8219890c4c527a7ff9b20d7e3b",
+          "words": 1272,
+          "headings": 22,
+          "examples": 15,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 9 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -9583,23 +9996,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/overlay-icon.md",
           "status": "content-present",
-          "sha256": "f6e047c0237abfd3da7d25bbe927b2d6b1c30e12ca4f5c683c8a6c9c26f00771",
-          "words": 1114,
-          "headings": 12,
-          "examples": 7,
+          "sha256": "7b318b580821421483170b429629e42c970bc58c261ea52754582ef91a6393e9",
+          "words": 1285,
+          "headings": 25,
+          "examples": 19,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 12 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -9638,23 +10061,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/search.md",
           "status": "content-present",
-          "sha256": "93e58f8ccff52c2353e1cacdd040631f022d4e519631e0566f8d754f75afa5fc",
-          "words": 674,
-          "headings": 9,
-          "examples": 5,
+          "sha256": "a57e29755ab562297e1626ca1c47b2b09c881d97f18c6bf220395785d3d117d8",
+          "words": 830,
+          "headings": 20,
+          "examples": 15,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 10 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -9693,23 +10126,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/state-badge.md",
           "status": "content-present",
-          "sha256": "935b137c264ef7f285b62de82b529cef20c81154c5adf9caed3090b532920a02",
-          "words": 809,
-          "headings": 4,
-          "examples": 6,
+          "sha256": "182370fe1060f1224065341107526e7df271d7328de9715197e7eb462bd3cd52",
+          "words": 930,
+          "headings": 13,
+          "examples": 14,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 8 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -9748,6 +10191,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -9803,6 +10251,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -9820,6 +10273,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -9868,28 +10326,38 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/tooltip.md",
           "status": "content-present",
-          "sha256": "a9e98bdfa9eb134d406fa3a3a9ba05fb9997a85918e9f46abf6926764bb6285e",
-          "words": 990,
-          "headings": 9,
+          "sha256": "d6f1801f1f94855b17bc03d400755a9cf95b254bc636b8b8324fec5944417af0",
+          "words": 1111,
+          "headings": 10,
           "examples": 6,
-          "versions": [],
+          "versions": [
+            "8.2.0",
+            "8.3.0-beta.6",
+            "8.3.0-beta.8",
+            "8.4.0"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "8.2.0",
-              "8.3.0-beta.6",
-              "8.3.0-beta.8",
-              "8.4.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added historical 8.2.0 versus 8.3-beta/8.4.0 defaults and trigger/open availability; current technical option/default tables retained."
           }
         }
       }
@@ -9928,6 +10396,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -9988,6 +10461,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10048,6 +10526,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10107,6 +10590,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10127,6 +10615,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -10137,9 +10630,9 @@
         "de": {
           "path": "projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "1f4f9aa0632914d344387df3192656da745de6dd1807546c6315fac179e3640e",
-          "words": 2137,
-          "headings": 15,
+          "sha256": "7444a1fb5c26f7fe7a272c37aef4ed42eb3acdb13ae712f7c7f93c391e3b63ff",
+          "words": 2265,
+          "headings": 16,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -10162,9 +10655,9 @@
         "en": {
           "path": "en/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "b9b09fc81644f3778421fa80c0880745cc83c5fb07b368b1b765c50cefaf84cf",
-          "words": 647,
-          "headings": 4,
+          "sha256": "4a3c4c7c2f3ffd6394249edf873c43a854cf9fcfede3fb261562259b7b591232",
+          "words": 769,
+          "headings": 5,
           "examples": 0,
           "versions": [
             "4.2.1",
@@ -10190,14 +10683,19 @@
             "fewer_examples": false,
             "substantially_shorter": true,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Locale-specific review history, not a product reference. German historical version lists and local publication details differ; current canonical revision and full public review records are linked."
           }
         },
         "fr": {
           "path": "fr/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "a7f57ed8018d375d8469c94bf362a7169e5d44121da0e973dcf97d534aa3e74d",
-          "words": 1982,
-          "headings": 12,
+          "sha256": "648cd12dc0782a0c5c3d6a8d11fc9128226c389729f3b34d8956d0c038935527",
+          "words": 2124,
+          "headings": 13,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -10223,6 +10721,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Locale-specific review history, not a product reference. German historical version lists and local publication details differ; current canonical revision and full public review records are linked."
           }
         }
       }
@@ -10262,6 +10765,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10319,6 +10827,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10336,6 +10849,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
           }
         }
       }
@@ -10374,6 +10892,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10432,6 +10955,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10489,6 +11017,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10544,6 +11077,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10599,23 +11137,33 @@
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/using/index.md",
           "status": "content-present",
-          "sha256": "de6891b9bf62b4d80a051bddfdd4f14970be4e7de99facb1d175a63231071b71",
-          "words": 92,
-          "headings": 1,
-          "examples": 0,
+          "sha256": "119b28c69956efb04a9057234817198a3742fdb70fce4b73fe40ad92c204206f",
+          "words": 162,
+          "headings": 3,
+          "examples": 1,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 1 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -10654,6 +11202,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10709,6 +11262,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10764,6 +11322,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -10819,15 +11382,20 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
           "path": "fr/projects/uix/using/themes.md",
           "status": "content-present",
-          "sha256": "8a114a767adf881fa7ab8f1bda5c35038f7e71adf98f895b155ed7ee58638f04",
-          "words": 1470,
-          "headings": 11,
-          "examples": 19,
+          "sha256": "ce9ff794ce85a1d89104430a6f990498eea5ef7fa9849087826b11c95ebce54b",
+          "words": 1704,
+          "headings": 26,
+          "examples": 32,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10835,7 +11403,12 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added 13 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
           }
         }
       }
@@ -10874,6 +11447,11 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
           }
         },
         "fr": {
@@ -12361,7 +12939,7 @@
         "de": {
           "path": "sammlung/ha-apps.md",
           "status": "content-present",
-          "sha256": "413c38adf134976fc2374a60544996990c5ce6be3239d83a58ab1aed6f3d7db5",
+          "sha256": "a3f0289f063bb40b922a8a88d7a47778f98936b84aa4ff1b52092956896e753f",
           "words": 154,
           "headings": 3,
           "examples": 1,
@@ -12373,9 +12951,9 @@
         "en": {
           "path": "en/collection/ha-apps.md",
           "status": "content-present",
-          "sha256": "c90e4ba1ab65d22eb8dae400cba22fb5ca81020865c00eb2c99cf4ab4c673f9b",
-          "words": 155,
-          "headings": 1,
+          "sha256": "3835c2300659adfa6e82b3f5122f6da5d2a699aebbb3f8bdf46257fccd54ec4a",
+          "words": 168,
+          "headings": 3,
           "examples": 1,
           "versions": [
             "0.1.16"
@@ -12386,13 +12964,18 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained."
           }
         },
         "fr": {
           "path": "fr/collection/ha-apps.md",
           "status": "content-present",
-          "sha256": "7c2ab4b19a3dd652249f4cdeb9962b473b52197115a481c9232de89ba783529f",
+          "sha256": "1d491d6c7d750142e77558a8777db4ebfc0eaf3d20a5cd70cbc877955e46257e",
           "words": 226,
           "headings": 3,
           "examples": 1,
@@ -12471,7 +13054,7 @@
         "de": {
           "path": "sammlung/ha-blueprints.md",
           "status": "content-present",
-          "sha256": "db9e7421adeda2a1580239465e1a7381752976ff23c9b345092c2b82f0328809",
+          "sha256": "122a65edfd8e662147fbb48f8ed758b083a169fcf23199222409227c58edfebc",
           "words": 57,
           "headings": 3,
           "examples": 0,
@@ -12481,7 +13064,7 @@
         "en": {
           "path": "en/collection/ha-blueprints.md",
           "status": "content-present",
-          "sha256": "727f579903ca7b40fddc0eb40a3c221812a39caf3273fbf249b865b1c1e919e3",
+          "sha256": "51fbd505a90c6795c801819fe35bc8dd247e17bbb20ba046b7f8b42100ee5de7",
           "words": 58,
           "headings": 3,
           "examples": 0,
@@ -12498,7 +13081,7 @@
         "fr": {
           "path": "fr/collection/ha-blueprints.md",
           "status": "content-present",
-          "sha256": "30e0ba0ea2fc7b589e8a157505a1e90637b9ebdc99709101c6464b2b752a5ac3",
+          "sha256": "a7d00e49d0863530ed4e9ddb952c231692a6ce7ca7ea4f638e3becf92adadafd",
           "words": 98,
           "headings": 3,
           "examples": 0,
@@ -12530,9 +13113,9 @@
         "en": {
           "path": "en/collection/ha-cards.md",
           "status": "content-present",
-          "sha256": "3115053b7125d3f7d0d56301eb4caf240e3734237f89bf284533bcd3f4c7ccdc",
-          "words": 148,
-          "headings": 2,
+          "sha256": "a046143ae190f72cb999b6999aa27a635c1794f7288605bc0e687002ddd77429",
+          "words": 192,
+          "headings": 4,
           "examples": 0,
           "versions": [],
           "unresolved_local_references": [],
@@ -12541,7 +13124,12 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained."
           }
         },
         "fr": {
@@ -12579,9 +13167,9 @@
         "en": {
           "path": "en/collection/ha-dashboard.md",
           "status": "content-present",
-          "sha256": "fe8802b5b71acd5e3beb7b90d8119882452c2972ce0ec398c7932aa54a0e8726",
-          "words": 111,
-          "headings": 3,
+          "sha256": "6aa98eb0808a204d7365dc322daecdc3fb4a9d1668d0811aab15af0eb3f45981",
+          "words": 139,
+          "headings": 4,
           "examples": 0,
           "versions": [],
           "unresolved_local_references": [],
@@ -12590,7 +13178,12 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained."
           }
         },
         "fr": {
@@ -12716,7 +13309,7 @@
         "de": {
           "path": "sammlung/ha-tools.md",
           "status": "content-present",
-          "sha256": "6bfd8b02840d1e403bc051550b244619844abaf90c2abe052715ac1db4e00aed",
+          "sha256": "981040e93d2ad374da122ae91631d8ed028c8cd5d3e25cbc2b42735936c89658",
           "words": 96,
           "headings": 3,
           "examples": 0,
@@ -12726,7 +13319,7 @@
         "en": {
           "path": "en/collection/ha-tools.md",
           "status": "content-present",
-          "sha256": "4ad2f05e40c66c9be1ec1ee2f19d90877a4f21b3b19d2454aa4de07af088a7bb",
+          "sha256": "da7f53e26e3f33187341092309575276978db35e5a67bac1fcb2f8193b6fbeef",
           "words": 78,
           "headings": 3,
           "examples": 0,
@@ -12743,7 +13336,7 @@
         "fr": {
           "path": "fr/collection/ha-tools.md",
           "status": "content-present",
-          "sha256": "1f65ed13e39d4231bc3203bcb035928fb0f74487540f9036bb2cf23fd6c9a616",
+          "sha256": "c91cec43dc767b19b6cb52eb8d65359600a4908f76a01ee1c29ddfbb42620f4d",
           "words": 131,
           "headings": 3,
           "examples": 0,
@@ -12775,9 +13368,9 @@
         "en": {
           "path": "en/collection/hacs-docs.md",
           "status": "content-present",
-          "sha256": "841117ec0e51005c9e58d10349acd42194643d4491f93d7a553217aa73dac365",
-          "words": 100,
-          "headings": 2,
+          "sha256": "830f075a6b4093ddec2a1cba1e10396a1a75840d944cbe28b87cc8e775da0a92",
+          "words": 142,
+          "headings": 5,
           "examples": 0,
           "versions": [],
           "unresolved_local_references": [],
@@ -12786,7 +13379,12 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained."
           }
         },
         "fr": {
@@ -12824,9 +13422,9 @@
         "en": {
           "path": "en/collection/index.md",
           "status": "content-present",
-          "sha256": "0d3db9343e37fc27525502245c682f2a55480baf2d191e8a65c5804a30ac0bc4",
-          "words": 191,
-          "headings": 3,
+          "sha256": "207d1f5625899966c4fc1f620007fe886e4ff79df78ef4909ff5e1edb6fcefc7",
+          "words": 236,
+          "headings": 4,
           "examples": 0,
           "versions": [],
           "unresolved_local_references": [],
@@ -12835,7 +13433,12 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained."
           }
         },
         "fr": {
@@ -13022,9 +13625,9 @@
         "en": {
           "path": "en/collection/mushroom/index.md",
           "status": "content-present",
-          "sha256": "3e159c4027d33c0db3dd1d39d482dcd956d88aee460fe97b1a72e550c6c3daef",
-          "words": 122,
-          "headings": 1,
+          "sha256": "215f397ac927e29c9866b4a83c8a20d5645b4932b6671ca962c05b9ce5b2e123",
+          "words": 197,
+          "headings": 3,
           "examples": 0,
           "versions": [
             "5.2.2"
@@ -13035,7 +13638,12 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "supplemented",
+            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained."
           }
         },
         "fr": {

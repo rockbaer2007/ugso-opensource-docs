@@ -554,3 +554,345 @@ views:
 
 :::
 ![En-tête de tableau de bord avec le spark Background](../../assets/page-assets/forge/sparks/background-dashboard-header.png)
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/background). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Utilisation de base {#reference-example-1}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: background
+      for: hui-tile-card
+      image_url: /local/backgrounds/living-room.jpg
+      background:
+        size: cover
+        position: center
+      opacity: 0.35
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 2. `background` sous forme de table {#reference-example-2}
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      for: hui-tile-card
+      image_url: /local/backgrounds/room.jpg
+      background:
+        size: cover
+        position: center
+        repeat: no-repeat
+```
+
+### 3. `dissolve_target` {#reference-example-3}
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      for: hui-tile-card
+      image_url: /local/backgrounds/room.jpg
+      dissolve_target:
+        - background
+        - box-shadow
+```
+
+### 4. `dissolve_target` {#reference-example-4}
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      for: hui-tile-card
+      background: var(--primary-color)
+      dissolve_target: opacity(0.5)
+```
+
+### 5. URI Media Source {#reference-example-5}
+
+```yaml
+image_url: media-source://media_source/local/backgrounds/room.jpg
+```
+
+### 6. URI Media Source {#reference-example-6}
+
+```yaml
+video_url: media-source://media_source/local/videos/ambient.mp4
+```
+
+### 7. Adaptateur de section {#reference-example-7}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: section
+  sparks:
+    - type: background
+      image_url: /local/backgrounds/section.jpg
+      background:
+        size: cover
+        position: center
+element:
+  type: heading
+  heading: Wohnzimmer
+```
+
+### 8. Caméra en direct comme arrière-plan {#reference-example-8}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: background
+      for: hui-tile-card
+      camera_entity: camera.front_door
+      camera_position: center
+      camera_zoom: 1.2
+      opacity: 0.55
+      dissolve_target:
+        - background
+        - box-shadow
+element:
+  type: tile
+  entity: binary_sensor.front_door_motion
+```
+
+### 9. Image d’entité comme arrière-plan {#reference-example-9}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: background
+      for: hui-tile-card
+      image_entity: person.max
+      background:
+        size: cover
+        position: center
+      opacity: 0.3
+element:
+  type: tile
+  entity: person.max
+```
+
+### 10. Vidéo en arrière-plan {#reference-example-10}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: background
+      video_url: /local/videos/fireplace.mp4
+      opacity: 0.4
+element:
+  type: tile
+  entity: sensor.living_room_temperature
+```
+
+### 11. Image statique {#reference-example-11}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: background
+      image_url: /local/backgrounds/kitchen.jpg
+      background:
+        size: cover
+        position: 50% 35%
+element:
+  type: tile
+  entity: light.kitchen
+```
+
+### 12. Arrière-plan CSS complet {#reference-example-12}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: background
+      background: linear-gradient(135deg, rgba(0,0,0,.6), rgba(0,0,0,.1)), url("/local/backgrounds/room.jpg") center / cover no-repeat
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 13. Couleur d’arrière-plan selon l’état {#reference-example-13}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: background
+      background: "{{ 'var(--error-color)' if is_state('binary_sensor.window', 'on') else 'var(--success-color)' }}"
+      opacity: 0.16
+element:
+  type: tile
+  entity: binary_sensor.window
+```
+
+### 14. Styles UIX du conteneur d’arrière-plan {#reference-example-14}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: background
+      class: soft-background
+      image_url: /local/backgrounds/room.jpg
+element:
+  type: tile
+  entity: light.living_room
+uix:
+  style: |
+    .soft-background {
+      filter: saturate(0.8);
+    }
+```
+
+### 15. Étendre l’en-tête du tableau de bord {#reference-example-15}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: background
+      for: ha-card
+      image_url: /local/backgrounds/header.jpg
+      background:
+        size: cover
+        position: center
+      opacity: 0.35
+element:
+  type: heading
+  heading: Zuhause
+```
+
+### 16. Positionnement et lisibilité {#reference-example-16}
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      image_url: /local/backgrounds/room.jpg
+      background:
+        size: cover
+        position: center
+      opacity: 0.45
+element:
+  type: tile
+  entity: sensor.room_status
+uix:
+  style: |
+    ha-card {
+      color: var(--white-color);
+      text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    }
+```
+
+### 17. Zoom et déplacement de caméra {#reference-example-17}
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      camera_entity: camera.driveway
+      camera_zoom: 1.6
+      camera_pan_x: "-8%"
+      camera_pan_y: "4%"
+      camera_position: center
+      opacity: 0.5
+```
+
+### 18. Plusieurs arrière-plans {#reference-example-18}
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      background: "linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.15)), url('/local/backgrounds/night.jpg') center / cover no-repeat"
+```
+
+### 19. Sources de modèles {#reference-example-19}
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      image_url: "{{ state_attr('sensor.current_room', 'background') | default('/local/backgrounds/default.jpg') }}"
+      background:
+        size: cover
+        position: center
+```
+
+### 20. Combinaison avec les sections {#reference-example-20}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: section
+  sparks:
+    - type: background
+      image_url: /local/backgrounds/living-room-wide.jpg
+      background:
+        size: cover
+        position: center
+      opacity: 0.2
+element:
+  type: heading
+  heading: Wohnzimmer
+```
+
+### 21. Combinaison avec Lock Spark {#reference-example-21}
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      image_url: /local/backgrounds/garage.jpg
+      opacity: 0.35
+    - type: lock
+      locks:
+        - confirmation: Garagentor bedienen?
+          admins: true
+```
+
+### 22. Arrière-plan par variables CSS {#reference-example-22}
+
+```yaml
+forge:
+  sparks:
+    - type: background
+      background:
+        color: var(--uix-room-background, var(--card-background-color))
+```
+
+### 23. Arrière-plan par variables CSS {#reference-example-23}
+
+```yaml
+uix:
+  style: |
+    :host {
+      --uix-room-background: rgba(25, 118, 210, 0.12);
+    }
+```
+
+::::

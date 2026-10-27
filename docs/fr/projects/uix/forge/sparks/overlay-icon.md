@@ -279,3 +279,189 @@ type: entities
 ```
 
 ![Exemple avec custom:template-entity-row](../../assets/page-assets/forge/sparks/overlay-icon-custom-entity-row.png)
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/overlay-icon). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Utilisation de base {#reference-example-1}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: overlay-icon
+      for: hui-tile-card $ ha-tile-icon
+      icon: mdi:star
+      icon_position:
+        top: 2
+        left: 30
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 2. Badge sur l’icône Tile {#reference-example-2}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: overlay-icon
+      for: hui-tile-card $ ha-tile-icon
+      icon: mdi:alert
+      icon_color: var(--white-color)
+      icon_background: var(--error-color)
+      icon_position:
+        top: 2
+        left: 30
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 3. Icône de surimpression avec valeur selon l’état {#reference-example-3}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: overlay-icon
+      for: hui-tile-card $ ha-tile-icon
+      entity: binary_sensor.window
+      value: "on"
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 4. Afficher le nombre de lumières allumées sur un bouton {#reference-example-4}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: overlay-icon
+      for: hui-button-card
+      icon: "mdi:numeric-{{ [states.light | selectattr('state', 'eq', 'on') | list | count, 9] | min }}"
+      icon_position:
+        top: 4
+        right: 4
+element:
+  type: button
+  entity: light.living_room
+```
+
+### 5. Image Media Source comme badge de fenêtre contextuelle {#reference-example-5}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: overlay-icon
+      image_url: media-source://media_source/local/icons/warning.png
+      icon_position:
+        top: -8
+        right: -8
+element:
+  type: tile
+  entity: sensor.warning_count
+uix:
+  style: |
+    :host {
+      --uix-overlay-icon-size: 28px;
+      --uix-overlay-icon-background: var(--card-background-color);
+      --uix-overlay-icon-border-radius: 999px;
+      --uix-overlay-icon-padding: 4px;
+    }
+```
+
+### 6. Surimpression sur l’icône du bouton {#reference-example-6}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: overlay-icon
+      for: hui-button-card $ ha-state-icon
+      icon: mdi:check
+      icon_position:
+        bottom: 0
+        right: 0
+element:
+  type: button
+  entity: input_boolean.ready
+```
+
+### 7. Surimpression dans `custom:template-entity-row` {#reference-example-7}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: row
+  sparks:
+    - type: overlay-icon
+      for: hui-generic-entity-row
+      entity: binary_sensor.front_door
+element:
+  type: custom:template-entity-row
+  entity: sensor.front_door_status
+```
+
+### 8. Positionnement {#reference-example-8}
+
+```yaml
+icon_position:
+  top: 4
+  right: 4
+```
+
+### 9. Positionnement {#reference-example-9}
+
+```yaml
+icon_position:
+  bottom: "0.25rem"
+  left: "calc(100% - 18px)"
+```
+
+### 10. Couleur de l’entité {#reference-example-10}
+
+```yaml
+forge:
+  sparks:
+    - type: overlay-icon
+      entity: binary_sensor.motion
+      color: state
+```
+
+### 11. Couleur de l’entité {#reference-example-11}
+
+```yaml
+forge:
+  sparks:
+    - type: overlay-icon
+      entity: binary_sensor.motion
+      color: none
+      icon_color: var(--primary-text-color)
+```
+
+### 12. Image en surimpression {#reference-example-12}
+
+```yaml
+forge:
+  sparks:
+    - type: overlay-icon
+      image_url: /local/icons/package.png
+      icon_position:
+        top: -6
+        right: -6
+```
+
+::::

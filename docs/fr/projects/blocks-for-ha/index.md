@@ -155,3 +155,40 @@ Depuis **0.1.31**, le nouveau bloc prend en charge temperature.changed natif. Ci
 
 
 **0.1.38:** [Entités cibles dynamiques](./blocks).
+
+## Repères historiques et compatibilité
+
+Ces repères complètent l’historique allemand ; ils ne remplacent pas les nouveautés plus récentes ci-dessous.
+
+- **0.1.4 et versions antérieures :** les anciens projets migrent vers les nouveaux connecteurs. Les chaînes de conditions deviennent des groupes ET de même sens ; les fichiers YAML restent importables.
+- **0.1.6 :** blocs Système pour le journal, les scripts HA et l’actualisation d’entités, ainsi qu’un bloc texte. Démarrer sans attendre utilise `script.turn_on`, arrêter utilise `script.turn_off`, appeler et attendre utilise directement `script.name`. `homeassistant.update_entity` demande une actualisation sans définir l’état et sans sémantique ioBroker `ack`. Paramètres supplémentaires via l’action HA générique ; données non représentables conservées dans cette action.
+- **0.1.7 :** recherche en bas du menu, texte multiligne, pourcentage, couleurs, action lumineuse, date et listes d’assistants dépendantes. Depuis **0.1.58**, toutes les extensions, y compris Sinon, passent uniquement par l’engrenage. Retirer un connecteur détache ses blocs sans les supprimer. Le comparateur de date utilise `now().strftime('%Y-%m-%d')` et le fuseau HA : c’est une condition, pas un déclencheur. Vérifier les capacités des appareils dans HA.
+- **0.1.8 :** création, affectation et lecture des variables ; catégorie Templates pour valeurs et conditions. Les variables produisent des actions HA `variables` ; Jinja est évalué uniquement dans HA. [Guide](./blocks#variablen-und-templates-verwenden).
+- **0.1.9 :** comparaison, ET/OU compact, NON, booléens, null et sélection conditionnelle de valeurs. Variables booléennes et null prises en charge. [Logique](./blocks#logik-blocks-seit-0-1-9).
+- **0.1.10 :** incrémenter une variable avec un pas initial de `1`, négatif ou décimal. [Exemple](./blocks#erhohen-und-verringern-seit-0-1-10).
+- **0.1.11 :** sept blocs de date/heure : comparaison, plages traversant minuit, valeurs de date, début de calendrier, événements solaires, calcul et formatage. [Guide](./time).
+- **0.1.12 :** neuf conversions : nombre, booléen, chaîne, type, date/heure, format/composants de date, différence et JSON. Format dynamique et formatage JSON ; JSONata reste une piste. [Guide](./conversion).
+- **0.1.13 :** 18 blocs pour délais, objets, logique, boucles et listes ; pauses natives, attente avec délai limite, arrêt, répétition, dictionnaires, choix, intervalles, remplacement et listes. [Comparaison et limites](./flow).
+- **0.1.15 :** mélange et couleurs aléatoires. Concaténation de texte et manipulation de listes sont également réalisées.
+- **0.1.16 :** thèmes UGSo Standard/Dark/Modern/Tritanopia et ajustement du zoom, enregistrés localement. À ce stade : 111 types de blocs. [Guide](./themes).
+- **0.1.17 :** catalogue d’entités HA en lecture, recherche par nom/ID, filtres lumière/script/assistant, IDs manuels hors connexion et identifiants gérés côté serveur. [Guide](./entities).
+- **0.1.18 :** éditeur de blocs/modèles à 95 % de l’écran, catégorie personnalisée, plusieurs blocs par paquet, JSON copiable et import/export ZIP. [Guide](./custom-blocks).
+- **0.1.19 :** badge Blockly officiel inchangé, de 32 pixels de haut, avec espace libre et lien vers Blockly. Les deux variantes SVG sont fournies localement. [Attribution originale](https://docs.blockly.com/guides/app-integration/attribution/).
+- **0.1.20 :** icône monochrome `mdi:toy-brick-outline` dans la barre latérale HA. Mettre l’app à jour, la redémarrer et activer l’affichage dans la barre latérale ; recharger HA si l’ancienne icône persiste. L’icône UGSo colorée reste dans la boutique et l’éditeur.
+- **0.1.21 :** recherche dans l’espace de travail, distincte de la recherche de la boîte à outils.
+- **0.1.23 :** introduction et paramètres plus compacts, champs/boutons de 32 pixels, état de connexion HA et nombre d’entités dans la barre de réglages, y compris sur écran étroit.
+- **0.1.24 :** flèche en haut à droite pour replier la sortie HA ; Blockly récupère la place disponible. La barre étroite rouvre le panneau. État enregistré localement ; une ligne compacte subsiste sur mobile. Aucun changement du YAML ou des projets.
+- **0.1.25 :** importer via YAML → Code importé. Sans remplacement complet, ajout des déclencheurs, conditions et actions ; les conditions sont réunies par ET. Pour remplacer, cocher explicitement le remplacement et confirmer. Une seule automatisation, objet ou liste d’un élément, au maximum 1 Mo. Annulation ou code invalide conserve les blocs ; le texte collé reste disponible au changement de mode.
+
+## Bibliothèque et démarrage local
+
+La bibliothèque originale **Blockly 13.3.0** fournit l’espace de travail, la boîte à outils, les connecteurs typés, les blocs fantômes, les mutateurs, menus, zoom, corbeille et repères d’insertion. Les blocs HA, la validation, la migration des projets et la génération YAML sont du code UGSo. Aucun JavaScript ioBroker n’est exécuté.
+
+Dans le dossier `blocks_for_ha` du [dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/blocks_for_ha), avec Node.js 22.12 ou plus récent :
+
+```sh
+npm install
+npm run dev
+```
+
+Éditeur local : `http://127.0.0.1:4180/`. Les projets JSON conservent les positions ; le navigateur sauvegarde le dernier état localement. L’import YAML accepte une seule automatisation et refuse les structures non prises en charge.

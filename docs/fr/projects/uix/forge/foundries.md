@@ -557,3 +557,216 @@ element:
 ```
 
 ![Exemple de fonderie globale utilisant une macro](../assets/page-assets/forge/foundries-global-macro.gif)
+
+## Précisions sur les fusions, billets et fichiers
+
+La fusion YAML avec `&name` et `<<: *name` est superficielle ; elle ne remplace pas l’héritage récursif des Foundries. Les valeurs locales, par exemple l’entité ou `show_forecast`, remplacent les valeurs correspondantes ; les autres options comme `show_current` et les imports de macros sont conservées. Sans billet local, la valeur définie par la Foundry reste applicable.
+
+Une Foundry peut déclarer `accent: ~` et `label: ~` dans `forge.billets`. Les modèles doivent traiter explicitement `none`, avec un repli, `default()` ou une condition. Utilisez des noms explicites : les Foundries de l’interface sont enregistrées en JSON et perdent leurs commentaires YAML ; les Foundries de fichiers les conservent.
+
+Un fichier chargé par `!include` fournit la valeur complète de la clé remplacée. Les Foundries de fichiers utilisent le chargeur YAML natif de HA : `!include` et `!secret` y restent non entourés de guillemets. Dans une Foundry de l’interface, ces balises doivent être des chaînes entre guillemets. Le fichier `secrets.yaml` reste dans le dossier de configuration HA ; les valeurs des exemples sont fictives.
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Configurations techniques de la [référence allemande](/projects/uix/forge/foundries). Les clés, expressions et valeurs de démonstration restent inchangées ; remplacez les entités par les vôtres.
+
+### 1. Format de fichier {#reference-example-1}
+
+```yaml
+uix_foundries:
+  light_tile:
+    forge:
+      mold: card
+    element:
+      type: tile
+      entity: light.bed_light
+  switch_tile:
+    forge:
+      mold: card
+    element:
+      type: tile
+      entity: switch.living_room
+```
+
+### 2. Utiliser une Foundry {#reference-example-2}
+
+```yaml
+type: custom:uix-forge
+foundry: light_tile
+element:
+  entity: light.kitchen
+```
+
+### 3. Foundry room_tile {#reference-example-3}
+
+```yaml
+# Dashboard-Karte
+type: custom:uix-forge
+foundry: room_tile
+element_base:
+  type: tile
+  entity: light.kitchen
+```
+
+### 4. Inclure des fichiers et secrets externes {#reference-example-4}
+
+```yaml
+# YAML-Datei
+forge:
+  uix: !include /config/uix/styles.yaml
+```
+
+### 5. Fichier YAML {#reference-example-5}
+
+```yaml
+# Entsprechende UI Foundry
+forge:
+  uix: "!include /config/uix/styles.yaml"
+```
+
+### 6. Foundry correspondante dans l’interface {#reference-example-6}
+
+```yaml
+# In secrets.yaml: gate_pin: "1234"
+forge:
+  billets:
+    gate_pin: !secret gate_pin
+```
+
+### 7. Modèle 2 : définir des billets vides {#reference-example-7}
+
+```yaml
+element:
+  name: "{{ label or state_attr(config.entity, 'friendly_name') }}"
+```
+
+### 8. Styles UIX issus d’une Foundry {#reference-example-8}
+
+```yaml
+type: custom:uix-forge
+foundry: styled_tile
+forge:
+  uix:
+    style:
+      .: |
+        :host { --ha-card-border-radius: 20px; }
+element:
+  entity: light.bed_light
+```
+
+### 9. Ancres YAML dans une liste d’entités {#reference-example-9}
+
+```yaml
+uix_foundries:
+  browser_multiple_entity_anchors:
+    forge:
+      mold: row
+      billets:
+        id: my_browser_id
+    element:
+      type: custom:multiple-entity-row
+      entity: binary_sensor.{{ id }}
+      entities:
+        - entity: sensor.{{ id }}_browser_battery
+          <<: &width                    # define anchor inline on first use
+            format: precision2
+            styles:
+              text-align: center
+        - entity: sensor.{{ id }}_browser_height
+          <<: *width                    # reuse the same formatting options
+```
+
+### 10. Include dans une Foundry de fichier {#reference-example-10}
+
+```yaml
+# In a YAML File Foundry — no quoting needed
+uix_foundries:
+  my_tile:
+    forge:
+      mold: card
+    element:
+      type: tile
+      entity: "{{ config.entity }}"
+      uix: !include uix/my_forge_styles.yaml
+```
+
+### 11. Secret dans une Foundry de fichier {#reference-example-11}
+
+```yaml
+# In a YAML File Foundry — no quoting needed
+uix_foundries:
+  my_tile:
+    forge:
+      mold: card
+      billets:
+        accent: !secret accent_colour
+    element:
+      type: tile
+      entity: "{{ config.entity }}"
+```
+
+### 12. Résultat de la fusion {#reference-example-12}
+
+```yaml
+forge:
+  mold: card
+  macros:
+    entity_color: "my_macros.jinja"
+element:
+  type: weather-forecast
+  entity: weather.home        # from element
+  show_current: true          # from foundry
+  show_forecast: true         # overridden by element
+```
+
+### 13. Foundry complète avec billets vides {#reference-example-13}
+
+```yaml
+forge:
+  mold: card
+  billets:
+    accent: ~          # empty slot — instance is expected to override this
+    label: ~           # optional label, templates handle none gracefully
+element:
+  type: tile
+  entity: "{{ config.entity }}"
+  name: "{{ label or state_attr(config.entity, 'friendly_name') }}"
+  uix:
+    style: |
+      ha-card {
+        {%- if accent %}
+        --tile-color: {{ accent }} !important;
+        {%- endif %}
+      }
+```
+
+### 14. Définir l’accent et le libellé {#reference-example-14}
+
+```yaml
+type: custom:uix-forge
+foundry: flexible_tile
+entity: light.bed_light
+forge:
+  billets:
+    accent: pink
+    label: Bed sconce
+```
+
+### 15. Base de style pour styled_tile {#reference-example-15}
+
+```yaml
+# Foundry: "styled_tile"
+forge:
+  mold: card
+  uix:
+    style:
+      hui-tile-card $: |
+        ha-card {
+          --tile-color: red !important;
+        }
+element:
+  type: tile
+```
+
+::::

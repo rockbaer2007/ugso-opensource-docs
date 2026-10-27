@@ -42,7 +42,7 @@ features:
     details: Les paquets sont gérés avec les espaces de travail pnpm et des responsabilités distinctes.
 ---
 
-## État du projet
+## <img class="package-icon" src="/images/packages/projects-atlas.png" width="32" height="32" alt="" aria-hidden="true"> État du projet
 
 ATLAS est en cours de développement. L'effort porte actuellement sur
 l'application ATLAS pour Home Assistant, qui comprend l'Administration, le Hub

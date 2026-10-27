@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import json
 import re
+from datetime import date
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -28,6 +29,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--source", type=Path)
+    parser.add_argument("--review-date", help="Review date for --write (YYYY-MM-DD)")
     args = parser.parse_args()
     canonical = json.loads((DOCS / "public/projects/uix/canonical-review.json").read_text(encoding="utf-8"))
     if args.write and not args.source:
@@ -61,7 +63,7 @@ def main():
         raise SystemExit("Expected the reviewed 64 canonical source pages")
     if args.write:
         RECORD.write_text(json.dumps({
-            "reviewed_at": "2026-10-26",
+            "reviewed_at": date.fromisoformat(args.review_date).isoformat() if args.review_date else date.today().isoformat(),
             "source_revision": canonical["revision"],
             "scope": "Editorial technical-reference review; page coverage, table identifiers, defaults and selected missing examples",
             "limitations": "Translations retain editorial summaries. Not sentence-by-sentence identity, independent linguistic certification or a Home Assistant runtime test.",

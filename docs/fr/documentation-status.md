@@ -14,11 +14,14 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 ## Inventaire
 
-| Langue | Pages existantes | Pages absentes | Textes provisoires | Autres points à examiner |
+| Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 229 | 0 | 0 | 0 |
-| EN | 229 | 0 | 0 | 74 |
-| FR | 229 | 0 | 0 | 47 |
+| EN | 229 | 0 | 0 | 0 |
+| FR | 229 | 0 | 0 | 0 |
+
+**Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).
+
 
 Les ajouts ont été réalisés avec une aide à la traduction et vérifiés techniquement par rapport à la source allemande : code, identifiants, tableaux et images. Quatorze autres lacunes ont été comblées par des références complémentaires, en conservant les pages et liens existants. Il ne s’agit pas d’une certification linguistique complète. Les points à examiner comprennent aussi des résumés volontairement différents et des versions historiques.
 
@@ -65,8 +68,8 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/atlas-plugins/plugin-template.md](/projects/atlas-plugins/plugin-template) | [Contenu présent](/en/projects/atlas-plugins/plugin-template) | [Contenu présent](/fr/projects/atlas-plugins/plugin-template) |
 | [projects/atlas-plugins/repository-format.md](/projects/atlas-plugins/repository-format) | [Contenu présent](/en/projects/atlas-plugins/repository-format) | [Contenu présent](/fr/projects/atlas-plugins/repository-format) |
 | [projects/atlas-plugins/terminal.md](/projects/atlas-plugins/terminal) | [Contenu présent](/en/projects/atlas-plugins/terminal) | [Contenu présent](/fr/projects/atlas-plugins/terminal) |
-| [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Contenu présent](/en/projects/atlas/card-editor) | [Contenu présent · Points à examiner](/fr/projects/atlas/card-editor) |
-| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Contenu présent](/en/projects/atlas/development-status) | [Contenu présent · Points à examiner](/fr/projects/atlas/development-status) |
+| [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Contenu présent](/en/projects/atlas/card-editor) | [Contenu présent · Différence examinée](/fr/projects/atlas/card-editor) |
+| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Contenu présent](/en/projects/atlas/development-status) | [Contenu présent · Différence examinée](/fr/projects/atlas/development-status) |
 | [projects/atlas/frontend.md](/projects/atlas/frontend) | [Contenu présent](/en/projects/atlas/frontend) | [Contenu présent](/fr/projects/atlas/frontend) |
 | [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Contenu présent](/en/projects/atlas/homeassistant) | [Contenu présent](/fr/projects/atlas/homeassistant) |
 | [projects/atlas/index.md](/projects/atlas/) | [Contenu présent](/en/projects/atlas/) | [Contenu présent](/fr/projects/atlas/) |
@@ -75,7 +78,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Contenu présent](/en/projects/atlas/tablet-test) | [Contenu présent](/fr/projects/atlas/tablet-test) |
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Contenu présent](/en/projects/atlas/tablet-uix-dauertest) | [Contenu présent](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Contenu présent](/en/projects/atlas/overview) | [Contenu présent](/fr/projects/atlas/overview) |
-| [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Contenu présent · Points à examiner](/en/projects/blocks-for-ha/advanced) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/advanced) |
+| [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Contenu présent](/en/projects/blocks-for-ha/advanced) | [Contenu présent](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Contenu présent](/en/projects/blocks-for-ha/blockly-audit) | [Contenu présent](/fr/projects/blocks-for-ha/blockly-audit) |
 | [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Contenu présent](/en/projects/blocks-for-ha/blocks) | [Contenu présent](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Contenu présent](/en/projects/blocks-for-ha/catalog/) | [Contenu présent](/fr/projects/blocks-for-ha/catalog/) |
@@ -85,7 +88,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Contenu présent](/en/projects/blocks-for-ha/custom-blocks) | [Contenu présent](/fr/projects/blocks-for-ha/custom-blocks) |
 | [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Contenu présent](/en/projects/blocks-for-ha/entities) | [Contenu présent](/fr/projects/blocks-for-ha/entities) |
 | [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Contenu présent](/en/projects/blocks-for-ha/flow) | [Contenu présent](/fr/projects/blocks-for-ha/flow) |
-| [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Contenu présent · Points à examiner](/en/projects/blocks-for-ha/) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/) |
+| [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Contenu présent](/en/projects/blocks-for-ha/) | [Contenu présent · Différence examinée](/fr/projects/blocks-for-ha/) |
 | [projects/blocks-for-ha/system-template.md](/projects/blocks-for-ha/system-template) | [Contenu présent](/en/projects/blocks-for-ha/system-template) | [Contenu présent](/fr/projects/blocks-for-ha/system-template) |
 | [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Contenu présent](/en/projects/blocks-for-ha/themes) | [Contenu présent](/fr/projects/blocks-for-ha/themes) |
 | [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Contenu présent](/en/projects/blocks-for-ha/time) | [Contenu présent](/fr/projects/blocks-for-ha/time) |
@@ -107,7 +110,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Contenu présent](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Contenu présent](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
 | [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Contenu présent](/en/projects/grafik-visual-studio/) | [Contenu présent](/fr/projects/grafik-visual-studio/) |
 | [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Contenu présent](/en/projects/grafik-visual-studio/industrial) | [Contenu présent](/fr/projects/grafik-visual-studio/industrial) |
-| [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Contenu présent](/en/projects/grafik-visual-studio/interaktiv) | [Contenu présent · Points à examiner](/fr/projects/grafik-visual-studio/interaktiv) |
+| [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Contenu présent](/en/projects/grafik-visual-studio/interaktiv) | [Contenu présent](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Contenu présent](/en/projects/grafik-visual-studio/materialdesign) | [Contenu présent](/fr/projects/grafik-visual-studio/materialdesign) |
 | [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Contenu présent](/en/projects/grafik-visual-studio/packer) | [Contenu présent](/fr/projects/grafik-visual-studio/packer) |
 | [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Contenu présent](/en/projects/grafik-visual-studio/printer) | [Contenu présent](/fr/projects/grafik-visual-studio/printer) |
@@ -132,79 +135,79 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Contenu présent](/en/projects/heizoel-to-mqtt/) | [Contenu présent](/fr/projects/heizoel-to-mqtt/) |
 | [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Contenu présent](/en/projects/heizoel-to-mqtt/installation) | [Contenu présent](/fr/projects/heizoel-to-mqtt/installation) |
 | [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Contenu présent](/en/projects/heizoel-to-mqtt/configuration) | [Contenu présent](/fr/projects/heizoel-to-mqtt/configuration) |
-| [projects/index.md](/projects/) | [Contenu présent · Points à examiner](/en/projects/) | [Contenu présent](/fr/projects/) |
+| [projects/index.md](/projects/) | [Contenu présent](/en/projects/) | [Contenu présent](/fr/projects/) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Contenu présent](/en/projects/mqtt-client/) | [Contenu présent](/fr/projects/mqtt-client/) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Contenu présent](/en/projects/parcel-to-mqtt/examples) | [Contenu présent](/fr/projects/parcel-to-mqtt/examples) |
 | [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Contenu présent](/en/projects/parcel-to-mqtt/entities) | [Contenu présent](/fr/projects/parcel-to-mqtt/entities) |
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Contenu présent](/en/projects/parcel-to-mqtt/) | [Contenu présent](/fr/projects/parcel-to-mqtt/) |
 | [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Contenu présent](/en/projects/parcel-to-mqtt/installation) | [Contenu présent](/fr/projects/parcel-to-mqtt/installation) |
 | [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Contenu présent](/en/projects/parcel-to-mqtt/configuration) | [Contenu présent](/fr/projects/parcel-to-mqtt/configuration) |
-| [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Contenu présent · Points à examiner](/en/projects/uix/broker/broker) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/broker) |
-| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Contenu présent · Points à examiner](/en/projects/uix/broker/directives) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/directives) |
-| [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Contenu présent · Points à examiner](/en/projects/uix/broker/examples) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/examples) |
-| [projects/uix/broker/index.md](/projects/uix/broker/) | [Contenu présent · Points à examiner](/en/projects/uix/broker/) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/) |
-| [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Contenu présent · Points à examiner](/en/projects/uix/broker/interaction-anchors) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/interaction-anchors) |
-| [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Contenu présent · Points à examiner](/en/projects/uix/broker/realms) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/realms) |
-| [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Contenu présent · Points à examiner](/en/projects/uix/broker/rules) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/rules) |
-| [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Contenu présent · Points à examiner](/en/projects/uix/concepts/application) | [Contenu présent · Points à examiner](/fr/projects/uix/concepts/application) |
-| [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Contenu présent · Points à examiner](/en/projects/uix/concepts/dom) | [Contenu présent · Points à examiner](/fr/projects/uix/concepts/dom) |
-| [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Contenu présent · Points à examiner](/en/projects/uix/concepts/) | [Contenu présent](/fr/projects/uix/concepts/) |
-| [projects/uix/contributing.md](/projects/uix/contributing) | [Contenu présent · Points à examiner](/en/projects/uix/contributing) | [Contenu présent · Points à examiner](/fr/projects/uix/contributing) |
-| [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Contenu présent · Points à examiner](/en/projects/uix/debugging/cache) | [Contenu présent · Points à examiner](/fr/projects/uix/debugging/cache) |
-| [projects/uix/debugging/cards.md](/projects/uix/debugging/cards) | [Contenu présent · Points à examiner](/en/projects/uix/debugging/cards) | [Contenu présent](/fr/projects/uix/debugging/cards) |
-| [projects/uix/debugging/index.md](/projects/uix/debugging/) | [Contenu présent · Points à examiner](/en/projects/uix/debugging/) | [Contenu présent](/fr/projects/uix/debugging/) |
-| [projects/uix/debugging/templates.md](/projects/uix/debugging/templates) | [Contenu présent · Points à examiner](/en/projects/uix/debugging/templates) | [Contenu présent · Points à examiner](/fr/projects/uix/debugging/templates) |
-| [projects/uix/developers/cards.md](/projects/uix/developers/cards) | [Contenu présent · Points à examiner](/en/projects/uix/developers/cards) | [Contenu présent](/fr/projects/uix/developers/cards) |
-| [projects/uix/developers/index.md](/projects/uix/developers/) | [Contenu présent · Points à examiner](/en/projects/uix/developers/) | [Contenu présent](/fr/projects/uix/developers/) |
-| [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Contenu présent · Points à examiner](/en/projects/uix/developers/themes) | [Contenu présent · Points à examiner](/fr/projects/uix/developers/themes) |
-| [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Contenu présent · Points à examiner](/en/projects/uix/extras/always-patch-ha-card) | [Contenu présent · Points à examiner](/fr/projects/uix/extras/always-patch-ha-card) |
-| [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Contenu présent · Points à examiner](/en/projects/uix/extras/dialog-styling-delay) | [Contenu présent · Points à examiner](/fr/projects/uix/extras/dialog-styling-delay) |
-| [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Contenu présent · Points à examiner](/en/projects/uix/extras/disable-entity-picture-image-override) | [Contenu présent · Points à examiner](/fr/projects/uix/extras/disable-entity-picture-image-override) |
-| [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Contenu présent · Points à examiner](/en/projects/uix/extras/disable-icon-styling) | [Contenu présent · Points à examiner](/fr/projects/uix/extras/disable-icon-styling) |
-| [projects/uix/extras/frontend-states-throttling.md](/projects/uix/extras/frontend-states-throttling) | [Contenu présent · Points à examiner](/en/projects/uix/extras/frontend-states-throttling) | [Contenu présent · Points à examiner](/fr/projects/uix/extras/frontend-states-throttling) |
-| [projects/uix/extras/hash-template-variable-updates.md](/projects/uix/extras/hash-template-variable-updates) | [Contenu présent · Points à examiner](/en/projects/uix/extras/hash-template-variable-updates) | [Contenu présent](/fr/projects/uix/extras/hash-template-variable-updates) |
-| [projects/uix/extras/index.md](/projects/uix/extras/) | [Contenu présent · Points à examiner](/en/projects/uix/extras/) | [Contenu présent · Points à examiner](/fr/projects/uix/extras/) |
+| [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Contenu présent · Différence examinée](/en/projects/uix/broker/broker) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/broker) |
+| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Contenu présent · Différence examinée](/en/projects/uix/broker/directives) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/directives) |
+| [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Contenu présent · Différence examinée](/en/projects/uix/broker/examples) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/examples) |
+| [projects/uix/broker/index.md](/projects/uix/broker/) | [Contenu présent · Différence examinée](/en/projects/uix/broker/) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/) |
+| [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Contenu présent · Différence examinée](/en/projects/uix/broker/interaction-anchors) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/interaction-anchors) |
+| [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Contenu présent · Différence examinée](/en/projects/uix/broker/realms) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/realms) |
+| [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Contenu présent · Différence examinée](/en/projects/uix/broker/rules) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/rules) |
+| [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/application) | [Contenu présent · Différence examinée](/fr/projects/uix/concepts/application) |
+| [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/dom) | [Contenu présent](/fr/projects/uix/concepts/dom) |
+| [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/) | [Contenu présent](/fr/projects/uix/concepts/) |
+| [projects/uix/contributing.md](/projects/uix/contributing) | [Contenu présent · Différence examinée](/en/projects/uix/contributing) | [Contenu présent · Différence examinée](/fr/projects/uix/contributing) |
+| [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Contenu présent · Différence examinée](/en/projects/uix/debugging/cache) | [Contenu présent · Différence examinée](/fr/projects/uix/debugging/cache) |
+| [projects/uix/debugging/cards.md](/projects/uix/debugging/cards) | [Contenu présent · Différence examinée](/en/projects/uix/debugging/cards) | [Contenu présent](/fr/projects/uix/debugging/cards) |
+| [projects/uix/debugging/index.md](/projects/uix/debugging/) | [Contenu présent · Différence examinée](/en/projects/uix/debugging/) | [Contenu présent](/fr/projects/uix/debugging/) |
+| [projects/uix/debugging/templates.md](/projects/uix/debugging/templates) | [Contenu présent · Différence examinée](/en/projects/uix/debugging/templates) | [Contenu présent · Différence examinée](/fr/projects/uix/debugging/templates) |
+| [projects/uix/developers/cards.md](/projects/uix/developers/cards) | [Contenu présent · Différence examinée](/en/projects/uix/developers/cards) | [Contenu présent](/fr/projects/uix/developers/cards) |
+| [projects/uix/developers/index.md](/projects/uix/developers/) | [Contenu présent · Différence examinée](/en/projects/uix/developers/) | [Contenu présent](/fr/projects/uix/developers/) |
+| [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Contenu présent · Différence examinée](/en/projects/uix/developers/themes) | [Contenu présent](/fr/projects/uix/developers/themes) |
+| [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Contenu présent · Différence examinée](/en/projects/uix/extras/always-patch-ha-card) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/always-patch-ha-card) |
+| [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Contenu présent · Différence examinée](/en/projects/uix/extras/dialog-styling-delay) | [Contenu présent](/fr/projects/uix/extras/dialog-styling-delay) |
+| [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Contenu présent · Différence examinée](/en/projects/uix/extras/disable-entity-picture-image-override) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/disable-entity-picture-image-override) |
+| [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Contenu présent · Différence examinée](/en/projects/uix/extras/disable-icon-styling) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/disable-icon-styling) |
+| [projects/uix/extras/frontend-states-throttling.md](/projects/uix/extras/frontend-states-throttling) | [Contenu présent · Différence examinée](/en/projects/uix/extras/frontend-states-throttling) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/frontend-states-throttling) |
+| [projects/uix/extras/hash-template-variable-updates.md](/projects/uix/extras/hash-template-variable-updates) | [Contenu présent · Différence examinée](/en/projects/uix/extras/hash-template-variable-updates) | [Contenu présent](/fr/projects/uix/extras/hash-template-variable-updates) |
+| [projects/uix/extras/index.md](/projects/uix/extras/) | [Contenu présent · Différence examinée](/en/projects/uix/extras/) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/) |
 | [projects/uix/extras/style-custom-panels.md](/projects/uix/extras/style-custom-panels) | [Contenu présent](/en/projects/uix/extras/style-custom-panels) | [Contenu présent](/fr/projects/uix/extras/style-custom-panels) |
-| [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Contenu présent · Points à examiner](/en/projects/uix/extras/style-frame-panels) | [Contenu présent](/fr/projects/uix/extras/style-frame-panels) |
-| [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Contenu présent · Points à examiner](/en/projects/uix/extras/uix-actions) | [Contenu présent · Points à examiner](/fr/projects/uix/extras/uix-actions) |
-| [projects/uix/faq.md](/projects/uix/faq) | [Contenu présent · Points à examiner](/en/projects/uix/faq) | [Contenu présent · Points à examiner](/fr/projects/uix/faq) |
-| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Contenu présent · Points à examiner](/en/projects/uix/forge/forge) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/forge) |
-| [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Contenu présent · Points à examiner](/en/projects/uix/forge/foundries) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/foundries) |
-| [projects/uix/forge/index.md](/projects/uix/forge/) | [Contenu présent · Points à examiner](/en/projects/uix/forge/) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/) |
-| [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/attribute) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/attribute) |
-| [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/background) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/background) |
-| [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/badge) | [Contenu présent](/fr/projects/uix/forge/sparks/badge) |
-| [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/button) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/button) |
-| [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/event) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/event) |
-| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/form) | [Contenu présent](/fr/projects/uix/forge/sparks/form) |
-| [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/grid) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/grid) |
-| [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/) |
-| [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/lock) | [Contenu présent](/fr/projects/uix/forge/sparks/lock) |
-| [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/map) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/map) |
-| [projects/uix/forge/sparks/more-info.md](/projects/uix/forge/sparks/more-info) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/more-info) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/more-info) |
-| [projects/uix/forge/sparks/overlay-icon.md](/projects/uix/forge/sparks/overlay-icon) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/overlay-icon) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/overlay-icon) |
-| [projects/uix/forge/sparks/search.md](/projects/uix/forge/sparks/search) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/search) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/search) |
-| [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/state-badge) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/state-badge) |
-| [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/theme) | [Contenu présent](/fr/projects/uix/forge/sparks/theme) |
-| [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/tile-icon) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/tile-icon) |
-| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Contenu présent · Points à examiner](/en/projects/uix/forge/sparks/tooltip) | [Contenu présent · Points à examiner](/fr/projects/uix/forge/sparks/tooltip) |
-| [projects/uix/guides.md](/projects/uix/guides) | [Contenu présent · Points à examiner](/en/projects/uix/guides) | [Contenu présent](/fr/projects/uix/guides) |
-| [projects/uix/index.md](/projects/uix/) | [Contenu présent · Points à examiner](/en/projects/uix/) | [Contenu présent](/fr/projects/uix/) |
-| [projects/uix/license.md](/projects/uix/license) | [Contenu présent · Points à examiner](/en/projects/uix/license) | [Contenu présent](/fr/projects/uix/license) |
-| [projects/uix/quick-start.md](/projects/uix/quick-start) | [Contenu présent · Points à examiner](/en/projects/uix/quick-start) | [Contenu présent · Points à examiner](/fr/projects/uix/quick-start) |
-| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Contenu présent · Points à examiner](/en/projects/uix/translation-status) | [Contenu présent · Points à examiner](/fr/projects/uix/translation-status) |
-| [projects/uix/using/apps.md](/projects/uix/using/apps) | [Contenu présent · Points à examiner](/en/projects/uix/using/apps) | [Contenu présent](/fr/projects/uix/using/apps) |
-| [projects/uix/using/cards.md](/projects/uix/using/cards) | [Contenu présent · Points à examiner](/en/projects/uix/using/cards) | [Contenu présent · Points à examiner](/fr/projects/uix/using/cards) |
-| [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Contenu présent · Points à examiner](/en/projects/uix/using/custom-panels) | [Contenu présent](/fr/projects/uix/using/custom-panels) |
-| [projects/uix/using/entities.md](/projects/uix/using/entities) | [Contenu présent · Points à examiner](/en/projects/uix/using/entities) | [Contenu présent](/fr/projects/uix/using/entities) |
-| [projects/uix/using/icons.md](/projects/uix/using/icons) | [Contenu présent · Points à examiner](/en/projects/uix/using/icons) | [Contenu présent](/fr/projects/uix/using/icons) |
-| [projects/uix/using/images.md](/projects/uix/using/images) | [Contenu présent · Points à examiner](/en/projects/uix/using/images) | [Contenu présent](/fr/projects/uix/using/images) |
-| [projects/uix/using/index.md](/projects/uix/using/) | [Contenu présent · Points à examiner](/en/projects/uix/using/) | [Contenu présent · Points à examiner](/fr/projects/uix/using/) |
-| [projects/uix/using/other.md](/projects/uix/using/other) | [Contenu présent · Points à examiner](/en/projects/uix/using/other) | [Contenu présent](/fr/projects/uix/using/other) |
-| [projects/uix/using/section-backgrounds.md](/projects/uix/using/section-backgrounds) | [Contenu présent · Points à examiner](/en/projects/uix/using/section-backgrounds) | [Contenu présent](/fr/projects/uix/using/section-backgrounds) |
-| [projects/uix/using/templates.md](/projects/uix/using/templates) | [Contenu présent · Points à examiner](/en/projects/uix/using/templates) | [Contenu présent](/fr/projects/uix/using/templates) |
-| [projects/uix/using/themes.md](/projects/uix/using/themes) | [Contenu présent · Points à examiner](/en/projects/uix/using/themes) | [Contenu présent · Points à examiner](/fr/projects/uix/using/themes) |
-| [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Contenu présent · Points à examiner](/en/projects/uix/using/view-backgrounds) | [Contenu présent](/fr/projects/uix/using/view-backgrounds) |
+| [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Contenu présent · Différence examinée](/en/projects/uix/extras/style-frame-panels) | [Contenu présent](/fr/projects/uix/extras/style-frame-panels) |
+| [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Contenu présent · Différence examinée](/en/projects/uix/extras/uix-actions) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/uix-actions) |
+| [projects/uix/faq.md](/projects/uix/faq) | [Contenu présent · Différence examinée](/en/projects/uix/faq) | [Contenu présent · Différence examinée](/fr/projects/uix/faq) |
+| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Contenu présent · Différence examinée](/en/projects/uix/forge/forge) | [Contenu présent](/fr/projects/uix/forge/forge) |
+| [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Contenu présent · Différence examinée](/en/projects/uix/forge/foundries) | [Contenu présent · Différence examinée](/fr/projects/uix/forge/foundries) |
+| [projects/uix/forge/index.md](/projects/uix/forge/) | [Contenu présent · Différence examinée](/en/projects/uix/forge/) | [Contenu présent · Différence examinée](/fr/projects/uix/forge/) |
+| [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/attribute) | [Contenu présent · Différence examinée](/fr/projects/uix/forge/sparks/attribute) |
+| [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/background) | [Contenu présent](/fr/projects/uix/forge/sparks/background) |
+| [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/badge) | [Contenu présent](/fr/projects/uix/forge/sparks/badge) |
+| [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/button) | [Contenu présent · Différence examinée](/fr/projects/uix/forge/sparks/button) |
+| [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/event) | [Contenu présent](/fr/projects/uix/forge/sparks/event) |
+| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/form) | [Contenu présent](/fr/projects/uix/forge/sparks/form) |
+| [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/grid) | [Contenu présent](/fr/projects/uix/forge/sparks/grid) |
+| [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/) | [Contenu présent · Différence examinée](/fr/projects/uix/forge/sparks/) |
+| [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/lock) | [Contenu présent](/fr/projects/uix/forge/sparks/lock) |
+| [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/map) | [Contenu présent](/fr/projects/uix/forge/sparks/map) |
+| [projects/uix/forge/sparks/more-info.md](/projects/uix/forge/sparks/more-info) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/more-info) | [Contenu présent](/fr/projects/uix/forge/sparks/more-info) |
+| [projects/uix/forge/sparks/overlay-icon.md](/projects/uix/forge/sparks/overlay-icon) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/overlay-icon) | [Contenu présent](/fr/projects/uix/forge/sparks/overlay-icon) |
+| [projects/uix/forge/sparks/search.md](/projects/uix/forge/sparks/search) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/search) | [Contenu présent](/fr/projects/uix/forge/sparks/search) |
+| [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/state-badge) | [Contenu présent](/fr/projects/uix/forge/sparks/state-badge) |
+| [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/theme) | [Contenu présent](/fr/projects/uix/forge/sparks/theme) |
+| [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/tile-icon) | [Contenu présent · Différence examinée](/fr/projects/uix/forge/sparks/tile-icon) |
+| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/tooltip) | [Contenu présent](/fr/projects/uix/forge/sparks/tooltip) |
+| [projects/uix/guides.md](/projects/uix/guides) | [Contenu présent · Différence examinée](/en/projects/uix/guides) | [Contenu présent](/fr/projects/uix/guides) |
+| [projects/uix/index.md](/projects/uix/) | [Contenu présent · Différence examinée](/en/projects/uix/) | [Contenu présent](/fr/projects/uix/) |
+| [projects/uix/license.md](/projects/uix/license) | [Contenu présent · Différence examinée](/en/projects/uix/license) | [Contenu présent](/fr/projects/uix/license) |
+| [projects/uix/quick-start.md](/projects/uix/quick-start) | [Contenu présent · Différence examinée](/en/projects/uix/quick-start) | [Contenu présent · Différence examinée](/fr/projects/uix/quick-start) |
+| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Contenu présent · Différence examinée](/en/projects/uix/translation-status) | [Contenu présent · Différence examinée](/fr/projects/uix/translation-status) |
+| [projects/uix/using/apps.md](/projects/uix/using/apps) | [Contenu présent · Différence examinée](/en/projects/uix/using/apps) | [Contenu présent](/fr/projects/uix/using/apps) |
+| [projects/uix/using/cards.md](/projects/uix/using/cards) | [Contenu présent · Différence examinée](/en/projects/uix/using/cards) | [Contenu présent · Différence examinée](/fr/projects/uix/using/cards) |
+| [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Contenu présent · Différence examinée](/en/projects/uix/using/custom-panels) | [Contenu présent](/fr/projects/uix/using/custom-panels) |
+| [projects/uix/using/entities.md](/projects/uix/using/entities) | [Contenu présent · Différence examinée](/en/projects/uix/using/entities) | [Contenu présent](/fr/projects/uix/using/entities) |
+| [projects/uix/using/icons.md](/projects/uix/using/icons) | [Contenu présent · Différence examinée](/en/projects/uix/using/icons) | [Contenu présent](/fr/projects/uix/using/icons) |
+| [projects/uix/using/images.md](/projects/uix/using/images) | [Contenu présent · Différence examinée](/en/projects/uix/using/images) | [Contenu présent](/fr/projects/uix/using/images) |
+| [projects/uix/using/index.md](/projects/uix/using/) | [Contenu présent · Différence examinée](/en/projects/uix/using/) | [Contenu présent](/fr/projects/uix/using/) |
+| [projects/uix/using/other.md](/projects/uix/using/other) | [Contenu présent · Différence examinée](/en/projects/uix/using/other) | [Contenu présent](/fr/projects/uix/using/other) |
+| [projects/uix/using/section-backgrounds.md](/projects/uix/using/section-backgrounds) | [Contenu présent · Différence examinée](/en/projects/uix/using/section-backgrounds) | [Contenu présent](/fr/projects/uix/using/section-backgrounds) |
+| [projects/uix/using/templates.md](/projects/uix/using/templates) | [Contenu présent · Différence examinée](/en/projects/uix/using/templates) | [Contenu présent](/fr/projects/uix/using/templates) |
+| [projects/uix/using/themes.md](/projects/uix/using/themes) | [Contenu présent · Différence examinée](/en/projects/uix/using/themes) | [Contenu présent](/fr/projects/uix/using/themes) |
+| [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Contenu présent · Différence examinée](/en/projects/uix/using/view-backgrounds) | [Contenu présent](/fr/projects/uix/using/view-backgrounds) |
 | [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Contenu présent](/en/projects/ultimate-timer/examples) | [Contenu présent](/fr/projects/ultimate-timer/examples) |
 | [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Contenu présent](/en/projects/ultimate-timer/how-it-works) | [Contenu présent](/fr/projects/ultimate-timer/how-it-works) |
 | [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Contenu présent](/en/projects/ultimate-timer/) | [Contenu présent](/fr/projects/ultimate-timer/) |
@@ -234,20 +237,20 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Contenu présent](/en/collection/flex-table-card/sortierung) | [Contenu présent](/fr/collection/flex-table-card/sortierung) |
 | [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Contenu présent](/en/collection/frosted-glass-manager/) | [Contenu présent](/fr/collection/frosted-glass-manager/) |
 | [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Contenu présent](/en/collection/frosted-glass-theme/) | [Contenu présent](/fr/collection/frosted-glass-theme/) |
-| [sammlung/ha-apps.md](/sammlung/ha-apps) | [Contenu présent · Points à examiner](/en/collection/ha-apps) | [Contenu présent](/fr/collection/ha-apps) |
+| [sammlung/ha-apps.md](/sammlung/ha-apps) | [Contenu présent](/en/collection/ha-apps) | [Contenu présent](/fr/collection/ha-apps) |
 | [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Contenu présent](/en/collection/ha-automation-exporter/) | [Contenu présent](/fr/collection/ha-automation-exporter/) |
 | [sammlung/ha-blueprints.md](/sammlung/ha-blueprints) | [Contenu présent](/en/collection/ha-blueprints) | [Contenu présent](/fr/collection/ha-blueprints) |
-| [sammlung/ha-cards.md](/sammlung/ha-cards) | [Contenu présent · Points à examiner](/en/collection/ha-cards) | [Contenu présent](/fr/collection/ha-cards) |
-| [sammlung/ha-dashboard.md](/sammlung/ha-dashboard) | [Contenu présent · Points à examiner](/en/collection/ha-dashboard) | [Contenu présent](/fr/collection/ha-dashboard) |
+| [sammlung/ha-cards.md](/sammlung/ha-cards) | [Contenu présent](/en/collection/ha-cards) | [Contenu présent](/fr/collection/ha-cards) |
+| [sammlung/ha-dashboard.md](/sammlung/ha-dashboard) | [Contenu présent](/en/collection/ha-dashboard) | [Contenu présent](/fr/collection/ha-dashboard) |
 | [sammlung/ha-empfehlungen.md](/sammlung/ha-empfehlungen) | [Contenu présent](/en/collection/ha-recommendations) | [Contenu présent](/fr/collection/ha-recommendations) |
 | [sammlung/ha-integrationen.md](/sammlung/ha-integrationen) | [Contenu présent](/en/collection/ha-integrations) | [Contenu présent](/fr/collection/ha-integrations) |
 | [sammlung/ha-tools.md](/sammlung/ha-tools) | [Contenu présent](/en/collection/ha-tools) | [Contenu présent](/fr/collection/ha-tools) |
-| [sammlung/hacs-dokus.md](/sammlung/hacs-dokus) | [Contenu présent · Points à examiner](/en/collection/hacs-docs) | [Contenu présent](/fr/collection/hacs-docs) |
-| [sammlung/index.md](/sammlung/) | [Contenu présent · Points à examiner](/en/collection/) | [Contenu présent](/fr/collection/) |
+| [sammlung/hacs-dokus.md](/sammlung/hacs-dokus) | [Contenu présent](/en/collection/hacs-docs) | [Contenu présent](/fr/collection/hacs-docs) |
+| [sammlung/index.md](/sammlung/) | [Contenu présent](/en/collection/) | [Contenu présent](/fr/collection/) |
 | [sammlung/mushroom/beispiele.md](/sammlung/mushroom/beispiele) | [Contenu présent](/en/collection/mushroom/beispiele) | [Contenu présent](/fr/collection/mushroom/beispiele) |
 | [sammlung/mushroom/entwicklung.md](/sammlung/mushroom/entwicklung) | [Contenu présent](/en/collection/mushroom/entwicklung) | [Contenu présent](/fr/collection/mushroom/entwicklung) |
 | [sammlung/mushroom/fehlersuche.md](/sammlung/mushroom/fehlersuche) | [Contenu présent](/en/collection/mushroom/fehlersuche) | [Contenu présent](/fr/collection/mushroom/fehlersuche) |
-| [sammlung/mushroom/index.md](/sammlung/mushroom/) | [Contenu présent · Points à examiner](/en/collection/mushroom/) | [Contenu présent](/fr/collection/mushroom/) |
+| [sammlung/mushroom/index.md](/sammlung/mushroom/) | [Contenu présent](/en/collection/mushroom/) | [Contenu présent](/fr/collection/mushroom/) |
 | [sammlung/mushroom/installation.md](/sammlung/mushroom/installation) | [Contenu présent](/en/collection/mushroom/installation) | [Contenu présent](/fr/collection/mushroom/installation) |
 | [sammlung/mushroom/karten.md](/sammlung/mushroom/karten) | [Contenu présent](/en/collection/mushroom/karten) | [Contenu présent](/fr/collection/mushroom/karten) |
 | [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Contenu présent](/en/collection/mushroom/lizenz-und-stand) | [Contenu présent](/fr/collection/mushroom/lizenz-und-stand) |

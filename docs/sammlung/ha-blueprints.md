@@ -10,7 +10,7 @@ Dieser Bereich sammelt Home-Assistant-Blueprints und wiederverwendbare Automatio
 
 | Projekt | Beschreibung |
 | --- | --- |
-| [Ultimate Timer](/projects/ultimate-timer/) | Home-Assistant-Blueprint für wiederverwendbare Timer. |
+| <img class="package-icon" src="/images/packages/projects-ultimate-timer.png" width="32" height="32" alt="" aria-hidden="true"> [Ultimate Timer](/projects/ultimate-timer/) | Home-Assistant-Blueprint für wiederverwendbare Timer. |
 
 ## Ziel für Blueprint-Dokus
 

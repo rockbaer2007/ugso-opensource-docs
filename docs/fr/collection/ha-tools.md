@@ -12,8 +12,8 @@ Cette section rassemble des outils externes liés à Home Assistant, aux tableau
 
 | Projet | Description |
 | --- | --- |
-| [HADash](/fr/projects/hadash/) | Outil pour importer, modifier et exporter des tableaux de bord Home Assistant. |
-| [Home Assistant Automation Exporter](/fr/collection/ha-automation-exporter/) | Outil Windows permettant d'exporter des automatisations individuelles depuis un fichier `automations.yaml` vers des fichiers YAML distincts. |
+| <img class="package-icon" src="/images/packages/projects-hadash.png" width="32" height="32" alt="" aria-hidden="true"> [HADash](/fr/projects/hadash/) | Outil pour importer, modifier et exporter des tableaux de bord Home Assistant. |
+| <img class="package-icon" src="/images/packages/sammlung-ha-automation-exporter.ico" width="32" height="32" alt="" aria-hidden="true"> [Home Assistant Automation Exporter](/fr/collection/ha-automation-exporter/) | Outil Windows permettant d'exporter des automatisations individuelles depuis un fichier `automations.yaml` vers des fichiers YAML distincts. |
 
 ## Outils de développement internes {#interne-entwicklungswerkzeuge}
 

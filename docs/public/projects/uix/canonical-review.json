@@ -206,7 +206,7 @@
     {
       "path": "debugging/cache.md",
       "sha256": "b890d460a55227522d612885a1fe8171d026ea4522bda74c564b0d75f1176514",
-      "english_sha256": "42be9a21d0f9a4b34d29da9b714ae3bf0a5b756bd3e7eca846dc9ec443d71929",
+      "english_sha256": "217dd71b2505be7be109499e7f3dad7fb26627be53d4a017c8c6e3e29a2dc7d2",
       "code_sha256": []
     },
     {
@@ -316,7 +316,7 @@
     {
       "path": "extras/uix-actions.md",
       "sha256": "14083c1a86213381cc61e6657101b6e2c7a6eea6fbc55415aca3778922624fbb",
-      "english_sha256": "0ce838a9695bede0e35877cae6d526cc73c208ffec31982fb5b04b1b730a36f0",
+      "english_sha256": "bcd6b4a5e0b2c8d4c6e5180b00fe59ecf7a97abe0fbe0e436a57ac09a31e8e63",
       "code_sha256": [
         "6b2bf5f82a82df107c870460dddd46c23e4bb50b658e52afdea1d59958cf8649",
         "d2174050b1834cca9ddb533d9aefe967f70fb600ee7877f59648d6723f70b24d",
@@ -854,5 +854,14 @@
         "aa63bd51de6457b9cc363f4258d6c893fbddb8ecf4f3773b43653bb703960e51"
       ]
     }
-  ]
+  ],
+  "editorial_corrections": {
+    "reviewed_at": "2026-10-27",
+    "paths": [
+      "debugging/cache.md",
+      "extras/uix-actions.md"
+    ],
+    "reason": "Contradictory upstream cache prose corrected against the implementation: clear_cache deletes Cache Storage entries and reloads, without clearing localStorage. Canonical source hashes and code examples remain unchanged.",
+    "implementation": "https://github.com/Lint-Free-Technology/uix/blob/26e54e6d4973231a393933e6479ed1b03cc86cd3/src/ll-custom-actions.ts#L224-L242"
+  }
 }

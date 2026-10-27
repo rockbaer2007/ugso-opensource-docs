@@ -45,7 +45,7 @@ features:
     details: Packages are managed through pnpm workspaces with clearly separated responsibilities.
 ---
 
-## Project Status
+## <img class="package-icon" src="/images/packages/projects-atlas.png" width="32" height="32" alt="" aria-hidden="true"> Project Status
 
 ATLAS is currently in active development.
 

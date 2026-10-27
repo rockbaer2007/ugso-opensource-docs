@@ -4,6 +4,12 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Inhaltsabgleich vom 27.10.2026
+
+Die verbliebenen Hinweise des vollständigen DE/EN/FR-Inventars sind [einzeln bewertet](/documentation-review.json). Die kanonische englische Vorschau bleibt erhalten. Zwei widersprüchliche Cache-Absätze wurden anhand der Implementierung berichtigt: `clear-cache` erhält `localStorage` und die Browser-Mod-Kennung. Die Prüfsummen der angepassten englischen Seiten sind mit dieser redaktionellen Korrektur fortgeschrieben; kanonische Quellen und Codebeispiele bleiben unverändert.
+
+18 französische Referenzseiten enthalten zusammen 199 ergänzende Konfigurationen aus den deutschen Beispielen, mit französischen Überschriften und unveränderten technischen Werten. Fehlende Erläuterungen zu Themes, Foundries, DOM-Pfaden und Browser-Overrides wurden ergänzt; ein englischer Theme-Absatz ist jetzt französisch. Historische Versionsangaben und unterschiedlich gegliederte Zusammenfassungen sind als geprüfte Unterschiede erfasst. Stabile Basis und kanonische Vorschau werden weiterhin getrennt ausgewiesen. Dies ist eine Dokumentationsprüfung, kein neuer HA-Laufzeittest.
+
 Diese Seite dokumentiert den aktuellen Abgleich der deutschen UIX-Dokumentation mit der englischen Originaldokumentation.
 
 ## Inhaltsprüfung vom 26.10.2026

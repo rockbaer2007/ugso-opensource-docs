@@ -14,11 +14,14 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 ## Bestandsaufnahme
 
-| Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Weitere Prüfhinweise |
+| Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 229 | 0 | 0 | 0 |
-| EN | 229 | 0 | 0 | 74 |
-| FR | 229 | 0 | 0 | 47 |
+| EN | 229 | 0 | 0 | 0 |
+| FR | 229 | 0 | 0 | 0 |
+
+**Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
+
 
 Die Ergänzungen wurden mit Übersetzungsunterstützung erstellt und technisch gegen die deutsche Vorlage geprüft: Code, Bezeichner, Tabellen und Bilder. 14 weitere Inhaltslücken wurden als ergänzende Referenz geschlossen; vorhandene Seiten und Links bleiben erhalten. Das ist keine vollständige sprachliche Zertifizierung. Verbleibende Prüfhinweise betreffen auch bewusst unterschiedliche Zusammenfassungen und historische Versionsangaben.
 
@@ -65,8 +68,8 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/atlas-plugins/plugin-template.md](/projects/atlas-plugins/plugin-template) | [Inhalt vorhanden](/en/projects/atlas-plugins/plugin-template) | [Inhalt vorhanden](/fr/projects/atlas-plugins/plugin-template) |
 | [projects/atlas-plugins/repository-format.md](/projects/atlas-plugins/repository-format) | [Inhalt vorhanden](/en/projects/atlas-plugins/repository-format) | [Inhalt vorhanden](/fr/projects/atlas-plugins/repository-format) |
 | [projects/atlas-plugins/terminal.md](/projects/atlas-plugins/terminal) | [Inhalt vorhanden](/en/projects/atlas-plugins/terminal) | [Inhalt vorhanden](/fr/projects/atlas-plugins/terminal) |
-| [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Inhalt vorhanden](/en/projects/atlas/card-editor) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/atlas/card-editor) |
-| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Inhalt vorhanden](/en/projects/atlas/development-status) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/atlas/development-status) |
+| [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Inhalt vorhanden](/en/projects/atlas/card-editor) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/atlas/card-editor) |
+| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Inhalt vorhanden](/en/projects/atlas/development-status) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/atlas/development-status) |
 | [projects/atlas/frontend.md](/projects/atlas/frontend) | [Inhalt vorhanden](/en/projects/atlas/frontend) | [Inhalt vorhanden](/fr/projects/atlas/frontend) |
 | [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Inhalt vorhanden](/en/projects/atlas/homeassistant) | [Inhalt vorhanden](/fr/projects/atlas/homeassistant) |
 | [projects/atlas/index.md](/projects/atlas/) | [Inhalt vorhanden](/en/projects/atlas/) | [Inhalt vorhanden](/fr/projects/atlas/) |
@@ -75,7 +78,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Inhalt vorhanden](/en/projects/atlas/tablet-test) | [Inhalt vorhanden](/fr/projects/atlas/tablet-test) |
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Inhalt vorhanden](/en/projects/atlas/tablet-uix-dauertest) | [Inhalt vorhanden](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Inhalt vorhanden](/en/projects/atlas/overview) | [Inhalt vorhanden](/fr/projects/atlas/overview) |
-| [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Inhalt vorhanden · Prüfhinweise](/en/projects/blocks-for-ha/advanced) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/blocks-for-ha/advanced) |
+| [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Inhalt vorhanden](/en/projects/blocks-for-ha/advanced) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Inhalt vorhanden](/en/projects/blocks-for-ha/blockly-audit) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/blockly-audit) |
 | [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Inhalt vorhanden](/en/projects/blocks-for-ha/blocks) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Inhalt vorhanden](/en/projects/blocks-for-ha/catalog/) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/catalog/) |
@@ -85,7 +88,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Inhalt vorhanden](/en/projects/blocks-for-ha/custom-blocks) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/custom-blocks) |
 | [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Inhalt vorhanden](/en/projects/blocks-for-ha/entities) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/entities) |
 | [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Inhalt vorhanden](/en/projects/blocks-for-ha/flow) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/flow) |
-| [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/blocks-for-ha/) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/blocks-for-ha/) |
+| [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Inhalt vorhanden](/en/projects/blocks-for-ha/) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/blocks-for-ha/) |
 | [projects/blocks-for-ha/system-template.md](/projects/blocks-for-ha/system-template) | [Inhalt vorhanden](/en/projects/blocks-for-ha/system-template) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/system-template) |
 | [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Inhalt vorhanden](/en/projects/blocks-for-ha/themes) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/themes) |
 | [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Inhalt vorhanden](/en/projects/blocks-for-ha/time) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/time) |
@@ -107,7 +110,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
 | [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/) |
 | [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/industrial) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/industrial) |
-| [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/interaktiv) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/grafik-visual-studio/interaktiv) |
+| [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/interaktiv) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/materialdesign) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/materialdesign) |
 | [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/packer) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/packer) |
 | [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/printer) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/printer) |
@@ -132,79 +135,79 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Inhalt vorhanden](/en/projects/heizoel-to-mqtt/) | [Inhalt vorhanden](/fr/projects/heizoel-to-mqtt/) |
 | [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Inhalt vorhanden](/en/projects/heizoel-to-mqtt/installation) | [Inhalt vorhanden](/fr/projects/heizoel-to-mqtt/installation) |
 | [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Inhalt vorhanden](/en/projects/heizoel-to-mqtt/configuration) | [Inhalt vorhanden](/fr/projects/heizoel-to-mqtt/configuration) |
-| [projects/index.md](/projects/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/) | [Inhalt vorhanden](/fr/projects/) |
+| [projects/index.md](/projects/) | [Inhalt vorhanden](/en/projects/) | [Inhalt vorhanden](/fr/projects/) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Inhalt vorhanden](/en/projects/mqtt-client/) | [Inhalt vorhanden](/fr/projects/mqtt-client/) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/examples) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/examples) |
 | [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/entities) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/entities) |
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/) |
 | [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/installation) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/installation) |
 | [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/configuration) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/configuration) |
-| [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/broker/broker) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/broker/broker) |
-| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/broker/directives) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/broker/directives) |
-| [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/broker/examples) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/broker/examples) |
-| [projects/uix/broker/index.md](/projects/uix/broker/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/broker/) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/broker/) |
-| [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/broker/interaction-anchors) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/broker/interaction-anchors) |
-| [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/broker/realms) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/broker/realms) |
-| [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/broker/rules) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/broker/rules) |
-| [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/concepts/application) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/concepts/application) |
-| [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/concepts/dom) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/concepts/dom) |
-| [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/concepts/) | [Inhalt vorhanden](/fr/projects/uix/concepts/) |
-| [projects/uix/contributing.md](/projects/uix/contributing) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/contributing) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/contributing) |
-| [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/debugging/cache) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/debugging/cache) |
-| [projects/uix/debugging/cards.md](/projects/uix/debugging/cards) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/debugging/cards) | [Inhalt vorhanden](/fr/projects/uix/debugging/cards) |
-| [projects/uix/debugging/index.md](/projects/uix/debugging/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/debugging/) | [Inhalt vorhanden](/fr/projects/uix/debugging/) |
-| [projects/uix/debugging/templates.md](/projects/uix/debugging/templates) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/debugging/templates) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/debugging/templates) |
-| [projects/uix/developers/cards.md](/projects/uix/developers/cards) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/developers/cards) | [Inhalt vorhanden](/fr/projects/uix/developers/cards) |
-| [projects/uix/developers/index.md](/projects/uix/developers/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/developers/) | [Inhalt vorhanden](/fr/projects/uix/developers/) |
-| [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/developers/themes) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/developers/themes) |
-| [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/always-patch-ha-card) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/extras/always-patch-ha-card) |
-| [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/dialog-styling-delay) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/extras/dialog-styling-delay) |
-| [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/disable-entity-picture-image-override) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/extras/disable-entity-picture-image-override) |
-| [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/disable-icon-styling) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/extras/disable-icon-styling) |
-| [projects/uix/extras/frontend-states-throttling.md](/projects/uix/extras/frontend-states-throttling) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/frontend-states-throttling) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/extras/frontend-states-throttling) |
-| [projects/uix/extras/hash-template-variable-updates.md](/projects/uix/extras/hash-template-variable-updates) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/hash-template-variable-updates) | [Inhalt vorhanden](/fr/projects/uix/extras/hash-template-variable-updates) |
-| [projects/uix/extras/index.md](/projects/uix/extras/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/extras/) |
+| [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/broker) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/broker) |
+| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/directives) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/directives) |
+| [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/examples) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/examples) |
+| [projects/uix/broker/index.md](/projects/uix/broker/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/) |
+| [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/interaction-anchors) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/interaction-anchors) |
+| [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/realms) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/realms) |
+| [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/rules) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/rules) |
+| [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/application) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/concepts/application) |
+| [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/dom) | [Inhalt vorhanden](/fr/projects/uix/concepts/dom) |
+| [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/) | [Inhalt vorhanden](/fr/projects/uix/concepts/) |
+| [projects/uix/contributing.md](/projects/uix/contributing) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/contributing) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/contributing) |
+| [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/debugging/cache) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/debugging/cache) |
+| [projects/uix/debugging/cards.md](/projects/uix/debugging/cards) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/debugging/cards) | [Inhalt vorhanden](/fr/projects/uix/debugging/cards) |
+| [projects/uix/debugging/index.md](/projects/uix/debugging/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/debugging/) | [Inhalt vorhanden](/fr/projects/uix/debugging/) |
+| [projects/uix/debugging/templates.md](/projects/uix/debugging/templates) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/debugging/templates) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/debugging/templates) |
+| [projects/uix/developers/cards.md](/projects/uix/developers/cards) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/developers/cards) | [Inhalt vorhanden](/fr/projects/uix/developers/cards) |
+| [projects/uix/developers/index.md](/projects/uix/developers/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/developers/) | [Inhalt vorhanden](/fr/projects/uix/developers/) |
+| [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/developers/themes) | [Inhalt vorhanden](/fr/projects/uix/developers/themes) |
+| [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/always-patch-ha-card) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/always-patch-ha-card) |
+| [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/dialog-styling-delay) | [Inhalt vorhanden](/fr/projects/uix/extras/dialog-styling-delay) |
+| [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/disable-entity-picture-image-override) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/disable-entity-picture-image-override) |
+| [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/disable-icon-styling) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/disable-icon-styling) |
+| [projects/uix/extras/frontend-states-throttling.md](/projects/uix/extras/frontend-states-throttling) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/frontend-states-throttling) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/frontend-states-throttling) |
+| [projects/uix/extras/hash-template-variable-updates.md](/projects/uix/extras/hash-template-variable-updates) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/hash-template-variable-updates) | [Inhalt vorhanden](/fr/projects/uix/extras/hash-template-variable-updates) |
+| [projects/uix/extras/index.md](/projects/uix/extras/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/) |
 | [projects/uix/extras/style-custom-panels.md](/projects/uix/extras/style-custom-panels) | [Inhalt vorhanden](/en/projects/uix/extras/style-custom-panels) | [Inhalt vorhanden](/fr/projects/uix/extras/style-custom-panels) |
-| [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/style-frame-panels) | [Inhalt vorhanden](/fr/projects/uix/extras/style-frame-panels) |
-| [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/uix-actions) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/extras/uix-actions) |
-| [projects/uix/faq.md](/projects/uix/faq) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/faq) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/faq) |
-| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/forge) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/forge) |
-| [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/foundries) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/foundries) |
-| [projects/uix/forge/index.md](/projects/uix/forge/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/) |
-| [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/attribute) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/attribute) |
-| [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/background) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/background) |
-| [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/badge) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/badge) |
-| [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/button) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/button) |
-| [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/event) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/event) |
-| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/form) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/form) |
-| [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/grid) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/grid) |
-| [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/) |
-| [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/lock) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/lock) |
-| [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/map) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/map) |
-| [projects/uix/forge/sparks/more-info.md](/projects/uix/forge/sparks/more-info) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/more-info) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/more-info) |
-| [projects/uix/forge/sparks/overlay-icon.md](/projects/uix/forge/sparks/overlay-icon) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/overlay-icon) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/overlay-icon) |
-| [projects/uix/forge/sparks/search.md](/projects/uix/forge/sparks/search) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/search) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/search) |
-| [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/state-badge) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/state-badge) |
-| [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/theme) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/theme) |
-| [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/tile-icon) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/tile-icon) |
-| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/forge/sparks/tooltip) |
-| [projects/uix/guides.md](/projects/uix/guides) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/guides) | [Inhalt vorhanden](/fr/projects/uix/guides) |
-| [projects/uix/index.md](/projects/uix/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/) | [Inhalt vorhanden](/fr/projects/uix/) |
-| [projects/uix/license.md](/projects/uix/license) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/license) | [Inhalt vorhanden](/fr/projects/uix/license) |
-| [projects/uix/quick-start.md](/projects/uix/quick-start) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/quick-start) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/quick-start) |
-| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/translation-status) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/translation-status) |
-| [projects/uix/using/apps.md](/projects/uix/using/apps) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/apps) | [Inhalt vorhanden](/fr/projects/uix/using/apps) |
-| [projects/uix/using/cards.md](/projects/uix/using/cards) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/cards) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/using/cards) |
-| [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/custom-panels) | [Inhalt vorhanden](/fr/projects/uix/using/custom-panels) |
-| [projects/uix/using/entities.md](/projects/uix/using/entities) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/entities) | [Inhalt vorhanden](/fr/projects/uix/using/entities) |
-| [projects/uix/using/icons.md](/projects/uix/using/icons) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/icons) | [Inhalt vorhanden](/fr/projects/uix/using/icons) |
-| [projects/uix/using/images.md](/projects/uix/using/images) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/images) | [Inhalt vorhanden](/fr/projects/uix/using/images) |
-| [projects/uix/using/index.md](/projects/uix/using/) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/using/) |
-| [projects/uix/using/other.md](/projects/uix/using/other) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/other) | [Inhalt vorhanden](/fr/projects/uix/using/other) |
-| [projects/uix/using/section-backgrounds.md](/projects/uix/using/section-backgrounds) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/section-backgrounds) | [Inhalt vorhanden](/fr/projects/uix/using/section-backgrounds) |
-| [projects/uix/using/templates.md](/projects/uix/using/templates) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/templates) | [Inhalt vorhanden](/fr/projects/uix/using/templates) |
-| [projects/uix/using/themes.md](/projects/uix/using/themes) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/themes) | [Inhalt vorhanden · Prüfhinweise](/fr/projects/uix/using/themes) |
-| [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/using/view-backgrounds) | [Inhalt vorhanden](/fr/projects/uix/using/view-backgrounds) |
+| [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/style-frame-panels) | [Inhalt vorhanden](/fr/projects/uix/extras/style-frame-panels) |
+| [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/uix-actions) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/uix-actions) |
+| [projects/uix/faq.md](/projects/uix/faq) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/faq) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/faq) |
+| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/forge) | [Inhalt vorhanden](/fr/projects/uix/forge/forge) |
+| [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/foundries) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/foundries) |
+| [projects/uix/forge/index.md](/projects/uix/forge/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/) |
+| [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/attribute) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/sparks/attribute) |
+| [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/background) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/background) |
+| [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/badge) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/badge) |
+| [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/button) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/sparks/button) |
+| [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/event) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/event) |
+| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/form) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/form) |
+| [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/grid) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/grid) |
+| [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/sparks/) |
+| [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/lock) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/lock) |
+| [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/map) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/map) |
+| [projects/uix/forge/sparks/more-info.md](/projects/uix/forge/sparks/more-info) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/more-info) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/more-info) |
+| [projects/uix/forge/sparks/overlay-icon.md](/projects/uix/forge/sparks/overlay-icon) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/overlay-icon) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/overlay-icon) |
+| [projects/uix/forge/sparks/search.md](/projects/uix/forge/sparks/search) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/search) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/search) |
+| [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/state-badge) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/state-badge) |
+| [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/theme) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/theme) |
+| [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/tile-icon) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/sparks/tile-icon) |
+| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/tooltip) |
+| [projects/uix/guides.md](/projects/uix/guides) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/guides) | [Inhalt vorhanden](/fr/projects/uix/guides) |
+| [projects/uix/index.md](/projects/uix/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/) | [Inhalt vorhanden](/fr/projects/uix/) |
+| [projects/uix/license.md](/projects/uix/license) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/license) | [Inhalt vorhanden](/fr/projects/uix/license) |
+| [projects/uix/quick-start.md](/projects/uix/quick-start) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/quick-start) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/quick-start) |
+| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/translation-status) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/translation-status) |
+| [projects/uix/using/apps.md](/projects/uix/using/apps) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/apps) | [Inhalt vorhanden](/fr/projects/uix/using/apps) |
+| [projects/uix/using/cards.md](/projects/uix/using/cards) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/cards) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/using/cards) |
+| [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/custom-panels) | [Inhalt vorhanden](/fr/projects/uix/using/custom-panels) |
+| [projects/uix/using/entities.md](/projects/uix/using/entities) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/entities) | [Inhalt vorhanden](/fr/projects/uix/using/entities) |
+| [projects/uix/using/icons.md](/projects/uix/using/icons) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/icons) | [Inhalt vorhanden](/fr/projects/uix/using/icons) |
+| [projects/uix/using/images.md](/projects/uix/using/images) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/images) | [Inhalt vorhanden](/fr/projects/uix/using/images) |
+| [projects/uix/using/index.md](/projects/uix/using/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/) | [Inhalt vorhanden](/fr/projects/uix/using/) |
+| [projects/uix/using/other.md](/projects/uix/using/other) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/other) | [Inhalt vorhanden](/fr/projects/uix/using/other) |
+| [projects/uix/using/section-backgrounds.md](/projects/uix/using/section-backgrounds) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/section-backgrounds) | [Inhalt vorhanden](/fr/projects/uix/using/section-backgrounds) |
+| [projects/uix/using/templates.md](/projects/uix/using/templates) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/templates) | [Inhalt vorhanden](/fr/projects/uix/using/templates) |
+| [projects/uix/using/themes.md](/projects/uix/using/themes) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/themes) | [Inhalt vorhanden](/fr/projects/uix/using/themes) |
+| [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/view-backgrounds) | [Inhalt vorhanden](/fr/projects/uix/using/view-backgrounds) |
 | [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Inhalt vorhanden](/en/projects/ultimate-timer/examples) | [Inhalt vorhanden](/fr/projects/ultimate-timer/examples) |
 | [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Inhalt vorhanden](/en/projects/ultimate-timer/how-it-works) | [Inhalt vorhanden](/fr/projects/ultimate-timer/how-it-works) |
 | [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Inhalt vorhanden](/en/projects/ultimate-timer/) | [Inhalt vorhanden](/fr/projects/ultimate-timer/) |
@@ -234,20 +237,20 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Inhalt vorhanden](/en/collection/flex-table-card/sortierung) | [Inhalt vorhanden](/fr/collection/flex-table-card/sortierung) |
 | [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Inhalt vorhanden](/en/collection/frosted-glass-manager/) | [Inhalt vorhanden](/fr/collection/frosted-glass-manager/) |
 | [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Inhalt vorhanden](/en/collection/frosted-glass-theme/) | [Inhalt vorhanden](/fr/collection/frosted-glass-theme/) |
-| [sammlung/ha-apps.md](/sammlung/ha-apps) | [Inhalt vorhanden · Prüfhinweise](/en/collection/ha-apps) | [Inhalt vorhanden](/fr/collection/ha-apps) |
+| [sammlung/ha-apps.md](/sammlung/ha-apps) | [Inhalt vorhanden](/en/collection/ha-apps) | [Inhalt vorhanden](/fr/collection/ha-apps) |
 | [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Inhalt vorhanden](/en/collection/ha-automation-exporter/) | [Inhalt vorhanden](/fr/collection/ha-automation-exporter/) |
 | [sammlung/ha-blueprints.md](/sammlung/ha-blueprints) | [Inhalt vorhanden](/en/collection/ha-blueprints) | [Inhalt vorhanden](/fr/collection/ha-blueprints) |
-| [sammlung/ha-cards.md](/sammlung/ha-cards) | [Inhalt vorhanden · Prüfhinweise](/en/collection/ha-cards) | [Inhalt vorhanden](/fr/collection/ha-cards) |
-| [sammlung/ha-dashboard.md](/sammlung/ha-dashboard) | [Inhalt vorhanden · Prüfhinweise](/en/collection/ha-dashboard) | [Inhalt vorhanden](/fr/collection/ha-dashboard) |
+| [sammlung/ha-cards.md](/sammlung/ha-cards) | [Inhalt vorhanden](/en/collection/ha-cards) | [Inhalt vorhanden](/fr/collection/ha-cards) |
+| [sammlung/ha-dashboard.md](/sammlung/ha-dashboard) | [Inhalt vorhanden](/en/collection/ha-dashboard) | [Inhalt vorhanden](/fr/collection/ha-dashboard) |
 | [sammlung/ha-empfehlungen.md](/sammlung/ha-empfehlungen) | [Inhalt vorhanden](/en/collection/ha-recommendations) | [Inhalt vorhanden](/fr/collection/ha-recommendations) |
 | [sammlung/ha-integrationen.md](/sammlung/ha-integrationen) | [Inhalt vorhanden](/en/collection/ha-integrations) | [Inhalt vorhanden](/fr/collection/ha-integrations) |
 | [sammlung/ha-tools.md](/sammlung/ha-tools) | [Inhalt vorhanden](/en/collection/ha-tools) | [Inhalt vorhanden](/fr/collection/ha-tools) |
-| [sammlung/hacs-dokus.md](/sammlung/hacs-dokus) | [Inhalt vorhanden · Prüfhinweise](/en/collection/hacs-docs) | [Inhalt vorhanden](/fr/collection/hacs-docs) |
-| [sammlung/index.md](/sammlung/) | [Inhalt vorhanden · Prüfhinweise](/en/collection/) | [Inhalt vorhanden](/fr/collection/) |
+| [sammlung/hacs-dokus.md](/sammlung/hacs-dokus) | [Inhalt vorhanden](/en/collection/hacs-docs) | [Inhalt vorhanden](/fr/collection/hacs-docs) |
+| [sammlung/index.md](/sammlung/) | [Inhalt vorhanden](/en/collection/) | [Inhalt vorhanden](/fr/collection/) |
 | [sammlung/mushroom/beispiele.md](/sammlung/mushroom/beispiele) | [Inhalt vorhanden](/en/collection/mushroom/beispiele) | [Inhalt vorhanden](/fr/collection/mushroom/beispiele) |
 | [sammlung/mushroom/entwicklung.md](/sammlung/mushroom/entwicklung) | [Inhalt vorhanden](/en/collection/mushroom/entwicklung) | [Inhalt vorhanden](/fr/collection/mushroom/entwicklung) |
 | [sammlung/mushroom/fehlersuche.md](/sammlung/mushroom/fehlersuche) | [Inhalt vorhanden](/en/collection/mushroom/fehlersuche) | [Inhalt vorhanden](/fr/collection/mushroom/fehlersuche) |
-| [sammlung/mushroom/index.md](/sammlung/mushroom/) | [Inhalt vorhanden · Prüfhinweise](/en/collection/mushroom/) | [Inhalt vorhanden](/fr/collection/mushroom/) |
+| [sammlung/mushroom/index.md](/sammlung/mushroom/) | [Inhalt vorhanden](/en/collection/mushroom/) | [Inhalt vorhanden](/fr/collection/mushroom/) |
 | [sammlung/mushroom/installation.md](/sammlung/mushroom/installation) | [Inhalt vorhanden](/en/collection/mushroom/installation) | [Inhalt vorhanden](/fr/collection/mushroom/installation) |
 | [sammlung/mushroom/karten.md](/sammlung/mushroom/karten) | [Inhalt vorhanden](/en/collection/mushroom/karten) | [Inhalt vorhanden](/fr/collection/mushroom/karten) |
 | [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Inhalt vorhanden](/en/collection/mushroom/lizenz-und-stand) | [Inhalt vorhanden](/fr/collection/mushroom/lizenz-und-stand) |

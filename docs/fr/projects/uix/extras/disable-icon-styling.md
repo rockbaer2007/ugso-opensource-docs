@@ -4,6 +4,8 @@ description: Découvrez comment désactiver la correction du style des icônes e
 ---
 # Désactiver la correction du style des icônes
 
+La désactivation concerne aussi les couleurs propres à une entité définies par `--uix-icon-color-for-<entity_id>`. Elle ne désactive pas les autres fonctions de style UIX. Le réglage est désactivé par défaut ; sa modification enregistrée s’applique immédiatement aux navigateurs connectés, sans rechargement.
+
 Par défaut, UIX corrige les éléments d'icône standard de Home Assistant (`ha-icon`, `ha-state-icon`, `ha-svg-icon`) pour permettre les styles et surcharges personnalisés, comme `--uix-icon`, `--uix-icon-color`, `--uix-icon-dim` ou `--uix-icon-for-<entity_id>`. UIX propose une option pour désactiver cette correction afin d'améliorer le rendu et de réduire la charge processeur des appareils peu puissants.
 
 ## Réglage depuis l'interface de l'intégration

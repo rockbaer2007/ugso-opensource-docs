@@ -166,3 +166,125 @@ entities:
 
 ![Exemple d'infobulle sur un badge d'état](../../assets/page-assets/forge/sparks/state-badge-tooltip.gif)
 :::
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/state-badge). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Utilisation de base {#reference-example-1}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: state-badge
+      after: hui-tile-card $ ha-tile-icon
+      entity: binary_sensor.window
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 2. Badge après l’icône Tile {#reference-example-2}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: state-badge
+      after: hui-tile-card $ ha-tile-icon
+      entity: sensor.outdoor_temperature
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 3. Badge avant le texte {#reference-example-3}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: state-badge
+      before: hui-tile-card $ ha-tile-info
+      entity: binary_sensor.front_door
+      color: state
+element:
+  type: tile
+  entity: lock.front_door
+```
+
+### 4. Remplacer l’icône {#reference-example-4}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: state-badge
+      after: hui-tile-card $ ha-tile-icon
+      entity: sensor.energy_today
+      override_icon: mdi:flash
+      color: amber
+element:
+  type: tile
+  entity: sensor.energy_today
+```
+
+### 5. Remplacer l’image {#reference-example-5}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: state-badge
+      after: hui-tile-card $ ha-tile-icon
+      entity: person.max
+      override_image: /local/persons/max.png
+element:
+  type: tile
+  entity: person.max
+```
+
+### 6. Couleur {#reference-example-6}
+
+```yaml
+forge:
+  sparks:
+    - type: state-badge
+      after: hui-tile-card $ ha-tile-icon
+      entity: binary_sensor.motion
+      color: state
+```
+
+### 7. Couleur {#reference-example-7}
+
+```yaml
+forge:
+  sparks:
+    - type: state-badge
+      after: hui-tile-card $ ha-tile-icon
+      entity: sensor.energy_today
+      color: green
+```
+
+### 8. Avec une carte vide {#reference-example-8}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: state-badge
+      after: uix-forge-blank-card $ div.content
+      entity: sensor.outdoor_temperature
+element:
+  type: custom:uix-forge-blank-card
+```
+
+::::

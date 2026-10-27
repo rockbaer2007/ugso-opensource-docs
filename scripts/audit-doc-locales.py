@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs'
 REPORT = DOCS / 'public/documentation-audit.json'
 LOCALE_MAP = DOCS / '.vitepress/page-locales.json'
+REVIEW = DOCS / 'public/documentation-review.json'
 SLUGS = {
     'blog/beitragsvorlage.md': 'blog/post-template.md',
     'projects/atlas/uebersicht.md': 'projects/atlas/overview.md',
@@ -91,6 +92,7 @@ def inspect(path):
 
 
 def inventory(reviewed_at):
+    reviewed = {entry['target']: entry for entry in json.loads(REVIEW.read_text(encoding='utf-8'))['pages']} if REVIEW.exists() else {}
     sources = sorted(p.relative_to(DOCS).as_posix() for p in DOCS.rglob('*.md')
                      if p.relative_to(DOCS).parts[0] not in ['en', 'fr', '.vitepress', 'public']
                      and p.name != 'documentation-status.md')
@@ -111,6 +113,11 @@ def inventory(reviewed_at):
                     'substantially_shorter': de['words'] >= 100 and item['words'] < de['words'] * 0.55,
                     'fewer_headings': item['headings'] < de['headings'],
                 }
+                entry = reviewed.get(path)
+                if entry:
+                    current = entry['source_sha256'] == de['sha256'] and entry['target_sha256'] == item['sha256']
+                    item['review'] = {'status': 'reviewed' if current else 'needs-recheck',
+                                      'disposition': entry['disposition'], 'reason': entry['reason']}
             row['locales'][locale] = item
         rows.append(row)
     extras = {}
@@ -123,7 +130,9 @@ def inventory(reviewed_at):
         extras[locale] = sorted(files - matched[locale])
         counts = Counter(row['locales'][locale]['status'] for row in rows)
         summary[locale] = dict(counts, existing_pages=len(files), unmatched_pages=len(extras[locale]),
-                              review_signals=sum(any(row['locales'][locale].get('review_signals', {}).values()) for row in rows))
+                              review_signals=sum(any(row['locales'][locale].get('review_signals', {}).values()) for row in rows),
+                              reviewed_findings=sum(row['locales'][locale].get('review', {}).get('status') == 'reviewed' for row in rows),
+                              open_review_signals=sum(any(row['locales'][locale].get('review_signals', {}).values()) and row['locales'][locale].get('review', {}).get('status') != 'reviewed' for row in rows))
     return {'reviewed_at': reviewed_at, 'hash_format': 'SHA-256 of UTF-8 text with normalized LF line endings', 'scope': 'All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.',
             'source_pages': len(sources), 'summary': summary, 'unmatched_pages': extras, 'pages': rows}
 
@@ -167,6 +176,8 @@ COPY = {
 
 def render_report(report, locale):
     text = dict(COPY[locale])
+    text['counts'] = list(text['counts'])
+    text['counts'][-1] = {'de': 'Offene Prüfhinweise', 'en': 'Open review findings', 'fr': 'Points restant à examiner'}[locale]
     complete = all(not counts.get('missing') and not counts.get('placeholder') for counts in report['summary'].values())
     if complete:
         text['intro'] = {
@@ -183,7 +194,13 @@ def render_report(report, locale):
              f'# {text["title"]}', '', f'DE / EN / FR · {report["reviewed_at"]}', '', text['intro'], '', text['scope'], '',
              f'## {text["summary"]}', '', '| ' + ' | '.join(text['counts']) + ' |', '| --- | ---: | ---: | ---: | ---: |']
     for language, counts in report['summary'].items():
-        lines.append(f'| {language.upper()} | {counts["existing_pages"]} | {counts.get("missing", 0)} | {counts.get("placeholder", 0)} | {counts["review_signals"]} |')
+        lines.append(f'| {language.upper()} | {counts["existing_pages"]} | {counts.get("missing", 0)} | {counts.get("placeholder", 0)} | {counts["open_review_signals"]} |')
+    if sum(counts['reviewed_findings'] for counts in report['summary'].values()):
+        lines += ['', {
+            'de': '**Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).',
+            'en': '**Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).',
+            'fr': '**Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).'
+        }[locale], '']
     lines += ['', text['priority'], '', text['details'], '', '[JSON](/documentation-audit.json)', '',
               '[UIX DE](/projects/uix/translation-status) · [UIX EN](/en/projects/uix/translation-status) · [UIX FR](/fr/projects/uix/translation-status)', '',
               f'## {text["head"]}', '', f'| {text["column"]} | EN | FR |', '| --- | --- | --- |']
@@ -193,7 +210,7 @@ def render_report(report, locale):
             item = row['locales'][language]
             status = text['statuses'][item['status']]
             if any(item.get('review_signals', {}).values()):
-                status += ' · ' + text['signal']
+                status += ' · ' + ({'de': 'Unterschied geprüft', 'en': 'Difference reviewed', 'fr': 'Différence examinée'}[locale] if item.get('review', {}).get('status') == 'reviewed' else text['signal'])
             cells.append(status if item['status'] == 'missing' else f'[{status}]({route(item["path"])})')
         lines.append('| ' + ' | '.join(cells) + ' |')
     return '\n'.join(lines) + '\n'

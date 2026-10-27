@@ -245,3 +245,53 @@ rules:
 ::: warning
 L'état du panneau est asynchrone. Une interaction comportant une règle de panneau dans ses `rules` au niveau de l'interaction ne peut pas utiliser `block`, car le blocage doit se terminer dans la pile d'appels synchrones de l'événement. Broker ignore ces interactions et journalise un avertissement. Les directives ultérieures autres que `block` peuvent avoir leurs propres règles de panneau : celles-ci conditionnent uniquement ces directives après le blocage de l'événement.
 :::
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/broker/rules). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Règles de l’élément hôte {#reference-example-1}
+
+```yaml
+rules:
+  - anchor: "$ ha-dialog"
+    match: "ha-dialog"
+
+  - anchor: "&home-assistant $$ ha-automation-sidebar"
+    match: "ha-automation-sidebar"
+
+  - anchor:
+      select_tree: "home-assistant $$ ha-automation-sidebar"
+    match: "{._yamlMode=false}"
+```
+
+### 2. Utilisateurs Home Assistant {#reference-example-2}
+
+```yaml
+rules:
+  - type: user
+    match: Darryn
+  # Wenn bekannt, vorzugsweise die stabile ID verwenden:
+  - type: user
+    match: 9f1362c9e0a24d918c66d4fdcf12b001
+```
+
+### 3. Utilisateurs Home Assistant {#reference-example-3}
+
+```yaml
+rules:
+  - type: user_is_admin
+```
+
+### 4. Utilisateurs Home Assistant {#reference-example-4}
+
+```yaml
+rules:
+  - type: user
+    match: wall-*
+  - type: user_is_admin
+    match: false
+```
+
+::::

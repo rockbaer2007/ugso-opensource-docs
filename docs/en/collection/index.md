@@ -28,3 +28,11 @@ UIX is intentionally kept separate because the German UIX documentation is maint
 
 - [German UIX documentation](/projects/uix/)
 - [Official UIX documentation](https://uix.lf.technology/)
+
+## Ground rules
+
+- Identify the original source and license on each documentation page.
+- The original documentation remains authoritative for external projects.
+- Examples should be complete and directly usable.
+- Mark outdated revisions explicitly.
+- Add guidance for AI tools and agents through metadata or `llms.txt` where useful.

@@ -5,13 +5,13 @@
 
 Cette page rassemble d'autres projets open source UGSo qui ne font pas directement partie des outils C# ou des applications MQTT.
 
-## Ultimate Timer {#ultimate-timer}
+## <img class="package-icon" src="/images/packages/projects-ultimate-timer.png" width="32" height="32" alt="" aria-hidden="true"> Ultimate Timer {#ultimate-timer}
 
 **Ultimate Timer**
 
 Un « blueprint » d'automatisation pour Home Assistant permettant de créer des minuteurs réutilisables, dotés d'une logique d'arrêt (STOP) robuste, d'un état « terminé » (DONE) persistant, d'une prise en charge multi-instance et d'une option de fonctionnement via MQTT.
 
-- [Ouvrir la documentation d'Ultimate-Timer](/fr/projects/ultimate-timer/)
+- <img class="package-icon" src="/images/packages/projects-ultimate-timer.png" width="32" height="32" alt="" aria-hidden="true"> [Ouvrir la documentation d'Ultimate-Timer](/fr/projects/ultimate-timer/)
 - [Ouvrir le Blueprint sur GitHub](https://github.com/rockbaer2007/ha-ultimate-timer-blueprint)
 
 ## Blueprints Home Assistant {#home-assistant-blueprints}
@@ -31,4 +31,4 @@ Une petite collection de Blueprints Home Assistant personnalisés, conçus pour 
 
 - [Ouvrir les projets C#](/fr/projects/)
 - [Ouvrir les projets MQTT](/fr/projects-mqtt/)
-- [Ouvrir ATLAS](/fr/projects/atlas/)
+- <img class="package-icon" src="/images/packages/projects-atlas.png" width="32" height="32" alt="" aria-hidden="true"> [Ouvrir ATLAS](/fr/projects/atlas/)

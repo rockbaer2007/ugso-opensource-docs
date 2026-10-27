@@ -430,11 +430,11 @@ body.uix-doc-route .VPDoc a {
     padding: 0 6px;
     height: 32px;
     line-height: 32px;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .VPNavBar .VPNavBarMenuGroup > .button .text {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 32px;
   }
 
@@ -478,11 +478,11 @@ body.uix-doc-route .VPDoc a {
   .VPNavBar .VPNavBarMenuLink,
   .VPNavBar .VPNavBarMenuGroup > .button {
     padding: 0 4px;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .VPNavBar .VPNavBarMenuGroup > .button .text {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .VPNavBar .VPNavBarMenuGroup .text-icon {
@@ -576,3 +576,28 @@ body.uix-doc-route .vp-doc :not(pre) > code {
 
 /* Block catalogs keep their image columns inside a scrollable table on phones. */
 .vp-doc[class*="projects_blocks-for-ha"] table{display:block;max-width:100%;overflow-x:auto}
+
+/* Original package icons share one compact footprint in overview headings/lists. */
+.vp-doc img.package-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 0 8px 0 0;
+  object-fit: contain;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.vp-doc img.eep-brand-logo {
+  display: inline-block;
+  width: 106px;
+  height: 48px;
+  margin: 0 12px 0 0;
+  object-fit: contain;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+}

@@ -4,6 +4,12 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Content review of 27 October 2026
+
+The remaining DE/EN/FR inventory findings have [individual assessments](/documentation-review.json). The canonical English preview is retained. Two contradictory cache paragraphs were corrected against the implementation: `clear-cache` preserves `localStorage` and the Browser Mod identity. The source/code record now explicitly documents these editorial corrections.
+
+Eighteen French reference pages include 199 additional configurations from the German examples, with French headings and unchanged technical values. Missing theme, Foundry, DOM-path and browser-override explanations were added, and a remaining English theme paragraph was translated into French. Historical version annotations and different editorial structures are recorded as reviewed differences. Stable and preview documentation remain distinct. This review does not constitute a new Home Assistant runtime test.
+
 ## Translation content review — 26 October 2026
 
 All **64 canonical pages** were checked again against [English source `26e54e6`](https://github.com/Lint-Free-Technology/uix/tree/26e54e6d4973231a393933e6479ed1b03cc86cd3/docs/source). The `dev` source has not changed since the previous review; the original website still identifies **9.0.0-beta.2**. The stable baseline remains **8.4.0**.

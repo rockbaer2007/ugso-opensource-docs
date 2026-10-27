@@ -218,3 +218,141 @@ uix:
 ```
 
 ![Spark More-info intégré à une carte de raccourci](../../assets/page-assets/forge/sparks/more-info-shortcut-card.png)
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/more-info). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Utilisation de base {#reference-example-1}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: more-info
+      after: hui-tile-card
+      entity: light.living_room
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 2. Avec détails {#reference-example-2}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: more-info
+      after: hui-tile-card
+      entity: light.living_room
+      details: true
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 3. Styles du thème {#reference-example-3}
+
+```yaml
+my-theme:
+  uix-theme: my-theme
+  uix-card: |
+    uix-more-info {
+      --uix-more-info-details-max-height: 360px;
+    }
+```
+
+### 4. Marge intérieure du contenu principal More-info {#reference-example-4}
+
+```yaml
+uix:
+  style: |
+    uix-more-info ha-more-info-info {
+      padding: 0 16px;
+    }
+```
+
+### 5. Marge intérieure du contenu détaillé {#reference-example-5}
+
+```yaml
+uix:
+  style: |
+    :host {
+      --uix-more-info-details-outer-padding: 8px 16px 16px;
+    }
+```
+
+### 6. Carte de raccourci dans une pile verticale {#reference-example-6}
+
+```yaml
+type: vertical-stack
+cards:
+  - type: custom:uix-forge
+    forge:
+      mold: card
+      sparks:
+        - type: more-info
+          after: hui-card
+          entity: light.living_room
+          details: true
+    element:
+      type: button
+      entity: light.living_room
+      name: Wohnzimmer
+```
+
+### 7. Afficher uniquement les détails {#reference-example-7}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: more-info
+      after: hui-tile-card
+      entity: climate.living_room
+      info: false
+      details: true
+element:
+  type: tile
+  entity: climate.living_room
+```
+
+### 8. Une entité différente de celle de la carte {#reference-example-8}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: more-info
+      after: hui-tile-card
+      entity: sensor.energy_today
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 9. Avec une entité issue d’un modèle {#reference-example-9}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  billets:
+    details_entity: sensor.outdoor_temperature
+  sparks:
+    - type: more-info
+      after: hui-tile-card
+      entity: "{{ details_entity }}"
+      details: true
+element:
+  type: tile
+  entity: sensor.outdoor_temperature
+```
+
+::::

@@ -144,3 +144,48 @@ Elle est utile lorsque :
 ::: warning
 Un intervalle trop élevé peut rendre le tableau de bord moins réactif. Une valeur de 200 à 500 ms constitue un bon point de départ. Le mécanisme de rattrapage garantit l'affichage du dernier état, même si les mises à jour intermédiaires sont ignorées. Si vous basculez rapidement un capteur, la seconde mise à jour apparaîtra au plus tard à la fin de l'intervalle, plus 50 ms.
 :::
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/extras/frontend-states-throttling). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. API de remplacement côté client {#reference-example-1}
+
+```js
+window.uixCoordinator.setThrottleOverride(500)
+window.uixCoordinator.setThrottleOverride(null)
+```
+
+### 2. Utilisation avec Browser Mod {#reference-example-2}
+
+```yaml
+# In der Browser-Mod-Konfiguration für eine bestimmte Browser-ID:
+service: browser_mod.javascript
+data:
+  browser_id: kitchen-tablet
+  code: |
+    window.uixCoordinator?.setThrottleOverride(500)
+```
+
+### 3. Utilisation avec custom:button-card {#reference-example-3}
+
+```yaml
+# Throttling mit 500 ms für diese Browser-Session aktivieren:
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: javascript
+    data:
+      code: window.uixCoordinator?.setThrottleOverride(500)
+
+# Throttling-Override für diese Browser-Session deaktivieren:
+hold_action:
+  action: fire-dom-event
+  uix:
+    action: javascript
+    data:
+      code: window.uixCoordinator?.setThrottleOverride(null)
+```
+
+::::

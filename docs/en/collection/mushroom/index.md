@@ -18,3 +18,17 @@ The German documentation is maintained as an unofficial translation and practica
 | License note | `LICENSE` says Apache-2.0, `package.json` says ISC |
 
 The source files are checked by a scheduled GitHub Action so the German documentation can be updated when the original documentation changes.
+
+## Contents
+
+- [Installation](./installation)
+- [Usage](./nutzung)
+- [Cards](./karten)
+- [Examples](./beispiele)
+- [Development and translation](./entwicklung)
+- [Troubleshooting](./fehlersuche)
+- [License and source status](./lizenz-und-stand)
+
+## What is Mushroom for?
+
+Mushroom helps you create modern, consistent Home Assistant dashboards. It focuses on usable cards, editor support, icon and colour selection, internationalisation, and light/dark appearances rather than exhaustive control over every CSS detail. For extensive visual customisation, the original project also points to UI Lovelace Minimalist and Button Card.

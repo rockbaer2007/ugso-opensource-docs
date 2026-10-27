@@ -148,7 +148,7 @@ element:
 
 ![Tooltip spark with custom styling](../../assets/page-assets/forge/sparks/tooltip-customised.gif)
 
-### CSS variables reference
+### Référence des variables CSS {#css-variables-reference}
 
 | Variable CSS | Valeur par défaut | Description |
 | ------------ | ------- | ----------- |
@@ -176,6 +176,10 @@ element:
 | `--uix-tooltip-text-transform` | `none` | Transformation du texte. |
 | `--uix-tooltip-overflow-wrap` | `normal` | Comportement de retour à la ligne du texte. |
 
-## Flèche et dimensions héritées
+## Compatibilité avec les versions antérieures
+
+Les options `trigger` et `open`, ainsi que le maintien de l’infobulle lors du passage du pointeur dans son contenu, ont été ajoutés en **8.3.0-beta.8** et sont inclus dans la base stable **8.4.0**. Les valeurs de style ont changé à partir de **8.3.0-beta.6** ; beta.7 a ajouté `--ha-tooltip-text-color` à la chaîne de repli. Avec **8.2.0**, les valeurs historiques comprennent `--secondary-background-color`, `--ha-font-size-s`, `--ha-font-weight-normal`, une marge intérieure de `8px`, `--ha-border-radius-sm` et `--ha-card-box-shadow`. Le tableau ci-dessus décrit les valeurs plus récentes.
+
+## Flèche et dimensions héritées {#fleche-et-dimensions-heritees}
 
 `without_arrow: true` masque explicitement la flèche. Sa taille hérite sinon de `var(--ha-tooltip-arrow-size, 8px)`. Vous pouvez également définir `--uix-tooltip-arrow-size: 0px` pour ce spark ou `--ha-tooltip-arrow-size: 0px` au niveau du thème. Ces possibilités ne modifient pas la valeur par défaut de `without_arrow`, qui reste `false`.

@@ -1105,3 +1105,569 @@ element:
     - entity: sun.sun
 ```
 :::
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/forge). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Structure de base {#reference-example-1}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 2. Configuration de l’élément {#reference-example-2}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: tile
+  entity: sensor.outdoor_temperature
+```
+
+### 3. Configuration de l’entité dans l’élément {#reference-example-3}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: tile
+  entity: light.kitchen
+  name: Kueche
+```
+
+### 4. Configuration d’une carte vide {#reference-example-4}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: custom:uix-forge-blank-card
+```
+
+### 5. Configuration d’une carte vide {#reference-example-5}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: custom:uix-forge-blank-card
+  cards:
+    - type: tile
+      entity: light.living_room
+    - type: tile
+      entity: sensor.living_room_temperature
+```
+
+### 6. Configuration d’une carte vide {#reference-example-6}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: grid
+      columns: 2
+      gap: 8
+element:
+  type: custom:uix-forge-blank-card
+  cards:
+    - type: tile
+      entity: light.living_room
+    - type: tile
+      entity: light.kitchen
+```
+
+### 7. Configuration en couches {#reference-example-7}
+
+```yaml
+type: custom:uix-forge
+entity: light.kitchen
+forge:
+  mold: card
+element_base:
+  type: markdown
+  # Dieses Template gehört der Markdown-Karte.
+  content: |
+    ## Temp: {{ states('sensor.kitchen_sensor') }}
+element:
+  title: "{{ config.entity }}"
+```
+
+### 8. Configuration en couches {#reference-example-8}
+
+```yaml
+element_base:
+  type: entities
+  entities:
+    - light.kitchen
+    - light.dining_room
+element:
+  # Das Template-Ergebnis ersetzt das komplette Array.
+  entities: "{{ integration_entities('light') | list | tojson }}"
+```
+
+### 9. Foundries et contexte des modèles {#reference-example-9}
+
+```text
+global → global_<mold> → geerbte/benannte Foundry → lokale Konfiguration
+```
+
+### 10. Foundries et contexte des modèles {#reference-example-10}
+
+```yaml
+uix_foundries:
+  kitchen_tile:
+    forge:
+      mold: card
+    element:
+      type: markdown
+      title: "{{ config.entity }}"
+
+# Dashboard-Karte: native Einstellungen lokal, Forge-Werte aus der Foundry.
+type: custom:uix-forge
+foundry: kitchen_tile
+element_base:
+  type: markdown
+  content: |
+    ## {{ states('sensor.room_label') }}
+element:
+  entity: light.kitchen
+```
+
+### 11. Exemple complet avec macro {#reference-example-11}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  macros:
+    state_color: |
+      {% macro state_color(entity) -%}
+      {{ 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' }}
+      {%- endmacro %}
+element:
+  type: tile
+  entity: light.living_room
+uix:
+  style: |
+    ha-card {
+      border-color: {{ state_color(config.element.entity) }};
+    }
+```
+
+### 12. Billets {#reference-example-12}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  billets:
+    main_entity: light.living_room
+    accent_color: var(--primary-color)
+element:
+  type: tile
+  entity: "{{ main_entity }}"
+uix:
+  style: |
+    ha-card {
+      border-color: {{ accent_color }};
+    }
+```
+
+### 13. Interpolation des billets {#reference-example-13}
+
+```yaml
+forge:
+  billets:
+    room: living_room
+    entity: "light.{{ room }}"
+element:
+  type: tile
+  entity: "{{ entity }}"
+```
+
+### 14. Interpolation des billets {#reference-example-14}
+
+```yaml
+forge:
+  billets:
+    domain: sensor
+    object_id: outdoor_temperature
+    entity: "{{ domain }}.{{ object_id }}"
+```
+
+### 15. Ignorer des modèles dans l’élément {#reference-example-15}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: markdown
+  content: |
+    << states('sensor.outdoor_temperature') >>
+```
+
+### 16. Imbrication des modèles {#reference-example-16}
+
+```yaml
+forge:
+  template_nesting: "<<>>"
+element:
+  type: markdown
+  content: "<< states('sensor.outdoor_temperature') >>"
+```
+
+### 17. Billets dans des modèles imbriqués {#reference-example-17}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  billets:
+    entity: light.living_room
+element:
+  type: tile
+  entity: "{{ entity }}"
+```
+
+### 18. Billets dans des modèles imbriqués {#reference-example-18}
+
+```jinja
+{% if is_state(entity, 'on') %}
+  eingeschaltet
+{% endif %}
+```
+
+### 19. Utilisation avec Auto-Entities {#reference-example-19}
+
+```yaml
+type: custom:auto-entities
+card:
+  type: vertical-stack
+card_param: cards
+filter:
+  include:
+    - domain: light
+      options:
+        type: custom:uix-forge
+        forge:
+          mold: card
+        element:
+          type: tile
+          entity: this.entity_id
+```
+
+### 20. Styles UIX {#reference-example-20}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: tile
+  entity: light.living_room
+uix:
+  style: |
+    ha-card {
+      border: 1px solid var(--primary-color);
+    }
+```
+
+### 21. Styles de l’élément {#reference-example-21}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+element:
+  type: tile
+  entity: light.living_room
+  uix:
+    style: |
+      ha-card {
+        color: var(--primary-text-color);
+      }
+```
+
+### 22. Sections {#reference-example-22}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: section
+element:
+  type: heading
+  heading: Wohnzimmer
+```
+
+### 23. Sections {#reference-example-23}
+
+```yaml
+# Nur Hauptkonfiguration fuer Sections. Visibility wird nicht unterstuetzt.
+type: custom:uix-forge
+forge:
+  mold: section
+element:
+  type: grid
+  cards:
+    - type: tile
+      entity: light.living_room
+```
+
+### 24. Pied de page {#reference-example-24}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: footer
+  max_width: 600
+element:
+  type: horizontal-stack
+  cards:
+    - type: button
+      entity: light.living_room
+    - type: button
+      entity: light.kitchen
+```
+
+### 25. Visibilité {#reference-example-25}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: footer
+  hidden: "{{ is_state('input_boolean.hide_footer', 'on') }}"
+element:
+  type: button
+  entity: input_boolean.hide_footer
+```
+
+### 26. Fonctionnalités de carte {#reference-example-26}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card-feature
+element:
+  type: toggle
+```
+
+### 27. Fonctionnalités de carte {#reference-example-27}
+
+```yaml
+type: tile
+entity: light.living_room
+features:
+  - type: custom:uix-forge
+    forge:
+      mold: card-feature
+    element:
+      type: toggle
+```
+
+### 28. `card_as_row` : intégrer une carte comme ligne {#reference-example-28}
+
+```yaml
+type: entities
+entities:
+  - type: custom:uix-forge
+    forge:
+      mold: card_as_row
+    element:
+      type: tile
+      entity: light.living_room
+```
+
+### 29. Intégrer un badge comme Picture-Element {#reference-example-29}
+
+```yaml
+type: picture-elements
+image: /local/floorplan.png
+elements:
+  - type: custom:uix-forge
+    forge:
+      mold: badge_as_picture_element
+    element:
+      type: entity
+      entity: light.living_room
+    style:
+      top: 40%
+      left: 60%
+```
+
+### 30. Exemple Forge complet {#reference-example-30}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  grid_options:
+    columns: 8
+    rows: 1
+  billets:
+    entity: light.living_room
+    label: Wohnzimmer
+  sparks:
+    - type: tooltip
+      for: hui-tile-card $ ha-tile-icon
+      content: "{{ label }}: {{ states(entity) }}"
+    - type: button
+      after: hui-tile-card $ ha-tile-info
+      label: Umschalten
+      entity: "{{ entity }}"
+      tap_action:
+        action: toggle
+    - type: overlay-icon
+      for: hui-tile-card $ ha-tile-icon
+      icon: "{{ 'mdi:check' if is_state(entity, 'on') else 'mdi:minus' }}"
+      icon_background: "{{ 'var(--success-color)' if is_state(entity, 'on') else 'var(--disabled-color)' }}"
+element:
+  type: tile
+  entity: "{{ entity }}"
+  name: "{{ label }}"
+uix:
+  style: |
+    ha-card {
+      border: 1px solid var(--divider-color);
+    }
+    ha-button {
+      margin-left: auto;
+    }
+```
+
+### 31. Affichage des erreurs et diagnostic {#reference-example-31}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  show_error: true
+element:
+  type: tile
+  entity: sensor.does_not_exist
+```
+
+### 32. `hidden` avec des modèles {#reference-example-32}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  hidden: "{{ not is_state('input_boolean.show_lights', 'on') }}"
+element:
+  type: tile
+  entity: light.living_room
+```
+
+### 33. `grid_options` {#reference-example-33}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  grid_options:
+    columns: 6
+    rows: 2
+element:
+  type: tile
+  entity: sensor.energy_today
+```
+
+### 34. `delayed_hass` {#reference-example-34}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  delayed_hass: true
+element:
+  type: custom:apexcharts-card
+  graph_span: 24h
+  series:
+    - entity: sensor.energy_today
+```
+
+### 35. Combiner des Sparks {#reference-example-35}
+
+```yaml
+forge:
+  mold: card
+  sparks:
+    - type: button
+      after: hui-tile-card $ ha-tile-info
+      label: Mehr
+      entity: light.living_room
+      tap_action:
+        action: more-info
+    - type: tooltip
+      for: hui-tile-card $ ha-button
+      content: Details oeffnen
+```
+
+### 36. Forge avec lignes {#reference-example-36}
+
+```yaml
+type: entities
+entities:
+  - type: custom:uix-forge
+    forge:
+      mold: row
+      sparks:
+        - type: tooltip
+          content: Direkte UIX-Zeile
+    element:
+      type: custom:template-entity-row
+      entity: light.living_room
+      name: Wohnzimmer
+```
+
+### 37. Forge avec badges {#reference-example-37}
+
+```yaml
+badges:
+  - type: custom:uix-forge
+    forge:
+      mold: badge
+      sparks:
+        - type: tooltip
+          content: Haustuerstatus
+    element:
+      type: entity
+      entity: binary_sensor.front_door
+```
+
+### 38. Forge avec Picture-Elements {#reference-example-38}
+
+```yaml
+type: picture-elements
+image: /local/floorplan.png
+elements:
+  - type: custom:uix-forge
+    forge:
+      mold: picture-element
+      sparks:
+        - type: lock
+          locks:
+            - confirmation: Licht schalten?
+    element:
+      type: state-icon
+      entity: light.living_room
+    style:
+      top: 45%
+      left: 55%
+```
+
+::::

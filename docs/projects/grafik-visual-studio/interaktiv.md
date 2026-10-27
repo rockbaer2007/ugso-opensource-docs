@@ -5,6 +5,8 @@ description: Universal, Radialregler und Inventwo-Vergleich ab Studio 0.1.295.
 
 # Interaktive Widgets
 
+**Studio 0.1.296:** Auch die übrigen 62 Widget-Typen bieten Eigenschaften und Meldungen in DE/EN/FR, optionale Climate-Steuerung sowie die Prüfung von HA-Quellen, Attributen und Einheiten. Vorhandene Projekte und Paketversionen bleiben gültig; neue Gruppen sind zunächst deaktiviert. [Anleitung und Grenzen](./ha-quellen-climate). Simulierte Prüfungen ersetzen keine Tests mit echten Geräten oder der Companion-App.
+
 **Studio 0.1.295** ergänzt die wichtigsten Funktionsgruppen aus dem [Inventwo-VIS-2-Vergleich](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/inventwo-interactive-audit-2026-10-12.md). [English](/en/projects/grafik-visual-studio/interaktiv) · [Français](/fr/projects/grafik-visual-studio/interaktiv).
 
 ## Universal

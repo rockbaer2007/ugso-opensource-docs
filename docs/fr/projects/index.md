@@ -5,22 +5,22 @@
 
 Cette page regroupe les outils C#/.NET publiés par UGSo Software.
 
-## HADash {#hadash}
+## <img class="package-icon" src="/images/packages/projects-hadash.png" width="32" height="32" alt="" aria-hidden="true"> HADash {#hadash}
 
 **HADash – Boîte à outils pour tableaux de bord Home Assistant**
 
 HADash est une application Windows portable permettant de récupérer, sauvegarder et exporter des tableaux de bord Home Assistant ainsi que des vues individuelles.
 
-- [Ouvrir la documentation de HADash](/fr/projects/hadash/)
+- <img class="package-icon" src="/images/packages/projects-hadash.png" width="32" height="32" alt="" aria-hidden="true"> [Ouvrir la documentation de HADash](/fr/projects/hadash/)
 - [Ouvrir HADash sur GitHub](https://github.com/rockbaer2007/HADash)
 
-## Home Assistant Automation Exporter {#home-assistant-automation-exporter}
+## <img class="package-icon" src="/images/packages/sammlung-ha-automation-exporter.ico" width="32" height="32" alt="" aria-hidden="true"> Home Assistant Automation Exporter {#home-assistant-automation-exporter}
 
 **Home Assistant Automation Exporter**
 
 Home Assistant Automation Exporter est une application Windows portable permettant de diviser un fichier `automations.yaml` en plusieurs fichiers YAML distincts.
 
-- [Ouvrir la documentation de Automation Exporter](/fr/collection/ha-automation-exporter/)
+- <img class="package-icon" src="/images/packages/sammlung-ha-automation-exporter.ico" width="32" height="32" alt="" aria-hidden="true"> [Ouvrir la documentation de Automation Exporter](/fr/collection/ha-automation-exporter/)
 - [Ouvrir Automation Exporter sur GitHub](https://github.com/rockbaer2007/ha-automation-exporter)
 - [Télécharger la version actuelle v0.3.4](https://github.com/rockbaer2007/ha-automation-exporter/releases/tag/v0.3.4)
 
@@ -38,5 +38,5 @@ Cette documentation est une traduction indépendante en allemand de la documenta
 
 - [Ouvrir les projets MQTT](/fr/projects-mqtt/)
 - [Ouvrir divers projets](/fr/projects-diverse/)
-- [Ouvrir ATLAS](/fr/projects/atlas/)
+- <img class="package-icon" src="/images/packages/projects-atlas.png" width="32" height="32" alt="" aria-hidden="true"> [Ouvrir ATLAS](/fr/projects/atlas/)
 - [Ouvrir les plugins ATLAS](/fr/projects/atlas-plugins/)

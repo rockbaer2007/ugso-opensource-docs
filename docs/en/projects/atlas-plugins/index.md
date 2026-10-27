@@ -23,12 +23,12 @@ The plugin interfaces are still in progress. These pages document the current AT
 - [Plugin Template](./plugin-template): use the template, customize a plugin, build its package and publish it.
 - [Plugin Development](./developers/): plugin structure, manifests, Runtime lifecycle and publishing.
 - [Verified Plugins](./verified-plugins): compact lists of verified and new unreviewed ATLAS plugins.
-- [Home Assistant Card Editor](./homeassistant-card-editor): the first official ATLAS reference plugin.
-- [ATLAS File Studio](./file-studio): second independent ATLAS plugin for approved Home Assistant file paths.
-- [ATLAS Icon Studio](./icon-studio): manage, import and save icon sets for Home Assistant.
-- [ATLAS Icon Library](./icon-library): browse icon sets and copy full icon names.
-- [ATLAS Terminal](./terminal): authenticated browser terminal with optional SSH, Oh My Posh themes and a server-served Nerd Font.
-- [ATLAS Automation Exporter / Editor](./automation-extractor): new plugin for analyzing, safely backing up and exporting Home Assistant automations.
+- <img class="package-icon" src="/images/packages/projects-atlas-plugins-homeassistant-card-editor.svg" width="32" height="32" alt="" aria-hidden="true"> [Home Assistant Card Editor](./homeassistant-card-editor): the first official ATLAS reference plugin.
+- <img class="package-icon" src="/images/packages/projects-atlas-plugins-file-studio.svg" width="32" height="32" alt="" aria-hidden="true"> [ATLAS File Studio](./file-studio): second independent ATLAS plugin for approved Home Assistant file paths.
+- <img class="package-icon" src="/images/packages/projects-atlas-plugins-icon-studio.svg" width="32" height="32" alt="" aria-hidden="true"> [ATLAS Icon Studio](./icon-studio): manage, import and save icon sets for Home Assistant.
+- <img class="package-icon" src="/images/packages/projects-atlas-plugins-icon-library.svg" width="32" height="32" alt="" aria-hidden="true"> [ATLAS Icon Library](./icon-library): browse icon sets and copy full icon names.
+- <img class="package-icon" src="/images/packages/projects-atlas-plugins-terminal.svg" width="32" height="32" alt="" aria-hidden="true"> [ATLAS Terminal](./terminal): authenticated browser terminal with optional SSH, Oh My Posh themes and a server-served Nerd Font.
+- <img class="package-icon" src="/images/packages/projects-atlas-plugins-automation-extractor.svg" width="32" height="32" alt="" aria-hidden="true"> [ATLAS Automation Exporter / Editor](./automation-extractor): new plugin for analyzing, safely backing up and exporting Home Assistant automations.
 - [Demo Repository](./demo-repository): public test repository for Administration, Hub and install flow.
 
 ## Goal

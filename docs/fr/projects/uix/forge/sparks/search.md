@@ -236,3 +236,170 @@ element:
 - Les actions s'appliquent à **tous** les éléments renvoyés par `query`. Utilisez `text` pour limiter la sélection à ceux dont le texte correspond à une expression régulière.
 - Le spark observe le conteneur avec un `MutationObserver` et traite automatiquement les éléments ajoutés dynamiquement, par exemple après un changement de mois dans un calendrier.
 :::
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/search). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Utilisation de base {#reference-example-1}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: search
+      for: element
+      query: ".event"
+      text: "Birthday"
+      actions:
+        add_class:
+          - birthday-event
+element:
+  type: calendar
+  entities:
+    - calendar.family
+```
+
+### 2. Classe CSS pour les événements de calendrier correspondants {#reference-example-2}
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: card
+  sparks:
+    - type: search
+      for: element
+      query: ".event"
+      text: "Geburtstag"
+      actions:
+        add_class:
+          - event-birthday
+element:
+  type: calendar
+  entities:
+    - calendar.family
+uix:
+  style: |
+    .event-birthday {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+```
+
+### 3. Retirer un attribut de toutes les correspondances {#reference-example-3}
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: "[title]"
+      actions:
+        remove_attribute:
+          - title
+```
+
+### 4. Ajouter du texte avant et après {#reference-example-4}
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".secondary"
+      actions:
+        prepend_text: "["
+        append_text: "]"
+```
+
+### 5. Rechercher du texte dans les éléments enfants {#reference-example-5}
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".row"
+      text: "Fenster"
+      actions:
+        add_class:
+          - contains-window
+```
+
+### 6. `replace_text` sous forme de chaîne {#reference-example-6}
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".event"
+      actions:
+        replace_text: "^Home Assistant: "
+```
+
+### 7. `replace_text` avec `find` et `replace` {#reference-example-7}
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".event"
+      actions:
+        replace_text:
+          find: "Birthday"
+          replace: "Geburtstag"
+```
+
+### 8. Définir des attributs {#reference-example-8}
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".calendar-event"
+      text: "Arzt"
+      actions:
+        add_attribute:
+          - attribute: data-kind
+            value: appointment
+          - attribute: aria-label
+            value: Termin
+```
+
+### 9. Combiner des classes {#reference-example-9}
+
+```yaml
+forge:
+  sparks:
+    - type: search
+      for: element
+      query: ".row"
+      text: "Warnung|Fehler|Alarm"
+      actions:
+        add_class:
+          - important-row
+        remove_class:
+          - muted-row
+```
+
+### 10. Combiner avec les styles UIX {#reference-example-10}
+
+```yaml
+uix:
+  style: |
+    .important-row {
+      color: var(--error-color);
+      font-weight: 600;
+    }
+    [data-kind="appointment"] {
+      border-left: 3px solid var(--accent-color);
+      padding-left: 8px;
+    }
+```
+
+::::

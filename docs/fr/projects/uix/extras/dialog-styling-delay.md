@@ -4,6 +4,10 @@ description: "Découvrez comment UIX peut appliquer les styles d'un dialogue apr
 ---
 # Délai d'application des styles aux dialogues
 
+## Priorité des réglages
+
+Le réglage de l’intégration constitue la valeur globale, appliquée immédiatement aux navigateurs connectés. Pour la session courante, `setDialogApplyAfterShowOverride(true)` active le délai, `setDialogApplyAfterShowOverride(false)` le désactive et `setDialogApplyAfterShowOverride(null)` supprime la surcharge pour reprendre la valeur globale. Le délai attend `after-show` et concerne les dialogues, pas les cartes ou les vues normales. Une surcharge locale est préférable si un seul appareil présente un problème d’animation.
+
 Par défaut, UIX applique les styles dès l'ouverture des dialogues. Sur certains appareils, cela peut provoquer un bref scintillement, car le navigateur redessine le dialogue pendant son animation. L'option de **délai d'application des styles** attend la fin de l'animation d'ouverture, ce qui évite ces scintillements et défauts d'animation.
 
 ## Activation dans l'interface de l'intégration
@@ -132,3 +136,55 @@ Ce délai est utile lorsque :
 ::: warning
 Lorsque cette option est activée, les styles sont appliqués un peu plus tard. La différence est généralement faible sur les appareils rapides, mais peut devenir perceptible sur les appareils très lents. Si seuls certains appareils en ont besoin, utilisez Browser Mod et une action **Default action** pour appliquer le réglage en JavaScript.
 :::
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Configurations techniques de la [référence allemande](/projects/uix/extras/dialog-styling-delay). Les clés, expressions et valeurs de démonstration restent inchangées ; remplacez les entités par les vôtres.
+
+### 1. API de remplacement côté client {#reference-example-1}
+
+```js
+window.uixCoordinator.setDialogApplyAfterShowOverride(true)
+window.uixCoordinator.setDialogApplyAfterShowOverride(false)
+window.uixCoordinator.setDialogApplyAfterShowOverride(null)
+```
+
+### 2. Utilisation avec Browser Mod {#reference-example-2}
+
+```yaml
+# In der Browser-Mod-Konfiguration für eine bestimmte Browser-ID:
+service: browser_mod.javascript
+data:
+  browser_id: wall-tablet
+  code: |
+    window.uixCoordinator?.setDialogApplyAfterShowOverride(true)
+```
+
+### 3. Utilisation avec custom:button-card {#reference-example-3}
+
+```yaml
+# Dialog Styling Delay für diese Browser-Session aktivieren:
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: javascript
+    data:
+      code: window.uixCoordinator?.setDialogApplyAfterShowOverride(true)
+
+# Override wieder löschen:
+hold_action:
+  action: fire-dom-event
+  uix:
+    action: javascript
+    data:
+      code: window.uixCoordinator?.setDialogApplyAfterShowOverride(null)
+```
+
+### 4. Annuler le réglage {#reference-example-4}
+
+```js
+window.uixCoordinator.setDialogApplyAfterShowOverride(null)
+```
+
+::::

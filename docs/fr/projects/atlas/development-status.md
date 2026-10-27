@@ -564,7 +564,11 @@ anglais et français. Leur préférence de langue enregistrée est partagée ent
 les deux interfaces, y compris lorsque leurs ports sont différents. Le
 paramètre `language` d'une URL reste prioritaire pour la page ouverte.
 
-## Suite du travail
+## Architecture déjà préparée
+
+Les fondations préparées comprennent les contrats du noyau, le conteneur de services, l’injection de dépendances, les descripteurs de services, les contrats d’événements et leurs implémentations de référence.
+
+## Suite du travail {#suite-du-travail}
 
 1. **Projets réels et endurance :** entités, Custom Cards et thèmes variés, mesures CPU/RAM longues et pannes réseau instrumentées sous charge de projets.
 2. **Récupération sur d’autres matériels :** étendre la restauration HAOS amd64 isolée aux appareils physiques ou ARM64, avec systèmes de test séparés et sauvegardes.
@@ -574,6 +578,10 @@ paramètre `language` d'une URL reste prioritaire pour la page ouverte.
 restent dans l'historique et ne sont plus des tâches ouvertes. Les plugins
 indépendants conservent leurs propres listes de travaux.
 La liste de référence se trouve dans la [feuille de route ATLAS](https://github.com/rockbaer2007/atlas/blob/main/ROADMAP.md).
+
+## Perspective à long terme
+
+Après stabilisation de la Runtime, ATLAS doit servir de base technique à d’autres projets UGSo. La **Lovelace UV Card** reste un projet prévu : indice UV, état de protection, seuils et affichage dans le tableau de bord. Le projet `filipnet/haos-uv-index` sert d’inspiration pour les capteurs UV, les niveaux de risque colorés, les recommandations de protection proches de celles de l’OMS, une présentation compatible Mushroom et des notifications facultatives. L’implémentation restera une création UGSo/ATLAS indépendante.
 
 ::: info État évolutif
 La feuille de route évolue avec le développement. Consultez les pages ATLAS et

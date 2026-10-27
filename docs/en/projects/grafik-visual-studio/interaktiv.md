@@ -5,6 +5,8 @@ description: Universal, radial slider and Inventwo comparison from Studio 0.1.29
 
 # Interactive widgets
 
+**Studio 0.1.296:** The remaining 62 widget types also provide DE/EN/FR properties and messages, optional Climate controls, and checks for HA sources, attributes and units. Existing projects and package versions remain valid; new groups start disabled. [Guide and limits](./ha-quellen-climate). Simulated checks do not replace tests with real devices or the Companion app.
+
 **Studio 0.1.295** adds the main functional groups from the [Inventwo VIS-2 review](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/inventwo-interactive-audit-2026-10-12.md). [Deutsch](/projects/grafik-visual-studio/interaktiv) · [Français](/fr/projects/grafik-visual-studio/interaktiv).
 
 ## Universal

@@ -15,3 +15,20 @@ description: Découvrez comment utiliser UI eXtension pour styliser les élémen
 - :clipboard: [Modèles](./templates.md)
 - :art: [Thèmes](./themes.md)
 - :hammer_and_pick: [Autres options](other.md)
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/using/index). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+
+### 1. Principe de base {#reference-example-1}
+
+```yaml
+uix:
+  style: |
+    ha-card {
+      border-radius: 12px;
+    }
+```
+
+::::

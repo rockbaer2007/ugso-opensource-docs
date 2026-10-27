@@ -352,7 +352,7 @@ UIX lance les téléchargements sans retarder les styles et n'enregistre qu'une 
 
 ## Boîtes de dialogue
 
-`uix-dialog` and `uix-dialog-yaml` apply to styles rooted in the dialog element of dialogs which may be `ha-dialog`, `ha-adaptive-dialog`, or `ha-drawer` (notification uses a dialog with an element using the drawer type). Dialogs will also have their class set to `type-<dialog-type>` where `<dialog-type>` will be the dialog element name with any `ha-` prefix stripped. e.g. UIX will append `type-dialog-box` to dialog boxes as used by alerts and other dialog boxes. The Home Assistant dialog manager places dialogs in the shadow root of the top `<home-assistant>` element. The active dialog will be the last child of the shadow root. To view what dialog you wish to target, review the last child of this shadow root node.
+`uix-dialog` et `uix-dialog-yaml` s’appliquent aux styles dont la racine est l’élément du dialogue : `ha-dialog`, `ha-adaptive-dialog` ou `ha-drawer` (les notifications utilisent un dialogue contenant un élément de type drawer). Les dialogues reçoivent aussi la classe `type-<dialog-type>` ; `<dialog-type>` correspond au nom de l’élément sans le préfixe `ha-`. UIX ajoute par exemple `type-dialog-box` aux boîtes d’alerte et aux dialogues de ce type. Le gestionnaire de dialogues de Home Assistant les place dans la racine Shadow DOM de l’élément `<home-assistant>` principal. Le dialogue actif en est le dernier enfant : inspectez-le pour déterminer celui à cibler.
 
 Consultez le guide UIX [Styliser les boîtes de dialogue avec UI eXtension](https://uix-guides.lf.technology/dialogs/2026/02/27/styling-dialogs.html).
 
@@ -420,3 +420,210 @@ Les macros `uix.macros` définies sur une carte sont prioritaires sur celles du 
 [Theme macros](#macros) are only available in UIX styling templates, not in UIX Forge element/forge templates.
 Utilisez les [fonderies globales](../forge/foundries.md#global-foundries) de UIX Forge pour définir des `forge.macros` disponibles globalement ou pour un `mold`.
 :::
+
+## Formes YAML et valeurs de repli
+
+Les variables `uix-<thing>` contiennent du CSS sous forme de chaîne multiligne. Leur variante `uix-<thing>-yaml` permet une structure YAML avec sélecteurs ; les chaînes commencent par `|` ou `>` et leur contenu doit être indenté. Les modèles Jinja peuvent employer les variables configurées et les macros du thème. La variable `uix-theme` est obligatoire et peut référencer un autre thème pour réutiliser ses styles.
+
+Après activation des thèmes et redémarrage de HA, `reload_theme` permet de recharger leurs fichiers. Un remplacement local par `uix.theme` change la référence pour l’élément concerné ; il ne modifie pas le thème global. Les exemples de la référence allemande ci-dessous conservent leurs noms et textes de démonstration.
+
+## Exemples complémentaires de la référence allemande {#german-reference-examples}
+
+:::: details Afficher les configurations complémentaires
+Configurations techniques de la [référence allemande](/projects/uix/using/themes). Les clés, expressions et valeurs de démonstration restent inchangées ; remplacez les entités par les vôtres.
+
+### 1. Thème UIX simple {#reference-example-1}
+
+```yaml
+my-awesome-theme:
+  uix-theme: my-awesome-theme
+```
+
+### 2. Thème UIX simple {#reference-example-2}
+
+```yaml
+theme-mods:
+  # UIX theme variables, styles and macros
+
+my-awesome-theme:
+  uix-theme: theme-mods
+```
+
+### 3. Thème UIX simple {#reference-example-3}
+
+```yaml
+red-theme:
+  uix-theme: red-theme
+
+  primary-color: red
+  primary-text-color: white
+  ha-card-border-radius: 20
+```
+
+### 4. Thème UIX simple {#reference-example-4}
+
+```yaml
+type: entities
+entities:
+  - entity: light.bed_light
+    uix:
+      style: |
+        :host {
+          display: block;
+          border: 1px solid black;
+        }
+  - entity: light.ceiling_lights
+    uix:
+      style: |
+        :host {
+          display: block;
+          border: 1px solid black;
+        }
+```
+
+### 5. Thème UIX simple {#reference-example-5}
+
+```yaml
+red-theme:
+  uix-theme: red-theme
+
+  uix-row: |
+    :host {
+      display: block;
+      border: 1px solid black;
+    }
+```
+
+### 6. Thème UIX simple {#reference-example-6}
+
+```yaml
+red-theme:
+  uix-theme: red-theme
+
+  uix-row: |
+    :host {
+      display: block;
+      border: 1px solid {% if is_state(config.entity, 'on') %} red {% else %} black {% endif %};
+    }
+```
+
+### 7. Classes {#reference-example-7}
+
+```yaml
+red-theme:
+  uix-theme: red-theme
+
+  uix-row: |
+    :host(.teal) {
+      background: teal;
+    }
+    :host(.purple) {
+      background: purple;
+    }
+```
+
+### 8. Parcourir le Shadow DOM {#reference-example-8}
+
+```yaml
+red-theme:
+  uix-theme: red-theme
+
+  uix-row-yaml: |
+    hui-generic-entity-row $ state-badge $: |
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+      ha-state-icon {
+        animation: pulse 2s infinite;
+      }
+```
+
+### 9. Remplacement local de thème avec `uix.theme` {#reference-example-9}
+
+```yaml
+row-red:
+  uix-theme: row-red
+  uix-row-yaml: |
+    hui-generic-entity-row $: |
+      .info {
+        color: red;
+      }
+```
+
+### 10. Remplacement local de thème avec `uix.theme` {#reference-example-10}
+
+```yaml
+row-blue-override:
+  uix-theme: row-blue-override
+  uix-row-yaml: |
+    hui-generic-entity-row $: |
+      .info {
+        color: blue;
+      }
+```
+
+### 11. Passer de `uix-<thing>` à `uix-<thing>-yaml` {#reference-example-11}
+
+```yaml
+red-theme:
+  uix-theme: red-theme
+
+  primary-color: red
+  ha-card-border-radius: 20px
+
+  uix-row-yaml: |
+    .: |
+      :host {
+        display: block;
+        border: 1px solid {% if is_state(config.entity, 'on') %} red {% else %} black {% endif %};
+      }
+      :host(.teal) {
+        background: teal;
+      }
+      :host(.purple) {
+        background: purple;
+      }
+    hui-generic-entity-row $ state-badge $: |
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+      ha-state-icon {
+        animation: pulse 2s infinite;
+      }
+```
+
+### 12. Macros {#reference-example-12}
+
+```yaml
+badges:
+  - type: entity
+    entity: light.bed_light
+    tap_action:
+      action: toggle
+    uix:
+      style: |
+        ha-badge {
+          --badge-color: {{ badge_color(config.entity) }} !important;
+        }
+```
+
+### 13. Macros {#reference-example-13}
+
+```yaml
+badges:
+  - type: entity
+    entity: light.bed_light
+    tap_action:
+      action: toggle
+    uix:
+      style: |
+        ha-badge {
+          --badge-color: {{ badge_color(config.entity, color_on='red') }} !important;
+        }
+```
+
+::::

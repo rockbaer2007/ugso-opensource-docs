@@ -203,3 +203,11 @@ Au moment d'une publication, UIX vérifie les URL du site et des métadonnées. 
 - Utilisez si possible la convention Conventional Commits pour nommer les commits. Ce n'est pas obligatoire, car les PR sont fusionnées et leur titre peut être renommé selon cette convention.
 - En cas de changement incompatible, utilisez `feat!:` ou ajoutez `BREAKING CHANGE: ...` au pied du commit ou dans la PR. Les deux formes produisent une nouvelle version majeure.
 - Ajoutez au pied du commit ou dans la PR les références aux tickets résolus, par exemple `fixes #1234`.
+
+## Compléments pour un fork de traduction
+
+Dans le workflow documentaire original, les sources anglaises restent sous `docs/source` ; l’exemple allemand utilise `docs/source-de`. Le workflow choisit le dossier d’après `docs/site.json`, sans modifier `docs_dir` dans `docs/mkdocs.yml`. Cela décrit le projet UIX original : le présent portail UGSo est construit avec VitePress.
+
+Les métadonnées `uix_sites.json` déclarent `schema`, `project`, `language`, `site_url`, `canonical_url` et les variantes `alternates` sous forme de paires `lang`/`url`. Le HTML doit inclure une URL canonique vers la page elle-même et des liens `hreflang` anglais/local. Le contrôle quotidien peut signaler des avertissements sans rendre le workflow rouge : un résultat global réussi ne prouve donc pas l’absence d’avertissements.
+
+Les numéros de développement tels que `5.0.1-mydev.1` et `9.0.0-mydev.1` sont des exemples de suffixe local, pas des versions à installer. Pour une publication, comparer les options, exemples YAML, Sparks, Foundries, variables de thème et changements incompatibles ; ne pas committer les bundles générés ni dupliquer inutilement les médias originaux.

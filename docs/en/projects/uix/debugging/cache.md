@@ -6,6 +6,10 @@ title: Clearing cache
 
 # Clearing Home Assistant Frontend application cache
 
-If at any time you need to clear the Home Assistant Frontend Application cache, which is used in addition to Browser cache, you can use a custom action to clear the Home Assistant Application cache and reload the Browser. This can be very convenient especially for devices where the option is hidden in a debugging menu and will also clear more than just the Frontend Application cache (e.g. localStorage which clears out many stored items like Browser Mod Browser ID).
+Use the custom action to clear the Home Assistant frontend application cache and reload the browser, particularly on devices where the normal cache control is hidden in a debugging menu. **`localStorage` remains untouched**, including stored values such as the Browser Mod browser ID. Clearing this cache is different from deleting all browser or app data.
+
+::: info Editorial clarification
+The archived upstream prose was contradictory about `localStorage`. The [implementation of `clear_cache()` in the reviewed revision](https://github.com/Lint-Free-Technology/uix/blob/26e54e6d4973231a393933e6479ed1b03cc86cd3/src/ll-custom-actions.ts#L224-L242) deletes Cache Storage entries and reloads the page; it does not clear `localStorage`.
+:::
 
 See [`clear_cache`](../extras/uix-actions.md#clear-cache-clearing-home-assistant-frontend-cache) UIX action.
