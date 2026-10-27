@@ -41,6 +41,9 @@ jobs:
       - name: Menüziele in DE/EN/FR prüfen
         run: python scripts/check-navigation.py
 
+      - name: Vollständiges Sprachinventar prüfen
+        run: python scripts/audit-doc-locales.py
+
       - name: UIX-Codebeispiele und Sprachverweise prüfen
         run: python scripts/check-uix-docs.py
 

@@ -144,7 +144,10 @@ function collectionLocaleTargets(path: string): Partial<Record<'DE' | 'EN' | 'FR
 
 function applyLocaleLinks(path: string) {
   const uixTargets = uixLocaleTargets(path)
-  const targets = uixTargets ?? atlasLocaleTargets(path) ?? collectionLocaleTargets(path)
+  const statusTargets = /^\/(?:(?:en|fr)\/)?documentation-status$/.test(normalizePath(path))
+    ? { DE: '/documentation-status', EN: '/en/documentation-status', FR: '/fr/documentation-status' }
+    : undefined
+  const targets = uixTargets ?? statusTargets ?? atlasLocaleTargets(path) ?? collectionLocaleTargets(path)
 
   document.querySelectorAll<HTMLAnchorElement>(
     '.VPNavBarTranslations a.link, .VPNavBarExtra .translations a.link, .VPNavScreenTranslations a'

@@ -75,7 +75,7 @@ footer: false
 
 <p class="ugso-intro">
   UIX remains maintained separately:
-  <a href="https://uix.lf.technology/">official UIX documentation</a>
+  <a href="https://uix.lf.technology/" target="_blank" rel="noopener noreferrer">official UIX documentation</a>
 </p>
 
 <div class="ugso-badge">🚧 Website under construction</div>
@@ -84,7 +84,8 @@ footer: false
   © 2026 UGSo Software |
   <a
     href="/impressum/"
-  >Legal notice</a>
+  >Legal notice</a> |
+  <a href="/en/documentation-status">Documentation language status</a>
 </div>
 
   </div>

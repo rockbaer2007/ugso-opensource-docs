@@ -84,7 +84,8 @@ footer: false
   © 2026 UGSo Software |
   <a
     href="/impressum/"
-  >Impressum</a>
+  >Impressum</a> |
+  <a href="/documentation-status">Sprachstand der Dokumentation</a>
 </div>
 
   </div>
