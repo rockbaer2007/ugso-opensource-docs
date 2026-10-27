@@ -537,11 +537,11 @@ onMounted(() => {
       if (!target) return
       try {
         await navigator.clipboard.writeText(target.textContent || '')
-        button.textContent = 'Kopiert'
-        window.setTimeout(() => { button.textContent = 'Kopieren' }, 1400)
+        button.textContent = 'Copied'
+        window.setTimeout(() => { button.textContent = 'Copy' }, 1400)
       } catch {
-        button.textContent = 'Fehler'
-        window.setTimeout(() => { button.textContent = 'Kopieren' }, 1400)
+        button.textContent = 'Error'
+        window.setTimeout(() => { button.textContent = 'Copy' }, 1400)
       }
     })
   })

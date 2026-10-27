@@ -11479,7 +11479,7 @@
         "en": {
           "path": "en/collection/calendar-card-pro/lizenz-und-stand.md",
           "status": "content-present",
-          "sha256": "51673fe25528315335ba1460d6382203559c0d26ca59415fb134e6a68ed52ffb",
+          "sha256": "f740b22da51f6958267f192b52c135f3145193f0ab280268bee46ee7c7e4f9d5",
           "words": 172,
           "headings": 3,
           "examples": 0,
@@ -11679,7 +11679,7 @@
         "en": {
           "path": "en/collection/flex-table-card/beispiele-aus-forum.md",
           "status": "content-present",
-          "sha256": "2367cd35454098b8bcbdf3c498eca77b257c0385be5a50ba9b21a5892caaba8f",
+          "sha256": "cf8a890e8fe896b5e11d03c396e7d8d5a1fab2fbac02535a0cc1f6a0123f520d",
           "words": 774,
           "headings": 24,
           "examples": 0,
@@ -11696,7 +11696,7 @@
         "fr": {
           "path": "fr/collection/flex-table-card/beispiele-aus-forum.md",
           "status": "content-present",
-          "sha256": "38b85bd9ee3c964c037e3e0963c447a0ea26da4371810b59283b7484a8f03c61",
+          "sha256": "65c599a141ad03ea80c6abdd01379adfc4d5631a02397168368091b53505874c",
           "words": 834,
           "headings": 24,
           "examples": 0,
@@ -13175,7 +13175,7 @@
         "en": {
           "path": "en/collection/mushroom/lizenz-und-stand.md",
           "status": "content-present",
-          "sha256": "077b09da39fb11bbded0735799d82ec53379605dabe9cee6dbd69a2e37b0223e",
+          "sha256": "0ef4cf3ed89c7629aa7883b2927a73a1f93944a5f0adbcf742e623807c0a68b4",
           "words": 139,
           "headings": 3,
           "examples": 0,

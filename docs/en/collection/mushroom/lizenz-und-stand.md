@@ -17,7 +17,7 @@ description: Sources, license information and change checking for the Mushroom d
 
 ## Labeling {#kennzeichnung}
 
-These pages are not official Mushroom documentation. They are a English-language reading aid and practical documentation.
+These pages are not official Mushroom documentation. They are an English-language reading aid and practical documentation.
 
 The original project and original English files remain authoritative.
 

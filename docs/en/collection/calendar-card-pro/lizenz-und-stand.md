@@ -18,7 +18,7 @@ description: Sources, license and change checking for the Calendar Card Pro docu
 
 ## Labeling {#kennzeichnung}
 
-These pages are not official Calendar Card Pro documentation. They are a English-language reading aid and practical documentation.
+These pages are not official Calendar Card Pro documentation. They are an English-language reading aid and practical documentation.
 
 The original project and original English files remain authoritative.
 
