@@ -178,6 +178,27 @@ function applyLocaleLinks(path: string) {
 function applyLocaleChrome(path: string) {
   applyLocaleFlags()
   applyLocaleLinks(path)
+  applyMobileNavSelection(path)
+}
+
+function applyMobileNavSelection(path: string) {
+  const current = normalizePath(path)
+  const matches = (link: HTMLAnchorElement) => {
+    const href = link.getAttribute('href') ?? ''
+    if (href === 'https://uix.lf.technology/') return /^\/en\/projects\/uix\//.test(current)
+    if (!href.startsWith('/')) return false
+    const target = normalizePath(href)
+    return current === target || (target.endsWith('/') && !['/', '/en/', '/fr/'].includes(target) && current.startsWith(target))
+  }
+  document.querySelectorAll<HTMLAnchorElement>('.VPNavScreenMenuLink').forEach(link => {
+    const active = matches(link)
+    link.dataset.ugsoActive = String(active)
+    if (active) link.setAttribute('aria-current', 'page')
+    else link.removeAttribute('aria-current')
+  })
+  document.querySelectorAll<HTMLElement>('.VPNavScreenMenuGroup').forEach(group => {
+    group.dataset.ugsoActive = String(Array.from(group.querySelectorAll<HTMLAnchorElement>('a')).some(matches))
+  })
 }
 
 function applyLocaleFlags() {

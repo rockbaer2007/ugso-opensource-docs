@@ -360,14 +360,66 @@ body.uix-doc-route {
   --vp-code-line-highlight-color: rgba(206, 50, 38, 0.1);
 }
 
-body.uix-doc-route .VPNavBarMenuLink:hover,
-body.uix-doc-route .VPNavBarMenuGroup .button:hover,
-body.uix-doc-route .VPNavBarMenuLink.active,
-body.uix-doc-route .VPNavBarMenuGroup.active .button,
 body.uix-doc-route .VPSidebarItem .link:hover .text,
 body.uix-doc-route .VPSidebarItem.is-active > .item .text,
 body.uix-doc-route .VPDoc a {
   color: #ce3226;
+}
+
+/* Main navigation always uses UGSo green, including on UIX pages. */
+.VPNavBarMenu,
+.VPNavScreenMenu {
+  --vp-c-brand-1: #259c30;
+  --vp-c-brand-2: #2ab137;
+  --vp-c-brand-3: #165f1d;
+}
+
+.VPNavBarMenuLink[href*="/projects/uix/"],
+.VPNavBarMenuLink[href="https://uix.lf.technology/"],
+.VPNavScreenMenuLink[href*="/projects/uix/"],
+.VPNavScreenMenuLink[href="https://uix.lf.technology/"] {
+  --vp-c-brand-1: #ce3226;
+}
+
+.VPNavBarMenuLink[href*="/projects/uix/"].active,
+.VPNavBarMenuLink[href*="/projects/uix/"]:hover,
+.VPNavBarMenuLink[href="https://uix.lf.technology/"].active,
+.VPNavBarMenuLink[href="https://uix.lf.technology/"]:hover,
+.VPNavScreenMenuLink[href*="/projects/uix/"][data-ugso-active="true"],
+.VPNavScreenMenuLink[href="https://uix.lf.technology/"][data-ugso-active="true"],
+.VPNavScreenMenuLink[href*="/projects/uix/"].active,
+.VPNavScreenMenuLink[href*="/projects/uix/"]:hover,
+.VPNavScreenMenuLink[href="https://uix.lf.technology/"].active,
+.VPNavScreenMenuLink[href="https://uix.lf.technology/"]:hover {
+  color: #ce3226;
+}
+
+.VPNavScreenMenuLink[data-ugso-active="true"],
+.VPNavScreenMenuGroup[data-ugso-active="true"] > .button {
+  color: var(--vp-c-brand-1);
+}
+
+.VPNavScreenMenuGroup .group + .group {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+/* Nine translated menu entries need the compact menu on smaller laptops. */
+@media (min-width: 768px) and (max-width: 1535px) {
+  .VPNavBar .VPNavBarMenu,
+  .VPNavBar .VPNavBarTranslations,
+  .VPNavBar .VPNavBarExtra {
+    display: none;
+  }
+
+  .VPNavBar .VPNavBarHamburger {
+    display: flex;
+  }
+
+  .VPNav .VPNavScreen {
+    display: block;
+  }
 }
 
 body.uix-doc-route .vp-doc th {

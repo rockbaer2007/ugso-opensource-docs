@@ -38,6 +38,9 @@ jobs:
       - name: VitePress bauen
         run: npm run docs:build
 
+      - name: Menüziele in DE/EN/FR prüfen
+        run: python scripts/check-navigation.py
+
       - name: UIX-Codebeispiele und Sprachverweise prüfen
         run: python scripts/check-uix-docs.py
 

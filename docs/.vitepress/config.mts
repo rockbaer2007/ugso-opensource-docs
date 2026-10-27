@@ -1,5 +1,6 @@
 import { defineConfig, type HeadConfig } from 'vitepress'
 import { atlasLocaleTargets } from './atlas-locales'
+import { reorganizeNavigation } from './navigation'
 
 const siteBaseUrl = 'https://opensource.ugso-software.de'
 
@@ -12,7 +13,7 @@ function canonicalHref(relativePath = 'index.md') {
   return new URL(pagePath, siteBaseUrl).href
 }
 
-const navDe = [
+const sourceNavDe = [
   { text: 'Startseite', link: '/' },
   { text: 'EEP', items: [
     { text: 'Übersicht', link: '/eep/' },
@@ -54,7 +55,7 @@ const navDe = [
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
 ]
 
-const navEn = [
+const sourceNavEn = [
   { text: 'Home', link: '/en/' },
   { text: 'EEP', items: [
     { text: 'Overview', link: '/en/eep/' },
@@ -97,7 +98,7 @@ const navEn = [
 ]
 
 
-const navFr = [
+const sourceNavFr = [
   { text: 'Accueil', link: '/fr/' },
   { text: 'EEP', items: [
     { text: 'Vue d’ensemble', link: '/fr/eep/' },
@@ -1126,6 +1127,10 @@ const sidebarFr = {
     }
   ]
 }
+
+const navDe = reorganizeNavigation('de', sourceNavDe, sidebarDe)
+const navEn = reorganizeNavigation('en', sourceNavEn, sidebarEn)
+const navFr = reorganizeNavigation('fr', sourceNavFr, sidebarFr, sidebarEn['/en/projects-mqtt/'][0].items)
 
 export default defineConfig({
   lang: 'de-DE',
