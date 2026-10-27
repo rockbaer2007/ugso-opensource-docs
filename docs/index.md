@@ -47,7 +47,7 @@ footer: false
     ><strong>ATLAS</strong>
   </span>,
   <span title="Lovelace-Komponenten">🎛️ <strong>Lovelace-Komponenten</strong></span>,
-  <a href="/eep/" title="eisenbahn.exe professional"><strong>EEP</strong></a>
+  <a href="/eep/" title="eisenbahn.exe professional"><img src="/images/eep/logo-eep.png" alt="" style="width:2.3em;height:1.05em;object-fit:contain;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"><strong>EEP</strong></a>
   sowie weitere Softwareprojekte aus den Bereichen
   <span title="ioBroker">
     <img

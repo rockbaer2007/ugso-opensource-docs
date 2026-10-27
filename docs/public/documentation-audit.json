@@ -784,7 +784,7 @@
         "de": {
           "path": "index.md",
           "status": "content-present",
-          "sha256": "8381f82219db678a28c2a5a889cdcf0a82448af793bc4ceff4acd1d461e7fa38",
+          "sha256": "32794e63ccad0a483c5637efeb9e08c992acf6ac53e97ec253cacb6297691900",
           "words": 66,
           "headings": 0,
           "examples": 0,
@@ -794,7 +794,7 @@
         "en": {
           "path": "en/index.md",
           "status": "content-present",
-          "sha256": "ae22d997f9a6a17079257a211f26680839f988d4b97f5a43ae5c2a1756ab1d14",
+          "sha256": "a16cfd0c3bff5c4f78fa6ba20d3300fefdf094b90bbb91776c6ac1df015de49b",
           "words": 68,
           "headings": 0,
           "examples": 0,
@@ -811,7 +811,7 @@
         "fr": {
           "path": "fr/index.md",
           "status": "content-present",
-          "sha256": "698427f17da9fe01e956cc891820dd2507fac22711d9f45876da0683f7698ccf",
+          "sha256": "2900a3aa3db602bfd1a43a0de86671cd694baa361e3fedab463d004718cb3d3b",
           "words": 70,
           "headings": 0,
           "examples": 0,

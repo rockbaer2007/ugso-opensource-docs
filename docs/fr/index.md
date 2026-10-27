@@ -31,7 +31,7 @@ footer: false
     <img src="/images/brands/atlas.svg" alt="ATLAS" style="width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"><strong>ATLAS</strong>
   </span>,
   <span title="Composants Lovelace">🎛️ <strong>composants Lovelace</strong></span>,
-  <a href="/fr/eep/" title="eisenbahn.exe professional"><strong>EEP</strong></a>,
+  <a href="/fr/eep/" title="eisenbahn.exe professional"><img src="/images/eep/logo-eep.png" alt="" style="width:2.3em;height:1.05em;object-fit:contain;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"><strong>EEP</strong></a>,
   ainsi que d’autres projets logiciels dans les domaines
   <span title="ioBroker">
     <img src="/images/brands/iobroker.png" alt="ioBroker" style="width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"><strong>ioBroker</strong>
