@@ -94,4 +94,5 @@ jobs:
       - name: Geprüften Build auf zweite Domain veröffentlichen
         env:
           MIRROR_DEPLOY_KEY: ${{ secrets.NET_MIRROR_DEPLOY_KEY }}
+          GH_TOKEN: ${{ github.token }}
         run: bash scripts/publish-net-mirror.sh mirror-site
