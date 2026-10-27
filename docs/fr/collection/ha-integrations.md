@@ -9,12 +9,12 @@ description: Intégrations personnalisées (custom integrations) pour Home Assis
 
 Cette section rassemble des intégrations personnalisées pour Home Assistant ainsi que des intégrations HACS.
 
-## Prévu {#geplant}
+## Documentations terminées {#geplant}
 
-| Projet | État | Remarque |
+| Projet | État de la documentation | Remarque |
 | --- | --- | --- |
-| [Intégration Zendure pour Home Assistant](/fr/collection/zendure-ha/) | En cours | Documentation utilisateur en allemand couvrant l'installation, le jeton (token), le protocole MQTT local, Zendure Manager, les groupes de fusibles (Fuse Group), les entités et le dépannage. |
-| [Gestionnaire de thèmes « verre dépoli » (Frosted Glass)](/fr/collection/frosted-glass-manager/) | Vérifié | Intégration pour Home Assistant permettant de créer des thèmes personnalisés de type « verre dépoli », incluant une variante de test UIX validée. |
+| [Intégration Zendure pour Home Assistant](/fr/collection/zendure-ha/) | Complète | Documentation utilisateur en DE/EN/FR couvrant l'installation, le jeton (token), le protocole MQTT local, Zendure Manager, les groupes de fusibles (Fuse Group), les entités et le dépannage. |
+| [Gestionnaire de thèmes « verre dépoli » (Frosted Glass)](/fr/collection/frosted-glass-manager/) | Complète | Intégration pour Home Assistant permettant de créer des thèmes personnalisés de type « verre dépoli », incluant une variante de test UIX validée. |
 
 ## Objectif des documentations d'intégration {#ziel-fur-integrationsdokus}
 

@@ -32,10 +32,18 @@ def main():
         assert quote and text.index('/images/eep/eep18-banner.png') < text.index('/images/eep/eep18-layout.png') < quote.start()
         assert f'https://eepshopping.de/?lang={lang}' in text
         assert '© Trend Verlag Freiburg' in text
+        assert '[Mein EEP Forum](http://www.eepforum.de/index.php?page=Portal)' in text
         assert 'eep-brand-logo' in text and '{#eep}' in text
         for name in ['eep18-banner.png', 'eep18-layout.png', 'logo-eep.png']:
             assert (DOCS / 'public/images/eep' / name).is_file()
     icons = json.loads((DOCS / 'public/images/packages/sources.json').read_text(encoding='utf-8'))
+    for path, heading, status in [
+        ('sammlung/ha-integrationen.md', 'Fertige Dokumentationen', 'Vollständig'),
+        ('en/collection/ha-integrations.md', 'Completed documentation', 'Complete'),
+        ('fr/collection/ha-integrations.md', 'Documentations terminées', 'Complète'),
+    ]:
+        text = (DOCS / path).read_text(encoding='utf-8')
+        assert heading in text and status in text and 'Frosted Glass' in text, path
     for item in icons.values():
         asset = DOCS / 'public' / item['asset'].lstrip('/')
         content = asset.read_text(encoding='utf-8').encode() if item['hash_format'] == 'UTF-8 with normalized LF' else asset.read_bytes()

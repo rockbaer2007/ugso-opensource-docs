@@ -543,8 +543,8 @@
         "de": {
           "path": "eep/index.md",
           "status": "content-present",
-          "sha256": "cf1202bbcfd6744faa774ad153886025471e85a842f1cb5f18d9e87a406199e7",
-          "words": 441,
+          "sha256": "4054b0f1c38624100d8d1b9dcc8e5b962e560332c0e120a51e11d2ba852be93a",
+          "words": 452,
           "headings": 4,
           "examples": 0,
           "versions": [
@@ -557,8 +557,8 @@
         "en": {
           "path": "en/eep/index.md",
           "status": "content-present",
-          "sha256": "0450eb0a654a7d038b0f0855c2fe871d15a7158abad0de42047ff5bd24d1265c",
-          "words": 445,
+          "sha256": "4dbce586a2c169424636f19f8a004b8db0dd86f1e7fdba3fd110298d515f592c",
+          "words": 456,
           "headings": 4,
           "examples": 0,
           "versions": [
@@ -578,8 +578,8 @@
         "fr": {
           "path": "fr/eep/index.md",
           "status": "content-present",
-          "sha256": "c5abf4b84cecf65a0f5154ebe0eeeae7841d1db7343b5110b71c9b40372c2504",
-          "words": 492,
+          "sha256": "a6a3b03c6ee3e257c881dcab41efc541a22023733ca134650b41e913f442b4df",
+          "words": 503,
           "headings": 4,
           "examples": 0,
           "versions": [
@@ -13260,8 +13260,8 @@
         "de": {
           "path": "sammlung/ha-integrationen.md",
           "status": "content-present",
-          "sha256": "be16e86bacb8c6669fca1c0f940f86f6ea937168d01b817f8a7499dbceebb5bb",
-          "words": 104,
+          "sha256": "4556a6b491397eecc32cfc0a3def1c08a8d9fee580e42f10c60671d320bed1cd",
+          "words": 109,
           "headings": 3,
           "examples": 0,
           "versions": [],
@@ -13270,8 +13270,8 @@
         "en": {
           "path": "en/collection/ha-integrations.md",
           "status": "content-present",
-          "sha256": "5c0592d2c9b412fb739158998176c7859d5d7237bd87595e8cec3191a3ec8754",
-          "words": 110,
+          "sha256": "9d27b0f73163fd1e9f5ad430ef3a68ffd0e26104cf1011001ffab54aa3fbafa7",
+          "words": 114,
           "headings": 3,
           "examples": 0,
           "versions": [],
@@ -13287,8 +13287,8 @@
         "fr": {
           "path": "fr/collection/ha-integrations.md",
           "status": "content-present",
-          "sha256": "cdbd77b8a2f9720f94b1996eb315cd7a704a052db6b5e1a3ebc4a528836857cb",
-          "words": 168,
+          "sha256": "139b47dde57787778fe68dc9f6622210cd7a4924e1dd4717f6823d157d6eb26b",
+          "words": 173,
           "headings": 3,
           "examples": 0,
           "versions": [],

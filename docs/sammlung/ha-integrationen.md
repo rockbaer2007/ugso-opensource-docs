@@ -6,12 +6,12 @@ description: Home-Assistant-Custom-Integrations und HACS-Integrationen in der UG
 
 Dieser Bereich sammelt Home-Assistant-Custom-Integrationen und HACS-Integrationen.
 
-## Geplant
+## Fertige Dokumentationen {#geplant}
 
-| Projekt | Status | Hinweis |
+| Projekt | Doku-Status | Hinweis |
 | --- | --- | --- |
-| [Zendure Home Assistant Integration](./zendure-ha/) | in Arbeit | Deutsche Anwenderdoku mit Installation, Token, lokalem MQTT, Zendure Manager, Fuse Group, Entitäten und Troubleshooting. |
-| [Frosted Glass Theme Manager](./frosted-glass-manager/) | geprüft | Home-Assistant-Integration zum Erzeugen angepasster Frosted-Glass-Themes, inklusive getesteter UIX-Testvariante. |
+| [Zendure Home Assistant Integration](./zendure-ha/) | Vollständig | Anwenderdokumentation in DE/EN/FR mit Installation, Token, lokalem MQTT, Zendure Manager, Fuse Group, Entitäten und Troubleshooting. |
+| [Frosted Glass Theme Manager](./frosted-glass-manager/) | Vollständig | Home-Assistant-Integration zum Erzeugen angepasster Frosted-Glass-Themes, inklusive getesteter UIX-Testvariante. |
 
 ## Ziel für Integrationsdokus
 

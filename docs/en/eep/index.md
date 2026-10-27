@@ -13,6 +13,8 @@ description: UGSo Software tools for EEP model creators.
 
 Source: [EEPShop – English page](https://eepshopping.de/?lang=2). Images and original description: © Trend Verlag Freiburg. English translation of the supplied German quotation.
 
+- [Mein EEP Forum](http://www.eepforum.de/index.php?page=Portal)
+
 ## UGSo Software tools
 
 Independent UGSo Software tools for editing EEP model descriptions and installation files.

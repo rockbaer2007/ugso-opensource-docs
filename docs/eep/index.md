@@ -13,6 +13,8 @@ description: Werkzeuge von UGSo Software für EEP-Modellbauer.
 
 Quelle: [EEPShop – deutsche Seite](https://eepshopping.de/?lang=1). Bilder und Beschreibung: © Trend Verlag Freiburg.
 
+- [Mein EEP Forum](http://www.eepforum.de/index.php?page=Portal)
+
 ## Werkzeuge von UGSo Software
 
 Hier findest du eigenständige Werkzeuge von UGSo Software für die Bearbeitung

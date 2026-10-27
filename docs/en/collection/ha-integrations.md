@@ -6,12 +6,12 @@ description: Home Assistant custom integrations and HACS integrations in the UGS
 
 This section collects Home Assistant custom integrations and HACS integrations.
 
-## Planned
+## Completed documentation {#planned}
 
-| Project | Status | Note |
+| Project | Documentation status | Note |
 | --- | --- | --- |
-| [Zendure Home Assistant Integration](./zendure-ha/) | in progress | German user documentation with installation, token, local MQTT, Zendure Manager, Fuse Group, entities and troubleshooting. |
-| [Frosted Glass Theme Manager](/sammlung/frosted-glass-manager/) | reviewed | Home Assistant integration for generating customized Frosted Glass themes, including a tested UIX experiment fork. |
+| [Zendure Home Assistant Integration](./zendure-ha/) | Complete | User documentation in DE/EN/FR with installation, token, local MQTT, Zendure Manager, Fuse Group, entities and troubleshooting. |
+| [Frosted Glass Theme Manager](./frosted-glass-manager/) | Complete | Home Assistant integration for generating customized Frosted Glass themes, including a tested UIX experiment fork. |
 
 ## Documentation Goals
 
