@@ -48,6 +48,16 @@ def main():
         asset = DOCS / 'public' / item['asset'].lstrip('/')
         content = asset.read_text(encoding='utf-8').encode() if item['hash_format'] == 'UTF-8 with normalized LF' else asset.read_bytes()
         assert hashlib.sha256(content).hexdigest() == item['sha256'], asset
+    for locale, collection, status in [('', 'sammlung', 'Vollständig'), ('en/', 'collection', 'Complete'), ('fr/', 'collection', 'Complète')]:
+        home = (DOCS / locale / 'index.md').read_text(encoding='utf-8')
+        assert 'ugso-button' not in home and 'ugso-actions' not in home, locale
+        assert f'href="/{locale}eep/"' in home, locale
+        for destination in ['', 'ha-cards', 'ha-integrations' if locale else 'ha-integrationen', 'ha-tools']:
+            assert f'href="/{locale}{collection}/{destination}"' in home, (locale, destination)
+        cards = (DOCS / locale / collection / 'ha-cards.md').read_text(encoding='utf-8')
+        for name in ['Calendar Card Pro', 'Mushroom Cards', 'flex-table-card']:
+            row = next(line for line in cards.splitlines() if line.startswith('| [') and f'[{name}]' in line)
+            assert f'| {status} |' in row, (locale, name)
     for page in ['en/projects/uix/debugging/cache.md', 'fr/projects/uix/debugging/cache.md']:
         text = (DOCS / page).read_text(encoding='utf-8')
         assert 'localStorage' in text and 'll-custom-actions.ts#L224-L242' in text

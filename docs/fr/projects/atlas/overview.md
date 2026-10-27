@@ -44,7 +44,9 @@ l’implémentation de référence.
 Les descripteurs et l’enregistrement des services, l’injection de dépendances
 et les conteneurs permettent de résoudre les services de manière contrôlée.
 
-## Utilisations prévues
+## Utilisation actuelle et perspectives {#utilisations-prevues}
+
+L’administration et le plugin de référence Home Assistant Card Editor sont déjà disponibles. D’autres outils et diagnostics sont intégrés via des plugins.
 
 ATLAS vise les outils Home Assistant, les composants de tableaux de bord,
 les applications de diagnostic et les applications web ou de bureau basées

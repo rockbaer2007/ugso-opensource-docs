@@ -6,7 +6,7 @@ description: Sammelbereich für HACS-Projekte ohne eigene Kategorie.
 
 Dieser Bereich bleibt als Sammelbereich für HACS-Projekte, die nicht klar in `HA Cards`, `HA Integrationen`, `HA Blueprints`, `HA Tools` oder `HA Apps und Add-ons` passen.
 
-## Geplant
+## Aktuelle Einträge {#geplant}
 
 | Projekt | Status | Hinweis |
 | --- | --- | --- |

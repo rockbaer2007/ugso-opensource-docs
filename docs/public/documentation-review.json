@@ -2251,9 +2251,9 @@
         "fewer_headings": true
       },
       "disposition": "supplemented",
-      "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained.",
-      "source_sha256": "a1f67d784fa9779e07a70719110984243e0673b10f9a2bcec2f86e534003ae03",
-      "target_sha256": "a046143ae190f72cb999b6999aa27a635c1794f7288605bc0e687002ddd77429"
+      "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained. Overview status reviewed on 2026-10-27: existing documentation/current ATLAS use distinguished from future work; home navigation uses text links with EEP and preserves destinations.",
+      "source_sha256": "59af742a60e13e58d4829116d53d9891a0044984ace714be90d8fc232bdbe061",
+      "target_sha256": "9973956a7e14a88c733499b82ce4701972b1f1c33f5a1b69b5aed545b5734d89"
     },
     {
       "source": "sammlung/ha-dashboard.md",
@@ -2283,9 +2283,9 @@
         "fewer_headings": true
       },
       "disposition": "supplemented",
-      "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained.",
-      "source_sha256": "def52f1be392b84b45ea182d55ac5913518a8cdc321c1dbee03225c9308a54b3",
-      "target_sha256": "830f075a6b4093ddec2a1cba1e10396a1a75840d944cbe28b87cc8e775da0a92"
+      "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained. Overview status reviewed on 2026-10-27: existing documentation/current ATLAS use distinguished from future work; home navigation uses text links with EEP and preserves destinations.",
+      "source_sha256": "56b02155fcd3c03b8c3a2c3eab19ed7a8d1cec7f00a60a8a143b69515debabb0",
+      "target_sha256": "dff33942a46873dba9187c125dcfb6aa1bcc13c2a41be56cfb625d3efc9b192f"
     },
     {
       "source": "sammlung/index.md",

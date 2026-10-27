@@ -46,7 +46,8 @@ footer: false
       style="width:1.05em;height:1.05em;vertical-align:-0.16em;margin-right:0.18em;display:inline-block;"
     ><strong>ATLAS</strong>
   </span>,
-  <span title="Lovelace-Komponenten">🎛️ <strong>Lovelace-Komponenten</strong></span>
+  <span title="Lovelace-Komponenten">🎛️ <strong>Lovelace-Komponenten</strong></span>,
+  <a href="/eep/" title="eisenbahn.exe professional"><strong>EEP</strong></a>
   sowie weitere Softwareprojekte aus den Bereichen
   <span title="ioBroker">
     <img
@@ -66,12 +67,12 @@ footer: false
   <span title="Arduino">🤖 <strong>Arduino</strong></span>.
 </p>
 
-<div class="ugso-actions">
-  <a class="ugso-button secondary" href="/sammlung/">Sammlung öffnen</a>
-  <a class="ugso-button secondary" href="/sammlung/ha-cards">HA Cards</a>
-  <a class="ugso-button secondary" href="/sammlung/ha-integrationen">HA Integrationen</a>
-  <a class="ugso-button secondary" href="/sammlung/ha-tools">HA Tools</a>
-</div>
+<p class="ugso-intro">
+  Weitere Bereiche: <a href="/sammlung/">Sammlung</a> ·
+  <a href="/sammlung/ha-cards">HA Cards</a> ·
+  <a href="/sammlung/ha-integrationen">HA Integrationen</a> ·
+  <a href="/sammlung/ha-tools">HA Tools</a>
+</p>
 
 <p class="ugso-intro">
   UIX bleibt separat gepflegt:

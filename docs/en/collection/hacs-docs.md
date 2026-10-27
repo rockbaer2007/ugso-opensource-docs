@@ -6,7 +6,7 @@ description: Catch-all section for HACS projects without a dedicated category.
 
 This section is kept as a catch-all for HACS projects that do not clearly fit into `HA Cards`, `HA Integrations`, `HA Blueprints`, `HA Tools` or `HA Apps and Add-ons`.
 
-## Planned
+## Current entries {#planned}
 
 | Project | Status | Note |
 | --- | --- | --- |

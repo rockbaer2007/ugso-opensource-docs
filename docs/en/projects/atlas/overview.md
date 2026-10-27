@@ -53,9 +53,9 @@ The Runtime Foundation contains the groundwork for:
 - service containers
 - controlled dependency resolution
 
-## Planned Usage
+## Current use and outlook {#planned-usage}
 
-ATLAS is intended to support:
+Administration and the Home Assistant Card Editor reference plugin are already available. Further tools and diagnostics are integrated through plugins. ATLAS provides a foundation for:
 
 - Home Assistant tools
 - dashboard components

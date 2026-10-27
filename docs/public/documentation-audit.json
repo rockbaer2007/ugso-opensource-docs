@@ -784,8 +784,8 @@
         "de": {
           "path": "index.md",
           "status": "content-present",
-          "sha256": "76937cde8afc75bed743291506ffd39b968dc6d683667b39eda7f1263326cec4",
-          "words": 64,
+          "sha256": "8381f82219db678a28c2a5a889cdcf0a82448af793bc4ceff4acd1d461e7fa38",
+          "words": 66,
           "headings": 0,
           "examples": 0,
           "versions": [],
@@ -794,8 +794,8 @@
         "en": {
           "path": "en/index.md",
           "status": "content-present",
-          "sha256": "7b1e92514b1028f5f556b27259f8a36e47ac0c2ccef5c0237bc0a54ee73fc6e3",
-          "words": 66,
+          "sha256": "ae22d997f9a6a17079257a211f26680839f988d4b97f5a43ae5c2a1756ab1d14",
+          "words": 68,
           "headings": 0,
           "examples": 0,
           "versions": [],
@@ -811,8 +811,8 @@
         "fr": {
           "path": "fr/index.md",
           "status": "content-present",
-          "sha256": "1643436d1c4e5dcf922a50f9d83a799951d563d993656a79a31d1f385ff1cd4a",
-          "words": 69,
+          "sha256": "698427f17da9fe01e956cc891820dd2507fac22711d9f45876da0683f7698ccf",
+          "words": 70,
           "headings": 0,
           "examples": 0,
           "versions": [],
@@ -2709,8 +2709,8 @@
         "de": {
           "path": "projects/atlas/uebersicht.md",
           "status": "content-present",
-          "sha256": "7541aae7eccb7ca6f491a5c4640b93a06c8ab31458b7e7a6936796ab8cce8e49",
-          "words": 197,
+          "sha256": "fdf68d89d90106acdc5a5a5cbc8beaac6006d033fedccc16c1044667a42e92c6",
+          "words": 219,
           "headings": 6,
           "examples": 0,
           "versions": [],
@@ -2719,8 +2719,8 @@
         "en": {
           "path": "en/projects/atlas/overview.md",
           "status": "content-present",
-          "sha256": "ebef196ab0380df1a4963e1e578a0cdce691ab1c2eef260d07374a2c25d5e636",
-          "words": 206,
+          "sha256": "59be24fcde628f820d09043bf30a72663dce42a9bcbfce3c3d91a5a582f9aa7f",
+          "words": 230,
           "headings": 6,
           "examples": 0,
           "versions": [],
@@ -2736,8 +2736,8 @@
         "fr": {
           "path": "fr/projects/atlas/overview.md",
           "status": "content-present",
-          "sha256": "505c048b8d3debccaa4b0a0d8f23299de47b801f0b1488e6e3a2c42c834f0534",
-          "words": 266,
+          "sha256": "d2c2de13405ef995619fa843877eda6913cb3aaf4e737532cd926ff911f9ea66",
+          "words": 294,
           "headings": 6,
           "examples": 0,
           "versions": [],
@@ -13103,8 +13103,8 @@
         "de": {
           "path": "sammlung/ha-cards.md",
           "status": "content-present",
-          "sha256": "a1f67d784fa9779e07a70719110984243e0673b10f9a2bcec2f86e534003ae03",
-          "words": 171,
+          "sha256": "59af742a60e13e58d4829116d53d9891a0044984ace714be90d8fc232bdbe061",
+          "words": 178,
           "headings": 4,
           "examples": 0,
           "versions": [],
@@ -13113,8 +13113,8 @@
         "en": {
           "path": "en/collection/ha-cards.md",
           "status": "content-present",
-          "sha256": "a046143ae190f72cb999b6999aa27a635c1794f7288605bc0e687002ddd77429",
-          "words": 192,
+          "sha256": "9973956a7e14a88c733499b82ce4701972b1f1c33f5a1b69b5aed545b5734d89",
+          "words": 199,
           "headings": 4,
           "examples": 0,
           "versions": [],
@@ -13129,14 +13129,14 @@
           "review": {
             "status": "reviewed",
             "disposition": "supplemented",
-            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained."
+            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained. Overview status reviewed on 2026-10-27: existing documentation/current ATLAS use distinguished from future work; home navigation uses text links with EEP and preserves destinations."
           }
         },
         "fr": {
           "path": "fr/collection/ha-cards.md",
           "status": "content-present",
-          "sha256": "ad28b43b37c20554b507a1fb17f81bdba09549d3994c35b15c67f9cc88e6d92b",
-          "words": 261,
+          "sha256": "61150aa4d2aaeb8eef55ec8579549ba5fa246013cddbd6e6c2386b7cf1b522e8",
+          "words": 257,
           "headings": 4,
           "examples": 0,
           "versions": [],
@@ -13358,8 +13358,8 @@
         "de": {
           "path": "sammlung/hacs-dokus.md",
           "status": "content-present",
-          "sha256": "def52f1be392b84b45ea182d55ac5913518a8cdc321c1dbee03225c9308a54b3",
-          "words": 129,
+          "sha256": "56b02155fcd3c03b8c3a2c3eab19ed7a8d1cec7f00a60a8a143b69515debabb0",
+          "words": 131,
           "headings": 5,
           "examples": 0,
           "versions": [],
@@ -13368,8 +13368,8 @@
         "en": {
           "path": "en/collection/hacs-docs.md",
           "status": "content-present",
-          "sha256": "830f075a6b4093ddec2a1cba1e10396a1a75840d944cbe28b87cc8e775da0a92",
-          "words": 142,
+          "sha256": "dff33942a46873dba9187c125dcfb6aa1bcc13c2a41be56cfb625d3efc9b192f",
+          "words": 144,
           "headings": 5,
           "examples": 0,
           "versions": [],
@@ -13384,14 +13384,14 @@
           "review": {
             "status": "reviewed",
             "disposition": "supplemented",
-            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained."
+            "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained. Overview status reviewed on 2026-10-27: existing documentation/current ATLAS use distinguished from future work; home navigation uses text links with EEP and preserves destinations."
           }
         },
         "fr": {
           "path": "fr/collection/hacs-docs.md",
           "status": "content-present",
-          "sha256": "e968afeb2b0f57a2af1a66780b116d5020b0224d2f27718ebabab245d5edf907",
-          "words": 180,
+          "sha256": "86d1d2aec6052d03c32c4b5a4a38e998356bd9541a9dff0d1b4cc04b74b48a96",
+          "words": 181,
           "headings": 5,
           "examples": 0,
           "versions": [],

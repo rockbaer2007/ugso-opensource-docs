@@ -9,7 +9,7 @@ description: Espace de regroupement pour les projets HACS ne disposant pas de ca
 
 Cet espace sert de zone de regroupement pour les projets HACS qui ne peuvent être clairement classés dans `HA Cards`, `HA Integrationen`, `HA Blueprints`, `HA Tools` ou `HA Apps und Add-ons`.
 
-## Prévu {#geplant}
+## Entrées actuelles {#geplant}
 
 | Projet | État | Remarque |
 | --- | --- | --- |

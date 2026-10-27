@@ -8,11 +8,11 @@ Dieser Bereich ist für Lovelace- und HACS-Karten gedacht, die als deutsche Doku
 
 ## Genutzte und geprüfte HA Cards
 
-| Projekt | Status | Hinweis |
+| Projekt | Doku-Status | Hinweis |
 | --- | --- | --- |
-| [Calendar Card Pro](./calendar-card-pro/) | in Arbeit | Deutsche Doku mit Installation, Features, Referenz, Beispielen und Änderungsprüfung. |
-| [Mushroom Cards](./mushroom/) | in Arbeit | Deutsche Doku mit Installation, Kartenübersicht, Beispielen und Änderungsprüfung. |
-| [flex-table-card](./flex-table-card/) | in Arbeit | Deutsche Doku mit Installation, Referenz und Praxisbeispielen. |
+| [Calendar Card Pro](./calendar-card-pro/) | Vollständig | Doku in DE/EN/FR mit Installation, Features, Referenz, Beispielen und Änderungsprüfung. |
+| [Mushroom Cards](./mushroom/) | Vollständig | Doku in DE/EN/FR mit Installation, Kartenübersicht, Beispielen und Änderungsprüfung. |
+| [flex-table-card](./flex-table-card/) | Vollständig | Doku in DE/EN/FR mit Installation, Referenz und Praxisbeispielen. |
 | bar-card | später prüfen | Repository ist lokal vorhanden und kann danach bewertet werden. |
 | sidebar-card | später prüfen | Repository ist lokal vorhanden und kann danach bewertet werden. |
 
