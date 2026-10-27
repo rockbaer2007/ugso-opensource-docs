@@ -17,7 +17,7 @@ footer: false
 <h1 class="ugso-title">UGSo Open Source</h1>
 
 <p class="ugso-intro">
-  Voici la nouvelle plateforme open source de
+  Bienvenue sur la plateforme open source de
   <strong>UGSo Software</strong>.<br><br>
 
   Vous trouverez ici nos projets open source autour de
@@ -54,8 +54,6 @@ footer: false
   UIX reste maintenu séparément :
   <a href="/fr/projects/uix/">UIX — documentation française non officielle</a>
 </p>
-
-<div class="ugso-badge">🚧 Site en construction</div>
 
 <div class="ugso-footer">
   © 2026 UGSo Software |

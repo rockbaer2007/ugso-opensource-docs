@@ -21,7 +21,7 @@ footer: false
 <h1 class="ugso-title">UGSo Open Source</h1>
 
 <p class="ugso-intro">
-  This is the new open-source platform by
+  Welcome to the open-source platform by
   <strong>UGSo Software</strong>.<br><br>
 
   Here you will find our open-source projects around
@@ -78,8 +78,6 @@ footer: false
   UIX remains maintained separately:
   <a href="https://uix.lf.technology/" target="_blank" rel="noopener noreferrer">official UIX documentation</a>
 </p>
-
-<div class="ugso-badge">🚧 Website under construction</div>
 
 <div class="ugso-footer">
   © 2026 UGSo Software |
