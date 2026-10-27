@@ -405,20 +405,115 @@ body.uix-doc-route .VPDoc a {
   border-top: 1px solid var(--vp-c-divider);
 }
 
-/* Nine translated menu entries need the compact menu on smaller laptops. */
-@media (min-width: 768px) and (max-width: 1535px) {
-  .VPNavBar .VPNavBarMenu,
-  .VPNavBar .VPNavBarTranslations,
-  .VPNavBar .VPNavBarExtra {
-    display: none;
+/* Keep every desktop destination visible; narrow headers may use two rows. */
+@media (min-width: 768px) {
+  .VPNavBar .content,
+  .VPNavBar .content-body {
+    min-width: 0;
+  }
+
+  .VPNavBar .VPNavBarMenu {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-width: 0;
+    align-content: center;
   }
 
   .VPNavBar .VPNavBarHamburger {
-    display: flex;
+    display: none;
   }
 
-  .VPNav .VPNavScreen {
+  .VPNavBar .VPNavBarMenuLink,
+  .VPNavBar .VPNavBarMenuGroup > .button {
+    padding: 0 6px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+  }
+
+  .VPNavBar .VPNavBarMenuGroup > .button .text {
+    font-size: 13px;
+    line-height: 32px;
+  }
+
+  .VPNavBar .VPNavBarMenuGroup > .menu {
+    top: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .VPNavBar .VPNavBarAppearance,
+  .VPNavBar .VPNavBarSocialLinks {
+    display: none;
+  }
+
+  .VPNavBar .VPNavBarExtra {
     display: block;
+  }
+
+  .VPNavBar .VPNavBarSearch {
+    flex: 0 0 32px;
+    padding-left: 0;
+  }
+
+  .VPNavBar .DocSearch-Button {
+    justify-content: center;
+    width: 32px;
+    padding: 0;
+  }
+
+  .VPNavBar .DocSearch-Button-Placeholder,
+  .VPNavBar .DocSearch-Button-Keys {
+    display: none;
+  }
+
+  .VPNavBar .DocSearch-Search-Icon {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .VPNavBar .VPNavBarMenuLink,
+  .VPNavBar .VPNavBarMenuGroup > .button {
+    padding: 0 4px;
+    font-size: 12px;
+  }
+
+  .VPNavBar .VPNavBarMenuGroup > .button .text {
+    font-size: 12px;
+  }
+
+  .VPNavBar .VPNavBarMenuGroup .text-icon {
+    margin-left: 2px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+  .VPNav .VPNavBar.has-sidebar .container > .title {
+    width: 220px;
+    padding: 0 16px;
+  }
+
+  .VPNav .VPNavBar.has-sidebar .container > .content {
+    padding-left: 220px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --vp-nav-height: 96px;
+  }
+
+  .VPNavBar .VPNavBarTitle .title {
+    font-size: 14px;
+  }
+
+  .VPNavBar .VPNavBarTitle .logo {
+    height: 28px;
   }
 }
 
