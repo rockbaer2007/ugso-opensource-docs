@@ -1,15 +1,23 @@
----
-title: Exemples and Preview
-description: Page française préparée pour Exemples and Preview dans la documentation UGSo Open Source.
----
-# Exemples and Preview
+<a id="exemples-and-preview"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Exemples et aperçu {#beispiele-und-vorschau}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/ultimate-timer/examples.md`](/en/projects/ultimate-timer/examples).
+## Démo {#demo}
 
-## Statut
+![Démo Ultimate Timer](/images/ultimate-timer/demo.gif)
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## États {#zustande}
+
+| Inactif (Idle) | En cours (Running) | Terminé (Done) |
+|---|---|---|
+| ![Inactif 1](/images/ultimate-timer/preview_idle1.png) | ![En cours 1](/images/ultimate-timer/preview_runing1.png) | ![Terminé 1](/images/ultimate-timer/preview_done1.png) |
+| ![Inactif 2](/images/ultimate-timer/preview_idle2.png) | ![En cours 2](/images/ultimate-timer/preview_runing2.png) | ![Terminé 2](/images/ultimate-timer/preview_done2.png) |
+
+## Exemples d'utilisation {#einsatzideen}
+
+- Temporisation d'arrêt (post-fonctionnement) d'une pompe
+- Éclairage temporisé
+- Durée d'arrosage
+- Surveillance (watchdog) avec retour d'état « terminé » (DONE)
+- Minuteur pour tableau de bord (dashboard) avec fonctions de démarrage, d'arrêt et affichage de l'état

@@ -1,17 +1,48 @@
 ---
-title: Mushroom Troubleshooting
-description: English page for Mushroom Troubleshooting in the UGSo Open Source collection.
+title: Mushroom troubleshooting
+description: Common Mushroom Card Problems and First Troubleshooting Steps.
 ---
-# Mushroom Troubleshooting
+<a id="mushroom-troubleshooting"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# Troubleshooting {#fehlersuche}
 
-Project: **Mushroom**.
+## New Changes Are Not Visible {#neue-anderungen-sind-nicht-sichtbar}
 
-The German source page is available under `/sammlung/mushroom/fehlersuche.md` and remains the reference until this page is fully translated.
+1. Check whether Home Assistant is up to date.
+2. Check whether the latest Mushroom version is installed in HACS.
+3. Check the browser console to see whether the expected mushroom version is actually being loaded.
+4. Clear cache.
+5. Remove mushroom resource.
+6. Uninstall Mushroom from HACS.
+7. Reinstall Mushroom.
+8. Reload browser and Home Assistant app.
 
-## Current focus
+Direct link to Lovelace resources:
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+[Open Home Assistant Resources](https://my.home-assistant.io/redirect/lovelace_resources/)
+
+## Card Mod Not Working {#card-mod-funktioniert-nicht}
+
+The Mushroom repository does not provide general support for `card-mod` configurations.
+
+The maintainer points to this status thread:
+
+- [State of card mod support](https://github.com/piitaya/lovelace-mushroom/issues/1366)
+
+## Card Cannot Be Found {#karte-wird-nicht-gefunden}
+
+Typical causes:
+
+- Resource missing or pointing to wrong path.
+- Browser cache is still loading an old file.
+- HACS installation did not load completely.
+- YAML uses incorrect map type.
+
+Example of a correct manual resource entry:
+
+```yaml
+resources:
+  - url: /local/mushroom.js
+    type: module
+```

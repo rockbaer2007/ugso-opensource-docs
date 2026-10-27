@@ -1,15 +1,26 @@
 ---
-title: HA Blueprints
-description: Page française pour HA Blueprints dans la collection UGSo Open Source.
+title: Blueprints HA
+description: Blueprints Home Assistant et modèles d'automatisation réutilisables.
 ---
-# HA Blueprints
+<a id="orientation-actuelle"></a>
 
-Cette page française a été créée afin que la collection Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Blueprints HA {#ha-blueprints}
 
-La page source allemande est disponible sous `/sammlung/ha-blueprints.md` et reste la référence jusqu'à la traduction complète.
+Cette section rassemble des « blueprints » (modèles) pour Home Assistant ainsi que des modèles d'automatisation réutilisables.
 
-## Orientation actuelle
+## Projets existants {#vorhandene-projekte}
 
-- Documentation Home Assistant et Lovelace dans la collection UGSo Open Source.
-- Navigation et sélection de langue cohérentes pour les lecteurs francophones.
-- Le contenu détaillé suivra la même structure que l'original allemand.
+| Projet | Description |
+| --- | --- |
+| [Ultimate Timer](/fr/projects/ultimate-timer/) | Blueprint Home Assistant pour des minuteurs réutilisables. |
+
+## Objectif pour la documentation des blueprints {#ziel-fur-blueprint-dokus}
+
+La documentation d'un blueprint devrait inclure au minimum :
+
+- L'objectif et les cas d'utilisation typiques
+- Le lien d'importation ou la procédure d'installation
+- Les « helpers » (assistants), entités et entrées requis
+- Un exemple de configuration
+- Des précisions sur les déclencheurs (« triggers »), conditions et actions
+- Le dépannage (« troubleshooting »)

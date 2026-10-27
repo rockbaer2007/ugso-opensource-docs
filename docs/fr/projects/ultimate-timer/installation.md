@@ -1,15 +1,34 @@
----
-title: Installation
-description: Page française préparée pour Installation dans la documentation UGSo Open Source.
----
-# Installation
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Installation {#installation}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/ultimate-timer/installation.md`](/en/projects/ultimate-timer/installation).
+## Importer directement dans Home Assistant {#direkt-in-home-assistant-importieren}
 
-## Statut
+[![Ouvrir le blueprint dans Home Assistant](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://raw.githubusercontent.com/rockbaer2007/ha-ultimate-timer-blueprint/main/blueprints/automation/ultimate_timer_v3_2_4.yaml)
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## Installation manuelle {#manuelle-installation}
+
+Téléchargez ce fichier :
+
+```text
+blueprints/automation/ultimate_timer_v3_2_4.yaml
+```
+
+Copiez-le dans votre répertoire Home Assistant :
+
+```text
+config/blueprints/automation/
+```
+
+Ensuite, dans Home Assistant :
+
+```text
+Einstellungen
+→ Automationen & Szenen
+→ Blueprints
+→ Blueprints neu laden
+```
+
+## Dépôt {#repository}
+
+[ha-ultimate-timer-blueprint sur GitHub](https://github.com/rockbaer2007/ha-ultimate-timer-blueprint)

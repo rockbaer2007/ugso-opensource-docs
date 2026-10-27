@@ -2,7 +2,7 @@
 import { withBase } from 'vitepress'
 import images from './studio-gallery.json'
 
-const props = defineProps<{ locale: 'de' | 'en' }>()
+const props = defineProps<{ locale: 'de' | 'en' | 'fr' }>()
 const imageUrl = (file: string) => withBase(`/images/grafik-visual-studio/gallery/${file}`)
 </script>
 

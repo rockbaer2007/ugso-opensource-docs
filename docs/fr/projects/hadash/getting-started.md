@@ -1,15 +1,26 @@
----
-title: Getting Started
-description: Page française préparée pour Getting Started dans la documentation UGSo Open Source.
----
-# Getting Started
+<a id="getting-started"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Premiers pas {#erste-schritte}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/hadash/getting-started.md`](/en/projects/hadash/getting-started).
+## Exigences {#voraussetzungen}
 
-## Statut
+- Windows 10 ou Windows 11
+- Environnement d'exécution .NET Desktop Runtime approprié
+- Fichier de tableau de bord ou données de sauvegarde non chiffrées
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## Installation {#installation}
+
+1. Accéder aux [versions (releases) de HADash](https://github.com/rockbaer2007/HADash/releases).
+2. Télécharger l'archive ZIP portable la plus récente.
+3. Extraire le contenu dans un dossier dédié.
+4. Lancer `HADash.exe`.
+
+## Formats pris en charge {#unterstutzte-formate}
+
+- `.dash`
+- `.yaml`
+- `.yml`
+- `.json`
+- `.txt`
+- Autres fichiers via `Alle Dateien (*.*)`

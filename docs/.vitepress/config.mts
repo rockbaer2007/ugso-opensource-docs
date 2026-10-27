@@ -897,8 +897,41 @@ const sidebarFr = {
     { text: 'Projektduplicator 2026', link: '/fr/eep/projektduplicator-2026/' }
   ] }],
   '/fr/projects/dashboard-user-manager/': [{text:'Utilisateurs des tableaux de bord',items:[{text:'Installation et utilisation',link:'/fr/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
-  '/fr/projects-mqtt/': [{text:'UGSo HA Apps',items:[{text:'Vue d’ensemble',link:'/fr/projects-mqtt/'},{text:'Utilisateurs des tableaux de bord',link:'/fr/projects/dashboard-user-manager/'}]}],
-  '/fr/projects/grafik-visual-studio/': [{text:'Grafik Visual Studio',items:[{text:'Widgets Material Design',link:'/fr/projects/grafik-visual-studio/materialdesign'},{text:'Widgets interactifs',link:'/fr/projects/grafik-visual-studio/interaktiv'},{text:'Langues, sources HA et Climate',link:'/fr/projects/grafik-visual-studio/ha-quellen-climate'},{text:'Widgets Basic',link:'/fr/projects/grafik-visual-studio/basic'},{text:'Studio (anglais)',link:'/en/projects/grafik-visual-studio/'}]}],
+  '/fr/projects-mqtt/': [{ text: 'UGSo HA Apps', items: [
+    { text: 'Vue d’ensemble', link: '/fr/projects-mqtt/' },
+    { text: 'Utilisateurs des tableaux de bord', link: '/fr/projects/dashboard-user-manager/' },
+    { text: 'MQTT-Client', link: '/fr/projects/mqtt-client/' },
+    { text: 'Blocks for HA', link: '/fr/projects/blocks-for-ha/' },
+    { text: 'Grafik Visual Studio', link: '/fr/projects/grafik-visual-studio/' },
+    { text: 'CallMeBot Whatsapp', link: '/fr/projects/callmebot/' },
+    { text: 'CallMeBot Signal', link: '/fr/projects/callmebot-signal/' },
+    { text: 'FRITZ!Box to MQTT', link: '/fr/projects/fritzbox-to-mqtt/' },
+    { text: 'Heizöl to MQTT', link: '/fr/projects/heizoel-to-mqtt/' },
+    { text: 'Parcel to MQTT', link: '/fr/projects/parcel-to-mqtt/' }
+  ] }],
+  '/fr/projects/grafik-visual-studio/': [{ text: 'Grafik Visual Studio', collapsed: false, items: [
+    { text: 'Vue d’ensemble', link: '/fr/projects/grafik-visual-studio/' },
+    { text: 'Éditeur et raccourcis clavier', link: '/fr/projects/grafik-visual-studio/editor' },
+    { text: 'Catalogue des widgets', link: '/fr/projects/grafik-visual-studio/widgets' },
+    { text: 'Widgets Material Design', link: '/fr/projects/grafik-visual-studio/materialdesign' },
+    { text: 'Widgets interactifs', link: '/fr/projects/grafik-visual-studio/interaktiv' },
+    { text: 'Langues, sources HA et Climate', link: '/fr/projects/grafik-visual-studio/ha-quellen-climate' },
+    { text: 'Widgets Basic', link: '/fr/projects/grafik-visual-studio/basic' },
+    { text: 'UGSo Industrial', link: '/fr/projects/grafik-visual-studio/industrial' },
+    { text: 'UGSo Energy', link: '/fr/projects/grafik-visual-studio/energy' },
+    { text: 'UGSo Printer', link: '/fr/projects/grafik-visual-studio/printer' },
+    { text: 'UGSo Solar', link: '/fr/projects/grafik-visual-studio/solar' },
+    { text: 'UGSo Calendar +', link: '/fr/projects/grafik-visual-studio/calendar-plus' },
+    { text: 'Dessin : vue d’ensemble', link: '/fr/projects/grafik-visual-studio/zeichnen' },
+    { text: 'SVG-Line', link: '/fr/projects/grafik-visual-studio/svg-line' },
+    { text: 'SVG LineBox', link: '/fr/projects/grafik-visual-studio/svg-linebox' },
+    { text: 'SVG LineBox Math', link: '/fr/projects/grafik-visual-studio/svg-linebox-math' },
+    { text: 'Flux de données : valeurs et convertisseurs', link: '/fr/projects/grafik-visual-studio/datenfluss' },
+    { text: 'Interface des paquets de widgets', link: '/fr/projects/grafik-visual-studio/widget-packages' },
+    { text: 'Interface des paquets d’outils', link: '/fr/projects/grafik-visual-studio/tool-packages' },
+    { text: 'Création de paquets', link: '/fr/projects/grafik-visual-studio/packer' },
+    { text: 'Galerie d’images', link: '/fr/projects/grafik-visual-studio/bildergalerie' }
+  ] }],
   '/fr/projects/callmebot/': [{ text: 'CallMeBot Whatsapp', items: [{ text: 'Configuration et Blockly', link: '/fr/projects/callmebot/' }, { text: 'Blocks for HA', link: '/fr/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/fr/projects-mqtt/' }] }],
   '/fr/projects/callmebot-signal/': [{ text: 'CallMeBot Signal', items: [{ text: 'Configuration et Blockly', link: '/fr/projects/callmebot-signal/' }, { text: 'Blocks for HA', link: '/fr/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/fr/projects-mqtt/' }] }],
   '/fr/projects/blocks-for-ha/': [{ text: 'Blocks for HA', items: [
@@ -1130,7 +1163,7 @@ const sidebarFr = {
 
 const navDe = reorganizeNavigation('de', sourceNavDe, sidebarDe)
 const navEn = reorganizeNavigation('en', sourceNavEn, sidebarEn)
-const navFr = reorganizeNavigation('fr', sourceNavFr, sidebarFr, sidebarEn['/en/projects-mqtt/'][0].items)
+const navFr = reorganizeNavigation('fr', sourceNavFr, sidebarFr)
 
 export default defineConfig({
   lang: 'de-DE',

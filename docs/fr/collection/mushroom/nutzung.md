@@ -1,17 +1,38 @@
 ---
-title: Mushroom Utilisation
-description: Page française pour Mushroom Utilisation dans la collection UGSo Open Source.
+title: Utilisation de Mushroom
+description: Utiliser les cartes Mushroom dans le tableau de bord de Home Assistant.
 ---
-# Mushroom Utilisation
+<a id="mushroom-utilisation"></a>
+<a id="orientation-actuelle"></a>
 
-Cette page française a été créée afin que la collection Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Utilisation {#nutzung}
 
-Projet : **Mushroom**.
+Toutes les cartes Mushroom peuvent être configurées via l'éditeur de tableau de bord de Home Assistant.
 
-La page source allemande est disponible sous `/sammlung/mushroom/nutzung.md` et reste la référence jusqu'à la traduction complète.
+1. Ouvrir le tableau de bord.
+2. Ouvrir le menu « trois points » en haut à droite.
+3. Sélectionner **Modifier le tableau de bord**.
+4. Sélectionner le bouton « plus » pour ajouter une carte. 5. Sélectionner l'une des cartes `Custom: Mushroom`.
+6. Configurer l'entité, le nom, l'icône, la disposition et les options dans l'éditeur.
+7. Enregistrer.
 
-## Orientation actuelle
+## Points forts {#typische-starken}
 
-- Documentation Home Assistant et Lovelace dans la collection UGSo Open Source.
-- Navigation et sélection de langue cohérentes pour les lecteurs francophones.
-- Le contenu détaillé suivra la même structure que l'original allemand.
+- Éditeur pour toutes les cartes et options
+- Sélection d'icônes
+- Choix des couleurs
+- Aucune dépendance envers d'autres cartes
+- Couleurs « Material UI »
+- Thèmes clairs et sombres
+- Personnalisation des thèmes (optionnelle)
+- Internationalisation
+
+## Thèmes {#themes}
+
+Mushroom fonctionne sans thème dédié. Pour une intégration visuelle plus poussée, il est possible d'utiliser le projet distinct « Mushroom Themes » :
+
+- [piitaya/lovelace-mushroom-themes](https://github.com/piitaya/lovelace-mushroom-themes)
+
+Les thèmes généraux pour Home Assistant sont décrits dans la documentation officielle de Home Assistant :
+
+- [Thèmes Home Assistant](https://www.home-assistant.io/integrations/frontend/#defining-themes)

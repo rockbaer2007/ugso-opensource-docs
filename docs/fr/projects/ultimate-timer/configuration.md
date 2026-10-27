@@ -1,15 +1,48 @@
----
-title: Configuration
-description: Page française préparée pour Configuration dans la documentation UGSo Open Source.
----
-# Configuration
+<a id="configuration"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Configuration {#konfiguration}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/ultimate-timer/configuration.md`](/en/projects/ultimate-timer/configuration).
+## Entrées {#eingaben}
 
-## Statut
+| Champ | Description |
+|---|---|
+| Utiliser MQTT | Utilise MQTT au lieu d'assistants (helpers) |
+| Déclencheur de démarrage | Démarre le minuteur |
+| Déclencheur d'arrêt | Arrête le minuteur prématurément |
+| État « En cours » | Indique que le minuteur est en cours d'exécution |
+| État « Terminé » | Indique que le minuteur est terminé |
+| Sujet MQTT « En cours » | Sujet MQTT pour l'état « En cours » (RUNNING) |
+| Sujet MQTT « Terminé » | Sujet MQTT pour l'état « Terminé » (DONE) |
+| Durée | Durée du minuteur au format `hh:mm:ss` |
+| Heure de réinitialisation | Heure pour la réinitialisation quotidienne |
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## Fonctionnement avec des « Helpers » {#helper-betrieb}
+
+Pour un fonctionnement standard avec des « Helpers » (entités auxiliaires), les éléments suivants sont nécessaires :
+
+- un « Helper » de démarrage (Start-Helper)
+- éventuellement un « Helper » d'arrêt (Stop-Helper)
+- un « Helper » d'état actif (Running-Helper)
+- un « Helper » d'état terminé (Done-Helper)
+
+Les entités de type `input_boolean` conviennent à cet usage.
+
+## Fonctionnement via MQTT {#mqtt-betrieb}
+
+Lorsque le mode MQTT est activé, les états RUNNING et DONE sont publiés sur les « topics » (sujets) configurés.
+
+Valeurs par défaut :
+
+```text
+timer/running/set
+timer/done/set
+```
+
+## Exemple de durée {#beispiel-fur-die-dauer}
+
+```text
+00:05:00
+```
+
+correspond à cinq minutes.

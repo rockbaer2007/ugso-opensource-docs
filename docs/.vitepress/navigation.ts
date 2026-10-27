@@ -13,8 +13,7 @@ const labels = {
 export function reorganizeNavigation(
   locale: Locale,
   source: DefaultTheme.NavItem[],
-  sidebar: Record<string, DefaultTheme.SidebarItem[]>,
-  englishApps: DefaultTheme.SidebarItem[] = []
+  sidebar: Record<string, DefaultTheme.SidebarItem[]>
 ): DefaultTheme.NavItem[] {
   const prefix = locale === 'de' ? '' : `/${locale}`
   const text = labels[locale]
@@ -23,17 +22,7 @@ export function reorganizeNavigation(
     (sidebar[path]?.[0]?.items ?? []).filter(item => item.link).map(item => ({ text: item.text!, link: item.link! }))
   const collection = byText(text.collection) as DefaultTheme.NavItemWithChildren
   const blog = byText('Blog') as DefaultTheme.NavItemWithChildren
-  const apps = locale === 'fr'
-    ? englishApps.map(item => {
-        const local = item.link!.replace(/^\/en\//, '/fr/')
-        // These overview pages currently have no French version.
-        // Keep their existing English destination explicitly labelled.
-        return /\/(?:mqtt-client|grafik-visual-studio)\/$/.test(local)
-          ? { text: `${item.text} (EN)`, link: item.link! }
-          : { text: item.link!.includes('/projects-mqtt/') ? text.overview
-              : item.link!.includes('/dashboard-user-manager/') ? 'Utilisateurs des tableaux de bord' : item.text!, link: local }
-      })
-    : links(`${prefix}/projects-mqtt/`)
+  const apps = links(`${prefix}/projects-mqtt/`)
 
   return [
     source[0],

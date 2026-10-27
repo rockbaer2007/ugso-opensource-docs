@@ -1,17 +1,39 @@
 ---
-title: Mushroom Usage
-description: English page for Mushroom Usage in the UGSo Open Source collection.
+title: Mushroom usage
+description: Use Mushroom Cards in the Home Assistant dashboard.
 ---
-# Mushroom Usage
+<a id="mushroom-usage"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# Usage {#nutzung}
 
-Project: **Mushroom**.
+All Mushroom Cards can be configured via Home Assistant's dashboard editor.
 
-The German source page is available under `/sammlung/mushroom/nutzung.md` and remains the reference until this page is fully translated.
+1. Open dashboard.
+2. Open the three-dot menu at the top right.
+3. Select **Edit Dashboard**.
+4. Select the plus button to add a card.
+5. Select one of the `Custom: Mushroom` cards.
+6. Set entity, name, icon, layout and options in the editor.
+7. Save.
 
-## Current focus
+## Typical strengths {#typische-starken}
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+- Editor for all cards and options
+- Icon selection
+- Color selection
+- no additional card dependency
+- Material UI colors
+- light and dark themes
+- optional theme customization
+- Internationalization
+
+## Themes {#themes}
+
+Mushroom works without its own theme. For a more suitable display, the separate Mushroom Themes project can be used:
+
+- [piitaya/lovelace-mushroom-themes](https://github.com/piitaya/lovelace-mushroom-themes)
+
+General Home Assistant themes are described in the official Home Assistant documentation:
+
+- [Home Assistant Themes](https://www.home-assistant.io/integrations/frontend/#defining-themes)

@@ -8,7 +8,7 @@ aside: false
 
 DE / EN / FR · 2026-10-27
 
-La documentation **n’est pas encore au même niveau dans les trois langues**. La page d’accueil française reprend désormais la structure, les images des marques, les boutons et le contenu de la page allemande.
+Toutes les pages de référence allemandes disposent désormais de contenu en anglais et en français. Les 128 pages provisoires ont été remplacées et les 20 pages françaises manquantes ajoutées.
 
 Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion de ces trois rapports générés : langues disponibles, textes provisoires, versions mentionnées, titres, exemples de code et références locales aux pages et images. Des versions ou longueurs différentes sont des points à examiner, pas une preuve automatique d’obsolescence. « Contenu présent » ne garantit pas une traduction complète ou vérifiée sur le plan linguistique. Les versions actuelles des projets en amont n’ont pas été contrôlées.
 
@@ -17,10 +17,10 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Autres points à examiner |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 229 | 0 | 0 | 0 |
-| EN | 229 | 0 | 37 | 78 |
-| FR | 209 | 20 | 91 | 57 |
+| EN | 229 | 0 | 0 | 74 |
+| FR | 229 | 0 | 0 | 47 |
 
-Il manque en français 19 pages de Grafik Visual Studio et la page du client MQTT. Les textes provisoires de la collection, du blog, des applications HA et des anciens projets doivent également être traduits. Les traductions complètes existantes et la documentation UIX vérifiée séparément sont conservées.
+Les ajouts ont été réalisés avec une aide à la traduction et vérifiés techniquement par rapport à la source allemande : code, identifiants, tableaux et images. Quatorze autres lacunes ont été comblées par des références complémentaires, en conservant les pages et liens existants. Il ne s’agit pas d’une certification linguistique complète. Les points à examiner comprennent aussi des résumés volontairement différents et des versions historiques.
 
 Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-256, différences de versions, indicateurs de structure et références locales non résolues.
 
@@ -32,23 +32,23 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 
 | Référence allemande | EN | FR |
 | --- | --- | --- |
-| [blog/beitragsvorlage.md](/blog/beitragsvorlage) | [Contenu présent](/en/blog/post-template) | [Texte provisoire](/fr/blog/post-template) |
-| [blog/index.md](/blog/) | [Contenu présent](/en/blog/) | [Texte provisoire](/fr/blog/) |
-| [blog/posts/atlas-runtime-foundation.md](/blog/posts/atlas-runtime-foundation) | [Contenu présent](/en/blog/posts/atlas-runtime-foundation) | [Texte provisoire](/fr/blog/posts/atlas-runtime-foundation) |
-| [blog/posts/hadash-preview.md](/blog/posts/hadash-preview) | [Contenu présent](/en/blog/posts/hadash-preview) | [Texte provisoire](/fr/blog/posts/hadash-preview) |
-| [blog/snippets/blockly.md](/blog/snippets/blockly) | [Contenu présent](/en/blog/snippets/blockly) | [Texte provisoire](/fr/blog/snippets/blockly) |
-| [blog/snippets/home-assistant-yaml.md](/blog/snippets/home-assistant-yaml) | [Contenu présent](/en/blog/snippets/home-assistant-yaml) | [Texte provisoire](/fr/blog/snippets/home-assistant-yaml) |
-| [blog/snippets/index.md](/blog/snippets/) | [Contenu présent](/en/blog/snippets/) | [Texte provisoire](/fr/blog/snippets/) |
-| [blog/snippets/iobroker-blockly.md](/blog/snippets/iobroker-blockly) | [Contenu présent](/en/blog/snippets/iobroker-blockly) | [Texte provisoire](/fr/blog/snippets/iobroker-blockly) |
-| [blog/snippets/javascript.md](/blog/snippets/javascript) | [Contenu présent](/en/blog/snippets/javascript) | [Texte provisoire](/fr/blog/snippets/javascript) |
-| [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Contenu présent](/en/blog/snippets/lovelace) | [Texte provisoire](/fr/blog/snippets/lovelace) |
+| [blog/beitragsvorlage.md](/blog/beitragsvorlage) | [Contenu présent](/en/blog/post-template) | [Contenu présent](/fr/blog/post-template) |
+| [blog/index.md](/blog/) | [Contenu présent](/en/blog/) | [Contenu présent](/fr/blog/) |
+| [blog/posts/atlas-runtime-foundation.md](/blog/posts/atlas-runtime-foundation) | [Contenu présent](/en/blog/posts/atlas-runtime-foundation) | [Contenu présent](/fr/blog/posts/atlas-runtime-foundation) |
+| [blog/posts/hadash-preview.md](/blog/posts/hadash-preview) | [Contenu présent](/en/blog/posts/hadash-preview) | [Contenu présent](/fr/blog/posts/hadash-preview) |
+| [blog/snippets/blockly.md](/blog/snippets/blockly) | [Contenu présent](/en/blog/snippets/blockly) | [Contenu présent](/fr/blog/snippets/blockly) |
+| [blog/snippets/home-assistant-yaml.md](/blog/snippets/home-assistant-yaml) | [Contenu présent](/en/blog/snippets/home-assistant-yaml) | [Contenu présent](/fr/blog/snippets/home-assistant-yaml) |
+| [blog/snippets/index.md](/blog/snippets/) | [Contenu présent](/en/blog/snippets/) | [Contenu présent](/fr/blog/snippets/) |
+| [blog/snippets/iobroker-blockly.md](/blog/snippets/iobroker-blockly) | [Contenu présent](/en/blog/snippets/iobroker-blockly) | [Contenu présent](/fr/blog/snippets/iobroker-blockly) |
+| [blog/snippets/javascript.md](/blog/snippets/javascript) | [Contenu présent](/en/blog/snippets/javascript) | [Contenu présent](/fr/blog/snippets/javascript) |
+| [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Contenu présent](/en/blog/snippets/lovelace) | [Contenu présent](/fr/blog/snippets/lovelace) |
 | [eep/index.md](/eep/) | [Contenu présent](/en/eep/) | [Contenu présent](/fr/eep/) |
 | [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Contenu présent](/en/eep/ini-edit-translate-2026/) | [Contenu présent](/fr/eep/ini-edit-translate-2026/) |
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Contenu présent](/en/eep/projektduplicator-2026/) | [Contenu présent](/fr/eep/projektduplicator-2026/) |
-| [impressum/index.md](/impressum/) | [Texte provisoire](/en/impressum/) | [Texte provisoire](/fr/impressum/) |
+| [impressum/index.md](/impressum/) | [Contenu présent](/en/impressum/) | [Contenu présent](/fr/impressum/) |
 | [index.md](/) | [Contenu présent](/en/) | [Contenu présent](/fr/) |
-| [projects-diverse/index.md](/projects-diverse/) | [Contenu présent](/en/projects-diverse/) | [Texte provisoire](/fr/projects-diverse/) |
-| [projects-mqtt/index.md](/projects-mqtt/) | [Contenu présent](/en/projects-mqtt/) | [Texte provisoire](/fr/projects-mqtt/) |
+| [projects-diverse/index.md](/projects-diverse/) | [Contenu présent](/en/projects-diverse/) | [Contenu présent](/fr/projects-diverse/) |
+| [projects-mqtt/index.md](/projects-mqtt/) | [Contenu présent](/en/projects-mqtt/) | [Contenu présent](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Contenu présent](/en/projects/atlas-plugins/automation-extractor) | [Contenu présent](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Contenu présent](/en/projects/atlas-plugins/demo-repository) | [Contenu présent](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Contenu présent](/en/projects/atlas-plugins/developers/compatibility) | [Contenu présent](/fr/projects/atlas-plugins/developers/compatibility) |
@@ -68,7 +68,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Contenu présent](/en/projects/atlas/card-editor) | [Contenu présent · Points à examiner](/fr/projects/atlas/card-editor) |
 | [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Contenu présent](/en/projects/atlas/development-status) | [Contenu présent · Points à examiner](/fr/projects/atlas/development-status) |
 | [projects/atlas/frontend.md](/projects/atlas/frontend) | [Contenu présent](/en/projects/atlas/frontend) | [Contenu présent](/fr/projects/atlas/frontend) |
-| [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Contenu présent](/en/projects/atlas/homeassistant) | [Contenu présent · Points à examiner](/fr/projects/atlas/homeassistant) |
+| [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Contenu présent](/en/projects/atlas/homeassistant) | [Contenu présent](/fr/projects/atlas/homeassistant) |
 | [projects/atlas/index.md](/projects/atlas/) | [Contenu présent](/en/projects/atlas/) | [Contenu présent](/fr/projects/atlas/) |
 | [projects/atlas/linux.md](/projects/atlas/linux) | [Contenu présent](/en/projects/atlas/linux) | [Contenu présent](/fr/projects/atlas/linux) |
 | [projects/atlas/plugins.md](/projects/atlas/plugins) | [Contenu présent](/en/projects/atlas/plugins) | [Contenu présent](/fr/projects/atlas/plugins) |
@@ -76,69 +76,69 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Contenu présent](/en/projects/atlas/tablet-uix-dauertest) | [Contenu présent](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Contenu présent](/en/projects/atlas/overview) | [Contenu présent](/fr/projects/atlas/overview) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Contenu présent · Points à examiner](/en/projects/blocks-for-ha/advanced) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/advanced) |
-| [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Contenu présent](/en/projects/blocks-for-ha/blockly-audit) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/blockly-audit) |
-| [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Contenu présent](/en/projects/blocks-for-ha/blocks) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/blocks) |
+| [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Contenu présent](/en/projects/blocks-for-ha/blockly-audit) | [Contenu présent](/fr/projects/blocks-for-ha/blockly-audit) |
+| [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Contenu présent](/en/projects/blocks-for-ha/blocks) | [Contenu présent](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Contenu présent](/en/projects/blocks-for-ha/catalog/) | [Contenu présent](/fr/projects/blocks-for-ha/catalog/) |
 | [projects/blocks-for-ha/catalog/sensor-light.md](/projects/blocks-for-ha/catalog/sensor-light) | [Contenu présent](/en/projects/blocks-for-ha/catalog/sensor-light) | [Contenu présent](/fr/projects/blocks-for-ha/catalog/sensor-light) |
-| [projects/blocks-for-ha/collections.md](/projects/blocks-for-ha/collections) | [Contenu présent](/en/projects/blocks-for-ha/collections) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/collections) |
-| [projects/blocks-for-ha/conversion.md](/projects/blocks-for-ha/conversion) | [Contenu présent](/en/projects/blocks-for-ha/conversion) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/conversion) |
-| [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Contenu présent](/en/projects/blocks-for-ha/custom-blocks) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/custom-blocks) |
-| [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Contenu présent](/en/projects/blocks-for-ha/entities) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/entities) |
-| [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Contenu présent](/en/projects/blocks-for-ha/flow) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/flow) |
+| [projects/blocks-for-ha/collections.md](/projects/blocks-for-ha/collections) | [Contenu présent](/en/projects/blocks-for-ha/collections) | [Contenu présent](/fr/projects/blocks-for-ha/collections) |
+| [projects/blocks-for-ha/conversion.md](/projects/blocks-for-ha/conversion) | [Contenu présent](/en/projects/blocks-for-ha/conversion) | [Contenu présent](/fr/projects/blocks-for-ha/conversion) |
+| [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Contenu présent](/en/projects/blocks-for-ha/custom-blocks) | [Contenu présent](/fr/projects/blocks-for-ha/custom-blocks) |
+| [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Contenu présent](/en/projects/blocks-for-ha/entities) | [Contenu présent](/fr/projects/blocks-for-ha/entities) |
+| [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Contenu présent](/en/projects/blocks-for-ha/flow) | [Contenu présent](/fr/projects/blocks-for-ha/flow) |
 | [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Contenu présent · Points à examiner](/en/projects/blocks-for-ha/) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/) |
 | [projects/blocks-for-ha/system-template.md](/projects/blocks-for-ha/system-template) | [Contenu présent](/en/projects/blocks-for-ha/system-template) | [Contenu présent](/fr/projects/blocks-for-ha/system-template) |
-| [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Contenu présent](/en/projects/blocks-for-ha/themes) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/themes) |
-| [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Contenu présent](/en/projects/blocks-for-ha/time) | [Contenu présent · Points à examiner](/fr/projects/blocks-for-ha/time) |
+| [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Contenu présent](/en/projects/blocks-for-ha/themes) | [Contenu présent](/fr/projects/blocks-for-ha/themes) |
+| [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Contenu présent](/en/projects/blocks-for-ha/time) | [Contenu présent](/fr/projects/blocks-for-ha/time) |
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Contenu présent](/en/projects/callmebot-signal/) | [Contenu présent](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Contenu présent](/en/projects/callmebot/) | [Contenu présent](/fr/projects/callmebot/) |
 | [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Contenu présent](/en/projects/dashboard-user-manager/) | [Contenu présent](/fr/projects/dashboard-user-manager/) |
-| [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Contenu présent](/en/projects/fritzbox-to-mqtt/examples) | [Texte provisoire](/fr/projects/fritzbox-to-mqtt/examples) |
-| [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Contenu présent](/en/projects/fritzbox-to-mqtt/entities) | [Texte provisoire](/fr/projects/fritzbox-to-mqtt/entities) |
-| [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Contenu présent](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Texte provisoire](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
-| [projects/fritzbox-to-mqtt/index.md](/projects/fritzbox-to-mqtt/) | [Contenu présent](/en/projects/fritzbox-to-mqtt/) | [Texte provisoire](/fr/projects/fritzbox-to-mqtt/) |
-| [projects/fritzbox-to-mqtt/installation.md](/projects/fritzbox-to-mqtt/installation) | [Contenu présent](/en/projects/fritzbox-to-mqtt/installation) | [Texte provisoire](/fr/projects/fritzbox-to-mqtt/installation) |
-| [projects/fritzbox-to-mqtt/konfiguration.md](/projects/fritzbox-to-mqtt/konfiguration) | [Contenu présent](/en/projects/fritzbox-to-mqtt/configuration) | [Texte provisoire](/fr/projects/fritzbox-to-mqtt/configuration) |
+| [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Contenu présent](/en/projects/fritzbox-to-mqtt/examples) | [Contenu présent](/fr/projects/fritzbox-to-mqtt/examples) |
+| [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Contenu présent](/en/projects/fritzbox-to-mqtt/entities) | [Contenu présent](/fr/projects/fritzbox-to-mqtt/entities) |
+| [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Contenu présent](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Contenu présent](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
+| [projects/fritzbox-to-mqtt/index.md](/projects/fritzbox-to-mqtt/) | [Contenu présent](/en/projects/fritzbox-to-mqtt/) | [Contenu présent](/fr/projects/fritzbox-to-mqtt/) |
+| [projects/fritzbox-to-mqtt/installation.md](/projects/fritzbox-to-mqtt/installation) | [Contenu présent](/en/projects/fritzbox-to-mqtt/installation) | [Contenu présent](/fr/projects/fritzbox-to-mqtt/installation) |
+| [projects/fritzbox-to-mqtt/konfiguration.md](/projects/fritzbox-to-mqtt/konfiguration) | [Contenu présent](/en/projects/fritzbox-to-mqtt/configuration) | [Contenu présent](/fr/projects/fritzbox-to-mqtt/configuration) |
 | [projects/grafik-visual-studio/basic.md](/projects/grafik-visual-studio/basic) | [Contenu présent](/en/projects/grafik-visual-studio/basic) | [Contenu présent](/fr/projects/grafik-visual-studio/basic) |
-| [projects/grafik-visual-studio/bildergalerie.md](/projects/grafik-visual-studio/bildergalerie) | [Contenu présent](/en/projects/grafik-visual-studio/bildergalerie) | Absente |
-| [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Contenu présent](/en/projects/grafik-visual-studio/calendar-plus) | Absente |
-| [projects/grafik-visual-studio/datenfluss.md](/projects/grafik-visual-studio/datenfluss) | [Contenu présent](/en/projects/grafik-visual-studio/datenfluss) | Absente |
-| [projects/grafik-visual-studio/editor.md](/projects/grafik-visual-studio/editor) | [Contenu présent](/en/projects/grafik-visual-studio/editor) | Absente |
-| [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Contenu présent](/en/projects/grafik-visual-studio/energy) | Absente |
+| [projects/grafik-visual-studio/bildergalerie.md](/projects/grafik-visual-studio/bildergalerie) | [Contenu présent](/en/projects/grafik-visual-studio/bildergalerie) | [Contenu présent](/fr/projects/grafik-visual-studio/bildergalerie) |
+| [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Contenu présent](/en/projects/grafik-visual-studio/calendar-plus) | [Contenu présent](/fr/projects/grafik-visual-studio/calendar-plus) |
+| [projects/grafik-visual-studio/datenfluss.md](/projects/grafik-visual-studio/datenfluss) | [Contenu présent](/en/projects/grafik-visual-studio/datenfluss) | [Contenu présent](/fr/projects/grafik-visual-studio/datenfluss) |
+| [projects/grafik-visual-studio/editor.md](/projects/grafik-visual-studio/editor) | [Contenu présent](/en/projects/grafik-visual-studio/editor) | [Contenu présent](/fr/projects/grafik-visual-studio/editor) |
+| [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Contenu présent](/en/projects/grafik-visual-studio/energy) | [Contenu présent](/fr/projects/grafik-visual-studio/energy) |
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Contenu présent](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Contenu présent](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
-| [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Contenu présent](/en/projects/grafik-visual-studio/) | Absente |
-| [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Contenu présent](/en/projects/grafik-visual-studio/industrial) | Absente |
+| [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Contenu présent](/en/projects/grafik-visual-studio/) | [Contenu présent](/fr/projects/grafik-visual-studio/) |
+| [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Contenu présent](/en/projects/grafik-visual-studio/industrial) | [Contenu présent](/fr/projects/grafik-visual-studio/industrial) |
 | [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Contenu présent](/en/projects/grafik-visual-studio/interaktiv) | [Contenu présent · Points à examiner](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Contenu présent](/en/projects/grafik-visual-studio/materialdesign) | [Contenu présent](/fr/projects/grafik-visual-studio/materialdesign) |
-| [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Contenu présent](/en/projects/grafik-visual-studio/packer) | Absente |
-| [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Contenu présent](/en/projects/grafik-visual-studio/printer) | Absente |
-| [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Contenu présent](/en/projects/grafik-visual-studio/solar) | Absente |
-| [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Contenu présent](/en/projects/grafik-visual-studio/svg-line) | Absente |
-| [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Contenu présent](/en/projects/grafik-visual-studio/svg-linebox-math) | Absente |
-| [projects/grafik-visual-studio/svg-linebox.md](/projects/grafik-visual-studio/svg-linebox) | [Contenu présent](/en/projects/grafik-visual-studio/svg-linebox) | Absente |
-| [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Contenu présent](/en/projects/grafik-visual-studio/technic) | Absente |
-| [projects/grafik-visual-studio/tool-pakete.md](/projects/grafik-visual-studio/tool-pakete) | [Contenu présent](/en/projects/grafik-visual-studio/tool-packages) | Absente |
-| [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Contenu présent](/en/projects/grafik-visual-studio/weather-heating) | Absente |
-| [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Contenu présent](/en/projects/grafik-visual-studio/widget-packages) | Absente |
-| [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Contenu présent](/en/projects/grafik-visual-studio/widgets) | Absente |
-| [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Contenu présent](/en/projects/grafik-visual-studio/zeichnen) | Absente |
-| [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Contenu présent](/en/projects/hadash/export-view) | [Texte provisoire](/fr/projects/hadash/export-view) |
-| [projects/hadash/backups-und-json.md](/projects/hadash/backups-und-json) | [Contenu présent](/en/projects/hadash/backups-and-json) | [Texte provisoire](/fr/projects/hadash/backups-and-json) |
-| [projects/hadash/dashboard-einlesen.md](/projects/hadash/dashboard-einlesen) | [Contenu présent](/en/projects/hadash/import-dashboard) | [Texte provisoire](/fr/projects/hadash/import-dashboard) |
-| [projects/hadash/erste-schritte.md](/projects/hadash/erste-schritte) | [Contenu présent](/en/projects/hadash/getting-started) | [Texte provisoire](/fr/projects/hadash/getting-started) |
-| [projects/hadash/index.md](/projects/hadash/) | [Contenu présent](/en/projects/hadash/) | [Texte provisoire](/fr/projects/hadash/) |
-| [projects/hadash/portable-nutzung.md](/projects/hadash/portable-nutzung) | [Contenu présent](/en/projects/hadash/portable-usage) | [Texte provisoire](/fr/projects/hadash/portable-usage) |
-| [projects/heizoel-to-mqtt/beispiele.md](/projects/heizoel-to-mqtt/beispiele) | [Contenu présent](/en/projects/heizoel-to-mqtt/examples) | [Texte provisoire](/fr/projects/heizoel-to-mqtt/examples) |
-| [projects/heizoel-to-mqtt/entitaeten.md](/projects/heizoel-to-mqtt/entitaeten) | [Contenu présent](/en/projects/heizoel-to-mqtt/entities) | [Texte provisoire](/fr/projects/heizoel-to-mqtt/entities) |
-| [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Contenu présent](/en/projects/heizoel-to-mqtt/) | [Texte provisoire](/fr/projects/heizoel-to-mqtt/) |
-| [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Contenu présent](/en/projects/heizoel-to-mqtt/installation) | [Texte provisoire](/fr/projects/heizoel-to-mqtt/installation) |
-| [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Contenu présent](/en/projects/heizoel-to-mqtt/configuration) | [Texte provisoire](/fr/projects/heizoel-to-mqtt/configuration) |
-| [projects/index.md](/projects/) | [Contenu présent · Points à examiner](/en/projects/) | [Texte provisoire](/fr/projects/) |
-| [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Contenu présent](/en/projects/mqtt-client/) | Absente |
-| [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Contenu présent](/en/projects/parcel-to-mqtt/examples) | [Texte provisoire](/fr/projects/parcel-to-mqtt/examples) |
-| [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Contenu présent](/en/projects/parcel-to-mqtt/entities) | [Texte provisoire](/fr/projects/parcel-to-mqtt/entities) |
-| [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Contenu présent](/en/projects/parcel-to-mqtt/) | [Texte provisoire](/fr/projects/parcel-to-mqtt/) |
-| [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Contenu présent](/en/projects/parcel-to-mqtt/installation) | [Texte provisoire](/fr/projects/parcel-to-mqtt/installation) |
-| [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Contenu présent](/en/projects/parcel-to-mqtt/configuration) | [Texte provisoire](/fr/projects/parcel-to-mqtt/configuration) |
+| [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Contenu présent](/en/projects/grafik-visual-studio/packer) | [Contenu présent](/fr/projects/grafik-visual-studio/packer) |
+| [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Contenu présent](/en/projects/grafik-visual-studio/printer) | [Contenu présent](/fr/projects/grafik-visual-studio/printer) |
+| [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Contenu présent](/en/projects/grafik-visual-studio/solar) | [Contenu présent](/fr/projects/grafik-visual-studio/solar) |
+| [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Contenu présent](/en/projects/grafik-visual-studio/svg-line) | [Contenu présent](/fr/projects/grafik-visual-studio/svg-line) |
+| [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Contenu présent](/en/projects/grafik-visual-studio/svg-linebox-math) | [Contenu présent](/fr/projects/grafik-visual-studio/svg-linebox-math) |
+| [projects/grafik-visual-studio/svg-linebox.md](/projects/grafik-visual-studio/svg-linebox) | [Contenu présent](/en/projects/grafik-visual-studio/svg-linebox) | [Contenu présent](/fr/projects/grafik-visual-studio/svg-linebox) |
+| [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Contenu présent](/en/projects/grafik-visual-studio/technic) | [Contenu présent](/fr/projects/grafik-visual-studio/technic) |
+| [projects/grafik-visual-studio/tool-pakete.md](/projects/grafik-visual-studio/tool-pakete) | [Contenu présent](/en/projects/grafik-visual-studio/tool-packages) | [Contenu présent](/fr/projects/grafik-visual-studio/tool-packages) |
+| [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Contenu présent](/en/projects/grafik-visual-studio/weather-heating) | [Contenu présent](/fr/projects/grafik-visual-studio/weather-heating) |
+| [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Contenu présent](/en/projects/grafik-visual-studio/widget-packages) | [Contenu présent](/fr/projects/grafik-visual-studio/widget-packages) |
+| [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Contenu présent](/en/projects/grafik-visual-studio/widgets) | [Contenu présent](/fr/projects/grafik-visual-studio/widgets) |
+| [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Contenu présent](/en/projects/grafik-visual-studio/zeichnen) | [Contenu présent](/fr/projects/grafik-visual-studio/zeichnen) |
+| [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Contenu présent](/en/projects/hadash/export-view) | [Contenu présent](/fr/projects/hadash/export-view) |
+| [projects/hadash/backups-und-json.md](/projects/hadash/backups-und-json) | [Contenu présent](/en/projects/hadash/backups-and-json) | [Contenu présent](/fr/projects/hadash/backups-and-json) |
+| [projects/hadash/dashboard-einlesen.md](/projects/hadash/dashboard-einlesen) | [Contenu présent](/en/projects/hadash/import-dashboard) | [Contenu présent](/fr/projects/hadash/import-dashboard) |
+| [projects/hadash/erste-schritte.md](/projects/hadash/erste-schritte) | [Contenu présent](/en/projects/hadash/getting-started) | [Contenu présent](/fr/projects/hadash/getting-started) |
+| [projects/hadash/index.md](/projects/hadash/) | [Contenu présent](/en/projects/hadash/) | [Contenu présent](/fr/projects/hadash/) |
+| [projects/hadash/portable-nutzung.md](/projects/hadash/portable-nutzung) | [Contenu présent](/en/projects/hadash/portable-usage) | [Contenu présent](/fr/projects/hadash/portable-usage) |
+| [projects/heizoel-to-mqtt/beispiele.md](/projects/heizoel-to-mqtt/beispiele) | [Contenu présent](/en/projects/heizoel-to-mqtt/examples) | [Contenu présent](/fr/projects/heizoel-to-mqtt/examples) |
+| [projects/heizoel-to-mqtt/entitaeten.md](/projects/heizoel-to-mqtt/entitaeten) | [Contenu présent](/en/projects/heizoel-to-mqtt/entities) | [Contenu présent](/fr/projects/heizoel-to-mqtt/entities) |
+| [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Contenu présent](/en/projects/heizoel-to-mqtt/) | [Contenu présent](/fr/projects/heizoel-to-mqtt/) |
+| [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Contenu présent](/en/projects/heizoel-to-mqtt/installation) | [Contenu présent](/fr/projects/heizoel-to-mqtt/installation) |
+| [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Contenu présent](/en/projects/heizoel-to-mqtt/configuration) | [Contenu présent](/fr/projects/heizoel-to-mqtt/configuration) |
+| [projects/index.md](/projects/) | [Contenu présent · Points à examiner](/en/projects/) | [Contenu présent](/fr/projects/) |
+| [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Contenu présent](/en/projects/mqtt-client/) | [Contenu présent](/fr/projects/mqtt-client/) |
+| [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Contenu présent](/en/projects/parcel-to-mqtt/examples) | [Contenu présent](/fr/projects/parcel-to-mqtt/examples) |
+| [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Contenu présent](/en/projects/parcel-to-mqtt/entities) | [Contenu présent](/fr/projects/parcel-to-mqtt/entities) |
+| [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Contenu présent](/en/projects/parcel-to-mqtt/) | [Contenu présent](/fr/projects/parcel-to-mqtt/) |
+| [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Contenu présent](/en/projects/parcel-to-mqtt/installation) | [Contenu présent](/fr/projects/parcel-to-mqtt/installation) |
+| [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Contenu présent](/en/projects/parcel-to-mqtt/configuration) | [Contenu présent](/fr/projects/parcel-to-mqtt/configuration) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Contenu présent · Points à examiner](/en/projects/uix/broker/broker) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/broker) |
 | [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Contenu présent · Points à examiner](/en/projects/uix/broker/directives) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/directives) |
 | [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Contenu présent · Points à examiner](/en/projects/uix/broker/examples) | [Contenu présent · Points à examiner](/fr/projects/uix/broker/examples) |
@@ -205,59 +205,59 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/uix/using/templates.md](/projects/uix/using/templates) | [Contenu présent · Points à examiner](/en/projects/uix/using/templates) | [Contenu présent](/fr/projects/uix/using/templates) |
 | [projects/uix/using/themes.md](/projects/uix/using/themes) | [Contenu présent · Points à examiner](/en/projects/uix/using/themes) | [Contenu présent · Points à examiner](/fr/projects/uix/using/themes) |
 | [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Contenu présent · Points à examiner](/en/projects/uix/using/view-backgrounds) | [Contenu présent](/fr/projects/uix/using/view-backgrounds) |
-| [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Contenu présent](/en/projects/ultimate-timer/examples) | [Texte provisoire](/fr/projects/ultimate-timer/examples) |
-| [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Contenu présent](/en/projects/ultimate-timer/how-it-works) | [Texte provisoire](/fr/projects/ultimate-timer/how-it-works) |
-| [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Contenu présent](/en/projects/ultimate-timer/) | [Texte provisoire](/fr/projects/ultimate-timer/) |
-| [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Contenu présent](/en/projects/ultimate-timer/installation) | [Texte provisoire](/fr/projects/ultimate-timer/installation) |
-| [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Contenu présent](/en/projects/ultimate-timer/configuration) | [Texte provisoire](/fr/projects/ultimate-timer/configuration) |
-| [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Texte provisoire](/en/collection/calendar-card-pro/beispiele) | [Texte provisoire](/fr/collection/calendar-card-pro/beispiele) |
-| [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Texte provisoire](/en/collection/calendar-card-pro/entwicklung) | [Texte provisoire](/fr/collection/calendar-card-pro/entwicklung) |
-| [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Texte provisoire](/en/collection/calendar-card-pro/features) | [Texte provisoire](/fr/collection/calendar-card-pro/features) |
-| [sammlung/calendar-card-pro/index.md](/sammlung/calendar-card-pro/) | [Contenu présent · Points à examiner](/en/collection/calendar-card-pro/) | [Texte provisoire](/fr/collection/calendar-card-pro/) |
-| [sammlung/calendar-card-pro/installation.md](/sammlung/calendar-card-pro/installation) | [Texte provisoire](/en/collection/calendar-card-pro/installation) | [Texte provisoire](/fr/collection/calendar-card-pro/installation) |
-| [sammlung/calendar-card-pro/konfiguration.md](/sammlung/calendar-card-pro/konfiguration) | [Texte provisoire](/en/collection/calendar-card-pro/konfiguration) | [Texte provisoire](/fr/collection/calendar-card-pro/konfiguration) |
-| [sammlung/calendar-card-pro/lizenz-und-stand.md](/sammlung/calendar-card-pro/lizenz-und-stand) | [Texte provisoire](/en/collection/calendar-card-pro/lizenz-und-stand) | [Texte provisoire](/fr/collection/calendar-card-pro/lizenz-und-stand) |
-| [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Texte provisoire](/en/collection/calendar-card-pro/nutzung) | [Texte provisoire](/fr/collection/calendar-card-pro/nutzung) |
+| [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Contenu présent](/en/projects/ultimate-timer/examples) | [Contenu présent](/fr/projects/ultimate-timer/examples) |
+| [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Contenu présent](/en/projects/ultimate-timer/how-it-works) | [Contenu présent](/fr/projects/ultimate-timer/how-it-works) |
+| [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Contenu présent](/en/projects/ultimate-timer/) | [Contenu présent](/fr/projects/ultimate-timer/) |
+| [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Contenu présent](/en/projects/ultimate-timer/installation) | [Contenu présent](/fr/projects/ultimate-timer/installation) |
+| [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Contenu présent](/en/projects/ultimate-timer/configuration) | [Contenu présent](/fr/projects/ultimate-timer/configuration) |
+| [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Contenu présent](/en/collection/calendar-card-pro/beispiele) | [Contenu présent](/fr/collection/calendar-card-pro/beispiele) |
+| [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Contenu présent](/en/collection/calendar-card-pro/entwicklung) | [Contenu présent](/fr/collection/calendar-card-pro/entwicklung) |
+| [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Contenu présent](/en/collection/calendar-card-pro/features) | [Contenu présent](/fr/collection/calendar-card-pro/features) |
+| [sammlung/calendar-card-pro/index.md](/sammlung/calendar-card-pro/) | [Contenu présent](/en/collection/calendar-card-pro/) | [Contenu présent](/fr/collection/calendar-card-pro/) |
+| [sammlung/calendar-card-pro/installation.md](/sammlung/calendar-card-pro/installation) | [Contenu présent](/en/collection/calendar-card-pro/installation) | [Contenu présent](/fr/collection/calendar-card-pro/installation) |
+| [sammlung/calendar-card-pro/konfiguration.md](/sammlung/calendar-card-pro/konfiguration) | [Contenu présent](/en/collection/calendar-card-pro/konfiguration) | [Contenu présent](/fr/collection/calendar-card-pro/konfiguration) |
+| [sammlung/calendar-card-pro/lizenz-und-stand.md](/sammlung/calendar-card-pro/lizenz-und-stand) | [Contenu présent](/en/collection/calendar-card-pro/lizenz-und-stand) | [Contenu présent](/fr/collection/calendar-card-pro/lizenz-und-stand) |
+| [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Contenu présent](/en/collection/calendar-card-pro/nutzung) | [Contenu présent](/fr/collection/calendar-card-pro/nutzung) |
 | [sammlung/dashboard-layout-card-v2/index.md](/sammlung/dashboard-layout-card-v2/) | [Contenu présent](/en/collection/dashboard-layout-card-v2/) | [Contenu présent](/fr/collection/dashboard-layout-card-v2/) |
-| [sammlung/flex-table-card/aktionen.md](/sammlung/flex-table-card/aktionen) | [Texte provisoire](/en/collection/flex-table-card/aktionen) | [Texte provisoire](/fr/collection/flex-table-card/aktionen) |
-| [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Texte provisoire](/en/collection/flex-table-card/beispiele-aus-forum) | [Texte provisoire](/fr/collection/flex-table-card/beispiele-aus-forum) |
-| [sammlung/flex-table-card/css.md](/sammlung/flex-table-card/css) | [Texte provisoire](/en/collection/flex-table-card/css) | [Texte provisoire](/fr/collection/flex-table-card/css) |
-| [sammlung/flex-table-card/datenquellen.md](/sammlung/flex-table-card/datenquellen) | [Texte provisoire](/en/collection/flex-table-card/datenquellen) | [Texte provisoire](/fr/collection/flex-table-card/datenquellen) |
-| [sammlung/flex-table-card/externe-daten.md](/sammlung/flex-table-card/externe-daten) | [Texte provisoire](/en/collection/flex-table-card/externe-daten) | [Texte provisoire](/fr/collection/flex-table-card/externe-daten) |
-| [sammlung/flex-table-card/formatierung.md](/sammlung/flex-table-card/formatierung) | [Texte provisoire](/en/collection/flex-table-card/formatierung) | [Texte provisoire](/fr/collection/flex-table-card/formatierung) |
-| [sammlung/flex-table-card/grundlagen.md](/sammlung/flex-table-card/grundlagen) | [Texte provisoire](/en/collection/flex-table-card/grundlagen) | [Texte provisoire](/fr/collection/flex-table-card/grundlagen) |
-| [sammlung/flex-table-card/header-footer.md](/sammlung/flex-table-card/header-footer) | [Texte provisoire](/en/collection/flex-table-card/header-footer) | [Texte provisoire](/fr/collection/flex-table-card/header-footer) |
-| [sammlung/flex-table-card/index.md](/sammlung/flex-table-card/) | [Contenu présent · Points à examiner](/en/collection/flex-table-card/) | [Texte provisoire](/fr/collection/flex-table-card/) |
-| [sammlung/flex-table-card/installation.md](/sammlung/flex-table-card/installation) | [Texte provisoire](/en/collection/flex-table-card/installation) | [Texte provisoire](/fr/collection/flex-table-card/installation) |
-| [sammlung/flex-table-card/paketliste.md](/sammlung/flex-table-card/paketliste) | [Texte provisoire](/en/collection/flex-table-card/paketliste) | [Texte provisoire](/fr/collection/flex-table-card/paketliste) |
-| [sammlung/flex-table-card/referenz.md](/sammlung/flex-table-card/referenz) | [Texte provisoire](/en/collection/flex-table-card/referenz) | [Texte provisoire](/fr/collection/flex-table-card/referenz) |
-| [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Texte provisoire](/en/collection/flex-table-card/sortierung) | [Texte provisoire](/fr/collection/flex-table-card/sortierung) |
-| [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Texte provisoire](/en/collection/frosted-glass-manager/) | [Texte provisoire](/fr/collection/frosted-glass-manager/) |
-| [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Texte provisoire](/en/collection/frosted-glass-theme/) | [Texte provisoire](/fr/collection/frosted-glass-theme/) |
-| [sammlung/ha-apps.md](/sammlung/ha-apps) | [Contenu présent · Points à examiner](/en/collection/ha-apps) | [Texte provisoire](/fr/collection/ha-apps) |
-| [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Texte provisoire](/en/collection/ha-automation-exporter/) | [Texte provisoire](/fr/collection/ha-automation-exporter/) |
-| [sammlung/ha-blueprints.md](/sammlung/ha-blueprints) | [Contenu présent](/en/collection/ha-blueprints) | [Texte provisoire](/fr/collection/ha-blueprints) |
-| [sammlung/ha-cards.md](/sammlung/ha-cards) | [Contenu présent · Points à examiner](/en/collection/ha-cards) | [Texte provisoire](/fr/collection/ha-cards) |
-| [sammlung/ha-dashboard.md](/sammlung/ha-dashboard) | [Contenu présent · Points à examiner](/en/collection/ha-dashboard) | [Texte provisoire](/fr/collection/ha-dashboard) |
-| [sammlung/ha-empfehlungen.md](/sammlung/ha-empfehlungen) | [Contenu présent](/en/collection/ha-recommendations) | [Texte provisoire](/fr/collection/ha-recommendations) |
-| [sammlung/ha-integrationen.md](/sammlung/ha-integrationen) | [Contenu présent](/en/collection/ha-integrations) | [Texte provisoire](/fr/collection/ha-integrations) |
-| [sammlung/ha-tools.md](/sammlung/ha-tools) | [Contenu présent](/en/collection/ha-tools) | [Texte provisoire](/fr/collection/ha-tools) |
-| [sammlung/hacs-dokus.md](/sammlung/hacs-dokus) | [Contenu présent · Points à examiner](/en/collection/hacs-docs) | [Texte provisoire](/fr/collection/hacs-docs) |
-| [sammlung/index.md](/sammlung/) | [Contenu présent · Points à examiner](/en/collection/) | [Texte provisoire](/fr/collection/) |
-| [sammlung/mushroom/beispiele.md](/sammlung/mushroom/beispiele) | [Texte provisoire](/en/collection/mushroom/beispiele) | [Texte provisoire](/fr/collection/mushroom/beispiele) |
-| [sammlung/mushroom/entwicklung.md](/sammlung/mushroom/entwicklung) | [Texte provisoire](/en/collection/mushroom/entwicklung) | [Texte provisoire](/fr/collection/mushroom/entwicklung) |
-| [sammlung/mushroom/fehlersuche.md](/sammlung/mushroom/fehlersuche) | [Texte provisoire](/en/collection/mushroom/fehlersuche) | [Texte provisoire](/fr/collection/mushroom/fehlersuche) |
-| [sammlung/mushroom/index.md](/sammlung/mushroom/) | [Contenu présent · Points à examiner](/en/collection/mushroom/) | [Texte provisoire](/fr/collection/mushroom/) |
-| [sammlung/mushroom/installation.md](/sammlung/mushroom/installation) | [Texte provisoire](/en/collection/mushroom/installation) | [Texte provisoire](/fr/collection/mushroom/installation) |
-| [sammlung/mushroom/karten.md](/sammlung/mushroom/karten) | [Texte provisoire](/en/collection/mushroom/karten) | [Texte provisoire](/fr/collection/mushroom/karten) |
-| [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Texte provisoire](/en/collection/mushroom/lizenz-und-stand) | [Texte provisoire](/fr/collection/mushroom/lizenz-und-stand) |
-| [sammlung/mushroom/nutzung.md](/sammlung/mushroom/nutzung) | [Texte provisoire](/en/collection/mushroom/nutzung) | [Texte provisoire](/fr/collection/mushroom/nutzung) |
-| [sammlung/neomorphix-uix/index.md](/sammlung/neomorphix-uix/) | [Texte provisoire](/en/collection/neomorphix-uix/) | [Texte provisoire](/fr/collection/neomorphix-uix/) |
-| [sammlung/weitere-beispiele.md](/sammlung/weitere-beispiele) | [Contenu présent · Points à examiner](/en/collection/interesting-examples) | [Texte provisoire](/fr/collection/interesting-examples) |
-| [sammlung/zendure-ha/entitaeten.md](/sammlung/zendure-ha/entitaeten) | [Texte provisoire](/en/collection/zendure-ha/entitaeten) | [Texte provisoire](/fr/collection/zendure-ha/entitaeten) |
-| [sammlung/zendure-ha/fehlersuche.md](/sammlung/zendure-ha/fehlersuche) | [Texte provisoire](/en/collection/zendure-ha/fehlersuche) | [Texte provisoire](/fr/collection/zendure-ha/fehlersuche) |
-| [sammlung/zendure-ha/fuse-group.md](/sammlung/zendure-ha/fuse-group) | [Texte provisoire](/en/collection/zendure-ha/fuse-group) | [Texte provisoire](/fr/collection/zendure-ha/fuse-group) |
-| [sammlung/zendure-ha/index.md](/sammlung/zendure-ha/) | [Contenu présent · Points à examiner](/en/collection/zendure-ha/) | [Texte provisoire](/fr/collection/zendure-ha/) |
-| [sammlung/zendure-ha/installation.md](/sammlung/zendure-ha/installation) | [Texte provisoire](/en/collection/zendure-ha/installation) | [Texte provisoire](/fr/collection/zendure-ha/installation) |
-| [sammlung/zendure-ha/lokales-mqtt.md](/sammlung/zendure-ha/lokales-mqtt) | [Texte provisoire](/en/collection/zendure-ha/lokales-mqtt) | [Texte provisoire](/fr/collection/zendure-ha/lokales-mqtt) |
-| [sammlung/zendure-ha/manager.md](/sammlung/zendure-ha/manager) | [Texte provisoire](/en/collection/zendure-ha/manager) | [Texte provisoire](/fr/collection/zendure-ha/manager) |
+| [sammlung/flex-table-card/aktionen.md](/sammlung/flex-table-card/aktionen) | [Contenu présent](/en/collection/flex-table-card/aktionen) | [Contenu présent](/fr/collection/flex-table-card/aktionen) |
+| [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Contenu présent](/en/collection/flex-table-card/beispiele-aus-forum) | [Contenu présent](/fr/collection/flex-table-card/beispiele-aus-forum) |
+| [sammlung/flex-table-card/css.md](/sammlung/flex-table-card/css) | [Contenu présent](/en/collection/flex-table-card/css) | [Contenu présent](/fr/collection/flex-table-card/css) |
+| [sammlung/flex-table-card/datenquellen.md](/sammlung/flex-table-card/datenquellen) | [Contenu présent](/en/collection/flex-table-card/datenquellen) | [Contenu présent](/fr/collection/flex-table-card/datenquellen) |
+| [sammlung/flex-table-card/externe-daten.md](/sammlung/flex-table-card/externe-daten) | [Contenu présent](/en/collection/flex-table-card/externe-daten) | [Contenu présent](/fr/collection/flex-table-card/externe-daten) |
+| [sammlung/flex-table-card/formatierung.md](/sammlung/flex-table-card/formatierung) | [Contenu présent](/en/collection/flex-table-card/formatierung) | [Contenu présent](/fr/collection/flex-table-card/formatierung) |
+| [sammlung/flex-table-card/grundlagen.md](/sammlung/flex-table-card/grundlagen) | [Contenu présent](/en/collection/flex-table-card/grundlagen) | [Contenu présent](/fr/collection/flex-table-card/grundlagen) |
+| [sammlung/flex-table-card/header-footer.md](/sammlung/flex-table-card/header-footer) | [Contenu présent](/en/collection/flex-table-card/header-footer) | [Contenu présent](/fr/collection/flex-table-card/header-footer) |
+| [sammlung/flex-table-card/index.md](/sammlung/flex-table-card/) | [Contenu présent](/en/collection/flex-table-card/) | [Contenu présent](/fr/collection/flex-table-card/) |
+| [sammlung/flex-table-card/installation.md](/sammlung/flex-table-card/installation) | [Contenu présent](/en/collection/flex-table-card/installation) | [Contenu présent](/fr/collection/flex-table-card/installation) |
+| [sammlung/flex-table-card/paketliste.md](/sammlung/flex-table-card/paketliste) | [Contenu présent](/en/collection/flex-table-card/paketliste) | [Contenu présent](/fr/collection/flex-table-card/paketliste) |
+| [sammlung/flex-table-card/referenz.md](/sammlung/flex-table-card/referenz) | [Contenu présent](/en/collection/flex-table-card/referenz) | [Contenu présent](/fr/collection/flex-table-card/referenz) |
+| [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Contenu présent](/en/collection/flex-table-card/sortierung) | [Contenu présent](/fr/collection/flex-table-card/sortierung) |
+| [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Contenu présent](/en/collection/frosted-glass-manager/) | [Contenu présent](/fr/collection/frosted-glass-manager/) |
+| [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Contenu présent](/en/collection/frosted-glass-theme/) | [Contenu présent](/fr/collection/frosted-glass-theme/) |
+| [sammlung/ha-apps.md](/sammlung/ha-apps) | [Contenu présent · Points à examiner](/en/collection/ha-apps) | [Contenu présent](/fr/collection/ha-apps) |
+| [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Contenu présent](/en/collection/ha-automation-exporter/) | [Contenu présent](/fr/collection/ha-automation-exporter/) |
+| [sammlung/ha-blueprints.md](/sammlung/ha-blueprints) | [Contenu présent](/en/collection/ha-blueprints) | [Contenu présent](/fr/collection/ha-blueprints) |
+| [sammlung/ha-cards.md](/sammlung/ha-cards) | [Contenu présent · Points à examiner](/en/collection/ha-cards) | [Contenu présent](/fr/collection/ha-cards) |
+| [sammlung/ha-dashboard.md](/sammlung/ha-dashboard) | [Contenu présent · Points à examiner](/en/collection/ha-dashboard) | [Contenu présent](/fr/collection/ha-dashboard) |
+| [sammlung/ha-empfehlungen.md](/sammlung/ha-empfehlungen) | [Contenu présent](/en/collection/ha-recommendations) | [Contenu présent](/fr/collection/ha-recommendations) |
+| [sammlung/ha-integrationen.md](/sammlung/ha-integrationen) | [Contenu présent](/en/collection/ha-integrations) | [Contenu présent](/fr/collection/ha-integrations) |
+| [sammlung/ha-tools.md](/sammlung/ha-tools) | [Contenu présent](/en/collection/ha-tools) | [Contenu présent](/fr/collection/ha-tools) |
+| [sammlung/hacs-dokus.md](/sammlung/hacs-dokus) | [Contenu présent · Points à examiner](/en/collection/hacs-docs) | [Contenu présent](/fr/collection/hacs-docs) |
+| [sammlung/index.md](/sammlung/) | [Contenu présent · Points à examiner](/en/collection/) | [Contenu présent](/fr/collection/) |
+| [sammlung/mushroom/beispiele.md](/sammlung/mushroom/beispiele) | [Contenu présent](/en/collection/mushroom/beispiele) | [Contenu présent](/fr/collection/mushroom/beispiele) |
+| [sammlung/mushroom/entwicklung.md](/sammlung/mushroom/entwicklung) | [Contenu présent](/en/collection/mushroom/entwicklung) | [Contenu présent](/fr/collection/mushroom/entwicklung) |
+| [sammlung/mushroom/fehlersuche.md](/sammlung/mushroom/fehlersuche) | [Contenu présent](/en/collection/mushroom/fehlersuche) | [Contenu présent](/fr/collection/mushroom/fehlersuche) |
+| [sammlung/mushroom/index.md](/sammlung/mushroom/) | [Contenu présent · Points à examiner](/en/collection/mushroom/) | [Contenu présent](/fr/collection/mushroom/) |
+| [sammlung/mushroom/installation.md](/sammlung/mushroom/installation) | [Contenu présent](/en/collection/mushroom/installation) | [Contenu présent](/fr/collection/mushroom/installation) |
+| [sammlung/mushroom/karten.md](/sammlung/mushroom/karten) | [Contenu présent](/en/collection/mushroom/karten) | [Contenu présent](/fr/collection/mushroom/karten) |
+| [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Contenu présent](/en/collection/mushroom/lizenz-und-stand) | [Contenu présent](/fr/collection/mushroom/lizenz-und-stand) |
+| [sammlung/mushroom/nutzung.md](/sammlung/mushroom/nutzung) | [Contenu présent](/en/collection/mushroom/nutzung) | [Contenu présent](/fr/collection/mushroom/nutzung) |
+| [sammlung/neomorphix-uix/index.md](/sammlung/neomorphix-uix/) | [Contenu présent](/en/collection/neomorphix-uix/) | [Contenu présent](/fr/collection/neomorphix-uix/) |
+| [sammlung/weitere-beispiele.md](/sammlung/weitere-beispiele) | [Contenu présent](/en/collection/interesting-examples) | [Contenu présent](/fr/collection/interesting-examples) |
+| [sammlung/zendure-ha/entitaeten.md](/sammlung/zendure-ha/entitaeten) | [Contenu présent](/en/collection/zendure-ha/entitaeten) | [Contenu présent](/fr/collection/zendure-ha/entitaeten) |
+| [sammlung/zendure-ha/fehlersuche.md](/sammlung/zendure-ha/fehlersuche) | [Contenu présent](/en/collection/zendure-ha/fehlersuche) | [Contenu présent](/fr/collection/zendure-ha/fehlersuche) |
+| [sammlung/zendure-ha/fuse-group.md](/sammlung/zendure-ha/fuse-group) | [Contenu présent](/en/collection/zendure-ha/fuse-group) | [Contenu présent](/fr/collection/zendure-ha/fuse-group) |
+| [sammlung/zendure-ha/index.md](/sammlung/zendure-ha/) | [Contenu présent](/en/collection/zendure-ha/) | [Contenu présent](/fr/collection/zendure-ha/) |
+| [sammlung/zendure-ha/installation.md](/sammlung/zendure-ha/installation) | [Contenu présent](/en/collection/zendure-ha/installation) | [Contenu présent](/fr/collection/zendure-ha/installation) |
+| [sammlung/zendure-ha/lokales-mqtt.md](/sammlung/zendure-ha/lokales-mqtt) | [Contenu présent](/en/collection/zendure-ha/lokales-mqtt) | [Contenu présent](/fr/collection/zendure-ha/lokales-mqtt) |
+| [sammlung/zendure-ha/manager.md](/sammlung/zendure-ha/manager) | [Contenu présent](/en/collection/zendure-ha/manager) | [Contenu présent](/fr/collection/zendure-ha/manager) |

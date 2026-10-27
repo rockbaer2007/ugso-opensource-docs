@@ -1,17 +1,33 @@
 ---
-title: Calendar Card Pro Développement und Mitwirken
-description: Page française pour Calendar Card Pro Développement und Mitwirken dans la collection UGSo Open Source.
+title: Développement et contribution à Calendar Card Pro
+description: Notes sur le développement et la contribution à Calendar Card Pro.
 ---
-# Calendar Card Pro Développement und Mitwirken
+<a id="calendar-card-pro-developpement-und-mitwirken"></a>
+<a id="orientation-actuelle"></a>
 
-Cette page française a été créée afin que la collection Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Développement et contribution {#entwicklung-und-mitwirken}
 
-Projet : **Calendar Card Pro**.
+## Développement en local {#lokal-entwickeln}
 
-La page source allemande est disponible sous `/sammlung/calendar-card-pro/entwicklung.md` et reste la référence jusqu'à la traduction complète.
+Le projet original utilise Node.js et npm.
 
-## Orientation actuelle
+```sh
+git clone https://github.com/alexpfau/calendar-card-pro.git
+cd calendar-card-pro
+npm install
+npm run dev
+```
 
-- Documentation Home Assistant et Lovelace dans la collection UGSo Open Source.
-- Navigation et sélection de langue cohérentes pour les lecteurs francophones.
-- Le contenu détaillé suivra la même structure que l'original allemand.
+Selon le fichier README, les « pull requests » doivent être soumises sur la branche `dev`.
+
+## Autres documents originaux {#weitere-originaldokumentation}
+
+- [Guide de contribution](https://calendar-card-pro.alexpfau.com/contributing)
+- [Documentation de l'architecture](https://calendar-card-pro.alexpfau.com/architecture)
+- [Notes de version](https://calendar-card-pro.alexpfau.com/RELEASE_NOTES)
+
+## Traductions {#ubersetzungen}
+
+La carte elle-même prend en charge de nombreuses langues. D'après le README, elle est disponible en 35 langues, tandis que l'éditeur visuel (dans la version `4.0.0`) en propose onze, dont l'allemand.
+
+Cette page est distincte : il s'agit d'une documentation externe en français, et non d'un fichier de traduction pour l'interface de la carte.

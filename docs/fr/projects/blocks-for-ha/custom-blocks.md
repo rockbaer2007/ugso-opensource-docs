@@ -31,3 +31,44 @@ Le JSON de définition produit par le [Blockly Developer Tools](https://docs.blo
 Les menus déroulants personnalisés, champs variable/image, conteneurs d’instructions, mutateurs et entrées dynamiques supplémentaires restent des pistes d’évolution. Les références à des blocs inconnus et les sorties non représentables sont refusées.
 
 Le [paquet capteur et lampe](./catalog/sensor-light) illustre une valeur de capteur, une condition de seuil et une action de luminosité. Tester les résultats et remplacer les entités avant utilisation dans HA.
+
+:::: details Référence détaillée issue de la documentation allemande
+
+## Blocs personnalisés et paquets de modèles (templates) {#eigene-blocks-und-template-pakete}
+
+Depuis la version **0.1.18**, l'**éditeur de blocs/modèles** (Block-/Template-Editor) ouvre, à côté du nom de l'automatisation, une fenêtre occupant 95 % de la largeur et de la hauteur de l'écran. Sur les appareils mobiles, elle occupe 98 % de l'espace et dispose d'un défilement interne. Des champs permettent de configurer le bloc ; sur la droite s'affichent un aperçu Blockly, le résultat HA (Home Assistant) avec des exemples de valeurs, ainsi qu'un code JSON du paquet pouvant être copié.
+
+### Création et application {#erstellen-und-ubernehmen}
+
+1. Saisissez l'identifiant du paquet, la version, le nom, l'auteur, la licence et la description, ou sélectionnez **Charger un exemple**.
+2. Ajoutez un ou plusieurs blocs : **Valeur/Jinja**, **Condition/Jinja**, **Action/HA-YAML** ou **Déclencheur/HA-YAML**.
+3. Créez des champs (pour du texte, des nombres, des booléens ou des entités) ainsi que des entrées de valeur (pour des nombres, des chaînes de caractères, des booléens ou des valeurs génériques).
+4. Saisissez l'expression Jinja ou le mappage déclaratif HA, puis vérifiez l'aperçu.
+5. Cliquez sur **Appliquer** pour installer le paquet localement. Ses blocs seront alors disponibles dans la section **Personnalisé** (Benutzerdefiniert), juste avant la barre de recherche.
+
+Les expressions Jinja doivent être saisies sans les doubles accolades de modèle. Les espaces réservés (placeholders), tels que `${ENTITY}`, font référence aux noms des champs ou des entrées. Les champs sont insérés en respectant leur type, tandis que les entrées de valeur sont intégrées sous forme d'expressions entre accolades. Le mappage HA utilise des valeurs JSON complètes, comme `{"$field":"ENTITY"}` ou `{"$input":"VALUE"}`. L'[exemple « Capteur et lumière »](/fr/projects/blocks-for-ha/catalog/sensor-light) illustre l'ensemble de ces mappages.
+
+### Deux méthodes d'importation et publication {#zwei-importwege-und-veroffentlichung}
+
+- **Insérer le code :** Collez le JSON du paquet dans la section « Importer du code JSON ou un fichier ZIP », **vérifiez le JSON**, consultez l'aperçu, puis **validez**.
+- **Charger un fichier ZIP :** Sélectionnez le fichier du paquet, consultez l'aperçu, puis **validez**.
+
+Les options **Télécharger le JSON**, **Copier le code** et **Télécharger le catalogue (ZIP)** permettent toutes d'exporter le même paquet. Le fichier ZIP contient `block-package.json` et `README.md`. Les pages open source présentent les paquets et proposent du code ainsi que des téléchargements ; le [catalogue](https://visualstudio.ugso-software.de/blocks), quant à lui, dispose de sa propre page dédiée aux paquets de blocs. Les nouvelles publications sont examinées manuellement ; l'éditeur ne procède à aucun téléversement automatique. [Catalogue et exemple](/fr/projects/blocks-for-ha/catalog/).
+
+### Stockage et conflits {#speicherung-und-konflikte}
+
+Format de paquet : `ugso-ha-block-package`, `schemaVersion: 1` ; les identifiants de paquets ou de blocs sont composés de lettres minuscules, de chiffres et de traits de soulignement simples. Les paquets installés restent stockés dans le navigateur. Le format de projet **3** intègre les paquets utilisés ainsi que leurs dépendances. Les formats de projet 1 et 2 restent lisibles. En cas d'échec lors de l'importation d'un projet, aucune nouvelle définition de paquet n'est installée.
+
+Des paquets identiques peuvent être réimportés. Un identifiant de paquet (ID) existant associé à un contenu ou une version différente sera rejeté. Pour créer une variante personnalisée, utilisez un nouvel identifiant de paquet ; les mises à jour automatiques et la désinstallation seront implémentées ultérieurement. Les dépendances doivent être présentes dans la version exacte requise, ou être incluses dans le projet. Les dépendances cycliques sont rejetées.
+
+Limites : 16 paquets installés, 32 blocs par paquet, 12 champs et 8 entrées de valeur par bloc ; le fichier JSON ne doit pas dépasser 500.000 caractères, et le fichier ZIP ne doit pas excéder 1 Mo (compressé ou décompressé). Les fichiers ZIP ne peuvent contenir que les deux fichiers spécifiés.
+
+### Limites de la première version de l'éditeur {#grenzen-des-ersten-editors}
+
+L'éditeur est une interface dédiée, conçue pour HA (Home Assistant) et dotée d'un aperçu Blockly. L'outil original [Blockly Block Factory](https://docs.blockly.com/guides/create-custom-blocks/blockly-developer-tools/) n'est pas encore intégré. Le code JSON brut des blocs généré par cet outil ne contient, en soi, aucune fonctionnalité HA et ne constitue pas un paquet UGSo importable. Les générateurs de code (JavaScript, Python, PHP, Lua, Dart) ne sont ni importés ni exécutés.
+
+Les menus déroulants, champs de variables, images, conteneurs d'instructions, « mutateurs » et connecteurs dynamiques ne sont pas encore disponibles dans l'éditeur (ils figurent sur la feuille de route). Les entrées de valeur font l'objet d'une vérification de type ; les blocs existants qui ne comportent que des champs numériques fixes ne peuvent pas accepter de valeurs numériques dynamiques.
+
+L'aperçu vérifie la structure du paquet et les structures HA prises en charge, mais n'exécute pas le code Jinja. Les propriétés des appareils et les plages de paramètres valides doivent être vérifiées au sein de HA ; les champs numériques ne permettent pas, pour l'instant, de définir librement des limites minimales ou maximales. L'éditeur n'exécute aucune action HA. L'exportation au format YAML génère des structures natives HA ; Lors de la réimportation YAML, la représentation native correspondante est générée. Les formes de blocs personnalisées initiales sont préservées grâce au fichier de projet JSON.
+
+::::

@@ -1,17 +1,48 @@
 ---
-title: Mushroom Dépannage
-description: Page française pour Mushroom Dépannage dans la collection UGSo Open Source.
+title: Dépannage de Mushroom
+description: Problèmes courants avec Mushroom Cards et premières étapes pour les résoudre.
 ---
-# Mushroom Dépannage
+<a id="mushroom-depannage"></a>
+<a id="orientation-actuelle"></a>
 
-Cette page française a été créée afin que la collection Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Dépannage {#fehlersuche}
 
-Projet : **Mushroom**.
+## Les nouvelles modifications ne sont pas visibles {#neue-anderungen-sind-nicht-sichtbar}
 
-La page source allemande est disponible sous `/sammlung/mushroom/fehlersuche.md` et reste la référence jusqu'à la traduction complète.
+1. Vérifiez si Home Assistant est à jour.
+2. Vérifiez si la dernière version de Mushroom est installée via HACS.
+3. Vérifiez dans la console du navigateur si la version attendue de Mushroom est bien celle qui est chargée.
+4. Videz le cache.
+5. Supprimez la ressource Mushroom.
+6. Désinstallez Mushroom via HACS.
+7. Réinstallez Mushroom.
+8. Rechargez le navigateur et l'application Home Assistant.
 
-## Orientation actuelle
+Lien direct vers les ressources Lovelace :
 
-- Documentation Home Assistant et Lovelace dans la collection UGSo Open Source.
-- Navigation et sélection de langue cohérentes pour les lecteurs francophones.
-- Le contenu détaillé suivra la même structure que l'original allemand.
+[Ouvrir les ressources Home Assistant](https://my.home-assistant.io/redirect/lovelace_resources/)
+
+## Card-mod ne fonctionne pas {#card-mod-funktioniert-nicht}
+
+Le dépôt Mushroom ne propose pas de support général pour les configurations `card-mod`.
+
+Le mainteneur renvoie vers ce fil de discussion dédié :
+
+- [État du support de card-mod](https://github.com/piitaya/lovelace-mushroom/issues/1366)
+
+## La carte est introuvable {#karte-wird-nicht-gefunden}
+
+Causes courantes :
+
+- La ressource est manquante ou pointe vers un mauvais chemin.
+- Le cache du navigateur charge encore un ancien fichier.
+- L'installation via HACS n'a pas été entièrement chargée.
+- Le code YAML utilise un type de carte incorrect.
+
+Exemple d'ajout manuel correct d'une ressource :
+
+```yaml
+resources:
+  - url: /local/mushroom.js
+    type: module
+```

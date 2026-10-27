@@ -1,15 +1,83 @@
 ---
-title: Post Title
-description: Page française préparée pour Post Title dans la documentation UGSo Open Source.
+title: Titre du message
+description: Brève description pour les moteurs de recherche et aperçu.
+date: '2026-08-02'
+author: UGSo Software
+tags:
+- Code
+- Home Assistant
 ---
-# Post Title
+<a id="post-title"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/blog/post-template.md`](/en/blog/post-template).
+# Titre du message {#titel-des-beitrags}
 
-## Statut
+**2. août 2026 · Logiciel UGSo**
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+Brève introduction au code ou au problème.
+
+## Objectif {#zweck}
+
+Décrivez à quoi sert le code.
+
+## Exigences {#voraussetzungen}
+
+- intégration requise
+- entités requises
+- version requise
+
+## Code {#code}
+
+### YAML {#yaml}
+
+```yaml
+alias: Beispiel
+triggers: []
+conditions: []
+actions: []
+mode: single
+```
+
+### JavaScript {#javascript}
+
+```javascript
+function example(value) {
+  return value ?? 'unbekannt';
+}
+```
+
+### JSON {#json}
+
+```json
+{
+  "name": "Beispiel",
+  "enabled": true
+}
+```
+
+## Explication {#erklarung}
+
+Expliquez les parties importantes du code.
+
+## Personnalisations {#anpassungen}
+
+Ces valeurs doivent être adaptées à votre propre système :
+
+```text
+entity_id
+topic
+dateipfad
+```
+
+## Remarques {#hinweise}
+
+:: avertissement
+Créez toujours une sauvegarde avant d’apporter des modifications productives.
+:::
+
+## Autres liens {#weiterfuhrende-links}
+
+- [Blog](/fr/blog/)
+- [Extraits de code](/fr/blog/snippets/)
+- [Projets](/fr/projects/)

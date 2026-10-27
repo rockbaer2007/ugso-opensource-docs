@@ -1,17 +1,36 @@
 ---
-title: Mushroom Lizenz und Quellenstand
-description: English page for Mushroom Lizenz und Quellenstand in the UGSo Open Source collection.
+title: Mushroom license and source status
+description: Sources, license information and change checking for the Mushroom documentation.
 ---
-# Mushroom Lizenz und Quellenstand
+<a id="mushroom-lizenz-und-quellenstand"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# License and source status {#lizenz-und-quellenstand}
 
-Project: **Mushroom**.
+| field | Value |
+| --- | --- |
+| Original project | [piitaya/lovelace-mushroom](https://github.com/piitaya/lovelace-mushroom) |
+| Checked commit | [`6f8f1eaed3dc5cff94cd7ac5de64d921c6fb4101`](https://github.com/piitaya/lovelace-mushroom/commit/6f8f1eaed3dc5cff94cd7ac5de64d921c6fb4101) |
+| Mushroom version | `5.2.2` according to `package.json` |
+| License notice | `LICENSE` calls Apache-2.0, `package.json` calls ISC |
+| Documentation status | Unofficial English working translation and practical documentation |
 
-The German source page is available under `/sammlung/mushroom/lizenz-und-stand.md` and remains the reference until this page is fully translated.
+## Labeling {#kennzeichnung}
 
-## Current focus
+These pages are not official Mushroom documentation. They are a English-language reading aid and practical documentation.
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+The original project and original English files remain authoritative.
+
+## Change checking {#anderungsprufung}
+
+The GitHub Action `Check Mushroom docs upstream` regularly checks whether relevant files in the original repository have changed.
+
+To be monitored:
+
+- `README.md`
+- `docs/cards/*.md`
+- `docs/badges/*.md`
+- `package.json`
+- `LICENSE`
+
+When relevant files change, the action creates an issue with a comparison link and file list.

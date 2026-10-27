@@ -1,17 +1,33 @@
 ---
-title: Calendar Card Pro Development und Mitwirken
-description: English page for Calendar Card Pro Development und Mitwirken in the UGSo Open Source collection.
+title: Calendar Card Pro development and participation
+description: Calendar Card Pro development and contribution notes.
 ---
-# Calendar Card Pro Development und Mitwirken
+<a id="calendar-card-pro-development-und-mitwirken"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# Development and participation {#entwicklung-und-mitwirken}
 
-Project: **Calendar Card Pro**.
+## Develop locally {#lokal-entwickeln}
 
-The German source page is available under `/sammlung/calendar-card-pro/entwicklung.md` and remains the reference until this page is fully translated.
+The original project uses Node.js and npm.
 
-## Current focus
+```sh
+git clone https://github.com/alexpfau/calendar-card-pro.git
+cd calendar-card-pro
+npm install
+npm run dev
+```
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+According to the README, pull requests should be created against the branch `dev`.
+
+## More original documentation {#weitere-originaldokumentation}
+
+- [Contributing Guide](https://calendar-card-pro.alexpfau.com/contributing)
+- [Architecture Documentation](https://calendar-card-pro.alexpfau.com/architecture)
+- [Release Notes](https://calendar-card-pro.alexpfau.com/RELEASE_NOTES)
+
+## Translations {#ubersetzungen}
+
+The card itself supports many languages. According to the README, the card speaks 35 languages, the visual editor in version `4.0.0` speaks eleven languages, including German.
+
+This page is separate from that: It is an external English documentation and not a language file for the card interface.

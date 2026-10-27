@@ -1,17 +1,38 @@
 ---
-title: Calendar Card Pro Lizenz und Quellenstand
-description: English page for Calendar Card Pro Lizenz und Quellenstand in the UGSo Open Source collection.
+title: Calendar Card Pro license and source status
+description: Sources, license and change checking for the Calendar Card Pro documentation.
 ---
-# Calendar Card Pro Lizenz und Quellenstand
+<a id="calendar-card-pro-lizenz-und-quellenstand"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# License and source status {#lizenz-und-quellenstand}
 
-Project: **Calendar Card Pro**.
+| field | Value |
+| --- | --- |
+| Original project | [alexpfau/calendar-card-pro](https://github.com/alexpfau/calendar-card-pro) |
+| Original documentation | [calendar-card-pro.alexpfau.com](https://calendar-card-pro.alexpfau.com) |
+| Checked commit | [`a3b01138daa44947f6673c33fe700e5ef4a08957`](https://github.com/alexpfau/calendar-card-pro/commit/a3b01138daa44947f6673c33fe700e5ef4a08957) |
+| Release | [`v4.1.0`](https://github.com/alexpfau/calendar-card-pro/releases/tag/v4.1.0) |
+| License | [MIT](https://github.com/alexpfau/calendar-card-pro/blob/main/LICENSE) |
+| Documentation status | Unofficial English working translation and practical documentation |
 
-The German source page is available under `/sammlung/calendar-card-pro/lizenz-und-stand.md` and remains the reference until this page is fully translated.
+## Labeling {#kennzeichnung}
 
-## Current focus
+These pages are not official Calendar Card Pro documentation. They are a English-language reading aid and practical documentation.
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+The original project and original English files remain authoritative.
+
+## Change checking {#anderungsprufung}
+
+The GitHub Action `Check Calendar Card Pro docs upstream` checks daily whether relevant files in the original repository have changed. It can also be started manually.
+
+To be monitored:
+
+- `README.md`
+- `docs/**/*.md`
+- `package.json`
+- `hacs.json`
+- `LICENSE`
+- `NOTICE`
+
+When relevant files change, the action creates an issue with a comparison link and file list.

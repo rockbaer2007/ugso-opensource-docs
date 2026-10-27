@@ -1,15 +1,31 @@
----
-title: Entités
-description: Page française préparée pour Entités dans la documentation UGSo Open Source.
----
-# Entités
+<a id="entites"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Entités {#entitaten}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/parcel-to-mqtt/entities.md`](/en/projects/parcel-to-mqtt/entities).
+Les entités sont créées via la découverte MQTT (MQTT Discovery).
 
-## Statut
+Entités générales :
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+- Connexion Parcel
+- Dernière mise à jour Parcel
+- Expéditions Parcel
+- Total Parcel
+- Parcel Enregistré
+- Parcel En transit
+- Parcel En cours de livraison
+- Parcel Point de retrait
+- Parcel Livré
+- Parcel Retour
+- Parcel Problème
+- Parcel Inconnu
+
+Emplacements (slots) pour colis :
+
+- Parcel 01
+- Parcel 02
+- autres emplacements, jusqu'au nombre configuré
+
+Chaque emplacement de colis utilise son statut comme état principal et dispose d'attributs pour : le numéro d'expédition, le transporteur, le groupe de statut, le dernier événement, l'horodatage du dernier événement et le pays de destination.
+
+La liste JSON de tous les envois est disponible en tant qu'attribut sur le capteur `Parcel Sendungen`.

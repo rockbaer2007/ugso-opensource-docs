@@ -3,165 +3,195 @@
     "file": "01-editor-overview.png",
     "title": {
       "de": "Die Editor-Oberfläche im Überblick",
-      "en": "Editor interface overview"
+      "en": "Editor interface overview",
+      "fr": "Aperçu de l'interface de l'éditeur"
     },
     "caption": {
       "de": "Links wählst du Widgets aus der Palette. In der Mitte gestaltest du deine Visualisierung auf der Rasterfläche. Rechts bearbeitest du die Eigenschaften des ausgewählten Widgets. Die obere Werkzeugleiste bietet unter anderem Einstellungen, Entitäten, Projekte und den Wechsel zur Runtime.",
-      "en": "Choose widgets from the palette on the left, arrange your visualization on the central grid and edit the selected widget's properties on the right. The top toolbar provides settings, entities, projects and the switch to runtime."
+      "en": "Choose widgets from the palette on the left, arrange your visualization on the central grid and edit the selected widget's properties on the right. The top toolbar provides settings, entities, projects and the switch to runtime.",
+      "fr": "À gauche, vous sélectionnez des widgets dans la palette. Au centre, vous concevez votre visualisation sur la grille. À droite, vous modifiez les propriétés du widget sélectionné. La barre d'outils supérieure propose, entre autres, les paramètres, les entités, les projets et la possibilité de basculer vers le mode exécution (runtime)."
     }
   },
   {
     "file": "02-widget-list.png",
     "title": {
       "de": "Widgetliste und Pakete",
-      "en": "Widget list and packages"
+      "en": "Widget list and packages",
+      "fr": "Liste des widgets et paquets"
     },
     "caption": {
       "de": "Die Widget-Palette ordnet die verfügbaren Widgets nach Gruppen und installierten Paketen. Klappe eine Gruppe auf, um ihre Widgets auszuwählen, oder finde passende Einträge über die Suche.",
-      "en": "The widget palette organizes available widgets by group and installed package. Expand a group to choose its widgets or use the search to find matching entries."
+      "en": "The widget palette organizes available widgets by group and installed package. Expand a group to choose its widgets or use the search to find matching entries.",
+      "fr": "La palette de widgets organise les éléments disponibles par groupes et par paquets installés. Déployez un groupe pour sélectionner ses widgets, ou utilisez la fonction de recherche pour trouver les éléments correspondants."
     }
   },
   {
     "file": "03-settings-general-1.png",
     "title": {
       "de": "Einstellungen – Allgemein (Bild 1)",
-      "en": "Settings – General (image 1)"
+      "en": "Settings – General (image 1)",
+      "fr": "Paramètres – Général (Image 1)"
     },
     "caption": {
       "de": "In den allgemeinen Einstellungen aktivierst du Umsteigerhinweise, legst das automatische Speichern und die App-Sprache fest und wählst die Farben der Andockpunkte im Editor. Über die weiteren Reiter verwaltest du Widget-Pakete und Tools.",
-      "en": "General settings let you enable migration hints, configure automatic saving and the app language, and choose editor docking-point colors. The other tabs provide access to widget packages and tools."
+      "en": "General settings let you enable migration hints, configure automatic saving and the app language, and choose editor docking-point colors. The other tabs provide access to widget packages and tools.",
+      "fr": "Dans les paramètres généraux, vous pouvez activer les indications pour les utilisateurs en transition, configurer la sauvegarde automatique et la langue de l'application, ainsi que choisir les couleurs des points d'ancrage dans l'éditeur. Les autres onglets vous permettent de gérer les packs de widgets et les outils."
     }
   },
   {
     "file": "04-settings-general-3.png",
     "title": {
       "de": "Einstellungen – Allgemein (Bild 3)",
-      "en": "Settings – General (image 3)"
+      "en": "Settings – General (image 3)",
+      "fr": "Paramètres – Général (Image 3)"
     },
     "caption": {
       "de": "Weitere allgemeine Einstellungen umfassen den Material-Design-Projektstandard, Wiederverbindung und Zustands-Entprellzeit, die Browserinstanz-ID sowie Projektzugänglichkeit. Für die Runtime legst du Titel, Favicon und das Scrollverhalten fest.",
-      "en": "Additional general settings cover the project's Material Design default, reconnection and state debounce time, browser instance ID and project accessibility. Runtime options include the title, favicon and scrolling behavior."
+      "en": "Additional general settings cover the project's Material Design default, reconnection and state debounce time, browser instance ID and project accessibility. Runtime options include the title, favicon and scrolling behavior.",
+      "fr": "D'autres paramètres généraux concernent la norme de projet « Material Design », la reconnexion et le délai de stabilisation des états (« debouncing »), l'identifiant de l'instance de navigateur, ainsi que l'accessibilité du projet. Pour l'environnement d'exécution (« Runtime »), vous pouvez définir le titre, le favicon et le comportement de défilement."
     }
   },
   {
     "file": "05-settings-widget-packages-1.png",
     "title": {
       "de": "Einstellungen – Widget-Pakete (Bild 1)",
-      "en": "Settings – Widget packages (image 1)"
+      "en": "Settings – Widget packages (image 1)",
+      "fr": "Paramètres – Packs de widgets (Image 1)"
     },
     "caption": {
       "de": "Widget-Pakete lassen sich lokal, aus dem Katalog oder über GitHub auswählen. Der Katalog zeigt Beschreibung, Lizenz, Paketversion, Installationsstatus und benötigte Studio-Version. Vor der Installation externer Pakete bestätigst du den Risikohinweis; Testpakete sind zusätzlich gekennzeichnet.",
-      "en": "Choose widget packages locally, from the catalog or via GitHub. Catalog entries show the description, license, package version, installation status and required Studio version. Installing external packages requires acknowledging the risk notice; test packages carry an additional label."
+      "en": "Choose widget packages locally, from the catalog or via GitHub. Catalog entries show the description, license, package version, installation status and required Studio version. Installing external packages requires acknowledging the risk notice; test packages carry an additional label.",
+      "fr": "Les packs de widgets peuvent être sélectionnés localement, depuis le catalogue ou via GitHub. Le catalogue affiche la description, la licence, la version du pack, l'état de l'installation et la version de Studio requise. Avant d'installer des packs externes, vous devez confirmer l'avertissement relatif aux risques ; les packs de test sont identifiés par un marquage spécifique."
     }
   },
   {
     "file": "06-settings-widget-packages-2.png",
     "title": {
       "de": "Einstellungen – Widget-Pakete (Bild 2)",
-      "en": "Settings – Widget packages (image 2)"
+      "en": "Settings – Widget packages (image 2)",
+      "fr": "Paramètres – Packs de widgets (Image 2)"
     },
     "caption": {
       "de": "Unter den Katalogeinträgen findest du die installierten Widget-Pakete als Karten mit Symbol, Version, Schnittstellenversion, Widget-Anzahl und Lizenz. Die Karten bieten Aktionen zum erneuten Laden und Deinstallieren. Ein Link öffnet den Webkatalog mit Zusatztools im Browser.",
-      "en": "Below the catalog entries, installed widget packages appear as cards showing their icon, version, API version, widget count and license. Card actions let you reload or uninstall a package. A link opens the web catalog and additional tools in the browser."
+      "en": "Below the catalog entries, installed widget packages appear as cards showing their icon, version, API version, widget count and license. Card actions let you reload or uninstall a package. A link opens the web catalog and additional tools in the browser.",
+      "fr": "Sous les entrées du catalogue, les packs de widgets installés s'affichent sous forme de cartes contenant une icône, la version, la version de l'interface, le nombre de widgets et la licence. Ces cartes proposent des actions pour recharger ou désinstaller les packs. Un lien permet d'ouvrir le catalogue en ligne, qui propose des outils supplémentaires, dans votre navigateur."
     }
   },
   {
     "file": "07-settings-tools-1.png",
     "title": {
       "de": "Einstellungen – Tools (Bild 1)",
-      "en": "Settings – Tools (image 1)"
+      "en": "Settings – Tools (image 1)",
+      "fr": "Paramètres – Outils (Image 1)"
     },
     "caption": {
       "de": "Im Tools-Reiter wählst du zusätzliche Editor-Tools lokal, aus dem Katalog oder über GitHub aus. Die Paketkarten zeigen Beschreibung, Lizenz, Version, Installationsstatus und benötigte Studio-Version. Hier sind das Tools-Testpaket und der Colorpicker zu sehen. Vor der Installation bestätigst du den Risikohinweis; Tool-Aktionen werden nach Vorschau und Bestätigung ausgeführt.",
-      "en": "The Tools tab lets you choose additional editor tools locally, from the catalog or via GitHub. Package cards show the description, license, version, installation status and required Studio version. This example shows the tools test package and Colorpicker. Installation requires acknowledging the risk notice; tool actions run after preview and confirmation."
+      "en": "The Tools tab lets you choose additional editor tools locally, from the catalog or via GitHub. Package cards show the description, license, version, installation status and required Studio version. This example shows the tools test package and Colorpicker. Installation requires acknowledging the risk notice; tool actions run after preview and confirmation.",
+      "fr": "Dans l'onglet « Outils », vous pouvez sélectionner des outils d'éditeur supplémentaires, soit localement, soit depuis le catalogue, soit via GitHub. Les cartes des packs indiquent la description, la licence, la version, l'état de l'installation et la version de Studio requise. On y trouve par exemple le pack de test d'outils et le sélecteur de couleurs (« Colorpicker »). Avant toute installation, vous devez confirmer l'avertissement relatif aux risques ; Les actions liées aux outils sont exécutées après un aperçu et une confirmation."
     }
   },
   {
     "file": "08-settings-tools-2.png",
     "title": {
       "de": "Einstellungen – Tools (Bild 2)",
-      "en": "Settings – Tools (image 2)"
+      "en": "Settings – Tools (image 2)",
+      "fr": "Paramètres – Outils (Image 2)"
     },
     "caption": {
       "de": "Unter den Katalogeinträgen stehen die installierten Tool-Pakete mit Symbol, Version, Schnittstellenversion und Lizenz. Die Karten bieten Aktionen zum erneuten Laden und Deinstallieren sowie eine Übersicht der enthaltenen Tools. Hier sind der Colorpicker und die Test-Seitenfarbe zu sehen.",
-      "en": "Below the catalog entries, installed tool packages show their icon, version, API version and license. Cards provide reload and uninstall actions and an overview of the included tools. This example shows Colorpicker and the test page-color tool."
+      "en": "Below the catalog entries, installed tool packages show their icon, version, API version and license. Cards provide reload and uninstall actions and an overview of the included tools. This example shows Colorpicker and the test page-color tool.",
+      "fr": "Sous les entrées du catalogue figurent les packs d'outils installés, accompagnés de leur icône, version, version d'interface et licence. Les fiches proposent des actions pour recharger ou désinstaller les outils, ainsi qu'un aperçu de leur contenu. On y trouve notamment le sélecteur de couleur (Colorpicker) et la fonction de couleur de page de test."
     }
   },
   {
     "file": "09-toolbar-1.png",
     "title": {
       "de": "Werkzeugleiste (Bild 1)",
-      "en": "Toolbar (image 1)"
+      "en": "Toolbar (image 1)",
+      "fr": "Barre d'outils (Image 1)"
     },
     "caption": {
       "de": "Die Werkzeugleiste öffnet Seiten, Widget-Palette, Einstellungen, Entitäten, Dateien und Projekte. Filter und Auswahlliste helfen beim Finden und Auswählen von Widgets. Daneben stehen Aktionen für Ebenen, Import und Export, Duplizieren und Löschen sowie Ausschneiden, Kopieren und Einfügen bereit.",
-      "en": "The toolbar opens pages, the widget palette, settings, entities, files and projects. Filters and the selection list help you find and select widgets. Nearby actions control layers, import and export, duplication and deletion, as well as cut, copy and paste."
+      "en": "The toolbar opens pages, the widget palette, settings, entities, files and projects. Filters and the selection list help you find and select widgets. Nearby actions control layers, import and export, duplication and deletion, as well as cut, copy and paste.",
+      "fr": "La barre d'outils permet d'accéder aux pages, à la palette de widgets, aux paramètres, aux entités, aux fichiers et aux projets. Des filtres et une liste de sélection facilitent la recherche et le choix des widgets. Elle propose également des actions relatives aux calques, à l'importation et à l'exportation, à la duplication et à la suppression, ainsi qu'aux fonctions couper, copier et coller."
     }
   },
   {
     "file": "10-toolbar-2.png",
     "title": {
       "de": "Werkzeugleiste (Bild 2)",
-      "en": "Toolbar (image 2)"
+      "en": "Toolbar (image 2)",
+      "fr": "Barre d'outils (Image 2)"
     },
     "caption": {
       "de": "Die Werkzeugleiste verbindet die wichtigsten Studio-Bereiche mit der Widget-Auswahl und den Bearbeitungsaktionen. Ohne ausgewähltes Widget sind viele dieser Aktionen deaktiviert.",
-      "en": "The toolbar combines the main Studio sections with widget selection and editing actions. Many of these actions are disabled when no widget is selected."
+      "en": "The toolbar combines the main Studio sections with widget selection and editing actions. Many of these actions are disabled when no widget is selected.",
+      "fr": "La barre d'outils fait le lien entre les principales zones du Studio, la sélection de widgets et les actions d'édition. Si aucun widget n'est sélectionné, bon nombre de ces actions sont désactivées."
     }
   },
   {
     "file": "11-sidebar-page.png",
     "title": {
       "de": "Seitenleiste – Seite",
-      "en": "Sidebar – Page"
+      "en": "Sidebar – Page",
+      "fr": "Barre latérale – Page"
     },
     "caption": {
       "de": "Im Reiter ANSICHT bearbeitest du die Eigenschaften der aktuellen Seite. Der geöffnete Bereich CSS-Hintergrund bietet Bildauswahl, Hintergrundfarbe und Einstellungen für Wiederholung, Position und Größe. Weitere aufklappbare Bereiche enthalten Schrift und Text, Optionen, Navigation, Anwendungsleiste und responsive Einstellungen. Die Seitengruppen benötigen keine Aktivierungscheckboxen.",
-      "en": "The VIEW tab lets you edit the current page's properties. The expanded CSS background section provides image selection, background color and settings for repetition, position and size. Other collapsible sections contain font and text, options, navigation, app bar and responsive settings. Page sections require no activation checkboxes."
+      "en": "The VIEW tab lets you edit the current page's properties. The expanded CSS background section provides image selection, background color and settings for repetition, position and size. Other collapsible sections contain font and text, options, navigation, app bar and responsive settings. Page sections require no activation checkboxes.",
+      "fr": "Dans l'onglet AFFICHAGE, vous pouvez modifier les propriétés de la page active. La section « Arrière-plan CSS » permet de sélectionner une image, de définir une couleur d'arrière-plan, ainsi que de configurer la répétition, la position et la taille. D'autres sections déployables concernent la police et le texte, les options, la navigation, la barre d'application et les paramètres adaptatifs (responsive). Les groupes de pages ne nécessitent pas de cases à cocher d'activation."
     }
   },
   {
     "file": "12-widgets-dataflow.png",
     "title": {
       "de": "Widgets – Datenfluss",
-      "en": "Widgets – Data flow"
+      "en": "Widgets – Data flow",
+      "fr": "Widgets – Flux de données"
     },
     "caption": {
       "de": "Die Gruppe HA Grafik – Datenfluss enthält Wert-Berechnung, Wert-Verbindung und Wert-Konverter. Mit diesen Widgets kannst du Werte berechnen, zwischen Widgets verbinden und umwandeln.",
-      "en": "The HA Grafik – Data flow group contains value calculation, value connection and value converter widgets. Use them to calculate values, connect values between widgets and convert them."
+      "en": "The HA Grafik – Data flow group contains value calculation, value connection and value converter widgets. Use them to calculate values, connect values between widgets and convert them.",
+      "fr": "Le groupe « HA Grafik – Flux de données » comprend des outils de calcul de valeurs, de liaison de valeurs et de conversion de valeurs. Ces widgets permettent de calculer des valeurs, de les relier entre différents widgets et de les convertir."
     }
   },
   {
     "file": "13-widgets-special.png",
     "title": {
       "de": "Widgets – Spezial",
-      "en": "Widgets – Special"
+      "en": "Widgets – Special",
+      "fr": "Widgets – Spéciaux"
     },
     "caption": {
       "de": "Die Spezial-Widgets umfassen Dashboard in widget, SVG-Line, SVG LineBox und SVG LineBox Math. Sie ergänzen die Visualisierung um eingebettete Dashboards, SVG-Verbindungen und LineBox-Funktionen für Werte und Berechnungen.",
-      "en": "Special widgets include Dashboard in widget, SVG-Line, SVG LineBox and SVG LineBox Math. They extend the visualization with embedded dashboards, SVG connections and LineBox functions for values and calculations."
+      "en": "Special widgets include Dashboard in widget, SVG-Line, SVG LineBox and SVG LineBox Math. They extend the visualization with embedded dashboards, SVG connections and LineBox functions for values and calculations.",
+      "fr": "Les widgets spéciaux incluent : « Dashboard in widget », « SVG-Line », « SVG LineBox » et « SVG LineBox Math ». Ils enrichissent la visualisation en permettant l'intégration de tableaux de bord, de connexions SVG et de fonctionnalités « LineBox » pour les valeurs et les calculs."
     }
   },
   {
     "file": "14-widgets-technic.png",
     "title": {
       "de": "Widgets – UGSo Technic",
-      "en": "Widgets – UGSo Technic"
+      "en": "Widgets – UGSo Technic",
+      "fr": "Widgets – UGSo Technic"
     },
     "caption": {
       "de": "Das Paket UGSo Technic bietet sieben Widgets für Fenster, Schalter, Lichtdimmer, Raumansichten, Uhr und Datum, Thermostat und Temperatur sowie Statuslisten. Die Palette zeigt die einzelnen Widgets mit passenden Symbolen.",
-      "en": "The UGSo Technic package provides seven widgets for windows, switches, light dimmers, room views, clock and date, thermostat and temperature, and status lists. The palette shows each widget with a matching icon."
+      "en": "The UGSo Technic package provides seven widgets for windows, switches, light dimmers, room views, clock and date, thermostat and temperature, and status lists. The palette shows each widget with a matching icon.",
+      "fr": "Le pack « UGSo Technic » propose sept widgets dédiés aux fenêtres, interrupteurs, variateurs d'éclairage, vues par pièce, horloge et date, thermostats et températures, ainsi qu'aux listes d'état. La palette présente chaque widget accompagné de son icône correspondante."
     }
   },
   {
     "file": "15-widgets-weather-heating.png",
     "title": {
       "de": "Widgets – Wetter und Heizung",
-      "en": "Widgets – Weather and heating"
+      "en": "Widgets – Weather and heating",
+      "fr": "Widgets – Météo et chauffage"
     },
     "caption": {
       "de": "Das Paket Wetter und Heizung enthält acht Widgets: Allgemeines Diagramm, Balkendiagramm für zwei Wochen, Wetter-Widget, Übersicht über Heizräume, METEORED-Wetter-Widget, Fensterstatus-Übersicht, Meinen Vermieter informieren und Allgemeine Heizparameter. Die Palette zeigt sieben Original-Vorschaubilder und ein Briefsymbol für die Vermieterbenachrichtigung.",
-      "en": "The Weather and Heating package contains eight widgets: general chart, two-week bar chart, weather widget, heating room overview, METEORED weather widget, window status overview, inform my landlord, and general heating parameters. The palette shows seven original preview images and an envelope icon for landlord notifications."
+      "en": "The Weather and Heating package contains eight widgets: general chart, two-week bar chart, weather widget, heating room overview, METEORED weather widget, window status overview, inform my landlord, and general heating parameters. The palette shows seven original preview images and an envelope icon for landlord notifications.",
+      "fr": "Le pack « Météo et chauffage » contient huit widgets : graphique général, graphique en barres sur deux semaines, widget météo, aperçu des pièces chauffées, widget météo METEORED, aperçu de l'état des fenêtres, notification au propriétaire et paramètres généraux de chauffage. La palette affiche sept aperçus visuels ainsi qu'une icône en forme de lettre pour la notification au propriétaire."
     }
   },
   {
@@ -169,11 +199,13 @@
     "wide": true,
     "title": {
       "de": "Poti und Wert-Verbindungen im Editor",
-      "en": "Rotary control and value connections in the editor"
+      "en": "Rotary control and value connections in the editor",
+      "fr": "Potentiomètre et liaisons de valeurs dans l'éditeur"
     },
     "caption": {
       "de": "Aufbau der folgenden Runtime-Demo: Das Poti ist mit der SVG-Line verbunden. Ein Wert-Koppelpunkt versorgt die zusätzliche Anzeige über eine Wert-Verbindung. Im Editor sind die Anschlüsse und der Verlauf der Verbindungen sichtbar.",
-      "en": "Editor setup for the following runtime demo: the rotary control connects to the SVG line. A value output point supplies the additional display through a value connection. The editor shows the ports and connection routes."
+      "en": "Editor setup for the following runtime demo: the rotary control connects to the SVG line. A value output point supplies the additional display through a value connection. The editor shows the ports and connection routes.",
+      "fr": "Configuration de la démonstration en exécution (runtime) suivante : le potentiomètre est relié à une ligne SVG. Un point de couplage de valeur alimente un affichage supplémentaire via une liaison de valeur. Dans l'éditeur, les points de connexion et le tracé des liaisons sont visibles."
     }
   },
   {
@@ -181,22 +213,26 @@
     "wide": true,
     "title": {
       "de": "Poti, Linienanimation und Wertanzeige",
-      "en": "Rotary control, line animation and value display"
+      "en": "Rotary control, line animation and value display",
+      "fr": "Potentiomètre, animation de ligne et affichage de valeur"
     },
     "caption": {
       "de": "Animierte Runtime-Demo: Das Poti liefert einen Zahlenwert für die SVG-Line und die verbundenen Wertanzeigen. Die laufenden Striche veranschaulichen den Fluss. Die Aufnahme verwendet eine reduzierte Bildrate; einzelne Zwischenstände der Anzeigen können dadurch versetzt erscheinen.",
-      "en": "Animated runtime demo: the rotary control supplies a numeric value to the SVG line and connected value displays. Moving dashes visualize the flow. The recording uses a reduced frame rate, so intermediate display updates may appear out of sync."
+      "en": "Animated runtime demo: the rotary control supplies a numeric value to the SVG line and connected value displays. Moving dashes visualize the flow. The recording uses a reduced frame rate, so intermediate display updates may appear out of sync.",
+      "fr": "Démonstration animée en exécution (runtime) : le potentiomètre fournit une valeur numérique à la ligne SVG ainsi qu'aux affichages de valeurs qui y sont reliés. Les traits en mouvement illustrent le flux. L'enregistrement a été réalisé avec une fréquence d'images réduite ; par conséquent, certains états intermédiaires des affichages peuvent apparaître décalés."
     }
   },
   {
     "file": "16-widgets-interactive.png",
     "title": {
       "de": "Widgets – HA Grafik Interaktiv",
-      "en": "Widgets – HA Grafik Interactive"
+      "en": "Widgets – HA Grafik Interactive",
+      "fr": "Widgets – Graphiques interactifs (HA Grafik Interaktiv)"
     },
     "caption": {
       "de": "Die Gruppe HA Grafik – Interaktiv enthält Universal Element, Calendar, Terminkalender, Checkbox, Schieberegler, Tabelle, Lauftext, Werteliste, Schalten, Radialer Schieberegler und Dropdown. Sie bietet Widgets für Eingaben, Schaltaktionen und die Darstellung von Kalendern, Tabellen und Wertelisten.",
-      "en": "The HA Grafik – Interactive group contains Universal Element, Calendar, appointment calendar, checkbox, slider, table, scrolling text, value list, switch, radial slider and dropdown widgets. It provides controls for input and switching, as well as calendar, table and value list displays."
+      "en": "The HA Grafik – Interactive group contains Universal Element, Calendar, appointment calendar, checkbox, slider, table, scrolling text, value list, switch, radial slider and dropdown widgets. It provides controls for input and switching, as well as calendar, table and value list displays.",
+      "fr": "Le groupe « Graphiques interactifs » (HA Grafik – Interaktiv) comprend les éléments suivants : élément universel, calendrier, agenda, case à cocher, curseur, tableau, texte défilant, liste de valeurs, commutateur, curseur radial et menu déroulant. Il propose des widgets destinés à la saisie de données, aux actions de commutation ainsi qu'à l'affichage de calendriers, de tableaux et de listes de valeurs."
     }
   }
 ]

@@ -1,15 +1,23 @@
----
-title: Export View
-description: Page française préparée pour Export View dans la documentation UGSo Open Source.
----
-# Export View
+<a id="export-view"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Exporter une vue {#ansicht-exportieren}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/hadash/export-view.md`](/en/projects/hadash/export-view).
+Après le chargement, HADash liste les vues de tableau de bord disponibles.
 
-## Statut
+## Options d'exportation {#exportmoglichkeiten}
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+Une vue sélectionnée peut être enregistrée sous forme de :
+
+- `.txt`
+- `.yaml`
+- nouveau tableau de bord complet sous `.dash`
+- nouveau tableau de bord complet sous `.yaml`
+
+## Créer un nouveau tableau de bord à partir d'une vue {#neues-dashboard-aus-einer-ansicht}
+
+1. Sélectionner la vue.
+2. Utiliser l'option **Enregistrer comme tableau de bord**.
+3. Attribuer un nouveau nom.
+4. Choisir le format de fichier.
+5. Enregistrer le fichier.

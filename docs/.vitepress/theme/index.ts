@@ -6,6 +6,7 @@ import './custom.css'
 import '../blog.css'
 import { atlasLocaleTargets } from '../atlas-locales'
 import { uixLocaleTargets } from '../uix-locales'
+import pageLocales from '../page-locales.json'
 
 declare global {
   interface Window {
@@ -147,7 +148,8 @@ function applyLocaleLinks(path: string) {
   const statusTargets = /^\/(?:(?:en|fr)\/)?documentation-status$/.test(normalizePath(path))
     ? { DE: '/documentation-status', EN: '/en/documentation-status', FR: '/fr/documentation-status' }
     : undefined
-  const targets = uixTargets ?? statusTargets ?? atlasLocaleTargets(path) ?? collectionLocaleTargets(path)
+  const pageTargets = (pageLocales as Record<string, Partial<Record<'DE' | 'EN' | 'FR', string>>>)[normalizePath(path)]
+  const targets = uixTargets ?? statusTargets ?? atlasLocaleTargets(path) ?? pageTargets ?? collectionLocaleTargets(path)
 
   document.querySelectorAll<HTMLAnchorElement>(
     '.VPNavBarTranslations a.link, .VPNavBarExtra .translations a.link, .VPNavScreenTranslations a'

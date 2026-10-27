@@ -1,15 +1,17 @@
----
-title: Import Dashboard
-description: Page française préparée pour Import Dashboard dans la documentation UGSo Open Source.
----
-# Import Dashboard
+<a id="import-dashboard"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Charger un tableau de bord {#dashboard-einlesen}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/hadash/import-dashboard.md`](/en/projects/hadash/import-dashboard).
+## Sauvegarder la configuration brute (RAW) depuis Home Assistant {#raw-konfiguration-aus-home-assistant-sichern}
 
-## Statut
+1. Ouvrir le tableau de bord en mode édition.
+2. Cliquer sur les trois points en haut à droite.
+3. Sélectionner l'**éditeur de configuration brute** (RAW).
+4. Cliquer dans la zone de code.
+5. Appuyer sur `STRG + A`.
+6. Appuyer sur `STRG + C`.
+7. Copier le code dans un éditeur de texte.
+8. Enregistrer sous le nom `Name.dash` ou `Name.yaml`.
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+Ensuite, le fichier peut être ouvert dans HADash.

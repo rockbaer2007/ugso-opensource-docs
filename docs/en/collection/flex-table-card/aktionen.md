@@ -1,17 +1,57 @@
 ---
-title: flex-table-card Actions
-description: English page for flex-table-card Actions in the UGSo Open Source collection.
+title: flex-table-card actions
+description: Cell actions, tap actions and edit actions of the flex-table-card.
 ---
-# flex-table-card Actions
+<a id="flex-table-card-actions"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# Actions {#aktionen}
 
-Project: **Flex Table Card**.
+Columns can trigger Home Assistant actions. Typical Lovelace actions such as `more-info`, `toggle`, `perform-action`, `navigate`, `url`, `assist` and also `fire-dom-event` are supported.
 
-The German source page is available under `/sammlung/flex-table-card/aktionen.md` and remains the reference until this page is fully translated.
+## More info while typing {#more-info-beim-tippen}
 
-## Current focus
+```yaml
+type: custom:flex-table-card
+title: Lichter
+entities:
+  include: light.*
+columns:
+  - name: Name
+    data: name
+    tap_action:
+      action: more-info
+  - name: Status
+    data: state
+```
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+## Action with column values {#aktion-mit-spaltenwerten}
+
+Values from other columns can be referenced within a row.
+
+| Reference | Meaning |
+| --- | --- |
+| `cell[n]` | visible column with index `n` |
+| `col[n]` | Column with index `n` even if hidden |
+
+```yaml
+type: custom:flex-table-card
+title: Navigation
+entities:
+  include: sensor.room_*
+columns:
+  - name: Raum
+    data: name
+  - name: Pfad
+    data: dashboard_path
+    hidden: true
+  - name: Oeffnen
+    data: name
+    tap_action:
+      action: navigate
+      navigation_path: col[1]
+```
+
+## Note on old terms {#hinweis-zu-alten-begriffen}
+
+Home Assistant today uses `action` and `perform-action`. Old terms like `call-service`, `service` or `service_data` should no longer be used for column actions.

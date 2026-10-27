@@ -44,6 +44,9 @@ jobs:
       - name: Vollständiges Sprachinventar prüfen
         run: python scripts/audit-doc-locales.py
 
+      - name: Ergänzte Übersetzungen und technische Beispiele prüfen
+        run: python scripts/check-translation-completion.py
+
       - name: UIX-Codebeispiele und Sprachverweise prüfen
         run: python scripts/check-uix-docs.py
 

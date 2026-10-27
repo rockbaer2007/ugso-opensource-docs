@@ -1,17 +1,36 @@
 ---
-title: Mushroom Lizenz und Quellenstand
-description: Page française pour Mushroom Lizenz und Quellenstand dans la collection UGSo Open Source.
+title: Licence et sources de Mushroom
+description: Sources, mentions de licence et suivi des modifications pour la documentation de Mushroom.
 ---
-# Mushroom Lizenz und Quellenstand
+<a id="mushroom-lizenz-und-quellenstand"></a>
+<a id="orientation-actuelle"></a>
 
-Cette page française a été créée afin que la collection Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Licence et état des sources {#lizenz-und-quellenstand}
 
-Projet : **Mushroom**.
+| Champ | Valeur |
+| --- | --- |
+| Projet original | [piitaya/lovelace-mushroom](https://github.com/piitaya/lovelace-mushroom) |
+| Commit vérifié | [`6f8f1eaed3dc5cff94cd7ac5de64d921c6fb4101`](https://github.com/piitaya/lovelace-mushroom/commit/6f8f1eaed3dc5cff94cd7ac5de64d921c6fb4101) |
+| Version de Mushroom | `5.2.2` selon `package.json` |
+| Mention de licence | `LICENSE` indique Apache-2.0, `package.json` indique ISC |
+| État de la documentation | Traduction de travail non officielle en français et documentation pratique |
 
-La page source allemande est disponible sous `/sammlung/mushroom/lizenz-und-stand.md` et reste la référence jusqu'à la traduction complète.
+## Identification {#kennzeichnung}
 
-## Orientation actuelle
+Ces pages ne constituent pas la documentation officielle de Mushroom. Il s'agit d'une aide à la lecture et d'une documentation pratique en langue française.
 
-- Documentation Home Assistant et Lovelace dans la collection UGSo Open Source.
-- Navigation et sélection de langue cohérentes pour les lecteurs francophones.
-- Le contenu détaillé suivra la même structure que l'original allemand.
+Le projet original et les fichiers sources en anglais font foi.
+
+## Vérification des modifications {#anderungsprufung}
+
+L'action GitHub `Check Mushroom docs upstream` vérifie régulièrement si des fichiers pertinents ont été modifiés dans le dépôt original.
+
+Éléments surveillés :
+
+- `README.md`
+- `docs/cards/*.md`
+- `docs/badges/*.md`
+- `package.json`
+- `LICENSE`
+
+Si des fichiers pertinents sont modifiés, l'action crée un « issue » (ticket) contenant un lien vers la comparaison et la liste des fichiers concernés.

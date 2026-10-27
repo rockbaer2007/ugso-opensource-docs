@@ -1,0 +1,3437 @@
+{
+  "/blog/beitragsvorlage": {
+    "DE": "/blog/beitragsvorlage",
+    "EN": "/en/blog/post-template",
+    "FR": "/fr/blog/post-template"
+  },
+  "/en/blog/post-template": {
+    "DE": "/blog/beitragsvorlage",
+    "EN": "/en/blog/post-template",
+    "FR": "/fr/blog/post-template"
+  },
+  "/fr/blog/post-template": {
+    "DE": "/blog/beitragsvorlage",
+    "EN": "/en/blog/post-template",
+    "FR": "/fr/blog/post-template"
+  },
+  "/blog/": {
+    "DE": "/blog/",
+    "EN": "/en/blog/",
+    "FR": "/fr/blog/"
+  },
+  "/en/blog/": {
+    "DE": "/blog/",
+    "EN": "/en/blog/",
+    "FR": "/fr/blog/"
+  },
+  "/fr/blog/": {
+    "DE": "/blog/",
+    "EN": "/en/blog/",
+    "FR": "/fr/blog/"
+  },
+  "/blog/posts/atlas-runtime-foundation": {
+    "DE": "/blog/posts/atlas-runtime-foundation",
+    "EN": "/en/blog/posts/atlas-runtime-foundation",
+    "FR": "/fr/blog/posts/atlas-runtime-foundation"
+  },
+  "/en/blog/posts/atlas-runtime-foundation": {
+    "DE": "/blog/posts/atlas-runtime-foundation",
+    "EN": "/en/blog/posts/atlas-runtime-foundation",
+    "FR": "/fr/blog/posts/atlas-runtime-foundation"
+  },
+  "/fr/blog/posts/atlas-runtime-foundation": {
+    "DE": "/blog/posts/atlas-runtime-foundation",
+    "EN": "/en/blog/posts/atlas-runtime-foundation",
+    "FR": "/fr/blog/posts/atlas-runtime-foundation"
+  },
+  "/blog/posts/hadash-preview": {
+    "DE": "/blog/posts/hadash-preview",
+    "EN": "/en/blog/posts/hadash-preview",
+    "FR": "/fr/blog/posts/hadash-preview"
+  },
+  "/en/blog/posts/hadash-preview": {
+    "DE": "/blog/posts/hadash-preview",
+    "EN": "/en/blog/posts/hadash-preview",
+    "FR": "/fr/blog/posts/hadash-preview"
+  },
+  "/fr/blog/posts/hadash-preview": {
+    "DE": "/blog/posts/hadash-preview",
+    "EN": "/en/blog/posts/hadash-preview",
+    "FR": "/fr/blog/posts/hadash-preview"
+  },
+  "/blog/snippets/blockly": {
+    "DE": "/blog/snippets/blockly",
+    "EN": "/en/blog/snippets/blockly",
+    "FR": "/fr/blog/snippets/blockly"
+  },
+  "/en/blog/snippets/blockly": {
+    "DE": "/blog/snippets/blockly",
+    "EN": "/en/blog/snippets/blockly",
+    "FR": "/fr/blog/snippets/blockly"
+  },
+  "/fr/blog/snippets/blockly": {
+    "DE": "/blog/snippets/blockly",
+    "EN": "/en/blog/snippets/blockly",
+    "FR": "/fr/blog/snippets/blockly"
+  },
+  "/blog/snippets/home-assistant-yaml": {
+    "DE": "/blog/snippets/home-assistant-yaml",
+    "EN": "/en/blog/snippets/home-assistant-yaml",
+    "FR": "/fr/blog/snippets/home-assistant-yaml"
+  },
+  "/en/blog/snippets/home-assistant-yaml": {
+    "DE": "/blog/snippets/home-assistant-yaml",
+    "EN": "/en/blog/snippets/home-assistant-yaml",
+    "FR": "/fr/blog/snippets/home-assistant-yaml"
+  },
+  "/fr/blog/snippets/home-assistant-yaml": {
+    "DE": "/blog/snippets/home-assistant-yaml",
+    "EN": "/en/blog/snippets/home-assistant-yaml",
+    "FR": "/fr/blog/snippets/home-assistant-yaml"
+  },
+  "/blog/snippets/": {
+    "DE": "/blog/snippets/",
+    "EN": "/en/blog/snippets/",
+    "FR": "/fr/blog/snippets/"
+  },
+  "/en/blog/snippets/": {
+    "DE": "/blog/snippets/",
+    "EN": "/en/blog/snippets/",
+    "FR": "/fr/blog/snippets/"
+  },
+  "/fr/blog/snippets/": {
+    "DE": "/blog/snippets/",
+    "EN": "/en/blog/snippets/",
+    "FR": "/fr/blog/snippets/"
+  },
+  "/blog/snippets/iobroker-blockly": {
+    "DE": "/blog/snippets/iobroker-blockly",
+    "EN": "/en/blog/snippets/iobroker-blockly",
+    "FR": "/fr/blog/snippets/iobroker-blockly"
+  },
+  "/en/blog/snippets/iobroker-blockly": {
+    "DE": "/blog/snippets/iobroker-blockly",
+    "EN": "/en/blog/snippets/iobroker-blockly",
+    "FR": "/fr/blog/snippets/iobroker-blockly"
+  },
+  "/fr/blog/snippets/iobroker-blockly": {
+    "DE": "/blog/snippets/iobroker-blockly",
+    "EN": "/en/blog/snippets/iobroker-blockly",
+    "FR": "/fr/blog/snippets/iobroker-blockly"
+  },
+  "/blog/snippets/javascript": {
+    "DE": "/blog/snippets/javascript",
+    "EN": "/en/blog/snippets/javascript",
+    "FR": "/fr/blog/snippets/javascript"
+  },
+  "/en/blog/snippets/javascript": {
+    "DE": "/blog/snippets/javascript",
+    "EN": "/en/blog/snippets/javascript",
+    "FR": "/fr/blog/snippets/javascript"
+  },
+  "/fr/blog/snippets/javascript": {
+    "DE": "/blog/snippets/javascript",
+    "EN": "/en/blog/snippets/javascript",
+    "FR": "/fr/blog/snippets/javascript"
+  },
+  "/blog/snippets/lovelace": {
+    "DE": "/blog/snippets/lovelace",
+    "EN": "/en/blog/snippets/lovelace",
+    "FR": "/fr/blog/snippets/lovelace"
+  },
+  "/en/blog/snippets/lovelace": {
+    "DE": "/blog/snippets/lovelace",
+    "EN": "/en/blog/snippets/lovelace",
+    "FR": "/fr/blog/snippets/lovelace"
+  },
+  "/fr/blog/snippets/lovelace": {
+    "DE": "/blog/snippets/lovelace",
+    "EN": "/en/blog/snippets/lovelace",
+    "FR": "/fr/blog/snippets/lovelace"
+  },
+  "/eep/": {
+    "DE": "/eep/",
+    "EN": "/en/eep/",
+    "FR": "/fr/eep/"
+  },
+  "/en/eep/": {
+    "DE": "/eep/",
+    "EN": "/en/eep/",
+    "FR": "/fr/eep/"
+  },
+  "/fr/eep/": {
+    "DE": "/eep/",
+    "EN": "/en/eep/",
+    "FR": "/fr/eep/"
+  },
+  "/eep/ini-edit-translate-2026/": {
+    "DE": "/eep/ini-edit-translate-2026/",
+    "EN": "/en/eep/ini-edit-translate-2026/",
+    "FR": "/fr/eep/ini-edit-translate-2026/"
+  },
+  "/en/eep/ini-edit-translate-2026/": {
+    "DE": "/eep/ini-edit-translate-2026/",
+    "EN": "/en/eep/ini-edit-translate-2026/",
+    "FR": "/fr/eep/ini-edit-translate-2026/"
+  },
+  "/fr/eep/ini-edit-translate-2026/": {
+    "DE": "/eep/ini-edit-translate-2026/",
+    "EN": "/en/eep/ini-edit-translate-2026/",
+    "FR": "/fr/eep/ini-edit-translate-2026/"
+  },
+  "/eep/projektduplicator-2026/": {
+    "DE": "/eep/projektduplicator-2026/",
+    "EN": "/en/eep/projektduplicator-2026/",
+    "FR": "/fr/eep/projektduplicator-2026/"
+  },
+  "/en/eep/projektduplicator-2026/": {
+    "DE": "/eep/projektduplicator-2026/",
+    "EN": "/en/eep/projektduplicator-2026/",
+    "FR": "/fr/eep/projektduplicator-2026/"
+  },
+  "/fr/eep/projektduplicator-2026/": {
+    "DE": "/eep/projektduplicator-2026/",
+    "EN": "/en/eep/projektduplicator-2026/",
+    "FR": "/fr/eep/projektduplicator-2026/"
+  },
+  "/impressum/": {
+    "DE": "/impressum/",
+    "EN": "/en/impressum/",
+    "FR": "/fr/impressum/"
+  },
+  "/en/impressum/": {
+    "DE": "/impressum/",
+    "EN": "/en/impressum/",
+    "FR": "/fr/impressum/"
+  },
+  "/fr/impressum/": {
+    "DE": "/impressum/",
+    "EN": "/en/impressum/",
+    "FR": "/fr/impressum/"
+  },
+  "/": {
+    "DE": "/",
+    "EN": "/en/",
+    "FR": "/fr/"
+  },
+  "/en/": {
+    "DE": "/",
+    "EN": "/en/",
+    "FR": "/fr/"
+  },
+  "/fr/": {
+    "DE": "/",
+    "EN": "/en/",
+    "FR": "/fr/"
+  },
+  "/projects-diverse/": {
+    "DE": "/projects-diverse/",
+    "EN": "/en/projects-diverse/",
+    "FR": "/fr/projects-diverse/"
+  },
+  "/en/projects-diverse/": {
+    "DE": "/projects-diverse/",
+    "EN": "/en/projects-diverse/",
+    "FR": "/fr/projects-diverse/"
+  },
+  "/fr/projects-diverse/": {
+    "DE": "/projects-diverse/",
+    "EN": "/en/projects-diverse/",
+    "FR": "/fr/projects-diverse/"
+  },
+  "/projects-mqtt/": {
+    "DE": "/projects-mqtt/",
+    "EN": "/en/projects-mqtt/",
+    "FR": "/fr/projects-mqtt/"
+  },
+  "/en/projects-mqtt/": {
+    "DE": "/projects-mqtt/",
+    "EN": "/en/projects-mqtt/",
+    "FR": "/fr/projects-mqtt/"
+  },
+  "/fr/projects-mqtt/": {
+    "DE": "/projects-mqtt/",
+    "EN": "/en/projects-mqtt/",
+    "FR": "/fr/projects-mqtt/"
+  },
+  "/projects/atlas-plugins/automation-extractor": {
+    "DE": "/projects/atlas-plugins/automation-extractor",
+    "EN": "/en/projects/atlas-plugins/automation-extractor",
+    "FR": "/fr/projects/atlas-plugins/automation-extractor"
+  },
+  "/en/projects/atlas-plugins/automation-extractor": {
+    "DE": "/projects/atlas-plugins/automation-extractor",
+    "EN": "/en/projects/atlas-plugins/automation-extractor",
+    "FR": "/fr/projects/atlas-plugins/automation-extractor"
+  },
+  "/fr/projects/atlas-plugins/automation-extractor": {
+    "DE": "/projects/atlas-plugins/automation-extractor",
+    "EN": "/en/projects/atlas-plugins/automation-extractor",
+    "FR": "/fr/projects/atlas-plugins/automation-extractor"
+  },
+  "/projects/atlas-plugins/demo-repository": {
+    "DE": "/projects/atlas-plugins/demo-repository",
+    "EN": "/en/projects/atlas-plugins/demo-repository",
+    "FR": "/fr/projects/atlas-plugins/demo-repository"
+  },
+  "/en/projects/atlas-plugins/demo-repository": {
+    "DE": "/projects/atlas-plugins/demo-repository",
+    "EN": "/en/projects/atlas-plugins/demo-repository",
+    "FR": "/fr/projects/atlas-plugins/demo-repository"
+  },
+  "/fr/projects/atlas-plugins/demo-repository": {
+    "DE": "/projects/atlas-plugins/demo-repository",
+    "EN": "/en/projects/atlas-plugins/demo-repository",
+    "FR": "/fr/projects/atlas-plugins/demo-repository"
+  },
+  "/projects/atlas-plugins/developers/compatibility": {
+    "DE": "/projects/atlas-plugins/developers/compatibility",
+    "EN": "/en/projects/atlas-plugins/developers/compatibility",
+    "FR": "/fr/projects/atlas-plugins/developers/compatibility"
+  },
+  "/en/projects/atlas-plugins/developers/compatibility": {
+    "DE": "/projects/atlas-plugins/developers/compatibility",
+    "EN": "/en/projects/atlas-plugins/developers/compatibility",
+    "FR": "/fr/projects/atlas-plugins/developers/compatibility"
+  },
+  "/fr/projects/atlas-plugins/developers/compatibility": {
+    "DE": "/projects/atlas-plugins/developers/compatibility",
+    "EN": "/en/projects/atlas-plugins/developers/compatibility",
+    "FR": "/fr/projects/atlas-plugins/developers/compatibility"
+  },
+  "/projects/atlas-plugins/developers/": {
+    "DE": "/projects/atlas-plugins/developers/",
+    "EN": "/en/projects/atlas-plugins/developers/",
+    "FR": "/fr/projects/atlas-plugins/developers/"
+  },
+  "/en/projects/atlas-plugins/developers/": {
+    "DE": "/projects/atlas-plugins/developers/",
+    "EN": "/en/projects/atlas-plugins/developers/",
+    "FR": "/fr/projects/atlas-plugins/developers/"
+  },
+  "/fr/projects/atlas-plugins/developers/": {
+    "DE": "/projects/atlas-plugins/developers/",
+    "EN": "/en/projects/atlas-plugins/developers/",
+    "FR": "/fr/projects/atlas-plugins/developers/"
+  },
+  "/projects/atlas-plugins/developers/manifest": {
+    "DE": "/projects/atlas-plugins/developers/manifest",
+    "EN": "/en/projects/atlas-plugins/developers/manifest",
+    "FR": "/fr/projects/atlas-plugins/developers/manifest"
+  },
+  "/en/projects/atlas-plugins/developers/manifest": {
+    "DE": "/projects/atlas-plugins/developers/manifest",
+    "EN": "/en/projects/atlas-plugins/developers/manifest",
+    "FR": "/fr/projects/atlas-plugins/developers/manifest"
+  },
+  "/fr/projects/atlas-plugins/developers/manifest": {
+    "DE": "/projects/atlas-plugins/developers/manifest",
+    "EN": "/en/projects/atlas-plugins/developers/manifest",
+    "FR": "/fr/projects/atlas-plugins/developers/manifest"
+  },
+  "/projects/atlas-plugins/developers/publishing": {
+    "DE": "/projects/atlas-plugins/developers/publishing",
+    "EN": "/en/projects/atlas-plugins/developers/publishing",
+    "FR": "/fr/projects/atlas-plugins/developers/publishing"
+  },
+  "/en/projects/atlas-plugins/developers/publishing": {
+    "DE": "/projects/atlas-plugins/developers/publishing",
+    "EN": "/en/projects/atlas-plugins/developers/publishing",
+    "FR": "/fr/projects/atlas-plugins/developers/publishing"
+  },
+  "/fr/projects/atlas-plugins/developers/publishing": {
+    "DE": "/projects/atlas-plugins/developers/publishing",
+    "EN": "/en/projects/atlas-plugins/developers/publishing",
+    "FR": "/fr/projects/atlas-plugins/developers/publishing"
+  },
+  "/projects/atlas-plugins/developers/runtime": {
+    "DE": "/projects/atlas-plugins/developers/runtime",
+    "EN": "/en/projects/atlas-plugins/developers/runtime",
+    "FR": "/fr/projects/atlas-plugins/developers/runtime"
+  },
+  "/en/projects/atlas-plugins/developers/runtime": {
+    "DE": "/projects/atlas-plugins/developers/runtime",
+    "EN": "/en/projects/atlas-plugins/developers/runtime",
+    "FR": "/fr/projects/atlas-plugins/developers/runtime"
+  },
+  "/fr/projects/atlas-plugins/developers/runtime": {
+    "DE": "/projects/atlas-plugins/developers/runtime",
+    "EN": "/en/projects/atlas-plugins/developers/runtime",
+    "FR": "/fr/projects/atlas-plugins/developers/runtime"
+  },
+  "/projects/atlas-plugins/file-studio": {
+    "DE": "/projects/atlas-plugins/file-studio",
+    "EN": "/en/projects/atlas-plugins/file-studio",
+    "FR": "/fr/projects/atlas-plugins/file-studio"
+  },
+  "/en/projects/atlas-plugins/file-studio": {
+    "DE": "/projects/atlas-plugins/file-studio",
+    "EN": "/en/projects/atlas-plugins/file-studio",
+    "FR": "/fr/projects/atlas-plugins/file-studio"
+  },
+  "/fr/projects/atlas-plugins/file-studio": {
+    "DE": "/projects/atlas-plugins/file-studio",
+    "EN": "/en/projects/atlas-plugins/file-studio",
+    "FR": "/fr/projects/atlas-plugins/file-studio"
+  },
+  "/projects/atlas-plugins/gepruefte-plugins": {
+    "DE": "/projects/atlas-plugins/gepruefte-plugins",
+    "EN": "/en/projects/atlas-plugins/verified-plugins",
+    "FR": "/fr/projects/atlas-plugins/verified-plugins"
+  },
+  "/en/projects/atlas-plugins/verified-plugins": {
+    "DE": "/projects/atlas-plugins/gepruefte-plugins",
+    "EN": "/en/projects/atlas-plugins/verified-plugins",
+    "FR": "/fr/projects/atlas-plugins/verified-plugins"
+  },
+  "/fr/projects/atlas-plugins/verified-plugins": {
+    "DE": "/projects/atlas-plugins/gepruefte-plugins",
+    "EN": "/en/projects/atlas-plugins/verified-plugins",
+    "FR": "/fr/projects/atlas-plugins/verified-plugins"
+  },
+  "/projects/atlas-plugins/homeassistant-card-editor": {
+    "DE": "/projects/atlas-plugins/homeassistant-card-editor",
+    "EN": "/en/projects/atlas-plugins/homeassistant-card-editor",
+    "FR": "/fr/projects/atlas-plugins/homeassistant-card-editor"
+  },
+  "/en/projects/atlas-plugins/homeassistant-card-editor": {
+    "DE": "/projects/atlas-plugins/homeassistant-card-editor",
+    "EN": "/en/projects/atlas-plugins/homeassistant-card-editor",
+    "FR": "/fr/projects/atlas-plugins/homeassistant-card-editor"
+  },
+  "/fr/projects/atlas-plugins/homeassistant-card-editor": {
+    "DE": "/projects/atlas-plugins/homeassistant-card-editor",
+    "EN": "/en/projects/atlas-plugins/homeassistant-card-editor",
+    "FR": "/fr/projects/atlas-plugins/homeassistant-card-editor"
+  },
+  "/projects/atlas-plugins/icon-library": {
+    "DE": "/projects/atlas-plugins/icon-library",
+    "EN": "/en/projects/atlas-plugins/icon-library",
+    "FR": "/fr/projects/atlas-plugins/icon-library"
+  },
+  "/en/projects/atlas-plugins/icon-library": {
+    "DE": "/projects/atlas-plugins/icon-library",
+    "EN": "/en/projects/atlas-plugins/icon-library",
+    "FR": "/fr/projects/atlas-plugins/icon-library"
+  },
+  "/fr/projects/atlas-plugins/icon-library": {
+    "DE": "/projects/atlas-plugins/icon-library",
+    "EN": "/en/projects/atlas-plugins/icon-library",
+    "FR": "/fr/projects/atlas-plugins/icon-library"
+  },
+  "/projects/atlas-plugins/icon-studio": {
+    "DE": "/projects/atlas-plugins/icon-studio",
+    "EN": "/en/projects/atlas-plugins/icon-studio",
+    "FR": "/fr/projects/atlas-plugins/icon-studio"
+  },
+  "/en/projects/atlas-plugins/icon-studio": {
+    "DE": "/projects/atlas-plugins/icon-studio",
+    "EN": "/en/projects/atlas-plugins/icon-studio",
+    "FR": "/fr/projects/atlas-plugins/icon-studio"
+  },
+  "/fr/projects/atlas-plugins/icon-studio": {
+    "DE": "/projects/atlas-plugins/icon-studio",
+    "EN": "/en/projects/atlas-plugins/icon-studio",
+    "FR": "/fr/projects/atlas-plugins/icon-studio"
+  },
+  "/projects/atlas-plugins/": {
+    "DE": "/projects/atlas-plugins/",
+    "EN": "/en/projects/atlas-plugins/",
+    "FR": "/fr/projects/atlas-plugins/"
+  },
+  "/en/projects/atlas-plugins/": {
+    "DE": "/projects/atlas-plugins/",
+    "EN": "/en/projects/atlas-plugins/",
+    "FR": "/fr/projects/atlas-plugins/"
+  },
+  "/fr/projects/atlas-plugins/": {
+    "DE": "/projects/atlas-plugins/",
+    "EN": "/en/projects/atlas-plugins/",
+    "FR": "/fr/projects/atlas-plugins/"
+  },
+  "/projects/atlas-plugins/plugin-template": {
+    "DE": "/projects/atlas-plugins/plugin-template",
+    "EN": "/en/projects/atlas-plugins/plugin-template",
+    "FR": "/fr/projects/atlas-plugins/plugin-template"
+  },
+  "/en/projects/atlas-plugins/plugin-template": {
+    "DE": "/projects/atlas-plugins/plugin-template",
+    "EN": "/en/projects/atlas-plugins/plugin-template",
+    "FR": "/fr/projects/atlas-plugins/plugin-template"
+  },
+  "/fr/projects/atlas-plugins/plugin-template": {
+    "DE": "/projects/atlas-plugins/plugin-template",
+    "EN": "/en/projects/atlas-plugins/plugin-template",
+    "FR": "/fr/projects/atlas-plugins/plugin-template"
+  },
+  "/projects/atlas-plugins/repository-format": {
+    "DE": "/projects/atlas-plugins/repository-format",
+    "EN": "/en/projects/atlas-plugins/repository-format",
+    "FR": "/fr/projects/atlas-plugins/repository-format"
+  },
+  "/en/projects/atlas-plugins/repository-format": {
+    "DE": "/projects/atlas-plugins/repository-format",
+    "EN": "/en/projects/atlas-plugins/repository-format",
+    "FR": "/fr/projects/atlas-plugins/repository-format"
+  },
+  "/fr/projects/atlas-plugins/repository-format": {
+    "DE": "/projects/atlas-plugins/repository-format",
+    "EN": "/en/projects/atlas-plugins/repository-format",
+    "FR": "/fr/projects/atlas-plugins/repository-format"
+  },
+  "/projects/atlas-plugins/terminal": {
+    "DE": "/projects/atlas-plugins/terminal",
+    "EN": "/en/projects/atlas-plugins/terminal",
+    "FR": "/fr/projects/atlas-plugins/terminal"
+  },
+  "/en/projects/atlas-plugins/terminal": {
+    "DE": "/projects/atlas-plugins/terminal",
+    "EN": "/en/projects/atlas-plugins/terminal",
+    "FR": "/fr/projects/atlas-plugins/terminal"
+  },
+  "/fr/projects/atlas-plugins/terminal": {
+    "DE": "/projects/atlas-plugins/terminal",
+    "EN": "/en/projects/atlas-plugins/terminal",
+    "FR": "/fr/projects/atlas-plugins/terminal"
+  },
+  "/projects/atlas/card-editor": {
+    "DE": "/projects/atlas/card-editor",
+    "EN": "/en/projects/atlas/card-editor",
+    "FR": "/fr/projects/atlas/card-editor"
+  },
+  "/en/projects/atlas/card-editor": {
+    "DE": "/projects/atlas/card-editor",
+    "EN": "/en/projects/atlas/card-editor",
+    "FR": "/fr/projects/atlas/card-editor"
+  },
+  "/fr/projects/atlas/card-editor": {
+    "DE": "/projects/atlas/card-editor",
+    "EN": "/en/projects/atlas/card-editor",
+    "FR": "/fr/projects/atlas/card-editor"
+  },
+  "/projects/atlas/entwicklungsstand": {
+    "DE": "/projects/atlas/entwicklungsstand",
+    "EN": "/en/projects/atlas/development-status",
+    "FR": "/fr/projects/atlas/development-status"
+  },
+  "/en/projects/atlas/development-status": {
+    "DE": "/projects/atlas/entwicklungsstand",
+    "EN": "/en/projects/atlas/development-status",
+    "FR": "/fr/projects/atlas/development-status"
+  },
+  "/fr/projects/atlas/development-status": {
+    "DE": "/projects/atlas/entwicklungsstand",
+    "EN": "/en/projects/atlas/development-status",
+    "FR": "/fr/projects/atlas/development-status"
+  },
+  "/projects/atlas/frontend": {
+    "DE": "/projects/atlas/frontend",
+    "EN": "/en/projects/atlas/frontend",
+    "FR": "/fr/projects/atlas/frontend"
+  },
+  "/en/projects/atlas/frontend": {
+    "DE": "/projects/atlas/frontend",
+    "EN": "/en/projects/atlas/frontend",
+    "FR": "/fr/projects/atlas/frontend"
+  },
+  "/fr/projects/atlas/frontend": {
+    "DE": "/projects/atlas/frontend",
+    "EN": "/en/projects/atlas/frontend",
+    "FR": "/fr/projects/atlas/frontend"
+  },
+  "/projects/atlas/homeassistant": {
+    "DE": "/projects/atlas/homeassistant",
+    "EN": "/en/projects/atlas/homeassistant",
+    "FR": "/fr/projects/atlas/homeassistant"
+  },
+  "/en/projects/atlas/homeassistant": {
+    "DE": "/projects/atlas/homeassistant",
+    "EN": "/en/projects/atlas/homeassistant",
+    "FR": "/fr/projects/atlas/homeassistant"
+  },
+  "/fr/projects/atlas/homeassistant": {
+    "DE": "/projects/atlas/homeassistant",
+    "EN": "/en/projects/atlas/homeassistant",
+    "FR": "/fr/projects/atlas/homeassistant"
+  },
+  "/projects/atlas/": {
+    "DE": "/projects/atlas/",
+    "EN": "/en/projects/atlas/",
+    "FR": "/fr/projects/atlas/"
+  },
+  "/en/projects/atlas/": {
+    "DE": "/projects/atlas/",
+    "EN": "/en/projects/atlas/",
+    "FR": "/fr/projects/atlas/"
+  },
+  "/fr/projects/atlas/": {
+    "DE": "/projects/atlas/",
+    "EN": "/en/projects/atlas/",
+    "FR": "/fr/projects/atlas/"
+  },
+  "/projects/atlas/linux": {
+    "DE": "/projects/atlas/linux",
+    "EN": "/en/projects/atlas/linux",
+    "FR": "/fr/projects/atlas/linux"
+  },
+  "/en/projects/atlas/linux": {
+    "DE": "/projects/atlas/linux",
+    "EN": "/en/projects/atlas/linux",
+    "FR": "/fr/projects/atlas/linux"
+  },
+  "/fr/projects/atlas/linux": {
+    "DE": "/projects/atlas/linux",
+    "EN": "/en/projects/atlas/linux",
+    "FR": "/fr/projects/atlas/linux"
+  },
+  "/projects/atlas/plugins": {
+    "DE": "/projects/atlas/plugins",
+    "EN": "/en/projects/atlas/plugins",
+    "FR": "/fr/projects/atlas/plugins"
+  },
+  "/en/projects/atlas/plugins": {
+    "DE": "/projects/atlas/plugins",
+    "EN": "/en/projects/atlas/plugins",
+    "FR": "/fr/projects/atlas/plugins"
+  },
+  "/fr/projects/atlas/plugins": {
+    "DE": "/projects/atlas/plugins",
+    "EN": "/en/projects/atlas/plugins",
+    "FR": "/fr/projects/atlas/plugins"
+  },
+  "/projects/atlas/tablet-test": {
+    "DE": "/projects/atlas/tablet-test",
+    "EN": "/en/projects/atlas/tablet-test",
+    "FR": "/fr/projects/atlas/tablet-test"
+  },
+  "/en/projects/atlas/tablet-test": {
+    "DE": "/projects/atlas/tablet-test",
+    "EN": "/en/projects/atlas/tablet-test",
+    "FR": "/fr/projects/atlas/tablet-test"
+  },
+  "/fr/projects/atlas/tablet-test": {
+    "DE": "/projects/atlas/tablet-test",
+    "EN": "/en/projects/atlas/tablet-test",
+    "FR": "/fr/projects/atlas/tablet-test"
+  },
+  "/projects/atlas/tablet-uix-dauertest": {
+    "DE": "/projects/atlas/tablet-uix-dauertest",
+    "EN": "/en/projects/atlas/tablet-uix-dauertest",
+    "FR": "/fr/projects/atlas/tablet-uix-dauertest"
+  },
+  "/en/projects/atlas/tablet-uix-dauertest": {
+    "DE": "/projects/atlas/tablet-uix-dauertest",
+    "EN": "/en/projects/atlas/tablet-uix-dauertest",
+    "FR": "/fr/projects/atlas/tablet-uix-dauertest"
+  },
+  "/fr/projects/atlas/tablet-uix-dauertest": {
+    "DE": "/projects/atlas/tablet-uix-dauertest",
+    "EN": "/en/projects/atlas/tablet-uix-dauertest",
+    "FR": "/fr/projects/atlas/tablet-uix-dauertest"
+  },
+  "/projects/atlas/uebersicht": {
+    "DE": "/projects/atlas/uebersicht",
+    "EN": "/en/projects/atlas/overview",
+    "FR": "/fr/projects/atlas/overview"
+  },
+  "/en/projects/atlas/overview": {
+    "DE": "/projects/atlas/uebersicht",
+    "EN": "/en/projects/atlas/overview",
+    "FR": "/fr/projects/atlas/overview"
+  },
+  "/fr/projects/atlas/overview": {
+    "DE": "/projects/atlas/uebersicht",
+    "EN": "/en/projects/atlas/overview",
+    "FR": "/fr/projects/atlas/overview"
+  },
+  "/projects/blocks-for-ha/advanced": {
+    "DE": "/projects/blocks-for-ha/advanced",
+    "EN": "/en/projects/blocks-for-ha/advanced",
+    "FR": "/fr/projects/blocks-for-ha/advanced"
+  },
+  "/en/projects/blocks-for-ha/advanced": {
+    "DE": "/projects/blocks-for-ha/advanced",
+    "EN": "/en/projects/blocks-for-ha/advanced",
+    "FR": "/fr/projects/blocks-for-ha/advanced"
+  },
+  "/fr/projects/blocks-for-ha/advanced": {
+    "DE": "/projects/blocks-for-ha/advanced",
+    "EN": "/en/projects/blocks-for-ha/advanced",
+    "FR": "/fr/projects/blocks-for-ha/advanced"
+  },
+  "/projects/blocks-for-ha/blockly-audit": {
+    "DE": "/projects/blocks-for-ha/blockly-audit",
+    "EN": "/en/projects/blocks-for-ha/blockly-audit",
+    "FR": "/fr/projects/blocks-for-ha/blockly-audit"
+  },
+  "/en/projects/blocks-for-ha/blockly-audit": {
+    "DE": "/projects/blocks-for-ha/blockly-audit",
+    "EN": "/en/projects/blocks-for-ha/blockly-audit",
+    "FR": "/fr/projects/blocks-for-ha/blockly-audit"
+  },
+  "/fr/projects/blocks-for-ha/blockly-audit": {
+    "DE": "/projects/blocks-for-ha/blockly-audit",
+    "EN": "/en/projects/blocks-for-ha/blockly-audit",
+    "FR": "/fr/projects/blocks-for-ha/blockly-audit"
+  },
+  "/projects/blocks-for-ha/blocks": {
+    "DE": "/projects/blocks-for-ha/blocks",
+    "EN": "/en/projects/blocks-for-ha/blocks",
+    "FR": "/fr/projects/blocks-for-ha/blocks"
+  },
+  "/en/projects/blocks-for-ha/blocks": {
+    "DE": "/projects/blocks-for-ha/blocks",
+    "EN": "/en/projects/blocks-for-ha/blocks",
+    "FR": "/fr/projects/blocks-for-ha/blocks"
+  },
+  "/fr/projects/blocks-for-ha/blocks": {
+    "DE": "/projects/blocks-for-ha/blocks",
+    "EN": "/en/projects/blocks-for-ha/blocks",
+    "FR": "/fr/projects/blocks-for-ha/blocks"
+  },
+  "/projects/blocks-for-ha/catalog/": {
+    "DE": "/projects/blocks-for-ha/catalog/",
+    "EN": "/en/projects/blocks-for-ha/catalog/",
+    "FR": "/fr/projects/blocks-for-ha/catalog/"
+  },
+  "/en/projects/blocks-for-ha/catalog/": {
+    "DE": "/projects/blocks-for-ha/catalog/",
+    "EN": "/en/projects/blocks-for-ha/catalog/",
+    "FR": "/fr/projects/blocks-for-ha/catalog/"
+  },
+  "/fr/projects/blocks-for-ha/catalog/": {
+    "DE": "/projects/blocks-for-ha/catalog/",
+    "EN": "/en/projects/blocks-for-ha/catalog/",
+    "FR": "/fr/projects/blocks-for-ha/catalog/"
+  },
+  "/projects/blocks-for-ha/catalog/sensor-light": {
+    "DE": "/projects/blocks-for-ha/catalog/sensor-light",
+    "EN": "/en/projects/blocks-for-ha/catalog/sensor-light",
+    "FR": "/fr/projects/blocks-for-ha/catalog/sensor-light"
+  },
+  "/en/projects/blocks-for-ha/catalog/sensor-light": {
+    "DE": "/projects/blocks-for-ha/catalog/sensor-light",
+    "EN": "/en/projects/blocks-for-ha/catalog/sensor-light",
+    "FR": "/fr/projects/blocks-for-ha/catalog/sensor-light"
+  },
+  "/fr/projects/blocks-for-ha/catalog/sensor-light": {
+    "DE": "/projects/blocks-for-ha/catalog/sensor-light",
+    "EN": "/en/projects/blocks-for-ha/catalog/sensor-light",
+    "FR": "/fr/projects/blocks-for-ha/catalog/sensor-light"
+  },
+  "/projects/blocks-for-ha/collections": {
+    "DE": "/projects/blocks-for-ha/collections",
+    "EN": "/en/projects/blocks-for-ha/collections",
+    "FR": "/fr/projects/blocks-for-ha/collections"
+  },
+  "/en/projects/blocks-for-ha/collections": {
+    "DE": "/projects/blocks-for-ha/collections",
+    "EN": "/en/projects/blocks-for-ha/collections",
+    "FR": "/fr/projects/blocks-for-ha/collections"
+  },
+  "/fr/projects/blocks-for-ha/collections": {
+    "DE": "/projects/blocks-for-ha/collections",
+    "EN": "/en/projects/blocks-for-ha/collections",
+    "FR": "/fr/projects/blocks-for-ha/collections"
+  },
+  "/projects/blocks-for-ha/conversion": {
+    "DE": "/projects/blocks-for-ha/conversion",
+    "EN": "/en/projects/blocks-for-ha/conversion",
+    "FR": "/fr/projects/blocks-for-ha/conversion"
+  },
+  "/en/projects/blocks-for-ha/conversion": {
+    "DE": "/projects/blocks-for-ha/conversion",
+    "EN": "/en/projects/blocks-for-ha/conversion",
+    "FR": "/fr/projects/blocks-for-ha/conversion"
+  },
+  "/fr/projects/blocks-for-ha/conversion": {
+    "DE": "/projects/blocks-for-ha/conversion",
+    "EN": "/en/projects/blocks-for-ha/conversion",
+    "FR": "/fr/projects/blocks-for-ha/conversion"
+  },
+  "/projects/blocks-for-ha/custom-blocks": {
+    "DE": "/projects/blocks-for-ha/custom-blocks",
+    "EN": "/en/projects/blocks-for-ha/custom-blocks",
+    "FR": "/fr/projects/blocks-for-ha/custom-blocks"
+  },
+  "/en/projects/blocks-for-ha/custom-blocks": {
+    "DE": "/projects/blocks-for-ha/custom-blocks",
+    "EN": "/en/projects/blocks-for-ha/custom-blocks",
+    "FR": "/fr/projects/blocks-for-ha/custom-blocks"
+  },
+  "/fr/projects/blocks-for-ha/custom-blocks": {
+    "DE": "/projects/blocks-for-ha/custom-blocks",
+    "EN": "/en/projects/blocks-for-ha/custom-blocks",
+    "FR": "/fr/projects/blocks-for-ha/custom-blocks"
+  },
+  "/projects/blocks-for-ha/entities": {
+    "DE": "/projects/blocks-for-ha/entities",
+    "EN": "/en/projects/blocks-for-ha/entities",
+    "FR": "/fr/projects/blocks-for-ha/entities"
+  },
+  "/en/projects/blocks-for-ha/entities": {
+    "DE": "/projects/blocks-for-ha/entities",
+    "EN": "/en/projects/blocks-for-ha/entities",
+    "FR": "/fr/projects/blocks-for-ha/entities"
+  },
+  "/fr/projects/blocks-for-ha/entities": {
+    "DE": "/projects/blocks-for-ha/entities",
+    "EN": "/en/projects/blocks-for-ha/entities",
+    "FR": "/fr/projects/blocks-for-ha/entities"
+  },
+  "/projects/blocks-for-ha/flow": {
+    "DE": "/projects/blocks-for-ha/flow",
+    "EN": "/en/projects/blocks-for-ha/flow",
+    "FR": "/fr/projects/blocks-for-ha/flow"
+  },
+  "/en/projects/blocks-for-ha/flow": {
+    "DE": "/projects/blocks-for-ha/flow",
+    "EN": "/en/projects/blocks-for-ha/flow",
+    "FR": "/fr/projects/blocks-for-ha/flow"
+  },
+  "/fr/projects/blocks-for-ha/flow": {
+    "DE": "/projects/blocks-for-ha/flow",
+    "EN": "/en/projects/blocks-for-ha/flow",
+    "FR": "/fr/projects/blocks-for-ha/flow"
+  },
+  "/projects/blocks-for-ha/": {
+    "DE": "/projects/blocks-for-ha/",
+    "EN": "/en/projects/blocks-for-ha/",
+    "FR": "/fr/projects/blocks-for-ha/"
+  },
+  "/en/projects/blocks-for-ha/": {
+    "DE": "/projects/blocks-for-ha/",
+    "EN": "/en/projects/blocks-for-ha/",
+    "FR": "/fr/projects/blocks-for-ha/"
+  },
+  "/fr/projects/blocks-for-ha/": {
+    "DE": "/projects/blocks-for-ha/",
+    "EN": "/en/projects/blocks-for-ha/",
+    "FR": "/fr/projects/blocks-for-ha/"
+  },
+  "/projects/blocks-for-ha/system-template": {
+    "DE": "/projects/blocks-for-ha/system-template",
+    "EN": "/en/projects/blocks-for-ha/system-template",
+    "FR": "/fr/projects/blocks-for-ha/system-template"
+  },
+  "/en/projects/blocks-for-ha/system-template": {
+    "DE": "/projects/blocks-for-ha/system-template",
+    "EN": "/en/projects/blocks-for-ha/system-template",
+    "FR": "/fr/projects/blocks-for-ha/system-template"
+  },
+  "/fr/projects/blocks-for-ha/system-template": {
+    "DE": "/projects/blocks-for-ha/system-template",
+    "EN": "/en/projects/blocks-for-ha/system-template",
+    "FR": "/fr/projects/blocks-for-ha/system-template"
+  },
+  "/projects/blocks-for-ha/themes": {
+    "DE": "/projects/blocks-for-ha/themes",
+    "EN": "/en/projects/blocks-for-ha/themes",
+    "FR": "/fr/projects/blocks-for-ha/themes"
+  },
+  "/en/projects/blocks-for-ha/themes": {
+    "DE": "/projects/blocks-for-ha/themes",
+    "EN": "/en/projects/blocks-for-ha/themes",
+    "FR": "/fr/projects/blocks-for-ha/themes"
+  },
+  "/fr/projects/blocks-for-ha/themes": {
+    "DE": "/projects/blocks-for-ha/themes",
+    "EN": "/en/projects/blocks-for-ha/themes",
+    "FR": "/fr/projects/blocks-for-ha/themes"
+  },
+  "/projects/blocks-for-ha/time": {
+    "DE": "/projects/blocks-for-ha/time",
+    "EN": "/en/projects/blocks-for-ha/time",
+    "FR": "/fr/projects/blocks-for-ha/time"
+  },
+  "/en/projects/blocks-for-ha/time": {
+    "DE": "/projects/blocks-for-ha/time",
+    "EN": "/en/projects/blocks-for-ha/time",
+    "FR": "/fr/projects/blocks-for-ha/time"
+  },
+  "/fr/projects/blocks-for-ha/time": {
+    "DE": "/projects/blocks-for-ha/time",
+    "EN": "/en/projects/blocks-for-ha/time",
+    "FR": "/fr/projects/blocks-for-ha/time"
+  },
+  "/projects/callmebot-signal/": {
+    "DE": "/projects/callmebot-signal/",
+    "EN": "/en/projects/callmebot-signal/",
+    "FR": "/fr/projects/callmebot-signal/"
+  },
+  "/en/projects/callmebot-signal/": {
+    "DE": "/projects/callmebot-signal/",
+    "EN": "/en/projects/callmebot-signal/",
+    "FR": "/fr/projects/callmebot-signal/"
+  },
+  "/fr/projects/callmebot-signal/": {
+    "DE": "/projects/callmebot-signal/",
+    "EN": "/en/projects/callmebot-signal/",
+    "FR": "/fr/projects/callmebot-signal/"
+  },
+  "/projects/callmebot/": {
+    "DE": "/projects/callmebot/",
+    "EN": "/en/projects/callmebot/",
+    "FR": "/fr/projects/callmebot/"
+  },
+  "/en/projects/callmebot/": {
+    "DE": "/projects/callmebot/",
+    "EN": "/en/projects/callmebot/",
+    "FR": "/fr/projects/callmebot/"
+  },
+  "/fr/projects/callmebot/": {
+    "DE": "/projects/callmebot/",
+    "EN": "/en/projects/callmebot/",
+    "FR": "/fr/projects/callmebot/"
+  },
+  "/projects/dashboard-user-manager/": {
+    "DE": "/projects/dashboard-user-manager/",
+    "EN": "/en/projects/dashboard-user-manager/",
+    "FR": "/fr/projects/dashboard-user-manager/"
+  },
+  "/en/projects/dashboard-user-manager/": {
+    "DE": "/projects/dashboard-user-manager/",
+    "EN": "/en/projects/dashboard-user-manager/",
+    "FR": "/fr/projects/dashboard-user-manager/"
+  },
+  "/fr/projects/dashboard-user-manager/": {
+    "DE": "/projects/dashboard-user-manager/",
+    "EN": "/en/projects/dashboard-user-manager/",
+    "FR": "/fr/projects/dashboard-user-manager/"
+  },
+  "/projects/fritzbox-to-mqtt/beispiele": {
+    "DE": "/projects/fritzbox-to-mqtt/beispiele",
+    "EN": "/en/projects/fritzbox-to-mqtt/examples",
+    "FR": "/fr/projects/fritzbox-to-mqtt/examples"
+  },
+  "/en/projects/fritzbox-to-mqtt/examples": {
+    "DE": "/projects/fritzbox-to-mqtt/beispiele",
+    "EN": "/en/projects/fritzbox-to-mqtt/examples",
+    "FR": "/fr/projects/fritzbox-to-mqtt/examples"
+  },
+  "/fr/projects/fritzbox-to-mqtt/examples": {
+    "DE": "/projects/fritzbox-to-mqtt/beispiele",
+    "EN": "/en/projects/fritzbox-to-mqtt/examples",
+    "FR": "/fr/projects/fritzbox-to-mqtt/examples"
+  },
+  "/projects/fritzbox-to-mqtt/entitaeten": {
+    "DE": "/projects/fritzbox-to-mqtt/entitaeten",
+    "EN": "/en/projects/fritzbox-to-mqtt/entities",
+    "FR": "/fr/projects/fritzbox-to-mqtt/entities"
+  },
+  "/en/projects/fritzbox-to-mqtt/entities": {
+    "DE": "/projects/fritzbox-to-mqtt/entitaeten",
+    "EN": "/en/projects/fritzbox-to-mqtt/entities",
+    "FR": "/fr/projects/fritzbox-to-mqtt/entities"
+  },
+  "/fr/projects/fritzbox-to-mqtt/entities": {
+    "DE": "/projects/fritzbox-to-mqtt/entitaeten",
+    "EN": "/en/projects/fritzbox-to-mqtt/entities",
+    "FR": "/fr/projects/fritzbox-to-mqtt/entities"
+  },
+  "/projects/fritzbox-to-mqtt/fehlersuche": {
+    "DE": "/projects/fritzbox-to-mqtt/fehlersuche",
+    "EN": "/en/projects/fritzbox-to-mqtt/troubleshooting",
+    "FR": "/fr/projects/fritzbox-to-mqtt/troubleshooting"
+  },
+  "/en/projects/fritzbox-to-mqtt/troubleshooting": {
+    "DE": "/projects/fritzbox-to-mqtt/fehlersuche",
+    "EN": "/en/projects/fritzbox-to-mqtt/troubleshooting",
+    "FR": "/fr/projects/fritzbox-to-mqtt/troubleshooting"
+  },
+  "/fr/projects/fritzbox-to-mqtt/troubleshooting": {
+    "DE": "/projects/fritzbox-to-mqtt/fehlersuche",
+    "EN": "/en/projects/fritzbox-to-mqtt/troubleshooting",
+    "FR": "/fr/projects/fritzbox-to-mqtt/troubleshooting"
+  },
+  "/projects/fritzbox-to-mqtt/": {
+    "DE": "/projects/fritzbox-to-mqtt/",
+    "EN": "/en/projects/fritzbox-to-mqtt/",
+    "FR": "/fr/projects/fritzbox-to-mqtt/"
+  },
+  "/en/projects/fritzbox-to-mqtt/": {
+    "DE": "/projects/fritzbox-to-mqtt/",
+    "EN": "/en/projects/fritzbox-to-mqtt/",
+    "FR": "/fr/projects/fritzbox-to-mqtt/"
+  },
+  "/fr/projects/fritzbox-to-mqtt/": {
+    "DE": "/projects/fritzbox-to-mqtt/",
+    "EN": "/en/projects/fritzbox-to-mqtt/",
+    "FR": "/fr/projects/fritzbox-to-mqtt/"
+  },
+  "/projects/fritzbox-to-mqtt/installation": {
+    "DE": "/projects/fritzbox-to-mqtt/installation",
+    "EN": "/en/projects/fritzbox-to-mqtt/installation",
+    "FR": "/fr/projects/fritzbox-to-mqtt/installation"
+  },
+  "/en/projects/fritzbox-to-mqtt/installation": {
+    "DE": "/projects/fritzbox-to-mqtt/installation",
+    "EN": "/en/projects/fritzbox-to-mqtt/installation",
+    "FR": "/fr/projects/fritzbox-to-mqtt/installation"
+  },
+  "/fr/projects/fritzbox-to-mqtt/installation": {
+    "DE": "/projects/fritzbox-to-mqtt/installation",
+    "EN": "/en/projects/fritzbox-to-mqtt/installation",
+    "FR": "/fr/projects/fritzbox-to-mqtt/installation"
+  },
+  "/projects/fritzbox-to-mqtt/konfiguration": {
+    "DE": "/projects/fritzbox-to-mqtt/konfiguration",
+    "EN": "/en/projects/fritzbox-to-mqtt/configuration",
+    "FR": "/fr/projects/fritzbox-to-mqtt/configuration"
+  },
+  "/en/projects/fritzbox-to-mqtt/configuration": {
+    "DE": "/projects/fritzbox-to-mqtt/konfiguration",
+    "EN": "/en/projects/fritzbox-to-mqtt/configuration",
+    "FR": "/fr/projects/fritzbox-to-mqtt/configuration"
+  },
+  "/fr/projects/fritzbox-to-mqtt/configuration": {
+    "DE": "/projects/fritzbox-to-mqtt/konfiguration",
+    "EN": "/en/projects/fritzbox-to-mqtt/configuration",
+    "FR": "/fr/projects/fritzbox-to-mqtt/configuration"
+  },
+  "/projects/grafik-visual-studio/basic": {
+    "DE": "/projects/grafik-visual-studio/basic",
+    "EN": "/en/projects/grafik-visual-studio/basic",
+    "FR": "/fr/projects/grafik-visual-studio/basic"
+  },
+  "/en/projects/grafik-visual-studio/basic": {
+    "DE": "/projects/grafik-visual-studio/basic",
+    "EN": "/en/projects/grafik-visual-studio/basic",
+    "FR": "/fr/projects/grafik-visual-studio/basic"
+  },
+  "/fr/projects/grafik-visual-studio/basic": {
+    "DE": "/projects/grafik-visual-studio/basic",
+    "EN": "/en/projects/grafik-visual-studio/basic",
+    "FR": "/fr/projects/grafik-visual-studio/basic"
+  },
+  "/projects/grafik-visual-studio/bildergalerie": {
+    "DE": "/projects/grafik-visual-studio/bildergalerie",
+    "EN": "/en/projects/grafik-visual-studio/bildergalerie",
+    "FR": "/fr/projects/grafik-visual-studio/bildergalerie"
+  },
+  "/en/projects/grafik-visual-studio/bildergalerie": {
+    "DE": "/projects/grafik-visual-studio/bildergalerie",
+    "EN": "/en/projects/grafik-visual-studio/bildergalerie",
+    "FR": "/fr/projects/grafik-visual-studio/bildergalerie"
+  },
+  "/fr/projects/grafik-visual-studio/bildergalerie": {
+    "DE": "/projects/grafik-visual-studio/bildergalerie",
+    "EN": "/en/projects/grafik-visual-studio/bildergalerie",
+    "FR": "/fr/projects/grafik-visual-studio/bildergalerie"
+  },
+  "/projects/grafik-visual-studio/calendar-plus": {
+    "DE": "/projects/grafik-visual-studio/calendar-plus",
+    "EN": "/en/projects/grafik-visual-studio/calendar-plus",
+    "FR": "/fr/projects/grafik-visual-studio/calendar-plus"
+  },
+  "/en/projects/grafik-visual-studio/calendar-plus": {
+    "DE": "/projects/grafik-visual-studio/calendar-plus",
+    "EN": "/en/projects/grafik-visual-studio/calendar-plus",
+    "FR": "/fr/projects/grafik-visual-studio/calendar-plus"
+  },
+  "/fr/projects/grafik-visual-studio/calendar-plus": {
+    "DE": "/projects/grafik-visual-studio/calendar-plus",
+    "EN": "/en/projects/grafik-visual-studio/calendar-plus",
+    "FR": "/fr/projects/grafik-visual-studio/calendar-plus"
+  },
+  "/projects/grafik-visual-studio/datenfluss": {
+    "DE": "/projects/grafik-visual-studio/datenfluss",
+    "EN": "/en/projects/grafik-visual-studio/datenfluss",
+    "FR": "/fr/projects/grafik-visual-studio/datenfluss"
+  },
+  "/en/projects/grafik-visual-studio/datenfluss": {
+    "DE": "/projects/grafik-visual-studio/datenfluss",
+    "EN": "/en/projects/grafik-visual-studio/datenfluss",
+    "FR": "/fr/projects/grafik-visual-studio/datenfluss"
+  },
+  "/fr/projects/grafik-visual-studio/datenfluss": {
+    "DE": "/projects/grafik-visual-studio/datenfluss",
+    "EN": "/en/projects/grafik-visual-studio/datenfluss",
+    "FR": "/fr/projects/grafik-visual-studio/datenfluss"
+  },
+  "/projects/grafik-visual-studio/editor": {
+    "DE": "/projects/grafik-visual-studio/editor",
+    "EN": "/en/projects/grafik-visual-studio/editor",
+    "FR": "/fr/projects/grafik-visual-studio/editor"
+  },
+  "/en/projects/grafik-visual-studio/editor": {
+    "DE": "/projects/grafik-visual-studio/editor",
+    "EN": "/en/projects/grafik-visual-studio/editor",
+    "FR": "/fr/projects/grafik-visual-studio/editor"
+  },
+  "/fr/projects/grafik-visual-studio/editor": {
+    "DE": "/projects/grafik-visual-studio/editor",
+    "EN": "/en/projects/grafik-visual-studio/editor",
+    "FR": "/fr/projects/grafik-visual-studio/editor"
+  },
+  "/projects/grafik-visual-studio/energy": {
+    "DE": "/projects/grafik-visual-studio/energy",
+    "EN": "/en/projects/grafik-visual-studio/energy",
+    "FR": "/fr/projects/grafik-visual-studio/energy"
+  },
+  "/en/projects/grafik-visual-studio/energy": {
+    "DE": "/projects/grafik-visual-studio/energy",
+    "EN": "/en/projects/grafik-visual-studio/energy",
+    "FR": "/fr/projects/grafik-visual-studio/energy"
+  },
+  "/fr/projects/grafik-visual-studio/energy": {
+    "DE": "/projects/grafik-visual-studio/energy",
+    "EN": "/en/projects/grafik-visual-studio/energy",
+    "FR": "/fr/projects/grafik-visual-studio/energy"
+  },
+  "/projects/grafik-visual-studio/ha-quellen-climate": {
+    "DE": "/projects/grafik-visual-studio/ha-quellen-climate",
+    "EN": "/en/projects/grafik-visual-studio/ha-quellen-climate",
+    "FR": "/fr/projects/grafik-visual-studio/ha-quellen-climate"
+  },
+  "/en/projects/grafik-visual-studio/ha-quellen-climate": {
+    "DE": "/projects/grafik-visual-studio/ha-quellen-climate",
+    "EN": "/en/projects/grafik-visual-studio/ha-quellen-climate",
+    "FR": "/fr/projects/grafik-visual-studio/ha-quellen-climate"
+  },
+  "/fr/projects/grafik-visual-studio/ha-quellen-climate": {
+    "DE": "/projects/grafik-visual-studio/ha-quellen-climate",
+    "EN": "/en/projects/grafik-visual-studio/ha-quellen-climate",
+    "FR": "/fr/projects/grafik-visual-studio/ha-quellen-climate"
+  },
+  "/projects/grafik-visual-studio/": {
+    "DE": "/projects/grafik-visual-studio/",
+    "EN": "/en/projects/grafik-visual-studio/",
+    "FR": "/fr/projects/grafik-visual-studio/"
+  },
+  "/en/projects/grafik-visual-studio/": {
+    "DE": "/projects/grafik-visual-studio/",
+    "EN": "/en/projects/grafik-visual-studio/",
+    "FR": "/fr/projects/grafik-visual-studio/"
+  },
+  "/fr/projects/grafik-visual-studio/": {
+    "DE": "/projects/grafik-visual-studio/",
+    "EN": "/en/projects/grafik-visual-studio/",
+    "FR": "/fr/projects/grafik-visual-studio/"
+  },
+  "/projects/grafik-visual-studio/industrial": {
+    "DE": "/projects/grafik-visual-studio/industrial",
+    "EN": "/en/projects/grafik-visual-studio/industrial",
+    "FR": "/fr/projects/grafik-visual-studio/industrial"
+  },
+  "/en/projects/grafik-visual-studio/industrial": {
+    "DE": "/projects/grafik-visual-studio/industrial",
+    "EN": "/en/projects/grafik-visual-studio/industrial",
+    "FR": "/fr/projects/grafik-visual-studio/industrial"
+  },
+  "/fr/projects/grafik-visual-studio/industrial": {
+    "DE": "/projects/grafik-visual-studio/industrial",
+    "EN": "/en/projects/grafik-visual-studio/industrial",
+    "FR": "/fr/projects/grafik-visual-studio/industrial"
+  },
+  "/projects/grafik-visual-studio/interaktiv": {
+    "DE": "/projects/grafik-visual-studio/interaktiv",
+    "EN": "/en/projects/grafik-visual-studio/interaktiv",
+    "FR": "/fr/projects/grafik-visual-studio/interaktiv"
+  },
+  "/en/projects/grafik-visual-studio/interaktiv": {
+    "DE": "/projects/grafik-visual-studio/interaktiv",
+    "EN": "/en/projects/grafik-visual-studio/interaktiv",
+    "FR": "/fr/projects/grafik-visual-studio/interaktiv"
+  },
+  "/fr/projects/grafik-visual-studio/interaktiv": {
+    "DE": "/projects/grafik-visual-studio/interaktiv",
+    "EN": "/en/projects/grafik-visual-studio/interaktiv",
+    "FR": "/fr/projects/grafik-visual-studio/interaktiv"
+  },
+  "/projects/grafik-visual-studio/materialdesign": {
+    "DE": "/projects/grafik-visual-studio/materialdesign",
+    "EN": "/en/projects/grafik-visual-studio/materialdesign",
+    "FR": "/fr/projects/grafik-visual-studio/materialdesign"
+  },
+  "/en/projects/grafik-visual-studio/materialdesign": {
+    "DE": "/projects/grafik-visual-studio/materialdesign",
+    "EN": "/en/projects/grafik-visual-studio/materialdesign",
+    "FR": "/fr/projects/grafik-visual-studio/materialdesign"
+  },
+  "/fr/projects/grafik-visual-studio/materialdesign": {
+    "DE": "/projects/grafik-visual-studio/materialdesign",
+    "EN": "/en/projects/grafik-visual-studio/materialdesign",
+    "FR": "/fr/projects/grafik-visual-studio/materialdesign"
+  },
+  "/projects/grafik-visual-studio/packer": {
+    "DE": "/projects/grafik-visual-studio/packer",
+    "EN": "/en/projects/grafik-visual-studio/packer",
+    "FR": "/fr/projects/grafik-visual-studio/packer"
+  },
+  "/en/projects/grafik-visual-studio/packer": {
+    "DE": "/projects/grafik-visual-studio/packer",
+    "EN": "/en/projects/grafik-visual-studio/packer",
+    "FR": "/fr/projects/grafik-visual-studio/packer"
+  },
+  "/fr/projects/grafik-visual-studio/packer": {
+    "DE": "/projects/grafik-visual-studio/packer",
+    "EN": "/en/projects/grafik-visual-studio/packer",
+    "FR": "/fr/projects/grafik-visual-studio/packer"
+  },
+  "/projects/grafik-visual-studio/printer": {
+    "DE": "/projects/grafik-visual-studio/printer",
+    "EN": "/en/projects/grafik-visual-studio/printer",
+    "FR": "/fr/projects/grafik-visual-studio/printer"
+  },
+  "/en/projects/grafik-visual-studio/printer": {
+    "DE": "/projects/grafik-visual-studio/printer",
+    "EN": "/en/projects/grafik-visual-studio/printer",
+    "FR": "/fr/projects/grafik-visual-studio/printer"
+  },
+  "/fr/projects/grafik-visual-studio/printer": {
+    "DE": "/projects/grafik-visual-studio/printer",
+    "EN": "/en/projects/grafik-visual-studio/printer",
+    "FR": "/fr/projects/grafik-visual-studio/printer"
+  },
+  "/projects/grafik-visual-studio/solar": {
+    "DE": "/projects/grafik-visual-studio/solar",
+    "EN": "/en/projects/grafik-visual-studio/solar",
+    "FR": "/fr/projects/grafik-visual-studio/solar"
+  },
+  "/en/projects/grafik-visual-studio/solar": {
+    "DE": "/projects/grafik-visual-studio/solar",
+    "EN": "/en/projects/grafik-visual-studio/solar",
+    "FR": "/fr/projects/grafik-visual-studio/solar"
+  },
+  "/fr/projects/grafik-visual-studio/solar": {
+    "DE": "/projects/grafik-visual-studio/solar",
+    "EN": "/en/projects/grafik-visual-studio/solar",
+    "FR": "/fr/projects/grafik-visual-studio/solar"
+  },
+  "/projects/grafik-visual-studio/svg-line": {
+    "DE": "/projects/grafik-visual-studio/svg-line",
+    "EN": "/en/projects/grafik-visual-studio/svg-line",
+    "FR": "/fr/projects/grafik-visual-studio/svg-line"
+  },
+  "/en/projects/grafik-visual-studio/svg-line": {
+    "DE": "/projects/grafik-visual-studio/svg-line",
+    "EN": "/en/projects/grafik-visual-studio/svg-line",
+    "FR": "/fr/projects/grafik-visual-studio/svg-line"
+  },
+  "/fr/projects/grafik-visual-studio/svg-line": {
+    "DE": "/projects/grafik-visual-studio/svg-line",
+    "EN": "/en/projects/grafik-visual-studio/svg-line",
+    "FR": "/fr/projects/grafik-visual-studio/svg-line"
+  },
+  "/projects/grafik-visual-studio/svg-linebox-math": {
+    "DE": "/projects/grafik-visual-studio/svg-linebox-math",
+    "EN": "/en/projects/grafik-visual-studio/svg-linebox-math",
+    "FR": "/fr/projects/grafik-visual-studio/svg-linebox-math"
+  },
+  "/en/projects/grafik-visual-studio/svg-linebox-math": {
+    "DE": "/projects/grafik-visual-studio/svg-linebox-math",
+    "EN": "/en/projects/grafik-visual-studio/svg-linebox-math",
+    "FR": "/fr/projects/grafik-visual-studio/svg-linebox-math"
+  },
+  "/fr/projects/grafik-visual-studio/svg-linebox-math": {
+    "DE": "/projects/grafik-visual-studio/svg-linebox-math",
+    "EN": "/en/projects/grafik-visual-studio/svg-linebox-math",
+    "FR": "/fr/projects/grafik-visual-studio/svg-linebox-math"
+  },
+  "/projects/grafik-visual-studio/svg-linebox": {
+    "DE": "/projects/grafik-visual-studio/svg-linebox",
+    "EN": "/en/projects/grafik-visual-studio/svg-linebox",
+    "FR": "/fr/projects/grafik-visual-studio/svg-linebox"
+  },
+  "/en/projects/grafik-visual-studio/svg-linebox": {
+    "DE": "/projects/grafik-visual-studio/svg-linebox",
+    "EN": "/en/projects/grafik-visual-studio/svg-linebox",
+    "FR": "/fr/projects/grafik-visual-studio/svg-linebox"
+  },
+  "/fr/projects/grafik-visual-studio/svg-linebox": {
+    "DE": "/projects/grafik-visual-studio/svg-linebox",
+    "EN": "/en/projects/grafik-visual-studio/svg-linebox",
+    "FR": "/fr/projects/grafik-visual-studio/svg-linebox"
+  },
+  "/projects/grafik-visual-studio/technic": {
+    "DE": "/projects/grafik-visual-studio/technic",
+    "EN": "/en/projects/grafik-visual-studio/technic",
+    "FR": "/fr/projects/grafik-visual-studio/technic"
+  },
+  "/en/projects/grafik-visual-studio/technic": {
+    "DE": "/projects/grafik-visual-studio/technic",
+    "EN": "/en/projects/grafik-visual-studio/technic",
+    "FR": "/fr/projects/grafik-visual-studio/technic"
+  },
+  "/fr/projects/grafik-visual-studio/technic": {
+    "DE": "/projects/grafik-visual-studio/technic",
+    "EN": "/en/projects/grafik-visual-studio/technic",
+    "FR": "/fr/projects/grafik-visual-studio/technic"
+  },
+  "/projects/grafik-visual-studio/tool-pakete": {
+    "DE": "/projects/grafik-visual-studio/tool-pakete",
+    "EN": "/en/projects/grafik-visual-studio/tool-packages",
+    "FR": "/fr/projects/grafik-visual-studio/tool-packages"
+  },
+  "/en/projects/grafik-visual-studio/tool-packages": {
+    "DE": "/projects/grafik-visual-studio/tool-pakete",
+    "EN": "/en/projects/grafik-visual-studio/tool-packages",
+    "FR": "/fr/projects/grafik-visual-studio/tool-packages"
+  },
+  "/fr/projects/grafik-visual-studio/tool-packages": {
+    "DE": "/projects/grafik-visual-studio/tool-pakete",
+    "EN": "/en/projects/grafik-visual-studio/tool-packages",
+    "FR": "/fr/projects/grafik-visual-studio/tool-packages"
+  },
+  "/projects/grafik-visual-studio/weather-heating": {
+    "DE": "/projects/grafik-visual-studio/weather-heating",
+    "EN": "/en/projects/grafik-visual-studio/weather-heating",
+    "FR": "/fr/projects/grafik-visual-studio/weather-heating"
+  },
+  "/en/projects/grafik-visual-studio/weather-heating": {
+    "DE": "/projects/grafik-visual-studio/weather-heating",
+    "EN": "/en/projects/grafik-visual-studio/weather-heating",
+    "FR": "/fr/projects/grafik-visual-studio/weather-heating"
+  },
+  "/fr/projects/grafik-visual-studio/weather-heating": {
+    "DE": "/projects/grafik-visual-studio/weather-heating",
+    "EN": "/en/projects/grafik-visual-studio/weather-heating",
+    "FR": "/fr/projects/grafik-visual-studio/weather-heating"
+  },
+  "/projects/grafik-visual-studio/widget-pakete": {
+    "DE": "/projects/grafik-visual-studio/widget-pakete",
+    "EN": "/en/projects/grafik-visual-studio/widget-packages",
+    "FR": "/fr/projects/grafik-visual-studio/widget-packages"
+  },
+  "/en/projects/grafik-visual-studio/widget-packages": {
+    "DE": "/projects/grafik-visual-studio/widget-pakete",
+    "EN": "/en/projects/grafik-visual-studio/widget-packages",
+    "FR": "/fr/projects/grafik-visual-studio/widget-packages"
+  },
+  "/fr/projects/grafik-visual-studio/widget-packages": {
+    "DE": "/projects/grafik-visual-studio/widget-pakete",
+    "EN": "/en/projects/grafik-visual-studio/widget-packages",
+    "FR": "/fr/projects/grafik-visual-studio/widget-packages"
+  },
+  "/projects/grafik-visual-studio/widgets": {
+    "DE": "/projects/grafik-visual-studio/widgets",
+    "EN": "/en/projects/grafik-visual-studio/widgets",
+    "FR": "/fr/projects/grafik-visual-studio/widgets"
+  },
+  "/en/projects/grafik-visual-studio/widgets": {
+    "DE": "/projects/grafik-visual-studio/widgets",
+    "EN": "/en/projects/grafik-visual-studio/widgets",
+    "FR": "/fr/projects/grafik-visual-studio/widgets"
+  },
+  "/fr/projects/grafik-visual-studio/widgets": {
+    "DE": "/projects/grafik-visual-studio/widgets",
+    "EN": "/en/projects/grafik-visual-studio/widgets",
+    "FR": "/fr/projects/grafik-visual-studio/widgets"
+  },
+  "/projects/grafik-visual-studio/zeichnen": {
+    "DE": "/projects/grafik-visual-studio/zeichnen",
+    "EN": "/en/projects/grafik-visual-studio/zeichnen",
+    "FR": "/fr/projects/grafik-visual-studio/zeichnen"
+  },
+  "/en/projects/grafik-visual-studio/zeichnen": {
+    "DE": "/projects/grafik-visual-studio/zeichnen",
+    "EN": "/en/projects/grafik-visual-studio/zeichnen",
+    "FR": "/fr/projects/grafik-visual-studio/zeichnen"
+  },
+  "/fr/projects/grafik-visual-studio/zeichnen": {
+    "DE": "/projects/grafik-visual-studio/zeichnen",
+    "EN": "/en/projects/grafik-visual-studio/zeichnen",
+    "FR": "/fr/projects/grafik-visual-studio/zeichnen"
+  },
+  "/projects/hadash/ansicht-exportieren": {
+    "DE": "/projects/hadash/ansicht-exportieren",
+    "EN": "/en/projects/hadash/export-view",
+    "FR": "/fr/projects/hadash/export-view"
+  },
+  "/en/projects/hadash/export-view": {
+    "DE": "/projects/hadash/ansicht-exportieren",
+    "EN": "/en/projects/hadash/export-view",
+    "FR": "/fr/projects/hadash/export-view"
+  },
+  "/fr/projects/hadash/export-view": {
+    "DE": "/projects/hadash/ansicht-exportieren",
+    "EN": "/en/projects/hadash/export-view",
+    "FR": "/fr/projects/hadash/export-view"
+  },
+  "/projects/hadash/backups-und-json": {
+    "DE": "/projects/hadash/backups-und-json",
+    "EN": "/en/projects/hadash/backups-and-json",
+    "FR": "/fr/projects/hadash/backups-and-json"
+  },
+  "/en/projects/hadash/backups-and-json": {
+    "DE": "/projects/hadash/backups-und-json",
+    "EN": "/en/projects/hadash/backups-and-json",
+    "FR": "/fr/projects/hadash/backups-and-json"
+  },
+  "/fr/projects/hadash/backups-and-json": {
+    "DE": "/projects/hadash/backups-und-json",
+    "EN": "/en/projects/hadash/backups-and-json",
+    "FR": "/fr/projects/hadash/backups-and-json"
+  },
+  "/projects/hadash/dashboard-einlesen": {
+    "DE": "/projects/hadash/dashboard-einlesen",
+    "EN": "/en/projects/hadash/import-dashboard",
+    "FR": "/fr/projects/hadash/import-dashboard"
+  },
+  "/en/projects/hadash/import-dashboard": {
+    "DE": "/projects/hadash/dashboard-einlesen",
+    "EN": "/en/projects/hadash/import-dashboard",
+    "FR": "/fr/projects/hadash/import-dashboard"
+  },
+  "/fr/projects/hadash/import-dashboard": {
+    "DE": "/projects/hadash/dashboard-einlesen",
+    "EN": "/en/projects/hadash/import-dashboard",
+    "FR": "/fr/projects/hadash/import-dashboard"
+  },
+  "/projects/hadash/erste-schritte": {
+    "DE": "/projects/hadash/erste-schritte",
+    "EN": "/en/projects/hadash/getting-started",
+    "FR": "/fr/projects/hadash/getting-started"
+  },
+  "/en/projects/hadash/getting-started": {
+    "DE": "/projects/hadash/erste-schritte",
+    "EN": "/en/projects/hadash/getting-started",
+    "FR": "/fr/projects/hadash/getting-started"
+  },
+  "/fr/projects/hadash/getting-started": {
+    "DE": "/projects/hadash/erste-schritte",
+    "EN": "/en/projects/hadash/getting-started",
+    "FR": "/fr/projects/hadash/getting-started"
+  },
+  "/projects/hadash/": {
+    "DE": "/projects/hadash/",
+    "EN": "/en/projects/hadash/",
+    "FR": "/fr/projects/hadash/"
+  },
+  "/en/projects/hadash/": {
+    "DE": "/projects/hadash/",
+    "EN": "/en/projects/hadash/",
+    "FR": "/fr/projects/hadash/"
+  },
+  "/fr/projects/hadash/": {
+    "DE": "/projects/hadash/",
+    "EN": "/en/projects/hadash/",
+    "FR": "/fr/projects/hadash/"
+  },
+  "/projects/hadash/portable-nutzung": {
+    "DE": "/projects/hadash/portable-nutzung",
+    "EN": "/en/projects/hadash/portable-usage",
+    "FR": "/fr/projects/hadash/portable-usage"
+  },
+  "/en/projects/hadash/portable-usage": {
+    "DE": "/projects/hadash/portable-nutzung",
+    "EN": "/en/projects/hadash/portable-usage",
+    "FR": "/fr/projects/hadash/portable-usage"
+  },
+  "/fr/projects/hadash/portable-usage": {
+    "DE": "/projects/hadash/portable-nutzung",
+    "EN": "/en/projects/hadash/portable-usage",
+    "FR": "/fr/projects/hadash/portable-usage"
+  },
+  "/projects/heizoel-to-mqtt/beispiele": {
+    "DE": "/projects/heizoel-to-mqtt/beispiele",
+    "EN": "/en/projects/heizoel-to-mqtt/examples",
+    "FR": "/fr/projects/heizoel-to-mqtt/examples"
+  },
+  "/en/projects/heizoel-to-mqtt/examples": {
+    "DE": "/projects/heizoel-to-mqtt/beispiele",
+    "EN": "/en/projects/heizoel-to-mqtt/examples",
+    "FR": "/fr/projects/heizoel-to-mqtt/examples"
+  },
+  "/fr/projects/heizoel-to-mqtt/examples": {
+    "DE": "/projects/heizoel-to-mqtt/beispiele",
+    "EN": "/en/projects/heizoel-to-mqtt/examples",
+    "FR": "/fr/projects/heizoel-to-mqtt/examples"
+  },
+  "/projects/heizoel-to-mqtt/entitaeten": {
+    "DE": "/projects/heizoel-to-mqtt/entitaeten",
+    "EN": "/en/projects/heizoel-to-mqtt/entities",
+    "FR": "/fr/projects/heizoel-to-mqtt/entities"
+  },
+  "/en/projects/heizoel-to-mqtt/entities": {
+    "DE": "/projects/heizoel-to-mqtt/entitaeten",
+    "EN": "/en/projects/heizoel-to-mqtt/entities",
+    "FR": "/fr/projects/heizoel-to-mqtt/entities"
+  },
+  "/fr/projects/heizoel-to-mqtt/entities": {
+    "DE": "/projects/heizoel-to-mqtt/entitaeten",
+    "EN": "/en/projects/heizoel-to-mqtt/entities",
+    "FR": "/fr/projects/heizoel-to-mqtt/entities"
+  },
+  "/projects/heizoel-to-mqtt/": {
+    "DE": "/projects/heizoel-to-mqtt/",
+    "EN": "/en/projects/heizoel-to-mqtt/",
+    "FR": "/fr/projects/heizoel-to-mqtt/"
+  },
+  "/en/projects/heizoel-to-mqtt/": {
+    "DE": "/projects/heizoel-to-mqtt/",
+    "EN": "/en/projects/heizoel-to-mqtt/",
+    "FR": "/fr/projects/heizoel-to-mqtt/"
+  },
+  "/fr/projects/heizoel-to-mqtt/": {
+    "DE": "/projects/heizoel-to-mqtt/",
+    "EN": "/en/projects/heizoel-to-mqtt/",
+    "FR": "/fr/projects/heizoel-to-mqtt/"
+  },
+  "/projects/heizoel-to-mqtt/installation": {
+    "DE": "/projects/heizoel-to-mqtt/installation",
+    "EN": "/en/projects/heizoel-to-mqtt/installation",
+    "FR": "/fr/projects/heizoel-to-mqtt/installation"
+  },
+  "/en/projects/heizoel-to-mqtt/installation": {
+    "DE": "/projects/heizoel-to-mqtt/installation",
+    "EN": "/en/projects/heizoel-to-mqtt/installation",
+    "FR": "/fr/projects/heizoel-to-mqtt/installation"
+  },
+  "/fr/projects/heizoel-to-mqtt/installation": {
+    "DE": "/projects/heizoel-to-mqtt/installation",
+    "EN": "/en/projects/heizoel-to-mqtt/installation",
+    "FR": "/fr/projects/heizoel-to-mqtt/installation"
+  },
+  "/projects/heizoel-to-mqtt/konfiguration": {
+    "DE": "/projects/heizoel-to-mqtt/konfiguration",
+    "EN": "/en/projects/heizoel-to-mqtt/configuration",
+    "FR": "/fr/projects/heizoel-to-mqtt/configuration"
+  },
+  "/en/projects/heizoel-to-mqtt/configuration": {
+    "DE": "/projects/heizoel-to-mqtt/konfiguration",
+    "EN": "/en/projects/heizoel-to-mqtt/configuration",
+    "FR": "/fr/projects/heizoel-to-mqtt/configuration"
+  },
+  "/fr/projects/heizoel-to-mqtt/configuration": {
+    "DE": "/projects/heizoel-to-mqtt/konfiguration",
+    "EN": "/en/projects/heizoel-to-mqtt/configuration",
+    "FR": "/fr/projects/heizoel-to-mqtt/configuration"
+  },
+  "/projects/": {
+    "DE": "/projects/",
+    "EN": "/en/projects/",
+    "FR": "/fr/projects/"
+  },
+  "/en/projects/": {
+    "DE": "/projects/",
+    "EN": "/en/projects/",
+    "FR": "/fr/projects/"
+  },
+  "/fr/projects/": {
+    "DE": "/projects/",
+    "EN": "/en/projects/",
+    "FR": "/fr/projects/"
+  },
+  "/projects/mqtt-client/": {
+    "DE": "/projects/mqtt-client/",
+    "EN": "/en/projects/mqtt-client/",
+    "FR": "/fr/projects/mqtt-client/"
+  },
+  "/en/projects/mqtt-client/": {
+    "DE": "/projects/mqtt-client/",
+    "EN": "/en/projects/mqtt-client/",
+    "FR": "/fr/projects/mqtt-client/"
+  },
+  "/fr/projects/mqtt-client/": {
+    "DE": "/projects/mqtt-client/",
+    "EN": "/en/projects/mqtt-client/",
+    "FR": "/fr/projects/mqtt-client/"
+  },
+  "/projects/parcel-to-mqtt/beispiele": {
+    "DE": "/projects/parcel-to-mqtt/beispiele",
+    "EN": "/en/projects/parcel-to-mqtt/examples",
+    "FR": "/fr/projects/parcel-to-mqtt/examples"
+  },
+  "/en/projects/parcel-to-mqtt/examples": {
+    "DE": "/projects/parcel-to-mqtt/beispiele",
+    "EN": "/en/projects/parcel-to-mqtt/examples",
+    "FR": "/fr/projects/parcel-to-mqtt/examples"
+  },
+  "/fr/projects/parcel-to-mqtt/examples": {
+    "DE": "/projects/parcel-to-mqtt/beispiele",
+    "EN": "/en/projects/parcel-to-mqtt/examples",
+    "FR": "/fr/projects/parcel-to-mqtt/examples"
+  },
+  "/projects/parcel-to-mqtt/entitaeten": {
+    "DE": "/projects/parcel-to-mqtt/entitaeten",
+    "EN": "/en/projects/parcel-to-mqtt/entities",
+    "FR": "/fr/projects/parcel-to-mqtt/entities"
+  },
+  "/en/projects/parcel-to-mqtt/entities": {
+    "DE": "/projects/parcel-to-mqtt/entitaeten",
+    "EN": "/en/projects/parcel-to-mqtt/entities",
+    "FR": "/fr/projects/parcel-to-mqtt/entities"
+  },
+  "/fr/projects/parcel-to-mqtt/entities": {
+    "DE": "/projects/parcel-to-mqtt/entitaeten",
+    "EN": "/en/projects/parcel-to-mqtt/entities",
+    "FR": "/fr/projects/parcel-to-mqtt/entities"
+  },
+  "/projects/parcel-to-mqtt/": {
+    "DE": "/projects/parcel-to-mqtt/",
+    "EN": "/en/projects/parcel-to-mqtt/",
+    "FR": "/fr/projects/parcel-to-mqtt/"
+  },
+  "/en/projects/parcel-to-mqtt/": {
+    "DE": "/projects/parcel-to-mqtt/",
+    "EN": "/en/projects/parcel-to-mqtt/",
+    "FR": "/fr/projects/parcel-to-mqtt/"
+  },
+  "/fr/projects/parcel-to-mqtt/": {
+    "DE": "/projects/parcel-to-mqtt/",
+    "EN": "/en/projects/parcel-to-mqtt/",
+    "FR": "/fr/projects/parcel-to-mqtt/"
+  },
+  "/projects/parcel-to-mqtt/installation": {
+    "DE": "/projects/parcel-to-mqtt/installation",
+    "EN": "/en/projects/parcel-to-mqtt/installation",
+    "FR": "/fr/projects/parcel-to-mqtt/installation"
+  },
+  "/en/projects/parcel-to-mqtt/installation": {
+    "DE": "/projects/parcel-to-mqtt/installation",
+    "EN": "/en/projects/parcel-to-mqtt/installation",
+    "FR": "/fr/projects/parcel-to-mqtt/installation"
+  },
+  "/fr/projects/parcel-to-mqtt/installation": {
+    "DE": "/projects/parcel-to-mqtt/installation",
+    "EN": "/en/projects/parcel-to-mqtt/installation",
+    "FR": "/fr/projects/parcel-to-mqtt/installation"
+  },
+  "/projects/parcel-to-mqtt/konfiguration": {
+    "DE": "/projects/parcel-to-mqtt/konfiguration",
+    "EN": "/en/projects/parcel-to-mqtt/configuration",
+    "FR": "/fr/projects/parcel-to-mqtt/configuration"
+  },
+  "/en/projects/parcel-to-mqtt/configuration": {
+    "DE": "/projects/parcel-to-mqtt/konfiguration",
+    "EN": "/en/projects/parcel-to-mqtt/configuration",
+    "FR": "/fr/projects/parcel-to-mqtt/configuration"
+  },
+  "/fr/projects/parcel-to-mqtt/configuration": {
+    "DE": "/projects/parcel-to-mqtt/konfiguration",
+    "EN": "/en/projects/parcel-to-mqtt/configuration",
+    "FR": "/fr/projects/parcel-to-mqtt/configuration"
+  },
+  "/projects/uix/broker/broker": {
+    "DE": "/projects/uix/broker/broker",
+    "EN": "/en/projects/uix/broker/broker",
+    "FR": "/fr/projects/uix/broker/broker"
+  },
+  "/en/projects/uix/broker/broker": {
+    "DE": "/projects/uix/broker/broker",
+    "EN": "/en/projects/uix/broker/broker",
+    "FR": "/fr/projects/uix/broker/broker"
+  },
+  "/fr/projects/uix/broker/broker": {
+    "DE": "/projects/uix/broker/broker",
+    "EN": "/en/projects/uix/broker/broker",
+    "FR": "/fr/projects/uix/broker/broker"
+  },
+  "/projects/uix/broker/directives": {
+    "DE": "/projects/uix/broker/directives",
+    "EN": "/en/projects/uix/broker/directives",
+    "FR": "/fr/projects/uix/broker/directives"
+  },
+  "/en/projects/uix/broker/directives": {
+    "DE": "/projects/uix/broker/directives",
+    "EN": "/en/projects/uix/broker/directives",
+    "FR": "/fr/projects/uix/broker/directives"
+  },
+  "/fr/projects/uix/broker/directives": {
+    "DE": "/projects/uix/broker/directives",
+    "EN": "/en/projects/uix/broker/directives",
+    "FR": "/fr/projects/uix/broker/directives"
+  },
+  "/projects/uix/broker/examples": {
+    "DE": "/projects/uix/broker/examples",
+    "EN": "/en/projects/uix/broker/examples",
+    "FR": "/fr/projects/uix/broker/examples"
+  },
+  "/en/projects/uix/broker/examples": {
+    "DE": "/projects/uix/broker/examples",
+    "EN": "/en/projects/uix/broker/examples",
+    "FR": "/fr/projects/uix/broker/examples"
+  },
+  "/fr/projects/uix/broker/examples": {
+    "DE": "/projects/uix/broker/examples",
+    "EN": "/en/projects/uix/broker/examples",
+    "FR": "/fr/projects/uix/broker/examples"
+  },
+  "/projects/uix/broker/": {
+    "DE": "/projects/uix/broker/",
+    "EN": "/en/projects/uix/broker/",
+    "FR": "/fr/projects/uix/broker/"
+  },
+  "/en/projects/uix/broker/": {
+    "DE": "/projects/uix/broker/",
+    "EN": "/en/projects/uix/broker/",
+    "FR": "/fr/projects/uix/broker/"
+  },
+  "/fr/projects/uix/broker/": {
+    "DE": "/projects/uix/broker/",
+    "EN": "/en/projects/uix/broker/",
+    "FR": "/fr/projects/uix/broker/"
+  },
+  "/projects/uix/broker/interaction-anchors": {
+    "DE": "/projects/uix/broker/interaction-anchors",
+    "EN": "/en/projects/uix/broker/interaction-anchors",
+    "FR": "/fr/projects/uix/broker/interaction-anchors"
+  },
+  "/en/projects/uix/broker/interaction-anchors": {
+    "DE": "/projects/uix/broker/interaction-anchors",
+    "EN": "/en/projects/uix/broker/interaction-anchors",
+    "FR": "/fr/projects/uix/broker/interaction-anchors"
+  },
+  "/fr/projects/uix/broker/interaction-anchors": {
+    "DE": "/projects/uix/broker/interaction-anchors",
+    "EN": "/en/projects/uix/broker/interaction-anchors",
+    "FR": "/fr/projects/uix/broker/interaction-anchors"
+  },
+  "/projects/uix/broker/realms": {
+    "DE": "/projects/uix/broker/realms",
+    "EN": "/en/projects/uix/broker/realms",
+    "FR": "/fr/projects/uix/broker/realms"
+  },
+  "/en/projects/uix/broker/realms": {
+    "DE": "/projects/uix/broker/realms",
+    "EN": "/en/projects/uix/broker/realms",
+    "FR": "/fr/projects/uix/broker/realms"
+  },
+  "/fr/projects/uix/broker/realms": {
+    "DE": "/projects/uix/broker/realms",
+    "EN": "/en/projects/uix/broker/realms",
+    "FR": "/fr/projects/uix/broker/realms"
+  },
+  "/projects/uix/broker/rules": {
+    "DE": "/projects/uix/broker/rules",
+    "EN": "/en/projects/uix/broker/rules",
+    "FR": "/fr/projects/uix/broker/rules"
+  },
+  "/en/projects/uix/broker/rules": {
+    "DE": "/projects/uix/broker/rules",
+    "EN": "/en/projects/uix/broker/rules",
+    "FR": "/fr/projects/uix/broker/rules"
+  },
+  "/fr/projects/uix/broker/rules": {
+    "DE": "/projects/uix/broker/rules",
+    "EN": "/en/projects/uix/broker/rules",
+    "FR": "/fr/projects/uix/broker/rules"
+  },
+  "/projects/uix/concepts/application": {
+    "DE": "/projects/uix/concepts/application",
+    "EN": "/en/projects/uix/concepts/application",
+    "FR": "/fr/projects/uix/concepts/application"
+  },
+  "/en/projects/uix/concepts/application": {
+    "DE": "/projects/uix/concepts/application",
+    "EN": "/en/projects/uix/concepts/application",
+    "FR": "/fr/projects/uix/concepts/application"
+  },
+  "/fr/projects/uix/concepts/application": {
+    "DE": "/projects/uix/concepts/application",
+    "EN": "/en/projects/uix/concepts/application",
+    "FR": "/fr/projects/uix/concepts/application"
+  },
+  "/projects/uix/concepts/dom": {
+    "DE": "/projects/uix/concepts/dom",
+    "EN": "/en/projects/uix/concepts/dom",
+    "FR": "/fr/projects/uix/concepts/dom"
+  },
+  "/en/projects/uix/concepts/dom": {
+    "DE": "/projects/uix/concepts/dom",
+    "EN": "/en/projects/uix/concepts/dom",
+    "FR": "/fr/projects/uix/concepts/dom"
+  },
+  "/fr/projects/uix/concepts/dom": {
+    "DE": "/projects/uix/concepts/dom",
+    "EN": "/en/projects/uix/concepts/dom",
+    "FR": "/fr/projects/uix/concepts/dom"
+  },
+  "/projects/uix/concepts/": {
+    "DE": "/projects/uix/concepts/",
+    "EN": "/en/projects/uix/concepts/",
+    "FR": "/fr/projects/uix/concepts/"
+  },
+  "/en/projects/uix/concepts/": {
+    "DE": "/projects/uix/concepts/",
+    "EN": "/en/projects/uix/concepts/",
+    "FR": "/fr/projects/uix/concepts/"
+  },
+  "/fr/projects/uix/concepts/": {
+    "DE": "/projects/uix/concepts/",
+    "EN": "/en/projects/uix/concepts/",
+    "FR": "/fr/projects/uix/concepts/"
+  },
+  "/projects/uix/contributing": {
+    "DE": "/projects/uix/contributing",
+    "EN": "/en/projects/uix/contributing",
+    "FR": "/fr/projects/uix/contributing"
+  },
+  "/en/projects/uix/contributing": {
+    "DE": "/projects/uix/contributing",
+    "EN": "/en/projects/uix/contributing",
+    "FR": "/fr/projects/uix/contributing"
+  },
+  "/fr/projects/uix/contributing": {
+    "DE": "/projects/uix/contributing",
+    "EN": "/en/projects/uix/contributing",
+    "FR": "/fr/projects/uix/contributing"
+  },
+  "/projects/uix/debugging/cache": {
+    "DE": "/projects/uix/debugging/cache",
+    "EN": "/en/projects/uix/debugging/cache",
+    "FR": "/fr/projects/uix/debugging/cache"
+  },
+  "/en/projects/uix/debugging/cache": {
+    "DE": "/projects/uix/debugging/cache",
+    "EN": "/en/projects/uix/debugging/cache",
+    "FR": "/fr/projects/uix/debugging/cache"
+  },
+  "/fr/projects/uix/debugging/cache": {
+    "DE": "/projects/uix/debugging/cache",
+    "EN": "/en/projects/uix/debugging/cache",
+    "FR": "/fr/projects/uix/debugging/cache"
+  },
+  "/projects/uix/debugging/cards": {
+    "DE": "/projects/uix/debugging/cards",
+    "EN": "/en/projects/uix/debugging/cards",
+    "FR": "/fr/projects/uix/debugging/cards"
+  },
+  "/en/projects/uix/debugging/cards": {
+    "DE": "/projects/uix/debugging/cards",
+    "EN": "/en/projects/uix/debugging/cards",
+    "FR": "/fr/projects/uix/debugging/cards"
+  },
+  "/fr/projects/uix/debugging/cards": {
+    "DE": "/projects/uix/debugging/cards",
+    "EN": "/en/projects/uix/debugging/cards",
+    "FR": "/fr/projects/uix/debugging/cards"
+  },
+  "/projects/uix/debugging/": {
+    "DE": "/projects/uix/debugging/",
+    "EN": "/en/projects/uix/debugging/",
+    "FR": "/fr/projects/uix/debugging/"
+  },
+  "/en/projects/uix/debugging/": {
+    "DE": "/projects/uix/debugging/",
+    "EN": "/en/projects/uix/debugging/",
+    "FR": "/fr/projects/uix/debugging/"
+  },
+  "/fr/projects/uix/debugging/": {
+    "DE": "/projects/uix/debugging/",
+    "EN": "/en/projects/uix/debugging/",
+    "FR": "/fr/projects/uix/debugging/"
+  },
+  "/projects/uix/debugging/templates": {
+    "DE": "/projects/uix/debugging/templates",
+    "EN": "/en/projects/uix/debugging/templates",
+    "FR": "/fr/projects/uix/debugging/templates"
+  },
+  "/en/projects/uix/debugging/templates": {
+    "DE": "/projects/uix/debugging/templates",
+    "EN": "/en/projects/uix/debugging/templates",
+    "FR": "/fr/projects/uix/debugging/templates"
+  },
+  "/fr/projects/uix/debugging/templates": {
+    "DE": "/projects/uix/debugging/templates",
+    "EN": "/en/projects/uix/debugging/templates",
+    "FR": "/fr/projects/uix/debugging/templates"
+  },
+  "/projects/uix/developers/cards": {
+    "DE": "/projects/uix/developers/cards",
+    "EN": "/en/projects/uix/developers/cards",
+    "FR": "/fr/projects/uix/developers/cards"
+  },
+  "/en/projects/uix/developers/cards": {
+    "DE": "/projects/uix/developers/cards",
+    "EN": "/en/projects/uix/developers/cards",
+    "FR": "/fr/projects/uix/developers/cards"
+  },
+  "/fr/projects/uix/developers/cards": {
+    "DE": "/projects/uix/developers/cards",
+    "EN": "/en/projects/uix/developers/cards",
+    "FR": "/fr/projects/uix/developers/cards"
+  },
+  "/projects/uix/developers/": {
+    "DE": "/projects/uix/developers/",
+    "EN": "/en/projects/uix/developers/",
+    "FR": "/fr/projects/uix/developers/"
+  },
+  "/en/projects/uix/developers/": {
+    "DE": "/projects/uix/developers/",
+    "EN": "/en/projects/uix/developers/",
+    "FR": "/fr/projects/uix/developers/"
+  },
+  "/fr/projects/uix/developers/": {
+    "DE": "/projects/uix/developers/",
+    "EN": "/en/projects/uix/developers/",
+    "FR": "/fr/projects/uix/developers/"
+  },
+  "/projects/uix/developers/themes": {
+    "DE": "/projects/uix/developers/themes",
+    "EN": "/en/projects/uix/developers/themes",
+    "FR": "/fr/projects/uix/developers/themes"
+  },
+  "/en/projects/uix/developers/themes": {
+    "DE": "/projects/uix/developers/themes",
+    "EN": "/en/projects/uix/developers/themes",
+    "FR": "/fr/projects/uix/developers/themes"
+  },
+  "/fr/projects/uix/developers/themes": {
+    "DE": "/projects/uix/developers/themes",
+    "EN": "/en/projects/uix/developers/themes",
+    "FR": "/fr/projects/uix/developers/themes"
+  },
+  "/projects/uix/extras/always-patch-ha-card": {
+    "DE": "/projects/uix/extras/always-patch-ha-card",
+    "EN": "/en/projects/uix/extras/always-patch-ha-card",
+    "FR": "/fr/projects/uix/extras/always-patch-ha-card"
+  },
+  "/en/projects/uix/extras/always-patch-ha-card": {
+    "DE": "/projects/uix/extras/always-patch-ha-card",
+    "EN": "/en/projects/uix/extras/always-patch-ha-card",
+    "FR": "/fr/projects/uix/extras/always-patch-ha-card"
+  },
+  "/fr/projects/uix/extras/always-patch-ha-card": {
+    "DE": "/projects/uix/extras/always-patch-ha-card",
+    "EN": "/en/projects/uix/extras/always-patch-ha-card",
+    "FR": "/fr/projects/uix/extras/always-patch-ha-card"
+  },
+  "/projects/uix/extras/dialog-styling-delay": {
+    "DE": "/projects/uix/extras/dialog-styling-delay",
+    "EN": "/en/projects/uix/extras/dialog-styling-delay",
+    "FR": "/fr/projects/uix/extras/dialog-styling-delay"
+  },
+  "/en/projects/uix/extras/dialog-styling-delay": {
+    "DE": "/projects/uix/extras/dialog-styling-delay",
+    "EN": "/en/projects/uix/extras/dialog-styling-delay",
+    "FR": "/fr/projects/uix/extras/dialog-styling-delay"
+  },
+  "/fr/projects/uix/extras/dialog-styling-delay": {
+    "DE": "/projects/uix/extras/dialog-styling-delay",
+    "EN": "/en/projects/uix/extras/dialog-styling-delay",
+    "FR": "/fr/projects/uix/extras/dialog-styling-delay"
+  },
+  "/projects/uix/extras/disable-entity-picture-image-override": {
+    "DE": "/projects/uix/extras/disable-entity-picture-image-override",
+    "EN": "/en/projects/uix/extras/disable-entity-picture-image-override",
+    "FR": "/fr/projects/uix/extras/disable-entity-picture-image-override"
+  },
+  "/en/projects/uix/extras/disable-entity-picture-image-override": {
+    "DE": "/projects/uix/extras/disable-entity-picture-image-override",
+    "EN": "/en/projects/uix/extras/disable-entity-picture-image-override",
+    "FR": "/fr/projects/uix/extras/disable-entity-picture-image-override"
+  },
+  "/fr/projects/uix/extras/disable-entity-picture-image-override": {
+    "DE": "/projects/uix/extras/disable-entity-picture-image-override",
+    "EN": "/en/projects/uix/extras/disable-entity-picture-image-override",
+    "FR": "/fr/projects/uix/extras/disable-entity-picture-image-override"
+  },
+  "/projects/uix/extras/disable-icon-styling": {
+    "DE": "/projects/uix/extras/disable-icon-styling",
+    "EN": "/en/projects/uix/extras/disable-icon-styling",
+    "FR": "/fr/projects/uix/extras/disable-icon-styling"
+  },
+  "/en/projects/uix/extras/disable-icon-styling": {
+    "DE": "/projects/uix/extras/disable-icon-styling",
+    "EN": "/en/projects/uix/extras/disable-icon-styling",
+    "FR": "/fr/projects/uix/extras/disable-icon-styling"
+  },
+  "/fr/projects/uix/extras/disable-icon-styling": {
+    "DE": "/projects/uix/extras/disable-icon-styling",
+    "EN": "/en/projects/uix/extras/disable-icon-styling",
+    "FR": "/fr/projects/uix/extras/disable-icon-styling"
+  },
+  "/projects/uix/extras/frontend-states-throttling": {
+    "DE": "/projects/uix/extras/frontend-states-throttling",
+    "EN": "/en/projects/uix/extras/frontend-states-throttling",
+    "FR": "/fr/projects/uix/extras/frontend-states-throttling"
+  },
+  "/en/projects/uix/extras/frontend-states-throttling": {
+    "DE": "/projects/uix/extras/frontend-states-throttling",
+    "EN": "/en/projects/uix/extras/frontend-states-throttling",
+    "FR": "/fr/projects/uix/extras/frontend-states-throttling"
+  },
+  "/fr/projects/uix/extras/frontend-states-throttling": {
+    "DE": "/projects/uix/extras/frontend-states-throttling",
+    "EN": "/en/projects/uix/extras/frontend-states-throttling",
+    "FR": "/fr/projects/uix/extras/frontend-states-throttling"
+  },
+  "/projects/uix/extras/hash-template-variable-updates": {
+    "DE": "/projects/uix/extras/hash-template-variable-updates",
+    "EN": "/en/projects/uix/extras/hash-template-variable-updates",
+    "FR": "/fr/projects/uix/extras/hash-template-variable-updates"
+  },
+  "/en/projects/uix/extras/hash-template-variable-updates": {
+    "DE": "/projects/uix/extras/hash-template-variable-updates",
+    "EN": "/en/projects/uix/extras/hash-template-variable-updates",
+    "FR": "/fr/projects/uix/extras/hash-template-variable-updates"
+  },
+  "/fr/projects/uix/extras/hash-template-variable-updates": {
+    "DE": "/projects/uix/extras/hash-template-variable-updates",
+    "EN": "/en/projects/uix/extras/hash-template-variable-updates",
+    "FR": "/fr/projects/uix/extras/hash-template-variable-updates"
+  },
+  "/projects/uix/extras/": {
+    "DE": "/projects/uix/extras/",
+    "EN": "/en/projects/uix/extras/",
+    "FR": "/fr/projects/uix/extras/"
+  },
+  "/en/projects/uix/extras/": {
+    "DE": "/projects/uix/extras/",
+    "EN": "/en/projects/uix/extras/",
+    "FR": "/fr/projects/uix/extras/"
+  },
+  "/fr/projects/uix/extras/": {
+    "DE": "/projects/uix/extras/",
+    "EN": "/en/projects/uix/extras/",
+    "FR": "/fr/projects/uix/extras/"
+  },
+  "/projects/uix/extras/style-custom-panels": {
+    "DE": "/projects/uix/extras/style-custom-panels",
+    "EN": "/en/projects/uix/extras/style-custom-panels",
+    "FR": "/fr/projects/uix/extras/style-custom-panels"
+  },
+  "/en/projects/uix/extras/style-custom-panels": {
+    "DE": "/projects/uix/extras/style-custom-panels",
+    "EN": "/en/projects/uix/extras/style-custom-panels",
+    "FR": "/fr/projects/uix/extras/style-custom-panels"
+  },
+  "/fr/projects/uix/extras/style-custom-panels": {
+    "DE": "/projects/uix/extras/style-custom-panels",
+    "EN": "/en/projects/uix/extras/style-custom-panels",
+    "FR": "/fr/projects/uix/extras/style-custom-panels"
+  },
+  "/projects/uix/extras/style-frame-panels": {
+    "DE": "/projects/uix/extras/style-frame-panels",
+    "EN": "/en/projects/uix/extras/style-frame-panels",
+    "FR": "/fr/projects/uix/extras/style-frame-panels"
+  },
+  "/en/projects/uix/extras/style-frame-panels": {
+    "DE": "/projects/uix/extras/style-frame-panels",
+    "EN": "/en/projects/uix/extras/style-frame-panels",
+    "FR": "/fr/projects/uix/extras/style-frame-panels"
+  },
+  "/fr/projects/uix/extras/style-frame-panels": {
+    "DE": "/projects/uix/extras/style-frame-panels",
+    "EN": "/en/projects/uix/extras/style-frame-panels",
+    "FR": "/fr/projects/uix/extras/style-frame-panels"
+  },
+  "/projects/uix/extras/uix-actions": {
+    "DE": "/projects/uix/extras/uix-actions",
+    "EN": "/en/projects/uix/extras/uix-actions",
+    "FR": "/fr/projects/uix/extras/uix-actions"
+  },
+  "/en/projects/uix/extras/uix-actions": {
+    "DE": "/projects/uix/extras/uix-actions",
+    "EN": "/en/projects/uix/extras/uix-actions",
+    "FR": "/fr/projects/uix/extras/uix-actions"
+  },
+  "/fr/projects/uix/extras/uix-actions": {
+    "DE": "/projects/uix/extras/uix-actions",
+    "EN": "/en/projects/uix/extras/uix-actions",
+    "FR": "/fr/projects/uix/extras/uix-actions"
+  },
+  "/projects/uix/faq": {
+    "DE": "/projects/uix/faq",
+    "EN": "/en/projects/uix/faq",
+    "FR": "/fr/projects/uix/faq"
+  },
+  "/en/projects/uix/faq": {
+    "DE": "/projects/uix/faq",
+    "EN": "/en/projects/uix/faq",
+    "FR": "/fr/projects/uix/faq"
+  },
+  "/fr/projects/uix/faq": {
+    "DE": "/projects/uix/faq",
+    "EN": "/en/projects/uix/faq",
+    "FR": "/fr/projects/uix/faq"
+  },
+  "/projects/uix/forge/forge": {
+    "DE": "/projects/uix/forge/forge",
+    "EN": "/en/projects/uix/forge/forge",
+    "FR": "/fr/projects/uix/forge/forge"
+  },
+  "/en/projects/uix/forge/forge": {
+    "DE": "/projects/uix/forge/forge",
+    "EN": "/en/projects/uix/forge/forge",
+    "FR": "/fr/projects/uix/forge/forge"
+  },
+  "/fr/projects/uix/forge/forge": {
+    "DE": "/projects/uix/forge/forge",
+    "EN": "/en/projects/uix/forge/forge",
+    "FR": "/fr/projects/uix/forge/forge"
+  },
+  "/projects/uix/forge/foundries": {
+    "DE": "/projects/uix/forge/foundries",
+    "EN": "/en/projects/uix/forge/foundries",
+    "FR": "/fr/projects/uix/forge/foundries"
+  },
+  "/en/projects/uix/forge/foundries": {
+    "DE": "/projects/uix/forge/foundries",
+    "EN": "/en/projects/uix/forge/foundries",
+    "FR": "/fr/projects/uix/forge/foundries"
+  },
+  "/fr/projects/uix/forge/foundries": {
+    "DE": "/projects/uix/forge/foundries",
+    "EN": "/en/projects/uix/forge/foundries",
+    "FR": "/fr/projects/uix/forge/foundries"
+  },
+  "/projects/uix/forge/": {
+    "DE": "/projects/uix/forge/",
+    "EN": "/en/projects/uix/forge/",
+    "FR": "/fr/projects/uix/forge/"
+  },
+  "/en/projects/uix/forge/": {
+    "DE": "/projects/uix/forge/",
+    "EN": "/en/projects/uix/forge/",
+    "FR": "/fr/projects/uix/forge/"
+  },
+  "/fr/projects/uix/forge/": {
+    "DE": "/projects/uix/forge/",
+    "EN": "/en/projects/uix/forge/",
+    "FR": "/fr/projects/uix/forge/"
+  },
+  "/projects/uix/forge/sparks/attribute": {
+    "DE": "/projects/uix/forge/sparks/attribute",
+    "EN": "/en/projects/uix/forge/sparks/attribute",
+    "FR": "/fr/projects/uix/forge/sparks/attribute"
+  },
+  "/en/projects/uix/forge/sparks/attribute": {
+    "DE": "/projects/uix/forge/sparks/attribute",
+    "EN": "/en/projects/uix/forge/sparks/attribute",
+    "FR": "/fr/projects/uix/forge/sparks/attribute"
+  },
+  "/fr/projects/uix/forge/sparks/attribute": {
+    "DE": "/projects/uix/forge/sparks/attribute",
+    "EN": "/en/projects/uix/forge/sparks/attribute",
+    "FR": "/fr/projects/uix/forge/sparks/attribute"
+  },
+  "/projects/uix/forge/sparks/background": {
+    "DE": "/projects/uix/forge/sparks/background",
+    "EN": "/en/projects/uix/forge/sparks/background",
+    "FR": "/fr/projects/uix/forge/sparks/background"
+  },
+  "/en/projects/uix/forge/sparks/background": {
+    "DE": "/projects/uix/forge/sparks/background",
+    "EN": "/en/projects/uix/forge/sparks/background",
+    "FR": "/fr/projects/uix/forge/sparks/background"
+  },
+  "/fr/projects/uix/forge/sparks/background": {
+    "DE": "/projects/uix/forge/sparks/background",
+    "EN": "/en/projects/uix/forge/sparks/background",
+    "FR": "/fr/projects/uix/forge/sparks/background"
+  },
+  "/projects/uix/forge/sparks/badge": {
+    "DE": "/projects/uix/forge/sparks/badge",
+    "EN": "/en/projects/uix/forge/sparks/badge",
+    "FR": "/fr/projects/uix/forge/sparks/badge"
+  },
+  "/en/projects/uix/forge/sparks/badge": {
+    "DE": "/projects/uix/forge/sparks/badge",
+    "EN": "/en/projects/uix/forge/sparks/badge",
+    "FR": "/fr/projects/uix/forge/sparks/badge"
+  },
+  "/fr/projects/uix/forge/sparks/badge": {
+    "DE": "/projects/uix/forge/sparks/badge",
+    "EN": "/en/projects/uix/forge/sparks/badge",
+    "FR": "/fr/projects/uix/forge/sparks/badge"
+  },
+  "/projects/uix/forge/sparks/button": {
+    "DE": "/projects/uix/forge/sparks/button",
+    "EN": "/en/projects/uix/forge/sparks/button",
+    "FR": "/fr/projects/uix/forge/sparks/button"
+  },
+  "/en/projects/uix/forge/sparks/button": {
+    "DE": "/projects/uix/forge/sparks/button",
+    "EN": "/en/projects/uix/forge/sparks/button",
+    "FR": "/fr/projects/uix/forge/sparks/button"
+  },
+  "/fr/projects/uix/forge/sparks/button": {
+    "DE": "/projects/uix/forge/sparks/button",
+    "EN": "/en/projects/uix/forge/sparks/button",
+    "FR": "/fr/projects/uix/forge/sparks/button"
+  },
+  "/projects/uix/forge/sparks/event": {
+    "DE": "/projects/uix/forge/sparks/event",
+    "EN": "/en/projects/uix/forge/sparks/event",
+    "FR": "/fr/projects/uix/forge/sparks/event"
+  },
+  "/en/projects/uix/forge/sparks/event": {
+    "DE": "/projects/uix/forge/sparks/event",
+    "EN": "/en/projects/uix/forge/sparks/event",
+    "FR": "/fr/projects/uix/forge/sparks/event"
+  },
+  "/fr/projects/uix/forge/sparks/event": {
+    "DE": "/projects/uix/forge/sparks/event",
+    "EN": "/en/projects/uix/forge/sparks/event",
+    "FR": "/fr/projects/uix/forge/sparks/event"
+  },
+  "/projects/uix/forge/sparks/form": {
+    "DE": "/projects/uix/forge/sparks/form",
+    "EN": "/en/projects/uix/forge/sparks/form",
+    "FR": "/fr/projects/uix/forge/sparks/form"
+  },
+  "/en/projects/uix/forge/sparks/form": {
+    "DE": "/projects/uix/forge/sparks/form",
+    "EN": "/en/projects/uix/forge/sparks/form",
+    "FR": "/fr/projects/uix/forge/sparks/form"
+  },
+  "/fr/projects/uix/forge/sparks/form": {
+    "DE": "/projects/uix/forge/sparks/form",
+    "EN": "/en/projects/uix/forge/sparks/form",
+    "FR": "/fr/projects/uix/forge/sparks/form"
+  },
+  "/projects/uix/forge/sparks/grid": {
+    "DE": "/projects/uix/forge/sparks/grid",
+    "EN": "/en/projects/uix/forge/sparks/grid",
+    "FR": "/fr/projects/uix/forge/sparks/grid"
+  },
+  "/en/projects/uix/forge/sparks/grid": {
+    "DE": "/projects/uix/forge/sparks/grid",
+    "EN": "/en/projects/uix/forge/sparks/grid",
+    "FR": "/fr/projects/uix/forge/sparks/grid"
+  },
+  "/fr/projects/uix/forge/sparks/grid": {
+    "DE": "/projects/uix/forge/sparks/grid",
+    "EN": "/en/projects/uix/forge/sparks/grid",
+    "FR": "/fr/projects/uix/forge/sparks/grid"
+  },
+  "/projects/uix/forge/sparks/": {
+    "DE": "/projects/uix/forge/sparks/",
+    "EN": "/en/projects/uix/forge/sparks/",
+    "FR": "/fr/projects/uix/forge/sparks/"
+  },
+  "/en/projects/uix/forge/sparks/": {
+    "DE": "/projects/uix/forge/sparks/",
+    "EN": "/en/projects/uix/forge/sparks/",
+    "FR": "/fr/projects/uix/forge/sparks/"
+  },
+  "/fr/projects/uix/forge/sparks/": {
+    "DE": "/projects/uix/forge/sparks/",
+    "EN": "/en/projects/uix/forge/sparks/",
+    "FR": "/fr/projects/uix/forge/sparks/"
+  },
+  "/projects/uix/forge/sparks/lock": {
+    "DE": "/projects/uix/forge/sparks/lock",
+    "EN": "/en/projects/uix/forge/sparks/lock",
+    "FR": "/fr/projects/uix/forge/sparks/lock"
+  },
+  "/en/projects/uix/forge/sparks/lock": {
+    "DE": "/projects/uix/forge/sparks/lock",
+    "EN": "/en/projects/uix/forge/sparks/lock",
+    "FR": "/fr/projects/uix/forge/sparks/lock"
+  },
+  "/fr/projects/uix/forge/sparks/lock": {
+    "DE": "/projects/uix/forge/sparks/lock",
+    "EN": "/en/projects/uix/forge/sparks/lock",
+    "FR": "/fr/projects/uix/forge/sparks/lock"
+  },
+  "/projects/uix/forge/sparks/map": {
+    "DE": "/projects/uix/forge/sparks/map",
+    "EN": "/en/projects/uix/forge/sparks/map",
+    "FR": "/fr/projects/uix/forge/sparks/map"
+  },
+  "/en/projects/uix/forge/sparks/map": {
+    "DE": "/projects/uix/forge/sparks/map",
+    "EN": "/en/projects/uix/forge/sparks/map",
+    "FR": "/fr/projects/uix/forge/sparks/map"
+  },
+  "/fr/projects/uix/forge/sparks/map": {
+    "DE": "/projects/uix/forge/sparks/map",
+    "EN": "/en/projects/uix/forge/sparks/map",
+    "FR": "/fr/projects/uix/forge/sparks/map"
+  },
+  "/projects/uix/forge/sparks/more-info": {
+    "DE": "/projects/uix/forge/sparks/more-info",
+    "EN": "/en/projects/uix/forge/sparks/more-info",
+    "FR": "/fr/projects/uix/forge/sparks/more-info"
+  },
+  "/en/projects/uix/forge/sparks/more-info": {
+    "DE": "/projects/uix/forge/sparks/more-info",
+    "EN": "/en/projects/uix/forge/sparks/more-info",
+    "FR": "/fr/projects/uix/forge/sparks/more-info"
+  },
+  "/fr/projects/uix/forge/sparks/more-info": {
+    "DE": "/projects/uix/forge/sparks/more-info",
+    "EN": "/en/projects/uix/forge/sparks/more-info",
+    "FR": "/fr/projects/uix/forge/sparks/more-info"
+  },
+  "/projects/uix/forge/sparks/overlay-icon": {
+    "DE": "/projects/uix/forge/sparks/overlay-icon",
+    "EN": "/en/projects/uix/forge/sparks/overlay-icon",
+    "FR": "/fr/projects/uix/forge/sparks/overlay-icon"
+  },
+  "/en/projects/uix/forge/sparks/overlay-icon": {
+    "DE": "/projects/uix/forge/sparks/overlay-icon",
+    "EN": "/en/projects/uix/forge/sparks/overlay-icon",
+    "FR": "/fr/projects/uix/forge/sparks/overlay-icon"
+  },
+  "/fr/projects/uix/forge/sparks/overlay-icon": {
+    "DE": "/projects/uix/forge/sparks/overlay-icon",
+    "EN": "/en/projects/uix/forge/sparks/overlay-icon",
+    "FR": "/fr/projects/uix/forge/sparks/overlay-icon"
+  },
+  "/projects/uix/forge/sparks/search": {
+    "DE": "/projects/uix/forge/sparks/search",
+    "EN": "/en/projects/uix/forge/sparks/search",
+    "FR": "/fr/projects/uix/forge/sparks/search"
+  },
+  "/en/projects/uix/forge/sparks/search": {
+    "DE": "/projects/uix/forge/sparks/search",
+    "EN": "/en/projects/uix/forge/sparks/search",
+    "FR": "/fr/projects/uix/forge/sparks/search"
+  },
+  "/fr/projects/uix/forge/sparks/search": {
+    "DE": "/projects/uix/forge/sparks/search",
+    "EN": "/en/projects/uix/forge/sparks/search",
+    "FR": "/fr/projects/uix/forge/sparks/search"
+  },
+  "/projects/uix/forge/sparks/state-badge": {
+    "DE": "/projects/uix/forge/sparks/state-badge",
+    "EN": "/en/projects/uix/forge/sparks/state-badge",
+    "FR": "/fr/projects/uix/forge/sparks/state-badge"
+  },
+  "/en/projects/uix/forge/sparks/state-badge": {
+    "DE": "/projects/uix/forge/sparks/state-badge",
+    "EN": "/en/projects/uix/forge/sparks/state-badge",
+    "FR": "/fr/projects/uix/forge/sparks/state-badge"
+  },
+  "/fr/projects/uix/forge/sparks/state-badge": {
+    "DE": "/projects/uix/forge/sparks/state-badge",
+    "EN": "/en/projects/uix/forge/sparks/state-badge",
+    "FR": "/fr/projects/uix/forge/sparks/state-badge"
+  },
+  "/projects/uix/forge/sparks/theme": {
+    "DE": "/projects/uix/forge/sparks/theme",
+    "EN": "/en/projects/uix/forge/sparks/theme",
+    "FR": "/fr/projects/uix/forge/sparks/theme"
+  },
+  "/en/projects/uix/forge/sparks/theme": {
+    "DE": "/projects/uix/forge/sparks/theme",
+    "EN": "/en/projects/uix/forge/sparks/theme",
+    "FR": "/fr/projects/uix/forge/sparks/theme"
+  },
+  "/fr/projects/uix/forge/sparks/theme": {
+    "DE": "/projects/uix/forge/sparks/theme",
+    "EN": "/en/projects/uix/forge/sparks/theme",
+    "FR": "/fr/projects/uix/forge/sparks/theme"
+  },
+  "/projects/uix/forge/sparks/tile-icon": {
+    "DE": "/projects/uix/forge/sparks/tile-icon",
+    "EN": "/en/projects/uix/forge/sparks/tile-icon",
+    "FR": "/fr/projects/uix/forge/sparks/tile-icon"
+  },
+  "/en/projects/uix/forge/sparks/tile-icon": {
+    "DE": "/projects/uix/forge/sparks/tile-icon",
+    "EN": "/en/projects/uix/forge/sparks/tile-icon",
+    "FR": "/fr/projects/uix/forge/sparks/tile-icon"
+  },
+  "/fr/projects/uix/forge/sparks/tile-icon": {
+    "DE": "/projects/uix/forge/sparks/tile-icon",
+    "EN": "/en/projects/uix/forge/sparks/tile-icon",
+    "FR": "/fr/projects/uix/forge/sparks/tile-icon"
+  },
+  "/projects/uix/forge/sparks/tooltip": {
+    "DE": "/projects/uix/forge/sparks/tooltip",
+    "EN": "/en/projects/uix/forge/sparks/tooltip",
+    "FR": "/fr/projects/uix/forge/sparks/tooltip"
+  },
+  "/en/projects/uix/forge/sparks/tooltip": {
+    "DE": "/projects/uix/forge/sparks/tooltip",
+    "EN": "/en/projects/uix/forge/sparks/tooltip",
+    "FR": "/fr/projects/uix/forge/sparks/tooltip"
+  },
+  "/fr/projects/uix/forge/sparks/tooltip": {
+    "DE": "/projects/uix/forge/sparks/tooltip",
+    "EN": "/en/projects/uix/forge/sparks/tooltip",
+    "FR": "/fr/projects/uix/forge/sparks/tooltip"
+  },
+  "/projects/uix/guides": {
+    "DE": "/projects/uix/guides",
+    "EN": "/en/projects/uix/guides",
+    "FR": "/fr/projects/uix/guides"
+  },
+  "/en/projects/uix/guides": {
+    "DE": "/projects/uix/guides",
+    "EN": "/en/projects/uix/guides",
+    "FR": "/fr/projects/uix/guides"
+  },
+  "/fr/projects/uix/guides": {
+    "DE": "/projects/uix/guides",
+    "EN": "/en/projects/uix/guides",
+    "FR": "/fr/projects/uix/guides"
+  },
+  "/projects/uix/": {
+    "DE": "/projects/uix/",
+    "EN": "/en/projects/uix/",
+    "FR": "/fr/projects/uix/"
+  },
+  "/en/projects/uix/": {
+    "DE": "/projects/uix/",
+    "EN": "/en/projects/uix/",
+    "FR": "/fr/projects/uix/"
+  },
+  "/fr/projects/uix/": {
+    "DE": "/projects/uix/",
+    "EN": "/en/projects/uix/",
+    "FR": "/fr/projects/uix/"
+  },
+  "/projects/uix/license": {
+    "DE": "/projects/uix/license",
+    "EN": "/en/projects/uix/license",
+    "FR": "/fr/projects/uix/license"
+  },
+  "/en/projects/uix/license": {
+    "DE": "/projects/uix/license",
+    "EN": "/en/projects/uix/license",
+    "FR": "/fr/projects/uix/license"
+  },
+  "/fr/projects/uix/license": {
+    "DE": "/projects/uix/license",
+    "EN": "/en/projects/uix/license",
+    "FR": "/fr/projects/uix/license"
+  },
+  "/projects/uix/quick-start": {
+    "DE": "/projects/uix/quick-start",
+    "EN": "/en/projects/uix/quick-start",
+    "FR": "/fr/projects/uix/quick-start"
+  },
+  "/en/projects/uix/quick-start": {
+    "DE": "/projects/uix/quick-start",
+    "EN": "/en/projects/uix/quick-start",
+    "FR": "/fr/projects/uix/quick-start"
+  },
+  "/fr/projects/uix/quick-start": {
+    "DE": "/projects/uix/quick-start",
+    "EN": "/en/projects/uix/quick-start",
+    "FR": "/fr/projects/uix/quick-start"
+  },
+  "/projects/uix/translation-status": {
+    "DE": "/projects/uix/translation-status",
+    "EN": "/en/projects/uix/translation-status",
+    "FR": "/fr/projects/uix/translation-status"
+  },
+  "/en/projects/uix/translation-status": {
+    "DE": "/projects/uix/translation-status",
+    "EN": "/en/projects/uix/translation-status",
+    "FR": "/fr/projects/uix/translation-status"
+  },
+  "/fr/projects/uix/translation-status": {
+    "DE": "/projects/uix/translation-status",
+    "EN": "/en/projects/uix/translation-status",
+    "FR": "/fr/projects/uix/translation-status"
+  },
+  "/projects/uix/using/apps": {
+    "DE": "/projects/uix/using/apps",
+    "EN": "/en/projects/uix/using/apps",
+    "FR": "/fr/projects/uix/using/apps"
+  },
+  "/en/projects/uix/using/apps": {
+    "DE": "/projects/uix/using/apps",
+    "EN": "/en/projects/uix/using/apps",
+    "FR": "/fr/projects/uix/using/apps"
+  },
+  "/fr/projects/uix/using/apps": {
+    "DE": "/projects/uix/using/apps",
+    "EN": "/en/projects/uix/using/apps",
+    "FR": "/fr/projects/uix/using/apps"
+  },
+  "/projects/uix/using/cards": {
+    "DE": "/projects/uix/using/cards",
+    "EN": "/en/projects/uix/using/cards",
+    "FR": "/fr/projects/uix/using/cards"
+  },
+  "/en/projects/uix/using/cards": {
+    "DE": "/projects/uix/using/cards",
+    "EN": "/en/projects/uix/using/cards",
+    "FR": "/fr/projects/uix/using/cards"
+  },
+  "/fr/projects/uix/using/cards": {
+    "DE": "/projects/uix/using/cards",
+    "EN": "/en/projects/uix/using/cards",
+    "FR": "/fr/projects/uix/using/cards"
+  },
+  "/projects/uix/using/custom-panels": {
+    "DE": "/projects/uix/using/custom-panels",
+    "EN": "/en/projects/uix/using/custom-panels",
+    "FR": "/fr/projects/uix/using/custom-panels"
+  },
+  "/en/projects/uix/using/custom-panels": {
+    "DE": "/projects/uix/using/custom-panels",
+    "EN": "/en/projects/uix/using/custom-panels",
+    "FR": "/fr/projects/uix/using/custom-panels"
+  },
+  "/fr/projects/uix/using/custom-panels": {
+    "DE": "/projects/uix/using/custom-panels",
+    "EN": "/en/projects/uix/using/custom-panels",
+    "FR": "/fr/projects/uix/using/custom-panels"
+  },
+  "/projects/uix/using/entities": {
+    "DE": "/projects/uix/using/entities",
+    "EN": "/en/projects/uix/using/entities",
+    "FR": "/fr/projects/uix/using/entities"
+  },
+  "/en/projects/uix/using/entities": {
+    "DE": "/projects/uix/using/entities",
+    "EN": "/en/projects/uix/using/entities",
+    "FR": "/fr/projects/uix/using/entities"
+  },
+  "/fr/projects/uix/using/entities": {
+    "DE": "/projects/uix/using/entities",
+    "EN": "/en/projects/uix/using/entities",
+    "FR": "/fr/projects/uix/using/entities"
+  },
+  "/projects/uix/using/icons": {
+    "DE": "/projects/uix/using/icons",
+    "EN": "/en/projects/uix/using/icons",
+    "FR": "/fr/projects/uix/using/icons"
+  },
+  "/en/projects/uix/using/icons": {
+    "DE": "/projects/uix/using/icons",
+    "EN": "/en/projects/uix/using/icons",
+    "FR": "/fr/projects/uix/using/icons"
+  },
+  "/fr/projects/uix/using/icons": {
+    "DE": "/projects/uix/using/icons",
+    "EN": "/en/projects/uix/using/icons",
+    "FR": "/fr/projects/uix/using/icons"
+  },
+  "/projects/uix/using/images": {
+    "DE": "/projects/uix/using/images",
+    "EN": "/en/projects/uix/using/images",
+    "FR": "/fr/projects/uix/using/images"
+  },
+  "/en/projects/uix/using/images": {
+    "DE": "/projects/uix/using/images",
+    "EN": "/en/projects/uix/using/images",
+    "FR": "/fr/projects/uix/using/images"
+  },
+  "/fr/projects/uix/using/images": {
+    "DE": "/projects/uix/using/images",
+    "EN": "/en/projects/uix/using/images",
+    "FR": "/fr/projects/uix/using/images"
+  },
+  "/projects/uix/using/": {
+    "DE": "/projects/uix/using/",
+    "EN": "/en/projects/uix/using/",
+    "FR": "/fr/projects/uix/using/"
+  },
+  "/en/projects/uix/using/": {
+    "DE": "/projects/uix/using/",
+    "EN": "/en/projects/uix/using/",
+    "FR": "/fr/projects/uix/using/"
+  },
+  "/fr/projects/uix/using/": {
+    "DE": "/projects/uix/using/",
+    "EN": "/en/projects/uix/using/",
+    "FR": "/fr/projects/uix/using/"
+  },
+  "/projects/uix/using/other": {
+    "DE": "/projects/uix/using/other",
+    "EN": "/en/projects/uix/using/other",
+    "FR": "/fr/projects/uix/using/other"
+  },
+  "/en/projects/uix/using/other": {
+    "DE": "/projects/uix/using/other",
+    "EN": "/en/projects/uix/using/other",
+    "FR": "/fr/projects/uix/using/other"
+  },
+  "/fr/projects/uix/using/other": {
+    "DE": "/projects/uix/using/other",
+    "EN": "/en/projects/uix/using/other",
+    "FR": "/fr/projects/uix/using/other"
+  },
+  "/projects/uix/using/section-backgrounds": {
+    "DE": "/projects/uix/using/section-backgrounds",
+    "EN": "/en/projects/uix/using/section-backgrounds",
+    "FR": "/fr/projects/uix/using/section-backgrounds"
+  },
+  "/en/projects/uix/using/section-backgrounds": {
+    "DE": "/projects/uix/using/section-backgrounds",
+    "EN": "/en/projects/uix/using/section-backgrounds",
+    "FR": "/fr/projects/uix/using/section-backgrounds"
+  },
+  "/fr/projects/uix/using/section-backgrounds": {
+    "DE": "/projects/uix/using/section-backgrounds",
+    "EN": "/en/projects/uix/using/section-backgrounds",
+    "FR": "/fr/projects/uix/using/section-backgrounds"
+  },
+  "/projects/uix/using/templates": {
+    "DE": "/projects/uix/using/templates",
+    "EN": "/en/projects/uix/using/templates",
+    "FR": "/fr/projects/uix/using/templates"
+  },
+  "/en/projects/uix/using/templates": {
+    "DE": "/projects/uix/using/templates",
+    "EN": "/en/projects/uix/using/templates",
+    "FR": "/fr/projects/uix/using/templates"
+  },
+  "/fr/projects/uix/using/templates": {
+    "DE": "/projects/uix/using/templates",
+    "EN": "/en/projects/uix/using/templates",
+    "FR": "/fr/projects/uix/using/templates"
+  },
+  "/projects/uix/using/themes": {
+    "DE": "/projects/uix/using/themes",
+    "EN": "/en/projects/uix/using/themes",
+    "FR": "/fr/projects/uix/using/themes"
+  },
+  "/en/projects/uix/using/themes": {
+    "DE": "/projects/uix/using/themes",
+    "EN": "/en/projects/uix/using/themes",
+    "FR": "/fr/projects/uix/using/themes"
+  },
+  "/fr/projects/uix/using/themes": {
+    "DE": "/projects/uix/using/themes",
+    "EN": "/en/projects/uix/using/themes",
+    "FR": "/fr/projects/uix/using/themes"
+  },
+  "/projects/uix/using/view-backgrounds": {
+    "DE": "/projects/uix/using/view-backgrounds",
+    "EN": "/en/projects/uix/using/view-backgrounds",
+    "FR": "/fr/projects/uix/using/view-backgrounds"
+  },
+  "/en/projects/uix/using/view-backgrounds": {
+    "DE": "/projects/uix/using/view-backgrounds",
+    "EN": "/en/projects/uix/using/view-backgrounds",
+    "FR": "/fr/projects/uix/using/view-backgrounds"
+  },
+  "/fr/projects/uix/using/view-backgrounds": {
+    "DE": "/projects/uix/using/view-backgrounds",
+    "EN": "/en/projects/uix/using/view-backgrounds",
+    "FR": "/fr/projects/uix/using/view-backgrounds"
+  },
+  "/projects/ultimate-timer/beispiele": {
+    "DE": "/projects/ultimate-timer/beispiele",
+    "EN": "/en/projects/ultimate-timer/examples",
+    "FR": "/fr/projects/ultimate-timer/examples"
+  },
+  "/en/projects/ultimate-timer/examples": {
+    "DE": "/projects/ultimate-timer/beispiele",
+    "EN": "/en/projects/ultimate-timer/examples",
+    "FR": "/fr/projects/ultimate-timer/examples"
+  },
+  "/fr/projects/ultimate-timer/examples": {
+    "DE": "/projects/ultimate-timer/beispiele",
+    "EN": "/en/projects/ultimate-timer/examples",
+    "FR": "/fr/projects/ultimate-timer/examples"
+  },
+  "/projects/ultimate-timer/funktionsweise": {
+    "DE": "/projects/ultimate-timer/funktionsweise",
+    "EN": "/en/projects/ultimate-timer/how-it-works",
+    "FR": "/fr/projects/ultimate-timer/how-it-works"
+  },
+  "/en/projects/ultimate-timer/how-it-works": {
+    "DE": "/projects/ultimate-timer/funktionsweise",
+    "EN": "/en/projects/ultimate-timer/how-it-works",
+    "FR": "/fr/projects/ultimate-timer/how-it-works"
+  },
+  "/fr/projects/ultimate-timer/how-it-works": {
+    "DE": "/projects/ultimate-timer/funktionsweise",
+    "EN": "/en/projects/ultimate-timer/how-it-works",
+    "FR": "/fr/projects/ultimate-timer/how-it-works"
+  },
+  "/projects/ultimate-timer/": {
+    "DE": "/projects/ultimate-timer/",
+    "EN": "/en/projects/ultimate-timer/",
+    "FR": "/fr/projects/ultimate-timer/"
+  },
+  "/en/projects/ultimate-timer/": {
+    "DE": "/projects/ultimate-timer/",
+    "EN": "/en/projects/ultimate-timer/",
+    "FR": "/fr/projects/ultimate-timer/"
+  },
+  "/fr/projects/ultimate-timer/": {
+    "DE": "/projects/ultimate-timer/",
+    "EN": "/en/projects/ultimate-timer/",
+    "FR": "/fr/projects/ultimate-timer/"
+  },
+  "/projects/ultimate-timer/installation": {
+    "DE": "/projects/ultimate-timer/installation",
+    "EN": "/en/projects/ultimate-timer/installation",
+    "FR": "/fr/projects/ultimate-timer/installation"
+  },
+  "/en/projects/ultimate-timer/installation": {
+    "DE": "/projects/ultimate-timer/installation",
+    "EN": "/en/projects/ultimate-timer/installation",
+    "FR": "/fr/projects/ultimate-timer/installation"
+  },
+  "/fr/projects/ultimate-timer/installation": {
+    "DE": "/projects/ultimate-timer/installation",
+    "EN": "/en/projects/ultimate-timer/installation",
+    "FR": "/fr/projects/ultimate-timer/installation"
+  },
+  "/projects/ultimate-timer/konfiguration": {
+    "DE": "/projects/ultimate-timer/konfiguration",
+    "EN": "/en/projects/ultimate-timer/configuration",
+    "FR": "/fr/projects/ultimate-timer/configuration"
+  },
+  "/en/projects/ultimate-timer/configuration": {
+    "DE": "/projects/ultimate-timer/konfiguration",
+    "EN": "/en/projects/ultimate-timer/configuration",
+    "FR": "/fr/projects/ultimate-timer/configuration"
+  },
+  "/fr/projects/ultimate-timer/configuration": {
+    "DE": "/projects/ultimate-timer/konfiguration",
+    "EN": "/en/projects/ultimate-timer/configuration",
+    "FR": "/fr/projects/ultimate-timer/configuration"
+  },
+  "/sammlung/calendar-card-pro/beispiele": {
+    "DE": "/sammlung/calendar-card-pro/beispiele",
+    "EN": "/en/collection/calendar-card-pro/beispiele",
+    "FR": "/fr/collection/calendar-card-pro/beispiele"
+  },
+  "/en/collection/calendar-card-pro/beispiele": {
+    "DE": "/sammlung/calendar-card-pro/beispiele",
+    "EN": "/en/collection/calendar-card-pro/beispiele",
+    "FR": "/fr/collection/calendar-card-pro/beispiele"
+  },
+  "/fr/collection/calendar-card-pro/beispiele": {
+    "DE": "/sammlung/calendar-card-pro/beispiele",
+    "EN": "/en/collection/calendar-card-pro/beispiele",
+    "FR": "/fr/collection/calendar-card-pro/beispiele"
+  },
+  "/sammlung/calendar-card-pro/entwicklung": {
+    "DE": "/sammlung/calendar-card-pro/entwicklung",
+    "EN": "/en/collection/calendar-card-pro/entwicklung",
+    "FR": "/fr/collection/calendar-card-pro/entwicklung"
+  },
+  "/en/collection/calendar-card-pro/entwicklung": {
+    "DE": "/sammlung/calendar-card-pro/entwicklung",
+    "EN": "/en/collection/calendar-card-pro/entwicklung",
+    "FR": "/fr/collection/calendar-card-pro/entwicklung"
+  },
+  "/fr/collection/calendar-card-pro/entwicklung": {
+    "DE": "/sammlung/calendar-card-pro/entwicklung",
+    "EN": "/en/collection/calendar-card-pro/entwicklung",
+    "FR": "/fr/collection/calendar-card-pro/entwicklung"
+  },
+  "/sammlung/calendar-card-pro/features": {
+    "DE": "/sammlung/calendar-card-pro/features",
+    "EN": "/en/collection/calendar-card-pro/features",
+    "FR": "/fr/collection/calendar-card-pro/features"
+  },
+  "/en/collection/calendar-card-pro/features": {
+    "DE": "/sammlung/calendar-card-pro/features",
+    "EN": "/en/collection/calendar-card-pro/features",
+    "FR": "/fr/collection/calendar-card-pro/features"
+  },
+  "/fr/collection/calendar-card-pro/features": {
+    "DE": "/sammlung/calendar-card-pro/features",
+    "EN": "/en/collection/calendar-card-pro/features",
+    "FR": "/fr/collection/calendar-card-pro/features"
+  },
+  "/sammlung/calendar-card-pro/": {
+    "DE": "/sammlung/calendar-card-pro/",
+    "EN": "/en/collection/calendar-card-pro/",
+    "FR": "/fr/collection/calendar-card-pro/"
+  },
+  "/en/collection/calendar-card-pro/": {
+    "DE": "/sammlung/calendar-card-pro/",
+    "EN": "/en/collection/calendar-card-pro/",
+    "FR": "/fr/collection/calendar-card-pro/"
+  },
+  "/fr/collection/calendar-card-pro/": {
+    "DE": "/sammlung/calendar-card-pro/",
+    "EN": "/en/collection/calendar-card-pro/",
+    "FR": "/fr/collection/calendar-card-pro/"
+  },
+  "/sammlung/calendar-card-pro/installation": {
+    "DE": "/sammlung/calendar-card-pro/installation",
+    "EN": "/en/collection/calendar-card-pro/installation",
+    "FR": "/fr/collection/calendar-card-pro/installation"
+  },
+  "/en/collection/calendar-card-pro/installation": {
+    "DE": "/sammlung/calendar-card-pro/installation",
+    "EN": "/en/collection/calendar-card-pro/installation",
+    "FR": "/fr/collection/calendar-card-pro/installation"
+  },
+  "/fr/collection/calendar-card-pro/installation": {
+    "DE": "/sammlung/calendar-card-pro/installation",
+    "EN": "/en/collection/calendar-card-pro/installation",
+    "FR": "/fr/collection/calendar-card-pro/installation"
+  },
+  "/sammlung/calendar-card-pro/konfiguration": {
+    "DE": "/sammlung/calendar-card-pro/konfiguration",
+    "EN": "/en/collection/calendar-card-pro/konfiguration",
+    "FR": "/fr/collection/calendar-card-pro/konfiguration"
+  },
+  "/en/collection/calendar-card-pro/konfiguration": {
+    "DE": "/sammlung/calendar-card-pro/konfiguration",
+    "EN": "/en/collection/calendar-card-pro/konfiguration",
+    "FR": "/fr/collection/calendar-card-pro/konfiguration"
+  },
+  "/fr/collection/calendar-card-pro/konfiguration": {
+    "DE": "/sammlung/calendar-card-pro/konfiguration",
+    "EN": "/en/collection/calendar-card-pro/konfiguration",
+    "FR": "/fr/collection/calendar-card-pro/konfiguration"
+  },
+  "/sammlung/calendar-card-pro/lizenz-und-stand": {
+    "DE": "/sammlung/calendar-card-pro/lizenz-und-stand",
+    "EN": "/en/collection/calendar-card-pro/lizenz-und-stand",
+    "FR": "/fr/collection/calendar-card-pro/lizenz-und-stand"
+  },
+  "/en/collection/calendar-card-pro/lizenz-und-stand": {
+    "DE": "/sammlung/calendar-card-pro/lizenz-und-stand",
+    "EN": "/en/collection/calendar-card-pro/lizenz-und-stand",
+    "FR": "/fr/collection/calendar-card-pro/lizenz-und-stand"
+  },
+  "/fr/collection/calendar-card-pro/lizenz-und-stand": {
+    "DE": "/sammlung/calendar-card-pro/lizenz-und-stand",
+    "EN": "/en/collection/calendar-card-pro/lizenz-und-stand",
+    "FR": "/fr/collection/calendar-card-pro/lizenz-und-stand"
+  },
+  "/sammlung/calendar-card-pro/nutzung": {
+    "DE": "/sammlung/calendar-card-pro/nutzung",
+    "EN": "/en/collection/calendar-card-pro/nutzung",
+    "FR": "/fr/collection/calendar-card-pro/nutzung"
+  },
+  "/en/collection/calendar-card-pro/nutzung": {
+    "DE": "/sammlung/calendar-card-pro/nutzung",
+    "EN": "/en/collection/calendar-card-pro/nutzung",
+    "FR": "/fr/collection/calendar-card-pro/nutzung"
+  },
+  "/fr/collection/calendar-card-pro/nutzung": {
+    "DE": "/sammlung/calendar-card-pro/nutzung",
+    "EN": "/en/collection/calendar-card-pro/nutzung",
+    "FR": "/fr/collection/calendar-card-pro/nutzung"
+  },
+  "/sammlung/dashboard-layout-card-v2/": {
+    "DE": "/sammlung/dashboard-layout-card-v2/",
+    "EN": "/en/collection/dashboard-layout-card-v2/",
+    "FR": "/fr/collection/dashboard-layout-card-v2/"
+  },
+  "/en/collection/dashboard-layout-card-v2/": {
+    "DE": "/sammlung/dashboard-layout-card-v2/",
+    "EN": "/en/collection/dashboard-layout-card-v2/",
+    "FR": "/fr/collection/dashboard-layout-card-v2/"
+  },
+  "/fr/collection/dashboard-layout-card-v2/": {
+    "DE": "/sammlung/dashboard-layout-card-v2/",
+    "EN": "/en/collection/dashboard-layout-card-v2/",
+    "FR": "/fr/collection/dashboard-layout-card-v2/"
+  },
+  "/sammlung/flex-table-card/aktionen": {
+    "DE": "/sammlung/flex-table-card/aktionen",
+    "EN": "/en/collection/flex-table-card/aktionen",
+    "FR": "/fr/collection/flex-table-card/aktionen"
+  },
+  "/en/collection/flex-table-card/aktionen": {
+    "DE": "/sammlung/flex-table-card/aktionen",
+    "EN": "/en/collection/flex-table-card/aktionen",
+    "FR": "/fr/collection/flex-table-card/aktionen"
+  },
+  "/fr/collection/flex-table-card/aktionen": {
+    "DE": "/sammlung/flex-table-card/aktionen",
+    "EN": "/en/collection/flex-table-card/aktionen",
+    "FR": "/fr/collection/flex-table-card/aktionen"
+  },
+  "/sammlung/flex-table-card/beispiele-aus-forum": {
+    "DE": "/sammlung/flex-table-card/beispiele-aus-forum",
+    "EN": "/en/collection/flex-table-card/beispiele-aus-forum",
+    "FR": "/fr/collection/flex-table-card/beispiele-aus-forum"
+  },
+  "/en/collection/flex-table-card/beispiele-aus-forum": {
+    "DE": "/sammlung/flex-table-card/beispiele-aus-forum",
+    "EN": "/en/collection/flex-table-card/beispiele-aus-forum",
+    "FR": "/fr/collection/flex-table-card/beispiele-aus-forum"
+  },
+  "/fr/collection/flex-table-card/beispiele-aus-forum": {
+    "DE": "/sammlung/flex-table-card/beispiele-aus-forum",
+    "EN": "/en/collection/flex-table-card/beispiele-aus-forum",
+    "FR": "/fr/collection/flex-table-card/beispiele-aus-forum"
+  },
+  "/sammlung/flex-table-card/css": {
+    "DE": "/sammlung/flex-table-card/css",
+    "EN": "/en/collection/flex-table-card/css",
+    "FR": "/fr/collection/flex-table-card/css"
+  },
+  "/en/collection/flex-table-card/css": {
+    "DE": "/sammlung/flex-table-card/css",
+    "EN": "/en/collection/flex-table-card/css",
+    "FR": "/fr/collection/flex-table-card/css"
+  },
+  "/fr/collection/flex-table-card/css": {
+    "DE": "/sammlung/flex-table-card/css",
+    "EN": "/en/collection/flex-table-card/css",
+    "FR": "/fr/collection/flex-table-card/css"
+  },
+  "/sammlung/flex-table-card/datenquellen": {
+    "DE": "/sammlung/flex-table-card/datenquellen",
+    "EN": "/en/collection/flex-table-card/datenquellen",
+    "FR": "/fr/collection/flex-table-card/datenquellen"
+  },
+  "/en/collection/flex-table-card/datenquellen": {
+    "DE": "/sammlung/flex-table-card/datenquellen",
+    "EN": "/en/collection/flex-table-card/datenquellen",
+    "FR": "/fr/collection/flex-table-card/datenquellen"
+  },
+  "/fr/collection/flex-table-card/datenquellen": {
+    "DE": "/sammlung/flex-table-card/datenquellen",
+    "EN": "/en/collection/flex-table-card/datenquellen",
+    "FR": "/fr/collection/flex-table-card/datenquellen"
+  },
+  "/sammlung/flex-table-card/externe-daten": {
+    "DE": "/sammlung/flex-table-card/externe-daten",
+    "EN": "/en/collection/flex-table-card/externe-daten",
+    "FR": "/fr/collection/flex-table-card/externe-daten"
+  },
+  "/en/collection/flex-table-card/externe-daten": {
+    "DE": "/sammlung/flex-table-card/externe-daten",
+    "EN": "/en/collection/flex-table-card/externe-daten",
+    "FR": "/fr/collection/flex-table-card/externe-daten"
+  },
+  "/fr/collection/flex-table-card/externe-daten": {
+    "DE": "/sammlung/flex-table-card/externe-daten",
+    "EN": "/en/collection/flex-table-card/externe-daten",
+    "FR": "/fr/collection/flex-table-card/externe-daten"
+  },
+  "/sammlung/flex-table-card/formatierung": {
+    "DE": "/sammlung/flex-table-card/formatierung",
+    "EN": "/en/collection/flex-table-card/formatierung",
+    "FR": "/fr/collection/flex-table-card/formatierung"
+  },
+  "/en/collection/flex-table-card/formatierung": {
+    "DE": "/sammlung/flex-table-card/formatierung",
+    "EN": "/en/collection/flex-table-card/formatierung",
+    "FR": "/fr/collection/flex-table-card/formatierung"
+  },
+  "/fr/collection/flex-table-card/formatierung": {
+    "DE": "/sammlung/flex-table-card/formatierung",
+    "EN": "/en/collection/flex-table-card/formatierung",
+    "FR": "/fr/collection/flex-table-card/formatierung"
+  },
+  "/sammlung/flex-table-card/grundlagen": {
+    "DE": "/sammlung/flex-table-card/grundlagen",
+    "EN": "/en/collection/flex-table-card/grundlagen",
+    "FR": "/fr/collection/flex-table-card/grundlagen"
+  },
+  "/en/collection/flex-table-card/grundlagen": {
+    "DE": "/sammlung/flex-table-card/grundlagen",
+    "EN": "/en/collection/flex-table-card/grundlagen",
+    "FR": "/fr/collection/flex-table-card/grundlagen"
+  },
+  "/fr/collection/flex-table-card/grundlagen": {
+    "DE": "/sammlung/flex-table-card/grundlagen",
+    "EN": "/en/collection/flex-table-card/grundlagen",
+    "FR": "/fr/collection/flex-table-card/grundlagen"
+  },
+  "/sammlung/flex-table-card/header-footer": {
+    "DE": "/sammlung/flex-table-card/header-footer",
+    "EN": "/en/collection/flex-table-card/header-footer",
+    "FR": "/fr/collection/flex-table-card/header-footer"
+  },
+  "/en/collection/flex-table-card/header-footer": {
+    "DE": "/sammlung/flex-table-card/header-footer",
+    "EN": "/en/collection/flex-table-card/header-footer",
+    "FR": "/fr/collection/flex-table-card/header-footer"
+  },
+  "/fr/collection/flex-table-card/header-footer": {
+    "DE": "/sammlung/flex-table-card/header-footer",
+    "EN": "/en/collection/flex-table-card/header-footer",
+    "FR": "/fr/collection/flex-table-card/header-footer"
+  },
+  "/sammlung/flex-table-card/": {
+    "DE": "/sammlung/flex-table-card/",
+    "EN": "/en/collection/flex-table-card/",
+    "FR": "/fr/collection/flex-table-card/"
+  },
+  "/en/collection/flex-table-card/": {
+    "DE": "/sammlung/flex-table-card/",
+    "EN": "/en/collection/flex-table-card/",
+    "FR": "/fr/collection/flex-table-card/"
+  },
+  "/fr/collection/flex-table-card/": {
+    "DE": "/sammlung/flex-table-card/",
+    "EN": "/en/collection/flex-table-card/",
+    "FR": "/fr/collection/flex-table-card/"
+  },
+  "/sammlung/flex-table-card/installation": {
+    "DE": "/sammlung/flex-table-card/installation",
+    "EN": "/en/collection/flex-table-card/installation",
+    "FR": "/fr/collection/flex-table-card/installation"
+  },
+  "/en/collection/flex-table-card/installation": {
+    "DE": "/sammlung/flex-table-card/installation",
+    "EN": "/en/collection/flex-table-card/installation",
+    "FR": "/fr/collection/flex-table-card/installation"
+  },
+  "/fr/collection/flex-table-card/installation": {
+    "DE": "/sammlung/flex-table-card/installation",
+    "EN": "/en/collection/flex-table-card/installation",
+    "FR": "/fr/collection/flex-table-card/installation"
+  },
+  "/sammlung/flex-table-card/paketliste": {
+    "DE": "/sammlung/flex-table-card/paketliste",
+    "EN": "/en/collection/flex-table-card/paketliste",
+    "FR": "/fr/collection/flex-table-card/paketliste"
+  },
+  "/en/collection/flex-table-card/paketliste": {
+    "DE": "/sammlung/flex-table-card/paketliste",
+    "EN": "/en/collection/flex-table-card/paketliste",
+    "FR": "/fr/collection/flex-table-card/paketliste"
+  },
+  "/fr/collection/flex-table-card/paketliste": {
+    "DE": "/sammlung/flex-table-card/paketliste",
+    "EN": "/en/collection/flex-table-card/paketliste",
+    "FR": "/fr/collection/flex-table-card/paketliste"
+  },
+  "/sammlung/flex-table-card/referenz": {
+    "DE": "/sammlung/flex-table-card/referenz",
+    "EN": "/en/collection/flex-table-card/referenz",
+    "FR": "/fr/collection/flex-table-card/referenz"
+  },
+  "/en/collection/flex-table-card/referenz": {
+    "DE": "/sammlung/flex-table-card/referenz",
+    "EN": "/en/collection/flex-table-card/referenz",
+    "FR": "/fr/collection/flex-table-card/referenz"
+  },
+  "/fr/collection/flex-table-card/referenz": {
+    "DE": "/sammlung/flex-table-card/referenz",
+    "EN": "/en/collection/flex-table-card/referenz",
+    "FR": "/fr/collection/flex-table-card/referenz"
+  },
+  "/sammlung/flex-table-card/sortierung": {
+    "DE": "/sammlung/flex-table-card/sortierung",
+    "EN": "/en/collection/flex-table-card/sortierung",
+    "FR": "/fr/collection/flex-table-card/sortierung"
+  },
+  "/en/collection/flex-table-card/sortierung": {
+    "DE": "/sammlung/flex-table-card/sortierung",
+    "EN": "/en/collection/flex-table-card/sortierung",
+    "FR": "/fr/collection/flex-table-card/sortierung"
+  },
+  "/fr/collection/flex-table-card/sortierung": {
+    "DE": "/sammlung/flex-table-card/sortierung",
+    "EN": "/en/collection/flex-table-card/sortierung",
+    "FR": "/fr/collection/flex-table-card/sortierung"
+  },
+  "/sammlung/frosted-glass-manager/": {
+    "DE": "/sammlung/frosted-glass-manager/",
+    "EN": "/en/collection/frosted-glass-manager/",
+    "FR": "/fr/collection/frosted-glass-manager/"
+  },
+  "/en/collection/frosted-glass-manager/": {
+    "DE": "/sammlung/frosted-glass-manager/",
+    "EN": "/en/collection/frosted-glass-manager/",
+    "FR": "/fr/collection/frosted-glass-manager/"
+  },
+  "/fr/collection/frosted-glass-manager/": {
+    "DE": "/sammlung/frosted-glass-manager/",
+    "EN": "/en/collection/frosted-glass-manager/",
+    "FR": "/fr/collection/frosted-glass-manager/"
+  },
+  "/sammlung/frosted-glass-theme/": {
+    "DE": "/sammlung/frosted-glass-theme/",
+    "EN": "/en/collection/frosted-glass-theme/",
+    "FR": "/fr/collection/frosted-glass-theme/"
+  },
+  "/en/collection/frosted-glass-theme/": {
+    "DE": "/sammlung/frosted-glass-theme/",
+    "EN": "/en/collection/frosted-glass-theme/",
+    "FR": "/fr/collection/frosted-glass-theme/"
+  },
+  "/fr/collection/frosted-glass-theme/": {
+    "DE": "/sammlung/frosted-glass-theme/",
+    "EN": "/en/collection/frosted-glass-theme/",
+    "FR": "/fr/collection/frosted-glass-theme/"
+  },
+  "/sammlung/ha-apps": {
+    "DE": "/sammlung/ha-apps",
+    "EN": "/en/collection/ha-apps",
+    "FR": "/fr/collection/ha-apps"
+  },
+  "/en/collection/ha-apps": {
+    "DE": "/sammlung/ha-apps",
+    "EN": "/en/collection/ha-apps",
+    "FR": "/fr/collection/ha-apps"
+  },
+  "/fr/collection/ha-apps": {
+    "DE": "/sammlung/ha-apps",
+    "EN": "/en/collection/ha-apps",
+    "FR": "/fr/collection/ha-apps"
+  },
+  "/sammlung/ha-automation-exporter/": {
+    "DE": "/sammlung/ha-automation-exporter/",
+    "EN": "/en/collection/ha-automation-exporter/",
+    "FR": "/fr/collection/ha-automation-exporter/"
+  },
+  "/en/collection/ha-automation-exporter/": {
+    "DE": "/sammlung/ha-automation-exporter/",
+    "EN": "/en/collection/ha-automation-exporter/",
+    "FR": "/fr/collection/ha-automation-exporter/"
+  },
+  "/fr/collection/ha-automation-exporter/": {
+    "DE": "/sammlung/ha-automation-exporter/",
+    "EN": "/en/collection/ha-automation-exporter/",
+    "FR": "/fr/collection/ha-automation-exporter/"
+  },
+  "/sammlung/ha-blueprints": {
+    "DE": "/sammlung/ha-blueprints",
+    "EN": "/en/collection/ha-blueprints",
+    "FR": "/fr/collection/ha-blueprints"
+  },
+  "/en/collection/ha-blueprints": {
+    "DE": "/sammlung/ha-blueprints",
+    "EN": "/en/collection/ha-blueprints",
+    "FR": "/fr/collection/ha-blueprints"
+  },
+  "/fr/collection/ha-blueprints": {
+    "DE": "/sammlung/ha-blueprints",
+    "EN": "/en/collection/ha-blueprints",
+    "FR": "/fr/collection/ha-blueprints"
+  },
+  "/sammlung/ha-cards": {
+    "DE": "/sammlung/ha-cards",
+    "EN": "/en/collection/ha-cards",
+    "FR": "/fr/collection/ha-cards"
+  },
+  "/en/collection/ha-cards": {
+    "DE": "/sammlung/ha-cards",
+    "EN": "/en/collection/ha-cards",
+    "FR": "/fr/collection/ha-cards"
+  },
+  "/fr/collection/ha-cards": {
+    "DE": "/sammlung/ha-cards",
+    "EN": "/en/collection/ha-cards",
+    "FR": "/fr/collection/ha-cards"
+  },
+  "/sammlung/ha-dashboard": {
+    "DE": "/sammlung/ha-dashboard",
+    "EN": "/en/collection/ha-dashboard",
+    "FR": "/fr/collection/ha-dashboard"
+  },
+  "/en/collection/ha-dashboard": {
+    "DE": "/sammlung/ha-dashboard",
+    "EN": "/en/collection/ha-dashboard",
+    "FR": "/fr/collection/ha-dashboard"
+  },
+  "/fr/collection/ha-dashboard": {
+    "DE": "/sammlung/ha-dashboard",
+    "EN": "/en/collection/ha-dashboard",
+    "FR": "/fr/collection/ha-dashboard"
+  },
+  "/sammlung/ha-empfehlungen": {
+    "DE": "/sammlung/ha-empfehlungen",
+    "EN": "/en/collection/ha-recommendations",
+    "FR": "/fr/collection/ha-recommendations"
+  },
+  "/en/collection/ha-recommendations": {
+    "DE": "/sammlung/ha-empfehlungen",
+    "EN": "/en/collection/ha-recommendations",
+    "FR": "/fr/collection/ha-recommendations"
+  },
+  "/fr/collection/ha-recommendations": {
+    "DE": "/sammlung/ha-empfehlungen",
+    "EN": "/en/collection/ha-recommendations",
+    "FR": "/fr/collection/ha-recommendations"
+  },
+  "/sammlung/ha-integrationen": {
+    "DE": "/sammlung/ha-integrationen",
+    "EN": "/en/collection/ha-integrations",
+    "FR": "/fr/collection/ha-integrations"
+  },
+  "/en/collection/ha-integrations": {
+    "DE": "/sammlung/ha-integrationen",
+    "EN": "/en/collection/ha-integrations",
+    "FR": "/fr/collection/ha-integrations"
+  },
+  "/fr/collection/ha-integrations": {
+    "DE": "/sammlung/ha-integrationen",
+    "EN": "/en/collection/ha-integrations",
+    "FR": "/fr/collection/ha-integrations"
+  },
+  "/sammlung/ha-tools": {
+    "DE": "/sammlung/ha-tools",
+    "EN": "/en/collection/ha-tools",
+    "FR": "/fr/collection/ha-tools"
+  },
+  "/en/collection/ha-tools": {
+    "DE": "/sammlung/ha-tools",
+    "EN": "/en/collection/ha-tools",
+    "FR": "/fr/collection/ha-tools"
+  },
+  "/fr/collection/ha-tools": {
+    "DE": "/sammlung/ha-tools",
+    "EN": "/en/collection/ha-tools",
+    "FR": "/fr/collection/ha-tools"
+  },
+  "/sammlung/hacs-dokus": {
+    "DE": "/sammlung/hacs-dokus",
+    "EN": "/en/collection/hacs-docs",
+    "FR": "/fr/collection/hacs-docs"
+  },
+  "/en/collection/hacs-docs": {
+    "DE": "/sammlung/hacs-dokus",
+    "EN": "/en/collection/hacs-docs",
+    "FR": "/fr/collection/hacs-docs"
+  },
+  "/fr/collection/hacs-docs": {
+    "DE": "/sammlung/hacs-dokus",
+    "EN": "/en/collection/hacs-docs",
+    "FR": "/fr/collection/hacs-docs"
+  },
+  "/sammlung/": {
+    "DE": "/sammlung/",
+    "EN": "/en/collection/",
+    "FR": "/fr/collection/"
+  },
+  "/en/collection/": {
+    "DE": "/sammlung/",
+    "EN": "/en/collection/",
+    "FR": "/fr/collection/"
+  },
+  "/fr/collection/": {
+    "DE": "/sammlung/",
+    "EN": "/en/collection/",
+    "FR": "/fr/collection/"
+  },
+  "/sammlung/mushroom/beispiele": {
+    "DE": "/sammlung/mushroom/beispiele",
+    "EN": "/en/collection/mushroom/beispiele",
+    "FR": "/fr/collection/mushroom/beispiele"
+  },
+  "/en/collection/mushroom/beispiele": {
+    "DE": "/sammlung/mushroom/beispiele",
+    "EN": "/en/collection/mushroom/beispiele",
+    "FR": "/fr/collection/mushroom/beispiele"
+  },
+  "/fr/collection/mushroom/beispiele": {
+    "DE": "/sammlung/mushroom/beispiele",
+    "EN": "/en/collection/mushroom/beispiele",
+    "FR": "/fr/collection/mushroom/beispiele"
+  },
+  "/sammlung/mushroom/entwicklung": {
+    "DE": "/sammlung/mushroom/entwicklung",
+    "EN": "/en/collection/mushroom/entwicklung",
+    "FR": "/fr/collection/mushroom/entwicklung"
+  },
+  "/en/collection/mushroom/entwicklung": {
+    "DE": "/sammlung/mushroom/entwicklung",
+    "EN": "/en/collection/mushroom/entwicklung",
+    "FR": "/fr/collection/mushroom/entwicklung"
+  },
+  "/fr/collection/mushroom/entwicklung": {
+    "DE": "/sammlung/mushroom/entwicklung",
+    "EN": "/en/collection/mushroom/entwicklung",
+    "FR": "/fr/collection/mushroom/entwicklung"
+  },
+  "/sammlung/mushroom/fehlersuche": {
+    "DE": "/sammlung/mushroom/fehlersuche",
+    "EN": "/en/collection/mushroom/fehlersuche",
+    "FR": "/fr/collection/mushroom/fehlersuche"
+  },
+  "/en/collection/mushroom/fehlersuche": {
+    "DE": "/sammlung/mushroom/fehlersuche",
+    "EN": "/en/collection/mushroom/fehlersuche",
+    "FR": "/fr/collection/mushroom/fehlersuche"
+  },
+  "/fr/collection/mushroom/fehlersuche": {
+    "DE": "/sammlung/mushroom/fehlersuche",
+    "EN": "/en/collection/mushroom/fehlersuche",
+    "FR": "/fr/collection/mushroom/fehlersuche"
+  },
+  "/sammlung/mushroom/": {
+    "DE": "/sammlung/mushroom/",
+    "EN": "/en/collection/mushroom/",
+    "FR": "/fr/collection/mushroom/"
+  },
+  "/en/collection/mushroom/": {
+    "DE": "/sammlung/mushroom/",
+    "EN": "/en/collection/mushroom/",
+    "FR": "/fr/collection/mushroom/"
+  },
+  "/fr/collection/mushroom/": {
+    "DE": "/sammlung/mushroom/",
+    "EN": "/en/collection/mushroom/",
+    "FR": "/fr/collection/mushroom/"
+  },
+  "/sammlung/mushroom/installation": {
+    "DE": "/sammlung/mushroom/installation",
+    "EN": "/en/collection/mushroom/installation",
+    "FR": "/fr/collection/mushroom/installation"
+  },
+  "/en/collection/mushroom/installation": {
+    "DE": "/sammlung/mushroom/installation",
+    "EN": "/en/collection/mushroom/installation",
+    "FR": "/fr/collection/mushroom/installation"
+  },
+  "/fr/collection/mushroom/installation": {
+    "DE": "/sammlung/mushroom/installation",
+    "EN": "/en/collection/mushroom/installation",
+    "FR": "/fr/collection/mushroom/installation"
+  },
+  "/sammlung/mushroom/karten": {
+    "DE": "/sammlung/mushroom/karten",
+    "EN": "/en/collection/mushroom/karten",
+    "FR": "/fr/collection/mushroom/karten"
+  },
+  "/en/collection/mushroom/karten": {
+    "DE": "/sammlung/mushroom/karten",
+    "EN": "/en/collection/mushroom/karten",
+    "FR": "/fr/collection/mushroom/karten"
+  },
+  "/fr/collection/mushroom/karten": {
+    "DE": "/sammlung/mushroom/karten",
+    "EN": "/en/collection/mushroom/karten",
+    "FR": "/fr/collection/mushroom/karten"
+  },
+  "/sammlung/mushroom/lizenz-und-stand": {
+    "DE": "/sammlung/mushroom/lizenz-und-stand",
+    "EN": "/en/collection/mushroom/lizenz-und-stand",
+    "FR": "/fr/collection/mushroom/lizenz-und-stand"
+  },
+  "/en/collection/mushroom/lizenz-und-stand": {
+    "DE": "/sammlung/mushroom/lizenz-und-stand",
+    "EN": "/en/collection/mushroom/lizenz-und-stand",
+    "FR": "/fr/collection/mushroom/lizenz-und-stand"
+  },
+  "/fr/collection/mushroom/lizenz-und-stand": {
+    "DE": "/sammlung/mushroom/lizenz-und-stand",
+    "EN": "/en/collection/mushroom/lizenz-und-stand",
+    "FR": "/fr/collection/mushroom/lizenz-und-stand"
+  },
+  "/sammlung/mushroom/nutzung": {
+    "DE": "/sammlung/mushroom/nutzung",
+    "EN": "/en/collection/mushroom/nutzung",
+    "FR": "/fr/collection/mushroom/nutzung"
+  },
+  "/en/collection/mushroom/nutzung": {
+    "DE": "/sammlung/mushroom/nutzung",
+    "EN": "/en/collection/mushroom/nutzung",
+    "FR": "/fr/collection/mushroom/nutzung"
+  },
+  "/fr/collection/mushroom/nutzung": {
+    "DE": "/sammlung/mushroom/nutzung",
+    "EN": "/en/collection/mushroom/nutzung",
+    "FR": "/fr/collection/mushroom/nutzung"
+  },
+  "/sammlung/neomorphix-uix/": {
+    "DE": "/sammlung/neomorphix-uix/",
+    "EN": "/en/collection/neomorphix-uix/",
+    "FR": "/fr/collection/neomorphix-uix/"
+  },
+  "/en/collection/neomorphix-uix/": {
+    "DE": "/sammlung/neomorphix-uix/",
+    "EN": "/en/collection/neomorphix-uix/",
+    "FR": "/fr/collection/neomorphix-uix/"
+  },
+  "/fr/collection/neomorphix-uix/": {
+    "DE": "/sammlung/neomorphix-uix/",
+    "EN": "/en/collection/neomorphix-uix/",
+    "FR": "/fr/collection/neomorphix-uix/"
+  },
+  "/sammlung/weitere-beispiele": {
+    "DE": "/sammlung/weitere-beispiele",
+    "EN": "/en/collection/interesting-examples",
+    "FR": "/fr/collection/interesting-examples"
+  },
+  "/en/collection/interesting-examples": {
+    "DE": "/sammlung/weitere-beispiele",
+    "EN": "/en/collection/interesting-examples",
+    "FR": "/fr/collection/interesting-examples"
+  },
+  "/fr/collection/interesting-examples": {
+    "DE": "/sammlung/weitere-beispiele",
+    "EN": "/en/collection/interesting-examples",
+    "FR": "/fr/collection/interesting-examples"
+  },
+  "/sammlung/zendure-ha/entitaeten": {
+    "DE": "/sammlung/zendure-ha/entitaeten",
+    "EN": "/en/collection/zendure-ha/entitaeten",
+    "FR": "/fr/collection/zendure-ha/entitaeten"
+  },
+  "/en/collection/zendure-ha/entitaeten": {
+    "DE": "/sammlung/zendure-ha/entitaeten",
+    "EN": "/en/collection/zendure-ha/entitaeten",
+    "FR": "/fr/collection/zendure-ha/entitaeten"
+  },
+  "/fr/collection/zendure-ha/entitaeten": {
+    "DE": "/sammlung/zendure-ha/entitaeten",
+    "EN": "/en/collection/zendure-ha/entitaeten",
+    "FR": "/fr/collection/zendure-ha/entitaeten"
+  },
+  "/sammlung/zendure-ha/fehlersuche": {
+    "DE": "/sammlung/zendure-ha/fehlersuche",
+    "EN": "/en/collection/zendure-ha/fehlersuche",
+    "FR": "/fr/collection/zendure-ha/fehlersuche"
+  },
+  "/en/collection/zendure-ha/fehlersuche": {
+    "DE": "/sammlung/zendure-ha/fehlersuche",
+    "EN": "/en/collection/zendure-ha/fehlersuche",
+    "FR": "/fr/collection/zendure-ha/fehlersuche"
+  },
+  "/fr/collection/zendure-ha/fehlersuche": {
+    "DE": "/sammlung/zendure-ha/fehlersuche",
+    "EN": "/en/collection/zendure-ha/fehlersuche",
+    "FR": "/fr/collection/zendure-ha/fehlersuche"
+  },
+  "/sammlung/zendure-ha/fuse-group": {
+    "DE": "/sammlung/zendure-ha/fuse-group",
+    "EN": "/en/collection/zendure-ha/fuse-group",
+    "FR": "/fr/collection/zendure-ha/fuse-group"
+  },
+  "/en/collection/zendure-ha/fuse-group": {
+    "DE": "/sammlung/zendure-ha/fuse-group",
+    "EN": "/en/collection/zendure-ha/fuse-group",
+    "FR": "/fr/collection/zendure-ha/fuse-group"
+  },
+  "/fr/collection/zendure-ha/fuse-group": {
+    "DE": "/sammlung/zendure-ha/fuse-group",
+    "EN": "/en/collection/zendure-ha/fuse-group",
+    "FR": "/fr/collection/zendure-ha/fuse-group"
+  },
+  "/sammlung/zendure-ha/": {
+    "DE": "/sammlung/zendure-ha/",
+    "EN": "/en/collection/zendure-ha/",
+    "FR": "/fr/collection/zendure-ha/"
+  },
+  "/en/collection/zendure-ha/": {
+    "DE": "/sammlung/zendure-ha/",
+    "EN": "/en/collection/zendure-ha/",
+    "FR": "/fr/collection/zendure-ha/"
+  },
+  "/fr/collection/zendure-ha/": {
+    "DE": "/sammlung/zendure-ha/",
+    "EN": "/en/collection/zendure-ha/",
+    "FR": "/fr/collection/zendure-ha/"
+  },
+  "/sammlung/zendure-ha/installation": {
+    "DE": "/sammlung/zendure-ha/installation",
+    "EN": "/en/collection/zendure-ha/installation",
+    "FR": "/fr/collection/zendure-ha/installation"
+  },
+  "/en/collection/zendure-ha/installation": {
+    "DE": "/sammlung/zendure-ha/installation",
+    "EN": "/en/collection/zendure-ha/installation",
+    "FR": "/fr/collection/zendure-ha/installation"
+  },
+  "/fr/collection/zendure-ha/installation": {
+    "DE": "/sammlung/zendure-ha/installation",
+    "EN": "/en/collection/zendure-ha/installation",
+    "FR": "/fr/collection/zendure-ha/installation"
+  },
+  "/sammlung/zendure-ha/lokales-mqtt": {
+    "DE": "/sammlung/zendure-ha/lokales-mqtt",
+    "EN": "/en/collection/zendure-ha/lokales-mqtt",
+    "FR": "/fr/collection/zendure-ha/lokales-mqtt"
+  },
+  "/en/collection/zendure-ha/lokales-mqtt": {
+    "DE": "/sammlung/zendure-ha/lokales-mqtt",
+    "EN": "/en/collection/zendure-ha/lokales-mqtt",
+    "FR": "/fr/collection/zendure-ha/lokales-mqtt"
+  },
+  "/fr/collection/zendure-ha/lokales-mqtt": {
+    "DE": "/sammlung/zendure-ha/lokales-mqtt",
+    "EN": "/en/collection/zendure-ha/lokales-mqtt",
+    "FR": "/fr/collection/zendure-ha/lokales-mqtt"
+  },
+  "/sammlung/zendure-ha/manager": {
+    "DE": "/sammlung/zendure-ha/manager",
+    "EN": "/en/collection/zendure-ha/manager",
+    "FR": "/fr/collection/zendure-ha/manager"
+  },
+  "/en/collection/zendure-ha/manager": {
+    "DE": "/sammlung/zendure-ha/manager",
+    "EN": "/en/collection/zendure-ha/manager",
+    "FR": "/fr/collection/zendure-ha/manager"
+  },
+  "/fr/collection/zendure-ha/manager": {
+    "DE": "/sammlung/zendure-ha/manager",
+    "EN": "/en/collection/zendure-ha/manager",
+    "FR": "/fr/collection/zendure-ha/manager"
+  }
+}

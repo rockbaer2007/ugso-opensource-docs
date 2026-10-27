@@ -11,19 +11,16 @@
       "review_signals": 0
     },
     "en": {
-      "content-present": 192,
-      "placeholder": 37,
+      "content-present": 229,
       "existing_pages": 229,
       "unmatched_pages": 0,
-      "review_signals": 78
+      "review_signals": 74
     },
     "fr": {
-      "placeholder": 91,
-      "content-present": 118,
-      "missing": 20,
-      "existing_pages": 209,
+      "content-present": 229,
+      "existing_pages": 229,
       "unmatched_pages": 0,
-      "review_signals": 57
+      "review_signals": 47
     }
   },
   "unmatched_pages": {
@@ -64,13 +61,20 @@
         },
         "fr": {
           "path": "fr/blog/post-template.md",
-          "status": "placeholder",
-          "sha256": "8e7eb24151570d6a96865b38d87ccdc5a20d5b25a302d0ca7eb87f97e342009a",
-          "words": 74,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "6baa1cefb892f4dc3944051dda42ad2fcb34814b51dd51f700e3b1e318f8bedd",
+          "words": 90,
+          "headings": 11,
+          "examples": 4,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -110,13 +114,22 @@
         },
         "fr": {
           "path": "fr/blog/index.md",
-          "status": "placeholder",
-          "sha256": "a482508dd270d9abb9e09da05eec9eb7ed79273c7b82bc028be3f03c6591b03f",
-          "words": 70,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "e0fc834f13b8001ad0de33a8c499d9e69516715f3612410f128bab9c06c86614",
+          "words": 211,
+          "headings": 7,
+          "examples": 2,
+          "versions": [
+            "0.9.4"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -152,13 +165,20 @@
         },
         "fr": {
           "path": "fr/blog/posts/atlas-runtime-foundation.md",
-          "status": "placeholder",
-          "sha256": "4be0cfa3320882ef220d367982d73cff45c5fffe995e49dcd31da32fda14bd53",
-          "words": 79,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "1ed4b519e9de713523e8417d614ecf60d243528b74244b8c17e2faa08afbe665",
+          "words": 184,
+          "headings": 5,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -198,15 +218,22 @@
         },
         "fr": {
           "path": "fr/blog/posts/hadash-preview.md",
-          "status": "placeholder",
-          "sha256": "b853ad1c7f51705e8c31170baa8c9021628c21d5afde9b8fdeb0edadd7cc12cd",
-          "words": 79,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "c26983f0160577f3912fe0c584137f950287ec0155fe5f53db3f9a5fb850f8b3",
+          "words": 189,
+          "headings": 5,
           "examples": 0,
           "versions": [
             "0.9.4"
           ],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -242,13 +269,20 @@
         },
         "fr": {
           "path": "fr/blog/snippets/blockly.md",
-          "status": "placeholder",
-          "sha256": "7fde90288d78d4ad38e4842fad65960ff8ed02c1f43d29cb0e1892bacaefc01c",
-          "words": 74,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "1ce0820bdc5f197ddd1da80f3cbd816ddaaea9316275aa9dc7fc9dfd8b0fb081",
+          "words": 70,
+          "headings": 5,
+          "examples": 5,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -284,13 +318,20 @@
         },
         "fr": {
           "path": "fr/blog/snippets/home-assistant-yaml.md",
-          "status": "placeholder",
-          "sha256": "9587751b1d6aeba1235203fb6aa3fe5db79e21f3adb36ef1c5fbe72158c1df44",
-          "words": 79,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "fa4c666f84f6ff9e08a3981afe0984b83dba7f1778ab2bdcd6420ea8ca6ca8cc",
+          "words": 33,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -326,13 +367,20 @@
         },
         "fr": {
           "path": "fr/blog/snippets/index.md",
-          "status": "placeholder",
-          "sha256": "240e3e1685edbf0fc783ed9b6b49a60f76b9b29388a19a4655b8ffa53e32e979",
-          "words": 73,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "37148ed9af601a9c646486d41597cf6923f0c60286bc311e4ee75e6614ae88ff",
+          "words": 134,
+          "headings": 7,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -368,13 +416,20 @@
         },
         "fr": {
           "path": "fr/blog/snippets/iobroker-blockly.md",
-          "status": "placeholder",
-          "sha256": "c1c4be3751705804d0695f63ef685f68ca0da2fdb90a39846f756927e0e78af0",
-          "words": 76,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "5980ade71e0e9a3513613d36c81797061aabe977994712a66d64a6fd0770aa50",
+          "words": 622,
+          "headings": 11,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -410,13 +465,20 @@
         },
         "fr": {
           "path": "fr/blog/snippets/javascript.md",
-          "status": "placeholder",
-          "sha256": "ebf2d4fb7378ad683dfbd1cae83c5e4dea995abde47a675cd45a6a3e089e6bef",
-          "words": 74,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "c43baf6f1ad740ccbd2da6df62557c16603d16a8db754872dfce5d2739a6e951",
+          "words": 54,
+          "headings": 5,
+          "examples": 4,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -452,13 +514,20 @@
         },
         "fr": {
           "path": "fr/blog/snippets/lovelace.md",
-          "status": "placeholder",
-          "sha256": "e2d51a369a7ab78870b3b62301b9732254f655ea81dc27b1c0be08b537e879d1",
-          "words": 76,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "fb48a7b2c80e9e0a39854ac6f980e7038714c8a799faaf4de3c52548b5b7b573",
+          "words": 49,
+          "headings": 5,
+          "examples": 4,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -474,8 +543,7 @@
           "examples": 0,
           "versions": [
             "2.1.37",
-            "2.1.38",
-            "4.6.6"
+            "2.1.38"
           ],
           "unresolved_local_references": []
         },
@@ -488,8 +556,7 @@
           "examples": 0,
           "versions": [
             "2.1.37",
-            "2.1.38",
-            "4.6.6"
+            "2.1.38"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -509,8 +576,7 @@
           "examples": 0,
           "versions": [
             "2.1.37",
-            "2.1.38",
-            "4.6.6"
+            "2.1.38"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -543,8 +609,7 @@
             "2.1.53",
             "2.1.54",
             "2.1.55",
-            "2.5.8",
-            "7.5.0"
+            "2.5.8"
           ],
           "unresolved_local_references": []
         },
@@ -565,8 +630,7 @@
             "2.1.53",
             "2.1.54",
             "2.1.55",
-            "2.5.8",
-            "7.5.0"
+            "2.5.8"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -594,8 +658,7 @@
             "2.1.53",
             "2.1.54",
             "2.1.55",
-            "2.5.8",
-            "7.5.0"
+            "2.5.8"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -618,9 +681,7 @@
           "words": 386,
           "headings": 6,
           "examples": 0,
-          "versions": [
-            "4.6.6"
-          ],
+          "versions": [],
           "unresolved_local_references": []
         },
         "en": {
@@ -630,9 +691,7 @@
           "words": 396,
           "headings": 6,
           "examples": 0,
-          "versions": [
-            "4.6.6"
-          ],
+          "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -649,9 +708,7 @@
           "words": 461,
           "headings": 6,
           "examples": 0,
-          "versions": [
-            "4.6.6"
-          ],
+          "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -678,23 +735,37 @@
         },
         "en": {
           "path": "en/impressum/index.md",
-          "status": "placeholder",
-          "sha256": "067eaa68806a539ac08c326395922cdfe576db5ef83e7435c8d365c728c3448c",
-          "words": 59,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "660e27e098c443cf845cc6530573091f19c7c94da2e71d6050abf8ebbbcbca91",
+          "words": 617,
+          "headings": 9,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/impressum/index.md",
-          "status": "placeholder",
-          "sha256": "e495a51e744e6a011764c65eb871d93074eff6c0ad673411ee49dc1ef0edca65",
-          "words": 71,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "3a82158f53c3cc5be00b0af1ea03c53102168e2550e09db1d6af6a1ac7d7a6a8",
+          "words": 731,
+          "headings": 9,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -779,13 +850,20 @@
         },
         "fr": {
           "path": "fr/projects-diverse/index.md",
-          "status": "placeholder",
-          "sha256": "0ce43fcfed930c162e01965b3b5f3a09f85f08acb7a554dee56939e5183bf233",
-          "words": 73,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "7ea261f537151ffdd290055a88b6b0bbd8c274a53c50b7707243f88407f11fd5",
+          "words": 287,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -831,15 +909,25 @@
         },
         "fr": {
           "path": "fr/projects-mqtt/index.md",
-          "status": "placeholder",
-          "sha256": "ecc844ab82d407977afa0b913ee514c768614ec91e38a02b838deb6da8c25734",
-          "words": 174,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "f524f756377a1c6ccbeb20d5aa68a0ad3c473acf07888bba480489c44c4dfbfd",
+          "words": 813,
+          "headings": 7,
+          "examples": 1,
           "versions": [
+            "0.1.0",
+            "0.1.16",
+            "0.1.3",
             "0.1.4"
           ],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -1829,7 +1917,6 @@
             "0.1.333",
             "0.1.334",
             "0.1.7",
-            "192.168.178",
             "2.0.5",
             "2026.10.1",
             "2026.10.2",
@@ -1881,7 +1968,6 @@
             "0.1.333",
             "0.1.334",
             "0.1.7",
-            "192.168.178",
             "2.0.5",
             "2026.10.1",
             "2026.10.2",
@@ -1940,8 +2026,6 @@
             "0.1.333",
             "0.1.334",
             "0.1.7",
-            "127.0.0",
-            "192.168.178",
             "2.0.5",
             "2026.10.1",
             "2026.10.2",
@@ -1954,9 +2038,7 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
-            "versions_only_in_translation": [
-              "127.0.0"
-            ],
+            "versions_only_in_translation": [],
             "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": false
@@ -2248,8 +2330,7 @@
             "0.1.298",
             "0.1.299",
             "0.1.306",
-            "0.1.312",
-            "192.168.178"
+            "0.1.312"
           ],
           "unresolved_local_references": []
         },
@@ -2265,8 +2346,7 @@
             "0.1.298",
             "0.1.299",
             "0.1.306",
-            "0.1.312",
-            "192.168.178"
+            "0.1.312"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -2280,24 +2360,22 @@
         "fr": {
           "path": "fr/projects/atlas/homeassistant.md",
           "status": "content-present",
-          "sha256": "76d310397275bcbfa2efb55ba1bcaa44b31d4a83f2e246232fe3601aef3ff104",
-          "words": 2500,
-          "headings": 18,
-          "examples": 6,
+          "sha256": "da325ee7fadc7e62a89056cb8dd42fe472a3b9c4fd43492aa0708482bacc81bd",
+          "words": 5868,
+          "headings": 36,
+          "examples": 13,
           "versions": [
             "0.1.236",
+            "0.1.298",
             "0.1.299",
-            "0.1.306"
+            "0.1.306",
+            "0.1.312"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.298",
-              "0.1.312",
-              "192.168.178"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
           }
@@ -2490,7 +2568,6 @@
           "examples": 0,
           "versions": [
             "0.1.327",
-            "192.168.178",
             "2026.10.2",
             "3.4.2",
             "4.2.1",
@@ -2507,7 +2584,6 @@
           "examples": 0,
           "versions": [
             "0.1.327",
-            "192.168.178",
             "2026.10.2",
             "3.4.2",
             "4.2.1",
@@ -2531,7 +2607,6 @@
           "examples": 0,
           "versions": [
             "0.1.327",
-            "192.168.178",
             "2026.10.2",
             "3.4.2",
             "4.2.1",
@@ -2766,19 +2841,18 @@
         "fr": {
           "path": "fr/projects/blocks-for-ha/blockly-audit.md",
           "status": "content-present",
-          "sha256": "19d073a150c18fdf9677edd3ca42837d2801269517dbb3a8b1992e5000076a8d",
-          "words": 729,
-          "headings": 6,
+          "sha256": "e6f6fac99c1b0fdbb08db986bf20974f3a702b7a57f824013effb7fe5572c4ad",
+          "words": 2758,
+          "headings": 12,
           "examples": 0,
           "versions": [
-            "0.1.47"
+            "0.1.15",
+            "0.1.47",
+            "13.3.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.15",
-              "13.3.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -2898,11 +2972,20 @@
         "fr": {
           "path": "fr/projects/blocks-for-ha/blocks.md",
           "status": "content-present",
-          "sha256": "f33deeecca5054daaa155b44a807c2e087d0018d4d5d0539b22eb427a98e4d3b",
-          "words": 5844,
-          "headings": 38,
+          "sha256": "e75ba8b9265bfdd694da6f38d5a198f48caa69b8acfdf5b7683d8cc11604f27e",
+          "words": 14867,
+          "headings": 67,
           "examples": 0,
           "versions": [
+            "0.1.10",
+            "0.1.11",
+            "0.1.12",
+            "0.1.13",
+            "0.1.14",
+            "0.1.15",
+            "0.1.17",
+            "0.1.18",
+            "0.1.21",
             "0.1.28",
             "0.1.30",
             "0.1.31",
@@ -2927,25 +3010,15 @@
             "0.1.61",
             "0.1.64",
             "0.1.65",
-            "0.1.66"
+            "0.1.66",
+            "0.1.8",
+            "0.1.9",
+            "13.2.0",
+            "13.3.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.10",
-              "0.1.11",
-              "0.1.12",
-              "0.1.13",
-              "0.1.14",
-              "0.1.15",
-              "0.1.17",
-              "0.1.18",
-              "0.1.21",
-              "0.1.8",
-              "0.1.9",
-              "13.2.0",
-              "13.3.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -3107,19 +3180,19 @@
         "fr": {
           "path": "fr/projects/blocks-for-ha/collections.md",
           "status": "content-present",
-          "sha256": "920899d2fcf1680d8b2ad461f33ce5c5189c96589262e54d4e98d5672a419e54",
-          "words": 534,
-          "headings": 5,
-          "examples": 0,
-          "versions": [],
+          "sha256": "2a126380c6e46186d8f97e299594288cd0a1be9e242fc83c9a106d82fff78b6f",
+          "words": 2169,
+          "headings": 9,
+          "examples": 1,
+          "versions": [
+            "0.1.14"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.14"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
-            "substantially_shorter": true,
+            "fewer_examples": false,
+            "substantially_shorter": false,
             "fewer_headings": false
           }
         }
@@ -3162,20 +3235,20 @@
         "fr": {
           "path": "fr/projects/blocks-for-ha/conversion.md",
           "status": "content-present",
-          "sha256": "0caad624b5ae234718e125f8734e576b1adffd14871a1f0d2d02f81411edf715",
-          "words": 291,
-          "headings": 1,
-          "examples": 0,
-          "versions": [],
+          "sha256": "ce0be6330615d1f12ad5f310c8839e1926a74f2db582002f179201c3794616cc",
+          "words": 1425,
+          "headings": 6,
+          "examples": 2,
+          "versions": [
+            "0.1.12"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.12"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
-            "substantially_shorter": true,
-            "fewer_headings": true
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
           }
         }
       }
@@ -3217,20 +3290,20 @@
         "fr": {
           "path": "fr/projects/blocks-for-ha/custom-blocks.md",
           "status": "content-present",
-          "sha256": "05a284cd5d2ca6f60e3febdf83919c2c6d2e5b3a542222a27e48bf49a058dc62",
-          "words": 413,
-          "headings": 4,
+          "sha256": "6b2d04535102fd6a539e4f6c95c4671162937da15be79ddb15c39a87ea7ea36a",
+          "words": 1308,
+          "headings": 9,
           "examples": 0,
-          "versions": [],
+          "versions": [
+            "0.1.18"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.18"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
           }
         }
       }
@@ -3247,8 +3320,7 @@
           "examples": 0,
           "versions": [
             "0.1.44",
-            "0.1.46",
-            "127.0.0"
+            "0.1.46"
           ],
           "unresolved_local_references": []
         },
@@ -3261,8 +3333,7 @@
           "examples": 0,
           "versions": [
             "0.1.44",
-            "0.1.46",
-            "127.0.0"
+            "0.1.46"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -3276,23 +3347,21 @@
         "fr": {
           "path": "fr/projects/blocks-for-ha/entities.md",
           "status": "content-present",
-          "sha256": "5e269cd45ea7512a865bc6093d4a627701121d936e6e3c2129b7360993730011",
-          "words": 489,
-          "headings": 1,
+          "sha256": "a0fffc9a958cb247aac549a9c86ba2fef6dea6b648700d4c8090ed9b5cfd477f",
+          "words": 1660,
+          "headings": 6,
           "examples": 0,
           "versions": [
-            "0.1.44"
+            "0.1.44",
+            "0.1.46"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.46",
-              "127.0.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
           }
         }
       }
@@ -3338,23 +3407,22 @@
         "fr": {
           "path": "fr/projects/blocks-for-ha/flow.md",
           "status": "content-present",
-          "sha256": "5b46fc163a4458831ace8a0a2b8366c71b3616b64aed5b527e80729af1b26b46",
-          "words": 485,
-          "headings": 4,
-          "examples": 0,
+          "sha256": "04e40321acfaefacec1266d2d7705cd83cfc2949bd4fa1cce77a2b92041fc4a5",
+          "words": 2499,
+          "headings": 10,
+          "examples": 1,
           "versions": [
+            "0.1.13",
+            "0.1.14",
             "0.1.39"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.13",
-              "0.1.14"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
-            "substantially_shorter": true,
-            "fewer_headings": true
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
           }
         }
       }
@@ -3419,7 +3487,6 @@
             "0.1.7",
             "0.1.8",
             "0.1.9",
-            "127.0.0",
             "13.3.0"
           ],
           "unresolved_local_references": []
@@ -3480,7 +3547,6 @@
             "0.1.7",
             "0.1.8",
             "0.1.9",
-            "127.0.0",
             "13.3.0"
           ],
           "unresolved_local_references": [],
@@ -3530,8 +3596,7 @@
             "0.1.63",
             "0.1.64",
             "0.1.65",
-            "0.1.66",
-            "127.0.0"
+            "0.1.66"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -3678,24 +3743,23 @@
         "fr": {
           "path": "fr/projects/blocks-for-ha/themes.md",
           "status": "content-present",
-          "sha256": "b2ad5db1a3911cae72d040babbbb1b449059b633466a3a3f939e841f6c73cc07",
-          "words": 648,
-          "headings": 6,
+          "sha256": "f8599c69be19e4e1cc9b5de0ee27edf8fea7f8683bf5e2f6c3a8469032320491",
+          "words": 2011,
+          "headings": 12,
           "examples": 0,
           "versions": [
+            "0.1.16",
+            "0.1.22",
             "0.1.27",
             "0.1.40",
             "0.1.51",
             "0.1.56",
+            "13.2.0",
             "13.3.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.16",
-              "0.1.22",
-              "13.2.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -3745,23 +3809,22 @@
         "fr": {
           "path": "fr/projects/blocks-for-ha/time.md",
           "status": "content-present",
-          "sha256": "65a0bb19e88ecc2f15ef568570319f775757460ebc2a63628153bbbc57eb95d8",
-          "words": 820,
-          "headings": 2,
-          "examples": 0,
+          "sha256": "5c921e9f608470b1eca6527ad5d46609684f647e6a2266d1b389c8a941a785a2",
+          "words": 2468,
+          "headings": 7,
+          "examples": 1,
           "versions": [
+            "0.1.11",
+            "0.1.12",
             "0.1.60"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "0.1.11",
-              "0.1.12"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
           }
         }
       }
@@ -4008,13 +4071,20 @@
         },
         "fr": {
           "path": "fr/projects/fritzbox-to-mqtt/examples.md",
-          "status": "placeholder",
-          "sha256": "bd9413222426fa2642a69de4f7e95e4ad29371d296cf9d0ea0bb1b8a904bf78b",
-          "words": 77,
+          "status": "content-present",
+          "sha256": "02a1474240cb1bc8abd3bbff4716fde488450aa5b94b38a716f13f8cefe21caa",
+          "words": 73,
           "headings": 2,
-          "examples": 0,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4050,13 +4120,20 @@
         },
         "fr": {
           "path": "fr/projects/fritzbox-to-mqtt/entities.md",
-          "status": "placeholder",
-          "sha256": "01ea2c5c0f8b814702a8c45355d5759b5e4a6a922f325ea307fcc779ae6a2858",
-          "words": 77,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "4fb7470f5ca5946ac15e6d65fb0c4d5b62bea0a1dac3fe9e80c98be3e9901347",
+          "words": 321,
+          "headings": 7,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4092,13 +4169,20 @@
         },
         "fr": {
           "path": "fr/projects/fritzbox-to-mqtt/troubleshooting.md",
-          "status": "placeholder",
-          "sha256": "4d9c750d8cea80ca796fd8abcb3f7cbf60fe785839a831ec1485c900269990c3",
-          "words": 77,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "b72e0ab3f881cb7209d5cbf20d848237160c2713e3086f677ef9ec6e381fc13d",
+          "words": 229,
+          "headings": 6,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4134,13 +4218,20 @@
         },
         "fr": {
           "path": "fr/projects/fritzbox-to-mqtt/index.md",
-          "status": "placeholder",
-          "sha256": "ee2eba64999fc8d953c220e96d2f0920957a08a6f972fee3baa3374424bad05b",
-          "words": 76,
+          "status": "content-present",
+          "sha256": "31e1c5e0069be061288daafaaa2769ac9b7418380982163b9c9f8f5223364be6",
+          "words": 220,
           "headings": 2,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4176,13 +4267,20 @@
         },
         "fr": {
           "path": "fr/projects/fritzbox-to-mqtt/installation.md",
-          "status": "placeholder",
-          "sha256": "4c2d7c352f5ce222173c4b62602e12b3d260bb44fba2855e2509cf826941e41b",
-          "words": 77,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "979d9fdf39a927c2be17b4a270e10e4f7a33f3bfbfef5db8b025e0273f879540",
+          "words": 255,
+          "headings": 5,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4218,13 +4316,20 @@
         },
         "fr": {
           "path": "fr/projects/fritzbox-to-mqtt/configuration.md",
-          "status": "placeholder",
-          "sha256": "8ad73a3f670debe648c2202537a3c7f5eb982b5f264fb154a3907aa0662c2529",
-          "words": 77,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "36a89f7c916a65c498593e38e12a4cde37f4ce4fc976577360ac55b791323545",
+          "words": 488,
+          "headings": 4,
+          "examples": 2,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4315,7 +4420,20 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/bildergalerie.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "0c9490ef292f46a2c8884e660d0dd47e8b74acabee12e4709a1e84b139c21669",
+          "words": 68,
+          "headings": 1,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4365,7 +4483,27 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/calendar-plus.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "aabf43be02e2483058b0ab63b27f8e45e4d62b1665e0b214cf941832729aaa07",
+          "words": 1477,
+          "headings": 7,
+          "examples": 0,
+          "versions": [
+            "0.1.0",
+            "0.1.1",
+            "0.1.267",
+            "0.1.268",
+            "0.1.269",
+            "0.1.270"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4415,7 +4553,27 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/datenfluss.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "68571221a342f638a3cb32f424f7724b8b3cb6f4e54e0e197e2a11f115f701cb",
+          "words": 1622,
+          "headings": 5,
+          "examples": 0,
+          "versions": [
+            "0.1.141",
+            "0.1.143",
+            "0.1.154",
+            "0.1.274",
+            "0.1.285",
+            "0.1.287"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4489,7 +4647,39 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/editor.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "198903b1987071cefd61b75e432ff351dc7d3952cddb6af444470b4946b1ae2c",
+          "words": 2989,
+          "headings": 10,
+          "examples": 0,
+          "versions": [
+            "0.1.115",
+            "0.1.184",
+            "0.1.185",
+            "0.1.196",
+            "0.1.256",
+            "0.1.257",
+            "0.1.286",
+            "0.1.287",
+            "0.1.290",
+            "0.1.291",
+            "0.1.293",
+            "0.1.294",
+            "0.1.295",
+            "0.1.296",
+            "0.1.80",
+            "0.1.82",
+            "0.1.83",
+            "1.10.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4531,7 +4721,23 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/energy.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "db8d2cb549fed8aac0060a4a22a23c5ab37cf982539f66a1af0d7ca9781205b6",
+          "words": 1444,
+          "headings": 9,
+          "examples": 0,
+          "versions": [
+            "0.1.0",
+            "0.1.255"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4678,7 +4884,48 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/index.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "3af544575ec17bce189a0d0faed60766b10a0f380005ee767ac560a15873f197",
+          "words": 3812,
+          "headings": 8,
+          "examples": 0,
+          "versions": [
+            "0.1.0",
+            "0.1.10",
+            "0.1.11",
+            "0.1.158",
+            "0.1.209",
+            "0.1.210",
+            "0.1.212",
+            "0.1.213",
+            "0.1.214",
+            "0.1.215",
+            "0.1.216",
+            "0.1.217",
+            "0.1.218",
+            "0.1.219",
+            "0.1.220",
+            "0.1.221",
+            "0.1.222",
+            "0.1.280",
+            "0.1.285",
+            "0.1.287",
+            "0.1.289",
+            "0.1.296",
+            "0.1.3",
+            "0.1.9",
+            "0.3.0",
+            "1.0.0",
+            "1.7.1"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4778,7 +5025,52 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/industrial.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "014d773abc6acb2bb9eab90bc72822ceb7ffffb01b723856949a6ba69c992b31",
+          "words": 7829,
+          "headings": 22,
+          "examples": 0,
+          "versions": [
+            "0.1.224",
+            "0.1.226",
+            "0.1.227",
+            "0.1.228",
+            "0.1.230",
+            "0.1.231",
+            "0.1.232",
+            "0.1.233",
+            "0.1.234",
+            "0.1.235",
+            "0.1.236",
+            "0.1.237",
+            "0.1.241",
+            "0.1.242",
+            "0.1.248",
+            "0.1.249",
+            "0.1.250",
+            "0.1.253",
+            "0.1.259",
+            "0.1.260",
+            "0.1.282",
+            "0.10.3",
+            "0.11.1",
+            "0.11.2",
+            "0.11.3",
+            "0.11.4",
+            "0.11.5",
+            "0.11.6",
+            "0.2.0",
+            "0.3.0",
+            "0.6.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4944,7 +5236,24 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/packer.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "dee33ac8877374b420b693c58042d84afffda3785f1c26b333f180953161ef89",
+          "words": 1311,
+          "headings": 5,
+          "examples": 1,
+          "versions": [
+            "0.2.0",
+            "0.3.0",
+            "0.3.1"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -4994,7 +5303,27 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/printer.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "2632b6cb754067f217614d88537dc85205050bf33d83d9055cd97f39ddc49184",
+          "words": 1491,
+          "headings": 10,
+          "examples": 0,
+          "versions": [
+            "0.1.0",
+            "0.1.1",
+            "0.1.262",
+            "0.1.263",
+            "0.1.270",
+            "0.1.273"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5036,7 +5365,23 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/solar.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "6b1c77b9dd81c58565510362a1341058e737278c65f312304d8078702d346b2f",
+          "words": 1643,
+          "headings": 5,
+          "examples": 0,
+          "versions": [
+            "0.1.280",
+            "0.1.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5084,7 +5429,26 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/svg-line.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "3a8718e8745047f54bf30a4a856932cf830326a44290f7a0f7dc07bd1c7a326b",
+          "words": 2592,
+          "headings": 10,
+          "examples": 1,
+          "versions": [
+            "0.1.136",
+            "0.1.275",
+            "0.1.281",
+            "0.1.282",
+            "0.1.285"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5136,7 +5500,28 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/svg-linebox-math.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "e9657bedb2177bb68d9e9956cc4111393bee5ccc9c4d56b6acb5f2666d33e168",
+          "words": 3225,
+          "headings": 12,
+          "examples": 0,
+          "versions": [
+            "0.1.137",
+            "0.1.138",
+            "0.1.139",
+            "0.1.140",
+            "0.1.141",
+            "0.1.285",
+            "0.1.287"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5178,7 +5563,23 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/svg-linebox.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "6a14ee883f6a6b1e16cc1de000676135a6d9f4f0703fdabb827352db0ceff500",
+          "words": 1415,
+          "headings": 5,
+          "examples": 0,
+          "versions": [
+            "0.1.126",
+            "0.1.136"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5222,7 +5623,24 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/technic.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "3ff85ef75ea3316e7656a4ee42601bfa63d345013cc06fd566918c54957861cf",
+          "words": 3240,
+          "headings": 11,
+          "examples": 0,
+          "versions": [
+            "0.1.203",
+            "0.1.296",
+            "1.6.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5278,7 +5696,30 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/tool-packages.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "0f7068486b8c8dc654215c13fc8816de1f464ed816b88ed1cd7a35c8a11ae57b",
+          "words": 1705,
+          "headings": 4,
+          "examples": 1,
+          "versions": [
+            "0.1.112",
+            "0.1.113",
+            "0.1.204",
+            "0.1.205",
+            "0.1.206",
+            "0.1.207",
+            "0.1.208",
+            "0.1.89",
+            "1.2.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5328,7 +5769,27 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/weather-heating.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "19c1a3e4ba9cbb3f7d44771b99b1d614ecdd88a7388ee39cb7e8545eecdf8686",
+          "words": 3080,
+          "headings": 10,
+          "examples": 3,
+          "versions": [
+            "0.1.190",
+            "0.1.191",
+            "0.1.194",
+            "1.0.0",
+            "1.6.0",
+            "1.7.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5414,7 +5875,45 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/widget-packages.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "eff024684b55991c257794193e78c70dda348d2754121330739c989e81a24954",
+          "words": 2728,
+          "headings": 6,
+          "examples": 1,
+          "versions": [
+            "0.1.187",
+            "0.1.188",
+            "0.1.190",
+            "0.1.191",
+            "0.1.192",
+            "0.1.193",
+            "0.1.194",
+            "0.1.197",
+            "0.1.198",
+            "0.1.199",
+            "0.1.200",
+            "0.1.201",
+            "0.1.202",
+            "0.1.203",
+            "0.1.204",
+            "0.1.205",
+            "0.1.206",
+            "0.1.207",
+            "0.1.208",
+            "0.1.225",
+            "0.1.261",
+            "0.1.266",
+            "0.1.288",
+            "0.1.89"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5542,7 +6041,66 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/widgets.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "970b9b82f782be88d677628a919cf5356b33b7309c91c14359172dad5834e89b",
+          "words": 17960,
+          "headings": 46,
+          "examples": 2,
+          "versions": [
+            "0.1.114",
+            "0.1.116",
+            "0.1.119",
+            "0.1.120",
+            "0.1.121",
+            "0.1.122",
+            "0.1.124",
+            "0.1.125",
+            "0.1.135",
+            "0.1.144",
+            "0.1.145",
+            "0.1.146",
+            "0.1.154",
+            "0.1.155",
+            "0.1.156",
+            "0.1.157",
+            "0.1.159",
+            "0.1.160",
+            "0.1.174",
+            "0.1.175",
+            "0.1.176",
+            "0.1.177",
+            "0.1.178",
+            "0.1.179",
+            "0.1.180",
+            "0.1.181",
+            "0.1.182",
+            "0.1.183",
+            "0.1.186",
+            "0.1.187",
+            "0.1.188",
+            "0.1.189",
+            "0.1.190",
+            "0.1.191",
+            "0.1.192",
+            "0.1.193",
+            "0.1.194",
+            "0.1.195",
+            "0.1.197",
+            "0.1.261",
+            "0.1.264",
+            "0.1.265",
+            "0.1.266",
+            "0.1.271",
+            "6.1.21"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5578,7 +6136,20 @@
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/zeichnen.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "09c82bec4dfafb4536a1cad09cc4f26acae0f1183f8d9069bcbdf93ddd09bbd2",
+          "words": 1806,
+          "headings": 5,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5614,13 +6185,20 @@
         },
         "fr": {
           "path": "fr/projects/hadash/export-view.md",
-          "status": "placeholder",
-          "sha256": "722962decc5e76e68ff531ff8fae0da5b2503d6ad4bbe08ecdd7f4136b64aad0",
-          "words": 76,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "a14856b2c13be427e7caed95fc1f1863b78446d55d97376c51a6fb5306fed31f",
+          "words": 90,
+          "headings": 3,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5656,13 +6234,20 @@
         },
         "fr": {
           "path": "fr/projects/hadash/backups-and-json.md",
-          "status": "placeholder",
-          "sha256": "b02f95cb3b4bffd02a3994137b211bfbb1aaa51f1a76f3d912809f1a37e23348",
-          "words": 79,
+          "status": "content-present",
+          "sha256": "07c007e343063df1bb9ada45cd0124c6cde445d8107c21a7a45cbde2529aaa00",
+          "words": 83,
           "headings": 2,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5698,13 +6283,20 @@
         },
         "fr": {
           "path": "fr/projects/hadash/import-dashboard.md",
-          "status": "placeholder",
-          "sha256": "bf79f6af6e8b499695a0341160989ffd89f65c8b7cb0d5cf8c3c38ab94b493d2",
-          "words": 76,
+          "status": "content-present",
+          "sha256": "3b1b06b3397bef8c1e08a319ed08e190e764bc69fb3e6ce03a680980b2612bb3",
+          "words": 92,
           "headings": 2,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5740,13 +6332,20 @@
         },
         "fr": {
           "path": "fr/projects/hadash/getting-started.md",
-          "status": "placeholder",
-          "sha256": "27a7ce7dfd5c419644150701166363b7fcc6ac9c970fca111057325dc2fd92cd",
-          "words": 76,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "fd19890a98a4a496288b6a7fb291e7e161edca8877a202d07cffbff5feab4e6f",
+          "words": 81,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5782,13 +6381,20 @@
         },
         "fr": {
           "path": "fr/projects/hadash/index.md",
-          "status": "placeholder",
-          "sha256": "86fe16ddc2b679116b8eda11b1c76be439ac0320c03d2dab205b5fbe73eb1b8c",
-          "words": 72,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "d09381638b2370a6587b82079f68e6f6a9d1740868c71ced89b2a96bb54cbe79",
+          "words": 91,
+          "headings": 1,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5824,13 +6430,20 @@
         },
         "fr": {
           "path": "fr/projects/hadash/portable-usage.md",
-          "status": "placeholder",
-          "sha256": "1fb3ef6923afa603d11bbeda685418995dab0f21c2f10e5d2cf677b6e3b1afd8",
-          "words": 76,
+          "status": "content-present",
+          "sha256": "d1bfcec8370807f344c020130cda21084b8095c6533900c6b774ba75c8387b02",
+          "words": 54,
           "headings": 2,
-          "examples": 0,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5866,13 +6479,20 @@
         },
         "fr": {
           "path": "fr/projects/heizoel-to-mqtt/examples.md",
-          "status": "placeholder",
-          "sha256": "eba21e5a33d7af9a6aa7c278ea41b6028c2d976822f6eee4b555125318311070",
-          "words": 77,
+          "status": "content-present",
+          "sha256": "dde2ca032ae949c3bd7733fc484714952c0e236d3f26fc24bce37654e0163416",
+          "words": 73,
           "headings": 2,
-          "examples": 0,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5908,13 +6528,20 @@
         },
         "fr": {
           "path": "fr/projects/heizoel-to-mqtt/entities.md",
-          "status": "placeholder",
-          "sha256": "fcdf24b387eba71c9aa42c4d5e7bd7110474d942f6cbfa51c48e8c35995563d7",
-          "words": 77,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "d51605ec64ab3e950d73d0151b806546586688fc5245cb30599a66c39e741501",
+          "words": 171,
+          "headings": 1,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5950,13 +6577,20 @@
         },
         "fr": {
           "path": "fr/projects/heizoel-to-mqtt/index.md",
-          "status": "placeholder",
-          "sha256": "8ce05e7fc8414c3cc4867ee1e3807abe1d1eff4d2ffc8a698f907370bd54cc5e",
-          "words": 76,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "09567f9f5ce534514dad81ae86e171add23623a2c0e11afc7554a65f5ab2a4b4",
+          "words": 185,
+          "headings": 3,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -5992,13 +6626,20 @@
         },
         "fr": {
           "path": "fr/projects/heizoel-to-mqtt/installation.md",
-          "status": "placeholder",
-          "sha256": "298369acc8c0b40f822ab87707c083fbdb7286f20890bb9177168ac95caa14a9",
-          "words": 77,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "5181b31cc6e895714b7e60187e5f8189d65fe60125434406ef7488068027e0bd",
+          "words": 125,
+          "headings": 3,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -6038,13 +6679,22 @@
         },
         "fr": {
           "path": "fr/projects/heizoel-to-mqtt/configuration.md",
-          "status": "placeholder",
-          "sha256": "352515d26a762c41330dd3c8823fb3c827ec3a600df4f35bab0492545e32bc98",
-          "words": 77,
+          "status": "content-present",
+          "sha256": "0d66d9a0168a783c5f085a7f310966dc3093aeb9f94178e30835bf47918d46ba",
+          "words": 422,
           "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "examples": 1,
+          "versions": [
+            "0.1.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -6084,13 +6734,22 @@
         },
         "fr": {
           "path": "fr/projects/index.md",
-          "status": "placeholder",
-          "sha256": "8a933e04e2a0820a8e54ad9dc0665227ae0c6414a0f886412ed261748258c579",
-          "words": 71,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "404d50d18eca67de2233e3bce0f2452dbd6bdb952780dadccc0c0032bd9ababb",
+          "words": 244,
+          "headings": 5,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "0.3.4"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -6132,7 +6791,23 @@
         },
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
-          "status": "missing"
+          "status": "content-present",
+          "sha256": "0e6a80c3cef0bfc8aaa54ac062289713a7d745144cc33cdb3c4642dfcb0a16d5",
+          "words": 1330,
+          "headings": 8,
+          "examples": 0,
+          "versions": [
+            "0.1.15",
+            "0.1.16"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -6168,13 +6843,20 @@
         },
         "fr": {
           "path": "fr/projects/parcel-to-mqtt/examples.md",
-          "status": "placeholder",
-          "sha256": "368927ad93ebe9264542252e6e7ea821dc0f9be84ac35802de12b5881726e80c",
-          "words": 77,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "2a193c14f2370f4b9f536cb0cd86a69604b1f440c937f791e77566e4359f35cb",
+          "words": 37,
+          "headings": 3,
+          "examples": 2,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -6210,13 +6892,20 @@
         },
         "fr": {
           "path": "fr/projects/parcel-to-mqtt/entities.md",
-          "status": "placeholder",
-          "sha256": "2f6ecd99182eefdc5d15a95bbd7a7f12cfae990dddfd56a4706e718c0f247728",
-          "words": 77,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "abb3dfc7141a8f79a09d885eb93e8fd4aa4d0834ec113c7e601dcbc9fce9ff50",
+          "words": 117,
+          "headings": 1,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -6252,13 +6941,20 @@
         },
         "fr": {
           "path": "fr/projects/parcel-to-mqtt/index.md",
-          "status": "placeholder",
-          "sha256": "f5f07cbf9678e0cea09bffc0830a802bd552de5a159e48b57dd742cbbc5d5f3f",
-          "words": 76,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "fe1467134c8bed5018f884031d87057646b0c4b998bfb989e1f45c4ff2b4d656",
+          "words": 418,
+          "headings": 3,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -6294,13 +6990,20 @@
         },
         "fr": {
           "path": "fr/projects/parcel-to-mqtt/installation.md",
-          "status": "placeholder",
-          "sha256": "30cc36a3b217adb872435a2a95b0190b3e9729767aca1fa508b7780cccee5db5",
-          "words": 77,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "e2f02547f603bfd46877328c9f7c40cb5414f835c71dee859ce05beabb8f2f2f",
+          "words": 190,
+          "headings": 1,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -6336,13 +7039,20 @@
         },
         "fr": {
           "path": "fr/projects/parcel-to-mqtt/configuration.md",
-          "status": "placeholder",
-          "sha256": "9422f3aa962889c0eaab245ea8082bc9ccb011fe90a8122c21ce443a8c52b521",
-          "words": 77,
+          "status": "content-present",
+          "sha256": "7f49a4196a1eedfaf54c6dd9feeeea86a3f6c17f8233403cb7751306f112bee6",
+          "words": 491,
           "headings": 2,
-          "examples": 0,
+          "examples": 2,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10217,13 +10927,20 @@
         },
         "fr": {
           "path": "fr/projects/ultimate-timer/examples.md",
-          "status": "placeholder",
-          "sha256": "b7a0db4a333f71d20201cbb18213114a0e5e6809c3c5d1b5e376ca5afb234bd2",
-          "words": 77,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "24ee00e51848078306d96f838494e6ab299a128b96a3d965eef21c83f12da91c",
+          "words": 111,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10259,13 +10976,20 @@
         },
         "fr": {
           "path": "fr/projects/ultimate-timer/how-it-works.md",
-          "status": "placeholder",
-          "sha256": "a3ce58e1fb75c339864d4f0e8c4ad4b82003ec04490cb8a25358ffdfdcc4ff94",
-          "words": 81,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "deca04424c884f01111eaadc8dda8e9b9cad73cae09a8cf5c892cfdd23ab923d",
+          "words": 124,
+          "headings": 5,
+          "examples": 2,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10301,13 +11025,20 @@
         },
         "fr": {
           "path": "fr/projects/ultimate-timer/index.md",
-          "status": "placeholder",
-          "sha256": "5326c8ee434ff51e6a4ea96031c8e840ee02dc8ba611f6acb3023eff849aed51",
-          "words": 74,
+          "status": "content-present",
+          "sha256": "5817029bf84885684bdfcb7ced1952698851d6e5c9d0eb99092141d9b13d7c01",
+          "words": 71,
           "headings": 2,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10343,13 +11074,20 @@
         },
         "fr": {
           "path": "fr/projects/ultimate-timer/installation.md",
-          "status": "placeholder",
-          "sha256": "44e85daeed84b764365978486d9488bf518cef00afbcb341bc3d248b8bc7f058",
-          "words": 75,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "a4160c5ec3e81097966615e8afa588b219346b7b7f5c2c63ea7a7bfd282dca5b",
+          "words": 82,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10385,13 +11123,20 @@
         },
         "fr": {
           "path": "fr/projects/ultimate-timer/configuration.md",
-          "status": "placeholder",
-          "sha256": "2275bcddf23e572573b5bc444471dc9e59312949f0edcf93b52abbf55e689d4c",
-          "words": 75,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "fb9c4d280d1f2416fc17c6050fca1237233af7bd8fe0f5e61e66ae2593f5dea5",
+          "words": 180,
+          "headings": 5,
+          "examples": 2,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10410,23 +11155,37 @@
         },
         "en": {
           "path": "en/collection/calendar-card-pro/beispiele.md",
-          "status": "placeholder",
-          "sha256": "54b9994c3e53557e4fb17c9542347ea2401692d2d08801e1d109ec4fe3347a38",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "f85519be9a9d28282db1f7f1cfc7afc14dee972935082e3c402b1cf0a10efba8",
+          "words": 60,
+          "headings": 7,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/beispiele.md",
-          "status": "placeholder",
-          "sha256": "e010a6613fd661b43d5d3b7b40c6c90801f63ab7a4b481bce9c45928dc9b6c65",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "b05c65280b8b7eecaa0595df09050de9f70eba8be6c706adb77d683a23c15b0e",
+          "words": 65,
+          "headings": 7,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10447,23 +11206,41 @@
         },
         "en": {
           "path": "en/collection/calendar-card-pro/entwicklung.md",
-          "status": "placeholder",
-          "sha256": "cca642a0d70f8c0e6669ff92b8c7090d169467cd10252aa6b9e6096c87d614d3",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "bd0d71518459cd6c0c47afaaf48abe5e28eb5584fdf74925f0ec201374fed0f8",
+          "words": 114,
+          "headings": 4,
+          "examples": 1,
+          "versions": [
+            "4.0.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/entwicklung.md",
-          "status": "placeholder",
-          "sha256": "b7ea3e2e250286353533cae8ddffa213d8befd4eb2c79f517211871e01d362ee",
-          "words": 91,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "a33ebae9d63d2812e58bcd6503774f753c23d044acc190522fc47a7be7705a32",
+          "words": 134,
+          "headings": 4,
+          "examples": 1,
+          "versions": [
+            "4.0.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10485,23 +11262,43 @@
         },
         "en": {
           "path": "en/collection/calendar-card-pro/features.md",
-          "status": "placeholder",
-          "sha256": "07f15ac52d399d962802002ddd93f5532c3981379c25300fffe0039b95aae740",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "940a97da784d86c3dfa79afd06af194280b2d8ff0687dc248cfeec7d2c3a7544",
+          "words": 621,
+          "headings": 16,
+          "examples": 7,
+          "versions": [
+            "4.0.0",
+            "4.1.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/features.md",
-          "status": "placeholder",
-          "sha256": "5c5018bd387d42f8d1312259ac59a2eb46e9c6c7b7a25c8f47add14412e434e8",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "7442040a483b3325fe5c29bf93c3396bc15bf3dfa5830ea6faa1dfbbf6a9918b",
+          "words": 801,
+          "headings": 16,
+          "examples": 7,
+          "versions": [
+            "4.0.0",
+            "4.1.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10523,9 +11320,9 @@
         "en": {
           "path": "en/collection/calendar-card-pro/index.md",
           "status": "content-present",
-          "sha256": "298e5cee92a41ec930f66bf74cd004728c4b101d5ab9aa8b03eaf1efffd0fee4",
-          "words": 118,
-          "headings": 1,
+          "sha256": "81512aa86463a3d5442add53ba0d0b541c637ead375aae2bca692069610f89e4",
+          "words": 437,
+          "headings": 4,
           "examples": 0,
           "versions": [
             "4.1.0"
@@ -10535,19 +11332,28 @@
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
-            "substantially_shorter": true,
-            "fewer_headings": true
+            "substantially_shorter": false,
+            "fewer_headings": false
           }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/index.md",
-          "status": "placeholder",
-          "sha256": "7daeae45b40a63b7bae227331389852277835a631f00220203341ac49acada1f",
-          "words": 86,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "71e9192fa0fda0f7df062e2cd863a010304ce1892ea1279ff7c5760f3da5c527",
+          "words": 367,
+          "headings": 3,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "4.1.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10566,23 +11372,37 @@
         },
         "en": {
           "path": "en/collection/calendar-card-pro/installation.md",
-          "status": "placeholder",
-          "sha256": "ab5ecacac31346abf81d55861dac524b73af2fd58c54dad3c4cd2218da6d524d",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "99e40cc14cbdb23d7a9f7ca8d17dcba794e54f43b5a50663419ad0ba3357e35d",
+          "words": 182,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/installation.md",
-          "status": "placeholder",
-          "sha256": "7ff19b3a29f12bc25a49f61fe220a949a94dd7a9ab8990fd9657bc846c87c5e3",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "c3cfe8dc449897a5be1e7bba9f04866bea5fe4e597e82186db3534c41d112140",
+          "words": 218,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10603,23 +11423,41 @@
         },
         "en": {
           "path": "en/collection/calendar-card-pro/konfiguration.md",
-          "status": "placeholder",
-          "sha256": "576809ad7714b29cd17c9ec60d44d113587dda79c6c28af527987747b149509e",
-          "words": 87,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "286d3129c0a91ad02689238329c94d170aa1af67a57edae5e05bf4289d7b3f97",
+          "words": 1527,
+          "headings": 15,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "4.1.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/konfiguration.md",
-          "status": "placeholder",
-          "sha256": "73bb650999c5ba21e6670191e153ef4754e8df8040d462d97fe6a471ac7443d6",
-          "words": 89,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "652b8cb58bb8b9213d674d1ade7b197cedc32262826ddeaa51f90b06727e5705",
+          "words": 1950,
+          "headings": 15,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "4.1.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10640,23 +11478,41 @@
         },
         "en": {
           "path": "en/collection/calendar-card-pro/lizenz-und-stand.md",
-          "status": "placeholder",
-          "sha256": "6c7bce57340f8638123a0c6ab5d9228d235e7d1ac5c4ba876e3f20ece6c42151",
-          "words": 91,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "51673fe25528315335ba1460d6382203559c0d26ca59415fb134e6a68ed52ffb",
+          "words": 172,
+          "headings": 3,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "4.1.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/lizenz-und-stand.md",
-          "status": "placeholder",
-          "sha256": "91044b9ac65ca33111c85abc6200585e18a26f34a4d8746f8928eeef24543de2",
-          "words": 93,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "b3bf6c8d48cda9119fb045aa36e2af9dc4e22600c10c3c1c66cbf84885ff4158",
+          "words": 197,
+          "headings": 3,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "4.1.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10675,23 +11531,37 @@
         },
         "en": {
           "path": "en/collection/calendar-card-pro/nutzung.md",
-          "status": "placeholder",
-          "sha256": "41bf78cbb9f16bcd04e219d0f4036e5d70c2a4c10af4d2d28f579e3755b9775d",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "4ae99829cb27b5452e0b71364f79629eecabedd0a79730fc6f721ce443d72f13",
+          "words": 133,
+          "headings": 5,
+          "examples": 2,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/nutzung.md",
-          "status": "placeholder",
-          "sha256": "f613fddc4339f1caa5654a2b60dcb43659925b9d164b283f76fde5b8cf12d3fa",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "638e1d7aecca15c64f64744d129d06f421fc1561773167003a2193c0a121181c",
+          "words": 154,
+          "headings": 5,
+          "examples": 2,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10759,23 +11629,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/aktionen.md",
-          "status": "placeholder",
-          "sha256": "890ba50b6caa2ccbc2431ca3a9f1c316bc849d453a4c96b08ee9f7d39208231a",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "04de71246bef49ca1708421f510232df5a6d6ee583f06347946e542a890131e8",
+          "words": 103,
+          "headings": 4,
+          "examples": 2,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/aktionen.md",
-          "status": "placeholder",
-          "sha256": "e644aa8c7c72b269dfcbe6fb95d3e2475f71bceab5c8eac9d6f9c11769cb41eb",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "90318880b410c12bf76f03a26f59a866c6f9959ab9efe8af679569e5122631c5",
+          "words": 129,
+          "headings": 4,
+          "examples": 2,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10794,23 +11678,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/beispiele-aus-forum.md",
-          "status": "placeholder",
-          "sha256": "2ba33517e115404395a827fa3b1e347d6abc92d5bc1ea14f5a840df54e6c74d7",
-          "words": 87,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "2367cd35454098b8bcbdf3c498eca77b257c0385be5a50ba9b21a5892caaba8f",
+          "words": 774,
+          "headings": 24,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/beispiele-aus-forum.md",
-          "status": "placeholder",
-          "sha256": "e7c985701eb73c0d566f111d722f362fc30f9fd347b04d25f97512b0a3afebc9",
-          "words": 90,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "38b85bd9ee3c964c037e3e0963c447a0ea26da4371810b59283b7484a8f03c61",
+          "words": 834,
+          "headings": 24,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10829,23 +11727,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/css.md",
-          "status": "placeholder",
-          "sha256": "20cc4cc431a476dc4b89003ce93c9f198a0f3d303e51b9d5a533a4774fabd2d1",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "793ed6cd00f407bd890962905e900ddd92fd82470bfb3f179b05a6ea01c267d2",
+          "words": 67,
+          "headings": 5,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/css.md",
-          "status": "placeholder",
-          "sha256": "768fae3af6db29a4a58438366c5ee045d3ac409ca1a8cbe8443f09b43aff2a2b",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "37e1db4265b160a0d6bf7ea1bf7543030d522f586af24d698f3ce3ba271a6843",
+          "words": 74,
+          "headings": 5,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10864,23 +11776,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/datenquellen.md",
-          "status": "placeholder",
-          "sha256": "a0229890e62b11fadf725d0fb9b546f21dbdc3340f4b7ce650ab9f1a5f6bb2e6",
-          "words": 88,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "1259486b253c6a7130b9952f4997a39746c96ce3d2c3896df6d2404bf0877fc0",
+          "words": 121,
+          "headings": 5,
+          "examples": 4,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/datenquellen.md",
-          "status": "placeholder",
-          "sha256": "5c79e7e4068b0d0477798f10f96429e6480c766d8d9ab5e3363ea38775151053",
-          "words": 91,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "7ac0c4eab291052c7a6ed5c8c8b6392f8d9e5d504ed41a3dea777e1af3a831d8",
+          "words": 152,
+          "headings": 5,
+          "examples": 4,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10899,23 +11825,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/externe-daten.md",
-          "status": "placeholder",
-          "sha256": "33a75b740c7728379681130b14b313d56e51e7aa00198d9b072e1ff55aa5eae1",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "6a2d9d7f9ed725d844c26dcde7b8370e169cd2ba2978a9497422c820baf23ba0",
+          "words": 231,
+          "headings": 5,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/externe-daten.md",
-          "status": "placeholder",
-          "sha256": "39d8a7a9ce190a94e8a9e788f15a3cb20bad2c1c07e639df5db85e28cd464b60",
-          "words": 91,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "259523a7cb83a63c535351045a621a3764a2b4d2952ebe454c7adea1c76fb980",
+          "words": 261,
+          "headings": 5,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10934,23 +11874,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/formatierung.md",
-          "status": "placeholder",
-          "sha256": "61effa7a0e94e4f602323240e3be35377c4f67681e9c432a88d935d129f17380",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "fbfd1a963dd5746416640e53fec376ca3c3fc54d58ba5d7e7ee3634e6c2b1bfc",
+          "words": 118,
+          "headings": 5,
+          "examples": 5,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/formatierung.md",
-          "status": "placeholder",
-          "sha256": "8e1b58323a1802ec0db4cc9b9d54773afbefdcdc260d52c36a841d72abe15f24",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "a56ef64c21f57c1d45ac18ff89374eb5cdc885e90f13fc561dee303a02019b34",
+          "words": 151,
+          "headings": 5,
+          "examples": 5,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -10969,23 +11923,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/grundlagen.md",
-          "status": "placeholder",
-          "sha256": "afd16afadc940b350a9e09e5cee735e90ef3ed455a6c34c87089a322d750c275",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "49cd7b3fbd450bc7634da08ee97348e007a0fb8a376656058578316a52dfb452",
+          "words": 83,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/grundlagen.md",
-          "status": "placeholder",
-          "sha256": "7d510b470f48363322d9c7227da1632a65cad98b768f628b6dee7863d6ba702d",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "e7651686cf753d07f6f171259fe3f9c061d6f4ac2883fb14a777b5de227dad19",
+          "words": 103,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11004,23 +11972,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/header-footer.md",
-          "status": "placeholder",
-          "sha256": "2d89b4b61e2771f5f36ea68dc3bf938802836333c07dcaf894553cd71efa3c8d",
-          "words": 90,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "caf80725e0e7f1b4d72e8eadc01b31fc154c2792c101ba5a2d1a4dc2ef3467e2",
+          "words": 119,
+          "headings": 6,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/header-footer.md",
-          "status": "placeholder",
-          "sha256": "118671435a90837380f0f7d05144566c2689bec9be5d0f7b00696e6a913ca652",
-          "words": 95,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "e834c1d94c3e23d85ef2d96beaf6f2d4191f20093b99800ba97001291e3376e6",
+          "words": 146,
+          "headings": 6,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11042,9 +12024,9 @@
         "en": {
           "path": "en/collection/flex-table-card/index.md",
           "status": "content-present",
-          "sha256": "403374bd01995166f2c91dbaa9aa6b2f0277f53a6dc92ed437c0ba12c26322d7",
-          "words": 88,
-          "headings": 1,
+          "sha256": "769fcd97879bb26f7f444576237ae5eac6efeea8fa54a4bb0b17922099c715cf",
+          "words": 403,
+          "headings": 6,
           "examples": 0,
           "versions": [
             "1.4.0"
@@ -11054,19 +12036,28 @@
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
-            "substantially_shorter": true,
-            "fewer_headings": true
+            "substantially_shorter": false,
+            "fewer_headings": false
           }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/index.md",
-          "status": "placeholder",
-          "sha256": "3e6f47ac3f73f67fc3b0046ab739c7497093b52aa121957cea9063f27cbae7f4",
-          "words": 86,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "f21e1e01bad7d156a29ee4af5ce16b6de3572892c216d8bb48894f4ecd5df783",
+          "words": 358,
+          "headings": 5,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "1.4.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11085,23 +12076,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/installation.md",
-          "status": "placeholder",
-          "sha256": "64a54fa846264660bab472a9dd30ea674ae376f9cbaefa5645e9e884fcc5d5f1",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "4d2e67ee8356e79d0c12f667b63f0cc318029cfd8eae4a5a180ae3ca87c27151",
+          "words": 105,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/installation.md",
-          "status": "placeholder",
-          "sha256": "dd9d4563217be52139ba5c01768261e231a77cdc44495ffbac34a42f73da8706",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "86be31485222fc66751b61d6b4a855dea4d58bf983d30b41ba818cb887bc0e20",
+          "words": 117,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11120,23 +12125,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/paketliste.md",
-          "status": "placeholder",
-          "sha256": "8dedfa28024a862bc5a7385042a176b9a5b50856fe907a9b8c676d139fcc1a3e",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "a520facf49426ea3c9aa21cfaf0d47b1adbb26f31d3549a32d364988bad38e82",
+          "words": 92,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/paketliste.md",
-          "status": "placeholder",
-          "sha256": "ce12f5a32bbbb66d37f5458997b246c0d1d9d917ef2bf70fc1bc15d851e4af3d",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "0f55bcedf6b9b4f5c3d11e2e202ec7f329ba67135160562efbb136d7c52e0f76",
+          "words": 97,
+          "headings": 4,
+          "examples": 3,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11155,23 +12174,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/referenz.md",
-          "status": "placeholder",
-          "sha256": "42c6e894ed50e8d469d0e372487151af16992f866e74f4a6e99f8f30df6b8144",
-          "words": 87,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "e88ed24d3489fc09c64d55e82fd44bc132c4650c21489d7c36d0e63d23c4ab4a",
+          "words": 308,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/referenz.md",
-          "status": "placeholder",
-          "sha256": "ca62f23dc0e8a3f62602c9b5e829391b646e4b8a7cfcdb83225f9eaf4586a8a4",
-          "words": 89,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "7e70cb651ba4c69b8366cba30ed5b3e3b038ac4b0b277c22ff8427d70eaf54b8",
+          "words": 378,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11190,23 +12223,37 @@
         },
         "en": {
           "path": "en/collection/flex-table-card/sortierung.md",
-          "status": "placeholder",
-          "sha256": "70192e32e6d17ba146f0cd07f120e652e1e1f67df2bb8ef11f8046897ddce1c9",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "2320730fb1d0865bd0e81b683d9a44e1690c9c0146c72f4c6c8b8210a4f143a6",
+          "words": 164,
+          "headings": 5,
+          "examples": 5,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/sortierung.md",
-          "status": "placeholder",
-          "sha256": "3bfaed2336fe1227aac1dea6beba5142274289e3513739390752ce4c3423deec",
-          "words": 89,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "3f3cdaa6bc2a0b28969ba74b5120e8a7b4c39f15eee5a2b4d4d68d7d65ae15bc",
+          "words": 202,
+          "headings": 5,
+          "examples": 5,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11225,23 +12272,37 @@
         },
         "en": {
           "path": "en/collection/frosted-glass-manager/index.md",
-          "status": "placeholder",
-          "sha256": "799de48125a89eeb70d4dfc7f956eb7163ca720a73fe467134386592c7365611",
-          "words": 85,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "a9c8c2f2f4f22f6aed1e41005ae13f21752c8cf0b06da35143d85d133b1dc279",
+          "words": 374,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/frosted-glass-manager/index.md",
-          "status": "placeholder",
-          "sha256": "b099db51a351c1c33090cdcd19eb916ffb0a28b1d2eeb16affab2dd1a20472c6",
-          "words": 87,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "4a23351f749e81b194e9fafffe3b2b18f98318f93879cbf88039beb9a2efa1e1",
+          "words": 413,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11260,23 +12321,37 @@
         },
         "en": {
           "path": "en/collection/frosted-glass-theme/index.md",
-          "status": "placeholder",
-          "sha256": "d6388f7964291efaee01c5e6fd48ecb2c20f869e86a5ddd32a721a46550fca01",
-          "words": 84,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "197000c976bf4bb8b25414e363204454d2b73b8098736bfa367b8b8dcc439b3c",
+          "words": 359,
+          "headings": 5,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/frosted-glass-theme/index.md",
-          "status": "placeholder",
-          "sha256": "cf544a6d1ffbb95fb9d2aa1a7871499c992b40fbddce0d8b33d4bfd7b113f406",
-          "words": 86,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "184c78fc8465898efab37b8602b6cd9c72d79f9d0aea26d4ea1e83dcd7da7696",
+          "words": 443,
+          "headings": 5,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11316,13 +12391,22 @@
         },
         "fr": {
           "path": "fr/collection/ha-apps.md",
-          "status": "placeholder",
-          "sha256": "bb1785e5055ba367caa76f68cbbdae5285bf114a4abc1af57b252f4251b54cea",
-          "words": 84,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "7c2ab4b19a3dd652249f4cdeb9962b473b52197115a481c9232de89ba783529f",
+          "words": 226,
+          "headings": 3,
+          "examples": 1,
+          "versions": [
+            "0.1.16"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11343,23 +12427,41 @@
         },
         "en": {
           "path": "en/collection/ha-automation-exporter/index.md",
-          "status": "placeholder",
-          "sha256": "04ec12a93d7186093a2a62c3d8f9499bd894101f87e57e6021306b763f56c170",
-          "words": 85,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "a1ca971c3d64f749e4cdd9c81fdec10f0f44c11d3bcbcdb3aacabb023811591a",
+          "words": 543,
+          "headings": 10,
+          "examples": 2,
+          "versions": [
+            "0.3.4"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/ha-automation-exporter/index.md",
-          "status": "placeholder",
-          "sha256": "9ab2f2b74499e179980f16f2dfda51e05be6a57bd93dbb57f990661b1b245a10",
-          "words": 87,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "05ccb17c2b20189160903ebf9415844caab1920ce77d46518f07e5415ebc336b",
+          "words": 662,
+          "headings": 10,
+          "examples": 2,
+          "versions": [
+            "0.3.4"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11395,13 +12497,20 @@
         },
         "fr": {
           "path": "fr/collection/ha-blueprints.md",
-          "status": "placeholder",
-          "sha256": "335b42f94e6415308693835a37d1085d8b57f42aed66e043c9b8b01992d3b700",
-          "words": 81,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "30e0ba0ea2fc7b589e8a157505a1e90637b9ebdc99709101c6464b2b752a5ac3",
+          "words": 98,
+          "headings": 3,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11437,13 +12546,20 @@
         },
         "fr": {
           "path": "fr/collection/ha-cards.md",
-          "status": "placeholder",
-          "sha256": "254327edfe60d98be285e17d0058a59dc2b79cf80402840dd4d022a0be3d7ad9",
-          "words": 81,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "ad28b43b37c20554b507a1fb17f81bdba09549d3994c35b15c67f9cc88e6d92b",
+          "words": 261,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11479,13 +12595,20 @@
         },
         "fr": {
           "path": "fr/collection/ha-dashboard.md",
-          "status": "placeholder",
-          "sha256": "7256e556ad4b51169d4dbf779897dba9721c1c53ba044080bedcacc0027051a1",
-          "words": 81,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "ff6190867c6951ae9d916a0188162cfd3398948c1c0d2a06c767cb6b90d3f47e",
+          "words": 203,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11521,13 +12644,20 @@
         },
         "fr": {
           "path": "fr/collection/ha-recommendations.md",
-          "status": "placeholder",
-          "sha256": "979dd28aebf2b6aa43ba8b0acc8835cfad4435103bb0ba1fe61ceab57314ae2b",
-          "words": 81,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "44490c778677eae493036650a13285cb7b589e343bd075e43dcab0e02766d907",
+          "words": 216,
+          "headings": 3,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11563,13 +12693,20 @@
         },
         "fr": {
           "path": "fr/collection/ha-integrations.md",
-          "status": "placeholder",
-          "sha256": "8184c6c8cd403c2d30481d19b9e83612cd039ea36763f3c4b013c1df5c9a24a3",
-          "words": 81,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "cdbd77b8a2f9720f94b1996eb315cd7a704a052db6b5e1a3ebc4a528836857cb",
+          "words": 168,
+          "headings": 3,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11605,13 +12742,20 @@
         },
         "fr": {
           "path": "fr/collection/ha-tools.md",
-          "status": "placeholder",
-          "sha256": "ca47a84055c8654e262499fc04050ac9ca5162f0ae5c4a8fa2aa45e2b7f61f35",
-          "words": 81,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "1f65ed13e39d4231bc3203bcb035928fb0f74487540f9036bb2cf23fd6c9a616",
+          "words": 131,
+          "headings": 3,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11647,13 +12791,20 @@
         },
         "fr": {
           "path": "fr/collection/hacs-docs.md",
-          "status": "placeholder",
-          "sha256": "660f6eb74d0cf6f9bef0afc8e022773ee2f0518301943f8995d276f320a96f97",
-          "words": 81,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "e968afeb2b0f57a2af1a66780b116d5020b0224d2f27718ebabab245d5edf907",
+          "words": 180,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11689,13 +12840,20 @@
         },
         "fr": {
           "path": "fr/collection/index.md",
-          "status": "placeholder",
-          "sha256": "c88e4b4e0016d16523fb265e919c104450858a38d60b49108e40c1df37f676f5",
-          "words": 77,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "67d0cac612f483999237f179d12f7d6154df83df89f30cbc480765ecb58226ef",
+          "words": 456,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11714,23 +12872,37 @@
         },
         "en": {
           "path": "en/collection/mushroom/beispiele.md",
-          "status": "placeholder",
-          "sha256": "659acd5d9f1896beb297d0252e4f1f90be2beeadfc56bb7d7262cc2fa53d07ae",
-          "words": 81,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "bdb865e09f332b3089ec9e43177c348c08aebb7b975a6e7ff972e6bc6626a7df",
+          "words": 41,
+          "headings": 7,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/mushroom/beispiele.md",
-          "status": "placeholder",
-          "sha256": "118fbcb13bd125d7bc0fd1469806846bf5acfe7c8ff8046254665e11c2402fb8",
-          "words": 83,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "fd62358567f46c583345d310275e64bfafccb924f0e0efb76d21d23ba99849bc",
+          "words": 49,
+          "headings": 7,
+          "examples": 6,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11749,23 +12921,37 @@
         },
         "en": {
           "path": "en/collection/mushroom/entwicklung.md",
-          "status": "placeholder",
-          "sha256": "3c9d74478292d02ab8c94f92b95430a05152e69a8fedf296799182e5ec426e23",
-          "words": 83,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "8e835db5cf3ffe7d5ae92e9d4e98443a5f6ac5f836ecbbc1ea36642db02dba02",
+          "words": 122,
+          "headings": 5,
+          "examples": 4,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/mushroom/entwicklung.md",
-          "status": "placeholder",
-          "sha256": "e3632968efa86795874b58fd7f8f316fd73853961b957eef98243b2e8471c6ed",
-          "words": 85,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "5d9d695a9e04b597672f9094cce726028d9035fd5e6f60878f05c73c3f18be52",
+          "words": 140,
+          "headings": 5,
+          "examples": 4,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11784,23 +12970,37 @@
         },
         "en": {
           "path": "en/collection/mushroom/fehlersuche.md",
-          "status": "placeholder",
-          "sha256": "976edefd4294a31969c3dfaaf93b17cc012a436a67a05479f341ddaa1f12b992",
-          "words": 81,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "89aad7faaa7d3e0ab68206317c9c3fe581bbdb9b342a26ee92e6a3a6bdd8508c",
+          "words": 169,
+          "headings": 4,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/mushroom/fehlersuche.md",
-          "status": "placeholder",
-          "sha256": "a1e7a6923ed73d41f101e7c124057fd9efb26828b0d419168c1d5cc2311c725e",
-          "words": 83,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "f164ee1d03a8f462e7bfab82f2e37bdcd182e66a68a0b053a0b71fb7be9c799f",
+          "words": 199,
+          "headings": 4,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11840,13 +13040,22 @@
         },
         "fr": {
           "path": "fr/collection/mushroom/index.md",
-          "status": "placeholder",
-          "sha256": "1d5520862fd3a1c0fb057331f878c4035fc582cbd4d76e227bdfc536ff992f55",
-          "words": 81,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "41a955a93f438340c66ca7c3860d8fe7d56a8bcd0d538c2cd579f7e1deceb7db",
+          "words": 297,
+          "headings": 3,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "5.2.2"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11865,23 +13074,37 @@
         },
         "en": {
           "path": "en/collection/mushroom/installation.md",
-          "status": "placeholder",
-          "sha256": "c5dc8b239aed8d5dda7b0c911de6eefb3270f7ca37b84e221448e4bc7ecf0cff",
-          "words": 81,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "7af4cca1998b17414dfbd8298e9172fa29933d2e1c94530fb1bac7d8ed378eca",
+          "words": 185,
+          "headings": 4,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/mushroom/installation.md",
-          "status": "placeholder",
-          "sha256": "fa7f92a47bad0305a6c85fd19a46b6528e7255a7ade5e145e54e30aa02118f21",
-          "words": 83,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "463b5db247eeaf70b955c625b84889889b4ae8f64fe9a30b83d5506b6cb8d662",
+          "words": 215,
+          "headings": 4,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11900,23 +13123,37 @@
         },
         "en": {
           "path": "en/collection/mushroom/karten.md",
-          "status": "placeholder",
-          "sha256": "ad74a00c730d6e208039b6dbd0893ecbb97c06b1e97c44984873a793441b3138",
-          "words": 81,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "8aee8d852b1654b25134478559b699ab8c87fee1eb6e7381aa47493ce7199972",
+          "words": 467,
+          "headings": 5,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/mushroom/karten.md",
-          "status": "placeholder",
-          "sha256": "69c7ffe122f165c27bd998a211aac0d482180ffad46492efaddbf96a0afcc686",
-          "words": 83,
-          "headings": 2,
-          "examples": 0,
+          "status": "content-present",
+          "sha256": "a9ef916bce46898315890d690ac1b7868238a086fa2261c931ccb5373b33a7f7",
+          "words": 545,
+          "headings": 5,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11937,23 +13174,41 @@
         },
         "en": {
           "path": "en/collection/mushroom/lizenz-und-stand.md",
-          "status": "placeholder",
-          "sha256": "aea0312c39d28c9b7c1225ea209793de5c042edbfa1556ad9204c6536b35177c",
-          "words": 85,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "077b09da39fb11bbded0735799d82ec53379605dabe9cee6dbd69a2e37b0223e",
+          "words": 139,
+          "headings": 3,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "5.2.2"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/mushroom/lizenz-und-stand.md",
-          "status": "placeholder",
-          "sha256": "58c952ce1b5aa9c2c322e798bfd051ad4195a5518b71bf5c1a358d6c0f1bdfa8",
-          "words": 87,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "5caac86dc7a83f3a43723b95f720434806edc2cd69d3f7be30c59d129152c0d4",
+          "words": 168,
+          "headings": 3,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "5.2.2"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -11972,23 +13227,37 @@
         },
         "en": {
           "path": "en/collection/mushroom/nutzung.md",
-          "status": "placeholder",
-          "sha256": "d06b817f3e91db225079eea4ad840a17eea6bcb481d8a96323af111debf512c3",
-          "words": 81,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "1a913e9d1c79e2572534ca6ea42bc865e3803df136b78fe98b63c86d8af24c22",
+          "words": 146,
+          "headings": 3,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/mushroom/nutzung.md",
-          "status": "placeholder",
-          "sha256": "2fa8db2a100ae1dabaec60721c533762af415ec731059ab30d7eef09b0e590d4",
-          "words": 83,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "8815be7a8e35552d772a19141bb8dd11f6e853df3065ceba385d380a1f209659",
+          "words": 173,
+          "headings": 3,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -12009,23 +13278,41 @@
         },
         "en": {
           "path": "en/collection/neomorphix-uix/index.md",
-          "status": "placeholder",
-          "sha256": "005e9db8b151d3789f3739fe6cc406ed863deac99df3a4b14346d2319d8f2922",
-          "words": 81,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "651e772802ddd4c7a0e979fa6a0278152f457448fd49ed0b2ed447e33978a9e6",
+          "words": 457,
+          "headings": 5,
+          "examples": 2,
+          "versions": [
+            "1.0.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/neomorphix-uix/index.md",
-          "status": "placeholder",
-          "sha256": "b9ef66f9c961a35364312db0f8e747e46ec765e0036425a15c31329b910a0230",
-          "words": 83,
-          "headings": 2,
-          "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "status": "content-present",
+          "sha256": "efa31a475ab736439db2bac17b923d4095f8da2723b386ebe21948ac9ebc1780",
+          "words": 518,
+          "headings": 5,
+          "examples": 2,
+          "versions": [
+            "1.0.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -12045,29 +13332,36 @@
         "en": {
           "path": "en/collection/interesting-examples.md",
           "status": "content-present",
-          "sha256": "a9f42fd654333f383e5a1d0fced9a54e98c6028d61953db9c9b51c8d16938a54",
-          "words": 133,
-          "headings": 2,
-          "examples": 0,
+          "sha256": "00e2e0fbe203f23d726d9413864f3aef9cd01b896038e8d6d5c66a23c9898eed",
+          "words": 325,
+          "headings": 4,
+          "examples": 1,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
-            "fewer_examples": true,
+            "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
           }
         },
         "fr": {
           "path": "fr/collection/interesting-examples.md",
-          "status": "placeholder",
-          "sha256": "15b8ae3258f8a39880ac6dfc4c257308b488c5d563efd1a3f36fd4ee87800ff0",
-          "words": 82,
+          "status": "content-present",
+          "sha256": "61d309739156514fd8fd7b74cff7db087a41816589afd5b24711f014ad3e0a5e",
+          "words": 228,
           "headings": 2,
-          "examples": 0,
+          "examples": 1,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -12086,23 +13380,37 @@
         },
         "en": {
           "path": "en/collection/zendure-ha/entitaeten.md",
-          "status": "placeholder",
-          "sha256": "eeaa18e15f563848bea6bb7ad012f63979354b3e6c9b8ab4864e5b40c73d7a32",
-          "words": 84,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "0c86debe8295702be9d3b659dc272750effd57d74bfcc4529abd608485dbd362",
+          "words": 397,
+          "headings": 8,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/zendure-ha/entitaeten.md",
-          "status": "placeholder",
-          "sha256": "cf4b369580124c9e7fd25866e13fc799bac246b1cf2040cd148f6dbb11b99b2a",
-          "words": 86,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "e656b5d26f26618f1c91db2354f6e5048f1d06898b2a70ea776eb4e938758f29",
+          "words": 475,
+          "headings": 8,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -12121,23 +13429,37 @@
         },
         "en": {
           "path": "en/collection/zendure-ha/fehlersuche.md",
-          "status": "placeholder",
-          "sha256": "d833d195750410232ef3e1c0f6ac3335ca83272237b3dc612d73b6f78d05c741",
-          "words": 84,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "a341a1d43ad648c281dddd7043b14a7ac33e8e7c7d2a3371a112acad63a08df6",
+          "words": 255,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/zendure-ha/fehlersuche.md",
-          "status": "placeholder",
-          "sha256": "20bc744164942b04dff7818962f94bad33a520fd1e9143ed29d770f411d5fa8a",
-          "words": 86,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "eee0cd135ce0436285605908713bb8a34b53da4ac9c6a1cd0de68c932ca21c52",
+          "words": 352,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -12156,23 +13478,37 @@
         },
         "en": {
           "path": "en/collection/zendure-ha/fuse-group.md",
-          "status": "placeholder",
-          "sha256": "c88c429545a47187d7447ccc1b56dc3224ef305582ff72371c340168eafc157f",
-          "words": 86,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "d62c206886ff2189bd6cddba680f894953413bd8b3a30f9b16a224005ca655c0",
+          "words": 270,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/zendure-ha/fuse-group.md",
-          "status": "placeholder",
-          "sha256": "5bfc67ccda856dffa3ffcd4cca761f8411a8407d5a37abb000e3f3347e274343",
-          "words": 88,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "4b117f55e53f6f0c38d41db5398769a665f6be008f1d939f33f8872cb8c5dd29",
+          "words": 328,
+          "headings": 4,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -12195,33 +13531,42 @@
         "en": {
           "path": "en/collection/zendure-ha/index.md",
           "status": "content-present",
-          "sha256": "d0aeb86400b3536c4b8b03989b05e13ad2d7fd1772262ce3425701f2905e35fc",
-          "words": 88,
-          "headings": 1,
+          "sha256": "eed93d60b605a756196de6a238a3057250e11ac7e76f06492f9bdc4bc21cf7e8",
+          "words": 377,
+          "headings": 6,
           "examples": 0,
           "versions": [
-            "1.4.4"
+            "1.4.4",
+            "2025.4.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "2025.4.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
-            "substantially_shorter": true,
-            "fewer_headings": true
+            "substantially_shorter": false,
+            "fewer_headings": false
           }
         },
         "fr": {
           "path": "fr/collection/zendure-ha/index.md",
-          "status": "placeholder",
-          "sha256": "2fedd71cdab4c8706a57543467b60a054d23d15b3656baca133ce1b22ba57f92",
-          "words": 85,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "d06d2dca448ebc6e8c254b9f4d687a4b4cfbba483c139c11fbe6423ac927dc07",
+          "words": 314,
+          "headings": 5,
           "examples": 0,
-          "versions": [],
-          "unresolved_local_references": []
+          "versions": [
+            "1.4.4",
+            "2025.4.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -12240,23 +13585,37 @@
         },
         "en": {
           "path": "en/collection/zendure-ha/installation.md",
-          "status": "placeholder",
-          "sha256": "4de04da4a859e4e5c776698325db7c7c3001dd1aa143b8573f9109046879167c",
-          "words": 84,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "ed25f747e8d9378c77c62f2d513d4c253a57fbadfefa4dd5c95d89c897edf6b2",
+          "words": 294,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/zendure-ha/installation.md",
-          "status": "placeholder",
-          "sha256": "4cc5852c0356795beb67047a058f5b7b3539c02927ab595050e32ffce755dd3a",
-          "words": 86,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "c6eaae71e11d80c312208c5513bef9d160f8fe6cf65b66611ac89206b8bf343a",
+          "words": 370,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -12275,23 +13634,37 @@
         },
         "en": {
           "path": "en/collection/zendure-ha/lokales-mqtt.md",
-          "status": "placeholder",
-          "sha256": "7340e3476e68558b0143b2e586da0362abbf2e4935b1fd3408c6be484111a780",
-          "words": 86,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "665f377ab417ab8ab5d5c4bc17a650c48403d15ced747b4e467d6996c7fa0ef6",
+          "words": 269,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/zendure-ha/lokales-mqtt.md",
-          "status": "placeholder",
-          "sha256": "22cb1dc6ed8ee5f347a1e61a8e5e428f582508aac7f11a5e0ad7c1eabc5b655b",
-          "words": 88,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "55b86d5bb5abfffa03592e8d51bc7152cab42058c9f1013fc268b1b6353b85e9",
+          "words": 338,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     },
@@ -12310,23 +13683,37 @@
         },
         "en": {
           "path": "en/collection/zendure-ha/manager.md",
-          "status": "placeholder",
-          "sha256": "a28732951d76314b972941a4130555f917cf6987546bb8966683ee4894548c28",
-          "words": 83,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "2f11ed3933dc48f942bf1cfa18fbb09532cf027ed5618208d17f5a6bd75f3500",
+          "words": 277,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         },
         "fr": {
           "path": "fr/collection/zendure-ha/manager.md",
-          "status": "placeholder",
-          "sha256": "c81a3acecdc303a2c38ed4228bcea8c0182730c9257998ea1511cb2f33b2e030",
-          "words": 85,
-          "headings": 2,
+          "status": "content-present",
+          "sha256": "5ed0e4232ea1eb91b272cabfcd200bd610ddacbfaad2d2f491bcbffc5827be40",
+          "words": 365,
+          "headings": 5,
           "examples": 0,
           "versions": [],
-          "unresolved_local_references": []
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
         }
       }
     }

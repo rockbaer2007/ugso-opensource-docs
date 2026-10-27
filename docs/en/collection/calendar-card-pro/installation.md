@@ -1,17 +1,61 @@
 ---
 title: Calendar Card Pro Installation
-description: English page for Calendar Card Pro Installation in the UGSo Open Source collection.
+description: Install Calendar Card Pro via HACS or manually.
 ---
-# Calendar Card Pro Installation
+<a id="calendar-card-pro-installation"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# Installation {#installation}
 
-Project: **Calendar Card Pro**.
+## HACS installation {#hacs-installation}
 
-The German source page is available under `/sammlung/calendar-card-pro/installation.md` and remains the reference until this page is fully translated.
+The recommended way is HACS.
 
-## Current focus
+1. Check whether HACS is installed.
+2. Open **HACS** in Home Assistant.
+3. Go to **Frontend**.
+4. Open **Custom Repositories**.
+5. Enter repository: `https://github.com/alexpfau/calendar-card-pro`
+6. Set type to `Dashboard`.
+7. Install Calendar Card Pro.
+8. Clear browser cache and reload Home Assistant.
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+Direct link:
+
+[Open Calendar Card Pro in HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=alexpfau&repository=calendar-card-pro&category=plugin)
+
+## Manual installation {#manuelle-installation}
+
+When installing manually, both release files must be loaded:
+
+- `calendar-card-pro.js`
+- `editor.js`
+
+Both files belong in the same subfolder, for example:
+
+```text
+/config/www/calendar-card-pro/
+```
+
+Afterwards only `calendar-card-pro.js` is entered as a resource. The card loads the editor itself when it is needed.
+
+```yaml
+url: /local/calendar-card-pro/calendar-card-pro.js
+type: module
+```
+
+::: tip Why a separate folder?
+`editor.js` is a common file name. A separate subfolder prevents naming conflicts with other manually installed cards.
+:::
+
+## Requirements {#voraussetzungen}
+
+Calendar Card Pro requires at least one calendar entity in Home Assistant, for example:
+
+```text
+calendar.family
+calendar.work
+calendar.personal
+```
+
+Without calendar integration, there are no appointments for the card to display.

@@ -1,15 +1,34 @@
----
-title: Misc Projets
-description: Page française préparée pour Misc Projets dans la documentation UGSo Open Source.
----
-# Misc Projets
+<a id="misc-projets"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Projets divers {#diverse-projekte}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects-diverse/index.md`](/en/projects-diverse/).
+Cette page rassemble d'autres projets open source UGSo qui ne font pas directement partie des outils C# ou des applications MQTT.
 
-## Statut
+## Ultimate Timer {#ultimate-timer}
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+**Ultimate Timer**
+
+Un « blueprint » d'automatisation pour Home Assistant permettant de créer des minuteurs réutilisables, dotés d'une logique d'arrêt (STOP) robuste, d'un état « terminé » (DONE) persistant, d'une prise en charge multi-instance et d'une option de fonctionnement via MQTT.
+
+- [Ouvrir la documentation d'Ultimate-Timer](/fr/projects/ultimate-timer/)
+- [Ouvrir le Blueprint sur GitHub](https://github.com/rockbaer2007/ha-ultimate-timer-blueprint)
+
+## Blueprints Home Assistant {#home-assistant-blueprints}
+
+**Blueprints Home Assistant**
+
+Une petite collection de Blueprints Home Assistant personnalisés, conçus pour la gestion des associations, des groupes de cibles et des fonctions d'arrêt d'urgence. Elle comprend des Blueprints pour relier une source à un maximum de six cibles, une source à un groupe de cibles personnalisable, ainsi qu'une automatisation d'arrêt d'urgence qui désactive des cibles sélectionnées lors du passage de `on` à `off`.
+
+- Association 1 vers 6 : une source permet d'activer et de désactiver simultanément jusqu'à six cibles.
+- Association source vers groupe de cibles : une source permet de contrôler des entités, des appareils ou des zones choisis librement.
+- Arrêt d'urgence (source désactivée vers cibles désactivées) : lors du passage de la source de `on` à `off`, les cibles sélectionnées sont désactivées.
+- Le fichier README sur GitHub contient des boutons d'importation directe vers Home Assistant pour tous les Blueprints inclus.
+
+- [Ouvrir les Blueprints sur GitHub](https://github.com/rockbaer2007/homeassistant-blueprints)
+
+## Autres domaines de projet {#weitere-projektbereiche}
+
+- [Ouvrir les projets C#](/fr/projects/)
+- [Ouvrir les projets MQTT](/fr/projects-mqtt/)
+- [Ouvrir ATLAS](/fr/projects/atlas/)

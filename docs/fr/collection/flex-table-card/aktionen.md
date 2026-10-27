@@ -1,17 +1,57 @@
 ---
-title: flex-table-card Actions
-description: Page française pour flex-table-card Actions dans la collection UGSo Open Source.
+title: Actions de `flex-table-card`
+description: Actions sur les cellules, actions au toucher (*tap-actions*) et actions d'édition (*edit-actions*) de `flex-table-card`.
 ---
-# flex-table-card Actions
+<a id="flex-table-card-actions"></a>
+<a id="orientation-actuelle"></a>
 
-Cette page française a été créée afin que la collection Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Actions {#aktionen}
 
-Projet : **Flex Table Card**.
+Les colonnes peuvent déclencher des actions Home Assistant. Les actions Lovelace classiques sont prises en charge, telles que `more-info`, `toggle`, `perform-action`, `navigate`, `url`, `assist` ainsi que `fire-dom-event`.
 
-La page source allemande est disponible sous `/sammlung/flex-table-card/aktionen.md` et reste la référence jusqu'à la traduction complète.
+## Affichage des détails (*more-info*) au toucher {#more-info-beim-tippen}
 
-## Orientation actuelle
+```yaml
+type: custom:flex-table-card
+title: Lichter
+entities:
+  include: light.*
+columns:
+  - name: Name
+    data: name
+    tap_action:
+      action: more-info
+  - name: Status
+    data: state
+```
 
-- Documentation Home Assistant et Lovelace dans la collection UGSo Open Source.
-- Navigation et sélection de langue cohérentes pour les lecteurs francophones.
-- Le contenu détaillé suivra la même structure que l'original allemand.
+## Action utilisant les valeurs des colonnes {#aktion-mit-spaltenwerten}
+
+Au sein d'une ligne, il est possible de faire référence aux valeurs d'autres colonnes.
+
+| Référence | Signification |
+| --- | --- |
+| `cell[n]` | Colonne visible avec l'index `n` |
+| `col[n]` | Colonne avec l'index `n`, même si elle est masquée |
+
+```yaml
+type: custom:flex-table-card
+title: Navigation
+entities:
+  include: sensor.room_*
+columns:
+  - name: Raum
+    data: name
+  - name: Pfad
+    data: dashboard_path
+    hidden: true
+  - name: Oeffnen
+    data: name
+    tap_action:
+      action: navigate
+      navigation_path: col[1]
+```
+
+## Remarque concernant les anciennes terminologies {#hinweis-zu-alten-begriffen}
+
+Home Assistant utilise désormais `action` et `perform-action`. Les anciennes terminologies, telles que `call-service`, `service` ou `service_data`, ne doivent plus être utilisées pour les actions sur les colonnes.

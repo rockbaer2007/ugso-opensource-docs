@@ -1,15 +1,112 @@
----
-title: Exemples
-description: Page française préparée pour Exemples dans la documentation UGSo Open Source.
----
-# Exemples
+<a id="exemples"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Exemples {#beispiele}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/fritzbox-to-mqtt/examples.md`](/en/projects/fritzbox-to-mqtt/examples).
+## Carte d'état Mushroom {#mushroom-status-card}
 
-## Statut
+Cette carte Lovelace affiche les débits de téléchargement et d'envoi, les répondeurs (`AB0` à `AB4`) avec leurs messages nouveaux et anciens, ainsi que l'état du Wi-Fi 2,4 GHz, du Wi-Fi 5 GHz et du Wi-Fi invité.
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+Nécessite l'installation de Mushroom dans Home Assistant.
+
+![Carte d'état Mushroom pour FRITZ!Box to MQTT](/images/fritzbox-to-mqtt.png)
+
+```yaml
+type: vertical-stack
+cards:
+  - type: custom:mushroom-title-card
+    title: FRITZ!Box
+    subtitle: MQTT Status und Dienste
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: sensor.fritz_box_tr_064_downloadrate
+        name: Download
+        icon: mdi:download-network
+        layout: vertical
+      - type: custom:mushroom-entity-card
+        entity: sensor.fritz_box_tr_064_uploadrate
+        name: Upload
+        icon: mdi:upload-network
+        layout: vertical
+  - type: custom:mushroom-title-card
+    title: Anrufbeantworter
+  - square: false
+    type: grid
+    columns: 1
+    cards:
+      - type: custom:mushroom-template-card
+        primary: AB0
+        secondary: >
+          Neu: {{ states('sensor.fritz_box_tr_064_ab0_neue_nachrichten') }} ·
+          Alt: {{ states('sensor.fritz_box_tr_064_ab0_alte_nachrichten') }}
+        icon: mdi:voicemail
+        entity: binary_sensor.fritz_box_tr_064_ab0_status
+        color: >
+          {% if is_state('binary_sensor.fritz_box_tr_064_ab0_status', 'on') %}
+          green {% else %} red {% endif %}
+        features_position: bottom
+      - type: custom:mushroom-template-card
+        primary: AB1
+        secondary: >
+          Neu: {{ states('sensor.fritz_box_tr_064_ab1_neue_nachrichten') }} ·
+          Alt: {{ states('sensor.fritz_box_tr_064_ab1_alte_nachrichten') }}
+        icon: mdi:voicemail
+        entity: binary_sensor.fritz_box_tr_064_ab1_status
+        color: >
+          {% if is_state('binary_sensor.fritz_box_tr_064_ab1_status', 'on') %}
+          green {% else %} red {% endif %}
+        features_position: bottom
+      - type: custom:mushroom-template-card
+        primary: AB2
+        secondary: >
+          Neu: {{ states('sensor.fritz_box_tr_064_ab2_neue_nachrichten') }} ·
+          Alt: {{ states('sensor.fritz_box_tr_064_ab2_alte_nachrichten') }}
+        icon: mdi:voicemail
+        entity: binary_sensor.fritz_box_tr_064_ab2_status
+        color: >
+          {% if is_state('binary_sensor.fritz_box_tr_064_ab2_status', 'on') %}
+          green {% else %} red {% endif %}
+        features_position: bottom
+      - type: custom:mushroom-template-card
+        primary: AB3
+        secondary: >
+          Neu: {{ states('sensor.fritz_box_tr_064_ab3_neue_nachrichten') }} ·
+          Alt: {{ states('sensor.fritz_box_tr_064_ab3_alte_nachrichten') }}
+        icon: mdi:voicemail
+        entity: binary_sensor.fritz_box_tr_064_ab3_status
+        color: >
+          {% if is_state('binary_sensor.fritz_box_tr_064_ab3_status', 'on') %}
+          green {% else %} grey {% endif %}
+        features_position: bottom
+      - type: custom:mushroom-template-card
+        primary: AB4
+        secondary: >
+          Neu: {{ states('sensor.fritz_box_tr_064_ab4_neue_nachrichten') }} ·
+          Alt: {{ states('sensor.fritz_box_tr_064_ab4_alte_nachrichten') }}
+        icon: mdi:voicemail
+        entity: binary_sensor.fritz_box_tr_064_ab4_status
+        color: >
+          {% if is_state('binary_sensor.fritz_box_tr_064_ab4_status', 'on') %}
+          green {% else %} red {% endif %}
+        features_position: bottom
+  - type: custom:mushroom-title-card
+    title: WLAN
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: sensor.fritz_box_tr_064_wlan_2_4_ghz_status
+        name: 2,4 GHz
+        icon: mdi:wifi
+        layout: vertical
+      - type: custom:mushroom-entity-card
+        entity: sensor.fritz_box_tr_064_wlan_5_ghz_status
+        name: 5 GHz
+        icon: mdi:wifi
+        layout: vertical
+      - type: custom:mushroom-entity-card
+        entity: sensor.fritz_box_tr_064_wlan_gast_status
+        name: Gast
+        icon: mdi:wifi-star
+        layout: vertical
+```

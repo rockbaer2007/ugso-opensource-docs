@@ -1,17 +1,67 @@
 ---
 title: flex-table-card CSS
-description: English page for flex-table-card CSS in the UGSo Open Source collection.
+description: Adjust the table layout and colors of the flex-table-card using CSS.
 ---
-# flex-table-card CSS
+<a id="flex-table-card-css"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# CSS {#css}
 
-Project: **Flex Table Card**.
+The flex-table-card can be designed directly using the `css` section. The CSS selector is the key, the CSS content is the value.
 
-The German source page is available under `/sammlung/flex-table-card/css.md` and remains the reference until this page is fully translated.
+```yaml
+type: custom:flex-table-card
+title: Tabelle
+entities:
+  include: sensor.*
+columns:
+  - name: Name
+    data: name
+  - name: Wert
+    data: state
+css:
+  table: "border-collapse: collapse; width: 100%;"
+  thead th: "font-weight: 700; font-size: 13px;"
+  tbody tr td: "font-size: 12px; padding: 6px 8px;"
+  "tbody tr:nth-child(odd)": "background-color: rgba(255,255,255,0.04);"
+  "tbody tr:nth-child(even)": "background-color: rgba(255,255,255,0.08);"
+```
 
-## Current focus
+## Replace or Expand {#ersetzen-oder-erweitern}
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+Without `+`, the existing style for the selector is replaced.
+
+```yaml
+css:
+  table: "border: 0;"
+```
+
+The style is completed with `+`.
+
+```yaml
+css:
+  table+: "border: 0;"
+```
+
+## Target columns {#spalten-gezielt-ansprechen}
+
+```yaml
+css:
+  "thead th:nth-child(1)": "width: 120px;"
+  "tbody tr td:nth-child(1)": "font-weight: 600;"
+  "tbody tr td:nth-child(3)": "text-align: right;"
+```
+
+## Font size in table rows {#schriftgroße-in-tabellenzeilen}
+
+```yaml
+css:
+  "tbody tr td": "font-size: 12px; line-height: 1.25;"
+```
+
+## Allow selection of text {#auswahl-von-text-erlauben}
+
+```yaml
+css:
+  "tbody tr+": "user-select: text;"
+```

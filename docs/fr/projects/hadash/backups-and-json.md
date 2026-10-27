@@ -1,15 +1,17 @@
----
-title: Sauvegardes et JSON
-description: Page française préparée pour Sauvegardes et JSON dans la documentation UGSo Open Source.
----
-# Sauvegardes et JSON
+<a id="sauvegardes-et-json"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Sauvegardes et JSON {#backups-und-json}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/hadash/backups-and-json.md`](/en/projects/hadash/backups-and-json).
+HADash peut traiter les données de tableau de bord issues de sauvegardes Home Assistant non chiffrées, ainsi que le contenu JSON provenant du dossier `.storage`.
 
-## Statut
+## Procédure type {#typischer-ablauf}
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+1. Décompresser la sauvegarde ou copier le fichier requis depuis `.storage`.
+2. Ouvrir le fichier JSON ou YAML dans HADash.
+3. Vérifier les vues détectées.
+4. Exporter le tableau de bord complet ou des vues individuelles.
+
+::: warning
+Conservez les sauvegardes originales intactes et travaillez toujours sur une copie.
+:::

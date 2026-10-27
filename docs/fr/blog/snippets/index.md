@@ -1,15 +1,64 @@
 ---
-title: Code Snippets
-description: Page française préparée pour Code Snippets dans la documentation UGSo Open Source.
+title: Extraits de code
+description: Exemples de code réutilisables pour Home Assistant, JavaScript, Blockly et Lovelace.
 ---
-# Code Snippets
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/blog/snippets/index.md`](/en/blog/snippets/).
+# Extraits de code {#code-snippets}
 
-## Statut
+Ici sont rassemblés de petits exemples de code réutilisables.
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## Catégories {#kategorien}
+
+<div class="blog-grid">
+
+<article class="blog-card">
+
+### 🏠 Home Assistant YAML {#🏠-home-assistant-yaml}
+
+Exemples d'automatisations, de modèles (templates), d'assistants (helpers) et de blueprints.
+
+[Ouvrir les exemples](/fr/blog/snippets/home-assistant-yaml)
+
+</article>
+
+<article class="blog-card">
+
+### 🟨 JavaScript {#🟨-javascript}
+
+JavaScript pour Bubble-Card, Lovelace, pages web et outils personnalisés.
+
+[Ouvrir les exemples](/fr/blog/snippets/javascript)
+
+</article>
+
+<article class="blog-card">
+
+### 🧩 Blockly {#🧩-blockly}
+
+Code Blockly, générateurs JavaScript et définitions de blocs personnalisés.
+
+[Ouvrir les exemples](/fr/blog/snippets/blockly)
+
+</article>
+
+<article class="blog-card">
+
+### 🎛️ Lovelace {#🎛️-lovelace}
+
+Bubble-Card, Mushroom et styles dynamiques.
+
+[Ouvrir les exemples](/fr/blog/snippets/lovelace)
+
+</article>
+
+</div>
+
+## Remarque sur l'utilisation {#verwendungshinweis}
+
+Les extraits de code doivent être vérifiés avant toute mise en production et adaptés à vos propres entités et chemins.
+
+::: warning
+Effectuez toujours une sauvegarde récente avant d'apporter des modifications à Home Assistant.
+:::

@@ -1,15 +1,41 @@
----
-title: How It Works
-description: Page française préparée pour How It Works dans la documentation UGSo Open Source.
----
-# How It Works
+<a id="how-it-works"></a>
+<a id="statut"></a>
 
-Cette page française a été ajoutée afin que la documentation Open Source dispose d'un chemin de langue complet. La traduction détaillée sera encore enrichie.
+# Fonctionnement {#funktionsweise}
 
-La page anglaise correspondante est actuellement la référence de structure : [`en/projects/ultimate-timer/how-it-works.md`](/en/projects/ultimate-timer/how-it-works).
+## Déroulement {#ablauf}
 
-## Statut
+1. Le déclencheur de démarrage (Start-Trigger) passe à `on`.
+2. L'état RUNNING est activé.
+3. L'état DONE est désactivé.
+4. Le minuteur attend la durée définie.
+5. Une fois la durée écoulée, RUNNING est désactivé.
+6. L'état DONE est activé.
+7. Lors de la réinitialisation quotidienne, RUNNING et DONE sont désactivés.
 
-- Le chemin de langue existe.
-- La navigation et le build peuvent résoudre cette page.
-- La traduction détaillée pourra être affinée lors d'une passe de documentation ultérieure.
+## STOP {#stop}
+
+Si le déclencheur d'arrêt (Stop-Trigger) est activé :
+
+- RUNNING est immédiatement désactivé.
+- L'auxiliaire d'arrêt (Stop-Helper) est réinitialisé.
+- DONE n'est pas activé comme lors d'un cycle normal.
+
+## Réinitialisation quotidienne {#taglicher-reset}
+
+Si aucune heure de réinitialisation spécifique n'est indiquée, le blueprint utilise :
+
+```text
+00:01:00
+```
+
+## Fonctionnement en parallèle {#parallelbetrieb}
+
+Le blueprint utilise :
+
+```yaml
+mode: parallel
+max: 10
+```
+
+Cela permet d'utiliser plusieurs instances indépendantes simultanément.

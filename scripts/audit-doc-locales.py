@@ -15,6 +15,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs'
 REPORT = DOCS / 'public/documentation-audit.json'
+LOCALE_MAP = DOCS / '.vitepress/page-locales.json'
 SLUGS = {
     'blog/beitragsvorlage.md': 'blog/post-template.md',
     'projects/atlas/uebersicht.md': 'projects/atlas/overview.md',
@@ -75,7 +76,7 @@ def inspect(path):
     body = re.sub(r'\A---\r?\n.*?\r?\n---\r?\n', '', raw, flags=re.S)
     examples = len(re.findall(r'^\s*```[^\n]*\n', body, re.M)) // 2
     prose = re.sub(r'^\s*(`{3,}|~{3,})[^\n]*\n.*?^\s*\1\s*$', '', body, flags=re.S | re.M)
-    versions = set(re.findall(r'(?<![\w.])v?(\d+\.\d+\.\d+(?:-(?:alpha|beta|rc|dev|mydev)(?:\.[A-Za-z0-9]+)*)?)', prose))
+    versions = set(re.findall(r'(?<![\w.])v?(\d+\.\d+\.\d+(?:-(?:alpha|beta|rc|dev|mydev)(?:\.[A-Za-z0-9]+)*)?)(?!\d|\.\d)', prose))
     # German dates and grammatical compounds such as "0.1.330-Prüfung"
     # must not become spurious software versions.
     versions = sorted(v for v in versions if not re.fullmatch(r'(?:0?[1-9]|[12]\d|3[01])\.(?:0?[1-9]|1[0-2])\.(?:19|20)\d\d', v))
@@ -165,7 +166,19 @@ COPY = {
 
 
 def render_report(report, locale):
-    text = COPY[locale]
+    text = dict(COPY[locale])
+    complete = all(not counts.get('missing') and not counts.get('placeholder') for counts in report['summary'].values())
+    if complete:
+        text['intro'] = {
+            'de': 'Alle deutschen Referenzseiten sind jetzt auch in EN und FR mit Inhalt vorhanden. Die 128 Platzhalter wurden ersetzt und die 20 fehlenden französischen Seiten ergänzt.',
+            'en': 'All German reference pages now have English and French content. The 128 placeholder pages have been replaced and the 20 missing French pages added.',
+            'fr': 'Toutes les pages de référence allemandes disposent désormais de contenu en anglais et en français. Les 128 pages provisoires ont été remplacées et les 20 pages françaises manquantes ajoutées.'
+        }[locale]
+        text['priority'] = {
+            'de': 'Die Ergänzungen wurden mit Übersetzungsunterstützung erstellt und technisch gegen die deutsche Vorlage geprüft: Code, Bezeichner, Tabellen und Bilder. 14 weitere Inhaltslücken wurden als ergänzende Referenz geschlossen; vorhandene Seiten und Links bleiben erhalten. Das ist keine vollständige sprachliche Zertifizierung. Verbleibende Prüfhinweise betreffen auch bewusst unterschiedliche Zusammenfassungen und historische Versionsangaben.',
+            'en': 'The additions were created with translation assistance and checked technically against the German source: code, identifiers, tables and images. Fourteen further content gaps were filled with supplementary references while preserving existing pages and links. This is not a complete linguistic certification. Remaining review signals also include intentionally different summaries and historical version mentions.',
+            'fr': 'Les ajouts ont été réalisés avec une aide à la traduction et vérifiés techniquement par rapport à la source allemande : code, identifiants, tableaux et images. Quatorze autres lacunes ont été comblées par des références complémentaires, en conservant les pages et liens existants. Il ne s’agit pas d’une certification linguistique complète. Les points à examiner comprennent aussi des résumés volontairement différents et des versions historiques.'
+        }[locale]
     lines = ['---', f'title: {text["title"]}', 'sidebar: false', 'aside: false', '---', '',
              f'# {text["title"]}', '', f'DE / EN / FR · {report["reviewed_at"]}', '', text['intro'], '', text['scope'], '',
              f'## {text["summary"]}', '', '| ' + ' | '.join(text['counts']) + ' |', '| --- | ---: | ---: | ---: | ---: |']
@@ -195,12 +208,20 @@ def main():
     reviewed_at = args.review_date or recorded.get('reviewed_at', '2026-10-27')
     date.fromisoformat(reviewed_at)
     report = inventory(reviewed_at)
+    locale_map = {}
+    for row in report['pages']:
+        targets = {locale.upper(): route(item['path']) for locale, item in row['locales'].items()
+                   if item['status'] != 'missing'}
+        for target in targets.values():
+            locale_map[target] = targets
     if args.write:
+        LOCALE_MAP.write_text(json.dumps(locale_map, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         for locale in COPY:
             target = DOCS / (locale if locale != 'de' else '') / 'documentation-status.md'
             target.write_text(render_report(report, locale), encoding='utf-8')
     else:
+        assert json.loads(LOCALE_MAP.read_text(encoding='utf-8')) == locale_map, 'Stale page locale map.'
         assert report == recorded, 'Documentation inventory changed; review and regenerate with --write.'
         for locale in COPY:
             target = DOCS / (locale if locale != 'de' else '') / 'documentation-status.md'

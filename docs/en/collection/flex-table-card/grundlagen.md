@@ -1,17 +1,75 @@
 ---
-title: flex-table-card Basics
-description: English page for flex-table-card Basics in the UGSo Open Source collection.
+title: flex-table-card basics
+description: Basic principle of the flex-table-card with rows, columns and selectors.
 ---
-# flex-table-card Basics
+<a id="flex-table-card-basics"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# Basics {#grundlagen}
 
-Project: **Flex Table Card**.
+The configuration essentially consists of two steps:
 
-The German source page is available under `/sammlung/flex-table-card/grundlagen.md` and remains the reference until this page is fully translated.
+1. `entities` selects the possible rows.
+2. `columns` describes which values are displayed as columns per row.
 
-## Current focus
+## Minimal example {#minimales-beispiel}
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+```yaml
+type: custom:flex-table-card
+title: Z-Wave Uebersicht
+entities:
+  include: zwave.*
+  exclude: zwave.unknown_node*
+columns:
+  - name: Node
+    data: node_id
+  - name: Name
+    data: name
+  - name: Status
+    data: state
+```
+
+## Include and exclude {#include-und-exclude}
+
+`include` and `exclude` can be individual expressions or lists.
+
+```yaml
+type: custom:flex-table-card
+title: Mehrere Filter
+entities:
+  include:
+    - sensor.*
+    - binary_sensor.tuer_*
+  exclude:
+    - sensor.unbenutzt
+    - sensor.test_*
+columns:
+  - name: Name
+    data: name
+  - name: Wert
+    data: state
+```
+
+An entity is included if at least one `include` matches. It is excluded as soon as a `exclude` matches.
+
+## Sorting and limiting {#sortierung-und-begrenzung}
+
+```yaml
+type: custom:flex-table-card
+title: Batterie niedrig
+entities:
+  include: sensor.*_battery*
+sort_by: battery+
+max_rows: 20
+columns:
+  - name: Name
+    data: name
+  - name: Batterie
+    id: battery
+    data: state
+    fmt: number
+    suffix: "%"
+    align: right
+```
+
+`sort_by` uses the column ID. `+` sorts in ascending order, `-` sorts in descending order.

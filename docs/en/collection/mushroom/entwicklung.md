@@ -1,17 +1,51 @@
 ---
-title: Mushroom Development und Übersetzung
-description: English page for Mushroom Development und Übersetzung in the UGSo Open Source collection.
+title: Mushroom development and translation
+description: Development server, build and translation notes for Mushroom.
 ---
-# Mushroom Development und Übersetzung
+<a id="mushroom-development-und-ubersetzung"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# Development and translation {#entwicklung-und-ubersetzung}
 
-Project: **Mushroom**.
+## Start Home Assistant demo {#home-assistant-demo-starten}
 
-The German source page is available under `/sammlung/mushroom/entwicklung.md` and remains the reference until this page is fully translated.
+The original project can launch a Home Assistant demo via Docker:
 
-## Current focus
+```sh
+npm run start:hass
+```
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+Home Assistant can then be accessed locally under `http://localhost:8123`.
+
+According to the original project, this command can be used under Windows as an alternative:
+
+```sh
+npm run start:hass-cmd
+```
+
+## Development server {#entwicklungsserver}
+
+Install dependencies and start development server:
+
+```sh
+npm install
+npm start
+```
+
+The server starts on port `4000`.
+
+## Build {#build}
+
+```sh
+npm run build
+```
+
+The build creates `mushroom.js` in the `dist` folder.
+
+## Translations of the Mushroom interface {#ubersetzungen-der-mushroom-oberflache}
+
+Mushroom uses Weblate for UI translations:
+
+- [Mushroom on Weblate](https://hosted.weblate.org/engage/mushroom/)
+
+New language files must use Home Assistant compatible BCP-47 language codes, for example `de`, `fr`, `fr-CA`, or `zh-Hans`.

@@ -1,17 +1,98 @@
 ---
-title: flex-table-card Header and footer
-description: English page for flex-table-card Header and footer in the UGSo Open Source collection.
+title: flex-table-card header and footer
+description: Column headers, icons and summary lines in the flex-table-card.
 ---
-# flex-table-card Header and footer
+<a id="flex-table-card-header-and-footer"></a>
+<a id="current-focus"></a>
 
-This English page has been created so the Open Source collection has a complete language path. The detailed translation is still being expanded.
+# Headers and footers {#header-und-footer}
 
-Project: **Flex Table Card**.
+## Column headings {#spaltenuberschriften}
 
-The German source page is available under `/sammlung/flex-table-card/header-footer.md` and remains the reference until this page is fully translated.
+The card determines the heading of a column in this order:
 
-## Current focus
+1.`name`
+2.`id`
+3.`data`
 
-- Home Assistant and Lovelace documentation in the UGSo Open Source collection.
-- Matching navigation and language switching for English readers.
-- Detailed content will follow in the same structure as the German original.
+```yaml
+columns:
+  - name: Geraet
+    data: name
+  - id: battery
+    data: state
+  - data: area
+```
+
+An empty heading is possible:
+
+```yaml
+columns:
+  - name: ""
+    data: icon
+```
+
+## Icons in the header {#icons-im-header}
+
+```yaml
+columns:
+  - name: Batterie
+    icon: mdi:battery
+    data: state
+    align: right
+```
+
+The alignment of the cells also affects the alignment of the header.
+
+## Activate footer {#footer-aktivieren}
+
+```yaml
+display_footer: true
+```
+
+You can then specify for each column what is calculated or displayed in the footer.
+
+| Value | Meaning |
+| --- | --- |
+| `sum` | Total |
+| `average` | Average |
+| `count` | Number |
+| `max` | highest value |
+| `min` | lowest value |
+| `text` | fixed text |
+
+## Example with totals line {#beispiel-mit-summenzeile}
+
+```yaml
+type: custom:flex-table-card
+title: Werte nach Land
+entities: []
+display_footer: true
+columns:
+  - name: Land
+    data: rows.country
+    footer_type: text
+    footer_text: "Gesamt:"
+  - name: Wert
+    data: rows.value
+    fmt: number
+    align: right
+    footer_type: sum
+    footer_modify: x.toFixed(0)
+static_data:
+  rows:
+    - country: Deutschland
+      value: 120
+    - country: Frankreich
+      value: 90
+```
+
+## Design footer using CSS {#footer-per-css-gestalten}
+
+```yaml
+css:
+  tfoot th: "text-align: right; font-weight: 700;"
+  tfoot *: "border-style: solid none none none;"
+```
+
+Original example image: [FlexTableFooterExample.png](https://raw.githubusercontent.com/custom-cards/flex-table-card/master/images/FlexTableFooterExample.png)
