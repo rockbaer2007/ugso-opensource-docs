@@ -1,5 +1,15 @@
 # Entwicklungsstand
 
+## Testsysteme {#getestete-hardwarevarianten}
+
+- **.193 – 192.168.178.193:** neue Proxmox-VM (amd64) mit **8 GB RAM und 4 vCPU**; ersetzt .68 für künftige VM-Prüfungen.
+- **.68 – 192.168.178.68:** bisherige Proxmox-VM (amd64) mit **8 GB RAM und 4 vCPU**. Die folgenden Prüfberichte zu .68 bleiben als Historie erhalten.
+- **.177 – 192.168.178.177:** **Raspberry Pi 5 (ARM64) mit 8 GB RAM und 4 CPU-Kernen**.
+- **Handy:** Blackview BV6200 Pro mit **Android 14 / DokeOS 4.0**, Mobilprüfung in **Chrome**.
+- **Tablet:** Samsung Tab A6 mit **Android 11 / LineageOS**, Mobilprüfung in **Chrome**.
+
+Zuordnung laut Nutzerangabe vom **28.10.2026**. Die neue .193 ist hier als Ersatzsystem erfasst; die bisherigen Testergebnisse von .68 gelten nicht automatisch als Prüfung auf .193. Der jeweilige Prüfumfang steht in den folgenden Berichten.
+
 **App 0.1.334:** Projektvorschau und Bestätigung stehen vor den lokalen Entwürfen
 direkt bei den Projektbuttons. Fokus/Scrollen, Ladeanzeige und begrenzte lesende
 Anfragen verhindern eine unsichtbare oder dauerhaft wartende Öffnungsprüfung.
@@ -19,16 +29,6 @@ nach dem Server-Schreiben vor dessen Bestätigung.
 Livefilter bleiben erhalten. Ein eigener Hinweis erklärt 0 lokale Quellen und
 den nötigen ersten Projektimport. DE/EN/FR, Suchen/Enter und schmale Testbereiche
 sind geprüft. Der Nutzer bestätigt auch beide echten Mobilgeräte. .177 unverändert.
-
-## Getestete Hardwarevarianten
-
-| Variante | Testumgebung |
-| --- | --- |
-| amd64 | Home Assistant in einer virtuellen Maschine unter Proxmox |
-| ARM64 | Home Assistant auf einem echten Raspberry Pi 5 mit 8 GB RAM |
-
-Diese Angaben beschreiben die getesteten Installationen; der Umfang und die
-noch offenen Prüfungen sind im folgenden Entwicklungsstand dokumentiert.
 
 ## Aktueller Stand
 

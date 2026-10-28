@@ -127,9 +127,9 @@
         "fewer_headings": true
       },
       "disposition": "supplemented",
-      "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content.",
-      "source_sha256": "4c0a5d6651805008a7c33af25030e37e17d033713ff7ed6718370fb86d5afa76",
-      "target_sha256": "0ac6e46982558b8aed159eb1aabd5c1439f8d23dd106f3ca9fcd6c8d4fdd3c04"
+      "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content. Test system inventory reviewed on 2026-10-28: user-provided VM/Raspberry Pi hardware, .193 replacement of .68, existing mobile qualification devices; historical test scope preserved.",
+      "source_sha256": "57cb27c02f2a5053797e0031d592ebe0afcbe8d3ffa057df0ccffe650f76bc66",
+      "target_sha256": "b5a850642ad543e35fd528a4f6ff192c0a31cad9428682ac3d6fbf793c476e81"
     },
     {
       "source": "projects/blocks-for-ha/advanced.md",

@@ -6,7 +6,7 @@ aside: false
 
 # Sprachstand der Dokumentation
 
-DE / EN / FR · 2026-10-27
+DE / EN / FR · 2026-10-28
 
 Alle deutschen Referenzseiten sind jetzt auch in EN und FR mit Inhalt vorhanden. Die 128 Platzhalter wurden ersetzt und die 20 fehlenden französischen Seiten ergänzt.
 

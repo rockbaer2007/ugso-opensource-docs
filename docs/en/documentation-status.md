@@ -6,7 +6,7 @@ aside: false
 
 # Documentation language status
 
-DE / EN / FR · 2026-10-27
+DE / EN / FR · 2026-10-28
 
 All German reference pages now have English and French content. The 128 placeholder pages have been replaced and the 20 missing French pages added.
 

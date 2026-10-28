@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-10-27",
+  "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
   "source_pages": 229,
@@ -2066,8 +2066,8 @@
         "de": {
           "path": "projects/atlas/entwicklungsstand.md",
           "status": "content-present",
-          "sha256": "4c0a5d6651805008a7c33af25030e37e17d033713ff7ed6718370fb86d5afa76",
-          "words": 6675,
+          "sha256": "57cb27c02f2a5053797e0031d592ebe0afcbe8d3ffa057df0ccffe650f76bc66",
+          "words": 6757,
           "headings": 8,
           "examples": 1,
           "versions": [
@@ -2122,8 +2122,8 @@
         "en": {
           "path": "en/projects/atlas/development-status.md",
           "status": "content-present",
-          "sha256": "2fa55d16db8f6d46d3349145b4355f8ed44f8f1890b6486efe36c4f205967299",
-          "words": 7060,
+          "sha256": "d1cacecea9327c21e93592c05fc43f3fdd1f463529c08a5981d10ea2f919ad90",
+          "words": 7144,
           "headings": 8,
           "examples": 1,
           "versions": [
@@ -2185,8 +2185,8 @@
         "fr": {
           "path": "fr/projects/atlas/development-status.md",
           "status": "content-present",
-          "sha256": "0ac6e46982558b8aed159eb1aabd5c1439f8d23dd106f3ca9fcd6c8d4fdd3c04",
-          "words": 7596,
+          "sha256": "b5a850642ad543e35fd528a4f6ff192c0a31cad9428682ac3d6fbf793c476e81",
+          "words": 7692,
           "headings": 7,
           "examples": 0,
           "versions": [
@@ -2247,7 +2247,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "supplemented",
-            "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content."
+            "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content. Test system inventory reviewed on 2026-10-28: user-provided VM/Raspberry Pi hardware, .193 replacement of .68, existing mobile qualification devices; historical test scope preserved."
           }
         }
       }

@@ -1,5 +1,15 @@
 # Development Status
 
+## Test systems {#tested-hardware-variants}
+
+- **.193 – 192.168.178.193:** new Proxmox VM (amd64) with **8 GB RAM and 4 vCPUs**; replaces .68 for future VM testing.
+- **.68 – 192.168.178.68:** previous Proxmox VM (amd64) with **8 GB RAM and 4 vCPUs**. The .68 test reports below remain as historical records.
+- **.177 – 192.168.178.177:** **Raspberry Pi 5 (ARM64) with 8 GB RAM and 4 CPU cores**.
+- **Phone:** Blackview BV6200 Pro with **Android 14 / DokeOS 4.0**, mobile testing in **Chrome**.
+- **Tablet:** Samsung Tab A6 with **Android 11 / LineageOS**, mobile testing in **Chrome**.
+
+System assignments supplied by the user on **2026-10-28**. The new .193 is recorded as the replacement system; previous .68 results do not automatically qualify .193. The reports below describe each test's scope.
+
 **App 0.1.334:** project preview and confirmation appear beside project actions,
 before local drafts. Focus/scroll, loading feedback and bounded read requests
 address invisible or indefinitely pending opening previews. Checked on .68 with
@@ -18,16 +28,6 @@ remain. .177 is untouched. This does not test post-write/pre-ack interruption.
 filtering remain available. A distinct message explains zero local sources and
 the initial project import. DE/EN/FR, Search/Enter and narrow test containers are
 checked. The user also confirms both actual mobile devices. .177 is untouched.
-
-## Tested hardware variants
-
-| Variant | Test environment |
-| --- | --- |
-| amd64 | Home Assistant in a virtual machine on Proxmox |
-| ARM64 | Home Assistant on a physical Raspberry Pi 5 with 8 GB RAM |
-
-These entries describe the tested installations; the scope and remaining checks
-are documented in the development status below.
 
 ## Current State
 

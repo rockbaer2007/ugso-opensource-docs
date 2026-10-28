@@ -4,6 +4,16 @@ description: État actuel du développement d'ATLAS.
 ---
 # État du développement
 
+## Systèmes de test {#variantes-materielles-testees}
+
+- **.193 – 192.168.178.193 :** nouvelle VM Proxmox (amd64) avec **8 Go de RAM et 4 vCPU** ; remplace .68 pour les prochains tests sur VM.
+- **.68 – 192.168.178.68 :** ancienne VM Proxmox (amd64) avec **8 Go de RAM et 4 vCPU**. Les comptes rendus concernant .68 sont conservés ci-dessous comme historique.
+- **.177 – 192.168.178.177 :** **Raspberry Pi 5 (ARM64) avec 8 Go de RAM et 4 cœurs CPU**.
+- **Téléphone :** Blackview BV6200 Pro sous **Android 14 / DokeOS 4.0**, tests mobiles dans **Chrome**.
+- **Tablette :** Samsung Tab A6 sous **Android 11 / LineageOS**, tests mobiles dans **Chrome**.
+
+Affectation des systèmes indiquée par l’utilisateur le **28/10/2026**. La nouvelle .193 est enregistrée comme système de remplacement ; les résultats obtenus sur .68 ne constituent pas automatiquement une validation de .193. Les comptes rendus ci-dessous précisent le périmètre de chaque test.
+
 **App 0.1.334 :** aperçu et confirmation près des actions de projet, avant les
 brouillons locaux. Focus/défilement, chargement et lectures à durée limitée
 évitent un aperçu invisible ou une attente illimitée de lecture. Vérifié sur .68,
@@ -23,16 +33,6 @@ Cela ne teste pas une coupure après écriture serveur avant confirmation.
 filtrage immédiat restent disponibles. Un message distingue l’absence de sources
 locales et indique d’abord d’importer un projet. DE/EN/FR, Rechercher/Entrée et
 zones étroites sont vérifiés. L’utilisateur confirme les deux appareils réels. .177 inchangé.
-
-## Variantes matérielles testées
-
-| Variante | Environnement de test |
-| --- | --- |
-| amd64 | Home Assistant dans une machine virtuelle sous Proxmox |
-| ARM64 | Home Assistant sur un Raspberry Pi 5 réel avec 8 Go de RAM |
-
-Ces indications décrivent les installations testées ; le périmètre et les
-vérifications restantes sont documentés dans l'état du développement ci-dessous.
 
 ## État actuel
 

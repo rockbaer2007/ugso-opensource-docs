@@ -6,7 +6,7 @@ aside: false
 
 # État des traductions de la documentation
 
-DE / EN / FR · 2026-10-27
+DE / EN / FR · 2026-10-28
 
 Toutes les pages de référence allemandes disposent désormais de contenu en anglais et en français. Les 128 pages provisoires ont été remplacées et les 20 pages françaises manquantes ajoutées.
 
