@@ -4,6 +4,17 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Review of 31 October 2026: 65 source pages, 9.0.0-beta.6 preview
+
+The notified revisions [`964f440`](https://github.com/Lint-Free-Technology/uix/commit/964f4402b6f263a5deac53327b825a85cb3e3e72), [`e6fb84d`](https://github.com/Lint-Free-Technology/uix/commit/e6fb84dd715ea4bac9a330357705897ea8d44690) and [`25aec39`](https://github.com/Lint-Free-Technology/uix/commit/25aec397f873e566c2ead0201d819595854405ab) were compared with the previous reviewed source. All **65** source paths are covered. English was synchronized; German and French cover the actual content changes.
+
+- Complete translated [custom sidebar panels](./using/custom-sidebar-panels) page, available **from 9.0.0-beta.6**, including setup, administrator option, internal targets, stable URLs, editing/deleting, personal order and history behavior. Added to indexes and navigation.
+- Forge migration explicitly names **Convert to visual editor** and moves only `element.type` to `element_base.type`.
+- Upstream also removed the forced automation YAML-mode examples. DE/FR retain them only in a clearly historical collapsed section for existing links.
+- Landing pages, footers, review records and `llms.txt` now agree. **Stable remains 8.4.0**, released 7 October 2026, revision `71b8ccd`, requiring **Home Assistant 2026.10.0**. **9.0.0-beta.6 / e6fb84d** identifies the separately reviewed documentation preview. Historical introduction versions and cache clarifications are preserved.
+
+Backed up before editing. Source comparison, page coverage, technical identifiers, build and local links/language metadata are checked; unchanged pages were not retranslated and no Home Assistant runtime test was performed.
+
 ## Content review of 27 October 2026
 
 The remaining DE/EN/FR inventory findings have [individual assessments](/documentation-review.json). The canonical English preview is retained. Two contradictory cache paragraphs were corrected against the implementation: `clear-cache` preserves `localStorage` and the Browser Mod identity. The source/code record now explicitly documents these editorial corrections.

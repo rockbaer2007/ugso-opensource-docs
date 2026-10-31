@@ -16,9 +16,9 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 229 | 0 | 0 | 0 |
-| EN | 229 | 0 | 0 | 0 |
-| FR | 229 | 0 | 0 | 0 |
+| DE | 230 | 0 | 0 | 0 |
+| EN | 230 | 0 | 0 | 0 |
+| FR | 230 | 0 | 0 | 0 |
 
 **Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).
 
@@ -199,6 +199,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/uix/using/apps.md](/projects/uix/using/apps) | [Contenu présent · Différence examinée](/en/projects/uix/using/apps) | [Contenu présent](/fr/projects/uix/using/apps) |
 | [projects/uix/using/cards.md](/projects/uix/using/cards) | [Contenu présent · Différence examinée](/en/projects/uix/using/cards) | [Contenu présent · Différence examinée](/fr/projects/uix/using/cards) |
 | [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Contenu présent · Différence examinée](/en/projects/uix/using/custom-panels) | [Contenu présent](/fr/projects/uix/using/custom-panels) |
+| [projects/uix/using/custom-sidebar-panels.md](/projects/uix/using/custom-sidebar-panels) | [Contenu présent](/en/projects/uix/using/custom-sidebar-panels) | [Contenu présent](/fr/projects/uix/using/custom-sidebar-panels) |
 | [projects/uix/using/entities.md](/projects/uix/using/entities) | [Contenu présent · Différence examinée](/en/projects/uix/using/entities) | [Contenu présent](/fr/projects/uix/using/entities) |
 | [projects/uix/using/icons.md](/projects/uix/using/icons) | [Contenu présent · Différence examinée](/en/projects/uix/using/icons) | [Contenu présent](/fr/projects/uix/using/icons) |
 | [projects/uix/using/images.md](/projects/uix/using/images) | [Contenu présent · Différence examinée](/en/projects/uix/using/images) | [Contenu présent](/fr/projects/uix/using/images) |

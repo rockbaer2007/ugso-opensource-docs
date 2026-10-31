@@ -1,12 +1,12 @@
 {
-  "reviewed_at": "2026-10-27",
-  "source_revision": "26e54e6d4973231a393933e6479ed1b03cc86cd3",
+  "reviewed_at": "2026-10-31",
+  "source_revision": "e6fb84dd715ea4bac9a330357705897ea8d44690",
   "scope": "Editorial technical-reference review; page coverage, table identifiers, defaults and selected missing examples",
   "limitations": "Translations retain editorial summaries. Not sentence-by-sentence identity, independent linguistic certification or a Home Assistant runtime test.",
   "pages": [
     {
       "path": "broker/broker.md",
-      "source_sha256": "206e0da58599baf7f88fd47909eadd8d72d133d327d1b91a8d441891d7a2e22e",
+      "source_sha256": "a818e69828337d874b81c64f08da994edf57b49eae82decc35d3e9ffe83dc010",
       "table_identifiers": [
         "anchor",
         "debug",
@@ -24,7 +24,7 @@
     },
     {
       "path": "broker/directives.md",
-      "source_sha256": "279ffa52c620336daa7414bf0502194f972de20944af604793975b1ebf7aebe8",
+      "source_sha256": "e123be1b669b0080b08e11bebad7768aa01fd8beb7c4ee5ba76a8e1dfe0eef45",
       "table_identifiers": [
         "after",
         "appearance",
@@ -67,16 +67,16 @@
     },
     {
       "path": "broker/examples.md",
-      "source_sha256": "d16b60241da477f361210308731daf0f6603c7ddbbcf9d8855b9b90aad8964b3",
+      "source_sha256": "01f4c08762b229e64459eb473b2f257af35365d9addf3ec3fb4476c0909b255e",
       "table_identifiers": [],
-      "de_sha256": "8a35cc0faa777ac2c35c5afe64ddcf12a65c17171790b2bed13264bea0b9f1c0",
+      "de_sha256": "82d171401f14f78bbb4a21deeb84ae1013b89af5346ee256183621daa0df3015",
       "de_example_blocks": 10,
-      "fr_sha256": "718abb953e851857847dc644f3ef50ed2ab4237bd0c7b912d67b23fb42b93fde",
+      "fr_sha256": "f091f85244649420065e823c805c17083aba05be69558a569670338ea0645346",
       "fr_example_blocks": 10
     },
     {
       "path": "broker/index.md",
-      "source_sha256": "d24a33f5935f20333804a11a1a8a9c47778c83bddd202109c01b513011e21e1e",
+      "source_sha256": "e1923d3842eb2fa4c0d30c536ab327ac9dff7678c8f7d86c2452db2907b84cfa",
       "table_identifiers": [],
       "de_sha256": "9dcb258eacef447fce60bcbb2551600a0ba90595c61985e7880e1d28a344a505",
       "de_example_blocks": 2,
@@ -85,7 +85,7 @@
     },
     {
       "path": "broker/interaction-anchors.md",
-      "source_sha256": "c05a5eb870c98429c3021f926a25a10614d41266e42e92108d76fa62ae858485",
+      "source_sha256": "45ea3f4f5d7175c124663cd97a4ce0d4850b49757c92c7b1ad4315d20b3c2a62",
       "table_identifiers": [
         "&",
         "<",
@@ -107,7 +107,7 @@
     },
     {
       "path": "broker/realms.md",
-      "source_sha256": "0ae6bb55547a00e2e181010d6f49604530aa3aabd353c6bb6508462a35b05bd1",
+      "source_sha256": "68f97b56d23dc4d5b860ed5707862868aa5bf99e002e9e80aadc3835c0e6099f",
       "table_identifiers": [
         "browser",
         "server",
@@ -120,7 +120,7 @@
     },
     {
       "path": "broker/rules.md",
-      "source_sha256": "d6f6b7d2093fe5e1154418f0d229e52319ba1c8e75194094b6a0c7a05a72a69c",
+      "source_sha256": "5ba15c90733229c2d4fd6d8cc6f7732223e5925222eaf9f42219d50605a693ba",
       "table_identifiers": [],
       "de_sha256": "e1a4eee8158c23266e82632074ec6d46f1bb17d9b4aa99b01aad50e4a2bda76b",
       "de_example_blocks": 14,
@@ -129,7 +129,7 @@
     },
     {
       "path": "concepts/application.md",
-      "source_sha256": "8b97d60b308cae2c60d69ccf8d6bba79cf19ea0d59e74b4c94f528747bef3722",
+      "source_sha256": "24be57e32f05eed9eafede271b99958f51dd94d3435666a2ba5a79f24c7f242a",
       "table_identifiers": [],
       "de_sha256": "8c83dae03d87e4d505159b83bfc59badf9d225694c818bf0a6036b67134c2757",
       "de_example_blocks": 6,
@@ -138,7 +138,7 @@
     },
     {
       "path": "concepts/dom.md",
-      "source_sha256": "e65d5af636ffce4ffa63f53fdde358131607a40616fdf2572d9dfd912146259f",
+      "source_sha256": "5412198c6a2c093f6d82b2c3637d3503458b6f2d598cd063d416a896787762df",
       "table_identifiers": [
         "#id",
         ".classname",
@@ -165,7 +165,7 @@
     },
     {
       "path": "concepts/index.md",
-      "source_sha256": "0537eeb2eda1b2dca66b00301ae6652cd284c580d6fc4c2aa66747e15794704d",
+      "source_sha256": "0679548c6db24ea2ba970fea3d40cbbf6012e804a1a2b9368c086f981c340b05",
       "table_identifiers": [],
       "de_sha256": "be03f9378610c022d2befdae6adb3497827f45eb9affada76a46e536d60279b1",
       "de_example_blocks": 0,
@@ -174,7 +174,7 @@
     },
     {
       "path": "contributing.md",
-      "source_sha256": "b1bde1d170ccd087e5506557bf86539e3dd751ac67a2bfa3f2684bd6188a819a",
+      "source_sha256": "bca4a80c4a721883479a007d4e2903bef4880663fc83793de359e468b56ba1b7",
       "table_identifiers": [],
       "de_sha256": "9552f75e36ca61cc795d39146580c63fe65ffe7fb80b208b8eac25f303a72108",
       "de_example_blocks": 6,
@@ -183,7 +183,7 @@
     },
     {
       "path": "debugging/cache.md",
-      "source_sha256": "b890d460a55227522d612885a1fe8171d026ea4522bda74c564b0d75f1176514",
+      "source_sha256": "2c0b0e35f636cce54c1e32c35cc446968af288096494f6a374094748617f364a",
       "table_identifiers": [],
       "de_sha256": "d1d50ace07e6941040ca56b1e550e56f350dc6674ca3a460be72f819b0686bf5",
       "de_example_blocks": 0,
@@ -192,7 +192,7 @@
     },
     {
       "path": "debugging/cards.md",
-      "source_sha256": "51d3f0cd8910c80e4c0962dbbdf93a3ff07b980b2917ac68d03fa9972b388abc",
+      "source_sha256": "9ecd3f31c860c48ba4df124df763e905f956954cb53fc4e5c1dbca2197b9ab25",
       "table_identifiers": [],
       "de_sha256": "85030c05302c2915e8e8aa371dfa8ac1423f65277c4ce2a850851e0d47b10846",
       "de_example_blocks": 4,
@@ -201,7 +201,7 @@
     },
     {
       "path": "debugging/index.md",
-      "source_sha256": "93cb2f572f2a9aa1bce5194c7aab8e75f6aa4742f2bf506ded5af3f3dcbb18cb",
+      "source_sha256": "2f01e11d3899a74298d53f65c19910eb7fed27ace176dd8f665e678d19a95ae7",
       "table_identifiers": [],
       "de_sha256": "a75fd03b502b74a24bd524269f36cff4b61ff538d276a2e91f040e61d0267529",
       "de_example_blocks": 0,
@@ -210,7 +210,7 @@
     },
     {
       "path": "debugging/templates.md",
-      "source_sha256": "f614ab2aec44a62ffb8ab77b1b13651f74907818936aed5ae89a949e4515a5f6",
+      "source_sha256": "6a952a6baf988706150643862aa36c5e50ccf9280a38672a9ecf308422ad953e",
       "table_identifiers": [],
       "de_sha256": "88f722aa0105346ef57bcc980f443295536770d4e7f1eb0082423bb43207ed95",
       "de_example_blocks": 1,
@@ -219,7 +219,7 @@
     },
     {
       "path": "developers/cards.md",
-      "source_sha256": "e6744cd93fd936ccff238a6b1a1b6ff3593dd917bdc0d0906d22801ecbb0f770",
+      "source_sha256": "b015e562376a5bb3b6c437b48d2b0a1c461419490667859b1c2bad9963806d1d",
       "table_identifiers": [],
       "de_sha256": "b3eb747a780941e424f32a99ecec4d99bfd9fe8f915cc551d60e5f0caf7dd644",
       "de_example_blocks": 4,
@@ -228,7 +228,7 @@
     },
     {
       "path": "developers/index.md",
-      "source_sha256": "401c20e019a4eae39b8662afd051bd194c40ad11bcc250228fcac9e5479a9132",
+      "source_sha256": "79fa211c889c316d7cb435a761bb4e76b23537e81328e511887f02b994cd088e",
       "table_identifiers": [],
       "de_sha256": "48fa30e640780dc167f5e2c1bfa0bd7892e3a27a4a81071d3ef3e5fa172d8598",
       "de_example_blocks": 0,
@@ -237,7 +237,7 @@
     },
     {
       "path": "developers/themes.md",
-      "source_sha256": "2eb60e3a74f87e9107315402bf4fe11fa50984d8f41a0cda8f755935ea8f584c",
+      "source_sha256": "5e789e99c37748da9263f6cedb0a3acd578526f0357a75f0e61fa6f1d4615f08",
       "table_identifiers": [],
       "de_sha256": "b1555002744fe70a6a904639db40afce3565565c27f1b6f951f34239601bfd52",
       "de_example_blocks": 1,
@@ -246,7 +246,7 @@
     },
     {
       "path": "extras/always-patch-ha-card.md",
-      "source_sha256": "ba4f8b654bec8d5518fc969a3fa6a79ee4d07c5de3106b4c4789fbfe07c0925a",
+      "source_sha256": "ba4f021473c9f6d9d56b183c1873c966235ca39b2072a2df5bc6b7784a405e5c",
       "table_identifiers": [],
       "de_sha256": "2511ebb270f1d7a88a0674c9de258ae43f8f155e9abd9191efddf074d2dd7be4",
       "de_example_blocks": 0,
@@ -255,7 +255,7 @@
     },
     {
       "path": "extras/dialog-styling-delay.md",
-      "source_sha256": "7e38de64552e564253d4bfdf561574075e069cae93266e1810d5c14cf9d60c60",
+      "source_sha256": "4bbe17331d513ce9a9f49cb527934b444d42dbf778bb788f92e93cf47741679d",
       "table_identifiers": [],
       "de_sha256": "aebb6b5aa29fe223ea63f45392819f8c79da1ddf18cf151aed1793971113cfe9",
       "de_example_blocks": 4,
@@ -264,7 +264,7 @@
     },
     {
       "path": "extras/disable-entity-picture-image-override.md",
-      "source_sha256": "3afb2d2fa4b2ac1853b6c3cfcc16bd2990df5e165b251cebccd1f5260242ad5d",
+      "source_sha256": "cbbf53085b6d1349ac1146b8edb4f10f640111bf7c6f11b530fdb5d12de89528",
       "table_identifiers": [],
       "de_sha256": "df01de68ba3dc1b678283af0c7e4b1679e7835f5fc05e116996e438a6771cb79",
       "de_example_blocks": 0,
@@ -273,7 +273,7 @@
     },
     {
       "path": "extras/disable-icon-styling.md",
-      "source_sha256": "9b6e6bf6371e21907c18036f92fc12af50f392eb321f0b495f7bb57cf8f0baec",
+      "source_sha256": "57d81e3b8ac8256cfb91af3e1fdfcded5364cef57d09ccdda67e97c330eb6fb5",
       "table_identifiers": [],
       "de_sha256": "cde67ad767edbaea46806437a283121eab6cd690a8bc8e98d046fe60dff793df",
       "de_example_blocks": 0,
@@ -282,7 +282,7 @@
     },
     {
       "path": "extras/frontend-states-throttling.md",
-      "source_sha256": "519f4161fd8b3fcd02100b0cf0d417dc8a5edc8199c5c2832229edade1b70fd9",
+      "source_sha256": "bd12e71948743dd03086bd30dddebb223b34ea619548d3ed87d52a85b3d4a00b",
       "table_identifiers": [],
       "de_sha256": "099b947501ecec076cb1f8853b05e99d14234d91bf1ed9724f8750876cf8d03b",
       "de_example_blocks": 6,
@@ -291,7 +291,7 @@
     },
     {
       "path": "extras/hash-template-variable-updates.md",
-      "source_sha256": "ad5ef301c2098c6c1aa6e2acc07e2efb0312218fc17eaaf68b15f9314f3e4070",
+      "source_sha256": "3729c790621fd67e716220c2103e4db85ee67f10275e4a9a3cd2f6e5e69c7903",
       "table_identifiers": [],
       "de_sha256": "fe21e56b8a71d3f5d8519642126e294ca6a21ded0facb6e7e8d12fb685bd2942",
       "de_example_blocks": 0,
@@ -300,7 +300,7 @@
     },
     {
       "path": "extras/index.md",
-      "source_sha256": "e95f7b1f90cbae218e7bb7c02f401c5832f844dd66d9eddefcdde508af3b0076",
+      "source_sha256": "46a0fad6ca645a30df611cf4a4aae004f737adb51e68388d35ee4280c2da1543",
       "table_identifiers": [],
       "de_sha256": "53aa02fd3deefecec3ff37a6bf13e1829c022569b8dcf67470c1d3fea9afe013",
       "de_example_blocks": 0,
@@ -309,7 +309,7 @@
     },
     {
       "path": "extras/style-frame-panels.md",
-      "source_sha256": "22ce0ee9838868f40f5620e35dd47a90c7905dbd3fbbcffc345d8eae60b835fa",
+      "source_sha256": "362540e0263fc82b18d8b702461110bcba626702ceccec9f408cc640cf165d92",
       "table_identifiers": [],
       "de_sha256": "813b257877f20be7063a0bb02743206487e769b5ea263f399e2531aa190b22d3",
       "de_example_blocks": 0,
@@ -318,7 +318,7 @@
     },
     {
       "path": "extras/uix-actions.md",
-      "source_sha256": "14083c1a86213381cc61e6657101b6e2c7a6eea6fbc55415aca3778922624fbb",
+      "source_sha256": "e2c7917f9031ac147653ca62df301283938b9cebb6076beb41135cddeb374694",
       "table_identifiers": [
         "action: clear-cache",
         "action: event",
@@ -357,7 +357,7 @@
     },
     {
       "path": "faq.md",
-      "source_sha256": "82d6418f252dc80db6faa812fd46fdcfe26d660309d58225364b5ef29fe6288a",
+      "source_sha256": "269cb89ee0f0308d8cd0fd576f7b4bd6f2a8ce41fc01bf4c495c73c2a9b125b2",
       "table_identifiers": [
         "...-dialog(-yaml)",
         "...-more-info(-yaml)",
@@ -370,7 +370,7 @@
     },
     {
       "path": "forge/forge.md",
-      "source_sha256": "5727f948404cd4d55da539561079aec4e5351b826d1b52a2f55dd7ad32f49276",
+      "source_sha256": "5a0a3766cb2d9f1c5fc99eb6f087a90efd9db38192e7b5eacc5a4c21beab8445",
       "table_identifiers": [
         "--uix-forge-footer-border-width",
         "--uix-forge-footer-bottom",
@@ -399,14 +399,14 @@
         "uix",
         "~"
       ],
-      "de_sha256": "b60604d617c6157e87a07e7a2b7508a27b2e1756747b53e3c8df336f02b89b54",
+      "de_sha256": "846ffc3327e6bbd27b62aa479f94501661bdcbcff89d2fc4e79dc99fc165f4b0",
       "de_example_blocks": 39,
-      "fr_sha256": "706d83493829dfb4c7952e5e214dc59a3e9a98c1266bd52a546c60514c3ab4bc",
+      "fr_sha256": "06aa0ca8410839670002029f02a3f11b22231ae10b2c2298d2eeed67dd816e7e",
       "fr_example_blocks": 75
     },
     {
       "path": "forge/foundries.md",
-      "source_sha256": "2f81248ef377d2c9dbfea4dbd2b9f3311b54a02167e834f669770c190bf0f6af",
+      "source_sha256": "836e2a88223f99cc0183431b2f785fe109b72b4a3d390c4dd4f3a3234d7ece3b",
       "table_identifiers": [],
       "de_sha256": "2b5450d9a0c811a21aab42ef725d49e847f8a612c9a0ac0f3f11fe57d547aa17",
       "de_example_blocks": 29,
@@ -415,7 +415,7 @@
     },
     {
       "path": "forge/index.md",
-      "source_sha256": "64042b1b01eaf33f615cd6be9faff4d1b68b0e0a027b596d7755cdcf5810cef3",
+      "source_sha256": "94ed8069769e90b759f268c243a6f917a155a2096244b97e3aa40209002e1574",
       "table_identifiers": [],
       "de_sha256": "3772b818e0008e8c6832764599b4b6fce29034bbe0c20289fc0dc49b393fbdfe",
       "de_example_blocks": 0,
@@ -424,7 +424,7 @@
     },
     {
       "path": "forge/sparks/attribute.md",
-      "source_sha256": "68911ba0a04728dd593185a34ebf27c0bfcf55857e904a1c2369af12e138a146",
+      "source_sha256": "68e6b5e4963331db637466fe4761ae7a4068f322cbcdd4b17788a77867fc9322",
       "table_identifiers": [
         "action",
         "attribute",
@@ -439,7 +439,7 @@
     },
     {
       "path": "forge/sparks/background.md",
-      "source_sha256": "0b7cd79ddd28f264dd5cc9b2015fbd128fbe7b74e80d5c0f6ca5cd14b487a50e",
+      "source_sha256": "e49d60e0bcba955243fe2fa4d7e21eb7c539b22607738b378f608c84c357e2d2",
       "table_identifiers": [
         "attachment",
         "background",
@@ -472,7 +472,7 @@
     },
     {
       "path": "forge/sparks/badge.md",
-      "source_sha256": "6d1ccad22ac27673aa23f0a511ecf9b8e5519e2eabf27f780917cd368300c151",
+      "source_sha256": "02332988637ea92b1dbe0771307122b6b44ed60887b1bde91c5d4965ca1b51a7",
       "table_identifiers": [
         "--uix-badge-attention-color",
         "--uix-badge-attention-color-hover",
@@ -516,7 +516,7 @@
     },
     {
       "path": "forge/sparks/button.md",
-      "source_sha256": "67da379e31aea9e3311da204f6f83ef9fdeca72b4e68e6b51b20255820b781b6",
+      "source_sha256": "3e7eff524e19c14bed60b7c7ab8dfaad080faa638b2e15f1d760be1535d3268b",
       "table_identifiers": [
         "--uix-button-border-color",
         "--uix-button-label-text-wrap",
@@ -548,7 +548,7 @@
     },
     {
       "path": "forge/sparks/event.md",
-      "source_sha256": "9a88e9d8e81ce567242c5f20533556eb512929dbf4547ea96d7234e41d9eb9a6",
+      "source_sha256": "0482bb06b2f90cc316a5e7c95c173d7b42dedf7382959ef5db54f4e13d48d866",
       "table_identifiers": [
         "forge_id",
         "other_forge_ids",
@@ -563,7 +563,7 @@
     },
     {
       "path": "forge/sparks/form.md",
-      "source_sha256": "f6a3c8c7baeb5fa71574e4c60cc6a47a231b68e20e2bb022c3572d180136975d",
+      "source_sha256": "0caf7c4d18c954bf9c7d9427f0ad54913abfc1b5758decacdd5b49816beb3ea8",
       "table_identifiers": [
         "--ha-checkbox-size",
         "--ha-input-padding-bottom",
@@ -602,7 +602,7 @@
     },
     {
       "path": "forge/sparks/grid.md",
-      "source_sha256": "a30c96d333ac72a406719fc15c9ef93fbe8ebaede79b8ae9ab4a3d84202d2101",
+      "source_sha256": "ad3ead5e81d34135f2c02eca4aac0a872eb436eff238f2f5a209e19f02fca96d",
       "table_identifiers": [
         "align_content",
         "align_items",
@@ -632,7 +632,7 @@
     },
     {
       "path": "forge/sparks/index.md",
-      "source_sha256": "aea332aa6110414bd2131df062b64ac3e9f9d93fbd5db152046c8bdf13d91afc",
+      "source_sha256": "97178ef31bb7b5b88e10e2cc7531e020b80328d3ca7ddb5a46d035ba2585ec70",
       "table_identifiers": [],
       "de_sha256": "1467c4ae719d6dba865a32d9f52ba6aa63cf92188fef79ebe5936d0b215c61b0",
       "de_example_blocks": 0,
@@ -641,7 +641,7 @@
     },
     {
       "path": "forge/sparks/lock.md",
-      "source_sha256": "d29244fe6db1342e41201c66fd49138fa97bf07c0445ff86d9c78fa0df1119b4",
+      "source_sha256": "1ca1643e71842b8eadbfabe3e0e2096aad31e831218f9f7023a93ffe8cbd86f0",
       "table_identifiers": [
         "--uix-lock-background",
         "--uix-lock-background-blocked",
@@ -705,7 +705,7 @@
     },
     {
       "path": "forge/sparks/map.md",
-      "source_sha256": "1d0f8e5d06fa39df55867277c7b7c9132a91bb079d46453ff6b5a65f027a81a7",
+      "source_sha256": "a52e880b76c50e1425cc778b88d0cb95f7874f575689bb880465456f512abd55",
       "table_identifiers": [
         "--uix-map-entity-filter-background",
         "--uix-map-entity-filter-border-radius",
@@ -786,7 +786,7 @@
     },
     {
       "path": "forge/sparks/more-info.md",
-      "source_sha256": "604b16ed340da29d34459882d69fd0577eadf038d62252ef4aaade1831c329f8",
+      "source_sha256": "6e157b4563e761900f14f0d013f483fbeb0d2b040008c050a1eb806622ad738c",
       "table_identifiers": [
         "--uix-more-info-details-head-gap",
         "--uix-more-info-details-head-height",
@@ -811,7 +811,7 @@
     },
     {
       "path": "forge/sparks/overlay-icon.md",
-      "source_sha256": "ea4b4540bf4d2471e085709f1abdfd37f32586a38d180b7357fdeab7a2de8886",
+      "source_sha256": "3eaeeea7d578592162f4ce5b898c00a1f6ef3aa854b8d79296b35956a9d2c221",
       "table_identifiers": [
         "--uix-overlay-icon-background",
         "--uix-overlay-icon-border",
@@ -843,7 +843,7 @@
     },
     {
       "path": "forge/sparks/search.md",
-      "source_sha256": "558b468bc719b723d8664fc77fed9b16258d45a6ad7b4e2cabc911accec86e6c",
+      "source_sha256": "bdceaab0a26dc768b6b43e5c7e4d162488b3d9f18f3eca0fbd778f67b78a224c",
       "table_identifiers": [
         "actions",
         "add_attribute",
@@ -865,7 +865,7 @@
     },
     {
       "path": "forge/sparks/state-badge.md",
-      "source_sha256": "38d805ed52789fe7df7852342cb2c0668699ff23c875f5f56a9ba03034591439",
+      "source_sha256": "dd8b0527f0d457131335d7538ccb5e5a02c524848ad13af5a20ef73e68ed0361",
       "table_identifiers": [
         "after",
         "before",
@@ -882,7 +882,7 @@
     },
     {
       "path": "forge/sparks/theme.md",
-      "source_sha256": "be34384d2ba8c73e345eebcdf6e30b4347f354267e07bdb6592cc185e0d003cf",
+      "source_sha256": "7a7e5bf89538553c753496fd031b2c60c9b135b389b173e4374079c06efa9905",
       "table_identifiers": [
         "for",
         "theme",
@@ -895,7 +895,7 @@
     },
     {
       "path": "forge/sparks/tile-icon.md",
-      "source_sha256": "1486bb3a78c218f6377381fe046a8e248c7e59976bc230ad1e74a0ca3b2b524f",
+      "source_sha256": "eaf8210dbf464eca19c3a96113bc5f9812128c2dd5803e6df91cb728dc4376a5",
       "table_identifiers": [
         "after",
         "before",
@@ -916,7 +916,7 @@
     },
     {
       "path": "forge/sparks/tooltip.md",
-      "source_sha256": "d35562cbfc2045d9e6afe39d2d224acacbdb897db95bae3d5caa79b278f478a6",
+      "source_sha256": "99270757e5654df38df124323ce90f5d0bbe7ec0de5e2c6256077d6fe033d340",
       "table_identifiers": [
         "--uix-tooltip-arrow-size",
         "--uix-tooltip-background-color",
@@ -960,7 +960,7 @@
     },
     {
       "path": "guides.md",
-      "source_sha256": "5d6bc38ade1b1177d096a80e45313deb4f2d5217e266c7370749f30e67e7bd5b",
+      "source_sha256": "389b0bd920cbf6878665d733d6fac8691f275ffaba8e64c392fa8def8aabf24b",
       "table_identifiers": [],
       "de_sha256": "38a2002d47e11b3eacb743d145066017d79a99ea3df53107ce28aae62f11e203",
       "de_example_blocks": 0,
@@ -969,16 +969,16 @@
     },
     {
       "path": "index.md",
-      "source_sha256": "602465d9e9b2aa6af3e2360d2ef343e88609cf2089c04db29dfa87d95c08ce30",
+      "source_sha256": "fb3a60fc5f67441b1b931b5e43ddbb0050c5d08e5f3815395c42e2346f9bd94b",
       "table_identifiers": [],
-      "de_sha256": "a062349ecdea8a4436fe9b32ce16dbc8db2beb30dfe20f6e539f6c625327bac3",
+      "de_sha256": "fbdff3105ad80c2c20dd5f8095c79b8473257f7578877a9cd6997e861852b7d9",
       "de_example_blocks": 0,
-      "fr_sha256": "1a5a6af9641bee1674ca006a5c641610237605419d4d940b1b91b879043787e7",
+      "fr_sha256": "32ca4102f21844308ad3a65bab449f8c8a4afd54d17a8f4c4a86b15ba622bf8b",
       "fr_example_blocks": 0
     },
     {
       "path": "license.md",
-      "source_sha256": "14fd13c6d78a723764e4c4e3004eacbd7345467538cf439c2b346ef3c7c0bb50",
+      "source_sha256": "0530ea25594c73fab23fae399bc74c560f694b1cbacf77e9aaebbbabc2683f07",
       "table_identifiers": [],
       "de_sha256": "da26aad59d0459325ead36313a4aa25d6d36dea6575997eae64d84debae79929",
       "de_example_blocks": 0,
@@ -987,7 +987,7 @@
     },
     {
       "path": "quick-start.md",
-      "source_sha256": "274ec0e9fde2d39bb7513bcbdc7e7764a4cbd334e17fb283c9cdd6025bb7e256",
+      "source_sha256": "e414b3b1d52198876395c0b7495be7c93b57c63632072cdf0f5bd831ef89790a",
       "table_identifiers": [],
       "de_sha256": "1d57f23208ee9083b243e3030bd56cc9a3bb386bef82aa1b53eb6bb2aab68ab1",
       "de_example_blocks": 2,
@@ -996,7 +996,7 @@
     },
     {
       "path": "using/apps.md",
-      "source_sha256": "623325538837adae42d907eb13a0fdd5a2ba76adac15c7e45c7e479ccb9f2345",
+      "source_sha256": "a6265560a307cf91b5bd3235ec1504f17d65cc2161ba46bf57bae945436ae334",
       "table_identifiers": [],
       "de_sha256": "32750c39efe61747d19fc28270297ef716a7cacd1df67de0764f9cbe87e090b9",
       "de_example_blocks": 1,
@@ -1005,7 +1005,7 @@
     },
     {
       "path": "using/cards.md",
-      "source_sha256": "1188135b35f3e3e638af1347a7082cab8c71d842bd8352c78a69b78283b99088",
+      "source_sha256": "03c0d5ca0336e1ca226f033ede2e7c0928b0c9ad3ce759518582836eaf613095",
       "table_identifiers": [],
       "de_sha256": "06986eb53e48ffc51cfc3538d1a8d76169a0c3955fcfd0f2e3597c7893004c72",
       "de_example_blocks": 5,
@@ -1014,7 +1014,7 @@
     },
     {
       "path": "using/custom-panels.md",
-      "source_sha256": "45bd15b6a3bdf9aadf6b41e6c81bc3fa8c14c709d15c000cf655bc0899e7bd7b",
+      "source_sha256": "71eb4b030e5ff56580b90263e97f347d453c3be0dd92ff1ed4884ff0a6a41aa6",
       "table_identifiers": [],
       "de_sha256": "9bd988d8a26d6c7f79939e15e5dd37af4a68a2b629f0b0662f6d710976491a15",
       "de_example_blocks": 3,
@@ -1022,8 +1022,17 @@
       "fr_example_blocks": 3
     },
     {
+      "path": "using/custom-sidebar-panels.md",
+      "source_sha256": "7e26fafba04ba0a80ef5684d3286c9de33fcc5da644d83930e66562fee21277a",
+      "table_identifiers": [],
+      "de_sha256": "c12e646cb9448a0abe8aab2d5deb13b5047aec2cdca9f4ad069593f6104dd0bd",
+      "de_example_blocks": 0,
+      "fr_sha256": "9be099288d9e35ba7bdfc33e56e06fd10fbd4d4f664cbc99d8bfdc18ced29cb0",
+      "fr_example_blocks": 0
+    },
+    {
       "path": "using/entities.md",
-      "source_sha256": "a07bc123a46db491c7d44842996c5b4b8f493a10cfe815f2e7e80bef81fd071b",
+      "source_sha256": "8f206ea5912bcc28824276f05db27f960bfc8c498f38aee3fbec0a93ac34b5c5",
       "table_identifiers": [],
       "de_sha256": "e0cb8eac6f5361ac55ef831691320d5f28f6487bb4c331c3246f9d226c598924",
       "de_example_blocks": 11,
@@ -1032,7 +1041,7 @@
     },
     {
       "path": "using/icons.md",
-      "source_sha256": "caf62f846e9fe3c4f01f17f6ade457c56753ab1143c45bce1cbe9c9e24d6eb1a",
+      "source_sha256": "2371a9b147a5c9058110b2a56d7d9ea8dc4e42d7574d96e62dc5a3937180295c",
       "table_identifiers": [],
       "de_sha256": "f3e4eaadb7f457ca92072992c5f42b3fba12e0313c1b3b91282569bd40088f3f",
       "de_example_blocks": 3,
@@ -1041,7 +1050,7 @@
     },
     {
       "path": "using/images.md",
-      "source_sha256": "dfdb0477af38ad40621ab613107df3c85dbc9cdfe4d61ba8090ba5bea8c73e43",
+      "source_sha256": "cd93932aee59d37d0fcb07bb81d2eadd25df1db46dc7cfc98517ecf00b4c6e48",
       "table_identifiers": [],
       "de_sha256": "4e52f829877d9d4de105d4ddae4b1251a784c85468c92cb04a1b39931f21e187",
       "de_example_blocks": 1,
@@ -1050,16 +1059,16 @@
     },
     {
       "path": "using/index.md",
-      "source_sha256": "9a8e4c4c3c2a1c109f2dfb96cff4f0e65f097dab00b6b15d9867574858437b72",
+      "source_sha256": "23a1b6345ca7fcb7a1af2ac94c635818967787c3c99afcdacc49ff9a20a816df",
       "table_identifiers": [],
-      "de_sha256": "8da5e47a10bf5606ccde757ef36db73960c6e317a3abe4d3fdeb0d5f82895fda",
+      "de_sha256": "3574bdf12c49b1f9e69f0df7f5f98dfad8737876d813c7ccc6e1f75eabf926a4",
       "de_example_blocks": 1,
-      "fr_sha256": "119b28c69956efb04a9057234817198a3742fdb70fce4b73fe40ad92c204206f",
+      "fr_sha256": "67711072154c737b0494d43f79d41e32bb784a0d706ca29f0a44a6ba4e294fcb",
       "fr_example_blocks": 1
     },
     {
       "path": "using/other.md",
-      "source_sha256": "b38516c4d03c00600b6cd5f893723d0d0814b1252aa3df1431a5bb9c5a3d707e",
+      "source_sha256": "314d7f3ead4b1786c8972e4992bd5f4c308a259c8910a5d5496a4a70129181d1",
       "table_identifiers": [],
       "de_sha256": "af08e3003342179b6ec3cdd6c80baee8ae79affaac37667fcb3cdd6aaf12fb66",
       "de_example_blocks": 1,
@@ -1068,7 +1077,7 @@
     },
     {
       "path": "using/section-backgrounds.md",
-      "source_sha256": "993ae1d580d866a9fb8502ef3faa4382fa604f2e7384ee1936b63b6c155ae16d",
+      "source_sha256": "f38124de3a357a0c9a0fd13d6d30c49e8078db9f93304d1561108d684bbeaf84",
       "table_identifiers": [],
       "de_sha256": "f369ae8571c9a477b9010d341da49db68201b55b7bb56ef4b2aa45ac1ccd7aad",
       "de_example_blocks": 2,
@@ -1077,7 +1086,7 @@
     },
     {
       "path": "using/templates.md",
-      "source_sha256": "03066d9eaec844ccab66d5b43e53c7baf5d2b7a7773ae7bce131385d7e636d0f",
+      "source_sha256": "c5bd23203b48e656ce2bf9abd359be194888818cd3a1b8b3e1f0716a39e8507c",
       "table_identifiers": [
         "params",
         "returns",
@@ -1090,7 +1099,7 @@
     },
     {
       "path": "using/themes.md",
-      "source_sha256": "c77e4db70c6c37a1d32843764cb6c4deab06aef7c9d386cb58253b3d0fcd1542",
+      "source_sha256": "ad729fcb12c1391c9d252e853f888ea1909a0614099079d14a6d74b623dbdcf1",
       "table_identifiers": [
         "descriptors",
         "family",
@@ -1103,7 +1112,7 @@
     },
     {
       "path": "using/view-backgrounds.md",
-      "source_sha256": "f6efc116c0fc1aab90914e6de165cbff6ff3a211fed3f88fe80ccd330bf4525b",
+      "source_sha256": "b54c1cefd45ce7e52fd2a0bb29c881cd5858d6ef8711a8b26dac1e3e80b42b5f",
       "table_identifiers": [
         "--uix-camera-pan-x",
         "--uix-camera-pan-y",

@@ -3,10 +3,10 @@ title: Forge
 description: UIX Forge config details including macros, billets, template nesting and UIX Styling.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.2**, revision [26e54e6](https://github.com/Lint-Free-Technology/uix/commit/26e54e6d4973231a393933e6479ed1b03cc86cd3), reviewed 22 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.6**, revision [e6fb84d](https://github.com/Lint-Free-Technology/uix/commit/e6fb84dd715ea4bac9a330357705897ea8d44690), reviewed 31 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
-::: info UIX 9.0.0-beta.2 preview
-This Forge content follows the reviewed `dev` revision, separate from the stable 8.4.0 baseline.
+::: info UIX 9.0.0-beta.6 preview
+This Forge content follows the reviewed `dev` revision, separate from the stable 8.4.0 baseline. Individual feature notices identify their introduction version.
 :::
 
 # UIX Forge
@@ -94,7 +94,7 @@ A string template uses Home Assistant's template selector and code editor, so en
 
 Enable/Disable becomes available after a Native element is selected; this prevents the visual editor from creating disabled paths before there is a Native source to suppress. Editing another template preserves valid disabled paths inherited from a selected Foundry or global configuration.
 
-Existing direct Card and Badge Forges can be converted for visual editing. Conversion moves only `element.type` to `element_base.type`; every other source value remains available for Forge to render.
+Existing direct Card and Badge Forges can use **Convert to visual editor**. That migration moves only `element.type` to `element_base.type`; every other source value remains available for Forge to render.
 
 When the editor saves, it keeps the selected card or badge configuration in `element_base` and the values you add on the Element tab in `element`. You only need to care about that layout when moving to YAML, debugging a configuration, or reusing it in a Foundry.
 

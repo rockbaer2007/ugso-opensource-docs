@@ -3,11 +3,11 @@ title: À propos
 ---
 # UI eXtension pour Home Assistant
 
-::: info Traductions vérifiées le 26 octobre 2026
-DE/FR ont été vérifiées avec les 64 pages sources anglaises. Les corrections des exemples de sections, valeurs par défaut et exemples Forge/Broker sont détaillées dans le [rapport](./translation-status).
+::: info État vérifié le 31 octobre 2026
+Base stable : **UIX 8.4.0**, nécessite **Home Assistant 2026.10.0 ou ultérieur**. Les **65** pages sources anglaises ont été comparées à la révision `dev` **e6fb84d / 9.0.0-beta.6** ; DE/FR ont été complétées avec les changements. Les fonctions d’aperçu sont indiquées séparément. Voir le [rapport](./translation-status).
 :::
 
-> **Traduction indépendante** — Cette documentation française est maintenue par UGSo Software et n'est pas la documentation officielle du projet UIX. La documentation anglaise reste la référence. Comparée le 8 octobre 2026 à la version stable [`UIX 8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) du 7 octobre 2026, révision [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389). **Home Assistant 2026.10.0 ou ultérieur est requis.**
+> **Traduction indépendante** — Cette documentation française est maintenue par UGSo Software et n'est pas la documentation officielle du projet UIX. La documentation anglaise reste la référence. Base comparée à la version stable [`UIX 8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) du 7 octobre 2026, révision [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389). **Home Assistant 2026.10.0 ou ultérieur est requis.**
 
 ![light-logo-icon](./assets/images/mixed.png)
 
@@ -23,12 +23,8 @@ UI eXtension comprend [UIX Styling](./using/index.md), [UIX Forge](./forge/index
 
 ## Nouveautés de UIX 8.4.0
 
-::: info Revue complète du 22 octobre 2026
-Les 64 sources ont été comparées à **dev 26e54e6 / 9.0.0-beta.2**. EN reprend les textes originaux complets ; DE/FR ajoutent les contenus manquants et corrigent les exemples. La base stable reste 8.4.0. Voir l’[état de la traduction](./translation-status) pour le périmètre et les preuves.
-:::
-
-::: info Aperçu comparé séparément
-Les changements de `dev` jusqu'à **9.0.0-beta.0** ont été intégrés en DE/FR le 9 octobre 2026. La [configuration Forge en couches](./forge/forge#layered-configuration) et le nouveau comportement après une mise à jour avant le redémarrage de Home Assistant sont des fonctions d'aperçu. La base stable reste 8.4.0. Consultez l'[état de la traduction](./translation-status).
+::: info Aperçu : UIX 9.0.0-beta.6
+Les [raccourcis personnalisés dans la barre latérale](./using/custom-sidebar-panels) sont disponibles à partir de **9.0.0-beta.6**. L’[éditeur visuel Forge](./forge/forge#visual-editor-cards-and-badges), disponible depuis **9.0.0-beta.2**, propose **Convert to visual editor** pour les Forges directes de carte ou de badge existantes. La base stable reste **8.4.0**.
 :::
 
 - [Spark Formulaire](./forge/sparks/form) et [action Popover](./extras/uix-actions#popover) pour les formulaires et les contenus superposés.

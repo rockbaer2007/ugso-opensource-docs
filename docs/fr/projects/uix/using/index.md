@@ -11,6 +11,7 @@ description: Découvrez comment utiliser UI eXtension pour styliser les élémen
 - :white_square_button: [Arrière-plans de sections](./section-backgrounds.md)
 - :film_frames: [Arrière-plans de vues : caméra, vidéo et image](./view-backgrounds.md)
 - :abacus: [Styliser les panneaux personnalisés](./custom-panels.md)
+- [Raccourcis personnalisés dans la barre latérale (à partir de 9.0.0-beta.6)](./custom-sidebar-panels)
 - :material-application-cog: [Styliser les panneaux d'applications et d'Ingress](./apps.md)
 - :clipboard: [Modèles](./templates.md)
 - :art: [Thèmes](./themes.md)

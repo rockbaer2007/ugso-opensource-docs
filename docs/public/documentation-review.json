@@ -273,7 +273,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "04e18a178dedb20b4457b9f4debc870f37adc19e2d1ef19f57e1b9d92acf38a4",
-      "target_sha256": "4f8628b8a6aa88a0fddc483410f49189b856579f8d54a056ccdec03a20855770"
+      "target_sha256": "d26abc545b60b2aec47e3c8e16342555e26ed64c017f43961dd1759a19cc33bc"
     },
     {
       "source": "projects/uix/broker/broker.md",
@@ -313,7 +313,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "64af9f0e051023f52ebe21dabc37130efd6d2f83f45ab81815020b9f2b7b53d2",
-      "target_sha256": "143c601d7861a36ca02304e936333baec4fd81c930dc2f0c36e48fdf90e7c7ff"
+      "target_sha256": "23844c5a183031d6ff6e23a5728b85312930803cbf65601498cacea23ef4baf3"
     },
     {
       "source": "projects/uix/broker/directives.md",
@@ -348,8 +348,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
-      "source_sha256": "8a35cc0faa777ac2c35c5afe64ddcf12a65c17171790b2bed13264bea0b9f1c0",
-      "target_sha256": "421a957ac12d1f39c23f6952ed9e392d0b76f8dd050b83d1b46e8feafc659f8f"
+      "source_sha256": "82d171401f14f78bbb4a21deeb84ae1013b89af5346ee256183621daa0df3015",
+      "target_sha256": "a1b30379fcf03965611f3526b93c06fa91268b7c97d5840a8d11f3e627890169"
     },
     {
       "source": "projects/uix/broker/examples.md",
@@ -366,8 +366,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals.",
-      "source_sha256": "8a35cc0faa777ac2c35c5afe64ddcf12a65c17171790b2bed13264bea0b9f1c0",
-      "target_sha256": "718abb953e851857847dc644f3ef50ed2ab4237bd0c7b912d67b23fb42b93fde"
+      "source_sha256": "82d171401f14f78bbb4a21deeb84ae1013b89af5346ee256183621daa0df3015",
+      "target_sha256": "f091f85244649420065e823c805c17083aba05be69558a569670338ea0645346"
     },
     {
       "source": "projects/uix/broker/index.md",
@@ -385,7 +385,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "9dcb258eacef447fce60bcbb2551600a0ba90595c61985e7880e1d28a344a505",
-      "target_sha256": "d6e2cdb1cadb6f48de54816ed2846870efee6c4d71b2ba09cfa4d6110a2076de"
+      "target_sha256": "0bd0203db32b34739aedf7abffe05b3acd150e3be79035e7a2faed45481045e9"
     },
     {
       "source": "projects/uix/broker/index.md",
@@ -421,7 +421,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "571a0e1f883387f5de79ede8c8640c65d89f327cc8206582a0d144dd041dec17",
-      "target_sha256": "0aecc47b65347d6e3e453d944a8c892830fe476d1e895e7a1657f857ba79e741"
+      "target_sha256": "2865a4daa7684c01d831449d0274d3028e362258048ee1e97930f2465debdc28"
     },
     {
       "source": "projects/uix/broker/interaction-anchors.md",
@@ -457,7 +457,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "f8fe793dbce6da29cb214e1a68bc9f1b51c10f212e15966a03a064ef0081a5e0",
-      "target_sha256": "fff882cd02d341a7eda022e5ab80747c504de49d8bf8d677d26a2173fbb8f85e"
+      "target_sha256": "47c936a85fd6e194ffd1194567d2d1d1ade589f76333473bd126d998f46a130c"
     },
     {
       "source": "projects/uix/broker/realms.md",
@@ -496,7 +496,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "e1a4eee8158c23266e82632074ec6d46f1bb17d9b4aa99b01aad50e4a2bda76b",
-      "target_sha256": "afc3198f608c39739a2717b1660cfd11e19969ab8c76084133ce65e7d8282066"
+      "target_sha256": "3723fbb5ce0ec7157274d18321761a3b78d02bf6d9fd53c7470a706e26cbb7d2"
     },
     {
       "source": "projects/uix/broker/rules.md",
@@ -533,7 +533,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "8c83dae03d87e4d505159b83bfc59badf9d225694c818bf0a6036b67134c2757",
-      "target_sha256": "d235c9e02c9d52b63ab36d5fc658189db72c57592e426605d92c06fa120a3f25"
+      "target_sha256": "88c6c595476b081d9a62df96853a20f99d4031a1ddde0bf7e7847920567fcc2b"
     },
     {
       "source": "projects/uix/concepts/application.md",
@@ -568,7 +568,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "9d1d866f62656a2000d2b4f58cd07382d5c9ff8f72f4ddb52e38c0a1c988d399",
-      "target_sha256": "c9cbe4cafb1117f965eb999242ab15a0116285ab74922e9a908d82cb904b7ede"
+      "target_sha256": "917e89829eb73f734091c11f76a6f6a95dd19bda3d1c4b6d296a4409fd839dbe"
     },
     {
       "source": "projects/uix/concepts/dom.md",
@@ -603,7 +603,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "be03f9378610c022d2befdae6adb3497827f45eb9affada76a46e536d60279b1",
-      "target_sha256": "b79ac79969b1009174d52ea6d5e0f7ebe30ebe46515cd3f5da59f962c9a1c569"
+      "target_sha256": "0adb8be859a626f210ca8eca4775cb9eb5f5e9f2e642ee3185562edc64b3b079"
     },
     {
       "source": "projects/uix/contributing.md",
@@ -625,7 +625,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "9552f75e36ca61cc795d39146580c63fe65ffe7fb80b208b8eac25f303a72108",
-      "target_sha256": "a56bf72b61c9b149b198d560ffb6e6488a472c82799f690e634b7aa139892c81"
+      "target_sha256": "fc62efeeda6057578e7781dd02b6adff2fdffc7568b8d08a60f7a3b3352f223e"
     },
     {
       "source": "projects/uix/contributing.md",
@@ -664,7 +664,7 @@
       "disposition": "corrected",
       "reason": "Incorrect/contradictory cache-deletion claim corrected against the reviewed implementation; localStorage and Browser Mod identity are preserved.",
       "source_sha256": "d1d50ace07e6941040ca56b1e550e56f350dc6674ca3a460be72f819b0686bf5",
-      "target_sha256": "217dd71b2505be7be109499e7f3dad7fb26627be53d4a017c8c6e3e29a2dc7d2"
+      "target_sha256": "c9a708762df7090798a624d0621aea91c210b79ef38f88d19b5c02261934e27f"
     },
     {
       "source": "projects/uix/debugging/cache.md",
@@ -699,7 +699,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "85030c05302c2915e8e8aa371dfa8ac1423f65277c4ce2a850851e0d47b10846",
-      "target_sha256": "c9284dd12e1602882a0cec6df1a3621090cf357f0d68d0caf147c6319e08f813"
+      "target_sha256": "331c32a505dc2fd855c143f493da56f40c413dcb1c0f678a8d5e6df7a9d1eb18"
     },
     {
       "source": "projects/uix/debugging/index.md",
@@ -718,7 +718,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "a75fd03b502b74a24bd524269f36cff4b61ff538d276a2e91f040e61d0267529",
-      "target_sha256": "e70dce23411c710fd136d684a5dceef706fa4769e7be06d9640e15a4c85ce850"
+      "target_sha256": "f93a611b7c3f5dbdab54bb4fad8dcab604e5078d729a0f1e33491c12b58f5d97"
     },
     {
       "source": "projects/uix/debugging/templates.md",
@@ -737,7 +737,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "88f722aa0105346ef57bcc980f443295536770d4e7f1eb0082423bb43207ed95",
-      "target_sha256": "bc5d1c64295ad8f1b85934bc34d2e97058e8a1c2761b12eb0f8abf22697648c0"
+      "target_sha256": "3f27e4a95eb2433710700044384858d47c2a2d1d95c73cdebafd3c8557dd7000"
     },
     {
       "source": "projects/uix/debugging/templates.md",
@@ -772,7 +772,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "b3eb747a780941e424f32a99ecec4d99bfd9fe8f915cc551d60e5f0caf7dd644",
-      "target_sha256": "ce4e25edc98eda97ba327b31c47c68547044b44bddb123237e2f396f67262575"
+      "target_sha256": "c01ecb0367bbbadca46d0b8763e7e35e1dbfeacca6779739e5974738311577fd"
     },
     {
       "source": "projects/uix/developers/index.md",
@@ -791,7 +791,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "48fa30e640780dc167f5e2c1bfa0bd7892e3a27a4a81071d3ef3e5fa172d8598",
-      "target_sha256": "e6c6de5cb0c37c9ef661469f12b53b60ed6f54fc4a54ba9207b83357b61bdd97"
+      "target_sha256": "0142787b3dd6b5a5ce9a80ede728ee90019940519df932d660fe3b95f8782ddb"
     },
     {
       "source": "projects/uix/developers/themes.md",
@@ -810,7 +810,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "b1555002744fe70a6a904639db40afce3565565c27f1b6f951f34239601bfd52",
-      "target_sha256": "e8e9dfbfc11808eaf375bfca814025f33bb71013f019a49f7a215d70343e144a"
+      "target_sha256": "70e9cf9034e074ff2baa1e7f30ff3b4550f2fef546a5762e2e0be9a549decf12"
     },
     {
       "source": "projects/uix/developers/themes.md",
@@ -847,7 +847,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "2511ebb270f1d7a88a0674c9de258ae43f8f155e9abd9191efddf074d2dd7be4",
-      "target_sha256": "fc08ab7f2be184e81ccae0dd13e1566af4f9d109e970f6a07c45c99c53ad8295"
+      "target_sha256": "89ba5cca9d2f32ddb24997b860fe81458c5f2b9f5992320343b38f8cb8eeba14"
     },
     {
       "source": "projects/uix/extras/always-patch-ha-card.md",
@@ -884,7 +884,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "aebb6b5aa29fe223ea63f45392819f8c79da1ddf18cf151aed1793971113cfe9",
-      "target_sha256": "db2dc968f02107590aabc368f789e8e37642249b5a2ad1845a55a4226646545b"
+      "target_sha256": "1f7f91ee312f5fe51b0c2ab2f6d0a34f87f69d186e91fa4a700b42b4ac9f2351"
     },
     {
       "source": "projects/uix/extras/dialog-styling-delay.md",
@@ -919,7 +919,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "df01de68ba3dc1b678283af0c7e4b1679e7835f5fc05e116996e438a6771cb79",
-      "target_sha256": "dd979b0bc055eadbf2331509fdfea5a654c4831475e6636bed00dddb98728cdc"
+      "target_sha256": "63f165832d2ec1f70aa199881e838b8c5934c1ef3c9e96f931e3af4918534cf7"
     },
     {
       "source": "projects/uix/extras/disable-entity-picture-image-override.md",
@@ -954,7 +954,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "cde67ad767edbaea46806437a283121eab6cd690a8bc8e98d046fe60dff793df",
-      "target_sha256": "fe901c39b321396e78cfc3d74f04b7f6fa5e6a590cb2f5b15633042149827e2a"
+      "target_sha256": "c6f00f0e217149b505d599e6f644af4e7a5568d093e879a3c02231555cf0c313"
     },
     {
       "source": "projects/uix/extras/disable-icon-styling.md",
@@ -989,7 +989,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "099b947501ecec076cb1f8853b05e99d14234d91bf1ed9724f8750876cf8d03b",
-      "target_sha256": "8ea6fcd249c723402613c43b853aab931529580070946bdfd8cdbbac87b5ccc3"
+      "target_sha256": "2787a7271ffbae84c18565c46aee386f1d9703e3502b7d21e93eb4cf9cf0f6f5"
     },
     {
       "source": "projects/uix/extras/frontend-states-throttling.md",
@@ -1024,7 +1024,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "fe21e56b8a71d3f5d8519642126e294ca6a21ded0facb6e7e8d12fb685bd2942",
-      "target_sha256": "04af6fc012c63794c9272caee610c42cdefeee15d921c534b0e821ca4f5c8bf9"
+      "target_sha256": "cac719388f0d18d694d907c71a1fcad79af37ed3e70b506c29758dd370659ff3"
     },
     {
       "source": "projects/uix/extras/index.md",
@@ -1043,7 +1043,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "53aa02fd3deefecec3ff37a6bf13e1829c022569b8dcf67470c1d3fea9afe013",
-      "target_sha256": "ee5d7868b4985a6699eb56227456336fa8cbb1e2bf2cd2b0981ff89710fcf6ba"
+      "target_sha256": "c2fde445040d24eb66e4bc28a34d29bc3aaaee61c74b4730aaf2cf41564831ac"
     },
     {
       "source": "projects/uix/extras/index.md",
@@ -1077,7 +1077,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "813b257877f20be7063a0bb02743206487e769b5ea263f399e2531aa190b22d3",
-      "target_sha256": "ec83c6993f16d3f33f38b5639163a80188f4e15a35429620170cf695798f940f"
+      "target_sha256": "a08646c24dcbe57b8f6f5f4010d1b21c69ce95c4abb44185ac1392ca68a80aaf"
     },
     {
       "source": "projects/uix/extras/uix-actions.md",
@@ -1097,7 +1097,7 @@
       "disposition": "corrected",
       "reason": "Incorrect/contradictory cache-deletion claim corrected against the reviewed implementation; localStorage and Browser Mod identity are preserved.",
       "source_sha256": "b2f883e83bde9cfd4d0a4d96a05a6208da4931ecdc84dcaed019675bee5002bc",
-      "target_sha256": "bcd6b4a5e0b2c8d4c6e5180b00fe59ecf7a97abe0fbe0e436a57ac09a31e8e63"
+      "target_sha256": "4db3650b9bf8c888d5f164a8d9e01e6a1bfb3da1002da4f237cb1163a38c8d95"
     },
     {
       "source": "projects/uix/extras/uix-actions.md",
@@ -1137,7 +1137,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "8e5863968299f97c14131c43d13a6a4d9a6294439da196ae1896c8f7745e71ce",
-      "target_sha256": "61c44ece215f0fc624a2ff2adc34c57df07d436d5617568250a4773295ef6de6"
+      "target_sha256": "6936b01a1bb03dce900de65213e50a9b1af1337bf893eefb4dec53d450215a5c"
     },
     {
       "source": "projects/uix/faq.md",
@@ -1173,8 +1173,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
-      "source_sha256": "b60604d617c6157e87a07e7a2b7508a27b2e1756747b53e3c8df336f02b89b54",
-      "target_sha256": "0eb061fffcab30f801c8957a640b5a62037fdf756d2159bfc79d1766c17537ae"
+      "source_sha256": "846ffc3327e6bbd27b62aa479f94501661bdcbcff89d2fc4e79dc99fc165f4b0",
+      "target_sha256": "b6c446add6b10153212aa2a7bbc0df7178850ef145e17b3b4de75ae072c5acd1"
     },
     {
       "source": "projects/uix/forge/forge.md",
@@ -1189,8 +1189,8 @@
       },
       "disposition": "supplemented",
       "reason": "Added 38 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed.",
-      "source_sha256": "b60604d617c6157e87a07e7a2b7508a27b2e1756747b53e3c8df336f02b89b54",
-      "target_sha256": "706d83493829dfb4c7952e5e214dc59a3e9a98c1266bd52a546c60514c3ab4bc"
+      "source_sha256": "846ffc3327e6bbd27b62aa479f94501661bdcbcff89d2fc4e79dc99fc165f4b0",
+      "target_sha256": "06aa0ca8410839670002029f02a3f11b22231ae10b2c2298d2eeed67dd816e7e"
     },
     {
       "source": "projects/uix/forge/foundries.md",
@@ -1206,7 +1206,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "2b5450d9a0c811a21aab42ef725d49e847f8a612c9a0ac0f3f11fe57d547aa17",
-      "target_sha256": "e46316b706a4fc713c17527c93232b856adb59279c4e24998eb8c8b6aaa56217"
+      "target_sha256": "7bd1d47e636c0dd8a69e2b2785e1c9565c3fdbbeb61626b6a57521967609a4c7"
     },
     {
       "source": "projects/uix/forge/foundries.md",
@@ -1244,7 +1244,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "3772b818e0008e8c6832764599b4b6fce29034bbe0c20289fc0dc49b393fbdfe",
-      "target_sha256": "b8928042401b475b182cfc3cb8ebd7b48dd7d124303019bee3fcb115346b4238"
+      "target_sha256": "1edfc3bef13340fb5cc7448ae32d01eb8f906b4858694b91c4809e2386703d1d"
     },
     {
       "source": "projects/uix/forge/index.md",
@@ -1279,7 +1279,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "108c2c0c9ac1520b19e893f5125dbc485575616aeb2de6e85025cc4533113f94",
-      "target_sha256": "868e30704e32142222609cd5a96830061a0b8abe92851397250591182b17f10c"
+      "target_sha256": "808d6e2bc544a2c56425468b624b938cb0734473445f0d4551cb8bec32bd1f53"
     },
     {
       "source": "projects/uix/forge/sparks/attribute.md",
@@ -1314,7 +1314,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "9935009fbd0074306ae13ebb871a1081a6bb8cd08f4d54726a64fec55a1330f1",
-      "target_sha256": "49b29f8081482d78fb30da7c3e81981a10e4ab2902e613c8b6a759cf2f2bd7bf"
+      "target_sha256": "99eebf8bda44d83c5460fedd84c40385450838cb2c154a0b1d22de593e72f04d"
     },
     {
       "source": "projects/uix/forge/sparks/background.md",
@@ -1348,7 +1348,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "ad063836ebae1be04c45506949d09c29661478e45000aa75c06230b083cb39c7",
-      "target_sha256": "35e1f8353dcd314504ba1eb6acfe99d83014e00145ebfd08348787123fa3b570"
+      "target_sha256": "5ec2aa3c8641e6c3b3ce425d47c67620574ad6551075454c710069e31669a191"
     },
     {
       "source": "projects/uix/forge/sparks/button.md",
@@ -1369,7 +1369,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "360137629310a54c7ddbd79aacaf74dc8887aca848d92e0b088debba21242770",
-      "target_sha256": "a475e0215661048cda338c0f6723a1adbc7c49bb4260eb2871f42dd5b309a137"
+      "target_sha256": "4e69a2fd37c256433200c5e5023e83bcf6ebd71db9d275515f381fecf4c4564c"
     },
     {
       "source": "projects/uix/forge/sparks/button.md",
@@ -1406,7 +1406,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "70b735b540f3e6be5fc35395b3943c9f104d52e5a2113217a0aefa4adb7315a0",
-      "target_sha256": "69b98542651a0b0f373f59009f55d639e7857ae8a60f6589f4e88c732ab4b3e8"
+      "target_sha256": "936a3c7b37e2542b63fee708fde3ac7b32b24d76a699be6a155bd0482da0a63e"
     },
     {
       "source": "projects/uix/forge/sparks/event.md",
@@ -1441,7 +1441,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "0ca5f40e9ec6a0cda3284b56ecc5367426ee86b46077abef0008abdbc954c3b5",
-      "target_sha256": "dfb0aec6d892234af025f6848fd4e66d64054964aad09509f2b35336f6ef6a9b"
+      "target_sha256": "2f50a8cfa921ea972b10ae64943bd83c5ce820a4c9f63eb3912943ddfc8d3008"
     },
     {
       "source": "projects/uix/forge/sparks/grid.md",
@@ -1460,7 +1460,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "b5e5404045ade1cd48203b534c0c0ad4232febecea69712a499e656af736b55b",
-      "target_sha256": "ab61be759ef9943550e8c2826cb5c5cbdc816c8b57511501be828f746e0e2fe5"
+      "target_sha256": "dd2f8a4c3c37ed06efb4f9a32bb3260ba92c1b859e2527da3a8d67582867e983"
     },
     {
       "source": "projects/uix/forge/sparks/grid.md",
@@ -1495,7 +1495,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "1467c4ae719d6dba865a32d9f52ba6aa63cf92188fef79ebe5936d0b215c61b0",
-      "target_sha256": "9f1abb17f3f92fadd510547fd5bdc1de19f650352b9a74a9ed95b6afacb54ec8"
+      "target_sha256": "854034e5d139cad8ba1ca1559a5dc12f5506212cb9b12e4970aff8e98ae07f3a"
     },
     {
       "source": "projects/uix/forge/sparks/index.md",
@@ -1530,7 +1530,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "62271ffd8233ecd162da10c562fa0d57949995bbc58737edb6a9dcafa72dcea1",
-      "target_sha256": "ff4b22cae54b0c2185415d3dafd00c7ea5ba24a38e64166fcdb51c385841ef3c"
+      "target_sha256": "6c2876bd2b28a225425e4dff4ad05b207cc7e0667b21045c8b5985ec9a89b5a3"
     },
     {
       "source": "projects/uix/forge/sparks/map.md",
@@ -1552,7 +1552,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "c6efc29acf4f3f897d128f6abef0b3ef994027e4fc8ff0e1ec70c5c3b8fc0afb",
-      "target_sha256": "1532df1b3aee10093f12f4b6fb7ba4b5315e39975108267efa59e7de3af11169"
+      "target_sha256": "ccc95201f0a6313da88776c149dade6043ea7acd3a3f2906b459f0c6f6b1ab5a"
     },
     {
       "source": "projects/uix/forge/sparks/map.md",
@@ -1587,7 +1587,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "cce0f15325273964acf7136f065077db8c6ec6836ea2bf1b8f38acb56489234e",
-      "target_sha256": "d52783c96595aa03485a3f519534ac6a00903a50d81076f4e9cb31fec6b60288"
+      "target_sha256": "4ae6700828ae8cd18b8682ddf87405526db5cf6b201aadb4504a8c617c26e717"
     },
     {
       "source": "projects/uix/forge/sparks/more-info.md",
@@ -1622,7 +1622,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "0b2b4fc6206cb214b3a08d1ca17fb7426f115048af675dcca685956796133cae",
-      "target_sha256": "cae887f2114a4d20c6b36bbb22203625659b4b4ad51d821fba331f752d9fe490"
+      "target_sha256": "71ab09d3406b538ccad0210dcbb66adad79adb7390d6cb510c0a25786ab85446"
     },
     {
       "source": "projects/uix/forge/sparks/overlay-icon.md",
@@ -1657,7 +1657,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "c0e0591252960d17f3b91037fb4ad4569c7df080e253bff88937e2461adb1152",
-      "target_sha256": "1cdc31b866af416fddced980777acba62e7d5c29eb3eac90a10cfa1c314c8ac1"
+      "target_sha256": "5f4c077d5b9d6e564cb459ce2d9334d02a3529c65987252146ae1310bfd4a2bc"
     },
     {
       "source": "projects/uix/forge/sparks/search.md",
@@ -1692,7 +1692,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "af68cd350506a6f839146c78406c2216785b94b843db6aa3e5c9338340b8ff27",
-      "target_sha256": "b2310dd83e3ce8cffdbb43c6478db1d892e8da1b73e74172060affd95cc5d7f2"
+      "target_sha256": "69166db0fc01b818d26b291c8fcbe28b34fa0f925d19885cad1b1f3cf76f5ac6"
     },
     {
       "source": "projects/uix/forge/sparks/state-badge.md",
@@ -1727,7 +1727,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "ed66cdd6755a3386fab8a484e8cded4932dec63a17be44b232acf537abe748d7",
-      "target_sha256": "b26f8adb625f27b4abd7d989614730fd7b3bfcdce2ca26df80cf64711fcd632c"
+      "target_sha256": "c2ddbf8879e0137478db49a71ea50a1ac696ca68b8e30e0dc0bc51ba91338650"
     },
     {
       "source": "projects/uix/forge/sparks/tile-icon.md",
@@ -1746,7 +1746,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "e82d57478d2f53d47b4871823f655c1d65f2053553c6a1768eb2ecd0dca8fb88",
-      "target_sha256": "eb6c087f6bf52d78892751c38db84a04283c2ebe113fd42f0a5a91f7f63167d8"
+      "target_sha256": "7208b2b7cf3c3b6c616bbe6a1d7dfeca79504a2590813d1a5518b1a8c75cc7f5"
     },
     {
       "source": "projects/uix/forge/sparks/tile-icon.md",
@@ -1785,7 +1785,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "7fb3d8c99dc27b8ff61aa552204421e675fcda366b44eb51c17cbd7b202653d7",
-      "target_sha256": "01728533acbb04c850e1fa4ff564f4553c8535e35dee34874bcbda6d1c7f1071"
+      "target_sha256": "28ccc64b0233e8d3e179d5982bae2dd2c29c5f15a4b18f579b57a5b030bf8f7b"
     },
     {
       "source": "projects/uix/forge/sparks/tooltip.md",
@@ -1825,7 +1825,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "38a2002d47e11b3eacb743d145066017d79a99ea3df53107ce28aae62f11e203",
-      "target_sha256": "7061ce93cd8b3424bca5c1682b58dea70f8615d39cc33c27ca74e11b78318c20"
+      "target_sha256": "9b9b1912fa1d13bb6410cf1b212b12c4f462c1aced9d586ab6254062039778ff"
     },
     {
       "source": "projects/uix/index.md",
@@ -1843,8 +1843,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
-      "source_sha256": "a062349ecdea8a4436fe9b32ce16dbc8db2beb30dfe20f6e539f6c625327bac3",
-      "target_sha256": "642456d4ae1c9afe1fe5d8d98ed4f7ab935de5187fac677d179ca90fa18144d5"
+      "source_sha256": "fbdff3105ad80c2c20dd5f8095c79b8473257f7578877a9cd6997e861852b7d9",
+      "target_sha256": "f68d8126d511552e313e84b70a5374c1c08a04ccbe07c388ca1e592da75180ee"
     },
     {
       "source": "projects/uix/license.md",
@@ -1863,7 +1863,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "da26aad59d0459325ead36313a4aa25d6d36dea6575997eae64d84debae79929",
-      "target_sha256": "d3cebb441a9cdc05cbd750d78ba45b3c4651ee4c3576c8f71c0a231b7dcffbb8"
+      "target_sha256": "60a68386cbd607b95729aad1514cac0becad01ceb05858a7782b7240e0553e57"
     },
     {
       "source": "projects/uix/quick-start.md",
@@ -1883,7 +1883,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "1d57f23208ee9083b243e3030bd56cc9a3bb386bef82aa1b53eb6bb2aab68ab1",
-      "target_sha256": "a9913c33c0cb8da0477d4d5c70a705dfa90c49dcea57ddd6cd0d6cc13762c0e8"
+      "target_sha256": "53c894b0667bffd6b833395e956664a24c38fed2a3203d01e7de2e932b942ea0"
     },
     {
       "source": "projects/uix/quick-start.md",
@@ -1925,8 +1925,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Locale-specific review history, not a product reference. German historical version lists and local publication details differ; current canonical revision and full public review records are linked.",
-      "source_sha256": "7444a1fb5c26f7fe7a272c37aef4ed42eb3acdb13ae712f7c7f93c391e3b63ff",
-      "target_sha256": "4a3c4c7c2f3ffd6394249edf873c43a854cf9fcfede3fb261562259b7b591232"
+      "source_sha256": "cabfca2c16dd31675ed3a78aa728e26e80c600f89f45b2da6c1e4ee2510c5477",
+      "target_sha256": "1dcffa7fa136051e32de1e9975999d24d88fc6b11d54f7344780c2a7efb2f5d9"
     },
     {
       "source": "projects/uix/translation-status.md",
@@ -1945,8 +1945,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Locale-specific review history, not a product reference. German historical version lists and local publication details differ; current canonical revision and full public review records are linked.",
-      "source_sha256": "7444a1fb5c26f7fe7a272c37aef4ed42eb3acdb13ae712f7c7f93c391e3b63ff",
-      "target_sha256": "648cd12dc0782a0c5c3d6a8d11fc9128226c389729f3b34d8956d0c038935527"
+      "source_sha256": "cabfca2c16dd31675ed3a78aa728e26e80c600f89f45b2da6c1e4ee2510c5477",
+      "target_sha256": "67c25c10baccf4df3e6177df43997a75d3b9bd758c3973762e7322298d83e4cf"
     },
     {
       "source": "projects/uix/using/apps.md",
@@ -1964,7 +1964,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "32750c39efe61747d19fc28270297ef716a7cacd1df67de0764f9cbe87e090b9",
-      "target_sha256": "5157a37b799cf82a66859cff29f3ffd013b0466ee24107663b55cc9e2e18ddd1"
+      "target_sha256": "4b440150e2dc7cca095dfbc4f183d587cec7584289ba912ef008aa4899a19d3c"
     },
     {
       "source": "projects/uix/using/cards.md",
@@ -1983,7 +1983,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "06986eb53e48ffc51cfc3538d1a8d76169a0c3955fcfd0f2e3597c7893004c72",
-      "target_sha256": "ec380f55008bcd07a17d4548c766778355640ec8a23644cb917b2248b89ce800"
+      "target_sha256": "2c974afdd02fe0f50a86d8e076f95a19ab1182e937e80b0850ef75b77dabf776"
     },
     {
       "source": "projects/uix/using/cards.md",
@@ -2018,7 +2018,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "9bd988d8a26d6c7f79939e15e5dd37af4a68a2b629f0b0662f6d710976491a15",
-      "target_sha256": "ad572c2c39687d6a17643a98aa68139c7ffb47da964a6abd85c49a32647a5a6a"
+      "target_sha256": "12d1f83a92d60beda44fa513a89c48ad9c9291b3227d5b210b434992f4845680"
     },
     {
       "source": "projects/uix/using/entities.md",
@@ -2037,7 +2037,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "e0cb8eac6f5361ac55ef831691320d5f28f6487bb4c331c3246f9d226c598924",
-      "target_sha256": "137a6eeeb52d42441558431f1e1974dde12e314a41b91a1d10ba4a42d9ff8de0"
+      "target_sha256": "d6cc5725194831ba3bc34f3c5df42a3756c48f5fdbd4bbc314eceb52ec2128eb"
     },
     {
       "source": "projects/uix/using/icons.md",
@@ -2056,7 +2056,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "f3e4eaadb7f457ca92072992c5f42b3fba12e0313c1b3b91282569bd40088f3f",
-      "target_sha256": "54770cd4d18809e96870bd0cdd63ad06263778f1911756d3dff0ffe4edf79f38"
+      "target_sha256": "7e318c2b33893fc07fd09a3cd51ba0cf0a093ca3edb165818063580df65232a7"
     },
     {
       "source": "projects/uix/using/images.md",
@@ -2075,7 +2075,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "4e52f829877d9d4de105d4ddae4b1251a784c85468c92cb04a1b39931f21e187",
-      "target_sha256": "f9c5f06b4717ad06ce4463b2f869e41f57c6c30a8b85321748dc36774f48ba8b"
+      "target_sha256": "816ba19acbf991d7a43fe5fb9ed137d6350c0225188bfacf017ee691db94f9fb"
     },
     {
       "source": "projects/uix/using/index.md",
@@ -2093,8 +2093,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
-      "source_sha256": "8da5e47a10bf5606ccde757ef36db73960c6e317a3abe4d3fdeb0d5f82895fda",
-      "target_sha256": "e5c181d34804e20691cea7ed7801e6b24c1897437808a542b7136a8c7f625dc8"
+      "source_sha256": "3574bdf12c49b1f9e69f0df7f5f98dfad8737876d813c7ccc6e1f75eabf926a4",
+      "target_sha256": "a9b304541bee2256190fc357daee669723470911c0a18adccd216762211078eb"
     },
     {
       "source": "projects/uix/using/index.md",
@@ -2109,8 +2109,8 @@
       },
       "disposition": "supplemented",
       "reason": "Added 1 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed.",
-      "source_sha256": "8da5e47a10bf5606ccde757ef36db73960c6e317a3abe4d3fdeb0d5f82895fda",
-      "target_sha256": "119b28c69956efb04a9057234817198a3742fdb70fce4b73fe40ad92c204206f"
+      "source_sha256": "3574bdf12c49b1f9e69f0df7f5f98dfad8737876d813c7ccc6e1f75eabf926a4",
+      "target_sha256": "67711072154c737b0494d43f79d41e32bb784a0d706ca29f0a44a6ba4e294fcb"
     },
     {
       "source": "projects/uix/using/other.md",
@@ -2129,7 +2129,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "af08e3003342179b6ec3cdd6c80baee8ae79affaac37667fcb3cdd6aaf12fb66",
-      "target_sha256": "0520f39677c1b5da6304d7ab89a02f8b0a6ef0ed113ab1fa392e31f2bf2e0114"
+      "target_sha256": "2d5333b2b86a5d13a396e8b4cfc8a7890d32d93e5e0f26fca0dc09861f23f2bd"
     },
     {
       "source": "projects/uix/using/section-backgrounds.md",
@@ -2148,7 +2148,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "f369ae8571c9a477b9010d341da49db68201b55b7bb56ef4b2aa45ac1ccd7aad",
-      "target_sha256": "573b59dcf253305c036a6777821663f0372565a4e780a2c6e5b167d5c34fde4e"
+      "target_sha256": "8acf1f8cf4cb35dc424d140159d797e35c7e3d5bb3e4c09757c986b0c2303cd0"
     },
     {
       "source": "projects/uix/using/templates.md",
@@ -2167,7 +2167,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "1eec82d66b1d4b1ee3854c4ba465a907da7b9b5b522622dc96a6d909f13efec8",
-      "target_sha256": "7bafbc74568e9444cc0128e3dc534efb8ee9df2f4a0484c47d87bce501f5dd1d"
+      "target_sha256": "37a1450a77fb848e5764fa10e0c63a7bae13d1b771580c81e889de34864a6c8d"
     },
     {
       "source": "projects/uix/using/themes.md",
@@ -2186,7 +2186,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "0aa36c5fd0b58096b824c70c3e9ea03b2f2861717bd64df0506367833861ca62",
-      "target_sha256": "c281684bd22e782724b7f30900c7c12760d385a2a8aad873a0cf258e84c83981"
+      "target_sha256": "fe2b8a9ccb0721ac8641b263e9b50e287e473bc6c9e62a71d47b75de06a4542f"
     },
     {
       "source": "projects/uix/using/themes.md",
@@ -2221,7 +2221,7 @@
       "disposition": "intentional-difference",
       "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately.",
       "source_sha256": "d7db8bba24528f96502dbda3467f4002c89fd2c699383c7b1cb12fc7789b682c",
-      "target_sha256": "fb25db599835a14187bf6c005efda1d6a170051540c04d8ffedfba19c05b35ee"
+      "target_sha256": "109c825d0e113c008218d4d852ad91687d2957afc19ecf87d6fff914e4943c31"
     },
     {
       "source": "sammlung/ha-apps.md",
@@ -2318,6 +2318,88 @@
       "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained.",
       "source_sha256": "5067d29e4d38f4689ec3fe657b9f3075811fddfba8115e008e524dbdcfe5ed55",
       "target_sha256": "215f397ac927e29c9866b4a83c8a20d5645b4932b6671ca962c05b9ce5b2e123"
+    }
+  ],
+  "incremental_reviews": [
+    {
+      "reviewed_at": "2026-10-31",
+      "scope": "UIX canonical dev e6fb84d / 9.0.0-beta.6: changed source notices, landing pages, Forge conversion, historical broker YAML examples and complete custom sidebar page. Stable 8.4.0 unchanged.",
+      "paths": [
+        "en/projects/uix/broker/broker.md",
+        "en/projects/uix/broker/directives.md",
+        "en/projects/uix/broker/examples.md",
+        "en/projects/uix/broker/index.md",
+        "en/projects/uix/broker/interaction-anchors.md",
+        "en/projects/uix/broker/realms.md",
+        "en/projects/uix/broker/rules.md",
+        "en/projects/uix/concepts/application.md",
+        "en/projects/uix/concepts/dom.md",
+        "en/projects/uix/concepts/index.md",
+        "en/projects/uix/contributing.md",
+        "en/projects/uix/debugging/cache.md",
+        "en/projects/uix/debugging/cards.md",
+        "en/projects/uix/debugging/index.md",
+        "en/projects/uix/debugging/templates.md",
+        "en/projects/uix/developers/cards.md",
+        "en/projects/uix/developers/index.md",
+        "en/projects/uix/developers/themes.md",
+        "en/projects/uix/extras/always-patch-ha-card.md",
+        "en/projects/uix/extras/dialog-styling-delay.md",
+        "en/projects/uix/extras/disable-entity-picture-image-override.md",
+        "en/projects/uix/extras/disable-icon-styling.md",
+        "en/projects/uix/extras/frontend-states-throttling.md",
+        "en/projects/uix/extras/hash-template-variable-updates.md",
+        "en/projects/uix/extras/index.md",
+        "en/projects/uix/extras/style-frame-panels.md",
+        "en/projects/uix/extras/uix-actions.md",
+        "en/projects/uix/faq.md",
+        "en/projects/uix/forge/forge.md",
+        "en/projects/uix/forge/foundries.md",
+        "en/projects/uix/forge/index.md",
+        "en/projects/uix/forge/sparks/attribute.md",
+        "en/projects/uix/forge/sparks/background.md",
+        "en/projects/uix/forge/sparks/badge.md",
+        "en/projects/uix/forge/sparks/button.md",
+        "en/projects/uix/forge/sparks/event.md",
+        "en/projects/uix/forge/sparks/form.md",
+        "en/projects/uix/forge/sparks/grid.md",
+        "en/projects/uix/forge/sparks/index.md",
+        "en/projects/uix/forge/sparks/lock.md",
+        "en/projects/uix/forge/sparks/map.md",
+        "en/projects/uix/forge/sparks/more-info.md",
+        "en/projects/uix/forge/sparks/overlay-icon.md",
+        "en/projects/uix/forge/sparks/search.md",
+        "en/projects/uix/forge/sparks/state-badge.md",
+        "en/projects/uix/forge/sparks/theme.md",
+        "en/projects/uix/forge/sparks/tile-icon.md",
+        "en/projects/uix/forge/sparks/tooltip.md",
+        "en/projects/uix/guides.md",
+        "en/projects/uix/index.md",
+        "en/projects/uix/license.md",
+        "en/projects/uix/quick-start.md",
+        "en/projects/uix/translation-status.md",
+        "en/projects/uix/using/apps.md",
+        "en/projects/uix/using/cards.md",
+        "en/projects/uix/using/custom-panels.md",
+        "en/projects/uix/using/entities.md",
+        "en/projects/uix/using/icons.md",
+        "en/projects/uix/using/images.md",
+        "en/projects/uix/using/index.md",
+        "en/projects/uix/using/other.md",
+        "en/projects/uix/using/section-backgrounds.md",
+        "en/projects/uix/using/templates.md",
+        "en/projects/uix/using/themes.md",
+        "en/projects/uix/using/view-backgrounds.md",
+        "fr/projects/uix/broker/examples.md",
+        "fr/projects/uix/forge/forge.md",
+        "fr/projects/uix/translation-status.md",
+        "fr/projects/uix/using/index.md",
+        "projects/uix/broker/examples.md",
+        "projects/uix/forge/forge.md",
+        "projects/uix/index.md",
+        "projects/uix/translation-status.md",
+        "projects/uix/using/index.md"
+      ]
     }
   ]
 }

@@ -4,6 +4,18 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Abgleich vom 31.10.2026: 65 Quellseiten, Vorschau 9.0.0-beta.6
+
+Die gemeldeten Revisionen [`964f440`](https://github.com/Lint-Free-Technology/uix/commit/964f4402b6f263a5deac53327b825a85cb3e3e72), [`e6fb84d`](https://github.com/Lint-Free-Technology/uix/commit/e6fb84dd715ea4bac9a330357705897ea8d44690) und [`25aec39`](https://github.com/Lint-Free-Technology/uix/commit/25aec397f873e566c2ead0201d819595854405ab) wurden gegen den zuvor geprüften Stand verglichen. Der vollständige neue Quellbaum umfasst **65** Markdown-Seiten; EN wurde synchronisiert, DE/FR wurden für die tatsächlichen Änderungen ergänzt.
+
+- Neue vollständige Seite zu [eigenen Seitenleisten-Verknüpfungen](./using/custom-sidebar-panels), ausdrücklich **ab 9.0.0-beta.6**: Einrichtung, Admin-Option, interne Ziele, feste URL, Bearbeiten/Löschen, Benutzerreihenfolge und Browserverlauf.
+- Neue Seite in Themenübersicht und Seitennavigation aufgenommen. Forge-Migration benennt die Aktion **Convert to visual editor**; ausschließlich `element.type` wird nach `element_base.type` verschoben.
+- Das Original entfernt außerdem die Beispiele zum erzwungenen YAML-Modus im Automationseditor. DE/FR bewahren sie in einem deutlich als historisch markierten, eingeklappten Abschnitt für bestehende Links auf.
+- Startseiten, Footer, Prüfmanifeste und `llms.txt` nennen den aktuellen Prüfstand. **Stabile Basis bleibt 8.4.0** (Release vom 07.10.2026, Revision `71b8ccd`), Mindestversion **Home Assistant 2026.10.0**. **9.0.0-beta.6** und Revision **e6fb84d** sind der getrennte Vorschau-Dokumentationsstand, kein neuer stabiler Release.
+- Bereits geprüfte redaktionelle Cache-Korrekturen bleiben erhalten. Historische Abschnitte und Hinweise auf die Einführung einzelner Funktionen behalten ihre damaligen Versionsnummern.
+
+Backup vor Änderungen vorhanden. Prüfung umfasst Quellenvergleich, vollständige Pfadabdeckung, technische Kennungen, Dokumentationsbuild und lokale Links/Sprachverweise; keine erneute Übersetzung unveränderter Seiten und kein HA-Laufzeittest.
+
 ## Inhaltsabgleich vom 27.10.2026
 
 Die verbliebenen Hinweise des vollständigen DE/EN/FR-Inventars sind [einzeln bewertet](/documentation-review.json). Die kanonische englische Vorschau bleibt erhalten. Zwei widersprüchliche Cache-Absätze wurden anhand der Implementierung berichtigt: `clear-cache` erhält `localStorage` und die Browser-Mod-Kennung. Die Prüfsummen der angepassten englischen Seiten sind mit dieser redaktionellen Korrektur fortgeschrieben; kanonische Quellen und Codebeispiele bleiben unverändert.

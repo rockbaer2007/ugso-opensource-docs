@@ -65,6 +65,12 @@ uix_broker:
 Enregistrez le YAML en tant que nouveau fichier dans votre répertoire ou sous-répertoire de configuration Home Assistant, puis enregistrez-le à l'aide du flux de configuration des options UIX.
 
 :::
+::: warning Exemples historiques retirés de la documentation originale actuelle
+Les exemples suivants qui imposent le mode YAML ont été retirés de la source anglaise entre les révisions `dev` examinées 26e54e6 et e6fb84d. Ils sont conservés uniquement pour les anciens liens et ne constituent pas une recommandation actuelle.
+:::
+
+::: details Afficher les exemples historiques du mode YAML
+
 ## Barre latérale d'automatisation et mode YAML
 
 ### Ouvrez la barre latérale de l'éditeur d'automatisation en mode YAML par défaut
@@ -232,6 +238,8 @@ uix_broker:
 ```
 
 :::
+:::
+
 ## Prioriser les déclencheurs d'entité lors de l'ajout d'un élément d'éditeur d'automatisation
 
 Résultat :

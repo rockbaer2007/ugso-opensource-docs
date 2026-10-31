@@ -15,6 +15,7 @@ UIX Styling erlaubt CSS-Anpassungen an fast allen sichtbaren Elementen der Home-
 - :white_square_button: [Abschnittshintergründe](./section-backgrounds)
 - :film_frames: [Ansichtshintergründe mit Kamera, Video oder Bild](./view-backgrounds)
 - :abacus: [Custom Panels stylen](./custom-panels)
+- [Eigene Seitenleisten-Verknüpfungen (ab 9.0.0-beta.6)](./custom-sidebar-panels)
 - :material-application-cog: [App- und Ingress-Panels stylen](./apps)
 - :clipboard: [Templates](./templates)
 - :art: [Themes](./themes)

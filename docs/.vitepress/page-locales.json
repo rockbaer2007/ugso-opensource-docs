@@ -2459,6 +2459,21 @@
     "EN": "/en/projects/uix/using/custom-panels",
     "FR": "/fr/projects/uix/using/custom-panels"
   },
+  "/projects/uix/using/custom-sidebar-panels": {
+    "DE": "/projects/uix/using/custom-sidebar-panels",
+    "EN": "/en/projects/uix/using/custom-sidebar-panels",
+    "FR": "/fr/projects/uix/using/custom-sidebar-panels"
+  },
+  "/en/projects/uix/using/custom-sidebar-panels": {
+    "DE": "/projects/uix/using/custom-sidebar-panels",
+    "EN": "/en/projects/uix/using/custom-sidebar-panels",
+    "FR": "/fr/projects/uix/using/custom-sidebar-panels"
+  },
+  "/fr/projects/uix/using/custom-sidebar-panels": {
+    "DE": "/projects/uix/using/custom-sidebar-panels",
+    "EN": "/en/projects/uix/using/custom-sidebar-panels",
+    "FR": "/fr/projects/uix/using/custom-sidebar-panels"
+  },
   "/projects/uix/using/entities": {
     "DE": "/projects/uix/using/entities",
     "EN": "/en/projects/uix/using/entities",

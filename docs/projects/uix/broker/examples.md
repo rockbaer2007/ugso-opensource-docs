@@ -66,6 +66,12 @@ uix_broker:
 Speichere das YAML als neue Datei im Home-Assistant-Konfigurationsverzeichnis oder einem Unterordner und registriere sie über den UIX-Optionsdialog.
 :::
 
+::: warning Historische Beispiele, nicht mehr Teil der aktuellen Originaldoku
+Die folgenden Beispiele zum erzwungenen YAML-Modus wurden zwischen den geprüften `dev`-Ständen 26e54e6 und e6fb84d aus der englischen Originaldoku entfernt. Sie bleiben hier ausschließlich zur Zuordnung älterer Links erhalten und sind keine aktuelle Empfehlung.
+:::
+
+::: details Historische YAML-Modus-Beispiele anzeigen
+
 ## Automation Sidebar und YAML-Modus
 
 ### Automation-Editor-Sidebar standardmäßig im YAML-Modus öffnen
@@ -178,6 +184,8 @@ uix_broker:
       - type: property
         clear: uixBlockAutoYamlMode
 ```
+
+:::
 
 :::
 

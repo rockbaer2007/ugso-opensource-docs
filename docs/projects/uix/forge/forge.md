@@ -43,7 +43,7 @@ Dieser Reiter bearbeitet die Überlagerung `element`; die native Basis bleibt in
 
 **Convert to object mapping** beginnt nach Bestätigung eine leere Objektzuordnung. **Set to null** löscht den entsprechenden Basiswert ausdrücklich. Für „Basiswert verwenden“ stattdessen **Disable** oder **Remove** wählen. Eine leere Zeichenkette ist ein eigener Ersatzwert und weder `null` noch Entfernen. Deaktivieren erhält die Quelle in `element` und speichert den Pfad in `element_disabled_paths`. Ein deaktivierter Elternpfad unterdrückt den Teilbaum und bewahrt die gespeicherten Kinderzustände. Arrays und strukturerzeugende Templates werden als ganze Ersatzwerte bearbeitet.
 
-Bei vorhandener Basis ist der oberste `type` kein Templatefeld. Aktivieren/Deaktivieren erfordert eine native Elementauswahl; gültige geerbte deaktivierte Pfade bleiben erhalten. Die Konvertierung bestehender direkter Karten-/Badge-Forges verschiebt nur `element.type` nach `element_base.type`.
+Bei vorhandener Basis ist der oberste `type` kein Templatefeld. Aktivieren/Deaktivieren erfordert eine native Elementauswahl; gültige geerbte deaktivierte Pfade bleiben erhalten. Bestehende direkte Karten-/Badge-Forges bieten **Convert to visual editor**. Diese Migration verschiebt ausschließlich `element.type` nach `element_base.type`; alle anderen Quellwerte bleiben für die Darstellung durch Forge erhalten.
 
 ### Foundry
 

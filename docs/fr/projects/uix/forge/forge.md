@@ -47,7 +47,7 @@ Cet onglet modifie la surcouche `element` ; la base native reste dans `element_b
 
 **Convert to object mapping** crée un objet vide après confirmation. **Set to null** efface explicitement la valeur de base correspondante. Pour utiliser la base, choisir **Disable** ou **Remove**. Une chaîne vide constitue un remplacement distinct de `null` et de la suppression. Désactiver garde la source dans `element` et son chemin dans `element_disabled_paths`. Un parent désactivé masque son sous-arbre en conservant les états enregistrés des enfants. Les tableaux et modèles structurels sont modifiés comme des remplacements complets.
 
-En présence d’une base, son `type` racine n’est pas un champ de modèle. Activer/désactiver exige une sélection native ; les chemins désactivés hérités valides restent conservés. Convertir une Forge directe de carte/badge déplace uniquement `element.type` vers `element_base.type`.
+En présence d’une base, son `type` racine n’est pas un champ de modèle. Activer/désactiver exige une sélection native ; les chemins désactivés hérités valides restent conservés. Les Forges directes de carte ou de badge proposent **Convert to visual editor**. Cette migration déplace uniquement `element.type` vers `element_base.type` ; toutes les autres valeurs sources restent disponibles pour le rendu de Forge.
 
 ### Foundry
 

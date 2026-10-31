@@ -4,6 +4,18 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Revue du 31 octobre 2026 : 65 pages sources, aperçu 9.0.0-beta.6
+
+Les révisions signalées [`964f440`](https://github.com/Lint-Free-Technology/uix/commit/964f4402b6f263a5deac53327b825a85cb3e3e72), [`e6fb84d`](https://github.com/Lint-Free-Technology/uix/commit/e6fb84dd715ea4bac9a330357705897ea8d44690) et [`25aec39`](https://github.com/Lint-Free-Technology/uix/commit/25aec397f873e566c2ead0201d819595854405ab) ont été comparées au précédent état vérifié. Le nouvel arbre source comprend **65** pages Markdown ; EN a été synchronisé et DE/FR ont été complétées pour les changements effectifs.
+
+- Nouvelle page complète sur les [raccourcis de barre latérale](./using/custom-sidebar-panels), disponibles **à partir de 9.0.0-beta.6** : configuration, option administrateur, destinations internes, URL stable, modification/suppression, ordre individuel et historique du navigateur.
+- Liens ajoutés à l’index et à la navigation. La migration Forge nomme **Convert to visual editor** et ne déplace que `element.type` vers `element_base.type`.
+- La source a aussi retiré les exemples imposant le mode YAML dans l’éditeur d’automatisations. DE/FR les conservent dans une section repliée clairement historique pour préserver les anciens liens.
+- Accueils, pied de page, relevés de vérification et `llms.txt` indiquent le nouvel état. **Base stable inchangée : 8.4.0**, publiée le 7 octobre 2026, révision `71b8ccd`, **Home Assistant 2026.10.0 minimum**. **9.0.0-beta.6 / e6fb84d** désigne séparément l’aperçu documentaire, pas une nouvelle version stable.
+- Les corrections rédactionnelles du cache restent conservées. Les sections historiques et versions d’introduction gardent leurs anciens numéros.
+
+Sauvegarde effectuée avant modification. Vérification des sources, de la couverture des chemins, des identifiants techniques, de la compilation et des liens/langues ; pas de nouvelle traduction des pages inchangées ni de test d’exécution Home Assistant.
+
 ## Revue du contenu du 27 octobre 2026
 
 Les points restants de l’inventaire DE/EN/FR ont reçu une [évaluation individuelle](/documentation-review.json). L’aperçu anglais canonique est conservé. Deux paragraphes contradictoires sur le cache ont été corrigés d’après l’implémentation : `clear-cache` conserve `localStorage` et l’identifiant Browser Mod. Le relevé des sources et du code indique explicitement ces corrections rédactionnelles.

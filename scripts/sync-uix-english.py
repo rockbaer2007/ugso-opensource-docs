@@ -15,7 +15,9 @@ import sys
 import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
-REVISION = '26e54e6d4973231a393933e6479ed1b03cc86cd3'
+REVISION = 'e6fb84dd715ea4bac9a330357705897ea8d44690'
+REVIEWED_AT = '2026-10-31'
+PREVIEW_VERSION = '9.0.0-beta.6'
 
 
 def code_hashes(text):
@@ -84,14 +86,14 @@ def convert(text, relative, source_files):
     }
     for heading,anchor in aliases.get(relative.as_posix(),{}).items():
         text=re.sub(r'(?m)^(#{2,6} '+re.escape(heading)+r'[^\n]*)$',lambda m:'<a id="'+anchor+'"></a>\n'+m[1],text)
-    notice = '\n> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.2**, revision ['+REVISION[:7]+'](https://github.com/Lint-Free-Technology/uix/commit/'+REVISION+'), reviewed 22 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.\n\n'
+    notice = '\n> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **'+PREVIEW_VERSION+'**, revision ['+REVISION[:7]+'](https://github.com/Lint-Free-Technology/uix/commit/'+REVISION+'), reviewed 31 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.\n\n'
     if text.startswith('---\n'):
         end=text.index('\n---',4)+4
         text=text[:end]+'\n'+notice+text[end:].lstrip('\n')
     else:
         text=notice.lstrip('\n')+text
     if relative.as_posix() in {'forge/forge.md','forge/index.md','forge/foundries.md'}:
-        text=text.replace(notice, notice+'::: info UIX 9.0.0-beta.2 preview\nThis Forge content follows the reviewed `dev` revision, separate from the stable 8.4.0 baseline.\n:::\n\n')
+        text=text.replace(notice, notice+'::: info UIX '+PREVIEW_VERSION+' preview\nThis Forge content follows the reviewed `dev` revision, separate from the stable 8.4.0 baseline. Individual feature notices identify their introduction version.\n:::\n\n')
     return '\n'.join(line.rstrip() for line in text.splitlines()).rstrip()+'\n'
 
 
@@ -100,6 +102,12 @@ def main():
     if not (source/'forge/forge.md').is_file():
         raise SystemExit('Expected an archived canonical docs/source directory')
     destination=ROOT/'docs/en/projects/uix'
+    record_path=ROOT/'docs/public/projects/uix/canonical-review.json'
+    previous=json.loads(record_path.read_text(encoding='utf-8'))
+    # Preserve reviewed editorial clarifications only while their canonical source
+    # is byte-identical. Upstream changes require a fresh manual review.
+    corrections=previous.get('editorial_corrections', {})
+    corrected={entry['path']: entry for entry in previous['pages'] if entry['path'] in corrections.get('paths', [])}
     manifest=[]
     source_files={file.relative_to(source).as_posix() for file in source.rglob('*.md')}
     for file in sorted(source.rglob('*.md')):
@@ -108,6 +116,15 @@ def main():
         target.parent.mkdir(parents=True,exist_ok=True)
         raw=file.read_bytes()
         converted=convert(raw.decode('utf-8'),relative,source_files)
+        if relative.as_posix() in corrected:
+            entry=corrected[relative.as_posix()]
+            equivalent_sources={hashlib.sha256(value).hexdigest() for value in
+                                (raw, raw.replace(b'\r\n',b'\n'), raw.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n'))}
+            assert entry['sha256'] in equivalent_sources, f'Editorial correction needs review: {relative}'
+            existing=target.read_text(encoding='utf-8')
+            assert hashlib.sha256(existing.encode()).hexdigest()==entry['english_sha256'], f'Editorial page changed: {relative}'
+            converted=re.sub(r'(?m)^> Adapted from the canonical English UIX documentation.*$',
+                             lambda _: next(line for line in converted.splitlines() if line.startswith('> Adapted from')), existing)
         target.write_text(converted,encoding='utf-8')
         original_code=code_hashes(raw.decode('utf-8'))
         assert code_hashes(converted)==original_code, f'Code changed: {relative}'
@@ -119,7 +136,7 @@ def main():
             if not target.exists():
                 target.parent.mkdir(parents=True,exist_ok=True)
                 shutil.copyfile(file,target)
-    (ROOT/'docs/public/projects/uix/canonical-review.json').write_text(json.dumps({'revision':REVISION,'reviewed_at':'2026-10-22','pages':manifest},indent=2)+'\n',encoding='utf-8')
+    record_path.write_text(json.dumps({'revision':REVISION,'reviewed_at':REVIEWED_AT,'pages':manifest,'editorial_corrections':corrections},indent=2)+'\n',encoding='utf-8')
     print(f'Adapted {len(manifest)} canonical English pages; source hashes recorded.')
 
 

@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 229 | 0 | 0 | 0 |
-| EN | 229 | 0 | 0 | 0 |
-| FR | 229 | 0 | 0 | 0 |
+| DE | 230 | 0 | 0 | 0 |
+| EN | 230 | 0 | 0 | 0 |
+| FR | 230 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -199,6 +199,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/uix/using/apps.md](/projects/uix/using/apps) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/apps) | [Inhalt vorhanden](/fr/projects/uix/using/apps) |
 | [projects/uix/using/cards.md](/projects/uix/using/cards) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/cards) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/using/cards) |
 | [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/custom-panels) | [Inhalt vorhanden](/fr/projects/uix/using/custom-panels) |
+| [projects/uix/using/custom-sidebar-panels.md](/projects/uix/using/custom-sidebar-panels) | [Inhalt vorhanden](/en/projects/uix/using/custom-sidebar-panels) | [Inhalt vorhanden](/fr/projects/uix/using/custom-sidebar-panels) |
 | [projects/uix/using/entities.md](/projects/uix/using/entities) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/entities) | [Inhalt vorhanden](/fr/projects/uix/using/entities) |
 | [projects/uix/using/icons.md](/projects/uix/using/icons) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/icons) | [Inhalt vorhanden](/fr/projects/uix/using/icons) |
 | [projects/uix/using/images.md](/projects/uix/using/images) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/images) | [Inhalt vorhanden](/fr/projects/uix/using/images) |

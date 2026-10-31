@@ -6,6 +6,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 import hashlib
 import json
 import sys
+from datetime import date
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +25,7 @@ class Page(HTMLParser):
         self.links = []
         self.code = []
         self.images = []
+        self.text = []
         self.in_pre = False
         self.feed(text)
 
@@ -45,6 +47,7 @@ class Page(HTMLParser):
             self.in_pre = False
 
     def handle_data(self, data):
+        self.text.append(data)
         if self.in_pre:
             self.code.append(data)
 
@@ -92,8 +95,8 @@ def main():
                 errors.append(f"Wrong self-canonical: {url}")
 
     manifest = json.loads((ROOT / "docs/public/projects/uix/canonical-review.json").read_text(encoding="utf-8"))
-    if len(manifest["pages"]) != 64:
-        errors.append("Canonical review does not cover all 64 source pages")
+    if len(manifest["pages"]) != 65:
+        errors.append("Canonical review does not cover all 65 source pages")
     for entry in manifest["pages"]:
         for prefix in ("projects/uix", "en/projects/uix", "fr/projects/uix"):
             if not (ROOT / "docs" / prefix / entry["path"]).is_file():
@@ -122,6 +125,14 @@ def main():
                     errors.append(f'Wrong hreflang={language}: {url}')
         if release not in page.hrefs or revision not in page.hrefs:
             errors.append(f"Version footer does not match release metadata: {url}")
+        visible_text = ''.join(page.text)
+        if metadata['preview_version'] not in visible_text or metadata['preview_source_revision'][:7] not in visible_text:
+            errors.append(f"Preview version/revision missing from page/footer: {url}")
+        reviewed = date.fromisoformat(metadata['reviewed_at'])
+        review_dates = (reviewed.strftime('%d %B %Y').lstrip('0'),
+                        reviewed.strftime('%d/%m/%Y'), reviewed.strftime('%d.%m.%Y'))
+        if not any(date in visible_text for date in review_dates):
+            errors.append(f"Current review date missing from page/footer: {url}")
         if any(entity in "".join(page.code) for entity in ("&#123;", "&#125;")):
             errors.append(f"Escaped Jinja delimiters in copyable code: {url}")
         for src in page.images:
