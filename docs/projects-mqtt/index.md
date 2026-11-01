@@ -14,6 +14,12 @@ Das gemeinsame Repository ist die zentrale Veröffentlichung für alle Home-Assi
 
 Diese Projekte liegen im selben Repository wie die folgenden MQTT-Apps.
 
+## Weitere Frontend-Erweiterungen
+
+| Projekt | Dokumentation |
+| --- | --- |
+| <img class="package-icon" src="/images/packages/projects-sidebar-colors.svg" width="32" height="32" alt="" aria-hidden="true"> [Seitenleistenfarben](/projects/sidebar-colors/) | 0.1.0: Farben und Transparenz je Menüeintrag direkt im HA-Seitenleisten-Editor. DE/EN/FR, benutzerspezifisch synchronisiert; eigenes [GitHub-Repo](https://github.com/rockbaer2007/ha-sidebar-colors), für HACS und Marketplace. Keine Supervisor-App. |
+
 ## Gemeinsames Add-on-Repository
 
 Die MQTT-Projekte werden jetzt primär über ein gemeinsames Home-Assistant-Add-on-Repository bereitgestellt. In Home Assistant muss nur eine Repository-URL eingetragen werden; danach erscheinen die einzelnen Projekte separat im Add-on Store.

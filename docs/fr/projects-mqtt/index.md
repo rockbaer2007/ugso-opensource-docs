@@ -17,6 +17,12 @@ Ce dépôt commun constitue le point de publication central pour toutes les appl
 
 Ces projets se trouvent dans le même dépôt (repository) que les applications MQTT suivantes.
 
+## Autres extensions frontend
+
+| Projet | Documentation |
+| --- | --- |
+| <img class="package-icon" src="/images/packages/projects-sidebar-colors.svg" width="32" height="32" alt="" aria-hidden="true"> [Couleurs du menu latéral](/fr/projects/sidebar-colors/) | 0.1.0 : couleurs et opacité par entrée dans l’éditeur natif du menu HA. DE/EN/FR, synchronisées par utilisateur ; [dépôt GitHub](https://github.com/rockbaer2007/ha-sidebar-colors) distinct, pour HACS et Marketplace. Pas une application Supervisor. |
+
 ## Dépôt d'add-ons commun {#gemeinsames-add-on-repository}
 
 Les projets MQTT sont désormais principalement distribués via un dépôt d'add-ons commun pour Home Assistant. Il suffit d'ajouter une seule URL de dépôt dans Home Assistant ; les différents projets apparaîtront ensuite individuellement dans la boutique d'add-ons (Add-on Store).

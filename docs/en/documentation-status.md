@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 230 | 0 | 0 | 0 |
-| EN | 230 | 0 | 0 | 0 |
-| FR | 230 | 0 | 0 | 0 |
+| DE | 231 | 0 | 0 | 0 |
+| EN | 231 | 0 | 0 | 0 |
+| FR | 231 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -142,6 +142,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Content present](/en/projects/parcel-to-mqtt/) | [Content present](/fr/projects/parcel-to-mqtt/) |
 | [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Content present](/en/projects/parcel-to-mqtt/installation) | [Content present](/fr/projects/parcel-to-mqtt/installation) |
 | [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Content present](/en/projects/parcel-to-mqtt/configuration) | [Content present](/fr/projects/parcel-to-mqtt/configuration) |
+| [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Content present](/en/projects/sidebar-colors/) | [Content present](/fr/projects/sidebar-colors/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Content present · Difference reviewed](/en/projects/uix/broker/broker) | [Content present · Difference reviewed](/fr/projects/uix/broker/broker) |
 | [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Content present · Difference reviewed](/en/projects/uix/broker/directives) | [Content present · Difference reviewed](/fr/projects/uix/broker/directives) |
 | [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Content present · Difference reviewed](/en/projects/uix/broker/examples) | [Content present · Difference reviewed](/fr/projects/uix/broker/examples) |

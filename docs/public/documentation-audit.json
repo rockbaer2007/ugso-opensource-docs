@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 230,
+  "source_pages": 231,
   "summary": {
     "de": {
-      "content-present": 230,
-      "existing_pages": 230,
+      "content-present": 231,
+      "existing_pages": 231,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 230,
-      "existing_pages": 230,
+      "content-present": 231,
+      "existing_pages": 231,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 230,
-      "existing_pages": 230,
+      "content-present": 231,
+      "existing_pages": 231,
       "unmatched_pages": 0,
       "review_signals": 30,
       "reviewed_findings": 47,
@@ -882,9 +882,9 @@
         "de": {
           "path": "projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "b5bd044e22fc398c3e134b3346228e6b000531500b60ab9963e55e18fff9bfde",
-          "words": 594,
-          "headings": 7,
+          "sha256": "021b6bf8167c7eb4819548eddd019aeefd7e425f4070052ea230764f0ddb149f",
+          "words": 638,
+          "headings": 8,
           "examples": 1,
           "versions": [
             "0.1.0",
@@ -897,9 +897,9 @@
         "en": {
           "path": "en/projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "ed0d91042304485184f0e51300fbe804e9322949f248c5f4cd7ebffa4d1e63dc",
-          "words": 631,
-          "headings": 7,
+          "sha256": "74936c451df11ffc32f6d2eab7c2b87e5bc4161e59da18083962b949dd69cbd3",
+          "words": 680,
+          "headings": 8,
           "examples": 1,
           "versions": [
             "0.1.0",
@@ -919,9 +919,9 @@
         "fr": {
           "path": "fr/projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "1c1077d1bc064b3b15e727bd48fd9b332aee12115fbbebcec9bdc1a633a1384b",
-          "words": 813,
-          "headings": 7,
+          "sha256": "8e3971ca13b6857f2a6a53555c90b32c02c1ac5a1951628d3d04dc62d6ee246f",
+          "words": 865,
+          "headings": 8,
           "examples": 1,
           "versions": [
             "0.1.0",
@@ -7089,6 +7089,67 @@
           "headings": 2,
           "examples": 2,
           "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/sidebar-colors/index.md",
+      "locales": {
+        "de": {
+          "path": "projects/sidebar-colors/index.md",
+          "status": "content-present",
+          "sha256": "f6aa4235c56d49ddca828aeaa68fd28b24efb113d1433ec8fbf4a6bfa268b52b",
+          "words": 789,
+          "headings": 8,
+          "examples": 1,
+          "versions": [
+            "0.1.0",
+            "2026.10.3",
+            "2026.10.4"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/sidebar-colors/index.md",
+          "status": "content-present",
+          "sha256": "fc76e7abd6b385b6d255c1c35d387cc6b813a90f4a2ab1f1524e83742fd2cca1",
+          "words": 809,
+          "headings": 8,
+          "examples": 1,
+          "versions": [
+            "0.1.0",
+            "2026.10.3",
+            "2026.10.4"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/sidebar-colors/index.md",
+          "status": "content-present",
+          "sha256": "7a02d1da13f5c9b9e3b527830cfb26dd7783e79f66277ffaa337e69e6b385ebb",
+          "words": 907,
+          "headings": 8,
+          "examples": 1,
+          "versions": [
+            "0.1.0",
+            "2026.10.3",
+            "2026.10.4"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],

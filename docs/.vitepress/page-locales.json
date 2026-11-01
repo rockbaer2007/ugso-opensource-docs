@@ -1604,6 +1604,21 @@
     "EN": "/en/projects/parcel-to-mqtt/configuration",
     "FR": "/fr/projects/parcel-to-mqtt/configuration"
   },
+  "/projects/sidebar-colors/": {
+    "DE": "/projects/sidebar-colors/",
+    "EN": "/en/projects/sidebar-colors/",
+    "FR": "/fr/projects/sidebar-colors/"
+  },
+  "/en/projects/sidebar-colors/": {
+    "DE": "/projects/sidebar-colors/",
+    "EN": "/en/projects/sidebar-colors/",
+    "FR": "/fr/projects/sidebar-colors/"
+  },
+  "/fr/projects/sidebar-colors/": {
+    "DE": "/projects/sidebar-colors/",
+    "EN": "/en/projects/sidebar-colors/",
+    "FR": "/fr/projects/sidebar-colors/"
+  },
   "/projects/uix/broker/broker": {
     "DE": "/projects/uix/broker/broker",
     "EN": "/en/projects/uix/broker/broker",

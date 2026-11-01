@@ -16,9 +16,9 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 230 | 0 | 0 | 0 |
-| EN | 230 | 0 | 0 | 0 |
-| FR | 230 | 0 | 0 | 0 |
+| DE | 231 | 0 | 0 | 0 |
+| EN | 231 | 0 | 0 | 0 |
+| FR | 231 | 0 | 0 | 0 |
 
 **Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).
 
@@ -142,6 +142,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Contenu présent](/en/projects/parcel-to-mqtt/) | [Contenu présent](/fr/projects/parcel-to-mqtt/) |
 | [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Contenu présent](/en/projects/parcel-to-mqtt/installation) | [Contenu présent](/fr/projects/parcel-to-mqtt/installation) |
 | [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Contenu présent](/en/projects/parcel-to-mqtt/configuration) | [Contenu présent](/fr/projects/parcel-to-mqtt/configuration) |
+| [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Contenu présent](/en/projects/sidebar-colors/) | [Contenu présent](/fr/projects/sidebar-colors/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Contenu présent · Différence examinée](/en/projects/uix/broker/broker) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/broker) |
 | [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Contenu présent · Différence examinée](/en/projects/uix/broker/directives) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/directives) |
 | [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Contenu présent · Différence examinée](/en/projects/uix/broker/examples) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/examples) |

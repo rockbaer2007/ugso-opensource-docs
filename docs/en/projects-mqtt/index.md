@@ -14,6 +14,12 @@ The shared repository is the central publishing location for all UGSo Software H
 
 These projects live in the same repository as the MQTT apps below.
 
+## Additional frontend extensions
+
+| Project | Documentation |
+| --- | --- |
+| <img class="package-icon" src="/images/packages/projects-sidebar-colors.svg" width="32" height="32" alt="" aria-hidden="true"> [Sidebar Colors](/en/projects/sidebar-colors/) | 0.1.0: per-entry colors and opacity in the native HA sidebar editor. DE/EN/FR, synchronized per user; separate [GitHub repository](https://github.com/rockbaer2007/ha-sidebar-colors), for HACS and Marketplace. Not a Supervisor app. |
+
 ## Shared Add-on Repository
 
 The MQTT projects are now primarily provided through a shared Home Assistant add-on repository. Home Assistant only needs one repository URL; after adding it, the individual projects appear separately in the add-on store.
