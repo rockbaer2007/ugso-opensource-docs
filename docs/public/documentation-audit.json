@@ -7170,8 +7170,8 @@
         "de": {
           "path": "projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "474e767b5b7ed63452f0fd1d6e6d72e2b8b70ae53633c61651b31d5871f0ce39",
-          "words": 1259,
+          "sha256": "861113f7b20bdbe5a99678a52e0c7efa3d88943672b901ead4bd61a14c1b69ad",
+          "words": 1271,
           "headings": 9,
           "examples": 2,
           "versions": [
@@ -7186,8 +7186,8 @@
         "en": {
           "path": "en/projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "b4ff97930b92ea06efec4c5d4aad569e12c31ed8c3f5fb2cebdbbabce9fbf53e",
-          "words": 1537,
+          "sha256": "fe94c1582980e3571b139dd80403d93c95481e505e7c892c042eb76fc618857b",
+          "words": 1555,
           "headings": 9,
           "examples": 3,
           "versions": [
@@ -7209,8 +7209,8 @@
         "fr": {
           "path": "fr/projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "67a60af5b4596a3c72cf5d520b8158797be11f9af12d9a660b697658fc9c242c",
-          "words": 1460,
+          "sha256": "c8117341ce1fd156c587e6d6d1cf58d55cb7e1e5430db7154dacebf96b0281c2",
+          "words": 1481,
           "headings": 9,
           "examples": 2,
           "versions": [

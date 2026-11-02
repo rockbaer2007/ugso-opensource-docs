@@ -1,22 +1,22 @@
 ---
 title: Sidebar Manager
-description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.7, DE/EN/FR.
+description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.8, DE/EN/FR.
 ---
 # Sidebar Manager
 
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
-**0.1.7 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.8 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Dossiers, couleurs, opacité et liens personnalisés dans « Modifier la barre latérale ». Triez dossiers et entrées principales avec les poignées natives. Aucun fichier système HA n'est remplacé.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.7](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.7) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.8](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.8) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
-## Aperçu local 0.1.8 : liens dans l’éditeur de barre latérale
+## Nouveautés de 0.1.8 : liens dans l’éditeur de barre latérale
 
-::: info État du développement, 2 novembre 2026
-**0.1.8 est préparée localement ; la version publique reste 0.1.7.** La vérification syntaxique, la compilation et **70 tests automatisés** réussissent. Ces ajouts n’ont pas encore été testés dans Home Assistant sur .177. Les étapes suivantes concernent le paquet de test local, pas la release 0.1.7 liée ci-dessus. Les images existantes montrent les vérifications antérieures.
+::: info État des vérifications, 2 novembre 2026
+**0.1.8 : vérification fonctionnelle réussie confirmée par l’utilisateur le 2 novembre 2026.** Liens, couleurs, déplacement et libellés « Lien »/« Lien ext. » fonctionnent. La vérification syntaxique, la compilation et **70 tests automatisés** réussissent aussi. Les images existantes montrent les vérifications antérieures. Codex n’a pas effectué de test d’exécution HA indépendant supplémentaire pour cette version ; l’hôte et la version HA du test utilisateur n’ont pas été précisés séparément.
 :::
 
 Les liens personnalisés internes et externes apparaissent aussi dans **Modifier la barre latérale**. Sans position enregistrée, ils apparaissent d’abord à la fin ; l’ordre existant est respecté. Les liens masqués restent disponibles pour modification.
@@ -29,7 +29,7 @@ Les liens personnalisés internes et externes apparaissent aussi dans **Modifier
 
 L’ordre et la visibilité des liens restent dans `ugso_sidebar_manager_v1`, les couleurs dans le relevé existant `ugso_sidebar_colors_v1`. Les identifiants des liens personnalisés ne sont jamais écrits dans l’ordre natif des panneaux HA. Réglages existants, modes d’ouverture et panneaux absents sont conservés.
 
-Les vérifications locales couvrent le paquet JavaScript compilé avec un stockage HA simulé, les libellés DE/EN/FR, la couleur, l’enregistrement/annulation, le tri, le dossier attribué et la restauration après un échec d’enregistrement. Un test réel dans HA reste à effectuer pour cet ajout.
+Les vérifications locales couvrent le paquet JavaScript compilé avec un stockage HA simulé, les libellés DE/EN/FR, la couleur, l’enregistrement/annulation, le tri, le dossier attribué et la restauration après un échec d’enregistrement. L’utilisateur a confirmé la réussite de la vérification fonctionnelle le 2 novembre 2026 ; cette validation est documentée séparément des tests automatisés.
 
 ## HACS / Marketplace
 
