@@ -145,6 +145,7 @@ const sidebarDe = {
     { text: 'Projektduplicator 2026', link: '/eep/projektduplicator-2026/' }
   ] }],
   '/projects/sidebar-colors/': [{text:'Seitenleistenfarben',items:[{text:'Installation und Farbauswahl',link:'/projects/sidebar-colors/'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
+  '/projects/sidebar-manager/': [{text:'Sidebar Manager',items:[{text:'Installation und Bedienung',link:'/projects/sidebar-manager/'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
   '/projects/dashboard-user-manager/': [{text:'Dashboard-Benutzerverwaltung',items:[{text:'Einrichtung und Bedienung',link:'/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
   '/projects/mqtt-client/': [{ text: 'MQTT-Client', items: [{ text: 'Einrichtung und Neuerungen', link: '/projects/mqtt-client/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
   '/projects/callmebot/': [{ text: 'CallMeBot Whatsapp', items: [{ text: 'Einrichtung und Blockly', link: '/projects/callmebot/' }, { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/projects-mqtt/' }] }],
@@ -323,6 +324,7 @@ const sidebarDe = {
         { text: 'Übersicht', link: '/projects-mqtt/' },
         { text: 'Dashboard-Benutzerverwaltung', link: '/projects/dashboard-user-manager/' },
         { text: 'Seitenleistenfarben', link: '/projects/sidebar-colors/' },
+        { text: 'Sidebar Manager', link: '/projects/sidebar-manager/' },
         { text: 'MQTT-Client', link: '/projects/mqtt-client/' },
         { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' },
         { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
@@ -597,6 +599,7 @@ const sidebarEn = {
     { text: 'Projektduplicator 2026', link: '/en/eep/projektduplicator-2026/' }
   ] }],
   '/en/projects/sidebar-colors/': [{text:'Sidebar Colors',items:[{text:'Installation and colors',link:'/en/projects/sidebar-colors/'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
+  '/en/projects/sidebar-manager/': [{text:'Sidebar Manager',items:[{text:'Installation and use',link:'/en/projects/sidebar-manager/'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
   '/en/projects/dashboard-user-manager/': [{text:'Dashboard User Manager',items:[{text:'Setup and usage',link:'/en/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
   '/en/projects/mqtt-client/': [{ text: 'MQTT-Client', items: [{ text: 'Setup and updates', link: '/en/projects/mqtt-client/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
   '/en/projects/callmebot/': [{ text: 'CallMeBot Whatsapp', items: [{ text: 'Setup and Blockly', link: '/en/projects/callmebot/' }, { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' }, { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' }] }],
@@ -732,6 +735,7 @@ const sidebarEn = {
         { text: 'Overview', link: '/en/projects-mqtt/' },
         { text: 'Dashboard User Manager', link: '/en/projects/dashboard-user-manager/' },
         { text: 'Sidebar Colors', link: '/en/projects/sidebar-colors/' },
+        { text: 'Sidebar Manager', link: '/en/projects/sidebar-manager/' },
         { text: 'MQTT-Client', link: '/en/projects/mqtt-client/' },
         { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' },
         { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
@@ -902,11 +906,13 @@ const sidebarFr = {
     { text: 'Projektduplicator 2026', link: '/fr/eep/projektduplicator-2026/' }
   ] }],
   '/fr/projects/sidebar-colors/': [{text:'Couleurs du menu latéral',items:[{text:'Installation et couleurs',link:'/fr/projects/sidebar-colors/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
+  '/fr/projects/sidebar-manager/': [{text:'Sidebar Manager',items:[{text:'Installation et utilisation',link:'/fr/projects/sidebar-manager/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
   '/fr/projects/dashboard-user-manager/': [{text:'Utilisateurs des tableaux de bord',items:[{text:'Installation et utilisation',link:'/fr/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
   '/fr/projects-mqtt/': [{ text: 'UGSo HA Apps', items: [
     { text: 'Vue d’ensemble', link: '/fr/projects-mqtt/' },
     { text: 'Utilisateurs des tableaux de bord', link: '/fr/projects/dashboard-user-manager/' },
     { text: 'Couleurs du menu latéral', link: '/fr/projects/sidebar-colors/' },
+    { text: 'Sidebar Manager', link: '/fr/projects/sidebar-manager/' },
     { text: 'MQTT-Client', link: '/fr/projects/mqtt-client/' },
     { text: 'Blocks for HA', link: '/fr/projects/blocks-for-ha/' },
     { text: 'Grafik Visual Studio', link: '/fr/projects/grafik-visual-studio/' },

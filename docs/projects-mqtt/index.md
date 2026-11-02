@@ -18,6 +18,7 @@ Diese Projekte liegen im selben Repository wie die folgenden MQTT-Apps.
 
 | Projekt | Dokumentation |
 | --- | --- |
+| <img class="package-icon" src="/images/packages/projects-sidebar-manager.svg" width="32" height="32" alt="" aria-hidden="true"> [Sidebar Manager](/projects/sidebar-manager/) | 0.1.7: Farben/Transparenz, Ordner mit Icons, gemeinsame Sortierung, Trennlinien nur ausgeklappt und eigene Links als neuer Tab oder iframe. DE/EN/FR, [GitHub](https://github.com/rockbaer2007/ha-sidebar-manager), HACS-kompatibles Frontend-Plugin. |
 | <img class="package-icon" src="/images/packages/projects-sidebar-colors.svg" width="32" height="32" alt="" aria-hidden="true"> [Seitenleistenfarben](/projects/sidebar-colors/) | 0.1.0: Farben und Transparenz je Menüeintrag direkt im HA-Seitenleisten-Editor. DE/EN/FR, benutzerspezifisch synchronisiert; eigenes [GitHub-Repo](https://github.com/rockbaer2007/ha-sidebar-colors), für HACS und Marketplace. Keine Supervisor-App. |
 
 ## Gemeinsames Add-on-Repository

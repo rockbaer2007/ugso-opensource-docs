@@ -22,6 +22,7 @@ Ces projets se trouvent dans le même dépôt (repository) que les applications 
 | Projet | Documentation |
 | --- | --- |
 | <img class="package-icon" src="/images/packages/projects-sidebar-colors.svg" width="32" height="32" alt="" aria-hidden="true"> [Couleurs du menu latéral](/fr/projects/sidebar-colors/) | 0.1.0 : couleurs et opacité par entrée dans l’éditeur natif du menu HA. DE/EN/FR, synchronisées par utilisateur ; [dépôt GitHub](https://github.com/rockbaer2007/ha-sidebar-colors) distinct, pour HACS et Marketplace. Pas une application Supervisor. |
+| <img class="package-icon" src="/images/packages/projects-sidebar-manager.svg" width="32" height="32" alt="" aria-hidden="true"> [Sidebar Manager](/fr/projects/sidebar-manager/) | 0.1.7 : couleurs/opacité, dossiers avec icônes, tri commun, séparateurs uniquement dépliés et liens dans un nouvel onglet ou une iframe. DE/EN/FR, [GitHub](https://github.com/rockbaer2007/ha-sidebar-manager), plugin frontend compatible HACS. |
 
 ## Dépôt d'add-ons commun {#gemeinsames-add-on-repository}
 

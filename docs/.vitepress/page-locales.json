@@ -1619,6 +1619,21 @@
     "EN": "/en/projects/sidebar-colors/",
     "FR": "/fr/projects/sidebar-colors/"
   },
+  "/projects/sidebar-manager/": {
+    "DE": "/projects/sidebar-manager/",
+    "EN": "/en/projects/sidebar-manager/",
+    "FR": "/fr/projects/sidebar-manager/"
+  },
+  "/en/projects/sidebar-manager/": {
+    "DE": "/projects/sidebar-manager/",
+    "EN": "/en/projects/sidebar-manager/",
+    "FR": "/fr/projects/sidebar-manager/"
+  },
+  "/fr/projects/sidebar-manager/": {
+    "DE": "/projects/sidebar-manager/",
+    "EN": "/en/projects/sidebar-manager/",
+    "FR": "/fr/projects/sidebar-manager/"
+  },
   "/projects/uix/broker/broker": {
     "DE": "/projects/uix/broker/broker",
     "EN": "/en/projects/uix/broker/broker",

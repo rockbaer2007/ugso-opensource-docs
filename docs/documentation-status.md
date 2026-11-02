@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 231 | 0 | 0 | 0 |
-| EN | 231 | 0 | 0 | 0 |
-| FR | 231 | 0 | 0 | 0 |
+| DE | 232 | 0 | 0 | 0 |
+| EN | 232 | 0 | 0 | 0 |
+| FR | 232 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -143,6 +143,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/installation) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/installation) |
 | [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/configuration) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/configuration) |
 | [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Inhalt vorhanden](/en/projects/sidebar-colors/) | [Inhalt vorhanden](/fr/projects/sidebar-colors/) |
+| [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Inhalt vorhanden](/en/projects/sidebar-manager/) | [Inhalt vorhanden](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/broker) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/broker) |
 | [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/directives) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/directives) |
 | [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/examples) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/examples) |

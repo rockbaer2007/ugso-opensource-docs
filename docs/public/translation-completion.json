@@ -134,12 +134,12 @@
       "source": "projects-mqtt/index.md",
       "target": "fr/projects-mqtt/index.md",
       "mode": "replace",
-      "source_sha256": "021b6bf8167c7eb4819548eddd019aeefd7e425f4070052ea230764f0ddb149f",
-      "target_sha256": "8e3971ca13b6857f2a6a53555c90b32c02c1ac5a1951628d3d04dc62d6ee246f",
+      "source_sha256": "6c03d37ecd83bfcff5dcaf7c682ea2690eb2dc6fdb70dd2927fc40e5acdee093",
+      "target_sha256": "25868c0503a0a09a5277f56a525fa363310ae8833159271858fe65b165f224f6",
       "source_code_blocks": 1,
       "target_code_blocks": 1,
-      "source_table_rows": 10,
-      "target_table_rows": 10
+      "source_table_rows": 11,
+      "target_table_rows": 11
     },
     {
       "source": "projects/fritzbox-to-mqtt/beispiele.md",
