@@ -74,7 +74,7 @@ def main():
             errors.append(f"Escaped Jinja delimiters in copyable code: {relative}")
         if not any(link.get("rel") == "canonical" and link.get("href") == url for link in page.links):
             errors.append(f"Wrong or missing self-canonical: {relative}")
-        if relative not in TRANSLATION_ONLY | {"extras/style-custom-panels.md"}:
+        if relative not in TRANSLATION_ONLY | {"extras/style-custom-panels.md", "using/custom-sidebar-panels.md"}:
             english_path = relative.removesuffix("index.md") if relative.endswith("index.md") else relative.removesuffix(".md") + "/"
             for language, href in (("de", url), ("en", ENGLISH + english_path)):
                 if not any(link.get("rel") == "alternate" and link.get("hreflang") == language and link.get("href") == href for link in page.links):
@@ -114,6 +114,8 @@ def main():
         relative = url.split('/projects/uix/', 1)[1]
         if relative == 'extras/style-custom-panels':
             relative = 'extras/style-frame-panels'
+        if relative == 'using/custom-sidebar-panels':
+            relative = 'extras/custom-sidebar-panels'
         if relative != 'translation-status':
             english_path = relative if not relative or relative.endswith('/') else relative+'/'
             for language, href in (

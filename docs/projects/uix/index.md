@@ -3,15 +3,15 @@ title: Übersicht
 ---
 # UI eXtension für Home Assistant
 
-::: info Stand geprüft am 31.10.2026
-Stabile Basis: **UIX 8.4.0**, benötigt **Home Assistant 2026.10.0 oder neuer**. Alle **65** englischen Quellseiten wurden mit `dev`-Revision **e6fb84d / 9.0.0-beta.6** verglichen; DE/FR wurden um die Änderungen ergänzt. Vorschaufunktionen sind separat gekennzeichnet. Einzelheiten stehen im [Prüfbericht](./translation-status).
+::: info Stand geprüft am 02.11.2026
+Stabile Basis: **UIX 8.4.0**, benötigt **Home Assistant 2026.10.0 oder neuer**. Alle **65** englischen Quellseiten wurden mit `dev`-Revision **e4a1caa / 9.0.0-beta.8** verglichen; DE/FR wurden um die Änderungen ergänzt. Vorschaufunktionen sind separat gekennzeichnet. Einzelheiten stehen im [Prüfbericht](./translation-status).
 :::
 
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
 > Basis: GitHub-Release [`v8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) vom 07.10.2026. Benötigt **Home Assistant 2026.10.0 oder neuer**. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389).
-> Die stabile Basis wurde gegen diesen Release geprüft; zusätzlich berücksichtigt diese Fassung den separat gekennzeichneten Vorschau-Dokumentationsstand vom 31.10.2026. Einzelheiten und bekannte Grenzen stehen im [Übersetzungsstatus](./translation-status).
+> Die stabile Basis wurde gegen diesen Release geprüft; zusätzlich berücksichtigt diese Fassung den separat gekennzeichneten Vorschau-Dokumentationsstand vom 02.11.2026. Einzelheiten und bekannte Grenzen stehen im [Übersetzungsstatus](./translation-status).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
 >
@@ -35,8 +35,8 @@ UIX besteht aus drei großen Bereichen:
 
 ## Neu in UIX 8.4.0
 
-::: info Vorschau: UIX 9.0.0-beta.6
-[Eigene Seitenleisten-Verknüpfungen](./using/custom-sidebar-panels) sind ab **9.0.0-beta.6** verfügbar. Der [visuelle Forge-Editor](./forge/forge#visual-editor-cards-and-badges) ist ab **9.0.0-beta.2** verfügbar und bietet **Convert to visual editor** für bestehende direkte Karten-/Badge-Forges. Die stabile Basis bleibt **8.4.0**.
+::: info Vorschau: UIX 9.0.0-beta.8
+[Eigene Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels) sind ab **9.0.0-beta.6** verfügbar. Der [visuelle Forge-Editor](./forge/forge#visual-editor-cards-and-badges) ist ab **9.0.0-beta.2** verfügbar und bietet **Convert to visual editor** für bestehende direkte Karten-/Badge-Forges. Seit **beta.7** gibt es [Popover-Timeouts](./extras/uix-actions#popover), seit **beta.8** externe Seitenleisten-Ziele und neue Tabs. Diese Ergänzungen benötigen **Home Assistant ab 2026.11.0b0**. Die stabile Basis bleibt **8.4.0**.
 :::
 
 - [Form Spark](./forge/sparks/form) und [Popover-Aktion](./extras/uix-actions#popover) für Formulare und eingeblendete Inhalte.
@@ -60,4 +60,4 @@ Der beste Einstieg ist der [Schnellstart](./quick-start). Dort findest du Instal
 - [FAQ](./faq)
 
 > **Stand dieser deutschen Doku**
-> Am 31.10.2026 gegen die stabile Basis `8.4.0` und den Dokumentationsstand `dev e6fb84d / 9.0.0-beta.6` geprüft. Bei Unklarheiten gilt immer die englische Originaldokumentation.
+> Am 02.11.2026 gegen die stabile Basis `8.4.0` und den Dokumentationsstand `dev e4a1caa / 9.0.0-beta.8` geprüft. Bei Unklarheiten gilt immer die englische Originaldokumentation.

@@ -1919,6 +1919,21 @@
     "EN": "/en/projects/uix/extras/always-patch-ha-card",
     "FR": "/fr/projects/uix/extras/always-patch-ha-card"
   },
+  "/projects/uix/extras/custom-sidebar-panels": {
+    "DE": "/projects/uix/extras/custom-sidebar-panels",
+    "EN": "/en/projects/uix/extras/custom-sidebar-panels",
+    "FR": "/fr/projects/uix/extras/custom-sidebar-panels"
+  },
+  "/en/projects/uix/extras/custom-sidebar-panels": {
+    "DE": "/projects/uix/extras/custom-sidebar-panels",
+    "EN": "/en/projects/uix/extras/custom-sidebar-panels",
+    "FR": "/fr/projects/uix/extras/custom-sidebar-panels"
+  },
+  "/fr/projects/uix/extras/custom-sidebar-panels": {
+    "DE": "/projects/uix/extras/custom-sidebar-panels",
+    "EN": "/en/projects/uix/extras/custom-sidebar-panels",
+    "FR": "/fr/projects/uix/extras/custom-sidebar-panels"
+  },
   "/projects/uix/extras/dialog-styling-delay": {
     "DE": "/projects/uix/extras/dialog-styling-delay",
     "EN": "/en/projects/uix/extras/dialog-styling-delay",

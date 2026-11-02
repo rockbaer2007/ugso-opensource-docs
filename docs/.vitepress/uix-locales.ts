@@ -6,6 +6,7 @@ export function uixLocaleTargets(path: string): Record<'DE' | 'EN' | 'FR', strin
   const suffix = match[1] ?? ''
   const canonical = suffix === 'translation-status' ? ''
     : suffix.replace(/^extras\/style-custom-panels\/?$/, 'extras/style-frame-panels')
+      .replace(/^using\/custom-sidebar-panels\/?$/, 'extras/custom-sidebar-panels')
   return {
     DE: '/projects/uix/' + suffix,
     EN: 'https://uix.lf.technology/' + canonical + (canonical && !canonical.endsWith('/') ? '/' : ''),

@@ -5,12 +5,13 @@
   "docs_version": "8.4.0",
   "stable_version": "8.4.0",
   "source_revision": "71b8ccd38202257c070ae9970a7aac12a68a6389",
-  "reviewed_at": "2026-10-31",
-  "preview_version": "9.0.0-beta.6",
+  "reviewed_at": "2026-11-02",
+  "preview_version": "9.0.0-beta.8",
   "preview_branch": "dev",
-  "preview_source_revision": "e6fb84dd715ea4bac9a330357705897ea8d44690",
+  "preview_source_revision": "e4a1caa6437f88282cfe04d768d3c11df387fc42",
   "minimum_home_assistant_version": "2026.10.0",
   "canonical_url": "https://uix.lf.technology/",
   "repository": "https://github.com/Lint-Free-Technology/uix",
-  "translation_notice": "Unofficial German translation. The English UIX documentation is authoritative."
+  "translation_notice": "Unofficial German translation. The English UIX documentation is authoritative.",
+  "preview_minimum_home_assistant_version": "2026.11.0b0"
 }

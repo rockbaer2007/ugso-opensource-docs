@@ -3,8 +3,8 @@ title: À propos
 ---
 # UI eXtension pour Home Assistant
 
-::: info État vérifié le 31 octobre 2026
-Base stable : **UIX 8.4.0**, nécessite **Home Assistant 2026.10.0 ou ultérieur**. Les **65** pages sources anglaises ont été comparées à la révision `dev` **e6fb84d / 9.0.0-beta.6** ; DE/FR ont été complétées avec les changements. Les fonctions d’aperçu sont indiquées séparément. Voir le [rapport](./translation-status).
+::: info État vérifié le 2 novembre 2026
+Base stable : **UIX 8.4.0**, nécessite **Home Assistant 2026.10.0 ou ultérieur**. Les **65** pages sources anglaises ont été comparées à la révision `dev` **e4a1caa / 9.0.0-beta.8** ; DE/FR ont été complétées avec les changements. Les fonctions d’aperçu sont indiquées séparément. Voir le [rapport](./translation-status).
 :::
 
 > **Traduction indépendante** — Cette documentation française est maintenue par UGSo Software et n'est pas la documentation officielle du projet UIX. La documentation anglaise reste la référence. Base comparée à la version stable [`UIX 8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) du 7 octobre 2026, révision [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389). **Home Assistant 2026.10.0 ou ultérieur est requis.**
@@ -23,8 +23,8 @@ UI eXtension comprend [UIX Styling](./using/index.md), [UIX Forge](./forge/index
 
 ## Nouveautés de UIX 8.4.0
 
-::: info Aperçu : UIX 9.0.0-beta.6
-Les [raccourcis personnalisés dans la barre latérale](./using/custom-sidebar-panels) sont disponibles à partir de **9.0.0-beta.6**. L’[éditeur visuel Forge](./forge/forge#visual-editor-cards-and-badges), disponible depuis **9.0.0-beta.2**, propose **Convert to visual editor** pour les Forges directes de carte ou de badge existantes. La base stable reste **8.4.0**.
+::: info Aperçu : UIX 9.0.0-beta.8
+Les [raccourcis personnalisés dans la barre latérale](./extras/custom-sidebar-panels) sont disponibles à partir de **9.0.0-beta.6**. L’[éditeur visuel Forge](./forge/forge#visual-editor-cards-and-badges), disponible depuis **9.0.0-beta.2**, propose **Convert to visual editor** pour les Forges directes de carte ou de badge existantes. Depuis **beta.7**, les [popovers proposent un délai de fermeture](./extras/uix-actions#popover) ; **beta.8** ajoute les destinations externes et les nouveaux onglets. Ces ajouts nécessitent **Home Assistant 2026.11.0b0 ou ultérieur**. La base stable reste **8.4.0**.
 :::
 
 - [Spark Formulaire](./forge/sparks/form) et [action Popover](./extras/uix-actions#popover) pour les formulaires et les contenus superposés.

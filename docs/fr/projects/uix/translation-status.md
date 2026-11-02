@@ -4,6 +4,17 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Revue du 2 novembre 2026 : aperçu 9.0.0-beta.8
+
+Les notifications `f769f06`, `2782a71`, `1f69b99` et `e4a1caa` ont été vérifiées jusqu’à la [révision canonique e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42). La comparaison des **65** pages a identifié trois pages modifiées et une page déplacée. EN est synchronisé ; DE/FR couvrent les changements.
+
+- [Délai des popovers](./extras/uix-actions#popover), depuis **beta.7** : millisecondes, plage `0`–`2147483647`, minuteur individuel non réinitialisé par les interactions, aucune action du pied de page ni soumission de formulaire à l’expiration.
+- [Raccourcis de barre latérale](./extras/custom-sidebar-panels), destinations externes et nouveaux onglets depuis **beta.8** : schémas d’URL autorisés, retour à la page HA précédente et repli en cas de blocage du nouvel onglet.
+- Page et navigation déplacées dans **Extras** ; anciennes adresses conservées comme renvois. Accueils, pieds de page et relevés de vérification actualisés. Clarification du cache conservée.
+- **Base stable : 8.4.0 / HA 2026.10.0 minimum**. Les nouveaux ajouts d’aperçu nécessitent **HA 2026.11.0b0 ou ultérieur**. Les versions historiques sont conservées.
+
+Sources précédentes sauvegardées. Vérification des sources, identifiants, exemples de code, compilation et liens ; aucun test d’exécution HA.
+
 ## Revue du 31 octobre 2026 : 65 pages sources, aperçu 9.0.0-beta.6
 
 Les révisions signalées [`964f440`](https://github.com/Lint-Free-Technology/uix/commit/964f4402b6f263a5deac53327b825a85cb3e3e72), [`e6fb84d`](https://github.com/Lint-Free-Technology/uix/commit/e6fb84dd715ea4bac9a330357705897ea8d44690) et [`25aec39`](https://github.com/Lint-Free-Technology/uix/commit/25aec397f873e566c2ead0201d819595854405ab) ont été comparées au précédent état vérifié. Le nouvel arbre source comprend **65** pages Markdown ; EN a été synchronisé et DE/FR ont été complétées pour les changements effectifs.

@@ -15,9 +15,9 @@ import sys
 import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
-REVISION = 'e6fb84dd715ea4bac9a330357705897ea8d44690'
-REVIEWED_AT = '2026-10-31'
-PREVIEW_VERSION = '9.0.0-beta.6'
+REVISION = 'e4a1caa6437f88282cfe04d768d3c11df387fc42'
+REVIEWED_AT = '2026-11-02'
+PREVIEW_VERSION = '9.0.0-beta.8'
 
 
 def code_hashes(text):
@@ -86,7 +86,7 @@ def convert(text, relative, source_files):
     }
     for heading,anchor in aliases.get(relative.as_posix(),{}).items():
         text=re.sub(r'(?m)^(#{2,6} '+re.escape(heading)+r'[^\n]*)$',lambda m:'<a id="'+anchor+'"></a>\n'+m[1],text)
-    notice = '\n> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **'+PREVIEW_VERSION+'**, revision ['+REVISION[:7]+'](https://github.com/Lint-Free-Technology/uix/commit/'+REVISION+'), reviewed 31 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.\n\n'
+    notice = '\n> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **'+PREVIEW_VERSION+'**, revision ['+REVISION[:7]+'](https://github.com/Lint-Free-Technology/uix/commit/'+REVISION+'), reviewed 2 November 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.\n\n'
     if text.startswith('---\n'):
         end=text.index('\n---',4)+4
         text=text[:end]+'\n'+notice+text[end:].lstrip('\n')
@@ -94,6 +94,8 @@ def convert(text, relative, source_files):
         text=notice.lstrip('\n')+text
     if relative.as_posix() in {'forge/forge.md','forge/index.md','forge/foundries.md'}:
         text=text.replace(notice, notice+'::: info UIX '+PREVIEW_VERSION+' preview\nThis Forge content follows the reviewed `dev` revision, separate from the stable 8.4.0 baseline. Individual feature notices identify their introduction version.\n:::\n\n')
+    if relative.as_posix() == 'extras/custom-sidebar-panels.md':
+        text=text.replace(notice, notice+'::: info Preview compatibility\nExternal targets and new tabs were added in **9.0.0-beta.8**, requiring **Home Assistant 2026.11.0b0 or later** according to the reviewed release changelog. Stable remains **8.4.0**.\n:::\n\n')
     return '\n'.join(line.rstrip() for line in text.splitlines()).rstrip()+'\n'
 
 
@@ -120,11 +122,20 @@ def main():
             entry=corrected[relative.as_posix()]
             equivalent_sources={hashlib.sha256(value).hexdigest() for value in
                                 (raw, raw.replace(b'\r\n',b'\n'), raw.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n'))}
-            assert entry['sha256'] in equivalent_sources, f'Editorial correction needs review: {relative}'
             existing=target.read_text(encoding='utf-8')
             assert hashlib.sha256(existing.encode()).hexdigest()==entry['english_sha256'], f'Editorial page changed: {relative}'
-            converted=re.sub(r'(?m)^> Adapted from the canonical English UIX documentation.*$',
-                             lambda _: next(line for line in converted.splitlines() if line.startswith('> Adapted from')), existing)
+            if entry['sha256'] in equivalent_sources:
+                converted=re.sub(r'(?m)^> Adapted from the canonical English UIX documentation.*$',
+                                 lambda _: next(line for line in converted.splitlines() if line.startswith('> Adapted from')), existing)
+            else:
+                # Manually reviewed timeout update at this frozen revision. Keep
+                # the established cache clarification, without discarding new prose.
+                assert relative.as_posix() == 'extras/uix-actions.md' and REVISION == 'e4a1caa6437f88282cfe04d768d3c11df387fc42', f'Editorial correction needs review: {relative}'
+                start='## `clear-cache` - clearing Home Assistant Frontend cache\n\n'
+                end='\n| config | setting | default | description |'
+                old_body=existing.split(start,1)[1].split(end,1)[0]
+                converted=re.sub(re.escape(start)+r'.*?(?='+re.escape(end)+r')', lambda _: start+old_body, converted, count=1, flags=re.S)
+                corrections['reviewed_at']=REVIEWED_AT
         target.write_text(converted,encoding='utf-8')
         original_code=code_hashes(raw.decode('utf-8'))
         assert code_hashes(converted)==original_code, f'Code changed: {relative}'

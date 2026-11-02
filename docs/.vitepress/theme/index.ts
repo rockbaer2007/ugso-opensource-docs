@@ -277,10 +277,10 @@ const UgsoLayout = defineComponent({
                   h(
                     'span',
                     isEnglish
-                      ? 'Stable baseline: UIX 8.4.0, Home Assistant 2026.10.0 minimum, revision 71b8ccd. Canonical documentation reviewed on 31 October 2026; documentation preview follows dev e6fb84d / 9.0.0-beta.6. The original English documentation remains authoritative.'
+                      ? 'Stable baseline: UIX 8.4.0, Home Assistant 2026.10.0 minimum, revision 71b8ccd. Canonical documentation reviewed on 2 November 2026; documentation preview follows dev e4a1caa / 9.0.0-beta.8. Preview additions require Home Assistant 2026.11.0b0 or later. The original English documentation remains authoritative.'
                       : isFrench
-                      ? 'Base stable : UIX 8.4.0, Home Assistant 2026.10.0 minimum. Traduction vérifiée le 31/10/2026 avec la source e6fb84d / 9.0.0-beta.6 ; fonctions d’aperçu indiquées séparément. La documentation originale en anglais reste la référence.'
-                      : 'Stabile Basis: UIX 8.4.0, benötigt Home Assistant ab 2026.10.0. Übersetzung am 31.10.2026 mit Quelle e6fb84d / 9.0.0-beta.6 geprüft; Vorschaufunktionen separat gekennzeichnet. Maßgeblich bleibt die englische Originaldokumentation.'
+                      ? 'Base stable : UIX 8.4.0, Home Assistant 2026.10.0 minimum. Traduction vérifiée le 02/11/2026 avec la source e4a1caa / 9.0.0-beta.8 ; fonctions d’aperçu indiquées séparément. Les ajouts d’aperçu nécessitent Home Assistant 2026.11.0b0 ou ultérieur. La documentation originale en anglais reste la référence.'
+                      : 'Stabile Basis: UIX 8.4.0, benötigt Home Assistant ab 2026.10.0. Übersetzung am 02.11.2026 mit Quelle e4a1caa / 9.0.0-beta.8 geprüft; Vorschaufunktionen separat gekennzeichnet. Neue Vorschaufunktionen benötigen Home Assistant ab 2026.11.0b0. Maßgeblich bleibt die englische Originaldokumentation.'
                   ),
                   h('span', [
                     h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical English documentation' : isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),

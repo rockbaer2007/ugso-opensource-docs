@@ -3,7 +3,7 @@ title: UIX actions
 description: Learn how UIX actions can clear cache, show more-info, toast messages or popovers, protect an action with a code, run JavaScript, and dispatch browser events.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.6**, revision [e6fb84d](https://github.com/Lint-Free-Technology/uix/commit/e6fb84dd715ea4bac9a330357705897ea8d44690), reviewed 31 October 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.8**, revision [e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42), reviewed 2 November 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # UIX actions
 
@@ -165,6 +165,11 @@ tap_action:
 
 ## `popover` - show an anchored Home Assistant popover
 
+::: info
+`timeout` added in 9.0.0-beta.7
+
+:::
+
 Shows a Home Assistant adaptive popover anchored to the element that triggered
 the `ll-custom` action. It includes Home Assistant's standard accessible close
 button and removes itself after it is closed.
@@ -178,6 +183,7 @@ button and removes itself after it is closed.
 | | `subtitle` | - | Sets the popover `headerSubtitle`. |
 | | `subtitle_position` | `below` | Sets the `header-subtitle-position` attribute. Accepted values are `above` and `below`. |
 | | `width` | `small` | Sets the popover width. Accepted values are `small`, `large`, and `full`. |
+| | `timeout` | `0` | Automatically closes the popover after this many milliseconds from opening. Omit or set to `0` to disable. Must be an integer from `0` to `2147483647`. |
 | | `without_header` | `false` | When `true`, hides the header and its close button. The popover can still be closed with <kbd>Escape</kbd> unless `dismissible` is `false`. |
 | | `dismissible` | `true` | Allows the close button, <kbd>Escape</kbd>, and outside dismissal. Set to `false` to require a footer button. `dismissable` is accepted as an alias. |
 | | `content` | - | HTML content to place inside the popover. Cannot be used with `card`. |
@@ -189,34 +195,32 @@ button and removes itself after it is closed.
 | | `buttons.primary` | - | Button placed at the footer's primary end. Defaults to `variant: brand` and `appearance: accent`. |
 | | `buttons.secondary` | - | Button placed before the primary button. Defaults to `variant: neutral` and `appearance: filled`. |
 
-`buttons.primary` and `buttons.secondary` use the same button settings as a
-[Forge button spark](../forge/sparks/button.md), except placement settings are
-not used. Set `label`, `icon`, `start_icon`, `end_icon`, `entity`, `size`,
-`variant`, `appearance`, and any of `tap_action`, `hold_action`, or
-`double_tap_action` as needed. Footer positions are logical: primary is on the
-right in left-to-right layouts and on the left in right-to-left layouts. A
-button with an action closes the popover after that action runs; an action-less
-button closes it on click.
+`buttons.primary` and `buttons.secondary` use the same button settings as a [Forge button spark](../forge/sparks/button.md), except placement settings are. not used. Set `label`, `icon`, `start_icon`, `end_icon`, `entity`, `size`, `variant`, `appearance`, and any of `tap_action`, `hold_action`, or `double_tap_action` as needed. Footer positions are logical: primary is on the right in left-to-right layouts and on the left in right-to-left layouts. A button with an action closes the popover after that action runs; an action-less button closes it on click.
 
 When the popover card contains a UIX Forge [form spark](../forge/sparks/form.md), its current form values are appended to the action data for both footer buttons. The form spark may omit its own Submit and Clear buttons in this layout.
 
-Set `target: none` to show the same content as a centered adaptive dialog
-instead of anchoring it to the action source. An integration or custom caller
-may instead provide an actual DOM element as `target` to choose a different
-anchor.
+Use `timeout` for temporary controls on a wall dashboard, for example `timeout: 20000` to close after 20 seconds. Each popover has its own timer, which starts when the popover opens and is cancelled if it closes early. Interaction does not reset the timer. The timer also closes popovers with `dismissible: false`; it does not run footer button actions or submit forms.
 
-Each `icons` entry uses Home Assistant's native round icon button. It must set
-`icon`; use `label` to provide its accessible name. It supports `entity`,
-`color`, and `tap_action`, `hold_action`, or `double_tap_action`. Header icons
-do not close the popover, which makes them suitable for actions such as opening
-settings or help.
+```yaml
+type: button
+name: Quick controls
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: popover
+    data:
+      title: Bed light
+      timeout: 20000
+      card:
+        type: tile
+        entity: light.bed_light
+```
 
-Use `style` for direct properties on the popover and `uix` to style its header,
-footer, or other internals using the usual UIX DOM navigation. The action data
-is available to UIX templates as `config`. A card rendered with `card` receives
-the `uix-popover-card` class. Style `.uix-popover-card` directly to set CSS
-custom properties on the card host without crossing a shadow root; use
-`".uix-popover-card $"` for rules inside the card's shadow root.
+Set `target: none` to show the same content as a centered adaptive dialog instead of anchoring it to the action source. An integration or custom caller may instead provide an actual DOM element as `target` to choose a different anchor.
+
+Each `icons` entry uses Home Assistant's native round icon button. It must set `icon`; use `label` to provide its accessible name. It supports `entity`, `color`, and `tap_action`, `hold_action`, or `double_tap_action`. Header icons do not close the popover, which makes them suitable for actions such as opening settings or help.
+
+Use `style` for direct properties on the popover and `uix` to style its header, footer, or other internals using the usual UIX DOM navigation. The action data is available to UIX templates as `config`. A card rendered with `card` receives the `uix-popover-card` class. Style `.uix-popover-card` directly to set CSS custom properties on the card host without crossing a shadow root; use `".uix-popover-card $"` for rules inside the card's shadow root.
 
 For example, show HTML content in a popover when a button is selected:
 

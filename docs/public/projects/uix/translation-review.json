@@ -1,6 +1,6 @@
 {
-  "reviewed_at": "2026-10-31",
-  "source_revision": "e6fb84dd715ea4bac9a330357705897ea8d44690",
+  "reviewed_at": "2026-11-02",
+  "source_revision": "e4a1caa6437f88282cfe04d768d3c11df387fc42",
   "scope": "Editorial technical-reference review; page coverage, table identifiers, defaults and selected missing examples",
   "limitations": "Translations retain editorial summaries. Not sentence-by-sentence identity, independent linguistic certification or a Home Assistant runtime test.",
   "pages": [
@@ -254,6 +254,15 @@
       "fr_example_blocks": 0
     },
     {
+      "path": "extras/custom-sidebar-panels.md",
+      "source_sha256": "c976722ac3ebfce657ad7cdb4bdffa20350b2bc2e120f111e8fbd1bd6f378dba",
+      "table_identifiers": [],
+      "de_sha256": "6096d87b342da9af34521146c736985cbd8030111e50e49ca9451e9635b65097",
+      "de_example_blocks": 0,
+      "fr_sha256": "767534fe0263f80800622e4c616bd5ad004aa58a3001ecd9e46e5acf5aa57e2d",
+      "fr_example_blocks": 0
+    },
+    {
       "path": "extras/dialog-styling-delay.md",
       "source_sha256": "4bbe17331d513ce9a9f49cb527934b444d42dbf778bb788f92e93cf47741679d",
       "table_identifiers": [],
@@ -300,11 +309,11 @@
     },
     {
       "path": "extras/index.md",
-      "source_sha256": "46a0fad6ca645a30df611cf4a4aae004f737adb51e68388d35ee4280c2da1543",
+      "source_sha256": "c8eb846c6b3b77daf3e2dbc74934c67a4a232d9b80b2fd671e6cf766d186b9f3",
       "table_identifiers": [],
-      "de_sha256": "53aa02fd3deefecec3ff37a6bf13e1829c022569b8dcf67470c1d3fea9afe013",
+      "de_sha256": "7f3146dc75724966fbc62bf433f629c915c09fcc95aefbaa42a1f767234d41d3",
       "de_example_blocks": 0,
-      "fr_sha256": "01eacee6ac9ed199a0ab085d069460155eace5486c2281a3c45198bb3009631f",
+      "fr_sha256": "4d73e184debafd7ec6c6b9b28d6b5335c59d196996a186f7bdbba3fe4caf368d",
       "fr_example_blocks": 0
     },
     {
@@ -318,7 +327,7 @@
     },
     {
       "path": "extras/uix-actions.md",
-      "source_sha256": "e2c7917f9031ac147653ca62df301283938b9cebb6076beb41135cddeb374694",
+      "source_sha256": "7c56edcda99b875c2fa56ffc826f4564630d00baf2084246ef3a82ea7ebf1ed5",
       "table_identifiers": [
         "action: clear-cache",
         "action: event",
@@ -350,10 +359,10 @@
         "title",
         "users"
       ],
-      "de_sha256": "b2f883e83bde9cfd4d0a4d96a05a6208da4931ecdc84dcaed019675bee5002bc",
-      "de_example_blocks": 10,
-      "fr_sha256": "56fbf221b74952d2d07b1e10a97dcbac1f8fe6c681f04140441a80ef23e6359d",
-      "fr_example_blocks": 10
+      "de_sha256": "d9e59584a12ade5c84b124e8d5ba8a97c83f527dc94b5590e55faae3d98e355d",
+      "de_example_blocks": 11,
+      "fr_sha256": "0ea3e53aaa8f02496842132a7dbc19df2c94846211bcdcbcf383b89f0e259cd2",
+      "fr_example_blocks": 11
     },
     {
       "path": "faq.md",
@@ -971,9 +980,9 @@
       "path": "index.md",
       "source_sha256": "fb3a60fc5f67441b1b931b5e43ddbb0050c5d08e5f3815395c42e2346f9bd94b",
       "table_identifiers": [],
-      "de_sha256": "fbdff3105ad80c2c20dd5f8095c79b8473257f7578877a9cd6997e861852b7d9",
+      "de_sha256": "2c6c305ae067c1473531f73bdd23fd56e07202b05b9aa4d6b4af5515ebde77f4",
       "de_example_blocks": 0,
-      "fr_sha256": "32ca4102f21844308ad3a65bab449f8c8a4afd54d17a8f4c4a86b15ba622bf8b",
+      "fr_sha256": "36c5bdc7a051499d004dd6ac7fbb377caad7243761f298c7215bf8a9f8388a8b",
       "fr_example_blocks": 0
     },
     {
@@ -1022,15 +1031,6 @@
       "fr_example_blocks": 3
     },
     {
-      "path": "using/custom-sidebar-panels.md",
-      "source_sha256": "7e26fafba04ba0a80ef5684d3286c9de33fcc5da644d83930e66562fee21277a",
-      "table_identifiers": [],
-      "de_sha256": "c12e646cb9448a0abe8aab2d5deb13b5047aec2cdca9f4ad069593f6104dd0bd",
-      "de_example_blocks": 0,
-      "fr_sha256": "9be099288d9e35ba7bdfc33e56e06fd10fbd4d4f664cbc99d8bfdc18ced29cb0",
-      "fr_example_blocks": 0
-    },
-    {
       "path": "using/entities.md",
       "source_sha256": "8f206ea5912bcc28824276f05db27f960bfc8c498f38aee3fbec0a93ac34b5c5",
       "table_identifiers": [],
@@ -1059,11 +1059,11 @@
     },
     {
       "path": "using/index.md",
-      "source_sha256": "23a1b6345ca7fcb7a1af2ac94c635818967787c3c99afcdacc49ff9a20a816df",
+      "source_sha256": "f32bfbb04523c547e2cad909f397e652fe6e28a07ccf75140a019bfde4e4355c",
       "table_identifiers": [],
-      "de_sha256": "3574bdf12c49b1f9e69f0df7f5f98dfad8737876d813c7ccc6e1f75eabf926a4",
+      "de_sha256": "8da5e47a10bf5606ccde757ef36db73960c6e317a3abe4d3fdeb0d5f82895fda",
       "de_example_blocks": 1,
-      "fr_sha256": "67711072154c737b0494d43f79d41e32bb784a0d706ca29f0a44a6ba4e294fcb",
+      "fr_sha256": "119b28c69956efb04a9057234817198a3742fdb70fce4b73fe40ad92c204206f",
       "fr_example_blocks": 1
     },
     {

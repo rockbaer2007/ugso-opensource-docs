@@ -4,6 +4,17 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Abgleich vom 02.11.2026: Vorschau 9.0.0-beta.8
+
+Die Meldungen zu `f769f06`, `2782a71`, `1f69b99` und `e4a1caa` wurden bis zur [kanonischen Revision e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42) geprüft. Der Quellenvergleich aller **65** Seiten ergab drei geänderte Seiten und die Verschiebung einer Seite; EN ist synchronisiert, DE/FR sind entsprechend ergänzt.
+
+- [Popover-Timeout](./extras/uix-actions#popover), ab **beta.7**: Millisekunden, Bereich `0`–`2147483647`, eigener Timer je Popover, keine Verlängerung durch Interaktion, keine Footer-Aktion/Formularübermittlung beim Ablauf.
+- [Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels), externe Ziele und neue Tabs ab **beta.8**: erlaubte URL-Schemata, Rückkehr zur vorherigen HA-Seite und Ausweichverhalten bei Popup-Sperre.
+- Seite und Navigation nach **Extras** verschoben; alte Adressen bleiben als Verweise erhalten. Startseiten, Footer und Prüfmanifeste aktualisiert. Cache-Klarstellung erhalten.
+- **Stabil bleibt 8.4.0 / HA ab 2026.10.0**. Die neuen Vorschaufunktionen benötigen **HA ab 2026.11.0b0**. Historische Versionsangaben bleiben unverändert.
+
+Vorherige Quellen gesichert. Quellen, technische Kennungen, Codebeispiele, Build und Links werden geprüft; dies ist kein HA-Laufzeittest.
+
 ## Abgleich vom 31.10.2026: 65 Quellseiten, Vorschau 9.0.0-beta.6
 
 Die gemeldeten Revisionen [`964f440`](https://github.com/Lint-Free-Technology/uix/commit/964f4402b6f263a5deac53327b825a85cb3e3e72), [`e6fb84d`](https://github.com/Lint-Free-Technology/uix/commit/e6fb84dd715ea4bac9a330357705897ea8d44690) und [`25aec39`](https://github.com/Lint-Free-Technology/uix/commit/25aec397f873e566c2ead0201d819595854405ab) wurden gegen den zuvor geprüften Stand verglichen. Der vollständige neue Quellbaum umfasst **65** Markdown-Seiten; EN wurde synchronisiert, DE/FR wurden für die tatsächlichen Änderungen ergänzt.

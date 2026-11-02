@@ -160,6 +160,10 @@ tap_action:
 
 ## `popover` — afficher un popover Home Assistant ancré {#popover}
 
+::: info Aperçu à partir de 9.0.0-beta.7
+`timeout` nécessite Home Assistant **2026.11.0b0 ou ultérieur**.
+:::
+
 Affiche un popover adaptatif Home Assistant à côté de l'élément qui a déclenché l'action `ll-custom`. Il inclut le bouton de fermeture accessible standard de Home Assistant et se supprime après sa fermeture.
 
 | Configuration | Paramètre | Valeur par défaut | Description |
@@ -171,6 +175,7 @@ Affiche un popover adaptatif Home Assistant à côté de l'élément qui a décl
 | | `subtitle` | — | Définit `headerSubtitle`. |
 | | `subtitle_position` | `below` | Définit `header-subtitle-position` : `above` ou `below`. |
 | | `width` | `small` | Largeur : `small`, `large` ou `full`. |
+| | `timeout` | `0` | Ferme automatiquement le popover après ce nombre de millisecondes depuis son ouverture. Omettre ce paramètre ou utiliser `0` désactive le délai. Entier de `0` à `2147483647`. |
 | | `without_header` | `false` | Masque l'en-tête et son bouton de fermeture. <kbd>Échap</kbd> ferme toujours le popover sauf si `dismissible` vaut `false`. |
 | | `dismissible` | `true` | Autorise le bouton de fermeture, <kbd>Échap</kbd> et le clic à l'extérieur. Avec `false`, un bouton de pied de page est obligatoire. `dismissable` est accepté comme alias. |
 | | `content` | — | Contenu HTML ; incompatible avec `card`. |
@@ -185,6 +190,23 @@ Affiche un popover adaptatif Home Assistant à côté de l'élément qui a décl
 `buttons.primary` et `buttons.secondary` utilisent les paramètres du [spark Bouton de Forge](../forge/sparks/button), sauf les paramètres de placement. Ils acceptent `label`, `icon`, `start_icon`, `end_icon`, `entity`, `size`, `variant`, `appearance`, `tap_action`, `hold_action` et `double_tap_action`. Les positions suivent le sens d'écriture : le bouton principal est à droite de gauche à droite, et à gauche de droite à gauche. Un bouton avec une action ferme le popover après l'exécution de l'action ; un bouton sans action le ferme au clic.
 
 Si la carte contient un [spark Formulaire de Forge](../forge/sparks/form), ses valeurs actuelles sont ajoutées aux données des actions des deux boutons de pied de page. Le formulaire peut alors omettre ses propres boutons d'envoi et d'effacement.
+
+Avec `timeout: 20000`, le popover se ferme après 20 secondes. Chaque popover possède son propre minuteur, démarré à l’ouverture et annulé en cas de fermeture anticipée. Les interactions ne réinitialisent pas ce minuteur. Il ferme aussi le popover avec `dismissible: false`, sans exécuter les actions du pied de page ni soumettre de formulaire.
+
+```yaml
+type: button
+name: Quick controls
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: popover
+    data:
+      title: Bed light
+      timeout: 20000
+      card:
+        type: tile
+        entity: light.bed_light
+```
 
 Avec `target: none`, le même contenu apparaît dans un dialogue adaptatif centré. Une intégration ou un appelant personnalisé peut fournir un véritable élément DOM comme `target` pour choisir une autre ancre.
 

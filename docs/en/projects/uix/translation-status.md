@@ -4,6 +4,17 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Review of 2 November 2026: 9.0.0-beta.8 preview
+
+Notifications `f769f06`, `2782a71`, `1f69b99` and `e4a1caa` were reviewed through [canonical revision e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42). Comparing all **65** source pages identified three changed pages and one relocated page. English is synchronized; German and French cover the changes.
+
+- [Popover timeout](./extras/uix-actions#popover-show-an-anchored-home-assistant-popover), from **beta.7**: milliseconds, `0`–`2147483647`, individual timer unaffected by interaction, no footer actions or form submission on expiry.
+- [Custom sidebar panels](./extras/custom-sidebar-panels), external targets and new tabs from **beta.8**: accepted URL schemes, return to the previous HA page, and current-tab fallback when blocked.
+- Page/navigation moved to **Extras**; old routes remain as compatibility links. Landing pages, footers and review records updated. Reviewed cache clarification preserved.
+- **Stable remains 8.4.0 / HA 2026.10.0 minimum**. New preview additions require **HA 2026.11.0b0 or later**. Historical feature versions remain unchanged.
+
+Previous sources backed up. Source, identifier, code-example, build and link checks; no HA runtime test.
+
 ## Review of 31 October 2026: 65 source pages, 9.0.0-beta.6 preview
 
 The notified revisions [`964f440`](https://github.com/Lint-Free-Technology/uix/commit/964f4402b6f263a5deac53327b825a85cb3e3e72), [`e6fb84d`](https://github.com/Lint-Free-Technology/uix/commit/e6fb84dd715ea4bac9a330357705897ea8d44690) and [`25aec39`](https://github.com/Lint-Free-Technology/uix/commit/25aec397f873e566c2ead0201d819595854405ab) were compared with the previous reviewed source. All **65** source paths are covered. English was synchronized; German and French cover the actual content changes.

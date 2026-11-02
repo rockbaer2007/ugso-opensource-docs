@@ -501,7 +501,6 @@ const sidebarDe = {
         { text: 'Abschnitte', link: '/projects/uix/using/section-backgrounds' },
         { text: 'Ansichten', link: '/projects/uix/using/view-backgrounds' },
         { text: 'Custom Panels', link: '/projects/uix/using/custom-panels' },
-        { text: 'Seitenleisten-Verknüpfungen', link: '/projects/uix/using/custom-sidebar-panels' },
         { text: 'App- und Ingress-Panels', link: '/projects/uix/using/apps' },
         { text: 'Templates', link: '/projects/uix/using/templates' },
         { text: 'Themes', link: '/projects/uix/using/themes' },
@@ -566,6 +565,7 @@ const sidebarDe = {
       items: [
         { text: 'Extras', link: '/projects/uix/extras/' },
         { text: 'UIX Actions', link: '/projects/uix/extras/uix-actions' },
+        { text: 'Seitenleisten-Verknüpfungen', link: '/projects/uix/extras/custom-sidebar-panels' },
         { text: 'Frontend State Throttling', link: '/projects/uix/extras/frontend-states-throttling' },
         { text: 'Dialog Styling Delay', link: '/projects/uix/extras/dialog-styling-delay' },
         { text: 'Hash-Template-Variablen', link: '/projects/uix/extras/hash-template-variable-updates' },
@@ -1089,7 +1089,6 @@ const sidebarFr = {
         { text: 'Sections', link: '/fr/projects/uix/using/section-backgrounds' },
         { text: 'Vues', link: '/fr/projects/uix/using/view-backgrounds' },
         { text: 'Panneaux personnalisés', link: '/fr/projects/uix/using/custom-panels' },
-        { text: 'Raccourcis de barre latérale', link: '/fr/projects/uix/using/custom-sidebar-panels' },
         { text: 'Panneaux d’applications et d’Ingress', link: '/fr/projects/uix/using/apps' },
         { text: 'Modèles', link: '/fr/projects/uix/using/templates' },
         { text: 'Thèmes', link: '/fr/projects/uix/using/themes' },
@@ -1138,6 +1137,7 @@ const sidebarFr = {
       { text: 'Extras et développement', collapsed: true, items: [
         { text: 'Extras', link: '/fr/projects/uix/extras/' },
         { text: 'Actions UIX', link: '/fr/projects/uix/extras/uix-actions' },
+        { text: 'Raccourcis de barre latérale', link: '/fr/projects/uix/extras/custom-sidebar-panels' },
         { text: 'Limitation des états frontend', link: '/fr/projects/uix/extras/frontend-states-throttling' },
         { text: 'Délai de style des boîtes de dialogue', link: '/fr/projects/uix/extras/dialog-styling-delay' },
         { text: 'Variables de modèle de hachage', link: '/fr/projects/uix/extras/hash-template-variable-updates' },
@@ -1221,7 +1221,8 @@ export default defineConfig({
     ]
     const uixPage = pageData.relativePath.match(/^(?:(en|fr)\/)?projects\/uix\/(.*)$/)
     if (uixPage) {
-      const relativeSource = uixPage[2] === 'extras/style-custom-panels.md' ? 'extras/style-frame-panels.md' : uixPage[2]
+      const relativeSource = uixPage[2] === 'extras/style-custom-panels.md' ? 'extras/style-frame-panels.md'
+        : uixPage[2] === 'using/custom-sidebar-panels.md' ? 'extras/custom-sidebar-panels.md' : uixPage[2]
       // The status page belongs to the translation rather than the English source.
       if (relativeSource !== 'translation-status.md') {
         const englishPath = relativeSource.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '/')
