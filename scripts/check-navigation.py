@@ -31,7 +31,18 @@ def check(items, locale):
 
 
 for locale, config in data['locales'].items():
-    check(config['themeConfig']['nav'], locale)
+    nav = config['themeConfig']['nav']
+    check(nav, locale)
+    assert len(nav) == 9, f'{locale}: expected nine main destinations'
+    assert nav[2]['text'] == 'Home Assistant', f'{locale}: Home Assistant menu missing'
+    expected = {
+        'de': ['Dashboards', 'Apps', 'Integrationen', 'Cards'],
+        'en': ['Dashboards', 'Apps', 'Integrations', 'Cards'],
+        'fr': ['Dashboards', 'Applications', 'Intégrations', 'Cartes'],
+    }
+    assert [group['text'] for group in nav[2]['items']] == expected['de' if locale == 'root' else locale]
+    assert nav[3]['text'] == 'ATLAS' and nav[6]['text'] == 'UIX'
+    assert any(group['text'] == 'Blog' for group in nav[5]['items']), f'{locale}: independent Blog menu missing'
 
 assert not errors, '\n'.join(errors)
 print(f'Navigation check passed: {count} menu destinations across DE/EN/FR.')

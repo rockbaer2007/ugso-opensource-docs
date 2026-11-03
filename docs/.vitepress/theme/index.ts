@@ -193,6 +193,7 @@ function applyMobileNavSelection(path: string) {
     if (href === 'https://uix.lf.technology/') return /^\/en\/projects\/uix\//.test(current)
     if (!href.startsWith('/')) return false
     const target = normalizePath(href)
+    if (['/sammlung/', '/en/collection/', '/fr/collection/'].includes(target)) return current === target
     return current === target || (target.endsWith('/') && !['/', '/en/', '/fr/'].includes(target) && current.startsWith(target))
   }
   document.querySelectorAll<HTMLAnchorElement>('.VPNavScreenMenuLink').forEach(link => {

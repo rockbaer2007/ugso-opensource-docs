@@ -601,3 +601,78 @@ body.uix-doc-route .vp-doc :not(pre) > code {
   border-radius: 4px;
   box-shadow: none;
 }
+
+/* Main navigation: the same nine destinations and icons in every locale. */
+/* UIX uses the same upstream mixed.png logo as projects/uix/index.md, stored locally. */
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :nth-child(1 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) { --ugso-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m3%2011%209-8%209%208M5%2010v11h5v-7h4v7h5V10%22%2F%3E%3C%2Fsvg%3E"); }
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :nth-child(2 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) { --ugso-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%225%22%20y%3D%223%22%20width%3D%2214%22%20height%3D%2215%22%20rx%3D%223%22%2F%3E%3Cpath%20d%3D%22M8%207h8M8%2011h8M8%2018l-3%203m11-3%203%203%22%2F%3E%3Ccircle%20cx%3D%228.5%22%20cy%3D%2215%22%20r%3D%22.7%22%2F%3E%3Ccircle%20cx%3D%2215.5%22%20cy%3D%2215%22%20r%3D%22.7%22%2F%3E%3C%2Fsvg%3E"); }
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) { --ugso-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m3%2010%209-7%209%207v10H3zM8%2020v-7h8v7%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%228%22%20r%3D%221%22%2F%3E%3C%2Fsvg%3E"); }
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :nth-child(4 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) { --ugso-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22m16%208-3%205-5%203%203-5z%22%2F%3E%3C%2Fsvg%3E"); }
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :nth-child(5 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) { --ugso-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m3%206%209-4%209%204v12l-9%204-9-4zM3%206l9%204%209-4M12%2010v12M7%204l10%204%22%2F%3E%3C%2Fsvg%3E"); }
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :nth-child(6 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) { --ugso-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%223%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%2214%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2214%22%20width%3D%227%22%20height%3D%227%22%20rx%3D%221%22%2F%3E%3C%2Fsvg%3E"); }
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :nth-child(7 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) { --ugso-nav-icon: url("/images/navigation/uix.png"); }
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :nth-child(8 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) { --ugso-nav-icon: url("/ugso-klein.png"); }
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :nth-child(9 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) { --ugso-nav-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%2020c-4%201-4-2-6-2m12%204v-4c0-1%20.5-2%20.5-2%203-.5%205.5-1.5%205.5-6a5%205%200%200%200-1.4-3.5c.2-1%20.1-2-.4-3-1.5%200-3%201-3.5%201.5a13%2013%200%200%200-7.4%200C7.8%204.5%206.3%203.5%204.8%203.5c-.5%201-.6%202-.4%203A5%205%200%200%200%203%2010c0%204.5%202.5%205.5%205.5%206%200%200%20.5%201%20.5%202v4%22%2F%3E%3C%2Fsvg%3E"); }
+
+.VPNavBarMenu > .VPNavBarMenuLink > span,
+.VPNavBarMenu > .VPNavBarMenuGroup > .button .text > span:first-child,
+.VPNavScreenMenu > .VPNavScreenMenuLink > span,
+.VPNavScreenMenu > .VPNavScreenMenuGroup > .button > .button-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.VPNavBarMenu > .VPNavBarMenuLink > span::before,
+.VPNavBarMenu > .VPNavBarMenuGroup > .button .text > span:first-child::before,
+.VPNavScreenMenu > .VPNavScreenMenuLink > span::before,
+.VPNavScreenMenu > .VPNavScreenMenuGroup > .button > .button-text::before {
+  content: "";
+  display: inline-block;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  background-color: currentColor;
+  mask: var(--ugso-nav-icon) center / contain no-repeat;
+}
+:is(.VPNavBarMenu, .VPNavScreenMenu) > :is(:nth-child(7 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)), :nth-child(8 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup))) span::before {
+  background: var(--ugso-nav-icon) center / contain no-repeat;
+  mask: none;
+}
+/* Four compact columns avoid a long, scrolling HA menu on desktop. */
+@media (min-width: 768px) {
+  .VPNavBarMenu > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) > .menu {
+    right: auto;
+    left: -140px;
+  }
+  .VPNavBarMenu > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) .VPMenu {
+    width: min(900px, calc(100vw - 48px));
+  }
+  .VPNavBarMenu > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) .VPMenu > .items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .VPNavBarMenu > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) .VPMenu .VPMenuGroup {
+    margin: 0;
+    padding: 0 10px;
+    border-top: 0;
+  }
+  .VPNavBarMenu > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) .VPMenu .VPMenuGroup + .VPMenuGroup {
+    border-left: 1px solid var(--vp-c-divider);
+  }
+  .VPNavBarMenu > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) .VPMenu .link {
+    white-space: normal;
+    line-height: 1.4;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  .VPNavBarMenu > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) > .menu { left: -200px; }
+  .VPNavBarMenu > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) .VPMenu {
+    width: min(680px, calc(100vw - 48px));
+  }
+  .VPNavBarMenu > :nth-child(3 of :is(a, .VPNavBarMenuGroup, .VPNavScreenMenuGroup)) .VPMenu > .items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 0;
+  }
+}
