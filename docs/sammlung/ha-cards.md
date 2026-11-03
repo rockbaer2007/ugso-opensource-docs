@@ -10,6 +10,7 @@ Dieser Bereich ist für Lovelace- und HACS-Karten gedacht, die als deutsche Doku
 
 | Projekt | Doku-Status | Hinweis |
 | --- | --- | --- |
+| <img class="package-icon" src="/images/automation-status-card/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Automation Status Card](/projects/automation-status-card/) | Vollständig | 0.1.3: automatische Liste, Zeilenzahl/Scrollen, optionale Schalter, Checkbox-Auswahl und Lauf-/Trace-Diagnose. DE/EN/FR; auf HA 2026.10.4 geprüft. |
 | [Calendar Card Pro](./calendar-card-pro/) | Vollständig | Doku in DE/EN/FR mit Installation, Features, Referenz, Beispielen und Änderungsprüfung. |
 | [Mushroom Cards](./mushroom/) | Vollständig | Doku in DE/EN/FR mit Installation, Kartenübersicht, Beispielen und Änderungsprüfung. |
 | [flex-table-card](./flex-table-card/) | Vollständig | Doku in DE/EN/FR mit Installation, Referenz und Praxisbeispielen. |

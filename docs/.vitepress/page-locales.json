@@ -644,6 +644,21 @@
     "EN": "/en/projects/atlas/overview",
     "FR": "/fr/projects/atlas/overview"
   },
+  "/projects/automation-status-card/": {
+    "DE": "/projects/automation-status-card/",
+    "EN": "/en/projects/automation-status-card/",
+    "FR": "/fr/projects/automation-status-card/"
+  },
+  "/en/projects/automation-status-card/": {
+    "DE": "/projects/automation-status-card/",
+    "EN": "/en/projects/automation-status-card/",
+    "FR": "/fr/projects/automation-status-card/"
+  },
+  "/fr/projects/automation-status-card/": {
+    "DE": "/projects/automation-status-card/",
+    "EN": "/en/projects/automation-status-card/",
+    "FR": "/fr/projects/automation-status-card/"
+  },
   "/projects/blocks-for-ha/advanced": {
     "DE": "/projects/blocks-for-ha/advanced",
     "EN": "/en/projects/blocks-for-ha/advanced",

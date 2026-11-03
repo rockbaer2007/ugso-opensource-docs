@@ -2252,8 +2252,8 @@
       },
       "disposition": "supplemented",
       "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained. Overview status reviewed on 2026-10-27: existing documentation/current ATLAS use distinguished from future work; home navigation uses text links with EEP and preserves destinations.",
-      "source_sha256": "59af742a60e13e58d4829116d53d9891a0044984ace714be90d8fc232bdbe061",
-      "target_sha256": "9973956a7e14a88c733499b82ce4701972b1f1c33f5a1b69b5aed545b5734d89"
+      "source_sha256": "38d5fec984f011320230c5bd75d005e23ad912fb8da6e7df076c876cd6b1f561",
+      "target_sha256": "0dd8b39a4318c75adb18ed0c3b4e9ee13a807564eeee39d4a076740c02ecd1d2"
     },
     {
       "source": "sammlung/ha-dashboard.md",

@@ -134,12 +134,12 @@
       "source": "projects-mqtt/index.md",
       "target": "fr/projects-mqtt/index.md",
       "mode": "replace",
-      "source_sha256": "6c03d37ecd83bfcff5dcaf7c682ea2690eb2dc6fdb70dd2927fc40e5acdee093",
-      "target_sha256": "25868c0503a0a09a5277f56a525fa363310ae8833159271858fe65b165f224f6",
+      "source_sha256": "24f509335ce93657a897ce089d0a7b06a913100fba5eae643df72ae6661ccd3e",
+      "target_sha256": "546508625d0d2f49c6bfe83c6f1597868286b1a1caa49cbc103e610f795628cc",
       "source_code_blocks": 1,
       "target_code_blocks": 1,
-      "source_table_rows": 11,
-      "target_table_rows": 11
+      "source_table_rows": 12,
+      "target_table_rows": 12
     },
     {
       "source": "projects/fritzbox-to-mqtt/beispiele.md",
@@ -1201,12 +1201,12 @@
       "source": "sammlung/ha-cards.md",
       "target": "fr/collection/ha-cards.md",
       "mode": "replace",
-      "source_sha256": "59af742a60e13e58d4829116d53d9891a0044984ace714be90d8fc232bdbe061",
-      "target_sha256": "61150aa4d2aaeb8eef55ec8579549ba5fa246013cddbd6e6c2386b7cf1b522e8",
+      "source_sha256": "38d5fec984f011320230c5bd75d005e23ad912fb8da6e7df076c876cd6b1f561",
+      "target_sha256": "fe3e659bc4f034900d1df8b27d3ba1d33508c2a2a9aea07d3237eaeed5832487",
       "source_code_blocks": 0,
       "target_code_blocks": 0,
-      "source_table_rows": 7,
-      "target_table_rows": 7
+      "source_table_rows": 8,
+      "target_table_rows": 8
     },
     {
       "source": "sammlung/ha-dashboard.md",

@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 233 | 0 | 0 | 0 |
-| EN | 233 | 0 | 0 | 0 |
-| FR | 233 | 0 | 0 | 0 |
+| DE | 234 | 0 | 0 | 0 |
+| EN | 234 | 0 | 0 | 0 |
+| FR | 234 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -78,6 +78,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Content present](/en/projects/atlas/tablet-test) | [Content present](/fr/projects/atlas/tablet-test) |
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Content present](/en/projects/atlas/tablet-uix-dauertest) | [Content present](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Content present](/en/projects/atlas/overview) | [Content present](/fr/projects/atlas/overview) |
+| [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Content present](/en/projects/automation-status-card/) | [Content present](/fr/projects/automation-status-card/) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Content present](/en/projects/blocks-for-ha/advanced) | [Content present](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Content present](/en/projects/blocks-for-ha/blockly-audit) | [Content present](/fr/projects/blocks-for-ha/blockly-audit) |
 | [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Content present](/en/projects/blocks-for-ha/blocks) | [Content present](/fr/projects/blocks-for-ha/blocks) |

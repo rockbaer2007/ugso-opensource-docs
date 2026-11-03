@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 233 | 0 | 0 | 0 |
-| EN | 233 | 0 | 0 | 0 |
-| FR | 233 | 0 | 0 | 0 |
+| DE | 234 | 0 | 0 | 0 |
+| EN | 234 | 0 | 0 | 0 |
+| FR | 234 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -78,6 +78,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Inhalt vorhanden](/en/projects/atlas/tablet-test) | [Inhalt vorhanden](/fr/projects/atlas/tablet-test) |
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Inhalt vorhanden](/en/projects/atlas/tablet-uix-dauertest) | [Inhalt vorhanden](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Inhalt vorhanden](/en/projects/atlas/overview) | [Inhalt vorhanden](/fr/projects/atlas/overview) |
+| [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Inhalt vorhanden](/en/projects/automation-status-card/) | [Inhalt vorhanden](/fr/projects/automation-status-card/) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Inhalt vorhanden](/en/projects/blocks-for-ha/advanced) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Inhalt vorhanden](/en/projects/blocks-for-ha/blockly-audit) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/blockly-audit) |
 | [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Inhalt vorhanden](/en/projects/blocks-for-ha/blocks) | [Inhalt vorhanden](/fr/projects/blocks-for-ha/blocks) |

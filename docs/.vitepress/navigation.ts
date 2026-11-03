@@ -27,7 +27,7 @@ export function reorganizeNavigation(
   return [
     source[0],
     byText('EEP'),
-    { text: text.apps, activeMatch: '^' + prefix + '/(?:projects-mqtt/|projects/(?:sidebar-manager|sidebar-colors|dashboard-user-manager|mqtt-client|blocks-for-ha|grafik-visual-studio|callmebot|callmebot-signal|fritzbox-to-mqtt|heizoel-to-mqtt|parcel-to-mqtt)/)', items: apps },
+    { text: text.apps, activeMatch: '^' + prefix + '/(?:projects-mqtt/|projects/(?:automation-status-card|sidebar-manager|sidebar-colors|dashboard-user-manager|mqtt-client|blocks-for-ha|grafik-visual-studio|callmebot|callmebot-signal|fritzbox-to-mqtt|heizoel-to-mqtt|parcel-to-mqtt)/)', items: apps },
     { text: 'ATLAS', activeMatch: '^' + prefix + '/projects/atlas(?:-plugins)?/', items: [
       { items: links(`${prefix}/projects/atlas/`) },
       { text: 'ATLAS Plugins', items: links(`${prefix}/projects/atlas-plugins/`) }

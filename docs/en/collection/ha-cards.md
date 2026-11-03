@@ -10,6 +10,7 @@ This section is for Lovelace and HACS cards that are maintained with examples.
 
 | Project | Documentation status | Note |
 | --- | --- | --- |
+| <img class="package-icon" src="/images/automation-status-card/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Automation Status Card](/en/projects/automation-status-card/) | Complete | 0.1.3: automatic list, configurable rows/scrolling, optional controls, checkbox selection and run/trace diagnostics. DE/EN/FR; verified on HA 2026.10.4. |
 | [Bubble Card](https://github.com/Clooos/Bubble-Card/blob/main/i18n/README.de.md) | German available upstream | External German README maintained in the Bubble Card project, linked here instead of duplicated. |
 | [Calendar Card Pro](./calendar-card-pro/) | Complete | Documentation in DE/EN/FR with installation, features, reference, examples and upstream change checks. |
 | [Mushroom Cards](./mushroom/) | Complete | Documentation in DE/EN/FR with installation, card overview, examples and upstream change checks. |

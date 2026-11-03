@@ -16,9 +16,9 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 233 | 0 | 0 | 0 |
-| EN | 233 | 0 | 0 | 0 |
-| FR | 233 | 0 | 0 | 0 |
+| DE | 234 | 0 | 0 | 0 |
+| EN | 234 | 0 | 0 | 0 |
+| FR | 234 | 0 | 0 | 0 |
 
 **Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).
 
@@ -78,6 +78,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Contenu présent](/en/projects/atlas/tablet-test) | [Contenu présent](/fr/projects/atlas/tablet-test) |
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Contenu présent](/en/projects/atlas/tablet-uix-dauertest) | [Contenu présent](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Contenu présent](/en/projects/atlas/overview) | [Contenu présent](/fr/projects/atlas/overview) |
+| [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Contenu présent](/en/projects/automation-status-card/) | [Contenu présent](/fr/projects/automation-status-card/) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Contenu présent](/en/projects/blocks-for-ha/advanced) | [Contenu présent](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Contenu présent](/en/projects/blocks-for-ha/blockly-audit) | [Contenu présent](/fr/projects/blocks-for-ha/blockly-audit) |
 | [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Contenu présent](/en/projects/blocks-for-ha/blocks) | [Contenu présent](/fr/projects/blocks-for-ha/blocks) |
