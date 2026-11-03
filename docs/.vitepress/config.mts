@@ -1250,9 +1250,6 @@ export default defineConfig({
 
     sidebar: sidebarDe,
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/rockbaer2007' }
-    ],
 
     search: {
       provider: 'local',

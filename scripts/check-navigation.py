@@ -9,6 +9,7 @@ html = (root / 'index.html').read_text(encoding='utf-8')
 match = re.search(r'__VP_SITE_DATA__=JSON.parse\(("(?:\\.|[^"\\])*")\)', html)
 assert match, 'Built site metadata missing'
 data = json.loads(json.loads(match[1]))
+assert not data['themeConfig'].get('socialLinks'), 'GitHub must only appear once, in the main menu'
 errors = []
 count = 0
 
