@@ -3,7 +3,7 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.16 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.17 {#mqtt-client-0-1-16}
 
 Le client MQTT transmet des appareils, des états et des attributs sélectionnés depuis Home Assistant vers un broker MQTT externe, comme par exemple l'adaptateur MQTT d'ioBroker. Au lieu de répliquer toutes les entités HA, vous sélectionnez vous-même les valeurs dont vous avez besoin. Le broker HA existant demeure en place. L'application lit les données directement depuis HA ; il ne s'agit pas d'un pont entre brokers (bridge).
 
@@ -17,6 +17,14 @@ Le client MQTT transmet des appareils, des états et des attributs sélectionné
 5. Sélectionner les valeurs et attributs souhaités. La case à cocher située à droite d'une ligne de valeur permet de transférer l'état ainsi que tous les attributs associés ; la sélection de l'appareil permet quant à elle d'inclure toutes les valeurs de celui-ci.
 
 Les modifications sont appliquées immédiatement. Aucun jeton d'accès (access token) HA supplémentaire n'est requis : l'application utilise l'accès « Supervisor » pour interagir avec l'API HA Core. En cas d'utilisation de plusieurs instances, veillez à employer des identifiants client (client IDs) et des préfixes de sujet (topic prefixes) distincts.
+
+## Transmettre les états avec une étiquette Home Assistant {#weiterleitung-per-label}
+
+Créez dans Home Assistant une étiquette **Transmettre au client MQTT**. Saisissez son identifiant, par exemple `an_mqtt_client_weiterleiten`, dans le champ **HA-Label-ID für Zustandsweiterleitung** du client MQTT. Ouvrez les paramètres de l’entité, choisissez **Ajouter une étiquette**, puis enregistrez.
+
+Le client vérifie les associations selon l’intervalle d’interrogation configuré. L’étiquette transmet l’état. Utilisez la sélection manuelle pour les attributs et les commandes. Le retrait de l’étiquette arrête la transmission automatique. Les entités sélectionnées manuellement restent actives. Le nettoyage des topics persistants permet de supprimer la dernière valeur MQTT mémorisée si nécessaire.
+
+Essai effectué sur Home Assistant `.177` avec un broker MQTT séparé. Après l’ajout de l’étiquette, le broker a reçu `off` et `on`. Après son retrait, le changement d’état suivant n’a plus été envoyé. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
 
 ## Transmission en temps réel et état {#live-ubertragung-und-status}
 

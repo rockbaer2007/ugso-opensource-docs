@@ -3,7 +3,7 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.16
+# MQTT-Client 0.1.17 {#mqtt-client-0-1-16}
 
 MQTT-Client sends selected Home Assistant devices, states and attributes to an external MQTT broker, such as ioBroker's MQTT adapter. Choose the values you need instead of mirroring the entire HA inventory. The existing HA broker remains in place. The app reads HA directly; it is not a broker bridge.
 
@@ -18,6 +18,14 @@ MQTT-Client sends selected Home Assistant devices, states and attributes to an e
 5. Select the states and attributes to transfer. The checkbox on the right of a value row includes the state and all attributes; device-wide selection can include every value of that device.
 
 Changes apply immediately. No additional HA access token is required: the app uses Supervisor access to the HA Core API. Use different client IDs and topic prefixes for multiple instances.
+
+## Forward states using a Home Assistant label {#weiterleitung-per-label}
+
+Create a Home Assistant label named **Forward to MQTT Client**. Enter its ID, for example `an_mqtt_client_weiterleiten`, in the MQTT Client setting **HA-Label-ID für Zustandsweiterleitung**. Open the entity settings, choose **Add label**, and save.
+
+The client checks assignments at the configured polling interval. The label forwards the state. Use manual selection for attributes and commands. Removing the label stops automatic forwarding, while manually selected entities remain active. Use retained topic cleanup to remove the last stored MQTT value if needed.
+
+Tested on Home Assistant `.177` with a separate MQTT broker. After adding the label, the broker received `off` and `on`. After removing it, the next state change was no longer sent. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
 
 ## Live transfer and status
 

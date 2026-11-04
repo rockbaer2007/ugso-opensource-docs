@@ -3,7 +3,7 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.16
+# MQTT-Client 0.1.17 {#mqtt-client-0-1-16}
 
 MQTT-Client überträgt ausgewählte Geräte, Zustände und Attribute aus Home Assistant an einen externen MQTT-Broker, beispielsweise den MQTT-Adapter von ioBroker. Statt sämtliche HA-Entitäten zu spiegeln, wählst du die benötigten Werte selbst aus. Der vorhandene HA-Broker bleibt bestehen. Die App liest direkt aus HA; sie ist keine Broker-Bridge.
 
@@ -18,6 +18,14 @@ MQTT-Client überträgt ausgewählte Geräte, Zustände und Attribute aus Home A
 5. Die gewünschten Werte und Attribute auswählen. Das Kontrollkästchen rechts in einer Wertzeile überträgt den Zustand einschließlich aller Attribute; die Geräteauswahl kann sämtliche Werte des Geräts übernehmen.
 
 Änderungen werden unmittelbar übernommen. Ein zusätzlicher HA-Zugriffstoken ist nicht nötig: Die App verwendet den Supervisor-Zugang zur HA-Core-API. Für mehrere Instanzen unterschiedliche Client-IDs und Themenpräfixe verwenden.
+
+## Weiterleitung per Home-Assistant-Label {#weiterleitung-per-label}
+
+Lege in Home Assistant das Label **An MQTT-Client weiterleiten** an. Trage seine ID, zum Beispiel `an_mqtt_client_weiterleiten`, im MQTT-Client unter **HA-Label-ID für Zustandsweiterleitung** ein. Öffne die Einstellungen der gewünschten Entität, wähle **Label hinzufügen** und speichere die Zuordnung.
+
+Der Client prüft die Zuordnung im eingestellten Polling-Intervall. Das Label sendet den Zustand. Attribute und Rückbefehle werden über die manuelle Auswahl eingerichtet. Beim Entfernen des Labels endet die automatische Weiterleitung, manuell ausgewählte Entitäten bleiben aktiv. Den letzten gespeicherten MQTT-Wert kannst du bei Bedarf über die Retain-Bereinigung entfernen.
+
+Auf Home Assistant `.177` mit einem separaten MQTT-Broker geprüft: Nach dem Hinzufügen kamen `off` und `on` an. Nach dem Entfernen wurde die nächste Zustandsänderung nicht mehr gesendet. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
 
 ## Live-Übertragung und Status
 
