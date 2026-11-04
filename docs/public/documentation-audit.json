@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 234,
+  "source_pages": 235,
   "summary": {
     "de": {
-      "content-present": 234,
-      "existing_pages": 234,
+      "content-present": 235,
+      "existing_pages": 235,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 234,
-      "existing_pages": 234,
+      "content-present": 235,
+      "existing_pages": 235,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 234,
-      "existing_pages": 234,
+      "content-present": 235,
+      "existing_pages": 235,
       "unmatched_pages": 0,
       "review_signals": 30,
       "reviewed_findings": 47,
@@ -814,6 +814,55 @@
           "sha256": "7bf158e2e493227255df750b902a55fb0c089e4d80ae411d95639b770a85f939",
           "words": 67,
           "headings": 0,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "iobroker/widgets/ugso-spezial/index.md",
+      "locales": {
+        "de": {
+          "path": "iobroker/widgets/ugso-spezial/index.md",
+          "status": "content-present",
+          "sha256": "b7542e523900a76702a2d6b54486cd3c57eb5e6235b80717be9115938a381328",
+          "words": 226,
+          "headings": 3,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/iobroker/widgets/ugso-spezial/index.md",
+          "status": "content-present",
+          "sha256": "f72bf945a6edd56db85a74f4cbc6d3e17e24db7416ad02ac4072640373008b33",
+          "words": 226,
+          "headings": 3,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/iobroker/widgets/ugso-spezial/index.md",
+          "status": "content-present",
+          "sha256": "8fc1f8e4ca2eecf380abcd94bc3781984acd323f5342bb682576622c8c4b35f7",
+          "words": 270,
+          "headings": 3,
           "examples": 0,
           "versions": [],
           "unresolved_local_references": [],

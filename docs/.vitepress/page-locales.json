@@ -224,6 +224,21 @@
     "EN": "/en/",
     "FR": "/fr/"
   },
+  "/iobroker/widgets/ugso-spezial/": {
+    "DE": "/iobroker/widgets/ugso-spezial/",
+    "EN": "/en/iobroker/widgets/ugso-spezial/",
+    "FR": "/fr/iobroker/widgets/ugso-spezial/"
+  },
+  "/en/iobroker/widgets/ugso-spezial/": {
+    "DE": "/iobroker/widgets/ugso-spezial/",
+    "EN": "/en/iobroker/widgets/ugso-spezial/",
+    "FR": "/fr/iobroker/widgets/ugso-spezial/"
+  },
+  "/fr/iobroker/widgets/ugso-spezial/": {
+    "DE": "/iobroker/widgets/ugso-spezial/",
+    "EN": "/en/iobroker/widgets/ugso-spezial/",
+    "FR": "/fr/iobroker/widgets/ugso-spezial/"
+  },
   "/projects-diverse/": {
     "DE": "/projects-diverse/",
     "EN": "/en/projects-diverse/",

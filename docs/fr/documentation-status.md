@@ -16,9 +16,9 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 234 | 0 | 0 | 0 |
-| EN | 234 | 0 | 0 | 0 |
-| FR | 234 | 0 | 0 | 0 |
+| DE | 235 | 0 | 0 | 0 |
+| EN | 235 | 0 | 0 | 0 |
+| FR | 235 | 0 | 0 | 0 |
 
 **Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).
 
@@ -50,6 +50,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Contenu présent](/en/eep/projektduplicator-2026/) | [Contenu présent](/fr/eep/projektduplicator-2026/) |
 | [impressum/index.md](/impressum/) | [Contenu présent](/en/impressum/) | [Contenu présent](/fr/impressum/) |
 | [index.md](/) | [Contenu présent](/en/) | [Contenu présent](/fr/) |
+| [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Contenu présent](/en/iobroker/widgets/ugso-spezial/) | [Contenu présent](/fr/iobroker/widgets/ugso-spezial/) |
 | [projects-diverse/index.md](/projects-diverse/) | [Contenu présent](/en/projects-diverse/) | [Contenu présent](/fr/projects-diverse/) |
 | [projects-mqtt/index.md](/projects-mqtt/) | [Contenu présent](/en/projects-mqtt/) | [Contenu présent](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Contenu présent](/en/projects/atlas-plugins/automation-extractor) | [Contenu présent](/fr/projects/atlas-plugins/automation-extractor) |

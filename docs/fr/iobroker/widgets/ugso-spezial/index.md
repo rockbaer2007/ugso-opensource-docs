@@ -1,0 +1,23 @@
+---
+title: UGSo Spezial
+description: Lignes SVG animées et nœuds de sommation pour ioBroker VIS 2.
+---
+
+# UGSo Spezial
+
+**UGSo Spezial** permet de visualiser des flux de données dans VIS 2, par exemple la puissance de plusieurs appareils. Le pack contient deux widgets.
+
+## Widgets
+
+- **SVG-Line** relie des points par un tracé droit, à angle droit ou passant par des points intermédiaires. Les couleurs, les longueurs des tirets et les pointes de flèche sont réglables. Une valeur positive anime la ligne vers l’avant, une valeur négative inverse le sens et une valeur nulle arrête l’animation. La vitesse peut être fixe ou proportionnelle à la valeur absolue.
+- **SVG LineBox** additionne jusqu’à quatre entrées et une valeur de correction facultative. Le total peut être transmis à deux lignes de sortie au maximum ou écrit, dans la vue d’exécution, dans un état numérique existant et modifiable sous `0_userdata.0`. Si une entrée sélectionnée est indisponible, le nœud attend sa valeur.
+
+Dans l’éditeur, faites glisser une extrémité jaune pour l’aimanter à une autre ligne ou à une LineBox. Une extrémité munie d’une flèche ne peut pas s’aimanter. L’aimantation aligne le dessin ; le transfert des valeurs se configure séparément dans la LineBox.
+
+## Installation
+
+Une installation VIS 2 opérationnelle est nécessaire. Installez le pack via son URL GitHub dans ioBroker Admin (mode expert). Après une mise à jour, redémarrez VIS 2 pour charger la nouvelle version. Les deux widgets figurent dans la palette de l’éditeur sous **UGSo Spezial**.
+
+- [GitHub](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-spezial)
+- [Releases](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-spezial/releases)
+- [npm](https://www.npmjs.com/package/iobroker.vis-2-widgets-ugso-spezial)

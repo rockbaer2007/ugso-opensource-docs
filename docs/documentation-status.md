@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 234 | 0 | 0 | 0 |
-| EN | 234 | 0 | 0 | 0 |
-| FR | 234 | 0 | 0 | 0 |
+| DE | 235 | 0 | 0 | 0 |
+| EN | 235 | 0 | 0 | 0 |
+| FR | 235 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -50,6 +50,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Inhalt vorhanden](/en/eep/projektduplicator-2026/) | [Inhalt vorhanden](/fr/eep/projektduplicator-2026/) |
 | [impressum/index.md](/impressum/) | [Inhalt vorhanden](/en/impressum/) | [Inhalt vorhanden](/fr/impressum/) |
 | [index.md](/) | [Inhalt vorhanden](/en/) | [Inhalt vorhanden](/fr/) |
+| [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Inhalt vorhanden](/en/iobroker/widgets/ugso-spezial/) | [Inhalt vorhanden](/fr/iobroker/widgets/ugso-spezial/) |
 | [projects-diverse/index.md](/projects-diverse/) | [Inhalt vorhanden](/en/projects-diverse/) | [Inhalt vorhanden](/fr/projects-diverse/) |
 | [projects-mqtt/index.md](/projects-mqtt/) | [Inhalt vorhanden](/en/projects-mqtt/) | [Inhalt vorhanden](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Inhalt vorhanden](/en/projects/atlas-plugins/automation-extractor) | [Inhalt vorhanden](/fr/projects/atlas-plugins/automation-extractor) |

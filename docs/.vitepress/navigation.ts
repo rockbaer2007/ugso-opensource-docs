@@ -64,6 +64,11 @@ export function reorganizeNavigation(
       { items: links(`${prefix}/projects/atlas/`) },
       { text: 'ATLAS Plugins', items: links(`${prefix}/projects/atlas-plugins/`) }
     ] },
+    { text: 'ioBroker', activeMatch: '^' + prefix + '/iobroker/', items: [
+      { text: 'Widgets', items: [
+        { text: 'UGSo Spezial', link: `${prefix}/iobroker/widgets/ugso-spezial/` }
+      ] }
+    ] },
     source.find(item => 'link' in item && item.link.startsWith('https://visualstudio.ugso-software.de/'))!,
     { text: text.diverse, activeMatch: '^' + prefix + '/(?:(?:sammlung|collection)/(?:$|weitere-beispiele|interesting-examples)|blog/)', items: [
       { text: text.collection, items: [overview(''), collectionLink(locale === 'de' ? 'weitere-beispiele' : 'interesting-examples')] },
