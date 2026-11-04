@@ -24,7 +24,16 @@ Les modifications sont appliquées immédiatement. Aucun jeton d'accès (access 
 
 *Exemple dans Home Assistant : l’étiquette s’appelle « zu mqtt client ». Saisissez dans le client MQTT l’identifiant de l’étiquette que vous avez créée.*
 
-Créez dans Home Assistant une étiquette **Transmettre au client MQTT**. Saisissez son identifiant, par exemple `an_mqtt_client_weiterleiten`, dans le champ **HA-Label-ID für Zustandsweiterleitung** du client MQTT. Ouvrez les paramètres de l’entité, choisissez **Ajouter une étiquette**, puis enregistrez.
+1. **Créez l’étiquette :** Dans Home Assistant, ouvrez **Paramètres → Zones, étiquettes et zones géographiques → Étiquettes**. Créez **zu mqtt client**, comme sur la capture.
+2. **Relevez l’identifiant :** Ouvrez **Paramètres → Outils → Modèle** (**Outils de développement → Modèle** dans les anciennes versions). Collez le modèle ci-dessous et copiez le résultat, par exemple `zu_mqtt_client`.
+3. **Saisissez l’identifiant dans le client MQTT :** Ouvrez **MQTT-Client** dans la barre latérale de Home Assistant. Dépliez **Übertragung und TLS** (Transmission et TLS). Collez le résultat dans **HA-Label-ID für Zustandsweiterleitung**, juste sous **Topic-Präfix**, puis cliquez sur **Speichern und verbinden** (Enregistrer et connecter).
+4. **Attribuez l’étiquette :** Ouvrez **Paramètres → Appareils et services → Entités**, sélectionnez l’entité et ouvrez ses paramètres avec la roue dentée. Choisissez **Ajouter une étiquette → zu mqtt client**, puis cliquez sur **Mettre à jour**.
+
+```jinja
+{{ label_id("zu mqtt client") }}
+```
+
+[Home Assistant · label_id](https://www.home-assistant.io/template-functions/label_id/)
 
 Le client vérifie les associations selon l’intervalle d’interrogation configuré. L’étiquette transmet l’état. Utilisez la sélection manuelle pour les attributs et les commandes. Le retrait de l’étiquette arrête la transmission automatique. Les entités sélectionnées manuellement restent actives. Le nettoyage des topics persistants permet de supprimer la dernière valeur MQTT mémorisée si nécessaire.
 

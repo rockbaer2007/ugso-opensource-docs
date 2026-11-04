@@ -6870,10 +6870,10 @@
         "de": {
           "path": "projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "b805dd8aa07d5118528fc450157f5b334e0f5d1ff6dd5341317a5fa601fc787b",
-          "words": 1031,
+          "sha256": "dd4f99a06cb4057edf2370368119d00121b21853768a87cf828c7f58b80a27ae",
+          "words": 1120,
           "headings": 9,
-          "examples": 0,
+          "examples": 1,
           "versions": [
             "0.1.15",
             "0.1.16",
@@ -6884,10 +6884,10 @@
         "en": {
           "path": "en/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "9f08a401b9de2de5f8a06cfdbe4a4822b1b4dba3526f4acc4f3671fef0a38ff0",
-          "words": 1039,
+          "sha256": "70e1f2af0ca2499b7de2b0a2b47cc6bfc536d8f7ec9be7f27c17cc8c9fed9727",
+          "words": 1135,
           "headings": 9,
-          "examples": 0,
+          "examples": 1,
           "versions": [
             "0.1.15",
             "0.1.16",
@@ -6905,10 +6905,10 @@
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "116a1695718365acbb4ec59b2a3c5641fba6709a93b99513839a55b2594f9c64",
-          "words": 1533,
+          "sha256": "72f56c2e7699506a576378cdbd31ac49bc7382e597fbd603c1308497bf9197c7",
+          "words": 1637,
           "headings": 9,
-          "examples": 0,
+          "examples": 1,
           "versions": [
             "0.1.15",
             "0.1.16",
