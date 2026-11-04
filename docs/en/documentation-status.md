@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 235 | 0 | 0 | 0 |
-| EN | 235 | 0 | 0 | 0 |
-| FR | 235 | 0 | 0 | 0 |
+| DE | 236 | 0 | 0 | 0 |
+| EN | 236 | 0 | 0 | 0 |
+| FR | 236 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -50,6 +50,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Content present](/en/eep/projektduplicator-2026/) | [Content present](/fr/eep/projektduplicator-2026/) |
 | [impressum/index.md](/impressum/) | [Content present](/en/impressum/) | [Content present](/fr/impressum/) |
 | [index.md](/) | [Content present](/en/) | [Content present](/fr/) |
+| [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Content present](/en/iobroker/publish-assistant/) | [Content present](/fr/iobroker/publish-assistant/) |
 | [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Content present](/en/iobroker/widgets/ugso-spezial/) | [Content present](/fr/iobroker/widgets/ugso-spezial/) |
 | [projects-diverse/index.md](/projects-diverse/) | [Content present](/en/projects-diverse/) | [Content present](/fr/projects-diverse/) |
 | [projects-mqtt/index.md](/projects-mqtt/) | [Content present](/en/projects-mqtt/) | [Content present](/fr/projects-mqtt/) |

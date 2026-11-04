@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 235,
+  "source_pages": 236,
   "summary": {
     "de": {
-      "content-present": 235,
-      "existing_pages": 235,
+      "content-present": 236,
+      "existing_pages": 236,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 235,
-      "existing_pages": 235,
+      "content-present": 236,
+      "existing_pages": 236,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 235,
-      "existing_pages": 235,
+      "content-present": 236,
+      "existing_pages": 236,
       "unmatched_pages": 0,
       "review_signals": 30,
       "reviewed_findings": 47,
@@ -816,6 +816,61 @@
           "headings": 0,
           "examples": 0,
           "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "iobroker/publish-assistant/index.md",
+      "locales": {
+        "de": {
+          "path": "iobroker/publish-assistant/index.md",
+          "status": "content-present",
+          "sha256": "6066238de12d10e1c2049e3394624dd4fdc14e11750d40883dcfa4b1d5e0cd4f",
+          "words": 83,
+          "headings": 1,
+          "examples": 0,
+          "versions": [
+            "0.2.0"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/iobroker/publish-assistant/index.md",
+          "status": "content-present",
+          "sha256": "25242ee389a0e15c2a9a1f3490e2a4bc6dd21af3f1f2841fda6cd5aed8ce73da",
+          "words": 88,
+          "headings": 1,
+          "examples": 0,
+          "versions": [
+            "0.2.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/iobroker/publish-assistant/index.md",
+          "status": "content-present",
+          "sha256": "54603863af6daf9b8d17083373e54aed53be657b344f24adefb35da2dc1705b5",
+          "words": 100,
+          "headings": 1,
+          "examples": 0,
+          "versions": [
+            "0.2.0"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],

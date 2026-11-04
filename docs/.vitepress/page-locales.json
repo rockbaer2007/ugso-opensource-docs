@@ -224,6 +224,21 @@
     "EN": "/en/",
     "FR": "/fr/"
   },
+  "/iobroker/publish-assistant/": {
+    "DE": "/iobroker/publish-assistant/",
+    "EN": "/en/iobroker/publish-assistant/",
+    "FR": "/fr/iobroker/publish-assistant/"
+  },
+  "/en/iobroker/publish-assistant/": {
+    "DE": "/iobroker/publish-assistant/",
+    "EN": "/en/iobroker/publish-assistant/",
+    "FR": "/fr/iobroker/publish-assistant/"
+  },
+  "/fr/iobroker/publish-assistant/": {
+    "DE": "/iobroker/publish-assistant/",
+    "EN": "/en/iobroker/publish-assistant/",
+    "FR": "/fr/iobroker/publish-assistant/"
+  },
   "/iobroker/widgets/ugso-spezial/": {
     "DE": "/iobroker/widgets/ugso-spezial/",
     "EN": "/en/iobroker/widgets/ugso-spezial/",

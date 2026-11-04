@@ -47,7 +47,10 @@ for locale, config in data['locales'].items():
     assert nav[4]['text'] == 'ioBroker'
     assert nav[4]['items'] == [{'text': 'Widgets', 'items': [
         {'text': 'UGSo Spezial', 'link': f'{prefix}/iobroker/widgets/ugso-spezial/'}
-    ]}]
+    ]}, {
+        'text': {'root': 'Veröffentlichungsassistent', 'en': 'Publishing Assistant', 'fr': 'Assistant de publication'}[locale],
+        'link': f'{prefix}/iobroker/publish-assistant/'
+    }]
     assert any(group['text'] == 'Blog' for group in nav[6]['items']), f'{locale}: independent Blog menu missing'
 
 assert not errors, '\n'.join(errors)

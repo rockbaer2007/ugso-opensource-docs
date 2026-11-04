@@ -67,7 +67,8 @@ export function reorganizeNavigation(
     { text: 'ioBroker', activeMatch: '^' + prefix + '/iobroker/', items: [
       { text: 'Widgets', items: [
         { text: 'UGSo Spezial', link: `${prefix}/iobroker/widgets/ugso-spezial/` }
-      ] }
+      ] },
+      { text: { de: 'Veröffentlichungsassistent', en: 'Publishing Assistant', fr: 'Assistant de publication' }[locale], link: `${prefix}/iobroker/publish-assistant/` }
     ] },
     source.find(item => 'link' in item && item.link.startsWith('https://visualstudio.ugso-software.de/'))!,
     { text: text.diverse, activeMatch: '^' + prefix + '/(?:(?:sammlung|collection)/(?:$|weitere-beispiele|interesting-examples)|blog/)', items: [
