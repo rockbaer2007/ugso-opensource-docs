@@ -20,6 +20,10 @@ Les modifications sont appliquées immédiatement. Aucun jeton d'accès (access 
 
 ## Transmettre les états avec une étiquette Home Assistant {#weiterleitung-per-label}
 
+![Dialogue Home Assistant de création d’une étiquette](/images/projects/mqtt-client/ha-label-erstellen.png)
+
+*Exemple dans Home Assistant : l’étiquette s’appelle « zu mqtt client ». Saisissez dans le client MQTT l’identifiant de l’étiquette que vous avez créée.*
+
 Créez dans Home Assistant une étiquette **Transmettre au client MQTT**. Saisissez son identifiant, par exemple `an_mqtt_client_weiterleiten`, dans le champ **HA-Label-ID für Zustandsweiterleitung** du client MQTT. Ouvrez les paramètres de l’entité, choisissez **Ajouter une étiquette**, puis enregistrez.
 
 Le client vérifie les associations selon l’intervalle d’interrogation configuré. L’étiquette transmet l’état. Utilisez la sélection manuelle pour les attributs et les commandes. Le retrait de l’étiquette arrête la transmission automatique. Les entités sélectionnées manuellement restent actives. Le nettoyage des topics persistants permet de supprimer la dernière valeur MQTT mémorisée si nécessaire.

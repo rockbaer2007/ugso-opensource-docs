@@ -21,6 +21,10 @@ MQTT-Client überträgt ausgewählte Geräte, Zustände und Attribute aus Home A
 
 ## Weiterleitung per Home-Assistant-Label {#weiterleitung-per-label}
 
+![Home Assistant: Dialog zum Anlegen eines neuen Labels](/images/projects/mqtt-client/ha-label-erstellen.png)
+
+*Beispiel in Home Assistant: Das Label heißt hier „zu mqtt client“. Verwende im MQTT-Client die ID des Labels, das du angelegt hast.*
+
 Lege in Home Assistant das Label **An MQTT-Client weiterleiten** an. Trage seine ID, zum Beispiel `an_mqtt_client_weiterleiten`, im MQTT-Client unter **HA-Label-ID für Zustandsweiterleitung** ein. Öffne die Einstellungen der gewünschten Entität, wähle **Label hinzufügen** und speichere die Zuordnung.
 
 Der Client prüft die Zuordnung im eingestellten Polling-Intervall. Das Label sendet den Zustand. Attribute und Rückbefehle werden über die manuelle Auswahl eingerichtet. Beim Entfernen des Labels endet die automatische Weiterleitung, manuell ausgewählte Entitäten bleiben aktiv. Den letzten gespeicherten MQTT-Wert kannst du bei Bedarf über die Retain-Bereinigung entfernen.

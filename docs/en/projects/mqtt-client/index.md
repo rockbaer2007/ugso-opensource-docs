@@ -21,6 +21,10 @@ Changes apply immediately. No additional HA access token is required: the app us
 
 ## Forward states using a Home Assistant label {#weiterleitung-per-label}
 
+![Home Assistant dialog for creating a new label](/images/projects/mqtt-client/ha-label-erstellen.png)
+
+*Home Assistant example: the label is named “zu mqtt client”. Enter the ID of the label you created in the MQTT Client.*
+
 Create a Home Assistant label named **Forward to MQTT Client**. Enter its ID, for example `an_mqtt_client_weiterleiten`, in the MQTT Client setting **HA-Label-ID für Zustandsweiterleitung**. Open the entity settings, choose **Add label**, and save.
 
 The client checks assignments at the configured polling interval. The label forwards the state. Use manual selection for attributes and commands. Removing the label stops automatic forwarding, while manually selected entities remain active. Use retained topic cleanup to remove the last stored MQTT value if needed.
