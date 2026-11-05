@@ -4,6 +4,12 @@ description: Folders, colors, opacity and links in the Home Assistant sidebar. V
 ---
 # Sidebar Manager
 
+::: warning Known finding on HA 2026.11
+Review on .177, 2026-11-05: sidebar, groups, native edit dialog, swatches and color picker load. **Text/icon colors are missing from native edit-dialog row previews.** Color application still searches for removed `ha-md-list-item`; HA now uses `ha-list-item-button`. Stored settings were not deleted. A fix has not yet been published.
+:::
+
+[Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).
+
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
 

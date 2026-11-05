@@ -1,5 +1,9 @@
 # Geprüfte Plugins
 
+**HA 2026.11, 05.11.2026:** Hub und Oberflächen aller sechs Plugins auf .177 geprüft. Card Editor verbindet sich mit HA; File Studio lädt die Pfade, der Automation Exporter liest nach Sicherung, die Icon Bibliothek lädt MDI und Icon Studio die SVG-Oberfläche. **ATLAS Terminal funktioniert laut Anwenderbestätigung.** Dies erweitert die Grundprüfung, ändert jedoch keine experimentellen Produktstatus und ersetzt keine Prüfung sämtlicher Funktionen.
+
+[Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
+
 Diese Seite sammelt ATLAS-Plugins, die sichtbar empfohlen oder als neue externe Einreichung beobachtet werden. Geprüfte Plugins wurden mindestens auf Manifest, Start-URL, Icon, offensichtliche Secret-Leaks und unsichere Pfadfreigaben kontrolliert.
 
 ::: warning Hinweis

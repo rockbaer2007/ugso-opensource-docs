@@ -4,6 +4,12 @@ description: Dossiers, couleurs, opacité et liens dans la barre latérale Home 
 ---
 # Sidebar Manager
 
+::: warning Problème connu sous HA 2026.11
+Vérification sur .177 le 05/11/2026 : barre latérale, groupes, dialogue natif, champs de couleur et sélecteur chargés. **Les couleurs du texte/des icônes sont absentes de l’aperçu des lignes du dialogue natif.** L’application des couleurs recherche encore `ha-md-list-item`, supprimé ; HA utilise désormais `ha-list-item-button`. Paramètres enregistrés conservés. Aucun correctif encore publié.
+:::
+
+[Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).
+
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
 **0.1.8 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**

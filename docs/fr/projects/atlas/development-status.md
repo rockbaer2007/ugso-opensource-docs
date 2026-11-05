@@ -36,7 +36,17 @@ zones étroites sont vérifiés. L’utilisateur confirme les deux appareils ré
 
 ## État actuel
 
-**État au 22/10/2026 · App HA 0.1.334 · intégration HACS 0.1.306.**
+**État au 05/11/2026 · App HA 0.1.334 · intégration HACS 0.1.306.**
+
+### HA 2026.11 sur .177
+
+Vérifié le 05/11/2026 avec Core 2026.11.0 / frontend 20261028.4 : Ingress ATLAS, hub avec six plugins actifs, Card Editor avec 35 entités réelles et liste des projets existants, arborescence File Studio, lecture par Automation Exporter après sauvegarde et interfaces de la bibliothèque d’icônes/Icon Studio. **L’utilisateur confirme également qu’ATLAS Terminal fonctionne.** Aucune nouvelle version logicielle ; projets et paramètres existants non modifiés.
+
+Les 431 tests du paquet HA, 74 tests app/frontend, contrôles TypeScript des onze paquets du workspace et vérification sans écriture de 523 fichiers du paquet app réussissent. Le test Python isolé du contrat HA n’a pas pu être exécuté localement, Home Assistant n’étant pas importable ; Docker n’était pas démarré. Aucun nouveau cycle complet d’écriture/restauration/HACS ni contrôle séparé de toutes les cibles SSH ou de tous les thèmes. Trois sauvegardes complètes conservées après sauvegarde et nettoyage des tests.
+
+[Synthèse de compatibilité avec versions des plugins et limites](/fr/collection/ha-2026-11-compatibility).
+
+Les comptes rendus historiques ci-dessous conservent leurs dates et systèmes de test ; « .177 inchangé » désigne le test réalisé à l’époque.
 
 **L’App 0.1.332 ajoute la recherche des brouillons.** Projet, fichier de script,
 date, association explicite à l’onglet et identifiant facilitent la sélection.

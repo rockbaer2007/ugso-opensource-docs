@@ -16,9 +16,9 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 236 | 0 | 0 | 0 |
-| EN | 236 | 0 | 0 | 0 |
-| FR | 236 | 0 | 0 | 0 |
+| DE | 237 | 0 | 0 | 0 |
+| EN | 237 | 0 | 0 | 0 |
+| FR | 237 | 0 | 0 | 0 |
 
 **Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).
 
@@ -244,6 +244,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Contenu présent](/en/collection/flex-table-card/sortierung) | [Contenu présent](/fr/collection/flex-table-card/sortierung) |
 | [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Contenu présent](/en/collection/frosted-glass-manager/) | [Contenu présent](/fr/collection/frosted-glass-manager/) |
 | [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Contenu présent](/en/collection/frosted-glass-theme/) | [Contenu présent](/fr/collection/frosted-glass-theme/) |
+| [sammlung/ha-2026-11-kompatibilitaet.md](/sammlung/ha-2026-11-kompatibilitaet) | [Contenu présent](/en/collection/ha-2026-11-compatibility) | [Contenu présent](/fr/collection/ha-2026-11-compatibility) |
 | [sammlung/ha-apps.md](/sammlung/ha-apps) | [Contenu présent](/en/collection/ha-apps) | [Contenu présent](/fr/collection/ha-apps) |
 | [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Contenu présent](/en/collection/ha-automation-exporter/) | [Contenu présent](/fr/collection/ha-automation-exporter/) |
 | [sammlung/ha-blueprints.md](/sammlung/ha-blueprints) | [Contenu présent](/en/collection/ha-blueprints) | [Contenu présent](/fr/collection/ha-blueprints) |

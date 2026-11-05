@@ -4,6 +4,12 @@ description: Benutzer für alle HA-Ansichten oder einzeln per Checkbox zuordnen,
 ---
 # Dashboard-Benutzerverwaltung
 
+::: warning Prüfstand HA 2026.11 vom 05.11.2026
+Auf .177 lädt 0.1.11 die bestehende Zuordnung mit 19 Ansichten und vier Benutzern. Es wurden keine Änderungen gespeichert. **Zusätzlich erscheint für das alte `lovelace`-Dashboard ein Ladehinweis.** Die Ursache ist noch nicht abschließend geklärt; kein pauschales Kompatibilitätsversprechen. 33 Python- und 19 Node-Tests der App bestehen. Fehlgeschlagene Dashboard-Lesevorgänge bleiben weiterhin sichtbar und gelten nicht als leere Dashboards.
+:::
+
+[Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
+
 **Version 0.1.11 · DE / EN / FR · MIT · stabil**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App-Icon mit Dashboard-Matrix, Benutzern und Häkchen" />

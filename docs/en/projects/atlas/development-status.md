@@ -31,8 +31,18 @@ checked. The user also confirms both actual mobile devices. .177 is untouched.
 
 ## Current State
 
-**As of 2026-10-22 · HA App 0.1.334 · HACS integration 0.1.306.**
+**As of 2026-11-05 · HA App 0.1.334 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
+
+### HA 2026.11 on .177
+
+Checked on 2026-11-05 with Core 2026.11.0 / frontend 20261028.4: ATLAS Ingress, hub with six active plugins, Card Editor with 35 live entities and existing project list, File Studio file tree, Automation Exporter reading after backup, and Icon Library/Icon Studio interfaces. **The user additionally confirms ATLAS Terminal works.** No new software version; existing projects and settings were not edited.
+
+All 431 HA-package tests, 74 app/frontend tests, TypeScript checks across eleven workspace packages and read-only verification of 523 app-package files passed. The isolated Python HA contract test could not run locally because Home Assistant was not importable; Docker was not running. No new complete write/restore/HACS round trip or separate verification of every SSH target or theme. Three full backups remain after backup and test cleanup.
+
+[Compatibility overview with plugin versions and limitations](/en/collection/ha-2026-11-compatibility).
+
+Historical reports below retain their original test dates and hosts; “.177 untouched” refers to that earlier test.
 
 **App 0.1.332 adds the searchable draft overview.** Project, script filename,
 save time, explicit tab association and source identifier simplify selection.

@@ -6,13 +6,17 @@ description: Documentation et exemples en DE/EN/FR pour les cartes Home Assistan
 
 # Cartes HA {#ha-cards}
 
+**Vérification HA 2026.11 du 05/11/2026 :** Automation Status Card 0.1.3 et Dashboard Layout Card V2 0.1.181 passent les tests réels décrits. Les autres extensions UGSo ont des niveaux de vérification différents et certains problèmes restent ouverts.
+
+[Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).
+
 Cette section est dédiée aux cartes Lovelace et HACS, documentées en DE/EN/FR et accompagnées d'exemples.
 
 ## Cartes HA utilisées et vérifiées {#genutzte-und-geprufte-ha-cards}
 
 | Projet | État de la documentation | Remarque |
 | --- | --- | --- |
-| <img class="package-icon" src="/images/automation-status-card/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Automation Status Card](/fr/projects/automation-status-card/) | Complète | 0.1.3 : liste automatique, lignes/défilement réglables, commande facultative, sélection et diagnostics des exécutions/traces. DE/EN/FR ; vérifié sur HA 2026.10.4. |
+| <img class="package-icon" src="/images/automation-status-card/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Automation Status Card](/fr/projects/automation-status-card/) | Complète | 0.1.3 : liste automatique, lignes/défilement réglables, commande facultative, sélection et diagnostics des exécutions/traces. DE/EN/FR ; test réel supplémentaire sous HA 2026.11.0 réussi le 05/11/2026, périmètre indiqué ci-dessus. |
 | [Calendar Card Pro](/fr/collection/calendar-card-pro/) | Complète | Documentation en DE/EN/FR incluant l'installation, les fonctionnalités, une référence, des exemples et un suivi des modifications. |
 | [Mushroom Cards](/fr/collection/mushroom/) | Complète | Documentation en DE/EN/FR incluant l'installation, un aperçu des cartes, des exemples et un suivi des modifications. |
 | [flex-table-card](/fr/collection/flex-table-card/) | Complète | Documentation en DE/EN/FR incluant l'installation, une référence et des exemples pratiques. |

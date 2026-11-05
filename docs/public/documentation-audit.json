@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 236,
+  "source_pages": 237,
   "summary": {
     "de": {
-      "content-present": 236,
-      "existing_pages": 236,
+      "content-present": 237,
+      "existing_pages": 237,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 236,
-      "existing_pages": 236,
+      "content-present": 237,
+      "existing_pages": 237,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 236,
-      "existing_pages": 236,
+      "content-present": 237,
+      "existing_pages": 237,
       "unmatched_pages": 0,
       "review_signals": 31,
       "reviewed_findings": 47,
@@ -1541,8 +1541,8 @@
         "de": {
           "path": "projects/atlas-plugins/gepruefte-plugins.md",
           "status": "content-present",
-          "sha256": "159e7f5dcc69f08c3b741f989f7e4a920704df0cc2d8f1b4c36e76aa4c334735",
-          "words": 158,
+          "sha256": "c77cd069f3223f050381ac12c0bc28239635e3a77622af5ab685d23cb85b06e3",
+          "words": 231,
           "headings": 4,
           "examples": 0,
           "versions": [],
@@ -1551,8 +1551,8 @@
         "en": {
           "path": "en/projects/atlas-plugins/verified-plugins.md",
           "status": "content-present",
-          "sha256": "61375600515d555067162ec8f03d29b2cd3253511a6852e39ce342b33b4a04c9",
-          "words": 176,
+          "sha256": "817ce36cbaaf86ad5338c7017a36db660ec8edc72fb5c599c084c9d53c75ee0b",
+          "words": 247,
           "headings": 4,
           "examples": 0,
           "versions": [],
@@ -1568,8 +1568,8 @@
         "fr": {
           "path": "fr/projects/atlas-plugins/verified-plugins.md",
           "status": "content-present",
-          "sha256": "e35850df794652a947b2ff2572be8bac827d2322c3ac8e8dde11ead687041faf",
-          "words": 206,
+          "sha256": "64a66ac67dee80dcab56daa00b466eba94c8c53689a1a5d5e371adccf885a4ca",
+          "words": 285,
           "headings": 4,
           "examples": 0,
           "versions": [],
@@ -1938,8 +1938,8 @@
         "de": {
           "path": "projects/atlas-plugins/terminal.md",
           "status": "content-present",
-          "sha256": "facfeca0716f0a4b4d8656990b13b23212d7c38043b4d9e2165b8699e6f5ceee",
-          "words": 593,
+          "sha256": "b84b32ccef3d9aa2ce6de58293da7bcd01d552ddc22a8ddee692ecb1e0da42a7",
+          "words": 649,
           "headings": 6,
           "examples": 0,
           "versions": [
@@ -1954,8 +1954,8 @@
         "en": {
           "path": "en/projects/atlas-plugins/terminal.md",
           "status": "content-present",
-          "sha256": "816947aaa60d3e0d007fd71913ccd28aa9c7b252606265723dfa830bfcdd4998",
-          "words": 619,
+          "sha256": "883fc9c80e7ebeeafccc8a7c0a3cdfb7fab38943dfcb3403291ce0ae99c8a558",
+          "words": 674,
           "headings": 6,
           "examples": 0,
           "versions": [
@@ -1977,8 +1977,8 @@
         "fr": {
           "path": "fr/projects/atlas-plugins/terminal.md",
           "status": "content-present",
-          "sha256": "2205fbe48e53f015a718f7e69051393f126d3afcd607bba94bb12cdfd4c2cef8",
-          "words": 705,
+          "sha256": "d6d53ddb6928f3954ca76db0a9782069497689f91907be4f8b763365448e2634",
+          "words": 768,
           "headings": 6,
           "examples": 0,
           "versions": [
@@ -2182,9 +2182,9 @@
         "de": {
           "path": "projects/atlas/entwicklungsstand.md",
           "status": "content-present",
-          "sha256": "57cb27c02f2a5053797e0031d592ebe0afcbe8d3ffa057df0ccffe650f76bc66",
-          "words": 6757,
-          "headings": 8,
+          "sha256": "9dfd43909282d9f46ec0b93b6b8179afc4ee6928396e6b543d1c3290f566fa66",
+          "words": 6919,
+          "headings": 9,
           "examples": 1,
           "versions": [
             "0.1.287",
@@ -2228,6 +2228,7 @@
             "0.2.0-alpha.88",
             "2026.10.1",
             "2026.10.2",
+            "2026.11.0",
             "2026.9.4",
             "4.2.1",
             "5.2.3",
@@ -2238,9 +2239,9 @@
         "en": {
           "path": "en/projects/atlas/development-status.md",
           "status": "content-present",
-          "sha256": "d1cacecea9327c21e93592c05fc43f3fdd1f463529c08a5981d10ea2f919ad90",
-          "words": 7144,
-          "headings": 8,
+          "sha256": "cbbcafb9adfb14a9c6e32547d51f86d73b50c360aa89a3e732bf67625a7b7ca5",
+          "words": 7313,
+          "headings": 9,
           "examples": 1,
           "versions": [
             "0.1.287",
@@ -2284,6 +2285,7 @@
             "0.2.0-alpha.88",
             "2026.10.1",
             "2026.10.2",
+            "2026.11.0",
             "2026.9.4",
             "4.2.1",
             "5.2.3",
@@ -2301,9 +2303,9 @@
         "fr": {
           "path": "fr/projects/atlas/development-status.md",
           "status": "content-present",
-          "sha256": "b5a850642ad543e35fd528a4f6ff192c0a31cad9428682ac3d6fbf793c476e81",
-          "words": 7692,
-          "headings": 7,
+          "sha256": "b4a60d179f89f1279aa1c008ee44406d429efdde36bb69d645d6dc56d15d191c",
+          "words": 7885,
+          "headings": 8,
           "examples": 0,
           "versions": [
             "0.1.287",
@@ -2347,6 +2349,7 @@
             "0.2.0-alpha.88",
             "2026.10.1",
             "2026.10.2",
+            "2026.11.0",
             "2026.9.4",
             "4.2.1",
             "5.2.3",
@@ -2874,28 +2877,30 @@
         "de": {
           "path": "projects/automation-status-card/index.md",
           "status": "content-present",
-          "sha256": "bed7e8e2d9950e016d9e710b0f1ff62f645d98a37d32e8f324b602c484d60b39",
-          "words": 1192,
+          "sha256": "bc1f301055ef468263e2419f465fefc0af9d3af97cfc8caecb3442e581804ed6",
+          "words": 1258,
           "headings": 7,
           "examples": 1,
           "versions": [
             "0.1.0",
             "0.1.3",
-            "2026.10.4"
+            "2026.10.4",
+            "2026.11.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/automation-status-card/index.md",
           "status": "content-present",
-          "sha256": "524c2a91e401711c5d0b013defad44559326492b1c09fb7c5c111598586f3644",
-          "words": 1035,
+          "sha256": "02f2ea197be0e1f0f058428fbd2d6b4b2cab78cb877cb441fd60a67b98c586e1",
+          "words": 1106,
           "headings": 7,
           "examples": 1,
           "versions": [
             "0.1.0",
             "0.1.3",
-            "2026.10.4"
+            "2026.10.4",
+            "2026.11.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -2909,14 +2914,15 @@
         "fr": {
           "path": "fr/projects/automation-status-card/index.md",
           "status": "content-present",
-          "sha256": "f600366f3644311b23281997bc80c13fff8b26ab3b6f41489a11350b1d7b887f",
-          "words": 1169,
+          "sha256": "983f8bcb6da8b98f9611ff5abd3404edf089cffd4230be7c32a5470307f4a00d",
+          "words": 1257,
           "headings": 7,
           "examples": 1,
           "versions": [
             "0.1.0",
             "0.1.3",
-            "2026.10.4"
+            "2026.10.4",
+            "2026.11.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -4174,8 +4180,8 @@
         "de": {
           "path": "projects/dashboard-user-manager/index.md",
           "status": "content-present",
-          "sha256": "02b08d2eb7f519133e1454787c6d1b5ca42831e01cfc61659eb22032df577d63",
-          "words": 3500,
+          "sha256": "54292d83ab8a38c9e74c77c9c721bead1df97e2d678b60fe0f971ca23e1a027d",
+          "words": 3579,
           "headings": 11,
           "examples": 2,
           "versions": [
@@ -4195,8 +4201,8 @@
         "en": {
           "path": "en/projects/dashboard-user-manager/index.md",
           "status": "content-present",
-          "sha256": "c71bccbffa3fa94a29941f84999223f20d4031f69314f51e42a0f435e3606978",
-          "words": 3742,
+          "sha256": "5a20694c227a249744e0e8147af31990c4bb8bbdfaa30f61814283013cdbb2dd",
+          "words": 3824,
           "headings": 11,
           "examples": 2,
           "versions": [
@@ -4223,8 +4229,8 @@
         "fr": {
           "path": "fr/projects/dashboard-user-manager/index.md",
           "status": "content-present",
-          "sha256": "435403c7c1e9e6c931e42074d3e7c3016ed178a18f00fde09e48a8b5f062dabe",
-          "words": 4199,
+          "sha256": "4e5f5d80f504163d1ef7a83279c733087a3a0f47c9a075d18b5762f2b159a64d",
+          "words": 4289,
           "headings": 11,
           "examples": 2,
           "versions": [
@@ -7286,8 +7292,8 @@
         "de": {
           "path": "projects/sidebar-colors/index.md",
           "status": "content-present",
-          "sha256": "f6aa4235c56d49ddca828aeaa68fd28b24efb113d1433ec8fbf4a6bfa268b52b",
-          "words": 789,
+          "sha256": "b9a8815c602c6a78474a3592e54158c8377b4d3aee38ffe6220deee30bec35b2",
+          "words": 867,
           "headings": 8,
           "examples": 1,
           "versions": [
@@ -7300,8 +7306,8 @@
         "en": {
           "path": "en/projects/sidebar-colors/index.md",
           "status": "content-present",
-          "sha256": "fc76e7abd6b385b6d255c1c35d387cc6b813a90f4a2ab1f1524e83742fd2cca1",
-          "words": 809,
+          "sha256": "7856ef38438fccc4e048189854b6c3935f732337f88757b069888f2bd567c712",
+          "words": 894,
           "headings": 8,
           "examples": 1,
           "versions": [
@@ -7321,8 +7327,8 @@
         "fr": {
           "path": "fr/projects/sidebar-colors/index.md",
           "status": "content-present",
-          "sha256": "7a02d1da13f5c9b9e3b527830cfb26dd7783e79f66277ffaa337e69e6b385ebb",
-          "words": 907,
+          "sha256": "86a863db8d63418634fe6427efb52fb15c6cc8d672f5a6e1cf33ec087b766eb1",
+          "words": 999,
           "headings": 8,
           "examples": 1,
           "versions": [
@@ -7347,8 +7353,8 @@
         "de": {
           "path": "projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "861113f7b20bdbe5a99678a52e0c7efa3d88943672b901ead4bd61a14c1b69ad",
-          "words": 1271,
+          "sha256": "54f4183ec202e10bbf1e3fb5bdc4d4a2bd749f26588924dca5d946c743f26a98",
+          "words": 1343,
           "headings": 9,
           "examples": 2,
           "versions": [
@@ -7363,8 +7369,8 @@
         "en": {
           "path": "en/projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "fe94c1582980e3571b139dd80403d93c95481e505e7c892c042eb76fc618857b",
-          "words": 1555,
+          "sha256": "fb1967fb51e743f74d79fc2731f57db5f97114fff664c851f8c2f4f8c53c6a7c",
+          "words": 1629,
           "headings": 9,
           "examples": 3,
           "versions": [
@@ -7386,8 +7392,8 @@
         "fr": {
           "path": "fr/projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "c8117341ce1fd156c587e6d6d1cf58d55cb7e1e5430db7154dacebf96b0281c2",
-          "words": 1481,
+          "sha256": "4907b9966cec834aface46ff607691e5c12a3b71a01bf8b1949a50068826f8f6",
+          "words": 1558,
           "headings": 9,
           "examples": 2,
           "versions": [
@@ -13365,6 +13371,121 @@
       }
     },
     {
+      "source": "sammlung/ha-2026-11-kompatibilitaet.md",
+      "locales": {
+        "de": {
+          "path": "sammlung/ha-2026-11-kompatibilitaet.md",
+          "status": "content-present",
+          "sha256": "6b1ece7e91fbbd53eadb75dc5fb89c64d7aff3a94dc7123104393151b37f35d7",
+          "words": 915,
+          "headings": 6,
+          "examples": 0,
+          "versions": [
+            "0.1.0",
+            "0.1.10",
+            "0.1.11",
+            "0.1.15",
+            "0.1.17",
+            "0.1.181",
+            "0.1.2",
+            "0.1.28",
+            "0.1.296",
+            "0.1.3",
+            "0.1.334",
+            "0.1.41",
+            "0.1.52",
+            "0.1.6",
+            "0.1.66",
+            "0.1.7",
+            "0.1.8",
+            "0.1.9",
+            "0.2.0-alpha.115",
+            "2026.11.0",
+            "7.4.47"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/collection/ha-2026-11-compatibility.md",
+          "status": "content-present",
+          "sha256": "47e3f6fbcb693a7bbd9b8b94bf337748a6b8a78cb086c7d6570edc3e048e740a",
+          "words": 987,
+          "headings": 6,
+          "examples": 0,
+          "versions": [
+            "0.1.0",
+            "0.1.10",
+            "0.1.11",
+            "0.1.15",
+            "0.1.17",
+            "0.1.181",
+            "0.1.2",
+            "0.1.28",
+            "0.1.296",
+            "0.1.3",
+            "0.1.334",
+            "0.1.41",
+            "0.1.52",
+            "0.1.6",
+            "0.1.66",
+            "0.1.7",
+            "0.1.8",
+            "0.1.9",
+            "0.2.0-alpha.115",
+            "2026.11.0",
+            "7.4.47"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/collection/ha-2026-11-compatibility.md",
+          "status": "content-present",
+          "sha256": "1eefdf717073f0e7938aaea9c292e30ba53f8a43d4b13fc6d793c1c223bf8945",
+          "words": 1129,
+          "headings": 6,
+          "examples": 0,
+          "versions": [
+            "0.1.0",
+            "0.1.10",
+            "0.1.11",
+            "0.1.15",
+            "0.1.17",
+            "0.1.181",
+            "0.1.2",
+            "0.1.28",
+            "0.1.296",
+            "0.1.3",
+            "0.1.334",
+            "0.1.41",
+            "0.1.52",
+            "0.1.6",
+            "0.1.66",
+            "0.1.7",
+            "0.1.8",
+            "0.1.9",
+            "0.2.0-alpha.115",
+            "2026.11.0",
+            "7.4.47"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
       "source": "sammlung/ha-apps.md",
       "locales": {
         "de": {
@@ -13534,26 +13655,28 @@
         "de": {
           "path": "sammlung/ha-cards.md",
           "status": "content-present",
-          "sha256": "38d5fec984f011320230c5bd75d005e23ad912fb8da6e7df076c876cd6b1f561",
-          "words": 210,
+          "sha256": "c10b7a5bb1f5230317584788ec79c5168758ee0c9f1bc66ab8add8ce65ffaff4",
+          "words": 268,
           "headings": 4,
           "examples": 0,
           "versions": [
+            "0.1.181",
             "0.1.3",
-            "2026.10.4"
+            "2026.11.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/collection/ha-cards.md",
           "status": "content-present",
-          "sha256": "0dd8b39a4318c75adb18ed0c3b4e9ee13a807564eeee39d4a076740c02ecd1d2",
-          "words": 233,
+          "sha256": "8286e515228f432c721617604cccbd13063e7b40ee52790dee47d43bbb59c7c3",
+          "words": 292,
           "headings": 4,
           "examples": 0,
           "versions": [
+            "0.1.181",
             "0.1.3",
-            "2026.10.4"
+            "2026.11.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13572,13 +13695,14 @@
         "fr": {
           "path": "fr/collection/ha-cards.md",
           "status": "content-present",
-          "sha256": "fe3e659bc4f034900d1df8b27d3ba1d33508c2a2a9aea07d3237eaeed5832487",
-          "words": 291,
+          "sha256": "905a420d6ad0ea16d2011aa4db29d674e257641faec8004f5e5423c11a4aa03f",
+          "words": 355,
           "headings": 4,
           "examples": 0,
           "versions": [
+            "0.1.181",
             "0.1.3",
-            "2026.10.4"
+            "2026.11.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {

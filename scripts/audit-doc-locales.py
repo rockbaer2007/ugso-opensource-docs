@@ -36,6 +36,7 @@ for project in ['fritzbox-to-mqtt', 'heizoel-to-mqtt', 'parcel-to-mqtt', 'ultima
                              ('konfiguration', 'configuration'), ('fehlersuche', 'troubleshooting')]:
         SLUGS[f'projects/{project}/{german}.md'] = f'projects/{project}/{english}.md'
 COLLECTION = {'ha-empfehlungen': 'ha-recommendations', 'ha-integrationen': 'ha-integrations',
+              'ha-2026-11-kompatibilitaet': 'ha-2026-11-compatibility',
               'hacs-dokus': 'hacs-docs', 'weitere-beispiele': 'interesting-examples'}
 PLACEHOLDER = re.compile(r'has been (?:added|created) so the Open Source|Cette page française a été (?:ajoutée|créée)')
 

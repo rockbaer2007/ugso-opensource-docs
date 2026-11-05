@@ -4,6 +4,12 @@ description: Eigene Farben und Transparenz für HA-Menüeinträge, direkt in Sei
 ---
 # Seitenleistenfarben / Sidebar Colors
 
+::: warning HA 2026.11: Kompatibilitätsrisiko
+Der Quellstand 0.1.0 verwendet für die Farbvorschau im Bearbeitungsdialog noch `ha-md-list-item`. HA 2026.11 verwendet dort `ha-list-item-button`; beim verwandten Sidebar Manager ist die fehlende Zeilenfarbe auf .177 am 05.11.2026 bestätigt. Sidebar Colors wurde nicht zusätzlich parallel installiert. 25 lokale Tests bestehen, ersetzen aber keinen Live-Test dieses Frontend-Wechsels. Noch keine Korrektur veröffentlicht.
+:::
+
+[Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
+
 <img src="/images/packages/projects-sidebar-colors.svg" width="80" height="80" alt="Sidebar Colors" />
 
 **0.1.0 · Frontend-Erweiterung · DE / EN / FR · MIT**

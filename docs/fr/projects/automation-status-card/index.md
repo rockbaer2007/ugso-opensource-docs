@@ -4,6 +4,10 @@ description: Liste automatique, sélection par cases, exécutions et diagnostic 
 ---
 # Automation Status Card
 
+**HA 2026.11.0, 05/11/2026, .177 :** la version 0.1.3 passe l’affichage, l’activation/désactivation confirmée par HA, l’exécution en cours, la lecture des traces, la fin normale, les cases à cocher, tout sélectionner/désélectionner et le rechargement. Les exemples individuels Bubble/Mushroom s’affichent. Objets de test supprimés. Les erreurs et alertes de durée n’ont pas été provoquées à nouveau sous cette version de HA ; les résultats antérieurs restent distincts.
+
+[Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).
+
 <img src="/images/automation-status-card/icon.svg" width="80" height="80" alt="Automation Status Card" />
 
 **0.1.3 · DE / EN / FR · MIT**

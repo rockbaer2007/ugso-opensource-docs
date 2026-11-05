@@ -3134,6 +3134,21 @@
     "EN": "/en/collection/frosted-glass-theme/",
     "FR": "/fr/collection/frosted-glass-theme/"
   },
+  "/sammlung/ha-2026-11-kompatibilitaet": {
+    "DE": "/sammlung/ha-2026-11-kompatibilitaet",
+    "EN": "/en/collection/ha-2026-11-compatibility",
+    "FR": "/fr/collection/ha-2026-11-compatibility"
+  },
+  "/en/collection/ha-2026-11-compatibility": {
+    "DE": "/sammlung/ha-2026-11-kompatibilitaet",
+    "EN": "/en/collection/ha-2026-11-compatibility",
+    "FR": "/fr/collection/ha-2026-11-compatibility"
+  },
+  "/fr/collection/ha-2026-11-compatibility": {
+    "DE": "/sammlung/ha-2026-11-kompatibilitaet",
+    "EN": "/en/collection/ha-2026-11-compatibility",
+    "FR": "/fr/collection/ha-2026-11-compatibility"
+  },
   "/sammlung/ha-apps": {
     "DE": "/sammlung/ha-apps",
     "EN": "/en/collection/ha-apps",

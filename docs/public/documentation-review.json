@@ -128,8 +128,8 @@
       },
       "disposition": "supplemented",
       "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content. Test system inventory reviewed on 2026-10-28: user-provided VM/Raspberry Pi hardware, .193 replacement of .68, existing mobile qualification devices; historical test scope preserved.",
-      "source_sha256": "57cb27c02f2a5053797e0031d592ebe0afcbe8d3ffa057df0ccffe650f76bc66",
-      "target_sha256": "b5a850642ad543e35fd528a4f6ff192c0a31cad9428682ac3d6fbf793c476e81"
+      "source_sha256": "9dfd43909282d9f46ec0b93b6b8179afc4ee6928396e6b543d1c3290f566fa66",
+      "target_sha256": "b4a60d179f89f1279aa1c008ee44406d429efdde36bb69d645d6dc56d15d191c"
     },
     {
       "source": "projects/blocks-for-ha/advanced.md",
@@ -2252,8 +2252,8 @@
       },
       "disposition": "supplemented",
       "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained. Overview status reviewed on 2026-10-27: existing documentation/current ATLAS use distinguished from future work; home navigation uses text links with EEP and preserves destinations.",
-      "source_sha256": "38d5fec984f011320230c5bd75d005e23ad912fb8da6e7df076c876cd6b1f561",
-      "target_sha256": "0dd8b39a4318c75adb18ed0c3b4e9ee13a807564eeee39d4a076740c02ecd1d2"
+      "source_sha256": "c10b7a5bb1f5230317584788ec79c5168758ee0c9f1bc66ab8add8ce65ffaff4",
+      "target_sha256": "8286e515228f432c721617604cccbd13063e7b40ee52790dee47d43bbb59c7c3"
     },
     {
       "source": "sammlung/ha-dashboard.md",

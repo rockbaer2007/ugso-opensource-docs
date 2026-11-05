@@ -4,6 +4,12 @@ description: Couleurs et opacité par entrée du menu HA, directement dans l’�
 ---
 # Couleurs du menu latéral / Sidebar Colors
 
+::: warning Risque de compatibilité HA 2026.11
+La version 0.1.0 utilise encore `ha-md-list-item` pour l’aperçu des couleurs dans le dialogue d’édition. HA 2026.11 utilise `ha-list-item-button` ; l’absence de couleurs des lignes est confirmée dans Sidebar Manager sur .177 le 05/11/2026. Sidebar Colors n’a pas été installé en parallèle. Vingt-cinq tests locaux réussissent, sans remplacer un test réel de ce changement du frontend. Aucun correctif encore publié.
+:::
+
+[Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).
+
 <img src="/images/packages/projects-sidebar-colors.svg" width="80" height="80" alt="Sidebar Colors" />
 
 **0.1.0 · Extension frontend · DE / EN / FR · MIT**

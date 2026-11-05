@@ -4,6 +4,12 @@ description: Assign users to all HA views or individual views with checkboxes, b
 ---
 # Dashboard User Manager
 
+::: warning HA 2026.11 review, 2026-11-05
+On .177, version 0.1.11 loads existing assignments with 19 views and four users. No changes were saved. **An additional loading warning appears for the old `lovelace` dashboard.** The root cause is not fully established; this is not a blanket compatibility claim. Thirty-three Python and nineteen Node app tests pass. Failed dashboard reads remain visible and never count as empty dashboards.
+:::
+
+[Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).
+
 **Version 0.1.11 · DE / EN / FR · MIT · stable**
 
 <img src="/images/dashboard-user-manager/icon.png" width="96" height="96" alt="App icon with dashboard matrix, users and checkmarks" />

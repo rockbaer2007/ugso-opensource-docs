@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 236 | 0 | 0 | 0 |
-| EN | 236 | 0 | 0 | 0 |
-| FR | 236 | 0 | 0 | 0 |
+| DE | 237 | 0 | 0 | 0 |
+| EN | 237 | 0 | 0 | 0 |
+| FR | 237 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -244,6 +244,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Content present](/en/collection/flex-table-card/sortierung) | [Content present](/fr/collection/flex-table-card/sortierung) |
 | [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Content present](/en/collection/frosted-glass-manager/) | [Content present](/fr/collection/frosted-glass-manager/) |
 | [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Content present](/en/collection/frosted-glass-theme/) | [Content present](/fr/collection/frosted-glass-theme/) |
+| [sammlung/ha-2026-11-kompatibilitaet.md](/sammlung/ha-2026-11-kompatibilitaet) | [Content present](/en/collection/ha-2026-11-compatibility) | [Content present](/fr/collection/ha-2026-11-compatibility) |
 | [sammlung/ha-apps.md](/sammlung/ha-apps) | [Content present](/en/collection/ha-apps) | [Content present](/fr/collection/ha-apps) |
 | [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Content present](/en/collection/ha-automation-exporter/) | [Content present](/fr/collection/ha-automation-exporter/) |
 | [sammlung/ha-blueprints.md](/sammlung/ha-blueprints) | [Content present](/en/collection/ha-blueprints) | [Content present](/fr/collection/ha-blueprints) |

@@ -4,6 +4,10 @@ description: ATLAS-Browser-Terminal mit ANSI-Farben, optionalem SSH, Oh-My-Posh-
 ---
 # ATLAS Terminal
 
+**HA 2026.11, 05.11.2026:** Die Oberfläche von Terminal 0.1.10 wurde auf .177 geladen. Anschließend bestätigt der Anwender: **ATLAS Terminal funktioniert.** Der zunächst offene Terminaltest ist damit durch eine Anwenderbestätigung ergänzt. Alle SSH-Ziele und Oh-My-Posh-Themes wurden nicht separat geprüft.
+
+[Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
+
 ATLAS Terminal ist ein eigenständiges Plugin-Repository für ein authentifiziertes Browser-Terminal. Es bietet ANSI-Farben, eine einstellbare Schriftgröße, auswählbare Oh-My-Posh-Themes und optional eine SSH-Verbindung zu einem serverseitig festgelegten Ziel.
 
 Die Oberfläche ist auf Deutsch, Englisch und Französisch verfügbar. Die Sprachauswahl wird im Browser gespeichert und kann zusätzlich über den URL-Parameter `language` vorgegeben werden.

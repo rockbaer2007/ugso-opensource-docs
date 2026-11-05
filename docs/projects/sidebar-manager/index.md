@@ -4,6 +4,12 @@ description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenl
 ---
 # Sidebar Manager
 
+::: warning Bekannter Befund unter HA 2026.11
+Prüfung vom 05.11.2026 auf .177: Sidebar, Gruppen, nativer Bearbeitungsdialog, Farbfelder und Farbwähler laden. **Die Text-/Iconfarben fehlen jedoch in der Zeilenvorschau des nativen Bearbeitungsdialogs.** Die Farbanwendung sucht noch nach dem entfernten `ha-md-list-item`; HA verwendet jetzt `ha-list-item-button`. Gespeicherte Einstellungen wurden nicht gelöscht. Eine Korrektur ist noch nicht veröffentlicht.
+:::
+
+[Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
+
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
 **0.1.8 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**

@@ -1,5 +1,9 @@
 # Verified Plugins
 
+**HA 2026.11, 2026-11-05:** Hub and interfaces of all six plugins checked on .177. Card Editor connects to HA; File Studio loads paths, Automation Exporter reads after backup, Icon Library loads MDI and Icon Studio its SVG interface. **The user confirms ATLAS Terminal works.** This extends the basic review without changing experimental product status or validating every feature.
+
+[Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).
+
 This page collects ATLAS plugins that are either visibly recommended or tracked as new external submissions. Verified plugins have at least been checked for manifest quality, launch URL, icon, obvious secret leaks and unsafe path grants.
 
 ::: warning Note

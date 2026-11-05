@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 236 | 0 | 0 | 0 |
-| EN | 236 | 0 | 0 | 0 |
-| FR | 236 | 0 | 0 | 0 |
+| DE | 237 | 0 | 0 | 0 |
+| EN | 237 | 0 | 0 | 0 |
+| FR | 237 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -244,6 +244,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Inhalt vorhanden](/en/collection/flex-table-card/sortierung) | [Inhalt vorhanden](/fr/collection/flex-table-card/sortierung) |
 | [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Inhalt vorhanden](/en/collection/frosted-glass-manager/) | [Inhalt vorhanden](/fr/collection/frosted-glass-manager/) |
 | [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Inhalt vorhanden](/en/collection/frosted-glass-theme/) | [Inhalt vorhanden](/fr/collection/frosted-glass-theme/) |
+| [sammlung/ha-2026-11-kompatibilitaet.md](/sammlung/ha-2026-11-kompatibilitaet) | [Inhalt vorhanden](/en/collection/ha-2026-11-compatibility) | [Inhalt vorhanden](/fr/collection/ha-2026-11-compatibility) |
 | [sammlung/ha-apps.md](/sammlung/ha-apps) | [Inhalt vorhanden](/en/collection/ha-apps) | [Inhalt vorhanden](/fr/collection/ha-apps) |
 | [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Inhalt vorhanden](/en/collection/ha-automation-exporter/) | [Inhalt vorhanden](/fr/collection/ha-automation-exporter/) |
 | [sammlung/ha-blueprints.md](/sammlung/ha-blueprints) | [Inhalt vorhanden](/en/collection/ha-blueprints) | [Inhalt vorhanden](/fr/collection/ha-blueprints) |
