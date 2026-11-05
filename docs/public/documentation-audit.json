@@ -12571,13 +12571,12 @@
         "de": {
           "path": "sammlung/dashboard-layout-card-v2/index.md",
           "status": "content-present",
-          "sha256": "c4d6f2a497549eba292e0bd52a5dd0812e4137e8315362e264ecaf33ad2c1aa5",
-          "words": 1392,
+          "sha256": "587937d900568d24149b2973c3f0b951ffd03444ddea1f1acbeea74b1a58a272",
+          "words": 1430,
           "headings": 12,
           "examples": 6,
           "versions": [
             "0.1.181",
-            "2026.10.4",
             "2026.11.0"
           ],
           "unresolved_local_references": []
@@ -12585,13 +12584,12 @@
         "en": {
           "path": "en/collection/dashboard-layout-card-v2/index.md",
           "status": "content-present",
-          "sha256": "29c24dd2de95ef8f66844e6f8f3bded238ee2a71c70c562328da4bbf21342088",
-          "words": 1519,
+          "sha256": "3c1d80fb072f0f872cd26add8b023467277325a5acbe0663bf461dd555d3ef46",
+          "words": 1564,
           "headings": 12,
           "examples": 6,
           "versions": [
             "0.1.181",
-            "2026.10.4",
             "2026.11.0"
           ],
           "unresolved_local_references": [],
@@ -12606,13 +12604,12 @@
         "fr": {
           "path": "fr/collection/dashboard-layout-card-v2/index.md",
           "status": "content-present",
-          "sha256": "9c2bea39e98f4fe7f5781af4df4990a63e0695cdbc7d3ff6f63d9f75577f58bc",
-          "words": 1389,
+          "sha256": "58d9c2cb6173a14793bf84f6b7c464702ba64884159a3fdbab2d027e1407d34f",
+          "words": 1453,
           "headings": 12,
           "examples": 6,
           "versions": [
             "0.1.181",
-            "2026.10.4",
             "2026.11.0"
           ],
           "unresolved_local_references": [],
