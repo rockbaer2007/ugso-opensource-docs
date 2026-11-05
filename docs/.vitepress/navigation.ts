@@ -66,7 +66,7 @@ export function reorganizeNavigation(
     ] },
     { text: 'ioBroker', activeMatch: '^' + prefix + '/iobroker/', items: [
       { text: 'Widgets', items: [
-        { text: 'UGSo Spezial', link: `${prefix}/iobroker/widgets/ugso-spezial/` }
+        { text: 'UGSo Special', link: `${prefix}/iobroker/widgets/ugso-spezial/` }
       ] },
       { text: { de: 'Veröffentlichungsassistent', en: 'Publishing Assistant', fr: 'Assistant de publication' }[locale], link: `${prefix}/iobroker/publish-assistant/` }
     ] },

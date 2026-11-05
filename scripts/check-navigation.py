@@ -46,7 +46,7 @@ for locale, config in data['locales'].items():
     prefix = '' if locale == 'root' else f'/{locale}'
     assert nav[4]['text'] == 'ioBroker'
     assert nav[4]['items'] == [{'text': 'Widgets', 'items': [
-        {'text': 'UGSo Spezial', 'link': f'{prefix}/iobroker/widgets/ugso-spezial/'}
+        {'text': 'UGSo Special', 'link': f'{prefix}/iobroker/widgets/ugso-spezial/'}
     ]}, {
         'text': {'root': 'Veröffentlichungsassistent', 'en': 'Publishing Assistant', 'fr': 'Assistant de publication'}[locale],
         'link': f'{prefix}/iobroker/publish-assistant/'

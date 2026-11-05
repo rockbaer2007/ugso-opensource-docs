@@ -888,8 +888,8 @@
         "de": {
           "path": "iobroker/widgets/ugso-spezial/index.md",
           "status": "content-present",
-          "sha256": "b7542e523900a76702a2d6b54486cd3c57eb5e6235b80717be9115938a381328",
-          "words": 226,
+          "sha256": "b63ec76a28414c09f86667becf518c90c747f8ee9d136c556a42dfa459991910",
+          "words": 272,
           "headings": 3,
           "examples": 0,
           "versions": [],
@@ -898,8 +898,8 @@
         "en": {
           "path": "en/iobroker/widgets/ugso-spezial/index.md",
           "status": "content-present",
-          "sha256": "f72bf945a6edd56db85a74f4cbc6d3e17e24db7416ad02ac4072640373008b33",
-          "words": 226,
+          "sha256": "0e8375ccbb8bed51800a8cd81e13933c82f25abc4f4cba28f8c66701c25020af",
+          "words": 271,
           "headings": 3,
           "examples": 0,
           "versions": [],
@@ -915,8 +915,8 @@
         "fr": {
           "path": "fr/iobroker/widgets/ugso-spezial/index.md",
           "status": "content-present",
-          "sha256": "8fc1f8e4ca2eecf380abcd94bc3781984acd323f5342bb682576622c8c4b35f7",
-          "words": 270,
+          "sha256": "8e29ffa6a82800aaea1c2f8540366c300db5abb13883d2cb322288b809010eb6",
+          "words": 320,
           "headings": 3,
           "examples": 0,
           "versions": [],

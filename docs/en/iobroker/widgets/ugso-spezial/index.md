@@ -1,11 +1,11 @@
 ---
-title: UGSo Spezial
+title: UGSo Special
 description: Animated SVG lines and summing nodes for ioBroker VIS 2.
 ---
 
-# UGSo Spezial
+# UGSo Special
 
-**UGSo Spezial** visualizes data flows in VIS 2, such as power readings from several devices. The set contains two widgets.
+**UGSo Special** visualizes data flows in VIS 2, such as power readings from several devices. The set contains two widgets.
 
 ## Widgets
 
@@ -16,8 +16,13 @@ In the editor, drag a yellow endpoint to snap it to another line or LineBox. An 
 
 ## Installation
 
-A running VIS 2 installation is required. Install the widget set from its GitHub URL in ioBroker Admin (expert mode). Restart VIS 2 after updates to load the new version. Both widgets appear under **UGSo Spezial** in the editor palette.
+The package is now named `iobroker.vis-2-widgets-ugso-special`.
+Export existing VIS 2 projects as a backup, install the new package and restart VIS 2.
+Check the projects before removing the previous package.
+Widget template IDs and the internal federation name are retained.
 
-- [GitHub](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-spezial)
-- [Releases](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-spezial/releases)
-- [npm](https://www.npmjs.com/package/iobroker.vis-2-widgets-ugso-spezial)
+A running VIS 2 installation is required. Install the widget set from its GitHub URL in ioBroker Admin (expert mode). Restart VIS 2 after updates to load the new version. Both widgets appear under **UGSo Special** in the editor palette.
+
+- [GitHub](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-special)
+- [Releases](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-special/releases)
+- [npm](https://www.npmjs.com/package/iobroker.vis-2-widgets-ugso-special)

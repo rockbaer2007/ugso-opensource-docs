@@ -1,11 +1,11 @@
 ---
-title: UGSo Spezial
+title: UGSo Special
 description: Animierte SVG-Linien und Summenknoten für ioBroker VIS 2.
 ---
 
-# UGSo Spezial
+# UGSo Special
 
-Mit **UGSo Spezial** stellst du Datenflüsse in VIS 2 dar, zum Beispiel die Leistung mehrerer Verbraucher. Das Widget-Set enthält zwei Bausteine.
+Mit **UGSo Special** stellst du Datenflüsse in VIS 2 dar, zum Beispiel die Leistung mehrerer Verbraucher. Das Widget-Set enthält zwei Bausteine.
 
 ## Widgets
 
@@ -16,8 +16,13 @@ Im Editor rasten gelbe Endpunkte beim Ziehen an einer anderen Linie oder LineBox
 
 ## Installation
 
-Voraussetzung ist eine laufende VIS-2-Installation. Installiere das Widget-Set über die GitHub-URL des Projekts in ioBroker Admin (Expertenmodus). Starte VIS 2 nach Updates neu, damit die neue Version geladen wird. Im Editor findest du beide Widgets in der Palette unter **UGSo Spezial**.
+Der technische Paketname lautet jetzt `iobroker.vis-2-widgets-ugso-special`.
+Exportiere vorhandene VIS-2-Projekte als Sicherung, installiere das neue Paket
+und starte VIS 2 neu. Prüfe die Projekte vor dem Entfernen des bisherigen Pakets.
+Die Widget-Template-IDs und der interne Federationsname bleiben erhalten.
 
-- [GitHub](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-spezial)
-- [Releases](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-spezial/releases)
-- [npm](https://www.npmjs.com/package/iobroker.vis-2-widgets-ugso-spezial)
+Voraussetzung ist eine laufende VIS-2-Installation. Installiere das Widget-Set über die GitHub-URL des Projekts in ioBroker Admin (Expertenmodus). Starte VIS 2 nach Updates neu, damit die neue Version geladen wird. Im Editor findest du beide Widgets in der Palette unter **UGSo Special**.
+
+- [GitHub](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-special)
+- [Releases](https://github.com/rockbaer2007/ioBroker.vis-2-widgets-ugso-special/releases)
+- [npm](https://www.npmjs.com/package/iobroker.vis-2-widgets-ugso-special)
