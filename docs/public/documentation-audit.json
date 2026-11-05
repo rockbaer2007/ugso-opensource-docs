@@ -12571,21 +12571,29 @@
         "de": {
           "path": "sammlung/dashboard-layout-card-v2/index.md",
           "status": "content-present",
-          "sha256": "bbd96dadc02c3a8cd6d0325d7d3dce85168cbbf4f29d4070dd2bdddb98a6e59a",
-          "words": 1264,
-          "headings": 11,
+          "sha256": "c4d6f2a497549eba292e0bd52a5dd0812e4137e8315362e264ecaf33ad2c1aa5",
+          "words": 1392,
+          "headings": 12,
           "examples": 6,
-          "versions": [],
+          "versions": [
+            "0.1.181",
+            "2026.10.4",
+            "2026.11.0"
+          ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/collection/dashboard-layout-card-v2/index.md",
           "status": "content-present",
-          "sha256": "d918abcc39e398a98911cb9db3a6a93c1f74456d05c9afa8a6577c915d8098e8",
-          "words": 1389,
-          "headings": 11,
+          "sha256": "29c24dd2de95ef8f66844e6f8f3bded238ee2a71c70c562328da4bbf21342088",
+          "words": 1519,
+          "headings": 12,
           "examples": 6,
-          "versions": [],
+          "versions": [
+            "0.1.181",
+            "2026.10.4",
+            "2026.11.0"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -12598,11 +12606,15 @@
         "fr": {
           "path": "fr/collection/dashboard-layout-card-v2/index.md",
           "status": "content-present",
-          "sha256": "31f45c55943060f7c2b7b455609e7a7e53437cd92f69274f0e8ea95d2e24861e",
-          "words": 1235,
-          "headings": 11,
+          "sha256": "9c2bea39e98f4fe7f5781af4df4990a63e0695cdbc7d3ff6f63d9f75577f58bc",
+          "words": 1389,
+          "headings": 12,
           "examples": 6,
-          "versions": [],
+          "versions": [
+            "0.1.181",
+            "2026.10.4",
+            "2026.11.0"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],

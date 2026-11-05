@@ -15,6 +15,12 @@ description: Dashboard Layout Card V2 for Home Assistant with side menu, submenu
 
 ## Overview
 
+### Update 0.1.181 for HA 2026.11
+
+The Sections V2 editor now passes complete configuration paths to Home Assistant. Native section editors can add cards to the correct section, and the header and footer also receive the new paths. The floating add button uses the first section. Existing cards and menu settings are preserved; no YAML migration is needed. Fully reload the browser page after updating.
+
+The comparison with the original HA 2026.11.0 code (frontend 20261028.4), build, TypeScript checks and local browser regression tests are complete. A live HA 2026.11 test remains pending because the checked test host .177 still uses HA 2026.10.4. See the [compatibility report](https://github.com/rockbaer2007/lovelace-layout-card-v2/blob/main/docs/ha-2026.11-compatibility.md).
+
 The card is less a single Lovelace card and more a dashboard/view extension. Its goal is a flexible Home Assistant dashboard with a side menu, subpages and a compact presentation for tablets or kiosk displays.
 
 Key features:

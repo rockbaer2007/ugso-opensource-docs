@@ -15,6 +15,12 @@ description: Dashboard Layout Card V2 pour Home Assistant avec menu latéral, so
 
 ## Vue d'ensemble
 
+### Mise à jour 0.1.181 pour HA 2026.11
+
+L’éditeur Sections V2 transmet désormais des chemins de configuration complets à Home Assistant. Les éditeurs natifs peuvent ajouter des cartes à la bonne section ; l’en-tête et le pied de page reçoivent également les nouveaux chemins. Le bouton flottant utilise la première section. Les cartes et réglages de menu existants sont conservés ; aucune migration YAML n’est nécessaire. Rechargez complètement la page du navigateur après la mise à jour.
+
+La comparaison avec le code original de HA 2026.11.0 (frontend 20261028.4), la compilation, la vérification TypeScript et les tests de régression locaux dans le navigateur sont terminés. Un test réel sous HA 2026.11 reste à effectuer, car le système de test .177 utilise encore HA 2026.10.4. Voir le [rapport de compatibilité](https://github.com/rockbaer2007/lovelace-layout-card-v2/blob/main/docs/ha-2026.11-compatibility.md).
+
 Cette extension est moins une simple carte Lovelace qu'une extension de vue/tableau de bord. L'objectif est de créer un tableau de bord Home Assistant flexible avec un menu latéral, des sous-pages et une présentation compacte pour tablettes ou écrans kiosk.
 
 Fonctions principales :

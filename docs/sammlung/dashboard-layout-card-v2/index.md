@@ -15,6 +15,12 @@ Die **Dashboard Layout Card V2** ist ein parallel installierbarer Fork der bekan
 
 ## Überblick
 
+### Update 0.1.181 für HA 2026.11
+
+Der Editor von Sections V2 übergibt jetzt vollständige Konfigurationspfade an Home Assistant. Dadurch können die nativen Abschnitts-Editoren Cards im richtigen Abschnitt hinzufügen; auch Kopf- und Fußzeile erhalten die neuen Pfade. Der schwebende Hinzufügen-Button verwendet den ersten Abschnitt. Vorhandene Cards und Menüeinstellungen bleiben erhalten; eine YAML-Umstellung ist nicht nötig. Nach dem Update die Browserseite vollständig neu laden.
+
+Der Vergleich mit dem Originalcode von HA 2026.11.0 (Frontend 20261028.4), Build, TypeScript-Prüfung und lokale Browser-Regressionstests sind abgeschlossen. Ein Live-Test unter HA 2026.11 ist noch offen, da das geprüfte Testsystem .177 weiterhin HA 2026.10.4 verwendet. Details: [Kompatibilitätsbericht](https://github.com/rockbaer2007/lovelace-layout-card-v2/blob/main/docs/ha-2026.11-compatibility.md).
+
 Die Card ist weniger eine einzelne Lovelace-Karte als eine Dashboard-/Ansichts-Erweiterung. Ziel ist ein flexibles Home-Assistant-Dashboard mit seitlichem Menü, Unterseiten und einer kompakten Darstellung für Tablets oder Kiosk-Displays.
 
 Wichtige Funktionen:
