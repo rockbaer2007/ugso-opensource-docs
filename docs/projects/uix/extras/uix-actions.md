@@ -118,8 +118,8 @@ tap_action:
 
 ## `popover` — verankertes Home-Assistant-Popover anzeigen {#popover}
 
-::: info Vorschau ab 9.0.0-beta.7
-`timeout` benötigt Home Assistant **2026.11.0b0 oder neuer**.
+::: info UIX 9.0.0
+`timeout` benötigt Home Assistant **2026.11.0 oder neuer**.
 :::
 
 Zeigt ein adaptives Home-Assistant-Popover neben dem Element an, das die Aktion `ll-custom` ausgelöst hat. Es enthält den standardmäßigen barrierefreien Schließen-Button von Home Assistant und entfernt sich nach dem Schließen.

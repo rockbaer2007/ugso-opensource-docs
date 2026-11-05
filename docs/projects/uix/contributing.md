@@ -167,6 +167,8 @@ Wenn Bilder benötigt werden, sind diese Wege sinnvoll:
 
 ## Abgleich mit neuen Releases
 
+Bei Conventional Commits erzeugen `feat!:` oder `BREAKING CHANGE: ...` im Commit-Footer beziehungsweise in der PR eine neue Hauptversion. `feat(major):` erzeugt dagegen eine neue Minor-Version.
+
 Bei neuen Minor-Versionen sollte die Übersetzung neu geprüft werden. Besonders kritisch sind:
 
 - neue Konfigurationsoptionen

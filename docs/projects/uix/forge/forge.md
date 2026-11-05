@@ -12,8 +12,8 @@ Forge ist besonders nützlich, wenn eine bestehende Karte fast passt, aber ein B
 :::
 ## Visueller Editor – Karten und Badges {#visual-editor-cards-and-badges}
 
-::: info Vorschau ab UIX 9.0.0-beta.2
-Laut [kanonischer Revision `1badf70`](https://github.com/Lint-Free-Technology/uix/blob/1badf70befb9c9d3d7b06c0eced75af7d552aff1/docs/source/forge/forge.md) ist der visuelle Forge-Editor ab **9.0.0-beta.2** verfügbar. Diese Zusammenfassung beschreibt die Vorschau, nicht die stabile Dokumentationsbasis 8.4.0.
+::: info UIX 9.0.0
+Der visuelle Forge-Editor für Karten und Badges gehört zur stabilen Version **9.0.0**.
 :::
 
 Wähle eine HA-Karte oder ein Badge, bearbeite es im normalen HA-Editor und ergänze Forge-Templates, Sparks, UIX-Styling und Foundries. Ohne Auswahl verwendet Forge seine integrierte leere Karte bzw. sein leeres Badge. Diese automatische Typwahl und der ausgewählte Editor-Reiter werden nicht in der Dashboard-Konfiguration gespeichert.
@@ -173,19 +173,19 @@ Bei Blank Cards zeigen viele Sparks standardmäßig auf `uix-forge-blank-card $ 
 :::
 ### Blank-Badge-Konfiguration {#blank-badge-config}
 
-In der Vorschau mit `mold: badge` und ohne Elementtyp verwendet Forge automatisch `uix-forge-blank-badge`. `element.icon` und `element.label` liefern den Inhalt; nur ein Icon ergibt ein Badge ohne Beschriftung. Ohne beides erscheint ein Hinweis zum Ergänzen von Icon, Label oder `forge.sparks`. Bei konfigurierten Sparks entfällt der Hinweis; sie adressieren eine leere `div` im Standard-Slot. Die automatisch gewählte Typangabe wird nicht im Dashboard gespeichert.
+Mit `mold: badge` und ohne Elementtyp verwendet Forge automatisch `uix-forge-blank-badge`. `element.icon` und `element.label` liefern den Inhalt; nur ein Icon ergibt ein Badge ohne Beschriftung. Ohne beides erscheint ein Hinweis zum Ergänzen von Icon, Label oder `forge.sparks`. Bei konfigurierten Sparks entfällt der Hinweis; sie adressieren eine leere `div` im Standard-Slot. Die automatisch gewählte Typangabe wird nicht im Dashboard gespeichert.
 
 <a id="layered-configuration"></a>
 <a id="keep-the-elements-configuration-in-element_base"></a>
 ## Geschichtete Konfiguration
 
-::: info Vorschau: verfügbar ab UIX 9.0.0-beta.0
-Diese Funktion gehört zum aktuellen `dev`-Stand und nicht zur stabilen Version 8.4.0.
+::: info UIX 9.0.0
+Die geschichtete Konfiguration gehört zur stabilen Version **9.0.0**.
 :::
 
 Die geschichtete Konfiguration bettet ein Element ein, das eigene Templates besitzt. Sie funktioniert mit allen Forge-Molds und benötigt keinen visuellen Editor. Sobald die aufgelöste Konfiguration `element_base` enthält, verwendet Forge diesen Modus.
 
-Die aktuelle Vorschau 9.0.0-beta.2 präzisiert die Typregel: Ein konkreter **geerbter** Foundry-`element.type` darf als Typanker dienen, wenn die lokale `element_base.type` exakt dieselbe Zeichenkette ist. Forge entfernt diesen passenden geerbten Typ vor dem Auflegen der übrigen Werte. Ein lokales `element.type`, dynamische Typen oder Abweichungen bleiben ungültig. Entfernen eines Element-Templates fragt vor dem Löschen der Quelle nach.
+In UIX 9.0.0 gilt die Typregel, dass ein konkreter **geerbter** Foundry-`element.type` als Typanker dienen darf, wenn die lokale `element_base.type` exakt dieselbe Zeichenkette ist. Forge entfernt diesen passenden geerbten Typ vor dem Auflegen der übrigen Werte. Ein lokales `element.type`, dynamische Typen oder Abweichungen bleiben ungültig. Entfernen eines Element-Templates fragt vor dem Löschen der Quelle nach.
 
 `element_base` enthält die vollständige elementeigene Basis. Forge reicht ihre Template-Zeichenketten unverändert weiter, ohne sie zu erkennen, auszuwerten, umzuschreiben oder Escape-Zeichen zu verlangen. `element` enthält die Forge-Überlagerung; deren aktive Werte werden nach den üblichen Forge-Template-Regeln verarbeitet.
 

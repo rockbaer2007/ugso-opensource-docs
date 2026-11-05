@@ -4,6 +4,18 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Abgleich vom 05.11.2026 mit UIX 9.0.0
+
+Alle **65** kanonischen Quellseiten wurden mit [`master f63ebbd`](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722) verglichen. Seit unserem Stand `e4a1caa` sind **acht Seiten geändert**, 57 sind unverändert. Gegenprüfung von `dev ef414d9` ergab dieselbe Dokumentation, einschließlich Navigation und Medien. Die Meldungen `fa4a427`, `5c253f9`, `4768bff`, `f63ebbd` und `99293d1` sind damit abgedeckt. Weitere Dokumentationsabweichungen wurden auf den aktuellen Zweigen nicht gefunden.
+
+- **UIX 9.0.0** ist seit 04.11.2026 stabil und benötigt **Home Assistant ab 2026.11.0**. Ehemalige Vorschauhinweise wurden auf den aktuellen Seiten berichtigt.
+- **Marketplace** übernimmt Installation und Dienstanlage. Die manuelle Einrichtung ist separat beschrieben. Bei Marketplace-Deinstallation werden auch Foundries, Seitenleisten-Einträge und Diensteinstellungen entfernt.
+- **Frame-Panels** verwenden im aktuellen Beispiel `a0d7b954_tailscale`. Das frühere HACS-Stylingbeispiel ist aus der aktuellen Referenz entfernt.
+- **Beiträge** unterscheiden `feat!:`/`BREAKING CHANGE: ...` für Hauptversionen von `feat(major):` für Minor-Versionen.
+- **Forge, Popover-Timeout und Seitenleisten** sind stabile 9.0.0-Funktionen. Startseiten, Footer, Metadaten und EN-Quellspiegel sind synchronisiert. Die gemeldete Forge-Animation wurde gegen die Quelle geprüft.
+
+Das Original und der vorherige Doku-Stand wurden gesichert. Der Abgleich prüft Quellen, Übersetzungsänderungen, technische Kennungen, Code, Medien und Links. Eine HA-Laufzeitprüfung gehört nicht zu diesem Dokumentationsabgleich.
+
 ## Abgleich vom 02.11.2026: Vorschau 9.0.0-beta.8
 
 Die Meldungen zu `f769f06`, `2782a71`, `1f69b99` und `e4a1caa` wurden bis zur [kanonischen Revision e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42) geprüft. Der Quellenvergleich aller **65** Seiten ergab drei geänderte Seiten und die Verschiebung einer Seite; EN ist synchronisiert, DE/FR sind entsprechend ergänzt.

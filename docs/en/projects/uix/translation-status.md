@@ -4,6 +4,18 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Review of 5 November 2026 against UIX 9.0.0
+
+All **65** canonical source pages were compared with [`master f63ebbd`](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722). Since our recorded `e4a1caa` baseline, **eight pages changed** and 57 remained identical. `dev ef414d9` contains identical documentation, including navigation and media. Notifications `fa4a427`, `5c253f9`, `4768bff`, `f63ebbd` and `99293d1` are covered. No additional documentation differences were found on the current branches.
+
+- **UIX 9.0.0** became stable on 4 November 2026 and requires **Home Assistant 2026.11.0 or later**. Current pages now identify the former preview features as stable.
+- **Marketplace** installs UIX and adds its service. Manual setup has separate instructions. Marketplace removal also removes Foundries, custom sidebar panels and service settings.
+- **Frame panels** now use `a0d7b954_tailscale` in the example. The former HACS styling example was removed from the current reference.
+- **Contributions** distinguish `feat!:`/`BREAKING CHANGE: ...` for major releases from `feat(major):` for minor releases.
+- **Forge, popover timeout and sidebar links** are stable 9.0.0 features. Landing pages, footers, metadata and the English source mirror are synchronized. The notified Forge animation was checked against the source.
+
+The previous documentation and original sources were backed up. Verification covers source changes, translations, technical identifiers, code, media and links. This documentation review does not include a Home Assistant runtime test.
+
 ## Review of 2 November 2026: 9.0.0-beta.8 preview
 
 Notifications `f769f06`, `2782a71`, `1f69b99` and `e4a1caa` were reviewed through [canonical revision e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42). Comparing all **65** source pages identified three changed pages and one relocated page. English is synchronized; German and French cover the changes.

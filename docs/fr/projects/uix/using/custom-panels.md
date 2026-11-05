@@ -11,7 +11,7 @@ UIX stylise directement les panneaux personnalisés chargés dans Home Assistant
 
 ::: info Panneau personnalisé chargé dans une iframe — fonctionnement
 1. Les panneaux personnalisés chargés dans une iframe sont stylisés par le moteur interne des frames UIX, injecté par le correctif de `ha-panel-custom`. Ce même moteur est utilisé pour les frames d'applications et ne dépend pas du type de panneau qui l'a appelé.
-2. Si UIX détecte qu'aucun thème n'est appliqué, il applique UIX Styling avec le thème actuellement chargé dans le frontend Home Assistant. Certains panneaux, comme [HACS](https://hacs.xyz), appliquent déjà le thème ; dans ce cas, le style UIX hérite de celui-ci.
+2. Si UIX détecte qu'aucun thème n'est appliqué, il applique UIX Styling avec le thème actuellement chargé dans le frontend Home Assistant. Certains panneaux appliquent déjà le thème. Dans ce cas, le style UIX hérite de celui-ci.
 3. La configuration des [panneaux personnalisés Home Assistant](https://www.home-assistant.io/integrations/panel_custom/) contient un champ `name:`. UIX Styling utilise ce nom pour créer la variable de thème UIX qui stylise les panneaux chargés dans une iframe.
 
 :::
@@ -68,39 +68,6 @@ La structure DOM de certains panneaux personnalisés peut ne pas utiliser de DOM
 
 Utilisez la variable de thème `uix-<name>(-yaml)`, où `name` correspond au [nom du panneau personnalisé](https://www.home-assistant.io/integrations/panel_custom/). En cas de doute, inspectez sur ordinateur le premier élément du DOM de l'iframe : le nom de sa balise indique celui du panneau.
 
-Exemple de style pour le panneau personnalisé [HACS](https://hacs.xyz) chargé dans une iframe :
-
-Le nom du panneau HACS est `hacs-frontend` ; sa variable de thème UIX Styling est donc `uix-hacs-frontend(-yaml)`. Le thème ci-dessous applique un dégradé arc-en-ciel à sa barre d'outils et définit des variables de style pour les cartes.
-
-```yaml
-UIX Test:
-
-  uix-theme: UIX Test
-
-  uix-hacs-frontend-yaml: |
-    hacs-dashboard $ hass-tabs-subpage-data-table $ hass-tabs-subpage $: |
-      .toolbar {
-        background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      }
-    hacs-repository-dashboard $:
-      .: |
-        ha-card {
-          background-color: orange;
-        }
-      hass-subpage $: |
-        .toolbar {
-          background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-        }
-      hass-loading-screen $: |
-        .toolbar {
-          background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-        }
-```
-
-::: example HACS panel styling
-![HACS panel styling](../assets/page-assets/using/custom-panel-hacs.png)
-
-:::
 ::: warning Mise à jour des thèmes
 Les mises à jour du thème sélectionné par l'utilisateur sont appliquées pendant l'affichage du panneau personnalisé. Toutefois, si vous changez le thème de l'utilisateur pendant qu'il consulte le panneau, actualisez celui-ci pour appliquer le nouveau thème.
 :::

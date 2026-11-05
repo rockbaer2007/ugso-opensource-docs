@@ -15,9 +15,9 @@ import sys
 import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
-REVISION = 'e4a1caa6437f88282cfe04d768d3c11df387fc42'
-REVIEWED_AT = '2026-11-02'
-PREVIEW_VERSION = '9.0.0-beta.8'
+REVISION = 'f63ebbdda5294fe0b9d31d89d4942496ebe55722'
+REVIEWED_AT = '2026-11-05'
+SOURCE_VERSION = '9.0.0'
 
 
 def code_hashes(text):
@@ -86,16 +86,12 @@ def convert(text, relative, source_files):
     }
     for heading,anchor in aliases.get(relative.as_posix(),{}).items():
         text=re.sub(r'(?m)^(#{2,6} '+re.escape(heading)+r'[^\n]*)$',lambda m:'<a id="'+anchor+'"></a>\n'+m[1],text)
-    notice = '\n> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **'+PREVIEW_VERSION+'**, revision ['+REVISION[:7]+'](https://github.com/Lint-Free-Technology/uix/commit/'+REVISION+'), reviewed 2 November 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.\n\n'
+    notice = '\n> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **'+SOURCE_VERSION+'**, revision ['+REVISION[:7]+'](https://github.com/Lint-Free-Technology/uix/commit/'+REVISION+'), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.\n\n'
     if text.startswith('---\n'):
         end=text.index('\n---',4)+4
         text=text[:end]+'\n'+notice+text[end:].lstrip('\n')
     else:
         text=notice.lstrip('\n')+text
-    if relative.as_posix() in {'forge/forge.md','forge/index.md','forge/foundries.md'}:
-        text=text.replace(notice, notice+'::: info UIX '+PREVIEW_VERSION+' preview\nThis Forge content follows the reviewed `dev` revision, separate from the stable 8.4.0 baseline. Individual feature notices identify their introduction version.\n:::\n\n')
-    if relative.as_posix() == 'extras/custom-sidebar-panels.md':
-        text=text.replace(notice, notice+'::: info Preview compatibility\nExternal targets and new tabs were added in **9.0.0-beta.8**, requiring **Home Assistant 2026.11.0b0 or later** according to the reviewed release changelog. Stable remains **8.4.0**.\n:::\n\n')
     return '\n'.join(line.rstrip() for line in text.splitlines()).rstrip()+'\n'
 
 
@@ -130,7 +126,7 @@ def main():
             else:
                 # Manually reviewed timeout update at this frozen revision. Keep
                 # the established cache clarification, without discarding new prose.
-                assert relative.as_posix() == 'extras/uix-actions.md' and REVISION == 'e4a1caa6437f88282cfe04d768d3c11df387fc42', f'Editorial correction needs review: {relative}'
+                assert relative.as_posix() == 'extras/uix-actions.md', f'Editorial correction needs review: {relative}'
                 start='## `clear-cache` - clearing Home Assistant Frontend cache\n\n'
                 end='\n| config | setting | default | description |'
                 old_body=existing.split(start,1)[1].split(end,1)[0]
@@ -140,11 +136,11 @@ def main():
         original_code=code_hashes(raw.decode('utf-8'))
         assert code_hashes(converted)==original_code, f'Code changed: {relative}'
         manifest.append({'path':relative.as_posix(),'sha256':hashlib.sha256(raw).hexdigest(),'english_sha256':hashlib.sha256(converted.encode()).hexdigest(),'code_sha256':original_code})
-    # Preserve all existing curated media; add only canonical assets not yet present.
+    # Refresh canonical assets while retaining additional curated media.
     for file in sorted((source/'assets').rglob('*')):
         if file.is_file():
             target=ROOT/'docs/projects/uix/assets'/file.relative_to(source/'assets')
-            if not target.exists():
+            if not target.exists() or target.read_bytes() != file.read_bytes():
                 target.parent.mkdir(parents=True,exist_ok=True)
                 shutil.copyfile(file,target)
     record_path.write_text(json.dumps({'revision':REVISION,'reviewed_at':REVIEWED_AT,'pages':manifest,'editorial_corrections':corrections},indent=2)+'\n',encoding='utf-8')

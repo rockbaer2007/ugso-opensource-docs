@@ -16,8 +16,8 @@ Dans les éditeurs YAML des cartes, badges, lignes, picture-elements et fonction
 :::
 ## Éditeur visuel – Cartes et badges {#visual-editor-cards-and-badges}
 
-::: info Aperçu à partir de UIX 9.0.0-beta.2
-Selon la [révision canonique `1badf70`](https://github.com/Lint-Free-Technology/uix/blob/1badf70befb9c9d3d7b06c0eced75af7d552aff1/docs/source/forge/forge.md), l’éditeur visuel Forge est disponible à partir de **9.0.0-beta.2**. Ce résumé décrit l’aperçu, pas la base documentaire stable 8.4.0.
+::: info UIX 9.0.0
+L’éditeur visuel Forge pour les cartes et les badges fait partie de la version stable **9.0.0**.
 :::
 
 Choisissez une carte ou un badge HA, modifiez-le avec son éditeur HA habituel, puis ajoutez des modèles Forge, Sparks, styles UIX et Foundries. Sans sélection, Forge utilise sa carte ou son badge vide intégré. Ce choix automatique de type et l’onglet sélectionné ne sont pas enregistrés dans la configuration du tableau de bord.
@@ -199,19 +199,19 @@ Sans autre contenu ajouté par un spark — comme élément frère ou enfant de 
 :::
 ### Configuration de badge vide {#blank-badge-config}
 
-Dans l’aperçu, `mold: badge` sans type utilise automatiquement `uix-forge-blank-badge`. `element.icon` et `element.label` fournissent le contenu ; une icône seule donne un badge sans texte. Sans les deux, un message demande d’ajouter une icône, un libellé ou `forge.sparks`. Avec des Sparks, ce message disparaît ; les Sparks ciblent une `div` vide dans le slot par défaut. Le type choisi automatiquement n’est pas enregistré dans le tableau de bord.
+Avec UIX 9.0.0, `mold: badge` sans type utilise automatiquement `uix-forge-blank-badge`. `element.icon` et `element.label` fournissent le contenu ; une icône seule donne un badge sans texte. Sans les deux, un message demande d’ajouter une icône, un libellé ou `forge.sparks`. Avec des Sparks, ce message disparaît ; les Sparks ciblent une `div` vide dans le slot par défaut. Le type choisi automatiquement n’est pas enregistré dans le tableau de bord.
 
 <a id="layered-configuration"></a>
 <a id="keep-the-elements-configuration-in-element_base"></a>
 ## Configuration en couches
 
-::: info Aperçu : disponible à partir de UIX 9.0.0-beta.0
-Cette fonction appartient à la branche `dev` actuelle, pas à la version stable 8.4.0.
+::: info UIX 9.0.0
+La configuration en couches fait partie de la version stable **9.0.0**.
 :::
 
 La configuration en couches encapsule un élément possédant ses propres modèles. Elle fonctionne avec tous les moules Forge et ne nécessite pas d'éditeur visuel. Toute configuration résolue contenant `element_base` utilise ce mode.
 
-L’aperçu 9.0.0-beta.2 précise la règle de type : un `element.type` concret **hérité** d’une Foundry peut servir d’ancrage si `element_base.type` local est exactement la même chaîne. Forge retire ce type hérité avant d’appliquer les autres valeurs. Un `element.type` local, dynamique ou incompatible reste invalide. Supprimer un modèle Element demande confirmation avant d’effacer sa source.
+La règle de type de UIX 9.0.0 : un `element.type` concret **hérité** d’une Foundry peut servir d’ancrage si `element_base.type` local est exactement la même chaîne. Forge retire ce type hérité avant d’appliquer les autres valeurs. Un `element.type` local, dynamique ou incompatible reste invalide. Supprimer un modèle Element demande confirmation avant d’effacer sa source.
 
 `template_nesting` reste utile dans un `element` sans couches ou dans la surcouche Forge lorsqu'un modèle Forge doit produire de la syntaxe Jinja pour l'élément. Les modèles natifs de `element_base` n'en ont pas besoin.
 

@@ -196,7 +196,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/state-badge) | [Content present](/fr/projects/uix/forge/sparks/state-badge) |
 | [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/theme) | [Content present](/fr/projects/uix/forge/sparks/theme) |
 | [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/tile-icon) | [Content present · Difference reviewed](/fr/projects/uix/forge/sparks/tile-icon) |
-| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/tooltip) | [Content present](/fr/projects/uix/forge/sparks/tooltip) |
+| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/tooltip) | [Content present · Difference reviewed](/fr/projects/uix/forge/sparks/tooltip) |
 | [projects/uix/guides.md](/projects/uix/guides) | [Content present · Difference reviewed](/en/projects/uix/guides) | [Content present](/fr/projects/uix/guides) |
 | [projects/uix/index.md](/projects/uix/) | [Content present · Difference reviewed](/en/projects/uix/) | [Content present](/fr/projects/uix/) |
 | [projects/uix/license.md](/projects/uix/license) | [Content present · Difference reviewed](/en/projects/uix/license) | [Content present](/fr/projects/uix/license) |

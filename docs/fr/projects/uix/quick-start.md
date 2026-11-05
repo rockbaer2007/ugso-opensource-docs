@@ -4,7 +4,7 @@ description: Premiers pas avec UI eXtension pour Home Assistant.
 ---
 # Démarrage rapide
 
-UIX **8.4.0** nécessite **Home Assistant 2026.10.0 ou ultérieur**. Voir la [version 8.4.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0).
+UIX **9.0.0** nécessite **Home Assistant 2026.11.0 ou ultérieur**. Voir la [version 9.0.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0).
 
 ::: note Utilisateurs de Card-mod
 Si vous migrez depuis Card-mod, consultez la [FAQ](./faq.md), qui répond à la plupart des questions. Pour toute autre question, utilisez les [discussions GitHub](https://github.com/Lint-Free-Technology/uix/discussions).
@@ -12,32 +12,23 @@ Si vous migrez depuis Card-mod, consultez la [FAQ](./faq.md), qui répond à la 
 :::
 ## Installation
 
-### HACS
+### Marketplace
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Lint-Free-Technology&repository=uix&category=integration)
+[![Ouvrir UIX dans le Marketplace de Home Assistant.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=Lint-Free-Technology&repository=uix&category=integration)
 
-Installez UI eXtension avec [HACS](https://hacs.xyz/). Cliquez sur le bouton ci-dessus pour effectuer l'installation en quelques étapes.
-
-::: hint Télécharger dans HACS
-Si vous utilisez HACS pour la première fois, n'oubliez pas de télécharger réellement l'intégration. Recherchez le bouton Télécharger ou utilisez le menu `...`.
-
-:::
+Ouvrez UI eXtension dans le [Marketplace de Home Assistant](https://www.home-assistant.io/integrations/marketplace/), puis choisissez **Installer**. Le Marketplace ajoute également UI eXtension comme service.
 ### Installation manuelle
 
-Utilisez votre méthode habituelle pour accéder aux fichiers de configuration Home Assistant. Ajoutez le dossier `uix` à `custom_components`, puis copiez dans ce dossier tous les fichiers de [custom_components/uix](https://github.com/Lint-Free-Technology/uix/tree/master/custom_components/uix).
+Utilisez votre méthode habituelle pour accéder aux fichiers de configuration Home Assistant. Ajoutez le dossier `uix` à `custom_components`, puis copiez dans ce dossier tous les fichiers de [custom_components/uix](https://github.com/Lint-Free-Technology/uix/tree/master/custom_components/uix). Redémarrez Home Assistant.
 
-## Ajouter l'intégration UI eXtension
+#### Ajouter le service après une installation manuelle {#ajouter-lintegration-ui-extension}
 
 [![Open your Home Assistant instance and show an integration.](https://my.home-assistant.io/badges/integration.svg)](https://my.home-assistant.io/redirect/integration/?domain=uix)
 
-Une fois l'intégration téléchargée et disponible dans Home Assistant, ajoutez UI eXtension dans la section `Appareils et services` des `Paramètres`. Le bouton ci-dessus vous guide à travers les étapes nécessaires.
+Après le redémarrage, ajoutez UI eXtension comme service dans **Paramètres → Appareils et services**. Le bouton ci-dessus vous guide à travers les étapes nécessaires.
 
 Une fois UI eXtension ajouté, actualisez la page pour rendre la ressource Frontend disponible.
 
-::: question UIX est introuvable ?
-Vérifiez que Home Assistant a été redémarré après une installation via HACS ou manuelle. Avec HACS, une notification de réparation permet de redémarrer Home Assistant.
-
-:::
 ## Votre premier style UIX
 
 - Ouvrez votre carte dans l'éditeur graphique Home Assistant.

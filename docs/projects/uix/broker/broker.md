@@ -5,7 +5,7 @@ description: UIX-Broker-Interaktionen konfigurieren und Konfigurationsquellen ve
 # UIX Broker
 
 ::: info Versionsstand
-Versionsstand: UIX 8.4.0. Frühere Beta-Versionshinweise kennzeichnen die Einführung einzelner Funktionen; diese sind in der stabilen Version enthalten.
+Versionsstand: UIX 9.0.0. Frühere Beta-Versionshinweise kennzeichnen die Einführung einzelner Funktionen; diese sind in der stabilen Version enthalten.
 :::
 
 Eine Interaktion besteht aus `realm`, `listen`, einem Interaktions-`anchor`, optionalen `rules` und einer geordneten Liste von `directives`.

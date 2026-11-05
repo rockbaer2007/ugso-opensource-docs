@@ -12,7 +12,7 @@ UIX stylt direkt geladene Custom Panels unmittelbar. Für Custom Panels, die in 
 
 ::: info So funktioniert iframe-Styling
 1. Custom Panels im iframe werden durch die interne UIX-Frame-Laufzeit gestylt, die der Patch für `ha-panel-custom` einfügt. Dieselbe Laufzeit wird auch für App-Frames verwendet und ist nicht an einen bestimmten Paneltyp gebunden.
-2. Wenn UIX erkennt, dass kein Theme angewendet wurde, wird UIX Styling mit dem aktuell geladenen Home-Assistant-Frontend-Theme angewendet. Manche Custom Panels wie HACS wenden das Theme selbst an; dann erbt UIX Styling dieses Theme.
+2. Wenn UIX erkennt, dass kein Theme angewendet wurde, wird UIX Styling mit dem aktuell geladenen Home-Assistant-Frontend-Theme angewendet. Manche Custom Panels wenden das Theme selbst an. Dann erbt UIX Styling dieses Theme.
 3. Home-Assistant-Custom-Panels werden mit einer Konfiguration inklusive `name:` definiert. UIX nutzt diesen Namen für die Theme-Variable, mit der iframe-Custom-Panels gestylt werden.
 :::
 
@@ -67,36 +67,6 @@ Die DOM-Struktur von Custom Panels verwendet nicht immer Shadow Roots oder Home-
 
 Nutze die Theme-Variable `uix-<name>(-yaml)`, wobei `name` der Name des [Home-Assistant-Custom-Panels](https://www.home-assistant.io/integrations/panel_custom/) ist. Wenn du den Namen nicht kennst, kannst du im Browser-Inspector nachsehen, welches erste Element im DOM des iframe liegt. Das Tag dieses Elements ist der Custom-Panel-Name.
 
-Beispiel für [HACS](https://hacs.xyz), das als iframe-Custom-Panel geladen wird:
-
-Für HACS ist der Custom-Panel-Name `hacs-frontend`, also lautet die UIX-Styling-Theme-Variable `uix-hacs-frontend(-yaml)`.
-
-```yaml
-UIX Test:
-
-  uix-theme: UIX Test
-
-  uix-hacs-frontend-yaml: |
-    hacs-dashboard $ hass-tabs-subpage-data-table $ hass-tabs-subpage $: |
-      .toolbar {
-        background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      }
-    hacs-repository-dashboard $:
-      .: |
-        ha-card {
-          background-color: orange;
-        }
-      hass-subpage $: |
-        .toolbar {
-          background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-        }
-      hass-loading-screen $: |
-        .toolbar {
-          background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-        }
-```
-
-![HACS panel styling](https://raw.githubusercontent.com/Lint-Free-Technology/uix/aae59986fc7f0475f27c7662a6a2ee7af310672b/docs/source/assets/page-assets/using/custom-panel-hacs.png)
 
 ::: warning Theme-Updates
 Theme-Updates für das aktuell ausgewählte Theme werden angewendet, während ein Custom Panel angezeigt wird. Wenn du aber das Theme des Nutzers wechselst, der das Custom Panel gerade sieht, muss das Panel neu geladen werden.

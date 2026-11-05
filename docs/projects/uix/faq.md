@@ -8,11 +8,11 @@ title: FAQ
 Deinstalliere zuerst Card-mod. Falls dessen Ressource über `extra_module_url` geladen wird, entferne auch diesen Eintrag und starte HA neu. Folge anschließend dem [UIX-Schnellstart](./quick-start), einschließlich des Hinzufügens der Integration als Dienst. Beide Ressourcen sollen nicht parallel geladen werden.
 
 ::: warning UI Lovelace Minimalist kann Card-mod nachladen
-Deaktiviere dort die Option `Include custom card resources it's depending on` und lade benötigte Custom Cards über HACS oder manuell. Durch die Ladereihenfolge kann UIX diesen Konflikt nicht selbst erkennen.
+Deaktiviere dort die Option `Include custom card resources it's depending on` und lade benötigte Custom Cards über Marketplace oder manuell. Durch die Ladereihenfolge kann UIX diesen Konflikt nicht selbst erkennen.
 :::
 
-::: tip UI eXtension als Service hinzufügen
-Wenn UIX als Home-Assistant-Integration installiert ist, kümmert sich UIX selbst um die Frontend-Ressource. Dadurch entfallen typische Probleme mit manuell gepflegten Ressourcen-URLs.
+::: tip UI eXtension ist ein Dienst
+Marketplace fügt UI eXtension bei der Installation automatisch als Dienst hinzu. Prüfe bei Problemen unter **Einstellungen → Geräte & Dienste**, ob der Dienst vorhanden ist. Bei manueller Installation fügst du ihn selbst hinzu.
 :::
 
 ## Ist UI eXtension ein direkter Ersatz für Card-mod?
@@ -75,10 +75,20 @@ Nein. Die Meldung stellt sicher, dass der UIX-JavaScript-Code im Frontend zur Ve
 
 Nach 60 Sekunden wird die Seite automatisch neu geladen.
 
-::: info Vorschau: UIX 9.0.0-beta.0
-Der aktuelle `dev`-Stand liefert bis zum nächsten Home-Assistant-Neustart weiterhin die beim Start geladene UIX-Version aus. Nach einem Update kannst du Home Assistant neu starten, sobald du die neue Version aktivieren möchtest. Die frühere Aufforderung an Administratoren, wegen eines vorzeitigen Frontend-Updates sofort neu zu starten, entfällt. Dieses Verhalten ist nicht Bestandteil der stabilen Basis 8.4.0.
+::: info UIX 9.0.0
+UIX liefert bis zum nächsten Home-Assistant-Neustart weiterhin die beim Start geladene Version aus. Nach einem Update kannst du Home Assistant neu starten, sobald du die neue Version aktivieren möchtest. Die frühere Aufforderung an Administratoren, wegen eines vorzeitigen Frontend-Updates sofort neu zu starten, entfällt.
 :::
 
 ## Wie deinstalliere ich UI eXtension?
 
-Entferne UIX über HACS oder aus `custom_components/uix`, starte Home Assistant neu und entferne anschließend UIX-spezifische Theme-Variablen oder `uix:`-Blöcke aus Dashboards, wenn sie nicht mehr benötigt werden.
+### Marketplace
+
+Öffne [UIX im Marketplace](https://my.home-assistant.io/redirect/marketplace_repository/?owner=Lint-Free-Technology&repository=uix&category=integration) und wähle im Dreipunktmenü **Deinstallieren**. Marketplace entfernt den Dienst und die Integrationsdateien.
+
+::: warning Dienstkonfiguration wird entfernt
+Dabei werden auch die Dienstkonfiguration mit Foundries, eigenen Seitenleisten-Einträgen und weiteren Einstellungen gelöscht. Dashboard- und Theme-YAML bleibt gespeichert, funktioniert ohne UIX aber nicht mehr.
+:::
+
+### Manuell
+
+Entferne zuerst den UI-eXtension-Dienst unter **Geräte & Dienste**. Lösche anschließend den Ordner `uix` aus `custom_components`.

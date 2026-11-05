@@ -3,15 +3,15 @@ title: Übersicht
 ---
 # UI eXtension für Home Assistant
 
-::: info Stand geprüft am 02.11.2026
-Stabile Basis: **UIX 8.4.0**, benötigt **Home Assistant 2026.10.0 oder neuer**. Alle **65** englischen Quellseiten wurden mit `dev`-Revision **e4a1caa / 9.0.0-beta.8** verglichen; DE/FR wurden um die Änderungen ergänzt. Vorschaufunktionen sind separat gekennzeichnet. Einzelheiten stehen im [Prüfbericht](./translation-status).
+::: info Stand geprüft am 05.11.2026
+Stabile Basis ist **UIX 9.0.0** mit **Home Assistant 2026.11.0 oder neuer**. Alle **65** englischen Quellseiten wurden mit `master f63ebbd` verglichen. `dev ef414d9` enthält dieselbe Dokumentation. Einzelheiten stehen im [Prüfbericht](./translation-status).
 :::
 
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
-> Basis: GitHub-Release [`v8.4.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0) vom 07.10.2026. Benötigt **Home Assistant 2026.10.0 oder neuer**. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`71b8ccd`](https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389).
-> Die stabile Basis wurde gegen diesen Release geprüft; zusätzlich berücksichtigt diese Fassung den separat gekennzeichneten Vorschau-Dokumentationsstand vom 02.11.2026. Einzelheiten und bekannte Grenzen stehen im [Übersetzungsstatus](./translation-status).
+> Basis ist GitHub-Release [`v9.0.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0) vom 04.11.2026. Benötigt **Home Assistant 2026.11.0 oder neuer**. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`cec1191`](https://github.com/Lint-Free-Technology/uix/commit/cec1191f6ee703284c75dfd3104dba9bb4419200).
+> Die Dokumentation wurde mit `master f63ebbd` abgeglichen. Einzelheiten stehen im [Übersetzungsstatus](./translation-status).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
 >
@@ -33,18 +33,18 @@ UIX besteht aus drei großen Bereichen:
 - [UIX Forge](./forge/index) für dynamisch erzeugte Elemente, wiederverwendbare Vorlagen und erweiterte Sparks.
 - [UIX Broker](./broker/index) für deklarative Interaktionen: Browser-Events, Tastenkürzel und Home-Assistant-Events wählen ein Element aus, prüfen Regeln und führen Direktiven in ihrer Reihenfolge aus.
 
-## Neu in UIX 8.4.0
+## Neu in UIX 9.0.0
 
-::: info Vorschau: UIX 9.0.0-beta.8
-[Eigene Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels) sind ab **9.0.0-beta.6** verfügbar. Der [visuelle Forge-Editor](./forge/forge#visual-editor-cards-and-badges) ist ab **9.0.0-beta.2** verfügbar und bietet **Convert to visual editor** für bestehende direkte Karten-/Badge-Forges. Seit **beta.7** gibt es [Popover-Timeouts](./extras/uix-actions#popover), seit **beta.8** externe Seitenleisten-Ziele und neue Tabs. Diese Ergänzungen benötigen **Home Assistant ab 2026.11.0b0**. Die stabile Basis bleibt **8.4.0**.
-:::
+- [Eigene Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels) können HA-Seiten und externe Webseiten öffnen, auch in einem neuen Tab.
+- Der [visuelle Forge-Editor](./forge/forge#visual-editor-cards-and-badges) bearbeitet Karten und Badges. `element_base` erhält die native Konfiguration mit ihren Templates.
+- [Popover-Timeouts](./extras/uix-actions#popover) schließen eingeblendete Inhalte automatisch.
 
 - [Form Spark](./forge/sparks/form) und [Popover-Aktion](./extras/uix-actions#popover) für Formulare und eingeblendete Inhalte.
 - [Frame-Panels stylen](./extras/style-frame-panels) mit interner Frame-Laufzeit; diese experimentelle Option bleibt standardmäßig deaktiviert.
 - [Theme-Schriften mit `uix-fonts`](./using/themes) und [Entitätsbilder in Kartenübersichten](./using/images), einschließlich der Anpassung an Home Assistant 2026.10.
 - [Broker-Direktiven-Regeln](./broker/directives#direktiven-regeln) können Ergebnisse früherer JavaScript- oder Template-Direktiven verwenden.
 
-Die zuvor beschriebenen 8.4-Beta-Ergänzungen gehören damit zur stabilen Version. Historische Versionshinweise kennzeichnen weiterhin die Einführung einzelner Funktionen.
+Die [Installation über Marketplace](./quick-start) richtet UIX automatisch als Dienst ein. Bei der [Deinstallation](./faq) werden auch Foundries, Seitenleisten-Verknüpfungen und weitere Diensteinstellungen entfernt.
 
 ## Schnell loslegen
 
@@ -60,4 +60,4 @@ Der beste Einstieg ist der [Schnellstart](./quick-start). Dort findest du Instal
 - [FAQ](./faq)
 
 > **Stand dieser deutschen Doku**
-> Am 02.11.2026 gegen die stabile Basis `8.4.0` und den Dokumentationsstand `dev e4a1caa / 9.0.0-beta.8` geprüft. Bei Unklarheiten gilt immer die englische Originaldokumentation.
+> Am 05.11.2026 gegen UIX `9.0.0` und den Dokumentationsstand `master f63ebbd` geprüft. Bei Unklarheiten gilt die englische Originaldokumentation.

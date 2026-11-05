@@ -6,9 +6,9 @@ description: "Les fonderies sont des configurations UIX Forge enregistrées sur 
 
 Une **fonderie** est une configuration UIX Forge nommée et enregistrée dans Home Assistant. Elle sert de base réutilisable : définissez une fois les configurations `forge` et `element`, attribuez-leur un nom, puis référencez-les dans autant d'éléments que nécessaire avec la clé `foundry:`. La configuration locale de l'élément est fusionnée avec cette base ; vous pouvez donc remplacer chaque valeur pour une instance donnée.
 
-À partir de **UIX 9.0.0-beta.0**, une fonderie peut aussi fournir un fragment `element_base`. La base appartenant à l'élément et la surcouche Forge `element` sont résolues séparément. Une base résolue active la [configuration en couches](./forge#layered-configuration). Cet aperçu ne fait pas partie de la version stable 8.4.0.
+Une fonderie peut aussi fournir un fragment `element_base`. La base appartenant à l'élément et la surcouche Forge `element` sont résolues séparément. Une base résolue active la [configuration en couches](./forge#layered-configuration), intégrée à la version stable **9.0.0**.
 
-::: info Précisions de l’aperçu 9.0.0-beta.2
+::: info UIX 9.0.0
 `element_base` d’une Foundry est une source native préservée par l’éditeur : la créer ou la modifier depuis le YAML du **Export** de Forge, puis la conserver pour une future prise en charge visuelle. Elle est fusionnée par héritage avant la base locale ; ses modèles sont évalués par HA ou l’élément enveloppé, pas par Forge. Les valeurs `element` s’appliquent ensuite. Le sélecteur visuel ne choisit pas encore une Foundry héritant `element_base`.
 :::
 

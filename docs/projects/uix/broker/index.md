@@ -5,7 +5,7 @@ description: Deklarative Frontend-Interaktionen für Home Assistant mit UIX Brok
 # UIX Broker
 
 ::: info Versionsstand
-Versionsstand: UIX 8.4.0, einschließlich der zuvor mit Beta-Versionen gekennzeichneten Funktionen. `block` blockiert das auslösende Event synchron, bevor die übrigen Direktiven laufen.
+Versionsstand: UIX 9.0.0, einschließlich der zuvor mit Beta-Versionen gekennzeichneten Funktionen. `block` blockiert das auslösende Event synchron, bevor die übrigen Direktiven laufen.
 :::
 
 UIX Broker wandelt Browser-Events, Tastenkürzel und Home-Assistant-Event-Bus-Events in deklarative Interaktionen um. Eine Interaktion wählt ein Browser-Element aus, prüft optionale Regeln und führt anschließend die Direktiven in der konfigurierten Reihenfolge aus.

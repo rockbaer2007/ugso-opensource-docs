@@ -5,7 +5,7 @@ description: Das Element auswählen, das UIX Broker standardmäßig für Regeln 
 # Interaction Anchors
 
 ::: info Versionsstand
-Versionsstand: UIX 8.4.0. Frühere Beta-Versionshinweise kennzeichnen die Einführung einzelner Funktionen; diese sind in der stabilen Version enthalten.
+Versionsstand: UIX 9.0.0. Frühere Beta-Versionshinweise kennzeichnen die Einführung einzelner Funktionen; diese sind in der stabilen Version enthalten.
 :::
 
 Ein Interaction Anchor wählt das Element aus, das Host-Element-Regeln prüfen und Direktiven standardmäßig verwenden. Browser- und Shortcut-Interaktionen können aus dem composed path des auslösenden Events wählen oder einen UIX-`select_tree`-Pfad nutzen. Server-Interaktionen verwenden ausschließlich `select_tree`.

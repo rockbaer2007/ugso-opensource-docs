@@ -13,11 +13,11 @@ hide:
 - Suivez ensuite le [guide de démarrage rapide de UI eXtension](./quick-start.md).
 
 ::: tip "Ajouter UI eXtension comme service"
-UI eXtension est une intégration. Après l'avoir installée avec HACS, vous devez l'ajouter comme service. Ne sautez pas l'étape **Ajouter le service UI eXtension** ; elle peut facilement passer inaperçue si vous n'avez pas l'habitude d'ajouter des intégrations comme services.
+UI eXtension est une intégration à ajouter comme service. Le Marketplace effectue cette étape automatiquement. En cas de problème, vérifiez la présence du service dans **Paramètres → Appareils et services**. Après une installation manuelle, ajoutez-le vous-même.
 
 :::
 ::: details UI Lovelace Minimalist peut charger la ressource Card-mod
-Si UI Lovelace Minimalist est installé, il peut charger la ressource Card-mod. En raison de l'ordre de chargement des intégrations, UI eXtension ne peut pas détecter ce conflit. Pour continuer à utiliser UI Lovelace Minimalist avec UI eXtension, désactivez l'option `Include custom card resources it's depending on` dans sa configuration, puis chargez les cartes personnalisées nécessaires avec HACS ou manuellement.
+Si UI Lovelace Minimalist est installé, il peut charger la ressource Card-mod. En raison de l'ordre de chargement des intégrations, UI eXtension ne peut pas détecter ce conflit. Pour continuer à utiliser UI Lovelace Minimalist avec UI eXtension, désactivez l'option `Include custom card resources it's depending on` dans sa configuration, puis chargez les cartes personnalisées nécessaires avec le Marketplace ou manuellement.
 
 ![UI Minimalist custom card option](./assets/page-assets/faq/ui-minimalist-option.png)
 
@@ -94,9 +94,19 @@ Non. Le message garantit que le code JavaScript UIX du frontend correspond à la
 La page se recharge automatiquement après 60 secondes, afin que les kiosques sans surveillance actualisent aussi leur frontend.
 
 ::: info Aperçu : UIX 9.0.0-beta.0
-La branche `dev` actuelle continue à servir la version UIX chargée au démarrage jusqu'au prochain redémarrage de Home Assistant. Après une mise à jour, redémarrez Home Assistant lorsque vous souhaitez activer la nouvelle version. L'ancienne demande de redémarrage immédiat adressée aux administrateurs en raison d'un frontend mis à jour trop tôt disparaît. Ce comportement ne fait pas partie de la base stable 8.4.0.
+UIX continue à servir la version chargée au démarrage jusqu’au prochain redémarrage de Home Assistant. Après une mise à jour, redémarrez Home Assistant lorsque vous souhaitez activer la nouvelle version. L’ancienne demande de redémarrage immédiat adressée aux administrateurs en raison d’un frontend mis à jour trop tôt disparaît. Ce comportement fait partie de UIX 9.0.0.
 :::
 
 ## Comment désinstaller UI eXtension ?
 
-La désinstallation de UI eXtension se déroule en deux étapes. Supprimez d'abord son entrée de service dans **Appareils et services**. Désinstallez ensuite l'intégration avec HACS ou, si vous l'avez installée manuellement, en supprimant le dossier `uix` du répertoire `custom_components`.
+### Marketplace
+
+Ouvrez [UIX dans le Marketplace](https://my.home-assistant.io/redirect/marketplace_repository/?owner=Lint-Free-Technology&repository=uix&category=integration), puis choisissez **Désinstaller** dans le menu à trois points. Le Marketplace supprime le service et les fichiers de l’intégration.
+
+::: warning Suppression de la configuration du service
+La désinstallation supprime aussi les Foundries, les panneaux personnalisés de la barre latérale et les autres réglages du service. Les configurations YAML des tableaux de bord et des thèmes sont conservées, mais cessent de fonctionner sans UIX.
+:::
+
+### Installation manuelle
+
+Supprimez d’abord l’entrée du service dans **Appareils et services**, puis le dossier `uix` dans `custom_components`.

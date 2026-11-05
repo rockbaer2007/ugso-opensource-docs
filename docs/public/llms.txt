@@ -16,11 +16,11 @@ Authoritative UIX repository:
 https://github.com/Lint-Free-Technology/uix
 
 Tracked UIX versions for the German and French translations:
-- Stable base: UIX 8.4.0, released 2026-10-07, source revision 71b8ccd38202257c070ae9970a7aac12a68a6389.
-- Requires Home Assistant 2026.10.0 or newer.
-- Stable release rechecked on 2026-11-02; still v8.4.0.
-- Separate documentation preview: dev e4a1caa6437f88282cfe04d768d3c11df387fc42 / 9.0.0-beta.8, reviewed 2026-11-02, 65 canonical source pages.
-- DE/FR cover popover timeout (beta.7), external sidebar targets/new tabs (beta.8), popup-blocker fallback, and the move to extras/custom-sidebar-panels. These preview additions require HA 2026.11.0b0. Old using/custom-sidebar-panels links remain available. Historical feature introduction versions are preserved.
+- Stable base: UIX 9.0.0, released 2026-11-04, release revision cec1191f6ee703284c75dfd3104dba9bb4419200.
+- Requires Home Assistant 2026.11.0 or newer.
+- All 65 canonical source pages reviewed on 2026-11-05 against master f63ebbdda5294fe0b9d31d89d4942496ebe55722.
+- Documentation on dev ef414d950c7d807f43ce4555f9a31112b25637c9 is identical to the reviewed master documentation.
+- DE/FR cover Marketplace installation and removal, service setup, sidebar links, Forge visual editing, popover timeout and current frame-panel examples.
 - Historical review details: https://opensource.ugso-software.de/projects/uix/translation-status
 
 License attribution:

@@ -24,7 +24,7 @@
       "content-present": 236,
       "existing_pages": 236,
       "unmatched_pages": 0,
-      "review_signals": 30,
+      "review_signals": 31,
       "reviewed_findings": 47,
       "open_review_signals": 0
     }
@@ -7408,31 +7408,31 @@
         "de": {
           "path": "projects/uix/broker/broker.md",
           "status": "content-present",
-          "sha256": "04e18a178dedb20b4457b9f4debc870f37adc19e2d1ef19f57e1b9d92acf38a4",
+          "sha256": "a928d007f1f96fd3866ffa5fc356f960822561f137e3cf3e16ddd849e0db3051",
           "words": 788,
           "headings": 7,
           "examples": 6,
           "versions": [
-            "8.4.0"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/broker/broker.md",
           "status": "content-present",
-          "sha256": "ab85be9fbc3488c49cd134fcb3db4b4e53aab1b9d9e95273af19c35590ddf042",
-          "words": 962,
+          "sha256": "a72d347d04c43a42afea7998a354115660e3e5a9e7711ef9585cd1ef572b226c",
+          "words": 956,
           "headings": 7,
           "examples": 6,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -7441,7 +7441,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -7455,7 +7455,7 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
-              "8.4.0"
+              "9.0.0"
             ],
             "versions_only_in_translation": [],
             "fewer_examples": false,
@@ -7465,7 +7465,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -7489,13 +7489,13 @@
         "en": {
           "path": "en/projects/uix/broker/directives.md",
           "status": "content-present",
-          "sha256": "e53feb1edc03a05e57bc3e41e54d743cd9a6f76db805a75065d6a6354db4f783",
-          "words": 4148,
+          "sha256": "c79f0597c59fce08db38646baca1b066771321ccaf1c7250c987f3ed86c7a9f7",
+          "words": 4142,
           "headings": 20,
           "examples": 42,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -7504,8 +7504,8 @@
               "8.3.0-beta.5"
             ],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -7514,7 +7514,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -7551,31 +7551,31 @@
         "de": {
           "path": "projects/uix/broker/examples.md",
           "status": "content-present",
-          "sha256": "82d171401f14f78bbb4a21deeb84ae1013b89af5346ee256183621daa0df3015",
+          "sha256": "e1a8e5fe7cf07b0c2e9f24af33a5e80e16d5e3c0cae2a1fee4faec87cb0371ef",
           "words": 921,
           "headings": 10,
           "examples": 10,
           "versions": [
-            "8.4.0"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/broker/examples.md",
           "status": "content-present",
-          "sha256": "a87c05811764d81a85278eb15693a88e26c93207160ef34741d6a4e8986ce45a",
-          "words": 940,
+          "sha256": "eb500d78d577772da6abb255a3669846474d8cc73ba261fe5101d8e0586860dd",
+          "words": 934,
           "headings": 6,
           "examples": 6,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -7584,7 +7584,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -7598,7 +7598,7 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
-              "8.4.0"
+              "9.0.0"
             ],
             "versions_only_in_translation": [],
             "fewer_examples": false,
@@ -7608,7 +7608,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -7619,31 +7619,31 @@
         "de": {
           "path": "projects/uix/broker/index.md",
           "status": "content-present",
-          "sha256": "9dcb258eacef447fce60bcbb2551600a0ba90595c61985e7880e1d28a344a505",
+          "sha256": "229f9b710004cdba79778873c3965daf255d42b21090ddc8955836d72d233f75",
           "words": 216,
           "headings": 2,
           "examples": 2,
           "versions": [
-            "8.4.0"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/broker/index.md",
           "status": "content-present",
-          "sha256": "95040119fbbd04cb20791cf29458f88c57dc7194020ba1380b40852fe6b26c04",
-          "words": 316,
+          "sha256": "29dc9701cd0761606214c26300c8010f62e0724ac64cf5adfbcf67fdcc634aba",
+          "words": 310,
           "headings": 2,
           "examples": 2,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -7652,7 +7652,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -7666,7 +7666,7 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
-              "8.4.0"
+              "9.0.0"
             ],
             "versions_only_in_translation": [],
             "fewer_examples": false,
@@ -7676,7 +7676,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -7687,31 +7687,31 @@
         "de": {
           "path": "projects/uix/broker/interaction-anchors.md",
           "status": "content-present",
-          "sha256": "571a0e1f883387f5de79ede8c8640c65d89f327cc8206582a0d144dd041dec17",
+          "sha256": "ac81410047813f76e35af9d014b962c80eaaafaadba38604b5b08ef7deb12c01",
           "words": 343,
           "headings": 10,
           "examples": 8,
           "versions": [
-            "8.4.0"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/broker/interaction-anchors.md",
           "status": "content-present",
-          "sha256": "13ab158872f700c0eb43363facf3f06087f3bda067e6d3792aebb18603d983bf",
-          "words": 517,
+          "sha256": "11657865405fd52792cb1049f904823d962c734f49fc513bc9aa40625e1d21fc",
+          "words": 511,
           "headings": 10,
           "examples": 8,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -7720,7 +7720,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -7734,7 +7734,7 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
-              "8.4.0"
+              "9.0.0"
             ],
             "versions_only_in_translation": [],
             "fewer_examples": false,
@@ -7744,7 +7744,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -7755,31 +7755,31 @@
         "de": {
           "path": "projects/uix/broker/realms.md",
           "status": "content-present",
-          "sha256": "f8fe793dbce6da29cb214e1a68bc9f1b51c10f212e15966a03a064ef0081a5e0",
+          "sha256": "deca4d2e262ec6c784ab7186b6f5faba5e196132dbd5ae08c8b7aeb992c21dfd",
           "words": 741,
           "headings": 8,
           "examples": 5,
           "versions": [
-            "8.4.0"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/broker/realms.md",
           "status": "content-present",
-          "sha256": "ffe28195acefa543eedd5b30414cf216d3e61a86d3b2285a2daa51d3bf04ff91",
-          "words": 1033,
+          "sha256": "0359d83b7ba75c995b9ce175cede512f200d948757eab1265e476c4814c7d5c6",
+          "words": 1027,
           "headings": 8,
           "examples": 5,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -7788,7 +7788,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -7802,7 +7802,7 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
-              "8.4.0"
+              "9.0.0"
             ],
             "versions_only_in_translation": [],
             "fewer_examples": false,
@@ -7812,7 +7812,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -7823,27 +7823,27 @@
         "de": {
           "path": "projects/uix/broker/rules.md",
           "status": "content-present",
-          "sha256": "e1a4eee8158c23266e82632074ec6d46f1bb17d9b4aa99b01aad50e4a2bda76b",
+          "sha256": "1efebc8b1c5515cc3adf8a512f30ac7917ca6d6adfea04eda6443a1004140c1f",
           "words": 790,
           "headings": 11,
           "examples": 14,
           "versions": [
             "8.3.0-beta.1",
-            "8.4.0",
-            "8.4.0-beta.9"
+            "8.4.0-beta.9",
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/broker/rules.md",
           "status": "content-present",
-          "sha256": "2325007d35a492143b22cb967d5e70f8095851c534ab5ad2f7707aa821090ab5",
-          "words": 1063,
+          "sha256": "9a8ea22f7351f6c3898cca0343600e61b4b1ede61f8642cbcad28226fc378994",
+          "words": 1057,
           "headings": 11,
           "examples": 12,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -7852,7 +7852,7 @@
               "8.4.0-beta.9"
             ],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -7861,7 +7861,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -7878,7 +7878,7 @@
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
-              "8.4.0"
+              "9.0.0"
             ],
             "versions_only_in_translation": [],
             "fewer_examples": false,
@@ -7888,7 +7888,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "supplemented",
-            "reason": "Added 4 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -7909,20 +7909,20 @@
         "en": {
           "path": "en/projects/uix/concepts/application.md",
           "status": "content-present",
-          "sha256": "e3a864479a2cb77cc570aebdaf20e83367efc34be4d3d7682b3555023c5f5b66",
-          "words": 573,
+          "sha256": "cbf507d1b29be5fc455e2e367c5c6e9554ec17ec18e7f9e4548f8011e04d9a74",
+          "words": 567,
           "headings": 4,
           "examples": 6,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -7931,7 +7931,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -7974,20 +7974,20 @@
         "en": {
           "path": "en/projects/uix/concepts/dom.md",
           "status": "content-present",
-          "sha256": "9f8020e6d854ac511e76ac3eb4cb9d8992d419cfc0e7e48a546fde6ff71d942a",
-          "words": 2206,
+          "sha256": "5dc487117e3f5f53e70a8f88ea6e244f4f9c2e3bb73d7cfbb19328a3839f0ddd",
+          "words": 2200,
           "headings": 9,
           "examples": 28,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -7996,7 +7996,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8039,20 +8039,20 @@
         "en": {
           "path": "en/projects/uix/concepts/index.md",
           "status": "content-present",
-          "sha256": "4d1a6f8319e8ebc683e8aaf3fa5c522c8c7323a7ee49e96daac5dc509e179a72",
-          "words": 146,
+          "sha256": "e6d947dc6db437363aedc97f80dbf8f36a4dba43855d952aaaf1f6896909a603",
+          "words": 140,
           "headings": 2,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8061,7 +8061,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8089,8 +8089,8 @@
         "de": {
           "path": "projects/uix/contributing.md",
           "status": "content-present",
-          "sha256": "9552f75e36ca61cc795d39146580c63fe65ffe7fb80b208b8eac25f303a72108",
-          "words": 1178,
+          "sha256": "9d8377e4dcc2d5ba0ee3b6645d7d447f8b71ac10c62893ac0d1c2016c12bcc5b",
+          "words": 1204,
           "headings": 14,
           "examples": 6,
           "versions": [
@@ -8103,16 +8103,16 @@
         "en": {
           "path": "en/projects/uix/contributing.md",
           "status": "content-present",
-          "sha256": "02b50aa4d55d139986c8e37b9683d93d69857f9f1519fd2f9cce144eafd7a1a9",
-          "words": 1813,
+          "sha256": "a7c8bc3f8c484c1371512dd562689c7e62eb0b5d58ecfc4e248acc738073ed7c",
+          "words": 1814,
           "headings": 11,
           "examples": 6,
           "versions": [
+            "2026.11.0",
             "5.0.1-mydev.1",
             "8.3.0",
             "8.3.0-beta.1",
-            "8.4.0",
-            "9.0.0-beta.8"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -8120,9 +8120,9 @@
               "9.0.0-mydev.1"
             ],
             "versions_only_in_translation": [
+              "2026.11.0",
               "5.0.1-mydev.1",
-              "8.4.0",
-              "9.0.0-beta.8"
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8131,14 +8131,14 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
           "path": "fr/projects/uix/contributing.md",
           "status": "content-present",
-          "sha256": "aff12af332b2b92196dc0f6af92ce635643d465a931a1499f63222bd16ad93dc",
-          "words": 2126,
+          "sha256": "c2b2daa5c204c9eb8f4d2c694609438018dd13e2f33581de581d94658f1837cd",
+          "words": 2132,
           "headings": 12,
           "examples": 6,
           "versions": [
@@ -8160,7 +8160,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "supplemented",
-            "reason": "Added translation-fork directories, publication metadata, warning semantics and development-version explanation. Different mydev version numbers are illustrative examples, not different supported releases."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -8181,20 +8181,20 @@
         "en": {
           "path": "en/projects/uix/debugging/cache.md",
           "status": "content-present",
-          "sha256": "ec8a0dd2c7b014d3b8c827793c0bcccd6b798cc829d4ae26ad1a662c834b5539",
-          "words": 202,
+          "sha256": "85c21ed7cf82e62c1dc3c013643d846a5064c1e6625cf587f07aa32866cf5911",
+          "words": 196,
           "headings": 1,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8203,7 +8203,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "corrected",
-            "reason": "Incorrect/contradictory cache-deletion claim corrected against the reviewed implementation; localStorage and Browser Mod identity are preserved."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8246,20 +8246,20 @@
         "en": {
           "path": "en/projects/uix/debugging/cards.md",
           "status": "content-present",
-          "sha256": "cb6d7b220a815f23eea38e1b308b5c00ff79b32f1a5fbb74ceaea57ae81cbb18",
-          "words": 540,
+          "sha256": "4e9fc8317d62582dd6ac6469f2a70f2e34c7f193ad7bd3851f5b7ad0a1343d1e",
+          "words": 534,
           "headings": 2,
           "examples": 4,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8268,7 +8268,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8306,20 +8306,20 @@
         "en": {
           "path": "en/projects/uix/debugging/index.md",
           "status": "content-present",
-          "sha256": "550540f442316018609e3ad2453ba3312fcc502fb12f34943d824266767b978e",
-          "words": 115,
+          "sha256": "fd6f249a526eafb364451e6bfd6893d2ad686abe4851b8b4b40f5327fd6f1a32",
+          "words": 109,
           "headings": 1,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8328,7 +8328,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8366,20 +8366,20 @@
         "en": {
           "path": "en/projects/uix/debugging/templates.md",
           "status": "content-present",
-          "sha256": "4a02056f0941264774172c6f6c14df5fa87ee2c8a345c67355a56459fffb8c0b",
-          "words": 152,
+          "sha256": "a4dfc202313c94ea2a973f45a2cc9582ede0a07c3fa5f3cd7c46884d61a9228b",
+          "words": 146,
           "headings": 1,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -8388,7 +8388,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8431,20 +8431,20 @@
         "en": {
           "path": "en/projects/uix/developers/cards.md",
           "status": "content-present",
-          "sha256": "3357468e70f5acbf824efe828cbb98e63ceb77f3ec5764fc360ebb9ee48f30b2",
-          "words": 331,
+          "sha256": "7568fe69aa4c142df8a8a8a3d34a8ff489e19b58f19eace06309d5295ee7a03a",
+          "words": 325,
           "headings": 2,
           "examples": 4,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8453,7 +8453,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8491,20 +8491,20 @@
         "en": {
           "path": "en/projects/uix/developers/index.md",
           "status": "content-present",
-          "sha256": "f17e87e9b5fcf6ed6ea868310cfe78a08f00f418adeebef58efa7881028df9a9",
-          "words": 111,
+          "sha256": "f5aef2a6012360e1fefcca5d6a9f2cfbf6d097223fb4d92db34254b93f836bbf",
+          "words": 105,
           "headings": 1,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8513,7 +8513,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8551,20 +8551,20 @@
         "en": {
           "path": "en/projects/uix/developers/themes.md",
           "status": "content-present",
-          "sha256": "6992a0b3f1e8809884c3a9313bbad014e45440c9ade20b187edd78ead78186af",
-          "words": 171,
+          "sha256": "aae74154f44e3f84a43ebc846a3c379f25b00e97d7840095017e09b7b9bbf5e8",
+          "words": 165,
           "headings": 1,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -8573,7 +8573,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8618,13 +8618,13 @@
         "en": {
           "path": "en/projects/uix/extras/always-patch-ha-card.md",
           "status": "content-present",
-          "sha256": "c3666182e21aa38347248468c77a69f7fec944a8d3172c3328f70fb520dde9ed",
-          "words": 259,
+          "sha256": "1fb7ea39dbb12925875142275554c9a90162e39118e5c144cd1c9f44a3ff054c",
+          "words": 253,
           "headings": 3,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -8632,8 +8632,8 @@
               "8.2.0-beta.1"
             ],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8642,7 +8642,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8677,30 +8677,26 @@
         "de": {
           "path": "projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "6096d87b342da9af34521146c736985cbd8030111e50e49ca9451e9635b65097",
-          "words": 369,
+          "sha256": "5c33be0e5b281e0643f003a0eb5d0fbbc8fcf4fc575d0659472b3dc00766bbad",
+          "words": 340,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "8.4.0",
-            "9.0.0-beta.6",
-            "9.0.0-beta.8"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "f03a929e5d407d65e450de01252a061a588fa116fc4ac12d4acdb85929840fed",
-          "words": 454,
+          "sha256": "05da7ec73ee708b638d8e7b8955c6b699be8125f2ee38dab9fcf94a6e4cb92cd",
+          "words": 400,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "8.4.0",
-            "9.0.0-beta.6",
-            "9.0.0-beta.8"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -8714,15 +8710,13 @@
         "fr": {
           "path": "fr/projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "767534fe0263f80800622e4c616bd5ad004aa58a3001ecd9e46e5acf5aa57e2d",
-          "words": 423,
+          "sha256": "c6482c286a150e5f0a320f765340be5be8e656cacf04cd797c7f4a30ad296f35",
+          "words": 392,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "8.4.0",
-            "9.0.0-beta.6",
-            "9.0.0-beta.8"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -8751,20 +8745,20 @@
         "en": {
           "path": "en/projects/uix/extras/dialog-styling-delay.md",
           "status": "content-present",
-          "sha256": "6cc40806b38919b8f22e211242804334e182a788becf0a82854d7e75abc72284",
-          "words": 614,
+          "sha256": "3beb1e9084940f15ab94030558cf49cdfb1a2593391ac644a1b4e7a3c1f77b2c",
+          "words": 608,
           "headings": 11,
           "examples": 4,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8773,7 +8767,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8816,20 +8810,20 @@
         "en": {
           "path": "en/projects/uix/extras/disable-entity-picture-image-override.md",
           "status": "content-present",
-          "sha256": "54dd5f24399cca050524c7091611060f846fde1b10d6f095f21f28f9b66eaa97",
-          "words": 251,
+          "sha256": "6b9d0afdc85de737e6b936dc1ab6a7d572254b392582d502ee0e93e6afa244f9",
+          "words": 245,
           "headings": 3,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8838,7 +8832,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8881,20 +8875,20 @@
         "en": {
           "path": "en/projects/uix/extras/disable-icon-styling.md",
           "status": "content-present",
-          "sha256": "9b4f5ead4e6baf2266ee8d4b8e70d503181f8e7aee109689b09b5b2f5377ae0a",
-          "words": 251,
+          "sha256": "1db3f21834bd40bf334fedad55076a4b34bbd4a5773c91c79f924ac082293d5f",
+          "words": 245,
           "headings": 3,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8903,7 +8897,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -8946,20 +8940,20 @@
         "en": {
           "path": "en/projects/uix/extras/frontend-states-throttling.md",
           "status": "content-present",
-          "sha256": "4896aa9a2bc5e698d710771102f11ada6eaf601b0d8438f264e0fa70f2b43375",
-          "words": 783,
+          "sha256": "f402db3d1b7a5e9134e5dbe9ff9be7fe92b21b5b4666e84c942f8b161184c350",
+          "words": 777,
           "headings": 12,
           "examples": 4,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -8968,7 +8962,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -9011,20 +9005,20 @@
         "en": {
           "path": "en/projects/uix/extras/hash-template-variable-updates.md",
           "status": "content-present",
-          "sha256": "95892eefbefd60af2a4f7190f9379b2332ab3f9c1c90103d201eeba22ed87084",
-          "words": 282,
+          "sha256": "463c44190ffdc0a6062821ae383ff431e07d9232906583203cb498935c532d56",
+          "words": 276,
           "headings": 3,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -9033,7 +9027,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -9071,20 +9065,20 @@
         "en": {
           "path": "en/projects/uix/extras/index.md",
           "status": "content-present",
-          "sha256": "d0c9225a299d00d85e8a9835864491e2ed2b0d50ab7c5e11440f21579ec40282",
-          "words": 166,
+          "sha256": "a54de8d4c39d573db70e6843341871090527d06dfbb85e933ab561d72ab8b568",
+          "words": 160,
           "headings": 0,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -9093,7 +9087,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -9175,31 +9169,31 @@
         "de": {
           "path": "projects/uix/extras/style-frame-panels.md",
           "status": "content-present",
-          "sha256": "813b257877f20be7063a0bb02743206487e769b5ea263f399e2531aa190b22d3",
-          "words": 397,
+          "sha256": "c87c2d1f301764300387811d6393421fafafaa57d349781233726236a549be89",
+          "words": 393,
           "headings": 3,
           "examples": 0,
           "versions": [
-            "8.4.0"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/extras/style-frame-panels.md",
           "status": "content-present",
-          "sha256": "2e993d2c6f6e1c556d7f683bd2f736e4407869555de48df5683855133155f963",
-          "words": 484,
+          "sha256": "1c3f34601564b78bc7de74558dca19a95f226413a57fafac8279dc2857cc1e70",
+          "words": 474,
           "headings": 3,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -9208,18 +9202,18 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
           "path": "fr/projects/uix/extras/style-frame-panels.md",
           "status": "content-present",
-          "sha256": "8f2c082d32ff5bdfd9a10a76518d58b7e78f1537bdcc5d3ea87c2e99ec319265",
-          "words": 485,
+          "sha256": "aca40bd087a9174da07d4c30d23a358cc9a6f238ea838ea43077fbb83a86e582",
+          "words": 483,
           "headings": 3,
           "examples": 0,
           "versions": [
-            "8.4.0"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -9238,7 +9232,7 @@
         "de": {
           "path": "projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "d9e59584a12ade5c84b124e8d5ba8a97c83f527dc94b5590e55faae3d98e355d",
+          "sha256": "91aefb903eb1bfec073ead160d692f29f98f6105b83bdc21a1ffb9147e5b2e5b",
           "words": 1318,
           "headings": 14,
           "examples": 11,
@@ -9246,31 +9240,28 @@
             "2026.11.0",
             "8.3.0-beta.2",
             "8.4.0",
-            "9.0.0-beta.7"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "cf896287685d2b49ac332a9947cb0bf588352904c2dd8bf4dca08be52047b6f1",
-          "words": 1752,
+          "sha256": "346e8d90c4a6a085142fb5a4d230281a26db59917d2c7357fbc63b6195b5eddc",
+          "words": 1746,
           "headings": 14,
           "examples": 11,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.7",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
-              "2026.11.0",
-              "8.3.0-beta.2"
+              "8.3.0-beta.2",
+              "8.4.0"
             ],
-            "versions_only_in_translation": [
-              "9.0.0-beta.8"
-            ],
+            "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
@@ -9278,20 +9269,20 @@
           "review": {
             "status": "reviewed",
             "disposition": "corrected",
-            "reason": "Incorrect/contradictory cache-deletion claim corrected against the reviewed implementation; localStorage and Browser Mod identity are preserved."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
           "path": "fr/projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "0ea3e53aaa8f02496842132a7dbc19df2c94846211bcdcbcf383b89f0e259cd2",
+          "sha256": "9b75d63c655fff4a47a29c7ea2541b548acdf88b5afc1e11f057227f57246140",
           "words": 1807,
           "headings": 14,
           "examples": 11,
           "versions": [
             "2026.11.0",
             "8.3.0-beta.2",
-            "9.0.0-beta.7"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -9306,7 +9297,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -9317,75 +9308,39 @@
         "de": {
           "path": "projects/uix/faq.md",
           "status": "content-present",
-          "sha256": "8e5863968299f97c14131c43d13a6a4d9a6294439da196ae1896c8f7745e71ce",
-          "words": 766,
-          "headings": 9,
+          "sha256": "5166dcbbab4079fad7ee151a57fe7ad2e30ab64c72df3f31a6ac545e9af3a28f",
+          "words": 803,
+          "headings": 11,
           "examples": 0,
           "versions": [
             "2026.3.0",
             "2026.8.0",
             "4.2.1",
-            "8.4.0",
-            "9.0.0-beta.0"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/faq.md",
           "status": "content-present",
-          "sha256": "3048005b47db2e189e21e90b2035f99bc04f8467d9ee810cb6e6d5bd14870986",
-          "words": 1030,
-          "headings": 9,
+          "sha256": "c0446c73d2b08ca35c729dbbaa0f5d3d98b1a4f2321f5f3f1e67d771f982bf14",
+          "words": 1103,
+          "headings": 11,
           "examples": 0,
           "versions": [
+            "2026.11.0",
             "2026.3.0",
             "2026.8.0",
             "4.2.1",
             "8.0.1",
             "8.1.0",
-            "8.4.0",
-            "9.0.0-beta.8"
-          ],
-          "unresolved_local_references": [],
-          "review_signals": {
-            "versions_only_in_de": [
-              "9.0.0-beta.0"
-            ],
-            "versions_only_in_translation": [
-              "8.0.1",
-              "8.1.0",
-              "9.0.0-beta.8"
-            ],
-            "fewer_examples": false,
-            "substantially_shorter": false,
-            "fewer_headings": false
-          },
-          "review": {
-            "status": "reviewed",
-            "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
-          }
-        },
-        "fr": {
-          "path": "fr/projects/uix/faq.md",
-          "status": "content-present",
-          "sha256": "93958ef6bb5b43e2be2e70f0f66374829d08c172f400828bbffe5dba94bbff58",
-          "words": 1058,
-          "headings": 9,
-          "examples": 0,
-          "versions": [
-            "2026.3.0",
-            "2026.8.0",
-            "4.2.1",
-            "8.0.1",
-            "8.1.0",
-            "8.4.0",
-            "9.0.0-beta.0"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
+              "2026.11.0",
               "8.0.1",
               "8.1.0"
             ],
@@ -9396,7 +9351,41 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          }
+        },
+        "fr": {
+          "path": "fr/projects/uix/faq.md",
+          "status": "content-present",
+          "sha256": "85e913139d1cf7f80c2413b8f19e52eb62ca47859fbefc6120efc77a4e4d3ca2",
+          "words": 1105,
+          "headings": 11,
+          "examples": 0,
+          "versions": [
+            "2026.3.0",
+            "2026.8.0",
+            "4.2.1",
+            "8.0.1",
+            "8.1.0",
+            "9.0.0",
+            "9.0.0-beta.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [
+              "8.0.1",
+              "8.1.0",
+              "9.0.0-beta.0"
+            ],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -9407,36 +9396,31 @@
         "de": {
           "path": "projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "846ffc3327e6bbd27b62aa479f94501661bdcbcff89d2fc4e79dc99fc165f4b0",
-          "words": 3625,
+          "sha256": "dafb000209cf270c41c1b8c208822ebdc32ef9f69b634275c6e58978cd51659d",
+          "words": 3579,
           "headings": 53,
           "examples": 39,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.0",
-            "9.0.0-beta.2"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "662b776ab0e3eb17b94baec0314685ab80485e6c407859a3f6c247186a103140",
-          "words": 7239,
+          "sha256": "364cf65bfc930327381878fa46df50f2d485c3c564d5c495bde2aaf18f813bb9",
+          "words": 7190,
           "headings": 41,
           "examples": 37,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.2",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "9.0.0-beta.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -9445,20 +9429,18 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "06aa0ca8410839670002029f02a3f11b22231ae10b2c2298d2eeed67dd816e7e",
-          "words": 6230,
+          "sha256": "7de3cfda80bd8bc503ea1b3283a8bb83c1e9f4ef2103a90afb7fc50b622c73ed",
+          "words": 6186,
           "headings": 81,
           "examples": 75,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.0",
-            "9.0.0-beta.2"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -9471,7 +9453,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "supplemented",
-            "reason": "Added 38 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -9482,34 +9464,31 @@
         "de": {
           "path": "projects/uix/forge/foundries.md",
           "status": "content-present",
-          "sha256": "2b5450d9a0c811a21aab42ef725d49e847f8a612c9a0ac0f3f11fe57d547aa17",
-          "words": 1088,
+          "sha256": "f66a05a6bbdbe1c6c6f3ba610b51e8e07f93d3636d6a24f2bb99c5ad08261895",
+          "words": 1078,
           "headings": 48,
           "examples": 29,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.2"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/forge/foundries.md",
           "status": "content-present",
-          "sha256": "5bd22224e36bb3470aae3f65f79a2c028ed61582199808bff216ade2fab37420",
-          "words": 1766,
+          "sha256": "c4f0d1fe169ce14a55b1ff3c3bf4bd4855a3a733d3112f17d10771d0bc1696e0",
+          "words": 1729,
           "headings": 35,
           "examples": 28,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "9.0.0-beta.2"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -9518,20 +9497,19 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/foundries.md",
           "status": "content-present",
-          "sha256": "71e3640eb7b627f806e947dc55a07e7e5431c6f4b89affefc2aac0600602c2b1",
-          "words": 2132,
+          "sha256": "f329151d2c8faefcab18a5a701c26d0e45122ecbbd6b5403902bbde457f37284",
+          "words": 2113,
           "headings": 59,
           "examples": 44,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.0",
-            "9.0.0-beta.2"
+            "9.0.0",
+            "9.0.0-beta.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -9546,7 +9524,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "supplemented",
-            "reason": "Added 15 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -9557,36 +9535,34 @@
         "de": {
           "path": "projects/uix/forge/index.md",
           "status": "content-present",
-          "sha256": "3772b818e0008e8c6832764599b4b6fce29034bbe0c20289fc0dc49b393fbdfe",
-          "words": 412,
+          "sha256": "ec3764ddb92e5e5f597432e0bf3f5d683cac2c2df26e9e67f16cd1b927cfe75d",
+          "words": 409,
           "headings": 3,
           "examples": 0,
           "versions": [
-            "9.0.0-beta.0",
-            "9.0.0-beta.2"
+            "9.0.0",
+            "9.0.0-beta.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/forge/index.md",
           "status": "content-present",
-          "sha256": "469df2c13598ade2d065cf2c3b439b3d4d375c29eaa731f592bc990843a25b05",
-          "words": 718,
+          "sha256": "5cfab23d76268e8645d5dc40b1a09284c10ab48353b9fec1e865a392dfea4ab1",
+          "words": 681,
           "headings": 2,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
-              "9.0.0-beta.0",
-              "9.0.0-beta.2"
+              "9.0.0-beta.0"
             ],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -9595,19 +9571,19 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/index.md",
           "status": "content-present",
-          "sha256": "f1829cab4042714fbade49ddb6629e7a63e9be886e27b8ea7000328ea0285007",
-          "words": 592,
+          "sha256": "acc7445cbf487d23ac2a6085b1a9fabcfc8554141fd80a800fd4ba17f842d70b",
+          "words": 589,
           "headings": 2,
           "examples": 0,
           "versions": [
-            "9.0.0-beta.0",
-            "9.0.0-beta.2"
+            "9.0.0",
+            "9.0.0-beta.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -9620,7 +9596,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -9641,20 +9617,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/attribute.md",
           "status": "content-present",
-          "sha256": "77f8b6a4d374545b369e30fa158500507863c3223cf9785088a7089382bb797a",
-          "words": 413,
+          "sha256": "60e47a9312a591a42e754f03b18bd94e5f5cd7999410dc247dfd08201313c8c8",
+          "words": 407,
           "headings": 6,
           "examples": 3,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -9663,7 +9639,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -9706,20 +9682,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/background.md",
           "status": "content-present",
-          "sha256": "da6ae009f7e8f22aa8e13d4830b429b1fb3da58b7b3d103769a8d0d31dd1a4f4",
-          "words": 1990,
+          "sha256": "9e971f2b732b4d575af4f4ad81eb39e7303962fa2009bfaf295f97c05a39ea50",
+          "words": 1984,
           "headings": 24,
           "examples": 16,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -9728,7 +9704,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -9773,19 +9749,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/badge.md",
           "status": "content-present",
-          "sha256": "a317a8e98c3c19f936ab84a879b676fb25e728b0c60ee92f381a531096f7310b",
-          "words": 1783,
+          "sha256": "513ab38ecb04416950308e059c92766d6fad75e511642db2ec14685cb51c1dc0",
+          "words": 1777,
           "headings": 12,
           "examples": 7,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [],
+            "versions_only_in_de": [
+              "8.4.0"
+            ],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -9794,7 +9773,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -9836,13 +9815,13 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/button.md",
           "status": "content-present",
-          "sha256": "2a7075d31c67b918eaeaabca50750ba208ee611ae6694833dced8b9843a82363",
-          "words": 1241,
+          "sha256": "59cc26a1362e6a6cce27e2d7a648300cf14e9d44e29e04f1a3b76d17e1610fb3",
+          "words": 1235,
           "headings": 7,
           "examples": 7,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -9850,8 +9829,8 @@
               "8.2.0"
             ],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -9860,7 +9839,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -9905,20 +9884,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/event.md",
           "status": "content-present",
-          "sha256": "443b0a238b15694d7a8c902154482a50444d0d481cb0a907092988aef2015699",
-          "words": 718,
+          "sha256": "dbfd1e698a5edfd15b8fed36cc41b31222818191c86ee865a9c05c0ad574b429",
+          "words": 712,
           "headings": 10,
           "examples": 14,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -9927,7 +9906,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -9970,20 +9949,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/form.md",
           "status": "content-present",
-          "sha256": "cfd709b3bcf17578c1e4510398d27aa3113156a37aa7e693d267fa33bb03b1a9",
-          "words": 1377,
+          "sha256": "0e0737d9f6fea01a386a4d45174a69e0baa9d6803ef00d561b39a377c514bc8f",
+          "words": 1371,
           "headings": 14,
           "examples": 9,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -9992,7 +9971,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10030,20 +10009,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/grid.md",
           "status": "content-present",
-          "sha256": "0c552938cca718141cfc6dff0309f7dcb4d895a5d128fec3697b52e114f50d8c",
-          "words": 976,
+          "sha256": "af8e578c889a03510dd5ee66c2088b454fac3c41b5527cd25d788a9d86985aed",
+          "words": 970,
           "headings": 6,
           "examples": 7,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -10052,7 +10031,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10095,20 +10074,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/index.md",
           "status": "content-present",
-          "sha256": "fada99d614fd49597d72ba1b1eda04260561d6f9d468ed1a628b56b7fff2291b",
-          "words": 452,
+          "sha256": "e2741e85f41ee80e6e0404cbc5c64d3cc2d8b2ce9c1e77aea65600b27c7f479a",
+          "words": 446,
           "headings": 1,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -10117,7 +10096,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10160,20 +10139,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/lock.md",
           "status": "content-present",
-          "sha256": "6c3ee4e9fda21a5401833a81e2df49c85b5005f708222403fc60d1a30c8afd87",
-          "words": 2058,
+          "sha256": "6a672c6e789a28cad037e7db1f5b40af293af772526679ae4c54568a61dfb1f2",
+          "words": 2052,
           "headings": 25,
           "examples": 15,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -10182,7 +10161,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10223,13 +10202,13 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/map.md",
           "status": "content-present",
-          "sha256": "4077c8ad2785a05d482ce3848a6261498bcbbd198a9126281ec3bdbddc17fdd6",
-          "words": 2474,
+          "sha256": "78dc3b90aba221ea09785031aa19cbdffdb6e041c11311c09839bf3214ed9bc6",
+          "words": 2468,
           "headings": 18,
           "examples": 9,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10238,8 +10217,8 @@
               "8.3.1"
             ],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -10248,7 +10227,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10294,20 +10273,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/more-info.md",
           "status": "content-present",
-          "sha256": "f16853674b94e8047f233770af991a110d0509324b7f66700430e44fdf205939",
-          "words": 1159,
+          "sha256": "fc1a7e9ef9f3d782e8eb742a90eb7534c9f2b386cb5e49dde523f7454a1c1d2c",
+          "words": 1153,
           "headings": 12,
           "examples": 6,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -10316,7 +10295,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10359,20 +10338,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/overlay-icon.md",
           "status": "content-present",
-          "sha256": "108a216aead2ba494c41154676237a35612a597bc77a2bbc33c62ac984d1bc2e",
-          "words": 1190,
+          "sha256": "ec9c91f6ef6bb7e5be34a97b77df7e5e4a79a78106d6640eea490ff5f49ccd17",
+          "words": 1184,
           "headings": 12,
           "examples": 7,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -10381,7 +10360,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10424,20 +10403,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/search.md",
           "status": "content-present",
-          "sha256": "ead29c0ff68df58dfa44f6b2756f80f2998fc26f50eb2c9de75eaf46f94a42a1",
-          "words": 699,
+          "sha256": "08c7a507a91e1c0942a791876d64065d73d45b35a06687f621ecbe9d36d8c78a",
+          "words": 693,
           "headings": 9,
           "examples": 5,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -10446,7 +10425,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10489,20 +10468,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/state-badge.md",
           "status": "content-present",
-          "sha256": "ee9bc171747d6900c48c83ff7f93ec3e4bf5b7a4592eb174c05b0102f45c2c74",
-          "words": 829,
+          "sha256": "b5a2ff33efb29c882351623315e5b213e1edacc5f1ea380184cfc9d78308aa59",
+          "words": 823,
           "headings": 4,
           "examples": 6,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -10511,7 +10490,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10554,20 +10533,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/theme.md",
           "status": "content-present",
-          "sha256": "d60d709842f81ae9cd26cb658c20518fc4205eff4fb3455e0368742a26a4d3ea",
-          "words": 338,
+          "sha256": "581a4179d7aa2fd1ca90bd6409eb3761d00d3a32683991c3b6a620eaa413ad1d",
+          "words": 332,
           "headings": 4,
           "examples": 4,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -10576,7 +10555,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10614,20 +10593,20 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/tile-icon.md",
           "status": "content-present",
-          "sha256": "252a4dd43abd3fc87a150bc871bc5fc4866d69243d5616b9d54487937455ce22",
-          "words": 875,
+          "sha256": "e74045d32c3e439a86a4e2a5d5e2b951d9b1eb49cc08253b174e647e4da1e82d",
+          "words": 869,
           "headings": 5,
           "examples": 7,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -10636,7 +10615,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10669,7 +10648,7 @@
         "de": {
           "path": "projects/uix/forge/sparks/tooltip.md",
           "status": "content-present",
-          "sha256": "7fb3d8c99dc27b8ff61aa552204421e675fcda366b44eb51c17cbd7b202653d7",
+          "sha256": "5023903c26015d09749f5c86981edcc5ab973f1458d739d8f2ab5a3703405b45",
           "words": 739,
           "headings": 8,
           "examples": 6,
@@ -10677,21 +10656,21 @@
             "8.2.0",
             "8.3.0-beta.6",
             "8.3.0-beta.8",
-            "8.4.0"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/forge/sparks/tooltip.md",
           "status": "content-present",
-          "sha256": "c4ac64ae961d5260e5a2a6cb70d50eb7252c6d6557aaa6a600dfd2c1ea97c18a",
-          "words": 1087,
+          "sha256": "51b4fe3d76ca1b44e348e5f457036f5c487dab9b76d119e9050d13d798b2bc41",
+          "words": 1081,
           "headings": 8,
           "examples": 6,
           "versions": [
+            "2026.11.0",
             "8.3.0",
-            "8.4.0",
-            "9.0.0-beta.8"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10701,8 +10680,8 @@
               "8.3.0-beta.8"
             ],
             "versions_only_in_translation": [
-              "8.3.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "8.3.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -10711,7 +10690,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10729,8 +10708,12 @@
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [],
-            "versions_only_in_translation": [],
+            "versions_only_in_de": [
+              "9.0.0"
+            ],
+            "versions_only_in_translation": [
+              "8.4.0"
+            ],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
@@ -10738,7 +10721,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "supplemented",
-            "reason": "Added historical 8.2.0 versus 8.3-beta/8.4.0 defaults and trigger/open availability; current technical option/default tables retained."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -10759,20 +10742,20 @@
         "en": {
           "path": "en/projects/uix/guides.md",
           "status": "content-present",
-          "sha256": "60e2b01bede5ae13d92f3847283e018d61db70abfa3795b8535aa01f72f790ca",
-          "words": 134,
+          "sha256": "4abe008bd5a48660083b4e7d9f013bf2544fe007907c957544523f61d01e0800",
+          "words": 128,
           "headings": 1,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -10781,7 +10764,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10809,64 +10792,51 @@
         "de": {
           "path": "projects/uix/index.md",
           "status": "content-present",
-          "sha256": "2c6c305ae067c1473531f73bdd23fd56e07202b05b9aa4d6b4af5515ebde77f4",
-          "words": 649,
+          "sha256": "189dbcf7e5c2fd7eeff784e40b897a06b5630583eeccd5fd8695c4d56cb98bd9",
+          "words": 581,
           "headings": 5,
           "examples": 0,
           "versions": [
-            "2026.10.0",
             "2026.11.0",
-            "8.4.0",
-            "9.0.0-beta.2",
-            "9.0.0-beta.6",
-            "9.0.0-beta.8"
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "02c53e2efa865d3f4eed764dfa7eaa397acdb55af61d75665b05fb3457572738",
-          "words": 351,
+          "sha256": "11eeead31b8166f6eb4c1f14a4ebf531e9f4e3f0537312b653d1255f824bc2dc",
+          "words": 345,
           "headings": 4,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "2026.10.0",
-              "2026.11.0",
-              "9.0.0-beta.2",
-              "9.0.0-beta.6"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
-            "substantially_shorter": true,
+            "substantially_shorter": false,
             "fewer_headings": true
           },
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
           "path": "fr/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "36c5bdc7a051499d004dd6ac7fbb377caad7243761f298c7215bf8a9f8388a8b",
-          "words": 616,
+          "sha256": "8d6f97c91e4fedb2cb1af113ccb8f31bfcc2957612c1759d3a47ef669882c479",
+          "words": 554,
           "headings": 5,
           "examples": 0,
           "versions": [
-            "2026.10.0",
             "2026.11.0",
-            "8.4.0",
-            "9.0.0-beta.2",
-            "9.0.0-beta.6",
-            "9.0.0-beta.8"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10895,20 +10865,20 @@
         "en": {
           "path": "en/projects/uix/license.md",
           "status": "content-present",
-          "sha256": "d4e027eac0170e8d64430205267ce89006ba70ea53e62a3a51c36867ae8fb977",
-          "words": 229,
+          "sha256": "cae928179fee8e5f86696bbeb0a7a6351e13c9dc930898be119bbff2dd16e641",
+          "words": 223,
           "headings": 1,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -10917,7 +10887,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -10945,55 +10915,26 @@
         "de": {
           "path": "projects/uix/quick-start.md",
           "status": "content-present",
-          "sha256": "1d57f23208ee9083b243e3030bd56cc9a3bb386bef82aa1b53eb6bb2aab68ab1",
-          "words": 405,
+          "sha256": "6ed13406fe6a184f8e43bf45d97f90ae618e6cf3c768c07c1e247e9e479109fe",
+          "words": 353,
           "headings": 8,
           "examples": 2,
           "versions": [
-            "2026.10.0",
-            "8.4.0"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/quick-start.md",
           "status": "content-present",
-          "sha256": "ea27d14d9c2e24e996cdd4db9826f6002dc9ff84b790076e9dc871404faef964",
-          "words": 570,
-          "headings": 7,
+          "sha256": "104917fea1060e87af4bfd08875b200e9980ce657e30a315e086d3f1c6c137a8",
+          "words": 502,
+          "headings": 5,
           "examples": 2,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
-          ],
-          "unresolved_local_references": [],
-          "review_signals": {
-            "versions_only_in_de": [
-              "2026.10.0"
-            ],
-            "versions_only_in_translation": [
-              "9.0.0-beta.8"
-            ],
-            "fewer_examples": false,
-            "substantially_shorter": false,
-            "fewer_headings": true
-          },
-          "review": {
-            "status": "reviewed",
-            "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
-          }
-        },
-        "fr": {
-          "path": "fr/projects/uix/quick-start.md",
-          "status": "content-present",
-          "sha256": "ffe47f6c757ae74903236a4a2183721710f4bab2b494c826375af5fb29774260",
-          "words": 471,
-          "headings": 7,
-          "examples": 2,
-          "versions": [
-            "2026.10.0",
-            "8.4.0"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11006,7 +10947,32 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          }
+        },
+        "fr": {
+          "path": "fr/projects/uix/quick-start.md",
+          "status": "content-present",
+          "sha256": "578f175b1b51cb5a41de12bd7874022a4b4c6febe2f45ad09d96332a3a1ba533",
+          "words": 414,
+          "headings": 7,
+          "examples": 2,
+          "versions": [
+            "2026.11.0",
+            "9.0.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": true
+          },
+          "review": {
+            "status": "reviewed",
+            "disposition": "intentional-difference",
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -11017,9 +10983,9 @@
         "de": {
           "path": "projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "610fb19c1b92e7b5d8217149ae4b9477d5ca9370fa5942854afe201d4b8c2bad",
-          "words": 2682,
-          "headings": 18,
+          "sha256": "0a9c56dfe38b614a52dadda2d9882c6efbba535485249f0a8ca92296e74bfae4",
+          "words": 2886,
+          "headings": 19,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -11035,6 +11001,7 @@
             "8.4.0-beta.3",
             "8.4.0-beta.9",
             "8.4.1",
+            "9.0.0",
             "9.0.0-beta.0",
             "9.0.0-beta.2",
             "9.0.0-beta.6",
@@ -11045,15 +11012,16 @@
         "en": {
           "path": "en/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "6b2ca535999d1c9d36c97090d5241a353f4f5915ac094554b83225e4d896af2f",
-          "words": 1173,
-          "headings": 7,
+          "sha256": "36e33ef16f0667686b217612becf6703fedde0531633c797d618e1b2fccb0ebf",
+          "words": 1390,
+          "headings": 8,
           "examples": 0,
           "versions": [
             "2026.10.0",
             "2026.11.0",
             "4.2.1",
             "8.4.0",
+            "9.0.0",
             "9.0.0-beta.0",
             "9.0.0-beta.2",
             "9.0.0-beta.6",
@@ -11080,15 +11048,15 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Locale-specific review history, not a product reference. German historical version lists and local publication details differ; current canonical revision and full public review records are linked."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
           "path": "fr/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "08a3c22735f7efb4fdbbf406704c805a1be8beede819e4ce1833656b391eaa66",
-          "words": 2594,
-          "headings": 15,
+          "sha256": "2b6912b917092c0a234e26ba5c14a4c2400b04989ce3373bff0b77e3e63a683e",
+          "words": 2853,
+          "headings": 16,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -11101,6 +11069,7 @@
             "8.4.0-beta.3",
             "8.4.0-beta.9",
             "8.4.1",
+            "9.0.0",
             "9.0.0-beta.0",
             "9.0.0-beta.2",
             "9.0.0-beta.6",
@@ -11121,7 +11090,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Locale-specific review history, not a product reference. German historical version lists and local publication details differ; current canonical revision and full public review records are linked."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         }
       }
@@ -11144,19 +11113,21 @@
         "en": {
           "path": "en/projects/uix/using/apps.md",
           "status": "content-present",
-          "sha256": "74fceb58c5bfd061eea9b7f1c7d4770c33e12dc64b161a46420eadd864dbc89d",
-          "words": 423,
+          "sha256": "99462deb9a9d393815f0a4ca4f078edddeb9214733d718c1a899712c3929d41a",
+          "words": 417,
           "headings": 4,
           "examples": 1,
           "versions": [
+            "2026.11.0",
             "8.4.0",
-            "9.0.0-beta.8"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11165,7 +11136,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11205,20 +11176,20 @@
         "en": {
           "path": "en/projects/uix/using/cards.md",
           "status": "content-present",
-          "sha256": "085a3565b7212441c66e119e3c4b95751d22f98eb847a185a6cbd339bd026005",
-          "words": 415,
+          "sha256": "5c37e6a8413dfa5e4e27faf403579f75cc02372eb4b225f0ea5c40fb71797cf7",
+          "words": 409,
           "headings": 2,
           "examples": 5,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11227,7 +11198,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11260,30 +11231,30 @@
         "de": {
           "path": "projects/uix/using/custom-panels.md",
           "status": "content-present",
-          "sha256": "9bd988d8a26d6c7f79939e15e5dd37af4a68a2b629f0b0662f6d710976491a15",
-          "words": 444,
+          "sha256": "f6e0c83f71025d233d1529c9ff7e806fcd7646c6cab0afdd1cb9f496bbe53d8a",
+          "words": 387,
           "headings": 4,
-          "examples": 3,
+          "examples": 2,
           "versions": [],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/using/custom-panels.md",
           "status": "content-present",
-          "sha256": "ff16c6457834e387587f7c2be267598f50d94ad860d49b5c70a875b21d2b0ce0",
-          "words": 524,
+          "sha256": "d29f30aa5f6873e3135f31dbb4d1c64a508f385d1c2604578589ca7d94869ab7",
+          "words": 443,
           "headings": 4,
-          "examples": 3,
+          "examples": 2,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11292,16 +11263,16 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
           "path": "fr/projects/uix/using/custom-panels.md",
           "status": "content-present",
-          "sha256": "c7ed4d90777f7d2c4a38943c125537c3cacc1bab0429a03f0ec2f56d7fb0b771",
-          "words": 522,
+          "sha256": "5496609292e00f2cdc30e084496404b2203ef68a31fd8685f7617edc9801ea1a",
+          "words": 443,
           "headings": 4,
-          "examples": 3,
+          "examples": 2,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11381,21 +11352,21 @@
         "en": {
           "path": "en/projects/uix/using/entities.md",
           "status": "content-present",
-          "sha256": "2762f020c348ce2a62c553b3853476a72d75a6c49f54ad3845247aaea1019987",
-          "words": 560,
+          "sha256": "52ab71efefee2752cfff6cc6d4dc25de62f9362b00edfd898da5efc640784e17",
+          "words": 554,
           "headings": 5,
           "examples": 11,
           "versions": [
             "2026.10.0",
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11404,7 +11375,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11444,20 +11415,20 @@
         "en": {
           "path": "en/projects/uix/using/icons.md",
           "status": "content-present",
-          "sha256": "ad24ace2a424fc9c617d074ee6f130dad345ea63976f8612dad56a99a0da70e2",
-          "words": 601,
+          "sha256": "5a7e12363b95ba03043bdaa463c02d751dbbe8f55da728c0a51bc1644863d6a5",
+          "words": 595,
           "headings": 4,
           "examples": 3,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11466,7 +11437,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11504,20 +11475,20 @@
         "en": {
           "path": "en/projects/uix/using/images.md",
           "status": "content-present",
-          "sha256": "07b6d629170a0566468a64e2f40b864f81483eaaab90f70b890b1242b63972d2",
-          "words": 393,
+          "sha256": "cd434e442cec5ed423d56947ad7c506b7c3c66243b6813dae0c527a64a9c664f",
+          "words": 387,
           "headings": 3,
           "examples": 1,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11526,7 +11497,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11564,20 +11535,20 @@
         "en": {
           "path": "en/projects/uix/using/index.md",
           "status": "content-present",
-          "sha256": "e078e60d4ffd80a2addb595c26aa1909905dbc01bc5d81163506d2a7e66f63ad",
-          "words": 155,
+          "sha256": "7766a8f5f88373f74bca2988b799d0e36a41bc827c90a4ac11b17ef67e78cbb6",
+          "words": 149,
           "headings": 1,
           "examples": 0,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -11586,7 +11557,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11629,20 +11600,20 @@
         "en": {
           "path": "en/projects/uix/using/other.md",
           "status": "content-present",
-          "sha256": "0ba8b90cc7b8b7b4ba88c62e13a7ba38fa9047f61274e49d2bf16f13d75dc238",
-          "words": 167,
+          "sha256": "ce750ebb151206c04a9810a27b61c34159e107d9d94e1148927eca439277838b",
+          "words": 161,
           "headings": 1,
           "examples": 1,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11651,7 +11622,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11689,20 +11660,20 @@
         "en": {
           "path": "en/projects/uix/using/section-backgrounds.md",
           "status": "content-present",
-          "sha256": "16e62679558572fff2c8d57c7caaff3b2f9739eaa02e1204610a75639e7113d4",
-          "words": 335,
+          "sha256": "fbc930167ac3ea2ddf48738b8b541ab9761e4a171d7905210c1ef54e9ef29ff2",
+          "words": 329,
           "headings": 3,
           "examples": 2,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11711,7 +11682,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11749,20 +11720,20 @@
         "en": {
           "path": "en/projects/uix/using/templates.md",
           "status": "content-present",
-          "sha256": "e7b058005c9b8cc2894b13ffd72aa91b826a7178c35bda57b35e89776c10657b",
-          "words": 1260,
+          "sha256": "723e2795541633697a0fe89df34807b5e0ddc2aa921bc6160c1d6cf8c7188286",
+          "words": 1254,
           "headings": 11,
           "examples": 14,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11771,7 +11742,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11809,20 +11780,20 @@
         "en": {
           "path": "en/projects/uix/using/themes.md",
           "status": "content-present",
-          "sha256": "176ceaae49cb5ddc60b571b073b04eacc4243e43f657ae8d7fe20a1913099513",
-          "words": 1538,
+          "sha256": "2826d10588974be1dc1a9cdb51dc7b9ba83576079bab9448f4b0fb2fe318998b",
+          "words": 1532,
           "headings": 11,
           "examples": 19,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11831,7 +11802,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {
@@ -11874,20 +11845,20 @@
         "en": {
           "path": "en/projects/uix/using/view-backgrounds.md",
           "status": "content-present",
-          "sha256": "172b67e000baa36bc815f71b25db2f8e1ce660c50c414b3e983fe35d81d0ac8f",
-          "words": 1467,
+          "sha256": "311805690aeda1c63993be7baedec4f5fb6cd6285134a84b0f6b85880198a394",
+          "words": 1461,
           "headings": 16,
           "examples": 17,
           "versions": [
-            "8.4.0",
-            "9.0.0-beta.8"
+            "2026.11.0",
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "8.4.0",
-              "9.0.0-beta.8"
+              "2026.11.0",
+              "9.0.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11896,7 +11867,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Full canonical English dev reference 26e54e6 (9.0.0-beta.2), with explicit preview/source attribution; German is an editorial stable-8.4.0 reference plus historical examples. Do not downgrade the canonical English prose to match historical version/heading counts. Canonical code hashes are checked separately."
+            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
           }
         },
         "fr": {

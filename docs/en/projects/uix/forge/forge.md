@@ -3,11 +3,7 @@ title: Forge
 description: UIX Forge config details including macros, billets, template nesting and UIX Styling.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.8**, revision [e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42), reviewed 2 November 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
-
-::: info UIX 9.0.0-beta.8 preview
-This Forge content follows the reviewed `dev` revision, separate from the stable 8.4.0 baseline. Individual feature notices identify their introduction version.
-:::
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **9.0.0**, revision [f63ebbd](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # UIX Forge
 
@@ -18,11 +14,6 @@ UIX Forge (`custom:uix-forge`) is a custom Lovelace element that combines templa
 - **Apply UIX styles** to the forged element, exactly like any other element. Additionally any spark variables are made available in the `uixForge` template variable.
 
 ## Visual editor — Cards and Badges
-
-::: info
-UIX Forge Visual editor available in 9.0.0-beta.2
-
-:::
 
 You can use the Forge visual editor for Cards and Badges. Choose the Home Assistant card or badge you want to use, edit it with its normal Home Assistant editor, then add Forge templates, Sparks, UIX styling, and Foundries around it. You can start without choosing an element too, which is useful for a blank Forge that will only use Sparks.
 

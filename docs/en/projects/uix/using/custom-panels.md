@@ -2,7 +2,7 @@
 description: Learn how to style custom panels
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.8**, revision [e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42), reviewed 2 November 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **9.0.0**, revision [f63ebbd](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Styling custom panels
 
@@ -10,7 +10,7 @@ UIX styles custom panels not loaded by iframe directly. UIX can also style custo
 
 ::: info Custom panel loaded by iframe - How it works
 1. Custom panels loaded as iframe are styled by the internal UIX frame runtime injected by the `ha-panel-custom` patch. The runtime is shared with app frames and is agnostic about which panel type invoked it.
-2. If UIX detects a theme is not applied, UIX Styling is applied with the currently loaded Home Assistant Frontend theme. Some custom panels like [HACS](https://hacs.xyz) apply the theme, and in this case UIX styling will inherit the applied theme.
+2. If UIX detects a theme is not applied, UIX Styling is applied with the currently loaded Home Assistant Frontend theme. Some custom panels apply the theme, and in this case UIX styling will inherit the applied theme.
 3. [Home Assistant custom panels](https://www.home-assistant.io/integrations/panel_custom/) are set by config that includes `name:`. UIX Styling uses this `name` to create the UIX theme variable for styling custom panels loaded by iframe.
 
 :::
@@ -69,40 +69,6 @@ Custom panels DOM structure may not use shadowRoots or Home Assistant elements s
 ### Styling custom panels loaded by iframe
 
 Use the theme variable `uix-<name>(-yaml)` where `name` is the [custom panel](https://www.home-assistant.io/integrations/panel_custom/) name. If you are not sure of the custom panel name, use a desktop Browser's inspector tools to see what the first element is in the DOM of the iframe. The element's tag is the custom panel name.
-
-Example styling of [HACS](https://hacs.xyz) custom panel loaded by iframe:
-
-For HACS, the custom panel name is `hacs-frontend` so the UIX Styling theme variable is `uix-hacs-frontend(-yaml)`. The theme below styles the toolbar of the HACS custom panel to a rainbow effect, and sets some card styling variables.
-
-```yaml
-UIX Test:
-
-  uix-theme: UIX Test
-
-  uix-hacs-frontend-yaml: |
-    hacs-dashboard $ hass-tabs-subpage-data-table $ hass-tabs-subpage $: |
-      .toolbar {
-        background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      }
-    hacs-repository-dashboard $:
-      .: |
-        ha-card {
-          background-color: orange;
-        }
-      hass-subpage $: |
-        .toolbar {
-          background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-        }
-      hass-loading-screen $: |
-        .toolbar {
-          background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-        }
-```
-
-::: details HACS panel styling
-![HACS panel styling](/projects/uix/assets/page-assets/using/custom-panel-hacs.png)
-
-:::
 
 ::: warning Theme updates
 Theme updates to the currently selected theme for user will be applied while viewing the custom panel. However, if you change the theme for the user viewing the custom panel you will need to refresh the panel to have the new theme applied.

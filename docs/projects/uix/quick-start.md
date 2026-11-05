@@ -4,35 +4,27 @@ description: Einstieg in UI eXtension für Home Assistant.
 ---
 # Schnellstart
 
-UIX **8.4.0** benötigt **Home Assistant 2026.10.0 oder neuer**. Siehe [Release 8.4.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0).
+UIX **9.0.0** benötigt **Home Assistant 2026.11.0 oder neuer**. Siehe [Release 9.0.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0).
 
 > **Für Card-mod-Nutzer**
 > Wenn du von Card-mod kommst, lies zusätzlich die [FAQ](./faq). UIX unterstützt viele Card-mod-Konfigurationen, nutzt aber eigene Schlüssel und bringt zusätzliche Funktionen mit.
 >
 ## Installation
 
-### HACS
+### Marketplace
 
-[![Home Assistant öffnen und Repository in HACS anzeigen.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Lint-Free-Technology&repository=uix&category=integration)
+[![Home Assistant öffnen und UIX im Marketplace anzeigen.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=Lint-Free-Technology&repository=uix&category=integration)
 
-Installiere UI eXtension über [HACS](https://hacs.xyz/). Nach der Installation muss Home Assistant neu gestartet werden, damit die Integration geladen werden kann.
-
-> **Download-Schritt in HACS**
-> In HACS reicht das Öffnen des Repositorys nicht aus. Achte darauf, die Integration wirklich herunterzuladen. Je nach Ansicht findest du den Download-Button direkt oder im `...`-Menü.
->
+Öffne UI eXtension im [Home Assistant Marketplace](https://www.home-assistant.io/integrations/marketplace/) und wähle **Installieren**. Marketplace übernimmt dabei auch das Hinzufügen als Dienst.
 ### Manuell
 
 Kopiere den Ordner `custom_components/uix` aus dem Repository in den `custom_components`-Ordner deiner Home-Assistant-Konfiguration. Starte Home Assistant anschließend neu.
 
-## UI eXtension als Dienst hinzufügen
+#### UI eXtension bei manueller Installation als Dienst hinzufügen {#ui-extension-als-dienst-hinzufugen}
 
 [![Home Assistant öffnen und Integration anzeigen.](https://my.home-assistant.io/badges/integration.svg)](https://my.home-assistant.io/redirect/integration/?domain=uix)
 
-Nach dem Download muss UI eXtension in Home Assistant unter `Einstellungen` -> `Geräte & Dienste` als Integration hinzugefügt werden. Danach die Seite neu laden, damit die Frontend-Ressource aktiv wird.
-
-> **UIX wird nicht gefunden?**
-> Prüfe, ob Home Assistant nach der Installation neu gestartet wurde. Bei HACS erscheint meist eine Reparaturmeldung, über die der Neustart ausgelöst werden kann.
->
+Füge UI eXtension nach dem Neustart unter **Einstellungen → Geräte & Dienste** als Dienst hinzu. Lade danach die Seite neu, damit die Frontend-Ressource aktiv wird.
 ## Erstes UIX Styling
 
 1. Öffne eine Karte im Home-Assistant-GUI-Editor.

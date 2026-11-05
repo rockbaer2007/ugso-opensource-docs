@@ -4,6 +4,18 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Vérification du 5 novembre 2026 avec UIX 9.0.0
+
+Les **65** pages sources canoniques ont été comparées à [`master f63ebbd`](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722). Depuis notre référence `e4a1caa`, **huit pages ont changé** et 57 sont identiques. `dev ef414d9` contient la même documentation, y compris la navigation et les médias. Les notifications `fa4a427`, `5c253f9`, `4768bff`, `f63ebbd` et `99293d1` sont couvertes. Aucune autre différence documentaire n’a été trouvée sur les branches actuelles.
+
+- **UIX 9.0.0** est stable depuis le 4 novembre 2026 et nécessite **Home Assistant 2026.11.0 ou ultérieur**. Les anciennes fonctions d’aperçu sont désormais présentées comme stables.
+- Le **Marketplace** installe UIX et ajoute son service. L’installation manuelle dispose d’instructions distinctes. La désinstallation via Marketplace supprime aussi les Foundries, les panneaux personnalisés de barre latérale et les réglages du service.
+- Les **panneaux intégrés dans un frame** utilisent désormais `a0d7b954_tailscale` comme exemple. L’ancien exemple de style HACS a été retiré de la référence actuelle.
+- Les **contributions** distinguent `feat!:`/`BREAKING CHANGE: ...` pour les versions majeures de `feat(major):` pour les versions mineures.
+- **Forge, délai des popovers et raccourcis de barre latérale** font partie de la version stable 9.0.0. Les accueils, pieds de page, métadonnées et pages anglaises sont synchronisés. L’animation Forge signalée a été comparée à la source.
+
+La documentation précédente et les sources originales ont été sauvegardées. La vérification couvre les changements, les traductions, les identifiants techniques, le code, les médias et les liens. Elle ne comprend pas de test d’exécution dans Home Assistant.
+
 ## Revue du 2 novembre 2026 : aperçu 9.0.0-beta.8
 
 Les notifications `f769f06`, `2782a71`, `1f69b99` et `e4a1caa` ont été vérifiées jusqu’à la [révision canonique e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42). La comparaison des **65** pages a identifié trois pages modifiées et une page déplacée. EN est synchronisé ; DE/FR couvrent les changements.

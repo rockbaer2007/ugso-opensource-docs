@@ -4,8 +4,8 @@ description: UIX-Verknüpfungen zu Home-Assistant-Seiten und externen Webseiten 
 ---
 # Eigene Seitenleisten-Verknüpfungen
 
-::: info Vorschaufunktionen
-Interne Seitenleisten-Verknüpfungen sind ab **9.0.0-beta.6** verfügbar. Externe Ziele und **Open in new tab** kommen mit **9.0.0-beta.8** hinzu und benötigen **Home Assistant 2026.11.0b0 oder neuer**. Geprüfte Quelle: [e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42), 02.11.2026. Die stabile Basis bleibt UIX 8.4.0.
+::: info UIX 9.0.0
+Interne und externe Seitenleisten-Verknüpfungen sowie **Open in new tab** gehören zur stabilen Version **9.0.0** und benötigen **Home Assistant 2026.11.0 oder neuer**.
 :::
 
 UIX kann eigene Einträge in der Home-Assistant-Seitenleiste hinzufügen, die eine andere Home-Assistant-Seite oder eine Webseite öffnen. Das erleichtert den Zugriff auf häufig verwendete Seiten unter „Einstellungen“ und auf zugehörige Webdienste.

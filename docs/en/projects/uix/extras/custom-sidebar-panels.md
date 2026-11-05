@@ -2,18 +2,9 @@
 description: Create UIX sidebar links to Home Assistant pages and websites.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.8**, revision [e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42), reviewed 2 November 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
-
-::: info Preview compatibility
-External targets and new tabs were added in **9.0.0-beta.8**, requiring **Home Assistant 2026.11.0b0 or later** according to the reviewed release changelog. Stable remains **8.4.0**.
-:::
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **9.0.0**, revision [f63ebbd](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Custom sidebar panels
-
-::: info
-Custom sidebar panel redirect’s available in 9.0.0-beta.6
-
-:::
 
 UIX can add custom entries to the Home Assistant sidebar that open another Home Assistant page or a website. This is useful for frequently used pages that are normally nested under Settings or another panel, or for providing a shortcut to a related web service.
 

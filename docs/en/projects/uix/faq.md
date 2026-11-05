@@ -5,7 +5,7 @@ hide:
   - navigation
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.8**, revision [e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42), reviewed 2 November 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **9.0.0**, revision [f63ebbd](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # FAQ
 
@@ -15,13 +15,13 @@ hide:
 - If you use extra_module_url for card-mod resource, remove and restart Home Assistant.
 - Proceed to follow the [UI eXtension quick start guide](./quick-start.md).
 
-::: tip Add UI eXtension as a Service
-UI eXtension is an integration and needs to be added as a Service once you have downloaded by HACS. Make sure you don't miss the **Add UI eXtension service** step. This is something you may miss if you are not accustomed to adding integrations like UIX as a Service.
+::: tip UI eXtension is a Service
+UI eXtension is an integration and needs to be added as a Service. If you install using Marketplace this step is done automatically. If anything seems to not be working, make sure UI eXtension has been added as a Service in [Devices and services](https://my.home-assistant.io/redirect/devices/?search=uix).
 
 :::
 
 ::: details UI Lovelace Minimalist may load card-mod resource
-If you have UI Lovelace Minimalist installed it may load card-mod resource. Due to load order of integrations, UI eXtension cannot check for this conflict. To continue to use UI Lovelace Minimalist with UI eXtension you need to turn off UI Lovelace Minimalist config option `Include custom card resources it's depending on` and load any required custom cards through HACS or manually.
+If you have UI Lovelace Minimalist installed it may load card-mod resource. Due to load order of integrations, UI eXtension cannot check for this conflict. To continue to use UI Lovelace Minimalist with UI eXtension you need to turn off UI Lovelace Minimalist config option `Include custom card resources it's depending on` and load any required custom cards through Marketplace or manually.
 
 ![UI Minimalist custom card option](/projects/uix/assets/page-assets/faq/ui-minimalist-option.png)
 
@@ -109,4 +109,15 @@ After updating UIX, restart Home Assistant when you are ready to activate the up
 
 ## How do I uninstall UI eXtension?
 
-Uninstallation of UI eXtension is a two step process. First, remove the service entry in Devices & services. Next uninstall the integration either using HACS or manually removing the `uix` folder from `custom_components` directory if you installed manually.
+### Marketplace
+
+Browse to [UIX](https://my.home-assistant.io/redirect/marketplace_repository/?owner=Lint-Free-Technology&repository=uix&category=integration) in Marketplace. Use the three dots menu and choose Uninstall. This will remove the UI eXtension service as well as remove UI eXtension files from Home Assistant.
+
+::: info
+Uninstalling via Marketplace will remove any Service configuration of UI eXtension including Foundries, custom Sidebar panels and other settings configured via the UI eXtension service. No dashboard or theme YAML is removed but will become non-functional.
+
+:::
+
+### Manual
+
+Uninstallation of UI eXtension is a two step process. First, remove the service entry in Devices & services. Next uninstall the integration by removing the `uix` folder from `custom_components` directory.

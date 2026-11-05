@@ -196,7 +196,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/state-badge) | [Contenu présent](/fr/projects/uix/forge/sparks/state-badge) |
 | [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/theme) | [Contenu présent](/fr/projects/uix/forge/sparks/theme) |
 | [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/tile-icon) | [Contenu présent · Différence examinée](/fr/projects/uix/forge/sparks/tile-icon) |
-| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/tooltip) | [Contenu présent](/fr/projects/uix/forge/sparks/tooltip) |
+| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/tooltip) | [Contenu présent · Différence examinée](/fr/projects/uix/forge/sparks/tooltip) |
 | [projects/uix/guides.md](/projects/uix/guides) | [Contenu présent · Différence examinée](/en/projects/uix/guides) | [Contenu présent](/fr/projects/uix/guides) |
 | [projects/uix/index.md](/projects/uix/) | [Contenu présent · Différence examinée](/en/projects/uix/) | [Contenu présent](/fr/projects/uix/) |
 | [projects/uix/license.md](/projects/uix/license) | [Contenu présent · Différence examinée](/en/projects/uix/license) | [Contenu présent](/fr/projects/uix/license) |

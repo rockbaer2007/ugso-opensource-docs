@@ -4,8 +4,8 @@ description: Créer des liens UIX vers des pages Home Assistant et des sites web
 ---
 # Raccourcis personnalisés de barre latérale
 
-::: info Fonctions d’aperçu
-Les raccourcis internes sont disponibles à partir de **9.0.0-beta.6**. Les destinations externes et **Open in new tab** arrivent avec **9.0.0-beta.8** et nécessitent **Home Assistant 2026.11.0b0 ou ultérieur**. Source vérifiée : [e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42), le 2 novembre 2026. La base stable reste UIX 8.4.0.
+::: info UIX 9.0.0
+Les raccourcis internes et externes ainsi que **Open in new tab** font partie de la version stable **9.0.0** et nécessitent **Home Assistant 2026.11.0 ou ultérieur**.
 :::
 
 UIX peut ajouter des entrées à la barre latérale de Home Assistant pour ouvrir une autre page Home Assistant ou un site web. Cela facilite l’accès aux pages fréquemment utilisées sous les paramètres et aux services web associés.

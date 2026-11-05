@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.0.0-beta.8**, revision [e4a1caa](https://github.com/Lint-Free-Technology/uix/commit/e4a1caa6437f88282cfe04d768d3c11df387fc42), reviewed 2 November 2026. This source mirror may describe preview behavior beyond stable 8.4.0. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **9.0.0**, revision [f63ebbd](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Contributing
 
@@ -196,5 +196,5 @@ At release time, UIX checks both the registered site and metadata URLs. For a st
 - **DO NOT** include `uix.js` in your commits in a pull request. The resource file will be built on release. As UIX is an integration it can't use release assets as `uix.js` needs to be in the `custom_components/uix` folder.
 - **DO** include tests for new visual components of UIX. See README.MD in `tests` folder in repo.
 - Use conventional commits style naming for commits. While this is not mandatory as pull requests will be squashed and title updated to use conventional commit naming.
-- Use `feat!:` or include `BREAKING CHANGE: ...` in a commit footer or pull request for a breaking change. Both produce a major release.
+- Use `feat!:` or include `BREAKING CHANGE: ...` in a commit footer or pull request for a breaking change. Both produce a major release; `feat(major):` is a minor feature release.
 - In commit footer or pull request include references to issues fixed/closed e.g. `fixes #1234`.

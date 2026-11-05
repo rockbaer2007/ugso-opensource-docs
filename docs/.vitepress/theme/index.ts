@@ -278,10 +278,10 @@ const UgsoLayout = defineComponent({
                   h(
                     'span',
                     isEnglish
-                      ? 'Stable baseline: UIX 8.4.0, Home Assistant 2026.10.0 minimum, revision 71b8ccd. Canonical documentation reviewed on 2 November 2026; documentation preview follows dev e4a1caa / 9.0.0-beta.8. Preview additions require Home Assistant 2026.11.0b0 or later. The original English documentation remains authoritative.'
+                      ? 'Stable baseline: UIX 9.0.0, Home Assistant 2026.11.0 minimum, release cec1191. All 65 canonical pages reviewed on 5 November 2026 against master f63ebbd. The dev documentation is identical at ef414d9. The original English documentation remains authoritative.'
                       : isFrench
-                      ? 'Base stable : UIX 8.4.0, Home Assistant 2026.10.0 minimum. Traduction vérifiée le 02/11/2026 avec la source e4a1caa / 9.0.0-beta.8 ; fonctions d’aperçu indiquées séparément. Les ajouts d’aperçu nécessitent Home Assistant 2026.11.0b0 ou ultérieur. La documentation originale en anglais reste la référence.'
-                      : 'Stabile Basis: UIX 8.4.0, benötigt Home Assistant ab 2026.10.0. Übersetzung am 02.11.2026 mit Quelle e4a1caa / 9.0.0-beta.8 geprüft; Vorschaufunktionen separat gekennzeichnet. Neue Vorschaufunktionen benötigen Home Assistant ab 2026.11.0b0. Maßgeblich bleibt die englische Originaldokumentation.'
+                      ? 'Base stable : UIX 9.0.0, Home Assistant 2026.11.0 minimum, version cec1191. Les 65 pages canoniques ont été vérifiées le 05/11/2026 avec master f63ebbd. La documentation dev est identique à ef414d9. La documentation originale en anglais reste la référence.'
+                      : 'Stabile Basis: UIX 9.0.0, benötigt Home Assistant ab 2026.11.0, Release cec1191. Alle 65 Quellseiten am 05.11.2026 mit master f63ebbd abgeglichen. Die dev-Dokumentation ist bei ef414d9 identisch. Maßgeblich bleibt die englische Originaldokumentation.'
                   ),
                   h('span', [
                     h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical English documentation' : isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),
@@ -289,14 +289,14 @@ const UgsoLayout = defineComponent({
                     h(
                       'a',
                       {
-                        href: 'https://github.com/Lint-Free-Technology/uix/releases/tag/v8.4.0',
+                        href: 'https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0',
                         target: '_blank',
                         rel: 'noopener'
                       },
-                      isEnglish ? 'Stable release 8.4.0' : isFrench ? 'Version stable 8.4.0' : 'Stabile Version 8.4.0'
+                      isEnglish ? 'Stable release 9.0.0' : isFrench ? 'Version stable 9.0.0' : 'Stabile Version 9.0.0'
                     ),
                     ' · ',
-                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/71b8ccd38202257c070ae9970a7aac12a68a6389', target: '_blank', rel: 'noopener' }, isEnglish ? 'Release revision 71b8ccd' : isFrench ? 'Révision publiée 71b8ccd' : 'Release-Revision 71b8ccd'),
+                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/cec1191f6ee703284c75dfd3104dba9bb4419200', target: '_blank', rel: 'noopener' }, isEnglish ? 'Release revision cec1191' : isFrench ? 'Révision publiée cec1191' : 'Release-Revision cec1191'),
                     ' · ',
                     h('a', { href: isEnglish ? '/en/projects/uix/translation-status' : isFrench ? '/fr/projects/uix/translation-status' : '/projects/uix/translation-status' }, isEnglish ? 'Translation status' : isFrench ? 'État de la traduction' : 'Übersetzungsstatus')
                   ]),

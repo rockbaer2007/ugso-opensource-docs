@@ -196,7 +196,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/state-badge) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/state-badge) |
 | [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/theme) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/theme) |
 | [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/tile-icon) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/sparks/tile-icon) |
-| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden](/fr/projects/uix/forge/sparks/tooltip) |
+| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/sparks/tooltip) |
 | [projects/uix/guides.md](/projects/uix/guides) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/guides) | [Inhalt vorhanden](/fr/projects/uix/guides) |
 | [projects/uix/index.md](/projects/uix/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/) | [Inhalt vorhanden](/fr/projects/uix/) |
 | [projects/uix/license.md](/projects/uix/license) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/license) | [Inhalt vorhanden](/fr/projects/uix/license) |

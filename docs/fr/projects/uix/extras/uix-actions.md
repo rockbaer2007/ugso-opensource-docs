@@ -160,8 +160,8 @@ tap_action:
 
 ## `popover` — afficher un popover Home Assistant ancré {#popover}
 
-::: info Aperçu à partir de 9.0.0-beta.7
-`timeout` nécessite Home Assistant **2026.11.0b0 ou ultérieur**.
+::: info UIX 9.0.0
+`timeout` nécessite Home Assistant **2026.11.0 ou ultérieur**.
 :::
 
 Affiche un popover adaptatif Home Assistant à côté de l'élément qui a déclenché l'action `ll-custom`. Il inclut le bouton de fermeture accessible standard de Home Assistant et se supprime après sa fermeture.
