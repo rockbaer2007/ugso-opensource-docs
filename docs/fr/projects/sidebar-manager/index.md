@@ -1,23 +1,23 @@
 ---
 title: Sidebar Manager
-description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.8, DE/EN/FR.
+description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.9, DE/EN/FR.
 ---
 # Sidebar Manager
 
-::: warning Problème connu sous HA 2026.11
-Vérification sur .177 le 05/11/2026 : barre latérale, groupes, dialogue natif, champs de couleur et sélecteur chargés. **Les couleurs du texte/des icônes sont absentes de l’aperçu des lignes du dialogue natif.** L’application des couleurs recherche encore `ha-md-list-item`, supprimé ; HA utilise désormais `ha-list-item-button`. Paramètres enregistrés conservés. Aucun correctif encore publié.
+::: info HA 2026.11 : aperçu des couleurs corrigé
+La version **0.1.9** corrige les couleurs du texte/des icônes dans le dialogue natif, y compris celles des groupes. Vérifié sur .177 (port 80), Core 2026.11.0 / frontend 20261028.4 : couleurs, opacité, annulation, enregistrement, réinitialisation au thème et rechargement complet. Les 72 tests automatisés réussissent. Groupe/lien de test supprimés ; disposition exportée identique à la sauvegarde initiale. Paramètres existants et « Test für APP » conservés.
 :::
 
 [Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).
 
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
-**0.1.8 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.9 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Dossiers, couleurs, opacité et liens personnalisés dans « Modifier la barre latérale ». Triez dossiers et entrées principales avec les poignées natives. Aucun fichier système HA n'est remplacé.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.8](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.8) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.9](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.9) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## Nouveautés de 0.1.8 : liens dans l’éditeur de barre latérale
 

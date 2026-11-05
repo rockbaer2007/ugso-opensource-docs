@@ -4,15 +4,15 @@ description: Eigene Farben und Transparenz für HA-Menüeinträge, direkt in Sei
 ---
 # Seitenleistenfarben / Sidebar Colors
 
-::: warning HA 2026.11: Kompatibilitätsrisiko
-Der Quellstand 0.1.0 verwendet für die Farbvorschau im Bearbeitungsdialog noch `ha-md-list-item`. HA 2026.11 verwendet dort `ha-list-item-button`; beim verwandten Sidebar Manager ist die fehlende Zeilenfarbe auf .177 am 05.11.2026 bestätigt. Sidebar Colors wurde nicht zusätzlich parallel installiert. 25 lokale Tests bestehen, ersetzen aber keinen Live-Test dieses Frontend-Wechsels. Noch keine Korrektur veröffentlicht.
+::: info HA 2026.11: Selektor korrigiert
+Version **0.1.1** berücksichtigt im nativen Bearbeitungsdialog sowohl `ha-md-list-item` als auch `ha-list-item-button`. 27 lokale Tests bestehen, darunter DOM-Regressionen für beide HA-Zeilentypen, Transparenz, Abbrechen, Speichern, erneutes Öffnen und Theme-Rücksetzung. Der entsprechende Manager-Fix wurde auf .177 live geprüft; Sidebar Colors wurde nicht parallel installiert. Bestehende Farben und Speicherschlüssel bleiben erhalten.
 :::
 
 [Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
 
 <img src="/images/packages/projects-sidebar-colors.svg" width="80" height="80" alt="Sidebar Colors" />
 
-**0.1.0 · Frontend-Erweiterung · DE / EN / FR · MIT**
+**0.1.1 · Frontend-Erweiterung · DE / EN / FR · MIT**
 
 Symbol und Beschriftung jedes Eintrags in der Home-Assistant-Seitenleiste individuell einfärben. Das neue Farbfeld sitzt direkt im vorhandenen Dialog **„Seitenleiste bearbeiten“**, zwischen Name und Auge. Sichtbarkeit und Reihenfolge bleiben über die gewohnten Bedienelemente einstellbar.
 

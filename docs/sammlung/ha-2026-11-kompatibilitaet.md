@@ -6,7 +6,7 @@ description: Bestätigte Prüfungen, lokale Tests und offene Befunde der UGSo-Er
 
 **Stand: 05.11.2026 · Core 2026.11.0 · Frontend 20261028.4 · Testsystem .177 (Port 80).**
 
-Die folgende Übersicht unterscheidet Live-Prüfungen, Anwenderbestätigungen und lokale Tests. Sie ist keine pauschale Freigabe aller Funktionen oder Hardwarevarianten. Die Prüfung änderte keine Softwareversionen.
+Die folgende Übersicht unterscheidet Live-Prüfungen, Anwenderbestätigungen und lokale Tests. Sie ist keine pauschale Freigabe aller Funktionen oder Hardwarevarianten. Die ursprüngliche Prüfung änderte keine Softwareversionen; die anschließende Sidebar-Korrektur ist unten gesondert dokumentiert.
 
 ## ATLAS und Plugins
 
@@ -27,8 +27,8 @@ Das ATLAS-App-Paket besteht zusätzlich die schreibfreie Prüfung von 523 Paketd
 | --- | --- |
 | [Dashboard Layout Card V2 **0.1.181**](/sammlung/dashboard-layout-card-v2/) | Separater Live-Test bestanden: Cards im zweiten Abschnitt hinzufügen/bearbeiten, schwebender Hinzufügen-Button, Kopf-/Fußzeilen und vollständiges Neuladen. |
 | [Automation Status Card **0.1.3**](/projects/automation-status-card/) | Live bestanden: Rendern, Ein/Aus mit Zustandsbestätigung, laufender Durchlauf, Trace-Abfrage, normaler Abschluss, Checkboxen, Alle auswählen/abwählen und Neuladen. Bubble-/Mushroom-Einzelvorlagen dargestellt. 21 lokale Tests bestanden. Fehlerfälle und Laufzeitwarnung wurden unter 2026.11 nicht erneut gezielt provoziert. |
-| [Sidebar Manager, Quellstand **0.1.8**](/projects/sidebar-manager/) | Die auf .177 installierte Fassung lädt Sidebar, Gruppen, Bearbeitungsdialog, Farbfelder und Farbwähler; ihre installierte Versionsnummer wurde nicht gesondert erfasst. **Offen: Text-/Iconfarben fehlen in der Zeilenvorschau des nativen Bearbeitungsdialogs.** Der Selektor ist auch im geprüften Quellstand 0.1.8 veraltet. 70 lokale Tests bestanden, decken diesen Frontend-Wechsel jedoch nicht ab. |
-| [Sidebar Colors **0.1.0**](/projects/sidebar-colors/) | 25 lokale Tests bestanden. Derselbe veraltete Zeilenselektor wie beim Manager ist im Quellcode vorhanden; nicht zusätzlich parallel auf .177 installiert. |
+| [Sidebar Manager **0.1.9**](/projects/sidebar-manager/) | Auf .177 von 0.1.7 auf **0.1.9** aktualisiert. Live bestanden: Text-/Iconfarben der Einträge und Gruppen im nativen Bearbeitungsdialog, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 lokale Tests bestanden. Eigene Testobjekte bereinigt; exportiertes Layout entspricht der ursprünglichen Sicherung. |
+| [Sidebar Colors **0.1.1**](/projects/sidebar-colors/) | **0.1.1** korrigiert denselben Zeilenselektor. 27 lokale Tests bestanden, einschließlich DOM-Regressionen für die alten/neuen HA-Elemente und Speichern/Abbrechen. Nicht zusätzlich parallel auf .177 installiert. |
 | [Dashboard-Benutzerverwaltung **0.1.11**](/projects/dashboard-user-manager/) | Live: 19 Ansichten und vier Benutzer geladen, keine Änderungen gespeichert. **Offen: zusätzlicher Ladehinweis für das alte `lovelace`-Dashboard.** Ursache nicht abschließend geklärt. 33 Python- und 19 Node-Tests der App bestanden. |
 | [HA Grafik Visual Studio **0.1.296**](/projects/grafik-visual-studio/) | 109 Python- und 388 Node-Tests bestanden. Kein eigener Live-Test auf .177; App dort nicht installiert. |
 | [Blocks for HA **0.1.66**](/projects/blocks-for-ha/) | Zehn Python- und 172 Node-Tests bestanden; sieben optionale Tests übersprungen. Kein Live-Test auf .177. |
@@ -40,7 +40,7 @@ Das ATLAS-App-Paket besteht zusätzlich die schreibfreie Prüfung von 523 Paketd
 
 ## Bekannte Befunde und nächste Prüfungen
 
-HA 2026.11 ersetzt im Anzeigeeditor `ha-md-list-item` durch `ha-list-item-button`. Die Farbanwendung von Sidebar Manager/Colors verwendet noch den alten Selektor. Eine Anpassung und gezielte Prüfung von Farben, Gruppenfarben, Abbrechen, Speichern und Neuladen stehen aus. Die gespeicherten Farbeinstellungen wurden nicht gelöscht.
+**Behoben in Sidebar Manager 0.1.9 und Sidebar Colors 0.1.1:** Die Farbanwendung unterstützt jetzt das alte `ha-md-list-item` und das neue `ha-list-item-button`. Manager auf .177 live geprüft: Text-/Iconfarben der Einträge und Gruppen, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 Manager- und 27 Colors-Tests bestehen. Colors wurde separat lokal geprüft, nicht parallel auf .177 geladen. Keine Migration der gespeicherten Farbeinstellungen nötig.
 
 Der `lovelace`-Ladehinweis der Benutzerverwaltung ist separat zu untersuchen. Ein fehlgeschlagenes Lesen darf weiterhin nicht als leeres Dashboard gelten. Der Hinweis ist noch nicht eindeutig als durch 2026.11 verursachte Regression eingeordnet.
 

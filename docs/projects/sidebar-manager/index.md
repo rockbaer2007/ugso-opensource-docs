@@ -1,23 +1,23 @@
 ---
 title: Sidebar Manager
-description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenleiste. Version 0.1.8, DE/EN/FR.
+description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenleiste. Version 0.1.9, DE/EN/FR.
 ---
 # Sidebar Manager
 
-::: warning Bekannter Befund unter HA 2026.11
-Prüfung vom 05.11.2026 auf .177: Sidebar, Gruppen, nativer Bearbeitungsdialog, Farbfelder und Farbwähler laden. **Die Text-/Iconfarben fehlen jedoch in der Zeilenvorschau des nativen Bearbeitungsdialogs.** Die Farbanwendung sucht noch nach dem entfernten `ha-md-list-item`; HA verwendet jetzt `ha-list-item-button`. Gespeicherte Einstellungen wurden nicht gelöscht. Eine Korrektur ist noch nicht veröffentlicht.
+::: info HA 2026.11: Farbvorschau korrigiert
+Version **0.1.9** behebt die fehlenden Text-/Iconfarben im nativen Bearbeitungsdialog, einschließlich Gruppenfarben. Auf .177 (Port 80), Core 2026.11.0 / Frontend 20261028.4 geprüft: Farben, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 automatische Tests bestehen. Eigene Testgruppe und -verknüpfung sind entfernt; das exportierte Layout entspricht wieder der Sicherung vor dem Test. Vorhandene Einstellungen und „Test für APP“ bleiben erhalten.
 :::
 
 [Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
 
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
-**0.1.8 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.9 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Ordner, Farben, Transparenz und eigene Links direkt in „Seitenleiste bearbeiten“. Haupteinträge und Ordner gemeinsam am nativen Ziehgriff sortieren. Keine HA-Systemdateien werden ersetzt.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.8](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.8) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.9](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.9) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## Neu in 0.1.8: Links im Seitenleisten-Editor
 

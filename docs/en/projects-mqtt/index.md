@@ -18,8 +18,8 @@ These projects live in the same repository as the MQTT apps below.
 
 | Project | Documentation |
 | --- | --- |
-| <img class="package-icon" src="/images/packages/projects-sidebar-colors.svg" width="32" height="32" alt="" aria-hidden="true"> [Sidebar Colors](/en/projects/sidebar-colors/) | 0.1.0: per-entry colors and opacity in the native HA sidebar editor. DE/EN/FR, synchronized per user; separate [GitHub repository](https://github.com/rockbaer2007/ha-sidebar-colors), for HACS and Marketplace. Not a Supervisor app. |
-| <img class="package-icon" src="/images/packages/projects-sidebar-manager.svg" width="32" height="32" alt="" aria-hidden="true"> [Sidebar Manager](/en/projects/sidebar-manager/) | 0.1.7: colors/opacity, folders with icons, shared ordering, expanded-only separators and custom links in a new tab or iframe. DE/EN/FR, [GitHub](https://github.com/rockbaer2007/ha-sidebar-manager), HACS-compatible frontend plugin. |
+| <img class="package-icon" src="/images/packages/projects-sidebar-colors.svg" width="32" height="32" alt="" aria-hidden="true"> [Sidebar Colors](/en/projects/sidebar-colors/) | 0.1.1: per-entry colors and opacity in the native HA sidebar editor. DE/EN/FR, synchronized per user; separate [GitHub repository](https://github.com/rockbaer2007/ha-sidebar-colors), for HACS and Marketplace. Not a Supervisor app. |
+| <img class="package-icon" src="/images/packages/projects-sidebar-manager.svg" width="32" height="32" alt="" aria-hidden="true"> [Sidebar Manager](/en/projects/sidebar-manager/) | 0.1.9: colors/opacity, folders with icons, shared ordering, expanded-only separators and custom links in a new tab or iframe. DE/EN/FR, [GitHub](https://github.com/rockbaer2007/ha-sidebar-manager), HACS-compatible frontend plugin. |
 | <img class="package-icon" src="/images/automation-status-card/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Automation Status Card](/en/projects/automation-status-card/) | 0.1.3: automatic list, configurable rows/scrolling, optional controls, checkbox selection and run/trace diagnostics. DE/EN/FR; verified on HA 2026.10.4. |
 
 ## Shared Add-on Repository

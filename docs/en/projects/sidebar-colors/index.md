@@ -4,15 +4,15 @@ description: Individual colors and opacity for HA sidebar entries in the native 
 ---
 # Sidebar Colors
 
-::: warning HA 2026.11 compatibility risk
-Version 0.1.0 still uses `ha-md-list-item` for color previews in the edit dialog. HA 2026.11 uses `ha-list-item-button`; missing row colors were confirmed in the related Sidebar Manager on .177 on 2026-11-05. Sidebar Colors was not additionally installed alongside it. Twenty-five local tests pass but do not replace live validation of this frontend change. No fix published yet.
+::: info HA 2026.11: selector fixed
+Version **0.1.1** supports both `ha-md-list-item` and `ha-list-item-button` in the native edit dialog. All 27 local tests pass, including DOM regressions for both HA row types, opacity, Cancel, Save, reopening and theme reset. The corresponding Manager fix was live-tested on .177; Sidebar Colors was not additionally installed alongside it. Existing colors and storage keys are preserved.
 :::
 
 [Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).
 
 <img src="/images/packages/projects-sidebar-colors.svg" width="80" height="80" alt="Sidebar Colors" />
 
-**0.1.0 · Frontend extension · DE / EN / FR · MIT**
+**0.1.1 · Frontend extension · DE / EN / FR · MIT**
 
 Give each Home Assistant sidebar entry its own icon and label color. The new color field is placed directly in **Edit sidebar**, between the name and the eye control. Visibility and order remain controlled by the familiar native controls.
 
