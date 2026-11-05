@@ -16,6 +16,10 @@ Im Editor rasten gelbe Endpunkte beim Ziehen an einer anderen Linie oder LineBox
 
 ## Installation
 
+### Katalogvorbereitung 0.1.34
+
+Die Veröffentlichung enthält vollständige Release-Hinweise in allen elf Katalogsprachen, korrigierte Paketabhängigkeiten sowie automatisches Linting und ioBroker-Paketprüfungen. Die Veröffentlichung erfolgt mit npm-Herkunftsnachweis über GitHub Actions. bluefox ist als npm-Mitinhaber eingetragen. Die Aufnahme in den offiziellen Katalog ist weiterhin beantragt; Widget-Funktionen und vorhandene Projekte bleiben erhalten.
+
 Der technische Paketname lautet jetzt `iobroker.vis-2-widgets-ugso-special`.
 Exportiere vorhandene VIS-2-Projekte als Sicherung, installiere das neue Paket
 und starte VIS 2 neu. Prüfe die Projekte vor dem Entfernen des bisherigen Pakets.

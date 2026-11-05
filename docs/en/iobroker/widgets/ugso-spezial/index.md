@@ -16,6 +16,10 @@ In the editor, drag a yellow endpoint to snap it to another line or LineBox. An 
 
 ## Installation
 
+### Catalogue preparation 0.1.34
+
+This release includes complete release notes in all eleven catalogue languages, corrected package dependencies, automated linting and ioBroker package checks. Releases use GitHub Actions with npm provenance. bluefox is listed as an npm co-owner. Inclusion in the official catalogue remains pending; widget features and existing projects are preserved.
+
 The package is now named `iobroker.vis-2-widgets-ugso-special`.
 Export existing VIS 2 projects as a backup, install the new package and restart VIS 2.
 Check the projects before removing the previous package.

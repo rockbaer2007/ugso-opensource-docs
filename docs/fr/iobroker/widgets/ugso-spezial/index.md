@@ -16,6 +16,10 @@ Dans l’éditeur, faites glisser une extrémité jaune pour l’aimanter à une
 
 ## Installation
 
+### Préparation du catalogue 0.1.34
+
+Cette version comprend des notes de version dans les onze langues du catalogue, des dépendances corrigées, une analyse statique automatisée et les contrôles de paquet ioBroker. Les publications utilisent GitHub Actions avec une attestation de provenance npm. bluefox figure parmi les copropriétaires npm. L’admission au catalogue officiel reste en cours ; les fonctions des widgets et les projets existants sont conservés.
+
 Le paquet s’appelle désormais `iobroker.vis-2-widgets-ugso-special`.
 Exportez vos projets VIS 2 pour les sauvegarder, installez le nouveau paquet
 et redémarrez VIS 2. Vérifiez les projets avant de supprimer l’ancien paquet.
