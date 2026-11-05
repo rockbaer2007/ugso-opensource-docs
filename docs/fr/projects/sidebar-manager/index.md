@@ -39,7 +39,11 @@ Les vérifications locales couvrent le paquet JavaScript compilé avec un stocka
 
 ## HACS / Marketplace
 
-Plugin frontend, pas une application Supervisor ni une carte de tableau de bord. Ajoutez `https://github.com/rockbaer2007/ha-sidebar-manager` comme dépôt personnalisé HACS, catégorie **Dashboard** (`plugin`), puis téléchargez-le. La publication n'implique pas l'inclusion au catalogue standard. Structure compatible HACS pour Marketplace ; aucun test d'exécution Marketplace distinct.
+Plugin frontend, pas une application Supervisor ni une carte de tableau de bord. Ajoutez `https://github.com/rockbaer2007/ha-sidebar-manager` comme dépôt personnalisé HACS, catégorie **Dashboard** (`plugin`), puis téléchargez-le. La publication n'implique pas l'inclusion au catalogue standard. Le paquet utilise une structure compatible HACS pour Marketplace.
+
+::: tip Installation Marketplace confirmée
+Le **5 novembre 2026**, l’utilisateur a confirmé la réussite de l’installation via **Marketplace**. Cette confirmation complète les vérifications documentées de Sidebar Manager 0.1.9. La version exacte de Marketplace n’a pas été précisée séparément ; cela ne constitue pas une validation de toutes les versions.
+:::
 
 Créez d'abord une sauvegarde complète HA. Fusionnez dans la section `frontend:` existante de `configuration.yaml`, en conservant thèmes et autres modules :
 

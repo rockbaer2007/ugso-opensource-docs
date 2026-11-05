@@ -40,7 +40,11 @@ Local checks exercise the built JavaScript package with simulated HA storage, DE
 
 ## Install with HACS / Marketplace
 
-This is a frontend plugin, not a Supervisor app or a dashboard card. Add `https://github.com/rockbaer2007/ha-sidebar-manager` as a custom repository in HACS, category **Dashboard** (`plugin` internally), and download Sidebar Manager. A public repository is not automatically included in the default catalog. The package uses the HACS-compatible structure for Marketplace; Marketplace itself has not been live-tested.
+This is a frontend plugin, not a Supervisor app or a dashboard card. Add `https://github.com/rockbaer2007/ha-sidebar-manager` as a custom repository in HACS, category **Dashboard** (`plugin` internally), and download Sidebar Manager. A public repository is not automatically included in the default catalog. The package uses a HACS-compatible structure for Marketplace.
+
+::: tip Marketplace installation confirmed
+On **5 November 2026**, the user confirmed successful installation through **Marketplace**. This supplements the documented Sidebar Manager 0.1.9 checks. The exact Marketplace version was not separately specified; this does not certify every version.
+:::
 
 [Open in HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 

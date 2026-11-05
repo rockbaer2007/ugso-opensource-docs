@@ -39,7 +39,11 @@ Die lokalen Prüfungen decken das gebaute JavaScript-Paket mit simuliertem HA-Sp
 
 ## HACS / Marketplace
 
-Frontend-Plugin, keine Supervisor-App und keine Dashboard-Karte. `https://github.com/rockbaer2007/ha-sidebar-manager` als benutzerdefiniertes HACS-Repository in Kategorie **Dashboard** (`plugin`) hinzufügen und herunterladen. Veröffentlichung bedeutet keine Aufnahme in den Standardkatalog. HACS-kompatible Paketstruktur für Marketplace; noch kein eigener Marketplace-Laufzeittest.
+Frontend-Plugin, keine Supervisor-App und keine Dashboard-Karte. `https://github.com/rockbaer2007/ha-sidebar-manager` als benutzerdefiniertes HACS-Repository in Kategorie **Dashboard** (`plugin`) hinzufügen und herunterladen. Veröffentlichung bedeutet keine Aufnahme in den Standardkatalog. Das Paket verwendet eine HACS-kompatible Struktur für Marketplace.
+
+::: tip Marketplace-Installation bestätigt
+Der Anwender hat am **05.11.2026** die erfolgreiche Installation über **Marketplace** bestätigt. Dies ergänzt die dokumentierten Prüfungen von Sidebar Manager 0.1.9. Die genaue Marketplace-Version wurde nicht gesondert angegeben; daraus folgt keine pauschale Freigabe aller Versionen.
+:::
 
 Vorher HA-Vollbackup erstellen. Im bestehenden `frontend:`-Abschnitt der `configuration.yaml` ergänzen; Themes und andere Module erhalten:
 
