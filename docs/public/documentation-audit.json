@@ -396,21 +396,29 @@
         "de": {
           "path": "blog/snippets/iobroker-blockly.md",
           "status": "content-present",
-          "sha256": "07561e42c0425d70e550564df1123e9a816dbf1de14ad2e035958f75a33ddfec",
-          "words": 444,
-          "headings": 11,
-          "examples": 3,
-          "versions": [],
+          "sha256": "4febe63b8e994fab14c5ff61ffbd6c40e13c9b8345e74833c97f7b704b7f410e",
+          "words": 1190,
+          "headings": 17,
+          "examples": 4,
+          "versions": [
+            "0.1.27",
+            "0.1.31",
+            "10.4.10"
+          ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/blog/snippets/iobroker-blockly.md",
           "status": "content-present",
-          "sha256": "a0b9d78bce0bcd780d4c5d5ba334d0a0ed3163954dbfb8b52bc586fc69b200ce",
-          "words": 469,
-          "headings": 11,
-          "examples": 3,
-          "versions": [],
+          "sha256": "735ad0ae5d553c7bd305f9084721ce19a9354d8192cc0180b70f05aa5f33b27b",
+          "words": 1234,
+          "headings": 17,
+          "examples": 4,
+          "versions": [
+            "0.1.27",
+            "0.1.31",
+            "10.4.10"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -423,11 +431,15 @@
         "fr": {
           "path": "fr/blog/snippets/iobroker-blockly.md",
           "status": "content-present",
-          "sha256": "5980ade71e0e9a3513613d36c81797061aabe977994712a66d64a6fd0770aa50",
-          "words": 622,
-          "headings": 11,
-          "examples": 3,
-          "versions": [],
+          "sha256": "3605b11b7594cf5a9bc40644cde48b53f2274a922ec74d68e34ca7502e901263",
+          "words": 1480,
+          "headings": 17,
+          "examples": 4,
+          "versions": [
+            "0.1.27",
+            "0.1.31",
+            "10.4.10"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -6989,9 +7001,9 @@
         "de": {
           "path": "projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "d6ce1098ef9eb09006c0351898505d6db816602163b750f14a024aef6bee5115",
-          "words": 3160,
-          "headings": 20,
+          "sha256": "79e5d2d7d641f63dd933584f6e1196979cb30aec43777bbf9c405073962488b7",
+          "words": 3252,
+          "headings": 21,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7010,6 +7022,7 @@
             "0.1.28",
             "0.1.29",
             "0.1.30",
+            "0.1.31",
             "10.4.10"
           ],
           "unresolved_local_references": []
@@ -7017,9 +7030,9 @@
         "en": {
           "path": "en/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "173a20f51aa1f0eec27ef63239f903d721eb17106369fd1c876b7aa99015f284",
-          "words": 3223,
-          "headings": 20,
+          "sha256": "9dcfc27293d005b4b46338425010c9894c35a0f29b1eb9d729ef6528c08b819a",
+          "words": 3318,
+          "headings": 21,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7038,6 +7051,7 @@
             "0.1.28",
             "0.1.29",
             "0.1.30",
+            "0.1.31",
             "10.4.10"
           ],
           "unresolved_local_references": [],
@@ -7052,9 +7066,9 @@
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "b369b1d09d501d08bb19e3f7f12d4710779576306c19b7a254d574bcf01d9801",
-          "words": 4157,
-          "headings": 20,
+          "sha256": "f6a4c9e84ada5806c189cbf8f30e5552bae674c1ce76ec16f2baf4df6f4fe57e",
+          "words": 4272,
+          "headings": 21,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7073,6 +7087,7 @@
             "0.1.28",
             "0.1.29",
             "0.1.30",
+            "0.1.31",
             "10.4.10"
           ],
           "unresolved_local_references": [],
@@ -7092,9 +7107,9 @@
         "de": {
           "path": "projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "b1de033d9f809864f480bf17859c30c2e918b2a91c4620fbb377798dfa6c1312",
-          "words": 2869,
-          "headings": 16,
+          "sha256": "fd17e46db5f50ecbee1e25a87a51b06bdb93397ea53b4da23e1aa37e3819d2d0",
+          "words": 2963,
+          "headings": 17,
           "examples": 1,
           "versions": [
             "0.1.24",
@@ -7104,6 +7119,7 @@
             "0.1.28",
             "0.1.29",
             "0.1.30",
+            "0.1.31",
             "10.4.10"
           ],
           "unresolved_local_references": []
@@ -7111,9 +7127,9 @@
         "en": {
           "path": "en/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "5940be906a170873db2a1f85d9944f71e6709538e1d01712cf4e6a76a5b807e4",
-          "words": 2935,
-          "headings": 16,
+          "sha256": "36cc10fe127eb2fe1ed3acf7888ff81445119ad16be7e4bc56bf3f10421500fd",
+          "words": 3032,
+          "headings": 17,
           "examples": 1,
           "versions": [
             "0.1.24",
@@ -7123,6 +7139,7 @@
             "0.1.28",
             "0.1.29",
             "0.1.30",
+            "0.1.31",
             "10.4.10"
           ],
           "unresolved_local_references": [],
@@ -7137,9 +7154,9 @@
         "fr": {
           "path": "fr/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "69bde1c96fb64e762339b48219467dbee87701ea6cddaccda4321ff437a8eed4",
-          "words": 3353,
-          "headings": 16,
+          "sha256": "97b3f2e819a1f6fd35c3d01129a1b059ee023e9fe6c9609ef8a4acc0d0ba6166",
+          "words": 3470,
+          "headings": 17,
           "examples": 1,
           "versions": [
             "0.1.24",
@@ -7149,6 +7166,7 @@
             "0.1.28",
             "0.1.29",
             "0.1.30",
+            "0.1.31",
             "10.4.10"
           ],
           "unresolved_local_references": [],

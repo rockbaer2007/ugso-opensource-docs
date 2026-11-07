@@ -14,6 +14,80 @@ This page only gives a short introduction. The complete description of all
 blocks and more examples are available in the official ioBroker documentation.
 :::
 
+## Connect Home Assistant to ioBroker and VIS 2 over MQTT {#mqtt-vis2-helper}
+
+This original UGSo example supplements the Blockly introduction: the **MQTT-Client for Home Assistant** forwards selected entities to an external MQTT broker. The **ioBroker JavaScript helper 0.1.27** shown here prepares them for VIS 2. App and helper versions may differ; app 0.1.31 continues to use this unchanged helper.
+
+::: warning JavaScript, not a Blockly import
+Paste the complete script into the **ioBroker JavaScript adapter** as JavaScript. It does not belong in Home Assistant or the Blockly XML importer. The existing Blockly examples below remain independent.
+:::
+
+### What does the helper do? {#mqtt-helper-purpose}
+
+MQTT uses separate topics for feedback and commands. The helper joins them through **one virtual state per value** under `0_userdata.0.ugso_mqtt`. In VIS 2, this one point is sufficient for display and control.
+
+```text
+HA -> MQTT state -> 0_userdata.0.ugso_mqtt -> VIS 2
+VIS 2 -> 0_userdata.0.ugso_mqtt -> MQTT set -> HA
+```
+
+- HA feedback updates the virtual point with `ack: true`.
+- VIS 2 control writes with `ack: false`; only an authorized return channel is used. A broker handoff is confirmed only after new actual HA feedback.
+- Supported light values are normalized appropriately, such as brightness to 0–100%. Measurements and dates remain read-only.
+- Suitable HA metadata supplies data types, units and unambiguous roles. Existing values, manual roles and unrelated objects remain protected.
+- The script processes affected MQTT changes selectively. It does not rebuild everything on every unrelated measurement update.
+
+### Requirements and setup {#mqtt-helper-setup}
+
+1. Configure the HA MQTT-Client and ioBroker MQTT adapter. The app sends to the external broker; the return channel described here uses the ioBroker MQTT adapter in **Server/Broker** mode.
+2. Select entities or assign the configured HA label. **Additional device measurements explicitly require “Automatically include related measurements and battery values from the same device” and then “Save and connect”.** Only existing, supported sensors of the same HA device are added.
+3. Create a JavaScript script in the ioBroker JavaScript adapter and paste the complete code below. The helper has been tested with adapter **10.4.10**.
+4. Enable **setObject** in the adapter settings and disable **Do not subscribe to all states on start**. The script requires synchronous object/state caches. No permissions are required merely to view the code.
+5. Check the paths in the settings block and initially keep `mode: 'preview'`. Preview creates only missing helper base folders/backup points and logs planned mappings; it creates no controllable virtual values and sends no commands.
+6. After review, set `mode: 'apply'` and restart the script. Virtual points are now created and synchronized.
+7. In VIS 2 select the appropriate virtual point, **not the raw MQTT `set` point**.
+
+### Settings and backup {#mqtt-helper-settings}
+
+| Setting | Meaning |
+| --- | --- |
+| `mqttRoot` | Incoming MQTT tree; default `mqtt.0.ha_external`. |
+| `mode` | `preview`: inspect; `apply`: apply; `restore`: safely undo the helper’s own backed-up changes. |
+| `outputMode` | `virtual` for VIS-2 points; `roles` for alternative role/alias mapping. |
+| `virtualRoot` | Target tree for virtual values. |
+| `virtualBackupId`, `backupId` | Helper backup journals; existing backups are preserved. |
+| `aliasRoot` | Target for read-only aliases in role mode. |
+| `excludeIds` | Exact source IDs to leave untouched. |
+
+When replacing an existing script, retain your settings. `restore` does not restore the entire ioBroker installation: objects changed manually afterwards remain protected; virtual values/references are retained and their controls disabled. See the [complete helper guide](/en/projects/mqtt-client/iobroker-roles) for details, including the role table, backups and limitations.
+
+### Complete script with copy button and download {#mqtt-helper-code}
+
+<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.27.js" download>Download JavaScript helper 0.1.27 (.js)</a>
+
+The copy button at the top right of the code block copies the **entire script**. The code block and download use the same unchanged file, without personal credentials. Review paths and mode for your installation afterwards.
+
+<div class="mqtt-helper-code">
+
+<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.27.js
+
+</div>
+
+### Missing values or confirmations {#mqtt-helper-troubleshooting}
+
+- **Only “Preview VIS 2” in the log:** After review, switch to `mode: 'apply'`.
+- **“setObject is not allowed”:** The adapter permission described above is missing.
+- **Missing energy, voltage, current or power:** Enable the measurements checkbox, save, and open **“Check related measurements”** in the HA app. Similar names do not replace an HA device association.
+- **Commands work but confirmation is missing:** Check the raw MQTT state first. If it remains old, HA feedback is already missing before the helper. The helper never fabricates confirmation or retries commands automatically.
+- **The raw MQTT `set` value does not change:** Commands are published through the broker API without retain; the stored raw value does not have to change.
+
+[MQTT-Client documentation and app update](/en/projects/mqtt-client/) · [Helper guide and complete role mapping](/en/projects/mqtt-client/iobroker-roles)
+
+<style scoped>
+.mqtt-helper-code :deep(pre) { max-height: 36rem; overflow: auto; }
+</style>
+
+
 ## Official Sources
 
 - [ioBroker.javascript - official repository](https://github.com/ioBroker/ioBroker.javascript)

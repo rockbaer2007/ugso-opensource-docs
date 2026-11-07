@@ -3,11 +3,11 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.30 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.31 {#mqtt-client-0-1-16}
 
-Forward selected HA states and attributes to an external MQTT broker. Version 0.1.30 prioritizes control feedback and adds a consistency check against HA. Install the HA app update; helper 0.1.27 can stay.
+Forward selected HA states and attributes to an external MQTT broker. Version 0.1.31 prioritizes control feedback and adds a consistency check against HA. Install the HA app update; helper 0.1.27 can stay.
 
-[Release 0.1.30](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.30)
+[Release 0.1.31](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.31)
 
 ## Important: explicitly enable additional device measurements {#enable-device-readings}
 
@@ -22,8 +22,12 @@ Only supported sensors enabled in HA and associated with the same HA device are 
 ::: tip Especially for VIS 2: the ioBroker JavaScript helper
 The supplied **JavaScript runs in the ioBroker JavaScript adapter, not in Home Assistant**. It creates virtual states under `0_userdata.0.ugso_mqtt`: **one point per value for display and control**, even though MQTT uses separate `state` and `set` topics. Supported switches and light values receive the appropriate command channel; measurements remain read-only. Suitable HA metadata determines data types, units and unambiguous roles. A command is confirmed only after actual HA feedback.
 
-**Review preview first, then set `mode: 'apply'`.** Preview creates only missing helper base folders/backup points; virtual VIS-2 points are created in apply mode. **setObject** must be allowed in the adapter settings for creation. Existing values and manually assigned roles remain protected. The HA app is **0.1.30**, while the current helper file remains **0.1.27** – these different versions are intentional. Plain MQTT forwarding also works without the helper.
+**Review preview first, then set `mode: 'apply'`.** Preview creates only missing helper base folders/backup points; virtual VIS-2 points are created in apply mode. **setObject** must be allowed in the adapter settings for creation. Existing values and manually assigned roles remain protected. The HA app is **0.1.31**, while the current helper file remains **0.1.27** – these different versions are intentional. Plain MQTT forwarding also works without the helper.
 :::
+
+## New in 0.1.31: collapse TLS and certificates separately
+
+**TLS and certificates** now has its own collapsible section, operable by mouse or keyboard. Its button shows whether TLS is selected even while closed. Expanding/collapsing changes neither TLS nor stored certificates or credentials. The section stays closed after loading and saving; transmission settings and both action buttons remain visible. The [new JavaScript helper blog entry](/en/blog/snippets/iobroker-blockly#mqtt-vis2-helper) explains purpose, setup, status/commands and backups and includes the complete unchanged script 0.1.27 with copy button and download.
 
 ## New in 0.1.30: collapsible credentials
 

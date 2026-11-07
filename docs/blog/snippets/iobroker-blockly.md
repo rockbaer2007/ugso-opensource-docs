@@ -11,6 +11,80 @@ Blockly ist der grafische Skripteditor des **ioBroker-JavaScript-Adapters**. Aut
 Diese Seite gibt nur einen kurzen Einstieg. Die vollständige Beschreibung aller Blöcke und weitere Beispiele befinden sich in der offiziellen ioBroker-Dokumentation.
 :::
 
+## Home Assistant per MQTT mit ioBroker und VIS 2 verbinden {#mqtt-vis2-helper}
+
+Dieses eigene UGSo-Beispiel ergänzt den Blockly-Einstieg: Der **MQTT-Client für Home Assistant** überträgt ausgewählte Entitäten an einen externen MQTT-Broker. Der hier gezeigte **ioBroker-JavaScript-Helfer 0.1.27** bereitet diese Werte für VIS 2 auf. Die App-Version und die Helferversion können unterschiedlich sein; für die App 0.1.31 bleibt dieser Helfer unverändert.
+
+::: warning JavaScript, kein Blockly-Import
+Das vollständige Skript wird im **ioBroker-JavaScript-Adapter** als JavaScript eingefügt. Es gehört weder in Home Assistant noch in den Blockly-XML-Import. Die vorhandenen Blockly-Beispiele weiter unten bleiben davon unabhängig.
+:::
+
+### Wozu ist der Helfer gedacht? {#mqtt-helper-purpose}
+
+MQTT verwendet für Rückmeldung und Bedienung getrennte Topics. Der Helfer verbindet beide über **einen virtuellen Datenpunkt pro Wert** unter `0_userdata.0.ugso_mqtt`. In VIS 2 genügt dann dieser eine Datenpunkt für Anzeige und Bedienung.
+
+```text
+HA -> MQTT state -> 0_userdata.0.ugso_mqtt -> VIS 2
+VIS 2 -> 0_userdata.0.ugso_mqtt -> MQTT set -> HA
+```
+
+- HA-Rückmeldungen aktualisieren den virtuellen Datenpunkt mit `ack: true`.
+- Eine Bedienung in VIS 2 schreibt mit `ack: false`; nur ein freigegebener Rückkanal wird verwendet. Ein Broker-Auftrag gilt erst nach einer neuen tatsächlichen HA-Rückmeldung als bestätigt.
+- Unterstützte Light-Werte werden passend normalisiert, etwa Helligkeit auf 0–100 %. Messwerte und Datum bleiben lesend.
+- Geeignete HA-Metadaten liefern Datentyp, Einheit und eindeutige Rollen. Vorhandene Werte, manuelle Rollen und fremde Objekte bleiben geschützt.
+- Das Skript verarbeitet betroffene MQTT-Änderungen gezielt. Es führt nicht bei jeder beliebigen Messwertänderung einen vollständigen Neuaufbau aus.
+
+### Voraussetzungen und Einrichtung {#mqtt-helper-setup}
+
+1. MQTT-Client in HA und ioBroker-MQTT-Adapter einrichten. Die App überträgt an den externen Broker; für den hier beschriebenen Rückkanal wird der ioBroker-MQTT-Adapter im Modus **Server/Broker** verwendet.
+2. Entitäten auswählen oder das konfigurierte HA-Label setzen. **Zusätzliche Gerätemesswerte benötigen ausdrücklich den Haken „Zugehörige Mess- und Batteriewerte desselben Geräts automatisch einbeziehen“ und anschließend „Speichern und verbinden“.** Nur vorhandene, unterstützte Sensoren desselben HA-Geräts werden ergänzt.
+3. Im ioBroker-JavaScript-Adapter ein neues JavaScript-Skript anlegen und den vollständigen Code unten einfügen. Der Helfer ist für Adapter **10.4.10** geprüft.
+4. In den Adaptereinstellungen **setObject erlauben** und **Do not subscribe to all states on start** deaktivieren. Das Skript benötigt synchrone Objekt-/Zustandscaches. Für das reine Ansehen des Codes sind keine Freigaben erforderlich.
+5. Pfade im Einstellungsblock prüfen und zunächst `mode: 'preview'` lassen. Die Vorschau legt nur fehlende eigene Basisordner/Sicherungsdatenpunkte an und protokolliert geplante Zuordnungen; sie erzeugt keine bedienbaren virtuellen Werte und sendet keine Schaltbefehle.
+6. Nach Prüfung `mode: 'apply'` einstellen und das Skript neu starten. Nun werden die virtuellen Datenpunkte angelegt und synchronisiert.
+7. In VIS 2 den passenden virtuellen Datenpunkt auswählen, **nicht den rohen MQTT-`set`-Datenpunkt**.
+
+### Einstellungsblock und Sicherung {#mqtt-helper-settings}
+
+| Einstellung | Bedeutung |
+| --- | --- |
+| `mqttRoot` | Eingehender MQTT-Baum, standardmäßig `mqtt.0.ha_external`. |
+| `mode` | `preview`: prüfen; `apply`: anwenden; `restore`: eigene gesicherte Änderungen geschützt zurücknehmen. |
+| `outputMode` | `virtual` für VIS-2-Datenpunkte; `roles` für die alternative Rollen-/Alias-Zuordnung. |
+| `virtualRoot` | Zielbaum der virtuellen Werte. |
+| `virtualBackupId`, `backupId` | Eigene Sicherungsjournale; vorhandene Sicherungen werden erhalten. |
+| `aliasRoot` | Ziel für lesende Aliase im Rollenmodus. |
+| `excludeIds` | Exakte Quell-IDs, die nicht bearbeitet werden sollen. |
+
+Bei bereits vorhandenem Skript die eigenen Einstellungen übernehmen. `restore` ist keine Wiederherstellung der gesamten ioBroker-Installation: Später manuell veränderte Objekte bleiben geschützt, virtuelle Werte/Referenzen werden erhalten und ihre Steuerung wird deaktiviert. Für die Details gilt die [vollständige Helfer-Anleitung](/projects/mqtt-client/iobroker-roles), einschließlich Rollentabelle, Sicherung und Grenzen.
+
+### Vollständiges Skript mit Kopierbutton und Download {#mqtt-helper-code}
+
+<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.27.js" download>JavaScript-Helfer 0.1.27 herunterladen (.js)</a>
+
+Der Kopierbutton rechts oben im Codefeld übernimmt das **gesamte Skript**. Codefeld und Download verwenden dieselbe unveränderte Datei; sie enthält keine persönlichen Zugangsdaten. Die Pfade und den Modus anschließend für die eigene Installation prüfen.
+
+<div class="mqtt-helper-code">
+
+<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.27.js
+
+</div>
+
+### Wenn Werte oder Bestätigungen fehlen {#mqtt-helper-troubleshooting}
+
+- **Nur „Preview VIS 2“ im Log:** Erst nach Prüfung auf `mode: 'apply'` wechseln.
+- **Fehler „setObject is not allowed“:** Die oben beschriebene Adapterfreigabe fehlt.
+- **Energie, Spannung, Strom oder Leistung fehlen:** Messwerte-Haken aktivieren, speichern und in der HA-App **„Zugehörige Messwerte prüfen“** öffnen. Ähnliche Namen ersetzen keine HA-Gerätezuordnung.
+- **Schalten möglich, Bestätigung fehlt:** Zuerst den rohen MQTT-Status prüfen. Bleibt er alt, fehlt die HA-Rückmeldung bereits vor dem Helfer. Der Helfer bestätigt nicht künstlich und wiederholt Befehle nicht automatisch.
+- **Roher MQTT-`set`-Wert ändert sich nicht:** Der Helfer veröffentlicht Befehle über die Broker-Schnittstelle ohne Retain; der gespeicherte rohe Wert muss dabei nicht wechseln.
+
+[MQTT-Client-Doku und App-Update](/projects/mqtt-client/) · [Helfer-Anleitung und vollständige Rollenzuordnung](/projects/mqtt-client/iobroker-roles)
+
+<style scoped>
+.mqtt-helper-code :deep(pre) { max-height: 36rem; overflow: auto; }
+</style>
+
+
 ## Offizielle Quellen
 
 - [ioBroker.javascript – offizielles Repository](https://github.com/ioBroker/ioBroker.javascript)

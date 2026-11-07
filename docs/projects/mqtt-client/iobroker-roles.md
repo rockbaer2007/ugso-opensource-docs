@@ -1,6 +1,6 @@
 # ioBroker: automatische Rollenzuordnung {#iobroker-role-mapping}
 
-Das optionale JavaScript gehört zu MQTT-Client **0.1.30** und läuft im ioBroker-JavaScript-Adapter. Es verwendet die übertragenen Metadaten `device_class` und `unit_of_measurement`. Es ordnet nur eindeutige Fälle zu; weder MQTT-Werte noch Datentypen, Einheiten, Zugangsdaten oder Rückkanäle werden umgeschrieben.
+Das optionale JavaScript gehört zu MQTT-Client **0.1.31** und läuft im ioBroker-JavaScript-Adapter. Es verwendet die übertragenen Metadaten `device_class` und `unit_of_measurement`. Es ordnet nur eindeutige Fälle zu; weder MQTT-Werte noch Datentypen, Einheiten, Zugangsdaten oder Rückkanäle werden umgeschrieben.
 
 
 
@@ -17,8 +17,12 @@ Erfasst werden unterstützte und in HA aktivierte Sensoren mit derselben HA-Ger�
 ::: tip Besonders für VIS 2: der ioBroker-JavaScript-Helfer
 Das mitgelieferte **JavaScript wird im ioBroker-JavaScript-Adapter ausgeführt, nicht in Home Assistant**. Es legt virtuelle Datenpunkte unter `0_userdata.0.ugso_mqtt` an: **ein Datenpunkt pro Wert für Anzeige und Bedienung**, obwohl MQTT getrennte `state`- und `set`-Topics verwendet. Unterstützte Schalter und Light-Werte erhalten den passenden Rückkanal; Messwerte bleiben lesend. Anhand geeigneter HA-Metadaten werden Datentypen, Einheiten und eindeutige Rollen zugeordnet. Eine Schaltanforderung ist erst nach tatsächlicher HA-Rückmeldung bestätigt.
 
-**Zuerst Vorschau prüfen, dann `mode: 'apply'` einstellen.** In der Vorschau werden nur fehlende eigene Basisordner/Sicherungsdatenpunkte angelegt; die virtuellen VIS-2-Werte entstehen im Anwendungsmodus. Für die Anlage muss **setObject** in den Adaptereinstellungen erlaubt sein. Bestehende Werte und manuell gesetzte Rollen bleiben geschützt. Die HA-App ist **0.1.30**, die weiterhin aktuelle Helferdatei **0.1.27** – unterschiedliche Versionsnummern sind hier beabsichtigt. Ohne Helfer ist die reine MQTT-Übertragung weiterhin nutzbar.
+**Zuerst Vorschau prüfen, dann `mode: 'apply'` einstellen.** In der Vorschau werden nur fehlende eigene Basisordner/Sicherungsdatenpunkte angelegt; die virtuellen VIS-2-Werte entstehen im Anwendungsmodus. Für die Anlage muss **setObject** in den Adaptereinstellungen erlaubt sein. Bestehende Werte und manuell gesetzte Rollen bleiben geschützt. Die HA-App ist **0.1.31**, die weiterhin aktuelle Helferdatei **0.1.27** – unterschiedliche Versionsnummern sind hier beabsichtigt. Ohne Helfer ist die reine MQTT-Übertragung weiterhin nutzbar.
 :::
+
+## Neu in 0.1.31: TLS und Zertifikate separat einklappen {#tls-0131}
+
+**TLS und Zertifikate** ist jetzt ein eigener, per Maus und Tastatur bedienbarer Klappbereich. Die Schaltfläche zeigt auch geschlossen, ob TLS ausgewählt ist. Beim Auf-/Zuklappen werden weder TLS noch gespeicherte Zertifikate oder Zugangsdaten verändert. Nach Laden und Speichern bleibt der Bereich geschlossen; Übertragungseinstellungen und die beiden Aktionsschaltflächen bleiben sichtbar. Der [neue Blogeintrag zum JavaScript-Helfer](/blog/snippets/iobroker-blockly#mqtt-vis2-helper) erklärt Zweck, Einrichtung, Status/Rückkanal und Sicherung und enthält das vollständige unveränderte Skript 0.1.27 mit Kopierbutton und Download.
 
 ## Neu in 0.1.30: Zugangsdaten einklappen {#credentials-0130}
 
