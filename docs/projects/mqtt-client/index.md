@@ -3,7 +3,18 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.22 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.23 {#mqtt-client-0-1-16}
+
+## ioBroker-Rollenzuordnung ab 0.1.23
+
+Ein optionales JavaScript ordnet Datum, Zeitstempel und eindeutige Messwerte
+passenden ioBroker-Rollen zu. Vorschau, Sicherung vor Änderungen und Wiederherstellung
+sind enthalten. Vorhandene Werte, Zugangsdaten und manuelle Spezialrollen bleiben
+erhalten. Schreibbare MQTT-Messwerte erhalten lesende Aliase. Das Skript lässt
+abweichende Datentypen, Einheiten und mehrdeutige Klassen aus.
+
+[Installation und vollständige Zuordnung HA → ioBroker](./iobroker-roles.md) ·
+[Release 0.1.23](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.23)
 
 ## Neu in 0.1.22
 

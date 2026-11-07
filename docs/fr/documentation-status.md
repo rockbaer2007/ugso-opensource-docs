@@ -16,9 +16,9 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 237 | 0 | 0 | 0 |
-| EN | 237 | 0 | 0 | 0 |
-| FR | 237 | 0 | 0 | 0 |
+| DE | 238 | 0 | 0 | 0 |
+| EN | 238 | 0 | 0 | 0 |
+| FR | 238 | 0 | 0 | 0 |
 
 **Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).
 
@@ -140,6 +140,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Contenu présent](/en/projects/heizoel-to-mqtt/configuration) | [Contenu présent](/fr/projects/heizoel-to-mqtt/configuration) |
 | [projects/index.md](/projects/) | [Contenu présent](/en/projects/) | [Contenu présent](/fr/projects/) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Contenu présent](/en/projects/mqtt-client/) | [Contenu présent](/fr/projects/mqtt-client/) |
+| [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Contenu présent](/en/projects/mqtt-client/iobroker-roles) | [Contenu présent](/fr/projects/mqtt-client/iobroker-roles) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Contenu présent](/en/projects/parcel-to-mqtt/examples) | [Contenu présent](/fr/projects/parcel-to-mqtt/examples) |
 | [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Contenu présent](/en/projects/parcel-to-mqtt/entities) | [Contenu présent](/fr/projects/parcel-to-mqtt/entities) |
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Contenu présent](/en/projects/parcel-to-mqtt/) | [Contenu présent](/fr/projects/parcel-to-mqtt/) |

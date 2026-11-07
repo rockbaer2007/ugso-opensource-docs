@@ -1574,6 +1574,21 @@
     "EN": "/en/projects/mqtt-client/",
     "FR": "/fr/projects/mqtt-client/"
   },
+  "/projects/mqtt-client/iobroker-roles": {
+    "DE": "/projects/mqtt-client/iobroker-roles",
+    "EN": "/en/projects/mqtt-client/iobroker-roles",
+    "FR": "/fr/projects/mqtt-client/iobroker-roles"
+  },
+  "/en/projects/mqtt-client/iobroker-roles": {
+    "DE": "/projects/mqtt-client/iobroker-roles",
+    "EN": "/en/projects/mqtt-client/iobroker-roles",
+    "FR": "/fr/projects/mqtt-client/iobroker-roles"
+  },
+  "/fr/projects/mqtt-client/iobroker-roles": {
+    "DE": "/projects/mqtt-client/iobroker-roles",
+    "EN": "/en/projects/mqtt-client/iobroker-roles",
+    "FR": "/fr/projects/mqtt-client/iobroker-roles"
+  },
   "/projects/parcel-to-mqtt/beispiele": {
     "DE": "/projects/parcel-to-mqtt/beispiele",
     "EN": "/en/projects/parcel-to-mqtt/examples",

@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 237 | 0 | 0 | 0 |
-| EN | 237 | 0 | 0 | 0 |
-| FR | 237 | 0 | 0 | 0 |
+| DE | 238 | 0 | 0 | 0 |
+| EN | 238 | 0 | 0 | 0 |
+| FR | 238 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -140,6 +140,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Inhalt vorhanden](/en/projects/heizoel-to-mqtt/configuration) | [Inhalt vorhanden](/fr/projects/heizoel-to-mqtt/configuration) |
 | [projects/index.md](/projects/) | [Inhalt vorhanden](/en/projects/) | [Inhalt vorhanden](/fr/projects/) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Inhalt vorhanden](/en/projects/mqtt-client/) | [Inhalt vorhanden](/fr/projects/mqtt-client/) |
+| [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Inhalt vorhanden](/en/projects/mqtt-client/iobroker-roles) | [Inhalt vorhanden](/fr/projects/mqtt-client/iobroker-roles) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/examples) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/examples) |
 | [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/entities) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/entities) |
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/) |

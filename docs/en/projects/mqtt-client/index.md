@@ -3,7 +3,18 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.22 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.23 {#mqtt-client-0-1-16}
+
+## ioBroker role mapping since 0.1.23
+
+An optional JavaScript assigns dates, timestamps and unambiguous measurements to
+matching ioBroker roles. Includes preview, backup before changes and guarded restore.
+Existing values, credentials and manual specific roles are preserved. Writable
+MQTT measurements use read-only aliases. Incompatible types, units and ambiguous
+classes are skipped.
+
+[Installation and complete HA → ioBroker mapping](./iobroker-roles.md) ·
+[Release 0.1.23](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.23)
 
 ## New in 0.1.22
 

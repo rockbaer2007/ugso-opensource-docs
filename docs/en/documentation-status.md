@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 237 | 0 | 0 | 0 |
-| EN | 237 | 0 | 0 | 0 |
-| FR | 237 | 0 | 0 | 0 |
+| DE | 238 | 0 | 0 | 0 |
+| EN | 238 | 0 | 0 | 0 |
+| FR | 238 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -140,6 +140,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Content present](/en/projects/heizoel-to-mqtt/configuration) | [Content present](/fr/projects/heizoel-to-mqtt/configuration) |
 | [projects/index.md](/projects/) | [Content present](/en/projects/) | [Content present](/fr/projects/) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Content present](/en/projects/mqtt-client/) | [Content present](/fr/projects/mqtt-client/) |
+| [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Content present](/en/projects/mqtt-client/iobroker-roles) | [Content present](/fr/projects/mqtt-client/iobroker-roles) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Content present](/en/projects/parcel-to-mqtt/examples) | [Content present](/fr/projects/parcel-to-mqtt/examples) |
 | [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Content present](/en/projects/parcel-to-mqtt/entities) | [Content present](/fr/projects/parcel-to-mqtt/entities) |
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Content present](/en/projects/parcel-to-mqtt/) | [Content present](/fr/projects/parcel-to-mqtt/) |
