@@ -1,6 +1,6 @@
 # ioBroker: automatic role mapping {#iobroker-role-mapping}
 
-The optional JavaScript ships with MQTT-Client **0.1.32** and runs in the ioBroker JavaScript adapter. It uses transmitted `device_class` and `unit_of_measurement` metadata. Only unambiguous cases are mapped; MQTT values, types, units, credentials and return channels are not rewritten.
+The optional JavaScript ships with MQTT-Client **0.1.33** and runs in the ioBroker JavaScript adapter. It uses transmitted `device_class` and `unit_of_measurement` metadata. Only unambiguous cases are mapped; MQTT values, types, units, credentials and return channels are not rewritten.
 
 
 
@@ -17,8 +17,14 @@ Only supported sensors enabled in HA and associated with the same HA device are 
 ::: tip Especially for VIS 2: the ioBroker JavaScript helper
 The supplied **JavaScript runs in the ioBroker JavaScript adapter, not in Home Assistant**. It creates virtual states under `0_userdata.0.ugso_mqtt`: **one point per value for display and control**, even though MQTT uses separate `state` and `set` topics. Supported switches and light values receive the appropriate command channel; measurements remain read-only. Suitable HA metadata determines data types, units and unambiguous roles. A command is confirmed only after actual HA feedback.
 
-**Review preview first, then set `mode: 'apply'`.** Preview creates only missing helper base folders/backup points; virtual VIS-2 points are created in apply mode. **setObject** must be allowed in the adapter settings for creation. Existing values and manually assigned roles remain protected. The HA app is **0.1.32**, while the current helper file remains **0.1.27** – these different versions are intentional. Plain MQTT forwarding also works without the helper.
+**Review preview first, then set `mode: 'apply'`.** Preview creates only missing helper base folders/backup points; virtual VIS-2 points are created in apply mode. **setObject** must be allowed in the adapter settings for creation. Existing values and manually assigned roles remain protected. The HA app and helper are **0.1.33** for this feature. Replace the complete helper in ioBroker for the flat layout; updating the app alone is insufficient. Plain MQTT forwarding also works without the helper.
 :::
+
+## New in 0.1.33: flat VIS-2 layout with short names {#flat-layout-0133}
+
+**Replace the complete JavaScript helper with 0.1.33 and retain your settings.** In its settings block, `virtualLayout: 'nested'` selects the existing layout (default); `virtualLayout: 'flat'` creates short points directly below the device folder, such as `schalter`, `energie`, `leistung`, `spannung`, `stromstaerke`. Lights add supported values such as `helligkeit`, `farbe`, `effekt` and `farbtemperatur`. Duplicate or occupied names receive unique suffixes such as `leistung_2`; assigned mappings remain pinned in the backup journal.
+
+Review preview first, then choose `mode: 'apply'`. Switching layout deletes or moves no existing points. Old and new IDs previously created by the helper continue to update and retain their authorized command channels; existing VIS-2 references can stay. Old folders therefore remain visible initially. Unrelated objects and manual roles are not overwritten, and MQTT topics remain unchanged. To switch back, select `nested` in the new helper; the old 0.1.27 helper cannot read journals containing flat entries.
 
 ## New in 0.1.32: highlight additional measurements {#readings-highlight-0132}
 

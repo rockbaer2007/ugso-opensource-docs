@@ -13,7 +13,7 @@ Diese Seite gibt nur einen kurzen Einstieg. Die vollständige Beschreibung aller
 
 ## Home Assistant per MQTT mit ioBroker und VIS 2 verbinden {#mqtt-vis2-helper}
 
-Dieses eigene UGSo-Beispiel ergänzt den Blockly-Einstieg: Der **MQTT-Client für Home Assistant** überträgt ausgewählte Entitäten an einen externen MQTT-Broker. Der hier gezeigte **ioBroker-JavaScript-Helfer 0.1.27** bereitet diese Werte für VIS 2 auf. Die App-Version und die Helferversion können unterschiedlich sein; für die App 0.1.32 bleibt dieser Helfer unverändert.
+Dieses eigene UGSo-Beispiel ergänzt den Blockly-Einstieg: Der **MQTT-Client für Home Assistant** überträgt ausgewählte Entitäten an einen externen MQTT-Broker. Der hier gezeigte **ioBroker-JavaScript-Helfer 0.1.33** bereitet diese Werte für VIS 2 auf und bietet eine wählbare flache Struktur mit kurzen Namen. Für die neue Option den vollständigen Helfer ersetzen und eigene Einstellungen übernehmen.
 
 ::: warning JavaScript, kein Blockly-Import
 Das vollständige Skript wird im **ioBroker-JavaScript-Adapter** als JavaScript eingefügt. Es gehört weder in Home Assistant noch in den Blockly-XML-Import. Die vorhandenen Blockly-Beispiele weiter unten bleiben davon unabhängig.
@@ -51,6 +51,7 @@ VIS 2 -> 0_userdata.0.ugso_mqtt -> MQTT set -> HA
 | `mqttRoot` | Eingehender MQTT-Baum, standardmäßig `mqtt.0.ha_external`. |
 | `mode` | `preview`: prüfen; `apply`: anwenden; `restore`: eigene gesicherte Änderungen geschützt zurücknehmen. |
 | `outputMode` | `virtual` für VIS-2-Datenpunkte; `roles` für die alternative Rollen-/Alias-Zuordnung. |
+| `virtualLayout` | `nested`: bisherige IDs (Standard); `flat`: kurze Datenpunkte direkt im Geräteordner. |
 | `virtualRoot` | Zielbaum der virtuellen Werte. |
 | `virtualBackupId`, `backupId` | Eigene Sicherungsjournale; vorhandene Sicherungen werden erhalten. |
 | `aliasRoot` | Ziel für lesende Aliase im Rollenmodus. |
@@ -58,15 +59,37 @@ VIS 2 -> 0_userdata.0.ugso_mqtt -> MQTT set -> HA
 
 Bei bereits vorhandenem Skript die eigenen Einstellungen übernehmen. `restore` ist keine Wiederherstellung der gesamten ioBroker-Installation: Später manuell veränderte Objekte bleiben geschützt, virtuelle Werte/Referenzen werden erhalten und ihre Steuerung wird deaktiviert. Für die Details gilt die [vollständige Helfer-Anleitung](/projects/mqtt-client/iobroker-roles), einschließlich Rollentabelle, Sicherung und Grenzen.
 
+### Wählbare flache Struktur mit kurzen Namen {#mqtt-helper-flat-layout}
+
+Im **vollständigen Helfer 0.1.33** kann im Einstellungsblock `virtualLayout: 'flat'` gewählt werden. Standard bleibt `virtualLayout: 'nested'`; fehlt die neue Einstellung in übernommenen Optionen, gilt ebenfalls die bisherige Struktur. Prüfen Sie zuerst die Vorschau und wechseln Sie danach zu `mode: 'apply'`.
+
+```text
+0_userdata.0.ugso_mqtt.pc_tv_wohnzimmer
+  schalter
+  energie
+  leistung
+  spannung
+  stromstaerke
+```
+
+Die technischen IDs verwenden diese kurzen deutschen Namen in allen Sprachen. Energie, Leistung, Spannung und Stromstärke werden aus der Geräteklasse erkannt; sonst wird ein geeigneter Teil der Entitäts-ID verwendet. Die Anzeigenamen lauten entsprechend etwa **Energie** oder **Stromstärke**. Für Lampen sind **licht**, **helligkeit**, **farbe**, **effekt** und **farbtemperatur** vorgesehen.
+
+Mehrere passende Werte erhalten **leistung**, **leistung_2**, **leistung_3** usw. Einmal vergebene Namen werden im vorhandenen Journal gespeichert und bleiben bei späteren Auswahländerungen erhalten. Bereits belegte Ordner, fremde Datenpunkte oder Sicherungs-IDs werden nicht überschrieben; stattdessen wird ein freier Zusatz vergeben.
+
+**Vorhandene Helfer-Datenpunkte werden weder gelöscht noch verschoben:** Alte und neue IDs bleiben synchronisiert und ihre freigegebenen Rückkanäle erhalten. Bestehende VIS-2-Verknüpfungen müssen deshalb nicht geändert werden. Für neue Widgets können die kurzen IDs gewählt werden; alte Ordner bleiben zunächst sichtbar. Zurückschalten erfolgt mit `virtualLayout: 'nested'` im neuen Helfer. Die alte Datei 0.1.27 kann Journale mit flachen Einträgen nicht lesen.
+
+MQTT-Objekte, Topic-Pfade, Werte und manuelle Rollen bleiben unverändert. Kann beim Zurückschalten ein benötigter Ordner wegen eines bestehenden Datenpunkts nicht angelegt werden, wird dieser neue Zielpfad ausgelassen und protokolliert; vorhandene Werte werden nicht ersetzt.
+
+
 ### Vollständiges Skript mit Kopierbutton und Download {#mqtt-helper-code}
 
-<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.27.js" download>JavaScript-Helfer 0.1.27 herunterladen (.js)</a>
+<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.33.js" download>JavaScript-Helfer 0.1.33 herunterladen (.js)</a>
 
 Der Kopierbutton rechts oben im Codefeld übernimmt das **gesamte Skript**. Codefeld und Download verwenden dieselbe unveränderte Datei; sie enthält keine persönlichen Zugangsdaten. Die Pfade und den Modus anschließend für die eigene Installation prüfen.
 
 <div class="mqtt-helper-code">
 
-<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.27.js
+<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.33.js
 
 </div>
 

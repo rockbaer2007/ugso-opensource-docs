@@ -1,6 +1,6 @@
 # ioBroker : attribution automatique des rôles {#iobroker-role-mapping}
 
-Le JavaScript optionnel est fourni avec MQTT-Client **0.1.32** et s’exécute dans l’adaptateur JavaScript d’ioBroker. Il exploite les métadonnées transmises `device_class` et `unit_of_measurement`. Seuls les cas non ambigus sont traités ; les valeurs MQTT, types, unités, identifiants de connexion et canaux de commande ne sont pas réécrits.
+Le JavaScript optionnel est fourni avec MQTT-Client **0.1.33** et s’exécute dans l’adaptateur JavaScript d’ioBroker. Il exploite les métadonnées transmises `device_class` et `unit_of_measurement`. Seuls les cas non ambigus sont traités ; les valeurs MQTT, types, unités, identifiants de connexion et canaux de commande ne sont pas réécrits.
 
 
 
@@ -17,8 +17,14 @@ Seuls les capteurs compatibles, activés dans HA et associés au même appareil 
 ::: tip Pour VIS 2 en particulier : le script JavaScript ioBroker
 Le **JavaScript fourni s’exécute dans l’adaptateur JavaScript ioBroker, pas dans Home Assistant**. Il crée des points virtuels sous `0_userdata.0.ugso_mqtt` : **un point par valeur pour l’affichage et la commande**, même si MQTT utilise des topics `state` et `set` séparés. Les interrupteurs et valeurs de lampe compatibles disposent du canal de commande approprié ; les mesures restent en lecture seule. Les métadonnées HA adaptées déterminent les types, unités et rôles non ambigus. Une commande n’est confirmée qu’après un véritable retour HA.
 
-**Vérifiez d’abord l’aperçu, puis choisissez `mode: 'apply'`.** L’aperçu crée uniquement les dossiers de base/points de sauvegarde manquants du script ; les points VIS-2 virtuels sont créés en mode application. **setObject** doit être autorisé dans les réglages de l’adaptateur pour leur création. Les valeurs existantes et rôles définis manuellement restent protégés. L’application HA est en **0.1.32**, le script actuel reste en **0.1.27** : cette différence est volontaire. Le transfert MQTT seul fonctionne aussi sans le script.
+**Vérifiez d’abord l’aperçu, puis choisissez `mode: 'apply'`.** L’aperçu crée uniquement les dossiers de base/points de sauvegarde manquants du script ; les points VIS-2 virtuels sont créés en mode application. **setObject** doit être autorisé dans les réglages de l’adaptateur pour leur création. Les valeurs existantes et rôles définis manuellement restent protégés. L’application HA et le script sont en **0.1.33** pour cette fonction. Remplacez le script complet dans ioBroker pour la structure plate ; la mise à jour de l’application seule ne suffit pas. Le transfert MQTT seul fonctionne aussi sans le script.
 :::
+
+## Nouveauté 0.1.33 : structure VIS-2 plate avec noms courts {#flat-layout-0133}
+
+**Remplacez le script JavaScript complet par la version 0.1.33 en conservant vos réglages.** Dans son bloc de réglages, `virtualLayout: 'nested'` sélectionne la structure existante (par défaut) ; `virtualLayout: 'flat'` crée des points courts directement sous le dossier de l’appareil, par exemple `schalter`, `energie`, `leistung`, `spannung`, `stromstaerke`. Les lampes ajoutent les valeurs compatibles comme `helligkeit`, `farbe`, `effekt` et `farbtemperatur`. Les noms identiques ou occupés reçoivent un suffixe unique comme `leistung_2` ; les affectations attribuées restent fixées dans le journal de sauvegarde.
+
+Vérifiez d’abord l’aperçu, puis choisissez `mode: 'apply'`. Le changement de structure ne supprime ni ne déplace aucun point existant. Les anciens et nouveaux identifiants déjà créés par le script restent actualisés et conservent leurs canaux de commande autorisés ; les références VIS-2 existantes peuvent rester. Les anciens dossiers restent donc visibles au départ. Les objets tiers et rôles manuels ne sont pas écrasés et les topics MQTT restent inchangés. Pour revenir en arrière, sélectionnez `nested` dans le nouveau script ; l’ancien script 0.1.27 ne peut pas lire les journaux contenant des entrées plates.
 
 ## Nouveauté 0.1.32 : mesures supplémentaires mises en évidence {#readings-highlight-0132}
 

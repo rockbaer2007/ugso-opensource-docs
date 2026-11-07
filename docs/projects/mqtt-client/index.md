@@ -3,11 +3,11 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.32 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.33 {#mqtt-client-0-1-16}
 
-Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. Version 0.1.32 priorisiert Schalt-Rückmeldungen und ergänzt einen Kontrollabgleich mit HA. Die Korrektur wird als HA-App installiert; Helfer 0.1.27 kann bleiben.
+Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. MQTT-Client und JavaScript-Helfer 0.1.33 ergänzen eine wählbare flache VIS-2-Struktur mit kurzen Namen. Für diese Option muss der vollständige Helfer im ioBroker-JavaScript-Adapter ersetzt werden; ein HA-App-Update allein ersetzt das dort gespeicherte Skript nicht.
 
-[Release 0.1.32](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.32)
+[Release 0.1.33](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.33)
 
 ## Wichtig: Zusätzliche Gerätemesswerte ausdrücklich aktivieren {#enable-device-readings}
 
@@ -22,8 +22,14 @@ Erfasst werden unterstützte und in HA aktivierte Sensoren mit derselben HA-Ger�
 ::: tip Besonders für VIS 2: der ioBroker-JavaScript-Helfer
 Das mitgelieferte **JavaScript wird im ioBroker-JavaScript-Adapter ausgeführt, nicht in Home Assistant**. Es legt virtuelle Datenpunkte unter `0_userdata.0.ugso_mqtt` an: **ein Datenpunkt pro Wert für Anzeige und Bedienung**, obwohl MQTT getrennte `state`- und `set`-Topics verwendet. Unterstützte Schalter und Light-Werte erhalten den passenden Rückkanal; Messwerte bleiben lesend. Anhand geeigneter HA-Metadaten werden Datentypen, Einheiten und eindeutige Rollen zugeordnet. Eine Schaltanforderung ist erst nach tatsächlicher HA-Rückmeldung bestätigt.
 
-**Zuerst Vorschau prüfen, dann `mode: 'apply'` einstellen.** In der Vorschau werden nur fehlende eigene Basisordner/Sicherungsdatenpunkte angelegt; die virtuellen VIS-2-Werte entstehen im Anwendungsmodus. Für die Anlage muss **setObject** in den Adaptereinstellungen erlaubt sein. Bestehende Werte und manuell gesetzte Rollen bleiben geschützt. Die HA-App ist **0.1.32**, die weiterhin aktuelle Helferdatei **0.1.27** – unterschiedliche Versionsnummern sind hier beabsichtigt. Ohne Helfer ist die reine MQTT-Übertragung weiterhin nutzbar.
+**Zuerst Vorschau prüfen, dann `mode: 'apply'` einstellen.** In der Vorschau werden nur fehlende eigene Basisordner/Sicherungsdatenpunkte angelegt; die virtuellen VIS-2-Werte entstehen im Anwendungsmodus. Für die Anlage muss **setObject** in den Adaptereinstellungen erlaubt sein. Bestehende Werte und manuell gesetzte Rollen bleiben geschützt. Die HA-App und der Helfer liegen für diese Erweiterung bei **0.1.33**. Für die flache Struktur den vollständigen Helfer in ioBroker ersetzen; ein App-Update allein genügt dafür nicht. Ohne Helfer ist die reine MQTT-Übertragung weiterhin nutzbar.
 :::
+
+## Neu in 0.1.33: flache VIS-2-Struktur mit kurzen Namen
+
+**Den vollständigen JavaScript-Helfer 0.1.33 ersetzen und eigene Einstellungen übernehmen.** Im Einstellungsblock wählt `virtualLayout: 'nested'` die bisherige Struktur (Standard); `virtualLayout: 'flat'` legt kurze Datenpunkte direkt unter dem Geräteordner an, etwa `schalter`, `energie`, `leistung`, `spannung`, `stromstaerke`. Bei Lampen kommen passende Werte wie `helligkeit`, `farbe`, `effekt` und `farbtemperatur` hinzu. Gleichartige oder belegte Namen erhalten eindeutige Zusätze wie `leistung_2`; einmal vergebene Zuordnungen bleiben im Sicherungsjournal erhalten.
+
+Zuerst im Vorschaumodus prüfen, anschließend `mode: 'apply'` wählen. Ein Layoutwechsel löscht oder verschiebt keine vorhandenen Datenpunkte. Bereits vom Helfer angelegte alte und neue IDs werden weiter aktualisiert und behalten ihre freigegebenen Rückkanäle; vorhandene VIS-2-Verknüpfungen können bleiben. Deshalb bleiben alte Ordner zunächst auch sichtbar. Fremde Objekte und manuelle Rollen werden nicht überschrieben, MQTT-Topics bleiben unverändert. Zur Rückkehr die Option mit dem neuen Helfer auf `nested` stellen; die alte Helferdatei 0.1.27 kann Journale mit flachen Einträgen nicht lesen.
 
 ## Neu in 0.1.32: zusätzliche Messwerte deutlich markieren
 

@@ -3,11 +3,11 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.32 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.33 {#mqtt-client-0-1-16}
 
-Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. La version 0.1.32 donne la priorité aux retours de commande et ajoute un contrôle des états HA. Installez la mise à jour de l’application HA ; le script 0.1.27 peut rester.
+Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. Le MQTT-Client et le script JavaScript 0.1.33 ajoutent une structure VIS-2 plate facultative avec noms courts. Cette option nécessite de remplacer le script complet dans l’adaptateur JavaScript ioBroker ; la mise à jour de l’application HA seule ne remplace pas le script enregistré dans ioBroker.
 
-[Release 0.1.32](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.32)
+[Release 0.1.33](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.33)
 
 ## Important : activer explicitement les mesures supplémentaires {#enable-device-readings}
 
@@ -22,8 +22,14 @@ Seuls les capteurs compatibles, activés dans HA et associés au même appareil 
 ::: tip Pour VIS 2 en particulier : le script JavaScript ioBroker
 Le **JavaScript fourni s’exécute dans l’adaptateur JavaScript ioBroker, pas dans Home Assistant**. Il crée des points virtuels sous `0_userdata.0.ugso_mqtt` : **un point par valeur pour l’affichage et la commande**, même si MQTT utilise des topics `state` et `set` séparés. Les interrupteurs et valeurs de lampe compatibles disposent du canal de commande approprié ; les mesures restent en lecture seule. Les métadonnées HA adaptées déterminent les types, unités et rôles non ambigus. Une commande n’est confirmée qu’après un véritable retour HA.
 
-**Vérifiez d’abord l’aperçu, puis choisissez `mode: 'apply'`.** L’aperçu crée uniquement les dossiers de base/points de sauvegarde manquants du script ; les points VIS-2 virtuels sont créés en mode application. **setObject** doit être autorisé dans les réglages de l’adaptateur pour leur création. Les valeurs existantes et rôles définis manuellement restent protégés. L’application HA est en **0.1.32**, le script actuel reste en **0.1.27** : cette différence est volontaire. Le transfert MQTT seul fonctionne aussi sans le script.
+**Vérifiez d’abord l’aperçu, puis choisissez `mode: 'apply'`.** L’aperçu crée uniquement les dossiers de base/points de sauvegarde manquants du script ; les points VIS-2 virtuels sont créés en mode application. **setObject** doit être autorisé dans les réglages de l’adaptateur pour leur création. Les valeurs existantes et rôles définis manuellement restent protégés. L’application HA et le script sont en **0.1.33** pour cette fonction. Remplacez le script complet dans ioBroker pour la structure plate ; la mise à jour de l’application seule ne suffit pas. Le transfert MQTT seul fonctionne aussi sans le script.
 :::
+
+## Nouveauté 0.1.33 : structure VIS-2 plate avec noms courts
+
+**Remplacez le script JavaScript complet par la version 0.1.33 en conservant vos réglages.** Dans son bloc de réglages, `virtualLayout: 'nested'` sélectionne la structure existante (par défaut) ; `virtualLayout: 'flat'` crée des points courts directement sous le dossier de l’appareil, par exemple `schalter`, `energie`, `leistung`, `spannung`, `stromstaerke`. Les lampes ajoutent les valeurs compatibles comme `helligkeit`, `farbe`, `effekt` et `farbtemperatur`. Les noms identiques ou occupés reçoivent un suffixe unique comme `leistung_2` ; les affectations attribuées restent fixées dans le journal de sauvegarde.
+
+Vérifiez d’abord l’aperçu, puis choisissez `mode: 'apply'`. Le changement de structure ne supprime ni ne déplace aucun point existant. Les anciens et nouveaux identifiants déjà créés par le script restent actualisés et conservent leurs canaux de commande autorisés ; les références VIS-2 existantes peuvent rester. Les anciens dossiers restent donc visibles au départ. Les objets tiers et rôles manuels ne sont pas écrasés et les topics MQTT restent inchangés. Pour revenir en arrière, sélectionnez `nested` dans le nouveau script ; l’ancien script 0.1.27 ne peut pas lire les journaux contenant des entrées plates.
 
 ## Nouveauté 0.1.32 : mesures supplémentaires mises en évidence
 

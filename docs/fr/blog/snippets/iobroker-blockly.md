@@ -15,7 +15,7 @@ Cette page ne propose qu'une brève introduction. La description complète de to
 
 ## Relier Home Assistant à ioBroker et VIS 2 par MQTT {#mqtt-vis2-helper}
 
-Cet exemple original UGSo complète l’introduction à Blockly : le **MQTT-Client pour Home Assistant** transmet les entités sélectionnées à un broker MQTT externe. Le **script JavaScript ioBroker 0.1.27** présenté ici les prépare pour VIS 2. Les versions de l’application et du script peuvent différer ; l’application 0.1.32 conserve ce script inchangé.
+Cet exemple original UGSo complète l’introduction à Blockly : le **MQTT-Client pour Home Assistant** transmet les entités sélectionnées à un broker MQTT externe. Le **script JavaScript ioBroker 0.1.33** présenté ici les prépare pour VIS 2 et propose une structure plate facultative avec noms courts. Remplacez le script complet en conservant vos réglages pour utiliser cette option.
 
 ::: warning JavaScript, pas un import Blockly
 Collez le script complet dans l’**adaptateur JavaScript ioBroker**, en tant que JavaScript. Il ne va ni dans Home Assistant ni dans l’importateur XML Blockly. Les exemples Blockly existants ci-dessous restent indépendants.
@@ -53,6 +53,7 @@ VIS 2 -> 0_userdata.0.ugso_mqtt -> MQTT set -> HA
 | `mqttRoot` | Arborescence MQTT entrante ; valeur par défaut `mqtt.0.ha_external`. |
 | `mode` | `preview` : vérifier ; `apply` : appliquer ; `restore` : annuler prudemment les propres modifications sauvegardées du script. |
 | `outputMode` | `virtual` pour les points VIS-2 ; `roles` pour l’affectation alternative de rôles/alias. |
+| `virtualLayout` | `nested` : anciens identifiants (par défaut) ; `flat` : points courts directement dans le dossier de l’appareil. |
 | `virtualRoot` | Arborescence cible des valeurs virtuelles. |
 | `virtualBackupId`, `backupId` | Journaux de sauvegarde du script ; les sauvegardes existantes sont conservées. |
 | `aliasRoot` | Cible des alias en lecture seule en mode rôles. |
@@ -60,15 +61,37 @@ VIS 2 -> 0_userdata.0.ugso_mqtt -> MQTT set -> HA
 
 Lors du remplacement d’un script existant, conservez vos réglages. `restore` ne restaure pas toute l’installation ioBroker : les objets modifiés manuellement depuis restent protégés ; les valeurs/références virtuelles sont conservées et leurs commandes désactivées. Consultez le [guide complet du script](/fr/projects/mqtt-client/iobroker-roles) pour les détails, dont le tableau des rôles, les sauvegardes et les limites.
 
+### Structure plate facultative avec noms courts {#mqtt-helper-flat-layout}
+
+Dans le **script complet 0.1.33**, choisissez `virtualLayout: 'flat'` dans le bloc de réglages. La valeur par défaut reste `virtualLayout: 'nested'` ; une configuration existante sans ce réglage conserve également l’ancienne structure. Vérifiez d’abord l’aperçu, puis passez à `mode: 'apply'`.
+
+```text
+0_userdata.0.ugso_mqtt.pc_tv_wohnzimmer
+  schalter
+  energie
+  leistung
+  spannung
+  stromstaerke
+```
+
+Les identifiants techniques utilisent ces noms allemands courts dans toutes les langues : énergie, puissance, tension et courant sont reconnus à partir de la classe d’appareil ; sinon, une partie adaptée de l’identifiant d’entité est utilisée. Les noms affichés sont aussi raccourcis, par exemple **Energie** ou **Stromstärke**. Les lampes utilisent **licht**, **helligkeit**, **farbe**, **effekt** et **farbtemperatur**.
+
+Plusieurs valeurs correspondantes reçoivent **leistung**, **leistung_2**, **leistung_3**, etc. Les noms attribués sont enregistrés dans le journal existant et restent stables lors des changements de sélection ultérieurs. Les dossiers occupés, points tiers ou identifiants de sauvegarde ne sont pas écrasés ; un suffixe libre est attribué.
+
+**Les points existants du script ne sont ni supprimés ni déplacés :** anciens et nouveaux identifiants restent synchronisés et conservent leurs canaux de commande autorisés. Les références VIS-2 existantes peuvent donc rester. Les nouveaux widgets peuvent utiliser les identifiants courts ; les anciens dossiers restent visibles au départ. Revenez en arrière avec `virtualLayout: 'nested'` dans le nouveau script. L’ancien fichier 0.1.27 ne peut pas lire les journaux contenant des entrées plates.
+
+Les objets MQTT, chemins des topics, valeurs et rôles manuels restent inchangés. Si le retour à l’ancienne structure nécessite un dossier occupé par un point existant, ce nouveau chemin cible est ignoré et journalisé ; aucune valeur existante n’est remplacée.
+
+
 ### Script complet avec bouton de copie et téléchargement {#mqtt-helper-code}
 
-<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.27.js" download>Télécharger le script JavaScript 0.1.27 (.js)</a>
+<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.33.js" download>Télécharger le script JavaScript 0.1.33 (.js)</a>
 
 Le bouton de copie en haut à droite du bloc reprend le **script entier**. Le bloc et le téléchargement utilisent le même fichier inchangé, sans identifiants personnels. Vérifiez ensuite les chemins et le mode pour votre installation.
 
 <div class="mqtt-helper-code">
 
-<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.27.js
+<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.33.js
 
 </div>
 
