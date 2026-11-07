@@ -3,7 +3,12 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.18 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.19 {#mqtt-client-0-1-16}
+
+**0.1.19** also separates the lines in the transmission list: the name appears
+above the state, selected-attribute and return-command summary. **Edit** remains
+on the right. This view was also checked locally at widths of 1300 and 390 pixels.
+[Release 0.1.19](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.19)
 
 Since **0.1.18**, device popup rows separate the **name** on the first line,
 **entity ID** on the second, and **target type with attribute count** on the third.

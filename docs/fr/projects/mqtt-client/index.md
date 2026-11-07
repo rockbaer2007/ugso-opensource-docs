@@ -3,7 +3,13 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.18 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.19 {#mqtt-client-0-1-16}
+
+La version **0.1.19** sépare également les lignes dans la liste des transmissions :
+le nom apparaît au-dessus du résumé de l’état, des attributs sélectionnés et de la
+commande de retour. **Modifier** reste à droite. Cette vue a aussi été vérifiée
+localement sur des largeurs de 1300 et 390 pixels.
+[Version 0.1.19](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.19)
 
 Depuis la version **0.1.18**, chaque ligne de la fenêtre d’un appareil distingue
 le **nom** sur la première ligne, l’**identifiant de l’entité** sur la deuxième,

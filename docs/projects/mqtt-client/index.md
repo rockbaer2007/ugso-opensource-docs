@@ -3,7 +3,12 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.18 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.19 {#mqtt-client-0-1-16}
+
+**0.1.19** ergänzt die Zeilentrennung in der Übertragungsliste: Der Name steht
+über der Zusammenfassung aus State, ausgewählten Attributen und Rückbefehl.
+**Bearbeiten** bleibt rechts. Auch diese Ansicht wurde lokal bei 1300 und
+390 Pixeln Breite geprüft. [Release 0.1.19](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.19)
 
 MQTT-Client überträgt ausgewählte Geräte, Zustände und Attribute aus Home Assistant an einen externen MQTT-Broker, beispielsweise den MQTT-Adapter von ioBroker. Statt sämtliche HA-Entitäten zu spiegeln, wählst du die benötigten Werte selbst aus. Der vorhandene HA-Broker bleibt bestehen. Die App liest direkt aus HA; sie ist keine Broker-Bridge.
 
