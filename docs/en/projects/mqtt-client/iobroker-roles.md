@@ -1,6 +1,6 @@
 # ioBroker: automatic role mapping {#iobroker-role-mapping}
 
-The optional JavaScript ships with MQTT-Client **0.1.31** and runs in the ioBroker JavaScript adapter. It uses transmitted `device_class` and `unit_of_measurement` metadata. Only unambiguous cases are mapped; MQTT values, types, units, credentials and return channels are not rewritten.
+The optional JavaScript ships with MQTT-Client **0.1.32** and runs in the ioBroker JavaScript adapter. It uses transmitted `device_class` and `unit_of_measurement` metadata. Only unambiguous cases are mapped; MQTT values, types, units, credentials and return channels are not rewritten.
 
 
 
@@ -17,8 +17,12 @@ Only supported sensors enabled in HA and associated with the same HA device are 
 ::: tip Especially for VIS 2: the ioBroker JavaScript helper
 The supplied **JavaScript runs in the ioBroker JavaScript adapter, not in Home Assistant**. It creates virtual states under `0_userdata.0.ugso_mqtt`: **one point per value for display and control**, even though MQTT uses separate `state` and `set` topics. Supported switches and light values receive the appropriate command channel; measurements remain read-only. Suitable HA metadata determines data types, units and unambiguous roles. A command is confirmed only after actual HA feedback.
 
-**Review preview first, then set `mode: 'apply'`.** Preview creates only missing helper base folders/backup points; virtual VIS-2 points are created in apply mode. **setObject** must be allowed in the adapter settings for creation. Existing values and manually assigned roles remain protected. The HA app is **0.1.31**, while the current helper file remains **0.1.27** – these different versions are intentional. Plain MQTT forwarding also works without the helper.
+**Review preview first, then set `mode: 'apply'`.** Preview creates only missing helper base folders/backup points; virtual VIS-2 points are created in apply mode. **setObject** must be allowed in the adapter settings for creation. Existing values and manually assigned roles remain protected. The HA app is **0.1.32**, while the current helper file remains **0.1.27** – these different versions are intentional. Plain MQTT forwarding also works without the helper.
 :::
+
+## New in 0.1.32: highlight additional measurements {#readings-highlight-0132}
+
+The **“Automatically include related measurements and battery values from the same device”** option is highlighted in amber. Highlighting does not enable the checkbox: make your selection and click **“Save and connect”**. Existing settings are preserved. TLS and certificates remain separately collapsible.
 
 ## New in 0.1.31: collapse TLS and certificates separately {#tls-0131}
 

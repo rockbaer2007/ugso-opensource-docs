@@ -3,11 +3,11 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.31 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.32 {#mqtt-client-0-1-16}
 
-Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. Version 0.1.31 priorisiert Schalt-Rückmeldungen und ergänzt einen Kontrollabgleich mit HA. Die Korrektur wird als HA-App installiert; Helfer 0.1.27 kann bleiben.
+Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. Version 0.1.32 priorisiert Schalt-Rückmeldungen und ergänzt einen Kontrollabgleich mit HA. Die Korrektur wird als HA-App installiert; Helfer 0.1.27 kann bleiben.
 
-[Release 0.1.31](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.31)
+[Release 0.1.32](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.32)
 
 ## Wichtig: Zusätzliche Gerätemesswerte ausdrücklich aktivieren {#enable-device-readings}
 
@@ -22,8 +22,12 @@ Erfasst werden unterstützte und in HA aktivierte Sensoren mit derselben HA-Ger�
 ::: tip Besonders für VIS 2: der ioBroker-JavaScript-Helfer
 Das mitgelieferte **JavaScript wird im ioBroker-JavaScript-Adapter ausgeführt, nicht in Home Assistant**. Es legt virtuelle Datenpunkte unter `0_userdata.0.ugso_mqtt` an: **ein Datenpunkt pro Wert für Anzeige und Bedienung**, obwohl MQTT getrennte `state`- und `set`-Topics verwendet. Unterstützte Schalter und Light-Werte erhalten den passenden Rückkanal; Messwerte bleiben lesend. Anhand geeigneter HA-Metadaten werden Datentypen, Einheiten und eindeutige Rollen zugeordnet. Eine Schaltanforderung ist erst nach tatsächlicher HA-Rückmeldung bestätigt.
 
-**Zuerst Vorschau prüfen, dann `mode: 'apply'` einstellen.** In der Vorschau werden nur fehlende eigene Basisordner/Sicherungsdatenpunkte angelegt; die virtuellen VIS-2-Werte entstehen im Anwendungsmodus. Für die Anlage muss **setObject** in den Adaptereinstellungen erlaubt sein. Bestehende Werte und manuell gesetzte Rollen bleiben geschützt. Die HA-App ist **0.1.31**, die weiterhin aktuelle Helferdatei **0.1.27** – unterschiedliche Versionsnummern sind hier beabsichtigt. Ohne Helfer ist die reine MQTT-Übertragung weiterhin nutzbar.
+**Zuerst Vorschau prüfen, dann `mode: 'apply'` einstellen.** In der Vorschau werden nur fehlende eigene Basisordner/Sicherungsdatenpunkte angelegt; die virtuellen VIS-2-Werte entstehen im Anwendungsmodus. Für die Anlage muss **setObject** in den Adaptereinstellungen erlaubt sein. Bestehende Werte und manuell gesetzte Rollen bleiben geschützt. Die HA-App ist **0.1.32**, die weiterhin aktuelle Helferdatei **0.1.27** – unterschiedliche Versionsnummern sind hier beabsichtigt. Ohne Helfer ist die reine MQTT-Übertragung weiterhin nutzbar.
 :::
+
+## Neu in 0.1.32: zusätzliche Messwerte deutlich markieren
+
+Die Option **„Zugehörige Mess- und Batteriewerte desselben Geräts automatisch einbeziehen“** ist gelb hervorgehoben. Die Markierung aktiviert den Haken nicht: Gewünschte Auswahl setzen und **„Speichern und verbinden“** drücken. Bestehende Einstellungen bleiben erhalten. TLS und Zertifikate sind weiterhin separat einklappbar.
 
 ## Neu in 0.1.31: TLS und Zertifikate separat einklappen
 

@@ -3,11 +3,11 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.31 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.32 {#mqtt-client-0-1-16}
 
-Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. La version 0.1.31 donne la priorité aux retours de commande et ajoute un contrôle des états HA. Installez la mise à jour de l’application HA ; le script 0.1.27 peut rester.
+Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. La version 0.1.32 donne la priorité aux retours de commande et ajoute un contrôle des états HA. Installez la mise à jour de l’application HA ; le script 0.1.27 peut rester.
 
-[Release 0.1.31](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.31)
+[Release 0.1.32](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.32)
 
 ## Important : activer explicitement les mesures supplémentaires {#enable-device-readings}
 
@@ -22,8 +22,12 @@ Seuls les capteurs compatibles, activés dans HA et associés au même appareil 
 ::: tip Pour VIS 2 en particulier : le script JavaScript ioBroker
 Le **JavaScript fourni s’exécute dans l’adaptateur JavaScript ioBroker, pas dans Home Assistant**. Il crée des points virtuels sous `0_userdata.0.ugso_mqtt` : **un point par valeur pour l’affichage et la commande**, même si MQTT utilise des topics `state` et `set` séparés. Les interrupteurs et valeurs de lampe compatibles disposent du canal de commande approprié ; les mesures restent en lecture seule. Les métadonnées HA adaptées déterminent les types, unités et rôles non ambigus. Une commande n’est confirmée qu’après un véritable retour HA.
 
-**Vérifiez d’abord l’aperçu, puis choisissez `mode: 'apply'`.** L’aperçu crée uniquement les dossiers de base/points de sauvegarde manquants du script ; les points VIS-2 virtuels sont créés en mode application. **setObject** doit être autorisé dans les réglages de l’adaptateur pour leur création. Les valeurs existantes et rôles définis manuellement restent protégés. L’application HA est en **0.1.31**, le script actuel reste en **0.1.27** : cette différence est volontaire. Le transfert MQTT seul fonctionne aussi sans le script.
+**Vérifiez d’abord l’aperçu, puis choisissez `mode: 'apply'`.** L’aperçu crée uniquement les dossiers de base/points de sauvegarde manquants du script ; les points VIS-2 virtuels sont créés en mode application. **setObject** doit être autorisé dans les réglages de l’adaptateur pour leur création. Les valeurs existantes et rôles définis manuellement restent protégés. L’application HA est en **0.1.32**, le script actuel reste en **0.1.27** : cette différence est volontaire. Le transfert MQTT seul fonctionne aussi sans le script.
 :::
+
+## Nouveauté 0.1.32 : mesures supplémentaires mises en évidence
+
+L’option **« Inclure automatiquement les mesures et valeurs de batterie du même appareil »** est mise en évidence en jaune. Cette présentation n’active pas la case : faites votre choix, puis cliquez sur **« Enregistrer et connecter »**. Les réglages existants sont conservés. TLS et certificats restent repliables séparément.
 
 ## Nouveauté 0.1.31 : TLS et certificats repliables séparément
 

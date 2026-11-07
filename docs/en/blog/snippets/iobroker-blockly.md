@@ -16,7 +16,7 @@ blocks and more examples are available in the official ioBroker documentation.
 
 ## Connect Home Assistant to ioBroker and VIS 2 over MQTT {#mqtt-vis2-helper}
 
-This original UGSo example supplements the Blockly introduction: the **MQTT-Client for Home Assistant** forwards selected entities to an external MQTT broker. The **ioBroker JavaScript helper 0.1.27** shown here prepares them for VIS 2. App and helper versions may differ; app 0.1.31 continues to use this unchanged helper.
+This original UGSo example supplements the Blockly introduction: the **MQTT-Client for Home Assistant** forwards selected entities to an external MQTT broker. The **ioBroker JavaScript helper 0.1.27** shown here prepares them for VIS 2. App and helper versions may differ; app 0.1.32 continues to use this unchanged helper.
 
 ::: warning JavaScript, not a Blockly import
 Paste the complete script into the **ioBroker JavaScript adapter** as JavaScript. It does not belong in Home Assistant or the Blockly XML importer. The existing Blockly examples below remain independent.
