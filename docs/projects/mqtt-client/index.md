@@ -3,7 +3,12 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.24 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.25 {#mqtt-client-0-1-16}
+
+**0.1.25:** Die im echten Protokoll gefundenen Warnungen für fehlende Objekte sind
+mit Existenzprüfungen vor beiden Lese-APIs korrigiert. Die Vorschau legt weiterhin
+nichts an; die Anlage erfolgt mit aktivierter Schreibfreigabe im Apply-Modus.
+[Details](./iobroker-roles.md#fix-0125) · [Release 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.25)
 
 ## Automatische VIS-2-Datenpunkte ab 0.1.24
 

@@ -3,7 +3,12 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.24 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.25 {#mqtt-client-0-1-16}
+
+**0.1.25:** Missing-object warnings from the real log are fixed using existence
+checks before both read APIs. Preview still creates nothing; creation requires
+write permission and Apply mode.
+[Details](./iobroker-roles.md#fix-0125) · [Release 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.25)
 
 ## Automatic VIS-2 states since 0.1.24
 

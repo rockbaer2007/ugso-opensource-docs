@@ -3,7 +3,12 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.24 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.25 {#mqtt-client-0-1-16}
+
+**0.1.25 :** Les avertissements d’objets absents du journal réel sont corrigés par
+des contrôles d’existence avant les deux API de lecture. L’aperçu ne crée toujours
+rien ; la création exige l’autorisation d’écriture et le mode Apply.
+[Détails](./iobroker-roles.md#fix-0125) · [Version 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.25)
 
 ## Points VIS 2 automatiques depuis 0.1.24
 
