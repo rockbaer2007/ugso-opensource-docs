@@ -6989,9 +6989,9 @@
         "de": {
           "path": "projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "eea83c3ef3523be7233cd4b0b8902dfa0a87e68743353b84f3a2604e9654868e",
-          "words": 2514,
-          "headings": 16,
+          "sha256": "bde52e4f747824ea8957a10290b3c6f79930229098f7678915a4f7749d4152c6",
+          "words": 2792,
+          "headings": 17,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7008,6 +7008,7 @@
             "0.1.26",
             "0.1.27",
             "0.1.28",
+            "0.1.29",
             "10.4.10"
           ],
           "unresolved_local_references": []
@@ -7015,9 +7016,9 @@
         "en": {
           "path": "en/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "30eac8ab4beda248e815dc31d9d65c7672697d8dbc29eb61e79675fcf497b37e",
-          "words": 2527,
-          "headings": 16,
+          "sha256": "51ee863b5d0ece0e9a052eafe91b9f6cab31ab9908e3984a795e148a062f62a3",
+          "words": 2835,
+          "headings": 17,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7034,6 +7035,7 @@
             "0.1.26",
             "0.1.27",
             "0.1.28",
+            "0.1.29",
             "10.4.10"
           ],
           "unresolved_local_references": [],
@@ -7048,9 +7050,9 @@
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "83a121b1d683a0aa69a8bafe3ae7c025d22057af61aa80e8be4d628d809e6112",
-          "words": 3328,
-          "headings": 16,
+          "sha256": "e83727bd2dcb0855f1f370e72f471d54183b605d7b3e38ea0bc36ada25500cde",
+          "words": 3690,
+          "headings": 17,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7067,6 +7069,7 @@
             "0.1.26",
             "0.1.27",
             "0.1.28",
+            "0.1.29",
             "10.4.10"
           ],
           "unresolved_local_references": [],
@@ -7086,9 +7089,9 @@
         "de": {
           "path": "projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "5b1d479499bfd4d559e31992103a5f2531d8450ef0fd8e4d50062ac3f7798d73",
-          "words": 2216,
-          "headings": 12,
+          "sha256": "97ecd0af2d5dab1f2e88e8b79cff9499f184050ef017d0d903e9088fa510c460",
+          "words": 2499,
+          "headings": 13,
           "examples": 1,
           "versions": [
             "0.1.24",
@@ -7096,6 +7099,7 @@
             "0.1.26",
             "0.1.27",
             "0.1.28",
+            "0.1.29",
             "10.4.10"
           ],
           "unresolved_local_references": []
@@ -7103,9 +7107,9 @@
         "en": {
           "path": "en/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "dd1059d189e93ed82427d54ddc9ba954f7bae48883f15b432e12773e887bd4a6",
-          "words": 2235,
-          "headings": 12,
+          "sha256": "e3350c3b420677634ad946ad761459457a04233bcf11f8732ad602939a215ca0",
+          "words": 2545,
+          "headings": 13,
           "examples": 1,
           "versions": [
             "0.1.24",
@@ -7113,6 +7117,7 @@
             "0.1.26",
             "0.1.27",
             "0.1.28",
+            "0.1.29",
             "10.4.10"
           ],
           "unresolved_local_references": [],
@@ -7127,9 +7132,9 @@
         "fr": {
           "path": "fr/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "0dfcf55fd4f48d547934a0ee4f0e9dda7ed7691796dff29d9a6890cc646f1388",
-          "words": 2520,
-          "headings": 12,
+          "sha256": "2bf3846e921ee6a027369e45093d98c0db0176c0aa2790d974985059ea26d3aa",
+          "words": 2884,
+          "headings": 13,
           "examples": 1,
           "versions": [
             "0.1.24",
@@ -7137,6 +7142,7 @@
             "0.1.26",
             "0.1.27",
             "0.1.28",
+            "0.1.29",
             "10.4.10"
           ],
           "unresolved_local_references": [],

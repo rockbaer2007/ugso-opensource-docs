@@ -3,12 +3,17 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.25 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.29 {#mqtt-client-0-1-16}
 
-**0.1.25:** Missing-object warnings from the real log are fixed using existence
-checks before both read APIs. Preview still creates nothing; creation requires
-write permission and Apply mode.
-[Details](./iobroker-roles.md#fix-0125) · [Release 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.28)
+Forward selected HA states and attributes to an external MQTT broker. Version 0.1.29 prioritizes control feedback and adds a consistency check against HA. Install the HA app update; helper 0.1.27 can stay.
+
+[Release 0.1.29](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.29)
+
+## New in 0.1.29: control states before measurements
+
+**Update the HA MQTT-Client app to 0.1.29; the ioBroker helper 0.1.27 remains unchanged.** Control/contact states and command feedback take priority over measurements and bypass the configured artificial publish pause. In-flight transmissions finish normally; between messages, measurement/attribute batches yield to urgent states or commands. With at least 32 events waiting, bounded sensor batches collapse intermediate values to the latest state per source. Ordinary control transitions are preserved. A periodic check reads actual HA states even with an active live connection, using the existing `poll_interval` (default 5 seconds). Unchanged values are not republished. **Übertragung und TLS** and the measurement/attribute publish delay are directly visible; credentials still collapse separately. The status line distinguishes waiting events (**Wartend**), collapsed events (**Zusammengefasst**), the last HA event (**HA-Eingang**) and the cumulative sent count (**Gesendet**). Existing settings and values are preserved. For validation, keep the check interval at 5 seconds and toggle a non-critical relay in HA. Only actual HA feedback produces `ack: true`; broker handoff is insufficient. Locally verified; end-to-end latency on the user's system still needs confirmation.
+
+Switches are recognized by the `switch.*` domain and require neither a device class nor a unit. Lights use `light.*`. Enabled automatic measurement selection remains restricted to the same HA device association. Sensors first use `device_class`; when it is missing, unambiguous `unit_of_measurement` values such as W/kW/MW, V/mV/kV, A/mA and Wh/kWh/MWh are used. Existing classes are never overridden; similar names or an ambiguous percent sign are insufficient. **Check related measurements** (German UI: **Zugehörige Messwerte prüfen**) provides a read-only report of detected sensors and exclusion reasons, including missing device associations, disabled entities or unsuitable classes/units. Measurements may wait behind control states. Settings, credentials and existing values are preserved.
 
 ## New in 0.1.28: HA live feedback without unrelated event floods
 

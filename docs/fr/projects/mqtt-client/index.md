@@ -3,12 +3,17 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.25 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.29 {#mqtt-client-0-1-16}
 
-**0.1.25 :** Les avertissements d’objets absents du journal réel sont corrigés par
-des contrôles d’existence avant les deux API de lecture. L’aperçu ne crée toujours
-rien ; la création exige l’autorisation d’écriture et le mode Apply.
-[Détails](./iobroker-roles.md#fix-0125) · [Version 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.28)
+Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. La version 0.1.29 donne la priorité aux retours de commande et ajoute un contrôle des états HA. Installez la mise à jour de l’application HA ; le script 0.1.27 peut rester.
+
+[Release 0.1.29](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.29)
+
+## Nouveauté 0.1.29 : états de commande avant mesures
+
+**Mettez l’application HA MQTT-Client à jour vers 0.1.29 ; le script ioBroker 0.1.27 reste inchangé.** Les états de commande/contact et les retours des commandes sont prioritaires sur les mesures et ne subissent pas la pause de publication configurée. Une transmission déjà engagée se termine normalement ; entre les messages, les lots de mesures/attributs cèdent la priorité aux états urgents ou commandes. À partir de 32 événements en attente, des lots limités de capteurs regroupent les valeurs intermédiaires pour conserver le dernier état de chaque source. Les changements de commande ordinaires restent conservés. Un contrôle périodique lit les états HA réels même avec la connexion en direct active, selon le `poll_interval` existant (5 secondes par défaut). Les valeurs inchangées ne sont pas republiées. **Übertragung und TLS** et la pause de publication des mesures/attributs sont directement visibles ; les identifiants de connexion restent repliables séparément. La ligne d’état distingue la file (**Wartend**), les événements regroupés (**Zusammengefasst**), la dernière réception HA (**HA-Eingang**) et le compteur cumulatif (**Gesendet**). Les réglages et valeurs existants sont conservés. Pour vérifier, laissez le contrôle à 5 secondes et actionnez un relais non critique dans HA. Seul un retour HA réel entraîne `ack: true` ; la transmission au broker ne suffit pas. Vérifié localement ; la latence réelle chez l’utilisateur reste à confirmer.
+
+Les interrupteurs sont reconnus par le domaine `switch.*`, sans classe d’appareil ni unité obligatoire. Les lampes utilisent `light.*`. La sélection automatique des mesures, lorsqu’elle est activée, reste limitée au même appareil HA. Les capteurs utilisent d’abord `device_class` ; si elle manque, les unités non ambiguës de `unit_of_measurement`, telles que W/kW/MW, V/mV/kV, A/mA et Wh/kWh/MWh, sont utilisées. Les classes existantes ne sont jamais remplacées ; des noms similaires ou un pourcentage ambigu ne suffisent pas. **Vérifier les mesures associées** (interface allemande : **Zugehörige Messwerte prüfen**) affiche un rapport en lecture seule des capteurs détectés et des motifs d’exclusion : association d’appareil absente, entité désactivée ou classe/unité inadaptée. Les mesures peuvent attendre derrière les états de commande. Les réglages, identifiants et valeurs existantes sont conservés.
 
 ## Nouveauté 0.1.28 : retours HA sans surcharge d’événements étrangers
 
