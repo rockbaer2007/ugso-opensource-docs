@@ -3,7 +3,51 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.21 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.22 {#mqtt-client-0-1-16}
+
+## Neu in 0.1.22
+
+Die Label-Auswahl aktiviert jetzt den Zustand, vorhandene Standardattribute und
+passende Rückkanäle steuerbarer Entitäten. Schalter erhalten automatisch
+`<base>/set` für `ON`/`OFF`; Zahlen, Selects und Taster verwenden ihre
+unterstützten Befehle. Es werden beim Einrichten keine Schaltbefehle gesendet.
+Retain-Befehle, leere Befehle und ungültige Werte werden verworfen.
+
+Bei Lampen entstehen nur die von HA gemeldeten Kanäle:
+
+| Kanal unter `<base>` | Wert und Rückkanal |
+| --- | --- |
+| `brightness/state`, `brightness/set` | Helligkeit 0–100 % |
+| `rgb_color/state`, `rgb_color/set` | JSON `[255,128,0]`, Komponenten 0–255 |
+| `effect/state`, `effect/set` | Effektname aus der gemeldeten Effektliste |
+| `color_temp_kelvin/state`, `color_temp_kelvin/set` | Ganze Kelvinzahl innerhalb der gemeldeten Grenzen |
+
+`<base>` ist das bestehende Topic ohne `/state`. Effektliste, unterstützte
+Farbmodi und minimale/maximale Kelvinwerte werden als Attribute nur gelesen.
+Manuell ausgewählte HA-Attribute behalten ihren Pfad und ihre Einheit:
+`attribute/brightness` bleibt beispielsweise 0–255.
+
+Unter **Übertragung und TLS** kann **Zugehörige Mess- und Batteriewerte desselben
+Geräts automatisch einbeziehen** aktiviert werden. `label_device_readings` ist
+standardmäßig `false`. Berücksichtigt werden Energie, Spannung, Strom, Leistung,
+Temperatur, Feuchtigkeit und Batterie sowie ein vorhandener Batterie-leer-Sensor.
+Die Zuordnung erfolgt ausschließlich über dieselbe HA-Geräte-ID. Es werden keine
+Schwellwerte erfunden oder ähnlich benannte Geräte zusammengefasst. Diese
+zusätzlichen Sensoren erhalten keine Rückkanäle.
+
+Automatisch übertragen werden vorhandene Standardangaben wie Name, Geräteklasse,
+Einheit und Zustandsklasse sowie notwendige Auswahl-/Grenzwerte. Andere Attribute
+bleiben manuell auswählbar. `device_class` wird als Metadatum übertragen; die
+ioBroker-Rolle, etwa `date`, wird dadurch nicht automatisch geändert.
+
+Das Werte-Popup zeigt auch automatische Attribute, Light-Werte und aktive
+Rückkanäle mit ihrer Herkunft. Nach Entfernen des Labels entfallen automatische
+Werte und Rückkanäle beim nächsten Abgleich; wartende Befehle werden vor der
+Ausführung erneut geprüft. Manuelle Auswahlen und Zugangsdaten bleiben erhalten.
+Alte Retain-Werte werden erst über die bestätigte Topic-Bereinigung entfernt.
+
+Lokal mit simuliertem HA und Broker geprüft; kein neuer Gerätetest auf HA.
+[Release 0.1.22](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.22)
 
 ## Aktuell übertragene Werte
 
@@ -14,8 +58,8 @@ Werte** bleiben gleich groß in einer Reihe sichtbar.
 Der zweite Button öffnet eine durchsuchbare, scrollbare Liste aller aktuell
 ausgewählten States und Attribute, einschließlich der per HA-Label ausgewählten
 States. Doppelte States werden zusammengeführt. Die Herkunft wird als beschriftetes
-Badge gezeigt: **Label** blau, **Manuell** grün, **Beides** violett. Attribute werden
-weiterhin ausschließlich über die manuelle Auswahl übertragen.
+Badge gezeigt: **Label** blau, **Manuell** grün, **Beides** violett. Seit 0.1.22
+werden auch automatische Standardattribute und Light-Werte angezeigt.
 
 Jede Zeile zeigt Name, Entitäts-ID, gegebenenfalls Attribut, aktuellen Wert und
 MQTT-Topic. Die letzte erfolgreiche Brokerbestätigung enthält Zeitpunkt und
@@ -80,7 +124,7 @@ Update erhalten. [Release 0.1.18](https://github.com/rockbaer2007/ugso-ha-mqtt-a
 
 [Home Assistant · label_id](https://www.home-assistant.io/template-functions/label_id/)
 
-Der Client prüft die Zuordnung im eingestellten Polling-Intervall. Das Label sendet den Zustand. Attribute und Rückbefehle werden über die manuelle Auswahl eingerichtet. Beim Entfernen des Labels endet die automatische Weiterleitung, manuell ausgewählte Entitäten bleiben aktiv. Den letzten gespeicherten MQTT-Wert kannst du bei Bedarf über die Retain-Bereinigung entfernen.
+Der Client prüft die Zuordnung im eingestellten Polling-Intervall. Das Label sendet Zustand und Standardattribute und aktiviert passende Rückkanäle. Weitere Attribute bleiben manuell auswählbar. Beim Entfernen des Labels endet die automatische Weiterleitung samt Rückkanälen; manuell ausgewählte Entitäten bleiben aktiv. Den letzten gespeicherten MQTT-Wert kannst du bei Bedarf über die Retain-Bereinigung entfernen.
 
 Auf Home Assistant `.177` mit einem separaten MQTT-Broker geprüft: Nach dem Hinzufügen kamen `off` und `on` an. Nach dem Entfernen wurde die nächste Zustandsänderung nicht mehr gesendet. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
 

@@ -3,7 +3,49 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.21 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.22 {#mqtt-client-0-1-16}
+
+## New in 0.1.22
+
+Label selection now includes the state, available standard metadata and return
+channels for supported controllable entities. Switches automatically receive
+`<base>/set` for `ON`/`OFF`; numbers, selects and buttons use their supported
+commands. Setup sends no control commands. Retained, empty and invalid commands
+are discarded.
+
+Lights receive only channels supported by their HA capabilities:
+
+| Channel below `<base>` | Value and return channel |
+| --- | --- |
+| `brightness/state`, `brightness/set` | Brightness 0–100% |
+| `rgb_color/state`, `rgb_color/set` | JSON `[255,128,0]`, components 0–255 |
+| `effect/state`, `effect/set` | Effect name from the reported effect list |
+| `color_temp_kelvin/state`, `color_temp_kelvin/set` | Integer Kelvin within the reported limits |
+
+`<base>` is the existing topic without `/state`. Effect lists, supported color
+modes and minimum/maximum Kelvin values are read-only attributes. Manually selected
+HA attributes retain their paths and units: `attribute/brightness` remains 0–255.
+
+Under **Übertragung und TLS** (Transfer and TLS), enable **Zugehörige Mess- und
+Batteriewerte desselben Geräts automatisch einbeziehen** to include related
+measurements. `label_device_readings` defaults to `false`. Supported readings
+are energy, voltage, current, power, temperature, humidity, battery and an existing
+battery-low sensor. Matching uses the same HA device ID, never similar names.
+No thresholds are invented. These additional sensors have no return channels.
+
+Automatic metadata includes available names, device classes, units and state
+classes, plus required choices and limits. Other attributes remain selectable
+manually. `device_class` is transmitted as metadata; this does not automatically
+change an ioBroker role such as `date`.
+
+The transmission popup also shows automatic attributes, Light values and active
+return topics with their origin. Removing a label revokes automatic values and
+return channels at the next sync; queued commands are checked again before
+execution. Manual selections and credentials are preserved. Old retained values
+are removed only through confirmed topic cleanup.
+
+Verified locally with simulated HA and broker; no new HA device test.
+[Release 0.1.22](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.22)
 
 ## Current transmissions
 
@@ -14,7 +56,7 @@ and **Current transmissions** buttons remain visible in one row.
 The second button opens a searchable, scrollable list of all currently selected
 states and attributes, including HA-label-selected states. Duplicate states are
 merged. Labelled origin badges distinguish blue **Label**, green **Manual** and
-purple **Both**. Attributes are still transmitted only through manual selection.
+purple **Both**. Since 0.1.22, automatic standard attributes and Light values are included too.
 
 Each row shows the name, entity ID, attribute where applicable, current value and
 MQTT topic. The last successful broker acknowledgement includes the time and sent
@@ -76,7 +118,7 @@ Changes apply immediately. No additional HA access token is required: the app us
 
 [Home Assistant · label_id](https://www.home-assistant.io/template-functions/label_id/)
 
-The client checks assignments at the configured polling interval. The label forwards the state. Use manual selection for attributes and commands. Removing the label stops automatic forwarding, while manually selected entities remain active. Use retained topic cleanup to remove the last stored MQTT value if needed.
+The client checks assignments at the configured polling interval. The label forwards the state and standard metadata and enables supported return channels. Other attributes remain manually selectable. Removing the label stops automatic forwarding and revokes return channels, while manually selected entities remain active. Use retained topic cleanup to remove the last stored MQTT value if needed.
 
 Tested on Home Assistant `.177` with a separate MQTT broker. After adding the label, the broker received `off` and `on`. After removing it, the next state change was no longer sent. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
 

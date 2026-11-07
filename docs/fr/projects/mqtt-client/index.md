@@ -3,7 +3,53 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.21 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.22 {#mqtt-client-0-1-16}
+
+## Nouveautés de la version 0.1.22
+
+La sélection par étiquette comprend désormais l’état, les métadonnées standard
+disponibles et les canaux de commande des entités pilotables prises en charge.
+Les interrupteurs reçoivent automatiquement `<base>/set` pour `ON`/`OFF` ;
+les nombres, listes de choix et boutons utilisent leurs commandes prises en charge.
+Aucune commande n’est envoyée lors de la configuration. Les commandes persistantes,
+vides ou invalides sont rejetées.
+
+Les lampes ne reçoivent que les canaux correspondant aux fonctions déclarées par HA :
+
+| Canal sous `<base>` | Valeur et canal de commande |
+| --- | --- |
+| `brightness/state`, `brightness/set` | Luminosité de 0 à 100 % |
+| `rgb_color/state`, `rgb_color/set` | JSON `[255,128,0]`, composantes de 0 à 255 |
+| `effect/state`, `effect/set` | Nom figurant dans la liste d’effets déclarée |
+| `color_temp_kelvin/state`, `color_temp_kelvin/set` | Kelvin entiers dans les limites déclarées |
+
+`<base>` est le topic existant sans `/state`. Les listes d’effets, modes de couleur
+et limites Kelvin sont des attributs en lecture seule. Les attributs HA sélectionnés
+manuellement conservent leur chemin et leur unité : `attribute/brightness` reste
+compris entre 0 et 255.
+
+Dans **Übertragung und TLS** (Transmission et TLS), activez **Zugehörige Mess- und
+Batteriewerte desselben Geräts automatisch einbeziehen** pour inclure les mesures
+associées. `label_device_readings` vaut `false` par défaut. Les mesures prises
+en charge sont l’énergie, la tension, le courant, la puissance, la température,
+l’humidité, la batterie et un éventuel capteur de batterie faible. Seule l’identité
+de l’appareil HA est utilisée, jamais la similitude des noms. Aucun seuil n’est
+inventé. Ces capteurs supplémentaires n’ont pas de canal de commande.
+
+Les métadonnées automatiques comprennent les noms, classes d’appareil, unités et
+classes d’état disponibles, ainsi que les choix et limites nécessaires. Les autres
+attributs restent sélectionnables manuellement. `device_class` est transmis comme
+métadonnée ; cela ne modifie pas automatiquement un rôle ioBroker tel que `date`.
+
+La fenêtre des transmissions affiche aussi les attributs automatiques, valeurs
+Light et canaux de commande actifs avec leur origine. Le retrait d’une étiquette
+révoque les valeurs et commandes automatiques au prochain contrôle ; les commandes
+en attente sont revérifiées avant exécution. Les sélections manuelles et identifiants
+sont conservés. Les anciennes valeurs persistantes ne sont supprimées qu’avec le
+nettoyage confirmé des topics.
+
+Vérification locale avec HA et broker simulés ; aucun nouvel essai sur appareil HA.
+[Version 0.1.22](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.22)
 
 ## Transmissions actuelles
 
@@ -16,7 +62,7 @@ Le second bouton ouvre une liste avec recherche et défilement de tous les état
 attributs actuellement sélectionnés, y compris les états sélectionnés par une
 étiquette HA. Les états en double sont regroupés. L’origine est indiquée par un
 badge avec texte : **Étiquette** en bleu, **Manuel** en vert, **Les deux** en violet.
-Les attributs restent transmis uniquement par sélection manuelle.
+Depuis 0.1.22, les attributs standard automatiques et les valeurs Light sont également affichés.
 
 Chaque entrée affiche le nom, l’identifiant de l’entité, l’attribut éventuel, la
 valeur actuelle et le topic MQTT. Le dernier accusé de réception du broker comprend
@@ -83,7 +129,7 @@ Les modifications sont appliquées immédiatement. Aucun jeton d'accès (access 
 
 [Home Assistant · label_id](https://www.home-assistant.io/template-functions/label_id/)
 
-Le client vérifie les associations selon l’intervalle d’interrogation configuré. L’étiquette transmet l’état. Utilisez la sélection manuelle pour les attributs et les commandes. Le retrait de l’étiquette arrête la transmission automatique. Les entités sélectionnées manuellement restent actives. Le nettoyage des topics persistants permet de supprimer la dernière valeur MQTT mémorisée si nécessaire.
+Le client vérifie les associations selon l’intervalle d’interrogation configuré. L’étiquette transmet l’état et les métadonnées standard et active les commandes prises en charge. Les autres attributs restent sélectionnables manuellement. Le retrait de l’étiquette arrête la transmission et les commandes automatiques. Les entités sélectionnées manuellement restent actives. Le nettoyage des topics persistants permet de supprimer la dernière valeur MQTT mémorisée si nécessaire.
 
 Essai effectué sur Home Assistant `.177` avec un broker MQTT séparé. Après l’ajout de l’étiquette, le broker a reçu `off` et `on`. Après son retrait, le changement d’état suivant n’a plus été envoyé. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
 
