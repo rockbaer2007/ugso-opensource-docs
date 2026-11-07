@@ -3,7 +3,28 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.20 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.21 {#mqtt-client-0-1-16}
+
+## Current transmissions
+
+Since **0.1.21**, only credentials collapse automatically. **Übertragung und TLS**
+(Transmission and TLS) remains separately accessible. Equal-size **Save and connect**
+and **Current transmissions** buttons remain visible in one row.
+
+The second button opens a searchable, scrollable list of all currently selected
+states and attributes, including HA-label-selected states. Duplicate states are
+merged. Labelled origin badges distinguish blue **Label**, green **Manual** and
+purple **Both**. Attributes are still transmitted only through manual selection.
+
+Each row shows the name, entity ID, attribute where applicable, current value and
+MQTT topic. The last successful broker acknowledgement includes the time and sent
+value; unconfirmed values are marked and errors appear separately in red.
+Acknowledgement proves broker acceptance, not processing by ioBroker or a target
+device. The open popup refreshes every three seconds and via **Refresh**.
+The overview covers the running connection and resets when it restarts. Credentials
+and settings are neither changed nor displayed in this list. Tested locally with
+manual/label selections, attributes, acknowledgement failures and mobile layout.
+[Release 0.1.21](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.21)
 
 **0.1.20:** Connection settings are collapsible under **Zugangsdaten** (Credentials).
 The section stays open for initial setup. With a saved broker address, it

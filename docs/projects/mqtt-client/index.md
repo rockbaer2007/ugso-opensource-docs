@@ -3,7 +3,31 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.20 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.21 {#mqtt-client-0-1-16}
+
+## Aktuell übertragene Werte
+
+Ab **0.1.21** klappen nur die Zugangsdaten automatisch ein. **Übertragung und TLS**
+ist davon getrennt erreichbar. **Speichern und verbinden** und **Aktuell übertragene
+Werte** bleiben gleich groß in einer Reihe sichtbar.
+
+Der zweite Button öffnet eine durchsuchbare, scrollbare Liste aller aktuell
+ausgewählten States und Attribute, einschließlich der per HA-Label ausgewählten
+States. Doppelte States werden zusammengeführt. Die Herkunft wird als beschriftetes
+Badge gezeigt: **Label** blau, **Manuell** grün, **Beides** violett. Attribute werden
+weiterhin ausschließlich über die manuelle Auswahl übertragen.
+
+Jede Zeile zeigt Name, Entitäts-ID, gegebenenfalls Attribut, aktuellen Wert und
+MQTT-Topic. Die letzte erfolgreiche Brokerbestätigung enthält Zeitpunkt und
+gesendeten Wert; noch nicht bestätigte Werte sind gekennzeichnet und Fehler
+separat rot markiert. Die Bestätigung belegt die Annahme durch den Broker,
+nicht die Verarbeitung durch ioBroker oder ein Zielgerät. Im geöffneten Popup
+erfolgt alle drei Sekunden eine Aktualisierung, zusätzlich über **Aktualisieren**.
+Die Übersicht gilt für die laufende Verbindung und wird bei deren Neustart
+zurückgesetzt. Zugangsdaten und Einstellungen werden weder geändert noch in
+dieser Liste ausgegeben. Lokal mit manuellen/Label-Auswahlen, Attributen,
+Bestätigungsfehlern und Mobilansicht geprüft.
+[Release 0.1.21](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.21)
 
 **0.1.20:** Die Verbindungseinstellungen sind unter **Zugangsdaten** einklappbar.
 Zur Ersteinrichtung bleibt der Bereich offen. Mit gespeicherter Brokeradresse

@@ -6989,9 +6989,9 @@
         "de": {
           "path": "projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "5afa4baac1a8085ae03ab6e6e98fdc6f183f01bddacafb5282834d16a4317291",
-          "words": 1332,
-          "headings": 9,
+          "sha256": "c195b1539a8bde5f1aabde1950bad914410496cc4e9e53922a094a95ab969fdd",
+          "words": 1527,
+          "headings": 10,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -6999,16 +6999,17 @@
             "0.1.17",
             "0.1.18",
             "0.1.19",
-            "0.1.20"
+            "0.1.20",
+            "0.1.21"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "6892da241b4ca6fe952b41671c20e285b37952105ddbb24e4226beadfc2ec550",
-          "words": 1349,
-          "headings": 9,
+          "sha256": "804f591bafc40548e0dc1fe1da6af6777ad0741fee9b545901bb6314ad3ba0ae",
+          "words": 1536,
+          "headings": 10,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7016,7 +7017,8 @@
             "0.1.17",
             "0.1.18",
             "0.1.19",
-            "0.1.20"
+            "0.1.20",
+            "0.1.21"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -7030,9 +7032,9 @@
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "df59366ee453612abd56d330bd77fcc82a6f1af4577f4eb80431a925b2762a45",
-          "words": 1903,
-          "headings": 9,
+          "sha256": "599429a185daf5a47dde5ec87fff363ea449bcb756cedbcabd9eea64866b09f4",
+          "words": 2141,
+          "headings": 10,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7040,7 +7042,8 @@
             "0.1.17",
             "0.1.18",
             "0.1.19",
-            "0.1.20"
+            "0.1.20",
+            "0.1.21"
           ],
           "unresolved_local_references": [],
           "review_signals": {

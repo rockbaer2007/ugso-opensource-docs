@@ -3,7 +3,32 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.20 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.21 {#mqtt-client-0-1-16}
+
+## Transmissions actuelles
+
+Depuis **0.1.21**, seuls les identifiants de connexion se replient automatiquement.
+**Übertragung und TLS** (Transmission et TLS) reste accessible séparément.
+Les boutons **Enregistrer et connecter** et **Transmissions actuelles**, de même
+taille, restent visibles sur une même ligne.
+
+Le second bouton ouvre une liste avec recherche et défilement de tous les états et
+attributs actuellement sélectionnés, y compris les états sélectionnés par une
+étiquette HA. Les états en double sont regroupés. L’origine est indiquée par un
+badge avec texte : **Étiquette** en bleu, **Manuel** en vert, **Les deux** en violet.
+Les attributs restent transmis uniquement par sélection manuelle.
+
+Chaque entrée affiche le nom, l’identifiant de l’entité, l’attribut éventuel, la
+valeur actuelle et le topic MQTT. Le dernier accusé de réception du broker comprend
+la date et la valeur envoyée ; les valeurs non confirmées sont signalées et les
+erreurs apparaissent séparément en rouge. L’accusé confirme l’acceptation par le
+broker, pas le traitement par ioBroker ou un appareil cible. La fenêtre ouverte
+s’actualise toutes les trois secondes ainsi qu’avec **Actualiser**.
+L’aperçu concerne la connexion en cours et se réinitialise à son redémarrage.
+Les paramètres et identifiants de connexion ne sont ni modifiés ni affichés dans
+cette liste. Vérifications locales : sélections manuelles et par étiquette,
+attributs, erreurs de confirmation et présentation mobile.
+[Version 0.1.21](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.21)
 
 **0.1.20 :** Les paramètres de connexion sont repliables sous **Zugangsdaten**
 (Identifiants de connexion). La section reste ouverte pour la première
