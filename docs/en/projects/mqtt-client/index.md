@@ -8,7 +8,11 @@ description: Transfer selected Home Assistant values live over MQTT and control 
 **0.1.25:** Missing-object warnings from the real log are fixed using existence
 checks before both read APIs. Preview still creates nothing; creation requires
 write permission and Apply mode.
-[Details](./iobroker-roles.md#fix-0125) · [Release 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.25)
+[Details](./iobroker-roles.md#fix-0125) · [Release 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.26)
+
+## New in 0.1.26: automatic helper setup
+
+Missing helper base folders (`virtualRoot`, `aliasRoot`) and both backup states (`virtualBackupId`, `backupId`) are now created automatically at startup in **every mode**, including `preview` and `restore`. Existing folders, backups, values and manual roles are not overwritten. New journals contain valid empty structures. Allow `setObject` in the JavaScript instance even for preview. Missing permissions or conflicting paths are reported as errors. Preview does not create controllable VIS-2 states or change MQTT roles or device values; use `mode: 'apply'` after review for those operations. Event-driven processing from 0.1.25 is retained.
 
 ## Automatic VIS-2 states since 0.1.24
 

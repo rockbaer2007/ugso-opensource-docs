@@ -8,7 +8,11 @@ description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gez
 **0.1.25:** Die im echten Protokoll gefundenen Warnungen für fehlende Objekte sind
 mit Existenzprüfungen vor beiden Lese-APIs korrigiert. Die Vorschau legt weiterhin
 nichts an; die Anlage erfolgt mit aktivierter Schreibfreigabe im Apply-Modus.
-[Details](./iobroker-roles.md#fix-0125) · [Release 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.25)
+[Details](./iobroker-roles.md#fix-0125) · [Release 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.26)
+
+## Neu in 0.1.26: automatische Basisanlage
+
+Fehlende eigene Basisordner (`virtualRoot`, `aliasRoot`) und beide Sicherungsdatenpunkte (`virtualBackupId`, `backupId`) werden jetzt beim Start in **jedem Modus** automatisch angelegt, auch in `preview` und `restore`. Vorhandene Ordner, Sicherungen, Werte und manuelle Rollen werden nicht überschrieben. Neue Journale enthalten gültige leere Strukturen. Für die Basisanlage muss `setObject` in der JavaScript-Instanz auch in der Vorschau erlaubt sein. Fehlende Freigaben oder kollidierende Pfade werden als Fehler gemeldet. Die Vorschau legt keine steuerbaren VIS-2-Datenpunkte an und ändert keine MQTT-Rollen oder Gerätewerte; dafür nach Prüfung `mode: 'apply'` verwenden. Die ereignisgesteuerte Verarbeitung aus 0.1.25 bleibt erhalten.
 
 ## Automatische VIS-2-Datenpunkte ab 0.1.24
 

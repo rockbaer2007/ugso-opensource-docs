@@ -8,7 +8,11 @@ description: Transmettre en temps réel des valeurs sélectionnées de Home Assi
 **0.1.25 :** Les avertissements d’objets absents du journal réel sont corrigés par
 des contrôles d’existence avant les deux API de lecture. L’aperçu ne crée toujours
 rien ; la création exige l’autorisation d’écriture et le mode Apply.
-[Détails](./iobroker-roles.md#fix-0125) · [Version 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.25)
+[Détails](./iobroker-roles.md#fix-0125) · [Version 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.26)
+
+## Nouveauté 0.1.26 : création automatique de la base
+
+Les dossiers de base du script (`virtualRoot`, `aliasRoot`) et les deux points de sauvegarde (`virtualBackupId`, `backupId`) absents sont désormais créés automatiquement au démarrage dans **tous les modes**, y compris `preview` et `restore`. Les dossiers, sauvegardes, valeurs et rôles manuels existants ne sont pas écrasés. Les nouveaux journaux contiennent des structures vides valides. Autorisez `setObject` dans l’instance JavaScript même pour l’aperçu. Les autorisations manquantes et les chemins incompatibles sont signalés comme erreurs. L’aperçu ne crée aucun point VIS 2 commandable et ne modifie ni les rôles MQTT ni les valeurs des appareils ; utilisez `mode: 'apply'` après vérification pour ces opérations. Le traitement événementiel de la version 0.1.25 est conservé.
 
 ## Points VIS 2 automatiques depuis 0.1.24
 
