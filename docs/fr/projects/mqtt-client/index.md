@@ -7,11 +7,23 @@ description: Transmettre en temps réel des valeurs sélectionnées de Home Assi
 
 Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. Le MQTT-Client et le script JavaScript 0.1.34 ajoutent une structure VIS-2 plate facultative avec noms courts. Cette option nécessite de remplacer le script complet dans l’adaptateur JavaScript ioBroker ; la mise à jour de l’application HA seule ne remplace pas le script enregistré dans ioBroker.
 
-[Release 0.1.35](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.35)
+[Release 0.1.36](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.36)
 
 
 
 **Application 0.1.35 :** Une lampe sélectionnée manuellement et par label peut manquer temporairement dans l’état HA sans interrompre le catalogue de sélection. Le script JavaScript reste en version **0.1.34**.
+
+
+
+## Nouveauté 0.1.36 : conserver les réglages après les mises à jour {#settings-persistence-0136}
+
+**Les réglages enregistrés dans l’application sont désormais conservés lorsque le Supervisor Home Assistant régénère son fichier d’options pendant une mise à jour.** Cela concerne notamment la case des mesures associées, la structure MQTT des nouvelles entités, les autres réglages enregistrés et les identifiants de connexion. L’application les conserve séparément dans son fichier privé `/data/mqtt-settings.json`. Les affectations de chemins MQTT restent dans `/data/mqtt-routes.json` ; les points et références VIS-2 existants ne changent pas.
+
+**Premier passage depuis la version 0.1.35 ou antérieure :** Exportez les réglages dans l’application avant la mise à jour. S’ils ont déjà été réinitialisés lors de ce premier passage, importez ensuite la sauvegarde ou sélectionnez de nouveau les deux options une fois, puis cliquez sur **Enregistrer et connecter**. Les réglages déjà perdus ne peuvent pas être reconstitués de façon fiable ; les mesures supplémentaires ne sont jamais activées sans votre choix.
+
+Modifiez de préférence ces réglages dans l’application. Les modifications réelles de la configuration Supervisor sont reprises au redémarrage ; ses valeurs par défaut inchangées ne réinitialisent pas les choix de l’application. Pour revenir explicitement à un choix par défaut, sélectionnez-le et enregistrez-le dans l’application. Les sauvegardes de réglages existantes restent utilisables et excluent toujours les mots de passe et clés TLS privées. Le script JavaScript reste en version **0.1.34** ; ce correctif ne nécessite pas de le remplacer à nouveau.
+
+Contexte : le Supervisor gère `/data/options.json` ; le répertoire privé `/data` fournit le stockage persistant de l’application. [Documentation officielle HA](https://contributors.home-assistant.io/apps/reference/environment/).
 
 
 ## Nouveauté 0.1.34 : chemins MQTT plats pour les nouvelles entités uniquement {#mqtt-layout-0134}

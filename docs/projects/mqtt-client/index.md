@@ -3,15 +3,27 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.35 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.36 {#mqtt-client-0-1-16}
 
 Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. MQTT-Client und JavaScript-Helfer 0.1.34 ergänzen eine wählbare flache VIS-2-Struktur mit kurzen Namen. Für diese Option muss der vollständige Helfer im ioBroker-JavaScript-Adapter ersetzt werden; ein HA-App-Update allein ersetzt das dort gespeicherte Skript nicht.
 
-[Release 0.1.35](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.35)
+[Release 0.1.36](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.36)
 
 
 
 **App 0.1.35:** Auch eine gleichzeitig manuell und per Label ausgewählte Lampe darf vorübergehend im HA-Abgleich fehlen. Der Auswahlkatalog bleibt dann verfügbar. Der JavaScript-Helfer bleibt auf **0.1.34**.
+
+
+
+## Neu in 0.1.36: Einstellungen nach Updates erhalten {#settings-persistence-0136}
+
+**Gespeicherte App-Einstellungen bleiben jetzt auch erhalten, wenn der Home-Assistant-Supervisor beim Update seine Optionsdatei neu erzeugt.** Das betrifft insbesondere den Messwerte-Haken und die MQTT-Struktur für neue Entitäten, aber auch die übrigen in der App gespeicherten Einstellungen und Zugangsdaten. Die App sichert sie unabhängig in der privaten Datei `/data/mqtt-settings.json`. Die MQTT-Pfadzuordnungen bleiben weiterhin in `/data/mqtt-routes.json`; vorhandene Datenpunkte und VIS-2-Verknüpfungen werden nicht geändert.
+
+**Einmaliger Umstieg von 0.1.35 oder älter:** Vor dem Update die Einstellungen in der App exportieren. Falls sie beim ersten Wechsel bereits zurückgesetzt wurden, die Sicherung nach dem Update wieder importieren oder die beiden Optionen einmal erneut wählen und **Speichern und verbinden** drücken. Schon verlorene Einstellungen können nicht zuverlässig rekonstruiert werden; zusätzliche Messwerte werden nicht ungefragt aktiviert.
+
+Die Einstellungen bevorzugt in der App ändern. Tatsächlich geänderte Supervisor-Konfigurationswerte werden beim Neustart übernommen; unveränderte Supervisor-Standardwerte setzen App-Auswahlen nicht zurück. Soll eine App-Auswahl ausdrücklich auf ihren Standard zurück, dies in der App wählen und speichern. Die vorhandene Einstellungssicherung bleibt verwendbar und enthält weiterhin keine Passwörter oder privaten TLS-Schlüssel. Der JavaScript-Helfer bleibt **0.1.34**; hierfür muss er nicht erneut ersetzt werden.
+
+Hintergrund: Der Supervisor verwaltet `/data/options.json`; für eigene dauerhafte Daten ist das private `/data`-Verzeichnis vorgesehen. [Offizielle HA-Dokumentation](https://contributors.home-assistant.io/apps/reference/environment/).
 
 
 ## Neu in 0.1.34: flache MQTT-Pfade nur für neue Entitäten {#mqtt-layout-0134}

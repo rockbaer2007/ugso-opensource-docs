@@ -3,15 +3,27 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.35 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.36 {#mqtt-client-0-1-16}
 
 Forward selected HA states and attributes to an external MQTT broker. MQTT-Client and JavaScript helper 0.1.34 add an optional flat VIS-2 layout with short names. This option requires replacing the complete helper in the ioBroker JavaScript adapter; updating the HA app alone does not replace the script stored there.
 
-[Release 0.1.35](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.35)
+[Release 0.1.36](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.36)
 
 
 
 **App 0.1.35:** A Light selected both manually and by label may temporarily be missing from the HA snapshot without interrupting the selection catalog. The JavaScript helper remains at **0.1.34**.
+
+
+
+## New in 0.1.36: retain settings across updates {#settings-persistence-0136}
+
+**Saved app settings now survive the Home Assistant Supervisor regenerating its options file during an update.** This includes the related-measurements checkbox, the MQTT layout for new entities, other saved app settings and credentials. The app stores them independently in its private `/data/mqtt-settings.json` file. MQTT path assignments remain in `/data/mqtt-routes.json`; existing points and VIS-2 references are unchanged.
+
+**One-time upgrade from 0.1.35 or earlier:** Export settings in the app before updating. If they have already been reset during the first upgrade, import that backup afterwards or select both options again once and click **Save and connect**. Already lost settings cannot be reliably reconstructed; additional measurements are never enabled without your selection.
+
+Prefer editing these settings in the app. Actual Supervisor configuration changes are merged on restart; unchanged Supervisor defaults do not reset app choices. To explicitly return an app choice to its default, select and save it in the app. Existing settings backups remain usable and still exclude passwords and private TLS keys. The JavaScript helper remains **0.1.34**; no further helper replacement is required for this fix.
+
+Background: Supervisor manages `/data/options.json`; the private `/data` directory provides persistent storage for the app. [Official HA documentation](https://contributors.home-assistant.io/apps/reference/environment/).
 
 
 ## New in 0.1.34: flat MQTT paths for new entities only {#mqtt-layout-0134}
