@@ -8,7 +8,11 @@ description: Transmettre en temps réel des valeurs sélectionnées de Home Assi
 **0.1.25 :** Les avertissements d’objets absents du journal réel sont corrigés par
 des contrôles d’existence avant les deux API de lecture. L’aperçu ne crée toujours
 rien ; la création exige l’autorisation d’écriture et le mode Apply.
-[Détails](./iobroker-roles.md#fix-0125) · [Version 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.26)
+[Détails](./iobroker-roles.md#fix-0125) · [Version 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.27)
+
+## Nouveauté 0.1.27 : commandes sans retain
+
+Les commandes utilisent désormais l’API `sendMessage2Client` de l’adaptateur MQTT ioBroker avec **`retain: false`**. En mode serveur, une écriture normale dans un point MQTT `set` peut parvenir au client avec le drapeau RETAIN. Le client HA continue de refuser ces commandes afin de ne pas exécuter d’anciennes demandes à la reconnexion. Les réglages globaux du broker et les valeurs des points MQTT sont conservés. Le script vérifie le topic de commande par rapport au topic d’état via `native.topic`, sans déduire les chemins des identifiants d’objets. Dans VIS 2, commandez toujours le point virtuel sous `0_userdata.0.ugso_mqtt` avec `ack: false` et `mode: 'apply'`. La ligne `Command handed to MQTT adapter (retain=false)` confirme uniquement la transmission à l’adaptateur ; un nouvel état HA doit confirmer l’exécution. La valeur brute du point MQTT `set` ne change pas nécessairement. Aucun nouvel essai automatique ; les erreurs ou l’absence de retour HA restent non confirmées. Remplacez le fichier complet du script en conservant vos réglages.
 
 ## Nouveauté 0.1.26 : création automatique de la base
 
