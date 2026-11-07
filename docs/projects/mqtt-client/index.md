@@ -3,11 +3,15 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.34 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.35 {#mqtt-client-0-1-16}
 
 Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. MQTT-Client und JavaScript-Helfer 0.1.34 ergänzen eine wählbare flache VIS-2-Struktur mit kurzen Namen. Für diese Option muss der vollständige Helfer im ioBroker-JavaScript-Adapter ersetzt werden; ein HA-App-Update allein ersetzt das dort gespeicherte Skript nicht.
 
-[Release 0.1.34](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.34)
+[Release 0.1.35](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.35)
+
+
+
+**App 0.1.35:** Auch eine gleichzeitig manuell und per Label ausgewählte Lampe darf vorübergehend im HA-Abgleich fehlen. Der Auswahlkatalog bleibt dann verfügbar. Der JavaScript-Helfer bleibt auf **0.1.34**.
 
 
 ## Neu in 0.1.34: flache MQTT-Pfade nur für neue Entitäten {#mqtt-layout-0134}

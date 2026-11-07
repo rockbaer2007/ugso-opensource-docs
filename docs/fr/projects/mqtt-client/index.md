@@ -7,7 +7,11 @@ description: Transmettre en temps réel des valeurs sélectionnées de Home Assi
 
 Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. Le MQTT-Client et le script JavaScript 0.1.34 ajoutent une structure VIS-2 plate facultative avec noms courts. Cette option nécessite de remplacer le script complet dans l’adaptateur JavaScript ioBroker ; la mise à jour de l’application HA seule ne remplace pas le script enregistré dans ioBroker.
 
-[Release 0.1.34](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.34)
+[Release 0.1.35](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.35)
+
+
+
+**Application 0.1.35 :** Une lampe sélectionnée manuellement et par label peut manquer temporairement dans l’état HA sans interrompre le catalogue de sélection. Le script JavaScript reste en version **0.1.34**.
 
 
 ## Nouveauté 0.1.34 : chemins MQTT plats pour les nouvelles entités uniquement {#mqtt-layout-0134}

@@ -126,7 +126,8 @@ Der Kopierbutton rechts oben im Codefeld übernimmt das **gesamte Skript**. Code
 [MQTT-Client-Doku und App-Update](/projects/mqtt-client/) · [Helfer-Anleitung und vollständige Rollenzuordnung](/projects/mqtt-client/iobroker-roles)
 
 <style scoped>
-.mqtt-helper-code :deep(pre) { max-height: 36rem; overflow: auto; }
+.mqtt-helper-code :deep(div[class*='language-']) { max-height: 36rem; overflow: auto; }
+.mqtt-helper-code :deep(div[class*='language-'] pre) { max-height: none; overflow: visible; }
 </style>
 
 

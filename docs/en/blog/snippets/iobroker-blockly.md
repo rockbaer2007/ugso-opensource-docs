@@ -129,7 +129,8 @@ The copy button at the top right of the code block copies the **entire script**.
 [MQTT-Client documentation and app update](/en/projects/mqtt-client/) · [Helper guide and complete role mapping](/en/projects/mqtt-client/iobroker-roles)
 
 <style scoped>
-.mqtt-helper-code :deep(pre) { max-height: 36rem; overflow: auto; }
+.mqtt-helper-code :deep(div[class*='language-']) { max-height: 36rem; overflow: auto; }
+.mqtt-helper-code :deep(div[class*='language-'] pre) { max-height: none; overflow: visible; }
 </style>
 
 

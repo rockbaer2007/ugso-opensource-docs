@@ -3,11 +3,15 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.34 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.35 {#mqtt-client-0-1-16}
 
 Forward selected HA states and attributes to an external MQTT broker. MQTT-Client and JavaScript helper 0.1.34 add an optional flat VIS-2 layout with short names. This option requires replacing the complete helper in the ioBroker JavaScript adapter; updating the HA app alone does not replace the script stored there.
 
-[Release 0.1.34](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.34)
+[Release 0.1.35](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.35)
+
+
+
+**App 0.1.35:** A Light selected both manually and by label may temporarily be missing from the HA snapshot without interrupting the selection catalog. The JavaScript helper remains at **0.1.34**.
 
 
 ## New in 0.1.34: flat MQTT paths for new entities only {#mqtt-layout-0134}

@@ -128,7 +128,8 @@ Le bouton de copie en haut à droite du bloc reprend le **script entier**. Le bl
 [Documentation MQTT-Client et mise à jour de l’application](/fr/projects/mqtt-client/) · [Guide du script et tableau complet des rôles](/fr/projects/mqtt-client/iobroker-roles)
 
 <style scoped>
-.mqtt-helper-code :deep(pre) { max-height: 36rem; overflow: auto; }
+.mqtt-helper-code :deep(div[class*='language-']) { max-height: 36rem; overflow: auto; }
+.mqtt-helper-code :deep(div[class*='language-'] pre) { max-height: none; overflow: visible; }
 </style>
 
 
