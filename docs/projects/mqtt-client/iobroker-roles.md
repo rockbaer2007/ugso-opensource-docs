@@ -4,6 +4,22 @@ Das optionale JavaScript gehört zu MQTT-Client **0.1.30** und läuft im ioBroke
 
 
 
+## Wichtig: Zusätzliche Gerätemesswerte ausdrücklich aktivieren {#enable-device-readings}
+
+::: warning Wichtig: Zusätzliche Gerätemesswerte ausdrücklich aktivieren
+**Ein Label allein aktiviert die zusätzlichen Messwerte nicht.** Unter **Übertragung und TLS** muss der Haken **„Zugehörige Mess- und Batteriewerte desselben Geräts automatisch einbeziehen“** gesetzt und anschließend **„Speichern und verbinden“** gedrückt werden. Ohne diesen Haken werden Energie, Spannung, Strom und Leistung nicht automatisch zum gelabelten Schalter ergänzt. Bereits manuell ausgewählte Werte bleiben davon unabhängig.
+:::
+
+Erfasst werden unterstützte und in HA aktivierte Sensoren mit derselben HA-Gerätezuordnung, sofern vorhanden. Es werden keine Messwerte erzeugt, die das Gerät nicht bereitstellt. **„Zugehörige Messwerte prüfen“** zeigt Erkennung und Ausschlussgründe. Schaltwerte haben Vorrang; Messwerte dürfen verzögert folgen.
+
+## Besonders für VIS 2: der ioBroker-JavaScript-Helfer {#javascript-vis2-helper}
+
+::: tip Besonders für VIS 2: der ioBroker-JavaScript-Helfer
+Das mitgelieferte **JavaScript wird im ioBroker-JavaScript-Adapter ausgeführt, nicht in Home Assistant**. Es legt virtuelle Datenpunkte unter `0_userdata.0.ugso_mqtt` an: **ein Datenpunkt pro Wert für Anzeige und Bedienung**, obwohl MQTT getrennte `state`- und `set`-Topics verwendet. Unterstützte Schalter und Light-Werte erhalten den passenden Rückkanal; Messwerte bleiben lesend. Anhand geeigneter HA-Metadaten werden Datentypen, Einheiten und eindeutige Rollen zugeordnet. Eine Schaltanforderung ist erst nach tatsächlicher HA-Rückmeldung bestätigt.
+
+**Zuerst Vorschau prüfen, dann `mode: 'apply'` einstellen.** In der Vorschau werden nur fehlende eigene Basisordner/Sicherungsdatenpunkte angelegt; die virtuellen VIS-2-Werte entstehen im Anwendungsmodus. Für die Anlage muss **setObject** in den Adaptereinstellungen erlaubt sein. Bestehende Werte und manuell gesetzte Rollen bleiben geschützt. Die HA-App ist **0.1.30**, die weiterhin aktuelle Helferdatei **0.1.27** – unterschiedliche Versionsnummern sind hier beabsichtigt. Ohne Helfer ist die reine MQTT-Übertragung weiterhin nutzbar.
+:::
+
 ## Neu in 0.1.30: Zugangsdaten einklappen {#credentials-0130}
 
 **Zugangsdaten** besitzt jetzt eine eigene Auf-/Zuklapp-Schaltfläche, auch per Tastatur bedienbar. Bei vorhandenem Broker bleiben IP, Port, Benutzername und Passwort nach Laden und Speichern eingeklappt. Fehlen Pflichtangaben, wird der Bereich zur Eingabe geöffnet. **Übertragung und TLS**, **Speichern und verbinden** und **Aktuell übertragene Werte** bleiben sichtbar. Einstellungen und Zugangsdaten werden nicht verändert. Die Priorisierung aus 0.1.29 und Helfer 0.1.27 bleiben erhalten. Der Nutzer hat die Schalt-Rückmeldung mit ungefähr einer halben Sekunde Verzögerung als erfolgreich bestätigt. Auch die Zigbee-Lampe wurde erfolgreich geprüft: Rückmeldung funktioniert, die Helligkeit folgt HA auf 100 %.

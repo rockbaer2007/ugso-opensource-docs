@@ -4,6 +4,22 @@ The optional JavaScript ships with MQTT-Client **0.1.30** and runs in the ioBrok
 
 
 
+## Important: explicitly enable additional device measurements {#enable-device-readings}
+
+::: warning Important: explicitly enable additional device measurements
+**A label alone does not enable additional measurements.** Under **Transmission and TLS**, check **“Automatically include related measurements and battery values from the same device”** (German UI: **„Zugehörige Mess- und Batteriewerte desselben Geräts automatisch einbeziehen“**) and then click **“Save and connect”**. Without this checkbox, energy, voltage, current and power are not automatically added to the labeled switch. Manually selected values are independent of this option.
+:::
+
+Only supported sensors enabled in HA and associated with the same HA device are included, when available. Measurements not provided by the device are not created. **“Check related measurements”** shows detection and exclusion reasons. Control states have priority; measurements may follow with a delay.
+
+## Especially for VIS 2: the ioBroker JavaScript helper {#javascript-vis2-helper}
+
+::: tip Especially for VIS 2: the ioBroker JavaScript helper
+The supplied **JavaScript runs in the ioBroker JavaScript adapter, not in Home Assistant**. It creates virtual states under `0_userdata.0.ugso_mqtt`: **one point per value for display and control**, even though MQTT uses separate `state` and `set` topics. Supported switches and light values receive the appropriate command channel; measurements remain read-only. Suitable HA metadata determines data types, units and unambiguous roles. A command is confirmed only after actual HA feedback.
+
+**Review preview first, then set `mode: 'apply'`.** Preview creates only missing helper base folders/backup points; virtual VIS-2 points are created in apply mode. **setObject** must be allowed in the adapter settings for creation. Existing values and manually assigned roles remain protected. The HA app is **0.1.30**, while the current helper file remains **0.1.27** – these different versions are intentional. Plain MQTT forwarding also works without the helper.
+:::
+
 ## New in 0.1.30: collapsible credentials {#credentials-0130}
 
 **Credentials** now has a dedicated expand/collapse button with keyboard support. With a configured broker, IP, port, username and password remain collapsed after loading and saving. Missing required credentials open the section for correction. **Transmission and TLS**, **Save and connect** and **Currently transmitted values** stay visible. Settings and credentials are not changed. The 0.1.29 priority logic and helper 0.1.27 are preserved. The user confirmed successful control feedback with a delay of approximately half a second. The Zigbee light was also tested successfully: feedback works and brightness follows HA to 100%.

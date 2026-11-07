@@ -9,6 +9,22 @@ Transmettre les états et attributs HA sélectionnés vers un broker MQTT extern
 
 [Release 0.1.30](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.30)
 
+## Important : activer explicitement les mesures supplémentaires {#enable-device-readings}
+
+::: warning Important : activer explicitement les mesures supplémentaires
+**Une étiquette seule n’active pas les mesures supplémentaires.** Dans **Transmission et TLS**, cochez **« Inclure automatiquement les mesures et valeurs de batterie du même appareil »** (interface allemande : **„Zugehörige Mess- und Batteriewerte desselben Geräts automatisch einbeziehen“**), puis cliquez sur **« Enregistrer et connecter »**. Sans cette case, l’énergie, la tension, le courant et la puissance ne sont pas automatiquement ajoutés à l’interrupteur étiqueté. Les valeurs sélectionnées manuellement restent indépendantes de cette option.
+:::
+
+Seuls les capteurs compatibles, activés dans HA et associés au même appareil HA sont inclus, s’ils existent. Aucune mesure absente de l’appareil n’est créée. **« Vérifier les mesures associées »** indique la détection et les motifs d’exclusion. Les états de commande sont prioritaires ; les mesures peuvent suivre avec un délai.
+
+## Pour VIS 2 en particulier : le script JavaScript ioBroker {#javascript-vis2-helper}
+
+::: tip Pour VIS 2 en particulier : le script JavaScript ioBroker
+Le **JavaScript fourni s’exécute dans l’adaptateur JavaScript ioBroker, pas dans Home Assistant**. Il crée des points virtuels sous `0_userdata.0.ugso_mqtt` : **un point par valeur pour l’affichage et la commande**, même si MQTT utilise des topics `state` et `set` séparés. Les interrupteurs et valeurs de lampe compatibles disposent du canal de commande approprié ; les mesures restent en lecture seule. Les métadonnées HA adaptées déterminent les types, unités et rôles non ambigus. Une commande n’est confirmée qu’après un véritable retour HA.
+
+**Vérifiez d’abord l’aperçu, puis choisissez `mode: 'apply'`.** L’aperçu crée uniquement les dossiers de base/points de sauvegarde manquants du script ; les points VIS-2 virtuels sont créés en mode application. **setObject** doit être autorisé dans les réglages de l’adaptateur pour leur création. Les valeurs existantes et rôles définis manuellement restent protégés. L’application HA est en **0.1.30**, le script actuel reste en **0.1.27** : cette différence est volontaire. Le transfert MQTT seul fonctionne aussi sans le script.
+:::
+
 ## Nouveauté 0.1.30 : identifiants repliables
 
 La section **Identifiants** dispose désormais d’un bouton pour la déplier ou la replier, également utilisable au clavier. Si le broker est configuré, l’adresse IP, le port, le nom d’utilisateur et le mot de passe restent repliés après chargement et enregistrement. Si des champs obligatoires manquent, la section s’ouvre pour les corriger. **Transmission et TLS**, **Enregistrer et connecter** et **Valeurs actuellement transmises** restent visibles. Les réglages et identifiants ne sont pas modifiés. La priorité de la version 0.1.29 et le script 0.1.27 sont conservés. L’utilisateur a confirmé le bon fonctionnement du retour de commande avec un délai d’environ une demi-seconde. La lampe Zigbee a également été testée avec succès : le retour d’état fonctionne et la luminosité suit HA à 100 %.

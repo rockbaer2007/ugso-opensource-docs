@@ -6989,9 +6989,9 @@
         "de": {
           "path": "projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "fbad64c69f11bf4c2546a5ec5603035486de124b2c0850abeeea14fb9250046a",
-          "words": 2894,
-          "headings": 18,
+          "sha256": "d6ce1098ef9eb09006c0351898505d6db816602163b750f14a024aef6bee5115",
+          "words": 3160,
+          "headings": 20,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7017,9 +7017,9 @@
         "en": {
           "path": "en/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "92ca3f2e288d3cc53deac9f6152769ded9a9d284329ca74321b6d599d79cda0f",
-          "words": 2936,
-          "headings": 18,
+          "sha256": "173a20f51aa1f0eec27ef63239f903d721eb17106369fd1c876b7aa99015f284",
+          "words": 3223,
+          "headings": 20,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7052,9 +7052,9 @@
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "f8b5691db6a53f93f8b327c40acb07c9b93e80173a143d7a87d3feae23d67bd3",
-          "words": 3827,
-          "headings": 18,
+          "sha256": "b369b1d09d501d08bb19e3f7f12d4710779576306c19b7a254d574bcf01d9801",
+          "words": 4157,
+          "headings": 20,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7092,9 +7092,9 @@
         "de": {
           "path": "projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "05b030c63d03704cd079c6fd2d92503c136ccf9349c35786809db85f2a1d4990",
-          "words": 2603,
-          "headings": 14,
+          "sha256": "b1de033d9f809864f480bf17859c30c2e918b2a91c4620fbb377798dfa6c1312",
+          "words": 2869,
+          "headings": 16,
           "examples": 1,
           "versions": [
             "0.1.24",
@@ -7111,9 +7111,9 @@
         "en": {
           "path": "en/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "50770c2b08ed7688a00863133778913cfef9cfe6a6aab597708a0234852777c5",
-          "words": 2648,
-          "headings": 14,
+          "sha256": "5940be906a170873db2a1f85d9944f71e6709538e1d01712cf4e6a76a5b807e4",
+          "words": 2935,
+          "headings": 16,
           "examples": 1,
           "versions": [
             "0.1.24",
@@ -7137,9 +7137,9 @@
         "fr": {
           "path": "fr/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "ad8b5e98a14b470733d972e60ba39608084864be9e98a00da357d3cd0f82b15b",
-          "words": 3023,
-          "headings": 14,
+          "sha256": "69bde1c96fb64e762339b48219467dbee87701ea6cddaccda4321ff437a8eed4",
+          "words": 3353,
+          "headings": 16,
           "examples": 1,
           "versions": [
             "0.1.24",
