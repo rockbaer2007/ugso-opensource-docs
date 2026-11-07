@@ -3,11 +3,20 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.17 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.18 {#mqtt-client-0-1-16}
+
+Depuis la version **0.1.18**, chaque ligne de la fenêtre d’un appareil distingue
+le **nom** sur la première ligne, l’**identifiant de l’entité** sur la deuxième,
+puis le **type cible et le nombre d’attributs** sur la troisième. Les noms et
+identifiants longs passent à la ligne ; l’état actuel reste à droite. Cette
+présentation est conservée après une modification de la sélection. Elle a été
+vérifiée localement sur des largeurs de 1300 et 390 pixels. La mise à jour conserve
+les paramètres, les identifiants de connexion et les transmissions sélectionnées.
+[Version 0.1.18](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.18)
 
 Le client MQTT transmet des appareils, des états et des attributs sélectionnés depuis Home Assistant vers un broker MQTT externe, comme par exemple l'adaptateur MQTT d'ioBroker. Au lieu de répliquer toutes les entités HA, vous sélectionnez vous-même les valeurs dont vous avez besoin. Le broker HA existant demeure en place. L'application lit les données directement depuis HA ; il ne s'agit pas d'un pont entre brokers (bridge).
 
-[Code source et référence de configuration](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client) · [Documentation en anglais](/fr/projects/mqtt-client/)
+[Code source et référence de configuration](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/mqtt_client) · [Documentation en anglais](/en/projects/mqtt-client/)
 
 ## Configuration et sélection {#einrichtung-und-auswahl}
 

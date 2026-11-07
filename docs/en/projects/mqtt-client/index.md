@@ -3,7 +3,14 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.17 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.18 {#mqtt-client-0-1-16}
+
+Since **0.1.18**, device popup rows separate the **name** on the first line,
+**entity ID** on the second, and **target type with attribute count** on the third.
+Long names and IDs wrap; the current state remains on the right. This separation
+is preserved after selection changes. The layout was checked locally at widths
+of 1300 and 390 pixels. Settings, credentials and selected transmissions are
+preserved during the update. [Release 0.1.18](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.18)
 
 MQTT-Client sends selected Home Assistant devices, states and attributes to an external MQTT broker, such as ioBroker's MQTT adapter. Choose the values you need instead of mirroring the entire HA inventory. The existing HA broker remains in place. The app reads HA directly; it is not a broker bridge.
 
