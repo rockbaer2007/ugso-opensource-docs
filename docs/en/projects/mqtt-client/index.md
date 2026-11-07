@@ -3,11 +3,15 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.29 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.30 {#mqtt-client-0-1-16}
 
-Forward selected HA states and attributes to an external MQTT broker. Version 0.1.29 prioritizes control feedback and adds a consistency check against HA. Install the HA app update; helper 0.1.27 can stay.
+Forward selected HA states and attributes to an external MQTT broker. Version 0.1.30 prioritizes control feedback and adds a consistency check against HA. Install the HA app update; helper 0.1.27 can stay.
 
-[Release 0.1.29](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.29)
+[Release 0.1.30](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.30)
+
+## New in 0.1.30: collapsible credentials
+
+**Credentials** now has a dedicated expand/collapse button with keyboard support. With a configured broker, IP, port, username and password remain collapsed after loading and saving. Missing required credentials open the section for correction. **Transmission and TLS**, **Save and connect** and **Currently transmitted values** stay visible. Settings and credentials are not changed. The 0.1.29 priority logic and helper 0.1.27 are preserved. The user confirmed successful control feedback with a delay of approximately half a second. The Zigbee light was also tested successfully: feedback works and brightness follows HA to 100%.
 
 ## New in 0.1.29: control states before measurements
 

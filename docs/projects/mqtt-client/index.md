@@ -3,11 +3,15 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.29 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.30 {#mqtt-client-0-1-16}
 
-Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. Version 0.1.29 priorisiert Schalt-Rückmeldungen und ergänzt einen Kontrollabgleich mit HA. Die Korrektur wird als HA-App installiert; Helfer 0.1.27 kann bleiben.
+Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. Version 0.1.30 priorisiert Schalt-Rückmeldungen und ergänzt einen Kontrollabgleich mit HA. Die Korrektur wird als HA-App installiert; Helfer 0.1.27 kann bleiben.
 
-[Release 0.1.29](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.29)
+[Release 0.1.30](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.30)
+
+## Neu in 0.1.30: Zugangsdaten einklappen
+
+**Zugangsdaten** besitzt jetzt eine eigene Auf-/Zuklapp-Schaltfläche, auch per Tastatur bedienbar. Bei vorhandenem Broker bleiben IP, Port, Benutzername und Passwort nach Laden und Speichern eingeklappt. Fehlen Pflichtangaben, wird der Bereich zur Eingabe geöffnet. **Übertragung und TLS**, **Speichern und verbinden** und **Aktuell übertragene Werte** bleiben sichtbar. Einstellungen und Zugangsdaten werden nicht verändert. Die Priorisierung aus 0.1.29 und Helfer 0.1.27 bleiben erhalten. Der Nutzer hat die Schalt-Rückmeldung mit ungefähr einer halben Sekunde Verzögerung als erfolgreich bestätigt. Auch die Zigbee-Lampe wurde erfolgreich geprüft: Rückmeldung funktioniert, die Helligkeit folgt HA auf 100 %.
 
 ## Neu in 0.1.29: Schaltwerte vor Messwerten
 

@@ -3,11 +3,15 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.29 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.30 {#mqtt-client-0-1-16}
 
-Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. La version 0.1.29 donne la priorité aux retours de commande et ajoute un contrôle des états HA. Installez la mise à jour de l’application HA ; le script 0.1.27 peut rester.
+Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. La version 0.1.30 donne la priorité aux retours de commande et ajoute un contrôle des états HA. Installez la mise à jour de l’application HA ; le script 0.1.27 peut rester.
 
-[Release 0.1.29](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.29)
+[Release 0.1.30](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.30)
+
+## Nouveauté 0.1.30 : identifiants repliables
+
+La section **Identifiants** dispose désormais d’un bouton pour la déplier ou la replier, également utilisable au clavier. Si le broker est configuré, l’adresse IP, le port, le nom d’utilisateur et le mot de passe restent repliés après chargement et enregistrement. Si des champs obligatoires manquent, la section s’ouvre pour les corriger. **Transmission et TLS**, **Enregistrer et connecter** et **Valeurs actuellement transmises** restent visibles. Les réglages et identifiants ne sont pas modifiés. La priorité de la version 0.1.29 et le script 0.1.27 sont conservés. L’utilisateur a confirmé le bon fonctionnement du retour de commande avec un délai d’environ une demi-seconde. La lampe Zigbee a également été testée avec succès : le retour d’état fonctionne et la luminosité suit HA à 100 %.
 
 ## Nouveauté 0.1.29 : états de commande avant mesures
 
