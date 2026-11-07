@@ -13,11 +13,33 @@ Diese Seite gibt nur einen kurzen Einstieg. Die vollständige Beschreibung aller
 
 ## Home Assistant per MQTT mit ioBroker und VIS 2 verbinden {#mqtt-vis2-helper}
 
-Dieses eigene UGSo-Beispiel ergänzt den Blockly-Einstieg: Der **MQTT-Client für Home Assistant** überträgt ausgewählte Entitäten an einen externen MQTT-Broker. Der hier gezeigte **ioBroker-JavaScript-Helfer 0.1.33** bereitet diese Werte für VIS 2 auf und bietet eine wählbare flache Struktur mit kurzen Namen. Für die neue Option den vollständigen Helfer ersetzen und eigene Einstellungen übernehmen.
+Dieses eigene UGSo-Beispiel ergänzt den Blockly-Einstieg: Der **MQTT-Client für Home Assistant** überträgt ausgewählte Entitäten an einen externen MQTT-Broker. Der hier gezeigte **ioBroker-JavaScript-Helfer 0.1.34** bereitet diese Werte für VIS 2 auf und bietet eine wählbare flache Struktur mit kurzen Namen. Für die neue Option den vollständigen Helfer ersetzen und eigene Einstellungen übernehmen.
 
 ::: warning JavaScript, kein Blockly-Import
 Das vollständige Skript wird im **ioBroker-JavaScript-Adapter** als JavaScript eingefügt. Es gehört weder in Home Assistant noch in den Blockly-XML-Import. Die vorhandenen Blockly-Beispiele weiter unten bleiben davon unabhängig.
 :::
+
+### Neu in 0.1.34: flache MQTT-Pfade nur für neue Entitäten {#mqtt-layout-0134}
+
+Unter **Übertragung und TLS → MQTT-Struktur für neue Entitäten** kann **Flach mit kurzen Namen** gewählt werden. Standard bleibt die bisherige Struktur. Danach **Speichern und verbinden**. Die Einstellung gilt für erstmals ausgewählte manuelle Entitäten und neue Label-Mitglieder, einschließlich optionaler Gerätemesswerte.
+
+Bereits bekannte Entitäten behalten ihre bisherigen Pfade. Die Zuordnung wird dauerhaft in `/data/mqtt-routes.json` gespeichert und ist in der exportierten Einstellungssicherung enthalten. Auch nach Entfernen und erneutem Auswählen eines Labels, Umbenennen, Neustart oder Update wird derselbe Pfad verwendet. Beim ersten Upgrade werden vorhandene Auswahlen und erfasste Topics als Bestand übernommen; die bestehende Label-Auswahl wird beim ersten erfolgreichen Abgleich gesichert. Diese Datei nicht löschen. Eine Rückstellung auf die bisherige Struktur migriert keine bereits zugeordneten Entitäten.
+
+Beispiel für neue flache MQTT-Topics:
+
+```text
+ha_external/geraet/schalter
+ha_external/geraet/schalter_set
+ha_external/geraet/schalter_attribute/device_class
+ha_external/geraet/energie
+ha_external/geraet/leistung
+ha_external/geraet/licht_brightness
+ha_external/geraet/licht_brightness_set
+```
+
+Alte Topics wie `ha_external/geraet/switch/state` und `…/switch/set` bleiben parallel gültig. Vergebene kurze Namen werden bei Kollisionen eindeutig ergänzt. Vorhandene Datenpunkte, Werte, Aliase und VIS-2-Verknüpfungen werden weder umbenannt noch gelöscht.
+
+**Vor Aktivierung den vollständigen JavaScript-Helfer 0.1.34 installieren und eigene Einstellungen übernehmen.** Er liest beide MQTT-Strukturen anhand des übertragenen Auswahlkatalogs mit exakten Status- und Rückkanalpfaden. Erst Vorschau prüfen, dann `mode: 'apply'`. Ältere Helfer erkennen die neuen flachen MQTT-Pfade nicht. `virtualLayout: 'flat'` ist davon unabhängig: Diese Helferoption bestimmt nur die Darstellung unter `0_userdata.0.ugso_mqtt`. Die bisherigen manuellen Rollen und Verknüpfungen bleiben geschützt.
 
 ### Wozu ist der Helfer gedacht? {#mqtt-helper-purpose}
 
@@ -61,7 +83,7 @@ Bei bereits vorhandenem Skript die eigenen Einstellungen übernehmen. `restore` 
 
 ### Wählbare flache Struktur mit kurzen Namen {#mqtt-helper-flat-layout}
 
-Im **vollständigen Helfer 0.1.33** kann im Einstellungsblock `virtualLayout: 'flat'` gewählt werden. Standard bleibt `virtualLayout: 'nested'`; fehlt die neue Einstellung in übernommenen Optionen, gilt ebenfalls die bisherige Struktur. Prüfen Sie zuerst die Vorschau und wechseln Sie danach zu `mode: 'apply'`.
+Im **vollständigen Helfer 0.1.34** kann im Einstellungsblock `virtualLayout: 'flat'` gewählt werden. Standard bleibt `virtualLayout: 'nested'`; fehlt die neue Einstellung in übernommenen Optionen, gilt ebenfalls die bisherige Struktur. Prüfen Sie zuerst die Vorschau und wechseln Sie danach zu `mode: 'apply'`.
 
 ```text
 0_userdata.0.ugso_mqtt.pc_tv_wohnzimmer
@@ -83,13 +105,13 @@ MQTT-Objekte, Topic-Pfade, Werte und manuelle Rollen bleiben unverändert. Kann 
 
 ### Vollständiges Skript mit Kopierbutton und Download {#mqtt-helper-code}
 
-<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.33.js" download>JavaScript-Helfer 0.1.33 herunterladen (.js)</a>
+<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.34.js" download>JavaScript-Helfer 0.1.34 herunterladen (.js)</a>
 
 Der Kopierbutton rechts oben im Codefeld übernimmt das **gesamte Skript**. Codefeld und Download verwenden dieselbe unveränderte Datei; sie enthält keine persönlichen Zugangsdaten. Die Pfade und den Modus anschließend für die eigene Installation prüfen.
 
 <div class="mqtt-helper-code">
 
-<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.33.js
+<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.34.js
 
 </div>
 

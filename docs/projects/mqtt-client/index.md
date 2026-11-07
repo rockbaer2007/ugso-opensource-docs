@@ -3,11 +3,35 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.33 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.34 {#mqtt-client-0-1-16}
 
-Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. MQTT-Client und JavaScript-Helfer 0.1.33 ergänzen eine wählbare flache VIS-2-Struktur mit kurzen Namen. Für diese Option muss der vollständige Helfer im ioBroker-JavaScript-Adapter ersetzt werden; ein HA-App-Update allein ersetzt das dort gespeicherte Skript nicht.
+Ausgewählte HA-Zustände und Attribute gezielt an einen externen MQTT-Broker übertragen. MQTT-Client und JavaScript-Helfer 0.1.34 ergänzen eine wählbare flache VIS-2-Struktur mit kurzen Namen. Für diese Option muss der vollständige Helfer im ioBroker-JavaScript-Adapter ersetzt werden; ein HA-App-Update allein ersetzt das dort gespeicherte Skript nicht.
 
-[Release 0.1.33](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.33)
+[Release 0.1.34](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.34)
+
+
+## Neu in 0.1.34: flache MQTT-Pfade nur für neue Entitäten {#mqtt-layout-0134}
+
+Unter **Übertragung und TLS → MQTT-Struktur für neue Entitäten** kann **Flach mit kurzen Namen** gewählt werden. Standard bleibt die bisherige Struktur. Danach **Speichern und verbinden**. Die Einstellung gilt für erstmals ausgewählte manuelle Entitäten und neue Label-Mitglieder, einschließlich optionaler Gerätemesswerte.
+
+Bereits bekannte Entitäten behalten ihre bisherigen Pfade. Die Zuordnung wird dauerhaft in `/data/mqtt-routes.json` gespeichert und ist in der exportierten Einstellungssicherung enthalten. Auch nach Entfernen und erneutem Auswählen eines Labels, Umbenennen, Neustart oder Update wird derselbe Pfad verwendet. Beim ersten Upgrade werden vorhandene Auswahlen und erfasste Topics als Bestand übernommen; die bestehende Label-Auswahl wird beim ersten erfolgreichen Abgleich gesichert. Diese Datei nicht löschen. Eine Rückstellung auf die bisherige Struktur migriert keine bereits zugeordneten Entitäten.
+
+Beispiel für neue flache MQTT-Topics:
+
+```text
+ha_external/geraet/schalter
+ha_external/geraet/schalter_set
+ha_external/geraet/schalter_attribute/device_class
+ha_external/geraet/energie
+ha_external/geraet/leistung
+ha_external/geraet/licht_brightness
+ha_external/geraet/licht_brightness_set
+```
+
+Alte Topics wie `ha_external/geraet/switch/state` und `…/switch/set` bleiben parallel gültig. Vergebene kurze Namen werden bei Kollisionen eindeutig ergänzt. Vorhandene Datenpunkte, Werte, Aliase und VIS-2-Verknüpfungen werden weder umbenannt noch gelöscht.
+
+**Vor Aktivierung den vollständigen JavaScript-Helfer 0.1.34 installieren und eigene Einstellungen übernehmen.** Er liest beide MQTT-Strukturen anhand des übertragenen Auswahlkatalogs mit exakten Status- und Rückkanalpfaden. Erst Vorschau prüfen, dann `mode: 'apply'`. Ältere Helfer erkennen die neuen flachen MQTT-Pfade nicht. `virtualLayout: 'flat'` ist davon unabhängig: Diese Helferoption bestimmt nur die Darstellung unter `0_userdata.0.ugso_mqtt`. Die bisherigen manuellen Rollen und Verknüpfungen bleiben geschützt.
+
 
 ## Wichtig: Zusätzliche Gerätemesswerte ausdrücklich aktivieren {#enable-device-readings}
 

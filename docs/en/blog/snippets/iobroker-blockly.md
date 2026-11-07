@@ -16,11 +16,33 @@ blocks and more examples are available in the official ioBroker documentation.
 
 ## Connect Home Assistant to ioBroker and VIS 2 over MQTT {#mqtt-vis2-helper}
 
-This original UGSo example supplements the Blockly introduction: the **MQTT-Client for Home Assistant** forwards selected entities to an external MQTT broker. The **ioBroker JavaScript helper 0.1.33** shown here prepares them for VIS 2 and offers an optional flat layout with short names. Replace the complete helper and retain your settings to use the new option.
+This original UGSo example supplements the Blockly introduction: the **MQTT-Client for Home Assistant** forwards selected entities to an external MQTT broker. The **ioBroker JavaScript helper 0.1.34** shown here prepares them for VIS 2 and offers an optional flat layout with short names. Replace the complete helper and retain your settings to use the new option.
 
 ::: warning JavaScript, not a Blockly import
 Paste the complete script into the **ioBroker JavaScript adapter** as JavaScript. It does not belong in Home Assistant or the Blockly XML importer. The existing Blockly examples below remain independent.
 :::
+
+### New in 0.1.34: flat MQTT paths for new entities only {#mqtt-layout-0134}
+
+Under **Transmission and TLS → MQTT structure for new entities**, select **Flat with short names** and **Save and connect**. The existing structure remains the default. This preference applies to manually selected entities and label members first encountered afterwards, including optional device measurements.
+
+Known entities keep their existing paths. Assignments persist in `/data/mqtt-routes.json` and are included in exported settings backups. Removing and reselecting a label, renaming, restarting or updating reuses the assigned path. On the first upgrade, existing selections and recorded topics are preserved; the existing label selection is pinned during its first successful reconciliation. Do not delete this file. Changing the preference back does not migrate previously assigned entities.
+
+Example new flat MQTT topics:
+
+```text
+ha_external/geraet/schalter
+ha_external/geraet/schalter_set
+ha_external/geraet/schalter_attribute/device_class
+ha_external/geraet/energie
+ha_external/geraet/leistung
+ha_external/geraet/licht_brightness
+ha_external/geraet/licht_brightness_set
+```
+
+Existing topics such as `ha_external/geraet/switch/state` and `…/switch/set` remain valid alongside them. Short-name collisions receive unique suffixes. Existing points, values, aliases and VIS-2 references are neither renamed nor removed.
+
+**Before enabling flat MQTT paths, replace the complete JavaScript helper with 0.1.34 and retain your settings.** It reads both MQTT structures from the published selection catalog with exact state and command paths. Review preview first, then choose `mode: 'apply'`. Older helpers cannot discover new flat MQTT paths. The independent helper option `virtualLayout: 'flat'` only controls the layout below `0_userdata.0.ugso_mqtt`. Existing manual roles and references remain protected.
 
 ### What does the helper do? {#mqtt-helper-purpose}
 
@@ -64,7 +86,7 @@ When replacing an existing script, retain your settings. `restore` does not rest
 
 ### Optional flat layout with short names {#mqtt-helper-flat-layout}
 
-In the **complete helper 0.1.33**, select `virtualLayout: 'flat'` in the settings block. The default remains `virtualLayout: 'nested'`; missing settings in existing configurations also mean the original layout. Review preview first and then switch to `mode: 'apply'`.
+In the **complete helper 0.1.34**, select `virtualLayout: 'flat'` in the settings block. The default remains `virtualLayout: 'nested'`; missing settings in existing configurations also mean the original layout. Review preview first and then switch to `mode: 'apply'`.
 
 ```text
 0_userdata.0.ugso_mqtt.pc_tv_wohnzimmer
@@ -86,13 +108,13 @@ MQTT objects, topic paths, values and manual roles remain unchanged. If switchin
 
 ### Complete script with copy button and download {#mqtt-helper-code}
 
-<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.33.js" download>Download JavaScript helper 0.1.33 (.js)</a>
+<a href="/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.34.js" download>Download JavaScript helper 0.1.34 (.js)</a>
 
 The copy button at the top right of the code block copies the **entire script**. The code block and download use the same unchanged file, without personal credentials. Review paths and mode for your installation afterwards.
 
 <div class="mqtt-helper-code">
 
-<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.33.js
+<<< @/public/downloads/mqtt-client/ugso-mqtt-role-mapper-0.1.34.js
 
 </div>
 

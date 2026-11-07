@@ -3,11 +3,35 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.33 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.34 {#mqtt-client-0-1-16}
 
-Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. Le MQTT-Client et le script JavaScript 0.1.33 ajoutent une structure VIS-2 plate facultative avec noms courts. Cette option nécessite de remplacer le script complet dans l’adaptateur JavaScript ioBroker ; la mise à jour de l’application HA seule ne remplace pas le script enregistré dans ioBroker.
+Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. Le MQTT-Client et le script JavaScript 0.1.34 ajoutent une structure VIS-2 plate facultative avec noms courts. Cette option nécessite de remplacer le script complet dans l’adaptateur JavaScript ioBroker ; la mise à jour de l’application HA seule ne remplace pas le script enregistré dans ioBroker.
 
-[Release 0.1.33](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.33)
+[Release 0.1.34](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.34)
+
+
+## Nouveauté 0.1.34 : chemins MQTT plats pour les nouvelles entités uniquement {#mqtt-layout-0134}
+
+Dans **Transmission et TLS → Structure MQTT des nouvelles entités**, choisissez **Plate avec noms courts**, puis **Enregistrer et connecter**. La structure existante reste le choix par défaut. Ce réglage concerne les entités manuelles et les membres d’un label rencontrés pour la première fois ensuite, y compris les mesures facultatives du même appareil.
+
+Les entités connues conservent leurs chemins. Les affectations sont enregistrées durablement dans `/data/mqtt-routes.json` et incluses dans la sauvegarde exportée des réglages. Retirer puis resélectionner un label, renommer, redémarrer ou mettre à jour réutilise le chemin attribué. Lors de la première mise à jour, les sélections existantes et les topics enregistrés sont conservés ; la sélection existante du label est fixée au premier rapprochement réussi. Ne supprimez pas ce fichier. Revenir au réglage précédent ne migre pas les entités déjà affectées.
+
+Exemples de nouveaux topics MQTT plats :
+
+```text
+ha_external/geraet/schalter
+ha_external/geraet/schalter_set
+ha_external/geraet/schalter_attribute/device_class
+ha_external/geraet/energie
+ha_external/geraet/leistung
+ha_external/geraet/licht_brightness
+ha_external/geraet/licht_brightness_set
+```
+
+Les anciens topics comme `ha_external/geraet/switch/state` et `…/switch/set` restent valides en parallèle. Les noms courts en conflit reçoivent un suffixe unique. Les points, valeurs, alias et références VIS-2 existants ne sont ni renommés ni supprimés.
+
+**Avant d’activer les chemins MQTT plats, remplacez le script JavaScript complet par la version 0.1.34 en conservant vos réglages.** Il lit les deux structures grâce au catalogue transmis, qui indique les chemins exacts des états et commandes. Vérifiez la prévisualisation, puis choisissez `mode: 'apply'`. Les anciens scripts ne reconnaissent pas les nouveaux chemins MQTT plats. L’option indépendante du script `virtualLayout: 'flat'` détermine uniquement la présentation sous `0_userdata.0.ugso_mqtt`. Les rôles manuels et références existants restent protégés.
+
 
 ## Important : activer explicitement les mesures supplémentaires {#enable-device-readings}
 

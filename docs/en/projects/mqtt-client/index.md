@@ -3,11 +3,35 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.33 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.34 {#mqtt-client-0-1-16}
 
-Forward selected HA states and attributes to an external MQTT broker. MQTT-Client and JavaScript helper 0.1.33 add an optional flat VIS-2 layout with short names. This option requires replacing the complete helper in the ioBroker JavaScript adapter; updating the HA app alone does not replace the script stored there.
+Forward selected HA states and attributes to an external MQTT broker. MQTT-Client and JavaScript helper 0.1.34 add an optional flat VIS-2 layout with short names. This option requires replacing the complete helper in the ioBroker JavaScript adapter; updating the HA app alone does not replace the script stored there.
 
-[Release 0.1.33](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.33)
+[Release 0.1.34](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.34)
+
+
+## New in 0.1.34: flat MQTT paths for new entities only {#mqtt-layout-0134}
+
+Under **Transmission and TLS → MQTT structure for new entities**, select **Flat with short names** and **Save and connect**. The existing structure remains the default. This preference applies to manually selected entities and label members first encountered afterwards, including optional device measurements.
+
+Known entities keep their existing paths. Assignments persist in `/data/mqtt-routes.json` and are included in exported settings backups. Removing and reselecting a label, renaming, restarting or updating reuses the assigned path. On the first upgrade, existing selections and recorded topics are preserved; the existing label selection is pinned during its first successful reconciliation. Do not delete this file. Changing the preference back does not migrate previously assigned entities.
+
+Example new flat MQTT topics:
+
+```text
+ha_external/geraet/schalter
+ha_external/geraet/schalter_set
+ha_external/geraet/schalter_attribute/device_class
+ha_external/geraet/energie
+ha_external/geraet/leistung
+ha_external/geraet/licht_brightness
+ha_external/geraet/licht_brightness_set
+```
+
+Existing topics such as `ha_external/geraet/switch/state` and `…/switch/set` remain valid alongside them. Short-name collisions receive unique suffixes. Existing points, values, aliases and VIS-2 references are neither renamed nor removed.
+
+**Before enabling flat MQTT paths, replace the complete JavaScript helper with 0.1.34 and retain your settings.** It reads both MQTT structures from the published selection catalog with exact state and command paths. Review preview first, then choose `mode: 'apply'`. Older helpers cannot discover new flat MQTT paths. The independent helper option `virtualLayout: 'flat'` only controls the layout below `0_userdata.0.ugso_mqtt`. Existing manual roles and references remain protected.
+
 
 ## Important: explicitly enable additional device measurements {#enable-device-readings}
 
