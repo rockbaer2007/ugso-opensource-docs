@@ -23,7 +23,7 @@ UI eXtension comprend [UIX Styling](./using/index.md), [UIX Forge](./forge/index
 
 ## Nouveautés de UIX 9.0.0
 
-- Les [raccourcis personnalisés de barre latérale](./extras/custom-sidebar-panels) ouvrent des pages Home Assistant et des sites externes, y compris dans un nouvel onglet.
+- Les [raccourcis personnalisés de barre latérale](./extras/custom-sidebar-panels) ouvrent des pages Home Assistant et des sites externes. L’option d’onglet de bureau dépend de la version, de la destination et du client ; le guide détaille les restrictions actuelles et le comportement de Companion.
 - L’[éditeur visuel Forge](./forge/forge#visual-editor-cards-and-badges) prend en charge les cartes et les badges. `element_base` conserve la configuration native et ses modèles.
 - Les [délais des popovers](./extras/uix-actions#popover) ferment automatiquement le contenu affiché.
 

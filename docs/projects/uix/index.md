@@ -35,7 +35,7 @@ UIX besteht aus drei großen Bereichen:
 
 ## Neu in UIX 9.0.0
 
-- [Eigene Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels) können HA-Seiten und externe Webseiten öffnen, auch in einem neuen Tab.
+- [Eigene Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels) öffnen HA-Seiten und externe Webseiten. Die Desktop-Tab-Option unterscheidet sich je nach Version, Ziel und Client; die Anleitung beschreibt die aktuellen Einschränkungen und die Companion-App.
 - Der [visuelle Forge-Editor](./forge/forge#visual-editor-cards-and-badges) bearbeitet Karten und Badges. `element_base` erhält die native Konfiguration mit ihren Templates.
 - [Popover-Timeouts](./extras/uix-actions#popover) schließen eingeblendete Inhalte automatisch.
 

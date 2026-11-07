@@ -4,6 +4,16 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+
+## Revue du 7 novembre 2026 : onglets de bureau dans l’aperçu 9.1.0-beta.0
+
+Notifications vérifiées : [1d53592](https://github.com/Lint-Free-Technology/uix/commit/1d53592b241ec8666b34d67056671bb37d1c2a1f) / [e7b5bdd](https://github.com/Lint-Free-Technology/uix/commit/e7b5bdd811a53960e9559c53a354c7855c537286). L’arbre source complet archivé de `dev` comprend **65** pages Markdown canoniques. Seule [Raccourcis personnalisés de barre latérale](./extras/custom-sidebar-panels) a changé de contenu depuis `f63ebbd` ; 64 pages, la navigation et les médias sont inchangés. La comparaison tient compte des différences de fins de ligne.
+
+**Open in new tab (desktop only)** concerne les chemins HA internes dans un navigateur de bureau. Companion conserve la navigation interne ; les URL de sites web n’utilisent pas cette option. Si le navigateur bloque le nouvel onglet, le chemin HA s’ouvre dans l’onglet courant. Ce comportement est explicitement documenté **à partir de 9.1.0-beta.0**. **9.0.0 / HA 2026.11.0 minimum** reste la base stable ; l’aperçu n’est pas présenté comme une version stable.
+
+EN est synchronisé avec la page source modifiée ; DE/FR et leurs vues d’ensemble sont actualisées. Les pages anglaises inchangées conservent leurs anciennes références toujours valides. Les relevés des sources et traductions sont actualisés. Il s’agit d’une revue documentaire, pas d’un nouveau test d’exécution HA.
+
+
 ## Vérification du 5 novembre 2026 avec UIX 9.0.0
 
 Les **65** pages sources canoniques ont été comparées à [`master f63ebbd`](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722). Depuis notre référence `e4a1caa`, **huit pages ont changé** et 57 sont identiques. `dev ef414d9` contient la même documentation, y compris la navigation et les médias. Les notifications `fa4a427`, `5c253f9`, `4768bff`, `f63ebbd` et `99293d1` sont couvertes. Aucune autre différence documentaire n’a été trouvée sur les branches actuelles.

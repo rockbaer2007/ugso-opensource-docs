@@ -8,6 +8,11 @@ Le JavaScript optionnel est fourni avec MQTT-Client **0.1.34** et s’exécute d
 
 ## Nouveauté 0.1.36 : conserver les réglages après les mises à jour {#settings-persistence-0136}
 
+::: tip Test de redémarrage réussi le 7 novembre 2026
+Après avoir de nouveau enregistré les réglages lors du passage à **0.1.36**, l’utilisateur a redémarré l’application MQTT-Client et confirmé : **La case des mesures associées reste cochée et la structure MQTT reste « Plate avec noms courts ».** Le test pratique de redémarrage est donc réussi. Aucun nouveau changement de version n’a été testé ; le test pratique de mise à jour vers la prochaine version reste à effectuer.
+:::
+
+
 **Les réglages enregistrés dans l’application sont désormais conservés lorsque le Supervisor Home Assistant régénère son fichier d’options pendant une mise à jour.** Cela concerne notamment la case des mesures associées, la structure MQTT des nouvelles entités, les autres réglages enregistrés et les identifiants de connexion. L’application les conserve séparément dans son fichier privé `/data/mqtt-settings.json`. Les affectations de chemins MQTT restent dans `/data/mqtt-routes.json` ; les points et références VIS-2 existants ne changent pas.
 
 **Premier passage depuis la version 0.1.35 ou antérieure :** Exportez les réglages dans l’application avant la mise à jour. S’ils ont déjà été réinitialisés lors de ce premier passage, importez ensuite la sauvegarde ou sélectionnez de nouveau les deux options une fois, puis cliquez sur **Enregistrer et connecter**. Les réglages déjà perdus ne peuvent pas être reconstitués de façon fiable ; les mesures supplémentaires ne sont jamais activées sans votre choix.

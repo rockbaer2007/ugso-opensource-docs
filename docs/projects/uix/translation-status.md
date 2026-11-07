@@ -4,6 +4,16 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+
+## Abgleich vom 07.11.2026: Desktop-Tabs in der Vorschau 9.1.0-beta.0
+
+Geprüfte Meldungen: [1d53592](https://github.com/Lint-Free-Technology/uix/commit/1d53592b241ec8666b34d67056671bb37d1c2a1f) / [e7b5bdd](https://github.com/Lint-Free-Technology/uix/commit/e7b5bdd811a53960e9559c53a354c7855c537286). Der vollständige archivierte Quellbaum auf `dev` umfasst **65** kanonische Markdown-Seiten. Gegenüber `f63ebbd` ist nur [Eigene Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels) inhaltlich geändert; 64 Seiten, Navigation und Medien sind unverändert. Unterschiedliche Zeilenenden wurden berücksichtigt.
+
+**Open in new tab (desktop only)** betrifft interne HA-Pfade im Desktop-Browser. In der Companion-App wird innerhalb der App navigiert; externe Webseiten-URLs verwenden die Option nicht. Blockiert der Desktop-Browser den Tab, wird der HA-Pfad im aktuellen Tab geöffnet. Diese neue Beschreibung ist ausdrücklich **ab 9.1.0-beta.0** dokumentiert. **9.0.0 / HA ab 2026.11.0** bleibt die stabile Basis; die Vorschau wird nicht als stabile Freigabe ausgegeben.
+
+EN ist mit der geänderten Originalseite synchronisiert, DE/FR und ihre Übersichten sind angepasst. Unveränderte englische Seiten behalten ihre weiterhin gültigen älteren Quellenhinweise. Quellen- und Übersetzungsmanifeste wurden aktualisiert. Dies ist ein Dokumentationsabgleich, kein neuer HA-Laufzeittest.
+
+
 ## Abgleich vom 05.11.2026 mit UIX 9.0.0
 
 Alle **65** kanonischen Quellseiten wurden mit [`master f63ebbd`](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722) verglichen. Seit unserem Stand `e4a1caa` sind **acht Seiten geändert**, 57 sind unverändert. Gegenprüfung von `dev ef414d9` ergab dieselbe Dokumentation, einschließlich Navigation und Medien. Die Meldungen `fa4a427`, `5c253f9`, `4768bff`, `f63ebbd` und `99293d1` sind damit abgedeckt. Weitere Dokumentationsabweichungen wurden auf den aktuellen Zweigen nicht gefunden.

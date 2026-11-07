@@ -8,6 +8,11 @@ Das optionale JavaScript gehört zu MQTT-Client **0.1.34** und läuft im ioBroke
 
 ## Neu in 0.1.36: Einstellungen nach Updates erhalten {#settings-persistence-0136}
 
+::: tip Erfolgreicher Neustarttest am 07.11.2026
+Der Nutzer hat nach erneutem Speichern der Einstellungen beim Umstieg auf **0.1.36** die MQTT-Client-App neu gestartet und bestätigt: **Der Messwerte-Haken bleibt gesetzt, die MQTT-Struktur bleibt „Flach mit kurzen Namen“.** Damit ist der praktische Neustarttest erfolgreich. Ein weiterer Versionswechsel wurde dabei nicht geprüft; der praktische Update-Test auf die nächste Version steht noch aus.
+:::
+
+
 **Gespeicherte App-Einstellungen bleiben jetzt auch erhalten, wenn der Home-Assistant-Supervisor beim Update seine Optionsdatei neu erzeugt.** Das betrifft insbesondere den Messwerte-Haken und die MQTT-Struktur für neue Entitäten, aber auch die übrigen in der App gespeicherten Einstellungen und Zugangsdaten. Die App sichert sie unabhängig in der privaten Datei `/data/mqtt-settings.json`. Die MQTT-Pfadzuordnungen bleiben weiterhin in `/data/mqtt-routes.json`; vorhandene Datenpunkte und VIS-2-Verknüpfungen werden nicht geändert.
 
 **Einmaliger Umstieg von 0.1.35 oder älter:** Vor dem Update die Einstellungen in der App exportieren. Falls sie beim ersten Wechsel bereits zurückgesetzt wurden, die Sicherung nach dem Update wieder importieren oder die beiden Optionen einmal erneut wählen und **Speichern und verbinden** drücken. Schon verlorene Einstellungen können nicht zuverlässig rekonstruiert werden; zusätzliche Messwerte werden nicht ungefragt aktiviert.

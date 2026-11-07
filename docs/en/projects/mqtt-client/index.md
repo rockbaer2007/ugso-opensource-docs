@@ -17,6 +17,11 @@ Forward selected HA states and attributes to an external MQTT broker. MQTT-Clien
 
 ## New in 0.1.36: retain settings across updates {#settings-persistence-0136}
 
+::: tip Successful restart test on 7 November 2026
+After saving the settings again when moving to **0.1.36**, the user restarted the MQTT-Client app and confirmed: **The related-measurements checkbox stays enabled and the MQTT layout stays “Flat with short names”.** This confirms the practical restart test. It does not test another version change; a practical update test with the next release is still pending.
+:::
+
+
 **Saved app settings now survive the Home Assistant Supervisor regenerating its options file during an update.** This includes the related-measurements checkbox, the MQTT layout for new entities, other saved app settings and credentials. The app stores them independently in its private `/data/mqtt-settings.json` file. MQTT path assignments remain in `/data/mqtt-routes.json`; existing points and VIS-2 references are unchanged.
 
 **One-time upgrade from 0.1.35 or earlier:** Export settings in the app before updating. If they have already been reset during the first upgrade, import that backup afterwards or select both options again once and click **Save and connect**. Already lost settings cannot be reliably reconstructed; additional measurements are never enabled without your selection.

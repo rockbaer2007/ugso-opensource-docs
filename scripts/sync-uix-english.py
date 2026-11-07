@@ -15,9 +15,10 @@ import sys
 import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
-REVISION = 'f63ebbdda5294fe0b9d31d89d4942496ebe55722'
-REVIEWED_AT = '2026-11-05'
-SOURCE_VERSION = '9.0.0'
+REVISION = 'e7b5bdd811a53960e9559c53a354c7855c537286'
+REVIEWED_AT = '2026-11-07'
+SOURCE_VERSION = '9.1.0-beta.0'
+SOURCE_BRANCH = 'dev'
 
 
 def code_hashes(text):
@@ -86,7 +87,7 @@ def convert(text, relative, source_files):
     }
     for heading,anchor in aliases.get(relative.as_posix(),{}).items():
         text=re.sub(r'(?m)^(#{2,6} '+re.escape(heading)+r'[^\n]*)$',lambda m:'<a id="'+anchor+'"></a>\n'+m[1],text)
-    notice = '\n> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **'+SOURCE_VERSION+'**, revision ['+REVISION[:7]+'](https://github.com/Lint-Free-Technology/uix/commit/'+REVISION+'), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.\n\n'
+    notice = '\n> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `'+SOURCE_BRANCH+'` / **'+SOURCE_VERSION+'**, revision ['+REVISION[:7]+'](https://github.com/Lint-Free-Technology/uix/commit/'+REVISION+'), reviewed '+REVIEWED_AT+'. Stable baseline on this site: **9.0.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.\n\n'
     if text.startswith('---\n'):
         end=text.index('\n---',4)+4
         text=text[:end]+'\n'+notice+text[end:].lstrip('\n')

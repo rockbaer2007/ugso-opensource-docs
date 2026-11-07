@@ -4,6 +4,16 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+
+## Review on 7 November 2026: desktop tabs in preview 9.1.0-beta.0
+
+Reviewed notifications: [1d53592](https://github.com/Lint-Free-Technology/uix/commit/1d53592b241ec8666b34d67056671bb37d1c2a1f) / [e7b5bdd](https://github.com/Lint-Free-Technology/uix/commit/e7b5bdd811a53960e9559c53a354c7855c537286). The complete archived `dev` source tree contains **65** canonical Markdown pages. Only [Custom sidebar panels](./extras/custom-sidebar-panels) changed in content since `f63ebbd`; 64 pages, navigation and media are unchanged. Content comparison accounts for different line endings.
+
+**Open in new tab (desktop only)** applies to internal HA paths in desktop browsers. Companion navigates within the app; website URLs do not use this option. If the desktop browser blocks the new tab, the HA path opens in the current tab. This new behavior is explicitly documented **from 9.1.0-beta.0**. **9.0.0 / HA 2026.11.0 or later** remains the stable baseline; the preview is not presented as a stable release.
+
+EN is synchronized with the changed source page; DE/FR and their overviews are updated. Unchanged English pages retain their still-valid older source notices. Source and translation manifests are updated. This is a documentation review, not a new HA runtime test.
+
+
 ## Review of 5 November 2026 against UIX 9.0.0
 
 All **65** canonical source pages were compared with [`master f63ebbd`](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722). Since our recorded `e4a1caa` baseline, **eight pages changed** and 57 remained identical. `dev ef414d9` contains identical documentation, including navigation and media. Notifications `fa4a427`, `5c253f9`, `4768bff`, `f63ebbd` and `99293d1` are covered. No additional documentation differences were found on the current branches.

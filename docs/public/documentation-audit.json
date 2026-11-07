@@ -396,8 +396,8 @@
         "de": {
           "path": "blog/snippets/iobroker-blockly.md",
           "status": "content-present",
-          "sha256": "c4e0ce1b5979aabd66cb348d29124c33ee953d5200112aa463c17392653aa48c",
-          "words": 1931,
+          "sha256": "49f5e88ea14c3c73af473ca34153f728b073a941ec5424e4a2da745f5193614a",
+          "words": 1997,
           "headings": 20,
           "examples": 6,
           "versions": [
@@ -412,8 +412,8 @@
         "en": {
           "path": "en/blog/snippets/iobroker-blockly.md",
           "status": "content-present",
-          "sha256": "fadbb49a8ed6ed66414a34276d24fce610936c5ea86e7caeeef4441544b2e09d",
-          "words": 1961,
+          "sha256": "4a649a5d542f6e2986b11edc3e9ba36fda0f4d6a22e375ef821e03824d7c5292",
+          "words": 2028,
           "headings": 20,
           "examples": 6,
           "versions": [
@@ -435,8 +435,8 @@
         "fr": {
           "path": "fr/blog/snippets/iobroker-blockly.md",
           "status": "content-present",
-          "sha256": "3b8f52c5107821aacc09c86daa85c541c08b41502f7d4d3f970960da33322eab",
-          "words": 2339,
+          "sha256": "b69a5aa69fdbc6bb00dd04058061d2637a70cbd650a196adcc53d7ee3e3ee6af",
+          "words": 2419,
           "headings": 20,
           "examples": 6,
           "versions": [
@@ -7007,8 +7007,8 @@
         "de": {
           "path": "projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "5b87b6ae1540cbb957b0f46e941475882693e24fe07359283c699bc9922802d5",
-          "words": 3994,
+          "sha256": "14297cfb5899b5845406e036ab73466278586be00dc926fbd216948b30220b52",
+          "words": 4060,
           "headings": 25,
           "examples": 2,
           "versions": [
@@ -7041,8 +7041,8 @@
         "en": {
           "path": "en/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "6b21553cb58b90950191e3bdf25c0363369f6c00dbb5401b2f31a48e74059557",
-          "words": 4047,
+          "sha256": "6263254dab0d4c818fbcbeabc9adcf68677ce82886d88b76a7efdd65b6093c36",
+          "words": 4114,
           "headings": 25,
           "examples": 2,
           "versions": [
@@ -7082,8 +7082,8 @@
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "21401ea2c0f0ed7fafd1a7729386d9b35b52a6d7436d8d9862f1e9d0d93372f6",
-          "words": 5137,
+          "sha256": "952639996fff9aa20ad8b46ffa6c960de5746b7f036da8b0b97d0a497311f9e0",
+          "words": 5217,
           "headings": 25,
           "examples": 2,
           "versions": [
@@ -7128,8 +7128,8 @@
         "de": {
           "path": "projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "32d3a99f08a63117245655a694277b5119b8267f427ee69d9e288493eb39d14f",
-          "words": 3663,
+          "sha256": "e1a344d669ea43fb1bc08c3429e26999a5df2279bdf001052408fe863fbb14ac",
+          "words": 3729,
           "headings": 21,
           "examples": 2,
           "versions": [
@@ -7153,8 +7153,8 @@
         "en": {
           "path": "en/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "73cb4e3fd221470d98b8dba7a2334af7b665eec2ff214da9293af73d382012b4",
-          "words": 3717,
+          "sha256": "2a035e15c1e61cfd6cdb1ca8c69dc30efc1fa5d45e3a17e6bafe54d6f2478f20",
+          "words": 3784,
           "headings": 21,
           "examples": 2,
           "versions": [
@@ -7185,8 +7185,8 @@
         "fr": {
           "path": "fr/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "f76d3c5a1847ca0b36192d2c63f701739c7df51442b71c4d49dc87f184324478",
-          "words": 4293,
+          "sha256": "0ceddf989efd1c12491b1ac7748373b2520a9877942ec186eedc7767af31d03c",
+          "words": 4373,
           "headings": 21,
           "examples": 2,
           "versions": [
@@ -8873,26 +8873,28 @@
         "de": {
           "path": "projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "5c33be0e5b281e0643f003a0eb5d0fbbc8fcf4fc575d0659472b3dc00766bbad",
-          "words": 340,
+          "sha256": "cc888996317300670035ca0392b003f1dcd855a33b111a4cd8fb8e38291c703d",
+          "words": 427,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.0.0"
+            "9.0.0",
+            "9.1.0-beta.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "05da7ec73ee708b638d8e7b8955c6b699be8125f2ee38dab9fcf94a6e4cb92cd",
-          "words": 400,
+          "sha256": "ed9084b3eca233636f08a2bc9a67c1c9f5d218d8d059ced97d3aa0710b5873c4",
+          "words": 422,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.0.0"
+            "9.0.0",
+            "9.1.0-beta.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -8906,13 +8908,14 @@
         "fr": {
           "path": "fr/projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "c6482c286a150e5f0a320f765340be5be8e656cacf04cd797c7f4a30ad296f35",
-          "words": 392,
+          "sha256": "80cc8463a054eda40313c0f9da2709fc38558e8438eb58bb5bc850b936c5a945",
+          "words": 496,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.0.0"
+            "9.0.0",
+            "9.1.0-beta.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10988,8 +10991,8 @@
         "de": {
           "path": "projects/uix/index.md",
           "status": "content-present",
-          "sha256": "189dbcf7e5c2fd7eeff784e40b897a06b5630583eeccd5fd8695c4d56cb98bd9",
-          "words": 581,
+          "sha256": "64bf3ec02b47d62fc38f77435eda241fa948250442e7603438ce500e9850c12f",
+          "words": 597,
           "headings": 5,
           "examples": 0,
           "versions": [
@@ -11020,14 +11023,14 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+            "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage."
           }
         },
         "fr": {
           "path": "fr/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "8d6f97c91e4fedb2cb1af113ccb8f31bfcc2957612c1759d3a47ef669882c479",
-          "words": 554,
+          "sha256": "ee40c1129cd40c4571956e7e2e16be273e83ef2dea51950add82d36c54b304ce",
+          "words": 575,
           "headings": 5,
           "examples": 0,
           "versions": [
@@ -11179,9 +11182,9 @@
         "de": {
           "path": "projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "0a9c56dfe38b614a52dadda2d9882c6efbba535485249f0a8ca92296e74bfae4",
-          "words": 2886,
-          "headings": 19,
+          "sha256": "60e42fd80c56cf76d4007d3478853eb8180183149ce68c66ed691e9a74051de1",
+          "words": 3069,
+          "headings": 20,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -11201,16 +11204,17 @@
             "9.0.0-beta.0",
             "9.0.0-beta.2",
             "9.0.0-beta.6",
-            "9.0.0-beta.8"
+            "9.0.0-beta.8",
+            "9.1.0-beta.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "36e33ef16f0667686b217612becf6703fedde0531633c797d618e1b2fccb0ebf",
-          "words": 1390,
-          "headings": 8,
+          "sha256": "846674877888a0b17f68c6108c6bbd88daf99f3ad51fdbafcf5f61ff71dffd3c",
+          "words": 1582,
+          "headings": 9,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -11221,7 +11225,8 @@
             "9.0.0-beta.0",
             "9.0.0-beta.2",
             "9.0.0-beta.6",
-            "9.0.0-beta.8"
+            "9.0.0-beta.8",
+            "9.1.0-beta.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11244,15 +11249,15 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+            "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage."
           }
         },
         "fr": {
           "path": "fr/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "2b6912b917092c0a234e26ba5c14a4c2400b04989ce3373bff0b77e3e63a683e",
-          "words": 2853,
-          "headings": 16,
+          "sha256": "47f3214c6ee6dd3892c8832591964d1d19d8f0e5df1f538b3e5c81f1e530679f",
+          "words": 3070,
+          "headings": 17,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -11269,7 +11274,8 @@
             "9.0.0-beta.0",
             "9.0.0-beta.2",
             "9.0.0-beta.6",
-            "9.0.0-beta.8"
+            "9.0.0-beta.8",
+            "9.1.0-beta.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11286,7 +11292,7 @@
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
-            "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+            "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage."
           }
         }
       }

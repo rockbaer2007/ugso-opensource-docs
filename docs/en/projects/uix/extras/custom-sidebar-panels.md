@@ -2,7 +2,7 @@
 description: Create UIX sidebar links to Home Assistant pages and websites.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **9.0.0**, revision [f63ebbd](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0-beta.0**, revision [e7b5bdd](https://github.com/Lint-Free-Technology/uix/commit/e7b5bdd811a53960e9559c53a354c7855c537286), reviewed 2026-11-07. Stable baseline on this site: **9.0.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Custom sidebar panels
 
@@ -14,10 +14,15 @@ Enable **Admin required** to restrict the sidebar panel to administrator account
 
 Targets can be either a Home Assistant navigation path beginning with `/`, such as `/config/dashboard`, or an absolute `http` or `https` URL. Other URL schemes are not accepted.
 
-Enable **Open in new tab** to open the target in a separate tab. The current Home Assistant tab returns to the page you were viewing. If the browser blocks the new tab, UIX opens the target in the current tab instead. Leave it disabled to open an external website in the current tab; Home Assistant navigation paths continue to use in-app navigation.
+::: info
+Open in new tab (desktop only) available in 9.1.0-beta.0
+
+:::
+
+Enable **Open in new tab (desktop only)** to open a Home Assistant navigation path in a separate tab on desktop browsers. The current Home Assistant tab returns to the page you were viewing. In the Companion app, UIX instead navigates to the path within the app. Website URLs never use this option because they cannot open inside the Companion app.
 
 ::: info New-tab availability
-Opening an external target in a new tab is subject to the browser's popup-blocking policy. UIX attempts to open the tab when the sidebar panel is selected, but cannot guarantee that the browser will permit it. When blocked, UIX opens the target in the current tab instead.
+Opening a Home Assistant path in a new tab is subject to the browser's popup-blocking policy. UIX attempts to open the tab when the sidebar panel is selected, but cannot guarantee that the browser will permit it. When blocked, UIX opens the path in the current tab instead.
 
 :::
 
