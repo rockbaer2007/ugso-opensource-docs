@@ -3,7 +3,21 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.23 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.24 {#mqtt-client-0-1-16}
+
+## Points VIS 2 automatiques depuis 0.1.24
+
+Le script ioBroker combiné crée des points virtuels réunissant retour d’état et
+canal de commande. Il prend en charge les interrupteurs, valeurs Light et autres
+canaux numériques/listes/texte autorisés ; dates et mesures restent en lecture
+seule. Les valeurs MQTT d’origine, paramètres et alias existants sont conservés.
+Aperçu, sauvegarde automatique, contrôle des types/limites et protection contre les
+boucles sont inclus. Les avertissements pour les points optionnels absents sont
+corrigés. Préparé pour les API de l’adaptateur JavaScript **10.4.10** ; pas encore
+de nouvel essai dans une installation réelle.
+
+[Configuration et correspondances](./iobroker-roles.md#vis2) ·
+[Version 0.1.24](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.24)
 
 ## Attribution des rôles ioBroker depuis 0.1.23
 

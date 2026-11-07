@@ -3,7 +3,20 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.23 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.24 {#mqtt-client-0-1-16}
+
+## Automatic VIS-2 states since 0.1.24
+
+The combined ioBroker helper creates virtual states combining feedback and a return
+channel. Supports switches, Light values and other enabled number/select/text
+channels; dates and measurements remain read-only. Original MQTT values, settings
+and existing aliases are preserved. Includes preview, automatic backup, type/limit
+validation and feedback-loop protection. Warnings for missing optional states are
+fixed. Prepared for JavaScript adapter **10.4.10** APIs; not yet newly tested in a
+real installation.
+
+[Setup and mapping table](./iobroker-roles.md#vis2) ·
+[Release 0.1.24](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.24)
 
 ## ioBroker role mapping since 0.1.23
 

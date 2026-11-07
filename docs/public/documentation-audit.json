@@ -6989,9 +6989,9 @@
         "de": {
           "path": "projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "327f8ca2c23aadce38c5c7014b4bd5030aebf7d5a41b307b388dcc3fe7269d7b",
-          "words": 1925,
-          "headings": 12,
+          "sha256": "a29146687ee0a524ced0bde9f0a21c9c8f846f6b3b62835b9f5389ab10bbd932",
+          "words": 2033,
+          "headings": 13,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7002,16 +7002,18 @@
             "0.1.20",
             "0.1.21",
             "0.1.22",
-            "0.1.23"
+            "0.1.23",
+            "0.1.24",
+            "10.4.10"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "9b24aa81673181db9c9be5e1d1c64b2e200f2b1aaade3eb5660ea104b3097efa",
-          "words": 1948,
-          "headings": 12,
+          "sha256": "58dcdfb7d8993ad4e297b02d2a53a1e0eb397a675910984ede0334ea03aaa505",
+          "words": 2056,
+          "headings": 13,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7022,7 +7024,9 @@
             "0.1.20",
             "0.1.21",
             "0.1.22",
-            "0.1.23"
+            "0.1.23",
+            "0.1.24",
+            "10.4.10"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -7036,9 +7040,9 @@
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "49be9146433f95e0133c21bf33b1b66493f04769a9b1a36fa95489f4b7d486d1",
-          "words": 2645,
-          "headings": 12,
+          "sha256": "8bb55066c0626b9139278d6e5c6e5bf199ae5185ce3e8e2cd5ef7694c63b4de8",
+          "words": 2771,
+          "headings": 13,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7049,7 +7053,9 @@
             "0.1.20",
             "0.1.21",
             "0.1.22",
-            "0.1.23"
+            "0.1.23",
+            "0.1.24",
+            "10.4.10"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -7068,24 +7074,26 @@
         "de": {
           "path": "projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "94ee867849b9ba7a660532f8aafde0a4362a49e8c0f9f0e79756a8c05b106267",
-          "words": 1078,
-          "headings": 7,
-          "examples": 0,
+          "sha256": "6bbe6aaf3502c57339e5de8fc28d21a65581046482f4b62cf897ae452602950c",
+          "words": 1532,
+          "headings": 8,
+          "examples": 1,
           "versions": [
-            "0.1.23"
+            "0.1.24",
+            "10.4.10"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "d7eed3561f642d08749b8ffcfb2af1a90aab7c73a1d800a129890cdd541816d4",
-          "words": 1109,
-          "headings": 7,
-          "examples": 0,
+          "sha256": "733004cecb74aac71cc44554f5d5d5c72a5b84de64d12d5f884a1be54f75b324",
+          "words": 1566,
+          "headings": 8,
+          "examples": 1,
           "versions": [
-            "0.1.23"
+            "0.1.24",
+            "10.4.10"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -7099,12 +7107,13 @@
         "fr": {
           "path": "fr/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "8a8f70ba2b9b1d0f94d03346ef454d0d085bf10a4d466633da15e90e5c97bfaa",
-          "words": 1224,
-          "headings": 7,
-          "examples": 0,
+          "sha256": "fd2d269c1b9e60d4468325f23f5eff314919b89abb9b5dcd389bf6b383bf3824",
+          "words": 1739,
+          "headings": 8,
+          "examples": 1,
           "versions": [
-            "0.1.23"
+            "0.1.24",
+            "10.4.10"
           ],
           "unresolved_local_references": [],
           "review_signals": {
