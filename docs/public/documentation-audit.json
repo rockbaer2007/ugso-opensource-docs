@@ -6989,9 +6989,9 @@
         "de": {
           "path": "projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "60e3f22a2d0261de44641f5a563265f9fe9cdded157b9e46c9c49c5315764858",
-          "words": 2348,
-          "headings": 15,
+          "sha256": "eea83c3ef3523be7233cd4b0b8902dfa0a87e68743353b84f3a2604e9654868e",
+          "words": 2514,
+          "headings": 16,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7007,6 +7007,7 @@
             "0.1.25",
             "0.1.26",
             "0.1.27",
+            "0.1.28",
             "10.4.10"
           ],
           "unresolved_local_references": []
@@ -7014,9 +7015,9 @@
         "en": {
           "path": "en/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "6a9f9896e15822d01ad686110f4c2f6513ac7e5030821f8f9ac1029c6cbe8eea",
-          "words": 2359,
-          "headings": 15,
+          "sha256": "30eac8ab4beda248e815dc31d9d65c7672697d8dbc29eb61e79675fcf497b37e",
+          "words": 2527,
+          "headings": 16,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7032,6 +7033,7 @@
             "0.1.25",
             "0.1.26",
             "0.1.27",
+            "0.1.28",
             "10.4.10"
           ],
           "unresolved_local_references": [],
@@ -7046,9 +7048,9 @@
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "c778e2a72f95433d5dcc0695855447fdb2901e23d560aab02fd6492d420880be",
-          "words": 3134,
-          "headings": 15,
+          "sha256": "83a121b1d683a0aa69a8bafe3ae7c025d22057af61aa80e8be4d628d809e6112",
+          "words": 3328,
+          "headings": 16,
           "examples": 1,
           "versions": [
             "0.1.15",
@@ -7064,6 +7066,7 @@
             "0.1.25",
             "0.1.26",
             "0.1.27",
+            "0.1.28",
             "10.4.10"
           ],
           "unresolved_local_references": [],
@@ -7083,15 +7086,16 @@
         "de": {
           "path": "projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "cff07209a6536658cdbbbbc5e02a9d46bd1fd4a9d214a194e424ee2f53a1e737",
-          "words": 2048,
-          "headings": 11,
+          "sha256": "5b1d479499bfd4d559e31992103a5f2531d8450ef0fd8e4d50062ac3f7798d73",
+          "words": 2216,
+          "headings": 12,
           "examples": 1,
           "versions": [
             "0.1.24",
             "0.1.25",
             "0.1.26",
             "0.1.27",
+            "0.1.28",
             "10.4.10"
           ],
           "unresolved_local_references": []
@@ -7099,15 +7103,16 @@
         "en": {
           "path": "en/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "f900b814c02cc9e45e8bdcc8cf48ad80553b7f0f91fd1794a1d0e8ecfb40c811",
-          "words": 2065,
-          "headings": 11,
+          "sha256": "dd1059d189e93ed82427d54ddc9ba954f7bae48883f15b432e12773e887bd4a6",
+          "words": 2235,
+          "headings": 12,
           "examples": 1,
           "versions": [
             "0.1.24",
             "0.1.25",
             "0.1.26",
             "0.1.27",
+            "0.1.28",
             "10.4.10"
           ],
           "unresolved_local_references": [],
@@ -7122,15 +7127,16 @@
         "fr": {
           "path": "fr/projects/mqtt-client/iobroker-roles.md",
           "status": "content-present",
-          "sha256": "66114922683c3b976b5008ec34439673fee8df9d7b1ff3c430af998145e2f5c9",
-          "words": 2324,
-          "headings": 11,
+          "sha256": "0dfcf55fd4f48d547934a0ee4f0e9dda7ed7691796dff29d9a6890cc646f1388",
+          "words": 2520,
+          "headings": 12,
           "examples": 1,
           "versions": [
             "0.1.24",
             "0.1.25",
             "0.1.26",
             "0.1.27",
+            "0.1.28",
             "10.4.10"
           ],
           "unresolved_local_references": [],

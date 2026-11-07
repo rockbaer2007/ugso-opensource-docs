@@ -8,7 +8,11 @@ description: Transmettre en temps réel des valeurs sélectionnées de Home Assi
 **0.1.25 :** Les avertissements d’objets absents du journal réel sont corrigés par
 des contrôles d’existence avant les deux API de lecture. L’aperçu ne crée toujours
 rien ; la création exige l’autorisation d’écriture et le mode Apply.
-[Détails](./iobroker-roles.md#fix-0125) · [Version 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.27)
+[Détails](./iobroker-roles.md#fix-0125) · [Version 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.28)
+
+## Nouveauté 0.1.28 : retours HA sans surcharge d’événements étrangers
+
+Cette correction concerne **l’application MQTT-Client dans Home Assistant** : mettez-la à jour vers 0.1.28 et redémarrez l’application. Le script ioBroker 0.1.27 peut rester inchangé ; son seul remplacement ne corrige pas la réception des événements HA. Avec la sélection par étiquette, seuls les événements des entités sélectionnées et de leurs mesures du même appareil activées sont mis en file. Les événements du reste de HA ne peuvent plus remplir cette file. Après modification des étiquettes ou des affectations d’appareils, le client récupère des états HA récents. Les états en attente avec un ancien `last_updated` sont ignorés après resynchronisation ; les changements normalement ordonnés restent conservés. Le compteur de surcharge est cumulatif depuis le démarrage et signale toujours les débordements réels des événements sélectionnés. Le délai de publication configuré, les identifiants de connexion et les sélections sont conservés ; une première synchronisation importante peut encore durer. Après celle-ci, actionnez un relais non critique dans HA et vérifiez que MQTT et le point virtuel ioBroker suivent rapidement. La confirmation sur le système réel de l’utilisateur reste à faire.
 
 ## Nouveauté 0.1.27 : commandes sans retain
 

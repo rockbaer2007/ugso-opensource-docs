@@ -8,7 +8,11 @@ description: Transfer selected Home Assistant values live over MQTT and control 
 **0.1.25:** Missing-object warnings from the real log are fixed using existence
 checks before both read APIs. Preview still creates nothing; creation requires
 write permission and Apply mode.
-[Details](./iobroker-roles.md#fix-0125) · [Release 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.27)
+[Details](./iobroker-roles.md#fix-0125) · [Release 0.1.25](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.28)
+
+## New in 0.1.28: HA live feedback without unrelated event floods
+
+This fix is in the **MQTT-Client app in Home Assistant**: update it to 0.1.28 and restart the app. The ioBroker helper 0.1.27 can remain unchanged; replacing only that script does not fix HA event reception. Label forwarding now queues events only for selected entities and their enabled same-device readings. Events from the rest of HA cannot fill that queue. When labels or device assignments change, the client fetches fresh HA states. Buffered states with an older `last_updated` are ignored after a resync; normal ordered transitions are preserved. The overload counter is cumulative since app startup and still reports actual selected-event overflows. The configured publish delay, credentials and selections are preserved; a large initial sync may still take longer. After initial sync, toggle a non-critical relay in HA and check that MQTT and the virtual ioBroker state follow promptly. Confirmation on the user's live system is still pending.
 
 ## New in 0.1.27: return channel without retain
 
