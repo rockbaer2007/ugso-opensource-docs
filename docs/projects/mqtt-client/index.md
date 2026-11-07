@@ -3,7 +3,14 @@ title: MQTT-Client
 description: Ausgewählte Home-Assistant-Werte live per MQTT übertragen und gezielt steuern.
 ---
 
-# MQTT-Client 0.1.19 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.20 {#mqtt-client-0-1-16}
+
+**0.1.20:** Die Verbindungseinstellungen sind unter **Zugangsdaten** einklappbar.
+Zur Ersteinrichtung bleibt der Bereich offen. Mit gespeicherter Brokeradresse
+klappt er nach dem Laden und erfolgreichen Speichern automatisch zu. Ein Klick
+auf den Titel öffnet ihn wieder. Speicher- und Fehlermeldungen bleiben sichtbar;
+Einstellungen und Zugangsdaten bleiben erhalten.
+[Release 0.1.20](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.20)
 
 **0.1.19** ergänzt die Zeilentrennung in der Übertragungsliste: Der Name steht
 über der Zusammenfassung aus State, ausgewählten Attributen und Rückbefehl.

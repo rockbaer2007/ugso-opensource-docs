@@ -3,7 +3,14 @@ title: MQTT-Client
 description: Transfer selected Home Assistant values live over MQTT and control supported entities.
 ---
 
-# MQTT-Client 0.1.19 {#mqtt-client-0-1-16}
+# MQTT-Client 0.1.20 {#mqtt-client-0-1-16}
+
+**0.1.20:** Connection settings are collapsible under **Zugangsdaten** (Credentials).
+The section stays open for initial setup. With a saved broker address, it
+automatically collapses after loading and successfully saving. Click its title
+to reopen it. Save and error messages remain visible; settings and credentials
+are preserved.
+[Release 0.1.20](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.20)
 
 **0.1.19** also separates the lines in the transmission list: the name appears
 above the state, selected-attribute and return-command summary. **Edit** remains
