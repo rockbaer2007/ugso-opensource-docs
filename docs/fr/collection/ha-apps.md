@@ -12,6 +12,7 @@ Cette section regroupe les modules complémentaires (add-ons) Home Assistant, le
 
 | Projet | Description |
 | --- | --- |
+| <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/fr/projects/logic-studio/) | 0.1.6 : première version publique de test ; plans à blocs, import HA et sortie YAML/JavaScript. Éditeur allemand, documentation DE/EN/FR. |
 | <img class="package-icon" src="/images/packages/projects-blocks-for-ha.png" width="32" height="32" alt="" aria-hidden="true"> [Blocks for HA](/fr/projects/blocks-for-ha/) | Application expérimentale pour HA : création d'automatisations natives via des blocs visuels ; inclut la gestion des entrées (Ingress), l'export/import YAML et des embranchements extensibles. |
 | <img class="package-icon" src="/images/packages/projects-fritzbox-to-mqtt.png" width="32" height="32" alt="" aria-hidden="true"> [FRITZ!Box to MQTT](/fr/projects/fritzbox-to-mqtt/) | Intégration des données FRITZ!Box dans Home Assistant via MQTT Discovery. |
 | <img class="package-icon" src="/images/packages/projects-heizoel-to-mqtt.png" width="32" height="32" alt="" aria-hidden="true"> [Heizöl to MQTT](/fr/projects/heizoel-to-mqtt/) | Intégration des prix du fioul domestique dans Home Assistant via MQTT Discovery. |

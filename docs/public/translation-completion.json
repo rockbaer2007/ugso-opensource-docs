@@ -134,12 +134,12 @@
       "source": "projects-mqtt/index.md",
       "target": "fr/projects-mqtt/index.md",
       "mode": "replace",
-      "source_sha256": "4d8fa63878e51897322d7221aa319978eec77b58e582fd54a47297b7980ae553",
-      "target_sha256": "ee8f6cca1cd668b98fc5911ad6f050286636ffba0ba8a028c9fb84af526af935",
+      "source_sha256": "946707030ae6fe8a6d96dc530c9bcbe2155bc9c4f722ac276b73043a82430e0f",
+      "target_sha256": "27d5d71d14903d21d9a7423671a6340713889a24019282bfdbef7e6458e12e75",
       "source_code_blocks": 1,
       "target_code_blocks": 1,
-      "source_table_rows": 12,
-      "target_table_rows": 12
+      "source_table_rows": 13,
+      "target_table_rows": 13
     },
     {
       "source": "projects/fritzbox-to-mqtt/beispiele.md",
@@ -1157,12 +1157,12 @@
       "source": "sammlung/ha-apps.md",
       "target": "fr/collection/ha-apps.md",
       "mode": "replace",
-      "source_sha256": "a3f0289f063bb40b922a8a88d7a47778f98936b84aa4ff1b52092956896e753f",
-      "target_sha256": "1d491d6c7d750142e77558a8777db4ebfc0eaf3d20a5cd70cbc877955e46257e",
+      "source_sha256": "1f03a00b2bd334f6dded75fd54e4d8a1292b13ea68327548ec5d8b2cefc6c5f5",
+      "target_sha256": "9e19b444b8b597a690d3152e487fdd5a591f3f8bde95ee900d551804bf115877",
       "source_code_blocks": 1,
       "target_code_blocks": 1,
-      "source_table_rows": 7,
-      "target_table_rows": 7
+      "source_table_rows": 8,
+      "target_table_rows": 8
     },
     {
       "source": "sammlung/ha-automation-exporter/index.md",

@@ -1589,6 +1589,21 @@
     "EN": "/en/projects/",
     "FR": "/fr/projects/"
   },
+  "/projects/logic-studio/": {
+    "DE": "/projects/logic-studio/",
+    "EN": "/en/projects/logic-studio/",
+    "FR": "/fr/projects/logic-studio/"
+  },
+  "/en/projects/logic-studio/": {
+    "DE": "/projects/logic-studio/",
+    "EN": "/en/projects/logic-studio/",
+    "FR": "/fr/projects/logic-studio/"
+  },
+  "/fr/projects/logic-studio/": {
+    "DE": "/projects/logic-studio/",
+    "EN": "/en/projects/logic-studio/",
+    "FR": "/fr/projects/logic-studio/"
+  },
   "/projects/mqtt-client/": {
     "DE": "/projects/mqtt-client/",
     "EN": "/en/projects/mqtt-client/",

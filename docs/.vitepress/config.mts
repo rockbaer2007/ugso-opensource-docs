@@ -49,7 +49,8 @@ const sourceNavDe = [
   { text: 'ATLAS', link: '/projects/atlas/' },
   { text: 'ATLAS Plugins', link: '/projects/atlas-plugins/' },
   { text: 'UGSo HA Apps', link: '/projects-mqtt/' },
-  { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
+  { text: 'Logic Studio', link: '/projects/logic-studio/' },
+        { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
   { text: 'Paketkatalog', link: 'https://visualstudio.ugso-software.de/?lang=de' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
@@ -91,7 +92,8 @@ const sourceNavEn = [
   { text: 'ATLAS', link: '/en/projects/atlas/' },
   { text: 'ATLAS Plugins', link: '/en/projects/atlas-plugins/' },
   { text: 'UGSo HA Apps', link: '/en/projects-mqtt/' },
-  { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
+  { text: 'Logic Studio', link: '/en/projects/logic-studio/' },
+        { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
   { text: 'Package catalog', link: 'https://visualstudio.ugso-software.de/?lang=en' },
   { text: 'UGSo Software', link: 'https://www.ugso-software.de/' },
   { text: 'GitHub', link: 'https://github.com/rockbaer2007' }
@@ -139,6 +141,7 @@ const sourceNavFr = [
 ]
 
 const sidebarDe = {
+  '/projects/logic-studio/': [{text:'Logic Studio',items:[{text:'Installation und Bedienung',link:'/projects/logic-studio/'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
   '/eep/': [{ text: 'EEP', items: [
     { text: 'Übersicht', link: '/eep/' },
     { text: 'INI Edit Translate 2026', link: '/eep/ini-edit-translate-2026/' },
@@ -331,6 +334,7 @@ const sidebarDe = {
         { text: 'Automation Status Card', link: '/projects/automation-status-card/' },
         { text: 'MQTT-Client', link: '/projects/mqtt-client/' },
         { text: 'Blocks for HA', link: '/projects/blocks-for-ha/' },
+        { text: 'Logic Studio', link: '/projects/logic-studio/' },
         { text: 'Grafik Visual Studio', link: '/projects/grafik-visual-studio/' },
         { text: 'CallMeBot Whatsapp', link: '/projects/callmebot/' },
         { text: 'CallMeBot Signal', link: '/projects/callmebot-signal/' },
@@ -597,6 +601,7 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects/logic-studio/': [{text:'Logic Studio',items:[{text:'Installation and use',link:'/en/projects/logic-studio/'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
   '/en/eep/': [{ text: 'EEP', items: [
     { text: 'Overview', link: '/en/eep/' },
     { text: 'INI Edit Translate 2026', link: '/en/eep/ini-edit-translate-2026/' },
@@ -746,6 +751,7 @@ const sidebarEn = {
         { text: 'Automation Status Card', link: '/en/projects/automation-status-card/' },
         { text: 'MQTT-Client', link: '/en/projects/mqtt-client/' },
         { text: 'Blocks for HA', link: '/en/projects/blocks-for-ha/' },
+        { text: 'Logic Studio', link: '/en/projects/logic-studio/' },
         { text: 'Grafik Visual Studio', link: '/en/projects/grafik-visual-studio/' },
         { text: 'CallMeBot Whatsapp', link: '/en/projects/callmebot/' },
         { text: 'CallMeBot Signal', link: '/en/projects/callmebot-signal/' },
@@ -908,6 +914,7 @@ const sidebarEn = {
 }
 
 const sidebarFr = {
+  '/fr/projects/logic-studio/': [{text:'Logic Studio',items:[{text:'Installation et utilisation',link:'/fr/projects/logic-studio/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
   '/fr/eep/': [{ text: 'EEP', items: [
     { text: 'Vue d’ensemble', link: '/fr/eep/' },
     { text: 'INI Edit Translate 2026', link: '/fr/eep/ini-edit-translate-2026/' },
@@ -919,6 +926,7 @@ const sidebarFr = {
   '/fr/projects/dashboard-user-manager/': [{text:'Utilisateurs des tableaux de bord',items:[{text:'Installation et utilisation',link:'/fr/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
   '/fr/projects-mqtt/': [{ text: 'UGSo HA Apps', items: [
     { text: 'Vue d’ensemble', link: '/fr/projects-mqtt/' },
+    { text: 'Logic Studio', link: '/fr/projects/logic-studio/' },
     { text: 'Utilisateurs des tableaux de bord', link: '/fr/projects/dashboard-user-manager/' },
     { text: 'Couleurs du menu latéral', link: '/fr/projects/sidebar-colors/' },
     { text: 'Sidebar Manager', link: '/fr/projects/sidebar-manager/' },
