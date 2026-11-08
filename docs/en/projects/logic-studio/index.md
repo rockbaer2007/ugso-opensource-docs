@@ -1,16 +1,16 @@
 ---
 title: Logic Studio
-description: First public test release of the visual function-block editor for Home Assistant.
+description: Logic Studio 0.1.7 with typed drag connections and a navigable overview for Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
-**0.1.6 – first public test release, 8 November 2026.** Logic Studio is a standalone HA app for visual function-block plans, independent of Grafik Visual Studio and Blocks for HA. The editor currently uses **German**; this guide is available in **DE/EN/FR**.
+**0.1.7 – public test update, 8 November 2026.** New features include typed mouse-drag connections and a navigable overview. Logic Studio is a standalone HA app for visual function-block plans, independent of Grafik Visual Studio and Blocks for HA. The editor currently uses **German**; this guide is available in **DE/EN/FR**.
 
 ::: warning Test release
 Install on a test system first and create a full backup beforehand. Native detail properties currently use JSON. The app does not write automations/scripts back to HA or control devices. Review and install generated output yourself.
 :::
 
-[GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.6) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+[GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.7) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
 ## Test installation from GitHub
 
@@ -26,6 +26,8 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 
 **Keep an existing local test installation:** GitHub and local apps have different repository IDs and separate data. Export your old plan using **Projekt** as JSON, then use **Öffnen** in the GitHub app. There is no automatic migration or uninstall. Each app retains its project and palette settings under `/data`.
 
+**Update an existing GitHub app:** Back up first, check for updates in the app manager and choose **UGSo Logic Studio → Update**. Keep the app installed: `/data`, entity IDs and existing plans are preserved. Do not uninstall or switch app IDs. On .193, the original plan, favorites, recent blocks and collapsed categories remained intact after the update.
+
 ## Two kinds of plan
 
 | Plan | Purpose and output |
@@ -34,6 +36,20 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 | Native HA flow | Import automations, scripts and blueprints as nested blocks. 53 additional HA types cover triggers, conditions, branches, loops, waits, variables and blueprint inputs. Export native HA YAML only. |
 
 Dataflow simulation uses demo/snapshot values. Persistent blocks need the documented HA text helpers or a JavaScript memory host. Native HA flows are neither executed in the editor nor automatically translated to JavaScript. The JavaScript output is not an ioBroker script.
+
+## Drag connections and overview
+
+Hold the mouse button on a colored pin, drag to a matching opposite pin and release. The cursor becomes a crosshair and a wire preview follows the mouse. Compatible targets are highlighted green; incompatible or occupied inputs are marked red. Dragging from an input back to an output also works. **Esc** or releasing on empty canvas cancels; **Undo** removes a newly created wire.
+
+**BOOL connects only to BOOL.** Identical signal types are compatible, with additional `INT → REAL` widening. Explicit `ANY` pins are universal. Numbers and text are not silently converted to BOOL. Each input accepts exactly one wire; incompatible types, matching pin directions, self-connections and cycles are rejected with an explanation. For keyboard operation, select the output with Tab/Enter, then select the input and press Enter.
+
+![Compatible BOOL pins connected by mouse on .193](/images/logic-studio/0.1.7-bool-verbunden.png)
+
+![STRING to BOOL is rejected with a clear type error](/images/logic-studio/0.1.7-typ-abgewiesen.png)
+
+The bottom-right **Übersicht** (overview) shows colored block positions and an outline of the visible viewport. Click to navigate. When focused, it also supports arrow keys, **Home** and **End**. It follows scrolling, zoom and block movements. **Referenz: React Flow** opens the reference project in a new tab; the current canvas is independently implemented and does not use React Flow as a runtime library.
+
+![Overview with block positions and visible viewport on .193](/images/logic-studio/0.1.7-miniuebersicht.png)
 
 ## Import and editing
 
@@ -52,6 +68,8 @@ Each block’s **⋮ menu** offers **Eigenschaften** (properties), **Duplizieren
 ## Validation and limits
 
 The **0.1.5** functional baseline was tested on **.193 / HA Core 2026.10.4**: actual blueprint import, automation/script/blueprint fixtures, semantically identical YAML exports and menu actions. **0.1.6** is its first public packaging. 22 Node and eight Python tests cover export, persistence, nested flows and safe source import; GitHub checks also build the container.
+
+**0.1.7 on .193 / HA Core 2026.10.4:** Real mouse-drag tests passed for BOOL → BOOL and the reverse direction. STRING → BOOL and an occupied input were rejected. Overview, click navigation and Home were verified. The original plan was restored and compared with its backup: **five blocks, three wires and all palette preferences preserved**, including after the local update to 0.1.7. Full HA and separate plan/settings backups were created first; no devices were controlled. **26 Node and eight Python tests** currently pass. Screenshots show the German UI.
 
 The editor does not provide complete HA semantic validation: verify targets, templates and selectors in HA. Comments, YAML anchors and formatting are not reconstructed. Import limits: **1 MB, 200 blocks, 500 wires**, bounded nesting and up to 250 blueprint files in standard folders. Controllers, calendar and custom subplans partly remain templates.
 

@@ -10,7 +10,7 @@ Dieser Bereich sammelt Home-Assistant-Add-ons, Apps, MQTT-Brücken und laufende 
 
 | Projekt | Beschreibung |
 | --- | --- |
-| <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/projects/logic-studio/) | 0.1.6: erste öffentliche Testversion; Funktionspläne, HA-Import und YAML-/JavaScript-Ausgabe. Oberfläche Deutsch, Doku DE/EN/FR. |
+| <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/projects/logic-studio/) | 0.1.7: typgeprüfte Ziehverbindungen und navigierbare Miniübersicht; auf .193 mit erhaltenem Originalplan und Einstellungen geprüft. HA-Import und YAML-/JavaScript-Ausgabe. Oberfläche Deutsch, Doku DE/EN/FR. |
 | <img class="package-icon" src="/images/packages/projects-blocks-for-ha.png" width="32" height="32" alt="" aria-hidden="true"> [Blocks for HA](/projects/blocks-for-ha/) | Experimentelle HA-App: native Automationen mit visuellen Blocks erstellen; Ingress, YAML-Export/-Import und erweiterbare Verzweigungen. |
 | <img class="package-icon" src="/images/packages/projects-fritzbox-to-mqtt.png" width="32" height="32" alt="" aria-hidden="true"> [FRITZ!Box to MQTT](/projects/fritzbox-to-mqtt/) | FRITZ!Box-Daten per MQTT Discovery in Home Assistant. |
 | <img class="package-icon" src="/images/packages/projects-heizoel-to-mqtt.png" width="32" height="32" alt="" aria-hidden="true"> [Heizöl to MQTT](/projects/heizoel-to-mqtt/) | Heizölpreise per MQTT Discovery in Home Assistant. |
