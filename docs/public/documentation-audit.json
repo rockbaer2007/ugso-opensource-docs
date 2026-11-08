@@ -4915,8 +4915,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "c2120997f22c6e1994aca0dab24ffd8d55344415904b9a99d1b7965f4012d023",
-          "words": 2023,
+          "sha256": "6de61408038db120b13a83ee2d638e9e653057d0114a90be36f27b08d307ce1f",
+          "words": 2005,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -4940,9 +4940,7 @@
             "0.1.83",
             "1.10.0"
           ],
-          "unresolved_local_references": [
-            "./widget-pakete"
-          ],
+          "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
@@ -4954,7 +4952,7 @@
         "fr": {
           "path": "fr/projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "5e381e94c22b2cd9cb58f0e98159027b17336c3acf314c1e20764a723a3b228a",
+          "sha256": "1486b1ac32c4c4db065762a3f4d9ac7d32f079f77faced1af416c5d169f815b0",
           "words": 3045,
           "headings": 10,
           "examples": 0,
@@ -4979,9 +4977,7 @@
             "0.1.83",
             "1.10.0"
           ],
-          "unresolved_local_references": [
-            "./widget-pakete"
-          ],
+          "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
