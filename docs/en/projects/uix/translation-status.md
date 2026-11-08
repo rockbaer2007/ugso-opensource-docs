@@ -4,6 +4,13 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Review on 8 November 2026: element configuration defaults
+
+The notices [0c09117](https://github.com/Lint-Free-Technology/uix/commit/0c09117ef5af41c0eeb81831e13183bfb7f3d6a0) and [e28976f](https://github.com/Lint-Free-Technology/uix/commit/e28976f96db019e009c4c604e80c0885c1b3ea67) are incorporated. The complete archived `dev e28976f` tree contains **66** canonical Markdown pages. Compared with `e7b5bdd`, [Element configuration defaults](./extras/element-config-defaults) is new and the custom sidebar guide removes a preview notice. The other 64 pages and media are unchanged; the new navigation entry is included.
+
+DE/FR include the complete new guide: UI/YAML configuration, Glance entities, compact entity strings and dot-separated object paths such as `group_config.name`. Existing values take precedence; array indexes and overlapping paths are not supported. All three YAML examples match the source. EN, navigation, overview and footer are updated. **UIX 9.0.0 / HA 2026.11.0 minimum** remains the stable baseline; the new documentation comes from **dev / 9.1.0-beta.1**. This is documentation verification, not a new HA runtime test.
+
+
 
 ## Review on 7 November 2026: desktop tabs in preview 9.1.0-beta.0
 

@@ -1,6 +1,6 @@
 {
-  "revision": "e7b5bdd811a53960e9559c53a354c7855c537286",
-  "reviewed_at": "2026-11-07",
+  "revision": "e28976f96db019e009c4c604e80c0885c1b3ea67",
+  "reviewed_at": "2026-11-08",
   "pages": [
     {
       "path": "broker/broker.md",
@@ -259,8 +259,8 @@
     },
     {
       "path": "extras/custom-sidebar-panels.md",
-      "sha256": "1f7c1290b9f8cf20c3c30ca439da8246b1086469353674a5f07564134df3167e",
-      "english_sha256": "ed9084b3eca233636f08a2bc9a67c1c9f5d218d8d059ced97d3aa0710b5873c4",
+      "sha256": "6f5f3e8d23fecced06d5adab4e96bba1c58e3c439bad0f78d4b0da4def3c57dc",
+      "english_sha256": "d6196438c13d971111f690f73f49e1abae9e85198d8d9168d4e171be30fdd7f3",
       "code_sha256": []
     },
     {
@@ -287,6 +287,16 @@
       "code_sha256": []
     },
     {
+      "path": "extras/element-config-defaults.md",
+      "sha256": "3246a753e39645fe1d72a8855861fdae87a89e99fbaab5403bbdc9511a9ab42d",
+      "english_sha256": "100af9354ce96424d096ec8088988c94257a9f6f1628a469e353d33c8064cb13",
+      "code_sha256": [
+        "d826df7d0414e37c5d1e1eac6751c4625b74946ca14979ca93d15b14771a48cf",
+        "c0a6647e9d2fa110a297aec539d4a8e1b6e481b1b87c85371dd00d34e73f126e",
+        "ac4d488034401eda60cfd6717d2937ff1f3df7d72b64c53ac1a0674946163bf8"
+      ]
+    },
+    {
       "path": "extras/frontend-states-throttling.md",
       "sha256": "bd12e71948743dd03086bd30dddebb223b34ea619548d3ed87d52a85b3d4a00b",
       "english_sha256": "f402db3d1b7a5e9134e5dbe9ff9be7fe92b21b5b4666e84c942f8b161184c350",
@@ -306,7 +316,7 @@
     {
       "path": "extras/index.md",
       "sha256": "c8eb846c6b3b77daf3e2dbc74934c67a4a232d9b80b2fd671e6cf766d186b9f3",
-      "english_sha256": "a54de8d4c39d573db70e6843341871090527d06dfbb85e933ab561d72ab8b568",
+      "english_sha256": "5c798ac41d887f905c4f8e8fa13f7cc86ad4b19bd4ca606a5f17a0f11177b5a4",
       "code_sha256": []
     },
     {
@@ -679,7 +689,7 @@
     {
       "path": "index.md",
       "sha256": "fb3a60fc5f67441b1b931b5e43ddbb0050c5d08e5f3815395c42e2346f9bd94b",
-      "english_sha256": "11eeead31b8166f6eb4c1f14a4ebf531e9f4e3f0537312b653d1255f824bc2dc",
+      "english_sha256": "226b099e2b87dafd4d65e517f7424691d66d3a2269e9ae50c781a1669225492f",
       "code_sha256": []
     },
     {

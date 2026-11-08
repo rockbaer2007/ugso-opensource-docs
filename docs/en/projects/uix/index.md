@@ -6,6 +6,10 @@ title: About
 
 # UI eXtension for Home Assistant
 
+::: info Reviewed 8 November 2026
+All **66** canonical pages are reviewed through `dev e28976f`. The new [element configuration defaults](./extras/element-config-defaults) guide comes from preview **9.1.0-beta.1**. Stable baseline: **UIX 9.0.0 / Home Assistant 2026.11.0 minimum**. See the [review report](./translation-status).
+:::
+
 ![light-logo-icon](/projects/uix/assets/images/mixed.png)
 
 ## What is UI eXtension?

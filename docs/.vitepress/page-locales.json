@@ -2084,6 +2084,21 @@
     "EN": "/en/projects/uix/extras/disable-icon-styling",
     "FR": "/fr/projects/uix/extras/disable-icon-styling"
   },
+  "/projects/uix/extras/element-config-defaults": {
+    "DE": "/projects/uix/extras/element-config-defaults",
+    "EN": "/en/projects/uix/extras/element-config-defaults",
+    "FR": "/fr/projects/uix/extras/element-config-defaults"
+  },
+  "/en/projects/uix/extras/element-config-defaults": {
+    "DE": "/projects/uix/extras/element-config-defaults",
+    "EN": "/en/projects/uix/extras/element-config-defaults",
+    "FR": "/fr/projects/uix/extras/element-config-defaults"
+  },
+  "/fr/projects/uix/extras/element-config-defaults": {
+    "DE": "/projects/uix/extras/element-config-defaults",
+    "EN": "/en/projects/uix/extras/element-config-defaults",
+    "FR": "/fr/projects/uix/extras/element-config-defaults"
+  },
   "/projects/uix/extras/frontend-states-throttling": {
     "DE": "/projects/uix/extras/frontend-states-throttling",
     "EN": "/en/projects/uix/extras/frontend-states-throttling",

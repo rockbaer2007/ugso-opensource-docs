@@ -4,6 +4,13 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Revue du 8 novembre 2026 : valeurs par défaut des éléments
+
+Les notifications [0c09117](https://github.com/Lint-Free-Technology/uix/commit/0c09117ef5af41c0eeb81831e13183bfb7f3d6a0) et [e28976f](https://github.com/Lint-Free-Technology/uix/commit/e28976f96db019e009c4c604e80c0885c1b3ea67) sont intégrées. L’arbre complet archivé `dev e28976f` comprend **66** pages Markdown canoniques. Depuis `e7b5bdd`, [Valeurs par défaut de configuration des éléments](./extras/element-config-defaults) est nouvelle et le guide des raccourcis de barre latérale supprime un avis d’aperçu. Les 64 autres pages et les médias sont inchangés ; la nouvelle entrée de navigation est ajoutée.
+
+DE/FR comprennent le guide complet : configuration par formulaire ou YAML, entités Glance, chaînes d’entité compactes et chemins d’objet séparés par des points comme `group_config.name`. Les valeurs existantes sont prioritaires ; les indices de tableau et chemins se chevauchant ne sont pas pris en charge. Les trois exemples YAML correspondent à la source. EN, navigation, vue d’ensemble et pied de page sont actualisés. **UIX 9.0.0 / HA 2026.11.0 minimum** reste la base stable ; la nouvelle documentation provient de **dev / 9.1.0-beta.1**. Il s’agit d’une revue documentaire, pas d’un nouveau test d’exécution HA.
+
+
 
 ## Revue du 7 novembre 2026 : onglets de bureau dans l’aperçu 9.1.0-beta.0
 

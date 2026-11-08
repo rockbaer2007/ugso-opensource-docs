@@ -5,7 +5,7 @@ description: UIX-Verknüpfungen zu Home-Assistant-Seiten und externen Webseiten 
 # Eigene Seitenleisten-Verknüpfungen
 
 ::: info UIX 9.0.0
-Interne und externe Seitenleisten-Verknüpfungen gehören zur stabilen Version **9.0.0** und benötigen **Home Assistant 2026.11.0 oder neuer**. Die unten beschriebene neue Desktop-Beschränkung der Tab-Option stammt aus der Vorschau **9.1.0-beta.0** auf `dev`.
+Interne und externe Seitenleisten-Verknüpfungen gehören zur stabilen Version **9.0.0** und benötigen **Home Assistant 2026.11.0 oder neuer**. Die unten beschriebene neue Desktop-Beschränkung der Tab-Option stammt aus der Vorschau **9.1.0-beta.1** auf `dev`.
 :::
 
 UIX kann eigene Einträge in der Home-Assistant-Seitenleiste hinzufügen, die eine andere Home-Assistant-Seite oder eine Webseite öffnen. Das erleichtert den Zugriff auf häufig verwendete Seiten unter „Einstellungen“ und auf zugehörige Webdienste.
@@ -15,10 +15,6 @@ UIX kann eigene Einträge in der Home-Assistant-Seitenleiste hinzufügen, die ei
 Aktiviere **Admin required**, um den Eintrag auf Administratorkonten zu beschränken.
 
 Als Ziel sind Home-Assistant-Pfade mit führendem `/`, etwa `/config/dashboard`, oder absolute `http`- und `https`-URLs erlaubt. Andere URL-Schemata werden nicht akzeptiert.
-
-::: info Vorschau ab 9.1.0-beta.0
-**Open in new tab (desktop only)** ist in dieser Form ab **9.1.0-beta.0** verfügbar.
-:::
 
 Mit **Open in new tab (desktop only)** öffnet sich ein interner Home-Assistant-Pfad in einem neuen Tab des Desktop-Browsers. Der bisherige Home-Assistant-Tab kehrt zur zuvor angezeigten Seite zurück. In der Companion-App navigiert UIX stattdessen innerhalb der App zum HA-Pfad. Für externe Webseiten-URLs wird diese Option nicht verwendet; Webseiten können nicht innerhalb der Companion-App geöffnet werden.
 

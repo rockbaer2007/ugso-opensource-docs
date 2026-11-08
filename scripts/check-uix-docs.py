@@ -95,8 +95,8 @@ def main():
                 errors.append(f"Wrong self-canonical: {url}")
 
     manifest = json.loads((ROOT / "docs/public/projects/uix/canonical-review.json").read_text(encoding="utf-8"))
-    if len(manifest["pages"]) != 65:
-        errors.append("Canonical review does not cover all 65 source pages")
+    if len(manifest["pages"]) != 66:
+        errors.append("Canonical review does not cover all 66 source pages")
     for entry in manifest["pages"]:
         for prefix in ("projects/uix", "en/projects/uix", "fr/projects/uix"):
             if not (ROOT / "docs" / prefix / entry["path"]).is_file():

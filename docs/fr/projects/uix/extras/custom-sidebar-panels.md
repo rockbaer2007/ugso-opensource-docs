@@ -5,7 +5,7 @@ description: Créer des liens UIX vers des pages Home Assistant et des sites web
 # Raccourcis personnalisés de barre latérale
 
 ::: info UIX 9.0.0
-Les raccourcis internes et externes font partie de la version stable **9.0.0** et nécessitent **Home Assistant 2026.11.0 ou ultérieur**. La nouvelle restriction aux navigateurs de bureau décrite ci-dessous provient de l’aperçu **9.1.0-beta.0** sur `dev`.
+Les raccourcis internes et externes font partie de la version stable **9.0.0** et nécessitent **Home Assistant 2026.11.0 ou ultérieur**. La nouvelle restriction aux navigateurs de bureau décrite ci-dessous provient de l’aperçu **9.1.0-beta.1** sur `dev`.
 :::
 
 UIX peut ajouter des entrées à la barre latérale de Home Assistant pour ouvrir une autre page Home Assistant ou un site web. Cela facilite l’accès aux pages fréquemment utilisées sous les paramètres et aux services web associés.
@@ -15,10 +15,6 @@ Ouvrez **Paramètres → Appareils et services → UI eXtension → Configurer**
 Activez **Admin required** pour réserver l’entrée aux comptes administrateurs.
 
 La destination peut être un chemin Home Assistant commençant par `/`, comme `/config/dashboard`, ou une URL absolue `http` ou `https`. Les autres schémas d’URL ne sont pas acceptés.
-
-::: info Aperçu à partir de 9.1.0-beta.0
-**Open in new tab (desktop only)** est disponible sous cette forme à partir de **9.1.0-beta.0**.
-:::
 
 Activez **Open in new tab (desktop only)** pour ouvrir un chemin interne Home Assistant dans un nouvel onglet d’un navigateur de bureau. L’onglet Home Assistant courant revient à la page précédemment affichée. Dans l’application Companion, UIX navigue plutôt vers le chemin HA à l’intérieur de l’application. Cette option ne s’applique pas aux URL de sites web externes, qui ne peuvent pas s’ouvrir à l’intérieur de l’application Companion.
 

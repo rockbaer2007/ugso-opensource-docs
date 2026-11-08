@@ -9,6 +9,7 @@ UIX Extras bieten zusätzliche Einstellungen zur Steuerung der Integration oder 
 
 - [UIX Actions](./uix-actions)
 - [Eigene Seitenleisten-Verknüpfungen](./custom-sidebar-panels)
+- [Standardwerte für Elementkonfigurationen](./element-config-defaults)
 - [Frontend State Throttling](./frontend-states-throttling)
 - [Dialog Styling Delay](./dialog-styling-delay)
 - [Hash-Template-Variablen](./hash-template-variable-updates)

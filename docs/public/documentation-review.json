@@ -1042,8 +1042,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "7f3146dc75724966fbc62bf433f629c915c09fcc95aefbaa42a1f767234d41d3",
-      "target_sha256": "a54de8d4c39d573db70e6843341871090527d06dfbb85e933ab561d72ab8b568"
+      "source_sha256": "9c488223828a3eaa1beacd3a8c23e8393532433aa88e52c3a11656a3c7cf84bb",
+      "target_sha256": "5c798ac41d887f905c4f8e8fa13f7cc86ad4b19bd4ca606a5f17a0f11177b5a4"
     },
     {
       "source": "projects/uix/extras/index.md",
@@ -1058,8 +1058,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals.",
-      "source_sha256": "7f3146dc75724966fbc62bf433f629c915c09fcc95aefbaa42a1f767234d41d3",
-      "target_sha256": "4d73e184debafd7ec6c6b9b28d6b5335c59d196996a186f7bdbba3fe4caf368d"
+      "source_sha256": "9c488223828a3eaa1beacd3a8c23e8393532433aa88e52c3a11656a3c7cf84bb",
+      "target_sha256": "78b35c1030d1f8f6b064f6c68d88263932107b5f1e986721671a469f05a322c9"
     },
     {
       "source": "projects/uix/extras/style-frame-panels.md",
@@ -1843,8 +1843,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage.",
-      "source_sha256": "64bf3ec02b47d62fc38f77435eda241fa948250442e7603438ce500e9850c12f",
-      "target_sha256": "11eeead31b8166f6eb4c1f14a4ebf531e9f4e3f0537312b653d1255f824bc2dc"
+      "source_sha256": "52c1d0b49d045627aa285edbc78a346c5e713e3e8b3a63bb1c4033cf17d0ebdc",
+      "target_sha256": "226b099e2b87dafd4d65e517f7424691d66d3a2269e9ae50c781a1669225492f"
     },
     {
       "source": "projects/uix/license.md",
@@ -1925,8 +1925,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage.",
-      "source_sha256": "60e42fd80c56cf76d4007d3478853eb8180183149ce68c66ed691e9a74051de1",
-      "target_sha256": "846674877888a0b17f68c6108c6bbd88daf99f3ad51fdbafcf5f61ff71dffd3c"
+      "source_sha256": "43e6de32264a1ffdb7d7f228c3ca4b7366ebfc986d2f29522ab02492bc0e37de",
+      "target_sha256": "e66c8732262e876c339394c5396bb1c0b6f08b307ed826cc229d4a7de4400ec7"
     },
     {
       "source": "projects/uix/translation-status.md",
@@ -1945,8 +1945,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage.",
-      "source_sha256": "60e42fd80c56cf76d4007d3478853eb8180183149ce68c66ed691e9a74051de1",
-      "target_sha256": "47f3214c6ee6dd3892c8832591964d1d19d8f0e5df1f538b3e5c81f1e530679f"
+      "source_sha256": "43e6de32264a1ffdb7d7f228c3ca4b7366ebfc986d2f29522ab02492bc0e37de",
+      "target_sha256": "d6773cd6a2af9c6ef7bc1d98e10d4b1ee89cf573afd643adaf2d8fe13450c555"
     },
     {
       "source": "projects/uix/using/apps.md",
@@ -2489,84 +2489,18 @@
     }
   ],
   "uix_canonical_refresh": {
-    "reviewed_at": "2026-11-02",
-    "revision": "e4a1caa6437f88282cfe04d768d3c11df387fc42",
-    "scope": "Canonical source hashes and unchanged code verified for all English pages; timeout and relocated sidebar content reviewed in DE/FR. Previous dispositions preserved for unchanged content and provenance-only updates.",
+    "reviewed_at": "2026-11-08",
+    "revision": "e28976f96db019e009c4c604e80c0885c1b3ea67",
+    "scope": "All 66 source pages compared; element defaults translated into DE/FR with identical YAML. Sidebar notice, navigation and overview reviewed.",
     "updated_paths": [
-      "en/projects/uix/broker/broker.md",
-      "en/projects/uix/broker/directives.md",
-      "en/projects/uix/broker/examples.md",
-      "en/projects/uix/broker/index.md",
-      "en/projects/uix/broker/interaction-anchors.md",
-      "en/projects/uix/broker/realms.md",
-      "en/projects/uix/broker/rules.md",
-      "en/projects/uix/concepts/application.md",
-      "en/projects/uix/concepts/dom.md",
-      "en/projects/uix/concepts/index.md",
-      "en/projects/uix/contributing.md",
-      "en/projects/uix/debugging/cache.md",
-      "en/projects/uix/debugging/cards.md",
-      "en/projects/uix/debugging/index.md",
-      "en/projects/uix/debugging/templates.md",
-      "en/projects/uix/developers/cards.md",
-      "en/projects/uix/developers/index.md",
-      "en/projects/uix/developers/themes.md",
-      "en/projects/uix/extras/always-patch-ha-card.md",
-      "en/projects/uix/extras/dialog-styling-delay.md",
-      "en/projects/uix/extras/disable-entity-picture-image-override.md",
-      "en/projects/uix/extras/disable-icon-styling.md",
-      "en/projects/uix/extras/frontend-states-throttling.md",
-      "en/projects/uix/extras/hash-template-variable-updates.md",
       "en/projects/uix/extras/index.md",
-      "en/projects/uix/extras/style-frame-panels.md",
-      "en/projects/uix/extras/uix-actions.md",
-      "en/projects/uix/faq.md",
-      "en/projects/uix/forge/forge.md",
-      "en/projects/uix/forge/foundries.md",
-      "en/projects/uix/forge/index.md",
-      "en/projects/uix/forge/sparks/attribute.md",
-      "en/projects/uix/forge/sparks/background.md",
-      "en/projects/uix/forge/sparks/badge.md",
-      "en/projects/uix/forge/sparks/button.md",
-      "en/projects/uix/forge/sparks/event.md",
-      "en/projects/uix/forge/sparks/form.md",
-      "en/projects/uix/forge/sparks/grid.md",
-      "en/projects/uix/forge/sparks/index.md",
-      "en/projects/uix/forge/sparks/lock.md",
-      "en/projects/uix/forge/sparks/map.md",
-      "en/projects/uix/forge/sparks/more-info.md",
-      "en/projects/uix/forge/sparks/overlay-icon.md",
-      "en/projects/uix/forge/sparks/search.md",
-      "en/projects/uix/forge/sparks/state-badge.md",
-      "en/projects/uix/forge/sparks/theme.md",
-      "en/projects/uix/forge/sparks/tile-icon.md",
-      "en/projects/uix/forge/sparks/tooltip.md",
-      "en/projects/uix/guides.md",
       "en/projects/uix/index.md",
-      "en/projects/uix/license.md",
-      "en/projects/uix/quick-start.md",
       "en/projects/uix/translation-status.md",
-      "en/projects/uix/using/apps.md",
-      "en/projects/uix/using/cards.md",
-      "en/projects/uix/using/custom-panels.md",
-      "en/projects/uix/using/entities.md",
-      "en/projects/uix/using/icons.md",
-      "en/projects/uix/using/images.md",
-      "en/projects/uix/using/index.md",
-      "en/projects/uix/using/other.md",
-      "en/projects/uix/using/section-backgrounds.md",
-      "en/projects/uix/using/templates.md",
-      "en/projects/uix/using/themes.md",
-      "en/projects/uix/using/view-backgrounds.md",
       "fr/projects/uix/extras/index.md",
-      "fr/projects/uix/extras/uix-actions.md",
       "fr/projects/uix/translation-status.md",
-      "fr/projects/uix/using/index.md",
       "projects/uix/extras/index.md",
-      "projects/uix/extras/uix-actions.md",
       "projects/uix/index.md",
-      "projects/uix/translation-status.md",
-      "projects/uix/using/index.md"
+      "projects/uix/translation-status.md"
     ]
   }
 }
