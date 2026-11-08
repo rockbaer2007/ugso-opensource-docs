@@ -7,6 +7,19 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 **Studio 0.1.299:** [Recently used, miniature palette and runtime start/stop](./palette-runtime). Up to twelve distinct recently inserted widget types persist in the browser. Runtime starts beside the page tabs over the canvas; the separate window remains available. Settings and projects are retained.
 
+## Current verification and next steps
+
+**As of November 8, 2026: Studio 0.1.299.** The thumbnail palette, Recently used and inline runtime have been verified on .177 and .193, preserving settings and existing projects. [Usage and test results](./palette-runtime). Devices, tablet return, the inactivity home page, heading values, demand-loaded renderers and package refresh are already implemented, not outstanding basic tasks.
+
+Remaining work:
+
+1. **Complete project export/import:** A portable project package including local media and package information, checks for missing dependencies and restoration without overwriting existing projects. Widget JSON export is not a complete project package.
+2. **Practical device and tablet tests:** Verify advanced Climate controls, Recorder data, Companion, sleep/wake and connection loss on actual hardware in addition to automated checks. Existing tests do not establish complete device coverage.
+3. **Complete French Studio interface:** Project/widget texts and documentation support DE/EN/FR; the general Studio interface remains DE/EN.
+4. **Larger follow-up projects:** Standalone runtime, companion connection app and Web Components. These are not available features yet.
+
+**Recommended next step:** Begin project export/import with a resource inventory and import preview, then verify transfer between .177 and .193. This is a recommendation; this documentation update does not implement a new program feature.
+
 **Studio 0.1.297:** Built-in [device set and tablet features](./devices-tablet): five device types as tiles and floorplan markers, live heading values, tablet return, optional inactivity home page and demand-loaded renderers. Package changes and optional capabilities appear without restarting. Checked on .177 and .193; existing settings and projects are retained. [GitHub update 0.1.297](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.297).
 
 **Studio 0.1.296:** The remaining **62 widget types** gain DE/EN/FR properties and runtime messages, optional Climate controls and source/attribute/unit checks. Existing projects and package versions remain valid; new groups start disabled. [Guide and limits](./ha-quellen-climate). Mocked tests do not verify real devices/Companion. [Audit report](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md).
@@ -106,7 +119,7 @@ A dedicated Home Assistant integration is planned to expose HA calendars as JSON
 
 ## Current limitations
 
-In the runtime, Sensor, String, Red Number, Bar, Gauge and Bool HTML read a bound Home Assistant entity every five seconds; visibility rules use those states too. A Switch widget can control `switch`, `light` and `input_boolean` through HA service actions and then displays the confirmed HA state. Other data and control widgets still use local sample values. Selecting an entity ID there does not yet provide live binding. Visibility's “Nur für Gruppen” option and `multi-views` behavior are not fully implemented. The editor filter affects only the editor view.
+Supported bindings read actual HA states in the editor and runtime; compatible controls write through explicitly mapped HA actions. Available functions depend on the domain, device capabilities and permissions. Display widgets remain read-only; missing or unavailable values are not confirmed live readings. Sources, attributes and units must match the integration. Recorder history does not replace HA long-term statistics. Group visibility is a presentation rule based on the known Ingress identity, not additional API authorization. External embedding depends on authentication and browser rules. The editor filter only affects the editor.
 
 The app provides one standard Home Assistant Ingress entry. Separate sidebar entries for editor and runtime require the additional experimental integration from `custom_components/ha_grafik_visual_studio`, which requires Home Assistant OS or Supervised with Supervisor. The [repository README](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/README.md) explains the installation.
 

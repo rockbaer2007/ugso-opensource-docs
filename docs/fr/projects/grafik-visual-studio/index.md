@@ -7,6 +7,19 @@ description: 'Un tableau de bord (dashboard) pour Home Assistant qui sort de l''
 
 **Studio 0.1.299 :** [Utilisés récemment, miniatures et démarrage/arrêt intégré](./palette-runtime). Jusqu’à douze types distincts récemment insérés sont conservés dans le navigateur. L’exécution démarre près des onglets au-dessus de la surface ; la fenêtre séparée reste disponible. Projets et réglages conservés.
 
+## Vérifications actuelles et prochaines étapes
+
+**État au 8 novembre 2026 : Studio 0.1.299.** Miniatures, Utilisés récemment et runtime intégrée vérifiés sur .177 et .193, avec conservation des réglages et projets existants. [Utilisation et résultats](./palette-runtime). Appareils, retour de tablette, page d’accueil après inactivité, valeurs dans les titres, chargement à la demande et actualisation des paquets sont déjà implémentés.
+
+Travaux restants :
+
+1. **Export/import complet de projets :** paquet transférable comprenant médias locaux et informations sur les paquets, détection des dépendances manquantes et restauration sans écraser les projets existants. L’export JSON de widgets ne remplace pas un projet complet.
+2. **Tests pratiques sur appareils et tablettes :** commandes Climate avancées, données Recorder, Companion, veille/réveil et perte de connexion sur du matériel réel, en complément des tests automatiques. Les tests actuels ne couvrent pas tous les appareils.
+3. **Interface Studio entièrement française :** les textes des projets/widgets et la documentation prennent en charge DE/EN/FR ; l’interface générale reste DE/EN.
+4. **Projets ultérieurs plus importants :** runtime autonome, application de connexion et Web Components. Ces fonctions ne sont pas encore disponibles.
+
+**Prochaine étape recommandée :** commencer l’export/import de projets par un inventaire des ressources et un aperçu d’importation, puis vérifier le transfert entre .177 et .193. Il s’agit d’une recommandation ; cette mise à jour documentaire n’ajoute aucune fonction au programme.
+
 **Studio 0.1.297 :** [Appareils intégrés et fonctions tablette](./devices-tablet) : cinq types en tuiles et marqueurs sur plan, valeurs dans les titres, retour de tablette, page d’accueil après inactivité et rendu à la demande. Modifications des paquets et capacités optionnelles visibles sans redémarrage. Vérifié sur .177 et .193 ; projets et réglages conservés. [Mise à jour GitHub 0.1.297](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.297).
 
 **Studio 0.1.296 :** Les **62 autres types de widgets** bénéficient désormais de propriétés multilingues (DE/EN/FR), de messages d'exécution, d'une fonction optionnelle de contrôle de la climatisation (Climate), ainsi que d'une vérification des sources, attributs et unités. Les projets et versions de paquets existants restent valides ; les nouveaux groupes sont créés à l'état désactivé. [Guide et limitations](/fr/projects/grafik-visual-studio/ha-quellen-climate). Le fonctionnement avec des appareils réels ou via l'application Companion n'a pas encore été confirmé par des tests en conditions réelles. [Rapport de test](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md).
@@ -108,7 +121,7 @@ Une intégration dédiée pour Home Assistant est prévue ; elle fournira les ca
 
 ## Limites de l'état actuel {#grenzen-des-aktuellen-stands}
 
-Dans le Runtime, les éléments de type Sensor, String, Red Number, Bar, Gauge et Bool HTML interrogent l'entité Home Assistant associée toutes les cinq secondes ; les règles de visibilité s'appuient également sur ces états. Un widget de type « interrupteur » (switch) permet de commander `switch`, `light` et `input_boolean` via les services HA, et affiche ensuite l'état confirmé par HA. Les autres widgets de données et de contrôle utilisent encore des valeurs de test locales. La sélection d'un « Entity ID » (identifiant d'entité) ne correspond pas encore à une connexion en temps réel. L'option « Uniquement pour les groupes » (dans les paramètres de visibilité) ainsi que le comportement de `multi-views` ne sont pas encore totalement implémentés. Le filtre de l'éditeur ne s'applique qu'à la vue de l'éditeur.
+Les liaisons prises en charge lisent les états HA réels dans l’éditeur et la runtime ; les commandes compatibles utilisent des actions HA explicitement associées. Les fonctions proposées dépendent du domaine, des capacités et des autorisations. Les affichages restent en lecture seule ; une valeur absente ou indisponible n’est pas une mesure réelle confirmée. Sources, attributs et unités doivent correspondre à l’intégration. L’historique Recorder ne remplace pas les statistiques HA à long terme. La visibilité par groupe repose sur l’identité Ingress connue et ne constitue pas une autorisation API supplémentaire. Les intégrations de pages externes dépendent de l’authentification et des règles du navigateur. Le filtre de l’éditeur ne modifie que l’éditeur.
 
 L'application dispose d'une entrée standard « Home Assistant Ingress ». L'utilisation d'entrées distinctes dans la barre latérale pour l'éditeur et l'environnement d'exécution (runtime) nécessite l'intégration expérimentale issue de `custom_components/ha_grafik_visual_studio` ; celle-ci requiert Home Assistant OS ou une installation de type « Supervised » (avec Supervisor). Le fichier README du dépôt (https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/README.md) détaille les étapes d'installation.
 

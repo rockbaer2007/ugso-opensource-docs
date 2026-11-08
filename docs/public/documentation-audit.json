@@ -4885,8 +4885,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "e6469a3cf9604ed9ad0b6178b00676a31230e08fe37e7fcc96b05e81c929c565",
-          "words": 1904,
+          "sha256": "3135034a211e0c8884aa7934bf8474fcb3e00fde125ecf43e0e87e4674372705",
+          "words": 2022,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -4904,6 +4904,7 @@
             "0.1.294",
             "0.1.295",
             "0.1.296",
+            "0.1.299",
             "0.1.80",
             "0.1.82",
             "0.1.83",
@@ -4914,8 +4915,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "e4c5dd67d8dad8d2bd27b78f3071c200377645281ee7328c0da5dc86949b8e63",
-          "words": 1903,
+          "sha256": "c2120997f22c6e1994aca0dab24ffd8d55344415904b9a99d1b7965f4012d023",
+          "words": 2023,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -4933,12 +4934,15 @@
             "0.1.294",
             "0.1.295",
             "0.1.296",
+            "0.1.299",
             "0.1.80",
             "0.1.82",
             "0.1.83",
             "1.10.0"
           ],
-          "unresolved_local_references": [],
+          "unresolved_local_references": [
+            "./widget-pakete"
+          ],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
@@ -4950,8 +4954,8 @@
         "fr": {
           "path": "fr/projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "198903b1987071cefd61b75e432ff351dc7d3952cddb6af444470b4946b1ae2c",
-          "words": 2989,
+          "sha256": "5e381e94c22b2cd9cb58f0e98159027b17336c3acf314c1e20764a723a3b228a",
+          "words": 3045,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -4969,12 +4973,15 @@
             "0.1.294",
             "0.1.295",
             "0.1.296",
+            "0.1.299",
             "0.1.80",
             "0.1.82",
             "0.1.83",
             "1.10.0"
           ],
-          "unresolved_local_references": [],
+          "unresolved_local_references": [
+            "./widget-pakete"
+          ],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [],
@@ -5104,9 +5111,9 @@
         "de": {
           "path": "projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "a299eea08afe619b1fdd34f3f79c26a7c959e72b9854507c6e1eb57c95e51f9e",
-          "words": 2478,
-          "headings": 8,
+          "sha256": "16d19b8cc5aa61ebe082a5bb93ec8b3ab13f467e5260490a03cddbe97b87b8e1",
+          "words": 2660,
+          "headings": 9,
           "examples": 0,
           "versions": [
             "0.1.0",
@@ -5144,9 +5151,9 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "265e7b504c36e14cf8b25c2b9916eb2371ecd0deea0572d23b0af63d87030437",
-          "words": 2535,
-          "headings": 8,
+          "sha256": "a968ed7f689f0460c7202d448191e84096d70ac1c5db16898313e8474b94509b",
+          "words": 2743,
+          "headings": 9,
           "examples": 0,
           "versions": [
             "0.1.0",
@@ -5191,9 +5198,9 @@
         "fr": {
           "path": "fr/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "fd04d190af098bd5b65e0f0391c783cd8df0441fb1b639d5213fdd43a30a8178",
-          "words": 3934,
-          "headings": 8,
+          "sha256": "1fafa38250e3b9993b32e88fe8cbb75d3945ac53b0acbc1999c34397b98c4ed6",
+          "words": 4144,
+          "headings": 9,
           "examples": 0,
           "versions": [
             "0.1.0",
