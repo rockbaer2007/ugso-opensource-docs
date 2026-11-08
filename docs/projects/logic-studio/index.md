@@ -1,16 +1,16 @@
 ---
 title: Logic Studio
-description: Logic Studio 0.1.8 mit React Flow, typgeprüften Ziehverbindungen und MiniMap für Home Assistant.
+description: Logic Studio 0.1.12 mit DE/EN/FR, gespeicherter Sprachwahl und Bausteinhilfe für Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
-**0.1.8 – öffentliches Testupdate, 8. November 2026.** Die Zeichenfläche verwendet jetzt **React Flow** mit eigenen Logic-Studio-Bausteinen, typgeprüften Verbindungen, Zoom und MiniMap. Bibliotheken und Lizenzen sind lokal enthalten; kein CDN erforderlich. Logic Studio ist eine eigene HA-App für grafische Funktionspläne, unabhängig von Grafik Visual Studio und Blocks for HA. Die Oberfläche ist derzeit **Deutsch**; diese Anleitung gibt es in **DE/EN/FR**.
+**0.1.12 – öffentliches Testupdate, 8. November 2026.** Oberfläche und Dokumentation sind jetzt **DE/EN/FR**. Logic Studio ist eine eigene HA-App für grafische Funktionspläne, unabhängig von Grafik Visual Studio und Blocks for HA. Die React-Flow-Zeichenfläche mit eigenen Bausteinen, typgeprüften Verbindungen, Zoom und MiniMap bleibt erhalten; Bibliotheken und Lizenzen sind lokal enthalten.
 
 ::: warning Testversion
 Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup erstellen. Native Detailoptionen werden zunächst als JSON bearbeitet. Die App schreibt keine Automationen oder Skripte in HA zurück und schaltet keine Geräte. Erzeugte Ausgaben immer prüfen und selbst in HA installieren.
 :::
 
-[GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.8) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+[GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
 ## Testinstallation aus GitHub
 
@@ -27,6 +27,20 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 **Vorhandene lokale Testinstallation erhalten:** GitHub- und lokale App haben verschiedene Repository-IDs und getrennte Daten. Den alten Plan über **Projekt** als JSON exportieren und in der GitHub-App über **Öffnen** importieren. Es gibt keine automatische Migration oder Deinstallation. Projekt und Paletteinstellungen der jeweiligen App bleiben unter `/data` gespeichert.
 
 **Bestehende GitHub-App aktualisieren:** Vorher sichern, in der App-Verwaltung nach Updates suchen und **UGSo Logic Studio → Aktualisieren** wählen. Die App bleibt installiert; `/data`, Entity-IDs und bestehende Pläne werden nicht ersetzt. Nicht deinstallieren oder die App-ID wechseln. Auf .193 blieben Originalplan, Favoriten, zuletzt benutzte Bausteine und eingeklappte Bereiche nach dem Update erhalten.
+
+## Sprache, Werkzeugleiste und Dokumentation
+
+Oben **Sprache → Deutsch / English / Français** wählen. Menüs, Bausteinbeschreibungen, Entitätsauswahl sowie Import-/Exportdialoge wechseln ohne Neuladen. Die Auswahl wird mit den Browser-/App-Einstellungen gespeichert. **Eigene Namen, Entitäts-IDs, Werte, Anschlussbezeichnungen und erzeugter YAML-/JavaScript-Code werden nicht übersetzt.**
+
+**Dokumentation** rechts zeigt die tatsächlich unterstützten Tastenkürzel und bei ausgewähltem Baustein dessen Beschreibung sowie Ein-/Ausgänge. **Strg+Z / Strg+Y**: Rückgängig/Wiederholen; **Entf**: Auswahl löschen; **Esc**: Verbindung abbrechen/Menü schließen. Anschlüsse lassen sich mit Tab und Enter/Leertaste auswählen und verbinden. Debugger-Befehle des ioBroker-Referenzeditors werden nicht als verfügbare Funktionen dargestellt.
+
+Die Werkzeugleiste gruppiert **Rückgängig/Wiederholen → Projekt → Simulation → Ausgabe**. Die drei Simulationsbuttons sind gleich groß und einzeln erkennbar. Das Projektmenü enthält zusätzlich **Neues Projekt** und **Beispiel laden**. Die Entitätsauswahl öffnet über das Icon **neben HA-Entity-ID** in den Eigenschaften von STATE_IN/STATE_OUT; der bisherige obere Auswahlbutton entfällt.
+
+![Deutsche Dokumentationsansicht auf .193 mit unverändertem Plan](/images/logic-studio/0.1.12-193-de-documentation.png)
+
+![Englische Dokumentationsansicht desselben Plans auf .193](/images/logic-studio/0.1.12-193-en-documentation.png)
+
+![Französische Dokumentationsansicht desselben Plans auf .193](/images/logic-studio/0.1.12-193-fr-documentation.png)
 
 ## Zwei Arten von Plänen
 
@@ -72,6 +86,10 @@ Das **⋮-Menü** jedes Bausteins bietet **Eigenschaften, Duplizieren und Lösch
 ![Drei-Punkte-Menü im Funktionsplan](/images/logic-studio/block-menu.png)
 
 ## Prüfstand und Grenzen
+
+**0.1.12 auf .193 / HA Core 2026.10.4:** Nach Vollbackup die lokale App von 0.1.8 aktualisiert. DE/EN/FR, Dokumentationsansicht und reale Entitätsauswahl erfolgreich geprüft. Französisch blieb nach Browser-Neuladen, App-Neustart und erneutem Laden des gespeicherten App-Projekts erhalten; abschließend wieder Deutsch eingestellt. Der Vergleich der Projektdateien zeigt **nur die neue Versionsnummer**, alle fünf Bausteine, drei Verbindungen, Namen, Werte und Positionen sind identisch. Der erzeugte YAML-Code ist in EN und FR identisch. Keine Geräte geschaltet. **31 Node- und neun Python-Tests** bestanden. Die folgenden älteren Berichte bleiben als Historie erhalten.
+
+![Deutsch nach erfolgreichem App-Neustart auf .193](/images/logic-studio/0.1.12-193-neustart-de.png)
 
 **0.1.8 auf .193 / HA Core 2026.10.4:** Bestehende lokale App nach Vollbackup aktualisiert. BOOL-Verbindungen per Maus, STRING→BOOL-Abweisung, belegte Eingänge, Verschieben/Rückgängig, Duplizieren, Zoom und MiniMap bestanden. Die Entitätsauswahl liest HA-Entitäten; ein verschachteltes Skript mit If/Then/Else, Delay und Stop wurde importiert und strukturerhaltend ausgegeben. Danach Originalplan wiederhergestellt und nach Neuladen verglichen: **alle IDs, Positionen, Parameter und drei Leitungen unverändert**, ebenso Favoriten, zuletzt benutzt und eingeklappte Kategorien. Keine Geräte geschaltet. Docker-Build und Container-HTTP-Test erfolgreich; **29 Node- und acht Python-Tests** bestanden. Bilder zeigen die deutsche Oberfläche. Hell-/Dunkel-Wechsel wurde in diesem Schritt nicht erneut manuell geprüft.
 

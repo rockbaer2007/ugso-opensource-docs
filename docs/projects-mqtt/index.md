@@ -6,7 +6,7 @@ Das gemeinsame Repository ist die zentrale Veröffentlichung für alle Home-Assi
 
 | Projekt | Dokumentation |
 | --- | --- |
-| <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/projects/logic-studio/) | 0.1.6: erste öffentliche Testversion; Funktionspläne, HA-Import und YAML-/JavaScript-Ausgabe. Oberfläche Deutsch, Doku DE/EN/FR. |
+| <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/projects/logic-studio/) | 0.1.12: Oberfläche DE/EN/FR, gespeicherte Sprachwahl, Tastenkürzel und Bausteinhilfe. Auf .193 einschließlich App-Neustart geprüft; Plan und Export erhalten. |
 | <img class="package-icon" src="/images/packages/projects-dashboard-user-manager.png" width="32" height="32" alt="" aria-hidden="true"> [Dashboard-Benutzerverwaltung](/projects/dashboard-user-manager/) | 0.1.4: Benutzer als Checkbox-Spalten, Sammel-/Einzelzuordnung, automatische DE/EN/FR-Oberfläche und Dashboard-Sicherung vor dem Speichern. |
 | <img class="package-icon" src="/images/packages/projects-callmebot.png" width="32" height="32" alt="" aria-hidden="true"> [CallMeBot Whatsapp](/projects/callmebot/) | Experimentelle HA-App 0.1.4: Empfängerprofile, WhatsApp-Texte über MQTT, DE/EN/FR und passende Blockly-Bausteine. |
 | <img class="package-icon" src="/images/packages/projects-callmebot-signal.png" width="32" height="32" alt="" aria-hidden="true"> [CallMeBot Signal](/projects/callmebot-signal/) | Experimentelle HA-App 0.1.0: Signal-Texte, Telefon-/UUID-Profile, eigener MQTT-Namensraum und Blockly mit Profilauswahl in DE/EN/FR. |

@@ -1,16 +1,16 @@
 ---
 title: Logic Studio
-description: Logic Studio 0.1.8 avec React Flow, connexions typées et MiniMap pour Home Assistant.
+description: Logic Studio 0.1.12 avec DE/EN/FR, langue mémorisée et aide des blocs pour Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
-**0.1.8 – mise à jour publique de test, 8 novembre 2026.** Le canevas utilise désormais **React Flow** avec des blocs Logic Studio personnalisés, des connexions typées, le zoom et une MiniMap. Bibliothèques et licences sont incluses localement ; aucun CDN nécessaire. Logic Studio est une application HA autonome pour les plans à blocs fonctionnels, indépendante de Grafik Visual Studio et Blocks for HA. L’éditeur est actuellement en **allemand** ; ce guide existe en **DE/EN/FR**.
+**0.1.12 – mise à jour publique de test, 8 novembre 2026.** Interface et documentation sont désormais disponibles en **DE/EN/FR**. Logic Studio est une application HA autonome pour les plans à blocs fonctionnels, indépendante de Grafik Visual Studio et Blocks for HA. Le canevas React Flow conserve ses blocs personnalisés, connexions typées, zoom et MiniMap ; bibliothèques et licences sont incluses localement.
 
 ::: warning Version de test
 Installer d’abord sur un système de test et créer une sauvegarde complète. Les propriétés natives détaillées sont actuellement modifiables en JSON. L’application ne réécrit pas les automatisations/scripts dans HA et ne commande aucun appareil. Vérifier et installer soi-même les sorties générées.
 :::
 
-[Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.8) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+[Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
 ## Installation de test depuis GitHub
 
@@ -27,6 +27,20 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 **Conserver une installation locale existante :** les applications GitHub et locale ont des identifiants de dépôt et des données séparés. Exporter l’ancien plan en JSON avec **Projekt**, puis utiliser **Öffnen** dans l’application GitHub. Aucune migration ou désinstallation automatique. Chaque application conserve projet et réglages de palette sous `/data`.
 
 **Mettre à jour une application GitHub existante :** sauvegarder d’abord, rechercher les mises à jour dans le gestionnaire d’applications puis choisir **UGSo Logic Studio → Mettre à jour**. Conserver l’installation : `/data`, les identifiants d’entités et les plans existants sont préservés. Ne pas désinstaller ni changer d’identifiant d’application. Sur .193, le plan original, les favoris, les blocs récents et les catégories repliées ont été conservés après la mise à jour.
+
+## Langue, barre d’outils et documentation
+
+Choisir **Langue → Deutsch / English / Français** dans l’en-tête. Menus, descriptions des blocs, sélecteur d’entités et dialogues d’import/export changent sans rechargement. Le choix est enregistré avec les préférences du navigateur/de l’application. **Noms personnels, identifiants d’entités, valeurs, noms des bornes et code YAML/JavaScript généré ne sont pas traduits.**
+
+**Documentation**, à droite, présente les raccourcis implémentés et, pour le bloc sélectionné, sa description et ses entrées/sorties. **Ctrl+Z / Ctrl+Y** : annuler/rétablir ; **Suppr** : supprimer la sélection ; **Échap** : annuler une connexion/fermer un menu. Tab et Entrée/Espace permettent de choisir et connecter les bornes. Les commandes du débogueur de l’éditeur de référence ioBroker ne sont pas présentées comme disponibles.
+
+La barre regroupe **Annuler/rétablir → Projet → Simulation → Sortie**. Les trois boutons de simulation ont les mêmes dimensions et des bordures distinctes. Le menu Projet propose aussi **Nouveau projet** et **Charger l’exemple**. Le sélecteur d’entités s’ouvre via l’icône **à côté de l’identifiant d’entité HA** dans les propriétés STATE_IN/STATE_OUT ; l’ancien bouton supérieur est retiré.
+
+![Documentation allemande sur .193 avec le plan original conservé](/images/logic-studio/0.1.12-193-de-documentation.png)
+
+![Documentation anglaise du même plan sur .193](/images/logic-studio/0.1.12-193-en-documentation.png)
+
+![Documentation française du même plan sur .193](/images/logic-studio/0.1.12-193-fr-documentation.png)
 
 ## Deux types de plans
 
@@ -72,6 +86,10 @@ Le **menu ⋮** de chaque bloc propose **Eigenschaften** (propriétés), **Dupli
 ![Menu à trois points d’un bloc](/images/logic-studio/block-menu.png)
 
 ## Validation et limites
+
+**0.1.12 sur .193 / HA Core 2026.10.4 :** Application locale mise à jour depuis 0.1.8 après sauvegarde complète. DE/EN/FR, documentation et sélection d’entités HA réelles validés. Le français reste mémorisé après rechargement du navigateur, redémarrage de l’application et nouveau chargement du projet enregistré ; l’allemand a ensuite été rétabli. Le JSON ne diffère **que par la version** : cinq blocs, trois liens, noms, valeurs et positions sont identiques. Le YAML généré est identique en EN et FR. Aucun appareil commandé. **31 tests Node et neuf tests Python** réussis. Les anciens rapports ci-dessous sont conservés comme historique.
+
+![Retour à l’allemand après redémarrage réussi sur .193](/images/logic-studio/0.1.12-193-neustart-de.png)
 
 **0.1.8 sur .193 / HA Core 2026.10.4 :** Application locale existante mise à jour après sauvegarde complète. Connexions BOOL à la souris, refus STRING→BOOL, entrées occupées, déplacement/annulation, duplication, zoom et MiniMap validés. Le sélecteur lit les entités HA ; un script imbriqué avec If/Then/Else, Delay et Stop a été importé puis exporté sans modification de structure. Le plan original a été restauré et comparé après rechargement : **identifiants, positions, paramètres et trois liens inchangés**, ainsi que favoris, blocs récents et catégories repliées. Aucun appareil commandé. Construction Docker et test HTTP du conteneur réussis, ainsi que **29 tests Node et huit tests Python**. Images de l’interface allemande. Le changement clair/sombre n’a pas été retesté manuellement à cette étape.
 

@@ -1,16 +1,16 @@
 ---
 title: Logic Studio
-description: Logic Studio 0.1.8 with React Flow, typed drag connections and MiniMap for Home Assistant.
+description: Logic Studio 0.1.12 with DE/EN/FR, persisted language selection and block help for Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
-**0.1.8 – public test update, 8 November 2026.** The canvas now uses **React Flow** with custom Logic Studio blocks, typed connections, zoom and MiniMap. Libraries and licenses are bundled locally; no CDN is required. Logic Studio is a standalone HA app for visual function-block plans, independent of Grafik Visual Studio and Blocks for HA. The editor currently uses **German**; this guide is available in **DE/EN/FR**.
+**0.1.12 – public test update, 8 November 2026.** Both interface and documentation now support **DE/EN/FR**. Logic Studio is a standalone HA app for visual function-block plans, independent of Grafik Visual Studio and Blocks for HA. The React Flow canvas retains custom blocks, typed connections, zoom and MiniMap; libraries and licenses are bundled locally.
 
 ::: warning Test release
 Install on a test system first and create a full backup beforehand. Native detail properties currently use JSON. The app does not write automations/scripts back to HA or control devices. Review and install generated output yourself.
 :::
 
-[GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.8) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+[GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
 ## Test installation from GitHub
 
@@ -27,6 +27,20 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 **Keep an existing local test installation:** GitHub and local apps have different repository IDs and separate data. Export your old plan using **Projekt** as JSON, then use **Öffnen** in the GitHub app. There is no automatic migration or uninstall. Each app retains its project and palette settings under `/data`.
 
 **Update an existing GitHub app:** Back up first, check for updates in the app manager and choose **UGSo Logic Studio → Update**. Keep the app installed: `/data`, entity IDs and existing plans are preserved. Do not uninstall or switch app IDs. On .193, the original plan, favorites, recent blocks and collapsed categories remained intact after the update.
+
+## Language, toolbar and documentation
+
+Choose **Language → Deutsch / English / Français** in the header. Menus, block descriptions, entity picker and import/export dialogs switch without reloading. The choice is saved with browser/app preferences. **Custom names, entity IDs, values, port names and generated YAML/JavaScript code are not translated.**
+
+**Documentation** on the right lists implemented keyboard shortcuts and, when a block is selected, its description and input/output ports. **Ctrl+Z / Ctrl+Y**: undo/redo; **Delete**: delete selection; **Esc**: cancel a connection/close a menu. Use Tab and Enter/Space to select and connect ports. Debugger commands from the ioBroker reference editor are not presented as implemented features.
+
+The toolbar groups **Undo/redo → Project → Simulation → Output**. The three simulation buttons have equal dimensions and separate borders. The project menu also offers **New project** and **Load example**. Open entity selection using the icon **beside HA entity ID** in STATE_IN/STATE_OUT properties; the previous top entity button is removed.
+
+![German documentation view on .193 with the original plan intact](/images/logic-studio/0.1.12-193-de-documentation.png)
+
+![English documentation view of the same plan on .193](/images/logic-studio/0.1.12-193-en-documentation.png)
+
+![French documentation view of the same plan on .193](/images/logic-studio/0.1.12-193-fr-documentation.png)
 
 ## Two kinds of plan
 
@@ -72,6 +86,10 @@ Each block’s **⋮ menu** offers **Eigenschaften** (properties), **Duplizieren
 ![Per-block three-dot menu](/images/logic-studio/block-menu.png)
 
 ## Validation and limits
+
+**0.1.12 on .193 / HA Core 2026.10.4:** Updated the local app from 0.1.8 after a full backup. DE/EN/FR, documentation and real HA entity selection passed. French survived browser reload, app restart and loading the saved app project again; German was restored afterwards. Project JSON differs **only in version**: all five blocks, three connections, names, values and positions are identical. Generated YAML is identical in EN and FR. No devices controlled. **31 Node and nine Python tests** passed. Older reports below remain as history.
+
+![German restored after the successful app restart on .193](/images/logic-studio/0.1.12-193-neustart-de.png)
 
 **0.1.8 on .193 / HA Core 2026.10.4:** Updated the existing local app after a full backup. Typed mouse connections, STRING→BOOL rejection, occupied inputs, move/undo, duplicate, zoom and MiniMap passed. The entity picker reads HA entities; a nested script with If/Then/Else, Delay and Stop was imported and exported with its structure preserved. The original plan was restored and compared after reload: **all IDs, positions, parameters and three wires unchanged**, along with favorites, recent blocks and collapsed categories. No devices were controlled. Docker build and container HTTP smoke test passed, as did **29 Node and eight Python tests**. Screenshots show the German UI. Light/dark switching was not manually retested in this step.
 
