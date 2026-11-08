@@ -18,7 +18,7 @@ Diese Projekte liegen im selben Repository wie die folgenden MQTT-Apps.
 
 | Projekt | Dokumentation |
 | --- | --- |
-| <img class="package-icon" src="/images/packages/projects-sidebar-manager.svg" width="32" height="32" alt="" aria-hidden="true"> [Sidebar Manager](/projects/sidebar-manager/) | 0.1.9: Farben/Transparenz, Ordner mit Icons, gemeinsame Sortierung, Trennlinien nur ausgeklappt und eigene Links als neuer Tab oder iframe. DE/EN/FR, [GitHub](https://github.com/rockbaer2007/ha-sidebar-manager), HACS-kompatibles Frontend-Plugin. |
+| <img class="package-icon" src="/images/packages/projects-sidebar-manager.svg" width="32" height="32" alt="" aria-hidden="true"> [Sidebar Manager](/projects/sidebar-manager/) | 0.1.10: Farben/Transparenz, Ordner mit Icons, gemeinsame Sortierung, Trennlinien nur ausgeklappt und eigene Links als neuer Tab oder iframe. DE/EN/FR, [GitHub](https://github.com/rockbaer2007/ha-sidebar-manager), HACS-kompatibles Frontend-Plugin. |
 | <img class="package-icon" src="/images/automation-status-card/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Automation Status Card](/projects/automation-status-card/) | 0.1.3: automatische Liste, Zeilenzahl/Scrollen, optionale Schalter, Checkbox-Auswahl und Lauf-/Trace-Diagnose. DE/EN/FR; auf HA 2026.10.4 geprüft. |
 | <img class="package-icon" src="/images/packages/projects-sidebar-colors.svg" width="32" height="32" alt="" aria-hidden="true"> [Seitenleistenfarben](/projects/sidebar-colors/) | 0.1.1: Farben und Transparenz je Menüeintrag direkt im HA-Seitenleisten-Editor. DE/EN/FR, benutzerspezifisch synchronisiert; eigenes [GitHub-Repo](https://github.com/rockbaer2007/ha-sidebar-colors), für HACS und Marketplace. Keine Supervisor-App. |
 

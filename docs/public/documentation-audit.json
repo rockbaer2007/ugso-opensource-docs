@@ -1010,17 +1010,17 @@
         "de": {
           "path": "projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "9b6dd5758caa39e52260ba0a8eb8a8dee20b8e3f1fe1e0c0fe02fec5410301a6",
+          "sha256": "4d8fa63878e51897322d7221aa319978eec77b58e582fd54a47297b7980ae553",
           "words": 710,
           "headings": 8,
           "examples": 1,
           "versions": [
             "0.1.0",
             "0.1.1",
+            "0.1.10",
             "0.1.16",
             "0.1.3",
             "0.1.4",
-            "0.1.9",
             "2026.10.4"
           ],
           "unresolved_local_references": []
@@ -1028,17 +1028,17 @@
         "en": {
           "path": "en/projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "223323e7c4e8ebb9d224dcadcf082d7bf3b72519a7379c692e34891f8807d1df",
+          "sha256": "4132672049a7489c6752c6e3b1590f5a945c531acddb50ce9246c07e8f9ef3a2",
           "words": 756,
           "headings": 8,
           "examples": 1,
           "versions": [
             "0.1.0",
             "0.1.1",
+            "0.1.10",
             "0.1.16",
             "0.1.3",
             "0.1.4",
-            "0.1.9",
             "2026.10.4"
           ],
           "unresolved_local_references": [],
@@ -1053,17 +1053,17 @@
         "fr": {
           "path": "fr/projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "b2126268c7df487bc9a772d12a7ebb8cac1a64bcb03e1bbdd2f398c1eca7145d",
+          "sha256": "ee8f6cca1cd668b98fc5911ad6f050286636ffba0ba8a028c9fb84af526af935",
           "words": 941,
           "headings": 8,
           "examples": 1,
           "versions": [
             "0.1.0",
             "0.1.1",
+            "0.1.10",
             "0.1.16",
             "0.1.3",
             "0.1.4",
-            "0.1.9",
             "2026.10.4"
           ],
           "unresolved_local_references": [],
@@ -7531,11 +7531,12 @@
         "de": {
           "path": "projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "fdb156dc924fd21c1c375b8186181f2f063fe553d416915f61d87defdb8b1449",
-          "words": 1392,
-          "headings": 9,
+          "sha256": "ca14dfb3e81a38e777dbdd3dcf7169403cf2c97b0d4647997a6670067c0ed335",
+          "words": 1683,
+          "headings": 10,
           "examples": 2,
           "versions": [
+            "0.1.10",
             "0.1.6",
             "0.1.7",
             "0.1.8",
@@ -7549,11 +7550,12 @@
         "en": {
           "path": "en/projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "50579ae88b09a516daa1368ccab7e6f82a318d0fb0492d4bac0a3c38550a1fec",
-          "words": 1670,
-          "headings": 9,
+          "sha256": "197ca4ce77bacab873ad5442c9bdd31898c0f765c851c16b6e916afc531ba123",
+          "words": 1968,
+          "headings": 10,
           "examples": 3,
           "versions": [
+            "0.1.10",
             "0.1.6",
             "0.1.7",
             "0.1.8",
@@ -7574,11 +7576,12 @@
         "fr": {
           "path": "fr/projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "cf4e670024bffe7200054f6f3871697feb958ee5b793e772ff0dc2715b86d976",
-          "words": 1617,
-          "headings": 9,
+          "sha256": "d96a3d6ca388fa4ccd97c26fc01256daee0e3fd99271ac9868f6ae390725d856",
+          "words": 1939,
+          "headings": 10,
           "examples": 2,
           "versions": [
+            "0.1.10",
             "0.1.6",
             "0.1.7",
             "0.1.8",

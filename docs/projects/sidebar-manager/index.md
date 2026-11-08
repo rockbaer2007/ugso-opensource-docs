@@ -1,8 +1,34 @@
 ---
 title: Sidebar Manager
-description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenleiste. Version 0.1.9, DE/EN/FR.
+description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenleiste. Version 0.1.10, DE/EN/FR.
 ---
 # Sidebar Manager
+
+## Neu in 0.1.10: Home-Assistant-Verknüpfungen
+
+::: warning Marketplace erst ab Home Assistant 2026.11.0
+**Die Marketplace-Verknüpfung wird nur ab HA 2026.11.0 angeboten.** Auf älteren oder unbekannten Versionen bleibt diese Vorgabe ausgeblendet. Die Mindestversion des gesamten Pakets bleibt **HA 2026.10.3**; die anderen Verknüpfungen sind davon unabhängig. Der Link installiert Marketplace nicht und erteilt keine zusätzlichen Zugriffsrechte.
+:::
+
+Unter **Seitenleiste bearbeiten → Gruppen und Links verwalten → Home-Assistant-Verknüpfungen** den gewünschten Ordner wählen und **Hinzufügen** klicken. Der Bereich ist auf dem Desktop zweispaltig und auf schmalen Bildschirmen einspaltig.
+
+| Verknüpfung | Standardicon | Ziel |
+| --- | --- | --- |
+| Logs | `mdi:history` | `/config/logs` |
+| Automationen | `mdi:robot` | `/config/automation/dashboard` |
+| Entitäten | `mdi:shape` | `/config/entities` |
+| **Marketplace · ab HA 2026.11.0** | `mdi:store` | `/marketplace/browse?group=status` |
+| Labels | `mdi:label` | `/config/labels` |
+| Zustände | `mdi:list-status` | `/config/tools/state` |
+| Aktionen | `mdi:run` | `/config/tools/action` |
+
+**Icons sind änderbare Vorgaben für neue Links.** Bereits gespeicherte Links werden anhand ihrer Adresse wiederverwendet; eigene Namen und Icons bleiben erhalten. Das gilt auch für ältere Zustände-Links mit `/developer-tools/state`. Vorhandene Gruppen, Farben, Reihenfolge und VIS-/Dashboard-Einstellungen werden nicht migriert oder zurückgesetzt. Im Manager **Speichern** übernimmt die Linkeinstellungen; **Abbrechen** verwirft den offenen Entwurf.
+
+::: tip Auf .177 mit HA 2026.11.0 geprüft · 08.11.2026
+Nach frischem Vollbackup: zweispaltige Desktop-Darstellung, vier neue Linkziele, Standardicons, Ordnerzuordnung, Abbrechen, Speichern und vollständiges Neuladen erfolgreich. Eigene Testlinks entfernt; Benutzereinstellungen, Farben, Gruppen, Testdashboard und Ressourcen stimmen exakt mit der PC-Sicherung überein. **73 automatische Tests** bestehen, einschließlich der Marketplace-Versionsgrenzen. Mobile Darstellung und ältere HA-Versionen wurden nicht separat live geprüft.
+:::
+
+![Zweispaltige Home-Assistant-Verknüpfungen in Sidebar Manager 0.1.10, auf .177 geprüft](/images/sidebar-manager/shortcuts-0110-177.png)
 
 ::: info HA 2026.11: Farbvorschau korrigiert
 Version **0.1.9** behebt die fehlenden Text-/Iconfarben im nativen Bearbeitungsdialog, einschließlich Gruppenfarben. Auf .177 (Port 80), Core 2026.11.0 / Frontend 20261028.4 geprüft: Farben, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 automatische Tests bestehen. Eigene Testgruppe und -verknüpfung sind entfernt; das exportierte Layout entspricht wieder der Sicherung vor dem Test. Vorhandene Einstellungen und „Test für APP“ bleiben erhalten.
@@ -12,12 +38,12 @@ Version **0.1.9** behebt die fehlenden Text-/Iconfarben im nativen Bearbeitungsd
 
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
-**0.1.9 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.10 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Ordner, Farben, Transparenz und eigene Links direkt in „Seitenleiste bearbeiten“. Haupteinträge und Ordner gemeinsam am nativen Ziehgriff sortieren. Keine HA-Systemdateien werden ersetzt.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.9](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.9) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.10](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.10) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## Neu in 0.1.8: Links im Seitenleisten-Editor
 
@@ -85,7 +111,7 @@ Den Seitenleistenkopf länger gedrückt halten. Farbfelder, Augen und Ziehgriffe
 - Ordner zwischen Haupteinträge ziehen. Ordner und Inhalt wandern als Block; Alt+Auf/Ab unterstützt die Tastaturbedienung.
 - Unten angeheftete Ordner stehen auch im Editor unten. Verschieben vor einen normalen Menüblock hebt die untere Anheftung auf. Abbrechen erhält Position und Anheftung.
 - Trennlinie **0–4 px**, 0 = Aus. Nur ausgeklappt sichtbar, am Ende des Untermenüs, in Icon-Farbe/Transparenz, mit jeweils 1 px Abstand oben und unten.
-- Logs, Automationen und Zustände mit auswählbarem Ordner hinzufügen. Vorhandene passende Links werden wiederverwendet; Namen und Icons bleiben änderbar.
+- Logs, Automationen, Entitäten, Labels, Zustände und Aktionen mit auswählbarem Ordner hinzufügen; Marketplace zusätzlich ab HA 2026.11.0. Vorhandene passende Links werden wiederverwendet; Namen und Icons bleiben änderbar.
 - Eigene interne Links sind in den Einstellungen hellgelb, externe HTTP(S)-Links hellblau. Extern: neuer Tab oder iframe. Alte Links behalten ihre bisherige Öffnungsart bis zur Änderung. Eigene Seitenleistenfarben bleiben erhalten.
 - Speichern im Manager übernimmt dessen Organisation. Farben/native Reihenfolge im darunterliegenden HA-Dialog dort separat speichern. Abbrechen verwirft den jeweiligen Entwurf.
 

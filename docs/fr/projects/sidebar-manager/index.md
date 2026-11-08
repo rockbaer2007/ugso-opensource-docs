@@ -1,8 +1,34 @@
 ---
 title: Sidebar Manager
-description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.9, DE/EN/FR.
+description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.10, DE/EN/FR.
 ---
 # Sidebar Manager
+
+## Nouveautés de 0.1.10 : raccourcis Home Assistant
+
+::: warning Marketplace nécessite Home Assistant 2026.11.0
+**Le raccourci Marketplace est proposé uniquement à partir de HA 2026.11.0.** Il est masqué sur les versions anciennes ou inconnues. Le minimum du paquet reste **HA 2026.10.3** ; les autres raccourcis sont indépendants de cette condition. Le lien n’installe pas Marketplace et n’accorde aucune autorisation supplémentaire.
+:::
+
+Ouvrir **Modifier la barre latérale → Gérer les groupes et les liens → Raccourcis Home Assistant**, choisir un dossier puis **Ajouter**. La section utilise deux colonnes sur ordinateur et une sur écran étroit.
+
+| Raccourci | Icône par défaut | Destination |
+| --- | --- | --- |
+| Journaux | `mdi:history` | `/config/logs` |
+| Automatisations | `mdi:robot` | `/config/automation/dashboard` |
+| Entités | `mdi:shape` | `/config/entities` |
+| **Marketplace · HA 2026.11.0+** | `mdi:store` | `/marketplace/browse?group=status` |
+| Étiquettes | `mdi:label` | `/config/labels` |
+| États | `mdi:list-status` | `/config/tools/state` |
+| Actions | `mdi:run` | `/config/tools/action` |
+
+**Les icônes sont des valeurs par défaut modifiables pour les nouveaux liens.** Les liens existants sont réutilisés selon leur adresse et conservent leurs noms et icônes, y compris l’ancienne adresse États `/developer-tools/state`. Groupes, couleurs, ordre et réglages VIS/tableaux de bord ne sont ni migrés ni réinitialisés. **Enregistrer** dans le Manager applique les réglages des liens ; **Annuler** abandonne le brouillon ouvert.
+
+::: tip Vérifié sur .177 avec HA 2026.11.0 · 8 novembre 2026
+Après sauvegarde complète : deux colonnes sur ordinateur, quatre nouvelles destinations, icônes par défaut, dossier, annulation, enregistrement et rechargement complet réussis. Liens de test supprimés ; réglages utilisateur, couleurs, groupes, tableau de test et ressources identiques à la sauvegarde PC. **73 tests automatisés** réussissent, y compris les seuils de version Marketplace. Aucun test réel distinct sur mobile ou ancienne version HA.
+:::
+
+![Raccourcis Home Assistant sur deux colonnes dans Sidebar Manager 0.1.10, testé sur .177 ; interface de test allemande](/images/sidebar-manager/shortcuts-0110-177.png)
 
 ::: info HA 2026.11 : aperçu des couleurs corrigé
 La version **0.1.9** corrige les couleurs du texte/des icônes dans le dialogue natif, y compris celles des groupes. Vérifié sur .177 (port 80), Core 2026.11.0 / frontend 20261028.4 : couleurs, opacité, annulation, enregistrement, réinitialisation au thème et rechargement complet. Les 72 tests automatisés réussissent. Groupe/lien de test supprimés ; disposition exportée identique à la sauvegarde initiale. Paramètres existants et « Test für APP » conservés.
@@ -12,12 +38,12 @@ La version **0.1.9** corrige les couleurs du texte/des icônes dans le dialogue 
 
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
-**0.1.9 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.10 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Dossiers, couleurs, opacité et liens personnalisés dans « Modifier la barre latérale ». Triez dossiers et entrées principales avec les poignées natives. Aucun fichier système HA n'est remplacé.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.9](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.9) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.10](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.10) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## Nouveautés de 0.1.8 : liens dans l’éditeur de barre latérale
 
@@ -85,7 +111,7 @@ Maintenez l'en-tête de la barre latérale. Couleurs, yeux et poignées restent 
 - Déplacez les dossiers entre les entrées principales. Dossier et contenu bougent ensemble ; Alt+Haut/Bas permet le tri au clavier.
 - Les dossiers épinglés en bas apparaissent aussi en bas dans l'éditeur. Les déplacer avant un bloc normal retire leur épinglage inférieur. Annuler conserve position et épinglage.
 - Séparateur **0–4 px**, 0 = désactivé. Visible uniquement lorsque le groupe est déplié, après son contenu, avec couleur/opacité de l'icône et 1 px d'espacement au-dessus et au-dessous.
-- Ajoutez Journaux, Automatisations et États avec un dossier au choix. Les liens correspondants sont réutilisés ; noms et icônes restent modifiables.
+- Ajoutez Journaux, Automatisations, Entités, Étiquettes, États et Actions avec un dossier au choix ; Marketplace est proposé à partir de HA 2026.11.0. Les liens correspondants sont réutilisés ; noms et icônes restent modifiables.
 - Liens internes personnalisés jaune clair dans les réglages, liens HTTP(S) externes bleu clair. Nouvel onglet ou iframe pour les liens externes. Les anciens gardent leur comportement précédent jusqu'à modification. Couleurs personnalisées de la barre latérale conservées.
 - Enregistrer dans le Manager applique l'organisation. Couleurs/ordre natif modifiés dans la fenêtre HA sous-jacente doivent y être enregistrés séparément. Annuler abandonne le brouillon concerné.
 

@@ -1,8 +1,34 @@
 ---
 title: Sidebar Manager
-description: Folders, colors, opacity and links in the Home Assistant sidebar. Version 0.1.9, DE/EN/FR.
+description: Folders, colors, opacity and links in the Home Assistant sidebar. Version 0.1.10, DE/EN/FR.
 ---
 # Sidebar Manager
+
+## New in 0.1.10: Home Assistant shortcuts
+
+::: warning Marketplace requires Home Assistant 2026.11.0
+**The Marketplace shortcut is offered only on HA 2026.11.0 or newer.** It is hidden on older or unknown versions. The package minimum remains **HA 2026.10.3**; other presets are independent of this requirement. The link does not install Marketplace or grant additional permissions.
+:::
+
+Open **Edit sidebar → Manage groups and links → Home Assistant shortcuts**, choose a folder and click **Add**. The section uses two columns on desktop and one on narrow screens.
+
+| Shortcut | Default icon | Target |
+| --- | --- | --- |
+| Logs | `mdi:history` | `/config/logs` |
+| Automations | `mdi:robot` | `/config/automation/dashboard` |
+| Entities | `mdi:shape` | `/config/entities` |
+| **Marketplace · HA 2026.11.0+** | `mdi:store` | `/marketplace/browse?group=status` |
+| Labels | `mdi:label` | `/config/labels` |
+| States | `mdi:list-status` | `/config/tools/state` |
+| Actions | `mdi:run` | `/config/tools/action` |
+
+**Icons are editable defaults for new links.** Existing links are reused by URL and retain their custom names and icons, including legacy States URLs at `/developer-tools/state`. Existing groups, colors, order and VIS/dashboard settings are not migrated or reset. **Save** in the Manager applies link settings; **Cancel** discards the open draft.
+
+::: tip Verified on .177 with HA 2026.11.0 · 8 November 2026
+Following a fresh full backup, the desktop two-column layout, four new destinations, default icons, folder assignment, Cancel, Save and full reload passed. Temporary test links removed; user preferences, colors, groups, test dashboard and resources exactly match the PC backup. **73 automated tests** pass, including Marketplace version boundaries. Mobile layout and older HA versions were not separately live-tested.
+:::
+
+![Two-column Home Assistant shortcuts in Sidebar Manager 0.1.10, tested on .177; German test interface](/images/sidebar-manager/shortcuts-0110-177.png)
 
 ::: info HA 2026.11: color preview fixed
 Version **0.1.9** fixes missing text/icon colors in the native edit dialog, including group colors. Verified on .177 (port 80), Core 2026.11.0 / frontend 20261028.4: colors, opacity, Cancel, Save, theme reset and a full reload. All 72 automated tests pass. Disposable group/link removed; the exported layout again matches the pre-test backup. Existing settings and “Test für APP” are preserved.
@@ -13,12 +39,12 @@ Version **0.1.9** fixes missing text/icon colors in the native edit dialog, incl
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
 
-**0.1.9 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.10 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Organize Home Assistant's sidebar with folders, colors, opacity and custom links, directly from **Edit sidebar**. Move main entries and folders with the native drag handles. No HA core files are replaced.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.9](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.9) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.10](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.10) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## New in 0.1.8: links in the sidebar editor
 
@@ -96,7 +122,7 @@ Hold the sidebar heading to open **Edit sidebar**. Color fields, eye buttons and
 - Drag folders between main entries in the native editor. Group membership is preserved: the folder and its children move together. Keyboard sorting is also available (Alt+Up/Down on a row).
 - Bottom-pinned folders also appear at the bottom in the editor. Moving one before a normal menu block releases its bottom pin; Cancel preserves the original pin and position.
 - Set the folder separator to **0–4 px**. Zero means off. It appears only while the group is expanded, at the end of the block, in the icon's color/opacity, with 1 px spacing above and below.
-- Add Logs, Automations and States shortcuts with a selectable folder. Matching existing links are reused; names and MDI icons remain editable.
+- Add Logs, Automations, Entities, Labels, States and Actions with a selectable folder; Marketplace is additionally available from HA 2026.11.0. Matching existing links are reused; names and MDI icons remain editable.
 - Own internal links are pale yellow in settings; external HTTP(S) links are light blue. Choose a new tab or iframe for external links. Older links retain their previous same-window behavior until edited. These settings highlights do not replace custom sidebar colors.
 - The Manager's **Save** commits its layout. Color/native order edits in the underlying HA dialog require that dialog's **Save**. Cancel discards the respective open draft.
 
