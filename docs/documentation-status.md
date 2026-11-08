@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 240 | 0 | 0 | 0 |
-| EN | 240 | 0 | 0 | 0 |
-| FR | 240 | 0 | 0 | 0 |
+| DE | 241 | 0 | 0 | 0 |
+| EN | 241 | 0 | 0 | 0 |
+| FR | 241 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -117,6 +117,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/interaktiv) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/materialdesign) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/materialdesign) |
 | [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/packer) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/packer) |
+| [projects/grafik-visual-studio/palette-runtime.md](/projects/grafik-visual-studio/palette-runtime) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/palette-runtime) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/palette-runtime) |
 | [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/printer) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/printer) |
 | [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/solar) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/solar) |
 | [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/svg-line) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/svg-line) |

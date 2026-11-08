@@ -1229,6 +1229,21 @@
     "EN": "/en/projects/grafik-visual-studio/packer",
     "FR": "/fr/projects/grafik-visual-studio/packer"
   },
+  "/projects/grafik-visual-studio/palette-runtime": {
+    "DE": "/projects/grafik-visual-studio/palette-runtime",
+    "EN": "/en/projects/grafik-visual-studio/palette-runtime",
+    "FR": "/fr/projects/grafik-visual-studio/palette-runtime"
+  },
+  "/en/projects/grafik-visual-studio/palette-runtime": {
+    "DE": "/projects/grafik-visual-studio/palette-runtime",
+    "EN": "/en/projects/grafik-visual-studio/palette-runtime",
+    "FR": "/fr/projects/grafik-visual-studio/palette-runtime"
+  },
+  "/fr/projects/grafik-visual-studio/palette-runtime": {
+    "DE": "/projects/grafik-visual-studio/palette-runtime",
+    "EN": "/en/projects/grafik-visual-studio/palette-runtime",
+    "FR": "/fr/projects/grafik-visual-studio/palette-runtime"
+  },
   "/projects/grafik-visual-studio/printer": {
     "DE": "/projects/grafik-visual-studio/printer",
     "EN": "/en/projects/grafik-visual-studio/printer",

@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 240,
+  "source_pages": 241,
   "summary": {
     "de": {
-      "content-present": 240,
-      "existing_pages": 240,
+      "content-present": 241,
+      "existing_pages": 241,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 240,
-      "existing_pages": 240,
+      "content-present": 241,
+      "existing_pages": 241,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 240,
-      "existing_pages": 240,
+      "content-present": 241,
+      "existing_pages": 241,
       "unmatched_pages": 0,
       "review_signals": 31,
       "reviewed_findings": 47,
@@ -5104,8 +5104,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "22e8a17468fa6125431edc95983e7995cddae0a618236783408f72090698fff6",
-          "words": 2435,
+          "sha256": "a299eea08afe619b1fdd34f3f79c26a7c959e72b9854507c6e1eb57c95e51f9e",
+          "words": 2478,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -5132,6 +5132,7 @@
             "0.1.289",
             "0.1.296",
             "0.1.297",
+            "0.1.299",
             "0.1.3",
             "0.1.9",
             "0.3.0",
@@ -5143,8 +5144,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "32040bfd23350dc07ba51ad799d27334badadaad2fa0ca01ef18256da0184aa3",
-          "words": 2490,
+          "sha256": "265e7b504c36e14cf8b25c2b9916eb2371ecd0deea0572d23b0af63d87030437",
+          "words": 2535,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -5171,6 +5172,7 @@
             "0.1.289",
             "0.1.296",
             "0.1.297",
+            "0.1.299",
             "0.1.3",
             "0.1.9",
             "0.3.0",
@@ -5189,8 +5191,8 @@
         "fr": {
           "path": "fr/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "982bb8bed56f69e97f9454eba62c875f0a992ed1ad2ded64128068d6bba6dac1",
-          "words": 3889,
+          "sha256": "fd04d190af098bd5b65e0f0391c783cd8df0441fb1b639d5213fdd43a30a8178",
+          "words": 3934,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -5217,6 +5219,7 @@
             "0.1.289",
             "0.1.296",
             "0.1.297",
+            "0.1.299",
             "0.1.3",
             "0.1.9",
             "0.3.0",
@@ -5555,6 +5558,70 @@
             "0.2.0",
             "0.3.0",
             "0.3.1"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/grafik-visual-studio/palette-runtime.md",
+      "locales": {
+        "de": {
+          "path": "projects/grafik-visual-studio/palette-runtime.md",
+          "status": "content-present",
+          "sha256": "40a6dbe0361f181f39c37a9a6c096cac5c31f353c617ad15a2a5f7d04f174af2",
+          "words": 494,
+          "headings": 5,
+          "examples": 0,
+          "versions": [
+            "0.1.298",
+            "0.1.299",
+            "2026.10.4",
+            "2026.11.0"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/grafik-visual-studio/palette-runtime.md",
+          "status": "content-present",
+          "sha256": "fd48bc4e195382863eab07caeac18ab15dfd459ae079087f34c80c6ee4966245",
+          "words": 511,
+          "headings": 5,
+          "examples": 0,
+          "versions": [
+            "0.1.298",
+            "0.1.299",
+            "2026.10.4",
+            "2026.11.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/grafik-visual-studio/palette-runtime.md",
+          "status": "content-present",
+          "sha256": "d43f482b05052948708d470bc904e9210e8437c30ca3ff7d880a128b39d97e5a",
+          "words": 560,
+          "headings": 5,
+          "examples": 0,
+          "versions": [
+            "0.1.298",
+            "0.1.299",
+            "2026.10.4",
+            "2026.11.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {

@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 240 | 0 | 0 | 0 |
-| EN | 240 | 0 | 0 | 0 |
-| FR | 240 | 0 | 0 | 0 |
+| DE | 241 | 0 | 0 | 0 |
+| EN | 241 | 0 | 0 | 0 |
+| FR | 241 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -117,6 +117,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Content present](/en/projects/grafik-visual-studio/interaktiv) | [Content present](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Content present](/en/projects/grafik-visual-studio/materialdesign) | [Content present](/fr/projects/grafik-visual-studio/materialdesign) |
 | [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Content present](/en/projects/grafik-visual-studio/packer) | [Content present](/fr/projects/grafik-visual-studio/packer) |
+| [projects/grafik-visual-studio/palette-runtime.md](/projects/grafik-visual-studio/palette-runtime) | [Content present](/en/projects/grafik-visual-studio/palette-runtime) | [Content present](/fr/projects/grafik-visual-studio/palette-runtime) |
 | [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Content present](/en/projects/grafik-visual-studio/printer) | [Content present](/fr/projects/grafik-visual-studio/printer) |
 | [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Content present](/en/projects/grafik-visual-studio/solar) | [Content present](/fr/projects/grafik-visual-studio/solar) |
 | [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Content present](/en/projects/grafik-visual-studio/svg-line) | [Content present](/fr/projects/grafik-visual-studio/svg-line) |

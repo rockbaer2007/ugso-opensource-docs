@@ -5,6 +5,8 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
+**Studio 0.1.299:** [Recently used, miniature palette and runtime start/stop](./palette-runtime). Up to twelve distinct recently inserted widget types persist in the browser. Runtime starts beside the page tabs over the canvas; the separate window remains available. Settings and projects are retained.
+
 **Studio 0.1.297:** Built-in [device set and tablet features](./devices-tablet): five device types as tiles and floorplan markers, live heading values, tablet return, optional inactivity home page and demand-loaded renderers. Package changes and optional capabilities appear without restarting. Checked on .177 and .193; existing settings and projects are retained. [GitHub update 0.1.297](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.297).
 
 **Studio 0.1.296:** The remaining **62 widget types** gain DE/EN/FR properties and runtime messages, optional Climate controls and source/attribute/unit checks. Existing projects and package versions remain valid; new groups start disabled. [Guide and limits](./ha-quellen-climate). Mocked tests do not verify real devices/Companion. [Audit report](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md).
