@@ -1,16 +1,16 @@
 ---
 title: Logic Studio
-description: Logic Studio 0.1.7 avec connexions typées par glisser-déposer et mini-vue navigable pour Home Assistant.
+description: Logic Studio 0.1.8 avec React Flow, connexions typées et MiniMap pour Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
-**0.1.7 – mise à jour publique de test, 8 novembre 2026.** Nouveautés : connexions typées à la souris et mini-vue navigable. Logic Studio est une application HA autonome pour les plans à blocs fonctionnels, indépendante de Grafik Visual Studio et Blocks for HA. L’éditeur est actuellement en **allemand** ; ce guide existe en **DE/EN/FR**.
+**0.1.8 – mise à jour publique de test, 8 novembre 2026.** Le canevas utilise désormais **React Flow** avec des blocs Logic Studio personnalisés, des connexions typées, le zoom et une MiniMap. Bibliothèques et licences sont incluses localement ; aucun CDN nécessaire. Logic Studio est une application HA autonome pour les plans à blocs fonctionnels, indépendante de Grafik Visual Studio et Blocks for HA. L’éditeur est actuellement en **allemand** ; ce guide existe en **DE/EN/FR**.
 
 ::: warning Version de test
 Installer d’abord sur un système de test et créer une sauvegarde complète. Les propriétés natives détaillées sont actuellement modifiables en JSON. L’application ne réécrit pas les automatisations/scripts dans HA et ne commande aucun appareil. Vérifier et installer soi-même les sorties générées.
 :::
 
-[Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.7) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+[Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.8) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
 ## Installation de test depuis GitHub
 
@@ -47,7 +47,13 @@ Maintenir le bouton de la souris sur une borne colorée, faire glisser vers une 
 
 ![Connexion STRING vers BOOL refusée avec une erreur de type explicite](/images/logic-studio/0.1.7-typ-abgewiesen.png)
 
-En bas à droite, **Übersicht** (mini-vue) affiche les positions colorées des blocs et le cadre de la zone visible. Cliquer pour naviguer. Avec le focus, les flèches ainsi que **Début** et **Fin** fonctionnent aussi. La mini-vue suit le défilement, le zoom et les déplacements des blocs. **Referenz: React Flow** ouvre le projet de référence dans un nouvel onglet ; le canevas actuel est une réalisation indépendante qui n’utilise pas React Flow comme bibliothèque d’exécution.
+En bas à droite, la **MiniMap** affiche les positions colorées des blocs et la zone visible. Faire glisser dans la MiniMap pour naviguer et utiliser la molette pour zoomer. Faire glisser le canevas vide déplace la vue ; **+/−** règlent le zoom et **Alles anzeigen** cadre tous les blocs. Déplacer un bloc par son en-tête. L’attribution **React Flow** reste visible en bas à droite. Depuis 0.1.8, la bibliothèque fonctionne réellement dans l’éditeur ; la logique métier, la validation des types et les exportateurs restent propres à Logic Studio.
+
+![Canevas React Flow avec plan original conservé et MiniMap sur .193](/images/logic-studio/0.1.8-react-flow-193.jpg)
+
+![Test local React Flow avec blocs typés](/images/logic-studio/0.1.8-react-flow-local.jpg)
+
+Les images suivantes documentent aussi les tests précédents de 0.1.7.
 
 ![Mini-vue avec positions des blocs et cadre visible sur .193](/images/logic-studio/0.1.7-miniuebersicht.png)
 
@@ -66,6 +72,8 @@ Le **menu ⋮** de chaque bloc propose **Eigenschaften** (propriétés), **Dupli
 ![Menu à trois points d’un bloc](/images/logic-studio/block-menu.png)
 
 ## Validation et limites
+
+**0.1.8 sur .193 / HA Core 2026.10.4 :** Application locale existante mise à jour après sauvegarde complète. Connexions BOOL à la souris, refus STRING→BOOL, entrées occupées, déplacement/annulation, duplication, zoom et MiniMap validés. Le sélecteur lit les entités HA ; un script imbriqué avec If/Then/Else, Delay et Stop a été importé puis exporté sans modification de structure. Le plan original a été restauré et comparé après rechargement : **identifiants, positions, paramètres et trois liens inchangés**, ainsi que favoris, blocs récents et catégories repliées. Aucun appareil commandé. Construction Docker et test HTTP du conteneur réussis, ainsi que **29 tests Node et huit tests Python**. Images de l’interface allemande. Le changement clair/sombre n’a pas été retesté manuellement à cette étape.
 
 La base fonctionnelle **0.1.5** a été testée sur **.193 / HA Core 2026.10.4** : import d’un blueprint réel, exemples d’automatisation/script/blueprint, exports YAML identiques sur le fond et actions du menu. **0.1.6** est sa première distribution publique. 22 tests Node et huit tests Python vérifient export, persistance, branches et import sûr ; les contrôles GitHub construisent aussi le conteneur.
 

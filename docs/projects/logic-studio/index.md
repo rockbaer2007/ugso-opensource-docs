@@ -1,16 +1,16 @@
 ---
 title: Logic Studio
-description: Logic Studio 0.1.7 mit typgeprüften Ziehverbindungen und navigierbarer Miniübersicht für Home Assistant.
+description: Logic Studio 0.1.8 mit React Flow, typgeprüften Ziehverbindungen und MiniMap für Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
-**0.1.7 – öffentliches Testupdate, 8. November 2026.** Neu sind typgeprüfte Maus-Ziehverbindungen und eine Miniübersicht mit Navigation. Logic Studio ist eine eigene HA-App für grafische Funktionspläne, unabhängig von Grafik Visual Studio und Blocks for HA. Die Oberfläche ist derzeit **Deutsch**; diese Anleitung gibt es in **DE/EN/FR**.
+**0.1.8 – öffentliches Testupdate, 8. November 2026.** Die Zeichenfläche verwendet jetzt **React Flow** mit eigenen Logic-Studio-Bausteinen, typgeprüften Verbindungen, Zoom und MiniMap. Bibliotheken und Lizenzen sind lokal enthalten; kein CDN erforderlich. Logic Studio ist eine eigene HA-App für grafische Funktionspläne, unabhängig von Grafik Visual Studio und Blocks for HA. Die Oberfläche ist derzeit **Deutsch**; diese Anleitung gibt es in **DE/EN/FR**.
 
 ::: warning Testversion
 Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup erstellen. Native Detailoptionen werden zunächst als JSON bearbeitet. Die App schreibt keine Automationen oder Skripte in HA zurück und schaltet keine Geräte. Erzeugte Ausgaben immer prüfen und selbst in HA installieren.
 :::
 
-[GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.7) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+[GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.8) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
 ## Testinstallation aus GitHub
 
@@ -47,7 +47,13 @@ Am farbigen Anschluss die Maustaste gedrückt halten, zum passenden Gegenanschlu
 
 ![STRING nach BOOL wird mit verständlichem Typfehler abgewiesen](/images/logic-studio/0.1.7-typ-abgewiesen.png)
 
-Rechts unten zeigt die **Übersicht** farbige Bausteinpositionen und den Rahmen des sichtbaren Ausschnitts. Ein Klick verschiebt den Ausschnitt. Mit fokussierter Übersicht navigieren auch Pfeiltasten, **Pos1** und **Ende**. Die Darstellung folgt Scrollen, Zoom und Positionsänderungen. **Referenz: React Flow** öffnet das Referenzprojekt in einem neuen Tab; die aktuelle Zeichenfläche ist eine eigene Umsetzung und verwendet React Flow nicht als Laufzeitbibliothek.
+Rechts unten zeigt die **MiniMap** farbige Bausteinpositionen und den sichtbaren Ausschnitt. In der MiniMap ziehen zum Navigieren und das Mausrad zum Zoomen verwenden. Auf der freien Zeichenfläche ziehen verschiebt den Ausschnitt; **+/−** ändern den Zoom, **Alles anzeigen** passt alle Bausteine ein. Bausteine am Kopf verschieben. Der Herkunftslink **React Flow** bleibt unten rechts sichtbar. Seit 0.1.8 läuft die Bibliothek tatsächlich im Editor; Fachlogik, Typprüfung und Exporte bleiben eigenständige Logic-Studio-Funktionen.
+
+![React-Flow-Zeichenfläche mit erhaltenem Originalplan und MiniMap auf .193](/images/logic-studio/0.1.8-react-flow-193.jpg)
+
+![Lokaler React-Flow-Test mit typisierten Bausteinen](/images/logic-studio/0.1.8-react-flow-local.jpg)
+
+Die folgenden Bilder dokumentieren zusätzlich die vorherigen Tests mit 0.1.7.
 
 ![Miniübersicht mit Bausteinpositionen und sichtbarem Ausschnitt auf .193](/images/logic-studio/0.1.7-miniuebersicht.png)
 
@@ -66,6 +72,8 @@ Das **⋮-Menü** jedes Bausteins bietet **Eigenschaften, Duplizieren und Lösch
 ![Drei-Punkte-Menü im Funktionsplan](/images/logic-studio/block-menu.png)
 
 ## Prüfstand und Grenzen
+
+**0.1.8 auf .193 / HA Core 2026.10.4:** Bestehende lokale App nach Vollbackup aktualisiert. BOOL-Verbindungen per Maus, STRING→BOOL-Abweisung, belegte Eingänge, Verschieben/Rückgängig, Duplizieren, Zoom und MiniMap bestanden. Die Entitätsauswahl liest HA-Entitäten; ein verschachteltes Skript mit If/Then/Else, Delay und Stop wurde importiert und strukturerhaltend ausgegeben. Danach Originalplan wiederhergestellt und nach Neuladen verglichen: **alle IDs, Positionen, Parameter und drei Leitungen unverändert**, ebenso Favoriten, zuletzt benutzt und eingeklappte Kategorien. Keine Geräte geschaltet. Docker-Build und Container-HTTP-Test erfolgreich; **29 Node- und acht Python-Tests** bestanden. Bilder zeigen die deutsche Oberfläche. Hell-/Dunkel-Wechsel wurde in diesem Schritt nicht erneut manuell geprüft.
 
 Der Funktionsstand **0.1.5** wurde auf **.193 / HA Core 2026.10.4** geprüft: echter Blueprint-Import, Automation-/Skript-/Blueprint-Beispiele, inhaltlich gleiche YAML-Ausgabe und Menüaktionen. **0.1.6** ist dessen erste öffentliche Paketierung. 22 Node- und acht Python-Tests prüfen unter anderem Export, Persistenz, verschachtelte Abläufe und sicheren Quelldateiimport; die GitHub-Prüfung baut zusätzlich den Container.
 

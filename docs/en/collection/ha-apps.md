@@ -16,7 +16,7 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 
 | Project | Description |
 | --- | --- |
-| <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/en/projects/logic-studio/) | 0.1.7: typed drag connections and navigable overview; tested on .193 with original plan and settings preserved. HA import and YAML/JavaScript output. German editor, DE/EN/FR docs. |
+| <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/en/projects/logic-studio/) | 0.1.8: locally bundled React Flow with typed connections, zoom and MiniMap. Tested on .193 and in a container; original plan and settings preserved. HA import and YAML/JavaScript output. German editor, DE/EN/FR docs. |
 | <img class="package-icon" src="/images/packages/projects-blocks-for-ha.png" width="32" height="32" alt="" aria-hidden="true"> [Blocks for HA](/en/projects/blocks-for-ha/) | Experimental HA app: build native automations with visual Blocks; ingress, YAML export/import and extensible branches. |
 | <img class="package-icon" src="/images/packages/projects-fritzbox-to-mqtt.png" width="32" height="32" alt="" aria-hidden="true"> [FRITZ!Box to MQTT](/en/projects/fritzbox-to-mqtt/) | FRITZ!Box data through MQTT Discovery for Home Assistant. |
 | <img class="package-icon" src="/images/packages/projects-heizoel-to-mqtt.png" width="32" height="32" alt="" aria-hidden="true"> [Heizöl to MQTT](/en/projects/heizoel-to-mqtt/) | Heating-oil prices through MQTT Discovery for Home Assistant. |

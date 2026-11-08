@@ -1,16 +1,16 @@
 ---
 title: Logic Studio
-description: Logic Studio 0.1.7 with typed drag connections and a navigable overview for Home Assistant.
+description: Logic Studio 0.1.8 with React Flow, typed drag connections and MiniMap for Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
-**0.1.7 – public test update, 8 November 2026.** New features include typed mouse-drag connections and a navigable overview. Logic Studio is a standalone HA app for visual function-block plans, independent of Grafik Visual Studio and Blocks for HA. The editor currently uses **German**; this guide is available in **DE/EN/FR**.
+**0.1.8 – public test update, 8 November 2026.** The canvas now uses **React Flow** with custom Logic Studio blocks, typed connections, zoom and MiniMap. Libraries and licenses are bundled locally; no CDN is required. Logic Studio is a standalone HA app for visual function-block plans, independent of Grafik Visual Studio and Blocks for HA. The editor currently uses **German**; this guide is available in **DE/EN/FR**.
 
 ::: warning Test release
 Install on a test system first and create a full backup beforehand. Native detail properties currently use JSON. The app does not write automations/scripts back to HA or control devices. Review and install generated output yourself.
 :::
 
-[GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.7) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+[GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.8) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
 ## Test installation from GitHub
 
@@ -47,7 +47,13 @@ Hold the mouse button on a colored pin, drag to a matching opposite pin and rele
 
 ![STRING to BOOL is rejected with a clear type error](/images/logic-studio/0.1.7-typ-abgewiesen.png)
 
-The bottom-right **Übersicht** (overview) shows colored block positions and an outline of the visible viewport. Click to navigate. When focused, it also supports arrow keys, **Home** and **End**. It follows scrolling, zoom and block movements. **Referenz: React Flow** opens the reference project in a new tab; the current canvas is independently implemented and does not use React Flow as a runtime library.
+The bottom-right **MiniMap** shows colored block positions and the visible viewport. Drag inside it to navigate and use the wheel to zoom. Drag empty canvas to pan; **+/−** change the zoom and **Alles anzeigen** fits all blocks. Drag a block by its header. The **React Flow** attribution remains visible at the bottom right. Since 0.1.8 the library actually runs in the editor; domain logic, type validation and exporters remain independent Logic Studio components.
+
+![React Flow canvas with preserved original plan and MiniMap on .193](/images/logic-studio/0.1.8-react-flow-193.jpg)
+
+![Local React Flow test with typed blocks](/images/logic-studio/0.1.8-react-flow-local.jpg)
+
+The following images additionally document the earlier 0.1.7 tests.
 
 ![Overview with block positions and visible viewport on .193](/images/logic-studio/0.1.7-miniuebersicht.png)
 
@@ -66,6 +72,8 @@ Each block’s **⋮ menu** offers **Eigenschaften** (properties), **Duplizieren
 ![Per-block three-dot menu](/images/logic-studio/block-menu.png)
 
 ## Validation and limits
+
+**0.1.8 on .193 / HA Core 2026.10.4:** Updated the existing local app after a full backup. Typed mouse connections, STRING→BOOL rejection, occupied inputs, move/undo, duplicate, zoom and MiniMap passed. The entity picker reads HA entities; a nested script with If/Then/Else, Delay and Stop was imported and exported with its structure preserved. The original plan was restored and compared after reload: **all IDs, positions, parameters and three wires unchanged**, along with favorites, recent blocks and collapsed categories. No devices were controlled. Docker build and container HTTP smoke test passed, as did **29 Node and eight Python tests**. Screenshots show the German UI. Light/dark switching was not manually retested in this step.
 
 The **0.1.5** functional baseline was tested on **.193 / HA Core 2026.10.4**: actual blueprint import, automation/script/blueprint fixtures, semantically identical YAML exports and menu actions. **0.1.6** is its first public packaging. 22 Node and eight Python tests cover export, persistence, nested flows and safe source import; GitHub checks also build the container.
 

@@ -7150,14 +7150,15 @@
         "de": {
           "path": "projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "1bcb362533795cb89ba78bbf7b6db3abf341e8974decbe2862381fd47e084870",
-          "words": 1161,
+          "sha256": "b5831caf12a0715c5ccf1987de6b1b18405c4aa7ad383735c0d4f0bf5a27ce2f",
+          "words": 1345,
           "headings": 6,
           "examples": 1,
           "versions": [
             "0.1.5",
             "0.1.6",
             "0.1.7",
+            "0.1.8",
             "2026.10.4"
           ],
           "unresolved_local_references": []
@@ -7165,14 +7166,15 @@
         "en": {
           "path": "en/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "008ce369c1ac77c58961fe404970c3c94529426a0098e0d327b638dbcb426b7d",
-          "words": 1202,
+          "sha256": "418428323a353ca6cc0c94e85fe5bf15fb564a3d3118f4ed42361d20c81c2e94",
+          "words": 1396,
           "headings": 6,
           "examples": 1,
           "versions": [
             "0.1.5",
             "0.1.6",
             "0.1.7",
+            "0.1.8",
             "2026.10.4"
           ],
           "unresolved_local_references": [],
@@ -7187,14 +7189,15 @@
         "fr": {
           "path": "fr/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "7715afc62b246a6b77c6caf885ee8656b1e97cccd5479afe63a7f1aaee643087",
-          "words": 1346,
+          "sha256": "381586e6a72cf4e6d9ac2b381bd4c1908912a88a3812e15414bcd17fa1ea251f",
+          "words": 1552,
           "headings": 6,
           "examples": 1,
           "versions": [
             "0.1.5",
             "0.1.6",
             "0.1.7",
+            "0.1.8",
             "2026.10.4"
           ],
           "unresolved_local_references": [],
@@ -13888,26 +13891,26 @@
         "de": {
           "path": "sammlung/ha-apps.md",
           "status": "content-present",
-          "sha256": "d30ca4d8676764fb26241fc1ef6a2aafaf1878fcdcdcfb32f87d5d265ba73a24",
-          "words": 187,
+          "sha256": "b83d3d7e2576534da629d58ebd6074b220c1075f879bc8f35befa715edfeb884",
+          "words": 194,
           "headings": 3,
           "examples": 1,
           "versions": [
             "0.1.16",
-            "0.1.7"
+            "0.1.8"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/collection/ha-apps.md",
           "status": "content-present",
-          "sha256": "8378f066a1945ab9576ec515d4db6c87444a6746c921062ac24d44a5bba48377",
-          "words": 204,
+          "sha256": "6fed45b1d1357bab838088bc72b329f0956e22acbbcf565b4e87446996deb6c8",
+          "words": 211,
           "headings": 3,
           "examples": 1,
           "versions": [
             "0.1.16",
-            "0.1.7"
+            "0.1.8"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13926,13 +13929,13 @@
         "fr": {
           "path": "fr/collection/ha-apps.md",
           "status": "content-present",
-          "sha256": "92a4aed4aabf6dede89367b78f61ea1ada39ba3e57b66879214f3212815c89e0",
-          "words": 265,
+          "sha256": "40c7be0a55f33cd99c9a2db61bc11a30f990d47c07a776a27f6add9f8dd3363a",
+          "words": 268,
           "headings": 3,
           "examples": 1,
           "versions": [
             "0.1.16",
-            "0.1.7"
+            "0.1.8"
           ],
           "unresolved_local_references": [],
           "review_signals": {

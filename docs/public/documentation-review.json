@@ -2236,8 +2236,8 @@
       },
       "disposition": "supplemented",
       "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained.",
-      "source_sha256": "d30ca4d8676764fb26241fc1ef6a2aafaf1878fcdcdcfb32f87d5d265ba73a24",
-      "target_sha256": "8378f066a1945ab9576ec515d4db6c87444a6746c921062ac24d44a5bba48377"
+      "source_sha256": "b83d3d7e2576534da629d58ebd6074b220c1075f879bc8f35befa715edfeb884",
+      "target_sha256": "6fed45b1d1357bab838088bc72b329f0956e22acbbcf565b4e87446996deb6c8"
     },
     {
       "source": "sammlung/ha-cards.md",
