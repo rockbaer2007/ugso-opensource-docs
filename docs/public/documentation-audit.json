@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 239,
+  "source_pages": 240,
   "summary": {
     "de": {
-      "content-present": 239,
-      "existing_pages": 239,
+      "content-present": 240,
+      "existing_pages": 240,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 239,
-      "existing_pages": 239,
+      "content-present": 240,
+      "existing_pages": 240,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 239,
-      "existing_pages": 239,
+      "content-present": 240,
+      "existing_pages": 240,
       "unmatched_pages": 0,
       "review_signals": 31,
       "reviewed_findings": 47,
@@ -4816,6 +4816,70 @@
       }
     },
     {
+      "source": "projects/grafik-visual-studio/devices-tablet.md",
+      "locales": {
+        "de": {
+          "path": "projects/grafik-visual-studio/devices-tablet.md",
+          "status": "content-present",
+          "sha256": "2decfb72bda994d20d7886a5473d04d9154ddb61542ae91fad7fb039dd11a37a",
+          "words": 687,
+          "headings": 6,
+          "examples": 0,
+          "versions": [
+            "0.1.297",
+            "1.1.0",
+            "2026.10.4",
+            "2026.11.0"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/grafik-visual-studio/devices-tablet.md",
+          "status": "content-present",
+          "sha256": "72cb90b83a40ca994b5910aa27b1519149b792103c4c766837299b209aa2c812",
+          "words": 720,
+          "headings": 6,
+          "examples": 0,
+          "versions": [
+            "0.1.297",
+            "1.1.0",
+            "2026.10.4",
+            "2026.11.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/grafik-visual-studio/devices-tablet.md",
+          "status": "content-present",
+          "sha256": "2fed61e963f32d9c628ce59b41616a3b1f2ce311e9e536eeec1c93a2a6e536e0",
+          "words": 794,
+          "headings": 6,
+          "examples": 0,
+          "versions": [
+            "0.1.297",
+            "1.1.0",
+            "2026.10.4",
+            "2026.11.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
       "source": "projects/grafik-visual-studio/editor.md",
       "locales": {
         "de": {
@@ -5040,8 +5104,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "1e2a57a709c7cc4552a76176531ff38baf384021fbb86c98d41b6cfebfb7028f",
-          "words": 2363,
+          "sha256": "22e8a17468fa6125431edc95983e7995cddae0a618236783408f72090698fff6",
+          "words": 2435,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -5067,6 +5131,7 @@
             "0.1.287",
             "0.1.289",
             "0.1.296",
+            "0.1.297",
             "0.1.3",
             "0.1.9",
             "0.3.0",
@@ -5078,8 +5143,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "2498eba1e6a63b245a7c42b76bc543ef8f3d711bd8ba2cc1e50f1ff2cc3bc35e",
-          "words": 2416,
+          "sha256": "32040bfd23350dc07ba51ad799d27334badadaad2fa0ca01ef18256da0184aa3",
+          "words": 2490,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -5105,6 +5170,7 @@
             "0.1.287",
             "0.1.289",
             "0.1.296",
+            "0.1.297",
             "0.1.3",
             "0.1.9",
             "0.3.0",
@@ -5123,8 +5189,8 @@
         "fr": {
           "path": "fr/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "3af544575ec17bce189a0d0faed60766b10a0f380005ee767ac560a15873f197",
-          "words": 3812,
+          "sha256": "982bb8bed56f69e97f9454eba62c875f0a992ed1ad2ded64128068d6bba6dac1",
+          "words": 3889,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -5150,6 +5216,7 @@
             "0.1.287",
             "0.1.289",
             "0.1.296",
+            "0.1.297",
             "0.1.3",
             "0.1.9",
             "0.3.0",
@@ -6166,8 +6233,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/widgets.md",
           "status": "content-present",
-          "sha256": "4aec76ae609678d449ee683001ecb13ec3946abfefc1a2978e92e99d44916d62",
-          "words": 11229,
+          "sha256": "57128b300415e46501a0ab2b06bdedb416ffafcd37207ea3c79722d20b19a7bb",
+          "words": 11259,
           "headings": 46,
           "examples": 2,
           "versions": [
@@ -6215,6 +6282,7 @@
             "0.1.265",
             "0.1.266",
             "0.1.271",
+            "0.1.297",
             "6.1.21"
           ],
           "unresolved_local_references": []
@@ -6222,8 +6290,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/widgets.md",
           "status": "content-present",
-          "sha256": "5d95feafc713c5b24f4f5574b8f26f9b6b8357f7ef8496ee2fc2e5c74df4c1b4",
-          "words": 11430,
+          "sha256": "0033c864d9f2ff5923e53ab3debd0d31eac0669c66f628d7c65be13c3bc7440a",
+          "words": 11462,
           "headings": 46,
           "examples": 2,
           "versions": [
@@ -6271,6 +6339,7 @@
             "0.1.265",
             "0.1.266",
             "0.1.271",
+            "0.1.297",
             "6.1.21"
           ],
           "unresolved_local_references": [],
@@ -6285,8 +6354,8 @@
         "fr": {
           "path": "fr/projects/grafik-visual-studio/widgets.md",
           "status": "content-present",
-          "sha256": "970b9b82f782be88d677628a919cf5356b33b7309c91c14359172dad5834e89b",
-          "words": 17960,
+          "sha256": "284966cdf84f328192922e97add11fedcc4870f545a278e712bc535d6e3c814b",
+          "words": 17992,
           "headings": 46,
           "examples": 2,
           "versions": [
@@ -6334,6 +6403,7 @@
             "0.1.265",
             "0.1.266",
             "0.1.271",
+            "0.1.297",
             "6.1.21"
           ],
           "unresolved_local_references": [],

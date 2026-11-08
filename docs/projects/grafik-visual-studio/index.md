@@ -5,6 +5,8 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 # HA Grafik Visual Studio
 
+**Studio 0.1.297:** Neues integriertes [Geräte-Set und Tablet-Funktionen](./devices-tablet): fünf Gerätetypen jeweils als Kachel und Grundriss-Marker, Live-Werte in Überschriften, Tablet-Rückkehr, optionale Inaktivitäts-Startseite und bedarfsgerechte Renderer. Paketänderungen und optionale Fähigkeiten werden ohne Neustart angezeigt. Auf .177 und .193 geprüft; Einstellungen und Projekte bleiben erhalten. [GitHub-Update 0.1.297](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.297).
+
 **Studio 0.1.296:** Die übrigen **62 Widgettypen** erhalten DE/EN/FR-Eigenschaften und Laufzeitmeldungen, optionale Climate-Steuerung sowie Quellen-/Attribut-/Einheitenprüfung. Bestehende Projekte und Paketversionen bleiben gültig; neue Gruppen starten deaktiviert. [Anleitung und Grenzen](./ha-quellen-climate). Echte Geräte/Companion sind durch simulierte Tests noch nicht bestätigt. [Prüfbericht](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md).
 
 Seit **0.1.289** wechselt **Speichern** während des Speicherns kurz die Farbe: **Orange** bei laufender Anfrage, **Grün** nach Erfolg und **Rot** bei einem Fehler. Nach 1,4 Sekunden kehrt die normale Farbe zurück. Das gilt auch für Autospeichern und funktioniert bei heller und dunkler Darstellung.

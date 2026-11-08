@@ -1094,6 +1094,21 @@
     "EN": "/en/projects/grafik-visual-studio/datenfluss",
     "FR": "/fr/projects/grafik-visual-studio/datenfluss"
   },
+  "/projects/grafik-visual-studio/devices-tablet": {
+    "DE": "/projects/grafik-visual-studio/devices-tablet",
+    "EN": "/en/projects/grafik-visual-studio/devices-tablet",
+    "FR": "/fr/projects/grafik-visual-studio/devices-tablet"
+  },
+  "/en/projects/grafik-visual-studio/devices-tablet": {
+    "DE": "/projects/grafik-visual-studio/devices-tablet",
+    "EN": "/en/projects/grafik-visual-studio/devices-tablet",
+    "FR": "/fr/projects/grafik-visual-studio/devices-tablet"
+  },
+  "/fr/projects/grafik-visual-studio/devices-tablet": {
+    "DE": "/projects/grafik-visual-studio/devices-tablet",
+    "EN": "/en/projects/grafik-visual-studio/devices-tablet",
+    "FR": "/fr/projects/grafik-visual-studio/devices-tablet"
+  },
   "/projects/grafik-visual-studio/editor": {
     "DE": "/projects/grafik-visual-studio/editor",
     "EN": "/en/projects/grafik-visual-studio/editor",

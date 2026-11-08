@@ -4,6 +4,8 @@ title: Widget catalog
 
 # Widget catalog
 
+**Devices in 0.1.297:** Ten additional built-in entries: switch, dimmer, color light, thermostat and measurement, each as a tile or floorplan marker with popup. [Guide and tablet features](./devices-tablet).
+
 **CSS standard from Studio 0.1.271:** All widgets except Industrial expose the complete general, font/text, background, border, and shadow/spacing CSS groups. This also applies to future installed widget sets. Existing settings are preserved; newly added optional groups start disabled. Industrial retains its own housing controls.
 
 Independent external set: [Calendar +](calendar-plus.md), from **Studio 0.1.266**. Automatically discovers all Home Assistant calendars, enabled by default; per-calendar show/hide, color and background. Event list, day groups and details popup with automatic DE/EN language. Inspired by [xBourner/calendar-card-plus](https://github.com/xBourner/calendar-card-plus).

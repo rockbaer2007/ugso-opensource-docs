@@ -4,6 +4,8 @@ title: Aperçu des widgets
 
 # Aperçu des widgets {#widget-ubersicht}
 
+**Appareils dans 0.1.297 :** Dix entrées intégrées supplémentaires : interrupteur, variateur, lumière colorée, thermostat et mesure, chacun en tuile ou marqueur sur plan avec fenêtre contextuelle. [Guide et fonctions tablette](./devices-tablet).
+
 **Standard CSS à partir de Studio 0.1.271 :** Tous les widgets, à l'exception de la gamme « Industrial », intègrent désormais les groupes complets suivants : **CSS Général**, **CSS Police et Texte**, **CSS Arrière-plan**, **CSS Bordures** ainsi que **CSS Ombres et Espacement**. Cela s'applique également aux ensembles de widgets installés ultérieurement. Les paramètres existants sont conservés ; les nouveaux groupes optionnels ajoutés sont désactivés par défaut. La gamme « Industrial » continue d'utiliser ses propres paramètres de structure (boîtier).
 
 Ensemble externe autonome : [Calendar +](/fr/projects/grafik-visual-studio/calendar-plus), disponible à partir de **Studio 0.1.266**. Détecte automatiquement tous les calendriers Home Assistant (activés par défaut). Chaque calendrier peut être affiché ou masqué individuellement et dispose de ses propres paramètres de couleur et de couleur d'arrière-plan. Liste des événements, regroupement par jour et fenêtre contextuelle détaillée ; détection automatique de la langue (allemand/anglais). Inspiré de [xBourner/calendar-card-plus](https://github.com/xBourner/calendar-card-plus).

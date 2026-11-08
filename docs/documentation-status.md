@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 239 | 0 | 0 | 0 |
-| EN | 239 | 0 | 0 | 0 |
-| FR | 239 | 0 | 0 | 0 |
+| DE | 240 | 0 | 0 | 0 |
+| EN | 240 | 0 | 0 | 0 |
+| FR | 240 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -108,6 +108,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/grafik-visual-studio/bildergalerie.md](/projects/grafik-visual-studio/bildergalerie) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/bildergalerie) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/bildergalerie) |
 | [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/calendar-plus) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/calendar-plus) |
 | [projects/grafik-visual-studio/datenfluss.md](/projects/grafik-visual-studio/datenfluss) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/datenfluss) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/datenfluss) |
+| [projects/grafik-visual-studio/devices-tablet.md](/projects/grafik-visual-studio/devices-tablet) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/devices-tablet) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/devices-tablet) |
 | [projects/grafik-visual-studio/editor.md](/projects/grafik-visual-studio/editor) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/editor) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/editor) |
 | [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/energy) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/energy) |
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Inhalt vorhanden](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Inhalt vorhanden](/fr/projects/grafik-visual-studio/ha-quellen-climate) |

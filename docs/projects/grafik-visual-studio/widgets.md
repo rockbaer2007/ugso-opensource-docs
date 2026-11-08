@@ -4,6 +4,8 @@ title: Widget-Übersicht
 
 # Widget-Übersicht
 
+**Geräte ab 0.1.297:** Zehn zusätzliche integrierte Einträge: Schalter, Dimmer, farbiges Licht, Thermostat und Messwert jeweils als Kachel oder Grundriss-Marker mit Popup. [Anleitung und Tablet-Funktionen](./devices-tablet).
+
 **CSS-Standard ab Studio 0.1.271:** Alle Widgets außer Industrial erhalten die vollständigen Gruppen **CSS Allgemein**, **CSS Font & Text**, **CSS Hintergrund**, **CSS Ränder** und **CSS Schatten und Abstand**. Das gilt auch für künftig installierte Widgetsets. Vorhandene Einstellungen bleiben erhalten; neu ergänzte optionale Gruppen sind zunächst deaktiviert. Industrial verwendet weiterhin seine eigenen Gehäuse-Einstellungen.
 
 Eigenständiges externes Set: [Calendar +](calendar-plus.md), ab **Studio 0.1.266**. Erkennt alle Home-Assistant-Kalender automatisch, zunächst alle aktiviert; je Kalender ein-/ausblendbar mit eigener Farbe und Hintergrundfarbe. Terminliste, Tagesgruppen und Detail-Popup, automatische DE/EN-Sprache. Inspiriert von [xBourner/calendar-card-plus](https://github.com/xBourner/calendar-card-plus).
