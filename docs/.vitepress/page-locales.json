@@ -3449,6 +3449,21 @@
     "EN": "/en/collection/neomorphix-uix/",
     "FR": "/fr/collection/neomorphix-uix/"
   },
+  "/sammlung/testsysteme": {
+    "DE": "/sammlung/testsysteme",
+    "EN": "/en/collection/test-systems",
+    "FR": "/fr/collection/test-systems"
+  },
+  "/en/collection/test-systems": {
+    "DE": "/sammlung/testsysteme",
+    "EN": "/en/collection/test-systems",
+    "FR": "/fr/collection/test-systems"
+  },
+  "/fr/collection/test-systems": {
+    "DE": "/sammlung/testsysteme",
+    "EN": "/en/collection/test-systems",
+    "FR": "/fr/collection/test-systems"
+  },
   "/sammlung/weitere-beispiele": {
     "DE": "/sammlung/weitere-beispiele",
     "EN": "/en/collection/interesting-examples",

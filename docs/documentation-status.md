@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 238 | 0 | 0 | 0 |
-| EN | 238 | 0 | 0 | 0 |
-| FR | 238 | 0 | 0 | 0 |
+| DE | 239 | 0 | 0 | 0 |
+| EN | 239 | 0 | 0 | 0 |
+| FR | 239 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -265,6 +265,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Inhalt vorhanden](/en/collection/mushroom/lizenz-und-stand) | [Inhalt vorhanden](/fr/collection/mushroom/lizenz-und-stand) |
 | [sammlung/mushroom/nutzung.md](/sammlung/mushroom/nutzung) | [Inhalt vorhanden](/en/collection/mushroom/nutzung) | [Inhalt vorhanden](/fr/collection/mushroom/nutzung) |
 | [sammlung/neomorphix-uix/index.md](/sammlung/neomorphix-uix/) | [Inhalt vorhanden](/en/collection/neomorphix-uix/) | [Inhalt vorhanden](/fr/collection/neomorphix-uix/) |
+| [sammlung/testsysteme.md](/sammlung/testsysteme) | [Inhalt vorhanden](/en/collection/test-systems) | [Inhalt vorhanden](/fr/collection/test-systems) |
 | [sammlung/weitere-beispiele.md](/sammlung/weitere-beispiele) | [Inhalt vorhanden](/en/collection/interesting-examples) | [Inhalt vorhanden](/fr/collection/interesting-examples) |
 | [sammlung/zendure-ha/entitaeten.md](/sammlung/zendure-ha/entitaeten) | [Inhalt vorhanden](/en/collection/zendure-ha/entitaeten) | [Inhalt vorhanden](/fr/collection/zendure-ha/entitaeten) |
 | [sammlung/zendure-ha/fehlersuche.md](/sammlung/zendure-ha/fehlersuche) | [Inhalt vorhanden](/en/collection/zendure-ha/fehlersuche) | [Inhalt vorhanden](/fr/collection/zendure-ha/fehlersuche) |

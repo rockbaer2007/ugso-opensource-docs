@@ -53,13 +53,14 @@ export function reorganizeNavigation(
       page('Calendar Card Pro', 'calendar-card-pro/'), page('Mushroom Cards', 'mushroom/'),
       page('flex-table-card', 'flex-table-card/'),
       { text: 'Bubble Card', link: 'https://github.com/Clooos/Bubble-Card' }
-    ] }
+    ] },
+    page({ de: 'Testsysteme', en: 'Test systems', fr: 'Systèmes de test' }[locale], locale === 'de' ? 'testsysteme' : 'test-systems')
   ]
 
   return [
     source[0],
     byText('EEP'),
-    { text: 'Home Assistant', activeMatch: '^' + prefix + '/(?:projects-mqtt/|(?:sammlung|collection)/(?:ha-|hacs-|dashboard-layout|frosted-|neomorphix-|zendure-|calendar-card|mushroom|flex-table)|projects/(?:automation-status-card|sidebar-manager|sidebar-colors|dashboard-user-manager|mqtt-client|blocks-for-ha|grafik-visual-studio|callmebot|callmebot-signal|fritzbox-to-mqtt|heizoel-to-mqtt|parcel-to-mqtt|hadash)/)', items: haItems },
+    { text: 'Home Assistant', activeMatch: '^' + prefix + '/(?:projects-mqtt/|(?:sammlung|collection)/(?:ha-|hacs-|dashboard-layout|frosted-|neomorphix-|zendure-|calendar-card|mushroom|flex-table|testsysteme|test-systems)|projects/(?:automation-status-card|sidebar-manager|sidebar-colors|dashboard-user-manager|mqtt-client|blocks-for-ha|grafik-visual-studio|callmebot|callmebot-signal|fritzbox-to-mqtt|heizoel-to-mqtt|parcel-to-mqtt|hadash)/)', items: haItems },
     { text: 'ATLAS', activeMatch: '^' + prefix + '/projects/atlas(?:-plugins)?/', items: [
       { items: links(`${prefix}/projects/atlas/`) },
       { text: 'ATLAS Plugins', items: links(`${prefix}/projects/atlas-plugins/`) }

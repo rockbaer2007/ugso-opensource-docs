@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 238,
+  "source_pages": 239,
   "summary": {
     "de": {
-      "content-present": 238,
-      "existing_pages": 238,
+      "content-present": 239,
+      "existing_pages": 239,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 238,
-      "existing_pages": 238,
+      "content-present": 239,
+      "existing_pages": 239,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 238,
-      "existing_pages": 238,
+      "content-present": 239,
+      "existing_pages": 239,
       "unmatched_pages": 0,
       "review_signals": 31,
       "reviewed_findings": 47,
@@ -14667,6 +14667,55 @@
           "versions": [
             "1.0.3"
           ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "sammlung/testsysteme.md",
+      "locales": {
+        "de": {
+          "path": "sammlung/testsysteme.md",
+          "status": "content-present",
+          "sha256": "597368f6ce1a0ed1d0e99c2e82a3ecda239690e25866fb951c927b6f2649687f",
+          "words": 103,
+          "headings": 1,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/collection/test-systems.md",
+          "status": "content-present",
+          "sha256": "1c2d5fd7618bfd13b5f835960f60d149dfab64fc48922a9954e6ca0e3d2d77b6",
+          "words": 110,
+          "headings": 1,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/collection/test-systems.md",
+          "status": "content-present",
+          "sha256": "c369c5188801d49594fcd3ff1a34ef0b4b66afec755d7b6649453c4db782eba7",
+          "words": 129,
+          "headings": 1,
+          "examples": 0,
+          "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],

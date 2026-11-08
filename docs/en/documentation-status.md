@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 238 | 0 | 0 | 0 |
-| EN | 238 | 0 | 0 | 0 |
-| FR | 238 | 0 | 0 | 0 |
+| DE | 239 | 0 | 0 | 0 |
+| EN | 239 | 0 | 0 | 0 |
+| FR | 239 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -265,6 +265,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Content present](/en/collection/mushroom/lizenz-und-stand) | [Content present](/fr/collection/mushroom/lizenz-und-stand) |
 | [sammlung/mushroom/nutzung.md](/sammlung/mushroom/nutzung) | [Content present](/en/collection/mushroom/nutzung) | [Content present](/fr/collection/mushroom/nutzung) |
 | [sammlung/neomorphix-uix/index.md](/sammlung/neomorphix-uix/) | [Content present](/en/collection/neomorphix-uix/) | [Content present](/fr/collection/neomorphix-uix/) |
+| [sammlung/testsysteme.md](/sammlung/testsysteme) | [Content present](/en/collection/test-systems) | [Content present](/fr/collection/test-systems) |
 | [sammlung/weitere-beispiele.md](/sammlung/weitere-beispiele) | [Content present](/en/collection/interesting-examples) | [Content present](/fr/collection/interesting-examples) |
 | [sammlung/zendure-ha/entitaeten.md](/sammlung/zendure-ha/entitaeten) | [Content present](/en/collection/zendure-ha/entitaeten) | [Content present](/fr/collection/zendure-ha/entitaeten) |
 | [sammlung/zendure-ha/fehlersuche.md](/sammlung/zendure-ha/fehlersuche) | [Content present](/en/collection/zendure-ha/fehlersuche) | [Content present](/fr/collection/zendure-ha/fehlersuche) |

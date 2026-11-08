@@ -41,7 +41,11 @@ for locale, config in data['locales'].items():
         'en': ['Dashboards', 'Apps', 'Integrations', 'Cards'],
         'fr': ['Dashboards', 'Applications', 'Intégrations', 'Cartes'],
     }
-    assert [group['text'] for group in nav[2]['items']] == expected['de' if locale == 'root' else locale]
+    language = 'de' if locale == 'root' else locale
+    assert [group['text'] for group in nav[2]['items'][:4]] == expected[language]
+    test_name = {'de': 'Testsysteme', 'en': 'Test systems', 'fr': 'Systèmes de test'}[language]
+    test_path = '/sammlung/testsysteme' if language == 'de' else f'/{language}/collection/test-systems'
+    assert nav[2]['items'][4:] == [{'text': test_name, 'link': test_path}], f'{locale}: test systems must follow the four HA categories'
     assert nav[3]['text'] == 'ATLAS' and nav[7]['text'] == 'UIX'
     prefix = '' if locale == 'root' else f'/{locale}'
     assert nav[4]['text'] == 'ioBroker'
