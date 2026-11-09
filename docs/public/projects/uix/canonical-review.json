@@ -1,6 +1,6 @@
 {
-  "revision": "e28976f96db019e009c4c604e80c0885c1b3ea67",
-  "reviewed_at": "2026-11-08",
+  "revision": "509b2c2475ce6b574876a8353f88aedf87e7b2e3",
+  "reviewed_at": "2026-11-09",
   "pages": [
     {
       "path": "broker/broker.md",
@@ -146,6 +146,23 @@
       ]
     },
     {
+      "path": "concepts/context.md",
+      "sha256": "063dcc74bce121e2824e274c114639293bb81e7e957d4fe03d72b1ddb16bb61e",
+      "english_sha256": "49f7ae580ca92a85c6bde0b80f754c8f3e1c636706c9b0112904a12e84199e84",
+      "code_sha256": [
+        "6c026ea3608be9d6e2b69fa53305562314be8a8d9886978b419c85af60a7019e",
+        "dceb15999717b638884d6b340b626377f100a8a1d4a976c838215a8acae2eef3",
+        "916371daca8f38c5cf545a409ac68d8e52fa3b7b74a796bcd2169a8e7a035ecd",
+        "d1c517251d306abfbb81d7b301c8a84a4beb47a357cf37f4d627380557699c1c",
+        "b36864c849c7fdf4c3532cded64b0aebd5b1d87dcd32a09dc38c8beab1e17f53",
+        "c60698547f5564b06eef96392d2d9c5f0a4a3b51ddd38ded77a4bdd0764f4f31",
+        "5c0dabdfdfe790f9d2ac59b748a9ba1470e0b3dffab233b073ba115611e568c8",
+        "f1d24da874b23539ac68c19353444930713590141509a7558bf38792d0f1c5e1",
+        "8dce11f422777f59d60bac73cf3d2fc19280dfc4a8e1e33845b323dbd2e3f2bd",
+        "f1f55bbb7046da26067c72ccbdd19919f338aa69b186b3998949a1c5277320ab"
+      ]
+    },
+    {
       "path": "concepts/dom.md",
       "sha256": "5412198c6a2c093f6d82b2c3637d3503458b6f2d598cd063d416a896787762df",
       "english_sha256": "5dc487117e3f5f53e70a8f88ea6e244f4f9c2e3bb73d7cfbb19328a3839f0ddd",
@@ -182,8 +199,8 @@
     },
     {
       "path": "concepts/index.md",
-      "sha256": "0679548c6db24ea2ba970fea3d40cbbf6012e804a1a2b9368c086f981c340b05",
-      "english_sha256": "e6d947dc6db437363aedc97f80dbf8f36a4dba43855d952aaaf1f6896909a603",
+      "sha256": "937c3655b68cb323270ea157489b5bf9258e631340f4f64f43aa6743c899c87b",
+      "english_sha256": "0a162d33458fa6a24dba5d83a21ba9c54e573e23df555ca45123466a19e81ce3",
       "code_sha256": []
     },
     {
@@ -689,7 +706,7 @@
     {
       "path": "index.md",
       "sha256": "fb3a60fc5f67441b1b931b5e43ddbb0050c5d08e5f3815395c42e2346f9bd94b",
-      "english_sha256": "226b099e2b87dafd4d65e517f7424691d66d3a2269e9ae50c781a1669225492f",
+      "english_sha256": "b76361c9530c5a8168c4c0070526788cf1948394e7e6b312048a3f83f1e8c11a",
       "code_sha256": []
     },
     {
@@ -818,8 +835,8 @@
     },
     {
       "path": "using/themes.md",
-      "sha256": "ad729fcb12c1391c9d252e853f888ea1909a0614099079d14a6d74b623dbdcf1",
-      "english_sha256": "2826d10588974be1dc1a9cdb51dc7b9ba83576079bab9448f4b0fb2fe318998b",
+      "sha256": "494f6dc6b608d275f739de1b2d0412c21b68dfd4c88794b007fa31d2548f4520",
+      "english_sha256": "2a9e9f23f0c71d25b5f1557a2a967ae1734ee4b6b2f81479fcf3ffd966f84450",
       "code_sha256": [
         "82e7686ce6106593782c69742bd8098325ae0cafbb7e0947e6daf6092caaa0d2",
         "2f6e81d56c716ab8d6c5fceb7e55f8f2572a42789b828d271b15152282b7bbc7",

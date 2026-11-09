@@ -187,6 +187,10 @@ red-theme:
 Bien que la valeur de `uix-<thing>-yaml` soit du YAML, elle DOIT être une chaîne du point de vue du thème, contenant elle-même d'autres chaînes.
 
 :::
+## Liaisons de contexte
+
+`uix-<thing>-context-yaml` contient une liste YAML de liaisons de contexte structurées pour toute cible UIX. Le guide des [contextes UIX](../concepts/context) présente les ancres, les règles de nom d’entité et des exemples.
+
 ## Surcharge locale de thème avec `uix.theme` { #local-theme-override-with-uixtheme }
 
 Vous pouvez imposer à une carte, une ligne, un badge ou un élément stylisé un thème Home Assistant différent du thème global actif. Pour ce nœud UIX, `uix.theme` est prioritaire sur le thème hérité ou actif.

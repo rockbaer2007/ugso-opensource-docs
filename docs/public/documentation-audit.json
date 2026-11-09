@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 243,
+  "source_pages": 244,
   "summary": {
     "de": {
-      "content-present": 243,
-      "existing_pages": 243,
+      "content-present": 244,
+      "existing_pages": 244,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 243,
-      "existing_pages": 243,
+      "content-present": 244,
+      "existing_pages": 244,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 243,
-      "existing_pages": 243,
+      "content-present": 244,
+      "existing_pages": 244,
       "unmatched_pages": 0,
       "review_signals": 31,
       "reviewed_findings": 47,
@@ -8371,6 +8371,70 @@
       }
     },
     {
+      "source": "projects/uix/concepts/context.md",
+      "locales": {
+        "de": {
+          "path": "projects/uix/concepts/context.md",
+          "status": "content-present",
+          "sha256": "f944ebf28f207a5d1231f3edd1577567e2a0a60e61079d508a8209293403299c",
+          "words": 502,
+          "headings": 10,
+          "examples": 10,
+          "versions": [
+            "2026.11.0",
+            "9.0.0",
+            "9.0.0-beta.3",
+            "9.1.0-beta.2"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/uix/concepts/context.md",
+          "status": "content-present",
+          "sha256": "49f7ae580ca92a85c6bde0b80f754c8f3e1c636706c9b0112904a12e84199e84",
+          "words": 566,
+          "headings": 10,
+          "examples": 10,
+          "versions": [
+            "2026.11.0",
+            "9.0.0",
+            "9.0.0-beta.3",
+            "9.1.0-beta.2"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/uix/concepts/context.md",
+          "status": "content-present",
+          "sha256": "a6c86a94560a322ac677da4690a1816cd318db484252ec66fa7571f5e8abae5d",
+          "words": 601,
+          "headings": 10,
+          "examples": 10,
+          "versions": [
+            "2026.11.0",
+            "9.0.0",
+            "9.0.0-beta.3",
+            "9.1.0-beta.2"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
       "source": "projects/uix/concepts/dom.md",
       "locales": {
         "de": {
@@ -8441,8 +8505,8 @@
         "de": {
           "path": "projects/uix/concepts/index.md",
           "status": "content-present",
-          "sha256": "be03f9378610c022d2befdae6adb3497827f45eb9affada76a46e536d60279b1",
-          "words": 51,
+          "sha256": "bd6ee9ae8b931208f0f67fb11a24fe3a44e1dd11f705480dad8287b01f0b5039",
+          "words": 54,
           "headings": 1,
           "examples": 0,
           "versions": [],
@@ -8451,20 +8515,22 @@
         "en": {
           "path": "en/projects/uix/concepts/index.md",
           "status": "content-present",
-          "sha256": "e6d947dc6db437363aedc97f80dbf8f36a4dba43855d952aaaf1f6896909a603",
-          "words": 140,
+          "sha256": "0a162d33458fa6a24dba5d83a21ba9c54e573e23df555ca45123466a19e81ce3",
+          "words": 154,
           "headings": 2,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.0.0"
+            "9.0.0",
+            "9.1.0-beta.2"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.0.0"
+              "9.0.0",
+              "9.1.0-beta.2"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -8479,8 +8545,8 @@
         "fr": {
           "path": "fr/projects/uix/concepts/index.md",
           "status": "content-present",
-          "sha256": "6b3c7bbc3c87045a659e1cf4af1939919ee0808bd7494e4ebb97f98e55c81fb5",
-          "words": 69,
+          "sha256": "4d109129cdee2fc66cc1316f8f6d9ee4e9cba732de0ffd69c918086a287ca8c4",
+          "words": 72,
           "headings": 2,
           "examples": 0,
           "versions": [],
@@ -11268,28 +11334,28 @@
         "de": {
           "path": "projects/uix/index.md",
           "status": "content-present",
-          "sha256": "52c1d0b49d045627aa285edbc78a346c5e713e3e8b3a63bb1c4033cf17d0ebdc",
-          "words": 610,
+          "sha256": "cf6dbb0773426025eb79b7fe613e6879ea7a1e372725e72e8686fb136b40de01",
+          "words": 594,
           "headings": 5,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0-beta.1"
+            "9.1.0-beta.2"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "226b099e2b87dafd4d65e517f7424691d66d3a2269e9ae50c781a1669225492f",
-          "words": 395,
+          "sha256": "b76361c9530c5a8168c4c0070526788cf1948394e7e6b312048a3f83f1e8c11a",
+          "words": 387,
           "headings": 4,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0-beta.1"
+            "9.1.0-beta.2"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11308,14 +11374,14 @@
         "fr": {
           "path": "fr/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "8f9333061173ead94679c8f5eea6cc66837821ef91ffe60ce8191e4273c43ebd",
-          "words": 591,
+          "sha256": "05e6e6d2e5b9dc024897bc2c0dc1ba276acdb3e0a22b5b264034e2529d771138",
+          "words": 585,
           "headings": 5,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0-beta.1"
+            "9.1.0-beta.2"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11462,9 +11528,9 @@
         "de": {
           "path": "projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "43e6de32264a1ffdb7d7f228c3ca4b7366ebfc986d2f29522ab02492bc0e37de",
-          "words": 3228,
-          "headings": 21,
+          "sha256": "e825821079c0b2172244f3210164cba4adbb25203a0110e09f76484ca1f58cd3",
+          "words": 3285,
+          "headings": 22,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -11486,16 +11552,17 @@
             "9.0.0-beta.6",
             "9.0.0-beta.8",
             "9.1.0-beta.0",
-            "9.1.0-beta.1"
+            "9.1.0-beta.1",
+            "9.1.0-beta.2"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "e66c8732262e876c339394c5396bb1c0b6f08b307ed826cc229d4a7de4400ec7",
-          "words": 1745,
-          "headings": 10,
+          "sha256": "5eb5c55f167997cbe3548e6ecba76b69dd2f117d63bb8cd50cab0d51365af191",
+          "words": 1807,
+          "headings": 11,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -11508,7 +11575,8 @@
             "9.0.0-beta.6",
             "9.0.0-beta.8",
             "9.1.0-beta.0",
-            "9.1.0-beta.1"
+            "9.1.0-beta.1",
+            "9.1.0-beta.2"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11525,7 +11593,7 @@
             ],
             "versions_only_in_translation": [],
             "fewer_examples": false,
-            "substantially_shorter": true,
+            "substantially_shorter": false,
             "fewer_headings": true
           },
           "review": {
@@ -11537,9 +11605,9 @@
         "fr": {
           "path": "fr/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "d6773cd6a2af9c6ef7bc1d98e10d4b1ee89cf573afd643adaf2d8fe13450c555",
-          "words": 3265,
-          "headings": 18,
+          "sha256": "46c417385a04d4d77e1023504cb44c86c681f39c90799096d2f9d8020a239457",
+          "words": 3338,
+          "headings": 19,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -11558,7 +11626,8 @@
             "9.0.0-beta.6",
             "9.0.0-beta.8",
             "9.1.0-beta.0",
-            "9.1.0-beta.1"
+            "9.1.0-beta.1",
+            "9.1.0-beta.2"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12255,9 +12324,9 @@
         "de": {
           "path": "projects/uix/using/themes.md",
           "status": "content-present",
-          "sha256": "0aa36c5fd0b58096b824c70c3e9ea03b2f2861717bd64df0506367833861ca62",
-          "words": 1271,
-          "headings": 12,
+          "sha256": "ddf5289e49590fc9c357809aaa0df9d6c246d2abf2306f68d104166fc55247f9",
+          "words": 1298,
+          "headings": 13,
           "examples": 19,
           "versions": [],
           "unresolved_local_references": []
@@ -12265,20 +12334,22 @@
         "en": {
           "path": "en/projects/uix/using/themes.md",
           "status": "content-present",
-          "sha256": "2826d10588974be1dc1a9cdb51dc7b9ba83576079bab9448f4b0fb2fe318998b",
-          "words": 1532,
-          "headings": 11,
+          "sha256": "2a9e9f23f0c71d25b5f1557a2a967ae1734ee4b6b2f81479fcf3ffd966f84450",
+          "words": 1583,
+          "headings": 12,
           "examples": 19,
           "versions": [
             "2026.11.0",
-            "9.0.0"
+            "9.0.0",
+            "9.1.0-beta.2"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.0.0"
+              "9.0.0",
+              "9.1.0-beta.2"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12293,9 +12364,9 @@
         "fr": {
           "path": "fr/projects/uix/using/themes.md",
           "status": "content-present",
-          "sha256": "ce9ff794ce85a1d89104430a6f990498eea5ef7fa9849087826b11c95ebce54b",
-          "words": 1704,
-          "headings": 26,
+          "sha256": "5d8607a2d5b1d6da10247261715db604e1c92bb8bd3171cef9486cd084169b06",
+          "words": 1742,
+          "headings": 27,
           "examples": 32,
           "versions": [],
           "unresolved_local_references": [],

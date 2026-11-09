@@ -16,9 +16,9 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 243 | 0 | 0 | 0 |
-| EN | 243 | 0 | 0 | 0 |
-| FR | 243 | 0 | 0 | 0 |
+| DE | 244 | 0 | 0 | 0 |
+| EN | 244 | 0 | 0 | 0 |
+| FR | 244 | 0 | 0 | 0 |
 
 **Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).
 
@@ -159,6 +159,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Contenu présent · Différence examinée](/en/projects/uix/broker/realms) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Contenu présent · Différence examinée](/en/projects/uix/broker/rules) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/application) | [Contenu présent · Différence examinée](/fr/projects/uix/concepts/application) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Contenu présent](/en/projects/uix/concepts/context) | [Contenu présent](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/dom) | [Contenu présent](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/) | [Contenu présent](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Contenu présent · Différence examinée](/en/projects/uix/contributing) | [Contenu présent · Différence examinée](/fr/projects/uix/contributing) |

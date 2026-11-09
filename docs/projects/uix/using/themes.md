@@ -173,6 +173,10 @@ red-theme:
 Auch wenn der Wert einer `uix-<thing>-yaml`-Variable selbst YAML enthält, muss er aus Sicht des Home-Assistant-Themes ein String sein, der wiederum weitere Strings enthält.
 :::
 
+## Kontextbindungen
+
+`uix-<thing>-context-yaml` enthält strukturierte UIX-Kontextbindungen als YAML-Liste für jedes UIX-Ziel. Die [UIX-Kontexte](../concepts/context) erläutern Anker, Regeln für Entitätsnamen und Beispiele.
+
 ## Lokales Theme-Override mit `uix.theme`
 
 Mit `uix.theme` kann ein einzelnes gestyltes Element, zum Beispiel Karte, Row, Badge oder Element, ein anderes Home-Assistant-Theme verwenden als das global aktive Theme. `uix.theme` hat Vorrang vor dem geerbten Theme für diesen UIX-Knoten.

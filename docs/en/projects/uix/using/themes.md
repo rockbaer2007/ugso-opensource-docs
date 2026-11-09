@@ -1,4 +1,4 @@
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **9.0.0**, revision [f63ebbd](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0-beta.2**, revision [509b2c2](https://github.com/Lint-Free-Technology/uix/commit/509b2c2475ce6b574876a8353f88aedf87e7b2e3), reviewed 2026-11-09. Stable baseline on this site: **9.0.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Themes
 
@@ -195,6 +195,10 @@ red-theme:
 While the value of the `uix-<thing>-yaml` variable is actually yaml, as far as the theme is concerned it MUST be a string, which in turn contains more strings.
 
 :::
+
+## Context bindings
+
+`uix-<thing>-context-yaml` holds structured UIX context bindings rather than CSS. The value must be a YAML list and can be used on any UIX target; see [UIX contexts](../concepts/context.md) for anchors, entity-name rules, and examples.
 
 <a id="local-theme-override-with-uixtheme"></a>
 ## Local theme override with `uix.theme`

@@ -4,6 +4,12 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Revue du 9 novembre 2026
+
+Les [contextes UIX](./concepts/context) expliquent l’héritage, la priorité de la configuration directe, les règles de nom d’entité et le débogage. Les guides sur les concepts et les thèmes renvoient vers cette page. La revue couvre **67** pages canoniques jusqu’à **9.1.0-beta.2**.
+
+[602a017](https://github.com/Lint-Free-Technology/uix/commit/602a017124bf52d370c800080065bf9d13783891) · [509b2c2](https://github.com/Lint-Free-Technology/uix/commit/509b2c2475ce6b574876a8353f88aedf87e7b2e3)
+
 ## Revue du 8 novembre 2026 : valeurs par défaut des éléments
 
 Les notifications [0c09117](https://github.com/Lint-Free-Technology/uix/commit/0c09117ef5af41c0eeb81831e13183bfb7f3d6a0) et [e28976f](https://github.com/Lint-Free-Technology/uix/commit/e28976f96db019e009c4c604e80c0885c1b3ea67) sont intégrées. L’arbre complet archivé `dev e28976f` comprend **66** pages Markdown canoniques. Depuis `e7b5bdd`, [Valeurs par défaut de configuration des éléments](./extras/element-config-defaults) est nouvelle et le guide des raccourcis de barre latérale supprime un avis d’aperçu. Les 64 autres pages et les médias sont inchangés ; la nouvelle entrée de navigation est ajoutée.

@@ -3,8 +3,8 @@ title: Übersicht
 ---
 # UI eXtension für Home Assistant
 
-::: info Stand geprüft am 08.11.2026
-Stabile Basis ist **UIX 9.0.0** mit **Home Assistant 2026.11.0 oder neuer**. Alle **66** Quellseiten sind bis `dev e28976f` geprüft. Neu ist die Anleitung zu [Element-Standardwerten](./extras/element-config-defaults) aus der Vorschau **9.1.0-beta.1**. Einzelheiten stehen im [Prüfbericht](./translation-status).
+::: info Stand geprüft am 09.11.2026
+Die [UIX-Kontexte](./concepts/context) erklären Vererbung, Vorrang direkter Konfiguration, Namensregeln und Fehlersuche. Konzeptübersicht und Theme-Anleitung verlinken die neue Seite. Geprüft sind **67** kanonische Seiten bis **9.1.0-beta.2**.
 :::
 
 > **Unabhängige Übersetzung**

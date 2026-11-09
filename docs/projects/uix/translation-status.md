@@ -4,6 +4,12 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Abgleich vom 09.11.2026
+
+Die [UIX-Kontexte](./concepts/context) erklären Vererbung, Vorrang direkter Konfiguration, Namensregeln und Fehlersuche. Konzeptübersicht und Theme-Anleitung verlinken die neue Seite. Geprüft sind **67** kanonische Seiten bis **9.1.0-beta.2**.
+
+[602a017](https://github.com/Lint-Free-Technology/uix/commit/602a017124bf52d370c800080065bf9d13783891) · [509b2c2](https://github.com/Lint-Free-Technology/uix/commit/509b2c2475ce6b574876a8353f88aedf87e7b2e3)
+
 ## Abgleich vom 08.11.2026: Element-Standardwerte
 
 Die Meldungen [0c09117](https://github.com/Lint-Free-Technology/uix/commit/0c09117ef5af41c0eeb81831e13183bfb7f3d6a0) und [e28976f](https://github.com/Lint-Free-Technology/uix/commit/e28976f96db019e009c4c604e80c0885c1b3ea67) sind eingepflegt. Der vollständige archivierte Quellbaum auf `dev e28976f` umfasst **66** kanonische Markdown-Seiten. Gegenüber `e7b5bdd` ist [Standardwerte für Elementkonfigurationen](./extras/element-config-defaults) neu; die Seitenleisten-Anleitung entfernt einen Vorschauhinweis. Die übrigen 64 Seiten und Medien sind unverändert; der neue Navigationseintrag ist übernommen.

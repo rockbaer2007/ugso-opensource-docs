@@ -9,3 +9,4 @@ Diese Seiten erklären die Grundideen hinter UI eXtension:
 - [Anwendung](./application): wie UIX im Frontend geladen wird und mit Home Assistant zusammenspielt.
 
 Für die praktische Nutzung beginne mit [Schnellstart](../quick-start), [UIX Styling](../using/index) und [UIX Forge](../forge/index).
+- [UIX-Kontexte](./context)

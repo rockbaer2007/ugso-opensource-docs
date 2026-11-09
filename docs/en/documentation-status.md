@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 243 | 0 | 0 | 0 |
-| EN | 243 | 0 | 0 | 0 |
-| FR | 243 | 0 | 0 | 0 |
+| DE | 244 | 0 | 0 | 0 |
+| EN | 244 | 0 | 0 | 0 |
+| FR | 244 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -159,6 +159,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Content present · Difference reviewed](/en/projects/uix/broker/realms) | [Content present · Difference reviewed](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Content present · Difference reviewed](/en/projects/uix/broker/rules) | [Content present · Difference reviewed](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Content present · Difference reviewed](/en/projects/uix/concepts/application) | [Content present · Difference reviewed](/fr/projects/uix/concepts/application) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Content present](/en/projects/uix/concepts/context) | [Content present](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Content present · Difference reviewed](/en/projects/uix/concepts/dom) | [Content present](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Content present · Difference reviewed](/en/projects/uix/concepts/) | [Content present](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Content present · Difference reviewed](/en/projects/uix/contributing) | [Content present · Difference reviewed](/fr/projects/uix/contributing) |

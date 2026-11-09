@@ -4,6 +4,12 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Review on 9 November 2026
+
+[UIX contexts](./concepts/context) covers inheritance, precedence of direct configuration, entity-name rules and debugging. The concepts and themes guides link to the new page. The review covers **67** canonical pages through **9.1.0-beta.2**.
+
+[602a017](https://github.com/Lint-Free-Technology/uix/commit/602a017124bf52d370c800080065bf9d13783891) · [509b2c2](https://github.com/Lint-Free-Technology/uix/commit/509b2c2475ce6b574876a8353f88aedf87e7b2e3)
+
 ## Review on 8 November 2026: element configuration defaults
 
 The notices [0c09117](https://github.com/Lint-Free-Technology/uix/commit/0c09117ef5af41c0eeb81831e13183bfb7f3d6a0) and [e28976f](https://github.com/Lint-Free-Technology/uix/commit/e28976f96db019e009c4c604e80c0885c1b3ea67) are incorporated. The complete archived `dev e28976f` tree contains **66** canonical Markdown pages. Compared with `e7b5bdd`, [Element configuration defaults](./extras/element-config-defaults) is new and the custom sidebar guide removes a preview notice. The other 64 pages and media are unchanged; the new navigation entry is included.

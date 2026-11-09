@@ -1859,6 +1859,21 @@
     "EN": "/en/projects/uix/concepts/application",
     "FR": "/fr/projects/uix/concepts/application"
   },
+  "/projects/uix/concepts/context": {
+    "DE": "/projects/uix/concepts/context",
+    "EN": "/en/projects/uix/concepts/context",
+    "FR": "/fr/projects/uix/concepts/context"
+  },
+  "/en/projects/uix/concepts/context": {
+    "DE": "/projects/uix/concepts/context",
+    "EN": "/en/projects/uix/concepts/context",
+    "FR": "/fr/projects/uix/concepts/context"
+  },
+  "/fr/projects/uix/concepts/context": {
+    "DE": "/projects/uix/concepts/context",
+    "EN": "/en/projects/uix/concepts/context",
+    "FR": "/fr/projects/uix/concepts/context"
+  },
   "/projects/uix/concepts/dom": {
     "DE": "/projects/uix/concepts/dom",
     "EN": "/en/projects/uix/concepts/dom",

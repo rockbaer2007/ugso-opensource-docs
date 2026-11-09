@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 243 | 0 | 0 | 0 |
-| EN | 243 | 0 | 0 | 0 |
-| FR | 243 | 0 | 0 | 0 |
+| DE | 244 | 0 | 0 | 0 |
+| EN | 244 | 0 | 0 | 0 |
+| FR | 244 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -159,6 +159,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/realms) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/rules) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/application) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/concepts/application) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Inhalt vorhanden](/en/projects/uix/concepts/context) | [Inhalt vorhanden](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/dom) | [Inhalt vorhanden](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/) | [Inhalt vorhanden](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/contributing) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/contributing) |
