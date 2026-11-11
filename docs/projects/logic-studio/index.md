@@ -14,7 +14,18 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 ## HA Logic Studio Pro 0.1.28
 
-HA Logic Studio Pro ist eine separate Home-Assistant-App im UGSo-Sammelrepo. **0.1.28** ist das aktuelle öffentliche Testupdate. Vor einem Update ein Vollbackup erstellen und zuerst auf einem Testsystem prüfen.
+HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrepository. Sie baut auf Logic Studio auf und greift Erfahrungen aus der Arbeit mit ioBroker auf.
+
+**Verfügbare Funktionen**
+
+- **Funktionsplan:** Bausteine verbinden, Signale an den Eingängen anzeigen und den Plan simulieren. Die Ausführung auf dem HA-Server kann auf Änderungen reagieren oder in einem festen Zyklus laufen.
+- **Regeln und Blocks A:** Automationen visuell erstellen und als HA-YAML ausgeben.
+- **Blocks JS, JavaScript und TypeScript:** Logik bearbeiten, mit simulierten Werten testen und auf dem HA-Server ausführen.
+- **HA-YAML:** Automationen und Skripte bearbeiten, prüfen und exportieren.
+- **Projektverwaltung:** Projekte und Ordner pro HA-Benutzer auf dem Server speichern.
+- **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
+
+**0.1.28** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
 
 ### Was seit 0.1.12 neu ist
 

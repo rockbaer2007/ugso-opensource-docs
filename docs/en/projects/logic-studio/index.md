@@ -14,7 +14,18 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 ## HA Logic Studio Pro 0.1.28
 
-HA Logic Studio Pro is a separate Home Assistant app in the shared UGSo repository. **0.1.28** is the current public test update. Make a full backup and try the update on a test system first.
+HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo repository. It builds on Logic Studio and draws on experience with ioBroker.
+
+**Available features**
+
+- **Function block diagram:** Connect blocks, display signals at the inputs, and simulate the diagram. Execution on the HA server can respond to changes or run on a fixed cycle.
+- **Rules and Blocks A:** Build automations visually and export them as HA YAML.
+- **Blocks JS, JavaScript, and TypeScript:** Edit logic, test it with simulated values, and run it on the HA server.
+- **HA YAML:** Edit, validate, and export automations and scripts.
+- **Project management:** Store projects and folders on the server for each HA user.
+- **Language selection:** The editors are available in German, English, and French.
+
+**0.1.28** is the public test update. Make a full backup before updating and try this version on a test system first.
 
 ### Changes since 0.1.12
 
