@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.23 with a live runtime, Blocks JS, and function block diagrams for Home Assistant.
+description: HA Logic Studio Pro 0.1.28 with server-side function block execution and editors in German, English and French.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,9 +12,9 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.23
+## HA Logic Studio Pro 0.1.28
 
-HA Logic Studio Pro is a separate Home Assistant app in the shared UGSo repository. **0.1.23** is a public test update for the live runtime. Make a full backup and try the update on a test system first.
+HA Logic Studio Pro is a separate Home Assistant app in the shared UGSo repository. **0.1.28** is the current public test update. Make a full backup and try the update on a test system first.
 
 ### Changes since 0.1.12
 
@@ -40,6 +40,14 @@ Write access also allows reads. `ha.readState` and `ha.readAttribute` return the
 Scripts need to be started again after an app restart. On connection loss or a rejected action, the runtime stops the script and logs the error. Astronomical triggers and automatic reconnection are pending.
 
 **Verified on .193 with HA 2026.11.1:** The runtime read a helper state and attribute, turned the helper on with a schedule and turned it off in response to a real HA event. Both state changes were reported. An imported Blocks JS schedule ran every two seconds. Earlier tests verified start, stop, restart and continued execution after leaving Studio with JavaScript and TypeScript.
+
+### 0.1.28 · Editor translations
+
+Version **0.1.28** adds translations for Rules, Blocks A, Blocks JS, JavaScript, TypeScript and HA YAML. The language setting also applies to the function block diagram. [Test update and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.28)
+
+Browser tests on .193 covered the toolbars for function block diagrams, Rules, Blocks A, Blocks JS, JavaScript, TypeScript, HA automations and HA scripts in all three languages. The French code example dialog was also checked.
+
+To install the Pro app, select **HA Logic Studio Pro** in the shared UGSo repository in the app store. For an existing GitHub installation, check for updates and select **HA Logic Studio Pro → Update**. Use **DE**, **EN** or **FR** at the top of the project pane to switch the editor language.
 
 ### 0.1.26 · FBD Runtime
 

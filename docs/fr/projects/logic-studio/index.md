@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.23 avec moteur d’exécution en direct, Blocks JS et diagrammes fonctionnels pour Home Assistant.
+description: HA Logic Studio Pro 0.1.28 avec exécution des diagrammes fonctionnels sur le serveur et éditeurs en allemand, anglais et français.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,9 +12,9 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.23
+## HA Logic Studio Pro 0.1.28
 
-HA Logic Studio Pro est une application Home Assistant distincte dans le dépôt commun UGSo. La version **0.1.23** est une mise à jour publique de test du moteur d’exécution en direct. Créer une sauvegarde complète et essayer d’abord la mise à jour sur un système de test.
+HA Logic Studio Pro est une application Home Assistant distincte dans le dépôt commun UGSo. La version **0.1.28** est la mise à jour de test publique actuelle. Créer une sauvegarde complète et essayer d’abord la mise à jour sur un système de test.
 
 ### Nouveautés depuis la version 0.1.12
 
@@ -40,6 +40,14 @@ L’autorisation d’écriture inclut la lecture. `ha.readState` et `ha.readAttr
 Après le redémarrage de l’application, les scripts doivent être relancés. En cas de perte de connexion ou de refus d’une action, le moteur arrête le script et journalise l’erreur. Les déclencheurs astronomiques et la reconnexion automatique restent à ajouter.
 
 **Vérifié sur .193 avec HA 2026.11.1.** Le moteur a lu l’état et un attribut de l’entrée de test, l’a activée par un horaire et l’a désactivée à la réception d’un événement HA réel. Les deux changements d’état ont été signalés. Un horaire Blocks JS importé s’est exécuté toutes les deux secondes. Les tests précédents ont vérifié le démarrage, l’arrêt, le redémarrage et la poursuite de l’exécution après avoir quitté Studio, avec JavaScript et TypeScript.
+
+### 0.1.28 · Traductions des éditeurs
+
+La version **0.1.28** complète les traductions des éditeurs de règles, Blocks A, Blocks JS, JavaScript, TypeScript et YAML HA. Le choix de langue s’applique aussi au diagramme fonctionnel. [Version de test et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.28)
+
+Les tests sur .193 ont vérifié dans les trois langues les barres d’outils du diagramme fonctionnel, des règles, de Blocks A, de Blocks JS, de JavaScript, de TypeScript, des automatisations HA et des scripts HA. La boîte de dialogue des exemples de code a aussi été vérifiée en français.
+
+Pour installer la version Pro, sélectionner **HA Logic Studio Pro** dans le dépôt commun UGSo de la boutique d’applications. Pour une installation GitHub existante, rechercher les mises à jour puis sélectionner **HA Logic Studio Pro → Mettre à jour**. Utiliser **DE**, **EN** ou **FR** en haut du volet des projets pour changer la langue des éditeurs.
 
 ### 0.1.26 · FBD Runtime
 
