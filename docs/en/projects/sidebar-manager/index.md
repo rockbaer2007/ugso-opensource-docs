@@ -1,8 +1,14 @@
 ---
 title: Sidebar Manager
-description: Folders, colors, opacity and links in the Home Assistant sidebar. Version 0.1.10, DE/EN/FR.
+description: Folders, colors, opacity and links in the Home Assistant sidebar. Version 0.1.11, DE/EN/FR.
 ---
 # Sidebar Manager
+
+## New in 0.1.11: Aligned sidebar icons
+
+Group and custom-link icons now measure 24 × 24 px. In the collapsed sidebar, they share the same horizontal center as native Home Assistant icons.
+
+Verified on .177 with Home Assistant 2026.11.0 on 11 November 2026. Group icons align with the Overview icon in both sidebar layouts. The Logs, Automations, and States link icons are centered in the collapsed sidebar. The user test also passed.
 
 ## New in 0.1.10: Home Assistant shortcuts
 
@@ -39,12 +45,12 @@ Version **0.1.9** fixes missing text/icon colors in the native edit dialog, incl
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
 
-**0.1.10 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.11 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Organize Home Assistant's sidebar with folders, colors, opacity and custom links, directly from **Edit sidebar**. Move main entries and folders with the native drag handles. No HA core files are replaced.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.10](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.10) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.11](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.11) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## New in 0.1.8: links in the sidebar editor
 

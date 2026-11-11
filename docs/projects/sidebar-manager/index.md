@@ -1,8 +1,14 @@
 ---
 title: Sidebar Manager
-description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenleiste. Version 0.1.10, DE/EN/FR.
+description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenleiste. Version 0.1.11, DE/EN/FR.
 ---
 # Sidebar Manager
+
+## Neu in 0.1.11: Ausgerichtete Seitenleisten-Icons
+
+Gruppen- und Link-Icons sind jetzt 24 × 24 px groß. In der eingeklappten Seitenleiste sitzen sie auf derselben horizontalen Position wie die Original-Icons von Home Assistant.
+
+Am 11.11.2026 auf .177 mit Home Assistant 2026.11.0 geprüft: Die Gruppenicons sind ein- und ausgeklappt bündig mit dem Icon „Übersicht“. Auch die Link-Icons für Logs, Automationen und Zustände sind eingeklappt mittig ausgerichtet. Der Nutzertest war ebenfalls erfolgreich.
 
 ## Neu in 0.1.10: Home-Assistant-Verknüpfungen
 
@@ -38,12 +44,12 @@ Version **0.1.9** behebt die fehlenden Text-/Iconfarben im nativen Bearbeitungsd
 
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
-**0.1.10 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.11 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Ordner, Farben, Transparenz und eigene Links direkt in „Seitenleiste bearbeiten“. Haupteinträge und Ordner gemeinsam am nativen Ziehgriff sortieren. Keine HA-Systemdateien werden ersetzt.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.10](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.10) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.11](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.11) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## Neu in 0.1.8: Links im Seitenleisten-Editor
 

@@ -1,8 +1,14 @@
 ---
 title: Sidebar Manager
-description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.10, DE/EN/FR.
+description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.11, DE/EN/FR.
 ---
 # Sidebar Manager
+
+## Nouveautés de 0.1.11 : icônes alignées dans la barre latérale
+
+Les icônes des groupes et des liens personnalisés mesurent désormais 24 × 24 px. Lorsque la barre latérale est réduite, elles sont centrées sur le même axe vertical que les icônes natives de Home Assistant.
+
+Vérifié sur .177 avec Home Assistant 2026.11.0 le 11 novembre 2026. Les icônes de groupe sont alignées sur celle de la Vue d’ensemble dans les deux modes. Les icônes des liens Journaux, Automatisations et États sont centrées dans la barre réduite. Le test utilisateur a également réussi.
 
 ## Nouveautés de 0.1.10 : raccourcis Home Assistant
 
@@ -38,12 +44,12 @@ La version **0.1.9** corrige les couleurs du texte/des icônes dans le dialogue 
 
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
-**0.1.10 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.11 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Dossiers, couleurs, opacité et liens personnalisés dans « Modifier la barre latérale ». Triez dossiers et entrées principales avec les poignées natives. Aucun fichier système HA n'est remplacé.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.10](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.10) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.11](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.11) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## Nouveautés de 0.1.8 : liens dans l’éditeur de barre latérale
 
