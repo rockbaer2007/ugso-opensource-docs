@@ -41,7 +41,13 @@ Nach einem App-Neustart müssen Skripte erneut gestartet werden. Bei einer Verbi
 
 **Geprüft auf .193 mit HA 2026.11.1:** Live-Zustand und Attribut gelesen, Testhelfer per Zeitplan eingeschaltet und per echtem HA-Ereignis ausgeschaltet. Beide Zustandswechsel wurden gemeldet. Ein importierter Blocks-JS-Zeitplan lief alle zwei Sekunden. Zuvor wurden Start, Stopp, Neustart und der Weiterlauf nach Verlassen der Studio-Seite mit JavaScript und TypeScript geprüft.
 
-[GitHub-Testupdate und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.23) · [App im Sammelrepository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
+### 0.1.26 · FBD Runtime
+
+Funktionsplan direkt über **Play** auf dem HA-Server starten. **Automatisch** reagiert auf Änderungen der freigegebenen Zustände und Attribute; **Fester Zyklus** wertet den Plan alle 100 bis 60.000 ms aus. Simulation und YAML-Ausgabe bleiben separat. **Speichern** übernimmt den Entwurf, **Abbrechen** lädt den letzten gespeicherten Stand. Die Werkzeugleiste ist in DE/EN/FR verfügbar.
+
+Auf .193 schaltete der Automatikstart den Testhelfer ein; der 200-ms-Zyklus schaltete ihn wieder aus. Stopp und das Verwerfen einer ungespeicherten Änderung wurden ebenfalls geprüft. Die Reaktion auf Eingangsänderungen wurde zusätzlich lokal für beide Betriebsarten getestet.
+
+[GitHub-Testupdate und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.26) · [App im Sammelrepository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
 
 ## Testinstallation aus GitHub
 

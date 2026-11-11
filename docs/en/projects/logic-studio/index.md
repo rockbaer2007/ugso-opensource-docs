@@ -41,7 +41,13 @@ Scripts need to be started again after an app restart. On connection loss or a r
 
 **Verified on .193 with HA 2026.11.1:** The runtime read a helper state and attribute, turned the helper on with a schedule and turned it off in response to a real HA event. Both state changes were reported. An imported Blocks JS schedule ran every two seconds. Earlier tests verified start, stop, restart and continued execution after leaving Studio with JavaScript and TypeScript.
 
-[GitHub test update and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.23) · [App in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
+### 0.1.26 · FBD Runtime
+
+Use **Play** to run a function block diagram on the HA server. **Automatic** responds to changes in authorized states and attributes; **Fixed cycle** evaluates the diagram every 100 to 60,000 ms. Simulation and YAML export are separate. **Save** commits the draft; **Cancel** restores the last saved version. The toolbar is available in DE/EN/FR.
+
+On .193, starting in automatic mode turned the test helper on, and the 200 ms cycle turned it off again. Stop and discarding an unsaved change were also verified. Both modes were additionally tested locally with input changes.
+
+[GitHub test update and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.26) · [App in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
 
 ## Test installation from GitHub
 

@@ -41,7 +41,13 @@ Après le redémarrage de l’application, les scripts doivent être relancés. 
 
 **Vérifié sur .193 avec HA 2026.11.1.** Le moteur a lu l’état et un attribut de l’entrée de test, l’a activée par un horaire et l’a désactivée à la réception d’un événement HA réel. Les deux changements d’état ont été signalés. Un horaire Blocks JS importé s’est exécuté toutes les deux secondes. Les tests précédents ont vérifié le démarrage, l’arrêt, le redémarrage et la poursuite de l’exécution après avoir quitté Studio, avec JavaScript et TypeScript.
 
-[Mise à jour de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.23) · [Application dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
+### 0.1.26 · FBD Runtime
+
+Le bouton **Lecture** lance le diagramme fonctionnel sur le serveur HA. Le mode **Automatique** réagit aux changements des états et attributs autorisés ; le **Cycle fixe** évalue le plan toutes les 100 à 60 000 ms. La simulation et l’export YAML restent séparés. **Enregistrer** valide le brouillon ; **Annuler** rétablit le dernier état enregistré. La barre d’outils est disponible en DE/EN/FR.
+
+Sur .193, le démarrage automatique a activé l’entité de test et le cycle de 200 ms l’a désactivée. L’arrêt et l’annulation d’une modification non enregistrée ont aussi été vérifiés. Les deux modes ont également été testés localement avec des changements d’entrée.
+
+[Mise à jour de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.26) · [Application dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
 
 ## Installation de test depuis GitHub
 
