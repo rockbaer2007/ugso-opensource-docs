@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: Logic Studio 0.1.12 with DE/EN/FR, persisted language selection and block help for Home Assistant.
+description: HA Logic Studio Pro 0.1.23 with a live runtime, Blocks JS, and function block diagrams for Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,13 +12,36 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.12
+## HA Logic Studio Pro 0.1.23
 
-HA Logic Studio Pro is a separate app in the shared UGSo repository. In 0.1.12, the left project pane adjusts its minimum width to fit visible script and folder names, indentation, and icons. Drag the handle to widen the pane. When space is limited, long names are shortened and shown in full in a tooltip. The project list has no horizontal scrollbar.
+HA Logic Studio Pro is a separate Home Assistant app in the shared UGSo repository. **0.1.23** is a public test update for the live runtime. Make a full backup and try the update on a test system first.
 
-**Tested on .193 (Home Assistant 2026.11.1):** In HA Ingress, collapsing the main folder reduced the pane width from 294 to 232 px. Reopening it restored 294 px. Dragging the handle widened the pane to 446 px. All six existing projects were still available after the update.
+### Changes since 0.1.12
 
-[GitHub test update and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.12)
+- **Project tree and editors:** Projects and folders are stored on the server per HA user. Existing browser projects can be migrated on first launch from the original browser. JavaScript and TypeScript have syntax highlighting, line numbers and their own toolbars. The project picker, tree and filters use matching icons and colors. Blocks A and Blocks JS have separate filters. The automatic project pane width can still be adjusted with the handle.
+- **Blocks A and Blocks JS:** Both use the bundled Blocks for HA catalog. Blocks A exports HA automations as YAML. Blocks JS generates JavaScript for the test run and runtime. Unrecognized ioBroker blocks are retained as placeholders and prevent code generation until replaced. Map ioBroker object IDs to Home Assistant entity IDs.
+- **Function block diagram:** Simulation, one-second step and reset have icons in the top toolbar. Output format and preview sit on the right. Connections can be moved to another target input, and signal values appear at the input.
+- **Server runtime:** Play starts JavaScript, transpiled TypeScript or Blocks JS on the HA server. Stop and restart are available in the editor. Runtime status and logs remain available across browsers. The separate **test run** uses simulated states and events. HA YAML scripts and automations can be exported and run in Home Assistant after import.
+
+### Configure the live runtime
+
+Under **Settings → Apps → HA Logic Studio Pro → Configuration**, add the required entries, save and restart the app. The lists start empty. Example for a dedicated test helper:
+
+```yaml
+runtime_read_entities: []
+runtime_write_entities:
+  - input_boolean.logic_studio_runtime_test
+runtime_events:
+  - logic_studio_runtime_test
+```
+
+Write access also allows reads. `ha.readState` and `ha.readAttribute` return the latest values confirmed by HA. `ha.onState`, `ha.onAttribute` and `ha.onEvent` respond to authorized changes and events. `ha.callAction` supports switching, setting number, text and select helpers, and pressing buttons on a single authorized target. `ha.schedule` handles time patterns and fixed times with optional weekdays in the HA time zone.
+
+Scripts need to be started again after an app restart. On connection loss or a rejected action, the runtime stops the script and logs the error. Astronomical triggers and automatic reconnection are pending.
+
+**Verified on .193 with HA 2026.11.1:** The runtime read a helper state and attribute, turned the helper on with a schedule and turned it off in response to a real HA event. Both state changes were reported. An imported Blocks JS schedule ran every two seconds. Earlier tests verified start, stop, restart and continued execution after leaving Studio with JavaScript and TypeScript.
+
+[GitHub test update and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.23) · [App in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
 
 ## Test installation from GitHub
 

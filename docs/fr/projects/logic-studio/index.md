@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: Logic Studio 0.1.12 avec DE/EN/FR, langue mémorisée et aide des blocs pour Home Assistant.
+description: HA Logic Studio Pro 0.1.23 avec moteur d’exécution en direct, Blocks JS et diagrammes fonctionnels pour Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,13 +12,36 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.12
+## HA Logic Studio Pro 0.1.23
 
-HA Logic Studio Pro est une application distincte dans le dépôt commun UGSo. En version 0.1.12, la largeur minimale du volet de gauche s’adapte aux noms visibles des scripts et des dossiers, aux retraits et aux icônes. La poignée permet d’élargir le volet. Lorsque la place manque, les noms longs sont abrégés et restent lisibles en entier dans une infobulle. La liste des projets n’a pas de barre de défilement horizontale.
+HA Logic Studio Pro est une application Home Assistant distincte dans le dépôt commun UGSo. La version **0.1.23** est une mise à jour publique de test du moteur d’exécution en direct. Créer une sauvegarde complète et essayer d’abord la mise à jour sur un système de test.
 
-**Testé sur .193 (Home Assistant 2026.11.1) :** Dans HA Ingress, le volet est passé de 294 à 232 px en repliant le dossier principal, puis est revenu à 294 px en le rouvrant. La poignée a permis de l’élargir à 446 px. Les six projets existants étaient toujours accessibles après la mise à jour.
+### Nouveautés depuis la version 0.1.12
 
-[Mise à jour de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.12)
+- **Arborescence et éditeurs.** Les projets et dossiers sont enregistrés sur le serveur pour chaque utilisateur HA. Les projets locaux peuvent être migrés au premier démarrage depuis le navigateur d’origine. JavaScript et TypeScript disposent de la coloration syntaxique, de numéros de ligne et de barres d’outils dédiées. Les icônes et couleurs correspondent entre le sélecteur, l’arborescence et les filtres. Blocks A et Blocks JS ont des filtres distincts. La largeur automatique du volet reste réglable par la poignée.
+- **Blocks A et Blocks JS.** Les deux utilisent le catalogue intégré de Blocks for HA. Blocks A exporte des automatisations HA en YAML. Blocks JS génère le JavaScript pour la simulation et le moteur. Les blocs ioBroker inconnus sont conservés sous forme de blocs de remplacement et bloquent la génération du code jusqu’à leur remplacement. Associer les identifiants d’objets ioBroker aux entités HA correspondantes.
+- **Diagramme fonctionnel.** La barre supérieure comporte les icônes de simulation, d’avancement d’une seconde et de réinitialisation. Le format de sortie et l’aperçu sont à droite. Les connexions peuvent être déplacées vers une autre entrée et les valeurs des signaux s’affichent à l’entrée cible.
+- **Moteur serveur.** Le bouton de lecture lance JavaScript, TypeScript transpilé ou Blocks JS sur le serveur HA. L’arrêt et le redémarrage sont disponibles dans l’éditeur. L’état et le journal restent accessibles depuis un autre navigateur. Le **test** séparé utilise des états et événements simulés. Les scripts et automatisations YAML sont exécutés par Home Assistant après import.
+
+### Configurer le moteur en direct
+
+Dans **Paramètres → Applications → HA Logic Studio Pro → Configuration**, ajouter les entrées nécessaires, enregistrer puis redémarrer l’application. Les listes sont vides par défaut. Exemple avec une entrée booléenne dédiée au test :
+
+```yaml
+runtime_read_entities: []
+runtime_write_entities:
+  - input_boolean.logic_studio_runtime_test
+runtime_events:
+  - logic_studio_runtime_test
+```
+
+L’autorisation d’écriture inclut la lecture. `ha.readState` et `ha.readAttribute` renvoient les dernières valeurs confirmées par HA. `ha.onState`, `ha.onAttribute` et `ha.onEvent` réagissent aux changements et événements autorisés. `ha.callAction` permet la commutation, la modification des entrées numériques, textuelles ou de sélection et l’appui sur des boutons pour une cible autorisée. `ha.schedule` accepte des motifs horaires et des heures fixes, avec des jours de la semaine facultatifs, dans le fuseau horaire de HA.
+
+Après le redémarrage de l’application, les scripts doivent être relancés. En cas de perte de connexion ou de refus d’une action, le moteur arrête le script et journalise l’erreur. Les déclencheurs astronomiques et la reconnexion automatique restent à ajouter.
+
+**Vérifié sur .193 avec HA 2026.11.1.** Le moteur a lu l’état et un attribut de l’entrée de test, l’a activée par un horaire et l’a désactivée à la réception d’un événement HA réel. Les deux changements d’état ont été signalés. Un horaire Blocks JS importé s’est exécuté toutes les deux secondes. Les tests précédents ont vérifié le démarrage, l’arrêt, le redémarrage et la poursuite de l’exécution après avoir quitté Studio, avec JavaScript et TypeScript.
+
+[Mise à jour de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.23) · [Application dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
 
 ## Installation de test depuis GitHub
 

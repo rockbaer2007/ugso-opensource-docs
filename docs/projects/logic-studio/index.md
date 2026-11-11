@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: Logic Studio 0.1.12 mit DE/EN/FR, gespeicherter Sprachwahl und Bausteinhilfe für Home Assistant.
+description: HA Logic Studio Pro 0.1.23 mit Live-Runtime, Blocks JS und Funktionsplan für Home Assistant.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,13 +12,36 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.12
+## HA Logic Studio Pro 0.1.23
 
-HA Logic Studio Pro ist als eigene App im UGSo-Sammelrepo verfügbar. In 0.1.12 richtet sich die Mindestbreite der linken Projektspalte nach den sichtbaren Skript- und Ordnernamen, Einrückungen und Symbolen. Mit dem Anfasser lässt sich die Spalte verbreitern. Bei wenig Platz kürzt die Liste lange Namen und zeigt sie im Tooltip vollständig an. Die Projektliste hat keinen horizontalen Scrollbalken.
+HA Logic Studio Pro ist eine separate Home-Assistant-App im UGSo-Sammelrepo. **0.1.23** ist ein öffentliches Testupdate für die Live-Runtime. Vor einem Update ein Vollbackup erstellen und zuerst auf einem Testsystem prüfen.
 
-**Auf .193 geprüft (Home Assistant 2026.11.1):** Im Ingress wurde die Spalte beim Einklappen des Hauptordners von 294 auf 232 px schmaler und beim Öffnen wieder 294 px breit. Ziehen am Anfasser vergrößerte sie auf 446 px. Alle sechs vorhandenen Projekte waren nach dem Update weiterhin vorhanden.
+### Was seit 0.1.12 neu ist
 
-[GitHub-Testupdate und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.12)
+- **Projektbaum und Editoren:** Projekte und Ordner werden pro HA-Benutzer serverseitig gespeichert. Vorhandene Browserprojekte können beim ersten Start aus dem bisherigen Browser übernommen werden. JavaScript und TypeScript haben Syntaxfarben, Zeilennummern und eigene Werkzeugleisten. Icons und Farben stimmen zwischen Projektauswahl, Baum und Filtern überein. Blocks A und Blocks JS haben getrennte Filter. Die automatisch bemessene Projektspalte bleibt per Anfasser verstellbar.
+- **Blocks A und Blocks JS:** Beide nutzen den integrierten Katalog von Blocks for HA. Blocks A exportiert HA-Automationen als YAML. Blocks JS erzeugt JavaScript für Testlauf und Runtime. Beim ioBroker-Import bleiben unbekannte Blöcke als Platzhalter sichtbar und verhindern die Codeausgabe, bis sie ersetzt sind. ioBroker-Objekt-IDs durch passende HA-Entitäts-IDs ersetzen.
+- **Funktionsplan:** Simulation, Zeitschritt von einer Sekunde und Zurücksetzen liegen als Icons in der oberen Leiste. Ausgabeformat und Vorschau sind rechts angeordnet. Verbindungen lassen sich am Zieleingang umhängen, Signalwerte erscheinen direkt am Eingang.
+- **Server-Runtime:** Play startet JavaScript, transpiliertes TypeScript oder Blocks JS auf dem HA-Server. Stopp und Neustart sind im Editor verfügbar. Status und Runtime-Protokoll bleiben beim Browserwechsel abrufbar. Der separate **Testlauf** verwendet simulierte Zustände und Ereignisse. HA-YAML-Skripte und -Automationen werden exportiert und anschließend in Home Assistant ausgeführt.
+
+### Live-Runtime einrichten
+
+In **Einstellungen → Apps → HA Logic Studio Pro → Konfiguration** die benötigten Einträge setzen, speichern und die App neu starten. Die Listen sind anfangs leer. Beispiel für einen eigens angelegten Testhelfer:
+
+```yaml
+runtime_read_entities: []
+runtime_write_entities:
+  - input_boolean.logic_studio_runtime_test
+runtime_events:
+  - logic_studio_runtime_test
+```
+
+Eine Schreibfreigabe erlaubt auch das Lesen. `ha.readState` und `ha.readAttribute` liefern die zuletzt von HA bestätigten Werte. `ha.onState`, `ha.onAttribute` und `ha.onEvent` reagieren auf freigegebene Änderungen und Ereignisse. `ha.callAction` unterstützt Schaltaktionen, Werte für Zahlen-, Text- und Auswahlhelfer sowie Taster mit genau einem freigegebenen Ziel. `ha.schedule` verarbeitet Zeitmuster und feste Uhrzeiten mit optionalen Wochentagen in der HA-Zeitzone.
+
+Nach einem App-Neustart müssen Skripte erneut gestartet werden. Bei einer Verbindungsunterbrechung oder abgelehnten Aktion hält die Runtime das Skript an und protokolliert den Fehler. Astro-Auslöser und automatische Wiederverbindung sind offen.
+
+**Geprüft auf .193 mit HA 2026.11.1:** Live-Zustand und Attribut gelesen, Testhelfer per Zeitplan eingeschaltet und per echtem HA-Ereignis ausgeschaltet. Beide Zustandswechsel wurden gemeldet. Ein importierter Blocks-JS-Zeitplan lief alle zwei Sekunden. Zuvor wurden Start, Stopp, Neustart und der Weiterlauf nach Verlassen der Studio-Seite mit JavaScript und TypeScript geprüft.
+
+[GitHub-Testupdate und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.23) · [App im Sammelrepository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
 
 ## Testinstallation aus GitHub
 
