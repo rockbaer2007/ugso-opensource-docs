@@ -7150,9 +7150,9 @@
         "de": {
           "path": "projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "9d051f297885a9a485ef643da2ee334b34184db1b8a9b95b30ca020299fefac2",
-          "words": 1638,
-          "headings": 7,
+          "sha256": "581bb370ec3636d73b5d45ac0309996ae0e9f4dff83716cf462661feed8469ec",
+          "words": 1775,
+          "headings": 8,
           "examples": 1,
           "versions": [
             "0.1.12",
@@ -7160,16 +7160,17 @@
             "0.1.6",
             "0.1.7",
             "0.1.8",
-            "2026.10.4"
+            "2026.10.4",
+            "2026.11.1"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "372dfda956c341e1196d556f5627e0b4c6232c6cc4fef312fd55f4e79fd4128f",
-          "words": 1706,
-          "headings": 7,
+          "sha256": "d8dd0dc38ffc2e0d9a9ab380953f552ff380152f00b874a1f3e511663b5eb128",
+          "words": 1847,
+          "headings": 8,
           "examples": 1,
           "versions": [
             "0.1.12",
@@ -7177,7 +7178,8 @@
             "0.1.6",
             "0.1.7",
             "0.1.8",
-            "2026.10.4"
+            "2026.10.4",
+            "2026.11.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -7191,9 +7193,9 @@
         "fr": {
           "path": "fr/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "32e323905155fd781316cba90a840e3170094c09afc06f13989c616134c30fb9",
-          "words": 1897,
-          "headings": 7,
+          "sha256": "5c51ffccdeb1f19e962b291b41a0da39f2fcfc3cac52e6c8d535cc980c89ec8b",
+          "words": 2061,
+          "headings": 8,
           "examples": 1,
           "versions": [
             "0.1.12",
@@ -7201,7 +7203,8 @@
             "0.1.6",
             "0.1.7",
             "0.1.8",
-            "2026.10.4"
+            "2026.10.4",
+            "2026.11.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {

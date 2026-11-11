@@ -12,6 +12,14 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
+## HA Logic Studio Pro 0.1.12
+
+HA Logic Studio Pro est une application distincte dans le dépôt commun UGSo. En version 0.1.12, la largeur minimale du volet de gauche s’adapte aux noms visibles des scripts et des dossiers, aux retraits et aux icônes. La poignée permet d’élargir le volet. Lorsque la place manque, les noms longs sont abrégés et restent lisibles en entier dans une infobulle. La liste des projets n’a pas de barre de défilement horizontale.
+
+**Testé sur .193 (Home Assistant 2026.11.1) :** Dans HA Ingress, le volet est passé de 294 à 232 px en repliant le dossier principal, puis est revenu à 294 px en le rouvrant. La poignée a permis de l’élargir à 446 px. Les six projets existants étaient toujours accessibles après la mise à jour.
+
+[Mise à jour de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.12)
+
 ## Installation de test depuis GitHub
 
 [![Ajouter le dépôt à Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Fugso-ha-mqtt-addons)

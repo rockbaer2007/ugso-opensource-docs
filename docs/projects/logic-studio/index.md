@@ -12,6 +12,14 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
+## HA Logic Studio Pro 0.1.12
+
+HA Logic Studio Pro ist als eigene App im UGSo-Sammelrepo verfügbar. In 0.1.12 richtet sich die Mindestbreite der linken Projektspalte nach den sichtbaren Skript- und Ordnernamen, Einrückungen und Symbolen. Mit dem Anfasser lässt sich die Spalte verbreitern. Bei wenig Platz kürzt die Liste lange Namen und zeigt sie im Tooltip vollständig an. Die Projektliste hat keinen horizontalen Scrollbalken.
+
+**Auf .193 geprüft (Home Assistant 2026.11.1):** Im Ingress wurde die Spalte beim Einklappen des Hauptordners von 294 auf 232 px schmaler und beim Öffnen wieder 294 px breit. Ziehen am Anfasser vergrößerte sie auf 446 px. Alle sechs vorhandenen Projekte waren nach dem Update weiterhin vorhanden.
+
+[GitHub-Testupdate und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.12)
+
 ## Testinstallation aus GitHub
 
 [![Repository in Home Assistant hinzufügen](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Fugso-ha-mqtt-addons)
