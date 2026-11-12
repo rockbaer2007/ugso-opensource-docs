@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.58 avec exécution des diagrammes fonctionnels sur le serveur et éditeurs en allemand, anglais et français.
+description: HA Logic Studio Pro 0.1.59 avec exécution des diagrammes fonctionnels sur le serveur et éditeurs en allemand, anglais et français.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,8 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.58
+## HA Logic Studio Pro 0.1.59
+
 
 HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt commun UGSo. Elle s’appuie sur Logic Studio et sur l’expérience acquise avec ioBroker.
 
@@ -25,7 +26,13 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 - **Gestion des projets :** Enregistrer les projets et les dossiers sur le serveur pour chaque utilisateur HA.
 - **Choix de la langue :** Les éditeurs sont disponibles en allemand, en anglais et en français.
 
-La version **0.1.58** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+La version **0.1.59** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+
+### Créer une règle avec l’assistant
+
+Choisissez **Règles → Assistant**. Le dialogue suit quatre étapes : **Déclencheur → Conditions → Actions → Récapitulatif**. Une règle peut réagir à un changement d’état, à une heure quotidienne dans le fuseau horaire de HA ou à un événement Home Assistant. Les conditions et la branche SINON sont facultatives. Le récapitulatif affiche l’aperçu YAML. **Appliquer** transfère le brouillon dans l’éditeur ; **Enregistrer** le conserve. Les règles existantes restent modifiables et peuvent être ouvertes en JavaScript ou en YAML HA.
+
+[HA Logic Studio Pro 0.1.59 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.59)
 
 ### Nouveautés depuis la version 0.1.12
 
