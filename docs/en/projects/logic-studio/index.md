@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.28 with server-side function block execution and editors in German, English and French.
+description: HA Logic Studio Pro 0.1.29 with server-side function block execution and editors in German, English and French.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.28
+## HA Logic Studio Pro 0.1.29
 
 HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo repository. It builds on Logic Studio and draws on experience with ioBroker.
 
@@ -25,12 +25,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Project management:** Store projects and folders on the server for each HA user.
 - **Language selection:** The editors are available in German, English, and French.
 
-**0.1.28** is the public test update. Make a full backup before updating and try this version on a test system first.
+**0.1.29** is the public test update. Make a full backup before updating and try this version on a test system first.
 
 ### Changes since 0.1.12
 
 - **Project tree and editors:** Projects and folders are stored on the server per HA user. Existing browser projects can be migrated on first launch from the original browser. JavaScript and TypeScript have syntax highlighting, line numbers and their own toolbars. The project picker, tree and filters use matching icons and colors. Blocks A and Blocks JS have separate filters. The automatic project pane width can still be adjusted with the handle.
-- **Blocks A and Blocks JS:** Both use the bundled Blocks for HA catalog. Blocks A exports HA automations as YAML. Blocks JS generates JavaScript for the test run and runtime. Unrecognized ioBroker blocks are retained as placeholders and prevent code generation until replaced. Map ioBroker object IDs to Home Assistant entity IDs.
+- **Blocks A and Blocks JS:** Blocks A uses the bundled Blocks for HA catalog. Blocks JS has its own JavaScript palette. Blocks A exports HA automations as YAML. Blocks JS generates JavaScript for the test run and runtime. Unrecognized ioBroker blocks are retained as placeholders and prevent code generation until replaced. Map ioBroker object IDs to Home Assistant entity IDs.
 - **Function block diagram:** Simulation, one-second step and reset have icons in the top toolbar. Output format and preview sit on the right. Connections can be moved to another target input, and signal values appear at the input.
 - **Server runtime:** Play starts JavaScript, transpiled TypeScript or Blocks JS on the HA server. Stop and restart are available in the editor. Runtime status and logs remain available across browsers. The separate **test run** uses simulated states and events. HA YAML scripts and automations can be exported and run in Home Assistant after import.
 
@@ -51,6 +51,12 @@ Write access also allows reads. `ha.readState` and `ha.readAttribute` return the
 Scripts need to be started again after an app restart. On connection loss or a rejected action, the runtime stops the script and logs the error. Astronomical triggers and automatic reconnection are pending.
 
 **Verified on .193 with HA 2026.11.1:** The runtime read a helper state and attribute, turned the helper on with a schedule and turned it off in response to a real HA event. Both state changes were reported. An imported Blocks JS schedule ran every two seconds. Earlier tests verified start, stop, restart and continued execution after leaving Studio with JavaScript and TypeScript.
+
+### 0.1.29 · Manual saving and block editors
+
+All editors save changes through **Save**. **Cancel** restores the last saved version or discards a new project. Unsaved changes disable **Play** and **Restart**. Running scripts can still be stopped. Blocks A opens the entity picker directly from the block field. Blocks JS has an ioBroker-inspired palette with HA entities, actions and triggers, without Jinja.
+
+[Test update and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.29)
 
 ### 0.1.28 · Editor translations
 
