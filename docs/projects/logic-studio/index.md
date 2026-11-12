@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.29 mit serverseitiger Funktionsplan-Ausführung und Editoren in DE, EN und FR.
+description: HA Logic Studio Pro 0.1.57 mit serverseitiger Funktionsplan-Ausführung und Editoren in DE, EN und FR.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.29
+## HA Logic Studio Pro 0.1.57
 
 HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrepository. Sie baut auf Logic Studio auf und greift Erfahrungen aus der Arbeit mit ioBroker auf.
 
@@ -25,7 +25,7 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Projektverwaltung:** Projekte und Ordner pro HA-Benutzer auf dem Server speichern.
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
-**0.1.29** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
+**0.1.57** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
 
 ### Was seit 0.1.12 neu ist
 
@@ -51,6 +51,18 @@ Eine Schreibfreigabe erlaubt auch das Lesen. `ha.readState` und `ha.readAttribut
 Nach einem App-Neustart müssen Skripte erneut gestartet werden. Bei einer Verbindungsunterbrechung oder abgelehnten Aktion hält die Runtime das Skript an und protokolliert den Fehler. Astro-Auslöser und automatische Wiederverbindung sind offen.
 
 **Geprüft auf .193 mit HA 2026.11.1:** Live-Zustand und Attribut gelesen, Testhelfer per Zeitplan eingeschaltet und per echtem HA-Ereignis ausgeschaltet. Beide Zustandswechsel wurden gemeldet. Ein importierter Blocks-JS-Zeitplan lief alle zwei Sekunden. Zuvor wurden Start, Stopp, Neustart und der Weiterlauf nach Verlassen der Studio-Seite mit JavaScript und TypeScript geprüft.
+
+### Funktionen und ioBroker-Import
+
+Unter **Blocks JS → Funktionen** gibt es zwei JavaScript-Funktionsblöcke mit und ohne Rückgabewert. Über das Zahnrad legst du Parameter fest. Über **…** bearbeitest du den Code. Nach dem Anlegen einer Definition erscheint der passende Aufrufblock in der Palette.
+
+Der ioBroker-Import übernimmt Definitionen, Aufrufe, Parameter und JavaScript-Code. Passe ioBroker-spezifische API-Aufrufe an die HA-Runtime an und ordne importierte Objekt-IDs explizit HA-Entitäten zu.
+
+### Verlauf abfragen
+
+Unter **Blocks JS → Sendto → Verlauf abfragen** liest du aufgezeichnete Zustände aus dem HA-Recorder. Ohne Zeitraum gilt der aktuelle Tag in der HA-Zeitzone. Der Ergebnisblock liefert Einträge mit Zeitstempel und Wert. Beim ioBroker-Import bleiben Zeitraum, Aggregation, Schrittweite und Anzahl erhalten.
+
+[HA Logic Studio Pro 0.1.57 · GitHub und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.57)
 
 ### 0.1.29 · Manuelles Speichern und Blocks-Editoren
 

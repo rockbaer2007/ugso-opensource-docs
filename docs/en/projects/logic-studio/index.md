@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.29 with server-side function block execution and editors in German, English and French.
+description: HA Logic Studio Pro 0.1.57 with server-side function block execution and editors in German, English and French.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.29
+## HA Logic Studio Pro 0.1.57
 
 HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo repository. It builds on Logic Studio and draws on experience with ioBroker.
 
@@ -25,7 +25,7 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Project management:** Store projects and folders on the server for each HA user.
 - **Language selection:** The editors are available in German, English, and French.
 
-**0.1.29** is the public test update. Make a full backup before updating and try this version on a test system first.
+**0.1.57** is the public test update. Make a full backup before updating and try this version on a test system first.
 
 ### Changes since 0.1.12
 
@@ -51,6 +51,18 @@ Write access also allows reads. `ha.readState` and `ha.readAttribute` return the
 Scripts need to be started again after an app restart. On connection loss or a rejected action, the runtime stops the script and logs the error. Astronomical triggers and automatic reconnection are pending.
 
 **Verified on .193 with HA 2026.11.1:** The runtime read a helper state and attribute, turned the helper on with a schedule and turned it off in response to a real HA event. Both state changes were reported. An imported Blocks JS schedule ran every two seconds. Earlier tests verified start, stop, restart and continued execution after leaving Studio with JavaScript and TypeScript.
+
+### Functions and ioBroker import
+
+**Blocks JS → Functions** offers two JavaScript function blocks, one with a return value and one without. Use the gear icon to set parameters and **…** to edit the code. After you add a definition, its call block appears in the palette.
+
+ioBroker import preserves definitions, calls, parameters, and JavaScript code. Adapt ioBroker-specific API calls to the HA runtime and explicitly map imported object IDs to HA entities.
+
+### Query history
+
+Use **Blocks JS → Sendto → Query history** to read states recorded by HA Recorder. If you omit the time range, the query uses the current day in the HA time zone. The result block returns timestamped values. ioBroker import preserves the time range, aggregation, interval, and count.
+
+[HA Logic Studio Pro 0.1.57 · GitHub and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.57)
 
 ### 0.1.29 · Manual saving and block editors
 

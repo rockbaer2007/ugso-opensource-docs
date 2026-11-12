@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.29 avec exécution des diagrammes fonctionnels sur le serveur et éditeurs en allemand, anglais et français.
+description: HA Logic Studio Pro 0.1.57 avec exécution des diagrammes fonctionnels sur le serveur et éditeurs en allemand, anglais et français.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.29
+## HA Logic Studio Pro 0.1.57
 
 HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt commun UGSo. Elle s’appuie sur Logic Studio et sur l’expérience acquise avec ioBroker.
 
@@ -25,7 +25,7 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 - **Gestion des projets :** Enregistrer les projets et les dossiers sur le serveur pour chaque utilisateur HA.
 - **Choix de la langue :** Les éditeurs sont disponibles en allemand, en anglais et en français.
 
-La version **0.1.29** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+La version **0.1.57** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
 
 ### Nouveautés depuis la version 0.1.12
 
@@ -51,6 +51,18 @@ L’autorisation d’écriture inclut la lecture. `ha.readState` et `ha.readAttr
 Après le redémarrage de l’application, les scripts doivent être relancés. En cas de perte de connexion ou de refus d’une action, le moteur arrête le script et journalise l’erreur. Les déclencheurs astronomiques et la reconnexion automatique restent à ajouter.
 
 **Vérifié sur .193 avec HA 2026.11.1.** Le moteur a lu l’état et un attribut de l’entrée de test, l’a activée par un horaire et l’a désactivée à la réception d’un événement HA réel. Les deux changements d’état ont été signalés. Un horaire Blocks JS importé s’est exécuté toutes les deux secondes. Les tests précédents ont vérifié le démarrage, l’arrêt, le redémarrage et la poursuite de l’exécution après avoir quitté Studio, avec JavaScript et TypeScript.
+
+### Fonctions et import ioBroker
+
+**Blocks JS → Fonctions** propose deux blocs de fonction JavaScript, avec ou sans valeur de retour. Utilisez l’engrenage pour définir les paramètres et **…** pour modifier le code. Après l’ajout d’une définition, son bloc d’appel apparaît dans la palette.
+
+L’import ioBroker conserve les définitions, les appels, les paramètres et le code JavaScript. Adaptez les appels propres à ioBroker au moteur HA et associez explicitement les identifiants d’objet importés aux entités HA.
+
+### Interroger l’historique
+
+Utilisez **Blocks JS → Sendto → Interroger l’historique** pour lire les états enregistrés par HA Recorder. Sans période indiquée, la requête utilise la journée en cours dans le fuseau horaire de HA. Le bloc de résultat renvoie des valeurs horodatées. L’import ioBroker conserve la période, l’agrégation, le pas et le nombre de résultats.
+
+[HA Logic Studio Pro 0.1.57 · GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.57)
 
 ### 0.1.29 · Enregistrement manuel et éditeurs de blocs
 
