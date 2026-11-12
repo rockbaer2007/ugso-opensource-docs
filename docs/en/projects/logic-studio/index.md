@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.61 · YAML export and live test on .193
+description: HA Logic Studio Pro 0.1.62 · Expanded Rules and live test on .193
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.61
+## HA Logic Studio Pro 0.1.62
 
 
 HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo repository. It builds on Logic Studio and draws on experience with ioBroker.
@@ -26,7 +26,17 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Project management:** Store projects and folders on the server for each HA user.
 - **Language selection:** The editors are available in German, English, and French.
 
-**0.1.61** is the public test update. Make a full backup before updating and try this version on a test system first.
+**0.1.62** is the public test update. Make a full backup before updating and try this version on a test system first.
+
+### Expanded Rules and live test on .193
+
+State triggers support from and to values, an attribute and a minimum duration. Conditions check states, attributes and numeric limits. THEN and ELSE support a Home Assistant action picker with JSON parameters and separate delay steps.
+
+The editor and action picker were tested locally in the browser. After a full backup, the generated YAML ran directly in Home Assistant on `.193`. A brief pulse did not trigger a run. Holding the state for three seconds ran THEN. A change to the display name ran ELSE. Both traces confirmed a two-second delay and the expected text value. The test automation and both helpers were removed.
+
+The new blocks export as HA YAML. Rules → JS reports when a block prevents conversion.
+
+[HA Logic Studio Pro 0.1.62 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.62)
 
 ### YAML export and live test on .193
 

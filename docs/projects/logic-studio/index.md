@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.61 · YAML-Export und Live-Test auf .193
+description: HA Logic Studio Pro 0.1.62 · Erweiterte Rules und Live-Test auf .193
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.61
+## HA Logic Studio Pro 0.1.62
 
 
 HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrepository. Sie baut auf Logic Studio auf und greift Erfahrungen aus der Arbeit mit ioBroker auf.
@@ -26,7 +26,17 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Projektverwaltung:** Projekte und Ordner pro HA-Benutzer auf dem Server speichern.
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
-**0.1.61** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
+**0.1.62** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
+
+### Erweiterte Rules und Live-Test auf .193
+
+Zustandsauslöser unterstützen Von/Nach, ein Attribut und eine Mindestdauer. Bedingungen prüfen Zustände und Attribute sowie numerische Grenzen. DANN und SONST unterstützen einen HA-Aktionswähler mit JSON-Parametern und separate Verzögerungsschritte.
+
+Der Editor und der Aktionswähler wurden lokal im Browser geprüft. Nach einem Vollbackup lief die erzeugte YAML direkt in Home Assistant auf `.193`. Ein kurzer Impuls löste nichts aus. Nach drei Sekunden Zustandsdauer lief DANN. Ein Wechsel des Anzeigenamens löste SONST aus. Beide Traces bestätigten zwei Sekunden Verzögerung und den erwarteten Textwert. Die Testautomation und beide Helfer wurden entfernt.
+
+Die neuen Bausteine werden als HA-YAML ausgegeben. Rules → JS meldet, wenn ein Baustein die Konvertierung verhindert.
+
+[HA Logic Studio Pro 0.1.62 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.62)
 
 ### YAML-Export und Live-Test auf .193
 

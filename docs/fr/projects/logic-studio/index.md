@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.61 · Export YAML et test en conditions réelles sur .193
+description: HA Logic Studio Pro 0.1.62 · Règles enrichies et test en conditions réelles sur .193
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.61
+## HA Logic Studio Pro 0.1.62
 
 
 HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt commun UGSo. Elle s’appuie sur Logic Studio et sur l’expérience acquise avec ioBroker.
@@ -26,7 +26,17 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 - **Gestion des projets :** Enregistrer les projets et les dossiers sur le serveur pour chaque utilisateur HA.
 - **Choix de la langue :** Les éditeurs sont disponibles en allemand, en anglais et en français.
 
-La version **0.1.61** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+La version **0.1.62** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+
+### Règles enrichies et test en conditions réelles sur .193
+
+Les déclencheurs d’état prennent en charge les valeurs de départ et d’arrivée, un attribut et une durée minimale. Les conditions vérifient les états, les attributs et les seuils numériques. Les branches ALORS et SINON proposent un sélecteur d’actions HA avec des paramètres JSON et des étapes de temporisation distinctes.
+
+L’éditeur et le sélecteur d’actions ont été testés localement dans le navigateur. Après une sauvegarde complète, le YAML généré a été exécuté directement dans Home Assistant sur `.193`. Une impulsion brève n’a rien déclenché. Un état maintenu trois secondes a exécuté ALORS. Un changement du nom d’affichage a exécuté SINON. Les deux traces ont confirmé le délai de deux secondes et la valeur de texte attendue. L’automatisation et les deux auxiliaires de test ont été supprimés.
+
+Les nouveaux blocs s’exportent en YAML HA. Rules → JS indique si un bloc empêche la conversion.
+
+[HA Logic Studio Pro 0.1.62 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.62)
 
 ### Export YAML et test en conditions réelles sur .193
 
