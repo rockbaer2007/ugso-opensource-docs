@@ -34,6 +34,10 @@ Choisissez **Règles → Assistant**. Le dialogue suit quatre étapes : **Décle
 
 [HA Logic Studio Pro 0.1.59 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.59)
 
+Le 12 novembre 2026, les trois déclencheurs ont été testés directement dans Home Assistant sur le système de test `.193`. Le passage de l’état désactivé à l’état activé, le déclenchement quotidien à 19 h 38 (heure locale de HA) et l’événement `rules_live_0159_event` ont chacun activé la sortie de test. Une sauvegarde complète a été créée avant le test. Les trois automatisations et les deux assistants de test ont ensuite été supprimés.
+
+![Home Assistant affiche la dernière exécution des trois automatisations de test et la sortie de test activée](/images/logic-studio/0.1.59-rules-live-test-193.png)
+
 ### Nouveautés depuis la version 0.1.12
 
 - **Arborescence et éditeurs.** Les projets et dossiers sont enregistrés sur le serveur pour chaque utilisateur HA. Les projets locaux peuvent être migrés au premier démarrage depuis le navigateur d’origine. JavaScript et TypeScript disposent de la coloration syntaxique, de numéros de ligne et de barres d’outils dédiées. Les icônes et couleurs correspondent entre le sélecteur, l’arborescence et les filtres. Blocks A et Blocks JS ont des filtres distincts. La largeur automatique du volet reste réglable par la poignée.

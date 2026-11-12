@@ -34,6 +34,10 @@ Wähle **Regeln → Assistent**. Der Dialog führt durch **Auslöser → Bedingu
 
 [HA Logic Studio Pro 0.1.59 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.59)
 
+Am 12. November 2026 wurden alle drei Auslöser direkt in Home Assistant auf dem Testsystem `.193` geprüft. Ein Zustandswechsel von Aus auf Ein, die tägliche Uhrzeit um 19:38 Uhr (HA-Ortszeit) und das Ereignis `rules_live_0159_event` schalteten den Testausgang jeweils auf Ein. Vor dem Test wurde ein Vollbackup erstellt. Anschließend wurden die drei Testautomationen und beide Testhelfer entfernt.
+
+![Home Assistant zeigt die letzte Ausführung aller drei Rules-Testautomationen und den eingeschalteten Testausgang](/images/logic-studio/0.1.59-rules-live-test-193.png)
+
 ### Was seit 0.1.12 neu ist
 
 - **Projektbaum und Editoren:** Projekte und Ordner werden pro HA-Benutzer serverseitig gespeichert. Vorhandene Browserprojekte können beim ersten Start aus dem bisherigen Browser übernommen werden. JavaScript und TypeScript haben Syntaxfarben, Zeilennummern und eigene Werkzeugleisten. Icons und Farben stimmen zwischen Projektauswahl, Baum und Filtern überein. Blocks A und Blocks JS haben getrennte Filter. Die automatisch bemessene Projektspalte bleibt per Anfasser verstellbar.

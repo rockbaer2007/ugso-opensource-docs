@@ -34,6 +34,10 @@ Select **Rules → Wizard**. It takes you through **Trigger → Conditions → A
 
 [HA Logic Studio Pro 0.1.59 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.59)
 
+On 12 November 2026, all three triggers were tested directly in Home Assistant on test system `.193`. A state change from off to on, the daily trigger at 19:38 (HA local time), and the `rules_live_0159_event` event each switched the test output on. A full backup was created before testing. The three test automations and both test helpers were removed afterward.
+
+![Home Assistant shows the last run of all three Rules test automations and the test output switched on](/images/logic-studio/0.1.59-rules-live-test-193.png)
+
 ### Changes since 0.1.12
 
 - **Project tree and editors:** Projects and folders are stored on the server per HA user. Existing browser projects can be migrated on first launch from the original browser. JavaScript and TypeScript have syntax highlighting, line numbers and their own toolbars. The project picker, tree and filters use matching icons and colors. Blocks A and Blocks JS have separate filters. The automatic project pane width can still be adjusted with the handle.
