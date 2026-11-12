@@ -4888,8 +4888,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "3135034a211e0c8884aa7934bf8474fcb3e00fde125ecf43e0e87e4674372705",
-          "words": 2022,
+          "sha256": "0fb8c132fd0903045c482a5c887b8d0b3351c4b30b73561d912fe974d0b159db",
+          "words": 2103,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -4908,6 +4908,7 @@
             "0.1.295",
             "0.1.296",
             "0.1.299",
+            "0.1.300",
             "0.1.80",
             "0.1.82",
             "0.1.83",
@@ -4918,8 +4919,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "6de61408038db120b13a83ee2d638e9e653057d0114a90be36f27b08d307ce1f",
-          "words": 2005,
+          "sha256": "86f724c8515666381f24d5c50726caf4383f7a372c6b6d146b38d49ca9e4e1fb",
+          "words": 2087,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -4938,6 +4939,7 @@
             "0.1.295",
             "0.1.296",
             "0.1.299",
+            "0.1.300",
             "0.1.80",
             "0.1.82",
             "0.1.83",
@@ -4955,8 +4957,8 @@
         "fr": {
           "path": "fr/projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "1486b1ac32c4c4db065762a3f4d9ac7d32f079f77faced1af416c5d169f815b0",
-          "words": 3045,
+          "sha256": "fe78ac611b74ec37909482a1a8c5a706669f445fde9c0ed94855f7215b0bd9ca",
+          "words": 3141,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -4975,6 +4977,7 @@
             "0.1.295",
             "0.1.296",
             "0.1.299",
+            "0.1.300",
             "0.1.80",
             "0.1.82",
             "0.1.83",
@@ -5110,8 +5113,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "16d19b8cc5aa61ebe082a5bb93ec8b3ab13f467e5260490a03cddbe97b87b8e1",
-          "words": 2660,
+          "sha256": "5b7f5480a9ca28514e71b208ed1671469a76cb7fa220137e59400242dabb29c8",
+          "words": 2711,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -5140,6 +5143,7 @@
             "0.1.297",
             "0.1.299",
             "0.1.3",
+            "0.1.300",
             "0.1.9",
             "0.3.0",
             "1.0.0",
@@ -5150,8 +5154,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "a968ed7f689f0460c7202d448191e84096d70ac1c5db16898313e8474b94509b",
-          "words": 2743,
+          "sha256": "0fbefbfcbe9338de09e010ef490c139c02d4b5e2daa51a68e33d8b50d0d3b22e",
+          "words": 2795,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -5180,6 +5184,7 @@
             "0.1.297",
             "0.1.299",
             "0.1.3",
+            "0.1.300",
             "0.1.9",
             "0.3.0",
             "1.0.0",
@@ -5197,8 +5202,8 @@
         "fr": {
           "path": "fr/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "1fafa38250e3b9993b32e88fe8cbb75d3945ac53b0acbc1999c34397b98c4ed6",
-          "words": 4144,
+          "sha256": "4b316fbf927be370bcfff7fb949d86c32d2bbc5a40af0fb9c97586e56e2868e8",
+          "words": 4202,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -5227,6 +5232,7 @@
             "0.1.297",
             "0.1.299",
             "0.1.3",
+            "0.1.300",
             "0.1.9",
             "0.3.0",
             "1.0.0",
