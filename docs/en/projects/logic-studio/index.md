@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.57 with server-side function block execution and editors in German, English and French.
+description: HA Logic Studio Pro 0.1.58 with server-side function block execution and editors in German, English and French.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.57
+## HA Logic Studio Pro 0.1.58
 
 HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo repository. It builds on Logic Studio and draws on experience with ioBroker.
 
@@ -25,7 +25,7 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Project management:** Store projects and folders on the server for each HA user.
 - **Language selection:** The editors are available in German, English, and French.
 
-**0.1.57** is the public test update. Make a full backup before updating and try this version on a test system first.
+**0.1.58** is the public test update. Make a full backup before updating and try this version on a test system first.
 
 ### Changes since 0.1.12
 
@@ -51,6 +51,12 @@ Write access also allows reads. `ha.readState` and `ha.readAttribute` return the
 Scripts need to be started again after an app restart. On connection loss or a rejected action, the runtime stops the script and logs the error. Astronomical triggers and automatic reconnection are pending.
 
 **Verified on .193 with HA 2026.11.1:** The runtime read a helper state and attribute, turned the helper on with a schedule and turned it off in response to a real HA event. Both state changes were reported. An imported Blocks JS schedule ran every two seconds. Earlier tests verified start, stop, restart and continued execution after leaving Studio with JavaScript and TypeScript.
+
+### Control scripts and automations
+
+Under **Blocks JS → System**, use **Select script or automation** to choose a Home Assistant entity and connect the block to **Control**. You can start or stop scripts and enable, disable, or trigger automations once. **Check conditions** is enabled by default when triggering an automation. Turn it off to skip the conditions. For live execution, allow the target entity in `runtime_write_entities`.
+
+[HA Logic Studio Pro 0.1.58 · GitHub and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.58)
 
 ### Functions and ioBroker import
 
