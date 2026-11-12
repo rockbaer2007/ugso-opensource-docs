@@ -5,6 +5,8 @@ description: 'Un tableau de bord (dashboard) pour Home Assistant qui sort de l''
 
 # HA Grafik Visual Studio {#ha-grafik-visual-studio}
 
+**Studio 0.1.300 (12 novembre 2026).** Import et export de pages à côté des onglets. Références internes vérifiées à l’importation et à la duplication sur .177 et .193 après sauvegarde complète. [Guide de l’éditeur](./editor) · [Mise à jour GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.300).
+
 **Studio 0.1.299 :** [Utilisés récemment, miniatures et démarrage/arrêt intégré](./palette-runtime). Jusqu’à douze types distincts récemment insérés sont conservés dans le navigateur. L’exécution démarre près des onglets au-dessus de la surface ; la fenêtre séparée reste disponible. Projets et réglages conservés.
 
 ## Vérifications actuelles et prochaines étapes

@@ -26,6 +26,8 @@ Depuis **Studio 0.1.294**, les aperçus des onze **widgets interactifs** occupen
 
 ## Onglets de pages {#seiten-tabs}
 
+**Nouveau dans Studio 0.1.300.** À côté des onglets, **Exporter la page** télécharge la page active au format JSON ou la copie dans le presse-papiers. **Importer une page** permet d’ouvrir ou de déposer un fichier, de coller du JSON et de choisir une page dans un fichier de projet Studio. Studio propose un nom disponible et demande une confirmation avant de remplacer une page du même nom. À l’importation et à la duplication, les références internes pointent vers les widgets copiés. Installez les packs de widgets nécessaires dans le Studio de destination.
+
 À partir de la version **0.1.256**, les pages du projet s'affichent sous forme d'onglets compacts, situés directement au-dessus de l'espace de travail, entre la palette de widgets et le panneau des propriétés. Un simple clic permet de changer de page ; la page active est mise en évidence par une couleur. De nombreuses pages défilent horizontalement ; les noms longs sont tronqués, mais leur intitulé complet apparaît dans une info-bulle. Les pages masquées lors de l'exécution (runtime) restent accessibles dans l'éditeur ; leur onglet est alors entouré d'un bord en pointillés.
 
 ![Pages du projet sous forme d'onglets au-dessus de l'espace de travail](/images/grafik-visual-studio/page-tabs.png)

@@ -26,6 +26,8 @@ From **Studio 0.1.286**, explicit **z-index −100 or lower** hides every widget
 
 ## Page tabs
 
+**New in Studio 0.1.300.** Beside the page tabs, **Export page** downloads the current page as JSON or copies it to the clipboard. **Import page** accepts a file, a dropped file or pasted JSON and lets you select one page from a Studio project file. Studio suggests an unused name and asks before replacing a page with the same name. When importing or duplicating, internal widget references point to the corresponding copies. Install any required widget packages in the destination Studio.
+
 Starting with **Studio 0.1.256**, project pages appear as compact **tabs above the canvas**, between the widget palette and properties. Click a tab to switch pages; the active page is highlighted. Long tab lists scroll horizontally, and truncated names remain available in tooltips. Pages hidden from runtime are still accessible in the editor with a dashed tab border.
 
 ![Project page tabs above the editor canvas](/images/grafik-visual-studio/page-tabs.png)

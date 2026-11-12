@@ -5,6 +5,8 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
+**Studio 0.1.300 (November 12, 2026).** Import and export pages beside the page tabs. Internal widget references on import and duplication were verified on .177 and .193 after full backups. [Editor guide](./editor) · [GitHub update](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.300).
+
 **Studio 0.1.299:** [Recently used, miniature palette and runtime start/stop](./palette-runtime). Up to twelve distinct recently inserted widget types persist in the browser. Runtime starts beside the page tabs over the canvas; the separate window remains available. Settings and projects are retained.
 
 ## Current verification and next steps

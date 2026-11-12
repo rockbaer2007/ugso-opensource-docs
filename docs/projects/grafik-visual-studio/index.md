@@ -5,6 +5,8 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 # HA Grafik Visual Studio
 
+**Studio 0.1.300 (12. November 2026).** Seiten direkt an den Seitenreitern importieren und exportieren. Interne Widget-Verweise beim Import und Duplizieren auf .177 und .193 nach Vollbackup geprüft. [Bedienung im Editor](./editor) · [GitHub-Update](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.300).
+
 **Studio 0.1.299:** [Zuletzt benutzt, Miniaturpalette und Runtime-Start/Stopp](./palette-runtime). Bis zu zwölf unterschiedliche zuletzt eingefügte Widgettypen bleiben browserlokal erhalten. Die Runtime startet direkt neben den Seitenreitern über der Arbeitsfläche; das separate Fenster bleibt verfügbar. Einstellungen und Projekte bleiben erhalten.
 
 ## Aktueller Prüfstand und nächste Schritte

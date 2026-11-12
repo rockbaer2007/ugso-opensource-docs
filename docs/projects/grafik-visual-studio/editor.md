@@ -26,6 +26,8 @@ Ab **Studio 0.1.286** blendet ein expliziter **Z-Index −100 oder kleiner** jed
 
 ## Seiten-Tabs
 
+**Neu in Studio 0.1.300.** Neben den Seitenreitern exportiert **Seite exportieren** die aktuelle Seite als JSON-Datei oder kopiert sie in die Zwischenablage. In **Seite importieren** kannst du eine Datei öffnen oder ablegen, JSON einfügen und aus einer Studio-Projektdatei eine einzelne Seite wählen. Studio schlägt einen freien Namen vor und fragt vor dem Ersetzen einer gleichnamigen Seite nach. Beim Import und Duplizieren zeigen interne Widget-Verweise auf die jeweiligen Kopien. Benötigte Widget-Pakete müssen im Ziel-Studio installiert sein.
+
 Ab **Studio 0.1.256** erscheinen die Projektseiten als kompakte **Tabs direkt über der Arbeitsfläche**, zwischen Widget-Palette und Eigenschaften. Ein Klick wechselt die Seite; die aktive Seite ist farbig markiert. Viele Seiten scrollen horizontal, lange Namen werden gekürzt und stehen vollständig im Tooltip. In der Runtime ausgeblendete Seiten bleiben im Editor erreichbar und haben einen gestrichelten Tab-Rand.
 
 ![Projektseiten als Tabs über der Editorfläche](/images/grafik-visual-studio/page-tabs.png)
