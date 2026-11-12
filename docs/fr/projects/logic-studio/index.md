@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.60 avec exécution des diagrammes fonctionnels sur le serveur et éditeurs en allemand, anglais et français.
+description: HA Logic Studio Pro 0.1.61 · Export YAML et test en conditions réelles sur .193
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.60
+## HA Logic Studio Pro 0.1.61
 
 
 HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt commun UGSo. Elle s’appuie sur Logic Studio et sur l’expérience acquise avec ioBroker.
@@ -26,7 +26,22 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 - **Gestion des projets :** Enregistrer les projets et les dossiers sur le serveur pour chaque utilisateur HA.
 - **Choix de la langue :** Les éditeurs sont disponibles en allemand, en anglais et en français.
 
-La version **0.1.60** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+La version **0.1.61** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+
+### Export YAML et test en conditions réelles sur .193
+
+L’export des règles conserve les états tels que `on` et `off` sous forme de texte, sans les convertir en booléens YAML. L’automatisation corrigée a été exécutée directement dans Home Assistant sur `.193` avec des entrées de test.
+
+| Déclencheur | Condition | Résultat de la trace HA |
+| --- | --- | --- |
+| Changement d’état | OU satisfaite | Deux actions ALORS |
+| Changement d’état | ET non satisfaite | Deux actions SINON |
+| Événement HA | Condition NON vraie | Deux actions ALORS |
+| Heure 20:26 | Condition NON fausse | Deux actions SINON |
+
+Une sauvegarde complète a été créée avant le test. L’automatisation et les trois entrées de test ont ensuite été supprimées.
+
+[HA Logic Studio Pro 0.1.61 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.61)
 
 ### Règles : palette compacte et déclencheurs multiples
 

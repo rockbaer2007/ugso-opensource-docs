@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.60 mit serverseitiger Funktionsplan-Ausführung und Editoren in DE, EN und FR.
+description: HA Logic Studio Pro 0.1.61 · YAML-Export und Live-Test auf .193
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.60
+## HA Logic Studio Pro 0.1.61
 
 
 HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrepository. Sie baut auf Logic Studio auf und greift Erfahrungen aus der Arbeit mit ioBroker auf.
@@ -26,7 +26,22 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Projektverwaltung:** Projekte und Ordner pro HA-Benutzer auf dem Server speichern.
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
-**0.1.60** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
+**0.1.61** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
+
+### YAML-Export und Live-Test auf .193
+
+Der Rules-Export schützt Zustände wie `on` und `off` vor der Umwandlung in YAML-Wahrheitswerte. Die korrigierte Automation wurde direkt in Home Assistant auf `.193` mit Testhelfern ausgeführt.
+
+| Auslöser | Bedingung | Ergebnis laut HA-Trace |
+| --- | --- | --- |
+| Zustandswechsel | ODER erfüllt | Beide DANN-Aktionen |
+| Zustandswechsel | UND nicht erfüllt | Beide SONST-Aktionen |
+| HA-Ereignis | NICHT erfüllt | Beide DANN-Aktionen |
+| Uhrzeit 20:26 | NICHT nicht erfüllt | Beide SONST-Aktionen |
+
+Vor dem Test wurde ein Vollbackup erstellt. Die Testautomation und alle drei Testhelfer wurden danach entfernt.
+
+[HA Logic Studio Pro 0.1.61 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.61)
 
 ### Rules: kompakte Leiste und mehrere Auslöser
 

@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.60 with server-side function block execution and editors in German, English and French.
+description: HA Logic Studio Pro 0.1.61 · YAML export and live test on .193
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.60
+## HA Logic Studio Pro 0.1.61
 
 
 HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo repository. It builds on Logic Studio and draws on experience with ioBroker.
@@ -26,7 +26,22 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Project management:** Store projects and folders on the server for each HA user.
 - **Language selection:** The editors are available in German, English, and French.
 
-**0.1.60** is the public test update. Make a full backup before updating and try this version on a test system first.
+**0.1.61** is the public test update. Make a full backup before updating and try this version on a test system first.
+
+### YAML export and live test on .193
+
+The Rules exporter preserves states such as `on` and `off` as strings instead of YAML booleans. The corrected automation ran directly in Home Assistant on `.193` using test helpers.
+
+| Trigger | Condition | Home Assistant trace result |
+| --- | --- | --- |
+| State change | OR matched | Both THEN actions |
+| State change | AND did not match | Both ELSE actions |
+| HA event | NOT matched | Both THEN actions |
+| Time 20:26 | NOT did not match | Both ELSE actions |
+
+A full backup was taken before testing. The test automation and all three helpers were removed afterwards.
+
+[HA Logic Studio Pro 0.1.61 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.61)
 
 ### Rules: compact palette and multiple triggers
 
