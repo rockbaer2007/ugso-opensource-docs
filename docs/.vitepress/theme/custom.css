@@ -30,6 +30,8 @@
   --vp-sidebar-bg-color: #f4f5f7;
   --vp-code-block-bg: #eef1f5;
   --vp-code-line-highlight-color: rgba(37, 156, 48, 0.1);
+  --vp-layout-max-width: min(100vw, 1800px);
+  --ugso-doc-width: clamp(860px, 52vw, 1040px);
 }
 
 html {
@@ -250,17 +252,33 @@ body {
   text-decoration: underline;
 }
 
-.VPDoc .container {
-  max-width: 1180px;
-}
-
-.VPDoc .content {
+.VPContent .VPDoc .container,
+.VPContent .VPDoc .content {
   width: 100%;
   max-width: none;
+  min-width: 0;
 }
 
-.VPDoc .content-container {
-  max-width: 1120px;
+.VPContent .VPDoc .content-container,
+.VPContent .VPDoc.has-aside .content-container {
+  max-width: var(--ugso-doc-width);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  .VPContent .VPDoc {
+    padding-inline: clamp(16px, 5vw, 24px);
+  }
+
+  .VPDoc .vp-doc div[class*="language-"] {
+    margin-inline: 0;
+  }
+}
+
+.vp-doc img,
+.vp-doc video {
+  max-width: 100%;
+  height: auto;
 }
 
 .VPDocAside,
@@ -268,16 +286,8 @@ body {
   display: none !important;
 }
 
-.VPDoc.has-aside .content-container {
-  max-width: 1120px;
-}
-
-.VPDoc:has(._sammlung_flex-table-card_beispiele-aus-forum) .container {
-  max-width: 1500px;
-}
-
 .VPDoc:has(._sammlung_flex-table-card_beispiele-aus-forum) .content-container {
-  max-width: 1440px;
+  --ugso-doc-width: 1440px;
 }
 
 .VPDoc h1,
@@ -314,11 +324,27 @@ body {
   display: table;
   width: 100%;
   border-collapse: collapse;
-  overflow: hidden;
   border: 1px solid #e0e0e5;
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 12px 30px rgba(66, 71, 83, 0.08);
+}
+
+.vp-doc .ugso-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.vp-doc .ugso-table-scroll > table {
+  display: table;
+  margin: 0;
+  overflow-wrap: normal;
+}
+
+.vp-doc .ugso-table-scroll:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: -2px;
 }
 
 .vp-doc th {
@@ -406,7 +432,7 @@ body.uix-doc-route .VPDoc a {
 }
 
 /* Keep every desktop destination visible; narrow headers may use two rows. */
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .VPNavBar .content,
   .VPNavBar .content-body {
     min-width: 0;
@@ -443,7 +469,7 @@ body.uix-doc-route .VPDoc a {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .VPNavBar .VPNavBarAppearance,
   .VPNavBar .VPNavBarSocialLinks {
     display: none;
@@ -475,37 +501,18 @@ body.uix-doc-route .VPDoc a {
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
-  .VPNavBar .VPNavBarMenuLink,
-  .VPNavBar .VPNavBarMenuGroup > .button {
-    padding: 0 4px;
-    font-size: 13px;
+  .VPNavBar .VPNavBarMenu,
+  .VPNavBar .VPNavBarTranslations,
+  .VPNavBar .VPNavBarExtra,
+  .VPNavBar .VPNavBarAppearance,
+  .VPNavBar .VPNavBarSocialLinks {
+    display: none;
   }
-
-  .VPNavBar .VPNavBarMenuGroup > .button .text {
-    font-size: 13px;
+  .VPNavBar .VPNavBarHamburger {
+    display: flex;
   }
-
-  .VPNavBar .VPNavBarMenuGroup .text-icon {
-    margin-left: 2px;
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 960px) and (max-width: 1279px) {
-  .VPNav .VPNavBar.has-sidebar .container > .title {
-    width: 220px;
-    padding: 0 16px;
-  }
-
-  .VPNav .VPNavBar.has-sidebar .container > .content {
-    padding-left: 220px;
-    padding-right: 16px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  :root {
-    --vp-nav-height: 96px;
+  .VPNav .VPNavScreen {
+    display: block;
   }
 
   .VPNavBar .VPNavBarTitle .title {
@@ -574,8 +581,6 @@ body.uix-doc-route .vp-doc :not(pre) > code {
 .dark .blockly-attribution .badge-light{display:none}
 .dark .blockly-attribution .badge-dark{display:block}
 
-/* Block catalogs keep their image columns inside a scrollable table on phones. */
-.vp-doc[class*="projects_blocks-for-ha"] table{display:block;max-width:100%;overflow-x:auto}
 
 /* Original package icons share one compact footprint in overview headings/lists. */
 .vp-doc img.package-icon {

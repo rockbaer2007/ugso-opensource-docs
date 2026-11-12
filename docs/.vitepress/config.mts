@@ -1229,7 +1229,12 @@ export default defineConfig({
   },
 
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    config(md) {
+      const render = md.renderer.rules
+      render.table_open = () => '<div class="ugso-table-scroll" tabindex="0"><table>'
+      render.table_close = () => '</table></div>\n'
+    }
   },
 
   head: [
