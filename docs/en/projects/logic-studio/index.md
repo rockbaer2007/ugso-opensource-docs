@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.59 with server-side function block execution and editors in German, English and French.
+description: HA Logic Studio Pro 0.1.60 with server-side function block execution and editors in German, English and French.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.59
+## HA Logic Studio Pro 0.1.60
 
 
 HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo repository. It builds on Logic Studio and draws on experience with ioBroker.
@@ -26,7 +26,17 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Project management:** Store projects and folders on the server for each HA user.
 - **Language selection:** The editors are available in German, English, and French.
 
-**0.1.59** is the public test update. Make a full backup before updating and try this version on a test system first.
+**0.1.60** is the public test update. Make a full backup before updating and try this version on a test system first.
+
+### Rules: compact palette and multiple triggers
+
+The editor has a compact icon list on the left. A rule can combine state changes, a daily time and Home Assistant events. Conditions support AND, OR and NOT. Both THEN and ELSE run multiple actions in the order shown.
+
+On `.193`, an existing rule was tested with three triggers, two conditions and two actions per branch. The YAML preview showed the expected structure. In the Studio test run, all three simulated triggers ran both THEN actions when the OR condition was met. When the AND condition was not met, both ELSE actions ran in the configured order. No real devices were operated.
+
+[HA Logic Studio Pro 0.1.60 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.60)
+
+![Rules editor on .193 with a compact palette and both action branches](/images/logic-studio/0.1.60-rules-test-193.png)
 
 ### Create rules with the wizard
 

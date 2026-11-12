@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.59 avec exécution des diagrammes fonctionnels sur le serveur et éditeurs en allemand, anglais et français.
+description: HA Logic Studio Pro 0.1.60 avec exécution des diagrammes fonctionnels sur le serveur et éditeurs en allemand, anglais et français.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.59
+## HA Logic Studio Pro 0.1.60
 
 
 HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt commun UGSo. Elle s’appuie sur Logic Studio et sur l’expérience acquise avec ioBroker.
@@ -26,7 +26,17 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 - **Gestion des projets :** Enregistrer les projets et les dossiers sur le serveur pour chaque utilisateur HA.
 - **Choix de la langue :** Les éditeurs sont disponibles en allemand, en anglais et en français.
 
-La version **0.1.59** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+La version **0.1.60** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+
+### Règles : palette compacte et déclencheurs multiples
+
+L’éditeur affiche une liste compacte avec des icônes à gauche. Une règle peut combiner des changements d’état, une heure quotidienne et des événements Home Assistant. Les conditions acceptent ET, OU et NON. Les branches ALORS et SINON exécutent plusieurs actions dans l’ordre affiché.
+
+Sur le système `.193`, une règle existante a été testée avec trois déclencheurs, deux conditions et deux actions par branche. L’aperçu YAML présentait la structure attendue. Lors du test dans Studio, les trois déclencheurs simulés ont lancé les deux actions ALORS lorsque la condition OU était satisfaite. Lorsque la condition ET ne l’était pas, les deux actions SINON se sont exécutées dans l’ordre configuré. Aucun appareil réel n’a été commandé.
+
+[HA Logic Studio Pro 0.1.60 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.60)
+
+![Éditeur de règles sur .193 avec la palette compacte et les deux branches](/images/logic-studio/0.1.60-rules-test-193.png)
 
 ### Créer une règle avec l’assistant
 

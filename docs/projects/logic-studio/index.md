@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.59 mit serverseitiger Funktionsplan-Ausführung und Editoren in DE, EN und FR.
+description: HA Logic Studio Pro 0.1.60 mit serverseitiger Funktionsplan-Ausführung und Editoren in DE, EN und FR.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,7 +12,7 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.59
+## HA Logic Studio Pro 0.1.60
 
 
 HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrepository. Sie baut auf Logic Studio auf und greift Erfahrungen aus der Arbeit mit ioBroker auf.
@@ -26,7 +26,17 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Projektverwaltung:** Projekte und Ordner pro HA-Benutzer auf dem Server speichern.
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
-**0.1.59** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
+**0.1.60** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
+
+### Rules: kompakte Leiste und mehrere Auslöser
+
+Links zeigt der Editor eine kompakte Liste mit Icons. Eine Regel kann Zustandswechsel, tägliche Uhrzeit und HA-Ereignisse kombinieren. Bedingungen unterstützen UND, ODER und NICHT. In DANN und SONST laufen mehrere Aktionen in der eingetragenen Reihenfolge.
+
+Auf `.193` wurde eine bestehende Regel mit drei Auslösern, zwei Bedingungen und zwei Aktionen pro Zweig geprüft. Die YAML-Vorschau zeigte die erwartete Struktur. Im Studio-Testlauf führten alle drei simulierten Auslöser bei erfüllter ODER-Bedingung beide DANN-Aktionen aus. Bei nicht erfüllter UND-Bedingung liefen beide SONST-Aktionen in der festgelegten Reihenfolge. Es wurden keine echten Geräte geschaltet.
+
+[HA Logic Studio Pro 0.1.60 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.60)
+
+![Rules-Editor auf .193 mit kompakter Leiste und beiden Aktionszweigen](/images/logic-studio/0.1.60-rules-test-193.png)
 
 ### Regeln mit dem Assistenten erstellen
 
