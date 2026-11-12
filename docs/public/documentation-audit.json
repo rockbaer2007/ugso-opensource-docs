@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 253,
+  "source_pages": 252,
   "summary": {
     "de": {
-      "content-present": 253,
-      "existing_pages": 253,
+      "content-present": 252,
+      "existing_pages": 252,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 253,
-      "existing_pages": 253,
+      "content-present": 252,
+      "existing_pages": 252,
       "unmatched_pages": 0,
-      "review_signals": 65,
+      "review_signals": 66,
       "reviewed_findings": 74,
-      "open_review_signals": 0
+      "open_review_signals": 1
     },
     "fr": {
-      "content-present": 253,
-      "existing_pages": 253,
+      "content-present": 252,
+      "existing_pages": 252,
       "unmatched_pages": 0,
       "review_signals": 31,
       "reviewed_findings": 47,
@@ -9860,33 +9860,36 @@
         "de": {
           "path": "projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "7c6fb6ec0ea0f15b5b6fdff8415e641684b0a5a7dd68cda21181032df8873d69",
-          "words": 402,
+          "sha256": "0eead0c2a3502dcebde76baafe5e5e08ab8e32dbd1e87511a85896793092aa62",
+          "words": 400,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0-beta.1"
+            "9.1.0-beta.0"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "d6196438c13d971111f690f73f49e1abae9e85198d8d9168d4e171be30fdd7f3",
-          "words": 408,
+          "sha256": "3ecdd830fe7496d72289d0185dc57425191d57dd0147f68511ee8b624f8b501a",
+          "words": 424,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0-beta.1"
+            "9.1.0-beta.0",
+            "9.1.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
-            "versions_only_in_translation": [],
+            "versions_only_in_translation": [
+              "9.1.0-beta.3"
+            ],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
@@ -9895,14 +9898,14 @@
         "fr": {
           "path": "fr/projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "aa42aafef94b9d15eef3922f16072f6ebf00cdb391e1230ecc0d9d7ac1dfe534",
-          "words": 467,
+          "sha256": "63225235d6428a44cea35df501c13681f4b88624ff3e9ee0b661db2a8546625d",
+          "words": 466,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0-beta.1"
+            "9.1.0-beta.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10111,67 +10114,6 @@
       }
     },
     {
-      "source": "projects/uix/extras/element-config-defaults.md",
-      "locales": {
-        "de": {
-          "path": "projects/uix/extras/element-config-defaults.md",
-          "status": "content-present",
-          "sha256": "04eaca943104465eef6c1f31f8c62856f8a0ee4a28c0b6cf8cbe5bd0c4d5c9b2",
-          "words": 525,
-          "headings": 3,
-          "examples": 3,
-          "versions": [
-            "2026.11.0",
-            "9.0.0",
-            "9.1.0-beta.1"
-          ],
-          "unresolved_local_references": []
-        },
-        "en": {
-          "path": "en/projects/uix/extras/element-config-defaults.md",
-          "status": "content-present",
-          "sha256": "100af9354ce96424d096ec8088988c94257a9f6f1628a469e353d33c8064cb13",
-          "words": 579,
-          "headings": 3,
-          "examples": 3,
-          "versions": [
-            "2026.11.0",
-            "9.0.0",
-            "9.1.0-beta.1"
-          ],
-          "unresolved_local_references": [],
-          "review_signals": {
-            "versions_only_in_de": [],
-            "versions_only_in_translation": [],
-            "fewer_examples": false,
-            "substantially_shorter": false,
-            "fewer_headings": false
-          }
-        },
-        "fr": {
-          "path": "fr/projects/uix/extras/element-config-defaults.md",
-          "status": "content-present",
-          "sha256": "ab0056b54db664d0c836db62bbeaff7d2df188a04d1599b4b915ad5575c58f45",
-          "words": 664,
-          "headings": 3,
-          "examples": 3,
-          "versions": [
-            "2026.11.0",
-            "9.0.0",
-            "9.1.0-beta.1"
-          ],
-          "unresolved_local_references": [],
-          "review_signals": {
-            "versions_only_in_de": [],
-            "versions_only_in_translation": [],
-            "fewer_examples": false,
-            "substantially_shorter": false,
-            "fewer_headings": false
-          }
-        }
-      }
-    },
-    {
       "source": "projects/uix/extras/frontend-states-throttling.md",
       "locales": {
         "de": {
@@ -10302,8 +10244,8 @@
         "de": {
           "path": "projects/uix/extras/index.md",
           "status": "content-present",
-          "sha256": "9c488223828a3eaa1beacd3a8c23e8393532433aa88e52c3a11656a3c7cf84bb",
-          "words": 84,
+          "sha256": "7f3146dc75724966fbc62bf433f629c915c09fcc95aefbaa42a1f767234d41d3",
+          "words": 78,
           "headings": 2,
           "examples": 0,
           "versions": [],
@@ -10312,8 +10254,8 @@
         "en": {
           "path": "en/projects/uix/extras/index.md",
           "status": "content-present",
-          "sha256": "5c798ac41d887f905c4f8e8fa13f7cc86ad4b19bd4ca606a5f17a0f11177b5a4",
-          "words": 167,
+          "sha256": "a54de8d4c39d573db70e6843341871090527d06dfbb85e933ab561d72ab8b568",
+          "words": 160,
           "headings": 0,
           "examples": 0,
           "versions": [
@@ -10340,8 +10282,8 @@
         "fr": {
           "path": "fr/projects/uix/extras/index.md",
           "status": "content-present",
-          "sha256": "78b35c1030d1f8f6b064f6c68d88263932107b5f1e986721671a469f05a322c9",
-          "words": 121,
+          "sha256": "4d73e184debafd7ec6c6b9b28d6b5335c59d196996a186f7bdbba3fe4caf368d",
+          "words": 111,
           "headings": 0,
           "examples": 0,
           "versions": [],
@@ -12039,28 +11981,28 @@
         "de": {
           "path": "projects/uix/index.md",
           "status": "content-present",
-          "sha256": "cf6dbb0773426025eb79b7fe613e6879ea7a1e372725e72e8686fb136b40de01",
+          "sha256": "425c84628189e438157bf641a34061900f05106f74a9ed8d5a32dcf6c261d484",
           "words": 594,
           "headings": 5,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0-beta.2"
+            "9.1.0-beta.3"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "b76361c9530c5a8168c4c0070526788cf1948394e7e6b312048a3f83f1e8c11a",
+          "sha256": "c12c9f216b6b6303f5cf8cdc594c4705be6b16f2a3f9f4eb8a651eef084b6ebf",
           "words": 387,
           "headings": 4,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0-beta.2"
+            "9.1.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12079,14 +12021,14 @@
         "fr": {
           "path": "fr/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "05e6e6d2e5b9dc024897bc2c0dc1ba276acdb3e0a22b5b264034e2529d771138",
+          "sha256": "926ea414f1a08e5733ce625d43efa22db50254eb19d079c501e68f1e1cb5587e",
           "words": 585,
           "headings": 5,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0-beta.2"
+            "9.1.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12233,9 +12175,9 @@
         "de": {
           "path": "projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "e825821079c0b2172244f3210164cba4adbb25203a0110e09f76484ca1f58cd3",
-          "words": 3285,
-          "headings": 22,
+          "sha256": "9f9ac719106ab58b15996b14b53443f9c8b88e26805bd684dfec417eb0dab966",
+          "words": 3311,
+          "headings": 23,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -12265,9 +12207,9 @@
         "en": {
           "path": "en/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "5eb5c55f167997cbe3548e6ecba76b69dd2f117d63bb8cd50cab0d51365af191",
-          "words": 1807,
-          "headings": 11,
+          "sha256": "60efd7e4a07fcbe1264462a9226a9b346197e62d7cb5e5cf8a6b82a314d833c5",
+          "words": 1835,
+          "headings": 12,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -12310,9 +12252,9 @@
         "fr": {
           "path": "fr/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "46c417385a04d4d77e1023504cb44c86c681f39c90799096d2f9d8020a239457",
-          "words": 3338,
-          "headings": 19,
+          "sha256": "9cccd0ed7b793407e8a52e0622ede0595fbe88237a21ff02e165dd1fd4baf817",
+          "words": 3374,
+          "headings": 20,
           "examples": 0,
           "versions": [
             "2026.10.0",

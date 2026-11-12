@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 253 | 0 | 0 | 0 |
-| EN | 253 | 0 | 0 | 0 |
-| FR | 253 | 0 | 0 | 0 |
+| DE | 252 | 0 | 0 | 0 |
+| EN | 252 | 0 | 0 | 1 |
+| FR | 252 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -180,11 +180,10 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/uix/developers/index.md](/projects/uix/developers/) | [Content present · Difference reviewed](/en/projects/uix/developers/) | [Content present](/fr/projects/uix/developers/) |
 | [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Content present · Difference reviewed](/en/projects/uix/developers/themes) | [Content present](/fr/projects/uix/developers/themes) |
 | [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Content present · Difference reviewed](/en/projects/uix/extras/always-patch-ha-card) | [Content present · Difference reviewed](/fr/projects/uix/extras/always-patch-ha-card) |
-| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Content present](/en/projects/uix/extras/custom-sidebar-panels) | [Content present](/fr/projects/uix/extras/custom-sidebar-panels) |
+| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Content present · Review signals](/en/projects/uix/extras/custom-sidebar-panels) | [Content present](/fr/projects/uix/extras/custom-sidebar-panels) |
 | [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Content present · Difference reviewed](/en/projects/uix/extras/dialog-styling-delay) | [Content present](/fr/projects/uix/extras/dialog-styling-delay) |
 | [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Content present · Difference reviewed](/en/projects/uix/extras/disable-entity-picture-image-override) | [Content present · Difference reviewed](/fr/projects/uix/extras/disable-entity-picture-image-override) |
 | [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Content present · Difference reviewed](/en/projects/uix/extras/disable-icon-styling) | [Content present · Difference reviewed](/fr/projects/uix/extras/disable-icon-styling) |
-| [projects/uix/extras/element-config-defaults.md](/projects/uix/extras/element-config-defaults) | [Content present](/en/projects/uix/extras/element-config-defaults) | [Content present](/fr/projects/uix/extras/element-config-defaults) |
 | [projects/uix/extras/frontend-states-throttling.md](/projects/uix/extras/frontend-states-throttling) | [Content present · Difference reviewed](/en/projects/uix/extras/frontend-states-throttling) | [Content present · Difference reviewed](/fr/projects/uix/extras/frontend-states-throttling) |
 | [projects/uix/extras/hash-template-variable-updates.md](/projects/uix/extras/hash-template-variable-updates) | [Content present · Difference reviewed](/en/projects/uix/extras/hash-template-variable-updates) | [Content present](/fr/projects/uix/extras/hash-template-variable-updates) |
 | [projects/uix/extras/index.md](/projects/uix/extras/) | [Content present · Difference reviewed](/en/projects/uix/extras/) | [Content present · Difference reviewed](/fr/projects/uix/extras/) |

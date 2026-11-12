@@ -4,7 +4,7 @@ title: Übersicht
 # UI eXtension für Home Assistant
 
 ::: info Stand geprüft am 09.11.2026
-Die [UIX-Kontexte](./concepts/context) erklären Vererbung, Vorrang direkter Konfiguration, Namensregeln und Fehlersuche. Konzeptübersicht und Theme-Anleitung verlinken die neue Seite. Geprüft sind **67** kanonische Seiten bis **9.1.0-beta.2**.
+Die [UIX-Kontexte](./concepts/context) erklären Vererbung, Vorrang direkter Konfiguration, Namensregeln und Fehlersuche. Konzeptübersicht und Theme-Anleitung verlinken die neue Seite. Geprüft sind **66** kanonische Seiten bis **9.1.0-beta.3**.
 :::
 
 > **Unabhängige Übersetzung**

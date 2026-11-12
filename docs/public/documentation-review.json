@@ -1042,8 +1042,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "9c488223828a3eaa1beacd3a8c23e8393532433aa88e52c3a11656a3c7cf84bb",
-      "target_sha256": "5c798ac41d887f905c4f8e8fa13f7cc86ad4b19bd4ca606a5f17a0f11177b5a4"
+      "source_sha256": "7f3146dc75724966fbc62bf433f629c915c09fcc95aefbaa42a1f767234d41d3",
+      "target_sha256": "a54de8d4c39d573db70e6843341871090527d06dfbb85e933ab561d72ab8b568"
     },
     {
       "source": "projects/uix/extras/index.md",
@@ -1058,8 +1058,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals.",
-      "source_sha256": "9c488223828a3eaa1beacd3a8c23e8393532433aa88e52c3a11656a3c7cf84bb",
-      "target_sha256": "78b35c1030d1f8f6b064f6c68d88263932107b5f1e986721671a469f05a322c9"
+      "source_sha256": "7f3146dc75724966fbc62bf433f629c915c09fcc95aefbaa42a1f767234d41d3",
+      "target_sha256": "4d73e184debafd7ec6c6b9b28d6b5335c59d196996a186f7bdbba3fe4caf368d"
     },
     {
       "source": "projects/uix/extras/style-frame-panels.md",
@@ -1843,8 +1843,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage.",
-      "source_sha256": "cf6dbb0773426025eb79b7fe613e6879ea7a1e372725e72e8686fb136b40de01",
-      "target_sha256": "b76361c9530c5a8168c4c0070526788cf1948394e7e6b312048a3f83f1e8c11a"
+      "source_sha256": "425c84628189e438157bf641a34061900f05106f74a9ed8d5a32dcf6c261d484",
+      "target_sha256": "c12c9f216b6b6303f5cf8cdc594c4705be6b16f2a3f9f4eb8a651eef084b6ebf"
     },
     {
       "source": "projects/uix/license.md",
@@ -1925,8 +1925,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage.",
-      "source_sha256": "e825821079c0b2172244f3210164cba4adbb25203a0110e09f76484ca1f58cd3",
-      "target_sha256": "5eb5c55f167997cbe3548e6ecba76b69dd2f117d63bb8cd50cab0d51365af191"
+      "source_sha256": "9f9ac719106ab58b15996b14b53443f9c8b88e26805bd684dfec417eb0dab966",
+      "target_sha256": "60efd7e4a07fcbe1264462a9226a9b346197e62d7cb5e5cf8a6b82a314d833c5"
     },
     {
       "source": "projects/uix/translation-status.md",
@@ -1945,8 +1945,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage.",
-      "source_sha256": "e825821079c0b2172244f3210164cba4adbb25203a0110e09f76484ca1f58cd3",
-      "target_sha256": "46c417385a04d4d77e1023504cb44c86c681f39c90799096d2f9d8020a239457"
+      "source_sha256": "9f9ac719106ab58b15996b14b53443f9c8b88e26805bd684dfec417eb0dab966",
+      "target_sha256": "9cccd0ed7b793407e8a52e0622ede0595fbe88237a21ff02e165dd1fd4baf817"
     },
     {
       "source": "projects/uix/using/apps.md",

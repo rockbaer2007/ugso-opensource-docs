@@ -7,7 +7,7 @@ title: About
 # UI eXtension for Home Assistant
 
 ::: info Reviewed 9 November 2026
-[UIX contexts](./concepts/context) covers inheritance, precedence of direct configuration, entity-name rules and debugging. The concepts and themes guides link to the new page. The review covers **67** canonical pages through **9.1.0-beta.2**.
+[UIX contexts](./concepts/context) covers inheritance, precedence of direct configuration, entity-name rules and debugging. The concepts and themes guides link to the new page. The review covers **66** canonical pages through **9.1.0-beta.3**.
 :::
 
 ![light-logo-icon](/projects/uix/assets/images/mixed.png)

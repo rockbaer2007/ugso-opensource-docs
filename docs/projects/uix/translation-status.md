@@ -4,6 +4,10 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Kanonischer Abgleich · 2026-11-12
+
+Die Vorschau [df5f4d6](https://github.com/Lint-Free-Technology/uix/commit/df5f4d67ecbd36c37fca96f4bb2df5d0e14dc16c) entfernt die Element-Standardwerte und nennt die Mindestversion für die Desktop-Tab-Option.
+
 ## Abgleich vom 09.11.2026
 
 Die [UIX-Kontexte](./concepts/context) erklären Vererbung, Vorrang direkter Konfiguration, Namensregeln und Fehlersuche. Konzeptübersicht und Theme-Anleitung verlinken die neue Seite. Geprüft sind **67** kanonische Seiten bis **9.1.0-beta.2**.
@@ -12,7 +16,7 @@ Die [UIX-Kontexte](./concepts/context) erklären Vererbung, Vorrang direkter Kon
 
 ## Abgleich vom 08.11.2026: Element-Standardwerte
 
-Die Meldungen [0c09117](https://github.com/Lint-Free-Technology/uix/commit/0c09117ef5af41c0eeb81831e13183bfb7f3d6a0) und [e28976f](https://github.com/Lint-Free-Technology/uix/commit/e28976f96db019e009c4c604e80c0885c1b3ea67) sind eingepflegt. Der vollständige archivierte Quellbaum auf `dev e28976f` umfasst **66** kanonische Markdown-Seiten. Gegenüber `e7b5bdd` ist [Standardwerte für Elementkonfigurationen](./extras/element-config-defaults) neu; die Seitenleisten-Anleitung entfernt einen Vorschauhinweis. Die übrigen 64 Seiten und Medien sind unverändert; der neue Navigationseintrag ist übernommen.
+Die Meldungen [0c09117](https://github.com/Lint-Free-Technology/uix/commit/0c09117ef5af41c0eeb81831e13183bfb7f3d6a0) und [e28976f](https://github.com/Lint-Free-Technology/uix/commit/e28976f96db019e009c4c604e80c0885c1b3ea67) sind eingepflegt. Der vollständige archivierte Quellbaum auf `dev e28976f` umfasst **66** kanonische Markdown-Seiten. Gegenüber `e7b5bdd` ist Standardwerte für Elementkonfigurationen neu; die Seitenleisten-Anleitung entfernt einen Vorschauhinweis. Die übrigen 64 Seiten und Medien sind unverändert; der neue Navigationseintrag ist übernommen.
 
 DE/FR enthalten die vollständige neue Anleitung mit UI-/YAML-Konfiguration, Glance-Entitäten, kompakten Entitätsangaben und durch Punkte getrennten Objektpfaden wie `group_config.name`. Vorhandene Werte bleiben maßgeblich; Array-Indizes und überlappende Pfade sind nicht erlaubt. Alle drei YAML-Beispiele stimmen mit der Quelle überein. EN ist synchronisiert, Navigation, Startseite und Footer sind aktualisiert. **UIX 9.0.0 / HA ab 2026.11.0** bleibt die stabile Basis; die neue Dokumentation stammt aus **dev / 9.1.0-beta.1**. Dies ist eine Dokumentationsprüfung, kein neuer HA-Laufzeittest.
 

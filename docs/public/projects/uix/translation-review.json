@@ -1,6 +1,6 @@
 {
-  "reviewed_at": "2026-11-09",
-  "source_revision": "509b2c2475ce6b574876a8353f88aedf87e7b2e3",
+  "reviewed_at": "2026-11-12",
+  "source_revision": "df5f4d67ecbd36c37fca96f4bb2df5d0e14dc16c",
   "scope": "Editorial technical-reference review; page coverage, table identifiers, defaults and selected missing examples",
   "limitations": "Translations retain editorial summaries. Not sentence-by-sentence identity, independent linguistic certification or a Home Assistant runtime test.",
   "pages": [
@@ -264,11 +264,11 @@
     },
     {
       "path": "extras/custom-sidebar-panels.md",
-      "source_sha256": "6f5f3e8d23fecced06d5adab4e96bba1c58e3c439bad0f78d4b0da4def3c57dc",
+      "source_sha256": "1f7c1290b9f8cf20c3c30ca439da8246b1086469353674a5f07564134df3167e",
       "table_identifiers": [],
-      "de_sha256": "7c6fb6ec0ea0f15b5b6fdff8415e641684b0a5a7dd68cda21181032df8873d69",
+      "de_sha256": "0eead0c2a3502dcebde76baafe5e5e08ab8e32dbd1e87511a85896793092aa62",
       "de_example_blocks": 0,
-      "fr_sha256": "aa42aafef94b9d15eef3922f16072f6ebf00cdb391e1230ecc0d9d7ac1dfe534",
+      "fr_sha256": "63225235d6428a44cea35df501c13681f4b88624ff3e9ee0b661db2a8546625d",
       "fr_example_blocks": 0
     },
     {
@@ -299,20 +299,6 @@
       "fr_example_blocks": 0
     },
     {
-      "path": "extras/element-config-defaults.md",
-      "source_sha256": "3246a753e39645fe1d72a8855861fdae87a89e99fbaab5403bbdc9511a9ab42d",
-      "table_identifiers": [
-        "config_key",
-        "element_type",
-        "uix_type",
-        "value"
-      ],
-      "de_sha256": "04eaca943104465eef6c1f31f8c62856f8a0ee4a28c0b6cf8cbe5bd0c4d5c9b2",
-      "de_example_blocks": 3,
-      "fr_sha256": "ab0056b54db664d0c836db62bbeaff7d2df188a04d1599b4b915ad5575c58f45",
-      "fr_example_blocks": 3
-    },
-    {
       "path": "extras/frontend-states-throttling.md",
       "source_sha256": "bd12e71948743dd03086bd30dddebb223b34ea619548d3ed87d52a85b3d4a00b",
       "table_identifiers": [],
@@ -334,9 +320,9 @@
       "path": "extras/index.md",
       "source_sha256": "c8eb846c6b3b77daf3e2dbc74934c67a4a232d9b80b2fd671e6cf766d186b9f3",
       "table_identifiers": [],
-      "de_sha256": "9c488223828a3eaa1beacd3a8c23e8393532433aa88e52c3a11656a3c7cf84bb",
+      "de_sha256": "7f3146dc75724966fbc62bf433f629c915c09fcc95aefbaa42a1f767234d41d3",
       "de_example_blocks": 0,
-      "fr_sha256": "78b35c1030d1f8f6b064f6c68d88263932107b5f1e986721671a469f05a322c9",
+      "fr_sha256": "4d73e184debafd7ec6c6b9b28d6b5335c59d196996a186f7bdbba3fe4caf368d",
       "fr_example_blocks": 0
     },
     {
@@ -1003,9 +989,9 @@
       "path": "index.md",
       "source_sha256": "fb3a60fc5f67441b1b931b5e43ddbb0050c5d08e5f3815395c42e2346f9bd94b",
       "table_identifiers": [],
-      "de_sha256": "cf6dbb0773426025eb79b7fe613e6879ea7a1e372725e72e8686fb136b40de01",
+      "de_sha256": "425c84628189e438157bf641a34061900f05106f74a9ed8d5a32dcf6c261d484",
       "de_example_blocks": 0,
-      "fr_sha256": "05e6e6d2e5b9dc024897bc2c0dc1ba276acdb3e0a22b5b264034e2529d771138",
+      "fr_sha256": "926ea414f1a08e5733ce625d43efa22db50254eb19d079c501e68f1e1cb5587e",
       "fr_example_blocks": 0
     },
     {

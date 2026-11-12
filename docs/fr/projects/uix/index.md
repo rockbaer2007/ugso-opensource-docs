@@ -4,7 +4,7 @@ title: À propos
 # UI eXtension pour Home Assistant
 
 ::: info État vérifié le 9 novembre 2026
-Les [contextes UIX](./concepts/context) expliquent l’héritage, la priorité de la configuration directe, les règles de nom d’entité et le débogage. Les guides sur les concepts et les thèmes renvoient vers cette page. La revue couvre **67** pages canoniques jusqu’à **9.1.0-beta.2**.
+Les [contextes UIX](./concepts/context) expliquent l’héritage, la priorité de la configuration directe, les règles de nom d’entité et le débogage. Les guides sur les concepts et les thèmes renvoient vers cette page. La revue couvre **66** pages canoniques jusqu’à **9.1.0-beta.3**.
 :::
 
 > Cette traduction française est maintenue par UGSo Software. La documentation anglaise reste la référence. La base est la version stable [`UIX 9.0.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0) du 4 novembre 2026, révision [`cec1191`](https://github.com/Lint-Free-Technology/uix/commit/cec1191f6ee703284c75dfd3104dba9bb4419200). **Home Assistant 2026.11.0 ou ultérieur est requis.**
