@@ -20,7 +20,9 @@ Activez la sauvegarde des compteurs et des mémoires dans le diagramme fonctionn
 
 Le rapport d’import de Blocks JS répertorie séparément les identifiants ioBroker calculés. Dans le champ d’association JSON du bloc importé, associez chaque identifiant ioBroker possible à une entité Home Assistant.
 
-Sur `.193`, le compteur CTU et la mémoire RS ont conservé les valeurs `1` et `true` après le redémarrage de l’application. Un plan ioBroker avec un identifiant calculé a été importé et ses blocs ont été ouverts dans l’éditeur.
+Sur `.193`, le compteur CTU et la mémoire RS ont conservé les valeurs `1` et `true` après le redémarrage de l’application.
+
+Lors du test en conditions réelles sur `.193`, le script Blocks JS importé a calculé l’identifiant ioBroker `zigbee.0.sensor`. L’association JSON lui a permis de lire l’assistant de test Home Assistant `input_boolean.logic_studio_runtime_test`. Deux lancements avec le bouton de lecture ont inscrit `false` dans le journal lorsque l’assistant était désactivé et `true` lorsqu’il était activé.
 
 [HA Logic Studio Pro 0.1.66 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.66)
 

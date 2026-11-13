@@ -20,7 +20,9 @@ Aktiviere im Funktionsplan **Zähler und Merker speichern** und speichere das Pr
 
 Der Blocks-JS-Importbericht weist berechnete ioBroker-IDs separat aus. Ordne im importierten Block unter **ID-Zuordnung (JSON)** jede mögliche ioBroker-ID einer HA-Entität zu.
 
-Auf `.193` behielten der CTU-Zähler und der RS-Merker nach einem App-Neustart die Werte `1` und `true`. Der Import eines ioBroker-Plans mit berechneter ID wurde bis zum Öffnen der Blöcke im Editor geprüft.
+Auf `.193` behielten der CTU-Zähler und der RS-Merker nach einem App-Neustart die Werte `1` und `true`.
+
+Im Live-Test auf `.193` berechnete das importierte Blocks-JS-Skript die ioBroker-ID `zigbee.0.sensor`. Über **ID-Zuordnung (JSON)** las es den HA-Testhelfer `input_boolean.logic_studio_runtime_test`. Zwei Starts über **Play** ergaben im Runtime-Protokoll `false` bei ausgeschaltetem und `true` bei eingeschaltetem Helfer.
 
 [HA Logic Studio Pro 0.1.66 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.66)
 

@@ -20,7 +20,9 @@ Enable **Save counters and latches** in the function block diagram and save the 
 
 The Blocks JS import report lists calculated ioBroker IDs separately. Use the imported block’s **ID mapping (JSON)** field to map each possible ioBroker ID to a Home Assistant entity.
 
-On `.193`, the CTU counter and RS latch retained `1` and `true` after an app restart. An ioBroker plan with a calculated ID was imported and its blocks opened in the editor.
+On `.193`, the CTU counter and RS latch retained `1` and `true` after an app restart.
+
+In the live test on `.193`, the imported Blocks JS script calculated the ioBroker ID `zigbee.0.sensor`. It used **ID mapping (JSON)** to read the Home Assistant test helper `input_boolean.logic_studio_runtime_test`. Two runs started with **Play** logged `false` with the helper off and `true` with it on.
 
 [HA Logic Studio Pro 0.1.66 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.66)
 
