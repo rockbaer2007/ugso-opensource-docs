@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.65 · Autostart, Simulation und ioBroker-Import
+description: HA Logic Studio Pro 0.1.66 · Zähler, Merker und berechnete ioBroker-IDs
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,9 +12,19 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.65
+## HA Logic Studio Pro 0.1.66
 
 Aktuelles öffentliches Testupdate. Vor dem Update ein Vollbackup erstellen und zuerst auf einem Testsystem prüfen.
+
+Aktiviere im Funktionsplan **Zähler und Merker speichern** und speichere das Projekt. CTU, CTD, CTUD, RS und SR können ihre Werte nach einem App-Neustart wiederherstellen.
+
+Der Blocks-JS-Importbericht weist berechnete ioBroker-IDs separat aus. Ordne im importierten Block unter **ID-Zuordnung (JSON)** jede mögliche ioBroker-ID einer HA-Entität zu.
+
+Auf `.193` behielten der CTU-Zähler und der RS-Merker nach einem App-Neustart die Werte `1` und `true`. Der Import eines ioBroker-Plans mit berechneter ID wurde bis zum Öffnen der Blöcke im Editor geprüft.
+
+[HA Logic Studio Pro 0.1.66 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.66)
+
+## HA Logic Studio Pro 0.1.65
 
 ### Autostart, Simulation und ioBroker-Import
 

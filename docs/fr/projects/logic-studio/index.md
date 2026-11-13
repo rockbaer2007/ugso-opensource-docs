@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.65 · Démarrage automatique, simulation et import ioBroker
+description: HA Logic Studio Pro 0.1.66 · Compteurs, mémoires et identifiants ioBroker calculés
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,9 +12,19 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.65
+## HA Logic Studio Pro 0.1.66
 
 Version de test publique actuelle. Créer une sauvegarde complète et essayer la mise à jour sur un système de test.
+
+Activez la sauvegarde des compteurs et des mémoires dans le diagramme fonctionnel, puis enregistrez le projet. Les blocs CTU, CTD, CTUD, RS et SR peuvent retrouver leurs valeurs après le redémarrage de l’application.
+
+Le rapport d’import de Blocks JS répertorie séparément les identifiants ioBroker calculés. Dans le champ d’association JSON du bloc importé, associez chaque identifiant ioBroker possible à une entité Home Assistant.
+
+Sur `.193`, le compteur CTU et la mémoire RS ont conservé les valeurs `1` et `true` après le redémarrage de l’application. Un plan ioBroker avec un identifiant calculé a été importé et ses blocs ont été ouverts dans l’éditeur.
+
+[HA Logic Studio Pro 0.1.66 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.66)
+
+## HA Logic Studio Pro 0.1.65
 
 ### Démarrage automatique, simulation et import ioBroker
 
