@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.67 · Import ioBroker étendu dans Blocks JS
+description: HA Logic Studio Pro 0.1.68 · Téléchargement YAML dans Chrome
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,12 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.68
+
+L’export YAML télécharge le fichier directement depuis l’éditeur. Deux exports sur le système de test `.193` ont produit deux fichiers YAML complets, identiques octet pour octet. Chrome a bloqué le deuxième téléchargement en le signalant comme non sécurisé. Après confirmation manuelle avec **Conserver**, le deuxième fichier était lui aussi complet dans le dossier des téléchargements.
+
+[HA Logic Studio Pro 0.1.68 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.68)
 
 ## HA Logic Studio Pro 0.1.67
 
