@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.62 · Règles enrichies et test en conditions réelles sur .193
+description: HA Logic Studio Pro 0.1.65 · Démarrage automatique, simulation et import ioBroker
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,18 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.65
+
+Version de test publique actuelle. Créer une sauvegarde complète et essayer la mise à jour sur un système de test.
+
+### Démarrage automatique, simulation et import ioBroker
+
+Les projets JavaScript, TypeScript et les diagrammes fonctionnels peuvent être exécutés au démarrage de l’application. Activer **Exécuter au démarrage de l’application** et enregistrer le projet. La simulation propose des points d’arrêt et le pas à pas. L’organisation automatique conserve la position des blocs épinglés. L’aperçu d’import ioBroker de Blocks JS liste les blocs non pris en charge et les identifiants fixes à associer.
+
+Sur `.193`, le projet de test JavaScript enregistré a démarré automatiquement après le redémarrage de l’application. Un point d’arrêt, un pas de simulation et l’aperçu d’import ioBroker avec un identifiant fixe ont également été vérifiés.
+
+[HA Logic Studio Pro 0.1.65 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.65)
 
 ## HA Logic Studio Pro 0.1.62
 
@@ -26,7 +38,7 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 - **Gestion des projets :** Enregistrer les projets et les dossiers sur le serveur pour chaque utilisateur HA.
 - **Choix de la langue :** Les éditeurs sont disponibles en allemand, en anglais et en français.
 
-La version **0.1.62** est la mise à jour de test publique. Créer une sauvegarde complète avant la mise à jour et essayer d’abord cette version sur un système de test.
+La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### Règles enrichies et test en conditions réelles sur .193
 

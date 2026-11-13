@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.62 · Erweiterte Rules und Live-Test auf .193
+description: HA Logic Studio Pro 0.1.65 · Autostart, Simulation und ioBroker-Import
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,18 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.65
+
+Aktuelles öffentliches Testupdate. Vor dem Update ein Vollbackup erstellen und zuerst auf einem Testsystem prüfen.
+
+### Autostart, Simulation und ioBroker-Import
+
+JavaScript, TypeScript und Funktionspläne können beim Start der App ausgeführt werden. Speichere dafür die Option **Beim Start der App ausführen** im Projekt. Die Simulation bietet Haltepunkte und Einzelschritt. Beim automatischen Anordnen bleiben angeheftete Bausteine stehen. Blocks JS zeigt beim ioBroker-Import nicht unterstützte Blöcke und feste IDs zur Zuordnung.
+
+Auf `.193` startete das gespeicherte JavaScript-Testprojekt nach einem Neustart der App automatisch. Geprüft wurden außerdem ein Haltepunkt mit Einzelschritt sowie die ioBroker-Importvorschau mit einer festen ID.
+
+[HA Logic Studio Pro 0.1.65 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.65)
 
 ## HA Logic Studio Pro 0.1.62
 
@@ -26,7 +38,7 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Projektverwaltung:** Projekte und Ordner pro HA-Benutzer auf dem Server speichern.
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
-**0.1.62** ist das öffentliche Testupdate. Vor dem Update ein Vollbackup erstellen und die Version zuerst auf einem Testsystem ausprobieren.
+**0.1.62** ergänzte die unten beschriebenen Rules-Funktionen.
 
 ### Erweiterte Rules und Live-Test auf .193
 

@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.62 · Expanded Rules and live test on .193
+description: HA Logic Studio Pro 0.1.65 · Autostart, simulation and ioBroker import
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,18 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.65
+
+Current public test release. Create a full backup and try the update on a test system first.
+
+### Autostart, simulation and ioBroker import
+
+JavaScript, TypeScript and function block diagrams can run when the app starts. Enable **Run when the app starts** and save the project. The simulation supports breakpoints and single stepping. Automatic layout preserves pinned blocks. The Blocks JS ioBroker import preview lists unsupported blocks and fixed IDs to map.
+
+On `.193`, the saved JavaScript test project started automatically after an app restart. A simulation breakpoint and single step were also checked, as was the ioBroker import preview with a fixed ID.
+
+[HA Logic Studio Pro 0.1.65 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.65)
 
 ## HA Logic Studio Pro 0.1.62
 
@@ -26,7 +38,7 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Project management:** Store projects and folders on the server for each HA user.
 - **Language selection:** The editors are available in German, English, and French.
 
-**0.1.62** is the public test update. Make a full backup before updating and try this version on a test system first.
+**0.1.62** added the Rules features described below.
 
 ### Expanded Rules and live test on .193
 
