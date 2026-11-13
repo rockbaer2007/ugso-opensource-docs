@@ -20,6 +20,10 @@ The imported “State exists?” and “Object ID” blocks retain their ioBroke
 
 The import preview’s **Required code changes** section explains how to replace unsupported blocks such as `exec`. After a full backup on `.193`, XML and JavaScript test files were imported and the new mapping fields were checked in the editor.
 
+### Reconnection after a Core restart
+
+A full backup was created on test system `.193` before the test. After Home Assistant Core restarted, the runtime reconnected 31 seconds after the connection dropped. The same JavaScript run then received the test helper’s change from `off` to `on` and the custom HA event `logic_studio_runtime_test` with its test payload.
+
 [HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
 
 ## HA Logic Studio Pro 0.1.66

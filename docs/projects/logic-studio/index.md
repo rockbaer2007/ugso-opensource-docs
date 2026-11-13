@@ -20,6 +20,10 @@ Aktuelles öffentliches Testupdate. Vor dem Update ein Vollbackup erstellen und 
 
 Unter **Nötige Codeanpassungen** erklärt die Importvorschau, wie sich nicht unterstützte Blöcke wie `exec` ersetzen lassen. Auf `.193` wurden nach einem Vollbackup XML- und JavaScript-Testdateien importiert und die neuen Zuordnungsfelder im Editor geprüft.
 
+### Wiederverbindung nach Core-Neustart
+
+Auf dem Testsystem `.193` wurde vor dem Test ein Vollbackup erstellt. Nach dem Neustart von Home Assistant Core stellte die Runtime die Verbindung 31 Sekunden nach der Trennung wieder her. Derselbe JavaScript-Skriptlauf empfing anschließend den Wechsel des Testhelfers von `off` auf `on` und das benutzerdefinierte HA-Ereignis `logic_studio_runtime_test` samt Testdaten.
+
 [HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
 
 ## HA Logic Studio Pro 0.1.66

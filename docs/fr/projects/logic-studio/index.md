@@ -20,6 +20,10 @@ Les blocs importés de vérification de l’existence d’un état et d’identi
 
 La section **Adaptations du code requises** de l’aperçu explique comment remplacer les blocs non pris en charge, comme `exec`. Après une sauvegarde complète sur `.193`, des fichiers de test XML et JavaScript ont été importés et les nouveaux champs d’association ont été vérifiés dans l’éditeur.
 
+### Reconnexion après un redémarrage de Core
+
+Une sauvegarde complète a été créée sur le système de test `.193` avant l’essai. Après le redémarrage de Home Assistant Core, le moteur d’exécution s’est reconnecté 31 secondes après la coupure. La même exécution du script JavaScript a ensuite reçu le passage de l’entité de test de `off` à `on` et l’événement HA personnalisé `logic_studio_runtime_test` avec ses données de test.
+
 [HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
 
 ## HA Logic Studio Pro 0.1.66
