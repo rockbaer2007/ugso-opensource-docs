@@ -24,6 +24,10 @@ The import preview’s **Required code changes** section explains how to replace
 
 A full backup was created on test system `.193` before the test. After Home Assistant Core restarted, the runtime reconnected 31 seconds after the connection dropped. The same JavaScript run then received the test helper’s change from `off` to `on` and the custom HA event `logic_studio_runtime_test` with its test payload.
 
+### Folder and script order after reloading
+
+After a full backup on test system `.193`, two test scripts were moved to a different folder by drag and drop. After saving the order and reloading Logic Studio Pro, both scripts were still in the destination folder in the saved order.
+
 [HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
 
 ## HA Logic Studio Pro 0.1.66

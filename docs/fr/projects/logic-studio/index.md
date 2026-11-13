@@ -24,6 +24,10 @@ La section **Adaptations du code requises** de l’aperçu explique comment remp
 
 Une sauvegarde complète a été créée sur le système de test `.193` avant l’essai. Après le redémarrage de Home Assistant Core, le moteur d’exécution s’est reconnecté 31 secondes après la coupure. La même exécution du script JavaScript a ensuite reçu le passage de l’entité de test de `off` à `on` et l’événement HA personnalisé `logic_studio_runtime_test` avec ses données de test.
 
+### Dossier et ordre des scripts après rechargement
+
+Après une sauvegarde complète sur le système de test `.193`, deux scripts de test ont été déplacés par glisser-déposer dans un autre dossier. Après l’enregistrement de l’ordre et le rechargement de Logic Studio Pro, les deux scripts étaient toujours dans le dossier de destination, dans l’ordre enregistré.
+
 [HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
 
 ## HA Logic Studio Pro 0.1.66

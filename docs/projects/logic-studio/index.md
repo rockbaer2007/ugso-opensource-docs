@@ -24,6 +24,10 @@ Unter **Nötige Codeanpassungen** erklärt die Importvorschau, wie sich nicht un
 
 Auf dem Testsystem `.193` wurde vor dem Test ein Vollbackup erstellt. Nach dem Neustart von Home Assistant Core stellte die Runtime die Verbindung 31 Sekunden nach der Trennung wieder her. Derselbe JavaScript-Skriptlauf empfing anschließend den Wechsel des Testhelfers von `off` auf `on` und das benutzerdefinierte HA-Ereignis `logic_studio_runtime_test` samt Testdaten.
 
+### Ordnerwechsel und Reihenfolge nach Neuladen
+
+Auf dem Testsystem `.193` wurden nach einem Vollbackup zwei Testskripte per Drag-and-drop in einen anderen Ordner verschoben. Nach dem Speichern der Sortierung und dem Neuladen von Logic Studio Pro waren beide Skripte weiterhin im Zielordner und standen in der gespeicherten Reihenfolge.
+
 [HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
 
 ## HA Logic Studio Pro 0.1.66
