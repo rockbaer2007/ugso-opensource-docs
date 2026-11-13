@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.66 · Compteurs, mémoires et identifiants ioBroker calculés
+description: HA Logic Studio Pro 0.1.67 · Import ioBroker étendu dans Blocks JS
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,9 +12,17 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.66
+## HA Logic Studio Pro 0.1.67
 
 Version de test publique actuelle. Créer une sauvegarde complète et essayer la mise à jour sur un système de test.
+
+Les blocs importés de vérification de l’existence d’un état et d’identifiant d’objet conservent leur identifiant ioBroker. Associez explicitement chaque identifiant à une entité Home Assistant dans le bloc. Blocks JS retrouve les données Blockly intégrées dans un fichier JavaScript même si d’autres commentaires les suivent.
+
+La section **Adaptations du code requises** de l’aperçu explique comment remplacer les blocs non pris en charge, comme `exec`. Après une sauvegarde complète sur `.193`, des fichiers de test XML et JavaScript ont été importés et les nouveaux champs d’association ont été vérifiés dans l’éditeur.
+
+[HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
+
+## HA Logic Studio Pro 0.1.66
 
 Activez la sauvegarde des compteurs et des mémoires dans le diagramme fonctionnel, puis enregistrez le projet. Les blocs CTU, CTD, CTUD, RS et SR peuvent retrouver leurs valeurs après le redémarrage de l’application.
 

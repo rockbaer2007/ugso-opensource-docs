@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.66 · Counters, latches and calculated ioBroker IDs
+description: HA Logic Studio Pro 0.1.67 · Extended ioBroker import in Blocks JS
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,9 +12,17 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.66
+## HA Logic Studio Pro 0.1.67
 
 Current public test release. Create a full backup and try the update on a test system first.
+
+The imported “State exists?” and “Object ID” blocks retain their ioBroker IDs. Explicitly map each ID to a Home Assistant entity in its block. Blocks JS also finds embedded Blockly data in JavaScript files when other comments follow it.
+
+The import preview’s **Required code changes** section explains how to replace unsupported blocks such as `exec`. After a full backup on `.193`, XML and JavaScript test files were imported and the new mapping fields were checked in the editor.
+
+[HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
+
+## HA Logic Studio Pro 0.1.66
 
 Enable **Save counters and latches** in the function block diagram and save the project. CTU, CTD, CTUD, RS and SR can restore their values after an app restart.
 

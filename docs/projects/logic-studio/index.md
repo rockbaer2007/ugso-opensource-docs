@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.66 · Zähler, Merker und berechnete ioBroker-IDs
+description: HA Logic Studio Pro 0.1.67 · Erweiterter ioBroker-Import in Blocks JS
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -12,9 +12,17 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
 
-## HA Logic Studio Pro 0.1.66
+## HA Logic Studio Pro 0.1.67
 
 Aktuelles öffentliches Testupdate. Vor dem Update ein Vollbackup erstellen und zuerst auf einem Testsystem prüfen.
+
+„Datenpunkt vorhanden?“ und „Objekt-ID“ behalten beim Import die ioBroker-ID. Ordne sie im jeweiligen Block ausdrücklich einer HA-Entität zu. Beim Import einer JavaScript-Datei erkennt Blocks JS eingebettete Blockly-Daten auch dann, wenn weitere Kommentare folgen.
+
+Unter **Nötige Codeanpassungen** erklärt die Importvorschau, wie sich nicht unterstützte Blöcke wie `exec` ersetzen lassen. Auf `.193` wurden nach einem Vollbackup XML- und JavaScript-Testdateien importiert und die neuen Zuordnungsfelder im Editor geprüft.
+
+[HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
+
+## HA Logic Studio Pro 0.1.66
 
 Aktiviere im Funktionsplan **Zähler und Merker speichern** und speichere das Projekt. CTU, CTD, CTUD, RS und SR können ihre Werte nach einem App-Neustart wiederherstellen.
 
