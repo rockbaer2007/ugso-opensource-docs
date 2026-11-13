@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.68 · YAML downloads in Chrome
+description: HA Logic Studio Pro 0.1.69 · Rules wizard and version display
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,12 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.69
+
+The Rules wizard follows language changes in the open editor. After a full backup on `.193`, the Chrome tablet viewport (820 × 1180 px) test verified that the title, steps and triggers followed **DE → EN → FR → DE**. Both the Studio interface and the Home Assistant app manager displayed **0.1.69**. The server now reads the displayed version from the package metadata.
+
+[HA Logic Studio Pro 0.1.69 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.69)
 
 ## HA Logic Studio Pro 0.1.68
 
