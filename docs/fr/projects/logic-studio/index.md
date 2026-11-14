@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.80 · Seuils numériques dans l’éditeur de règles
+description: HA Logic Studio Pro 0.1.81 · Lever et coucher du soleil dans les règles
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.81
+
+L’assistant de règles propose le lever et le coucher du soleil comme déclencheurs. Le décalage facultatif se saisit en minutes. Une valeur négative déclenche la règle avant l’événement solaire et une valeur positive la déclenche après.
+
+L’export YAML a été vérifié et validé dans la version installée sur le [système de test PC (64 bits)](/fr/collection/test-systems#testsystem-pc). Pour 30 minutes avant le lever du soleil, il a généré `event: sunrise` et `offset: -1800`. Pour 15 minutes après le coucher du soleil, il a généré `event: sunset` et `offset: 900`. Les décalages du YAML sont exprimés en secondes.
+
+[HA Logic Studio Pro 0.1.81 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.81)
 
 ## HA Logic Studio Pro 0.1.80
 

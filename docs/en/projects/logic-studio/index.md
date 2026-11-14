@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.80 · Numeric threshold triggers in Rules
+description: HA Logic Studio Pro 0.1.81 · Sunrise and sunset triggers in Rules
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.81
+
+The Rules wizard offers sunrise and sunset triggers. Enter the optional offset in minutes. Negative values trigger before the solar event and positive values trigger after it.
+
+The YAML export was checked and validated in the installed version on the [PC test system (64-bit)](/en/collection/test-systems#testsystem-pc). For 30 minutes before sunrise, it generated `event: sunrise` and `offset: -1800`. For 15 minutes after sunset, it generated `event: sunset` and `offset: 900`. The YAML offsets are in seconds.
+
+[HA Logic Studio Pro 0.1.81 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.81)
 
 ## HA Logic Studio Pro 0.1.80
 

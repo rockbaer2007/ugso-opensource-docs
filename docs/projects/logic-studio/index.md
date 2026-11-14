@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.80 · Zahlenschwellen im Rules-Editor
+description: HA Logic Studio Pro 0.1.81 · Sonnenaufgang und Sonnenuntergang in Rules
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.81
+
+Der Rules-Assistent bietet Sonnenaufgang und Sonnenuntergang als Auslöser an. Der optionale Zeitversatz wird in Minuten eingegeben. Negative Werte lösen vor dem Sonnenereignis aus, positive danach.
+
+Auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) wurde der YAML-Export in der installierten Version geprüft und validiert. 30 Minuten vor Sonnenaufgang ergaben `event: sunrise` und `offset: -1800`. 15 Minuten nach Sonnenuntergang ergaben `event: sunset` und `offset: 900`. Die YAML-Werte sind in Sekunden angegeben.
+
+[HA Logic Studio Pro 0.1.81 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.81)
 
 ## HA Logic Studio Pro 0.1.80
 
