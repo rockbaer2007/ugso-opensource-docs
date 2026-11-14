@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.73 · Exécution et statut de l’application
+description: HA Logic Studio Pro 0.1.74 · Journaux d’exécution persistants
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,12 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.74
+
+Logic Studio Pro conserve les 100 dernières entrées du journal d’exécution par utilisateur et par projet. Sur `.193`, une entrée restait consultable avec le même horodatage après le redémarrage de l’application. Le script était arrêté et l’entrée ne figurait pas dans le journal d’un autre projet.
+
+[HA Logic Studio Pro 0.1.74 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.74)
 
 ## HA Logic Studio Pro 0.1.73
 
