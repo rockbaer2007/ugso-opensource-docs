@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.78 · Shared functions from global scripts
+description: HA Logic Studio Pro 0.1.79 · Per-block mapping for ioBroker imports
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.79
+
+The Blocks JS import preview shows which Home Assistant entity each block needs or which code change is still required. Fixed ioBroker IDs can be mapped to HA entities directly in the preview.
+
+Using the original `test33.xml` export on the [PC test system (64-bit)](/en/collection/test-systems#testsystem-pc), the state trigger was mapped to a sensor and the write block to a number helper. The test run simulated writes of `21` and `20`.
+
+[HA Logic Studio Pro 0.1.79 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.79)
 
 ## HA Logic Studio Pro 0.1.78
 

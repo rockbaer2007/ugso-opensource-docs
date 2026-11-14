@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.78 · Fonctions partagées des scripts globaux
+description: HA Logic Studio Pro 0.1.79 · Association par bloc lors de l’import ioBroker
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.79
+
+L’aperçu de l’import dans Blocks JS indique, pour chaque bloc, l’entité Home Assistant à associer ou la modification de code encore nécessaire. Les identifiants ioBroker fixes peuvent être associés à des entités HA directement dans l’aperçu.
+
+Sur le [système de test PC (64 bits)](/fr/collection/test-systems#testsystem-pc), l’export original `test33.xml` a permis d’associer le déclencheur d’état à un capteur et le bloc d’écriture à un assistant numérique. Le test a simulé l’écriture des valeurs `21` et `20`.
+
+[HA Logic Studio Pro 0.1.79 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.79)
 
 ## HA Logic Studio Pro 0.1.78
 

@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.78 · Gemeinsame Funktionen aus globalen Skripten
+description: HA Logic Studio Pro 0.1.79 · ioBroker-Import mit Zuordnung pro Block
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.79
+
+Die Importvorschau in Blocks JS zeigt pro Block, welche Home-Assistant-Entität zugeordnet werden muss oder welche Codeanpassung noch nötig ist. Feste ioBroker-IDs lassen sich direkt in der Vorschau einer HA-Entität zuordnen.
+
+Mit dem Originalexport `test33.xml` wurden auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) der Zustandstrigger einem Sensor und der Schreibblock einem Zahlenhelfer zugeordnet. Im Testlauf simulierte Blocks JS Schreibvorgänge mit den Werten `21` und `20`.
+
+[HA Logic Studio Pro 0.1.79 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.79)
 
 ## HA Logic Studio Pro 0.1.78
 
