@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.84 · Home Assistant startup trigger in Rules
+description: HA Logic Studio Pro 0.1.85 · Time windows and weekdays in Rules
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.85 · Time windows and weekdays in Rules**
+
+**Time window and weekdays** lets you combine a start time, an end time, and selected weekdays. You can also select weekdays alone. The export uses Home Assistant’s native `condition: time`.
+
+In the live test, the automation ran only when both the time and the weekday matched. The test helpers stayed off outside the time window and on a nonmatching weekday. [PC test system (64-bit)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.85 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.85)
 
 **0.1.84 · Home Assistant startup trigger in Rules**
 

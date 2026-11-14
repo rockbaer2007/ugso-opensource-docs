@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.84 · HA-Startauslöser in Rules
+description: HA Logic Studio Pro 0.1.85 · Zeitfenster und Wochentage in Rules
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.85 · Zeitfenster und Wochentage in Rules**
+
+In **Zeitfenster und Wochentage** lassen sich Startzeit, Endzeit und einzelne Wochentage kombinieren. Auch eine Auswahl nur nach Wochentagen ist möglich. Der Export nutzt die native HA-Bedingung `condition: time`.
+
+Im Live-Test lief die Automation nur bei passender Uhrzeit und passendem Wochentag. Außerhalb des Zeitfensters und bei einem abweichenden Wochentag blieben die jeweiligen Testhelfer aus. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.85 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.85)
 
 **0.1.84 · HA-Startauslöser in Rules**
 

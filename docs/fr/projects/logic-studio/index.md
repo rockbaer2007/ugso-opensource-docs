@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.84 · Déclencheur au démarrage de Home Assistant
+description: HA Logic Studio Pro 0.1.85 · Plages horaires et jours de la semaine dans les règles
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,14 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.85 · Plages horaires et jours de la semaine dans les règles**
+
+**Plage horaire et jours de la semaine** permet de combiner une heure de début, une heure de fin et les jours souhaités. Il est aussi possible de choisir uniquement les jours. L’export utilise la condition native `condition: time` de Home Assistant.
+
+Lors du test en conditions réelles, l’automatisation s’est exécutée uniquement quand l’heure et le jour correspondaient. Hors de la plage horaire ou lorsque le jour ne correspondait pas, les assistants de test sont restés désactivés. [Système de test PC (64 bits)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.85 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.85)
 
 **0.1.84 · Déclencheur au démarrage de Home Assistant**
 
