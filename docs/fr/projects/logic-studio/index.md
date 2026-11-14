@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.87 · Aperçu graphique du YAML HA
+description: HA Logic Studio Pro 0.1.88 · Aperçu graphique du YAML HA
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,12 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.88 · Aperçu graphique du YAML HA**
+
+La carte « Choisir » est centrée entre les branches et affiche en permanence les libellés des connecteurs. Sur le système de test PC (64), l’automatisation du couloir affichait **Option 1**, **Option 2**, **Option 3** et **Par défaut**. Les sept connexions étaient visibles, les cartes ne se chevauchaient pas et le texte YAML est resté identique après le changement de vue.
+
+[HA Logic Studio Pro 0.1.88 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.88)
 
 **0.1.87 · React Flow**
 
