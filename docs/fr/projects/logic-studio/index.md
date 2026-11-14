@@ -14,7 +14,7 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 ## HA Logic Studio Pro 0.1.74
 
-Logic Studio Pro conserve les 100 dernières entrées du journal d’exécution par utilisateur et par projet. Sur `.193`, une entrée restait consultable avec le même horodatage après le redémarrage de l’application. Le script était arrêté et l’entrée ne figurait pas dans le journal d’un autre projet.
+Logic Studio Pro conserve les 100 dernières entrées du journal d’exécution par utilisateur et par projet. Sur le système de test PC (64), une entrée restait consultable avec le même horodatage après le redémarrage de l’application. Le script était arrêté et l’entrée ne figurait pas dans le journal d’un autre projet.
 
 [HA Logic Studio Pro 0.1.74 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.74)
 

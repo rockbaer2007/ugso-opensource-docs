@@ -14,7 +14,7 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 ## HA Logic Studio Pro 0.1.74
 
-Logic Studio Pro keeps the last 100 runtime log entries per user and project. On `.193`, an entry remained available with the same timestamp after an app restart. The script was stopped, and the entry did not appear in another project.
+Logic Studio Pro keeps the last 100 runtime log entries per user and project. On the PC (64) test system, an entry remained available with the same timestamp after an app restart. The script was stopped, and the entry did not appear in another project.
 
 [HA Logic Studio Pro 0.1.74 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.74)
 

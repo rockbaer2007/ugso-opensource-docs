@@ -14,7 +14,7 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 
 ## HA Logic Studio Pro 0.1.74
 
-Logic Studio Pro speichert die letzten 100 Runtime-Protokolleinträge pro Benutzer und Projekt. Auf `.193` blieb ein Eintrag nach einem Neustart der App mit demselben Zeitstempel abrufbar. Das Skript war dabei gestoppt. In einem anderen Projekt erschien der Eintrag nicht.
+Logic Studio Pro speichert die letzten 100 Runtime-Protokolleinträge pro Benutzer und Projekt. Auf dem Testsystem PC (64) blieb ein Eintrag nach einem Neustart der App mit demselben Zeitstempel abrufbar. Das Skript war dabei gestoppt. In einem anderen Projekt erschien der Eintrag nicht.
 
 [HA Logic Studio Pro 0.1.74 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.74)
 
