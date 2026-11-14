@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.71 · Expertenmodus
+description: HA Logic Studio Pro 0.1.72 · Skriptnachrichten mit Antwort
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.72
+
+Blocks JS übernimmt ioBroker-Skriptnachrichten mit Antwort und berechneten Zieladressen. Die Importvorschau zeigt am jeweiligen Block, welche Empfangsadresse und Antwortverarbeitung zu prüfen sind.
+
+Auf dem Home-Assistant-Testsystem `.193` setzte ein laufendes Blocks-JS-Skript die Zieladresse aus zwei Textteilen zusammen. Das zweite Skript protokollierte den Empfang, und der Antwortblock im Sender wurde ausgeführt. Danach wurden beide Testprojekte gelöscht und die temporäre Freigabe für `logic_studio_script_message` wieder entfernt.
+
+[HA Logic Studio Pro 0.1.72 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.72)
 
 ## HA Logic Studio Pro 0.1.71
 
