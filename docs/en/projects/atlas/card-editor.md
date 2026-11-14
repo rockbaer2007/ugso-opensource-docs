@@ -39,7 +39,7 @@ a configuration. Search only filters this browser's drafts, not server projects.
 Narrow 320/390/768-pixel test containers and real phone/tablet qualification pass.
 
 ::: info Mobile qualification passed – user confirmation on 2026-10-22
-The user confirms App 0.1.333 in **Chrome on phone and tablet** through .68:
+The user confirms App 0.1.333 in **Chrome on phone and tablet** through [Test system 2 (64)](/en/collection/test-systems#testsystem-2):
 selection, Search button, tab association, portrait/landscape and separate A/B
 recovery work. Devices: Blackview BV6200 Pro, Android 14/DokeOS 4.0, and Samsung
 Tab A6, Android 11/LineageOS. Temporary server projects, guide and owned sidebar
@@ -70,7 +70,7 @@ The qualified procedure on **each device separately**:
 
 Browser drafts are separate per device/profile and are outside HA full backups.
 Temporary links and projects are removed after completion. PC evidence is retained;
-.68 retains its three newest full backups.
+Test system 2 (64) retains its three newest full backups.
 :::
 
 ::: info Searchable draft overview – App 0.1.332
@@ -90,7 +90,7 @@ still requires explicit inspection and backed-up apply. A newer-draft recovery
 offer also works during a search by clearing the filter. No automatic application
 or deletion is introduced.
 
-Native qualification on .68 with HA 2026.10.2 passes: duplicate project names in
+Native qualification on Test system 2 (64) with HA 2026.10.2 passes: duplicate project names in
 two tabs, project/script/source search, empty results, selection after clearing,
 preview cancellation, DE/EN/FR and separate recovery after reload. All 32 original
 sources remain byte-identical; original Editors/data are restored, fixtures
@@ -100,7 +100,7 @@ is not yet qualified.
 :::
 
 ::: info Browser termination during repeated file import qualified – 2026-10-22
-On .68 with App 0.1.331 and HA 2026.10.2, forced Chrome process termination passes
+On Test system 2 (64) with App 0.1.331 and HA 2026.10.2, forced Chrome process termination passes
 after the new local draft record is written, before updating its tab pointer.
 Session restoration explicitly offers A's newer draft; B keeps its independent
 source. Cancelling the preview leaves the workspace unchanged. New A, predecessor
@@ -110,7 +110,7 @@ action rather than automatic application.
 
 All 20 previous sources in the test profile remain byte-identical. Original
 Editors and global configuration are restored, including after reload; owned
-fixture files are in trash and three full backups retained on .68. ARM test system (Pi 5) is untouched.
+fixture files are in trash and three full backups retained on Test system 2 (64). ARM test system (Pi 5) is untouched.
 The controlled halt is between two writes; it does not qualify power loss,
 deleted browser storage or interruption inside the atomic Storage operation.
 Continue exporting browser drafts separately.
@@ -133,7 +133,7 @@ This corrects the fresh-profile finding in 0.1.330, where no tab sources were
 created and both tabs showed only the last import after reload. The fix concerns
 normal JSON whole-configuration import; it is not a new HACS qualification.
 
-Update and native qualification on .68 with HA 2026.10.2 pass: both original
+Update and native qualification on Test system 2 (64) with HA 2026.10.2 pass: both original
 failure files, reverse order, repeated identical import, own-source selection
 after reload and complete recoveries. Cancellation and invalid input change
 neither workspace nor sources. Blocked local/session writes show the correct
@@ -144,7 +144,7 @@ remain as recovery material. ARM test system (Pi 5) is untouched.
 :::
 
 ::: info Two tabs qualified with blocked session storage and a HA outage
-On .68 with App 0.1.330 and HA 2026.10.2, two different drafts remain editable
+On Test system 2 (64) with App 0.1.330 and HA 2026.10.2, two different drafts remain editable
 and exportable with blocked session methods during a real HA restart. Both tabs
 reconnect automatically. Reloading while the session remains blocked never
 auto-applies a source: explicitly inspect and back up/apply the matching draft.
@@ -157,7 +157,7 @@ Wi-Fi loss or forced browser-process termination.
 :::
 
 ::: info Distinct local and session failure notices – App 0.1.330
-Native qualification on .68 with HA 2026.10.2 passes: real full session storage
+Native qualification on Test system 2 (64) with HA 2026.10.2 passes: real full session storage
 with and without an existing tab pointer, blocked session methods and getter,
 export, manual recovery and DE/EN/FR notices. Full local storage and blocked local
 writes retain their distinct failure notice. All 31 previous draft sources remain
@@ -201,7 +201,7 @@ before 0.1.329 and drafts without available tab session storage remain manually
 selectable. Detection does not replace an Export before clearing browser storage
 or switching devices.
 
-**Checked on .68 with HA 2026.10.2 on 2026-10-21:** after the update, an owned
+**Checked on Test system 2 (64) with HA 2026.10.2 on 2026-10-21:** after the update, an owned
 save is interrupted precisely after its record write and before its tab pointer.
 Reloading shows the correct successor and offer in DE/EN/FR. Preview/cancellation
 leave the workspace unchanged; confirmed recovery restores all project data
@@ -230,14 +230,14 @@ Local record-write failures are displayed: export before reloading or closing if
 occurs. Old recovery sources are not automatically deleted. Each draft permits
 at most 5,000 fields and 4 MiB of project data.
 
-**Checked on .68 with HA 2026.10.2 on 2026-10-21:** two different drafts fully
+**Checked on Test system 2 (64) with HA 2026.10.2 on 2026-10-21:** two different drafts fully
 recover after tab reload and App outage; exports match except their creation
 time. A new tab explicitly recovers a closed tab's draft. Old sources remain
 selectable and server conflicts blocked. DE/EN/FR pass. Original Editors,
 seven server projects, six plugins and ten captured files are preserved.
-Owned project cleaned, three full backups on .68; ARM test system (Pi 5) unchanged.
+Owned project cleaned, three full backups on Test system 2 (64); ARM test system (Pi 5) unchanged.
 
-**Full Chrome restart with session restoration also passes (2026-10-21, .68):**
+**Full Chrome restart with session restoration also passes (2026-10-21, Test system 2 (64)):**
 The user restarts Chrome and its main process is replaced. Both restored tabs
 preselect their own previous draft IDs. After explicit recovery, both complete
 exports match their respective pre-restart versions except the export time.
@@ -246,17 +246,17 @@ Editors and captured data are preserved; owned project removed and three full
 backups retained. ARM test system (Pi 5) is untouched. This qualifies an orderly restart, not a
 browser crash, power failure or recovery of deleted browser storage.
 
-**Forced browser termination also passes (2026-10-21, .68):** the user forcibly
+**Forced browser termination also passes (2026-10-21, Test system 2 (64)):** the user forcibly
 terminates Chrome 155. No Chrome processes remain before reopening it. After
 session recovery, both tabs retain their own draft IDs. The explicitly restored
 drafts, including their different Card titles, match the complete pre-abort
 exports except the export time. Four older drafts are separately exported and
 their project data checked unchanged afterwards. Original Editors and existing
 data are preserved, the owned server project removed and three full backups
-retained on .68; ARM test system (Pi 5) untouched. Termination follows completed local saving,
+retained on Test system 2 (64); ARM test system (Pi 5) untouched. Termination follows completed local saving,
 not an in-progress write. This does not qualify power or disk failures.
 
-**Also checked during local saving (2026-10-21, .68):** an owned test probe
+**Also checked during local saving (2026-10-21, Test system 2 (64)):** an owned test probe
 pauses the unchanged installed Editor after writing the new record but before
 updating the tab pointer. The user forcibly terminates Chrome; no Chrome
 processes remain before reopening it. After session restoration, the confirmed
@@ -264,7 +264,7 @@ predecessor stays preselected. **Manually select the new complete version under
 Local drafts, inspect it and use Back up and apply.** Its project data, including
 the new Card title, exactly matches the pre-test backup. Tab B and eight older
 sources remain unchanged. Original Editors and existing data are preserved,
-owned active test objects cleaned, three full backups on .68; ARM test system (Pi 5) untouched.
+owned active test objects cleaned, three full backups on Test system 2 (64); ARM test system (Pi 5) untouched.
 This qualifies the boundary between record and tab pointer, not interruption
 inside the atomic native storage call, power loss or disk failure.
 :::
@@ -293,7 +293,7 @@ these budgets cannot be disabled.
 Cancel stays in the same position when validation completes and Apply appears.
 :::
 
-::: info Repeated large-project imports on the ARM test system (Pi 5) and .68
+::: info Repeated large-project imports on the ARM test system (Pi 5) and Test system 2 (64)
 Checked for about 25 minutes on 19 October 2026 with App 0.1.327 and HA 2026.10.2:
 60 series adoptions per host, with 36 fields and 360 or 720 nested Core/Bubble/
 Mushroom Cards. Across both hosts, 238 cancellations during reading/checking or
@@ -309,7 +309,7 @@ Each confirmed import creates a local group; test groups were removed by
 restoring the original complete configuration.
 :::
 
-::: info HA rendering of 360/720 Cards on the ARM test system (Pi 5) and .68
+::: info HA rendering of 360/720 Cards on the ARM test system (Pi 5) and Test system 2 (64)
 Checked on 19 October 2026 with unchanged App 0.1.327 and HA 2026.10.2:
 original exported projects and owned dynamic copies with Core, Bubble 3.4.2
 and Mushroom 5.2.3. **Card-Mod 4.2.1 and UIX 8.4.0 run separately.** UIX handles
@@ -328,7 +328,7 @@ loading, rather than intermediate states.
 :::
 
 ::: warning Historical size finding with App 0.1.324
-Checked on 19 October 2026 with App 0.1.324 and HA 2026.10.2 on the ARM test system (Pi 5) and .68:
+Checked on 19 October 2026 with App 0.1.324 and HA 2026.10.2 on the ARM test system (Pi 5) and Test system 2 (64):
 24 actual imports, including 16 valid adoptions at 112/112 and eight rejections.
 Up to 30,008 files, 64 MiB of extra stored content and a 16-MiB README are
 accepted. Deflate archives with 128 MiB of content or an almost 4-GiB declared
@@ -354,7 +354,7 @@ overwrite the Editor. Valid JSON/YAML, root/dist layouts and single-word filenam
 such as temperature.js remain supported. All 418 package tests, including 40 new
 shipped-handler regressions, pass. Existing stored data is not migrated or rewritten.
 
-Updates on the ARM test system (Pi 5) and .68 with HA 2026.10.2 pass after fresh full backups: 60 actual
+Updates on the ARM test system (Pi 5) and Test system 2 (64) with HA 2026.10.2 pass after fresh full backups: 60 actual
 imports, 52 correct rejections and eight valid controls at 112/112. All 14 earlier
 incorrect adoptions are blocked. After every case, reload and complete original
 Editor exports match the backups; checked existing data, seven projects and six
@@ -362,7 +362,7 @@ plugins per host remain intact.
 :::
 
 ::: warning Historical finding: ambiguous HACS packages through App 0.1.323
-Native qualification on the ARM test system (Pi 5) and .68 with HA 2026.10.2 finds 14 incorrect adoptions
+Native qualification on the ARM test system (Pi 5) and Test system 2 (64) with HA 2026.10.2 finds 14 incorrect adoptions
 among 46 imports. Six packages per host with multiple projects or extra scripts
 are adopted despite a blocked report at 111/112. With same-identity projects,
 ZIP entry order selects the content. A conflicting script name in the Editor
@@ -386,7 +386,7 @@ available. Import stays blocked and the Editor state is unchanged. Actually
 missing files in verified ZIPs still produce errors. The stable list retains
 112 checks; all 378 package tests, including 54 integrity cases, pass.
 
-Updates on the ARM test system (Pi 5) and .68 with HA 2026.10.2 pass after fresh full backups: 60 rejections
+Updates on the ARM test system (Pi 5) and Test system 2 (64) with HA 2026.10.2 pass after fresh full backups: 60 rejections
 and four valid JSON/YAML controls succeed. All 26 cases with unavailable ZIP
 inventories show the ZIP cause first without invented missing-file claims.
 Actually missing files remain detectable. Complete Editor configurations match
@@ -401,7 +401,7 @@ flags, method, CRC and sizes; directory bounds, counts and overlapping entries
 are checked. Corrupted archives expose no importable package data to the Editor.
 All 52 new integrity cases and 376 package tests pass. Valid original archives
 remain byte-identical, preserving empty names and outer whitespace. Native
-updates from 0.1.321 to 0.1.322 pass on the ARM test system (Pi 5) and .68 with HA 2026.10.2 after full
+updates from 0.1.321 to 0.1.322 pass on the ARM test system (Pi 5) and Test system 2 (64) with HA 2026.10.2 after full
 backups: 30 corrupt/invalid packages per host are rejected and two valid JSON/YAML
 originals each pass at 112/112. After each rejection and reload, the complete
 Editor configuration stays unchanged. The original CRC failure is rejected.
@@ -417,7 +417,7 @@ after CRC failures. From 0.1.323, these dependent checks are marked unverified.
 
 ::: warning Historical CRC finding through App 0.1.321
 After fresh full backups, 21 actual Editor imports per host are checked on
-ARM test system (Pi 5) and .68 with HA 2026.10.2. Missing, empty, whitespace-only or conflicting names
+ARM test system (Pi 5) and Test system 2 (64) with HA 2026.10.2. Missing, empty, whitespace-only or conflicting names
 in HACS/package manifests, seven missing required files including declared
 locales, unreadable/truncated ZIPs and broken manifest/package JSON are correctly
 rejected in 19 cases per host. After each rejection and reload, the complete
@@ -427,7 +427,7 @@ package passes at 112/112 on both hosts.
 A ZIP with modified README bytes and an invalid stored CRC is nevertheless
 accepted at 112/112 on both hosts and replaces the local Editor state. An
 independent ZIP reader confirms the CRC error. Readiness in 0.1.321 did not prove
-complete ZIP integrity. CRC validation is corrected from 0.1.322 and confirmed on the ARM test system (Pi 5) and .68; regenerate damaged
+complete ZIP integrity. CRC validation is corrected from 0.1.322 and confirmed on the ARM test system (Pi 5) and Test system 2 (64); regenerate damaged
 packages from an intact original. Both original Editors were restored exactly
 from backups; existing files, projects, plugins and trash remain intact.
 :::
@@ -440,7 +440,7 @@ causes a false title failure. Original names and archives stay unchanged. All
 Conditional and invalid-manifest checks. The four saved failing ZIPs and four
 control packages pass unchanged at 112/112 and reexport byte-identically. Missing
 or mismatched manifest names remain rejected. Native updates from 0.1.320 to
-0.1.321 pass on the ARM test system (Pi 5) and .68 with HA 2026.10.2 after fresh full backups. The four
+0.1.321 pass on the ARM test system (Pi 5) and Test system 2 (64) with HA 2026.10.2 after fresh full backups. The four
 original failing JSON/YAML ZIPs without a control card each reach 112/112 in the
 actual Editor and reexport byte-identically. All eight cards retain exact names
 and Conditional conditions after import and reload. Existing data, seven projects
@@ -456,7 +456,7 @@ All 296 local package tests pass, including 37 new checks against the unparsed
 original source, JSON/YAML, nested Conditionals, draft restoration, Card packages
 and HACS. Deliberate renaming and entity selection remain available. Stored data
 is not rewritten; recover previously normalized names from the original or backup.
-Native updates from 0.1.319 to 0.1.320 pass on the ARM test system (Pi 5) and .68 with HA 2026.10.2 after
+Native updates from 0.1.319 to 0.1.320 pass on the ARM test system (Pi 5) and Test system 2 (64) with HA 2026.10.2 after
 full backups: 64 JSON/YAML file/paste cases with 128 captured outputs after import
 and reload, plus 16 actual Card package roundtrips, retain original values exactly,
 including nested Conditionals. Existing data and both original local Editors
@@ -475,7 +475,7 @@ When the package starts with an empty Entity name, readiness reports 110/112:
 package. A whitespace-only first name also fails the title check. Name data stays
 intact, but readiness is unreliable here. A named control card before the same
 eight cases passes. The title check is fixed from 0.1.321 and confirmed natively
-on the ARM test system (Pi 5) and .68 with the original ZIPs. The native empty-string failure on 0.1.320 is reproduced;
+on the ARM test system (Pi 5) and Test system 2 (64) with the original ZIPs. The native empty-string failure on 0.1.320 is reproduced;
 the whitespace case follows from `trim()` in the check implementation.
 :::
 
@@ -485,7 +485,7 @@ cards intact. Standalone Entity cards retain their custom names; explicit renami
 and entity selection still work. All 259 local package tests pass, including 19
 new checks of the actual Editor conversion, draft restoration and JSON/YAML/HACS
 export. Stored data is unchanged. Recover previously lost content by reimporting
-its original source or backup. Native updates on the ARM test system (Pi 5) and .68 pass with HA 2026.10.2
+its original source or backup. Native updates on the ARM test system (Pi 5) and Test system 2 (64) pass with HA 2026.10.2
 after full backups: 32 cases retain original structure through JSON/YAML file/paste
 imports and reload. Eight actual Card packages pass export, reimport and reload.
 Existing data and both original local Editor configurations remain unchanged.
@@ -506,11 +506,11 @@ export payload contents. Unsupported Markdown cards are rejected before the
 Editor state changes; Markdown support is not added. Supported standalone
 Entity and Conditional cards are also recognized as JSON, and YAML is checked
 structurally. All 240 local package tests pass, including 27 new parity tests.
-Native updates on the ARM test system (Pi 5) and .68 pass after full backups:24 Markdown rejections through
+Native updates on the ARM test system (Pi 5) and Test system 2 (64) pass after full backups:24 Markdown rejections through
 file/paste import retain Editor code, and eight nested JSON/YAML imports preserve
 structure. Existing data and original local Editors are preserved, including
 after reload. The earlier standalone losses pass retesting on 0.1.319;
-name normalization is fixed from 0.1.320 and passes native qualification on the ARM test system (Pi 5) and .68.
+name normalization is fixed from 0.1.320 and passes native qualification on the ARM test system (Pi 5) and Test system 2 (64).
 :::
 
 ::: info Extended Conditional rendering checked on 2026-10-18

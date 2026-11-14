@@ -2029,8 +2029,8 @@
         "de": {
           "path": "projects/atlas/card-editor.md",
           "status": "content-present",
-          "sha256": "6debf7df74d7ff452a38acb6750d4027c25b583b974d630ebee7f0c5376d92cb",
-          "words": 10772,
+          "sha256": "2941ebe42805bec8fb421b30bd5325eb07e84823f5b9c958c32208d5055a89a4",
+          "words": 10840,
           "headings": 15,
           "examples": 6,
           "versions": [
@@ -2080,8 +2080,8 @@
         "en": {
           "path": "en/projects/atlas/card-editor.md",
           "status": "content-present",
-          "sha256": "fac318567bc67516a9377c102d7203ea56073841e5ad78ad808bfe0782daf781",
-          "words": 11081,
+          "sha256": "21b75b77553af4bd08e6e3650a4afa856e84411f0c7e8cf85904f284c7b0ecd9",
+          "words": 11180,
           "headings": 15,
           "examples": 6,
           "versions": [
@@ -2138,8 +2138,8 @@
         "fr": {
           "path": "fr/projects/atlas/card-editor.md",
           "status": "content-present",
-          "sha256": "8e651cda7dba834d69662d77ff9b531a3e34e31b068a1f65be5f815fdfc1c0c2",
-          "words": 12139,
+          "sha256": "0daccc98824d28ad3834fae2d8ad472906b5eb8db7bdf2ae69a4ce169e8d9ec9",
+          "words": 12269,
           "headings": 15,
           "examples": 4,
           "versions": [
@@ -2206,8 +2206,8 @@
         "de": {
           "path": "projects/atlas/entwicklungsstand.md",
           "status": "content-present",
-          "sha256": "22cdde1b436969bd1190d3afcaa44e9a5e1230d990c456b265163e1a9df6406a",
-          "words": 7048,
+          "sha256": "f994f785dbc6752c807578a205b3e0c3caf42be3309e99d6671fb3655da82314",
+          "words": 7116,
           "headings": 9,
           "examples": 1,
           "versions": [
@@ -2263,8 +2263,8 @@
         "en": {
           "path": "en/projects/atlas/development-status.md",
           "status": "content-present",
-          "sha256": "f12ab47d1cb0b8fc771382eb9bbab7414d7749bd48f9e8567590cb5211cdd1c6",
-          "words": 7475,
+          "sha256": "bcab15329b02b85650fd644a2ba9574d54b647c5bd213d3c1fefa462e5786fc0",
+          "words": 7577,
           "headings": 9,
           "examples": 1,
           "versions": [
@@ -2327,8 +2327,8 @@
         "fr": {
           "path": "fr/projects/atlas/development-status.md",
           "status": "content-present",
-          "sha256": "bafc535e3f759a9fae516db0da666d9b2addbaceffce44192b56fddb517a43f3",
-          "words": 8078,
+          "sha256": "1373b0cba90c621f3add368feabb59a79c5d2a86d2b0ed288dbe3d89f000c1d2",
+          "words": 8212,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -2401,8 +2401,8 @@
         "de": {
           "path": "projects/atlas/frontend.md",
           "status": "content-present",
-          "sha256": "731ff708506cbce94d52fec8dd75ba03610096735aa27dbd39042a894e0d8568",
-          "words": 1714,
+          "sha256": "d5d9505cf17ba0956fa9c88dd8e55fc9916d443810f7afac2cd029aefd7c6924",
+          "words": 1722,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -2422,8 +2422,8 @@
         "en": {
           "path": "en/projects/atlas/frontend.md",
           "status": "content-present",
-          "sha256": "cd695b79445a96385d4eb7de125bd0656c004b375cb53420a0871016f0ef5a35",
-          "words": 1717,
+          "sha256": "12c2e8ff71c217ad44872ec92e09d489db701edcc66e073ceb9403eb98185de4",
+          "words": 1729,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -2450,8 +2450,8 @@
         "fr": {
           "path": "fr/projects/atlas/frontend.md",
           "status": "content-present",
-          "sha256": "6e4f2917499d028cd27bf75e68400c56fc3b56e2fde414dec820b8777247014e",
-          "words": 1972,
+          "sha256": "804ec6dd7697b1e72272b05bb550f0165f01aa67f5502a1714f0cc944449786d",
+          "words": 1986,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -2724,8 +2724,8 @@
         "de": {
           "path": "projects/atlas/tablet-test.md",
           "status": "content-present",
-          "sha256": "0a4272c1cabdafb211ed424439230ce08153277510dc0a14418d08a888ab7ed9",
-          "words": 257,
+          "sha256": "bb8a71a2a405fb6dc598f49cf03cba1dc838284cefa6be14c43dc1390f966926",
+          "words": 263,
           "headings": 1,
           "examples": 0,
           "versions": [
@@ -2740,8 +2740,8 @@
         "en": {
           "path": "en/projects/atlas/tablet-test.md",
           "status": "content-present",
-          "sha256": "3a4441011f4b22c4ebdaed36d86895784092e7b84e9acca5fdbf0c17a2f40005",
-          "words": 271,
+          "sha256": "54804039e70d2c6a999479bb131c42ef97f8678273aa7317798b36038bd47465",
+          "words": 280,
           "headings": 1,
           "examples": 0,
           "versions": [
@@ -2763,8 +2763,8 @@
         "fr": {
           "path": "fr/projects/atlas/tablet-test.md",
           "status": "content-present",
-          "sha256": "63fb374c5f405e85e40369d32972fd7d56242c15728cb56175437d2168c15a0e",
-          "words": 279,
+          "sha256": "99af94eaaa026096f52654e72247924b5b9ee25478df4b3ffa7f22c20994850b",
+          "words": 289,
           "headings": 1,
           "examples": 0,
           "versions": [
@@ -2791,8 +2791,8 @@
         "de": {
           "path": "projects/atlas/tablet-uix-dauertest.md",
           "status": "content-present",
-          "sha256": "2bcce3fcbee011914ce7426dea8a1a35688d3b103a7a944637813a42fea84db3",
-          "words": 462,
+          "sha256": "8d06e6175338f3e53dc46c8d47c1b1afb2c219827d153c25b55fad5b63b467c6",
+          "words": 470,
           "headings": 3,
           "examples": 0,
           "versions": [
@@ -2805,8 +2805,8 @@
         "en": {
           "path": "en/projects/atlas/tablet-uix-dauertest.md",
           "status": "content-present",
-          "sha256": "28c11277f591f39e4664fa1cac889e282b530c5bbd9e60b7786622a9ba4db8a0",
-          "words": 444,
+          "sha256": "6e4e2a615a14cd21832fde11bd05707c37f2495dabe24463cf60b89161c9c1a5",
+          "words": 456,
           "headings": 3,
           "examples": 0,
           "versions": [
@@ -2826,8 +2826,8 @@
         "fr": {
           "path": "fr/projects/atlas/tablet-uix-dauertest.md",
           "status": "content-present",
-          "sha256": "e63e44bfd90d9548b4f4549ee1ecbcea597da3fbe6a7f232936d5dea4b022813",
-          "words": 456,
+          "sha256": "bff7f4023469550185761e8d37828058e29667ffc20b0b48558a4379c2d85c0e",
+          "words": 470,
           "headings": 3,
           "examples": 0,
           "versions": [
@@ -4204,8 +4204,8 @@
         "de": {
           "path": "projects/dashboard-user-manager/index.md",
           "status": "content-present",
-          "sha256": "cbbb53efd072161dbcb65bb448b8d3a08e7ca93094c9ffc35f18b6136f20f510",
-          "words": 3681,
+          "sha256": "fe015929600c9bc7e86160d362e6ba5fc9ea29f3a06f299e04f0450a696b2a7d",
+          "words": 3693,
           "headings": 11,
           "examples": 2,
           "versions": [
@@ -4225,8 +4225,8 @@
         "en": {
           "path": "en/projects/dashboard-user-manager/index.md",
           "status": "content-present",
-          "sha256": "ac46c515b28efa7c37809a71048639db24a270f67594d18bfd2abae58bfc835a",
-          "words": 3952,
+          "sha256": "9db32df5db75b77f4c40a2ba4696bef920b9cf8caa31d0b4ff5c064e5a8fd4c4",
+          "words": 3970,
           "headings": 11,
           "examples": 2,
           "versions": [
@@ -4253,8 +4253,8 @@
         "fr": {
           "path": "fr/projects/dashboard-user-manager/index.md",
           "status": "content-present",
-          "sha256": "39465cc9ad906d9907e66208cc88cb532dc361e4d5ded015b76268c65f9a577e",
-          "words": 4443,
+          "sha256": "c3cb4ef0b19a0a9393d4cb0508cc46ca4b59fea44f7d02bc6d703871f58db4e3",
+          "words": 4465,
           "headings": 11,
           "examples": 2,
           "versions": [
@@ -7156,9 +7156,9 @@
         "de": {
           "path": "projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "cdcbc03d4f266a31bdf9aa5e1ebd5c021cb08647f87779b73afbb639bcef2f1c",
-          "words": 4644,
-          "headings": 34,
+          "sha256": "517af75b7d36ca985e43fb55bd9a80fff3f7d12716d5d53cb47ad50b660482ce",
+          "words": 4735,
+          "headings": 35,
           "examples": 2,
           "versions": [
             "0.1.12",
@@ -7185,6 +7185,7 @@
             "0.1.73",
             "0.1.74",
             "0.1.75",
+            "0.1.76",
             "0.1.8",
             "2026.10.4",
             "2026.11.1"
@@ -7194,9 +7195,9 @@
         "en": {
           "path": "en/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "ba3c577bb4754e6f86b1fac12d3146833a33e79ac494e60e32e88a4f84b15446",
-          "words": 4873,
-          "headings": 34,
+          "sha256": "505a5b3f47dcef35c746d4e77cde87c49548bbfc2edd0ede8aac334b2f5eb45e",
+          "words": 4966,
+          "headings": 35,
           "examples": 2,
           "versions": [
             "0.1.12",
@@ -7223,6 +7224,7 @@
             "0.1.73",
             "0.1.74",
             "0.1.75",
+            "0.1.76",
             "0.1.8",
             "2026.10.4",
             "2026.11.1"
@@ -7239,9 +7241,9 @@
         "fr": {
           "path": "fr/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "575fe2efb84a9a64cb33a715b19c222306853d3af035a2dadf35fe7a96d30ac6",
-          "words": 5609,
-          "headings": 34,
+          "sha256": "4c492611d835b76dfbad5859cd9312b82f13350bdcc9a045629c222ea0588267",
+          "words": 5717,
+          "headings": 35,
           "examples": 2,
           "versions": [
             "0.1.12",
@@ -7268,6 +7270,7 @@
             "0.1.73",
             "0.1.74",
             "0.1.75",
+            "0.1.76",
             "0.1.8",
             "2026.10.4",
             "2026.11.1"
@@ -15110,8 +15113,8 @@
         "de": {
           "path": "sammlung/testsysteme.md",
           "status": "content-present",
-          "sha256": "58a833371a2cd00b9a19f51a6697a565b11036fe31568abdef004b7485cf7fe9",
-          "words": 111,
+          "sha256": "0f1382455095612a4ef34f88020f393f060bf255a39d21494d7229bb62640f5e",
+          "words": 119,
           "headings": 1,
           "examples": 0,
           "versions": [],
@@ -15120,7 +15123,7 @@
         "en": {
           "path": "en/collection/test-systems.md",
           "status": "content-present",
-          "sha256": "ab6e0e89617f2aeab61460f11428f12b45d96cd9e240423e85026118450c4731",
+          "sha256": "691ed056ecf492bad6f93219eaf49c800df74be9ba6299b6ad0c6870af5501cc",
           "words": 120,
           "headings": 1,
           "examples": 0,
@@ -15137,8 +15140,8 @@
         "fr": {
           "path": "fr/collection/test-systems.md",
           "status": "content-present",
-          "sha256": "a68cebc47455073f2c5bc5a45ff0f6d0bc2547b8609a400f86e5dcc84320a21c",
-          "words": 142,
+          "sha256": "c192835d06d7196d39b9737a8429cf2530f130967e10fded1e4d7faa56663ce4",
+          "words": 126,
           "headings": 1,
           "examples": 0,
           "versions": [],

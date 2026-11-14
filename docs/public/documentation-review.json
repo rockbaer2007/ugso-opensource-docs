@@ -112,8 +112,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content.",
-      "source_sha256": "6debf7df74d7ff452a38acb6750d4027c25b583b974d630ebee7f0c5376d92cb",
-      "target_sha256": "8e651cda7dba834d69662d77ff9b531a3e34e31b068a1f65be5f815fdfc1c0c2"
+      "source_sha256": "2941ebe42805bec8fb421b30bd5325eb07e84823f5b9c958c32208d5055a89a4",
+      "target_sha256": "0daccc98824d28ad3834fae2d8ad472906b5eb8db7bdf2ae69a4ce169e8d9ec9"
     },
     {
       "source": "projects/atlas/entwicklungsstand.md",
@@ -128,8 +128,8 @@
       },
       "disposition": "supplemented",
       "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content. Test system inventory reviewed on 2026-10-28: user-provided VM/Raspberry Pi hardware, .193 replacement of .68, existing mobile qualification devices; historical test scope preserved.",
-      "source_sha256": "22cdde1b436969bd1190d3afcaa44e9a5e1230d990c456b265163e1a9df6406a",
-      "target_sha256": "bafc535e3f759a9fae516db0da666d9b2addbaceffce44192b56fddb517a43f3"
+      "source_sha256": "f994f785dbc6752c807578a205b3e0c3caf42be3309e99d6671fb3655da82314",
+      "target_sha256": "1373b0cba90c621f3add368feabb59a79c5d2a86d2b0ed288dbe3d89f000c1d2"
     },
     {
       "source": "projects/blocks-for-ha/advanced.md",

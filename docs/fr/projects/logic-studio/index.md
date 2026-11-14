@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.75 · Lignes d’origine des erreurs JavaScript et TypeScript
+description: HA Logic Studio Pro 0.1.76 · Autocomplétion et signatures de l’API de script
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.76
+
+Dans les éditeurs JavaScript et TypeScript, la saisie de `ha.` suggère les méthodes de l’API de script. La liste affiche les paramètres et les types de retour. L’éditeur met en évidence le paramètre en cours de saisie.
+
+Le test dans Chrome sur le [système de test PC (64)](/fr/collection/test-systems) a vérifié la sélection au clavier dans les deux éditeurs et les signatures de `ha.readState`, `ha.callAction` et `ha.pause`.
+
+[HA Logic Studio Pro 0.1.76 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.76)
 
 ## HA Logic Studio Pro 0.1.75
 

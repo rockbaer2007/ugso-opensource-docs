@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.75 · Original JavaScript and TypeScript error lines
+description: HA Logic Studio Pro 0.1.76 · Script API completion and signatures
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.76
+
+In the JavaScript and TypeScript editors, typing `ha.` suggests script API methods. The list shows parameters and return types. The editor highlights the current parameter while you enter a call.
+
+The Chrome test on the [PC (64) test system](/en/collection/test-systems) verified keyboard selection in both editors and the signatures for `ha.readState`, `ha.callAction` and `ha.pause`.
+
+[HA Logic Studio Pro 0.1.76 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.76)
 
 ## HA Logic Studio Pro 0.1.75
 

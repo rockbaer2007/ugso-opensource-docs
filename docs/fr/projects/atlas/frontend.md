@@ -190,7 +190,7 @@ Téléchargement HACS, Supervisor, ARM64 et retour à une ancienne intégration
 n’ont pas été revérifiés sous 2026.9.4.
 
 Le **21/10/2026**, la combinaison exacte **HA 2026.10.2**, **intégration 0.1.306 /
-App 0.1.327** est également vérifiée sur le clone de test **.68** : Hub,
+App 0.1.327** est également vérifiée sur le clone de test **[Système de test 2 (64)](/fr/collection/test-systems#testsystem-2)** : Hub,
 Administration et Editor intégrés, connexion/recherche d’entités en direct,
 enregistrement local/rechargement et paquets HACS JSON/YAML avec **112/112**
 chacun et export/import/réexport identiques octet par octet. Après un véritable
@@ -198,7 +198,7 @@ redémarrage de HA Core, l’éditeur ouvert se reconnecte automatiquement sans
 rechargement. L’éditeur initial, sept projets serveur, six plugins et les
 paramètres/fichiers capturés sont conservés ; l’URL temporaire du Runtime est
 rétablie. **système de test ARM (Pi 5) reste inchangé et n’a pas été contacté.** Trois sauvegardes
-complètes restent sur .68. Ce test ne constitue ni une mise à jour HA, ni une
+complètes restent sur Système de test 2 (64). Ce test ne constitue ni une mise à jour HA, ni une
 conversion de schéma, ni une nouvelle validation d’installation HACS/ARM64.
 HA conserve l’URL initiale comme option explicite ; seuls les horodatages
 administratifs changent par ailleurs.

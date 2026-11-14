@@ -12,7 +12,7 @@ Résultat fonctionnel rapporté, sans mesure FPS/mémoire ni longue durée. Les 
 
 Sauvegardes complètes avant le test. Tableaux, ressources et états propres retirés ; fichiers WWW dans la corbeille récupérable File Studio. Les anciens liens temporaires sont retirés et ne sont plus actifs.
 
-Sept projets et six plugins par hôte, 531 fichiers existants capturés sur le système de test ARM (Pi 5) et neuf sur .68 conservés, avec thèmes initiaux et anciennes entrées de corbeille. Trois sauvegardes complètes récentes par hôte ; sauvegardes PC conservées.
+Sept projets et six plugins par hôte, 531 fichiers existants capturés sur le système de test ARM (Pi 5) et neuf sur [Système de test 2 (64)](/fr/collection/test-systems#testsystem-2) conservés, avec thèmes initiaux et anciennes entrées de corbeille. Trois sauvegardes complètes récentes par hôte ; sauvegardes PC conservées.
 
 Pour les futurs tests : vérification légère du navigateur, puis 12, 360 et 720 cartes. Augmenter seulement si fluide ; vérifier portrait/paysage, défilement, états synthétiques, thèmes et reconnexion sans rechargement. Restaurer le thème initial. Créer les tableaux propres visibles dans la barre latérale sans Admin-only. Ne jamais charger Card-Mod et UIX en parallèle.
 

@@ -6,17 +6,17 @@ description: État actuel du développement d'ATLAS.
 
 ## Systèmes de test {#variantes-materielles-testees}
 
-- **système de test PC (64) – 192.168.178.193 :** nouvelle VM Proxmox (amd64) avec **8 Go de RAM et 4 vCPU** ; remplace .68 pour les prochains tests sur VM.
-- **.68 – 192.168.178.68 :** ancienne VM Proxmox (amd64) avec **8 Go de RAM et 4 vCPU**. Les comptes rendus concernant .68 sont conservés ci-dessous comme historique.
+- **système de test PC (64) – 192.168.178.193 :** nouvelle VM Proxmox (amd64) avec **8 Go de RAM et 4 vCPU** ; remplace [Système de test 2 (64)](/fr/collection/test-systems#testsystem-2) pour les prochains tests sur VM.
+- **Système de test 2 (64) – 192.168.178.68 :** ancienne VM Proxmox (amd64) avec **8 Go de RAM et 4 vCPU**. Les comptes rendus concernant Système de test 2 (64) sont conservés ci-dessous comme historique.
 - **système de test ARM (Pi 5) – 192.168.178.177 :** **Raspberry Pi 5 (ARM64) avec 8 Go de RAM et 4 cœurs CPU**.
 - **Téléphone :** Blackview BV6200 Pro sous **Android 14 / DokeOS 4.0**, tests mobiles dans **Chrome**.
 - **Tablette :** Samsung Tab A6 sous **Android 11 / LineageOS**, tests mobiles dans **Chrome**.
 
-Affectation des systèmes indiquée par l’utilisateur le **28/10/2026**. La nouvelle système de test PC (64) est enregistrée comme système de remplacement ; les résultats obtenus sur .68 ne constituent pas automatiquement une validation du système de test PC (64). Les comptes rendus ci-dessous précisent le périmètre de chaque test.
+Affectation des systèmes indiquée par l’utilisateur le **28/10/2026**. La nouvelle système de test PC (64) est enregistrée comme système de remplacement ; les résultats obtenus sur Système de test 2 (64) ne constituent pas automatiquement une validation du système de test PC (64). Les comptes rendus ci-dessous précisent le périmètre de chaque test.
 
 **App 0.1.334 :** aperçu et confirmation près des actions de projet, avant les
 brouillons locaux. Focus/défilement, chargement et lectures à durée limitée
-évitent un aperçu invisible ou une attente illimitée de lecture. Vérifié sur .68,
+évitent un aperçu invisible ou une attente illimitée de lecture. Vérifié sur Système de test 2 (64),
 données conservées ; confirmation visible sur les deux appareils et conflit
 d’enregistrement commun désormais confirmés par l’utilisateur. système de test ARM (Pi 5) inchangé.
 
@@ -53,7 +53,7 @@ date, association explicite à l’onglet et identifiant facilitent la sélectio
 Recherche multiterme, nombre de résultats, résultats vides et retour à la sélection
 après effacement du filtre sont disponibles en DE/EN/FR. Les sources enregistrées
 ne sont ni réécrites ni supprimées ; la reprise reste explicite.
-La vérification native sur .68 réussit : 32 sources anciennes identiques octet par
+La vérification native sur Système de test 2 (64) réussit : 32 sources anciennes identiques octet par
 octet, homonymes, reprises distinctes et données conservées. Trois sauvegardes
 complètes restent ; système de test ARM (Pi 5) inchangé. Le 22/10/2026, l’utilisateur confirme Chrome sur
 Blackview BV6200 Pro (Android 14/DokeOS 4.0) et Samsung Tab A6 (Android 11/LineageOS) :
@@ -62,14 +62,14 @@ distinctes fonctionnent. Projets serveur, page et entrée latérale propres au t
 sont nettoyés ; données initiales conservées. Zéro source avant la première reprise
 explicite d’un projet ne signifiait pas une perte de données.
 
-**Arrêt du navigateur pendant un nouvel import réussi sur .68.** L’arrêt forcé
+**Arrêt du navigateur pendant un nouvel import réussi sur Système de test 2 (64).** L’arrêt forcé
 des processus Chrome après écriture locale, avant mise à jour du pointeur,
 conserve le nouveau A avec proposition explicite de reprise et la source B
 distincte. Annuler l’aperçu ne change rien ; nouveau A, prédécesseur et B retrouvent
 leurs contenus et réglages (la reprise sélectionne la première carte). Les 20
 anciennes sources du profil de test restent identiques octet par octet ; éditeurs
 et configuration globale sont rétablis, même après recharge. Fichiers de test
-dans la corbeille et trois sauvegardes complètes sur .68 ; système de test ARM (Pi 5) inchangé.
+dans la corbeille et trois sauvegardes complètes sur Système de test 2 (64) ; système de test ARM (Pi 5) inchangé.
 Ce contrôle couvre une limite entre deux écritures, pas une panne électrique
 ni une interruption dans l’opération Storage atomique. Aucune nouvelle version.
 
@@ -82,14 +82,14 @@ distincts pour erreurs locales/de session restent conservés. Cela corrige le d�
 0.1.330 du nouveau profil ; ses fichiers et 46 anciennes sources étaient préservés.
 Détails : [Card Editor](card-editor.md).
 
-Mise à jour sur .68 (HA 2026.10.2) et qualification native import/recharge réussies
+Mise à jour sur Système de test 2 (64) (HA 2026.10.2) et qualification native import/recharge réussies
 dans les deux ordres : import répété, annulation/fichier invalide et écritures
 locales/de session bloquées avec nouveaux essais sûrs. Comparaisons complètes des
 exports et 48 anciennes sources conformes ; états et données conservés, fichiers
 de test nettoyés et trois sauvegardes complètes gardées. système de test ARM (Pi 5) inchangé. La reprise
 du brouillon présélectionné reste explicite.
 
-**Qualification combinée de deux onglets réussie :** sur .68, avec méthodes de
+**Qualification combinée de deux onglets réussie :** sur Système de test 2 (64), avec méthodes de
 session bloquées, deux brouillons distincts restent modifiables/exportables pendant
 un vrai redémarrage HA. Reconnexion automatique, reprises explicites séparées après
 recharge et sauvegardes ultérieures confirmées réussissent avec comparaison des
@@ -108,7 +108,7 @@ session bloqué n’empêche plus la sauvegarde locale. Les erreurs locales rest
 distinctes. Le défaut du test 0.1.329 avec 20 sources conservées est corrigé.
 Voir [Card Editor](card-editor.md).
 
-La nouvelle qualification sur .68 (HA 2026.10.2) réussit avec quota réel de session,
+La nouvelle qualification sur Système de test 2 (64) (HA 2026.10.2) réussit avec quota réel de session,
 méthodes/accès bloqués, export et reprise manuelle. Les changements de langue/liste
 conservent le message ; une sauvegarde entièrement confirmée le retire. Les erreurs
 locales restent distinctes. Les 31 anciennes sources restent identiques octet par
@@ -124,7 +124,7 @@ Autres onglets, versions précédentes et anciennes sources restent disponibles.
 Les marques invalides ne changent pas la sélection ; les anciennes versions
 nécessitent encore une sélection manuelle. Voir [Card Editor](card-editor.md).
 
-Mise à jour et interruption ciblée après écriture/avant pointeur réussies sur .68
+Mise à jour et interruption ciblée après écriture/avant pointeur réussies sur Système de test 2 (64)
 avec HA 2026.10.2 : offre/aperçu DE/EN/FR, annulation sans changement, reprise
 confirmée exacte et aucun mélange avec un brouillon étranger plus récent. Les 13
 sources existantes et les deux éditeurs initiaux sont inchangés ; comparaison des
@@ -132,7 +132,7 @@ données réussie, objets de test propres retirés et trois sauvegardes complèt
 conservées. système de test ARM (Pi 5) inchangé. Ce test utilise une exception contrôlée à la frontière
 d’écriture, pas un nouvel arrêt forcé du navigateur.
 
-**Collision corrigée dans l’App 0.1.328 (21/10/2026, .68) :** deux onglets
+**Collision corrigée dans l’App 0.1.328 (21/10/2026, Système de test 2 (64)) :** deux onglets
 sauvegardent indépendamment et retrouvent chacun leur brouillon après
 rechargement. Les exports complets correspondent avant/après restauration,
 y compris après des modifications locales pendant l’arrêt réel de l’App.
@@ -141,7 +141,7 @@ onglet. Anciennes sources et brouillon commun restent disponibles ; les
 enregistrements serveur périmés restent bloqués. Sélection et aperçu DE/EN/FR
 sont vérifiés. Voir [Card Editor](card-editor.md) pour utilisation et limites.
 Projet de test retiré, éditeurs initiaux/données capturées conservés, trois
-sauvegardes complètes sur .68 ; système de test ARM (Pi 5) inchangé. Le redémarrage complet de Chrome
+sauvegardes complètes sur Système de test 2 (64) ; système de test ARM (Pi 5) inchangé. Le redémarrage complet de Chrome
 avec restauration de session réussit ensuite : nouveau processus principal,
 pointeurs d’onglets distincts restaurés, comparaison complète des brouillons et
 sélection manuelle des sources. L’arrêt forcé de tous les processus Chrome
@@ -157,12 +157,12 @@ brouillon complet pour sélection manuelle ; la version précédente confirmée
 reste présélectionnée. L’onglet B et huit anciennes sources correspondent à leurs
 sauvegardes. La sonde propre laisse les fichiers installés de l’App inchangés.
 Éditeurs initiaux/données conservés, objets de test actifs retirés, trois sauvegardes
-complètes sur .68 ; système de test ARM (Pi 5) inchangé. Aucun arrêt dans l’appel natif atomique ni test
+complètes sur Système de test 2 (64) ; système de test ARM (Pi 5) inchangé. Aucun arrêt dans l’appel natif atomique ni test
 de coupure électrique/panne de disque. Voir [Card Editor](card-editor.md) pour
 la reprise et les limites du test.
 
 La [matrice de compatibilité HA](frontend.md) comprend aussi HA **2026.10.2**
-avec l’intégration 0.1.306 et l’App 0.1.327 sur **.68** : affichage intégré,
+avec l’intégration 0.1.306 et l’App 0.1.327 sur **Système de test 2 (64)** : affichage intégré,
 connexion en direct, enregistrement local/rechargement, cycles HACS JSON/YAML
 identiques octet par octet et reconnexion automatique après redémarrage HA.
 L’éditeur initial et les données capturées sont conservés, l’URL du Runtime est
@@ -174,13 +174,13 @@ Limites avant lecture/CRC, annulation, surveillance de 15 secondes et adoption
 explicite préservent l’éditeur jusqu’à confirmation. Le même fichier peut être
 sélectionné après annulation. Les 431 tests et la compilation du workspace
 réussissent. Voir le [guide Card Editor](card-editor.md).
-La vérification native sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2 réussit après sauvegardes
+La vérification native sur le système de test ARM (Pi 5) et Système de test 2 (64) avec HA 2026.10.2 réussit après sauvegardes
 complètes : 20 cas limites, six annulations, deux nouvelles sélections du même
 fichier et deux adoptions explicites. Éditeurs originaux complets, fichiers,
 projets et plugins vérifiés sont conservés ; les deux hôtes exécutent 0.1.327.
 
 **Imports répétés de grands projets avec l’App 0.1.327 inchangée.** Environ
-25 minutes sur le système de test ARM (Pi 5) und .68 : 60 adoptions en série par hôte, 36 champs contenant
+25 minutes sur le système de test ARM (Pi 5) et Système de test 2 (64) : 60 adoptions en série par hôte, 36 champs contenant
 360/720 cartes imbriquées, 238 annulations et 116 nouvelles sélections du même
 fichier au total. Quatre cycles HACS réels sont identiques octet par octet ;
 trois rechargements par hôte et un paquet valide de 24 MiB réussissent. Les
@@ -188,7 +188,7 @@ trois rechargements par hôte et un paquet valide de 24 MiB réussissent. Les
 navigateur n’est pas une mesure isolée d’ATLAS ; le rendu HA est vérifié
 séparément ci-dessous.
 
-**Le rendu HA des grands projets réussit.** Sur le système de test ARM (Pi 5) und .68 avec l’App 0.1.327 et
+**Le rendu HA des grands projets réussit.** Sur le système de test ARM (Pi 5) et Système de test 2 (64) avec l’App 0.1.327 et
 HA 2026.10.2 : projets originaux et dynamiques de 360/720 cartes, Card-Mod 4.2.1
 et UIX 8.4.0 strictement séparés. UIX traite aussi `card_mod`. Clair/sombre,
 héritage CSS, Mushroom Jinja et huit reconnexions automatiques réussissent :
@@ -201,13 +201,13 @@ données conservées, trois sauvegardes complètes par hôte. Sans mesure FPS/lo
 durée pour cette première étape. Voir le [résultat tablette](tablet-test.md).
 
 **Test prolongé UIX tablette terminé :** l’utilisateur confirme 60 minutes par
-hôte avec 720 cartes, thèmes et reconnexion sur le système de test ARM (Pi 5) und .68, UIX 8.4.0 seul.
+hôte avec 720 cartes, thèmes et reconnexion sur le système de test ARM (Pi 5) et Système de test 2 (64), UIX 8.4.0 seul.
 Objets propres et UIX temporaire retirés, comparaison des données réussie et trois
 sauvegardes complètes par hôte. Sans mesure indépendante FPS/mémoire/fuite.
 Voir le [résultat prolongé](tablet-uix-dauertest.md).
 
 **Constat historique des tailles avec l’App 0.1.324.**
-24 imports réels sur le système de test ARM (Pi 5) und .68 : 16 adoptions à 112/112 jusqu’à 30 008 fichiers
+24 imports réels sur le système de test ARM (Pi 5) et Système de test 2 (64) : 16 adoptions à 112/112 jusqu’à 30 008 fichiers
 ou 64 MiB de contenu supplémentaire, et huit refus corrects de ZIP compressés
 ou tronqués. Éditeurs originaux et données vérifiées sont conservés. Recharger
 juste après sélection conserve les deux originaux, sans qualifier l’annulation
@@ -218,12 +218,12 @@ Voir le [guide Card Editor](card-editor.md).
 identités de scripts et vérification complète bloquent avant toute adoption.
 Les 418 tests et 40 nouvelles régressions du gestionnaire/des identités réussissent.
 Exports valides et données enregistrées sont conservés.
-Les mises à jour natives sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2 réussissent après
+Les mises à jour natives sur le système de test ARM (Pi 5) et Système de test 2 (64) avec HA 2026.10.2 réussissent après
 sauvegardes complètes : 60 cas, 52 refus corrects, huit imports valides à 112/112
 et les 14 anciens imports incorrects bloqués. Éditeurs d’origine complets et
 données contrôlées sont conservés.
 
-**Constat historique en 0.1.323 : paquets HACS ambigus.** Sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2,
+**Constat historique en 0.1.323 : paquets HACS ambigus.** Sur le système de test ARM (Pi 5) et Système de test 2 (64) avec HA 2026.10.2,
 46 imports réels donnent 26 refus corrects, six témoins valides et 14 imports
 incorrects. Plusieurs projets/scripts peuvent être adoptés malgré un rapport
 bloqué ; un nom de script contradictoire du plan passe même à 112/112. L’ordre
@@ -235,7 +235,7 @@ L’App 0.1.322 vérifie le CRC32 de chaque entrée ZIP stockée et la cohérenc
 en-têtes/répertoires avant l’import HACS. Les archives endommagées ou non prises
 en charge restent hors de l’éditeur. Les 376 tests, dont 52 nouveaux cas
 d’intégrité, et quatre cycles d’archives originales identiques réussissent.
-La mise à jour native sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2 réussit après sauvegardes
+La mise à jour native sur le système de test ARM (Pi 5) et Système de test 2 (64) avec HA 2026.10.2 réussit après sauvegardes
 complètes : 60 refus corrects préservent les éditeurs complets après rechargement
 et quatre témoins JSON/YAML valides atteignent 112/112. Éditeurs d’origine et
 données restent inchangés. L’App 0.1.323 corrige ensuite les faux avis de fichiers
@@ -243,12 +243,12 @@ absents : les erreurs ZIP bloquent en premier et les contrôles dépendants rest
 non vérifiés. Les absences réelles dans un ZIP vérifié restent des erreurs.
 Les 378 tests réussissent ; voir [Card Editor](./card-editor).
 
-La qualification native 0.1.323 sur le système de test ARM (Pi 5) und .68 réussit après sauvegardes complètes :
+La qualification native 0.1.323 sur le système de test ARM (Pi 5) et Système de test 2 (64) réussit après sauvegardes complètes :
 64 cas, dont 26 ZIP non vérifiables sans faux fichiers absents, 60 refus sûrs et
 quatre imports valides à 112/112. Éditeurs d’origine complets et données contrôlées
 restent conservés.
 
-La qualification négative HACS native sur le système de test ARM (Pi 5) und .68 est terminée avec 21 paquets
+La qualification négative HACS native sur le système de test ARM (Pi 5) et Système de test 2 (64) est terminée avec 21 paquets
 par hôte après sauvegardes complètes : 38 refus corrects préservent les éditeurs
 complets après rechargement et deux témoins valides réussissent. L’App 0.1.321
 avait un défaut CRC : un README endommagé dans le ZIP est accepté deux fois à 112/112
@@ -261,7 +261,7 @@ vide sans changer les noms. Les deux contrôles utilisent le nom du paquet.
 Les 324 tests locaux réussissent ; les huit archives originales/témoins sauvegardées
 passent sans modification à 112/112 et se réexportent à l’identique. Les manifestes
 invalides restent refusés. La mise à jour native de 0.1.320 vers 0.1.321 réussit
-sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2 après sauvegardes complètes : les quatre ZIP
+sur le système de test ARM (Pi 5) et Système de test 2 (64) avec HA 2026.10.2 après sauvegardes complètes : les quatre ZIP
 JSON/YAML originaux en échec sans carte témoin atteignent chacun 112/112 et se
 réexportent à l’identique. Noms et conditions restent exacts après import et
 rechargement ; données et éditeurs locaux d’origine sont inchangés.
@@ -271,7 +271,7 @@ L’App 0.1.320 conserve littéralement les noms Entity vides et les espaces ou
 tabulations extérieurs. Les 296 tests locaux réussissent ; 37 nouveaux contrôles
 comparent à la source originale avant analyse : JSON/YAML, brouillons, paquets
 Card et HACS. Un nom absent conserve son remplacement. Aucune donnée enregistrée
-n’est modifiée. La mise à jour native de système de test ARM (Pi 5) und .68 réussit avec HA 2026.10.2 après
+n’est modifiée. La mise à jour native de système de test ARM (Pi 5) et Système de test 2 (64) réussit avec HA 2026.10.2 après
 de nouvelles sauvegardes complètes : 64 cas d’import, 128 sorties identiques à la
 source et 16 cycles de paquets Card réels. Paramètres, fichiers, sept projets et
 six plugins par hôte, corbeille et éditeurs locaux d’origine sont conservés.
@@ -287,7 +287,7 @@ comportement CSS dans [Card Editor](./card-editor).
 L’App 0.1.319 corrige les pertes des cartes seules lors du transfert réel vers
 l’éditeur : conditions Conditional et noms Entity sont conservés. Les 259 tests
 locaux réussissent, dont 19 nouveaux contrôles éditeur/brouillon/export. Les
-données enregistrées ne changent pas. La mise à jour native de système de test ARM (Pi 5) und .68 avec
+données enregistrées ne changent pas. La mise à jour native de système de test ARM (Pi 5) et Système de test 2 (64) avec
 HA 2026.10.2 est vérifiée après sauvegardes complètes : 32 cas JSON/YAML par
 fichier/collage conservent la source après rechargement et huit paquets Card réels
 passent l’export/réimport. Données, sept projets et six plugins par hôte ainsi que
@@ -298,7 +298,7 @@ large est corrigée. Voir [Card Editor](./card-editor) pour le périmètre et le
 
 L’App 0.1.318 aligne la prévisualisation d’import sur l’analyseur réel et refuse
 les cartes Markdown non prises en charge, même imbriquées. Les 240 tests locaux
-réussissent, dont 27 nouveaux tests de parité. La mise à jour native de système de test ARM (Pi 5) und .68
+réussissent, dont 27 nouveaux tests de parité. La mise à jour native de système de test ARM (Pi 5) et Système de test 2 (64)
 avec HA 2026.10.2 est vérifiée après sauvegardes complètes :24 refus Markdown
 conservent l’éditeur et huit imports imbriqués conservent la structure. Les données
 et éditeurs locaux sont conservés. Défauts constatés en 0.1.318 : les cartes Conditional seules
@@ -306,7 +306,7 @@ perdent leurs conditions lors du transfert vers l’éditeur ; les cartes Entity
 seules perdent leur nom personnalisé (JSON/YAML sur les deux hôtes).
 
 Les conditions étendues sont vérifiées sur les systèmes de test autorisés système de test ARM (Pi 5)
-et .68 avec HA 2026.10.2 : 1 008 décisions de visibilité, JSON/YAML,
+et Système de test 2 (64) avec HA 2026.10.2 : 1 008 décisions de visibilité, JSON/YAML,
 enregistrement/réouverture et cycles HACS identiques octet par octet avec 112/112
 contrôles chacun. Les données existantes et les éditeurs locaux sont conservés.
 La divergence de prévisualisation Markdown est corrigée localement en0.1.318 ; voir le
@@ -401,7 +401,7 @@ existantes sont restaurées exactement.
 - Gestion partagée des plugins, projets serveur et mises à jour HACS de
   l’intégration avec redémarrage HA vérifiés sur Pi 5 et Proxmox. La matrice HA
   couvre 2026.10.1, 2026.9.4 isolément et la combinaison exacte 2026.10.2
-  sur .68, pas toutes les versions HA.
+  sur Système de test 2 (64), pas toutes les versions HA.
 - Export/import des cartes, enregistrement réel du dépôt HACS, releases
   étiquetées, mises à jour et récupération vérifiés isolément. Fichiers de langue
   manquants et versions mélangées sont détectés ; les contrôles de 0.1.310/0.1.311

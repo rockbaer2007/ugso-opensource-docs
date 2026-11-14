@@ -172,14 +172,14 @@ Proxmox were unchanged for this additional check. HACS download, Supervisor,
 ARM64 and integration rollback were not repeated on 2026.9.4.
 
 On **2026-10-21**, the exact **HA 2026.10.2**, **integration 0.1.306 / App
-0.1.327** combination is also qualified on test clone **.68**: embedded Hub,
+0.1.327** combination is also qualified on test clone **[Test system 2 (64)](/en/collection/test-systems#testsystem-2)**: embedded Hub,
 Administration and Editor, live connection/entity search, browser-local
 save/reload and JSON/YAML HACS bundles with **112/112** each and byte-identical
 export/import/re-export. After a real HA Core restart, the open Editor reconnects
 automatically without reloading. The original Editor, seven server projects,
 six plugins and captured settings/files are preserved; the temporary Runtime
 URL is restored. **ARM test system (Pi 5) is unchanged and was not accessed.** Three full backups
-remain on .68. This is not an HA update, schema conversion or repeated HACS
+remain on Test system 2 (64). This is not an HA update, schema conversion or repeated HACS
 repository-installation/ARM64 qualification. HA retains the original URL as an
 explicit option; only administrative timestamps change otherwise.
 

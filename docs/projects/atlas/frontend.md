@@ -192,14 +192,14 @@ für diese zusätzliche Prüfung nicht verändert. HACS-Download, Supervisor,
 ARM64 und Integrations-Rollback wurden unter 2026.9.4 nicht erneut geprüft.
 
 Am **21.10.2026** ist außerdem die genaue Kombination **HA 2026.10.2**,
-**Integration 0.1.306 / App 0.1.327** auf dem Testklon **.68** geprüft:
+**Integration 0.1.306 / App 0.1.327** auf dem Testklon **[Testsystem 2 (64)](/sammlung/testsysteme#testsystem-2)** geprüft:
 eingebetteter Hub, Administration und Editor, Live-Verbindung und Entitätssuche,
 lokales Speichern/Neuladen sowie JSON-/YAML-HACS-Pakete mit je **112/112** und
 bytegleichem Export/Rückimport/Rückexport. Nach einem echten HA-Core-Neustart
 verbindet sich der offene Editor ohne Neuladen automatisch wieder. Originaleditor,
 sieben Serverprojekte, sechs Plugins und erfasste Einstellungen/Dateien sind
 erhalten; die vorübergehende Runtime-Adresse ist zurückgestellt. **Testsystem ARM (Pi 5) bleibt
-unverändert und wurde nicht aufgerufen.** Auf .68 bleiben drei Vollbackups.
+unverändert und wurde nicht aufgerufen.** Auf Testsystem 2 (64) bleiben drei Vollbackups.
 Dies ist kein HA-Update, keine Schemaumwandlung und keine erneute Prüfung einer
 HACS-Repository-Installation oder von ARM64. Die ursprüngliche Adresse wird in
 den HA-Optionen ausdrücklich gespeichert; nur Verwaltungszeitstempel ändern sich.
