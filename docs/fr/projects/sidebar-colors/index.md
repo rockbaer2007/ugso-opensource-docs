@@ -5,7 +5,7 @@ description: Couleurs et opacité par entrée du menu HA, directement dans l’�
 # Couleurs du menu latéral / Sidebar Colors
 
 ::: info HA 2026.11 : sélecteur corrigé
-La version **0.1.1** prend en charge `ha-md-list-item` et `ha-list-item-button` dans le dialogue natif. Les 27 tests locaux réussissent : régressions DOM des deux types de lignes HA, opacité, annulation, enregistrement, réouverture et réinitialisation au thème. Le correctif correspondant du Manager a été testé sur .177 ; Sidebar Colors n’a pas été installé en parallèle. Couleurs et clés de stockage existantes conservées.
+La version **0.1.1** prend en charge `ha-md-list-item` et `ha-list-item-button` dans le dialogue natif. Les 27 tests locaux réussissent : régressions DOM des deux types de lignes HA, opacité, annulation, enregistrement, réouverture et réinitialisation au thème. Le correctif correspondant du Manager a été testé sur le système de test ARM (Pi 5) ; Sidebar Colors n’a pas été installé en parallèle. Couleurs et clés de stockage existantes conservées.
 :::
 
 [Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).

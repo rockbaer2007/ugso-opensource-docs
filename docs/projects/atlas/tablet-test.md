@@ -12,7 +12,7 @@ Funktionale Nutzerrückmeldung, keine FPS-/Speicher- oder Langzeitmessung. Separ
 
 Frische Vollbackups vor dem Test. Eigene Dashboards, Ressourcen und Zustände sind entfernt; WWW-Dateien im wiederherstellbaren File-Studio-Papierkorb. Alte Testlinks sind entfernt und keine aktiven Einstiegsseiten.
 
-Alle sieben Projekte und sechs Plugins je Host sowie 531 erfasste Bestandsdateien auf .177 und neun auf .68 bleiben erhalten, einschließlich ursprünglicher Theme-Einstellungen und alter Papierkorbeinträge. Je drei neueste Vollbackups bleiben; PC-Sicherungen erhalten.
+Alle sieben Projekte und sechs Plugins je Host sowie 531 erfasste Bestandsdateien auf dem Testsystem ARM (Pi 5) und neun auf .68 bleiben erhalten, einschließlich ursprünglicher Theme-Einstellungen und alter Papierkorbeinträge. Je drei neueste Vollbackups bleiben; PC-Sicherungen erhalten.
 
 Für spätere Prüfungen zuerst einen leichten Browsercheck, dann 12, 360 und 720 Karten verwenden. Nur bei flüssiger Bedienung steigern; Hoch-/Querformat, Scrollen, synthetische Zustände, Themes und Wiederverbindung ohne Neuladen prüfen. Ursprüngliches Theme wiederherstellen. Eigene Dashboards ohne Admin-only und sichtbar in der Seitenleiste erstellen. Card-Mod und UIX niemals parallel laden.
 

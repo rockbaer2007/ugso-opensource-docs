@@ -2,19 +2,19 @@
 
 ## Test systems {#tested-hardware-variants}
 
-- **.193 – 192.168.178.193:** new Proxmox VM (amd64) with **8 GB RAM and 4 vCPUs**; replaces .68 for future VM testing.
+- **PC (64) test system – 192.168.178.193:** new Proxmox VM (amd64) with **8 GB RAM and 4 vCPUs**; replaces .68 for future VM testing.
 - **.68 – 192.168.178.68:** previous Proxmox VM (amd64) with **8 GB RAM and 4 vCPUs**. The .68 test reports below remain as historical records.
-- **.177 – 192.168.178.177:** **Raspberry Pi 5 (ARM64) with 8 GB RAM and 4 CPU cores**.
+- **ARM test system (Pi 5) – 192.168.178.177:** **Raspberry Pi 5 (ARM64) with 8 GB RAM and 4 CPU cores**.
 - **Phone:** Blackview BV6200 Pro with **Android 14 / DokeOS 4.0**, mobile testing in **Chrome**.
 - **Tablet:** Samsung Tab A6 with **Android 11 / LineageOS**, mobile testing in **Chrome**.
 
-System assignments supplied by the user on **2026-10-28**. The new .193 is recorded as the replacement system; previous .68 results do not automatically qualify .193. The reports below describe each test's scope.
+System assignments supplied by the user on **2026-10-28**. The new PC (64) test system is recorded as the replacement system; previous .68 results do not automatically qualify PC (64) test system. The reports below describe each test's scope.
 
 **App 0.1.334:** project preview and confirmation appear beside project actions,
 before local drafts. Focus/scroll, loading feedback and bounded read requests
 address invisible or indefinitely pending opening previews. Checked on .68 with
 existing data retained; the user now confirms visible confirmation on both devices
-and the shared save conflict. .177 is untouched.
+and the shared save conflict. ARM test system (Pi 5) is untouched.
 
 **Cross-device conflict/Wi-Fi test passed:** user confirmation on 2026-10-22,
 Chrome on phone and tablet. Phone saved, stale tablet preview rejected and tablet
@@ -22,19 +22,19 @@ draft retained. Wi-Fi loss before phone apply reports an error, keeps its offlin
 draft and reconnects. Independent server comparison retains exact revision 2 with
 the phone script before/after the offline attempt. Owned fixtures cleaned up,
 seven original projects and existing data retained; three newest full backups
-remain. .177 is untouched. This does not test post-write/pre-ack interruption.
+remain. ARM test system (Pi 5) is untouched. This does not test post-write/pre-ack interruption.
 
 **App 0.1.333: explicit Search button for local drafts.** Enter and live
 filtering remain available. A distinct message explains zero local sources and
 the initial project import. DE/EN/FR, Search/Enter and narrow test containers are
-checked. The user also confirms both actual mobile devices. .177 is untouched.
+checked. The user also confirms both actual mobile devices. ARM test system (Pi 5) is untouched.
 
 ## Current State
 
 **As of 2026-11-05 · HA App 0.1.334 · HACS integration 0.1.306.**
 App and integration version numbers are maintained independently.
 
-### HA 2026.11 on .177
+### HA 2026.11 on the ARM test system (Pi 5)
 
 Checked on 2026-11-05 with Core 2026.11.0 / frontend 20261028.4: ATLAS Ingress, hub with six active plugins, Card Editor with 35 live entities and existing project list, File Studio file tree, Automation Exporter reading after backup, and Icon Library/Icon Studio interfaces. **The user additionally confirms ATLAS Terminal works.** No new software version; existing projects and settings were not edited.
 
@@ -42,7 +42,7 @@ All 431 HA-package tests, 74 app/frontend tests, TypeScript checks across eleven
 
 [Compatibility overview with plugin versions and limitations](/en/collection/ha-2026-11-compatibility).
 
-Historical reports below retain their original test dates and hosts; “.177 untouched” refers to that earlier test.
+Historical reports below retain their original test dates and hosts; “ARM test system (Pi 5) untouched” refers to that earlier test.
 
 **App 0.1.332 adds the searchable draft overview.** Project, script filename,
 save time, explicit tab association and source identifier simplify selection.
@@ -51,7 +51,7 @@ clearing the filter are available in DE/EN/FR. Stored sources are neither rewrit
 nor deleted; recovery remains explicit.
 Native .68 qualification passes with 32 byte-identical original sources, duplicate
 names, independent recoveries and preserved data. Three full backups remain;
-.177 is untouched. On 2026-10-22 the user confirms Chrome qualification on
+ARM test system (Pi 5) is untouched. On 2026-10-22 the user confirms Chrome qualification on
 Blackview BV6200 Pro (Android 14/DokeOS 4.0) and Samsung Tab A6 (Android 11/LineageOS):
 selection, search, tab association, portrait/landscape and separate A/B recovery
 work. Owned server projects, guide and sidebar entry are cleaned up; existing data
@@ -64,7 +64,7 @@ Cancelling preview changes nothing; new A, predecessor A and B recover identical
 content and settings (apply selects the first card). All 20 old test-profile
 sources remain byte-identical, original Editors and global configuration are
 restored including after reload. Fixture files are in trash and three full backups
-remain on .68; .177 is untouched. This qualifies one controlled boundary between
+remain on .68; ARM test system (Pi 5) is untouched. This qualifies one controlled boundary between
 writes, not power loss or interruption inside the atomic Storage operation.
 No new App version is needed.
 
@@ -81,14 +81,14 @@ The .68 update (HA 2026.10.2) and native import/reload qualification pass in bot
 orders, with repeat import, cancellation/invalid input and blocked local/session
 writes followed by safe retries. Complete export comparisons and all 48 old
 sources pass; original states/data are retained, fixtures cleaned and three full
-backups kept. .177 untouched. Applying the preselected draft remains explicit.
+backups kept. ARM test system (Pi 5) untouched. Applying the preselected draft remains explicit.
 
 **Combined two-tab qualification passes:** On .68 with blocked session methods,
 two distinct drafts remain editable/exportable during a real HA restart.
 Automatic reconnection, explicit separate recovery after reload and confirmed
 subsequent saves pass with complete export comparisons. All 40 previous sources
 and existing data are preserved, both original Editors restored, owned fixtures
-cleaned and three full backups retained. .177 untouched. App 0.1.330 is unchanged;
+cleaned and three full backups retained. ARM test system (Pi 5) untouched. App 0.1.330 is unchanged;
 see [Card Editor](card-editor.md) for instructions and qualification boundaries.
 
 **App 0.1.330 fixes the missing session-failure notice.** After a local write,
@@ -105,7 +105,7 @@ blocked methods/getter, export and manual recovery. Language/list refreshes keep
 the notice; a fully confirmed subsequent save clears it. Local errors remain
 distinct. All 31 old draft sources are byte-identical; five original Editors and
 existing data are restored. Owned fixtures are cleaned, three full backups kept,
-.177 untouched. No further process crash or operating-system disk-fill test;
+ARM test system (Pi 5) untouched. No further process crash or operating-system disk-fill test;
 see the Card Editor section for boundaries.
 
 **App 0.1.329 offers the newer draft after interrupted saving.** A tab-scoped
@@ -119,7 +119,7 @@ The update and targeted interruption after the record write/before the tab point
 pass on .68 with HA 2026.10.2: DE/EN/FR offer/preview, cancellation without changes,
 exact confirmed recovery and no confusion with a newer foreign draft. All 13
 existing sources and both original Editors are unchanged; data comparison passes,
-owned test objects are cleaned and three full backups retained. .177 untouched.
+owned test objects are cleaned and three full backups retained. ARM test system (Pi 5) untouched.
 This run uses a controlled exception at the write boundary, not another forced
 browser-process termination.
 
@@ -130,21 +130,21 @@ A closed tab's draft can be selected explicitly in a new tab. Old sources and
 the legacy shared draft remain available; stale server saves remain blocked.
 DE/EN/FR selection and preview pass. See [Card Editor](card-editor.md) for use
 and limits. Owned project cleaned, original Editors/captured data preserved,
-three full backups on .68; .177 unchanged. The subsequent full Chrome restart
+three full backups on .68; ARM test system (Pi 5) unchanged. The subsequent full Chrome restart
 with session restoration also passes: new main process, separate restored tab
 pointers, complete draft comparisons and manual source selection. Subsequent
 forced termination of all Chrome processes also passes: both complete drafts
 including distinct Card titles recover, and four older draft sources are unchanged.
 Originals preserved, owned project removed, three full backups retained. The
 abort follows completed local saving; interrupted writes, power and disk
-failures are not qualified. .177 remains untouched.
+failures are not qualified. ARM test system (Pi 5) remains untouched.
 
 A subsequent targeted interruption during local saving, after the record write
 and before the tab-pointer update, preserves the complete new draft for manual
 selection; the confirmed predecessor stays preselected. Tab B and eight older
 sources match their backups. The owned test probe leaves installed App files
 unchanged. Original Editors/data are preserved, active test objects cleaned,
-three full backups on .68; .177 untouched. This does not interrupt an atomic
+three full backups on .68; ARM test system (Pi 5) untouched. This does not interrupt an atomic
 native storage call or qualify power/disk failure. See [Card Editor](card-editor.md)
 for the recovery steps and test limits.
 
@@ -153,27 +153,27 @@ with integration 0.1.306 and App 0.1.327 on **.68**: embedding, live connection,
 local save/reload, byte-identical JSON/YAML HACS roundtrips and automatic
 reconnection after an HA restart pass. The original Editor and captured data
 are preserved, the Runtime URL is restored and three full backups remain.
-.177 was neither accessed nor changed. All three CI versions pass.
+ARM test system (Pi 5) was neither accessed nor changed. All three CI versions pass.
 
 **App 0.1.327 bounds HACS checks and runs them off the UI thread.** Fixed budgets
 before reads/CRC, a cancellable worker with a 15-second watchdog and explicit
 adoption preserve the Editor until confirmation. The identical file can be
 selected again after cancellation. All 431 package tests and the workspace build
 pass. See the [Card Editor guide](card-editor.md) for limits and behavior.
-Native qualification on .177/.68 with HA 2026.10.2 passes after full backups:
+Native qualification on the ARM test system (Pi 5) and .68 with HA 2026.10.2 passes after full backups:
 20 boundary cases, six cancellations, two same-file retries and two explicit
 adoptions. Complete original Editors and captured files, projects and plugins
 are preserved; both hosts run 0.1.327.
 
 **Repeated large-project imports with unchanged App 0.1.327.** About 25 minutes
-on .177/.68: 60 series adoptions per host, 36 fields with 360/720 nested Cards,
+on the ARM test system (Pi 5) and .68: 60 series adoptions per host, 36 fields with 360/720 nested Cards,
 238 cancellations and 116 identical-file retries in total. Four actual HACS
 round trips are byte-identical; three reload checkpoints per host and a valid
 24-MiB package pass. Original Editors and captured existing data are preserved.
 Browser-wide memory is not isolated ATLAS memory evidence; HA rendering is
 qualified separately below.
 
-**Large-project HA rendering passes.** On .177/.68 with App 0.1.327 and HA
+**Large-project HA rendering passes.** On the ARM test system (Pi 5) and .68 with App 0.1.327 and HA
 2026.10.2: original and dynamic 360/720-Card projects, Card-Mod 4.2.1 and UIX
 8.4.0 strictly separated. UIX also handles `card_mod`. Light/dark, CSS inheritance,
 Mushroom Jinja and eight automatic reconnections pass: 62 snapshots, 33,120
@@ -185,13 +185,13 @@ Apps. Owned objects removed, existing data preserved, three full backups each.
 This earlier run has no FPS/long-term measurement. See [tablet result](tablet-test.md).
 
 **UIX tablet soak completed:** The user confirms 60 minutes per host with 720
-Cards, themes and reconnection on .177/.68, UIX 8.4.0 alone. Owned objects and
+Cards, themes and reconnection on the ARM test system (Pi 5) and .68, UIX 8.4.0 alone. Owned objects and
 temporary UIX are removed, existing data comparisons pass and three full backups
 remain per host. No independent FPS/memory/leak measurement is claimed.
 See the [soak result](tablet-uix-dauertest.md).
 
 **Historical size finding with App 0.1.324.**
-24 actual import cases on .177/.68: 16 adoptions at 112/112 up to 30,008 files
+24 actual import cases on the ARM test system (Pi 5) and .68: 16 adoptions at 112/112 up to 30,008 files
 or 64 MiB of extra stored content, and eight correct rejections of compressed
 or truncated archives. Original Editors and checked existing data are preserved.
 Reload directly after file selection retains both originals; this does not
@@ -202,11 +202,11 @@ See the [Card Editor guide](card-editor.md) for scope and remaining gaps.
 declared script identities and complete readiness gate actual Editor adoption.
 All 418 package tests and 40 new handler/identity regressions pass. Valid exports
 and existing stored data remain intact.
-Native updates on .177/.68 with HA 2026.10.2 pass after full backups: 60 cases,
+Native updates on the ARM test system (Pi 5) and .68 with HA 2026.10.2 pass after full backups: 60 cases,
 52 correct rejections, eight valid imports at 112/112 and all 14 earlier incorrect
 adoptions blocked. Complete original Editors and checked existing data remain intact.
 
-**Historical finding in 0.1.323: ambiguous HACS packages.** On .177/.68 with HA 2026.10.2,
+**Historical finding in 0.1.323: ambiguous HACS packages.** On the ARM test system (Pi 5) and .68 with HA 2026.10.2,
 46 actual imports produce 26 correct rejections, six valid controls and
 14 incorrect adoptions. Multiple projects/scripts may be adopted despite a
 blocked report; a conflicting Editor plan script name even passes 112/112.
@@ -217,7 +217,7 @@ see [Card Editor](./card-editor).
 App 0.1.322 validates every stored ZIP entry's CRC32 and header/directory
 consistency before HACS adoption. Corrupt or unsupported archives stay outside
 the Editor. All 376 package tests, including 52 new integrity cases, and four
-byte-identical original archive roundtrips pass. Native updates on .177/.68 with
+byte-identical original archive roundtrips pass. Native updates on the ARM test system (Pi 5) and .68 with
 HA 2026.10.2 pass after full backups: 60 correct rejections preserve complete
 Editors through reload, and four valid JSON/YAML controls pass at 112/112.
 Original Editors and existing data remain unchanged. App 0.1.323 then corrects
@@ -226,12 +226,12 @@ file/content checks remain unverified. Actual missing files in verified ZIPs
 remain errors. All 378 package tests pass; see
 [Card Editor](./card-editor).
 
-Native 0.1.323 qualification on .177/.68 passes after fresh full backups:
+Native 0.1.323 qualification on the ARM test system (Pi 5) and .68 passes after fresh full backups:
 64 package cases, including 26 unverifiable ZIPs without misleading missing-file
 claims, 60 safe rejections and four valid imports at 112/112. Complete original
 Editors and checked existing data remain intact.
 
-Native HACS negative qualification on .177/.68 is complete with 21 packages per
+Native HACS negative qualification on the ARM test system (Pi 5) and .68 is complete with 21 packages per
 host after full backups: 38 correct rejections preserve complete Editor states
 through reload, and two valid controls pass. App 0.1.321 had a CRC gap: a damaged README
 inside the ZIP is falsely accepted at 112/112 twice and replaces local Editor
@@ -243,7 +243,7 @@ App 0.1.321 fixes false HACS title failures with an empty first Entity name,
 without modifying names. Both checks use package identity. All 324 local package
 tests pass; the eight saved original/control archives pass unchanged at 112/112
 and reexport byte-identically. Invalid manifest names remain rejected. Native
-updates from 0.1.320 to 0.1.321 pass on .177/.68 with HA 2026.10.2 after full
+updates from 0.1.320 to 0.1.321 pass on the ARM test system (Pi 5) and .68 with HA 2026.10.2 after full
 backups: four original failing JSON/YAML ZIPs without a control card each reach
 112/112 and reexport byte-identically. Original names and conditions remain exact
 after import and reload; existing data and original local Editors stay unchanged.
@@ -252,7 +252,7 @@ See [Card Editor](./card-editor) for scope.
 App 0.1.320 preserves empty Entity names and outer spaces/tabs literally.
 All 296 local package tests pass; 37 new checks compare against the original
 unparsed source through JSON/YAML, drafts, Card packages and HACS. Missing names
-retain their fallback. Native updates on .177/.68 pass with HA 2026.10.2 after
+retain their fallback. Native updates on the ARM test system (Pi 5) and .68 pass with HA 2026.10.2 after
 fresh full backups: 64 import cases, 128 source-exact output samples and 16 actual
 Card package roundtrips. Settings, files, seven projects and six plugins per host,
 trash and original local Editors remain intact. The subsequent 0.1.321 update is documented above.
@@ -268,7 +268,7 @@ See [Card Editor](./card-editor) for scope and CSS behavior.
 App 0.1.319 fixes standalone losses in the actual Editor application path:
 Conditional conditions and Entity custom names survive. All 259 local package
 tests pass, including 19 new Editor/draft/export checks. Stored data is unchanged.
-Native updates on .177/.68 with HA 2026.10.2 pass after full backups: 32
+Native updates on the ARM test system (Pi 5) and .68 with HA 2026.10.2 pass after full backups: 32
 source-exact JSON/YAML file/paste cases with reload and eight actual Card package
 exports/reimports. Existing data, seven projects and six plugins per host, and
 both original local Editors remain intact. Sixteen additional controls exposed a
@@ -278,13 +278,13 @@ has been corrected. See [Card Editor](./card-editor) for scope and limits.
 
 App 0.1.318 aligns import preview with the actual parser, rejecting unsupported
 Markdown even inside nested cards. All 240 local package tests pass, including
-27 new parity tests. Native updates on .177/.68 with HA 2026.10.2 pass after
+27 new parity tests. Native updates on the ARM test system (Pi 5) and .68 with HA 2026.10.2 pass after
 full backups:24 Markdown rejections retain the Editor, eight nested imports
 preserve structure, and existing data/local Editors remain intact. Findings on 0.1.318:
 standalone Conditional cards lose conditions during Editor application, and
 standalone Entity cards lose custom names (JSON/YAML on both hosts).
 
-Extended Conditionals pass on the approved .177 and .68 test systems with
+Extended Conditionals pass on the approved ARM test system (Pi 5) and .68 test systems with
 HA 2026.10.2: 1,008 visibility decisions, JSON/YAML, save/reopen and byte-identical
 HACS roundtrips with 112/112 checks each. Existing data and original local
 Editors are preserved. The Markdown preview mismatch is fixed locally in0.1.318; see the

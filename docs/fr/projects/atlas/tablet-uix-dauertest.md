@@ -1,6 +1,6 @@
 # Test prolongé UIX sur tablette : 720 cartes
 
-Au 19/10/2026. **L’utilisateur confirme 60 minutes sur chaque hôte, .177 et .68,
+Au 19/10/2026. **L’utilisateur confirme 60 minutes sur chaque hôte, système de test ARM (Pi 5) et .68,
 avec thèmes et reconnexion fonctionnels.**
 App 0.1.327, HA 2026.10.2, UIX 8.4.0 ; Card-Mod n’est pas chargé.
 Appareil indiqué : Samsung Galaxy Tab A6, Android 11 / LineageOS,
@@ -48,7 +48,7 @@ Recharger ne reprend pas automatiquement le test.
 
 Tableaux, ressources, états synthétiques et UIX temporaire sont retirés ; fichiers
 WWW dans la corbeille récupérable File Studio. Sept projets et six plugins par
-hôte, 551 fichiers existants capturés sur .177 et neuf sur .68, réglages initiaux
+hôte, 551 fichiers existants capturés sur le système de test ARM (Pi 5) et neuf sur .68, réglages initiaux
 et anciennes entrées de corbeille restent inchangés. Trois sauvegardes complètes
 par hôte ; sauvegardes PC et mises à jour conservées. Ne jamais charger Card-Mod
 et UIX ensemble.

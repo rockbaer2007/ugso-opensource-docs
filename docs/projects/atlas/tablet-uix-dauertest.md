@@ -1,6 +1,6 @@
 # Tablet-Dauertest mit UIX: 720 Karten
 
-Stand: 19.10.2026. **Nutzerbestätigung: je 60 Minuten auf .177 und .68 bestanden,
+Stand: 19.10.2026. **Nutzerbestätigung: je 60 Minuten auf dem Testsystem ARM (Pi 5) und .68 bestanden,
 einschließlich Theme-Wechsel und Wiederverbindung.**
 App 0.1.327, HA 2026.10.2, UIX 8.4.0; Card-Mod wird nicht geladen.
 Gerät laut Nutzer: Samsung Galaxy Tab A6, Android 11 / LineageOS,
@@ -52,7 +52,7 @@ erhält die ursprüngliche Auswahl. Ein Neuladen startet den Lauf nicht automati
 
 Eigene Dashboards, Ressourcen, synthetische Zustände sowie temporäres UIX sind
 entfernt; WWW-Dateien liegen im wiederherstellbaren File-Studio-Papierkorb. Alle
-sieben Projekte, sechs Plugins je Host, 551 erfasste Bestandsdateien auf .177 und
+sieben Projekte, sechs Plugins je Host, 551 erfasste Bestandsdateien auf dem Testsystem ARM (Pi 5) und
 neun auf .68 sowie ursprüngliche Einstellungen und alte Papierkorbeinträge sind
 unverändert. Auf jedem Host bleiben drei Vollbackups. PC-Sicherungen und
 installierte Updates bleiben erhalten. Card-Mod und UIX niemals parallel laden.

@@ -178,7 +178,7 @@ save/reload and JSON/YAML HACS bundles with **112/112** each and byte-identical
 export/import/re-export. After a real HA Core restart, the open Editor reconnects
 automatically without reloading. The original Editor, seven server projects,
 six plugins and captured settings/files are preserved; the temporary Runtime
-URL is restored. **.177 is unchanged and was not accessed.** Three full backups
+URL is restored. **ARM test system (Pi 5) is unchanged and was not accessed.** Three full backups
 remain on .68. This is not an HA update, schema conversion or repeated HACS
 repository-installation/ARM64 qualification. HA retains the original URL as an
 explicit option; only administrative timestamps change otherwise.

@@ -4,7 +4,7 @@ description: État des plugins ATLAS examinés ou encore expérimentaux.
 ---
 # Plugins vérifiés
 
-**HA 2026.11, 05/11/2026 :** hub et interfaces des six plugins vérifiés sur .177. Card Editor se connecte à HA ; File Studio charge les chemins, Automation Exporter lit après sauvegarde, la bibliothèque d’icônes charge MDI et Icon Studio son interface SVG. **L’utilisateur confirme qu’ATLAS Terminal fonctionne.** Cela complète la vérification de base sans modifier le statut expérimental des produits ni valider toutes les fonctions.
+**HA 2026.11, 05/11/2026 :** hub et interfaces des six plugins vérifiés sur le système de test ARM (Pi 5). Card Editor se connecte à HA ; File Studio charge les chemins, Automation Exporter lit après sauvegarde, la bibliothèque d’icônes charge MDI et Icon Studio son interface SVG. **L’utilisateur confirme qu’ATLAS Terminal fonctionne.** Cela complète la vérification de base sans modifier le statut expérimental des produits ni valider toutes les fonctions.
 
 [Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).
 

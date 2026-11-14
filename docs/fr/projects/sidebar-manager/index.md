@@ -8,7 +8,7 @@ description: Dossiers, couleurs, opacité et liens dans la barre latérale Home 
 
 Les icônes des groupes et des liens personnalisés mesurent désormais 24 × 24 px. Lorsque la barre latérale est réduite, elles sont centrées sur le même axe vertical que les icônes natives de Home Assistant.
 
-Vérifié sur .177 avec Home Assistant 2026.11.0 le 11 novembre 2026. Les icônes de groupe sont alignées sur celle de la Vue d’ensemble dans les deux modes. Les icônes des liens Journaux, Automatisations et États sont centrées dans la barre réduite. Le test utilisateur a également réussi.
+Vérifié sur le système de test ARM (Pi 5) avec Home Assistant 2026.11.0 le 11 novembre 2026. Les icônes de groupe sont alignées sur celle de la Vue d’ensemble dans les deux modes. Les icônes des liens Journaux, Automatisations et États sont centrées dans la barre réduite. Le test utilisateur a également réussi.
 
 ## Nouveautés de 0.1.10 : raccourcis Home Assistant
 
@@ -30,14 +30,14 @@ Ouvrir **Modifier la barre latérale → Gérer les groupes et les liens → Rac
 
 **Les icônes sont des valeurs par défaut modifiables pour les nouveaux liens.** Les liens existants sont réutilisés selon leur adresse et conservent leurs noms et icônes, y compris l’ancienne adresse États `/developer-tools/state`. Groupes, couleurs, ordre et réglages VIS/tableaux de bord ne sont ni migrés ni réinitialisés. **Enregistrer** dans le Manager applique les réglages des liens ; **Annuler** abandonne le brouillon ouvert.
 
-::: tip Vérifié sur .177 avec HA 2026.11.0 · 8 novembre 2026
+::: tip Vérifié sur le système de test ARM (Pi 5) avec HA 2026.11.0 · 8 novembre 2026
 Après sauvegarde complète : deux colonnes sur ordinateur, quatre nouvelles destinations, icônes par défaut, dossier, annulation, enregistrement et rechargement complet réussis. Liens de test supprimés ; réglages utilisateur, couleurs, groupes, tableau de test et ressources identiques à la sauvegarde PC. **73 tests automatisés** réussissent, y compris les seuils de version Marketplace. Aucun test réel distinct sur mobile ou ancienne version HA.
 :::
 
-![Raccourcis Home Assistant sur deux colonnes dans Sidebar Manager 0.1.10, testé sur .177 ; interface de test allemande](/images/sidebar-manager/shortcuts-0110-177.png)
+![Raccourcis Home Assistant sur deux colonnes dans Sidebar Manager 0.1.10, testé sur le système de test ARM (Pi 5) ; interface de test allemande](/images/sidebar-manager/shortcuts-0110-177.png)
 
 ::: info HA 2026.11 : aperçu des couleurs corrigé
-La version **0.1.9** corrige les couleurs du texte/des icônes dans le dialogue natif, y compris celles des groupes. Vérifié sur .177 (port 80), Core 2026.11.0 / frontend 20261028.4 : couleurs, opacité, annulation, enregistrement, réinitialisation au thème et rechargement complet. Les 72 tests automatisés réussissent. Groupe/lien de test supprimés ; disposition exportée identique à la sauvegarde initiale. Paramètres existants et « Test für APP » conservés.
+La version **0.1.9** corrige les couleurs du texte/des icônes dans le dialogue natif, y compris celles des groupes. Vérifié sur le système de test ARM (Pi 5) (port 80), Core 2026.11.0 / frontend 20261028.4 : couleurs, opacité, annulation, enregistrement, réinitialisation au thème et rechargement complet. Les 72 tests automatisés réussissent. Groupe/lien de test supprimés ; disposition exportée identique à la sauvegarde initiale. Paramètres existants et « Test für APP » conservés.
 :::
 
 [Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).

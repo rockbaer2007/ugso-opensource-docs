@@ -19,7 +19,7 @@ Un clic insère un nouveau widget avec les valeurs par défaut du type, **pas un
 
 Liste et état replié persistent après rechargement ou mise à jour dans le **même profil de navigateur et à la même adresse web**. Ils ne sont ni synchronisés entre appareils ni exportés avec les projets. Effacer les données du navigateur les réinitialise. Si le stockage est bloqué, la liste reste utilisable pendant la session. Les autres réglages et fichiers de projet restent inchangés.
 
-![Widgets récemment utilisés sur .177](/images/grafik-visual-studio/recent-177-299.jpg)
+![Widgets récemment utilisés sur le système de test ARM (Pi 5)](/images/grafik-visual-studio/recent-177-299.jpg)
 
 ## Exécution au-dessus de la surface
 
@@ -33,4 +33,4 @@ L’arrêt restitue la page initiale de l’éditeur avec sélection, historique
 
 Projets, types de widgets, CSS et couleurs existants conservés. Les nouvelles préférences utilisent une clé de stockage distincte. Aucun code ni illustration VIS-2 n’a été copié pour ces fonctions.
 
-Le 8 novembre 2026, la version 0.1.299 a été vérifiée sur .177 (HA 2026.11.0/ARM64) et .193 (HA 2026.10.4/amd64) : miniatures récentes, ordre sans doublons, insertion, repli et conservation après rechargement, ainsi que verrouillage pendant la runtime intégrée. Les insertions de test ont été annulées ; les 13 et 11 widgets existants ont été conservés. Palette et démarrage/arrêt ont également été vérifiés avec sauvegarde, navigation et retour à l’éditeur. Les 23 tests JavaScript et 17 tests Python ont réussi. Détails : [sources et rapports](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/docs).
+Le 8 novembre 2026, la version 0.1.299 a été vérifiée sur le système de test ARM (Pi 5) (HA 2026.11.0/ARM64) et système de test PC (64) (HA 2026.10.4/amd64) : miniatures récentes, ordre sans doublons, insertion, repli et conservation après rechargement, ainsi que verrouillage pendant la runtime intégrée. Les insertions de test ont été annulées ; les 13 et 11 widgets existants ont été conservés. Palette et démarrage/arrêt ont également été vérifiés avec sauvegarde, navigation et retour à l’éditeur. Les 23 tests JavaScript et 17 tests Python ont réussi. Détails : [sources et rapports](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/docs).

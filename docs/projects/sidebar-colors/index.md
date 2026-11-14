@@ -5,7 +5,7 @@ description: Eigene Farben und Transparenz für HA-Menüeinträge, direkt in Sei
 # Seitenleistenfarben / Sidebar Colors
 
 ::: info HA 2026.11: Selektor korrigiert
-Version **0.1.1** berücksichtigt im nativen Bearbeitungsdialog sowohl `ha-md-list-item` als auch `ha-list-item-button`. 27 lokale Tests bestehen, darunter DOM-Regressionen für beide HA-Zeilentypen, Transparenz, Abbrechen, Speichern, erneutes Öffnen und Theme-Rücksetzung. Der entsprechende Manager-Fix wurde auf .177 live geprüft; Sidebar Colors wurde nicht parallel installiert. Bestehende Farben und Speicherschlüssel bleiben erhalten.
+Version **0.1.1** berücksichtigt im nativen Bearbeitungsdialog sowohl `ha-md-list-item` als auch `ha-list-item-button`. 27 lokale Tests bestehen, darunter DOM-Regressionen für beide HA-Zeilentypen, Transparenz, Abbrechen, Speichern, erneutes Öffnen und Theme-Rücksetzung. Der entsprechende Manager-Fix wurde auf dem Testsystem ARM (Pi 5) live geprüft; Sidebar Colors wurde nicht parallel installiert. Bestehende Farben und Speicherschlüssel bleiben erhalten.
 :::
 
 [Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).

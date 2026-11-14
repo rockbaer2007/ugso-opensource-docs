@@ -8,7 +8,7 @@ description: Folders, colors, opacity and links in the Home Assistant sidebar. V
 
 Group and custom-link icons now measure 24 × 24 px. In the collapsed sidebar, they share the same horizontal center as native Home Assistant icons.
 
-Verified on .177 with Home Assistant 2026.11.0 on 11 November 2026. Group icons align with the Overview icon in both sidebar layouts. The Logs, Automations, and States link icons are centered in the collapsed sidebar. The user test also passed.
+Verified on the ARM test system (Pi 5) with Home Assistant 2026.11.0 on 11 November 2026. Group icons align with the Overview icon in both sidebar layouts. The Logs, Automations, and States link icons are centered in the collapsed sidebar. The user test also passed.
 
 ## New in 0.1.10: Home Assistant shortcuts
 
@@ -30,14 +30,14 @@ Open **Edit sidebar → Manage groups and links → Home Assistant shortcuts**, 
 
 **Icons are editable defaults for new links.** Existing links are reused by URL and retain their custom names and icons, including legacy States URLs at `/developer-tools/state`. Existing groups, colors, order and VIS/dashboard settings are not migrated or reset. **Save** in the Manager applies link settings; **Cancel** discards the open draft.
 
-::: tip Verified on .177 with HA 2026.11.0 · 8 November 2026
+::: tip Verified on the ARM test system (Pi 5) with HA 2026.11.0 · 8 November 2026
 Following a fresh full backup, the desktop two-column layout, four new destinations, default icons, folder assignment, Cancel, Save and full reload passed. Temporary test links removed; user preferences, colors, groups, test dashboard and resources exactly match the PC backup. **73 automated tests** pass, including Marketplace version boundaries. Mobile layout and older HA versions were not separately live-tested.
 :::
 
-![Two-column Home Assistant shortcuts in Sidebar Manager 0.1.10, tested on .177; German test interface](/images/sidebar-manager/shortcuts-0110-177.png)
+![Two-column Home Assistant shortcuts in Sidebar Manager 0.1.10, tested on the ARM test system (Pi 5); German test interface](/images/sidebar-manager/shortcuts-0110-177.png)
 
 ::: info HA 2026.11: color preview fixed
-Version **0.1.9** fixes missing text/icon colors in the native edit dialog, including group colors. Verified on .177 (port 80), Core 2026.11.0 / frontend 20261028.4: colors, opacity, Cancel, Save, theme reset and a full reload. All 72 automated tests pass. Disposable group/link removed; the exported layout again matches the pre-test backup. Existing settings and “Test für APP” are preserved.
+Version **0.1.9** fixes missing text/icon colors in the native edit dialog, including group colors. Verified on the ARM test system (Pi 5) (port 80), Core 2026.11.0 / frontend 20261028.4: colors, opacity, Cancel, Save, theme reset and a full reload. All 72 automated tests pass. Disposable group/link removed; the exported layout again matches the pre-test backup. Existing settings and “Test für APP” are preserved.
 :::
 
 [Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).
@@ -142,7 +142,7 @@ Color picker and group settings:
 
 ![Folder settings](/images/sidebar-manager/web-link-016-177.png)
 
-Actual 0.1.7 folder placement and collapsed separator on the authorized .177 test system:
+Actual 0.1.7 folder placement and collapsed separator on the authorized ARM test system (Pi 5):
 
 ![Saved folder position](/images/sidebar-manager/ordnerposition-017-177.png)
 

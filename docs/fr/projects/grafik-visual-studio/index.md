@@ -5,13 +5,13 @@ description: 'Un tableau de bord (dashboard) pour Home Assistant qui sort de l''
 
 # HA Grafik Visual Studio {#ha-grafik-visual-studio}
 
-**Studio 0.1.300 (12 novembre 2026).** Import et export de pages à côté des onglets. Références internes vérifiées à l’importation et à la duplication sur .177 et .193 après sauvegarde complète. [Guide de l’éditeur](./editor) · [Mise à jour GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.300).
+**Studio 0.1.300 (12 novembre 2026).** Import et export de pages à côté des onglets. Références internes vérifiées à l’importation et à la duplication sur le système de test ARM (Pi 5) et système de test PC (64) après sauvegarde complète. [Guide de l’éditeur](./editor) · [Mise à jour GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.300).
 
 **Studio 0.1.299 :** [Utilisés récemment, miniatures et démarrage/arrêt intégré](./palette-runtime). Jusqu’à douze types distincts récemment insérés sont conservés dans le navigateur. L’exécution démarre près des onglets au-dessus de la surface ; la fenêtre séparée reste disponible. Projets et réglages conservés.
 
 ## Vérifications actuelles et prochaines étapes
 
-**État au 8 novembre 2026 : Studio 0.1.299.** Miniatures, Utilisés récemment et runtime intégrée vérifiés sur .177 et .193, avec conservation des réglages et projets existants. [Utilisation et résultats](./palette-runtime). Appareils, retour de tablette, page d’accueil après inactivité, valeurs dans les titres, chargement à la demande et actualisation des paquets sont déjà implémentés.
+**État au 8 novembre 2026 : Studio 0.1.299.** Miniatures, Utilisés récemment et runtime intégrée vérifiés sur le système de test ARM (Pi 5) et système de test PC (64), avec conservation des réglages et projets existants. [Utilisation et résultats](./palette-runtime). Appareils, retour de tablette, page d’accueil après inactivité, valeurs dans les titres, chargement à la demande et actualisation des paquets sont déjà implémentés.
 
 Travaux restants :
 
@@ -20,9 +20,9 @@ Travaux restants :
 3. **Interface Studio entièrement française :** les textes des projets/widgets et la documentation prennent en charge DE/EN/FR ; l’interface générale reste DE/EN.
 4. **Projets ultérieurs plus importants :** runtime autonome, application de connexion et Web Components. Ces fonctions ne sont pas encore disponibles.
 
-**Prochaine étape recommandée :** commencer l’export/import de projets par un inventaire des ressources et un aperçu d’importation, puis vérifier le transfert entre .177 et .193. Il s’agit d’une recommandation ; cette mise à jour documentaire n’ajoute aucune fonction au programme.
+**Prochaine étape recommandée :** commencer l’export/import de projets par un inventaire des ressources et un aperçu d’importation, puis vérifier le transfert entre système de test ARM (Pi 5) et système de test PC (64). Il s’agit d’une recommandation ; cette mise à jour documentaire n’ajoute aucune fonction au programme.
 
-**Studio 0.1.297 :** [Appareils intégrés et fonctions tablette](./devices-tablet) : cinq types en tuiles et marqueurs sur plan, valeurs dans les titres, retour de tablette, page d’accueil après inactivité et rendu à la demande. Modifications des paquets et capacités optionnelles visibles sans redémarrage. Vérifié sur .177 et .193 ; projets et réglages conservés. [Mise à jour GitHub 0.1.297](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.297).
+**Studio 0.1.297 :** [Appareils intégrés et fonctions tablette](./devices-tablet) : cinq types en tuiles et marqueurs sur plan, valeurs dans les titres, retour de tablette, page d’accueil après inactivité et rendu à la demande. Modifications des paquets et capacités optionnelles visibles sans redémarrage. Vérifié sur le système de test ARM (Pi 5) et système de test PC (64) ; projets et réglages conservés. [Mise à jour GitHub 0.1.297](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.297).
 
 **Studio 0.1.296 :** Les **62 autres types de widgets** bénéficient désormais de propriétés multilingues (DE/EN/FR), de messages d'exécution, d'une fonction optionnelle de contrôle de la climatisation (Climate), ainsi que d'une vérification des sources, attributs et unités. Les projets et versions de paquets existants restent valides ; les nouveaux groupes sont créés à l'état désactivé. [Guide et limitations](/fr/projects/grafik-visual-studio/ha-quellen-climate). Le fonctionnement avec des appareils réels ou via l'application Companion n'a pas encore été confirmé par des tests en conditions réelles. [Rapport de test](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md).
 

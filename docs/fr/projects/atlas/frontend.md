@@ -197,7 +197,7 @@ chacun et export/import/réexport identiques octet par octet. Après un véritab
 redémarrage de HA Core, l’éditeur ouvert se reconnecte automatiquement sans
 rechargement. L’éditeur initial, sept projets serveur, six plugins et les
 paramètres/fichiers capturés sont conservés ; l’URL temporaire du Runtime est
-rétablie. **.177 reste inchangé et n’a pas été contacté.** Trois sauvegardes
+rétablie. **système de test ARM (Pi 5) reste inchangé et n’a pas été contacté.** Trois sauvegardes
 complètes restent sur .68. Ce test ne constitue ni une mise à jour HA, ni une
 conversion de schéma, ni une nouvelle validation d’installation HACS/ARM64.
 HA conserve l’URL initiale comme option explicite ; seuls les horodatages

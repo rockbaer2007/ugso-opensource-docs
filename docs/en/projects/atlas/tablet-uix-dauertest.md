@@ -1,6 +1,6 @@
 # UIX tablet soak: 720 Cards
 
-As of 19 October 2026. **User confirms 60 minutes on each host, .177 and .68,
+As of 19 October 2026. **User confirms 60 minutes on each host, ARM test system (Pi 5) and .68,
 with working theme changes and reconnection.**
 App 0.1.327, HA 2026.10.2, UIX 8.4.0; Card-Mod is not loaded.
 User-reported device: Samsung Galaxy Tab A6, Android 11 / LineageOS,
@@ -48,6 +48,6 @@ Reload does not automatically resume the run.
 
 Owned dashboards, resources, synthetic states and temporary UIX are removed;
 WWW files are in recoverable File Studio Trash. All seven projects and six plugins
-per host, 551 captured existing files on .177 and nine on .68, original settings
+per host, 551 captured existing files on the ARM test system (Pi 5) and nine on .68, original settings
 and old trash entries are unchanged. Three full backups remain per host. PC
 backups and installed updates are preserved. Never load Card-Mod and UIX together.

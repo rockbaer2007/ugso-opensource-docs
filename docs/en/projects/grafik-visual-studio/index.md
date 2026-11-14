@@ -5,13 +5,13 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 # HA Grafik Visual Studio
 
-**Studio 0.1.300 (November 12, 2026).** Import and export pages beside the page tabs. Internal widget references on import and duplication were verified on .177 and .193 after full backups. [Editor guide](./editor) · [GitHub update](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.300).
+**Studio 0.1.300 (November 12, 2026).** Import and export pages beside the page tabs. Internal widget references on import and duplication were verified on the ARM test system (Pi 5) and PC (64) test system after full backups. [Editor guide](./editor) · [GitHub update](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.300).
 
 **Studio 0.1.299:** [Recently used, miniature palette and runtime start/stop](./palette-runtime). Up to twelve distinct recently inserted widget types persist in the browser. Runtime starts beside the page tabs over the canvas; the separate window remains available. Settings and projects are retained.
 
 ## Current verification and next steps
 
-**As of November 8, 2026: Studio 0.1.299.** The thumbnail palette, Recently used and inline runtime have been verified on .177 and .193, preserving settings and existing projects. [Usage and test results](./palette-runtime). Devices, tablet return, the inactivity home page, heading values, demand-loaded renderers and package refresh are already implemented, not outstanding basic tasks.
+**As of November 8, 2026: Studio 0.1.299.** The thumbnail palette, Recently used and inline runtime have been verified on the ARM test system (Pi 5) and PC (64) test system, preserving settings and existing projects. [Usage and test results](./palette-runtime). Devices, tablet return, the inactivity home page, heading values, demand-loaded renderers and package refresh are already implemented, not outstanding basic tasks.
 
 Remaining work:
 
@@ -20,9 +20,9 @@ Remaining work:
 3. **Complete French Studio interface:** Project/widget texts and documentation support DE/EN/FR; the general Studio interface remains DE/EN.
 4. **Larger follow-up projects:** Standalone runtime, companion connection app and Web Components. These are not available features yet.
 
-**Recommended next step:** Begin project export/import with a resource inventory and import preview, then verify transfer between .177 and .193. This is a recommendation; this documentation update does not implement a new program feature.
+**Recommended next step:** Begin project export/import with a resource inventory and import preview, then verify transfer between the ARM test system (Pi 5) and PC (64) test system. This is a recommendation; this documentation update does not implement a new program feature.
 
-**Studio 0.1.297:** Built-in [device set and tablet features](./devices-tablet): five device types as tiles and floorplan markers, live heading values, tablet return, optional inactivity home page and demand-loaded renderers. Package changes and optional capabilities appear without restarting. Checked on .177 and .193; existing settings and projects are retained. [GitHub update 0.1.297](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.297).
+**Studio 0.1.297:** Built-in [device set and tablet features](./devices-tablet): five device types as tiles and floorplan markers, live heading values, tablet return, optional inactivity home page and demand-loaded renderers. Package changes and optional capabilities appear without restarting. Checked on the ARM test system (Pi 5) and PC (64) test system; existing settings and projects are retained. [GitHub update 0.1.297](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/grafik-visual-studio-v0.1.297).
 
 **Studio 0.1.296:** The remaining **62 widget types** gain DE/EN/FR properties and runtime messages, optional Climate controls and source/attribute/unit checks. Existing projects and package versions remain valid; new groups start disabled. [Guide and limits](./ha-quellen-climate). Mocked tests do not verify real devices/Companion. [Audit report](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/remaining-widget-audit-2026-10-12.md).
 

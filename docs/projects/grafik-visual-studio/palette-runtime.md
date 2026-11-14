@@ -19,7 +19,7 @@ Ein Klick fügt ein neues Widget mit den Standardwerten des Typs ein, **keine Ko
 
 Liste und Klappzustand bleiben beim Neuladen und App-Update im **gleichen Browserprofil und derselben Webadresse** erhalten. Sie werden nicht zwischen Geräten synchronisiert und nicht in Projekte exportiert. Browserdaten löschen setzt sie zurück. Bei blockiertem Browserspeicher bleibt die Liste für die aktuelle Sitzung nutzbar. Andere Einstellungen und Projektdateien werden nicht verändert.
 
-![Zuletzt benutzte Widgets auf .177](/images/grafik-visual-studio/recent-177-299.jpg)
+![Zuletzt benutzte Widgets auf dem Testsystem ARM (Pi 5)](/images/grafik-visual-studio/recent-177-299.jpg)
 
 ## Runtime direkt über der Arbeitsfläche
 
@@ -33,4 +33,4 @@ Stoppen stellt die bisherige Editorseite mit Auswahl, Verlauf und Scrollposition
 
 Bestehende Projekte, Widgettypen, CSS- und Farbeinstellungen bleiben erhalten. Neue Browserpräferenzen erhalten einen eigenen Speicherschlüssel. Kein VIS-2-Code oder -Bild wurde für diese Funktionen kopiert.
 
-Am 8. November 2026 wurde 0.1.299 auf .177 (HA 2026.11.0/ARM64) und .193 (HA 2026.10.4/amd64) geprüft: zuletzt verwendete Miniaturen, Reihenfolge ohne Duplikate, Einfügen, Einklappen und Erhalt nach Neuladen sowie die Sperre während der Inline-Runtime. Testeinfügungen wurden rückgängig gemacht; die bestehenden 13 beziehungsweise 11 Widgets blieben erhalten. Palette und Start/Stopp waren zusätzlich mit Speichern, Seitenwechsel und Rückkehr zum Editor geprüft. 23 JavaScript- und 17 Python-Tests bestanden. Details: [Quellcode und Prüfberichte](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/docs).
+Am 8. November 2026 wurde 0.1.299 auf dem Testsystem ARM (Pi 5) (HA 2026.11.0/ARM64) und Testsystem PC (64) (HA 2026.10.4/amd64) geprüft: zuletzt verwendete Miniaturen, Reihenfolge ohne Duplikate, Einfügen, Einklappen und Erhalt nach Neuladen sowie die Sperre während der Inline-Runtime. Testeinfügungen wurden rückgängig gemacht; die bestehenden 13 beziehungsweise 11 Widgets blieben erhalten. Palette und Start/Stopp waren zusätzlich mit Speichern, Seitenwechsel und Rückkehr zum Editor geprüft. 23 JavaScript- und 17 Python-Tests bestanden. Details: [Quellcode und Prüfberichte](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/docs).

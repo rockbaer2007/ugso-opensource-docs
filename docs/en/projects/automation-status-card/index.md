@@ -4,7 +4,7 @@ description: Automatic automation list, checkbox selection, running status and t
 ---
 # Automation Status Card
 
-**HA 2026.11.0, 2026-11-05, .177:** Version 0.1.3 passes rendering, on/off with state confirmation, running status, trace requests, normal completion, checkboxes, select/deselect all and reload. Bubble/Mushroom single-automation examples render. Owned test objects were removed. Failures and runtime warnings were not deliberately triggered again on this HA version; earlier results remain recorded separately.
+**HA 2026.11.0, 2026-11-05, ARM test system (Pi 5):** Version 0.1.3 passes rendering, on/off with state confirmation, running status, trace requests, normal completion, checkboxes, select/deselect all and reload. Bubble/Mushroom single-automation examples render. Owned test objects were removed. Failures and runtime warnings were not deliberately triggered again on this HA version; earlier results remain recorded separately.
 
 [Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).
 
@@ -14,7 +14,7 @@ description: Automatic automation list, checkbox selection, running status and t
 
 [GitHub](https://github.com/rockbaer2007/automation-status-card) · [Download 0.1.3](https://github.com/rockbaer2007/automation-status-card/releases/tag/v0.1.3) · [Documentation](https://opensource.ugso-software.de/en/projects/automation-status-card/)
 
-Verified on .177 with HA 2026.10.4: the 0.1.0 base card and selection/diagnostics in corrected version 0.1.3. Actual HA traces, failure, normal completion, running warnings, disabled warnings, checkboxes and saved selection passed. [Report and screenshots](https://github.com/rockbaer2007/automation-status-card/blob/main/docs/TESTING.md).
+Verified on the ARM test system (Pi 5) with HA 2026.10.4: the 0.1.0 base card and selection/diagnostics in corrected version 0.1.3. Actual HA traces, failure, normal completion, running warnings, disabled warnings, checkboxes and saved selection passed. [Report and screenshots](https://github.com/rockbaer2007/automation-status-card/blob/main/docs/TESTING.md).
 
 Automatically lists all `automation.*` entities available to the signed-in HA user, sorted alphabetically. Eight rows are visible by default; further entries scroll vertically. New/deleted automations update automatically. No additional card library is required.
 

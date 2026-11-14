@@ -19,7 +19,7 @@ Clicking inserts a new widget using the type’s defaults, **not a copy of the l
 
 The list and collapse state survive reloads and app updates in the **same browser profile and web address**. They are not synchronized between devices or exported with projects. Clearing browser data resets them. If browser storage is blocked, the list remains usable for the current session. Other settings and project files are unchanged.
 
-![Recently used widgets on .177](/images/grafik-visual-studio/recent-177-299.jpg)
+![Recently used widgets on the ARM test system (Pi 5)](/images/grafik-visual-studio/recent-177-299.jpg)
 
 ## Runtime over the canvas
 
@@ -33,4 +33,4 @@ Stopping restores the original editor page with selection, history and scroll po
 
 Existing projects, widget types, CSS and color settings remain intact. New browser preferences use a separate storage key. No VIS-2 code or artwork was copied for these features.
 
-On November 8, 2026, 0.1.299 was verified on .177 (HA 2026.11.0/ARM64) and .193 (HA 2026.10.4/amd64): recent thumbnails, ordering without duplicates, insertion, collapse and persistence after reload, and locking during inline runtime. Test insertions were undone; the existing 13 and 11 widgets were preserved. The palette and start/stop were also checked with save, page navigation and returning to the editor. All 23 JavaScript and 17 Python tests passed. Details: [source and test reports](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/docs).
+On November 8, 2026, 0.1.299 was verified on the ARM test system (Pi 5) (HA 2026.11.0/ARM64) and PC (64) test system (HA 2026.10.4/amd64): recent thumbnails, ordering without duplicates, insertion, collapse and persistence after reload, and locking during inline runtime. Test insertions were undone; the existing 13 and 11 widgets were preserved. The palette and start/stop were also checked with save, page navigation and returning to the editor. All 23 JavaScript and 17 Python tests passed. Details: [source and test reports](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/docs).

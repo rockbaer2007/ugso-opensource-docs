@@ -2,19 +2,19 @@
 
 ## Testsysteme {#getestete-hardwarevarianten}
 
-- **.193 – 192.168.178.193:** neue Proxmox-VM (amd64) mit **8 GB RAM und 4 vCPU**; ersetzt .68 für künftige VM-Prüfungen.
+- **Testsystem PC (64) – 192.168.178.193:** neue Proxmox-VM (amd64) mit **8 GB RAM und 4 vCPU**; ersetzt .68 für künftige VM-Prüfungen.
 - **.68 – 192.168.178.68:** bisherige Proxmox-VM (amd64) mit **8 GB RAM und 4 vCPU**. Die folgenden Prüfberichte zu .68 bleiben als Historie erhalten.
-- **.177 – 192.168.178.177:** **Raspberry Pi 5 (ARM64) mit 8 GB RAM und 4 CPU-Kernen**.
+- **Testsystem ARM (Pi 5) – 192.168.178.177:** **Raspberry Pi 5 (ARM64) mit 8 GB RAM und 4 CPU-Kernen**.
 - **Handy:** Blackview BV6200 Pro mit **Android 14 / DokeOS 4.0**, Mobilprüfung in **Chrome**.
 - **Tablet:** Samsung Tab A6 mit **Android 11 / LineageOS**, Mobilprüfung in **Chrome**.
 
-Zuordnung laut Nutzerangabe vom **28.10.2026**. Die neue .193 ist hier als Ersatzsystem erfasst; die bisherigen Testergebnisse von .68 gelten nicht automatisch als Prüfung auf .193. Der jeweilige Prüfumfang steht in den folgenden Berichten.
+Zuordnung laut Nutzerangabe vom **28.10.2026**. Das neue Testsystem PC (64) ist hier als Ersatzsystem erfasst; die bisherigen Testergebnisse von .68 gelten nicht automatisch als Prüfung auf dem Testsystem PC (64). Der jeweilige Prüfumfang steht in den folgenden Berichten.
 
 **App 0.1.334:** Projektvorschau und Bestätigung stehen vor den lokalen Entwürfen
 direkt bei den Projektbuttons. Fokus/Scrollen, Ladeanzeige und begrenzte lesende
 Anfragen verhindern eine unsichtbare oder dauerhaft wartende Öffnungsprüfung.
 Auf .68 geprüft, Bestandsdaten erhalten; sichtbare Bestätigung auf beiden Geräten
-und gemeinsamer Speicherkonflikt inzwischen vom Nutzer bestätigt. .177 unverändert.
+und gemeinsamer Speicherkonflikt inzwischen vom Nutzer bestätigt. Testsystem ARM (Pi 5) unverändert.
 
 **Geräteübergreifender Konflikt-/WLAN-Test bestanden:** Nutzerbestätigung vom
 22.10.2026 in Chrome auf Handy und Tablet. Handy gespeichert, veraltete Tablet-
@@ -22,20 +22,20 @@ Vorschau abgewiesen, Tablet-Entwurf erhalten. WLAN-Abbruch vor der Handy-Überna
 zeigt Fehler und erhält den Offline-Entwurf; Wiederverbindung funktioniert.
 Serververgleich: exakt Revision 2 mit dem Handy-Script vor/nach dem Offline-Versuch.
 Eigene Testobjekte bereinigt, sieben Originalprojekte und Bestandsdaten erhalten,
-drei neueste Vollbackups behalten. .177 unverändert. Dies prüft keinen Abbruch
+drei neueste Vollbackups behalten. Testsystem ARM (Pi 5) unverändert. Dies prüft keinen Abbruch
 nach dem Server-Schreiben vor dessen Bestätigung.
 
 **App 0.1.333: sichtbarer Suchen-Button für lokale Entwürfe.** Enter und
 Livefilter bleiben erhalten. Ein eigener Hinweis erklärt 0 lokale Quellen und
 den nötigen ersten Projektimport. DE/EN/FR, Suchen/Enter und schmale Testbereiche
-sind geprüft. Der Nutzer bestätigt auch beide echten Mobilgeräte. .177 unverändert.
+sind geprüft. Der Nutzer bestätigt auch beide echten Mobilgeräte. Testsystem ARM (Pi 5) unverändert.
 
 ## Aktueller Stand
 
 **Stand: 05.11.2026 · HA-App 0.1.334 · HACS-Integration 0.1.306.**
 App und Integration haben unabhängige Versionsnummern.
 
-### HA 2026.11 auf .177
+### HA 2026.11 auf dem Testsystem ARM (Pi 5)
 
 Am 05.11.2026 unter Core 2026.11.0 / Frontend 20261028.4 geprüft: ATLAS-Ingress, Hub mit sechs aktiven Plugins, Card Editor mit 35 Live-Entitäten und vorhandener Projektliste, File-Studio-Dateibaum, Automation-Exporter-Lesen nach Sicherung sowie Icon-Bibliothek und Icon-Studio-Oberflächen. **Der Anwender bestätigt zusätzlich: ATLAS Terminal funktioniert.** Keine neue Softwareversion; vorhandene Projekte und Einstellungen wurden nicht bearbeitet.
 
@@ -43,7 +43,7 @@ Am 05.11.2026 unter Core 2026.11.0 / Frontend 20261028.4 geprüft: ATLAS-Ingress
 
 [Kompatibilitätsübersicht mit Plugin-Versionen und Grenzen](/sammlung/ha-2026-11-kompatibilitaet).
 
-Die älteren Berichte unten behalten ihre jeweiligen Prüfstände und Hostangaben; „.177 unverändert“ bezieht sich dort auf die damalige Prüfung.
+Die älteren Berichte unten behalten ihre jeweiligen Prüfstände und Hostangaben; „Testsystem ARM (Pi 5) unverändert“ bezieht sich dort auf die damalige Prüfung.
 
 **App 0.1.332 ergänzt die durchsuchbare Entwurfsübersicht.** Projekt, Scriptdatei,
 Speicherzeit, ehrliche Tab-Zuordnung und Quellenkennung erleichtern die Auswahl.
@@ -52,7 +52,7 @@ der Auswahl nach Filterende sind in DE/EN/FR verfügbar. Gespeicherte Quellen
 werden weder umgeschrieben noch gelöscht; die Wiederherstellung bleibt ausdrücklich.
 Die native Prüfung auf .68 besteht mit 32 bytegleich erhaltenen alten Quellen,
 gleichnamigen Projekten, getrennter Wiederherstellung und erhaltenen Bestandsdaten.
-Drei Vollbackups bleiben, .177 unverändert. Am 22.10.2026 bestätigt der Nutzer
+Drei Vollbackups bleiben, Testsystem ARM (Pi 5) unverändert. Am 22.10.2026 bestätigt der Nutzer
 die Chrome-Prüfung auf Blackview BV6200 Pro (Android 14/DokeOS 4.0) und Samsung
 Tab A6 (Android 11/LineageOS): Auswahl, Suche, Tab-Zuordnung, Hoch-/Querformat und
 getrennte A/B-Wiederherstellung funktionieren. Die eigenen Serverprojekte,
@@ -66,7 +66,7 @@ B-Quelle. Vorschau-Abbrechen ändert nichts; neuer A-Stand, Vorgänger und B
 lassen sich mit identischen Inhalten und Einstellungen übernehmen (erste Karte
 wird ausgewählt). Alle 20 alten Quellen des Testprofils bleiben bytegleich,
 Originaleditoren und globale Konfiguration sind auch nach Neuladen hergestellt.
-Testdateien liegen im Papierkorb, drei Vollbackups bleiben auf .68; .177 unverändert.
+Testdateien liegen im Papierkorb, drei Vollbackups bleiben auf .68; Testsystem ARM (Pi 5) unverändert.
 Das prüft eine kontrollierte Grenze zwischen Schreibvorgängen, keinen Stromausfall
 oder Abbruch innerhalb der atomaren Storage-Operation. Keine neue App-Version.
 
@@ -85,7 +85,7 @@ bestehen in beiden Reihenfolgen, mit erneutem Import, Abbrechen/ungültiger Date
 und blockierten lokalen/Sitzungs-Schreibzugriffen samt sicheren Folgeversuchen.
 Vollständige Exportvergleiche und alle 48 alten Quellen bestehen, Ausgangsstände
 und Daten sind erhalten, Testdateien bereinigt und drei Vollbackups behalten.
-.177 unverändert. Die Übernahme des vorausgewählten Entwurfs bleibt ausdrücklich.
+Testsystem ARM (Pi 5) unverändert. Die Übernahme des vorausgewählten Entwurfs bleibt ausdrücklich.
 
 **Kombinierter Zwei-Tab-Test bestanden:** Auf .68 bleiben bei blockierten
 Sitzungsmethoden zwei unterschiedliche Entwürfe während eines echten HA-Neustarts
@@ -93,7 +93,7 @@ editier- und exportierbar. Automatische Wiederverbindung, ausdrückliche getrenn
 Wiederherstellung nach Neuladen und bestätigte Folgesicherung bestehen mit
 vollständigem Exportvergleich. Alle 40 vorherigen Quellen und Bestandsdaten sind
 erhalten, beide Originaleditoren wiederhergestellt, Testobjekte bereinigt und drei
-Vollbackups behalten. .177 unverändert. App 0.1.330 bleibt unverändert; Grenzen
+Vollbackups behalten. Testsystem ARM (Pi 5) unverändert. App 0.1.330 bleibt unverändert; Grenzen
 und Bedienhinweise stehen im [Card Editor](card-editor.md).
 
 **App 0.1.330 behebt den fehlenden Hinweis bei Sitzungsfehlern.** Nach erfolgreichem
@@ -111,7 +111,7 @@ blockierten Methoden/Getter, Export und manueller Wiederherstellung. Sprachwechs
 und Listenaktualisierung erhalten die Warnung; bestätigtes Folgespeichern entfernt
 sie. Lokale Fehler bleiben getrennt. Alle 31 alten Entwurfsquellen sind bytegleich,
 fünf Originaleditoren und Bestandsdaten wiederhergestellt. Testobjekte bereinigt,
-drei Vollbackups erhalten, .177 unverändert. Kein erneuter Prozessabbruch oder
+drei Vollbackups erhalten, Testsystem ARM (Pi 5) unverändert. Kein erneuter Prozessabbruch oder
 Betriebssystem-Datenträgerfülltest; die Grenzen stehen im Card-Editor-Abschnitt.
 
 **App 0.1.329 bietet den neueren Entwurf nach unterbrochener Sicherung an.**
@@ -127,7 +127,7 @@ auf .68 mit HA 2026.10.2: Angebot/Vorschau in DE/EN/FR, Abbrechen ohne Änderung
 exakte bestätigte Wiederherstellung und keine Verwechslung mit einem neueren
 fremden Entwurf. Alle 13 vorhandenen Quellen und beide Originaleditoren sind
 unverändert; Bestandsvergleich bestanden, eigene Testobjekte bereinigt und drei
-Vollbackups erhalten. .177 unberührt. Dieser Lauf nutzt eine kontrollierte
+Vollbackups erhalten. Testsystem ARM (Pi 5) unberührt. Dieser Lauf nutzt eine kontrollierte
 Ausnahme an der Schreibgrenze, keinen neuen Browserprozessabbruch.
 
 **Entwurfskollision mit App 0.1.328 behoben (21.10.2026, .68):** Zwei Tabs
@@ -138,14 +138,14 @@ lässt sich im neuen Tab gezielt auswählen. Alte Quellen und der bisherige glob
 Entwurf bleiben erhalten; veraltetes Serverspeichern bleibt gesperrt.
 DE/EN/FR-Auswahl und Vorschau sind geprüft. Siehe [Card Editor](card-editor.md)
 für Verwendung und Grenzen. Testprojekt bereinigt, Originaleditoren und erfasste
-Daten erhalten, drei Vollbackups auf .68; .177 unverändert. Der anschließende
+Daten erhalten, drei Vollbackups auf .68; Testsystem ARM (Pi 5) unverändert. Der anschließende
 vollständige Chrome-Neustart mit Sitzungswiederherstellung besteht ebenfalls:
 neuer Hauptprozess, getrennte wiederhergestellte Tab-Zeiger, vollständige
 Entwurfsvergleiche und manuelle Quellenwahl. Auch der anschließende harte Abbruch
 aller Chrome-Prozesse besteht: beide Entwürfe samt unterschiedlichen Kartentiteln
 vollständig wiederhergestellt, vier ältere Entwurfsquellen unverändert. Originale
 erhalten, Testprojekt entfernt, drei Vollbackups. Abbruch nach lokaler Sicherung;
-kein Schreibabbruch-, Stromausfall- oder Datenträgertest. .177 bleibt unberührt.
+kein Schreibabbruch-, Stromausfall- oder Datenträgertest. Testsystem ARM (Pi 5) bleibt unberührt.
 
 Anschließend ist der Abbruch innerhalb der lokalen Sicherung nach Schreiben
 des Datensatzes und vor Aktualisierung des Tab-Zeigers gezielt geprüft: der
@@ -153,7 +153,7 @@ vollständige neue Entwurf bleibt manuell auswählbar, der bestätigte Vorgänge
 bleibt vorausgewählt. Tab B und acht ältere Quellen stimmen mit den Sicherungen
 überein. Die eigene Testinstrumentierung lässt installierte App-Dateien unverändert.
 Originaleditoren und Bestandsdaten erhalten, aktive Testobjekte bereinigt, drei
-Vollbackups auf .68; .177 unverändert. Kein Abbruch innerhalb eines atomaren
+Vollbackups auf .68; Testsystem ARM (Pi 5) unverändert. Kein Abbruch innerhalb eines atomaren
 nativen Speicheraufrufs, kein Stromausfall-/Datenträgertest. Anleitung und
 Testgrenzen stehen im [Card Editor](card-editor.md).
 
@@ -162,27 +162,27 @@ mit Integration 0.1.306 und App 0.1.327 auf **.68**: Einbettung, Live-Verbindung
 lokales Speichern/Neuladen, bytegleiche JSON-/YAML-HACS-Rundläufe und automatische
 Wiederverbindung nach HA-Neustart bestehen. Originaleditor und erfasste Daten
 sind erhalten, Runtime-Adresse zurückgestellt und drei Vollbackups vorhanden.
-.177 wurde nicht aufgerufen oder verändert. Alle drei CI-Versionen bestehen.
+Testsystem ARM (Pi 5) wurde nicht aufgerufen oder verändert. Alle drei CI-Versionen bestehen.
 
 **App 0.1.327 begrenzt und entkoppelt die HACS-Prüfung.** Feste Grenzen vor
 Dateilesen/CRC, Worker mit Abbrechen und 15-Sekunden-Prüfwächter sowie eine
 ausdrückliche Übernahme erhalten den Editor bis zur Bestätigung. Dieselbe Datei
 ist nach Abbruch erneut auswählbar. Alle 431 Pakettests und der Workspace-Build
 bestehen. Details und Grenzwerte: [Card-Editor-Handbuch](card-editor.md).
-Die native Prüfung auf .177/.68 mit HA 2026.10.2 besteht nach Vollbackups:
+Die native Prüfung auf dem Testsystem ARM (Pi 5) und .68 mit HA 2026.10.2 besteht nach Vollbackups:
 20 Grenzfälle, sechs Abbrüche, zwei Wiederholungen derselben Datei und zwei
 ausdrückliche Übernahmen. Vollständige Originaleditoren und erfasste Dateien,
 Projekte und Plugins sind erhalten; beide Hosts laufen mit 0.1.327.
 
 **Großprojekt-Import unter wiederholter Last mit unveränderter App 0.1.327.**
-Rund 25 Minuten auf .177/.68: je 60 Serienübernahmen von 36 Feldern mit 360/720
+Rund 25 Minuten auf dem Testsystem ARM (Pi 5) und .68: je 60 Serienübernahmen von 36 Feldern mit 360/720
 verschachtelten Karten, zusammen 238 Abbrüche und 116 gleiche Datei-Wiederholungen.
 Vier tatsächliche HACS-Rundläufe sind bytegleich; je drei Neuladetests und die
 Prüfung eines gültigen 24-MiB-Pakets bestehen. Originaleditoren und erfasste
 Bestandsdaten bleiben erhalten. Browserweite Speicherwerte sind kein isolierter
 ATLAS-Speichernachweis; die HA-Darstellung ist separat geprüft, siehe unten.
 
-**HA-Darstellung großer Projekte bestanden.** Auf .177/.68 mit App 0.1.327 und
+**HA-Darstellung großer Projekte bestanden.** Auf dem Testsystem ARM (Pi 5) und .68 mit App 0.1.327 und
 HA 2026.10.2: ursprüngliche und dynamische 360-/720-Karten-Projekte, Card-Mod
 4.2.1 und UIX 8.4.0 strikt getrennt. UIX verarbeitet auch `card_mod`. Hell/Dunkel,
 CSS-Vererbung, Mushroom-Jinja und acht automatische Wiederverbindungen bestehen:
@@ -196,13 +196,13 @@ Bestandsdaten erhalten, je drei Vollbackups. Keine FPS-/Langzeitmessung;
 Der frühere Card-Mod-Lauf prüft UIX noch nicht. Siehe [Tablet-Ergebnis](tablet-test.md).
 
 **UIX-Tablet-Dauertest abgeschlossen:** Der Nutzer bestätigt je 60 Minuten mit
-720 Karten auf .177/.68 samt Themes und Wiederverbindung. UIX 8.4.0 lief allein.
+720 Karten auf dem Testsystem ARM (Pi 5) und .68 samt Themes und Wiederverbindung. UIX 8.4.0 lief allein.
 Testobjekte und temporäres UIX sind entfernt, Bestandsvergleich bestanden und
 je drei Vollbackups erhalten. Keine unabhängige FPS-/Speicher- oder Leckmessung.
 Siehe [Dauertest-Ergebnis](tablet-uix-dauertest.md).
 
 **Historischer Größenbefund mit App 0.1.324.**
-24 echte Importfälle auf .177/.68: 16 Annahmen mit 112/112 bis 30.008 Dateien
+24 echte Importfälle auf dem Testsystem ARM (Pi 5) und .68: 16 Annahmen mit 112/112 bis 30.008 Dateien
 beziehungsweise 64 MiB Zusatzinhalt und acht korrekte Ablehnungen komprimierter
 oder abgeschnittener Archive. Originaleditoren und geprüfte Bestandsdaten bleiben
 erhalten. Neuladen direkt nach Dateiauswahl erhält beide Originale; eine
@@ -213,12 +213,12 @@ nicht qualifiziert. Einzelheiten stehen im [Card-Editor-Handbuch](card-editor.md
 sämtliche Scriptidentitäten und vollständige Vorprüfung sperren vor der tatsächlichen
 Editorübernahme. 418 Pakettests und 40 neue Handler-/Identitätsregressionen bestehen.
 Gültige Exporte und bestehende gespeicherte Daten bleiben erhalten.
-Das native Update auf .177/.68 mit HA 2026.10.2 ist nach Vollbackups bestanden:
+Das native Update auf dem Testsystem ARM (Pi 5) und .68 mit HA 2026.10.2 ist nach Vollbackups bestanden:
 60 Fälle, 52 korrekte Ablehnungen, acht gültige Importe mit 112/112 und alle
 14 früheren Fehlübernahmen gesperrt. Vollständige Originaleditoren und geprüfte
 Bestandsdaten sind erhalten.
 
-**Historischer Befund unter 0.1.323: mehrdeutige HACS-Pakete.** Auf .177/.68 mit HA 2026.10.2
+**Historischer Befund unter 0.1.323: mehrdeutige HACS-Pakete.** Auf dem Testsystem ARM (Pi 5) und .68 mit HA 2026.10.2
 werden 46 echte Importe geprüft: 26 korrekte Ablehnungen, sechs gültige Kontrollen,
 aber 14 falsche Übernahmen. Mehrere Projekte oder Scripts können trotz blockiertem
 Bericht übernommen werden; ein widersprüchlicher Editorplan-Scriptname besteht
@@ -230,7 +230,7 @@ App 0.1.322 prüft CRC32 aller gespeicherten ZIP-Einträge und die Header-/
 Verzeichniskonsistenz vor der HACS-Übernahme. Beschädigte oder nicht unterstützte
 Archive bleiben außerhalb des Editors. 376 Pakettests, darunter 52 neue
 Integritätsfälle, und vier bytegleiche Originalarchiv-Rundläufe bestehen.
-Das native Update auf .177/.68 mit HA 2026.10.2 besteht nach Vollbackups:
+Das native Update auf dem Testsystem ARM (Pi 5) und .68 mit HA 2026.10.2 besteht nach Vollbackups:
 60 korrekte Ablehnungen erhalten die vollständigen Editorstände auch nach
 Neuladen; vier gültige JSON/YAML-Kontrollen bestehen mit 112/112. Originaleditoren
 und Bestandsdaten sind unverändert. App 0.1.323 korrigiert anschließend die
@@ -239,12 +239,12 @@ Datei-/Inhaltsprüfungen bleiben nicht geprüft. Tatsächlich fehlende Dateien i
 verifizierten ZIPs bleiben Fehler. Alle 378 Pakettests bestehen; siehe
 [Card Editor](./card-editor).
 
-Die native 0.1.323-Qualifikation auf .177/.68 besteht nach frischen Vollbackups:
+Die native 0.1.323-Qualifikation auf dem Testsystem ARM (Pi 5) und .68 besteht nach frischen Vollbackups:
 64 Paketfälle, darunter 26 unverifizierbare ZIPs ohne irreführende Dateifehler,
 60 sichere Ablehnungen und vier gültige Importe mit 112/112. Vollständige
 Originaleditoren und geprüfte Bestandsdaten sind erhalten.
 
-Die native HACS-Negativprüfung auf .177/.68 ist mit 21 Paketen je Host nach
+Die native HACS-Negativprüfung auf dem Testsystem ARM (Pi 5) und .68 ist mit 21 Paketen je Host nach
 Vollbackups abgeschlossen: 38 korrekte Ablehnungen erhalten die vollständigen
 Editorstände auch nach Neuladen; zwei gültige Kontrollen bestehen. Unter 0.1.321
 bestand eine CRC-Lücke: Ein beschädigtes README im ZIP wird zweimal fälschlich mit
@@ -257,7 +257,7 @@ App 0.1.321 korrigiert die falschen HACS-Titelfehler bei leerem ersten
 Entity-Namen, ohne die Namen zu verändern. Beide Prüfungen nutzen den Paketnamen.
 324 lokale Pakettests bestehen; die acht gesicherten Original-/Kontrollarchive
 erreichen unverändert 112/112 und bytegleiche Rückexporte. Ungültige Manifestnamen
-bleiben gesperrt. Das native Update von 0.1.320 auf 0.1.321 ist auf .177/.68
+bleiben gesperrt. Das native Update von 0.1.320 auf 0.1.321 ist auf dem Testsystem ARM (Pi 5) und .68
 mit HA 2026.10.2 nach Vollsicherungen bestanden: vier ursprüngliche JSON/YAML-
 Fehler-ZIPs ohne Kontrollkarte erreichen je 112/112 und bytegleiche Rückexporte.
 Originalnamen und Bedingungen bleiben nach Import und Neuladen exakt erhalten;
@@ -268,7 +268,7 @@ App 0.1.320 erhält leere Entity-Namen und äußere Leerzeichen/Tabulatoren
 unverändert. 296 lokale Pakettests bestehen; 37 neue Prüfungen vergleichen mit
 der unveränderten Originalquelle statt erst nach Normalisierung, einschließlich
 JSON/YAML, Entwürfen, Card-Paketen und HACS. Fehlende Namen behalten ihren
-Ersatznamen. Das native Update auf .177/.68 ist mit HA 2026.10.2 nach frischen
+Ersatznamen. Das native Update auf dem Testsystem ARM (Pi 5) und .68 ist mit HA 2026.10.2 nach frischen
 Vollsicherungen bestanden: 64 Importfälle, 128 quellgetreue Codeproben und 16 echte
 Card-Paket-Rundläufe. Einstellungen, Dateien, sieben Projekte und sechs Plugins
 je Host sowie Papierkorb und ursprüngliche lokale Editorstände bleiben erhalten.
@@ -284,7 +284,7 @@ in 0.1.321 korrigiert und nativ bestätigt. Umfang und CSS-Verhalten stehen im [
 App 0.1.319 korrigiert die Einzelkartenverluste im tatsächlichen Editor-
 Übernahmepfad. Conditional-Bedingungen und eigene Entity-Namen bleiben erhalten;
 259 lokale Pakettests mit 19 neuen Editor-/Entwurfs-/Exportprüfungen bestehen.
-Das native Update auf .177/.68 mit HA 2026.10.2 ist nach Vollsicherungen geprüft:
+Das native Update auf dem Testsystem ARM (Pi 5) und .68 mit HA 2026.10.2 ist nach Vollsicherungen geprüft:
 32 originalgetreue JSON/YAML-Datei-/Einfügefälle samt Neuladen und acht echte
 Card-Paket-Exporte mit Rückimport bestehen. Bestandsdaten, sieben Projekte und
 sechs Plugins je Host sowie beide ursprünglichen lokalen Editorstände bleiben
@@ -296,14 +296,14 @@ Details und Umfang im [Card Editor](./card-editor).
 App 0.1.318 gleicht Import-Vorprüfung und tatsächlichen Parser an: nicht
 unterstützte Markdown-Karten werden auch in verschachtelten Strukturen frühzeitig
 abgelehnt. 240 lokale Pakettests inklusive 27 neuer Paritätsprüfungen bestehen.
-Das Update auf .177/.68 ist mit HA 2026.10.2 nach Vollsicherungen geprüft:
+Das Update auf dem Testsystem ARM (Pi 5) und .68 ist mit HA 2026.10.2 nach Vollsicherungen geprüft:
 24 Markdown-Ablehnungen erhalten den Editorstand, acht verschachtelte Importe
 die Struktur. Bestandsdaten und lokale Editorstände bleiben erhalten. Befund unter 0.1.318:
 Einzelne Conditional-Karten verlieren beim Übernehmen in den Editor Bedingungen,
 einzelne Entity-Karten ihren eigenen Namen (JSON/YAML auf beiden Hosts).
 
 Die erweiterten Conditionals sind mit HA 2026.10.2 auf den freigegebenen
-Testsystemen .177 und .68 geprüft: 1.008 Sichtbarkeitsprüfungen, JSON/YAML,
+den Testsystemen ARM (Pi 5) und .68 geprüft: 1.008 Sichtbarkeitsprüfungen, JSON/YAML,
 Speichern/Wiederöffnen und bytegleiche HACS-Rundläufe mit je 112/112 Prüfungen.
 Bestandsdaten und ursprüngliche lokale Editorstände bleiben erhalten. Die
 gefundene Markdown-Vorprüflücke ist lokal in 0.1.318 korrigiert. Details und Grenzen stehen im

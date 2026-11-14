@@ -4,7 +4,7 @@ description: Bestätigte Prüfungen, lokale Tests und offene Befunde der UGSo-Er
 ---
 # HA 2026.11 – Kompatibilitätsprüfung
 
-**Stand: 05.11.2026 · Core 2026.11.0 · Frontend 20261028.4 · Testsystem .177 (Port 80).**
+**Stand: 05.11.2026 · Core 2026.11.0 · Frontend 20261028.4 · Testsystem ARM (Pi 5) (Port 80).**
 
 Die folgende Übersicht unterscheidet Live-Prüfungen, Anwenderbestätigungen und lokale Tests. Sie ist keine pauschale Freigabe aller Funktionen oder Hardwarevarianten. Die ursprüngliche Prüfung änderte keine Softwareversionen; die anschließende Sidebar-Korrektur ist unten gesondert dokumentiert.
 
@@ -27,11 +27,11 @@ Das ATLAS-App-Paket besteht zusätzlich die schreibfreie Prüfung von 523 Paketd
 | --- | --- |
 | [Dashboard Layout Card V2 **0.1.181**](/sammlung/dashboard-layout-card-v2/) | Separater Live-Test bestanden: Cards im zweiten Abschnitt hinzufügen/bearbeiten, schwebender Hinzufügen-Button, Kopf-/Fußzeilen und vollständiges Neuladen. |
 | [Automation Status Card **0.1.3**](/projects/automation-status-card/) | Live bestanden: Rendern, Ein/Aus mit Zustandsbestätigung, laufender Durchlauf, Trace-Abfrage, normaler Abschluss, Checkboxen, Alle auswählen/abwählen und Neuladen. Bubble-/Mushroom-Einzelvorlagen dargestellt. 21 lokale Tests bestanden. Fehlerfälle und Laufzeitwarnung wurden unter 2026.11 nicht erneut gezielt provoziert. |
-| [Sidebar Manager **0.1.9**](/projects/sidebar-manager/) | Auf .177 von 0.1.7 auf **0.1.9** aktualisiert. Live bestanden: Text-/Iconfarben der Einträge und Gruppen im nativen Bearbeitungsdialog, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 lokale Tests bestanden. Eigene Testobjekte bereinigt; exportiertes Layout entspricht der ursprünglichen Sicherung. |
-| [Sidebar Colors **0.1.1**](/projects/sidebar-colors/) | **0.1.1** korrigiert denselben Zeilenselektor. 27 lokale Tests bestanden, einschließlich DOM-Regressionen für die alten/neuen HA-Elemente und Speichern/Abbrechen. Nicht zusätzlich parallel auf .177 installiert. |
+| [Sidebar Manager **0.1.9**](/projects/sidebar-manager/) | Auf dem Testsystem ARM (Pi 5) von 0.1.7 auf **0.1.9** aktualisiert. Live bestanden: Text-/Iconfarben der Einträge und Gruppen im nativen Bearbeitungsdialog, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 lokale Tests bestanden. Eigene Testobjekte bereinigt; exportiertes Layout entspricht der ursprünglichen Sicherung. |
+| [Sidebar Colors **0.1.1**](/projects/sidebar-colors/) | **0.1.1** korrigiert denselben Zeilenselektor. 27 lokale Tests bestanden, einschließlich DOM-Regressionen für die alten/neuen HA-Elemente und Speichern/Abbrechen. Nicht zusätzlich parallel auf dem Testsystem ARM (Pi 5) installiert. |
 | [Dashboard-Benutzerverwaltung **0.1.11**](/projects/dashboard-user-manager/) | Live: 19 Ansichten und vier Benutzer geladen, keine Änderungen gespeichert. **Offen: zusätzlicher Ladehinweis für das alte `lovelace`-Dashboard.** Ursache nicht abschließend geklärt. 33 Python- und 19 Node-Tests der App bestanden. |
-| [HA Grafik Visual Studio **0.1.296**](/projects/grafik-visual-studio/) | 109 Python- und 388 Node-Tests bestanden. Kein eigener Live-Test auf .177; App dort nicht installiert. |
-| [Blocks for HA **0.1.66**](/projects/blocks-for-ha/) | Zehn Python- und 172 Node-Tests bestanden; sieben optionale Tests übersprungen. Kein Live-Test auf .177. |
+| [HA Grafik Visual Studio **0.1.296**](/projects/grafik-visual-studio/) | 109 Python- und 388 Node-Tests bestanden. Kein eigener Live-Test auf dem Testsystem ARM (Pi 5); App dort nicht installiert. |
+| [Blocks for HA **0.1.66**](/projects/blocks-for-ha/) | Zehn Python- und 172 Node-Tests bestanden; sieben optionale Tests übersprungen. Kein Live-Test auf dem Testsystem ARM (Pi 5). |
 | [MQTT-Client **0.1.17**](/projects/mqtt-client/) | 36 Python-Tests bestanden; zwei Tests mit separatem MQTT-Broker übersprungen. Keine neue Live-Prüfung gegen einen externen Broker. |
 | [CallMeBot Whatsapp **0.1.6**](/projects/callmebot/) / [Signal **0.1.2**](/projects/callmebot-signal/) | 17/18 Python-Tests und jeweils drei Request-ID-Tests bestanden. Keine Nachrichten an echte Empfänger gesendet. |
 | Tabbed Card V2 / Editor **0.1.7**, HA-Integration **0.1.3** | JavaScript-/Python-Syntax geprüft; keine Live-Freigabe der nicht installierten Erweiterung. |
@@ -40,7 +40,7 @@ Das ATLAS-App-Paket besteht zusätzlich die schreibfreie Prüfung von 523 Paketd
 
 ## Bekannte Befunde und nächste Prüfungen
 
-**Behoben in Sidebar Manager 0.1.9 und Sidebar Colors 0.1.1:** Die Farbanwendung unterstützt jetzt das alte `ha-md-list-item` und das neue `ha-list-item-button`. Manager auf .177 live geprüft: Text-/Iconfarben der Einträge und Gruppen, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 Manager- und 27 Colors-Tests bestehen. Colors wurde separat lokal geprüft, nicht parallel auf .177 geladen. Keine Migration der gespeicherten Farbeinstellungen nötig.
+**Behoben in Sidebar Manager 0.1.9 und Sidebar Colors 0.1.1:** Die Farbanwendung unterstützt jetzt das alte `ha-md-list-item` und das neue `ha-list-item-button`. Manager auf dem Testsystem ARM (Pi 5) live geprüft: Text-/Iconfarben der Einträge und Gruppen, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 Manager- und 27 Colors-Tests bestehen. Colors wurde separat lokal geprüft, nicht parallel auf dem Testsystem ARM (Pi 5) geladen. Keine Migration der gespeicherten Farbeinstellungen nötig.
 
 Der `lovelace`-Ladehinweis der Benutzerverwaltung ist separat zu untersuchen. Ein fehlgeschlagenes Lesen darf weiterhin nicht als leeres Dashboard gelten. Der Hinweis ist noch nicht eindeutig als durch 2026.11 verursachte Regression eingeordnet.
 

@@ -4,7 +4,7 @@ description: Liste automatique, sélection par cases, exécutions et diagnostic 
 ---
 # Automation Status Card
 
-**HA 2026.11.0, 05/11/2026, .177 :** la version 0.1.3 passe l’affichage, l’activation/désactivation confirmée par HA, l’exécution en cours, la lecture des traces, la fin normale, les cases à cocher, tout sélectionner/désélectionner et le rechargement. Les exemples individuels Bubble/Mushroom s’affichent. Objets de test supprimés. Les erreurs et alertes de durée n’ont pas été provoquées à nouveau sous cette version de HA ; les résultats antérieurs restent distincts.
+**HA 2026.11.0, 05/11/2026, système de test ARM (Pi 5) :** la version 0.1.3 passe l’affichage, l’activation/désactivation confirmée par HA, l’exécution en cours, la lecture des traces, la fin normale, les cases à cocher, tout sélectionner/désélectionner et le rechargement. Les exemples individuels Bubble/Mushroom s’affichent. Objets de test supprimés. Les erreurs et alertes de durée n’ont pas été provoquées à nouveau sous cette version de HA ; les résultats antérieurs restent distincts.
 
 [Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).
 
@@ -14,7 +14,7 @@ description: Liste automatique, sélection par cases, exécutions et diagnostic 
 
 [GitHub](https://github.com/rockbaer2007/automation-status-card) · [Télécharger 0.1.3](https://github.com/rockbaer2007/automation-status-card/releases/tag/v0.1.3) · [Documentation](https://opensource.ugso-software.de/fr/projects/automation-status-card/)
 
-Vérifié sur .177 avec HA 2026.10.4 : carte de base 0.1.0 et sélection/diagnostics dans la version corrigée 0.1.3. Traces HA réelles, erreur, fin normale, alerte de durée, alerte désactivée, cases à cocher et sélection enregistrée vérifiées. [Rapport et captures](https://github.com/rockbaer2007/automation-status-card/blob/main/docs/TESTING.md).
+Vérifié sur le système de test ARM (Pi 5) avec HA 2026.10.4 : carte de base 0.1.0 et sélection/diagnostics dans la version corrigée 0.1.3. Traces HA réelles, erreur, fin normale, alerte de durée, alerte désactivée, cases à cocher et sélection enregistrée vérifiées. [Rapport et captures](https://github.com/rockbaer2007/automation-status-card/blob/main/docs/TESTING.md).
 
 Liste automatiquement toutes les entités `automation.*` disponibles pour l’utilisateur HA connecté, par ordre alphabétique. Huit lignes sont visibles par défaut ; les autres sont accessibles par défilement vertical. Les nouvelles automatisations et suppressions sont prises en compte automatiquement. Aucune bibliothèque de cartes supplémentaire n’est requise.
 

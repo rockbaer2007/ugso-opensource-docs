@@ -257,7 +257,7 @@ Les modifications sont appliquées immédiatement. Aucun jeton d'accès (access 
 
 Le client vérifie les associations selon l’intervalle d’interrogation configuré. L’étiquette transmet l’état et les métadonnées standard et active les commandes prises en charge. Les autres attributs restent sélectionnables manuellement. Le retrait de l’étiquette arrête la transmission et les commandes automatiques. Les entités sélectionnées manuellement restent actives. Le nettoyage des topics persistants permet de supprimer la dernière valeur MQTT mémorisée si nécessaire.
 
-Essai effectué sur Home Assistant `.177` avec un broker MQTT séparé. Après l’ajout de l’étiquette, le broker a reçu `off` et `on`. Après son retrait, le changement d’état suivant n’a plus été envoyé. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
+Essai effectué sur Home Assistant système de test ARM (Pi 5) avec un broker MQTT séparé. Après l’ajout de l’étiquette, le broker a reçu `off` et `on`. Après son retrait, le changement d’état suivant n’a plus été envoyé. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
 
 ## Transmission en temps réel et état {#live-ubertragung-und-status}
 

@@ -45,11 +45,11 @@ Les manifestes installés sont vérifiés toutes les **30 secondes** et au retou
 
 `optionalCapabilities` est une déclaration optionnelle du manifeste : `entity-state`, `history`, `light-color`, `climate`. La liste indique leur prise en charge. Une capacité inconnue ne donne aucun droit. Les anciens manifestes restent valides ; les commandes dépendent toujours de HA et des capacités de l’entité.
 
-![Import avec deux widgets et affichage des capacités sur .177](/images/grafik-visual-studio/package-import-297.jpg)
+![Import avec deux widgets et affichage des capacités sur le système de test ARM (Pi 5)](/images/grafik-visual-studio/package-import-297.jpg)
 
 ## Vérification et limites
 
-Le **8 novembre 2026**, tests sur **.177 / HA 2026.11.0 / Raspberry Pi 5 ARM64** et **.193 / HA 2026.10.4 / Proxmox amd64** : sauvegarde/rechargement du projet, commande réelle d’un assistant HA temporaire avec retour d’état et retour après inactivité. Sur .177, dialogue du marqueur et import local manuel du paquet 1.1.0 avec deux widgets et affichage des capacités également vérifiés. Paquet et assistants de test ensuite supprimés ; délai remis à 0 seconde. Studio reste installé sur les deux systèmes, projets et réglages existants conservés.
+Le **8 novembre 2026**, tests sur **système de test ARM (Pi 5) / HA 2026.11.0 / Raspberry Pi 5 ARM64** et **système de test PC (64) / HA 2026.10.4 / Proxmox amd64** : sauvegarde/rechargement du projet, commande réelle d’un assistant HA temporaire avec retour d’état et retour après inactivité. Sur le système de test ARM (Pi 5), dialogue du marqueur et import local manuel du paquet 1.1.0 avec deux widgets et affichage des capacités également vérifiés. Paquet et assistants de test ensuite supprimés ; délai remis à 0 seconde. Studio reste installé sur les deux systèmes, projets et réglages existants conservés.
 
 Luminosité, RGB et thermostat testés avec des entités locales simulées. Vues contrôlées dans un navigateur de bureau à 1440 × 1000 et dans une vue tablette à 1280 × 800. Cela ne confirme ni une tablette physique ni tous les types de lampes/chauffages. 394 vérifications JavaScript et 109 Python réussies, plus 7 vérifications JavaScript ciblées et 17 Python pour les paquets. [Rapport technique](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/devices-tablet-0.1.297.md).
 

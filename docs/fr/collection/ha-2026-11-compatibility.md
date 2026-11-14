@@ -4,7 +4,7 @@ description: Vérifications confirmées, tests locaux et problèmes ouverts des 
 ---
 # Vérification de compatibilité HA 2026.11
 
-**État au 05/11/2026 · Core 2026.11.0 · Frontend 20261028.4 · Système de test .177 (port 80).**
+**État au 05/11/2026 · Core 2026.11.0 · Frontend 20261028.4 · Système de test système de test ARM (Pi 5) (port 80).**
 
 Cette synthèse distingue les vérifications réelles, les confirmations de l’utilisateur et les tests locaux. Elle ne certifie pas toutes les fonctions ni toutes les variantes matérielles. La vérification initiale n’a modifié aucune version logicielle ; le correctif ultérieur de la barre latérale est documenté séparément ci-dessous.
 
@@ -27,11 +27,11 @@ Le paquet de l’app ATLAS passe aussi la vérification sans écriture de 523 fi
 | --- | --- |
 | [Dashboard Layout Card V2 **0.1.181**](/fr/collection/dashboard-layout-card-v2/) | Test réel distinct réussi : ajout/modification de cartes dans la deuxième section, bouton d’ajout flottant, en-tête/pied de page et rechargement complet. |
 | [Automation Status Card **0.1.3**](/fr/projects/automation-status-card/) | Tests réels réussis : affichage, activation/désactivation confirmée par HA, exécution en cours, lecture des traces, fin normale, cases à cocher, tout sélectionner/désélectionner et rechargement. Exemples individuels Bubble/Mushroom affichés. Vingt et un tests locaux réussis. Les erreurs et alertes de durée n’ont pas été provoquées à nouveau sous 2026.11. |
-| [Sidebar Manager **0.1.9**](/fr/projects/sidebar-manager/) | Mise à jour de 0.1.7 vers **0.1.9** sur .177. Tests réels réussis : couleurs du texte/des icônes des entrées et groupes dans le dialogue natif, opacité, annulation, enregistrement, réinitialisation au thème et rechargement complet. Les 72 tests locaux réussissent. Objets de test supprimés ; disposition exportée identique à la sauvegarde initiale. |
-| [Sidebar Colors **0.1.1**](/fr/projects/sidebar-colors/) | **0.1.1** corrige le même sélecteur de lignes. Les 27 tests locaux réussissent, y compris les régressions DOM des anciens/nouveaux éléments HA et l’enregistrement/annulation. Aucune installation parallèle supplémentaire sur .177. |
+| [Sidebar Manager **0.1.9**](/fr/projects/sidebar-manager/) | Mise à jour de 0.1.7 vers **0.1.9** sur le système de test ARM (Pi 5). Tests réels réussis : couleurs du texte/des icônes des entrées et groupes dans le dialogue natif, opacité, annulation, enregistrement, réinitialisation au thème et rechargement complet. Les 72 tests locaux réussissent. Objets de test supprimés ; disposition exportée identique à la sauvegarde initiale. |
+| [Sidebar Colors **0.1.1**](/fr/projects/sidebar-colors/) | **0.1.1** corrige le même sélecteur de lignes. Les 27 tests locaux réussissent, y compris les régressions DOM des anciens/nouveaux éléments HA et l’enregistrement/annulation. Aucune installation parallèle supplémentaire sur le système de test ARM (Pi 5). |
 | [Gestion des utilisateurs **0.1.11**](/fr/projects/dashboard-user-manager/) | En conditions réelles : 19 vues et quatre utilisateurs chargés, aucune modification enregistrée. **Ouvert : avertissement de chargement supplémentaire pour l’ancien tableau de bord `lovelace`.** Cause non définitivement établie. Trente-trois tests Python et dix-neuf tests Node de l’app réussis. |
-| [HA Grafik Visual Studio **0.1.296**](/fr/projects/grafik-visual-studio/) | 109 tests Python et 388 tests Node réussis. Aucun test réel dédié sur .177, où l’app n’est pas installée. |
-| [Blocks for HA **0.1.66**](/fr/projects/blocks-for-ha/) | Dix tests Python et 172 tests Node réussis ; sept tests facultatifs ignorés. Aucun test réel sur .177. |
+| [HA Grafik Visual Studio **0.1.296**](/fr/projects/grafik-visual-studio/) | 109 tests Python et 388 tests Node réussis. Aucun test réel dédié sur le système de test ARM (Pi 5), où l’app n’est pas installée. |
+| [Blocks for HA **0.1.66**](/fr/projects/blocks-for-ha/) | Dix tests Python et 172 tests Node réussis ; sept tests facultatifs ignorés. Aucun test réel sur le système de test ARM (Pi 5). |
 | [Client MQTT **0.1.17**](/fr/projects/mqtt-client/) | Trente-six tests Python réussis ; deux tests nécessitant un broker MQTT distinct ignorés. Aucun nouveau test réel avec un broker externe. |
 | [CallMeBot Whatsapp **0.1.6**](/fr/projects/callmebot/) / [Signal **0.1.2**](/fr/projects/callmebot-signal/) | 17/18 tests Python et trois tests d’identifiant de requête par app réussis. Aucun message envoyé à de vrais destinataires. |
 | Tabbed Card V2 / Editor **0.1.7**, intégration HA **0.1.3** | Syntaxe JavaScript/Python vérifiée ; aucune validation réelle de l’extension non installée. |
@@ -40,7 +40,7 @@ Le paquet de l’app ATLAS passe aussi la vérification sans écriture de 523 fi
 
 ## Problèmes connus et prochaines vérifications
 
-**Corrigé dans Sidebar Manager 0.1.9 et Sidebar Colors 0.1.1 :** les couleurs prennent en charge l’ancien `ha-md-list-item` et le nouveau `ha-list-item-button`. Manager testé sur .177 : couleurs du texte/des icônes des entrées et groupes, opacité, annulation, enregistrement, réinitialisation au thème et rechargement complet. Les 72 tests Manager et 27 tests Colors réussissent. Colors testé séparément en local, sans chargement parallèle sur .177. Aucune migration des couleurs enregistrées nécessaire.
+**Corrigé dans Sidebar Manager 0.1.9 et Sidebar Colors 0.1.1 :** les couleurs prennent en charge l’ancien `ha-md-list-item` et le nouveau `ha-list-item-button`. Manager testé sur le système de test ARM (Pi 5) : couleurs du texte/des icônes des entrées et groupes, opacité, annulation, enregistrement, réinitialisation au thème et rechargement complet. Les 72 tests Manager et 27 tests Colors réussissent. Colors testé séparément en local, sans chargement parallèle sur le système de test ARM (Pi 5). Aucune migration des couleurs enregistrées nécessaire.
 
 L’avertissement `lovelace` de la gestion des utilisateurs nécessite une investigation distincte. Une lecture échouée ne doit toujours pas être considérée comme un tableau de bord vide. Cet avertissement n’est pas encore attribué avec certitude à une régression de 2026.11.
 

@@ -20,9 +20,9 @@ Logic Studio Pro conserve les 100 dernières entrées du journal d’exécution 
 
 ## HA Logic Studio Pro 0.1.73
 
-Lors du test sur `.193` avec la version 0.1.72, le deuxième déclenchement a commencé avant la fin du premier. Les deux se sont terminés. Une erreur volontaire a arrêté le script concerné. L’autre script a ensuite traité un troisième déclenchement avec succès.
+Lors du test sur le système de test PC (64) avec la version 0.1.72, le deuxième déclenchement a commencé avant la fin du premier. Les deux se sont terminés. Une erreur volontaire a arrêté le script concerné. L’autre script a ensuite traité un troisième déclenchement avec succès.
 
-Après la mise à jour locale vers la version 0.1.73 sur `.193`, la page de l’application dans Home Assistant n’affichait plus « Expérimental » et l’en-tête de Studio n’affichait plus « Test interne ». Les trois projets de test ont été supprimés.
+Après la mise à jour locale vers la version 0.1.73 sur le système de test PC (64), la page de l’application dans Home Assistant n’affichait plus « Expérimental » et l’en-tête de Studio n’affichait plus « Test interne ». Les trois projets de test ont été supprimés.
 
 [HA Logic Studio Pro 0.1.73 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.73)
 
@@ -30,7 +30,7 @@ Après la mise à jour locale vers la version 0.1.73 sur `.193`, la page de l’
 
 Blocks JS importe les messages ioBroker entre scripts avec réponse et adresse cible calculée. L’aperçu indique, pour chaque bloc concerné, l’adresse de réception et le traitement de la réponse à vérifier.
 
-Sur le système de test Home Assistant `.193`, un script Blocks JS en cours d’exécution a construit l’adresse cible à partir de deux fragments de texte. Le second script a journalisé la réception et le bloc de réponse de l’expéditeur s’est exécuté. Les deux projets de test ont ensuite été supprimés et l’autorisation temporaire de `logic_studio_script_message` a été retirée.
+Sur le système de test PC (64), un script Blocks JS en cours d’exécution a construit l’adresse cible à partir de deux fragments de texte. Le second script a journalisé la réception et le bloc de réponse de l’expéditeur s’est exécuté. Les deux projets de test ont ensuite été supprimés et l’autorisation temporaire de `logic_studio_script_message` a été retirée.
 
 [HA Logic Studio Pro 0.1.72 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.72)
 
@@ -38,25 +38,25 @@ Sur le système de test Home Assistant `.193`, un script Blocks JS en cours d’
 
 Le bouton Mode expert dans le menu des projets enregistre le choix pour chaque utilisateur de Home Assistant. Il affiche les outils avancés, dont le code source et l’API de script en JavaScript, l’import et le code généré dans Blocks JS, ainsi que les réglages de diagnostic et d’exécution dans le diagramme fonctionnel. Enregistrer, Annuler, Tester et Lancer restent directement accessibles dans les éditeurs qui les proposent.
 
-Après une sauvegarde complète sur `.193`, les trois éditeurs ont été vérifiés. Le choix a été conservé après rechargement. Le réglage initial a ensuite été rétabli et vérifié après un nouveau rechargement.
+Après une sauvegarde complète sur le système de test PC (64), les trois éditeurs ont été vérifiés. Le choix a été conservé après rechargement. Le réglage initial a ensuite été rétabli et vérifié après un nouveau rechargement.
 
 [HA Logic Studio Pro 0.1.71 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.71)
 
 ## HA Logic Studio Pro 0.1.70
 
-L’icône en forme de crayon dans l’arborescence permet de renommer un dossier personnalisé. Après une sauvegarde complète sur le système de test Home Assistant `.193`, la comparaison des exports avant le renommage et après le rechargement a confirmé que l’identifiant du dossier, l’affectation des deux projets et leur ordre étaient conservés. Le nom d’origine a ensuite été rétabli et vérifié après un nouveau rechargement.
+L’icône en forme de crayon dans l’arborescence permet de renommer un dossier personnalisé. Après une sauvegarde complète sur le système de test PC (64), la comparaison des exports avant le renommage et après le rechargement a confirmé que l’identifiant du dossier, l’affectation des deux projets et leur ordre étaient conservés. Le nom d’origine a ensuite été rétabli et vérifié après un nouveau rechargement.
 
 [HA Logic Studio Pro 0.1.70 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.70)
 
 ## HA Logic Studio Pro 0.1.69
 
-L’assistant de règles prend en compte le changement de langue dans l’éditeur ouvert. Après une sauvegarde complète sur `.193`, le test dans Chrome au format tablette (820 × 1180 px) a confirmé que le titre, les étapes et les déclencheurs suivaient le changement **DE → EN → FR → DE**. L’interface de Studio et le gestionnaire d’applications de Home Assistant affichaient tous deux **0.1.69**. Le serveur lit désormais la version affichée dans les métadonnées du paquet.
+L’assistant de règles prend en compte le changement de langue dans l’éditeur ouvert. Après une sauvegarde complète sur le système de test PC (64), le test dans Chrome au format tablette (820 × 1180 px) a confirmé que le titre, les étapes et les déclencheurs suivaient le changement **DE → EN → FR → DE**. L’interface de Studio et le gestionnaire d’applications de Home Assistant affichaient tous deux **0.1.69**. Le serveur lit désormais la version affichée dans les métadonnées du paquet.
 
 [HA Logic Studio Pro 0.1.69 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.69)
 
 ## HA Logic Studio Pro 0.1.68
 
-L’export YAML télécharge le fichier directement depuis l’éditeur. Deux exports sur le système de test `.193` ont produit deux fichiers YAML complets, identiques octet pour octet. Chrome a bloqué le deuxième téléchargement en le signalant comme non sécurisé. Après confirmation manuelle avec **Conserver**, le deuxième fichier était lui aussi complet dans le dossier des téléchargements.
+L’export YAML télécharge le fichier directement depuis l’éditeur. Deux exports sur le système de test PC (64) ont produit deux fichiers YAML complets, identiques octet pour octet. Chrome a bloqué le deuxième téléchargement en le signalant comme non sécurisé. Après confirmation manuelle avec **Conserver**, le deuxième fichier était lui aussi complet dans le dossier des téléchargements.
 
 [HA Logic Studio Pro 0.1.68 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.68)
 
@@ -66,15 +66,15 @@ Version de test publique actuelle. Créer une sauvegarde complète et essayer la
 
 Les blocs importés de vérification de l’existence d’un état et d’identifiant d’objet conservent leur identifiant ioBroker. Associez explicitement chaque identifiant à une entité Home Assistant dans le bloc. Blocks JS retrouve les données Blockly intégrées dans un fichier JavaScript même si d’autres commentaires les suivent.
 
-La section **Adaptations du code requises** de l’aperçu explique comment remplacer les blocs non pris en charge, comme `exec`. Après une sauvegarde complète sur `.193`, des fichiers de test XML et JavaScript ont été importés et les nouveaux champs d’association ont été vérifiés dans l’éditeur.
+La section **Adaptations du code requises** de l’aperçu explique comment remplacer les blocs non pris en charge, comme `exec`. Après une sauvegarde complète sur le système de test PC (64), des fichiers de test XML et JavaScript ont été importés et les nouveaux champs d’association ont été vérifiés dans l’éditeur.
 
 ### Reconnexion après un redémarrage de Core
 
-Une sauvegarde complète a été créée sur le système de test `.193` avant l’essai. Après le redémarrage de Home Assistant Core, le moteur d’exécution s’est reconnecté 31 secondes après la coupure. La même exécution du script JavaScript a ensuite reçu le passage de l’entité de test de `off` à `on` et l’événement HA personnalisé `logic_studio_runtime_test` avec ses données de test.
+Une sauvegarde complète a été créée sur le système de test PC (64) avant l’essai. Après le redémarrage de Home Assistant Core, le moteur d’exécution s’est reconnecté 31 secondes après la coupure. La même exécution du script JavaScript a ensuite reçu le passage de l’entité de test de `off` à `on` et l’événement HA personnalisé `logic_studio_runtime_test` avec ses données de test.
 
 ### Dossier et ordre des scripts après rechargement
 
-Après une sauvegarde complète sur le système de test `.193`, deux scripts de test ont été déplacés par glisser-déposer dans un autre dossier. Après l’enregistrement de l’ordre et le rechargement de Logic Studio Pro, les deux scripts étaient toujours dans le dossier de destination, dans l’ordre enregistré.
+Après une sauvegarde complète sur le système de test PC (64), deux scripts de test ont été déplacés par glisser-déposer dans un autre dossier. Après l’enregistrement de l’ordre et le rechargement de Logic Studio Pro, les deux scripts étaient toujours dans le dossier de destination, dans l’ordre enregistré.
 
 [HA Logic Studio Pro 0.1.67 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.67)
 
@@ -84,9 +84,9 @@ Activez la sauvegarde des compteurs et des mémoires dans le diagramme fonctionn
 
 Le rapport d’import de Blocks JS répertorie séparément les identifiants ioBroker calculés. Dans le champ d’association JSON du bloc importé, associez chaque identifiant ioBroker possible à une entité Home Assistant.
 
-Sur `.193`, le compteur CTU et la mémoire RS ont conservé les valeurs `1` et `true` après le redémarrage de l’application.
+Sur le système de test PC (64), le compteur CTU et la mémoire RS ont conservé les valeurs `1` et `true` après le redémarrage de l’application.
 
-Lors du test en conditions réelles sur `.193`, le script Blocks JS importé a calculé l’identifiant ioBroker `zigbee.0.sensor`. L’association JSON lui a permis de lire l’assistant de test Home Assistant `input_boolean.logic_studio_runtime_test`. Deux lancements avec le bouton de lecture ont inscrit `false` dans le journal lorsque l’assistant était désactivé et `true` lorsqu’il était activé.
+Lors du test en conditions réelles sur le système de test PC (64), le script Blocks JS importé a calculé l’identifiant ioBroker `zigbee.0.sensor`. L’association JSON lui a permis de lire l’assistant de test Home Assistant `input_boolean.logic_studio_runtime_test`. Deux lancements avec le bouton de lecture ont inscrit `false` dans le journal lorsque l’assistant était désactivé et `true` lorsqu’il était activé.
 
 [HA Logic Studio Pro 0.1.66 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.66)
 
@@ -96,7 +96,7 @@ Lors du test en conditions réelles sur `.193`, le script Blocks JS importé a c
 
 Les projets JavaScript, TypeScript et les diagrammes fonctionnels peuvent être exécutés au démarrage de l’application. Activer **Exécuter au démarrage de l’application** et enregistrer le projet. La simulation propose des points d’arrêt et le pas à pas. L’organisation automatique conserve la position des blocs épinglés. L’aperçu d’import ioBroker de Blocks JS liste les blocs non pris en charge et les identifiants fixes à associer.
 
-Sur `.193`, le projet de test JavaScript enregistré a démarré automatiquement après le redémarrage de l’application. Un point d’arrêt, un pas de simulation et l’aperçu d’import ioBroker avec un identifiant fixe ont également été vérifiés.
+Sur le système de test PC (64), le projet de test JavaScript enregistré a démarré automatiquement après le redémarrage de l’application. Un point d’arrêt, un pas de simulation et l’aperçu d’import ioBroker avec un identifiant fixe ont également été vérifiés.
 
 [HA Logic Studio Pro 0.1.65 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.65)
 
@@ -116,19 +116,19 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
-### Règles enrichies et test en conditions réelles sur .193
+### Règles enrichies et test en conditions réelles sur le système de test PC (64)
 
 Les déclencheurs d’état prennent en charge les valeurs de départ et d’arrivée, un attribut et une durée minimale. Les conditions vérifient les états, les attributs et les seuils numériques. Les branches ALORS et SINON proposent un sélecteur d’actions HA avec des paramètres JSON et des étapes de temporisation distinctes.
 
-L’éditeur et le sélecteur d’actions ont été testés localement dans le navigateur. Après une sauvegarde complète, le YAML généré a été exécuté directement dans Home Assistant sur `.193`. Une impulsion brève n’a rien déclenché. Un état maintenu trois secondes a exécuté ALORS. Un changement du nom d’affichage a exécuté SINON. Les deux traces ont confirmé le délai de deux secondes et la valeur de texte attendue. L’automatisation et les deux auxiliaires de test ont été supprimés.
+L’éditeur et le sélecteur d’actions ont été testés localement dans le navigateur. Après une sauvegarde complète, le YAML généré a été exécuté directement dans Home Assistant sur le système de test PC (64). Une impulsion brève n’a rien déclenché. Un état maintenu trois secondes a exécuté ALORS. Un changement du nom d’affichage a exécuté SINON. Les deux traces ont confirmé le délai de deux secondes et la valeur de texte attendue. L’automatisation et les deux auxiliaires de test ont été supprimés.
 
 Les nouveaux blocs s’exportent en YAML HA. Rules → JS indique si un bloc empêche la conversion.
 
 [HA Logic Studio Pro 0.1.62 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.62)
 
-### Export YAML et test en conditions réelles sur .193
+### Export YAML et test en conditions réelles sur le système de test PC (64)
 
-L’export des règles conserve les états tels que `on` et `off` sous forme de texte, sans les convertir en booléens YAML. L’automatisation corrigée a été exécutée directement dans Home Assistant sur `.193` avec des entrées de test.
+L’export des règles conserve les états tels que `on` et `off` sous forme de texte, sans les convertir en booléens YAML. L’automatisation corrigée a été exécutée directement dans Home Assistant sur le système de test PC (64) avec des entrées de test.
 
 | Déclencheur | Condition | Résultat de la trace HA |
 | --- | --- | --- |
@@ -145,11 +145,11 @@ Une sauvegarde complète a été créée avant le test. L’automatisation et le
 
 L’éditeur affiche une liste compacte avec des icônes à gauche. Une règle peut combiner des changements d’état, une heure quotidienne et des événements Home Assistant. Les conditions acceptent ET, OU et NON. Les branches ALORS et SINON exécutent plusieurs actions dans l’ordre affiché.
 
-Sur le système `.193`, une règle existante a été testée avec trois déclencheurs, deux conditions et deux actions par branche. L’aperçu YAML présentait la structure attendue. Lors du test dans Studio, les trois déclencheurs simulés ont lancé les deux actions ALORS lorsque la condition OU était satisfaite. Lorsque la condition ET ne l’était pas, les deux actions SINON se sont exécutées dans l’ordre configuré. Aucun appareil réel n’a été commandé.
+Sur le système de test PC (64), une règle existante a été testée avec trois déclencheurs, deux conditions et deux actions par branche. L’aperçu YAML présentait la structure attendue. Lors du test dans Studio, les trois déclencheurs simulés ont lancé les deux actions ALORS lorsque la condition OU était satisfaite. Lorsque la condition ET ne l’était pas, les deux actions SINON se sont exécutées dans l’ordre configuré. Aucun appareil réel n’a été commandé.
 
 [HA Logic Studio Pro 0.1.60 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.60)
 
-![Éditeur de règles sur .193 avec la palette compacte et les deux branches](/images/logic-studio/0.1.60-rules-test-193.png)
+![Éditeur de règles sur le système de test PC (64) avec la palette compacte et les deux branches](/images/logic-studio/0.1.60-rules-test-193.png)
 
 ### Créer une règle avec l’assistant
 
@@ -157,7 +157,7 @@ Choisissez **Règles → Assistant**. Le dialogue suit quatre étapes : **Décle
 
 [HA Logic Studio Pro 0.1.59 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.59)
 
-Le 12 novembre 2026, les trois déclencheurs ont été testés directement dans Home Assistant sur le système de test `.193`. Le passage de l’état désactivé à l’état activé, le déclenchement quotidien à 19 h 38 (heure locale de HA) et l’événement `rules_live_0159_event` ont chacun activé la sortie de test. Une sauvegarde complète a été créée avant le test. Les trois automatisations et les deux assistants de test ont ensuite été supprimés.
+Le 12 novembre 2026, les trois déclencheurs ont été testés directement dans Home Assistant sur le système de test PC (64). Le passage de l’état désactivé à l’état activé, le déclenchement quotidien à 19 h 38 (heure locale de HA) et l’événement `rules_live_0159_event` ont chacun activé la sortie de test. Une sauvegarde complète a été créée avant le test. Les trois automatisations et les deux assistants de test ont ensuite été supprimés.
 
 ![Home Assistant affiche la dernière exécution des trois automatisations de test et la sortie de test activée](/images/logic-studio/0.1.59-rules-live-test-193.png)
 
@@ -184,7 +184,7 @@ L’autorisation d’écriture inclut la lecture. `ha.readState` et `ha.readAttr
 
 Après le redémarrage de l’application, les scripts doivent être relancés. En cas de perte de connexion ou de refus d’une action, le moteur arrête le script et journalise l’erreur. Les déclencheurs astronomiques et la reconnexion automatique restent à ajouter.
 
-**Vérifié sur .193 avec HA 2026.11.1.** Le moteur a lu l’état et un attribut de l’entrée de test, l’a activée par un horaire et l’a désactivée à la réception d’un événement HA réel. Les deux changements d’état ont été signalés. Un horaire Blocks JS importé s’est exécuté toutes les deux secondes. Les tests précédents ont vérifié le démarrage, l’arrêt, le redémarrage et la poursuite de l’exécution après avoir quitté Studio, avec JavaScript et TypeScript.
+**Vérifié sur le système de test PC (64) avec HA 2026.11.1.** Le moteur a lu l’état et un attribut de l’entrée de test, l’a activée par un horaire et l’a désactivée à la réception d’un événement HA réel. Les deux changements d’état ont été signalés. Un horaire Blocks JS importé s’est exécuté toutes les deux secondes. Les tests précédents ont vérifié le démarrage, l’arrêt, le redémarrage et la poursuite de l’exécution après avoir quitté Studio, avec JavaScript et TypeScript.
 
 ### Commander des scripts et des automatisations
 
@@ -214,7 +214,7 @@ Dans tous les éditeurs, **Enregistrer** applique les modifications. **Annuler**
 
 La version **0.1.28** complète les traductions des éditeurs de règles, Blocks A, Blocks JS, JavaScript, TypeScript et YAML HA. Le choix de langue s’applique aussi au diagramme fonctionnel. [Version de test et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.28)
 
-Les tests sur .193 ont vérifié dans les trois langues les barres d’outils du diagramme fonctionnel, des règles, de Blocks A, de Blocks JS, de JavaScript, de TypeScript, des automatisations HA et des scripts HA. La boîte de dialogue des exemples de code a aussi été vérifiée en français.
+Les tests sur le système de test PC (64) ont vérifié dans les trois langues les barres d’outils du diagramme fonctionnel, des règles, de Blocks A, de Blocks JS, de JavaScript, de TypeScript, des automatisations HA et des scripts HA. La boîte de dialogue des exemples de code a aussi été vérifiée en français.
 
 Pour installer la version Pro, sélectionner **HA Logic Studio Pro** dans le dépôt commun UGSo de la boutique d’applications. Pour une installation GitHub existante, rechercher les mises à jour puis sélectionner **HA Logic Studio Pro → Mettre à jour**. Utiliser **DE**, **EN** ou **FR** en haut du volet des projets pour changer la langue des éditeurs.
 
@@ -222,7 +222,7 @@ Pour installer la version Pro, sélectionner **HA Logic Studio Pro** dans le dé
 
 Le bouton **Lecture** lance le diagramme fonctionnel sur le serveur HA. Le mode **Automatique** réagit aux changements des états et attributs autorisés ; le **Cycle fixe** évalue le plan toutes les 100 à 60 000 ms. La simulation et l’export YAML restent séparés. **Enregistrer** valide le brouillon ; **Annuler** rétablit le dernier état enregistré. La barre d’outils est disponible en DE/EN/FR.
 
-Sur .193, le démarrage automatique a activé l’entité de test et le cycle de 200 ms l’a désactivée. L’arrêt et l’annulation d’une modification non enregistrée ont aussi été vérifiés. Les deux modes ont également été testés localement avec des changements d’entrée.
+Sur le système de test PC (64), le démarrage automatique a activé l’entité de test et le cycle de 200 ms l’a désactivée. L’arrêt et l’annulation d’une modification non enregistrée ont aussi été vérifiés. Les deux modes ont également été testés localement avec des changements d’entrée.
 
 [Mise à jour de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.26) · [Application dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_logic_studio_pro)
 
@@ -240,7 +240,7 @@ https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 
 **Conserver une installation locale existante :** les applications GitHub et locale ont des identifiants de dépôt et des données séparés. Exporter l’ancien plan en JSON avec **Projekt**, puis utiliser **Öffnen** dans l’application GitHub. Aucune migration ou désinstallation automatique. Chaque application conserve projet et réglages de palette sous `/data`.
 
-**Mettre à jour une application GitHub existante :** sauvegarder d’abord, rechercher les mises à jour dans le gestionnaire d’applications puis choisir **UGSo Logic Studio → Mettre à jour**. Conserver l’installation : `/data`, les identifiants d’entités et les plans existants sont préservés. Ne pas désinstaller ni changer d’identifiant d’application. Sur .193, le plan original, les favoris, les blocs récents et les catégories repliées ont été conservés après la mise à jour.
+**Mettre à jour une application GitHub existante :** sauvegarder d’abord, rechercher les mises à jour dans le gestionnaire d’applications puis choisir **UGSo Logic Studio → Mettre à jour**. Conserver l’installation : `/data`, les identifiants d’entités et les plans existants sont préservés. Ne pas désinstaller ni changer d’identifiant d’application. Sur le système de test PC (64), le plan original, les favoris, les blocs récents et les catégories repliées ont été conservés après la mise à jour.
 
 ## Langue, barre d’outils et documentation
 
@@ -250,11 +250,11 @@ Choisir **Langue → Deutsch / English / Français** dans l’en-tête. Menus, d
 
 La barre regroupe **Annuler/rétablir → Projet → Simulation → Sortie**. Les trois boutons de simulation ont les mêmes dimensions et des bordures distinctes. Le menu Projet propose aussi **Nouveau projet** et **Charger l’exemple**. Le sélecteur d’entités s’ouvre via l’icône **à côté de l’identifiant d’entité HA** dans les propriétés STATE_IN/STATE_OUT ; l’ancien bouton supérieur est retiré.
 
-![Documentation allemande sur .193 avec le plan original conservé](/images/logic-studio/0.1.12-193-de-documentation.png)
+![Documentation allemande sur le système de test PC (64) avec le plan original conservé](/images/logic-studio/0.1.12-193-de-documentation.png)
 
-![Documentation anglaise du même plan sur .193](/images/logic-studio/0.1.12-193-en-documentation.png)
+![Documentation anglaise du même plan sur le système de test PC (64)](/images/logic-studio/0.1.12-193-en-documentation.png)
 
-![Documentation française du même plan sur .193](/images/logic-studio/0.1.12-193-fr-documentation.png)
+![Documentation française du même plan sur le système de test PC (64)](/images/logic-studio/0.1.12-193-fr-documentation.png)
 
 ## Deux types de plans
 
@@ -271,19 +271,19 @@ Maintenir le bouton de la souris sur une borne colorée, faire glisser vers une 
 
 **BOOL se connecte uniquement à BOOL.** Les types identiques sont compatibles ; la conversion élargissante `INT → REAL` est aussi autorisée. Les bornes explicitement `ANY` sont universelles. Nombres et textes ne sont pas convertis implicitement en BOOL. Une entrée accepte un seul lien ; types incompatibles, bornes de même direction, liens vers le même bloc et cycles sont refusés avec une explication. Au clavier, sélectionner la sortie avec Tab/Entrée, puis l’entrée et Entrée.
 
-![Bornes BOOL compatibles reliées à la souris sur .193](/images/logic-studio/0.1.7-bool-verbunden.png)
+![Bornes BOOL compatibles reliées à la souris sur le système de test PC (64)](/images/logic-studio/0.1.7-bool-verbunden.png)
 
 ![Connexion STRING vers BOOL refusée avec une erreur de type explicite](/images/logic-studio/0.1.7-typ-abgewiesen.png)
 
 En bas à droite, la **MiniMap** affiche les positions colorées des blocs et la zone visible. Faire glisser dans la MiniMap pour naviguer et utiliser la molette pour zoomer. Faire glisser le canevas vide déplace la vue ; **+/−** règlent le zoom et **Alles anzeigen** cadre tous les blocs. Déplacer un bloc par son en-tête. L’attribution **React Flow** reste visible en bas à droite. Depuis 0.1.8, la bibliothèque fonctionne réellement dans l’éditeur ; la logique métier, la validation des types et les exportateurs restent propres à Logic Studio.
 
-![Canevas React Flow avec plan original conservé et MiniMap sur .193](/images/logic-studio/0.1.8-react-flow-193.jpg)
+![Canevas React Flow avec plan original conservé et MiniMap sur le système de test PC (64)](/images/logic-studio/0.1.8-react-flow-193.jpg)
 
 ![Test local React Flow avec blocs typés](/images/logic-studio/0.1.8-react-flow-local.jpg)
 
 Les images suivantes documentent aussi les tests précédents de 0.1.7.
 
-![Mini-vue avec positions des blocs et cadre visible sur .193](/images/logic-studio/0.1.7-miniuebersicht.png)
+![Mini-vue avec positions des blocs et cadre visible sur le système de test PC (64)](/images/logic-studio/0.1.7-miniuebersicht.png)
 
 ## Importation et modification
 
@@ -301,15 +301,15 @@ Le **menu ⋮** de chaque bloc propose **Eigenschaften** (propriétés), **Dupli
 
 ## Validation et limites
 
-**0.1.12 sur .193 / HA Core 2026.10.4 :** Application locale mise à jour depuis 0.1.8 après sauvegarde complète. DE/EN/FR, documentation et sélection d’entités HA réelles validés. Le français reste mémorisé après rechargement du navigateur, redémarrage de l’application et nouveau chargement du projet enregistré ; l’allemand a ensuite été rétabli. Le JSON ne diffère **que par la version** : cinq blocs, trois liens, noms, valeurs et positions sont identiques. Le YAML généré est identique en EN et FR. Aucun appareil commandé. **31 tests Node et neuf tests Python** réussis. Les anciens rapports ci-dessous sont conservés comme historique.
+**0.1.12 sur le système de test PC (64) / HA Core 2026.10.4 :** Application locale mise à jour depuis 0.1.8 après sauvegarde complète. DE/EN/FR, documentation et sélection d’entités HA réelles validés. Le français reste mémorisé après rechargement du navigateur, redémarrage de l’application et nouveau chargement du projet enregistré ; l’allemand a ensuite été rétabli. Le JSON ne diffère **que par la version** : cinq blocs, trois liens, noms, valeurs et positions sont identiques. Le YAML généré est identique en EN et FR. Aucun appareil commandé. **31 tests Node et neuf tests Python** réussis. Les anciens rapports ci-dessous sont conservés comme historique.
 
-![Retour à l’allemand après redémarrage réussi sur .193](/images/logic-studio/0.1.12-193-neustart-de.png)
+![Retour à l’allemand après redémarrage réussi sur le système de test PC (64)](/images/logic-studio/0.1.12-193-neustart-de.png)
 
-**0.1.8 sur .193 / HA Core 2026.10.4 :** Application locale existante mise à jour après sauvegarde complète. Connexions BOOL à la souris, refus STRING→BOOL, entrées occupées, déplacement/annulation, duplication, zoom et MiniMap validés. Le sélecteur lit les entités HA ; un script imbriqué avec If/Then/Else, Delay et Stop a été importé puis exporté sans modification de structure. Le plan original a été restauré et comparé après rechargement : **identifiants, positions, paramètres et trois liens inchangés**, ainsi que favoris, blocs récents et catégories repliées. Aucun appareil commandé. Construction Docker et test HTTP du conteneur réussis, ainsi que **29 tests Node et huit tests Python**. Images de l’interface allemande. Le changement clair/sombre n’a pas été retesté manuellement à cette étape.
+**0.1.8 sur le système de test PC (64) / HA Core 2026.10.4 :** Application locale existante mise à jour après sauvegarde complète. Connexions BOOL à la souris, refus STRING→BOOL, entrées occupées, déplacement/annulation, duplication, zoom et MiniMap validés. Le sélecteur lit les entités HA ; un script imbriqué avec If/Then/Else, Delay et Stop a été importé puis exporté sans modification de structure. Le plan original a été restauré et comparé après rechargement : **identifiants, positions, paramètres et trois liens inchangés**, ainsi que favoris, blocs récents et catégories repliées. Aucun appareil commandé. Construction Docker et test HTTP du conteneur réussis, ainsi que **29 tests Node et huit tests Python**. Images de l’interface allemande. Le changement clair/sombre n’a pas été retesté manuellement à cette étape.
 
-La base fonctionnelle **0.1.5** a été testée sur **.193 / HA Core 2026.10.4** : import d’un blueprint réel, exemples d’automatisation/script/blueprint, exports YAML identiques sur le fond et actions du menu. **0.1.6** est sa première distribution publique. 22 tests Node et huit tests Python vérifient export, persistance, branches et import sûr ; les contrôles GitHub construisent aussi le conteneur.
+La base fonctionnelle **0.1.5** a été testée sur **système de test PC (64) / HA Core 2026.10.4** : import d’un blueprint réel, exemples d’automatisation/script/blueprint, exports YAML identiques sur le fond et actions du menu. **0.1.6** est sa première distribution publique. 22 tests Node et huit tests Python vérifient export, persistance, branches et import sûr ; les contrôles GitHub construisent aussi le conteneur.
 
-**0.1.7 sur .193 / HA Core 2026.10.4 :** tests réels à la souris réussis pour BOOL → BOOL et le sens inverse. STRING → BOOL et une entrée occupée ont été refusés. Mini-vue, navigation par clic et touche Début vérifiées. Le plan original a été rétabli et comparé à sa sauvegarde : **cinq blocs, trois liens et tous les réglages de palette conservés**, y compris après la mise à jour locale vers 0.1.7. Sauvegardes HA complète et projet/réglages séparées créées au préalable ; aucun appareil commandé. **26 tests Node et huit tests Python** réussissent actuellement. Les captures montrent l’interface allemande.
+**0.1.7 sur le système de test PC (64) / HA Core 2026.10.4 :** tests réels à la souris réussis pour BOOL → BOOL et le sens inverse. STRING → BOOL et une entrée occupée ont été refusés. Mini-vue, navigation par clic et touche Début vérifiées. Le plan original a été rétabli et comparé à sa sauvegarde : **cinq blocs, trois liens et tous les réglages de palette conservés**, y compris après la mise à jour locale vers 0.1.7. Sauvegardes HA complète et projet/réglages séparées créées au préalable ; aucun appareil commandé. **26 tests Node et huit tests Python** réussissent actuellement. Les captures montrent l’interface allemande.
 
 L’éditeur ne valide pas toute la sémantique HA : vérifier cibles, templates et sélecteurs dans HA. Commentaires, ancres YAML et mise en forme ne sont pas reconstruits. Limites : **1 Mo, 200 blocs, 500 liens**, imbrication limitée et jusqu’à 250 fichiers blueprint dans les dossiers habituels. Régulateurs, calendrier et sous-plans personnalisés restent partiellement des modèles.
 

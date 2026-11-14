@@ -8,7 +8,7 @@ description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenl
 
 Gruppen- und Link-Icons sind jetzt 24 × 24 px groß. In der eingeklappten Seitenleiste sitzen sie auf derselben horizontalen Position wie die Original-Icons von Home Assistant.
 
-Am 11.11.2026 auf .177 mit Home Assistant 2026.11.0 geprüft: Die Gruppenicons sind ein- und ausgeklappt bündig mit dem Icon „Übersicht“. Auch die Link-Icons für Logs, Automationen und Zustände sind eingeklappt mittig ausgerichtet. Der Nutzertest war ebenfalls erfolgreich.
+Am 11.11.2026 auf dem Testsystem ARM (Pi 5) mit Home Assistant 2026.11.0 geprüft: Die Gruppenicons sind ein- und ausgeklappt bündig mit dem Icon „Übersicht“. Auch die Link-Icons für Logs, Automationen und Zustände sind eingeklappt mittig ausgerichtet. Der Nutzertest war ebenfalls erfolgreich.
 
 ## Neu in 0.1.10: Home-Assistant-Verknüpfungen
 
@@ -30,14 +30,14 @@ Unter **Seitenleiste bearbeiten → Gruppen und Links verwalten → Home-Assista
 
 **Icons sind änderbare Vorgaben für neue Links.** Bereits gespeicherte Links werden anhand ihrer Adresse wiederverwendet; eigene Namen und Icons bleiben erhalten. Das gilt auch für ältere Zustände-Links mit `/developer-tools/state`. Vorhandene Gruppen, Farben, Reihenfolge und VIS-/Dashboard-Einstellungen werden nicht migriert oder zurückgesetzt. Im Manager **Speichern** übernimmt die Linkeinstellungen; **Abbrechen** verwirft den offenen Entwurf.
 
-::: tip Auf .177 mit HA 2026.11.0 geprüft · 08.11.2026
+::: tip Auf dem Testsystem ARM (Pi 5) mit HA 2026.11.0 geprüft · 08.11.2026
 Nach frischem Vollbackup: zweispaltige Desktop-Darstellung, vier neue Linkziele, Standardicons, Ordnerzuordnung, Abbrechen, Speichern und vollständiges Neuladen erfolgreich. Eigene Testlinks entfernt; Benutzereinstellungen, Farben, Gruppen, Testdashboard und Ressourcen stimmen exakt mit der PC-Sicherung überein. **73 automatische Tests** bestehen, einschließlich der Marketplace-Versionsgrenzen. Mobile Darstellung und ältere HA-Versionen wurden nicht separat live geprüft.
 :::
 
-![Zweispaltige Home-Assistant-Verknüpfungen in Sidebar Manager 0.1.10, auf .177 geprüft](/images/sidebar-manager/shortcuts-0110-177.png)
+![Zweispaltige Home-Assistant-Verknüpfungen in Sidebar Manager 0.1.10, auf dem Testsystem ARM (Pi 5) geprüft](/images/sidebar-manager/shortcuts-0110-177.png)
 
 ::: info HA 2026.11: Farbvorschau korrigiert
-Version **0.1.9** behebt die fehlenden Text-/Iconfarben im nativen Bearbeitungsdialog, einschließlich Gruppenfarben. Auf .177 (Port 80), Core 2026.11.0 / Frontend 20261028.4 geprüft: Farben, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 automatische Tests bestehen. Eigene Testgruppe und -verknüpfung sind entfernt; das exportierte Layout entspricht wieder der Sicherung vor dem Test. Vorhandene Einstellungen und „Test für APP“ bleiben erhalten.
+Version **0.1.9** behebt die fehlenden Text-/Iconfarben im nativen Bearbeitungsdialog, einschließlich Gruppenfarben. Auf dem Testsystem ARM (Pi 5) (Port 80), Core 2026.11.0 / Frontend 20261028.4 geprüft: Farben, Transparenz, Abbrechen, Speichern, Theme-Rücksetzung und vollständiges Neuladen. 72 automatische Tests bestehen. Eigene Testgruppe und -verknüpfung sind entfernt; das exportierte Layout entspricht wieder der Sicherung vor dem Test. Vorhandene Einstellungen und „Test für APP“ bleiben erhalten.
 :::
 
 [Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).

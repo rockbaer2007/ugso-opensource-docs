@@ -4,7 +4,7 @@ description: Confirmed checks, local tests and remaining findings for UGSo exten
 ---
 # HA 2026.11 compatibility review
 
-**As of 2026-11-05 · Core 2026.11.0 · Frontend 20261028.4 · Test system .177 (port 80).**
+**As of 2026-11-05 · Core 2026.11.0 · Frontend 20261028.4 · ARM test system (Pi 5) (port 80).**
 
 This overview distinguishes live checks, user confirmations and local tests. It does not certify every feature or hardware variant. The initial review changed no software versions; the subsequent sidebar correction is documented separately below.
 
@@ -27,11 +27,11 @@ The ATLAS app also passed read-only validation of 523 package files. The isolate
 | --- | --- |
 | [Dashboard Layout Card V2 **0.1.181**](/en/collection/dashboard-layout-card-v2/) | Separate live test passed: add/edit cards in the second section, floating Add button, header/footer and full reload. |
 | [Automation Status Card **0.1.3**](/en/projects/automation-status-card/) | Live checks passed: rendering, on/off with state confirmation, running execution, trace request, normal completion, checkboxes, select/deselect all and reload. Bubble/Mushroom single-automation examples rendered. Twenty-one local tests passed. Failures and runtime warnings were not deliberately triggered again on 2026.11. |
-| [Sidebar Manager **0.1.9**](/en/projects/sidebar-manager/) | Updated on .177 from 0.1.7 to **0.1.9**. Live checks passed: entry/group text and icon colors in the native edit dialog, opacity, Cancel, Save, theme reset and a full reload. All 72 local tests passed. Disposable test objects removed; exported layout matches the original backup. |
-| [Sidebar Colors **0.1.1**](/en/projects/sidebar-colors/) | **0.1.1** fixes the same row selector. All 27 local tests passed, including DOM regressions for legacy/new HA elements and Save/Cancel. Not additionally installed alongside Manager on .177. |
+| [Sidebar Manager **0.1.9**](/en/projects/sidebar-manager/) | Updated on the ARM test system (Pi 5) from 0.1.7 to **0.1.9**. Live checks passed: entry/group text and icon colors in the native edit dialog, opacity, Cancel, Save, theme reset and a full reload. All 72 local tests passed. Disposable test objects removed; exported layout matches the original backup. |
+| [Sidebar Colors **0.1.1**](/en/projects/sidebar-colors/) | **0.1.1** fixes the same row selector. All 27 local tests passed, including DOM regressions for legacy/new HA elements and Save/Cancel. Not additionally installed alongside Manager on the ARM test system (Pi 5). |
 | [Dashboard User Manager **0.1.11**](/en/projects/dashboard-user-manager/) | Live: 19 views and four users loaded; no changes saved. **Open: additional loading warning for the old `lovelace` dashboard.** Root cause not fully established. Thirty-three Python and nineteen Node app tests passed. |
-| [HA Grafik Visual Studio **0.1.296**](/en/projects/grafik-visual-studio/) | 109 Python and 388 Node tests passed. No dedicated live test on .177, where the app is not installed. |
-| [Blocks for HA **0.1.66**](/en/projects/blocks-for-ha/) | Ten Python and 172 Node tests passed; seven optional tests skipped. No live test on .177. |
+| [HA Grafik Visual Studio **0.1.296**](/en/projects/grafik-visual-studio/) | 109 Python and 388 Node tests passed. No dedicated live test on the ARM test system (Pi 5), where the app is not installed. |
+| [Blocks for HA **0.1.66**](/en/projects/blocks-for-ha/) | Ten Python and 172 Node tests passed; seven optional tests skipped. No live test on the ARM test system (Pi 5). |
 | [MQTT Client **0.1.17**](/en/projects/mqtt-client/) | Thirty-six Python tests passed; two tests requiring a separate MQTT broker skipped. No new live test against an external broker. |
 | [CallMeBot Whatsapp **0.1.6**](/en/projects/callmebot/) / [Signal **0.1.2**](/en/projects/callmebot-signal/) | 17/18 Python tests and three request-ID tests each passed. No messages sent to actual recipients. |
 | Tabbed Card V2 / Editor **0.1.7**, HA integration **0.1.3** | JavaScript/Python syntax checked; no live qualification of the uninstalled extension. |
@@ -40,7 +40,7 @@ The ATLAS app also passed read-only validation of 523 package files. The isolate
 
 ## Known findings and next checks
 
-**Fixed in Sidebar Manager 0.1.9 and Sidebar Colors 0.1.1:** color application now supports legacy `ha-md-list-item` and new `ha-list-item-button`. Manager live-tested on .177: entry/group text and icon colors, opacity, Cancel, Save, theme reset and a full reload. All 72 Manager and 27 Colors tests pass. Colors was tested separately locally, not loaded alongside Manager on .177. Stored color settings need no migration.
+**Fixed in Sidebar Manager 0.1.9 and Sidebar Colors 0.1.1:** color application now supports legacy `ha-md-list-item` and new `ha-list-item-button`. Manager live-tested on the ARM test system (Pi 5): entry/group text and icon colors, opacity, Cancel, Save, theme reset and a full reload. All 72 Manager and 27 Colors tests pass. Colors was tested separately locally, not loaded alongside Manager on the ARM test system (Pi 5). Stored color settings need no migration.
 
 The User Manager's `lovelace` loading warning requires a separate investigation. Failed reads must still never count as empty dashboards. The warning has not yet been conclusively attributed to a 2026.11 regression.
 

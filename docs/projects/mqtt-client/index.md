@@ -252,7 +252,7 @@ Update erhalten. [Release 0.1.18](https://github.com/rockbaer2007/ugso-ha-mqtt-a
 
 Der Client prüft die Zuordnung im eingestellten Polling-Intervall. Das Label sendet Zustand und Standardattribute und aktiviert passende Rückkanäle. Weitere Attribute bleiben manuell auswählbar. Beim Entfernen des Labels endet die automatische Weiterleitung samt Rückkanälen; manuell ausgewählte Entitäten bleiben aktiv. Den letzten gespeicherten MQTT-Wert kannst du bei Bedarf über die Retain-Bereinigung entfernen.
 
-Auf Home Assistant `.177` mit einem separaten MQTT-Broker geprüft: Nach dem Hinzufügen kamen `off` und `on` an. Nach dem Entfernen wurde die nächste Zustandsänderung nicht mehr gesendet. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
+Auf Home Assistant Testsystem ARM (Pi 5) mit einem separaten MQTT-Broker geprüft: Nach dem Hinzufügen kamen `off` und `on` an. Nach dem Entfernen wurde die nächste Zustandsänderung nicht mehr gesendet. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
 
 ## Live-Übertragung und Status
 

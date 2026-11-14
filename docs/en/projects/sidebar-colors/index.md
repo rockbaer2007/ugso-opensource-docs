@@ -5,7 +5,7 @@ description: Individual colors and opacity for HA sidebar entries in the native 
 # Sidebar Colors
 
 ::: info HA 2026.11: selector fixed
-Version **0.1.1** supports both `ha-md-list-item` and `ha-list-item-button` in the native edit dialog. All 27 local tests pass, including DOM regressions for both HA row types, opacity, Cancel, Save, reopening and theme reset. The corresponding Manager fix was live-tested on .177; Sidebar Colors was not additionally installed alongside it. Existing colors and storage keys are preserved.
+Version **0.1.1** supports both `ha-md-list-item` and `ha-list-item-button` in the native edit dialog. All 27 local tests pass, including DOM regressions for both HA row types, opacity, Cancel, Save, reopening and theme reset. The corresponding Manager fix was live-tested on the ARM test system (Pi 5); Sidebar Colors was not additionally installed alongside it. Existing colors and storage keys are preserved.
 :::
 
 [Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).

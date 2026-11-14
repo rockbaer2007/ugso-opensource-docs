@@ -4,7 +4,7 @@ description: Automatische Automationsliste, Auswahl per Checkbox, Laufstatus und
 ---
 # Automation Status Card
 
-**HA 2026.11.0, 05.11.2026, .177:** Version 0.1.3 besteht Rendern, Ein/Aus mit Zustandsbestätigung, Laufanzeige, Trace-Abfrage, normalen Abschluss, Checkboxen, Alle auswählen/abwählen und Neuladen. Bubble-/Mushroom-Einzelvorlagen werden dargestellt. Eigene Testobjekte sind bereinigt. Fehlerfälle und Laufzeitwarnung wurden in dieser Version von HA nicht erneut gezielt provoziert; frühere Prüfergebnisse bleiben separat erhalten.
+**HA 2026.11.0, 05.11.2026, Testsystem ARM (Pi 5):** Version 0.1.3 besteht Rendern, Ein/Aus mit Zustandsbestätigung, Laufanzeige, Trace-Abfrage, normalen Abschluss, Checkboxen, Alle auswählen/abwählen und Neuladen. Bubble-/Mushroom-Einzelvorlagen werden dargestellt. Eigene Testobjekte sind bereinigt. Fehlerfälle und Laufzeitwarnung wurden in dieser Version von HA nicht erneut gezielt provoziert; frühere Prüfergebnisse bleiben separat erhalten.
 
 [Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
 
@@ -18,7 +18,7 @@ Listet automatisch alle für den angemeldeten HA-Benutzer verfügbaren `automati
 
 [English](/en/projects/automation-status-card/) · [Français](/fr/projects/automation-status-card/)
 
-Auf .177 mit HA 2026.10.4 geprüft: Grundversion 0.1.0 sowie Auswahl und Laufdiagnose in der korrigierten Fassung 0.1.3. Echte HA-Traces, Fehler, normaler Abschluss, Laufzeitwarnung, ausgeschaltete Warnung, Checkboxen und gespeicherte Auswahl erfolgreich geprüft. [Prüfbericht mit Bildern](https://github.com/rockbaer2007/automation-status-card/blob/main/docs/TESTING.md).
+Auf dem Testsystem ARM (Pi 5) mit HA 2026.10.4 geprüft: Grundversion 0.1.0 sowie Auswahl und Laufdiagnose in der korrigierten Fassung 0.1.3. Echte HA-Traces, Fehler, normaler Abschluss, Laufzeitwarnung, ausgeschaltete Warnung, Checkboxen und gespeicherte Auswahl erfolgreich geprüft. [Prüfbericht mit Bildern](https://github.com/rockbaer2007/automation-status-card/blob/main/docs/TESTING.md).
 
 ## Installation
 

@@ -13,7 +13,7 @@ et limite de 15 secondes des requêtes de lecture rendent les erreurs visibles.
 Écritures et contrôles de révision inchangés. Zones étroites, DE/EN/FR, erreur de
 lecture, délai et nouvel essai sont vérifiés. L’utilisateur confirme la confirmation
 visible sur les deux appareils et le test conflit/Wi-Fi ci-dessous. Exporter les
-modifications avant rechargement. .177 inchangé.
+modifications avant rechargement. système de test ARM (Pi 5) inchangé.
 :::
 
 ::: info Réussi : conflit entre appareils et coupure Wi-Fi
@@ -32,7 +32,7 @@ après écriture avant confirmation.
 Résultats réels rapportés par l’utilisateur ; états serveur comparés séparément.
 Projet, page et entrée latérale propres au test nettoyés ; sept projets initiaux
 et données conservés. Trois sauvegardes complètes récentes et preuves PC gardées ;
-brouillons/téléchargements mobiles non effacés. .177 inchangé.
+brouillons/téléchargements mobiles non effacés. système de test ARM (Pi 5) inchangé.
 :::
 
 Depuis l’App **0.1.333**, **Brouillons locaux** propose un bouton **Rechercher**
@@ -48,7 +48,7 @@ L’utilisateur confirme l’App 0.1.333 dans **Chrome sur téléphone et tablet
 reprises distinctes A/B fonctionnent. Appareils : Blackview BV6200 Pro sous
 Android 14/DokeOS 4.0 et Samsung Tab A6 sous Android 11/LineageOS.
 Projets serveur temporaires, page de test et entrée latérale propre au test sont
-nettoyés ; les sept projets initiaux et données restent intacts. .177 inchangé.
+nettoyés ; les sept projets initiaux et données restent intacts. système de test ARM (Pi 5) inchangé.
 Les résultats sur appareils réels sont rapportés par l’utilisateur.
 
 Procédure validée sur **chaque appareil séparément** :
@@ -100,7 +100,7 @@ Qualification native sur .68 avec HA 2026.10.2 réussie : projets homonymes dans
 deux onglets, recherche projet/script/source, résultats vides, retour à la sélection,
 annulation d’aperçu, DE/EN/FR et reprises distinctes après recharge. Les 32 anciennes
 sources restent identiques octet par octet ; éditeurs/données rétablis, fichiers
-de test nettoyés et trois sauvegardes complètes conservées. .177 inchangé.
+de test nettoyés et trois sauvegardes complètes conservées. système de test ARM (Pi 5) inchangé.
 Affichage bureau vérifié ; le redimensionnement Chrome reste sans effet, donc
 l’affichage étroit/mobile n’est pas encore qualifié.
 :::
@@ -117,7 +117,7 @@ la reprise reste une action explicite, jamais automatique.
 Les 20 sources précédentes du profil de test restent identiques octet par octet.
 Éditeurs et configuration globale sont rétablis, y compris après recharge ;
 fichiers de test dans la corbeille et trois sauvegardes complètes gardées sur .68.
-.177 reste inchangé. L’arrêt contrôlé est entre deux écritures : panne électrique,
+système de test ARM (Pi 5) reste inchangé. L’arrêt contrôlé est entre deux écritures : panne électrique,
 stockage du navigateur supprimé ou interruption dans l’opération Storage atomique
 ne sont pas vérifiés. Continuer à exporter séparément les brouillons du navigateur.
 :::
@@ -147,7 +147,7 @@ espace ni sources. Écritures locales/de session bloquées affichent les bons
 messages ; export et nouveaux essais conservent les versions précédentes. Les
 48 anciennes sources restent identiques octet par octet, éditeurs et espace global
 rétablis, fichiers de test nettoyés et trois sauvegardes complètes gardées. Nouvelles
-sources de test et exports PC restent disponibles pour reprise. .177 inchangé.
+sources de test et exports PC restent disponibles pour reprise. système de test ARM (Pi 5) inchangé.
 :::
 
 ::: info Deux onglets vérifiés avec session bloquée et interruption HA
@@ -160,7 +160,7 @@ de reprise correspond à son propre état pendant l’interruption, sauf date d�
 Seule une sauvegarde ultérieure confirmée retire le message ; ensuite les pointeurs
 restent distincts après recharge. Les 40 anciennes sources et les données sont
 conservées, deux éditeurs originaux rétablis, objets de test nettoyés et trois
-sauvegardes complètes gardées. .177 inchangé. Ni coupure Wi-Fi ni arrêt forcé du
+sauvegardes complètes gardées. système de test ARM (Pi 5) inchangé. Ni coupure Wi-Fi ni arrêt forcé du
 processus navigateur ne sont qualifiés dans ce passage.
 :::
 
@@ -170,7 +170,7 @@ et sans pointeur existant, méthodes et accès de session bloqués, export, repr
 manuelle et messages DE/EN/FR. Stockage local plein et écritures locales bloquées
 gardent leur erreur distincte. Les 31 anciennes sources restent identiques octet
 par octet ; cinq éditeurs originaux et les données sont rétablis. Objets de test
-nettoyés, trois sauvegardes complètes conservées, .177 inchangé. Ce passage ne
+nettoyés, trois sauvegardes complètes conservées, système de test ARM (Pi 5) inchangé. Ce passage ne
 comprend ni nouvel arrêt forcé du navigateur ni remplissage du disque système.
 
 Un brouillon écrit localement reste conservé même si son association à cet onglet
@@ -250,7 +250,7 @@ exports identiques sauf leur date de création. Un nouvel onglet reprend
 explicitement le brouillon d’un onglet fermé. Les anciennes sources restent
 sélectionnables et les conflits serveur bloqués. DE/EN/FR réussissent. Éditeurs
 initiaux, sept projets serveur, six plugins et dix fichiers capturés sont conservés.
-Projet propre retiré, trois sauvegardes complètes sur .68 ; .177 inchangé.
+Projet propre retiré, trois sauvegardes complètes sur .68 ; système de test ARM (Pi 5) inchangé.
 
 **Le redémarrage complet de Chrome avec restauration de session réussit aussi
 (21/10/2026, .68) :** l’utilisateur redémarre Chrome ; son processus principal
@@ -259,7 +259,7 @@ brouillon précédent. Après reprise explicite, les exports complets correspond
 aux versions respectives avant redémarrage, sauf la date d’export. Les autres
 sources conservées restent sélectionnables manuellement. Révision serveur,
 éditeurs initiaux et données capturées sont conservés ; projet propre retiré,
-trois sauvegardes complètes gardées. .177 reste inchangé. Il s’agit d’un
+trois sauvegardes complètes gardées. système de test ARM (Pi 5) reste inchangé. Il s’agit d’un
 redémarrage normal, pas d’un plantage, d’une coupure électrique ou de la
 restauration d’un stockage de navigateur effacé.
 
@@ -270,7 +270,7 @@ brouillon. Les brouillons repris explicitement, avec leurs titres de carte
 différents, correspondent aux exports complets précédents, sauf leur date.
 Quatre anciens brouillons sont exportés séparément et leurs données projet
 vérifiées inchangées après le test. Éditeurs initiaux et données conservés,
-projet serveur propre retiré, trois sauvegardes complètes sur .68 ; .177 inchangé.
+projet serveur propre retiré, trois sauvegardes complètes sur .68 ; système de test ARM (Pi 5) inchangé.
 L’arrêt suit une sauvegarde locale terminée, pas une écriture en cours.
 Aucun test de coupure électrique ou panne de disque.
 
@@ -284,7 +284,7 @@ la vérifier puis choisir Sauvegarder et reprendre.** Ses données projet, y com
 le nouveau titre de carte, correspondent exactement à la sauvegarde préalable.
 L’onglet B et huit anciennes sources restent inchangés. Éditeurs initiaux et
 données conservés, objets de test actifs retirés, trois sauvegardes complètes
-sur .68 ; .177 inchangé. Ce test vise la frontière entre enregistrement et
+sur .68 ; système de test ARM (Pi 5) inchangé. Ce test vise la frontière entre enregistrement et
 pointeur, pas une interruption dans l’appel natif atomique, une coupure électrique
 ou une panne de disque.
 :::
@@ -312,7 +312,7 @@ Pour les grands projets, créer des paquets plus petits ; les limites sont fixes
 Annuler conserve sa position quand la vérification se termine et Appliquer apparaît.
 :::
 
-::: info Imports répétés de grands projets sur .177/.68
+::: info Imports répétés de grands projets sur le système de test ARM (Pi 5) und .68
 Vérification d’environ 25 minutes le 19/10/2026 avec l’App 0.1.327 et HA 2026.10.2 :
 60 adoptions en série par hôte, avec 36 champs et 360 ou 720 cartes imbriquées
 Core/Bubble/Mushroom. Au total, 238 annulations pendant la lecture/vérification
@@ -330,7 +330,7 @@ import confirmé crée un groupe local ; les groupes de test ont été retirés 
 restaurant la configuration originale complète.
 :::
 
-::: info Rendu HA de 360/720 cartes sur .177/.68
+::: info Rendu HA de 360/720 cartes sur le système de test ARM (Pi 5) und .68
 Vérifié le 19/10/2026 avec l’App 0.1.327 inchangée et HA 2026.10.2 : projets
 exportés originaux et copies dynamiques propres au test, avec Core, Bubble 3.4.2
 et Mushroom 5.2.3. **Card-Mod 4.2.1 et UIX 8.4.0 fonctionnent séparément.** UIX
@@ -350,7 +350,7 @@ démontrés. Les mesures suivent la fin des transitions et du chargement des mod
 :::
 
 ::: warning Constat historique des tailles avec l’App 0.1.324
-Vérification du 19/10/2026 avec l’App 0.1.324 et HA 2026.10.2 sur .177/.68 :
+Vérification du 19/10/2026 avec l’App 0.1.324 et HA 2026.10.2 sur le système de test ARM (Pi 5) und .68 :
 24 imports réels, dont 16 adoptions valides à 112/112 et huit refus.
 Jusqu’à 30 008 fichiers, 64 MiB de contenu supplémentaire stocké et un README
 de 16 MiB sont acceptés. Les ZIP tronqués et les archives Deflate avec 128 MiB
@@ -377,7 +377,7 @@ comme temperature.js restent pris en charge. Les 418 tests, dont 40 nouvelles
 régressions du gestionnaire livré, réussissent. Les données existantes ne sont
 ni migrées ni réécrites automatiquement.
 
-Les mises à jour sur .177/.68 avec HA 2026.10.2 réussissent après sauvegardes
+Les mises à jour sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2 réussissent après sauvegardes
 complètes : 60 imports réels, 52 refus corrects et huit témoins valides à 112/112.
 Les 14 anciens imports incorrects sont bloqués. Après chaque cas, rechargement
 et exports complets des éditeurs d’origine correspondent aux sauvegardes.
@@ -385,7 +385,7 @@ Données contrôlées, sept projets et six plugins par hôte sont conservés.
 :::
 
 ::: warning Constat historique : paquets HACS ambigus jusqu’à l’App 0.1.323
-La vérification native sur .177/.68 avec HA 2026.10.2 trouve 14 imports incorrects
+La vérification native sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2 trouve 14 imports incorrects
 sur 46 cas. Six paquets par hôte contenant plusieurs projets ou scripts sont
 adoptés malgré un rapport bloqué à 111/112. Pour des projets de même identité,
 l’ordre des entrées ZIP détermine le contenu. Un nom de script contradictoire
@@ -409,7 +409,7 @@ la fourniture d’une archive intacte. L’import reste refusé et l’éditeur 
 Les fichiers réellement absents d’un ZIP vérifié restent signalés. La liste
 conserve 112 contrôles ; les 378 tests, dont 54 cas d’intégrité, réussissent.
 
-Les mises à jour sur .177/.68 avec HA 2026.10.2 réussissent après sauvegardes
+Les mises à jour sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2 réussissent après sauvegardes
 complètes : 60 refus et quatre témoins JSON/YAML valides sont confirmés. Les
 26 cas sans inventaire ZIP vérifiable indiquent la cause ZIP en premier sans
 faux fichiers absents. Les absences réelles restent détectées. Les configurations
@@ -426,7 +426,7 @@ répertoire, nombre de fichiers et chevauchements sont contrôlés. Aucune donn�
 de paquet endommagé n’est transmise à l’éditeur pour import. Les 52 nouveaux cas
 d’intégrité et les 376 tests réussissent. Les archives originales valides restent
 identiques, avec noms vides et espaces extérieurs préservés. La mise à jour native
-de 0.1.321 vers 0.1.322 réussit sur .177/.68 avec HA 2026.10.2 après sauvegardes
+de 0.1.321 vers 0.1.322 réussit sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2 après sauvegardes
 complètes : 30 paquets endommagés/invalides par hôte sont refusés et deux originaux
 JSON/YAML valides atteignent chacun 112/112. Après chaque refus et rechargement,
 la configuration complète de l’éditeur reste inchangée. Le cas CRC initial est
@@ -443,7 +443,7 @@ ces contrôles dépendants sont indiqués comme non vérifiés.
 
 ::: warning Constat CRC historique jusqu’à l’App 0.1.321 incluse
 Après de nouvelles sauvegardes complètes, 21 imports réels par hôte sont vérifiés
-sur .177/.68 avec HA 2026.10.2. Les noms absents, vides, composés d’espaces ou
+sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2. Les noms absents, vides, composés d’espaces ou
 contradictoires dans les manifestes HACS/paquet, sept fichiers obligatoires absents
 y compris des langues déclarées, les ZIP illisibles/tronqués et le JSON invalide
 des manifestes/paquets sont correctement refusés dans 19 cas par hôte. Après
@@ -453,7 +453,7 @@ inchangée, hormis la date d’export. Le paquet témoin valide atteint 112/112.
 Un ZIP dont le README est modifié avec une somme CRC désormais incorrecte est
 pourtant accepté à 112/112 sur les deux hôtes et remplace l’éditeur local. Un
 lecteur ZIP indépendant confirme l’erreur CRC. La validation de 0.1.321 ne prouvait
-donc pas l’intégrité complète du ZIP. Le contrôle CRC est corrigé dès 0.1.322 et confirmé sur .177/.68 ; régénérer
+donc pas l’intégrité complète du ZIP. Le contrôle CRC est corrigé dès 0.1.322 et confirmé sur le système de test ARM (Pi 5) und .68 ; régénérer
 les paquets endommagés depuis un original intact. Les deux éditeurs d’origine
 sont restaurés exactement ; fichiers, projets, plugins et corbeille sont conservés.
 :::
@@ -467,7 +467,7 @@ seules, piles, Conditional et manifestes invalides. Les quatre ZIP en échec
 sauvegardés et quatre paquets témoins passent sans modification à 112/112 et
 leur réexport est identique octet par octet. Les noms de manifeste absents ou
 contradictoires restent refusés. La mise à jour native de 0.1.320 vers 0.1.321
-réussit sur .177/.68 avec HA 2026.10.2 après de nouvelles sauvegardes complètes.
+réussit sur le système de test ARM (Pi 5) und .68 avec HA 2026.10.2 après de nouvelles sauvegardes complètes.
 Les quatre ZIP JSON/YAML originaux en échec, sans carte témoin, atteignent chacun
 112/112 dans le véritable éditeur et se réexportent à l’identique octet par octet.
 Les huit cartes conservent exactement noms et conditions Conditional après import
@@ -484,7 +484,7 @@ contrôles contre la source originale avant analyse, JSON/YAML, Conditional
 imbriquées, restauration des brouillons, paquets Card et HACS. Renommage volontaire
 et choix d’entité restent possibles. Aucune donnée enregistrée n’est réécrite ;
 réimporter la source ou une sauvegarde pour récupérer les noms déjà normalisés.
-La mise à jour native de 0.1.319 vers 0.1.320 est vérifiée sur .177/.68 avec
+La mise à jour native de 0.1.319 vers 0.1.320 est vérifiée sur le système de test ARM (Pi 5) und .68 avec
 HA 2026.10.2 après sauvegardes complètes : 64 cas JSON/YAML par fichier/collage,
 128 sorties capturées après import et rechargement, puis 16 cycles de paquets Card
 réels conservent exactement les valeurs originales, même dans des Conditional
@@ -504,7 +504,7 @@ Si le paquet commence par un nom Entity vide, la validation affiche 110/112 :
 du paquet. Un premier nom composé d’espaces échoue aussi au contrôle du titre.
 Les noms restent intacts, mais la validation n’est pas fiable dans ce cas. Une
 carte témoin nommée avant les huit cas permet la réussite. Le contrôle est corrigé
-dès 0.1.321 et confirmé nativement sur .177/.68 avec les ZIP originaux.
+dès 0.1.321 et confirmé nativement sur le système de test ARM (Pi 5) und .68 avec les ZIP originaux.
 L’échec natif en 0.1.320 avec une chaîne vide est reproduit ; le cas des espaces
 découle de `trim()` dans le code du contrôle.
 :::
@@ -516,7 +516,7 @@ le renommage explicite et le choix d’entité restent possibles. Les 259 tests 
 réussissent, dont 19 nouveaux contrôles de la conversion réelle de l’éditeur, de la
 restauration des brouillons et de l’export JSON/YAML/HACS. Les données enregistrées
 ne changent pas. Réimporter la source ou une sauvegarde pour récupérer un contenu
-déjà perdu. La mise à jour native de .177/.68 est vérifiée avec HA 2026.10.2 après
+déjà perdu. La mise à jour native de système de test ARM (Pi 5) und .68 est vérifiée avec HA 2026.10.2 après
 sauvegardes complètes : 32 cas conservent la structure d’origine par import
 JSON/YAML, fichier/collage et rechargement. Huit paquets Card réels passent
 l’export, le réimport et le rechargement. Les données et les deux configurations
@@ -540,12 +540,12 @@ non prises en charge sont refusées avant toute modification de l’éditeur ;
 cette correction n’ajoute pas le support de Markdown. Les cartes Entity et
 Conditional seules sont aussi reconnues en JSON ; le YAML est analysé de façon
 structurée. Les 240 tests locaux réussissent, dont 27 nouveaux tests de parité.
-La mise à jour native de .177/.68 est vérifiée après sauvegardes complètes :
+La mise à jour native de système de test ARM (Pi 5) und .68 est vérifiée après sauvegardes complètes :
 24 refus Markdown par fichier/collage conservent le code et huit imports
 JSON/YAML imbriqués conservent la structure. Les données et les éditeurs locaux
 d’origine sont conservés, même après rechargement. Les anciennes pertes des cartes
 seules sont corrigées et revérifiées en 0.1.319 ; la normalisation est corrigée
-dès 0.1.320 et sa validation native réussit sur .177/.68.
+dès 0.1.320 et sa validation native réussit sur le système de test ARM (Pi 5) und .68.
 :::
 
 ::: info Affichage Conditional vérifié le 18/10/2026

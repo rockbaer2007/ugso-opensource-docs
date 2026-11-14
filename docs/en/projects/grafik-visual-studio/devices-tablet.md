@@ -45,11 +45,11 @@ Installed package manifests are checked every **30 seconds** and on return. Chan
 
 Manifest `optionalCapabilities` is an optional declaration: `entity-state`, `history`, `light-color`, `climate`. The package list indicates support. Unknown capabilities grant no permissions. Old manifests remain valid; actual controls still depend on HA and entity capabilities.
 
-![Package import with two widgets and capability reporting on .177](/images/grafik-visual-studio/package-import-297.jpg)
+![Package import with two widgets and capability reporting on the ARM test system (Pi 5)](/images/grafik-visual-studio/package-import-297.jpg)
 
 ## Verification and limits
 
-On **8 November 2026**, **.177 / HA 2026.11.0 / Raspberry Pi 5 ARM64** and **.193 / HA 2026.10.4 / Proxmox amd64** passed project save/reload, actual operation of a disposable HA helper with state feedback and inactivity return. On .177, the marker dialog and manual local package import 1.1.0 with two widgets and capability reporting were also checked. The test package and helpers were then removed; inactivity was reset to 0 seconds. Studio stays installed on both systems, preserving existing projects/settings.
+On **8 November 2026**, **ARM test system (Pi 5) / HA 2026.11.0 / Raspberry Pi 5 ARM64** and **PC (64) test system / HA 2026.10.4 / Proxmox amd64** passed project save/reload, actual operation of a disposable HA helper with state feedback and inactivity return. On the ARM test system (Pi 5), the marker dialog and manual local package import 1.1.0 with two widgets and capability reporting were also checked. The test package and helpers were then removed; inactivity was reset to 0 seconds. Studio stays installed on both systems, preserving existing projects/settings.
 
 Brightness, RGB and thermostat were tested with local simulated entities. The new views were inspected in a desktop browser at 1440 × 1000 and tablet viewport 1280 × 800. This does not verify physical tablet hardware or every lamp/heating type. 394 JavaScript and 109 Python checks passed, plus 7 focused JavaScript and 17 package Python checks. [Technical test report](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/devices-tablet-0.1.297.md).
 

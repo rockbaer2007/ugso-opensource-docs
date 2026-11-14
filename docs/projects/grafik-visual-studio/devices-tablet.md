@@ -45,11 +45,11 @@ Installierte Paketmanifeste werden alle **30 Sekunden** und bei Rückkehr geprü
 
 `optionalCapabilities` im Manifest ist ein freiwilliger Hinweis: `entity-state`, `history`, `light-color`, `climate`. Die Paketliste zeigt unterstützt/nicht unterstützt. Unbekannte Fähigkeiten erteilen keine Berechtigungen. Alte Manifeste bleiben gültig; tatsächliche Steuerung hängt weiterhin von HA und den jeweiligen Entitätsfähigkeiten ab.
 
-![Paketimport mit zwei Widgets und Fähigkeitsanzeige auf .177](/images/grafik-visual-studio/package-import-297.jpg)
+![Paketimport mit zwei Widgets und Fähigkeitsanzeige auf dem Testsystem ARM (Pi 5)](/images/grafik-visual-studio/package-import-297.jpg)
 
 ## Prüfung und Grenzen
 
-Am **8. November 2026** auf **.177 / HA 2026.11.0 / Raspberry Pi 5 ARM64** und **.193 / HA 2026.10.4 / Proxmox amd64** geprüft: Projekt speichern/erneut laden, tatsächliches Schalten eines temporären HA-Helfers mit Rückmeldung sowie Inaktivitäts-Rückkehr. Auf .177 zusätzlich Marker-Dialog und manueller lokaler Paketimport 1.1.0 mit zwei Widgets und Fähigkeitsanzeige. Testpaket und Testhelfer danach entfernt; Inaktivität wieder auf 0 Sekunden. Studio bleibt auf beiden Systemen installiert, bestehende Projekte/Einstellungen erhalten.
+Am **8. November 2026** auf **Testsystem ARM (Pi 5) / HA 2026.11.0 / Raspberry Pi 5 ARM64** und **Testsystem PC (64) / HA 2026.10.4 / Proxmox amd64** geprüft: Projekt speichern/erneut laden, tatsächliches Schalten eines temporären HA-Helfers mit Rückmeldung sowie Inaktivitäts-Rückkehr. Auf dem Testsystem ARM (Pi 5) zusätzlich Marker-Dialog und manueller lokaler Paketimport 1.1.0 mit zwei Widgets und Fähigkeitsanzeige. Testpaket und Testhelfer danach entfernt; Inaktivität wieder auf 0 Sekunden. Studio bleibt auf beiden Systemen installiert, bestehende Projekte/Einstellungen erhalten.
 
 Helligkeit, RGB und Thermostat wurden mit lokalen simulierten Entitäten geprüft. Die neuen Ansichten wurden im Desktop-Browser bei 1440 × 1000 und mit Tablet-Ansicht 1280 × 800 kontrolliert. Das bestätigt keinen Test auf echter Tablet-Hardware oder mit jedem Lampen-/Heizungstyp. 394 JavaScript- und 109 Python-Prüfungen bestanden; ergänzend 7 gezielte JavaScript- und 17 Paket-Python-Prüfungen. [Technischer Prüfbericht](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/devices-tablet-0.1.297.md).
 
