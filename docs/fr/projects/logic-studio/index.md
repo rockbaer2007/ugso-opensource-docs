@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.70 · Renommer les dossiers
+description: HA Logic Studio Pro 0.1.71 · Mode expert
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.71
+
+Le bouton Mode expert dans le menu des projets enregistre le choix pour chaque utilisateur de Home Assistant. Il affiche les outils avancés, dont le code source et l’API de script en JavaScript, l’import et le code généré dans Blocks JS, ainsi que les réglages de diagnostic et d’exécution dans le diagramme fonctionnel. Enregistrer, Annuler, Tester et Lancer restent directement accessibles dans les éditeurs qui les proposent.
+
+Après une sauvegarde complète sur `.193`, les trois éditeurs ont été vérifiés. Le choix a été conservé après rechargement. Le réglage initial a ensuite été rétabli et vérifié après un nouveau rechargement.
+
+[HA Logic Studio Pro 0.1.71 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.71)
 
 ## HA Logic Studio Pro 0.1.70
 
