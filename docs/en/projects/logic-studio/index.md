@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.81 · Sunrise and sunset triggers in Rules
+description: HA Logic Studio Pro 0.1.82 · Time from a helper in Rules
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.82
+
+The Rules wizard offers a **Time from helper** trigger. Select a Home Assistant `input_datetime` helper that includes a time. The YAML export uses `trigger: time` and sets `at` to the entity ID. Home Assistant picks up changes made to the helper’s time.
+
+In the live test on the PC test system (64-bit), the helper time was changed from 17:27:27 to 17:27:56. The original time passed without a run. The Home Assistant trace confirms the automation ran at **17:27:56**. [PC test system (64-bit)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.82 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.82)
 
 ## HA Logic Studio Pro 0.1.81
 

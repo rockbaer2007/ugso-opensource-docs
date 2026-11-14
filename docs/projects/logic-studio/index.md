@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.81 · Sonnenaufgang und Sonnenuntergang in Rules
+description: HA Logic Studio Pro 0.1.82 · Uhrzeit aus einem Helfer in Rules
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.82
+
+Der Rules-Assistent bietet **Uhrzeit aus Helfer** an. Wähle einen Home-Assistant-Helfer vom Typ `input_datetime` mit Uhrzeit. Der YAML-Export verwendet `trigger: time` und trägt die Entitäts-ID unter `at` ein. Wenn du die Uhrzeit am Helfer änderst, übernimmt Home Assistant den neuen Termin.
+
+Im Live-Test auf dem Testsystem PC (64) wurde der Helfer von 17:27:27 auf 17:27:56 umgestellt. Zum ursprünglichen Termin blieb die Auslösung aus. Der Home-Assistant-Trace bestätigt die Ausführung um **17:27:56**. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.82 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.82)
 
 ## HA Logic Studio Pro 0.1.81
 

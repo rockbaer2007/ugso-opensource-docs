@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.81 · Lever et coucher du soleil dans les règles
+description: HA Logic Studio Pro 0.1.82 · Heure depuis un assistant dans les règles
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.82
+
+L’assistant de règles propose le déclencheur **Heure depuis un assistant**. Sélectionnez un assistant Home Assistant de type `input_datetime` qui inclut une heure. L’export YAML utilise `trigger: time` et indique l’identifiant de l’entité sous `at`. Home Assistant prend en compte les modifications de l’heure dans cet assistant.
+
+Lors du test en conditions réelles sur le système de test PC (64 bits), l’heure de l’assistant a été modifiée de 17:27:27 à 17:27:56. L’automatisation ne s’est pas déclenchée à l’heure initiale. La trace Home Assistant confirme son exécution à **17:27:56**. [système de test PC (64 bits)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.82 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.82)
 
 ## HA Logic Studio Pro 0.1.81
 
