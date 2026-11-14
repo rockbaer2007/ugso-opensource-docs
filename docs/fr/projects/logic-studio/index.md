@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.83 · Déclencheurs MQTT dans les règles
+description: HA Logic Studio Pro 0.1.84 · Déclencheur au démarrage de Home Assistant
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,14 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.84 · Déclencheur au démarrage de Home Assistant**
+
+La palette et l’assistant de règles proposent **Démarrage de Home Assistant**. L’export YAML utilise `trigger: homeassistant` avec `event: start`.
+
+Lors du test en conditions réelles, l’automatisation a activé l’assistant de test après le redémarrage de Home Assistant Core. [Système de test PC (64 bits)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.84 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.84)
 
 **0.1.83 · Déclencheurs MQTT dans les règles**
 

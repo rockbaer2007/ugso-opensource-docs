@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.83 · MQTT-Auslöser in Rules
+description: HA Logic Studio Pro 0.1.84 · HA-Startauslöser in Rules
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.84 · HA-Startauslöser in Rules**
+
+Der Auslöser **Home Assistant gestartet** steht in der Rules-Palette und im Assistenten zur Verfügung. Der YAML-Export erzeugt `trigger: homeassistant` mit `event: start`.
+
+Im Live-Test schaltete die Automation den Testhelfer nach einem Neustart von Home Assistant Core ein. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.84 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.84)
 
 **0.1.83 · MQTT-Auslöser in Rules**
 
