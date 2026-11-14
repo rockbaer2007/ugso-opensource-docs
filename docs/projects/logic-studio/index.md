@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.86 · Grafische HA-YAML-Vorschau
+description: HA Logic Studio Pro 0.1.87 · Grafische HA-YAML-Vorschau
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.87 · React Flow**
+
+Die grafische HA-YAML-Vorschau nutzt React Flow mit feinem Punktraster, kompakten Karten, Minimap, Zoom, Verschieben und „Alles einpassen“. `choose` erscheint als eine Karte mit beschrifteten Ausgängen pro Option und einem Standardausgang. Die Ansicht dient der Visualisierung. Änderungen werden im YAML-Editor vorgenommen.
+
+Auf dem Testsystem PC (64) wurden alle drei Ausgänge der Flur-Automation geprüft. Die Karten überlappten auch bei langen Entitäts-IDs nicht. Der YAML-Text war nach dem Wechsel zurück in den Editor identisch.
+
+[HA Logic Studio Pro 0.1.87 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.87)
 
 **0.1.86 · Grafische HA-YAML-Vorschau**
 

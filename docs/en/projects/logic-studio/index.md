@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.86 · Visual HA YAML preview
+description: HA Logic Studio Pro 0.1.87 · Visual HA YAML preview
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.87 · React Flow**
+
+The graphical HA YAML preview uses React Flow with a fine dot grid, compact cards, a minimap, zoom, panning and Fit view. Each `choose` card has a labelled output for every option and a default output. The graph is a read-only view. Make changes in the YAML editor.
+
+All three outputs of the hallway automation were verified on the PC test system (64). Cards stayed separate with long entity IDs, and the YAML text matched the input after switching back to the editor.
+
+[HA Logic Studio Pro 0.1.87 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.87)
 
 **0.1.86 · Visual HA YAML preview**
 
