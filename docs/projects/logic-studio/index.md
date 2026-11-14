@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.69 · Rules-Assistent und Versionsanzeige
+description: HA Logic Studio Pro 0.1.70 · Ordner umbenennen
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,12 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.70
+
+Benutzerdefinierte Ordner lassen sich über das Stiftsymbol im Projektbaum umbenennen. Auf dem Home-Assistant-Testsystem `.193` habe ich nach einem Vollbackup die Projektbaum-Exporte vor dem Umbenennen und nach dem Neuladen verglichen. Ordner-ID, Projektzuordnungen und Reihenfolge der beiden Projekte blieben erhalten. Danach habe ich den ursprünglichen Namen wiederhergestellt und nach erneutem Neuladen bestätigt.
+
+[HA Logic Studio Pro 0.1.70 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.70)
 
 ## HA Logic Studio Pro 0.1.69
 

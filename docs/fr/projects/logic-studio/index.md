@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.69 · Assistant de règles et affichage de la version
+description: HA Logic Studio Pro 0.1.70 · Renommer les dossiers
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,12 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.70
+
+L’icône en forme de crayon dans l’arborescence permet de renommer un dossier personnalisé. Après une sauvegarde complète sur le système de test Home Assistant `.193`, la comparaison des exports avant le renommage et après le rechargement a confirmé que l’identifiant du dossier, l’affectation des deux projets et leur ordre étaient conservés. Le nom d’origine a ensuite été rétabli et vérifié après un nouveau rechargement.
+
+[HA Logic Studio Pro 0.1.70 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.70)
 
 ## HA Logic Studio Pro 0.1.69
 
