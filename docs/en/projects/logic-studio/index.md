@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.88 · Visual HA YAML preview
+description: HA Logic Studio Pro 0.1.89 · JSON import in HA YAML
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.89 · JSON import in HA YAML**
+
+Use **Import JSON** to select a file or paste its contents. The validated configuration opens as a YAML draft. Choose **Save** to keep it.
+
+On the PC test system (64), both `Flur.automation.json` from Logic Studio Pro and `flur test.flode.json` from FLODE were imported using the file picker. Both produced equivalent YAML and preserved all three `choose` branches for toggle, turn on and turn off.
+
+[HA Logic Studio Pro 0.1.89 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.89)
 
 **0.1.88 · Visual HA YAML preview**
 
