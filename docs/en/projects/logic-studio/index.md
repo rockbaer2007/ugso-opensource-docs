@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.72 · Script messages with replies
+description: HA Logic Studio Pro 0.1.73 · Runtime and app status
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.73
+
+In the runtime test on `.193` with 0.1.72, the second trigger started before the first had finished. Both completed. A deliberate error stopped the affected script. The other script then successfully handled a third trigger.
+
+After the local update to 0.1.73 on `.193`, the Home Assistant app page no longer displayed “Experimental”, and the Studio header no longer displayed “Internal test”. The three test projects were deleted.
+
+[HA Logic Studio Pro 0.1.73 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.73)
 
 ## HA Logic Studio Pro 0.1.72
 

@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.72 · Messages entre scripts avec réponse
+description: HA Logic Studio Pro 0.1.73 · Exécution et statut de l’application
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.73
+
+Lors du test sur `.193` avec la version 0.1.72, le deuxième déclenchement a commencé avant la fin du premier. Les deux se sont terminés. Une erreur volontaire a arrêté le script concerné. L’autre script a ensuite traité un troisième déclenchement avec succès.
+
+Après la mise à jour locale vers la version 0.1.73 sur `.193`, la page de l’application dans Home Assistant n’affichait plus « Expérimental » et l’en-tête de Studio n’affichait plus « Test interne ». Les trois projets de test ont été supprimés.
+
+[HA Logic Studio Pro 0.1.73 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.73)
 
 ## HA Logic Studio Pro 0.1.72
 
