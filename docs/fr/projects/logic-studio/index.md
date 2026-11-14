@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.74 · Journaux d’exécution persistants
+description: HA Logic Studio Pro 0.1.75 · Lignes d’origine des erreurs JavaScript et TypeScript
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.75
+
+Lorsque l’erreur peut être localisée, le journal affiche la ligne d’origine du code JavaScript ou TypeScript, en mode test comme en exécution. Un clic sur le numéro de ligne ouvre la ligne concernée dans l’éditeur.
+
+Sur le **système de test PC (64)**, les deux modes ont signalé les erreurs provoquées à la **ligne 3 en JavaScript** et à la **ligne 5 en TypeScript**. Le numéro de ligne TypeScript était correct même après la suppression d’une déclaration de type lors de la transpilation.
+
+[HA Logic Studio Pro 0.1.75 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.75)
 
 ## HA Logic Studio Pro 0.1.74
 

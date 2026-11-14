@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.74 · Dauerhafte Runtime-Protokolle
+description: HA Logic Studio Pro 0.1.75 · Fehlerzeilen in JavaScript und TypeScript
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.75
+
+Das Protokoll zeigt im Testlauf und in der Runtime bei zuordenbaren Fehlern die ursprüngliche JavaScript- oder TypeScript-Zeile an. Ein Klick auf die Zeilennummer springt im Editor zur betroffenen Stelle.
+
+Auf dem **Testsystem PC (64)** meldeten beide Ausführungsarten den absichtlich ausgelösten Fehler in **JavaScript-Zeile 3** und **TypeScript-Zeile 5**. Die TypeScript-Zeilennummer blieb korrekt, obwohl beim Übersetzen eine Typdeklaration wegfiel.
+
+[HA Logic Studio Pro 0.1.75 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.75)
 
 ## HA Logic Studio Pro 0.1.74
 

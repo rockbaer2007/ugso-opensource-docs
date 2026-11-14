@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.74 · Persistent runtime logs
+description: HA Logic Studio Pro 0.1.75 · Original JavaScript and TypeScript error lines
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.75
+
+When a test run or runtime error can be traced to the source, the log shows the original JavaScript or TypeScript line. Clicking the line number jumps to it in the editor.
+
+On the **PC (64) test system**, both execution modes reported the deliberate errors at **JavaScript line 3** and **TypeScript line 5**. The TypeScript line number was correct even though transpilation removed a type declaration.
+
+[HA Logic Studio Pro 0.1.75 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.75)
 
 ## HA Logic Studio Pro 0.1.74
 
