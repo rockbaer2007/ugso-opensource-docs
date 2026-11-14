@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.77 · TypeScript-Typprüfung
+description: HA Logic Studio Pro 0.1.78 · Gemeinsame Funktionen aus globalen Skripten
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.78
+
+Unter **Globale Skripte** können JavaScript- und TypeScript-Projekte gespeicherte Skripte aus dem gleichnamigen Ordner auswählen. Der Dialog zeigt den Aufrufpfad für benannte Funktionen, die mit `export function` freigegeben wurden, etwa `shared.script_43.twice(21)`.
+
+Auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) rief je ein allgemeines JavaScript- und TypeScript-Projekt dieselbe globale TypeScript-Funktion auf. Testlauf und Runtime lieferten in beiden Projekten `42`. TypeScript markierte ein Argument mit falschem Typ in Zeile 2. Die Auswahl blieb nach dem Neuladen erhalten.
+
+[HA Logic Studio Pro 0.1.78 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.78)
 
 ## HA Logic Studio Pro 0.1.77
 
