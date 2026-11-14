@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.79 · Per-block mapping for ioBroker imports
+description: HA Logic Studio Pro 0.1.80 · Numeric threshold triggers in Rules
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.80
+
+The Rules wizard offers a **Numeric threshold** trigger with an above limit, a below limit, or both limits for a range. The attribute and minimum duration are optional. The YAML export uses Home Assistant’s native `numeric_state` trigger.
+
+On the [PC test system (64-bit)](/en/collection/test-systems#testsystem-pc), the installed Rules editor generated `above: 50` for a threshold of 50. In the live test of the exported YAML, the automation fired once at 51. The counter stayed at 1 at both 65 and 49. It reached 2 when the value crossed the threshold again at 52.
+
+[HA Logic Studio Pro 0.1.80 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.80)
 
 ## HA Logic Studio Pro 0.1.79
 

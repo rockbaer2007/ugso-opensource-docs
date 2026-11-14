@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.79 · ioBroker-Import mit Zuordnung pro Block
+description: HA Logic Studio Pro 0.1.80 · Zahlenschwellen im Rules-Editor
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.80
+
+Der Rules-Assistent bietet den Auslöser **Zahlenschwelle** mit „Über“, „Unter“ oder beiden Grenzen für einen Bereich. Attribut und Mindestdauer sind optional. Der YAML-Export verwendet den nativen Home-Assistant-Auslöser `numeric_state`.
+
+Auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) erzeugte der installierte Rules-Editor für „Über 50“ den Eintrag `above: 50`. Im Live-Test des erzeugten YAMLs löste die Automation bei 51 einmal aus. Bei 65 und 49 blieb der Zähler bei 1. Erst beim erneuten Überschreiten mit 52 stieg der Zähler auf 2.
+
+[HA Logic Studio Pro 0.1.80 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.80)
 
 ## HA Logic Studio Pro 0.1.79
 

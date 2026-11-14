@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.79 · Association par bloc lors de l’import ioBroker
+description: HA Logic Studio Pro 0.1.80 · Seuils numériques dans l’éditeur de règles
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 :::
 
 [Version de test GitHub et ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Sources dans le dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.80
+
+L’assistant de règles propose le déclencheur **Seuil numérique** avec une limite inférieure, une limite supérieure ou les deux pour définir un intervalle. L’attribut et la durée minimale sont facultatifs. L’export YAML utilise le déclencheur natif `numeric_state` de Home Assistant.
+
+Sur le [système de test PC (64 bits)](/fr/collection/test-systems#testsystem-pc), l’éditeur installé a généré `above: 50` pour le seuil « Au-dessus de 50 ». Lors du test du YAML exporté dans Home Assistant, l’automatisation s’est déclenchée une fois à 51. Le compteur est resté à 1 à 65 puis à 49. Il est passé à 2 lors du nouveau franchissement du seuil à 52.
+
+[HA Logic Studio Pro 0.1.80 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.80)
 
 ## HA Logic Studio Pro 0.1.79
 
