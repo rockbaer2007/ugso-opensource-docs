@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.76 · Script API completion and signatures
+description: HA Logic Studio Pro 0.1.77 · TypeScript type checking
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Install on a test system first and create a full backup beforehand. Native detai
 :::
 
 [GitHub test release and ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Source in the shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.77
+
+**Check types** checks the TypeScript source and the script API types. The editor highlights lines with errors. Clicking a line number in the log jumps to the original source. Test runs and the runtime check types before executing the script.
+
+On the [PC (64) test system](/en/collection/test-systems#testsystem-pc), two deliberate type errors were highlighted on lines 2 and 3. After correction, the test run succeeded. Starting the faulty script in the runtime reported line 2.
+
+[HA Logic Studio Pro 0.1.77 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.77)
 
 ## HA Logic Studio Pro 0.1.76
 

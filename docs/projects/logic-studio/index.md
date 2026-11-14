@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.76 · Autovervollständigung und Funktionssignaturen
+description: HA Logic Studio Pro 0.1.77 · TypeScript-Typprüfung
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -11,6 +11,14 @@ Zuerst auf einem Testsystem installieren und vorher ein vollständiges Backup er
 :::
 
 [GitHub-Testrelease und ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/logic-studio-v0.1.12) · [Quellcode im Sammel-Repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/logic_studio)
+
+## HA Logic Studio Pro 0.1.77
+
+**Typen prüfen** prüft den TypeScript-Code und die Typen der Skript-API. Der Editor markiert fehlerhafte Zeilen. Ein Klick auf die Zeilennummer im Protokoll springt zur ursprünglichen Stelle. Testlauf und Runtime prüfen die Typen vor der Ausführung.
+
+Auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) wurden zwei absichtlich erzeugte Typfehler in Zeile 2 und 3 markiert. Nach der Korrektur lief der Testlauf erfolgreich. Beim Start des fehlerhaften Skripts meldete die Runtime Zeile 2.
+
+[HA Logic Studio Pro 0.1.77 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.77)
 
 ## HA Logic Studio Pro 0.1.76
 
