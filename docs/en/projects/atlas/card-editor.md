@@ -12,7 +12,7 @@ explicit ready message. Loading feedback, a selection hint and a 15-second limit
 for read-only project requests expose failures. Writes and revision checks are
 unchanged. Narrow containers, DE/EN/FR, read failure, timeout and retry pass.
 The user confirms visible confirmation on both devices and the mobile
-conflict/Wi-Fi test below. Export own changes before reloading. ARM test system (Pi 5) is untouched.
+conflict/Wi-Fi test below. Export own changes before reloading. [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm) is untouched.
 :::
 
 ::: info Passed: cross-device save conflict and Wi-Fi interruption

@@ -1,6 +1,6 @@
 # Verified Plugins
 
-**HA 2026.11, 2026-11-05:** Hub and interfaces of all six plugins checked on the ARM test system (Pi 5). Card Editor connects to HA; File Studio loads paths, Automation Exporter reads after backup, Icon Library loads MDI and Icon Studio its SVG interface. **The user confirms ATLAS Terminal works.** This extends the basic review without changing experimental product status or validating every feature.
+**HA 2026.11, 2026-11-05:** Hub and interfaces of all six plugins checked on the [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm). Card Editor connects to HA; File Studio loads paths, Automation Exporter reads after backup, Icon Library loads MDI and Icon Studio its SVG interface. **The user confirms ATLAS Terminal works.** This extends the basic review without changing experimental product status or validating every feature.
 
 [Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).
 

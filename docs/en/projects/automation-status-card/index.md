@@ -4,7 +4,7 @@ description: Automatic automation list, checkbox selection, running status and t
 ---
 # Automation Status Card
 
-**HA 2026.11.0, 2026-11-05, ARM test system (Pi 5):** Version 0.1.3 passes rendering, on/off with state confirmation, running status, trace requests, normal completion, checkboxes, select/deselect all and reload. Bubble/Mushroom single-automation examples render. Owned test objects were removed. Failures and runtime warnings were not deliberately triggered again on this HA version; earlier results remain recorded separately.
+**HA 2026.11.0, 2026-11-05, [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm):** Version 0.1.3 passes rendering, on/off with state confirmation, running status, trace requests, normal completion, checkboxes, select/deselect all and reload. Bubble/Mushroom single-automation examples render. Owned test objects were removed. Failures and runtime warnings were not deliberately triggered again on this HA version; earlier results remain recorded separately.
 
 [Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).
 

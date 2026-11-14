@@ -4,7 +4,7 @@ description: Vérifications confirmées, tests locaux et problèmes ouverts des 
 ---
 # Vérification de compatibilité HA 2026.11
 
-**État au 05/11/2026 · Core 2026.11.0 · Frontend 20261028.4 · Système de test système de test ARM (Pi 5) (port 80).**
+**État au 05/11/2026 · Core 2026.11.0 · Frontend 20261028.4 · Système de test [système de test ARM (Pi 5)](/fr/collection/test-systems#testsystem-arm) (port 80).**
 
 Cette synthèse distingue les vérifications réelles, les confirmations de l’utilisateur et les tests locaux. Elle ne certifie pas toutes les fonctions ni toutes les variantes matérielles. La vérification initiale n’a modifié aucune version logicielle ; le correctif ultérieur de la barre latérale est documenté séparément ci-dessous.
 

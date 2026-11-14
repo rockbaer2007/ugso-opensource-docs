@@ -245,7 +245,7 @@ Changes apply immediately. No additional HA access token is required: the app us
 
 The client checks assignments at the configured polling interval. The label forwards the state and standard metadata and enables supported return channels. Other attributes remain manually selectable. Removing the label stops automatic forwarding and revokes return channels, while manually selected entities remain active. Use retained topic cleanup to remove the last stored MQTT value if needed.
 
-Tested on the ARM test system (Pi 5) with a separate MQTT broker. After adding the label, the broker received `off` and `on`. After removing it, the next state change was no longer sent. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
+Tested on the [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm) with a separate MQTT broker. After adding the label, the broker received `off` and `on`. After removing it, the next state change was no longer sent. [Release 0.1.17](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/mqtt-client-v0.1.17)
 
 ## Live transfer and status
 

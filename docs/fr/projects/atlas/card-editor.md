@@ -13,7 +13,7 @@ et limite de 15 secondes des requêtes de lecture rendent les erreurs visibles.
 Écritures et contrôles de révision inchangés. Zones étroites, DE/EN/FR, erreur de
 lecture, délai et nouvel essai sont vérifiés. L’utilisateur confirme la confirmation
 visible sur les deux appareils et le test conflit/Wi-Fi ci-dessous. Exporter les
-modifications avant rechargement. système de test ARM (Pi 5) inchangé.
+modifications avant rechargement. [système de test ARM (Pi 5)](/fr/collection/test-systems#testsystem-arm) inchangé.
 :::
 
 ::: info Réussi : conflit entre appareils et coupure Wi-Fi

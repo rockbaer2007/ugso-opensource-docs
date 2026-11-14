@@ -14,7 +14,7 @@ machen Fehler sichtbar. Schreibanfragen und Konfliktprüfungen bleiben unveränd
 Schmale Testbereiche, DE/EN/FR, Lesefehler, Zeitlimit und erneutes Öffnen sind
 geprüft. Der Nutzer bestätigt die sichtbare Bestätigung auf beiden Geräten und
 den unten dokumentierten Mobilkonflikt-/WLAN-Test.
-Vor einem Neuladen eigene Änderungen exportieren. Testsystem ARM (Pi 5) bleibt unverändert.
+Vor einem Neuladen eigene Änderungen exportieren. [Testsystem ARM (Pi 5)](/sammlung/testsysteme#testsystem-arm) bleibt unverändert.
 :::
 
 ::: info Bestanden: geräteübergreifender Speicherkonflikt und WLAN-Abbruch

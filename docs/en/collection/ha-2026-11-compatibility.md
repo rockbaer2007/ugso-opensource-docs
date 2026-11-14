@@ -4,7 +4,7 @@ description: Confirmed checks, local tests and remaining findings for UGSo exten
 ---
 # HA 2026.11 compatibility review
 
-**As of 2026-11-05 · Core 2026.11.0 · Frontend 20261028.4 · ARM test system (Pi 5) (port 80).**
+**As of 2026-11-05 · Core 2026.11.0 · Frontend 20261028.4 · [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm) (port 80).**
 
 This overview distinguishes live checks, user confirmations and local tests. It does not certify every feature or hardware variant. The initial review changed no software versions; the subsequent sidebar correction is documented separately below.
 

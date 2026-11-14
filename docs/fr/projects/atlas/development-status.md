@@ -6,9 +6,9 @@ description: État actuel du développement d'ATLAS.
 
 ## Systèmes de test {#variantes-materielles-testees}
 
-- **système de test PC (64) – 192.168.178.193 :** nouvelle VM Proxmox (amd64) avec **8 Go de RAM et 4 vCPU** ; remplace [Système de test 2 (64)](/fr/collection/test-systems#testsystem-2) pour les prochains tests sur VM.
+- **[système de test PC (64)](/fr/collection/test-systems#testsystem-pc) – 192.168.178.193 :** nouvelle VM Proxmox (amd64) avec **8 Go de RAM et 4 vCPU** ; remplace [Système de test 2 (64)](/fr/collection/test-systems#testsystem-2) pour les prochains tests sur VM.
 - **Système de test 2 (64) – 192.168.178.68 :** ancienne VM Proxmox (amd64) avec **8 Go de RAM et 4 vCPU**. Les comptes rendus concernant Système de test 2 (64) sont conservés ci-dessous comme historique.
-- **système de test ARM (Pi 5) – 192.168.178.177 :** **Raspberry Pi 5 (ARM64) avec 8 Go de RAM et 4 cœurs CPU**.
+- **[système de test ARM (Pi 5)](/fr/collection/test-systems#testsystem-arm) – 192.168.178.177 :** **Raspberry Pi 5 (ARM64) avec 8 Go de RAM et 4 cœurs CPU**.
 - **Téléphone :** Blackview BV6200 Pro sous **Android 14 / DokeOS 4.0**, tests mobiles dans **Chrome**.
 - **Tablette :** Samsung Tab A6 sous **Android 11 / LineageOS**, tests mobiles dans **Chrome**.
 

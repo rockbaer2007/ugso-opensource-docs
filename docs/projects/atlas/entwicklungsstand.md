@@ -2,9 +2,9 @@
 
 ## Testsysteme {#getestete-hardwarevarianten}
 
-- **Testsystem PC (64) – 192.168.178.193:** neue Proxmox-VM (amd64) mit **8 GB RAM und 4 vCPU**; ersetzt [Testsystem 2 (64)](/sammlung/testsysteme#testsystem-2) für künftige VM-Prüfungen.
+- **[Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) – 192.168.178.193:** neue Proxmox-VM (amd64) mit **8 GB RAM und 4 vCPU**; ersetzt [Testsystem 2 (64)](/sammlung/testsysteme#testsystem-2) für künftige VM-Prüfungen.
 - **Testsystem 2 (64) – 192.168.178.68:** bisherige Proxmox-VM (amd64) mit **8 GB RAM und 4 vCPU**. Die folgenden Prüfberichte zu Testsystem 2 (64) bleiben als Historie erhalten.
-- **Testsystem ARM (Pi 5) – 192.168.178.177:** **Raspberry Pi 5 (ARM64) mit 8 GB RAM und 4 CPU-Kernen**.
+- **[Testsystem ARM (Pi 5)](/sammlung/testsysteme#testsystem-arm) – 192.168.178.177:** **Raspberry Pi 5 (ARM64) mit 8 GB RAM und 4 CPU-Kernen**.
 - **Handy:** Blackview BV6200 Pro mit **Android 14 / DokeOS 4.0**, Mobilprüfung in **Chrome**.
 - **Tablet:** Samsung Tab A6 mit **Android 11 / LineageOS**, Mobilprüfung in **Chrome**.
 

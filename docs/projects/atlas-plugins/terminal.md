@@ -4,7 +4,7 @@ description: ATLAS-Browser-Terminal mit ANSI-Farben, optionalem SSH, Oh-My-Posh-
 ---
 # ATLAS Terminal
 
-**HA 2026.11, 05.11.2026:** Die Oberfläche von Terminal 0.1.10 wurde auf dem Testsystem ARM (Pi 5) geladen. Anschließend bestätigt der Anwender: **ATLAS Terminal funktioniert.** Der zunächst offene Terminaltest ist damit durch eine Anwenderbestätigung ergänzt. Alle SSH-Ziele und Oh-My-Posh-Themes wurden nicht separat geprüft.
+**HA 2026.11, 05.11.2026:** Die Oberfläche von Terminal 0.1.10 wurde auf dem [Testsystem ARM (Pi 5)](/sammlung/testsysteme#testsystem-arm) geladen. Anschließend bestätigt der Anwender: **ATLAS Terminal funktioniert.** Der zunächst offene Terminaltest ist damit durch eine Anwenderbestätigung ergänzt. Alle SSH-Ziele und Oh-My-Posh-Themes wurden nicht separat geprüft.
 
 [Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
 

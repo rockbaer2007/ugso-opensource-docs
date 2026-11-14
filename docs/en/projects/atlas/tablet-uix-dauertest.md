@@ -1,6 +1,6 @@
 # UIX tablet soak: 720 Cards
 
-As of 19 October 2026. **User confirms 60 minutes on each host, ARM test system (Pi 5) and [Test system 2 (64)](/en/collection/test-systems#testsystem-2),
+As of 19 October 2026. **User confirms 60 minutes on each host, [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm) and [Test system 2 (64)](/en/collection/test-systems#testsystem-2),
 with working theme changes and reconnection.**
 App 0.1.327, HA 2026.10.2, UIX 8.4.0; Card-Mod is not loaded.
 User-reported device: Samsung Galaxy Tab A6, Android 11 / LineageOS,

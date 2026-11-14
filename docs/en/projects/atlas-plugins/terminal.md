@@ -4,7 +4,7 @@ description: ATLAS browser terminal with ANSI colors, optional SSH, Oh My Posh t
 ---
 # ATLAS Terminal
 
-**HA 2026.11, 2026-11-05:** Terminal 0.1.10's interface loaded on the ARM test system (Pi 5). The user subsequently confirmed: **ATLAS Terminal works.** This adds user confirmation to the initially incomplete terminal check. All SSH targets and Oh My Posh themes were not tested separately.
+**HA 2026.11, 2026-11-05:** Terminal 0.1.10's interface loaded on the [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm). The user subsequently confirmed: **ATLAS Terminal works.** This adds user confirmation to the initially incomplete terminal check. All SSH targets and Oh My Posh themes were not tested separately.
 
 [Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).
 

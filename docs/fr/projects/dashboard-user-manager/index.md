@@ -5,7 +5,7 @@ description: Affecter des utilisateurs à toutes les vues HA ou individuellement
 # Gestion des utilisateurs des tableaux de bord
 
 ::: warning Vérification HA 2026.11 du 05/11/2026
-Sur le système de test ARM (Pi 5), la version 0.1.11 charge les affectations existantes avec 19 vues et quatre utilisateurs. Aucune modification enregistrée. **Un avertissement de chargement supplémentaire apparaît pour l’ancien tableau de bord `lovelace`.** Cause non définitivement établie ; aucune garantie générale de compatibilité. Trente-trois tests Python et dix-neuf tests Node de l’app réussissent. Une lecture échouée reste visible et ne compte jamais comme un tableau de bord vide.
+Sur le [système de test ARM (Pi 5)](/fr/collection/test-systems#testsystem-arm), la version 0.1.11 charge les affectations existantes avec 19 vues et quatre utilisateurs. Aucune modification enregistrée. **Un avertissement de chargement supplémentaire apparaît pour l’ancien tableau de bord `lovelace`.** Cause non définitivement établie ; aucune garantie générale de compatibilité. Trente-trois tests Python et dix-neuf tests Node de l’app réussissent. Une lecture échouée reste visible et ne compte jamais comme un tableau de bord vide.
 :::
 
 [Périmètre, résultats et problèmes ouverts](/fr/collection/ha-2026-11-compatibility).

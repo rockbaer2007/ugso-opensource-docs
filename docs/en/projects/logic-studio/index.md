@@ -16,7 +16,7 @@ Install on a test system first and create a full backup beforehand. Native detai
 
 In the JavaScript and TypeScript editors, typing `ha.` suggests script API methods. The list shows parameters and return types. The editor highlights the current parameter while you enter a call.
 
-The Chrome test on the [PC (64) test system](/en/collection/test-systems) verified keyboard selection in both editors and the signatures for `ha.readState`, `ha.callAction` and `ha.pause`.
+The Chrome test on the [PC (64) test system](/en/collection/test-systems#testsystem-pc) verified keyboard selection in both editors and the signatures for `ha.readState`, `ha.callAction` and `ha.pause`.
 
 [HA Logic Studio Pro 0.1.76 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.76)
 

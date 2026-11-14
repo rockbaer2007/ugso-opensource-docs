@@ -16,7 +16,7 @@ Installer d’abord sur un système de test et créer une sauvegarde complète. 
 
 Dans les éditeurs JavaScript et TypeScript, la saisie de `ha.` suggère les méthodes de l’API de script. La liste affiche les paramètres et les types de retour. L’éditeur met en évidence le paramètre en cours de saisie.
 
-Le test dans Chrome sur le [système de test PC (64)](/fr/collection/test-systems) a vérifié la sélection au clavier dans les deux éditeurs et les signatures de `ha.readState`, `ha.callAction` et `ha.pause`.
+Le test dans Chrome sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc) a vérifié la sélection au clavier dans les deux éditeurs et les signatures de `ha.readState`, `ha.callAction` et `ha.pause`.
 
 [HA Logic Studio Pro 0.1.76 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.76)
 

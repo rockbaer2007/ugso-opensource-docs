@@ -8,7 +8,7 @@ description: Folders, colors, opacity and links in the Home Assistant sidebar. V
 
 Group and custom-link icons now measure 24 × 24 px. In the collapsed sidebar, they share the same horizontal center as native Home Assistant icons.
 
-Verified on the ARM test system (Pi 5) with Home Assistant 2026.11.0 on 11 November 2026. Group icons align with the Overview icon in both sidebar layouts. The Logs, Automations, and States link icons are centered in the collapsed sidebar. The user test also passed.
+Verified on the [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm) with Home Assistant 2026.11.0 on 11 November 2026. Group icons align with the Overview icon in both sidebar layouts. The Logs, Automations, and States link icons are centered in the collapsed sidebar. The user test also passed.
 
 ## New in 0.1.10: Home Assistant shortcuts
 

@@ -5,7 +5,7 @@ description: Assign users to all HA views or individual views with checkboxes, b
 # Dashboard User Manager
 
 ::: warning HA 2026.11 review, 2026-11-05
-On the ARM test system (Pi 5), version 0.1.11 loads existing assignments with 19 views and four users. No changes were saved. **An additional loading warning appears for the old `lovelace` dashboard.** The root cause is not fully established; this is not a blanket compatibility claim. Thirty-three Python and nineteen Node app tests pass. Failed dashboard reads remain visible and never count as empty dashboards.
+On the [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm), version 0.1.11 loads existing assignments with 19 views and four users. No changes were saved. **An additional loading warning appears for the old `lovelace` dashboard.** The root cause is not fully established; this is not a blanket compatibility claim. Thirty-three Python and nineteen Node app tests pass. Failed dashboard reads remain visible and never count as empty dashboards.
 :::
 
 [Scope, results and remaining findings](/en/collection/ha-2026-11-compatibility).

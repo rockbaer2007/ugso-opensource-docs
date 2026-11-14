@@ -198,7 +198,7 @@ lokales Speichern/Neuladen sowie JSON-/YAML-HACS-Pakete mit je **112/112** und
 bytegleichem Export/Rückimport/Rückexport. Nach einem echten HA-Core-Neustart
 verbindet sich der offene Editor ohne Neuladen automatisch wieder. Originaleditor,
 sieben Serverprojekte, sechs Plugins und erfasste Einstellungen/Dateien sind
-erhalten; die vorübergehende Runtime-Adresse ist zurückgestellt. **Testsystem ARM (Pi 5) bleibt
+erhalten; die vorübergehende Runtime-Adresse ist zurückgestellt. **[Testsystem ARM (Pi 5)](/sammlung/testsysteme#testsystem-arm) bleibt
 unverändert und wurde nicht aufgerufen.** Auf Testsystem 2 (64) bleiben drei Vollbackups.
 Dies ist kein HA-Update, keine Schemaumwandlung und keine erneute Prüfung einer
 HACS-Repository-Installation oder von ARM64. Die ursprüngliche Adresse wird in

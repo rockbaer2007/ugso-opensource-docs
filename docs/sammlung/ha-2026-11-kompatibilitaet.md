@@ -4,7 +4,7 @@ description: Bestätigte Prüfungen, lokale Tests und offene Befunde der UGSo-Er
 ---
 # HA 2026.11 – Kompatibilitätsprüfung
 
-**Stand: 05.11.2026 · Core 2026.11.0 · Frontend 20261028.4 · Testsystem ARM (Pi 5) (Port 80).**
+**Stand: 05.11.2026 · Core 2026.11.0 · Frontend 20261028.4 · [Testsystem ARM (Pi 5)](/sammlung/testsysteme#testsystem-arm) (Port 80).**
 
 Die folgende Übersicht unterscheidet Live-Prüfungen, Anwenderbestätigungen und lokale Tests. Sie ist keine pauschale Freigabe aller Funktionen oder Hardwarevarianten. Die ursprüngliche Prüfung änderte keine Softwareversionen; die anschließende Sidebar-Korrektur ist unten gesondert dokumentiert.
 

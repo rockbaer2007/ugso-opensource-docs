@@ -12,7 +12,7 @@ User-reported functional qualification, not FPS/memory or long-term measurements
 
 Fresh full backups precede the test. Owned dashboards, resources and states are removed; WWW files are in recoverable File Studio Trash. Old temporary links are removed and are no longer active entry points.
 
-All seven projects and six plugins per host, 531 captured existing files on the ARM test system (Pi 5) and nine on [Test system 2 (64)](/en/collection/test-systems#testsystem-2) are preserved, including original theme settings and old trash entries. Three newest full backups remain per host; PC backups are retained.
+All seven projects and six plugins per host, 531 captured existing files on the [ARM test system (Pi 5)](/en/collection/test-systems#testsystem-arm) and nine on [Test system 2 (64)](/en/collection/test-systems#testsystem-2) are preserved, including original theme settings and old trash entries. Three newest full backups remain per host; PC backups are retained.
 
 For future runs, start with a lightweight browser check, then 12, 360 and 720 Cards. Increase only when responsive; check portrait/landscape, scrolling, synthetic states, themes and reconnect without reload. Restore the original theme. Create owned dashboards in the sidebar without Admin-only. Never load Card-Mod and UIX in parallel.
 

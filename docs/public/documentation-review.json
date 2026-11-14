@@ -112,8 +112,8 @@
       },
       "disposition": "intentional-difference",
       "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content.",
-      "source_sha256": "2941ebe42805bec8fb421b30bd5325eb07e84823f5b9c958c32208d5055a89a4",
-      "target_sha256": "0daccc98824d28ad3834fae2d8ad472906b5eb8db7bdf2ae69a4ce169e8d9ec9"
+      "source_sha256": "c9b59c11889c6c24d7df8b03f37d114429d69c0342f1281082027f4bd8f7eeed",
+      "target_sha256": "4c2242d162ffc584c8884b6aad708b44ab79d101b5f398e6ea1cf5b807f398bc"
     },
     {
       "source": "projects/atlas/entwicklungsstand.md",
@@ -128,8 +128,8 @@
       },
       "disposition": "supplemented",
       "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content. Test system inventory reviewed on 2026-10-28: user-provided VM/Raspberry Pi hardware, .193 replacement of .68, existing mobile qualification devices; historical test scope preserved.",
-      "source_sha256": "f994f785dbc6752c807578a205b3e0c3caf42be3309e99d6671fb3655da82314",
-      "target_sha256": "1373b0cba90c621f3add368feabb59a79c5d2a86d2b0ed288dbe3d89f000c1d2"
+      "source_sha256": "84a6e10b05cdde95b1367960570075f922e0a97a1d3be0a43a80fc0f4abeaf61",
+      "target_sha256": "bdff7e0fa887133da3df82c5444f96a4a9532e43153432692274c3d97f5a5af0"
     },
     {
       "source": "projects/blocks-for-ha/advanced.md",
@@ -2236,8 +2236,8 @@
       },
       "disposition": "supplemented",
       "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained.",
-      "source_sha256": "2dba344fac645d302d95b9ec03585b64bca5ddfc58ee5647334278014e802d18",
-      "target_sha256": "a2614ed5886b34533dcff0665d7002d727709b535286b31be7401f94413282d8"
+      "source_sha256": "aeca4aff4a98f30a7b84921fd8b1467a8b2f392f0ad171e1b24da8d52f895183",
+      "target_sha256": "377f262aebd3be2aebbdaa01a2bf821f3659ba8f8229af70b87be06f7cf1851c"
     },
     {
       "source": "sammlung/ha-cards.md",

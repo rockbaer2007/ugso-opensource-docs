@@ -4,7 +4,7 @@ description: Automatische Automationsliste, Auswahl per Checkbox, Laufstatus und
 ---
 # Automation Status Card
 
-**HA 2026.11.0, 05.11.2026, Testsystem ARM (Pi 5):** Version 0.1.3 besteht Rendern, Ein/Aus mit Zustandsbestätigung, Laufanzeige, Trace-Abfrage, normalen Abschluss, Checkboxen, Alle auswählen/abwählen und Neuladen. Bubble-/Mushroom-Einzelvorlagen werden dargestellt. Eigene Testobjekte sind bereinigt. Fehlerfälle und Laufzeitwarnung wurden in dieser Version von HA nicht erneut gezielt provoziert; frühere Prüfergebnisse bleiben separat erhalten.
+**HA 2026.11.0, 05.11.2026, [Testsystem ARM (Pi 5)](/sammlung/testsysteme#testsystem-arm):** Version 0.1.3 besteht Rendern, Ein/Aus mit Zustandsbestätigung, Laufanzeige, Trace-Abfrage, normalen Abschluss, Checkboxen, Alle auswählen/abwählen und Neuladen. Bubble-/Mushroom-Einzelvorlagen werden dargestellt. Eigene Testobjekte sind bereinigt. Fehlerfälle und Laufzeitwarnung wurden in dieser Version von HA nicht erneut gezielt provoziert; frühere Prüfergebnisse bleiben separat erhalten.
 
 [Prüfumfang, Ergebnisse und offene Punkte](/sammlung/ha-2026-11-kompatibilitaet).
 

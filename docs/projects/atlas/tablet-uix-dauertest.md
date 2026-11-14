@@ -1,6 +1,6 @@
 # Tablet-Dauertest mit UIX: 720 Karten
 
-Stand: 19.10.2026. **Nutzerbestätigung: je 60 Minuten auf dem Testsystem ARM (Pi 5) und [Testsystem 2 (64)](/sammlung/testsysteme#testsystem-2) bestanden,
+Stand: 19.10.2026. **Nutzerbestätigung: je 60 Minuten auf dem [Testsystem ARM (Pi 5)](/sammlung/testsysteme#testsystem-arm) und [Testsystem 2 (64)](/sammlung/testsysteme#testsystem-2) bestanden,
 einschließlich Theme-Wechsel und Wiederverbindung.**
 App 0.1.327, HA 2026.10.2, UIX 8.4.0; Card-Mod wird nicht geladen.
 Gerät laut Nutzer: Samsung Galaxy Tab A6, Android 11 / LineageOS,

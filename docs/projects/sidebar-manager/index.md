@@ -8,7 +8,7 @@ description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenl
 
 Gruppen- und Link-Icons sind jetzt 24 × 24 px groß. In der eingeklappten Seitenleiste sitzen sie auf derselben horizontalen Position wie die Original-Icons von Home Assistant.
 
-Am 11.11.2026 auf dem Testsystem ARM (Pi 5) mit Home Assistant 2026.11.0 geprüft: Die Gruppenicons sind ein- und ausgeklappt bündig mit dem Icon „Übersicht“. Auch die Link-Icons für Logs, Automationen und Zustände sind eingeklappt mittig ausgerichtet. Der Nutzertest war ebenfalls erfolgreich.
+Am 11.11.2026 auf dem [Testsystem ARM (Pi 5)](/sammlung/testsysteme#testsystem-arm) mit Home Assistant 2026.11.0 geprüft: Die Gruppenicons sind ein- und ausgeklappt bündig mit dem Icon „Übersicht“. Auch die Link-Icons für Logs, Automationen und Zustände sind eingeklappt mittig ausgerichtet. Der Nutzertest war ebenfalls erfolgreich.
 
 ## Neu in 0.1.10: Home-Assistant-Verknüpfungen
 

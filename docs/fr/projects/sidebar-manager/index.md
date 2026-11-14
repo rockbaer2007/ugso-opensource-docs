@@ -8,7 +8,7 @@ description: Dossiers, couleurs, opacité et liens dans la barre latérale Home 
 
 Les icônes des groupes et des liens personnalisés mesurent désormais 24 × 24 px. Lorsque la barre latérale est réduite, elles sont centrées sur le même axe vertical que les icônes natives de Home Assistant.
 
-Vérifié sur le système de test ARM (Pi 5) avec Home Assistant 2026.11.0 le 11 novembre 2026. Les icônes de groupe sont alignées sur celle de la Vue d’ensemble dans les deux modes. Les icônes des liens Journaux, Automatisations et États sont centrées dans la barre réduite. Le test utilisateur a également réussi.
+Vérifié sur le [système de test ARM (Pi 5)](/fr/collection/test-systems#testsystem-arm) avec Home Assistant 2026.11.0 le 11 novembre 2026. Les icônes de groupe sont alignées sur celle de la Vue d’ensemble dans les deux modes. Les icônes des liens Journaux, Automatisations et États sont centrées dans la barre réduite. Le test utilisateur a également réussi.
 
 ## Nouveautés de 0.1.10 : raccourcis Home Assistant
 

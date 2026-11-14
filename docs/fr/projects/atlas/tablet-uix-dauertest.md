@@ -1,6 +1,6 @@
 # Test prolongé UIX sur tablette : 720 cartes
 
-Au 19/10/2026. **L’utilisateur confirme 60 minutes sur chaque hôte, système de test ARM (Pi 5) et [Système de test 2 (64)](/fr/collection/test-systems#testsystem-2),
+Au 19/10/2026. **L’utilisateur confirme 60 minutes sur chaque hôte, [système de test ARM (Pi 5)](/fr/collection/test-systems#testsystem-arm) et [Système de test 2 (64)](/fr/collection/test-systems#testsystem-2),
 avec thèmes et reconnexion fonctionnels.**
 App 0.1.327, HA 2026.10.2, UIX 8.4.0 ; Card-Mod n’est pas chargé.
 Appareil indiqué : Samsung Galaxy Tab A6, Android 11 / LineageOS,

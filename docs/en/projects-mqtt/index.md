@@ -6,7 +6,7 @@ The shared repository is the central publishing location for all UGSo Software H
 
 | Project | Documentation |
 | --- | --- |
-| <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/en/projects/logic-studio/) | 0.1.12: DE/EN/FR interface, saved language, shortcuts and block help. Tested on the PC (64) test system including app restart; plan and export preserved. |
+| <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/en/projects/logic-studio/) | 0.1.12: DE/EN/FR interface, saved language, shortcuts and block help. Tested on the [PC (64) test system](/en/collection/test-systems#testsystem-pc) including app restart; plan and export preserved. |
 | <img class="package-icon" src="/images/packages/projects-dashboard-user-manager.png" width="32" height="32" alt="" aria-hidden="true"> [Dashboard User Manager](/en/projects/dashboard-user-manager/) | 0.1.4: user checkbox columns, bulk/individual assignments, automatic DE/EN/FR interface and dashboard backup before saving. |
 | <img class="package-icon" src="/images/packages/projects-callmebot.png" width="32" height="32" alt="" aria-hidden="true"> [CallMeBot Whatsapp](/en/projects/callmebot/) | Experimental HA App 0.1.4: recipient profiles, WhatsApp texts via MQTT, DE/EN/FR and matching Blockly blocks. |
 | <img class="package-icon" src="/images/packages/projects-callmebot-signal.png" width="32" height="32" alt="" aria-hidden="true"> [CallMeBot Signal](/en/projects/callmebot-signal/) | Experimental HA app 0.1.0: Signal texts, phone/UUID profiles, separate MQTT namespace and Blockly profile selection in DE/EN/FR. |
