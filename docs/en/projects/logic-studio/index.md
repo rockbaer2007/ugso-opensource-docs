@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.85 · Time windows and weekdays in Rules
+description: HA Logic Studio Pro 0.1.86 · Visual HA YAML preview
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.86 · Visual HA YAML preview**
+
+The visual preview displays triggers, conditions, and actions as cards. For a `choose` action, it shows each branch with its conditions and actions.
+
+On the PC test system (64-bit), the hallway automation showed all four triggers and all three `choose` branches. The two downloaded YAML files were byte-identical. Comparing them with the input confirmed that all fields were preserved, including trigger IDs, the device ID and event options, target entities, sun offsets, and `mode: restart`. [PC test system (64-bit)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.86 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.86)
 
 **0.1.85 · Time windows and weekdays in Rules**
 

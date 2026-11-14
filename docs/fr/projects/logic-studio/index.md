@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.85 · Plages horaires et jours de la semaine dans les règles
+description: HA Logic Studio Pro 0.1.86 · Aperçu graphique du YAML HA
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,14 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.86 · Aperçu graphique du YAML HA**
+
+L’aperçu graphique affiche les déclencheurs, les conditions et les actions sous forme de cartes. Pour une action `choose`, il présente chaque branche avec ses conditions et ses actions.
+
+Sur le système de test PC (64 bits), l’automatisation du couloir affichait les quatre déclencheurs et les trois branches `choose`. Les deux fichiers YAML téléchargés étaient identiques octet pour octet. La comparaison avec la configuration saisie a confirmé la conservation de tous les champs, dont les identifiants des déclencheurs, l’identifiant de l’appareil et les options d’événement, les entités cibles, les décalages solaires et `mode: restart`. [Système de test PC (64 bits)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.86 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.86)
 
 **0.1.85 · Plages horaires et jours de la semaine dans les règles**
 
