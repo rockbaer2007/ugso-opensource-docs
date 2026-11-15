@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.103 · Import HTTP POST dans Blocks JS**
+
+Blocks JS importe HTTP POST depuis ioBroker avec le corps JSON, la vérification du statut et le traitement de la réponse. Lors du test réel avec Play, le point de terminaison temporaire a reçu `{"probe":42}` et renvoyé le **statut 200**. Le script importé a lu le champ JSON `value` et inscrit **42** dans le journal. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.103 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.103)
+
 **0.1.102 · Import HTTP GET dans Blocks JS**
 
 Blocks JS importe HTTP GET depuis ioBroker avec la vérification du statut et le traitement du JSON. Pour exécuter le bloc, associez-lui une commande REST Home Assistant autorisée. Lors du test réel, la requête HTTP a renvoyé le **statut 200**. Le script importé a lu le champ JSON `value` et inscrit **42** dans le journal. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
