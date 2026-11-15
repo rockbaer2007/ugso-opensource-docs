@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.105 · Gestion des erreurs HTTP dans Blocks JS**
+
+Blocks JS importe le bloc d’erreur ioBroker pour les requêtes HTTP. Lors de deux essais réels avec Play, le script importé a d’abord journalisé **HTTP 404**. Au second appel, une **erreur de connexion** a atteint la branche d’erreur sans statut HTTP. Le moteur d’exécution est resté actif dans les deux cas. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.105 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.105)
+
 **0.1.104 · En-têtes de réponse HTTP dans Blocks JS**
 
 Blocks JS importe les en-têtes de réponse d’ioBroker. Leurs noms sont convertis en minuscules pour permettre la lecture d’une clé comme `content-type`. Lors du test réel avec Play, la requête GET a renvoyé **`Content-Type: application/json`**. Le script importé a lu cet en-tête et inscrit `application/json` dans le journal. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)

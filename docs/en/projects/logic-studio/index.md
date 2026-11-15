@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.105 · HTTP error handling in Blocks JS**
+
+Blocks JS imports the ioBroker error block for HTTP requests. In two live runs via Play, the imported script first logged **HTTP 404**. On the second request, a **connection error** reached the error branch without an HTTP status. The runtime stayed active in both cases. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.105 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.105)
+
 **0.1.104 · HTTP response headers in Blocks JS**
 
 Blocks JS imports ioBroker response headers. Header names are lowercased so a key such as `content-type` can be read. In the live Play test, the real GET request returned **`Content-Type: application/json`**. The imported script read the header and logged `application/json`. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
