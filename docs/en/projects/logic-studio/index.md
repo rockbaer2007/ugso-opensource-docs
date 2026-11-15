@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.92 · Insert entities and actions at the YAML cursor
+description: HA Logic Studio Pro 0.1.93 · YAML round-trip export with blueprint instances
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.93 · YAML round-trip export with blueprint instances**
+
+YAML round-trip export preserves the original content, including additional fields, comments, YAML tags, the blueprint path and its inputs. On the PC test system (64), the hallway test file with additional nested fields and a blueprint instance were imported and exported again. SHA-256 comparison confirmed that both exports were byte-for-byte identical to their input files. Chrome left both files with a `.crdownload` suffix during the test.
+
+[HA Logic Studio Pro 0.1.93 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.93)
 
 **0.1.92 · Insert entities and actions at the YAML cursor**
 

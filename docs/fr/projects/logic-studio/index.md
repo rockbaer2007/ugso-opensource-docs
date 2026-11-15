@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.92 · Insérer des entités et des actions au curseur YAML
+description: HA Logic Studio Pro 0.1.93 · Réexport YAML avec des instances de plans directeurs
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,12 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.93 · Réexport YAML avec des instances de plans directeurs**
+
+Le réexport YAML conserve le contenu d’origine, y compris les champs supplémentaires, les commentaires, les balises YAML, le chemin du plan directeur et ses entrées. Sur le système de test PC (64), le fichier de test du couloir avec des champs imbriqués supplémentaires et une instance de plan directeur ont été importés puis réexportés. La comparaison SHA-256 a confirmé que les deux exports étaient identiques octet pour octet aux fichiers importés. Chrome a conservé le suffixe `.crdownload` pour les deux fichiers pendant le test.
+
+[HA Logic Studio Pro 0.1.93 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.93)
 
 **0.1.92 · Insérer des entités et des actions au curseur YAML**
 
