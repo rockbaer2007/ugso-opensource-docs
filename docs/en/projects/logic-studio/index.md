@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.95 · Rules condition – Triggered by
+description: HA Logic Studio Pro 0.1.96 · Rules groups and Blocks A target catalogs
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.96 · Rules groups and Blocks A target catalogs**
+
+**Rules.** Nested AND, OR, and NOT groups can be combined with trigger IDs. In the live HA test, `first` ran THEN. An inner condition blocked `second`, so ELSE ran. The trace confirmed waiting for a state, the script parameter `42`, the notification, and the final event. The area and label selected the same test entity. To refresh the entity list after assignments change, select the area or label again.
+
+**Blocks A.** The test area, test label, loopback test device, and test floor could each be selected. The generated HA YAML draft contained the corresponding IDs under `area_id`, `label_id`, `device_id`, and `floor_id`. The test objects were then removed. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.96 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.96)
 
 **0.1.95 · Rules condition: Triggered by**
 

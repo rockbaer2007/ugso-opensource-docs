@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.95 · Rules-Bedingung „Ausgelöst durch“
+description: HA Logic Studio Pro 0.1.96 · Rules-Gruppen und Blocks-A-Zielkataloge
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.96 · Rules-Gruppen und Blocks-A-Zielkataloge**
+
+**Rules.** Verschachtelte UND-, ODER- und NICHT-Gruppen lassen sich mit Trigger-IDs kombinieren. Im HA-Live-Test führte `first` den DANN-Zweig aus. Die innere Bedingung blockierte `second`, sodass SONST lief. Der Trace bestätigte das Warten auf einen Zustand, den Skriptparameter `42`, die Benachrichtigung und das Abschlussereignis. Bereich und Label übernahmen dieselbe Testentität. Bei geänderter Zuordnung lässt sich die Entitätsliste durch erneutes Auswählen aktualisieren.
+
+**Blocks A.** Der Testbereich, das Testlabel, das Loopback-Testgerät und die Testetage ließen sich jeweils in der Zielauswahl übernehmen. Der erzeugte HA-YAML-Entwurf enthielt die passenden IDs unter `area_id`, `label_id`, `device_id` und `floor_id`. Die Testobjekte wurden anschließend entfernt. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.96 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.96)
 
 **0.1.95 · Rules-Bedingung „Ausgelöst durch“**
 

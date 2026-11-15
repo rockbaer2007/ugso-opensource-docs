@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.95 · Condition « Déclenché par » dans Règles
+description: HA Logic Studio Pro 0.1.96 · Groupes de conditions et catalogues de cibles Blocks A
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,14 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.96 · Groupes de conditions et catalogues de cibles Blocks A**
+
+**Règles.** Les groupes ET, OU et NON imbriqués peuvent être combinés avec des identifiants de déclencheur. Lors du test en conditions réelles dans HA, `first` a exécuté la branche ALORS. Une condition interne a bloqué `second`, ce qui a exécuté SINON. La trace a confirmé l’attente d’un état, le paramètre de script `42`, la notification et l’événement final. La zone et l’étiquette ont sélectionné la même entité de test. Pour actualiser la liste des entités après une modification des affectations, il suffit de sélectionner à nouveau la zone ou l’étiquette.
+
+**Blocks A.** La zone, l’étiquette, l’appareil de bouclage et l’étage de test étaient tous disponibles dans le sélecteur de cibles. Le brouillon YAML HA contenait les identifiants correspondants sous `area_id`, `label_id`, `device_id` et `floor_id`. Les objets de test ont ensuite été supprimés. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.96 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.96)
 
 **0.1.95 · Condition « Déclenché par » dans Règles**
 
