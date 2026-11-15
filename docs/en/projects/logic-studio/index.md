@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.106 · Request headers in ioBroker POST imports**
+
+Blocks JS preserves custom Content-Type values from ioBroker POST blocks. The imported value is shown in the block as a reference for the HA REST command. In the live Play test, the endpoint confirmed **`Content-Type: application/vnd.ugso+json`** and **`Accept: application/json`**. The POST returned HTTP 200 and delivered the JSON value `42`. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.106 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.106)
+
 **0.1.105 · HTTP error handling in Blocks JS**
 
 Blocks JS imports the ioBroker error block for HTTP requests. In two live runs via Play, the imported script first logged **HTTP 404**. On the second request, a **connection error** reached the error branch without an HTTP status. The runtime stayed active in both cases. In a further live test via Play, a slow test endpoint caused an **HTTP timeout**. The error branch ran with no HTTP status (`null`), and the script kept running. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
