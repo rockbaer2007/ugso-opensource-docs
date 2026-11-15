@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.104 · HTTP-Antwortheader in Blocks JS**
+
+Blocks JS übernimmt ioBroker-Antwortheader. Die Namen werden kleingeschrieben, damit etwa `content-type` ausgelesen werden kann. Im Live-Test per Play lieferte der echte GET-Aufruf **`Content-Type: application/json`**. Das importierte Skript las den Header und protokollierte `application/json`. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.104 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.104)
+
 **0.1.103 · HTTP-POST-Import in Blocks JS**
 
 Blocks JS übernimmt ioBroker-HTTP-POST mit JSON-Payload, Statusprüfung und Antwortauswertung. Im Live-Test per Play empfing der temporäre Endpunkt den Payload `{"probe":42}` und antwortete mit **Status 200**. Das importierte Skript las das JSON-Feld `value` und protokollierte **42**. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)

@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.104 · En-têtes de réponse HTTP dans Blocks JS**
+
+Blocks JS importe les en-têtes de réponse d’ioBroker. Leurs noms sont convertis en minuscules pour permettre la lecture d’une clé comme `content-type`. Lors du test réel avec Play, la requête GET a renvoyé **`Content-Type: application/json`**. Le script importé a lu cet en-tête et inscrit `application/json` dans le journal. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.104 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.104)
+
 **0.1.103 · Import HTTP POST dans Blocks JS**
 
 Blocks JS importe HTTP POST depuis ioBroker avec le corps JSON, la vérification du statut et le traitement de la réponse. Lors du test réel avec Play, le point de terminaison temporaire a reçu `{"probe":42}` et renvoyé le **statut 200**. Le script importé a lu le champ JSON `value` et inscrit **42** dans le journal. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
