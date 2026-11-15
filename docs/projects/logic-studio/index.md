@@ -29,7 +29,7 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 **0.1.105 · HTTP-Fehlerbehandlung in Blocks JS**
 
-Blocks JS übernimmt den ioBroker-Fehlerblock für HTTP-Aufrufe. In zwei Live-Läufen per Play protokollierte das importierte Skript zuerst **HTTP 404**. Beim zweiten Aufruf erreichte ein **Verbindungsfehler** den Fehlerzweig ohne HTTP-Status. Die Runtime blieb in beiden Fällen aktiv. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+Blocks JS übernimmt den ioBroker-Fehlerblock für HTTP-Aufrufe. In zwei Live-Läufen per Play protokollierte das importierte Skript zuerst **HTTP 404**. Beim zweiten Aufruf erreichte ein **Verbindungsfehler** den Fehlerzweig ohne HTTP-Status. Die Runtime blieb in beiden Fällen aktiv. In einem weiteren Live-Test per Play löste ein langsamer Testendpunkt einen **HTTP-Timeout** aus. Der Fehlerzweig lief ohne HTTP-Status (`null`), und das Skript lief weiter. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
 
 [HA Logic Studio Pro 0.1.105 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.105)
 

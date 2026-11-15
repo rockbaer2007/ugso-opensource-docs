@@ -31,7 +31,7 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 **0.1.105 · Gestion des erreurs HTTP dans Blocks JS**
 
-Blocks JS importe le bloc d’erreur ioBroker pour les requêtes HTTP. Lors de deux essais réels avec Play, le script importé a d’abord journalisé **HTTP 404**. Au second appel, une **erreur de connexion** a atteint la branche d’erreur sans statut HTTP. Le moteur d’exécution est resté actif dans les deux cas. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+Blocks JS importe le bloc d’erreur ioBroker pour les requêtes HTTP. Lors de deux essais réels avec Play, le script importé a d’abord journalisé **HTTP 404**. Au second appel, une **erreur de connexion** a atteint la branche d’erreur sans statut HTTP. Le moteur d’exécution est resté actif dans les deux cas. Lors d’un autre essai réel avec Play, un point de terminaison lent a provoqué un **dépassement du délai HTTP**. La branche d’erreur s’est exécutée sans statut HTTP (`null`), puis le script a continué à tourner. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
 
 [HA Logic Studio Pro 0.1.105 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.105)
 
