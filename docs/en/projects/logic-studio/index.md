@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.91 · Home Assistant catalog checks in the YAML editor
+description: HA Logic Studio Pro 0.1.92 · Insert entities and actions at the YAML cursor
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.92 · Insert entities and actions at the YAML cursor**
+
+Use **Insert entity** or **Insert HA action** to insert the chosen ID at the cursor. If text is selected, the ID replaces it. In the hallway automation test on the PC test system (64), `sun.sun` and `homeassistant.turn_off` were inserted exactly at the intended cursor positions. All three `choose` branches remained visible.
+
+[HA Logic Studio Pro 0.1.92 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.92)
 
 **0.1.91 · Home Assistant catalog checks in the YAML editor**
 
