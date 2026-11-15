@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.102 · Import HTTP GET dans Blocks JS**
+
+Blocks JS importe HTTP GET depuis ioBroker avec la vérification du statut et le traitement du JSON. Pour exécuter le bloc, associez-lui une commande REST Home Assistant autorisée. Lors du test réel, la requête HTTP a renvoyé le **statut 200**. Le script importé a lu le champ JSON `value` et inscrit **42** dans le journal. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.102 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.102)
+
 **0.1.101 · Indication sur le bloc exec importé**
 
 Dans l’export de test ioBroker, le bloc `exec` reçoit la comparaison « heure actuelle avant 12:00 ». Le test a confirmé que l’indication apparaît dans le récapitulatif d’import et directement sur le bloc de substitution Blockly. La comparaison est conservée. Le commentaire explique comment la brancher sur « si » et placer l’action HA souhaitée dans « faire ». [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)

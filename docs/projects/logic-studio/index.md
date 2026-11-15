@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.102 · HTTP-GET-Import in Blocks JS**
+
+Blocks JS übernimmt ioBroker-HTTP-GET mit Statusprüfung und JSON-Auswertung. Für die Ausführung wird dem Block ein freigegebener HA-REST-Befehl zugeordnet. Im Live-Test lieferte der echte HTTP-Aufruf **Status 200**. Das importierte Skript las das JSON-Feld `value` und protokollierte **42**. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.102 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.102)
+
 **0.1.101 · Hinweis am importierten exec-Block**
 
 Der vorhandene ioBroker-Testexport enthält am `exec`-Block den Vergleich „aktuelle Zeit vor 12:00“. Im Test erschien der Hinweis sowohl in der Importübersicht als auch direkt am Blockly-Platzhalter. Der Vergleich blieb erhalten. Der Hinweis erklärt, wie er an „falls“ angeschlossen und die gewünschte HA-Aktion unter „mache“ eingefügt wird. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
