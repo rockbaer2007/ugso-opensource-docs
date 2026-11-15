@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.110 · Indication pour le type de réponse HTTP arraybuffer**
+
+Blocks JS conserve l’export Blockly ioBroker avec `arraybuffer` sous forme de bloc de remplacement identifié. Lors du test de contrôle avec Play, en mode texte, Home Assistant a renvoyé les quatre octets `00 41 C3 A9` sous forme de **trois caractères**. `byteLength` valait `null`. Pour `00 41 FF 80`, Home Assistant a signalé une erreur de décodage et Blocks JS n’a reçu aucun octet. L’indication sur le bloc explique qu’un point de terminaison peut renvoyer les données binaires en **Base64 dans du JSON**. Il faut adapter le traitement de la réponse. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.110 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.110)
+
 **0.1.109 · Gestion des réponses JSON invalides**
 
 Lors du test avec Play, les deux réponses JSON invalides ont atteint la branche d’erreur. Quand Home Assistant n’a pas pu décoder la réponse JSON, la branche a reçu un message explicite et le statut HTTP était `null`. Quand Blocks JS a lui-même analysé le texte invalide, il a signalé « Réponse JSON invalide. » et conservé **HTTP 200**. Dans la même exécution, la requête valide suivante a renvoyé **`42`** et le script a continué. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
