@@ -1,8 +1,41 @@
 <script setup>
-const props = defineProps({ labels: { type: Object, required: true } })
+import { ref } from 'vue'
 
-function openEmail(event) {
+const props = defineProps({ labels: { type: Object, required: true } })
+const endpoint = import.meta.env.VITE_LOGIC_STUDIO_FEEDBACK_ENDPOINT
+const status = ref('')
+const sending = ref(false)
+
+async function submitFeedback(event) {
+  const form = event.currentTarget
   const fields = new FormData(event.currentTarget)
+  if (endpoint) {
+    if (sending.value) return
+    const payload = Object.fromEntries(
+      ['subject', 'version', 'editor', 'message', 'reply'].map(key => [key, fields.get(key).trim()]),
+    )
+    if (!payload.subject || !payload.message) return
+    sending.value = true
+    status.value = ''
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        redirect: 'error',
+        signal: AbortSignal.timeout(15000),
+      })
+      if (!response.ok || (await response.json()).sent !== true) throw new Error('Send failed')
+      form.reset()
+      status.value = props.labels.sent
+    } catch {
+      status.value = props.labels.failed
+    } finally {
+      sending.value = false
+    }
+    return
+  }
+
   const subject = 'HA Logic Studio Pro – ' + fields.get('subject').trim()
   const body = ['version', 'editor', 'message', 'reply']
     .filter(key => fields.get(key).trim())
@@ -14,13 +47,16 @@ function openEmail(event) {
 </script>
 
 <template>
-  <form class="logic-feedback" @submit.prevent="openEmail">
+  <form class="logic-feedback" @submit.prevent="submitFeedback" :aria-busy="sending">
+    <p v-if="endpoint">{{ labels.directIntro }}</p>
+    <p v-else>{{ labels.draftIntro }}</p>
     <label>{{ labels.subject }} <input name="subject" required maxlength="120"></label>
     <label>{{ labels.version }} <input name="version" maxlength="40"></label>
     <label>{{ labels.editor }} <input name="editor" maxlength="80"></label>
     <label>{{ labels.message }} <textarea name="message" required rows="6" maxlength="1200"></textarea></label>
     <label>{{ labels.reply }} <input name="reply" type="email" autocomplete="email" maxlength="120"></label>
-    <button type="submit">{{ labels.open }}</button>
+    <button type="submit" :disabled="sending">{{ endpoint ? labels.send : labels.open }}</button>
+    <p v-if="status" role="status">{{ status }}</p>
   </form>
 </template>
 

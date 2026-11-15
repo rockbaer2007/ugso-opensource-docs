@@ -4,6 +4,10 @@
 
 Lege eine Regel an und öffne den Assistenten. Wähle **Zustand**, deinen Testhelfer und als neuen Wert `on`. Füge unter **DANN** eine Aktion für einen zweiten Helfer hinzu. Exportiere die Regel als HA-YAML und prüfe sie in Home Assistant.
 
+So sieht der Rules-Editor mit der Auswahl links und den Abschnitten FALLS, DANN und SONST aus.
+
+![Rules-Editor mit Auslösern, Bedingungen und Aktionszweigen](/images/logic-studio/0.1.60-rules-test-193.png)
+
 ## Funktionen
 
 ### Assistent und Palette

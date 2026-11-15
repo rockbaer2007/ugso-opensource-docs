@@ -4,6 +4,10 @@
 
 Ajoute une entrée numérique et une sortie dans un nouveau plan. Relie les broches, lance la simulation et bascule l’entrée. La sortie doit suivre.
 
+Le canevas affiche les blocs reliés et une mini-carte en bas à droite.
+
+![Plan fonctionnel avec blocs reliés et mini-carte](/images/logic-studio/0.1.8-react-flow-193.jpg)
+
 ## Fonctions
 
 ### Canevas

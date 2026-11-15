@@ -4,6 +4,10 @@
 
 Erstelle einen Funktionsplan. Ziehe einen digitalen Eingang und einen Ausgang auf die Fläche. Verbinde den Ausgangspin des Eingangs mit dem Eingangspin des Ausgangs. Starte die Simulation und schalte den Eingang um. Der Ausgang folgt dem Signal.
 
+In der Zeichenfläche siehst du die verbundenen Bausteine und die Miniübersicht unten rechts.
+
+![Funktionsplan mit verbundenen Bausteinen und Miniübersicht](/images/logic-studio/0.1.8-react-flow-193.jpg)
+
 ## Funktionen
 
 ### Zeichenfläche

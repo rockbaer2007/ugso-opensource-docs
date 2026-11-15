@@ -1,7 +1,7 @@
 <script setup>
 import LogicStudioFeedback from '../../../../.vitepress/theme/LogicStudioFeedback.vue'
 
-const labels = {"subject":"Objet","version":"Version de l’application","editor":"Éditeur","message":"Message","reply":"Adresse de réponse (facultative)","open":"Ouvrir le brouillon d’e-mail"}
+const labels = {"subject":"Objet","version":"Version de l’application","editor":"Éditeur","message":"Message","reply":"Adresse de réponse (facultative)","open":"Ouvrir le brouillon d’e-mail","directIntro":"Le formulaire envoie ton signalement par e-mail. L’adresse de réponse est facultative.","draftIntro":"Le formulaire ouvre un brouillon dans ta messagerie. Tu peux relire et envoyer ton signalement.","send":"Envoyer le signalement","sent":"Ton signalement a été envoyé.","failed":"L’envoi a échoué. Les données saisies sont conservées."}
 </script>
 
 # Signaler un problème et contribuer
@@ -11,8 +11,6 @@ const labels = {"subject":"Objet","version":"Version de l’application","editor
 Crée un ticket dans le dépôt commun pour permettre à d’autres de retrouver le signalement et d’ajouter leur expérience. [Créer un ticket GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/issues/new)
 
 ## Signaler en privé par e-mail
-
-Le formulaire prépare un message à `info@ugso-software.de` et ouvre ta messagerie. Tu peux relire le brouillon, joindre un fichier et l’envoyer.
 
 Indique la version, l’éditeur, les étapes pour reproduire le problème, le résultat attendu et le résultat observé. Retire les identifiants et les informations personnelles des captures et journaux.
 

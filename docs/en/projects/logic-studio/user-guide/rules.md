@@ -4,6 +4,10 @@
 
 In the wizard, choose a state trigger, your helper and `on`. Add a THEN action to turn on a second helper. Export the YAML and check it in HA.
 
+The Rules editor shows the palette on the left and the IF, THEN and ELSE sections in the workspace.
+
+![Rules editor with the palette and rule branches](/images/logic-studio/0.1.60-rules-test-193.png)
+
 ## Features
 
 ### Wizard and palette

@@ -34,6 +34,13 @@ Select an approved HA REST command for the URL, timeout and request headers. The
 
 Use simulation first. Save before Play and check actual results in the log.
 
+## Check an import step by step
+
+1. Enable **Expert mode** in the project menu. In the editor, open **Expert tools → Paste ioBroker export**.
+2. Paste Blockly XML or an ioBroker JavaScript export with embedded Blockly data. Check the import and read which blocks need a mapping.
+3. Open the import as a project and resolve the guidance on the affected blocks. For example, select the HA REST command that defines the headers and timeout for an imported POST.
+4. Save and start with a **test run**. Use **Play** for live execution, check the **log**, and press **Stop** when finished.
+
 ## If something goes wrong
 
 Replace or adapt unsupported placeholders before running the script.

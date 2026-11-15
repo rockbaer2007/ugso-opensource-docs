@@ -4,6 +4,10 @@
 
 Add a digital input and output to a new plan. Connect their pins, start the simulation and toggle the input. The output should follow.
 
+The canvas shows the connected blocks and a minimap in the lower right.
+
+![Function plan with connected blocks and a minimap](/images/logic-studio/0.1.8-react-flow-193.jpg)
+
 ## Features
 
 ### Canvas

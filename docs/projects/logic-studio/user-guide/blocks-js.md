@@ -34,6 +34,13 @@ Ordne einen freigegebenen HA-REST-Befehl zu. URL, Timeout und zusätzliche Reque
 
 Der Testlauf simuliert. Speichere vor Play und schau im Protokoll nach, ob die echte HA-Aktion ausgeführt wurde.
 
+## Einen Import Schritt für Schritt prüfen
+
+1. Öffne das Projektmenü und schalte den **Expertenmodus** ein. Öffne im Editor **Expertenwerkzeuge → ioBroker-Export einfügen**.
+2. Füge das Blockly-XML oder einen ioBroker-JavaScript-Export mit eingebetteten Blockly-Daten ein. Klicke **Import prüfen**. Die Liste zeigt, welche Blöcke übernommen wurden und wo eine Zuordnung fehlt.
+3. Klicke **Als Projekt öffnen** und ergänze die Hinweise direkt an den betroffenen Blöcken. Bei einem importierten POST trägst du beispielsweise den HA-REST-Befehl ein, der die Header und den Zeitrahmen definiert.
+4. Speichere den Entwurf und starte zuerst den **Testlauf**. Für die echte Ausführung wähle danach **Play**. Öffne das **Protokoll**, kontrolliere die Ausgabe und beende den Lauf mit **Stopp**.
+
 ## Wenn etwas nicht klappt
 
 Wenn der Import einen Platzhalter zeigt, lies den Blockhinweis und ersetze oder ergänze den Block vor dem Start.

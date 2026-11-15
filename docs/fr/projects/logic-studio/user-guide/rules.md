@@ -4,6 +4,10 @@
 
 Dans l’assistant, choisis un déclencheur d’état, ton entrée de test et `on`. Ajoute une action ALORS pour activer une seconde entrée. Exporte le YAML et vérifie-le dans HA.
 
+L’éditeur Rules affiche la palette à gauche et les sections SI, ALORS et SINON dans la zone de travail.
+
+![Éditeur Rules avec palette et branches](/images/logic-studio/0.1.60-rules-test-193.png)
+
 ## Fonctions
 
 ### Assistant et palette
