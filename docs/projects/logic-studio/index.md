@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.107 · Berechnete HTTP-URLs beim ioBroker-Import**
+
+Blocks JS erhält den URL-Ausdruck aus ioBroker. Der Host und der feste URL-Anfang werden im freigegebenen HA-REST-Befehl festgelegt. Den variablen Teil übergibt Blocks JS als `url_suffix`. Im GET-Live-Test per Play empfing der Testendpunkt **`garten & 42`** als einzelnen Query-Wert und antwortete mit **HTTP 200**. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.107 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.107)
+
 **0.1.106 · Request-Header beim ioBroker-POST-Import**
 
 Blocks JS übernimmt auch frei eingegebene Content-Type-Werte aus ioBroker-POST-Blöcken. Der importierte Wert steht im Block als Vorgabe für den HA-REST-Befehl. Im Live-Test per Play bestätigte der Testendpunkt **`Content-Type: application/vnd.ugso+json`** und **`Accept: application/json`**. Der POST lieferte HTTP 200 und übertrug den JSON-Wert `42`. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)

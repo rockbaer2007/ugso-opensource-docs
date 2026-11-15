@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.107 · URL HTTP calculées dans les imports ioBroker**
+
+Blocks JS conserve l’expression d’URL ioBroker. La commande REST HA autorisée définit l’hôte et le préfixe fixe de l’URL. Blocks JS transmet la partie variable dans `url_suffix`. Lors du test GET avec Play, le point de terminaison a reçu **`garten & 42`** comme valeur unique du paramètre de requête et a renvoyé **HTTP 200**. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.107 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.107)
+
 **0.1.106 · En-têtes de requête dans les imports POST ioBroker**
 
 Blocks JS conserve les valeurs Content-Type personnalisées des blocs POST ioBroker. Le bloc affiche la valeur importée pour configurer la commande REST de HA. Lors du test réel avec Play, le point de terminaison a confirmé **`Content-Type: application/vnd.ugso+json`** et **`Accept: application/json`**. La requête POST a renvoyé HTTP 200 et transmis la valeur JSON `42`. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
