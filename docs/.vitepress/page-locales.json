@@ -1604,6 +1604,21 @@
     "EN": "/en/projects/logic-studio/",
     "FR": "/fr/projects/logic-studio/"
   },
+  "/projects/logic-studio/user-guide": {
+    "DE": "/projects/logic-studio/user-guide",
+    "EN": "/en/projects/logic-studio/user-guide",
+    "FR": "/fr/projects/logic-studio/user-guide"
+  },
+  "/en/projects/logic-studio/user-guide": {
+    "DE": "/projects/logic-studio/user-guide",
+    "EN": "/en/projects/logic-studio/user-guide",
+    "FR": "/fr/projects/logic-studio/user-guide"
+  },
+  "/fr/projects/logic-studio/user-guide": {
+    "DE": "/projects/logic-studio/user-guide",
+    "EN": "/en/projects/logic-studio/user-guide",
+    "FR": "/fr/projects/logic-studio/user-guide"
+  },
   "/projects/mqtt-client/": {
     "DE": "/projects/mqtt-client/",
     "EN": "/en/projects/mqtt-client/",

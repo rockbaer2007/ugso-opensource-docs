@@ -141,7 +141,7 @@ const sourceNavFr = [
 ]
 
 const sidebarDe = {
-  '/projects/logic-studio/': [{text:'Logic Studio',items:[{text:'Installation und Testbericht',link:'/projects/logic-studio/'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
+  '/projects/logic-studio/': [{text:'Logic Studio',items:[{text:'Installation und Testbericht',link:'/projects/logic-studio/'},{text:'Bedienungsanleitung',link:'/projects/logic-studio/user-guide'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
   '/eep/': [{ text: 'EEP', items: [
     { text: 'Übersicht', link: '/eep/' },
     { text: 'INI Edit Translate 2026', link: '/eep/ini-edit-translate-2026/' },
@@ -603,7 +603,7 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
-  '/en/projects/logic-studio/': [{text:'Logic Studio',items:[{text:'Installation and test report',link:'/en/projects/logic-studio/'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
+  '/en/projects/logic-studio/': [{text:'Logic Studio',items:[{text:'Installation and test report',link:'/en/projects/logic-studio/'},{text:'User guide',link:'/en/projects/logic-studio/user-guide'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
   '/en/eep/': [{ text: 'EEP', items: [
     { text: 'Overview', link: '/en/eep/' },
     { text: 'INI Edit Translate 2026', link: '/en/eep/ini-edit-translate-2026/' },
@@ -916,7 +916,7 @@ const sidebarEn = {
 }
 
 const sidebarFr = {
-  '/fr/projects/logic-studio/': [{text:'Logic Studio',items:[{text:'Installation et rapport de test',link:'/fr/projects/logic-studio/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
+  '/fr/projects/logic-studio/': [{text:'Logic Studio',items:[{text:'Installation et rapport de test',link:'/fr/projects/logic-studio/'},{text:'Guide d’utilisation',link:'/fr/projects/logic-studio/user-guide'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
   '/fr/eep/': [{ text: 'EEP', items: [
     { text: 'Vue d’ensemble', link: '/fr/eep/' },
     { text: 'INI Edit Translate 2026', link: '/fr/eep/ini-edit-translate-2026/' },

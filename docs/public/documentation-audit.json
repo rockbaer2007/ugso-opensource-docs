@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 244,
+  "source_pages": 245,
   "summary": {
     "de": {
-      "content-present": 244,
-      "existing_pages": 244,
+      "content-present": 245,
+      "existing_pages": 245,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 244,
-      "existing_pages": 244,
+      "content-present": 245,
+      "existing_pages": 245,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 244,
-      "existing_pages": 244,
+      "content-present": 245,
+      "existing_pages": 245,
       "unmatched_pages": 0,
       "review_signals": 31,
       "reviewed_findings": 47,
@@ -7383,6 +7383,55 @@
             "2026.10.4",
             "2026.11.1"
           ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/logic-studio/user-guide.md",
+      "locales": {
+        "de": {
+          "path": "projects/logic-studio/user-guide.md",
+          "status": "content-present",
+          "sha256": "6539e7d5b453042b4a76391e748923d299778d945219715fb715f2eb2c7b1ee6",
+          "words": 1,
+          "headings": 1,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/logic-studio/user-guide.md",
+          "status": "content-present",
+          "sha256": "fa1664bae6b053faea67dad3e36f301a83409b58874210569fef85cacd74ccb5",
+          "words": 2,
+          "headings": 1,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/logic-studio/user-guide.md",
+          "status": "content-present",
+          "sha256": "9a0f1c45ac5f93f1e11823deaea59c52a5bbd8908beabac60babe8e5f90773f9",
+          "words": 3,
+          "headings": 1,
+          "examples": 0,
+          "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
