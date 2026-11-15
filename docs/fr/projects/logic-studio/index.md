@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.108 · Type de réponse HTTP JSON dans les imports ioBroker**
+
+Blocks JS importe le type de réponse `json` et permet d’accéder directement aux champs de la réponse. Lors du test avec Play, l’export Blockly ioBroker d’origine avec conversion JSON en objet et la variante XML adaptée avec `TYPE=json` et accès direct ont tous deux renvoyé **`42`** pour **`result.value`**. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.108 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.108)
+
 **0.1.107 · URL HTTP calculées dans les imports ioBroker**
 
 Blocks JS conserve l’expression d’URL ioBroker. La commande REST HA autorisée définit l’hôte et le préfixe fixe de l’URL. Blocks JS transmet la partie variable dans `url_suffix`. Lors du test GET avec Play, le point de terminaison a reçu **`garten & 42`** comme valeur unique du paramètre de requête et a renvoyé **HTTP 200**. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)

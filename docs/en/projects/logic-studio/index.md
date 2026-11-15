@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.108 · JSON HTTP response type in ioBroker imports**
+
+Blocks JS imports the `json` response type and makes the response data available for direct field access. In the live test via Play, the original ioBroker Blockly export with JSON-to-object conversion and the adapted XML test variant with `TYPE=json` and direct field access both returned **`42`** for **`result.value`**. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.108 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.108)
+
 **0.1.107 · Computed HTTP URLs in ioBroker imports**
 
 Blocks JS preserves the ioBroker URL expression. The approved HA REST command defines the host and fixed URL prefix. Blocks JS passes the variable part as `url_suffix`. In the live GET test via Play, the endpoint received **`garten & 42`** as one query value and returned **HTTP 200**. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
