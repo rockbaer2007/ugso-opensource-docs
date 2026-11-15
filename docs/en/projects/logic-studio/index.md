@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.109 · Handling invalid JSON responses**
+
+In the live test via Play, both invalid JSON responses reached the error branch. When Home Assistant could not decode the response as JSON, the branch received a clear error and the HTTP status was `null`. When Blocks JS parsed the invalid response text itself, it reported “Invalid JSON response.” and kept **HTTP 200**. In the same run, the valid follow-up request returned **`42`** and the script kept running. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.109 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.109)
+
 **0.1.108 · JSON HTTP response type in ioBroker imports**
 
 Blocks JS imports the `json` response type and makes the response data available for direct field access. In the live test via Play, the original ioBroker Blockly export with JSON-to-object conversion and the adapted XML test variant with `TYPE=json` and direct field access both returned **`42`** for **`result.value`**. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
