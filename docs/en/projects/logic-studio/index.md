@@ -31,6 +31,8 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 Blocks JS preserves the ioBroker URL expression. The approved HA REST command defines the host and fixed URL prefix. Blocks JS passes the variable part as `url_suffix`. In the live GET test via Play, the endpoint received **`garten & 42`** as one query value and returned **HTTP 200**. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
 
+In a follow-up **live POST test via Play** using an ioBroker Blockly export, the endpoint received the computed query value `garten & 42` and the JSON payload `{"probe":42}` in the same request. It returned **HTTP 200**. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
 [HA Logic Studio Pro 0.1.107 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.107)
 
 **0.1.106 · Request headers in ioBroker POST imports**

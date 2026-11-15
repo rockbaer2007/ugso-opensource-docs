@@ -33,6 +33,8 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 Blocks JS conserve l’expression d’URL ioBroker. La commande REST HA autorisée définit l’hôte et le préfixe fixe de l’URL. Blocks JS transmet la partie variable dans `url_suffix`. Lors du test GET avec Play, le point de terminaison a reçu **`garten & 42`** comme valeur unique du paramètre de requête et a renvoyé **HTTP 200**. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
 
+Lors du **test POST avec Play** réalisé ensuite à partir d’un export Blockly ioBroker, le point de terminaison a reçu dans la même requête la valeur calculée `garten & 42` et le corps JSON `{"probe":42}`. Il a renvoyé **HTTP 200**. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
 [HA Logic Studio Pro 0.1.107 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.107)
 
 **0.1.106 · En-têtes de requête dans les imports POST ioBroker**
