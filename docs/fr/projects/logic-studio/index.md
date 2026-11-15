@@ -33,6 +33,8 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 Blocks JS conserve l’export Blockly ioBroker avec `arraybuffer` sous forme de bloc de remplacement identifié. Lors du test de contrôle avec Play, en mode texte, Home Assistant a renvoyé les quatre octets `00 41 C3 A9` sous forme de **trois caractères**. `byteLength` valait `null`. Pour `00 41 FF 80`, Home Assistant a signalé une erreur de décodage et Blocks JS n’a reçu aucun octet. L’indication sur le bloc explique qu’un point de terminaison peut renvoyer les données binaires en **Base64 dans du JSON**. Il faut adapter le traitement de la réponse. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
 
+Lors du test suivant avec Play sur le système de test PC (64), une fonction JavaScript dans Blocks JS a décodé le champ Base64 de la réponse JSON et obtenu les octets `00 41 FF 80`. Le journal d’exécution a affiché la suite d’octets et la longueur `4`.
+
 [HA Logic Studio Pro 0.1.110 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.110)
 
 **0.1.109 · Gestion des réponses JSON invalides**

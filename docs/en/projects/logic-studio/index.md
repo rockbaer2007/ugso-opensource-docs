@@ -31,6 +31,8 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 Blocks JS retains the ioBroker Blockly export with `arraybuffer` as a labeled placeholder. In the Play control test with the HTTP block in text mode, Home Assistant returned the four bytes `00 41 C3 A9` as **three text characters**. `byteLength` was `null`. For `00 41 FF 80`, Home Assistant reported a decoding error and Blocks JS received no bytes. The block note explains how an endpoint can return binary data as **Base64 in JSON**. Response handling must be adapted accordingly. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
 
+In the follow-up Play test on the PC test system (64), a JavaScript function in Blocks JS decoded the Base64 field in the JSON response into the bytes `00 41 FF 80`. The runtime log showed the byte sequence and the length `4`.
+
 [HA Logic Studio Pro 0.1.110 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.110)
 
 **0.1.109 · Handling invalid JSON responses**
