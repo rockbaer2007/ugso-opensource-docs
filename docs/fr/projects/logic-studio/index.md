@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.93 · Réexport YAML avec des instances de plans directeurs
+description: HA Logic Studio Pro 0.1.94 · Associer le YAML HA à une automatisation ou à un script
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,12 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.94 · Associer le YAML HA à une automatisation ou à un script**
+
+Le bouton **Associer une entrée HA** permet de lier un projet YAML à une automatisation ou à un script existant. Après enregistrement, l’éditeur affiche son statut et l’heure du dernier déclenchement si elle est disponible. Sur le système de test PC (64), l’automatisation de test a été désactivée, réactivée puis déclenchée avec vérification des conditions. Le script de test a été démarré puis arrêté. Les liens ont été conservés après rechargement. Le bouton **Annuler** a restauré le lien enregistré. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.94 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.94)
 
 **0.1.93 · Réexport YAML avec des instances de plans directeurs**
 

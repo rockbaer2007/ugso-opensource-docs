@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.93 · YAML round-trip export with blueprint instances
+description: HA Logic Studio Pro 0.1.94 · Link HA YAML to an automation or script
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.94 · Link HA YAML to an automation or script**
+
+Use **Link HA entry** to associate a YAML project with an existing automation or script. After saving, the editor shows its status and last trigger time when available. On the PC test system (64), the test automation was disabled, enabled, and triggered with its conditions checked. The test script was started and stopped. Both links persisted after reloading. **Cancel** restored the saved link. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.94 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.94)
 
 **0.1.93 · YAML round-trip export with blueprint instances**
 

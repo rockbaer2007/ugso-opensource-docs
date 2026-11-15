@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.93 · YAML-Rückexport mit Blueprint-Instanzen
+description: HA Logic Studio Pro 0.1.94 · HA-YAML mit Automation oder Skript verknüpfen
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.94 · HA-YAML mit Automation oder Skript verknüpfen**
+
+Über **HA-Eintrag verknüpfen** lässt sich einem YAML-Projekt eine bestehende Automation oder ein Skript zuordnen. Nach dem Speichern zeigt der Editor den Status und, sofern verfügbar, den letzten Auslösezeitpunkt. Auf dem Testsystem PC (64) ließ sich die Testautomation deaktivieren, aktivieren und mit Bedingungsprüfung auslösen. Das Testskript ließ sich starten und stoppen. Die Verknüpfungen blieben nach dem Neuladen erhalten. **Abbrechen** stellte die gespeicherte Zuordnung wieder her. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.94 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.94)
 
 **0.1.93 · YAML-Rückexport mit Blueprint-Instanzen**
 
