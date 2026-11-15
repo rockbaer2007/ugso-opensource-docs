@@ -1,12 +1,32 @@
 # Rules
 
-## First example
+## Create a rule for a hallway light
 
-In the wizard, choose a state trigger, your helper and `on`. Add a THEN action to turn on a second helper. Export the YAML and check it in HA.
+### 1. Create the project
 
-The Rules editor shows the palette on the left and the IF, THEN and ELSE sections in the workspace.
+Choose **New project → Rules**, name it, then open the **wizard**. Its four steps cover triggers, conditions, actions and review.
 
-![Rules editor with the palette and rule branches](/images/logic-studio/0.1.60-rules-test-193.png)
+### 2. Set the trigger
+
+Choose **State**. Enter your motion sensor or first test helper as the entity. The demo uses `binary_sensor.bewegung`. Enter `on` in **To** and leave **From**, attribute and minimum duration empty. Click **Next**.
+
+### 3. Skip conditions
+
+Click **Next** in the conditions step. A condition is an extra check, such as limiting the rule to evenings. This example runs whenever the trigger matches.
+
+### 4. Add the action
+
+Under **THEN**, click **+ Add** and leave the step type set to **HA action**. Set the action to `light.turn_on` and choose your test light as the target. The demo uses `light.flur`. For a second toggle helper, use `input_boolean.turn_on` instead. Leave **ELSE** empty and click **Next**.
+
+### 5. Review and open the YAML
+
+Check the entity and `to: "on"` under `triggers`. Check the action and its target under `actions`. Apply the wizard, save the rule, then use **Open as HA YAML** to review and export the draft.
+
+### 6. Try it in Home Assistant
+
+Add the reviewed automation to Home Assistant. Set the trigger entity to `off`, then to `on`. Check that the correct target turned on. The automation trace shows the trigger and action that ran.
+
+[![Rules editor with a state trigger in IF and a light action in THEN](/images/logic-studio/user-guide/rules-walkthrough-en.jpg)](/images/logic-studio/user-guide/rules-walkthrough-en.jpg)
 
 ## Features
 

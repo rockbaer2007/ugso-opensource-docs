@@ -1,12 +1,32 @@
 # Rules
 
-## Premier exemple
+## Créer une règle pour la lumière du couloir
 
-Dans l’assistant, choisis un déclencheur d’état, ton entrée de test et `on`. Ajoute une action ALORS pour activer une seconde entrée. Exporte le YAML et vérifie-le dans HA.
+### 1. Créer le projet
 
-L’éditeur Rules affiche la palette à gauche et les sections SI, ALORS et SINON dans la zone de travail.
+Choisis **Nouveau projet → Rules**, donne un nom au projet et ouvre l’**assistant**. Il comprend quatre étapes pour le déclencheur, les conditions, les actions et la vérification.
 
-![Éditeur Rules avec palette et branches](/images/logic-studio/0.1.60-rules-test-193.png)
+### 2. Définir le déclencheur
+
+Choisis un déclencheur d’état. Saisis l’identifiant de ton capteur de mouvement ou de ta première entrée de test. La démo utilise `binary_sensor.bewegung`. Saisis `on` comme état d’arrivée et laisse l’état de départ, l’attribut et la durée minimale vides. Clique sur **Suivant**.
+
+### 3. Passer les conditions
+
+Avance sans ajouter de condition. Une condition sert à vérifier un critère supplémentaire, par exemple l’heure de la journée. Ici, le changement d’état suffit.
+
+### 4. Ajouter une action
+
+Dans **ALORS**, ajoute une action HA. Choisis `light.turn_on` et sélectionne la lampe de test comme cible. Dans la démo, c’est `light.flur`. Avec une deuxième entrée de test de type interrupteur, utilise `input_boolean.turn_on`. Laisse **SINON** vide, puis avance.
+
+### 5. Vérifier le YAML
+
+Sous `triggers`, vérifie l’entité et `to: "on"`. Sous `actions`, vérifie l’action et la cible. Applique les réglages, enregistre la règle, puis ouvre-la en YAML HA pour contrôler et exporter le brouillon.
+
+### 6. Tester dans Home Assistant
+
+Ajoute l’automatisation vérifiée à Home Assistant. Mets l’entité déclencheuse à `off`, puis à `on`. Vérifie que la bonne cible s’allume. La trace d’automatisation indique quel déclencheur et quelle action ont été exécutés.
+
+[![Éditeur Rules avec le déclencheur d’état dans SI et l’action d’allumage dans ALORS](/images/logic-studio/user-guide/rules-walkthrough-fr.jpg)](/images/logic-studio/user-guide/rules-walkthrough-fr.jpg)
 
 ## Fonctions
 

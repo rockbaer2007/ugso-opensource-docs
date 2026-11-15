@@ -1,12 +1,34 @@
 # Funktionsplan
 
-## Erstes Beispiel
+## Ein Signal im Funktionsplan umkehren
 
-Erstelle einen Funktionsplan. Ziehe einen digitalen Eingang und einen Ausgang auf die Fläche. Verbinde den Ausgangspin des Eingangs mit dem Eingangspin des Ausgangs. Starte die Simulation und schalte den Eingang um. Der Ausgang folgt dem Signal.
+### 1. Plan öffnen und Bausteine hinzufügen
 
-In der Zeichenfläche siehst du die verbundenen Bausteine und die Miniübersicht unten rechts.
+Öffne **Funktionsplan** im Projektbaum. Suche links nacheinander `STATE_IN`, `NOT` und `STATE_OUT`. Klicke jeweils auf den Baustein, um ihn einzufügen. Ziehe die Bausteine an ihrer Kopfzeile in dieser Reihenfolge von links nach rechts.
 
-![Funktionsplan mit verbundenen Bausteinen und Miniübersicht](/images/logic-studio/0.1.8-react-flow-193.jpg)
+### 2. Eingang konfigurieren
+
+Öffne über das Zahnrad die Eigenschaften von `STATE_IN`. Trage die Entitäts-ID deines Sensors oder Testhelfers ein. Im Bild ist das `binary_sensor.bewegung`. Stelle **Signaltyp** auf `BOOL` und **Demo-Eingang (nur Simulation)** auf `TRUE`.
+
+### 3. Ausgang konfigurieren
+
+Öffne die Eigenschaften von `STATE_OUT`. Trage eine passende Ziel-ID ein. Im Bild ist es `light.flur`. Lass den **Ausgangsmodus** auf `BOOL`. Ein BOOL-Signal hat genau zwei Werte, `TRUE` und `FALSE`.
+
+### 4. Anschlüsse verbinden
+
+Ziehe vom runden Ausgangspunkt **Q** von `STATE_IN` zum Eingangspunkt **IN** von `NOT`. Ziehe dann von **OUT** an `NOT` zu **IN** an `STATE_OUT`. Oberhalb der Zeichenfläche sollten drei Bausteine und zwei Verbindungen stehen.
+
+### 5. Simulation ausführen
+
+Klicke oben auf **Simulation** (Kolbensymbol). Am Eingang siehst du `Demo: true`. `NOT` kehrt den Wert um. Bei `STATE_OUT` steht deshalb `Demo: false`. Die Simulation verwendet Demowerte und schaltet die Leuchte nicht.
+
+### 6. Gegenprobe machen
+
+Setze den Demo-Eingang auf `FALSE` und klicke erneut auf **Simulation**. Jetzt ist der Ausgang `true`. Mit **Simulation zurücksetzen** startest du den Simulationszustand neu. Wenn du den Plan behalten möchtest, speichere das Projekt.
+
+[![Funktionsplan mit STATE_IN, NOT und STATE_OUT. Die Simulation zeigt true am Eingang und false am Ausgang.](/images/logic-studio/user-guide/function-plan-walkthrough-de.jpg)](/images/logic-studio/user-guide/function-plan-walkthrough-de.jpg)
+
+Wenn eine Verbindung abgelehnt wird, prüfe die Signaltypen. Falls die Simulation eine fehlende Entitäts-ID meldet, überprüfe die Eigenschaften von Eingang und Ausgang. Nutze für dieses Beispiel das Simulationssymbol. **Play** in der Projektleiste startet die Runtime.
 
 ## Funktionen
 

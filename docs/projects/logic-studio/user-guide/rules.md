@@ -1,12 +1,34 @@
 # Rules
 
-## Erstes Beispiel
+## Regel für ein Flurlicht erstellen
 
-Lege eine Regel an und öffne den Assistenten. Wähle **Zustand**, deinen Testhelfer und als neuen Wert `on`. Füge unter **DANN** eine Aktion für einen zweiten Helfer hinzu. Exportiere die Regel als HA-YAML und prüfe sie in Home Assistant.
+### 1. Projekt anlegen
 
-So sieht der Rules-Editor mit der Auswahl links und den Abschnitten FALLS, DANN und SONST aus.
+Wähle **Neues Projekt → Regeln** und gib einen Namen ein, etwa **Flurlicht bei Bewegung**. Öffne **Assistent**. Der Dialog führt dich durch **Löst aus**, **Bedingungen**, **Aktionen** und **Übersicht**.
 
-![Rules-Editor mit Auslösern, Bedingungen und Aktionszweigen](/images/logic-studio/0.1.60-rules-test-193.png)
+### 2. Auslöser festlegen
+
+Wähle **Zustand**. Trage bei **Entität** deinen Bewegungssensor oder ersten Testhelfer ein. Im Bild ist es `binary_sensor.bewegung`. Trage bei **Nach** `on` ein. Lass **Von**, Attribut und Mindestdauer leer. Klicke auf **Weiter**.
+
+[![Zustandsauslöser im ersten Schritt des Rules-Assistenten](/images/logic-studio/user-guide/rules-trigger-de.jpg)](/images/logic-studio/user-guide/rules-trigger-de.jpg)
+
+### 3. Bedingungen überspringen
+
+Klicke im Schritt **Bedingungen** auf **Weiter**. Für dieses Beispiel reicht der Zustandswechsel als Auslöser. Eine zusätzliche Bedingung wäre etwa, dass es nach 18 Uhr ist.
+
+### 4. Aktion hinzufügen
+
+Wähle bei **DANN** **+ Hinzufügen**. Lass als Schritttyp **HA-Aktion** stehen. Wähle `light.turn_on` und als **Ziel-Entität** deine Testleuchte. In der Demo ist es `light.flur`. Für einen zweiten Umschalter als Ziel verwende `input_boolean.turn_on`. Lass **SONST** leer und klicke auf **Weiter**.
+
+### 5. Übersicht und YAML prüfen
+
+Unter `triggers` steht die gewählte Entität mit `to: "on"`. Unter `actions` stehen die Aktion und ihr Ziel. Klicke auf **Übernehmen**. Im Editor kannst du die Regel speichern, mit **Als HA-YAML öffnen** den Entwurf ansehen und dort die Datei exportieren.
+
+### 6. In Home Assistant ausprobieren
+
+Übernimm die geprüfte Automation in Home Assistant. Setze den Auslöser zunächst auf `off` und dann auf `on`. Kontrolliere, ob das richtige Ziel eingeschaltet wurde. Im **Trace** der Automation siehst du, welcher Auslöser und welche Aktion ausgeführt wurden.
+
+[![Rules mit Zustandsauslöser im Abschnitt FALLS und Lichtaktion im Abschnitt DANN](/images/logic-studio/user-guide/rules-walkthrough-de.jpg)](/images/logic-studio/user-guide/rules-walkthrough-de.jpg)
 
 ## Funktionen
 

@@ -7596,25 +7596,21 @@
         "de": {
           "path": "projects/logic-studio/user-guide/function-plan.md",
           "status": "content-present",
-          "sha256": "dd8d433a5bddd5531d42a4c3adb05f4e2f8dfd8d8dd67abb5a99109863138cf5",
-          "words": 225,
-          "headings": 12,
+          "sha256": "3efa8c2726ccd69000ae2667329659508814f19e6da8a09dbcf3306eeec3d408",
+          "words": 450,
+          "headings": 18,
           "examples": 0,
-          "versions": [
-            "0.1.8"
-          ],
+          "versions": [],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/logic-studio/user-guide/function-plan.md",
           "status": "content-present",
-          "sha256": "de16a157c95ccad2ffedd24860f42355dcfc26bc7079c043b917b22ceaf2446e",
-          "words": 183,
-          "headings": 12,
+          "sha256": "25ae4808a25715d4a30d02f2e2b126035974c80543b2f7d95dea3eecab1a3bc7",
+          "words": 431,
+          "headings": 18,
           "examples": 0,
-          "versions": [
-            "0.1.8"
-          ],
+          "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -7627,13 +7623,11 @@
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/function-plan.md",
           "status": "content-present",
-          "sha256": "3ab15ff2a20326a2c0bc02b233c1552487fcdc5dca97858c0c3e016edbd2a857",
-          "words": 209,
-          "headings": 12,
+          "sha256": "0e08e7fdae77a7cdc2f6b0c3eeed38c769608557507851f4fc5abd19c49d01be",
+          "words": 480,
+          "headings": 18,
           "examples": 0,
-          "versions": [
-            "0.1.8"
-          ],
+          "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -7749,25 +7743,21 @@
         "de": {
           "path": "projects/logic-studio/user-guide/rules.md",
           "status": "content-present",
-          "sha256": "cdb766e33729992d6829656e5f1a92a2c5c0116737e939e3d0e8d7338dd96ac8",
-          "words": 266,
-          "headings": 11,
+          "sha256": "2512295d93d4974b1c012a998dd9d026b658a0137614c88c17d1b772a56a9c32",
+          "words": 473,
+          "headings": 17,
           "examples": 0,
-          "versions": [
-            "0.1.60"
-          ],
+          "versions": [],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/logic-studio/user-guide/rules.md",
           "status": "content-present",
-          "sha256": "0f935d4a043e68a8fecf78b227a58884ea5eb48bea287329589bc2ecf79fb37d",
-          "words": 238,
-          "headings": 11,
+          "sha256": "0d0cf48f7576a883dd9b5d0a9b391005926c9acef1895d260827bbf15e14517c",
+          "words": 427,
+          "headings": 17,
           "examples": 0,
-          "versions": [
-            "0.1.60"
-          ],
+          "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -7780,13 +7770,11 @@
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/rules.md",
           "status": "content-present",
-          "sha256": "14d211db75497f08d7581d73b031aa75fb1bd4666734d4e19510566c7f1d90a6",
-          "words": 267,
-          "headings": 11,
+          "sha256": "4e825d577bbb839e3cc8a403135b16393546a3f99d7d953dc1b5e6dcfcf1b6d6",
+          "words": 476,
+          "headings": 17,
           "examples": 0,
-          "versions": [
-            "0.1.60"
-          ],
+          "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
