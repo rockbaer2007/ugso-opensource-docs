@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.94 · Link HA YAML to an automation or script
+description: HA Logic Studio Pro 0.1.95 · Rules condition – Triggered by
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.95 · Rules condition: Triggered by**
+
+Triggers can have an optional **trigger ID**. The **Triggered by** condition references one of these IDs and exports as `condition: trigger` in HA YAML. In the live test, the HA event with trigger ID `first` ran the **THEN** branch. The event with `second` ran the **ELSE** branch. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.95 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.95)
 
 **0.1.94 · Link HA YAML to an automation or script**
 

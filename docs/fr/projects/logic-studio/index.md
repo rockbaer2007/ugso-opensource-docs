@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.94 · Associer le YAML HA à une automatisation ou à un script
+description: HA Logic Studio Pro 0.1.95 · Condition « Déclenché par » dans Règles
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,12 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.95 · Condition « Déclenché par » dans Règles**
+
+Chaque déclencheur peut avoir un **identifiant facultatif**. La condition **Déclenché par** utilise l’un de ces identifiants et s’exporte sous la forme `condition: trigger` dans le YAML HA. Lors du test en conditions réelles, l’événement HA associé à l’identifiant `first` a exécuté la branche **ALORS**. L’événement associé à `second` a exécuté la branche **SINON**. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.95 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.95)
 
 **0.1.94 · Associer le YAML HA à une automatisation ou à un script**
 

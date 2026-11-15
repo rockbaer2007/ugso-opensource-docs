@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.94 · HA-YAML mit Automation oder Skript verknüpfen
+description: HA Logic Studio Pro 0.1.95 · Rules-Bedingung „Ausgelöst durch“
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.95 · Rules-Bedingung „Ausgelöst durch“**
+
+Auslöser können eine optionale **Trigger-ID** erhalten. Die Bedingung **Ausgelöst durch** verweist auf eine dieser IDs und wird als `condition: trigger` in HA-YAML ausgegeben. Im Live-Test führte das HA-Ereignis mit der Trigger-ID `first` den **DANN**-Zweig aus. Das Ereignis mit `second` führte den **SONST**-Zweig aus. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.95 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.95)
 
 **0.1.94 · HA-YAML mit Automation oder Skript verknüpfen**
 
