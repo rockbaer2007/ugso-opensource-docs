@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.89 · JSON import in HA YAML
+description: HA Logic Studio Pro 0.1.90 · HA YAML syntax highlighting and error markers
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.90 · HA YAML syntax highlighting and error markers**
+
+The HA YAML editor shows syntax highlighting and line numbers. Errors are marked in the code and in the gutter. In the hallway automation test on the PC test system (64), the editor flagged an intentionally duplicated `mode` key on **line 79**. After correction, the marker disappeared and all three `choose` branches remained visible.
+
+[HA Logic Studio Pro 0.1.90 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.90)
 
 **0.1.89 · JSON import in HA YAML**
 

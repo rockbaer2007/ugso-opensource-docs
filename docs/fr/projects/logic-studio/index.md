@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.89 · Import JSON dans YAML HA
+description: HA Logic Studio Pro 0.1.90 · Coloration syntaxique et erreurs dans YAML HA
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,12 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.90 · Coloration syntaxique et erreurs dans YAML HA**
+
+L’éditeur YAML HA affiche la coloration syntaxique et les numéros de ligne. Les erreurs sont signalées dans le code et dans la marge. Lors du test de l’automatisation du couloir sur le système de test PC (64), l’éditeur a signalé une clé `mode` dupliquée volontairement à la **ligne 79**. Après correction, le marqueur a disparu et les trois branches `choose` sont restées visibles.
+
+[HA Logic Studio Pro 0.1.90 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.90)
 
 **0.1.89 · Import JSON dans YAML HA**
 
