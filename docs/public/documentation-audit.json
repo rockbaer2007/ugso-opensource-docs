@@ -7156,8 +7156,8 @@
         "de": {
           "path": "projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "dc9eac827086ba52582c3cb9f6e316f306f17ed6e58ccde1fc2d2e8bc630deae",
-          "words": 6199,
+          "sha256": "0c599317abb2d4fa116a92b0b39572fc26a7e4355f21f633082c8917381201ec",
+          "words": 6303,
           "headings": 13,
           "examples": 2,
           "versions": [
@@ -7207,6 +7207,7 @@
             "0.1.88",
             "0.1.89",
             "0.1.90",
+            "0.1.91",
             "2026.10.4",
             "2026.11.1"
           ],
@@ -7215,8 +7216,8 @@
         "en": {
           "path": "en/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "a4046b43c0384d4b30594f5966c2cd5215529047ebb8f2b56b195d14fe863450",
-          "words": 6512,
+          "sha256": "24c5262e4958daf180a1ef26da9fdc829a4b240f34beeac08fafc9c2c3e7bfb1",
+          "words": 6617,
           "headings": 13,
           "examples": 2,
           "versions": [
@@ -7266,6 +7267,7 @@
             "0.1.88",
             "0.1.89",
             "0.1.90",
+            "0.1.91",
             "2026.10.4",
             "2026.11.1"
           ],
@@ -7281,8 +7283,8 @@
         "fr": {
           "path": "fr/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "45d4c63ec9ff1b3a0a83a1ec35feedb7937171d838b885fc952639cd91c6c5c0",
-          "words": 7489,
+          "sha256": "5e4e421ef88f5e48acadd8e6b86f7915753e4384aa37a17fda2a9bcd7172734b",
+          "words": 7609,
           "headings": 13,
           "examples": 2,
           "versions": [
@@ -7332,6 +7334,7 @@
             "0.1.88",
             "0.1.89",
             "0.1.90",
+            "0.1.91",
             "2026.10.4",
             "2026.11.1"
           ],

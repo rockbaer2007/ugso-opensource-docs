@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.90 · HA YAML syntax highlighting and error markers
+description: HA Logic Studio Pro 0.1.91 · Home Assistant catalog checks in the YAML editor
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.91 · Home Assistant catalog checks in the YAML editor**
+
+The YAML editor marks unknown entities, invalid target fields and action fields absent from the Home Assistant catalog directly in the code. The catalog check skips dynamic templates. In the hallway automation test on the PC test system (64), it flagged an unknown entity on **line 28** and an invalid `light.turn_on` field on **line 45**. Both test markers cleared after correction. All three `choose` branches remained visible.
+
+[HA Logic Studio Pro 0.1.91 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.91)
 
 **0.1.90 · HA YAML syntax highlighting and error markers**
 

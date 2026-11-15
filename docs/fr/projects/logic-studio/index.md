@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.90 · Coloration syntaxique et erreurs dans YAML HA
+description: HA Logic Studio Pro 0.1.91 · Vérification du catalogue Home Assistant dans l’éditeur YAML
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,12 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.91 · Vérification du catalogue Home Assistant dans l’éditeur YAML**
+
+L’éditeur YAML signale dans le code les entités inconnues, les champs cibles invalides et les champs d’action absents du catalogue Home Assistant. La vérification du catalogue ignore les modèles dynamiques. Lors du test de l’automatisation du couloir sur le système de test PC (64), l’éditeur a signalé une entité inconnue à la **ligne 28** et un champ `light.turn_on` invalide à la **ligne 45**. Les deux marqueurs ont disparu après correction. Les trois branches `choose` sont restées visibles.
+
+[HA Logic Studio Pro 0.1.91 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.91)
 
 **0.1.90 · Coloration syntaxique et erreurs dans YAML HA**
 
