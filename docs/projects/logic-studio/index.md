@@ -25,6 +25,14 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Projektverwaltung:** Projekte und Ordner pro HA-Benutzer auf dem Server speichern.
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
+### HA Logic Studio Pro 0.1.101–0.1.120
+
+**0.1.101 · Hinweis am importierten exec-Block**
+
+Der vorhandene ioBroker-Testexport enthält am `exec`-Block den Vergleich „aktuelle Zeit vor 12:00“. Im Test erschien der Hinweis sowohl in der Importübersicht als auch direkt am Blockly-Platzhalter. Der Vergleich blieb erhalten. Der Hinweis erklärt, wie er an „falls“ angeschlossen und die gewünschte HA-Aktion unter „mache“ eingefügt wird. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.101 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.101)
+
 ### HA Logic Studio Pro 0.1.81–0.1.100
 
 **0.1.100 · Template-Bedingung in Rules**

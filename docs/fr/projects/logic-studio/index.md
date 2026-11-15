@@ -27,6 +27,14 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
+### HA Logic Studio Pro 0.1.101–0.1.120
+
+**0.1.101 · Indication sur le bloc exec importé**
+
+Dans l’export de test ioBroker, le bloc `exec` reçoit la comparaison « heure actuelle avant 12:00 ». Le test a confirmé que l’indication apparaît dans le récapitulatif d’import et directement sur le bloc de substitution Blockly. La comparaison est conservée. Le commentaire explique comment la brancher sur « si » et placer l’action HA souhaitée dans « faire ». [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.101 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.101)
+
 ### HA Logic Studio Pro 0.1.81–0.1.100
 
 **0.1.100 · Condition de modèle dans Rules**

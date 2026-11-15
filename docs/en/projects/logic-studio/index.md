@@ -25,6 +25,14 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Project management:** Store projects and folders on the server for each HA user.
 - **Language selection:** The editors are available in German, English, and French.
 
+### HA Logic Studio Pro 0.1.101–0.1.120
+
+**0.1.101 · Guidance on the imported exec block**
+
+The ioBroker test export contains a comparison of the current time with 12:00 as the input to `exec`. The test verified that guidance appeared both in the import review and on the Blockly placeholder itself. The comparison was preserved. The note explains how to connect it to “if” and place the intended HA action in “do”. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.101 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.101)
+
 ### HA Logic Studio Pro 0.1.81–0.1.100
 
 **0.1.100 · Template condition in Rules**
