@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.96 · Groupes de conditions et catalogues de cibles Blocks A
+description: HA Logic Studio Pro 0.1.97 · Échange Blocks JS et mémoire du diagramme fonctionnel
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,14 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.97 · Échange Blocks JS et mémoire du diagramme fonctionnel**
+
+Dans Blocks JS, la vue des identifiants d’entité affiche aussi l’identifiant ioBroker d’origine du bloc importé sélectionné. Les indications d’import ont été vérifiées avec les exports d’origine `test33.xml` et `test33.js`. Le bloc de mise à jour sélectionné et sa valeur connectée ont été importés dans un brouillon séparé à partir d’un texte JSON et d’un fichier.
+
+Dans le diagramme fonctionnel, le plan enregistré a conservé la valeur `1` du compteur et la valeur `true` du bistable après le redémarrage de l’application et la relance du plan. Les tests automatisés du moteur d’exécution vérifient le redémarrage avec une entrée déjà active et l’abandon des anciennes valeurs après une modification des connexions. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.97 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.97)
 
 **0.1.96 · Groupes de conditions et catalogues de cibles Blocks A**
 

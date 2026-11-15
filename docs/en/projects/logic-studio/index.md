@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.96 · Rules groups and Blocks A target catalogs
+description: HA Logic Studio Pro 0.1.97 · Blocks JS exchange and function block memory
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.97 · Blocks JS exchange and function block memory**
+
+The entity ID view in Blocks JS also shows the original ioBroker ID of a selected imported block. The import hints were checked with the original `test33.xml` and `test33.js` exports. The selected update block and its connected value were imported into a separate draft from both JSON text and a file.
+
+In the function block diagram, the saved plan retained counter `1` and latch `true` when it was started again after an app restart. Automated tests using the runtime runner cover a restart with an already active input and verify that rewiring the plan discards old values. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.97 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.97)
 
 **0.1.96 · Rules groups and Blocks A target catalogs**
 

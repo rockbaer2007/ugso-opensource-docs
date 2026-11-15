@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.96 · Rules-Gruppen und Blocks-A-Zielkataloge
+description: HA Logic Studio Pro 0.1.97 · Blocks-JS-Austausch und Funktionsplan-Speicher
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,14 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.97 · Blocks-JS-Austausch und Funktionsplan-Speicher**
+
+In Blocks JS zeigt die Entitäts-ID-Ansicht am ausgewählten importierten Block auch die ursprüngliche ioBroker-ID. Mit den echten Exporten `test33.xml` und `test33.js` wurden die Importhinweise geprüft. Der ausgewählte Aktualisierungsblock samt angeschlossenem Wert ließ sich als JSON-Text und als Datei in einen eigenen Entwurf übernehmen.
+
+Im Funktionsplan blieben Zähler `1` und Merker `true` beim erneuten Start des gespeicherten Plans nach einem App-Neustart erhalten. Automatisierte Tests mit dem Runtime-Runner prüfen den Neustart mit bereits aktivem Eingang und das Verwerfen alter Werte nach geänderter Verdrahtung. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.97 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.97)
 
 **0.1.96 · Rules-Gruppen und Blocks-A-Zielkataloge**
 
