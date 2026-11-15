@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 245 | 0 | 0 | 0 |
-| EN | 245 | 0 | 0 | 0 |
-| FR | 245 | 0 | 0 | 0 |
+| DE | 253 | 0 | 0 | 0 |
+| EN | 253 | 0 | 0 | 0 |
+| FR | 253 | 0 | 0 | 0 |
 
 **Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
 
@@ -143,6 +143,14 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/index.md](/projects/) | [Content present](/en/projects/) | [Content present](/fr/projects/) |
 | [projects/logic-studio/index.md](/projects/logic-studio/) | [Content present](/en/projects/logic-studio/) | [Content present](/fr/projects/logic-studio/) |
 | [projects/logic-studio/user-guide.md](/projects/logic-studio/user-guide) | [Content present](/en/projects/logic-studio/user-guide) | [Content present](/fr/projects/logic-studio/user-guide) |
+| [projects/logic-studio/user-guide/blocks-a.md](/projects/logic-studio/user-guide/blocks-a) | [Content present](/en/projects/logic-studio/user-guide/blocks-a) | [Content present](/fr/projects/logic-studio/user-guide/blocks-a) |
+| [projects/logic-studio/user-guide/blocks-js.md](/projects/logic-studio/user-guide/blocks-js) | [Content present](/en/projects/logic-studio/user-guide/blocks-js) | [Content present](/fr/projects/logic-studio/user-guide/blocks-js) |
+| [projects/logic-studio/user-guide/feedback.md](/projects/logic-studio/user-guide/feedback) | [Content present](/en/projects/logic-studio/user-guide/feedback) | [Content present](/fr/projects/logic-studio/user-guide/feedback) |
+| [projects/logic-studio/user-guide/function-plan.md](/projects/logic-studio/user-guide/function-plan) | [Content present](/en/projects/logic-studio/user-guide/function-plan) | [Content present](/fr/projects/logic-studio/user-guide/function-plan) |
+| [projects/logic-studio/user-guide/ha-yaml.md](/projects/logic-studio/user-guide/ha-yaml) | [Content present](/en/projects/logic-studio/user-guide/ha-yaml) | [Content present](/fr/projects/logic-studio/user-guide/ha-yaml) |
+| [projects/logic-studio/user-guide/javascript.md](/projects/logic-studio/user-guide/javascript) | [Content present](/en/projects/logic-studio/user-guide/javascript) | [Content present](/fr/projects/logic-studio/user-guide/javascript) |
+| [projects/logic-studio/user-guide/rules.md](/projects/logic-studio/user-guide/rules) | [Content present](/en/projects/logic-studio/user-guide/rules) | [Content present](/fr/projects/logic-studio/user-guide/rules) |
+| [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Content present](/en/projects/logic-studio/user-guide/typescript) | [Content present](/fr/projects/logic-studio/user-guide/typescript) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Content present](/en/projects/mqtt-client/) | [Content present](/fr/projects/mqtt-client/) |
 | [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Content present](/en/projects/mqtt-client/iobroker-roles) | [Content present](/fr/projects/mqtt-client/iobroker-roles) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Content present](/en/projects/parcel-to-mqtt/examples) | [Content present](/fr/projects/parcel-to-mqtt/examples) |

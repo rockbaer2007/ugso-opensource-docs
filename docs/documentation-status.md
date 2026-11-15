@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 245 | 0 | 0 | 0 |
-| EN | 245 | 0 | 0 | 0 |
-| FR | 245 | 0 | 0 | 0 |
+| DE | 253 | 0 | 0 | 0 |
+| EN | 253 | 0 | 0 | 0 |
+| FR | 253 | 0 | 0 | 0 |
 
 **Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
 
@@ -143,6 +143,14 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/index.md](/projects/) | [Inhalt vorhanden](/en/projects/) | [Inhalt vorhanden](/fr/projects/) |
 | [projects/logic-studio/index.md](/projects/logic-studio/) | [Inhalt vorhanden](/en/projects/logic-studio/) | [Inhalt vorhanden](/fr/projects/logic-studio/) |
 | [projects/logic-studio/user-guide.md](/projects/logic-studio/user-guide) | [Inhalt vorhanden](/en/projects/logic-studio/user-guide) | [Inhalt vorhanden](/fr/projects/logic-studio/user-guide) |
+| [projects/logic-studio/user-guide/blocks-a.md](/projects/logic-studio/user-guide/blocks-a) | [Inhalt vorhanden](/en/projects/logic-studio/user-guide/blocks-a) | [Inhalt vorhanden](/fr/projects/logic-studio/user-guide/blocks-a) |
+| [projects/logic-studio/user-guide/blocks-js.md](/projects/logic-studio/user-guide/blocks-js) | [Inhalt vorhanden](/en/projects/logic-studio/user-guide/blocks-js) | [Inhalt vorhanden](/fr/projects/logic-studio/user-guide/blocks-js) |
+| [projects/logic-studio/user-guide/feedback.md](/projects/logic-studio/user-guide/feedback) | [Inhalt vorhanden](/en/projects/logic-studio/user-guide/feedback) | [Inhalt vorhanden](/fr/projects/logic-studio/user-guide/feedback) |
+| [projects/logic-studio/user-guide/function-plan.md](/projects/logic-studio/user-guide/function-plan) | [Inhalt vorhanden](/en/projects/logic-studio/user-guide/function-plan) | [Inhalt vorhanden](/fr/projects/logic-studio/user-guide/function-plan) |
+| [projects/logic-studio/user-guide/ha-yaml.md](/projects/logic-studio/user-guide/ha-yaml) | [Inhalt vorhanden](/en/projects/logic-studio/user-guide/ha-yaml) | [Inhalt vorhanden](/fr/projects/logic-studio/user-guide/ha-yaml) |
+| [projects/logic-studio/user-guide/javascript.md](/projects/logic-studio/user-guide/javascript) | [Inhalt vorhanden](/en/projects/logic-studio/user-guide/javascript) | [Inhalt vorhanden](/fr/projects/logic-studio/user-guide/javascript) |
+| [projects/logic-studio/user-guide/rules.md](/projects/logic-studio/user-guide/rules) | [Inhalt vorhanden](/en/projects/logic-studio/user-guide/rules) | [Inhalt vorhanden](/fr/projects/logic-studio/user-guide/rules) |
+| [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Inhalt vorhanden](/en/projects/logic-studio/user-guide/typescript) | [Inhalt vorhanden](/fr/projects/logic-studio/user-guide/typescript) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Inhalt vorhanden](/en/projects/mqtt-client/) | [Inhalt vorhanden](/fr/projects/mqtt-client/) |
 | [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Inhalt vorhanden](/en/projects/mqtt-client/iobroker-roles) | [Inhalt vorhanden](/fr/projects/mqtt-client/iobroker-roles) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Inhalt vorhanden](/en/projects/parcel-to-mqtt/examples) | [Inhalt vorhanden](/fr/projects/parcel-to-mqtt/examples) |

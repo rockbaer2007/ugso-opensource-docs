@@ -1619,6 +1619,126 @@
     "EN": "/en/projects/logic-studio/user-guide",
     "FR": "/fr/projects/logic-studio/user-guide"
   },
+  "/projects/logic-studio/user-guide/blocks-a": {
+    "DE": "/projects/logic-studio/user-guide/blocks-a",
+    "EN": "/en/projects/logic-studio/user-guide/blocks-a",
+    "FR": "/fr/projects/logic-studio/user-guide/blocks-a"
+  },
+  "/en/projects/logic-studio/user-guide/blocks-a": {
+    "DE": "/projects/logic-studio/user-guide/blocks-a",
+    "EN": "/en/projects/logic-studio/user-guide/blocks-a",
+    "FR": "/fr/projects/logic-studio/user-guide/blocks-a"
+  },
+  "/fr/projects/logic-studio/user-guide/blocks-a": {
+    "DE": "/projects/logic-studio/user-guide/blocks-a",
+    "EN": "/en/projects/logic-studio/user-guide/blocks-a",
+    "FR": "/fr/projects/logic-studio/user-guide/blocks-a"
+  },
+  "/projects/logic-studio/user-guide/blocks-js": {
+    "DE": "/projects/logic-studio/user-guide/blocks-js",
+    "EN": "/en/projects/logic-studio/user-guide/blocks-js",
+    "FR": "/fr/projects/logic-studio/user-guide/blocks-js"
+  },
+  "/en/projects/logic-studio/user-guide/blocks-js": {
+    "DE": "/projects/logic-studio/user-guide/blocks-js",
+    "EN": "/en/projects/logic-studio/user-guide/blocks-js",
+    "FR": "/fr/projects/logic-studio/user-guide/blocks-js"
+  },
+  "/fr/projects/logic-studio/user-guide/blocks-js": {
+    "DE": "/projects/logic-studio/user-guide/blocks-js",
+    "EN": "/en/projects/logic-studio/user-guide/blocks-js",
+    "FR": "/fr/projects/logic-studio/user-guide/blocks-js"
+  },
+  "/projects/logic-studio/user-guide/feedback": {
+    "DE": "/projects/logic-studio/user-guide/feedback",
+    "EN": "/en/projects/logic-studio/user-guide/feedback",
+    "FR": "/fr/projects/logic-studio/user-guide/feedback"
+  },
+  "/en/projects/logic-studio/user-guide/feedback": {
+    "DE": "/projects/logic-studio/user-guide/feedback",
+    "EN": "/en/projects/logic-studio/user-guide/feedback",
+    "FR": "/fr/projects/logic-studio/user-guide/feedback"
+  },
+  "/fr/projects/logic-studio/user-guide/feedback": {
+    "DE": "/projects/logic-studio/user-guide/feedback",
+    "EN": "/en/projects/logic-studio/user-guide/feedback",
+    "FR": "/fr/projects/logic-studio/user-guide/feedback"
+  },
+  "/projects/logic-studio/user-guide/function-plan": {
+    "DE": "/projects/logic-studio/user-guide/function-plan",
+    "EN": "/en/projects/logic-studio/user-guide/function-plan",
+    "FR": "/fr/projects/logic-studio/user-guide/function-plan"
+  },
+  "/en/projects/logic-studio/user-guide/function-plan": {
+    "DE": "/projects/logic-studio/user-guide/function-plan",
+    "EN": "/en/projects/logic-studio/user-guide/function-plan",
+    "FR": "/fr/projects/logic-studio/user-guide/function-plan"
+  },
+  "/fr/projects/logic-studio/user-guide/function-plan": {
+    "DE": "/projects/logic-studio/user-guide/function-plan",
+    "EN": "/en/projects/logic-studio/user-guide/function-plan",
+    "FR": "/fr/projects/logic-studio/user-guide/function-plan"
+  },
+  "/projects/logic-studio/user-guide/ha-yaml": {
+    "DE": "/projects/logic-studio/user-guide/ha-yaml",
+    "EN": "/en/projects/logic-studio/user-guide/ha-yaml",
+    "FR": "/fr/projects/logic-studio/user-guide/ha-yaml"
+  },
+  "/en/projects/logic-studio/user-guide/ha-yaml": {
+    "DE": "/projects/logic-studio/user-guide/ha-yaml",
+    "EN": "/en/projects/logic-studio/user-guide/ha-yaml",
+    "FR": "/fr/projects/logic-studio/user-guide/ha-yaml"
+  },
+  "/fr/projects/logic-studio/user-guide/ha-yaml": {
+    "DE": "/projects/logic-studio/user-guide/ha-yaml",
+    "EN": "/en/projects/logic-studio/user-guide/ha-yaml",
+    "FR": "/fr/projects/logic-studio/user-guide/ha-yaml"
+  },
+  "/projects/logic-studio/user-guide/javascript": {
+    "DE": "/projects/logic-studio/user-guide/javascript",
+    "EN": "/en/projects/logic-studio/user-guide/javascript",
+    "FR": "/fr/projects/logic-studio/user-guide/javascript"
+  },
+  "/en/projects/logic-studio/user-guide/javascript": {
+    "DE": "/projects/logic-studio/user-guide/javascript",
+    "EN": "/en/projects/logic-studio/user-guide/javascript",
+    "FR": "/fr/projects/logic-studio/user-guide/javascript"
+  },
+  "/fr/projects/logic-studio/user-guide/javascript": {
+    "DE": "/projects/logic-studio/user-guide/javascript",
+    "EN": "/en/projects/logic-studio/user-guide/javascript",
+    "FR": "/fr/projects/logic-studio/user-guide/javascript"
+  },
+  "/projects/logic-studio/user-guide/rules": {
+    "DE": "/projects/logic-studio/user-guide/rules",
+    "EN": "/en/projects/logic-studio/user-guide/rules",
+    "FR": "/fr/projects/logic-studio/user-guide/rules"
+  },
+  "/en/projects/logic-studio/user-guide/rules": {
+    "DE": "/projects/logic-studio/user-guide/rules",
+    "EN": "/en/projects/logic-studio/user-guide/rules",
+    "FR": "/fr/projects/logic-studio/user-guide/rules"
+  },
+  "/fr/projects/logic-studio/user-guide/rules": {
+    "DE": "/projects/logic-studio/user-guide/rules",
+    "EN": "/en/projects/logic-studio/user-guide/rules",
+    "FR": "/fr/projects/logic-studio/user-guide/rules"
+  },
+  "/projects/logic-studio/user-guide/typescript": {
+    "DE": "/projects/logic-studio/user-guide/typescript",
+    "EN": "/en/projects/logic-studio/user-guide/typescript",
+    "FR": "/fr/projects/logic-studio/user-guide/typescript"
+  },
+  "/en/projects/logic-studio/user-guide/typescript": {
+    "DE": "/projects/logic-studio/user-guide/typescript",
+    "EN": "/en/projects/logic-studio/user-guide/typescript",
+    "FR": "/fr/projects/logic-studio/user-guide/typescript"
+  },
+  "/fr/projects/logic-studio/user-guide/typescript": {
+    "DE": "/projects/logic-studio/user-guide/typescript",
+    "EN": "/en/projects/logic-studio/user-guide/typescript",
+    "FR": "/fr/projects/logic-studio/user-guide/typescript"
+  },
   "/projects/mqtt-client/": {
     "DE": "/projects/mqtt-client/",
     "EN": "/en/projects/mqtt-client/",

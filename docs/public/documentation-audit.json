@@ -2,27 +2,27 @@
   "reviewed_at": "2026-10-28",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 245,
+  "source_pages": 253,
   "summary": {
     "de": {
-      "content-present": 245,
-      "existing_pages": 245,
+      "content-present": 253,
+      "existing_pages": 253,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 245,
-      "existing_pages": 245,
+      "content-present": 253,
+      "existing_pages": 253,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 245,
-      "existing_pages": 245,
+      "content-present": 253,
+      "existing_pages": 253,
       "unmatched_pages": 0,
       "review_signals": 31,
       "reviewed_findings": 47,
@@ -7400,9 +7400,9 @@
         "de": {
           "path": "projects/logic-studio/user-guide.md",
           "status": "content-present",
-          "sha256": "6539e7d5b453042b4a76391e748923d299778d945219715fb715f2eb2c7b1ee6",
-          "words": 1,
-          "headings": 1,
+          "sha256": "b45027bd979b466442059db1e058800da55328d1c40bee7720d3dd3d7b963053",
+          "words": 271,
+          "headings": 4,
           "examples": 0,
           "versions": [],
           "unresolved_local_references": []
@@ -7410,9 +7410,9 @@
         "en": {
           "path": "en/projects/logic-studio/user-guide.md",
           "status": "content-present",
-          "sha256": "fa1664bae6b053faea67dad3e36f301a83409b58874210569fef85cacd74ccb5",
-          "words": 2,
-          "headings": 1,
+          "sha256": "db9ef14aee5094fde4a5caf6c08b5094b8616ff3780f9b462396dca08118f628",
+          "words": 262,
+          "headings": 4,
           "examples": 0,
           "versions": [],
           "unresolved_local_references": [],
@@ -7427,9 +7427,401 @@
         "fr": {
           "path": "fr/projects/logic-studio/user-guide.md",
           "status": "content-present",
-          "sha256": "9a0f1c45ac5f93f1e11823deaea59c52a5bbd8908beabac60babe8e5f90773f9",
-          "words": 3,
-          "headings": 1,
+          "sha256": "0b6cf8ea1acced4f83b31563518d23051f8133062823bbaf0c8a0b7c73807409",
+          "words": 290,
+          "headings": 4,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/logic-studio/user-guide/blocks-a.md",
+      "locales": {
+        "de": {
+          "path": "projects/logic-studio/user-guide/blocks-a.md",
+          "status": "content-present",
+          "sha256": "d308fcc9a158cdc84eaa770f4d094fd75b6ccfaf30b5c60b3d0b57ffa863b78d",
+          "words": 179,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/logic-studio/user-guide/blocks-a.md",
+          "status": "content-present",
+          "sha256": "901ebb416901d9afce028b0058ffd28faf208cf8a68c62a8d340cd8d3ef62179",
+          "words": 140,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/logic-studio/user-guide/blocks-a.md",
+          "status": "content-present",
+          "sha256": "7bfc6dcfbe5992c963c962046f12b6a99006a57e9d3e01232b276cdd6fbfa1de",
+          "words": 161,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/logic-studio/user-guide/blocks-js.md",
+      "locales": {
+        "de": {
+          "path": "projects/logic-studio/user-guide/blocks-js.md",
+          "status": "content-present",
+          "sha256": "0ed47e89f2e13f3c011948718759272cd8e2c5cd21f68e9524b6115315facf38",
+          "words": 227,
+          "headings": 11,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/logic-studio/user-guide/blocks-js.md",
+          "status": "content-present",
+          "sha256": "d672e08fff50014b96d7f30dd7b1a8a82fea76c6daab5f8bd241bcc91533256b",
+          "words": 185,
+          "headings": 11,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/logic-studio/user-guide/blocks-js.md",
+          "status": "content-present",
+          "sha256": "e07b25b13a333da3c3c8be04aed6ac95858d5759f4e4c59cc0f94ea12d2d6cc4",
+          "words": 210,
+          "headings": 11,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/logic-studio/user-guide/feedback.md",
+      "locales": {
+        "de": {
+          "path": "projects/logic-studio/user-guide/feedback.md",
+          "status": "content-present",
+          "sha256": "275021e4c7d05862d2157cf0b6e971715ef2740da8b5de3b76c6ea31c52778e0",
+          "words": 148,
+          "headings": 4,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/logic-studio/user-guide/feedback.md",
+          "status": "content-present",
+          "sha256": "33e8835ae6397771bba5488c07b0bd3267b4d68830cd71e5c0816f6d0aedecab",
+          "words": 145,
+          "headings": 4,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/logic-studio/user-guide/feedback.md",
+          "status": "content-present",
+          "sha256": "ff586897623e66d6f648734d742cd36ff9123d6083cd675fc29760ff1efce7f9",
+          "words": 166,
+          "headings": 4,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/logic-studio/user-guide/function-plan.md",
+      "locales": {
+        "de": {
+          "path": "projects/logic-studio/user-guide/function-plan.md",
+          "status": "content-present",
+          "sha256": "59fdd33c016a9e4bf3f449475281d19cd828653568bf0e25cdf64705e4a3e05b",
+          "words": 196,
+          "headings": 12,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/logic-studio/user-guide/function-plan.md",
+          "status": "content-present",
+          "sha256": "fece1c80ee42ce2e588a698475ca58a6dc8535725c28b03e3f4b689edf089325",
+          "words": 152,
+          "headings": 12,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/logic-studio/user-guide/function-plan.md",
+          "status": "content-present",
+          "sha256": "604c6dea4f9e5c1660a7c438bfc6dfefcb2e1bb06dc6e60c40dcc90e386a3656",
+          "words": 177,
+          "headings": 12,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/logic-studio/user-guide/ha-yaml.md",
+      "locales": {
+        "de": {
+          "path": "projects/logic-studio/user-guide/ha-yaml.md",
+          "status": "content-present",
+          "sha256": "ac549df6c1911be1011e90b4edfa83e7836fa96b274bd1432c78d3993b0ee0dc",
+          "words": 196,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/logic-studio/user-guide/ha-yaml.md",
+          "status": "content-present",
+          "sha256": "d9c0c09ca1c0fada3c29bc51c15b57427ad5baeb7c6c98c528cac527d2fac68e",
+          "words": 166,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/logic-studio/user-guide/ha-yaml.md",
+          "status": "content-present",
+          "sha256": "e7b8e1554691ab8eee1a5c2a35b4e60cffd4f3ca7ec8d11970567ae4303639c9",
+          "words": 187,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/logic-studio/user-guide/javascript.md",
+      "locales": {
+        "de": {
+          "path": "projects/logic-studio/user-guide/javascript.md",
+          "status": "content-present",
+          "sha256": "ed8ec52b3269eb10be987f07c7443760bdfcc8251c61d7dd6beb1623480fb56c",
+          "words": 155,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/logic-studio/user-guide/javascript.md",
+          "status": "content-present",
+          "sha256": "913f81f7fb75daa127385cae384a725b8d1a6df6b9a517bb3b401b1186cc53d4",
+          "words": 137,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/logic-studio/user-guide/javascript.md",
+          "status": "content-present",
+          "sha256": "11eb3ae73a1ac850da24fc6e2bc8648095ad2c9e7b47a1cfb2dde2af6cb6a69c",
+          "words": 144,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/logic-studio/user-guide/rules.md",
+      "locales": {
+        "de": {
+          "path": "projects/logic-studio/user-guide/rules.md",
+          "status": "content-present",
+          "sha256": "e699d2aedf0f450f7cc0b53ec8026b76d4e6c0e7ea61402f97146934f320a434",
+          "words": 232,
+          "headings": 11,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/logic-studio/user-guide/rules.md",
+          "status": "content-present",
+          "sha256": "e2dfe22c6f0a46e8c491ce6c700020d7dfe85f178b289930a2380c0820783713",
+          "words": 201,
+          "headings": 11,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/logic-studio/user-guide/rules.md",
+          "status": "content-present",
+          "sha256": "e004b89845269bff974b2edcf4be3204dcf6a69c5c2bb62ea464734e9087f976",
+          "words": 231,
+          "headings": 11,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/logic-studio/user-guide/typescript.md",
+      "locales": {
+        "de": {
+          "path": "projects/logic-studio/user-guide/typescript.md",
+          "status": "content-present",
+          "sha256": "174c92d63bd08f6916d5ee125f08978a75ffda264bfbd1480a481ab732a02312",
+          "words": 153,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/logic-studio/user-guide/typescript.md",
+          "status": "content-present",
+          "sha256": "929ce3de8260aec84b26e75715eb8b3b07d41632ebb010b21988eedb45d117c5",
+          "words": 133,
+          "headings": 10,
+          "examples": 0,
+          "versions": [],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/logic-studio/user-guide/typescript.md",
+          "status": "content-present",
+          "sha256": "1b1fa9313a77c0e0ecd29cd52f4a52ba380026d882ae51068405db5e1227d2df",
+          "words": 148,
+          "headings": 10,
           "examples": 0,
           "versions": [],
           "unresolved_local_references": [],
