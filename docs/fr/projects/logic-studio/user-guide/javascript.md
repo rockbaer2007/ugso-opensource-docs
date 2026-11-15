@@ -2,7 +2,13 @@
 
 ## Premier exemple
 
-Saisis `log('Test Studio');` dans un projet JavaScript. Lance un test et retrouve le message dans le journal.
+Une ligne de code écrit un message dans le journal.
+
+1. Choisis **Nouveau projet → JavaScript** et remplace le code d’exemple par `ha.log('Studio-Test');`.
+2. Lance le **test** en haut à droite. Tu peux essayer le code avant de l’enregistrer.
+3. Dans le **journal**, cherche `Studio-Test` dans le champ `message`. Clique sur **Enregistrer** pour conserver le brouillon.
+
+[![Test JavaScript affichant Studio-Test dans le journal](/images/logic-studio/user-guide/javascript-fr.png)](/images/logic-studio/user-guide/javascript-fr.png)
 
 ## Fonctions
 

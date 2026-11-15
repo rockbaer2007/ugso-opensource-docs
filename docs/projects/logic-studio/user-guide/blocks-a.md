@@ -2,7 +2,14 @@
 
 ## Erstes Beispiel
 
-Erstelle ein Blocks-A-Projekt. Setze einen Zustandsauslöser für deinen Testhelfer ein und verbinde ihn mit einer Aktion für einen zweiten Helfer. Erzeuge das YAML und kontrolliere Auslöser, Aktion und Ziel.
+Die Beispielautomation schaltet das Flurlicht ein, sobald der Bewegungssensor `on` meldet.
+
+1. Wähle **Neues Projekt → Blocks A** und gib dem Projekt einen Namen. Auf der Fläche steht der Block **Automation**.
+2. Öffne **Auslöser** und ziehe den Zustandsblock in **Wenn**. Im Bild steht `binary_sensor.flur_bewegung` mit dem Zielzustand `on`. Wähle auf deinem System deinen Testhelfer oder Sensor.
+3. Öffne **Aktionen** und ziehe den Schaltblock in **Dann**. Im Bild steht `light.flur` auf **einschalten**. Für deinen ersten Versuch kannst du einen zweiten Testhelfer als Ziel verwenden. **Nur wenn** bleibt in diesem Beispiel leer.
+4. Klicke auf das Fähnchen **Blöcke prüfen**. Wenn die Prüfung erfolgreich ist, wähle **Als HA-YAML öffnen**. Kontrolliere im Entwurf `triggers` und `actions`, bevor du exportierst.
+
+[![Blocks A mit Zustandsauslöser in Wenn und Schaltaktion in Dann](/images/logic-studio/user-guide/blocks-a-de.png)](/images/logic-studio/user-guide/blocks-a-de.png)
 
 ## Funktionen
 

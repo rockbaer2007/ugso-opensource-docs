@@ -2,7 +2,13 @@
 
 ## First example
 
-Enter `log('Studio test');` in a JavaScript project. Start a test run and find the message in the log.
+This example writes a message to the log with one line of code.
+
+1. Choose **New project → JavaScript** and replace the sample code with `ha.log('Studio-Test');`.
+2. Click the test run button at the top right. You can try the code before saving it.
+3. Look for `Studio-Test` in the `message` field in the **Log**. Click **Save** to keep the draft.
+
+[![JavaScript test run showing Studio-Test in the log](/images/logic-studio/user-guide/javascript-en.png)](/images/logic-studio/user-guide/javascript-en.png)
 
 ## Features
 

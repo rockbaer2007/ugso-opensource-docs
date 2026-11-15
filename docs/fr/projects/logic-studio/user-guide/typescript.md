@@ -2,7 +2,13 @@
 
 ## Premier exemple
 
-Saisis `const valeur: number = 42; log(valeur);`. Lance un test et cherche `42`. Remplace ensuite la valeur par `'42'` pour voir l’erreur de type.
+La capture montre une erreur volontaire. Une variable de type `number` reçoit le texte `'42'`.
+
+1. Choisis **Nouveau projet → TypeScript** et saisis le code affiché. La deuxième ligne, `ha.log(String(zahl));`, écrit la valeur sous forme de texte.
+2. Lance un **test**. Le journal indique qu’un texte ne peut pas être affecté à un nombre. Utilise le lien vers la ligne 1 pour retrouver l’erreur.
+3. Retire les guillemets autour de `42` et relance le test. Le journal affiche `42`.
+
+[![Erreur de type dans une affectation TypeScript et lien vers la ligne 1](/images/logic-studio/user-guide/typescript-fr.png)](/images/logic-studio/user-guide/typescript-fr.png)
 
 ## Fonctions
 

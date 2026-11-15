@@ -2,7 +2,13 @@
 
 ## Erstes Beispiel
 
-Erstelle ein TypeScript-Projekt und gib `const zahl: number = 42; log(zahl);` ein. Startet der Testlauf, prüfe die Ausgabe `42`. Ersetze danach `42` testweise durch `'42'` und lies den Typfehler an der Zeile.
+Im Bild ist absichtlich ein Typfehler eingebaut. Eine Variable vom Typ `number` erhält den Text `'42'`.
+
+1. Wähle **Neues Projekt → TypeScript** und gib den Code aus dem Bild ein. Die zweite Zeile gibt den Wert mit `ha.log(String(zahl));` als Text aus.
+2. Klicke auf **Testlauf starten**. Das Protokoll meldet, dass ein Text keiner Zahlvariablen zugewiesen werden kann. Über **Zeile 1** springst du zur betroffenen Stelle.
+3. Entferne nur die Anführungszeichen um `42`. Starte erneut. Im Protokoll erscheint `42` als Meldung.
+
+[![TypeScript mit markiertem Typfehler und Link zu Zeile 1](/images/logic-studio/user-guide/typescript-de.png)](/images/logic-studio/user-guide/typescript-de.png)
 
 ## Funktionen
 

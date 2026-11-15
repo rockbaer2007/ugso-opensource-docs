@@ -2,7 +2,13 @@
 
 ## First example
 
-Connect an entity state block to a log output block. Select your test helper, run the test and look for its value in the log.
+The test run reads a simulated entity state and writes it to the log.
+
+1. Choose **New project → Blocks JS**. Open **System** and drag **Log** into the workspace.
+2. Drag **State of** from the same category into the open input on the log block. Select your test entity. The screenshot uses `binary_sensor.bewegung`.
+3. Start a **test run** and open the **Log**. The demo shows the state and message `on`. This script only reads and logs the value.
+
+[![Blocks JS with an entity state block and the resulting log](/images/logic-studio/user-guide/blocks-js-en.png)](/images/logic-studio/user-guide/blocks-js-en.png)
 
 ## Features
 

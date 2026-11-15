@@ -2,7 +2,16 @@
 
 ## First example
 
-Open a small automation as a YAML draft. Switch to Graph, find its trigger and actions, then return to YAML. Check and export the file.
+The template shows an automation that turns on a hallway light when motion is detected.
+
+1. Choose **New project → HA-YAML**, select **HA automation**, open the template and name the draft.
+2. Select **YAML**. `triggers` contains the state trigger. `actions` contains `light.turn_on` with `light.flur` as its target. Replace those entity IDs with your own when using the example in HA.
+3. Click **Validate**. If a line is marked, read the diagnostic and correct that line.
+4. Switch to **Graph**. The connection leads from the motion trigger to the light action. **Export** saves the YAML to a file.
+
+[![HA YAML source showing the trigger, action and target](/images/logic-studio/user-guide/ha-yaml-source-en.png)](/images/logic-studio/user-guide/ha-yaml-source-en.png)
+
+[![Graph connecting a motion trigger to a light action](/images/logic-studio/user-guide/ha-yaml-graph-en.png)](/images/logic-studio/user-guide/ha-yaml-graph-en.png)
 
 ## Features
 

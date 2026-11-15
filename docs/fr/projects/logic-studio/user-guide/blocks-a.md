@@ -2,7 +2,14 @@
 
 ## Premier exemple
 
-Relie un déclencheur d’état pour ton entrée de test à une action sur une autre entrée. Génère le YAML et vérifie le déclencheur, l’action et la cible.
+L’automatisation allume la lumière du couloir lorsque le capteur de mouvement passe à `on`.
+
+1. Choisis **Nouveau projet → Blocks A** et donne un nom au projet. Le bloc **Automatisation** apparaît sur le canevas.
+2. Ouvre **Déclencheurs** et glisse un déclencheur d’état dans **Quand**. La capture utilise `binary_sensor.flur_bewegung` et l’état `on`. Choisis ton propre capteur ou une entrée de test.
+3. Ouvre **Actions** et place une action dans **Alors**. La capture utilise `light.flur` et **allumer**. Tu peux choisir une deuxième entrée de test comme cible. Laisse **Seulement si** vide pour cet exemple.
+4. Clique sur le drapeau pour vérifier les blocs. Si la vérification réussit, choisis **Ouvrir en YAML HA** et contrôle `triggers` et `actions` avant d’exporter.
+
+[![Blocks A avec un déclencheur dans Quand et une action dans Alors](/images/logic-studio/user-guide/blocks-a-fr.png)](/images/logic-studio/user-guide/blocks-a-fr.png)
 
 ## Fonctions
 

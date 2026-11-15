@@ -2,7 +2,13 @@
 
 ## First example
 
-Enter `const value: number = 42; log(value);`. Run the test and look for `42`. Try changing the assigned value to `'42'` and find the type error.
+The screenshot contains a deliberate type error. A variable declared as `number` is assigned the text `'42'`.
+
+1. Choose **New project → TypeScript** and enter the code shown. The second line, `ha.log(String(zahl));`, logs the value as text.
+2. Start a **test run**. The log explains that text cannot be assigned to a number. Use the line link to jump to line 1.
+3. Remove the quotes around `42` and run the test again. The log should show `42`.
+
+[![TypeScript assignment with the type error and a link to line 1](/images/logic-studio/user-guide/typescript-en.png)](/images/logic-studio/user-guide/typescript-en.png)
 
 ## Features
 

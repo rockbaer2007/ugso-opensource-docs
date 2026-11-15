@@ -2,7 +2,14 @@
 
 ## First example
 
-Connect a state trigger for your test helper to an action on a second helper. Generate YAML and check its trigger, action and target.
+The example turns on a hallway light when the motion sensor changes to `on`.
+
+1. Choose **New project → Blocks A** and name the project. The workspace contains an **Automation** block.
+2. Open **Triggers** and drag the state trigger into **When**. The screenshot uses `binary_sensor.flur_bewegung` and the state `on`. Select your own test helper or sensor.
+3. Open **Actions** and drag a switch action into **Then**. The example uses `light.flur` and **turn on**. You can target a second test helper instead. Leave **Only if** empty for this example.
+4. Click the flag icon to check the blocks. When the check passes, choose **Open as HA YAML** and review `triggers` and `actions` before exporting.
+
+[![Blocks A with a state trigger in When and a switch action in Then](/images/logic-studio/user-guide/blocks-a-en.png)](/images/logic-studio/user-guide/blocks-a-en.png)
 
 ## Features
 

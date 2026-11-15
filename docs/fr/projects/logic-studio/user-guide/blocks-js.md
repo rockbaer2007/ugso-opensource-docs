@@ -2,7 +2,13 @@
 
 ## Premier exemple
 
-Relie un bloc d’état d’entité à un bloc de journal. Choisis ton entrée de test, lance un test et cherche sa valeur dans le journal.
+Le test lit l’état simulé d’une entité et l’affiche dans le journal.
+
+1. Choisis **Nouveau projet → Blocks JS**. Dans **Système**, glisse le bloc **Journal** sur le canevas.
+2. Glisse **État de** dans l’entrée libre du bloc de journal. Choisis ton entité de test. La capture utilise `binary_sensor.bewegung`.
+3. Lance un **test** et consulte le **journal**. La démonstration affiche l’état et le message `on`. Le script lit et affiche la valeur.
+
+[![Blocks JS avec un bloc d’état relié au journal](/images/logic-studio/user-guide/blocks-js-fr.png)](/images/logic-studio/user-guide/blocks-js-fr.png)
 
 ## Fonctions
 

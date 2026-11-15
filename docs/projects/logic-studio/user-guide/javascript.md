@@ -2,7 +2,13 @@
 
 ## Erstes Beispiel
 
-Erstelle ein JavaScript-Projekt, gib `log('Studio-Test');` ein und starte den Testlauf. Lies die Meldung im Protokoll.
+In diesem Beispiel schreibt eine einzelne Zeile eine Meldung ins Protokoll.
+
+1. Wähle **Neues Projekt → JavaScript** und ersetze den Beispielcode durch `ha.log('Studio-Test');`.
+2. Klicke rechts oben auf **Testlauf starten**. Du kannst den Code dabei vor dem Speichern ausprobieren.
+3. Scrolle zum **Protokoll**. Unter `message` steht `Studio-Test`. Klicke auf **Speichern**, wenn du den Entwurf behalten möchtest.
+
+[![JavaScript-Testlauf mit Studio-Test im Protokoll](/images/logic-studio/user-guide/javascript-de.png)](/images/logic-studio/user-guide/javascript-de.png)
 
 ## Funktionen
 

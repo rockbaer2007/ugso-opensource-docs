@@ -2,7 +2,13 @@
 
 ## Erstes Beispiel
 
-Ziehe einen Block für die Protokollausgabe in den Arbeitsbereich. Verbinde seinen Werteingang mit **Zustand von Entität** und wähle deinen Testhelfer. Starte den Testlauf und suche den Wert im Protokoll.
+Der Testlauf liest einen simulierten Entitätszustand und schreibt ihn ins Protokoll.
+
+1. Wähle **Neues Projekt → Blocks JS**. Öffne **System** und ziehe **debug output** in den Arbeitsbereich.
+2. Ziehe **Zustand von Entität** aus derselben Kategorie in den freien Werteanschluss von **debug output**. Wähle deine Testentität. Im Bild ist es `binary_sensor.bewegung`.
+3. Wähle **Testlauf starten**. Unter **Protokoll** stehen der gelesene Zustand und die Ausgabemeldung. In der Demo steht dort `on`. Der Testlauf sendet hier keinen Schaltbefehl.
+
+[![Blocks JS mit verbundenem Entitätsblock und Zustand on im Protokoll](/images/logic-studio/user-guide/blocks-js-de.png)](/images/logic-studio/user-guide/blocks-js-de.png)
 
 ## Funktionen
 
