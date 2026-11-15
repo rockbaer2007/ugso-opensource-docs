@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.97 · Échange Blocks JS et mémoire du diagramme fonctionnel
+description: HA Logic Studio Pro 0.1.98 · Conservation des journaux d’exécution
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,12 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.98 · Conservation des journaux d’exécution**
+
+Les journaux d’exécution sont conservés jusqu’à **30 jours** par projet, dans la limite de **64 Kio** et de **100 entrées**. Le nettoyage s’applique aussi aux projets arrêtés. Le test en conditions réelles a supprimé une entrée vieille de 31 jours et réduit un fichier de **84 240 à 65 430 octets**. La nouvelle entrée d’exécution était toujours consultable dans le projet de test arrêté après le redémarrage de l’application. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.98 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.98)
 
 **0.1.97 · Échange Blocks JS et mémoire du diagramme fonctionnel**
 

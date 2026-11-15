@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.97 · Blocks-JS-Austausch und Funktionsplan-Speicher
+description: HA Logic Studio Pro 0.1.98 · Aufbewahrung der Runtime-Protokolle
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.98 · Aufbewahrung der Runtime-Protokolle**
+
+Pro Projekt bleiben Runtime-Protokolle bis zu **30 Tage** erhalten. Das Limit liegt bei **64 KiB** und **100 Einträgen**. Die Bereinigung erfasst auch gestoppte Projekte. Im Live-Test wurde ein 31 Tage alter Eintrag entfernt und eine übergroße Protokolldatei von **84.240 auf 65.430 Byte** gekürzt. Der neu erzeugte Runtime-Eintrag war nach dem Neustart der App im gestoppten Testprojekt weiterhin abrufbar. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.98 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.98)
 
 **0.1.97 · Blocks-JS-Austausch und Funktionsplan-Speicher**
 

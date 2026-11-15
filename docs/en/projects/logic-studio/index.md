@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.97 · Blocks JS exchange and function block memory
+description: HA Logic Studio Pro 0.1.98 · Runtime log retention
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
+
+**0.1.98 · Runtime log retention**
+
+Runtime logs are kept for up to **30 days** per project, with limits of **64 KiB** and **100 entries**. Cleanup also covers stopped projects. The live test removed a 31-day-old entry and reduced an oversized log file from **84,240 to 65,430 bytes**. The new runtime entry was still available in the stopped test project after the app restarted. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.98 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.98)
 
 **0.1.97 · Blocks JS exchange and function block memory**
 
