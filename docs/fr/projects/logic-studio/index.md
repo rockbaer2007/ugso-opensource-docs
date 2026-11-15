@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
 
+**0.1.100 · Condition de modèle dans Rules**
+
+Le mode expert permet d’ajouter une condition Jinja. Rules l’exporte comme condition de modèle native de Home Assistant. Lors du test, ALORS a activé l’assistant de test et SINON l’a désactivé. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.100 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.100)
+
 **0.1.99 · Validation de la structure des branches HA YAML imbriquées**
 
 L’éditeur HA YAML signale les erreurs de structure dans les branches `choose` imbriquées à la ligne concernée. Sur le système de test, l’éditeur a signalé la **ligne 10**. Les 159 octets de l’export du blueprint étaient identiques, y compris les paramètres et le champ supplémentaire. Les essais JavaScript et TypeScript ont tous deux indiqué la **ligne 2**. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)

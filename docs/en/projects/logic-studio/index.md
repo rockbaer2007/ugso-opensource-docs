@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
 
+**0.1.100 · Template condition in Rules**
+
+Expert mode lets you add a Jinja condition. Rules exports it as a native Home Assistant template condition. In the live test, THEN switched the test helper on and ELSE switched it off again. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.100 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.100)
+
 **0.1.99 · Structure validation for nested HA YAML branches**
 
 The HA YAML editor marks structural errors in nested `choose` branches on the affected line. On the test system, the editor marked **line 10**. The blueprint export matched all 159 bytes, including the inputs and extension field. The JavaScript and TypeScript test runs both linked to **line 2**. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
