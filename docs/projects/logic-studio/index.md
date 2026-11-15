@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
 
+**0.1.99 · Strukturprüfung für verschachtelte HA-YAML-Zweige**
+
+HA-YAML markiert Strukturfehler in verschachtelten `choose`-Zweigen an der betroffenen Zeile. Auf dem Testsystem landete die Markierung in **Zeile 10**. Der Blueprint-Export enthielt bytegleich alle 159 Bytes einschließlich Eingaben und Zusatzfeld. JavaScript und TypeScript verwiesen im Testlauf jeweils auf **Zeile 2**. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.99 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.99)
+
 **0.1.98 · Aufbewahrung der Runtime-Protokolle**
 
 Pro Projekt bleiben Runtime-Protokolle bis zu **30 Tage** erhalten. Das Limit liegt bei **64 KiB** und **100 Einträgen**. Die Bereinigung erfasst auch gestoppte Projekte. Im Live-Test wurde ein 31 Tage alter Eintrag entfernt und eine übergroße Protokolldatei von **84.240 auf 65.430 Byte** gekürzt. Der neu erzeugte Runtime-Eintrag war nach dem Neustart der App im gestoppten Testprojekt weiterhin abrufbar. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)

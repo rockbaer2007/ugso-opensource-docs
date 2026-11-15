@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.81–0.1.100
 
+**0.1.99 · Validation de la structure des branches HA YAML imbriquées**
+
+L’éditeur HA YAML signale les erreurs de structure dans les branches `choose` imbriquées à la ligne concernée. Sur le système de test, l’éditeur a signalé la **ligne 10**. Les 159 octets de l’export du blueprint étaient identiques, y compris les paramètres et le champ supplémentaire. Les essais JavaScript et TypeScript ont tous deux indiqué la **ligne 2**. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.99 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.99)
+
 **0.1.98 · Conservation des journaux d’exécution**
 
 Les journaux d’exécution sont conservés jusqu’à **30 jours** par projet, dans la limite de **64 Kio** et de **100 entrées**. Le nettoyage s’applique aussi aux projets arrêtés. Le test en conditions réelles a supprimé une entrée vieille de 31 jours et réduit un fichier de **84 240 à 65 430 octets**. La nouvelle entrée d’exécution était toujours consultable dans le projet de test arrêté après le redémarrage de l’application. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
