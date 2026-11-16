@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.118 · Importing ioBroker category members**
+
+Blocks JS imports `get_enum_members` with “states only” enabled. During import, the category is mapped to a Home Assistant area or label. In the Play test on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the imported loop logged both IDs from the HA label exactly once each. The log showed `input_boolean.logic_studio_runtime_test` and `input_number.ugso_rules_080_level`.
+
+[HA Logic Studio Pro 0.1.118 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.118)
+
 **0.1.117 · Importing the ioBroker category trigger**
 
 When importing `onEnumMembers`, Blocks JS maps the category to a Home Assistant area or label and saves the resolved entities. On the [PC test system (64)](/en/collection/test-systems#testsystem-pc), a Blockly export was mapped to an HA label with two test helpers. The running script logged `input_boolean.logic_studio_runtime_test` with `true` and `input_number.ugso_rules_080_level` with `42.0`. A state change on `counter.ugso_rules_080_count` outside the label produced no output.

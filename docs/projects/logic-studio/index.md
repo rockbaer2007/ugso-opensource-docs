@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.118 · Import der ioBroker-Kategorie-Mitglieder**
+
+Blocks JS übernimmt `get_enum_members` mit aktivierter Option „nur Zustände“. Beim Import wird die Kategorie einem HA-Bereich oder Label zugeordnet. Im Play-Test auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) gab die importierte Schleife beide IDs des HA-Labels jeweils einmal aus. Im Protokoll standen `input_boolean.logic_studio_runtime_test` und `input_number.ugso_rules_080_level`.
+
+[HA Logic Studio Pro 0.1.118 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.118)
+
 **0.1.117 · Import des ioBroker-Kategorieauslösers**
 
 Blocks JS ordnet die Kategorie aus `onEnumMembers` beim Import einem HA-Bereich oder Label zu und speichert die dabei ermittelten Entitäten. Auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) wurde ein Blockly-Export einem HA-Label mit zwei Testhelfern zugeordnet. Das laufende Skript protokollierte `input_boolean.logic_studio_runtime_test` mit `true` und `input_number.ugso_rules_080_level` mit `42.0`. Die Zustandsänderung von `counter.ugso_rules_080_count` außerhalb des Labels erzeugte keine Ausgabe.

@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.118 · Import des membres d’une catégorie ioBroker**
+
+Blocks JS importe `get_enum_members` avec l’option « états uniquement » activée. Lors de l’import, la catégorie est associée à une zone ou à une étiquette Home Assistant. Lors du test avec le bouton Play sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), la boucle importée a journalisé une seule fois chacun des deux identifiants de l’étiquette HA. Le journal affichait `input_boolean.logic_studio_runtime_test` et `input_number.ugso_rules_080_level`.
+
+[HA Logic Studio Pro 0.1.118 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.118)
+
 **0.1.117 · Import du déclencheur de catégorie ioBroker**
 
 Lors de l’import de `onEnumMembers`, Blocks JS associe la catégorie à une zone ou à une étiquette Home Assistant et enregistre les entités correspondantes. Sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), un export Blockly a été associé à une étiquette HA comprenant deux assistants de test. Le script en cours d’exécution a journalisé `input_boolean.logic_studio_runtime_test` avec la valeur `true` et `input_number.ugso_rules_080_level` avec la valeur `42.0`. Le changement d’état de `counter.ugso_rules_080_count`, en dehors de l’étiquette, n’a produit aucune sortie.
