@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.119 · Import du sélecteur ioBroker**
+
+Blocks JS importe le sélecteur ioBroker `$()` sous forme de bloc de liste. L’expression d’origine reste visible sur le bloc. Les entités HA associées explicitement lors de l’import sont enregistrées dans une liste fixe. Lors du test avec le bouton Play sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), la boucle importée a journalisé une fois chacun des deux identifiants `input_boolean.logic_studio_runtime_test` et `input_number.ugso_rules_080_level`.
+
+[HA Logic Studio Pro 0.1.119 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.119)
+
 **0.1.118 · Import des membres d’une catégorie ioBroker**
 
 Blocks JS importe `get_enum_members` avec l’option « états uniquement » activée. Lors de l’import, la catégorie est associée à une zone ou à une étiquette Home Assistant. Lors du test avec le bouton Play sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), la boucle importée a journalisé une seule fois chacun des deux identifiants de l’étiquette HA. Le journal affichait `input_boolean.logic_studio_runtime_test` et `input_number.ugso_rules_080_level`.

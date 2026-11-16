@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.119 · Importing the ioBroker selector**
+
+Blocks JS imports the ioBroker `$()` selector as a list block. The original expression remains visible on the block. The HA entities explicitly mapped during import are saved as a fixed list. In the Play test on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the imported loop logged `input_boolean.logic_studio_runtime_test` and `input_number.ugso_rules_080_level` once each.
+
+[HA Logic Studio Pro 0.1.119 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.119)
+
 **0.1.118 · Importing ioBroker category members**
 
 Blocks JS imports `get_enum_members` with “states only” enabled. During import, the category is mapped to a Home Assistant area or label. In the Play test on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the imported loop logged both IDs from the HA label exactly once each. The log showed `input_boolean.logic_studio_runtime_test` and `input_number.ugso_rules_080_level`.

@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.119 · Import des ioBroker-Selektors**
+
+Blocks JS übernimmt den ioBroker-Selektor `$()` als Listenblock. Der ursprüngliche Ausdruck bleibt am Block sichtbar. Die beim Import ausdrücklich zugeordneten HA-Entitäten werden als feste Liste gespeichert. Beim Play-Test auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) gab die importierte Schleife `input_boolean.logic_studio_runtime_test` und `input_number.ugso_rules_080_level` jeweils einmal aus.
+
+[HA Logic Studio Pro 0.1.119 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.119)
+
 **0.1.118 · Import der ioBroker-Kategorie-Mitglieder**
 
 Blocks JS übernimmt `get_enum_members` mit aktivierter Option „nur Zustände“. Beim Import wird die Kategorie einem HA-Bereich oder Label zugeordnet. Im Play-Test auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) gab die importierte Schleife beide IDs des HA-Labels jeweils einmal aus. Im Protokoll standen `input_boolean.logic_studio_runtime_test` und `input_number.ugso_rules_080_level`.
