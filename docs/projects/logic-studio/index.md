@@ -27,6 +27,14 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.122 · ioBroker-Datenpunkte als HA-Helfer**
+
+Blocks JS importiert `createState` mit der Blockfolge zum Lesen und Aktualisieren. Im Importdialog kann man einen vorhandenen HA-Helfer zuordnen, einen neuen anlegen oder die Zuordnung später vornehmen.
+
+Im Live-Test auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) legte Blocks JS einen Zahlenhelfer mit Startwert **17** an. Das Skript las **17**, schrieb **42** und las nach dem Skriptneustart erneut **42**. Der echte ioBroker-Blockly-Export ergab denselben Arbeitsbereich. Die Zuordnung zu einem vorhandenen Helfer wurde damit in Chrome geprüft.
+
+[HA Logic Studio Pro 0.1.122 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.122)
+
 **0.1.121 · Kompakte Tab-Leiste und Alles speichern**
 
 Jeder Tab bündelt Projektname, rotes Quadrat für ungespeicherte Änderungen und Schließen-Kreuz. Die blaue Linie zeigt den aktiven Tab.

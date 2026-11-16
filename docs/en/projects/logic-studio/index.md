@@ -27,6 +27,14 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.122 · ioBroker data points as HA helpers**
+
+Blocks JS imports `createState` along with the blocks that read and update the value. In the import dialog, you can map an existing HA helper, create a new helper, or map it later.
+
+In the live test on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), Blocks JS created a number helper with an initial value of **17**. The script read **17**, wrote **42**, and read **42** again after a script restart. The actual ioBroker Blockly export produced the same workspace. It was used in Chrome to verify mapping to an existing helper.
+
+[HA Logic Studio Pro 0.1.122 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.122)
+
 **0.1.121 · Compact tabs and Save all**
 
 Each tab combines the project name, a red square for unsaved changes, and a close button. A blue line marks the active tab.

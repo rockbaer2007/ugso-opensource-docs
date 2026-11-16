@@ -29,6 +29,14 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.122 · Points de données ioBroker associés aux assistants HA**
+
+Blocks JS importe `createState` avec les blocs de lecture et de mise à jour. Dans la boîte de dialogue d’importation, on peut associer un assistant HA existant, en créer un ou reporter l’association.
+
+Lors du test en conditions réelles sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), Blocks JS a créé un assistant numérique avec la valeur initiale **17**. Le script a lu **17**, écrit **42**, puis relu **42** après son redémarrage. L’export Blockly d’ioBroker a produit le même espace de travail et a servi à vérifier dans Chrome l’association à un assistant existant.
+
+[HA Logic Studio Pro 0.1.122 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.122)
+
 **0.1.121 · Onglets compacts et enregistrement groupé**
 
 Chaque onglet réunit le nom du projet, un carré rouge pour les modifications non enregistrées et le bouton de fermeture. Un trait bleu indique l’onglet actif.
