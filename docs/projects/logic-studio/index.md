@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.125 · ioBroker-Nachricht mit Antwort in Blocks JS**
+
+Blocks JS übernimmt `sendto_custom` mit benannten Parametern und Antwortzweig. Beim Import lässt sich eine HA-Skriptaktion mit Rückgabedaten zuordnen. Im Play-Test mit einem echten ioBroker-Blockly-Export auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) ergaben die Parameter `left: 17` und `right: 25` den Wert **42**. Der Antwortzweig las `result.total` und protokollierte **42**.
+
+[HA Logic Studio Pro 0.1.125 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.125)
+
 **0.1.124 · Direkte ioBroker-Verknüpfung in Blocks JS**
 
 Blocks JS übernimmt den ioBroker-Block `direct` mit getrennter Zuordnung für Quelle und Ziel sowie der Option „nur bei Änderung“. Beim Play-Test mit einem echten Blockly-Export auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) schrieb der Quellwechsel von **0** auf **53** den Wert **53** in den Zielhelfer. Anschließend wurde das Ziel zur Kontrolle auf **7** gesetzt. Als sich nur ein Attribut der Quelle änderte und ihr Wert **53** blieb, behielt das Ziel den Wert **7**.
