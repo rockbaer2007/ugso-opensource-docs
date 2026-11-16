@@ -32,6 +32,20 @@ Use variables for intermediate values and functions for reusable steps and retur
 
 In Expert mode, paste the export and check the report. Map entities explicitly and read each block's guidance.
 
+### Import an ioBroker data point as an HA helper
+
+If your Blockly export includes the **Create data point** block (`createState`), you can store its value in a Home Assistant helper. The helper appears in Home Assistant under **Settings → Devices & services → Helpers**.
+
+1. Open **Expert tools → Paste ioBroker export**, paste the export, and check the import.
+2. Choose one of the three options for the ioBroker ID:
+   - **Map helper** uses an existing helper and keeps its current value.
+   - **Create helper** suggests a toggle, number, or text helper based on the data type. Check and confirm the name. Creating it requires an HA administrator account. A supported fixed initial value is applied once. For a calculated initial value, you can prepare a helper in HA and map it yourself.
+   - **Map later** leaves the mapping open. Open the project and select a compatible HA entity in the imported block before starting the script.
+3. Check that the blocks that create, read, and update the same ioBroker ID all point to the same HA entity. Open the import as a project and save it.
+4. Allow the helper in the app options under `runtime_read_entities` and also under `runtime_write_entities` for updates. Use **Play** to start the saved script. The script reads the helper’s current value, including changes you make in Home Assistant.
+
+The example creates a number helper with **17**. On the first start, the script logs **17** and writes **42**. After a script restart, the log shows **42**. This verifies that the initial value was applied only when the helper was created. [Blockly example](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/ha-logic-studio-pro-v0.1.122/ha_logic_studio_pro/tests/fixtures/iobroker-create-state.xml)
+
 ### Imported HTTP blocks
 
 Select an approved HA REST command for the URL, timeout and request headers. The imported POST Content-Type is shown in the block.

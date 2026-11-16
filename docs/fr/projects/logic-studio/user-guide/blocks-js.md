@@ -32,6 +32,20 @@ Les variables conservent des valeurs intermédiaires. Les fonctions regroupent d
 
 Colle l’export en mode expert et lis le rapport. Associe explicitement les entités et consulte les indications de chaque bloc.
 
+### Importer un point de données ioBroker comme assistant HA
+
+Si ton export Blockly contient le bloc de création d’un point de données (`createState`), tu peux stocker sa valeur dans un assistant Home Assistant. L’assistant apparaît dans **Paramètres → Appareils et services → Assistants**.
+
+1. Dans les outils experts, ouvre l’import ioBroker, colle l’export et vérifie l’importation.
+2. Choisis l’une des trois options pour l’identifiant ioBroker :
+   - **Associer un assistant** utilise un assistant existant et conserve sa valeur actuelle.
+   - **Créer un assistant** propose un interrupteur, un assistant numérique ou un assistant texte selon le type de données. Vérifie et confirme le nom. La création nécessite un compte administrateur HA. Une valeur initiale fixe compatible est appliquée une seule fois. Pour une valeur initiale calculée, tu peux préparer un assistant dans HA puis l’associer.
+   - **Associer plus tard** laisse l’association en attente. Ouvre le projet et sélectionne une entité HA compatible dans le bloc importé avant de lancer le script.
+3. Vérifie que les blocs de création, de lecture et de mise à jour du même identifiant ioBroker utilisent la même entité HA. Ouvre l’import comme projet et enregistre-le.
+4. Autorise l’assistant dans les options de l’application sous `runtime_read_entities` et, pour les mises à jour, sous `runtime_write_entities`. Lance le script enregistré avec **Play**. Le script lit la valeur actuelle de l’assistant, y compris après une modification dans Home Assistant.
+
+L’exemple crée un assistant numérique avec **17**. Au premier lancement, le script journalise **17** et écrit **42**. Après le redémarrage du script, le journal affiche **42**. Tu peux ainsi vérifier que la valeur initiale a été appliquée uniquement à la création de l’assistant. [Exemple Blockly](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/ha-logic-studio-pro-v0.1.122/ha_logic_studio_pro/tests/fixtures/iobroker-create-state.xml)
+
 ### Blocs HTTP importés
 
 Choisis une commande REST HA autorisée. Configure l’URL, le délai et les en-têtes dans HA. Le bloc POST indique le Content-Type importé.

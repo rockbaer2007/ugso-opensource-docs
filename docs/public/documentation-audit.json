@@ -7546,21 +7546,25 @@
         "de": {
           "path": "projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "e9f1b5b78b2e24c30f0f41897dd90e95707de65402dc14af18134f6313d9e847",
-          "words": 414,
-          "headings": 12,
+          "sha256": "bbe21199aa4b591b385588ed83fc8966dafcce2b5096337b9a999b5e8540ee50",
+          "words": 685,
+          "headings": 13,
           "examples": 0,
-          "versions": [],
+          "versions": [
+            "0.1.122"
+          ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "bcef061b223a4cb6524b0b3a914d7cab71fe4f0009b8999576f8c0dd5565a546",
-          "words": 366,
-          "headings": 12,
+          "sha256": "3c509cd71a3b90ba723848ea1077ccf82a95ebe1633d4e7b3b3fc525756100e1",
+          "words": 650,
+          "headings": 13,
           "examples": 0,
-          "versions": [],
+          "versions": [
+            "0.1.122"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -7573,11 +7577,13 @@
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "ac8673dce2ffbc99766c23b1170d9bb9b8e087183b3c6b91c87b1d46d79db0cd",
-          "words": 392,
-          "headings": 12,
+          "sha256": "20e15cd51f2a543c7ec598b8d02e3d80a89fb13028fc9319cc531ebe4162595a",
+          "words": 699,
+          "headings": 13,
           "examples": 0,
-          "versions": [],
+          "versions": [
+            "0.1.122"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
