@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.111 · Indication sur le bloc de fichier ioBroker**
+
+Sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), l’import d’un export Blockly ioBroker réel a conservé le nom de fichier `ugso-111-probe.txt`. L’indication figurait dans le récapitulatif de l’import et directement sur le bloc. Elle précise que `downloader.download_file` lance une requête GET distincte. Pour enregistrer la réponse déjà reçue et réutiliser le chemin du fichier, il faut configurer un service dédié. Après la reconstruction locale, l’en-tête du Studio dans Chrome affichait `0.1.111`.
+
+[HA Logic Studio Pro 0.1.111 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.111)
+
 **0.1.110 · Indication pour le type de réponse HTTP arraybuffer**
 
 Blocks JS conserve l’export Blockly ioBroker avec `arraybuffer` sous forme de bloc de remplacement identifié. Lors du test de contrôle avec Play, en mode texte, Home Assistant a renvoyé les quatre octets `00 41 C3 A9` sous forme de **trois caractères**. `byteLength` valait `null`. Pour `00 41 FF 80`, Home Assistant a signalé une erreur de décodage et Blocks JS n’a reçu aucun octet. L’indication sur le bloc explique qu’un point de terminaison peut renvoyer les données binaires en **Base64 dans du JSON**. Il faut adapter le traitement de la réponse. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)

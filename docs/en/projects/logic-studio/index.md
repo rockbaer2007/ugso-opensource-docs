@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.111 · Guidance on the ioBroker response-to-file block**
+
+On the [PC test system (64)](/en/collection/test-systems#testsystem-pc), importing a real ioBroker Blockly export preserved the filename `ugso-111-probe.txt`. The note appeared in the import review and on the block itself. It explains that `downloader.download_file` makes a separate GET request. Saving the response already received and reusing its file path requires a configured service. After the local rebuild, the Studio header in Chrome showed `0.1.111`.
+
+[HA Logic Studio Pro 0.1.111 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.111)
+
 **0.1.110 · Guidance for the HTTP arraybuffer response type**
 
 Blocks JS retains the ioBroker Blockly export with `arraybuffer` as a labeled placeholder. In the Play control test with the HTTP block in text mode, Home Assistant returned the four bytes `00 41 C3 A9` as **three text characters**. `byteLength` was `null`. For `00 41 FF 80`, Home Assistant reported a decoding error and Blocks JS received no bytes. The block note explains how an endpoint can return binary data as **Base64 in JSON**. Response handling must be adapted accordingly. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
