@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.115 · Hinweis am ioBroker-Dateiauslöser**
+
+Auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) blieben beim Import eines echten ioBroker-Blockly-Exports mit `onFile` das Dateimuster `ugso-115-*.txt` und der Dateinamenblock `onFile_data` im Antwortzweig erhalten. Der Hinweis erschien in der Importübersicht und direkt am Block. Er erklärt, wie eine HA-Automation mit Folder Watcher den Dateinamen aus `trigger.to_state.attributes.file` liest.
+
+[HA Logic Studio Pro 0.1.115 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.115)
+
 **0.1.114 · Hinweis zum alten ioBroker-GET-Block**
 
 Auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) blieben beim Import eines echten ioBroker-Blockly-Exports mit `request` die GET-URL und der Antwortzweig mit `result` erhalten. Der Hinweis erschien in der Importübersicht und direkt am Block. Er beschreibt den Wechsel zu „HTTP GET · HA REST“ und die Zuordnung von `result`, `response.statusCode` und `error` zu den Antwortblöcken. Der Test prüfte den Import und den Hinweis.
