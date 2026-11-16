@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.124 · Direct ioBroker binding in Blocks JS**
+
+Blocks JS imports the ioBroker `direct` block with separate source and target mappings and the “only on change” option. In the Play test with an actual Blockly export on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), changing the source from **0** to **53** wrote **53** to the target helper. The target was then set to **7** as a control. Changing only a source attribute while its value stayed at **53** left the target at **7**.
+
+[HA Logic Studio Pro 0.1.124 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.124)
+
 **0.1.123 · Asynchronous value import in Blocks JS**
 
 Blocks JS imports `get_value_async` with HA entity mapping and the response branch. The “Read value” block returns the selected value in that branch. In the Play test with an actual ioBroker Blockly export on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the script read and logged **52** and wrote **52** to a separately mapped HA number helper.

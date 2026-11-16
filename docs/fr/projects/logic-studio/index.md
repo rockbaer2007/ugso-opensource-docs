@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.124 · Liaison directe ioBroker dans Blocks JS**
+
+Blocks JS importe le bloc ioBroker `direct` avec des associations distinctes pour la source et la cible ainsi que l’option « uniquement en cas de changement ». Lors du test avec Play et un véritable export Blockly sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), le passage de la source de **0** à **53** a écrit **53** dans l’assistant cible. La cible a ensuite été réglée sur **7** pour la vérification. Quand seul un attribut de la source a changé et que sa valeur est restée à **53**, la cible est restée à **7**.
+
+[HA Logic Studio Pro 0.1.124 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.124)
+
 **0.1.123 · Import de valeurs asynchrones dans Blocks JS**
 
 Blocks JS importe `get_value_async` avec l’association à une entité HA et la branche de réponse. Le bloc « Valeur lue » renvoie la valeur sélectionnée dans cette branche. Lors du test avec Play et un véritable export Blockly d’ioBroker sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), le script a lu et journalisé **52**, puis écrit **52** dans un assistant numérique HA associé séparément.
