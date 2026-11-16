@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.116 · Importing the ioBroker log trigger**
+
+Blocks JS imports `onLog` and its message text and log level blocks. A real ioBroker Blockly export was imported on the [PC test system (64)](/en/collection/test-systems#testsystem-pc). When `system_log_event` was fired manually in Home Assistant with `WARNING`, the running script logged the message and `warn`. The `ERROR` control event produced no output. To receive automatically generated log events, enable `system_log.fire_event` in Home Assistant and allow `system_log_event` under `runtime_events` in the app.
+
+[HA Logic Studio Pro 0.1.116 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.116)
+
 **0.1.115 · Guidance on the ioBroker file change trigger**
 
 On the [PC test system (64)](/en/collection/test-systems#testsystem-pc), importing a real ioBroker Blockly export containing `onFile` preserved the file pattern `ugso-115-*.txt` and the filename block `onFile_data` in the callback. The note appeared in the import review and on the block itself. It explains how a Home Assistant automation with Folder Watcher reads the filename from `trigger.to_state.attributes.file`.

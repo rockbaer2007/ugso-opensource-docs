@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.116 · Import du déclencheur de journal ioBroker**
+
+Blocks JS importe `onLog` et les blocs qui lisent le message et le niveau de journalisation. Un export Blockly ioBroker réel a été importé sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc). Lorsque l’événement `system_log_event` a été déclenché manuellement dans Home Assistant avec le niveau `WARNING`, le script a journalisé le message et `warn`. L’événement de contrôle avec `ERROR` n’a produit aucune sortie. Pour recevoir les événements du journal générés automatiquement, activez `system_log.fire_event` dans Home Assistant et autorisez `system_log_event` dans `runtime_events` dans l’application.
+
+[HA Logic Studio Pro 0.1.116 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.116)
+
 **0.1.115 · Indication sur le déclencheur de modification de fichier ioBroker**
 
 Sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), l’import d’un export Blockly ioBroker réel contenant `onFile` a conservé le motif `ugso-115-*.txt` et le bloc de nom de fichier `onFile_data` dans le rappel. L’indication figurait dans le récapitulatif de l’import et directement sur le bloc. Elle explique comment une automatisation Home Assistant avec Folder Watcher lit le nom via `trigger.to_state.attributes.file`.
