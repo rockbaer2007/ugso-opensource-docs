@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.123 · Asynchronous value import in Blocks JS**
+
+Blocks JS imports `get_value_async` with HA entity mapping and the response branch. The “Read value” block returns the selected value in that branch. In the Play test with an actual ioBroker Blockly export on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the script read and logged **52** and wrote **52** to a separately mapped HA number helper.
+
+[HA Logic Studio Pro 0.1.123 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.123)
+
 **0.1.122 · ioBroker data points as HA helpers**
 
 Blocks JS imports `createState` along with the blocks that read and update the value. In the import dialog, you can map an existing HA helper, create a new helper, or map it later.
