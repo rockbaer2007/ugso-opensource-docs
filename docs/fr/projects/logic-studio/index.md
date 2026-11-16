@@ -27,6 +27,16 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
+### HA Logic Studio Pro 0.1.121–0.1.140
+
+**0.1.121 · Onglets compacts et enregistrement groupé**
+
+Chaque onglet réunit le nom du projet, un carré rouge pour les modifications non enregistrées et le bouton de fermeture. Un trait bleu indique l’onglet actif.
+
+Dans Chrome, **Tout enregistrer** est resté masqué avec un seul onglet modifié. Avec deux onglets modifiés, le bouton est apparu entre **Enregistrer** et **Annuler**. Les deux modifications étaient toujours présentes après le clic et le rechargement. [Système de test PC (64)](/fr/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.121 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.121)
+
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
 **0.1.120 · Lecture asynchrone d’objet et enregistrement de tous les onglets**

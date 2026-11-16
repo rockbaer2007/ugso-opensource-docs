@@ -25,6 +25,16 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Project management:** Store projects and folders on the server for each HA user.
 - **Language selection:** The editors are available in German, English, and French.
 
+### HA Logic Studio Pro 0.1.121–0.1.140
+
+**0.1.121 · Compact tabs and Save all**
+
+Each tab combines the project name, a red square for unsaved changes, and a close button. A blue line marks the active tab.
+
+In Chrome, **Save all** remained hidden with one modified tab. With two modified tabs, it appeared between **Save** and **Cancel**. Both changes were still present after clicking the button and reloading. [PC test system (64)](/en/collection/test-systems#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.121 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.121)
+
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
 **0.1.120 · Async object reads and Save all**

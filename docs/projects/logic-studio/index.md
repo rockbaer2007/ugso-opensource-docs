@@ -25,6 +25,16 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Projektverwaltung:** Projekte und Ordner pro HA-Benutzer auf dem Server speichern.
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
+### HA Logic Studio Pro 0.1.121–0.1.140
+
+**0.1.121 · Kompakte Tab-Leiste und Alles speichern**
+
+Jeder Tab bündelt Projektname, rotes Quadrat für ungespeicherte Änderungen und Schließen-Kreuz. Die blaue Linie zeigt den aktiven Tab.
+
+Im Chrome-Test blieb **Alles speichern** bei einem geänderten Tab verborgen. Bei zwei geänderten Tabs erschien die Schaltfläche zwischen **Speichern** und **Abbrechen**. Nach einem Klick und erneutem Laden waren beide Änderungen erhalten. [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc)
+
+[HA Logic Studio Pro 0.1.121 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.121)
+
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
 **0.1.120 · Asynchrones Objektlesen und Alles speichern**
