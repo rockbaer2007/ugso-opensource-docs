@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.117 · Importing the ioBroker category trigger**
+
+When importing `onEnumMembers`, Blocks JS maps the category to a Home Assistant area or label and saves the resolved entities. On the [PC test system (64)](/en/collection/test-systems#testsystem-pc), a Blockly export was mapped to an HA label with two test helpers. The running script logged `input_boolean.logic_studio_runtime_test` with `true` and `input_number.ugso_rules_080_level` with `42.0`. A state change on `counter.ugso_rules_080_count` outside the label produced no output.
+
+[HA Logic Studio Pro 0.1.117 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.117)
+
 **0.1.116 · Importing the ioBroker log trigger**
 
 Blocks JS imports `onLog` and its message text and log level blocks. A real ioBroker Blockly export was imported on the [PC test system (64)](/en/collection/test-systems#testsystem-pc). When `system_log_event` was fired manually in Home Assistant with `WARNING`, the running script logged the message and `warn`. The `ERROR` control event produced no output. To receive automatically generated log events, enable `system_log.fire_event` in Home Assistant and allow `system_log_event` under `runtime_events` in the app.

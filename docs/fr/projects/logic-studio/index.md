@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.117 · Import du déclencheur de catégorie ioBroker**
+
+Lors de l’import de `onEnumMembers`, Blocks JS associe la catégorie à une zone ou à une étiquette Home Assistant et enregistre les entités correspondantes. Sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), un export Blockly a été associé à une étiquette HA comprenant deux assistants de test. Le script en cours d’exécution a journalisé `input_boolean.logic_studio_runtime_test` avec la valeur `true` et `input_number.ugso_rules_080_level` avec la valeur `42.0`. Le changement d’état de `counter.ugso_rules_080_count`, en dehors de l’étiquette, n’a produit aucune sortie.
+
+[HA Logic Studio Pro 0.1.117 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.117)
+
 **0.1.116 · Import du déclencheur de journal ioBroker**
 
 Blocks JS importe `onLog` et les blocs qui lisent le message et le niveau de journalisation. Un export Blockly ioBroker réel a été importé sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc). Lorsque l’événement `system_log_event` a été déclenché manuellement dans Home Assistant avec le niveau `WARNING`, le script a journalisé le message et `warn`. L’événement de contrôle avec `ERROR` n’a produit aucune sortie. Pour recevoir les événements du journal générés automatiquement, activez `system_log.fire_event` dans Home Assistant et autorisez `system_log_event` dans `runtime_events` dans l’application.
