@@ -32,6 +32,14 @@ Speichere Zwischenwerte in Variablen. Funktionen bündeln Schritte, können Wert
 
 Öffne im Expertenmodus **ioBroker-Export einfügen**, füge den Export ein und prüfe die Übersicht. Wähle HA-Entitäten ausdrücklich zu und beachte Hinweise direkt am Block.
 
+### Berechnete ioBroker-ID auf Existenz prüfen
+
+Wenn dein ioBroker-Skript eine ID aus mehreren Textteilen zusammensetzt, kannst du sie mit dem importierten Block `state_exists_var` prüfen.
+
+1. Öffne die Importprüfung und trage im Feld **ID-Zuordnung (JSON)** die fertig zusammengesetzte ioBroker-ID und die dazugehörige HA-Entitäts-ID ein, zum Beispiel `{"0_userdata.0.garten.pumpe":"switch.gartenpumpe"}`. Das Feld findest du auch am importierten Block.
+2. Gib die zugeordnete Entität in den App-Einstellungen unter `runtime_read_entities` frei, sofern sie noch keine Schreibfreigabe hat.
+3. Speichere das Projekt und starte **Play**. Eine vorhandene HA-Entität ergibt `true`, eine zugeordnete, aber fehlende Entität `false`. Fehlt für die berechnete ID ein Eintrag, stoppt der Lauf und nennt die ID im Protokoll. Ergänze den Eintrag am Block und starte erneut.
+
 ### Einen ioBroker-Datenpunkt als HA-Helfer übernehmen
 
 Wenn dein Blockly-Export den Block **Datenpunkt erzeugen** (`createState`) enthält, kannst du den Wert in einem Home-Assistant-Helfer speichern. Der Helfer erscheint in Home Assistant unter **Einstellungen → Geräte & Dienste → Helfer**.

@@ -32,6 +32,14 @@ Use variables for intermediate values and functions for reusable steps and retur
 
 In Expert mode, paste the export and check the report. Map entities explicitly and read each block's guidance.
 
+### Check whether a computed ioBroker ID exists
+
+If your ioBroker script builds an ID from several text fragments, use the imported `state_exists_var` block to check it.
+
+1. In the import review, enter the complete computed ioBroker ID and its HA entity ID in **ID mapping (JSON)**, for example `{"0_userdata.0.garden.pump":"switch.garden_pump"}`. The imported block also has this field.
+2. Allow the mapped entity under `runtime_read_entities` in the app settings if it has no write permission yet.
+3. Save the project and select **Play**. An existing HA entity returns `true`, and a mapped entity that is absent returns `false`. If the computed ID has no entry, the run stops and the log names that ID. Add the mapping on the block and run it again.
+
 ### Import an ioBroker data point as an HA helper
 
 If your Blockly export includes the **Create data point** block (`createState`), you can store its value in a Home Assistant helper. The helper appears in Home Assistant under **Settings → Devices & services → Helpers**.

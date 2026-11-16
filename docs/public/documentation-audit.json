@@ -7567,9 +7567,9 @@
         "de": {
           "path": "projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "bbe21199aa4b591b385588ed83fc8966dafcce2b5096337b9a999b5e8540ee50",
-          "words": 685,
-          "headings": 13,
+          "sha256": "286c01bfecc99a6b50d9033a60382b0fe8a3b909d2f66edcf4edad43cddb5a50",
+          "words": 810,
+          "headings": 14,
           "examples": 0,
           "versions": [
             "0.1.122"
@@ -7579,9 +7579,9 @@
         "en": {
           "path": "en/projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "3c509cd71a3b90ba723848ea1077ccf82a95ebe1633d4e7b3b3fc525756100e1",
-          "words": 650,
-          "headings": 13,
+          "sha256": "2f7f3befd8751c0798856a2ed4494955ee7e9fb7fa69d5db5a45f0b5c0d0eaf6",
+          "words": 777,
+          "headings": 14,
           "examples": 0,
           "versions": [
             "0.1.122"
@@ -7598,9 +7598,9 @@
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "20e15cd51f2a543c7ec598b8d02e3d80a89fb13028fc9319cc531ebe4162595a",
-          "words": 699,
-          "headings": 13,
+          "sha256": "f81a0e42e56c6aa212e8625f59794f320c2ef71516a0c76c4c99a4c82aacc6db",
+          "words": 844,
+          "headings": 14,
           "examples": 0,
           "versions": [
             "0.1.122"

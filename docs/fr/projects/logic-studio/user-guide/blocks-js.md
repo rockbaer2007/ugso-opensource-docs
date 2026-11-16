@@ -32,6 +32,14 @@ Les variables conservent des valeurs intermédiaires. Les fonctions regroupent d
 
 Colle l’export en mode expert et lis le rapport. Associe explicitement les entités et consulte les indications de chaque bloc.
 
+### Vérifier si un ID ioBroker calculé existe
+
+Si ton script ioBroker construit un ID à partir de plusieurs fragments de texte, utilise le bloc importé `state_exists_var` pour le vérifier.
+
+1. Dans la vérification de l’import, saisis l’ID ioBroker calculé complet et l’ID d’entité HA correspondant dans **Correspondance des ID (JSON)**, par exemple `{"0_userdata.0.jardin.pompe":"switch.pompe_jardin"}`. Ce champ est aussi disponible dans le bloc importé.
+2. Autorise l’entité associée dans `runtime_read_entities` dans les réglages de l’application si elle ne dispose pas encore d’une autorisation d’écriture.
+3. Enregistre le projet et clique sur **Play**. Une entité HA existante renvoie `true`. Une entité associée mais absente renvoie `false`. Si aucune association n’existe pour l’ID calculé, l’exécution s’arrête et le journal indique cet ID. Ajoute l’association dans le bloc, puis relance le projet.
+
 ### Importer un point de données ioBroker comme assistant HA
 
 Si ton export Blockly contient le bloc de création d’un point de données (`createState`), tu peux stocker sa valeur dans un assistant Home Assistant. L’assistant apparaît dans **Paramètres → Appareils et services → Assistants**.
