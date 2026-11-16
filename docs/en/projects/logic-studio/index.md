@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.112 · Guidance on the ioBroker Write file block**
+
+On the [PC test system (64)](/en/collection/test-systems#testsystem-pc), Blocks JS imported a real ioBroker Blockly export containing `file_write`. The placeholder retained the inputs for the storage object, filename and content. The note appeared in the import review and on the block itself. It explains how `notify.send_message` appends text to a configured file and when a dedicated service is needed to reproduce the original write behavior.
+
+[HA Logic Studio Pro 0.1.112 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.112)
+
 **0.1.111 · Guidance on the ioBroker response-to-file block**
 
 On the [PC test system (64)](/en/collection/test-systems#testsystem-pc), importing a real ioBroker Blockly export preserved the filename `ugso-111-probe.txt`. The note appeared in the import review and on the block itself. It explains that `downloader.download_file` makes a separate GET request. Saving the response already received and reusing its file path requires a configured service. After the local rebuild, the Studio header in Chrome showed `0.1.111`.

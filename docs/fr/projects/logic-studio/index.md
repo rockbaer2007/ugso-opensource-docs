@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.112 · Indication sur le bloc ioBroker « Écrire un fichier »**
+
+Sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), Blocks JS a importé un export Blockly ioBroker réel contenant `file_write`. Le bloc de remplacement a conservé les entrées de l’objet de stockage, du nom de fichier et du contenu. L’indication figurait dans le récapitulatif de l’import et directement sur le bloc. Elle explique comment `notify.send_message` ajoute du texte à un fichier configuré et quand un service dédié est nécessaire pour reproduire le comportement d’écriture d’origine.
+
+[HA Logic Studio Pro 0.1.112 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.112)
+
 **0.1.111 · Indication sur le bloc de fichier ioBroker**
 
 Sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), l’import d’un export Blockly ioBroker réel a conservé le nom de fichier `ugso-111-probe.txt`. L’indication figurait dans le récapitulatif de l’import et directement sur le bloc. Elle précise que `downloader.download_file` lance une requête GET distincte. Pour enregistrer la réponse déjà reçue et réutiliser le chemin du fichier, il faut configurer un service dédié. Après la reconstruction locale, l’en-tête du Studio dans Chrome affichait `0.1.111`.
