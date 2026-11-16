@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.126 · Mise à jour différée avec un ID ioBroker calculé**
+
+Blocks JS importe `control_ex` en mode mise à jour avec un ID et un délai calculés. L’ID est explicitement associé à un assistant HA. Lors du test avec Play et un véritable export Blockly d’ioBroker sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), l’assistant numérique est passé de **0** à **42** après le délai calculé de **15 secondes**.
+
+[HA Logic Studio Pro 0.1.126 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.126)
+
 **0.1.125 · Message ioBroker avec réponse dans Blocks JS**
 
 Blocks JS importe `sendto_custom` avec ses paramètres nommés et sa branche de réponse. À l’importation, il est possible d’associer une action de script HA qui renvoie des données. Lors du test avec Play et un véritable export Blockly d’ioBroker sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), les paramètres `left: 17` et `right: 25` ont donné **42**. La branche de réponse a lu `result.total` et journalisé **42**.
