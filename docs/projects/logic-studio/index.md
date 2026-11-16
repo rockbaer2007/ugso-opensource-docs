@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.127 · Verzögertes Steuern mit berechneter ioBroker-ID**
+
+Blocks JS übernimmt `control_ex` im Modus „steuere“ mit berechneter ID, booleschem Wert und berechneter Verzögerung. Im Play-Test mit einem echten ioBroker-Blockly-Export auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) blieb der zugeordnete HA-Schalterhelfer nach rund vier Sekunden noch aus und war nach Ablauf der berechneten Verzögerung von **15 Sekunden** eingeschaltet.
+
+[HA Logic Studio Pro 0.1.127 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.127)
+
 **0.1.126 · Verzögertes Aktualisieren mit berechneter ioBroker-ID**
 
 Blocks JS übernimmt `control_ex` im Modus „aktualisiere“ mit berechneter ID und Verzögerung. Die ID wird ausdrücklich einem HA-Helfer zugeordnet. Beim Play-Test mit einem echten ioBroker-Blockly-Export auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) wechselte der Zahlenhelfer nach der berechneten Verzögerung von **15 Sekunden** von **0** auf **42**.

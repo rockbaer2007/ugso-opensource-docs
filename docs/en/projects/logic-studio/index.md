@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.127 · Delayed control with a computed ioBroker ID**
+
+Blocks JS imports `control_ex` in control mode with a computed ID, a boolean value and a computed delay. In the Play test with an actual ioBroker Blockly export on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the mapped HA toggle helper was still off after about four seconds and switched on after the computed **15-second** delay.
+
+[HA Logic Studio Pro 0.1.127 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.127)
+
 **0.1.126 · Delayed update with a computed ioBroker ID**
 
 Blocks JS imports `control_ex` in update mode with a computed ID and delay. The ID is explicitly mapped to an HA helper. During the Play test with an actual ioBroker Blockly export on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the number helper changed from **0** to **42** after the computed delay of **15 seconds**.

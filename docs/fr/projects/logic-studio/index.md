@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.127 · Commande différée avec un ID ioBroker calculé**
+
+Blocks JS importe `control_ex` en mode commande avec un ID calculé, une valeur booléenne et un délai calculé. Lors du test avec Play et un véritable export Blockly d’ioBroker sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), l’assistant booléen HA associé était encore désactivé après environ quatre secondes et s’est activé après le délai calculé de **15 secondes**.
+
+[HA Logic Studio Pro 0.1.127 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.127)
+
 **0.1.126 · Mise à jour différée avec un ID ioBroker calculé**
 
 Blocks JS importe `control_ex` en mode mise à jour avec un ID et un délai calculés. L’ID est explicitement associé à un assistant HA. Lors du test avec Play et un véritable export Blockly d’ioBroker sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), l’assistant numérique est passé de **0** à **42** après le délai calculé de **15 secondes**.
