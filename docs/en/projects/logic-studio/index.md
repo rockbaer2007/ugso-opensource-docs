@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.130 · Preserve ioBroker adapter restart when importing**
+
+In the test with an actual Blockly export on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the imported `control_instance` block preserved the **admin.0** adapter instance and the **Restart** action. The on-block hint lists `hassio.app_restart` for an HA app and `homeassistant.reload_config_entry` for an integration. Play blocked the placeholder and the test triggered no restart.
+
+[HA Logic Studio Pro 0.1.130 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.130)
+
 **0.1.129 · Existence check with a computed ioBroker ID**
 
 In the Play test on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the imported `state_exists_var` block returned `true` for an existing HA entity and `false` for a mapped entity that did not exist. When a mapping was missing, the log reported the computed ioBroker ID. The mapping hint appeared on the block.

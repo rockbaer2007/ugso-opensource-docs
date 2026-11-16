@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.130 · Conservation du redémarrage de l’adaptateur ioBroker à l’import**
+
+Lors du test avec un véritable export Blockly sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), le bloc importé `control_instance` a conservé l’instance **admin.0** et l’action **Redémarrer**. L’indication sur le bloc propose `hassio.app_restart` pour une application HA et `homeassistant.reload_config_entry` pour une intégration. Play a bloqué le bloc de substitution et le test n’a déclenché aucun redémarrage.
+
+[HA Logic Studio Pro 0.1.130 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.130)
+
 **0.1.129 · Vérification de l’existence avec un ID ioBroker calculé**
 
 Lors du test avec Play sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), le bloc importé `state_exists_var` a renvoyé `true` pour une entité HA existante et `false` pour une entité associée mais absente. En l’absence d’association, le journal a indiqué l’ID ioBroker calculé. Le bloc affichait une indication sur l’association.
