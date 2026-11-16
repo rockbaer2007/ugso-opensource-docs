@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.114 · Indication sur l’ancien bloc GET ioBroker**
+
+Sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), l’import d’un export Blockly ioBroker réel contenant `request` a conservé l’URL GET et la branche de réponse avec `result`. L’indication figurait dans le récapitulatif de l’import et directement sur le bloc. Elle explique comment passer à « HTTP GET · HA REST » et associer `result`, `response.statusCode` et `error` aux blocs de réponse. Le test a vérifié l’import et l’indication.
+
+[HA Logic Studio Pro 0.1.114 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.114)
+
 **0.1.113 · Indication sur le bloc ioBroker « Lire un fichier »**
 
 Sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), l’action native `file.read_file` de Home Assistant a renvoyé `data.probe = 42` pour le fichier JSON de test. L’import de l’export Blockly ioBroker réel dans Blocks JS a conservé le nom du fichier et le bloc `file_data` imbriqué dans le rappel. L’indication figurait dans le récapitulatif de l’import et directement sur le bloc. Elle explique comment traiter le contenu dans un script Home Assistant avec `response_variable` et `.data`.
