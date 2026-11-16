@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.128 · Hinweis für ioBroker-Ablaufzeiten in Blocks JS**
+
+Bei `control_ex` mit `expire` bleibt der Block mit seinen Eingaben als Platzhalter erhalten. ioBroker entfernt den gespeicherten Zustand nach Ablauf. Ein HA-Schalterhelfer behält seinen Ein/Aus-Zustand. Im Play-Test mit einem echten Blockly-Export auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) erschien der **Hinweis direkt am Block**. Play wurde blockiert und der Helfer blieb aus.
+
+[HA Logic Studio Pro 0.1.128 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.128)
+
 **0.1.127 · Verzögertes Steuern mit berechneter ioBroker-ID**
 
 Blocks JS übernimmt `control_ex` im Modus „steuere“ mit berechneter ID, booleschem Wert und berechneter Verzögerung. Im Play-Test mit einem echten ioBroker-Blockly-Export auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) blieb der zugeordnete HA-Schalterhelfer nach rund vier Sekunden noch aus und war nach Ablauf der berechneten Verzögerung von **15 Sekunden** eingeschaltet.

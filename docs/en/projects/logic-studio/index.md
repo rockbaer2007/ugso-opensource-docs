@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.128 · ioBroker expiration notice in Blocks JS**
+
+For `control_ex` with `expire`, Blocks JS preserves the block and its inputs as a placeholder. ioBroker removes the stored state when it expires. An HA toggle helper retains its on/off state. In the Play test with an actual Blockly export on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the **notice appeared on the block**. Play was blocked and the helper stayed off.
+
+[HA Logic Studio Pro 0.1.128 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.128)
+
 **0.1.127 · Delayed control with a computed ioBroker ID**
 
 Blocks JS imports `control_ex` in control mode with a computed ID, a boolean value and a computed delay. In the Play test with an actual ioBroker Blockly export on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the mapped HA toggle helper was still off after about four seconds and switched on after the computed **15-second** delay.
