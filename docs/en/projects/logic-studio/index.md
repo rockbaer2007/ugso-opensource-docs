@@ -27,6 +27,14 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.120 · Async object reads and Save all**
+
+Blocks JS imports `get_object_async` with explicit mapping to an HA entity. In the Play test on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the response branch returned the display name **Logic Studio Runtime Test** through `common.name`.
+
+**Save all** appears when multiple tabs are open. It saves the changes in all open projects together. A red square marks each tab with unsaved changes.
+
+[HA Logic Studio Pro 0.1.120 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.120)
+
 **0.1.119 · Importing the ioBroker selector**
 
 Blocks JS imports the ioBroker `$()` selector as a list block. The original expression remains visible on the block. The HA entities explicitly mapped during import are saved as a fixed list. In the Play test on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the imported loop logged `input_boolean.logic_studio_runtime_test` and `input_number.ugso_rules_080_level` once each.

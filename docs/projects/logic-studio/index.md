@@ -27,6 +27,14 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.101–0.1.120
 
+**0.1.120 · Asynchrones Objektlesen und Alles speichern**
+
+Blocks JS übernimmt `get_object_async` mit ausdrücklicher Zuordnung einer HA-Entität. Im Play-Test auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) gab der Antwortzweig über `common.name` den Anzeigenamen **Logic Studio Runtime Test** aus.
+
+Bei mehreren offenen Tabs erscheint **Alles speichern**. Die Schaltfläche speichert die Änderungen aller offenen Projekte gemeinsam. Ein rotes Quadrat markiert jeden Tab mit ungespeicherten Änderungen.
+
+[HA Logic Studio Pro 0.1.120 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.120)
+
 **0.1.119 · Import des ioBroker-Selektors**
 
 Blocks JS übernimmt den ioBroker-Selektor `$()` als Listenblock. Der ursprüngliche Ausdruck bleibt am Block sichtbar. Die beim Import ausdrücklich zugeordneten HA-Entitäten werden als feste Liste gespeichert. Beim Play-Test auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) gab die importierte Schleife `input_boolean.logic_studio_runtime_test` und `input_number.ugso_rules_080_level` jeweils einmal aus.
