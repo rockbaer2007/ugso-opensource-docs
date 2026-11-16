@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.129 · Existenzprüfung mit berechneter ioBroker-ID**
+
+Beim Play-Test auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) lieferte der importierte Block `state_exists_var` für eine vorhandene HA-Entität `true` und für eine zugeordnete, fehlende Entität `false`. Bei fehlender Zuordnung meldete das Protokoll die berechnete ioBroker-ID. Der Hinweis zur Zuordnung war direkt am Block sichtbar.
+
+[HA Logic Studio Pro 0.1.129 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.129)
+
 **0.1.128 · Hinweis für ioBroker-Ablaufzeiten in Blocks JS**
 
 Bei `control_ex` mit `expire` bleibt der Block mit seinen Eingaben als Platzhalter erhalten. ioBroker entfernt den gespeicherten Zustand nach Ablauf. Ein HA-Schalterhelfer behält seinen Ein/Aus-Zustand. Im Play-Test mit einem echten Blockly-Export auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) erschien der **Hinweis direkt am Block**. Play wurde blockiert und der Helfer blieb aus.

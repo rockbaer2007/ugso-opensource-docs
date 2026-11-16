@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.129 · Vérification de l’existence avec un ID ioBroker calculé**
+
+Lors du test avec Play sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), le bloc importé `state_exists_var` a renvoyé `true` pour une entité HA existante et `false` pour une entité associée mais absente. En l’absence d’association, le journal a indiqué l’ID ioBroker calculé. Le bloc affichait une indication sur l’association.
+
+[HA Logic Studio Pro 0.1.129 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.129)
+
 **0.1.128 · Avertissement sur l’expiration ioBroker dans Blocks JS**
 
 Pour `control_ex` avec `expire`, Blocks JS conserve le bloc et ses entrées sous forme de bloc de substitution. ioBroker supprime l’état stocké à l’expiration. Un assistant booléen HA conserve son état activé ou désactivé. Lors du test avec Play et un véritable export Blockly sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc), l’**avertissement est apparu directement sur le bloc**. Play a été bloqué et l’assistant est resté désactivé.

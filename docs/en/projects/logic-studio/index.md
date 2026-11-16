@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+**0.1.129 · Existence check with a computed ioBroker ID**
+
+In the Play test on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the imported `state_exists_var` block returned `true` for an existing HA entity and `false` for a mapped entity that did not exist. When a mapping was missing, the log reported the computed ioBroker ID. The mapping hint appeared on the block.
+
+[HA Logic Studio Pro 0.1.129 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.129)
+
 **0.1.128 · ioBroker expiration notice in Blocks JS**
 
 For `control_ex` with `expire`, Blocks JS preserves the block and its inputs as a placeholder. ioBroker removes the stored state when it expires. An HA toggle helper retains its on/off state. In the Play test with an actual Blockly export on the [PC test system (64)](/en/collection/test-systems#testsystem-pc), the **notice appeared on the block**. Play was blocked and the helper stayed off.
