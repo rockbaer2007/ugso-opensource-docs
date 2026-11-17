@@ -6,6 +6,12 @@ description: Dossiers, couleurs, opacité et liens dans la barre latérale Home 
 
 ## Profils globaux dans la version 0.1.14
 
+**Barre latérale personnelle.** Chaque utilisateur peut enregistrer sa propre présentation. Une sauvegarde JSON contient les groupes, les liens, les couleurs, la visibilité et l’ordre des éléments. Pour l’importer, sélectionnez le fichier, vérifiez l’aperçu et cliquez sur **Enregistrer**. Vous pouvez modifier cette copie indépendamment par la suite.
+
+**Profil attribué.** L’administrateur enregistre sa barre latérale comme modèle et coche les noms des utilisateurs concernés. Chaque utilisateur peut avoir plusieurs profils au choix. Lorsqu’un profil est actif, ses groupes, ses couleurs et son ordre s’appliquent. Les réglages personnels restent enregistrés. Pour les modifier, sélectionnez **Ma barre latérale**.
+
+**Profil global imposé.** Un seul modèle s’applique à tous. L’administrateur le gère de manière centralisée. Les autres utilisateurs voient le nom du profil et peuvent l’actualiser. La barre latérale partagée modifie la présentation. Les autorisations de Home Assistant continuent de s’appliquer.
+
 1. Ouvrez **Apparence → Modifier la barre latérale → Profils de barre latérale**.
 2. En tant qu’administrateur, ouvrez **Gérer les profils**, choisissez un modèle, activez **Imposer ce profil à tous**, puis cliquez sur **Enregistrer**.
 3. Tant que le profil global est actif, les administrateurs voient ses groupes dans **Modifier la barre latérale** et peuvent modifier le modèle. Les autres utilisateurs y accèdent en lecture seule.

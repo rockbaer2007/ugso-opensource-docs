@@ -6,6 +6,12 @@ description: Folders, colors, opacity and links in the Home Assistant sidebar. V
 
 ## Global profiles in 0.1.14
 
+**Personal sidebar:** Each user can save their own layout. A JSON backup captures a snapshot of groups, links, colors, visibility and order. To import it, select the file, review the preview and click **Save**. The resulting copy can be edited independently.
+
+**Assigned profile:** An administrator saves their sidebar as a named template and selects users by name. One user can have several profiles to choose from. While a profile is active, the sidebar uses its groups, colors and order. Personal settings remain saved. To change them, select **My own sidebar**.
+
+**Enforced global profile:** One template applies to everyone. The administrator maintains it centrally. Other users see its name and can refresh it. The shared sidebar changes the layout. Home Assistant permissions still apply.
+
 1. Open **Appearance → Edit sidebar → Sidebar profiles**.
 2. As an administrator, open **Manage profiles**, choose a template, enable **Enforce this profile for everyone**, and click **Save**.
 3. With enforcement active, administrators can see and edit the template's groups directly in **Edit sidebar**. The template is read-only for regular users.

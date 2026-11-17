@@ -6,6 +6,12 @@ description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenl
 
 ## Globale Profile in 0.1.14
 
+**Eigene Sidebar:** Jeder Benutzer kann seine persönliche Ansicht speichern. Eine JSON-Sicherung ist eine Momentaufnahme mit Gruppen, Links, Farben, Sichtbarkeit und Reihenfolge. Wer sie importiert, wählt die Datei aus, prüft die Vorschau und klickt auf **Speichern**. So entsteht eine eigenständige Kopie, die später separat bearbeitet werden kann.
+
+**Zugewiesenes Profil:** Der Admin speichert seine Sidebar als benannte Vorlage und wählt die Benutzer über Checkboxen aus. Ein Benutzer kann mehrere Vorlagen zur Auswahl haben. Beim Wechsel zu einer Vorlage zeigt die Sidebar deren Gruppen, Farben und Reihenfolge an. Die eigenen Einstellungen bleiben gespeichert. Für Änderungen an der eigenen Ansicht wählt der Benutzer **Eigene Sidebar**.
+
+**Verbindliches globales Profil:** Eine Vorlage gilt für alle Benutzer. Der Admin pflegt sie zentral. Andere Benutzer sehen den Namen des aktiven Profils und können es aktualisieren. Die gemeinsame Sidebar verändert nur die Darstellung. Home-Assistant-Zugriffsrechte gelten weiterhin.
+
 1. Öffne **Erscheinungsbild → Seitenleiste bearbeiten → Sidebar-Profile**.
 2. Als Administrator öffne **Profile verwalten**, wähle eine Vorlage und aktiviere **Dieses Profil für alle verbindlich anwenden**. Klicke auf **Speichern**.
 3. Solange die Vorgabe aktiv ist, siehst du als Administrator die Gruppen der Vorlage direkt unter **Seitenleiste bearbeiten**. Dort kannst du die Vorlage ändern und speichern. Für normale Benutzer ist sie schreibgeschützt.
