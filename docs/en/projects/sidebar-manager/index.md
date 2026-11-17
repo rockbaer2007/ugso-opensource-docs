@@ -1,8 +1,19 @@
 ---
 title: Sidebar Manager
-description: Folders, colors, opacity and links in the Home Assistant sidebar. Version 0.1.11, DE/EN/FR.
+description: Folders, colors, opacity and links in the Home Assistant sidebar. Version 0.1.14, DE/EN/FR.
 ---
 # Sidebar Manager
+
+## Global profiles in 0.1.14
+
+1. Open **Appearance → Edit sidebar → Sidebar profiles**.
+2. As an administrator, open **Manage profiles**, choose a template, enable **Enforce this profile for everyone**, and click **Save**.
+3. With enforcement active, administrators can see and edit the template's groups directly in **Edit sidebar**. The template is read-only for regular users.
+4. A notice appears when the template changes. In **Edit sidebar**, click **Refresh global profile** to reload the saved template. The button is available while a global profile is active.
+
+Without enforcement, users can choose their own sidebar or an assigned profile. Removing enforcement restores their previous selection. The administrator editor was tested on the [PC test system (64-bit)](/en/collection/test-systems#testsystem-pc) for group display and saved visibility. The user later confirmed the workflow.
+
+If the buttons are missing when opening the editor directly, check `frontend.extra_module_url` in the installation section. A dashboard resource on its own loads Sidebar Manager when you open a dashboard that uses it.
 
 ## New in 0.1.11: Aligned sidebar icons
 
@@ -45,12 +56,12 @@ Version **0.1.9** fixes missing text/icon colors in the native edit dialog, incl
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
 
-**0.1.11 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.14 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Organize Home Assistant's sidebar with folders, colors, opacity and custom links, directly from **Edit sidebar**. Move main entries and folders with the native drag handles. No HA core files are replaced.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.11](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.11) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.14](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.14) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## New in 0.1.8: links in the sidebar editor
 

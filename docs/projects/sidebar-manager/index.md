@@ -1,8 +1,19 @@
 ---
 title: Sidebar Manager
-description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenleiste. Version 0.1.11, DE/EN/FR.
+description: Ordner, Farben, Transparenz und Links in der Home-Assistant-Seitenleiste. Version 0.1.14, DE/EN/FR.
 ---
 # Sidebar Manager
+
+## Globale Profile in 0.1.14
+
+1. Öffne **Erscheinungsbild → Seitenleiste bearbeiten → Sidebar-Profile**.
+2. Als Administrator öffne **Profile verwalten**, wähle eine Vorlage und aktiviere **Dieses Profil für alle verbindlich anwenden**. Klicke auf **Speichern**.
+3. Solange die Vorgabe aktiv ist, siehst du als Administrator die Gruppen der Vorlage direkt unter **Seitenleiste bearbeiten**. Dort kannst du die Vorlage ändern und speichern. Für normale Benutzer ist sie schreibgeschützt.
+4. Nach einer Änderung erscheint ein Hinweis. Unter **Seitenleiste bearbeiten** lädt **Globales Profil aktualisieren** die gespeicherte Vorlage erneut. Der Button ist nur bei aktivem globalem Profil sichtbar.
+
+Ohne globale Vorgabe wählt jeder Benutzer zwischen **Eigene Sidebar** und seinen zugewiesenen Profilen. Beim Aufheben der Vorgabe gilt wieder die vorherige Auswahl. Der Admin-Editor mit Gruppen und gespeicherter Sichtbarkeit wurde auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) geprüft. Der Anwender hat den Ablauf anschließend bestätigt.
+
+Fehlen die Buttons beim direkten Einstieg, prüfe den Eintrag `frontend.extra_module_url` im Installationsabschnitt. Eine Dashboard-Ressource allein lädt den Sidebar Manager erst, wenn ein entsprechendes Dashboard geöffnet wird.
 
 ## Neu in 0.1.11: Ausgerichtete Seitenleisten-Icons
 
@@ -44,12 +55,12 @@ Version **0.1.9** behebt die fehlenden Text-/Iconfarben im nativen Bearbeitungsd
 
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
-**0.1.11 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.14 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Ordner, Farben, Transparenz und eigene Links direkt in „Seitenleiste bearbeiten“. Haupteinträge und Ordner gemeinsam am nativen Ziehgriff sortieren. Keine HA-Systemdateien werden ersetzt.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.11](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.11) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.14](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.14) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## Neu in 0.1.8: Links im Seitenleisten-Editor
 

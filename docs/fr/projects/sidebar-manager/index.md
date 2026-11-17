@@ -1,8 +1,19 @@
 ---
 title: Sidebar Manager
-description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.11, DE/EN/FR.
+description: Dossiers, couleurs, opacité et liens dans la barre latérale Home Assistant. Version 0.1.14, DE/EN/FR.
 ---
 # Sidebar Manager
+
+## Profils globaux dans la version 0.1.14
+
+1. Ouvrez **Apparence → Modifier la barre latérale → Profils de barre latérale**.
+2. En tant qu’administrateur, ouvrez **Gérer les profils**, choisissez un modèle, activez **Imposer ce profil à tous**, puis cliquez sur **Enregistrer**.
+3. Tant que le profil global est actif, les administrateurs voient ses groupes dans **Modifier la barre latérale** et peuvent modifier le modèle. Les autres utilisateurs y accèdent en lecture seule.
+4. Un message s’affiche lorsque le modèle change. Dans **Modifier la barre latérale**, cliquez sur **Actualiser le profil global** pour recharger le modèle enregistré. Le bouton est disponible lorsqu’un profil global est actif.
+
+Lorsque le profil global est désactivé, chaque utilisateur retrouve son choix précédent et peut sélectionner sa barre latérale personnelle ou un profil attribué. L’affichage des groupes et l’enregistrement de la visibilité ont été vérifiés sur le [système de test PC (64 bits)](/fr/collection/test-systems#testsystem-pc). L’utilisateur a ensuite confirmé le fonctionnement.
+
+Si les boutons manquent en ouvrant directement l’éditeur, vérifiez `frontend.extra_module_url` dans la section d’installation. Une ressource de tableau de bord seule charge Sidebar Manager à l’ouverture d’un tableau de bord qui l’utilise.
 
 ## Nouveautés de 0.1.11 : icônes alignées dans la barre latérale
 
@@ -44,12 +55,12 @@ La version **0.1.9** corrige les couleurs du texte/des icônes dans le dialogue 
 
 <img src="/images/packages/projects-sidebar-manager.svg" width="80" height="80" alt="Sidebar Manager" />
 
-**0.1.11 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
+**0.1.14 · Home Assistant ≥ 2026.10.3 · DE / EN / FR · MIT**
 
 Dossiers, couleurs, opacité et liens personnalisés dans « Modifier la barre latérale ». Triez dossiers et entrées principales avec les poignées natives. Aucun fichier système HA n'est remplacé.
 
 
-[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.11](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.11) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
+[GitHub](https://github.com/rockbaer2007/ha-sidebar-manager) · [Release 0.1.14](https://github.com/rockbaer2007/ha-sidebar-manager/releases/tag/v0.1.14) · [HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=ha-sidebar-manager&category=plugin)
 
 ## Nouveautés de 0.1.8 : liens dans l’éditeur de barre latérale
 
