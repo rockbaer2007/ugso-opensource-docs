@@ -73,6 +73,29 @@ Les lignes des cartes Entities sont affichées en ligne (`display: inline`). Il 
 :::
 ---
 
+## Badges comme cibles
+
+Lorsqu'un verrou cible `hui-badge`, y compris avec la configuration habituelle `mold: badge`, sa superposition est attachée à la surface du badge rendu. L'icône est positionnée par défaut à `left: 24px`, sans décalage vertical.
+
+Utilisez `icon_position` pour régler précisément sa position. Une valeur explicite remplace entièrement le réglage par défaut du badge. Ajoutez donc également `left: 24px` lorsque vous définissez `top` ou `bottom` tout en conservant le positionnement horizontal habituel.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: badge
+  sparks:
+    - type: lock
+      icon_position:
+        top: -10px
+        left: 24px
+      locks:
+        - code: 1234
+          admins: true
+element:
+  type: entity
+  entity: sensor.backup_next_scheduled_automatic_backup
+```
+
 ## Règles de correspondance des verrous
 
 `locks` est une liste ordonnée. La **première entrée correspondante** détermine ce que l'utilisateur doit faire pour déverrouiller l'élément. Les règles de correspondance sont les suivantes :
@@ -108,7 +131,7 @@ Si aucune entrée ne correspond, y compris une entrée `active: false` :
 | `icon_unlocked` | string | — | Icône MDI affichée lorsque l'élément est déverrouillé. Si cette option est absente, l'icône de verrou s'estompe. |
 | `icon_locked_color` | string | `--error-color` | Couleur CSS de l'icône verrouillée. |
 | `icon_unlocked_color` | string | `--success-color` | Couleur CSS de l'icône déverrouillée ; utilisée uniquement si `icon_unlocked` est défini. |
-| `icon_position` | object | Moule `row` : `{top: 6, left: 30}` ; cible `ha-tile-icon` : `{top: 3, left: 3}` | Décalages de l'icône dans la superposition. Accepte `top` ou `bottom`, ainsi que `left` ou `right` (une seule valeur par paire). Les nombres sont en pixels ; les chaînes acceptent toute valeur CSS. |
+| `icon_position` | object | Moule `row` : `{top: 6, left: 30}` ; cible `ha-tile-icon` : `{top: 3, left: 3}` ; cible `hui-badge` : `{left: 24}` | Décalages de l'icône dans la superposition. Accepte `top` ou `bottom`, ainsi que `left` ou `right` (une seule valeur par paire). Les nombres sont en pixels ; les chaînes acceptent toute valeur CSS. Une valeur explicite remplace entièrement le réglage par défaut. |
 | `icon_size` | nombre ou chaîne | `12px` pour `ha-tile-icon`, sinon `24px` | Taille de l'icône. Les nombres sont en pixels, par exemple `18` devient `18px` ; les chaînes sont transmises telles quelles, par exemple `"1.5rem"`. La variable CSS `--uix-lock-icon-size`, définie dans UIX Styling ou un thème, est prioritaire. |
 | `permissive` | booléen | `false` | Si `true`, l'élément est accessible lorsqu'aucune entrée de verrou ne correspond à l'utilisateur. |
 | `entity` | string | — | ID d'entité utilisé lorsque `unlocked_action` est une action Home Assistant classique. |

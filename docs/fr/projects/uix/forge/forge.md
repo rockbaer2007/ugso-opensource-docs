@@ -948,17 +948,23 @@ Lors de la modification du tableau de bord en mode visuel, une bordure rouge en 
 L'élément `<hui-view-footer>` utilise la position CSS `fixed` au lieu de `sticky`, utilisée par le pied de page d'une section. `sticky` dépend de l'élément parent ; seule la position `fixed` permet donc au pied de page Forge de sortir de son conteneur. Son apparence diffère légèrement : il est centré dans la fenêtre, et non uniquement dans la zone du tableau de bord. Ajustez-le si besoin avec des marges intérieures asymétriques via `--uix-forge-footer-padding`.
 
 :::
-La clé de configuration Forge suivante définit la largeur maximale du pied de page :
+::: info Aperçu à partir de 9.1.0-beta.5
+La configuration `bottom` et les modèles dans `max_width` sont disponibles à partir de **9.1.0-beta.5**. La base stable de cette documentation reste UIX 9.0.0.
+:::
+
+Les clés suivantes définissent la position et la largeur maximale du pied de page :
 
 | Clé | Type | Modèles acceptés | Valeur par défaut | Description |
 | --- | ---- | ---------------- | ------- | ----------- |
-| `max_width` | string | | `600` | Largeur maximale du pied de page en pixels. |
+| `max_width` | string | Oui | `600` | Largeur maximale du pied de page en pixels. |
+| `bottom` | string | Oui | `var(--uix-forge-footer-bottom, var(--ha-space-2))` | Valeur CSS `bottom` du pied de page. Définit directement la position initiale ; par exemple `calc(100vh - 100px)` permet de le placer près du haut de la fenêtre. |
 
 ```yaml
 type: custom:uix-forge
 forge:
   mold: footer
   max_width: 400
+  bottom: calc(100vh - 100px)
 element:
   type: tile
   entity: light.bed_light
@@ -969,7 +975,7 @@ Vous pouvez définir les variables CSS suivantes sur l'élément Forge ou l'un d
 | Variable | Valeur par défaut | Description |
 | -------- | ------- | ----------- |
 | `--uix-forge-footer-border-width` | `1px` | Épaisseur de la bordure de la carte affichée dans le pied de page. |
-| `--uix-forge-footer-bottom` | `var(--ha-space-2)` | Distance par rapport au bas de la fenêtre. |
+| `--uix-forge-footer-bottom` | `var(--ha-space-2)` | Distance par rapport au bas de la fenêtre lorsque `forge.bottom` n'est pas défini. |
 | `--uix-forge-footer-padding` | `0 var(--ha-space-2)` | Marge intérieure du conteneur du pied de page. |
 
 ### Visibilité

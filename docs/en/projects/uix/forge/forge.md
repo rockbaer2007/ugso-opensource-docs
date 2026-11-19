@@ -3,7 +3,7 @@ title: Forge
 description: UIX Forge config details including macros, billets, template nesting and UIX Styling.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `master` / **9.0.0**, revision [f63ebbd](https://github.com/Lint-Free-Technology/uix/commit/f63ebbdda5294fe0b9d31d89d4942496ebe55722), reviewed 5 November 2026. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0-beta.8**, revision [3e33066](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702), reviewed 2026-11-19. Stable baseline on this site: **9.0.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # UIX Forge
 
@@ -1023,17 +1023,24 @@ The footer element `<hui-view-footer>` is given the CSS position `fixed` rather 
 
 :::
 
-The following forge config key controls the maximum width of the footer:
+::: info
+`bottom` config and `max-width` supporting templates available in 9.1.0-beta.5
+
+:::
+
+The following forge config keys control the footer position and maximum width:
 
 | Key | Type | Allows Templates | Default | Description |
 | --- | ---- | ---------------- | ------- | ----------- |
-| `max_width` | string | | `600` | Maximum width of the footer in pixels. |
+| `max_width` | string | Yes | `600` | Maximum width of the footer in pixels. |
+| `bottom` | string | Yes | `var(--uix-forge-footer-bottom, var(--ha-space-2))` | CSS `bottom` value for the footer. Set this when the initial position matters, for example `calc(100vh - 100px)` to float near top as a 'header'. |
 
 ```yaml
 type: custom:uix-forge
 forge:
   mold: footer
   max_width: 400
+  bottom: calc(100vh - 100px)
 element:
   type: tile
   entity: light.bed_light
@@ -1044,7 +1051,7 @@ The following CSS variables can be set on the forge element or any ancestor to c
 | Variable | Default | Description |
 | -------- | ------- | ----------- |
 | `--uix-forge-footer-border-width` | `1px` | Border width of the forged card within the footer. |
-| `--uix-forge-footer-bottom` | `var(--ha-space-2)` | Distance from the bottom of the viewport. |
+| `--uix-forge-footer-bottom` | `var(--ha-space-2)` | Distance from the bottom of the viewport when `forge.bottom` is not set. |
 | `--uix-forge-footer-padding` | `0 var(--ha-space-2)` | Padding applied to the footer container. |
 
 ### Visibility

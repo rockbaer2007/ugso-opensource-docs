@@ -567,7 +567,25 @@ Footer sind für kompakte, dauerhaft sichtbare Bedienelemente gedacht. Sie sollt
 :::
 | Schlüssel | Typ | Templates | Standard | Beschreibung |
 | --- | --- | --- | --- | --- |
-| `max_width` | string | nein | `600` | Maximale Breite des Footers in Pixeln. |
+| `max_width` | string | ja | `600` | Maximale Breite des Footers in Pixeln. |
+| `bottom` | string | ja | `var(--uix-forge-footer-bottom, var(--ha-space-2))` | CSS-Wert `bottom` für den Footer. Legt die Anfangsposition direkt fest, zum Beispiel `calc(100vh - 100px)` für einen schwebenden Bereich nahe dem oberen Rand. |
+
+::: info Vorschau ab 9.1.0-beta.5
+Die Konfiguration `bottom` und die Template-Unterstützung für `max_width` stehen ab **9.1.0-beta.5** zur Verfügung. Die stabile Basis dieser Dokumentation bleibt UIX 9.0.0.
+:::
+
+Beispiel aus der aktuellen Originaldokumentation:
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: footer
+  max_width: 400
+  bottom: calc(100vh - 100px)
+element:
+  type: tile
+  entity: light.bed_light
+```
 
 ```yaml
 type: custom:uix-forge
@@ -588,7 +606,7 @@ Footer-Variablen:
 | Variable | Standard | Beschreibung |
 | --- | --- | --- |
 | `--uix-forge-footer-border-width` | `1px` | Rahmenbreite der erzeugten Karte im Footer. |
-| `--uix-forge-footer-bottom` | `var(--ha-space-2)` | Abstand vom unteren Viewport-Rand. |
+| `--uix-forge-footer-bottom` | `var(--ha-space-2)` | Abstand vom unteren Viewport-Rand, wenn `forge.bottom` nicht gesetzt ist. |
 | `--uix-forge-footer-padding` | `0 var(--ha-space-2)` | Padding des Footer-Containers. |
 
 ### Visibility

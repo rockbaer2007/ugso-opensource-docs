@@ -1,6 +1,6 @@
 {
-  "reviewed_at": "2026-11-12",
-  "source_revision": "df5f4d67ecbd36c37fca96f4bb2df5d0e14dc16c",
+  "reviewed_at": "2026-11-19",
+  "source_revision": "3e330667ff27cedcbb84a1f4d370a35b809d2702",
   "scope": "Editorial technical-reference review; page coverage, table identifiers, defaults and selected missing examples",
   "limitations": "Translations retain editorial summaries. Not sentence-by-sentence identity, independent linguistic certification or a Home Assistant runtime test.",
   "pages": [
@@ -388,7 +388,7 @@
     },
     {
       "path": "forge/forge.md",
-      "source_sha256": "e61f8fc31cdc6a2005b5c7cc8b4bc7aee7ec831cdb682a17230190dbaf079ef3",
+      "source_sha256": "8a01c3079a0c506fbe75258ab996e7338a00da1d7515029a16a0f01db32b8fdc",
       "table_identifiers": [
         "--uix-forge-footer-border-width",
         "--uix-forge-footer-bottom",
@@ -397,6 +397,7 @@
         "badge_as_picture_element",
         "badge_as_row",
         "billets",
+        "bottom",
         "card_as_badge",
         "card_as_row",
         "delayed_hass",
@@ -417,9 +418,9 @@
         "uix",
         "~"
       ],
-      "de_sha256": "dafb000209cf270c41c1b8c208822ebdc32ef9f69b634275c6e58978cd51659d",
-      "de_example_blocks": 39,
-      "fr_sha256": "7de3cfda80bd8bc503ea1b3283a8bb83c1e9f4ef2103a90afb7fc50b622c73ed",
+      "de_sha256": "f3f17b11f6909ef8cbd2fef866971c1a1cf6f54f8153a036c9d6a69ff4ea97fe",
+      "de_example_blocks": 40,
+      "fr_sha256": "25139fc109b049a4d2030a4ef6c5e3e3950ab63bdfc8bcfd18384f43a9b5c5b4",
       "fr_example_blocks": 75
     },
     {
@@ -659,7 +660,7 @@
     },
     {
       "path": "forge/sparks/lock.md",
-      "source_sha256": "1ca1643e71842b8eadbfabe3e0e2096aad31e831218f9f7023a93ffe8cbd86f0",
+      "source_sha256": "6b7feac83186268077da059357d4918c9a2702a50959541cf00b209cc1012759",
       "table_identifiers": [
         "--uix-lock-background",
         "--uix-lock-background-blocked",
@@ -716,10 +717,10 @@
         "unlocked_action",
         "users"
       ],
-      "de_sha256": "62271ffd8233ecd162da10c562fa0d57949995bbc58737edb6a9dcafa72dcea1",
-      "de_example_blocks": 15,
-      "fr_sha256": "35f5a08d2b7a0cc2d22b5ef100b234589d64df2f29069aea95859f35eceb1b51",
-      "fr_example_blocks": 15
+      "de_sha256": "bab41f4de2ad925d59496a83fcae2b908ced0a7a67a36010493fc95e43000e2b",
+      "de_example_blocks": 16,
+      "fr_sha256": "2948a964ab4dabf9067f373e78684ad586629df80ae9f07513e57fdeb5b51c76",
+      "fr_example_blocks": 16
     },
     {
       "path": "forge/sparks/map.md",
@@ -989,9 +990,9 @@
       "path": "index.md",
       "source_sha256": "fb3a60fc5f67441b1b931b5e43ddbb0050c5d08e5f3815395c42e2346f9bd94b",
       "table_identifiers": [],
-      "de_sha256": "425c84628189e438157bf641a34061900f05106f74a9ed8d5a32dcf6c261d484",
+      "de_sha256": "795ee793a8571fe9af528d375556e2b2ac96ad3c7e03c6448e616c543d36073b",
       "de_example_blocks": 0,
-      "fr_sha256": "926ea414f1a08e5733ce625d43efa22db50254eb19d079c501e68f1e1cb5587e",
+      "fr_sha256": "af85a1d3ded2e5a02009eb80dcd1092c37f8d8da9ad694cdfad6633cfba3778d",
       "fr_example_blocks": 0
     },
     {
@@ -1095,15 +1096,15 @@
     },
     {
       "path": "using/templates.md",
-      "source_sha256": "c5bd23203b48e656ce2bf9abd359be194888818cd3a1b8b3e1f0716a39e8507c",
+      "source_sha256": "95ffe84883d1b2fd65c4de38551d7c0c5e46da4bf7f5328ee10c20b3b4875ab2",
       "table_identifiers": [
         "params",
         "returns",
         "template"
       ],
-      "de_sha256": "1eec82d66b1d4b1ee3854c4ba465a907da7b9b5b522622dc96a6d909f13efec8",
+      "de_sha256": "decae4b4bc1557afaf8e5044f03b3caef71cabbf59e22b445237ac1b91f5eccd",
       "de_example_blocks": 13,
-      "fr_sha256": "fc398da465e7d7444df6e5411d76ae887e4a34e8b478b168e0ee0f91232e630d",
+      "fr_sha256": "2e0bdcdca65910430e153082f7f6da8261efe1bf754285b5aac1fe6301746fff",
       "fr_example_blocks": 14
     },
     {

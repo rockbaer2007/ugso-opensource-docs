@@ -1,5 +1,5 @@
 ---
-description: Learn all about using templates.
+description: Utiliser les modèles dans UIX.
 ---
 # Modèles
 
@@ -7,11 +7,12 @@ Tous les styles peuvent contenir des [modèles Jinja2](https://www.home-assistan
 
 UI eXtension met également les variables suivantes à disposition des modèles :
 
-- `config` - The entire configuration of the card, entity or badge - (`config.entity` may be of special interest)
-- `user` - The name of the currently logged in user
-- `browser` - The `browser_id` of your browser, if you have [browser_mod](https://github.com/thomasloven/hass-browser_mod) installed
-- `hash` - Whatever comes after `#` in the current URL. UIX watches for location changes through `location-changed` and `popstate` events so templates will be rebound with the updated `hash` (this can be disabled in Integration Options → Performance settings via **Disable hash template variable and updates**, which also makes `hash` unavailable)
-- `panel` - various information about the panel in view, be it a lovelace dashboard or another panel view. `panel` is a dictionary containing the following panel attributes with example values shown.
+- `config` : la configuration complète de la carte, de l'entité ou du badge ; `config.entity` peut notamment être utile.
+- `params` : les paramètres fournis par une boîte de dialogue ou une notification. Pour respecter la limite des messages WebSocket de Home Assistant lors des abonnements aux modèles, UIX limite ces paramètres à **512 KiB**. Si la limite est dépassée, les valeurs complètes du premier niveau sont retirées, de la plus grande à la plus petite. Les informations spécifiques plus petites, telles que `params.repository`, restent ainsi disponibles lorsqu'une grande valeur comme `params.marketplace` est omise.
+- `user` : le nom de l'utilisateur connecté.
+- `browser` : le `browser_id` du navigateur, si [browser_mod](https://github.com/thomasloven/hass-browser_mod) est installé.
+- `hash` : la partie de l'URL située après `#`. UIX surveille `location-changed` et `popstate` pour réassocier les modèles lorsque `hash` change. L'option **Disable hash template variable and updates**, dans les réglages de performance de l'intégration, désactive ces mises à jour et rend `hash` indisponible.
+- `panel` : des informations sur le panneau ou la vue affichée. Ce dictionnaire expose notamment les attributs suivants, avec des exemples de valeurs :
   - `panel.fullUrlPath`: "uix/another-test-view"
   - `panel.panelComponentName`: "lovelace"
   - `panel.panelIcon`: "mdi:card-bulleted-outline"
@@ -25,8 +26,8 @@ UI eXtension met également les variables suivantes à disposition des modèles 
   - `panel.globalTheme`: "Red theme"
   - `panel.theme`: "Blue theme"
 
-::: info Panel theme variables
-`panel.theme` is set when the dashboard view has a theme set directly, otherwise is `None`. `panel.globalTheme` is the global Home Assistant theme currently applied. The effective UIX theme is not part of the `panel` dictionary.
+::: info Variables de thème du panneau
+`panel.theme` est défini si la vue du tableau de bord possède directement un thème ; sinon, sa valeur est `None`. `panel.globalTheme` désigne le thème Home Assistant global actuellement appliqué. Le thème UIX effectif ne fait pas partie du dictionnaire `panel`.
 
 :::
 Vous pouvez déboguer les modèles UIX Jinja2 en plaçant le commentaire <code v-pre>{# uix.debug #}</code> n'importe où dans votre modèle. Vous verrez les messages de débogage lors de la liaison du modèle, de la mise à jour de valeur, de la réutilisation, de la déliaison et du désabonnement final. Chaque modèle reste abonné dans le cache pendant 20 secondes afin de faciliter l'application des modèles et d'améliorer légèrement la vitesse lorsque vous passez d'une vue à l'autre ou utilisez le même modèle sur des cartes de vues différentes.

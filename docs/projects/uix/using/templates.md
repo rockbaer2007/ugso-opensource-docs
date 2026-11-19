@@ -13,6 +13,7 @@ Alle Styles können [Jinja2-Templates](https://www.home-assistant.io/docs/config
 UI eXtension stellt Templates zusätzlich diese Variablen bereit:
 
 - `config`: die komplette Konfiguration der Karte, Entity oder Badge. `config.entity` ist oft besonders nützlich.
+- `params`: Parameter eines Dialogs oder einer Benachrichtigung. Damit Template-Abonnements unter der WebSocket-Nachrichtengrenze von Home Assistant bleiben, begrenzt UIX die Parameter auf **512 KiB**. Bei Überschreitung werden vollständige Werte auf der obersten Ebene entfernt, beginnend mit dem größten Wert. Kleinere dialogspezifische Angaben wie `params.repository` bleiben dadurch verfügbar, wenn beispielsweise ein großer Wert wie `params.marketplace` entfällt.
 - `user`: der Name des aktuell angemeldeten Nutzers.
 - `browser`: die `browser_id` deines Browsers, wenn [browser_mod](https://github.com/thomasloven/hass-browser_mod) installiert ist.
 - `hash`: alles, was nach `#` in der aktuellen URL steht. UIX beobachtet `location-changed` und `popstate`, sodass Templates bei geändertem `hash` neu gebunden werden. Das kann in den Integrationsoptionen unter Performance deaktiviert werden.

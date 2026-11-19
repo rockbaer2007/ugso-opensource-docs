@@ -4,6 +4,18 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Complete canonical comparison — 19 November 2026
+
+All **66** canonical Markdown pages were compared with [`dev 3e330667`](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702). Since `df5f4d6`, **three pages changed and 63 are unchanged**. No pages were added or removed; canonical navigation and media are unchanged.
+
+- `26494fc0d752`: badge lock overlays target the rendered `hui-badge` surface; default `left: 24px`, no vertical offset. Explicit `icon_position` replaces the entire default. The canonical example and table were added to DE/FR.
+- `c2f284917609`: dialog/notification `params` are limited to **512 KiB**, omitting complete top-level values from largest to smallest. Smaller details such as `params.repository` survive when `params.marketplace` is omitted.
+- The full comparison also caught `forge.bottom` and template support for `max_width`/`bottom`, available **from 9.1.0-beta.5** (`f905e7036d7d`, `c8cde9254807`). Defaults and the `calc(100vh - 100px)` example are synchronized.
+
+The English mirror covers all 66 current source pages with unchanged code examples. DE/FR incorporate the actual updates while preserving editorial summaries and reviewed cache clarifications. The [source audit](/projects/uix/source-audit-20261119.json) records the comparison. **UIX 9.0.0 / HA 2026.11.0 minimum** remains the stable baseline; **9.1.0-beta.8** identifies the documented `dev` source snapshot, not a new stable release.
+
+Checks cover source coverage, technical identifiers, examples, media, navigation and the documentation build. They do not certify sentence-by-sentence or independent linguistic equivalence and are not a Home Assistant runtime test.
+
 ## Canonical update · 2026-11-12
 
 Preview revision [df5f4d6](https://github.com/Lint-Free-Technology/uix/commit/df5f4d67ecbd36c37fca96f4bb2df5d0e14dc16c) removes element configuration defaults and states the minimum version for the desktop new-tab option.

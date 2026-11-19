@@ -4,6 +4,18 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Vollständiger Quellenabgleich vom 19.11.2026
+
+Alle **66** kanonischen Markdown-Seiten wurden mit [`dev 3e330667`](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702) verglichen. Gegenüber dem zuvor geprüften Stand `df5f4d6` sind **drei Seiten geändert, 63 unverändert**. Es gibt keine neuen oder entfernten Seiten; kanonische Navigation und Medien sind unverändert.
+
+- **Lock Spark / Badges:** Die Sperrebene liegt auf der gerenderten `hui-badge`-Oberfläche. Standard ist `left: 24px` ohne vertikalen Versatz. Ein explizites `icon_position` ersetzt den Standard vollständig. Beispiel und Referenztabelle sind in DE/EN/FR ergänzt. Meldung: [`26494fc0d752`](https://github.com/Lint-Free-Technology/uix/commit/26494fc0d752f3c18fc6aa48d493556cdedf4151).
+- **Dialog- und Benachrichtigungsparameter:** `params` ist auf **512 KiB** begrenzt. Vollständige Werte der obersten Ebene werden von groß nach klein entfernt; kleinere Angaben wie `params.repository` bleiben verfügbar, wenn `params.marketplace` entfällt. Meldung: [`c2f284917609`](https://github.com/Lint-Free-Technology/uix/commit/c2f2849176094cb12b6c2cdff1e6dc4170060289).
+- **Zusätzlich gefundene Footer-Änderung:** `forge.bottom` steuert die Anfangsposition direkt; `max_width` und `bottom` unterstützen Templates **ab 9.1.0-beta.5**. Standardwerte und das Beispiel mit `calc(100vh - 100px)` sind übernommen. Zugehörige Meldungen: `f905e7036d7d` und `c8cde9254807`.
+
+Der englische Spiegel enthält alle 66 aktuellen Quellseiten mit unveränderten Codebeispielen. Die DE/FR-Fassungen sind für die tatsächlichen Änderungen aktualisiert; bestehende redaktionelle Zusammenfassungen und geprüfte Cache-Klarstellungen bleiben erhalten. Die [Quellenprüfung](/projects/uix/source-audit-20261119.json) dokumentiert den Vergleich. **Stabile Basis bleibt UIX 9.0.0 / HA ab 2026.11.0**; **9.1.0-beta.8** bezeichnet den dokumentierten `dev`-Quellstand, keine neue stabile Freigabe.
+
+Geprüft werden Quellenabdeckung, technische Kennungen, Beispiele, Medien, Navigation und der Dokumentationsbuild. Das ist keine wortgleiche Übersetzung oder unabhängige sprachliche Zertifizierung und kein neuer Home-Assistant-Laufzeittest.
+
 ## Kanonischer Abgleich · 2026-11-12
 
 Die Vorschau [df5f4d6](https://github.com/Lint-Free-Technology/uix/commit/df5f4d67ecbd36c37fca96f4bb2df5d0e14dc16c) entfernt die Element-Standardwerte und nennt die Mindestversion für die Desktop-Tab-Option.

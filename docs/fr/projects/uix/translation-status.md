@@ -4,6 +4,18 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Comparaison complète des sources — 19 novembre 2026
+
+Les **66** pages Markdown canoniques ont été comparées à [`dev 3e330667`](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702). Depuis `df5f4d6`, **trois pages ont changé et 63 sont inchangées**. Aucune page n'a été ajoutée ou supprimée ; la navigation et les médias canoniques sont inchangés.
+
+- `26494fc0d752` : le verrou est attaché à la surface rendue de `hui-badge`. Valeur par défaut : `left: 24px`, sans décalage vertical. Un `icon_position` explicite remplace entièrement ce réglage. L'exemple canonique et le tableau sont intégrés en DE/FR.
+- `c2f284917609` : les paramètres `params` des boîtes de dialogue et notifications sont limités à **512 KiB**. Les valeurs complètes du premier niveau sont retirées de la plus grande à la plus petite ; `params.repository` peut rester disponible lorsque `params.marketplace` est omis.
+- La comparaison a aussi détecté `forge.bottom` et les modèles dans `max_width`/`bottom`, disponibles **depuis 9.1.0-beta.5** (`f905e7036d7d`, `c8cde9254807`). Les valeurs par défaut et l'exemple `calc(100vh - 100px)` sont synchronisés.
+
+Le miroir anglais couvre les 66 pages sources actuelles avec leurs exemples de code inchangés. Les mises à jour DE/FR préservent les résumés rédactionnels et les clarifications du cache déjà vérifiées. Le [rapport des sources](/projects/uix/source-audit-20261119.json) consigne la comparaison. **UIX 9.0.0 / HA 2026.11.0 minimum** reste la base stable ; **9.1.0-beta.8** identifie l'instantané documentaire `dev`, et non une nouvelle version stable.
+
+Les vérifications portent sur les sources, identifiants techniques, exemples, médias, navigation et génération du site. Elles ne constituent ni une certification linguistique indépendante ou une identité phrase par phrase, ni un test d'exécution Home Assistant.
+
 ## Mise à jour canonique · 2026-11-12
 
 La révision [df5f4d6](https://github.com/Lint-Free-Technology/uix/commit/df5f4d67ecbd36c37fca96f4bb2df5d0e14dc16c) retire les valeurs par défaut des éléments et précise la version minimale pour l’ouverture dans un nouvel onglet sur ordinateur.

@@ -3,8 +3,8 @@ title: À propos
 ---
 # UI eXtension pour Home Assistant
 
-::: info État vérifié le 9 novembre 2026
-Les [contextes UIX](./concepts/context) expliquent l’héritage, la priorité de la configuration directe, les règles de nom d’entité et le débogage. Les guides sur les concepts et les thèmes renvoient vers cette page. La revue couvre **66** pages canoniques jusqu’à **9.1.0-beta.3**.
+::: info État vérifié le 19 novembre 2026
+Les **66** pages canoniques ont été comparées à `dev 3e330667`. Les trois modifications concernent les [verrous des badges](./forge/sparks/lock#badges-comme-cibles), les [paramètres des boîtes de dialogue limités à 512 KiB](./using/templates) et la [position du pied de page](./forge/forge#pied-de-page). L'aperçu documentaire suit la version source **9.1.0-beta.8** ; **9.0.0** reste la base stable. Les 63 autres pages sources sont inchangées depuis la dernière revue.
 :::
 
 > Cette traduction française est maintenue par UGSo Software. La documentation anglaise reste la référence. La base est la version stable [`UIX 9.0.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0) du 4 novembre 2026, révision [`cec1191`](https://github.com/Lint-Free-Technology/uix/commit/cec1191f6ee703284c75dfd3104dba9bb4419200). **Home Assistant 2026.11.0 ou ultérieur est requis.**

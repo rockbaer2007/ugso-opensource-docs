@@ -48,6 +48,29 @@ element:
 Nutze keine PINs für echte Sicherheitsgrenzen. UIX läuft im Browser und kann Bedienfehler vermeiden, aber keine Home-Assistant-Rechte erzwingen.
 
 :::
+## Badges als Ziel
+
+Wenn eine Sperre auf `hui-badge` zielt, auch bei der üblichen Konfiguration `mold: badge`, wird die Sperrebene direkt an der gerenderten Badge-Oberfläche angebracht. Das Schloss erhält standardmäßig `left: 24px` ohne vertikalen Versatz.
+
+Mit `icon_position` lässt sich die Position gezielt ändern. Ein expliziter Wert ersetzt den Badge-Standard vollständig. Gib deshalb auch `left: 24px` an, wenn du nur `top` oder `bottom` ergänzen und die übliche horizontale Position beibehalten möchtest.
+
+```yaml
+type: custom:uix-forge
+forge:
+  mold: badge
+  sparks:
+    - type: lock
+      icon_position:
+        top: -10px
+        left: 24px
+      locks:
+        - code: 1234
+          admins: true
+element:
+  type: entity
+  entity: sensor.backup_next_scheduled_automatic_backup
+```
+
 ## Matching-Logik
 
 | Konfiguration | Wen sie trifft |
@@ -70,7 +93,7 @@ Nutze keine PINs für echte Sicherheitsgrenzen. UIX läuft im Browser und kann B
 | `icon_unlocked` | string | - | Icon im entsperrten Zustand. Ohne Wert blendet das Schloss aus. |
 | `icon_locked_color` | string | `--error-color` | Farbe des gesperrten Icons. |
 | `icon_unlocked_color` | string | `--success-color` | Farbe des entsperrten Icons. |
-| `icon_position` | object | Bei Row-Mold `{top: 6, left: 30}`; am `ha-tile-icon` `{top: 3, left: 3}` | Pixel-Offsets des Icons. Erlaubt `top` oder `bottom` und `left` oder `right`. |
+| `icon_position` | object | Bei Row-Mold `{top: 6, left: 30}`; am `ha-tile-icon` `{top: 3, left: 3}`; am `hui-badge` `{left: 24}` | Pixel-Offsets des Icons. Erlaubt `top` oder `bottom` und `left` oder `right`. Ein expliziter Wert ersetzt den Standard vollständig. |
 | `icon_size` | number oder string | `24px`, bei `ha-tile-icon` `12px` | Icongröße. `--uix-lock-icon-size` hat Vorrang. |
 | `permissive` | boolean | `false` | Bei `true` bleiben Elemente zugänglich, wenn kein Lock-Eintrag zum aktuellen Nutzer passt. |
 | `entity` | string | - | Entity-ID für einfache HA-Aktionen in `unlocked_action`. |

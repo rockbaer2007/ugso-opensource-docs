@@ -3,15 +3,15 @@ title: Übersicht
 ---
 # UI eXtension für Home Assistant
 
-::: info Stand geprüft am 09.11.2026
-Die [UIX-Kontexte](./concepts/context) erklären Vererbung, Vorrang direkter Konfiguration, Namensregeln und Fehlersuche. Konzeptübersicht und Theme-Anleitung verlinken die neue Seite. Geprüft sind **66** kanonische Seiten bis **9.1.0-beta.3**.
+::: info Stand geprüft am 19.11.2026
+Alle **66** kanonischen Seiten wurden mit `dev 3e330667` verglichen. Die drei Änderungen betreffen [Badge-Sperren](./forge/sparks/lock#badges-als-ziel), [Dialogparameter bis 512 KiB](./using/templates) und [Footer-Positionierung](./forge/forge#footer). Die Vorschau-Dokumentation folgt dem Quellstand **9.1.0-beta.8**; **9.0.0** bleibt die stabile Basis. Die übrigen 63 Quellseiten sind seit dem letzten Abgleich unverändert.
 :::
 
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
 > Basis ist GitHub-Release [`v9.0.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0) vom 04.11.2026. Benötigt **Home Assistant 2026.11.0 oder neuer**. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`cec1191`](https://github.com/Lint-Free-Technology/uix/commit/cec1191f6ee703284c75dfd3104dba9bb4419200).
-> Die Dokumentation wurde mit `master f63ebbd` abgeglichen. Einzelheiten stehen im [Übersetzungsstatus](./translation-status).
+> Der aktuelle Dokumentationsabgleich verwendet `dev 3e330667` vom 19.11.2026. Einzelheiten und Prüfgrenzen stehen im [Übersetzungsstatus](./translation-status).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
 >

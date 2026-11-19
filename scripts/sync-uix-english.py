@@ -15,9 +15,9 @@ import sys
 import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
-REVISION = 'df5f4d67ecbd36c37fca96f4bb2df5d0e14dc16c'
-REVIEWED_AT = '2026-11-12'
-SOURCE_VERSION = '9.1.0-beta.3'
+REVISION = '3e330667ff27cedcbb84a1f4d370a35b809d2702'
+REVIEWED_AT = '2026-11-19'
+SOURCE_VERSION = '9.1.0-beta.8'
 SOURCE_BRANCH = 'dev'
 
 
@@ -144,7 +144,7 @@ def main():
             if not target.exists() or target.read_bytes() != file.read_bytes():
                 target.parent.mkdir(parents=True,exist_ok=True)
                 shutil.copyfile(file,target)
-    record_path.write_text(json.dumps({'revision':REVISION,'reviewed_at':REVIEWED_AT,'pages':manifest,'editorial_corrections':corrections},indent=2)+'\n',encoding='utf-8')
+    record_path.write_text(json.dumps({'revision':REVISION,'reviewed_at':REVIEWED_AT,'pages':manifest,'editorial_corrections':corrections,'baseline_revision':previous.get('baseline_revision'),'source_branch':SOURCE_BRANCH,'source_version':SOURCE_VERSION},indent=2)+'\n',encoding='utf-8')
     print(f'Adapted {len(manifest)} canonical English pages; source hashes recorded.')
 
 
