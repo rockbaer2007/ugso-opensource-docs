@@ -6,6 +6,8 @@ description: Collection of maintained Home Assistant, HACS and open-source docum
 
 This section groups maintained documentation, examples and project notes around Home Assistant, HACS and open source.
 
+The collection began as personal German documentation for friends with little or no English. The initial material was then compared with the original documentation using ChatGPT to correct identified errors, outdated wording and unclear passages. The focus is practical guides with versions, original sources, license notices and examples.
+
 External projects are marked as unofficial translations or supplemental documentation. The original documentation remains authoritative.
 
 ## Sections

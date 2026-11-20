@@ -11,9 +11,9 @@ UIX sollte grundsätzlich mit allen Custom Cards funktionieren.
 :::
 
 ::: warning Wo UIX ohne weiteren Code oder Styling durch die übergeordnete Karte nicht funktioniert
-- Die Custom Card wird von einer anderen Custom Card geladen, die nicht die moderne `<hui-card>`-Methode nutzt, und
-- die Custom Card nutzt kein `<ha-card>` oder
-- die Custom Card nutzt zwar `<ha-card>`, speichert die Konfiguration aber nicht in `config` oder `_config`.
+- Die Custom Card wird von einer anderen Custom Card geladen, die nicht die moderne `<hui-card>`-Methode nutzt, und zusätzlich trifft mindestens einer dieser Fälle zu:
+  - Die Custom Card nutzt kein `<ha-card>`.
+  - Die Custom Card nutzt zwar `<ha-card>`, speichert die Konfiguration aber nicht in `config` oder `_config`.
 
 In diesem Fall kann UIX die `uix:`-Konfiguration für das Styling nicht finden und wendet sie nicht an.
 :::

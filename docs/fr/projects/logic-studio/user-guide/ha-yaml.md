@@ -21,7 +21,7 @@ Ouvre ou colle du YAML. L’import JSON accepte les données d’automatisation 
 
 ### Syntaxe et structure
 
-Les couleurs facilitent la lecture. La vérification marque les erreurs de syntaxe, entités inconnues, champs d’action invalides et problèmes de structure dans `choose`.
+Les couleurs facilitent la lecture. La vérification marque les erreurs de syntaxe, entités inconnues, champs d’action invalides et problèmes de structure des branches `choose` imbriquées directement à la ligne concernée.
 
 ### Sélecteurs
 

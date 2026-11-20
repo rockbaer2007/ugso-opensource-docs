@@ -1,13 +1,13 @@
 ---
 title: Collection
-description: Collection en allemand de documentations maintenues concernant Home Assistant, HACS et l'Open Source.
+description: Collection de documentations concernant Home Assistant, HACS et l'Open Source, avec référence allemande et traductions.
 ---
 <a id="collection"></a>
 <a id="orientation-actuelle"></a>
 
 # Collection {#sammlung}
 
-Cette collection regroupe des documentations, des exemples et des pages de projet maintenus en allemand, portant sur Home Assistant, HACS et l'Open Source.
+Cette collection regroupe des documentations, des exemples et des pages de projet concernant Home Assistant, HACS et l'Open Source. La référence allemande est accompagnée de traductions, dont cette version française.
 
 Cette collection est issue de ma documentation personnelle. Elle a été créée à l'origine pour un cercle d'amis et de connaissances qui s'intéressent à Home Assistant, mais qui possèdent peu ou pas de connaissances en anglais. La documentation privée initiale a ensuite été comparée aux documents originaux respectifs à l'aide de ChatGPT. Ce processus a permis de corriger les erreurs identifiées, de supprimer les formulations obsolètes et de clarifier les passages ambigus.
 
@@ -17,7 +17,7 @@ L'accent est mis sur des documents exploitables en pratique, incluant la version
 
 | Domaine | Contenu |
 | --- | --- |
-| [Recommandations HA](/fr/collection/ha-recommendations) | Liens sélectionnés vers des cartes (cards), intégrations, applications et outils disposant d'une documentation en français ou offrant une bonne porte d'entrée. |
+| [Recommandations HA](/fr/collection/ha-recommendations) | Liens sélectionnés vers des cartes, intégrations, applications et outils disposant d'une documentation en allemand ou offrant une bonne porte d'entrée. |
 | [Cartes HA](/fr/collection/ha-cards) | Cartes Lovelace et HACS accompagnées d'instructions en allemand et d'exemples. |
 | [Tableaux de bord HA](/fr/collection/ha-dashboard) | Thèmes, idées de mise en page et extensions visuelles pour les tableaux de bord Home Assistant. |
 | [Intégrations HA](/fr/collection/ha-integrations) | Intégrations personnalisées (custom integrations) et intégrations HACS pour Home Assistant. |
@@ -31,7 +31,7 @@ L'accent est mis sur des documents exploitables en pratique, incluant la version
 
 UIX est volontairement exclu de cette collection, car la documentation allemande d'UIX est déjà maintenue séparément et référencée dans le menu de sélection de langue officiel d'UIX.
 
-- [Ouvrir la documentation allemande d'UIX](/fr/projects/uix/)
+- [Ouvrir la documentation française d'UIX](/fr/projects/uix/)
 - [Ouvrir la documentation originale d'UIX](https://uix.lf.technology/)
 
 ## Règles fondamentales {#grundregeln}

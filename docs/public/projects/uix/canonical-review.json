@@ -248,13 +248,24 @@
     {
       "path": "developers/cards.md",
       "sha256": "b015e562376a5bb3b6c437b48d2b0a1c461419490667859b1c2bad9963806d1d",
-      "english_sha256": "436cbce7cfa1148f29795c91d9ef649adf1ff8c74bda67e50e64465731a233a7",
+      "english_sha256": "e8257e8a31c258e79f9468b0dac346147ed6210be931ae41cdd2e7bf1efde913",
       "code_sha256": [
         "7d1b8f9458930646e187d50a5e8883099bcba272b68ef2929dd5a674dd1b179d",
         "c8e3cf6dfa8b2790b64f28fcb5cf92161ad76c9fcc9d62234e5aa5f64c6a4203",
         "b61f5bea5579b58a7f8f522a52c751239c3b04ea825f2c7ace931374c09a8827",
         "01be9f892ef2ce3a364ae88d33b3b7c839f7240a07fb4055d0c9dd43435a5875"
-      ]
+      ],
+      "english_code_sha256": [
+        "a775f844a9f9a521bf68ab1f69b2ce17468839b9f4fc18b8e2f01432de0e6cee",
+        "c8e3cf6dfa8b2790b64f28fcb5cf92161ad76c9fcc9d62234e5aa5f64c6a4203",
+        "b61f5bea5579b58a7f8f522a52c751239c3b04ea825f2c7ace931374c09a8827",
+        "01be9f892ef2ce3a364ae88d33b3b7c839f7240a07fb4055d0c9dd43435a5875"
+      ],
+      "code_correction": {
+        "reviewed_at": "2026-11-20",
+        "block": 1,
+        "reason": "Missing argument comma and promise-callback delimiters repaired; all remaining code blocks unchanged."
+      }
     },
     {
       "path": "developers/index.md",
@@ -556,7 +567,7 @@
     {
       "path": "forge/sparks/index.md",
       "sha256": "97178ef31bb7b5b88e10e2cc7531e020b80328d3ca7ddb5a46d035ba2585ec70",
-      "english_sha256": "8e9375934c33c086ccc853fb92a9d72e85449e21a2f255ea78b528885a35075f",
+      "english_sha256": "6e54844df2b136be4ba0e8f30241b12139ab5ef6f8af1ae1f9750dc37e578c97",
       "code_sha256": []
     },
     {

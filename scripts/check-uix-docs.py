@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 import hashlib
+import importlib.util
 import json
 import sys
 from datetime import date
@@ -95,6 +96,9 @@ def main():
                 errors.append(f"Wrong self-canonical: {url}")
 
     manifest = json.loads((ROOT / "docs/public/projects/uix/canonical-review.json").read_text(encoding="utf-8"))
+    spec = importlib.util.spec_from_file_location("uix_sync", ROOT / "scripts/sync-uix-english.py")
+    sync = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(sync)
     if len(manifest["pages"]) != 66:
         errors.append("Canonical review does not cover all 66 source pages")
     for entry in manifest["pages"]:
@@ -104,6 +108,16 @@ def main():
         english = ROOT / "docs/en/projects/uix" / entry["path"]
         if hashlib.sha256(english.read_text(encoding="utf-8").encode()).hexdigest() != entry["english_sha256"]:
             errors.append(f"Canonical English adaptation changed without resync: {entry['path']}")
+        expected_code = entry.get("english_code_sha256", entry["code_sha256"])
+        if sync.code_hashes(english.read_text(encoding="utf-8")) != expected_code:
+            errors.append(f"Canonical English examples changed without review: {entry['path']}")
+        if "english_code_sha256" in entry:
+            correction = entry.get("code_correction", {})
+            if (entry["path"] != "developers/cards.md" or correction.get("block") != 1
+                    or not correction.get("reason") or not correction.get("reviewed_at")
+                    or expected_code[1:] != entry["code_sha256"][1:]
+                    or len(expected_code) != len(entry["code_sha256"])):
+                errors.append(f"Unapproved canonical code correction: {entry['path']}")
 
     metadata = json.loads((ROOT / "docs/public/projects/uix/uix-docs.json").read_text(encoding="utf-8"))
     if metadata["docs_version"] != metadata["stable_version"]:

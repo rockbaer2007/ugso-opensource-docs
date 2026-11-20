@@ -8,13 +8,15 @@ description: Installation und Einrichtung der Zendure Home Assistant Integration
 
 1. Home Assistant öffnen.
 2. `HACS` öffnen.
-3. Zu `Integrationen` wechseln.
-4. `+ Explore & Download Repos` öffnen.
-5. Nach `Zendure` suchen.
-6. `Zendure Home Assistant Integration` herunterladen.
-7. Browser neu laden, falls Home Assistant die Integration noch nicht direkt anzeigt.
+3. In der HACS-Suche nach `Zendure` suchen; bei Bedarf nach dem Typ Integration filtern.
+4. Den Eintrag `Zendure Home Assistant Integration` öffnen.
+5. Die passende Version herunterladen.
+6. Home Assistant nach Aufforderung von HACS neu starten, damit die Integration geladen wird.
+7. Warten, bis Home Assistant wieder erreichbar ist.
 8. `Einstellungen -> Geräte & Dienste -> Integration hinzufügen` öffnen.
 9. Nach `Zendure` suchen und die Einrichtung starten.
+
+Die aktuelle [HACS-Oberfläche](https://www.hacs.xyz/docs/use/repositories/dashboard/) verwendet Suche und Typfilter. Ein Neuladen des Browsers ersetzt den nötigen Home-Assistant-Neustart nicht.
 
 Direktlink:
 

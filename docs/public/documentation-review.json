@@ -259,7 +259,9 @@
       "disposition": "supplemented",
       "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained.",
       "source_sha256": "848a9e03d24ea8f93827ede7c946824fbbad38cfe7e75408b968c9d051b51d2b",
-      "target_sha256": "c8f4a6b7b6ae4711d09623a793f3dff7385cd09136f5fc964f5f1a886b741f0d"
+      "target_sha256": "00567748ed7ff3fd3d3219468ed38c3846786aee08c41c35f20e3538f54bd0b3",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/broker/broker.md",
@@ -809,10 +811,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "b3eb747a780941e424f32a99ecec4d99bfd9fe8f915cc551d60e5f0caf7dd644",
-      "target_sha256": "436cbce7cfa1148f29795c91d9ef649adf1ff8c74bda67e50e64465731a233a7",
+      "source_sha256": "30c70617b4eafe397558a3c36ec4f4a35bc3807ad95ce22cec1fd7e3d313c884",
+      "target_sha256": "e8257e8a31c258e79f9468b0dac346147ed6210be931ae41cdd2e7bf1efde913",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/developers/index.md",
@@ -1584,9 +1587,10 @@
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
       "source_sha256": "1467c4ae719d6dba865a32d9f52ba6aa63cf92188fef79ebe5936d0b215c61b0",
-      "target_sha256": "8e9375934c33c086ccc853fb92a9d72e85449e21a2f255ea78b528885a35075f",
+      "target_sha256": "6e54844df2b136be4ba0e8f30241b12139ab5ef6f8af1ae1f9750dc37e578c97",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/index.md",
@@ -2458,7 +2462,9 @@
       "disposition": "supplemented",
       "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained.",
       "source_sha256": "cf2690a7e58693c52f3082be4ec04f089524ec3f23a5afb80847bb1817741ba2",
-      "target_sha256": "207d1f5625899966c4fc1f620007fe886e4ff79df78ef4909ff5e1edb6fcefc7"
+      "target_sha256": "634613f36560f063107367457993562fe1140215ac841b06ec32d299d884f5da",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/mushroom/index.md",
@@ -2474,7 +2480,9 @@
       "disposition": "supplemented",
       "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained.",
       "source_sha256": "5067d29e4d38f4689ec3fe657b9f3075811fddfba8115e008e524dbdcfe5ed55",
-      "target_sha256": "215f397ac927e29c9866b4a83c8a20d5645b4932b6671ca962c05b9ce5b2e123"
+      "target_sha256": "dfe6afd8641a42ec15bf0943bd57326de263c39d16f9c43d8103c19f774c68a5",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     }
   ],
   "incremental_reviews": [

@@ -40,7 +40,7 @@ L'intégration affiche un état de connexion qui aide à situer la situation :
 | État | Signification |
 | --- | --- |
 | `Unbekannt` | Aucun état de connexion défini |
-| `Kalibrierung` | Appareil calibré |
+| `Kalibrierung` | Étalonnage de l'appareil en cours |
 | `HEMS` | Appareil contrôlé par le HEMS |
 | `Keine Sicherungsgruppe` | Groupe de fusibles (Fuse Group) manquant |
 | `Verbunden (Cloud)` | Connexion via le cloud |

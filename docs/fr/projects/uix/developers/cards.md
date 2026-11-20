@@ -102,7 +102,7 @@ uix:
     }
 ```
 
-And this theme:
+Et avec ce thème :
 
 ```yaml
 UIX Test:
@@ -114,4 +114,4 @@ UIX Test:
   dark:
 ```
 
-![Output](../assets/page-assets/developers/custom-card.png)
+![Résultat](../assets/page-assets/developers/custom-card.png)

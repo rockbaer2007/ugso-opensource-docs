@@ -30,11 +30,13 @@ customElements.whenDefined("uix-node").then((uix) => {
     "type", // Determines which theme variables should apply (uix-<type>, uix-<type>-yaml)
     config, // The UIX configuration. See below
     variables, // Any variables passed on to jinja templates, preferably { config: <element configuration> }. Default: {}
-    shadow // whether the styles should be based in the #shadow-root of el. Default: true
+    shadow, // whether the styles should be based in the #shadow-root of el. Default: true
     cls // An extra class to apply to the element. Default: undefined
-  )
-}
+  );
+});
 ```
+
+**Editorial correction (2026-11-20):** The first example adds the missing argument comma and closes the promise callback. The frozen upstream example contains these syntax errors; its original source hashes remain recorded.
 
 The UIX configuration is an object with the following optional properties:
 

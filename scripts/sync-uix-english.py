@@ -1,7 +1,8 @@
 """Render an archived canonical UIX Markdown tree into VitePress English pages.
 
 Usage: python scripts/sync-uix-english.py PATH/TO/docs/source
-Only markup, local asset URLs and the attribution notice change. No translation
+Markup, local URLs and attribution are adapted. Explicit, source-bound editorial
+corrections below also repair a known syntax error and an index description. No translation
 provider, HA connection or credentials are used. Review the Git diff afterwards.
 """
 from pathlib import Path
@@ -26,6 +27,34 @@ def code_hashes(text):
     return [
         hashlib.sha256('\n'.join(line.rstrip() for line in textwrap.dedent(match[2]).strip().splitlines()).encode()).hexdigest()
         for match in re.finditer(r'(?m)^([ \t]*)```[^\n]*\n(.*?)^\1```\s*$', text, flags=re.S)]
+
+
+def reviewed_corrections(text, raw, relative):
+    """Fail closed if either frozen upstream passage changes."""
+    path = relative.as_posix()
+    expected_sources = {
+        'developers/cards.md': 'b015e562376a5bb3b6c437b48d2b0a1c461419490667859b1c2bad9963806d1d',
+        'forge/sparks/index.md': '97178ef31bb7b5b88e10e2cc7531e020b80328d3ca7ddb5a46d035ba2585ec70',
+    }
+    if path not in expected_sources:
+        return text
+    normalized = raw.decode('utf-8').replace('\r\n', '\n')
+    assert hashlib.sha256(normalized.encode()).hexdigest() == expected_sources[path], f'Editorial source needs review: {path}'
+    if path == 'developers/cards.md':
+        old = '    shadow // whether the styles should be based in the #shadow-root of el. Default: true'
+        assert text.count(old) == 1
+        text = text.replace(old, old.replace('shadow //', 'shadow, //'))
+        old = '  )\n}\n```'
+        assert text.count(old) == 1
+        text = text.replace(old, '  );\n});\n```')
+        marker = 'The UIX configuration is an object with the following optional properties:'
+        assert text.count(marker) == 1
+        text = text.replace(marker, '**Editorial correction (2026-11-20):** The first example adds the missing argument comma and closes the promise callback. The frozen upstream example contains these syntax errors; its original source hashes remain recorded.\n\n' + marker)
+    else:
+        old = 'insert an interactive `ha-button` element as a sibling after any element within the forged element.'
+        assert text.count(old) == 1
+        text = text.replace(old, 'insert an interactive `ha-button` element as a sibling before or after a target element within the forged element.')
+    return text
 
 
 def containers(lines):
@@ -133,10 +162,19 @@ def main():
                 old_body=existing.split(start,1)[1].split(end,1)[0]
                 converted=re.sub(re.escape(start)+r'.*?(?='+re.escape(end)+r')', lambda _: start+old_body, converted, count=1, flags=re.S)
                 corrections['reviewed_at']=REVIEWED_AT
-        target.write_text(converted,encoding='utf-8')
         original_code=code_hashes(raw.decode('utf-8'))
-        assert code_hashes(converted)==original_code, f'Code changed: {relative}'
-        manifest.append({'path':relative.as_posix(),'sha256':hashlib.sha256(raw).hexdigest(),'english_sha256':hashlib.sha256(converted.encode()).hexdigest(),'code_sha256':original_code})
+        assert code_hashes(converted)==original_code, f'Code changed before reviewed corrections: {relative}'
+        converted=reviewed_corrections(converted,raw,relative)
+        adapted_code=code_hashes(converted)
+        item={'path':relative.as_posix(),'sha256':hashlib.sha256(raw).hexdigest(),'english_sha256':hashlib.sha256(converted.encode()).hexdigest(),'code_sha256':original_code}
+        if relative.as_posix() == 'developers/cards.md':
+            assert adapted_code[1:] == original_code[1:] and len(adapted_code) == len(original_code)
+            item['english_code_sha256']=adapted_code
+            item['code_correction']={'reviewed_at':REVIEWED_AT,'block':1,'reason':'Missing argument comma and promise-callback delimiters repaired; all remaining code blocks unchanged.'}
+        else:
+            assert adapted_code == original_code, f'Unapproved code change: {relative}'
+        target.write_text(converted,encoding='utf-8')
+        manifest.append(item)
     # Refresh canonical assets while retaining additional curated media.
     for file in sorted((source/'assets').rglob('*')):
         if file.is_file():

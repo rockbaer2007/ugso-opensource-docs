@@ -2,8 +2,8 @@
   "reviewed_at": "2026-11-20",
   "scope_pages": 504,
   "coverage": {
-    "en": 101,
-    "fr": 101
+    "en": 131,
+    "fr": 131
   },
   "scope": "Content/meaning review of all 504 EN/FR inventory entries, including previously assessed structural differences. Reviewed pages only; unreviewed pages retain their existing technical status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
@@ -349,6 +349,26 @@
       "target_sha256": "4700b12cbe045800482ac713d96701d151637a60ffd1f342cd755c42a55798aa"
     },
     {
+      "source": "projects/atlas-plugins/developers/index.md",
+      "locale": "en",
+      "target": "en/projects/atlas-plugins/developers/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Five template-to-publish steps, six developer guides, evolving contracts, minimum capabilities, no credential publication and static package versus Runtime host integration agree in all locales.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "cf9c698f483f3c67275d71b779ac0e7d48286185e670ef55d02a62a919b861b5",
+      "target_sha256": "6db7c8cba373e6d6418d7524bbc27e2e5e4e6b364a6f7e23062e9f2140f4be16"
+    },
+    {
+      "source": "projects/atlas-plugins/developers/index.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas-plugins/developers/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Five template-to-publish steps, six developer guides, evolving contracts, minimum capabilities, no credential publication and static package versus Runtime host integration agree in all locales.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "cf9c698f483f3c67275d71b779ac0e7d48286185e670ef55d02a62a919b861b5",
+      "target_sha256": "de0ff12458a8febbc8d107df11a2e5d6d15cbb406ce2d6aa50b60ed10d71192e"
+    },
+    {
       "source": "projects/atlas-plugins/developers/manifest.md",
       "locale": "en",
       "target": "en/projects/atlas-plugins/developers/manifest.md",
@@ -367,6 +387,86 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "7329f4e223e47bf6e018b72852a20bd95dd7f7562346c0ddfd5933bcab0d454c",
       "target_sha256": "e0b097813b7383d5f795785e74cf631c947d73a41f9ee40aba87fabf5fffb95e"
+    },
+    {
+      "source": "projects/atlas-plugins/developers/publishing.md",
+      "locale": "en",
+      "target": "en/projects/atlas-plugins/developers/publishing.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All six publication steps, manifest/catalog/package ID and version consistency, raw catalog versus optional Pages, stable IDs and external binary assets agree. Persistent static assets versus explicit Runtime host integration and no-sandbox caveat retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "146ba50f0c803f981c1fd37954bc83ea11e1e13418e3eba60ac5b8e20ec6574b",
+      "target_sha256": "439312561bbbd8b4867cb72cfdb1318e7a99c58acfe48da05ef438f168bd7a94"
+    },
+    {
+      "source": "projects/atlas-plugins/developers/publishing.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas-plugins/developers/publishing.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All six publication steps, manifest/catalog/package ID and version consistency, raw catalog versus optional Pages, stable IDs and external binary assets agree. Persistent static assets versus explicit Runtime host integration and no-sandbox caveat retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "146ba50f0c803f981c1fd37954bc83ea11e1e13418e3eba60ac5b8e20ec6574b",
+      "target_sha256": "624ef0a4e9cd9e71d081fff8edfe8b66145acc926261c01e32c765271db9c732"
+    },
+    {
+      "source": "projects/atlas-plugins/developers/runtime.md",
+      "locale": "en",
+      "target": "en/projects/atlas-plugins/developers/runtime.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Current versus historical A5 versions, qualified activation/stop/dispose/parser/recovery scope, static-web/runtime boundary, no sandbox/raw-asset restriction, required/optional manifest/hooks and three catalog methods agree. No stable1.0 or cross-host guarantee introduced.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "c873cdb1a48bc206f10a762e25531b43ea076c60bf597b33d925c583606ffc41",
+      "target_sha256": "8bfbe26712fd94f52af736fcd0b9427464b004cdc9d543e358c18f363a7c19c2"
+    },
+    {
+      "source": "projects/atlas-plugins/developers/runtime.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas-plugins/developers/runtime.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Current versus historical A5 versions, qualified activation/stop/dispose/parser/recovery scope, static-web/runtime boundary, no sandbox/raw-asset restriction, required/optional manifest/hooks and three catalog methods agree. No stable1.0 or cross-host guarantee introduced.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "c873cdb1a48bc206f10a762e25531b43ea076c60bf597b33d925c583606ffc41",
+      "target_sha256": "f113c79cabe3b767eb6c4ec6920a7d6568e1c136363fead7bd82f09aa1eb8004"
+    },
+    {
+      "source": "projects/atlas-plugins/gepruefte-plugins.md",
+      "locale": "en",
+      "target": "en/projects/atlas-plugins/verified-plugins.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Historical six-plugin surface qualification and user-confirmed Terminal, explicit limited verification scope, manifest/URL/icon/basic-secret/path review, product experimental statuses, five status definitions and own production review agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b0a6e04948219d75ec032097b64ca841d894caac94d2a2a1f28a4d8fa1db5b99",
+      "target_sha256": "07646900feb0771c096360b00b4618658a29cf0667c8db22c287a0b7a8862abd"
+    },
+    {
+      "source": "projects/atlas-plugins/gepruefte-plugins.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas-plugins/verified-plugins.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Historical six-plugin surface qualification and user-confirmed Terminal, explicit limited verification scope, manifest/URL/icon/basic-secret/path review, product experimental statuses, five status definitions and own production review agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b0a6e04948219d75ec032097b64ca841d894caac94d2a2a1f28a4d8fa1db5b99",
+      "target_sha256": "f882ed7078ec5095ad0c0fdbd1fbf6c9c80ba200a5ba2409b4f2b67191d16bdc"
+    },
+    {
+      "source": "projects/atlas-plugins/icon-library.md",
+      "locale": "en",
+      "target": "en/projects/atlas-plugins/icon-library.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Twenty-column visible-window rendering, copied full names, bundled MDI, accent/browser theme, coalesced resize with still-open Safari finding, static JS-as-data scanning, prefix grouping, local storage, legacy/new enumeration limits, File Studio grant/no token and minimum Atlas version agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "498bd09bac3549b0db7d6109a82a1ec3f22671e5a789049bc38721c9b11f3039",
+      "target_sha256": "652de90ca62130a15ea47a0b028315bd333ba8263560883f276c05da508aff29"
+    },
+    {
+      "source": "projects/atlas-plugins/icon-library.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas-plugins/icon-library.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Twenty-column visible-window rendering, copied full names, bundled MDI, accent/browser theme, coalesced resize with still-open Safari finding, static JS-as-data scanning, prefix grouping, local storage, legacy/new enumeration limits, File Studio grant/no token and minimum Atlas version agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "498bd09bac3549b0db7d6109a82a1ec3f22671e5a789049bc38721c9b11f3039",
+      "target_sha256": "6755ba4a9791a9ea886ec6f5ab15d18ad03166ff2ffe60d537af3113b1b1944a"
     },
     {
       "source": "projects/atlas/plugins.md",
@@ -407,6 +507,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "8132e640ae3b88bf9ee554f69a1e8e0c26e8bc0d32b1e21316449684530bbf02",
       "target_sha256": "d4fa58e6faa02c753c78991e004beabc986e360a737e8584469ca288b895bd33"
+    },
+    {
+      "source": "projects/atlas/uebersicht.md",
+      "locale": "en",
+      "target": "en/projects/atlas/overview.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Eleven package purposes, six architecture principles, seven event contracts, controlled service resolution and available Administration/reference Card Editor versus planned UV Card agree. French qualified package names identify the same packages; evolving/nonstable API caveat retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "fdf68d89d90106acdc5a5a5cbc8beaac6006d033fedccc16c1044667a42e92c6",
+      "target_sha256": "59be24fcde628f820d09043bf30a72663dce42a9bcbfce3c3d91a5a582f9aa7f"
+    },
+    {
+      "source": "projects/atlas/uebersicht.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas/overview.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Eleven package purposes, six architecture principles, seven event contracts, controlled service resolution and available Administration/reference Card Editor versus planned UV Card agree. French qualified package names identify the same packages; evolving/nonstable API caveat retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "fdf68d89d90106acdc5a5a5cbc8beaac6006d033fedccc16c1044667a42e92c6",
+      "target_sha256": "d2c2de13405ef995619fa843877eda6913cb3aaf4e737532cd926ff911f9ea66"
     },
     {
       "source": "projects/blocks-for-ha/catalog/index.md",
@@ -809,6 +929,46 @@
       "target_sha256": "0d66d9a0168a783c5f085a7f310966dc3093aeb9f94178e30835bf47918d46ba"
     },
     {
+      "source": "projects/index.md",
+      "locale": "en",
+      "target": "en/projects/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "HADash and Automation Exporter purpose/release links, independent UIX and additional project areas agree. English Exporter destination corrected to EN; French UIX subsection now correctly identifies its linked French adaptation, not German.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "848a9e03d24ea8f93827ede7c946824fbbad38cfe7e75408b968c9d051b51d2b",
+      "target_sha256": "00567748ed7ff3fd3d3219468ed38c3846786aee08c41c35f20e3538f54bd0b3"
+    },
+    {
+      "source": "projects/index.md",
+      "locale": "fr",
+      "target": "fr/projects/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "HADash and Automation Exporter purpose/release links, independent UIX and additional project areas agree. English Exporter destination corrected to EN; French UIX subsection now correctly identifies its linked French adaptation, not German.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "848a9e03d24ea8f93827ede7c946824fbbad38cfe7e75408b968c9d051b51d2b",
+      "target_sha256": "aabcef9a5a20010a1f805f1d4d4926d84dd5d666ff6bb535f34fc6377d9ad6d1"
+    },
+    {
+      "source": "projects/logic-studio/user-guide.md",
+      "locale": "en",
+      "target": "en/projects/logic-studio/user-guide.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Seven editors, own toggle helper, orange/gray save state, cancel restoration, simulated test versus live saved Play, stop, export, expert tools and project log agree in EN/FR. No new application execution claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b45027bd979b466442059db1e058800da55328d1c40bee7720d3dd3d7b963053",
+      "target_sha256": "db9ef14aee5094fde4a5caf6c08b5094b8616ff3780f9b462396dca08118f628"
+    },
+    {
+      "source": "projects/logic-studio/user-guide.md",
+      "locale": "fr",
+      "target": "fr/projects/logic-studio/user-guide.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Seven editors, own toggle helper, orange/gray save state, cancel restoration, simulated test versus live saved Play, stop, export, expert tools and project log agree in EN/FR. No new application execution claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b45027bd979b466442059db1e058800da55328d1c40bee7720d3dd3d7b963053",
+      "target_sha256": "0b6cf8ea1acced4f83b31563518d23051f8133062823bbaf0c8a0b7c73807409"
+    },
+    {
       "source": "projects/logic-studio/user-guide/blocks-a.md",
       "locale": "en",
       "target": "en/projects/logic-studio/user-guide/blocks-a.md",
@@ -847,6 +1007,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "cb46c0dad89d4a9d83e21176a5db90b58e6b87008a95bde59a6d999c37981ffe",
       "target_sha256": "e03de849545265592533fc5d5a42c218b21785228d6e2ad71289c12c67ecbf38"
+    },
+    {
+      "source": "projects/logic-studio/user-guide/ha-yaml.md",
+      "locale": "en",
+      "target": "en/projects/logic-studio/user-guide/ha-yaml.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four beginner steps, replace IDs, source/graph/export, compatible JSON/FLODE import, cursor insertion, labeled choose outputs, unchanged unknown/Blueprint field retention and optional existing-HA link agree. French explicitly restores affected-line reporting for nested choose errors.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e6d05ae9c5dc06bf0dafc3dbe14a243d75ec63093c6bcaf5aa2c0f33525a4bf9",
+      "target_sha256": "f42e7fd08ea85363ddcd7347f631edeeff8784b5999824393e06507dfd6b6d2f"
+    },
+    {
+      "source": "projects/logic-studio/user-guide/ha-yaml.md",
+      "locale": "fr",
+      "target": "fr/projects/logic-studio/user-guide/ha-yaml.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four beginner steps, replace IDs, source/graph/export, compatible JSON/FLODE import, cursor insertion, labeled choose outputs, unchanged unknown/Blueprint field retention and optional existing-HA link agree. French explicitly restores affected-line reporting for nested choose errors.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e6d05ae9c5dc06bf0dafc3dbe14a243d75ec63093c6bcaf5aa2c0f33525a4bf9",
+      "target_sha256": "2e754dd41924c6f01dace25eb97d4cf1909c65abf8a003c6177e3f10e0b27321"
     },
     {
       "source": "projects/logic-studio/user-guide/javascript.md",
@@ -989,6 +1169,36 @@
       "target_sha256": "b158dc2b27ac12129b96d59639f2a5fa4534cdbec8999295e25be2320fb8a964"
     },
     {
+      "source": "projects/uix/broker/index.md",
+      "locale": "en",
+      "target": "en/projects/uix/broker/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Three event realms, select/rule/directive flow, synchronous block exception, all sixteen directives, six guide links and Browser Mod identity prerequisite agree with canonical EN. German9.0 introduction is a historical feature baseline, not a claim of latest UIX release.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "229f9b710004cdba79778873c3965daf255d42b21090ddc8955836d72d233f75",
+      "target_sha256": "34aba7b751457e69b2f1ef15460d80a11c6e1c2c5264b043a4efc2f5dfc764c5",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "broker/index.md",
+        "source_sha256": "e1923d3842eb2fa4c0d30c536ab327ac9dff7678c8f7d86c2452db2907b84cfa"
+      }
+    },
+    {
+      "source": "projects/uix/broker/index.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/broker/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Three event realms, select/rule/directive flow, synchronous block exception, all sixteen directives, six guide links and Browser Mod identity prerequisite agree with canonical EN. German9.0 introduction is a historical feature baseline, not a claim of latest UIX release.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "229f9b710004cdba79778873c3965daf255d42b21090ddc8955836d72d233f75",
+      "target_sha256": "cf70195a190406e26cfc92a0b8af889010a8f65693e0ef515c322927b7f24b45",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "broker/index.md",
+        "source_sha256": "e1923d3842eb2fa4c0d30c536ab327ac9dff7678c8f7d86c2452db2907b84cfa"
+      }
+    },
+    {
       "source": "projects/uix/concepts/index.md",
       "locale": "en",
       "target": "en/projects/uix/concepts/index.md",
@@ -1109,6 +1319,36 @@
       }
     },
     {
+      "source": "projects/uix/developers/cards.md",
+      "locale": "en",
+      "target": "en/projects/uix/developers/cards.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Automatic hui-card/ha-card cases and missing-config fallback now have explicit AND/OR nesting in German matching EN/FR. Four optional config fields, local theme application and custom-card/YAML/theme purpose agree. Frozen EN first JS example had missing comma/callback delimiters, repaired with visible editorial note, original hashes retained and source-bound sync guard; all DE/EN/FR JS examples parse with node --check. French remaining English theme/alt labels translated. No browser runtime test claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "30c70617b4eafe397558a3c36ec4f4a35bc3807ad95ce22cec1fd7e3d313c884",
+      "target_sha256": "e8257e8a31c258e79f9468b0dac346147ed6210be931ae41cdd2e7bf1efde913",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "developers/cards.md",
+        "source_sha256": "b015e562376a5bb3b6c437b48d2b0a1c461419490667859b1c2bad9963806d1d"
+      }
+    },
+    {
+      "source": "projects/uix/developers/cards.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/developers/cards.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Automatic hui-card/ha-card cases and missing-config fallback now have explicit AND/OR nesting in German matching EN/FR. Four optional config fields, local theme application and custom-card/YAML/theme purpose agree. Frozen EN first JS example had missing comma/callback delimiters, repaired with visible editorial note, original hashes retained and source-bound sync guard; all DE/EN/FR JS examples parse with node --check. French remaining English theme/alt labels translated. No browser runtime test claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "30c70617b4eafe397558a3c36ec4f4a35bc3807ad95ce22cec1fd7e3d313c884",
+      "target_sha256": "c84be8f7648803c36dc90db8b9faf889492245a0d0146887079c7c99bdc669d6",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "developers/cards.md",
+        "source_sha256": "b015e562376a5bb3b6c437b48d2b0a1c461419490667859b1c2bad9963806d1d"
+      }
+    },
+    {
       "source": "projects/uix/developers/index.md",
       "locale": "en",
       "target": "en/projects/uix/developers/index.md",
@@ -1196,6 +1436,36 @@
         "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
         "path": "extras/always-patch-ha-card.md",
         "source_sha256": "ba4f021473c9f6d9d56b183c1873c966235ca39b2072a2df5bc6b7784a405e5c"
+      }
+    },
+    {
+      "source": "projects/uix/extras/custom-sidebar-panels.md",
+      "locale": "en",
+      "target": "en/projects/uix/extras/custom-sidebar-panels.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Stable9.1/HA2026.11 prerequisite, supported target schemes, admin restriction, desktop internal new-tab versus Companion navigation, popup fallback, stable internal URL/edit/delete/order and history-replacing redirect agree with canonical EN. External URLs not falsely offered inside Companion.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "549e3f398f1369de22c7dd8cea7cf756f9313548c564c0949bf4e3f7a80d78f4",
+      "target_sha256": "46aea501ef8f3d5dd5291339abc09e1a315de73d331c10b3c55ec4dd58f1e014",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "extras/custom-sidebar-panels.md",
+        "source_sha256": "6f5f3e8d23fecced06d5adab4e96bba1c58e3c439bad0f78d4b0da4def3c57dc"
+      }
+    },
+    {
+      "source": "projects/uix/extras/custom-sidebar-panels.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/extras/custom-sidebar-panels.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Stable9.1/HA2026.11 prerequisite, supported target schemes, admin restriction, desktop internal new-tab versus Companion navigation, popup fallback, stable internal URL/edit/delete/order and history-replacing redirect agree with canonical EN. External URLs not falsely offered inside Companion.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "549e3f398f1369de22c7dd8cea7cf756f9313548c564c0949bf4e3f7a80d78f4",
+      "target_sha256": "f8d688353cffea2ac23c62a1a3b7e5fb78afe2faf50b40a955035ca0a41734de",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "extras/custom-sidebar-panels.md",
+        "source_sha256": "6f5f3e8d23fecced06d5adab4e96bba1c58e3c439bad0f78d4b0da4def3c57dc"
       }
     },
     {
@@ -1339,6 +1609,66 @@
       "target_sha256": "8c99ec0e1758c7b4778248a778b38539477e5c23b23529a55184a7dbb107cd45"
     },
     {
+      "source": "projects/uix/forge/sparks/attribute.md",
+      "locale": "en",
+      "target": "en/projects/uix/forge/sparks/attribute.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Five fields/defaults, first-match semantics, Blank Card selector, shadow-root crossing, templated value and empty attribute versus remove agree. Three example purposes retained; German Tooltip alternative is an editorial suggestion rather than different API behavior.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "108c2c0c9ac1520b19e893f5125dbc485575616aeb2de6e85025cc4533113f94",
+      "target_sha256": "08c3a571e8a52e4e4245e6cbfcd773849c70d45613f94826c21a0d6bddad01da",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/attribute.md",
+        "source_sha256": "68e6b5e4963331db637466fe4761ae7a4068f322cbcdd4b17788a77867fc9322"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/attribute.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/forge/sparks/attribute.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Five fields/defaults, first-match semantics, Blank Card selector, shadow-root crossing, templated value and empty attribute versus remove agree. Three example purposes retained; German Tooltip alternative is an editorial suggestion rather than different API behavior.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "108c2c0c9ac1520b19e893f5125dbc485575616aeb2de6e85025cc4533113f94",
+      "target_sha256": "dc331358453f39de3e828b27446401c7c6ac5b5f0ea3d34414e8573852ab1675",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/attribute.md",
+        "source_sha256": "68e6b5e4963331db637466fe4761ae7a4068f322cbcdd4b17788a77867fc9322"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/index.md",
+      "locale": "en",
+      "target": "en/projects/uix/forge/sparks/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All sixteen spark destinations and optional forge.sparks/type purpose agree. Canonical EN button summary corrected to before OR after, matching the frozen canonical button page; no code change. German intentionally compact index and French equivalent descriptions retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "1467c4ae719d6dba865a32d9f52ba6aa63cf92188fef79ebe5936d0b215c61b0",
+      "target_sha256": "6e54844df2b136be4ba0e8f30241b12139ab5ef6f8af1ae1f9750dc37e578c97",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/index.md",
+        "source_sha256": "97178ef31bb7b5b88e10e2cc7531e020b80328d3ca7ddb5a46d035ba2585ec70"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/index.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/forge/sparks/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All sixteen spark destinations and optional forge.sparks/type purpose agree. Canonical EN button summary corrected to before OR after, matching the frozen canonical button page; no code change. German intentionally compact index and French equivalent descriptions retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "1467c4ae719d6dba865a32d9f52ba6aa63cf92188fef79ebe5936d0b215c61b0",
+      "target_sha256": "62c17de590fa57b2bd2c6ec21254301e08d21aadc8ea69d25019a886f607a738",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/index.md",
+        "source_sha256": "97178ef31bb7b5b88e10e2cc7531e020b80328d3ca7ddb5a46d035ba2585ec70"
+      }
+    },
+    {
       "source": "projects/uix/forge/sparks/theme.md",
       "locale": "en",
       "target": "en/projects/uix/forge/sparks/theme.md",
@@ -1429,6 +1759,96 @@
       }
     },
     {
+      "source": "projects/uix/using/apps.md",
+      "locale": "en",
+      "target": "en/projects/uix/using/apps.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "App host versus config-installed-list, noninteractive CRT versus frame content, experimental same-origin frame styling, full slug precedence over stripped hash/core/local slug, console discovery, internal runtime separation and optional Always-patch requirement agree with canonical EN.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "32750c39efe61747d19fc28270297ef716a7cacd1df67de0764f9cbe87e090b9",
+      "target_sha256": "383e6206160f449ef3645426831f616cf73f42fc3326736d713d9522d2460307",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/apps.md",
+        "source_sha256": "a6265560a307cf91b5bd3235ec1504f17d65cc2161ba46bf57bae945436ae334"
+      }
+    },
+    {
+      "source": "projects/uix/using/apps.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/using/apps.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "App host versus config-installed-list, noninteractive CRT versus frame content, experimental same-origin frame styling, full slug precedence over stripped hash/core/local slug, console discovery, internal runtime separation and optional Always-patch requirement agree with canonical EN.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "32750c39efe61747d19fc28270297ef716a7cacd1df67de0764f9cbe87e090b9",
+      "target_sha256": "447f5a8f044a4c04355b66c4d8733d8d0639b5392afbe8cc295db8b3e07ef90f",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/apps.md",
+        "source_sha256": "a6265560a307cf91b5bd3235ec1504f17d65cc2161ba46bf57bae945436ae334"
+      }
+    },
+    {
+      "source": "projects/uix/using/cards.md",
+      "locale": "en",
+      "target": "en/projects/uix/using/cards.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "hui-card versus ha-card injection roots, CSS variables, local theme precedence/child override and high-to-low custom CSS variable scope agree. Examples and canonical image retained; no runtime claim.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "06986eb53e48ffc51cfc3538d1a8d76169a0c3955fcfd0f2e3597c7893004c72",
+      "target_sha256": "02248236d5004c90fd46f0a97fdea892da6daf96ba5bc3e68c56ecc026f78eee",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/cards.md",
+        "source_sha256": "03c0d5ca0336e1ca226f033ede2e7c0928b0c9ad3ce759518582836eaf613095"
+      }
+    },
+    {
+      "source": "projects/uix/using/cards.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/using/cards.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "hui-card versus ha-card injection roots, CSS variables, local theme precedence/child override and high-to-low custom CSS variable scope agree. Examples and canonical image retained; no runtime claim.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "06986eb53e48ffc51cfc3538d1a8d76169a0c3955fcfd0f2e3597c7893004c72",
+      "target_sha256": "e1979d7b96bb04336af8835cd05f1b3002349879e41f21c0d4696a4592ea1df2",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/cards.md",
+        "source_sha256": "03c0d5ca0336e1ca226f033ede2e7c0928b0c9ad3ce759518582836eaf613095"
+      }
+    },
+    {
+      "source": "projects/uix/using/custom-panels.md",
+      "locale": "en",
+      "target": "en/projects/uix/using/custom-panels.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Direct versus experimental iframe styling, shared internal runtime, inherited/current theme, name-based frame variable, two BrowserMod examples, actual-DOM inspection and reload only on selected-theme change agree. French example title is cosmetic; no extra behavior promised.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "f6e0c83f71025d233d1529c9ff7e806fcd7646c6cab0afdd1cb9f496bbe53d8a",
+      "target_sha256": "fdd4eb59eadbbe931af37f2b3399ff55dc2ad893da40b4252865f45c56ca0cab",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/custom-panels.md",
+        "source_sha256": "b06d063a5cead025934f634668fd6d40cf22fd8c2f3658a69c0e79ceb288f28b"
+      }
+    },
+    {
+      "source": "projects/uix/using/custom-panels.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/using/custom-panels.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Direct versus experimental iframe styling, shared internal runtime, inherited/current theme, name-based frame variable, two BrowserMod examples, actual-DOM inspection and reload only on selected-theme change agree. French example title is cosmetic; no extra behavior promised.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "f6e0c83f71025d233d1529c9ff7e806fcd7646c6cab0afdd1cb9f496bbe53d8a",
+      "target_sha256": "5496609292e00f2cdc30e084496404b2203ef68a31fd8685f7617edc9801ea1a",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/custom-panels.md",
+        "source_sha256": "b06d063a5cead025934f634668fd6d40cf22fd8c2f3658a69c0e79ceb288f28b"
+      }
+    },
+    {
       "source": "projects/uix/using/custom-sidebar-panels.md",
       "locale": "en",
       "target": "en/projects/uix/using/custom-sidebar-panels.md",
@@ -1447,6 +1867,36 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "9bd567490df3c97b6751960e062aaaccb5012cb669ed8fd56fe4eae47cabf3c8",
       "target_sha256": "6b9fb5c56ff75b171bf9396977947b13566854f8587c769e74fc7adf3481b3a7"
+    },
+    {
+      "source": "projects/uix/using/images.md",
+      "locale": "en",
+      "target": "en/projects/uix/using/images.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Seven affected element types, entity-picture prerequisite, dots-to-underscores IDs, ancestor/theme scope, entity-specific-only map overview and generic override precedence agree with canonical EN. Template support and original image fallback retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "4e52f829877d9d4de105d4ddae4b1251a784c85468c92cb04a1b39931f21e187",
+      "target_sha256": "0d8fc59407825ea54a152b0b7b5b936675d7b5ac2ab975196ae51bf66012fa61",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/images.md",
+        "source_sha256": "cd93932aee59d37d0fcb07bb81d2eadd25df1db46dc7cfc98517ecf00b4c6e48"
+      }
+    },
+    {
+      "source": "projects/uix/using/images.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/using/images.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Seven affected element types, entity-picture prerequisite, dots-to-underscores IDs, ancestor/theme scope, entity-specific-only map overview and generic override precedence agree with canonical EN. Template support and original image fallback retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "4e52f829877d9d4de105d4ddae4b1251a784c85468c92cb04a1b39931f21e187",
+      "target_sha256": "4752e1ea24db71534eccfa7452090bd2ee9f5ac2af05ada165c3de82d6c99223",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/images.md",
+        "source_sha256": "cd93932aee59d37d0fcb07bb81d2eadd25df1db46dc7cfc98517ecf00b4c6e48"
+      }
     },
     {
       "source": "projects/uix/using/index.md",
@@ -1506,6 +1956,36 @@
         "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
         "path": "using/other.md",
         "source_sha256": "314d7f3ead4b1786c8972e4992bd5f4c308a259c8910a5d5496a4a70129181d1"
+      }
+    },
+    {
+      "source": "projects/uix/using/section-backgrounds.md",
+      "locale": "en",
+      "target": "en/projects/uix/using/section-backgrounds.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Sibling background DOM, two override methods, required background:true, direct per-update variable transfer, whole-section template context and !important caveat agree with canonical EN and both translations.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "f369ae8571c9a477b9010d341da49db68201b55b7bb56ef4b2aa45ac1ccd7aad",
+      "target_sha256": "897d31929915e9a10f3eca0e34b5a57faebaf9f3daa82eca9c0c6568f8efad0d",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/section-backgrounds.md",
+        "source_sha256": "f38124de3a357a0c9a0fd13d6d30c49e8078db9f93304d1561108d684bbeaf84"
+      }
+    },
+    {
+      "source": "projects/uix/using/section-backgrounds.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/using/section-backgrounds.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Sibling background DOM, two override methods, required background:true, direct per-update variable transfer, whole-section template context and !important caveat agree with canonical EN and both translations.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "f369ae8571c9a477b9010d341da49db68201b55b7bb56ef4b2aa45ac1ccd7aad",
+      "target_sha256": "e92e3d57ed1d471def5c96cccc369ea351b1ffaff9675b5d3ae43dc1dc7ac4ef",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/section-backgrounds.md",
+        "source_sha256": "f38124de3a357a0c9a0fd13d6d30c49e8078db9f93304d1561108d684bbeaf84"
       }
     },
     {
@@ -1849,6 +2329,26 @@
       "target_sha256": "e834c1d94c3e23d85ef2d96beaf6f2d4191f20093b99800ba97001291e3376e6"
     },
     {
+      "source": "sammlung/flex-table-card/index.md",
+      "locale": "en",
+      "target": "en/collection/flex-table-card/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Declared1.4.0/GPL3, seven capabilities, eleven guide links, original authority and externally loaded images agree. French incorrectly called itself German and had a damaged image-source sentence; both corrected.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "3a326f3f4983672fffd7b3386f4fafe1f944eaecc4d4498b166ea98e74573553",
+      "target_sha256": "769fcd97879bb26f7f444576237ae5eac6efeea8fa54a4bb0b17922099c715cf"
+    },
+    {
+      "source": "sammlung/flex-table-card/index.md",
+      "locale": "fr",
+      "target": "fr/collection/flex-table-card/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Declared1.4.0/GPL3, seven capabilities, eleven guide links, original authority and externally loaded images agree. French incorrectly called itself German and had a damaged image-source sentence; both corrected.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "3a326f3f4983672fffd7b3386f4fafe1f944eaecc4d4498b166ea98e74573553",
+      "target_sha256": "bdfc5df723b728176f77283190d7b07b0764cecb439fe09f974bd312454f247e"
+    },
+    {
       "source": "sammlung/flex-table-card/installation.md",
       "locale": "en",
       "target": "en/collection/flex-table-card/installation.md",
@@ -1909,6 +2409,26 @@
       "target_sha256": "3f3cdaa6bc2a0b28969ba74b5120e8a7b4c39f15eee5a2b4d4d68d7d65ae15bc"
     },
     {
+      "source": "sammlung/ha-apps.md",
+      "locale": "en",
+      "target": "en/collection/ha-apps.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Six app rows and historical versions, foundation Logic Studio versus experimental Blocks for HA, archived Parcel alternative, MQTT-client capabilities/settings preservation and shared add-on repository agree. These are historical feature rows, not a new latest-release/runtime assertion.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "aeca4aff4a98f30a7b84921fd8b1467a8b2f392f0ad171e1b24da8d52f895183",
+      "target_sha256": "377f262aebd3be2aebbdaa01a2bf821f3659ba8f8229af70b87be06f7cf1851c"
+    },
+    {
+      "source": "sammlung/ha-apps.md",
+      "locale": "fr",
+      "target": "fr/collection/ha-apps.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Six app rows and historical versions, foundation Logic Studio versus experimental Blocks for HA, archived Parcel alternative, MQTT-client capabilities/settings preservation and shared add-on repository agree. These are historical feature rows, not a new latest-release/runtime assertion.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "aeca4aff4a98f30a7b84921fd8b1467a8b2f392f0ad171e1b24da8d52f895183",
+      "target_sha256": "3fdcdd427ed5ec26991de8f7ff328ece8210ef99f9aec5adbd5785454901136e"
+    },
+    {
       "source": "sammlung/ha-blueprints.md",
       "locale": "en",
       "target": "en/collection/ha-blueprints.md",
@@ -1927,6 +2447,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "122a65edfd8e662147fbb48f8ed758b083a169fcf23199222409227c58edfebc",
       "target_sha256": "a7d00e49d0863530ed4e9ddb952c231692a6ce7ca7ea4f638e3becf92adadafd"
+    },
+    {
+      "source": "sammlung/ha-cards.md",
+      "locale": "en",
+      "target": "en/collection/ha-cards.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Historical HA2026.11 two-card live qualification and other open findings, five documented/planned rows, independent UIX category and six minimum guide requirements agree. English additional Bubble upstream link is a deliberate curated extra, not an omitted German capability.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "c10b7a5bb1f5230317584788ec79c5168758ee0c9f1bc66ab8add8ce65ffaff4",
+      "target_sha256": "8286e515228f432c721617604cccbd13063e7b40ee52790dee47d43bbb59c7c3"
+    },
+    {
+      "source": "sammlung/ha-cards.md",
+      "locale": "fr",
+      "target": "fr/collection/ha-cards.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Historical HA2026.11 two-card live qualification and other open findings, five documented/planned rows, independent UIX category and six minimum guide requirements agree. English additional Bubble upstream link is a deliberate curated extra, not an omitted German capability.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "c10b7a5bb1f5230317584788ec79c5168758ee0c9f1bc66ab8add8ce65ffaff4",
+      "target_sha256": "905a420d6ad0ea16d2011aa4db29d674e257641faec8004f5e5423c11a4aa03f"
     },
     {
       "source": "sammlung/ha-dashboard.md",
@@ -2029,6 +2569,26 @@
       "target_sha256": "9317db0e94e3dd3def08a98f41a23196d739d9486dbe8f443a1072532659e844"
     },
     {
+      "source": "sammlung/index.md",
+      "locale": "en",
+      "target": "en/collection/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Nine collection categories, unofficial original-authority/licence/version rules and separate UIX scope agree. Missing English personal-German origin/ChatGPT comparison restored. French recommendation row no longer promises French upstream docs, and the local UIX link is labeled French while origin remains German.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "cf2690a7e58693c52f3082be4ec04f089524ec3f23a5afb80847bb1817741ba2",
+      "target_sha256": "634613f36560f063107367457993562fe1140215ac841b06ec32d299d884f5da"
+    },
+    {
+      "source": "sammlung/index.md",
+      "locale": "fr",
+      "target": "fr/collection/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Nine collection categories, unofficial original-authority/licence/version rules and separate UIX scope agree. Missing English personal-German origin/ChatGPT comparison restored. French recommendation row no longer promises French upstream docs, and the local UIX link is labeled French while origin remains German.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "cf2690a7e58693c52f3082be4ec04f089524ec3f23a5afb80847bb1817741ba2",
+      "target_sha256": "dabbb41699a03c00b11641970c096d200cb626a8c38968ad301ff3911ff5cb75"
+    },
+    {
       "source": "sammlung/mushroom/beispiele.md",
       "locale": "en",
       "target": "en/collection/mushroom/beispiele.md",
@@ -2087,6 +2647,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "729618f64d96caeabbe98b1275a4249d84b038f195915c2a186754ae6428bc7a",
       "target_sha256": "f164ee1d03a8f462e7bfab82f2e37bdcd182e66a68a0b053a0b71fb7be9c799f"
+    },
+    {
+      "source": "sammlung/mushroom/index.md",
+      "locale": "en",
+      "target": "en/collection/mushroom/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All local navigation, declared5.2.2/source commit, Apache-2 versus ISC discrepancy, unofficial scope and customization boundaries agree. English introduction now explicitly restores Lovelace purpose and UI editor for every card instead of only linking the German entry.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5067d29e4d38f4689ec3fe657b9f3075811fddfba8115e008e524dbdcfe5ed55",
+      "target_sha256": "dfe6afd8641a42ec15bf0943bd57326de263c39d16f9c43d8103c19f774c68a5"
+    },
+    {
+      "source": "sammlung/mushroom/index.md",
+      "locale": "fr",
+      "target": "fr/collection/mushroom/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All local navigation, declared5.2.2/source commit, Apache-2 versus ISC discrepancy, unofficial scope and customization boundaries agree. English introduction now explicitly restores Lovelace purpose and UI editor for every card instead of only linking the German entry.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5067d29e4d38f4689ec3fe657b9f3075811fddfba8115e008e524dbdcfe5ed55",
+      "target_sha256": "41a955a93f438340c66ca7c3860d8fe7d56a8bcd0d538c2cd579f7e1deceb7db"
     },
     {
       "source": "sammlung/mushroom/installation.md",
@@ -2187,6 +2767,126 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "5bdc9dc05e354e194ad5514abae39556223fa7dc05687aacdf8bc932e9a98d45",
       "target_sha256": "61d309739156514fd8fd7b74cff7db087a41816589afd5b24711f014ad3e0a5e"
+    },
+    {
+      "source": "sammlung/zendure-ha/fehlersuche.md",
+      "locale": "en",
+      "target": "en/collection/zendure-ha/fehlersuche.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Six basic checks, five diagnostic meanings, eleven legacy recovery steps including ten-minute Bluetooth delay and manual300/400W test agree. English fuse group mistranslated as backup group corrected; German UI labels are retained with English explanations.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "2c6a648ccde193066c6b195a1c090e161762e7c3bf8d36add4498ea3e50f549d",
+      "target_sha256": "980f6f006289de3644d1d91d2a46f3843fef2286c28f1862e0ea9d698921351f"
+    },
+    {
+      "source": "sammlung/zendure-ha/fehlersuche.md",
+      "locale": "fr",
+      "target": "fr/collection/zendure-ha/fehlersuche.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Six basic checks, five diagnostic meanings, eleven legacy recovery steps including ten-minute Bluetooth delay and manual300/400W test agree. English fuse group mistranslated as backup group corrected; German UI labels are retained with English explanations.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "2c6a648ccde193066c6b195a1c090e161762e7c3bf8d36add4498ea3e50f549d",
+      "target_sha256": "eee0cd135ce0436285605908713bb8a34b53da4ac9c6a1cd0de68c932ca21c52"
+    },
+    {
+      "source": "sammlung/zendure-ha/fuse-group.md",
+      "locale": "en",
+      "target": "en/collection/zendure-ha/fuse-group.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Safety/control grouping, single-strategy limits, no-group exclusion, nine power options and seven connection statuses agree after corrections. English tax group repaired to control grouping; EN/FR calibration status means calibrating now, not already calibrated. Declared original electrical-safety responsibility retained, no installation audit performed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "ef42a070fa56be1fbbf1db68119f88629a0d807210faa0212ec3922edb15fb97",
+      "target_sha256": "0d7b85b05384c571665c3929629fa074e3418b5ee4315158b7bdf5d5a1540d00"
+    },
+    {
+      "source": "sammlung/zendure-ha/fuse-group.md",
+      "locale": "fr",
+      "target": "fr/collection/zendure-ha/fuse-group.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Safety/control grouping, single-strategy limits, no-group exclusion, nine power options and seven connection statuses agree after corrections. English tax group repaired to control grouping; EN/FR calibration status means calibrating now, not already calibrated. Declared original electrical-safety responsibility retained, no installation audit performed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "ef42a070fa56be1fbbf1db68119f88629a0d807210faa0212ec3922edb15fb97",
+      "target_sha256": "8c435ca865c9b202f97f000b2aa457c754b1edc7006228986edcfab8368bb534"
+    },
+    {
+      "source": "sammlung/zendure-ha/index.md",
+      "locale": "en",
+      "target": "en/collection/zendure-ha/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Declared2026-08-29 repository snapshot, tag names, conflicting README/HACS minimum versions, ten supported-device rows including limited V4600 token support, six guides and partly outdated wiki caveat agree. English detail table erroneous WITH licence repaired to MIT and reviewed distinguished from runtime tested.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "fa152ef85854a6e397752a0c19fa900515a0b6fb0118e16aff313c7053fba971",
+      "target_sha256": "1ca39334e4137c79c8788466fdf985367d45c6bfa567c071bbd7e9ce0aceb2ac"
+    },
+    {
+      "source": "sammlung/zendure-ha/index.md",
+      "locale": "fr",
+      "target": "fr/collection/zendure-ha/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Declared2026-08-29 repository snapshot, tag names, conflicting README/HACS minimum versions, ten supported-device rows including limited V4600 token support, six guides and partly outdated wiki caveat agree. English detail table erroneous WITH licence repaired to MIT and reviewed distinguished from runtime tested.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "fa152ef85854a6e397752a0c19fa900515a0b6fb0118e16aff313c7053fba971",
+      "target_sha256": "d06d2dca448ebc6e8c254b9f4d687a4b4cfbba483c139c11fbe6423ac927dc07"
+    },
+    {
+      "source": "sammlung/zendure-ha/installation.md",
+      "locale": "en",
+      "target": "en/collection/zendure-ha/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Main-account token, old-login migration warning, seven setup fields/P1 signs and post-setup Fuse Group agree. Obsolete HACS category/explore path updated in all locales against official HACS dashboard docs. Required core restart no longer confused with browser refresh; French collapsed steps fixed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "65c21ad0d172945dc95ec5aeb8d5be1ae05395170a8deed2884cbcf84bb91549",
+      "target_sha256": "fe7df90f1cc36f3bd6464a6b68618cf95ca2192403652a7289281f4296c2e32b"
+    },
+    {
+      "source": "sammlung/zendure-ha/installation.md",
+      "locale": "fr",
+      "target": "fr/collection/zendure-ha/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Main-account token, old-login migration warning, seven setup fields/P1 signs and post-setup Fuse Group agree. Obsolete HACS category/explore path updated in all locales against official HACS dashboard docs. Required core restart no longer confused with browser refresh; French collapsed steps fixed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "65c21ad0d172945dc95ec5aeb8d5be1ae05395170a8deed2884cbcf84bb91549",
+      "target_sha256": "6e8a6ae7048475222f89ec240b5b512c5714bf956865f593acb08b6464088813"
+    },
+    {
+      "source": "sammlung/zendure-ha/lokales-mqtt.md",
+      "locale": "en",
+      "target": "en/collection/zendure-ha/lokales-mqtt.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four legacy families versus newer zenSDK devices, Bluetooth/network/broker prerequisites, real network address rather than core-mosquitto, six setup fields, supported connection modes and possible restart/notification/reset agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "03b3c08f9d699889fb54c84d361bc11098a9636866291d59d6f03a4286f54879",
+      "target_sha256": "665f377ab417ab8ab5d5c4bc17a650c48403d15ced747b4e467d6996c7fa0ef6"
+    },
+    {
+      "source": "sammlung/zendure-ha/lokales-mqtt.md",
+      "locale": "fr",
+      "target": "fr/collection/zendure-ha/lokales-mqtt.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four legacy families versus newer zenSDK devices, Bluetooth/network/broker prerequisites, real network address rather than core-mosquitto, six setup fields, supported connection modes and possible restart/notification/reset agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "03b3c08f9d699889fb54c84d361bc11098a9636866291d59d6f03a4286f54879",
+      "target_sha256": "55b86d5bb5abfffa03592e8d51bc7152cab42058c9f1013fc268b1b6353b85e9"
+    },
+    {
+      "source": "sammlung/zendure-ha/manager.md",
+      "locale": "en",
+      "target": "en/collection/zendure-ha/manager.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "P1 sign versus manual battery-power sign, six modes, one active controller warning, Fuse Group/SoC/limits/status distribution and partly outdated source warning agree. English power/performance and charging/loading mistranslations repaired; only-one strategy made explicit.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "6b2ffaa6e6093b525751bccbc8acac05b26adb74b2eef505e6d8145983b935b1",
+      "target_sha256": "74373e0a21203856d38560bd1aa1cbe88e96fd5f4add205609e9c71c6a215711"
+    },
+    {
+      "source": "sammlung/zendure-ha/manager.md",
+      "locale": "fr",
+      "target": "fr/collection/zendure-ha/manager.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "P1 sign versus manual battery-power sign, six modes, one active controller warning, Fuse Group/SoC/limits/status distribution and partly outdated source warning agree. English power/performance and charging/loading mistranslations repaired; only-one strategy made explicit.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "6b2ffaa6e6093b525751bccbc8acac05b26adb74b2eef505e6d8145983b935b1",
+      "target_sha256": "5ed0e4232ea1eb91b272cabfcd200bd610ddacbfaad2d2f491bcbffc5827be40"
     }
   ]
 }

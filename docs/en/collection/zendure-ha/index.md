@@ -33,11 +33,11 @@ This documentation is an independent English guide based on the German documenta
 | --- | --- |
 | Original project | [zendure/zendure-ha](https://github.com/zendure/zendure-ha) |
 | Original Wiki | [Zendure-HA Wiki](https://github.com/Zendure/Zendure-HA/wiki) |
-| Documented repo status | `master`, tested on 29.08.2026 |
+| Documented repo status | `master`, reviewed on 29.08.2026 |
 | Last tags in repo | `1.4.4`, `1.4.4-pre1` |
 | Minimum version according to README | Home Assistant `2025.5+` |
 | Minimum version according to HACS file | Home Assistant `2025.4.0` |
-| License | WITH |
+| License | MIT |
 | Integration domain | `zendure_ha` |
 
 ### Supported devices according to the original documentation {#unterstutzte-gerate-laut-originaldoku}

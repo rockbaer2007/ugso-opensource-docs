@@ -4,7 +4,7 @@ description: German Mushroom Cards documentation entry in the UGSo Open Source c
 ---
 # Mushroom Cards
 
-This is the collection entry for the German Mushroom Cards documentation.
+Mushroom is a collection of Lovelace cards for Home Assistant, designed for dashboards that are quick and easy to configure. Every card includes a UI editor. This section provides an unofficial English guide; the German reference is also linked below.
 
 The German documentation is maintained as an unofficial translation and practical guide. The original Mushroom project remains authoritative.
 

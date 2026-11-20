@@ -9,7 +9,7 @@ description: Documentation française non officielle pour la carte « flex-table
 `flex-table-card` est une carte HACS/Lovelace pour Home Assistant qui permet d'afficher des données tabulaires avec une grande flexibilité. Elle est particulièrement adaptée aux listes comportant un grand nombre de lignes ou de colonnes, comme par exemple des listes de colis, des aperçus de capteurs, des niveaux de batterie, des listes d'appareils ou des tableaux de référence statiques.
 
 ::: warning Documentation française non officielle
-Cette documentation constitue une adaptation indépendante en langue allemande. Le projet original demeure la référence absolue.
+Cette documentation constitue une adaptation indépendante en français. Le projet original demeure la référence.
 :::
 
 ## État du projet {#projektstand}
@@ -48,4 +48,4 @@ Cette documentation constitue une adaptation indépendante en langue allemande. 
 
 ## Images externes {#externe-bilder}
 
-Les images d'exemple sont récupérées directement depuis le dépôt d'origine si nécessaire. ...chargé, plutôt que de le copier dans cette collection.
+Les images d'exemple sont chargées directement depuis le dépôt d'origine lorsque cela est nécessaire, plutôt que copiées dans cette collection.

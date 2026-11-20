@@ -12,7 +12,7 @@ Sparks are optional behaviours added to a [UIX Forge](../index.md) forged elemen
 Available sparks:
 
 - :speech_balloon: [Tooltip](./tooltip.md) — attach a styled tooltip to any element within the forged element.
-- :material-button-cursor: [Button](button.md) — insert an interactive `ha-button` element as a sibling after any element within the forged element.
+- :material-button-cursor: [Button](button.md) — insert an interactive `ha-button` element as a sibling before or after a target element within the forged element.
 - :material-badge-account-horizontal-outline: [Badge](badge.md) — insert a Web Awesome-styled `uix-badge` as a sibling before or after any element within the forged element.
 - :label: [Attribute](attribute.md) — add, replace or remove an attribute of any element within the forged element.
 - :zap: [Event](event.md) — receive DOM events from `fire-dom-event` actions and expose their data as template variables.
