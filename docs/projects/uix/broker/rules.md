@@ -30,6 +30,8 @@ Diese Regeln passen, wenn der Anchor `ha-button.action-button[data-action]` ist,
 
 Die erweiterte Form wird genutzt, wenn eine Regel ein anderes Anchor-Element prüfen soll:
 
+`anchor` ist relativ zum Interaction Anchor. Ein vorangestelltes `&` beginnt an der Dokumentwurzel; die ausführliche `select_tree`-Form ist immer absolut zur Dokumentwurzel. `match` prüft anschließend das so ausgewählte Element mit der Host-Element-Syntax.
+
 ```yaml
 rules:
   - anchor: "$ ha-dialog"

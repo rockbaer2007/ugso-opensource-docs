@@ -31,7 +31,7 @@ Avec **CallMeBot 0.1.2 et Blocks for HA 0.1.69**, le champ de profil ouvre une l
 
 ![Sélecteur de profil CallMeBot en français](/assets/callmebot/profiles-fr.png)
 
-Mettre à jour et redémarrer les deux applications, puis recharger Blocks. HA doit être connecté au courtier et activer la découverte MQTT avec le préfixe standard `homeassistant`. CallMeBot découvre un capteur de diagnostic, normalement `sensor.ugso_callmebot_profiles` ; Blocks lit son catalogue via sa connexion HA existante. Le capteur peut être renommé, car son marqueur identifie le catalogue. Base technique : [capteurs MQTT HA et attributs JSON](https://www.home-assistant.io/integrations/sensor.mqtt/).
+Mettre à jour et redémarrer les deux applications, puis recharger Blocks. HA doit être connecté au courtier et activer la découverte MQTT avec le préfixe standard `homeassistant`. CallMeBot publie un capteur de diagnostic via MQTT Discovery, normalement `sensor.ugso_callmebot_profiles` ; Blocks lit son catalogue via sa connexion HA existante. Le capteur peut être renommé, car son marqueur identifie le catalogue. Base technique : [capteurs MQTT HA et attributs JSON](https://www.home-assistant.io/integrations/sensor.mqtt/).
 
 Le catalogue retenu `ugso/callmebot/profiles` contient uniquement IDs, noms, profil par défaut, nombre et marqueur. Aucun numéro, message ou clé API n’est publié. Modifications et reconnexions MQTT actualisent le catalogue. Les noms sont visibles dans MQTT et HA.
 

@@ -19,7 +19,7 @@ Pakete und Zusatztools werden zentral auf [visualstudio.ugso-software.de](https:
 
 Seit Studio-Version 0.1.89 kannst du ZIP-basierte Pakete mit der Endung `.tp` installieren. Bisherige `.tp.zip`-Dateien bleiben nutzbar; Endung und Manifest müssen zur Tool-Paketart passen.
 
-Über **Einstellungen → Tools** installierst du ein lokales `*.tp.zip`. Installierte Tools erscheinen zusätzlich als Symbole in zwei Reihen der Editor-Werkzeugleiste; das Koffersymbol dort öffnet direkt den Tools-Tab zur Verwaltung. Tool-Pakete ergänzen den Editor, nicht die Widget-Palette oder Runtime. Schnittstelle 0.1 unterstützt eine deklarative Aktion: die Hintergrundfarbe der aktuellen Seite setzen. Ein Klick auf das Tool-Symbol oder **Ausführen** im Tools-Tab zeigt zunächst eine Vorschau; erst **Anwenden** übernimmt die Änderung. Sie lässt sich mit **Rückgängig** zurücknehmen und wird über den normalen Projektweg gespeichert. Bei der Installation wird keine Aktion ausgeführt.
+Über **Einstellungen → Tools** installierst du ein lokales `*.tp.zip`. Installierte Tools erscheinen zusätzlich als Symbole in zwei Reihen der Editor-Werkzeugleiste; das Koffersymbol dort öffnet direkt den Tools-Tab zur Verwaltung. Tool-Pakete ergänzen den Editor, nicht die Widget-Palette oder Runtime. Die ursprüngliche deklarative Aktion setzt die Hintergrundfarbe der aktuellen Seite. Als weitere Aktion steht der unten beschriebene Colorpicker bereit. Ein Klick auf das Tool-Symbol oder **Ausführen** im Tools-Tab zeigt zunächst eine Vorschau; erst **Anwenden** übernimmt die Änderung. Sie lässt sich mit **Rückgängig** zurücknehmen und wird über den normalen Projektweg gespeichert. Bei der Installation wird keine Aktion ausgeführt.
 
 ## UGSo Colorpicker 1.2.0
 
@@ -37,7 +37,7 @@ Das Zusatztool benötigt **HA Grafik Visual Studio 0.1.112 oder neuer**. Install
 - Als Ausgabe **HEX** oder **Farbname** wählen und **Kopieren** drücken. Ohne Browser-Zwischenablage kannst du die Ausgabe markieren und manuell kopieren.
 - Die 31.918 Farbnamen von [meodai/color-names](https://github.com/meodai/color-names) sind lokal mitgeliefert; Internetzugriff ist nicht erforderlich. Exakte und nächstliegende Treffer werden unterschieden. Die Ähnlichkeit wird über RGB-Abstand bestimmt.
 - Farbnamen sind Bezeichnungen, keine CSS-Farbwerte. Für Widget-Farbfelder HEX kopieren.
-- Das Tool benötigt keine Projekt- oder HA-Rechte und ändert keine Projektdaten. Auf dem Farbkreis ändern Pfeiltasten links/rechts den Farbton und oben/unten die Sättigung.
+- Der Farbwähler benötigt keine Projektrechte und ändert keine Projektdaten; gemeinsame Favoriten erfordern HA-Administratorrechte. Auf dem Farbkreis ändern Pfeiltasten links/rechts den Farbton und oben/unten die Sättigung.
 
 Die neue deklarative Aktion `color-picker` verwendet `capabilities: []`. Der Dialog und die Farbnamenliste gehören zur Studio-Version; das reine Datenpaket aktiviert das Tool. Alte Studio-Versionen unterstützen diese Aktion nicht. Lizenz und Quellenhinweis sind im Dialog erreichbar. Die vorhandene Aktion `set-page-background` bleibt unverändert.
 
@@ -75,4 +75,4 @@ Das ZIP darf höchstens 2 MB, das Manifest 200 KB und jedes Bild 50 KB groß sei
 2. Wähle die Datei unter **Einstellungen → Tools**. Die Liste zeigt Paket-ID, Version, Lizenz und das enthaltene Tool.
 3. Öffne für das Tool über sein Symbol in der Editor-Werkzeugleiste oder mit **Ausführen** im Tools-Tab die Vorschau und bestätige die gewünschte Seitenänderung mit **Anwenden**.
 
-Pakete können im Tool-Tab entfernt werden. Eigene Skripte, Home-Assistant-Dienste, externe URLs, GitHub-Installation und Updates sind noch nicht Teil von 0.1. Die geplanten Kompatibilitäts- und Erweiterungsregeln stehen in den [Tool-Regeln im Quellcode](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/tool-rules.md).
+Pakete können im Tool-Tab entfernt werden. Eigene Skripte, Home-Assistant-Dienste und das Öffnen beliebiger externer URLs sind keine Paketaktionen der Schnittstelle 0.1. Installation per GitHub-Link und Updates sind dagegen ab Studio 0.1.204 wie oben beschrieben verfügbar. Die geplanten Kompatibilitäts- und Erweiterungsregeln stehen in den [Tool-Regeln im Quellcode](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/tool-rules.md).

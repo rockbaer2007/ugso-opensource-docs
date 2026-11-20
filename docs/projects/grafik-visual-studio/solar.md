@@ -64,7 +64,7 @@ Das Kopfteil besitzt vier optische Solarpanel-Anschlussbuchsen: links oben/unten
 
 Unter **Linienanschlüsse** hat jede verfügbare Seite zwei Einstellungen:
 
-- **Rolle:** Aus, Eingang oder Ausgang. Standardmäßig sind die Linienpunkte aus.
+- **Rolle:** Aus, Eingang oder Ausgang. Standardmäßig sind die Linienpunkte aus, ausgenommen die vier zuvor beschriebenen Solarpanel-Eingänge des Kopfteils.
 - **Wert:** Leistung, Temperatur oder Ladezustand (SoC).
 
 Ein **Ausgang** gibt den ausgewählten Wert mit Einheit weiter, zum Beispiel an Number oder an eine SVG-Linie. Ein **Eingang** übernimmt diesen Wert aus genau einer angeschlossenen Quelle und ersetzt für diesen Kanal die Entität. Verwende höchstens einen Eingang pro Wert. Ein anderer Ausgang kann den übernommenen Wert weiterreichen; Rückkopplungen werden abgefangen. Es werden keine Home-Assistant-Entitäten beschrieben.

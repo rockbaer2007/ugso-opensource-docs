@@ -64,7 +64,7 @@ L'élément supérieur (tête) dispose de quatre connecteurs visuels pour pannea
 
 Dans la section **Connexions de lignes**, chaque côté disponible propose deux réglages :
 
-- **Rôle :** Désactivé, Entrée ou Sortie. Par défaut, les points de connexion sont désactivés.
+- **Rôle :** Désactivé, Entrée ou Sortie. Par défaut, les points de connexion sont désactivés, sauf les quatre entrées solaires de la tête décrites ci-dessus.
 - **Valeur :** Puissance, Température ou État de charge (SoC).
 
 Une **sortie** transmet la valeur sélectionnée, accompagnée de son unité, par exemple vers un élément *Number* ou une ligne SVG. Une **entrée** récupère cette valeur depuis une source unique connectée et remplace l'entité pour ce canal. N'utilisez qu'une seule entrée par valeur. Une autre sortie peut relayer la valeur ainsi récupérée ; les boucles de rétroaction sont gérées (interceptées). Aucune entité Home Assistant n'est modifiée.

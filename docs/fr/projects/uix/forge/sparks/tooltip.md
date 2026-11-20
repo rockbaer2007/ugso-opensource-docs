@@ -64,6 +64,8 @@ L'infobulle est ajoutée uniquement au **premier** élément correspondant à `f
 Le helper DOM [`uix_forge_path()`](../../concepts/dom.md#uix_forge_path0-forge-helper) vous aide à déterminer le chemin à utiliser pour `for`.
 
 :::
+Si la cible possède déjà un attribut natif `title`, le [spark Attribute](./attribute) peut le supprimer pour éviter deux infobulles simultanées.
+
 ## Modèles dans le contenu
 
 Avec `hover`, l’infobulle reste ouverte lorsque le pointeur entre dans son contenu, permettant le défilement avec `--uix-tooltip-max-height` et `--uix-tooltip-overflow: auto`. `manual` ne s’active pas tout seul : définir `open: true`.
@@ -178,7 +180,7 @@ element:
 
 ## Compatibilité avec les versions antérieures
 
-Les options `trigger` et `open`, ainsi que le maintien de l’infobulle lors du passage du pointeur dans son contenu, ont été ajoutés en **8.3.0-beta.8** et sont inclus dans la base stable **8.4.0**. Les valeurs de style ont changé à partir de **8.3.0-beta.6** ; beta.7 a ajouté `--ha-tooltip-text-color` à la chaîne de repli. Avec **8.2.0**, les valeurs historiques comprennent `--secondary-background-color`, `--ha-font-size-s`, `--ha-font-weight-normal`, une marge intérieure de `8px`, `--ha-border-radius-sm` et `--ha-card-box-shadow`. Le tableau ci-dessus décrit les valeurs plus récentes.
+Les options `trigger` et `open`, ainsi que le maintien de l’infobulle lors du passage du pointeur dans son contenu, ont été ajoutés en **8.3.0-beta.8** et sont inclus dans la référence stable **9.1.0**. Les valeurs de style ont changé à partir de **8.3.0-beta.6** ; beta.7 a ajouté `--ha-tooltip-text-color` à la chaîne de repli. Avec **8.2.0**, les valeurs historiques comprennent `--secondary-background-color`, `--ha-font-size-s`, `--ha-font-weight-normal`, une marge intérieure de `8px`, `--ha-border-radius-sm` et `--ha-card-box-shadow`. Le tableau ci-dessus décrit les valeurs plus récentes.
 
 ## Flèche et dimensions héritées {#fleche-et-dimensions-heritees}
 

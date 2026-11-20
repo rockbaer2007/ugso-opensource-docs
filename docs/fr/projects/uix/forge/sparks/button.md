@@ -54,7 +54,7 @@ Le helper DOM [`uix_forge_path()`](../../concepts/dom.md#uix_forge_path0-forge-h
 | Clé | Type | Obligatoire | Valeur par défaut | Description |
 | --- | ---- | -------- | ------- | ----------- |
 | `type` | `string` | ✅ | — | Doit être défini sur `button`. |
-| `after` | `string` | l'un de `after`/`before` ✅ | Avec la [configuration de carte vide](../forge.md#blank-card-config), la valeur par défaut est `uix-forge-blank-card $ div.content`. Sinon, elle est `""`. Pour utiliser `before` dans cette configuration, définissez explicitement `after: ""`. | Sélecteur UIX de l'élément de référence. Le bouton est inséré comme élément frère **après** l'élément correspondant. |
+| `after` | `string` | l'un de `after`/`before` ✅ | Avec la [configuration de carte vide](../forge.md#blank-card-config), la valeur par défaut est `uix-forge-blank-card $ div.content`. Sinon, elle est `""`. Voir la limite de placement ci-dessous. | Sélecteur UIX de l'élément de référence. Le bouton est inséré comme élément frère **après** l'élément correspondant. |
 | `before` | `string` | l'un de `after`/`before` ✅ | — | Sélecteur UIX de l'élément de référence. Le bouton est inséré comme élément frère **avant** l'élément correspondant. |
 | `entity` | `string` | | — | ID de l'entité transmis aux gestionnaires d'action, par exemple `toggle`. Obligatoire pour les actions qui utilisent une entité. |
 | `icon` | `string` | | — | Nom d'une icône MDI, par exemple `mdi:lightbulb`, affichée à la place du libellé. Ne peut pas être utilisé avec `label`. |
@@ -271,7 +271,11 @@ element:
 
 `variant` peut prendre l'une des valeurs `brand`, `neutral`, `danger`, `warning` ou `success`. Si cette option est omise, Home Assistant utilise la variante `brand` par défaut.
 
-`appearance` peut prendre l'une des valeurs `accent`, `filled` ou `plain`. Si cette option est omise, Home Assistant utilise l'apparence `accent` par défaut.
+`appearance` peut prendre l'une des valeurs `accent`, `filled`, `outlined` ou `plain`. Si cette option est omise, Home Assistant utilise l'apparence `accent` pour un bouton avec libellé. Un bouton avec icône seule utilise `neutral` et `plain`, comme indiqué dans le tableau.
+
+::: warning Précision issue du code source de la version documentée
+La recherche de cible privilégie `after`, y compris sa valeur par défaut pour Blank Card ; un `before` non vide commande l'insertion avant cette cible résolue. Un `after` vide ne désactive pas cette valeur par défaut. Ne combinez pas les deux sélecteurs ; pour un placement prévisible dans Blank Card, utilisez explicitement `after`. L'ancien conseil `after: ""` n'est pas un contournement fiable. Constat sur le code au commit de référence, sans nouveau test dans le navigateur.
+:::
 
 ::: info "Illustration des variantes et apparences de bouton"
 ![Illustration des variantes et apparences de bouton](../../assets/page-assets/forge/sparks/button-variant-appearance.gif)

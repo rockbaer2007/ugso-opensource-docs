@@ -40,6 +40,7 @@ def reviewed_corrections(text, raw, relative):
         'forge/sparks/state-badge.md': 'dd8b0527f0d457131335d7538ccb5e5a02c524848ad13af5a20ef73e68ed0361',
         'forge/sparks/more-info.md': '6e157b4563e761900f14f0d013f483fbeb0d2b040008c050a1eb806622ad738c',
         'extras/frontend-states-throttling.md': 'bd12e71948743dd03086bd30dddebb223b34ea619548d3ed87d52a85b3d4a00b',
+        'forge/sparks/button.md': '3e7eff524e19c14bed60b7c7ab8dfaad080faa638b2e15f1d760be1535d3268b',
     }
     if path not in expected_sources:
         return text
@@ -67,14 +68,22 @@ def reviewed_corrections(text, raw, relative):
                  '`setThrottleOverride(null)` clears the session override and restores server defaults; '
                  'it does not necessarily disable throttling. Use `setThrottleOverride({ enable: false })` '
                  'to disable it for the session even when enabled on the server.\n:::\n')
-    elif path == 'forge/sparks/more-info.md':
+    elif path in ('forge/sparks/more-info.md', 'forge/sparks/button.md'):
         text += ('\n::: warning Editorial source-code clarification (2026-11-20)\n'
                  'At this frozen revision, target lookup prefers `after` (including the Blank Card default), '
                  'while a nonempty `before` selects insertion before that resolved target. Do not combine '
                  'both selectors or rely on an empty `after` to disable the Blank Card default. '
                  'For predictable Blank Card placement, use explicit `after`. This is a source-code finding, '
                  'not a new browser test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/'
-                 + REVISION + '/src/forge/sparks/uix-spark-more-info.ts).\n:::\n')
+                 + REVISION + '/src/forge/sparks/uix-spark-'+relative.stem+'.ts).\n:::\n')
+        if path.endswith('/button.md'):
+            old='If you wish to target `before` using Blank card config, set explicitly to `""`.'
+            assert text.count(old)==1
+            text=text.replace(old, 'See the editorial placement limitation below.')
+            old='Button `appearance` can be one of `accent`, `filled`, `plain`.'
+            assert text.count(old)==1
+            text=text.replace(old, 'Button `appearance` can be one of `accent`, `filled`, `outlined`, `plain`.')
+            text += '\nIcon-only buttons use `neutral` and `plain` defaults, as specified in the configuration table; the general `brand`/`accent` defaults apply to labelled buttons.\n'
     else:
         old = 'If you wish to target `before` using Blank card config, set explicitly to `""`.'
         assert text.count(old) == 1

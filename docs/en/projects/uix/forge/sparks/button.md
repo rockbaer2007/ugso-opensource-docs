@@ -56,7 +56,7 @@ You can use the [`uix_forge_path()`](../../concepts/dom.md#uix_forge_path0-forge
 | Key | Type | Required | Default | Description |
 | --- | ---- | -------- | ------- | ----------- |
 | `type` | `string` | ✅ | — | Must be `button`. |
-| `after` | `string` | one of `after`/`before` ✅ | When the UIX Forge element is using [Blank card config](../forge.md#blank-card-config), the default is `uix-forge-blank-card $ div.content`. Otherwise, `""`. If you wish to target `before` using Blank card config, set explicitly to `""`. | UIX selector for the reference element. The button is inserted as a sibling **after** the matched element. |
+| `after` | `string` | one of `after`/`before` ✅ | When the UIX Forge element is using [Blank card config](../forge.md#blank-card-config), the default is `uix-forge-blank-card $ div.content`. Otherwise, `""`. See the editorial placement limitation below. | UIX selector for the reference element. The button is inserted as a sibling **after** the matched element. |
 | `before` | `string` | one of `after`/`before` ✅ | — | UIX selector for the reference element. The button is inserted as a sibling **before** the matched element. |
 | `entity` | `string` | | — | Entity ID passed to action handlers (e.g. `toggle`). Required for entity-based actions. |
 | `icon` | `string` | | — | MDI icon string (e.g. `mdi:lightbulb`) placed in the label slot of the button. Mutually exclusive with `label`. |
@@ -280,8 +280,14 @@ element:
 
 Button `variant` can be one of `brand`, `neutral`, `danger`, `warning`, `success`. When omitted, the default Home Assistant button variant `brand` is used.
 
-Button `appearance` can be one of `accent`, `filled`, `plain`. When omitted, the default Home Assistant button appearance `accent` is used.
+Button `appearance` can be one of `accent`, `filled`, `outlined`, `plain`. When omitted, the default Home Assistant button appearance `accent` is used.
 
 ::: info Button variant and appearance image
 ![Button variant and appearance image](/projects/uix/assets/page-assets/forge/sparks/button-variant-appearance.gif)
 :::
+
+::: warning Editorial source-code clarification (2026-11-20)
+At this frozen revision, target lookup prefers `after` (including the Blank Card default), while a nonempty `before` selects insertion before that resolved target. Do not combine both selectors or rely on an empty `after` to disable the Blank Card default. For predictable Blank Card placement, use explicit `after`. This is a source-code finding, not a new browser test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/src/forge/sparks/uix-spark-button.ts).
+:::
+
+Icon-only buttons use `neutral` and `plain` defaults, as specified in the configuration table; the general `brand`/`accent` defaults apply to labelled buttons.

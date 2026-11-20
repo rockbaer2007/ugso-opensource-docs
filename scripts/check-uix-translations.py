@@ -51,6 +51,17 @@ def main():
         item = {"path": path, "source_sha256": entry["sha256"], "table_identifiers": table_keys(english)}
         for locale, base in (("de", "projects/uix"), ("fr", "fr/projects/uix")):
             text = (DOCS / base / path).read_text(encoding="utf-8")
+            if path == "broker/rules.md":
+                # These canonical examples use indented code, not fenced blocks.
+                # Guard keys and values independently of translated prose/hash approval.
+                for pattern in (
+                    r"(?m)^\s*rules:\n\s+- type: user_is_admin\s*$",
+                    r"(?m)^\s*- type: user\n\s+match: wall-\*\n\s+- type: user_is_admin\n\s+match: false\s*$",
+                ):
+                    if not re.search(pattern, text):
+                        raise SystemExit(f"Missing or translated user-rule YAML keys: {locale}/{path}")
+                if re.search(r"(?m)^ {4,}- tapez", text):
+                    raise SystemExit(f"Translated key in indented YAML example: {locale}/{path}")
             missing = [key for key in item["table_identifiers"] if key not in text]
             if missing:
                 raise SystemExit(f"Missing {locale} technical identifiers in {path}: {missing}")

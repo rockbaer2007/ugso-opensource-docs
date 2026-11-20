@@ -19,7 +19,7 @@ Packages and helper tools are provided centrally at [visualstudio.ugso-software.
 
 Starting with Studio 0.1.89, you can install ZIP-based packages ending in `.tp`. Existing `.tp.zip` files remain supported; the extension and manifest must both identify a tool package.
 
-Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tools also appear as icons in two rows of the editor toolbar; its toolbox icon opens the Tools tab for management. Tool packages extend the editor, not the widget palette or runtime. Interface 0.1 supports one declarative action: setting the current page's background color. Clicking a toolbar tool icon or **Run** in the Tools tab opens a preview; only **Apply** commits the change. **Undo** can revert it, and normal project saving persists it. Installation itself does not run an action.
+Under **Settings → Tools**, you can install a local `*.tp.zip`. Installed tools also appear as icons in two rows of the editor toolbar; its toolbox icon opens the Tools tab for management. Tool packages extend the editor, not the widget palette or runtime. The original declarative action sets the current page's background color. The Colorpicker below provides an additional action. Clicking a toolbar tool icon or **Run** in the Tools tab opens a preview; only **Apply** commits the change. **Undo** can revert it, and normal project saving persists it. Installation itself does not run an action.
 
 ## UGSo Colorpicker 1.2.0
 
@@ -75,4 +75,4 @@ The ZIP limit is 2 MB, the manifest limit is 200 KB, and each image is limited t
 2. Select it under **Settings → Tools**. The list shows the package ID, version, license and included tool.
 3. Open the preview from the tool icon in the editor toolbar or with **Run** in the Tools tab, then confirm the page change with **Apply**.
 
-Packages can be removed from the Tools tab. Custom scripts, Home Assistant services, external URLs, GitHub installation and updates are not part of 0.1 yet. See the planned compatibility and extension points in the [tool rules in the source repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/tool-rules.md).
+Packages can be removed from the Tools tab. Custom scripts, Home Assistant services and opening arbitrary external URLs are not interface 0.1 package actions. Installation through a GitHub link and updates are available from Studio 0.1.204 as described above. See the planned compatibility and extension points in the [tool rules in the source repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/tool-rules.md).

@@ -36,7 +36,7 @@ allow_toggle: false
 language: auto
 ```
 
-L’éditeur visuel permet de modifier le titre, les lignes visibles (entier 1–50), **Autoriser la commutation** et la langue (`auto`, `de`, `en`, `fr`). Un titre vide masque l’en-tête. La langue automatique suit HA, avec l’anglais comme repli.
+L’éditeur visuel permet de modifier le titre, les lignes visibles (entier 1–50), **Autoriser la commutation** (par défaut : `false`) et la langue (`auto`, `de`, `en`, `fr`). Un titre vide masque l’en-tête. La langue automatique suit HA, avec l’anglais comme repli.
 
 Dans **Afficher les automatisations**, toutes les entrées sont initialement cochées : **cochée = affichée**, décochée = masquée uniquement dans cette carte. **Tout sélectionner** affiche toutes les entrées ; **Tout désélectionner** masque toutes les entrées actuellement répertoriées. Les nouvelles automatisations sont sélectionnées par défaut. La sélection est enregistrée par carte sans modifier les automatisations ni les autres cartes. Les entités décochées temporairement indisponibles restent répertoriées pour pouvoir être sélectionnées à nouveau. En YAML : `hidden_entities: [automation.mon_automatisation]` contient les identifiants décochés. Sans ce paramètre, le comportement précédent reste inchangé.
 

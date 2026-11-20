@@ -36,7 +36,7 @@ allow_toggle: false
 language: auto
 ```
 
-The visual editor exposes title, visible rows (integer 1–50), **Allow toggling**, and language (`auto`, `de`, `en`, `fr`). An empty title hides the heading. Automatic language follows HA, falling back to English.
+The visual editor exposes title, visible rows (integer 1–50), **Allow toggling** (default: `false`), and language (`auto`, `de`, `en`, `fr`). An empty title hides the heading. Automatic language follows HA, falling back to English.
 
 **Show automations** initially checks every entry: **checked = show**, unchecked = hide only in this card. **Select all** shows every entry; **Deselect all** hides all currently listed entries. Newly discovered automations are selected by default. Selection is saved per card without changing automations or other cards. Temporarily unavailable, deselected entities remain listed so they can be selected again. Optional YAML: `hidden_entities: [automation.my_automation]` lists deselected IDs. Omitting it preserves the previous behavior.
 

@@ -252,4 +252,6 @@ Home Assistant stellt verschiedene Kombinationen aus `variant` und `appearance` 
 
 ## Blank Card: vor statt nach dem Inhalt einfügen
 
-Bei einer Blank Card besitzt `after` bereits den Standardwert `uix-forge-blank-card $ div.content`. Wenn du stattdessen `before` verwenden möchtest, setze deshalb `after: ""` ausdrücklich. Es muss genau eine der beiden Bezugsrichtungen wirksam sein.
+::: warning Quellcode-Hinweis zum dokumentierten Stand
+Die Zielsuche bevorzugt `after`, auch dessen Blank-Card-Standard. Ein gesetztes `before` fügt den Button vor dem so gefundenen Ziel ein. Ein leeres `after` deaktiviert den Standard nicht. Deshalb nicht beide Selektoren kombinieren; für eine eindeutige Blank-Card-Platzierung explizit `after` verwenden. Der frühere Hinweis mit `after: ""` war kein zuverlässiger Workaround. Dies ist ein Quellcodebefund am festgehaltenen Commit, kein neuer Browsertest.
+:::

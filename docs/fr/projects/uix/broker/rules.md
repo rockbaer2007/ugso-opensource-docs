@@ -78,13 +78,7 @@ rules:
 Règles d'utilisation de Home Assistant disponibles dans la version 8.3.0-beta.1
 
 :::
-Utilisez `type: user` pour faire correspondre l'utilisateur Home Assistant connecté par son
-nom d’affichage (`hass.user.name`) ou identifiant d’utilisateur stable (`hass.user.id`). Maison
-Les noms d'utilisateur de l'assistant ne sont pas disponibles dans l'objet utilisateur frontal et ne sont pas
-soutenu par cette règle ; utilisez un nom d’affichage ou un identifiant. `match` et `value` utilisent le
-mêmes syntaxe et opérateurs de correspondance que [règles de données capturées](#regles-relatives-aux-donnees-capturees),
-y compris les caractères génériques, les expressions régulières et la composition booléenne. Réglez soit
-`match` ou `value`.
+Utilisez `type: user` pour vérifier l'utilisateur Home Assistant connecté par son nom d'affichage (`hass.user.name`) ou son identifiant stable (`hass.user.id`). Le nom de connexion n'est pas disponible dans l'objet utilisateur du frontend et n'est pas pris en charge. Définissez soit `match`, soit `value`, avec les mêmes opérateurs que les [règles de données capturées](#regles-relatives-aux-donnees-capturees), y compris les jokers, expressions régulières et compositions booléennes.
 
 ```yaml
 rules:
@@ -97,9 +91,7 @@ rules:
     match: 9f1362c9e0a24d918c66d4fdcf12b001
 ```
 
-Pour un correspondant positif, le nom ou l'identifiant peuvent correspondre. Un matcher annulé,
-y compris `not` ou `!=`, doit exclure les deux champs. Par exemple, cela correspond
-chaque utilisateur sauf l'utilisateur nommé `wall-panel` (ou avec cet identifiant) :
+Une comparaison positive peut correspondre au nom ou à l'identifiant. Une comparaison négative, notamment `not` ou `!=`, doit exclure les deux champs. Cet exemple accepte tous les utilisateurs sauf celui nommé `wall-panel` ou portant cet identifiant :
 
 ```yaml
 rules:
@@ -115,14 +107,14 @@ utilisateurs non-administrateurs. Il prend en charge les mêmes objets de corres
 Utilisateur administrateur :
 
     rules:
-      - tapez : user_is_admin
+      - type: user_is_admin
 
 Utilisateur non-administrateur dont le nom ou l'identifiant commence par wall- :
 
     rules:
-      - tapez : utilisateur
+      - type: user
         match: wall-*
-      - tapez : user_is_admin
+      - type: user_is_admin
         match: false
 
 ### Fragment d'URL du navigateur

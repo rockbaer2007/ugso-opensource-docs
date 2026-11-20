@@ -193,8 +193,7 @@ Chaque nom de `elements` est affecté à l'enfant correspondant avec la proprié
 
 ![Grid spark template areas example](../../assets/page-assets/forge/sparks/grid-template-areas.png)
 
-!!! tip
-    Vous pouvez répéter un nom de zone dans plusieurs cellules de `areas` pour qu'un élément enfant s'étende sur ces cellules. Par exemple, `"header header"` fait occuper les deux colonnes à `header`.
+**Conseil :** Vous pouvez répéter un nom de zone dans plusieurs cellules de `areas` pour qu'un élément enfant s'étende sur ces cellules. Par exemple, `"header header"` fait occuper les deux colonnes à `header`.
 
 :::
 ::: details Zones adaptatives avec des requêtes média

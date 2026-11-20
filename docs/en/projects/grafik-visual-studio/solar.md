@@ -64,7 +64,7 @@ The head has four visible PV input sockets: upper/lower left and upper/lower rig
 
 Under **Line ports**, each available side has two settings:
 
-- **Role:** Off, Input or Output. Line ports are off by default.
+- **Role:** Off, Input or Output. Line ports are off by default, except the four head PV inputs described above.
 - **Value:** Power, Temperature or State of charge (SoC).
 
 An **output** forwards the chosen value and unit to Number or an SVG line. An **input** receives that value from exactly one connected source, replacing the entity for that channel. Use at most one input per value. Another output can forward the received value; feedback loops are detected. Home Assistant entities are never written.

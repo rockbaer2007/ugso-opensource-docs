@@ -1582,7 +1582,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "ae4b4483d07e5304413902175e3df9b1a022691c5358ec23ab23a8f201cb36f7",
-      "target_sha256": "809d81a26b717189a69eff1f192ca74127f66d0b8abc7927065b42f07534071f",
+      "target_sha256": "6c48f9d3c36787c94660cc1f180bdf9d108c33cf616f202f866f6a8422d9d2bd",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1606,7 +1606,9 @@
         "Source-only backticked strings were checked in context: translated sample entity IDs, package filenames or fields documented in prose/code without the same inline formatting. Relevant functionality is still described.",
         "Source-only external URLs were checked against the target references: localized documentation/demo URLs, localized external guides, source attribution elsewhere or a local equivalent instead of the German absolute URL. This comparison does not check remote server availability."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/automation-status-card/index.md",
@@ -1614,7 +1616,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "ae4b4483d07e5304413902175e3df9b1a022691c5358ec23ab23a8f201cb36f7",
-      "target_sha256": "90974115718dbb0e26dda23ac59a48e00ef86827b5f8c50f4037d4d39abd8fb3",
+      "target_sha256": "ae1b20bdccc32649ca6c1065bb18dbc9fddfc49dbf7872d9dc3723279a863d43",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1638,7 +1640,9 @@
         "Source-only backticked strings were checked in context: translated sample entity IDs, package filenames or fields documented in prose/code without the same inline formatting. Relevant functionality is still described.",
         "Source-only external URLs were checked against the target references: localized documentation/demo URLs, localized external guides, source attribution elsewhere or a local equivalent instead of the German absolute URL. This comparison does not check remote server availability."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/advanced.md",
@@ -1837,7 +1841,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "b79bff8de42d6bae98d1041d23991c2eded219ee05df4894ae6cfb060a6439dc",
-      "target_sha256": "2a126380c6e46186d8f97e299594288cd0a1be9e242fc83c9a106d82fff78b6f",
+      "target_sha256": "3a0e14ab01982813df120d6fc083deeaecc1e008650bf8f6573e7ad017bc1602",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1846,7 +1850,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/conversion.md",
@@ -2122,7 +2128,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "2eb62146adf1de00e01f742f799bacf6c6bd3ac4f8a19ddc6b2894ddd67ffbe7",
-      "target_sha256": "5c921e9f608470b1eca6527ad5d46609684f647e6a2266d1b389c8a941a785a2",
+      "target_sha256": "8e6f14ab8c23e5b31419cf52544444fd255195be6efd3b78fe6f36328fd858b1",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -2131,7 +2137,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/callmebot-signal/index.md",
@@ -2177,7 +2185,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "ca7782a8d7754b7e2be3607e1d3a7f150fa4b067976a29b8c07f3c6d6b22a44d",
-      "target_sha256": "77bac5bd0aaab87114ece038616a5fb653c1eae2e90b6deee6a994ae7130e831",
+      "target_sha256": "8919d437596e3dd5026ba1a4116d88becfc3320d3c25a8275089f153af3c509e",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -2186,7 +2194,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/callmebot/index.md",
@@ -2194,7 +2204,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "ca7782a8d7754b7e2be3607e1d3a7f150fa4b067976a29b8c07f3c6d6b22a44d",
-      "target_sha256": "db86b4ed1168ae1f9d88057e08eb8801643f0f03d2dc8342ebccc21ef0561bba",
+      "target_sha256": "28e1fcdac6b74c0548a6f757929f8729650113efc104d1aea11fe178ebdbfff7",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -2203,7 +2213,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/dashboard-user-manager/index.md",
@@ -3000,8 +3012,8 @@
       "target": "en/projects/grafik-visual-studio/solar.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "9faad6b80bdad22bebcf19022e8131fd385a984207be1e06fd9e3fb161df4aa6",
-      "target_sha256": "f0a01c8823e206c4e52842ee02513f9c9cbe2a23f298b3fd4a381a11dd3b474b",
+      "source_sha256": "d06df2572b233e9f9ce1e4f4a7a643645fdc0df2ac04a7cb7c30b294e0ef0e60",
+      "target_sha256": "47d16f7cec088e22f18886f7af93da2e7a17e5b324f9de67556080ced294044e",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -3010,15 +3022,17 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/grafik-visual-studio/solar.md",
       "target": "fr/projects/grafik-visual-studio/solar.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "9faad6b80bdad22bebcf19022e8131fd385a984207be1e06fd9e3fb161df4aa6",
-      "target_sha256": "6b1c77b9dd81c58565510362a1341058e737278c65f312304d8078702d346b2f",
+      "source_sha256": "d06df2572b233e9f9ce1e4f4a7a643645fdc0df2ac04a7cb7c30b294e0ef0e60",
+      "target_sha256": "d6386feaafde04e262dc45dadfeead2dbf1a08f80e018b16d19a3ef453e395c0",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -3027,7 +3041,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/grafik-visual-studio/svg-line.md",
@@ -3184,8 +3200,8 @@
       "target": "en/projects/grafik-visual-studio/tool-packages.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "677cfe44de02f5a4d4893b6c815e1b687c921b427d6481fd7c87207590ec3e9a",
-      "target_sha256": "c5e2b6132bfcca01d5733b3b1bed7a01addc41ef430cd4d7021df0c54ab269a8",
+      "source_sha256": "03bc0a0804bffedead0ab6c5d4935c0d28f71c450ada16b94fb15bb38390d355",
+      "target_sha256": "b2239864f01a165f40276d2ce6d065d99b5dea17341efe9f04fe72f71fa25435",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -3204,15 +3220,17 @@
         "Source-only backticked strings were checked in context: translated sample entity IDs, package filenames or fields documented in prose/code without the same inline formatting. Relevant functionality is still described.",
         "Source-only external URLs were checked against the target references: localized documentation/demo URLs, localized external guides, source attribution elsewhere or a local equivalent instead of the German absolute URL. This comparison does not check remote server availability."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/grafik-visual-studio/tool-pakete.md",
       "target": "fr/projects/grafik-visual-studio/tool-packages.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "677cfe44de02f5a4d4893b6c815e1b687c921b427d6481fd7c87207590ec3e9a",
-      "target_sha256": "0f7068486b8c8dc654215c13fc8816de1f464ed816b88ed1cd7a35c8a11ae57b",
+      "source_sha256": "03bc0a0804bffedead0ab6c5d4935c0d28f71c450ada16b94fb15bb38390d355",
+      "target_sha256": "4f23c0daa1313cc6f322bec7901ffc8d6c44be93cfeca385917d3c0f92a3e607",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -3221,7 +3239,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/grafik-visual-studio/weather-heating.md",
@@ -3382,7 +3402,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "62daac83b3177cc709496898656cd1e2f622d7b84692ef348e331aaeb9b3999c",
-      "target_sha256": "09c82bec4dfafb4536a1cad09cc4f26acae0f1183f8d9069bcbdf93ddd09bbd2",
+      "target_sha256": "685523e667898979a875b3f6d4ceb6409825ff5a080a600c8160c7724ed725b3",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -3391,7 +3411,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/hadash/ansicht-exportieren.md",
@@ -4902,8 +4924,8 @@
       "target": "fr/projects/uix/forge/sparks/grid.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "b5e5404045ade1cd48203b534c0c0ad4232febecea69712a499e656af736b55b",
-      "target_sha256": "290fc72e3defa2851c84c9aa0b89ddcae657541b65e4442e7a69bd3d7e233f6f",
+      "source_sha256": "153f93f4d71a4186ab22150ce9abe3227e9fbfc4bd424f404cdc98f960cd4f1d",
+      "target_sha256": "398b3c0178b84a353f8336073362409036c4a3b6b2d771cd9e7b09acba7b4968",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4916,7 +4938,9 @@
       "difference_assessment": [
         "Source-only inline strings were checked in context: canonical UIX wording, expressions demonstrated in code rather than repeated inline, or version/attribution formatting. They are not a list of missing API options."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/lock.md",

@@ -31,7 +31,7 @@ With **CallMeBot 0.1.2 and Blocks for HA 0.1.69**, the profile field opens a sea
 
 ![English CallMeBot profile picker](/assets/callmebot/profiles-en.png)
 
-Update/restart both apps and reload Blocks. HA must connect to the broker and enable MQTT discovery with the standard `homeassistant` prefix. CallMeBot discovers a diagnostic sensor, normally `sensor.ugso_callmebot_profiles`; Blocks reads its catalog through the existing HA connection. Renaming this sensor is supported because its catalog marker identifies it. Technical basis: [HA MQTT sensors and JSON attributes](https://www.home-assistant.io/integrations/sensor.mqtt/).
+Update/restart both apps and reload Blocks. HA must connect to the broker and enable MQTT discovery with the standard `homeassistant` prefix. CallMeBot publishes a diagnostic sensor through MQTT Discovery, normally `sensor.ugso_callmebot_profiles`; Blocks reads its catalog through the existing HA connection. Renaming this sensor is supported because its catalog marker identifies it. Technical basis: [HA MQTT sensors and JSON attributes](https://www.home-assistant.io/integrations/sensor.mqtt/).
 
 The retained `ugso/callmebot/profiles` catalog contains IDs, names, default profile, count and a marker only. No phone numbers, messages or API keys are published. Changes and MQTT reconnections refresh it. Profile names are visible in MQTT and HA.
 

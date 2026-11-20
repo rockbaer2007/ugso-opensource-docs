@@ -68,12 +68,12 @@ Références : ensemble original des blocs Blockly pour les [boucles](https://gi
 | atan2 | Également repris du Blockly original | Non visible dans les illustrations mathématiques fournies ; ceci n'est pas considéré comme une lacune d'ioBroker. |
 | Texte sur une ou plusieurs lignes | Bloc de texte existant | Champ multiligne original. |
 | Saut de ligne, concaténation, ajout | Nouveaux blocs de texte | LF/CRLF/CR ; concaténation via l'icône « engrenage » (+/-) ; l'ajout affecte une nouvelle variable texte. |
-| Longueur/vide/contient/rechercher/caractère/sous-chaîne | Nouveaux blocs de texte | Indexation à partir de 1 ; résultat 0 si l'élément est introuvable. Les plages incluent le début et la fin ; la sous-chaîne peut être définie sans borne de fin. |
+| Longueur/vide/contient/rechercher/caractère/sous-chaîne | Nouveaux blocs de texte | Indexation à partir de 1 ; résultat 0 si l'élément est introuvable. Les plages incluent le début et la fin ; les variantes de sous-chaîne comptées depuis la fin restent à implémenter. |
 | Majuscules/minuscules/casse titre, trim, compter, remplacer, inverser | Nouveaux blocs de texte | Utilisation de littéraux (et non d'expressions régulières) ; règles Unicode/Python. L'inversion de texte fait également partie du périmètre Blockly original. |
 | print / prompt | Action de journalisation (log) disponible ; prompt non implémenté | Une boîte de dialogue dans le navigateur ne constituerait pas une saisie adaptée à l'automatisation HA (Home Assistant) exécutée ultérieurement. |
 | Liste vide / Liste avec éléments | Bloc de liste existant (0 à 100 entrées) | L'icône « engrenage » (+/-) permet de modifier les entrées. |
 | Répétition de liste, longueur/vide, index, lecture, sous-liste | Blocs de liste existants et nouveaux | Lecture depuis le début/la fin, premier/dernier élément, ou élément aléatoire. La sous-liste inclut la borne de fin. |
-| Modifier / insérer / supprimer dans une liste | Nouveaux blocs d'action | Crée une nouvelle liste dans la variable sélectionnée ; n'affecte pas les autres variables. « Lire et supprimer » en tant que bloc combiné ; la modification depuis la fin et la suppression aléatoire restent à prévoir. |
+| Modifier / insérer / supprimer dans une liste | Nouveaux blocs d'action | Crée une nouvelle liste dans la variable sélectionnée ; n'affecte pas les autres variables. Le bloc combiné « Lire et supprimer », la modification depuis la fin et la suppression aléatoire restent à implémenter. |
 | Scinder/fusionner, trier, inverser | Nouveaux blocs de liste | Numérique / Texte / Texte (insensible à la casse) ; la liste originale est préservée. |
 
 ### Utilisation et valeurs d'exécution {#bedienung-und-laufzeitwerte}

@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 195 | 57 |
-| FR | 195 | 57 |
+| EN | 207 | 45 |
+| FR | 207 | 45 |
 
 ## Complete page inventory
 
@@ -93,23 +93,23 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Content reviewed](/en/projects/atlas/tablet-test) | [Content reviewed](/fr/projects/atlas/tablet-test) |
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Content reviewed](/en/projects/atlas/tablet-uix-dauertest) | [Content reviewed](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Content reviewed](/en/projects/atlas/overview) | [Content reviewed](/fr/projects/atlas/overview) |
-| [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Technically compared](/en/projects/automation-status-card/) | [Technically compared](/fr/projects/automation-status-card/) |
+| [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Content reviewed](/en/projects/automation-status-card/) | [Content reviewed](/fr/projects/automation-status-card/) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Technically compared](/en/projects/blocks-for-ha/advanced) | [Technically compared](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Technically compared](/en/projects/blocks-for-ha/blockly-audit) | [Technically compared](/fr/projects/blocks-for-ha/blockly-audit) |
 | [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Technically compared](/en/projects/blocks-for-ha/blocks) | [Technically compared](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Content reviewed](/en/projects/blocks-for-ha/catalog/) | [Content reviewed](/fr/projects/blocks-for-ha/catalog/) |
 | [projects/blocks-for-ha/catalog/sensor-light.md](/projects/blocks-for-ha/catalog/sensor-light) | [Content reviewed](/en/projects/blocks-for-ha/catalog/sensor-light) | [Content reviewed](/fr/projects/blocks-for-ha/catalog/sensor-light) |
-| [projects/blocks-for-ha/collections.md](/projects/blocks-for-ha/collections) | [Technically compared](/en/projects/blocks-for-ha/collections) | [Technically compared](/fr/projects/blocks-for-ha/collections) |
+| [projects/blocks-for-ha/collections.md](/projects/blocks-for-ha/collections) | [Content reviewed](/en/projects/blocks-for-ha/collections) | [Content reviewed](/fr/projects/blocks-for-ha/collections) |
 | [projects/blocks-for-ha/conversion.md](/projects/blocks-for-ha/conversion) | [Content reviewed](/en/projects/blocks-for-ha/conversion) | [Content reviewed](/fr/projects/blocks-for-ha/conversion) |
 | [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Content reviewed](/en/projects/blocks-for-ha/custom-blocks) | [Content reviewed](/fr/projects/blocks-for-ha/custom-blocks) |
 | [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Content reviewed](/en/projects/blocks-for-ha/entities) | [Content reviewed](/fr/projects/blocks-for-ha/entities) |
 | [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Technically compared](/en/projects/blocks-for-ha/flow) | [Technically compared](/fr/projects/blocks-for-ha/flow) |
 | [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Technically compared](/en/projects/blocks-for-ha/) | [Content present · Difference reviewed](/fr/projects/blocks-for-ha/) |
-| [projects/blocks-for-ha/system-template.md](/projects/blocks-for-ha/system-template) | [Technically compared](/en/projects/blocks-for-ha/system-template) | [Technically compared](/fr/projects/blocks-for-ha/system-template) |
+| [projects/blocks-for-ha/system-template.md](/projects/blocks-for-ha/system-template) | [Content reviewed](/en/projects/blocks-for-ha/system-template) | [Content reviewed](/fr/projects/blocks-for-ha/system-template) |
 | [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Content reviewed](/en/projects/blocks-for-ha/themes) | [Content reviewed](/fr/projects/blocks-for-ha/themes) |
-| [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Technically compared](/en/projects/blocks-for-ha/time) | [Technically compared](/fr/projects/blocks-for-ha/time) |
+| [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Content reviewed](/en/projects/blocks-for-ha/time) | [Content reviewed](/fr/projects/blocks-for-ha/time) |
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Content reviewed](/en/projects/callmebot-signal/) | [Content reviewed](/fr/projects/callmebot-signal/) |
-| [projects/callmebot/index.md](/projects/callmebot/) | [Technically compared](/en/projects/callmebot/) | [Technically compared](/fr/projects/callmebot/) |
+| [projects/callmebot/index.md](/projects/callmebot/) | [Content reviewed](/en/projects/callmebot/) | [Content reviewed](/fr/projects/callmebot/) |
 | [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Technically compared](/en/projects/dashboard-user-manager/) | [Technically compared](/fr/projects/dashboard-user-manager/) |
 | [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Content reviewed](/en/projects/fritzbox-to-mqtt/examples) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/examples) |
 | [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Content reviewed](/en/projects/fritzbox-to-mqtt/entities) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/entities) |
@@ -132,16 +132,16 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Content reviewed](/en/projects/grafik-visual-studio/packer) | [Content reviewed](/fr/projects/grafik-visual-studio/packer) |
 | [projects/grafik-visual-studio/palette-runtime.md](/projects/grafik-visual-studio/palette-runtime) | [Content reviewed](/en/projects/grafik-visual-studio/palette-runtime) | [Content reviewed](/fr/projects/grafik-visual-studio/palette-runtime) |
 | [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Content reviewed](/en/projects/grafik-visual-studio/printer) | [Content reviewed](/fr/projects/grafik-visual-studio/printer) |
-| [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Technically compared](/en/projects/grafik-visual-studio/solar) | [Technically compared](/fr/projects/grafik-visual-studio/solar) |
+| [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Content reviewed](/en/projects/grafik-visual-studio/solar) | [Content reviewed](/fr/projects/grafik-visual-studio/solar) |
 | [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Technically compared](/en/projects/grafik-visual-studio/svg-line) | [Technically compared](/fr/projects/grafik-visual-studio/svg-line) |
 | [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Technically compared](/en/projects/grafik-visual-studio/svg-linebox-math) | [Technically compared](/fr/projects/grafik-visual-studio/svg-linebox-math) |
 | [projects/grafik-visual-studio/svg-linebox.md](/projects/grafik-visual-studio/svg-linebox) | [Content reviewed](/en/projects/grafik-visual-studio/svg-linebox) | [Content reviewed](/fr/projects/grafik-visual-studio/svg-linebox) |
 | [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Technically compared](/en/projects/grafik-visual-studio/technic) | [Technically compared](/fr/projects/grafik-visual-studio/technic) |
-| [projects/grafik-visual-studio/tool-pakete.md](/projects/grafik-visual-studio/tool-pakete) | [Technically compared](/en/projects/grafik-visual-studio/tool-packages) | [Technically compared](/fr/projects/grafik-visual-studio/tool-packages) |
+| [projects/grafik-visual-studio/tool-pakete.md](/projects/grafik-visual-studio/tool-pakete) | [Content reviewed](/en/projects/grafik-visual-studio/tool-packages) | [Content reviewed](/fr/projects/grafik-visual-studio/tool-packages) |
 | [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Technically compared](/en/projects/grafik-visual-studio/weather-heating) | [Technically compared](/fr/projects/grafik-visual-studio/weather-heating) |
 | [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Technically compared](/en/projects/grafik-visual-studio/widget-packages) | [Technically compared](/fr/projects/grafik-visual-studio/widget-packages) |
 | [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Technically compared](/en/projects/grafik-visual-studio/widgets) | [Technically compared](/fr/projects/grafik-visual-studio/widgets) |
-| [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Technically compared](/en/projects/grafik-visual-studio/zeichnen) | [Technically compared](/fr/projects/grafik-visual-studio/zeichnen) |
+| [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Content reviewed](/en/projects/grafik-visual-studio/zeichnen) | [Content reviewed](/fr/projects/grafik-visual-studio/zeichnen) |
 | [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Content reviewed](/en/projects/hadash/export-view) | [Content reviewed](/fr/projects/hadash/export-view) |
 | [projects/hadash/backups-und-json.md](/projects/hadash/backups-und-json) | [Content reviewed](/en/projects/hadash/backups-and-json) | [Content reviewed](/fr/projects/hadash/backups-and-json) |
 | [projects/hadash/dashboard-einlesen.md](/projects/hadash/dashboard-einlesen) | [Content reviewed](/en/projects/hadash/import-dashboard) | [Content reviewed](/fr/projects/hadash/import-dashboard) |
@@ -179,7 +179,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/broker/index.md](/projects/uix/broker/) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/) |
 | [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/interaction-anchors) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/interaction-anchors) |
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/realms) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/realms) |
-| [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Content present · Difference reviewed](/en/projects/uix/broker/rules) | [Content present · Difference reviewed](/fr/projects/uix/broker/rules) |
+| [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/rules) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Content reviewed · Difference reviewed](/en/projects/uix/concepts/application) | [Content reviewed · Difference reviewed](/fr/projects/uix/concepts/application) |
 | [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Content reviewed](/en/projects/uix/concepts/context) | [Content reviewed](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Content present · Difference reviewed](/en/projects/uix/concepts/dom) | [Technically compared](/fr/projects/uix/concepts/dom) |
@@ -210,10 +210,10 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/attribute) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/attribute) |
 | [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/background) | [Technically compared](/fr/projects/uix/forge/sparks/background) |
 | [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/badge) | [Technically compared](/fr/projects/uix/forge/sparks/badge) |
-| [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/button) | [Content present · Difference reviewed](/fr/projects/uix/forge/sparks/button) |
+| [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/button) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/button) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/event) | [Content reviewed](/fr/projects/uix/forge/sparks/event) |
 | [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/form) | [Technically compared](/fr/projects/uix/forge/sparks/form) |
-| [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/grid) | [Technically compared](/fr/projects/uix/forge/sparks/grid) |
+| [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/grid) | [Content reviewed](/fr/projects/uix/forge/sparks/grid) |
 | [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/) |
 | [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/lock) | [Technically compared](/fr/projects/uix/forge/sparks/lock) |
 | [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/map) | [Technically compared](/fr/projects/uix/forge/sparks/map) |
@@ -223,7 +223,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/state-badge) | [Content reviewed](/fr/projects/uix/forge/sparks/state-badge) |
 | [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/theme) | [Content reviewed](/fr/projects/uix/forge/sparks/theme) |
 | [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/tile-icon) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/tile-icon) |
-| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/tooltip) | [Content present · Difference reviewed](/fr/projects/uix/forge/sparks/tooltip) |
+| [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/tooltip) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/tooltip) |
 | [projects/uix/guides.md](/projects/uix/guides) | [Content reviewed · Difference reviewed](/en/projects/uix/guides) | [Content reviewed](/fr/projects/uix/guides) |
 | [projects/uix/index.md](/projects/uix/) | [Content reviewed · Difference reviewed](/en/projects/uix/) | [Content reviewed](/fr/projects/uix/) |
 | [projects/uix/license.md](/projects/uix/license) | [Content reviewed · Difference reviewed](/en/projects/uix/license) | [Content reviewed](/fr/projects/uix/license) |

@@ -247,6 +247,8 @@ forge:
 
 ## Fehlerquellen
 
+Ohne `media_queries` und `elements` setzt der Spark nur Inline-Styles. Nur ausdrücklich konfigurierte Eigenschaften werden geschrieben. Beim Trennen des Forge-Elements oder bei geänderter Konfiguration werden die vom Spark gesetzten Grid-Styles entfernt, damit sie nicht in andere Layouts hineinwirken. Die `elements`-Zuordnung bleibt unabhängig vom Breakpoint gleich; für ein anderes Layout werden die benannten `areas` innerhalb von `media_queries` geändert.
+
 Bei `media_queries` oder `elements` wird ein begrenztes `<style>`-Element in die nächste Shadow Root oder `document.head` eingefügt. Es enthält die `:nth-child()`- und `@media`-Regeln und wird beim Trennen des Elements entfernt. Für eine Grid-Karte in einer Section empfiehlt das Original `column_span: 4` an der Section und `forge.grid_options.columns: full` an der Forge.
 
 | Problem | Ursache | Lösung |

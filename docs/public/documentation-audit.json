@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 195,
+      "content_reviewed": 207,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 195,
+      "content_reviewed": 207,
       "open_review_signals": 0
     }
   },
@@ -3840,8 +3840,8 @@
         "en": {
           "path": "en/projects/automation-status-card/index.md",
           "status": "content-present",
-          "sha256": "809d81a26b717189a69eff1f192ca74127f66d0b8abc7927065b42f07534071f",
-          "words": 1121,
+          "sha256": "6c48f9d3c36787c94660cc1f180bdf9d108c33cf616f202f866f6a8422d9d2bd",
+          "words": 1123,
           "headings": 7,
           "examples": 1,
           "versions": [
@@ -3863,13 +3863,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eight visible rows/1-50limits, per-card hidden selection/new defaults, activation versus execution, stop_actionsfalse and state-confirmation/no-retry agree. ENFR defaultallow_togglefalse now explicit. Trace30s summaries/admin-only, oldest-run bounded by observation/clock skew/aborted-neutral and300s/0/7day warnings, separate BubbleMushroom templates and historical tests retained."
           }
         },
         "fr": {
           "path": "fr/projects/automation-status-card/index.md",
           "status": "content-present",
-          "sha256": "90974115718dbb0e26dda23ac59a48e00ef86827b5f8c50f4037d4d39abd8fb3",
-          "words": 1274,
+          "sha256": "ae1b20bdccc32649ca6c1065bb18dbc9fddfc49dbf7872d9dc3723279a863d43",
+          "words": 1277,
           "headings": 7,
           "examples": 1,
           "versions": [
@@ -3891,6 +3896,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eight visible rows/1-50limits, per-card hidden selection/new defaults, activation versus execution, stop_actionsfalse and state-confirmation/no-retry agree. ENFR defaultallow_togglefalse now explicit. Trace30s summaries/admin-only, oldest-run bounded by observation/clock skew/aborted-neutral and300s/0/7day warnings, separate BubbleMushroom templates and historical tests retained."
           }
         }
       }
@@ -4430,12 +4440,17 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Twentyrowmapping/37new105historictypes, fixedinclusive10000loops versus pendingbreak/continue/prime/mode/stddev,1based/readbounds/listcopy andJinja rounding/modulo/codepoints agree. French from-end substring pending mistranslated as no-end-bound corrected, combined get/remove pending made explicit. Full omitted ENtail/FRhead reread; mocked sandbox remains distinct from liveHA."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/collections.md",
           "status": "content-present",
-          "sha256": "2a126380c6e46186d8f97e299594288cd0a1be9e242fc83c9a106d82fff78b6f",
+          "sha256": "3a0e14ab01982813df120d6fc083deeaecc1e008650bf8f6573e7ad017bc1602",
           "words": 2169,
           "headings": 9,
           "examples": 1,
@@ -4455,6 +4470,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Twentyrowmapping/37new105historictypes, fixedinclusive10000loops versus pendingbreak/continue/prime/mode/stddev,1based/readbounds/listcopy andJinja rounding/modulo/codepoints agree. French from-end substring pending mistranslated as no-end-bound corrected, combined get/remove pending made explicit. Full omitted ENtail/FRhead reread; mocked sandbox remains distinct from liveHA."
           }
         }
       }
@@ -5026,6 +5046,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Time start-inclusive/end-exclusive/overnight, strict rise/fall withfloat0fallthrough, full Jinja versus expression-only parts, six system blocks, Supervisor admin/read-only selection versus exported actions agree. Native automation defaults, four text-template modifiers, typed branches/empty requirements, migration and snapshot preview/no credential export retained."
           }
         },
         "fr": {
@@ -5053,6 +5078,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Time start-inclusive/end-exclusive/overnight, strict rise/fall withfloat0fallthrough, full Jinja versus expression-only parts, six system blocks, Supervisor admin/read-only selection versus exported actions agree. Native automation defaults, four text-template modifiers, typed branches/empty requirements, migration and snapshot preview/no credential export retained."
           }
         }
       }
@@ -5197,13 +5227,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Five/sixfieldCRON/weekday0or7/native HA execution/monthdaystar/2000time limit, seven additions and six time mappings, overnight inclusive-exclusive/empty bounds, HA timezone versus elapsedUTC/DST and nextSun not today agree. FR runtime numbers mistaken as temporal values clarified; ENtail/FRhead reread fully after truncation. No new liveHA claim."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/time.md",
           "status": "content-present",
-          "sha256": "5c921e9f608470b1eca6527ad5d46609684f647e6a2266d1b389c8a941a785a2",
-          "words": 2468,
+          "sha256": "8e6f14ab8c23e5b31419cf52544444fd255195be6efd3b78fe6f36328fd858b1",
+          "words": 2465,
           "headings": 7,
           "examples": 1,
           "versions": [
@@ -5224,6 +5259,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Five/sixfieldCRON/weekday0or7/native HA execution/monthdaystar/2000time limit, seven additions and six time mappings, overnight inclusive-exclusive/empty bounds, HA timezone versus elapsedUTC/DST and nextSun not today agree. FR runtime numbers mistaken as temporal values clarified; ENtail/FRhead reread fully after truncation. No new liveHA claim."
           }
         }
       }
@@ -5331,8 +5371,8 @@
         "en": {
           "path": "en/projects/callmebot/index.md",
           "status": "content-present",
-          "sha256": "77bac5bd0aaab87114ece038616a5fb653c1eae2e90b6deee6a994ae7130e831",
-          "words": 1214,
+          "sha256": "8919d437596e3dd5026ba1a4116d88becfc3320d3c25a8275089f153af3c509e",
+          "words": 1217,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -5356,13 +5396,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All16profiles/4000chars/20queue/10s/1h1000dedup, plus versus no-plus recipient distinctions, diagnostic catalog without secrets, nativeMQTT versus directWhatsApp action imports agree. EN/FR falsely said app discovers its sensor; corrected to publishes via MQTT Discovery.200entryhistory/AESGCMscrypt12chars/noautomaticretry/TLSbridge and no real message scope retained."
           }
         },
         "fr": {
           "path": "fr/projects/callmebot/index.md",
           "status": "content-present",
-          "sha256": "db86b4ed1168ae1f9d88057e08eb8801643f0f03d2dc8342ebccc21ef0561bba",
-          "words": 1306,
+          "sha256": "28e1fcdac6b74c0548a6f757929f8729650113efc104d1aea11fe178ebdbfff7",
+          "words": 1309,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -5386,6 +5431,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All16profiles/4000chars/20queue/10s/1h1000dedup, plus versus no-plus recipient distinctions, diagnostic catalog without secrets, nativeMQTT versus directWhatsApp action imports agree. EN/FR falsely said app discovers its sensor; corrected to publishes via MQTT Discovery.200entryhistory/AESGCMscrypt12chars/noautomaticretry/TLSbridge and no real message scope retained."
           }
         }
       }
@@ -7358,8 +7408,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/solar.md",
           "status": "content-present",
-          "sha256": "9faad6b80bdad22bebcf19022e8131fd385a984207be1e06fd9e3fb161df4aa6",
-          "words": 1090,
+          "sha256": "d06df2572b233e9f9ce1e4f4a7a643645fdc0df2ac04a7cb7c30b294e0ef0e60",
+          "words": 1099,
           "headings": 5,
           "examples": 0,
           "versions": [
@@ -7371,8 +7421,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/solar.md",
           "status": "content-present",
-          "sha256": "f0a01c8823e206c4e52842ee02513f9c9cbe2a23f298b3fd4a381a11dd3b474b",
-          "words": 1109,
+          "sha256": "47d16f7cec088e22f18886f7af93da2e7a17e5b324f9de67556080ced294044e",
+          "words": 1117,
           "headings": 5,
           "examples": 0,
           "versions": [
@@ -7392,13 +7442,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Four independent modules/dimensions, housing-only snaps versus data ports,1-6batteries, tenSolo ports/fourheadPVinputs, one-source-per-value priority and noHAwrite agree. Explicit exception added to otherwise-disabled port default for four PVinputs. Preview versus unknown and hidden-text versus continuing values retained."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/solar.md",
           "status": "content-present",
-          "sha256": "6b1c77b9dd81c58565510362a1341058e737278c65f312304d8078702d346b2f",
-          "words": 1643,
+          "sha256": "d6386feaafde04e262dc45dadfeead2dbf1a08f80e018b16d19a3ef453e395c0",
+          "words": 1654,
           "headings": 5,
           "examples": 0,
           "versions": [
@@ -7418,6 +7473,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Four independent modules/dimensions, housing-only snaps versus data ports,1-6batteries, tenSolo ports/fourheadPVinputs, one-source-per-value priority and noHAwrite agree. Explicit exception added to otherwise-disabled port default for four PVinputs. Preview versus unknown and hidden-text versus continuing values retained."
           }
         }
       }
@@ -7745,8 +7805,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/tool-pakete.md",
           "status": "content-present",
-          "sha256": "677cfe44de02f5a4d4893b6c815e1b687c921b427d6481fd7c87207590ec3e9a",
-          "words": 1097,
+          "sha256": "03bc0a0804bffedead0ab6c5d4935c0d28f71c450ada16b94fb15bb38390d355",
+          "words": 1122,
           "headings": 4,
           "examples": 1,
           "versions": [
@@ -7765,8 +7825,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/tool-packages.md",
           "status": "content-present",
-          "sha256": "c5e2b6132bfcca01d5733b3b1bed7a01addc41ef430cd4d7021df0c54ab269a8",
-          "words": 1109,
+          "sha256": "b2239864f01a165f40276d2ce6d065d99b5dea17341efe9f04fe72f71fa25435",
+          "words": 1129,
           "headings": 4,
           "examples": 1,
           "versions": [
@@ -7793,13 +7853,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "CatalogSHA256/id/version/risk confirmation, no same/older update, two declarative actions,15shared-adminfavorites versus ordinary picker access, local merge retention,31918names, archive2MB/manifest200k/image50k/1024pxlimits agree. All locales had stale no-GitHub-update and one-action statements now distinguished from current functionality. FR SVG passive-content rule mistranslation and HEX/SVGcopy ambiguity repaired; DEFR favorite privileges clarified."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/tool-packages.md",
           "status": "content-present",
-          "sha256": "0f7068486b8c8dc654215c13fc8816de1f464ed816b88ed1cd7a35c8a11ae57b",
-          "words": 1705,
+          "sha256": "4f23c0daa1313cc6f322bec7901ffc8d6c44be93cfeca385917d3c0f92a3e607",
+          "words": 1730,
           "headings": 4,
           "examples": 1,
           "versions": [
@@ -7826,6 +7891,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "CatalogSHA256/id/version/risk confirmation, no same/older update, two declarative actions,15shared-adminfavorites versus ordinary picker access, local merge retention,31918names, archive2MB/manifest200k/image50k/1024pxlimits agree. All locales had stale no-GitHub-update and one-action statements now distinguished from current functionality. FR SVG passive-content rule mistranslation and HEX/SVGcopy ambiguity repaired; DEFR favorite privileges clarified."
           }
         }
       }
@@ -8284,13 +8354,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Twelve docks/fourpath types/collector explicit coupling, numeric andbooldirections, divisor0.05-20, branch timing/color inheritance and keyboard controls agree. French duplicate anchor, neutral role and settings becoming active after detaching repaired. Signed linebox examples/helper feedback and compatibility IDs retained; omitted EN paragraph fully reread."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/zeichnen.md",
           "status": "content-present",
-          "sha256": "09c82bec4dfafb4536a1cad09cc4f26acae0f1183f8d9069bcbdf93ddd09bbd2",
-          "words": 1806,
+          "sha256": "685523e667898979a875b3f6d4ceb6409825ff5a080a600c8160c7724ed725b3",
+          "words": 1798,
           "headings": 5,
           "examples": 0,
           "versions": [],
@@ -8307,6 +8382,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Twelve docks/fourpath types/collector explicit coupling, numeric andbooldirections, divisor0.05-20, branch timing/color inheritance and keyboard controls agree. French duplicate anchor, neutral role and settings becoming active after detaching repaired. Signed linebox examples/helper feedback and compatibility IDs retained; omitted EN paragraph fully reread."
           }
         }
       }
@@ -11403,8 +11483,8 @@
         "de": {
           "path": "projects/uix/broker/rules.md",
           "status": "content-present",
-          "sha256": "1efebc8b1c5515cc3adf8a512f30ac7917ca6d6adfea04eda6443a1004140c1f",
-          "words": 790,
+          "sha256": "25c6b48eff8acee52e149676162e6de16d2f8ad95f105063fcfcf75a27154c6d",
+          "words": 823,
           "headings": 11,
           "examples": 14,
           "versions": [
@@ -11444,13 +11524,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Seven typed rules, name/ID versus unavailable login, positiveOR/negativeboth exclusions, hostundefined-versus-absent, captured roots/bracket paths/operators and async-panelblock incompatibility agree. DE absolute/relative rule anchor explanation restored. FR indented unfenced YAML had translated type/user keys: repaired and regression checks added; earlier fenced-only technical comparison did not detect these. French user matching prose repaired. No runtime test."
           }
         },
         "fr": {
           "path": "fr/projects/uix/broker/rules.md",
           "status": "content-present",
-          "sha256": "7a73524ed1f0cf000e8a213c5239013e1d9717b5af1f8aecb6fe258d9a8426c3",
-          "words": 1353,
+          "sha256": "678b810dc44f780fc90c8ca4555af56345031c1860d1c56b7eaf1ce5547c4715",
+          "words": 1328,
           "headings": 16,
           "examples": 16,
           "versions": [
@@ -11471,6 +11556,11 @@
             "status": "reviewed",
             "disposition": "supplemented",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Seven typed rules, name/ID versus unavailable login, positiveOR/negativeboth exclusions, hostundefined-versus-absent, captured roots/bracket paths/operators and async-panelblock incompatibility agree. DE absolute/relative rule anchor explanation restored. FR indented unfenced YAML had translated type/user keys: repaired and regression checks added; earlier fenced-only technical comparison did not detect these. French user matching prose repaired. No runtime test."
           }
         }
       }
@@ -13801,8 +13891,8 @@
         "de": {
           "path": "projects/uix/forge/sparks/button.md",
           "status": "content-present",
-          "sha256": "360137629310a54c7ddbd79aacaf74dc8887aca848d92e0b088debba21242770",
-          "words": 694,
+          "sha256": "e7b3c7b00c9951351861676ef6fde3d658b257c768e83a4fa7523b90312fed4f",
+          "words": 727,
           "headings": 8,
           "examples": 7,
           "versions": [
@@ -13813,8 +13903,8 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/button.md",
           "status": "content-present",
-          "sha256": "250e20434728ad912d848db652d28ee78944319f6cd4112f8b3f11326c34fc6c",
-          "words": 1243,
+          "sha256": "74c4bea0d8e4a611eae36a7cf3394c15d976eb9783511ef4c2bdf56df7057f3e",
+          "words": 1345,
           "headings": 7,
           "examples": 7,
           "versions": [
@@ -13838,13 +13928,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Sixteenoptions/sevenCSSvariables, icon-over-label/neutralplain versus labelledbrandaccent, isolatedtileactions and five example purposes agree. Frozen button.ts reveals after-target lookup plus before insertion/Blankdefault pitfall like more-info; misleading empty-after workaround replaced in all locales with source-bound editorial warning. Outlined omitted from ENFR closing prose restored; canonical code unchanged."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/button.md",
           "status": "content-present",
-          "sha256": "28addac6e6d251be1ec06b877507b70f09e6c4764680367865d40e407a1f4007",
-          "words": 1210,
+          "sha256": "ae2f8bb7b440065daf250f89f966ad8d9c7984b7ca96d1ce491a40d8df9029ea",
+          "words": 1312,
           "headings": 7,
           "examples": 7,
           "versions": [],
@@ -13862,6 +13957,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Sixteenoptions/sevenCSSvariables, icon-over-label/neutralplain versus labelledbrandaccent, isolatedtileactions and five example purposes agree. Frozen button.ts reveals after-target lookup plus before insertion/Blankdefault pitfall like more-info; misleading empty-after workaround replaced in all locales with source-bound editorial warning. Outlined omitted from ENFR closing prose restored; canonical code unchanged."
           }
         }
       }
@@ -14019,8 +14119,8 @@
         "de": {
           "path": "projects/uix/forge/sparks/grid.md",
           "status": "content-present",
-          "sha256": "b5e5404045ade1cd48203b534c0c0ad4232febecea69712a499e656af736b55b",
-          "words": 574,
+          "sha256": "153f93f4d71a4186ab22150ce9abe3227e9fbfc4bd424f404cdc98f960cd4f1d",
+          "words": 634,
           "headings": 16,
           "examples": 11,
           "versions": [],
@@ -14052,12 +14152,17 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Nineteenbasefields/mediaquerysubset, numericrepeat/pixels versus rawstrings, directchildDOMorder/areas and firstcontainer troubleshooting agree. DE inline versus scopedstyle cleanup and breakpoint-independent element assignment restored. French raw nested MkDocs tip converted to readable advice; canonical examples unchanged."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/grid.md",
           "status": "content-present",
-          "sha256": "290fc72e3defa2851c84c9aa0b89ddcae657541b65e4442e7a69bd3d7e233f6f",
+          "sha256": "398b3c0178b84a353f8336073362409036c4a3b6b2d771cd9e7b09acba7b4968",
           "words": 1143,
           "headings": 18,
           "examples": 18,
@@ -14080,6 +14185,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Nineteenbasefields/mediaquerysubset, numericrepeat/pixels versus rawstrings, directchildDOMorder/areas and firstcontainer troubleshooting agree. DE inline versus scopedstyle cleanup and breakpoint-independent element assignment restored. French raw nested MkDocs tip converted to readable advice; canonical examples unchanged."
           }
         }
       }
@@ -14821,20 +14931,25 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eleven options/twelve placements, first-match Shadow DOM/Blank Card targeting, default hover/focus/manual/open, sibling-parent CSS styling and23variables agree with canonical EN. French native-title removal advice restored; obsolete stable-reference label updated while retaining historical8.2/beta CSS defaults and scroll behavior."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/tooltip.md",
           "status": "content-present",
-          "sha256": "d6f1801f1f94855b17bc03d400755a9cf95b254bc636b8b8324fec5944417af0",
-          "words": 1111,
+          "sha256": "3bfe48e0c8309f926c8b371ad6d157c9bdd050d009d911dd395b9cf566b218a5",
+          "words": 1132,
           "headings": 10,
           "examples": 6,
           "versions": [
             "8.2.0",
             "8.3.0-beta.6",
             "8.3.0-beta.8",
-            "8.4.0"
+            "9.1.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14842,7 +14957,7 @@
               "9.0.0"
             ],
             "versions_only_in_translation": [
-              "8.4.0"
+              "9.1.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14852,6 +14967,11 @@
             "status": "reviewed",
             "disposition": "supplemented",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eleven options/twelve placements, first-match Shadow DOM/Blank Card targeting, default hover/focus/manual/open, sibling-parent CSS styling and23variables agree with canonical EN. French native-title removal advice restored; obsolete stable-reference label updated while retaining historical8.2/beta CSS defaults and scroll behavior."
           }
         }
       }
