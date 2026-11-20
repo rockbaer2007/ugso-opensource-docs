@@ -12,7 +12,8 @@ Toutes les cartes Mushroom peuvent être configurées via l'éditeur de tableau 
 1. Ouvrir le tableau de bord.
 2. Ouvrir le menu « trois points » en haut à droite.
 3. Sélectionner **Modifier le tableau de bord**.
-4. Sélectionner le bouton « plus » pour ajouter une carte. 5. Sélectionner l'une des cartes `Custom: Mushroom`.
+4. Sélectionner le bouton « plus » pour ajouter une carte.
+5. Sélectionner l'une des cartes `Custom: Mushroom`.
 6. Configurer l'entité, le nom, l'icône, la disposition et les options dans l'éditeur.
 7. Enregistrer.
 

@@ -14,7 +14,7 @@ Cette section rassemble des intégrations personnalisées pour Home Assistant ai
 | Projet | État de la documentation | Remarque |
 | --- | --- | --- |
 | [Intégration Zendure pour Home Assistant](/fr/collection/zendure-ha/) | Complète | Documentation utilisateur en DE/EN/FR couvrant l'installation, le jeton (token), le protocole MQTT local, Zendure Manager, les groupes de fusibles (Fuse Group), les entités et le dépannage. |
-| [Gestionnaire de thèmes « verre dépoli » (Frosted Glass)](/fr/collection/frosted-glass-manager/) | Complète | Intégration pour Home Assistant permettant de créer des thèmes personnalisés de type « verre dépoli », incluant une variante de test UIX validée. |
+| [Gestionnaire de thèmes « verre dépoli » (Frosted Glass)](/fr/collection/frosted-glass-manager/) | Complète | Intégration pour Home Assistant permettant de créer des thèmes personnalisés de type « verre dépoli », incluant une variante d’essai UIX testée. |
 
 ## Objectif des documentations d'intégration {#ziel-fur-integrationsdokus}
 

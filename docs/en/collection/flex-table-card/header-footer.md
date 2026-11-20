@@ -11,9 +11,9 @@ description: Column headers, icons and summary lines in the flex-table-card.
 
 The card determines the heading of a column in this order:
 
-1.`name`
-2.`id`
-3.`data`
+1. `name`
+2. `id`
+3. `data`
 
 ```yaml
 columns:

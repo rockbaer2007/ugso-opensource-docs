@@ -21,17 +21,17 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 65,
+      "content_reviewed": 81,
       "open_review_signals": 0
     },
     "fr": {
       "content-present": 252,
       "existing_pages": 252,
       "unmatched_pages": 0,
-      "review_signals": 31,
+      "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 65,
+      "content_reviewed": 81,
       "open_review_signals": 0
     }
   },
@@ -4111,8 +4111,8 @@
         "en": {
           "path": "en/projects/blocks-for-ha/catalog/sensor-light.md",
           "status": "content-present",
-          "sha256": "cbf42d75fb4f84f0dc4ed56aa9d9cc4204badc14239744e193cf755cc29ddad5",
-          "words": 163,
+          "sha256": "8a6afb2c3b844ccd32fbbe7c6d2603192c143d618871319c86469f7721130e9b",
+          "words": 172,
           "headings": 2,
           "examples": 0,
           "versions": [
@@ -4132,13 +4132,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Three block semantics verified in package JSON: float(0), is_number plus strict > threshold, and light.turn_on brightness_pct0-100. English/French strict comparison direction restored and German UI button labels clarified. ZIP block-package.json parsed identically to the published JSON; original German package labels/version/licence retained."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/catalog/sensor-light.md",
           "status": "content-present",
-          "sha256": "b912f5cac4c94b90967b411961e17d76a35765a312fe1db83e5993df5b83e729",
-          "words": 167,
+          "sha256": "26f1c028e3d10b2f1ee5d80e3c7264a8db59fa983ec8ebed4a5735302924761a",
+          "words": 179,
           "headings": 2,
           "examples": 0,
           "versions": [
@@ -4158,6 +4163,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Three block semantics verified in package JSON: float(0), is_number plus strict > threshold, and light.turn_on brightness_pct0-100. English/French strict comparison direction restored and German UI button labels clarified. ZIP block-package.json parsed identically to the published JSON; original German package labels/version/licence retained."
           }
         }
       }
@@ -9321,6 +9331,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All three complete files including13 frontend label strings compared: public GitHub report, private email, required report details and credential-removal advice, optional reply address, direct-send versus mail-app-draft introductions and success/failure behavior agree. No report/email sent."
           }
         },
         "fr": {
@@ -9344,6 +9359,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All three complete files including13 frontend label strings compared: public GitHub report, private email, required report details and credential-removal advice, optional reply address, direct-send versus mail-app-draft introductions and success/failure behavior agree. No report/email sent."
           }
         }
       }
@@ -11328,13 +11348,18 @@
             "status": "reviewed",
             "disposition": "corrected",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Cache Storage deletion/reload versus preserved localStorage/BrowserMod ID agree and retain the implementation-based correction. French cache symptoms/reload order added from German advice; no recommendation to erase all browser/app data."
           }
         },
         "fr": {
           "path": "fr/projects/uix/debugging/cache.md",
           "status": "content-present",
-          "sha256": "2057acc2a83b33d41e59bc87caa5f679995d127e997bf783c82fdd5424e9877f",
-          "words": 118,
+          "sha256": "6f251ac69000254db49f947fac23f7d935b59e9357cb1bc9a2538197c4f0f5da",
+          "words": 201,
           "headings": 1,
           "examples": 0,
           "versions": [],
@@ -11350,6 +11375,11 @@
             "status": "reviewed",
             "disposition": "corrected",
             "reason": "Incorrect/contradictory cache-deletion claim corrected against the reviewed implementation; localStorage and Browser Mod identity are preserved."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Cache Storage deletion/reload versus preserved localStorage/BrowserMod ID agree and retain the implementation-based correction. French cache symptoms/reload order added from German advice; no recommendation to erase all browser/app data."
           }
         }
       }
@@ -11535,14 +11565,19 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Canonical debug marker, five lifecycle events and20-second subscription cooldown preserved. French four-step fixed-value/CSS/condition/type workflow, common entity/none/YAML causes and CSS fallback explanation restored from German local guidance. Canonical EN deliberately remains the original compact API explanation."
           }
         },
         "fr": {
           "path": "fr/projects/uix/debugging/templates.md",
           "status": "content-present",
-          "sha256": "c30edbfa53f290e5b9c7d88876de5b6f3d68e523726765d5f09e70dfdd9567c2",
-          "words": 162,
-          "headings": 3,
+          "sha256": "5b042fa284db9c681ba8c3c7e1fa707a70dfb18a1f9d3890492207716fcfd1e5",
+          "words": 240,
+          "headings": 4,
           "examples": 1,
           "versions": [],
           "unresolved_local_references": [],
@@ -11551,12 +11586,17 @@
             "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": true
+            "fewer_headings": false
           },
           "review": {
             "status": "reviewed",
             "disposition": "supplemented",
             "reason": "Added 1 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Canonical debug marker, five lifecycle events and20-second subscription cooldown preserved. French four-step fixed-value/CSS/condition/type workflow, common entity/none/YAML causes and CSS fallback explanation restored from German local guidance. Canonical EN deliberately remains the original compact API explanation."
           }
         }
       }
@@ -12306,6 +12346,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All nine settings destinations and both explicit experimental labels agree. Canonical EN/FR use a compact index rather than German editorial headings; no functional omission."
           }
         },
         "fr": {
@@ -12328,6 +12373,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All nine settings destinations and both explicit experimental labels agree. Canonical EN/FR use a compact index rather than German editorial headings; no functional omission."
           }
         }
       }
@@ -15774,7 +15824,7 @@
         "en": {
           "path": "en/collection/calendar-card-pro/beispiele.md",
           "status": "content-present",
-          "sha256": "f85519be9a9d28282db1f7f1cfc7afc14dee972935082e3c402b1cf0a10efba8",
+          "sha256": "d2b5c0facc6311a85a0fa3b0acdf7e2a99773e829ec3ce75f71ae695e872b601",
           "words": 60,
           "headings": 7,
           "examples": 6,
@@ -15792,12 +15842,17 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Six example purposes—basic theme-aware, compact calendars, custom styling, week numbers/separators, column week and extensive configuration—agree. Three German alt descriptions translated in EN/FR; image sources and examples retained."
           }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/beispiele.md",
           "status": "content-present",
-          "sha256": "b05c65280b8b7eecaa0595df09050de9f70eba8be6c706adb77d683a23c15b0e",
+          "sha256": "bbd3ed70a84f202f646307455b749e46712008139f44c6e61311b33f262956b1",
           "words": 65,
           "headings": 7,
           "examples": 6,
@@ -15815,6 +15870,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Six example purposes—basic theme-aware, compact calendars, custom styling, week numbers/separators, column week and extensive configuration—agree. Three German alt descriptions translated in EN/FR; image sources and examples retained."
           }
         }
       }
@@ -15857,6 +15917,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Node/npm setup, dev-branch PR target, three original-doc links, declared35 card/11 editor languages at4.0.0 and external-doc versus UI-translation distinction agree. Snapshot claims, no new upstream release audit."
           }
         },
         "fr": {
@@ -15882,6 +15947,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Node/npm setup, dev-branch PR target, three original-doc links, declared35 card/11 editor languages at4.0.0 and external-doc versus UI-translation distinction agree. Snapshot claims, no new upstream release audit."
           }
         }
       }
@@ -16234,7 +16304,7 @@
         "en": {
           "path": "en/collection/calendar-card-pro/nutzung.md",
           "status": "content-present",
-          "sha256": "4ae99829cb27b5452e0b71364f79629eecabedd0a79730fc6f721ce443d72f13",
+          "sha256": "e834c109ea4241b58cefe69d7079cb7c53a4796f075dc2ec94b33ec6b7afb882",
           "words": 133,
           "headings": 5,
           "examples": 2,
@@ -16252,6 +16322,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Seven editor steps,2026.6 By entity suggestion for calendar.* (may, not guaranteed), own-entity replacement, multi-calendar examples and six use cases agree. English Pro product-name typo corrected."
           }
         },
         "fr": {
@@ -16275,6 +16350,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Seven editor steps,2026.6 By entity suggestion for calendar.* (may, not guaranteed), own-entity replacement, multi-calendar examples and six use cases agree. English Pro product-name typo corrected."
           }
         }
       }
@@ -16568,7 +16648,7 @@
         "en": {
           "path": "en/collection/flex-table-card/datenquellen.md",
           "status": "content-present",
-          "sha256": "1259486b253c6a7130b9952f4997a39746c96ce3d2c3896df6d2404bf0877fc0",
+          "sha256": "6279f3237d025ca4f5d16e932221049c78fd41a736dbfa69346cae048cfec4d9",
           "words": 121,
           "headings": 5,
           "examples": 4,
@@ -16586,6 +16666,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All nine selectors, complete versus domainless IDs, nested dot notation, comma combination, static_data and example image agree. Incorrect English Range translation of HA area corrected to Area."
           }
         },
         "fr": {
@@ -16609,6 +16694,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All nine selectors, complete versus domainless IDs, nested dot notation, comma combination, static_data and example image agree. Incorrect English Range translation of HA area corrected to Area."
           }
         }
       }
@@ -16680,7 +16770,7 @@
         "de": {
           "path": "sammlung/flex-table-card/formatierung.md",
           "status": "content-present",
-          "sha256": "5dadb1798942f4a5ec509efacb613732157c7b185f095dc1392079b4f4cdc5d6",
+          "sha256": "e5de49a5599f1cc7f9f85776ac64487947ea54ad54da4bf3a9979fe07ce15848",
           "words": 104,
           "headings": 5,
           "examples": 5,
@@ -16690,8 +16780,8 @@
         "en": {
           "path": "en/collection/flex-table-card/formatierung.md",
           "status": "content-present",
-          "sha256": "fbfd1a963dd5746416640e53fec376ca3c3fc54d58ba5d7e7ee3634e6c2b1bfc",
-          "words": 118,
+          "sha256": "23cdcbfa2442b42d44b6622ab8468aa9b707b49b0f1825642fc97df3af3171a3",
+          "words": 121,
           "headings": 5,
           "examples": 5,
           "versions": [],
@@ -16708,6 +16798,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Global/per-column auto_format, prefix/suffix/alignment, eight fmt helpers and JavaScript modify cell value x agree. Execution/trusted-source warning retained; English elapsed-time wording and German umlaut improved."
           }
         },
         "fr": {
@@ -16731,6 +16826,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Global/per-column auto_format, prefix/suffix/alignment, eight fmt helpers and JavaScript modify cell value x agree. Execution/trusted-source warning retained; English elapsed-time wording and German umlaut improved."
           }
         }
       }
@@ -16822,7 +16922,7 @@
         "en": {
           "path": "en/collection/flex-table-card/header-footer.md",
           "status": "content-present",
-          "sha256": "caf80725e0e7f1b4d72e8eadc01b31fc154c2792c101ba5a2d1a4dc2ef3467e2",
+          "sha256": "420ff1205c2966739416e4f00308beeca27f393509a1c5fcf164911129be8b9b",
           "words": 119,
           "headings": 6,
           "examples": 6,
@@ -16840,6 +16940,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "name/id/data heading precedence, empty headings, icons/alignment, enabling footer, all six aggregate/text functions, total-row/CSS examples and source image agree. English malformed ordered list repaired."
           }
         },
         "fr": {
@@ -16863,6 +16968,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "name/id/data heading precedence, empty headings, icons/alignment, enabling footer, all six aggregate/text functions, total-row/CSS examples and source image agree. English malformed ordered list repaired."
           }
         }
       }
@@ -17896,12 +18006,17 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Both Zendure and Frosted Glass documentation entries and all eight documentation requirements retained. French UIX fork wording narrowed to tested, without implying general certification or a new test."
           }
         },
         "fr": {
           "path": "fr/collection/ha-integrations.md",
           "status": "content-present",
-          "sha256": "139b47dde57787778fe68dc9f6622210cd7a4924e1dd4717f6823d157d6eb26b",
+          "sha256": "59fdd13824c28eac11982f121735d88861b599b2d6581ee003e5d590afd0e3bd",
           "words": 173,
           "headings": 3,
           "examples": 0,
@@ -17919,6 +18034,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Both Zendure and Frosted Glass documentation entries and all eight documentation requirements retained. French UIX fork wording narrowed to tested, without implying general certification or a new test."
           }
         }
       }
@@ -17939,8 +18059,8 @@
         "en": {
           "path": "en/collection/ha-tools.md",
           "status": "content-present",
-          "sha256": "da7f53e26e3f33187341092309575276978db35e5a67bac1fcb2f8193b6fbeef",
-          "words": 78,
+          "sha256": "c81d2045c8822041c83b91fa60f5c5e8c691ccc7622d162e5ec39bef58263f77",
+          "words": 100,
           "headings": 3,
           "examples": 0,
           "versions": [],
@@ -17957,6 +18077,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "HADash, Automation Exporter and both internal-development tools now agree. English Automation Exporter entry with automations.yaml/separate YAML meaning was missing and restored. Initial technical missing-identifier triage had incorrectly treated this as formatting; explicit erratum retained in the technical review record."
           }
         },
         "fr": {
@@ -17980,6 +18105,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "HADash, Automation Exporter and both internal-development tools now agree. English Automation Exporter entry with automations.yaml/separate YAML meaning was missing and restored. Initial technical missing-identifier triage had incorrectly treated this as formatting; explicit erratum retained in the technical review record."
           }
         }
       }
@@ -18023,13 +18153,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Catch-all-only scope, empty-entry status, seven provenance/licence/freshness requirements, three preferred categories and separate UIX reference agree. French UIX link label corrected to French; German reference category labels given French glosses."
           }
         },
         "fr": {
           "path": "fr/collection/hacs-docs.md",
           "status": "content-present",
-          "sha256": "86d1d2aec6052d03c32c4b5a4a38e998356bd9541a9dff0d1b4cc04b74b48a96",
-          "words": 181,
+          "sha256": "9317db0e94e3dd3def08a98f41a23196d739d9486dbe8f443a1072532659e844",
+          "words": 200,
           "headings": 5,
           "examples": 0,
           "versions": [],
@@ -18046,6 +18181,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Catch-all-only scope, empty-entry status, seven provenance/licence/freshness requirements, three preferred categories and separate UIX reference agree. French UIX link label corrected to French; German reference category labels given French glosses."
           }
         }
       }
@@ -18221,6 +18361,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Docker demo localhost8123, Windows alternative, devserver4000, dist/mushroom.js build, Weblate and all BCP47 examples agree. Commands were compared, not executed."
           }
         },
         "fr": {
@@ -18244,6 +18389,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Docker demo localhost8123, Windows alternative, devserver4000, dist/mushroom.js build, Weblate and all BCP47 examples agree. Commands were compared, not executed."
           }
         }
       }
@@ -18604,12 +18754,17 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Seven dashboard-editor steps, eight stated strengths, no extra-card dependency and optional Mushroom versus HA themes agree. French collapsed steps4/5 separated."
           }
         },
         "fr": {
           "path": "fr/collection/mushroom/nutzung.md",
           "status": "content-present",
-          "sha256": "8815be7a8e35552d772a19141bb8dd11f6e853df3065ceba385d380a1f209659",
+          "sha256": "ae7787dfae22f16d3a60fa08df99f605b3db046cb5df8af8aee3d0ed8dff6c4c",
           "words": 173,
           "headings": 3,
           "examples": 0,
@@ -18627,6 +18782,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Seven dashboard-editor steps, eight stated strengths, no extra-card dependency and optional Mushroom versus HA themes agree. French collapsed steps4/5 separated."
           }
         }
       }

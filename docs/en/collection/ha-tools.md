@@ -11,6 +11,7 @@ This section collects external tools around Home Assistant, dashboards and devel
 | Project | Description |
 | --- | --- |
 | <img class="package-icon" src="/images/packages/projects-hadash.png" width="32" height="32" alt="" aria-hidden="true"> [HADash](/en/projects/hadash/) | Tool for importing, editing and exporting Home Assistant dashboards. |
+| <img class="package-icon" src="/images/packages/sammlung-ha-automation-exporter.ico" width="32" height="32" alt="" aria-hidden="true"> [Home Assistant Automation Exporter](./ha-automation-exporter/) | Windows tool for exporting individual automations from an `automations.yaml` file into separate YAML files. |
 
 ## Internal Development Tools
 

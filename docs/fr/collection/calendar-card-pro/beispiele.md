@@ -11,7 +11,7 @@ description: Exemples concrets d'utilisation de Calendar Card Pro dans Home Assi
 
 Affiche les événements d'un calendrier et s'adapte automatiquement au thème ainsi qu'au mode clair ou sombre.
 
-<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_1_basic_native.png" alt="Einfache Calendar Card Pro Konfiguration" width="600">
+<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_1_basic_native.png" alt="Configuration simple de Calendar Card Pro" width="600">
 
 ```yaml
 type: custom:calendar-card-pro
@@ -42,7 +42,7 @@ tap_action:
 
 ## Plusieurs calendriers avec personnalisation {#mehrere-kalender-mit-eigener-gestaltung}
 
-<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_3_custom_styling.png" alt="Calendar Card Pro mit eigener Gestaltung" width="600">
+<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_3_custom_styling.png" alt="Calendar Card Pro avec style personnalisé" width="600">
 
 ```yaml
 type: custom:calendar-card-pro
@@ -82,7 +82,7 @@ month_separator_color: var(--secondary-text-color)
 
 ## Vue hebdomadaire en colonnes {#wochenansicht-als-spalten}
 
-<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_column_week.png" alt="Calendar Card Pro Wochenansicht als Spalten" width="600">
+<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_column_week.png" alt="Vue hebdomadaire en colonnes de Calendar Card Pro" width="600">
 
 ```yaml
 type: custom:calendar-card-pro

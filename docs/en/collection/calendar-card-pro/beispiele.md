@@ -11,7 +11,7 @@ description: Practical examples for Calendar Card Pro in Home Assistant.
 
 Shows appointments from a calendar and automatically adapts to theme and light/dark mode.
 
-<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_1_basic_native.png" alt="Einfache Calendar Card Pro Konfiguration" width="600">
+<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_1_basic_native.png" alt="Basic Calendar Card Pro configuration" width="600">
 
 ```yaml
 type: custom:calendar-card-pro
@@ -42,7 +42,7 @@ tap_action:
 
 ## Multiple calendars with your own design {#mehrere-kalender-mit-eigener-gestaltung}
 
-<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_3_custom_styling.png" alt="Calendar Card Pro mit eigener Gestaltung" width="600">
+<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_3_custom_styling.png" alt="Calendar Card Pro with custom styling" width="600">
 
 ```yaml
 type: custom:calendar-card-pro
@@ -82,7 +82,7 @@ month_separator_color: var(--secondary-text-color)
 
 ## Week View As Columns {#wochenansicht-als-spalten}
 
-<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_column_week.png" alt="Calendar Card Pro Wochenansicht als Spalten" width="600">
+<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/example_column_week.png" alt="Calendar Card Pro weekly column view" width="600">
 
 ```yaml
 type: custom:calendar-card-pro

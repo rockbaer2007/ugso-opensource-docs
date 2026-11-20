@@ -1,5 +1,5 @@
 ---
-title: Calendar Card Per Usage
+title: Calendar Card Pro usage
 description: Use Calendar Card Pro in the Home Assistant dashboard.
 ---
 <a id="calendar-card-pro-usage"></a>

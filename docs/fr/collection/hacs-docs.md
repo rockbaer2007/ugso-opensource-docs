@@ -7,7 +7,7 @@ description: Espace de regroupement pour les projets HACS ne disposant pas de ca
 
 # Documentation HACS {#hacs-dokus}
 
-Cet espace sert de zone de regroupement pour les projets HACS qui ne peuvent être clairement classés dans `HA Cards`, `HA Integrationen`, `HA Blueprints`, `HA Tools` ou `HA Apps und Add-ons`.
+Cet espace regroupe les projets HACS qui ne relèvent pas clairement des cartes (`HA Cards`), des intégrations (`HA Integrationen`), des modèles d’automatisation (`HA Blueprints`), des outils (`HA Tools`) ou des applications et modules complémentaires (`HA Apps und Add-ons`). Les noms entre parenthèses correspondent aux catégories de la référence allemande.
 
 ## Entrées actuelles {#geplant}
 
@@ -37,5 +37,5 @@ Pour chaque documentation HACS externe, les éléments suivants doivent être vi
 
 UIX est volontairement présenté uniquement sous forme de lien de référence, et non comme une entrée classique dans la collection :
 
-- [Documentation UIX en allemand](/fr/projects/uix/)
+- [Documentation UIX en français](/fr/projects/uix/)
 - [Documentation originale UIX](https://uix.lf.technology/)

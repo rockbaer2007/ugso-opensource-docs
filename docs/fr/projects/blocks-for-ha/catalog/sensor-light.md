@@ -15,7 +15,7 @@ const code = JSON.stringify(pkg, null, 2)
 | Bloc | Fonction |
 | --- | --- |
 | Valeur numérique du capteur | Lit un état comme nombre. État non numérique : 0. |
-| Capteur au-dessus du seuil | Vérifie un seuil numérique. Les états inconnus ne satisfont pas la condition. |
+| Capteur au-dessus du seuil | Vérifie si l’état numérique du capteur est strictement supérieur au seuil. Les états inconnus ne satisfont pas la condition. |
 | Lampe avec luminosité | Produit `light.turn_on` avec `brightness_pct`. Valeurs 0–100 ; lampe compatible requise. |
 
 Remplacer `sensor.temperatur` et `light.wohnzimmer`. Jinja est évalué dans HA. Les libellés de ce paquet restent en allemand, langue définie par son auteur. [Import et limites](../custom-blocks).
@@ -24,6 +24,6 @@ Remplacer `sensor.temperatur` et `light.wohnzimmer`. Jinja est évalué dans HA.
 
 ## Coller le code
 
-Copier le JSON, sélectionner **JSON prüfen** puis **Übernehmen** dans l’éditeur. Code et ZIP contiennent la même définition.
+Copier le JSON, le vérifier (**JSON prüfen** dans l’interface allemande), puis l’appliquer (**Übernehmen**). Code et ZIP contiennent la même définition.
 
 <BlockPackageCode :code="code" french />

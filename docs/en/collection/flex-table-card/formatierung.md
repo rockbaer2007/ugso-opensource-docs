@@ -69,7 +69,7 @@ columns:
 | `full_datetime` | Convert date string to timestamp |
 | `hours_passed` | past hours since date |
 | `hours_mins_passed` | past hours and minutes |
-| `time_passed` | past time with rough readability |
+| `time_passed` | Elapsed time in a coarse, human-readable format |
 
 ```yaml
 columns:

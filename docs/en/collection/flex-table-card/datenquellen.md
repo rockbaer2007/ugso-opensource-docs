@@ -32,7 +32,7 @@ Commonly used selectors:
 | `entity_id` | complete entity ID |
 | `state` | current status |
 | `icon` | Entity icon |
-| `area` | Range if available |
+| `area` | Area, if available |
 | `floor` | floor if available |
 | `device` | Device name if available |
 | `platform` | Domain, for example `sensor` |

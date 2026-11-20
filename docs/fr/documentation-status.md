@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 65 | 187 |
-| FR | 65 | 187 |
+| EN | 81 | 171 |
+| FR | 81 | 171 |
 
 ## Inventaire complet des pages
 
@@ -98,7 +98,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/blockly-audit) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/blockly-audit) |
 | [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/blocks) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Contenu vérifié](/en/projects/blocks-for-ha/catalog/) | [Contenu vérifié](/fr/projects/blocks-for-ha/catalog/) |
-| [projects/blocks-for-ha/catalog/sensor-light.md](/projects/blocks-for-ha/catalog/sensor-light) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/catalog/sensor-light) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/catalog/sensor-light) |
+| [projects/blocks-for-ha/catalog/sensor-light.md](/projects/blocks-for-ha/catalog/sensor-light) | [Contenu vérifié](/en/projects/blocks-for-ha/catalog/sensor-light) | [Contenu vérifié](/fr/projects/blocks-for-ha/catalog/sensor-light) |
 | [projects/blocks-for-ha/collections.md](/projects/blocks-for-ha/collections) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/collections) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/collections) |
 | [projects/blocks-for-ha/conversion.md](/projects/blocks-for-ha/conversion) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/conversion) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/conversion) |
 | [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/custom-blocks) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/custom-blocks) |
@@ -158,7 +158,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/logic-studio/user-guide.md](/projects/logic-studio/user-guide) | [Comparaison technique effectuée](/en/projects/logic-studio/user-guide) | [Comparaison technique effectuée](/fr/projects/logic-studio/user-guide) |
 | [projects/logic-studio/user-guide/blocks-a.md](/projects/logic-studio/user-guide/blocks-a) | [Comparaison technique effectuée](/en/projects/logic-studio/user-guide/blocks-a) | [Comparaison technique effectuée](/fr/projects/logic-studio/user-guide/blocks-a) |
 | [projects/logic-studio/user-guide/blocks-js.md](/projects/logic-studio/user-guide/blocks-js) | [Comparaison technique effectuée](/en/projects/logic-studio/user-guide/blocks-js) | [Comparaison technique effectuée](/fr/projects/logic-studio/user-guide/blocks-js) |
-| [projects/logic-studio/user-guide/feedback.md](/projects/logic-studio/user-guide/feedback) | [Comparaison technique effectuée](/en/projects/logic-studio/user-guide/feedback) | [Comparaison technique effectuée](/fr/projects/logic-studio/user-guide/feedback) |
+| [projects/logic-studio/user-guide/feedback.md](/projects/logic-studio/user-guide/feedback) | [Contenu vérifié](/en/projects/logic-studio/user-guide/feedback) | [Contenu vérifié](/fr/projects/logic-studio/user-guide/feedback) |
 | [projects/logic-studio/user-guide/function-plan.md](/projects/logic-studio/user-guide/function-plan) | [Comparaison technique effectuée](/en/projects/logic-studio/user-guide/function-plan) | [Comparaison technique effectuée](/fr/projects/logic-studio/user-guide/function-plan) |
 | [projects/logic-studio/user-guide/ha-yaml.md](/projects/logic-studio/user-guide/ha-yaml) | [Comparaison technique effectuée](/en/projects/logic-studio/user-guide/ha-yaml) | [Comparaison technique effectuée](/fr/projects/logic-studio/user-guide/ha-yaml) |
 | [projects/logic-studio/user-guide/javascript.md](/projects/logic-studio/user-guide/javascript) | [Comparaison technique effectuée](/en/projects/logic-studio/user-guide/javascript) | [Comparaison technique effectuée](/fr/projects/logic-studio/user-guide/javascript) |
@@ -185,10 +185,10 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/dom) | [Comparaison technique effectuée](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Contenu vérifié · Différence examinée](/en/projects/uix/concepts/) | [Contenu vérifié](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Contenu présent · Différence examinée](/en/projects/uix/contributing) | [Contenu présent · Différence examinée](/fr/projects/uix/contributing) |
-| [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Contenu présent · Différence examinée](/en/projects/uix/debugging/cache) | [Contenu présent · Différence examinée](/fr/projects/uix/debugging/cache) |
+| [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Contenu vérifié · Différence examinée](/en/projects/uix/debugging/cache) | [Contenu vérifié · Différence examinée](/fr/projects/uix/debugging/cache) |
 | [projects/uix/debugging/cards.md](/projects/uix/debugging/cards) | [Contenu présent · Différence examinée](/en/projects/uix/debugging/cards) | [Comparaison technique effectuée](/fr/projects/uix/debugging/cards) |
 | [projects/uix/debugging/index.md](/projects/uix/debugging/) | [Contenu vérifié · Différence examinée](/en/projects/uix/debugging/) | [Contenu vérifié](/fr/projects/uix/debugging/) |
-| [projects/uix/debugging/templates.md](/projects/uix/debugging/templates) | [Contenu présent · Différence examinée](/en/projects/uix/debugging/templates) | [Contenu présent · Différence examinée](/fr/projects/uix/debugging/templates) |
+| [projects/uix/debugging/templates.md](/projects/uix/debugging/templates) | [Contenu vérifié · Différence examinée](/en/projects/uix/debugging/templates) | [Contenu vérifié](/fr/projects/uix/debugging/templates) |
 | [projects/uix/developers/cards.md](/projects/uix/developers/cards) | [Contenu présent · Différence examinée](/en/projects/uix/developers/cards) | [Comparaison technique effectuée](/fr/projects/uix/developers/cards) |
 | [projects/uix/developers/index.md](/projects/uix/developers/) | [Contenu vérifié · Différence examinée](/en/projects/uix/developers/) | [Contenu vérifié](/fr/projects/uix/developers/) |
 | [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Contenu vérifié · Différence examinée](/en/projects/uix/developers/themes) | [Contenu vérifié](/fr/projects/uix/developers/themes) |
@@ -199,7 +199,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Contenu présent · Différence examinée](/en/projects/uix/extras/disable-icon-styling) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/disable-icon-styling) |
 | [projects/uix/extras/frontend-states-throttling.md](/projects/uix/extras/frontend-states-throttling) | [Contenu présent · Différence examinée](/en/projects/uix/extras/frontend-states-throttling) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/frontend-states-throttling) |
 | [projects/uix/extras/hash-template-variable-updates.md](/projects/uix/extras/hash-template-variable-updates) | [Contenu vérifié · Différence examinée](/en/projects/uix/extras/hash-template-variable-updates) | [Contenu vérifié](/fr/projects/uix/extras/hash-template-variable-updates) |
-| [projects/uix/extras/index.md](/projects/uix/extras/) | [Contenu présent · Différence examinée](/en/projects/uix/extras/) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/) |
+| [projects/uix/extras/index.md](/projects/uix/extras/) | [Contenu vérifié · Différence examinée](/en/projects/uix/extras/) | [Contenu vérifié · Différence examinée](/fr/projects/uix/extras/) |
 | [projects/uix/extras/style-custom-panels.md](/projects/uix/extras/style-custom-panels) | [Contenu vérifié](/en/projects/uix/extras/style-custom-panels) | [Contenu vérifié](/fr/projects/uix/extras/style-custom-panels) |
 | [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Contenu présent · Différence examinée](/en/projects/uix/extras/style-frame-panels) | [Comparaison technique effectuée](/fr/projects/uix/extras/style-frame-panels) |
 | [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Contenu présent · Différence examinée](/en/projects/uix/extras/uix-actions) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/uix-actions) |
@@ -247,23 +247,23 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Contenu vérifié](/en/projects/ultimate-timer/) | [Contenu vérifié](/fr/projects/ultimate-timer/) |
 | [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Contenu vérifié](/en/projects/ultimate-timer/installation) | [Contenu vérifié](/fr/projects/ultimate-timer/installation) |
 | [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Contenu vérifié](/en/projects/ultimate-timer/configuration) | [Contenu vérifié](/fr/projects/ultimate-timer/configuration) |
-| [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/beispiele) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/beispiele) |
-| [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/entwicklung) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/entwicklung) |
+| [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Contenu vérifié](/en/collection/calendar-card-pro/beispiele) | [Contenu vérifié](/fr/collection/calendar-card-pro/beispiele) |
+| [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Contenu vérifié](/en/collection/calendar-card-pro/entwicklung) | [Contenu vérifié](/fr/collection/calendar-card-pro/entwicklung) |
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/features) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/features) |
 | [sammlung/calendar-card-pro/index.md](/sammlung/calendar-card-pro/) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/) |
 | [sammlung/calendar-card-pro/installation.md](/sammlung/calendar-card-pro/installation) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/installation) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/installation) |
 | [sammlung/calendar-card-pro/konfiguration.md](/sammlung/calendar-card-pro/konfiguration) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/konfiguration) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/konfiguration) |
 | [sammlung/calendar-card-pro/lizenz-und-stand.md](/sammlung/calendar-card-pro/lizenz-und-stand) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/lizenz-und-stand) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/lizenz-und-stand) |
-| [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/nutzung) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/nutzung) |
+| [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Contenu vérifié](/en/collection/calendar-card-pro/nutzung) | [Contenu vérifié](/fr/collection/calendar-card-pro/nutzung) |
 | [sammlung/dashboard-layout-card-v2/index.md](/sammlung/dashboard-layout-card-v2/) | [Comparaison technique effectuée](/en/collection/dashboard-layout-card-v2/) | [Comparaison technique effectuée](/fr/collection/dashboard-layout-card-v2/) |
 | [sammlung/flex-table-card/aktionen.md](/sammlung/flex-table-card/aktionen) | [Contenu vérifié](/en/collection/flex-table-card/aktionen) | [Contenu vérifié](/fr/collection/flex-table-card/aktionen) |
 | [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Comparaison technique effectuée](/en/collection/flex-table-card/beispiele-aus-forum) | [Comparaison technique effectuée](/fr/collection/flex-table-card/beispiele-aus-forum) |
 | [sammlung/flex-table-card/css.md](/sammlung/flex-table-card/css) | [Contenu vérifié](/en/collection/flex-table-card/css) | [Contenu vérifié](/fr/collection/flex-table-card/css) |
-| [sammlung/flex-table-card/datenquellen.md](/sammlung/flex-table-card/datenquellen) | [Comparaison technique effectuée](/en/collection/flex-table-card/datenquellen) | [Comparaison technique effectuée](/fr/collection/flex-table-card/datenquellen) |
+| [sammlung/flex-table-card/datenquellen.md](/sammlung/flex-table-card/datenquellen) | [Contenu vérifié](/en/collection/flex-table-card/datenquellen) | [Contenu vérifié](/fr/collection/flex-table-card/datenquellen) |
 | [sammlung/flex-table-card/externe-daten.md](/sammlung/flex-table-card/externe-daten) | [Comparaison technique effectuée](/en/collection/flex-table-card/externe-daten) | [Comparaison technique effectuée](/fr/collection/flex-table-card/externe-daten) |
-| [sammlung/flex-table-card/formatierung.md](/sammlung/flex-table-card/formatierung) | [Comparaison technique effectuée](/en/collection/flex-table-card/formatierung) | [Comparaison technique effectuée](/fr/collection/flex-table-card/formatierung) |
+| [sammlung/flex-table-card/formatierung.md](/sammlung/flex-table-card/formatierung) | [Contenu vérifié](/en/collection/flex-table-card/formatierung) | [Contenu vérifié](/fr/collection/flex-table-card/formatierung) |
 | [sammlung/flex-table-card/grundlagen.md](/sammlung/flex-table-card/grundlagen) | [Contenu vérifié](/en/collection/flex-table-card/grundlagen) | [Contenu vérifié](/fr/collection/flex-table-card/grundlagen) |
-| [sammlung/flex-table-card/header-footer.md](/sammlung/flex-table-card/header-footer) | [Comparaison technique effectuée](/en/collection/flex-table-card/header-footer) | [Comparaison technique effectuée](/fr/collection/flex-table-card/header-footer) |
+| [sammlung/flex-table-card/header-footer.md](/sammlung/flex-table-card/header-footer) | [Contenu vérifié](/en/collection/flex-table-card/header-footer) | [Contenu vérifié](/fr/collection/flex-table-card/header-footer) |
 | [sammlung/flex-table-card/index.md](/sammlung/flex-table-card/) | [Comparaison technique effectuée](/en/collection/flex-table-card/) | [Comparaison technique effectuée](/fr/collection/flex-table-card/) |
 | [sammlung/flex-table-card/installation.md](/sammlung/flex-table-card/installation) | [Contenu vérifié](/en/collection/flex-table-card/installation) | [Contenu vérifié](/fr/collection/flex-table-card/installation) |
 | [sammlung/flex-table-card/paketliste.md](/sammlung/flex-table-card/paketliste) | [Contenu vérifié](/en/collection/flex-table-card/paketliste) | [Contenu vérifié](/fr/collection/flex-table-card/paketliste) |
@@ -278,18 +278,18 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [sammlung/ha-cards.md](/sammlung/ha-cards) | [Comparaison technique effectuée](/en/collection/ha-cards) | [Comparaison technique effectuée](/fr/collection/ha-cards) |
 | [sammlung/ha-dashboard.md](/sammlung/ha-dashboard) | [Comparaison technique effectuée](/en/collection/ha-dashboard) | [Comparaison technique effectuée](/fr/collection/ha-dashboard) |
 | [sammlung/ha-empfehlungen.md](/sammlung/ha-empfehlungen) | [Comparaison technique effectuée](/en/collection/ha-recommendations) | [Comparaison technique effectuée](/fr/collection/ha-recommendations) |
-| [sammlung/ha-integrationen.md](/sammlung/ha-integrationen) | [Comparaison technique effectuée](/en/collection/ha-integrations) | [Comparaison technique effectuée](/fr/collection/ha-integrations) |
-| [sammlung/ha-tools.md](/sammlung/ha-tools) | [Comparaison technique effectuée](/en/collection/ha-tools) | [Comparaison technique effectuée](/fr/collection/ha-tools) |
-| [sammlung/hacs-dokus.md](/sammlung/hacs-dokus) | [Comparaison technique effectuée](/en/collection/hacs-docs) | [Comparaison technique effectuée](/fr/collection/hacs-docs) |
+| [sammlung/ha-integrationen.md](/sammlung/ha-integrationen) | [Contenu vérifié](/en/collection/ha-integrations) | [Contenu vérifié](/fr/collection/ha-integrations) |
+| [sammlung/ha-tools.md](/sammlung/ha-tools) | [Contenu vérifié](/en/collection/ha-tools) | [Contenu vérifié](/fr/collection/ha-tools) |
+| [sammlung/hacs-dokus.md](/sammlung/hacs-dokus) | [Contenu vérifié](/en/collection/hacs-docs) | [Contenu vérifié](/fr/collection/hacs-docs) |
 | [sammlung/index.md](/sammlung/) | [Comparaison technique effectuée](/en/collection/) | [Comparaison technique effectuée](/fr/collection/) |
 | [sammlung/mushroom/beispiele.md](/sammlung/mushroom/beispiele) | [Contenu vérifié](/en/collection/mushroom/beispiele) | [Contenu vérifié](/fr/collection/mushroom/beispiele) |
-| [sammlung/mushroom/entwicklung.md](/sammlung/mushroom/entwicklung) | [Comparaison technique effectuée](/en/collection/mushroom/entwicklung) | [Comparaison technique effectuée](/fr/collection/mushroom/entwicklung) |
+| [sammlung/mushroom/entwicklung.md](/sammlung/mushroom/entwicklung) | [Contenu vérifié](/en/collection/mushroom/entwicklung) | [Contenu vérifié](/fr/collection/mushroom/entwicklung) |
 | [sammlung/mushroom/fehlersuche.md](/sammlung/mushroom/fehlersuche) | [Comparaison technique effectuée](/en/collection/mushroom/fehlersuche) | [Comparaison technique effectuée](/fr/collection/mushroom/fehlersuche) |
 | [sammlung/mushroom/index.md](/sammlung/mushroom/) | [Comparaison technique effectuée](/en/collection/mushroom/) | [Comparaison technique effectuée](/fr/collection/mushroom/) |
 | [sammlung/mushroom/installation.md](/sammlung/mushroom/installation) | [Comparaison technique effectuée](/en/collection/mushroom/installation) | [Comparaison technique effectuée](/fr/collection/mushroom/installation) |
 | [sammlung/mushroom/karten.md](/sammlung/mushroom/karten) | [Comparaison technique effectuée](/en/collection/mushroom/karten) | [Comparaison technique effectuée](/fr/collection/mushroom/karten) |
 | [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Comparaison technique effectuée](/en/collection/mushroom/lizenz-und-stand) | [Comparaison technique effectuée](/fr/collection/mushroom/lizenz-und-stand) |
-| [sammlung/mushroom/nutzung.md](/sammlung/mushroom/nutzung) | [Comparaison technique effectuée](/en/collection/mushroom/nutzung) | [Comparaison technique effectuée](/fr/collection/mushroom/nutzung) |
+| [sammlung/mushroom/nutzung.md](/sammlung/mushroom/nutzung) | [Contenu vérifié](/en/collection/mushroom/nutzung) | [Contenu vérifié](/fr/collection/mushroom/nutzung) |
 | [sammlung/neomorphix-uix/index.md](/sammlung/neomorphix-uix/) | [Comparaison technique effectuée](/en/collection/neomorphix-uix/) | [Comparaison technique effectuée](/fr/collection/neomorphix-uix/) |
 | [sammlung/testsysteme.md](/sammlung/testsysteme) | [Contenu vérifié](/en/collection/test-systems) | [Contenu vérifié](/fr/collection/test-systems) |
 | [sammlung/weitere-beispiele.md](/sammlung/weitere-beispiele) | [Comparaison technique effectuée](/en/collection/interesting-examples) | [Comparaison technique effectuée](/fr/collection/interesting-examples) |

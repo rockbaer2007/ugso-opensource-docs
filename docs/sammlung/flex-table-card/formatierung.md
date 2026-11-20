@@ -89,6 +89,6 @@ columns:
 ```
 
 ::: danger Sicherheit
-`modify` fuehrt JavaScript aus. Nutze es nur mit Daten, deren Quelle du vertraust.
+`modify` führt JavaScript aus. Nutze es nur mit Daten, deren Quelle du vertraust.
 :::
 

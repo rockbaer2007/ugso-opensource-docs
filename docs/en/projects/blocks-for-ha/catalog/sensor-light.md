@@ -14,7 +14,7 @@ const code = JSON.stringify(pkg, null, 2)
 | Block | Function |
 | --- | --- |
 | Numeric sensor value | Reads a sensor state as a number. Non-numeric states become 0. |
-| Sensor above threshold | Tests a numeric sensor state against a threshold. Unknown states do not pass. |
+| Sensor above threshold | Tests whether the numeric sensor state is strictly greater than the threshold. Unknown states do not pass. |
 | Light with brightness | Generates native `light.turn_on` with `brightness_pct`. Use 0–100; the light must support brightness. |
 
 Replace sample entities `sensor.temperatur` and `light.wohnzimmer`. HA evaluates Jinja. Package labels remain in their original German language. [Import and limits](../custom-blocks).
@@ -23,6 +23,6 @@ Replace sample entities `sensor.temperatur` and `light.wohnzimmer`. HA evaluates
 
 ## Paste code
 
-Copy the code, select **JSON prüfen** and **Übernehmen** in the editor. Code and ZIP contain the same definition.
+Copy the code, validate the JSON (**JSON prüfen** in the German interface), then apply it (**Übernehmen**). Code and ZIP contain the same definition.
 
 <BlockPackageCode :code="code" english />

@@ -1780,7 +1780,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "85e6976af1fb93a95da14e218cabda6a0bf1b032c55a27917cf1fc9db09fb584",
-      "target_sha256": "cbf42d75fb4f84f0dc4ed56aa9d9cc4204badc14239744e193cf755cc29ddad5",
+      "target_sha256": "8a6afb2c3b844ccd32fbbe7c6d2603192c143d618871319c86469f7721130e9b",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1789,7 +1789,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/catalog/sensor-light.md",
@@ -1797,7 +1799,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "85e6976af1fb93a95da14e218cabda6a0bf1b032c55a27917cf1fc9db09fb584",
-      "target_sha256": "b912f5cac4c94b90967b411961e17d76a35765a312fe1db83e5993df5b83e729",
+      "target_sha256": "26f1c028e3d10b2f1ee5d80e3c7264a8db59fa983ec8ebed4a5735302924761a",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1806,7 +1808,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/collections.md",
@@ -5490,7 +5494,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "d0d62f2fb3167fc04fffd28b29872f90c1064e12688e35e2814c9a53117ed496",
-      "target_sha256": "f85519be9a9d28282db1f7f1cfc7afc14dee972935082e3c402b1cf0a10efba8",
+      "target_sha256": "d2b5c0facc6311a85a0fa3b0acdf7e2a99773e829ec3ce75f71ae695e872b601",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5499,7 +5503,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/calendar-card-pro/beispiele.md",
@@ -5507,7 +5513,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "d0d62f2fb3167fc04fffd28b29872f90c1064e12688e35e2814c9a53117ed496",
-      "target_sha256": "b05c65280b8b7eecaa0595df09050de9f70eba8be6c706adb77d683a23c15b0e",
+      "target_sha256": "bbd3ed70a84f202f646307455b749e46712008139f44c6e61311b33f262956b1",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5516,7 +5522,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/calendar-card-pro/entwicklung.md",
@@ -5728,7 +5736,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "7a7e7293e224f90f5fb2288337af336491447df3ff37c3f31f3f782136d753f2",
-      "target_sha256": "4ae99829cb27b5452e0b71364f79629eecabedd0a79730fc6f721ce443d72f13",
+      "target_sha256": "e834c109ea4241b58cefe69d7079cb7c53a4796f075dc2ec94b33ec6b7afb882",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5737,7 +5745,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/calendar-card-pro/nutzung.md",
@@ -5909,7 +5919,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "8f55e8b2feade44019193d9e367d56a4a1361798978257a52cf05f7342541c12",
-      "target_sha256": "1259486b253c6a7130b9952f4997a39746c96ce3d2c3896df6d2404bf0877fc0",
+      "target_sha256": "6279f3237d025ca4f5d16e932221049c78fd41a736dbfa69346cae048cfec4d9",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5918,7 +5928,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/flex-table-card/datenquellen.md",
@@ -5976,8 +5988,8 @@
       "target": "en/collection/flex-table-card/formatierung.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "5dadb1798942f4a5ec509efacb613732157c7b185f095dc1392079b4f4cdc5d6",
-      "target_sha256": "fbfd1a963dd5746416640e53fec376ca3c3fc54d58ba5d7e7ee3634e6c2b1bfc",
+      "source_sha256": "e5de49a5599f1cc7f9f85776ac64487947ea54ad54da4bf3a9979fe07ce15848",
+      "target_sha256": "23cdcbfa2442b42d44b6622ab8468aa9b707b49b0f1825642fc97df3af3171a3",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5986,14 +5998,16 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/flex-table-card/formatierung.md",
       "target": "fr/collection/flex-table-card/formatierung.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "5dadb1798942f4a5ec509efacb613732157c7b185f095dc1392079b4f4cdc5d6",
+      "source_sha256": "e5de49a5599f1cc7f9f85776ac64487947ea54ad54da4bf3a9979fe07ce15848",
       "target_sha256": "a56ef64c21f57c1d45ac18ff89374eb5cdc885e90f13fc561dee303a02019b34",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
@@ -6003,7 +6017,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/flex-table-card/grundlagen.md",
@@ -6047,7 +6063,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "f96e56f5cfed3adbfa5f98fdf3a2143be46da14e9ce467ee048ff121640ecc5c",
-      "target_sha256": "caf80725e0e7f1b4d72e8eadc01b31fc154c2792c101ba5a2d1a4dc2ef3467e2",
+      "target_sha256": "420ff1205c2966739416e4f00308beeca27f393509a1c5fcf164911129be8b9b",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -6056,7 +6072,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/flex-table-card/header-footer.md",
@@ -6574,7 +6592,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "4556a6b491397eecc32cfc0a3def1c08a8d9fee580e42f10c60671d320bed1cd",
-      "target_sha256": "139b47dde57787778fe68dc9f6622210cd7a4924e1dd4717f6823d157d6eb26b",
+      "target_sha256": "59fdd13824c28eac11982f121735d88861b599b2d6581ee003e5d590afd0e3bd",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -6583,7 +6601,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/ha-tools.md",
@@ -6591,20 +6611,27 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "981040e93d2ad374da122ae91631d8ed028c8cd5d3e25cbc2b42735936c89658",
-      "target_sha256": "da7f53e26e3f33187341092309575276978db35e5a67bac1fcb2f8193b6fbeef",
+      "target_sha256": "c81d2045c8822041c83b91fa60f5c5e8c691ccc7622d162e5ec39bef58263f77",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
-        "missing_inline": [
-          "automations.yaml"
-        ],
+        "missing_inline": [],
         "missing_external": [],
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [
-        "Source-only backticked strings were checked in context: translated sample entity IDs, package filenames or fields documented in prose/code without the same inline formatting. Relevant functionality is still described."
+        "Missing Automation Exporter row restored after full content comparison; see explicit technical triage erratum."
       ],
-      "corrections": null
+      "corrections": "Restored Automation Exporter link, icon, automations.yaml input and separate-YAML export description.",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json.",
+      "technical_triage_erratum": {
+        "reviewed_at": "2026-11-20",
+        "original_missing_inline": [
+          "automations.yaml"
+        ],
+        "correction": "The initial technical triage incorrectly treated this identifier difference as formatting. Content review found the entire Automation Exporter row missing; the row is now restored."
+      }
     },
     {
       "source": "sammlung/ha-tools.md",
@@ -6646,7 +6673,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "56b02155fcd3c03b8c3a2c3eab19ed7a8d1cec7f00a60a8a143b69515debabb0",
-      "target_sha256": "86d1d2aec6052d03c32c4b5a4a38e998356bd9541a9dff0d1b4cc04b74b48a96",
+      "target_sha256": "9317db0e94e3dd3def08a98f41a23196d739d9486dbe8f443a1072532659e844",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -6655,7 +6682,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/index.md",
@@ -6952,7 +6981,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "844226536a4987dcef1ae9e4b7552d825953bda3ab4d4bfd7c490185cef8e488",
-      "target_sha256": "8815be7a8e35552d772a19141bb8dd11f6e853df3065ceba385d380a1f209659",
+      "target_sha256": "ae7787dfae22f16d3a60fa08df99f605b3db046cb5df8af8aee3d0ed8dff6c4c",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -6961,7 +6990,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/neomorphix-uix/index.md",
