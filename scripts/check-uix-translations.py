@@ -62,6 +62,15 @@ def main():
                         raise SystemExit(f"Missing or translated user-rule YAML keys: {locale}/{path}")
                 if re.search(r"(?m)^ {4,}- tapez", text):
                     raise SystemExit(f"Translated key in indented YAML example: {locale}/{path}")
+            if path == "forge/sparks/background.md":
+                # Supplemental translated examples must use the actual API forms.
+                # Invalid older examples were preserved by the former parity check.
+                blocks = re.findall(r"(?ms)^```[^\n]*\n(.*?)^```", text)
+                for block in blocks:
+                    if re.search(r"dissolve_target:\s*opacity\(", block) or re.search(r"(?m)^\s*- (?:background|box-shadow)\s*$", block):
+                        raise SystemExit(f"Invalid dissolve_target example: {locale}/{path}")
+                if "dissolve_target: opacity_50" not in text or "- background: none" not in text:
+                    raise SystemExit(f"Missing corrected dissolve_target examples: {locale}/{path}")
             missing = [key for key in item["table_identifiers"] if key not in text]
             if missing:
                 raise SystemExit(f"Missing {locale} technical identifiers in {path}: {missing}")

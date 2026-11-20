@@ -98,7 +98,7 @@ element:
 
 ## Règles de correspondance des verrous
 
-`locks` est une liste ordonnée. La **première entrée correspondante** détermine ce que l'utilisateur doit faire pour déverrouiller l'élément. Les règles de correspondance sont les suivantes :
+`locks` est une liste ordonnée. La **première entrée active correspondante** détermine ce que l'utilisateur doit faire pour déverrouiller l'élément. Les règles de correspondance sont les suivantes :
 
 | Configuration | Utilisateurs concernés |
 | --- | --- |
@@ -108,7 +108,7 @@ element:
 
 `admins` est un indicateur **additif**. Sans liste `users`, il *étend* la portée par défaut (tous les non-administrateurs) aux administrateurs ; l'entrée concerne alors tout le monde. Par défaut, les administrateurs sont **exclus** des entrées qui ne définissent pas explicitement `admins: true` et ne les mentionnent pas dans `users`.
 
-Lorsqu'une entrée définit `active: false`, les verrous suivants sont examinés pour trouver une correspondance avec `active: true`. Si aucun verrou n'est actif, la première entrée inactive correspondant à l'utilisateur est retenue ; les utilisateurs concernés **ne sont pas verrouillés** et la superposition est masquée pour eux.
+Lorsqu'une entrée définit `active: false`, les verrous suivants sont examinés pour trouver une correspondance avec `active: true`. Si aucun verrou actif ne correspond à cet utilisateur, la première entrée inactive correspondant à l'utilisateur est retenue ; les utilisateurs concernés **ne sont pas verrouillés** et la superposition est masquée pour eux.
 
 Si aucune entrée ne correspond, y compris une entrée `active: false` :
 
@@ -167,7 +167,7 @@ Contrôle l'apparence de la boîte de dialogue de saisie du code PIN ou de la ph
 | `pin` | chaîne ou nombre | — | Alias de `code`. |
 | `confirmation` | chaîne ou booléen | — | Demande de confirmation. Utilisez `true` pour le texte localisé par défaut de Home Assistant ou indiquez un texte personnalisé. |
 | `users` | liste de chaînes | — | Noms des utilisateurs concernés par cette entrée. |
-| `admins` | booléen | `false` | **Indicateur additif.** Sans liste `users`, `admins: true` étend l'entrée à **tous les utilisateurs**, administrateurs compris. Avec une liste `users`, les administrateurs sont également concernés. Ils sont exclus si cette option est absente ou définie sur `false`. |
+| `admins` | booléen | `false` | **Indicateur additif.** Sans liste `users`, `admins: true` étend l'entrée à **tous les utilisateurs**, administrateurs compris. Avec une liste `users`, les administrateurs sont également concernés. Ils sont exclus si cette option est absente ou définie sur `false`, sauf s'ils figurent explicitement dans `users`. |
 | `except` | liste de chaînes | — | Utilisateurs exemptés de cette entrée ; cette option est utilisée uniquement sans liste `users`. |
 | `retry_delay` | nombre ou chaîne | — | Délai entre deux tentatives après un code incorrect. Les nombres sont en millisecondes ; les chaînes acceptent des unités lisibles, par exemple `"10s"`. |
 | `max_retries` | nombre | — | Nombre maximal de tentatives incorrectes consécutives avant l'application du délai prolongé. |

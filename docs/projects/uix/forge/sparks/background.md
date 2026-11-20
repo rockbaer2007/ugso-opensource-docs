@@ -9,7 +9,7 @@ Der Background Spark fügt einem Forge-Element eine eigene Hintergrundebene hinz
 | --- | --- | --- |
 | Kamera | `camera_entity` | Live-Stream über `ha-camera-stream`. Unterstützt Zoom, Pan und Position. Zeigt während des Ladens einen Spinner. |
 | Entity Picture | `image_entity` | Liest `entity_picture` aus einer Entity und signiert die URL. Zeigt während des Ladens einen Spinner. |
-| Video | `video_url` | Fuegt ein `<video>`-Element ein, automatisch startend, stumm und geloopt. Unterstützt `media-source://`-URIs. |
+| Video | `video_url` | Fügt ein `<video>`-Element ein, automatisch startend, stumm und geloopt. Unterstützt `media-source://`-URIs. |
 | Bild-URL | `image_url` | Statisches Bild als `background-image`. Unterstützt `media-source://`-URIs. |
 | Farbe oder CSS-Shorthand | `background` | Beliebiger CSS-`background`-Wert oder Mapping einzelner Background-Eigenschaften. |
 
@@ -17,6 +17,8 @@ Der Background Spark fügt einem Forge-Element eine eigene Hintergrundebene hinz
 Nutze `opacity`, um nur den Hintergrund abzudunkeln. Wenn du stattdessen das ganze Zielelement transparent machst, werden auch Text, Icons und Controls beeinflusst.
 
 :::
+Die erste nicht leere Quelle in der Tabellenreihenfolge gewinnt. Der Hintergrundcontainer liegt bei `z-index: -1` hinter dem Inhalt.
+
 ## Grundnutzung
 
 ```yaml
@@ -49,8 +51,8 @@ element:
 | `camera_position` | string | `center` | Positionierung des Streams: `center`, `top`, `bottom`, `left`, `right`, `top-left`, `top-right`, `bottom-left`, `bottom-right`. |
 | `camera_stream_cache_ms` | number | `20000` | Wie lange ein `ha-camera-stream` nach dem Entfernen im Cache bleibt. So kann ein Stream beim nächsten Aufbau wiederverwendet werden. |
 | `image_entity` | string | - | Entity-ID, deren Attribut `entity_picture` als Hintergrundbild genutzt wird. |
-| `video_url` | string | - | Video-URL. `media-source://` wird unterstuetzt. |
-| `image_url` | string | - | Bild-URL. `media-source://` wird unterstuetzt. |
+| `video_url` | string | - | Video-URL. `media-source://` wird unterstützt. |
+| `image_url` | string | - | Bild-URL. `media-source://` wird unterstützt. |
 | `background` | string oder object | - | CSS-`background`-Shorthand oder Mapping einzelner Eigenschaften. Bei `image_entity` oder `image_url` können Objektwerte wie `position` und `size` das Bildlayout überschreiben. |
 | `opacity` | number | - | CSS-Deckkraft der Hintergrundebene von `0` bis `1`. |
 | `dissolve_target` | string oder list | - | Macht das Zielelement transparent, damit der Spark-Hintergrund sichtbar wird. |
@@ -87,7 +89,7 @@ forge:
 
 ## `dissolve_target`
 
-`dissolve_target` entfernt oder reduziert den bestehenden Hintergrund des Zielelements. Das ist besonders wichtig bei Karten, deren eigenes `ha-card` sonst über der neuen Hintergrundebene liegt.
+`dissolve_target` verändert das Zielelement, damit der Hintergrund sichtbar wird. Erlaubt sind `opacity_<0-100>` als String oder eine Liste von CSS-Eigenschaftsobjekten. Ein bloßer Eigenschaftsname oder `opacity(0.5)` ist ungültig. Die folgenden ergänzenden Beispiele wurden nach Abgleich mit dem Originalcode entsprechend berichtigt.
 
 ```yaml
 forge:
@@ -96,8 +98,8 @@ forge:
       for: hui-tile-card
       image_url: /local/backgrounds/room.jpg
       dissolve_target:
-        - background
-        - box-shadow
+        - background: none
+        - box-shadow: none
 ```
 
 ```yaml
@@ -106,7 +108,7 @@ forge:
     - type: background
       for: hui-tile-card
       background: var(--primary-color)
-      dissolve_target: opacity(0.5)
+      dissolve_target: opacity_50
 ```
 
 ## Media-Source-URIs
@@ -162,8 +164,8 @@ forge:
       camera_zoom: 1.2
       opacity: 0.55
       dissolve_target:
-        - background
-        - box-shadow
+        - background: none
+        - box-shadow: none
 element:
   type: tile
   entity: binary_sensor.front_door_motion
@@ -344,7 +346,7 @@ forge:
 | Problem | Ursache | Lösung |
 | --- | --- | --- |
 | Bild sichtbar, Text schlecht lesbar | Hintergrund zu hell oder zu kontrastreich | `opacity`, `text-shadow` oder dunkles Gradient nutzen |
-| Hintergrund nicht sichtbar | Zielkarte hat eigenen Hintergrund | `dissolve_target` auf `background` setzen |
+| Hintergrund nicht sichtbar | Zielkarte hat eigenen Hintergrund | `dissolve_target` als Liste mit `background: none` setzen |
 | Kamera startet langsam | Stream wird neu aufgebaut | `camera_stream_cache_ms` erhöhen |
 | Bild falsch zugeschnitten | `background-size` oder Position fehlt | `background.size` und `background.position` setzen |
 | Medienbibliothek funktioniert nicht | URI falsch | `media-source://media_source/local/...` prüfen |

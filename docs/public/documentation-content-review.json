@@ -4558,8 +4558,8 @@
       "target": "fr/projects/uix/concepts/dom.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "9d1d866f62656a2000d2b4f58cd07382d5c9ff8f72f4ddb52e38c0a1c988d399",
-      "target_sha256": "6569703360d48b1febd46dc3d2b2a6cd456f66fcd3bbe4e93c678ae406ca79c7",
+      "source_sha256": "8f6ac782da3f8aa4c11b564a4596eed739c72095465d7c3cdeaf6aee4ae95fde",
+      "target_sha256": "f169f324583ec2aa5b2f7af3178c5b98b3d4f8fd751b9898d70c142331664579",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4568,7 +4568,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/concepts/index.md",
@@ -4851,8 +4853,8 @@
       "target": "fr/projects/uix/forge/sparks/background.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "9935009fbd0074306ae13ebb871a1081a6bb8cd08f4d54726a64fec55a1330f1",
-      "target_sha256": "bd78c0b931cc57e356d3dd0bf32a6f89a8f77e0a71d7b02ea302157898ef7500",
+      "source_sha256": "11f004cfd40d94503c4abfc986fbb3c38a48604c149c43a425a96900666a207e",
+      "target_sha256": "83d8708b2cdcfc1ac8cbf37f818121dbe01bfe778a3198d8a46e2b0efac5ae7e",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4868,7 +4870,9 @@
       "difference_assessment": [
         "Source-only inline strings were checked in context: canonical UIX wording, expressions demonstrated in code rather than repeated inline, or version/attribution formatting. They are not a list of missing API options."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/badge.md",
@@ -4961,8 +4965,8 @@
       "target": "fr/projects/uix/forge/sparks/lock.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "9fc2a8e0fd6f9103b8025586f89f60caacfd578b07456eccdd61041edfb40082",
-      "target_sha256": "064542ee0b2473f472e2a0142f8b49c1414a1b2db3133083d6b735c0a98ef186",
+      "source_sha256": "f8ca1daed1683c57fa01016602c90c6557de057f0d8babdfa274f092a54eeeac",
+      "target_sha256": "0932779bf3eba10a17a40494696340fef6af4b98b024d7bc7979faa0d16a2791",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4974,14 +4978,16 @@
         "Compared the differing blocks: translated comments, indentation and alternative/expanded canonical UIX examples account for the differences. German summaries and canonical adaptations are not literal copies; pin is a documented alias of code. The French developer syntax defect was corrected separately.",
         "Canonical UIX source coverage is independently checked by check-uix-translations.py; no claim of identical German/French example sets."
       ],
-      "corrections": "active:false fallback clarified to agree with the canonical matching rules; entry heading translated. German reference clarified too."
+      "corrections": "active:false fallback clarified to agree with the canonical matching rules; entry heading translated. German reference clarified too.",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/map.md",
       "target": "fr/projects/uix/forge/sparks/map.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "c6efc29acf4f3f897d128f6abef0b3ef994027e4fc8ff0e1ec70c5c3b8fc0afb",
+      "source_sha256": "75abe08d6d0238124d72f7442c9e5ce2ff77da8f9a39db3836e70249639eb6ad",
       "target_sha256": "5a295fa7561a824b21021fac877660906669fe042d42de9d64c8a984ddd1c023",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
@@ -4995,7 +5001,9 @@
       "difference_assessment": [
         "Source-only inline strings were checked in context: canonical UIX wording, expressions demonstrated in code rather than repeated inline, or version/attribution formatting. They are not a list of missing API options."
       ],
-      "corrections": "Fixed two MP4 links and published byte-identical canonical media at their stable public URLs."
+      "corrections": "Fixed two MP4 links and published byte-identical canonical media at their stable public URLs.",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/more-info.md",
@@ -5382,8 +5390,8 @@
       "target": "fr/projects/uix/using/themes.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "ddf5289e49590fc9c357809aaa0df9d6c246d2abf2306f68d104166fc55247f9",
-      "target_sha256": "8752095869f3240c3377ef4aa6c8e3804c685a8deef35d435a6763c5c9764835",
+      "source_sha256": "191301115565f03130b64578036d6ca5e614ba21afafa0269dfeb1e9ecced9f1",
+      "target_sha256": "8889fef9a7606940eda9b80fab4b054c683026b49d077287be34fe5b0dd110bd",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5392,7 +5400,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": "English theme-variable precedence, CSS class and macro-scope explanations translated."
+      "corrections": "English theme-variable precedence, CSS class and macro-scope explanations translated.",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/using/view-backgrounds.md",

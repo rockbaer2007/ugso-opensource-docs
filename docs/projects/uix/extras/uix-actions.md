@@ -42,6 +42,8 @@ tap_action:
 
 Wenn ein Forge-Form-Spark die Aktion `event` auslöst, werden seine aktuellen Formularwerte den Aktionsdaten und damit dem `detail` des Events hinzugefügt.
 
+`clear-cache` erhält `localStorage`, einschließlich der Browser-Mod-Browser-ID. Es löscht nicht sämtliche Browser- oder App-Daten. Die Aliasnamen `clear_cache` und `more_info` sind ebenfalls zulässig.
+
 ## `event`: Browser-Event auslösen {#event}
 
 Diese Action sendet ein `CustomEvent` auf `window`. Damit können Dashboard-Aktionen Broker-Interaktionen im Realm `browser` auslösen, ohne einen weiteren `fire-dom-event`-Listener zu entpacken. `name` ist erforderlich, `data` ist das Event-`detail` und standardmäßig `{}`.

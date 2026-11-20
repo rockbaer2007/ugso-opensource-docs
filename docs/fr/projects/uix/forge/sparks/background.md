@@ -91,7 +91,7 @@ Lorsque `background` est une correspondance, chaque clé est convertie en propri
 - **Chaîne `opacity_<0-100>`** — définit l'opacité de l'élément `for`, par exemple `opacity_50` pour 50 %.
 - **Liste d'objets de propriétés CSS** — chaque paire clé/valeur est appliquée comme style en ligne à l'élément `for`. Les noms de propriété peuvent utiliser des traits de soulignement à la place des tirets.
 
-`dissolve_target` est prévu pour les cas où l'élément cible possède son propre arrière-plan. Cette option n'est souvent pas nécessaire et n'est utilisée dans aucun des exemples ci-dessous.
+`dissolve_target` est prévu pour les cas où l'élément cible possède son propre arrière-plan. Cette option n'est souvent pas nécessaire ; elle figure dans les exemples complémentaires qui en ont besoin.
 
 ```yaml
 # Remove the card's own background using a CSS property list
@@ -558,7 +558,7 @@ views:
 ## Exemples complémentaires de la référence allemande {#german-reference-examples}
 
 :::: details Afficher les configurations complémentaires
-Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/background). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
+Ces configurations complètent la référence traduite ci-dessus. Les anciens noms de propriétés isolés et `opacity(0.5)` de `dissolve_target` ont été corrigés après comparaison avec le code original : il faut des objets CSS ou `opacity_50`. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/background). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
 
 ### 1. Utilisation de base {#reference-example-1}
 
@@ -602,8 +602,8 @@ forge:
       for: hui-tile-card
       image_url: /local/backgrounds/room.jpg
       dissolve_target:
-        - background
-        - box-shadow
+        - background: none
+        - box-shadow: none
 ```
 
 ### 4. `dissolve_target` {#reference-example-4}
@@ -614,7 +614,7 @@ forge:
     - type: background
       for: hui-tile-card
       background: var(--primary-color)
-      dissolve_target: opacity(0.5)
+      dissolve_target: opacity_50
 ```
 
 ### 5. URI Media Source {#reference-example-5}
@@ -660,8 +660,8 @@ forge:
       camera_zoom: 1.2
       opacity: 0.55
       dissolve_target:
-        - background
-        - box-shadow
+        - background: none
+        - box-shadow: none
 element:
   type: tile
   entity: binary_sensor.front_door_motion

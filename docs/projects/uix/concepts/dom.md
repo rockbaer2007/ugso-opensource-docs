@@ -305,7 +305,7 @@ Alle Operatoren wie bei Attribut-Selektoren werden unterstützt: `=`, `~=`, `^=`
 
 ## DOM-Inspektionshelfer
 
-UIX liefert drei Browser-Konsolenhelfer mit, um gültige Style-Pfade, Forge-Spark-Pfade und die UIX-Hierarchie zur Laufzeit zu verstehen. Öffne die DevTools, wähle ein Element im **Elements**-Panel aus, sodass es `$0` ist, und rufe einen der Helfer auf.
+UIX liefert Browser-Konsolenhelfer mit, um gültige Style-Pfade, Forge-Spark-Pfade und die UIX-Hierarchie zur Laufzeit zu verstehen. Öffne die DevTools, wähle ein Element im **Elements**-Panel aus, sodass es `$0` ist, und rufe einen der Helfer auf.
 
 ### `uix_tree($0)`: allgemeiner Helfer
 

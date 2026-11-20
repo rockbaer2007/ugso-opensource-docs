@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 222 | 30 |
-| FR | 222 | 30 |
+| EN | 229 | 23 |
+| FR | 229 | 23 |
 
 ## Vollständiges Seiteninventar
 
@@ -182,7 +182,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/broker/rules) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/concepts/application) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/concepts/application) |
 | [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Inhaltlich geprüft](/en/projects/uix/concepts/context) | [Inhaltlich geprüft](/fr/projects/uix/concepts/context) |
-| [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/dom) | [Technisch abgeglichen](/fr/projects/uix/concepts/dom) |
+| [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/concepts/dom) | [Inhaltlich geprüft](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/concepts/) | [Inhaltlich geprüft](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/contributing) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/contributing) |
 | [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/debugging/cache) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/debugging/cache) |
@@ -202,21 +202,21 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/extras/index.md](/projects/uix/extras/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/extras/) |
 | [projects/uix/extras/style-custom-panels.md](/projects/uix/extras/style-custom-panels) | [Inhaltlich geprüft](/en/projects/uix/extras/style-custom-panels) | [Inhaltlich geprüft](/fr/projects/uix/extras/style-custom-panels) |
 | [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/style-frame-panels) | [Inhaltlich geprüft](/fr/projects/uix/extras/style-frame-panels) |
-| [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/uix-actions) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/uix-actions) |
+| [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/uix-actions) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/extras/uix-actions) |
 | [projects/uix/faq.md](/projects/uix/faq) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/faq) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/faq) |
 | [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/forge) | [Technisch abgeglichen](/fr/projects/uix/forge/forge) |
-| [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/foundries) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/foundries) |
+| [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/foundries) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/foundries) |
 | [projects/uix/forge/index.md](/projects/uix/forge/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/) |
 | [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/attribute) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/sparks/attribute) |
-| [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/background) | [Technisch abgeglichen](/fr/projects/uix/forge/sparks/background) |
+| [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/background) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/background) |
 | [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/badge) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/badge) |
 | [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/button) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/sparks/button) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/event) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/event) |
 | [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/form) | [Technisch abgeglichen](/fr/projects/uix/forge/sparks/form) |
 | [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/grid) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/grid) |
 | [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/sparks/) |
-| [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/lock) | [Technisch abgeglichen](/fr/projects/uix/forge/sparks/lock) |
-| [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/map) | [Technisch abgeglichen](/fr/projects/uix/forge/sparks/map) |
+| [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/lock) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/lock) |
+| [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/map) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/map) |
 | [projects/uix/forge/sparks/more-info.md](/projects/uix/forge/sparks/more-info) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/more-info) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/more-info) |
 | [projects/uix/forge/sparks/overlay-icon.md](/projects/uix/forge/sparks/overlay-icon) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/overlay-icon) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/overlay-icon) |
 | [projects/uix/forge/sparks/search.md](/projects/uix/forge/sparks/search) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/search) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/search) |
@@ -240,7 +240,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/using/other.md](/projects/uix/using/other) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/other) | [Inhaltlich geprüft](/fr/projects/uix/using/other) |
 | [projects/uix/using/section-backgrounds.md](/projects/uix/using/section-backgrounds) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/section-backgrounds) | [Inhaltlich geprüft](/fr/projects/uix/using/section-backgrounds) |
 | [projects/uix/using/templates.md](/projects/uix/using/templates) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/templates) | [Inhaltlich geprüft](/fr/projects/uix/using/templates) |
-| [projects/uix/using/themes.md](/projects/uix/using/themes) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/themes) | [Technisch abgeglichen](/fr/projects/uix/using/themes) |
+| [projects/uix/using/themes.md](/projects/uix/using/themes) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/themes) | [Inhaltlich geprüft](/fr/projects/uix/using/themes) |
 | [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/view-backgrounds) | [Inhaltlich geprüft](/fr/projects/uix/using/view-backgrounds) |
 | [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Inhaltlich geprüft](/en/projects/ultimate-timer/examples) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/examples) |
 | [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Inhaltlich geprüft](/en/projects/ultimate-timer/how-it-works) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/how-it-works) |

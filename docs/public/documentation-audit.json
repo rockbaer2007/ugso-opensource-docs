@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 222,
+      "content_reviewed": 229,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 222,
+      "content_reviewed": 229,
       "open_review_signals": 0
     }
   },
@@ -11803,8 +11803,8 @@
         "de": {
           "path": "projects/uix/concepts/dom.md",
           "status": "content-present",
-          "sha256": "9d1d866f62656a2000d2b4f58cd07382d5c9ff8f72f4ddb52e38c0a1c988d399",
-          "words": 1505,
+          "sha256": "8f6ac782da3f8aa4c11b564a4596eed739c72095465d7c3cdeaf6aee4ae95fde",
+          "words": 1504,
           "headings": 12,
           "examples": 26,
           "versions": [],
@@ -11836,13 +11836,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FullDEENFR selector tutorial/18hostpropertytokens, first-versus-all and trailing$ chain behavior, $$midpath/retrycost, bareundefined/missing/null distinction, arrayindices and fiveDOMhelpers agree. DE outdatedthreehelper count removed; remaining FR English headings/tablefragment translated. No mutation/execution of user's dashboards."
           }
         },
         "fr": {
           "path": "fr/projects/uix/concepts/dom.md",
           "status": "content-present",
-          "sha256": "6569703360d48b1febd46dc3d2b2a6cd456f66fcd3bbe4e93c678ae406ca79c7",
-          "words": 2522,
+          "sha256": "f169f324583ec2aa5b2f7af3178c5b98b3d4f8fd751b9898d70c142331664579",
+          "words": 2527,
           "headings": 26,
           "examples": 43,
           "versions": [],
@@ -11864,6 +11869,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FullDEENFR selector tutorial/18hostpropertytokens, first-versus-all and trailing$ chain behavior, $$midpath/retrycost, bareundefined/missing/null distinction, arrayindices and fiveDOMhelpers agree. DE outdatedthreehelper count removed; remaining FR English headings/tablefragment translated. No mutation/execution of user's dashboards."
           }
         }
       }
@@ -13347,8 +13357,8 @@
         "de": {
           "path": "projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "91aefb903eb1bfec073ead160d692f29f98f6105b83bdc21a1ffb9147e5b2e5b",
-          "words": 1318,
+          "sha256": "62a36ee5c1923cb23e42acd7059245cd578e3d70878f15d5bb46cf36416dfe08",
+          "words": 1344,
           "headings": 14,
           "examples": 11,
           "versions": [
@@ -13388,6 +13398,11 @@
             "status": "reviewed",
             "disposition": "corrected",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization."
           }
         },
         "fr": {
@@ -13416,6 +13431,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization."
           }
         }
       }
@@ -13602,12 +13622,13 @@
         "de": {
           "path": "projects/uix/forge/foundries.md",
           "status": "content-present",
-          "sha256": "f66a05a6bbdbe1c6c6f3ba610b51e8e07f93d3636d6a24f2bb99c5ad08261895",
-          "words": 1078,
+          "sha256": "9fcb59998207327a165923fe34132a9608eaf1858e9fb21e8b19b97ec01278ac",
+          "words": 1084,
           "headings": 48,
           "examples": 29,
           "versions": [
-            "9.0.0"
+            "9.0.0",
+            "9.1.0"
           ],
           "unresolved_local_references": []
         },
@@ -13628,8 +13649,7 @@
               "9.0.0"
             ],
             "versions_only_in_translation": [
-              "2026.11.0",
-              "9.1.0"
+              "2026.11.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -13639,6 +13659,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FullDEENFR global/mold/named/local mergeorder, UIoverfile/latestregisteredfile, arrayclear and sameid+type sparkmerge, nativebase/type/no-local-disabledpaths, quotedUI versus unquotedfile includes/secrets, typedreturns and billetnull fallback agree. DE oldercitation updated frozen9.1, originalEN examples retained. No liveHA operation."
           }
         },
         "fr": {
@@ -13654,7 +13679,9 @@
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [],
+            "versions_only_in_de": [
+              "9.1.0"
+            ],
             "versions_only_in_translation": [
               "9.0.0-beta.0"
             ],
@@ -13666,6 +13693,11 @@
             "status": "reviewed",
             "disposition": "supplemented",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FullDEENFR global/mold/named/local mergeorder, UIoverfile/latestregisteredfile, arrayclear and sameid+type sparkmerge, nativebase/type/no-local-disabledpaths, quotedUI versus unquotedfile includes/secrets, typedreturns and billetnull fallback agree. DE oldercitation updated frozen9.1, originalEN examples retained. No liveHA operation."
           }
         }
       }
@@ -13835,8 +13867,8 @@
         "de": {
           "path": "projects/uix/forge/sparks/background.md",
           "status": "content-present",
-          "sha256": "9935009fbd0074306ae13ebb871a1081a6bb8cd08f4d54726a64fec55a1330f1",
-          "words": 1010,
+          "sha256": "11f004cfd40d94503c4abfc986fbb3c38a48604c149c43a425a96900666a207e",
+          "words": 1048,
           "headings": 29,
           "examples": 23,
           "versions": [],
@@ -13868,13 +13900,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Fiveprioritysources,16configfields,cache20s connectedholder/samedimensions,media_source resolution,ha-card/section adapters/restorepadding and stringreplacement-versus-object overrides reviewed. DE supplemental dissolve_target examples used invalid stringlist/opacity(0.5); confirmed against frozen uix-spark-background.ts _applyDissolveTarget then corrected DE and matchingFR supplements to CSSmapping/opacity_50 with expliciterrata. CanonicalEnglish examples unchanged. DE priority/z-index restored."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/background.md",
           "status": "content-present",
-          "sha256": "bd78c0b931cc57e356d3dd0bf32a6f89a8f77e0a71d7b02ea302157898ef7500",
-          "words": 2273,
+          "sha256": "83d8708b2cdcfc1ac8cbf37f818121dbe01bfe778a3198d8a46e2b0efac5ae7e",
+          "words": 2301,
           "headings": 48,
           "examples": 39,
           "versions": [],
@@ -13896,6 +13933,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Fiveprioritysources,16configfields,cache20s connectedholder/samedimensions,media_source resolution,ha-card/section adapters/restorepadding and stringreplacement-versus-object overrides reviewed. DE supplemental dissolve_target examples used invalid stringlist/opacity(0.5); confirmed against frozen uix-spark-background.ts _applyDissolveTarget then corrected DE and matchingFR supplements to CSSmapping/opacity_50 with expliciterrata. CanonicalEnglish examples unchanged. DE priority/z-index restored."
           }
         }
       }
@@ -14369,8 +14411,8 @@
         "de": {
           "path": "projects/uix/forge/sparks/lock.md",
           "status": "content-present",
-          "sha256": "9fc2a8e0fd6f9103b8025586f89f60caacfd578b07456eccdd61041edfb40082",
-          "words": 1048,
+          "sha256": "f8ca1daed1683c57fa01016602c90c6557de057f0d8babdfa274f092a54eeeac",
+          "words": 1079,
           "headings": 24,
           "examples": 16,
           "versions": [],
@@ -14402,13 +14444,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/lock.md",
           "status": "content-present",
-          "sha256": "064542ee0b2473f472e2a0142f8b49c1414a1b2db3133083d6b735c0a98ef186",
-          "words": 2257,
+          "sha256": "0932779bf3eba10a17a40494696340fef6af4b98b024d7bc7979faa0d16a2791",
+          "words": 2268,
           "headings": 26,
           "examples": 16,
           "versions": [],
@@ -14425,6 +14472,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim."
           }
         }
       }
@@ -14435,8 +14487,8 @@
         "de": {
           "path": "projects/uix/forge/sparks/map.md",
           "status": "content-present",
-          "sha256": "c6efc29acf4f3f897d128f6abef0b3ef994027e4fc8ff0e1ec70c5c3b8fc0afb",
-          "words": 1373,
+          "sha256": "75abe08d6d0238124d72f7442c9e5ce2ff77da8f9a39db3836e70249639eb6ad",
+          "words": 1399,
           "headings": 28,
           "examples": 14,
           "versions": [
@@ -14474,6 +14526,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Fivemodes/allconfigrows and42CSSoptions compared; map engine fallback, numericmillisecond period,40pxdefaultsharedrow,POI entitymembership, lastentity guard/show_all/filterrestart agree. MissingDE memory suppression duringtour and skipinitialunready restoration restored. FR fullincludingtail/ENhead separatelyreread after initial truncation; examples preserved."
           }
         },
         "fr": {
@@ -14505,6 +14562,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Fivemodes/allconfigrows and42CSSoptions compared; map engine fallback, numericmillisecond period,40pxdefaultsharedrow,POI entitymembership, lastentity guard/show_all/filterrestart agree. MissingDE memory suppression duringtour and skipinitialunready restoration restored. FR fullincludingtail/ENhead separatelyreread after initial truncation; examples preserved."
           }
         }
       }
@@ -16376,8 +16438,8 @@
         "de": {
           "path": "projects/uix/using/themes.md",
           "status": "content-present",
-          "sha256": "ddf5289e49590fc9c357809aaa0df9d6c246d2abf2306f68d104166fc55247f9",
-          "words": 1298,
+          "sha256": "191301115565f03130b64578036d6ca5e614ba21afafa0269dfeb1e9ecced9f1",
+          "words": 1300,
           "headings": 13,
           "examples": 19,
           "versions": [],
@@ -16409,13 +16471,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FullDEENFR theme tutorial, requireduix-theme/reference reuse, precedence-yaml, localoverridecontext and FontFace descriptors/globalmodes/stringmapping/nonblockingcleanup/macros-onlystyling agree. Missinguix-app target restoredDEFR, other26target identifiers preserved; FR extras code supplements reviewed separately by technicalgates."
           }
         },
         "fr": {
           "path": "fr/projects/uix/using/themes.md",
           "status": "content-present",
-          "sha256": "8752095869f3240c3377ef4aa6c8e3804c685a8deef35d435a6763c5c9764835",
-          "words": 1762,
+          "sha256": "8889fef9a7606940eda9b80fab4b054c683026b49d077287be34fe5b0dd110bd",
+          "words": 1764,
           "headings": 27,
           "examples": 32,
           "versions": [],
@@ -16437,6 +16504,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FullDEENFR theme tutorial, requireduix-theme/reference reuse, precedence-yaml, localoverridecontext and FontFace descriptors/globalmodes/stringmapping/nonblockingcleanup/macros-onlystyling agree. Missinguix-app target restoredDEFR, other26target identifiers preserved; FR extras code supplements reviewed separately by technicalgates."
           }
         }
       }

@@ -7,7 +7,7 @@ description: Wiederverwendbare Forge-Konfigurationen, native Basis, Vererbung, Y
 Eine **Foundry** ist eine benannte Forge-Konfiguration in Home Assistant. Definiere `forge`, `element` und bei vom Forge-Editor exportierten nativen Einstellungen optional `element_base` einmal und verwende sie mit dem obersten Schlüssel `foundry:` mehrfach. Lokale Werte überschreiben die Vorlage.
 
 ::: info Versionsstand
-Abgeglichen mit [UIX master `f63ebbd`](https://github.com/Lint-Free-Technology/uix/blob/f63ebbdda5294fe0b9d31d89d4942496ebe55722/docs/source/forge/foundries.md). Native Basis und visueller Editor gehören zur stabilen Version **9.0.0**.
+Inhaltlich abgeglichen mit dem festgehaltenen [UIX-9.1.0-Original `fb36536`](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/docs/source/forge/foundries.md). Native Basis und visueller Editor gehören zur stabilen Version **9.0.0**.
 :::
 
 ## Global Foundries {#global-foundries}

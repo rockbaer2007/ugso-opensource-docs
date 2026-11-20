@@ -45,6 +45,8 @@ element:
 ```
 
 ::: warning
+In Entities-Karten lassen sich die inline dargestellten Zeilen nur als ganze Zeile sperren; tieferes Overlay-Targeting funktioniert dort nicht. `for` unterstützt ansonsten die UIX-DOM-Pfade einschließlich `$` für Shadow Roots.
+
 Nutze keine PINs für echte Sicherheitsgrenzen. UIX läuft im Browser und kann Bedienfehler vermeiden, aber keine Home-Assistant-Rechte erzwingen.
 
 :::

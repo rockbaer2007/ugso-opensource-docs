@@ -287,6 +287,8 @@ forge:
 
 Das ist besonders nützlich, wenn viele Tracker aktualisiert werden oder wenn die Karte in einer Live-Ansicht lange offen bleibt.
 
+Während eine Tour läuft, setzt `memory` den Ausschnitt nicht bei Zustandsupdates zurück. Beim ersten Laden ohne initialisierte Karten-Engine wird noch kein Ausschnitt gespeichert oder wiederhergestellt.
+
 ## `fit_map` im Detail
 
 `fit_map` passt die Karte an alle sichtbaren Entities an, sobald die Map sichtbar ist. Das hilft bei Karten, die beim Laden in Tabs, Expandern oder Conditional Cards versteckt sind.

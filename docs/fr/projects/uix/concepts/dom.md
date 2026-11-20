@@ -66,7 +66,7 @@ La chaîne de sélecteurs recherche les éléments un par un, séparés par des 
 
 Une chaîne terminée par `$` constitue un raccourci qui sélectionne les DOM fantômes de tous les éléments.
 
-::: example Chaining example
+::: example Exemple de chaînage
 Le sélecteur suivant cible les éléments `div` du premier marqueur d'une carte :
 ```yaml
   ha-map $ ha-entity-marker $ div: |
@@ -138,7 +138,7 @@ uix:
 ```
 
 :::
-::: example Multiple card feature types
+::: example Plusieurs types de fonctionnalités de carte
 ```yaml
 uix:
   style:
@@ -160,7 +160,7 @@ uix:
 Comme `$$` parcourt tout le sous-arbre du DOM fantôme du contexte actuel, il est nécessairement plus lent qu'un chemin explicite. Pour les cas où les performances sont importantes, préférez le chemin explicite.
 
 :::
-::: warning Load order and retries
+::: warning Ordre de chargement et nouvelles tentatives
 Le mécanisme de nouvelle tentative qui stabilise l'ordre de chargement des chemins `$` en séparant la chaîne sur plusieurs niveaux de dictionnaire s'applique à chaque entrée. Avec le sélecteur rapide `$$`, toute la recherche profonde est relancée en une seule fois. Si l'élément cible est chargé très tard, séparez le chemin explicite sur deux niveaux de dictionnaire :
 ```yaml
 uix:
@@ -195,7 +195,7 @@ La correspondance examine directement les propriétés du parent ou de l'hôte, 
 | `[attr*=val]` | la valeur contient |
 | `[attr~=val]` | mot correspondant dans une liste séparée par des espaces |
 | `[attr\|=val]` | valeur égale ou sous-balise précédée de `-` |
-| `{.prop}` | `element.prop` is not `null`/`undefined` |
+| `{.prop}` | `element.prop` ne vaut ni `null` ni `undefined` |
 | `{!.prop}` | le chemin de propriété n'existe pas |
 | `{.prop=val}` | `String(element.prop) === val` |
 | `{.prop=undefined}` | `element.prop` existe et vaut strictement `undefined` |
@@ -348,7 +348,7 @@ Chaque libellé de groupe indique une clé de style YAML suivie de la syntaxe `:
 
 Indique le chemin UIX exact vers l'élément sélectionné et génère un extrait YAML prêt à coller :
 
-| Section | What it shows |
+| Section | Contenu |
 | ------- | ------------- |
 | **📦 Closest UIX Parent** | Même contenu que pour `uix_tree`. |
 | **📍 UIX Path to Target** | Chemin exact (avec `$` pour traverser les DOM fantômes) entre le contexte parent UIX et `$0`. Utilisez-le comme clé dans une configuration UIX `style:`. |

@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 222 | 30 |
-| FR | 222 | 30 |
+| EN | 229 | 23 |
+| FR | 229 | 23 |
 
 ## Complete page inventory
 
@@ -182,7 +182,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/rules) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Content reviewed · Difference reviewed](/en/projects/uix/concepts/application) | [Content reviewed · Difference reviewed](/fr/projects/uix/concepts/application) |
 | [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Content reviewed](/en/projects/uix/concepts/context) | [Content reviewed](/fr/projects/uix/concepts/context) |
-| [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Content present · Difference reviewed](/en/projects/uix/concepts/dom) | [Technically compared](/fr/projects/uix/concepts/dom) |
+| [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Content reviewed · Difference reviewed](/en/projects/uix/concepts/dom) | [Content reviewed](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Content reviewed · Difference reviewed](/en/projects/uix/concepts/) | [Content reviewed](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Content reviewed · Difference reviewed](/en/projects/uix/contributing) | [Content reviewed · Difference reviewed](/fr/projects/uix/contributing) |
 | [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Content reviewed · Difference reviewed](/en/projects/uix/debugging/cache) | [Content reviewed · Difference reviewed](/fr/projects/uix/debugging/cache) |
@@ -202,21 +202,21 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/extras/index.md](/projects/uix/extras/) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/) |
 | [projects/uix/extras/style-custom-panels.md](/projects/uix/extras/style-custom-panels) | [Content reviewed](/en/projects/uix/extras/style-custom-panels) | [Content reviewed](/fr/projects/uix/extras/style-custom-panels) |
 | [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/style-frame-panels) | [Content reviewed](/fr/projects/uix/extras/style-frame-panels) |
-| [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Content present · Difference reviewed](/en/projects/uix/extras/uix-actions) | [Content present · Difference reviewed](/fr/projects/uix/extras/uix-actions) |
+| [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/uix-actions) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/uix-actions) |
 | [projects/uix/faq.md](/projects/uix/faq) | [Content reviewed · Difference reviewed](/en/projects/uix/faq) | [Content reviewed · Difference reviewed](/fr/projects/uix/faq) |
 | [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Content present · Difference reviewed](/en/projects/uix/forge/forge) | [Technically compared](/fr/projects/uix/forge/forge) |
-| [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Content present · Difference reviewed](/en/projects/uix/forge/foundries) | [Content present · Difference reviewed](/fr/projects/uix/forge/foundries) |
+| [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/foundries) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/foundries) |
 | [projects/uix/forge/index.md](/projects/uix/forge/) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/) |
 | [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/attribute) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/attribute) |
-| [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/background) | [Technically compared](/fr/projects/uix/forge/sparks/background) |
+| [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/background) | [Content reviewed](/fr/projects/uix/forge/sparks/background) |
 | [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/badge) | [Content reviewed](/fr/projects/uix/forge/sparks/badge) |
 | [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/button) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/button) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/event) | [Content reviewed](/fr/projects/uix/forge/sparks/event) |
 | [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/form) | [Technically compared](/fr/projects/uix/forge/sparks/form) |
 | [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/grid) | [Content reviewed](/fr/projects/uix/forge/sparks/grid) |
 | [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/) |
-| [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/lock) | [Technically compared](/fr/projects/uix/forge/sparks/lock) |
-| [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/map) | [Technically compared](/fr/projects/uix/forge/sparks/map) |
+| [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/lock) | [Content reviewed](/fr/projects/uix/forge/sparks/lock) |
+| [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/map) | [Content reviewed](/fr/projects/uix/forge/sparks/map) |
 | [projects/uix/forge/sparks/more-info.md](/projects/uix/forge/sparks/more-info) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/more-info) | [Content reviewed](/fr/projects/uix/forge/sparks/more-info) |
 | [projects/uix/forge/sparks/overlay-icon.md](/projects/uix/forge/sparks/overlay-icon) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/overlay-icon) | [Content reviewed](/fr/projects/uix/forge/sparks/overlay-icon) |
 | [projects/uix/forge/sparks/search.md](/projects/uix/forge/sparks/search) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/search) | [Content reviewed](/fr/projects/uix/forge/sparks/search) |
@@ -240,7 +240,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/using/other.md](/projects/uix/using/other) | [Content reviewed · Difference reviewed](/en/projects/uix/using/other) | [Content reviewed](/fr/projects/uix/using/other) |
 | [projects/uix/using/section-backgrounds.md](/projects/uix/using/section-backgrounds) | [Content reviewed · Difference reviewed](/en/projects/uix/using/section-backgrounds) | [Content reviewed](/fr/projects/uix/using/section-backgrounds) |
 | [projects/uix/using/templates.md](/projects/uix/using/templates) | [Content reviewed · Difference reviewed](/en/projects/uix/using/templates) | [Content reviewed](/fr/projects/uix/using/templates) |
-| [projects/uix/using/themes.md](/projects/uix/using/themes) | [Content present · Difference reviewed](/en/projects/uix/using/themes) | [Technically compared](/fr/projects/uix/using/themes) |
+| [projects/uix/using/themes.md](/projects/uix/using/themes) | [Content reviewed · Difference reviewed](/en/projects/uix/using/themes) | [Content reviewed](/fr/projects/uix/using/themes) |
 | [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Content reviewed · Difference reviewed](/en/projects/uix/using/view-backgrounds) | [Content reviewed](/fr/projects/uix/using/view-backgrounds) |
 | [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Content reviewed](/en/projects/ultimate-timer/examples) | [Content reviewed](/fr/projects/ultimate-timer/examples) |
 | [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Content reviewed](/en/projects/ultimate-timer/how-it-works) | [Content reviewed](/fr/projects/ultimate-timer/how-it-works) |

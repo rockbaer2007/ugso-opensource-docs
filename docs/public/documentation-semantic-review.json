@@ -2,8 +2,8 @@
   "reviewed_at": "2026-11-20",
   "scope_pages": 504,
   "coverage": {
-    "en": 222,
-    "fr": 222
+    "en": 229,
+    "fr": 229
   },
   "scope": "Content/meaning review of all 504 EN/FR inventory entries, including previously assessed structural differences. Reviewed pages only; unreviewed pages retain their existing technical status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
@@ -2389,6 +2389,36 @@
       }
     },
     {
+      "source": "projects/uix/concepts/dom.md",
+      "locale": "en",
+      "target": "en/projects/uix/concepts/dom.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "FullDEENFR selector tutorial/18hostpropertytokens, first-versus-all and trailing$ chain behavior, $$midpath/retrycost, bareundefined/missing/null distinction, arrayindices and fiveDOMhelpers agree. DE outdatedthreehelper count removed; remaining FR English headings/tablefragment translated. No mutation/execution of user's dashboards.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "8f6ac782da3f8aa4c11b564a4596eed739c72095465d7c3cdeaf6aee4ae95fde",
+      "target_sha256": "ce283dda046feca354467164155ae242a5a4a26c0dec16a41a7a9d30fc41b973",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "concepts/dom.md",
+        "source_sha256": "5412198c6a2c093f6d82b2c3637d3503458b6f2d598cd063d416a896787762df"
+      }
+    },
+    {
+      "source": "projects/uix/concepts/dom.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/concepts/dom.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "FullDEENFR selector tutorial/18hostpropertytokens, first-versus-all and trailing$ chain behavior, $$midpath/retrycost, bareundefined/missing/null distinction, arrayindices and fiveDOMhelpers agree. DE outdatedthreehelper count removed; remaining FR English headings/tablefragment translated. No mutation/execution of user's dashboards.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "8f6ac782da3f8aa4c11b564a4596eed739c72095465d7c3cdeaf6aee4ae95fde",
+      "target_sha256": "f169f324583ec2aa5b2f7af3178c5b98b3d4f8fd751b9898d70c142331664579",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "concepts/dom.md",
+        "source_sha256": "5412198c6a2c093f6d82b2c3637d3503458b6f2d598cd063d416a896787762df"
+      }
+    },
+    {
       "source": "projects/uix/concepts/index.md",
       "locale": "en",
       "target": "en/projects/uix/concepts/index.md",
@@ -2949,6 +2979,36 @@
       }
     },
     {
+      "source": "projects/uix/extras/uix-actions.md",
+      "locale": "en",
+      "target": "en/projects/uix/extras/uix-actions.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "62a36ee5c1923cb23e42acd7059245cd578e3d70878f15d5bb46cf36416dfe08",
+      "target_sha256": "1dcecd88e27166c73957623ab7cdf61237d38e3b15a318c72b966855c31bcfa5",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "extras/uix-actions.md",
+        "source_sha256": "2179f70081c8a6a7db0efee298daacbf950bac1a37ce55ded9c8c5aa29f57691"
+      }
+    },
+    {
+      "source": "projects/uix/extras/uix-actions.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/extras/uix-actions.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "62a36ee5c1923cb23e42acd7059245cd578e3d70878f15d5bb46cf36416dfe08",
+      "target_sha256": "9b75d63c655fff4a47a29c7ea2541b548acdf88b5afc1e11f057227f57246140",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "extras/uix-actions.md",
+        "source_sha256": "2179f70081c8a6a7db0efee298daacbf950bac1a37ce55ded9c8c5aa29f57691"
+      }
+    },
+    {
       "source": "projects/uix/faq.md",
       "locale": "en",
       "target": "en/projects/uix/faq.md",
@@ -2976,6 +3036,36 @@
         "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
         "path": "faq.md",
         "source_sha256": "b32c34ae11c9722a63a3740c9347dba3a72cda5ddd37e9f367afe1f7f6f0f84f"
+      }
+    },
+    {
+      "source": "projects/uix/forge/foundries.md",
+      "locale": "en",
+      "target": "en/projects/uix/forge/foundries.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "FullDEENFR global/mold/named/local mergeorder, UIoverfile/latestregisteredfile, arrayclear and sameid+type sparkmerge, nativebase/type/no-local-disabledpaths, quotedUI versus unquotedfile includes/secrets, typedreturns and billetnull fallback agree. DE oldercitation updated frozen9.1, originalEN examples retained. No liveHA operation.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "9fcb59998207327a165923fe34132a9608eaf1858e9fb21e8b19b97ec01278ac",
+      "target_sha256": "4e89e025128dc009891ee6bce57db2bc6ec3a7ea717af4fe2948af56a4c5b22b",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/foundries.md",
+        "source_sha256": "836e2a88223f99cc0183431b2f785fe109b72b4a3d390c4dd4f3a3234d7ece3b"
+      }
+    },
+    {
+      "source": "projects/uix/forge/foundries.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/forge/foundries.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "FullDEENFR global/mold/named/local mergeorder, UIoverfile/latestregisteredfile, arrayclear and sameid+type sparkmerge, nativebase/type/no-local-disabledpaths, quotedUI versus unquotedfile includes/secrets, typedreturns and billetnull fallback agree. DE oldercitation updated frozen9.1, originalEN examples retained. No liveHA operation.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "9fcb59998207327a165923fe34132a9608eaf1858e9fb21e8b19b97ec01278ac",
+      "target_sha256": "f329151d2c8faefcab18a5a701c26d0e45122ecbbd6b5403902bbde457f37284",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/foundries.md",
+        "source_sha256": "836e2a88223f99cc0183431b2f785fe109b72b4a3d390c4dd4f3a3234d7ece3b"
       }
     },
     {
@@ -3036,6 +3126,36 @@
         "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
         "path": "forge/sparks/attribute.md",
         "source_sha256": "68e6b5e4963331db637466fe4761ae7a4068f322cbcdd4b17788a77867fc9322"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/background.md",
+      "locale": "en",
+      "target": "en/projects/uix/forge/sparks/background.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Fiveprioritysources,16configfields,cache20s connectedholder/samedimensions,media_source resolution,ha-card/section adapters/restorepadding and stringreplacement-versus-object overrides reviewed. DE supplemental dissolve_target examples used invalid stringlist/opacity(0.5); confirmed against frozen uix-spark-background.ts _applyDissolveTarget then corrected DE and matchingFR supplements to CSSmapping/opacity_50 with expliciterrata. CanonicalEnglish examples unchanged. DE priority/z-index restored.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "11f004cfd40d94503c4abfc986fbb3c38a48604c149c43a425a96900666a207e",
+      "target_sha256": "b297c6e2fb77928de668aae36ad2147f0b2082193ae464a11ff32beba9ce2177",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/background.md",
+        "source_sha256": "e49d60e0bcba955243fe2fa4d7e21eb7c539b22607738b378f608c84c357e2d2"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/background.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/forge/sparks/background.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Fiveprioritysources,16configfields,cache20s connectedholder/samedimensions,media_source resolution,ha-card/section adapters/restorepadding and stringreplacement-versus-object overrides reviewed. DE supplemental dissolve_target examples used invalid stringlist/opacity(0.5); confirmed against frozen uix-spark-background.ts _applyDissolveTarget then corrected DE and matchingFR supplements to CSSmapping/opacity_50 with expliciterrata. CanonicalEnglish examples unchanged. DE priority/z-index restored.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "11f004cfd40d94503c4abfc986fbb3c38a48604c149c43a425a96900666a207e",
+      "target_sha256": "83d8708b2cdcfc1ac8cbf37f818121dbe01bfe778a3198d8a46e2b0efac5ae7e",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/background.md",
+        "source_sha256": "e49d60e0bcba955243fe2fa4d7e21eb7c539b22607738b378f608c84c357e2d2"
       }
     },
     {
@@ -3186,6 +3306,66 @@
         "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
         "path": "forge/sparks/index.md",
         "source_sha256": "97178ef31bb7b5b88e10e2cc7531e020b80328d3ca7ddb5a46d035ba2585ec70"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/lock.md",
+      "locale": "en",
+      "target": "en/projects/uix/forge/sparks/lock.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "f8ca1daed1683c57fa01016602c90c6557de057f0d8babdfa274f092a54eeeac",
+      "target_sha256": "85995eff73428ef2399931848052c0de6e20d54d5ba410321ab1a4063106c078",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/lock.md",
+        "source_sha256": "3b2689c9349f93066d820e2bd1bb2d26566e43fa848d08f8506564ff0c69e672"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/lock.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/forge/sparks/lock.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "f8ca1daed1683c57fa01016602c90c6557de057f0d8babdfa274f092a54eeeac",
+      "target_sha256": "0932779bf3eba10a17a40494696340fef6af4b98b024d7bc7979faa0d16a2791",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/lock.md",
+        "source_sha256": "3b2689c9349f93066d820e2bd1bb2d26566e43fa848d08f8506564ff0c69e672"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/map.md",
+      "locale": "en",
+      "target": "en/projects/uix/forge/sparks/map.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Fivemodes/allconfigrows and42CSSoptions compared; map engine fallback, numericmillisecond period,40pxdefaultsharedrow,POI entitymembership, lastentity guard/show_all/filterrestart agree. MissingDE memory suppression duringtour and skipinitialunready restoration restored. FR fullincludingtail/ENhead separatelyreread after initial truncation; examples preserved.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "75abe08d6d0238124d72f7442c9e5ce2ff77da8f9a39db3836e70249639eb6ad",
+      "target_sha256": "9c0ecffa547a3626a1b17610bfe6cd09634f4c7c60fe8fa683224a5a15dc4ab7",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/map.md",
+        "source_sha256": "a52e880b76c50e1425cc778b88d0cb95f7874f575689bb880465456f512abd55"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/map.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/forge/sparks/map.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Fivemodes/allconfigrows and42CSSoptions compared; map engine fallback, numericmillisecond period,40pxdefaultsharedrow,POI entitymembership, lastentity guard/show_all/filterrestart agree. MissingDE memory suppression duringtour and skipinitialunready restoration restored. FR fullincludingtail/ENhead separatelyreread after initial truncation; examples preserved.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "75abe08d6d0238124d72f7442c9e5ce2ff77da8f9a39db3836e70249639eb6ad",
+      "target_sha256": "5a295fa7561a824b21021fac877660906669fe042d42de9d64c8a984ddd1c023",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/map.md",
+        "source_sha256": "a52e880b76c50e1425cc778b88d0cb95f7874f575689bb880465456f512abd55"
       }
     },
     {
@@ -3836,6 +4016,36 @@
         "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
         "path": "using/templates.md",
         "source_sha256": "95ffe84883d1b2fd65c4de38551d7c0c5e46da4bf7f5328ee10c20b3b4875ab2"
+      }
+    },
+    {
+      "source": "projects/uix/using/themes.md",
+      "locale": "en",
+      "target": "en/projects/uix/using/themes.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "FullDEENFR theme tutorial, requireduix-theme/reference reuse, precedence-yaml, localoverridecontext and FontFace descriptors/globalmodes/stringmapping/nonblockingcleanup/macros-onlystyling agree. Missinguix-app target restoredDEFR, other26target identifiers preserved; FR extras code supplements reviewed separately by technicalgates.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "191301115565f03130b64578036d6ca5e614ba21afafa0269dfeb1e9ecced9f1",
+      "target_sha256": "dfe91ab261f51a28e23783d0b047654a591ed97bf6c096ee053d2f58081da38c",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/themes.md",
+        "source_sha256": "494f6dc6b608d275f739de1b2d0412c21b68dfd4c88794b007fa31d2548f4520"
+      }
+    },
+    {
+      "source": "projects/uix/using/themes.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/using/themes.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "FullDEENFR theme tutorial, requireduix-theme/reference reuse, precedence-yaml, localoverridecontext and FontFace descriptors/globalmodes/stringmapping/nonblockingcleanup/macros-onlystyling agree. Missinguix-app target restoredDEFR, other26target identifiers preserved; FR extras code supplements reviewed separately by technicalgates.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "191301115565f03130b64578036d6ca5e614ba21afafa0269dfeb1e9ecced9f1",
+      "target_sha256": "8889fef9a7606940eda9b80fab4b054c683026b49d077287be34fe5b0dd110bd",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/themes.md",
+        "source_sha256": "494f6dc6b608d275f739de1b2d0412c21b68dfd4c88794b007fa31d2548f4520"
       }
     },
     {
