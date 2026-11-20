@@ -5,6 +5,10 @@ title: Tile Icon Spark
 
 Der Tile Icon Spark fügt ein `ha-tile-icon` in ein Forge-Element ein. Du kannst ein MDI-Icon, einen SVG-Pfad, ein Bild oder ein Entity-basiertes State-Icon verwenden.
 
+::: warning Hinweis zum geprüften Quellstand
+Im dokumentierten Quellstand fällt ein leeres `after` auf das Standardziel der Blank Card zurück. Es deaktiviert dieses Standardziel nicht. Ein leeres `after` ist deshalb kein verlässlicher Weg, `before` bei einer Blank Card zu verwenden. Nutze dort eine ausdrückliche Platzierung mit `after`. Das ist ein [Quellcodebefund](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/src/forge/sparks/uix-spark-tile-icon.ts), kein neuer Browsertest.
+:::
+
 ## Grundnutzung
 
 ::: tip
@@ -44,12 +48,16 @@ element:
 ::: note
 Für die Iconquelle muss mindestens einer dieser Werte gesetzt sein: `icon`, `icon_path`, `image_url` oder `entity`.
 
+`entity` darf zusätzlich mit `icon` kombiniert werden, um das Symbol zu ersetzen. Die Aussage im Original, es sei immer genau eine Quelle erlaubt, widerspricht dieser unterstützten Kombination.
+
 :::
 ::: tip
 Mit `entity` bekommst du Home Assistants native State-Icon-Logik. Mit `icon` oder `image_url` steuerst du das Aussehen selbst.
 
 :::
 ## Aktionen
+
+Mit `entity` kann schon die native Standardaktion beim Antippen eine unterstützte Entität schalten oder aktivieren, auch ohne ausdrücklich konfigurierte Aktion. Für eine reine Zustandsanzeige setze `tap_action: {action: none}`. Dies folgt aus dem gemeinsamen Tile-Icon-Helfer des dokumentierten Quellstands.
 
 ```yaml
 type: custom:uix-forge
@@ -72,6 +80,8 @@ element:
 
 ::: note
 Klicks auf das eingefügte Icon werden getrennt von Aktionen des Ziel- oder Elternelements behandelt.
+
+Der Spark trifft das erste passende Element und fügt das Icon als Geschwisterelement ein. Bei `before` vor einem bestehenden Tile-Icon muss der Selektor das neu eingefügte Icon ausschließen, etwa über `:not([data-uix-forge-tile-icon-id])`, damit Aktualisierungen nicht das eigene Icon auswählen.
 
 :::
 ## Beispiele

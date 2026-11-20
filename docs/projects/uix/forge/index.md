@@ -28,6 +28,8 @@ Verfügbare Sparks:
 
 - :speech_balloon: [Tooltip](./sparks/tooltip) - Tooltip an ein Element hängen.
 - :material-button-cursor: [Button](./sparks/button) - Button mit Aktionen einfügen.
+- [Badge](./sparks/badge) - Text- oder Icon-Badge ergänzen.
+- [More-info](./sparks/more-info) - Home-Assistant-Entitätsdetails einbetten.
 - :label: [Attribute](./sparks/attribute) - Attribute hinzufügen, ersetzen oder entfernen.
 - :zap: [Event](./sparks/event) - DOM-Events aufnehmen und als Template-Variablen nutzen.
 - :star: [Tile Icon](./sparks/tile-icon) - `ha-tile-icon` ergänzen.

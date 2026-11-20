@@ -15,7 +15,14 @@ The badge can display:
 - a fixed override icon (via `override_icon`)
 - a fixed override image URL (via `override_image`)
 
+::: warning Editorial source-code clarification (2026-11-20)
+At the frozen documented revision, an empty `after` falls back to the default Blank Card target. It does not disable that fallback, so setting an empty `after` is not a reliable workaround for `before` on Blank Card. Use explicit `after` placement there. This is a source-code finding, not a new browser runtime test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/src/forge/sparks/uix-spark-state-badge.ts).
+:::
+
 ## Basic usage
+
+For an entity-state badge, provide `entity`. A fixed `override_icon` or `override_image` can also supply badge content without an entity; the original table incorrectly marked `entity` as mandatory for every case. This clarification follows the frozen implementation.
+
 
 Add a `state-badge` entry to `forge.sparks` with either `after` or `before` to specify the target element, and one of `entity`, `override_icon`, or `override_image` to provide the badge content.
 
@@ -49,9 +56,9 @@ entities:
 | Key | Type | Required | Default | Description |
 | --- | ---- | -------- | ------- | ----------- |
 | `type` | `string` | ✅ | — | Must be `state-badge`. |
-| `after` | `string` | one of `after`/`before` ✅ | — | UIX selector for the reference element. The badge is inserted as a sibling **after** the matched element. When the UIX Forge element is using [Blank card config](../forge.md#blank-card-config), the default is `uix-forge-blank-card $ div.content`. Otherwise, `""`. If you wish to target `before` using Blank card config, set explicitly to `""`. |
+| `after` | `string` | one of `after`/`before` ✅ | — | UIX selector for the reference element. The badge is inserted as a sibling **after** the matched element. When the UIX Forge element is using [Blank card config](../forge.md#blank-card-config), the default is `uix-forge-blank-card $ div.content`. Otherwise, `""`. Blank Card `before` placement has a known limitation at this revision; see the editorial note below. |
 | `before` | `string` | one of `after`/`before` ✅ | — | UIX selector for the reference element. The badge is inserted as a sibling **before** the matched element. |
-| `entity` | `string` | ✅ | — | Entity ID whose current state object is passed to `state-badge`, displaying the entity's native state icon, picture, or camera feed. |
+| `entity` | `string` | required for native entity state | — | Entity ID whose current state object is passed to `state-badge`, displaying the entity's native state icon, picture, or camera feed. |
 | `override_icon` | `string` | | — | MDI icon string (e.g. `mdi:star`) that overrides the entity's default icon. Can be combined with `entity`. |
 | `override_image` | `string` | | — | URL of an image that replaces the icon entirely. Can be combined with `entity`. |
 | `color` | string | | — | Set the icon color when the entity is active for the state badge. By default, the color is based on the `state`, `domain`, and `device_class` of the entity. To disable coloring, set to `none`. It accepts `state`, `none`, a Home Assistant [color token](https://www.home-assistant.io/dashboards/tile/#available-colors), or a hex color code. |

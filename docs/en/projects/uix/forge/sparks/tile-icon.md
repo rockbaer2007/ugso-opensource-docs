@@ -18,7 +18,14 @@ The icon source can be:
 
 Optionally the tile icon can be made interactive with tap/hold/double-tap [actions](#actions).
 
+::: warning Editorial source-code clarification (2026-11-20)
+At the frozen documented revision, an empty `after` falls back to the default Blank Card target. It does not disable that fallback, so setting an empty `after` is not a reliable workaround for `before` on Blank Card. Use explicit `after` placement there. This is a source-code finding, not a new browser runtime test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/src/forge/sparks/uix-spark-tile-icon.ts).
+:::
+
 ## Basic usage
+
+With `entity`, the native default tap action may toggle or activate a supported entity even without an explicit action. Set `tap_action: {action: none}` when the icon should only display state. This follows the frozen shared tile-icon helper.
+
 
 Add a `tile-icon` entry to `forge.sparks` with either `after` or `before` to specify the target element, and one of `icon`, `icon_path`, `image_url`, or `entity` to provide the icon source.
 
@@ -50,7 +57,7 @@ element:
 | Key | Type | Required | Default | Description |
 | --- | ---- | -------- | ------- | ----------- |
 | `type` | `string` | ✅ | — | Must be `tile-icon`. |
-| `after` | `string` | one of `after`/`before` ✅ | — | UIX selector for the reference element. The icon is inserted as a sibling **after** the matched element. When the UIX Forge element is using [Blank card config](../forge.md#blank-card-config), the default is `uix-forge-blank-card $ div.content`. Otherwise, `""`. If you wish to target `before` using Blank card config, set explicitly to `""`. |
+| `after` | `string` | one of `after`/`before` ✅ | — | UIX selector for the reference element. The icon is inserted as a sibling **after** the matched element. When the UIX Forge element is using [Blank card config](../forge.md#blank-card-config), the default is `uix-forge-blank-card $ div.content`. Otherwise, `""`. Blank Card `before` placement has a known limitation at this revision; see the editorial note below. |
 | `before` | `string` | one of `after`/`before` ✅ | — | UIX selector for the reference element. The icon is inserted as a sibling **before** the matched element. |
 | `icon` | `string` | one of `icon`/`icon_path`/`image_url`/`entity` ✅ | — | MDI icon string (e.g. `mdi:star`). `icon` can also be used to replace the default entity icon if `entity` is set. |
 | `icon_path` | `string` | one of `icon`/`icon_path`/`image_url`/`entity` ✅ | — | SVG path string passed to `ha-tile-icon` as its `iconPath` property (rendered via `ha-svg-icon`). |
@@ -62,7 +69,7 @@ element:
 | `double_tap_action` | action | — | — | Action to perform on double tap. |
 
 ::: info
-Exactly one of `after` or `before` must be provided, and exactly one icon source (`icon`, `icon_path`, `image_url`, or `entity`) must be provided.
+Choose one placement, `after` or `before`, and provide an icon source (`icon`, `icon_path`, `image_url`, or `entity`). An `entity` may additionally use `icon` to override its symbol. The original exactly-one-source statement conflicts with this supported combination.
 
 :::
 

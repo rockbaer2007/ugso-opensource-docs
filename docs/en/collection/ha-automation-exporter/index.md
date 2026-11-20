@@ -50,7 +50,7 @@ For development or starting from source code:
 dotnet run --project .\HaAutomationExporter.csproj
 ```
 
-## Service {#bedienung}
+## Usage {#bedienung}
 
 1. Start the program.
 2. Select the Home Assistant file `automations.yaml`.
@@ -62,7 +62,7 @@ dotnet run --project .\HaAutomationExporter.csproj
 
 ## Detailed view {#detailansicht}
 
-In the detailed view, an automation can be checked before exporting. This is particularly useful when many automations have similar names or when you want to control templates and entities.
+In the detailed view, an automation can be checked before exporting. This is particularly useful when many automations have similar names or when you want to inspect templates and entities.
 
 ![Automation Details: Entities](/images/ha-automation-exporter/details-entities.png)
 
@@ -78,7 +78,7 @@ The exported files are prepared to make them easier to use individually in Home 
 
 The exporter removes the leading top line `id:` and normalizes different YAML notations:
 
-| exit | Export |
+| Input | Export |
 | --- | --- |
 | `triggers` | `trigger` |
 | `conditions` | `condition` |
@@ -116,6 +116,6 @@ The graphical interface is intended for normal use.
 ## Notes {#hinweise}
 
 - Before importing into Home Assistant, each exported automation should be briefly checked.
-- Automations with complex templates may require manual control.
+- Automations with complex templates may require manual review.
 - The original file `automations.yaml` is only read and not changed.
 - The export folder should be outside of the productive Home Assistant configuration until the files are checked.

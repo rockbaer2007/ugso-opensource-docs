@@ -102,7 +102,7 @@ Der Override ist besonders nützlich für Wandtablets oder Companion-App-Session
 
 1. Dialog ohne Delay öffnen und prüfen, ob UIX-Styling direkt greift.
 2. Delay global oder per Browser-Override aktivieren.
-3. Home Assistant im Browser hart neu laden.
+3. Den Dialog schließen. Ein Neuladen ist nicht nötig und kann den nur für die Sitzung gesetzten Override entfernen.
 4. Dialog erneut öffnen und vergleichen.
 5. Wenn nur ein Gerät betroffen ist, global wieder deaktivieren und den Browser-Override nutzen.
 

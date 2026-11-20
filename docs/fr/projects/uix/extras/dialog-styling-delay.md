@@ -139,6 +139,14 @@ Lorsque cette option est activée, les styles sont appliqués un peu plus tard. 
 
 ## Exemples complémentaires de la référence allemande {#german-reference-examples}
 
+### Comparer le comportement
+
+1. Ouvrez un dialogue sans délai et observez les styles.
+2. Activez le délai global ou la surcharge de ce navigateur.
+3. Fermez le dialogue. Aucun rechargement n'est nécessaire ; il pourrait supprimer la surcharge temporaire de la session.
+4. Rouvrez le dialogue et comparez.
+5. Si un seul appareil est concerné, désactivez le réglage global et utilisez la surcharge locale. Pour revenir au réglage global, effacez la surcharge avec `setDialogApplyAfterShowOverride(null)`.
+
 :::: details Afficher les configurations complémentaires
 Configurations techniques de la [référence allemande](/projects/uix/extras/dialog-styling-delay). Les clés, expressions et valeurs de démonstration restent inchangées ; remplacez les entités par les vôtres.
 

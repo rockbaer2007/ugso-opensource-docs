@@ -2441,7 +2441,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "bb7e27c58f953038d0c48c950a448f5b53e4fee06eaadfc150cfefcdf8a262a1",
-      "target_sha256": "c59bf68d936d0e3ea8ae0c463828805ca138770eef64f09ccb8737981343399a",
+      "target_sha256": "3d7803aa7287cd7fc71b0e85a2fe63adf58ee4a0a320d064dc9edcae68098d04",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -2450,7 +2450,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/grafik-visual-studio/basic.md",
@@ -2458,7 +2460,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "bb7e27c58f953038d0c48c950a448f5b53e4fee06eaadfc150cfefcdf8a262a1",
-      "target_sha256": "dce2eecbbaed3a420fbd70cbcf367c960d2bfb10fc3e3c4fe4484daecba5a9d1",
+      "target_sha256": "e5f8ba5be0429505a0fd2ee98394826da33647e13f7e184d0ac4991fd61c657c",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -2467,7 +2469,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/grafik-visual-studio/bildergalerie.md",
@@ -4675,8 +4679,8 @@
       "target": "fr/projects/uix/extras/dialog-styling-delay.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "aebb6b5aa29fe223ea63f45392819f8c79da1ddf18cf151aed1793971113cfe9",
-      "target_sha256": "0690f8046dfc47ae4ab93283986da0a980c8df7b21b2db17e6495695e63c909d",
+      "source_sha256": "b536c320e7fe21bcc0464bb55ad4ebd42ca6b45ff96ce3981246c975aa480e50",
+      "target_sha256": "08b2a7224d3ef66f21b31d6e1a60df0ea1515f2f0e62ff81f51c510474edf58a",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4690,7 +4694,9 @@
       "difference_assessment": [
         "Source-only inline strings were checked in context: canonical UIX wording, expressions demonstrated in code rather than repeated inline, or version/attribution formatting. They are not a list of missing API options."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/extras/hash-template-variable-updates.md",
@@ -4973,8 +4979,8 @@
       "target": "fr/projects/uix/forge/sparks/search.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "c0e0591252960d17f3b91037fb4ad4569c7df080e253bff88937e2461adb1152",
-      "target_sha256": "a57e29755ab562297e1626ca1c47b2b09c881d97f18c6bf220395785d3d117d8",
+      "source_sha256": "e0554cbc6e6310a46c3db4779eced3958f9205681b2e1fdb0aacf818524d3c90",
+      "target_sha256": "28ccedaee04537ab5e6be9ab311ba8be4bb50b700ae09fa522d5d306fcdf6e15",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4983,15 +4989,17 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/state-badge.md",
       "target": "fr/projects/uix/forge/sparks/state-badge.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "af68cd350506a6f839146c78406c2216785b94b843db6aa3e5c9338340b8ff27",
-      "target_sha256": "182370fe1060f1224065341107526e7df271d7328de9715197e7eb462bd3cd52",
+      "source_sha256": "42359ca54df7f11b2163a676b7b430d04d2fdb001173e2eae63deffd9f67257f",
+      "target_sha256": "328733374dd77626d87587f7dc29eef98f035cd61b5021162aa1a54af43947e4",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5000,7 +5008,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/theme.md",
@@ -6447,7 +6457,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "578cd9ca37f0312010b4886b7670e8b48e385ae4e3633ec997e55bcbc61965c8",
-      "target_sha256": "a1ca971c3d64f749e4cdd9c81fdec10f0f44c11d3bcbcdb3aacabb023811591a",
+      "target_sha256": "78e5066d8e13602ab905706c22b3fe3a7474bc1dbe970a5ee578d5c6139e72ad",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -6456,7 +6466,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/ha-automation-exporter/index.md",
@@ -6464,7 +6476,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "578cd9ca37f0312010b4886b7670e8b48e385ae4e3633ec997e55bcbc61965c8",
-      "target_sha256": "05ccb17c2b20189160903ebf9415844caab1920ce77d46518f07e5415ebc336b",
+      "target_sha256": "d64d20b8f25264a2b4bd2f1395cd37336dbe7c01760342149d634d11a4d0a7df",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -6473,7 +6485,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/ha-blueprints.md",

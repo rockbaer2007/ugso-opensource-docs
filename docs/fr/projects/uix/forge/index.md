@@ -24,6 +24,8 @@ Sparks disponibles :
 
 - :speech_balloon: [Infobulle](./sparks/tooltip.md) — attache une infobulle stylisée à tout élément créé.
 - :material-button-cursor: [Bouton](./sparks/button.md) — attache un bouton stylisé (`ha-button`) avec actions avant ou après un élément.
+- [Badge](./sparks/badge) — ajoute un badge textuel ou une icône.
+- [Plus d'informations](./sparks/more-info) — intègre les détails d'une entité Home Assistant.
 - :label: [Attribut](./sparks/attribute.md) — ajoute, remplace ou supprime un attribut d'un élément.
 - :zap: [Événement](./sparks/event.md) — reçoit des événements DOM d'actions `fire-dom-event` et expose leurs données comme variables de modèle.
 - :star: [Icône Tile](./sparks/tile-icon.md) — insère un élément `ha-tile-icon` avant ou après un élément.

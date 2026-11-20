@@ -7,6 +7,10 @@ Der State Badge Spark fügt ein Home-Assistant-`state-badge` in ein Forge-Elemen
 
 ## Grundnutzung
 
+::: warning Hinweis zum geprüften Quellstand
+Im dokumentierten Quellstand fällt ein leeres `after` auf das Standardziel der Blank Card zurück. Es deaktiviert dieses Ziel nicht. Verwende dort eine ausdrückliche Platzierung mit `after`; ein leeres `after` ermöglicht `before` nicht zuverlässig. Das ist ein [Quellcodebefund](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/src/forge/sparks/uix-spark-state-badge.ts), kein neuer Browsertest.
+:::
+
 ::: tip
 Für reine Overlay-Marker ist oft der [Overlay Icon Spark](./overlay-icon) passender. `state-badge` ist richtig, wenn du Home Assistants native Entity-Darstellung einbetten willst.
 
@@ -31,7 +35,7 @@ element:
 | `type` | `string` | ja | - | Muss `state-badge` sein. |
 | `after` | `string` | `after` oder `before` | Bei Blank Card `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor für das Referenzelement. Das Badge wird danach als Geschwisterelement eingefügt. |
 | `before` | `string` | `after` oder `before` | - | UIX-Selektor für das Referenzelement. Das Badge wird davor eingefügt. |
-| `entity` | `string` | ja | - | Entity-ID. Der aktuelle State wird an `state-badge` übergeben. |
+| `entity` | `string` | für nativen Entitätszustand | - | Entity-ID. Der aktuelle State wird an `state-badge` übergeben. Ein festes Override-Icon oder -Bild kann auch ohne Entität verwendet werden. |
 | `override_icon` | `string` | nein | - | MDI-Icon, das das Standardicon ersetzt. Kann mit `entity` kombiniert werden. |
 | `override_image` | `string` | nein | - | Bild-URL, die das Icon vollständig ersetzt. Kann mit `entity` kombiniert werden. |
 | `color` | string | nein | - | Iconfarbe für aktive Zustände. Erlaubt `state`, `none`, Home-Assistant-Farbtoken oder Hexcode. |
@@ -159,6 +163,6 @@ element:
 
 ## Fehlerquellen
 
-- `entity` ist Pflicht, auch wenn `override_icon` oder `override_image` gesetzt ist.
+- Für den nativen Entitätszustand ist `entity` nötig. Bei einem festen `override_icon` oder `override_image` kann die Entität im geprüften Quellstand fehlen; die ursprüngliche Pflichtangabe war zu allgemein.
 - Genau einer von `after` und `before` sollte gesetzt sein.
 - Wenn das Badge nicht sichtbar ist, prüfe den DOM-Pfad und ob das Referenzelement vorhanden ist.

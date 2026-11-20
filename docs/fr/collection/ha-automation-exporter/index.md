@@ -31,7 +31,8 @@ Cela s'avère utile si vous souhaitez sauvegarder des automatisations séparéme
 - Affichage de toutes les automatisations dans un tableau avec cases à cocher.
 - Accès à des vues détaillées incluant les entités détectées et le code YAML complet.
 - Exportation des automatisations sélectionnées sous forme de fichiers individuels `.yaml`.
-- Ouverture directe du dossier d'exportation dans l'Explorateur Windows. - Enregistre les paramètres de manière portable, à côté du fichier EXE, dans `HaAutomationExporter.settings.json`.
+- Ouverture directe du dossier d'exportation dans l'Explorateur Windows.
+- Enregistrement des paramètres de manière portable, à côté du fichier EXE, dans `HaAutomationExporter.settings.json`.
 
 ## Exigences {#voraussetzungen}
 

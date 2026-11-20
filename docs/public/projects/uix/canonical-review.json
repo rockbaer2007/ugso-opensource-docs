@@ -651,7 +651,7 @@
     {
       "path": "forge/sparks/state-badge.md",
       "sha256": "dd8b0527f0d457131335d7538ccb5e5a02c524848ad13af5a20ef73e68ed0361",
-      "english_sha256": "7966d88d2f659a0dafd739268d60591fd1908dcf06f90291396a44d2794ca0dd",
+      "english_sha256": "5e0c869da810abf4f17ab2a1a2c49b9ca0ea61cc390da3d64e35d2bcfc8f0d6c",
       "code_sha256": [
         "0ef8d4b1c538888513719caf5c79370ab9d22f0cf82b2c84be76adfc16f33ea8",
         "73f492ca33f9c70e7c7f131840c26cfca852072f02312ce2e751a4df7d2e9873",
@@ -675,7 +675,7 @@
     {
       "path": "forge/sparks/tile-icon.md",
       "sha256": "eaf8210dbf464eca19c3a96113bc5f9812128c2dd5803e6df91cb728dc4376a5",
-      "english_sha256": "b35ee8f4c7d90d42876844cc18a21250d14e7140bdb7de173f87625c0a766ec7",
+      "english_sha256": "15c5bb92146b24f662053a72d28cc903ec38b164dd29406dc4466cdf1261c3c3",
       "code_sha256": [
         "957f35bc1cbd5725b020836c76d23c038727136451aebf1b697aa1c369910d1c",
         "958eb46f41a019dd99709e837dafd47d0afe1ef562d4e19f6540ff383db0a5ca",

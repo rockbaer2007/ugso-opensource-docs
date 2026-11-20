@@ -455,7 +455,9 @@
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
       "source_sha256": "ac81410047813f76e35af9d014b962c80eaaafaadba38604b5b08ef7deb12c01",
-      "target_sha256": "9d8bf36a4c6bdc08d4a8263f9bab5d50fcf4b8b2c5fb75c5573e75b69a7c41db"
+      "target_sha256": "f0db17bb84287a760d75979238ff4ae363e3eb4411b8dc421ff2d023dcd08d4f",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/broker/realms.md",
@@ -935,10 +937,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "aebb6b5aa29fe223ea63f45392819f8c79da1ddf18cf151aed1793971113cfe9",
+      "source_sha256": "b536c320e7fe21bcc0464bb55ad4ebd42ca6b45ff96ce3981246c975aa480e50",
       "target_sha256": "ec7de96f42cfc3be3e48cd8863119bbefb0e3ecd5a000f9954b19c0c35afb6b5",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/extras/dialog-styling-delay.md",
@@ -953,8 +956,10 @@
       },
       "disposition": "supplemented",
       "reason": "Added 4 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed.",
-      "source_sha256": "aebb6b5aa29fe223ea63f45392819f8c79da1ddf18cf151aed1793971113cfe9",
-      "target_sha256": "0690f8046dfc47ae4ab93283986da0a980c8df7b21b2db17e6495695e63c909d"
+      "source_sha256": "b536c320e7fe21bcc0464bb55ad4ebd42ca6b45ff96ce3981246c975aa480e50",
+      "target_sha256": "08b2a7224d3ef66f21b31d6e1a60df0ea1515f2f0e62ff81f51c510474edf58a",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/extras/disable-entity-picture-image-override.md",
@@ -1322,10 +1327,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "ec3764ddb92e5e5f597432e0bf3f5d683cac2c2df26e9e67f16cd1b927cfe75d",
+      "source_sha256": "c8b4a5e33383d77d687a638176bde646cdde0eb4dc9ef26b0eba18a9d7b57b39",
       "target_sha256": "321a3938e53f1b23e516768ae4d2906db2fa5a8735e0a8a4dc09c6e1171f83dd",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/index.md",
@@ -1340,8 +1346,10 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "ec3764ddb92e5e5f597432e0bf3f5d683cac2c2df26e9e67f16cd1b927cfe75d",
-      "target_sha256": "acc7445cbf487d23ac2a6085b1a9fabcfc8554141fd80a800fd4ba17f842d70b"
+      "source_sha256": "c8b4a5e33383d77d687a638176bde646cdde0eb4dc9ef26b0eba18a9d7b57b39",
+      "target_sha256": "680dbde794bdd1650557d55377b499639ecfa3c5bd0c2d526e3e18f337273c7d",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/attribute.md",
@@ -1765,10 +1773,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "c0e0591252960d17f3b91037fb4ad4569c7df080e253bff88937e2461adb1152",
+      "source_sha256": "e0554cbc6e6310a46c3db4779eced3958f9205681b2e1fdb0aacf818524d3c90",
       "target_sha256": "db05874adfaa6cdce4b53c23bb6efc1e03daa8f2a53722cfcac5e332c462f189",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/search.md",
@@ -1783,8 +1792,10 @@
       },
       "disposition": "supplemented",
       "reason": "Added 10 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed.",
-      "source_sha256": "c0e0591252960d17f3b91037fb4ad4569c7df080e253bff88937e2461adb1152",
-      "target_sha256": "a57e29755ab562297e1626ca1c47b2b09c881d97f18c6bf220395785d3d117d8"
+      "source_sha256": "e0554cbc6e6310a46c3db4779eced3958f9205681b2e1fdb0aacf818524d3c90",
+      "target_sha256": "28ccedaee04537ab5e6be9ab311ba8be4bb50b700ae09fa522d5d306fcdf6e15",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/state-badge.md",
@@ -1802,10 +1813,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "af68cd350506a6f839146c78406c2216785b94b843db6aa3e5c9338340b8ff27",
-      "target_sha256": "7966d88d2f659a0dafd739268d60591fd1908dcf06f90291396a44d2794ca0dd",
+      "source_sha256": "42359ca54df7f11b2163a676b7b430d04d2fdb001173e2eae63deffd9f67257f",
+      "target_sha256": "5e0c869da810abf4f17ab2a1a2c49b9ca0ea61cc390da3d64e35d2bcfc8f0d6c",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/state-badge.md",
@@ -1820,8 +1832,10 @@
       },
       "disposition": "supplemented",
       "reason": "Added 8 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed.",
-      "source_sha256": "af68cd350506a6f839146c78406c2216785b94b843db6aa3e5c9338340b8ff27",
-      "target_sha256": "182370fe1060f1224065341107526e7df271d7328de9715197e7eb462bd3cd52"
+      "source_sha256": "42359ca54df7f11b2163a676b7b430d04d2fdb001173e2eae63deffd9f67257f",
+      "target_sha256": "328733374dd77626d87587f7dc29eef98f035cd61b5021162aa1a54af43947e4",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/theme.md",
@@ -1861,10 +1875,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "e82d57478d2f53d47b4871823f655c1d65f2053553c6a1768eb2ecd0dca8fb88",
-      "target_sha256": "b35ee8f4c7d90d42876844cc18a21250d14e7140bdb7de173f87625c0a766ec7",
+      "source_sha256": "b2adcabe38edca24f93a860c3511adc087f3f24b2e36babd0ce2ba88698a074c",
+      "target_sha256": "15c5bb92146b24f662053a72d28cc903ec38b164dd29406dc4466cdf1261c3c3",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/tile-icon.md",
@@ -1879,8 +1894,10 @@
       },
       "disposition": "intentional-difference",
       "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals.",
-      "source_sha256": "e82d57478d2f53d47b4871823f655c1d65f2053553c6a1768eb2ecd0dca8fb88",
-      "target_sha256": "c298f8ec13b3047cd03986e8efa0bd53503dd4aae49ff57a039528f7aca6f973"
+      "source_sha256": "b2adcabe38edca24f93a860c3511adc087f3f24b2e36babd0ce2ba88698a074c",
+      "target_sha256": "6ec5690ea6834516b92db09e0884b95b91b5abfd19192845aa3ec489a9a4b567",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/tooltip.md",

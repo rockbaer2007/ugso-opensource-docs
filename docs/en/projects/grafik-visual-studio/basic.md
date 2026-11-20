@@ -10,7 +10,7 @@ title: Basic widgets
 
 ## Values and actions
 
-Number offers thousands separators, automatic decimals, a quality entity and CSS classes. Reference mode explicitly uses numeric-prefix parsing and singular selection after formatting; the previous mode remains. Bool HTML/control add on/off sentinels, HTML additions and extra HA targets. The server checks supported entities, availability and limits. Main and extra actions are not atomic; an extra-write failure prevents the subsequent extra URL action.
+Number offers thousands separators, automatic decimals, a quality entity and CSS classes. Reference mode explicitly uses numeric-prefix parsing and singular selection after formatting; the previous mode remains. Bool HTML/control add minimum/maximum sentinel values, HTML additions and extra HA targets. The server checks supported entities, availability and limits. Main and extra actions are not atomic; an extra-write failure prevents the subsequent extra URL action.
 
 AckFlag HTML uses an explicitly selected acknowledgment entity or attribute. HA has no ioBroker ACK flag. Old projects keep their old state source; missing acknowledgment is never displayed as confirmed.
 

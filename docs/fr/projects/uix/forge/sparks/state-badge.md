@@ -15,6 +15,10 @@ Le badge peut afficher :
 
 ## Utilisation de base
 
+::: warning Précision issue du code source
+Dans la révision documentée, un `after` vide réactive la cible par défaut de Blank Card. Il ne la désactive pas ; ce n'est donc pas un contournement fiable pour utiliser `before` sur Blank Card. Utilisez un placement explicite avec `after`. Ce [constat du code figé](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/src/forge/sparks/uix-spark-state-badge.ts) ne constitue pas un nouveau test dans le navigateur.
+:::
+
 Ajoutez une entrée `state-badge` à `forge.sparks`. Utilisez `after` ou `before` pour désigner l'élément cible, puis `entity`, `override_icon` ou `override_image` pour définir le contenu du badge.
 
 La valeur de `after` ou `before` est un sélecteur qui repère l'élément cible dans l'élément créé. Elle accepte la même [syntaxe de navigation dans le DOM](../../concepts/dom.md) que les styles UIX, y compris `$` pour traverser les limites d'une racine Shadow DOM.
@@ -46,9 +50,9 @@ entities:
 | Clé | Type | Obligatoire | Valeur par défaut | Description |
 | --- | ---- | -------- | ------- | ----------- |
 | `type` | `string` | ✅ | — | Doit être défini sur `state-badge`. |
-| `after` | `string` | l'un de `after`/`before` ✅ | — | Sélecteur UIX de l'élément de référence. Le badge est inséré comme élément frère **après** l'élément correspondant. Avec la [configuration de carte vide](../forge.md#blank-card-config), la valeur par défaut est `uix-forge-blank-card $ div.content`. Sinon, elle est `""`. Pour cibler un élément avec `before` dans cette configuration, définissez explicitement `after: ""`. |
+| `after` | `string` | l'un de `after`/`before` ✅ | — | Sélecteur UIX de l'élément de référence. Le badge est inséré comme élément frère **après** l'élément correspondant. Avec la [configuration de carte vide](../forge.md#blank-card-config), la valeur par défaut est `uix-forge-blank-card $ div.content`. Sinon, elle est `""`. Le placement avec `before` sur Blank Card présente la limite décrite ci-dessus. |
 | `before` | `string` | l'un de `after`/`before` ✅ | — | Sélecteur UIX de l'élément de référence. Le badge est inséré comme élément frère **avant** l'élément correspondant. |
-| `entity` | `string` | ✅ | — | ID de l'entité dont l'objet d'état actuel est transmis à `state-badge`. Le badge affiche ainsi son icône d'état native, son image ou son flux de caméra. |
+| `entity` | `string` | requis pour l'état natif | — | ID de l'entité dont l'objet d'état actuel est transmis à `state-badge`. Le badge affiche ainsi son icône d'état native, son image ou son flux de caméra. Un `override_icon` ou `override_image` fixe peut aussi être utilisé sans entité dans la révision vérifiée ; l'indication originale était trop générale. |
 | `override_icon` | `string` | | — | Icône MDI, par exemple `mdi:star`, qui remplace l'icône par défaut de l'entité. Peut être utilisée avec `entity`. |
 | `override_image` | `string` | | — | URL d'une image qui remplace entièrement l'icône. Peut être utilisée avec `entity`. |
 | `color` | string | | — | Couleur de l'icône lorsque le badge représente une entité active. Par défaut, elle dépend de `state`, `domain` et `device_class`. Définissez `none` pour désactiver la coloration. Valeurs acceptées : `state`, `none`, un [jeton de couleur Home Assistant](https://www.home-assistant.io/dashboards/tile/#available-colors) ou un code couleur hexadécimal. |

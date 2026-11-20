@@ -25,9 +25,9 @@ Les expressions de chemin d'événement sont évaluées de droite à gauche à p
 | --- | --- |
 | `target` | La cible d’origine de l’événement la plus interne. Dans toutes les autres formes, `target` est facultatif par souci de concision mais peut être inclus pour des raisons de lisibilité. |
 | `< [target]` | L'élément parent de `target`. |
-| `<$ [target]` | Le premier hôte racine fantôme au-dessus de `target`. |
-| `<selector> <$ [target]` | Le premier élément correspondant dans le DOM clair de ce premier hôte fantôme. |
-| `<selector> <$$ [target]` | Le premier élément correspondant en marchant vers l'extérieur à travers le chemin composé et en traversant les racines de l'ombre. |
+| `<$ [target]` | L'hôte du premier Shadow Root au-dessus de `target`. |
+| `<selector> <$ [target]` | Le premier élément correspondant dans le DOM classique (Light DOM) de cet hôte. |
+| `<selector> <$$ [target]` | Le premier élément correspondant en remontant le chemin composé, y compris au-delà des limites des Shadow Roots. |
 
 ::: note
 Les ancres d'interaction événement-chemin sont résolues de manière synchrone et peuvent être utilisées avec la [directive `block`](directives.md#block).
@@ -106,8 +106,7 @@ uix_broker_absolute_path($0)
 
 Cela signale un chemin d’ancrage d’interaction absolu compact commençant par `&`.
 
-Pour une ancre de directive ou de règle relative à une interaction précédemment résolue
-ancre, utilisez :
+Pour une ancre de directive ou de règle relative à une ancre d'interaction déjà résolue, utilisez :
 
 ```javascript
 uix_broker_path($0)

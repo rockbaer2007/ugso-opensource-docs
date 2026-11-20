@@ -239,6 +239,10 @@ element:
 
 ## Exemples complémentaires de la référence allemande {#german-reference-examples}
 
+### Expressions régulières et performances
+
+`text` et `replace_text` utilisent des expressions régulières. Les caractères spéciaux comme le point ou le crochet doivent être échappés lorsqu'ils doivent être recherchés littéralement. Limitez la recherche avec un conteneur `for` précis et un sélecteur `query` ciblé, au lieu de parcourir inutilement tout l'arbre.
+
 :::: details Afficher les configurations complémentaires
 Ces configurations complètent la référence traduite ci-dessus. Elles reprennent les exemples techniques de la [page allemande](/projects/uix/forge/sparks/search). Les clés, expressions, valeurs et textes de démonstration sont conservés tels quels ; remplacez les entités par les vôtres. Les limites de version indiquées dans la référence restent applicables.
 

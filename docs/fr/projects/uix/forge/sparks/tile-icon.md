@@ -18,6 +18,10 @@ Vous pouvez aussi rendre l'icône de tuile interactive avec des [actions](#actio
 
 ## Utilisation de base
 
+::: warning Précision issue du code source
+Dans la révision documentée, un `after` vide utilise de nouveau la cible par défaut de Blank Card. Il ne désactive pas cette valeur par défaut ; ce n'est donc pas un contournement fiable pour placer une icône avec `before` sur Blank Card. Utilisez un placement explicite avec `after`. Il s'agit d'un [constat dans le code figé](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/src/forge/sparks/uix-spark-tile-icon.ts), pas d'un nouveau test dans le navigateur.
+:::
+
 Ajoutez une entrée `tile-icon` à `forge.sparks`. Utilisez `after` ou `before` pour désigner l'élément cible, puis `icon`, `icon_path`, `image_url` ou `entity` pour définir l'icône.
 
 La valeur de `after` ou `before` est un sélecteur qui repère la cible dans l'élément créé. Elle accepte la même [syntaxe de navigation dans le DOM](../../concepts/dom.md) que les styles UIX, y compris `$` pour traverser les limites d'une racine Shadow DOM.
@@ -47,7 +51,7 @@ element:
 | Clé | Type | Obligatoire | Valeur par défaut | Description |
 | --- | ---- | -------- | ------- | ----------- |
 | `type` | `string` | ✅ | — | Doit être défini sur `tile-icon`. |
-| `after` | `string` | l'un de `after`/`before` ✅ | — | Sélecteur UIX de l'élément de référence. L'icône est insérée comme élément frère **après** l'élément correspondant. Avec la [configuration de carte vide](../forge.md#blank-card-config), la valeur par défaut est `uix-forge-blank-card $ div.content`. Sinon, elle est `""`. Pour cibler un élément avec `before` dans cette configuration, définissez explicitement `after: ""`. |
+| `after` | `string` | l'un de `after`/`before` ✅ | — | Sélecteur UIX de l'élément de référence. L'icône est insérée comme élément frère **après** l'élément correspondant. Avec la [configuration de carte vide](../forge.md#blank-card-config), la valeur par défaut est `uix-forge-blank-card $ div.content`. Sinon, elle est `""`. Le placement avec `before` sur Blank Card présente la limite décrite ci-dessus. |
 | `before` | `string` | l'un de `after`/`before` ✅ | — | Sélecteur UIX de l'élément de référence. L'icône est insérée comme élément frère **avant** l'élément correspondant. |
 | `icon` | `string` | l'un de `icon`/`icon_path`/`image_url`/`entity` ✅ | — | Nom d'une icône MDI, par exemple `mdi:star`. Si `entity` est défini, `icon` peut remplacer l'icône par défaut de l'entité. |
 | `icon_path` | `string` | l'un de `icon`/`icon_path`/`image_url`/`entity` ✅ | — | Chemin SVG transmis à `ha-tile-icon` comme propriété `iconPath` et rendu avec `ha-svg-icon`. |
@@ -59,7 +63,7 @@ element:
 | `double_tap_action` | action | — | — | Action exécutée lors d'un double toucher. |
 
 ::: note
-Définissez exactement l'une des options `after` ou `before`, ainsi qu'une seule source d'icône parmi `icon`, `icon_path`, `image_url` et `entity`.
+Choisissez un placement, `after` ou `before`, et une source parmi `icon`, `icon_path`, `image_url` et `entity`. Une `entity` peut aussi utiliser `icon` pour remplacer son symbole. L'affirmation originale imposant toujours une seule source contredit cette combinaison prise en charge.
 
 :::
 ::: tip
@@ -67,6 +71,8 @@ Le helper DOM [`uix_forge_path()`](../../concepts/dom.md#uix_forge_path0-forge-h
 
 :::
 ## Actions
+
+Avec `entity`, l'action native par défaut peut commuter ou activer une entité compatible au toucher, même sans action explicite. Pour un simple affichage d'état, définissez `tap_action: {action: none}`. Ce comportement provient du helper partagé d'icône de tuile dans la révision documentée.
 
 Lorsque vous définissez une ou plusieurs clés d'action (`tap_action`, `hold_action`, `double_tap_action`), l'icône de tuile devient automatiquement interactive.
 

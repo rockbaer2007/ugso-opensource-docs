@@ -5,6 +5,8 @@ title: Search Spark
 
 Der Search Spark sucht innerhalb eines Containers nach Elementen und wendet kleine Mutationen an. Er kann Klassen oder Attribute setzen und Text ersetzen, voranstellen oder anhängen.
 
+Ein `MutationObserver` verarbeitet auch später hinzugefügte Elemente, etwa nach einem Monatswechsel im Kalender. Der DOM-Helfer `uix_forge_path()` unterstützt die Auswahl des `for`-Containers.
+
 ## Grundnutzung
 
 ```yaml

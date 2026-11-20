@@ -10,7 +10,7 @@ title: Widgets Basic
 
 ## Valeurs et actions
 
-Number propose séparateur de milliers, décimales automatiques, entité de qualité et classes CSS. Le mode de référence active explicitement le parsing du préfixe numérique et le singulier après formatage ; le mode précédent reste. Bool HTML/control ajoutent sentinelles marche/arrêt, préfixe/suffixe HTML et cibles HA supplémentaires. Le serveur vérifie entités prises en charge, disponibilité et limites. Actions principale et supplémentaire ne sont pas atomiques ; un échec de l’écriture supplémentaire empêche l’action URL suivante.
+Number propose séparateur de milliers, décimales automatiques, entité de qualité et classes CSS. Le mode de référence active explicitement le parsing du préfixe numérique et le singulier après formatage ; le mode précédent reste. Bool HTML/control ajoutent des valeurs sentinelles minimum/maximum, préfixe/suffixe HTML et cibles HA supplémentaires. Le serveur vérifie entités prises en charge, disponibilité et limites. Actions principale et supplémentaire ne sont pas atomiques ; un échec de l’écriture supplémentaire empêche l’action URL suivante.
 
 AckFlag HTML utilise une entité ou un attribut de confirmation explicitement choisi. HA n’a pas d’indicateur ACK ioBroker. Les anciens projets conservent leur source d’état ; une confirmation manquante n’est jamais affichée comme confirmée.
 

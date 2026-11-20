@@ -36,6 +36,8 @@ def reviewed_corrections(text, raw, relative):
         'developers/cards.md': 'b015e562376a5bb3b6c437b48d2b0a1c461419490667859b1c2bad9963806d1d',
         'forge/sparks/index.md': '97178ef31bb7b5b88e10e2cc7531e020b80328d3ca7ddb5a46d035ba2585ec70',
         'concepts/application.md': '24be57e32f05eed9eafede271b99958f51dd94d3435666a2ba5a79f24c7f242a',
+        'forge/sparks/tile-icon.md': 'eaf8210dbf464eca19c3a96113bc5f9812128c2dd5803e6df91cb728dc4376a5',
+        'forge/sparks/state-badge.md': 'dd8b0527f0d457131335d7538ccb5e5a02c524848ad13af5a20ef73e68ed0361',
     }
     if path not in expected_sources:
         return text
@@ -55,9 +57,32 @@ def reviewed_corrections(text, raw, relative):
         old = 'insert an interactive `ha-button` element as a sibling after any element within the forged element.'
         assert text.count(old) == 1
         text = text.replace(old, 'insert an interactive `ha-button` element as a sibling before or after a target element within the forged element.')
-    else:
+    elif path == 'concepts/application.md':
         assert text.count('`UIX-card`') == 1
         text = text.replace('`UIX-card`', '`uix-card`')
+    else:
+        old = 'If you wish to target `before` using Blank card config, set explicitly to `""`.'
+        assert text.count(old) == 1
+        text = text.replace(old, 'Blank Card `before` placement has a known limitation at this revision; see the editorial note below.')
+        marker = '## Basic usage'
+        source_name = 'uix-spark-tile-icon.ts' if path.endswith('/tile-icon.md') else 'uix-spark-state-badge.ts'
+        note = ('::: warning Editorial source-code clarification (2026-11-20)\n'
+                'At the frozen documented revision, an empty `after` falls back to the default Blank Card target. '
+                'It does not disable that fallback, so setting an empty `after` is not a reliable workaround for `before` on Blank Card. '
+                'Use explicit `after` placement there. This is a source-code finding, not a new browser runtime test. '
+                '[Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/'+REVISION+'/src/forge/sparks/'+source_name+').\n:::\n\n')
+        assert text.count(marker) == 1
+        text = text.replace(marker, note+marker)
+        if path.endswith('/tile-icon.md'):
+            old = 'Exactly one of `after` or `before` must be provided, and exactly one icon source (`icon`, `icon_path`, `image_url`, or `entity`) must be provided.'
+            assert text.count(old) == 1
+            text = text.replace(old, 'Choose one placement, `after` or `before`, and provide an icon source (`icon`, `icon_path`, `image_url`, or `entity`). An `entity` may additionally use `icon` to override its symbol. The original exactly-one-source statement conflicts with this supported combination.')
+            text = text.replace(marker, marker+'\n\nWith `entity`, the native default tap action may toggle or activate a supported entity even without an explicit action. Set `tap_action: {action: none}` when the icon should only display state. This follows the frozen shared tile-icon helper.\n')
+        else:
+            old = '| `entity` | `string` | ✅ |'
+            assert text.count(old) == 1
+            text = text.replace(old, '| `entity` | `string` | required for native entity state |')
+            text = text.replace(marker, marker+'\n\nFor an entity-state badge, provide `entity`. A fixed `override_icon` or `override_image` can also supply badge content without an entity; the original table incorrectly marked `entity` as mandatory for every case. This clarification follows the frozen implementation.\n')
     return text
 
 
