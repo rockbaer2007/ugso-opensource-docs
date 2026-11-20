@@ -35,29 +35,38 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 
 Corrections include English prose left in French UIX concepts, macros, themes and camera backgrounds, a JavaScript syntax error in the developer example, seven anchor links and two video links. The Lock Spark active:false fallback is clarified in DE/FR. Examples, media and existing anchors are preserved.
 
+## Content review
+
+**Content reviewed** means sections and statements were compared with the reference for meaning, completeness, prerequisites, limitations and the purpose of examples. Identified mistranslations or contradictions were corrected. This is not a new application live test or legal certification. Pages not yet reviewed this way retain their technical status. [Individual assessments](/documentation-semantic-review.json).
+
+| Language | Reviewed | Pending |
+| --- | ---: | ---: |
+| EN | 43 | 144 |
+| FR | 43 | 178 |
+
 ## Complete page inventory
 
 | German reference | EN | FR |
 | --- | --- | --- |
-| [blog/beitragsvorlage.md](/blog/beitragsvorlage) | [Technically compared](/en/blog/post-template) | [Technically compared](/fr/blog/post-template) |
-| [blog/index.md](/blog/) | [Technically compared](/en/blog/) | [Technically compared](/fr/blog/) |
-| [blog/posts/atlas-runtime-foundation.md](/blog/posts/atlas-runtime-foundation) | [Technically compared](/en/blog/posts/atlas-runtime-foundation) | [Technically compared](/fr/blog/posts/atlas-runtime-foundation) |
-| [blog/posts/hadash-preview.md](/blog/posts/hadash-preview) | [Technically compared](/en/blog/posts/hadash-preview) | [Technically compared](/fr/blog/posts/hadash-preview) |
-| [blog/snippets/blockly.md](/blog/snippets/blockly) | [Technically compared](/en/blog/snippets/blockly) | [Technically compared](/fr/blog/snippets/blockly) |
-| [blog/snippets/home-assistant-yaml.md](/blog/snippets/home-assistant-yaml) | [Technically compared](/en/blog/snippets/home-assistant-yaml) | [Technically compared](/fr/blog/snippets/home-assistant-yaml) |
-| [blog/snippets/index.md](/blog/snippets/) | [Technically compared](/en/blog/snippets/) | [Technically compared](/fr/blog/snippets/) |
-| [blog/snippets/iobroker-blockly.md](/blog/snippets/iobroker-blockly) | [Technically compared](/en/blog/snippets/iobroker-blockly) | [Technically compared](/fr/blog/snippets/iobroker-blockly) |
-| [blog/snippets/javascript.md](/blog/snippets/javascript) | [Technically compared](/en/blog/snippets/javascript) | [Technically compared](/fr/blog/snippets/javascript) |
-| [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Technically compared](/en/blog/snippets/lovelace) | [Technically compared](/fr/blog/snippets/lovelace) |
+| [blog/beitragsvorlage.md](/blog/beitragsvorlage) | [Content reviewed](/en/blog/post-template) | [Content reviewed](/fr/blog/post-template) |
+| [blog/index.md](/blog/) | [Content reviewed](/en/blog/) | [Content reviewed](/fr/blog/) |
+| [blog/posts/atlas-runtime-foundation.md](/blog/posts/atlas-runtime-foundation) | [Content reviewed](/en/blog/posts/atlas-runtime-foundation) | [Content reviewed](/fr/blog/posts/atlas-runtime-foundation) |
+| [blog/posts/hadash-preview.md](/blog/posts/hadash-preview) | [Content reviewed](/en/blog/posts/hadash-preview) | [Content reviewed](/fr/blog/posts/hadash-preview) |
+| [blog/snippets/blockly.md](/blog/snippets/blockly) | [Content reviewed](/en/blog/snippets/blockly) | [Content reviewed](/fr/blog/snippets/blockly) |
+| [blog/snippets/home-assistant-yaml.md](/blog/snippets/home-assistant-yaml) | [Content reviewed](/en/blog/snippets/home-assistant-yaml) | [Content reviewed](/fr/blog/snippets/home-assistant-yaml) |
+| [blog/snippets/index.md](/blog/snippets/) | [Content reviewed](/en/blog/snippets/) | [Content reviewed](/fr/blog/snippets/) |
+| [blog/snippets/iobroker-blockly.md](/blog/snippets/iobroker-blockly) | [Content reviewed](/en/blog/snippets/iobroker-blockly) | [Content reviewed](/fr/blog/snippets/iobroker-blockly) |
+| [blog/snippets/javascript.md](/blog/snippets/javascript) | [Content reviewed](/en/blog/snippets/javascript) | [Content reviewed](/fr/blog/snippets/javascript) |
+| [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Content reviewed](/en/blog/snippets/lovelace) | [Content reviewed](/fr/blog/snippets/lovelace) |
 | [eep/index.md](/eep/) | [Technically compared](/en/eep/) | [Technically compared](/fr/eep/) |
 | [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Technically compared](/en/eep/ini-edit-translate-2026/) | [Technically compared](/fr/eep/ini-edit-translate-2026/) |
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Technically compared](/en/eep/projektduplicator-2026/) | [Technically compared](/fr/eep/projektduplicator-2026/) |
-| [impressum/index.md](/impressum/) | [Technically compared](/en/impressum/) | [Technically compared](/fr/impressum/) |
-| [index.md](/) | [Technically compared](/en/) | [Technically compared](/fr/) |
-| [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Technically compared](/en/iobroker/publish-assistant/) | [Technically compared](/fr/iobroker/publish-assistant/) |
-| [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Technically compared](/en/iobroker/widgets/ugso-spezial/) | [Technically compared](/fr/iobroker/widgets/ugso-spezial/) |
-| [projects-diverse/index.md](/projects-diverse/) | [Technically compared](/en/projects-diverse/) | [Technically compared](/fr/projects-diverse/) |
-| [projects-mqtt/index.md](/projects-mqtt/) | [Technically compared](/en/projects-mqtt/) | [Technically compared](/fr/projects-mqtt/) |
+| [impressum/index.md](/impressum/) | [Content reviewed](/en/impressum/) | [Content reviewed](/fr/impressum/) |
+| [index.md](/) | [Content reviewed](/en/) | [Content reviewed](/fr/) |
+| [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Content reviewed](/en/iobroker/publish-assistant/) | [Content reviewed](/fr/iobroker/publish-assistant/) |
+| [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Content reviewed](/en/iobroker/widgets/ugso-spezial/) | [Content reviewed](/fr/iobroker/widgets/ugso-spezial/) |
+| [projects-diverse/index.md](/projects-diverse/) | [Content reviewed](/en/projects-diverse/) | [Content reviewed](/fr/projects-diverse/) |
+| [projects-mqtt/index.md](/projects-mqtt/) | [Content reviewed](/en/projects-mqtt/) | [Content reviewed](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Technically compared](/en/projects/atlas-plugins/automation-extractor) | [Technically compared](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Technically compared](/en/projects/atlas-plugins/demo-repository) | [Technically compared](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Technically compared](/en/projects/atlas-plugins/developers/compatibility) | [Technically compared](/fr/projects/atlas-plugins/developers/compatibility) |
@@ -102,12 +111,12 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Technically compared](/en/projects/callmebot-signal/) | [Technically compared](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Technically compared](/en/projects/callmebot/) | [Technically compared](/fr/projects/callmebot/) |
 | [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Technically compared](/en/projects/dashboard-user-manager/) | [Technically compared](/fr/projects/dashboard-user-manager/) |
-| [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Technically compared](/en/projects/fritzbox-to-mqtt/examples) | [Technically compared](/fr/projects/fritzbox-to-mqtt/examples) |
-| [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Technically compared](/en/projects/fritzbox-to-mqtt/entities) | [Technically compared](/fr/projects/fritzbox-to-mqtt/entities) |
-| [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Technically compared](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Technically compared](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
-| [projects/fritzbox-to-mqtt/index.md](/projects/fritzbox-to-mqtt/) | [Technically compared](/en/projects/fritzbox-to-mqtt/) | [Technically compared](/fr/projects/fritzbox-to-mqtt/) |
-| [projects/fritzbox-to-mqtt/installation.md](/projects/fritzbox-to-mqtt/installation) | [Technically compared](/en/projects/fritzbox-to-mqtt/installation) | [Technically compared](/fr/projects/fritzbox-to-mqtt/installation) |
-| [projects/fritzbox-to-mqtt/konfiguration.md](/projects/fritzbox-to-mqtt/konfiguration) | [Technically compared](/en/projects/fritzbox-to-mqtt/configuration) | [Technically compared](/fr/projects/fritzbox-to-mqtt/configuration) |
+| [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Content reviewed](/en/projects/fritzbox-to-mqtt/examples) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/examples) |
+| [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Content reviewed](/en/projects/fritzbox-to-mqtt/entities) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/entities) |
+| [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Content reviewed](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
+| [projects/fritzbox-to-mqtt/index.md](/projects/fritzbox-to-mqtt/) | [Content reviewed](/en/projects/fritzbox-to-mqtt/) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/) |
+| [projects/fritzbox-to-mqtt/installation.md](/projects/fritzbox-to-mqtt/installation) | [Content reviewed](/en/projects/fritzbox-to-mqtt/installation) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/installation) |
+| [projects/fritzbox-to-mqtt/konfiguration.md](/projects/fritzbox-to-mqtt/konfiguration) | [Content reviewed](/en/projects/fritzbox-to-mqtt/configuration) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/configuration) |
 | [projects/grafik-visual-studio/basic.md](/projects/grafik-visual-studio/basic) | [Technically compared](/en/projects/grafik-visual-studio/basic) | [Technically compared](/fr/projects/grafik-visual-studio/basic) |
 | [projects/grafik-visual-studio/bildergalerie.md](/projects/grafik-visual-studio/bildergalerie) | [Technically compared](/en/projects/grafik-visual-studio/bildergalerie) | [Technically compared](/fr/projects/grafik-visual-studio/bildergalerie) |
 | [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Technically compared](/en/projects/grafik-visual-studio/calendar-plus) | [Technically compared](/fr/projects/grafik-visual-studio/calendar-plus) |
@@ -133,17 +142,17 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Technically compared](/en/projects/grafik-visual-studio/widget-packages) | [Technically compared](/fr/projects/grafik-visual-studio/widget-packages) |
 | [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Technically compared](/en/projects/grafik-visual-studio/widgets) | [Technically compared](/fr/projects/grafik-visual-studio/widgets) |
 | [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Technically compared](/en/projects/grafik-visual-studio/zeichnen) | [Technically compared](/fr/projects/grafik-visual-studio/zeichnen) |
-| [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Technically compared](/en/projects/hadash/export-view) | [Technically compared](/fr/projects/hadash/export-view) |
-| [projects/hadash/backups-und-json.md](/projects/hadash/backups-und-json) | [Technically compared](/en/projects/hadash/backups-and-json) | [Technically compared](/fr/projects/hadash/backups-and-json) |
-| [projects/hadash/dashboard-einlesen.md](/projects/hadash/dashboard-einlesen) | [Technically compared](/en/projects/hadash/import-dashboard) | [Technically compared](/fr/projects/hadash/import-dashboard) |
-| [projects/hadash/erste-schritte.md](/projects/hadash/erste-schritte) | [Technically compared](/en/projects/hadash/getting-started) | [Technically compared](/fr/projects/hadash/getting-started) |
-| [projects/hadash/index.md](/projects/hadash/) | [Technically compared](/en/projects/hadash/) | [Technically compared](/fr/projects/hadash/) |
-| [projects/hadash/portable-nutzung.md](/projects/hadash/portable-nutzung) | [Technically compared](/en/projects/hadash/portable-usage) | [Technically compared](/fr/projects/hadash/portable-usage) |
-| [projects/heizoel-to-mqtt/beispiele.md](/projects/heizoel-to-mqtt/beispiele) | [Technically compared](/en/projects/heizoel-to-mqtt/examples) | [Technically compared](/fr/projects/heizoel-to-mqtt/examples) |
-| [projects/heizoel-to-mqtt/entitaeten.md](/projects/heizoel-to-mqtt/entitaeten) | [Technically compared](/en/projects/heizoel-to-mqtt/entities) | [Technically compared](/fr/projects/heizoel-to-mqtt/entities) |
-| [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Technically compared](/en/projects/heizoel-to-mqtt/) | [Technically compared](/fr/projects/heizoel-to-mqtt/) |
-| [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Technically compared](/en/projects/heizoel-to-mqtt/installation) | [Technically compared](/fr/projects/heizoel-to-mqtt/installation) |
-| [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Technically compared](/en/projects/heizoel-to-mqtt/configuration) | [Technically compared](/fr/projects/heizoel-to-mqtt/configuration) |
+| [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Content reviewed](/en/projects/hadash/export-view) | [Content reviewed](/fr/projects/hadash/export-view) |
+| [projects/hadash/backups-und-json.md](/projects/hadash/backups-und-json) | [Content reviewed](/en/projects/hadash/backups-and-json) | [Content reviewed](/fr/projects/hadash/backups-and-json) |
+| [projects/hadash/dashboard-einlesen.md](/projects/hadash/dashboard-einlesen) | [Content reviewed](/en/projects/hadash/import-dashboard) | [Content reviewed](/fr/projects/hadash/import-dashboard) |
+| [projects/hadash/erste-schritte.md](/projects/hadash/erste-schritte) | [Content reviewed](/en/projects/hadash/getting-started) | [Content reviewed](/fr/projects/hadash/getting-started) |
+| [projects/hadash/index.md](/projects/hadash/) | [Content reviewed](/en/projects/hadash/) | [Content reviewed](/fr/projects/hadash/) |
+| [projects/hadash/portable-nutzung.md](/projects/hadash/portable-nutzung) | [Content reviewed](/en/projects/hadash/portable-usage) | [Content reviewed](/fr/projects/hadash/portable-usage) |
+| [projects/heizoel-to-mqtt/beispiele.md](/projects/heizoel-to-mqtt/beispiele) | [Content reviewed](/en/projects/heizoel-to-mqtt/examples) | [Content reviewed](/fr/projects/heizoel-to-mqtt/examples) |
+| [projects/heizoel-to-mqtt/entitaeten.md](/projects/heizoel-to-mqtt/entitaeten) | [Content reviewed](/en/projects/heizoel-to-mqtt/entities) | [Content reviewed](/fr/projects/heizoel-to-mqtt/entities) |
+| [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Content reviewed](/en/projects/heizoel-to-mqtt/) | [Content reviewed](/fr/projects/heizoel-to-mqtt/) |
+| [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Content reviewed](/en/projects/heizoel-to-mqtt/installation) | [Content reviewed](/fr/projects/heizoel-to-mqtt/installation) |
+| [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Content reviewed](/en/projects/heizoel-to-mqtt/configuration) | [Content reviewed](/fr/projects/heizoel-to-mqtt/configuration) |
 | [projects/index.md](/projects/) | [Technically compared](/en/projects/) | [Technically compared](/fr/projects/) |
 | [projects/logic-studio/index.md](/projects/logic-studio/) | [Technically compared](/en/projects/logic-studio/) | [Technically compared](/fr/projects/logic-studio/) |
 | [projects/logic-studio/user-guide.md](/projects/logic-studio/user-guide) | [Technically compared](/en/projects/logic-studio/user-guide) | [Technically compared](/fr/projects/logic-studio/user-guide) |
@@ -157,11 +166,11 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Technically compared](/en/projects/logic-studio/user-guide/typescript) | [Technically compared](/fr/projects/logic-studio/user-guide/typescript) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Technically compared](/en/projects/mqtt-client/) | [Technically compared](/fr/projects/mqtt-client/) |
 | [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Technically compared](/en/projects/mqtt-client/iobroker-roles) | [Technically compared](/fr/projects/mqtt-client/iobroker-roles) |
-| [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Technically compared](/en/projects/parcel-to-mqtt/examples) | [Technically compared](/fr/projects/parcel-to-mqtt/examples) |
-| [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Technically compared](/en/projects/parcel-to-mqtt/entities) | [Technically compared](/fr/projects/parcel-to-mqtt/entities) |
-| [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Technically compared](/en/projects/parcel-to-mqtt/) | [Technically compared](/fr/projects/parcel-to-mqtt/) |
-| [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Technically compared](/en/projects/parcel-to-mqtt/installation) | [Technically compared](/fr/projects/parcel-to-mqtt/installation) |
-| [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Technically compared](/en/projects/parcel-to-mqtt/configuration) | [Technically compared](/fr/projects/parcel-to-mqtt/configuration) |
+| [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Content reviewed](/en/projects/parcel-to-mqtt/examples) | [Content reviewed](/fr/projects/parcel-to-mqtt/examples) |
+| [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Content reviewed](/en/projects/parcel-to-mqtt/entities) | [Content reviewed](/fr/projects/parcel-to-mqtt/entities) |
+| [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Content reviewed](/en/projects/parcel-to-mqtt/) | [Content reviewed](/fr/projects/parcel-to-mqtt/) |
+| [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Content reviewed](/en/projects/parcel-to-mqtt/installation) | [Content reviewed](/fr/projects/parcel-to-mqtt/installation) |
+| [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Content reviewed](/en/projects/parcel-to-mqtt/configuration) | [Content reviewed](/fr/projects/parcel-to-mqtt/configuration) |
 | [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Technically compared](/en/projects/sidebar-colors/) | [Technically compared](/fr/projects/sidebar-colors/) |
 | [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Technically compared](/en/projects/sidebar-manager/) | [Technically compared](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Content present · Difference reviewed](/en/projects/uix/broker/broker) | [Content present · Difference reviewed](/fr/projects/uix/broker/broker) |
@@ -233,11 +242,11 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/using/templates.md](/projects/uix/using/templates) | [Content present · Difference reviewed](/en/projects/uix/using/templates) | [Technically compared](/fr/projects/uix/using/templates) |
 | [projects/uix/using/themes.md](/projects/uix/using/themes) | [Content present · Difference reviewed](/en/projects/uix/using/themes) | [Technically compared](/fr/projects/uix/using/themes) |
 | [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Content present · Difference reviewed](/en/projects/uix/using/view-backgrounds) | [Technically compared](/fr/projects/uix/using/view-backgrounds) |
-| [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Technically compared](/en/projects/ultimate-timer/examples) | [Technically compared](/fr/projects/ultimate-timer/examples) |
-| [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Technically compared](/en/projects/ultimate-timer/how-it-works) | [Technically compared](/fr/projects/ultimate-timer/how-it-works) |
-| [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Technically compared](/en/projects/ultimate-timer/) | [Technically compared](/fr/projects/ultimate-timer/) |
-| [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Technically compared](/en/projects/ultimate-timer/installation) | [Technically compared](/fr/projects/ultimate-timer/installation) |
-| [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Technically compared](/en/projects/ultimate-timer/configuration) | [Technically compared](/fr/projects/ultimate-timer/configuration) |
+| [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Content reviewed](/en/projects/ultimate-timer/examples) | [Content reviewed](/fr/projects/ultimate-timer/examples) |
+| [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Content reviewed](/en/projects/ultimate-timer/how-it-works) | [Content reviewed](/fr/projects/ultimate-timer/how-it-works) |
+| [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Content reviewed](/en/projects/ultimate-timer/) | [Content reviewed](/fr/projects/ultimate-timer/) |
+| [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Content reviewed](/en/projects/ultimate-timer/installation) | [Content reviewed](/fr/projects/ultimate-timer/installation) |
+| [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Content reviewed](/en/projects/ultimate-timer/configuration) | [Content reviewed](/fr/projects/ultimate-timer/configuration) |
 | [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Technically compared](/en/collection/calendar-card-pro/beispiele) | [Technically compared](/fr/collection/calendar-card-pro/beispiele) |
 | [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Technically compared](/en/collection/calendar-card-pro/entwicklung) | [Technically compared](/fr/collection/calendar-card-pro/entwicklung) |
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Technically compared](/en/collection/calendar-card-pro/features) | [Technically compared](/fr/collection/calendar-card-pro/features) |

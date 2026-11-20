@@ -18,6 +18,7 @@ REPORT = DOCS / 'public/documentation-audit.json'
 LOCALE_MAP = DOCS / '.vitepress/page-locales.json'
 REVIEW = DOCS / 'public/documentation-review.json'
 CONTENT_REVIEW = DOCS / 'public/documentation-content-review.json'
+SEMANTIC_REVIEW = DOCS / 'public/documentation-semantic-review.json'
 SLUGS = {
     'blog/beitragsvorlage.md': 'blog/post-template.md',
     'projects/atlas/uebersicht.md': 'projects/atlas/overview.md',
@@ -97,6 +98,7 @@ def inspect(path):
 def inventory(reviewed_at):
     reviewed = {entry['target']: entry for entry in json.loads(REVIEW.read_text(encoding='utf-8'))['pages']} if REVIEW.exists() else {}
     content_reviews = {entry['target']: entry for entry in json.loads(CONTENT_REVIEW.read_text(encoding='utf-8'))['pages']} if CONTENT_REVIEW.exists() else {}
+    semantic_reviews = {entry['target']: entry for entry in json.loads(SEMANTIC_REVIEW.read_text(encoding='utf-8'))['pages']} if SEMANTIC_REVIEW.exists() else {}
     sources = sorted(p.relative_to(DOCS).as_posix() for p in DOCS.rglob('*.md')
                      if p.relative_to(DOCS).parts[0] not in ['en', 'fr', '.vitepress', 'public']
                      and p.name != 'documentation-status.md')
@@ -131,6 +133,14 @@ def inventory(reviewed_at):
                         'assessment': content_entry['assessment'],
                         'language_scope': content_entry['language_scope'],
                     }
+                semantic_entry = semantic_reviews.get(path)
+                if semantic_entry:
+                    current = semantic_entry['source_sha256'] == de['sha256'] and semantic_entry['target_sha256'] == item['sha256']
+                    item['semantic_review'] = {
+                        'status': 'content-reviewed' if current else 'needs-recheck',
+                        'reviewed_at': semantic_entry['reviewed_at'],
+                        'assessment': semantic_entry['assessment'],
+                    }
             row['locales'][locale] = item
         rows.append(row)
     extras = {}
@@ -146,8 +156,10 @@ def inventory(reviewed_at):
                               review_signals=sum(any(row['locales'][locale].get('review_signals', {}).values()) for row in rows),
                               reviewed_findings=sum(row['locales'][locale].get('review', {}).get('status') == 'reviewed' for row in rows),
                               technically_compared=sum(row['locales'][locale].get('content_review', {}).get('status') == 'technically-compared' for row in rows),
+                              content_reviewed=sum(row['locales'][locale].get('semantic_review', {}).get('status') == 'content-reviewed' for row in rows),
                               open_review_signals=sum(
                                   row['locales'][locale].get('content_review', {}).get('status') == 'needs-recheck'
+                                  or row['locales'][locale].get('semantic_review', {}).get('status') == 'needs-recheck'
                                   or (any(row['locales'][locale].get('review_signals', {}).values())
                                       and row['locales'][locale].get('review', {}).get('status') != 'reviewed')
                                   for row in rows))
@@ -237,6 +249,19 @@ def render_report(report, locale):
             'fr': 'Corrections : passages anglais dans les concepts, macros, thèmes et arrière-plans caméra UIX français, erreur de syntaxe JavaScript dans l’exemple développeur, sept liens d’ancrage et deux liens vidéo. La règle de repli active:false du spark Lock est précisée en DE/FR. Les exemples, médias et ancres existants sont conservés.',
         }[locale]
         lines[index:index] = [note, '', fixes, '']
+    if SEMANTIC_REVIEW.exists():
+        planned = Counter(entry['locale'] for entry in json.loads(CONTENT_REVIEW.read_text(encoding='utf-8'))['pages'])
+        done = {lang: report['summary'][lang]['content_reviewed'] for lang in ['en', 'fr']}
+        meaning = {
+            'de': '**Inhaltlich geprüft** bedeutet: Abschnitte und Aussagen wurden auf Bedeutung, Vollständigkeit, Voraussetzungen, Einschränkungen und den Zweck der Beispiele mit der Referenz verglichen. Gefundene Fehlübersetzungen oder Widersprüche wurden korrigiert. Dies ist kein neuer App-Live-Test und keine rechtliche Zertifizierung. Noch nicht so geprüfte Seiten behalten ihren technischen Status. [Einzelbewertungen](/documentation-semantic-review.json).',
+            'en': '**Content reviewed** means sections and statements were compared with the reference for meaning, completeness, prerequisites, limitations and the purpose of examples. Identified mistranslations or contradictions were corrected. This is not a new application live test or legal certification. Pages not yet reviewed this way retain their technical status. [Individual assessments](/documentation-semantic-review.json).',
+            'fr': '**Contenu vérifié** signifie que les sections et affirmations ont été comparées à la référence : sens, exhaustivité, prérequis, limites et objectif des exemples. Les erreurs de traduction ou contradictions détectées ont été corrigées. Il ne s’agit ni d’un nouveau test réel de l’application ni d’une certification juridique. Les autres pages conservent leur statut technique. [Évaluations individuelles](/documentation-semantic-review.json).',
+        }[locale]
+        labels = {'de': ('Inhaltliche Prüfung', 'Sprache', 'Geprüft', 'Noch offen'), 'en': ('Content review', 'Language', 'Reviewed', 'Pending'), 'fr': ('Vérification du contenu', 'Langue', 'Vérifié', 'Restant')}[locale]
+        block = [f'## {labels[0]}', '', meaning, '', f'| {labels[1]} | {labels[2]} | {labels[3]} |', '| --- | ---: | ---: |']
+        block += [f'| {lang.upper()} | {done[lang]} | {planned[lang] - done[lang]} |' for lang in ['en', 'fr']]
+        index = next(i for i, line in enumerate(lines) if line == f'## {text["head"]}')
+        lines[index:index] = block + ['']
     for row in report['pages']:
         cells = [f'[{row["source"]}]({route(row["source"])})']
         for language in ['en', 'fr']:
@@ -245,6 +270,9 @@ def render_report(report, locale):
             content_status = item.get('content_review', {}).get('status')
             if content_status:
                 status = ({'de': 'Technisch abgeglichen', 'en': 'Technically compared', 'fr': 'Comparaison technique effectuée'} if content_status == 'technically-compared' else {'de': 'Erneut prüfen', 'en': 'Recheck required', 'fr': 'À revérifier'})[locale]
+            semantic_status = item.get('semantic_review', {}).get('status')
+            if semantic_status:
+                status = ({'de': 'Inhaltlich geprüft', 'en': 'Content reviewed', 'fr': 'Contenu vérifié'} if semantic_status == 'content-reviewed' else {'de': 'Erneut prüfen', 'en': 'Recheck required', 'fr': 'À revérifier'})[locale]
             if any(item.get('review_signals', {}).values()):
                 status += ' · ' + ({'de': 'Unterschied geprüft', 'en': 'Difference reviewed', 'fr': 'Différence examinée'}[locale] if item.get('review', {}).get('status') == 'reviewed' else text['signal'])
             cells.append(status if item['status'] == 'missing' else f'[{status}]({route(item["path"])})')

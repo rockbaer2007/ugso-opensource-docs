@@ -1,5 +1,9 @@
 # Konfiguration
 
+::: warning Archiv: Entwicklung eingestellt
+Diese Seite beschreibt den archivierten Paketstand. Vorbereitete Anbieterbereiche sind keine aktiven Connectoren; weitere Connectoren werden für dieses Projekt nicht mehr entwickelt. Als Alternative siehe [Parcel Tracker](https://github.com/SoerenKaiser99/parcel_tracker).
+:::
+
 ```yaml
 dhl:
   enabled: true
@@ -40,7 +44,7 @@ general:
   log_response_details: false
 ```
 
-Die Home-Assistant-App zeigt die Optionen als gruppierte Anbieterbereiche an. DHL und Hermes sind aktiv nutzbar. GLS, DPD, UPS, Amazon Logistics, Deutsche Post Briefe und FedEx sind bereits als Konfigurationsbereiche vorbereitet, ihre aktiven Connectoren folgen schrittweise.
+Die Home-Assistant-App zeigt die Optionen als gruppierte Anbieterbereiche an. Im archivierten Paket sind DHL und Hermes nutzbar. GLS, DPD, UPS, Amazon Logistics, Deutsche Post Briefe und FedEx wurden lediglich als Konfigurationsbereiche vorbereitet; aktive Connectoren sind dafür nicht enthalten.
 
 `dhl.login_url` ist die sichtbare Kopierhilfe für den DHL-Browser-Login.
 

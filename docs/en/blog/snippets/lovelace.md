@@ -5,6 +5,10 @@ description: Code snippets for Home Assistant dashboards and Bubble Card.
 
 # Lovelace and Bubble Card
 
+::: info Prerequisites and fragments
+Bubble Card must be installed and loaded as a dashboard resource. If `liquid_glass_2` is referenced under `modules`, that module must also be configured. Examples containing only `styles` extend an existing card; they are not complete card configurations. Replace the example entities with your own.
+:::
+
 ## Dynamic Icon Color
 
 ```yaml

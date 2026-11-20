@@ -35,29 +35,38 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 
 Corrections : passages anglais dans les concepts, macros, thèmes et arrière-plans caméra UIX français, erreur de syntaxe JavaScript dans l’exemple développeur, sept liens d’ancrage et deux liens vidéo. La règle de repli active:false du spark Lock est précisée en DE/FR. Les exemples, médias et ancres existants sont conservés.
 
+## Vérification du contenu
+
+**Contenu vérifié** signifie que les sections et affirmations ont été comparées à la référence : sens, exhaustivité, prérequis, limites et objectif des exemples. Les erreurs de traduction ou contradictions détectées ont été corrigées. Il ne s’agit ni d’un nouveau test réel de l’application ni d’une certification juridique. Les autres pages conservent leur statut technique. [Évaluations individuelles](/documentation-semantic-review.json).
+
+| Langue | Vérifié | Restant |
+| --- | ---: | ---: |
+| EN | 43 | 144 |
+| FR | 43 | 178 |
+
 ## Inventaire complet des pages
 
 | Référence allemande | EN | FR |
 | --- | --- | --- |
-| [blog/beitragsvorlage.md](/blog/beitragsvorlage) | [Comparaison technique effectuée](/en/blog/post-template) | [Comparaison technique effectuée](/fr/blog/post-template) |
-| [blog/index.md](/blog/) | [Comparaison technique effectuée](/en/blog/) | [Comparaison technique effectuée](/fr/blog/) |
-| [blog/posts/atlas-runtime-foundation.md](/blog/posts/atlas-runtime-foundation) | [Comparaison technique effectuée](/en/blog/posts/atlas-runtime-foundation) | [Comparaison technique effectuée](/fr/blog/posts/atlas-runtime-foundation) |
-| [blog/posts/hadash-preview.md](/blog/posts/hadash-preview) | [Comparaison technique effectuée](/en/blog/posts/hadash-preview) | [Comparaison technique effectuée](/fr/blog/posts/hadash-preview) |
-| [blog/snippets/blockly.md](/blog/snippets/blockly) | [Comparaison technique effectuée](/en/blog/snippets/blockly) | [Comparaison technique effectuée](/fr/blog/snippets/blockly) |
-| [blog/snippets/home-assistant-yaml.md](/blog/snippets/home-assistant-yaml) | [Comparaison technique effectuée](/en/blog/snippets/home-assistant-yaml) | [Comparaison technique effectuée](/fr/blog/snippets/home-assistant-yaml) |
-| [blog/snippets/index.md](/blog/snippets/) | [Comparaison technique effectuée](/en/blog/snippets/) | [Comparaison technique effectuée](/fr/blog/snippets/) |
-| [blog/snippets/iobroker-blockly.md](/blog/snippets/iobroker-blockly) | [Comparaison technique effectuée](/en/blog/snippets/iobroker-blockly) | [Comparaison technique effectuée](/fr/blog/snippets/iobroker-blockly) |
-| [blog/snippets/javascript.md](/blog/snippets/javascript) | [Comparaison technique effectuée](/en/blog/snippets/javascript) | [Comparaison technique effectuée](/fr/blog/snippets/javascript) |
-| [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Comparaison technique effectuée](/en/blog/snippets/lovelace) | [Comparaison technique effectuée](/fr/blog/snippets/lovelace) |
+| [blog/beitragsvorlage.md](/blog/beitragsvorlage) | [Contenu vérifié](/en/blog/post-template) | [Contenu vérifié](/fr/blog/post-template) |
+| [blog/index.md](/blog/) | [Contenu vérifié](/en/blog/) | [Contenu vérifié](/fr/blog/) |
+| [blog/posts/atlas-runtime-foundation.md](/blog/posts/atlas-runtime-foundation) | [Contenu vérifié](/en/blog/posts/atlas-runtime-foundation) | [Contenu vérifié](/fr/blog/posts/atlas-runtime-foundation) |
+| [blog/posts/hadash-preview.md](/blog/posts/hadash-preview) | [Contenu vérifié](/en/blog/posts/hadash-preview) | [Contenu vérifié](/fr/blog/posts/hadash-preview) |
+| [blog/snippets/blockly.md](/blog/snippets/blockly) | [Contenu vérifié](/en/blog/snippets/blockly) | [Contenu vérifié](/fr/blog/snippets/blockly) |
+| [blog/snippets/home-assistant-yaml.md](/blog/snippets/home-assistant-yaml) | [Contenu vérifié](/en/blog/snippets/home-assistant-yaml) | [Contenu vérifié](/fr/blog/snippets/home-assistant-yaml) |
+| [blog/snippets/index.md](/blog/snippets/) | [Contenu vérifié](/en/blog/snippets/) | [Contenu vérifié](/fr/blog/snippets/) |
+| [blog/snippets/iobroker-blockly.md](/blog/snippets/iobroker-blockly) | [Contenu vérifié](/en/blog/snippets/iobroker-blockly) | [Contenu vérifié](/fr/blog/snippets/iobroker-blockly) |
+| [blog/snippets/javascript.md](/blog/snippets/javascript) | [Contenu vérifié](/en/blog/snippets/javascript) | [Contenu vérifié](/fr/blog/snippets/javascript) |
+| [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Contenu vérifié](/en/blog/snippets/lovelace) | [Contenu vérifié](/fr/blog/snippets/lovelace) |
 | [eep/index.md](/eep/) | [Comparaison technique effectuée](/en/eep/) | [Comparaison technique effectuée](/fr/eep/) |
 | [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Comparaison technique effectuée](/en/eep/ini-edit-translate-2026/) | [Comparaison technique effectuée](/fr/eep/ini-edit-translate-2026/) |
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Comparaison technique effectuée](/en/eep/projektduplicator-2026/) | [Comparaison technique effectuée](/fr/eep/projektduplicator-2026/) |
-| [impressum/index.md](/impressum/) | [Comparaison technique effectuée](/en/impressum/) | [Comparaison technique effectuée](/fr/impressum/) |
-| [index.md](/) | [Comparaison technique effectuée](/en/) | [Comparaison technique effectuée](/fr/) |
-| [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Comparaison technique effectuée](/en/iobroker/publish-assistant/) | [Comparaison technique effectuée](/fr/iobroker/publish-assistant/) |
-| [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Comparaison technique effectuée](/en/iobroker/widgets/ugso-spezial/) | [Comparaison technique effectuée](/fr/iobroker/widgets/ugso-spezial/) |
-| [projects-diverse/index.md](/projects-diverse/) | [Comparaison technique effectuée](/en/projects-diverse/) | [Comparaison technique effectuée](/fr/projects-diverse/) |
-| [projects-mqtt/index.md](/projects-mqtt/) | [Comparaison technique effectuée](/en/projects-mqtt/) | [Comparaison technique effectuée](/fr/projects-mqtt/) |
+| [impressum/index.md](/impressum/) | [Contenu vérifié](/en/impressum/) | [Contenu vérifié](/fr/impressum/) |
+| [index.md](/) | [Contenu vérifié](/en/) | [Contenu vérifié](/fr/) |
+| [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Contenu vérifié](/en/iobroker/publish-assistant/) | [Contenu vérifié](/fr/iobroker/publish-assistant/) |
+| [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Contenu vérifié](/en/iobroker/widgets/ugso-spezial/) | [Contenu vérifié](/fr/iobroker/widgets/ugso-spezial/) |
+| [projects-diverse/index.md](/projects-diverse/) | [Contenu vérifié](/en/projects-diverse/) | [Contenu vérifié](/fr/projects-diverse/) |
+| [projects-mqtt/index.md](/projects-mqtt/) | [Contenu vérifié](/en/projects-mqtt/) | [Contenu vérifié](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Comparaison technique effectuée](/en/projects/atlas-plugins/automation-extractor) | [Comparaison technique effectuée](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Comparaison technique effectuée](/en/projects/atlas-plugins/demo-repository) | [Comparaison technique effectuée](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Comparaison technique effectuée](/en/projects/atlas-plugins/developers/compatibility) | [Comparaison technique effectuée](/fr/projects/atlas-plugins/developers/compatibility) |
@@ -102,12 +111,12 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Comparaison technique effectuée](/en/projects/callmebot-signal/) | [Comparaison technique effectuée](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Comparaison technique effectuée](/en/projects/callmebot/) | [Comparaison technique effectuée](/fr/projects/callmebot/) |
 | [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Comparaison technique effectuée](/en/projects/dashboard-user-manager/) | [Comparaison technique effectuée](/fr/projects/dashboard-user-manager/) |
-| [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Comparaison technique effectuée](/en/projects/fritzbox-to-mqtt/examples) | [Comparaison technique effectuée](/fr/projects/fritzbox-to-mqtt/examples) |
-| [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Comparaison technique effectuée](/en/projects/fritzbox-to-mqtt/entities) | [Comparaison technique effectuée](/fr/projects/fritzbox-to-mqtt/entities) |
-| [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Comparaison technique effectuée](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Comparaison technique effectuée](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
-| [projects/fritzbox-to-mqtt/index.md](/projects/fritzbox-to-mqtt/) | [Comparaison technique effectuée](/en/projects/fritzbox-to-mqtt/) | [Comparaison technique effectuée](/fr/projects/fritzbox-to-mqtt/) |
-| [projects/fritzbox-to-mqtt/installation.md](/projects/fritzbox-to-mqtt/installation) | [Comparaison technique effectuée](/en/projects/fritzbox-to-mqtt/installation) | [Comparaison technique effectuée](/fr/projects/fritzbox-to-mqtt/installation) |
-| [projects/fritzbox-to-mqtt/konfiguration.md](/projects/fritzbox-to-mqtt/konfiguration) | [Comparaison technique effectuée](/en/projects/fritzbox-to-mqtt/configuration) | [Comparaison technique effectuée](/fr/projects/fritzbox-to-mqtt/configuration) |
+| [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/examples) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/examples) |
+| [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/entities) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/entities) |
+| [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
+| [projects/fritzbox-to-mqtt/index.md](/projects/fritzbox-to-mqtt/) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/) |
+| [projects/fritzbox-to-mqtt/installation.md](/projects/fritzbox-to-mqtt/installation) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/installation) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/installation) |
+| [projects/fritzbox-to-mqtt/konfiguration.md](/projects/fritzbox-to-mqtt/konfiguration) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/configuration) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/configuration) |
 | [projects/grafik-visual-studio/basic.md](/projects/grafik-visual-studio/basic) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/basic) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/basic) |
 | [projects/grafik-visual-studio/bildergalerie.md](/projects/grafik-visual-studio/bildergalerie) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/bildergalerie) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/bildergalerie) |
 | [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/calendar-plus) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/calendar-plus) |
@@ -133,17 +142,17 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/widget-packages) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/widget-packages) |
 | [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/widgets) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/widgets) |
 | [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/zeichnen) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/zeichnen) |
-| [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Comparaison technique effectuée](/en/projects/hadash/export-view) | [Comparaison technique effectuée](/fr/projects/hadash/export-view) |
-| [projects/hadash/backups-und-json.md](/projects/hadash/backups-und-json) | [Comparaison technique effectuée](/en/projects/hadash/backups-and-json) | [Comparaison technique effectuée](/fr/projects/hadash/backups-and-json) |
-| [projects/hadash/dashboard-einlesen.md](/projects/hadash/dashboard-einlesen) | [Comparaison technique effectuée](/en/projects/hadash/import-dashboard) | [Comparaison technique effectuée](/fr/projects/hadash/import-dashboard) |
-| [projects/hadash/erste-schritte.md](/projects/hadash/erste-schritte) | [Comparaison technique effectuée](/en/projects/hadash/getting-started) | [Comparaison technique effectuée](/fr/projects/hadash/getting-started) |
-| [projects/hadash/index.md](/projects/hadash/) | [Comparaison technique effectuée](/en/projects/hadash/) | [Comparaison technique effectuée](/fr/projects/hadash/) |
-| [projects/hadash/portable-nutzung.md](/projects/hadash/portable-nutzung) | [Comparaison technique effectuée](/en/projects/hadash/portable-usage) | [Comparaison technique effectuée](/fr/projects/hadash/portable-usage) |
-| [projects/heizoel-to-mqtt/beispiele.md](/projects/heizoel-to-mqtt/beispiele) | [Comparaison technique effectuée](/en/projects/heizoel-to-mqtt/examples) | [Comparaison technique effectuée](/fr/projects/heizoel-to-mqtt/examples) |
-| [projects/heizoel-to-mqtt/entitaeten.md](/projects/heizoel-to-mqtt/entitaeten) | [Comparaison technique effectuée](/en/projects/heizoel-to-mqtt/entities) | [Comparaison technique effectuée](/fr/projects/heizoel-to-mqtt/entities) |
-| [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Comparaison technique effectuée](/en/projects/heizoel-to-mqtt/) | [Comparaison technique effectuée](/fr/projects/heizoel-to-mqtt/) |
-| [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Comparaison technique effectuée](/en/projects/heizoel-to-mqtt/installation) | [Comparaison technique effectuée](/fr/projects/heizoel-to-mqtt/installation) |
-| [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Comparaison technique effectuée](/en/projects/heizoel-to-mqtt/configuration) | [Comparaison technique effectuée](/fr/projects/heizoel-to-mqtt/configuration) |
+| [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Contenu vérifié](/en/projects/hadash/export-view) | [Contenu vérifié](/fr/projects/hadash/export-view) |
+| [projects/hadash/backups-und-json.md](/projects/hadash/backups-und-json) | [Contenu vérifié](/en/projects/hadash/backups-and-json) | [Contenu vérifié](/fr/projects/hadash/backups-and-json) |
+| [projects/hadash/dashboard-einlesen.md](/projects/hadash/dashboard-einlesen) | [Contenu vérifié](/en/projects/hadash/import-dashboard) | [Contenu vérifié](/fr/projects/hadash/import-dashboard) |
+| [projects/hadash/erste-schritte.md](/projects/hadash/erste-schritte) | [Contenu vérifié](/en/projects/hadash/getting-started) | [Contenu vérifié](/fr/projects/hadash/getting-started) |
+| [projects/hadash/index.md](/projects/hadash/) | [Contenu vérifié](/en/projects/hadash/) | [Contenu vérifié](/fr/projects/hadash/) |
+| [projects/hadash/portable-nutzung.md](/projects/hadash/portable-nutzung) | [Contenu vérifié](/en/projects/hadash/portable-usage) | [Contenu vérifié](/fr/projects/hadash/portable-usage) |
+| [projects/heizoel-to-mqtt/beispiele.md](/projects/heizoel-to-mqtt/beispiele) | [Contenu vérifié](/en/projects/heizoel-to-mqtt/examples) | [Contenu vérifié](/fr/projects/heizoel-to-mqtt/examples) |
+| [projects/heizoel-to-mqtt/entitaeten.md](/projects/heizoel-to-mqtt/entitaeten) | [Contenu vérifié](/en/projects/heizoel-to-mqtt/entities) | [Contenu vérifié](/fr/projects/heizoel-to-mqtt/entities) |
+| [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Contenu vérifié](/en/projects/heizoel-to-mqtt/) | [Contenu vérifié](/fr/projects/heizoel-to-mqtt/) |
+| [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Contenu vérifié](/en/projects/heizoel-to-mqtt/installation) | [Contenu vérifié](/fr/projects/heizoel-to-mqtt/installation) |
+| [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Contenu vérifié](/en/projects/heizoel-to-mqtt/configuration) | [Contenu vérifié](/fr/projects/heizoel-to-mqtt/configuration) |
 | [projects/index.md](/projects/) | [Comparaison technique effectuée](/en/projects/) | [Comparaison technique effectuée](/fr/projects/) |
 | [projects/logic-studio/index.md](/projects/logic-studio/) | [Comparaison technique effectuée](/en/projects/logic-studio/) | [Comparaison technique effectuée](/fr/projects/logic-studio/) |
 | [projects/logic-studio/user-guide.md](/projects/logic-studio/user-guide) | [Comparaison technique effectuée](/en/projects/logic-studio/user-guide) | [Comparaison technique effectuée](/fr/projects/logic-studio/user-guide) |
@@ -157,11 +166,11 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Comparaison technique effectuée](/en/projects/logic-studio/user-guide/typescript) | [Comparaison technique effectuée](/fr/projects/logic-studio/user-guide/typescript) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Comparaison technique effectuée](/en/projects/mqtt-client/) | [Comparaison technique effectuée](/fr/projects/mqtt-client/) |
 | [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Comparaison technique effectuée](/en/projects/mqtt-client/iobroker-roles) | [Comparaison technique effectuée](/fr/projects/mqtt-client/iobroker-roles) |
-| [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Comparaison technique effectuée](/en/projects/parcel-to-mqtt/examples) | [Comparaison technique effectuée](/fr/projects/parcel-to-mqtt/examples) |
-| [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Comparaison technique effectuée](/en/projects/parcel-to-mqtt/entities) | [Comparaison technique effectuée](/fr/projects/parcel-to-mqtt/entities) |
-| [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Comparaison technique effectuée](/en/projects/parcel-to-mqtt/) | [Comparaison technique effectuée](/fr/projects/parcel-to-mqtt/) |
-| [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Comparaison technique effectuée](/en/projects/parcel-to-mqtt/installation) | [Comparaison technique effectuée](/fr/projects/parcel-to-mqtt/installation) |
-| [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Comparaison technique effectuée](/en/projects/parcel-to-mqtt/configuration) | [Comparaison technique effectuée](/fr/projects/parcel-to-mqtt/configuration) |
+| [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Contenu vérifié](/en/projects/parcel-to-mqtt/examples) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/examples) |
+| [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Contenu vérifié](/en/projects/parcel-to-mqtt/entities) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/entities) |
+| [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Contenu vérifié](/en/projects/parcel-to-mqtt/) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/) |
+| [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Contenu vérifié](/en/projects/parcel-to-mqtt/installation) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/installation) |
+| [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Contenu vérifié](/en/projects/parcel-to-mqtt/configuration) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/configuration) |
 | [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Comparaison technique effectuée](/en/projects/sidebar-colors/) | [Comparaison technique effectuée](/fr/projects/sidebar-colors/) |
 | [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Comparaison technique effectuée](/en/projects/sidebar-manager/) | [Comparaison technique effectuée](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Contenu présent · Différence examinée](/en/projects/uix/broker/broker) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/broker) |
@@ -233,11 +242,11 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/using/templates.md](/projects/uix/using/templates) | [Contenu présent · Différence examinée](/en/projects/uix/using/templates) | [Comparaison technique effectuée](/fr/projects/uix/using/templates) |
 | [projects/uix/using/themes.md](/projects/uix/using/themes) | [Contenu présent · Différence examinée](/en/projects/uix/using/themes) | [Comparaison technique effectuée](/fr/projects/uix/using/themes) |
 | [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Contenu présent · Différence examinée](/en/projects/uix/using/view-backgrounds) | [Comparaison technique effectuée](/fr/projects/uix/using/view-backgrounds) |
-| [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Comparaison technique effectuée](/en/projects/ultimate-timer/examples) | [Comparaison technique effectuée](/fr/projects/ultimate-timer/examples) |
-| [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Comparaison technique effectuée](/en/projects/ultimate-timer/how-it-works) | [Comparaison technique effectuée](/fr/projects/ultimate-timer/how-it-works) |
-| [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Comparaison technique effectuée](/en/projects/ultimate-timer/) | [Comparaison technique effectuée](/fr/projects/ultimate-timer/) |
-| [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Comparaison technique effectuée](/en/projects/ultimate-timer/installation) | [Comparaison technique effectuée](/fr/projects/ultimate-timer/installation) |
-| [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Comparaison technique effectuée](/en/projects/ultimate-timer/configuration) | [Comparaison technique effectuée](/fr/projects/ultimate-timer/configuration) |
+| [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Contenu vérifié](/en/projects/ultimate-timer/examples) | [Contenu vérifié](/fr/projects/ultimate-timer/examples) |
+| [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Contenu vérifié](/en/projects/ultimate-timer/how-it-works) | [Contenu vérifié](/fr/projects/ultimate-timer/how-it-works) |
+| [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Contenu vérifié](/en/projects/ultimate-timer/) | [Contenu vérifié](/fr/projects/ultimate-timer/) |
+| [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Contenu vérifié](/en/projects/ultimate-timer/installation) | [Contenu vérifié](/fr/projects/ultimate-timer/installation) |
+| [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Contenu vérifié](/en/projects/ultimate-timer/configuration) | [Contenu vérifié](/fr/projects/ultimate-timer/configuration) |
 | [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/beispiele) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/beispiele) |
 | [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/entwicklung) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/entwicklung) |
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/features) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/features) |

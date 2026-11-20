@@ -6,7 +6,11 @@ pageClass: ugso-legal-page
 
 # Impressum
 
-## Angaben gemäß § 5 TMG
+<span id="angaben-gemaß-5-tmg"></span>
+
+## Angaben gemäß § 5 DDG
+
+Rechtsgrundlage: [§ 5 Digitale-Dienste-Gesetz (DDG)](https://www.gesetze-im-internet.de/ddg/__5.html).
 
 **Rechtsform:**  
 Einzelunternehmer
@@ -38,6 +42,8 @@ Registernummer: 30019872
 
 ## Domaininhaber
 
+- [opensource.ugso-software.de](https://opensource.ugso-software.de/)
+- [ugso-opensource.net](https://ugso-opensource.net/)
 - [www.ugso-software.de](https://www.ugso-software.de/)
 - [www.ugso-software.com](https://www.ugso-software.com)
 - [www.ugso-software.info](https://www.ugso-software.info)
@@ -51,9 +57,9 @@ Registernummer: 30019872
 
 ### Haftung für Inhalte
 
-Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Für eigene Inhalte auf diesen Seiten sind wir nach den allgemeinen Gesetzen verantwortlich.
 
-Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+Für übermittelte oder gespeicherte fremde Informationen richten sich anwendbare Haftungsbeschränkungen nach [§ 7 DDG](https://www.gesetze-im-internet.de/ddg/__7.html) in Verbindung mit den Artikeln 4 bis 8 der Verordnung (EU) 2022/2065. Gesetzliche Pflichten zur Entfernung von Informationen oder zur Sperrung ihrer Nutzung bleiben unberührt.
 
 Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
 
@@ -67,7 +73,7 @@ Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsve
 
 Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors beziehungsweise Erstellers.
 
-Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet.
+Soweit für einzelne Inhalte keine abweichende Lizenz angegeben ist, sind Downloads und Kopien dieser Seite nur für den privaten, nicht kommerziellen Gebrauch gestattet. Ausdrücklich angegebene Open-Source- oder Dokumentationslizenzen, etwa MIT oder CC BY 4.0, bleiben maßgeblich und werden durch diesen Hinweis nicht eingeschränkt. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet.
 
 Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
 

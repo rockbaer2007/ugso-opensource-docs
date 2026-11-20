@@ -82,7 +82,7 @@ footer: false
 <div class="ugso-footer">
   © 2026 UGSo Software |
   <a
-    href="/impressum/"
+    href="/en/impressum/"
   >Legal notice</a> |
   <a href="/en/documentation-status">Documentation language status</a>
 </div>

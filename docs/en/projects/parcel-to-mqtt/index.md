@@ -49,7 +49,7 @@ Source code and existing documentation remain available as an archive. The featu
 
 Parcel to MQTT is a Home Assistant app that publishes parcel tracking data through MQTT Discovery.
 
-The current version uses DHL account parcel lists, optional manual DHL tracking numbers and Hermes parcel tracking. App settings are grouped by provider so the Home Assistant configuration stays compact as provider sections.
+The final package uses DHL account parcel lists, optional manual DHL tracking numbers and Hermes parcel tracking. App settings are grouped by provider so the Home Assistant configuration stays compact as provider sections.
 
 ::: info Origin
 This implementation is adapted from and inspired by the ioBroker adapter [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel).
@@ -63,7 +63,7 @@ The following items describe the previous development state and earlier plans. T
 
 - DHL: active through `dhllogin://` browser login code plus optional manual tracking numbers
 - Amazon: prepared with e-mail, password and optional OTP token
-- Hermes: currently active by manual tracking number; account login with app username and app password is planned
+- Hermes: active by manual tracking number; account login with app username and app password was planned but not implemented
 - UPS: prepared with app username, app password and manual tracking numbers
 - GLS: prepared with manual tracking numbers and delivery postal code; polling waits for a stable guest bearer session
 - DPD: prepared with username, password and manual tracking numbers after the stable login/session flow is mapped

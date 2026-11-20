@@ -5,6 +5,10 @@ description: JavaScript examples for websites, Lovelace and Bubble Card.
 
 # JavaScript
 
+::: info Example context
+Each example requires its stated context: `entity` and `hass` come from the Home Assistant frontend, while `document` belongs to a web page. The first snippet contains `return` and belongs inside a function or an appropriate template callback; it is not a standalone JavaScript file.
+:::
+
 ## Determine Color from a Sensor Value
 
 ```javascript

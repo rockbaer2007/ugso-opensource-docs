@@ -57,7 +57,7 @@ footer: false
 
 <div class="ugso-footer">
   © 2026 UGSo Software |
-  <a href="/impressum/">Mentions légales</a> |
+  <a href="/fr/impressum/">Mentions légales</a> |
   <a href="/fr/documentation-status">État des traductions</a>
 </div>
 

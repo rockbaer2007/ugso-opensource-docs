@@ -1,0 +1,872 @@
+{
+  "reviewed_at": "2026-11-20",
+  "scope_pages": 408,
+  "coverage": {
+    "en": 43,
+    "fr": 43
+  },
+  "scope": "Content/meaning review of the 408 EN/FR files previously labelled only Content present. Reviewed pages only; unreviewed pages retain their technical status.",
+  "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
+  "pages": [
+    {
+      "source": "blog/beitragsvorlage.md",
+      "locale": "en",
+      "target": "en/blog/post-template.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All purpose/prerequisite/code/explanation/adaptation sections and production backup warning retained. French article title, brand attribution/date and broken warning directive corrected.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5d5e9462e6f66f7ba14cec5a775573a2b3352116398baa01d053ca197d8926b5",
+      "target_sha256": "f22b67f029f899e0c619de499380f5ad88a03d0a5e2337eaf705924fdd66bc23"
+    },
+    {
+      "source": "blog/beitragsvorlage.md",
+      "locale": "fr",
+      "target": "fr/blog/post-template.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All purpose/prerequisite/code/explanation/adaptation sections and production backup warning retained. French article title, brand attribution/date and broken warning directive corrected.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5d5e9462e6f66f7ba14cec5a775573a2b3352116398baa01d053ca197d8926b5",
+      "target_sha256": "22b4c52f51b0b9ef22081f3c0d4203a9f0d0751d6da795e7fc370caa89f0ab4f"
+    },
+    {
+      "source": "blog/index.md",
+      "locale": "en",
+      "target": "en/blog/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Three content areas, six article links, code-language identifiers and automatic copy-button explanation agree; localized post-template route is correct.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9969167e77e2d1f76a6f8a6354eff6cc5a191e2e9003fd0fdfd27b6924d26e75",
+      "target_sha256": "a3433a2138e43dcaffdba89d5fcabd949dc856316b100530fec573750e87812e"
+    },
+    {
+      "source": "blog/index.md",
+      "locale": "fr",
+      "target": "fr/blog/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Three content areas, six article links, code-language identifiers and automatic copy-button explanation agree; localized post-template route is correct.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9969167e77e2d1f76a6f8a6354eff6cc5a191e2e9003fd0fdfd27b6924d26e75",
+      "target_sha256": "e0fc834f13b8001ad0de33a8c499d9e69516715f3612410f128bab9c06c86614"
+    },
+    {
+      "source": "blog/posts/atlas-runtime-foundation.md",
+      "locale": "en",
+      "target": "en/blog/posts/atlas-runtime-foundation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Dated 2026-08-02 report retains six completed foundations, historical next-sprint focus and future UV Card direction; not interpreted as a present-day roadmap.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f69276f53dad6258d6f4d18a138c79eb254ffd3a49f6f29ef34c86f3dda5bd51",
+      "target_sha256": "b78f013c4929c973a2fbcccd4ff44aee4050293526bc671e3d978155025f097f"
+    },
+    {
+      "source": "blog/posts/atlas-runtime-foundation.md",
+      "locale": "fr",
+      "target": "fr/blog/posts/atlas-runtime-foundation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Dated 2026-08-02 report retains six completed foundations, historical next-sprint focus and future UV Card direction; not interpreted as a present-day roadmap.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f69276f53dad6258d6f4d18a138c79eb254ffd3a49f6f29ef34c86f3dda5bd51",
+      "target_sha256": "1ed4b519e9de713523e8417d614ecf60d243528b74244b8c17e2faa08afbe665"
+    },
+    {
+      "source": "blog/posts/hadash-preview.md",
+      "locale": "en",
+      "target": "en/blog/posts/hadash-preview.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Dated v0.9.4-preview report retains theme removal, four usability effects, five dashboard extraction/export functions and release/documentation links.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "4a7130df9ff6f86c90303c27df1f14dac4fa5e93cad322ba37847cb41d6f9fee",
+      "target_sha256": "1feee889ec72a0ad9ab9f1bb9e446d0dbc6a94c257b9a1b087b01d79179b4f3f"
+    },
+    {
+      "source": "blog/posts/hadash-preview.md",
+      "locale": "fr",
+      "target": "fr/blog/posts/hadash-preview.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Dated v0.9.4-preview report retains theme removal, four usability effects, five dashboard extraction/export functions and release/documentation links.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "4a7130df9ff6f86c90303c27df1f14dac4fa5e93cad322ba37847cb41d6f9fee",
+      "target_sha256": "c26983f0160577f3912fe0c584137f950287ec0155fe5f53db3f9a5fb850f8b3"
+    },
+    {
+      "source": "blog/snippets/blockly.md",
+      "locale": "en",
+      "target": "en/blog/snippets/blockly.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Visual programming definition, block/generator/workspace/code-generation examples and official Blockly-versus-Blocky naming note agree; translated labels preserve the same block IDs and operations.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "1dd90226cd112e1bca9babe9483e0f00b3cd4191a710e552684e0939ce164dab",
+      "target_sha256": "782e3ae09798d6e6e67ab8dc7ddde7afea984f4bc2b422475649ca3fa8109dc1"
+    },
+    {
+      "source": "blog/snippets/blockly.md",
+      "locale": "fr",
+      "target": "fr/blog/snippets/blockly.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Visual programming definition, block/generator/workspace/code-generation examples and official Blockly-versus-Blocky naming note agree; translated labels preserve the same block IDs and operations.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "1dd90226cd112e1bca9babe9483e0f00b3cd4191a710e552684e0939ce164dab",
+      "target_sha256": "1ce0820bdc5f197ddd1da80f3cbd816ddaaea9316275aa9dc7fc9dfd8b0fb081"
+    },
+    {
+      "source": "blog/snippets/home-assistant-yaml.md",
+      "locale": "en",
+      "target": "en/blog/snippets/home-assistant-yaml.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Frequency out-of-range, combined-solar daily maximum and temperature-output examples agree; translated local variable names are consistent within the examples.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f0c3275d0d5cae3744faeba51d15de4e2c0d1fb670ae3c5debec490b45730958",
+      "target_sha256": "e809212ce1fce5140f33ee7303d9da0d5fe67c529e8c3d70c8256c5143519923"
+    },
+    {
+      "source": "blog/snippets/home-assistant-yaml.md",
+      "locale": "fr",
+      "target": "fr/blog/snippets/home-assistant-yaml.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Frequency out-of-range, combined-solar daily maximum and temperature-output examples agree; translated local variable names are consistent within the examples.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f0c3275d0d5cae3744faeba51d15de4e2c0d1fb670ae3c5debec490b45730958",
+      "target_sha256": "fa4c666f84f6ff9e08a3981afe0984b83dba7f1778ab2bdcd6420ea8ca6ca8cc"
+    },
+    {
+      "source": "blog/snippets/index.md",
+      "locale": "en",
+      "target": "en/blog/snippets/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All four categories and their uses, adaptation-to-local-entities requirement and fresh-backup warning agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b6c6592e778b853c91df5398a71f14751feeefa2d69b8617ab605900d9237c08",
+      "target_sha256": "cc4147fe28c3cae804a715fb719fa8b93ac2a5b999306ad6b3b63f6e6c65b493"
+    },
+    {
+      "source": "blog/snippets/index.md",
+      "locale": "fr",
+      "target": "fr/blog/snippets/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All four categories and their uses, adaptation-to-local-entities requirement and fresh-backup warning agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b6c6592e778b853c91df5398a71f14751feeefa2d69b8617ab605900d9237c08",
+      "target_sha256": "37148ed9af601a9c646486d41597cf6923f0c60286bc311e4ee75e6614ae88ff"
+    },
+    {
+      "source": "blog/snippets/iobroker-blockly.md",
+      "locale": "en",
+      "target": "en/blog/snippets/iobroker-blockly.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Entire helper/prose compared: distinction between app0.1.36 and helper0.1.34, restart-only evidence versus pending upgrade test, private settings versus secret-free exports, new-only topic routing, independent flat virtual layout, ack directions, preview/apply/restore limits, adapter/cache requirements, stable mappings and no fabricated command confirmations retained. Official motion/XML/examples/attribution and local adaptation warning agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "49f5e88ea14c3c73af473ca34153f728b073a941ec5424e4a2da745f5193614a",
+      "target_sha256": "4a649a5d542f6e2986b11edc3e9ba36fda0f4d6a22e375ef821e03824d7c5292"
+    },
+    {
+      "source": "blog/snippets/iobroker-blockly.md",
+      "locale": "fr",
+      "target": "fr/blog/snippets/iobroker-blockly.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Entire helper/prose compared: distinction between app0.1.36 and helper0.1.34, restart-only evidence versus pending upgrade test, private settings versus secret-free exports, new-only topic routing, independent flat virtual layout, ack directions, preview/apply/restore limits, adapter/cache requirements, stable mappings and no fabricated command confirmations retained. Official motion/XML/examples/attribution and local adaptation warning agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "49f5e88ea14c3c73af473ca34153f728b073a941ec5424e4a2da745f5193614a",
+      "target_sha256": "b69a5aa69fdbc6bb00dd04058061d2637a70cbd650a196adcc53d7ee3e3ee6af"
+    },
+    {
+      "source": "blog/snippets/javascript.md",
+      "locale": "en",
+      "target": "en/blog/snippets/javascript.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four examples retain sensor thresholds, optional entity/DOM access and JSON error handling. Function/callback context for return and supplied entity/hass/document variables clarified in DE/EN/FR without altering code.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "46e05a4251c4941d4b7f9756cb20069bea15b0e40a09a7c44d6cc1734612a3a3",
+      "target_sha256": "f4a41988e85d2c9ef536c13b2bc488eb4bd35c8e9da8d8848a94222b7e5c4366"
+    },
+    {
+      "source": "blog/snippets/javascript.md",
+      "locale": "fr",
+      "target": "fr/blog/snippets/javascript.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four examples retain sensor thresholds, optional entity/DOM access and JSON error handling. Function/callback context for return and supplied entity/hass/document variables clarified in DE/EN/FR without altering code.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "46e05a4251c4941d4b7f9756cb20069bea15b0e40a09a7c44d6cc1734612a3a3",
+      "target_sha256": "ba2c686ff540e1a4f08601d4c604961ab60bfdc46961a9eb0335f44bcb0fa339"
+    },
+    {
+      "source": "blog/snippets/lovelace.md",
+      "locale": "en",
+      "target": "en/blog/snippets/lovelace.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All four icon/background/conditional/temperature-slider examples agree. Installed Bubble Card/module requirements, styles-as-fragments and entity substitution clarified in DE/EN/FR.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "0290ad4e99047fb81bb5db66a5bb9c7cdf8c4c594e095c9f1a1a771e9f24279d",
+      "target_sha256": "1fdcd8ff8c08e3b45b9b142438c352793c0f036707bfb1e375cffb21dec52f2f"
+    },
+    {
+      "source": "blog/snippets/lovelace.md",
+      "locale": "fr",
+      "target": "fr/blog/snippets/lovelace.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All four icon/background/conditional/temperature-slider examples agree. Installed Bubble Card/module requirements, styles-as-fragments and entity substitution clarified in DE/EN/FR.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "0290ad4e99047fb81bb5db66a5bb9c7cdf8c4c594e095c9f1a1a771e9f24279d",
+      "target_sha256": "e18d2729ac9e0b7ca2086e320a4490b3f7952e0b5de8a29c28424b5815d4cebd"
+    },
+    {
+      "source": "impressum/index.md",
+      "locale": "en",
+      "target": "en/impressum/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All identity/contact/trademark/domain/liability/copyright/privacy paragraphs compared. Obsolete TMG citations replaced with official DDG sections5/7 references after checking Gesetze-im-Internet; explicit MIT/CC licences take precedence over generic download restrictions; both publishing domains included. This is translation/reference review, not legal certification.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "63a74e381ba2bfdf1a4042020578d46f5abac18bfb42cfb2a9a248aaf5eda9ff",
+      "target_sha256": "1333234d357ca0a4a06be1c391bf8eda552e25ec54bd33d90bd9114ecb38189a"
+    },
+    {
+      "source": "impressum/index.md",
+      "locale": "fr",
+      "target": "fr/impressum/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All identity/contact/trademark/domain/liability/copyright/privacy paragraphs compared. Obsolete TMG citations replaced with official DDG sections5/7 references after checking Gesetze-im-Internet; explicit MIT/CC licences take precedence over generic download restrictions; both publishing domains included. This is translation/reference review, not legal certification.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "63a74e381ba2bfdf1a4042020578d46f5abac18bfb42cfb2a9a248aaf5eda9ff",
+      "target_sha256": "03da63f8ed75bd16b3fcddc547716332be9c8bc0b79390320a6360b66ec08baf"
+    },
+    {
+      "source": "index.md",
+      "locale": "en",
+      "target": "en/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All nine project/ecosystem references, four collection links, brand/EEP imagery, separate UIX scope and legal/status navigation retained. English intentionally points to official English UIX; French points to the maintained French adaptation. Legal links corrected to the matching locale.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b85b8284bbbd1e17b4eefe5785e9b92e98173577fdab2a5e4b9cd3ebecb3f2a9",
+      "target_sha256": "c5df41a5ef14c961fcacd3291d1878ceb1bf9763c475d0a90dcc07388fb39b5a"
+    },
+    {
+      "source": "index.md",
+      "locale": "fr",
+      "target": "fr/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All nine project/ecosystem references, four collection links, brand/EEP imagery, separate UIX scope and legal/status navigation retained. English intentionally points to official English UIX; French points to the maintained French adaptation. Legal links corrected to the matching locale.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b85b8284bbbd1e17b4eefe5785e9b92e98173577fdab2a5e4b9cd3ebecb3f2a9",
+      "target_sha256": "4e7ddc8d51dc0670252e25997b619a6194a84806dd92eaa8526313fa74495642"
+    },
+    {
+      "source": "iobroker/publish-assistant/index.md",
+      "locale": "en",
+      "target": "en/iobroker/publish-assistant/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four menu operations, existing-workflow/catalogue-PR limitation, Node24/npm/Git/authenticated-gh prerequisites, extraction/start command and versioned0.2.0 source download agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "6066238de12d10e1c2049e3394624dd4fdc14e11750d40883dcfa4b1d5e0cd4f",
+      "target_sha256": "25242ee389a0e15c2a9a1f3490e2a4bc6dd21af3f1f2841fda6cd5aed8ce73da"
+    },
+    {
+      "source": "iobroker/publish-assistant/index.md",
+      "locale": "fr",
+      "target": "fr/iobroker/publish-assistant/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four menu operations, existing-workflow/catalogue-PR limitation, Node24/npm/Git/authenticated-gh prerequisites, extraction/start command and versioned0.2.0 source download agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "6066238de12d10e1c2049e3394624dd4fdc14e11750d40883dcfa4b1d5e0cd4f",
+      "target_sha256": "54603863af6daf9b8d17083373e54aed53be657b344f24adefb35da2dc1705b5"
+    },
+    {
+      "source": "iobroker/widgets/ugso-spezial/index.md",
+      "locale": "en",
+      "target": "en/iobroker/widgets/ugso-spezial/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Both SVG widgets: signed animation/zero behavior, fixed versus absolute speed, four inputs/correction/two outputs, writable existing numeric state, unavailable-input wait and snap-versus-value-routing distinction retained. Version0.1.34 packaging/catalogue snapshot, backup/migration cautions and VIS2 requirements agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "98bdc50b7533b2e94106a04d3dd4ae0c690fdaf3b1795e7e1ebd23cc282a1ab1",
+      "target_sha256": "bebc6a5b9e2fca5c4708076614ae675dfd9f1bf1767223c0f7ee10e5a4ee4daa"
+    },
+    {
+      "source": "iobroker/widgets/ugso-spezial/index.md",
+      "locale": "fr",
+      "target": "fr/iobroker/widgets/ugso-spezial/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Both SVG widgets: signed animation/zero behavior, fixed versus absolute speed, four inputs/correction/two outputs, writable existing numeric state, unavailable-input wait and snap-versus-value-routing distinction retained. Version0.1.34 packaging/catalogue snapshot, backup/migration cautions and VIS2 requirements agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "98bdc50b7533b2e94106a04d3dd4ae0c690fdaf3b1795e7e1ebd23cc282a1ab1",
+      "target_sha256": "6de9cb71dfbf8d358303b42f531c4c679da78cb87e9c8112e91fdb636f969198"
+    },
+    {
+      "source": "projects-diverse/index.md",
+      "locale": "en",
+      "target": "en/projects-diverse/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Timer/STOP/DONE/MQTT description, three blueprint variants, six-target maximum, selectable entity/device/area group, on-to-off emergency semantics and import-button/project links agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5a90406efb51bfa48711d031cb871a7226d6f162edf10db90f8a586e5cf7b665",
+      "target_sha256": "ae78e86ebac73806d6f03aa872212acef232f30aa6c659e7a044ccb77e38b6ac"
+    },
+    {
+      "source": "projects-diverse/index.md",
+      "locale": "fr",
+      "target": "fr/projects-diverse/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Timer/STOP/DONE/MQTT description, three blueprint variants, six-target maximum, selectable entity/device/area group, on-to-off emergency semantics and import-button/project links agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5a90406efb51bfa48711d031cb871a7226d6f162edf10db90f8a586e5cf7b665",
+      "target_sha256": "209e7239085acf3fd4f25862f770077443661a9c1e9cb52c232575f18fd4115f"
+    },
+    {
+      "source": "projects-mqtt/index.md",
+      "locale": "en",
+      "target": "en/projects-mqtt/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "2881977d572f16bdf7cfae314a31a3e17c5ab55a06545e5f51aef70f939739ea",
+      "target_sha256": "0427582daeb048a913016a3a7834f5789b4e307e49f5ab5aaeeba0270da7d299"
+    },
+    {
+      "source": "projects-mqtt/index.md",
+      "locale": "fr",
+      "target": "fr/projects-mqtt/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "2881977d572f16bdf7cfae314a31a3e17c5ab55a06545e5f51aef70f939739ea",
+      "target_sha256": "6994fa9b855f394f52b6e6397ce01c57787dcd53891eed6624399c589dfb5f78"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/beispiele.md",
+      "locale": "en",
+      "target": "en/projects/fritzbox-to-mqtt/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Download/upload, AB0-AB4 old/new messages, all three WLAN statuses and mandatory Mushroom prerequisite retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9e3a110b60758f9fd255b73ca6d9f4937688891f6675f0075343a1087f64ce31",
+      "target_sha256": "969a97e4788dfeb1e5e0fd22bc96a51a56c2c1befd827f25487cd260981d09bc"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/beispiele.md",
+      "locale": "fr",
+      "target": "fr/projects/fritzbox-to-mqtt/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Download/upload, AB0-AB4 old/new messages, all three WLAN statuses and mandatory Mushroom prerequisite retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9e3a110b60758f9fd255b73ca6d9f4937688891f6675f0075343a1087f64ce31",
+      "target_sha256": "02a1474240cb1bc8abd3bbff4716fde488450aa5b94b38a716f13f8cefe21caa"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/entitaeten.md",
+      "locale": "en",
+      "target": "en/projects/fritzbox-to-mqtt/entities.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Discovery, answering machine attributes versus entity names, WLAN/raw status, optional unknown values, all call-list groups, live events, phonebook filtering/names and DECT/NoRingTime exclusion agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "72b95eecb8331f670322fae3ff1f9df80372c75299ba4266c656765ea38fa84e",
+      "target_sha256": "0b037b092391703094e2df0dd903653a37d52d9aa29b4bfd4caae228cc10d136"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/entitaeten.md",
+      "locale": "fr",
+      "target": "fr/projects/fritzbox-to-mqtt/entities.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Discovery, answering machine attributes versus entity names, WLAN/raw status, optional unknown values, all call-list groups, live events, phonebook filtering/names and DECT/NoRingTime exclusion agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "72b95eecb8331f670322fae3ff1f9df80372c75299ba4266c656765ea38fa84e",
+      "target_sha256": "4fb7470f5ca5946ac15e6d65fb0c4d5b62bea0a1dac3fe9e80c98be3e9901347"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/fehlersuche.md",
+      "locale": "en",
+      "target": "en/projects/fritzbox-to-mqtt/troubleshooting.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "MQTT authorization/restart order, FRITZ credentials/permissions, TR064/Lua fallback diagnostics, port1012 limitation and Supervisor-versus-HACS distinction retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "48b7a62bdf00169061cb11f7ba1ed198f3130db9d8c2c11f9d79fa2299c472fc",
+      "target_sha256": "297bee69d3ff79974cc1ca1eece91d8899b2528da59d2faf0151947eb5495094"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/fehlersuche.md",
+      "locale": "fr",
+      "target": "fr/projects/fritzbox-to-mqtt/troubleshooting.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "MQTT authorization/restart order, FRITZ credentials/permissions, TR064/Lua fallback diagnostics, port1012 limitation and Supervisor-versus-HACS distinction retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "48b7a62bdf00169061cb11f7ba1ed198f3130db9d8c2c11f9d79fa2299c472fc",
+      "target_sha256": "b72e0ab3f881cb7209d5cbf20d848237160c2713e3086f677ef9ec6e381fc13d"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/index.md",
+      "locale": "en",
+      "target": "en/projects/fritzbox-to-mqtt/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Hero six features, shared repository versus archived original, four data sources and Supervisor/HACS limits agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "1363389536860e0d89490da4ff952f3b0d95b4bb951d7c434091d11a8d8d7951",
+      "target_sha256": "15a62d51495702538d176899f3c7ca146166764577ee18148d92fcd406ab0e63"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/index.md",
+      "locale": "fr",
+      "target": "fr/projects/fritzbox-to-mqtt/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Hero six features, shared repository versus archived original, four data sources and Supervisor/HACS limits agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "1363389536860e0d89490da4ff952f3b0d95b4bb951d7c434091d11a8d8d7951",
+      "target_sha256": "5f8ae71609461fac94b7ee23a080f8e9f2d5e28fa85c9da0f127bb84bdb30b36"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/installation.md",
+      "locale": "en",
+      "target": "en/projects/fritzbox-to-mqtt/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Supervisor, broker, MQTT, FRITZ permissions and TR064 prerequisites; repository/local-addons installation and no-HACS requirement agree. English smart-home permission wording restored.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "7c37526f027512553215ae2bfcee2d58fe29f9980cf5ba0659cab0737a1dc8ad",
+      "target_sha256": "5a27afa626c1796c25d4878be1131609eeeb4daaac76741cd369bacdc57add4e"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/installation.md",
+      "locale": "fr",
+      "target": "fr/projects/fritzbox-to-mqtt/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Supervisor, broker, MQTT, FRITZ permissions and TR064 prerequisites; repository/local-addons installation and no-HACS requirement agree. English smart-home permission wording restored.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "7c37526f027512553215ae2bfcee2d58fe29f9980cf5ba0659cab0737a1dc8ad",
+      "target_sha256": "979d9fdf39a927c2be17b4a270e10e4f7a33f3bfbfef5db8b025e0273f879540"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/konfiguration.md",
+      "locale": "en",
+      "target": "en/projects/fritzbox-to-mqtt/configuration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Fixed IP, ports49000/1012, polling120/600/3600 seconds, offline group pause, live-monitor independence, immediate reconnect refresh, full/limited/unknown diagnostics, topics, phonebooks/DECT/log options and internal MQTT credentials agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "996a974581ea96caa70a2ef50bf9433d3001d9bf5dc9afd16dce3a772c5ef2d0",
+      "target_sha256": "481d73caf0a92a295d23a9784e88a7d323f317fa44bce2c9ccbc449ae6a7eada"
+    },
+    {
+      "source": "projects/fritzbox-to-mqtt/konfiguration.md",
+      "locale": "fr",
+      "target": "fr/projects/fritzbox-to-mqtt/configuration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Fixed IP, ports49000/1012, polling120/600/3600 seconds, offline group pause, live-monitor independence, immediate reconnect refresh, full/limited/unknown diagnostics, topics, phonebooks/DECT/log options and internal MQTT credentials agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "996a974581ea96caa70a2ef50bf9433d3001d9bf5dc9afd16dce3a772c5ef2d0",
+      "target_sha256": "36a89f7c916a65c498593e38e12a4cde37f4ce4fc976577360ac55b791323545"
+    },
+    {
+      "source": "projects/hadash/ansicht-exportieren.md",
+      "locale": "en",
+      "target": "en/projects/hadash/export-view.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "View extraction and all four TXT/YAML/DASH/new-dashboard export options and five-step naming/format workflow agree in EN/FR.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5be94bd509b8e6334d714ff2d9ec74c6fb8495452732c9037f82d372ea5dfe4d",
+      "target_sha256": "08dc1d676fe6ac868110d5d9f3d538c8ee6796ae9fdbb7f4bff145fb63a2b53c"
+    },
+    {
+      "source": "projects/hadash/ansicht-exportieren.md",
+      "locale": "fr",
+      "target": "fr/projects/hadash/export-view.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "View extraction and all four TXT/YAML/DASH/new-dashboard export options and five-step naming/format workflow agree in EN/FR.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5be94bd509b8e6334d714ff2d9ec74c6fb8495452732c9037f82d372ea5dfe4d",
+      "target_sha256": "a14856b2c13be427e7caed95fc1f1863b78446d55d97376c51a6fb5306fed31f"
+    },
+    {
+      "source": "projects/hadash/backups-und-json.md",
+      "locale": "en",
+      "target": "en/projects/hadash/backups-and-json.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Unencrypted-backup and .storage limits, JSON/YAML workflow and unchanged-original/copy safety requirement retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "533ec1abeb5b53be7856fbb1f61c2cd18b6a95bc5a44520412d53c08b298443b",
+      "target_sha256": "1acd7dba15486521301fbc133eea62c197a8027ae90a685e33eb7f6bf216f52a"
+    },
+    {
+      "source": "projects/hadash/backups-und-json.md",
+      "locale": "fr",
+      "target": "fr/projects/hadash/backups-and-json.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Unencrypted-backup and .storage limits, JSON/YAML workflow and unchanged-original/copy safety requirement retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "533ec1abeb5b53be7856fbb1f61c2cd18b6a95bc5a44520412d53c08b298443b",
+      "target_sha256": "07c007e343063df1bb9ada45cd0124c6cde445d8107c21a7a45cbde2529aaa00"
+    },
+    {
+      "source": "projects/hadash/dashboard-einlesen.md",
+      "locale": "en",
+      "target": "en/projects/hadash/import-dashboard.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All eight RAW-editor steps and both output extensions retained. French Ctrl key names and paste instruction clarified.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f330ad5249bde99009d9f48c88e5febf2d4a58603d6d716d600a97773cb3357d",
+      "target_sha256": "76a8e2c35e445da89f2b434d482ad0ad53bf37dfef0285677433d45980226b34"
+    },
+    {
+      "source": "projects/hadash/dashboard-einlesen.md",
+      "locale": "fr",
+      "target": "fr/projects/hadash/import-dashboard.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All eight RAW-editor steps and both output extensions retained. French Ctrl key names and paste instruction clarified.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f330ad5249bde99009d9f48c88e5febf2d4a58603d6d716d600a97773cb3357d",
+      "target_sha256": "b5e4e79bca51eeae93111117dda35be365f5dd9722df760d20c639f9dabf5a82"
+    },
+    {
+      "source": "projects/hadash/erste-schritte.md",
+      "locale": "en",
+      "target": "en/projects/hadash/getting-started.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Windows 10/11, matching .NET runtime, unencrypted input, ZIP extraction, EXE and all six format choices agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "fdc4712957258e2bb30c376a8b13a08c72153fcdb16849bcc02485e6312b07bd",
+      "target_sha256": "d30c99390fff25566e5fd16a1ef30398a1a3aa7856cd404cf05db2ff2452963e"
+    },
+    {
+      "source": "projects/hadash/erste-schritte.md",
+      "locale": "fr",
+      "target": "fr/projects/hadash/getting-started.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Windows 10/11, matching .NET runtime, unencrypted input, ZIP extraction, EXE and all six format choices agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "fdc4712957258e2bb30c376a8b13a08c72153fcdb16849bcc02485e6312b07bd",
+      "target_sha256": "fd19890a98a4a496288b6a7fb291e7e161edca8877a202d07cffbff5feab4e6f"
+    },
+    {
+      "source": "projects/hadash/index.md",
+      "locale": "en",
+      "target": "en/projects/hadash/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Hero, four feature descriptions, extraction purpose, YAML recovery from unencrypted backups and preview/development warning agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "29cd611ee649172b17df0df5a7de4c1be3b3aea9ef4faf0e5349d17e64d6e1ea",
+      "target_sha256": "4811f75d66180869eb9df8a1cf48aeeaad3a73189597ac82ee25aa7facf24774"
+    },
+    {
+      "source": "projects/hadash/index.md",
+      "locale": "fr",
+      "target": "fr/projects/hadash/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Hero, four feature descriptions, extraction purpose, YAML recovery from unencrypted backups and preview/development warning agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "29cd611ee649172b17df0df5a7de4c1be3b3aea9ef4faf0e5349d17e64d6e1ea",
+      "target_sha256": "d09381638b2370a6587b82079f68e6f6a9d1740868c71ced89b2a96bb54cbe79"
+    },
+    {
+      "source": "projects/hadash/portable-nutzung.md",
+      "locale": "en",
+      "target": "en/projects/hadash/portable-usage.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "No installation/registry/AppData, local configuration, USB portability and settings-path explanation retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "89855667aae817fdd91e4eadbb44baa075dcf747fdd318db3e1aa96e7d9aa238",
+      "target_sha256": "a5de17776aaed74c1c0f1e6671784c6522d6ea46943f2d2151109d7d81a49d74"
+    },
+    {
+      "source": "projects/hadash/portable-nutzung.md",
+      "locale": "fr",
+      "target": "fr/projects/hadash/portable-usage.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "No installation/registry/AppData, local configuration, USB portability and settings-path explanation retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "89855667aae817fdd91e4eadbb44baa075dcf747fdd318db3e1aa96e7d9aa238",
+      "target_sha256": "d1bfcec8370807f344c020130cda21084b8095c6533900c6b774ba75c8387b02"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/beispiele.md",
+      "locale": "en",
+      "target": "en/projects/heizoel-to-mqtt/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Three price measures, per-liter color criterion, Mushroom prerequisite and optional styling-only card_mod retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "d01c973a9ae00a1c27b59243396faeb94cff3ca677ff28deca738276e5f7ad4c",
+      "target_sha256": "c45356f929e530ed86e0f24afb7d383e8a064ea9fc8591d67b05643a8d438f1f"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/beispiele.md",
+      "locale": "fr",
+      "target": "fr/projects/heizoel-to-mqtt/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Three price measures, per-liter color criterion, Mushroom prerequisite and optional styling-only card_mod retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "d01c973a9ae00a1c27b59243396faeb94cff3ca677ff28deca738276e5f7ad4c",
+      "target_sha256": "dde2ca032ae949c3bd7733fc484714952c0e236d3f26fc24bce37654e0163416"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/entitaeten.md",
+      "locale": "en",
+      "target": "en/projects/heizoel-to-mqtt/entities.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Per-source/quantity outputs, six providers, four entities per offer, detailed offer attributes, two decimals and discovery precision retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "795cb9e5bd5628d4de79c1c2f4935385dba4edf1fb562d87d6488961737eae10",
+      "target_sha256": "fbef9190488d12d929d2199d326c47fc1305f1499958d84e951805f7dd65387c"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/entitaeten.md",
+      "locale": "fr",
+      "target": "fr/projects/heizoel-to-mqtt/entities.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Per-source/quantity outputs, six providers, four entities per offer, detailed offer attributes, two decimals and discovery precision retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "795cb9e5bd5628d4de79c1c2f4935385dba4edf1fb562d87d6488961737eae10",
+      "target_sha256": "d51605ec64ab3e950d73d0151b806546586688fc5245cb30599a66c39e741501"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/index.md",
+      "locale": "en",
+      "target": "en/projects/heizoel-to-mqtt/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Esyoil/Heizoel24 scope, Germany/Austria restriction, six-offer limit, Discovery, source attribution and non-stable-public-endpoint limitation agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9e49b51083cd6ca08b6938e0b1f87be28de9203a65397ce7260cc2aee11f9c4a",
+      "target_sha256": "6a5efc169d74d21ea471bf651ff563cd24edd8e6824b3c99b3bfa0ea66e3a0cf"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/index.md",
+      "locale": "fr",
+      "target": "fr/projects/heizoel-to-mqtt/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Esyoil/Heizoel24 scope, Germany/Austria restriction, six-offer limit, Discovery, source attribution and non-stable-public-endpoint limitation agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9e49b51083cd6ca08b6938e0b1f87be28de9203a65397ce7260cc2aee11f9c4a",
+      "target_sha256": "8f4c6cbce5346320d0c760dc23301f53045b824361efbc1299437189b7addd5c"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/installation.md",
+      "locale": "en",
+      "target": "en/projects/heizoel-to-mqtt/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Supervisor app-store steps, postal-code/quantity/source setup and internal MQTT condition retained. Archived standalone installation URL corrected to the shared app repository in all three languages; local shared heizoel_to_mqtt/config.yaml confirms the package exists there.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5911e4f10d1a67c64c3021fb0aa4fec7724022e757b19686f8066fef22bb36e2",
+      "target_sha256": "4f3de44750294380182df70f37f8a1f5f329f90926fd7f48dd41cb5302faa362"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/installation.md",
+      "locale": "fr",
+      "target": "fr/projects/heizoel-to-mqtt/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Supervisor app-store steps, postal-code/quantity/source setup and internal MQTT condition retained. Archived standalone installation URL corrected to the shared app repository in all three languages; local shared heizoel_to_mqtt/config.yaml confirms the package exists there.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5911e4f10d1a67c64c3021fb0aa4fec7724022e757b19686f8066fef22bb36e2",
+      "target_sha256": "627a366324cd13a4c0a8b1fa16e01ea77a42473722cb505916631abf82f90a3c"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/konfiguration.md",
+      "locale": "en",
+      "target": "en/projects/heizoel-to-mqtt/configuration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All option meanings and enumeration values, 30-minute minimum, country restriction, legacy spaced hoses/options compatibility, provider toggles, logging and disclosure of sent location/quantity/options agree. English additionally mentions English configuration labels, consistent with an additive rather than exclusive German-source claim.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "d88aa8bc449a53b70d65b3247c8f9e24f9efde281e081cf856b3160f5965af34",
+      "target_sha256": "7d4805df89923438f007ad21770eca2b4122e78d518a85222833b6bae1588d7f"
+    },
+    {
+      "source": "projects/heizoel-to-mqtt/konfiguration.md",
+      "locale": "fr",
+      "target": "fr/projects/heizoel-to-mqtt/configuration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All option meanings and enumeration values, 30-minute minimum, country restriction, legacy spaced hoses/options compatibility, provider toggles, logging and disclosure of sent location/quantity/options agree. English additionally mentions English configuration labels, consistent with an additive rather than exclusive German-source claim.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "d88aa8bc449a53b70d65b3247c8f9e24f9efde281e081cf856b3160f5965af34",
+      "target_sha256": "0d66d9a0168a783c5f085a7f310966dc3093aeb9f94178e30835bf47918d46ba"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/beispiele.md",
+      "locale": "en",
+      "target": "en/projects/parcel-to-mqtt/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Both flex-table and Mushroom examples retained; translated display labels do not alter shipment-field paths.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "1a693647656c95a3a0da743aed657f25ac67be25e61a6832928410ef567a7720",
+      "target_sha256": "2677dc3cfa7070d6e8c128b7b5047e84235ddedc1772b7bc57c3a741c6174667"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/beispiele.md",
+      "locale": "fr",
+      "target": "fr/projects/parcel-to-mqtt/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Both flex-table and Mushroom examples retained; translated display labels do not alter shipment-field paths.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "1a693647656c95a3a0da743aed657f25ac67be25e61a6832928410ef567a7720",
+      "target_sha256": "2a193c14f2370f4b9f536cb0cd86a69604b1f440c937f791e77566e4359f35cb"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/entitaeten.md",
+      "locale": "en",
+      "target": "en/projects/parcel-to-mqtt/entities.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Discovery, all twelve general status/counter entries, configurable parcel slots, seven slot attributes and JSON attribute location agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e070248ce5e0a7838ca514db150f572c7cee27d1e29f61619d0f244e81485456",
+      "target_sha256": "b0accc6f39b92a08c3317e122626e2ea56a1cccf60e464b3da3a846485b47e35"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/entitaeten.md",
+      "locale": "fr",
+      "target": "fr/projects/parcel-to-mqtt/entities.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Discovery, all twelve general status/counter entries, configurable parcel slots, seven slot attributes and JSON attribute location agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e070248ce5e0a7838ca514db150f572c7cee27d1e29f61619d0f244e81485456",
+      "target_sha256": "abb3dfc7141a8f79a09d885eb93e8fd4aa4d0834ec113c7e601dcbc9fce9ff50"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/index.md",
+      "locale": "en",
+      "target": "en/projects/parcel-to-mqtt/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Archive/discontinued status and alternative, attribution, active DHL/Hermes versus prepared providers and historical roadmap retained. French ready-to-use overclaims corrected; unimplemented Hermes account login explicitly marked historical in all languages.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e831e86e47d044b20df3b77893a66af62b940d92181cfd6bde262db72216393c",
+      "target_sha256": "f6585df9edf8c9fc95894b3587f82f4e35e9f8e06d98f1179d28054a54c5bcae"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/index.md",
+      "locale": "fr",
+      "target": "fr/projects/parcel-to-mqtt/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Archive/discontinued status and alternative, attribution, active DHL/Hermes versus prepared providers and historical roadmap retained. French ready-to-use overclaims corrected; unimplemented Hermes account login explicitly marked historical in all languages.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e831e86e47d044b20df3b77893a66af62b940d92181cfd6bde262db72216393c",
+      "target_sha256": "bffc5b8cce68a25adaaf1a13a264c2fb0b857f8144a22a04cb772f7a15b3e217"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/installation.md",
+      "locale": "en",
+      "target": "en/projects/parcel-to-mqtt/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Archive warning, alternative, shared repository root versus subfolder, seven app-store steps and MQTT broker/Discovery requirements retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "03e9ecfa897b7a34e091ef32c8a8c92c191c66329db29927688526c175efecfa",
+      "target_sha256": "7c139723e00269cd139f923f83a098e8d21731d9f57ea6beb30b239f581c6889"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/installation.md",
+      "locale": "fr",
+      "target": "fr/projects/parcel-to-mqtt/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Archive warning, alternative, shared repository root versus subfolder, seven app-store steps and MQTT broker/Discovery requirements retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "03e9ecfa897b7a34e091ef32c8a8c92c191c66329db29927688526c175efecfa",
+      "target_sha256": "e2f02547f603bfd46877328c9f7c40cb5414f835c71dee859ce05beabb8f2f2f"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/konfiguration.md",
+      "locale": "en",
+      "target": "en/projects/parcel-to-mqtt/configuration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All provider status distinctions, DHL login and refresh-token persistence, manual IDs, inactive connectors, minute interval, slot count, masked 100-line logging and disable-after-test instruction agree. Archive warning added and unsupported future connector promises removed in DE/EN/FR.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "4c0e7fac657743a8e0617be94c2a5f8ad60683a57c0816e6d9af999f396af33d",
+      "target_sha256": "ec1a10403c93b7f152cf85ea3b460f5efade65188edfe95681da8cbdae7f1e15"
+    },
+    {
+      "source": "projects/parcel-to-mqtt/konfiguration.md",
+      "locale": "fr",
+      "target": "fr/projects/parcel-to-mqtt/configuration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All provider status distinctions, DHL login and refresh-token persistence, manual IDs, inactive connectors, minute interval, slot count, masked 100-line logging and disable-after-test instruction agree. Archive warning added and unsupported future connector promises removed in DE/EN/FR.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "4c0e7fac657743a8e0617be94c2a5f8ad60683a57c0816e6d9af999f396af33d",
+      "target_sha256": "b158dc2b27ac12129b96d59639f2a5fa4534cdbec8999295e25be2320fb8a964"
+    },
+    {
+      "source": "projects/ultimate-timer/beispiele.md",
+      "locale": "en",
+      "target": "en/projects/ultimate-timer/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Three timer states, preview illustrations and five pump/light/irrigation/watchdog/dashboard applications retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "493895639f4954526febf7025daa348bf872aaac8be718f64333b0178aefaf92",
+      "target_sha256": "365d07b10661c16ee4418b281dc9baab9e3f77a7143d89401a26fbdb87bb3917"
+    },
+    {
+      "source": "projects/ultimate-timer/beispiele.md",
+      "locale": "fr",
+      "target": "fr/projects/ultimate-timer/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Three timer states, preview illustrations and five pump/light/irrigation/watchdog/dashboard applications retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "493895639f4954526febf7025daa348bf872aaac8be718f64333b0178aefaf92",
+      "target_sha256": "24ee00e51848078306d96f838494e6ab299a128b96a3d965eef21c83f12da91c"
+    },
+    {
+      "source": "projects/ultimate-timer/funktionsweise.md",
+      "locale": "en",
+      "target": "en/projects/ultimate-timer/how-it-works.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Seven start/completion/reset steps, immediate STOP, stop-helper reset, no regular DONE on STOP, default reset and parallel-instance behavior agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "8f1d978b16e0c8d024d7a73d7cedb24f7e1e479a5fe13dbdf10b212f6e955090",
+      "target_sha256": "dedc4c55f585d2c254d754767529fac28e804e9556689e11170178f4e836ca1a"
+    },
+    {
+      "source": "projects/ultimate-timer/funktionsweise.md",
+      "locale": "fr",
+      "target": "fr/projects/ultimate-timer/how-it-works.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Seven start/completion/reset steps, immediate STOP, stop-helper reset, no regular DONE on STOP, default reset and parallel-instance behavior agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "8f1d978b16e0c8d024d7a73d7cedb24f7e1e479a5fe13dbdf10b212f6e955090",
+      "target_sha256": "deca04424c884f01111eaadc8dda8e9b9cad73cae09a8cf5c892cfdd23ab923d"
+    },
+    {
+      "source": "projects/ultimate-timer/index.md",
+      "locale": "en",
+      "target": "en/projects/ultimate-timer/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Version 3.2.4, six timer features, persistent DONE, STOP, helper/MQTT alternatives, blueprint links and all use cases retained. Incorrect literal French watchdog translation removed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "7d266308b75ef123af612a2cf6fbcfdb35bb05adc6a6d0420ae42b9b9a289fac",
+      "target_sha256": "875f1e7fde8014b14c9fb0dd3f08f0c7fa89c133609ab7587ced99789243c8ba"
+    },
+    {
+      "source": "projects/ultimate-timer/index.md",
+      "locale": "fr",
+      "target": "fr/projects/ultimate-timer/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Version 3.2.4, six timer features, persistent DONE, STOP, helper/MQTT alternatives, blueprint links and all use cases retained. Incorrect literal French watchdog translation removed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "7d266308b75ef123af612a2cf6fbcfdb35bb05adc6a6d0420ae42b9b9a289fac",
+      "target_sha256": "4bfbdb5085f47e361c46158352ef9ca3abf4445099d81a57467c0b5940ad481f"
+    },
+    {
+      "source": "projects/ultimate-timer/installation.md",
+      "locale": "en",
+      "target": "en/projects/ultimate-timer/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Direct blueprint import and manual file/copy/reload paths and repository retained; English menu labels are correctly localized.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "19a83a85d5ee5bc25bc483175924005b36be80372f7533640c5eb47dfd75eca6",
+      "target_sha256": "bff0a8d41b3dd9ec668c9369de31a1fc4aefa5c7efc2688253bc8d21d68f246f"
+    },
+    {
+      "source": "projects/ultimate-timer/installation.md",
+      "locale": "fr",
+      "target": "fr/projects/ultimate-timer/installation.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Direct blueprint import and manual file/copy/reload paths and repository retained; English menu labels are correctly localized.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "19a83a85d5ee5bc25bc483175924005b36be80372f7533640c5eb47dfd75eca6",
+      "target_sha256": "a4160c5ec3e81097966615e8afa588b219346b7b7f5c2c63ea7a7bfd282dca5b"
+    },
+    {
+      "source": "projects/ultimate-timer/konfiguration.md",
+      "locale": "en",
+      "target": "en/projects/ultimate-timer/configuration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All nine inputs, optional STOP helper, input_boolean requirement, RUNNING/DONE MQTT publication, defaults and five-minute duration interpretation retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "abf3e0bbc68421394ba49980123d16ce1053bb9e9f55cdfd01c1dea6285b210b",
+      "target_sha256": "cd456bf354d2876fec660759d04e8b007f4862924d43dc1f02c84cd66ca44c38"
+    },
+    {
+      "source": "projects/ultimate-timer/konfiguration.md",
+      "locale": "fr",
+      "target": "fr/projects/ultimate-timer/configuration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All nine inputs, optional STOP helper, input_boolean requirement, RUNNING/DONE MQTT publication, defaults and five-minute duration interpretation retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "abf3e0bbc68421394ba49980123d16ce1053bb9e9f55cdfd01c1dea6285b210b",
+      "target_sha256": "fb9c4d280d1f2416fc17c6050fca1237233af7bd8fe0f5e61e66ae2593f5dea5"
+    }
+  ]
+}

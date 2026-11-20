@@ -39,14 +39,14 @@ features:
 ::: warning Développement arrêté
 Parcel Tracker est un projet bien plus abouti. C'est pourquoi nous mettons fin au développement de Parcel to MQTT ; nous invitons les personnes intéressées à consulter [Parcel Tracker par SoerenKaiser99](https://github.com/SoerenKaiser99/parcel_tracker).
 
-Le code source et la documentation précédente sont conservés sous forme d'archive. Les fonctionnalités et instructions suivantes décrivent l'état actuel de notre paquet.
+Le code source et la documentation précédente sont conservés sous forme d'archive. Les fonctionnalités et instructions suivantes décrivent le dernier état archivé de notre paquet.
 :::
 
 ## Aperçu {#uberblick}
 
 « Parcel to MQTT » est une application pour Home Assistant qui permet le suivi de colis via la fonctionnalité « MQTT Discovery » de Home Assistant.
 
-La version actuelle prend en charge les listes de colis issues d'un compte DHL, l'ajout manuel de numéros de suivi DHL, ainsi que le suivi des colis Hermes. Les paramètres de l'application sont regroupés par prestataire, ce qui permet à la configuration dans Home Assistant de rester concise, organisée par fournisseur.
+La dernière version du paquet prend en charge les listes de colis issues d'un compte DHL, l'ajout manuel de numéros de suivi DHL, ainsi que le suivi des colis Hermes. Les paramètres de l'application sont regroupés par prestataire, ce qui permet à la configuration dans Home Assistant de rester concise, organisée par fournisseur.
 
 ::: info Origine
 Cette implémentation est adaptée de — et inspirée par — l'adaptateur ioBroker [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel).
@@ -60,10 +60,10 @@ Les points suivants décrivent l'état d'avancement antérieur et les plans init
 
 - DHL : actif via un code de connexion par navigateur (`dhllogin://`) et ajout manuel de numéros de suivi ;
 - Amazon : préparé pour une utilisation avec e-mail, mot de passe et jeton OTP optionnel ;
-- Hermes : actuellement actif via la saisie manuelle de numéros de suivi ; La connexion au compte via le nom d'utilisateur et le mot de passe de l'application est prévue.
-- UPS : prêt à l'emploi avec nom d'utilisateur, mot de passe et numéros de suivi saisis manuellement.
-- GLS : prêt à l'emploi avec numéros de suivi saisis manuellement et code postal de livraison ; le mécanisme de récupération des données (*polling*) attend l'établissement d'une session « Guest-Bearer » stable.
-- DPD : prêt à l'emploi avec nom d'utilisateur, mot de passe et numéros de suivi saisis manuellement, dès que le processus de connexion/session sera parfaitement stabilisé.
+- Hermes : actif via la saisie manuelle de numéros de suivi ; la connexion au compte avec identifiant et mot de passe était envisagée, mais n'a pas été implémentée.
+- UPS : section préparée pour le nom d'utilisateur, le mot de passe et les numéros de suivi manuels ; aucun connecteur actif.
+- GLS : section préparée pour les numéros de suivi manuels et le code postal ; l'interrogation nécessiterait une session « Guest-Bearer » stable, non implémentée.
+- DPD : section préparée pour le nom d'utilisateur, le mot de passe et les numéros de suivi manuels ; aucun connecteur actif, le processus de connexion/session n'ayant pas été finalisé.
 - Deutsche Post (lettres) et FedEx : préparation effectuée pour une intégration ultérieure via des connecteurs dédiés, avec saisie manuelle des numéros de suivi.
 
 ## Autres pages {#weitere-seiten}

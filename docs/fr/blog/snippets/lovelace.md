@@ -8,6 +8,10 @@ description: Extraits de code pour les tableaux de bord Home Assistant et Bubble
 
 # Lovelace et Bubble-Card {#lovelace-und-bubble-card}
 
+::: info Prérequis et extraits
+Bubble Card doit être installé et chargé comme ressource du tableau de bord. Si `liquid_glass_2` figure sous `modules`, ce module doit aussi être configuré. Les exemples contenant uniquement `styles` complètent une carte existante ; ce ne sont pas des configurations de carte complètes. Remplacez les entités d’exemple par les vôtres.
+:::
+
 ## Couleur d'icône dynamique {#dynamische-icon-farbe}
 
 ```yaml

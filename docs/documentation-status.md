@@ -35,29 +35,38 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 
 Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und Kamera-Hintergründen, ein JavaScript-Syntaxfehler im Entwicklerbeispiel sowie sieben Sprungmarken und zwei Videolinks. Die Rückfallregel für `active: false` beim Lock Spark ist in DE/FR präzisiert. Beispiele, Medien und vorhandene Anker bleiben erhalten.
 
+## Inhaltliche Prüfung
+
+**Inhaltlich geprüft** bedeutet: Abschnitte und Aussagen wurden auf Bedeutung, Vollständigkeit, Voraussetzungen, Einschränkungen und den Zweck der Beispiele mit der Referenz verglichen. Gefundene Fehlübersetzungen oder Widersprüche wurden korrigiert. Dies ist kein neuer App-Live-Test und keine rechtliche Zertifizierung. Noch nicht so geprüfte Seiten behalten ihren technischen Status. [Einzelbewertungen](/documentation-semantic-review.json).
+
+| Sprache | Geprüft | Noch offen |
+| --- | ---: | ---: |
+| EN | 43 | 144 |
+| FR | 43 | 178 |
+
 ## Vollständiges Seiteninventar
 
 | Deutsche Referenz | EN | FR |
 | --- | --- | --- |
-| [blog/beitragsvorlage.md](/blog/beitragsvorlage) | [Technisch abgeglichen](/en/blog/post-template) | [Technisch abgeglichen](/fr/blog/post-template) |
-| [blog/index.md](/blog/) | [Technisch abgeglichen](/en/blog/) | [Technisch abgeglichen](/fr/blog/) |
-| [blog/posts/atlas-runtime-foundation.md](/blog/posts/atlas-runtime-foundation) | [Technisch abgeglichen](/en/blog/posts/atlas-runtime-foundation) | [Technisch abgeglichen](/fr/blog/posts/atlas-runtime-foundation) |
-| [blog/posts/hadash-preview.md](/blog/posts/hadash-preview) | [Technisch abgeglichen](/en/blog/posts/hadash-preview) | [Technisch abgeglichen](/fr/blog/posts/hadash-preview) |
-| [blog/snippets/blockly.md](/blog/snippets/blockly) | [Technisch abgeglichen](/en/blog/snippets/blockly) | [Technisch abgeglichen](/fr/blog/snippets/blockly) |
-| [blog/snippets/home-assistant-yaml.md](/blog/snippets/home-assistant-yaml) | [Technisch abgeglichen](/en/blog/snippets/home-assistant-yaml) | [Technisch abgeglichen](/fr/blog/snippets/home-assistant-yaml) |
-| [blog/snippets/index.md](/blog/snippets/) | [Technisch abgeglichen](/en/blog/snippets/) | [Technisch abgeglichen](/fr/blog/snippets/) |
-| [blog/snippets/iobroker-blockly.md](/blog/snippets/iobroker-blockly) | [Technisch abgeglichen](/en/blog/snippets/iobroker-blockly) | [Technisch abgeglichen](/fr/blog/snippets/iobroker-blockly) |
-| [blog/snippets/javascript.md](/blog/snippets/javascript) | [Technisch abgeglichen](/en/blog/snippets/javascript) | [Technisch abgeglichen](/fr/blog/snippets/javascript) |
-| [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Technisch abgeglichen](/en/blog/snippets/lovelace) | [Technisch abgeglichen](/fr/blog/snippets/lovelace) |
+| [blog/beitragsvorlage.md](/blog/beitragsvorlage) | [Inhaltlich geprüft](/en/blog/post-template) | [Inhaltlich geprüft](/fr/blog/post-template) |
+| [blog/index.md](/blog/) | [Inhaltlich geprüft](/en/blog/) | [Inhaltlich geprüft](/fr/blog/) |
+| [blog/posts/atlas-runtime-foundation.md](/blog/posts/atlas-runtime-foundation) | [Inhaltlich geprüft](/en/blog/posts/atlas-runtime-foundation) | [Inhaltlich geprüft](/fr/blog/posts/atlas-runtime-foundation) |
+| [blog/posts/hadash-preview.md](/blog/posts/hadash-preview) | [Inhaltlich geprüft](/en/blog/posts/hadash-preview) | [Inhaltlich geprüft](/fr/blog/posts/hadash-preview) |
+| [blog/snippets/blockly.md](/blog/snippets/blockly) | [Inhaltlich geprüft](/en/blog/snippets/blockly) | [Inhaltlich geprüft](/fr/blog/snippets/blockly) |
+| [blog/snippets/home-assistant-yaml.md](/blog/snippets/home-assistant-yaml) | [Inhaltlich geprüft](/en/blog/snippets/home-assistant-yaml) | [Inhaltlich geprüft](/fr/blog/snippets/home-assistant-yaml) |
+| [blog/snippets/index.md](/blog/snippets/) | [Inhaltlich geprüft](/en/blog/snippets/) | [Inhaltlich geprüft](/fr/blog/snippets/) |
+| [blog/snippets/iobroker-blockly.md](/blog/snippets/iobroker-blockly) | [Inhaltlich geprüft](/en/blog/snippets/iobroker-blockly) | [Inhaltlich geprüft](/fr/blog/snippets/iobroker-blockly) |
+| [blog/snippets/javascript.md](/blog/snippets/javascript) | [Inhaltlich geprüft](/en/blog/snippets/javascript) | [Inhaltlich geprüft](/fr/blog/snippets/javascript) |
+| [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Inhaltlich geprüft](/en/blog/snippets/lovelace) | [Inhaltlich geprüft](/fr/blog/snippets/lovelace) |
 | [eep/index.md](/eep/) | [Technisch abgeglichen](/en/eep/) | [Technisch abgeglichen](/fr/eep/) |
 | [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Technisch abgeglichen](/en/eep/ini-edit-translate-2026/) | [Technisch abgeglichen](/fr/eep/ini-edit-translate-2026/) |
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Technisch abgeglichen](/en/eep/projektduplicator-2026/) | [Technisch abgeglichen](/fr/eep/projektduplicator-2026/) |
-| [impressum/index.md](/impressum/) | [Technisch abgeglichen](/en/impressum/) | [Technisch abgeglichen](/fr/impressum/) |
-| [index.md](/) | [Technisch abgeglichen](/en/) | [Technisch abgeglichen](/fr/) |
-| [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Technisch abgeglichen](/en/iobroker/publish-assistant/) | [Technisch abgeglichen](/fr/iobroker/publish-assistant/) |
-| [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Technisch abgeglichen](/en/iobroker/widgets/ugso-spezial/) | [Technisch abgeglichen](/fr/iobroker/widgets/ugso-spezial/) |
-| [projects-diverse/index.md](/projects-diverse/) | [Technisch abgeglichen](/en/projects-diverse/) | [Technisch abgeglichen](/fr/projects-diverse/) |
-| [projects-mqtt/index.md](/projects-mqtt/) | [Technisch abgeglichen](/en/projects-mqtt/) | [Technisch abgeglichen](/fr/projects-mqtt/) |
+| [impressum/index.md](/impressum/) | [Inhaltlich geprüft](/en/impressum/) | [Inhaltlich geprüft](/fr/impressum/) |
+| [index.md](/) | [Inhaltlich geprüft](/en/) | [Inhaltlich geprüft](/fr/) |
+| [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Inhaltlich geprüft](/en/iobroker/publish-assistant/) | [Inhaltlich geprüft](/fr/iobroker/publish-assistant/) |
+| [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Inhaltlich geprüft](/en/iobroker/widgets/ugso-spezial/) | [Inhaltlich geprüft](/fr/iobroker/widgets/ugso-spezial/) |
+| [projects-diverse/index.md](/projects-diverse/) | [Inhaltlich geprüft](/en/projects-diverse/) | [Inhaltlich geprüft](/fr/projects-diverse/) |
+| [projects-mqtt/index.md](/projects-mqtt/) | [Inhaltlich geprüft](/en/projects-mqtt/) | [Inhaltlich geprüft](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Technisch abgeglichen](/en/projects/atlas-plugins/automation-extractor) | [Technisch abgeglichen](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Technisch abgeglichen](/en/projects/atlas-plugins/demo-repository) | [Technisch abgeglichen](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Technisch abgeglichen](/en/projects/atlas-plugins/developers/compatibility) | [Technisch abgeglichen](/fr/projects/atlas-plugins/developers/compatibility) |
@@ -102,12 +111,12 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Technisch abgeglichen](/en/projects/callmebot-signal/) | [Technisch abgeglichen](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Technisch abgeglichen](/en/projects/callmebot/) | [Technisch abgeglichen](/fr/projects/callmebot/) |
 | [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Technisch abgeglichen](/en/projects/dashboard-user-manager/) | [Technisch abgeglichen](/fr/projects/dashboard-user-manager/) |
-| [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Technisch abgeglichen](/en/projects/fritzbox-to-mqtt/examples) | [Technisch abgeglichen](/fr/projects/fritzbox-to-mqtt/examples) |
-| [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Technisch abgeglichen](/en/projects/fritzbox-to-mqtt/entities) | [Technisch abgeglichen](/fr/projects/fritzbox-to-mqtt/entities) |
-| [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Technisch abgeglichen](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Technisch abgeglichen](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
-| [projects/fritzbox-to-mqtt/index.md](/projects/fritzbox-to-mqtt/) | [Technisch abgeglichen](/en/projects/fritzbox-to-mqtt/) | [Technisch abgeglichen](/fr/projects/fritzbox-to-mqtt/) |
-| [projects/fritzbox-to-mqtt/installation.md](/projects/fritzbox-to-mqtt/installation) | [Technisch abgeglichen](/en/projects/fritzbox-to-mqtt/installation) | [Technisch abgeglichen](/fr/projects/fritzbox-to-mqtt/installation) |
-| [projects/fritzbox-to-mqtt/konfiguration.md](/projects/fritzbox-to-mqtt/konfiguration) | [Technisch abgeglichen](/en/projects/fritzbox-to-mqtt/configuration) | [Technisch abgeglichen](/fr/projects/fritzbox-to-mqtt/configuration) |
+| [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/examples) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/examples) |
+| [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/entities) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/entities) |
+| [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
+| [projects/fritzbox-to-mqtt/index.md](/projects/fritzbox-to-mqtt/) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/) |
+| [projects/fritzbox-to-mqtt/installation.md](/projects/fritzbox-to-mqtt/installation) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/installation) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/installation) |
+| [projects/fritzbox-to-mqtt/konfiguration.md](/projects/fritzbox-to-mqtt/konfiguration) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/configuration) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/configuration) |
 | [projects/grafik-visual-studio/basic.md](/projects/grafik-visual-studio/basic) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/basic) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/basic) |
 | [projects/grafik-visual-studio/bildergalerie.md](/projects/grafik-visual-studio/bildergalerie) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/bildergalerie) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/bildergalerie) |
 | [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/calendar-plus) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/calendar-plus) |
@@ -133,17 +142,17 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/widget-packages) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/widget-packages) |
 | [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/widgets) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/widgets) |
 | [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/zeichnen) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/zeichnen) |
-| [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Technisch abgeglichen](/en/projects/hadash/export-view) | [Technisch abgeglichen](/fr/projects/hadash/export-view) |
-| [projects/hadash/backups-und-json.md](/projects/hadash/backups-und-json) | [Technisch abgeglichen](/en/projects/hadash/backups-and-json) | [Technisch abgeglichen](/fr/projects/hadash/backups-and-json) |
-| [projects/hadash/dashboard-einlesen.md](/projects/hadash/dashboard-einlesen) | [Technisch abgeglichen](/en/projects/hadash/import-dashboard) | [Technisch abgeglichen](/fr/projects/hadash/import-dashboard) |
-| [projects/hadash/erste-schritte.md](/projects/hadash/erste-schritte) | [Technisch abgeglichen](/en/projects/hadash/getting-started) | [Technisch abgeglichen](/fr/projects/hadash/getting-started) |
-| [projects/hadash/index.md](/projects/hadash/) | [Technisch abgeglichen](/en/projects/hadash/) | [Technisch abgeglichen](/fr/projects/hadash/) |
-| [projects/hadash/portable-nutzung.md](/projects/hadash/portable-nutzung) | [Technisch abgeglichen](/en/projects/hadash/portable-usage) | [Technisch abgeglichen](/fr/projects/hadash/portable-usage) |
-| [projects/heizoel-to-mqtt/beispiele.md](/projects/heizoel-to-mqtt/beispiele) | [Technisch abgeglichen](/en/projects/heizoel-to-mqtt/examples) | [Technisch abgeglichen](/fr/projects/heizoel-to-mqtt/examples) |
-| [projects/heizoel-to-mqtt/entitaeten.md](/projects/heizoel-to-mqtt/entitaeten) | [Technisch abgeglichen](/en/projects/heizoel-to-mqtt/entities) | [Technisch abgeglichen](/fr/projects/heizoel-to-mqtt/entities) |
-| [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Technisch abgeglichen](/en/projects/heizoel-to-mqtt/) | [Technisch abgeglichen](/fr/projects/heizoel-to-mqtt/) |
-| [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Technisch abgeglichen](/en/projects/heizoel-to-mqtt/installation) | [Technisch abgeglichen](/fr/projects/heizoel-to-mqtt/installation) |
-| [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Technisch abgeglichen](/en/projects/heizoel-to-mqtt/configuration) | [Technisch abgeglichen](/fr/projects/heizoel-to-mqtt/configuration) |
+| [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Inhaltlich geprüft](/en/projects/hadash/export-view) | [Inhaltlich geprüft](/fr/projects/hadash/export-view) |
+| [projects/hadash/backups-und-json.md](/projects/hadash/backups-und-json) | [Inhaltlich geprüft](/en/projects/hadash/backups-and-json) | [Inhaltlich geprüft](/fr/projects/hadash/backups-and-json) |
+| [projects/hadash/dashboard-einlesen.md](/projects/hadash/dashboard-einlesen) | [Inhaltlich geprüft](/en/projects/hadash/import-dashboard) | [Inhaltlich geprüft](/fr/projects/hadash/import-dashboard) |
+| [projects/hadash/erste-schritte.md](/projects/hadash/erste-schritte) | [Inhaltlich geprüft](/en/projects/hadash/getting-started) | [Inhaltlich geprüft](/fr/projects/hadash/getting-started) |
+| [projects/hadash/index.md](/projects/hadash/) | [Inhaltlich geprüft](/en/projects/hadash/) | [Inhaltlich geprüft](/fr/projects/hadash/) |
+| [projects/hadash/portable-nutzung.md](/projects/hadash/portable-nutzung) | [Inhaltlich geprüft](/en/projects/hadash/portable-usage) | [Inhaltlich geprüft](/fr/projects/hadash/portable-usage) |
+| [projects/heizoel-to-mqtt/beispiele.md](/projects/heizoel-to-mqtt/beispiele) | [Inhaltlich geprüft](/en/projects/heizoel-to-mqtt/examples) | [Inhaltlich geprüft](/fr/projects/heizoel-to-mqtt/examples) |
+| [projects/heizoel-to-mqtt/entitaeten.md](/projects/heizoel-to-mqtt/entitaeten) | [Inhaltlich geprüft](/en/projects/heizoel-to-mqtt/entities) | [Inhaltlich geprüft](/fr/projects/heizoel-to-mqtt/entities) |
+| [projects/heizoel-to-mqtt/index.md](/projects/heizoel-to-mqtt/) | [Inhaltlich geprüft](/en/projects/heizoel-to-mqtt/) | [Inhaltlich geprüft](/fr/projects/heizoel-to-mqtt/) |
+| [projects/heizoel-to-mqtt/installation.md](/projects/heizoel-to-mqtt/installation) | [Inhaltlich geprüft](/en/projects/heizoel-to-mqtt/installation) | [Inhaltlich geprüft](/fr/projects/heizoel-to-mqtt/installation) |
+| [projects/heizoel-to-mqtt/konfiguration.md](/projects/heizoel-to-mqtt/konfiguration) | [Inhaltlich geprüft](/en/projects/heizoel-to-mqtt/configuration) | [Inhaltlich geprüft](/fr/projects/heizoel-to-mqtt/configuration) |
 | [projects/index.md](/projects/) | [Technisch abgeglichen](/en/projects/) | [Technisch abgeglichen](/fr/projects/) |
 | [projects/logic-studio/index.md](/projects/logic-studio/) | [Technisch abgeglichen](/en/projects/logic-studio/) | [Technisch abgeglichen](/fr/projects/logic-studio/) |
 | [projects/logic-studio/user-guide.md](/projects/logic-studio/user-guide) | [Technisch abgeglichen](/en/projects/logic-studio/user-guide) | [Technisch abgeglichen](/fr/projects/logic-studio/user-guide) |
@@ -157,11 +166,11 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Technisch abgeglichen](/en/projects/logic-studio/user-guide/typescript) | [Technisch abgeglichen](/fr/projects/logic-studio/user-guide/typescript) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Technisch abgeglichen](/en/projects/mqtt-client/) | [Technisch abgeglichen](/fr/projects/mqtt-client/) |
 | [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Technisch abgeglichen](/en/projects/mqtt-client/iobroker-roles) | [Technisch abgeglichen](/fr/projects/mqtt-client/iobroker-roles) |
-| [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Technisch abgeglichen](/en/projects/parcel-to-mqtt/examples) | [Technisch abgeglichen](/fr/projects/parcel-to-mqtt/examples) |
-| [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Technisch abgeglichen](/en/projects/parcel-to-mqtt/entities) | [Technisch abgeglichen](/fr/projects/parcel-to-mqtt/entities) |
-| [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Technisch abgeglichen](/en/projects/parcel-to-mqtt/) | [Technisch abgeglichen](/fr/projects/parcel-to-mqtt/) |
-| [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Technisch abgeglichen](/en/projects/parcel-to-mqtt/installation) | [Technisch abgeglichen](/fr/projects/parcel-to-mqtt/installation) |
-| [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Technisch abgeglichen](/en/projects/parcel-to-mqtt/configuration) | [Technisch abgeglichen](/fr/projects/parcel-to-mqtt/configuration) |
+| [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/examples) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/examples) |
+| [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/entities) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/entities) |
+| [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/) |
+| [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/installation) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/installation) |
+| [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/configuration) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/configuration) |
 | [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Technisch abgeglichen](/en/projects/sidebar-colors/) | [Technisch abgeglichen](/fr/projects/sidebar-colors/) |
 | [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Technisch abgeglichen](/en/projects/sidebar-manager/) | [Technisch abgeglichen](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/broker) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/broker) |
@@ -233,11 +242,11 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/using/templates.md](/projects/uix/using/templates) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/templates) | [Technisch abgeglichen](/fr/projects/uix/using/templates) |
 | [projects/uix/using/themes.md](/projects/uix/using/themes) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/themes) | [Technisch abgeglichen](/fr/projects/uix/using/themes) |
 | [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/view-backgrounds) | [Technisch abgeglichen](/fr/projects/uix/using/view-backgrounds) |
-| [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Technisch abgeglichen](/en/projects/ultimate-timer/examples) | [Technisch abgeglichen](/fr/projects/ultimate-timer/examples) |
-| [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Technisch abgeglichen](/en/projects/ultimate-timer/how-it-works) | [Technisch abgeglichen](/fr/projects/ultimate-timer/how-it-works) |
-| [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Technisch abgeglichen](/en/projects/ultimate-timer/) | [Technisch abgeglichen](/fr/projects/ultimate-timer/) |
-| [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Technisch abgeglichen](/en/projects/ultimate-timer/installation) | [Technisch abgeglichen](/fr/projects/ultimate-timer/installation) |
-| [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Technisch abgeglichen](/en/projects/ultimate-timer/configuration) | [Technisch abgeglichen](/fr/projects/ultimate-timer/configuration) |
+| [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Inhaltlich geprüft](/en/projects/ultimate-timer/examples) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/examples) |
+| [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Inhaltlich geprüft](/en/projects/ultimate-timer/how-it-works) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/how-it-works) |
+| [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Inhaltlich geprüft](/en/projects/ultimate-timer/) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/) |
+| [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Inhaltlich geprüft](/en/projects/ultimate-timer/installation) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/installation) |
+| [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Inhaltlich geprüft](/en/projects/ultimate-timer/configuration) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/configuration) |
 | [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Technisch abgeglichen](/en/collection/calendar-card-pro/beispiele) | [Technisch abgeglichen](/fr/collection/calendar-card-pro/beispiele) |
 | [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Technisch abgeglichen](/en/collection/calendar-card-pro/entwicklung) | [Technisch abgeglichen](/fr/collection/calendar-card-pro/entwicklung) |
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Technisch abgeglichen](/en/collection/calendar-card-pro/features) | [Technisch abgeglichen](/fr/collection/calendar-card-pro/features) |

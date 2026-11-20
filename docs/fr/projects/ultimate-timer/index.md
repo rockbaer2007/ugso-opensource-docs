@@ -43,7 +43,7 @@ Cas d'utilisation typiques :
 
 - Pompes de piscine et de bassin
 - Arrosage
-- « Watchdogs » (surveillance/garde-chiens)
+- Mécanismes de surveillance (« watchdogs »)
 - Exécutions différées
 - Appareils pilotés par minuterie
 - Minuteurs réutilisables pour tableaux de bord

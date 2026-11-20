@@ -9,9 +9,9 @@
 2. Cliquer sur les trois points en haut à droite.
 3. Sélectionner l'**éditeur de configuration brute** (RAW).
 4. Cliquer dans la zone de code.
-5. Appuyer sur `STRG + A`.
-6. Appuyer sur `STRG + C`.
-7. Copier le code dans un éditeur de texte.
+5. Appuyer sur `Ctrl + A` pour tout sélectionner (`STRG + A` sur un clavier allemand).
+6. Appuyer sur `Ctrl + C` pour copier (`STRG + C` sur un clavier allemand).
+7. Coller le code dans un éditeur de texte avec `Ctrl + V`.
 8. Enregistrer sous le nom `Name.dash` ou `Name.yaml`.
 
 Ensuite, le fichier peut être ouvert dans HADash.

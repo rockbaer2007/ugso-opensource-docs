@@ -3,6 +3,10 @@
 
 # Configuration {#konfiguration}
 
+::: warning Archives : développement arrêté
+Cette page décrit le paquet archivé. Les sections préparées pour les transporteurs ne sont pas des connecteurs actifs ; aucun nouveau connecteur ne sera développé pour ce projet. Consultez [Parcel Tracker](https://github.com/SoerenKaiser99/parcel_tracker) comme alternative.
+:::
+
 ```yaml
 dhl:
   enabled: true
@@ -43,7 +47,7 @@ general:
   log_response_details: false
 ```
 
-L'application Home Assistant affiche les options sous forme de sections regroupées par transporteur. DHL et Hermes sont d'ores et déjà opérationnels. GLS, DPD, UPS, Amazon Logistics, Deutsche Post (courriers) et FedEx sont prévus en tant que sections de configuration ; leurs connecteurs actifs respectifs seront ajoutés progressivement.
+L'application Home Assistant affiche les options sous forme de sections regroupées par transporteur. DHL et Hermes sont utilisables dans le paquet archivé. GLS, DPD, UPS, Amazon Logistics, Deutsche Post (courriers) et FedEx ont uniquement été préparés sous forme de sections de configuration ; leurs connecteurs actifs ne sont pas inclus.
 
 `dhl.login_url` sert d'aide à la copie pour la connexion via le navigateur pour DHL.
 
@@ -55,7 +59,7 @@ L'application Home Assistant affiche les options sous forme de sections regroup�
 
 `gls.tracking_numbers` et `gls.postal_code` sont déjà disponibles en tant que champs de configuration. GLS Allemagne n'est pas encore interrogé activement, car cela nécessite la mise en œuvre d'une session « invité » (*Guest-Bearer-Session*) anonyme.
 
-`dpd`, `ups`, `amazon`, `deutsche_post` et `fedex` sont prêts à être utilisés. S'ils sont activés, l'application indique clairement dans le journal (*log*) que le connecteur correspondant n'est pas encore disponible.
+`dpd`, `ups`, `amazon`, `deutsche_post` et `fedex` sont uniquement des sections préparées, sans connecteur actif. Si elles sont activées, l'application indique clairement dans le journal (*log*) que le connecteur correspondant n'est pas disponible.
 
 `general.interval` définit l'intervalle de mise à jour, exprimé en minutes.
 

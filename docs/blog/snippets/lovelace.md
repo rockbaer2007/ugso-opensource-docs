@@ -5,6 +5,10 @@ description: Code-Snippets für Home-Assistant-Dashboards und Bubble-Card.
 
 # Lovelace und Bubble-Card
 
+::: info Voraussetzungen und Ausschnitte
+Bubble Card muss installiert und als Dashboard-Ressource geladen sein. Wird `liquid_glass_2` unter `modules` verwendet, muss auch dieses Modul eingerichtet sein. Die reinen `styles`-Beispiele sind Ergänzungen einer bestehenden Karte, keine vollständigen Kartenkonfigurationen. Beispielentitäten durch eigene Entitäten ersetzen.
+:::
+
 ## Dynamische Icon-Farbe
 
 ```yaml

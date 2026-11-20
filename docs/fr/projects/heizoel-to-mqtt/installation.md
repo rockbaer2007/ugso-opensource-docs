@@ -4,7 +4,7 @@
 
 Vous pouvez ouvrir le dépôt directement dans Home Assistant en utilisant ce bouton :
 
-[![Ouvrir Heizöl to MQTT dans Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Fheizoel-to-mqtt)
+[![Ouvrir Heizöl to MQTT dans Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Fugso-ha-mqtt-addons)
 
 ## Ajouter le dépôt d'applications {#app-repository-hinzufugen}
 
@@ -14,7 +14,7 @@ Vous pouvez ouvrir le dépôt directement dans Home Assistant en utilisant ce bo
 4. Ajoutez ce dépôt :
 
 ```text
-https://github.com/rockbaer2007/heizoel-to-mqtt
+https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 ```
 
 5. Installer **Heizöl to MQTT**.

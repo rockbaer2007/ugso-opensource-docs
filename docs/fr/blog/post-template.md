@@ -1,5 +1,5 @@
 ---
-title: Titre du message
+title: Titre de l’article
 description: Brève description pour les moteurs de recherche et aperçu.
 date: '2026-08-02'
 author: UGSo Software
@@ -11,9 +11,9 @@ tags:
 <a id="statut"></a>
 
 
-# Titre du message {#titel-des-beitrags}
+# Titre de l’article {#titel-des-beitrags}
 
-**2. août 2026 · Logiciel UGSo**
+**2 août 2026 · UGSo Software**
 
 Brève introduction au code ou au problème.
 
@@ -72,8 +72,8 @@ dateipfad
 
 ## Remarques {#hinweise}
 
-:: avertissement
-Créez toujours une sauvegarde avant d’apporter des modifications productives.
+::: warning
+Créez toujours une sauvegarde avant d’apporter des modifications en production.
 :::
 
 ## Autres liens {#weiterfuhrende-links}

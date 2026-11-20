@@ -11,7 +11,7 @@ hero:
       link: /en/projects/heizoel-to-mqtt/installation
     - theme: alt
       text: GitHub
-      link: https://github.com/rockbaer2007/heizoel-to-mqtt
+      link: https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/heizoel_to_mqtt
 
 features:
   - icon: 🛢️
@@ -40,6 +40,8 @@ features:
 ---
 
 ## Overview
+
+The maintained app lives in the [shared repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/heizoel_to_mqtt). The former [standalone repository](https://github.com/rockbaer2007/heizoel-to-mqtt) remains archived. Install using the shared repository URL without a subfolder.
 
 Heizöl to MQTT is a Home Assistant app that publishes heating-oil prices through MQTT Discovery.
 

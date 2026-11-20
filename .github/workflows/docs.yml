@@ -49,6 +49,9 @@ jobs:
       - name: Erweiterten technischen Inhaltsabgleich prüfen
         run: python scripts/check-content-review.py --built
 
+      - name: Inhaltliche Einzelprüfungen verifizieren
+        run: python scripts/check-semantic-review.py
+
       - name: Ergänzte Übersetzungen und technische Beispiele prüfen
         run: python scripts/check-translation-completion.py
 

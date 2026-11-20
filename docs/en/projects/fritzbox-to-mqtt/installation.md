@@ -5,7 +5,7 @@
 - Home Assistant with Supervisor/App-Store.
 - MQTT broker, for example the Mosquitto broker app.
 - MQTT integration enabled in Home Assistant.
-- FRITZ!Box user with permissions for telephony, network status and system data.
+- FRITZ!Box user with permissions for telephony, network status and smart-home/system data.
 - TR-064 enabled on the FRITZ!Box.
 
 ## Add The Repository

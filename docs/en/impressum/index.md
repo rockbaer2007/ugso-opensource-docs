@@ -6,7 +6,9 @@ pageClass: ugso-legal-page
 
 # Legal notice {#impressum}
 
-## Information pursuant to section 5 TMG {#angaben-gemaß-5-tmg}
+## Information pursuant to section 5 DDG {#angaben-gemaß-5-tmg}
+
+Legal basis: [section 5 of the German Digital Services Act (DDG)](https://www.gesetze-im-internet.de/ddg/__5.html).
 
 **Legal form:**<br>
 Sole proprietor
@@ -38,6 +40,8 @@ Registration number: 30019872
 
 ## Domain owner {#domaininhaber}
 
+- [opensource.ugso-software.de](https://opensource.ugso-software.de/)
+- [ugso-opensource.net](https://ugso-opensource.net/)
 - [www.ugso-software.de](https://www.ugso-software.de/)
 - [www.ugso-software.com](https://www.ugso-software.com)
 - [www.ugso-software.info](https://www.ugso-software.info)
@@ -51,9 +55,9 @@ Registration number: 30019872
 
 ### Liability for content {#haftung-fur-inhalte}
 
-The content of our pages has been prepared with the greatest care. However, we cannot guarantee its accuracy, completeness or timeliness. As a service provider, we are responsible for our own content on these pages under general law in accordance with section 7(1) TMG.
+The content of our pages has been prepared with the greatest care. However, we cannot guarantee its accuracy, completeness or timeliness. We are responsible for our own content on these pages under general law.
 
-Under sections 8 to 10 TMG, however, we are not obliged as a service provider to monitor third-party information transmitted or stored, or to investigate circumstances indicating unlawful activity. Obligations to remove information or block its use under general law remain unaffected.
+Applicable limitations of liability for third-party information transmitted or stored are governed by [section 7 DDG](https://www.gesetze-im-internet.de/ddg/__7.html) together with Articles 4 to 8 of Regulation (EU) 2022/2065. Statutory obligations to remove information or block its use remain unaffected.
 
 Liability in this respect can arise only from the time we become aware of a specific infringement. Once we become aware of such infringements, we will remove the content immediately.
 
@@ -67,7 +71,7 @@ Linked pages were checked for possible legal infringements when the links were c
 
 Content and works created by the website operators on these pages are subject to German copyright law. Reproduction, editing, distribution and any use beyond the limits of copyright law require the written consent of the respective author or creator.
 
-Downloads and copies of this website are permitted only for private, non-commercial use. Where content on this website was not created by the operator, third-party copyrights are respected. Third-party content is identified as such.
+Unless an individual item specifies a different licence, downloads and copies of this website are permitted only for private, non-commercial use. Explicit open-source or documentation licences, such as MIT or CC BY 4.0, remain authoritative and are not restricted by this notice. Where content on this website was not created by the operator, third-party copyrights are respected. Third-party content is identified as such.
 
 If you nevertheless become aware of a copyright infringement, please inform us. Once we become aware of infringements, we will remove the content immediately.
 

@@ -11,7 +11,7 @@ hero:
     link: /fr/projects/heizoel-to-mqtt/installation
   - theme: alt
     text: GitHub
-    link: https://github.com/rockbaer2007/heizoel-to-mqtt
+    link: https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/heizoel_to_mqtt
 features:
 - icon: 🛢️
   title: Prix du fioul domestique
@@ -37,6 +37,8 @@ features:
 
 
 ## Aperçu {#uberblick}
+
+L’application maintenue se trouve dans le [dépôt commun](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/heizoel_to_mqtt). L’ancien [dépôt individuel](https://github.com/rockbaer2007/heizoel-to-mqtt) reste archivé. Pour l’installation, utilisez l’URL du dépôt commun sans sous-dossier.
 
 « Heizöl to MQTT » (Fioul domestique vers MQTT) est une application pour Home Assistant qui fournit les prix du fioul domestique dans Home Assistant via la découverte MQTT (MQTT Discovery).
 

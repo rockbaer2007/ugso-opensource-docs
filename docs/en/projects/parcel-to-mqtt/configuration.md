@@ -1,5 +1,9 @@
 # Configuration
 
+::: warning Archive: development discontinued
+This page describes the archived package. Prepared provider sections are not active connectors; no further connectors will be developed for this project. See [Parcel Tracker](https://github.com/SoerenKaiser99/parcel_tracker) as an alternative.
+:::
+
 ```yaml
 dhl:
   enabled: true
@@ -40,7 +44,7 @@ general:
   log_response_details: false
 ```
 
-The Home Assistant app shows the options as grouped provider sections. DHL and Hermes are active. GLS, DPD, UPS, Amazon Logistics, Deutsche Post letters and FedEx are already prepared as configuration sections, with active connectors following step by step.
+The Home Assistant app shows the options as grouped provider sections. DHL and Hermes are usable in the archived package. GLS, DPD, UPS, Amazon Logistics, Deutsche Post letters and FedEx were only prepared as configuration sections; active connectors for them are not included.
 
 `dhl.login_url` is the visible copy helper for the DHL browser login.
 

@@ -2,7 +2,7 @@
 
 Use this button to open the repository directly in Home Assistant:
 
-[![Open Heizöl to MQTT in Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Fheizoel-to-mqtt)
+[![Open Heizöl to MQTT in Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frockbaer2007%2Fugso-ha-mqtt-addons)
 
 ## Add The App Repository
 
@@ -12,7 +12,7 @@ Use this button to open the repository directly in Home Assistant:
 4. Add this repository:
 
 ```text
-https://github.com/rockbaer2007/heizoel-to-mqtt
+https://github.com/rockbaer2007/ugso-ha-mqtt-addons
 ```
 
 5. Install **Heizöl to MQTT**.

@@ -8,6 +8,10 @@ description: Exemples JavaScript pour les pages web, Lovelace et Bubble-Card.
 
 # JavaScript {#javascript}
 
+::: info Contexte des exemples
+Chaque exemple nécessite son contexte : `entity` et `hass` sont fournis par l’interface Home Assistant, tandis que `document` appartient à une page web. Le premier extrait contient `return` et doit être placé dans une fonction ou un rappel de modèle adapté ; il ne constitue pas un fichier JavaScript autonome.
+:::
+
 ## Déterminer une couleur en fonction de la valeur d'un capteur {#farbe-anhand-eines-sensorwerts-bestimmen}
 
 ```javascript

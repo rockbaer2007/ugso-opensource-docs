@@ -6,7 +6,9 @@ pageClass: ugso-legal-page
 
 # Mentions légales {#impressum}
 
-## Informations conformément à l’article 5 de la TMG {#angaben-gemaß-5-tmg}
+## Informations conformément à l’article 5 de la DDG {#angaben-gemaß-5-tmg}
+
+Base légale : [article 5 de la loi allemande sur les services numériques (DDG)](https://www.gesetze-im-internet.de/ddg/__5.html).
 
 **Forme juridique :**<br>
 Entrepreneur individuel
@@ -38,6 +40,8 @@ Numéro d’enregistrement : 30019872
 
 ## Titulaire des domaines {#domaininhaber}
 
+- [opensource.ugso-software.de](https://opensource.ugso-software.de/)
+- [ugso-opensource.net](https://ugso-opensource.net/)
 - [www.ugso-software.de](https://www.ugso-software.de/)
 - [www.ugso-software.com](https://www.ugso-software.com)
 - [www.ugso-software.info](https://www.ugso-software.info)
@@ -51,9 +55,9 @@ Numéro d’enregistrement : 30019872
 
 ### Responsabilité relative aux contenus {#haftung-fur-inhalte}
 
-Les contenus de nos pages ont été élaborés avec le plus grand soin. Nous ne pouvons toutefois garantir leur exactitude, leur exhaustivité ni leur actualité. En tant que prestataire de services, nous sommes responsables de nos propres contenus sur ces pages conformément aux dispositions générales du droit et à l’article 7, paragraphe 1, de la TMG.
+Les contenus de nos pages ont été élaborés avec le plus grand soin. Nous ne pouvons toutefois garantir leur exactitude, leur exhaustivité ni leur actualité. Nous sommes responsables de nos propres contenus sur ces pages conformément aux dispositions générales du droit.
 
-Conformément aux articles 8 à 10 de la TMG, nous ne sommes cependant pas tenus, en tant que prestataire de services, de surveiller les informations de tiers transmises ou stockées, ni de rechercher des circonstances révélant une activité illicite. Les obligations de suppression d’informations ou de blocage de leur utilisation prévues par le droit commun demeurent inchangées.
+Les limitations de responsabilité applicables aux informations de tiers transmises ou stockées relèvent de l’[article 7 de la DDG](https://www.gesetze-im-internet.de/ddg/__7.html), en lien avec les articles 4 à 8 du règlement (UE) 2022/2065. Les obligations légales de suppression d’informations ou de blocage de leur utilisation demeurent inchangées.
 
 Notre responsabilité à cet égard ne peut être engagée qu’à partir du moment où nous avons connaissance d’une violation précise. Dès que nous avons connaissance de telles violations, nous supprimons immédiatement les contenus concernés.
 
@@ -67,7 +71,7 @@ Les pages liées ont été vérifiées lors de la création des liens afin de d�
 
 Les contenus et œuvres créés par les exploitants de ce site sont soumis au droit d’auteur allemand. Leur reproduction, adaptation, diffusion ou toute utilisation dépassant les limites du droit d’auteur nécessite l’accord écrit de l’auteur ou du créateur concerné.
 
-Les téléchargements et copies de ce site sont autorisés uniquement pour un usage privé et non commercial. Lorsque les contenus n’ont pas été créés par l’exploitant, les droits d’auteur des tiers sont respectés. Les contenus de tiers sont identifiés comme tels.
+Sauf licence différente indiquée pour un contenu précis, les téléchargements et copies de ce site sont autorisés uniquement pour un usage privé et non commercial. Les licences open source ou documentaires explicitement indiquées, telles que MIT ou CC BY 4.0, restent applicables et ne sont pas restreintes par cette mention. Lorsque les contenus n’ont pas été créés par l’exploitant, les droits d’auteur des tiers sont respectés. Les contenus de tiers sont identifiés comme tels.
 
 Si vous constatez malgré tout une violation du droit d’auteur, merci de nous en informer. Dès que nous avons connaissance de violations, nous supprimons immédiatement les contenus concernés.
 

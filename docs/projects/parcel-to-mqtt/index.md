@@ -49,7 +49,7 @@ Quellcode und bisherige Dokumentation bleiben als Archiv erhalten. Die folgenden
 
 Parcel to MQTT ist eine Home-Assistant-App, die Paketverfolgung per MQTT Discovery in Home Assistant bereitstellt.
 
-Die aktuelle Version nutzt DHL-Konto-Paketlisten, optionale manuelle DHL-Sendungsnummern und Hermes-Paketverfolgung. Die App-Einstellungen sind nach Dienstleistern gruppiert, damit die Home-Assistant-Konfiguration kompakt als Anbieterbereiche erscheint.
+Der letzte Paketstand nutzt DHL-Konto-Paketlisten, optionale manuelle DHL-Sendungsnummern und Hermes-Paketverfolgung. Die App-Einstellungen sind nach Dienstleistern gruppiert, damit die Home-Assistant-Konfiguration kompakt als Anbieterbereiche erscheint.
 
 ::: info Ursprung
 Die Umsetzung ist adaptiert von und inspiriert durch den ioBroker-Adapter [TA2k/ioBroker.parcel](https://github.com/TA2k/ioBroker.parcel).
@@ -63,7 +63,7 @@ Die folgenden Punkte beschreiben den bisherigen Entwicklungsstand und frühere P
 
 - DHL: aktiv über `dhllogin://` Browser-Login-Code plus optionale manuelle Sendungsnummern
 - Amazon: vorbereitet mit E-Mail, Passwort und optionalem OTP-Token
-- Hermes: aktuell per manueller Sendungsnummer aktiv; Konto-Login mit App-Username und App-Passwort ist geplant
+- Hermes: per manueller Sendungsnummer aktiv; Konto-Login mit App-Username und App-Passwort war geplant, wurde aber nicht umgesetzt
 - UPS: vorbereitet mit App-Username, App-Passwort und manuellen Sendungsnummern
 - GLS: vorbereitet mit manuellen Sendungsnummern und Liefer-Postleitzahl; Polling wartet auf eine stabile Guest-Bearer-Session
 - DPD: vorbereitet mit Username, Passwort und manuellen Sendungsnummern, sobald der stabile Login-/Session-Ablauf sauber abgebildet ist

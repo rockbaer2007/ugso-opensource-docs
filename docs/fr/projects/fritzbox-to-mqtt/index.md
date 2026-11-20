@@ -52,7 +52,8 @@ L'application utilise plusieurs sources, car les interfaces disponibles peuvent 
 - La découverte MQTT pour la création automatique d'entités dans Home Assistant
 
 ::: info HACS
-Ce projet est une application pour le « Supervisor » de Home Assistant. HACS permet d'installer des intégrations personnalisées et des cartes d'interface (frontend cards), mais ne prend pas en charge les applications basées sur Docker (Supervisor apps). L'installation doit donc s'effectuer via la fonctionnalité de dépôt d'applications de Home Assistant. :::
+Ce projet est une application pour le « Supervisor » de Home Assistant. HACS permet d'installer des intégrations personnalisées et des cartes d'interface (frontend cards), mais ne prend pas en charge les applications basées sur Docker (Supervisor apps). L'installation doit donc s'effectuer via la fonctionnalité de dépôt d'applications de Home Assistant.
+:::
 
 ## Autres pages {#weitere-seiten}
 

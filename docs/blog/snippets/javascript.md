@@ -5,6 +5,10 @@ description: JavaScript-Beispiele für Webseiten, Lovelace und Bubble-Card.
 
 # JavaScript
 
+::: info Einbettung der Beispiele
+Die Beispiele setzen den jeweils gezeigten Kontext voraus: `entity` und `hass` werden von der Home-Assistant-Oberfläche bereitgestellt, `document` gehört zu einer Webseite. Der erste Ausschnitt enthält `return` und gehört in eine Funktion oder einen passenden Vorlagen-Callback; er ist keine direkt ausführbare JavaScript-Datei.
+:::
+
 ## Farbe anhand eines Sensorwerts bestimmen
 
 ```javascript
