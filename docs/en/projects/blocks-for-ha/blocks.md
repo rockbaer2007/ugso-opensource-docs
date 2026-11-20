@@ -130,7 +130,7 @@ In Standard/Dark, triggers are orange, conditions and logic blue, values green, 
 | **Repeat count**<br><code>ugso_repeat</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_repeat.png" alt="Repeat count" style="max-width:280px;max-height:180px"> | C-shaped body for HA repeat.count; repeat.index is the 1-based index. |
 | **Repeat while/until**<br><code>ugso_repeat_while</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_repeat_while.png" alt="Repeat while/until" style="max-width:280px;max-height:180px"> | Boolean input and action body. While checks before; until after. Include a pause in the body. |
 | **For each item**<br><code>ugso_foreach</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_foreach.png" alt="For each item" style="max-width:280px;max-height:180px"> | Iterate a list; current value through template repeat.item, index through repeat.index. |
-| **New object**<br><code>ugso_object_new</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_object_new.png" alt="New object" style="max-width:280px;max-height:180px"> | 0–100 named attributes using gear/+−. Dictionary value, not an HA entity. |
+| **New object**<br><code>ugso_object_new</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_object_new.png" alt="New object" style="max-width:280px;max-height:180px"> | 0–100 named attributes using the gear (without additional +/− controls since 0.1.58). Dictionary value, not an HA entity. |
 | **Attribute of object**<br><code>ugso_object_get</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_object_get.png" alt="Attribute of object" style="max-width:280px;max-height:180px"> | Read a dictionary key; missing key returns null. Requires a dictionary. |
 | **Object has attribute**<br><code>ugso_object_has</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_object_has.png" alt="Object has attribute" style="max-width:280px;max-height:180px"> | Boolean test for a dictionary key. |
 | **Object attributes**<br><code>ugso_object_keys</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_object_keys.png" alt="Object attributes" style="max-width:280px;max-height:180px"> | Key list for list operations and for-each. |
@@ -138,8 +138,8 @@ In Standard/Dark, triggers are orange, conditions and logic blue, values green, 
 | **Remove attribute from variable**<br><code>ugso_object_remove</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_object_remove.png" alt="Remove attribute from variable" style="max-width:280px;max-height:180px"> | Reassigns without the key. Does not mutate other variables or entity attributes. |
 | **Range comparison**<br><code>ugso_logic_range</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_logic_range.png" alt="Range comparison" style="max-width:280px;max-height:180px"> | Independent &lt; or ≤ for each bound; numbers and runtime numbers. |
 | **Fallback value**<br><code>ugso_logic_default</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_logic_default.png" alt="Fallback value" style="max-width:280px;max-height:180px"> | Select null/undefined or empty/false/zero; null mode preserves valid zero and false. |
-| **Case selection**<br><code>ugso_case</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_case.png" alt="Case selection" style="max-width:280px;max-height:180px"> | 1–100 cases using gear/+− and action bodies. First match wins; optional populated default body. |
-| **Create list**<br><code>ugso_list_new</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_list_new.png" alt="Create list" style="max-width:280px;max-height:180px"> | 0–100 arbitrary items using gear/+−, including nested values. |
+| **Case selection**<br><code>ugso_case</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_case.png" alt="Case selection" style="max-width:280px;max-height:180px"> | 1–100 cases using the gear (without additional +/− controls since 0.1.58) and action bodies. First match wins; optional populated default body. |
+| **Create list**<br><code>ugso_list_new</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_list_new.png" alt="Create list" style="max-width:280px;max-height:180px"> | 0–100 arbitrary items using the gear (without additional +/− controls since 0.1.58), including nested values. |
 | **List length**<br><code>ugso_list_length</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_list_length.png" alt="List length" style="max-width:280px;max-height:180px"> | List length as a runtime number. Strings and dictionaries are not lists. |
 | **List is empty**<br><code>ugso_list_empty</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_list_empty.png" alt="List is empty" style="max-width:280px;max-height:180px"> | Boolean test for a list with no items. |
 
@@ -170,7 +170,7 @@ Purple time blocks use a typed datetime socket. [Usage, boundary rules and compa
 | **Current datetime**<br><code>ugso_time_now</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_now.png" alt="Current datetime" style="max-width:280px;max-height:180px"> | HA local date, time and timezone. Typed Time output. |
 | **Calendar start**<br><code>ugso_time_boundary</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_boundary.png" alt="Calendar start" style="max-width:280px;max-height:180px"> | Start of today, tomorrow, week (Monday), month or year. |
 | **Next sun event**<br><code>ugso_time_sun</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_sun.png" alt="Next sun event" style="max-width:280px;max-height:180px"> | Rise, set, dawn, dusk, solar noon or midnight from sun.sun, with minute offset. May be tomorrow. |
-| **Shift datetime**<br><code>ugso_time_shift</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_shift.png" alt="Shift datetime" style="max-width:280px;max-height:180px"> | Datetime gear number in milliseconds, seconds, minutes, hours or days. |
+| **Shift datetime**<br><code>ugso_time_shift</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_shift.png" alt="Shift datetime" style="max-width:280px;max-height:180px"> | Datetime plus/minus a number in milliseconds, seconds, minutes, hours or days. |
 | **Format datetime**<br><code>ugso_time_format</code> | <img src="/assets/blocks-for-ha/blocks/en/ugso_time_format.png" alt="Format datetime" style="max-width:280px;max-height:180px"> | Clock time, date, date/time, ISO with timezone or Unix seconds. |
 
 ## Other blocks
@@ -227,7 +227,7 @@ Choose **Variablen → Variable erstellen …** in the German editor to create, 
 
 Example: **Set leistung to Template** containing <code v-pre>{{ states('sensor.leistung') | float(0) }}</code>, followed by **Log Info message Read leistung**. HA reads the sensor during assignment and uses that value in the next step. A template condition can check <code v-pre>{{ states('sensor.leistung') | float(0) > 100 }}</code>.
 
-Renaming updates variable blocks. References in free-form Jinja text must be changed manually. Action variables become available after assignment, not in preceding automation conditions. Blocks validates structure and YAML, not Jinja syntax or HA entities. Import supports text/template, number, Boolean or null for each variable value. Multiple entries are supported since 0.1.34 in the grouped JSON block; list/object values and automation-level variables remain rejected. [Native HA variables and scope](https://www.home-assistant.io/docs/scripts/#define-variables).
+Renaming updates variable blocks. References in free-form Jinja text must be changed manually. Action variables become available after assignment, not in preceding automation conditions. Blocks validates structure and YAML, not Jinja syntax or HA entities. Import supports text/template, number, Boolean or null for each variable value. Multiple entries are supported since 0.1.34 in the grouped JSON block; list/object values and automation-level variables are supported since 0.1.39. [Native HA variables and scope](https://www.home-assistant.io/docs/scripts/#define-variables).
 
 ## Logic blocks added in 0.1.9
 
@@ -259,7 +259,7 @@ The six existing plugins are pinned to **13.2.0**, the four theme/zoom plugins a
 | --- | --- |
 | [workspace-search](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/workspace-search) | Finds placed blocks in the workspace; separate from toolbox search. Available since 0.1.21. |
 | [toolbox-search](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/toolbox-search) | Search at the bottom of the menu, German search hints; results preserve dropdowns and shadows. |
-| [field-multilineinput](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-multilineinput) | Used by Text; newlines remain in projects and YAML. |
+| [field-multilineinput](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-multilineinput) | Used by Text until 0.1.64 and still by multiline code fields; newlines remain in projects and YAML. |
 | [field-slider](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-slider) | Used by Percentage; 0–100 with exact numeric entry. |
 | [field-colour](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/field-colour) | Used by Colour; converts hex to RGB for lights. Random/RGB/blend use own HA generators since 0.1.15. |
 | [theme-dark](https://github.com/raspberrypifoundation/blockly-samples/tree/main/plugins/theme-dark) | Dark workspace/flyout, part of the saved theme selector. |
@@ -356,7 +356,7 @@ The timer-reset example first turns off timer_reset, waits two seconds and then 
 
 Since **0.1.36**, the first field in **HA action** accepts a static action name or a Jinja template. The field supports multiline editing. Examples: `input_boolean.turn_on`, `input_boolean.turn_` followed by a Jinja expression, or a full if/else template. Target, data, metadata and response variable retain their existing fields. Templates and line breaks survive import, project storage and YAML export.
 
-The Shelly example retains the action prefix `input_boolean.turn_` combined with the state lookup and the nested choose branches. Home Assistant evaluates the action name at runtime; it must then resolve to an available service name. Blocks checks static names and template delimiters, not Jinja syntax or runtime results. Target entities must still be fixed IDs; templating the entire data object is outside this extension.
+The Shelly example retains the action prefix `input_boolean.turn_` combined with the state lookup and the nested choose branches. Home Assistant evaluates the action name at runtime; it must then resolve to an available service name. Blocks checks static names and template delimiters, not Jinja syntax or runtime results. In this 0.1.36 extension targets still required fixed IDs; dynamic targets are supported since 0.1.39. templating the entire data object is outside this extension.
 
 [Home Assistant: choosing the action with a template](https://www.home-assistant.io/docs/scripts/perform-actions/#choosing-the-action-with-a-template)
 

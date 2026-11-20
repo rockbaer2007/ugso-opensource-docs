@@ -2,8 +2,8 @@
   "reviewed_at": "2026-11-20",
   "scope_pages": 504,
   "coverage": {
-    "en": 241,
-    "fr": 241
+    "en": 245,
+    "fr": 245
   },
   "scope": "Content/meaning review of all 504 EN/FR inventory entries, including previously assessed structural differences. Reviewed pages only; unreviewed pages retain their existing technical status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
@@ -227,6 +227,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "4054b0f1c38624100d8d1b9dcc8e5b962e560332c0e120a51e11d2ba852be93a",
       "target_sha256": "a6a3b03c6ee3e257c881dcab41efc541a22023733ca134650b41e913f442b4df"
+    },
+    {
+      "source": "eep/ini-edit-translate-2026/index.md",
+      "locale": "en",
+      "target": "en/eep/ini-edit-translate-2026/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE/EN/FR release history and usage read: CSV30terms precedence/limits/protectedcodes, embedded14 versusautomatic20railwayabbreviations and272constructors, authoraccepted updates versusstillpendingVSdesigner, realMyMemory versusmock/noOpenAI tests, intermediateEnglish, userdata/update rollback and2438? dictionary correctly2428 entries agree. Correct stale general statement that model names nevertranslate after2.1.52; qualify historical41checks and OpenAI-only privacy/billing paragraph versusotherproviders. No new API requests or EEP encoding verification claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "92a711ee15a6b1b5a2d0b5718c88e4c0415af3d1b2076aaaa2d2cfba5cc73796",
+      "target_sha256": "152ab83ed3c368871c26291258fb51ae5569280b2fcc43f5559d45ed206805fe"
+    },
+    {
+      "source": "eep/ini-edit-translate-2026/index.md",
+      "locale": "fr",
+      "target": "fr/eep/ini-edit-translate-2026/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE/EN/FR release history and usage read: CSV30terms precedence/limits/protectedcodes, embedded14 versusautomatic20railwayabbreviations and272constructors, authoraccepted updates versusstillpendingVSdesigner, realMyMemory versusmock/noOpenAI tests, intermediateEnglish, userdata/update rollback and2438? dictionary correctly2428 entries agree. Correct stale general statement that model names nevertranslate after2.1.52; qualify historical41checks and OpenAI-only privacy/billing paragraph versusotherproviders. No new API requests or EEP encoding verification claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "92a711ee15a6b1b5a2d0b5718c88e4c0415af3d1b2076aaaa2d2cfba5cc73796",
+      "target_sha256": "ac93b1bf25436fc738c4c8c93cd49e03611a8923009a5776bb3db2d5d62812fd"
     },
     {
       "source": "eep/projektduplicator-2026/index.md",
@@ -689,6 +709,26 @@
       "target_sha256": "71425b70022c0cd6e3f586f5ca1c5c2438f4cd939dc056f1984c0e14ef4512c0"
     },
     {
+      "source": "projects/atlas/entwicklungsstand.md",
+      "locale": "en",
+      "target": "en/projects/atlas/development-status.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read full DE/EN/FR chronology in bounded character sections: native versusmock/emulated, exact originalproject recovery, prewrite/postwrite/preack failures, oldCRC/ambiguity/name-loss findings and laterfixedversions,1008/33120CSS comparisons and userreportedtabletsoaks retain scope. French architecture/completedwork condensed into explicit current app/plugin summary, linked detailed guides preserve detail. Correct stale currentfocus0.1.312 to declared0.1.334, FR versionindependence placement and grammar, EN guide-versusstartpage mistranslation. Historical host restrictions preserved as history, not new test authorization.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "a430838c001e4644a1ea5d946ee9b3f2e0fb1be6775051dead59b5c78fec074d",
+      "target_sha256": "73cd87f17886401eeea37db4f08f1e045167adc643f3bf9ea992ab0a89093071"
+    },
+    {
+      "source": "projects/atlas/entwicklungsstand.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas/development-status.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read full DE/EN/FR chronology in bounded character sections: native versusmock/emulated, exact originalproject recovery, prewrite/postwrite/preack failures, oldCRC/ambiguity/name-loss findings and laterfixedversions,1008/33120CSS comparisons and userreportedtabletsoaks retain scope. French architecture/completedwork condensed into explicit current app/plugin summary, linked detailed guides preserve detail. Correct stale currentfocus0.1.312 to declared0.1.334, FR versionindependence placement and grammar, EN guide-versusstartpage mistranslation. Historical host restrictions preserved as history, not new test authorization.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "a430838c001e4644a1ea5d946ee9b3f2e0fb1be6775051dead59b5c78fec074d",
+      "target_sha256": "d0264a95ddff1d76b772a8642751e4251b0d9c8e23029130ead7f227f58999c3"
+    },
+    {
       "source": "projects/atlas/frontend.md",
       "locale": "en",
       "target": "en/projects/atlas/frontend.md",
@@ -707,6 +747,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "bbb4ebe75a5d23cb2feb8a87d0da4139cfd650ad93b7e80c9daa0d88b7a2c7fb",
       "target_sha256": "1c860027885139c3a0b9a1dc52776014ed04a96b912ece1baf5338bd90d58ed8"
+    },
+    {
+      "source": "projects/atlas/homeassistant.md",
+      "locale": "en",
+      "target": "en/projects/atlas/homeassistant.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read full DE/EN reference plus French guide and full detailedreference, including all duplicate sections. Resource target versusinstalledintegration, exactcasepaths, explicit externalmapping,Expert-only legacyimport, palette sizes/favorites and outputlanguages/secretboundaries agree. Corrected stale App version, removed misleading mode-switch wording and clarified mixedcard dependencies in otherwise dependency-free package archive. French scan-only eligibility and malformed sentences repaired; no new provider/runtime verification claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "77e88c01c66486fe676a5aebb2aa9b2a2ebb0ec2136aa4a655e42c7a4bef87ab",
+      "target_sha256": "724acb2c041302793829a40cd08ed287aac9b39f593480782eeed3c65345a639"
+    },
+    {
+      "source": "projects/atlas/homeassistant.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas/homeassistant.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read full DE/EN reference plus French guide and full detailedreference, including all duplicate sections. Resource target versusinstalledintegration, exactcasepaths, explicit externalmapping,Expert-only legacyimport, palette sizes/favorites and outputlanguages/secretboundaries agree. Corrected stale App version, removed misleading mode-switch wording and clarified mixedcard dependencies in otherwise dependency-free package archive. French scan-only eligibility and malformed sentences repaired; no new provider/runtime verification claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "77e88c01c66486fe676a5aebb2aa9b2a2ebb0ec2136aa4a655e42c7a4bef87ab",
+      "target_sha256": "bcb8bf35ab2798eb9b8738695299831f680e15818eee90d4cfca3849f5d4149e"
     },
     {
       "source": "projects/atlas/index.md",
@@ -887,6 +947,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "e486c610fb1373cad7729692d1685b38349632295c3831c40aa18240369e4676",
       "target_sha256": "525920895c6eb4035829add1aea0b6e738b43cdaa7fa01ee3c6be7190979771a"
+    },
+    {
+      "source": "projects/blocks-for-ha/blocks.md",
+      "locale": "en",
+      "target": "en/projects/blocks-for-ha/blocks.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE and EN catalog and French catalog plus entire expanded detailed reference read with HTML tags stripped only, in bounded chunks. Compared typedports,10000loops,unicodecodepoints/notgraphemes,Python/Jinja rounding/modulo/null,conditional-lazy values,localruntime variables and nativeHAexport,169types versushistorical163, triggerIDs and structuredJinja. Correct misleading old variable/target restrictions superseded0.1.39,gear-only controls after0.1.58 and multilineinput after0.1.65, arithmetic conversion direction, checkbox-versussocket, actual imported timer_runing ID, JSONata plannednotconfigured and FR duplicated structuralvalidation wording. No new HAexecution claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "7ab6db2ab0c011a90926e205041c8958aeaea9685ed883973c9de90fe6aef9b6",
+      "target_sha256": "b45942fbbbcdfdb71707abd7d38df6ed6a55328fe8f6b25cd440f7e428475fca"
+    },
+    {
+      "source": "projects/blocks-for-ha/blocks.md",
+      "locale": "fr",
+      "target": "fr/projects/blocks-for-ha/blocks.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE and EN catalog and French catalog plus entire expanded detailed reference read with HTML tags stripped only, in bounded chunks. Compared typedports,10000loops,unicodecodepoints/notgraphemes,Python/Jinja rounding/modulo/null,conditional-lazy values,localruntime variables and nativeHAexport,169types versushistorical163, triggerIDs and structuredJinja. Correct misleading old variable/target restrictions superseded0.1.39,gear-only controls after0.1.58 and multilineinput after0.1.65, arithmetic conversion direction, checkbox-versussocket, actual imported timer_runing ID, JSONata plannednotconfigured and FR duplicated structuralvalidation wording. No new HAexecution claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "7ab6db2ab0c011a90926e205041c8958aeaea9685ed883973c9de90fe6aef9b6",
+      "target_sha256": "0d397f1ff9bf85083c3a281d8e2fc94200af805e1e185efba323c1b646058ea3"
     },
     {
       "source": "projects/blocks-for-ha/catalog/index.md",

@@ -300,7 +300,7 @@ Visual Studio ist nur zum Bauen der Quellen nötig. Kein Installer erforderlich.
 
 ## Übersetzungsanbieter
 
-Unter **Optionen → Übersetzungseinstellungen** stehen OpenAI-API, ChatGPT-Abo
+Unter **Über → Einstellungen → Übersetzungseinstellungen** stehen OpenAI-API, ChatGPT-Abo
 und **MyMemory** zur Wahl. MyMemory benötigt Internet, aber keinen Schlüssel und kein
 Konto. Eine optionale E-Mail-Adresse wird mit jeder Anfrage an MyMemory gesendet:
 laut Anbieter 5.000 Zeichen täglich anonym, bis zu 50.000 mit gültiger E-Mail.
@@ -311,7 +311,7 @@ Deutsch ist die Voreinstellung. Die ausgewählte Oberfläche bestimmt die anfän
 Ausgangssprache; die Quellwahl für Achsen/Signalfunktionen bleibt bedienbar.
 Deutsch und Französisch werden zuerst nach Englisch übersetzt; weitere Zielsprachen
 entstehen aus diesem englischen Zwischenstand. Die gewählte Ausgangssprache bleibt erhalten.
-Das gilt für alle Anbieter. Modellnamen werden weiterhin nicht übersetzt.
+Das gilt für die Online-Anbieter. Modellnamen werden seit 2.1.52 lokal anhand der geprüften Wortliste übersetzt; unbekannte Eigennamen bleiben unverändert.
 
 MyMemory kann übermittelte Texte langfristig speichern. Die App ruft ausschließlich
 die Übersetzungsabfrage auf und veröffentlicht keine zusätzlichen Wörterbucheinträge.
@@ -421,7 +421,7 @@ Die neue Fassung importiert keine alten Registrierungen oder privaten Datenbanke
 Einstellungen werden getrennt pro Windows-Benutzer gespeichert. OpenAI-Konfiguration
 und Dateisicherungen liegen unter `%LOCALAPPDATA%/UGSo/IET2026/`.
 
-Der Schlüssel wird für das Windows-Konto mit DPAPI verschlüsselt. Nur ausdrücklich
+Bei Verwendung der OpenAI-API wird der Schlüssel für das Windows-Konto mit DPAPI verschlüsselt. Nur ausdrücklich
 übersetzte Texte werden an OpenAI gesendet; die API-Anfrage setzt `store: false`.
 Internet und separate API-Abrechnung sind erforderlich. Ein ChatGPT-Abonnement
 ersetzt die API-Abrechnung nicht.
@@ -431,7 +431,7 @@ ersetzt die API-Abrechnung nicht.
 **GitHub-Updates werden manuell gestartet und vor der Installation bestätigt.** Der alte Updateserver wird nicht verwendet.
 Google, LEO, Linguee und DeepL werden nicht mehr angeboten.
 
-41 lokale Prüfungen mit simulierten API-Antworten sowie Debug- und Release-Builds
+Historischer Prüfstand 2.1.37: 41 lokale Prüfungen mit simulierten API-Antworten sowie Debug- und Release-Builds
 prüfen Fehlerfälle, Abbruch, Wiederherstellung, Tabellenexport und die gerenderten
 Oberflächen in DE/EN/FR. Die Tests senden keine Texte an OpenAI. Ein echter API-Aufruf
 und die Qualität erzeugter Modellübersetzungen sind mit dem eigenen Zugang noch zu prüfen.

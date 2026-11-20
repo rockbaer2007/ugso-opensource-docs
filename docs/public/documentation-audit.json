@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 241,
+      "content_reviewed": 245,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 241,
+      "content_reviewed": 245,
       "open_review_signals": 0
     }
   },
@@ -870,8 +870,8 @@
         "de": {
           "path": "eep/ini-edit-translate-2026/index.md",
           "status": "content-present",
-          "sha256": "55b722e500a9cc2b78f0f46e69f7d34a222e6baef05e8d35e778fd8df852614f",
-          "words": 3405,
+          "sha256": "92a711ee15a6b1b5a2d0b5718c88e4c0415af3d1b2076aaaa2d2cfba5cc73796",
+          "words": 3428,
           "headings": 20,
           "examples": 1,
           "versions": [
@@ -891,8 +891,8 @@
         "en": {
           "path": "en/eep/ini-edit-translate-2026/index.md",
           "status": "content-present",
-          "sha256": "72535558528482cc3ad0a0823f7a5b9a550fcbdcabe7331208749ca85cc34832",
-          "words": 3438,
+          "sha256": "152ab83ed3c368871c26291258fb51ae5569280b2fcc43f5559d45ed206805fe",
+          "words": 3463,
           "headings": 20,
           "examples": 1,
           "versions": [
@@ -920,13 +920,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/EN/FR release history and usage read: CSV30terms precedence/limits/protectedcodes, embedded14 versusautomatic20railwayabbreviations and272constructors, authoraccepted updates versusstillpendingVSdesigner, realMyMemory versusmock/noOpenAI tests, intermediateEnglish, userdata/update rollback and2438? dictionary correctly2428 entries agree. Correct stale general statement that model names nevertranslate after2.1.52; qualify historical41checks and OpenAI-only privacy/billing paragraph versusotherproviders. No new API requests or EEP encoding verification claimed."
           }
         },
         "fr": {
           "path": "fr/eep/ini-edit-translate-2026/index.md",
           "status": "content-present",
-          "sha256": "4cb3fc517092308618a9648571e2d41d4752e62b0d0fd62b512592b5b84d9728",
-          "words": 3903,
+          "sha256": "ac93b1bf25436fc738c4c8c93cd49e03611a8923009a5776bb3db2d5d62812fd",
+          "words": 3932,
           "headings": 20,
           "examples": 1,
           "versions": [
@@ -954,6 +959,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/EN/FR release history and usage read: CSV30terms precedence/limits/protectedcodes, embedded14 versusautomatic20railwayabbreviations and272constructors, authoraccepted updates versusstillpendingVSdesigner, realMyMemory versusmock/noOpenAI tests, intermediateEnglish, userdata/update rollback and2438? dictionary correctly2428 entries agree. Correct stale general statement that model names nevertranslate after2.1.52; qualify historical41checks and OpenAI-only privacy/billing paragraph versusotherproviders. No new API requests or EEP encoding verification claimed."
           }
         }
       }
@@ -2978,8 +2988,8 @@
         "de": {
           "path": "projects/atlas/entwicklungsstand.md",
           "status": "content-present",
-          "sha256": "84a6e10b05cdde95b1367960570075f922e0a97a1d3be0a43a80fc0f4abeaf61",
-          "words": 7124,
+          "sha256": "a430838c001e4644a1ea5d946ee9b3f2e0fb1be6775051dead59b5c78fec074d",
+          "words": 7128,
           "headings": 9,
           "examples": 1,
           "versions": [
@@ -3035,8 +3045,8 @@
         "en": {
           "path": "en/projects/atlas/development-status.md",
           "status": "content-present",
-          "sha256": "800a4d2a1ec592cc4e3ad72d47c7be1fb153c0e0bb919d1067d9cec7f9614511",
-          "words": 7589,
+          "sha256": "73cd87f17886401eeea37db4f08f1e045167adc643f3bf9ea992ab0a89093071",
+          "words": 7595,
           "headings": 9,
           "examples": 1,
           "versions": [
@@ -3100,13 +3110,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read full DE/EN/FR chronology in bounded character sections: native versusmock/emulated, exact originalproject recovery, prewrite/postwrite/preack failures, oldCRC/ambiguity/name-loss findings and laterfixedversions,1008/33120CSS comparisons and userreportedtabletsoaks retain scope. French architecture/completedwork condensed into explicit current app/plugin summary, linked detailed guides preserve detail. Correct stale currentfocus0.1.312 to declared0.1.334, FR versionindependence placement and grammar, EN guide-versusstartpage mistranslation. Historical host restrictions preserved as history, not new test authorization."
           }
         },
         "fr": {
           "path": "fr/projects/atlas/development-status.md",
           "status": "content-present",
-          "sha256": "bdff7e0fa887133da3df82c5444f96a4a9532e43153432692274c3d97f5a5af0",
-          "words": 8224,
+          "sha256": "d0264a95ddff1d76b772a8642751e4251b0d9c8e23029130ead7f227f58999c3",
+          "words": 8229,
           "headings": 8,
           "examples": 0,
           "versions": [
@@ -3169,6 +3184,11 @@
             "status": "reviewed",
             "disposition": "supplemented",
             "reason": "French preserves the operational/editor/test content; plain-text focus and inline demo URLs differ from German fenced text. Added missing architecture decisions and planned UV-card perspective to the development status. Localized demonstration YAML remains valid reference content. Test system inventory reviewed on 2026-10-28: user-provided VM/Raspberry Pi hardware, .193 replacement of .68, existing mobile qualification devices; historical test scope preserved."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read full DE/EN/FR chronology in bounded character sections: native versusmock/emulated, exact originalproject recovery, prewrite/postwrite/preack failures, oldCRC/ambiguity/name-loss findings and laterfixedversions,1008/33120CSS comparisons and userreportedtabletsoaks retain scope. French architecture/completedwork condensed into explicit current app/plugin summary, linked detailed guides preserve detail. Correct stale currentfocus0.1.312 to declared0.1.334, FR versionindependence placement and grammar, EN guide-versusstartpage mistranslation. Historical host restrictions preserved as history, not new test authorization."
           }
         }
       }
@@ -3283,8 +3303,8 @@
         "de": {
           "path": "projects/atlas/homeassistant.md",
           "status": "content-present",
-          "sha256": "892952c7cde0f28e3f06a65ef053ca335239c5988eee3609a010292f69a8affd",
-          "words": 4500,
+          "sha256": "77e88c01c66486fe676a5aebb2aa9b2a2ebb0ec2136aa4a655e42c7a4bef87ab",
+          "words": 4515,
           "headings": 18,
           "examples": 7,
           "versions": [
@@ -3292,15 +3312,15 @@
             "0.1.298",
             "0.1.299",
             "0.1.306",
-            "0.1.312"
+            "0.1.334"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/atlas/homeassistant.md",
           "status": "content-present",
-          "sha256": "95b262c07bac614780a91011a7868ce98e97f10280ef28cd3b41c51488e17503",
-          "words": 4656,
+          "sha256": "724acb2c041302793829a40cd08ed287aac9b39f593480782eeed3c65345a639",
+          "words": 4670,
           "headings": 18,
           "examples": 7,
           "versions": [
@@ -3308,7 +3328,7 @@
             "0.1.298",
             "0.1.299",
             "0.1.306",
-            "0.1.312"
+            "0.1.334"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -3323,13 +3343,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read full DE/EN reference plus French guide and full detailedreference, including all duplicate sections. Resource target versusinstalledintegration, exactcasepaths, explicit externalmapping,Expert-only legacyimport, palette sizes/favorites and outputlanguages/secretboundaries agree. Corrected stale App version, removed misleading mode-switch wording and clarified mixedcard dependencies in otherwise dependency-free package archive. French scan-only eligibility and malformed sentences repaired; no new provider/runtime verification claimed."
           }
         },
         "fr": {
           "path": "fr/projects/atlas/homeassistant.md",
           "status": "content-present",
-          "sha256": "b4e8bffc8634865272b143814b34fb7a70fe2a8466fa8509b7e0e2c304337831",
-          "words": 5859,
+          "sha256": "bcb8bf35ab2798eb9b8738695299831f680e15818eee90d4cfca3849f5d4149e",
+          "words": 5875,
           "headings": 36,
           "examples": 13,
           "versions": [
@@ -3337,7 +3362,7 @@
             "0.1.298",
             "0.1.299",
             "0.1.306",
-            "0.1.312"
+            "0.1.334"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -3352,6 +3377,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read full DE/EN reference plus French guide and full detailedreference, including all duplicate sections. Resource target versusinstalledintegration, exactcasepaths, explicit externalmapping,Expert-only legacyimport, palette sizes/favorites and outputlanguages/secretboundaries agree. Corrected stale App version, removed misleading mode-switch wording and clarified mixedcard dependencies in otherwise dependency-free package archive. French scan-only eligibility and malformed sentences repaired; no new provider/runtime verification claimed."
           }
         }
       }
@@ -4110,8 +4140,8 @@
         "de": {
           "path": "projects/blocks-for-ha/blocks.md",
           "status": "content-present",
-          "sha256": "d2f20a6bdca82859cdbfe8f5665feda1b00348ae685c58d01f2ac54f66d177db",
-          "words": 5958,
+          "sha256": "7ab6db2ab0c011a90926e205041c8958aeaea9685ed883973c9de90fe6aef9b6",
+          "words": 5992,
           "headings": 29,
           "examples": 0,
           "versions": [
@@ -4159,8 +4189,8 @@
         "en": {
           "path": "en/projects/blocks-for-ha/blocks.md",
           "status": "content-present",
-          "sha256": "974e71430e151c3f03b15397102d3cd1f16fb475fde4fc989200256187b2115a",
-          "words": 5982,
+          "sha256": "b45942fbbbcdfdb71707abd7d38df6ed6a55328fe8f6b25cd440f7e428475fca",
+          "words": 6034,
           "headings": 29,
           "examples": 0,
           "versions": [
@@ -4216,13 +4246,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE and EN catalog and French catalog plus entire expanded detailed reference read with HTML tags stripped only, in bounded chunks. Compared typedports,10000loops,unicodecodepoints/notgraphemes,Python/Jinja rounding/modulo/null,conditional-lazy values,localruntime variables and nativeHAexport,169types versushistorical163, triggerIDs and structuredJinja. Correct misleading old variable/target restrictions superseded0.1.39,gear-only controls after0.1.58 and multilineinput after0.1.65, arithmetic conversion direction, checkbox-versussocket, actual imported timer_runing ID, JSONata plannednotconfigured and FR duplicated structuralvalidation wording. No new HAexecution claimed."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/blocks.md",
           "status": "content-present",
-          "sha256": "e75ba8b9265bfdd694da6f38d5a198f48caa69b8acfdf5b7683d8cc11604f27e",
-          "words": 14867,
+          "sha256": "0d397f1ff9bf85083c3a281d8e2fc94200af805e1e185efba323c1b646058ea3",
+          "words": 14884,
           "headings": 67,
           "examples": 0,
           "versions": [
@@ -4278,6 +4313,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE and EN catalog and French catalog plus entire expanded detailed reference read with HTML tags stripped only, in bounded chunks. Compared typedports,10000loops,unicodecodepoints/notgraphemes,Python/Jinja rounding/modulo/null,conditional-lazy values,localruntime variables and nativeHAexport,169types versushistorical163, triggerIDs and structuredJinja. Correct misleading old variable/target restrictions superseded0.1.39,gear-only controls after0.1.58 and multilineinput after0.1.65, arithmetic conversion direction, checkbox-versussocket, actual imported timer_runing ID, JSONata plannednotconfigured and FR duplicated structuralvalidation wording. No new HAexecution claimed."
           }
         }
       }

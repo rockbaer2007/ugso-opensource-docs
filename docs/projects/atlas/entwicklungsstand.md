@@ -602,7 +602,7 @@ ATLAS Card Editor, Runtime und Erhalt bestehender Einstellungen und Plugins
 
 Der Schwerpunkt liegt auf realistischen Projekten, Dauerlast und den noch
 offenen Plattform- und Kompatibilitätsprüfungen.
-Der aktuelle Home-Assistant-App/Add-on-Stand ist `0.1.312`. Administration und
+Der hier dokumentierte Home-Assistant-App/Add-on-Stand ist `0.1.334` (05.11.2026). Administration und
 Plugin-Hub unterstützen Deutsch, Englisch und Französisch und teilen ihre
 gespeicherte Spracheinstellung über die getrennten App-Ports hinweg.
 

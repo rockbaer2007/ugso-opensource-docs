@@ -12,7 +12,7 @@ description: État actuel du développement d'ATLAS.
 - **Téléphone :** Blackview BV6200 Pro sous **Android 14 / DokeOS 4.0**, tests mobiles dans **Chrome**.
 - **Tablette :** Samsung Tab A6 sous **Android 11 / LineageOS**, tests mobiles dans **Chrome**.
 
-Affectation des systèmes indiquée par l’utilisateur le **28/10/2026**. La nouvelle système de test PC (64) est enregistrée comme système de remplacement ; les résultats obtenus sur Système de test 2 (64) ne constituent pas automatiquement une validation du système de test PC (64). Les comptes rendus ci-dessous précisent le périmètre de chaque test.
+Affectation des systèmes indiquée par l’utilisateur le **28/10/2026**. Le nouveau système de test PC (64) est enregistrée comme système de remplacement ; les résultats obtenus sur Système de test 2 (64) ne constituent pas automatiquement une validation du système de test PC (64). Les comptes rendus ci-dessous précisent le périmètre de chaque test.
 
 **App 0.1.334 :** aperçu et confirmation près des actions de projet, avant les
 brouillons locaux. Focus/défilement, chargement et lectures à durée limitée
@@ -299,7 +299,7 @@ large est corrigée. Voir [Card Editor](./card-editor) pour le périmètre et le
 L’App 0.1.318 aligne la prévisualisation d’import sur l’analyseur réel et refuse
 les cartes Markdown non prises en charge, même imbriquées. Les 240 tests locaux
 réussissent, dont 27 nouveaux tests de parité. La mise à jour native de système de test ARM (Pi 5) et Système de test 2 (64)
-avec HA 2026.10.2 est vérifiée après sauvegardes complètes :24 refus Markdown
+avec HA 2026.10.2 est vérifiée après sauvegardes complètes : 24 refus Markdown
 conservent l’éditeur et huit imports imbriqués conservent la structure. Les données
 et éditeurs locaux sont conservés. Défauts constatés en 0.1.318 : les cartes Conditional seules
 perdent leurs conditions lors du transfert vers l’éditeur ; les cartes Entity
@@ -309,7 +309,7 @@ Les conditions étendues sont vérifiées sur les systèmes de test autorisés s
 et Système de test 2 (64) avec HA 2026.10.2 : 1 008 décisions de visibilité, JSON/YAML,
 enregistrement/réouverture et cycles HACS identiques octet par octet avec 112/112
 contrôles chacun. Les données existantes et les éditeurs locaux sont conservés.
-La divergence de prévisualisation Markdown est corrigée localement en0.1.318 ; voir le
+La divergence de prévisualisation Markdown est corrigée localement en 0.1.318 ; voir le
 [Card Editor](./card-editor) pour les limites. Les nouveaux tests réseau sont
 limités à ces deux adresses ; les rapports sur d’autres hôtes sont historiques.
 Les numéros de version de l’App et de l’intégration sont indépendants.
@@ -322,20 +322,20 @@ et Pi 5 : 112/112 contrôles chacun, cycles HACS identiques, 756 comparaisons CS
 supplémentaires, Conditional/Jinja, thèmes et connexion automatique après
 redémarrage HA Core. Cet essai utilise UIX existant sur Proxmox et Card-Mod
 temporaire sur Pi. Les projets Editor locaux initiaux sont rétablis.
-Voir le [Card Editor](./card-editor#état-actuel).
+Voir le [Card Editor](./card-editor#etat-actuel).
 
 Après de nouvelles sauvegardes, les changements de thème sans rechargement passent
 aussi sur Proxmox et Pi 5 : Card-Mod/UIX séparément, 28 transitions,
 1 920 comparaisons CSS et identités cartes/document stables. Thèmes et réglages
 des extensions initiaux sont rétablis ; les données existantes sont conservées.
-Voir le [Card Editor](./card-editor#état-actuel).
+Voir le [Card Editor](./card-editor#etat-actuel).
 
 Les changements clair/sombre sans rechargement passent maintenant isolément
 avec Core, Bubble et Mushroom : Card-Mod 4.2.1 et UIX 8.4.0 séparément, sept
 transitions chacun, 960 comparaisons CSS et identités des cartes/document stables.
 Les surcharges fixes restent intactes, couleurs/rayons hérités suivent le thème.
 Pi 5 et Proxmox restent inchangés pendant cet essai supplémentaire. Voir le
-[Card Editor](./card-editor#état-actuel) pour le périmètre et les versions.
+[Card Editor](./card-editor#etat-actuel) pour le périmètre et les versions.
 
 0.1.316 corrige la perte de CSS Bubble à l’import et l’héritage UIX à la racine
 des scripts exportés. Après les essais isolés, les mises à jour sur Proxmox et
@@ -344,21 +344,21 @@ identiques avec 112/112 contrôles chacun et 240 comparaisons CSS supplémentair
 dans le thème sombre existant, rechargement inclus. Les configurations locales
 initiales des éditeurs sont restaurées. Réexporter les cartes existantes ;
 récupérer le CSS déjà perdu dans les originaux/sauvegardes.
-Voir [Card Editor](./card-editor#état-actuel).
+Voir [Card Editor](./card-editor#etat-actuel).
 
 Après de nouvelles sauvegardes, la vérification CSS native réussit aussi sur
 Proxmox et Pi 5 avec Card-Mod 4.2.1 et UIX 8.4.0 : scripts générés et références
 natives concordent pour les règles dynamiques et statiques testées. Extensions
 séparées, capteurs passifs et aucune commande d’appareil. La configuration
 d’origine des extensions est rétablie ; quatre anciens projets par hôte et
-six plugins sont conservés. Voir le [Card Editor](./card-editor#état-actuel)
+six plugins sont conservés. Voir le [Card Editor](./card-editor#etat-actuel)
 pour le détail et les limites de version.
 
 Le rendu CSS est également vérifié isolément avec HA 2026.10.1, Mushroom
 5.2.3, Card-Mod 4.2.1 et séparément UIX 8.4.0 : scripts générés et références
 natives concordent pour couleurs/bordures dynamiques, styles Shadow DOM et
 rayons UIX. `uix_style` n’a aucun effet CSS ; le Jinja CSS nécessite
-`config.entity`. Voir le [Card Editor](./card-editor#état-actuel) pour
+`config.entity`. Voir le [Card Editor](./card-editor#etat-actuel) pour
 l’installation, les exemples et limites. Pi 5 et Proxmox restent inchangés ;
 aucune nouvelle version de l’App.
 
@@ -568,7 +568,7 @@ ATLAS est en cours de développement. L'application Home Assistant comprend
 l'Administration, le Hub des plugins et le Card Editor ; File Studio et
 Automation Exporter / Editor sont distribués comme plugins indépendants.
 
-La version actuelle de l'application Home Assistant est `0.1.312`.
+La version de l'application Home Assistant documentée ici est `0.1.334` (05/11/2026).
 L'Administration et le Hub des plugins proposent des interfaces en allemand,
 anglais et français. Leur préférence de langue enregistrée est partagée entre
 les deux interfaces, y compris lorsque leurs ports sont différents. Le

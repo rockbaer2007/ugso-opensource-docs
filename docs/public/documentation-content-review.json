@@ -425,8 +425,8 @@
       "target": "en/eep/ini-edit-translate-2026/index.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "55b722e500a9cc2b78f0f46e69f7d34a222e6baef05e8d35e778fd8df852614f",
-      "target_sha256": "72535558528482cc3ad0a0823f7a5b9a550fcbdcabe7331208749ca85cc34832",
+      "source_sha256": "92a711ee15a6b1b5a2d0b5718c88e4c0415af3d1b2076aaaa2d2cfba5cc73796",
+      "target_sha256": "152ab83ed3c368871c26291258fb51ae5569280b2fcc43f5559d45ed206805fe",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -435,15 +435,17 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "eep/ini-edit-translate-2026/index.md",
       "target": "fr/eep/ini-edit-translate-2026/index.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "55b722e500a9cc2b78f0f46e69f7d34a222e6baef05e8d35e778fd8df852614f",
-      "target_sha256": "4cb3fc517092308618a9648571e2d41d4752e62b0d0fd62b512592b5b84d9728",
+      "source_sha256": "92a711ee15a6b1b5a2d0b5718c88e4c0415af3d1b2076aaaa2d2cfba5cc73796",
+      "target_sha256": "ac93b1bf25436fc738c4c8c93cd49e03611a8923009a5776bb3db2d5d62812fd",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -454,7 +456,9 @@
       "difference_assessment": [
         "Language detector flag is the intentional DE/EN/FR/PL railway-term comparison table; its language columns must remain multilingual."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "eep/projektduplicator-2026/index.md",
@@ -1286,8 +1290,8 @@
       "target": "en/projects/atlas/development-status.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "84a6e10b05cdde95b1367960570075f922e0a97a1d3be0a43a80fc0f4abeaf61",
-      "target_sha256": "800a4d2a1ec592cc4e3ad72d47c7be1fb153c0e0bb919d1067d9cec7f9614511",
+      "source_sha256": "a430838c001e4644a1ea5d946ee9b3f2e0fb1be6775051dead59b5c78fec074d",
+      "target_sha256": "73cd87f17886401eeea37db4f08f1e045167adc643f3bf9ea992ab0a89093071",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1298,7 +1302,9 @@
       "difference_assessment": [
         "Compared the differing blocks: localized demonstration names, comments, example paths/IDs, output text or consistently renamed local variables; API fields and operations are retained. These are example substitutions, not missing blocks."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/atlas/frontend.md",
@@ -1339,8 +1345,8 @@
       "target": "en/projects/atlas/homeassistant.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "892952c7cde0f28e3f06a65ef053ca335239c5988eee3609a010292f69a8affd",
-      "target_sha256": "95b262c07bac614780a91011a7868ce98e97f10280ef28cd3b41c51488e17503",
+      "source_sha256": "77e88c01c66486fe676a5aebb2aa9b2a2ebb0ec2136aa4a655e42c7a4bef87ab",
+      "target_sha256": "724acb2c041302793829a40cd08ed287aac9b39f593480782eeed3c65345a639",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1349,15 +1355,17 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/atlas/homeassistant.md",
       "target": "fr/projects/atlas/homeassistant.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "892952c7cde0f28e3f06a65ef053ca335239c5988eee3609a010292f69a8affd",
-      "target_sha256": "b4e8bffc8634865272b143814b34fb7a70fe2a8466fa8509b7e0e2c304337831",
+      "source_sha256": "77e88c01c66486fe676a5aebb2aa9b2a2ebb0ec2136aa4a655e42c7a4bef87ab",
+      "target_sha256": "bcb8bf35ab2798eb9b8738695299831f680e15818eee90d4cfca3849f5d4149e",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1366,7 +1374,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/atlas/index.md",
@@ -1719,8 +1729,8 @@
       "target": "en/projects/blocks-for-ha/blocks.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "d2f20a6bdca82859cdbfe8f5665feda1b00348ae685c58d01f2ac54f66d177db",
-      "target_sha256": "974e71430e151c3f03b15397102d3cd1f16fb475fde4fc989200256187b2115a",
+      "source_sha256": "7ab6db2ab0c011a90926e205041c8958aeaea9685ed883973c9de90fe6aef9b6",
+      "target_sha256": "b45942fbbbcdfdb71707abd7d38df6ed6a55328fe8f6b25cd440f7e428475fca",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1729,15 +1739,17 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/blocks.md",
       "target": "fr/projects/blocks-for-ha/blocks.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "d2f20a6bdca82859cdbfe8f5665feda1b00348ae685c58d01f2ac54f66d177db",
-      "target_sha256": "e75ba8b9265bfdd694da6f38d5a198f48caa69b8acfdf5b7683d8cc11604f27e",
+      "source_sha256": "7ab6db2ab0c011a90926e205041c8958aeaea9685ed883973c9de90fe6aef9b6",
+      "target_sha256": "0d397f1ff9bf85083c3a281d8e2fc94200af805e1e185efba323c1b646058ea3",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1746,7 +1758,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/catalog/index.md",

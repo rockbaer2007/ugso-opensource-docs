@@ -6,7 +6,7 @@ on Debian 12 amd64 LXC. Native ATLAS HA/HACS frontend access is provided by the
 optional [ATLAS Runtime integration](/en/projects/atlas/frontend), available
 since 0.1.299. Native HACS installation, upgrade to integration 0.1.306 and HA
 restart pass on Pi 5 and Proxmox with data preserved. The independently released
-App is at 0.1.312. Linux also passes on Raspberry Pi OS aarch64 on Pi 4.
+App is documented here at 0.1.334 (2026-11-05). Linux also passes on Raspberry Pi OS aarch64 on Pi 4.
 
 ATLAS includes its own `@atlas/homeassistant` package for Home-Assistant-oriented
 integration. The current focus is an editor and export workflow for Home
@@ -169,8 +169,7 @@ This allows copy and download flows to use the same verified content.
 In addition to direct YAML/JSON export, ATLAS can create a portable JSON
 package. This package is intended for later editor and HACS-oriented workflows.
 When a package is exported from Expert mode, it also includes the editor plan.
-On a later import, ATLAS can restore the placed fields and switch back to
-Expert mode automatically.
+On a later import, ATLAS can restore the placed fields. The editor remains Expert-only.
 The demo UI now exposes a dedicated HACS script filename field for that package
 flow. Names such as `Energy Kitchen` are normalized to `energy-kitchen.js`,
 stored in the embedded editor plan and restored into the field when an Atlas
@@ -183,7 +182,7 @@ Home Assistant entities.
 In the demo, this `.js` source can also be downloaded directly through the card
 script export so the artifact can be reviewed separately before a full HACS
 bundle is produced.
-The next packaging step creates a dependency-free `.hacs.zip` archive. The
+The packaging step creates a `.hacs.zip` archive without an extra packaging library. Included Community cards still require their own installed resources. The
 archive contains the files for a later frontend repository: `hacs.json`, the
 generated JavaScript card, a README, an example Lovelace card and the original
 Atlas Card Package for later editing.

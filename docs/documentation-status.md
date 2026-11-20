@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 241 | 11 |
-| FR | 241 | 11 |
+| EN | 245 | 7 |
+| FR | 245 | 7 |
 
 ## Vollständiges Seiteninventar
 
@@ -59,7 +59,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [blog/snippets/javascript.md](/blog/snippets/javascript) | [Inhaltlich geprüft](/en/blog/snippets/javascript) | [Inhaltlich geprüft](/fr/blog/snippets/javascript) |
 | [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Inhaltlich geprüft](/en/blog/snippets/lovelace) | [Inhaltlich geprüft](/fr/blog/snippets/lovelace) |
 | [eep/index.md](/eep/) | [Inhaltlich geprüft](/en/eep/) | [Inhaltlich geprüft](/fr/eep/) |
-| [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Technisch abgeglichen](/en/eep/ini-edit-translate-2026/) | [Technisch abgeglichen](/fr/eep/ini-edit-translate-2026/) |
+| [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Inhaltlich geprüft](/en/eep/ini-edit-translate-2026/) | [Inhaltlich geprüft](/fr/eep/ini-edit-translate-2026/) |
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Inhaltlich geprüft](/en/eep/projektduplicator-2026/) | [Inhaltlich geprüft](/fr/eep/projektduplicator-2026/) |
 | [impressum/index.md](/impressum/) | [Inhaltlich geprüft](/en/impressum/) | [Inhaltlich geprüft](/fr/impressum/) |
 | [index.md](/) | [Inhaltlich geprüft](/en/) | [Inhaltlich geprüft](/fr/) |
@@ -84,9 +84,9 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/atlas-plugins/repository-format.md](/projects/atlas-plugins/repository-format) | [Inhaltlich geprüft](/en/projects/atlas-plugins/repository-format) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/repository-format) |
 | [projects/atlas-plugins/terminal.md](/projects/atlas-plugins/terminal) | [Inhaltlich geprüft](/en/projects/atlas-plugins/terminal) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/terminal) |
 | [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Technisch abgeglichen](/en/projects/atlas/card-editor) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/atlas/card-editor) |
-| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Technisch abgeglichen](/en/projects/atlas/development-status) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/atlas/development-status) |
+| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Inhaltlich geprüft](/en/projects/atlas/development-status) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/atlas/development-status) |
 | [projects/atlas/frontend.md](/projects/atlas/frontend) | [Inhaltlich geprüft](/en/projects/atlas/frontend) | [Inhaltlich geprüft](/fr/projects/atlas/frontend) |
-| [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Technisch abgeglichen](/en/projects/atlas/homeassistant) | [Technisch abgeglichen](/fr/projects/atlas/homeassistant) |
+| [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Inhaltlich geprüft](/en/projects/atlas/homeassistant) | [Inhaltlich geprüft](/fr/projects/atlas/homeassistant) |
 | [projects/atlas/index.md](/projects/atlas/) | [Inhaltlich geprüft](/en/projects/atlas/) | [Inhaltlich geprüft](/fr/projects/atlas/) |
 | [projects/atlas/linux.md](/projects/atlas/linux) | [Inhaltlich geprüft](/en/projects/atlas/linux) | [Inhaltlich geprüft](/fr/projects/atlas/linux) |
 | [projects/atlas/plugins.md](/projects/atlas/plugins) | [Inhaltlich geprüft](/en/projects/atlas/plugins) | [Inhaltlich geprüft](/fr/projects/atlas/plugins) |
@@ -96,7 +96,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Inhaltlich geprüft](/en/projects/automation-status-card/) | [Inhaltlich geprüft](/fr/projects/automation-status-card/) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/advanced) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/blockly-audit) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/blockly-audit) |
-| [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Technisch abgeglichen](/en/projects/blocks-for-ha/blocks) | [Technisch abgeglichen](/fr/projects/blocks-for-ha/blocks) |
+| [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/blocks) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/catalog/) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/catalog/) |
 | [projects/blocks-for-ha/catalog/sensor-light.md](/projects/blocks-for-ha/catalog/sensor-light) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/catalog/sensor-light) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/catalog/sensor-light) |
 | [projects/blocks-for-ha/collections.md](/projects/blocks-for-ha/collections) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/collections) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/collections) |

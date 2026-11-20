@@ -401,7 +401,7 @@ L'intégration native de l'interface ATLAS dans Home Assistant (via HACS)
 est disponible sous forme d'une [intégration « ATLAS Runtime »](/fr/projects/atlas/frontend) optionnelle,
 à partir de la version 0.1.299. L'installation via HACS, la mise à jour vers la version 0.1.306
 et le redémarrage de Home Assistant ont été validés sur Raspberry Pi 5 et Proxmox, en garantissant la conservation des données.
-Indépendamment de cela, l'application elle-même est en version 0.1.312.
+Indépendamment de cela, l'application est documentée ici en version 0.1.334 (05/11/2026).
 
 Avec `@atlas/homeassistant`, ATLAS dispose de son propre paquet dédié à
 l'intégration avec Home Assistant. L'accent est actuellement mis sur un flux de travail
@@ -551,11 +551,11 @@ Ainsi, les fonctions de copie et de téléchargement utilisent toutes deux le m�
 ### Packs de cartes Atlas {#atlas-card-packages}
 
 Outre l'exportation directe au format YAML/JSON, ATLAS permet de générer un paquet JSON portable. Ce paquet est conçu pour faciliter les flux de travail ultérieurs impliquant un éditeur ou l'intégration avec HACS.
-Lorsqu'un paquet est exporté depuis le mode « Expert », il inclut également le plan de l'éditeur. Lors d'une importation ultérieure, ATLAS peut ainsi restaurer les champs placés et basculer automatiquement en mode « Expert ».
+Lorsqu'un paquet est exporté depuis le mode « Expert », il inclut également le plan de l'éditeur. Lors d'une importation ultérieure, ATLAS peut ainsi restaurer les champs placés ; l'éditeur reste exclusivement dans le workflow Expert.
 L'interface de démonstration propose, à cet effet, un champ dédié au nom du fichier de script HACS. Des noms tels que `Energy Kitchen` sont normalisés en `energy-kitchen.js`, enregistrés dans le plan de l'éditeur intégré, puis réintégrés dans le champ lors de la réimportation du paquet de carte Atlas.
 Par ailleurs, le plan du paquet peut désormais générer une source JavaScript pour une carte personnalisée (*custom card*). Ce script contient le nom de fichier normalisé, le type de carte `custom:<name>` correspondant, le chemin de ressource `/hacsfiles/atlas/...`, une configuration par défaut `getStubConfig()` utilisant des entités de démonstration sûres, ainsi qu'une recommandation de remplacer ces entités par vos propres valeurs dans Home Assistant.
 Dans la démonstration, cette source `.js` peut également être téléchargée directement via la fonction d'exportation de script de carte, permettant ainsi de vérifier cet élément indépendamment du paquet HACS complet.
-L'étape suivante du processus de création de paquet génère un élément `.hacs.zip` autonome (sans dépendances). L'archive contient les fichiers nécessaires à la constitution ultérieure d'un dépôt *frontend* :
+L'étape suivante du processus de création de paquet génère une archive `.hacs.zip` sans bibliothèque de création de paquet supplémentaire. Les cartes Community incluses nécessitent toujours leurs propres ressources installées. L'archive contient les fichiers nécessaires à la constitution ultérieure d'un dépôt *frontend* :
 `hacs.json`, la carte JavaScript générée, un fichier README, un exemple de carte Lovelace, ainsi que le paquet de carte Atlas original pour toute modification ultérieure.
 La démonstration est capable de reconnaître ces fichiers `.hacs.zip` lors de l'importation d'une carte dans Home Assistant. Elle lit la structure ZIP, signale les fichiers de bundle manquants et réimporte
 l'élément `atlas/*.atlas-card.json` intégré dans l'Expert Editor. Cela permet
@@ -697,7 +697,7 @@ Les valeurs prises en charge sont `state`, `switch`, `slider` et `name` ; la val
 La palette Expert de gauche sépare les cartes Core et Community. Les cartes individuelles
 peuvent être cochées comme favorites et enregistrées avec `Save favorites`.
 Une fois les favoris enregistrés, ATLAS masque toutes les
-...d'autres cartes. `Show all cards` permet de rouvrir la liste complète,
+autres cartes. `Show all cards` permet de rouvrir la liste complète,
 sans supprimer les favoris enregistrés. De plus, les éléments inutiles
 peuvent être masqués dans la palette standard via une case à cocher rouge `Versteckt`,
 et réaffichés ultérieurement depuis la liste complète.
@@ -711,8 +711,7 @@ Assistant et ajoute à la palette les cartes communautaires détectées, telles 
 Home Assistant ne fournit pas de registre complet des options
 pour chaque carte personnalisée (*custom card*), mais les ressources installées peuvent servir
 de point de départ. Les autres ressources Lovelace enregistrées apparaissent
-comme des entrées « à analyser » (*scan-only*), jusqu'à ce qu'ATLAS dispose d'une correspondance (*mapping*) prédéfinie
-soit disponible. L’utilisateur peut associer localement ces entrées à un type de carte `custom:*`
+comme des entrées « à analyser » (*scan-only*), jusqu'à ce qu'ATLAS dispose d'une correspondance (*mapping*) prédéfinie. L’utilisateur peut associer localement ces entrées à un type de carte `custom:*`
 approprié. Une fois associés, ils peuvent être déplacés en tant que « cartes personnalisées » (Custom Cards) mappées ; ils sont exportés dans le
 fichier YAML expert avec ce type de carte, et leur chemin de ressource est inclus dans le
 fragment de ressource. Les ressources déjà mappées sont dédoublonnées,
@@ -720,15 +719,15 @@ afin d'éviter qu'elles n'apparaissent à nouveau sous forme de copie « en lect
 La liste principale (Core) inclut désormais : Entité, Entités, Aperçu (Glance), Bouton,
 Grille, Capteur, Pile (Stack), Pile horizontale, Thermostat, Lien et Page Web. La
 page web est exportée comme carte Home Assistant `iframe`. Le modèle
-modèle « Aperçu » (Glance) est initialisé sans entité de démonstration ; il reçoit automatiquement un nom
+« Aperçu » (Glance) est initialisé sans entité de démonstration ; il reçoit automatiquement un nom
 tel que `Glance 1` ou `Glance 2` et est configuré via une
 fenêtre contextuelle (popup) dédiée aux entités.
 Lors de la connexion à Home Assistant, ATLAS demande automatiquement
 cette liste de ressources. L'activation des favoris enregistrés masque toutes les cartes non sélectionnées,
-masquent, y compris les entrées analysées sous `/hacsfiles/`. Les cartes masquées restent
+y compris les entrées analysées sous `/hacsfiles/`. Les cartes masquées restent
 invisibles dans la vue normale jusqu’à ce que `Show all cards` soit utilisé et que
-...le marquage « masqué » est supprimé. Les ressources HACS et HA
-détectées (scan uniquement) peuvent également être marquées comme favorites. Les ressources auxiliaires
+le marquage « masqué » soit supprimé. Les ressources HACS et HA
+détectées et déjà associées à un type de carte peuvent également être marquées comme favorites. Les ressources auxiliaires
 telles que les outils de cartes (card-tools), les tableaux de bord, les stratégies, les aides à la navigation, les packs d'icônes et
 d'autres ressources identifiées comme n'étant pas des cartes sont masquées lors de l'analyse (scan) de la palette.
 La vérification temporaire des ressources dispose d'une section de débogage activable. Via
@@ -791,7 +790,7 @@ Le plan d'interopérabilité distingue trois approches :
 
 - **Inspiration** : les idées de produits accessibles au public et les comportements documentés servent de base à la création de définitions (contrats) propres à ATLAS.
 - **Compatibilité Import/Export** : à terme, ATLAS pourra analyser des artefacts documentés et proposer ses propres correspondances (« mappings »), sans pour autant copier le code source.
-- **Fork / Dérivation** : cette option ne sera retenue que dans le cadre d'une décision délibérée, impliquant l'application de la licence AGPL (3.0-Erfüllung), une attribution visible et une vérification complète des conditions de licence.
+- **Fork / Dérivation** : cette option ne sera retenue que dans le cadre d'une décision délibérée, impliquant l'application de la licence AGPL-3.0, une attribution visible et une vérification complète des conditions de licence.
 
 ### Résumé de l'importation {#import-summary}
 
@@ -839,7 +838,8 @@ La vérification des ressources permet d'afficher ces informations distinctes :
 - La ressource de l'interface ATLAS est-elle enregistrée ?
 - La ressource de carte sélectionnée est-elle installée ?
 - Manque-t-il des chemins HACS supplémentaires pour « Mushroom Card » ou « Bubble Card » ?
-- L'exportation complète est-elle prête pour Home Assistant ? - Quelles ressources JSON ou YAML doivent être enregistrées dans Home Assistant ?
+- L'exportation complète est-elle prête pour Home Assistant ?
+- Quelles ressources JSON ou YAML doivent être enregistrées dans Home Assistant ?
 
 Pour l'installation effective du panneau, seul le guide d'intégration
 (lien ci-dessus) fait foi. Un simple « Resource-Target » ne suffit pas à réaliser l'intégration.

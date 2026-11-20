@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 241 | 11 |
-| FR | 241 | 11 |
+| EN | 245 | 7 |
+| FR | 245 | 7 |
 
 ## Complete page inventory
 
@@ -59,7 +59,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [blog/snippets/javascript.md](/blog/snippets/javascript) | [Content reviewed](/en/blog/snippets/javascript) | [Content reviewed](/fr/blog/snippets/javascript) |
 | [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Content reviewed](/en/blog/snippets/lovelace) | [Content reviewed](/fr/blog/snippets/lovelace) |
 | [eep/index.md](/eep/) | [Content reviewed](/en/eep/) | [Content reviewed](/fr/eep/) |
-| [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Technically compared](/en/eep/ini-edit-translate-2026/) | [Technically compared](/fr/eep/ini-edit-translate-2026/) |
+| [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Content reviewed](/en/eep/ini-edit-translate-2026/) | [Content reviewed](/fr/eep/ini-edit-translate-2026/) |
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Content reviewed](/en/eep/projektduplicator-2026/) | [Content reviewed](/fr/eep/projektduplicator-2026/) |
 | [impressum/index.md](/impressum/) | [Content reviewed](/en/impressum/) | [Content reviewed](/fr/impressum/) |
 | [index.md](/) | [Content reviewed](/en/) | [Content reviewed](/fr/) |
@@ -84,9 +84,9 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/atlas-plugins/repository-format.md](/projects/atlas-plugins/repository-format) | [Content reviewed](/en/projects/atlas-plugins/repository-format) | [Content reviewed](/fr/projects/atlas-plugins/repository-format) |
 | [projects/atlas-plugins/terminal.md](/projects/atlas-plugins/terminal) | [Content reviewed](/en/projects/atlas-plugins/terminal) | [Content reviewed](/fr/projects/atlas-plugins/terminal) |
 | [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Technically compared](/en/projects/atlas/card-editor) | [Content present · Difference reviewed](/fr/projects/atlas/card-editor) |
-| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Technically compared](/en/projects/atlas/development-status) | [Content present · Difference reviewed](/fr/projects/atlas/development-status) |
+| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Content reviewed](/en/projects/atlas/development-status) | [Content reviewed · Difference reviewed](/fr/projects/atlas/development-status) |
 | [projects/atlas/frontend.md](/projects/atlas/frontend) | [Content reviewed](/en/projects/atlas/frontend) | [Content reviewed](/fr/projects/atlas/frontend) |
-| [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Technically compared](/en/projects/atlas/homeassistant) | [Technically compared](/fr/projects/atlas/homeassistant) |
+| [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Content reviewed](/en/projects/atlas/homeassistant) | [Content reviewed](/fr/projects/atlas/homeassistant) |
 | [projects/atlas/index.md](/projects/atlas/) | [Content reviewed](/en/projects/atlas/) | [Content reviewed](/fr/projects/atlas/) |
 | [projects/atlas/linux.md](/projects/atlas/linux) | [Content reviewed](/en/projects/atlas/linux) | [Content reviewed](/fr/projects/atlas/linux) |
 | [projects/atlas/plugins.md](/projects/atlas/plugins) | [Content reviewed](/en/projects/atlas/plugins) | [Content reviewed](/fr/projects/atlas/plugins) |
@@ -96,7 +96,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Content reviewed](/en/projects/automation-status-card/) | [Content reviewed](/fr/projects/automation-status-card/) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Content reviewed](/en/projects/blocks-for-ha/advanced) | [Content reviewed](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Content reviewed](/en/projects/blocks-for-ha/blockly-audit) | [Content reviewed](/fr/projects/blocks-for-ha/blockly-audit) |
-| [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Technically compared](/en/projects/blocks-for-ha/blocks) | [Technically compared](/fr/projects/blocks-for-ha/blocks) |
+| [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Content reviewed](/en/projects/blocks-for-ha/blocks) | [Content reviewed](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Content reviewed](/en/projects/blocks-for-ha/catalog/) | [Content reviewed](/fr/projects/blocks-for-ha/catalog/) |
 | [projects/blocks-for-ha/catalog/sensor-light.md](/projects/blocks-for-ha/catalog/sensor-light) | [Content reviewed](/en/projects/blocks-for-ha/catalog/sensor-light) | [Content reviewed](/fr/projects/blocks-for-ha/catalog/sensor-light) |
 | [projects/blocks-for-ha/collections.md](/projects/blocks-for-ha/collections) | [Content reviewed](/en/projects/blocks-for-ha/collections) | [Content reviewed](/fr/projects/blocks-for-ha/collections) |

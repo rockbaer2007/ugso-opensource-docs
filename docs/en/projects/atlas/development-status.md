@@ -54,7 +54,7 @@ names, independent recoveries and preserved data. Three full backups remain;
 ARM test system (Pi 5) is untouched. On 2026-10-22 the user confirms Chrome qualification on
 Blackview BV6200 Pro (Android 14/DokeOS 4.0) and Samsung Tab A6 (Android 11/LineageOS):
 selection, search, tab association, portrait/landscape and separate A/B recovery
-work. Owned server projects, guide and sidebar entry are cleaned up; existing data
+work. Owned server projects, start page and sidebar entry are cleaned up; existing data
 is retained. Zero sources before the first explicit project apply was not data loss.
 
 **Browser termination during repeated file import passes on Test system 2 (64).** Forced Chrome
@@ -279,7 +279,7 @@ has been corrected. See [Card Editor](./card-editor) for scope and limits.
 App 0.1.318 aligns import preview with the actual parser, rejecting unsupported
 Markdown even inside nested cards. All 240 local package tests pass, including
 27 new parity tests. Native updates on the ARM test system (Pi 5) and Test system 2 (64) with HA 2026.10.2 pass after
-full backups:24 Markdown rejections retain the Editor, eight nested imports
+full backups: 24 Markdown rejections retain the Editor, eight nested imports
 preserve structure, and existing data/local Editors remain intact. Findings on 0.1.318:
 standalone Conditional cards lose conditions during Editor application, and
 standalone Entity cards lose custom names (JSON/YAML on both hosts).
@@ -287,7 +287,7 @@ standalone Entity cards lose custom names (JSON/YAML on both hosts).
 Extended Conditionals pass on the approved ARM test system (Pi 5) and Test system 2 (64) test systems with
 HA 2026.10.2: 1,008 visibility decisions, JSON/YAML, save/reopen and byte-identical
 HACS roundtrips with 112/112 checks each. Existing data and original local
-Editors are preserved. The Markdown preview mismatch is fixed locally in0.1.318; see the
+Editors are preserved. The Markdown preview mismatch is fixed locally in 0.1.318; see the
 [Card Editor](./card-editor) for scope and limits. New network tests are restricted
 to these two addresses; reports below involving other hosts are historical.
 
@@ -573,7 +573,7 @@ ATLAS Card Editor, Runtime and preservation of existing settings and plugins
 
 The focus is realistic projects, endurance under load and remaining platform
 and compatibility qualification.
-The current Home Assistant App/Add-on version is `0.1.312`. Administration and
+The Home Assistant App/Add-on version documented here is `0.1.334` (2026-11-05). Administration and
 Plugin Hub support German, English and French, and share the saved language
 preference across their separate app ports.
 

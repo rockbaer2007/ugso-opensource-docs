@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 241 | 11 |
-| FR | 241 | 11 |
+| EN | 245 | 7 |
+| FR | 245 | 7 |
 
 ## Inventaire complet des pages
 
@@ -59,7 +59,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [blog/snippets/javascript.md](/blog/snippets/javascript) | [Contenu vérifié](/en/blog/snippets/javascript) | [Contenu vérifié](/fr/blog/snippets/javascript) |
 | [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Contenu vérifié](/en/blog/snippets/lovelace) | [Contenu vérifié](/fr/blog/snippets/lovelace) |
 | [eep/index.md](/eep/) | [Contenu vérifié](/en/eep/) | [Contenu vérifié](/fr/eep/) |
-| [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Comparaison technique effectuée](/en/eep/ini-edit-translate-2026/) | [Comparaison technique effectuée](/fr/eep/ini-edit-translate-2026/) |
+| [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Contenu vérifié](/en/eep/ini-edit-translate-2026/) | [Contenu vérifié](/fr/eep/ini-edit-translate-2026/) |
 | [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Contenu vérifié](/en/eep/projektduplicator-2026/) | [Contenu vérifié](/fr/eep/projektduplicator-2026/) |
 | [impressum/index.md](/impressum/) | [Contenu vérifié](/en/impressum/) | [Contenu vérifié](/fr/impressum/) |
 | [index.md](/) | [Contenu vérifié](/en/) | [Contenu vérifié](/fr/) |
@@ -84,9 +84,9 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/atlas-plugins/repository-format.md](/projects/atlas-plugins/repository-format) | [Contenu vérifié](/en/projects/atlas-plugins/repository-format) | [Contenu vérifié](/fr/projects/atlas-plugins/repository-format) |
 | [projects/atlas-plugins/terminal.md](/projects/atlas-plugins/terminal) | [Contenu vérifié](/en/projects/atlas-plugins/terminal) | [Contenu vérifié](/fr/projects/atlas-plugins/terminal) |
 | [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Comparaison technique effectuée](/en/projects/atlas/card-editor) | [Contenu présent · Différence examinée](/fr/projects/atlas/card-editor) |
-| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Comparaison technique effectuée](/en/projects/atlas/development-status) | [Contenu présent · Différence examinée](/fr/projects/atlas/development-status) |
+| [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Contenu vérifié](/en/projects/atlas/development-status) | [Contenu vérifié · Différence examinée](/fr/projects/atlas/development-status) |
 | [projects/atlas/frontend.md](/projects/atlas/frontend) | [Contenu vérifié](/en/projects/atlas/frontend) | [Contenu vérifié](/fr/projects/atlas/frontend) |
-| [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Comparaison technique effectuée](/en/projects/atlas/homeassistant) | [Comparaison technique effectuée](/fr/projects/atlas/homeassistant) |
+| [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Contenu vérifié](/en/projects/atlas/homeassistant) | [Contenu vérifié](/fr/projects/atlas/homeassistant) |
 | [projects/atlas/index.md](/projects/atlas/) | [Contenu vérifié](/en/projects/atlas/) | [Contenu vérifié](/fr/projects/atlas/) |
 | [projects/atlas/linux.md](/projects/atlas/linux) | [Contenu vérifié](/en/projects/atlas/linux) | [Contenu vérifié](/fr/projects/atlas/linux) |
 | [projects/atlas/plugins.md](/projects/atlas/plugins) | [Contenu vérifié](/en/projects/atlas/plugins) | [Contenu vérifié](/fr/projects/atlas/plugins) |
@@ -96,7 +96,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Contenu vérifié](/en/projects/automation-status-card/) | [Contenu vérifié](/fr/projects/automation-status-card/) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Contenu vérifié](/en/projects/blocks-for-ha/advanced) | [Contenu vérifié](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Contenu vérifié](/en/projects/blocks-for-ha/blockly-audit) | [Contenu vérifié](/fr/projects/blocks-for-ha/blockly-audit) |
-| [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/blocks) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/blocks) |
+| [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Contenu vérifié](/en/projects/blocks-for-ha/blocks) | [Contenu vérifié](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Contenu vérifié](/en/projects/blocks-for-ha/catalog/) | [Contenu vérifié](/fr/projects/blocks-for-ha/catalog/) |
 | [projects/blocks-for-ha/catalog/sensor-light.md](/projects/blocks-for-ha/catalog/sensor-light) | [Contenu vérifié](/en/projects/blocks-for-ha/catalog/sensor-light) | [Contenu vérifié](/fr/projects/blocks-for-ha/catalog/sensor-light) |
 | [projects/blocks-for-ha/collections.md](/projects/blocks-for-ha/collections) | [Contenu vérifié](/en/projects/blocks-for-ha/collections) | [Contenu vérifié](/fr/projects/blocks-for-ha/collections) |

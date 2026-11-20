@@ -289,7 +289,7 @@ Visual Studio sert uniquement à compiler les sources. Aucun installateur néces
 
 ## Fournisseurs de traduction
 
-Dans **Options → Paramètres de traduction**, choisir API OpenAI, abonnement ChatGPT ou
+Dans **À propos → Paramètres → Paramètres de traduction**, choisir API OpenAI, abonnement ChatGPT ou
 **MyMemory**. MyMemory nécessite Internet, mais aucune clé ni aucun compte.
 Une adresse e-mail facultative est envoyée avec chaque requête : selon le fournisseur,
 5 000 caractères par jour sans identification, jusqu’à 50 000 avec une adresse valide.
@@ -300,7 +300,7 @@ L’allemand est la langue par défaut. La langue choisie pour l’interface dé
 source initiale ; les axes/fonctions des signaux gardent leur sélecteur de source.
 L’allemand et le français sont d’abord traduits en anglais ; les autres langues cibles
 utilisent ce texte intermédiaire anglais. Cela vaut pour tous les fournisseurs.
-Le texte source choisi et les noms de modèles sont conservés.
+La langue source choisie est conservée. Depuis 2.1.52, les noms de modèles sont traduits localement avec la liste de mots vérifiés ; les noms propres inconnus restent inchangés.
 
 MyMemory peut conserver durablement les textes transmis. L’application utilise uniquement
 la requête de traduction et ne publie pas d’entrées supplémentaires dans un dictionnaire.
@@ -406,7 +406,7 @@ Les anciennes inscriptions et bases personnelles ne sont pas importées. Les par
 sont séparés par utilisateur Windows. La configuration OpenAI et les sauvegardes sont
 conservées sous `%LOCALAPPDATA%/UGSo/IET2026/`.
 
-Windows DPAPI chiffre la clé API pour le compte Windows actuel. Les textes sélectionnés
+Avec l'API OpenAI, Windows DPAPI chiffre la clé API pour le compte Windows actuel. Les textes sélectionnés
 sont envoyés à OpenAI avec `store: false`. Internet et une facturation API distincte sont
 nécessaires ; un abonnement ChatGPT ne remplace pas cette facturation.
 
@@ -414,7 +414,7 @@ nécessaires ; un abonnement ChatGPT ne remplace pas cette facturation.
 
 **Les mises à jour GitHub sont lancées manuellement et leur installation doit être confirmée.** L’ancien serveur n’est pas utilisé. Google, LEO, Linguee et DeepL ne sont plus proposés.
 
-41 contrôles locaux avec réponses API simulées et les compilations Debug/Release
+Vérification historique 2.1.37 : 41 contrôles locaux avec réponses API simulées et les compilations Debug/Release
 vérifient les erreurs, l’annulation, la restauration, l’export et les interfaces rendues
 DE/EN/FR. Aucun texte n’est envoyé à OpenAI pendant les tests. Un appel API réel et la
 qualité des traductions produites restent à vérifier avec son propre compte.

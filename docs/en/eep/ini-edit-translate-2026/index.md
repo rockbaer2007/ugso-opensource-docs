@@ -276,7 +276,7 @@ Visual Studio is only needed to build from source. No installer is required.
 
 ## Translation providers
 
-Select OpenAI API, ChatGPT plan or **MyMemory** under **Options → Translation settings**.
+Select OpenAI API, ChatGPT plan or **MyMemory** under **About → Settings → Translation settings**.
 MyMemory requires internet access but no key or account. An optional email address is
 sent with each request: the provider allows 5,000 characters daily anonymously, up to
 50,000 with a valid email. Each target language counts separately. Long text is split
@@ -285,7 +285,7 @@ into sections up to 500 UTF-8 bytes. A temporary cache avoids repeats within one
 German is the default. The selected interface language sets the initial source language;
 axes/signal functions retain their source selector. German and French are translated
 to English first; other target languages use that English intermediate text.
-This applies to all providers. The selected source text and model names are retained.
+This applies to online providers; the chosen source language is retained. Since 2.1.52, model names use the reviewed local word list; unknown proper names remain unchanged.
 
 MyMemory may store submitted texts long term. The application uses only the translation
 query and does not submit additional dictionary entries. There is no automatic provider
@@ -386,7 +386,7 @@ Old registrations and personal databases are not imported. Settings are stored
 separately for each Windows user. OpenAI configuration and file backups are under
 `%LOCALAPPDATA%/UGSo/IET2026/`.
 
-Windows DPAPI encrypts the API key for the current Windows account. Selected texts
+When using the OpenAI API, Windows DPAPI encrypts the API key for the current Windows account. Selected texts
 are sent to OpenAI with `store: false`. Internet access and separate API billing are
 required; a ChatGPT subscription does not replace API billing.
 
@@ -394,7 +394,7 @@ required; a ChatGPT subscription does not replace API billing.
 
 **GitHub updates are started manually and require installation confirmation.** The old update server is not used. Google, LEO, Linguee and DeepL are no longer offered.
 
-41 local checks with mocked API responses and Debug/Release builds cover failures,
+Historical 2.1.37 verification: 41 local checks with mocked API responses and Debug/Release builds cover failures,
 cancellation, restoration, export and rendered DE/EN/FR interfaces. Tests do not send
 texts to OpenAI. A live API request and generated translation quality still need
 verification with your own account. Not every possible INI schema is supported;

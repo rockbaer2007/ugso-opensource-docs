@@ -7,7 +7,7 @@ Die native ATLAS-HA/HACS-Frontend-Integration
 ist als optionale [Integration ATLAS Runtime](/projects/atlas/frontend) ab 0.1.299
 umgesetzt. HACS-Installation, Update auf Integration 0.1.306 und HA-Neustart
 sind auf Pi 5 und Proxmox mit Datenerhalt geprüft. Die App hat unabhängig davon
-den Stand 0.1.312.
+den hier dokumentierten Stand 0.1.334 (05.11.2026).
 
 ATLAS besitzt mit `@atlas/homeassistant` ein eigenes Paket für die
 Home-Assistant-nahe Integration. Der aktuelle Schwerpunkt liegt auf einem
@@ -175,7 +175,7 @@ Zusätzlich zum direkten YAML/JSON-Export kann ATLAS ein portables JSON-Paket
 erzeugen. Dieses Paket ist für spätere Editor- und HACS-nahe Workflows gedacht.
 Wird ein Paket aus dem Expert-Modus exportiert, enthält es zusätzlich den
 Editorplan. Beim späteren Import kann ATLAS dadurch die platzierten Felder
-wiederherstellen und automatisch in den Expert-Modus wechseln.
+wiederherstellen. Der Editor bleibt ausschließlich im Expert-Workflow.
 Das Demo-UI bietet dafür ein eigenes Feld für den HACS-Script-Dateinamen. Namen
 wie `Energy Kitchen` werden zu `energy-kitchen.js` normalisiert, im eingebetteten
 Editorplan gespeichert und beim erneuten Import eines Atlas Card Package wieder
@@ -188,7 +188,7 @@ Entitäten in Home Assistant durch eigene Werte zu ersetzen.
 In der Demo kann diese `.js`-Quelle auch direkt über den Card-Script-Export
 heruntergeladen werden, damit das Artefakt vor einem vollständigen
 HACS-Bundle separat geprüft werden kann.
-Der nächste Paketierungsschritt erzeugt ein abhängigkeitsfreies `.hacs.zip`.
+Der Paketierungsschritt erzeugt ein `.hacs.zip` ohne zusätzliche Paketierungsbibliothek. Enthaltene Community-Cards benötigen weiterhin ihre eigenen installierten Ressourcen.
 Das Archiv enthält die Dateien für ein späteres Frontend-Repository:
 `hacs.json`, die generierte JavaScript-Card, eine README, eine
 Beispiel-Lovelace-Card und das ursprüngliche Atlas Card Package für spätere
