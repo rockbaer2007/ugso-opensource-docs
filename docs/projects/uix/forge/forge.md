@@ -570,10 +570,6 @@ Footer sind für kompakte, dauerhaft sichtbare Bedienelemente gedacht. Sie sollt
 | `max_width` | string | ja | `600` | Maximale Breite des Footers in Pixeln. |
 | `bottom` | string | ja | `var(--uix-forge-footer-bottom, var(--ha-space-2))` | CSS-Wert `bottom` für den Footer. Legt die Anfangsposition direkt fest, zum Beispiel `calc(100vh - 100px)` für einen schwebenden Bereich nahe dem oberen Rand. |
 
-::: info Vorschau ab 9.1.0-beta.5
-Die Konfiguration `bottom` und die Template-Unterstützung für `max_width` stehen ab **9.1.0-beta.5** zur Verfügung. Die stabile Basis dieser Dokumentation bleibt UIX 9.0.0.
-:::
-
 Beispiel aus der aktuellen Originaldokumentation:
 
 ```yaml

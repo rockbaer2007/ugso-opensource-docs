@@ -3,11 +3,11 @@ title: À propos
 ---
 # UI eXtension pour Home Assistant
 
-::: info État vérifié le 19 novembre 2026
-Les **66** pages canoniques ont été comparées à `dev 3e330667`. Les trois modifications concernent les [verrous des badges](./forge/sparks/lock#badges-comme-cibles), les [paramètres des boîtes de dialogue limités à 512 KiB](./using/templates) et la [position du pied de page](./forge/forge#pied-de-page). L'aperçu documentaire suit la version source **9.1.0-beta.8** ; **9.0.0** reste la base stable. Les 63 autres pages sources sont inchangées depuis la dernière revue.
+::: info État vérifié le 20 novembre 2026 – UIX 9.1.0 stable
+Les **66** pages canoniques ont été comparées à `dev fb36536` et à la documentation de **v9.1.0**. Quatre pages ont changé et 62 restent identiques. Le [spark Lock](./forge/sparks/lock) bloque aussi la bordure stylisée ; les anciennes mentions bêta des [contextes](./concepts/context), des [raccourcis de barre latérale](./extras/custom-sidebar-panels) et du [pied de page](./forge/forge#pied-de-page) sont supprimées. Cette mise à jour du contenu résout les deux points de traduction ouverts concernant les contextes et les raccourcis.
 :::
 
-> Cette traduction française est maintenue par UGSo Software. La documentation anglaise reste la référence. La base est la version stable [`UIX 9.0.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0) du 4 novembre 2026, révision [`cec1191`](https://github.com/Lint-Free-Technology/uix/commit/cec1191f6ee703284c75dfd3104dba9bb4419200). **Home Assistant 2026.11.0 ou ultérieur est requis.**
+> Cette traduction française est maintenue par UGSo Software. La documentation anglaise reste la référence. La base est la version stable [`UIX 9.1.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0), révision [`ca36726`](https://github.com/Lint-Free-Technology/uix/commit/ca3672619a11858bbc7f9165db999c0aaa7cef00). **Home Assistant 2026.11.0 ou ultérieur est requis.**
 
 ![light-logo-icon](./assets/images/mixed.png)
 

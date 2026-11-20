@@ -6,21 +6,21 @@ aside: false
 
 # État des traductions de la documentation
 
-DE / EN / FR · 2026-11-19
+DE / EN / FR · 2026-11-20
 
 Toutes les pages de référence allemandes disposent désormais de contenu en anglais et en français. Les 128 pages provisoires ont été remplacées et les 20 pages françaises manquantes ajoutées.
 
-Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion de ces trois rapports générés : langues disponibles, textes provisoires, versions mentionnées, titres, exemples de code et références locales aux pages et images. Des versions ou longueurs différentes sont des points à examiner, pas une preuve automatique d’obsolescence. « Contenu présent » ne garantit pas une traduction complète ou vérifiée sur le plan linguistique. Les versions actuelles des projets en amont n’ont pas été contrôlées.
+Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion de ces trois rapports générés : langues disponibles, textes provisoires, versions mentionnées, titres, exemples de code et références locales aux pages et images. Des versions ou longueurs différentes sont des points à examiner, pas une preuve automatique d’obsolescence. « Contenu présent » ne garantit pas une traduction complète ou vérifiée sur le plan linguistique. Cet inventaire ne contrôle pas automatiquement les versions en amont ; les comparaisons de sources documentées séparément, comme pour UIX, restent la référence pour leur périmètre.
 
 ## Inventaire
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 252 | 0 | 0 | 0 |
-| EN | 252 | 0 | 0 | 2 |
+| EN | 252 | 0 | 0 | 0 |
 | FR | 252 | 0 | 0 | 0 |
 
-**Revue du 27 octobre 2026 :** les 74 points anglais et les 47 points français ont été examinés. Les lacunes et contradictions ont été corrigées ; les différences voulues d’historique, d’aperçu canonique et de structure rédactionnelle sont justifiées. Le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Les 121 évaluations](/documentation-review.json).
+**Comparaison technique du 2026-11-20 :** les évaluations sont liées aux empreintes actuelles des fichiers ; toute modification exige une nouvelle revue. Les lacunes et contradictions sont corrigées, tandis que les différences voulues d’historique et de structure sont justifiées. Le tableau indique les points encore ouverts ; le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Évaluations documentées](/documentation-review.json).
 
 
 Les ajouts ont été réalisés avec une aide à la traduction et vérifiés techniquement par rapport à la source allemande : code, identifiants, tableaux et images. Quatorze autres lacunes ont été comblées par des références complémentaires, en conservant les pages et liens existants. Il ne s’agit pas d’une certification linguistique complète. Les points à examiner comprennent aussi des résumés volontairement différents et des versions historiques.
@@ -168,7 +168,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Contenu présent · Différence examinée](/en/projects/uix/broker/realms) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Contenu présent · Différence examinée](/en/projects/uix/broker/rules) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/application) | [Contenu présent · Différence examinée](/fr/projects/uix/concepts/application) |
-| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Contenu présent · Points à examiner](/en/projects/uix/concepts/context) | [Contenu présent](/fr/projects/uix/concepts/context) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Contenu présent](/en/projects/uix/concepts/context) | [Contenu présent](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/dom) | [Contenu présent](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/) | [Contenu présent](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Contenu présent · Différence examinée](/en/projects/uix/contributing) | [Contenu présent · Différence examinée](/fr/projects/uix/contributing) |
@@ -180,7 +180,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 | [projects/uix/developers/index.md](/projects/uix/developers/) | [Contenu présent · Différence examinée](/en/projects/uix/developers/) | [Contenu présent](/fr/projects/uix/developers/) |
 | [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Contenu présent · Différence examinée](/en/projects/uix/developers/themes) | [Contenu présent](/fr/projects/uix/developers/themes) |
 | [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Contenu présent · Différence examinée](/en/projects/uix/extras/always-patch-ha-card) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/always-patch-ha-card) |
-| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Contenu présent · Points à examiner](/en/projects/uix/extras/custom-sidebar-panels) | [Contenu présent](/fr/projects/uix/extras/custom-sidebar-panels) |
+| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Contenu présent](/en/projects/uix/extras/custom-sidebar-panels) | [Contenu présent](/fr/projects/uix/extras/custom-sidebar-panels) |
 | [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Contenu présent · Différence examinée](/en/projects/uix/extras/dialog-styling-delay) | [Contenu présent](/fr/projects/uix/extras/dialog-styling-delay) |
 | [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Contenu présent · Différence examinée](/en/projects/uix/extras/disable-entity-picture-image-override) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/disable-entity-picture-image-override) |
 | [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Contenu présent · Différence examinée](/en/projects/uix/extras/disable-icon-styling) | [Contenu présent · Différence examinée](/fr/projects/uix/extras/disable-icon-styling) |

@@ -1,6 +1,6 @@
 {
-  "reviewed_at": "2026-11-19",
-  "source_revision": "3e330667ff27cedcbb84a1f4d370a35b809d2702",
+  "reviewed_at": "2026-11-20",
+  "source_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
   "scope": "Editorial technical-reference review; page coverage, table identifiers, defaults and selected missing examples",
   "limitations": "Translations retain editorial summaries. Not sentence-by-sentence identity, independent linguistic certification or a Home Assistant runtime test.",
   "pages": [
@@ -138,11 +138,11 @@
     },
     {
       "path": "concepts/context.md",
-      "source_sha256": "063dcc74bce121e2824e274c114639293bb81e7e957d4fe03d72b1ddb16bb61e",
+      "source_sha256": "d55f422198f7432376ca490a98ab654e3a1a59fd4dc28f4248c110417df81605",
       "table_identifiers": [],
-      "de_sha256": "f944ebf28f207a5d1231f3edd1577567e2a0a60e61079d508a8209293403299c",
+      "de_sha256": "e7fd54e3fdb7d3ca0c72822009cd3d0abf4fc5862a117c3f1f40c79d20a81b03",
       "de_example_blocks": 10,
-      "fr_sha256": "a6c86a94560a322ac677da4690a1816cd318db484252ec66fa7571f5e8abae5d",
+      "fr_sha256": "b6ee1ade5289b783e877a2de056aedbb4a99ef96af98a92ee9ff79d143624e53",
       "fr_example_blocks": 10
     },
     {
@@ -264,11 +264,11 @@
     },
     {
       "path": "extras/custom-sidebar-panels.md",
-      "source_sha256": "1f7c1290b9f8cf20c3c30ca439da8246b1086469353674a5f07564134df3167e",
+      "source_sha256": "6f5f3e8d23fecced06d5adab4e96bba1c58e3c439bad0f78d4b0da4def3c57dc",
       "table_identifiers": [],
-      "de_sha256": "0eead0c2a3502dcebde76baafe5e5e08ab8e32dbd1e87511a85896793092aa62",
+      "de_sha256": "549e3f398f1369de22c7dd8cea7cf756f9313548c564c0949bf4e3f7a80d78f4",
       "de_example_blocks": 0,
-      "fr_sha256": "63225235d6428a44cea35df501c13681f4b88624ff3e9ee0b661db2a8546625d",
+      "fr_sha256": "f8d688353cffea2ac23c62a1a3b7e5fb78afe2faf50b40a955035ca0a41734de",
       "fr_example_blocks": 0
     },
     {
@@ -388,7 +388,7 @@
     },
     {
       "path": "forge/forge.md",
-      "source_sha256": "8a01c3079a0c506fbe75258ab996e7338a00da1d7515029a16a0f01db32b8fdc",
+      "source_sha256": "ca617b4c2a5ac003d5c9fdf3b5b94b5f1ecd26ee2e23498ce7712893b22e4fc7",
       "table_identifiers": [
         "--uix-forge-footer-border-width",
         "--uix-forge-footer-bottom",
@@ -418,9 +418,9 @@
         "uix",
         "~"
       ],
-      "de_sha256": "f3f17b11f6909ef8cbd2fef866971c1a1cf6f54f8153a036c9d6a69ff4ea97fe",
+      "de_sha256": "62fd3a9c5f3c590ee09a9a755fafba36d3671984a21354027ca5faf9b3869d3f",
       "de_example_blocks": 40,
-      "fr_sha256": "25139fc109b049a4d2030a4ef6c5e3e3950ab63bdfc8bcfd18384f43a9b5c5b4",
+      "fr_sha256": "5b10cb2e7ca31f4aac6cd493ad897b2265271b0373a4afdd9724096ee49f586b",
       "fr_example_blocks": 75
     },
     {
@@ -660,7 +660,7 @@
     },
     {
       "path": "forge/sparks/lock.md",
-      "source_sha256": "6b7feac83186268077da059357d4918c9a2702a50959541cf00b209cc1012759",
+      "source_sha256": "3b2689c9349f93066d820e2bd1bb2d26566e43fa848d08f8506564ff0c69e672",
       "table_identifiers": [
         "--uix-lock-background",
         "--uix-lock-background-blocked",
@@ -717,9 +717,9 @@
         "unlocked_action",
         "users"
       ],
-      "de_sha256": "bab41f4de2ad925d59496a83fcae2b908ced0a7a67a36010493fc95e43000e2b",
+      "de_sha256": "bd3da6288a8467fb38e533c9e285fbed03b513c154f725e746c080a1b932dec7",
       "de_example_blocks": 16,
-      "fr_sha256": "2948a964ab4dabf9067f373e78684ad586629df80ae9f07513e57fdeb5b51c76",
+      "fr_sha256": "fc42a8680871eef5e6e0e01e2540250126a0f777764ba043d51910ac2780ad0b",
       "fr_example_blocks": 16
     },
     {
@@ -990,9 +990,9 @@
       "path": "index.md",
       "source_sha256": "fb3a60fc5f67441b1b931b5e43ddbb0050c5d08e5f3815395c42e2346f9bd94b",
       "table_identifiers": [],
-      "de_sha256": "795ee793a8571fe9af528d375556e2b2ac96ad3c7e03c6448e616c543d36073b",
+      "de_sha256": "1df756456456adc779cd7ca1ac610a0f7aedc4adc0c9003fa4aedcd30cecc724",
       "de_example_blocks": 0,
-      "fr_sha256": "af85a1d3ded2e5a02009eb80dcd1092c37f8d8da9ad694cdfad6633cfba3778d",
+      "fr_sha256": "ba0550587fd7fe7b8217590d51899d039d4a53dd50247cd03dd1856dc5850b37",
       "fr_example_blocks": 0
     },
     {

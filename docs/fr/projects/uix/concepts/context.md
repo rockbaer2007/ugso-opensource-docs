@@ -2,13 +2,9 @@
 description: Définir un comportement structuré pour certaines zones de l’interface Home Assistant avec les contextes UIX.
 ---
 
-> Traduit de la [documentation anglaise d’UIX](https://github.com/Lint-Free-Technology/uix/blob/509b2c2475ce6b574876a8353f88aedf87e7b2e3/docs/source/concepts/context.md) de Lint-Free-Technology/uix sous [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source vérifiée **9.1.0-beta.2**. Base stable **9.0.0**, Home Assistant **2026.11.0** minimum.
+> Traduit de la [documentation anglaise d’UIX](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/docs/source/concepts/context.md) de Lint-Free-Technology/uix sous [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Comparaison avec la version stable **9.1.0** effectuée le 20 novembre 2026. Home Assistant **2026.11.0** minimum.
 
 # Contextes UIX
-
-::: info Disponibilité
-Les contextes UIX et le contexte de nom d’entité sont disponibles depuis la version **9.0.0-beta.3**.
-:::
 
 Les contextes UIX définissent un comportement structuré pour un hôte UIX et tous ses descendants. Les éléments peuvent ainsi tenir compte de leur emplacement dans l’interface sans que chacun ait besoin de ses propres règles de sélection.
 

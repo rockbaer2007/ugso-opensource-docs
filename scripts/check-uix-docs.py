@@ -128,6 +128,8 @@ def main():
         if release not in page.hrefs or revision not in page.hrefs:
             errors.append(f"Version footer does not match release metadata: {url}")
         visible_text = ''.join(page.text)
+        if metadata.get('documentation_revision') and metadata['documentation_revision'][:7] not in visible_text:
+            errors.append(f"Canonical documentation revision missing from page/footer: {url}")
         if metadata.get('preview_version') and (metadata['preview_version'] not in visible_text or metadata['preview_source_revision'][:7] not in visible_text):
             errors.append(f"Preview version/revision missing from page/footer: {url}")
         reviewed = date.fromisoformat(metadata['reviewed_at'])

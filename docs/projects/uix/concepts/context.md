@@ -2,13 +2,9 @@
 description: Wie UIX-Kontexte das Verhalten in bestimmten Bereichen der Home-Assistant-Oberfläche festlegen.
 ---
 
-> Übersetzt aus der [englischen UIX-Dokumentation](https://github.com/Lint-Free-Technology/uix/blob/509b2c2475ce6b574876a8353f88aedf87e7b2e3/docs/source/concepts/context.md) von Lint-Free-Technology/uix unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Geprüfter Quellstand **9.1.0-beta.2**. Stabile Basis **9.0.0**, Home Assistant ab **2026.11.0**.
+> Übersetzt aus der [englischen UIX-Dokumentation](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/docs/source/concepts/context.md) von Lint-Free-Technology/uix unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Am 20.11.2026 mit der stabilen Version **9.1.0** abgeglichen. Home Assistant ab **2026.11.0**.
 
 # UIX-Kontexte
-
-::: info Verfügbarkeit
-UIX-Kontexte und der Kontext für Entitätsnamen sind seit **9.0.0-beta.3** verfügbar.
-:::
 
 UIX-Kontexte legen ein strukturiertes Verhalten für einen UIX-Host und alle Elemente darunter fest. So können Elemente auf ihren Platz in der Oberfläche reagieren, ohne jeweils eigene Auswahlregeln zu benötigen.
 

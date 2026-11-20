@@ -4,6 +4,18 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Comparaison canonique et points ouverts — 20 novembre 2026
+
+La version stable est désormais [UIX 9.1.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0), révision publiée `ca36726`. Les **66** pages canoniques ont été comparées à [`dev fb36536`](https://github.com/Lint-Free-Technology/uix/commit/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6), dont la documentation est identique à celle de la version publiée. Depuis `3e330667`, **quatre pages ont changé et 62 sont inchangées**. Navigation, médias et exemples de code sont inchangés.
+
+- `26494fc0d752` : la mise à jour des badges était déjà intégrée le 19 novembre et reste conservée.
+- `154de19563f4` : le spark Lock bloque aussi les interactions du pointeur sur la bordure stylisée ; ce comportement est précisé en DE/EN/FR.
+- `bfc0f051b174` : les anciennes mentions bêta des contextes, des onglets de barre latérale et du pied de page sont supprimées. Ces fonctions sont présentées dans la version stable.
+
+Les deux points anglais ouverts sur la [page d’état documentaire](/fr/documentation-status) concernaient des différences de versions dans `concepts/context.md` et `extras/custom-sidebar-panels.md`. Les références aux sources, la disponibilité et la version stable ont été corrigées dans le contenu, sans simplement déclarer les pages vérifiées. Le rapport est régénéré avec les empreintes actuelles et le nombre réel de points ouverts ; sa date de revue fixe et périmée a également été corrigée.
+
+[Comparaison des sources du 20 novembre](/projects/uix/source-audit-20261120.json). Les contrôles couvrent les sources, les identifiants techniques, les exemples, les médias, les liens linguistiques, la navigation et la compilation. Il ne s’agit ni d’une certification linguistique indépendante ni d’un test d’exécution Home Assistant. Les sections plus anciennes ci-dessous décrivent leur état historique.
+
 ## Comparaison complète des sources — 19 novembre 2026
 
 Les **66** pages Markdown canoniques ont été comparées à [`dev 3e330667`](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702). Depuis `df5f4d6`, **trois pages ont changé et 63 sont inchangées**. Aucune page n'a été ajoutée ou supprimée ; la navigation et les médias canoniques sont inchangés.

@@ -3,15 +3,15 @@ title: Übersicht
 ---
 # UI eXtension für Home Assistant
 
-::: info Stand geprüft am 19.11.2026
-Alle **66** kanonischen Seiten wurden mit `dev 3e330667` verglichen. Die drei Änderungen betreffen [Badge-Sperren](./forge/sparks/lock#badges-als-ziel), [Dialogparameter bis 512 KiB](./using/templates) und [Footer-Positionierung](./forge/forge#footer). Die Vorschau-Dokumentation folgt dem Quellstand **9.1.0-beta.8**; **9.0.0** bleibt die stabile Basis. Die übrigen 63 Quellseiten sind seit dem letzten Abgleich unverändert.
+::: info Stand geprüft am 20.11.2026 – UIX 9.1.0 stabil
+Alle **66** kanonischen Seiten wurden mit `dev fb36536` und der Dokumentation von **v9.1.0** verglichen. Seit dem letzten Abgleich wurden vier Seiten geändert und 62 sind unverändert. [Lock Spark](./forge/sparks/lock) sperrt auch den gestalteten Rahmen; veraltete Beta-Hinweise bei [Kontexten](./concepts/context), [Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels) und [Footer-Konfiguration](./forge/forge#footer) sind entfernt. Die zwei offenen Sprachprüfhinweise zu Kontexten und Seitenleisten-Verknüpfungen werden durch diesen Inhaltsabgleich behoben.
 :::
 
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
-> Basis ist GitHub-Release [`v9.0.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0) vom 04.11.2026. Benötigt **Home Assistant 2026.11.0 oder neuer**. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`cec1191`](https://github.com/Lint-Free-Technology/uix/commit/cec1191f6ee703284c75dfd3104dba9bb4419200).
-> Der aktuelle Dokumentationsabgleich verwendet `dev 3e330667` vom 19.11.2026. Einzelheiten und Prüfgrenzen stehen im [Übersetzungsstatus](./translation-status).
+> Basis ist GitHub-Release [`v9.1.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0). Benötigt **Home Assistant 2026.11.0 oder neuer**. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`ca36726`](https://github.com/Lint-Free-Technology/uix/commit/ca3672619a11858bbc7f9165db999c0aaa7cef00).
+> Der aktuelle Dokumentationsabgleich verwendet `dev fb36536` vom 20.11.2026. Einzelheiten und Prüfgrenzen stehen im [Übersetzungsstatus](./translation-status).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
 >

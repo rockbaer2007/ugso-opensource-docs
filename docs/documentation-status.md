@@ -6,21 +6,21 @@ aside: false
 
 # Sprachstand der Dokumentation
 
-DE / EN / FR · 2026-11-19
+DE / EN / FR · 2026-11-20
 
 Alle deutschen Referenzseiten sind jetzt auch in EN und FR mit Inhalt vorhanden. Die 128 Platzhalter wurden ersetzt und die 20 fehlenden französischen Seiten ergänzt.
 
-Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Berichtsseiten: vorhandene Sprachfassungen, Platzhalter, Versionsnennungen, Überschriften, Codebeispiele und auflösbare lokale Seiten-/Bildverweise. Unterschiedliche Versionslisten oder Textlängen sind Prüfhinweise, kein automatischer Beweis für veraltete Inhalte. „Inhalt vorhanden“ bestätigt keine vollständige oder sprachlich geprüfte Übersetzung. Aktuelle Upstream-Releases wurden damit nicht geprüft.
+Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Berichtsseiten: vorhandene Sprachfassungen, Platzhalter, Versionsnennungen, Überschriften, Codebeispiele und auflösbare lokale Seiten-/Bildverweise. Unterschiedliche Versionslisten oder Textlängen sind Prüfhinweise, kein automatischer Beweis für veraltete Inhalte. „Inhalt vorhanden“ bestätigt keine vollständige oder sprachlich geprüfte Übersetzung. Das Inventar prüft Upstream-Releases nicht automatisch; separat dokumentierte Quellenabgleiche wie bei UIX bleiben maßgeblich.
 
 ## Bestandsaufnahme
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 252 | 0 | 0 | 0 |
-| EN | 252 | 0 | 0 | 2 |
+| EN | 252 | 0 | 0 | 0 |
 | FR | 252 | 0 | 0 | 0 |
 
-**Abgleich vom 27.10.2026:** Alle 74 EN- und 47 FR-Hinweise wurden geprüft. Echte Lücken und widersprüchliche Angaben wurden korrigiert; bewusst unterschiedliche Versionshistorien, kanonische Vorschauhinweise und redaktionelle Gliederungen sind mit Begründung dokumentiert. Der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Alle 121 Einzelbewertungen](/documentation-review.json).
+**Technischer Abgleich vom 2026-11-20:** Vorhandene Einzelbewertungen sind an die aktuellen Datei-Prüfsummen gebunden; Änderungen erfordern eine erneute Prüfung. Echte Lücken und widersprüchliche Angaben werden korrigiert, bewusst unterschiedliche Versionshistorien und redaktionelle Gliederungen mit Begründung eingeordnet. Die Tabelle zeigt die noch offenen Hinweise; der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Dokumentierte Einzelbewertungen](/documentation-review.json).
 
 
 Die Ergänzungen wurden mit Übersetzungsunterstützung erstellt und technisch gegen die deutsche Vorlage geprüft: Code, Bezeichner, Tabellen und Bilder. 14 weitere Inhaltslücken wurden als ergänzende Referenz geschlossen; vorhandene Seiten und Links bleiben erhalten. Das ist keine vollständige sprachliche Zertifizierung. Verbleibende Prüfhinweise betreffen auch bewusst unterschiedliche Zusammenfassungen und historische Versionsangaben.
@@ -168,7 +168,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/realms) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/rules) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/application) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/concepts/application) |
-| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/concepts/context) | [Inhalt vorhanden](/fr/projects/uix/concepts/context) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Inhalt vorhanden](/en/projects/uix/concepts/context) | [Inhalt vorhanden](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/dom) | [Inhalt vorhanden](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/) | [Inhalt vorhanden](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/contributing) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/contributing) |
@@ -180,7 +180,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 | [projects/uix/developers/index.md](/projects/uix/developers/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/developers/) | [Inhalt vorhanden](/fr/projects/uix/developers/) |
 | [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/developers/themes) | [Inhalt vorhanden](/fr/projects/uix/developers/themes) |
 | [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/always-patch-ha-card) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/always-patch-ha-card) |
-| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Inhalt vorhanden · Prüfhinweise](/en/projects/uix/extras/custom-sidebar-panels) | [Inhalt vorhanden](/fr/projects/uix/extras/custom-sidebar-panels) |
+| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Inhalt vorhanden](/en/projects/uix/extras/custom-sidebar-panels) | [Inhalt vorhanden](/fr/projects/uix/extras/custom-sidebar-panels) |
 | [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/dialog-styling-delay) | [Inhalt vorhanden](/fr/projects/uix/extras/dialog-styling-delay) |
 | [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/disable-entity-picture-image-override) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/disable-entity-picture-image-override) |
 | [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/disable-icon-styling) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/disable-icon-styling) |

@@ -2,14 +2,9 @@
 description: Learn how UIX contexts apply structured, scoped behavior to Home Assistant UI areas.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0-beta.8**, revision [3e33066](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702), reviewed 2026-11-19. Stable baseline on this site: **9.0.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0**, revision [fb36536](https://github.com/Lint-Free-Technology/uix/commit/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6), reviewed 2026-11-20. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # UIX contexts
-
-::: info
-UIX Contexts and Entity-name context available in 9.0.0-beta.3
-
-:::
 
 UIX contexts apply structured behaviour to a UIX host and everything below it. They are a way to make a UI area aware of where it appears without adding selection rules to every consumer.
 

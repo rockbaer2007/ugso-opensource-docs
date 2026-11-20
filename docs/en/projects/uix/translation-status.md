@@ -4,6 +4,18 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Canonical comparison and outstanding findings — 20 November 2026
+
+The stable version is now [UIX 9.1.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0), release revision `ca36726`. All **66** canonical pages were compared with [`dev fb36536`](https://github.com/Lint-Free-Technology/uix/commit/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6), whose documentation is identical to the release. Since `3e330667`, **four pages changed and 62 remain unchanged**. Navigation, media and all code examples are unchanged.
+
+- `26494fc0d752`: the badge update was already incorporated on 19 November and remains intact.
+- `154de19563f4`: Lock Spark also blocks pointer interaction on the styled element border; DE/EN/FR now state this explicitly.
+- `bfc0f051b174`: obsolete beta availability notes for contexts, desktop sidebar tabs and footer configuration were removed. These features are documented as part of the stable release.
+
+The two outstanding English findings on the [documentation status page](/en/documentation-status) concerned version differences in `concepts/context.md` and `extras/custom-sidebar-panels.md`. Source references, availability and stable-version information were corrected in the actual content, rather than merely classifying the pages as reviewed. The status report is regenerated with current hashes and the actual outstanding count; its outdated fixed review date was corrected too.
+
+[Source comparison of 20 November](/projects/uix/source-audit-20261120.json). Checks cover source coverage, technical identifiers, examples, media, language links, navigation and the build. They are not an independent linguistic certification or a Home Assistant runtime test. Older sections below record their historical state.
+
 ## Complete canonical comparison — 19 November 2026
 
 All **66** canonical Markdown pages were compared with [`dev 3e330667`](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702). Since `df5f4d6`, **three pages changed and 63 are unchanged**. No pages were added or removed; canonical navigation and media are unchanged.

@@ -3,7 +3,7 @@ title: Forge
 description: UIX Forge config details including macros, billets, template nesting and UIX Styling.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0-beta.8**, revision [3e33066](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702), reviewed 2026-11-19. Stable baseline on this site: **9.0.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0**, revision [fb36536](https://github.com/Lint-Free-Technology/uix/commit/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6), reviewed 2026-11-20. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # UIX Forge
 
@@ -1020,11 +1020,6 @@ When editing the dashboard in UI mode, the footer is surrounded by a red dashed 
 
 ::: info
 The footer element `<hui-view-footer>` is given the CSS position `fixed` rather than the standard `sticky` of a section footer. This is required as `sticky` is only relative to parent element, so the forged footer can only 'break out' to be a footer using `fixed` position. This will give a lightly different appearance in that the footer will be centered to the window and not just the dashboard area. Use asymmetrical padding via `--uix-forge-footer-padding` to adjust if required.
-
-:::
-
-::: info
-`bottom` config and `max-width` supporting templates available in 9.1.0-beta.5
 
 :::
 

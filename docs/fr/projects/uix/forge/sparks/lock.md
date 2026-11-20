@@ -5,7 +5,7 @@ icon: material/lock
 ---
 # :material-lock: Spark Lock
 
-Le spark `lock` superpose une icône de verrou à tout élément créé avec [UIX Forge](../index.md). Tant que l'élément est verrouillé, toutes les interactions avec lui sont bloquées. L'utilisateur peut le déverrouiller par toucher, appui prolongé ou double toucher, avec éventuellement un code PIN, une phrase secrète ou une simple confirmation. Après la durée `duration` configurée, la superposition verrouille à nouveau l'élément.
+Le spark `lock` superpose une icône de verrou à tout élément créé avec [UIX Forge](../index.md). Tant que l'élément est verrouillé, toutes les interactions du pointeur avec lui, y compris avec sa bordure stylisée, sont bloquées. L'utilisateur peut le déverrouiller par toucher, appui prolongé ou double toucher, avec éventuellement un code PIN, une phrase secrète ou une simple confirmation. Après la durée `duration` configurée, la superposition verrouille à nouveau l'élément.
 
 Les boîtes de dialogue de saisie, de confirmation et de retour d'information utilisent les boîtes de dialogue natives de Home Assistant.
 

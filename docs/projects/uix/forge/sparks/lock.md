@@ -3,7 +3,7 @@ title: Lock Spark
 ---
 # Lock Spark
 
-Der Lock Spark legt eine Sperrebene über ein Forge-Element oder über ein gezieltes Unterelement. Er kann je nach Benutzer, Adminstatus, PIN, Code oder Bestätigung entsperrt werden.
+Der Lock Spark legt eine Sperrebene über ein Forge-Element oder über ein gezieltes Unterelement. Während der Sperre werden alle Zeigerinteraktionen mit dem Element einschließlich seines gestalteten Rahmens blockiert. Er kann je nach Benutzer, Adminstatus, PIN, Code oder Bestätigung entsperrt werden.
 
 ::: tip
 Der Spark schützt die Bedienung in der Oberfläche. Er ersetzt keine serverseitige Home-Assistant-Berechtigung.

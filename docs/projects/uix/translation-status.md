@@ -4,6 +4,18 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Kanonischer Abgleich und offene Prüfhinweise – 20. November 2026
+
+Die stabile Version ist jetzt [UIX 9.1.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0), Release-Revision `ca36726`. Alle **66** kanonischen Seiten wurden mit [`dev fb36536`](https://github.com/Lint-Free-Technology/uix/commit/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6) verglichen; dessen Dokumentation entspricht vollständig dem Release. Seit `3e330667` sind **vier Seiten geändert und 62 unverändert**. Navigation, Medien und sämtliche Codebeispiele sind unverändert.
+
+- `26494fc0d752`: Die Badge-Erweiterung war bereits am 19. November eingepflegt und bleibt erhalten.
+- `154de19563f4`: Lock Spark blockiert Zeigerinteraktionen auch auf dem gestalteten Elementrahmen; DE/EN/FR wurden entsprechend ergänzt.
+- `bfc0f051b174`: Veraltete Beta-Verfügbarkeitshinweise bei Kontexten, Desktop-Seitenleisten-Tabs und Footer-Konfiguration wurden entfernt. Diese Funktionen werden jetzt als Bestandteil der stabilen Version beschrieben.
+
+Die zwei offenen EN-Prüfhinweise auf der [Dokumentationsstatus-Seite](/documentation-status) betrafen Versionsabweichungen bei `concepts/context.md` und `extras/custom-sidebar-panels.md`. Quellangaben, Verfügbarkeit und stabile Versionsbasis wurden inhaltlich angeglichen. Die Seiten wurden nicht bloß als „geprüft“ umklassifiziert. Der Statusbericht wird mit aktuellen Prüfsummen und dem tatsächlichen offenen Bestand neu erzeugt; sein veraltetes festes Prüfdatum wurde ebenfalls korrigiert.
+
+[Quellvergleich vom 20. November](/projects/uix/source-audit-20261120.json). Die Prüfung umfasst Quellabdeckung, technische Bezeichner, Beispiele, Medien, Sprachverweise, Links und Build. Sie ist keine unabhängige sprachliche Zertifizierung und kein Home-Assistant-Laufzeittest. Ältere Abschnitte unten dokumentieren den damaligen Stand.
+
 ## Vollständiger Quellenabgleich vom 19.11.2026
 
 Alle **66** kanonischen Markdown-Seiten wurden mit [`dev 3e330667`](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702) verglichen. Gegenüber dem zuvor geprüften Stand `df5f4d6` sind **drei Seiten geändert, 63 unverändert**. Es gibt keine neuen oder entfernten Seiten; kanonische Navigation und Medien sind unverändert.

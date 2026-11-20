@@ -948,10 +948,6 @@ Lors de la modification du tableau de bord en mode visuel, une bordure rouge en 
 L'élément `<hui-view-footer>` utilise la position CSS `fixed` au lieu de `sticky`, utilisée par le pied de page d'une section. `sticky` dépend de l'élément parent ; seule la position `fixed` permet donc au pied de page Forge de sortir de son conteneur. Son apparence diffère légèrement : il est centré dans la fenêtre, et non uniquement dans la zone du tableau de bord. Ajustez-le si besoin avec des marges intérieures asymétriques via `--uix-forge-footer-padding`.
 
 :::
-::: info Aperçu à partir de 9.1.0-beta.5
-La configuration `bottom` et les modèles dans `max_width` sont disponibles à partir de **9.1.0-beta.5**. La base stable de cette documentation reste UIX 9.0.0.
-:::
-
 Les clés suivantes définissent la position et la largeur maximale du pied de page :
 
 | Clé | Type | Modèles acceptés | Valeur par défaut | Description |

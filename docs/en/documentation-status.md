@@ -6,21 +6,21 @@ aside: false
 
 # Documentation language status
 
-DE / EN / FR · 2026-11-19
+DE / EN / FR · 2026-11-20
 
 All German reference pages now have English and French content. The 128 placeholder pages have been replaced and the 20 missing French pages added.
 
-Every Markdown content page was inventoried, excluding these three generated reports: locale coverage, placeholder text, version mentions, headings, code examples and resolvable local page/image references. Different version lists or text lengths are review signals, not automatic evidence of outdated content. “Content present” does not certify a complete or linguistically reviewed translation. This is not an audit of current upstream releases.
+Every Markdown content page was inventoried, excluding these three generated reports: locale coverage, placeholder text, version mentions, headings, code examples and resolvable local page/image references. Different version lists or text lengths are review signals, not automatic evidence of outdated content. “Content present” does not certify a complete or linguistically reviewed translation. The inventory does not automatically audit upstream releases; separately documented source comparisons, such as UIX, remain authoritative for that scope.
 
 ## Inventory
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 252 | 0 | 0 | 0 |
-| EN | 252 | 0 | 0 | 2 |
+| EN | 252 | 0 | 0 | 0 |
 | FR | 252 | 0 | 0 | 0 |
 
-**Review of 27 October 2026:** All 74 English and 47 French findings were reviewed. Actual gaps and contradictions were corrected; intentional differences in version history, canonical preview notices and editorial structure have recorded explanations. Raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [All 121 assessments](/documentation-review.json).
+**Technical comparison of 2026-11-20:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
 
 
 The additions were created with translation assistance and checked technically against the German source: code, identifiers, tables and images. Fourteen further content gaps were filled with supplementary references while preserving existing pages and links. This is not a complete linguistic certification. Remaining review signals also include intentionally different summaries and historical version mentions.
@@ -168,7 +168,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Content present · Difference reviewed](/en/projects/uix/broker/realms) | [Content present · Difference reviewed](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Content present · Difference reviewed](/en/projects/uix/broker/rules) | [Content present · Difference reviewed](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Content present · Difference reviewed](/en/projects/uix/concepts/application) | [Content present · Difference reviewed](/fr/projects/uix/concepts/application) |
-| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Content present · Review signals](/en/projects/uix/concepts/context) | [Content present](/fr/projects/uix/concepts/context) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Content present](/en/projects/uix/concepts/context) | [Content present](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Content present · Difference reviewed](/en/projects/uix/concepts/dom) | [Content present](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Content present · Difference reviewed](/en/projects/uix/concepts/) | [Content present](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Content present · Difference reviewed](/en/projects/uix/contributing) | [Content present · Difference reviewed](/fr/projects/uix/contributing) |
@@ -180,7 +180,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 | [projects/uix/developers/index.md](/projects/uix/developers/) | [Content present · Difference reviewed](/en/projects/uix/developers/) | [Content present](/fr/projects/uix/developers/) |
 | [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Content present · Difference reviewed](/en/projects/uix/developers/themes) | [Content present](/fr/projects/uix/developers/themes) |
 | [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Content present · Difference reviewed](/en/projects/uix/extras/always-patch-ha-card) | [Content present · Difference reviewed](/fr/projects/uix/extras/always-patch-ha-card) |
-| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Content present · Review signals](/en/projects/uix/extras/custom-sidebar-panels) | [Content present](/fr/projects/uix/extras/custom-sidebar-panels) |
+| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Content present](/en/projects/uix/extras/custom-sidebar-panels) | [Content present](/fr/projects/uix/extras/custom-sidebar-panels) |
 | [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Content present · Difference reviewed](/en/projects/uix/extras/dialog-styling-delay) | [Content present](/fr/projects/uix/extras/dialog-styling-delay) |
 | [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Content present · Difference reviewed](/en/projects/uix/extras/disable-entity-picture-image-override) | [Content present · Difference reviewed](/fr/projects/uix/extras/disable-entity-picture-image-override) |
 | [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Content present · Difference reviewed](/en/projects/uix/extras/disable-icon-styling) | [Content present · Difference reviewed](/fr/projects/uix/extras/disable-icon-styling) |

@@ -2,7 +2,7 @@
 description: Create UIX sidebar links to Home Assistant pages and websites.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0-beta.8**, revision [3e33066](https://github.com/Lint-Free-Technology/uix/commit/3e330667ff27cedcbb84a1f4d370a35b809d2702), reviewed 2026-11-19. Stable baseline on this site: **9.0.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0**, revision [fb36536](https://github.com/Lint-Free-Technology/uix/commit/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6), reviewed 2026-11-20. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Custom sidebar panels
 
@@ -13,11 +13,6 @@ Open **Settings** > **Devices & services** > **UI eXtension** > **Configure**, t
 Enable **Admin required** to restrict the sidebar panel to administrator accounts.
 
 Targets can be either a Home Assistant navigation path beginning with `/`, such as `/config/dashboard`, or an absolute `http` or `https` URL. Other URL schemes are not accepted.
-
-::: info
-Open in new tab (desktop only) available in 9.1.0-beta.0
-
-:::
 
 Enable **Open in new tab (desktop only)** to open a Home Assistant navigation path in a separate tab on desktop browsers. The current Home Assistant tab returns to the page you were viewing. In the Companion app, UIX instead navigates to the path within the app. Website URLs never use this option because they cannot open inside the Companion app.
 
