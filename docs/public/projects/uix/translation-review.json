@@ -69,9 +69,9 @@
       "path": "broker/examples.md",
       "source_sha256": "01f4c08762b229e64459eb473b2f257af35365d9addf3ec3fb4476c0909b255e",
       "table_identifiers": [],
-      "de_sha256": "e1a8e5fe7cf07b0c2e9f24af33a5e80e16d5e3c0cae2a1fee4faec87cb0371ef",
+      "de_sha256": "1cf39de073216fdcf220715f40233fafaea30b242f50ad03dbae26d425485ce7",
       "de_example_blocks": 10,
-      "fr_sha256": "f091f85244649420065e823c805c17083aba05be69558a569670338ea0645346",
+      "fr_sha256": "1fd0920efea4236bd18ccc3bc0f7f662d2b33a2b444ed605011d0fab460b0ed0",
       "fr_example_blocks": 10
     },
     {
@@ -1146,9 +1146,9 @@
         "top-right",
         "view"
       ],
-      "de_sha256": "d7db8bba24528f96502dbda3467f4002c89fd2c699383c7b1cb12fc7789b682c",
+      "de_sha256": "79c0a141c7fc02129268350755121db2ae6e5a4bbd3bccc9df6c190271f89015",
       "de_example_blocks": 17,
-      "fr_sha256": "f3b4173091ffe880d7ca1acf1881c66e09a1f40028381ee355927a39a2102510",
+      "fr_sha256": "b1b2cf50e71b8b840ca8ac61b9b9b9a5d66e817c24d4036d33148f064a43033c",
       "fr_example_blocks": 17
     }
   ]

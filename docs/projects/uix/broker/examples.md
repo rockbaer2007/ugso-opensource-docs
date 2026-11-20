@@ -5,7 +5,7 @@ description: UIX-Broker-Beispiele.
 # Beispiele
 
 ::: info Versionsstand
-Versionsstand: UIX 9.0.0. Frühere Beta-Versionshinweise kennzeichnen die Einführung einzelner Funktionen; diese sind in der stabilen Version enthalten.
+Inhaltlich mit dem festgehaltenen UIX-9.1.0-Quellstand abgeglichen. Frühere Beta-Versionshinweise kennzeichnen die Einführung einzelner Funktionen; diese sind in der stabilen Version enthalten.
 :::
 
 ## Card-Tab im Add-Card-Dialog als Standard setzen

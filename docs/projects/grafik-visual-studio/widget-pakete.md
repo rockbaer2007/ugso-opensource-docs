@@ -80,7 +80,7 @@ Das ZIP darf höchstens 2 MB, das Manifest 200 KB und jedes Bild 50 KB groß sei
 
 ## Schnittstelle 0.2: Diagramm
 
-Das Manifest verwendet `apiVersion: "0.2"` und `render: {"kind":"chart","valueKey":"headline"}`. `headline` ist ein deklariertes Textfeld mit Standardwert. Die Instanz speichert Definitionsversion 0.2. Manifest und Icons bleiben die einzigen zulässigen Paketdateien; das Studio zeichnet mit seinem eigenen SVG-Renderer.
+Das Manifest verwendet `apiVersion: "0.2"` und `render: {"kind":"chart","valueKey":"headline"}`. `headline` ist ein deklariertes Textfeld mit Standardwert. Die Instanz speichert Definitionsversion 0.2. Zusätzlich zu Manifest und geprüften Icons sind seit 0.1.197 die oben beschriebenen optionalen Lizenz- und README-Dateien erlaubt; das Studio zeichnet mit seinem eigenen SVG-Renderer.
 
 Die festen Diagrammschlüssel und Grenzen stehen im [Diagrammvertrag](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/widget-rules.md#widget-paket-schnittstelle-02). Unterstützt werden bis zu zehn JSON-Reihen, Linien/Balken, linke/rechte Achse, Zeit-/Kategorieachse und lesende HA-Zustands-/Attributbindungen. Ausführbare Formatierer und Schreibaktionen sind nicht enthalten. Bestehende Text-Pakete aus 0.1 bleiben nutzbar.
 
@@ -98,8 +98,8 @@ Ab Studio 0.1.190 bietet Schnittstelle 0.2 zusätzlich `render: {"kind":"room-ta
 
 1. Erstelle das ZIP mit dem Dateinamen `mein-paket.wg` und den genannten Dateien. Auch `mein-paket.wg.zip` wird weiter angenommen.
 2. Öffne **Einstellungen → Widget-Pakete** und wähle die lokale ZIP-Datei.
-3. Prüfe den Eintrag mit Paket-ID, Version, API-Version, Widget-Anzahl und Lizenz. Lade die App über **Neuladen** erneut, damit das Set in der Palette erscheint.
+3. Prüfe den Eintrag mit Paket-ID, Version, API-Version, Widget-Anzahl und Lizenz. Seit 0.1.204 wird die Palette nach erfolgreicher Installation direkt aktualisiert.
 
-Ab Studio 0.1.188 darf der lokale Import eine höhere Paketversion installieren, wenn Paketidentität und sämtliche vorhandenen Widget-Definitionen exakt erhalten bleiben. Neue Widgets dürfen hinzukommen, auch bei bereits verwendeten Paket-Widgets. Bestehende Projekte werden nicht verändert. Änderungen vorhandener Definitionen, gleiche Versionen und Downgrades werden abgewiesen. **Entfernen** bleibt gesperrt, solange ein Widget-Typ des Pakets in einem Projekt verwendet wird. GitHub-Installation und automatische Updates sind noch nicht verfügbar. Eigene Skripte, Home-Assistant-Zustandsbindungen und Schreibaktionen gehören nicht zu Schnittstelle 0.1.
+Ab Studio 0.1.188 darf der lokale Import eine höhere Paketversion installieren, wenn Paketidentität und sämtliche vorhandenen Widget-Definitionen exakt erhalten bleiben. Neue Widgets dürfen hinzukommen, auch bei bereits verwendeten Paket-Widgets. Bestehende Projekte werden nicht verändert. Änderungen vorhandener Definitionen, gleiche Versionen und Downgrades werden abgewiesen. **Entfernen** bleibt gesperrt, solange ein Widget-Typ des Pakets in einem Projekt verwendet wird. Seit 0.1.204 ist auch die oben beschriebene GitHub-Installation verfügbar; automatische Hintergrundupdates sind damit nicht gemeint. Eigene Skripte, Home-Assistant-Zustandsbindungen und Schreibaktionen gehören nicht zu Schnittstelle 0.1.
 
 Bestehende Widget-Grundfunktionen sollen bei späteren Erweiterungen erhalten bleiben. Die vollständigen Regeln und weitere geplante Fähigkeiten stehen in den [Widget-Regeln im Quellcode](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/widget-rules.md).

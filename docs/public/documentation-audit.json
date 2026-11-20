@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 215,
+      "content_reviewed": 222,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 215,
+      "content_reviewed": 222,
       "open_review_signals": 0
     }
   },
@@ -3229,6 +3229,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/FR and EN body plus verified-scope tail reread. App312 versus integration306 distinct releases, host-bound project/config/metadata isolation, mounted paths and backups, 300/15s metadata limits and 100project/4MiB/64MiB constraints agree. Historical HA2026.9.4/10.1/10.2 matrix and x86-versusARM qualifications explicitly limited; no new HA operation."
           }
         },
         "fr": {
@@ -3263,6 +3268,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/FR and EN body plus verified-scope tail reread. App312 versus integration306 distinct releases, host-bound project/config/metadata isolation, mounted paths and backups, 300/15s metadata limits and 100project/4MiB/64MiB constraints agree. Historical HA2026.9.4/10.1/10.2 matrix and x86-versusARM qualifications explicitly limited; no new HA operation."
           }
         }
       }
@@ -4053,13 +4063,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Historical111type/Blockly13.3 audit distinguished from0.1.47 action functions; eightASCIIparams, HAsequence bindings, no earlyreturn, Jinja expansion and RGB lists/boundary rounding agree. FR false combinedgetremove completion corrected to pending, fractional count mistranslation and half-rounding corrected; contradictory summary excludes earlyreturn/recursion instead of nowavailable actionfunctions. Simulated/browser verification not liveHA."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/blockly-audit.md",
           "status": "content-present",
-          "sha256": "e6f6fac99c1b0fdbb08db986bf20974f3a702b7a57f824013effb7fe5572c4ad",
-          "words": 2758,
+          "sha256": "525920895c6eb4035829add1aea0b6e738b43cdaa7fa01ee3c6be7190979771a",
+          "words": 2762,
           "headings": 12,
           "examples": 0,
           "versions": [
@@ -4080,6 +4095,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Historical111type/Blockly13.3 audit distinguished from0.1.47 action functions; eightASCIIparams, HAsequence bindings, no earlyreturn, Jinja expansion and RGB lists/boundary rounding agree. FR false combinedgetremove completion corrected to pending, fractional count mistranslation and half-rounding corrected; contradictory summary excludes earlyreturn/recursion instead of nowavailable actionfunctions. Simulated/browser verification not liveHA."
           }
         }
       }
@@ -7558,13 +7578,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Twelvedockingpoints, Ctrl/Alt/Shift interactions,6pxthreshold, fourpaths/outputonly octagon, runtimehiding at z<=-100 and branch inheritance agree. Animationmanual0.2-20s/numeric0.05-20Hz/target0.05-5Hz, signedzero/missing semantics and default-off automation agree. FR absolutevalue threshold and keyboardlabels corrected; separate step4 restored. Full EN reread after initial truncation."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/svg-line.md",
           "status": "content-present",
-          "sha256": "3a8718e8745047f54bf30a4a856932cf830326a44290f7a0f7dc07bd1c7a326b",
-          "words": 2592,
+          "sha256": "e9faf9af7b50af4220ea74aed44fff3418a1c83bb1749d11d4055249e99284a6",
+          "words": 2605,
           "headings": 10,
           "examples": 1,
           "versions": [
@@ -7587,6 +7612,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Twelvedockingpoints, Ctrl/Alt/Shift interactions,6pxthreshold, fourpaths/outputonly octagon, runtimehiding at z<=-100 and branch inheritance agree. Animationmanual0.2-20s/numeric0.05-20Hz/target0.05-5Hz, signedzero/missing semantics and default-off automation agree. FR absolutevalue threshold and keyboardlabels corrected; separate step4 restored. Full EN reread after initial truncation."
           }
         }
       }
@@ -8018,8 +8048,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/widget-pakete.md",
           "status": "content-present",
-          "sha256": "66b2bb5d841eb3a6a98b08d944dfa4b158f94986d679f2e1936c0186c15e8396",
-          "words": 1814,
+          "sha256": "81895f93f0688ce23ba7107973516ce6d494285934d5e0527f7a5a4aa5eb5de2",
+          "words": 1834,
           "headings": 6,
           "examples": 1,
           "versions": [
@@ -8053,8 +8083,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/widget-packages.md",
           "status": "content-present",
-          "sha256": "d4482e78e8582626544ddaa68b02e86aa13d82b8765577d8250c612a5e60edd7",
-          "words": 1858,
+          "sha256": "df1e0f6e6d34fa60fdabdb77c7430c5eb2264abc87163046d5a310dfb93817f2",
+          "words": 1877,
           "headings": 6,
           "examples": 1,
           "versions": [
@@ -8096,13 +8126,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full interface0.1/0.2 reference,12 host-renderer additions, tenreadrows/720points/3entities, declarative validation/size/defaults/identity restrictions agree. All locales obsolete no-GitHub/noREADME/reloadneeded claims reconciled with own0.1.197/204 sections. FR cataloglocale/power-versus-performance/sharedtimer meanings corrected; no executablepackage or backgroundupdates claimed."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/widget-packages.md",
           "status": "content-present",
-          "sha256": "eff024684b55991c257794193e78c70dda348d2754121330739c989e81a24954",
-          "words": 2728,
+          "sha256": "b3db98a07f0ad1d4457c1b19564f84540a7c47303477134effd4bba25cb17c2f",
+          "words": 2750,
           "headings": 6,
           "examples": 1,
           "versions": [
@@ -8144,6 +8179,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full interface0.1/0.2 reference,12 host-renderer additions, tenreadrows/720points/3entities, declarative validation/size/defaults/identity restrictions agree. All locales obsolete no-GitHub/noREADME/reloadneeded claims reconciled with own0.1.197/204 sections. FR cataloglocale/power-versus-performance/sharedtimer meanings corrected; no executablepackage or backgroundupdates claimed."
           }
         }
       }
@@ -11199,12 +11239,12 @@
         "de": {
           "path": "projects/uix/broker/examples.md",
           "status": "content-present",
-          "sha256": "e1a8e5fe7cf07b0c2e9f24af33a5e80e16d5e3c0cae2a1fee4faec87cb0371ef",
-          "words": 921,
+          "sha256": "1cf39de073216fdcf220715f40233fafaea30b242f50ad03dbae26d425485ce7",
+          "words": 926,
           "headings": 10,
           "examples": 10,
           "versions": [
-            "9.0.0"
+            "9.1.0"
           ],
           "unresolved_local_references": []
         },
@@ -11221,12 +11261,9 @@
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "9.0.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "2026.11.0",
-              "9.1.0"
+              "2026.11.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -11236,20 +11273,25 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Five current broker examples and marked historical YAML-mode archive read; anchors, admin-only guard, synchronous block/event deepmerge, trigger-only filter, server helper/custombrowser event and exact matchIDs agree. FR accordion translated as extension/module corrected to foldout panels; toggle incorrectly turn-on corrected, home-assistant technical tag restored. DE frozen9.1 review label reconciled."
           }
         },
         "fr": {
           "path": "fr/projects/uix/broker/examples.md",
           "status": "content-present",
-          "sha256": "f091f85244649420065e823c805c17083aba05be69558a569670338ea0645346",
-          "words": 1851,
+          "sha256": "1fd0920efea4236bd18ccc3bc0f7f662d2b33a2b444ed605011d0fab460b0ed0",
+          "words": 1854,
           "headings": 11,
           "examples": 10,
           "versions": [],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
-              "9.0.0"
+              "9.1.0"
             ],
             "versions_only_in_translation": [],
             "fewer_examples": false,
@@ -11260,6 +11302,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Five current broker examples and marked historical YAML-mode archive read; anchors, admin-only guard, synchronous block/event deepmerge, trigger-only filter, server helper/custombrowser event and exact matchIDs agree. FR accordion translated as extension/module corrected to foldout panels; toggle incorrectly turn-on corrected, home-assistant technical tag restored. DE frozen9.1 review label reconciled."
           }
         }
       }
@@ -16400,8 +16447,8 @@
         "de": {
           "path": "projects/uix/using/view-backgrounds.md",
           "status": "content-present",
-          "sha256": "d7db8bba24528f96502dbda3467f4002c89fd2c699383c7b1cb12fc7789b682c",
-          "words": 932,
+          "sha256": "79c0a141c7fc02129268350755121db2ae6e5a4bbd3bccc9df6c190271f89015",
+          "words": 971,
           "headings": 16,
           "examples": 17,
           "versions": [],
@@ -16433,13 +16480,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "TenCSSvariables/five simultaneous layers, authentication/source types, view/full coverage, ninepositions and drawer-over-background variable priority agree with frozenEN. Missing DE double-header compensation caveat, center/screen-spacepan and exact upper-leftquarter centering restored. FR camera reuse explicit; spinners/tab recovery/static images unaffected retained."
           }
         },
         "fr": {
           "path": "fr/projects/uix/using/view-backgrounds.md",
           "status": "content-present",
-          "sha256": "f3b4173091ffe880d7ca1acf1881c66e09a1f40028381ee355927a39a2102510",
-          "words": 1590,
+          "sha256": "b1b2cf50e71b8b840ca8ac61b9b9b9a5d66e817c24d4036d33148f064a43033c",
+          "words": 1591,
           "headings": 16,
           "examples": 17,
           "versions": [],
@@ -16456,6 +16508,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "TenCSSvariables/five simultaneous layers, authentication/source types, view/full coverage, ninepositions and drawer-over-background variable priority agree with frozenEN. Missing DE double-header compensation caveat, center/screen-spacepan and exact upper-leftquarter centering restored. FR camera reuse explicit; spinners/tab recovery/static images unaffected retained."
           }
         }
       }
@@ -17209,7 +17266,7 @@
         "en": {
           "path": "en/collection/calendar-card-pro/konfiguration.md",
           "status": "content-present",
-          "sha256": "286d3129c0a91ad02689238329c94d170aa1af67a57edae5e05bf4289d7b3f97",
+          "sha256": "9d5389d39380b2bf3b054ddaaeb235cbd14708948fdaa8e4a26f85fc462e5c68",
           "words": 1527,
           "headings": 15,
           "examples": 0,
@@ -17229,13 +17286,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All optiongroups/rows compared:4.1.0 filter/replace/eventtype, list versus column defaults, compact exclusions, calendarlocal expiration, 6column properties, style/countdown/location weather/actions and30min refresh. FR heading wrongly1.0 fixed4.1.0 and merged bullet split; EN card/title and day separator mistranslations fixed. DEtail/ENhead reread after truncation."
           }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/konfiguration.md",
           "status": "content-present",
-          "sha256": "652b8cb58bb8b9213d674d1ade7b197cedc32262826ddeaa51f90b06727e5705",
-          "words": 1950,
+          "sha256": "48717f7f936b3193c3199956039911172cdaef801c5e0d69f391873c40d73b51",
+          "words": 1951,
           "headings": 15,
           "examples": 0,
           "versions": [
@@ -17254,6 +17316,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All optiongroups/rows compared:4.1.0 filter/replace/eventtype, list versus column defaults, compact exclusions, calendarlocal expiration, 6column properties, style/countdown/location weather/actions and30min refresh. FR heading wrongly1.0 fixed4.1.0 and merged bullet split; EN card/title and day separator mistranslations fixed. DEtail/ENhead reread after truncation."
           }
         }
       }

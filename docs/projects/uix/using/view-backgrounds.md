@@ -39,7 +39,7 @@ Für Kamera-Entity, Image-Entity, Video oder Bild muss kein `url()` angegeben we
 
 | Wert | Beschreibung |
 | --- | --- |
-| `view` | Standard. Füllt nur den Inhaltsbereich, also unterhalb der Top-Bar und rechts neben der Sidebar. Die Offsets passen sich automatisch an. |
+| `view` | Standard. Füllt nur den Inhaltsbereich, also unterhalb der Top-Bar und rechts neben der Sidebar. Die Offsets passen sich automatisch an. Bei Panels mit doppelter Kopfleiste wird nur `--header-height` ausgeglichen. |
 | `full` | Füllt den kompletten Viewport und liegt hinter Top-Bar und Sidebar. |
 
 ## Grundbeispiele
@@ -211,7 +211,7 @@ my-theme:
     }
 ```
 
-Bei 2x-Zoom kann die obere linke Bildhälfte in den Mittelpunkt geschoben werden:
+Mit `center` erfolgt der Zoom vom Bildmittelpunkt aus; Pan verschiebt danach unabhängig vom Zoom in Bildschirmkoordinaten. Bei 2x-Zoom lässt sich der Mittelpunkt des oberen linken Bildviertels durch Verschieben um 50 % der Containerbreite nach rechts und 50 % der Containerhöhe nach unten zentrieren:
 
 ```yaml
 uix-drawer: |

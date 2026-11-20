@@ -9,11 +9,12 @@ description: Référence de configuration pour Calendar Card Pro.
 
 Cette page reprend les groupes d'options de la documentation de référence originale. Pour des exemples détaillés, la documentation originale en anglais fait foi.
 
-## Nouveautés dans la version 1.0 {#neu-in-v4-1-0}
+## Nouveautés dans la version 4.1.0 {#neu-in-v4-1-0}
 
 La version `4.1.0` ajoute plusieurs contrôles liés au calendrier :
 
-- `event_type` permet de distinguer les événements avec heure précise des événements sur toute la journée. - `filter_field` permet à `blocklist` et `allowlist` d'agir sur le titre, le lieu ou la description.
+- `event_type` permet de distinguer les événements avec heure précise des événements sur toute la journée.
+- `filter_field` permet à `blocklist` et `allowlist` d'agir sur le titre, le lieu ou la description.
 - `replace_field`, `replace_pattern` et `replace_with` modifient le texte affiché, sans pour autant altérer l'événement du calendrier lui-même.
 - `allday_expires_at` permet de faire se terminer plus tôt dans la journée les événements d'une journée entière.
 - `days_of_week` limite un calendrier aux jours ouvrables ou au week-end.

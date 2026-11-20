@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 215 | 37 |
-| FR | 215 | 37 |
+| EN | 222 | 30 |
+| FR | 222 | 30 |
 
 ## Inventaire complet des pages
 
@@ -85,7 +85,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/atlas-plugins/terminal.md](/projects/atlas-plugins/terminal) | [Contenu vérifié](/en/projects/atlas-plugins/terminal) | [Contenu vérifié](/fr/projects/atlas-plugins/terminal) |
 | [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Comparaison technique effectuée](/en/projects/atlas/card-editor) | [Contenu présent · Différence examinée](/fr/projects/atlas/card-editor) |
 | [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Comparaison technique effectuée](/en/projects/atlas/development-status) | [Contenu présent · Différence examinée](/fr/projects/atlas/development-status) |
-| [projects/atlas/frontend.md](/projects/atlas/frontend) | [Comparaison technique effectuée](/en/projects/atlas/frontend) | [Comparaison technique effectuée](/fr/projects/atlas/frontend) |
+| [projects/atlas/frontend.md](/projects/atlas/frontend) | [Contenu vérifié](/en/projects/atlas/frontend) | [Contenu vérifié](/fr/projects/atlas/frontend) |
 | [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Comparaison technique effectuée](/en/projects/atlas/homeassistant) | [Comparaison technique effectuée](/fr/projects/atlas/homeassistant) |
 | [projects/atlas/index.md](/projects/atlas/) | [Contenu vérifié](/en/projects/atlas/) | [Contenu vérifié](/fr/projects/atlas/) |
 | [projects/atlas/linux.md](/projects/atlas/linux) | [Contenu vérifié](/en/projects/atlas/linux) | [Contenu vérifié](/fr/projects/atlas/linux) |
@@ -95,7 +95,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Contenu vérifié](/en/projects/atlas/overview) | [Contenu vérifié](/fr/projects/atlas/overview) |
 | [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Contenu vérifié](/en/projects/automation-status-card/) | [Contenu vérifié](/fr/projects/automation-status-card/) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Contenu vérifié](/en/projects/blocks-for-ha/advanced) | [Contenu vérifié](/fr/projects/blocks-for-ha/advanced) |
-| [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/blockly-audit) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/blockly-audit) |
+| [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Contenu vérifié](/en/projects/blocks-for-ha/blockly-audit) | [Contenu vérifié](/fr/projects/blocks-for-ha/blockly-audit) |
 | [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/blocks) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Contenu vérifié](/en/projects/blocks-for-ha/catalog/) | [Contenu vérifié](/fr/projects/blocks-for-ha/catalog/) |
 | [projects/blocks-for-ha/catalog/sensor-light.md](/projects/blocks-for-ha/catalog/sensor-light) | [Contenu vérifié](/en/projects/blocks-for-ha/catalog/sensor-light) | [Contenu vérifié](/fr/projects/blocks-for-ha/catalog/sensor-light) |
@@ -133,13 +133,13 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/grafik-visual-studio/palette-runtime.md](/projects/grafik-visual-studio/palette-runtime) | [Contenu vérifié](/en/projects/grafik-visual-studio/palette-runtime) | [Contenu vérifié](/fr/projects/grafik-visual-studio/palette-runtime) |
 | [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Contenu vérifié](/en/projects/grafik-visual-studio/printer) | [Contenu vérifié](/fr/projects/grafik-visual-studio/printer) |
 | [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Contenu vérifié](/en/projects/grafik-visual-studio/solar) | [Contenu vérifié](/fr/projects/grafik-visual-studio/solar) |
-| [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/svg-line) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/svg-line) |
+| [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Contenu vérifié](/en/projects/grafik-visual-studio/svg-line) | [Contenu vérifié](/fr/projects/grafik-visual-studio/svg-line) |
 | [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/svg-linebox-math) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/svg-linebox-math) |
 | [projects/grafik-visual-studio/svg-linebox.md](/projects/grafik-visual-studio/svg-linebox) | [Contenu vérifié](/en/projects/grafik-visual-studio/svg-linebox) | [Contenu vérifié](/fr/projects/grafik-visual-studio/svg-linebox) |
 | [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/technic) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/technic) |
 | [projects/grafik-visual-studio/tool-pakete.md](/projects/grafik-visual-studio/tool-pakete) | [Contenu vérifié](/en/projects/grafik-visual-studio/tool-packages) | [Contenu vérifié](/fr/projects/grafik-visual-studio/tool-packages) |
 | [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/weather-heating) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/weather-heating) |
-| [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/widget-packages) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/widget-packages) |
+| [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Contenu vérifié](/en/projects/grafik-visual-studio/widget-packages) | [Contenu vérifié](/fr/projects/grafik-visual-studio/widget-packages) |
 | [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/widgets) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/widgets) |
 | [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Contenu vérifié](/en/projects/grafik-visual-studio/zeichnen) | [Contenu vérifié](/fr/projects/grafik-visual-studio/zeichnen) |
 | [projects/hadash/ansicht-exportieren.md](/projects/hadash/ansicht-exportieren) | [Contenu vérifié](/en/projects/hadash/export-view) | [Contenu vérifié](/fr/projects/hadash/export-view) |
@@ -175,7 +175,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Comparaison technique effectuée](/en/projects/sidebar-manager/) | [Comparaison technique effectuée](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/broker) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/broker) |
 | [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Contenu présent · Différence examinée](/en/projects/uix/broker/directives) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/directives) |
-| [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Contenu présent · Différence examinée](/en/projects/uix/broker/examples) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/examples) |
+| [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/examples) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/examples) |
 | [projects/uix/broker/index.md](/projects/uix/broker/) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/) |
 | [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/interaction-anchors) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/interaction-anchors) |
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/realms) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/realms) |
@@ -241,7 +241,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/using/section-backgrounds.md](/projects/uix/using/section-backgrounds) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/section-backgrounds) | [Contenu vérifié](/fr/projects/uix/using/section-backgrounds) |
 | [projects/uix/using/templates.md](/projects/uix/using/templates) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/templates) | [Contenu vérifié](/fr/projects/uix/using/templates) |
 | [projects/uix/using/themes.md](/projects/uix/using/themes) | [Contenu présent · Différence examinée](/en/projects/uix/using/themes) | [Comparaison technique effectuée](/fr/projects/uix/using/themes) |
-| [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Contenu présent · Différence examinée](/en/projects/uix/using/view-backgrounds) | [Comparaison technique effectuée](/fr/projects/uix/using/view-backgrounds) |
+| [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/view-backgrounds) | [Contenu vérifié](/fr/projects/uix/using/view-backgrounds) |
 | [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Contenu vérifié](/en/projects/ultimate-timer/examples) | [Contenu vérifié](/fr/projects/ultimate-timer/examples) |
 | [projects/ultimate-timer/funktionsweise.md](/projects/ultimate-timer/funktionsweise) | [Contenu vérifié](/en/projects/ultimate-timer/how-it-works) | [Contenu vérifié](/fr/projects/ultimate-timer/how-it-works) |
 | [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Contenu vérifié](/en/projects/ultimate-timer/) | [Contenu vérifié](/fr/projects/ultimate-timer/) |
@@ -252,7 +252,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Contenu vérifié](/en/collection/calendar-card-pro/features) | [Contenu vérifié](/fr/collection/calendar-card-pro/features) |
 | [sammlung/calendar-card-pro/index.md](/sammlung/calendar-card-pro/) | [Contenu vérifié](/en/collection/calendar-card-pro/) | [Contenu vérifié](/fr/collection/calendar-card-pro/) |
 | [sammlung/calendar-card-pro/installation.md](/sammlung/calendar-card-pro/installation) | [Contenu vérifié](/en/collection/calendar-card-pro/installation) | [Contenu vérifié](/fr/collection/calendar-card-pro/installation) |
-| [sammlung/calendar-card-pro/konfiguration.md](/sammlung/calendar-card-pro/konfiguration) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/konfiguration) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/konfiguration) |
+| [sammlung/calendar-card-pro/konfiguration.md](/sammlung/calendar-card-pro/konfiguration) | [Contenu vérifié](/en/collection/calendar-card-pro/konfiguration) | [Contenu vérifié](/fr/collection/calendar-card-pro/konfiguration) |
 | [sammlung/calendar-card-pro/lizenz-und-stand.md](/sammlung/calendar-card-pro/lizenz-und-stand) | [Contenu vérifié](/en/collection/calendar-card-pro/lizenz-und-stand) | [Contenu vérifié](/fr/collection/calendar-card-pro/lizenz-und-stand) |
 | [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Contenu vérifié](/en/collection/calendar-card-pro/nutzung) | [Contenu vérifié](/fr/collection/calendar-card-pro/nutzung) |
 | [sammlung/dashboard-layout-card-v2/index.md](/sammlung/dashboard-layout-card-v2/) | [Contenu vérifié](/en/collection/dashboard-layout-card-v2/) | [Contenu vérifié](/fr/collection/dashboard-layout-card-v2/) |

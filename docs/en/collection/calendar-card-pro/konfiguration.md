@@ -44,7 +44,7 @@ Version `4.1.0` adds several calendar-related controls:
 
 | option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `column.day_header_gap` | string | `8px` | Distance between day head and first appointment. |
+| `column.day_header_gap` | string | `8px` | Distance between day header and first appointment. |
 | `column.day_header_separator_width` | string | `0px` | Width of line under day header. |
 | `column.day_header_separator_color` | string | `var(--divider-color)` | Color of the line under the day header. |
 | `column.min_day_width` | number | `140` | Smallest column width in pixels. |
@@ -89,7 +89,7 @@ An entry in `entities` can only be an entity ID or an object with its own settin
 
 | option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `title` | string | - | Map title, may contain Home Assistant templates. |
+| `title` | string | - | Card title, may contain Home Assistant templates. |
 | `title_font_size` | string | `--calendar-card-font-size-title` | Title font size. |
 | `title_color` | string | `--calendar-card-color-title` | Title color. |
 
@@ -117,7 +117,7 @@ An entry in `entities` can only be an entity ID or an object with its own settin
 | `week_number_background_color` | string | `#03a9f450` | Week number background color. |
 | `first_day_of_week` | string | `system` | Start of week: `monday`, `sunday` or `system`. |
 | `day_separator_width` | string | `0px` | dividing line between days. |
-| `day_separator_color` | string | `var(--secondary-text-color)` | Tag separator color. |
+| `day_separator_color` | string | `var(--secondary-text-color)` | Day separator color. |
 | `week_separator_width` | string | `0px` | dividing line between weeks. |
 | `week_separator_color` | string | `#03a9f450` | Color of the week separator line. |
 | `month_separator_width` | string | `0px` | dividing line between months. |

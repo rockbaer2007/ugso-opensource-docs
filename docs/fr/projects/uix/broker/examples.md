@@ -9,8 +9,8 @@ description: Exemples de courtier UIX
 Résultat :
 
 - Sélectionnez l'onglet de la carte lorsque la boîte de dialogue d'ajout de carte s'ouvre.
-- Assurez-vous que le premier module d'extension, Suggéré ou Favoris, est ouvert.
-- Réduisez tous les autres extensions.
+- Assurez-vous que le premier panneau dépliable, Suggestions ou Favoris, est ouvert.
+- Repliez tous les autres panneaux.
 
 Méthode :
 
@@ -19,8 +19,8 @@ Méthode :
 - Utilisez une ancre d'interaction courte et absolue qui correspond à la boîte de dialogue (`hui-dialog-create-card`).
 - Directives :
     - Définissez la propriété `_currTab` de la boîte de dialogue sur `card`. Cette propriété étant réactive, il n’est pas nécessaire de forcer une mise à jour.
-    - Définissez la propriété `expanded` du premier extenseur sur `true`, à l’aide d’une ancre relative de forme courte.
-    - Définissez la propriété `expanded` des autres extensions sur `false`, à l’aide d’ancres relatives de forme courte.
+    - Définissez la propriété `expanded` du premier panneau dépliable sur `true`, à l’aide d’une ancre relative de forme courte.
+    - Définissez la propriété `expanded` des autres panneaux dépliables sur `false`, à l’aide d’ancres relatives de forme courte.
 
 ```yaml
 uix_broker:
@@ -361,7 +361,7 @@ Méthode (interaction dans la barre latérale) :
 - Utilise un ancrage absolu compact pour `ha-sidebar`
 - Directives :
     - Directive `javascript` pour définir les paramètres d'objet à utiliser dans la directive `button`. `icon` et `color` sont définis par état d'entité.
-    - Utilise la directive `button` pour placer le bouton après l'élément du menu Accueil en utilisant un objet de style simple pour donner une ombre de boîte et une taille d'icône réduite. Action définie pour activer la lumière. REMARQUE : La configuration et le fonctionnement de ce bouton sont conformes au [UIX Forge Button spark](../forge/sparks/button.md), pour lequel l'entité est incluse pour l'action uniquement.
+    - Utilise la directive `button` pour placer le bouton après l'élément du menu Accueil en utilisant un objet de style simple pour donner une ombre de boîte et une taille d'icône réduite. Action définie pour inverser l'état de la lumière (`toggle`). REMARQUE : La configuration et le fonctionnement de ce bouton sont conformes au [UIX Forge Button spark](../forge/sparks/button.md), pour lequel l'entité est incluse pour l'action uniquement.
 
 ```yaml
   - realm: browser
@@ -403,7 +403,7 @@ Résultat :
 Méthode :
 
 - Écoutez l'événement `state_changed` dans le domaine du serveur.
-- Placez l'ancre sur l'élément d'assistant à domicile en utilisant une forme d'ancrage compacte absolue.
+- Placez l'ancre sur l'élément `home-assistant` en utilisant une forme d'ancrage compacte absolue.
 - Directive `event` pour déclencher l'événement de navigateur personnalisé `uix-update-sidebar` si l'état modifié `entity_id` est `light.bed_light`. Cet exemple se déclencherait également si `entity_id` est `light.other_light`. Ceci est inclus dans cet exemple pour montrer l'utilisation de `or:` dans la correspondance ; vous utiliseriez une telle technique si vous ajoutiez d'autres directives de bouton à l'exemple ci-dessus.
 
 ```yaml

@@ -2,8 +2,8 @@
   "reviewed_at": "2026-11-20",
   "scope_pages": 504,
   "coverage": {
-    "en": 215,
-    "fr": 215
+    "en": 222,
+    "fr": 222
   },
   "scope": "Content/meaning review of all 504 EN/FR inventory entries, including previously assessed structural differences. Reviewed pages only; unreviewed pages retain their existing technical status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
@@ -689,6 +689,26 @@
       "target_sha256": "71425b70022c0cd6e3f586f5ca1c5c2438f4cd939dc056f1984c0e14ef4512c0"
     },
     {
+      "source": "projects/atlas/frontend.md",
+      "locale": "en",
+      "target": "en/projects/atlas/frontend.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE/FR and EN body plus verified-scope tail reread. App312 versus integration306 distinct releases, host-bound project/config/metadata isolation, mounted paths and backups, 300/15s metadata limits and 100project/4MiB/64MiB constraints agree. Historical HA2026.9.4/10.1/10.2 matrix and x86-versusARM qualifications explicitly limited; no new HA operation.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "bbb4ebe75a5d23cb2feb8a87d0da4139cfd650ad93b7e80c9daa0d88b7a2c7fb",
+      "target_sha256": "267c1b0b2492ccb14986bcdeffe1f05dccfbea3065f3a19ddad2fb3a608936d8"
+    },
+    {
+      "source": "projects/atlas/frontend.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas/frontend.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE/FR and EN body plus verified-scope tail reread. App312 versus integration306 distinct releases, host-bound project/config/metadata isolation, mounted paths and backups, 300/15s metadata limits and 100project/4MiB/64MiB constraints agree. Historical HA2026.9.4/10.1/10.2 matrix and x86-versusARM qualifications explicitly limited; no new HA operation.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "bbb4ebe75a5d23cb2feb8a87d0da4139cfd650ad93b7e80c9daa0d88b7a2c7fb",
+      "target_sha256": "1c860027885139c3a0b9a1dc52776014ed04a96b912ece1baf5338bd90d58ed8"
+    },
+    {
       "source": "projects/atlas/index.md",
       "locale": "en",
       "target": "en/projects/atlas/index.md",
@@ -847,6 +867,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "f40456006bf2ab0574ce26dd1017e9dd89463eb3b989196036506ac90537d0d3",
       "target_sha256": "1265abdf2632ff272bbba053715e4fbc53211125c3b9bd89d21b970977532166"
+    },
+    {
+      "source": "projects/blocks-for-ha/blockly-audit.md",
+      "locale": "en",
+      "target": "en/projects/blocks-for-ha/blockly-audit.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Historical111type/Blockly13.3 audit distinguished from0.1.47 action functions; eightASCIIparams, HAsequence bindings, no earlyreturn, Jinja expansion and RGB lists/boundary rounding agree. FR false combinedgetremove completion corrected to pending, fractional count mistranslation and half-rounding corrected; contradictory summary excludes earlyreturn/recursion instead of nowavailable actionfunctions. Simulated/browser verification not liveHA.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e486c610fb1373cad7729692d1685b38349632295c3831c40aa18240369e4676",
+      "target_sha256": "898e0a2d09393dcc3316c55efed0ac8c78965c842c01a45f66f8f5c05ac72875"
+    },
+    {
+      "source": "projects/blocks-for-ha/blockly-audit.md",
+      "locale": "fr",
+      "target": "fr/projects/blocks-for-ha/blockly-audit.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Historical111type/Blockly13.3 audit distinguished from0.1.47 action functions; eightASCIIparams, HAsequence bindings, no earlyreturn, Jinja expansion and RGB lists/boundary rounding agree. FR false combinedgetremove completion corrected to pending, fractional count mistranslation and half-rounding corrected; contradictory summary excludes earlyreturn/recursion instead of nowavailable actionfunctions. Simulated/browser verification not liveHA.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e486c610fb1373cad7729692d1685b38349632295c3831c40aa18240369e4676",
+      "target_sha256": "525920895c6eb4035829add1aea0b6e738b43cdaa7fa01ee3c6be7190979771a"
     },
     {
       "source": "projects/blocks-for-ha/catalog/index.md",
@@ -1469,6 +1509,26 @@
       "target_sha256": "d6386feaafde04e262dc45dadfeead2dbf1a08f80e018b16d19a3ef453e395c0"
     },
     {
+      "source": "projects/grafik-visual-studio/svg-line.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/svg-line.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Twelvedockingpoints, Ctrl/Alt/Shift interactions,6pxthreshold, fourpaths/outputonly octagon, runtimehiding at z<=-100 and branch inheritance agree. Animationmanual0.2-20s/numeric0.05-20Hz/target0.05-5Hz, signedzero/missing semantics and default-off automation agree. FR absolutevalue threshold and keyboardlabels corrected; separate step4 restored. Full EN reread after initial truncation.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "8d4f8b1ad1b409caf11020aeca2a4d5ac49f474a42ed83bf187ea3956a8b4152",
+      "target_sha256": "6dc77bec2ffd84f27b6589e4fc0ec661961a83fef9431fe6e61b5212af64c814"
+    },
+    {
+      "source": "projects/grafik-visual-studio/svg-line.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/svg-line.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Twelvedockingpoints, Ctrl/Alt/Shift interactions,6pxthreshold, fourpaths/outputonly octagon, runtimehiding at z<=-100 and branch inheritance agree. Animationmanual0.2-20s/numeric0.05-20Hz/target0.05-5Hz, signedzero/missing semantics and default-off automation agree. FR absolutevalue threshold and keyboardlabels corrected; separate step4 restored. Full EN reread after initial truncation.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "8d4f8b1ad1b409caf11020aeca2a4d5ac49f474a42ed83bf187ea3956a8b4152",
+      "target_sha256": "e9faf9af7b50af4220ea74aed44fff3418a1c83bb1749d11d4055249e99284a6"
+    },
+    {
       "source": "projects/grafik-visual-studio/svg-linebox.md",
       "locale": "en",
       "target": "en/projects/grafik-visual-studio/svg-linebox.md",
@@ -1507,6 +1567,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "03bc0a0804bffedead0ab6c5d4935c0d28f71c450ada16b94fb15bb38390d355",
       "target_sha256": "4f23c0daa1313cc6f322bec7901ffc8d6c44be93cfeca385917d3c0f92a3e607"
+    },
+    {
+      "source": "projects/grafik-visual-studio/widget-pakete.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/widget-packages.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full interface0.1/0.2 reference,12 host-renderer additions, tenreadrows/720points/3entities, declarative validation/size/defaults/identity restrictions agree. All locales obsolete no-GitHub/noREADME/reloadneeded claims reconciled with own0.1.197/204 sections. FR cataloglocale/power-versus-performance/sharedtimer meanings corrected; no executablepackage or backgroundupdates claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "81895f93f0688ce23ba7107973516ce6d494285934d5e0527f7a5a4aa5eb5de2",
+      "target_sha256": "df1e0f6e6d34fa60fdabdb77c7430c5eb2264abc87163046d5a310dfb93817f2"
+    },
+    {
+      "source": "projects/grafik-visual-studio/widget-pakete.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/widget-packages.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full interface0.1/0.2 reference,12 host-renderer additions, tenreadrows/720points/3entities, declarative validation/size/defaults/identity restrictions agree. All locales obsolete no-GitHub/noREADME/reloadneeded claims reconciled with own0.1.197/204 sections. FR cataloglocale/power-versus-performance/sharedtimer meanings corrected; no executablepackage or backgroundupdates claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "81895f93f0688ce23ba7107973516ce6d494285934d5e0527f7a5a4aa5eb5de2",
+      "target_sha256": "b3db98a07f0ad1d4457c1b19564f84540a7c47303477134effd4bba25cb17c2f"
     },
     {
       "source": "projects/grafik-visual-studio/zeichnen.md",
@@ -2096,6 +2176,36 @@
         "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
         "path": "broker/broker.md",
         "source_sha256": "a818e69828337d874b81c64f08da994edf57b49eae82decc35d3e9ffe83dc010"
+      }
+    },
+    {
+      "source": "projects/uix/broker/examples.md",
+      "locale": "en",
+      "target": "en/projects/uix/broker/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Five current broker examples and marked historical YAML-mode archive read; anchors, admin-only guard, synchronous block/event deepmerge, trigger-only filter, server helper/custombrowser event and exact matchIDs agree. FR accordion translated as extension/module corrected to foldout panels; toggle incorrectly turn-on corrected, home-assistant technical tag restored. DE frozen9.1 review label reconciled.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "1cf39de073216fdcf220715f40233fafaea30b242f50ad03dbae26d425485ce7",
+      "target_sha256": "89bda503610d633cbcfd6f8701d63b7268f5a1f80e7058aa60ffcf1b224c8b05",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "broker/examples.md",
+        "source_sha256": "01f4c08762b229e64459eb473b2f257af35365d9addf3ec3fb4476c0909b255e"
+      }
+    },
+    {
+      "source": "projects/uix/broker/examples.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/broker/examples.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Five current broker examples and marked historical YAML-mode archive read; anchors, admin-only guard, synchronous block/event deepmerge, trigger-only filter, server helper/custombrowser event and exact matchIDs agree. FR accordion translated as extension/module corrected to foldout panels; toggle incorrectly turn-on corrected, home-assistant technical tag restored. DE frozen9.1 review label reconciled.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "1cf39de073216fdcf220715f40233fafaea30b242f50ad03dbae26d425485ce7",
+      "target_sha256": "1fd0920efea4236bd18ccc3bc0f7f662d2b33a2b444ed605011d0fab460b0ed0",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "broker/examples.md",
+        "source_sha256": "01f4c08762b229e64459eb473b2f257af35365d9addf3ec3fb4476c0909b255e"
       }
     },
     {
@@ -3729,6 +3839,36 @@
       }
     },
     {
+      "source": "projects/uix/using/view-backgrounds.md",
+      "locale": "en",
+      "target": "en/projects/uix/using/view-backgrounds.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "TenCSSvariables/five simultaneous layers, authentication/source types, view/full coverage, ninepositions and drawer-over-background variable priority agree with frozenEN. Missing DE double-header compensation caveat, center/screen-spacepan and exact upper-leftquarter centering restored. FR camera reuse explicit; spinners/tab recovery/static images unaffected retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "79c0a141c7fc02129268350755121db2ae6e5a4bbd3bccc9df6c190271f89015",
+      "target_sha256": "94f7c7d890536dd854407529e3040cd4d9825d7520566ced17673ceaf2659f4d",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/view-backgrounds.md",
+        "source_sha256": "b54c1cefd45ce7e52fd2a0bb29c881cd5858d6ef8711a8b26dac1e3e80b42b5f"
+      }
+    },
+    {
+      "source": "projects/uix/using/view-backgrounds.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/using/view-backgrounds.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "TenCSSvariables/five simultaneous layers, authentication/source types, view/full coverage, ninepositions and drawer-over-background variable priority agree with frozenEN. Missing DE double-header compensation caveat, center/screen-spacepan and exact upper-leftquarter centering restored. FR camera reuse explicit; spinners/tab recovery/static images unaffected retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "79c0a141c7fc02129268350755121db2ae6e5a4bbd3bccc9df6c190271f89015",
+      "target_sha256": "b1b2cf50e71b8b840ca8ac61b9b9b9a5d66e817c24d4036d33148f064a43033c",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/view-backgrounds.md",
+        "source_sha256": "b54c1cefd45ce7e52fd2a0bb29c881cd5858d6ef8711a8b26dac1e3e80b42b5f"
+      }
+    },
+    {
       "source": "projects/ultimate-timer/beispiele.md",
       "locale": "en",
       "target": "en/projects/ultimate-timer/examples.md",
@@ -3927,6 +4067,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "5f9e63322ec98bcb9a12ec2986475e988758eac4b88cba044c87c9ac863f6d79",
       "target_sha256": "024df92dc1bb0559cd197fa95f63a21b74ee5563a63193b8459a42631d902f74"
+    },
+    {
+      "source": "sammlung/calendar-card-pro/konfiguration.md",
+      "locale": "en",
+      "target": "en/collection/calendar-card-pro/konfiguration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All optiongroups/rows compared:4.1.0 filter/replace/eventtype, list versus column defaults, compact exclusions, calendarlocal expiration, 6column properties, style/countdown/location weather/actions and30min refresh. FR heading wrongly1.0 fixed4.1.0 and merged bullet split; EN card/title and day separator mistranslations fixed. DEtail/ENhead reread after truncation.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "8fa59b177f81b292f03efb7281a2ddfeeaf5afa897aeea3854b9660f9441c1a3",
+      "target_sha256": "9d5389d39380b2bf3b054ddaaeb235cbd14708948fdaa8e4a26f85fc462e5c68"
+    },
+    {
+      "source": "sammlung/calendar-card-pro/konfiguration.md",
+      "locale": "fr",
+      "target": "fr/collection/calendar-card-pro/konfiguration.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All optiongroups/rows compared:4.1.0 filter/replace/eventtype, list versus column defaults, compact exclusions, calendarlocal expiration, 6column properties, style/countdown/location weather/actions and30min refresh. FR heading wrongly1.0 fixed4.1.0 and merged bullet split; EN card/title and day separator mistranslations fixed. DEtail/ENhead reread after truncation.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "8fa59b177f81b292f03efb7281a2ddfeeaf5afa897aeea3854b9660f9441c1a3",
+      "target_sha256": "48717f7f936b3193c3199956039911172cdaef801c5e0d69f391873c40d73b51"
     },
     {
       "source": "sammlung/calendar-card-pro/lizenz-und-stand.md",

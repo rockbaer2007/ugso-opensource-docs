@@ -6,7 +6,7 @@ description: Afficher un flux caméra, une vidéo ou une image en arrière-plan 
 UIX peut afficher un **flux de caméra**, une **vidéo** ou une **image** en plein écran derrière les vues de votre tableau de bord Home Assistant et les panneaux de configuration. L'arrière-plan est entièrement contrôlé par des variables CSS définies dans votre thème et prend en charge les modèles Jinja2 ; vous pouvez donc changer de source selon la vue sans code personnalisé.
 
 ::: info Fonctionnement
-Le correctif de style de `ha-drawer` contrôle également l'arrière-plan de la vue, ce qui permet à cette fonction de s'appliquer aux vues du tableau de bord *et* aux panneaux de configuration. Définissez les variables sur `:host` dans la clé de thème `uix-drawer` afin qu'elles soient accessibles via `getComputedStyle(ha-drawer)`. Comme `ha-drawer` persiste pendant la navigation, l'élément d'arrière-plan est **réutilisé** entre les vues lorsque la source (vidéo ou image) est identique ; il n'est pas détruit puis recréé.
+Le correctif de style de `ha-drawer` contrôle également l'arrière-plan de la vue, ce qui permet à cette fonction de s'appliquer aux vues du tableau de bord *et* aux panneaux de configuration. Définissez les variables sur `:host` dans la clé de thème `uix-drawer` afin qu'elles soient accessibles via `getComputedStyle(ha-drawer)`. Comme `ha-drawer` persiste pendant la navigation, l'élément d'arrière-plan est **réutilisé** entre les vues lorsque la source (caméra, vidéo ou image) est identique ; il n'est pas détruit puis recréé.
 
 :::
 ## Variables CSS

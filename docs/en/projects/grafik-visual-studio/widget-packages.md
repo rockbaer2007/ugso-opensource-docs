@@ -45,7 +45,7 @@ Under **Settings → Widget packages → Local**, you can install a local `.wg` 
 
 ## Interface 0.2: chart
 
-The manifest uses `apiVersion: "0.2"` and `render: {"kind":"chart","valueKey":"headline"}`. Declare `headline` as a text field with a default. Instances save definition version 0.2. Manifest and validated icons remain the only allowed package files; Studio uses its own SVG renderer.
+The manifest uses `apiVersion: "0.2"` and `render: {"kind":"chart","valueKey":"headline"}`. Declare `headline` as a text field with a default. Instances save definition version 0.2. Alongside the manifest and validated icons, the optional license and README files described below are accepted since 0.1.197; Studio uses its own SVG renderer.
 
 The fixed property keys and limits are listed in the [chart contract](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/widget-rules.md#widget-paket-schnittstelle-02). It supports up to ten JSON series, line/bar charts, left/right axes, time/category axes and read-only HA state/attribute bindings. Executable formatters and write actions are excluded. Existing 0.1 text packages remain supported.
 
@@ -98,8 +98,8 @@ From Studio 0.1.190, interface 0.2 also supports `render: {"kind":"room-table","
 
 1. Create a ZIP named, for example, `my-package.wg` with the files above. `my-package.wg.zip` remains supported.
 2. Select the local ZIP under **Settings → Widget packages**.
-3. Review its package ID, version, API version, widget count and license. Use **Reload** to make the set appear in the palette.
+3. Review its package ID, version, API version, widget count and license. Since 0.1.204, successful installation refreshes the palette directly.
 
-From Studio 0.1.188, the local import may install a higher package version if its identity and all existing widget definitions remain exactly unchanged. It may add new widgets even while existing package widgets are used. Saved projects are not modified. Changes to existing definitions, identical versions and downgrades are rejected. **Remove** remains blocked while any project uses a widget type from that package. GitHub installation and automatic updates are not available yet. Custom scripts, Home Assistant state binding and write actions remain outside interface 0.1.
+From Studio 0.1.188, the local import may install a higher package version if its identity and all existing widget definitions remain exactly unchanged. It may add new widgets even while existing package widgets are used. Saved projects are not modified. Changes to existing definitions, identical versions and downgrades are rejected. **Remove** remains blocked while any project uses a widget type from that package. GitHub installation is available since 0.1.204 as described above; this does not mean automatic background updates. Custom scripts, Home Assistant state binding and write actions remain outside interface 0.1.
 
 Later extensions should preserve existing widget behavior. See the complete [widget rules in the source repository](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/ha_grafik_visual_studio/docs/widget-rules.md).
