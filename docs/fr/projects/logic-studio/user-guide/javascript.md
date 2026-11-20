@@ -30,7 +30,7 @@ Exporte une fonction d’un script global et sélectionne ce script dans le proj
 
 ### Play et démarrage automatique
 
-Enregistre, puis lance Play. Active le démarrage automatique par projet si nécessaire.
+Enregistre, puis lance Play. Active le démarrage automatique par projet si le projet doit redémarrer après un redémarrage de l’application.
 
 ### Journal d’exécution
 

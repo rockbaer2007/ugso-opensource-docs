@@ -1,6 +1,6 @@
 ---
 title: Recommandations HA
-description: Sélection de liens vers des cartes, intégrations, applications et outils pour Home Assistant, accompagnés d'une documentation en français ou
+description: Sélection de liens vers des cartes, intégrations, applications et outils pour Home Assistant, accompagnés d'une documentation en allemand ou
   offrant une bonne prise en main.
 ---
 <a id="recommandations-ha"></a>

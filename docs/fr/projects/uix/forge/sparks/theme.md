@@ -8,6 +8,8 @@ Le spark `theme` applique un thème frontend à un élément cible.
 
 Utilisez-le pour appliquer à un élément créé avec UIX Forge un thème existant, sans ajouter de configuration de style UIX.
 
+Il s'applique à un élément précis. Pour les styles UIX globaux d'un thème, consultez la [configuration des thèmes](../../using/themes).
+
 ## Configuration
 
 | Clé | Type | Obligatoire | Valeur par défaut | Description |
@@ -83,4 +85,6 @@ element:
 
 ::: tip
 Le helper DOM [`uix_forge_path()`](../../concepts/dom.md#uix_forge_path0-forge-helper) vous aide à déterminer le chemin à utiliser pour `for`.
+
+Si le thème ne change pas visiblement, vérifiez que la cible existe dans le DOM et que l'élément Home Assistant utilise les variables définies.
 :::

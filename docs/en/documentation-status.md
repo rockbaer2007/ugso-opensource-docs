@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 81 | 171 |
-| FR | 81 | 171 |
+| EN | 101 | 151 |
+| FR | 101 | 151 |
 
 ## Complete page inventory
 
@@ -68,10 +68,10 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects-diverse/index.md](/projects-diverse/) | [Content reviewed](/en/projects-diverse/) | [Content reviewed](/fr/projects-diverse/) |
 | [projects-mqtt/index.md](/projects-mqtt/) | [Content reviewed](/en/projects-mqtt/) | [Content reviewed](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Technically compared](/en/projects/atlas-plugins/automation-extractor) | [Technically compared](/fr/projects/atlas-plugins/automation-extractor) |
-| [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Technically compared](/en/projects/atlas-plugins/demo-repository) | [Technically compared](/fr/projects/atlas-plugins/demo-repository) |
+| [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Content reviewed](/en/projects/atlas-plugins/demo-repository) | [Content reviewed](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Technically compared](/en/projects/atlas-plugins/developers/compatibility) | [Technically compared](/fr/projects/atlas-plugins/developers/compatibility) |
 | [projects/atlas-plugins/developers/index.md](/projects/atlas-plugins/developers/) | [Technically compared](/en/projects/atlas-plugins/developers/) | [Technically compared](/fr/projects/atlas-plugins/developers/) |
-| [projects/atlas-plugins/developers/manifest.md](/projects/atlas-plugins/developers/manifest) | [Technically compared](/en/projects/atlas-plugins/developers/manifest) | [Technically compared](/fr/projects/atlas-plugins/developers/manifest) |
+| [projects/atlas-plugins/developers/manifest.md](/projects/atlas-plugins/developers/manifest) | [Content reviewed](/en/projects/atlas-plugins/developers/manifest) | [Content reviewed](/fr/projects/atlas-plugins/developers/manifest) |
 | [projects/atlas-plugins/developers/publishing.md](/projects/atlas-plugins/developers/publishing) | [Technically compared](/en/projects/atlas-plugins/developers/publishing) | [Technically compared](/fr/projects/atlas-plugins/developers/publishing) |
 | [projects/atlas-plugins/developers/runtime.md](/projects/atlas-plugins/developers/runtime) | [Technically compared](/en/projects/atlas-plugins/developers/runtime) | [Technically compared](/fr/projects/atlas-plugins/developers/runtime) |
 | [projects/atlas-plugins/file-studio.md](/projects/atlas-plugins/file-studio) | [Technically compared](/en/projects/atlas-plugins/file-studio) | [Technically compared](/fr/projects/atlas-plugins/file-studio) |
@@ -90,7 +90,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/atlas/index.md](/projects/atlas/) | [Technically compared](/en/projects/atlas/) | [Technically compared](/fr/projects/atlas/) |
 | [projects/atlas/linux.md](/projects/atlas/linux) | [Technically compared](/en/projects/atlas/linux) | [Technically compared](/fr/projects/atlas/linux) |
 | [projects/atlas/plugins.md](/projects/atlas/plugins) | [Content reviewed](/en/projects/atlas/plugins) | [Content reviewed](/fr/projects/atlas/plugins) |
-| [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Technically compared](/en/projects/atlas/tablet-test) | [Technically compared](/fr/projects/atlas/tablet-test) |
+| [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Content reviewed](/en/projects/atlas/tablet-test) | [Content reviewed](/fr/projects/atlas/tablet-test) |
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Technically compared](/en/projects/atlas/tablet-uix-dauertest) | [Technically compared](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Technically compared](/en/projects/atlas/overview) | [Technically compared](/fr/projects/atlas/overview) |
 | [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Technically compared](/en/projects/automation-status-card/) | [Technically compared](/fr/projects/automation-status-card/) |
@@ -156,14 +156,14 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/index.md](/projects/) | [Technically compared](/en/projects/) | [Technically compared](/fr/projects/) |
 | [projects/logic-studio/index.md](/projects/logic-studio/) | [Technically compared](/en/projects/logic-studio/) | [Technically compared](/fr/projects/logic-studio/) |
 | [projects/logic-studio/user-guide.md](/projects/logic-studio/user-guide) | [Technically compared](/en/projects/logic-studio/user-guide) | [Technically compared](/fr/projects/logic-studio/user-guide) |
-| [projects/logic-studio/user-guide/blocks-a.md](/projects/logic-studio/user-guide/blocks-a) | [Technically compared](/en/projects/logic-studio/user-guide/blocks-a) | [Technically compared](/fr/projects/logic-studio/user-guide/blocks-a) |
+| [projects/logic-studio/user-guide/blocks-a.md](/projects/logic-studio/user-guide/blocks-a) | [Content reviewed](/en/projects/logic-studio/user-guide/blocks-a) | [Content reviewed](/fr/projects/logic-studio/user-guide/blocks-a) |
 | [projects/logic-studio/user-guide/blocks-js.md](/projects/logic-studio/user-guide/blocks-js) | [Technically compared](/en/projects/logic-studio/user-guide/blocks-js) | [Technically compared](/fr/projects/logic-studio/user-guide/blocks-js) |
 | [projects/logic-studio/user-guide/feedback.md](/projects/logic-studio/user-guide/feedback) | [Content reviewed](/en/projects/logic-studio/user-guide/feedback) | [Content reviewed](/fr/projects/logic-studio/user-guide/feedback) |
 | [projects/logic-studio/user-guide/function-plan.md](/projects/logic-studio/user-guide/function-plan) | [Technically compared](/en/projects/logic-studio/user-guide/function-plan) | [Technically compared](/fr/projects/logic-studio/user-guide/function-plan) |
 | [projects/logic-studio/user-guide/ha-yaml.md](/projects/logic-studio/user-guide/ha-yaml) | [Technically compared](/en/projects/logic-studio/user-guide/ha-yaml) | [Technically compared](/fr/projects/logic-studio/user-guide/ha-yaml) |
-| [projects/logic-studio/user-guide/javascript.md](/projects/logic-studio/user-guide/javascript) | [Technically compared](/en/projects/logic-studio/user-guide/javascript) | [Technically compared](/fr/projects/logic-studio/user-guide/javascript) |
+| [projects/logic-studio/user-guide/javascript.md](/projects/logic-studio/user-guide/javascript) | [Content reviewed](/en/projects/logic-studio/user-guide/javascript) | [Content reviewed](/fr/projects/logic-studio/user-guide/javascript) |
 | [projects/logic-studio/user-guide/rules.md](/projects/logic-studio/user-guide/rules) | [Technically compared](/en/projects/logic-studio/user-guide/rules) | [Technically compared](/fr/projects/logic-studio/user-guide/rules) |
-| [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Technically compared](/en/projects/logic-studio/user-guide/typescript) | [Technically compared](/fr/projects/logic-studio/user-guide/typescript) |
+| [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Content reviewed](/en/projects/logic-studio/user-guide/typescript) | [Content reviewed](/fr/projects/logic-studio/user-guide/typescript) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Technically compared](/en/projects/mqtt-client/) | [Technically compared](/fr/projects/mqtt-client/) |
 | [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Technically compared](/en/projects/mqtt-client/iobroker-roles) | [Technically compared](/fr/projects/mqtt-client/iobroker-roles) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Content reviewed](/en/projects/parcel-to-mqtt/examples) | [Content reviewed](/fr/projects/parcel-to-mqtt/examples) |
@@ -192,11 +192,11 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/developers/cards.md](/projects/uix/developers/cards) | [Content present · Difference reviewed](/en/projects/uix/developers/cards) | [Technically compared](/fr/projects/uix/developers/cards) |
 | [projects/uix/developers/index.md](/projects/uix/developers/) | [Content reviewed · Difference reviewed](/en/projects/uix/developers/) | [Content reviewed](/fr/projects/uix/developers/) |
 | [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Content reviewed · Difference reviewed](/en/projects/uix/developers/themes) | [Content reviewed](/fr/projects/uix/developers/themes) |
-| [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Content present · Difference reviewed](/en/projects/uix/extras/always-patch-ha-card) | [Content present · Difference reviewed](/fr/projects/uix/extras/always-patch-ha-card) |
+| [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/always-patch-ha-card) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/always-patch-ha-card) |
 | [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Technically compared](/en/projects/uix/extras/custom-sidebar-panels) | [Technically compared](/fr/projects/uix/extras/custom-sidebar-panels) |
 | [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Content present · Difference reviewed](/en/projects/uix/extras/dialog-styling-delay) | [Technically compared](/fr/projects/uix/extras/dialog-styling-delay) |
-| [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Content present · Difference reviewed](/en/projects/uix/extras/disable-entity-picture-image-override) | [Content present · Difference reviewed](/fr/projects/uix/extras/disable-entity-picture-image-override) |
-| [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Content present · Difference reviewed](/en/projects/uix/extras/disable-icon-styling) | [Content present · Difference reviewed](/fr/projects/uix/extras/disable-icon-styling) |
+| [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/disable-entity-picture-image-override) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/disable-entity-picture-image-override) |
+| [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/disable-icon-styling) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/disable-icon-styling) |
 | [projects/uix/extras/frontend-states-throttling.md](/projects/uix/extras/frontend-states-throttling) | [Content present · Difference reviewed](/en/projects/uix/extras/frontend-states-throttling) | [Content present · Difference reviewed](/fr/projects/uix/extras/frontend-states-throttling) |
 | [projects/uix/extras/hash-template-variable-updates.md](/projects/uix/extras/hash-template-variable-updates) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/hash-template-variable-updates) | [Content reviewed](/fr/projects/uix/extras/hash-template-variable-updates) |
 | [projects/uix/extras/index.md](/projects/uix/extras/) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/) |
@@ -221,7 +221,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/forge/sparks/overlay-icon.md](/projects/uix/forge/sparks/overlay-icon) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/overlay-icon) | [Technically compared](/fr/projects/uix/forge/sparks/overlay-icon) |
 | [projects/uix/forge/sparks/search.md](/projects/uix/forge/sparks/search) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/search) | [Technically compared](/fr/projects/uix/forge/sparks/search) |
 | [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/state-badge) | [Technically compared](/fr/projects/uix/forge/sparks/state-badge) |
-| [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/theme) | [Technically compared](/fr/projects/uix/forge/sparks/theme) |
+| [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/theme) | [Content reviewed](/fr/projects/uix/forge/sparks/theme) |
 | [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/tile-icon) | [Content present · Difference reviewed](/fr/projects/uix/forge/sparks/tile-icon) |
 | [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/tooltip) | [Content present · Difference reviewed](/fr/projects/uix/forge/sparks/tooltip) |
 | [projects/uix/guides.md](/projects/uix/guides) | [Content reviewed · Difference reviewed](/en/projects/uix/guides) | [Content reviewed](/fr/projects/uix/guides) |
@@ -251,16 +251,16 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Content reviewed](/en/collection/calendar-card-pro/entwicklung) | [Content reviewed](/fr/collection/calendar-card-pro/entwicklung) |
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Technically compared](/en/collection/calendar-card-pro/features) | [Technically compared](/fr/collection/calendar-card-pro/features) |
 | [sammlung/calendar-card-pro/index.md](/sammlung/calendar-card-pro/) | [Technically compared](/en/collection/calendar-card-pro/) | [Technically compared](/fr/collection/calendar-card-pro/) |
-| [sammlung/calendar-card-pro/installation.md](/sammlung/calendar-card-pro/installation) | [Technically compared](/en/collection/calendar-card-pro/installation) | [Technically compared](/fr/collection/calendar-card-pro/installation) |
+| [sammlung/calendar-card-pro/installation.md](/sammlung/calendar-card-pro/installation) | [Content reviewed](/en/collection/calendar-card-pro/installation) | [Content reviewed](/fr/collection/calendar-card-pro/installation) |
 | [sammlung/calendar-card-pro/konfiguration.md](/sammlung/calendar-card-pro/konfiguration) | [Technically compared](/en/collection/calendar-card-pro/konfiguration) | [Technically compared](/fr/collection/calendar-card-pro/konfiguration) |
-| [sammlung/calendar-card-pro/lizenz-und-stand.md](/sammlung/calendar-card-pro/lizenz-und-stand) | [Technically compared](/en/collection/calendar-card-pro/lizenz-und-stand) | [Technically compared](/fr/collection/calendar-card-pro/lizenz-und-stand) |
+| [sammlung/calendar-card-pro/lizenz-und-stand.md](/sammlung/calendar-card-pro/lizenz-und-stand) | [Content reviewed](/en/collection/calendar-card-pro/lizenz-und-stand) | [Content reviewed](/fr/collection/calendar-card-pro/lizenz-und-stand) |
 | [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Content reviewed](/en/collection/calendar-card-pro/nutzung) | [Content reviewed](/fr/collection/calendar-card-pro/nutzung) |
 | [sammlung/dashboard-layout-card-v2/index.md](/sammlung/dashboard-layout-card-v2/) | [Technically compared](/en/collection/dashboard-layout-card-v2/) | [Technically compared](/fr/collection/dashboard-layout-card-v2/) |
 | [sammlung/flex-table-card/aktionen.md](/sammlung/flex-table-card/aktionen) | [Content reviewed](/en/collection/flex-table-card/aktionen) | [Content reviewed](/fr/collection/flex-table-card/aktionen) |
 | [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Technically compared](/en/collection/flex-table-card/beispiele-aus-forum) | [Technically compared](/fr/collection/flex-table-card/beispiele-aus-forum) |
 | [sammlung/flex-table-card/css.md](/sammlung/flex-table-card/css) | [Content reviewed](/en/collection/flex-table-card/css) | [Content reviewed](/fr/collection/flex-table-card/css) |
 | [sammlung/flex-table-card/datenquellen.md](/sammlung/flex-table-card/datenquellen) | [Content reviewed](/en/collection/flex-table-card/datenquellen) | [Content reviewed](/fr/collection/flex-table-card/datenquellen) |
-| [sammlung/flex-table-card/externe-daten.md](/sammlung/flex-table-card/externe-daten) | [Technically compared](/en/collection/flex-table-card/externe-daten) | [Technically compared](/fr/collection/flex-table-card/externe-daten) |
+| [sammlung/flex-table-card/externe-daten.md](/sammlung/flex-table-card/externe-daten) | [Content reviewed](/en/collection/flex-table-card/externe-daten) | [Content reviewed](/fr/collection/flex-table-card/externe-daten) |
 | [sammlung/flex-table-card/formatierung.md](/sammlung/flex-table-card/formatierung) | [Content reviewed](/en/collection/flex-table-card/formatierung) | [Content reviewed](/fr/collection/flex-table-card/formatierung) |
 | [sammlung/flex-table-card/grundlagen.md](/sammlung/flex-table-card/grundlagen) | [Content reviewed](/en/collection/flex-table-card/grundlagen) | [Content reviewed](/fr/collection/flex-table-card/grundlagen) |
 | [sammlung/flex-table-card/header-footer.md](/sammlung/flex-table-card/header-footer) | [Content reviewed](/en/collection/flex-table-card/header-footer) | [Content reviewed](/fr/collection/flex-table-card/header-footer) |
@@ -268,7 +268,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [sammlung/flex-table-card/installation.md](/sammlung/flex-table-card/installation) | [Content reviewed](/en/collection/flex-table-card/installation) | [Content reviewed](/fr/collection/flex-table-card/installation) |
 | [sammlung/flex-table-card/paketliste.md](/sammlung/flex-table-card/paketliste) | [Content reviewed](/en/collection/flex-table-card/paketliste) | [Content reviewed](/fr/collection/flex-table-card/paketliste) |
 | [sammlung/flex-table-card/referenz.md](/sammlung/flex-table-card/referenz) | [Technically compared](/en/collection/flex-table-card/referenz) | [Technically compared](/fr/collection/flex-table-card/referenz) |
-| [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Technically compared](/en/collection/flex-table-card/sortierung) | [Technically compared](/fr/collection/flex-table-card/sortierung) |
+| [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Content reviewed](/en/collection/flex-table-card/sortierung) | [Content reviewed](/fr/collection/flex-table-card/sortierung) |
 | [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Technically compared](/en/collection/frosted-glass-manager/) | [Technically compared](/fr/collection/frosted-glass-manager/) |
 | [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Technically compared](/en/collection/frosted-glass-theme/) | [Technically compared](/fr/collection/frosted-glass-theme/) |
 | [sammlung/ha-2026-11-kompatibilitaet.md](/sammlung/ha-2026-11-kompatibilitaet) | [Technically compared](/en/collection/ha-2026-11-compatibility) | [Technically compared](/fr/collection/ha-2026-11-compatibility) |
@@ -276,23 +276,23 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Technically compared](/en/collection/ha-automation-exporter/) | [Technically compared](/fr/collection/ha-automation-exporter/) |
 | [sammlung/ha-blueprints.md](/sammlung/ha-blueprints) | [Content reviewed](/en/collection/ha-blueprints) | [Content reviewed](/fr/collection/ha-blueprints) |
 | [sammlung/ha-cards.md](/sammlung/ha-cards) | [Technically compared](/en/collection/ha-cards) | [Technically compared](/fr/collection/ha-cards) |
-| [sammlung/ha-dashboard.md](/sammlung/ha-dashboard) | [Technically compared](/en/collection/ha-dashboard) | [Technically compared](/fr/collection/ha-dashboard) |
-| [sammlung/ha-empfehlungen.md](/sammlung/ha-empfehlungen) | [Technically compared](/en/collection/ha-recommendations) | [Technically compared](/fr/collection/ha-recommendations) |
+| [sammlung/ha-dashboard.md](/sammlung/ha-dashboard) | [Content reviewed](/en/collection/ha-dashboard) | [Content reviewed](/fr/collection/ha-dashboard) |
+| [sammlung/ha-empfehlungen.md](/sammlung/ha-empfehlungen) | [Content reviewed](/en/collection/ha-recommendations) | [Content reviewed](/fr/collection/ha-recommendations) |
 | [sammlung/ha-integrationen.md](/sammlung/ha-integrationen) | [Content reviewed](/en/collection/ha-integrations) | [Content reviewed](/fr/collection/ha-integrations) |
 | [sammlung/ha-tools.md](/sammlung/ha-tools) | [Content reviewed](/en/collection/ha-tools) | [Content reviewed](/fr/collection/ha-tools) |
 | [sammlung/hacs-dokus.md](/sammlung/hacs-dokus) | [Content reviewed](/en/collection/hacs-docs) | [Content reviewed](/fr/collection/hacs-docs) |
 | [sammlung/index.md](/sammlung/) | [Technically compared](/en/collection/) | [Technically compared](/fr/collection/) |
 | [sammlung/mushroom/beispiele.md](/sammlung/mushroom/beispiele) | [Content reviewed](/en/collection/mushroom/beispiele) | [Content reviewed](/fr/collection/mushroom/beispiele) |
 | [sammlung/mushroom/entwicklung.md](/sammlung/mushroom/entwicklung) | [Content reviewed](/en/collection/mushroom/entwicklung) | [Content reviewed](/fr/collection/mushroom/entwicklung) |
-| [sammlung/mushroom/fehlersuche.md](/sammlung/mushroom/fehlersuche) | [Technically compared](/en/collection/mushroom/fehlersuche) | [Technically compared](/fr/collection/mushroom/fehlersuche) |
+| [sammlung/mushroom/fehlersuche.md](/sammlung/mushroom/fehlersuche) | [Content reviewed](/en/collection/mushroom/fehlersuche) | [Content reviewed](/fr/collection/mushroom/fehlersuche) |
 | [sammlung/mushroom/index.md](/sammlung/mushroom/) | [Technically compared](/en/collection/mushroom/) | [Technically compared](/fr/collection/mushroom/) |
-| [sammlung/mushroom/installation.md](/sammlung/mushroom/installation) | [Technically compared](/en/collection/mushroom/installation) | [Technically compared](/fr/collection/mushroom/installation) |
+| [sammlung/mushroom/installation.md](/sammlung/mushroom/installation) | [Content reviewed](/en/collection/mushroom/installation) | [Content reviewed](/fr/collection/mushroom/installation) |
 | [sammlung/mushroom/karten.md](/sammlung/mushroom/karten) | [Technically compared](/en/collection/mushroom/karten) | [Technically compared](/fr/collection/mushroom/karten) |
-| [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Technically compared](/en/collection/mushroom/lizenz-und-stand) | [Technically compared](/fr/collection/mushroom/lizenz-und-stand) |
+| [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Content reviewed](/en/collection/mushroom/lizenz-und-stand) | [Content reviewed](/fr/collection/mushroom/lizenz-und-stand) |
 | [sammlung/mushroom/nutzung.md](/sammlung/mushroom/nutzung) | [Content reviewed](/en/collection/mushroom/nutzung) | [Content reviewed](/fr/collection/mushroom/nutzung) |
 | [sammlung/neomorphix-uix/index.md](/sammlung/neomorphix-uix/) | [Technically compared](/en/collection/neomorphix-uix/) | [Technically compared](/fr/collection/neomorphix-uix/) |
 | [sammlung/testsysteme.md](/sammlung/testsysteme) | [Content reviewed](/en/collection/test-systems) | [Content reviewed](/fr/collection/test-systems) |
-| [sammlung/weitere-beispiele.md](/sammlung/weitere-beispiele) | [Technically compared](/en/collection/interesting-examples) | [Technically compared](/fr/collection/interesting-examples) |
+| [sammlung/weitere-beispiele.md](/sammlung/weitere-beispiele) | [Content reviewed](/en/collection/interesting-examples) | [Content reviewed](/fr/collection/interesting-examples) |
 | [sammlung/zendure-ha/entitaeten.md](/sammlung/zendure-ha/entitaeten) | [Technically compared](/en/collection/zendure-ha/entitaeten) | [Technically compared](/fr/collection/zendure-ha/entitaeten) |
 | [sammlung/zendure-ha/fehlersuche.md](/sammlung/zendure-ha/fehlersuche) | [Technically compared](/en/collection/zendure-ha/fehlersuche) | [Technically compared](/fr/collection/zendure-ha/fehlersuche) |
 | [sammlung/zendure-ha/fuse-group.md](/sammlung/zendure-ha/fuse-group) | [Technically compared](/en/collection/zendure-ha/fuse-group) | [Technically compared](/fr/collection/zendure-ha/fuse-group) |

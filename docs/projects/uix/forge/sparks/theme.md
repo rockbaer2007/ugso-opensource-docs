@@ -17,6 +17,10 @@ Der Theme Spark wendet ein Home-Assistant-Frontend-Theme auf das Forge-Element o
 Der Theme Spark setzt ein Home-Assistant-Theme auf ein konkretes Element. Für globale UIX-Theme-Styles nutze die normale [Theme-Konfiguration](../../using/themes).
 
 :::
+
+Ein Template kann mit der leeren Zeichenfolge `""` zum Haupttheme zurückkehren. Die Theme-Werte werden als Inline-Styles gesetzt. Das Ersatztheme sollte deshalb dieselben Eigenschaften wie das Haupttheme oder nur eine Teilmenge davon enthalten. Bei verschachtelten Forge-Elementen sollte jede weitere Überschreibung eine Teilmenge der vorherigen sein, damit keine unerwarteten Werte übrig bleiben.
+
+Der DOM-Helfer [`uix_forge_path()`](../../concepts/dom.md#uix_forge_path0-forge-helper) hilft beim Bestimmen des Zielpfads.
 ## Beispiel - einfach
 
 Theme:

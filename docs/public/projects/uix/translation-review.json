@@ -284,7 +284,7 @@
       "path": "extras/disable-entity-picture-image-override.md",
       "source_sha256": "cbbf53085b6d1349ac1146b8edb4f10f640111bf7c6f11b530fdb5d12de89528",
       "table_identifiers": [],
-      "de_sha256": "df01de68ba3dc1b678283af0c7e4b1679e7835f5fc05e116996e438a6771cb79",
+      "de_sha256": "c3c38f972956669cd6ea8b07ae8b611af87bfecd3bd8f467fd7b173fd41709be",
       "de_example_blocks": 0,
       "fr_sha256": "cfcb297240deae0719d5217a3abfa935d1dad2b39272ead64f0702c37136af02",
       "fr_example_blocks": 0
@@ -907,9 +907,9 @@
         "theme",
         "type"
       ],
-      "de_sha256": "ed66cdd6755a3386fab8a484e8cded4932dec63a17be44b232acf537abe748d7",
+      "de_sha256": "4a23d9a03d2f22ed12ea568656f338c3f438e70b1217fa268115f527b28c136a",
       "de_example_blocks": 4,
-      "fr_sha256": "bd4b0e886cbb9fefa083cc1147f0884d68619a449ba24a6707e13324d75d9dcd",
+      "fr_sha256": "f15064442cb66579e48363855f34569bed8ac9b6cd9efdbad61e2b2ccc5c0c42",
       "fr_example_blocks": 4
     },
     {

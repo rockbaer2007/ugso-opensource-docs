@@ -13,12 +13,14 @@ The recommended way is HACS.
 
 1. Check whether HACS is installed.
 2. Open **HACS** in Home Assistant.
-3. Go to **Frontend**.
+3. Open the three-dot menu at the top right.
 4. Open **Custom Repositories**.
 5. Enter repository: `https://github.com/alexpfau/calendar-card-pro`
 6. Set type to `Dashboard`.
 7. Install Calendar Card Pro.
-8. Clear browser cache and reload Home Assistant.
+8. Reload Home Assistant. If the old card still appears, refresh the resource cache; deleting saved website data is not necessary.
+
+This menu sequence follows the [HACS custom repository instructions](https://hacs.dev/docs/faq/custom_repositories/).
 
 Direct link:
 

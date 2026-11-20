@@ -966,10 +966,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "df01de68ba3dc1b678283af0c7e4b1679e7835f5fc05e116996e438a6771cb79",
+      "source_sha256": "c3c38f972956669cd6ea8b07ae8b611af87bfecd3bd8f467fd7b173fd41709be",
       "target_sha256": "cb1c283b91ff502a761407a0fa2f9e015d0e487ceb5992b1a9c028bdfcc88db5",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/extras/disable-entity-picture-image-override.md",
@@ -984,8 +985,10 @@
       },
       "disposition": "intentional-difference",
       "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals.",
-      "source_sha256": "df01de68ba3dc1b678283af0c7e4b1679e7835f5fc05e116996e438a6771cb79",
-      "target_sha256": "cfcb297240deae0719d5217a3abfa935d1dad2b39272ead64f0702c37136af02"
+      "source_sha256": "c3c38f972956669cd6ea8b07ae8b611af87bfecd3bd8f467fd7b173fd41709be",
+      "target_sha256": "cfcb297240deae0719d5217a3abfa935d1dad2b39272ead64f0702c37136af02",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/extras/disable-icon-styling.md",
@@ -1829,10 +1832,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "ed66cdd6755a3386fab8a484e8cded4932dec63a17be44b232acf537abe748d7",
+      "source_sha256": "4a23d9a03d2f22ed12ea568656f338c3f438e70b1217fa268115f527b28c136a",
       "target_sha256": "9666fe1a9c974dce56f8a75fde97a5a366d4463b38e9e9be8b342f1cb78e72be",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/tile-icon.md",
@@ -2420,7 +2424,9 @@
       "disposition": "supplemented",
       "reason": "Added missing local navigation, UIX reference, project sections, documentation checklist, collection rules or scope from the German overview; existing links and page content retained.",
       "source_sha256": "a18936af4cb77ace33c7fc3c4169a5d0a7d20447c8470a95ecf93275e7d4ac65",
-      "target_sha256": "6aa98eb0808a204d7365dc322daecdc3fb4a9d1668d0811aab15af0eb3f45981"
+      "target_sha256": "8b76b842795b058ac1d7fdf0005b583597c0c4605d78d412b6db0ec5342e53ed",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/hacs-dokus.md",

@@ -8,14 +8,16 @@ description: Calendar Card Pro über HACS oder manuell installieren.
 
 Der empfohlene Weg ist HACS.
 
-1. Pruefen, ob HACS installiert ist.
+1. Prüfen, ob HACS installiert ist.
 2. In Home Assistant **HACS** öffnen.
-3. Zu **Frontend** wechseln.
-4. **Custom Repositories** öffnen.
+3. Das Drei-Punkte-Menü oben rechts öffnen.
+4. **Custom Repositories** (benutzerdefinierte Repositorys) öffnen.
 5. Repository eintragen: `https://github.com/alexpfau/calendar-card-pro`
 6. Typ auf `Dashboard` setzen.
 7. Calendar Card Pro installieren.
-8. Browsercache leeren und Home Assistant neu laden.
+8. Home Assistant neu laden. Falls noch die alte Karte erscheint, den Ressourcen-Cache aktualisieren; gespeicherte Website-Daten müssen dafür nicht gelöscht werden.
+
+Die Menüfolge entspricht der [HACS-Anleitung für benutzerdefinierte Repositorys](https://hacs.dev/docs/faq/custom_repositories/).
 
 Direktlink:
 

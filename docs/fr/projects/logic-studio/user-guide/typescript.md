@@ -30,7 +30,7 @@ Teste avec des valeurs simulées. Les erreurs d’exécution renvoient à la lig
 
 ### Fonctions globales et démarrage automatique
 
-Choisis les fonctions exportées disponibles dans le projet et configure le démarrage automatique par projet.
+Choisis les fonctions exportées par les scripts globaux et configure le démarrage automatique par projet.
 
 ### Play et journal
 

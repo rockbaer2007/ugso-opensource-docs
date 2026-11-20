@@ -37,7 +37,7 @@ Typical causes:
 - Resource missing or pointing to wrong path.
 - Browser cache is still loading an old file.
 - HACS installation did not load completely.
-- YAML uses incorrect map type.
+- YAML uses an incorrect card type.
 
 Example of a correct manual resource entry:
 

@@ -4046,7 +4046,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "bfd18abbec83f42d19e18c2c34507d2c5097f3c6c7dc27f53928b1001850a405",
-      "target_sha256": "63ce58d88f4db34f996dc4b6858e3df7deb255d474e3b69b6d8e1ea8ad004280",
+      "target_sha256": "bceb89a7584b3e98dab7f7f2a88b0c7fb1a9f052c8669830a5d153593a345319",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4055,7 +4055,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/logic-studio/user-guide/rules.md",
@@ -4114,7 +4116,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "0407b0d6692b534d9868aa69502049ea5792a52f01d55070b2e68a78b8750710",
-      "target_sha256": "c88be3680a0009adb4aec393208ecd88c76cff1700ce63547b5989d1581f5bdd",
+      "target_sha256": "379d33601f048066fcf18b22321bba7726b0ca43b9c1f1acde062fb5fd1b9cc1",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4123,7 +4125,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/mqtt-client/index.md",
@@ -4989,8 +4993,8 @@
       "target": "fr/projects/uix/forge/sparks/theme.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "ed66cdd6755a3386fab8a484e8cded4932dec63a17be44b232acf537abe748d7",
-      "target_sha256": "bd4b0e886cbb9fefa083cc1147f0884d68619a449ba24a6707e13324d75d9dcd",
+      "source_sha256": "4a23d9a03d2f22ed12ea568656f338c3f438e70b1217fa268115f527b28c136a",
+      "target_sha256": "f15064442cb66579e48363855f34569bed8ac9b6cd9efdbad61e2b2ccc5c0c42",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5002,7 +5006,9 @@
         "Compared the differing blocks: translated comments, indentation and alternative/expanded canonical UIX examples account for the differences. German summaries and canonical adaptations are not literal copies; pin is a documented alias of code. The French developer syntax defect was corrected separately.",
         "Canonical UIX source coverage is independently checked by check-uix-translations.py; no claim of identical German/French example sets."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/guides.md",
@@ -5633,8 +5639,8 @@
       "target": "en/collection/calendar-card-pro/installation.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "c7255edfadc3aa301b60107e2c4edcbafd68898445e5487eed0c8f8acf1cbfde",
-      "target_sha256": "99e40cc14cbdb23d7a9f7ca8d17dcba794e54f43b5a50663419ad0ba3357e35d",
+      "source_sha256": "5f9e63322ec98bcb9a12ec2986475e988758eac4b88cba044c87c9ac863f6d79",
+      "target_sha256": "a50da04c66243f10cb272844fedf9b6d56d0b16da2b08a9891ce5417a3c99074",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5643,15 +5649,17 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/calendar-card-pro/installation.md",
       "target": "fr/collection/calendar-card-pro/installation.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "c7255edfadc3aa301b60107e2c4edcbafd68898445e5487eed0c8f8acf1cbfde",
-      "target_sha256": "c3cfe8dc449897a5be1e7bba9f04866bea5fe4e597e82186db3534c41d112140",
+      "source_sha256": "5f9e63322ec98bcb9a12ec2986475e988758eac4b88cba044c87c9ac863f6d79",
+      "target_sha256": "024df92dc1bb0559cd197fa95f63a21b74ee5563a63193b8459a42631d902f74",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5660,7 +5668,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/calendar-card-pro/konfiguration.md",
@@ -6507,7 +6517,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "a18936af4cb77ace33c7fc3c4169a5d0a7d20447c8470a95ecf93275e7d4ac65",
-      "target_sha256": "6aa98eb0808a204d7365dc322daecdc3fb4a9d1668d0811aab15af0eb3f45981",
+      "target_sha256": "8b76b842795b058ac1d7fdf0005b583597c0c4605d78d412b6db0ec5342e53ed",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -6516,7 +6526,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/ha-dashboard.md",
@@ -6558,7 +6570,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "feaaa0bddeededfa041afb7f152b19954619d559c1821d4c7ebed37a9716642d",
-      "target_sha256": "44490c778677eae493036650a13285cb7b589e343bd075e43dcab0e02766d907",
+      "target_sha256": "b2244f463bf0806bef17d0093c647b7123876febda3f82f5989c762f27fb9e3d",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -6567,7 +6579,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/ha-integrationen.md",
@@ -6794,7 +6808,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-20",
       "source_sha256": "729618f64d96caeabbe98b1275a4249d84b038f195915c2a186754ae6428bc7a",
-      "target_sha256": "89aad7faaa7d3e0ab68206317c9c3fe581bbdb9b342a26ee92e6a3a6bdd8508c",
+      "target_sha256": "4075c397d1a1b997ddedf87e3c02f016f66dad1c9bb58251e458b0bde1f1318e",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -6803,7 +6817,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/mushroom/fehlersuche.md",

@@ -9,7 +9,7 @@ Diese Option verhindert, dass UIX Entitätsbilder ersetzt. Das ist nützlich, we
 ## Einstellung über die Integrations-UI
 
 1. In Home Assistant zu **Settings -> Devices & Services -> UI eXtension -> Configure** gehen.
-2. Den passenden Optionsbereich öffnen.
+2. **Performance settings** (Leistungseinstellungen) öffnen.
 3. **Disable entity picture image overrides** aktivieren.
 4. Speichern.
 
