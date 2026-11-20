@@ -54,7 +54,7 @@ Neu in **0.1.17**: Entitäten aus HA laden und in vorhandenen Blockfeldern nach 
 
 Neu in **0.1.16**: Theme-Auswahl UGSo Standard/Dark/Modern/Tritanopia und Zoom-to-fit-Knopf. Auswahl wird lokal gespeichert; eigene Blocks folgen den Paletten. [Bedienung, Bilder und Originalquellen](./themes). Weiterhin 111 Blocktypen.
 
-**Version 0.1.47 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. HA-Aktionen und Ziele lassen sich aus lesenden Katalogen auswählen.
+**Version 0.1.66 · experimentelle HA-App.** Mit visuellen Blocks entstehen native Home-Assistant-Automationen. Der Editor erzeugt YAML; Home Assistant übernimmt die Ausführung. HA-Aktionen und Ziele lassen sich aus lesenden Katalogen auswählen.
 
 Seit **0.1.25** rechts **YAML → Code importieren** wählen, YAML einfügen und **Importieren** statt Speichern klicken. Ohne Haken werden Auslöser, Bedingungen und Aktionen ergänzt; Name, Einstellungen und bestehende Blockformen bleiben erhalten. Bedingungen werden gemeinsam als UND geprüft; zusätzliche Auslöser können weitere Starts verursachen. Zum vollständigen Ersetzen **Aktuelle Automation vollständig ersetzen** aktivieren und die Abfrage bestätigen. Unterstützt wird eine Automation als Objekt oder Liste mit einem Eintrag, maximal 1 MB. Ungültiger Code oder Abbruch lässt die aktuellen Blocks erhalten. Einfügetext bleibt beim Moduswechsel für diese Seite erhalten; nach Erfolg erscheint wieder die Ausgabe. Zum Ergänzen muss die aktuelle Automation gültig sein; vollständiger Ersatz funktioniert auch bei unvollständigen Blocks. Dateiimport über **Öffnen** bleibt verfügbar.
 
@@ -72,7 +72,7 @@ Neu in **0.1.10**: **Erhöhe Variable um …** im Variablen-Menü mit Schritt `1
 
 Neu in **0.1.9**: Kategorie **Logik** mit Vergleich, kompaktem UND/ODER, NICHT, wahr/falsch, null und bedingter Wertauswahl. Variablen unterstützen jetzt auch Boolean und null. [Alle sechs neuen Blocks mit Bildern und Beispiel](./blocks#logik-blocks-seit-0-1-9).
 
-Die [Liste aller 163 Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsbeschreibung. Die Tabelle der Originalplugins verlinkt direkt auf die jeweiligen Quellen.
+Die [Liste der Blocks](./blocks) zeigt jeden Block mit Bild und Funktionsbeschreibung. Die Tabelle der Originalplugins verlinkt direkt auf die jeweiligen Quellen.
 
 Neu in **0.1.8**: **Variablen → Variable erstellen …**, Setzen-/Lesen-Blocks und die Kategorie **Templates** mit eigenen Wert- und Bedingungsblocks. Variablen erzeugen native HA-`variables`-Aktionen; Lesen erzeugt <code v-pre>{{ name }}</code>. Jinja wird erst in HA ausgewertet. [Anleitung, Beispiel und Importgrenzen](./blocks#variablen-und-templates-verwenden).
 
@@ -80,7 +80,7 @@ Neu in 0.1.7: **Suche am Menüende**, mehrzeilige Texte, Prozent-Slider, Farbe u
 
 Der Datumsvergleich einschließlich Jahr wird in HA mit `now().strftime('%Y-%m-%d')` ausgewertet; er verwendet die HA-Zeitzone und ist eine Bedingung, kein Auslöser. Diese Form erhält beim Import den Datumsblock; andere Template-Bedingungen erhalten den allgemeinen Template-Block. Die Lichtaktion erzeugt RGB-Farbe und Helligkeit in Prozent. Timer nutzen ihre konfigurierte Dauer; zusätzliche Parameter bleiben in der generischen HA-Aktion. Die tatsächlichen Gerätefähigkeiten müssen in HA geprüft werden.
 
-Das eigene UGSo-Icon verbindet Haus und Puzzle-Baustein und wird in Oberfläche, Browser und HA-App verwendet. Zehn Originalplugins werden lokal ausgeliefert. Farbmischung und Zufallsfarben sind seit 0.1.15 umgesetzt; automatisch wachsende Anschlüsse und Live-Aktionsauswahl bleiben offen. Textverknüpfung und Listenbearbeitung sind umgesetzt.
+Das eigene UGSo-Icon verbindet Haus und Puzzle-Baustein und wird in Oberfläche, Browser und HA-App verwendet. Zehn Originalplugins werden lokal ausgeliefert. Farbmischung und Zufallsfarben sind seit 0.1.15 umgesetzt; automatisch wachsende Anschlüsse sind seit 0.1.63 für Templates umgesetzt, die Aktionsauswahl seit 0.1.44. Textverknüpfung und Listenbearbeitung sind umgesetzt.
 
 ## Im HA-App-Store installieren
 
@@ -165,8 +165,8 @@ Das Kategorienmenü ist dunkel, die aufgeklappte Blockauswahl hell. Werte sind g
 - **Output links / Werteingang rechts:** Bedingungen liefern Boolean-Werte. Sie passen in „Nur wenn“, „Falls“, „sonst falls“ und UND/ODER/NICHT. Zahlen liefern Number-Werte und passen in Grenzen oder Wartezeiten. Die Typprüfung verhindert unpassende Verbindungen.
 - **Previous oben / Next unten:** Auslöser und Aktionen bilden jeweils eigene Ketten; sie können nicht miteinander vertauscht werden.
 - **Statement-Innenraum:** „mache“ und „sonst“ nehmen Aktionsfolgen auf. Bedingungen gehören an die seitlichen Werteingänge.
-- **Shadow-Zahlen:** Grenzen und Wartezeiten haben editierbare Standardwerte. Ein herausgezogener Zahlenblock kann sie ersetzen. Wird dieser entfernt, erscheint der Standardwert wieder. Logmeldungen nutzen String-Textblocks mit editierbarem Shadow. Sensor- und Entitäts-Wertblocks sind noch nicht umgesetzt.
-- **Kontextmenü:** Rechtsklick beziehungsweise langes Drücken bietet die Blockly-Funktionen, etwa Duplizieren, Kommentar, Einklappen, Deaktivieren, Löschen und Hilfe. Hilfe führt hierher. Kommentare bleiben im JSON-Projekt; sie werden noch nicht als YAML-Kommentare exportiert.
+- **Shadow-Zahlen:** Grenzen und Wartezeiten haben editierbare Standardwerte. Ein herausgezogener Zahlenblock kann sie ersetzen. Wird dieser entfernt, erscheint der Standardwert wieder. Logmeldungen nutzen String-Textblocks mit editierbarem Shadow. Entitäts-ID und gemeinsame Entitätswerte stehen seit 0.1.62 unter System bereit.
+- **Kontextmenü:** Rechtsklick beziehungsweise langes Drücken bietet die Blockly-Funktionen, etwa Duplizieren, Kommentar, Einklappen, Deaktivieren, Löschen und Hilfe. Hilfe führt hierher. Blockly-Kommentare bleiben im JSON-Projekt; für YAML-Kommentare gibt es seit 0.1.59 den eigenen Kommentarblock.
 - **Deaktivieren:** Deaktivierte Aktionen und Auslöser werden beim Export übersprungen. Deaktivierte Bedingungen werden ausgelassen. Pflichtinhalte bleiben erforderlich; fehlende Auslöser, leere Falls-Bedingungen oder leere Aktionszweige verhindern den Export.
 - **Papierkorb:** Blocks löschen, den Papierkorb öffnen und gelöschte Blocks zurück auf die Arbeitsfläche ziehen. Der Verlauf ist auf die aktuelle Sitzung begrenzt. Rückgängig/Wiederholen steht zusätzlich bereit.
 - **Einfügemarkierung:** Blockly zeigt beim Ziehen die mögliche Andockposition an.
@@ -193,7 +193,7 @@ Die [Originaldokumentation zur Arbeitsfläche und zu Blockteilen](https://docs.b
 | Veröffentlichung und Updates | Jede neue HA-App von Anfang an im gemeinsamen Repository mit installierbarem Paket; Paket- und Oberflächenversion gemeinsam anheben |
 | HA-Verbindung, Katalog und Plugins | Lesende Entitätsanbindung und deklarative Blockpakete vorhanden; Live-Aktionsauswahl und Paketupdates offen |
 
-Diese Seite hält umgesetzte Funktionen und offene Aufgaben zusammen fest und wird mit jeder Erweiterung gepflegt.
+Die Tabelle beschreibt den historischen Stand 0.1.16. Die neueren Erweiterungen oben und die verlinkten Fachseiten haben Vorrang; insbesondere sind Aktionsauswahl, Kommentarblock und Entitätswerte inzwischen umgesetzt.
 
 ## Eigene Blocks: umgesetzt und Roadmap
 
@@ -203,7 +203,7 @@ Die Einbettung der originalen Blockly Developer Tools, Dropdowns, Bilder, Variab
 
 ## System: Stand und nächste Schritte
 
-Steuern, Umschalten, Wartezeit, generische Aktionen, Log-Ausgabe, Script-Steuerung, Entität aktualisieren und Helfer steuern sind vorhanden. Entitätsauswahl ist seit 0.1.17 umgesetzt. Eigene Blocks für Kommentar, Zustand/Attribute als Werte, Existenz/Verfügbarkeit und Zahlen-/Texthelfer folgen schrittweise. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.
+Steuern, Umschalten, Wartezeit, generische Aktionen, Log-Ausgabe, Script-Steuerung, Entität aktualisieren und Helfer steuern sind vorhanden. Entitätsauswahl ist seit 0.1.17 umgesetzt. Kommentar ist seit 0.1.59, Entitäts-ID und gemeinsame Entitätswerte sind seit 0.1.62 umgesetzt. Weitere Systemblöcke werden schrittweise ergänzt. ioBroker-`ack`, Adapterinstanzen und Datenpunkt-Erzeugung haben kein direktes HA-Gegenstück.
 
 Die vollständige [Gegenüberstellung mit Umsetzungsstatus](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.de.md) wird bei jeder Erweiterung aktualisiert. Deklarative Blockpakete und Beispielkatalog sind seit 0.1.18 vorhanden.
 

@@ -49,7 +49,7 @@ Nouveau en **0.1.39** : 148 types, déclencheurs/conditions HA avancés, cibles/
 
 Blocks for HA assemble des automatisations Home Assistant avec des blocs visuels. Les déclencheurs, conditions et actions produisent du YAML natif ; les expressions utilisent Jinja dans Home Assistant. Blockly fournit l’éditeur, pas le moteur d’exécution de HA.
 
-**Version 0.1.47 · 166 types de blocs · code source Apache-2.0**
+**Version 0.1.66 · application HA expérimentale · code source Apache-2.0**
 
 [Code source sur GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/blocks_for_ha) · [Documentation DE](/projects/blocks-for-ha/) · [Documentation EN](/en/projects/blocks-for-ha/)
 
@@ -116,7 +116,7 @@ Le thème de l’application **Hell / Dunkel / System** est indépendant des pal
 
 Les scripts ioBroker ne sont pas exécutés dans HA. Les intervalles nommés, `sendTo`, objets ioBroker et JSONata nécessiteraient une adaptation réelle. Le navigateur ne simule pas ces capacités. Les actions sont exécutées uniquement après utilisation du YAML dans Home Assistant.
 
-Les prochaines possibilités comprennent la sélection des services et appareils HA, les variables typées, davantage de formes dans l’éditeur de blocs personnalisés et la gestion des versions de paquets. Le Block Factory original reste une référence ; ses définitions JSON seules ne contiennent pas un générateur HA complet.
+La sélection des actions et cibles HA est disponible depuis 0.1.44, le bloc Commentaire depuis 0.1.59 et les valeurs d’entités depuis 0.1.62. Les pistes restantes comprennent davantage de formes dans l’éditeur de blocs personnalisés et la gestion des versions de paquets. Le Block Factory original reste une référence ; ses définitions JSON seules ne contiennent pas un générateur HA complet.
 
 ## Licences
 
@@ -158,7 +158,7 @@ Depuis **0.1.31**, le nouveau bloc prend en charge temperature.changed natif. Ci
 
 ## Repères historiques et compatibilité
 
-Ces repères complètent l’historique allemand ; ils ne remplacent pas les nouveautés plus récentes ci-dessous.
+Ces repères complètent l’historique allemand ; ils ne remplacent pas les nouveautés plus récentes en haut de cette page.
 
 - **0.1.4 et versions antérieures :** les anciens projets migrent vers les nouveaux connecteurs. Les chaînes de conditions deviennent des groupes ET de même sens ; les fichiers YAML restent importables.
 - **0.1.6 :** blocs Système pour le journal, les scripts HA et l’actualisation d’entités, ainsi qu’un bloc texte. Démarrer sans attendre utilise `script.turn_on`, arrêter utilise `script.turn_off`, appeler et attendre utilise directement `script.name`. `homeassistant.update_entity` demande une actualisation sans définir l’état et sans sémantique ioBroker `ack`. Paramètres supplémentaires via l’action HA générique ; données non représentables conservées dans cette action.

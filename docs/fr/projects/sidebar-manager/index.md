@@ -165,7 +165,7 @@ Réglages, profil et notifications restent natifs. Masquer ou regrouper ne chang
 
 Les panneaux absents restent enregistrés. Une erreur de lecture ou un format inconnu n'écrit pas de valeurs par défaut. L'organisation précédente est sauvegardée dans le navigateur avant écriture ; un stockage bloqué empêche l'enregistrement. Conflits vérifiés avant écriture, confirmations incertaines contrôlées par relecture. Une courte course entre écritures simultanées reste possible sans comparaison atomique serveur.
 
-Export/import JSON : dossiers, liens, noms, icônes, visibilité, épinglage, ordre et séparateurs ; aucun identifiant d'accès ni réglage HA natif. Les couleurs des entrées gardent leur sauvegarde distincte. Réinitialiser change seulement le brouillon jusqu'à son enregistrement. Pour revenir, restaurez l'ancien module, redémarrez HA et rechargez le navigateur sans supprimer les données utilisateur.
+La sauvegarde JSON complète (format version 2) contient dossiers, liens, noms, icônes, couleurs, visibilité, épinglage, ordre et séparateurs, ainsi que l'ordre natif des panneaux HA et leur liste de masquage. Les identifiants et autres réglages HA sont exclus. Les anciennes sauvegardes de présentation (format version 1) contiennent uniquement l'organisation ; aucune couleur manquante n'est inventée. Réinitialiser change seulement le brouillon jusqu'à son enregistrement. Pour revenir, restaurez l'ancien module, redémarrez HA et rechargez le navigateur sans supprimer les données utilisateur.
 
 ## Développement et limites
 

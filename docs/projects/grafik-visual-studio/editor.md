@@ -88,7 +88,7 @@ Der Stammordner ist **/config/www/studio**. Studio legt ihn nach Möglichkeit an
 | **Deutsch** | Die Oberfläche bleibt auf Deutsch. |
 | **English** | Die Oberfläche bleibt auf Englisch. |
 
-Die Auswahl gilt nur in diesem Browser und bleibt nach einem Neuladen erhalten. Andere Benutzer und Browser behalten ihre eigene Wahl. Die Sprache ändert Oberflächentexte wie Menüs, Dialoge, Widget-Palette und Eigenschaften; selbst vergebene Projekt- und Widget-Namen sowie Widget-Inhalte werden nicht übersetzt.
+Die Auswahl gilt nur in diesem Browser und bleibt nach einem Neuladen erhalten. Andere Benutzer und Browser behalten ihre eigene Wahl. Die Sprache ändert Oberflächentexte wie Menüs, Dialoge, Widget-Palette; die separat wählbare Projekt-/Widget-Sprache steuert die unterstützten Eigenschaften. Selbst vergebene Projekt- und Widget-Namen sowie Widget-Inhalte werden nicht übersetzt.
 
 ## Tastatur und Maus
 
@@ -103,7 +103,7 @@ Die Auswahl gilt nur in diesem Browser und bleibt nach einem Neuladen erhalten. 
 | Ganze Verbindungslinie verschieben | Freie Linie ziehen; bei angedockter Linie `Alt` halten und ziehen. Bestehende Andockverbindungen werden dabei gelöst. Einzelne Punktgriffe bewegen keine Mehrfachauswahl; Ziehen startet ab 6 px Bewegung. |
 | Zwischen- oder Sammelpunkt einfügen | Linie anklicken, „Zwischenpunkt“ oder „Sammelpunkt“ wählen und mit **OK** bestätigen |
 
-Die Kürzel für Rückgängig/Wiederholen gelten, wenn der Fokus nicht in einem Eingabefeld, Textbereich oder Auswahlfeld liegt. Für Ausschneiden, Kopieren und Einfügen stehen Schaltflächen bereit; dafür sind derzeit keine globalen `Strg+X/C/V`-Kürzel eingerichtet.
+Die Kürzel für Rückgängig/Wiederholen gelten, wenn der Fokus nicht in einem Eingabefeld, Textbereich oder Auswahlfeld liegt. Ausschneiden, Kopieren und Einfügen sind über Schaltflächen und seit 0.1.291 über `Strg+X/C/V` möglich; die oben genannten Fokusregeln bleiben wirksam.
 
 ## Verbindungslinien und Andockpunkte
 
@@ -112,4 +112,4 @@ Aktiviere **Andockpunkte** in den Eigenschaften eines Ziel-Widgets. Bei neuen Wi
 ## Sichtbarkeit und Filter
 
 
-**Generell** und **Sichtbarkeit** sind bei jedem Widget vorhanden und standardmäßig deaktiviert. „Generell“ enthält unter anderem Name, Kommentar, CSS-Klasse, Filterwort und Sperre. Der Editor-Filter kann Widgets anhand des Filterworts ausblenden oder nur passende anzeigen. Die Sichtbarkeit kann in der Runtime einen Home-Assistant-Zustand mit Bedingung und Vergleichswert prüfen; die Gruppenauswertung ist noch offen. In der Runtime richten sich Sichtbarkeitsregeln nach den gebundenen HA-Zuständen. „Nur für Gruppen“ verwendet die bekannte HA-Ingress-Identität; unbekannte Betrachter erhalten keine Gruppen. Das blendet Elemente aus, ersetzt aber keine HA-Zugriffsrechte.
+**Generell** und **Sichtbarkeit** sind bei jedem Widget vorhanden und standardmäßig deaktiviert. „Generell“ enthält unter anderem Name, Kommentar, CSS-Klasse, Filterwort und Sperre. Der Editor-Filter kann Widgets anhand des Filterworts ausblenden oder nur passende anzeigen. Die Sichtbarkeit kann in der Runtime einen Home-Assistant-Zustand mit Bedingung und Vergleichswert prüfen; gruppenbezogene Regeln verwenden die bekannte HA-Ingress-Identität. In der Runtime richten sich Sichtbarkeitsregeln nach den gebundenen HA-Zuständen. „Nur für Gruppen“ verwendet die bekannte HA-Ingress-Identität; unbekannte Betrachter erhalten keine Gruppen. Das blendet Elemente aus, ersetzt aber keine HA-Zugriffsrechte.

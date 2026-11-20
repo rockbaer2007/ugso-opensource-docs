@@ -54,7 +54,7 @@ New in **0.1.17**: Load entities from HA and search existing block fields by nam
 
 New in **0.1.16**: UGSo Standard/Dark/Modern/Tritanopia selector and zoom-to-fit control. Choice saved locally; own blocks follow palettes. [Usage, images and upstream sources](./themes). Still 111 block types.
 
-**Version 0.1.47 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Actions and targets are selectable from read-only HA catalogues.
+**Version 0.1.66 · experimental HA app.** Visual Blocks generate native Home Assistant automation YAML. Home Assistant runs the automation. Actions and targets are selectable from read-only HA catalogues.
 
 Since **0.1.25**, select **YAML → Code importieren**, paste YAML and click **Importieren** instead of Save. Without the checkbox, triggers, conditions and actions are added; the current name, settings and block shapes are preserved. Conditions are combined with AND; additional triggers may start more runs. To replace everything, select **Aktuelle Automation vollständig ersetzen** and confirm. One supported automation as an object or single-item list is accepted, up to 1 MB. Invalid code or cancellation leaves the current blocks unchanged. Switching modes retains pasted text for this page session; successful import returns to output. Adding requires a valid current automation; complete replacement also works with incomplete blocks. File import through **Öffnen** remains available.
 
@@ -72,7 +72,7 @@ New in **0.1.10**: **Change variable by …** in the variables menu, with defaul
 
 New in **0.1.9**: **Logik** category with comparison, compact AND/OR, NOT, true/false, null and conditional value selection. Variables now accept Boolean and null too. [Six new blocks with images and example](./blocks#logic-blocks-added-in-0-1-9).
 
-The [catalog of all 163 blocks](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
+The [block catalog](./blocks) shows an image and description for each block. The original-plugin table links directly to upstream sources.
 
 New in **0.1.8**: **Variablen → Variable erstellen …**, Set/Read variable blocks and a **Templates** category with dedicated value and condition blocks. Variables generate native HA `variables` actions; reads produce <code v-pre>{{ name }}</code>. Jinja is evaluated in HA. [Usage, example and import limits](./blocks#using-variables-and-templates).
 
@@ -80,7 +80,7 @@ New in 0.1.7: **search at the bottom of the menu**, multiline text, percentage s
 
 The date comparison includes the year and uses HA’s `now().strftime('%Y-%m-%d')`, evaluated in HA’s time zone. It is a condition, not a trigger. Import maps this shape to the date block and other template conditions to the general template block. The light action generates RGB colour and percentage brightness. Timers use their configured duration; additional parameters stay in the generic HA action. Actual device capabilities must be checked in HA.
 
-Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Ten original plugins are bundled locally. Colour blending and random colours are implemented since 0.1.15; automatic growing connections and live action selection remain pending. Text joining and list editing are implemented.
+Our original UGSo house/puzzle icon is used by the UI, browser and HA app. Ten original plugins are bundled locally. Colour blending and random colours are implemented since 0.1.15; automatically growing Template inputs are implemented since 0.1.63 and action selection since 0.1.44. Text joining and list editing are implemented.
 
 ## Install from the HA app store
 
@@ -165,8 +165,8 @@ The category menu is dark and the block flyout is light. Values are green, trigg
 - **Left output / right value input:** Conditions produce Boolean values for the automation condition slot, if/else-if and AND/OR/NOT. Numbers produce Number values for thresholds and delays. Type checks reject incompatible connections.
 - **Previous / next:** Triggers and actions each form their own statement chains and cannot be mixed.
 - **Statement cavity:** Then/else slots accept action sequences. Conditions belong in value inputs.
-- **Shadow numbers:** Thresholds and delays have editable defaults that can be replaced by number blocks. Removing a replacement restores the default. Log messages use String text blocks with editable shadows. Sensor and entity value blocks are not implemented yet.
-- **Context menu:** Right-click or long-press for Blockly actions such as duplicate, comment, collapse, disable, delete and help. Help links to the documentation. Comments remain in JSON projects; YAML comment export is not implemented.
+- **Shadow numbers:** Thresholds and delays have editable defaults that can be replaced by number blocks. Removing a replacement restores the default. Log messages use String text blocks with editable shadows. Entity ID and shared entity values are available in System since 0.1.62.
+- **Context menu:** Right-click or long-press for Blockly actions such as duplicate, comment, collapse, disable, delete and help. Help links to the documentation. Blockly comments remain in JSON projects; a dedicated Comment block exports YAML comments since 0.1.59.
 - **Disable:** Disabled actions, triggers and conditions are omitted from export. Required content remains required: missing triggers, empty if conditions or empty action branches prevent export.
 - **Trash:** Delete blocks, open the trash and drag deleted blocks back to the workspace. History lasts for the current session. Undo/redo is also available.
 - **Insertion marker:** Blockly previews the potential connection while dragging.
@@ -193,7 +193,7 @@ The [original workspace and block-parts documentation](https://docs.blockly.com/
 | Publishing and updates | Every new HA app starts in the shared repository with installable packaging; bump package and UI versions together |
 | HA connection, catalog and plugins | Read-only entity integration and declarative block packages available; live action selection and package updates pending |
 
-This page tracks implemented features and outstanding tasks together and is maintained with each extension.
+This table records the historical 0.1.16 checkpoint. The newer updates above and linked guides take precedence: action selection, the Comment block and entity values have since been implemented.
 
 ## Custom blocks: implemented and roadmap
 
@@ -203,7 +203,7 @@ Embedding the original Blockly Developer Tools, dropdowns, images, variable fiel
 
 ## System: status and next steps
 
-Control, toggle, delay, generic actions, logging, script control, entity refresh and helper control are available. Entity selection is available since 0.1.17. Dedicated comment, state/attribute value, existence/availability and number/text helper blocks will follow progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
+Control, toggle, delay, generic actions, logging, script control, entity refresh and helper control are available. Entity selection is available since 0.1.17. The Comment block is implemented since 0.1.59; entity ID and shared entity values since 0.1.62. Further System blocks are added progressively. ioBroker `ack`, adapter instances and datapoint creation have no direct HA counterpart.
 
 The full [comparison and implementation status](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/blob/master/blocks_for_ha/docs/iobroker-comparison.en.md) is updated with every feature. Declarative block packages and a sample catalog are available since 0.1.18.
 

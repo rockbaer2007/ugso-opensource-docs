@@ -180,7 +180,7 @@ HA 2026.10.3 is the intended minimum, not a separate live-tested installation. N
 
 Missing panels remain stored. Read failures and unsupported schemas never write defaults. Before writes, the previous layout is saved in local browser storage; blocked storage prevents saving. Concurrent edits are checked before writes; uncertain confirmations are read back rather than blindly retried. This is not an atomic server-side compare-and-swap.
 
-Manager JSON export/import covers folders, links, labels, icons, visibility, pinning, order and separator settings, not access tokens or native HA preferences. Entry colors keep their separate backup. Reset affects the open Manager draft until saved. To roll back, restore the previous module entry, restart HA and reload the browser; leave stored user settings intact.
+Complete JSON backups (format version 2) include folders, links, labels, icons, colors, visibility, pinning, order, separators and the native HA panel order/hidden-panel list. Access tokens and other HA preferences are excluded. Older layout backups (format version 1) contain organization only; missing colors are not invented. Reset affects the open Manager draft until saved. To roll back, restore the previous module entry, restart HA and reload the browser; leave stored user settings intact.
 
 ## Development and scope
 

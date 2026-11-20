@@ -88,7 +88,7 @@ Accédez à **Paramètres → Général → Langue → Langue de l'application**
 | **Allemand** | L'interface reste en allemand. |
 | **Anglais** | L'interface reste en anglais. |
 
-Ce choix ne s'applique qu'au navigateur actuel et est conservé après un rechargement de la page. Les autres utilisateurs et navigateurs conservent leurs propres paramètres. La langue affecte les éléments de l'interface tels que les menus, les boîtes de dialogue, la palette de widgets et les propriétés ; en revanche, les noms de projets et de widgets définis par l'utilisateur, ainsi que le contenu des widgets, ne sont pas traduits.
+Ce choix ne s'applique qu'au navigateur actuel et est conservé après un rechargement de la page. Les autres utilisateurs et navigateurs conservent leurs propres paramètres. La langue affecte les éléments de l'interface tels que les menus, les boîtes de dialogue, la palette de widgets. La langue projet/widget distincte contrôle les propriétés prises en charge ; les noms de projets et de widgets définis par l'utilisateur, ainsi que le contenu des widgets, ne sont pas traduits.
 
 ## Clavier et souris {#tastatur-und-maus}
 
@@ -103,7 +103,7 @@ Ce choix ne s'applique qu'au navigateur actuel et est conservé après un rechar
 | Déplacer une ligne de connexion entière | Faire glisser une ligne libre ; pour une ligne ancrée, maintenir `Alt` et faire glisser. Les ancrages existants sont alors supprimés. Le déplacement des poignées de points individuels ne déplace pas une sélection multiple ; le glissement s'active après un déplacement de 6 px. |
 | Insérer un point intermédiaire ou un point de regroupement | Cliquer sur la ligne, sélectionner « Point intermédiaire » ou « Point de regroupement » et valider par **OK** |
 
-Les raccourcis pour « Annuler » et « Rétablir » s'appliquent lorsque le focus n'est pas placé dans un champ de saisie, une zone de texte ou un champ de sélection. Des boutons sont disponibles pour les fonctions « Couper », « Copier » et « Coller » ; aucun raccourci global `Strg+X/C/V` n'est actuellement défini pour ces actions.
+Les raccourcis pour « Annuler » et « Rétablir » s'appliquent lorsque le focus n'est pas placé dans un champ de saisie, une zone de texte ou un champ de sélection. Couper, Copier et Coller utilisent les boutons et, depuis 0.1.291, `Ctrl+X/C/V` (clavier allemand : `Strg+X/C/V`) ; les règles de focus décrites plus haut restent applicables.
 
 ## Lignes de connexion et points d'ancrage {#verbindungslinien-und-andockpunkte}
 

@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 245 | 7 |
-| FR | 245 | 7 |
+| EN | 249 | 3 |
+| FR | 249 | 3 |
 
 ## Complete page inventory
 
@@ -104,7 +104,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Content reviewed](/en/projects/blocks-for-ha/custom-blocks) | [Content reviewed](/fr/projects/blocks-for-ha/custom-blocks) |
 | [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Content reviewed](/en/projects/blocks-for-ha/entities) | [Content reviewed](/fr/projects/blocks-for-ha/entities) |
 | [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Content reviewed](/en/projects/blocks-for-ha/flow) | [Content reviewed](/fr/projects/blocks-for-ha/flow) |
-| [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Technically compared](/en/projects/blocks-for-ha/) | [Content present · Difference reviewed](/fr/projects/blocks-for-ha/) |
+| [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Content reviewed](/en/projects/blocks-for-ha/) | [Content reviewed · Difference reviewed](/fr/projects/blocks-for-ha/) |
 | [projects/blocks-for-ha/system-template.md](/projects/blocks-for-ha/system-template) | [Content reviewed](/en/projects/blocks-for-ha/system-template) | [Content reviewed](/fr/projects/blocks-for-ha/system-template) |
 | [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Content reviewed](/en/projects/blocks-for-ha/themes) | [Content reviewed](/fr/projects/blocks-for-ha/themes) |
 | [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Content reviewed](/en/projects/blocks-for-ha/time) | [Content reviewed](/fr/projects/blocks-for-ha/time) |
@@ -122,10 +122,10 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Content reviewed](/en/projects/grafik-visual-studio/calendar-plus) | [Content reviewed](/fr/projects/grafik-visual-studio/calendar-plus) |
 | [projects/grafik-visual-studio/datenfluss.md](/projects/grafik-visual-studio/datenfluss) | [Content reviewed](/en/projects/grafik-visual-studio/datenfluss) | [Content reviewed](/fr/projects/grafik-visual-studio/datenfluss) |
 | [projects/grafik-visual-studio/devices-tablet.md](/projects/grafik-visual-studio/devices-tablet) | [Content reviewed](/en/projects/grafik-visual-studio/devices-tablet) | [Content reviewed](/fr/projects/grafik-visual-studio/devices-tablet) |
-| [projects/grafik-visual-studio/editor.md](/projects/grafik-visual-studio/editor) | [Technically compared](/en/projects/grafik-visual-studio/editor) | [Technically compared](/fr/projects/grafik-visual-studio/editor) |
+| [projects/grafik-visual-studio/editor.md](/projects/grafik-visual-studio/editor) | [Content reviewed](/en/projects/grafik-visual-studio/editor) | [Content reviewed](/fr/projects/grafik-visual-studio/editor) |
 | [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Content reviewed](/en/projects/grafik-visual-studio/energy) | [Content reviewed](/fr/projects/grafik-visual-studio/energy) |
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Content reviewed](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Content reviewed](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
-| [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Technically compared](/en/projects/grafik-visual-studio/) | [Technically compared](/fr/projects/grafik-visual-studio/) |
+| [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Content reviewed](/en/projects/grafik-visual-studio/) | [Content reviewed](/fr/projects/grafik-visual-studio/) |
 | [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Content reviewed](/en/projects/grafik-visual-studio/industrial) | [Content reviewed](/fr/projects/grafik-visual-studio/industrial) |
 | [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Content reviewed](/en/projects/grafik-visual-studio/interaktiv) | [Content reviewed](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Content reviewed](/en/projects/grafik-visual-studio/materialdesign) | [Content reviewed](/fr/projects/grafik-visual-studio/materialdesign) |
@@ -172,7 +172,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Content reviewed](/en/projects/parcel-to-mqtt/installation) | [Content reviewed](/fr/projects/parcel-to-mqtt/installation) |
 | [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Content reviewed](/en/projects/parcel-to-mqtt/configuration) | [Content reviewed](/fr/projects/parcel-to-mqtt/configuration) |
 | [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Content reviewed](/en/projects/sidebar-colors/) | [Content reviewed](/fr/projects/sidebar-colors/) |
-| [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Technically compared](/en/projects/sidebar-manager/) | [Technically compared](/fr/projects/sidebar-manager/) |
+| [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Content reviewed](/en/projects/sidebar-manager/) | [Content reviewed](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/broker) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/broker) |
 | [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/directives) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/directives) |
 | [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/examples) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/examples) |

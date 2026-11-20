@@ -88,7 +88,7 @@ Open **Settings → General → Language → App language**, choose an option, t
 | **German** | Keep the interface in German. |
 | **English** | Keep the interface in English. |
 
-The choice is stored only in this browser and survives a reload. Other users and browsers keep their own choice. It translates interface text such as menus, dialogs, the widget palette and properties; user-defined project and widget names and widget content are not translated.
+The choice is stored only in this browser and survives a reload. Other users and browsers keep their own choice. It translates interface text such as menus, dialogs, the widget palette. The separate project/widget language controls supported properties; user-defined project and widget names and widget content are not translated.
 
 ## Keyboard and mouse
 
@@ -103,7 +103,7 @@ The choice is stored only in this browser and survives a reload. Other users and
 | Move an entire connection line | Drag a free line; hold `Alt` to drag a docked line. This detaches its endpoints. Individual point handles do not move a multi-selection; dragging starts after 6 px of movement. |
 | Add an intermediate or collector point | Click the line, choose “Intermediate point” or “Collector point”, then confirm with **OK** |
 
-Undo/redo shortcuts apply when focus is outside input, text area and select controls. Cut, copy and paste are available as buttons; global `Ctrl+X/C/V` shortcuts are not currently implemented.
+Undo/redo shortcuts apply when focus is outside input, text area and select controls. Cut, copy and paste use buttons and, since 0.1.291, `Ctrl+X/C/V`; the focus guards described above still apply.
 
 ## Connection lines and docking points
 

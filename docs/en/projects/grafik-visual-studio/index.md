@@ -11,7 +11,7 @@ description: A different kind of Home Assistant dashboard, with its current deve
 
 ## Current verification and next steps
 
-**As of November 8, 2026: Studio 0.1.299.** The thumbnail palette, Recently used and inline runtime have been verified on the ARM test system (Pi 5) and PC (64) test system, preserving settings and existing projects. [Usage and test results](./palette-runtime). Devices, tablet return, the inactivity home page, heading values, demand-loaded renderers and package refresh are already implemented, not outstanding basic tasks.
+**Additional checkpoint on November 8, 2026: Studio 0.1.299.** The later page-import check with 0.1.300 is documented above. The thumbnail palette, Recently used and inline runtime have been verified on the ARM test system (Pi 5) and PC (64) test system, preserving settings and existing projects. [Usage and test results](./palette-runtime). Devices, tablet return, the inactivity home page, heading values, demand-loaded renderers and package refresh are already implemented, not outstanding basic tasks.
 
 Remaining work:
 

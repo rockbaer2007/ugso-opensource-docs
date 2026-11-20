@@ -165,7 +165,7 @@ Einstellungen, Profil und Benachrichtigungen bleiben nativ. Ausblenden und Grupp
 
 Fehlende Panels bleiben gespeichert. Ladefehler/unbekannte Formate überschreiben keine Einstellungen. Vor Änderungen wird der vorherige Organisationsstand im Browser gesichert; gesperrte Ablage verhindert das Speichern. Konflikte werden vorab geprüft, unklare Bestätigungen nachgelesen. Ein enges gleichzeitiges Schreibfenster bleibt ohne atomaren Serververgleich möglich.
 
-JSON-Export/Import betrifft Gruppen, Links, Namen, Icons, Sichtbarkeit, Anheftung, Reihenfolge und Trennlinien; keine Zugangsdaten oder nativen HA-Einstellungen. Eintragsfarben haben eine getrennte Sicherung. Zurücksetzen wirkt zunächst nur auf den Entwurf. Für Rückkehr alten Moduleintrag wiederherstellen, HA neu starten und Browser neu laden; Benutzerdaten behalten.
+Die vollständige JSON-Sicherung (Formatversion 2) enthält Gruppen, Links, Namen, Icons, Farben, Sichtbarkeit, Anheftung, Reihenfolge und Trennlinien sowie die native HA-Panelreihenfolge und ausgeblendete Panels. Zugangsdaten und sonstige HA-Einstellungen sind nicht enthalten. Alte Layout-Sicherungen (Formatversion 1) enthalten nur die Organisation; ihre fehlenden Farben werden nicht erfunden. Zurücksetzen wirkt zunächst nur auf den Entwurf. Für Rückkehr alten Moduleintrag wiederherstellen, HA neu starten und Browser neu laden; Benutzerdaten behalten.
 
 ## Entwicklung und Grenzen
 

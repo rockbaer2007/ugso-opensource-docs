@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 245,
+      "content_reviewed": 249,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 245,
+      "content_reviewed": 249,
       "open_review_signals": 0
     }
   },
@@ -924,7 +924,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Full DE/EN/FR release history and usage read: CSV30terms precedence/limits/protectedcodes, embedded14 versusautomatic20railwayabbreviations and272constructors, authoraccepted updates versusstillpendingVSdesigner, realMyMemory versusmock/noOpenAI tests, intermediateEnglish, userdata/update rollback and2438? dictionary correctly2428 entries agree. Correct stale general statement that model names nevertranslate after2.1.52; qualify historical41checks and OpenAI-only privacy/billing paragraph versusotherproviders. No new API requests or EEP encoding verification claimed."
+            "assessment": "DE/EN/FR release history and usage compared: CSV precedence and 30-term limit, protected codes, 14 lookup abbreviations versus 20 automatic railway abbreviations, 272 manufacturers and 2428 dictionary entries agree. User-accepted updates and pending Visual Studio designer work remain distinct. Corrected obsolete model-name translation statement after 2.1.52; qualified historical 41-check report and OpenAI-specific privacy and billing scope. No new API requests or EEP encoding verification claimed."
           }
         },
         "fr": {
@@ -963,7 +963,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Full DE/EN/FR release history and usage read: CSV30terms precedence/limits/protectedcodes, embedded14 versusautomatic20railwayabbreviations and272constructors, authoraccepted updates versusstillpendingVSdesigner, realMyMemory versusmock/noOpenAI tests, intermediateEnglish, userdata/update rollback and2438? dictionary correctly2428 entries agree. Correct stale general statement that model names nevertranslate after2.1.52; qualify historical41checks and OpenAI-only privacy/billing paragraph versusotherproviders. No new API requests or EEP encoding verification claimed."
+            "assessment": "DE/EN/FR release history and usage compared: CSV precedence and 30-term limit, protected codes, 14 lookup abbreviations versus 20 automatic railway abbreviations, 272 manufacturers and 2428 dictionary entries agree. User-accepted updates and pending Visual Studio designer work remain distinct. Corrected obsolete model-name translation statement after 2.1.52; qualified historical 41-check report and OpenAI-specific privacy and billing scope. No new API requests or EEP encoding verification claimed."
           }
         }
       }
@@ -4882,8 +4882,8 @@
         "de": {
           "path": "projects/blocks-for-ha/index.md",
           "status": "content-present",
-          "sha256": "a4ba50c44fd5dfbbbcc47d312e1850085f60ff23f920fb783e5773a9374f7c8e",
-          "words": 3845,
+          "sha256": "73040de636d40ce557b2d1881521673ee8b88856098c0d96bb6b4b314389a78f",
+          "words": 3881,
           "headings": 16,
           "examples": 1,
           "versions": [
@@ -4943,8 +4943,8 @@
         "en": {
           "path": "en/projects/blocks-for-ha/index.md",
           "status": "content-present",
-          "sha256": "527bed5d3dd91d1f8a4bb9ed449987ab0fe0980d61ba3d2ed05bd202c8c979f1",
-          "words": 3922,
+          "sha256": "cb5c299de3dfbfda4e67f1c0a683fd50bde935f839974fb8e5b6a6bc6bcf498a",
+          "words": 3963,
           "headings": 16,
           "examples": 1,
           "versions": [
@@ -5017,13 +5017,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read and compared DE/EN/FR overview and history: empty-start backups and cancellation, typed connections, native HA execution rather than ioBroker runtime, import append AND semantics versus confirmed replacement, 1 MB/single-automation limits, local language and package labels, script wait/error propagation, migration and keyboard focus boundaries agree. Updated misleading current 0.1.47 version to documented 0.1.66, removed obsolete catalogue total, qualified historical pending sensor/comment/action-selection statements against implemented 0.1.44/59/62 changes. Historical development table remains explicitly version-bound; no new HA execution or accessibility test claimed."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/index.md",
           "status": "content-present",
-          "sha256": "e72ad2cd4de9688b091655cb536c236e830c8b306dfbe0bc7d8b678fd4056bfd",
-          "words": 3100,
+          "sha256": "71e8d23b0dd18b2dbae8dbb35fd2028c5d42ffeeab3e55ed64863abc2973cea9",
+          "words": 3121,
           "headings": 12,
           "examples": 1,
           "versions": [
@@ -5090,6 +5095,11 @@
             "status": "reviewed",
             "disposition": "corrected",
             "reason": "Replaced obsolete S-button instructions with gear-only extension since 0.1.58 in EN. Added missing historical FR capabilities, compatibility/migration, Blockly 13.3.0 and local-start commands; recent release notes remain first."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read and compared DE/EN/FR overview and history: empty-start backups and cancellation, typed connections, native HA execution rather than ioBroker runtime, import append AND semantics versus confirmed replacement, 1 MB/single-automation limits, local language and package labels, script wait/error propagation, migration and keyboard focus boundaries agree. Updated misleading current 0.1.47 version to documented 0.1.66, removed obsolete catalogue total, qualified historical pending sensor/comment/action-selection statements against implemented 0.1.44/59/62 changes. Historical development table remains explicitly version-bound; no new HA execution or accessibility test claimed."
           }
         }
       }
@@ -6484,8 +6494,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "0fb8c132fd0903045c482a5c887b8d0b3351c4b30b73561d912fe974d0b159db",
-          "words": 2103,
+          "sha256": "e0b457a8f0a2aa59ef15e170419ac698053cf0e2c7fcf807b2bc5528b48a61b8",
+          "words": 2119,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -6515,8 +6525,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "86f724c8515666381f24d5c50726caf4383f7a372c6b6d146b38d49ca9e4e1fb",
-          "words": 2087,
+          "sha256": "e77420743aea7c15d66eb39932b69e8c0dfbaaf0fbba40bee13af6996755e6f1",
+          "words": 2097,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -6554,13 +6564,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read complete DE/EN/FR guides: 291clipboard and290deletion focusguards,287checkboxversus286zthreshold,300pageimport references,299inlineRuntime,flatgroups/locks,50undo,selection moves,docking12/collector distinctions,6pxdrag,language shellversuswidget and identity-basedvisibility agree. Removed contradictory obsolete globalclipboard claim, scoped language distinction and stale DE group-open statement to implemented visibility guidance. No new runtime test."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/editor.md",
           "status": "content-present",
-          "sha256": "fe78ac611b74ec37909482a1a8c5a706669f445fde9c0ed94855f7215b0bd9ca",
-          "words": 3141,
+          "sha256": "d663245728451749f8090841a5337e05bed6367c329e8c95621e7efd6b3451d1",
+          "words": 3153,
           "headings": 10,
           "examples": 0,
           "versions": [
@@ -6598,6 +6613,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read complete DE/EN/FR guides: 291clipboard and290deletion focusguards,287checkboxversus286zthreshold,300pageimport references,299inlineRuntime,flatgroups/locks,50undo,selection moves,docking12/collector distinctions,6pxdrag,language shellversuswidget and identity-basedvisibility agree. Removed contradictory obsolete globalclipboard claim, scoped language distinction and stale DE group-open statement to implemented visibility guidance. No new runtime test."
           }
         }
       }
@@ -6765,8 +6785,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "6ca129b0e5e79628cdb07febc4ea03be339f1dca7f281a9e37327601ede70428",
-          "words": 2743,
+          "sha256": "e7386d2e43f3318eeeb8068787e01ccd82f3aafe3f734d9daca086f46ab751fb",
+          "words": 2755,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -6806,8 +6826,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "78d5a70b522fe0978f58fb473eae1517de3796cd3a015a1c9d568f81097890d9",
-          "words": 2839,
+          "sha256": "a80bc1146e34a0d34bee06338c80a42bf75e2288466e777cd788ccb9e718c86d",
+          "words": 2852,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -6855,13 +6875,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FullDEENFR overviewread: Studio300pageimport versus299inlineRuntime,297devices/296language, optionalpackagecataloglicenses/private90day uploads/typechecks, userinstallednotautoupdated packages,controlversusreadonly/identityvisibility and standalonefuturegoals agree. Qualify old299checkpoint belowcurrent300intro; FR cataloglinks followlanguage and obsolete snapshotwording corrected. No new runtimeimplementation orhardwareverification claimed."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/index.md",
           "status": "content-present",
-          "sha256": "40ba3e1f12559629c820415b46d98afad4bfbf613f2bafcff23a6946acd489b7",
-          "words": 4253,
+          "sha256": "8fd34c6c72ff3e2574e4fe13dfdf6742bfdb400c4d7e9302581fedf0512d325b",
+          "words": 4267,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -6909,6 +6934,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FullDEENFR overviewread: Studio300pageimport versus299inlineRuntime,297devices/296language, optionalpackagecataloglicenses/private90day uploads/typechecks, userinstallednotautoupdated packages,controlversusreadonly/identityvisibility and standalonefuturegoals agree. Qualify old299checkpoint belowcurrent300intro; FR cataloglinks followlanguage and obsolete snapshotwording corrected. No new runtimeimplementation orhardwareverification claimed."
           }
         }
       }
@@ -11102,8 +11132,8 @@
         "de": {
           "path": "projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "ce9f9dacb91cf8f57e9306f5f8119d674dd1e6bb12327edeee12a715e3283e31",
-          "words": 2088,
+          "sha256": "26371dfaba64086508f6661738788101bd03fcd1735b0899b27f7b742c443eb8",
+          "words": 2112,
           "headings": 12,
           "examples": 2,
           "versions": [
@@ -11123,8 +11153,8 @@
         "en": {
           "path": "en/projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "1e2175de807c88080d904d68404d5966c26b28c4df6dc95bc03b9bf749325107",
-          "words": 2363,
+          "sha256": "6d31d3ece0cb8a67e8989d273b658647079f8d1c5a7ca8ce4495ce6e654b5385",
+          "words": 2382,
           "headings": 12,
           "examples": 3,
           "versions": [
@@ -11152,13 +11182,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/EN/FR pages read: personalcopy versusassignedreadonly versusenforcedglobal, adminediting/refresh, visibilitynotaccesscontrol, minimumHAversusMarketplacegate, explicit modulevsdashboardresource, iframeprivacy and historicaltests agree. Found contradictory oldbackup paragraph; inspected local sidebar-preferences.js parseBackup/makeBackup: v2 includes layout/colors/nativepanelOrder/hiddenPanels, v1layoutonly. Correct currentbackup description in all3withoutchangingcode orclaimingnewHAchecks."
           }
         },
         "fr": {
           "path": "fr/projects/sidebar-manager/index.md",
           "status": "content-present",
-          "sha256": "616f34e638cbc3e9b65373faf5c0e8c26061dec3a933df23854b4cc28463177c",
-          "words": 2411,
+          "sha256": "6934657b14268e7d3aa061e2b838ce20a64d654ad7f96596b629b35e2ac8e35b",
+          "words": 2440,
           "headings": 12,
           "examples": 2,
           "versions": [
@@ -11186,6 +11221,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/EN/FR pages read: personalcopy versusassignedreadonly versusenforcedglobal, adminediting/refresh, visibilitynotaccesscontrol, minimumHAversusMarketplacegate, explicit modulevsdashboardresource, iframeprivacy and historicaltests agree. Found contradictory oldbackup paragraph; inspected local sidebar-preferences.js parseBackup/makeBackup: v2 includes layout/colors/nativepanelOrder/hiddenPanels, v1layoutonly. Correct currentbackup description in all3withoutchangingcode orclaimingnewHAchecks."
           }
         }
       }

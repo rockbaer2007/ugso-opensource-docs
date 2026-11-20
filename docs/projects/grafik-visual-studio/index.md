@@ -11,7 +11,7 @@ description: "Das etwas andere Dashboard für Home Assistant: aktueller Entwickl
 
 ## Aktueller Prüfstand und nächste Schritte
 
-**Stand: 8. November 2026, Studio 0.1.299.** Miniaturpalette, Zuletzt benutzt und Inline-Runtime sind auf dem Testsystem ARM (Pi 5) und Testsystem PC (64) geprüft; Einstellungen und bestehende Projekte blieben erhalten. [Bedienung und Testnachweise](./palette-runtime). Geräte-Set, Tablet-Rückkehr, Inaktivitäts-Startseite, Überschriftenwerte, bedarfsgerechte Renderer und Paketaktualisierung sind bereits umgesetzt und keine offenen Basisaufgaben mehr.
+**Ergänzender Prüfstand vom 8. November 2026, Studio 0.1.299.** Die spätere Seitenprüfung mit 0.1.300 ist oben dokumentiert. Miniaturpalette, Zuletzt benutzt und Inline-Runtime sind auf dem Testsystem ARM (Pi 5) und Testsystem PC (64) geprüft; Einstellungen und bestehende Projekte blieben erhalten. [Bedienung und Testnachweise](./palette-runtime). Geräte-Set, Tablet-Rückkehr, Inaktivitäts-Startseite, Überschriftenwerte, bedarfsgerechte Renderer und Paketaktualisierung sind bereits umgesetzt und keine offenen Basisaufgaben mehr.
 
 Offen bleiben:
 

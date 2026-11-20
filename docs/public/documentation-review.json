@@ -188,8 +188,10 @@
       },
       "disposition": "corrected",
       "reason": "Replaced obsolete S-button instructions with gear-only extension since 0.1.58 in EN. Added missing historical FR capabilities, compatibility/migration, Blockly 13.3.0 and local-start commands; recent release notes remain first.",
-      "source_sha256": "a4ba50c44fd5dfbbbcc47d312e1850085f60ff23f920fb783e5773a9374f7c8e",
-      "target_sha256": "527bed5d3dd91d1f8a4bb9ed449987ab0fe0980d61ba3d2ed05bd202c8c979f1"
+      "source_sha256": "73040de636d40ce557b2d1881521673ee8b88856098c0d96bb6b4b314389a78f",
+      "target_sha256": "cb5c299de3dfbfda4e67f1c0a683fd50bde935f839974fb8e5b6a6bc6bcf498a",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/index.md",
@@ -226,8 +228,10 @@
       },
       "disposition": "corrected",
       "reason": "Replaced obsolete S-button instructions with gear-only extension since 0.1.58 in EN. Added missing historical FR capabilities, compatibility/migration, Blockly 13.3.0 and local-start commands; recent release notes remain first.",
-      "source_sha256": "a4ba50c44fd5dfbbbcc47d312e1850085f60ff23f920fb783e5773a9374f7c8e",
-      "target_sha256": "e72ad2cd4de9688b091655cb536c236e830c8b306dfbe0bc7d8b678fd4056bfd"
+      "source_sha256": "73040de636d40ce557b2d1881521673ee8b88856098c0d96bb6b4b314389a78f",
+      "target_sha256": "71e8d23b0dd18b2dbae8dbb35fd2028c5d42ffeeab3e55ed64863abc2973cea9",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/grafik-visual-studio/interaktiv.md",

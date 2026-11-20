@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 245 | 7 |
-| FR | 245 | 7 |
+| EN | 249 | 3 |
+| FR | 249 | 3 |
 
 ## Inventaire complet des pages
 
@@ -104,7 +104,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Contenu vérifié](/en/projects/blocks-for-ha/custom-blocks) | [Contenu vérifié](/fr/projects/blocks-for-ha/custom-blocks) |
 | [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Contenu vérifié](/en/projects/blocks-for-ha/entities) | [Contenu vérifié](/fr/projects/blocks-for-ha/entities) |
 | [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Contenu vérifié](/en/projects/blocks-for-ha/flow) | [Contenu vérifié](/fr/projects/blocks-for-ha/flow) |
-| [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/) | [Contenu présent · Différence examinée](/fr/projects/blocks-for-ha/) |
+| [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Contenu vérifié](/en/projects/blocks-for-ha/) | [Contenu vérifié · Différence examinée](/fr/projects/blocks-for-ha/) |
 | [projects/blocks-for-ha/system-template.md](/projects/blocks-for-ha/system-template) | [Contenu vérifié](/en/projects/blocks-for-ha/system-template) | [Contenu vérifié](/fr/projects/blocks-for-ha/system-template) |
 | [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Contenu vérifié](/en/projects/blocks-for-ha/themes) | [Contenu vérifié](/fr/projects/blocks-for-ha/themes) |
 | [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Contenu vérifié](/en/projects/blocks-for-ha/time) | [Contenu vérifié](/fr/projects/blocks-for-ha/time) |
@@ -122,10 +122,10 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Contenu vérifié](/en/projects/grafik-visual-studio/calendar-plus) | [Contenu vérifié](/fr/projects/grafik-visual-studio/calendar-plus) |
 | [projects/grafik-visual-studio/datenfluss.md](/projects/grafik-visual-studio/datenfluss) | [Contenu vérifié](/en/projects/grafik-visual-studio/datenfluss) | [Contenu vérifié](/fr/projects/grafik-visual-studio/datenfluss) |
 | [projects/grafik-visual-studio/devices-tablet.md](/projects/grafik-visual-studio/devices-tablet) | [Contenu vérifié](/en/projects/grafik-visual-studio/devices-tablet) | [Contenu vérifié](/fr/projects/grafik-visual-studio/devices-tablet) |
-| [projects/grafik-visual-studio/editor.md](/projects/grafik-visual-studio/editor) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/editor) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/editor) |
+| [projects/grafik-visual-studio/editor.md](/projects/grafik-visual-studio/editor) | [Contenu vérifié](/en/projects/grafik-visual-studio/editor) | [Contenu vérifié](/fr/projects/grafik-visual-studio/editor) |
 | [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Contenu vérifié](/en/projects/grafik-visual-studio/energy) | [Contenu vérifié](/fr/projects/grafik-visual-studio/energy) |
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Contenu vérifié](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Contenu vérifié](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
-| [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/) |
+| [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Contenu vérifié](/en/projects/grafik-visual-studio/) | [Contenu vérifié](/fr/projects/grafik-visual-studio/) |
 | [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Contenu vérifié](/en/projects/grafik-visual-studio/industrial) | [Contenu vérifié](/fr/projects/grafik-visual-studio/industrial) |
 | [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Contenu vérifié](/en/projects/grafik-visual-studio/interaktiv) | [Contenu vérifié](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Contenu vérifié](/en/projects/grafik-visual-studio/materialdesign) | [Contenu vérifié](/fr/projects/grafik-visual-studio/materialdesign) |
@@ -172,7 +172,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Contenu vérifié](/en/projects/parcel-to-mqtt/installation) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/installation) |
 | [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Contenu vérifié](/en/projects/parcel-to-mqtt/configuration) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/configuration) |
 | [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Contenu vérifié](/en/projects/sidebar-colors/) | [Contenu vérifié](/fr/projects/sidebar-colors/) |
-| [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Comparaison technique effectuée](/en/projects/sidebar-manager/) | [Comparaison technique effectuée](/fr/projects/sidebar-manager/) |
+| [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Contenu vérifié](/en/projects/sidebar-manager/) | [Contenu vérifié](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/broker) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/broker) |
 | [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/directives) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/directives) |
 | [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/examples) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/examples) |
