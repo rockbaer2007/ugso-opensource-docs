@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 229 | 23 |
-| FR | 229 | 23 |
+| EN | 233 | 19 |
+| FR | 233 | 19 |
 
 ## Vollständiges Seiteninventar
 
@@ -174,7 +174,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Inhaltlich geprüft](/en/projects/sidebar-colors/) | [Inhaltlich geprüft](/fr/projects/sidebar-colors/) |
 | [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Technisch abgeglichen](/en/projects/sidebar-manager/) | [Technisch abgeglichen](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/broker/broker) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/broker/broker) |
-| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/directives) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/directives) |
+| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/broker/directives) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/broker/directives) |
 | [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/broker/examples) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/broker/examples) |
 | [projects/uix/broker/index.md](/projects/uix/broker/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/broker/) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/broker/) |
 | [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/broker/interaction-anchors) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/broker/interaction-anchors) |
@@ -204,7 +204,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/style-frame-panels) | [Inhaltlich geprüft](/fr/projects/uix/extras/style-frame-panels) |
 | [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/uix-actions) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/extras/uix-actions) |
 | [projects/uix/faq.md](/projects/uix/faq) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/faq) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/faq) |
-| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/forge) | [Technisch abgeglichen](/fr/projects/uix/forge/forge) |
+| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/forge) | [Inhaltlich geprüft](/fr/projects/uix/forge/forge) |
 | [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/foundries) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/foundries) |
 | [projects/uix/forge/index.md](/projects/uix/forge/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/) |
 | [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/attribute) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/sparks/attribute) |
@@ -212,7 +212,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/badge) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/badge) |
 | [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/button) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/sparks/button) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/event) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/event) |
-| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/form) | [Technisch abgeglichen](/fr/projects/uix/forge/sparks/form) |
+| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/form) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/form) |
 | [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/grid) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/grid) |
 | [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/sparks/) |
 | [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/lock) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/lock) |
@@ -228,7 +228,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/index.md](/projects/uix/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/) | [Inhaltlich geprüft](/fr/projects/uix/) |
 | [projects/uix/license.md](/projects/uix/license) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/license) | [Inhaltlich geprüft](/fr/projects/uix/license) |
 | [projects/uix/quick-start.md](/projects/uix/quick-start) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/quick-start) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/quick-start) |
-| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/translation-status) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/translation-status) |
+| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/translation-status) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/translation-status) |
 | [projects/uix/using/apps.md](/projects/uix/using/apps) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/apps) | [Inhaltlich geprüft](/fr/projects/uix/using/apps) |
 | [projects/uix/using/cards.md](/projects/uix/using/cards) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/cards) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/using/cards) |
 | [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/custom-panels) | [Inhaltlich geprüft](/fr/projects/uix/using/custom-panels) |

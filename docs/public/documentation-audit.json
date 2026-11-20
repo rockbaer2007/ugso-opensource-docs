@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 229,
+      "content_reviewed": 233,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 229,
+      "content_reviewed": 233,
       "open_review_signals": 0
     }
   },
@@ -11164,8 +11164,8 @@
         "de": {
           "path": "projects/uix/broker/directives.md",
           "status": "content-present",
-          "sha256": "64af9f0e051023f52ebe21dabc37130efd6d2f83f45ab81815020b9f2b7b53d2",
-          "words": 3259,
+          "sha256": "796c42678ce7933f289ea3a41873f34c5867fee5f89846b5e5a669fdc043fc9a",
+          "words": 3265,
           "headings": 26,
           "examples": 42,
           "versions": [
@@ -11203,13 +11203,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All15directives compared in full localechunks: syncblock first/anchor-readiness,10directiveanchor defaults, copiedtypedwholevalues/notinterpolation, deepmerge/noarraymerge,callthisbinding, badgeparent placement,previous/textslots,action-handler ownership,templatebrowsercache/ms/JSONkey and synchronousJS-versusawaitedactionPromise agree. DEFR incompleteanchor lists restored, FRallrules prerequisite/cacheage/no-cache rerender/brackets and configdirective namespace corrected; encoded Jinja inline repaired."
           }
         },
         "fr": {
           "path": "fr/projects/uix/broker/directives.md",
           "status": "content-present",
-          "sha256": "de2e2cee17ca35de0fe12913c476a1a72655cf1276c31ec47c5de7d8c3a8d871",
-          "words": 3861,
+          "sha256": "f6c82530d9e8b4fa91839e08834928a1ce937510c6e96aa63459f26e299d3404",
+          "words": 3891,
           "headings": 26,
           "examples": 42,
           "versions": [
@@ -11229,6 +11234,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All15directives compared in full localechunks: syncblock first/anchor-readiness,10directiveanchor defaults, copiedtypedwholevalues/notinterpolation, deepmerge/noarraymerge,callthisbinding, badgeparent placement,previous/textslots,action-handler ownership,templatebrowsercache/ms/JSONkey and synchronousJS-versusawaitedactionPromise agree. DEFR incompleteanchor lists restored, FRallrules prerequisite/cacheage/no-cache rerender/brackets and configdirective namespace corrected; encoded Jinja inline repaired."
           }
         }
       }
@@ -13545,8 +13555,8 @@
         "de": {
           "path": "projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "62fd3a9c5f3c590ee09a9a755fafba36d3671984a21354027ca5faf9b3869d3f",
-          "words": 3626,
+          "sha256": "57a8a6581545c61e9fe2d76f0e39384d10812092fd1ba928e518e271066455db",
+          "words": 3745,
           "headings": 53,
           "examples": 40,
           "versions": [
@@ -13582,13 +13592,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full visualfivepanel/nativebase/disabledpath/null/sourcepreservation/reference in DEENFR read plus sevenmolds/sevencrossmolds/9options/footer/table/billets/nesting. DE falsemacro-nesting support corrected, Jinja-in-billet exception andcardfeaturecontext restored. DEFR runtime-default exceptions, invalidYAML outerSave gate/tabdiscard/inheritedsparkresumption and nullvalue-versus-keydeletion clarified. FR HTMLencoded inlineJinja rendered literally fixed to protectedcode; canonicalENcodeunchanged."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "5b10cb2e7ca31f4aac6cd493ad897b2265271b0373a4afdd9724096ee49f586b",
-          "words": 6233,
+          "sha256": "98427f6f8db2943ae3c4ff98b8ef2ade01dc0f67e1eeda22407554021354fabd",
+          "words": 6247,
           "headings": 81,
           "examples": 75,
           "versions": [
@@ -13612,6 +13627,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full visualfivepanel/nativebase/disabledpath/null/sourcepreservation/reference in DEENFR read plus sevenmolds/sevencrossmolds/9options/footer/table/billets/nesting. DE falsemacro-nesting support corrected, Jinja-in-billet exception andcardfeaturecontext restored. DEFR runtime-default exceptions, invalidYAML outerSave gate/tabdiscard/inheritedsparkresumption and nullvalue-versus-keydeletion clarified. FR HTMLencoded inlineJinja rendered literally fixed to protectedcode; canonicalENcodeunchanged."
           }
         }
       }
@@ -14189,11 +14209,13 @@
         "de": {
           "path": "projects/uix/forge/sparks/form.md",
           "status": "content-present",
-          "sha256": "0ca5f40e9ec6a0cda3284b56ecc5367426ee86b46077abef0008abdbc954c3b5",
-          "words": 1044,
+          "sha256": "2806e78a57920b97ac0903126c659ca1c9cd97e5e5924f8dfb9f2f9220bb8561",
+          "words": 1051,
           "headings": 14,
           "examples": 9,
-          "versions": [],
+          "versions": [
+            "9.1.0"
+          ],
           "unresolved_local_references": []
         },
         "en": {
@@ -14211,8 +14233,7 @@
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "2026.11.0",
-              "9.1.0"
+              "2026.11.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14222,16 +14243,23 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Fullreference8topkeys/7submit/6clear/3densities/12CSS tokens agree: unique schema names, overwrite staticdata withformvalues, JavaScriptvariables/eventdetail,optionalpopoverfooter,clearalways-empty notresetdefaults,24/16/8pxgaps and56pxhittargetretention. DEFR frozenrevisioncitation updated; canonicalcodeunchanged."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/form.md",
           "status": "content-present",
-          "sha256": "63a06dd58e2e255d869a7e8855b0ef952f3cc94c8799b1638c38996e1852e362",
-          "words": 1214,
+          "sha256": "7ce7e9bf704639f3dbdcebe395ffb75ff5acf48e343af3cd7909e2de0520051e",
+          "words": 1221,
           "headings": 14,
           "examples": 9,
-          "versions": [],
+          "versions": [
+            "9.1.0"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -14245,6 +14273,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Fullreference8topkeys/7submit/6clear/3densities/12CSS tokens agree: unique schema names, overwrite staticdata withformvalues, JavaScriptvariables/eventdetail,optionalpopoverfooter,clearalways-empty notresetdefaults,24/16/8pxgaps and56pxhittargetretention. DEFR frozenrevisioncitation updated; canonicalcodeunchanged."
           }
         }
       }
@@ -15457,9 +15490,9 @@
         "de": {
           "path": "projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "4ab274219e6f9798bce376d005fe5ae928773049a0416e002938a99779b45716",
-          "words": 3802,
-          "headings": 25,
+          "sha256": "30070d13c9f5f7b563fac82d3e87a6e61f5ae96f58418920d32e80d19771549f",
+          "words": 3903,
+          "headings": 26,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -15492,9 +15525,9 @@
         "en": {
           "path": "en/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "6c02d4d8df53fb0c31631556985d40afff17b0907011e64d3014dd082e648bbf",
-          "words": 2318,
-          "headings": 14,
+          "sha256": "7c4f070236acd38e4165e22a4c345c131ab770ac01bd28344b86db0a01e35346",
+          "words": 2415,
+          "headings": 15,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -15535,14 +15568,19 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read all DE/EN/FR review histories in bounded sections, source66 versus formerly67/65/64 counts and stable-versuspreview transitions, badge/params512KiB/footer notices and oldreviewlimitations agree. EN condensed olderhistory explicitlylinksDEFR. New section explains actualcontentreview/hashrevocation and explicit supplemental/originalerrata without implying newHAverification."
           }
         },
         "fr": {
           "path": "fr/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "caeeffed56f66c66c79058fbe868ba88dd347f14fce7831cc8b34cfa13a67588",
-          "words": 3932,
-          "headings": 22,
+          "sha256": "bfc38273afdd3eb17c2d278590cd6c2f1b6a0f7c35a463241c15e41958863fcd",
+          "words": 4049,
+          "headings": 23,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -15583,6 +15621,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Revalidated 2026-11-20 against stable UIX 9.1.0 and canonical dev fb36536. The latest DE/EN/FR review sections cover all four changed source pages, stable-release provenance and the two corrected English findings. Differences in the older dated review sections (including extra German historical version mentions and headings) remain intentional historical summaries, not claims about the current stable version."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read all DE/EN/FR review histories in bounded sections, source66 versus formerly67/65/64 counts and stable-versuspreview transitions, badge/params512KiB/footer notices and oldreviewlimitations agree. EN condensed olderhistory explicitlylinksDEFR. New section explains actualcontentreview/hashrevocation and explicit supplemental/originalerrata without implying newHAverification."
           }
         }
       }

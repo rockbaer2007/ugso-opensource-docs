@@ -297,4 +297,4 @@ Pour le message `Hello Jim` et la priorité `urgent`, la sortie est :
 Submitted: Message: Hello Jim, Priority: urgent from contact-form
 ```
 
-Source : [documentation anglaise canonique du Form spark](https://uix.lf.technology/forge/sparks/form/), comparée à la révision `c70d1275f1fb`.
+Source : [documentation anglaise canonique du Form spark](https://uix.lf.technology/forge/sparks/form/), comparée au contenu de la révision UIX 9.1.0 figée `fb36536`.

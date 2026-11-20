@@ -35,9 +35,9 @@ L’éditeur de code conserve la configuration YAML complète. Le mode visuel co
 - **General :** `mold` fixé à `card`/`badge`, `hidden` et lignes/colonnes de grille. Les modèles restent du texte source ; nombres et booléens littéraux gardent leur type. Un modèle couvrant tout `grid_options` reste intact jusqu’à son remplacement explicite par des lignes/colonnes. **Control** contient `show_error`, `template_nesting`, `delayed_hass` ; la section de style modifie le contenu de `forge.uix`.
 - **Billets :** noms locaux et valeurs scalaires ; `~` signifie `null`. Les billets résolus de la Foundry sont affichés séparément et peuvent être surchargés. Tables et listes restent dans le code.
 - **Macros :** nom, statut de retour, paramètres avec valeurs par défaut scalaires facultatives et source du modèle. Nombres, booléens et `null` sont conservés. Les imports `custom_templates` restent dans le code ; les macros résolues de la Foundry sont affichées séparément.
-- **Sparks :** choisir un Spark enregistré et ses options prises en charge. Les sources restent du texte de modèle/code, un objet/une liste YAML ou explicitement `null`. Les nouvelles options commencent à `null` ; remplacer une source existante par un objet ou `null` demande confirmation. Configuration complète et suppression restent possibles dans le code.
+- **Sparks :** choisir un Spark enregistré et ses options prises en charge. Les sources restent du texte de modèle/code, un objet/une liste YAML ou explicitement `null`. Les nouvelles options commencent normalement à `null` ; celles qui exigent une valeur concrète à l'exécution démarrent avec leur valeur par défaut valide ; remplacer une source existante par un objet ou `null` demande confirmation. Configuration complète et suppression restent possibles dans le code.
 
-Les éditeurs YAML Forge, Native et de style conservent le texte saisi, les commentaires et le YAML temporairement invalide. Le YAML invalide n’est pas transmis à la configuration.
+Les éditeurs YAML Forge, Native et de style conservent le texte saisi, les commentaires et le YAML temporairement invalide. Le YAML invalide n’est pas transmis à la configuration et bloque l'enregistrement externe dans HA. Changer d'onglet avec un brouillon non appliqué demande confirmation. Supprimer le dernier Spark local réactive les Sparks hérités au lieu de vider leur liste.
 
 ### Element
 
@@ -45,7 +45,7 @@ Cet onglet modifie la surcouche `element` ; la base native reste dans `element_b
 
 **Apply** applique un brouillon valide, active un modèle désactivé et garde l’éditeur ouvert. **Apply & exit** applique puis revient à la table ; sans changement, il revient directement. **Exit** demande confirmation pour les changements non appliqués. Le YAML invalide reste modifiable mais désactive les deux actions d’application. Les modèles de chaîne utilisent l’éditeur HA et son test ; saisir la source sans guillemets YAML supplémentaires.
 
-**Convert to object mapping** crée un objet vide après confirmation. **Set to null** efface explicitement la valeur de base correspondante. Pour utiliser la base, choisir **Disable** ou **Remove**. Une chaîne vide constitue un remplacement distinct de `null` et de la suppression. Désactiver garde la source dans `element` et son chemin dans `element_disabled_paths`. Un parent désactivé masque son sous-arbre en conservant les états enregistrés des enfants. Les tableaux et modèles structurels sont modifiés comme des remplacements complets.
+**Convert to object mapping** crée un objet vide après confirmation. **Set to null** remplace explicitement la valeur de base correspondante par `null`, sans supprimer la clé. Pour utiliser la base, choisir **Disable** ou **Remove**. Une chaîne vide constitue un remplacement distinct de `null` et de la suppression. Désactiver garde la source dans `element` et son chemin dans `element_disabled_paths`. Un parent désactivé masque son sous-arbre en conservant les états enregistrés des enfants. Les tableaux et modèles structurels sont modifiés comme des remplacements complets.
 
 En présence d’une base, son `type` racine n’est pas un champ de modèle. Activer/désactiver exige une sélection native ; les chemins désactivés hérités valides restent conservés. Les Forges directes de carte ou de badge proposent **Convert to visual editor**. Cette migration déplace uniquement `element.type` vers `element_base.type` ; toutes les autres valeurs sources restent disponibles pour le rendu de Forge.
 
@@ -88,7 +88,7 @@ element:
 | `hidden` | boolean | ✅ | `false` | Si la valeur est vraie, l'élément est masqué. |
 | `grid_options` | mapping | ✅ | — | Options de grille Lovelace, par exemple `rows` et `columns`, lorsque `mold` vaut `card`. Ignorées pour les autres types. |
 | `show_error` | boolean | | `false` | Si `true`, affiche la carte d'erreur Lovelace au lieu de masquer l'élément lorsque sa création échoue. |
-| `template_nesting` | string | | `"<<>>"` | Chaîne de quatre caractères qui protège les modèles imbriqués. Elle contrôle les deux syntaxes Jinja : avec `<<>>` par défaut, utilisez `<<...>>` pour `&#123;&#123;...&#125;&#125;` et `<%...%>` pour `{%...%}`. À utiliser si la configuration de l'élément contient elle-même une syntaxe de type Jinja2. Pour chaque niveau Forge supplémentaire, ajoutez une paire `<>`, par exemple `<<< >>>` et `<<% %>>` pour deux niveaux. |
+| `template_nesting` | string | | `"<<>>"` | Chaîne de quatre caractères qui protège les modèles imbriqués. Elle contrôle les deux syntaxes Jinja : avec `<<>>` par défaut, utilisez `<<...>>` pour <code v-pre>{{...}}</code> et `<%...%>` pour `{%...%}`. À utiliser si la configuration de l'élément contient elle-même une syntaxe de type Jinja2. Pour chaque niveau Forge supplémentaire, ajoutez une paire `<>`, par exemple `<<< >>>` et `<<% %>>` pour deux niveaux. |
 | `sparks` | list | ✅ | `[]` | Liste des configurations de [sparks](./sparks/index.md) à appliquer à l'élément créé. |
 | `delayed_hass` | boolean | | — | Retarde la transmission de l'objet hass à la carte jusqu'à son chargement. Cela peut éviter des erreurs de console ou d'autres problèmes avec certaines cartes personnalisées, par exemple `apexcharts_card`. |
 
@@ -462,12 +462,12 @@ Le type YAML d'un billet détermine sa représentation dans les modèles :
 
 | Type YAML | Exemple | Type Jinja2 | Utilisation dans un modèle |
 | --------- | ------- | ----------- | -------------- |
-| Vide (`~` ou `null`) | `my_billet: ~` | `none` | `&#123;&#123; my_billet &#125;&#125;` → vide |
-| Chaîne | `my_billet: hello` | `str` | `&#123;&#123; my_billet &#125;&#125;` → `hello` |
-| Nombre | `my_billet: 42` | `int` ou `float` | `&#123;&#123; my_billet + 1 &#125;&#125;` → `43` |
+| Vide (`~` ou `null`) | `my_billet: ~` | `none` | <code v-pre>{{ my_billet }}</code> → vide |
+| Chaîne | `my_billet: hello` | `str` | <code v-pre>{{ my_billet }}</code> → `hello` |
+| Nombre | `my_billet: 42` | `int` ou `float` | <code v-pre>{{ my_billet + 1 }}</code> → `43` |
 | Booléen | `my_billet: true` | `bool` | `{% if my_billet %}…{% endif %}` |
-| Liste | `my_billet: [1, 2, 3]` | `list` | `&#123;&#123; my_billet \| join(', ') &#125;&#125;` |
-| Correspondance | `my_billet: {a: 1}` | `dict` | `&#123;&#123; my_billet.a &#125;&#125;` |
+| Liste | `my_billet: [1, 2, 3]` | `list` | <code v-pre>{{ my_billet &#124; join(', ') }}</code> |
+| Correspondance | `my_billet: {a: 1}` | `dict` | <code v-pre>{{ my_billet.a }}</code> |
 
 Chaque billet est injecté sous forme d'instruction `{%- set name = value -%}`. Le type Jinja2 natif de chaque valeur YAML est ainsi conservé, sans enveloppe de macro.
 
@@ -658,12 +658,12 @@ Le choix d'imbriquer ou non les modèles du contenu Markdown dépend de votre us
 :::
 #### Utiliser des billets dans les modèles imbriqués
 
-Les valeurs des billets sont disponibles comme variables Jinja2 dans les expressions `<<...>>`. Lorsqu'UIX construit le modèle, les variables des billets sont définies avec des instructions Jinja2 `{%- set ... -%}` avant l'évaluation du corps du modèle par Home Assistant. Ainsi, `&#123;&#123; billet_name &#125;&#125;` dans `<<...>>` est évalué par HA et sa valeur résolue est transmise à la carte destinataire.
+Les valeurs des billets sont disponibles comme variables Jinja2 dans les expressions `<<...>>`. Lorsqu'UIX construit le modèle, les variables des billets sont définies avec des instructions Jinja2 `{%- set ... -%}` avant l'évaluation du corps du modèle par Home Assistant. Ainsi, <code v-pre>{{ billet_name }}</code> dans `<<...>>` est évalué par HA et sa valeur résolue est transmise à la carte destinataire.
 
 ::: note "Vous venez de decluttering-card ?"
-Dans des outils comme decluttering-card, un espace réservé tel que `[[id]]` est remplacé en texte brut avant tout autre traitement. UIX Forge fonctionne différemment, mais aboutit au même résultat : il injecte les variables des billets dans le modèle Jinja2 généré, puis Home Assistant les évalue avec le reste du modèle. Ainsi, `&#123;&#123; id &#125;&#125;` dans `<<...>>` est remplacé par la valeur du billet avant que la carte destinataire ne reçoive la chaîne.
+Dans des outils comme decluttering-card, un espace réservé tel que `[[id]]` est remplacé en texte brut avant tout autre traitement. UIX Forge fonctionne différemment, mais aboutit au même résultat : il injecte les variables des billets dans le modèle Jinja2 généré, puis Home Assistant les évalue avec le reste du modèle. Ainsi, <code v-pre>{{ id }}</code> dans `<<...>>` est remplacé par la valeur du billet avant que la carte destinataire ne reçoive la chaîne.
 
-La différence essentielle est qu'il faut utiliser la syntaxe d'expression Jinja2 standard — `&#123;&#123; billet_name &#125;&#125;` — et non la syntaxe d'interpolation entre billets (`{billet_name}`). La syntaxe `{...}` n'est disponible que dans les *valeurs* de billets pour référencer un autre billet, pas dans les expressions de modèle.
+La différence essentielle est qu'il faut utiliser la syntaxe d'expression Jinja2 standard — <code v-pre>{{ billet_name }}</code> — et non la syntaxe d'interpolation entre billets (`{billet_name}`). La syntaxe `{...}` n'est disponible que dans les *valeurs* de billets pour référencer un autre billet, pas dans les expressions de modèle.
 
 :::
 Un cas d'utilisation fréquent consiste à alimenter le modèle de filtre `auto-entities` avec un billet. Par exemple, si le billet `id` contient l'identifiant d'une pièce, vous pouvez générer la liste de ses entités d'appareil :
@@ -684,7 +684,7 @@ element:
     type: entities
 ```
 
-Lorsqu'UIX traite le modèle, il ajoute au début `{%- set id = "living_room" -%}`. HA évalue ensuite le modèle et remplace `&#123;&#123;id&#125;&#125;` par `living_room`. L'expression transmise à `auto-entities` est :
+Lorsqu'UIX traite le modèle, il ajoute au début `{%- set id = "living_room" -%}`. HA évalue ensuite le modèle et remplace <code v-pre>{{id}}</code> par `living_room`. L'expression transmise à `auto-entities` est :
 
 ```jinja
 {#uix#}{{ device_entities(device_id('switch.living_room'))|reject('search','device')|list }}{#uix#}
@@ -697,7 +697,7 @@ Les billets étant résolus lors de l'évaluation du modèle UIX, leur valeur es
 
 :::
 ::: details À lire avant de créer votre propre séquence d'imbrication
-Lors de l'imbrication, les délimiteurs sont remplacés par des directives Jinja `raw` avant le rendu. Le remplacement inclut un marqueur qui permet au mécanisme interne de reconnaître le modèle imbriqué rendu. Avec les délimiteurs par défaut `<<>>`, `<<` devient `{% raw %}{#uix#}&#123;&#123;{% endraw %}` et `>>` devient `{% raw %&#125;&#125;}{#uix#}{% endraw %}`. Les délimiteurs de contrôle de flux sont déduits automatiquement : `<%` devient `{% raw %}{#uix#}{%{% endraw %}` et `%>` devient `{% raw %}%}{#uix#}{% endraw %}`. Si vous créez ces séquences sans raccourci d'imbrication, elles doivent être reproduites à l'identique pour que les contrôles internes de Forge aboutissent.
+Lors de l'imbrication, les délimiteurs sont remplacés par des directives Jinja `raw` avant le rendu. Le remplacement inclut un marqueur qui permet au mécanisme interne de reconnaître le modèle imbriqué rendu. Avec les délimiteurs par défaut `<<>>`, `<<` devient <code v-pre>{% raw %}{#uix#}{{{% endraw %}</code> et `>>` devient <code v-pre>{% raw %}}}{#uix#}{% endraw %}</code>. Les délimiteurs de contrôle de flux sont déduits automatiquement : `<%` devient `{% raw %}{#uix#}{%{% endraw %}` et `%>` devient `{% raw %}%}{#uix#}{% endraw %}`. Si vous créez ces séquences sans raccourci d'imbrication, elles doivent être reproduites à l'identique pour que les contrôles internes de Forge aboutissent.
 
 :::
 ### Utiliser avec auto-entities
@@ -709,7 +709,7 @@ Pour générer simplement des entités avec un modèle, vous pouvez créer une c
 UIX Forge prend en charge `custom:auto-entities` de deux façons :
 
 1. Lorsque UIX Forge est la carte principale d'auto-entities, il accepte `entities` et le transmet à la configuration de l'élément, mais cette valeur n'est pas disponible dans `config.element.entities`.
-2. Lorsque UIX Forge est utilisé comme carte d'entité dans les options `options` d'un filtre `include` auto-entities, il accepte l'`entity` transmise par auto-entities, mais ne la transmet pas à la configuration de l'élément. Elle reste disponible dans les modèles via `config.entity` ; utilisez `&#123;&#123; config.entity &#125;&#125;` pour renseigner l'entité dans les options de carte.
+2. Lorsque UIX Forge est utilisé comme carte d'entité dans les options `options` d'un filtre `include` auto-entities, il accepte l'`entity` transmise par auto-entities, mais ne la transmet pas à la configuration de l'élément. Elle reste disponible dans les modèles via `config.entity` ; utilisez <code v-pre>{{ config.entity }}</code> pour renseigner l'entité dans les options de carte.
 
 ::: details Exemple avec auto-entities
 ```yaml

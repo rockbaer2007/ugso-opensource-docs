@@ -4,6 +4,12 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Editorial content review
+
+Translations are also read against the recorded reference for meaning, prerequisites, defaults and limitations; discovered contradictions are corrected. “Content reviewed” applies only to the recorded text. Changing the reference or translation requires another review. See the current [per-page status](/en/documentation-status) and the [hash-bound assessments](/documentation-semantic-review.json).
+
+Corrections to supplemental examples, including `dissolve_target`, and editorial corrections to English source prose are explicitly identified. The original canonical snapshot remains recorded separately. This is not independent linguistic certification or a new HA runtime test. Older reports below describe their historical scope.
+
 ## Canonical comparison and outstanding findings — 20 November 2026
 
 The stable version is now [UIX 9.1.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0), release revision `ca36726`. All **66** canonical pages were compared with [`dev fb36536`](https://github.com/Lint-Free-Technology/uix/commit/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6), whose documentation is identical to the release. Since `3e330667`, **four pages changed and 62 remain unchanged**. Navigation, media and all code examples are unchanged.

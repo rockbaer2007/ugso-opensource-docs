@@ -322,10 +322,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "64af9f0e051023f52ebe21dabc37130efd6d2f83f45ab81815020b9f2b7b53d2",
+      "source_sha256": "796c42678ce7933f289ea3a41873f34c5867fee5f89846b5e5a669fdc043fc9a",
       "target_sha256": "581c8647f700129260d6c26ea765e963cb4c523efb40999a1ce6824ee8e224a7",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/broker/directives.md",
@@ -342,8 +343,10 @@
       },
       "disposition": "intentional-difference",
       "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals.",
-      "source_sha256": "64af9f0e051023f52ebe21dabc37130efd6d2f83f45ab81815020b9f2b7b53d2",
-      "target_sha256": "de2e2cee17ca35de0fe12913c476a1a72655cf1276c31ec47c5de7d8c3a8d871"
+      "source_sha256": "796c42678ce7933f289ea3a41873f34c5867fee5f89846b5e5a669fdc043fc9a",
+      "target_sha256": "f6c82530d9e8b4fa91839e08834928a1ce937510c6e96aa63459f26e299d3404",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/broker/examples.md",
@@ -1277,10 +1280,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "62fd3a9c5f3c590ee09a9a755fafba36d3671984a21354027ca5faf9b3869d3f",
+      "source_sha256": "57a8a6581545c61e9fe2d76f0e39384d10812092fd1ba928e518e271066455db",
       "target_sha256": "88a023207acb1aca753b391f55216146dd10635007ee693d96e1d813aa517c07",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/forge.md",
@@ -1295,10 +1299,11 @@
       },
       "disposition": "supplemented",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "62fd3a9c5f3c590ee09a9a755fafba36d3671984a21354027ca5faf9b3869d3f",
-      "target_sha256": "5b10cb2e7ca31f4aac6cd493ad897b2265271b0373a4afdd9724096ee49f586b",
+      "source_sha256": "57a8a6581545c61e9fe2d76f0e39384d10812092fd1ba928e518e271066455db",
+      "target_sha256": "98427f6f8db2943ae3c4ff98b8ef2ade01dc0f67e1eeda22407554021354fabd",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/foundries.md",
@@ -1577,10 +1582,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "0ca5f40e9ec6a0cda3284b56ecc5367426ee86b46077abef0008abdbc954c3b5",
+      "source_sha256": "2806e78a57920b97ac0903126c659ca1c9cd97e5e5924f8dfb9f2f9220bb8561",
       "target_sha256": "5523b31f9a3d3647a776521579f5fa7e062861dae0f76ccf66b7d5cb11ff83fc",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/grid.md",
@@ -2125,10 +2131,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage.",
-      "source_sha256": "4ab274219e6f9798bce376d005fe5ae928773049a0416e002938a99779b45716",
-      "target_sha256": "6c02d4d8df53fb0c31631556985d40afff17b0907011e64d3014dd082e648bbf",
+      "source_sha256": "30070d13c9f5f7b563fac82d3e87a6e61f5ae96f58418920d32e80d19771549f",
+      "target_sha256": "7c4f070236acd38e4165e22a4c345c131ab770ac01bd28344b86db0a01e35346",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/translation-status.md",
@@ -2147,11 +2154,12 @@
       },
       "disposition": "intentional-difference",
       "reason": "Revalidated 2026-11-20 against stable UIX 9.1.0 and canonical dev fb36536. The latest DE/EN/FR review sections cover all four changed source pages, stable-release provenance and the two corrected English findings. Differences in the older dated review sections (including extra German historical version mentions and headings) remain intentional historical summaries, not claims about the current stable version.",
-      "source_sha256": "4ab274219e6f9798bce376d005fe5ae928773049a0416e002938a99779b45716",
-      "target_sha256": "caeeffed56f66c66c79058fbe868ba88dd347f14fce7831cc8b34cfa13a67588",
+      "source_sha256": "30070d13c9f5f7b563fac82d3e87a6e61f5ae96f58418920d32e80d19771549f",
+      "target_sha256": "bfc38273afdd3eb17c2d278590cd6c2f1b6a0f7c35a463241c15e41958863fcd",
       "revalidated_at": "2026-11-20",
       "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
-      "earlier_assessment": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage."
+      "earlier_assessment": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage.",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/using/apps.md",

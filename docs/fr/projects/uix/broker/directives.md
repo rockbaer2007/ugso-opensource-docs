@@ -4,7 +4,7 @@ description: "Appliquer des opérations déclaratives UIX Broker à un élément
 ---
 # Directives
 
-Les directives s'exécutent une par une après chaque correspondance de règle d'interaction. Chaque directive effectue une opération configurée, en utilisant l'ancre d'interaction par défaut ou une ancre de directive explicitement sélectionnée si elle est prise en charge. À l'exception de `block`, une directive peut également avoir son propre `rules` ; la directive ne s'exécute que lorsque toutes correspondent, sinon Broker l'ignore et passe à la directive suivante.
+Les directives s'exécutent une par une après que toutes les règles de l'interaction correspondent. Chaque directive effectue une opération configurée, en utilisant l'ancre d'interaction par défaut ou une ancre de directive explicitement sélectionnée si elle est prise en charge. À l'exception de `block`, une directive peut également avoir son propre `rules` ; la directive ne s'exécute que lorsque toutes correspondent, sinon Broker l'ignore et passe à la directive suivante.
 
 - [Block](#bloquer) — empêche l'action et la propagation par défaut de l'événement initiateur du navigateur.
 - [Property](#propriete) — définit ou efface une propriété d'objet JavaScript.
@@ -71,7 +71,7 @@ Il est disponible uniquement dans les domaines `browser` et `shortcut`. L'ancre 
 
 ## Ancres de directive
 
-Les directives `property`, `event`, `call`, `button` et `tile-icon` utilisent l'ancre d'interaction par défaut. Chacun peut remplacer cette valeur par défaut avec sa propre configuration `anchor`. Une chaîne nue est relative à l'ancre d'interaction, une chaîne commençant par `&` est un chemin `select_tree` de racine de document absolu compact et `{ select_tree: ... }` est la forme absolue longue équivalente.
+Les directives `property`, `event`, `call`, `action-handler`, `button`, `badge`, `text-content`, `tile-icon`, `tooltip` et `lock` utilisent l'ancre d'interaction par défaut. Chacun peut remplacer cette valeur par défaut avec sa propre configuration `anchor`. Une chaîne nue est relative à l'ancre d'interaction, une chaîne commençant par `&` est un chemin `select_tree` de racine de document absolu compact et `{ select_tree: ... }` est la forme absolue longue équivalente.
 
 ```yaml
 directives:
@@ -106,7 +106,7 @@ La directive `property` modifie l'objet JavaScript de l'ancre sélectionnée. `s
   clear: config.icon
 ```
 
-Les valeurs peuvent faire référence à des données capturées ou à un résultat `template` ou `javascript` précédent. `@captured` résout l'objet de données capturées complet, tandis que `@captured.path` résout la valeur sur ce chemin séparé par des points. Les index de tableau peuvent utiliser la notation par points (`items.0`) ou par parenthèses (`items[0]`) ; utilisez une clé entre crochets entre guillemets pour les propriétés d'objet contenant des signes de ponctuation, telles que `settings['icon-color']`. La référence est remplacée avant que la propriété ne soit définie et doit être citée en YAML car elle commence par `@`.
+Les valeurs peuvent faire référence à des données capturées ou à un résultat `template` ou `javascript` précédent. `@captured` résout l'objet de données capturées complet, tandis que `@captured.path` résout la valeur sur ce chemin séparé par des points. Les index de tableau peuvent utiliser la notation par points (`items.0`) ou par crochets (`items[0]`) ; utilisez une clé entre crochets entre guillemets pour les propriétés d'objet contenant des signes de ponctuation, telles que `settings['icon-color']`. La référence est remplacée avant que la propriété ne soit définie et doit être citée en YAML car elle commence par `@`.
 
 ```yaml
 - type: property
@@ -213,7 +213,7 @@ Utilisez `style` pour un mappage plat des noms et valeurs des propriétés CSS. 
     "--ha-icon-button-size": 32px
 ```
 
-Utilisez `uix` pour le style UIX, y compris les styles à l’intérieur de la racine fantôme du bouton. Son type UIX est `uix-broker-button` et les paramètres de bouton résolus sont disponibles sous la forme `config` dans les modèles UIX.
+Utilisez `uix` pour le style UIX, y compris les styles à l’intérieur de la racine fantôme du bouton. Son type UIX est `uix-broker-button` et les paramètres de bouton résolus sont disponibles sous la forme `config` dans les modèles UIX ; les résultats des directives `template` ou `javascript` précédentes sont disponibles dans `directive`.
 
 ::: info
 Style UIX `button` disponible dans la version 8.3.0-beta.3
@@ -230,7 +230,7 @@ Style UIX `button` disponible dans la version 8.3.0-beta.3
       }
 ```
 
-| Clé | Tapez | Par défaut | Descriptif |
+| Clé | Type | Par défaut | Description |
 | --- | --- | --- | --- |
 | `after` | `string` | ancre directive | Sélecteur relatif pour l'élément de référence. Le bouton est inséré après. |
 | `before` | `string` | — | Sélecteur relatif pour l'élément de référence. Le bouton est inséré avant lui. |
@@ -294,7 +294,7 @@ Utilisez `style` pour un mappage plat des noms et valeurs des propriétés CSS. 
     z-index: 1
 ```
 
-Utilisez `uix` pour le style UIX, y compris les styles à l’intérieur de la racine fantôme de l’icône de vignette. Son type UIX est `broker-tile-icon`, et les paramètres d'icône de tuile résolus sont disponibles en tant que `config` dans les modèles UIX.
+Utilisez `uix` pour le style UIX, y compris les styles à l’intérieur de la racine fantôme de l’icône de vignette. Son type UIX est `broker-tile-icon`, et les paramètres d'icône de tuile résolus sont disponibles en tant que `config` dans les modèles UIX ; les résultats des directives précédentes sont disponibles dans `directive`.
 
 ```yaml
 - type: tile-icon
@@ -306,7 +306,7 @@ Utilisez `uix` pour le style UIX, y compris les styles à l’intérieur de la r
       }
 ```
 
-| Clé | Tapez | Par défaut | Descriptif |
+| Clé | Type | Par défaut | Description |
 | --- | --- | --- | --- |
 | `after` | `string` | ancre directive | Sélecteur relatif pour l'élément de référence. L'icône de tuile est insérée après. |
 | `before` | `string` | — | Sélecteur relatif pour l'élément de référence. L'icône de tuile est insérée devant elle. |
@@ -537,7 +537,7 @@ Chaque rendu non mis en cache est un aller-retour vers le serveur Home Assistant
   template: "{{ states('sensor.example') }}"
 ```
 
-Le cache est conservé dans le navigateur et partagé par les directives de modèle en utilisant le même texte de modèle et les mêmes résultats de directive précédente. Une valeur mise en cache est utilisée uniquement lorsqu'elle est inférieure à la durée `cache` de la directive ; `cache: 0` (ou en omettant `cache`) est toujours restitué. Le cache stocke uniquement les résultats réussis, est effacé lors du rechargement de la configuration du Broker et n'observe pas les modifications de modèle pendant la période de cache. Lorsque `cache` est activé, les résultats des directives précédentes doivent être sérialisables en JSON car ils font partie de la clé de cache ; les objets circulaires ne peuvent pas être mis en cache.
+Le cache est conservé dans le navigateur et partagé par les directives de modèle en utilisant le même texte de modèle et les mêmes résultats de directive précédente. Une valeur mise en cache est utilisée uniquement lorsque son âge est inférieur à la durée `cache` de la directive ; `cache: 0` (ou l'absence de `cache`) impose toujours un nouveau rendu. Le cache stocke uniquement les résultats réussis, est effacé lors du rechargement de la configuration du Broker et n'observe pas les modifications de modèle pendant la période de cache. Lorsque `cache` est activé, les résultats des directives précédentes doivent être sérialisables en JSON car ils font partie de la clé de cache ; les objets circulaires ne peuvent pas être mis en cache.
 
 ```yaml
 - type: template
@@ -554,7 +554,7 @@ Le cache est conservé dans le navigateur et partagé par les directives de mod�
 
 `id` doit commencer par une lettre ou un trait de soulignement et peut ensuite contenir des lettres, des chiffres, des traits de soulignement et des traits d'union. Le nom `captured` est réservé aux données d'événement `@captured` et ne peut pas être utilisé comme identifiant. Utilisez des chemins de tableau de points ou de crochets pour sélectionner un objet ou une valeur de tableau enregistré, tout comme pour `@captured`. Les clés de support citées fonctionnent également, par exemple `@config_path['icon-color']` ou `@config_path["icon-color"]`.
 
-Les modèles reçoivent les résultats des directives antérieures dans la variable `directive` de niveau supérieur. Par exemple, une directive antérieure avec `id: provider` est disponible sous le nom `&#123;&#123; directive.provider &#125;&#125;`. Cet espace de noms contient uniquement les résultats des directives précédentes dans la même interaction.
+Les modèles reçoivent les résultats des directives antérieures dans la variable `directive` de niveau supérieur. Par exemple, une directive antérieure avec `id: provider` est disponible sous le nom <code v-pre>{{ directive.provider }}</code>. Cet espace de noms contient uniquement les résultats des directives précédentes dans la même interaction.
 
 ## JavaScript
 

@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 229 | 23 |
-| FR | 229 | 23 |
+| EN | 233 | 19 |
+| FR | 233 | 19 |
 
 ## Inventaire complet des pages
 
@@ -174,7 +174,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Contenu vérifié](/en/projects/sidebar-colors/) | [Contenu vérifié](/fr/projects/sidebar-colors/) |
 | [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Comparaison technique effectuée](/en/projects/sidebar-manager/) | [Comparaison technique effectuée](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/broker) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/broker) |
-| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Contenu présent · Différence examinée](/en/projects/uix/broker/directives) | [Contenu présent · Différence examinée](/fr/projects/uix/broker/directives) |
+| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/directives) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/directives) |
 | [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/examples) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/examples) |
 | [projects/uix/broker/index.md](/projects/uix/broker/) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/) |
 | [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/interaction-anchors) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/interaction-anchors) |
@@ -204,7 +204,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Contenu vérifié · Différence examinée](/en/projects/uix/extras/style-frame-panels) | [Contenu vérifié](/fr/projects/uix/extras/style-frame-panels) |
 | [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Contenu vérifié · Différence examinée](/en/projects/uix/extras/uix-actions) | [Contenu vérifié · Différence examinée](/fr/projects/uix/extras/uix-actions) |
 | [projects/uix/faq.md](/projects/uix/faq) | [Contenu vérifié · Différence examinée](/en/projects/uix/faq) | [Contenu vérifié · Différence examinée](/fr/projects/uix/faq) |
-| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Contenu présent · Différence examinée](/en/projects/uix/forge/forge) | [Comparaison technique effectuée](/fr/projects/uix/forge/forge) |
+| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/forge) | [Contenu vérifié](/fr/projects/uix/forge/forge) |
 | [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/foundries) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/foundries) |
 | [projects/uix/forge/index.md](/projects/uix/forge/) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/) |
 | [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/attribute) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/sparks/attribute) |
@@ -212,7 +212,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/badge) | [Contenu vérifié](/fr/projects/uix/forge/sparks/badge) |
 | [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/button) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/sparks/button) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/event) | [Contenu vérifié](/fr/projects/uix/forge/sparks/event) |
-| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/form) | [Comparaison technique effectuée](/fr/projects/uix/forge/sparks/form) |
+| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/form) | [Contenu vérifié](/fr/projects/uix/forge/sparks/form) |
 | [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/grid) | [Contenu vérifié](/fr/projects/uix/forge/sparks/grid) |
 | [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/sparks/) |
 | [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/lock) | [Contenu vérifié](/fr/projects/uix/forge/sparks/lock) |
@@ -228,7 +228,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/index.md](/projects/uix/) | [Contenu vérifié · Différence examinée](/en/projects/uix/) | [Contenu vérifié](/fr/projects/uix/) |
 | [projects/uix/license.md](/projects/uix/license) | [Contenu vérifié · Différence examinée](/en/projects/uix/license) | [Contenu vérifié](/fr/projects/uix/license) |
 | [projects/uix/quick-start.md](/projects/uix/quick-start) | [Contenu vérifié · Différence examinée](/en/projects/uix/quick-start) | [Contenu vérifié · Différence examinée](/fr/projects/uix/quick-start) |
-| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Contenu présent · Différence examinée](/en/projects/uix/translation-status) | [Contenu présent · Différence examinée](/fr/projects/uix/translation-status) |
+| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Contenu vérifié · Différence examinée](/en/projects/uix/translation-status) | [Contenu vérifié · Différence examinée](/fr/projects/uix/translation-status) |
 | [projects/uix/using/apps.md](/projects/uix/using/apps) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/apps) | [Contenu vérifié](/fr/projects/uix/using/apps) |
 | [projects/uix/using/cards.md](/projects/uix/using/cards) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/cards) | [Contenu vérifié · Différence examinée](/fr/projects/uix/using/cards) |
 | [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/custom-panels) | [Contenu vérifié](/fr/projects/uix/using/custom-panels) |

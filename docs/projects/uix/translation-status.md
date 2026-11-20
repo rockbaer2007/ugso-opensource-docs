@@ -4,6 +4,12 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Inhaltliche Prüfung der Sprachfassungen
+
+Die Seiten werden zusätzlich redaktionell gegen die festgehaltene Quelle gelesen: Bedeutung, Voraussetzungen, Standardwerte und Einschränkungen werden verglichen und gefundene Widersprüche korrigiert. „Inhaltlich geprüft“ gilt nur für die erfasste Textfassung; Änderungen an Quelle oder Übersetzung erfordern eine erneute Prüfung. Den aktuellen Stand je Seite zeigt die [Dokumentationsübersicht](/documentation-status), die Prüfsummen und Begründungen stehen im [Inhaltsprüfbericht](/documentation-semantic-review.json).
+
+Korrigierte ergänzende Beispiele, etwa `dissolve_target`, und redaktionelle Berichtigungen der englischen Quelle werden ausdrücklich gekennzeichnet. Der kanonische Quellstand bleibt separat gespeichert. Das ist keine unabhängige sprachliche Zertifizierung und kein neuer HA-Laufzeittest. Frühere Prüfberichte unten beschreiben ihren damaligen Umfang.
+
 ## Kanonischer Abgleich und offene Prüfhinweise – 20. November 2026
 
 Die stabile Version ist jetzt [UIX 9.1.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0), Release-Revision `ca36726`. Alle **66** kanonischen Seiten wurden mit [`dev fb36536`](https://github.com/Lint-Free-Technology/uix/commit/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6) verglichen; dessen Dokumentation entspricht vollständig dem Release. Seit `3e330667` sind **vier Seiten geändert und 62 unverändert**. Navigation, Medien und sämtliche Codebeispiele sind unverändert.

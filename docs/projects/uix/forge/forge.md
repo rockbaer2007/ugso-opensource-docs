@@ -31,9 +31,9 @@ Die vollständige Forge-YAML-Konfiguration bleibt im Code-Editor verfügbar. Die
 - **General:** auf `card`/`badge` festgelegtes `mold`, `hidden` und Grid-Zeilen/-Spalten. Templates bleiben Quelltext, Zahlen und boolesche Literale behalten ihren Typ. Ein Template für ganz `grid_options` bleibt bis zum ausdrücklichen Ersetzen durch Zeilen-/Spaltenwerte erhalten. **Control** enthält `show_error`, `template_nesting`, `delayed_hass`; der Styling-Bereich bearbeitet den Inhalt von `forge.uix`.
 - **Billets:** lokale Namen mit skalaren Werten; `~` bedeutet `null`. Aufgelöste Foundry-Billets werden separat angezeigt und können überschrieben werden. Zuordnungen und Listen bleiben im Code-Editor.
 - **Macros:** Name, Rückgabestatus, Parameter mit optionalen skalaren Standardwerten und Templatequelle. Zahlen, boolesche Werte und `null` bleiben erhalten. `custom_templates`-Importe bleiben im Code-Editor; aufgelöste Foundry-Makros werden separat angezeigt.
-- **Sparks:** registrierten Spark und unterstützte Optionen wählen. Quellen bleiben Template-/Code-Text, YAML-Objekt/-Liste oder ausdrücklich `null`. Neue Optionen beginnen als `null`; vor dem Ersetzen vorhandener Quellen durch eine Objektzuordnung oder `null` wird nachgefragt. Vollständige Konfiguration und Entfernen bleiben im Code-Editor möglich.
+- **Sparks:** registrierten Spark und unterstützte Optionen wählen. Quellen bleiben Template-/Code-Text, YAML-Objekt/-Liste oder ausdrücklich `null`. Neue Optionen beginnen normalerweise als `null`; Optionen, die zur Laufzeit einen konkreten Wert benötigen, starten mit ihrem gültigen Standardwert; vor dem Ersetzen vorhandener Quellen durch eine Objektzuordnung oder `null` wird nachgefragt. Vollständige Konfiguration und Entfernen bleiben im Code-Editor möglich.
 
-Forge-, Native- und Styling-YAML-Editoren behalten den eingegebenen Text einschließlich Kommentaren und vorübergehend ungültigem YAML. Ungültiges YAML wird nicht in die Konfiguration übernommen.
+Forge-, Native- und Styling-YAML-Editoren behalten den eingegebenen Text einschließlich Kommentaren und vorübergehend ungültigem YAML. Ungültiges YAML wird nicht in die Konfiguration übernommen und sperrt das äußere HA-Speichern. Nicht übernommene Entwürfe erfordern beim Reiterwechsel eine Bestätigung. Nach Entfernen des letzten lokalen Sparks gelten wieder die geerbten Sparks; ihre Liste wird dadurch nicht geleert.
 
 ### Element
 
@@ -41,7 +41,7 @@ Dieser Reiter bearbeitet die Überlagerung `element`; die native Basis bleibt in
 
 **Apply** übernimmt einen gültigen Entwurf, aktiviert ein deaktiviertes Template und lässt den Editor offen. **Apply & exit** übernimmt Änderungen und kehrt zur Tabelle zurück; ohne Änderungen kehrt es direkt zurück. **Exit** fragt bei nicht übernommenen Änderungen nach. Ungültiges YAML bleibt bearbeitbar, sperrt aber beide Übernahmeaktionen. Zeichenketten-Templates verwenden den HA-Templateeditor samt Testfunktion; die Quelle ohne zusätzliche YAML-Anführungszeichen eingeben.
 
-**Convert to object mapping** beginnt nach Bestätigung eine leere Objektzuordnung. **Set to null** löscht den entsprechenden Basiswert ausdrücklich. Für „Basiswert verwenden“ stattdessen **Disable** oder **Remove** wählen. Eine leere Zeichenkette ist ein eigener Ersatzwert und weder `null` noch Entfernen. Deaktivieren erhält die Quelle in `element` und speichert den Pfad in `element_disabled_paths`. Ein deaktivierter Elternpfad unterdrückt den Teilbaum und bewahrt die gespeicherten Kinderzustände. Arrays und strukturerzeugende Templates werden als ganze Ersatzwerte bearbeitet.
+**Convert to object mapping** beginnt nach Bestätigung eine leere Objektzuordnung. **Set to null** ersetzt den entsprechenden Basiswert ausdrücklich durch den Wert `null`; der Schlüssel wird nicht entfernt. Für „Basiswert verwenden“ stattdessen **Disable** oder **Remove** wählen. Eine leere Zeichenkette ist ein eigener Ersatzwert und weder `null` noch Entfernen. Deaktivieren erhält die Quelle in `element` und speichert den Pfad in `element_disabled_paths`. Ein deaktivierter Elternpfad unterdrückt den Teilbaum und bewahrt die gespeicherten Kinderzustände. Arrays und strukturerzeugende Templates werden als ganze Ersatzwerte bearbeitet.
 
 Bei vorhandener Basis ist der oberste `type` kein Templatefeld. Aktivieren/Deaktivieren erfordert eine native Elementauswahl; gültige geerbte deaktivierte Pfade bleiben erhalten. Bestehende direkte Karten-/Badge-Forges bieten **Convert to visual editor**. Diese Migration verschiebt ausschließlich `element.type` nach `element_base.type`; alle anderen Quellwerte bleiben für die Darstellung durch Forge erhalten.
 
@@ -319,6 +319,8 @@ uix:
 Billets sind benannte YAML-Werte, die in Templates als Konstanten genutzt werden können. Sie sind praktisch für Defaults, Farben, Entity-IDs oder Textbausteine.
 
 ::: warning
+Billets selbst dürfen keine Jinja2-Templates enthalten, außer in verschachtelten `uix`-Objekten, deren Templates UIX Styling verarbeitet. Die äußere Forge-`entity` ist eine Zeichenkette und unterstützt selbst kein Template.
+
 Billets sind Konfiguration, keine sichere Geheimnisablage. Für sensible Werte nutze Home-Assistant-Secrets oder passende Backend-Mechanismen.
 
 :::
@@ -418,7 +420,7 @@ Bei zwei Ebenen nutzt du ein weiteres Klammerpaar, zum Beispiel `<<< ... >>>` f�
 
 #### Template-Nesting und Makros
 
-Makros können ebenfalls verschachtelte Templates ausgeben. Wichtig ist, dass die Ebene, die das Template auswerten soll, die Syntax erkennt.
+Template-Nesting wird in Forge-Makros nicht unterstützt. Für eine Makroauswertung durch die empfangende Markdown-Karte das Makro in Home Assistants `custom_templates` ablegen und beispielsweise mit `<< content() >>` verschachtelt aufrufen.
 
 ::: tip
 Wenn ein Template zu früh ausgewertet wird, ist das fast immer ein Nesting-Problem.
@@ -619,7 +621,7 @@ element:
 
 ## Card Features
 
-Mit `mold: card-feature` können Card-Feature-Elemente erzeugt werden, die in Cards verwendet werden.
+Mit `mold: card-feature` können Card-Feature-Elemente erzeugt werden, die in Cards verwendet werden. Ihre Templates erhalten zusätzlich `context` von der Host-Karte, üblicherweise mit `entity_id`. Bei mehreren unten angeordneten, bedingt ausgeblendeten Features automatische Zeilenhöhe verwenden, damit kein leerer Platz bleibt.
 
 ```yaml
 type: custom:uix-forge

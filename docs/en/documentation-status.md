@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 229 | 23 |
-| FR | 229 | 23 |
+| EN | 233 | 19 |
+| FR | 233 | 19 |
 
 ## Complete page inventory
 
@@ -174,7 +174,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Content reviewed](/en/projects/sidebar-colors/) | [Content reviewed](/fr/projects/sidebar-colors/) |
 | [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Technically compared](/en/projects/sidebar-manager/) | [Technically compared](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/broker) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/broker) |
-| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Content present · Difference reviewed](/en/projects/uix/broker/directives) | [Content present · Difference reviewed](/fr/projects/uix/broker/directives) |
+| [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/directives) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/directives) |
 | [projects/uix/broker/examples.md](/projects/uix/broker/examples) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/examples) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/examples) |
 | [projects/uix/broker/index.md](/projects/uix/broker/) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/) |
 | [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/interaction-anchors) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/interaction-anchors) |
@@ -204,7 +204,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/style-frame-panels) | [Content reviewed](/fr/projects/uix/extras/style-frame-panels) |
 | [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/uix-actions) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/uix-actions) |
 | [projects/uix/faq.md](/projects/uix/faq) | [Content reviewed · Difference reviewed](/en/projects/uix/faq) | [Content reviewed · Difference reviewed](/fr/projects/uix/faq) |
-| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Content present · Difference reviewed](/en/projects/uix/forge/forge) | [Technically compared](/fr/projects/uix/forge/forge) |
+| [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/forge) | [Content reviewed](/fr/projects/uix/forge/forge) |
 | [projects/uix/forge/foundries.md](/projects/uix/forge/foundries) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/foundries) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/foundries) |
 | [projects/uix/forge/index.md](/projects/uix/forge/) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/) |
 | [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/attribute) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/attribute) |
@@ -212,7 +212,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/badge) | [Content reviewed](/fr/projects/uix/forge/sparks/badge) |
 | [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/button) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/button) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/event) | [Content reviewed](/fr/projects/uix/forge/sparks/event) |
-| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Content present · Difference reviewed](/en/projects/uix/forge/sparks/form) | [Technically compared](/fr/projects/uix/forge/sparks/form) |
+| [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/form) | [Content reviewed](/fr/projects/uix/forge/sparks/form) |
 | [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/grid) | [Content reviewed](/fr/projects/uix/forge/sparks/grid) |
 | [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/) |
 | [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/lock) | [Content reviewed](/fr/projects/uix/forge/sparks/lock) |
@@ -228,7 +228,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/index.md](/projects/uix/) | [Content reviewed · Difference reviewed](/en/projects/uix/) | [Content reviewed](/fr/projects/uix/) |
 | [projects/uix/license.md](/projects/uix/license) | [Content reviewed · Difference reviewed](/en/projects/uix/license) | [Content reviewed](/fr/projects/uix/license) |
 | [projects/uix/quick-start.md](/projects/uix/quick-start) | [Content reviewed · Difference reviewed](/en/projects/uix/quick-start) | [Content reviewed · Difference reviewed](/fr/projects/uix/quick-start) |
-| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Content present · Difference reviewed](/en/projects/uix/translation-status) | [Content present · Difference reviewed](/fr/projects/uix/translation-status) |
+| [projects/uix/translation-status.md](/projects/uix/translation-status) | [Content reviewed · Difference reviewed](/en/projects/uix/translation-status) | [Content reviewed · Difference reviewed](/fr/projects/uix/translation-status) |
 | [projects/uix/using/apps.md](/projects/uix/using/apps) | [Content reviewed · Difference reviewed](/en/projects/uix/using/apps) | [Content reviewed](/fr/projects/uix/using/apps) |
 | [projects/uix/using/cards.md](/projects/uix/using/cards) | [Content reviewed · Difference reviewed](/en/projects/uix/using/cards) | [Content reviewed · Difference reviewed](/fr/projects/uix/using/cards) |
 | [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Content reviewed · Difference reviewed](/en/projects/uix/using/custom-panels) | [Content reviewed](/fr/projects/uix/using/custom-panels) |

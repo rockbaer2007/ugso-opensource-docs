@@ -4,6 +4,12 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Vérification rédactionnelle du contenu
+
+Les traductions sont aussi lues face à la référence enregistrée : sens, prérequis, valeurs par défaut et limites sont comparés ; les contradictions trouvées sont corrigées. « Contenu vérifié » ne vaut que pour le texte enregistré. Modifier la référence ou la traduction exige une nouvelle vérification. Consultez le [statut actuel par page](/fr/documentation-status) et les [évaluations avec empreintes](/documentation-semantic-review.json).
+
+Les corrections des exemples complémentaires, notamment `dissolve_target`, et les rectifications rédactionnelles de la source anglaise sont signalées explicitement. La source canonique originale reste enregistrée séparément. Il ne s'agit ni d'une certification linguistique indépendante ni d'un nouveau test d'exécution HA. Les rapports anciens ci-dessous décrivent leur portée historique.
+
 ## Comparaison canonique et points ouverts — 20 novembre 2026
 
 La version stable est désormais [UIX 9.1.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0), révision publiée `ca36726`. Les **66** pages canoniques ont été comparées à [`dev fb36536`](https://github.com/Lint-Free-Technology/uix/commit/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6), dont la documentation est identique à celle de la version publiée. Depuis `3e330667`, **quatre pages ont changé et 62 sont inchangées**. Navigation, médias et exemples de code sont inchangés.

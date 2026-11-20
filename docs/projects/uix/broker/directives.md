@@ -70,7 +70,7 @@ directives:
 
 ## Direktiven-Anchors
 
-`property`, `event`, `call`, `button`, `tile-icon` und `tooltip` nutzen standardmäßig den Interaction Anchor. Jede dieser Direktiven kann den Standard mit eigener `anchor`-Konfiguration überschreiben. Ein einfacher String ist relativ zum Interaction Anchor, ein String mit `&` am Anfang ist ein kompakter absoluter `select_tree`-Pfad ab `document`, und `{ select_tree: ... }` ist die entsprechende lange absolute Form.
+`property`, `event`, `call`, `action-handler`, `button`, `badge`, `text-content`, `tile-icon`, `tooltip` und `lock` nutzen standardmäßig den Interaction Anchor. Jede dieser Direktiven kann den Standard mit eigener `anchor`-Konfiguration überschreiben. Ein einfacher String ist relativ zum Interaction Anchor, ein String mit `&` am Anfang ist ein kompakter absoluter `select_tree`-Pfad ab `document`, und `{ select_tree: ... }` ist die entsprechende lange absolute Form.
 
 ```yaml
 directives:
