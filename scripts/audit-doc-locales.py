@@ -17,6 +17,7 @@ DOCS = ROOT / 'docs'
 REPORT = DOCS / 'public/documentation-audit.json'
 LOCALE_MAP = DOCS / '.vitepress/page-locales.json'
 REVIEW = DOCS / 'public/documentation-review.json'
+CONTENT_REVIEW = DOCS / 'public/documentation-content-review.json'
 SLUGS = {
     'blog/beitragsvorlage.md': 'blog/post-template.md',
     'projects/atlas/uebersicht.md': 'projects/atlas/overview.md',
@@ -95,6 +96,7 @@ def inspect(path):
 
 def inventory(reviewed_at):
     reviewed = {entry['target']: entry for entry in json.loads(REVIEW.read_text(encoding='utf-8'))['pages']} if REVIEW.exists() else {}
+    content_reviews = {entry['target']: entry for entry in json.loads(CONTENT_REVIEW.read_text(encoding='utf-8'))['pages']} if CONTENT_REVIEW.exists() else {}
     sources = sorted(p.relative_to(DOCS).as_posix() for p in DOCS.rglob('*.md')
                      if p.relative_to(DOCS).parts[0] not in ['en', 'fr', '.vitepress', 'public']
                      and p.name != 'documentation-status.md')
@@ -120,6 +122,15 @@ def inventory(reviewed_at):
                     current = entry['source_sha256'] == de['sha256'] and entry['target_sha256'] == item['sha256']
                     item['review'] = {'status': 'reviewed' if current else 'needs-recheck',
                                       'disposition': entry['disposition'], 'reason': entry['reason']}
+                content_entry = content_reviews.get(path)
+                if content_entry:
+                    current = content_entry['source_sha256'] == de['sha256'] and content_entry['target_sha256'] == item['sha256']
+                    item['content_review'] = {
+                        'status': 'technically-compared' if current else 'needs-recheck',
+                        'reviewed_at': content_entry['reviewed_at'],
+                        'assessment': content_entry['assessment'],
+                        'language_scope': content_entry['language_scope'],
+                    }
             row['locales'][locale] = item
         rows.append(row)
     extras = {}
@@ -134,7 +145,12 @@ def inventory(reviewed_at):
         summary[locale] = dict(counts, existing_pages=len(files), unmatched_pages=len(extras[locale]),
                               review_signals=sum(any(row['locales'][locale].get('review_signals', {}).values()) for row in rows),
                               reviewed_findings=sum(row['locales'][locale].get('review', {}).get('status') == 'reviewed' for row in rows),
-                              open_review_signals=sum(any(row['locales'][locale].get('review_signals', {}).values()) and row['locales'][locale].get('review', {}).get('status') != 'reviewed' for row in rows))
+                              technically_compared=sum(row['locales'][locale].get('content_review', {}).get('status') == 'technically-compared' for row in rows),
+                              open_review_signals=sum(
+                                  row['locales'][locale].get('content_review', {}).get('status') == 'needs-recheck'
+                                  or (any(row['locales'][locale].get('review_signals', {}).values())
+                                      and row['locales'][locale].get('review', {}).get('status') != 'reviewed')
+                                  for row in rows))
     return {'reviewed_at': reviewed_at, 'hash_format': 'SHA-256 of UTF-8 text with normalized LF line endings', 'scope': 'All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.',
             'source_pages': len(sources), 'summary': summary, 'unmatched_pages': extras, 'pages': rows}
 
@@ -206,11 +222,29 @@ def render_report(report, locale):
     lines += ['', text['priority'], '', text['details'], '', '[JSON](/documentation-audit.json)', '',
               '[UIX DE](/projects/uix/translation-status) · [UIX EN](/en/projects/uix/translation-status) · [UIX FR](/fr/projects/uix/translation-status)', '',
               f'## {text["head"]}', '', f'| {text["column"]} | EN | FR |', '| --- | --- | --- |']
+    if CONTENT_REVIEW.exists():
+        counts = report['summary']
+        note = {
+            'de': f'**Erweiterter Abgleich vom 20.11.2026: {counts["en"]["technically_compared"]} EN- und {counts["fr"]["technically_compared"]} FR-Seiten.** Alle zuvor nur als „Inhalt vorhanden“ ausgewiesenen Dateien wurden vollständig technisch mit ihrer Referenz verglichen: Versionen, Codeblöcke, technische Bezeichner und Verweise. Abweichungen wurden einzeln eingeordnet; eine automatische Sprachsuche wurde durch die Korrektur der gefundenen englischen Textreste ergänzt. **„Technisch abgeglichen“ ist keine vollständige sprachliche oder satzweise Inhaltsfreigabe.** „Unterschied geprüft“ bleibt die frühere Bewertung struktureller Abweichungen. „Erneut prüfen“ erscheint, sobald sich eine der beiden Dateien ändert. [Prüfumfang und Einzelbewertungen](/documentation-content-review.json).',
+            'en': f'**Extended comparison of 2026-11-20: {counts["en"]["technically_compared"]} EN and {counts["fr"]["technically_compared"]} FR pages.** Every file previously labelled only “Content present” was technically compared in full against its reference: versions, code blocks, technical identifiers and links. Differences were individually classified; automatic language screening was followed by corrections to the English prose found in French pages. **“Technically compared” is not a full linguistic or sentence-by-sentence content approval.** “Difference reviewed” retains the earlier structural assessment. “Recheck required” appears when either file changes. [Scope and individual assessments](/documentation-content-review.json).',
+            'fr': f'**Comparaison étendue du 20 novembre 2026 : {counts["en"]["technically_compared"]} pages EN et {counts["fr"]["technically_compared"]} pages FR.** Tous les fichiers auparavant marqués uniquement « Contenu présent » ont été comparés intégralement à leur référence sur le plan technique : versions, blocs de code, identifiants et liens. Les différences ont été classées individuellement ; la détection automatique de langue a été suivie de la correction des passages anglais trouvés dans les pages françaises. **« Comparaison technique effectuée » ne constitue pas une validation linguistique complète ni une vérification du contenu phrase par phrase.** « Différence examinée » conserve l’évaluation structurelle antérieure. « À revérifier » apparaît dès qu’un des fichiers change. [Périmètre et évaluations](/documentation-content-review.json).',
+        }[locale]
+        # Explain the labels before readers reach the page table.
+        index = next(i for i, line in enumerate(lines) if line == f'## {text["head"]}')
+        fixes = {
+            'de': 'Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und Kamera-Hintergründen, ein JavaScript-Syntaxfehler im Entwicklerbeispiel sowie sieben Sprungmarken und zwei Videolinks. Die Rückfallregel für `active: false` beim Lock Spark ist in DE/FR präzisiert. Beispiele, Medien und vorhandene Anker bleiben erhalten.',
+            'en': 'Corrections include English prose left in French UIX concepts, macros, themes and camera backgrounds, a JavaScript syntax error in the developer example, seven anchor links and two video links. The Lock Spark active:false fallback is clarified in DE/FR. Examples, media and existing anchors are preserved.',
+            'fr': 'Corrections : passages anglais dans les concepts, macros, thèmes et arrière-plans caméra UIX français, erreur de syntaxe JavaScript dans l’exemple développeur, sept liens d’ancrage et deux liens vidéo. La règle de repli active:false du spark Lock est précisée en DE/FR. Les exemples, médias et ancres existants sont conservés.',
+        }[locale]
+        lines[index:index] = [note, '', fixes, '']
     for row in report['pages']:
         cells = [f'[{row["source"]}]({route(row["source"])})']
         for language in ['en', 'fr']:
             item = row['locales'][language]
             status = text['statuses'][item['status']]
+            content_status = item.get('content_review', {}).get('status')
+            if content_status:
+                status = ({'de': 'Technisch abgeglichen', 'en': 'Technically compared', 'fr': 'Comparaison technique effectuée'} if content_status == 'technically-compared' else {'de': 'Erneut prüfen', 'en': 'Recheck required', 'fr': 'À revérifier'})[locale]
             if any(item.get('review_signals', {}).values()):
                 status += ' · ' + ({'de': 'Unterschied geprüft', 'en': 'Difference reviewed', 'fr': 'Différence examinée'}[locale] if item.get('review', {}).get('status') == 'reviewed' else text['signal'])
             cells.append(status if item['status'] == 'missing' else f'[{status}]({route(item["path"])})')

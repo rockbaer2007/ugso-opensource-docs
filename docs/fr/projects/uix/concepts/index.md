@@ -1,12 +1,12 @@
 ---
-description: Learn about UI eXtension concepts such as DOM navigation and how UIX patches and applies to UI elements in Home Assistant.
+description: Comprendre la navigation dans le DOM et la manière dont UIX applique les styles aux éléments de Home Assistant.
 ---
 # Concepts UIX
 
-UI eXtension does its magic by patching various functions of HTML elements used by Home Assistant Frontend to inject a UIX styling node, `<uix-node>` where styles are injected into the DOM. To get the most out of UIX you can either use [UIX Guides](../guides.md) to follow what others have created, or work it out yourself.
+UI eXtension adapte différentes fonctions des éléments HTML utilisés par l’interface de Home Assistant afin d’insérer un nœud de style UIX, `<uix-node>`, dans le DOM. Ce nœud contient les styles à appliquer. Pour découvrir les possibilités de UIX, vous pouvez suivre les exemples des [guides UIX](../guides.md) ou explorer vous-même la structure de l’interface.
 
 ## Ressources des concepts
 
-- [DOM navigation](dom.md)
-- [UIX application](application.md)
+- [Navigation dans le DOM](dom.md)
+- [Application des styles UIX](application.md)
 - [Contextes UIX](./context)

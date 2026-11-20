@@ -887,6 +887,8 @@ expressions Jinja, les modèles Mushroom et les styles `card_mod`.
 Les opacités des arrière-plans actifs et inactifs sont calculées en valeurs
 de couleur stables avant le changement d’onglet.
 
+<span id="tabbed-card-v2-styling"></span>
+
 ### Styles Tabbed Card V2
 
 Les variables Material sont complétées par celles des arrière-plans, des

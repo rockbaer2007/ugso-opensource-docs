@@ -158,11 +158,11 @@ Contrôle l'apparence de la boîte de dialogue de saisie du code PIN ou de la ph
 | `action: element_double_tap` | Déclenche `double_tap_action` sur l'élément cible. |
 | N'importe quel objet d'action HA | Exécute cette action sur `entity`, par exemple `action: toggle`. |
 
-### Lock entry keys
+### Clés des entrées de verrou
 
 | Clé | Type | Valeur par défaut | Description |
 | --- | --- | --- | --- |
-| `active` | booléen | `true` | Définissez `false` pour déverrouiller explicitement l'élément pour les utilisateurs concernés, sans superposition. |
+| `active` | booléen | `true` | `false` libère les utilisateurs concernés uniquement si aucune entrée active ne leur correspond. |
 | `code` | chaîne ou nombre | — | Code à saisir. Une valeur numérique affiche le pavé numérique Home Assistant ; une chaîne affiche un champ de mot de passe. |
 | `pin` | chaîne ou nombre | — | Alias de `code`. |
 | `confirmation` | chaîne ou booléen | — | Demande de confirmation. Utilisez `true` pour le texte localisé par défaut de Home Assistant ou indiquez un texte personnalisé. |

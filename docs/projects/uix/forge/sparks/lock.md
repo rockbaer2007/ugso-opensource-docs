@@ -73,6 +73,8 @@ element:
 
 ## Matching-Logik
 
+`locks` wird in der angegebenen Reihenfolge geprüft. Der erste passende aktive Eintrag bestimmt die Entsperrung. Ein passender Eintrag mit `active: false` ist nur der Rückfall, wenn kein passender aktiver Eintrag folgt. Er überstimmt daher keine später passende aktive Sperre. Ohne passenden Eintrag ist das Element bei `permissive: true` frei; andernfalls umgehen Administratoren die Sperre, während andere Nutzer dauerhaft blockiert bleiben.
+
 | Konfiguration | Wen sie trifft |
 | --- | --- |
 | `users`-Liste vorhanden | Nutzer, deren Name in der Liste steht. Mit `admins: true` zusätzlich Admins. |
@@ -122,7 +124,7 @@ element:
 
 | Schlüssel | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
-| `active` | boolean | `true` | Mit `false` wird für passende Nutzer explizit entsperrt. |
+| `active` | boolean | `true` | `false` gibt passende Nutzer nur frei, wenn kein passender aktiver Eintrag existiert. |
 | `code` | string oder number | - | Einzugebender Code. Zahlen zeigen das HA-Nummernfeld, Text zeigt ein Passwortfeld. |
 | `pin` | string oder number | - | Alias für `code`. |
 | `confirmation` | string oder boolean | - | Bestätigungsdialog. `true` nutzt den HA-Standardtext, ein String nutzt eigenen Text. |

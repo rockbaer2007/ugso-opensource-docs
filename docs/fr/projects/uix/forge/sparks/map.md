@@ -268,7 +268,7 @@ element:
     - device_tracker.my_tablet
 ```
 
-:material-movie: [Animation du mode visite du spark Map (mp4)](../../assets/page-assets/forge/sparks/map-tour.mp4){ data-type="video" class="glightbox" }
+:material-movie: [Animation du mode visite du spark Map (mp4)](/projects/uix/assets/page-assets/forge/sparks/map-tour.mp4){ data-type="video" class="glightbox" }
 
 ### Mode visite avec une liste de points personnalisée
 
@@ -301,7 +301,7 @@ element:
     - device_tracker.my_tablet
 ```
 
-:material-movie: [Animation du mode visite avec points personnalisés (mp4)](../../assets/page-assets/forge/sparks/map-tour-pois.mp4){ data-type="video" class="glightbox" }
+:material-movie: [Animation du mode visite avec points personnalisés (mp4)](/projects/uix/assets/page-assets/forge/sparks/map-tour-pois.mp4){ data-type="video" class="glightbox" }
 
 ### Styliser le bouton de visite
 

@@ -13,6 +13,8 @@ Les paquets et outils complémentaires sont proposés de manière centralisée s
 
 À partir de **Studio 0.1.203**, vous pouvez installer **Technic 1.6.0**. Ce paquet contient les sept types de widgets : **Window – Wall**, **Switch – Boolean**, **Dimmer – Light**, **Room – Overlay**, **Clock – Date**, **Thermostat – Temperature** et **Status – List**. La version 1.6.0 peut être installée via le gestionnaire de paquets en tant qu'extension des versions précédentes ; les widgets existants sont conservés.
 
+<span id="status-list"></span>
+
 ## Status – List {#status-–-list}
 
 ![Liste d'états affichant la température et l'état d'une fenêtre ; données de test simulées pour HA](/images/grafik-visual-studio/technic-status-runtime.png)
@@ -22,6 +24,8 @@ La liste d'états affiche jusqu'à **dix lignes d'état en lecture seule**. Par 
 Selon le nombre défini, les **lignes d'état [1]** à **[10]** s'affichent. Chaque ligne se voit attribuer une étiquette et une entité Home Assistant. Le type **Nombre** prend en charge les unités, les décimales et la couleur des chiffres. Le type **Vrai / Faux** permet de définir des textes et des couleurs pour les états ON/OFF, ainsi que des entités supplémentaires (séparées par des virgules) combinées par des opérateurs **ET** ou **OU**. Les champs d'origine `oid1` à `oid10` correspondent aux champs Studio `rowEntityId1` à `rowEntityId10` ; les champs `oidsExtra1` à `oidsExtra10` correspondent aux champs `extraEntityIds1` à `extraEntityIds10`.
 
 Les valeurs manquantes, inconnues ou indisponibles sont traitées comme `—`. La taille de la police, la police elle-même, le style gras et la couleur de l'étiquette sont définis via **CSS → Police et texte**. Les étiquettes ou valeurs trop longues sont tronquées avec des points de suspension ; le texte complet est alors visible dans une info-bulle (tooltip). Si vous utilisez des unités longues, augmentez la largeur du widget ; l'exemple illustré utilise 240 pixels. Si le nombre de lignes est trop élevé, un défilement (scroll) est activé au sein du widget. Les clics ne modifient pas les états dans Home Assistant et ne masquent pas les étiquettes. Toutes les lignes et tous les espacements sont conservés lors de l'exportation du projet ou du widget.
+
+<span id="thermostat-temperature"></span>
 
 ## Thermostat – Température {#thermostat-–-temperature}
 

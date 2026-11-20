@@ -144,6 +144,13 @@ def main():
             if not target.exists() or target.read_bytes() != file.read_bytes():
                 target.parent.mkdir(parents=True,exist_ok=True)
                 shutil.copyfile(file,target)
+            # Markdown download links to videos are not bundled like images.
+            # Publish their stable URLs used by the canonical adaptations.
+            if file.suffix.lower() == '.mp4':
+                public_target=ROOT/'docs/public/projects/uix/assets'/file.relative_to(source/'assets')
+                public_target.parent.mkdir(parents=True,exist_ok=True)
+                if not public_target.exists() or public_target.read_bytes() != file.read_bytes():
+                    shutil.copyfile(file,public_target)
     record_path.write_text(json.dumps({'revision':REVISION,'reviewed_at':REVIEWED_AT,'pages':manifest,'editorial_corrections':corrections,'baseline_revision':previous.get('baseline_revision'),'source_branch':SOURCE_BRANCH,'source_version':SOURCE_VERSION},indent=2)+'\n',encoding='utf-8')
     print(f'Adapted {len(manifest)} canonical English pages; source hashes recorded.')
 

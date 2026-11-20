@@ -1,11 +1,11 @@
 ---
-description: Learn how to display a full-screen camera stream, video, or image as a view background using UIX theme CSS variables.
+description: Afficher un flux caméra, une vidéo ou une image en arrière-plan avec les variables CSS du thème UIX.
 ---
 # Arrière-plans des vues
 
 UIX peut afficher un **flux de caméra**, une **vidéo** ou une **image** en plein écran derrière les vues de votre tableau de bord Home Assistant et les panneaux de configuration. L'arrière-plan est entièrement contrôlé par des variables CSS définies dans votre thème et prend en charge les modèles Jinja2 ; vous pouvez donc changer de source selon la vue sans code personnalisé.
 
-::: info How it works
+::: info Fonctionnement
 Le correctif de style de `ha-drawer` contrôle également l'arrière-plan de la vue, ce qui permet à cette fonction de s'appliquer aux vues du tableau de bord *et* aux panneaux de configuration. Définissez les variables sur `:host` dans la clé de thème `uix-drawer` afin qu'elles soient accessibles via `getComputedStyle(ha-drawer)`. Comme `ha-drawer` persiste pendant la navigation, l'élément d'arrière-plan est **réutilisé** entre les vues lorsque la source (vidéo ou image) est identique ; il n'est pas détruit puis recréé.
 
 :::
@@ -13,20 +13,20 @@ Le correctif de style de `ha-drawer` contrôle également l'arrière-plan de la 
 
 | Variable | Description |
 |---|---|
-| `--uix-view-background-camera-entity` | Camera entity ID — UIX renders a muted `ha-camera-stream` which manages all stream connection and any authentication. |
-| `--uix-view-background-image-entity` | Any entity with `entity_picture` — UIX manages any URL authentication and renders a cover-sized background image |
-| `--uix-view-background-video` | Plain video URL — UIX renders a `<video autoplay muted loop playsinline>` |
-| `--uix-view-background-image` | Plain image URL — UIX renders a cover-sized CSS `background-image` |
-| `--uix-view-background` | Full CSS `background` shorthand value — applied directly to the background div; user is responsible for `url()`, sizing, positioning, etc. |
-| `--uix-view-background-cover` | `view` (default) or `full` — controls viewport coverage (see [below](#coverage-modes)) |
-| `--uix-camera-position`| Camera background position keyword — `center` (default), `top`, `bottom`, `left`, `right`, `top-left`, `top-right`, `bottom-left`, `bottom-right` |
-| :camera:  `--uix-camera-zoom` | Scale factor — values greater than `1` zoom in, less than `1` zoom out. |
-| :camera:  `--uix-camera-pan-x` | Horizontal shift.  Accepts any CSS length or percentage. Positive values move the stream right (showing more of the left side of the camera). |
-| :camera:  `--uix-camera-pan-y` | Vertical shift.  Accepts any CSS length or percentage. Positive values move the stream down (showing more of the top of the camera). |
+| `--uix-view-background-camera-entity` | Identifiant d’entité caméra : UIX affiche un `ha-camera-stream` sans son, qui gère la connexion au flux et son authentification. |
+| `--uix-view-background-image-entity` | Entité possédant `entity_picture` : UIX gère l’authentification de l’URL et affiche l’image en couvrant l’arrière-plan. |
+| `--uix-view-background-video` | URL vidéo simple : UIX affiche un élément `<video autoplay muted loop playsinline>`. |
+| `--uix-view-background-image` | URL d’image simple : UIX affiche une `background-image` CSS couvrant l’arrière-plan. |
+| `--uix-view-background` | Valeur complète du raccourci CSS `background`, appliquée directement au conteneur. Vous devez fournir `url()`, la taille, la position et les autres propriétés nécessaires. |
+| `--uix-view-background-cover` | `view` (par défaut) ou `full` : détermine la zone couverte (voir [ci-dessous](#coverage-modes)). |
+| `--uix-camera-position`| Position du flux caméra : `center` (par défaut), `top`, `bottom`, `left`, `right`, `top-left`, `top-right`, `bottom-left`, `bottom-right`. |
+| :camera:  `--uix-camera-zoom` | Facteur d’échelle : une valeur supérieure à `1` agrandit le flux ; une valeur inférieure à `1` le réduit. |
+| :camera:  `--uix-camera-pan-x` | Décalage horizontal, exprimé par une longueur CSS ou un pourcentage. Une valeur positive déplace le flux vers la droite et montre davantage son côté gauche. |
+| :camera:  `--uix-camera-pan-y` | Décalage vertical, exprimé par une longueur CSS ou un pourcentage. Une valeur positive déplace le flux vers le bas et montre davantage sa partie supérieure. |
 
-:camera: The camera CSS zoom and pan CSS variables can be set either on `:host` inside `uix-drawer` or inside `uix-view-background`. See [camera positioning](#camera-positioning) and [camera zoom and pan](#camera-zoom-and-pan).
+:camera: Les variables CSS de zoom et de déplacement de la caméra peuvent être définies sur `:host` dans `uix-drawer` ou dans `uix-view-background`. Consultez le [positionnement](#camera-positioning) et le [zoom et déplacement de la caméra](#camera-zoom-and-pan).
 
-**Priority order**: `camera-entity` → `image-entity` → `video` → `image` → `background`.  All five slots can be active simultaneously as independent layers.
+**Ordre de priorité** : `camera-entity` → `image-entity` → `video` → `image` → `background`. Les cinq emplacements peuvent être actifs simultanément en tant que couches indépendantes.
 
 ::: tip
 Il n'est pas nécessaire d'entourer de `url()` les variables CSS d'entité caméra, d'entité image, de vidéo ou d'image pour les arrière-plans de vue. UIX ajoute `url()` si nécessaire. Vous **devez** toutefois le fournir si vous utilisez `--uix-view-background`.
@@ -38,10 +38,10 @@ Il n'est pas nécessaire d'entourer de `url()` les variables CSS d'entité camé
 
 La variable `--uix-view-background-cover` contrôle la partie de la fenêtre occupée par l'arrière-plan.
 
-| Value | Description |
+| Valeur | Description |
 |---|---|
-| `view` *(default)* | Background fills only the **content area** — offset below the top bar (`--header-height`) and to the right of the sidebar.  The offset adjusts automatically when the sidebar is resized or toggled. NOTE: For any config panels like developer tools which have double header height, the view will not compensate beyond `--header-height`. |
-| `full` | Background fills the **entire viewport**, sitting behind the top bar and sidebar. |
+| `view` *(par défaut)* | L’arrière-plan remplit uniquement la **zone de contenu**, sous la barre supérieure (`--header-height`) et à droite de la barre latérale. Le décalage s’adapte automatiquement au redimensionnement ou au masquage de la barre latérale. Pour les panneaux à double en-tête, tels que les outils de développement, la compensation reste limitée à `--header-height`. |
+| `full` | L’arrière-plan remplit **toute la fenêtre**, derrière la barre supérieure et la barre latérale. |
 
 ## Exemples de base
 
@@ -128,7 +128,7 @@ my-theme:
 
 Consultez [Modèles](./templates.md) pour la documentation complète des variables de modèle.
 
-::: tip Use template debug to check variables
+::: tip Vérifier les variables avec le débogage des modèles
 Pour vérifier quelles variables `panel` sont disponibles, utilisez un modèle dans votre thème avec le débogage UIX et un commentaire CSS. Dans la console de votre navigateur, repérez `UIX: Template updated`, puis développez `variables` et enfin `panel`.
 ```yaml
 uix-drawer: |
@@ -139,7 +139,7 @@ uix-drawer: |
 :::
 ## Styliser l'arrière-plan avec `uix-view-background`
 
-UIX styling for the view background is available using the theme variables `uix-view-background`.  This lets you style the background content using the `uix-view-background` theme key — exactly like any other UIX theme target.
+La clé de thème `uix-view-background` permet d’appliquer des styles au contenu de l’arrière-plan de la vue, comme pour les autres cibles de thème UIX.
 
 Les usages courants comprennent le réglage de l'opacité, du niveau de gris, du flou et de la luminosité :
 
@@ -159,13 +159,13 @@ my-theme:
 
 Pour ajuster la position ou d'autres propriétés de l'arrière-plan de la vue, vous pouvez modifier les paramètres d'affichage du conteneur hôte ainsi que ceux de l'élément affiché. Cet élément dépend du type indiqué dans le tableau ci-dessous.
 
-| Type | Element |
+| Type | Élément |
 | - | - |
-| Camera entity | `ha-camera-stream` |
-| Entity image | `div.uix-bg-image` |
-| Video | `video` |
+| Entité caméra | `ha-camera-stream` |
+| Image d’une entité | `div.uix-bg-image` |
+| Vidéo | `video` |
 | Image | `div.uix-bg-image` |
-| Background shorthand | `div.uix-bg-image` |
+| Raccourci d’arrière-plan | `div.uix-bg-image` |
 
 <span id="camera-positioning"></span>
 
@@ -173,17 +173,17 @@ Pour ajuster la position ou d'autres propriétés de l'arrière-plan de la vue, 
 
 Par défaut, les arrière-plans de caméra sont **centrés** : le flux remplit le conteneur et le débordement dû au rapport hauteur/largeur est rogné symétriquement de chaque côté. Utilisez `--uix-camera-position` pour modifier le point d'ancrage du flux en cas de débordement :
 
-| Value | Description |
+| Valeur | Description |
 |---|---|
-| `center` *(default)* | Centred horizontally and vertically |
-| `top` | Anchored to the top edge |
-| `bottom` | Anchored to the bottom edge |
-| `left` | Anchored to the left edge |
-| `right` | Anchored to the right edge |
-| `top-left` | Anchored to the top-left corner |
-| `top-right` | Anchored to the top-right corner |
-| `bottom-left` | Anchored to the bottom-left corner |
-| `bottom-right` | Anchored to the bottom-right corner |
+| `center` *(par défaut)* | Centré horizontalement et verticalement |
+| `top` | Ancré au bord supérieur |
+| `bottom` | Ancré au bord inférieur |
+| `left` | Ancré au bord gauche |
+| `right` | Ancré au bord droit |
+| `top-left` | Ancré dans le coin supérieur gauche |
+| `top-right` | Ancré dans le coin supérieur droit |
+| `bottom-left` | Ancré dans le coin inférieur gauche |
+| `bottom-right` | Ancré dans le coin inférieur droit |
 
 ```yaml
   uix-drawer: |
@@ -197,17 +197,17 @@ Par défaut, les arrière-plans de caméra sont **centrés** : le flux remplit l
 
 ### Zoom et déplacement de la caméra
 
-UIX injects a default transform rule into every camera background so that you can zoom and pan the stream by setting CSS custom properties.  The variables can be set in **`uix-drawer`** (alongside `--uix-view-background-camera-entity`, for convenience) or in **`uix-view-background`** (for more targeted control).  When set in both places the `uix-drawer` value takes precedence.
+UIX insère une règle de transformation par défaut dans chaque arrière-plan caméra. Vous pouvez ainsi agrandir et déplacer le flux avec des propriétés CSS personnalisées, définies dans **`uix-drawer`** (à côté de `--uix-view-background-camera-entity`) ou dans **`uix-view-background`** (pour un réglage plus ciblé). Si les deux emplacements définissent une même variable, la valeur de `uix-drawer` est prioritaire.
 
-| Variable | Default | Description |
+| Variable | Par défaut | Description |
 |---|---|---|
-| `--uix-camera-zoom` | `1` | Scale factor — values greater than `1` zoom in, less than `1` zoom out. |
-| `--uix-camera-pan-x` | `0%` | Horizontal shift.  Accepts any CSS length or percentage. Positive values move the stream right (showing more of the left side of the camera). |
-| `--uix-camera-pan-y` | `0%` | Vertical shift.  Accepts any CSS length or percentage. Positive values move the stream down (showing more of the top of the camera). |
+| `--uix-camera-zoom` | `1` | Facteur d’échelle : au-dessus de `1`, le flux est agrandi ; en dessous, il est réduit. |
+| `--uix-camera-pan-x` | `0%` | Décalage horizontal en longueur CSS ou pourcentage. Une valeur positive déplace le flux vers la droite et montre davantage son côté gauche. |
+| `--uix-camera-pan-y` | `0%` | Décalage vertical en longueur CSS ou pourcentage. Une valeur positive déplace le flux vers le bas et montre davantage sa partie supérieure. |
 
-**Centering**: `--uix-camera-position: center;` ensures zooming always scales from the centre of the stream — so the camera stays centred at every zoom level.  The pan variables shift from that centred position in screen space, independently of the current zoom level (10% pan is always a 10% screen-space shift).
+**Centrage** : `--uix-camera-position: center;` fait varier l’échelle depuis le centre du flux ; la caméra reste centrée à chaque niveau de zoom. Les variables de déplacement décalent cette position dans l’espace de l’écran, indépendamment du zoom : un déplacement de 10 % reste un déplacement de 10 % à l’écran.
 
-**Everything in one place (position + zoom + camera entity in `uix-drawer`):**
+**Tout au même endroit : position, zoom et entité caméra dans `uix-drawer` :**
 
 ```yaml
 my-theme:
@@ -221,7 +221,7 @@ my-theme:
     }
 ```
 
-**Zoom in and centre on the upper-left quadrant:**
+**Agrandir et centrer sur le quadrant supérieur gauche :**
 
 Avec un zoom de 2×, le flux fait deux fois la taille du conteneur. Pour afficher le centre du quadrant supérieur gauche, déplacez l'image vers la droite et vers le bas de 50 % des dimensions du conteneur :
 
@@ -235,7 +235,7 @@ Avec un zoom de 2×, le flux fait deux fois la taille du conteneur. Pour affiche
     }
 ```
 
-**Per-view zoom with templates:**
+**Adapter le zoom à la vue avec des modèles :**
 
 ```yaml
 my-theme:
@@ -250,9 +250,9 @@ my-theme:
     }
 ```
 
-**Responsive zoom with media queries:**
+**Adapter le zoom à la taille de l’écran avec les requêtes média :**
 
-CSS variables set inside a `@media` block apply only when that query matches, so you can zoom in on large screens while leaving the camera at natural size on smaller screens:
+Les variables CSS d’un bloc `@media` ne s’appliquent que si sa condition est remplie. Vous pouvez donc agrandir le flux sur les grands écrans et conserver sa taille naturelle sur les petits :
 
 ```yaml
 my-theme:
@@ -317,7 +317,7 @@ my-theme:
 
 Vous pouvez appliquer un style UIX à `uix-top-app-bar-fixed` pour rendre transparentes la barre supérieure de l'application et la barre latérale. Certains panneaux de configuration possèdent leur propre barre d'outils ; vous devrez peut-être également la styliser avec `uix-config`.
 
-[Example](https://github.com/ngocjohn/hass-config/blob/40288532f57eacbbf9dd38b14f20b31ea615a9f5/config/themes/graphite-auto.yaml#L758-L768) as shared by `@ngocjohn` on Home Assistant Community Forum.
+[Exemple](https://github.com/ngocjohn/hass-config/blob/40288532f57eacbbf9dd38b14f20b31ea615a9f5/config/themes/graphite-auto.yaml#L758-L768) partagé par `@ngocjohn` sur le forum de la communauté Home Assistant.
 
 ```yaml
   uix-top-app-bar-fixed: |

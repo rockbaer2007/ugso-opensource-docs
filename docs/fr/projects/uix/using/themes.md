@@ -23,7 +23,7 @@ red-theme:
   ha-card-border-radius: 20px
 ```
 
-::: tip Theme name
+::: tip Nom du thème
 Le nom du thème doit figurer sur la première ligne ; le reste doit être indenté d'un niveau.
 
 :::
@@ -31,7 +31,7 @@ Le nom du thème doit figurer sur la première ligne ; le reste doit être inden
 
 ## Thème UIX de base
 
-::: info Theme variable
+::: info Variable du thème
 Le thème DOIT définir une variable `uix-theme` dont la valeur désigne la configuration de thème utilisée par UIX pour ses styles, ses macros et ses [polices](#fonts). En général, `uix-theme` correspond au nom du thème Home Assistant, mais peut désigner un autre thème si vous souhaitez réutiliser sa configuration UIX.
 
 `uix-theme` correspondant au thème Home Assistant :
@@ -111,8 +111,8 @@ red-theme:
 
 ![Red theme row border example](../assets/page-assets/using/theme-red-black-rows-border.png){ width="500" }
 
-::: tip `uix-<thing>` variables
-`uix-<thing>` variables contain strings containing CSS code, and must start with `|` or `>` and be indented at least one step.
+::: tip Variables `uix-<thing>`
+Les variables `uix-<thing>` contiennent du code CSS sous forme de chaînes. Elles doivent commencer par `|` ou `>` et leur contenu doit être indenté d’au moins un niveau.
 
 :::
 Comme pour les styles habituels, vous pouvez utiliser les modèles Jinja2 pour traiter les règles.
@@ -132,7 +132,7 @@ red-theme:
 
 ## Classes
 
-UIX lets you set a CSS class to elements. You can then use this in your theme.
+UIX permet d’attribuer une classe CSS aux éléments, puis de la cibler dans votre thème.
 
 ```yaml
 red-theme:
@@ -183,7 +183,7 @@ red-theme:
       }
 ```
 
-::: tip Theme variables MUST be strings
+::: tip Les variables de thème DOIVENT être des chaînes
 Bien que la valeur de `uix-<thing>-yaml` soit du YAML, elle DOIT être une chaîne du point de vue du thème, contenant elle-même d'autres chaînes.
 
 :::
@@ -235,14 +235,14 @@ entities:
 
 ![UIX Theme override example](../assets/page-assets/using/theme-local-override.png){ width="500" }
 
-::: warning Take caution where you use theme overrides
+::: warning Utiliser les remplacements de thème avec précaution
 La personnalisation des styles et des thèmes dans Home Assistant peut devenir complexe. Une variable CSS peut ne pas s'appliquer comme prévu. Par exemple, si vous définissez `--primary-text-color: color;` sur une ligne Entités avec un style UIX direct sur `:host {}` ou avec `uix.theme`, vous pourriez vous attendre à ce que le texte prenne cette couleur. Toutefois, dans ce cas, la propriété `color` est définie sur l'élément `ha-card` de la carte Entités ; le remplacement n'aura donc aucun effet.
 
 :::
 ## Mettre à jour une variable `uix-<thing>` vers `uix-<thing>-yaml`
 
-::: tip UIX theme variable precedence
-`uix-<thing>-yaml` always takes precedence over `uix-<thing>` which is NOT used if `uix-<thing>-yaml` is present in the theme.
+::: tip Priorité des variables de thème UIX
+`uix-<thing>-yaml` est toujours prioritaire sur `uix-<thing>`. Cette dernière n’est pas utilisée si le thème contient `uix-<thing>-yaml`.
 
 :::
 En développant vos thèmes UIX, vous pourriez commencer avec des chaînes CSS simples dans `uix-<thing>`, puis avoir besoin de passer à `uix-<thing>-yaml`. Utilisez alors le sélecteur YAML racine `.:`. Voici l'exemple complet du thème rouge avec `uix-row-yaml`.
@@ -421,7 +421,7 @@ Exemple de badge définissant la variable nommée `color_on` sur `red` dans la m
 Les macros `uix.macros` définies sur une carte sont prioritaires sur celles du thème portant le même nom.
 
 ::: warning
-[Theme macros](#macros) are only available in UIX styling templates, not in UIX Forge element/forge templates.
+Les [macros de thème](#macros) sont disponibles uniquement dans les modèles de style UIX, pas dans les modèles element/forge de UIX Forge.
 Utilisez les [fonderies globales](../forge/foundries.md#global-foundries) de UIX Forge pour définir des `forge.macros` disponibles globalement ou pour un `mold`.
 :::
 

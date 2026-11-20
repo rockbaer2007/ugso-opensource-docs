@@ -355,7 +355,7 @@
       "target": "fr/projects/grafik-visual-studio/technic.md",
       "mode": "replace",
       "source_sha256": "c414606fbe0c3365a184005ded1d2de29eca74dee429af1903535c29b0bf43b5",
-      "target_sha256": "3ff85ef75ea3316e7656a4ee42601bfa63d345013cc06fd566918c54957861cf",
+      "target_sha256": "c9bcc8b509ad1de54419bff625557fad48ca3e66557c35450e48b34b45c1993e",
       "source_code_blocks": 0,
       "target_code_blocks": 0,
       "source_table_rows": 12,

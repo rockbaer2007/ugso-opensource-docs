@@ -178,7 +178,7 @@
       "table_identifiers": [],
       "de_sha256": "bd6ee9ae8b931208f0f67fb11a24fe3a44e1dd11f705480dad8287b01f0b5039",
       "de_example_blocks": 0,
-      "fr_sha256": "4d109129cdee2fc66cc1316f8f6d9ee4e9cba732de0ffd69c918086a287ca8c4",
+      "fr_sha256": "5fbed79da5a50b4efb42a1d6462e8bd9385dfff0455adc90875c2be0e7cea25e",
       "fr_example_blocks": 0
     },
     {
@@ -232,7 +232,7 @@
       "table_identifiers": [],
       "de_sha256": "b3eb747a780941e424f32a99ecec4d99bfd9fe8f915cc551d60e5f0caf7dd644",
       "de_example_blocks": 4,
-      "fr_sha256": "93fdfdf54713a8e68cb559cfb85984d8e60f13ad1006ee1afa3097e4b6531a02",
+      "fr_sha256": "b5cfe533c8189f70a868ff1d7849c58aa3e02c6477e001918a7b3e315e1f5464",
       "fr_example_blocks": 4
     },
     {
@@ -717,9 +717,9 @@
         "unlocked_action",
         "users"
       ],
-      "de_sha256": "bd3da6288a8467fb38e533c9e285fbed03b513c154f725e746c080a1b932dec7",
+      "de_sha256": "9fc2a8e0fd6f9103b8025586f89f60caacfd578b07456eccdd61041edfb40082",
       "de_example_blocks": 16,
-      "fr_sha256": "fc42a8680871eef5e6e0e01e2540250126a0f777764ba043d51910ac2780ad0b",
+      "fr_sha256": "064542ee0b2473f472e2a0142f8b49c1414a1b2db3133083d6b735c0a98ef186",
       "fr_example_blocks": 16
     },
     {
@@ -800,7 +800,7 @@
       ],
       "de_sha256": "c6efc29acf4f3f897d128f6abef0b3ef994027e4fc8ff0e1ec70c5c3b8fc0afb",
       "de_example_blocks": 14,
-      "fr_sha256": "05cc694b6daa07f7bf66b98205a700f468dc3021a235f0c1b789cfe3f52e9b9e",
+      "fr_sha256": "5a295fa7561a824b21021fac877660906669fe042d42de9d64c8a984ddd1c023",
       "fr_example_blocks": 23
     },
     {
@@ -1104,7 +1104,7 @@
       ],
       "de_sha256": "decae4b4bc1557afaf8e5044f03b3caef71cabbf59e22b445237ac1b91f5eccd",
       "de_example_blocks": 13,
-      "fr_sha256": "2e0bdcdca65910430e153082f7f6da8261efe1bf754285b5aac1fe6301746fff",
+      "fr_sha256": "765ea96129f145744647b65f00ae9c5ea382a8c08d2f6c9be802194b8ab7a3d4",
       "fr_example_blocks": 14
     },
     {
@@ -1117,7 +1117,7 @@
       ],
       "de_sha256": "ddf5289e49590fc9c357809aaa0df9d6c246d2abf2306f68d104166fc55247f9",
       "de_example_blocks": 19,
-      "fr_sha256": "5d8607a2d5b1d6da10247261715db604e1c92bb8bd3171cef9486cd084169b06",
+      "fr_sha256": "8752095869f3240c3377ef4aa6c8e3804c685a8deef35d435a6763c5c9764835",
       "fr_example_blocks": 32
     },
     {
@@ -1148,7 +1148,7 @@
       ],
       "de_sha256": "d7db8bba24528f96502dbda3467f4002c89fd2c699383c7b1cb12fc7789b682c",
       "de_example_blocks": 17,
-      "fr_sha256": "4c3b33b9491528eeeeb01cb238dff6a3761f10ac96918cc305624603bfec06a7",
+      "fr_sha256": "f3b4173091ffe880d7ca1acf1881c66e09a1f40028381ee355927a39a2102510",
       "fr_example_blocks": 17
     }
   ]

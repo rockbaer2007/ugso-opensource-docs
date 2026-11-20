@@ -73,6 +73,8 @@ Sous **Projet et description → Options HA**, modifier `variables`, `trigger_va
 
 Ces blocs exportent les séquences natives HA. L’exécution se fait dans HA, sans moteur de script local.
 
+<span id="jinja-experimentell"></span>
+
 ## Jinja (expérimental)
 
 Depuis **0.1.41**, **Jinja einlesen** peut décomposer les modèles en blocs imbriqués modifiables. Coller le modèle, vérifier l’aperçu, laisser **Décomposer en blocs modifiables** activé et choisir éventuellement **Als Bedingung**. **Block erstellen** place la structure connectée à côté de l’automatisation. Relier le bloc valeur extérieur à une affectation de variable ou une entrée de valeur ; relier le bloc condition à une entrée booléenne. Désactiver la décomposition crée un bloc de texte original.

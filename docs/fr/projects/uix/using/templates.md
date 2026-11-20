@@ -61,16 +61,16 @@ uix:
 
 Chaque entrée de macro accepte les clés suivantes :
 
-| Key | Required | Description |
+| Clé | Obligatoire | Description |
 | --- | -------- | ----------- |
-| `template` | Yes | The Jinja2 template body of the macro. |
-| `params` | No | A list of parameters the macro accepts. Each entry is either a plain string (parameter name) or a mapping with `name` and `default` keys (see below). |
-| `returns` | No | Set to `true` to make the macro callable as a function using Home Assistant's `as_function` filter. When `true`, use `<code v-pre>{%- do returns(<value>) -%}</code>` inside the template to return a typed value (boolean, number, etc.). |
+| `template` | Oui | Le corps du modèle Jinja2 de la macro. |
+| `params` | Non | La liste des paramètres acceptés. Chaque entrée est une chaîne (nom du paramètre) ou un dictionnaire contenant les clés `name` et `default` (voir ci-dessous). |
+| `returns` | Non | La valeur `true` permet d’appeler la macro comme une fonction avec le filtre `as_function` de Home Assistant. Utilisez alors `<code v-pre>{%- do returns(<value>) -%}</code>` dans le modèle pour renvoyer une valeur typée (booléen, nombre, etc.). |
 
 Chaque élément de `params` peut être :
 
-- A **plain string** — just the parameter name: `- entity_id`
-- A **mapping** with `name` and `default` — the parameter name and its Jinja2 default expression:
+- Une **chaîne simple** : uniquement le nom du paramètre, par exemple `- entity_id`.
+- Un **dictionnaire** avec `name` et `default` : le nom du paramètre et son expression Jinja2 par défaut :
 
 ```yaml
 params:
@@ -145,7 +145,7 @@ uix:
     }
 ```
 
-Even though only `border_style` is used in the style template, `color_for_state` is also included because `border_style` references it. This generates the following Jinja2 block prepended to every template:
+Même si le modèle de style utilise uniquement `border_style`, UIX inclut aussi `color_for_state`, car la première macro y fait référence. Le bloc Jinja2 suivant est ajouté au début de chaque modèle :
 
 ```jinja
 {% macro color_for_state(entity_id) %}
@@ -188,11 +188,11 @@ uix:
     format_date: "utils.jinja"
 ```
 
-::: tip Using template file macros
+::: tip Utiliser des macros provenant de fichiers
 Tous les fichiers de modèles doivent porter l'extension `.jinja` et faire moins de 5 Mio. Les modèles du dossier `/config/custom_templates` sont chargés au démarrage de Home Assistant. Pour les recharger sans redémarrer Home Assistant, exécutez l'action `homeassistant.reload_custom_templates`.
 
 :::
-Inline and file-import macros can be freely mixed within the same card.
+Une même carte peut combiner librement des macros définies directement et des macros importées depuis des fichiers.
 
 ### Macros de thème
 
@@ -208,9 +208,9 @@ Les billets sont des valeurs YAML nommées qui deviennent des constantes simples
 
 Définissez les billets sous `uix.billets` dans une carte. Chaque billet est inséré sous la forme d'une instruction `<code v-pre>{%- set name = value -%}</code>` avant chaque modèle de style de cette carte :
 
-#### Billet interpolation
+#### Interpolation des billets
 
-String billet values may reference other billets using `{name}` syntax — a simple substitution performed before the billets are turned into Jinja2 variables. Use `{name[N]}` to reference element `N` (0-indexed) from a list billet:
+Les billets textuels peuvent faire référence à d’autres billets avec la syntaxe `{name}`. Cette substitution est effectuée avant leur conversion en variables Jinja2. Utilisez `{name[N]}` pour désigner l’élément `N` d’un billet de type liste ; les indices commencent à zéro :
 
 ```yaml
 uix:
@@ -225,7 +225,7 @@ uix:
     ha-card { content: "{{ entity_id }} / {{ default_scene }}"; }
 ```
 
-Billet references are resolved in dependency order, so declaration order does not matter:
+Les références sont résolues selon leurs dépendances ; l’ordre des déclarations n’a donc pas d’importance :
 
 ```yaml
 billets:
@@ -234,7 +234,7 @@ billets:
   base: "bed"
 ```
 
-::: note Circular references
+::: note Références circulaires
 Si des billets se référencent en boucle, directement ou par une chaîne de références, aucun billet de cette boucle ne peut être résolu. UIX consigne une erreur pour chacun et conserve leurs valeurs telles quelles.
 
 :::
@@ -277,9 +277,9 @@ element:
       }
 ```
 
-![Example using billets](../assets/page-assets/forge/billets.gif)
+![Exemple utilisant des billets](../assets/page-assets/forge/billets.gif)
 
-In templates, billets are used as plain constants:
+Dans les modèles, les billets s’utilisent comme des constantes simples :
 
 ```jinja
 {{ accent_color }}         {# teal #}

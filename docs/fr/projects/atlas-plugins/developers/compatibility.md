@@ -36,6 +36,8 @@ La recherche de mises à jour compare numériquement les textes des versions ; c
 
 L'identifiant et la version du paquet sont comparés au manifeste avant remplacement ; les mises à jour par dépôt doivent aussi correspondre à la version du catalogue. Les capacités déclarées ne sont ni des autorisations automatiques ni un bac à sable. Des versions compatibles ne remplacent ni les tests fonctionnels ni l'évaluation de confiance d'un plugin.
 
+<span id="préserver-et-restaurer-les-données"></span>
+
 ## Préserver et restaurer les données
 
 1. Avant une mise à jour, sauvegarder HA et les données ATLAS, ou l'installation autonome avec ses données et son identité. Exporter aussi les paramètres Admin locaux, projets et métadonnées partagées des plugins. Les données propres aux plugins et collections du navigateur demandent des sauvegardes distinctes.

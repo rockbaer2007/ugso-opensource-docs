@@ -21,14 +21,14 @@ Si votre carte personnalisée ne fonctionne pas lorsqu'elle est utilisée avec d
 ```js
 customElements.whenDefined("uix-node").then((uix) => {
   uix.applyToElement(
-    el, // The root element
-    "type", // Determines which theme variables should apply (uix-<type>, uix-<type>-yaml)
-    config, // The UIX configuration. See below
-    variables, // Any variables passed on to jinja templates, preferably { config: <element configuration> }. Default: {}
-    shadow // whether the styles should be based in the #shadow-root of el. Default: true
-    cls // An extra class to apply to the element. Default: undefined
-  )
-}
+    el, // L’élément racine
+    "type", // Variables de thème uix-<type> et uix-<type>-yaml à appliquer
+    config, // Configuration UIX décrite ci-dessous
+    variables, // Variables Jinja, de préférence { config: <configuration de l’élément> } ; par défaut : {}
+    shadow, // Appliquer les styles dans le #shadow-root de el ; par défaut : true
+    cls // Classe supplémentaire ; par défaut : undefined
+  );
+});
 ```
 
 La configuration UIX est un objet qui accepte les propriétés facultatives suivantes :
@@ -42,7 +42,7 @@ Lorsque `theme` est défini, UIX applique directement à l'élément cible la lo
 
 ## Exemple
 
-Custom card javascript:
+Code JavaScript de la carte personnalisée :
 
 ```js
 const LitElement = customElements.get("ha-panel-lovelace")
@@ -73,7 +73,7 @@ class MyAwesomeCard extends LitElement {
  render() {
     return html`
       <div class="content">
-        <h1> This is a custom card</h1>
+        <h1>Carte personnalisée</h1>
         <div class="my-class">
           Cette carte sert à tester la configuration UIX des cartes personnalisées.
           Elle ne contient pas d'élément <b>ha-card</b>,
@@ -88,7 +88,7 @@ class MyAwesomeCard extends LitElement {
 customElements.define("my-awesome-card", MyAwesomeCard);
 ```
 
-With the following dashboard configuration:
+Avec la configuration de tableau de bord suivante :
 
 ```yaml
 type: custom:my-awesome-card

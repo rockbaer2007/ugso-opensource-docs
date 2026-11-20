@@ -46,6 +46,9 @@ jobs:
       - name: Vollständiges Sprachinventar prüfen
         run: python scripts/audit-doc-locales.py
 
+      - name: Erweiterten technischen Inhaltsabgleich prüfen
+        run: python scripts/check-content-review.py --built
+
       - name: Ergänzte Übersetzungen und technische Beispiele prüfen
         run: python scripts/check-translation-completion.py
 
