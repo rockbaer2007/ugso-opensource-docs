@@ -1971,8 +1971,8 @@
       "target": "en/projects/blocks-for-ha/flow.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "4b774ad2190eb00dd75e14c6aa7c6aad0776e4fc94a1d6086c780cf9b2f34042",
-      "target_sha256": "3a82efa8715183c3bd7d89bdae603be36258ec76625ef62d115e068a08b28c5a",
+      "source_sha256": "934292a6b3069c1e03989d6624926cf0b000b4896aa335ac98c4dc43ead955a4",
+      "target_sha256": "835cd1d1b3461705e5ef92cabb1e1a7739a7ca54546b3e94b8799ed0b9241d59",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1983,15 +1983,17 @@
       "difference_assessment": [
         "Compared the differing blocks: localized demonstration names, comments, example paths/IDs, output text or consistently renamed local variables; API fields and operations are retained. These are example substitutions, not missing blocks."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/flow.md",
       "target": "fr/projects/blocks-for-ha/flow.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "4b774ad2190eb00dd75e14c6aa7c6aad0776e4fc94a1d6086c780cf9b2f34042",
-      "target_sha256": "04e40321acfaefacec1266d2d7705cd83cfc2949bd4fa1cce77a2b92041fc4a5",
+      "source_sha256": "934292a6b3069c1e03989d6624926cf0b000b4896aa335ac98c4dc43ead955a4",
+      "target_sha256": "7ca55c51f775f5cf3fab26849eb6104b6a007c916c0e3fa641f1faa9ccd90c48",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -2004,7 +2006,9 @@
       "difference_assessment": [
         "Source-only external URLs were checked against the target references: localized documentation/demo URLs, localized external guides, source attribution elsewhere or a local equivalent instead of the German absolute URL. This comparison does not check remote server availability."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/index.md",
@@ -4863,8 +4867,8 @@
       "target": "fr/projects/uix/forge/sparks/badge.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "ad063836ebae1be04c45506949d09c29661478e45000aa75c06230b083cb39c7",
-      "target_sha256": "fb1b4ff8a0efa157fdc20c9ab76c35446a4bb6e1322e1c2f88cc09588bee4143",
+      "source_sha256": "5c9e0ea589c64129e15c42aa92824b6158473f48c727ab1d6ca04baaee8539c2",
+      "target_sha256": "affa92a6890fcf8aa492d8bbc4f87b9612d7a15c5a68284eb4bf862305b1aa3c",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4873,7 +4877,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/event.md",
@@ -5007,7 +5013,7 @@
       "target": "fr/projects/uix/forge/sparks/overlay-icon.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "0b2b4fc6206cb214b3a08d1ca17fb7426f115048af675dcca685956796133cae",
+      "source_sha256": "8e01c9bcb455dc960efdd73c9b7e15fe3e1789cf4cc6a5e0db67178ce6895363",
       "target_sha256": "7b318b580821421483170b429629e42c970bc58c261ea52754582ef91a6393e9",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
@@ -5022,7 +5028,9 @@
       "difference_assessment": [
         "Source-only inline strings were checked in context: canonical UIX wording, expressions demonstrated in code rather than repeated inline, or version/attribution formatting. They are not a list of missing API options."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/search.md",
@@ -5341,8 +5349,8 @@
       "target": "fr/projects/uix/using/templates.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "decae4b4bc1557afaf8e5044f03b3caef71cabbf59e22b445237ac1b91f5eccd",
-      "target_sha256": "765ea96129f145744647b65f00ae9c5ea382a8c08d2f6c9be802194b8ab7a3d4",
+      "source_sha256": "9d220e27f4e3c2efe642b77beee879871b990d3848a4526872912ed159f22f52",
+      "target_sha256": "8446ef9bb0462eaaaf6a41205dd2202d452631db1a9be39248a4b7f93ae81c48",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5357,7 +5365,9 @@
         "Source-only inline strings were checked in context: canonical UIX wording, expressions demonstrated in code rather than repeated inline, or version/attribution formatting. They are not a list of missing API options.",
         "Canonical UIX source coverage is independently checked by check-uix-translations.py; no claim of identical German/French example sets."
       ],
-      "corrections": "English macro table, parameter descriptions, dependency explanation and billet interpolation prose translated; keys and examples retained."
+      "corrections": "English macro table, parameter descriptions, dependency explanation and billet interpolation prose translated; keys and examples retained.",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/using/themes.md",
@@ -5881,7 +5891,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "b5aeb5b2e4641f8991d861eeb40e86359c4f1d309d1abe5ef8f6560aeb8e719c",
-      "target_sha256": "cf0240a13a997cb09285da6c5d87e981d5fe02eccb32c931d3a2d5d7930e6b2b",
+      "target_sha256": "7af1fff0d0ef26af84a4b62ac22bae9945b41a13e84d20094d5dfeef07601a48",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5895,7 +5905,9 @@
         "Compared the differing blocks: localized demonstration names, comments, example paths/IDs, output text or consistently renamed local variables; API fields and operations are retained. These are example substitutions, not missing blocks.",
         "Source-only backticked strings were checked in context: translated sample entity IDs, package filenames or fields documented in prose/code without the same inline formatting. Relevant functionality is still described."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "sammlung/flex-table-card/aktionen.md",

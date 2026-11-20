@@ -7,6 +7,14 @@ Die folgenden Hinweise beziehen sich auf Beiträge zum originalen UIX-Repository
 
 UIX-Dokumentation ist ein Bereich, in dem jede Nutzerin und jeder Nutzer helfen kann. Wenn Python in deiner Umgebung installiert ist, kannst du die Dokumentationsquellen bearbeiten und das Ergebnis lokal in Echtzeit ansehen.
 
+## Integration und Frontend entwickeln
+
+Auch Beiträge zur Integration und zum Frontend sind willkommen. Ideen für neue Dienste oder zu patchende UI-Elemente können zuerst in einer [Discussion](https://github.com/Lint-Free-Technology/uix/discussions/categories/ideas) besprochen werden. In einem HA-Core-Entwicklungscontainer lässt sich `custom_components/uix` als Mount einbinden. Ohne solchen Container müssen nach dem Build sowohl `uix.js` als auch `manifest.json` gemeinsam nach `custom_components/uix` kopiert werden; danach Home Assistant neu starten. Versionszusatz und Build sind unten beschrieben. Nicht zusammenpassende Integrations- und Frontend-Versionen können Änderungen unwirksam machen und wiederholte Reload- oder Cache-Hinweise auslösen.
+
+## Lizenz der Dokumentationsbeiträge
+
+Neue Dokumentationstexte und eigene Dokumentationsmedien werden mit ihrer Einreichung unter CC BY 4.0 bereitgestellt. Code, Dokumentationswerkzeuge, Stylesheets, Templates, Codeblöcke und Konfigurationsbeispiele bleiben unter MIT; fremde Materialien behalten ihre jeweiligen Bedingungen. Zuvor unter der repositoryweiten MIT-Lizenz veröffentlichte Dokumentation bleibt auch unter dieser Lizenz verfügbar.
+
 ## Dokumentation aktualisieren
 
 Für einen eigenen Frontend-Entwicklungsstand zuerst die Version in `package.json` mit einem Entwicklungszusatz setzen, etwa `9.0.0-mydev.1`. `npm run build` aktualisiert die Integrationsversion in `manifest.json` und erzeugt `uix.js`. Das erzeugte Bundle nicht committen. Neue visuelle Komponenten benötigen Tests; Hinweise stehen in der README im Verzeichnis `tests` des Originals.

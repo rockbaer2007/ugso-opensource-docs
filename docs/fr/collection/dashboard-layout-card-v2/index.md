@@ -112,30 +112,32 @@ La fenêtre de l'éditeur s'ouvre par défaut plus largement, avec 80 % de la la
 | Onglet | Options |
 | --- | --- |
 | Menu | Position du menu (`left`, `none`, `right`), titre du menu et mode icônes uniquement global. |
-| Home page | Entrée Home, titre, chemin, icône, couleurs Home, colonnes Sections V2 et héritage du thème. |
-| Display | Horloge, date, jour de la semaine, couleurs de l'horloge et helpers pour le symbole du jour. |
-| Pages | Pages principales, espaces, séparateurs, layouts, couleurs par entrée et comportement du premier bouton de sous-menu. |
-| Submenu | Sous-pages de la page principale sélectionnée avec couleurs et layout. |
+| Home page | Afficher/masquer Home, titre, chemin, icône, couleurs de l'icône/bouton, colonnes maximales Sections V2, disposition dense, espace supérieur et héritage du thème. |
+| Display | Horloge (`none`, `digital`, `analog`), marques des heures/minutes et aiguille des secondes, date, jour (`none`, `short`, `long`), couleur du week-end et de l'horloge/anneau/aiguilles, helpers Holiday/Birthday/Christmas et taille du symbole du jour. |
+| Pages | Pages principales, espaces, séparateurs ; titre, chemin, icône, layout, colonnes maximales, couleurs par entrée/réinitialisation, premier bouton de sous-menu, couleur/3D/opacité/hauteur des séparateurs. |
+| Submenu | Sous-pages de la page principale sélectionnée : titre, chemin, icône, layout, colonnes maximales, couleurs/réinitialisation. Cet onglet apparaît si l'entrée principale choisie possède des sous-pages. |
 | Messages | Notification, bordures, opacité et jusqu'à quatre valeurs d'état. |
-| Styles Global | Couleurs globales, tailles, formes d'icônes, arrière-plans, opacités et effets 3D. |
-| Colors | Jusqu'à 20 couleurs favorites réutilisables. |
+| Styles Global | Tailles horloge/date/retour à la ligne du jour, couleurs onglet/texte/survol, bordures menu/contenu et opacité, effets 3D et décalage commun, couleurs/formes/tailles des icônes, fond du menu (`none`, `color`, `image`), image/couleur/opacité, fond du sous-menu et opacité. |
+| Colors | Jusqu'à 20 couleurs favorites réutilisables ; **Enregistrer les couleurs** ne sauvegarde que ces favoris. |
 | Backup | Export YAML du tableau de bord actuel vers l'ordinateur local. |
-| Advanced | Réglages Home Assistant chrome, utilisateurs visibles, Debug et JSON avancé. |
+| Advanced | Réglages Home Assistant chrome, commandes administrateur toujours visibles en option, liste d'utilisateurs visibles et options JSON des pages. |
 
 ## Export YAML
 
 L'onglet **Backup** peut exporter l'état actuel du tableau de bord comme fichier YAML sur l'ordinateur local. L'export ne modifie pas Home Assistant et sert de sauvegarde avant de grands tests ou changements de design.
 
+L'onglet est préparé pour un futur import YAML ; cet import n'est pas encore proposé ici. Les boutons du sous-menu reprennent initialement le style du bouton principal, avec un arrière-plan de sous-menu séparé. Les bordures du menu, du contenu, des notifications et des états disposent de leurs propres opacités ; les séparateurs ont aussi leur opacité et leur effet 3D.
+
 ## Sélecteur de langue Debug
 
-Pour les captures d'écran de documentation ou les tests de langue, la langue affichée peut être forcée dans l'éditeur sous **Advanced > Special options / edit JSON > Debug** ou directement en YAML.
+Pour les captures d'écran de documentation ou les tests de langue, la langue affichée peut être forcée directement en YAML. Ce réglage est volontairement absent des commandes visuelles de l'éditeur.
 
 ```yaml
 debug:
   language: fr # vide/default, de, en ou fr
 ```
 
-Avec une valeur vide, Dashboard Layout Card V2 utilise automatiquement la langue Home Assistant ou navigateur et revient à l'anglais si nécessaire.
+Avec une valeur vide ou sans `debug.language`, Dashboard Layout Card V2 utilise automatiquement la langue Home Assistant ou navigateur et revient à l'anglais si nécessaire. Si cette entrée manque, l'ouverture de l'éditeur ajoute un emplacement vide à compléter en YAML.
 
 ## Images d'arrière-plan
 

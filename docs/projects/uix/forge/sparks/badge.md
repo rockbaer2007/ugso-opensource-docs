@@ -6,7 +6,7 @@ description: Text- und Symbol-Badges mit Theme-Farben, Animation und optionaler 
 
 Der Spark `badge` fügt ein `uix-badge` vor oder nach einem Element im Forge-Ergebnis ein. Er verwendet Home Assistants angepasste Web-Awesome-Badge-Basis und übernimmt die Theme-Farben. UIX registriert dabei keinen globalen `wa-badge`.
 
-Diese kompakte Referenz basiert auf der [Originalseite im Release 8.4.0](https://github.com/Lint-Free-Technology/uix/blob/v8.4.0/docs/source/forge/sparks/badge.md), unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) von Lint-Free-Technology/uix. Weitere bebilderte Beispiele stehen in der [englischen Dokumentation](https://uix.lf.technology/forge/sparks/badge/).
+Diese kompakte Referenz wurde mit der [Originalseite zum dokumentierten Stand 9.1.0](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/docs/source/forge/sparks/badge.md) abgeglichen, unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) von Lint-Free-Technology/uix. Weitere bebilderte Beispiele stehen in der [englischen Dokumentation](https://uix.lf.technology/forge/sparks/badge/).
 
 ## Grundnutzung
 

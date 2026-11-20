@@ -4,7 +4,7 @@ description: Comparing ioBroker, original Blockly and native HA control flow.
 ---
 # Timeouts, objects, logic and loops
 
-This page describes the 18 additions in 0.1.13 (68 block types at that time). The current total is **105**, including the additional [math, text, list and loop blocks in 0.1.14](./collections).
+This page describes the 18 additions in 0.1.13 (68 block types at that time). The additional [math, text, list and loop blocks in 0.1.14](./collections) increased that historical total to **105**, not today's overall count. Later entity-state/attribute values are documented under [System values and Templates](./system-template).
 
 Version **0.1.13** adds 18 blocks, bringing the total to **68 block types**. [Images and functions](./blocks#flow-objects-and-lists-added-in-0-1-13). The comparison uses the actual ioBroker JavaScript adapter [timeout](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_timeout.ts), [object](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_object.ts), [logic](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_logic.ts) and [switch](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_switch.ts) definitions. Similar appearance does not imply identical execution. ioBroker JavaScript is not imported.
 

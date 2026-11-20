@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 207 | 45 |
-| FR | 207 | 45 |
+| EN | 215 | 37 |
+| FR | 215 | 37 |
 
 ## Inventaire complet des pages
 
@@ -74,7 +74,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/atlas-plugins/developers/manifest.md](/projects/atlas-plugins/developers/manifest) | [Contenu vérifié](/en/projects/atlas-plugins/developers/manifest) | [Contenu vérifié](/fr/projects/atlas-plugins/developers/manifest) |
 | [projects/atlas-plugins/developers/publishing.md](/projects/atlas-plugins/developers/publishing) | [Contenu vérifié](/en/projects/atlas-plugins/developers/publishing) | [Contenu vérifié](/fr/projects/atlas-plugins/developers/publishing) |
 | [projects/atlas-plugins/developers/runtime.md](/projects/atlas-plugins/developers/runtime) | [Contenu vérifié](/en/projects/atlas-plugins/developers/runtime) | [Contenu vérifié](/fr/projects/atlas-plugins/developers/runtime) |
-| [projects/atlas-plugins/file-studio.md](/projects/atlas-plugins/file-studio) | [Comparaison technique effectuée](/en/projects/atlas-plugins/file-studio) | [Comparaison technique effectuée](/fr/projects/atlas-plugins/file-studio) |
+| [projects/atlas-plugins/file-studio.md](/projects/atlas-plugins/file-studio) | [Contenu vérifié](/en/projects/atlas-plugins/file-studio) | [Contenu vérifié](/fr/projects/atlas-plugins/file-studio) |
 | [projects/atlas-plugins/gepruefte-plugins.md](/projects/atlas-plugins/gepruefte-plugins) | [Contenu vérifié](/en/projects/atlas-plugins/verified-plugins) | [Contenu vérifié](/fr/projects/atlas-plugins/verified-plugins) |
 | [projects/atlas-plugins/homeassistant-card-editor.md](/projects/atlas-plugins/homeassistant-card-editor) | [Contenu vérifié](/en/projects/atlas-plugins/homeassistant-card-editor) | [Contenu vérifié](/fr/projects/atlas-plugins/homeassistant-card-editor) |
 | [projects/atlas-plugins/icon-library.md](/projects/atlas-plugins/icon-library) | [Contenu vérifié](/en/projects/atlas-plugins/icon-library) | [Contenu vérifié](/fr/projects/atlas-plugins/icon-library) |
@@ -94,7 +94,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Contenu vérifié](/en/projects/atlas/tablet-uix-dauertest) | [Contenu vérifié](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Contenu vérifié](/en/projects/atlas/overview) | [Contenu vérifié](/fr/projects/atlas/overview) |
 | [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Contenu vérifié](/en/projects/automation-status-card/) | [Contenu vérifié](/fr/projects/automation-status-card/) |
-| [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/advanced) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/advanced) |
+| [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Contenu vérifié](/en/projects/blocks-for-ha/advanced) | [Contenu vérifié](/fr/projects/blocks-for-ha/advanced) |
 | [projects/blocks-for-ha/blockly-audit.md](/projects/blocks-for-ha/blockly-audit) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/blockly-audit) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/blockly-audit) |
 | [projects/blocks-for-ha/blocks.md](/projects/blocks-for-ha/blocks) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/blocks) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/blocks) |
 | [projects/blocks-for-ha/catalog/index.md](/projects/blocks-for-ha/catalog/) | [Contenu vérifié](/en/projects/blocks-for-ha/catalog/) | [Contenu vérifié](/fr/projects/blocks-for-ha/catalog/) |
@@ -103,7 +103,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/blocks-for-ha/conversion.md](/projects/blocks-for-ha/conversion) | [Contenu vérifié](/en/projects/blocks-for-ha/conversion) | [Contenu vérifié](/fr/projects/blocks-for-ha/conversion) |
 | [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Contenu vérifié](/en/projects/blocks-for-ha/custom-blocks) | [Contenu vérifié](/fr/projects/blocks-for-ha/custom-blocks) |
 | [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Contenu vérifié](/en/projects/blocks-for-ha/entities) | [Contenu vérifié](/fr/projects/blocks-for-ha/entities) |
-| [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/flow) | [Comparaison technique effectuée](/fr/projects/blocks-for-ha/flow) |
+| [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Contenu vérifié](/en/projects/blocks-for-ha/flow) | [Contenu vérifié](/fr/projects/blocks-for-ha/flow) |
 | [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Comparaison technique effectuée](/en/projects/blocks-for-ha/) | [Contenu présent · Différence examinée](/fr/projects/blocks-for-ha/) |
 | [projects/blocks-for-ha/system-template.md](/projects/blocks-for-ha/system-template) | [Contenu vérifié](/en/projects/blocks-for-ha/system-template) | [Contenu vérifié](/fr/projects/blocks-for-ha/system-template) |
 | [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Contenu vérifié](/en/projects/blocks-for-ha/themes) | [Contenu vérifié](/fr/projects/blocks-for-ha/themes) |
@@ -184,7 +184,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Contenu vérifié](/en/projects/uix/concepts/context) | [Contenu vérifié](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Contenu présent · Différence examinée](/en/projects/uix/concepts/dom) | [Comparaison technique effectuée](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Contenu vérifié · Différence examinée](/en/projects/uix/concepts/) | [Contenu vérifié](/fr/projects/uix/concepts/) |
-| [projects/uix/contributing.md](/projects/uix/contributing) | [Contenu présent · Différence examinée](/en/projects/uix/contributing) | [Contenu présent · Différence examinée](/fr/projects/uix/contributing) |
+| [projects/uix/contributing.md](/projects/uix/contributing) | [Contenu vérifié · Différence examinée](/en/projects/uix/contributing) | [Contenu vérifié · Différence examinée](/fr/projects/uix/contributing) |
 | [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Contenu vérifié · Différence examinée](/en/projects/uix/debugging/cache) | [Contenu vérifié · Différence examinée](/fr/projects/uix/debugging/cache) |
 | [projects/uix/debugging/cards.md](/projects/uix/debugging/cards) | [Contenu vérifié · Différence examinée](/en/projects/uix/debugging/cards) | [Contenu vérifié](/fr/projects/uix/debugging/cards) |
 | [projects/uix/debugging/index.md](/projects/uix/debugging/) | [Contenu vérifié · Différence examinée](/en/projects/uix/debugging/) | [Contenu vérifié](/fr/projects/uix/debugging/) |
@@ -209,7 +209,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/forge/index.md](/projects/uix/forge/) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/) |
 | [projects/uix/forge/sparks/attribute.md](/projects/uix/forge/sparks/attribute) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/attribute) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/sparks/attribute) |
 | [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/background) | [Comparaison technique effectuée](/fr/projects/uix/forge/sparks/background) |
-| [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/badge) | [Comparaison technique effectuée](/fr/projects/uix/forge/sparks/badge) |
+| [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/badge) | [Contenu vérifié](/fr/projects/uix/forge/sparks/badge) |
 | [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/button) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/sparks/button) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/event) | [Contenu vérifié](/fr/projects/uix/forge/sparks/event) |
 | [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/form) | [Comparaison technique effectuée](/fr/projects/uix/forge/sparks/form) |
@@ -218,7 +218,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/lock) | [Comparaison technique effectuée](/fr/projects/uix/forge/sparks/lock) |
 | [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/map) | [Comparaison technique effectuée](/fr/projects/uix/forge/sparks/map) |
 | [projects/uix/forge/sparks/more-info.md](/projects/uix/forge/sparks/more-info) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/more-info) | [Contenu vérifié](/fr/projects/uix/forge/sparks/more-info) |
-| [projects/uix/forge/sparks/overlay-icon.md](/projects/uix/forge/sparks/overlay-icon) | [Contenu présent · Différence examinée](/en/projects/uix/forge/sparks/overlay-icon) | [Comparaison technique effectuée](/fr/projects/uix/forge/sparks/overlay-icon) |
+| [projects/uix/forge/sparks/overlay-icon.md](/projects/uix/forge/sparks/overlay-icon) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/overlay-icon) | [Contenu vérifié](/fr/projects/uix/forge/sparks/overlay-icon) |
 | [projects/uix/forge/sparks/search.md](/projects/uix/forge/sparks/search) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/search) | [Contenu vérifié](/fr/projects/uix/forge/sparks/search) |
 | [projects/uix/forge/sparks/state-badge.md](/projects/uix/forge/sparks/state-badge) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/state-badge) | [Contenu vérifié](/fr/projects/uix/forge/sparks/state-badge) |
 | [projects/uix/forge/sparks/theme.md](/projects/uix/forge/sparks/theme) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/theme) | [Contenu vérifié](/fr/projects/uix/forge/sparks/theme) |
@@ -239,7 +239,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/using/index.md](/projects/uix/using/) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/) | [Contenu vérifié](/fr/projects/uix/using/) |
 | [projects/uix/using/other.md](/projects/uix/using/other) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/other) | [Contenu vérifié](/fr/projects/uix/using/other) |
 | [projects/uix/using/section-backgrounds.md](/projects/uix/using/section-backgrounds) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/section-backgrounds) | [Contenu vérifié](/fr/projects/uix/using/section-backgrounds) |
-| [projects/uix/using/templates.md](/projects/uix/using/templates) | [Contenu présent · Différence examinée](/en/projects/uix/using/templates) | [Comparaison technique effectuée](/fr/projects/uix/using/templates) |
+| [projects/uix/using/templates.md](/projects/uix/using/templates) | [Contenu vérifié · Différence examinée](/en/projects/uix/using/templates) | [Contenu vérifié](/fr/projects/uix/using/templates) |
 | [projects/uix/using/themes.md](/projects/uix/using/themes) | [Contenu présent · Différence examinée](/en/projects/uix/using/themes) | [Comparaison technique effectuée](/fr/projects/uix/using/themes) |
 | [projects/uix/using/view-backgrounds.md](/projects/uix/using/view-backgrounds) | [Contenu présent · Différence examinée](/en/projects/uix/using/view-backgrounds) | [Comparaison technique effectuée](/fr/projects/uix/using/view-backgrounds) |
 | [projects/ultimate-timer/beispiele.md](/projects/ultimate-timer/beispiele) | [Contenu vérifié](/en/projects/ultimate-timer/examples) | [Contenu vérifié](/fr/projects/ultimate-timer/examples) |
@@ -255,7 +255,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [sammlung/calendar-card-pro/konfiguration.md](/sammlung/calendar-card-pro/konfiguration) | [Comparaison technique effectuée](/en/collection/calendar-card-pro/konfiguration) | [Comparaison technique effectuée](/fr/collection/calendar-card-pro/konfiguration) |
 | [sammlung/calendar-card-pro/lizenz-und-stand.md](/sammlung/calendar-card-pro/lizenz-und-stand) | [Contenu vérifié](/en/collection/calendar-card-pro/lizenz-und-stand) | [Contenu vérifié](/fr/collection/calendar-card-pro/lizenz-und-stand) |
 | [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Contenu vérifié](/en/collection/calendar-card-pro/nutzung) | [Contenu vérifié](/fr/collection/calendar-card-pro/nutzung) |
-| [sammlung/dashboard-layout-card-v2/index.md](/sammlung/dashboard-layout-card-v2/) | [Comparaison technique effectuée](/en/collection/dashboard-layout-card-v2/) | [Comparaison technique effectuée](/fr/collection/dashboard-layout-card-v2/) |
+| [sammlung/dashboard-layout-card-v2/index.md](/sammlung/dashboard-layout-card-v2/) | [Contenu vérifié](/en/collection/dashboard-layout-card-v2/) | [Contenu vérifié](/fr/collection/dashboard-layout-card-v2/) |
 | [sammlung/flex-table-card/aktionen.md](/sammlung/flex-table-card/aktionen) | [Contenu vérifié](/en/collection/flex-table-card/aktionen) | [Contenu vérifié](/fr/collection/flex-table-card/aktionen) |
 | [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Comparaison technique effectuée](/en/collection/flex-table-card/beispiele-aus-forum) | [Comparaison technique effectuée](/fr/collection/flex-table-card/beispiele-aus-forum) |
 | [sammlung/flex-table-card/css.md](/sammlung/flex-table-card/css) | [Contenu vérifié](/en/collection/flex-table-card/css) | [Contenu vérifié](/fr/collection/flex-table-card/css) |

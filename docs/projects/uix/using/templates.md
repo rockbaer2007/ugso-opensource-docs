@@ -192,7 +192,7 @@ uix:
 ```
 
 ::: tip Template-Datei-Makros verwenden
-Alle Template-Dateien müssen die Endung `.jinja` haben und kleiner als 5 MiB sein. Templates im Ordner `/config/custom_template` werden beim Home-Assistant-Start geladen. Ohne Neustart können sie mit der Aktion `homeassistant.reload_custom_templates` neu geladen werden.
+Alle Template-Dateien müssen die Endung `.jinja` haben und kleiner als 5 MiB sein. Templates im Ordner `/config/custom_templates` werden beim Home-Assistant-Start geladen. Ohne Neustart können sie mit der Aktion `homeassistant.reload_custom_templates` neu geladen werden. Die frühere Singular-Schreibweise war ein Tippfehler des festgehaltenen Originals; siehe [HA-Referenz zu Custom Templates](https://www.home-assistant.io/docs/templating/custom-templates/).
 :::
 
 Inline-Makros und aus Dateien importierte Makros können in derselben Karte gemischt werden.
@@ -213,7 +213,7 @@ Billets werden auf einer Karte unter `uix.billets` definiert. Jedes Billet wird 
 
 #### Billet-Interpolation
 
-String-Werte können andere Billets über `{name}` referenzieren. Mit `{name[N]}` kann Element `N` einer Liste referenziert werden.
+String-Werte können andere Billets über `{name}` referenzieren. Mit `{name[N]}` kann Element `N` einer Liste referenziert werden; die Zählung beginnt bei 0.
 
 ```yaml
 uix:

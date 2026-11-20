@@ -245,6 +245,10 @@ forge:
 
 ## Fehlerquellen
 
+Entities-Zeilen mit `display: inline` unterstützen kein Overlay auf tiefer liegenden Inline-Elementen; hier die ganze Zeile wählen. Bei einem Button-Icon kann ein abschließendes `$` nötig sein: `for: hui-button-card $ ha-state-icon $` adressiert dessen Shadow Root. Für `custom:template-entity-row` beschreibt das Original `for: $ #wrapper`; die Position muss gegebenenfalls angepasst werden. `left` hat Vorrang vor `right`, `top` vor `bottom`. Ohne `entity` hat `image_url` Vorrang vor `icon`.
+
+`--uix-overlay-icon-border-radius` wird auf zwei Ebenen verwendet: Der Overlay-Wrapper fällt auf `inherit` zurück, das innere Icon auf `none` beziehungsweise `50%` beim Tile-Icon. Ein ausdrücklich gesetzter Wert beeinflusst beide Ebenen.
+
 - Wenn `entity` gesetzt ist, werden `icon` und `image_url` ignoriert.
 - Wenn das Overlay hinter anderen Elementen liegt, erhöhe `--uix-overlay-icon-z-index`.
 - Wenn `right` oder `bottom` nicht wie erwartet wirken, teste zuerst mit `top` und `left`.

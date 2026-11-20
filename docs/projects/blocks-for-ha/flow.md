@@ -4,7 +4,7 @@ description: ioBroker, Original-Blockly und native HA-Abläufe gegenübergestell
 ---
 # Timeouts, Objekt, Logik und Schleifen
 
-Diese Seite beschreibt die 18 Ergänzungen von 0.1.13 (damals 68 Blocktypen). Aktuell sind es **105** mit den weiteren [Mathematik-, Text-, Listen- und Schleifenblocks aus 0.1.14](./collections).
+Diese Seite beschreibt die 18 Ergänzungen von 0.1.13 (damals 68 Blocktypen). Mit den weiteren [Mathematik-, Text-, Listen- und Schleifenblocks aus 0.1.14](./collections) stieg der damalige Umfang auf **105**; dies ist keine aktuelle Gesamtzahl. Später ergänzte Entitätszustands-/Attributwerte stehen unter [Systemwerte und Templates](./system-template).
 
 Seit **0.1.13** ergänzen 18 neue Blocks den Editor, insgesamt **68 Blocktypen**. [Bilder und Funktionen aller Blocks](./blocks#ablaufe-objekte-und-listen-seit-0-1-13). Grundlage sind die tatsächlichen [Timeout-](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_timeout.ts), [Objekt-](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_object.ts), [Logik-](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_logic.ts) und [Switch-Blocks](https://github.com/ioBroker/ioBroker.javascript/blob/master/src-editor/src/Components/blockly-plugins/blocks/blocks_switch.ts) des ioBroker-JavaScript-Adapters. Die folgende Zuordnung erklärt Ähnlichkeiten und Grenzen; ioBroker-JavaScript wird nicht importiert.
 

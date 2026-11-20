@@ -2,8 +2,8 @@
   "reviewed_at": "2026-11-20",
   "scope_pages": 504,
   "coverage": {
-    "en": 207,
-    "fr": 207
+    "en": 215,
+    "fr": 215
   },
   "scope": "Content/meaning review of all 504 EN/FR inventory entries, including previously assessed structural differences. Reviewed pages only; unreviewed pages retain their existing technical status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
@@ -509,6 +509,26 @@
       "target_sha256": "f113c79cabe3b767eb6c4ec6920a7d6568e1c136363fead7bd82f09aa1eb8004"
     },
     {
+      "source": "projects/atlas-plugins/file-studio.md",
+      "locale": "en",
+      "target": "en/projects/atlas-plugins/file-studio.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE/FR and reread omitted EN sections. Persistent trash/history migration before old-container replacement,154file/sixplugin full versus native restore boundaries,64MiBbinaryupload,CM6/YAML validation/deep links and no-root approvals agree. French64MiBentry/512MiBtotal TAR clarification confirmed in atlas-app-server.mjs constants; partial French application UI explicitly distinguished from translated documentation. No new HA test.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f2c43c861d99b49bbd2490b09bd4ef708f588dd129cec207dfc909cdf113b082",
+      "target_sha256": "c72798305db2fe705b9ff7475774100f178f839ec1c71848fa1f95cde541892e"
+    },
+    {
+      "source": "projects/atlas-plugins/file-studio.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas-plugins/file-studio.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE/FR and reread omitted EN sections. Persistent trash/history migration before old-container replacement,154file/sixplugin full versus native restore boundaries,64MiBbinaryupload,CM6/YAML validation/deep links and no-root approvals agree. French64MiBentry/512MiBtotal TAR clarification confirmed in atlas-app-server.mjs constants; partial French application UI explicitly distinguished from translated documentation. No new HA test.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f2c43c861d99b49bbd2490b09bd4ef708f588dd129cec207dfc909cdf113b082",
+      "target_sha256": "5771e74af6dd56771e230e4ed05b3157cc74d3ab9c9c184c6962b45ff10ae903"
+    },
+    {
       "source": "projects/atlas-plugins/gepruefte-plugins.md",
       "locale": "en",
       "target": "en/projects/atlas-plugins/verified-plugins.md",
@@ -809,6 +829,26 @@
       "target_sha256": "ae1b20bdccc32649ca6c1065bb18dbc9fddfc49dbf7872d9dc3723279a863d43"
     },
     {
+      "source": "projects/blocks-for-ha/advanced.md",
+      "locale": "en",
+      "target": "en/projects/blocks-for-ha/advanced.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Ninegearrows/preservedfalsezeroempty,15classictrigger fields/five targettypes/nativevariable andactiondata options,100branch/10depth limits and seven decomposed Jinja categories agree. Whole-template fallback/no silent field loss,10000chars/100parts/typeconstraints, exact-original roundtrip versus reformatted changes and no local runtime agree. Full EN reread after initial output truncation; no corrections required.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f40456006bf2ab0574ce26dd1017e9dd89463eb3b989196036506ac90537d0d3",
+      "target_sha256": "6297758df8092698940148a230c565a0ade0899a608a4ccd7cc26352c5cae12c"
+    },
+    {
+      "source": "projects/blocks-for-ha/advanced.md",
+      "locale": "fr",
+      "target": "fr/projects/blocks-for-ha/advanced.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Ninegearrows/preservedfalsezeroempty,15classictrigger fields/five targettypes/nativevariable andactiondata options,100branch/10depth limits and seven decomposed Jinja categories agree. Whole-template fallback/no silent field loss,10000chars/100parts/typeconstraints, exact-original roundtrip versus reformatted changes and no local runtime agree. Full EN reread after initial output truncation; no corrections required.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f40456006bf2ab0574ce26dd1017e9dd89463eb3b989196036506ac90537d0d3",
+      "target_sha256": "1265abdf2632ff272bbba053715e4fbc53211125c3b9bd89d21b970977532166"
+    },
+    {
       "source": "projects/blocks-for-ha/catalog/index.md",
       "locale": "en",
       "target": "en/projects/blocks-for-ha/catalog/index.md",
@@ -927,6 +967,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "76c755cc50b343a904a8c4f1ebb7cb8b9f54d21c7194b06b74e121f49c5acbb7",
       "target_sha256": "f9930537dbd924ef0ad6b38a6f0b2a8114fc5ca6ad6fe2fe076697a6f07bd7ac"
+    },
+    {
+      "source": "projects/blocks-for-ha/flow.md",
+      "locale": "en",
+      "target": "en/projects/blocks-for-ha/flow.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Eighttimeout mappings/localcallback-vsHAsequence/no selectivebreak, mandatorywaittimeouts and now nonreactivity,86400s/10000constant limits, sixobject copy mappings, fourlogic alternatives and100entry/1basedloops agree. FR fallbacktable reversed preserve-versus-replace zero/false/empty corrected. All locales historical105 count labelled as historical with later System-value link; omitted ENtail/FRhead reread. Existing claimed tests remain mocked/browser, not liveHA.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "934292a6b3069c1e03989d6624926cf0b000b4896aa335ac98c4dc43ead955a4",
+      "target_sha256": "835cd1d1b3461705e5ef92cabb1e1a7739a7ca54546b3e94b8799ed0b9241d59"
+    },
+    {
+      "source": "projects/blocks-for-ha/flow.md",
+      "locale": "fr",
+      "target": "fr/projects/blocks-for-ha/flow.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Eighttimeout mappings/localcallback-vsHAsequence/no selectivebreak, mandatorywaittimeouts and now nonreactivity,86400s/10000constant limits, sixobject copy mappings, fourlogic alternatives and100entry/1basedloops agree. FR fallbacktable reversed preserve-versus-replace zero/false/empty corrected. All locales historical105 count labelled as historical with later System-value link; omitted ENtail/FRhead reread. Existing claimed tests remain mocked/browser, not liveHA.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "934292a6b3069c1e03989d6624926cf0b000b4896aa335ac98c4dc43ead955a4",
+      "target_sha256": "7ca55c51f775f5cf3fab26849eb6104b6a007c916c0e3fa641f1faa9ccd90c48"
     },
     {
       "source": "projects/blocks-for-ha/system-template.md",
@@ -2249,6 +2309,36 @@
       }
     },
     {
+      "source": "projects/uix/contributing.md",
+      "locale": "en",
+      "target": "en/projects/uix/contributing.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Original integration/frontend versus unofficial docs, versionbuild/restart/no bundlecommit, MITcode versusCCBYprose/grandfatheredMIT, Zensical workflow/translationfork directories and metadata contracts agree. Missing DE integration/frontend consistency and licensing scope restored. Canonical66page reference unchanged; all curator optin/preview/no public posting effects, prerelease compatibility window and warn-notfail health-check boundaries retained. Omitted canonical EN registration section reread in full.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "863123c45a9e1ae5562993ccdffa6d97ac8742e50dc9d01b2f066ca232772d92",
+      "target_sha256": "c65e68a687f863116215d39c05b39eea718333912b1d0d50eda95742eb176fea",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "contributing.md",
+        "source_sha256": "150e6f1510ed5365a110a78074c71c1c06cd843fad397e2125bd6c1ce8760864"
+      }
+    },
+    {
+      "source": "projects/uix/contributing.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/contributing.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Original integration/frontend versus unofficial docs, versionbuild/restart/no bundlecommit, MITcode versusCCBYprose/grandfatheredMIT, Zensical workflow/translationfork directories and metadata contracts agree. Missing DE integration/frontend consistency and licensing scope restored. Canonical66page reference unchanged; all curator optin/preview/no public posting effects, prerelease compatibility window and warn-notfail health-check boundaries retained. Omitted canonical EN registration section reread in full.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "863123c45a9e1ae5562993ccdffa6d97ac8742e50dc9d01b2f066ca232772d92",
+      "target_sha256": "c2b2daa5c204c9eb8f4d2c694609438018dd13e2f33581de581d94658f1837cd",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "contributing.md",
+        "source_sha256": "150e6f1510ed5365a110a78074c71c1c06cd843fad397e2125bd6c1ce8760864"
+      }
+    },
+    {
       "source": "projects/uix/debugging/cache.md",
       "locale": "en",
       "target": "en/projects/uix/debugging/cache.md",
@@ -2839,6 +2929,36 @@
       }
     },
     {
+      "source": "projects/uix/forge/sparks/badge.md",
+      "locale": "en",
+      "target": "en/projects/uix/forge/sparks/badge.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Elevenconfigrows/twentyCSSvariables, only ha-button/ha-tile-icon automatic top-end, contents-wrapper recognition, other targets parent not measured, twelve placements/percentage offsets and text-notHTML agree. Six example purposes and pulse-static-shadow/hover/directpointer rules retained. DEFR attribution now references frozen9.1.0 comparison rather than former8.4 source link.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "5c9e0ea589c64129e15c42aa92824b6158473f48c727ab1d6ca04baaee8539c2",
+      "target_sha256": "c4b3623f5afc2eafae4fde2147b211dd9ddaf15dfbf16e23e15c5adca316d343",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/badge.md",
+        "source_sha256": "02332988637ea92b1dbe0771307122b6b44ed60887b1bde91c5d4965ca1b51a7"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/badge.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/forge/sparks/badge.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Elevenconfigrows/twentyCSSvariables, only ha-button/ha-tile-icon automatic top-end, contents-wrapper recognition, other targets parent not measured, twelve placements/percentage offsets and text-notHTML agree. Six example purposes and pulse-static-shadow/hover/directpointer rules retained. DEFR attribution now references frozen9.1.0 comparison rather than former8.4 source link.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "5c9e0ea589c64129e15c42aa92824b6158473f48c727ab1d6ca04baaee8539c2",
+      "target_sha256": "affa92a6890fcf8aa492d8bbc4f87b9612d7a15c5a68284eb4bf862305b1aa3c",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/badge.md",
+        "source_sha256": "02332988637ea92b1dbe0771307122b6b44ed60887b1bde91c5d4965ca1b51a7"
+      }
+    },
+    {
       "source": "projects/uix/forge/sparks/button.md",
       "locale": "en",
       "target": "en/projects/uix/forge/sparks/button.md",
@@ -2986,6 +3106,36 @@
         "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
         "path": "forge/sparks/more-info.md",
         "source_sha256": "6e157b4563e761900f14f0d013f483fbeb0d2b040008c050a1eb806622ad738c"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/overlay-icon.md",
+      "locale": "en",
+      "target": "en/projects/uix/forge/sparks/overlay-icon.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Eleventopfields/twelveappearancevariables, entity>image>icon priority, native statecolor/none/defaults, top-left priority/calcpositions,3targetadapters and12supplemental configurations compared. DE missing inline-row/shadowRoot targeting and nonentity source priority guidance restored. Two uses of radius variable clarified from frozen overlay implementation: wrapper inherit versus icon none/tile50percent.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "8e01c9bcb455dc960efdd73c9b7e15fe3e1789cf4cc6a5e0db67178ce6895363",
+      "target_sha256": "c86b5da5684cdcfe533180047aea9f41a70c6a877a991599a2b8bfc61c638a62",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/overlay-icon.md",
+        "source_sha256": "3eaeeea7d578592162f4ce5b898c00a1f6ef3aa854b8d79296b35956a9d2c221"
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/overlay-icon.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/forge/sparks/overlay-icon.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Eleventopfields/twelveappearancevariables, entity>image>icon priority, native statecolor/none/defaults, top-left priority/calcpositions,3targetadapters and12supplemental configurations compared. DE missing inline-row/shadowRoot targeting and nonentity source priority guidance restored. Two uses of radius variable clarified from frozen overlay implementation: wrapper inherit versus icon none/tile50percent.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "8e01c9bcb455dc960efdd73c9b7e15fe3e1789cf4cc6a5e0db67178ce6895363",
+      "target_sha256": "7b318b580821421483170b429629e42c970bc58c261ea52754582ef91a6393e9",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "forge/sparks/overlay-icon.md",
+        "source_sha256": "3eaeeea7d578592162f4ce5b898c00a1f6ef3aa854b8d79296b35956a9d2c221"
       }
     },
     {
@@ -3549,6 +3699,36 @@
       }
     },
     {
+      "source": "projects/uix/using/templates.md",
+      "locale": "en",
+      "target": "en/projects/uix/using/templates.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Sixvariables/512KiBlargest-first complete params omission, paneltheme distinction,20scooldown, macrostrings versus typedreturns/as_function, dependency closure/theme priority and file imports agree. Canonical original had singular custom_template typo: corrected EN via guarded adaptation and DE to plural verified against official HA custom-template docs; FR already correct. FR literal HTML wrappers around Jinja examples fixed, DE0-based billet index explicit. Merge localbillets/forge scope and cycle unchanged-values behavior retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "9d220e27f4e3c2efe642b77beee879871b990d3848a4526872912ed159f22f52",
+      "target_sha256": "4fa0818edc26d05e7ecf679f136dc062befad5b0e498c80505686319d2e0e981",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/templates.md",
+        "source_sha256": "95ffe84883d1b2fd65c4de38551d7c0c5e46da4bf7f5328ee10c20b3b4875ab2"
+      }
+    },
+    {
+      "source": "projects/uix/using/templates.md",
+      "locale": "fr",
+      "target": "fr/projects/uix/using/templates.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Sixvariables/512KiBlargest-first complete params omission, paneltheme distinction,20scooldown, macrostrings versus typedreturns/as_function, dependency closure/theme priority and file imports agree. Canonical original had singular custom_template typo: corrected EN via guarded adaptation and DE to plural verified against official HA custom-template docs; FR already correct. FR literal HTML wrappers around Jinja examples fixed, DE0-based billet index explicit. Merge localbillets/forge scope and cycle unchanged-values behavior retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review. Canonical English UIX is authoritative where the German page is an editorial overview; intentional differences are recorded in the assessment.",
+      "source_sha256": "9d220e27f4e3c2efe642b77beee879871b990d3848a4526872912ed159f22f52",
+      "target_sha256": "8446ef9bb0462eaaaf6a41205dd2202d452631db1a9be39248a4b7f93ae81c48",
+      "canonical_reference": {
+        "revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+        "path": "using/templates.md",
+        "source_sha256": "95ffe84883d1b2fd65c4de38551d7c0c5e46da4bf7f5328ee10c20b3b4875ab2"
+      }
+    },
+    {
       "source": "projects/ultimate-timer/beispiele.md",
       "locale": "en",
       "target": "en/projects/ultimate-timer/examples.md",
@@ -3787,6 +3967,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "7a7e7293e224f90f5fb2288337af336491447df3ff37c3f31f3f782136d753f2",
       "target_sha256": "638e1d7aecca15c64f64744d129d06f421fc1561773167003a2193c0a121181c"
+    },
+    {
+      "source": "sammlung/dashboard-layout-card-v2/index.md",
+      "locale": "en",
+      "target": "en/collection/dashboard-layout-card-v2/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "FiveV2layouttypes versus parallel original,600pxicon-only, fouroptionalhelpers/fourstatusrows, menu colors/reset20favorites and80/95percentwindow agree. FR false visual Debug language option corrected to YAML-only, emptyplaceholder behavior restored, detailed tab options/opacity/submenu inheritance/future import boundaries restored. Exact0.1.181 frontendpaths/live-test boundaries retained; truncated ENmiddle reread.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b5aeb5b2e4641f8991d861eeb40e86359c4f1d309d1abe5ef8f6560aeb8e719c",
+      "target_sha256": "b1bee2267e591e7778cec9785399944480365ceeb9e4605ace693bb2fc094637"
+    },
+    {
+      "source": "sammlung/dashboard-layout-card-v2/index.md",
+      "locale": "fr",
+      "target": "fr/collection/dashboard-layout-card-v2/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "FiveV2layouttypes versus parallel original,600pxicon-only, fouroptionalhelpers/fourstatusrows, menu colors/reset20favorites and80/95percentwindow agree. FR false visual Debug language option corrected to YAML-only, emptyplaceholder behavior restored, detailed tab options/opacity/submenu inheritance/future import boundaries restored. Exact0.1.181 frontendpaths/live-test boundaries retained; truncated ENmiddle reread.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b5aeb5b2e4641f8991d861eeb40e86359c4f1d309d1abe5ef8f6560aeb8e719c",
+      "target_sha256": "7af1fff0d0ef26af84a4b62ac22bae9945b41a13e84d20094d5dfeef07601a48"
     },
     {
       "source": "sammlung/flex-table-card/aktionen.md",

@@ -185,7 +185,7 @@
       "path": "contributing.md",
       "source_sha256": "150e6f1510ed5365a110a78074c71c1c06cd843fad397e2125bd6c1ce8760864",
       "table_identifiers": [],
-      "de_sha256": "9d8377e4dcc2d5ba0ee3b6645d7d447f8b71ac10c62893ac0d1c2016c12bcc5b",
+      "de_sha256": "863123c45a9e1ae5562993ccdffa6d97ac8742e50dc9d01b2f066ca232772d92",
       "de_example_blocks": 6,
       "fr_sha256": "c2b2daa5c204c9eb8f4d2c694609438018dd13e2f33581de581d94658f1837cd",
       "fr_example_blocks": 5
@@ -528,9 +528,9 @@
         "type",
         "variant"
       ],
-      "de_sha256": "ad063836ebae1be04c45506949d09c29661478e45000aa75c06230b083cb39c7",
+      "de_sha256": "5c9e0ea589c64129e15c42aa92824b6158473f48c727ab1d6ca04baaee8539c2",
       "de_example_blocks": 7,
-      "fr_sha256": "fb1b4ff8a0efa157fdc20c9ab76c35446a4bb6e1322e1c2f88cc09588bee4143",
+      "fr_sha256": "affa92a6890fcf8aa492d8bbc4f87b9612d7a15c5a68284eb4bf862305b1aa3c",
       "fr_example_blocks": 7
     },
     {
@@ -855,7 +855,7 @@
         "type",
         "value"
       ],
-      "de_sha256": "0b2b4fc6206cb214b3a08d1ca17fb7426f115048af675dcca685956796133cae",
+      "de_sha256": "8e01c9bcb455dc960efdd73c9b7e15fe3e1789cf4cc6a5e0db67178ce6895363",
       "de_example_blocks": 12,
       "fr_sha256": "7b318b580821421483170b429629e42c970bc58c261ea52754582ef91a6393e9",
       "fr_example_blocks": 19
@@ -1102,9 +1102,9 @@
         "returns",
         "template"
       ],
-      "de_sha256": "decae4b4bc1557afaf8e5044f03b3caef71cabbf59e22b445237ac1b91f5eccd",
+      "de_sha256": "9d220e27f4e3c2efe642b77beee879871b990d3848a4526872912ed159f22f52",
       "de_example_blocks": 13,
-      "fr_sha256": "765ea96129f145744647b65f00ae9c5ea382a8c08d2f6c9be802194b8ab7a3d4",
+      "fr_sha256": "8446ef9bb0462eaaaf6a41205dd2202d452631db1a9be39248a4b7f93ae81c48",
       "fr_example_blocks": 14
     },
     {

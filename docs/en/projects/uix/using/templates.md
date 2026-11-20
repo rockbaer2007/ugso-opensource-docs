@@ -193,7 +193,7 @@ uix:
 ```
 
 ::: tip Using template file macros
-All template files must have the .jinja extension and be less than 5MiB. Templates in the `/config/custom_template` folder will be loaded at Home Assistant startup. To reload the templates without restarting Home Assistant, invoke the `homeassistant.reload_custom_templates` action.
+All template files must have the .jinja extension and be less than 5MiB. Templates in the `/config/custom_templates` folder will be loaded at Home Assistant startup. To reload the templates without restarting Home Assistant, invoke the `homeassistant.reload_custom_templates` action.
 
 :::
 
@@ -298,3 +298,5 @@ In templates, billets are used as plain constants:
 When using [UIX Forge](../forge/index.md), billets defined under `forge.billets` are available in all forge templates **and** in any `uix:` style on the forge card or the forged element. Forge billets are merged with any billets defined directly in the `uix:` config, with the local `uix:` billets taking precedence.
 
 See [UIX Forge — Billets](../forge/forge.md#billets) for the full reference including supported types and foundry override behaviour.
+
+Editorial path correction (2026-11-20): the frozen source tip omitted the final `s` in `custom_templates`; the import examples already use the correct plural. See [Home Assistant custom templates](https://www.home-assistant.io/docs/templating/custom-templates/).

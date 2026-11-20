@@ -65,7 +65,7 @@ Chaque entrée de macro accepte les clés suivantes :
 | --- | -------- | ----------- |
 | `template` | Oui | Le corps du modèle Jinja2 de la macro. |
 | `params` | Non | La liste des paramètres acceptés. Chaque entrée est une chaîne (nom du paramètre) ou un dictionnaire contenant les clés `name` et `default` (voir ci-dessous). |
-| `returns` | Non | La valeur `true` permet d’appeler la macro comme une fonction avec le filtre `as_function` de Home Assistant. Utilisez alors `<code v-pre>{%- do returns(<value>) -%}</code>` dans le modèle pour renvoyer une valeur typée (booléen, nombre, etc.). |
+| `returns` | Non | La valeur `true` permet d’appeler la macro comme une fonction avec le filtre `as_function` de Home Assistant. Utilisez alors <code v-pre>{%- do returns(&lt;value&gt;) -%}</code> dans le modèle pour renvoyer une valeur typée (booléen, nombre, etc.). |
 
 Chaque élément de `params` peut être :
 
@@ -206,7 +206,7 @@ Les billets sont des valeurs YAML nommées qui deviennent des constantes simples
 
 ### Billets dans UIX Styling
 
-Définissez les billets sous `uix.billets` dans une carte. Chaque billet est inséré sous la forme d'une instruction `<code v-pre>{%- set name = value -%}</code>` avant chaque modèle de style de cette carte :
+Définissez les billets sous `uix.billets` dans une carte. Chaque billet est inséré sous la forme d'une instruction <code v-pre>{%- set name = value -%}</code> avant chaque modèle de style de cette carte :
 
 #### Interpolation des billets
 

@@ -41,6 +41,7 @@ def reviewed_corrections(text, raw, relative):
         'forge/sparks/more-info.md': '6e157b4563e761900f14f0d013f483fbeb0d2b040008c050a1eb806622ad738c',
         'extras/frontend-states-throttling.md': 'bd12e71948743dd03086bd30dddebb223b34ea619548d3ed87d52a85b3d4a00b',
         'forge/sparks/button.md': '3e7eff524e19c14bed60b7c7ab8dfaad080faa638b2e15f1d760be1535d3268b',
+        'using/templates.md': '95ffe84883d1b2fd65c4de38551d7c0c5e46da4bf7f5328ee10c20b3b4875ab2',
     }
     if path not in expected_sources:
         return text
@@ -63,6 +64,13 @@ def reviewed_corrections(text, raw, relative):
     elif path == 'concepts/application.md':
         assert text.count('`UIX-card`') == 1
         text = text.replace('`UIX-card`', '`uix-card`')
+    elif path == 'using/templates.md':
+        old='Templates in the `/config/custom_template` folder'
+        assert text.count(old)==1
+        text=text.replace(old, 'Templates in the `/config/custom_templates` folder')
+        text += ('\nEditorial path correction (2026-11-20): the frozen source tip omitted the final '
+                 '`s` in `custom_templates`; the import examples already use the correct plural. '
+                 'See [Home Assistant custom templates](https://www.home-assistant.io/docs/templating/custom-templates/).\n')
     elif path == 'extras/frontend-states-throttling.md':
         text += ('\n::: info Editorial clarification (2026-11-20)\n'
                  '`setThrottleOverride(null)` clears the session override and restores server defaults; '

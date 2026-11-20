@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 207,
+      "content_reviewed": 215,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 207,
+      "content_reviewed": 215,
       "open_review_signals": 0
     }
   },
@@ -2104,6 +2104,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/FR and reread omitted EN sections. Persistent trash/history migration before old-container replacement,154file/sixplugin full versus native restore boundaries,64MiBbinaryupload,CM6/YAML validation/deep links and no-root approvals agree. French64MiBentry/512MiBtotal TAR clarification confirmed in atlas-app-server.mjs constants; partial French application UI explicitly distinguished from translated documentation. No new HA test."
           }
         },
         "fr": {
@@ -2135,6 +2140,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/FR and reread omitted EN sections. Persistent trash/history migration before old-container replacement,154file/sixplugin full versus native restore boundaries,64MiBbinaryupload,CM6/YAML validation/deep links and no-root approvals agree. French64MiBentry/512MiBtotal TAR clarification confirmed in atlas-app-server.mjs constants; partial French application UI explicitly distinguished from translated documentation. No new HA test."
           }
         }
       }
@@ -3954,6 +3964,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Ninegearrows/preservedfalsezeroempty,15classictrigger fields/five targettypes/nativevariable andactiondata options,100branch/10depth limits and seven decomposed Jinja categories agree. Whole-template fallback/no silent field loss,10000chars/100parts/typeconstraints, exact-original roundtrip versus reformatted changes and no local runtime agree. Full EN reread after initial output truncation; no corrections required."
           }
         },
         "fr": {
@@ -3987,6 +4002,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Ninegearrows/preservedfalsezeroempty,15classictrigger fields/five targettypes/nativevariable andactiondata options,100branch/10depth limits and seven decomposed Jinja categories agree. Whole-template fallback/no silent field loss,10000chars/100parts/typeconstraints, exact-original roundtrip versus reformatted changes and no local runtime agree. Full EN reread after initial output truncation; no corrections required."
           }
         }
       }
@@ -4719,8 +4739,8 @@
         "de": {
           "path": "projects/blocks-for-ha/flow.md",
           "status": "content-present",
-          "sha256": "4b774ad2190eb00dd75e14c6aa7c6aad0776e4fc94a1d6086c780cf9b2f34042",
-          "words": 1278,
+          "sha256": "934292a6b3069c1e03989d6624926cf0b000b4896aa335ac98c4dc43ead955a4",
+          "words": 1296,
           "headings": 6,
           "examples": 1,
           "versions": [
@@ -4733,8 +4753,8 @@
         "en": {
           "path": "en/projects/blocks-for-ha/flow.md",
           "status": "content-present",
-          "sha256": "3a82efa8715183c3bd7d89bdae603be36258ec76625ef62d115e068a08b28c5a",
-          "words": 1262,
+          "sha256": "835cd1d1b3461705e5ef92cabb1e1a7739a7ca54546b3e94b8799ed0b9241d59",
+          "words": 1281,
           "headings": 6,
           "examples": 1,
           "versions": [
@@ -4755,13 +4775,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eighttimeout mappings/localcallback-vsHAsequence/no selectivebreak, mandatorywaittimeouts and now nonreactivity,86400s/10000constant limits, sixobject copy mappings, fourlogic alternatives and100entry/1basedloops agree. FR fallbacktable reversed preserve-versus-replace zero/false/empty corrected. All locales historical105 count labelled as historical with later System-value link; omitted ENtail/FRhead reread. Existing claimed tests remain mocked/browser, not liveHA."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/flow.md",
           "status": "content-present",
-          "sha256": "04e40321acfaefacec1266d2d7705cd83cfc2949bd4fa1cce77a2b92041fc4a5",
-          "words": 2499,
+          "sha256": "7ca55c51f775f5cf3fab26849eb6104b6a007c916c0e3fa641f1faa9ccd90c48",
+          "words": 2513,
           "headings": 10,
           "examples": 1,
           "versions": [
@@ -4782,6 +4807,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eighttimeout mappings/localcallback-vsHAsequence/no selectivebreak, mandatorywaittimeouts and now nonreactivity,86400s/10000constant limits, sixobject copy mappings, fourlogic alternatives and100entry/1basedloops agree. FR fallbacktable reversed preserve-versus-replace zero/false/empty corrected. All locales historical105 count labelled as historical with later System-value link; omitted ENtail/FRhead reread. Existing claimed tests remain mocked/browser, not liveHA."
           }
         }
       }
@@ -11873,9 +11903,9 @@
         "de": {
           "path": "projects/uix/contributing.md",
           "status": "content-present",
-          "sha256": "9d8377e4dcc2d5ba0ee3b6645d7d447f8b71ac10c62893ac0d1c2016c12bcc5b",
-          "words": 1204,
-          "headings": 14,
+          "sha256": "863123c45a9e1ae5562993ccdffa6d97ac8742e50dc9d01b2f066ca232772d92",
+          "words": 1351,
+          "headings": 16,
           "examples": 6,
           "versions": [
             "8.3.0",
@@ -11916,6 +11946,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Original integration/frontend versus unofficial docs, versionbuild/restart/no bundlecommit, MITcode versusCCBYprose/grandfatheredMIT, Zensical workflow/translationfork directories and metadata contracts agree. Missing DE integration/frontend consistency and licensing scope restored. Canonical66page reference unchanged; all curator optin/preview/no public posting effects, prerelease compatibility window and warn-notfail health-check boundaries retained. Omitted canonical EN registration section reread in full."
           }
         },
         "fr": {
@@ -11945,6 +11980,11 @@
             "status": "reviewed",
             "disposition": "supplemented",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Original integration/frontend versus unofficial docs, versionbuild/restart/no bundlecommit, MITcode versusCCBYprose/grandfatheredMIT, Zensical workflow/translationfork directories and metadata contracts agree. Missing DE integration/frontend consistency and licensing scope restored. Canonical66page reference unchanged; all curator optin/preview/no public posting effects, prerelease compatibility window and warn-notfail health-check boundaries retained. Omitted canonical EN registration section reread in full."
           }
         }
       }
@@ -13819,12 +13859,12 @@
         "de": {
           "path": "projects/uix/forge/sparks/badge.md",
           "status": "content-present",
-          "sha256": "ad063836ebae1be04c45506949d09c29661478e45000aa75c06230b083cb39c7",
+          "sha256": "5c9e0ea589c64129e15c42aa92824b6158473f48c727ab1d6ca04baaee8539c2",
           "words": 979,
           "headings": 12,
           "examples": 7,
           "versions": [
-            "8.4.0"
+            "9.1.0"
           ],
           "unresolved_local_references": []
         },
@@ -13841,12 +13881,9 @@
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "8.4.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "2026.11.0",
-              "9.1.0"
+              "2026.11.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13856,17 +13893,22 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Elevenconfigrows/twentyCSSvariables, only ha-button/ha-tile-icon automatic top-end, contents-wrapper recognition, other targets parent not measured, twelve placements/percentage offsets and text-notHTML agree. Six example purposes and pulse-static-shadow/hover/directpointer rules retained. DEFR attribution now references frozen9.1.0 comparison rather than former8.4 source link."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/badge.md",
           "status": "content-present",
-          "sha256": "fb1b4ff8a0efa157fdc20c9ab76c35446a4bb6e1322e1c2f88cc09588bee4143",
+          "sha256": "affa92a6890fcf8aa492d8bbc4f87b9612d7a15c5a68284eb4bf862305b1aa3c",
           "words": 1106,
           "headings": 12,
           "examples": 7,
           "versions": [
-            "8.4.0"
+            "9.1.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13881,6 +13923,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Elevenconfigrows/twentyCSSvariables, only ha-button/ha-tile-icon automatic top-end, contents-wrapper recognition, other targets parent not measured, twelve placements/percentage offsets and text-notHTML agree. Six example purposes and pulse-static-shadow/hover/directpointer rules retained. DEFR attribution now references frozen9.1.0 comparison rather than former8.4 source link."
           }
         }
       }
@@ -14502,8 +14549,8 @@
         "de": {
           "path": "projects/uix/forge/sparks/overlay-icon.md",
           "status": "content-present",
-          "sha256": "0b2b4fc6206cb214b3a08d1ca17fb7426f115048af675dcca685956796133cae",
-          "words": 633,
+          "sha256": "8e01c9bcb455dc960efdd73c9b7e15fe3e1789cf4cc6a5e0db67178ce6895363",
+          "words": 736,
           "headings": 17,
           "examples": 12,
           "versions": [],
@@ -14535,6 +14582,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eleventopfields/twelveappearancevariables, entity>image>icon priority, native statecolor/none/defaults, top-left priority/calcpositions,3targetadapters and12supplemental configurations compared. DE missing inline-row/shadowRoot targeting and nonentity source priority guidance restored. Two uses of radius variable clarified from frozen overlay implementation: wrapper inherit versus icon none/tile50percent."
           }
         },
         "fr": {
@@ -14563,6 +14615,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eleventopfields/twelveappearancevariables, entity>image>icon priority, native statecolor/none/defaults, top-left priority/calcpositions,3targetadapters and12supplemental configurations compared. DE missing inline-row/shadowRoot targeting and nonentity source priority guidance restored. Two uses of radius variable clarified from frozen overlay implementation: wrapper inherit versus icon none/tile50percent."
           }
         }
       }
@@ -16196,8 +16253,8 @@
         "de": {
           "path": "projects/uix/using/templates.md",
           "status": "content-present",
-          "sha256": "decae4b4bc1557afaf8e5044f03b3caef71cabbf59e22b445237ac1b91f5eccd",
-          "words": 927,
+          "sha256": "9d220e27f4e3c2efe642b77beee879871b990d3848a4526872912ed159f22f52",
+          "words": 957,
           "headings": 11,
           "examples": 13,
           "versions": [],
@@ -16206,8 +16263,8 @@
         "en": {
           "path": "en/projects/uix/using/templates.md",
           "status": "content-present",
-          "sha256": "dbe85cda1d973867c11b528d76db3652c1e65ac5f282a9ccb88e917d813ee261",
-          "words": 1317,
+          "sha256": "4fa0818edc26d05e7ecf679f136dc062befad5b0e498c80505686319d2e0e981",
+          "words": 1355,
           "headings": 11,
           "examples": 14,
           "versions": [
@@ -16229,13 +16286,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Sixvariables/512KiBlargest-first complete params omission, paneltheme distinction,20scooldown, macrostrings versus typedreturns/as_function, dependency closure/theme priority and file imports agree. Canonical original had singular custom_template typo: corrected EN via guarded adaptation and DE to plural verified against official HA custom-template docs; FR already correct. FR literal HTML wrappers around Jinja examples fixed, DE0-based billet index explicit. Merge localbillets/forge scope and cycle unchanged-values behavior retained."
           }
         },
         "fr": {
           "path": "fr/projects/uix/using/templates.md",
           "status": "content-present",
-          "sha256": "765ea96129f145744647b65f00ae9c5ea382a8c08d2f6c9be802194b8ab7a3d4",
-          "words": 1380,
+          "sha256": "8446ef9bb0462eaaaf6a41205dd2202d452631db1a9be39248a4b7f93ae81c48",
+          "words": 1383,
           "headings": 11,
           "examples": 14,
           "versions": [],
@@ -16252,6 +16314,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Sixvariables/512KiBlargest-first complete params omission, paneltheme distinction,20scooldown, macrostrings versus typedreturns/as_function, dependency closure/theme priority and file imports agree. Canonical original had singular custom_template typo: corrected EN via guarded adaptation and DE to plural verified against official HA custom-template docs; FR already correct. FR literal HTML wrappers around Jinja examples fixed, DE0-based billet index explicit. Merge localbillets/forge scope and cycle unchanged-values behavior retained."
           }
         }
       }
@@ -17379,13 +17446,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FiveV2layouttypes versus parallel original,600pxicon-only, fouroptionalhelpers/fourstatusrows, menu colors/reset20favorites and80/95percentwindow agree. FR false visual Debug language option corrected to YAML-only, emptyplaceholder behavior restored, detailed tab options/opacity/submenu inheritance/future import boundaries restored. Exact0.1.181 frontendpaths/live-test boundaries retained; truncated ENmiddle reread."
           }
         },
         "fr": {
           "path": "fr/collection/dashboard-layout-card-v2/index.md",
           "status": "content-present",
-          "sha256": "cf0240a13a997cb09285da6c5d87e981d5fe02eccb32c931d3a2d5d7930e6b2b",
-          "words": 1465,
+          "sha256": "7af1fff0d0ef26af84a4b62ac22bae9945b41a13e84d20094d5dfeef07601a48",
+          "words": 1651,
           "headings": 12,
           "examples": 6,
           "versions": [
@@ -17405,6 +17477,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "FiveV2layouttypes versus parallel original,600pxicon-only, fouroptionalhelpers/fourstatusrows, menu colors/reset20favorites and80/95percentwindow agree. FR false visual Debug language option corrected to YAML-only, emptyplaceholder behavior restored, detailed tab options/opacity/submenu inheritance/future import boundaries restored. Exact0.1.181 frontendpaths/live-test boundaries retained; truncated ENmiddle reread."
           }
         }
       }
