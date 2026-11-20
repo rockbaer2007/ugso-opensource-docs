@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 170,
+      "content_reviewed": 182,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 170,
+      "content_reviewed": 182,
       "open_review_signals": 0
     }
   },
@@ -1538,13 +1538,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Actual YAML root-entry counting, modern/classic actions, time25200->07:00:00, missing/duplicate conflicts, paired exports with/without ID and safety-before-reading agree. Both isolated versus subsequent native package recovery tests retain exact version sequences/nine files/no migration or full HA restore claim. French independent external plugin and conflict separation clarified; full FR reread after truncation."
           }
         },
         "fr": {
           "path": "fr/projects/atlas-plugins/automation-extractor.md",
           "status": "content-present",
-          "sha256": "65136e97323f170071c56d7a26b0b796c061a5216caaeb422dc4e705d1014aa2",
-          "words": 1000,
+          "sha256": "ca0e7156f3e0ec44d54846e31289f3b922d3422af153a86526137555388268e4",
+          "words": 1008,
           "headings": 6,
           "examples": 0,
           "versions": [
@@ -1566,6 +1571,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Actual YAML root-entry counting, modern/classic actions, time25200->07:00:00, missing/duplicate conflicts, paired exports with/without ID and safety-before-reading agree. Both isolated versus subsequent native package recovery tests retain exact version sequences/nine files/no migration or full HA restore claim. French independent external plugin and conflict separation clarified; full FR reread after truncation."
           }
         }
       }
@@ -2418,6 +2428,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read all DE/EN/FR prose including full French reread. Twenty-four previews versus full search, protected collections, typed SVG/raster limits, ten-step undo, IndexedDB origin versus exports, File Studio capabilities and dated recovery counts agree. No browser storage restore or latest-version claim added."
           }
         },
         "fr": {
@@ -2447,6 +2462,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read all DE/EN/FR prose including full French reread. Twenty-four previews versus full search, protected collections, typed SVG/raster limits, ten-step undo, IndexedDB origin versus exports, File Studio capabilities and dated recovery counts agree. No browser storage restore or latest-version claim added."
           }
         }
       }
@@ -4457,13 +4477,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Nine conversions and pending JSONata, Python versus JS type/coercion/date formats, Monday1-Sunday7/ISO weeks/truncation, runtime versus constant connections and static JSON limitations agree. French HA mistaken expansion and runtime-number wording repaired. Mocked Jinja tests not upgraded to actual HA verification."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/conversion.md",
           "status": "content-present",
-          "sha256": "ce0be6330615d1f12ad5f310c8839e1926a74f2db582002f179201c3794616cc",
-          "words": 1425,
+          "sha256": "69081944e82c6177189571103551105ac04df0fff96df7ed7b330a859d257d85",
+          "words": 1426,
           "headings": 6,
           "examples": 2,
           "versions": [
@@ -4482,6 +4507,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Nine conversions and pending JSONata, Python versus JS type/coercion/date formats, Monday1-Sunday7/ISO weeks/truncation, runtime versus constant connections and static JSON limitations agree. French HA mistaken expansion and runtime-number wording repaired. Mocked Jinja tests not upgraded to actual HA verification."
           }
         }
       }
@@ -4524,12 +4554,17 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Schema1/2 versus project3, typed placeholders, static JSON versus runtime Jinja, dependencies/cycles/conflicts and16/32/12/8/500k/1M limits retained. Full French tail reread; value expressions incorrectly described as curly-braced now correctly parenthesized."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/custom-blocks.md",
           "status": "content-present",
-          "sha256": "6b2d04535102fd6a539e4f6c95c4671162937da15be79ddb15c39a87ea7ea36a",
+          "sha256": "3a7a67c7cafbca8a653dc210a77ab19f08281ea1b2ae5e417b71840d6df6c419",
           "words": 1308,
           "headings": 9,
           "examples": 0,
@@ -4549,6 +4584,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Schema1/2 versus project3, typed placeholders, static JSON versus runtime Jinja, dependencies/cycles/conflicts and16/32/12/8/500k/1M limits retained. Full French tail reread; value expressions incorrectly described as curly-braced now correctly parenthesized."
           }
         }
       }
@@ -5154,8 +5194,8 @@
         "de": {
           "path": "projects/callmebot-signal/index.md",
           "status": "content-present",
-          "sha256": "ad79cbb5acdcdb38525c4c67c67f41b8d235c3a5561c429a8657f316dfe207c1",
-          "words": 886,
+          "sha256": "60bb47ac42494fa50bd9a035d365105b04ae215ba6f2c40b328100060f714621",
+          "words": 891,
           "headings": 6,
           "examples": 0,
           "versions": [
@@ -5167,8 +5207,8 @@
         "en": {
           "path": "en/projects/callmebot-signal/index.md",
           "status": "content-present",
-          "sha256": "e942b5686e203471093308561a9a78c8e16842ef2270fa6df596ec3d153c36c2",
-          "words": 889,
+          "sha256": "a4056a1a338ae842634dca357670496bbdb89f5e33ff2007058030e66cb43ce6",
+          "words": 893,
           "headings": 6,
           "examples": 0,
           "versions": [
@@ -5188,13 +5228,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Signal versus WhatsApp credentials, QoS0/no retain,16 profiles/4000chars/20requests/10s/dedup1h1000, no automatic retry, AES-GCM encrypted profile backup versus unencrypted backend, pending restore and explicit external broker bridge requirements agree. Contradictory earlier no-TLS claim now points to existing beta TLS section in all locales; no message sent."
           }
         },
         "fr": {
           "path": "fr/projects/callmebot-signal/index.md",
           "status": "content-present",
-          "sha256": "372a249bee8a3cf49659f1e154a06c24127a79a5237525a9a04376c2b9ca42bb",
-          "words": 937,
+          "sha256": "794ccd8b5eedf420d4643d7c090af9b900635814041b84a0018996236854761d",
+          "words": 943,
           "headings": 6,
           "examples": 0,
           "versions": [
@@ -5214,6 +5259,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Signal versus WhatsApp credentials, QoS0/no retain,16 profiles/4000chars/20requests/10s/dedup1h1000, no automatic retry, AES-GCM encrypted profile backup versus unencrypted backend, pending restore and explicit external broker bridge requirements agree. Contradictory earlier no-TLS claim now points to existing beta TLS section in all locales; no message sent."
           }
         }
       }
@@ -6176,6 +6226,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All ten entries and five tile-marker types, client/server capability boundary, simulation versus actual helpers, no responsive-grid guarantee, inactive tablet return without reload, lazy 30-second lifecycle and optional capabilities agree. Full DE head reread after initial output truncation."
           }
         },
         "fr": {
@@ -6204,6 +6259,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All ten entries and five tile-marker types, client/server capability boundary, simulation versus actual helpers, no responsive-grid guarantee, inactive tablet return without reload, lazy 30-second lifecycle and optional capabilities agree. Full DE head reread after initial output truncation."
           }
         }
       }
@@ -10790,13 +10850,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eight interaction options/defaults, ordered block behavior, browser-only listen lists, reentrancy scope, ready event on every reload, files-before-UI/config include/secret paths, synchronous rule/block versus50ms/two-second async retry and state_changed helper reactivity agree. French file-error reporting mistranslation and broken extra bracket repaired."
           }
         },
         "fr": {
           "path": "fr/projects/uix/broker/broker.md",
           "status": "content-present",
-          "sha256": "2d920e28629382da11f3230eb47fda393c5067dce441ed737b4149bd5cf07a88",
-          "words": 1104,
+          "sha256": "bf1108df7d88dea5aee77b852b959250da30b088b9f54f3e8213047754c61538",
+          "words": 1106,
           "headings": 7,
           "examples": 6,
           "versions": [],
@@ -10814,6 +10879,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eight interaction options/defaults, ordered block behavior, browser-only listen lists, reentrancy scope, ready event on every reload, files-before-UI/config include/secret paths, synchronous rule/block versus50ms/two-second async retry and state_changed helper reactivity agree. French file-error reporting mistranslation and broken extra bracket repaired."
           }
         }
       }
@@ -11132,9 +11202,9 @@
         "de": {
           "path": "projects/uix/broker/realms.md",
           "status": "content-present",
-          "sha256": "deca4d2e262ec6c784ab7186b6f5faba5e196132dbd5ae08c8b7aeb992c21dfd",
-          "words": 741,
-          "headings": 8,
+          "sha256": "bb540671907b202280d2deb2d13e4db09f6d9375975ee854932f5976b8949268",
+          "words": 816,
+          "headings": 9,
           "examples": 5,
           "versions": [
             "9.0.0"
@@ -11163,20 +11233,25 @@
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
-            "fewer_headings": false
+            "fewer_headings": true
           },
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Browser capture/detail roots, shortcut Tinykeys input conflicts, server select-tree only, synchronous block limits and three UIX lifecycle events/updateComplete sequencing agree. Missing distinct-enabled-event shared listener/subscription explanation restored in DE/FR. French keyboard key terminology and grammar repaired."
           }
         },
         "fr": {
           "path": "fr/projects/uix/broker/realms.md",
           "status": "content-present",
-          "sha256": "aabe3f47ba8b95ebddb063dc0afe0da1c082c7a01ab653483e4da1bcbe4b338c",
-          "words": 994,
-          "headings": 7,
+          "sha256": "3b7d95ff4e05c1401a101b0a1ff3f70b3780db8f99f6459b905935153e5302de",
+          "words": 1086,
+          "headings": 8,
           "examples": 5,
           "versions": [],
           "unresolved_local_references": [],
@@ -11193,6 +11268,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Browser capture/detail roots, shortcut Tinykeys input conflicts, server select-tree only, synchronous block limits and three UIX lifecycle events/updateComplete sequencing agree. Missing distinct-enabled-event shared listener/subscription explanation restored in DE/FR. French keyboard key terminology and grammar repaired."
           }
         }
       }
@@ -12592,8 +12672,8 @@
         "de": {
           "path": "projects/uix/extras/frontend-states-throttling.md",
           "status": "content-present",
-          "sha256": "099b947501ecec076cb1f8853b05e99d14234d91bf1ed9724f8750876cf8d03b",
-          "words": 599,
+          "sha256": "b764548bb404ede6defd8ad00af703665bcecaff52a0e0e40d0a075fe2395d83",
+          "words": 650,
           "headings": 22,
           "examples": 6,
           "versions": [],
@@ -12602,8 +12682,8 @@
         "en": {
           "path": "en/projects/uix/extras/frontend-states-throttling.md",
           "status": "content-present",
-          "sha256": "828620bc0543832fb2784a28bfc09990a20986ca568696d5537ee8d4da5985e3",
-          "words": 785,
+          "sha256": "80bdd206524d06d24f490993c5a4cd62957af77c4e06e6cef6c42cba3f3a5e2c",
+          "words": 823,
           "headings": 12,
           "examples": 4,
           "versions": [
@@ -12625,13 +12705,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Only hass.states versus unaffected backend, default200/range50-10000, interval+50ms after last suppressed update/cancel on natural update and session versus global precedence compared with frozen canonical EN and coordinator connection.ts. DE/FR obsolete numeric API calls corrected to object enable/ms; null restores defaults rather than always disabling. No-reload comparison clarified; canonical examples unchanged with explicit editorial null clarification."
           }
         },
         "fr": {
           "path": "fr/projects/uix/extras/frontend-states-throttling.md",
           "status": "content-present",
-          "sha256": "af4a2c6acbb0cb7781e417732f9a024ebf824718d04c6952b9e1a15f84fef629",
-          "words": 891,
+          "sha256": "62886a172237d863190f3981bc12ccbeb420199fbebbc8f9bfc1c1b17f9225a1",
+          "words": 939,
           "headings": 19,
           "examples": 7,
           "versions": [],
@@ -12647,6 +12732,11 @@
             "status": "reviewed",
             "disposition": "supplemented",
             "reason": "Added 3 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Only hass.states versus unaffected backend, default200/range50-10000, interval+50ms after last suppressed update/cancel on natural update and session versus global precedence compared with frozen canonical EN and coordinator connection.ts. DE/FR obsolete numeric API calls corrected to object enable/ms; null restores defaults rather than always disabling. No-reload comparison clarified; canonical examples unchanged with explicit editorial null clarification."
           }
         }
       }
@@ -13039,8 +13129,8 @@
         "de": {
           "path": "projects/uix/faq.md",
           "status": "content-present",
-          "sha256": "5166dcbbab4079fad7ee151a57fe7ad2e30ab64c72df3f31a6ac545e9af3a28f",
-          "words": 803,
+          "sha256": "24c6030afdb3e436c9fe2d31afdf2ca72ebdae82bad78ee24f17fd15c7efe293",
+          "words": 839,
           "headings": 11,
           "examples": 0,
           "versions": [
@@ -13086,12 +13176,17 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Card-mod4.2.1 compatibility versus no parallel resources, Minimalist load-order conflict, precedence, CAST/version resources,60s reload and server-restart requirement, uninstall service/config versus preserved YAML agree with frozen canonical EN. Missing DE six key/debug differences restored; FR obsolete beta preview label made historical. Full DE reread after truncation."
           }
         },
         "fr": {
           "path": "fr/projects/uix/faq.md",
           "status": "content-present",
-          "sha256": "85e913139d1cf7f80c2413b8f19e52eb62ca47859fbefc6120efc77a4e4d3ca2",
+          "sha256": "d7629b3617563edb1e088790ab1ce3a8d1a015aeda4abe6e51f924d6e07e19de",
           "words": 1105,
           "headings": 11,
           "examples": 0,
@@ -13101,16 +13196,14 @@
             "4.2.1",
             "8.0.1",
             "8.1.0",
-            "9.0.0",
-            "9.0.0-beta.0"
+            "9.0.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "8.0.1",
-              "8.1.0",
-              "9.0.0-beta.0"
+              "8.1.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13120,6 +13213,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Card-mod4.2.1 compatibility versus no parallel resources, Minimalist load-order conflict, precedence, CAST/version resources,60s reload and server-restart requirement, uninstall service/config versus preserved YAML agree with frozen canonical EN. Missing DE six key/debug differences restored; FR obsolete beta preview label made historical. Full DE reread after truncation."
           }
         }
       }
@@ -13687,13 +13785,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Local DOM merge/replace behavior, own versus external namespace, optional identifiers, first-event defaults, one/multiple consumers and17 supplemental example purposes agree. French local-only/nonpersistent boundary restored with HA helper/entity guidance for shared durable state. No new runtime test."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/event.md",
           "status": "content-present",
-          "sha256": "6045aea7b0e3220e9dc303679e2419228c4cae776414a4f66b5f00168bfe7f8d",
-          "words": 902,
+          "sha256": "257bfe0749d1b7466dfec6cfdc5c687853a509e3af522858813b1827bbb292cd",
+          "words": 950,
           "headings": 28,
           "examples": 32,
           "versions": [],
@@ -13715,6 +13818,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Local DOM merge/replace behavior, own versus external namespace, optional identifiers, first-event defaults, one/multiple consumers and17 supplemental example purposes agree. French local-only/nonpersistent boundary restored with HA helper/entity guidance for shared durable state. No new runtime test."
           }
         }
       }
@@ -14083,8 +14191,8 @@
         "de": {
           "path": "projects/uix/forge/sparks/more-info.md",
           "status": "content-present",
-          "sha256": "cce0f15325273964acf7136f065077db8c6ec6836ea2bf1b8f38acb56489234e",
-          "words": 622,
+          "sha256": "e903e53042c1baf1c008344aef8114f15ea5184bcfd8a38bca2023e99ce2a692",
+          "words": 705,
           "headings": 18,
           "examples": 9,
           "versions": [],
@@ -14093,8 +14201,8 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/more-info.md",
           "status": "content-present",
-          "sha256": "88adb157e7a677636b3d5004bae2dceb910ca861321c69d9ef3c75405a37d630",
-          "words": 1161,
+          "sha256": "4a133cd5f74b66f605677a81bf9edac29862a80e93777caa70b17d26d696ad33",
+          "words": 1247,
           "headings": 12,
           "examples": 6,
           "versions": [
@@ -14116,13 +14224,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Six options/nine CSS variables, native info/details defaults, conditional YAML toggle, child-dialog behavior, inDialog workaround and shadow padding/stack example purposes compared. Missing German child-view and first-match guidance restored. Frozen more-info implementation differs from tile placement: after chooses target while before controls insertion; explicit editorial warning added without modifying upstream code or canonical examples."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/more-info.md",
           "status": "content-present",
-          "sha256": "7add0a7abd043cef822d82c61ca8690edf6edc8219890c4c527a7ff9b20d7e3b",
-          "words": 1272,
+          "sha256": "bd9442b1039cefffcddd228568c9690e30669dbe03a01bc2c6c9414d5df92385",
+          "words": 1354,
           "headings": 22,
           "examples": 15,
           "versions": [],
@@ -14144,6 +14257,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Six options/nine CSS variables, native info/details defaults, conditional YAML toggle, child-dialog behavior, inDialog workaround and shadow padding/stack example purposes compared. Missing German child-view and first-match guidance restored. Frozen more-info implementation differs from tile placement: after chooses target while before controls insertion; explicit editorial warning added without modifying upstream code or canonical examples."
           }
         }
       }

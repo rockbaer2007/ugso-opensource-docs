@@ -729,7 +729,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "d852ed971ef657f2fa60fb93b3a377d3609d3e64da383cca0ce34197f011f8a3",
-      "target_sha256": "65136e97323f170071c56d7a26b0b796c061a5216caaeb422dc4e705d1014aa2",
+      "target_sha256": "ca0e7156f3e0ec44d54846e31289f3b922d3422af153a86526137555388268e4",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -738,7 +738,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/atlas-plugins/demo-repository.md",
@@ -1869,7 +1871,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "a93d4cc8780c8996feb3e1167d24af97a4fe3ac933afdc9866d3a10c6285e773",
-      "target_sha256": "ce0be6330615d1f12ad5f310c8839e1926a74f2db582002f179201c3794616cc",
+      "target_sha256": "69081944e82c6177189571103551105ac04df0fff96df7ed7b330a859d257d85",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1878,7 +1880,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/custom-blocks.md",
@@ -1903,7 +1907,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "dc014c10edf377c74c7dae5d93d689ec3cca593f21b748abf29f29035589b2d1",
-      "target_sha256": "6b2d04535102fd6a539e4f6c95c4671162937da15be79ddb15c39a87ea7ea36a",
+      "target_sha256": "3a7a67c7cafbca8a653dc210a77ab19f08281ea1b2ae5e417b71840d6df6c419",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -1912,7 +1916,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/blocks-for-ha/entities.md",
@@ -2128,8 +2134,8 @@
       "target": "en/projects/callmebot-signal/index.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "ad79cbb5acdcdb38525c4c67c67f41b8d235c3a5561c429a8657f316dfe207c1",
-      "target_sha256": "e942b5686e203471093308561a9a78c8e16842ef2270fa6df596ec3d153c36c2",
+      "source_sha256": "60bb47ac42494fa50bd9a035d365105b04ae215ba6f2c40b328100060f714621",
+      "target_sha256": "a4056a1a338ae842634dca357670496bbdb89f5e33ff2007058030e66cb43ce6",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -2138,15 +2144,17 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/callmebot-signal/index.md",
       "target": "fr/projects/callmebot-signal/index.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "ad79cbb5acdcdb38525c4c67c67f41b8d235c3a5561c429a8657f316dfe207c1",
-      "target_sha256": "372a249bee8a3cf49659f1e154a06c24127a79a5237525a9a04376c2b9ca42bb",
+      "source_sha256": "60bb47ac42494fa50bd9a035d365105b04ae215ba6f2c40b328100060f714621",
+      "target_sha256": "794ccd8b5eedf420d4643d7c090af9b900635814041b84a0018996236854761d",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -2155,7 +2163,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/callmebot/index.md",
@@ -4837,7 +4847,7 @@
       "locale": "fr",
       "reviewed_at": "2026-11-20",
       "source_sha256": "70b735b540f3e6be5fc35395b3943c9f104d52e5a2113217a0aefa4adb7315a0",
-      "target_sha256": "6045aea7b0e3220e9dc303679e2419228c4cae776414a4f66b5f00168bfe7f8d",
+      "target_sha256": "257bfe0749d1b7466dfec6cfdc5c687853a509e3af522858813b1827bbb292cd",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4854,7 +4864,9 @@
       "difference_assessment": [
         "Source-only inline strings were checked in context: canonical UIX wording, expressions demonstrated in code rather than repeated inline, or version/attribution formatting. They are not a list of missing API options."
       ],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/form.md",
@@ -4940,8 +4952,8 @@
       "target": "fr/projects/uix/forge/sparks/more-info.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "cce0f15325273964acf7136f065077db8c6ec6836ea2bf1b8f38acb56489234e",
-      "target_sha256": "7add0a7abd043cef822d82c61ca8690edf6edc8219890c4c527a7ff9b20d7e3b",
+      "source_sha256": "e903e53042c1baf1c008344aef8114f15ea5184bcfd8a38bca2023e99ce2a692",
+      "target_sha256": "bd9442b1039cefffcddd228568c9690e30669dbe03a01bc2c6c9414d5df92385",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4950,7 +4962,9 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
-      "corrections": null
+      "corrections": null,
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/forge/sparks/overlay-icon.md",

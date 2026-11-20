@@ -38,7 +38,7 @@ Sans connexion, saisir l’ID manuellement ou le laisser vide. Les IDs invalides
 - Catalogue et disponibilité : `ugso/callmebot_signal/profiles` et `ugso/callmebot_signal/availability`, retenus. La disponibilité reflète la connexion au courtier.
 - Maximum 16 profils, 4000 caractères, file de 20 et 10 secondes entre tentatives par profil. Les commandes plus rapides sont refusées.
 - `request_id` facultatif : déduplication pendant une heure, maximum 1000 IDs. Sans réessai automatique ni répétition après redémarrage ; commandes retenues refusées.
-- Une instance Signal par courtier. Limiter les droits d’écriture sur les commandes. La configuration MQTT TLS externe n’est pas incluse.
+- Une instance Signal par courtier. Limiter les droits d’écriture sur les commandes. La configuration des connexions MQTT/TLS externes est décrite dans la section bêta ci-dessous.
 
 Cette application envoie des **textes à vos propres destinataires activés**. Images, groupes et réponses ne sont pas implémentés. `accepted` confirme uniquement l’acceptation API. Destinataire, clé et message sont transmis par HTTPS à `https://signal.callmebot.com/signal/send.php`.
 

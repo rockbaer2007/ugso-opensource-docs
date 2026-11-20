@@ -38,7 +38,7 @@ Without a connection, enter the profile ID manually or leave it empty. Invalid/d
 - Catalog and availability: `ugso/callmebot_signal/profiles` and `ugso/callmebot_signal/availability`, retained. Availability reflects the broker connection.
 - Up to 16 profiles, 4000 characters, queue of 20, at least 10 seconds between attempts per profile. Faster commands are rejected.
 - Optional `request_id`: one-hour deduplication, up to 1000 IDs. No automatic retries/replay after restart; retained commands are rejected.
-- One Signal app instance per broker. Restrict write access to command topics. External MQTT TLS configuration is not included.
+- One Signal app instance per broker. Restrict write access to command topics. External MQTT/TLS connections are described in the beta section below.
 
 This app sends **text messages to your own activated recipients**. Images, groups and replies are not implemented. `accepted` confirms API acceptance only. Recipient, key and message are sent over HTTPS to `https://signal.callmebot.com/signal/send.php`.
 

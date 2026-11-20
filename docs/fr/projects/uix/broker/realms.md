@@ -14,6 +14,10 @@ L'interaction `realm` détermine où Broker écoute et comment sa valeur `listen
 
 Tous les domaines prennent en charge les [règles](rules.md) et les [directives](directives.md). L'élément [interaction Anchor](interaction-anchors.md) sélectionné est toujours dans le navigateur actuel, donc un événement capturé à partir du domaine `server` peut toujours mettre à jour un élément du navigateur ou lui envoyer un événement.
 
+## Enregistrement des écouteurs
+
+Broker enregistre un seul écouteur de navigateur par nom d'événement `browser` distinct activé, et un seul abonnement au bus Home Assistant par nom d'événement `server` distinct activé. Les interactions partageant la même valeur `listen` utilisent cet enregistrement commun ; leurs ancres et règles sont évaluées à la réception de l'événement. Deux interactions `browser` écoutant `uix-applied` utilisent ainsi un seul écouteur `window`, et deux interactions `server` écoutant `state_changed` un seul abonnement. Vous pouvez séparer les interactions par cible, règle ou directive sans multiplier les enregistrements du même événement.
+
 ## Navigateur
 
 `browser` écoute `window` pendant la phase de capture. Utilisez-le pour les événements DOM tels que `click`, `change`, `show-dialog` et les événements de navigateur personnalisés de Home Assistant. `listen` peut être un nom d'événement ou une liste lorsque la même interaction doit répondre à plusieurs événements.
@@ -45,7 +49,7 @@ Par exemple, exécutez une interaction après le démarrage de Broker et chaque 
 ```
 
 L'objet `detail` de l'événement de navigateur est la racine des données capturées. Voir [Règles de données capturées](./rules.md#regles-relatives-aux-donnees-capturees) et [Directive d'événement](./directives.md#evenement) pour savoir comment les données capturées sont mises en correspondance et
-réutilisé.
+réutilisées.
 
 ### Événements du cycle de vie de UIX Styling
 
@@ -117,7 +121,7 @@ Pour les interactions avec le serveur, les données capturées possèdent une cl
 La directive `block` est disponible dans les domaines du navigateur et des raccourcis. Ses règles d'ancrage et d'élément hôte sont résolues de manière synchrone ; si une ancre `select_tree` ne peut pas être trouvée immédiatement, l'interaction complète est ignorée. Cela préserve la propagation du navigateur et le timing des actions par défaut. Les événements du serveur ne peuvent pas être bloqués.
 
 ::: note
-Tinykeys ignore les touches enfoncées dans les zones de saisie, de zone de texte, de sélection et modifiables, donc un domaine `shortcut` `block` ne s'exécutera pas dans ces situations. Pour bloquer une clé dans ces situations, utilisez le domaine `browser` avec `listen: keydown`, ainsi que des règles de données capturées et/ou d'éléments hôtes synchrones.
+Tinykeys ignore les touches enfoncées dans les zones de saisie, de texte, de sélection et modifiables, donc un domaine `shortcut` avec `block` ne s'exécutera pas dans ces situations. Pour bloquer une touche dans ces situations, utilisez le domaine `browser` avec `listen: keydown`, ainsi que des règles de données capturées et/ou d'éléments hôtes synchrones.
 
 Lorsqu'une liaison de raccourci s'exécute, `block` empêche l'action native par défaut et arrête les écouteurs ultérieurs sur `window`. Il ne peut pas annuler un gestionnaire de raccourcis Home Assistant déjà exécuté.
 

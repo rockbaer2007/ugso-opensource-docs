@@ -8,6 +8,8 @@ icon: material/lightning-bolt-outline
 
 Le spark `event` reçoit les événements déclenchés avec l'action Home Assistant `fire-dom-event` et expose leurs données sous forme de variables de modèle dans l'élément créé avec UIX Forge. Utilisez-le pour créer des cartes qui réagissent aux interactions ou aux événements d'automatisation provenant du tableau de bord.
 
+Les événements restent locaux au navigateur : ils ne constituent ni un stockage durable ni une communication entre tableaux de bord ou appareils. Utilisez une entité ou un helper Home Assistant pour un état partagé ou persistant. Choisissez un identifiant distinct si un seul élément doit recevoir les données.
+
 ## Configuration
 
 | Clé | Type | Obligatoire | Valeur par défaut | Description |

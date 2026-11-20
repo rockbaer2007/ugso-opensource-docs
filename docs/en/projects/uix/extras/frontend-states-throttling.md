@@ -149,3 +149,7 @@ Throttling is beneficial when:
 ::: warning
 Setting the throttle interval too high can make dashboards feel unresponsive. A value of 200–500 ms is a good starting point. The flush mechanism ensures the final state is always rendered even if intermediate updates are suppressed. So if you toggle a sensor rapidly within the throttle time, the second update will not reflect until the throttle time plus 50ms has expired.
 :::
+
+::: info Editorial clarification (2026-11-20)
+`setThrottleOverride(null)` clears the session override and restores server defaults; it does not necessarily disable throttling. Use `setThrottleOverride({ enable: false })` to disable it for the session even when enabled on the server.
+:::

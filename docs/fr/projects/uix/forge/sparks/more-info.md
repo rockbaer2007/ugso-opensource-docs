@@ -54,6 +54,10 @@ forge:
 
 ## Configuration
 
+::: warning Précision issue du code source de la version documentée
+La recherche de cible privilégie `after`, y compris sa valeur par défaut pour Blank Card. Un `before` non vide insère le contenu avant cette cible résolue. Ne combinez donc pas les deux sélecteurs et ne supposez pas qu'un `after` vide désactive cette valeur par défaut. Pour un placement prévisible dans Blank Card, utilisez explicitement `after`. Il s'agit d'un constat sur le code source, sans nouveau test dans le navigateur.
+:::
+
 | Clé | Type | Obligatoire | Valeur par défaut | Description |
 | --- | ---- | -------- | ------- | ----------- |
 | `type` | `string` | ✅ | — | Doit être défini sur `more-info`. |

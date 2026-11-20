@@ -18,6 +18,10 @@ Der `realm` einer Interaktion legt fest, wo Broker lauscht und wie `listen` inte
 
 Alle Realms unterstützen [Regeln](./rules) und [Direktiven](./directives). Der gewählte [Interaction Anchor](./interaction-anchors) befindet sich immer im aktuellen Browser. Auch ein Event aus dem `server`-Realm kann daher ein Browser-Element aktualisieren oder ein Event darauf auslösen.
 
+## Gemeinsame Listener
+
+Broker registriert pro unterschiedlichem aktiviertem `listen`-Event genau einen Browser-Listener beziehungsweise eine Home-Assistant-Event-Bus-Subscription. Mehrere Interaktionen für dasselbe Event teilen diese Registrierung; ihre Anchors und Regeln werden erst beim Eintreffen des Events ausgewertet. Zwei `browser`-Interaktionen für `uix-applied` benötigen somit nur einen `window`-Listener, zwei `server`-Interaktionen für `state_changed` nur eine Subscription. Du kannst Interaktionen nach Ziel, Regeln oder Direktiven aufteilen, ohne dadurch dieselbe Event-Registrierung zu vervielfachen.
+
 ## Browser
 
 `browser` lauscht auf `window` während der Capture-Phase. Nutze ihn für DOM-Events wie `click`, `change`, `show-dialog` und benutzerdefinierte Home-Assistant-Browser-Events.

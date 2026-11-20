@@ -5,6 +5,12 @@ title: More-info Spark
 
 Der More-info Spark fügt Home Assistants More-info-Inhalt direkt in ein Forge-Element ein. So kannst du den bekannten Detailbereich einer Entity in Karten, Stacks oder Shortcuts einbetten.
 
+Benötigt eine Aktion eine untergeordnete Detailansicht, etwa zur Auswahl von Staubsauger-Reinigungsbereichen, öffnet sich dafür der reguläre More-info-Dialog. Der Spark verwendet jeweils das erste passende Referenzelement.
+
+::: warning Quellcode-Hinweis zum dokumentierten Stand
+Die Zielsuche bevorzugt `after`, auch dessen Blank-Card-Standard. Ein gesetztes `before` fügt den Inhalt vor diesem gefundenen Ziel ein. Deshalb nicht beide Selektoren kombinieren oder mit leerem `after` den Blank-Card-Standard umgehen. Für eine eindeutige Platzierung dort explizit `after` verwenden. Dies ist ein Quellcodebefund, kein neuer Browsertest.
+:::
+
 ::: note
 Der Spark nutzt Home-Assistant-Frontend-Elemente. Dadurch kann sich das genaue Aussehen mit Home-Assistant-Versionen ändern.
 
@@ -48,8 +54,8 @@ element:
 | `after` | `string` | nein | Bei Blank Card `uix-forge-blank-card $ div.content`, sonst `""`. | UIX-Selektor für das Referenzelement. Der More-info-Inhalt wird danach als Geschwisterelement eingefügt. |
 | `before` | `string` | nein | - | UIX-Selektor für das Referenzelement. Der Inhalt wird davor eingefügt. |
 | `entity` | `string` | nein | `element.entity` | Entity-ID für den eingebetteten More-info-Bereich. Ohne Wert nutzt UIX die Entity des Forge-Elements, falls vorhanden. |
-| `info` | `boolean` | nein | `true` | Wenn `false`, wird der Hauptinhalt `ha-more-info-info` nicht angezeigt. Nuetzlich zusammen mit `details: true`. |
-| `details` | `boolean` | nein | `false` | Fuegt einen einklappbaren `ha-more-info-details`-Bereich unter dem Hauptinhalt hinzu. |
+| `info` | `boolean` | nein | `true` | Wenn `false`, wird der Hauptinhalt `ha-more-info-info` nicht angezeigt. Nützlich zusammen mit `details: true`. |
+| `details` | `boolean` | nein | `false` | Fügt einen einklappbaren `ha-more-info-details`-Bereich unter dem Hauptinhalt hinzu. |
 
 ::: note
 Nutze entweder `after` oder `before`, wenn die Position exakt sein soll. Ohne klares Referenzelement kann der More-info-Bereich je nach Karte an einer unerwarteten Stelle erscheinen.

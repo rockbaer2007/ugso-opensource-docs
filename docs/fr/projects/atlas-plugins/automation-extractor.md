@@ -4,7 +4,7 @@ description: Analyser et exporter les automatisations Home Assistant avec ATLAS.
 ---
 # ATLAS Automation Exporter / Editor
 
-ATLAS Automation Exporter / Editor est un plugin autonome d’ATLAS. Il reprend l’idée de l’ancien outil Windows de séparation de `automations.yaml` et l’intègre directement à l’architecture des plugins ATLAS.
+ATLAS Automation Exporter / Editor est un plugin externe d’ATLAS, maintenu indépendamment. Il reprend l’idée de l’ancien outil Windows de séparation de `automations.yaml` et l’intègre directement à l’architecture des plugins ATLAS.
 
 ## Objectif
 
@@ -35,6 +35,7 @@ précède toujours l’analyse du fichier système chargé.
 - conserver les déclencheurs horaires au format `HH:MM:SS` entre guillemets et convertir les valeurs numériques en secondes, par exemple `25200` en `'07:00:00'` ;
 - signaler les ID ou alias absents ou en double, les déclencheurs ou actions manquants et les automatisations désactivées ;
 - marquer les ID et alias en double comme conflits dans la liste ;
+- distinguer ces conflits des simples avertissements ;
 - filtrer les automatisations qui comportent des avertissements ;
 - afficher le YAML détaillé avec une coloration similaire à File Studio ;
 - limiter la liste à environ 15 lignes visibles et la faire défiler indépendamment ;

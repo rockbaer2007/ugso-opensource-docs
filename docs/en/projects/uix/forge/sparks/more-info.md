@@ -222,3 +222,7 @@ uix:
 ```
 
 ![Forge spark more-info applied to shortcut card](/projects/uix/assets/page-assets/forge/sparks/more-info-shortcut-card.png)
+
+::: warning Editorial source-code clarification (2026-11-20)
+At this frozen revision, target lookup prefers `after` (including the Blank Card default), while a nonempty `before` selects insertion before that resolved target. Do not combine both selectors or rely on an empty `after` to disable the Blank Card default. For predictable Blank Card placement, use explicit `after`. This is a source-code finding, not a new browser test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/fb36536e5836d595637fbf3bc253d5fc0d3ed8d6/src/forge/sparks/uix-spark-more-info.ts).
+:::

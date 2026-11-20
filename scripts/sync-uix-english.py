@@ -38,6 +38,8 @@ def reviewed_corrections(text, raw, relative):
         'concepts/application.md': '24be57e32f05eed9eafede271b99958f51dd94d3435666a2ba5a79f24c7f242a',
         'forge/sparks/tile-icon.md': 'eaf8210dbf464eca19c3a96113bc5f9812128c2dd5803e6df91cb728dc4376a5',
         'forge/sparks/state-badge.md': 'dd8b0527f0d457131335d7538ccb5e5a02c524848ad13af5a20ef73e68ed0361',
+        'forge/sparks/more-info.md': '6e157b4563e761900f14f0d013f483fbeb0d2b040008c050a1eb806622ad738c',
+        'extras/frontend-states-throttling.md': 'bd12e71948743dd03086bd30dddebb223b34ea619548d3ed87d52a85b3d4a00b',
     }
     if path not in expected_sources:
         return text
@@ -60,6 +62,19 @@ def reviewed_corrections(text, raw, relative):
     elif path == 'concepts/application.md':
         assert text.count('`UIX-card`') == 1
         text = text.replace('`UIX-card`', '`uix-card`')
+    elif path == 'extras/frontend-states-throttling.md':
+        text += ('\n::: info Editorial clarification (2026-11-20)\n'
+                 '`setThrottleOverride(null)` clears the session override and restores server defaults; '
+                 'it does not necessarily disable throttling. Use `setThrottleOverride({ enable: false })` '
+                 'to disable it for the session even when enabled on the server.\n:::\n')
+    elif path == 'forge/sparks/more-info.md':
+        text += ('\n::: warning Editorial source-code clarification (2026-11-20)\n'
+                 'At this frozen revision, target lookup prefers `after` (including the Blank Card default), '
+                 'while a nonempty `before` selects insertion before that resolved target. Do not combine '
+                 'both selectors or rely on an empty `after` to disable the Blank Card default. '
+                 'For predictable Blank Card placement, use explicit `after`. This is a source-code finding, '
+                 'not a new browser test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/'
+                 + REVISION + '/src/forge/sparks/uix-spark-more-info.ts).\n:::\n')
     else:
         old = 'If you wish to target `before` using Blank card config, set explicitly to `""`.'
         assert text.count(old) == 1

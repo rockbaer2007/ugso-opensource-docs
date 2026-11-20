@@ -55,7 +55,7 @@ Les listes sont prises en charge uniquement dans le domaine `browser` ; Les int
 
 `reentrant: false` est utile lorsqu'une interaction distribue le même événement qui l'a déclenchée. L'interaction est considérée comme active pendant la résolution des ancres, l'exécution des directives et l'attente des directives.
 
-## Événement prêt pour les courtiers
+## Événement de disponibilité de UIX Broker
 
 Une fois qu'UIX Broker a appliqué sa configuration, il distribue un événement de navigateur `uix-broker-ready` sur `window`. L'événement se déclenche une fois que Broker a enregistré ses écouteurs du domaine du navigateur, de sorte qu'une interaction peut écouter cet événement pour appliquer une personnalisation initiale de l'interface utilisateur. Il se déclenche également après chaque rechargement de la configuration du courtier.
 
@@ -85,8 +85,7 @@ uix_broker:
 
 Utilisez **Gérer les fichiers Broker** pour enregistrer, désenregistrer ou recharger des fichiers. Les chemins de fichiers peuvent être absolus ou relatifs au répertoire de configuration de Home Assistant. Les fichiers enregistrés sont lus dans l'ordre d'enregistrement, puis les interactions configurées par l'interface utilisateur sont ajoutées. Toutes les interactions sont transmises aux navigateurs connectés sous la forme d'une seule liste.
 
-Les configurations de fichiers YAML utilisent la même résolution YAML de Home Assistant que les fonderies, notamment `!include` et `!secret`. L'action **UIX Broker** dans **Outils → YAML** recharge tous les fichiers Broker enregistrés et les fichiers de rapports.
-erreurs. Pour les tableaux de bord en mode YAML, l'action **Actualiser** intégrée du tableau de bord
+Les configurations de fichiers YAML utilisent la même résolution YAML de Home Assistant que les Foundries, notamment `!include` et `!secret`. L'action **UIX Broker** dans **Outils → YAML** recharge tous les fichiers Broker enregistrés et signale les erreurs de fichier. Pour les tableaux de bord en mode YAML, l'action **Actualiser** intégrée du tableau de bord
 recharge également les fichiers de courtier enregistrés.
 
 ## Chemins d'exécution des interactions synchrones et asynchrones
@@ -99,7 +98,7 @@ Une fois `block` appliqué, les [ancres de directive](./directives#ancres-de-dir
 
 Pour les interactions sans `block`, les [ancres d'interaction](interaction-anchors.md) et les [règles d'élément hôte](rules.md#regles-des-elements-hotes) manquantes sont réessayées toutes les 50 ms pendant deux secondes maximum. Cela permet à une interaction écoutant un événement de navigateur tel que `show-dialog` d'attendre que la boîte de dialogue soit montée avant de sélectionner la boîte de dialogue ou l'un de ses éléments comme ancre d'interaction.
 
-Voir [Realms](realms.md), [Interaction Anchors](interaction-anchors.md) et [Rules](rules.md)] pour plus d'informations.
+Voir [Domaines](realms.md), [Ancres d'interaction](interaction-anchors.md) et [Règles](rules.md) pour plus d'informations.
 
 ## Débogage
 

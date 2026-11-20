@@ -7,7 +7,7 @@ description: "Découvrez comment UIX limite la fréquence des mises à jour d'é
 Home Assistant peut envoyer très fréquemment des états au frontend, sans permettre de choisir ceux qui sont transmis. Par exemple, une valeur RSSI Bluetooth qui change rapidement provoque l'envoi de nouveaux états et l'actualisation des vues. Cela peut gêner les appareils lents ou les tableaux de bord très chargés. UIX permet de limiter la fréquence des mises à jour d'état afin d'atténuer ces problèmes.
 
 ::: info "Quelles mises à jour sont limitées ?"
-Seules les mises à jour qui modifient `hass.states` sont limitées. Tous les autres changements de `hass` — comme les thèmes, la langue ou l'utilisateur connecté — sont transmis immédiatement afin de préserver la réactivité de l'interface.
+Seules les mises à jour qui modifient `hass.states` sont limitées. Tous les autres changements de `hass` — comme les thèmes, la langue ou l'utilisateur connecté — sont transmis immédiatement afin de préserver la réactivité de l'interface. Les états du serveur, automatisations, services, MQTT, Recorder, historique et capteurs de modèle continuent de fonctionner normalement.
 
 :::
 ## Activation dans l'interface de l'intégration
@@ -50,6 +50,8 @@ window.uixCoordinator.setThrottleOverride(null);
 ```
 
 Comme `hui-view` lit les valeurs du coordinateur à chaque appel de `shouldUpdate`, le remplacement prend effet immédiatement, sans rechargement de page.
+
+`setThrottleOverride(null)` rétablit les valeurs du serveur : il ne désactive donc pas nécessairement la limitation. Utilisez `setThrottleOverride({ enable: false })` pour la désactiver explicitement pendant la session.
 
 ### Utilisation avec Browser Mod
 
@@ -142,7 +144,7 @@ Elle est utile lorsque :
 - des **tableaux de bord complexes**, comportant de nombreuses cartes ou beaucoup de styles UIX, ralentissent lors de fortes rafales de mises à jour.
 
 ::: warning
-Un intervalle trop élevé peut rendre le tableau de bord moins réactif. Une valeur de 200 à 500 ms constitue un bon point de départ. Le mécanisme de rattrapage garantit l'affichage du dernier état, même si les mises à jour intermédiaires sont ignorées. Si vous basculez rapidement un capteur, la seconde mise à jour apparaîtra au plus tard à la fin de l'intervalle, plus 50 ms.
+Un intervalle trop élevé peut rendre le tableau de bord moins réactif. Une valeur de 200 à 500 ms constitue un bon point de départ. Le mécanisme de rattrapage applique le dernier état après l'intervalle plus 50 ms, à compter de la dernière mise à jour retenue, sauf si une mise à jour normale a déjà été transmise. Comparez sans recharger la page : un rechargement efface le remplacement temporaire de la session.
 :::
 
 ## Exemples complémentaires de la référence allemande {#german-reference-examples}
@@ -153,7 +155,7 @@ Ces configurations complètent la référence traduite ci-dessus. Elles reprenne
 ### 1. API de remplacement côté client {#reference-example-1}
 
 ```js
-window.uixCoordinator.setThrottleOverride(500)
+window.uixCoordinator.setThrottleOverride({ enable: true, ms: 500 })
 window.uixCoordinator.setThrottleOverride(null)
 ```
 
@@ -165,7 +167,7 @@ service: browser_mod.javascript
 data:
   browser_id: kitchen-tablet
   code: |
-    window.uixCoordinator?.setThrottleOverride(500)
+    window.uixCoordinator?.setThrottleOverride({ enable: true, ms: 500 })
 ```
 
 ### 3. Utilisation avec custom:button-card {#reference-example-3}
@@ -177,9 +179,9 @@ tap_action:
   uix:
     action: javascript
     data:
-      code: window.uixCoordinator?.setThrottleOverride(500)
+      code: window.uixCoordinator?.setThrottleOverride({ enable: true, ms: 500 })
 
-# Throttling-Override für diese Browser-Session deaktivieren:
+# Override entfernen und wieder die Integrationsvorgabe verwenden:
 hold_action:
   action: fire-dom-event
   uix:

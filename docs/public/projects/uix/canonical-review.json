@@ -317,7 +317,7 @@
     {
       "path": "extras/frontend-states-throttling.md",
       "sha256": "bd12e71948743dd03086bd30dddebb223b34ea619548d3ed87d52a85b3d4a00b",
-      "english_sha256": "828620bc0543832fb2784a28bfc09990a20986ca568696d5537ee8d4da5985e3",
+      "english_sha256": "80bdd206524d06d24f490993c5a4cd62957af77c4e06e6cef6c42cba3f3a5e2c",
       "code_sha256": [
         "0351e4eb88e478f570d71503676c0a709da44283239bb57dd2f97cb8fd8e5aef",
         "ba09150cc4832d75f708bfde22e45d89817ed1c44e38372f2a2ae54cf27f8bbb",
@@ -612,7 +612,7 @@
     {
       "path": "forge/sparks/more-info.md",
       "sha256": "6e157b4563e761900f14f0d013f483fbeb0d2b040008c050a1eb806622ad738c",
-      "english_sha256": "88adb157e7a677636b3d5004bae2dceb910ca861321c69d9ef3c75405a37d630",
+      "english_sha256": "4a133cd5f74b66f605677a81bf9edac29862a80e93777caa70b17d26d696ad33",
       "code_sha256": [
         "74ad2eafb710ac63fb0a6824677387659423463e85bd1b7bfa8f8b7c438db816",
         "4e99209208cf0dca6de961f261123bae7aabdd0b2a6228c9384f5e66aba9855a",

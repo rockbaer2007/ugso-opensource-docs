@@ -93,7 +93,7 @@ Non. Le message garantit que le code JavaScript UIX du frontend correspond à la
 
 La page se recharge automatiquement après 60 secondes, afin que les kiosques sans surveillance actualisent aussi leur frontend.
 
-::: info Aperçu : UIX 9.0.0-beta.0
+::: info Comportement introduit avec UIX 9.0.0
 UIX continue à servir la version chargée au démarrage jusqu’au prochain redémarrage de Home Assistant. Après une mise à jour, redémarrez Home Assistant lorsque vous souhaitez activer la nouvelle version. L’ancienne demande de redémarrage immédiat adressée aux administrateurs en raison d’un frontend mis à jour trop tôt disparaît. Ce comportement fait partie de UIX 9.0.0.
 :::
 

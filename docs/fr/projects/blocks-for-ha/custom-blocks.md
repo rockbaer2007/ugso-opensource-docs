@@ -46,7 +46,7 @@ Depuis la version **0.1.18**, l'**éditeur de blocs/modèles** (Block-/Template-
 4. Saisissez l'expression Jinja ou le mappage déclaratif HA, puis vérifiez l'aperçu.
 5. Cliquez sur **Appliquer** pour installer le paquet localement. Ses blocs seront alors disponibles dans la section **Personnalisé** (Benutzerdefiniert), juste avant la barre de recherche.
 
-Les expressions Jinja doivent être saisies sans les doubles accolades de modèle. Les espaces réservés (placeholders), tels que `${ENTITY}`, font référence aux noms des champs ou des entrées. Les champs sont insérés en respectant leur type, tandis que les entrées de valeur sont intégrées sous forme d'expressions entre accolades. Le mappage HA utilise des valeurs JSON complètes, comme `{"$field":"ENTITY"}` ou `{"$input":"VALUE"}`. L'[exemple « Capteur et lumière »](/fr/projects/blocks-for-ha/catalog/sensor-light) illustre l'ensemble de ces mappages.
+Les expressions Jinja doivent être saisies sans les doubles accolades de modèle. Les espaces réservés (placeholders), tels que `${ENTITY}`, font référence aux noms des champs ou des entrées. Les champs sont insérés en respectant leur type, tandis que les entrées de valeur sont intégrées sous forme d'expressions entre parenthèses. Le mappage HA utilise des valeurs JSON complètes, comme `{"$field":"ENTITY"}` ou `{"$input":"VALUE"}`. L'[exemple « Capteur et lumière »](/fr/projects/blocks-for-ha/catalog/sensor-light) illustre l'ensemble de ces mappages.
 
 ### Deux méthodes d'importation et publication {#zwei-importwege-und-veroffentlichung}
 

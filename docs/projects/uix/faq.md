@@ -23,6 +23,8 @@ Ja. Laut englischem Original ist UIX ein direkter Ersatz für Card-mod bis **4.2
 
 Nein. UIX nutzt eine eigene Architektur und eigene Frontend-Patches. Es adressiert neuere Home-Assistant-Strukturen, Dialoge, Theme-Variablen, DOM-Hilfen und erweiterte Funktionen, die über reines CSS-Injection-Styling hinausgehen.
 
+Die Kartenkonfiguration verwendet `uix:`, die Theme-Auswahl `uix-theme:` und die Theme-Bereiche `uix-<thing>(-yaml):`. Der HTML-Knoten heißt `<uix-node>`, seine Eigenschaften beziehen sich auf `uix`. Templates lassen sich mit `{# uix.debug #}` prüfen; Konsolenmeldungen beginnen mit `UIX`.
+
 ## Gibt es eine Liste der Unterschiede zwischen Card-mod und UI eXtension?
 
 | Funktion | Card-mod | UIX |

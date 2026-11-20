@@ -38,7 +38,7 @@ Bei fehlender Verbindung Profil-ID manuell eingeben oder leer lassen. Ungültige
 - Katalog und Verfügbarkeit: `ugso/callmebot_signal/profiles` und `ugso/callmebot_signal/availability`, retained. Verfügbarkeit zeigt die Broker-Verbindung.
 - Maximal 16 Profile, 4000 Zeichen, Warteschlange 20, mindestens 10 Sekunden zwischen Versandversuchen je Profil. Schnellere Befehle werden abgelehnt.
 - Optionale `request_id`: eine Stunde Dublettenprüfung, maximal 1000 IDs. Keine automatischen Wiederholungen oder Wiedergabe nach Neustart; retained Befehle werden abgelehnt.
-- Eine Signal-App-Instanz pro Broker. Schreibrechte auf Versandthemen beschränken. Externe MQTT-TLS-Konfiguration ist nicht enthalten.
+- Eine Signal-App-Instanz pro Broker. Schreibrechte auf Versandthemen beschränken. Die Einrichtung externer MQTT-/TLS-Verbindungen ist im Beta-Abschnitt unten beschrieben.
 
 Diese App sendet **Textnachrichten an eigene aktivierte Empfänger**. Bilder, Gruppen und Antworten sind nicht implementiert. `accepted` bestätigt nur die API-Annahme. Empfänger, Schlüssel und Nachricht gehen per HTTPS an `https://signal.callmebot.com/signal/send.php`.
 

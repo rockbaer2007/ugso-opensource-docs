@@ -26,14 +26,14 @@ UIX sammelt schnelle State-Update-Signale im Browser und lässt Aktualisierungen
 
 ### Letztes Update flushen
 
-Wenn während eines Throttle-Fensters ein Update zurückgehalten wurde, wird das letzte Update nach Ablauf des Fensters nachgezogen. So bleibt die Anzeige aktuell, ohne jede Zwischenänderung sofort zu rendern.
+Nach jedem zurückgehaltenen Update startet UIX einen Timer neu. Er übernimmt das letzte Update nach dem konfigurierten Intervall plus 50 ms, gerechnet ab dem letzten zurückgehaltenen Update. Wird vorher ein reguläres Update durchgereicht, entfällt dieser zusätzliche Renderdurchlauf.
 
 ## Clientseitige Override-API
 
 `window.uixCoordinator` stellt eine Override-Methode bereit, mit der Integrationen wie Browser Mod pro Browser, Nutzer oder Gerät Einstellungen setzen können.
 
 ```js
-window.uixCoordinator.setThrottleOverride(500)
+window.uixCoordinator.setThrottleOverride({ enable: true, ms: 500 })
 window.uixCoordinator.setThrottleOverride(null)
 ```
 
@@ -45,7 +45,7 @@ service: browser_mod.javascript
 data:
   browser_id: kitchen-tablet
   code: |
-    window.uixCoordinator?.setThrottleOverride(500)
+    window.uixCoordinator?.setThrottleOverride({ enable: true, ms: 500 })
 ```
 
 ### Mit custom:button-card verwenden
@@ -57,9 +57,9 @@ tap_action:
   uix:
     action: javascript
     data:
-      code: window.uixCoordinator?.setThrottleOverride(500)
+      code: window.uixCoordinator?.setThrottleOverride({ enable: true, ms: 500 })
 
-# Throttling-Override für diese Browser-Session deaktivieren:
+# Override entfernen und wieder die Integrationsvorgabe verwenden:
 hold_action:
   action: fire-dom-event
   uix:
@@ -88,10 +88,12 @@ Ein zu großes Intervall kann Anzeigen träge wirken lassen. Starte konservativ,
 | Quelle | Wirkung |
 | --- | --- |
 | Integrations-UI | Globaler Standard für alle Browser |
-| `setThrottleOverride(500)` | Setzt das Intervall für diese Browser-Session auf 500 ms |
+| `setThrottleOverride({ enable: true, ms: 500 })` | Aktiviert die Drosselung mit 500 ms für diese Browser-Session |
 | `setThrottleOverride(null)` | Entfernt den Session-Override und nutzt wieder den globalen Standard |
 
 Der Session-Override eignet sich für Geräte mit schwacher Hardware, etwa ältere Tablets, ohne schnelle Desktop-Browser unnötig zu bremsen.
+
+Änderungen greifen sofort ohne Neuladen. `setThrottleOverride(null)` stellt die Integrationsvorgabe wieder her; bei global aktiver Drosselung bleibt diese also eingeschaltet. Mit `setThrottleOverride({ enable: false })` schaltest du sie für die Session ausdrücklich aus.
 
 ## Was nicht gedrosselt wird
 
@@ -126,7 +128,7 @@ Gedrosselt wird nur, wie oft das Frontend State-Änderungen an UI-Elemente weite
 1. Dashboard ohne Throttling öffnen.
 2. Browser-Performance oder sichtbares Ruckeln beobachten.
 3. Throttling mit 200 ms aktivieren.
-4. Dashboard neu laden.
+4. Wirkung ohne Neuladen vergleichen; ein Neuladen entfernt den temporären Session-Override.
 5. Schrittweise auf 500 ms oder 1000 ms erhöhen, wenn es noch ruckelt.
 
 Wenn wichtige Anzeigen zu langsam reagieren, reduziere das Intervall wieder oder nutze einen Session-Override nur auf dem betroffenen Gerät.
