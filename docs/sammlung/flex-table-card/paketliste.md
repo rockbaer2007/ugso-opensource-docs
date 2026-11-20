@@ -6,6 +6,10 @@ description: Praxisbeispiel für Parcel to MQTT Paketlisten als flex-table-card.
 
 Dieses Beispiel zeigt eine Paketliste aus einem JSON-Sensor, wie sie von `Parcel to MQTT` oder ähnlichen Adaptern bereitgestellt werden kann.
 
+::: info Archivbeispiel
+Parcel to MQTT wird nicht mehr weiterentwickelt. Das Beispiel beschreibt die erwartete Datenstruktur, nicht die aktuelle Verfügbarkeit aller genannten Anbieter. Eine passende Quelle muss diese Daten tatsächlich bereitstellen.
+:::
+
 ## Erwartete Struktur
 
 Der Sensor sollte im Attribut `sendungen` eine Liste enthalten. Pro Paket sind mindestens diese Felder hilfreich:

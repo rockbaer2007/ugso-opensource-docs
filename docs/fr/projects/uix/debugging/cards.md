@@ -44,8 +44,8 @@ my-awesome-theme:
   uix-badge-my-class-debug: true # Débogue les badges ayant my-class dans la configuration UIX
 ```
 
-!!! warning "Définissez les variables dans le thème Home Assistant"
-    Les variables de débogage sont définies dans le thème Home Assistant actif, global ou appliqué localement à une vue ou une carte. Elles ne sont **pas** lues depuis le thème `uix-theme`. Si les deux thèmes sont différents, définissez les variables de débogage dans le thème Home Assistant actif.
+::: warning Définissez les variables dans le thème Home Assistant
+Les variables de débogage sont définies dans le thème Home Assistant actif, global ou appliqué localement à une vue ou une carte. Elles ne sont **pas** lues depuis le thème `uix-theme`. Si les deux thèmes sont différents, définissez les variables de débogage dans le thème Home Assistant actif.
 
     ```yaml
     theme-mods:
@@ -58,9 +58,11 @@ my-awesome-theme:
       uix-theme: theme-mods
     ```
 
+:::
+
 ### Définir le débogage dans le thème actif
 
-Les variables de débogage doivent être placées dans le thème Home Assistant actuellement appliqué, et non dans une carte isolée.
+Les variables de débogage doivent être placées dans le thème Home Assistant actuellement appliqué, même s'il s'agit d'un thème local à une carte. Les écrire seulement dans la configuration UIX de cette carte ne définit pas une variable du thème.
 
 ```yaml
 theme-mods:

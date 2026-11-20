@@ -6,6 +6,8 @@ description: Wie UI eXtension Home-Assistant-Elemente patcht und UIX auf sie anw
 
 UIX erreicht nahezu vollständige Abdeckung der Standardkarten des Home-Assistant-Frontends und unterstützt gleichzeitig Custom Cards, die nicht den modernen Home-Assistant-Rendering-Container für Karten verwenden.
 
+Die [Styling-Lebenszyklus-Ereignisse](../broker/realms#uix-styling-lebenszyklus-events) melden das Einfügen eines UIX-Knotens, das Rendern von Styles und Theme-Aktualisierungen. UIX Broker kann damit auf das Bereitstehen oder erneute Stylen eines Elements reagieren.
+
 ::: info Begriffe
 1. **Patch/Patching**: UIX führt injizierten Code in der Elementklasse aus.
 2. **Application/Applying**: UIX wendet ein `<uix-node>` auf ein Element an, meist im Shadow Root, und auf Kindpfade gemäß Selektoren.

@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 131,
+      "content_reviewed": 156,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 131,
+      "content_reviewed": 156,
       "open_review_signals": 0
     }
   },
@@ -982,6 +982,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "4.6.6.59 download/hash/source, preserved technical EXE name/.NET4.8/VS2026, four locales and five features agree. Web translation is unofficial and failure preserves texts; manual updater backup/checksum/data retention,49 local simulated checks and still-open real GitHub update test retained."
           }
         },
         "fr": {
@@ -1005,6 +1010,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "4.6.6.59 download/hash/source, preserved technical EXE name/.NET4.8/VS2026, four locales and five features agree. Web translation is unofficial and failure preserves texts; manual updater backup/checksum/data retention,49 local simulated checks and still-open real GitHub update test retained."
           }
         }
       }
@@ -1677,6 +1687,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Five version layers, SemVer/pre1.0 rules, fresh server HA version/unknown denial, no browser trust, kernel caret limitation, IDs/capabilities, four backup/recovery steps and future migration requirements agree.0.1.304 package-only restore boundaries, exact limits/no auto-purge, stale previews and historical integration/recovery qualification retained."
           }
         },
         "fr": {
@@ -1711,6 +1726,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Five version layers, SemVer/pre1.0 rules, fresh server HA version/unknown denial, no browser trust, kernel caret limitation, IDs/capabilities, four backup/recovery steps and future migration requirements agree.0.1.304 package-only restore boundaries, exact limits/no auto-purge, stale previews and historical integration/recovery qualification retained."
           }
         }
       }
@@ -2512,6 +2532,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Seven repository-start steps, generator metadata/MDI/custom512KiB PNG and licences, separate README/no automatic GitHub publication, inherited language/URL/fallback and persistent static package/no Runtime hooks agree.300files/20MB and explicit Base64 assets retained."
           }
         },
         "fr": {
@@ -2535,6 +2560,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Seven repository-start steps, generator metadata/MDI/custom512KiB PNG and licences, separate README/no automatic GitHub publication, inherited language/URL/fallback and persistent static package/no Runtime hooks agree.300files/20MB and explicit Base64 assets retained."
           }
         }
       }
@@ -2573,6 +2603,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Distinct ATLAS/add-on formats, template/raw catalog/optional install page, package generation/checks, twenty-one field purposes, relative resolution and package versus manifest fallback agree. Static package/no automatic Runtime integration and stable-ID sample scope retained."
           }
         },
         "fr": {
@@ -2596,6 +2631,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Distinct ATLAS/add-on formats, template/raw catalog/optional install page, package generation/checks, twenty-one field purposes, relative resolution and package versus manifest fallback agree. Static package/no automatic Runtime integration and stable-ID sample scope retained."
           }
         }
       }
@@ -3276,6 +3316,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Hero actions and six feature cards, dated app/integration baseline, only integrated Card Editor versus five external plugins, shared language preference with URL priority and nonproduction evolving contracts agree. All goal areas preserved; no new latest-version audit implied."
           }
         },
         "fr": {
@@ -3302,6 +3347,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Hero actions and six feature cards, dated app/integration baseline, only integrated Card Editor versus five external plugins, shared language preference with URL priority and nonproduction evolving contracts agree. All goal areas preserved; no new latest-version audit implied."
           }
         }
       }
@@ -3587,6 +3637,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "User-reported60minutes per host/720cards and exact baseline agree. No independently collected FPS/memory/rotation claims; historical six-step procedure, timing/theme/reconnect schedules, synthetic-only states, original theme restore, removed links, preservation counts and three backups retained."
           }
         },
         "fr": {
@@ -3614,6 +3669,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "User-reported60minutes per host/720cards and exact baseline agree. No independently collected FPS/memory/rotation claims; historical six-step procedure, timing/theme/reconnect schedules, synthetic-only states, original theme restore, removed links, preservation counts and three backups retained."
           }
         }
       }
@@ -6340,6 +6400,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "62-type/widget-only language scope and seven package compatibility, opt-in state/attribute source and conversion units/fixed targets, Recorder gaps/no offset conversion/history limits agree. Reported-only climate capabilities, server limits, disabled controls, no physical-success guarantee and remaining real-device tests retained."
           }
         },
         "fr": {
@@ -6365,6 +6430,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "62-type/widget-only language scope and seven package compatibility, opt-in state/attribute source and conversion units/fixed targets, Recorder gaps/no offset conversion/history limits agree. Reported-only climate capabilities, server limits, disabled controls, no physical-success guarantee and remaining real-device tests retained."
           }
         }
       }
@@ -6722,6 +6792,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "62-type extension scope, fixed/hold/cycle values, recursion-protected embedded view, color formats/alpha limits, browser clock and independent widget language agree. Slider gradients/previews and15-second browser-only HTTP with CORS/mixed-content, PIN not auth and hold recovery failure caveats retained."
           }
         },
         "fr": {
@@ -6754,6 +6829,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "62-type extension scope, fixed/hold/cycle values, recursion-protected embedded view, color formats/alpha limits, browser clock and independent widget language agree. Slider gradients/previews and15-second browser-only HTTP with CORS/mixed-content, PIN not auth and hold recovery failure caveats retained."
           }
         }
       }
@@ -9388,6 +9468,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Three simulated beginner steps, dynamic inputs, schedules/values/functions, explicit computed-ID existence mapping and absent-versus-unmapped behavior agree. createState three choices/admin requirement/one-time17-to42 persistence, read/write allowlists, REST-command mapping and four import steps agree. Example IDs intentionally localized; test-run versus actual saved Play retained."
           }
         },
         "fr": {
@@ -9413,6 +9498,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Three simulated beginner steps, dynamic inputs, schedules/values/functions, explicit computed-ID existence mapping and absent-versus-unmapped behavior agree. createState three choices/admin requirement/one-time17-to42 persistence, read/write allowlists, REST-command mapping and four import steps agree. Example IDs intentionally localized; test-run versus actual saved Play retained."
           }
         }
       }
@@ -9522,6 +9612,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Six NOT-signal tutorial steps, exact pins and demo true/false behavior, simulation not real light control, saved Play, type compatibility, breakpoints/single scan, pinned auto-layout and opt-in persistent counters with reset caveat agree in EN/FR."
           }
         },
         "fr": {
@@ -9545,6 +9640,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Six NOT-signal tutorial steps, exact pins and demo true/false behavior, simulation not real light control, saved Play, type compatibility, breakpoints/single scan, pinned auto-layout and opt-in persistent counters with reset caveat agree in EN/FR."
           }
         }
       }
@@ -9707,8 +9807,8 @@
         "en": {
           "path": "en/projects/logic-studio/user-guide/rules.md",
           "status": "content-present",
-          "sha256": "0d0cf48f7576a883dd9b5d0a9b391005926c9acef1895d260827bbf15e14517c",
-          "words": 427,
+          "sha256": "509e022ef2bdb780bdf1bc208fe1a88bda5e0645567807ff35f3b4f7a632aea7",
+          "words": 461,
           "headings": 17,
           "examples": 0,
           "versions": [],
@@ -9725,13 +9825,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Six-step state-to-light wizard, helper action alternative, reviewed native YAML and off/on trace verification agree. Trigger features, AND/OR/NOT, IDs, expert template, ordered action branches and threshold re-entry behavior agree. EN/FR areas/labels clarified as entity grouping and missing wizard image restored with explicit German-interface caption."
           }
         },
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/rules.md",
           "status": "content-present",
-          "sha256": "4e825d577bbb839e3cc8a403135b16393546a3f99d7d953dc1b5e6dcfcf1b6d6",
-          "words": 476,
+          "sha256": "6781dd3ca8e6f499a34bfc043acedb28232af6bc12a44b28c1bdcac2eab79d8a",
+          "words": 507,
           "headings": 17,
           "examples": 0,
           "versions": [],
@@ -9748,6 +9853,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Six-step state-to-light wizard, helper action alternative, reviewed native YAML and off/on trace verification agree. Trigger features, AND/OR/NOT, IDs, expert template, ordered action branches and threshold re-entry behavior agree. EN/FR areas/labels clarified as entity grouping and missing wizard image restored with explicit German-interface caption."
           }
         }
       }
@@ -11111,8 +11221,8 @@
         "de": {
           "path": "projects/uix/concepts/application.md",
           "status": "content-present",
-          "sha256": "8c83dae03d87e4d505159b83bfc59badf9d225694c818bf0a6036b67134c2757",
-          "words": 373,
+          "sha256": "4b1ab46d5c13ea92d41a7b247267c00a98942d9f7c0cb618671194da307135e5",
+          "words": 409,
           "headings": 5,
           "examples": 6,
           "versions": [],
@@ -11121,7 +11231,7 @@
         "en": {
           "path": "en/projects/uix/concepts/application.md",
           "status": "content-present",
-          "sha256": "a3d77f0e801a3d42e3242e906dacb20d868fd443f2fb6dc721e32b2cce988a86",
+          "sha256": "762eebd0f5455feb0cf1e20d927f3131d3c76ad613fa6d07ca85ec38576888f8",
           "words": 575,
           "headings": 4,
           "examples": 6,
@@ -11144,13 +11254,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Three patch/apply/ignore definitions, standard/custom/streamline structures and dual-selector/theme examples agree with canonical EN. Missing lifecycle-events navigation restored in DE/FR. Canonical uppercase UIX-card typo corrected to case-sensitive uix-card using a source-bound sync correction; no code examples changed."
           }
         },
         "fr": {
           "path": "fr/projects/uix/concepts/application.md",
           "status": "content-present",
-          "sha256": "3ba149c56ed7c3a59cc8acc94a7bb25cea68ed71c4e3fcbc61c6cc5f28262fd7",
-          "words": 508,
+          "sha256": "b0b4e303da5581a359bd20c7947f261e5a97821b49f4b20fb63184cfb79094c3",
+          "words": 559,
           "headings": 4,
           "examples": 6,
           "versions": [],
@@ -11166,6 +11281,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Compared French technical reference with German and canonical English: configuration tables retain canonical identifiers. Remaining signals concern historical version annotations, equivalent localized example values or merged editorial sections; stable 8.4.0 and preview 9.0.0-beta.2 are distinguished. No functional omission identified for these remaining signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Three patch/apply/ignore definitions, standard/custom/streamline structures and dual-selector/theme examples agree with canonical EN. Missing lifecycle-events navigation restored in DE/FR. Canonical uppercase UIX-card typo corrected to case-sensitive uix-card using a source-bound sync correction; no code examples changed."
           }
         }
       }
@@ -11210,6 +11330,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "First matching theme anchor, direct same-host precedence, inherited subtree/specific exceptions, user display names preserved, five exact allowed name parts, grouped requests, punctuation control and inspector/debug helpers agree against frozen canonical EN. All energy/view/card/direct examples retain their purposes."
           }
         },
         "fr": {
@@ -11236,6 +11361,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "First matching theme anchor, direct same-host precedence, inherited subtree/specific exceptions, user display names preserved, five exact allowed name parts, grouped requests, punctuation control and inspector/debug helpers agree against frozen canonical EN. All energy/view/card/direct examples retain their purposes."
           }
         }
       }
@@ -11583,13 +11713,18 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Inspector chain/string-versus-object/input/children/parent workflow and both type/class debug variables agree. French raw MkDocs warning converted to a rendered warning; misleading final exclusion of card-local themes corrected: active HA theme may be local, but UIX config alone is not a theme variable."
           }
         },
         "fr": {
           "path": "fr/projects/uix/debugging/cards.md",
           "status": "content-present",
-          "sha256": "5e9f85f428469cbf08f7e765036ec5bc9303f4d824b85ce2c4eb7dcf2ef834fa",
-          "words": 396,
+          "sha256": "3841f3320bd1a051bb3bf82474456ef82359330fb10b56b43d21c86818fbc9f7",
+          "words": 419,
           "headings": 3,
           "examples": 5,
           "versions": [],
@@ -11606,6 +11741,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Inspector chain/string-versus-object/input/children/parent workflow and both type/class debug variables agree. French raw MkDocs warning converted to a rendered warning; misleading final exclusion of card-local themes corrected: active HA theme may be local, but UIX config alone is not a theme variable."
           }
         }
       }
@@ -12705,6 +12845,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Experimental default off, same-origin frames versus unaffected host styling, Lit/non-Lit fallback CSS-only limitation, per-app validation, immediate setting with possible reload, target slug precedence and only matching theme target agree with canonical EN. Console version is illustrative, not a current-version assertion."
           }
         },
         "fr": {
@@ -12730,6 +12875,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Experimental default off, same-origin frames versus unaffected host styling, Lit/non-Lit fallback CSS-only limitation, per-app validation, immediate setting with possible reload, target slug precedence and only matching theme target agree with canonical EN. Console version is illustrative, not a current-version assertion."
           }
         }
       }
@@ -14440,13 +14590,12 @@
         "de": {
           "path": "projects/uix/index.md",
           "status": "content-present",
-          "sha256": "1df756456456adc779cd7ca1ac610a0f7aedc4adc0c9003fa4aedcd30cecc724",
-          "words": 641,
+          "sha256": "8ef4df7af03a26deb5c4cb2caeefe55126da521fe28bea5d073e3ef367fd1a7d",
+          "words": 649,
           "headings": 5,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.0.0",
             "9.1.0"
           ],
           "unresolved_local_references": []
@@ -14464,30 +14613,32 @@
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "9.0.0"
-            ],
+            "versions_only_in_de": [],
             "versions_only_in_translation": [],
             "fewer_examples": false,
-            "substantially_shorter": false,
+            "substantially_shorter": true,
             "fewer_headings": true
           },
           "review": {
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Re-reviewed 2026-11-07 against archived dev e7b5bdd: the current desktop-tab restriction, Companion behavior, external URL exception and 9.1.0-beta.0 preview are covered in the linked guides and matching latest review sections. Stable 9.0.0 remains separate. Unchanged English overview retains canonical wording; older historical translation summaries intentionally differ in length and version coverage."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Styling/Forge/Broker purpose, independent translation/source authority, stable9.1/HA2026.11 and66-page canonical update scope agree. German contradictory old current-status footer now clearly historical; DE/FR9.x feature heading avoids assigning9.1 behavior to9.0. Canonical EN intentionally compact overview; local supplemental release features remain DE/FR editorial guidance."
           }
         },
         "fr": {
           "path": "fr/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "ba0550587fd7fe7b8217590d51899d039d4a53dd50247cd03dd1856dc5850b37",
+          "sha256": "5324b6315aa8a02c2f0bffc2df9ebb184bf867b26e2bb6ee2b8f01af432faffd",
           "words": 623,
           "headings": 5,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.0.0",
             "9.1.0"
           ],
           "unresolved_local_references": [],
@@ -14503,6 +14654,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Styling/Forge/Broker purpose, independent translation/source authority, stable9.1/HA2026.11 and66-page canonical update scope agree. German contradictory old current-status footer now clearly historical; DE/FR9.x feature heading avoids assigning9.1 behavior to9.0. Canonical EN intentionally compact overview; local supplemental release features remain DE/FR editorial guidance."
           }
         }
       }
@@ -14589,13 +14745,13 @@
         "de": {
           "path": "projects/uix/quick-start.md",
           "status": "content-present",
-          "sha256": "6ed13406fe6a184f8e43bf45d97f90ae618e6cf3c768c07c1e247e9e479109fe",
-          "words": 353,
+          "sha256": "1b69b0bc217bccdc14d806ee19f7c9923a79588b0e79d516e813ad991a9eb81a",
+          "words": 379,
           "headings": 8,
           "examples": 2,
           "versions": [
             "2026.11.0",
-            "9.0.0"
+            "9.1.0"
           ],
           "unresolved_local_references": []
         },
@@ -14612,12 +14768,8 @@
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [
-              "9.0.0"
-            ],
-            "versions_only_in_translation": [
-              "9.1.0"
-            ],
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
@@ -14626,18 +14778,23 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Marketplace versus manual copy/restart/add-service/refresh, red-card and brush behavior, conditional Tile Forge and templated config purpose agree. German missing full Forge templating explanation restored; stale DE/FR9.0 heading brought to declared9.1 reference; French integration badge caption translated."
           }
         },
         "fr": {
           "path": "fr/projects/uix/quick-start.md",
           "status": "content-present",
-          "sha256": "578f175b1b51cb5a41de12bd7874022a4b4c6febe2f45ad09d96332a3a1ba533",
-          "words": 414,
+          "sha256": "e67cbe39a300d723e9b16bde25b4c06901e8c5b0c3524357de733bda1e8db91d",
+          "words": 413,
           "headings": 7,
           "examples": 2,
           "versions": [
             "2026.11.0",
-            "9.0.0"
+            "9.1.0"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14651,6 +14808,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Marketplace versus manual copy/restart/add-service/refresh, red-card and brush behavior, conditional Tile Forge and templated config purpose agree. German missing full Forge templating explanation restored; stale DE/FR9.0 heading brought to declared9.1 reference; French integration badge caption translated."
           }
         }
       }
@@ -15204,6 +15366,11 @@
             "status": "reviewed",
             "disposition": "intentional-difference",
             "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Three supported elements, entity-ID normalization, ancestor and theme-scope overrides, generic icon/color precedence, required rendered icon and multi-icon caution agree. Two macro theme example and yaml-root purpose retained."
           }
         },
         "fr": {
@@ -15227,6 +15394,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Three supported elements, entity-ID normalization, ancestor and theme-scope overrides, generic icon/color precedence, required rendered icon and multi-icon caution agree. Two macro theme example and yaml-root purpose retained."
           }
         }
       }
@@ -16334,7 +16506,7 @@
         "en": {
           "path": "en/collection/calendar-card-pro/index.md",
           "status": "content-present",
-          "sha256": "81512aa86463a3d5442add53ba0d0b541c637ead375aae2bca692069610f89e4",
+          "sha256": "402f48fc6667d0e548de569f31d327665f927660631c02deb6096d6bbfc3442d",
           "words": 437,
           "headings": 4,
           "examples": 0,
@@ -16354,12 +16526,17 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Declared4.1.0/source/licence and seven guide links agree. Multiple/column/calendar/weather/template/action/filter/editor features, calendar.* prerequisite and upstream CalDAV/Google test attribution retained. EN/FR header alt localized; English expanded reference carries full meaning."
           }
         },
         "fr": {
           "path": "fr/collection/calendar-card-pro/index.md",
           "status": "content-present",
-          "sha256": "71e9192fa0fda0f7df062e2cd863a010304ce1892ea1279ff7c5760f3da5c527",
+          "sha256": "9c3cb8db806266155deee43f3fdee4db675936128dbd86777211546c39218ced",
           "words": 367,
           "headings": 3,
           "examples": 0,
@@ -16379,6 +16556,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Declared4.1.0/source/licence and seven guide links agree. Multiple/column/calendar/weather/template/action/filter/editor features, calendar.* prerequisite and upstream CalDAV/Google test attribution retained. EN/FR header alt localized; English expanded reference carries full meaning."
           }
         }
       }
@@ -17193,7 +17375,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Entities select rows, columns select displayed values; include is OR and exclude wins; column-ID sorting and +/- direction agree. French collapsed two-step list repaired."
+            "assessment": "Entities-to-rows/columns-to-values model, at-least-one include versus any exclude precedence, sort column ID and plus/minus direction agree. Minimal/filter/sort example purposes retained."
           }
         },
         "fr": {
@@ -17221,7 +17403,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Entities select rows, columns select displayed values; include is OR and exclude wins; column-ID sorting and +/- direction agree. French collapsed two-step list repaired."
+            "assessment": "Entities-to-rows/columns-to-values model, at-least-one include versus any exclude precedence, sort column ID and plus/minus direction agree. Minimal/filter/sort example purposes retained."
           }
         }
       }
@@ -17412,7 +17594,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Five HACS steps, exact card type, manual JS/www/resource alternative and quick-test example retained. No new installation test claimed."
+            "assessment": "Five HACS steps, custom card type, manual JS to www/resource registration, automatic/HACS-assisted resource maintenance and minimal test purpose agree."
           }
         },
         "fr": {
@@ -17440,7 +17622,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Five HACS steps, exact card type, manual JS/www/resource alternative and quick-test example retained. No new installation test claimed."
+            "assessment": "Five HACS steps, custom card type, manual JS to www/resource registration, automatic/HACS-assisted resource maintenance and minimal test purpose agree."
           }
         }
       }
@@ -17451,8 +17633,8 @@
         "de": {
           "path": "sammlung/flex-table-card/paketliste.md",
           "status": "content-present",
-          "sha256": "3706d6a893065d61be7d5e8165ef1a1a6921652c8fed3e4a2e35d1d67edbb69b",
-          "words": 77,
+          "sha256": "fcb99a115eaf7803e82e5b782f1612fb8020be2c813cedef27482053e4cd36c3",
+          "words": 107,
           "headings": 4,
           "examples": 3,
           "versions": [],
@@ -17461,8 +17643,8 @@
         "en": {
           "path": "en/collection/flex-table-card/paketliste.md",
           "status": "content-present",
-          "sha256": "a520facf49426ea3c9aa21cfaf0d47b1adbb26f31d3549a32d364988bad38e82",
-          "words": 92,
+          "sha256": "b76c1b30b5479a270e6fa524fb59e77f5f23f394210f808e31fb475eccec9b86",
+          "words": 124,
           "headings": 4,
           "examples": 3,
           "versions": [],
@@ -17483,14 +17665,14 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "sendungen JSON attribute/schema, separate-per-provider cards and max_rows10 versus15 examples agree. Provider names are conditional example data, not a claim that archived Parcel implements every connector."
+            "assessment": "sendungen list/data schema, separate per-provider sensors/cards and10-versus15 row examples agree. Added archive warning in all locales: Parcel is discontinued and illustrative provider rows do not prove working connectors."
           }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/paketliste.md",
           "status": "content-present",
-          "sha256": "0f55bcedf6b9b4f5c3d11e2e202ec7f329ba67135160562efbb136d7c52e0f76",
-          "words": 97,
+          "sha256": "8db042341631bf5a4dbd5b75f4275c80f9007110d5f4e172f8d81cbe90bef709",
+          "words": 133,
           "headings": 4,
           "examples": 3,
           "versions": [],
@@ -17511,7 +17693,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "sendungen JSON attribute/schema, separate-per-provider cards and max_rows10 versus15 examples agree. Provider names are conditional example data, not a claim that archived Parcel implements every connector."
+            "assessment": "sendungen list/data schema, separate per-provider sensors/cards and10-versus15 row examples agree. Added archive warning in all locales: Parcel is discontinued and illustrative provider rows do not prove working connectors."
           }
         }
       }
@@ -17532,7 +17714,7 @@
         "en": {
           "path": "en/collection/flex-table-card/referenz.md",
           "status": "content-present",
-          "sha256": "e88ed24d3489fc09c64d55e82fd44bc132c4650c21489d7c36d0e63d23c4ab4a",
+          "sha256": "9fc99eaef92913c7dd80633957800a320ce775efced6b26bd1a81e8d580b09ae",
           "words": 308,
           "headings": 5,
           "examples": 0,
@@ -17550,6 +17732,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All17 top-level,2 entities and21 column options, required flags, six footer modes and original reference agree. English tap_action mistakenly said typing and now correctly means tapping."
           }
         },
         "fr": {
@@ -17573,6 +17760,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All17 top-level,2 entities and21 column options, required flags, six footer modes and original reference agree. English tap_action mistakenly said typing and now correctly means tapping."
           }
         }
       }
@@ -17682,6 +17874,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Original card-mod manager versus separate experimental UIX fork, PR15, own domain, two generated files/two local background assets and /local URLs without CDN dependency agree. Practical prior test does not remove experimental status."
           }
         },
         "fr": {
@@ -17705,6 +17902,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Original card-mod manager versus separate experimental UIX fork, PR15, own domain, two generated files/two local background assets and /local URLs without CDN dependency agree. Practical prior test does not remove experimental status."
           }
         }
       }
@@ -17725,8 +17927,8 @@
         "en": {
           "path": "en/collection/frosted-glass-theme/index.md",
           "status": "content-present",
-          "sha256": "197000c976bf4bb8b25414e363204454d2b73b8098736bfa367b8b8dcc439b3c",
-          "words": 359,
+          "sha256": "f1dc74df1fe10ca81f562506d966cf45c9a3205a3e1f53d5eb87fe4af3b0b94a",
+          "words": 364,
           "headings": 5,
           "examples": 1,
           "versions": [],
@@ -17743,12 +17945,17 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Declared1.3 commit/licence, five installation steps, card-mod OR UIX requirement, six variants, Lite/blur/dropdown/stack limitations and manager link agree. French unclosed warning repaired; English opaque clues/disarm wording clarified."
           }
         },
         "fr": {
           "path": "fr/collection/frosted-glass-theme/index.md",
           "status": "content-present",
-          "sha256": "184c78fc8465898efab37b8602b6cd9c72d79f9d0aea26d4ea1e83dcd7da7696",
+          "sha256": "e6d36c90387a840663df5b8be71d03b709834be908129cc64f7b202cf441f02e",
           "words": 443,
           "headings": 5,
           "examples": 1,
@@ -17766,6 +17973,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Declared1.3 commit/licence, five installation steps, card-mod OR UIX requirement, six variants, Lite/blur/dropdown/stack limitations and manager link agree. French unclosed warning repaired; English opaque clues/disarm wording clarified."
           }
         }
       }
@@ -18084,7 +18296,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Existing timer entry and all six documentation requirements retained, including helpers, import, trigger/condition/action detail and troubleshooting."
+            "assessment": "Ultimate Timer destination/purpose and all six minimum blueprint guide topics agree, including required helpers, example config and troubleshooting."
           }
         },
         "fr": {
@@ -18112,7 +18324,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Existing timer entry and all six documentation requirements retained, including helpers, import, trigger/condition/action detail and troubleshooting."
+            "assessment": "Ultimate Timer destination/purpose and all six minimum blueprint guide topics agree, including required helpers, example config and troubleshooting."
           }
         }
       }
@@ -19046,6 +19258,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All eighteen active card purposes, legacy Template not in picker, Template Badge HA2024.8 minimum and basic type/schema examples agree with original referenced list. Source names are retained as product names rather than mistranslated card identifiers."
           }
         },
         "fr": {
@@ -19069,6 +19286,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All eighteen active card purposes, legacy Template not in picker, Template Badge HA2024.8 minimum and basic type/schema examples agree with original referenced list. Source names are retained as product names rather than mistranslated card identifiers."
           }
         }
       }
@@ -19239,7 +19461,7 @@
         "en": {
           "path": "en/collection/neomorphix-uix/index.md",
           "status": "content-present",
-          "sha256": "651e772802ddd4c7a0e979fa6a0278152f457448fd49ed0b2ed447e33978a9e6",
+          "sha256": "c70108f4a6b9731a283437cb977608ca46f19671dc0a466cf454d915f8220aac",
           "words": 457,
           "headings": 5,
           "examples": 2,
@@ -19259,13 +19481,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Declared1.0.3 snapshot, unofficial fork/PR4/additive files, UIX instead of card-mod, six original/six UIX variants, mapping keys and Inset limitation agree. English mistranslated WITH licence repaired to MIT with no-separate-LICENSE qualification retained; French collapsed note split."
           }
         },
         "fr": {
           "path": "fr/collection/neomorphix-uix/index.md",
           "status": "content-present",
-          "sha256": "efa31a475ab736439db2bac17b923d4095f8da2723b386ebe21948ac9ebc1780",
-          "words": 518,
+          "sha256": "cf52d527461d353d7314845c26fc361f49f6e9f39c974a00f3c1d5a2257acee1",
+          "words": 517,
           "headings": 5,
           "examples": 2,
           "versions": [
@@ -19284,6 +19511,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Declared1.0.3 snapshot, unofficial fork/PR4/additive files, UIX instead of card-mod, six original/six UIX variants, mapping keys and Inset limitation agree. English mistranslated WITH licence repaired to MIT with no-separate-LICENSE qualification retained; French collapsed note split."
           }
         }
       }
@@ -19446,8 +19678,8 @@
         "en": {
           "path": "en/collection/zendure-ha/entitaeten.md",
           "status": "content-present",
-          "sha256": "0c86debe8295702be9d3b659dc272750effd57d74bfcc4529abd608485dbd362",
-          "words": 397,
+          "sha256": "c06392508711eb0aa3b4c25c3e69f49176c70bf4a4d666ec76cb7e247ea04ac7",
+          "words": 400,
           "headings": 8,
           "examples": 0,
           "versions": [],
@@ -19464,12 +19696,17 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Sixteen sensor, seven energy-counter, five number, eleven selector, six switch/button and nine binary-sensor purposes agree with device/firmware/connection availability caveat. English grid/power/charge wording repaired. French DC port on/output versus off/input restored using upstream dc_switch state keys, not the upstream French labels which are inverted; no hardware test claimed."
           }
         },
         "fr": {
           "path": "fr/collection/zendure-ha/entitaeten.md",
           "status": "content-present",
-          "sha256": "e656b5d26f26618f1c91db2354f6e5048f1d06898b2a70ea776eb4e938758f29",
+          "sha256": "e9287bc3ef0a5f5850ece03a09051571375668b3e20918f872069e9f07dbf15e",
           "words": 475,
           "headings": 8,
           "examples": 0,
@@ -19487,6 +19724,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Sixteen sensor, seven energy-counter, five number, eleven selector, six switch/button and nine binary-sensor purposes agree with device/firmware/connection availability caveat. English grid/power/charge wording repaired. French DC port on/output versus off/input restored using upstream dc_switch state keys, not the upstream French labels which are inverted; no hardware test claimed."
           }
         }
       }

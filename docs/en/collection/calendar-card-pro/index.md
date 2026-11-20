@@ -29,7 +29,7 @@ Calendar Card Pro is a modern, highly customizable calendar card for Home Assist
 This documentation is an unofficial English working translation and practical documentation. The original Calendar Card Pro project and its English documentation remain authoritative.
 :::
 
-<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/header.png" alt="Calendar Card Pro Vorschau" width="100%">
+<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/header.png" alt="Calendar Card Pro preview" width="100%">
 
 | field | Value |
 | --- | --- |

@@ -21,7 +21,7 @@ Avec un ensemble de fonctions qui dépasse les cartes et les tableaux de bord, U
 
 UI eXtension comprend [UIX Styling](./using/index.md), [UIX Forge](./forge/index.md) et [UIX Broker](./broker/index.md). [UIX Styling](./using/index.md) permet d'appliquer du CSS à presque tous les éléments de l'interface Home Assistant. [UIX Forge](./forge/index.md) permet de créer des éléments Home Assistant (cartes, badges, lignes, etc.) avec des modèles pour toute leur configuration et des extensions avancées grâce aux [Sparks UIX Forge](./forge/sparks/index.md). UIX Broker transforme les événements du navigateur, les raccourcis clavier et les événements du bus Home Assistant en interactions déclaratives. Une interaction sélectionne un élément, vérifie des règles optionnelles, puis exécute ses directives dans l'ordre configuré.
 
-## Nouveautés de UIX 9.0.0
+## Fonctions des versions UIX 9.x
 
 - Les [raccourcis personnalisés de barre latérale](./extras/custom-sidebar-panels) ouvrent des pages Home Assistant et des sites externes. L’option d’onglet de bureau dépend de la version, de la destination et du client ; le guide détaille les restrictions actuelles et le comportement de Companion.
 - L’[éditeur visuel Forge](./forge/forge#visual-editor-cards-and-badges) prend en charge les cartes et les badges. `element_base` conserve la configuration native et ses modèles.

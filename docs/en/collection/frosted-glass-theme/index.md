@@ -57,14 +57,14 @@ There is a separate integration project to customize colors and background image
 
 - [Frosted Glass Theme Manager and UIX Trial Variant](/en/collection/frosted-glass-manager/)
 
-## Known clues {#bekannte-hinweise}
+## Known issues and notes {#bekannte-hinweise}
 
 - Text-only Markdown cards still receive the theme's glass/border styling.
 - Blur can interfere with dropdowns in HACS or deeper Home Assistant menus.
 - `stack-in-card` can be difficult due to deeply nested styles.
 - Lite versions are usually the better choice on low-performance devices.
 
-Disarm Plain Markdown Card using `card_mod`:
+Reduce styling on a plain Markdown card using `card_mod`:
 
 ```yaml
 card_mod:

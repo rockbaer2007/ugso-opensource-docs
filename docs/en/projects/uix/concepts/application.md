@@ -77,7 +77,7 @@ hui-card                 ⇐ UIX patches here
 ___
 ::: info Comments
 - Custom cards that are wrappers like `streamlined-card` could adopt wrapping each card in `<hui-card>`. This would give all benefits of users who could then include `visibility` conditions or even templating the new `disabled` config option. These only work 100% when using `<hui-card>` as a wrapper. This is what `expander-card` now does and has 100% success. _NOTE: If you see anything like a history card not updating on first load, that is due to not taking this approach_
-- `UIX-card` theme variable applies to new `<hui-card>` patching and the legacy `<ha-card>` patching.
+- `uix-card` theme variable applies to new `<hui-card>` patching and the legacy `<ha-card>` patching.
 - For situations where you have cards loaded in a standard way, and also by a custom card like layout-card, you can use dual CSS selectors to target both in your themes
 - When you know there is a parent `<hui-card>` patch you can adjust your themes to match. e.g. for streamlined-card, the example below will work for patching from `<hui-card>`, the `*` matching the unknown card type (to UIX) in the streamlined-card structure.
 - The examples show UIX applied to a card. Similar would also work for themes.

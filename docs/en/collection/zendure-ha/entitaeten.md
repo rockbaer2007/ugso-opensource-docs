@@ -18,8 +18,8 @@ The integration creates different entities depending on the device. Not every mo
 | `Gesamtkapazität Batterie` | detected battery capacity |
 | `Solarleistung` | total solar input power |
 | `PV1` to `PV4 Solarleistung` | Solar power of individual inputs |
-| `Haus-Ausgangsleistung` | Performance towards home |
-| `Netz-Eingangsleistung` | Power from the network into the device |
+| `Haus-Ausgangsleistung` | Power supplied to the home |
+| `Netz-Eingangsleistung` | Power from the electricity grid into the device |
 | `Batterieleistung` | calculated charging/discharging power |
 | `Batterieladeleistung` | Power into the battery |
 | `Batterieentladeleistung` | Power from the battery |
@@ -49,7 +49,7 @@ The integration creates different entities depending on the device. Not every mo
 | `AC-Eingangsgrenze` | maximum AC charging power |
 | `AC-Ausgangsgrenze` | maximum AC output power |
 | `Manuelle Leistung` | Manual Manager Mode Setpoint |
-| `SoC-Minimum` | lower loading limit |
+| `SoC-Minimum` | lower charge limit |
 | `SoC-Zielwert` | upper target SoC |
 
 ## Selection fields {#auswahlfelder}

@@ -10,6 +10,8 @@ Choose **New project → Rules**, name it, then open the **wizard**. Its four st
 
 Choose **State**. Enter your motion sensor or first test helper as the entity. The demo uses `binary_sensor.bewegung`. Enter `on` in **To** and leave **From**, attribute and minimum duration empty. Click **Next**.
 
+[![State trigger in the Rules wizard, shown in the German interface](/images/logic-studio/user-guide/rules-trigger-de.jpg)](/images/logic-studio/user-guide/rules-trigger-de.jpg)
+
 ### 3. Skip conditions
 
 Click **Next** in the conditions step. A condition is an extra check, such as limiting the rule to evenings. This example runs whenever the trigger matches.
@@ -36,7 +38,7 @@ The wizard guides you through the rule. Search the palette or drag an item into 
 
 ### Triggers
 
-Choose a state change with from/to, attribute and duration, a numeric threshold, fixed or helper time, sun with offset, MQTT, HA event, HA start, area or label.
+Choose a state change with from/to, attribute and duration, a numeric threshold, fixed or helper time, sun with offset, MQTT, HA event or HA start. Areas and labels group the selected entities.
 
 ### Conditions
 

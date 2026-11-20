@@ -18,7 +18,7 @@ This page is not official documentation of the project. It summarizes the most i
 | Verified commit | [`269c298e47b02faaac4f08c8c9dfccf49d70d860`](https://github.com/yakidd/NeumorphixHome/commit/269c298e47b02faaac4f08c8c9dfccf49d70d860) |
 | Release | [`1.0.3`](https://github.com/yakidd/NeumorphixHome/releases/tag/1.0.3) |
 | UIX fork | [rockbaer2007/NeoMorphix-UIX](https://github.com/rockbaer2007/NeoMorphix-UIX/tree/experiment/uix-theme-variant) |
-| License | according to README: WITH |
+| License | according to README: MIT |
 | Category | HA Dashboard -> Themes |
 
 ## Installation {#installation}

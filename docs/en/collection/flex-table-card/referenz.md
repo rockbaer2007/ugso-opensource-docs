@@ -59,7 +59,7 @@ If `static_data`, `entities: []` is set.
 | `footer_text` | no | Text in the footer line |
 | `footer_colspan` | no | Footer text across multiple columns |
 | `footer_modify` | no | JavaScript for footer value |
-| `tap_action` | no | Action when typing |
+| `tap_action` | no | Action on tap |
 | `hold_action` | no | Action on Hold |
 | `double_tap_action` | no | Action on double tap |
 | `edit_action` | no | Edit and save from cell |

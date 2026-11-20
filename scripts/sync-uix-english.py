@@ -35,6 +35,7 @@ def reviewed_corrections(text, raw, relative):
     expected_sources = {
         'developers/cards.md': 'b015e562376a5bb3b6c437b48d2b0a1c461419490667859b1c2bad9963806d1d',
         'forge/sparks/index.md': '97178ef31bb7b5b88e10e2cc7531e020b80328d3ca7ddb5a46d035ba2585ec70',
+        'concepts/application.md': '24be57e32f05eed9eafede271b99958f51dd94d3435666a2ba5a79f24c7f242a',
     }
     if path not in expected_sources:
         return text
@@ -50,10 +51,13 @@ def reviewed_corrections(text, raw, relative):
         marker = 'The UIX configuration is an object with the following optional properties:'
         assert text.count(marker) == 1
         text = text.replace(marker, '**Editorial correction (2026-11-20):** The first example adds the missing argument comma and closes the promise callback. The frozen upstream example contains these syntax errors; its original source hashes remain recorded.\n\n' + marker)
-    else:
+    elif path == 'forge/sparks/index.md':
         old = 'insert an interactive `ha-button` element as a sibling after any element within the forged element.'
         assert text.count(old) == 1
         text = text.replace(old, 'insert an interactive `ha-button` element as a sibling before or after a target element within the forged element.')
+    else:
+        assert text.count('`UIX-card`') == 1
+        text = text.replace('`UIX-card`', '`uix-card`')
     return text
 
 

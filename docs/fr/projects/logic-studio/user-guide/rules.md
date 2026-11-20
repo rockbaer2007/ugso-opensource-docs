@@ -10,6 +10,8 @@ Choisis **Nouveau projet → Rules**, donne un nom au projet et ouvre l’**assi
 
 Choisis un déclencheur d’état. Saisis l’identifiant de ton capteur de mouvement ou de ta première entrée de test. La démo utilise `binary_sensor.bewegung`. Saisis `on` comme état d’arrivée et laisse l’état de départ, l’attribut et la durée minimale vides. Clique sur **Suivant**.
 
+[![Déclencheur d'état dans l'assistant Rules, interface allemande](/images/logic-studio/user-guide/rules-trigger-de.jpg)](/images/logic-studio/user-guide/rules-trigger-de.jpg)
+
 ### 3. Passer les conditions
 
 Avance sans ajouter de condition. Une condition sert à vérifier un critère supplémentaire, par exemple l’heure de la journée. Ici, le changement d’état suffit.
@@ -36,7 +38,7 @@ L’assistant guide la création. Tu peux aussi chercher et glisser un élément
 
 ### Déclencheurs
 
-Choisis un état avec valeurs avant/après, attribut et durée, un seuil, une heure fixe ou issue d’une entrée, le soleil avec décalage, MQTT, un événement HA, le démarrage de HA, une zone ou une étiquette.
+Choisis un état avec valeurs avant/après, attribut et durée, un seuil, une heure fixe ou issue d’une entrée, le soleil avec décalage, MQTT, un événement HA ou le démarrage de HA. Les zones et étiquettes regroupent les entités sélectionnées.
 
 ### Conditions
 

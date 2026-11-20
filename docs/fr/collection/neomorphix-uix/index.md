@@ -95,4 +95,5 @@ Sur le plan technique, les fichiers supplémentaires ont été associés à des 
 ## Remarques {#hinweise}
 
 - Le projet original indique la licence MIT dans son fichier README, mais ne contient pas de fichier `LICENSE` distinct dans le dépôt.
-- La variante UIX est conçue comme un complément. Les fichiers `card-mod` existants demeurent inchangés. - Avec les variantes « Inset », la page de configuration principale de Home Assistant peut se comporter différemment, car cette interface est rendue d'une manière distincte des tableaux de bord (dashboards) classiques.
+- La variante UIX est conçue comme un complément. Les fichiers `card-mod` existants demeurent inchangés.
+- Avec les variantes « Inset », la page de configuration principale de Home Assistant peut se comporter différemment, car cette interface est rendue d'une manière distincte des tableaux de bord classiques.

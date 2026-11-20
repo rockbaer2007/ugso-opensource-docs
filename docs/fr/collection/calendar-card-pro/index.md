@@ -12,7 +12,7 @@ Calendar Card Pro est une carte de calendrier moderne et hautement personnalisab
 Cette documentation est une traduction de travail non officielle en français, conçue pour une utilisation pratique. Le projet original Calendar Card Pro et sa documentation en anglais restent les références faisant foi.
 :::
 
-<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/header.png" alt="Calendar Card Pro Vorschau" width="100%">
+<img src="https://raw.githubusercontent.com/alexpfau/calendar-card-pro/main/.github/img/header.png" alt="Aperçu de Calendar Card Pro" width="100%">
 
 | Champ | Valeur |
 | --- | --- |

@@ -9,6 +9,10 @@ description: 'Exemple pratique : listes de colis (via « Parcel to MQTT ») affi
 
 Cet exemple présente une liste de colis issue d'un capteur JSON, telle qu'elle peut être fournie par `Parcel to MQTT` ou des adaptateurs similaires.
 
+::: info Exemple archivé
+Parcel to MQTT n'est plus développé. Cet exemple décrit la structure attendue des données, sans garantir la disponibilité actuelle de tous les transporteurs cités. Une source adaptée doit réellement fournir ces données.
+:::
+
 ## Structure attendue {#erwartete-struktur}
 
 Le capteur doit contenir une liste dans l'attribut `sendungen`. Pour chaque colis, les champs suivants sont particulièrement utiles :

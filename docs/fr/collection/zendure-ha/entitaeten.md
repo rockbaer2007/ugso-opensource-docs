@@ -57,7 +57,7 @@ L'intégration génère des entités différentes selon l'appareil. Tous les mod
 | Entité / Traduction | Options / Usage |
 | --- | --- |
 | `AC-Betriebsmodus` | Entrée CA ou sortie CA |
-| `DC Anschluss` | Entrée/Sortie ou Sortie/Entrée |
+| `DC Anschluss` | Activé/sortie ou désactivé/entrée |
 | `Hub-Modus` | Couplé ou autonome |
 | `HEMS-Status` | Activé ou désactivé |
 | `Auto. Batterieheizung` | Activé ou désactivé |

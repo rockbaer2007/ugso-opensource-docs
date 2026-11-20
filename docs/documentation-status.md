@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 131 | 121 |
-| FR | 131 | 121 |
+| EN | 156 | 96 |
+| FR | 156 | 96 |
 
 ## Vollständiges Seiteninventar
 
@@ -60,7 +60,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [blog/snippets/lovelace.md](/blog/snippets/lovelace) | [Inhaltlich geprüft](/en/blog/snippets/lovelace) | [Inhaltlich geprüft](/fr/blog/snippets/lovelace) |
 | [eep/index.md](/eep/) | [Technisch abgeglichen](/en/eep/) | [Technisch abgeglichen](/fr/eep/) |
 | [eep/ini-edit-translate-2026/index.md](/eep/ini-edit-translate-2026/) | [Technisch abgeglichen](/en/eep/ini-edit-translate-2026/) | [Technisch abgeglichen](/fr/eep/ini-edit-translate-2026/) |
-| [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Technisch abgeglichen](/en/eep/projektduplicator-2026/) | [Technisch abgeglichen](/fr/eep/projektduplicator-2026/) |
+| [eep/projektduplicator-2026/index.md](/eep/projektduplicator-2026/) | [Inhaltlich geprüft](/en/eep/projektduplicator-2026/) | [Inhaltlich geprüft](/fr/eep/projektduplicator-2026/) |
 | [impressum/index.md](/impressum/) | [Inhaltlich geprüft](/en/impressum/) | [Inhaltlich geprüft](/fr/impressum/) |
 | [index.md](/) | [Inhaltlich geprüft](/en/) | [Inhaltlich geprüft](/fr/) |
 | [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Inhaltlich geprüft](/en/iobroker/publish-assistant/) | [Inhaltlich geprüft](/fr/iobroker/publish-assistant/) |
@@ -69,7 +69,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects-mqtt/index.md](/projects-mqtt/) | [Inhaltlich geprüft](/en/projects-mqtt/) | [Inhaltlich geprüft](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Technisch abgeglichen](/en/projects/atlas-plugins/automation-extractor) | [Technisch abgeglichen](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Inhaltlich geprüft](/en/projects/atlas-plugins/demo-repository) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/demo-repository) |
-| [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Technisch abgeglichen](/en/projects/atlas-plugins/developers/compatibility) | [Technisch abgeglichen](/fr/projects/atlas-plugins/developers/compatibility) |
+| [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Inhaltlich geprüft](/en/projects/atlas-plugins/developers/compatibility) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/developers/compatibility) |
 | [projects/atlas-plugins/developers/index.md](/projects/atlas-plugins/developers/) | [Inhaltlich geprüft](/en/projects/atlas-plugins/developers/) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/developers/) |
 | [projects/atlas-plugins/developers/manifest.md](/projects/atlas-plugins/developers/manifest) | [Inhaltlich geprüft](/en/projects/atlas-plugins/developers/manifest) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/developers/manifest) |
 | [projects/atlas-plugins/developers/publishing.md](/projects/atlas-plugins/developers/publishing) | [Inhaltlich geprüft](/en/projects/atlas-plugins/developers/publishing) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/developers/publishing) |
@@ -80,18 +80,18 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/atlas-plugins/icon-library.md](/projects/atlas-plugins/icon-library) | [Inhaltlich geprüft](/en/projects/atlas-plugins/icon-library) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/icon-library) |
 | [projects/atlas-plugins/icon-studio.md](/projects/atlas-plugins/icon-studio) | [Technisch abgeglichen](/en/projects/atlas-plugins/icon-studio) | [Technisch abgeglichen](/fr/projects/atlas-plugins/icon-studio) |
 | [projects/atlas-plugins/index.md](/projects/atlas-plugins/) | [Technisch abgeglichen](/en/projects/atlas-plugins/) | [Technisch abgeglichen](/fr/projects/atlas-plugins/) |
-| [projects/atlas-plugins/plugin-template.md](/projects/atlas-plugins/plugin-template) | [Technisch abgeglichen](/en/projects/atlas-plugins/plugin-template) | [Technisch abgeglichen](/fr/projects/atlas-plugins/plugin-template) |
-| [projects/atlas-plugins/repository-format.md](/projects/atlas-plugins/repository-format) | [Technisch abgeglichen](/en/projects/atlas-plugins/repository-format) | [Technisch abgeglichen](/fr/projects/atlas-plugins/repository-format) |
+| [projects/atlas-plugins/plugin-template.md](/projects/atlas-plugins/plugin-template) | [Inhaltlich geprüft](/en/projects/atlas-plugins/plugin-template) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/plugin-template) |
+| [projects/atlas-plugins/repository-format.md](/projects/atlas-plugins/repository-format) | [Inhaltlich geprüft](/en/projects/atlas-plugins/repository-format) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/repository-format) |
 | [projects/atlas-plugins/terminal.md](/projects/atlas-plugins/terminal) | [Technisch abgeglichen](/en/projects/atlas-plugins/terminal) | [Technisch abgeglichen](/fr/projects/atlas-plugins/terminal) |
 | [projects/atlas/card-editor.md](/projects/atlas/card-editor) | [Technisch abgeglichen](/en/projects/atlas/card-editor) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/atlas/card-editor) |
 | [projects/atlas/entwicklungsstand.md](/projects/atlas/entwicklungsstand) | [Technisch abgeglichen](/en/projects/atlas/development-status) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/atlas/development-status) |
 | [projects/atlas/frontend.md](/projects/atlas/frontend) | [Technisch abgeglichen](/en/projects/atlas/frontend) | [Technisch abgeglichen](/fr/projects/atlas/frontend) |
 | [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Technisch abgeglichen](/en/projects/atlas/homeassistant) | [Technisch abgeglichen](/fr/projects/atlas/homeassistant) |
-| [projects/atlas/index.md](/projects/atlas/) | [Technisch abgeglichen](/en/projects/atlas/) | [Technisch abgeglichen](/fr/projects/atlas/) |
+| [projects/atlas/index.md](/projects/atlas/) | [Inhaltlich geprüft](/en/projects/atlas/) | [Inhaltlich geprüft](/fr/projects/atlas/) |
 | [projects/atlas/linux.md](/projects/atlas/linux) | [Technisch abgeglichen](/en/projects/atlas/linux) | [Technisch abgeglichen](/fr/projects/atlas/linux) |
 | [projects/atlas/plugins.md](/projects/atlas/plugins) | [Inhaltlich geprüft](/en/projects/atlas/plugins) | [Inhaltlich geprüft](/fr/projects/atlas/plugins) |
 | [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Inhaltlich geprüft](/en/projects/atlas/tablet-test) | [Inhaltlich geprüft](/fr/projects/atlas/tablet-test) |
-| [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Technisch abgeglichen](/en/projects/atlas/tablet-uix-dauertest) | [Technisch abgeglichen](/fr/projects/atlas/tablet-uix-dauertest) |
+| [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Inhaltlich geprüft](/en/projects/atlas/tablet-uix-dauertest) | [Inhaltlich geprüft](/fr/projects/atlas/tablet-uix-dauertest) |
 | [projects/atlas/uebersicht.md](/projects/atlas/uebersicht) | [Inhaltlich geprüft](/en/projects/atlas/overview) | [Inhaltlich geprüft](/fr/projects/atlas/overview) |
 | [projects/automation-status-card/index.md](/projects/automation-status-card/) | [Technisch abgeglichen](/en/projects/automation-status-card/) | [Technisch abgeglichen](/fr/projects/automation-status-card/) |
 | [projects/blocks-for-ha/advanced.md](/projects/blocks-for-ha/advanced) | [Technisch abgeglichen](/en/projects/blocks-for-ha/advanced) | [Technisch abgeglichen](/fr/projects/blocks-for-ha/advanced) |
@@ -124,10 +124,10 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/grafik-visual-studio/devices-tablet.md](/projects/grafik-visual-studio/devices-tablet) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/devices-tablet) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/devices-tablet) |
 | [projects/grafik-visual-studio/editor.md](/projects/grafik-visual-studio/editor) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/editor) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/editor) |
 | [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/energy) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/energy) |
-| [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
+| [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
 | [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/) |
 | [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/industrial) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/industrial) |
-| [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/interaktiv) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/interaktiv) |
+| [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/interaktiv) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/materialdesign) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/materialdesign) |
 | [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/packer) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/packer) |
 | [projects/grafik-visual-studio/palette-runtime.md](/projects/grafik-visual-studio/palette-runtime) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/palette-runtime) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/palette-runtime) |
@@ -157,12 +157,12 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/logic-studio/index.md](/projects/logic-studio/) | [Technisch abgeglichen](/en/projects/logic-studio/) | [Technisch abgeglichen](/fr/projects/logic-studio/) |
 | [projects/logic-studio/user-guide.md](/projects/logic-studio/user-guide) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide) |
 | [projects/logic-studio/user-guide/blocks-a.md](/projects/logic-studio/user-guide/blocks-a) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/blocks-a) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/blocks-a) |
-| [projects/logic-studio/user-guide/blocks-js.md](/projects/logic-studio/user-guide/blocks-js) | [Technisch abgeglichen](/en/projects/logic-studio/user-guide/blocks-js) | [Technisch abgeglichen](/fr/projects/logic-studio/user-guide/blocks-js) |
+| [projects/logic-studio/user-guide/blocks-js.md](/projects/logic-studio/user-guide/blocks-js) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/blocks-js) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/blocks-js) |
 | [projects/logic-studio/user-guide/feedback.md](/projects/logic-studio/user-guide/feedback) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/feedback) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/feedback) |
-| [projects/logic-studio/user-guide/function-plan.md](/projects/logic-studio/user-guide/function-plan) | [Technisch abgeglichen](/en/projects/logic-studio/user-guide/function-plan) | [Technisch abgeglichen](/fr/projects/logic-studio/user-guide/function-plan) |
+| [projects/logic-studio/user-guide/function-plan.md](/projects/logic-studio/user-guide/function-plan) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/function-plan) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/function-plan) |
 | [projects/logic-studio/user-guide/ha-yaml.md](/projects/logic-studio/user-guide/ha-yaml) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/ha-yaml) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/ha-yaml) |
 | [projects/logic-studio/user-guide/javascript.md](/projects/logic-studio/user-guide/javascript) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/javascript) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/javascript) |
-| [projects/logic-studio/user-guide/rules.md](/projects/logic-studio/user-guide/rules) | [Technisch abgeglichen](/en/projects/logic-studio/user-guide/rules) | [Technisch abgeglichen](/fr/projects/logic-studio/user-guide/rules) |
+| [projects/logic-studio/user-guide/rules.md](/projects/logic-studio/user-guide/rules) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/rules) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/rules) |
 | [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/typescript) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/typescript) |
 | [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Technisch abgeglichen](/en/projects/mqtt-client/) | [Technisch abgeglichen](/fr/projects/mqtt-client/) |
 | [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Technisch abgeglichen](/en/projects/mqtt-client/iobroker-roles) | [Technisch abgeglichen](/fr/projects/mqtt-client/iobroker-roles) |
@@ -180,13 +180,13 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/broker/interaction-anchors.md](/projects/uix/broker/interaction-anchors) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/interaction-anchors) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/interaction-anchors) |
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/realms) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/rules) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/rules) |
-| [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/application) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/concepts/application) |
-| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Technisch abgeglichen](/en/projects/uix/concepts/context) | [Technisch abgeglichen](/fr/projects/uix/concepts/context) |
+| [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/concepts/application) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/concepts/application) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Inhaltlich geprüft](/en/projects/uix/concepts/context) | [Inhaltlich geprüft](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/concepts/dom) | [Technisch abgeglichen](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/concepts/) | [Inhaltlich geprüft](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/contributing) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/contributing) |
 | [projects/uix/debugging/cache.md](/projects/uix/debugging/cache) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/debugging/cache) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/debugging/cache) |
-| [projects/uix/debugging/cards.md](/projects/uix/debugging/cards) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/debugging/cards) | [Technisch abgeglichen](/fr/projects/uix/debugging/cards) |
+| [projects/uix/debugging/cards.md](/projects/uix/debugging/cards) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/debugging/cards) | [Inhaltlich geprüft](/fr/projects/uix/debugging/cards) |
 | [projects/uix/debugging/index.md](/projects/uix/debugging/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/debugging/) | [Inhaltlich geprüft](/fr/projects/uix/debugging/) |
 | [projects/uix/debugging/templates.md](/projects/uix/debugging/templates) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/debugging/templates) | [Inhaltlich geprüft](/fr/projects/uix/debugging/templates) |
 | [projects/uix/developers/cards.md](/projects/uix/developers/cards) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/developers/cards) | [Inhaltlich geprüft](/fr/projects/uix/developers/cards) |
@@ -201,7 +201,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/extras/hash-template-variable-updates.md](/projects/uix/extras/hash-template-variable-updates) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/hash-template-variable-updates) | [Inhaltlich geprüft](/fr/projects/uix/extras/hash-template-variable-updates) |
 | [projects/uix/extras/index.md](/projects/uix/extras/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/extras/) |
 | [projects/uix/extras/style-custom-panels.md](/projects/uix/extras/style-custom-panels) | [Inhaltlich geprüft](/en/projects/uix/extras/style-custom-panels) | [Inhaltlich geprüft](/fr/projects/uix/extras/style-custom-panels) |
-| [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/style-frame-panels) | [Technisch abgeglichen](/fr/projects/uix/extras/style-frame-panels) |
+| [projects/uix/extras/style-frame-panels.md](/projects/uix/extras/style-frame-panels) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/style-frame-panels) | [Inhaltlich geprüft](/fr/projects/uix/extras/style-frame-panels) |
 | [projects/uix/extras/uix-actions.md](/projects/uix/extras/uix-actions) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/extras/uix-actions) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/extras/uix-actions) |
 | [projects/uix/faq.md](/projects/uix/faq) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/faq) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/faq) |
 | [projects/uix/forge/forge.md](/projects/uix/forge/forge) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/forge) | [Technisch abgeglichen](/fr/projects/uix/forge/forge) |
@@ -225,16 +225,16 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/forge/sparks/tile-icon.md](/projects/uix/forge/sparks/tile-icon) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/tile-icon) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/sparks/tile-icon) |
 | [projects/uix/forge/sparks/tooltip.md](/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/forge/sparks/tooltip) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/forge/sparks/tooltip) |
 | [projects/uix/guides.md](/projects/uix/guides) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/guides) | [Inhaltlich geprüft](/fr/projects/uix/guides) |
-| [projects/uix/index.md](/projects/uix/) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/) | [Technisch abgeglichen](/fr/projects/uix/) |
+| [projects/uix/index.md](/projects/uix/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/) | [Inhaltlich geprüft](/fr/projects/uix/) |
 | [projects/uix/license.md](/projects/uix/license) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/license) | [Inhaltlich geprüft](/fr/projects/uix/license) |
-| [projects/uix/quick-start.md](/projects/uix/quick-start) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/quick-start) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/quick-start) |
+| [projects/uix/quick-start.md](/projects/uix/quick-start) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/quick-start) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/quick-start) |
 | [projects/uix/translation-status.md](/projects/uix/translation-status) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/translation-status) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/translation-status) |
 | [projects/uix/using/apps.md](/projects/uix/using/apps) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/apps) | [Inhaltlich geprüft](/fr/projects/uix/using/apps) |
 | [projects/uix/using/cards.md](/projects/uix/using/cards) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/cards) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/using/cards) |
 | [projects/uix/using/custom-panels.md](/projects/uix/using/custom-panels) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/custom-panels) | [Inhaltlich geprüft](/fr/projects/uix/using/custom-panels) |
 | [projects/uix/using/custom-sidebar-panels.md](/projects/uix/using/custom-sidebar-panels) | [Inhaltlich geprüft](/en/projects/uix/using/custom-sidebar-panels) | [Inhaltlich geprüft](/fr/projects/uix/using/custom-sidebar-panels) |
 | [projects/uix/using/entities.md](/projects/uix/using/entities) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/entities) | [Technisch abgeglichen](/fr/projects/uix/using/entities) |
-| [projects/uix/using/icons.md](/projects/uix/using/icons) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/using/icons) | [Technisch abgeglichen](/fr/projects/uix/using/icons) |
+| [projects/uix/using/icons.md](/projects/uix/using/icons) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/icons) | [Inhaltlich geprüft](/fr/projects/uix/using/icons) |
 | [projects/uix/using/images.md](/projects/uix/using/images) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/images) | [Inhaltlich geprüft](/fr/projects/uix/using/images) |
 | [projects/uix/using/index.md](/projects/uix/using/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/) | [Inhaltlich geprüft](/fr/projects/uix/using/) |
 | [projects/uix/using/other.md](/projects/uix/using/other) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/using/other) | [Inhaltlich geprüft](/fr/projects/uix/using/other) |
@@ -250,7 +250,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Inhaltlich geprüft](/en/collection/calendar-card-pro/beispiele) | [Inhaltlich geprüft](/fr/collection/calendar-card-pro/beispiele) |
 | [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Inhaltlich geprüft](/en/collection/calendar-card-pro/entwicklung) | [Inhaltlich geprüft](/fr/collection/calendar-card-pro/entwicklung) |
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Technisch abgeglichen](/en/collection/calendar-card-pro/features) | [Technisch abgeglichen](/fr/collection/calendar-card-pro/features) |
-| [sammlung/calendar-card-pro/index.md](/sammlung/calendar-card-pro/) | [Technisch abgeglichen](/en/collection/calendar-card-pro/) | [Technisch abgeglichen](/fr/collection/calendar-card-pro/) |
+| [sammlung/calendar-card-pro/index.md](/sammlung/calendar-card-pro/) | [Inhaltlich geprüft](/en/collection/calendar-card-pro/) | [Inhaltlich geprüft](/fr/collection/calendar-card-pro/) |
 | [sammlung/calendar-card-pro/installation.md](/sammlung/calendar-card-pro/installation) | [Inhaltlich geprüft](/en/collection/calendar-card-pro/installation) | [Inhaltlich geprüft](/fr/collection/calendar-card-pro/installation) |
 | [sammlung/calendar-card-pro/konfiguration.md](/sammlung/calendar-card-pro/konfiguration) | [Technisch abgeglichen](/en/collection/calendar-card-pro/konfiguration) | [Technisch abgeglichen](/fr/collection/calendar-card-pro/konfiguration) |
 | [sammlung/calendar-card-pro/lizenz-und-stand.md](/sammlung/calendar-card-pro/lizenz-und-stand) | [Inhaltlich geprüft](/en/collection/calendar-card-pro/lizenz-und-stand) | [Inhaltlich geprüft](/fr/collection/calendar-card-pro/lizenz-und-stand) |
@@ -267,10 +267,10 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [sammlung/flex-table-card/index.md](/sammlung/flex-table-card/) | [Inhaltlich geprüft](/en/collection/flex-table-card/) | [Inhaltlich geprüft](/fr/collection/flex-table-card/) |
 | [sammlung/flex-table-card/installation.md](/sammlung/flex-table-card/installation) | [Inhaltlich geprüft](/en/collection/flex-table-card/installation) | [Inhaltlich geprüft](/fr/collection/flex-table-card/installation) |
 | [sammlung/flex-table-card/paketliste.md](/sammlung/flex-table-card/paketliste) | [Inhaltlich geprüft](/en/collection/flex-table-card/paketliste) | [Inhaltlich geprüft](/fr/collection/flex-table-card/paketliste) |
-| [sammlung/flex-table-card/referenz.md](/sammlung/flex-table-card/referenz) | [Technisch abgeglichen](/en/collection/flex-table-card/referenz) | [Technisch abgeglichen](/fr/collection/flex-table-card/referenz) |
+| [sammlung/flex-table-card/referenz.md](/sammlung/flex-table-card/referenz) | [Inhaltlich geprüft](/en/collection/flex-table-card/referenz) | [Inhaltlich geprüft](/fr/collection/flex-table-card/referenz) |
 | [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Inhaltlich geprüft](/en/collection/flex-table-card/sortierung) | [Inhaltlich geprüft](/fr/collection/flex-table-card/sortierung) |
-| [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Technisch abgeglichen](/en/collection/frosted-glass-manager/) | [Technisch abgeglichen](/fr/collection/frosted-glass-manager/) |
-| [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Technisch abgeglichen](/en/collection/frosted-glass-theme/) | [Technisch abgeglichen](/fr/collection/frosted-glass-theme/) |
+| [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Inhaltlich geprüft](/en/collection/frosted-glass-manager/) | [Inhaltlich geprüft](/fr/collection/frosted-glass-manager/) |
+| [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Inhaltlich geprüft](/en/collection/frosted-glass-theme/) | [Inhaltlich geprüft](/fr/collection/frosted-glass-theme/) |
 | [sammlung/ha-2026-11-kompatibilitaet.md](/sammlung/ha-2026-11-kompatibilitaet) | [Technisch abgeglichen](/en/collection/ha-2026-11-compatibility) | [Technisch abgeglichen](/fr/collection/ha-2026-11-compatibility) |
 | [sammlung/ha-apps.md](/sammlung/ha-apps) | [Inhaltlich geprüft](/en/collection/ha-apps) | [Inhaltlich geprüft](/fr/collection/ha-apps) |
 | [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Technisch abgeglichen](/en/collection/ha-automation-exporter/) | [Technisch abgeglichen](/fr/collection/ha-automation-exporter/) |
@@ -287,13 +287,13 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [sammlung/mushroom/fehlersuche.md](/sammlung/mushroom/fehlersuche) | [Inhaltlich geprüft](/en/collection/mushroom/fehlersuche) | [Inhaltlich geprüft](/fr/collection/mushroom/fehlersuche) |
 | [sammlung/mushroom/index.md](/sammlung/mushroom/) | [Inhaltlich geprüft](/en/collection/mushroom/) | [Inhaltlich geprüft](/fr/collection/mushroom/) |
 | [sammlung/mushroom/installation.md](/sammlung/mushroom/installation) | [Inhaltlich geprüft](/en/collection/mushroom/installation) | [Inhaltlich geprüft](/fr/collection/mushroom/installation) |
-| [sammlung/mushroom/karten.md](/sammlung/mushroom/karten) | [Technisch abgeglichen](/en/collection/mushroom/karten) | [Technisch abgeglichen](/fr/collection/mushroom/karten) |
+| [sammlung/mushroom/karten.md](/sammlung/mushroom/karten) | [Inhaltlich geprüft](/en/collection/mushroom/karten) | [Inhaltlich geprüft](/fr/collection/mushroom/karten) |
 | [sammlung/mushroom/lizenz-und-stand.md](/sammlung/mushroom/lizenz-und-stand) | [Inhaltlich geprüft](/en/collection/mushroom/lizenz-und-stand) | [Inhaltlich geprüft](/fr/collection/mushroom/lizenz-und-stand) |
 | [sammlung/mushroom/nutzung.md](/sammlung/mushroom/nutzung) | [Inhaltlich geprüft](/en/collection/mushroom/nutzung) | [Inhaltlich geprüft](/fr/collection/mushroom/nutzung) |
-| [sammlung/neomorphix-uix/index.md](/sammlung/neomorphix-uix/) | [Technisch abgeglichen](/en/collection/neomorphix-uix/) | [Technisch abgeglichen](/fr/collection/neomorphix-uix/) |
+| [sammlung/neomorphix-uix/index.md](/sammlung/neomorphix-uix/) | [Inhaltlich geprüft](/en/collection/neomorphix-uix/) | [Inhaltlich geprüft](/fr/collection/neomorphix-uix/) |
 | [sammlung/testsysteme.md](/sammlung/testsysteme) | [Inhaltlich geprüft](/en/collection/test-systems) | [Inhaltlich geprüft](/fr/collection/test-systems) |
 | [sammlung/weitere-beispiele.md](/sammlung/weitere-beispiele) | [Inhaltlich geprüft](/en/collection/interesting-examples) | [Inhaltlich geprüft](/fr/collection/interesting-examples) |
-| [sammlung/zendure-ha/entitaeten.md](/sammlung/zendure-ha/entitaeten) | [Technisch abgeglichen](/en/collection/zendure-ha/entitaeten) | [Technisch abgeglichen](/fr/collection/zendure-ha/entitaeten) |
+| [sammlung/zendure-ha/entitaeten.md](/sammlung/zendure-ha/entitaeten) | [Inhaltlich geprüft](/en/collection/zendure-ha/entitaeten) | [Inhaltlich geprüft](/fr/collection/zendure-ha/entitaeten) |
 | [sammlung/zendure-ha/fehlersuche.md](/sammlung/zendure-ha/fehlersuche) | [Inhaltlich geprüft](/en/collection/zendure-ha/fehlersuche) | [Inhaltlich geprüft](/fr/collection/zendure-ha/fehlersuche) |
 | [sammlung/zendure-ha/fuse-group.md](/sammlung/zendure-ha/fuse-group) | [Inhaltlich geprüft](/en/collection/zendure-ha/fuse-group) | [Inhaltlich geprüft](/fr/collection/zendure-ha/fuse-group) |
 | [sammlung/zendure-ha/index.md](/sammlung/zendure-ha/) | [Inhaltlich geprüft](/en/collection/zendure-ha/) | [Inhaltlich geprüft](/fr/collection/zendure-ha/) |

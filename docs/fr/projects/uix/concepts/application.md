@@ -5,6 +5,8 @@ description: Découvrez comment UI eXtension intervient sur les éléments d'int
 
 UIX prend en charge presque toutes les cartes standard du frontend Home Assistant, ainsi que les cartes personnalisées qui n'utilisent pas le conteneur de rendu moderne de Home Assistant.
 
+Les [événements du cycle de vie des styles](../broker/realms#evenements-du-cycle-de-vie-de-uix-styling) signalent l'ajout d'un nœud UIX, le rendu des styles et les mises à jour du thème. UIX Broker peut ainsi réagir lorsqu'un élément devient disponible ou est à nouveau stylisé.
+
 ::: info Definitions
 1. **patch / patching** : UIX injecte du code dans la classe de l'élément.
 2. **application / applying** : UIX applique un `<uix-node>` à l'élément, généralement dans son `shadowRoot`, ainsi qu'aux éléments enfants indiqués par les sélecteurs.
@@ -65,7 +67,7 @@ hui-card                 ⇐ UIX patches here
 ___
 ::: note Remarques
 - Les cartes personnalisées conteneurs, comme `streamlined-card`, peuvent envelopper chaque carte dans `<hui-card>`. Les utilisateurs bénéficient alors des options `visibility` et du modèle de la nouvelle option de configuration `disabled`. Ces fonctions sont pleinement prises en charge lorsque `<hui-card>` sert de conteneur. C'est désormais le cas de `expander-card`, qui fonctionne ainsi correctement. _Remarque : si une carte d'historique ne se met pas à jour au premier chargement, cela peut venir de l'absence de cette approche._
-- La variable de thème `UIX-card` s'applique aux interventions récentes sur `<hui-card>` et aux interventions historiques sur `<ha-card>`.
+- La variable de thème `uix-card` s'applique aux interventions récentes sur `<hui-card>` et aux interventions historiques sur `<ha-card>`.
 - Si une carte est chargée directement et aussi par une carte personnalisée comme `layout-card`, utilisez deux sélecteurs CSS dans vos thèmes pour cibler les deux cas.
 - Si vous savez qu'une intervention parente `<hui-card>` existe, adaptez vos thèmes en conséquence. Par exemple, pour `streamlined-card`, l'exemple ci-dessous intervient depuis `<hui-card>` ; `*` correspond au type de carte inconnu de UIX dans la structure de `streamlined-card`.
 - Les exemples montrent l'application de UIX à une carte. Le même principe s'applique aux thèmes.
@@ -92,7 +94,7 @@ uix:
         --card-background-color: red;
       }
 ```
-OR
+OU
 ```yaml
 uix:
   style:

@@ -9,6 +9,10 @@ description: Practical example for Parcel to MQTT package lists as a flex-table-
 
 This example shows a package list from a JSON sensor, as can be provided by `Parcel to MQTT` or similar adapters.
 
+::: info Archived example
+Parcel to MQTT is no longer developed. This example describes the expected data structure, not current availability of all listed providers. A suitable source must actually supply these data.
+:::
+
 ## Expected structure {#erwartete-struktur}
 
 The sensor should contain a list in the `sendungen` attribute. At least these fields are helpful for each package:

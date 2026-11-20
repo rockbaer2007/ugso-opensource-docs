@@ -4,7 +4,7 @@ description: Einstieg in UI eXtension für Home Assistant.
 ---
 # Schnellstart
 
-UIX **9.0.0** benötigt **Home Assistant 2026.11.0 oder neuer**. Siehe [Release 9.0.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0).
+UIX **9.1.0** benötigt **Home Assistant 2026.11.0 oder neuer**. Siehe [Release 9.1.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0).
 
 > **Für Card-mod-Nutzer**
 > Wenn du von Card-mod kommst, lies zusätzlich die [FAQ](./faq). UIX unterstützt viele Card-mod-Konfigurationen, nutzt aber eigene Schlüssel und bringt zusätzliche Funktionen mit.
@@ -48,6 +48,8 @@ Während der Eingabe sollte sich der Kartenhintergrund rot färben. Außerdem er
 ## Erstes UIX Forge
 
 UIX Forge erzeugt ein Home-Assistant-Element aus einer Vorlage. Im Beispiel wird eine Tile-Karte erzeugt, die ausgeblendet wird, wenn `input_boolean.test_boolean` auf `on` steht.
+
+Die übrigen Optionen zeigen Templates mit festen Ergebnissen. Die gesamte Elementkonfiguration sowie `hidden`, `grid_options` und `sparks` können Templates verwenden. Ersetze die Beispielentität durch deine eigene Entität.
 
 ```yaml
 type: custom:uix-forge

@@ -35,7 +35,8 @@ Lien direct :
 [Ouvrir le thème « Frosted Glass » dans HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=WessamLauf&repository=homeassistant-frosted-glass-themes&category=theme)
 
 ::: warning card-mod ou UIX requis
-Le thème nécessite `card-mod` ou `UIX` pour que les effets de flou et de style fonctionnent correctement. :::
+Le thème nécessite `card-mod` ou `UIX` pour que les effets de flou et de style fonctionnent correctement.
+:::
 
 ## Variantes {#varianten}
 

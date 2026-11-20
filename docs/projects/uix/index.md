@@ -33,7 +33,7 @@ UIX besteht aus drei großen Bereichen:
 - [UIX Forge](./forge/index) für dynamisch erzeugte Elemente, wiederverwendbare Vorlagen und erweiterte Sparks.
 - [UIX Broker](./broker/index) für deklarative Interaktionen: Browser-Events, Tastenkürzel und Home-Assistant-Events wählen ein Element aus, prüfen Regeln und führen Direktiven in ihrer Reihenfolge aus.
 
-## Neu in UIX 9.0.0
+## Funktionen der UIX-9.x-Versionen
 
 - [Eigene Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels) öffnen HA-Seiten und externe Webseiten. Die Desktop-Tab-Option unterscheidet sich je nach Version, Ziel und Client; die Anleitung beschreibt die aktuellen Einschränkungen und die Companion-App.
 - Der [visuelle Forge-Editor](./forge/forge#visual-editor-cards-and-badges) bearbeitet Karten und Badges. `element_base` erhält die native Konfiguration mit ihren Templates.
@@ -60,4 +60,4 @@ Der beste Einstieg ist der [Schnellstart](./quick-start). Dort findest du Instal
 - [FAQ](./faq)
 
 > **Stand dieser deutschen Doku**
-> Am 05.11.2026 gegen UIX `9.0.0` und den Dokumentationsstand `master f63ebbd` geprüft. Bei Unklarheiten gilt die englische Originaldokumentation.
+> Aktueller Quellenabgleich: 20.11.2026, UIX 9.1.0 und `dev fb36536`. Bei Unklarheiten gilt die englische Originaldokumentation. Der frühere Abgleich vom 05.11.2026 ist ein historischer Prüfstand.

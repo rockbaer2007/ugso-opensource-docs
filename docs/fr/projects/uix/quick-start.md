@@ -4,7 +4,7 @@ description: Premiers pas avec UI eXtension pour Home Assistant.
 ---
 # Démarrage rapide
 
-UIX **9.0.0** nécessite **Home Assistant 2026.11.0 ou ultérieur**. Voir la [version 9.0.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.0.0).
+UIX **9.1.0** nécessite **Home Assistant 2026.11.0 ou ultérieur**. Voir la [version 9.1.0](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0).
 
 ::: note Utilisateurs de Card-mod
 Si vous migrez depuis Card-mod, consultez la [FAQ](./faq.md), qui répond à la plupart des questions. Pour toute autre question, utilisez les [discussions GitHub](https://github.com/Lint-Free-Technology/uix/discussions).
@@ -23,7 +23,7 @@ Utilisez votre méthode habituelle pour accéder aux fichiers de configuration H
 
 #### Ajouter le service après une installation manuelle {#ajouter-lintegration-ui-extension}
 
-[![Open your Home Assistant instance and show an integration.](https://my.home-assistant.io/badges/integration.svg)](https://my.home-assistant.io/redirect/integration/?domain=uix)
+[![Ouvrir l'intégration dans votre instance Home Assistant.](https://my.home-assistant.io/badges/integration.svg)](https://my.home-assistant.io/redirect/integration/?domain=uix)
 
 Après le redémarrage, ajoutez UI eXtension comme service dans **Paramètres → Appareils et services**. Le bouton ci-dessus vous guide à travers les étapes nécessaires.
 
