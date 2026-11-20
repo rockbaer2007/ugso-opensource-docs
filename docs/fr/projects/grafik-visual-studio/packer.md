@@ -5,9 +5,9 @@ description: Vérification des paquets pour « HA Grafik Visual Studio » et cr�
 
 # Outil de création (packer) pour les paquets de widgets et d'outils {#packer-fur-widget-und-tool-pakete}
 
-Les paquets et outils complémentaires sont proposés de manière centralisée sur [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=de). Ce site open source contient des descriptions et des instructions ; le téléchargement s'effectue via le catalogue de paquets.
+Les paquets et outils complémentaires sont proposés de manière centralisée sur [visualstudio.ugso-software.de](https://visualstudio.ugso-software.de/?lang=fr). Ce site open source contient des descriptions et des instructions ; le téléchargement s'effectue via le catalogue de paquets.
 
-L'outil d'empaquetage (« Packer ») crée, à partir d'un dossier source, un paquet de widgets (`.wg`) ou un paquet d'outils (`.tp`) pour HA Grafik Visual Studio. Ces deux fichiers sont des archives ZIP dotées d'une extension spécifique. Avant l'exportation, l'outil vérifie le manifeste, la structure du paquet, les images SVG/PNG référencées ainsi que les contraintes définies par l'interface des paquets de widgets (./widget-pakete) ou l'interface des paquets d'outils (./tool-pakete). Dans la version actuelle de l'interface (0.1), les fichiers de paquet ne contiennent aucun code exécutable.
+L'outil d'empaquetage (« Packer ») crée, à partir d'un dossier source, un paquet de widgets (`.wg`) ou un paquet d'outils (`.tp`) pour HA Grafik Visual Studio. Ces deux fichiers sont des archives ZIP dotées d'une extension spécifique. Avant l'exportation, l'outil vérifie le manifeste, la structure du paquet, les images SVG/PNG référencées ainsi que les contraintes définies par l'[interface des paquets de widgets](./widget-packages) ou l'[interface des paquets d'outils](./tool-packages). Dans la version actuelle de l'interface (0.1), les fichiers de paquet ne contiennent aucun code exécutable.
 
 ## Création d'un paquet {#paket-erstellen}
 
@@ -16,7 +16,7 @@ L'outil d'empaquetage (« Packer ») crée, à partir d'un dossier source, un pa
 3. Vérifiez la liste des résultats ainsi que l'identifiant du paquet, la version, la licence et le nom de destination. L'option **Exporter** ne devient active que si le paquet est valide et si le nom de destination est disponible. L'outil d'empaquetage ne remplace aucun fichier existant.
 4. Installez le fichier généré (`.wg` ou `.tp`) dans le Studio via **Paramètres → Paquets de widgets** ou **Paramètres → Outils**. Les anciennes extensions `.wg.zip` et `.tp.zip` restent utilisables.
 
-L'outil d'empaquetage effectue ses vérifications en appliquant les mêmes règles que l'outil d'importation intégré au Studio. Le paquet 0.3.0 prend en charge jusqu'à 64 widgets par paquet ; Un paquet d'outils contient exactement un outil dans l'interface 0.1. Le Studio effectue en outre sa propre vérification pour chaque paquet importé.
+L'outil d'empaquetage effectue ses vérifications en appliquant les mêmes règles que l'outil d'importation intégré au Studio. Packer 0.3.0 prend en charge jusqu'à 64 widgets par paquet ; un paquet d'outils contient exactement un outil dans l'interface 0.1. Le Studio effectue en outre sa propre vérification pour chaque paquet importé.
 
 ## GitHub et enregistrement direct {#github-und-direkte-registrierung}
 
@@ -37,7 +37,7 @@ L'adresse de contact est transmise en interne au catalogue et, le cas échéant,
 
 L'interface Qt fonctionne sous Windows et Linux. Le bouton **Enregistrer les extensions** affiche d'abord un aperçu ; après confirmation, il configure des icônes spécifiques ainsi que des entrées « Ouvrir avec » pour `.wg` et `.tp` pour l'utilisateur actuel. L'application par défaut existante n'est pas modifiée. L'outil d'empaquetage permet d'ouvrir un paquet existant pour vérification, sans l'installer. Si le programme est déplacé, l'enregistrement des types de fichiers doit être effectué à nouveau.
 
-La version **0.3.1** est disponible en tant que version de test signée pour Windows et Linux dans le [catalogue de paquets](https://visualstudio.ugso-software.de/?kind=helper&lang=de) :
+La version **0.3.1** est disponible en tant que version de test signée pour Windows et Linux dans le [catalogue de paquets](https://visualstudio.ugso-software.de/?kind=helper&lang=fr) :
 
 | Système | Téléchargement | SHA-256 |
 | --- | --- | --- |

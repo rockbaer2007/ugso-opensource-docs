@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 182 | 70 |
-| FR | 182 | 70 |
+| EN | 195 | 57 |
+| FR | 195 | 57 |
 
 ## Vollständiges Seiteninventar
 
@@ -79,7 +79,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/atlas-plugins/homeassistant-card-editor.md](/projects/atlas-plugins/homeassistant-card-editor) | [Inhaltlich geprüft](/en/projects/atlas-plugins/homeassistant-card-editor) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/homeassistant-card-editor) |
 | [projects/atlas-plugins/icon-library.md](/projects/atlas-plugins/icon-library) | [Inhaltlich geprüft](/en/projects/atlas-plugins/icon-library) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/icon-library) |
 | [projects/atlas-plugins/icon-studio.md](/projects/atlas-plugins/icon-studio) | [Inhaltlich geprüft](/en/projects/atlas-plugins/icon-studio) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/icon-studio) |
-| [projects/atlas-plugins/index.md](/projects/atlas-plugins/) | [Technisch abgeglichen](/en/projects/atlas-plugins/) | [Technisch abgeglichen](/fr/projects/atlas-plugins/) |
+| [projects/atlas-plugins/index.md](/projects/atlas-plugins/) | [Inhaltlich geprüft](/en/projects/atlas-plugins/) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/) |
 | [projects/atlas-plugins/plugin-template.md](/projects/atlas-plugins/plugin-template) | [Inhaltlich geprüft](/en/projects/atlas-plugins/plugin-template) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/plugin-template) |
 | [projects/atlas-plugins/repository-format.md](/projects/atlas-plugins/repository-format) | [Inhaltlich geprüft](/en/projects/atlas-plugins/repository-format) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/repository-format) |
 | [projects/atlas-plugins/terminal.md](/projects/atlas-plugins/terminal) | [Inhaltlich geprüft](/en/projects/atlas-plugins/terminal) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/terminal) |
@@ -88,7 +88,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/atlas/frontend.md](/projects/atlas/frontend) | [Technisch abgeglichen](/en/projects/atlas/frontend) | [Technisch abgeglichen](/fr/projects/atlas/frontend) |
 | [projects/atlas/homeassistant.md](/projects/atlas/homeassistant) | [Technisch abgeglichen](/en/projects/atlas/homeassistant) | [Technisch abgeglichen](/fr/projects/atlas/homeassistant) |
 | [projects/atlas/index.md](/projects/atlas/) | [Inhaltlich geprüft](/en/projects/atlas/) | [Inhaltlich geprüft](/fr/projects/atlas/) |
-| [projects/atlas/linux.md](/projects/atlas/linux) | [Technisch abgeglichen](/en/projects/atlas/linux) | [Technisch abgeglichen](/fr/projects/atlas/linux) |
+| [projects/atlas/linux.md](/projects/atlas/linux) | [Inhaltlich geprüft](/en/projects/atlas/linux) | [Inhaltlich geprüft](/fr/projects/atlas/linux) |
 | [projects/atlas/plugins.md](/projects/atlas/plugins) | [Inhaltlich geprüft](/en/projects/atlas/plugins) | [Inhaltlich geprüft](/fr/projects/atlas/plugins) |
 | [projects/atlas/tablet-test.md](/projects/atlas/tablet-test) | [Inhaltlich geprüft](/en/projects/atlas/tablet-test) | [Inhaltlich geprüft](/fr/projects/atlas/tablet-test) |
 | [projects/atlas/tablet-uix-dauertest.md](/projects/atlas/tablet-uix-dauertest) | [Inhaltlich geprüft](/en/projects/atlas/tablet-uix-dauertest) | [Inhaltlich geprüft](/fr/projects/atlas/tablet-uix-dauertest) |
@@ -102,11 +102,11 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/blocks-for-ha/collections.md](/projects/blocks-for-ha/collections) | [Technisch abgeglichen](/en/projects/blocks-for-ha/collections) | [Technisch abgeglichen](/fr/projects/blocks-for-ha/collections) |
 | [projects/blocks-for-ha/conversion.md](/projects/blocks-for-ha/conversion) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/conversion) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/conversion) |
 | [projects/blocks-for-ha/custom-blocks.md](/projects/blocks-for-ha/custom-blocks) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/custom-blocks) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/custom-blocks) |
-| [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Technisch abgeglichen](/en/projects/blocks-for-ha/entities) | [Technisch abgeglichen](/fr/projects/blocks-for-ha/entities) |
+| [projects/blocks-for-ha/entities.md](/projects/blocks-for-ha/entities) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/entities) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/entities) |
 | [projects/blocks-for-ha/flow.md](/projects/blocks-for-ha/flow) | [Technisch abgeglichen](/en/projects/blocks-for-ha/flow) | [Technisch abgeglichen](/fr/projects/blocks-for-ha/flow) |
 | [projects/blocks-for-ha/index.md](/projects/blocks-for-ha/) | [Technisch abgeglichen](/en/projects/blocks-for-ha/) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/blocks-for-ha/) |
 | [projects/blocks-for-ha/system-template.md](/projects/blocks-for-ha/system-template) | [Technisch abgeglichen](/en/projects/blocks-for-ha/system-template) | [Technisch abgeglichen](/fr/projects/blocks-for-ha/system-template) |
-| [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Technisch abgeglichen](/en/projects/blocks-for-ha/themes) | [Technisch abgeglichen](/fr/projects/blocks-for-ha/themes) |
+| [projects/blocks-for-ha/themes.md](/projects/blocks-for-ha/themes) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/themes) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/themes) |
 | [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Technisch abgeglichen](/en/projects/blocks-for-ha/time) | [Technisch abgeglichen](/fr/projects/blocks-for-ha/time) |
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Inhaltlich geprüft](/en/projects/callmebot-signal/) | [Inhaltlich geprüft](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Technisch abgeglichen](/en/projects/callmebot/) | [Technisch abgeglichen](/fr/projects/callmebot/) |
@@ -119,23 +119,23 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/fritzbox-to-mqtt/konfiguration.md](/projects/fritzbox-to-mqtt/konfiguration) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/configuration) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/configuration) |
 | [projects/grafik-visual-studio/basic.md](/projects/grafik-visual-studio/basic) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/basic) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/basic) |
 | [projects/grafik-visual-studio/bildergalerie.md](/projects/grafik-visual-studio/bildergalerie) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/bildergalerie) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/bildergalerie) |
-| [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/calendar-plus) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/calendar-plus) |
-| [projects/grafik-visual-studio/datenfluss.md](/projects/grafik-visual-studio/datenfluss) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/datenfluss) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/datenfluss) |
+| [projects/grafik-visual-studio/calendar-plus.md](/projects/grafik-visual-studio/calendar-plus) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/calendar-plus) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/calendar-plus) |
+| [projects/grafik-visual-studio/datenfluss.md](/projects/grafik-visual-studio/datenfluss) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/datenfluss) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/datenfluss) |
 | [projects/grafik-visual-studio/devices-tablet.md](/projects/grafik-visual-studio/devices-tablet) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/devices-tablet) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/devices-tablet) |
 | [projects/grafik-visual-studio/editor.md](/projects/grafik-visual-studio/editor) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/editor) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/editor) |
-| [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/energy) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/energy) |
+| [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/energy) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/energy) |
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
 | [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/) |
 | [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/industrial) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/industrial) |
 | [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/interaktiv) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/interaktiv) |
-| [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/materialdesign) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/materialdesign) |
-| [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/packer) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/packer) |
+| [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/materialdesign) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/materialdesign) |
+| [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/packer) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/packer) |
 | [projects/grafik-visual-studio/palette-runtime.md](/projects/grafik-visual-studio/palette-runtime) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/palette-runtime) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/palette-runtime) |
-| [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/printer) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/printer) |
+| [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/printer) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/printer) |
 | [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/solar) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/solar) |
 | [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/svg-line) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/svg-line) |
 | [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/svg-linebox-math) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/svg-linebox-math) |
-| [projects/grafik-visual-studio/svg-linebox.md](/projects/grafik-visual-studio/svg-linebox) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/svg-linebox) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/svg-linebox) |
+| [projects/grafik-visual-studio/svg-linebox.md](/projects/grafik-visual-studio/svg-linebox) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/svg-linebox) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/svg-linebox) |
 | [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/technic) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/technic) |
 | [projects/grafik-visual-studio/tool-pakete.md](/projects/grafik-visual-studio/tool-pakete) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/tool-packages) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/tool-packages) |
 | [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/weather-heating) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/weather-heating) |
@@ -171,7 +171,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/) |
 | [projects/parcel-to-mqtt/installation.md](/projects/parcel-to-mqtt/installation) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/installation) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/installation) |
 | [projects/parcel-to-mqtt/konfiguration.md](/projects/parcel-to-mqtt/konfiguration) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/configuration) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/configuration) |
-| [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Technisch abgeglichen](/en/projects/sidebar-colors/) | [Technisch abgeglichen](/fr/projects/sidebar-colors/) |
+| [projects/sidebar-colors/index.md](/projects/sidebar-colors/) | [Inhaltlich geprüft](/en/projects/sidebar-colors/) | [Inhaltlich geprüft](/fr/projects/sidebar-colors/) |
 | [projects/sidebar-manager/index.md](/projects/sidebar-manager/) | [Technisch abgeglichen](/en/projects/sidebar-manager/) | [Technisch abgeglichen](/fr/projects/sidebar-manager/) |
 | [projects/uix/broker/broker.md](/projects/uix/broker/broker) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/broker/broker) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/broker/broker) |
 | [projects/uix/broker/directives.md](/projects/uix/broker/directives) | [Inhalt vorhanden · Unterschied geprüft](/en/projects/uix/broker/directives) | [Inhalt vorhanden · Unterschied geprüft](/fr/projects/uix/broker/directives) |
@@ -271,7 +271,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [sammlung/flex-table-card/sortierung.md](/sammlung/flex-table-card/sortierung) | [Inhaltlich geprüft](/en/collection/flex-table-card/sortierung) | [Inhaltlich geprüft](/fr/collection/flex-table-card/sortierung) |
 | [sammlung/frosted-glass-manager/index.md](/sammlung/frosted-glass-manager/) | [Inhaltlich geprüft](/en/collection/frosted-glass-manager/) | [Inhaltlich geprüft](/fr/collection/frosted-glass-manager/) |
 | [sammlung/frosted-glass-theme/index.md](/sammlung/frosted-glass-theme/) | [Inhaltlich geprüft](/en/collection/frosted-glass-theme/) | [Inhaltlich geprüft](/fr/collection/frosted-glass-theme/) |
-| [sammlung/ha-2026-11-kompatibilitaet.md](/sammlung/ha-2026-11-kompatibilitaet) | [Technisch abgeglichen](/en/collection/ha-2026-11-compatibility) | [Technisch abgeglichen](/fr/collection/ha-2026-11-compatibility) |
+| [sammlung/ha-2026-11-kompatibilitaet.md](/sammlung/ha-2026-11-kompatibilitaet) | [Inhaltlich geprüft](/en/collection/ha-2026-11-compatibility) | [Inhaltlich geprüft](/fr/collection/ha-2026-11-compatibility) |
 | [sammlung/ha-apps.md](/sammlung/ha-apps) | [Inhaltlich geprüft](/en/collection/ha-apps) | [Inhaltlich geprüft](/fr/collection/ha-apps) |
 | [sammlung/ha-automation-exporter/index.md](/sammlung/ha-automation-exporter/) | [Inhaltlich geprüft](/en/collection/ha-automation-exporter/) | [Inhaltlich geprüft](/fr/collection/ha-automation-exporter/) |
 | [sammlung/ha-blueprints.md](/sammlung/ha-blueprints) | [Inhaltlich geprüft](/en/collection/ha-blueprints) | [Inhaltlich geprüft](/fr/collection/ha-blueprints) |

@@ -10,7 +10,7 @@ Depuis **0.1.44**, les champs appropriés des blocs simples et avancés ouvrent 
 
 Installer **0.1.44** puis redémarrer l’application. Le serveur lit les entités et actions via l’[API REST](https://developers.home-assistant.io/docs/api/rest/) et les registres de cibles via l’[API WebSocket](https://developers.home-assistant.io/docs/api/websocket/). Les permissions manquantes affectent seulement la liste concernée. Aucun jeton HA n’est envoyé au navigateur. La connexion et le nombre d’entités apparaissent dans la barre des réglages.
 
-Cliquer sur un champ d’entité d’un bloc ouvre le sélecteur. Chercher par nom ou ID puis choisir une ligne. Les noms affichés viennent de votre installation et ne sont pas traduits. Les mots de recherche peuvent correspondre au nom ou à l’ID. Le choix remplit le champ actuellement modifié.
+Cliquer sur un champ d’entité d’un bloc ouvre le sélecteur. Chercher par nom ou ID puis choisir une ligne. Les noms affichés viennent de votre installation et ne sont pas traduits. Tous les mots de recherche doivent correspondre au nom ou à l’ID. Seul **Appliquer** remplit le champ actuellement modifié ; **Annuler** ou Échap laisse sa valeur inchangée.
 
 Le filtre suit le type du bloc : une lampe pour une action de couleur, un script pour un appel de script, le domaine approprié pour un assistant. Les actions génériques peuvent avoir une cible vide si leur service le permet. Les autres IDs doivent respecter `domaine.identifiant`.
 

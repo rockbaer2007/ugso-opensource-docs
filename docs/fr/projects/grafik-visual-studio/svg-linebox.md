@@ -12,7 +12,7 @@ La **SVG LineBox**, située dans la section **HA Grafik – Spezial**, agrège l
 
 1. Ajoutez une **SVG LineBox** ainsi que les **SVG-Lines** nécessaires.
 2. Activez les **points d'ancrage** sur la LineBox, en ne sélectionnant que les positions requises. Par défaut, les douze points sont désactivés. L'option **Tous les points** permet de les activer ou désactiver simultanément ; il est également possible de sélectionner chaque position individuellement.
-3. Dans la section **Connexions**, chaque point actif se voit attribuer un rôle : **Entrée**, **Remise à zéro** ou **Sortie**. Le rôle **Remise à zéro** est défini par défaut ; il n'est pas pris en compte dans le calcul. Aucun rôle ne peut être attribué aux points désactivés.
+3. Dans la section **Connexions**, chaque point actif se voit attribuer un rôle : **Entrée**, **Neutre** ou **Sortie**. Le rôle **Neutre** est défini par défaut ; il n'est pas pris en compte dans le calcul. Il ne remet aucune valeur à zéro. Aucun rôle ne peut être attribué aux points désactivés.
 4. Reliez les lignes d'entrée aux entrées, et connectez une autre « SVG-Line » à une sortie. À partir de la version Studio 0.1.126, une ligne peut reprendre la valeur d'un widget numérique connecté à son autre extrémité (par exemple, une entité de type « Number »). Alternativement, vous pouvez sélectionner une **entité numérique** via le paramètre **Animation → Source de direction** ; cette source de ligne dédiée est prioritaire.
 5. Activez l'option **Transmettre la valeur calculée** au niveau de la sortie, et **Activer l'animation** sur la ligne de sortie. Ce n'est qu'alors que la somme en pilotera la direction et la vitesse.
 
@@ -33,7 +33,7 @@ La LineBox prend en compte les lignes SVG visibles connectées à ses **entrées
 
 Exemple : Deux lignes d'entrée aboutissent à la LineBox, identifiées par `1000` et `-300`. La somme est représentée par `700`. Pour une troisième ligne, partant d'une **sortie** et ayant l'option **Transmettre la valeur calculée** activée, `700` indique un flux allant du début vers la fin. Si la ligne de sortie se termine au niveau de la boîte, le signe correspondant à son orientation est inversé. Ses couleurs, ses pointes de flèche et son type de trait restent inchangés. Si son animation est désactivée, elle demeure immobile même lorsqu'une valeur lui est transmise ; de même, `0` ou l'absence d'entrée valide entraîne son arrêt. L'utilisation de l'option **Diviseur SVG LineBox (lors de la transmission)** sur la ligne de sortie permet d'obtenir `700 ÷ 100 = 7` cycles/s. La plage générale pour l'animation numérique se situe entre 0,05 et 20 cycles/s.
 
-En position **zéro**, un point ne contribue ni à la somme ni à la sortie. Désactivez l'option **Transmettre la valeur calculée** sur une sortie si vous souhaitez que la ligne SVG connectée soit à nouveau pilotée uniquement par ses propres paramètres d'animation. Un simple croisement de lignes n'établit aucune liaison.
+En position **Neutre**, un point ne contribue ni à la somme ni à la sortie. Désactivez l'option **Transmettre la valeur calculée** sur une sortie si vous souhaitez que la ligne SVG connectée soit à nouveau pilotée uniquement par ses propres paramètres d'animation. Un simple croisement de lignes n'établit aucune liaison.
 
 ## Point de connexion et exécution (Runtime) {#verbindungspunkt-und-runtime}
 

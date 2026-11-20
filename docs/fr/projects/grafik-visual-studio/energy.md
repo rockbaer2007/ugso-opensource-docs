@@ -47,7 +47,7 @@ Le fichier contient huit widgets déclaratifs, des icônes SVG personnalisées p
 
 ## Unités et valeurs inconnues {#einheiten-und-unbekannte-werte}
 
-**Les multiplicateurs doivent être configurés explicitement** : p. ex. B. `0.001` pour Wh → kWh ou W → kW. Un capteur de puissance (W) ne se transforme pas automatiquement en compteur d'énergie (Wh). L'autarcie nécessite des données de même nature et exprimées dans la même unité : soit des puissances, soit des énergies se rapportant à la même période.
+**Les multiplicateurs doivent être configurés explicitement** : par exemple `0.001` pour Wh → kWh ou W → kW. Un capteur de puissance (W) ne se transforme pas automatiquement en compteur d'énergie (Wh). L'autarcie nécessite des données de même nature et exprimées dans la même unité : soit des puissances, soit des énergies se rapportant à la même période.
 
 Réseau : valeur positive = prélèvement (achat), valeur négative = injection (vente). Si une source d'injection distincte est configurée, elle remplace la composante négative du réseau. Flux d'énergie : par défaut, les valeurs positives au niveau des nœuds correspondent à un flux vers la maison, et les valeurs négatives à un flux sortant ; pour les consommateurs ou les batteries dont le comptage est inversé, activez l'option **Inverser le sens du flux**.
 
@@ -65,7 +65,7 @@ Limites : **366 jours**, **six entités**, **20.000 états par ligne**. Si la r�
 
 Les tableaux (arrays) contenus dans un état ou dans un attribut sélectionné sont pris en charge, y compris lorsqu'ils sont imbriqués dans `prices`, `today`, `data`, `values` ou `result`. Les champs temporels sont détectés à partir de `startsAt`, `start_timestamp`, `start`, `date` et `x` ; les champs tarifaires, à partir de `total`, `marketprice`, `price`, `value` et `y`. Il est possible de saisir d'autres noms. Les horodatages peuvent être au format ISO, en secondes ou en millisecondes. Un tableau de nombres correspond aux heures de la journée locale en cours.
 
-Définir le facteur de prix par rapport à la source : **100** pour EUR/kWh → ct/kWh, **0.1** pour EUR/MWh → ct/kWh. À partir de maintenant, il est possible de configurer le nombre d'heures, ainsi que les heures « avantageuses » ou « coûteuses » et leurs couleurs respectives.
+Définir le facteur de prix par rapport à la source : **100** pour EUR/kWh → ct/kWh, **0.1** pour EUR/MWh → ct/kWh. Le filtre « uniquement à partir de maintenant », le nombre d'heures, les nombres d'heures avantageuses ou coûteuses et leurs couleurs sont configurables.
 
 ## Différences par rapport à l'original {#unterschiede-zum-original}
 

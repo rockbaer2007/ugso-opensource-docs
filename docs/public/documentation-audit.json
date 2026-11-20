@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 182,
+      "content_reviewed": 195,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 182,
+      "content_reviewed": 195,
       "open_review_signals": 0
     }
   },
@@ -2509,6 +2509,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Plugin development warning, reference versus external plugins, seven lifecycle stages, hub zero/one/many active start rules, shared locale/URL override, ingress assets and fallback launch URLs agree. Package-only recovery versus browser data, incompatible-blocked/unknown-reviewed boundaries and isolated/native qualification scope retained."
           }
         },
         "fr": {
@@ -2534,6 +2539,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Plugin development warning, reference versus external plugins, seven lifecycle stages, hub zero/one/many active start rules, shared locale/URL override, ingress assets and fallback launch URLs agree. Package-only recovery versus browser data, incompatible-blocked/unknown-reviewed boundaries and isolated/native qualification scope retained."
           }
         }
       }
@@ -3452,6 +3462,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Architecture/libc/ABI/Node22/root/systemd prerequisites, three ports/eight persistent paths, own account refusal, stopped-service backups/program-only rollback and retained boot state agree. AES-GCM three-file identity-bound data, external/browser/SSH backup omissions, no firewall/loopback defaults and actual Pi4/LXC versus simulation scope retained. No new system test."
           }
         },
         "fr": {
@@ -3481,6 +3496,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Architecture/libc/ABI/Node22/root/systemd prerequisites, three ports/eight persistent paths, own account refusal, stopped-service backups/program-only rollback and retained boot state agree. AES-GCM three-file identity-bound data, external/browser/SSH backup omissions, no firewall/loopback defaults and actual Pi4/LXC versus simulation scope retained. No new system test."
           }
         }
       }
@@ -4633,13 +4653,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Five catalog types/domain filtering, first150/all-search-words, explicit Apply versus Cancel, snapshot versus subscription, free IDs/Jinja preservation, no reference rewrite, server token/read-only endpoints and no-redirect boundaries agree. French compact summary now explicitly requires Apply instead of implying immediate selection commit. Mocked tests remain distinct from live HA qualification."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/entities.md",
           "status": "content-present",
-          "sha256": "a0fffc9a958cb247aac549a9c86ba2fef6dea6b648700d4c8090ed9b5cfd477f",
-          "words": 1660,
+          "sha256": "f9930537dbd924ef0ad6b38a6f0b2a8114fc5ca6ad6fe2fe076697a6f07bd7ac",
+          "words": 1668,
           "headings": 6,
           "examples": 0,
           "versions": [
@@ -4659,6 +4684,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Five catalog types/domain filtering, first150/all-search-words, explicit Apply versus Cancel, snapshot versus subscription, free IDs/Jinja preservation, no reference rewrite, server token/read-only endpoints and no-redirect boundaries agree. French compact summary now explicitly requires Apply instead of implying immediate selection commit. Mocked tests remain distinct from live HA qualification."
           }
         }
       }
@@ -5079,13 +5109,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Four palettes versus independent app appearance,25unit grid/4.5contrast/Geras, stored local preference,16px/fit85-120/manual50-240 limits and native branch output agree. French overview incorrectly implied all plugins13.3.0; corrected four new13.3.0 versus six retained13.2.0. No complete accessibility certification added."
           }
         },
         "fr": {
           "path": "fr/projects/blocks-for-ha/themes.md",
           "status": "content-present",
-          "sha256": "f8599c69be19e4e1cc9b5de0ee27edf8fea7f8683bf5e2f6c3a8469032320491",
-          "words": 2011,
+          "sha256": "89bc5bd054e10e88d1661e075435dee8768e99d917978cef9f5e4c345c177d46",
+          "words": 2025,
           "headings": 12,
           "examples": 0,
           "versions": [
@@ -5111,6 +5146,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Four palettes versus independent app appearance,25unit grid/4.5contrast/Geras, stored local preference,16px/fit85-120/manual50-240 limits and native branch output agree. French overview incorrectly implied all plugins13.3.0; corrected four new13.3.0 versus six retained13.2.0. No complete accessibility certification added."
           }
         }
       }
@@ -6066,6 +6106,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Independent renderer/automatic available calendar detection, disabled-registry skip,20calendar batches, tile36x44/44x52/58x64/76x82, font clamping and separate radii,1-90days/1-20visible/100popup limits agree.60s refresh/manual refresh/page-entry versus hidden queries, exclusive all-day end, errors distinct from empty and read-only/noICS-login boundaries retained."
           }
         },
         "fr": {
@@ -6096,6 +6141,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Independent renderer/automatic available calendar detection, disabled-registry skip,20calendar batches, tile36x44/44x52/58x64/76x82, font clamping and separate radii,1-90days/1-20visible/100popup limits agree.60s refresh/manual refresh/page-entry versus hidden queries, exclusive all-day end, errors distinct from empty and read-only/noICS-login boundaries retained."
           }
         }
       }
@@ -6148,13 +6198,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Browser-only/open-visualization requirement, hidden source persistence, three shared internal widget types, twelve/native versus independent cardinal ports, exactly-one source versus Math summing and seven conversion modes agree. French moving input to another widget side mistranslated as changing dashboard page corrected; collapsed step4 and six-pixel drag threshold clarified. Unit priority/fallback text/no automatic HA writes and no hysteresis retained."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/datenfluss.md",
           "status": "content-present",
-          "sha256": "68571221a342f638a3cb32f424f7724b8b3cb6f4e54e0e197e2a11f115f701cb",
-          "words": 1622,
+          "sha256": "8e90052bf264a07b4677525cfe51e9e4e8994b512ee346b1e6bc1f01d298b9b9",
+          "words": 1627,
           "headings": 5,
           "examples": 0,
           "versions": [
@@ -6178,6 +6233,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Browser-only/open-visualization requirement, hidden source persistence, three shared internal widget types, twelve/native versus independent cardinal ports, exactly-one source versus Math summing and seven conversion modes agree. French moving input to another widget side mistranslated as changing dashboard page corrected; collapsed step4 and six-pixel drag threshold clarified. Unit priority/fallback text/no automatic HA writes and no hysteresis retained."
           }
         }
       }
@@ -6432,13 +6492,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eight independent widgets,1-10flow nodes/sixseries/366days/20000states, explicit units/factors/signs, counter gaps versus sum, no long-term statistics or device writes, local-period and complete-data cost requirements agree. French future-only price filter mistranslated as release timing corrected; test-data images and attribution retained."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/energy.md",
           "status": "content-present",
-          "sha256": "db8d2cb549fed8aac0060a4a22a23c5ab37cf982539f66a1af0d7ca9781205b6",
-          "words": 1444,
+          "sha256": "4546d27bc2467f9e2dd8b6e1788db2239306ecb6aeb6376ee85a62fef25fdd0b",
+          "words": 1442,
           "headings": 9,
           "examples": 0,
           "versions": [
@@ -6458,6 +6523,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Eight independent widgets,1-10flow nodes/sixseries/366days/20000states, explicit units/factors/signs, counter gaps versus sum, no long-term statistics or device writes, local-period and complete-data cost requirements agree. French future-only price filter mistranslated as release timing corrected; test-data images and attribution retained."
           }
         }
       }
@@ -6980,6 +7050,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "49widgets/26palettes, additive update protection, legacyStateMulti/AdvancedViews modes, explicit Material DEENFR versus Studio DEEN, supported entity actions/sequential stop/no rollback, cleaned HTML/sandbox, four chart axes and ten-entity1-168h Recorder boundaries agree. Attribution and no pixel-identity or auto-ioBroker import guarantee retained."
           }
         },
         "fr": {
@@ -7007,6 +7082,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "49widgets/26palettes, additive update protection, legacyStateMulti/AdvancedViews modes, explicit Material DEENFR versus Studio DEEN, supported entity actions/sequential stop/no rollback, cleaned HTML/sandbox, four chart axes and ten-entity1-168h Recorder boundaries agree. Attribution and no pixel-identity or auto-ioBroker import guarantee retained."
           }
         }
       }
@@ -7053,13 +7133,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Source root/ZIP extensions,64widget versus one-tool limits, identical-file green state/no overwrite, existing Git tag/public repo consent and uncertain-response no-retry workflow agree. Private contact/storage limits, current-user file associations, separate key/signature/hashes and platform requirements agree. French broken plain-text interface references made locale-correct links and catalog locale corrected."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/packer.md",
           "status": "content-present",
-          "sha256": "dee33ac8877374b420b693c58042d84afffda3785f1c26b333f180953161ef89",
-          "words": 1311,
+          "sha256": "41be6f804905ba8d4eec12a14a472dbe853ea718adea3743a1bcfefd31a5f46c",
+          "words": 1310,
           "headings": 5,
           "examples": 1,
           "versions": [
@@ -7080,6 +7165,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Source root/ZIP extensions,64widget versus one-tool limits, identical-file green state/no overwrite, existing Git tag/public repo consent and uncertain-response no-retry workflow agree. Private contact/storage limits, current-user file associations, separate key/signature/hashes and platform requirements agree. French broken plain-text interface references made locale-correct links and catalog locale corrected."
           }
         }
       }
@@ -7218,6 +7308,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Independent read-only widget,1-6supplies/unknown-notzero/clamp0-100/at-or-below20warning, disabled hidden bindings retention,2MB embedded versus reachable external image, default half size and reduced motion/error precedence agree. Explicit auto URL attribute order/no discovery, technical versions and no test printing retained."
           }
         },
         "fr": {
@@ -7248,6 +7343,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Independent read-only widget,1-6supplies/unknown-notzero/clamp0-100/at-or-below20warning, disabled hidden bindings retention,2MB embedded versus reachable external image, default half size and reduced motion/error precedence agree. Explicit auto URL attribute order/no discovery, technical versions and no test printing retained."
           }
         }
       }
@@ -7526,13 +7626,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Twelve disabled-by-default ports, own entity priority, signed orientation/one-count/zero-valid logic,125+79=204 and700/100=7 examples, runtime junction dimensions and optional changed-only helper/no-feedback write agree. French neutral role incorrectly called reset-to-zero corrected; no calculation changed."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/svg-linebox.md",
           "status": "content-present",
-          "sha256": "6a14ee883f6a6b1e16cc1de000676135a6d9f4f0703fdabb827352db0ceff500",
-          "words": 1415,
+          "sha256": "c7f41e4291e3f351552ca85b16501ebc6a900e681b0145838386809afb91ef42",
+          "words": 1418,
           "headings": 5,
           "examples": 0,
           "versions": [
@@ -7552,6 +7657,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Twelve disabled-by-default ports, own entity priority, signed orientation/one-count/zero-valid logic,125+79=204 and700/100=7 examples, runtime junction dimensions and optional changed-only helper/no-feedback write agree. French neutral role incorrectly called reset-to-zero corrected; no calculation changed."
           }
         }
       }
@@ -10681,6 +10791,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "27localtests versus Manager-only live selector test, intended2026.10.3 minimum versus tested10.4, picker Apply versus parent Save, per-user/path storage, local backup/full-storage refusal and separate non-atomic color/order writes agree. Installation migration/module paths and70/0percent tests preserve exact historical scope."
           }
         },
         "fr": {
@@ -10709,6 +10824,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "27localtests versus Manager-only live selector test, intended2026.10.3 minimum versus tested10.4, picker Apply versus parent Save, per-user/path storage, local backup/full-storage refusal and separate non-atomic color/order writes agree. Installation migration/module paths and70/0percent tests preserve exact historical scope."
           }
         }
       }
@@ -18306,13 +18426,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All package/version rows and exact test counts, live versus local/user-confirmed distinctions, no full HA migration/restore certification, open lovelace warning and no-regression attribution agree. Existing settings/test cleanup and three full backup historical result retained; French duplicated test-system label cleaned."
           }
         },
         "fr": {
           "path": "fr/collection/ha-2026-11-compatibility.md",
           "status": "content-present",
-          "sha256": "56c86d913004db1470fce7f15056cb9621fd8ae70fdfc672b202c877300ea5ab",
-          "words": 1198,
+          "sha256": "339c4ebec8ed606c552dea4fbf763c24133b6883bff19d6f71c1aa12558b9554",
+          "words": 1195,
           "headings": 6,
           "examples": 0,
           "versions": [
@@ -18350,6 +18475,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All package/version rows and exact test counts, live versus local/user-confirmed distinctions, no full HA migration/restore certification, open lovelace warning and no-regression attribution agree. Existing settings/test cleanup and three full backup historical result retained; French duplicated test-system label cleaned."
           }
         }
       }

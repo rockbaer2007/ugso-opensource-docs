@@ -47,7 +47,7 @@ Depuis **0.1.40**, tous les thèmes utilisent une **police de 16 px**. Le menu d
 
 **Darstellung** propose **Hell**, **Dunkel** et **System** pour l’en-tête, les panneaux, formulaires, YAML, dialogues et éditeurs. System suit immédiatement la préférence de couleur du navigateur/système ; un choix manuel la remplace. Préférence locale, indépendante de la palette Blockly. Le badge Built with Blockly utilise automatiquement la variante adaptée.
 
-Blockly et les plugins de thèmes/zoom sont épinglés à 13.3.0 et intégrés localement sous Apache-2.0. [Catalogue et liens des plugins](./blocks).
+Blockly et les quatre plugins supplémentaires de thèmes/zoom sont épinglés à 13.3.0 ; les six plugins préexistants restent en 13.2.0. Ils sont intégrés localement sous Apache-2.0, sans CDN. [Catalogue et liens des plugins](./blocks).
 
 :::: details Référence détaillée issue de la documentation allemande
 

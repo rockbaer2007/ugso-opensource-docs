@@ -2,8 +2,8 @@
   "reviewed_at": "2026-11-20",
   "scope_pages": 504,
   "coverage": {
-    "en": 182,
-    "fr": 182
+    "en": 195,
+    "fr": 195
   },
   "scope": "Content/meaning review of all 504 EN/FR inventory entries, including previously assessed structural differences. Reviewed pages only; unreviewed pages retain their existing technical status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
@@ -589,6 +589,26 @@
       "target_sha256": "1d00139cd66130f5a1ce12a3fdcb9fc921d44378bd5020ec6819bc0cc2c05d9b"
     },
     {
+      "source": "projects/atlas-plugins/index.md",
+      "locale": "en",
+      "target": "en/projects/atlas-plugins/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Plugin development warning, reference versus external plugins, seven lifecycle stages, hub zero/one/many active start rules, shared locale/URL override, ingress assets and fallback launch URLs agree. Package-only recovery versus browser data, incompatible-blocked/unknown-reviewed boundaries and isolated/native qualification scope retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5fbefbec2ee3695ea43e9b32ff9993f97bbf3d96a3d0805c4cd7963c0bae61df",
+      "target_sha256": "805c8221d8b0499d126a155d5d88cf47e09a6c4c8d4d9586a094a086fd330452"
+    },
+    {
+      "source": "projects/atlas-plugins/index.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas-plugins/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Plugin development warning, reference versus external plugins, seven lifecycle stages, hub zero/one/many active start rules, shared locale/URL override, ingress assets and fallback launch URLs agree. Package-only recovery versus browser data, incompatible-blocked/unknown-reviewed boundaries and isolated/native qualification scope retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "5fbefbec2ee3695ea43e9b32ff9993f97bbf3d96a3d0805c4cd7963c0bae61df",
+      "target_sha256": "e88d464304563aed50afd9f0051da5e62e3872048b7d44234225c61d578dc606"
+    },
+    {
       "source": "projects/atlas-plugins/plugin-template.md",
       "locale": "en",
       "target": "en/projects/atlas-plugins/plugin-template.md",
@@ -667,6 +687,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "3f24431973b4dc933a0b987a44f028383effbc4e868decc7d140aae77536a78b",
       "target_sha256": "a3bd88d52a93b8e7e498d6fd56c5548e4c8c3da99fbfcfdb2675904975926b58"
+    },
+    {
+      "source": "projects/atlas/linux.md",
+      "locale": "en",
+      "target": "en/projects/atlas/linux.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Architecture/libc/ABI/Node22/root/systemd prerequisites, three ports/eight persistent paths, own account refusal, stopped-service backups/program-only rollback and retained boot state agree. AES-GCM three-file identity-bound data, external/browser/SSH backup omissions, no firewall/loopback defaults and actual Pi4/LXC versus simulation scope retained. No new system test.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "0e851f690feabb7179373294573466322c87d2a44c995d9660f69da7d0a87646",
+      "target_sha256": "22c833e3f403227091c602cc581ff6fcaa76cd32e3a5887272f2aafd176f626e"
+    },
+    {
+      "source": "projects/atlas/linux.md",
+      "locale": "fr",
+      "target": "fr/projects/atlas/linux.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Architecture/libc/ABI/Node22/root/systemd prerequisites, three ports/eight persistent paths, own account refusal, stopped-service backups/program-only rollback and retained boot state agree. AES-GCM three-file identity-bound data, external/browser/SSH backup omissions, no firewall/loopback defaults and actual Pi4/LXC versus simulation scope retained. No new system test.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "0e851f690feabb7179373294573466322c87d2a44c995d9660f69da7d0a87646",
+      "target_sha256": "6bd36029444a4ace410e8513399a6839ee7e1ccb3b9ea7543f70024e6277ab36"
     },
     {
       "source": "projects/atlas/plugins.md",
@@ -827,6 +867,46 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "dc014c10edf377c74c7dae5d93d689ec3cca593f21b748abf29f29035589b2d1",
       "target_sha256": "3a7a67c7cafbca8a653dc210a77ab19f08281ea1b2ae5e417b71840d6df6c419"
+    },
+    {
+      "source": "projects/blocks-for-ha/entities.md",
+      "locale": "en",
+      "target": "en/projects/blocks-for-ha/entities.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Five catalog types/domain filtering, first150/all-search-words, explicit Apply versus Cancel, snapshot versus subscription, free IDs/Jinja preservation, no reference rewrite, server token/read-only endpoints and no-redirect boundaries agree. French compact summary now explicitly requires Apply instead of implying immediate selection commit. Mocked tests remain distinct from live HA qualification.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "76c755cc50b343a904a8c4f1ebb7cb8b9f54d21c7194b06b74e121f49c5acbb7",
+      "target_sha256": "d987bafb57cb8b216247b47ab6b1c4ee685251251610882ce84cd9277c4c04c4"
+    },
+    {
+      "source": "projects/blocks-for-ha/entities.md",
+      "locale": "fr",
+      "target": "fr/projects/blocks-for-ha/entities.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Five catalog types/domain filtering, first150/all-search-words, explicit Apply versus Cancel, snapshot versus subscription, free IDs/Jinja preservation, no reference rewrite, server token/read-only endpoints and no-redirect boundaries agree. French compact summary now explicitly requires Apply instead of implying immediate selection commit. Mocked tests remain distinct from live HA qualification.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "76c755cc50b343a904a8c4f1ebb7cb8b9f54d21c7194b06b74e121f49c5acbb7",
+      "target_sha256": "f9930537dbd924ef0ad6b38a6f0b2a8114fc5ca6ad6fe2fe076697a6f07bd7ac"
+    },
+    {
+      "source": "projects/blocks-for-ha/themes.md",
+      "locale": "en",
+      "target": "en/projects/blocks-for-ha/themes.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four palettes versus independent app appearance,25unit grid/4.5contrast/Geras, stored local preference,16px/fit85-120/manual50-240 limits and native branch output agree. French overview incorrectly implied all plugins13.3.0; corrected four new13.3.0 versus six retained13.2.0. No complete accessibility certification added.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "0f16e6fe11c7c618f7b054a56de6191174c011a71be789a5d2e1b4c5ee2b0e51",
+      "target_sha256": "d6fbaa4d63d0c3832e59f2d353630627b091646dba3c014c97c4645358afd12a"
+    },
+    {
+      "source": "projects/blocks-for-ha/themes.md",
+      "locale": "fr",
+      "target": "fr/projects/blocks-for-ha/themes.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Four palettes versus independent app appearance,25unit grid/4.5contrast/Geras, stored local preference,16px/fit85-120/manual50-240 limits and native branch output agree. French overview incorrectly implied all plugins13.3.0; corrected four new13.3.0 versus six retained13.2.0. No complete accessibility certification added.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "0f16e6fe11c7c618f7b054a56de6191174c011a71be789a5d2e1b4c5ee2b0e51",
+      "target_sha256": "89bc5bd054e10e88d1661e075435dee8768e99d917978cef9f5e4c345c177d46"
     },
     {
       "source": "projects/callmebot-signal/index.md",
@@ -1009,6 +1089,46 @@
       "target_sha256": "0c9490ef292f46a2c8884e660d0dd47e8b74acabee12e4709a1e84b139c21669"
     },
     {
+      "source": "projects/grafik-visual-studio/calendar-plus.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/calendar-plus.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Independent renderer/automatic available calendar detection, disabled-registry skip,20calendar batches, tile36x44/44x52/58x64/76x82, font clamping and separate radii,1-90days/1-20visible/100popup limits agree.60s refresh/manual refresh/page-entry versus hidden queries, exclusive all-day end, errors distinct from empty and read-only/noICS-login boundaries retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9c255ca135395a1a4b196dafbe071cefe52a3d730172ef65566f4b920b21873c",
+      "target_sha256": "10bfa79d9a221539aa21b31b902c2992022d0a636d1f9e70a55cb91c35dca485"
+    },
+    {
+      "source": "projects/grafik-visual-studio/calendar-plus.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/calendar-plus.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Independent renderer/automatic available calendar detection, disabled-registry skip,20calendar batches, tile36x44/44x52/58x64/76x82, font clamping and separate radii,1-90days/1-20visible/100popup limits agree.60s refresh/manual refresh/page-entry versus hidden queries, exclusive all-day end, errors distinct from empty and read-only/noICS-login boundaries retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9c255ca135395a1a4b196dafbe071cefe52a3d730172ef65566f4b920b21873c",
+      "target_sha256": "aabf43be02e2483058b0ab63b27f8e45e4d62b1665e0b214cf941832729aaa07"
+    },
+    {
+      "source": "projects/grafik-visual-studio/datenfluss.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/datenfluss.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Browser-only/open-visualization requirement, hidden source persistence, three shared internal widget types, twelve/native versus independent cardinal ports, exactly-one source versus Math summing and seven conversion modes agree. French moving input to another widget side mistranslated as changing dashboard page corrected; collapsed step4 and six-pixel drag threshold clarified. Unit priority/fallback text/no automatic HA writes and no hysteresis retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "ae87ccb3c566371e4e3a6ab3677083d4445b06ee097af81c377fea4188c95ad1",
+      "target_sha256": "96c91ec7d108452adadbd633f6b0ab76353551ac913de460b3cb551695b537f5"
+    },
+    {
+      "source": "projects/grafik-visual-studio/datenfluss.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/datenfluss.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Browser-only/open-visualization requirement, hidden source persistence, three shared internal widget types, twelve/native versus independent cardinal ports, exactly-one source versus Math summing and seven conversion modes agree. French moving input to another widget side mistranslated as changing dashboard page corrected; collapsed step4 and six-pixel drag threshold clarified. Unit priority/fallback text/no automatic HA writes and no hysteresis retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "ae87ccb3c566371e4e3a6ab3677083d4445b06ee097af81c377fea4188c95ad1",
+      "target_sha256": "8e90052bf264a07b4677525cfe51e9e4e8994b512ee346b1e6bc1f01d298b9b9"
+    },
+    {
       "source": "projects/grafik-visual-studio/devices-tablet.md",
       "locale": "en",
       "target": "en/projects/grafik-visual-studio/devices-tablet.md",
@@ -1027,6 +1147,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "d1f9b522f28ee410c416337507c1074a2c881c5eb48d0538439803128b23b165",
       "target_sha256": "4867e7425a4ad33d53393fffe4fec75621fccc37d9a8bd9c08d1b4484ea65881"
+    },
+    {
+      "source": "projects/grafik-visual-studio/energy.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/energy.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Eight independent widgets,1-10flow nodes/sixseries/366days/20000states, explicit units/factors/signs, counter gaps versus sum, no long-term statistics or device writes, local-period and complete-data cost requirements agree. French future-only price filter mistranslated as release timing corrected; test-data images and attribution retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "fe8ca0f9cb3065cafa3c87fb4a978ebb8842a1eb51669355755ac30ebde8d3b6",
+      "target_sha256": "e34b17ee0ff6ba64ba69bdcebb7dc88426304776443c8279725d86b6ffbdbfa9"
+    },
+    {
+      "source": "projects/grafik-visual-studio/energy.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/energy.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Eight independent widgets,1-10flow nodes/sixseries/366days/20000states, explicit units/factors/signs, counter gaps versus sum, no long-term statistics or device writes, local-period and complete-data cost requirements agree. French future-only price filter mistranslated as release timing corrected; test-data images and attribution retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "fe8ca0f9cb3065cafa3c87fb4a978ebb8842a1eb51669355755ac30ebde8d3b6",
+      "target_sha256": "4546d27bc2467f9e2dd8b6e1788db2239306ecb6aeb6376ee85a62fef25fdd0b"
     },
     {
       "source": "projects/grafik-visual-studio/ha-quellen-climate.md",
@@ -1069,6 +1209,46 @@
       "target_sha256": "25ffbd5f54219427451cf3ad9f0822e16055f796c200b1318a2e77998cf0c8ff"
     },
     {
+      "source": "projects/grafik-visual-studio/materialdesign.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/materialdesign.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "49widgets/26palettes, additive update protection, legacyStateMulti/AdvancedViews modes, explicit Material DEENFR versus Studio DEEN, supported entity actions/sequential stop/no rollback, cleaned HTML/sandbox, four chart axes and ten-entity1-168h Recorder boundaries agree. Attribution and no pixel-identity or auto-ioBroker import guarantee retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f48206e33a49aedfff1fdb9bc89036d42e74729b976ab0c7da9c34dcca3ad288",
+      "target_sha256": "4bedf5fde073a962889e7ffd37d03395bfcb449b214c924f590c0bc611838ac0"
+    },
+    {
+      "source": "projects/grafik-visual-studio/materialdesign.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/materialdesign.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "49widgets/26palettes, additive update protection, legacyStateMulti/AdvancedViews modes, explicit Material DEENFR versus Studio DEEN, supported entity actions/sequential stop/no rollback, cleaned HTML/sandbox, four chart axes and ten-entity1-168h Recorder boundaries agree. Attribution and no pixel-identity or auto-ioBroker import guarantee retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "f48206e33a49aedfff1fdb9bc89036d42e74729b976ab0c7da9c34dcca3ad288",
+      "target_sha256": "75ac75a4fcf8b95c75f7377ca7a98e6a96e68d8090ea8fc54c382770ecacd2dd"
+    },
+    {
+      "source": "projects/grafik-visual-studio/packer.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/packer.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Source root/ZIP extensions,64widget versus one-tool limits, identical-file green state/no overwrite, existing Git tag/public repo consent and uncertain-response no-retry workflow agree. Private contact/storage limits, current-user file associations, separate key/signature/hashes and platform requirements agree. French broken plain-text interface references made locale-correct links and catalog locale corrected.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "60ecdca938295bb4442092358a51c440b01cdb93082e4edcd78dda848aa61be3",
+      "target_sha256": "511957b2c7a98cc0e9a5f79eadd73367951974fdc26fc711ece5c781ba7d4572"
+    },
+    {
+      "source": "projects/grafik-visual-studio/packer.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/packer.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Source root/ZIP extensions,64widget versus one-tool limits, identical-file green state/no overwrite, existing Git tag/public repo consent and uncertain-response no-retry workflow agree. Private contact/storage limits, current-user file associations, separate key/signature/hashes and platform requirements agree. French broken plain-text interface references made locale-correct links and catalog locale corrected.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "60ecdca938295bb4442092358a51c440b01cdb93082e4edcd78dda848aa61be3",
+      "target_sha256": "41be6f804905ba8d4eec12a14a472dbe853ea718adea3743a1bcfefd31a5f46c"
+    },
+    {
       "source": "projects/grafik-visual-studio/palette-runtime.md",
       "locale": "en",
       "target": "en/projects/grafik-visual-studio/palette-runtime.md",
@@ -1087,6 +1267,46 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "b3fcb816520f78f53a7bbaeebdce323bac92ffa777659b7787929ae0f3eaa754",
       "target_sha256": "99bc4857dce2f0bed81bdc6eb73eb49f9d9003ba01868dc018b70bf1e41a4690"
+    },
+    {
+      "source": "projects/grafik-visual-studio/printer.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/printer.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Independent read-only widget,1-6supplies/unknown-notzero/clamp0-100/at-or-below20warning, disabled hidden bindings retention,2MB embedded versus reachable external image, default half size and reduced motion/error precedence agree. Explicit auto URL attribute order/no discovery, technical versions and no test printing retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "06b33a6e53e50a465d1c29caa777cadeb2036a5c8834023ff99d9831872d1b04",
+      "target_sha256": "5a6d3855ec6c3bc6d7f034960fef8b3db561d93df83034ba85f5da688ed175b5"
+    },
+    {
+      "source": "projects/grafik-visual-studio/printer.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/printer.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Independent read-only widget,1-6supplies/unknown-notzero/clamp0-100/at-or-below20warning, disabled hidden bindings retention,2MB embedded versus reachable external image, default half size and reduced motion/error precedence agree. Explicit auto URL attribute order/no discovery, technical versions and no test printing retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "06b33a6e53e50a465d1c29caa777cadeb2036a5c8834023ff99d9831872d1b04",
+      "target_sha256": "2632b6cb754067f217614d88537dc85205050bf33d83d9055cd97f39ddc49184"
+    },
+    {
+      "source": "projects/grafik-visual-studio/svg-linebox.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/svg-linebox.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Twelve disabled-by-default ports, own entity priority, signed orientation/one-count/zero-valid logic,125+79=204 and700/100=7 examples, runtime junction dimensions and optional changed-only helper/no-feedback write agree. French neutral role incorrectly called reset-to-zero corrected; no calculation changed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9c25cda44aec2c85977f789f3470207d4b30cd42a715208b7354611874309d36",
+      "target_sha256": "987d84010e4829ecd451673f0a04a104ff6f701fd03f7eb97fdd158067b7493d"
+    },
+    {
+      "source": "projects/grafik-visual-studio/svg-linebox.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/svg-linebox.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Twelve disabled-by-default ports, own entity priority, signed orientation/one-count/zero-valid logic,125+79=204 and700/100=7 examples, runtime junction dimensions and optional changed-only helper/no-feedback write agree. French neutral role incorrectly called reset-to-zero corrected; no calculation changed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "9c25cda44aec2c85977f789f3470207d4b30cd42a715208b7354611874309d36",
+      "target_sha256": "c7f41e4291e3f351552ca85b16501ebc6a900e681b0145838386809afb91ef42"
     },
     {
       "source": "projects/hadash/ansicht-exportieren.md",
@@ -1607,6 +1827,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "4c0e7fac657743a8e0617be94c2a5f8ad60683a57c0816e6d9af999f396af33d",
       "target_sha256": "b158dc2b27ac12129b96d59639f2a5fa4534cdbec8999295e25be2320fb8a964"
+    },
+    {
+      "source": "projects/sidebar-colors/index.md",
+      "locale": "en",
+      "target": "en/projects/sidebar-colors/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "27localtests versus Manager-only live selector test, intended2026.10.3 minimum versus tested10.4, picker Apply versus parent Save, per-user/path storage, local backup/full-storage refusal and separate non-atomic color/order writes agree. Installation migration/module paths and70/0percent tests preserve exact historical scope.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "abba89ebe588197049f7dcc8e36c453e425a4806e029ab87303f1c3650eeba23",
+      "target_sha256": "2768bd950f3a7112892f14cce0a7dbbc2c7232c0fccbedb4c752f13334b459ce"
+    },
+    {
+      "source": "projects/sidebar-colors/index.md",
+      "locale": "fr",
+      "target": "fr/projects/sidebar-colors/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "27localtests versus Manager-only live selector test, intended2026.10.3 minimum versus tested10.4, picker Apply versus parent Save, per-user/path storage, local backup/full-storage refusal and separate non-atomic color/order writes agree. Installation migration/module paths and70/0percent tests preserve exact historical scope.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "abba89ebe588197049f7dcc8e36c453e425a4806e029ab87303f1c3650eeba23",
+      "target_sha256": "eab5efb98c97196bf95ab3a0f20e81be97451725166348ccf9dfa94408ad02f8"
     },
     {
       "source": "projects/uix/broker/broker.md",
@@ -3547,6 +3787,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "a7a3c2770fdfd930f843b8007d69a0b3ccac95aed96a16ab64375b8d5b9e1130",
       "target_sha256": "e6d36c90387a840663df5b8be71d03b709834be908129cc64f7b202cf441f02e"
+    },
+    {
+      "source": "sammlung/ha-2026-11-kompatibilitaet.md",
+      "locale": "en",
+      "target": "en/collection/ha-2026-11-compatibility.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All package/version rows and exact test counts, live versus local/user-confirmed distinctions, no full HA migration/restore certification, open lovelace warning and no-regression attribution agree. Existing settings/test cleanup and three full backup historical result retained; French duplicated test-system label cleaned.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "6b41c69976f69d77e50f2c851ac99a8f75379623bf8c792ff4fa72226b8c071f",
+      "target_sha256": "05d5df66736d3659b3110328887ad5944071032168ffbb3c90136c9656b8692e"
+    },
+    {
+      "source": "sammlung/ha-2026-11-kompatibilitaet.md",
+      "locale": "fr",
+      "target": "fr/collection/ha-2026-11-compatibility.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All package/version rows and exact test counts, live versus local/user-confirmed distinctions, no full HA migration/restore certification, open lovelace warning and no-regression attribution agree. Existing settings/test cleanup and three full backup historical result retained; French duplicated test-system label cleaned.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "6b41c69976f69d77e50f2c851ac99a8f75379623bf8c792ff4fa72226b8c071f",
+      "target_sha256": "339c4ebec8ed606c552dea4fbf763c24133b6883bff19d6f71c1aa12558b9554"
     },
     {
       "source": "sammlung/ha-apps.md",
