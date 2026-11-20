@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 233 | 19 |
-| FR | 233 | 19 |
+| EN | 241 | 11 |
+| FR | 241 | 11 |
 
 ## Inventaire complet des pages
 
@@ -110,7 +110,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Contenu vérifié](/en/projects/blocks-for-ha/time) | [Contenu vérifié](/fr/projects/blocks-for-ha/time) |
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Contenu vérifié](/en/projects/callmebot-signal/) | [Contenu vérifié](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Contenu vérifié](/en/projects/callmebot/) | [Contenu vérifié](/fr/projects/callmebot/) |
-| [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Comparaison technique effectuée](/en/projects/dashboard-user-manager/) | [Comparaison technique effectuée](/fr/projects/dashboard-user-manager/) |
+| [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Contenu vérifié](/en/projects/dashboard-user-manager/) | [Contenu vérifié](/fr/projects/dashboard-user-manager/) |
 | [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/examples) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/examples) |
 | [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/entities) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/entities) |
 | [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
@@ -126,7 +126,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Contenu vérifié](/en/projects/grafik-visual-studio/energy) | [Contenu vérifié](/fr/projects/grafik-visual-studio/energy) |
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Contenu vérifié](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Contenu vérifié](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
 | [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/) |
-| [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/industrial) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/industrial) |
+| [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Contenu vérifié](/en/projects/grafik-visual-studio/industrial) | [Contenu vérifié](/fr/projects/grafik-visual-studio/industrial) |
 | [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Contenu vérifié](/en/projects/grafik-visual-studio/interaktiv) | [Contenu vérifié](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Contenu vérifié](/en/projects/grafik-visual-studio/materialdesign) | [Contenu vérifié](/fr/projects/grafik-visual-studio/materialdesign) |
 | [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Contenu vérifié](/en/projects/grafik-visual-studio/packer) | [Contenu vérifié](/fr/projects/grafik-visual-studio/packer) |
@@ -134,11 +134,11 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Contenu vérifié](/en/projects/grafik-visual-studio/printer) | [Contenu vérifié](/fr/projects/grafik-visual-studio/printer) |
 | [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Contenu vérifié](/en/projects/grafik-visual-studio/solar) | [Contenu vérifié](/fr/projects/grafik-visual-studio/solar) |
 | [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Contenu vérifié](/en/projects/grafik-visual-studio/svg-line) | [Contenu vérifié](/fr/projects/grafik-visual-studio/svg-line) |
-| [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/svg-linebox-math) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/svg-linebox-math) |
+| [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Contenu vérifié](/en/projects/grafik-visual-studio/svg-linebox-math) | [Contenu vérifié](/fr/projects/grafik-visual-studio/svg-linebox-math) |
 | [projects/grafik-visual-studio/svg-linebox.md](/projects/grafik-visual-studio/svg-linebox) | [Contenu vérifié](/en/projects/grafik-visual-studio/svg-linebox) | [Contenu vérifié](/fr/projects/grafik-visual-studio/svg-linebox) |
-| [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/technic) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/technic) |
+| [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Contenu vérifié](/en/projects/grafik-visual-studio/technic) | [Contenu vérifié](/fr/projects/grafik-visual-studio/technic) |
 | [projects/grafik-visual-studio/tool-pakete.md](/projects/grafik-visual-studio/tool-pakete) | [Contenu vérifié](/en/projects/grafik-visual-studio/tool-packages) | [Contenu vérifié](/fr/projects/grafik-visual-studio/tool-packages) |
-| [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/weather-heating) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/weather-heating) |
+| [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Contenu vérifié](/en/projects/grafik-visual-studio/weather-heating) | [Contenu vérifié](/fr/projects/grafik-visual-studio/weather-heating) |
 | [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Contenu vérifié](/en/projects/grafik-visual-studio/widget-packages) | [Contenu vérifié](/fr/projects/grafik-visual-studio/widget-packages) |
 | [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Comparaison technique effectuée](/en/projects/grafik-visual-studio/widgets) | [Comparaison technique effectuée](/fr/projects/grafik-visual-studio/widgets) |
 | [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Contenu vérifié](/en/projects/grafik-visual-studio/zeichnen) | [Contenu vérifié](/fr/projects/grafik-visual-studio/zeichnen) |
@@ -164,8 +164,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/logic-studio/user-guide/javascript.md](/projects/logic-studio/user-guide/javascript) | [Contenu vérifié](/en/projects/logic-studio/user-guide/javascript) | [Contenu vérifié](/fr/projects/logic-studio/user-guide/javascript) |
 | [projects/logic-studio/user-guide/rules.md](/projects/logic-studio/user-guide/rules) | [Contenu vérifié](/en/projects/logic-studio/user-guide/rules) | [Contenu vérifié](/fr/projects/logic-studio/user-guide/rules) |
 | [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Contenu vérifié](/en/projects/logic-studio/user-guide/typescript) | [Contenu vérifié](/fr/projects/logic-studio/user-guide/typescript) |
-| [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Comparaison technique effectuée](/en/projects/mqtt-client/) | [Comparaison technique effectuée](/fr/projects/mqtt-client/) |
-| [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Comparaison technique effectuée](/en/projects/mqtt-client/iobroker-roles) | [Comparaison technique effectuée](/fr/projects/mqtt-client/iobroker-roles) |
+| [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Contenu vérifié](/en/projects/mqtt-client/) | [Contenu vérifié](/fr/projects/mqtt-client/) |
+| [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Contenu vérifié](/en/projects/mqtt-client/iobroker-roles) | [Contenu vérifié](/fr/projects/mqtt-client/iobroker-roles) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Contenu vérifié](/en/projects/parcel-to-mqtt/examples) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/examples) |
 | [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Contenu vérifié](/en/projects/parcel-to-mqtt/entities) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/entities) |
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Contenu vérifié](/en/projects/parcel-to-mqtt/) | [Contenu vérifié](/fr/projects/parcel-to-mqtt/) |
@@ -257,7 +257,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Contenu vérifié](/en/collection/calendar-card-pro/nutzung) | [Contenu vérifié](/fr/collection/calendar-card-pro/nutzung) |
 | [sammlung/dashboard-layout-card-v2/index.md](/sammlung/dashboard-layout-card-v2/) | [Contenu vérifié](/en/collection/dashboard-layout-card-v2/) | [Contenu vérifié](/fr/collection/dashboard-layout-card-v2/) |
 | [sammlung/flex-table-card/aktionen.md](/sammlung/flex-table-card/aktionen) | [Contenu vérifié](/en/collection/flex-table-card/aktionen) | [Contenu vérifié](/fr/collection/flex-table-card/aktionen) |
-| [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Comparaison technique effectuée](/en/collection/flex-table-card/beispiele-aus-forum) | [Comparaison technique effectuée](/fr/collection/flex-table-card/beispiele-aus-forum) |
+| [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Contenu vérifié](/en/collection/flex-table-card/beispiele-aus-forum) | [Contenu vérifié](/fr/collection/flex-table-card/beispiele-aus-forum) |
 | [sammlung/flex-table-card/css.md](/sammlung/flex-table-card/css) | [Contenu vérifié](/en/collection/flex-table-card/css) | [Contenu vérifié](/fr/collection/flex-table-card/css) |
 | [sammlung/flex-table-card/datenquellen.md](/sammlung/flex-table-card/datenquellen) | [Contenu vérifié](/en/collection/flex-table-card/datenquellen) | [Contenu vérifié](/fr/collection/flex-table-card/datenquellen) |
 | [sammlung/flex-table-card/externe-daten.md](/sammlung/flex-table-card/externe-daten) | [Contenu vérifié](/en/collection/flex-table-card/externe-daten) | [Contenu vérifié](/fr/collection/flex-table-card/externe-daten) |

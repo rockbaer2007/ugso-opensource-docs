@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 233 | 19 |
-| FR | 233 | 19 |
+| EN | 241 | 11 |
+| FR | 241 | 11 |
 
 ## Vollständiges Seiteninventar
 
@@ -110,7 +110,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Inhaltlich geprüft](/en/projects/blocks-for-ha/time) | [Inhaltlich geprüft](/fr/projects/blocks-for-ha/time) |
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Inhaltlich geprüft](/en/projects/callmebot-signal/) | [Inhaltlich geprüft](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Inhaltlich geprüft](/en/projects/callmebot/) | [Inhaltlich geprüft](/fr/projects/callmebot/) |
-| [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Technisch abgeglichen](/en/projects/dashboard-user-manager/) | [Technisch abgeglichen](/fr/projects/dashboard-user-manager/) |
+| [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Inhaltlich geprüft](/en/projects/dashboard-user-manager/) | [Inhaltlich geprüft](/fr/projects/dashboard-user-manager/) |
 | [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/examples) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/examples) |
 | [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/entities) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/entities) |
 | [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
@@ -126,7 +126,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/energy) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/energy) |
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
 | [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/) |
-| [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/industrial) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/industrial) |
+| [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/industrial) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/industrial) |
 | [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/interaktiv) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/materialdesign) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/materialdesign) |
 | [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/packer) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/packer) |
@@ -134,11 +134,11 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/printer) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/printer) |
 | [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/solar) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/solar) |
 | [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/svg-line) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/svg-line) |
-| [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/svg-linebox-math) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/svg-linebox-math) |
+| [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/svg-linebox-math) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/svg-linebox-math) |
 | [projects/grafik-visual-studio/svg-linebox.md](/projects/grafik-visual-studio/svg-linebox) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/svg-linebox) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/svg-linebox) |
-| [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/technic) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/technic) |
+| [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/technic) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/technic) |
 | [projects/grafik-visual-studio/tool-pakete.md](/projects/grafik-visual-studio/tool-pakete) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/tool-packages) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/tool-packages) |
-| [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/weather-heating) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/weather-heating) |
+| [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/weather-heating) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/weather-heating) |
 | [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/widget-packages) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/widget-packages) |
 | [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Technisch abgeglichen](/en/projects/grafik-visual-studio/widgets) | [Technisch abgeglichen](/fr/projects/grafik-visual-studio/widgets) |
 | [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Inhaltlich geprüft](/en/projects/grafik-visual-studio/zeichnen) | [Inhaltlich geprüft](/fr/projects/grafik-visual-studio/zeichnen) |
@@ -164,8 +164,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/logic-studio/user-guide/javascript.md](/projects/logic-studio/user-guide/javascript) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/javascript) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/javascript) |
 | [projects/logic-studio/user-guide/rules.md](/projects/logic-studio/user-guide/rules) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/rules) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/rules) |
 | [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Inhaltlich geprüft](/en/projects/logic-studio/user-guide/typescript) | [Inhaltlich geprüft](/fr/projects/logic-studio/user-guide/typescript) |
-| [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Technisch abgeglichen](/en/projects/mqtt-client/) | [Technisch abgeglichen](/fr/projects/mqtt-client/) |
-| [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Technisch abgeglichen](/en/projects/mqtt-client/iobroker-roles) | [Technisch abgeglichen](/fr/projects/mqtt-client/iobroker-roles) |
+| [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Inhaltlich geprüft](/en/projects/mqtt-client/) | [Inhaltlich geprüft](/fr/projects/mqtt-client/) |
+| [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Inhaltlich geprüft](/en/projects/mqtt-client/iobroker-roles) | [Inhaltlich geprüft](/fr/projects/mqtt-client/iobroker-roles) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/examples) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/examples) |
 | [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/entities) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/entities) |
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Inhaltlich geprüft](/en/projects/parcel-to-mqtt/) | [Inhaltlich geprüft](/fr/projects/parcel-to-mqtt/) |
@@ -257,7 +257,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Inhaltlich geprüft](/en/collection/calendar-card-pro/nutzung) | [Inhaltlich geprüft](/fr/collection/calendar-card-pro/nutzung) |
 | [sammlung/dashboard-layout-card-v2/index.md](/sammlung/dashboard-layout-card-v2/) | [Inhaltlich geprüft](/en/collection/dashboard-layout-card-v2/) | [Inhaltlich geprüft](/fr/collection/dashboard-layout-card-v2/) |
 | [sammlung/flex-table-card/aktionen.md](/sammlung/flex-table-card/aktionen) | [Inhaltlich geprüft](/en/collection/flex-table-card/aktionen) | [Inhaltlich geprüft](/fr/collection/flex-table-card/aktionen) |
-| [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Technisch abgeglichen](/en/collection/flex-table-card/beispiele-aus-forum) | [Technisch abgeglichen](/fr/collection/flex-table-card/beispiele-aus-forum) |
+| [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Inhaltlich geprüft](/en/collection/flex-table-card/beispiele-aus-forum) | [Inhaltlich geprüft](/fr/collection/flex-table-card/beispiele-aus-forum) |
 | [sammlung/flex-table-card/css.md](/sammlung/flex-table-card/css) | [Inhaltlich geprüft](/en/collection/flex-table-card/css) | [Inhaltlich geprüft](/fr/collection/flex-table-card/css) |
 | [sammlung/flex-table-card/datenquellen.md](/sammlung/flex-table-card/datenquellen) | [Inhaltlich geprüft](/en/collection/flex-table-card/datenquellen) | [Inhaltlich geprüft](/fr/collection/flex-table-card/datenquellen) |
 | [sammlung/flex-table-card/externe-daten.md](/sammlung/flex-table-card/externe-daten) | [Inhaltlich geprüft](/en/collection/flex-table-card/externe-daten) | [Inhaltlich geprüft](/fr/collection/flex-table-card/externe-daten) |

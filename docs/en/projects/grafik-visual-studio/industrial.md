@@ -7,7 +7,7 @@ description: Installation and settings for the external Industrial package for G
 
 The external **Industrial 0.11.6** package contains sixteen widgets: **Gauge/Poti – 270°**, **Toggle switches – 1 to 4**, **Rocker switches – 1 to 4**, **LCD – 20×4**, **LCD – 16×2**, normal/slim **Linear gauge / slider** and **Odometer**, **7-segment LED**, **16-segment LED**, **16-segment LCD**, **Industrial clock – Nixie / LED / LCD**, **Industrial weather – LCD / LED**, **Blank panel**, and **Heating – boiler and oil tank**. Industrial styling adds a housing, corner screws and a frame. The detailed heating artwork requires **Studio 0.1.253 or newer**.
 
-**Upgrade note:** Version 0.11.4 could not upgrade existing installations because widget captions changed. Use **0.11.5** as a local `.wg` file instead; it preserves published widget contracts and entity bindings. Studio **0.1.259** displays supply captions without changing persisted group keys.
+**Upgrade note:** Version 0.11.4 could not upgrade existing installations because widget captions changed. Use **0.11.5 or 0.11.6** as a local `.wg` file instead; it preserves published widget contracts and entity bindings. Studio **0.1.259** displays supply captions without changing persisted group keys.
 
 ## Images
 
@@ -22,7 +22,7 @@ The images show runtime with example data, not live measurements.
 
 Every entity field in the set provides an **…** button opening the **Home Assistant entity picker**. Search, select an entity and use **Insert** to fill the active field. From **Studio 0.1.250**, this also covers each toggle/rocker channel's **Input entity** and **Output entity** fields, assigning the selection to the correct channel. Updating Studio is sufficient with existing packages.
 
-[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.253 or newer** first, then install package **0.11.3**. Existing package 0.11.1/0.11.2 only needs the Studio update for the detailed artwork. Reload with **Ctrl+F5** afterwards. The optional package uses API 0.2 and contains no executable package code. Updating preserves all sixteen existing widget definitions.
+[Download the package](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/raw/master/ha_grafik_visual_studio/packages/industrial/ugso.industrial.wg) and install it through **Settings → Widget packages → Local**. Update Studio to **0.1.253 or newer** first, then install the **0.11.6** package described here. Existing package 0.11.1/0.11.2 only needs the Studio update for the detailed artwork. Reload with **Ctrl+F5** afterwards. The optional package uses API 0.2 and contains no executable package code. Updating preserves all sixteen existing widget definitions.
 
 [Source code and package instructions on GitHub](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/industrial)
 
@@ -266,7 +266,7 @@ Set the color in **Settings → General → Editor and dock points → Housing s
 
 From **Studio 0.1.249**, each channel offers **Plate legend → Custom** with **Text when OFF** and **Text when ON**. For example, a **Pump** heading with OFF text **1** and ON text **2**, or **Cold/Warm**. All four channels have independent labels; explicitly empty custom labels remain empty. Long labels are clipped, with the full current state text in the tooltip. Rocker switches share this feature; printed O/I artwork remains unchanged. **Only the labels change:** entity actions and E/A ports retain Boolean (`false`/`true`) values; labels “1”/“2” are not emitted as numeric values and do not automatically select two entities. Existing presets remain available. Updating Studio is sufficient with existing Industrial packages.
 
-Since **Studio 0.1.236**, toggle bank width includes the space between channels: **height × channel count + 2 × all-side spacing × (channel count − 1)**. At 64 px height and 1 px spacing, widths are **64 / 130 / 196 / 262 px**. Channel centers and E/A ports align with individual widgets below. Width input and resizing include the extra spacing. This change initially applies only to toggle switches; rocker sizing is unchanged. Updating Studio is sufficient; package 0.3.0 is unchanged.
+Since **Studio 0.1.236**, toggle bank width includes the space between channels: **height × channel count + 2 × all-side spacing × (channel count − 1)**. At 64 px height and 1 px spacing, widths are **64 / 130 / 196 / 262 px**. Channel centers and E/A ports align with individual widgets below. Width input and resizing include the extra spacing. In Studio 0.1.236 this change initially applied only to toggle switches; rocker sizing follows it from 0.1.237. Updating Studio is sufficient; package 0.3.0 is unchanged.
 
 Package **0.2.0** and Studio **0.1.232** add one to four independently controlled switches side by side. **Number of switches** sets the width/height ratio from **1:1 to 4:1**. Minimum height and width per channel are 64 px; typed changes and resizing preserve the ratio.
 

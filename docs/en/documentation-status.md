@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 233 | 19 |
-| FR | 233 | 19 |
+| EN | 241 | 11 |
+| FR | 241 | 11 |
 
 ## Complete page inventory
 
@@ -110,7 +110,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/blocks-for-ha/time.md](/projects/blocks-for-ha/time) | [Content reviewed](/en/projects/blocks-for-ha/time) | [Content reviewed](/fr/projects/blocks-for-ha/time) |
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Content reviewed](/en/projects/callmebot-signal/) | [Content reviewed](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Content reviewed](/en/projects/callmebot/) | [Content reviewed](/fr/projects/callmebot/) |
-| [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Technically compared](/en/projects/dashboard-user-manager/) | [Technically compared](/fr/projects/dashboard-user-manager/) |
+| [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Content reviewed](/en/projects/dashboard-user-manager/) | [Content reviewed](/fr/projects/dashboard-user-manager/) |
 | [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Content reviewed](/en/projects/fritzbox-to-mqtt/examples) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/examples) |
 | [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Content reviewed](/en/projects/fritzbox-to-mqtt/entities) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/entities) |
 | [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Content reviewed](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
@@ -126,7 +126,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/grafik-visual-studio/energy.md](/projects/grafik-visual-studio/energy) | [Content reviewed](/en/projects/grafik-visual-studio/energy) | [Content reviewed](/fr/projects/grafik-visual-studio/energy) |
 | [projects/grafik-visual-studio/ha-quellen-climate.md](/projects/grafik-visual-studio/ha-quellen-climate) | [Content reviewed](/en/projects/grafik-visual-studio/ha-quellen-climate) | [Content reviewed](/fr/projects/grafik-visual-studio/ha-quellen-climate) |
 | [projects/grafik-visual-studio/index.md](/projects/grafik-visual-studio/) | [Technically compared](/en/projects/grafik-visual-studio/) | [Technically compared](/fr/projects/grafik-visual-studio/) |
-| [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Technically compared](/en/projects/grafik-visual-studio/industrial) | [Technically compared](/fr/projects/grafik-visual-studio/industrial) |
+| [projects/grafik-visual-studio/industrial.md](/projects/grafik-visual-studio/industrial) | [Content reviewed](/en/projects/grafik-visual-studio/industrial) | [Content reviewed](/fr/projects/grafik-visual-studio/industrial) |
 | [projects/grafik-visual-studio/interaktiv.md](/projects/grafik-visual-studio/interaktiv) | [Content reviewed](/en/projects/grafik-visual-studio/interaktiv) | [Content reviewed](/fr/projects/grafik-visual-studio/interaktiv) |
 | [projects/grafik-visual-studio/materialdesign.md](/projects/grafik-visual-studio/materialdesign) | [Content reviewed](/en/projects/grafik-visual-studio/materialdesign) | [Content reviewed](/fr/projects/grafik-visual-studio/materialdesign) |
 | [projects/grafik-visual-studio/packer.md](/projects/grafik-visual-studio/packer) | [Content reviewed](/en/projects/grafik-visual-studio/packer) | [Content reviewed](/fr/projects/grafik-visual-studio/packer) |
@@ -134,11 +134,11 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/grafik-visual-studio/printer.md](/projects/grafik-visual-studio/printer) | [Content reviewed](/en/projects/grafik-visual-studio/printer) | [Content reviewed](/fr/projects/grafik-visual-studio/printer) |
 | [projects/grafik-visual-studio/solar.md](/projects/grafik-visual-studio/solar) | [Content reviewed](/en/projects/grafik-visual-studio/solar) | [Content reviewed](/fr/projects/grafik-visual-studio/solar) |
 | [projects/grafik-visual-studio/svg-line.md](/projects/grafik-visual-studio/svg-line) | [Content reviewed](/en/projects/grafik-visual-studio/svg-line) | [Content reviewed](/fr/projects/grafik-visual-studio/svg-line) |
-| [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Technically compared](/en/projects/grafik-visual-studio/svg-linebox-math) | [Technically compared](/fr/projects/grafik-visual-studio/svg-linebox-math) |
+| [projects/grafik-visual-studio/svg-linebox-math.md](/projects/grafik-visual-studio/svg-linebox-math) | [Content reviewed](/en/projects/grafik-visual-studio/svg-linebox-math) | [Content reviewed](/fr/projects/grafik-visual-studio/svg-linebox-math) |
 | [projects/grafik-visual-studio/svg-linebox.md](/projects/grafik-visual-studio/svg-linebox) | [Content reviewed](/en/projects/grafik-visual-studio/svg-linebox) | [Content reviewed](/fr/projects/grafik-visual-studio/svg-linebox) |
-| [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Technically compared](/en/projects/grafik-visual-studio/technic) | [Technically compared](/fr/projects/grafik-visual-studio/technic) |
+| [projects/grafik-visual-studio/technic.md](/projects/grafik-visual-studio/technic) | [Content reviewed](/en/projects/grafik-visual-studio/technic) | [Content reviewed](/fr/projects/grafik-visual-studio/technic) |
 | [projects/grafik-visual-studio/tool-pakete.md](/projects/grafik-visual-studio/tool-pakete) | [Content reviewed](/en/projects/grafik-visual-studio/tool-packages) | [Content reviewed](/fr/projects/grafik-visual-studio/tool-packages) |
-| [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Technically compared](/en/projects/grafik-visual-studio/weather-heating) | [Technically compared](/fr/projects/grafik-visual-studio/weather-heating) |
+| [projects/grafik-visual-studio/weather-heating.md](/projects/grafik-visual-studio/weather-heating) | [Content reviewed](/en/projects/grafik-visual-studio/weather-heating) | [Content reviewed](/fr/projects/grafik-visual-studio/weather-heating) |
 | [projects/grafik-visual-studio/widget-pakete.md](/projects/grafik-visual-studio/widget-pakete) | [Content reviewed](/en/projects/grafik-visual-studio/widget-packages) | [Content reviewed](/fr/projects/grafik-visual-studio/widget-packages) |
 | [projects/grafik-visual-studio/widgets.md](/projects/grafik-visual-studio/widgets) | [Technically compared](/en/projects/grafik-visual-studio/widgets) | [Technically compared](/fr/projects/grafik-visual-studio/widgets) |
 | [projects/grafik-visual-studio/zeichnen.md](/projects/grafik-visual-studio/zeichnen) | [Content reviewed](/en/projects/grafik-visual-studio/zeichnen) | [Content reviewed](/fr/projects/grafik-visual-studio/zeichnen) |
@@ -164,8 +164,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/logic-studio/user-guide/javascript.md](/projects/logic-studio/user-guide/javascript) | [Content reviewed](/en/projects/logic-studio/user-guide/javascript) | [Content reviewed](/fr/projects/logic-studio/user-guide/javascript) |
 | [projects/logic-studio/user-guide/rules.md](/projects/logic-studio/user-guide/rules) | [Content reviewed](/en/projects/logic-studio/user-guide/rules) | [Content reviewed](/fr/projects/logic-studio/user-guide/rules) |
 | [projects/logic-studio/user-guide/typescript.md](/projects/logic-studio/user-guide/typescript) | [Content reviewed](/en/projects/logic-studio/user-guide/typescript) | [Content reviewed](/fr/projects/logic-studio/user-guide/typescript) |
-| [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Technically compared](/en/projects/mqtt-client/) | [Technically compared](/fr/projects/mqtt-client/) |
-| [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Technically compared](/en/projects/mqtt-client/iobroker-roles) | [Technically compared](/fr/projects/mqtt-client/iobroker-roles) |
+| [projects/mqtt-client/index.md](/projects/mqtt-client/) | [Content reviewed](/en/projects/mqtt-client/) | [Content reviewed](/fr/projects/mqtt-client/) |
+| [projects/mqtt-client/iobroker-roles.md](/projects/mqtt-client/iobroker-roles) | [Content reviewed](/en/projects/mqtt-client/iobroker-roles) | [Content reviewed](/fr/projects/mqtt-client/iobroker-roles) |
 | [projects/parcel-to-mqtt/beispiele.md](/projects/parcel-to-mqtt/beispiele) | [Content reviewed](/en/projects/parcel-to-mqtt/examples) | [Content reviewed](/fr/projects/parcel-to-mqtt/examples) |
 | [projects/parcel-to-mqtt/entitaeten.md](/projects/parcel-to-mqtt/entitaeten) | [Content reviewed](/en/projects/parcel-to-mqtt/entities) | [Content reviewed](/fr/projects/parcel-to-mqtt/entities) |
 | [projects/parcel-to-mqtt/index.md](/projects/parcel-to-mqtt/) | [Content reviewed](/en/projects/parcel-to-mqtt/) | [Content reviewed](/fr/projects/parcel-to-mqtt/) |
@@ -257,7 +257,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [sammlung/calendar-card-pro/nutzung.md](/sammlung/calendar-card-pro/nutzung) | [Content reviewed](/en/collection/calendar-card-pro/nutzung) | [Content reviewed](/fr/collection/calendar-card-pro/nutzung) |
 | [sammlung/dashboard-layout-card-v2/index.md](/sammlung/dashboard-layout-card-v2/) | [Content reviewed](/en/collection/dashboard-layout-card-v2/) | [Content reviewed](/fr/collection/dashboard-layout-card-v2/) |
 | [sammlung/flex-table-card/aktionen.md](/sammlung/flex-table-card/aktionen) | [Content reviewed](/en/collection/flex-table-card/aktionen) | [Content reviewed](/fr/collection/flex-table-card/aktionen) |
-| [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Technically compared](/en/collection/flex-table-card/beispiele-aus-forum) | [Technically compared](/fr/collection/flex-table-card/beispiele-aus-forum) |
+| [sammlung/flex-table-card/beispiele-aus-forum.md](/sammlung/flex-table-card/beispiele-aus-forum) | [Content reviewed](/en/collection/flex-table-card/beispiele-aus-forum) | [Content reviewed](/fr/collection/flex-table-card/beispiele-aus-forum) |
 | [sammlung/flex-table-card/css.md](/sammlung/flex-table-card/css) | [Content reviewed](/en/collection/flex-table-card/css) | [Content reviewed](/fr/collection/flex-table-card/css) |
 | [sammlung/flex-table-card/datenquellen.md](/sammlung/flex-table-card/datenquellen) | [Content reviewed](/en/collection/flex-table-card/datenquellen) | [Content reviewed](/fr/collection/flex-table-card/datenquellen) |
 | [sammlung/flex-table-card/externe-daten.md](/sammlung/flex-table-card/externe-daten) | [Content reviewed](/en/collection/flex-table-card/externe-daten) | [Content reviewed](/fr/collection/flex-table-card/externe-daten) |

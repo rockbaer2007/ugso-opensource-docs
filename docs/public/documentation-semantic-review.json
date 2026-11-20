@@ -2,8 +2,8 @@
   "reviewed_at": "2026-11-20",
   "scope_pages": 504,
   "coverage": {
-    "en": 233,
-    "fr": 233
+    "en": 241,
+    "fr": 241
   },
   "scope": "Content/meaning review of all 504 EN/FR inventory entries, including previously assessed structural differences. Reviewed pages only; unreviewed pages retain their existing technical status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
@@ -1129,6 +1129,26 @@
       "target_sha256": "28e1fcdac6b74c0548a6f757929f8729650113efc104d1aea11fe178ebdbfff7"
     },
     {
+      "source": "projects/dashboard-user-manager/index.md",
+      "locale": "en",
+      "target": "en/projects/dashboard-user-manager/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE/EN/FR pages and historical test chronology read: admin-only Ingress, tab visibility is not access control, drafts/cancel do not undo received writes, three reconciliation outcomes, backup privacy and app-versusfullrestore scope agree. Historical pending tests remain under explicit earlier-status heading. Corrected EN empty-map mistranslation; localized screenshot captions intentionally differ by their actual language image.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b4f2632a94260f6dd82ee46c30b0df5aca5807be845a9c6170be1b3445e04480",
+      "target_sha256": "bfe953278970db69e86fc7d2ed8889ca390a27a24d02e0ffcf6cb67ef15f7a5e"
+    },
+    {
+      "source": "projects/dashboard-user-manager/index.md",
+      "locale": "fr",
+      "target": "fr/projects/dashboard-user-manager/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full DE/EN/FR pages and historical test chronology read: admin-only Ingress, tab visibility is not access control, drafts/cancel do not undo received writes, three reconciliation outcomes, backup privacy and app-versusfullrestore scope agree. Historical pending tests remain under explicit earlier-status heading. Corrected EN empty-map mistranslation; localized screenshot captions intentionally differ by their actual language image.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "b4f2632a94260f6dd82ee46c30b0df5aca5807be845a9c6170be1b3445e04480",
+      "target_sha256": "6b1e62ccc6ce51eb35ae3d04e90f35038845ce0896f3e8858a7aefff2de57411"
+    },
+    {
       "source": "projects/fritzbox-to-mqtt/beispiele.md",
       "locale": "en",
       "target": "en/projects/fritzbox-to-mqtt/examples.md",
@@ -1389,6 +1409,26 @@
       "target_sha256": "09a25f2eb533934e96d18e5fe0914b4a034c6926b27658b9852a8199db564d40"
     },
     {
+      "source": "projects/grafik-visual-studio/industrial.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/industrial.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All locale sections read in bounded chunks: sixteen widgets, heating bindings, geometry formulas, blank-panel cell preservation, display power precedence, missing-input handling, segment overflow and font license, odometer limits, local slider output, LCD lines, toggle boolean labels and enclosure snapping. Corrected French false cell-resizing/invisible-panel descriptions and lever/rocker distinction, qualified historical switch change and reconciled installation package version with current0.11.6. No new hardware testing claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "caa3ccf7d6f9ac63e91bcd8458d7320e3e559e2592f140674da2c0b922d29cc9",
+      "target_sha256": "b5c94d71b2b8d4e50d71c83eb8a9c9eec424d0df62479ce6f5a2df0a2b6965b2"
+    },
+    {
+      "source": "projects/grafik-visual-studio/industrial.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/industrial.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All locale sections read in bounded chunks: sixteen widgets, heating bindings, geometry formulas, blank-panel cell preservation, display power precedence, missing-input handling, segment overflow and font license, odometer limits, local slider output, LCD lines, toggle boolean labels and enclosure snapping. Corrected French false cell-resizing/invisible-panel descriptions and lever/rocker distinction, qualified historical switch change and reconciled installation package version with current0.11.6. No new hardware testing claimed.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "caa3ccf7d6f9ac63e91bcd8458d7320e3e559e2592f140674da2c0b922d29cc9",
+      "target_sha256": "70e52261b1ed2cd0f0f7569767e5efe83026d1c838af33cd08763740f869b953"
+    },
+    {
       "source": "projects/grafik-visual-studio/interaktiv.md",
       "locale": "en",
       "target": "en/projects/grafik-visual-studio/interaktiv.md",
@@ -1529,6 +1569,26 @@
       "target_sha256": "e9faf9af7b50af4220ea74aed44fff3418a1c83bb1749d11d4055249e99284a6"
     },
     {
+      "source": "projects/grafik-visual-studio/svg-linebox-math.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/svg-linebox-math.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read DE/EN/FR fully: four restricted calculations, sixteen ports, output uniqueness and dependency ordering, zero versus missing values, mean90 and charge/discharge sign examples agree. Corrected French invoice mistranslation and decimal-point requirement. Local browser computation, no HA writes or implicit feedback, CSS limits and runtime visibility agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "039cd3b608e1e280d186a1402c562d5e0c159d671e4dcd868f62e529eaad45c4",
+      "target_sha256": "d7ce69e315ea927cd4649b95667d180d2464936133f2afa279ed8eda74e7ab3f"
+    },
+    {
+      "source": "projects/grafik-visual-studio/svg-linebox-math.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/svg-linebox-math.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read DE/EN/FR fully: four restricted calculations, sixteen ports, output uniqueness and dependency ordering, zero versus missing values, mean90 and charge/discharge sign examples agree. Corrected French invoice mistranslation and decimal-point requirement. Local browser computation, no HA writes or implicit feedback, CSS limits and runtime visibility agree.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "039cd3b608e1e280d186a1402c562d5e0c159d671e4dcd868f62e529eaad45c4",
+      "target_sha256": "30f09bda495ec85d7c8c86ed1fae64c0e7fcaa6e9a122da7f5c4598b39aae961"
+    },
+    {
       "source": "projects/grafik-visual-studio/svg-linebox.md",
       "locale": "en",
       "target": "en/projects/grafik-visual-studio/svg-linebox.md",
@@ -1549,6 +1609,26 @@
       "target_sha256": "c7f41e4291e3f351552ca85b16501ebc6a900e681b0145838386809afb91ef42"
     },
     {
+      "source": "projects/grafik-visual-studio/technic.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/technic.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read all locale sections: thermostat five bindings, basic dial versus optional Climate controls, server bounds and step checks, room popup targets, blind SET_POSITION, read-only sensors and dimmer coupling/partial failure. Corrected stale installation guidance, French action/entity confusion and locale catalog links; explicit basic dial scope avoids contradicting optional Climate functions.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "43b712776a70d4d035c42e6d7cf4a01d3b830586cdabf940f90189aede438ec4",
+      "target_sha256": "8941e9781a9ce049a6f151d0f4d9f3409450ef1986cc08bc968082957130e484"
+    },
+    {
+      "source": "projects/grafik-visual-studio/technic.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/technic.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read all locale sections: thermostat five bindings, basic dial versus optional Climate controls, server bounds and step checks, room popup targets, blind SET_POSITION, read-only sensors and dimmer coupling/partial failure. Corrected stale installation guidance, French action/entity confusion and locale catalog links; explicit basic dial scope avoids contradicting optional Climate functions.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "43b712776a70d4d035c42e6d7cf4a01d3b830586cdabf940f90189aede438ec4",
+      "target_sha256": "a9397cc61430193a479c2586041743b24790306cbffe9cf5d0b755ffcb7570e2"
+    },
+    {
       "source": "projects/grafik-visual-studio/tool-pakete.md",
       "locale": "en",
       "target": "en/projects/grafik-visual-studio/tool-packages.md",
@@ -1567,6 +1647,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "03bc0a0804bffedead0ab6c5d4935c0d28f71c450ada16b94fb15bb38390d355",
       "target_sha256": "4f23c0daa1313cc6f322bec7901ffc8d6c44be93cfeca385917d3c0f92a3e607"
+    },
+    {
+      "source": "projects/grafik-visual-studio/weather-heating.md",
+      "locale": "en",
+      "target": "en/projects/grafik-visual-studio/weather-heating.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full eight-widget reference compared: notification acceptance versus delivery, drafts, JSON/table limits, no preview fallback when bound, two-week data ownership, weather cache and sandbox Meteored constraints. Corrected stale installation-reload guidance with historical version qualification, own-renderer wording, misplaced general-chart section and French room-table origin. Historical tests are not new runtime checks.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "ac47b95994d77be30c6dbfe7caeb90d0ee21e1c712f1ae55a7a2ccb262865de4",
+      "target_sha256": "525b7d13b1a7a8d50d62486556290c5b9105686b31bd21044dfd627e8aa9851d"
+    },
+    {
+      "source": "projects/grafik-visual-studio/weather-heating.md",
+      "locale": "fr",
+      "target": "fr/projects/grafik-visual-studio/weather-heating.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full eight-widget reference compared: notification acceptance versus delivery, drafts, JSON/table limits, no preview fallback when bound, two-week data ownership, weather cache and sandbox Meteored constraints. Corrected stale installation-reload guidance with historical version qualification, own-renderer wording, misplaced general-chart section and French room-table origin. Historical tests are not new runtime checks.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "ac47b95994d77be30c6dbfe7caeb90d0ee21e1c712f1ae55a7a2ccb262865de4",
+      "target_sha256": "d256c74d92405f578cfabb004239f67eadc1c84f87a0a602622598eec0e74853"
     },
     {
       "source": "projects/grafik-visual-studio/widget-pakete.md",
@@ -2027,6 +2127,46 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "0407b0d6692b534d9868aa69502049ea5792a52f01d55070b2e68a78b8750710",
       "target_sha256": "379d33601f048066fcf18b22321bba7726b0ca43b9c1f1acde062fb5fd1b9cc1"
+    },
+    {
+      "source": "projects/mqtt-client/index.md",
+      "locale": "en",
+      "target": "en/projects/mqtt-client/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full locale texts compared: app0.1.36/helper0.1.34 distinction, actualrestart versus untestednextupgrade, private settings versus secret-free export, pinned oldroutes, opt-in same-device sensors, priority/32eventcollapse, ackonlyafterHAfeedback,30squality and nonretained command requirements. Corrected FR stale heading and sanitized-error meaning (not resolved errors), restored separate installation step. No simulated test recast as live evidence.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "4de880278f48540daba91d38cf58f10913322ee6355a020d2e9d936759490699",
+      "target_sha256": "11d8a7a10a3bfd86d9e21e659036c34bc358d6efdc3fd5d3c1ea40059e8072ed"
+    },
+    {
+      "source": "projects/mqtt-client/index.md",
+      "locale": "fr",
+      "target": "fr/projects/mqtt-client/index.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Full locale texts compared: app0.1.36/helper0.1.34 distinction, actualrestart versus untestednextupgrade, private settings versus secret-free export, pinned oldroutes, opt-in same-device sensors, priority/32eventcollapse, ackonlyafterHAfeedback,30squality and nonretained command requirements. Corrected FR stale heading and sanitized-error meaning (not resolved errors), restored separate installation step. No simulated test recast as live evidence.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "4de880278f48540daba91d38cf58f10913322ee6355a020d2e9d936759490699",
+      "target_sha256": "dd8489b9bffccb7f393a580d85543376632493a4a1a30618387f36fa59f37858"
+    },
+    {
+      "source": "projects/mqtt-client/iobroker-roles.md",
+      "locale": "en",
+      "target": "en/projects/mqtt-client/iobroker-roles.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read all DE role reference and both translated unique paragraphs, with exact shared index paragraphs excluded only after verbatim comparison to already read text. Numericunits/role table and boolean inversion, virtual versusroles restore, cache subscription prerequisite, previewbasecreation, q128/130 and onehelpercopy all agree. No unsupported conversions or invented runtime guarantees.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e1a344d669ea43fb1bc08c3429e26999a5df2279bdf001052408fe863fbb14ac",
+      "target_sha256": "2a035e15c1e61cfd6cdb1ca8c69dc30efc1fa5d45e3a17e6bafe54d6f2478f20"
+    },
+    {
+      "source": "projects/mqtt-client/iobroker-roles.md",
+      "locale": "fr",
+      "target": "fr/projects/mqtt-client/iobroker-roles.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "Read all DE role reference and both translated unique paragraphs, with exact shared index paragraphs excluded only after verbatim comparison to already read text. Numericunits/role table and boolean inversion, virtual versusroles restore, cache subscription prerequisite, previewbasecreation, q128/130 and onehelpercopy all agree. No unsupported conversions or invented runtime guarantees.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "e1a344d669ea43fb1bc08c3429e26999a5df2279bdf001052408fe863fbb14ac",
+      "target_sha256": "0ceddf989efd1c12491b1ac7748373b2520a9877942ec186eedc7767af31d03c"
     },
     {
       "source": "projects/parcel-to-mqtt/beispiele.md",
@@ -4487,6 +4627,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "94babc081fa40a77e857b573a422b1f853d472bb83517d8ff3d47aa797318e8d",
       "target_sha256": "90318880b410c12bf76f03a26f59a866c6f9959ab9efe8af679569e5122631c5"
+    },
+    {
+      "source": "sammlung/flex-table-card/beispiele-aus-forum.md",
+      "locale": "en",
+      "target": "en/collection/flex-table-card/beispiele-aus-forum.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All23titles and locale warnings read, all46copyablepayloads decoded and exactlocaleidentity checked. Originalexcerpts sometimes need surrounding YAML anchors/indentation, explicitly disclosed without silentlyrewritingforumsource. Corrected FR zero-padding meaning, strayHTMLbackticks/containerclosing and EN rowheading; image and copy identifiers retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "af660f60f66e3ff6f123caba5f4af36e960839d43996db874c1f7f0469d41bda",
+      "target_sha256": "bf425104c08e4e1ba1d076cc8879b6ed3efa5730fd9b0472f8ccdcf4d9992dba"
+    },
+    {
+      "source": "sammlung/flex-table-card/beispiele-aus-forum.md",
+      "locale": "fr",
+      "target": "fr/collection/flex-table-card/beispiele-aus-forum.md",
+      "reviewed_at": "2026-11-20",
+      "assessment": "All23titles and locale warnings read, all46copyablepayloads decoded and exactlocaleidentity checked. Originalexcerpts sometimes need surrounding YAML anchors/indentation, explicitly disclosed without silentlyrewritingforumsource. Corrected FR zero-padding meaning, strayHTMLbackticks/containerclosing and EN rowheading; image and copy identifiers retained.",
+      "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
+      "source_sha256": "af660f60f66e3ff6f123caba5f4af36e960839d43996db874c1f7f0469d41bda",
+      "target_sha256": "a39739e13788233257dde025e15e56823ddc12178cb0eed284ca91680746816f"
     },
     {
       "source": "sammlung/flex-table-card/css.md",

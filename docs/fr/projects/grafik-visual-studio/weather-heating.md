@@ -13,7 +13,7 @@ Les paquets et outils complémentaires sont proposés de manière centralisée s
 
 ## Installation {#installieren}
 
-Téléchargez [ugso.weather-heating.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=de). Accédez à **Paramètres → Packs de widgets → Installer un fichier .wg / .wg.zip local** et sélectionnez le fichier. Après un rechargement, un nouvel ensemble apparaît, doté d'une couleur attribuée automatiquement. L'attribution de cette couleur est conservée dans le navigateur, même en cas de suppression et de réinstallation. Les 74 widgets intégrés restent disponibles.
+Téléchargez [ugso.weather-heating.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=fr). Accédez à **Paramètres → Packs de widgets → Installer un fichier .wg / .wg.zip local** et sélectionnez le fichier. Depuis Studio 0.1.204, l'ensemble apparaît directement après l'installation ; les anciennes versions nécessitent un rechargement. Il apparaît, doté d'une couleur attribuée automatiquement. L'attribution de cette couleur est conservée dans le navigateur, même en cas de suppression et de réinstallation. Les widgets intégrés restent disponibles (74 à l'époque de Studio 0.1.194).
 
 ## Configurer le diagramme {#diagramm-konfigurieren}
 
@@ -64,6 +64,8 @@ Votre entité HA doit déjà fournir la liste JSON ; le widget n'agrège pas les
 
 ![Aperçu de l'état des fenêtres avec les pièces ouvertes et fermées](/images/grafik-visual-studio/weather-heating-windows.png)
 
+## Graphique général
+
 Sous **Général**, vous trouverez le titre, le nombre de séries (1–10), la légende et l'option d'affichage sans carte. La première série peut utiliser l'entité générale. Chaque groupe **Données [N]** propose sa propre entité, un attribut optionnel, un JSON de prévisualisation, des clés X/Y, un nom, une unité, une couleur, un type (ligne/barre), un axe des valeurs (gauche/droite) et un calcul de différence. Avec une liaison à une entité, le graphique lit exclusivement son état ou son attribut. En l'absence de données en temps réel, aucun JSON de prévisualisation n'est utilisé. Aucune écriture d'états dans HA (Home Assistant) n'est effectuée.
 
 Exemple de JSON de prévisualisation ou d'attribut HA :
@@ -110,9 +112,9 @@ Les paramètres **Température**, **Pluie**, **Nuages** et **Probabilité de plu
 
 ![Widget météo affichant la température et les précipitations](/images/grafik-visual-studio/weather-heating-weather.png)
 
-## Aperçu des chaufferies {#ubersicht-uber-heizraume}
+## Vue d'ensemble des pièces chauffées {#ubersicht-uber-heizraume}
 
-À partir de **0.1.190**, ce widget affiche un tableau de pièces au format HTML, généré à partir du point de données source `RoomStatesHtmlTable`. Dans la section **Tableau de pièces**, vous sélectionnez une entité HA (Home Assistant) et, éventuellement, un **attribut de tableau**. Si aucun attribut n'est spécifié, c'est l'état (state) de l'entité qui est utilisé. En cas de liaison, le widget exploite exclusivement cette valeur en temps réel ; si la valeur est absente ou indisponible, le message **Aucun tableau de pièces disponible** s'affiche. En l'absence de liaison avec une entité, le champ **Aperçu du tableau de pièces (HTML)** peut être modifié, y compris via l'éditeur HTML.
+À partir de **0.1.190**, ce widget affiche un tableau de pièces HTML déjà fourni, correspondant au point de données d'origine `RoomStatesHtmlTable`. Dans la section **Tableau de pièces**, vous sélectionnez une entité HA (Home Assistant) et, éventuellement, un **attribut de tableau**. Si aucun attribut n'est spécifié, c'est l'état (state) de l'entité qui est utilisé. En cas de liaison, le widget exploite exclusivement cette valeur en temps réel ; si la valeur est absente ou indisponible, le message **Aucun tableau de pièces disponible** s'affiche. En l'absence de liaison avec une entité, le champ **Aperçu du tableau de pièces (HTML)** peut être modifié, y compris via l'éditeur HTML.
 
 Ce widget ne génère pas de données relatives aux pièces ni de profils de chauffage, et ne pilote aucun thermostat. Aucune instance ioBroker (telle que `heatingcontrol.0`) n'est requise ; la source HA sélectionnée doit déjà fournir le tableau sous forme de chaîne HTML. Il est recommandé de placer les contenus HTML volumineux dans un attribut plutôt que dans l'état (state).
 

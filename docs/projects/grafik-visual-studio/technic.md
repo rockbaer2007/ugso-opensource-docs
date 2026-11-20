@@ -39,7 +39,7 @@ Der Temperaturregler zeigt Soll-/Ist-Temperatur, Feuchtigkeit, Stellmotor und K�
 
 Leere Lesebindungen verwenden die passenden Attribute der Sollwert-`climate`-Entität. Bei `input_number` brauchst du separate Sensoren. Heiz-/Kühlaktivität bedeutet **100 %**, idle/off **0 %**; dies ist keine gemessene Ventilposition. Fehlende oder nicht verfügbare Werte bleiben `—`.
 
-In der Runtime ziehst du den **300°-Bogen** oder bedienst den Regler per Tastatur. Erst beim Loslassen wird einmal geschrieben: `climate.set_temperature` beziehungsweise `input_number.set_value`. Der Server prüft zuvor aktuelle HA-Fähigkeiten, HA-Grenzen und beide Schrittweiten. Nicht passende Raster, unbekannte Zustände, Schreibschutz und Editorbetrieb erlauben keine Schreibaktion. Der Regler verändert nur den Sollwert; Betriebsmodus und Ein/Aus werden nicht mitgeschaltet. Nach einem HA-Fehler erscheint ein Hinweis; die Beschriftung bleibt erhalten.
+In der Runtime ziehst du den **300°-Bogen** oder bedienst den Regler per Tastatur. Erst beim Loslassen wird einmal geschrieben: `climate.set_temperature` beziehungsweise `input_number.set_value`. Der Server prüft zuvor aktuelle HA-Fähigkeiten, HA-Grenzen und beide Schrittweiten. Nicht passende Raster, unbekannte Zustände, Schreibschutz und Editorbetrieb erlauben keine Schreibaktion. Diese Grundbedienung verändert nur den Sollwert; Betriebsmodus und Ein/Aus werden nicht mitgeschaltet. Die zusätzliche Climate-Steuerung ist oben verlinkt. Nach einem HA-Fehler erscheint ein Hinweis; die Beschriftung bleibt erhalten.
 
 ![Sieben-Tage-Verlauf mit Soll-/Ist-Temperatur und separater Stellmotor-Achse; simulierte Testdaten](/images/grafik-visual-studio/technic-temperature-history.png)
 
@@ -73,7 +73,7 @@ Popup-Breite und -Höhe, feste X/Y-Position statt Zentrierung, Hintergrund, Rahm
 
 ## Installieren
 
-Lade [ugso.technic.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=de) herunter. Öffne **Einstellungen → Widget-Pakete → Lokales .wg / .wg.zip installieren** und wähle die Datei. Nach dem Neuladen erscheint das Set mit einer automatisch vergebenen freien Farbe. Es bleibt unabhängig von den integrierten Widgets und von Wetter und Heizung.
+Lade [ugso.technic.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=de) herunter. Öffne **Einstellungen → Widget-Pakete → Lokales .wg / .wg.zip installieren** und wähle die Datei. Seit Studio 0.1.204 erscheint das Set direkt nach der Installation; ältere Versionen benötigen Neuladen. Es erscheint mit einer automatisch vergebenen freien Farbe. Es bleibt unabhängig von den integrierten Widgets und von Wetter und Heizung.
 
 Der [Quellcode und reproduzierbare Paketbau](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/technic) sind öffentlich. Das Downloadpaket enthält `README.md` und `LICENSE.txt`, einschließlich des vollständigen MIT-Lizenztextes und des Herkunftshinweises `Copyright (c) 2026 Sefina-DS`.
 

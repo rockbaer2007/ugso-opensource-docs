@@ -21,7 +21,7 @@
       "review_signals": 65,
       "reviewed_findings": 74,
       "technically_compared": 187,
-      "content_reviewed": 233,
+      "content_reviewed": 241,
       "open_review_signals": 0
     },
     "fr": {
@@ -31,7 +31,7 @@
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 221,
-      "content_reviewed": 233,
+      "content_reviewed": 241,
       "open_review_signals": 0
     }
   },
@@ -5517,8 +5517,8 @@
         "en": {
           "path": "en/projects/dashboard-user-manager/index.md",
           "status": "content-present",
-          "sha256": "bab2ff606e45913f0cb250f5dc38d38e669ee3a13217a62b39bcaede3602809e",
-          "words": 3976,
+          "sha256": "bfe953278970db69e86fc7d2ed8889ca390a27a24d02e0ffcf6cb67ef15f7a5e",
+          "words": 3977,
           "headings": 11,
           "examples": 2,
           "versions": [
@@ -5546,6 +5546,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/EN/FR pages and historical test chronology read: admin-only Ingress, tab visibility is not access control, drafts/cancel do not undo received writes, three reconciliation outcomes, backup privacy and app-versusfullrestore scope agree. Historical pending tests remain under explicit earlier-status heading. Corrected EN empty-map mistranslation; localized screenshot captions intentionally differ by their actual language image."
           }
         },
         "fr": {
@@ -5580,6 +5585,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full DE/EN/FR pages and historical test chronology read: admin-only Ingress, tab visibility is not access control, drafts/cancel do not undo received writes, three reconciliation outcomes, backup privacy and app-versusfullrestore scope agree. Historical pending tests remain under explicit earlier-status heading. Corrected EN empty-map mistranslation; localized screenshot captions intentionally differ by their actual language image."
           }
         }
       }
@@ -6869,8 +6879,8 @@
         "de": {
           "path": "projects/grafik-visual-studio/industrial.md",
           "status": "content-present",
-          "sha256": "572c9f3f2bd0335235a4111a02bdaa02ad42d9e6e9eb82ca988a2726c2e62e2e",
-          "words": 4921,
+          "sha256": "caa3ccf7d6f9ac63e91bcd8458d7320e3e559e2592f140674da2c0b922d29cc9",
+          "words": 4938,
           "headings": 22,
           "examples": 0,
           "versions": [
@@ -6898,7 +6908,6 @@
             "0.10.3",
             "0.11.1",
             "0.11.2",
-            "0.11.3",
             "0.11.4",
             "0.11.5",
             "0.11.6",
@@ -6911,8 +6920,8 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/industrial.md",
           "status": "content-present",
-          "sha256": "7a8175482254be053d96be1f9fc4be44b7d26282116bba516cb82a8a5c4a66df",
-          "words": 5026,
+          "sha256": "b5c94d71b2b8d4e50d71c83eb8a9c9eec424d0df62479ce6f5a2df0a2b6965b2",
+          "words": 5042,
           "headings": 22,
           "examples": 0,
           "versions": [
@@ -6940,7 +6949,6 @@
             "0.10.3",
             "0.11.1",
             "0.11.2",
-            "0.11.3",
             "0.11.4",
             "0.11.5",
             "0.11.6",
@@ -6961,13 +6969,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All locale sections read in bounded chunks: sixteen widgets, heating bindings, geometry formulas, blank-panel cell preservation, display power precedence, missing-input handling, segment overflow and font license, odometer limits, local slider output, LCD lines, toggle boolean labels and enclosure snapping. Corrected French false cell-resizing/invisible-panel descriptions and lever/rocker distinction, qualified historical switch change and reconciled installation package version with current0.11.6. No new hardware testing claimed."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/industrial.md",
           "status": "content-present",
-          "sha256": "014d773abc6acb2bb9eab90bc72822ceb7ffffb01b723856949a6ba69c992b31",
-          "words": 7829,
+          "sha256": "70e52261b1ed2cd0f0f7569767e5efe83026d1c838af33cd08763740f869b953",
+          "words": 7840,
           "headings": 22,
           "examples": 0,
           "versions": [
@@ -6995,7 +7008,6 @@
             "0.10.3",
             "0.11.1",
             "0.11.2",
-            "0.11.3",
             "0.11.4",
             "0.11.5",
             "0.11.6",
@@ -7016,6 +7028,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All locale sections read in bounded chunks: sixteen widgets, heating bindings, geometry formulas, blank-panel cell preservation, display power precedence, missing-input handling, segment overflow and font license, odometer limits, local slider output, LCD lines, toggle boolean labels and enclosure snapping. Corrected French false cell-resizing/invisible-panel descriptions and lever/rocker distinction, qualified historical switch change and reconciled installation package version with current0.11.6. No new hardware testing claimed."
           }
         }
       }
@@ -7671,13 +7688,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read DE/EN/FR fully: four restricted calculations, sixteen ports, output uniqueness and dependency ordering, zero versus missing values, mean90 and charge/discharge sign examples agree. Corrected French invoice mistranslation and decimal-point requirement. Local browser computation, no HA writes or implicit feedback, CSS limits and runtime visibility agree."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/svg-linebox-math.md",
           "status": "content-present",
-          "sha256": "e9657bedb2177bb68d9e9956cc4111393bee5ccc9c4d56b6acb5f2666d33e168",
-          "words": 3225,
+          "sha256": "30f09bda495ec85d7c8c86ed1fae64c0e7fcaa6e9a122da7f5c4598b39aae961",
+          "words": 3226,
           "headings": 12,
           "examples": 0,
           "versions": [
@@ -7702,6 +7724,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read DE/EN/FR fully: four restricted calculations, sixteen ports, output uniqueness and dependency ordering, zero versus missing values, mean90 and charge/discharge sign examples agree. Corrected French invoice mistranslation and decimal-point requirement. Local browser computation, no HA writes or implicit feedback, CSS limits and runtime visibility agree."
           }
         }
       }
@@ -7792,12 +7819,13 @@
         "de": {
           "path": "projects/grafik-visual-studio/technic.md",
           "status": "content-present",
-          "sha256": "c414606fbe0c3365a184005ded1d2de29eca74dee429af1903535c29b0bf43b5",
-          "words": 2091,
+          "sha256": "43b712776a70d4d035c42e6d7cf4a01d3b830586cdabf940f90189aede438ec4",
+          "words": 2110,
           "headings": 11,
           "examples": 0,
           "versions": [
             "0.1.203",
+            "0.1.204",
             "0.1.296",
             "1.6.0"
           ],
@@ -7806,12 +7834,13 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/technic.md",
           "status": "content-present",
-          "sha256": "98a24bc06edf475c9584ef85769bf0ea0d39bfcc1edd87bc0ff093898fcd2cb7",
-          "words": 2095,
+          "sha256": "8941e9781a9ce049a6f151d0f4d9f3409450ef1986cc08bc968082957130e484",
+          "words": 2118,
           "headings": 11,
           "examples": 0,
           "versions": [
             "0.1.203",
+            "0.1.204",
             "0.1.296",
             "1.6.0"
           ],
@@ -7828,17 +7857,23 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read all locale sections: thermostat five bindings, basic dial versus optional Climate controls, server bounds and step checks, room popup targets, blind SET_POSITION, read-only sensors and dimmer coupling/partial failure. Corrected stale installation guidance, French action/entity confusion and locale catalog links; explicit basic dial scope avoids contradicting optional Climate functions."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/technic.md",
           "status": "content-present",
-          "sha256": "c9bcc8b509ad1de54419bff625557fad48ca3e66557c35450e48b34b45c1993e",
-          "words": 3240,
+          "sha256": "a9397cc61430193a479c2586041743b24790306cbffe9cf5d0b755ffcb7570e2",
+          "words": 3266,
           "headings": 11,
           "examples": 0,
           "versions": [
             "0.1.203",
+            "0.1.204",
             "0.1.296",
             "1.6.0"
           ],
@@ -7855,6 +7890,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read all locale sections: thermostat five bindings, basic dial versus optional Climate controls, server bounds and step checks, room popup targets, blind SET_POSITION, read-only sensors and dimmer coupling/partial failure. Corrected stale installation guidance, French action/entity confusion and locale catalog links; explicit basic dial scope avoids contradicting optional Climate functions."
           }
         }
       }
@@ -7966,14 +8006,15 @@
         "de": {
           "path": "projects/grafik-visual-studio/weather-heating.md",
           "status": "content-present",
-          "sha256": "9844a6e37fbeaf73f7081e82a14393507167016b7e34cfa4bd58ce6100ca709c",
-          "words": 2016,
-          "headings": 10,
+          "sha256": "ac47b95994d77be30c6dbfe7caeb90d0ee21e1c712f1ae55a7a2ccb262865de4",
+          "words": 2039,
+          "headings": 11,
           "examples": 3,
           "versions": [
             "0.1.190",
             "0.1.191",
             "0.1.194",
+            "0.1.204",
             "1.0.0",
             "1.6.0",
             "1.7.0"
@@ -7983,14 +8024,15 @@
         "en": {
           "path": "en/projects/grafik-visual-studio/weather-heating.md",
           "status": "content-present",
-          "sha256": "af6162e4c6830f0c844f706f16a47e66a8c826cd7a82a17d6fecbdac5ab49ed2",
-          "words": 2080,
-          "headings": 10,
+          "sha256": "525b7d13b1a7a8d50d62486556290c5b9105686b31bd21044dfd627e8aa9851d",
+          "words": 2102,
+          "headings": 11,
           "examples": 3,
           "versions": [
             "0.1.190",
             "0.1.191",
             "0.1.194",
+            "0.1.204",
             "1.0.0",
             "1.6.0",
             "1.7.0"
@@ -8008,19 +8050,25 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full eight-widget reference compared: notification acceptance versus delivery, drafts, JSON/table limits, no preview fallback when bound, two-week data ownership, weather cache and sandbox Meteored constraints. Corrected stale installation-reload guidance with historical version qualification, own-renderer wording, misplaced general-chart section and French room-table origin. Historical tests are not new runtime checks."
           }
         },
         "fr": {
           "path": "fr/projects/grafik-visual-studio/weather-heating.md",
           "status": "content-present",
-          "sha256": "19c1a3e4ba9cbb3f7d44771b99b1d614ecdd88a7388ee39cb7e8545eecdf8686",
-          "words": 3080,
-          "headings": 10,
+          "sha256": "d256c74d92405f578cfabb004239f67eadc1c84f87a0a602622598eec0e74853",
+          "words": 3105,
+          "headings": 11,
           "examples": 3,
           "versions": [
             "0.1.190",
             "0.1.191",
             "0.1.194",
+            "0.1.204",
             "1.0.0",
             "1.6.0",
             "1.7.0"
@@ -8038,6 +8086,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full eight-widget reference compared: notification acceptance versus delivery, drafts, JSON/table limits, no preview fallback when bound, two-week data ownership, weather cache and sandbox Meteored constraints. Corrected stale installation-reload guidance with historical version qualification, own-renderer wording, misplaced general-chart section and French room-table origin. Historical tests are not new runtime checks."
           }
         }
       }
@@ -10385,13 +10438,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full locale texts compared: app0.1.36/helper0.1.34 distinction, actualrestart versus untestednextupgrade, private settings versus secret-free export, pinned oldroutes, opt-in same-device sensors, priority/32eventcollapse, ackonlyafterHAfeedback,30squality and nonretained command requirements. Corrected FR stale heading and sanitized-error meaning (not resolved errors), restored separate installation step. No simulated test recast as live evidence."
           }
         },
         "fr": {
           "path": "fr/projects/mqtt-client/index.md",
           "status": "content-present",
-          "sha256": "6a10353c72f916a1191681d4ee7888fa23a592e7574a4763266efe3291589350",
-          "words": 5228,
+          "sha256": "dd8489b9bffccb7f393a580d85543376632493a4a1a30618387f36fa59f37858",
+          "words": 5229,
           "headings": 25,
           "examples": 2,
           "versions": [
@@ -10432,6 +10490,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Full locale texts compared: app0.1.36/helper0.1.34 distinction, actualrestart versus untestednextupgrade, private settings versus secret-free export, pinned oldroutes, opt-in same-device sensors, priority/32eventcollapse, ackonlyafterHAfeedback,30squality and nonretained command requirements. Corrected FR stale heading and sanitized-error meaning (not resolved errors), restored separate installation step. No simulated test recast as live evidence."
           }
         }
       }
@@ -10500,6 +10563,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read all DE role reference and both translated unique paragraphs, with exact shared index paragraphs excluded only after verbatim comparison to already read text. Numericunits/role table and boolean inversion, virtual versusroles restore, cache subscription prerequisite, previewbasecreation, q128/130 and onehelpercopy all agree. No unsupported conversions or invented runtime guarantees."
           }
         },
         "fr": {
@@ -10538,6 +10606,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "Read all DE role reference and both translated unique paragraphs, with exact shared index paragraphs excluded only after verbatim comparison to already read text. Numericunits/role table and boolean inversion, virtual versusroles restore, cache subscription prerequisite, previewbasecreation, q128/130 and onehelpercopy all agree. No unsupported conversions or invented runtime guarantees."
           }
         }
       }
@@ -17745,8 +17818,8 @@
         "de": {
           "path": "sammlung/flex-table-card/beispiele-aus-forum.md",
           "status": "content-present",
-          "sha256": "8c1cc12c0ba22b663e5df39cd655d1c009e432964d9784b7b598cb0c212d27bc",
-          "words": 637,
+          "sha256": "af660f60f66e3ff6f123caba5f4af36e960839d43996db874c1f7f0469d41bda",
+          "words": 678,
           "headings": 24,
           "examples": 0,
           "versions": [],
@@ -17755,8 +17828,8 @@
         "en": {
           "path": "en/collection/flex-table-card/beispiele-aus-forum.md",
           "status": "content-present",
-          "sha256": "cf8a890e8fe896b5e11d03c396e7d8d5a1fab2fbac02535a0cc1f6a0123f520d",
-          "words": 774,
+          "sha256": "bf425104c08e4e1ba1d076cc8879b6ed3efa5730fd9b0472f8ccdcf4d9992dba",
+          "words": 816,
           "headings": 24,
           "examples": 0,
           "versions": [],
@@ -17773,13 +17846,18 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All23titles and locale warnings read, all46copyablepayloads decoded and exactlocaleidentity checked. Originalexcerpts sometimes need surrounding YAML anchors/indentation, explicitly disclosed without silentlyrewritingforumsource. Corrected FR zero-padding meaning, strayHTMLbackticks/containerclosing and EN rowheading; image and copy identifiers retained."
           }
         },
         "fr": {
           "path": "fr/collection/flex-table-card/beispiele-aus-forum.md",
           "status": "content-present",
-          "sha256": "65c599a141ad03ea80c6abdd01379adfc4d5631a02397168368091b53505874c",
-          "words": 834,
+          "sha256": "a39739e13788233257dde025e15e56823ddc12178cb0eed284ca91680746816f",
+          "words": 879,
           "headings": 24,
           "examples": 0,
           "versions": [],
@@ -17796,6 +17874,11 @@
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-20",
+            "assessment": "All23titles and locale warnings read, all46copyablepayloads decoded and exactlocaleidentity checked. Originalexcerpts sometimes need surrounding YAML anchors/indentation, explicitly disclosed without silentlyrewritingforumsource. Corrected FR zero-padding meaning, strayHTMLbackticks/containerclosing and EN rowheading; image and copy identifiers retained."
           }
         }
       }

@@ -43,7 +43,7 @@ The thermostat displays target/actual temperature, humidity, actuator and coolin
 
 Blank read bindings use matching attributes of the target `climate` entity. An `input_number` target needs separate sensors. Heating/cooling activity means **100%**, idle/off **0%**; this is not a measured valve position. Missing or unavailable readings remain `—`.
 
-In runtime, drag the **300° arc** or use the keyboard range. Release commits once through `climate.set_temperature` or `input_number.set_value`. The server first checks current HA capabilities, bounds and both step grids. Incompatible grids, unknown states, read-only mode and editor operation never write. Only the setpoint changes; operating mode and power are not changed. HA failures show a status message; the caption remains visible.
+In runtime, drag the **300° arc** or use the keyboard range. Release commits once through `climate.set_temperature` or `input_number.set_value`. The server first checks current HA capabilities, bounds and both step grids. Incompatible grids, unknown states, read-only mode and editor operation never write. This basic dial operation changes only the setpoint; operating mode and power are not changed. The optional Climate controls are linked above. HA failures show a status message; the caption remains visible.
 
 ![Seven-day target/actual temperature history and separate actuator axis; simulated test data](/images/grafik-visual-studio/technic-temperature-history.png)
 
@@ -77,7 +77,7 @@ Configure popup width and height, a fixed X/Y position instead of centering, bac
 
 ## Installation
 
-Download [ugso.technic.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=en). Open **Settings → Widget packages → Install local .wg / .wg.zip** and select the file. After reloading, the set appears with an automatically assigned unused color. It remains independent of built-in widgets and Weather and Heating.
+Download [ugso.technic.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=en). Open **Settings → Widget packages → Install local .wg / .wg.zip** and select the file. Since Studio 0.1.204, the set appears immediately after installation; older versions require reloading. It appears with an automatically assigned unused color. It remains independent of built-in widgets and Weather and Heating.
 
 The [source and reproducible package build](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/tree/master/ha_grafik_visual_studio/packages/technic) are public. The download includes `README.md` and `LICENSE.txt`, including the full MIT license and original attribution `Copyright (c) 2026 Sefina-DS`.
 

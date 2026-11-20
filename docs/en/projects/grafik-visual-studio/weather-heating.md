@@ -9,11 +9,11 @@ Packages and helper tools are provided centrally at [visualstudio.ugso-software.
 
 **Inspired by the ioBroker “Weather and Heating” widgets by [rg-engineering](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating).** The Studio widgets are an independent implementation for Home Assistant.
 
-From **Studio 0.1.194**, you can install **Weather and Heating 1.7.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview**, **METEORED Weather Widget**, **Window Status Overview**, **Inform my landlord** and **General heating parameters**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses original renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
+From **Studio 0.1.194**, you can install **Weather and Heating 1.7.0**. It contains **General Chart**, **Two Weeks Bar Chart**, **Weather Widget**, **Heating Rooms Overview**, **METEORED Weather Widget**, **Window Status Overview**, **Inform my landlord** and **General heating parameters**. The functional reference is [ioBroker.vis-2-widgets-weather-and-heating](https://github.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating); Studio uses its own renderers. Other weather/heating widgets and ioBroker-specific adapter bindings are not included yet.
 
 ## Install
 
-Download [ugso.weather-heating.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=en). Open **Settings → Widget packages → Install local .wg / .wg.zip** and select the file. After reloading, a separate set appears with an automatically assigned color. This browser remembers its color across removal and reinstallation. The 74 built-in widgets remain available.
+Download [ugso.weather-heating.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=en). Open **Settings → Widget packages → Install local .wg / .wg.zip** and select the file. Since Studio 0.1.204, the set appears immediately after installation; older versions require reloading. It appears with an automatically assigned color. This browser remembers its color across removal and reinstallation. The built-in widgets remain available (74 in the historical Studio 0.1.194 release).
 
 ## Configure the chart
 
@@ -63,6 +63,8 @@ Under **Window list**, select an HA entity and optional attribute providing a JS
 Your HA entity must already provide the JSON list; this widget does not aggregate individual window sensors or write HA states. No `heatingcontrol` adapter is required.
 
 ![Window Status Overview with open and closed rooms](/images/grafik-visual-studio/weather-heating-windows.png)
+
+## General Chart
 
 **General** provides a headline, series count (1–10), legend and display without a card. The first series can use the main entity. Each **Data [N]** group provides its own entity, optional attribute, preview JSON, X/Y keys, name, unit, color, line/bar type, left/right axis and difference calculation. A bound series reads only its entity state or attribute. Missing live data never falls back to preview JSON. The widget does not write HA states.
 

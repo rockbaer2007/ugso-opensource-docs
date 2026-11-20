@@ -13,6 +13,10 @@ These examples are from the Home Assistant community post [Styling the card](htt
 The examples are forum excerpts and may need to be adapted depending on the Home Assistant version, `flex-table-card` version or additionally used cards such as `auto-entities` and `card_mod`.
 :::
 
+::: warning Incomplete forum excerpts
+Some original excerpts are not standalone cards: indent lists for their actual context and provide missing YAML anchors such as `ref_brightness_right_6cols` from the surrounding configuration. Original example code remains preserved. The UIX column only replaces existing `card_mod` keys.
+:::
+
 ::: info UIX versions
 The third column contains a UIX variant of the code. Only the styling part is replaced: `card_mod:` becomes `uix:`, the native `css:` configuration of the flex-table-card remains unchanged.
 :::
@@ -280,7 +284,7 @@ The third column contains a UIX variant of the code. Only the styling part is re
 <pre><code id="forum-uix-code-12" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogMgpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogICAgLSAqcmVmX2NvbHVtbgogIHN0cmljdDogdHJ1ZQogIGNzczoKICAgIHRoZWFkIHRoOiAnY29sb3I6IHRyYW5zcGFyZW50OycKICAgIHRoZWFkIHRoOmZpcnN0LWNoaWxkOiA+LQogICAgICBjb2xvcjogdW5zZXQ7CiAgICAgIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Z3JlZW47CiAgICB0aGVhZCB0aDpsYXN0LWNoaWxkOiA+LQogICAgICBjb2xvcjogdW5zZXQ7CiAgICAgIGJhY2tncm91bmQtY29sb3I6IHllbGxvdzs="></code></pre>
 </div></div>
 
-## 13. Visually summarize headers {#_13-header-optisch-zusammenfassen}
+## 13. Visually merge headers {#_13-header-optisch-zusammenfassen}
 
 <div class="forum-example-row">
 <div class="forum-example-image">
@@ -302,7 +306,7 @@ The third column contains a UIX variant of the code. Only the styling part is re
 <pre><code id="forum-uix-code-13" data-code-b64="dHlwZTogY3VzdG9tOmF1dG8tZW50aXRpZXMKZmlsdGVyOgogIGluY2x1ZGU6CiAgICAtIGRvbWFpbjogbGlnaHQKc29ydDoKICBjb3VudDogNQpjYXJkOgogIHR5cGU6IGN1c3RvbTpmbGV4LXRhYmxlLWNhcmQKICBjb2x1bW5zOgogICAgLSAmcmVmX2NvbHVtbgogICAgICBuYW1lOiBoaGgKICAgICAgZGF0YTogYnJpZ2h0bmVzcwogICAgICBhbGlnbjogcmlnaHQKICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICAgIC0gKnJlZl9jb2x1bW4KICBzdHJpY3Q6IHRydWUKICBjc3M6CiAgICB0YWJsZSs6ICdib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlOycKICAgIHRoKzogPi0KICAgICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYigxMjcsMTI3LDEyNyk7CiAgICAgIHRleHQtYWxpZ246IGxlZnQgIWltcG9ydGFudDsKICAgIHRoOm50aC1vZi10eXBlKG4rMikrOiAmcmVmX3N0eWxlX2JvcmRlciA+LQogICAgICBib3JkZXItbGVmdDogMXB4IHNvbGlkIHJnYigxMjcsMTI3LDEyNykKICAgIHRkOm50aC1vZi10eXBlKG4rMikrOiAqcmVmX3N0eWxlX2JvcmRlcgogICAgdGg6bnRoLW9mLXR5cGUoMikrOiAmcmVmX3N0eWxlX21lcmdlZF9oZWFkZXIgPi0KICAgICAgYm9yZGVyLWxlZnQ6IG5vbmU7CiAgICAgIGNvbG9yOiB0cmFuc3BhcmVudDsKICAgIHRoOm50aC1vZi10eXBlKDUpKzogKnJlZl9zdHlsZV9tZXJnZWRfaGVhZGVyCiAgdWl4OgogICAgc3R5bGU6IHwKICAgICAgZGl2IHsKICAgICAgICBwYWRkaW5nOiAxNnB4OwogICAgICB9"></code></pre>
 </div></div>
 
-## 14th lines: same background color {#_14-zeilen-gleiche-hintergrundfarbe}
+## 14. Rows: same background color {#_14-zeilen-gleiche-hintergrundfarbe}
 
 <div class="forum-example-row">
 <div class="forum-example-image">

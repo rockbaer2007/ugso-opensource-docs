@@ -13,7 +13,7 @@ Ab **Studio 0.1.194** kannst du das Paket **Wetter und Heizung 1.7.0** nachinsta
 
 ## Installieren
 
-Lade [ugso.weather-heating.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=de) herunter. Öffne **Einstellungen → Widget-Pakete → Lokales .wg / .wg.zip installieren** und wähle die Datei. Nach dem Neuladen erscheint ein eigenes Set mit automatisch vergebener Farbe. Die Farbzuordnung bleibt in diesem Browser erhalten, auch bei Entfernen und Neuinstallation. Die 74 integrierten Widgets bleiben verfügbar.
+Lade [ugso.weather-heating.wg](https://visualstudio.ugso-software.de/?kind=widget&lang=de) herunter. Öffne **Einstellungen → Widget-Pakete → Lokales .wg / .wg.zip installieren** und wähle die Datei. Seit Studio 0.1.204 erscheint das Set direkt nach der Installation; ältere Studio-Versionen benötigen Neuladen. Es erscheint ein eigenes Set mit automatisch vergebener Farbe. Die Farbzuordnung bleibt in diesem Browser erhalten, auch bei Entfernen und Neuinstallation. Die integrierten Widgets bleiben verfügbar (74 beim damaligen Stand 0.1.194).
 
 ## Diagramm konfigurieren
 
@@ -63,6 +63,8 @@ Unter **Farben** stehen Überschrift, Statuszeile, Raumname offen/geschlossen, l
 Deine HA-Entität muss die JSON-Liste bereits bereitstellen; das Widget aggregiert keine einzelnen Fenstersensoren und schreibt keine HA-Zustände. Ein `heatingcontrol`-Adapter ist nicht erforderlich.
 
 ![Fensterstatus-Übersicht mit offenen und geschlossenen Räumen](/images/grafik-visual-studio/weather-heating-windows.png)
+
+## Allgemeines Diagramm
 
 Unter **Allgemein** findest du Überschrift, Anzahl der Serien (1–10), Legende und Darstellung ohne Karte. Die erste Reihe kann die allgemeine Entität verwenden. Jede Gruppe **Daten [N]** bietet eine eigene Entität, ein optionales Attribut, Vorschau-JSON, X-/Y-Schlüssel, Name, Einheit, Farbe, Linie/Balken, linke/rechte Wertachse und Differenzberechnung. Mit einer Entitätsbindung liest das Diagramm ausschließlich deren Zustand oder Attribut. Fehlen Live-Daten, wird kein Vorschau-JSON eingesetzt. Es schreibt keine HA-Zustände.
 

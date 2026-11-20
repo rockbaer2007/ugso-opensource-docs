@@ -3,7 +3,7 @@ title: Client MQTT
 description: Transmettre en temps réel des valeurs sélectionnées de Home Assistant via MQTT et les piloter de manière ciblée.
 ---
 
-# Client MQTT 0.1.34 {#mqtt-client-0-1-16}
+# Client MQTT 0.1.36 {#mqtt-client-0-1-16}
 
 Transmettre les états et attributs HA sélectionnés vers un broker MQTT externe. Le MQTT-Client et le script JavaScript 0.1.34 ajoutent une structure VIS-2 plate facultative avec noms courts. Cette option nécessite de remplacer le script complet dans l’adaptateur JavaScript ioBroker ; la mise à jour de l’application HA seule ne remplace pas le script enregistré dans ioBroker.
 
@@ -231,7 +231,8 @@ Le client MQTT transmet des appareils, des états et des attributs sélectionné
 
 ## Configuration et sélection {#einrichtung-und-auswahl}
 
-1. Ajoutez `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` depuis l'App Store de Home Assistant. 2. Installer et lancer le **client MQTT** ; les architectures amd64 et aarch64 sont prises en charge.
+1. Ajoutez `https://github.com/rockbaer2007/ugso-ha-mqtt-addons` depuis l'App Store de Home Assistant.
+2. Installer et lancer le **client MQTT** ; les architectures amd64 et aarch64 sont prises en charge.
 3. Ouvrir l'interface web et enregistrer l'hôte, le port, l'utilisateur et le mot de passe du broker externe. En l'absence de TLS, le port par défaut est 1883.
 4. Sélectionner un appareil sur la gauche. Dans la fenêtre qui s'affiche, ses entités sont regroupées par catégories : commandes, capteurs, configuration et diagnostic. La fonction de recherche permet également de trouver des entités au sein d'un appareil.
 5. Sélectionner les valeurs et attributs souhaités. La case à cocher située à droite d'une ligne de valeur permet de transférer l'état ainsi que tous les attributs associés ; la sélection de l'appareil permet quant à elle d'inclure toutes les valeurs de celui-ci.
@@ -265,7 +266,7 @@ Après le chargement initial de l'état complet, l'application traite les change
 
 En cas de défaillance de la connexion en temps réel, le mécanisme d'interrogation (polling) précédent prend le relais — configuré par défaut sur un intervalle de cinq secondes, mais ajustable via `poll_interval` (de 1 à 300 secondes). Les changements survenus pendant une interruption ou entre deux intervalles d'interrogation ne peuvent pas être reconstitués a posteriori. Une saturation de la file d'attente des événements est signalée et déclenche une resynchronisation.
 
-L'état permet de distinguer la connexion MQTT de l'accessibilité de HA ; il affiche le mode actif (temps réel/interrogation), l'heure de la dernière synchronisation, la date de la dernière publication, le nombre total de publications, ainsi que tout type d'erreur ayant été résolu. Les identifiants d'accès et le contenu des messages (payloads) ne sont pas affichés.
+L'état permet de distinguer la connexion MQTT de l'accessibilité de HA ; il affiche le mode actif (temps réel/interrogation), l'heure de la dernière synchronisation, la date de la dernière publication, le nombre total de publications, ainsi que les types d'erreurs expurgés des données sensibles. Les identifiants d'accès et le contenu des messages (payloads) ne sont pas affichés.
 
 | Sujet MQTT | Contenu |
 | --- | --- |

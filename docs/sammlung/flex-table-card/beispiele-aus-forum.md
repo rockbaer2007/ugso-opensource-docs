@@ -10,6 +10,10 @@ Diese Beispiele stammen aus dem Home-Assistant-Community-Beitrag [Styling the ca
 Die Beispiele sind Forumsausschnitte und können je nach Home-Assistant-Version, `flex-table-card`-Version oder zusätzlich genutzten Karten wie `auto-entities` und `card_mod` angepasst werden müssen.
 :::
 
+::: warning Unvollständige Forumsausschnitte
+Einige Originalausschnitte sind keine eigenständig einfügbaren Karten: Listen müssen passend eingerückt und fehlende YAML-Anker wie `ref_brightness_right_6cols` aus der umgebenden Konfiguration ergänzt werden. Der Quelltext bleibt als Forumsausschnitt erhalten. Die UIX-Spalte ersetzt nur die vorhandenen `card_mod`-Schlüssel.
+:::
+
 ::: info UIX-Versionen
 In der dritten Spalte steht jeweils eine UIX-Variante des Codes. Dabei wird nur der Styling-Teil ersetzt: `card_mod:` wird zu `uix:`, die native `css:`-Konfiguration der flex-table-card bleibt unverändert.
 :::
