@@ -19,3 +19,5 @@ uix:
 ```
 La mod-card crée un élément `<ha-card>` et y place votre carte. Cette carte sera transparente, sans bordure ni arrière-plan.
 :::
+
+Les points de suspension de l’exemple sont des emplacements à remplacer par votre configuration de carte et vos règles CSS ; cet extrait n’est pas directement exécutable tel quel.

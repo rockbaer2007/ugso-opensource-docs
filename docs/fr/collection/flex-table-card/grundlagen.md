@@ -9,7 +9,8 @@ description: 'Principe fondamental de `flex-table-card` : lignes, colonnes et s�
 
 La configuration repose essentiellement sur deux étapes :
 
-1. `entities` sélectionne les lignes disponibles. 2. `columns` définit quelles valeurs, parmi celles présentes sur chaque ligne, doivent être affichées sous forme de colonnes.
+1. `entities` sélectionne les lignes disponibles.
+2. `columns` définit quelles valeurs, parmi celles présentes sur chaque ligne, doivent être affichées sous forme de colonnes.
 
 ## Exemple minimal {#minimales-beispiel}
 

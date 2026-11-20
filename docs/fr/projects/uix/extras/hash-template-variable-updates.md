@@ -6,6 +6,8 @@ description: Découvrez comment désactiver les mises à jour de la variable has
 
 Par défaut, UIX expose `hash` comme variable de modèle et met à jour les modèles lorsque le fragment d'URL (`#...`) change. Cette option désactive ce comportement pour éviter les nouvelles liaisons et mises à jour Forge déclenchées par le hash.
 
+UIX surveille les événements `location-changed` et `popstate` afin de réassocier les modèles lorsque le fragment change.
+
 ## Réglage depuis l'interface de l'intégration
 
 Cette option est **désactivée par défaut**. Pour l'activer :
@@ -25,5 +27,6 @@ Lorsque cette option est activée :
 - Les changements d'URL limités au hash ne déclenchent **pas** de nouvelle liaison des modèles UIX.
 - Les changements d'URL limités au hash ne déclenchent **pas** de mise à jour UIX Forge.
 
-!!! warning
-    Tout modèle qui référence `hash` sans valeur par défaut génère une erreur lorsque cette option est activée, car la variable n'est plus disponible. Si vous souhaitez pouvoir activer ou désactiver l'option, définissez une valeur par défaut, par exemple `&#123;&#123; hash | default("") &#125;&#125;`, ou utilisez une variable locale dans les modèles plus complexes : `{% set hashWithDefault = hash | default("") %}`.
+::: warning
+Tout modèle qui référence `hash` sans valeur par défaut génère une erreur lorsque cette option est activée, car la variable n'est plus disponible. Si vous souhaitez pouvoir activer ou désactiver l'option, définissez une valeur par défaut, par exemple <code v-pre>{{ hash | default("") }}</code>, ou utilisez une variable locale dans les modèles plus complexes : `{% set hashWithDefault = hash | default("") %}`.
+:::

@@ -36,7 +36,7 @@ css:
   table: "border: 0;"
 ```
 
-The style is completed with `+`.
+With `+`, the new declarations are appended to the existing style instead of replacing it.
 
 ```yaml
 css:

@@ -14,6 +14,6 @@ description: Home Assistant test systems and the attribution of historical test 
 
 - **ARM test system (Pi 5) – 192.168.178.177:** **Raspberry Pi 5 (ARM64) with 8 GB RAM and 4 CPU cores**.
 
-Historical reports for Test system 2 (64) refer to that VM. Each report specifies its host, software version and test scope.
+The user confirmed this attribution. Historical results from Test system 2 (64) do not automatically count as tests on the PC (64) test system. Each report specifies its host, software version and test scope.
 
 [HA 2026.11 compatibility checks](./ha-2026-11-compatibility) · [Historical ATLAS test reports](/en/projects/atlas/development-status)

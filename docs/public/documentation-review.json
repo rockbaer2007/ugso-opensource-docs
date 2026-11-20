@@ -1971,10 +1971,11 @@
       },
       "disposition": "intentional-difference",
       "reason": "Reviewed against canonical master f63ebbd / stable UIX 9.0.0 on 2026-11-05. English retains canonical source content with VitePress markup. DE/FR provide editorial translations with current Marketplace, service, frame-panel and version guidance. Historical version annotations and compact translated sections explain structural signals.",
-      "source_sha256": "da26aad59d0459325ead36313a4aa25d6d36dea6575997eae64d84debae79929",
+      "source_sha256": "431e335383572bd9bb79bdf0f30f63a71597f7b0570f868c5bddaffdc8b81023",
       "target_sha256": "8a8d7684a653149e5558d97f212e6df9ad93cb69fa8d74838982e5719cc96989",
       "revalidated_at": "2026-11-20",
-      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6"
+      "canonical_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/quick-start.md",
@@ -2242,7 +2243,9 @@
       "disposition": "supplemented",
       "reason": "Added 1 exact German-reference configurations with French headings, retaining the existing French guide; relevant context/defaults and the untranslated theme paragraph were reviewed.",
       "source_sha256": "8da5e47a10bf5606ccde757ef36db73960c6e317a3abe4d3fdeb0d5f82895fda",
-      "target_sha256": "119b28c69956efb04a9057234817198a3742fdb70fce4b73fe40ad92c204206f"
+      "target_sha256": "89fcbbb433970979bfc4632c38206b472d947c847f87519bd6a57e1cd21d0704",
+      "revalidated_at": "2026-11-20",
+      "revalidation_note": "Revalidated during complete editorial content comparison; see documentation-semantic-review.json."
     },
     {
       "source": "projects/uix/using/other.md",

@@ -250,7 +250,7 @@ def render_report(report, locale):
         }[locale]
         lines[index:index] = [note, '', fixes, '']
     if SEMANTIC_REVIEW.exists():
-        planned = Counter(entry['locale'] for entry in json.loads(CONTENT_REVIEW.read_text(encoding='utf-8'))['pages'])
+        planned = {lang: len(report['pages']) for lang in ['en', 'fr']}
         done = {lang: report['summary'][lang]['content_reviewed'] for lang in ['en', 'fr']}
         meaning = {
             'de': '**Inhaltlich geprüft** bedeutet: Abschnitte und Aussagen wurden auf Bedeutung, Vollständigkeit, Voraussetzungen, Einschränkungen und den Zweck der Beispiele mit der Referenz verglichen. Gefundene Fehlübersetzungen oder Widersprüche wurden korrigiert. Dies ist kein neuer App-Live-Test und keine rechtliche Zertifizierung. Noch nicht so geprüfte Seiten behalten ihren technischen Status. [Einzelbewertungen](/documentation-semantic-review.json).',

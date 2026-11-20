@@ -14,6 +14,6 @@ description: Systèmes de test Home Assistant et attribution des comptes rendus 
 
 - **système de test ARM (Pi 5) – 192.168.178.177 :** **Raspberry Pi 5 (ARM64) avec 8 Go de RAM et 4 cœurs CPU**.
 
-Chaque compte rendu précise l’hôte, la version du logiciel et le périmètre du test.
+Cette attribution a été confirmée par l’utilisateur. Les anciens résultats du système de test 2 (64) ne constituent pas automatiquement des tests sur le système PC (64). Chaque compte rendu précise l’hôte, la version du logiciel et le périmètre du test.
 
 [Vérification de compatibilité HA 2026.11](./ha-2026-11-compatibility) · [Comptes rendus historiques ATLAS](/fr/projects/atlas/development-status)

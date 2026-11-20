@@ -10,3 +10,5 @@ UI eXtension adapte différentes fonctions des éléments HTML utilisés par l�
 - [Navigation dans le DOM](dom.md)
 - [Application des styles UIX](application.md)
 - [Contextes UIX](./context)
+
+Pour commencer la mise en pratique, consultez le [démarrage rapide](../quick-start), [UIX Styling](../using/index) et [UIX Forge](../forge/index).

@@ -9,7 +9,7 @@ description: Cell actions, tap actions and edit actions of the flex-table-card.
 
 Columns can trigger Home Assistant actions. Typical Lovelace actions such as `more-info`, `toggle`, `perform-action`, `navigate`, `url`, `assist` and also `fire-dom-event` are supported.
 
-## More info while typing {#more-info-beim-tippen}
+## More info on tap {#more-info-beim-tippen}
 
 ```yaml
 type: custom:flex-table-card

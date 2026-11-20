@@ -4,6 +4,8 @@ description: Découvrez comment utiliser UI eXtension pour styliser les élémen
 ---
 # Utiliser UIX Styling pour Home Assistant
 
+UIX Styling permet de personnaliser avec du CSS presque tous les éléments visibles de l’interface Home Assistant : cartes, lignes, badges, icônes, images, sections, vues et variables de thème.
+
 - :bar_chart: [Styliser les cartes](./cards.md)
 - :bulb: [Styliser les entités, badges, éléments et marqueurs d'entité](entities.md)
 - :red_circle: [Styliser les icônes](./icons.md)
@@ -15,6 +17,8 @@ description: Découvrez comment utiliser UI eXtension pour styliser les élémen
 - :clipboard: [Modèles](./templates.md)
 - :art: [Thèmes](./themes.md)
 - :hammer_and_pick: [Autres options](other.md)
+
+La configuration s’écrit généralement en YAML sous `uix:`. Selon l’élément, UIX peut cibler différentes parties du DOM, traverser des racines Shadow DOM imbriquées et évaluer des modèles. L’exemple de base ci-dessous illustre cette structure.
 
 ## Exemples complémentaires de la référence allemande {#german-reference-examples}
 

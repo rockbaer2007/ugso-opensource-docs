@@ -50,7 +50,7 @@ jobs:
         run: python scripts/check-content-review.py --built
 
       - name: Inhaltliche Einzelprüfungen verifizieren
-        run: python scripts/check-semantic-review.py
+        run: python scripts/check-semantic-review.py --built
 
       - name: Ergänzte Übersetzungen und technische Beispiele prüfen
         run: python scripts/check-translation-completion.py
