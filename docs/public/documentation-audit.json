@@ -17146,11 +17146,12 @@
         "de": {
           "path": "projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "e14497e08dac75ae3ad8ed4e2f8c62edbeb133f3516d82c94bf936c7caf0fed2",
-          "words": 1742,
-          "headings": 10,
+          "sha256": "ed9c7ec23b356aa4c9d9efb77153ddf04b71b115acc02187cd6d871acab221ce",
+          "words": 2328,
+          "headings": 13,
           "examples": 3,
           "versions": [
+            "0.1.22",
             "0.1.5",
             "0.10.0"
           ],
@@ -17159,11 +17160,12 @@
         "en": {
           "path": "en/projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "74a879e73c1b7226500c59e4e4ef91a6b27da2d8f903bcd3503059219264503c",
-          "words": 1819,
-          "headings": 10,
+          "sha256": "2eb588d1887be56e048115dcd599dfc37f80fb8d29df4022e6c3f84a59875f4e",
+          "words": 2461,
+          "headings": 13,
           "examples": 3,
           "versions": [
+            "0.1.22",
             "0.1.5",
             "0.10.0"
           ],
@@ -17179,11 +17181,12 @@
         "fr": {
           "path": "fr/projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "27d6de89577bc1616c44a9a853c47f6c91ccf3ac661fc6d0f52b4185795c592b",
-          "words": 2060,
-          "headings": 10,
+          "sha256": "d2d5f2e3c274eab963e02acb542c0c31094c71e336b76c2d44ac31f01165e40c",
+          "words": 2786,
+          "headings": 13,
           "examples": 3,
           "versions": [
+            "0.1.22",
             "0.1.5",
             "0.10.0"
           ],

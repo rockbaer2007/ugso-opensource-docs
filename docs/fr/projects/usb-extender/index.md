@@ -5,7 +5,7 @@ description: Relier des touches USB, Stream Deck et claviers à macros à trois 
 
 # USB Extender pour Home Assistant
 
-**0.1.5 · Raspberry Pi · Mise à jour du 21 novembre 2026**
+**0.1.22 · Version de test publique · Raspberry Pi · Mise à jour du 21 novembre 2026**
 
 Un clavier USB connecté au Raspberry Pi peut servir de commande pour Home
 Assistant ou ioBroker. USB Extender lit les entrées et les publie vers **trois
@@ -13,7 +13,7 @@ courtiers MQTT simultanément** au maximum. L’interface Web sert à la configu
 et peut ensuite être arrêtée ; le service USB/MQTT continue indépendamment.
 
 [GitHub / README allemand et anglais](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.5](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.5)
+· [ZIP 0.1.22](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.22)
 · [Modifications](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 Il s’agit d’un programme autonome pour Raspberry Pi, pas d’une application HA à
@@ -41,7 +41,7 @@ autorisation explicite dans l’application. Ce sont deux capacités distinctes.
 | Elgato Stream Deck physiques | Pilote HID dédié ; fonctions d’affichage et d’entrée ci-dessous | Implémentées ; aucun Stream Deck physique encore testé dans ce projet |
 | Autres appareils à touches LCD | Entrées clavier éventuellement via HID ; affichage nécessitant le pilote du fabricant | Aucune compatibilité générale garantie |
 | Imprimantes, caméras, stockage USB, interfaces audio, appareils série et autres contrôleurs | Inventaire ; fonctions particulières nécessitant des adaptateurs spécifiques | Pas de transmission générale d’impression, caméra, audio, MIDI ou série |
-| Stream Deck Mobile / application sur tablette | Ce n’est pas un périphérique USB directement connecté au Pi | Non intégré actuellement |
+| Stream Deck Mobile / application Android | Serveur réseau expérimental optionnel avec jumelage QR, images et MQTT | Jumelage, transfert d’icônes, couleurs et grille 8×8 confirmés par l’utilisateur ; stabilité à long terme encore à vérifier |
 
 Un appareil répertorié n’est pas automatiquement activé. Dans **USB-Geräte**,
 attribuer un nom, cocher **Gerät für Eingaben freigeben**, puis choisir les courtiers
@@ -61,8 +61,8 @@ Copier le ZIP sur le Pi, ouvrir un terminal dans son dossier de téléchargement
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.5-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.5
+unzip USB-Extender-Home-Assistant-0.1.22-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.22
 sudo bash install.sh
 ```
 
@@ -194,13 +194,85 @@ physiques déjà effectués** dans ce projet.
 - Molettes présentes : sens de rotation et appui comme entrées.
 - Écran tactile présent : événements tactiles ; pas d’éditeur d’écran librement composé.
 - Pedal et autres modèles sans écran : entrées, mais pas d’icônes sur touches d’affichage.
-- Une disposition fixe ; changement de profil/page et icônes animées restent à réaliser.
+- Une disposition fixe ; changement de profil/page encore à réaliser. Les icônes animées sont implémentées.
 
-Dans **Iconbibliothek**, importer des images ou un dossier situé sur le Pi. Les
-archives ZIP et `.streamDeckIconPack` disponibles localement sont également
-acceptées. Aucun téléchargement automatique depuis le Marketplace Elgato.
-Respecter les droits de chaque pack ; l’application utilise la première image
-d’une animation.
+### Éditeur graphique et liste compacte des touches {#editor}
+
+L’onglet **Stream Deck** reste visible hors ligne et conserve l’éditeur et la
+dernière grille. Autoriser l’appareil et enregistrer, puis choisir une touche :
+texte, icône, image de fond, position et couleurs. L’état **enfoncé** accepte une
+seconde icône et des couleurs de texte/fond distinctes. Un texte en haut/bas
+réserve sa place à côté de l’icône ajustée. L’aperçu ne déclenche aucune action MQTT.
+Enregistrer ensuite.
+
+[![Éditeur avec appareil simulé](/images/usb-extender/editor-022.png)](/images/usb-extender/editor-022.png)
+
+Cette image est une **démonstration locale**, pas un essai matériel.
+Dans **Tasten & Anzeigen**, les lignes repliées montrent **Appareil – Key – Nom** ;
+une seule touche est dépliée. **Speichern** enregistre toutes les modifications en
+attente ; **Abbrechen** annule seulement celles de cette touche. Des repères signalent
+les modifications non enregistrées. **Bearbeiten** ouvre les options MQTT avancées
+et les délais.
+
+## Stream Deck Mobile : optionnel et expérimental {#mobile}
+
+1. Activer **Mobile-Server**, saisir l’adresse accessible du Pi et le port
+   (**28198** par défaut), puis enregistrer.
+2. Choisir **Kopplung starten · QR-Code** et scanner avec **Ajouter un ordinateur** dans Android.
+3. Comparer l’empreinte à six chiffres. Seulement si elle correspond, cliquer sur
+   **Gerät vertrauen** dans **Mobile-Verbindungen**. La confiance reste enregistrée.
+4. Ouvrir un deck dans Android, autoriser l’appareil Mobile dans USB Extender et
+   enregistrer. Affecter l’apparence et MQTT dans l’éditeur Stream Deck.
+5. **Régler lignes et colonnes dans Android.** L’éditeur suit la grille annoncée
+   jusqu’à 8×8 ; aucun remplacement de grille côté éditeur.
+
+Le service Mobile fonctionne indépendamment du service Web. Le jumelage exige
+l’interface Web ; elle peut ensuite être arrêtée. Port WebSocket local, sans
+découverte cloud/Bonjour ni modification des droits d’achat Pro de l’application.
+
+**Mobile-Verbindungen** affiche compteurs d’images/métadonnées, ping/pong et dernière
+déconnexion. Pour des touches **statiques** inchangées, les compteurs d’images doivent
+cesser d’augmenter. Le maintien de connexion n’envoie pas de nouvelles images ;
+les animations en transmettent volontairement. L’utilisateur a confirmé jumelage,
+icônes, couleurs et 8×8. Un essai prolongé au repos sur tablette réelle reste ouvert.
+
+## Bibliothèque d’icônes, animations et import de packs {#icons}
+
+Déplier les packs séparément ou rechercher noms de packs, fichiers et sous-dossiers.
+Survol/focus affiche nom et aperçu. Miniatures 48×48 dans des cases compactes 52×52 ;
+la licence figure une fois dans l’en-tête du pack. Espace libre et total en haut de page.
+
+[![Packs avec aperçu, démonstration locale](/images/usb-extender/icons-022.png)](/images/usb-extender/icons-022.png)
+
+Importer images seules, dossiers du navigateur, dossiers sur le Pi et packs locaux
+ZIP, `.streamDeckIconPack` ou `.streamDeckPlugin`. Les plugins fournissent seulement
+les images des dossiers pris en charge, jamais le code exécutable. Les métadonnées
+JSON reconnues donnent le nom du pack, sinon le nom du dossier/de l’archive est utilisé.
+Les noms et sous-dossiers d’origine sont conservés. Aucun téléchargement automatique
+du Marketplace ; respecter les droits d’utilisation.
+
+PNG/JPEG et SVG statiques sont pris en charge. GIF/WebP s’animent dans les états
+**normal et enfoncé**, jusqu’à 120 images et 10 images/s. Les animations SVG ne sont
+pas lues ; les fonds restent statiques. La lecture réelle doit être vérifiée par modèle.
+
+Originaux : `/var/lib/ugso-usbhub/icons/IconPacks/` ; index : `icons/index.json` ;
+aperçus dérivés : `icons/.cache/`. La suppression d’un pack crée d’abord une
+sauvegarde et bloque les packs utilisés par des affectations enregistrées.
+
+**Depuis 0.1.22 :** enregistrer l’index une fois à la fin et créer aperçus/données
+d’animation à la demande. Les dossiers du navigateur sont envoyés en un ZIP,
+en conservant plusieurs packs et leurs chemins. La progression utilise les vrais
+compteurs du serveur. **Terminer un import en cours avant toute mise à jour.**
+
+| Comparaison unique sur PC Windows local | Avant | 0.1.22 |
+| --- | --- | --- |
+| Itsyhome, 240 PNG réels | 4,262 s | 0,395 s |
+| 6 800 PNG synthétiques | 458,323 s | 10,464 s |
+
+Écritures de l’index : auparavant 240 ou 6 800, désormais une par import.
+Ces mesures concernent le PC, pas le Pi/la carte SD. L’utilisateur a signalé un
+arrêt à 2 898 sur 6 862 icônes. Le message d’erreur et la version installée restent
+à vérifier ; le traitement réussi de ce pack sur le Pi n’est pas confirmé.
 
 Pour un appareil ressemblant à un Stream Deck, la partie clavier peut déjà
 fonctionner via HID. LCD, tactile et commandes propres au fabricant peuvent
@@ -238,9 +310,11 @@ ne sont pas pour autant testées sur chaque appareil.
 
 [![Événements F12 avec topics sélectionnés et trois destinations MQTT](/images/usb-extender/events.png)](/images/usb-extender/events.png)
 
-En complément, 61 tests Python locaux et deux vérifications JavaScript/DOM
-réussissent, notamment double-clic, persistance Switch après redémarrage,
-routage et erreurs. Le test d’un Stream Deck physique reste ouvert.
+La version 0.1.22 réussit 134 tests Python locaux ainsi que des vérifications
+JavaScript/DOM et Chrome : enregistrement, affichage mobile, packs, animations et
+envoi de dossiers. Les tests locaux du protocole Mobile ne remplacent pas un
+essai prolongé sur tablette. Un Stream Deck physique et un essai 8×8 Mobile
+prolongé sans modification restent à vérifier.
 
 ## Tester votre matériel et faire un retour {#feedback}
 
