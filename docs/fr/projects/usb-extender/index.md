@@ -270,9 +270,10 @@ compteurs du serveur. **Terminer un import en cours avant toute mise à jour.**
 | 6 800 PNG synthétiques | 458,323 s | 10,464 s |
 
 Écritures de l’index : auparavant 240 ou 6 800, désormais une par import.
-Ces mesures concernent le PC, pas le Pi/la carte SD. L’utilisateur a signalé un
-arrêt à 2 898 sur 6 862 icônes. Le message d’erreur et la version installée restent
-à vérifier ; le traitement réussi de ce pack sur le Pi n’est pas confirmé.
+Ces mesures concernent le PC, pas le Pi/la carte SD. Lors du précédent import de
+6 862 icônes, la page de connexion est réapparue à 2 898, sans message d’erreur.
+Après installation de la mise à jour, l’utilisateur indique que cela fonctionne
+à nouveau. La fin de l’import des 6 862 icônes n’est pas encore confirmée.
 
 Pour un appareil ressemblant à un Stream Deck, la partie clavier peut déjà
 fonctionner via HID. LCD, tactile et commandes propres au fabricant peuvent

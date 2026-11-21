@@ -261,9 +261,10 @@ Paketen und ihren Pfaden. Der Ladebalken nutzt echte Serverzählstände.
 | 6.800 synthetische PNGs | 458,323 s | 10,464 s |
 
 Indexschreibvorgänge: vorher 240 beziehungsweise 6.800, danach jeweils einer.
-Das sind PC-Messwerte, keine Pi-/SD-Kartenmessung. Der Nutzer meldete beim Import
-mit 6.862 Icons einen Abbruch bei 2.898. Fehlermeldung und installierte Version
-sind noch zu prüfen; dieses Paket ist auf dem Pi nicht erfolgreich bestätigt.
+Das sind PC-Messwerte, keine Pi-/SD-Kartenmessung. Beim vorherigen Import mit
+6.862 Icons erschien bei 2.898 wieder die Loginseite, ohne Fehlermeldung.
+Nach Einspielen des Updates meldet der Nutzer, dass es wieder funktioniert.
+Der vollständige Abschluss aller 6.862 Icons ist noch nicht bestätigt.
 
 Bei Fremdgeräten mit ähnlicher Optik kann der Tastaturteil bereits über HID
 funktionieren. LCDs, Touch und herstellerspezifische Befehle benötigen eventuell

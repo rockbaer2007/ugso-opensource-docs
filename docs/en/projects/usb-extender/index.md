@@ -256,9 +256,10 @@ and their paths. Progress uses actual server processing counts.
 | 6,800 synthetic PNGs | 458.323 s | 10.464 s |
 
 Index writes: previously 240 or 6,800, now one per import.
-These are PC measurements, not Pi/SD-card timings. The user reported a 6,862-icon
-import stopping at 2,898. Its error message and installed version still need
-checking; successful processing of that package on the Pi is not confirmed.
+These are PC measurements, not Pi/SD-card timings. During the previous 6,862-icon
+import, the login page reappeared at 2,898 without an error message. After installing
+the update, the user reports that it works again. Completion of all 6,862 icons
+has not yet been confirmed.
 
 For other similarly shaped devices, the keyboard part may already work through
 HID. LCDs, touch and vendor-specific commands may require a separate adapter.
