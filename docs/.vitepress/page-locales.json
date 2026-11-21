@@ -2984,6 +2984,21 @@
     "EN": "/en/projects/ultimate-timer/configuration",
     "FR": "/fr/projects/ultimate-timer/configuration"
   },
+  "/projects/usb-extender/": {
+    "DE": "/projects/usb-extender/",
+    "EN": "/en/projects/usb-extender/",
+    "FR": "/fr/projects/usb-extender/"
+  },
+  "/en/projects/usb-extender/": {
+    "DE": "/projects/usb-extender/",
+    "EN": "/en/projects/usb-extender/",
+    "FR": "/fr/projects/usb-extender/"
+  },
+  "/fr/projects/usb-extender/": {
+    "DE": "/projects/usb-extender/",
+    "EN": "/en/projects/usb-extender/",
+    "FR": "/fr/projects/usb-extender/"
+  },
   "/sammlung/calendar-card-pro/beispiele": {
     "DE": "/sammlung/calendar-card-pro/beispiele",
     "EN": "/en/collection/calendar-card-pro/beispiele",

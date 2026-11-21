@@ -6,7 +6,7 @@ aside: false
 
 # État des traductions de la documentation
 
-DE / EN / FR · 2026-11-20
+DE / EN / FR · 2026-11-21
 
 Toutes les pages de référence allemandes disposent désormais de contenu en anglais et en français. Les 128 pages provisoires ont été remplacées et les 20 pages françaises manquantes ajoutées.
 
@@ -16,11 +16,11 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 252 | 0 | 0 | 0 |
-| EN | 252 | 0 | 0 | 0 |
-| FR | 252 | 0 | 0 | 0 |
+| DE | 253 | 0 | 0 | 0 |
+| EN | 253 | 0 | 0 | 0 |
+| FR | 253 | 0 | 0 | 0 |
 
-**Comparaison technique du 2026-11-20 :** les évaluations sont liées aux empreintes actuelles des fichiers ; toute modification exige une nouvelle revue. Les lacunes et contradictions sont corrigées, tandis que les différences voulues d’historique et de structure sont justifiées. Le tableau indique les points encore ouverts ; le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Évaluations documentées](/documentation-review.json).
+**Comparaison technique du 2026-11-21 :** les évaluations sont liées aux empreintes actuelles des fichiers ; toute modification exige une nouvelle revue. Les lacunes et contradictions sont corrigées, tandis que les différences voulues d’historique et de structure sont justifiées. Le tableau indique les points encore ouverts ; le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Évaluations documentées](/documentation-review.json).
 
 
 Les ajouts ont été réalisés avec une aide à la traduction et vérifiés techniquement par rapport à la source allemande : code, identifiants, tableaux et images. Quatorze autres lacunes ont été comblées par des références complémentaires, en conservant les pages et liens existants. Il ne s’agit pas d’une certification linguistique complète. Les points à examiner comprennent aussi des résumés volontairement différents et des versions historiques.
@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 249 | 3 |
-| FR | 249 | 3 |
+| EN | 249 | 4 |
+| FR | 249 | 4 |
 
 ## Inventaire complet des pages
 
@@ -247,6 +247,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Contenu vérifié](/en/projects/ultimate-timer/) | [Contenu vérifié](/fr/projects/ultimate-timer/) |
 | [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Contenu vérifié](/en/projects/ultimate-timer/installation) | [Contenu vérifié](/fr/projects/ultimate-timer/installation) |
 | [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Contenu vérifié](/en/projects/ultimate-timer/configuration) | [Contenu vérifié](/fr/projects/ultimate-timer/configuration) |
+| [projects/usb-extender/index.md](/projects/usb-extender/) | [Contenu présent](/en/projects/usb-extender/) | [Contenu présent](/fr/projects/usb-extender/) |
 | [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Contenu vérifié](/en/collection/calendar-card-pro/beispiele) | [Contenu vérifié](/fr/collection/calendar-card-pro/beispiele) |
 | [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Contenu vérifié](/en/collection/calendar-card-pro/entwicklung) | [Contenu vérifié](/fr/collection/calendar-card-pro/entwicklung) |
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Contenu vérifié](/en/collection/calendar-card-pro/features) | [Contenu vérifié](/fr/collection/calendar-card-pro/features) |

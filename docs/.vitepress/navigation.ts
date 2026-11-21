@@ -36,6 +36,7 @@ export function reorganizeNavigation(
     ] },
     { text: text.apps, items: [
       overview('ha-apps'),
+      { text: 'USB Extender (Raspberry Pi)', link: `${prefix}/projects/usb-extender/` },
       ...apps.filter(item => item.link !== `${prefix}/projects-mqtt/` && !['sidebar-manager', 'sidebar-colors', 'automation-status-card', 'parcel-to-mqtt'].some(slug => item.link === `${prefix}/projects/${slug}/`)),
       { text: 'UGSo HA Apps', link: `${prefix}/projects-mqtt/` },
       { ...project('parcel-to-mqtt'), text: `${project('parcel-to-mqtt').text} (${text.archived})` },
@@ -60,7 +61,7 @@ export function reorganizeNavigation(
   return [
     source[0],
     byText('EEP'),
-    { text: 'Home Assistant', activeMatch: '^' + prefix + '/(?:projects-mqtt/|(?:sammlung|collection)/(?:ha-|hacs-|dashboard-layout|frosted-|neomorphix-|zendure-|calendar-card|mushroom|flex-table|testsysteme|test-systems)|projects/(?:automation-status-card|sidebar-manager|sidebar-colors|dashboard-user-manager|mqtt-client|blocks-for-ha|logic-studio|grafik-visual-studio|callmebot|callmebot-signal|fritzbox-to-mqtt|heizoel-to-mqtt|parcel-to-mqtt|hadash)/)', items: haItems },
+    { text: 'Home Assistant', activeMatch: '^' + prefix + '/(?:projects-mqtt/|(?:sammlung|collection)/(?:ha-|hacs-|dashboard-layout|frosted-|neomorphix-|zendure-|calendar-card|mushroom|flex-table|testsysteme|test-systems)|projects/(?:usb-extender|automation-status-card|sidebar-manager|sidebar-colors|dashboard-user-manager|mqtt-client|blocks-for-ha|logic-studio|grafik-visual-studio|callmebot|callmebot-signal|fritzbox-to-mqtt|heizoel-to-mqtt|parcel-to-mqtt|hadash)/)', items: haItems },
     { text: 'ATLAS', activeMatch: '^' + prefix + '/projects/atlas(?:-plugins)?/', items: [
       { items: links(`${prefix}/projects/atlas/`) },
       { text: 'ATLAS Plugins', items: links(`${prefix}/projects/atlas-plugins/`) }

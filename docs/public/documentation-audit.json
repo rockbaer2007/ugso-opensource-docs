@@ -1,12 +1,12 @@
 {
-  "reviewed_at": "2026-11-20",
+  "reviewed_at": "2026-11-21",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 252,
+  "source_pages": 253,
   "summary": {
     "de": {
-      "content-present": 252,
-      "existing_pages": 252,
+      "content-present": 253,
+      "existing_pages": 253,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
@@ -15,8 +15,8 @@
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 252,
-      "existing_pages": 252,
+      "content-present": 253,
+      "existing_pages": 253,
       "unmatched_pages": 0,
       "review_signals": 65,
       "reviewed_findings": 74,
@@ -25,8 +25,8 @@
       "open_review_signals": 0
     },
     "fr": {
-      "content-present": 252,
-      "existing_pages": 252,
+      "content-present": 253,
+      "existing_pages": 253,
       "unmatched_pages": 0,
       "review_signals": 30,
       "reviewed_findings": 47,
@@ -17136,6 +17136,64 @@
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
             "assessment": "All nine inputs, optional STOP helper, input_boolean requirement, RUNNING/DONE MQTT publication, defaults and five-minute duration interpretation retained."
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/usb-extender/index.md",
+      "locales": {
+        "de": {
+          "path": "projects/usb-extender/index.md",
+          "status": "content-present",
+          "sha256": "e14497e08dac75ae3ad8ed4e2f8c62edbeb133f3516d82c94bf936c7caf0fed2",
+          "words": 1742,
+          "headings": 10,
+          "examples": 3,
+          "versions": [
+            "0.1.5",
+            "0.10.0"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/usb-extender/index.md",
+          "status": "content-present",
+          "sha256": "74a879e73c1b7226500c59e4e4ef91a6b27da2d8f903bcd3503059219264503c",
+          "words": 1819,
+          "headings": 10,
+          "examples": 3,
+          "versions": [
+            "0.1.5",
+            "0.10.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/usb-extender/index.md",
+          "status": "content-present",
+          "sha256": "27d6de89577bc1616c44a9a853c47f6c91ccf3ac661fc6d0f52b4185795c592b",
+          "words": 2060,
+          "headings": 10,
+          "examples": 3,
+          "versions": [
+            "0.1.5",
+            "0.10.0"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
           }
         }
       }

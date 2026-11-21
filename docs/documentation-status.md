@@ -6,7 +6,7 @@ aside: false
 
 # Sprachstand der Dokumentation
 
-DE / EN / FR · 2026-11-20
+DE / EN / FR · 2026-11-21
 
 Alle deutschen Referenzseiten sind jetzt auch in EN und FR mit Inhalt vorhanden. Die 128 Platzhalter wurden ersetzt und die 20 fehlenden französischen Seiten ergänzt.
 
@@ -16,11 +16,11 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 252 | 0 | 0 | 0 |
-| EN | 252 | 0 | 0 | 0 |
-| FR | 252 | 0 | 0 | 0 |
+| DE | 253 | 0 | 0 | 0 |
+| EN | 253 | 0 | 0 | 0 |
+| FR | 253 | 0 | 0 | 0 |
 
-**Technischer Abgleich vom 2026-11-20:** Vorhandene Einzelbewertungen sind an die aktuellen Datei-Prüfsummen gebunden; Änderungen erfordern eine erneute Prüfung. Echte Lücken und widersprüchliche Angaben werden korrigiert, bewusst unterschiedliche Versionshistorien und redaktionelle Gliederungen mit Begründung eingeordnet. Die Tabelle zeigt die noch offenen Hinweise; der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Dokumentierte Einzelbewertungen](/documentation-review.json).
+**Technischer Abgleich vom 2026-11-21:** Vorhandene Einzelbewertungen sind an die aktuellen Datei-Prüfsummen gebunden; Änderungen erfordern eine erneute Prüfung. Echte Lücken und widersprüchliche Angaben werden korrigiert, bewusst unterschiedliche Versionshistorien und redaktionelle Gliederungen mit Begründung eingeordnet. Die Tabelle zeigt die noch offenen Hinweise; der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Dokumentierte Einzelbewertungen](/documentation-review.json).
 
 
 Die Ergänzungen wurden mit Übersetzungsunterstützung erstellt und technisch gegen die deutsche Vorlage geprüft: Code, Bezeichner, Tabellen und Bilder. 14 weitere Inhaltslücken wurden als ergänzende Referenz geschlossen; vorhandene Seiten und Links bleiben erhalten. Das ist keine vollständige sprachliche Zertifizierung. Verbleibende Prüfhinweise betreffen auch bewusst unterschiedliche Zusammenfassungen und historische Versionsangaben.
@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 249 | 3 |
-| FR | 249 | 3 |
+| EN | 249 | 4 |
+| FR | 249 | 4 |
 
 ## Vollständiges Seiteninventar
 
@@ -247,6 +247,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Inhaltlich geprüft](/en/projects/ultimate-timer/) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/) |
 | [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Inhaltlich geprüft](/en/projects/ultimate-timer/installation) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/installation) |
 | [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Inhaltlich geprüft](/en/projects/ultimate-timer/configuration) | [Inhaltlich geprüft](/fr/projects/ultimate-timer/configuration) |
+| [projects/usb-extender/index.md](/projects/usb-extender/) | [Inhalt vorhanden](/en/projects/usb-extender/) | [Inhalt vorhanden](/fr/projects/usb-extender/) |
 | [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Inhaltlich geprüft](/en/collection/calendar-card-pro/beispiele) | [Inhaltlich geprüft](/fr/collection/calendar-card-pro/beispiele) |
 | [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Inhaltlich geprüft](/en/collection/calendar-card-pro/entwicklung) | [Inhaltlich geprüft](/fr/collection/calendar-card-pro/entwicklung) |
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Inhaltlich geprüft](/en/collection/calendar-card-pro/features) | [Inhaltlich geprüft](/fr/collection/calendar-card-pro/features) |

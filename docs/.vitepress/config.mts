@@ -141,6 +141,18 @@ const sourceNavFr = [
 ]
 
 const sidebarDe = {
+  '/projects/usb-extender/': [{ text: 'USB Extender', items: [
+    { text: 'Überblick und Bilder', link: '/projects/usb-extender/' },
+    { text: 'Geräte und Unterstützung', link: '/projects/usb-extender/#hardware' },
+    { text: 'Installation', link: '/projects/usb-extender/#installation' },
+    { text: 'Einrichten und Anlernen', link: '/projects/usb-extender/#setup' },
+    { text: 'Topics und Funktionen', link: '/projects/usb-extender/#topics' },
+    { text: 'Home Assistant und ioBroker', link: '/projects/usb-extender/#integration' },
+    { text: 'Stream Deck und ähnliche Geräte', link: '/projects/usb-extender/#stream-deck' },
+    { text: 'Betrieb und Sicherung', link: '/projects/usb-extender/#operation' },
+    { text: 'Praxistest', link: '/projects/usb-extender/#tests' },
+    { text: 'Hardware testen und Rückmeldung', link: '/projects/usb-extender/#feedback' }
+  ] }],
   '/projects/logic-studio/': [{ text: 'Logic Studio', items: [
     { text: 'Installation und Testbericht', link: '/projects/logic-studio/' },
     { text: 'Bedienungsanleitung', link: '/projects/logic-studio/user-guide', collapsed: false, items: [
@@ -615,6 +627,18 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects/usb-extender/': [{ text: 'USB Extender', items: [
+    { text: 'Overview and screenshots', link: '/en/projects/usb-extender/' },
+    { text: 'Devices and support', link: '/en/projects/usb-extender/#hardware' },
+    { text: 'Installation', link: '/en/projects/usb-extender/#installation' },
+    { text: 'Setup and learning', link: '/en/projects/usb-extender/#setup' },
+    { text: 'Topics and functions', link: '/en/projects/usb-extender/#topics' },
+    { text: 'Home Assistant and ioBroker', link: '/en/projects/usb-extender/#integration' },
+    { text: 'Stream Deck and similar devices', link: '/en/projects/usb-extender/#stream-deck' },
+    { text: 'Operation and backups', link: '/en/projects/usb-extender/#operation' },
+    { text: 'Practical test', link: '/en/projects/usb-extender/#tests' },
+    { text: 'Hardware testing and feedback', link: '/en/projects/usb-extender/#feedback' }
+  ] }],
   '/en/projects/logic-studio/': [{ text: 'Logic Studio', items: [
     { text: 'Installation and test report', link: '/en/projects/logic-studio/' },
     { text: 'User guide', link: '/en/projects/logic-studio/user-guide', collapsed: false, items: [
@@ -941,6 +965,18 @@ const sidebarEn = {
 }
 
 const sidebarFr = {
+  '/fr/projects/usb-extender/': [{ text: 'USB Extender', items: [
+    { text: 'Présentation et captures', link: '/fr/projects/usb-extender/' },
+    { text: 'Appareils et compatibilité', link: '/fr/projects/usb-extender/#hardware' },
+    { text: 'Installation', link: '/fr/projects/usb-extender/#installation' },
+    { text: 'Configuration et apprentissage', link: '/fr/projects/usb-extender/#setup' },
+    { text: 'Topics et fonctions', link: '/fr/projects/usb-extender/#topics' },
+    { text: 'Home Assistant et ioBroker', link: '/fr/projects/usb-extender/#integration' },
+    { text: 'Stream Deck et appareils similaires', link: '/fr/projects/usb-extender/#stream-deck' },
+    { text: 'Exploitation et sauvegardes', link: '/fr/projects/usb-extender/#operation' },
+    { text: 'Test pratique', link: '/fr/projects/usb-extender/#tests' },
+    { text: 'Tests matériels et retours', link: '/fr/projects/usb-extender/#feedback' }
+  ] }],
   '/fr/projects/logic-studio/': [{ text: 'Logic Studio', items: [
     { text: 'Installation et rapport de test', link: '/fr/projects/logic-studio/' },
     { text: 'Guide d’utilisation', link: '/fr/projects/logic-studio/user-guide', collapsed: false, items: [

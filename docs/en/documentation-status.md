@@ -6,7 +6,7 @@ aside: false
 
 # Documentation language status
 
-DE / EN / FR · 2026-11-20
+DE / EN / FR · 2026-11-21
 
 All German reference pages now have English and French content. The 128 placeholder pages have been replaced and the 20 missing French pages added.
 
@@ -16,11 +16,11 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 252 | 0 | 0 | 0 |
-| EN | 252 | 0 | 0 | 0 |
-| FR | 252 | 0 | 0 | 0 |
+| DE | 253 | 0 | 0 | 0 |
+| EN | 253 | 0 | 0 | 0 |
+| FR | 253 | 0 | 0 | 0 |
 
-**Technical comparison of 2026-11-20:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
+**Technical comparison of 2026-11-21:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
 
 
 The additions were created with translation assistance and checked technically against the German source: code, identifiers, tables and images. Fourteen further content gaps were filled with supplementary references while preserving existing pages and links. This is not a complete linguistic certification. Remaining review signals also include intentionally different summaries and historical version mentions.
@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 249 | 3 |
-| FR | 249 | 3 |
+| EN | 249 | 4 |
+| FR | 249 | 4 |
 
 ## Complete page inventory
 
@@ -247,6 +247,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/ultimate-timer/index.md](/projects/ultimate-timer/) | [Content reviewed](/en/projects/ultimate-timer/) | [Content reviewed](/fr/projects/ultimate-timer/) |
 | [projects/ultimate-timer/installation.md](/projects/ultimate-timer/installation) | [Content reviewed](/en/projects/ultimate-timer/installation) | [Content reviewed](/fr/projects/ultimate-timer/installation) |
 | [projects/ultimate-timer/konfiguration.md](/projects/ultimate-timer/konfiguration) | [Content reviewed](/en/projects/ultimate-timer/configuration) | [Content reviewed](/fr/projects/ultimate-timer/configuration) |
+| [projects/usb-extender/index.md](/projects/usb-extender/) | [Content present](/en/projects/usb-extender/) | [Content present](/fr/projects/usb-extender/) |
 | [sammlung/calendar-card-pro/beispiele.md](/sammlung/calendar-card-pro/beispiele) | [Content reviewed](/en/collection/calendar-card-pro/beispiele) | [Content reviewed](/fr/collection/calendar-card-pro/beispiele) |
 | [sammlung/calendar-card-pro/entwicklung.md](/sammlung/calendar-card-pro/entwicklung) | [Content reviewed](/en/collection/calendar-card-pro/entwicklung) | [Content reviewed](/fr/collection/calendar-card-pro/entwicklung) |
 | [sammlung/calendar-card-pro/features.md](/sammlung/calendar-card-pro/features) | [Content reviewed](/en/collection/calendar-card-pro/features) | [Content reviewed](/fr/collection/calendar-card-pro/features) |

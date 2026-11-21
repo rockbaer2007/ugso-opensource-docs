@@ -1,11 +1,11 @@
 {
   "reviewed_at": "2026-11-20",
-  "scope_pages": 504,
+  "scope_pages": 506,
   "coverage": {
     "en": 249,
     "fr": 249
   },
-  "scope": "Content/meaning review of all 504 EN/FR inventory entries, including previously assessed structural differences. Reviewed pages only; unreviewed pages retain their existing technical status.",
+  "scope": "Current inventory contains 506 EN/FR entries, including the new USB Extender pages. Recorded content/meaning reviews cover only the explicitly listed pages; new unreviewed pages retain their existing technical status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
   "pages": [
     {
