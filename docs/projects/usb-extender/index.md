@@ -5,7 +5,7 @@ description: USB-Tasten, Stream Decks und Makropads über bis zu drei MQTT-Broke
 
 # USB Extender für Home Assistant
 
-**0.1.22 · Öffentliches Testrelease · Raspberry Pi · Stand 21. November 2026**
+**0.1.28 · Öffentliches Testrelease · Raspberry Pi · Stand 22. November 2026**
 
 Eine USB-Tastatur am Raspberry Pi kann zum Bedienteil für Home Assistant oder
 ioBroker werden. Der USB Extender erkennt Eingaben und sendet sie über MQTT an
@@ -13,7 +13,7 @@ bis zu **drei Broker gleichzeitig**. Die Weboberfläche dient zum Einrichten und
 kann danach abgeschaltet werden; USB und MQTT laufen unabhängig weiter.
 
 [GitHub / README DE und EN](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.22](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.22)
+· [ZIP 0.1.28](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.28)
 · [Änderungen](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 Dies ist ein eigenständiges Raspberry-Pi-Programm, keine HA-App zum Installieren
@@ -42,7 +42,7 @@ der Oberfläche ausdrücklich freigegeben. Das ist nicht dasselbe.
 | Drucker, Kameras, USB-Speicher, Audiointerfaces, serielle Geräte und weitere Controller | Bestandsanzeige; besondere Nutzfunktionen brauchen eigene Adapter | Keine allgemeine Druck-, Kamera-, Audio-, MIDI- oder serielle Weiterleitung |
 | Stream Deck Mobile / Android-App | Optionaler experimenteller Netzwerkserver mit QR-Kopplung, Bildern und MQTT | Kopplung, Iconübertragung, Farben und 8×8-Raster vom Nutzer bestätigt; Langzeitstabilität noch offen |
 
-Ein angezeigtes Gerät ist nicht automatisch aktiviert. Unter **USB-Geräte** kannst
+Ein angezeigtes Gerät ist nicht automatisch aktiviert. Unter **USB / Virtuelle Geräte** kannst
 du einen Namen vergeben, **Gerät für Eingaben freigeben** wählen und die Zielbroker
 ankreuzen. Geräte ohne Seriennummer werden anhand ihres USB-Ports zugeordnet;
 beim Umstecken kann eine neue Zuordnung nötig sein.
@@ -60,8 +60,8 @@ ZIP auf den Pi kopieren, im Terminal in den Downloadordner wechseln und ausführ
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.22-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.22
+unzip USB-Extender-Home-Assistant-0.1.28-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.28
 sudo bash install.sh
 ```
 
@@ -88,7 +88,7 @@ lokalen Netz verwenden, ansonsten VPN/HTTPS davor setzen; nicht ins Internet fre
    eigene Verbindung; eine Taste kann alle drei Ziele erreichen.
 2. Auf HA-Brokern Discovery aktivieren. Für ioBroker **Aus – nur MQTT-Daten senden**
    wählen, damit der HA-Discovery-Adapter nicht über Geräteauslöser klagt.
-3. Unter **USB-Geräte** Gerät benennen, freigeben, Ziele wählen und speichern.
+3. Unter **USB / Virtuelle Geräte** Gerät benennen, freigeben, Ziele wählen und speichern.
 4. Unter **Tasten & Anzeigen** das Gerät wählen und **Anlernen starten** drücken.
    Jede gewünschte Taste einmal drücken und loslassen. Wiederholte und bereits
    vorhandene Tasten werden nicht doppelt angelegt.
@@ -187,7 +187,7 @@ Treiberumfang, **keinen bereits durchgeführten Hardwaretest** dieses Projekts.
 - Drehregler, wenn vorhanden: Drehrichtung und Druck als Eingaben.
 - Touchscreen, wenn vorhanden: Touch-Ereignisse; kein frei gestaltbarer Touchscreen-Editor.
 - Pedal und andere Modelle ohne Display: Eingaben, aber keine Display-Icons.
-- Eine feste Belegung; Profil-/Seitenwechsel bleiben offen. Animierte Tastenicons sind implementiert.
+- Bis zu acht eigene Seiten je Deck mit Navigationstasten; zusätzliche Profile bleiben offen. Animierte Tastenicons sind implementiert.
 
 ### Grafischer Editor und kompakte Tastenliste {#editor}
 
@@ -204,6 +204,34 @@ In **Tasten & Anzeigen** steht eingeklappt nur **Gerät – Key – Name**; imme
 eine Taste ist aufgeklappt. **Speichern** sichert alle ausstehenden Änderungen,
 **Abbrechen** verwirft nur die Änderungen dieser Taste. Hinweise markieren
 ungespeicherte Änderungen. **Bearbeiten** öffnet erweiterte MQTT- und Zeitoptionen.
+
+## Seiten und Navigation auf dem Deck {#pages}
+
+**USB / Virtuelle Geräte** fasst USB-Geräte und gekoppelte Mobile-Decks zusammen.
+Handy und Tablet behalten jeweils ihre eigenen Seiten, Gestaltung und Zuordnungen.
+
+1. Im Tab **Stream Deck** mit **Neue Seite** bis zu acht Seiten je Gerät anlegen.
+   Die Tasten zählen weiter: bei 15 Tasten 1–15, danach 16–30; bei 8×8 1–64,
+   danach 65–128. Das Raster kommt weiterhin vom Gerät bzw. der Android-App.
+2. Taste auswählen und unter **Gestaltung → Tastenfunktion** MQTT, **Vor**,
+   **Zurück**, **Home** oder **Gehe zu** wählen. Bei Gehe zu die **Zielseite** wählen.
+   Nach **Speichern** navigieren diese Tasten direkt am Tablet, ohne MQTT-Aktion.
+3. **Seitennummer anzeigen** ergänzt einen kleinen Zähler. Home führt zu Seite 1;
+   Vor/Zurück bleiben an den Grenzen stehen. Die Editorbuttons wechseln nur die
+   Vorschau, nicht die tatsächlich am Gerät sichtbare Seite.
+4. **Aktuelle Seite löschen** entfernt nach Rückfrage deren Belegungen;
+   **Seite 1 ist geschützt**. Erst Speichern übernimmt Änderungen. Andere Seiten
+   behalten ihre IDs/Topics, auch wenn sichtbare Nummern nachrücken. Gehe-zu-Ziele
+   folgen nachrückenden Seiten; beim Löschen des Ziels führt die Taste zu Seite 1.
+
+Navigation blendet bestehende MQTT-Zuordnungen nur aus; beim Zurückstellen auf
+MQTT werden sie wieder aktiv. Neue Seiten erhalten stabile Topics wie
+`tablet-page-2-key-0/press`; vorhandene Topics der ersten Seite bleiben erhalten.
+Nach Dienstneustart startet jedes Deck auf Seite 1. Seitenwechsel beenden
+gehaltene Tasten/Klickfolgen; Rückmeldungen anderer Seiten überschreiben die
+sichtbare Seite nicht. Farbfelder und übrige Gestaltungsfelder sind kompakter.
+
+[![Deck-Seiten und kompakte Gestaltung, lokale Simulation](/images/usb-extender/pages-028.png)](/images/usb-extender/pages-028.png)
 
 ## Stream Deck Mobile: optional und experimentell {#mobile}
 
@@ -225,9 +253,54 @@ keine Cloud-/Bonjour-Erkennung; keine Veränderung der Pro-Kaufberechtigung der 
 Bei unveränderten **statischen** Tasten sollen die Bildzähler stehen bleiben.
 Keepalive hält die Verbindung ohne neue Bilder; Animationen senden absichtlich
 weitere Bilder. Kopplung, Iconanzeige, Farben und 8×8 wurden vom Nutzer bestätigt.
-Ein längerer Leerlauftest auf dem echten Tablet bleibt offen.
+Der unten dokumentierte 15-Minuten-Test mit Navigation und Leerlauf ist bestanden.
+
+### 0.1.28: erfolgreiche 15-Minuten-Prüfung {#stability}
+
+Bildübertragung wird in kleine Pakete aufgeteilt: maximal vier Bilder je
+Durchlauf mit einem weichen 25-ms-Arbeitsbudget. Zwischen Paketen werden
+Eingaben und Heartbeat wieder bedient. Ein bereits laufender Socket-Sendevorgang
+kann länger dauern; der Heartbeat-Timeout bleibt bei 20 Sekunden. Das Journal
+enthält bei Trennung zusätzlich Ping/Pong, letzte Nachrichtenart/Alter und
+ausstehende Bilder, aber keine Nachrichteninhalte oder Zugangsdaten.
+
+Am **22. November 2026** wurde das echte **SM-T580 mit 8×8 und zwei Seiten**
+über 900 Sekunden beobachtet: zunächst mehrfach Vor/Zurück, anschließend rund
+14 Minuten Leerlauf. Der Monitor wurde vom Nutzer per SSH gestartet; seine
+16 Messpunkte und das abschließende Journal wurden direkt ausgewertet.
+
+| Messung | Ergebnis |
+| --- | --- |
+| Zeitraum laut Pi-Uhr | 11:39:17–11:54:17; Dauer über monotone Zeit gesteuert |
+| Tablet-Verbindung | In allen 16 Messpunkten geöffnet und autorisiert |
+| Ping/Pong | 56/56 → 232/232; zusätzlich 176 Pings vollständig beantwortet |
+| Leerlauf | 1.228 Bilder / 19 Metadatenpakete ab Minute 1 unverändert |
+| Abschließendes Journal | Kein neuer Heartbeat-Timeout, keine Trennung, kein Dienstneustart |
+
+Ein zusätzlicher „connection open“-Eintrag nennt kein Gerät; Tablet-Zähler
+steigen ohne Rücksetzung weiter. [Vollständiger Messbericht](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/docs/tests/mobile-0.1.28-15min-20261122.md).
+Der Test ist für diesen Zeitraum bestanden. Bildschirmabschaltung,
+App-Hintergrundbetrieb, andere Netze und physische Stream Decks sind damit nicht
+geprüft; die Ursache aller früheren Abbrüche ist nicht rückwirkend bewiesen.
 
 ## Iconbibliothek, Animationen und Paketimport {#icons}
+
+**Grafische Auswahl statt langer Listen:** Bei normalem/gedrücktem Icon,
+Hintergrund und MQTT-Rückmeldung öffnet sich ein gemeinsamer Picker. Paket
+aufklappen, suchen, Icon wählen und **Übernehmen** (oder doppelklicken).
+**Abbrechen**/Escape behalten die vorige Auswahl; danach oben **Speichern**.
+Die Auswahl lädt nur 48×48-PNG-Miniaturen, bei Animationen das erste Bild,
+mit höchstens 96 sichtbaren Kacheln je Paketseite. Der Pi erzeugt sie bei Bedarf
+unter `icons/.cache/thumbnails/`; Pi und angemeldeter Browser verwenden den Cache.
+
+Gleiche Icon-IDs/Inhalte erscheinen einmal je Paket; alternative Dateinamen
+bleiben suchbar. Originale und gespeicherte IDs werden nicht gelöscht oder
+umgeschrieben; echte Stilvarianten und schwarze/weiße Pakete bleiben getrennt.
+**MDI-Favoriten hinzufügen · 40 Icons** importiert optional das gebündelte
+SteelBlue-Paket mit 20 Ein-/Aus-Paaren. Keine automatische Installation oder
+MQTT-Zuordnung; Normal/Gedrückt bzw. Rückmeldung selbst auswählen.
+
+[![Grafische Iconauswahl mit Miniaturcache, lokale Demo](/images/usb-extender/picker-028.png)](/images/usb-extender/picker-028.png)
 
 Pakete einzeln aufklappen oder nach Paketname, Dateiname und Unterordner suchen.
 Hover/Fokus zeigt Namen und Vorschau. 48×48-Miniaturen in 52×52-Kacheln sparen Platz;
@@ -301,10 +374,11 @@ sichtbaren Nachweis. Nicht jede Funktion ist dadurch an jeder Hardware geprüft.
 
 [![F12-Ereignisse mit ausgewählten Topics und drei MQTT-Zielen](/images/usb-extender/events.png)](/images/usb-extender/events.png)
 
-Für 0.1.22 bestehen 134 lokale Python-Tests sowie JavaScript-/DOM- und Chrome-Prüfungen
-für Speichern, mobile Darstellung, Pakete, Animationen und Ordnerupload. Dazu kommen
-lokale Mobile-Protokolltests; sie ersetzen keinen Tablet-Dauertest.
-Ein physischer Stream-Deck-Test und der längere 8×8-Mobile-Leerlauftest bleiben offen.
+Für 0.1.28 bestehen 168 erfolgreiche lokale Python-Tests sowie JavaScript-/DOM-
+und Chrome-Prüfungen für Seiten, Speichern, mobile Darstellung, Iconauswahl,
+Pakete und Animationen. Dazu kommt der erfolgreiche reale 15-Minuten-Test oben.
+Neue/Löschen-Seite, Home und Gehe zu sind lokal geprüft; deren vollständiger
+Hardwaretest sowie Tests physischer Stream Decks bleiben weitere Prüfpunkte.
 
 ## Eigene Hardware testen und Rückmeldung geben {#feedback}
 

@@ -5,7 +5,7 @@ description: Connect USB keys, Stream Decks and macro pads to up to three MQTT b
 
 # USB Extender for Home Assistant
 
-**0.1.22 · Public test release · Raspberry Pi · Updated 21 November 2026**
+**0.1.28 · Public test release · Raspberry Pi · Updated 22 November 2026**
 
 A USB keyboard connected to a Raspberry Pi can become a control panel for Home
 Assistant or ioBroker. USB Extender reads inputs and publishes them to up to
@@ -13,7 +13,7 @@ Assistant or ioBroker. USB Extender reads inputs and publishes them to up to
 be stopped; the USB/MQTT service continues independently.
 
 [GitHub / German and English README](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.22](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.22)
+· [ZIP 0.1.28](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.28)
 · [Changelog](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 This is a standalone Raspberry Pi program, not an HA app installed through the
@@ -41,7 +41,7 @@ Those are separate capabilities.
 | Printers, cameras, storage, audio interfaces, serial devices and other controllers | Inventory listing; specific functionality needs separate adapters | No general print/camera/audio/MIDI/serial forwarding |
 | Stream Deck Mobile / Android app | Optional experimental network server with QR pairing, images and MQTT | User confirmed pairing, icon transfer, colours and an 8×8 grid; long-term stability still open |
 
-A listed device is not automatically enabled. Under **USB-Geräte**, assign a
+A listed device is not automatically enabled. Under **USB / Virtuelle Geräte**, assign a
 name, select **Gerät für Eingaben freigeben**, and choose destination brokers.
 Devices without a serial number use their USB port for identification; moving
 them to another port may require assigning them again.
@@ -58,8 +58,8 @@ Copy the ZIP to the Pi, open a terminal in its download directory, and run:
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.22-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.22
+unzip USB-Extender-Home-Assistant-0.1.28-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.28
 sudo bash install.sh
 ```
 
@@ -85,7 +85,7 @@ network; otherwise put VPN/HTTPS in front. Do not expose the UI to the internet.
    connections and save. Each broker has an independent connection; a key can use all three.
 2. Enable discovery on HA brokers. For ioBroker select **Aus – nur MQTT-Daten senden**
    so its HA-discovery adapter does not complain about device triggers.
-3. Under **USB-Geräte**, name and enable the device, choose its targets and save.
+3. Under **USB / Virtuelle Geräte**, name and enable the device, choose its targets and save.
 4. Under **Tasten & Anzeigen**, select the device and click **Anlernen starten**.
    Press and release each wanted key once. Repeated or existing keys are not duplicated.
 5. Select **Anlernen beenden → Tasten übernehmen → Speichern**. New rows are now
@@ -181,7 +181,7 @@ completed physical hardware testing** by this project.
 - Dials, where present: rotation direction and presses as input.
 - Touchscreen, where present: touch events; no freely designed touchscreen editor.
 - Pedal and other non-display models: input, but no display-key icons.
-- One fixed layout; profile/page switching remains open. Animated key icons are implemented.
+- Up to eight independent pages per deck with navigation keys; additional profiles remain open. Animated key icons are implemented.
 
 ### Graphical editor and compact key list {#editor}
 
@@ -198,6 +198,34 @@ In **Tasten & Anzeigen**, collapsed rows show **Device – Key – Name**; only 
 is expanded at a time. **Speichern** saves all pending changes; **Abbrechen** discards
 changes to that key only. Indicators identify unsaved changes.
 **Bearbeiten** opens advanced MQTT and timing options.
+
+## Pages and navigation on the deck {#pages}
+
+**USB / Virtuelle Geräte** groups USB devices and paired virtual Mobile decks.
+Each phone/tablet keeps its own pages, artwork and assignments.
+
+1. In **Stream Deck**, choose **Neue Seite** to add up to eight pages per device.
+   Key numbers continue: 1–15 then 16–30 for a 15-key deck, or 1–64 then 65–128
+   for 8×8. The device/Android app still supplies the grid.
+2. Select a key. Under **Gestaltung → Tastenfunktion**, choose MQTT, **Vor**
+   (next), **Zurück** (previous), **Home**, or **Gehe zu** (go to) with a **Zielseite**
+   (target page). After **Speichern**, navigation works on the tablet without MQTT.
+3. **Seitennummer anzeigen** adds a page counter. Home returns to page 1;
+   next/previous stop at the boundaries. Editor navigation changes only the
+   preview, not the actual page displayed on the device.
+4. **Aktuelle Seite löschen** removes a page's assignments after confirmation;
+   **page 1 is protected**. Save to apply. Remaining IDs/topics stay stable even
+   if displayed numbers change. Go-to targets follow their pages when renumbered;
+   deleting the target redirects that key to page 1.
+
+Navigation preserves existing MQTT assignments; switching back to MQTT enables
+them again. New-page topics include a stable page component, e.g.
+`tablet-page-2-key-0/press`; existing page-1 topics are preserved. A service
+restart opens page 1. Page changes clear held keys/pending click sequences;
+feedback for another page cannot overwrite the visible page. Artwork controls,
+especially colour fields, are more compact.
+
+[![Deck pages and compact artwork, local simulation](/images/usb-extender/pages-028.png)](/images/usb-extender/pages-028.png)
 
 ## Stream Deck Mobile: optional and experimental {#mobile}
 
@@ -219,9 +247,53 @@ without cloud/Bonjour discovery or changes to the app's Pro purchase entitlement
 disconnect. For unchanged **static** keys, image counters should stop increasing.
 Keepalive maintains the connection without new images; animations intentionally
 send frames. The user confirmed pairing, icons, colours and 8×8.
-A longer idle test on an actual tablet remains open.
+The 15-minute navigation/idle test on a real tablet documented below has passed.
+
+### 0.1.28: successful 15-minute test {#stability}
+
+Mobile images are sent in small batches: at most four images per loop with a
+soft 25-ms work budget. Input and heartbeat handling run between batches.
+An in-progress socket send can take longer; the heartbeat timeout remains
+20 seconds. Disconnect logs now include Ping/Pong, the last packet type/age
+and queued images, without message contents or credentials.
+
+On **22 November 2026**, a real **SM-T580 with an 8×8 grid and two pages** was
+observed for 900 seconds: repeated next/previous navigation, then about 14 minutes
+idle. The user started the read-only SSH monitor; its 16 samples and final
+journal were inspected directly.
+
+| Measurement | Result |
+| --- | --- |
+| Interval on the Pi clock | 11:39:17–11:54:17; duration controlled by a monotonic timer |
+| Tablet connection | Open and authorised in all 16 samples |
+| Ping/Pong | 56/56 → 232/232; all 176 additional pings answered |
+| Idle | 1,228 images / 19 metadata packets unchanged from minute 1 |
+| Final journal | No new heartbeat timeout, disconnect or service restart |
+
+One extra “connection open” entry does not identify a device; tablet counters
+keep increasing without resetting. [Full readings, German report](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/docs/tests/mobile-0.1.28-15min-20261122.md).
+This interval passed. Screen-off, background operation, other networks and
+physical Stream Decks were not tested here; the result does not retrospectively
+prove the cause of every earlier disconnect.
 
 ## Icon library, animation and package import {#icons}
+
+**Visual picker instead of long dropdowns:** Normal/pressed icons, backgrounds
+and MQTT feedback share one picker. Expand a package, search and select an icon;
+choose **Übernehmen** or double-click. **Abbrechen**/Escape preserve the previous
+choice. Use **Speichern** afterwards. Only 48×48 PNG thumbnails are loaded,
+using the first animation frame, with at most 96 visible tiles per package page.
+The Pi generates them on demand in `icons/.cache/thumbnails/`; the Pi and
+authenticated browser reuse the cache.
+
+Identical icon IDs/content appear once per package; alternative filenames remain
+searchable. Originals and stored IDs are not deleted or rewritten. Distinct
+styles and black/white packages stay separate. **MDI-Favoriten hinzufügen · 40
+Icons** optionally imports the bundled SteelBlue pack with 20 on/off pairs.
+Nothing is installed or mapped to MQTT automatically; choose normal/pressed
+icons or feedback mappings yourself.
+
+[![Visual icon picker and thumbnail cache, local demo](/images/usb-extender/picker-028.png)](/images/usb-extender/picker-028.png)
 
 Expand packages individually or search package names, filenames and subfolders.
 Hover/focus displays a filename and preview. 48×48 thumbnails use compact 52×52
@@ -296,10 +368,11 @@ visible evidence. This does not test every function on every device.
 
 [![F12 events with selected topics and three MQTT targets](/images/usb-extender/events.png)](/images/usb-extender/events.png)
 
-Version 0.1.22 passes 134 local Python tests plus JavaScript/DOM and Chrome checks
-for saving, mobile layout, packages, animation and folder upload. Local Mobile
-protocol tests complement these; they do not replace a tablet endurance test.
-Physical Stream Deck testing and a longer idle test with an 8×8 Mobile deck remain open.
+Version 0.1.28 passes 168 local Python tests plus JavaScript/DOM and Chrome checks
+for pages, saving, mobile layout, icon selection, packages and animation. The
+real 15-minute tablet test above has also passed. New/delete page, Home and Go to
+have local coverage; their full hardware verification and physical Stream Deck
+tests remain further checks.
 
 ## Test your hardware and send feedback {#feedback}
 

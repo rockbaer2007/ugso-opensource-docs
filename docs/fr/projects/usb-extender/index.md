@@ -5,7 +5,7 @@ description: Relier des touches USB, Stream Deck et claviers à macros à trois 
 
 # USB Extender pour Home Assistant
 
-**0.1.22 · Version de test publique · Raspberry Pi · Mise à jour du 21 novembre 2026**
+**0.1.28 · Version de test publique · Raspberry Pi · Mise à jour du 22 novembre 2026**
 
 Un clavier USB connecté au Raspberry Pi peut servir de commande pour Home
 Assistant ou ioBroker. USB Extender lit les entrées et les publie vers **trois
@@ -13,7 +13,7 @@ courtiers MQTT simultanément** au maximum. L’interface Web sert à la configu
 et peut ensuite être arrêtée ; le service USB/MQTT continue indépendamment.
 
 [GitHub / README allemand et anglais](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.22](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.22)
+· [ZIP 0.1.28](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.28)
 · [Modifications](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 Il s’agit d’un programme autonome pour Raspberry Pi, pas d’une application HA à
@@ -43,7 +43,7 @@ autorisation explicite dans l’application. Ce sont deux capacités distinctes.
 | Imprimantes, caméras, stockage USB, interfaces audio, appareils série et autres contrôleurs | Inventaire ; fonctions particulières nécessitant des adaptateurs spécifiques | Pas de transmission générale d’impression, caméra, audio, MIDI ou série |
 | Stream Deck Mobile / application Android | Serveur réseau expérimental optionnel avec jumelage QR, images et MQTT | Jumelage, transfert d’icônes, couleurs et grille 8×8 confirmés par l’utilisateur ; stabilité à long terme encore à vérifier |
 
-Un appareil répertorié n’est pas automatiquement activé. Dans **USB-Geräte**,
+Un appareil répertorié n’est pas automatiquement activé. Dans **USB / Virtuelle Geräte**,
 attribuer un nom, cocher **Gerät für Eingaben freigeben**, puis choisir les courtiers
 destinataires. Les appareils sans numéro de série sont identifiés par leur port
 USB ; un changement de port peut nécessiter une nouvelle affectation.
@@ -61,8 +61,8 @@ Copier le ZIP sur le Pi, ouvrir un terminal dans son dossier de téléchargement
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.22-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.22
+unzip USB-Extender-Home-Assistant-0.1.28-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.28
 sudo bash install.sh
 ```
 
@@ -91,7 +91,7 @@ exposer directement l’interface sur Internet.
    une touche peut envoyer aux trois.
 2. Activer la découverte pour HA. Pour ioBroker, choisir **Aus – nur MQTT-Daten senden**
    afin que son adaptateur de découverte HA ne signale pas de déclencheurs non pris en charge.
-3. Dans **USB-Geräte**, nommer et autoriser l’appareil, choisir ses cibles et enregistrer.
+3. Dans **USB / Virtuelle Geräte**, nommer et autoriser l’appareil, choisir ses cibles et enregistrer.
 4. Dans **Tasten & Anzeigen**, choisir l’appareil puis **Anlernen starten**.
    Appuyer et relâcher chaque touche souhaitée. Les répétitions et touches déjà
    présentes ne créent pas de doublons.
@@ -194,7 +194,7 @@ physiques déjà effectués** dans ce projet.
 - Molettes présentes : sens de rotation et appui comme entrées.
 - Écran tactile présent : événements tactiles ; pas d’éditeur d’écran librement composé.
 - Pedal et autres modèles sans écran : entrées, mais pas d’icônes sur touches d’affichage.
-- Une disposition fixe ; changement de profil/page encore à réaliser. Les icônes animées sont implémentées.
+- Jusqu’à huit pages indépendantes par deck avec touches de navigation ; profils supplémentaires encore à réaliser. Les icônes animées sont implémentées.
 
 ### Éditeur graphique et liste compacte des touches {#editor}
 
@@ -213,6 +213,36 @@ une seule touche est dépliée. **Speichern** enregistre toutes les modification
 attente ; **Abbrechen** annule seulement celles de cette touche. Des repères signalent
 les modifications non enregistrées. **Bearbeiten** ouvre les options MQTT avancées
 et les délais.
+
+## Pages et navigation sur le deck {#pages}
+
+**USB / Virtuelle Geräte** regroupe les périphériques USB et les decks Mobile
+virtuels jumelés. Chaque téléphone/tablette conserve ses pages et affectations.
+
+1. Dans **Stream Deck**, **Neue Seite** ajoute une page, jusqu’à huit par appareil.
+   Les numéros continuent : 1–15 puis 16–30 pour 15 touches ; 1–64 puis 65–128
+   pour 8×8. La grille vient toujours de l’appareil ou de l’application Android.
+2. Choisir une touche, puis **Gestaltung → Tastenfunktion** : MQTT, **Vor**
+   (suivante), **Zurück** (précédente), **Home** (première) ou **Gehe zu** (aller à)
+   avec **Zielseite** (page cible). Après **Speichern**, la touche navigue sur
+   la tablette sans envoyer d’action MQTT.
+3. **Seitennummer anzeigen** ajoute un compteur. Home revient à la page 1 ;
+   suivante/précédente s’arrêtent aux limites. Les boutons de l’éditeur changent
+   seulement l’aperçu, pas la page réellement affichée sur l’appareil.
+4. **Aktuelle Seite löschen** supprime les affectations de cette page après
+   confirmation ; **la page 1 est protégée**. Enregistrer pour appliquer.
+   Les IDs/topics des autres pages restent stables même si les numéros affichés
+   changent. Les cibles suivent leur page renumérotée ; supprimer la cible
+   redirige la touche vers la page 1.
+
+La navigation conserve les affectations MQTT existantes ; choisir de nouveau
+MQTT les réactive. Les nouvelles pages reçoivent des topics stables tels que
+`tablet-page-2-key-0/press` ; ceux de la première page restent inchangés.
+Un redémarrage du service ouvre la page 1. Changer de page termine les touches
+maintenues et clics en attente ; un retour MQTT d’une autre page n’écrase pas
+la page visible. Les champs d’apparence et de couleur sont plus compacts.
+
+[![Pages et champs compacts, simulation locale](/images/usb-extender/pages-028.png)](/images/usb-extender/pages-028.png)
 
 ## Stream Deck Mobile : optionnel et expérimental {#mobile}
 
@@ -234,9 +264,54 @@ découverte cloud/Bonjour ni modification des droits d’achat Pro de l’applic
 déconnexion. Pour des touches **statiques** inchangées, les compteurs d’images doivent
 cesser d’augmenter. Le maintien de connexion n’envoie pas de nouvelles images ;
 les animations en transmettent volontairement. L’utilisateur a confirmé jumelage,
-icônes, couleurs et 8×8. Un essai prolongé au repos sur tablette réelle reste ouvert.
+icônes, couleurs et 8×8. L’essai de 15 minutes avec navigation et repos ci-dessous est réussi.
+
+### 0.1.28 : essai de 15 minutes réussi {#stability}
+
+Les images Mobile sont envoyées en petits lots : au plus quatre images par
+itération avec un budget de travail souple de 25 ms. Les entrées et le heartbeat
+sont traités entre les lots. Un envoi réseau déjà commencé peut durer plus
+longtemps ; le délai heartbeat reste de 20 secondes. Le journal de déconnexion
+ajoute Ping/Pong, type/âge du dernier message et images en attente, sans contenu
+des messages ni identifiants de connexion.
+
+Le **22 novembre 2026**, une vraie **SM-T580 avec grille 8×8 et deux pages** a
+été observée pendant 900 secondes : plusieurs passages suivante/précédente,
+puis environ 14 minutes au repos. L’utilisateur a lancé le moniteur SSH en
+lecture seule ; ses 16 mesures et le journal final ont été examinés directement.
+
+| Mesure | Résultat |
+| --- | --- |
+| Période selon l’horloge du Pi | 11:39:17–11:54:17 ; durée contrôlée par un minuteur monotone |
+| Connexion tablette | Ouverte et autorisée aux 16 mesures |
+| Ping/Pong | 56/56 → 232/232 ; les 176 pings supplémentaires ont reçu une réponse |
+| Repos | 1 228 images / 19 paquets de métadonnées inchangés dès la minute 1 |
+| Journal final | Aucun nouveau timeout heartbeat, aucune déconnexion ni relance du service |
+
+Une entrée supplémentaire « connection open » ne précise aucun appareil ; les
+compteurs tablette continuent sans remise à zéro. [Mesures complètes, rapport allemand](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/docs/tests/mobile-0.1.28-15min-20261122.md).
+Cet intervalle est réussi. Écran éteint, fonctionnement en arrière-plan, autres
+réseaux et Stream Deck physiques ne sont pas vérifiés ici ; cela ne prouve pas
+rétrospectivement la cause de toutes les déconnexions précédentes.
 
 ## Bibliothèque d’icônes, animations et import de packs {#icons}
+
+**Sélecteur graphique au lieu de longues listes :** icônes normales/enfoncées,
+fonds et retours MQTT utilisent le même sélecteur. Déplier un pack, rechercher,
+choisir une icône et **Übernehmen** (ou double-cliquer). **Abbrechen**/Échap
+conservent l’ancien choix ; **Speichern** enregistre ensuite. Seules les miniatures
+PNG 48×48 sont chargées, première image d’une animation, avec au plus 96 cases
+visibles par page de pack. Le Pi les crée à la demande dans
+`icons/.cache/thumbnails/` ; le Pi et le navigateur authentifié réutilisent le cache.
+
+Les mêmes IDs/contenus apparaissent une fois par pack ; les noms alternatifs
+restent recherchables. Originaux et IDs enregistrés ne sont ni supprimés ni
+réécrits. Styles distincts et packs noir/blanc restent séparés.
+**MDI-Favoriten hinzufügen · 40 Icons** importe, sur demande, le pack SteelBlue
+fourni avec 20 paires marche/arrêt. Aucune installation ou affectation MQTT
+automatique ; choisir soi-même les icônes normales/enfoncées ou les retours.
+
+[![Sélecteur graphique et cache de miniatures, démonstration locale](/images/usb-extender/picker-028.png)](/images/usb-extender/picker-028.png)
 
 Déplier les packs séparément ou rechercher noms de packs, fichiers et sous-dossiers.
 Survol/focus affiche nom et aperçu. Miniatures 48×48 dans des cases compactes 52×52 ;
@@ -311,11 +386,11 @@ ne sont pas pour autant testées sur chaque appareil.
 
 [![Événements F12 avec topics sélectionnés et trois destinations MQTT](/images/usb-extender/events.png)](/images/usb-extender/events.png)
 
-La version 0.1.22 réussit 134 tests Python locaux ainsi que des vérifications
-JavaScript/DOM et Chrome : enregistrement, affichage mobile, packs, animations et
-envoi de dossiers. Les tests locaux du protocole Mobile ne remplacent pas un
-essai prolongé sur tablette. Un Stream Deck physique et un essai 8×8 Mobile
-prolongé sans modification restent à vérifier.
+La version 0.1.28 réussit 168 tests Python locaux ainsi que des vérifications
+JavaScript/DOM et Chrome pour pages, enregistrement, affichage mobile, choix
+d’icônes, packs et animations. L’essai réel de 15 minutes ci-dessus est réussi.
+Ajout/suppression de page, Home et Gehe zu sont vérifiés localement ; leur
+vérification matérielle complète et les Stream Deck physiques restent à tester.
 
 ## Tester votre matériel et faire un retour {#feedback}
 
