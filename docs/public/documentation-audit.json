@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-11-21",
+  "reviewed_at": "2026-11-22",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
   "source_pages": 253,
@@ -17146,13 +17146,16 @@
         "de": {
           "path": "projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "e78c013e4dd6588c79cf648420186a01506fb9296f5a6c410b2622d0570220a5",
-          "words": 2998,
-          "headings": 15,
+          "sha256": "6ee7d6f441f9f3da02fad51106b6d28be6acfef36352b41970c4cf7a8aa58c67",
+          "words": 3717,
+          "headings": 19,
           "examples": 3,
           "versions": [
             "0.1.22",
             "0.1.28",
+            "0.1.29",
+            "0.1.30",
+            "0.1.31",
             "0.1.5",
             "0.10.0"
           ],
@@ -17161,13 +17164,16 @@
         "en": {
           "path": "en/projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "ca32705de70bbbc5ba89c90ba303390acf99a0b4798be9790a3cba4d301f0c3e",
-          "words": 3151,
-          "headings": 15,
+          "sha256": "a3ff3aecfaa68e1175baded14b5b4e3a5d58d5f4922bd5d8360cb1f9898ebccc",
+          "words": 3912,
+          "headings": 19,
           "examples": 3,
           "versions": [
             "0.1.22",
             "0.1.28",
+            "0.1.29",
+            "0.1.30",
+            "0.1.31",
             "0.1.5",
             "0.10.0"
           ],
@@ -17183,13 +17189,16 @@
         "fr": {
           "path": "fr/projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "4a9e24a7fccc7c497f126818535420ece2a1fa232c3d34290407e611c4376fe0",
-          "words": 3545,
-          "headings": 15,
+          "sha256": "9cc88747b425c0dbf024a5596db71c09654f3ff904e3df73e0ee6797543797e1",
+          "words": 4434,
+          "headings": 19,
           "examples": 3,
           "versions": [
             "0.1.22",
             "0.1.28",
+            "0.1.29",
+            "0.1.30",
+            "0.1.31",
             "0.1.5",
             "0.10.0"
           ],

@@ -6,7 +6,7 @@ aside: false
 
 # Documentation language status
 
-DE / EN / FR · 2026-11-21
+DE / EN / FR · 2026-11-22
 
 All German reference pages now have English and French content. The 128 placeholder pages have been replaced and the 20 missing French pages added.
 
@@ -20,7 +20,7 @@ Every Markdown content page was inventoried, excluding these three generated rep
 | EN | 253 | 0 | 0 | 0 |
 | FR | 253 | 0 | 0 | 0 |
 
-**Technical comparison of 2026-11-21:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
+**Technical comparison of 2026-11-22:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
 
 
 The additions were created with translation assistance and checked technically against the German source: code, identifiers, tables and images. Fourteen further content gaps were filled with supplementary references while preserving existing pages and links. This is not a complete linguistic certification. Remaining review signals also include intentionally different summaries and historical version mentions.

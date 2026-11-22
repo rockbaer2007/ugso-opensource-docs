@@ -5,7 +5,7 @@ description: Relier des touches USB, Stream Deck et claviers à macros à trois 
 
 # USB Extender pour Home Assistant
 
-**0.1.28 · Version de test publique · Raspberry Pi · Mise à jour du 22 novembre 2026**
+**0.1.31 · Version de test publique · Raspberry Pi · Mise à jour du 22 novembre 2026**
 
 Un clavier USB connecté au Raspberry Pi peut servir de commande pour Home
 Assistant ou ioBroker. USB Extender lit les entrées et les publie vers **trois
@@ -13,7 +13,7 @@ courtiers MQTT simultanément** au maximum. L’interface Web sert à la configu
 et peut ensuite être arrêtée ; le service USB/MQTT continue indépendamment.
 
 [GitHub / README allemand et anglais](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.28](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.28)
+· [ZIP 0.1.31](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.31)
 · [Modifications](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 Il s’agit d’un programme autonome pour Raspberry Pi, pas d’une application HA à
@@ -27,6 +27,96 @@ ouvrir à leur taille d’origine.
 
 [![Liste large des touches et groupes de canaux MQTT](/images/usb-extender/key-list.png)](/images/usb-extender/key-list.png)
 
+## Nouveautés 0.1.31 : T650, périphériques et droits d’installation {#release-031}
+
+0.1.31 inclut les modifications auparavant locales des versions 0.1.29 et 0.1.30.
+**Tasten & Anzeigen** regroupe les périphériques par ordre alphabétique, repliés
+initialement. Un seul groupe et une seule touche restent ouverts à la fois.
+Les touches de volume, de luminosité et d’éclairage du clavier proposent un filtre
+de pas 1–5 sous **Bearbeiten** : 3 envoie les pas 3, 6, 9, etc. Le relâchement
+arrête la répétition du volume, même lorsque certains pas sont ignorés.
+
+Les numéros de série uniques et les identifiants Logitech HID++ disponibles
+conservent l’affectation lors d’un changement de port. Sans identifiant unique,
+affecter explicitement le nouvel appareil USB à une entrée hors ligne enregistrée ;
+touches, pages et topics sont conservés. La suppression confirmée par la corbeille
+sauvegarde les métadonnées et conserve les icônes partagées. Révoquer séparément
+la confiance Mobile.
+
+### T650 : glissement à un doigt et X/Y {#t650}
+
+Dans **USB / Virtuelle Geräte**, autoriser le T650, activer **Touchpad-Gesten
+auswerten**, puis ouvrir **Ein-Finger-Slide und optionale X/Y-Werte**. Régler la
+sensibilité et la fréquence maximale, enregistrer, puis apprendre les directions
+souhaitées. Le pilote Linux doit fournir le multitouch de type B ; un simple
+événement de clic ne suffit pas.
+
+| Mouvement | Action à apprendre |
+| --- | --- |
+| Gauche / droite | `TOUCHPAD_SLIDE_LEFT` / `TOUCHPAD_SLIDE_RIGHT` |
+| Haut / bas | `TOUCHPAD_SLIDE_UP` / `TOUCHPAD_SLIDE_DOWN` |
+| Haut gauche / haut droite | `TOUCHPAD_SLIDE_UP_LEFT` / `TOUCHPAD_SLIDE_UP_RIGHT` |
+| Bas gauche / bas droite | `TOUCHPAD_SLIDE_DOWN_LEFT` / `TOUCHPAD_SLIDE_DOWN_RIGHT` |
+
+Huit secteurs de 45° distinguent les directions. La **sensibilité 1–10** définit
+le mouvement nécessaire : 10 est plus sensible, 1 demande un mouvement plus ample ;
+valeur initiale 5. La **fréquence 1–30/s** est une limite par flux d’actions
+directionnelles et par paire X/Y, initialement 10/s. Une paire X/Y représente deux
+messages MQTT par courtier cible ; les autres canaux de touche activés peuvent
+produire des messages supplémentaires.
+
+**X/Y est désactivé initialement.** L’activation suivie de l’enregistrement crée
+des topics lisibles, par exemple `t650-touchpad/x` et `t650-touchpad/y`. Des topics
+personnalisés sont possibles ; les topics enregistrés restent identiques après
+renommage. Les deux axes utilisent les courtiers cibles de l’appareil et envoient
+des nombres entiers **0–100**, sans JSON. X : gauche 0, droite 100 ; Y : haut 0,
+bas 100. Il s’agit de la position absolue sur le pavé tactile.
+
+Après un glissement reconnu, aucun tapotement supplémentaire n’est produit au
+relâchement. Les positions inchangées ne sont pas retransmises. Une dernière paire
+en attente peut suivre le relâchement au prochain intervalle autorisé. Plusieurs
+doigts, un clic mécanique, une perte d’entrée ou une modification des options
+annulent les valeurs en attente. Pas de conservation MQTT ni de renvoi aux
+courtiers précédemment déconnectés ; X/Y reste muet pendant l’apprentissage.
+
+### Test réel du T650 et limites {#t650-test}
+
+Test du 22 novembre 2026 avec un véritable T650 et un Raspberry Pi 4 en 64 bits :
+
+- Les huit directions attendues sont reconnues ; **aucun tapotement** pendant les
+  glissements. Un test séparé a produit quatre tapotements, sans sortie X/Y.
+- Trois courtiers MQTT de test locaux ont reçu chacun **752 messages identiques**,
+  dont 200 paires X/Y. Les axes transmettent des entiers dans la plage 0–100.
+- **En direct** : sensibilité 5, limite de 10/s ; intervalle minimal 0,100000 s.
+- **Relecture des mêmes enregistrements réels** : la sensibilité 1/5/10 a produit
+  33/38/39 actions lors des mouvements rapides. Les limites 1/5/30 ont donné des
+  intervalles X/Y minimaux de 1,006229 / 0,201979 / 0,037912 s. Cela ne remplace pas
+  un nouveau test en direct des réglages Web ou de nouveaux gestes à chaque valeur.
+- Deux événements de direction voisine et un appui long ont aussi été enregistrés.
+  Aucune garantie d’une direction exclusivement unique pour chaque geste, ni de
+  validation générale des autres gestes multitouch ou modèles de pavés tactiles.
+- Seul le T650 a été évalué ; K400/T400 sont inchangés. La mesure isolée utilisait
+  des réglages temporaires et des courtiers de boucle locale, sans cible de production.
+
+[Rapport complet du T650 et de l’installation](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/v0.1.31/docs/tests/t650-0.1.31-20261122.md).
+L’outil de mesure a également été corrigé : la purge bornée consomme le générateur
+evdev ; un message de départ et un compte à rebours rendent la fenêtre de mesure visible.
+
+### Correction de l’installateur et conservation des données {#installer-031}
+
+Un `umask 077` hérité pouvait rendre le nouvel environnement Python inaccessible
+au compte de service (`Permission denied` à l’étape 6). L’installateur définit
+désormais `umask 022` pour les fichiers du programme et `umask 077` pour les archives
+privées. Aucune modification globale des droits des données utilisateur n’est requise.
+
+L’installation suivante sur le Pi a été vérifiée : CLI et service actif indiquent
+**0.1.31**, USB/MQTT et Web sont actifs, avec **NRestarts=0** chacun. Mobile est
+actif et la liste d’erreurs est vide. Cinq contrôles SHA256 de `config.json`,
+`switches.json`, `mobile-identity.json`, `mobile-trust.json` et `mobile-devices.json`
+confirment des réglages et jumelages identiques octet par octet. Une sauvegarde a
+précédé l’installation. Ce contrôle du démarrage ne constitue pas un nouveau test
+d’endurance après installation.
+
 ## Quels périphériques sont détectés ? {#hardware}
 
 **Détecté** signifie d’abord que Linux peut répertorier le périphérique USB.
@@ -38,6 +128,7 @@ autorisation explicite dans l’application. Ce sont deux capacités distinctes.
 | Claviers USB, y compris claviers multimédias Windows | Codes de touches, appui/relâchement, bascule, état d’appui, clic/double-clic/appui long | Claviers Trust/HCT utilisés dans le montage réel |
 | Touches de volume et multimédias | `KEY_VOLUMEUP`, `KEY_VOLUMEDOWN`, `KEY_MUTE` ; autres touches de lecture/piste signalées par le matériel | Volume/muet observés ; autres touches à tester par modèle |
 | Claviers à macros HID et pédales USB | Même traitement si Linux fournit des codes de touches ordinaires | Selon le modèle ; retours bienvenus |
+| Logitech T650 | Huit directions à un doigt, X/Y 0–100 optionnel | Test isolé T650/MQTT réel réussi ; limites ci-dessus |
 | Elgato Stream Deck physiques | Pilote HID dédié ; fonctions d’affichage et d’entrée ci-dessous | Implémentées ; aucun Stream Deck physique encore testé dans ce projet |
 | Autres appareils à touches LCD | Entrées clavier éventuellement via HID ; affichage nécessitant le pilote du fabricant | Aucune compatibilité générale garantie |
 | Imprimantes, caméras, stockage USB, interfaces audio, appareils série et autres contrôleurs | Inventaire ; fonctions particulières nécessitant des adaptateurs spécifiques | Pas de transmission générale d’impression, caméra, audio, MIDI ou série |
@@ -45,8 +136,9 @@ autorisation explicite dans l’application. Ce sont deux capacités distinctes.
 
 Un appareil répertorié n’est pas automatiquement activé. Dans **USB / Virtuelle Geräte**,
 attribuer un nom, cocher **Gerät für Eingaben freigeben**, puis choisir les courtiers
-destinataires. Les appareils sans numéro de série sont identifiés par leur port
-USB ; un changement de port peut nécessiter une nouvelle affectation.
+destinataires. Les identifiants uniques de série ou d’appareil sont indépendants
+du port. Sans identifiant unique, affecter l’appareil reconnecté à une entrée hors
+ligne enregistrée.
 
 [![Inventaire USB et autorisation explicite des entrées](/images/usb-extender/devices.png)](/images/usb-extender/devices.png)
 
@@ -61,8 +153,8 @@ Copier le ZIP sur le Pi, ouvrir un terminal dans son dossier de téléchargement
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.28-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.28
+unzip USB-Extender-Home-Assistant-0.1.31-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.31
 sudo bash install.sh
 ```
 

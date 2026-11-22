@@ -5,7 +5,7 @@ description: Connect USB keys, Stream Decks and macro pads to up to three MQTT b
 
 # USB Extender for Home Assistant
 
-**0.1.28 · Public test release · Raspberry Pi · Updated 22 November 2026**
+**0.1.31 · Public test release · Raspberry Pi · Updated 22 November 2026**
 
 A USB keyboard connected to a Raspberry Pi can become a control panel for Home
 Assistant or ioBroker. USB Extender reads inputs and publishes them to up to
@@ -13,7 +13,7 @@ Assistant or ioBroker. USB Extender reads inputs and publishes them to up to
 be stopped; the USB/MQTT service continues independently.
 
 [GitHub / German and English README](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.28](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.28)
+· [ZIP 0.1.31](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.31)
 · [Changelog](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 This is a standalone Raspberry Pi program, not an HA app installed through the
@@ -24,6 +24,89 @@ The screenshots are supplied by the user from the real 0.1.5 setup. The interfac
 currently uses German labels. Click wide images to open their original size.
 
 [![Wide key list with MQTT channel groups](/images/usb-extender/key-list.png)](/images/usb-extender/key-list.png)
+
+## New in 0.1.31: T650, devices and installer permissions {#release-031}
+
+0.1.31 includes the previously local 0.1.29 and 0.1.30 changes. **Tasten & Anzeigen**
+now groups devices alphabetically, initially collapsed. Only one device group and
+one key are expanded at a time. Volume, display-brightness and keyboard-light keys
+offer a 1–5 step filter under **Bearbeiten**: setting 3 sends steps 3, 6, 9, etc.
+Release stops volume auto-repeat even when steps are skipped.
+
+Unique serial numbers and available Logitech HID++ identifiers preserve device
+identity across port changes. Without a unique identifier, explicitly assign the
+new USB device to a saved offline entry; keys, pages and topics remain intact.
+The confirmed trash action backs up metadata and retains shared icons. Revoke
+Mobile trust separately.
+
+### T650: one-finger slide and X/Y {#t650}
+
+In **USB / Virtuelle Geräte**, enable the T650 and **Touchpad-Gesten auswerten**,
+then open **Ein-Finger-Slide und optionale X/Y-Werte**. Set sensitivity and rate,
+save, then learn the desired directions. The Linux driver must provide type-B
+multitouch; a plain click event is insufficient.
+
+| Movement | Learnable action |
+| --- | --- |
+| Left / right | `TOUCHPAD_SLIDE_LEFT` / `TOUCHPAD_SLIDE_RIGHT` |
+| Up / down | `TOUCHPAD_SLIDE_UP` / `TOUCHPAD_SLIDE_DOWN` |
+| Upper left / upper right | `TOUCHPAD_SLIDE_UP_LEFT` / `TOUCHPAD_SLIDE_UP_RIGHT` |
+| Lower left / lower right | `TOUCHPAD_SLIDE_DOWN_LEFT` / `TOUCHPAD_SLIDE_DOWN_RIGHT` |
+
+Eight 45° sectors distinguish directions. **Sensitivity 1–10** sets the required
+movement: 10 is more sensitive, 1 needs a larger movement; default 5. **Rate 1–30/s**
+is an upper limit per direction-action stream and X/Y pair, default 10/s. Each
+X/Y pair is two MQTT messages per target broker; additional enabled key channels
+can generate further messages.
+
+**X/Y is off by default.** Enabling it and saving creates readable topics, e.g.
+`t650-touchpad/x` and `t650-touchpad/y`. Custom topics are supported; saved topics
+survive renaming. Both axes use device target brokers and plain integer payloads
+**0–100**, no JSON. X: left 0, right 100; Y: top 0, bottom 100. This is absolute
+position on the touchpad.
+
+A recognized slide produces no additional tap on release. Unchanged positions
+are not retransmitted. One pending final pair may follow release at the next
+allowed interval. Multiple fingers, a mechanical click, input loss or changed
+options cancel pending values. No retain or replay to previously disconnected
+brokers; X/Y remains silent during learning.
+
+### Real T650 test and limits {#t650-test}
+
+Tested on 22 November 2026 using a real T650 and a 64-bit Raspberry Pi 4:
+
+- All eight expected directions detected; **no taps** in slide phases. A separate
+  tap phase produced four taps and no X/Y output.
+- Three local MQTT test brokers each received **752 identical messages**, including
+  200 X/Y pairs. Axis values were plain integers within 0–100.
+- **Live**: sensitivity 5 and a maximum rate of 10/s; minimum interval 0.100000 s.
+- **Replay of the same real recordings**: sensitivity 1/5/10 produced 33/38/39 slide
+  actions during rapid movement. Rates 1/5/30 gave minimum X/Y intervals of
+  1.006229 / 0.201979 / 0.037912 s. This does not replace another live test of
+  Web settings or new physical movements at every value.
+- Two adjacent-direction events and one hold were also recorded. No guarantee
+  of exactly one exclusive direction for every hand movement, nor a general
+  hardware verification of other multitouch gestures or touchpad models.
+- Only the T650 was evaluated; K400/T400 were unchanged. The isolated measurement
+  used temporary settings and loopback brokers, not production destinations.
+
+[Full T650 and installation report](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/v0.1.31/docs/tests/t650-0.1.31-20261122.md).
+The measurement tool was also fixed: bounded draining consumes the evdev generator;
+a visible start and countdown make the capture window clear.
+
+### Installer correction and data preservation {#installer-031}
+
+An inherited `umask 077` could make the new Python environment inaccessible to the
+service account (`Permission denied` in step 6). The installer now sets `umask 022`
+for program files and `umask 077` for private backup archives. No blanket permission
+change to user data is required.
+
+The subsequent Pi installation was verified: CLI and running service report
+**0.1.31**, USB/MQTT and Web are active, both with **NRestarts=0**. Mobile is active
+and the error list is empty. Five SHA256 checks for `config.json`, `switches.json`,
+`mobile-identity.json`, `mobile-trust.json` and `mobile-devices.json` confirm
+byte-identical settings and pairings. A backup was created first. This verifies
+service startup, not an additional post-installation endurance test.
 
 ## Which devices are detected? {#hardware}
 
@@ -36,6 +119,7 @@ Those are separate capabilities.
 | USB keyboards, including Windows multimedia keyboards | Key codes, press/release, toggling switch, pressed state, click/double-click/hold | Trust/HCT keyboards used in the practical setup |
 | Volume and media keys | `KEY_VOLUMEUP`, `KEY_VOLUMEDOWN`, `KEY_MUTE`; other reported playback/track keys | Volume/mute observed; test other keys per model |
 | HID macro pads and USB pedals | Same processing if Linux reports ordinary key codes | Model-dependent; reports welcome |
+| Logitech T650 | Eight one-finger slide directions, optional X/Y 0–100 | Real isolated T650/MQTT check passed; limits above |
 | Physical Elgato Stream Decks | Dedicated HID driver; display/input features below | Implemented; no physical Stream Deck tested in this project yet |
 | Other LCD-key devices | Keyboard input may work through HID; displays need the appropriate vendor driver | No blanket compatibility claim |
 | Printers, cameras, storage, audio interfaces, serial devices and other controllers | Inventory listing; specific functionality needs separate adapters | No general print/camera/audio/MIDI/serial forwarding |
@@ -43,8 +127,8 @@ Those are separate capabilities.
 
 A listed device is not automatically enabled. Under **USB / Virtuelle Geräte**, assign a
 name, select **Gerät für Eingaben freigeben**, and choose destination brokers.
-Devices without a serial number use their USB port for identification; moving
-them to another port may require assigning them again.
+Unique serial/device identifiers survive port changes. Without one, explicitly
+assign the reconnected device to a saved offline entry.
 
 [![USB inventory and explicit input permission](/images/usb-extender/devices.png)](/images/usb-extender/devices.png)
 
@@ -58,8 +142,8 @@ Copy the ZIP to the Pi, open a terminal in its download directory, and run:
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.28-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.28
+unzip USB-Extender-Home-Assistant-0.1.31-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.31
 sudo bash install.sh
 ```
 
