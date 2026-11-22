@@ -17146,9 +17146,9 @@
         "de": {
           "path": "projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "6ee7d6f441f9f3da02fad51106b6d28be6acfef36352b41970c4cf7a8aa58c67",
-          "words": 3717,
-          "headings": 19,
+          "sha256": "c497dc743b6110e4d7e076e25c7f514735a265e6c8c9faf17c912d55fdf38526",
+          "words": 4301,
+          "headings": 23,
           "examples": 3,
           "versions": [
             "0.1.22",
@@ -17156,6 +17156,9 @@
             "0.1.29",
             "0.1.30",
             "0.1.31",
+            "0.1.32",
+            "0.1.34",
+            "0.1.35",
             "0.1.5",
             "0.10.0"
           ],
@@ -17164,9 +17167,9 @@
         "en": {
           "path": "en/projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "a3ff3aecfaa68e1175baded14b5b4e3a5d58d5f4922bd5d8360cb1f9898ebccc",
-          "words": 3912,
-          "headings": 19,
+          "sha256": "97dccf56d8dbdd27a67c7a081dba71affa90bbe099d173dbf2c59a6a988ec453",
+          "words": 4531,
+          "headings": 23,
           "examples": 3,
           "versions": [
             "0.1.22",
@@ -17174,6 +17177,9 @@
             "0.1.29",
             "0.1.30",
             "0.1.31",
+            "0.1.32",
+            "0.1.34",
+            "0.1.35",
             "0.1.5",
             "0.10.0"
           ],
@@ -17189,9 +17195,9 @@
         "fr": {
           "path": "fr/projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "9cc88747b425c0dbf024a5596db71c09654f3ff904e3df73e0ee6797543797e1",
-          "words": 4434,
-          "headings": 19,
+          "sha256": "59ddf0fd52210e5d44fa13e6c1ee327a1065b55901f594acec08a8e3169a3939",
+          "words": 5101,
+          "headings": 23,
           "examples": 3,
           "versions": [
             "0.1.22",
@@ -17199,6 +17205,9 @@
             "0.1.29",
             "0.1.30",
             "0.1.31",
+            "0.1.32",
+            "0.1.34",
+            "0.1.35",
             "0.1.5",
             "0.10.0"
           ],

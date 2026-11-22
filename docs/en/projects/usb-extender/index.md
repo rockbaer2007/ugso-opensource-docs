@@ -5,7 +5,7 @@ description: Connect USB keys, Stream Decks and macro pads to up to three MQTT b
 
 # USB Extender for Home Assistant
 
-**0.1.31 · Public test release · Raspberry Pi · Updated 22 November 2026**
+**0.1.35 · Public test release · Raspberry Pi · Updated 22 November 2026**
 
 A USB keyboard connected to a Raspberry Pi can become a control panel for Home
 Assistant or ioBroker. USB Extender reads inputs and publishes them to up to
@@ -13,7 +13,7 @@ Assistant or ioBroker. USB Extender reads inputs and publishes them to up to
 be stopped; the USB/MQTT service continues independently.
 
 [GitHub / German and English README](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.31](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.31)
+· [ZIP 0.1.35 and SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.35)
 · [Changelog](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 This is a standalone Raspberry Pi program, not an HA app installed through the
@@ -25,7 +25,65 @@ currently uses German labels. Click wide images to open their original size.
 
 [![Wide key list with MQTT channel groups](/images/usb-extender/key-list.png)](/images/usb-extender/key-list.png)
 
-## New in 0.1.31: T650, devices and installer permissions {#release-031}
+## New in 0.1.35: barcode/QR scanners and HA tags {#release-035}
+
+USB HID keyboard scanners have a separate mode, disabled by default. In
+**USB / Virtuelle Geräte**, enable the device and scanner mode, choose the
+**DE/US layout**, **Enter/Tab/idle-gap** completion, topic and target brokers,
+then save. Example topic: `barcodescanner`. The default gap is 500 ms; incomplete
+or oversized inputs are rejected. Serial scanners, arbitrary Unicode input and
+GS1 control sequences are not supported.
+
+Each complete scan publishes plain text without retain. Identical codes trigger
+separate events on every scan; leading zeroes delivered by the device are retained.
+Scanned links are not opened and commands are not executed. The preview shows the
+last raw input. Existing key actions on this device pause in scanner mode while
+their bindings remain saved.
+
+### Where do scans appear in Home Assistant? {#scanner-ha}
+
+Enable discovery for the HA target broker. The scanner is announced through the
+native [MQTT tag integration](https://www.home-assistant.io/integrations/tag.mqtt/).
+Scans appear as **`tag_scanned` events**, rather than regular sensor entities.
+Under **Settings → Tags**, name the tag and create a tag automation, for example
+to toggle a light. HA defines the action. USB Extender needs no HA access token.
+
+Optionally, `https://www.home-assistant.io/tag/workshoplight` becomes the tag ID
+`workshoplight`. Other text remains unchanged. ioBroker receives the text value
+on the selected topic; discovery can remain disabled for its broker.
+
+### Successful Aplic 305045 practical test {#scanner-test}
+
+On **22 November 2026**, four real scans were performed on Raspberry Pi .112 with
+0.1.35: the same barcode twice, a plain-text QR and an HA tag QR. Each scan was
+handed to three brokers; HA .193 received four separate native events. ioBroker
+reception on `barcodescanner` was also confirmed. Repeated codes are not suppressed.
+Both USB/MQTT and web services were active at completion, with no restarts or
+reported errors. No HA action was executed during this test.
+
+[Full test and limitations](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/v0.1.35/docs/tests/scanner-live-0.1.35-20261122.md).
+The backup verified before testing was no longer at its recorded path during the
+final comparison; this test therefore provides no final metadata hash proof.
+The agent did not change settings or pairings. Scanner discovery after restart
+and disabling remains an additional practical check.
+
+### Also included from 0.1.32–0.1.34 {#values-gamepad}
+
+- **Logitech Touchpad T650:** eight individually enabled directional values plus X/Y, with separate
+  topics and HA sensors, plain numbers 0–100. All ten live values confirmed in HA.
+- **Alternative surface mode:** five vertical faders. Touch-down selects a strip
+  locked until lift-off; top 100, bottom 0. Directional actions pause with their
+  settings preserved. X/Y remains independent. Active faders are turquoise,
+  directions gold and paused controls grey; values and the latest trigger are
+  visible. Five real values confirmed in ioBroker.
+- **DragonRise `0079:0006` gamepad:** left stick `ABS_X/ABS_Y`, right stick
+  `ABS_RX/ABS_RZ`, each 0–100, centre 50, with individual topics and HA sensors.
+  Explicitly enable output; rate 1–30/s per axis. `ABS_Z` is ignored. Learn L1/R1,
+  L2/R2 and stick clicks as ordinary keys; L2/R2 are digital. Mapping measured on
+  real hardware, new MQTT processing tested locally; not a universal gamepad
+  profile. Additional practical checks are recorded in the roadmap.
+
+## Previously in 0.1.31: Logitech Touchpad T650, devices and installer permissions {#release-031}
 
 0.1.31 includes the previously local 0.1.29 and 0.1.30 changes. **Tasten & Anzeigen**
 now groups devices alphabetically, initially collapsed. Only one device group and
@@ -39,7 +97,7 @@ new USB device to a saved offline entry; keys, pages and topics remain intact.
 The confirmed trash action backs up metadata and retains shared icons. Revoke
 Mobile trust separately.
 
-### T650: one-finger slide and X/Y {#t650}
+### Logitech Touchpad T650: one-finger slide and X/Y {#t650}
 
 In **USB / Virtuelle Geräte**, enable the T650 and **Touchpad-Gesten auswerten**,
 then open **Ein-Finger-Slide und optionale X/Y-Werte**. Set sensitivity and rate,
@@ -71,7 +129,7 @@ allowed interval. Multiple fingers, a mechanical click, input loss or changed
 options cancel pending values. No retain or replay to previously disconnected
 brokers; X/Y remains silent during learning.
 
-### Real T650 test and limits {#t650-test}
+### Logitech Touchpad T650: practical test and limits {#t650-test}
 
 Tested on 22 November 2026 using a real T650 and a 64-bit Raspberry Pi 4:
 
@@ -119,7 +177,9 @@ Those are separate capabilities.
 | USB keyboards, including Windows multimedia keyboards | Key codes, press/release, toggling switch, pressed state, click/double-click/hold | Trust/HCT keyboards used in the practical setup |
 | Volume and media keys | `KEY_VOLUMEUP`, `KEY_VOLUMEDOWN`, `KEY_MUTE`; other reported playback/track keys | Volume/mute observed; test other keys per model |
 | HID macro pads and USB pedals | Same processing if Linux reports ordinary key codes | Model-dependent; reports welcome |
-| Logitech T650 | Eight one-finger slide directions, optional X/Y 0–100 | Real isolated T650/MQTT check passed; limits above |
+| USB HID barcode/QR scanners | Plain-text MQTT and native HA tag discovery | Aplic 305045 repeated barcode, text QR and HA tag confirmed on hardware |
+| DragonRise 0079:0006 gamepad | Four stick values 0–100 and ordinary buttons | Hardware mapping measured, new MQTT processing tested locally |
+| Logitech Touchpad T650 | Eight slide directions, optional values/X/Y, alternative five vertical faders | Directions/X/Y confirmed in HA, five fader values in ioBroker; limits above |
 | Physical Elgato Stream Decks | Dedicated HID driver; display/input features below | Implemented; no physical Stream Deck tested in this project yet |
 | Other LCD-key devices | Keyboard input may work through HID; displays need the appropriate vendor driver | No blanket compatibility claim |
 | Printers, cameras, storage, audio interfaces, serial devices and other controllers | Inventory listing; specific functionality needs separate adapters | No general print/camera/audio/MIDI/serial forwarding |
@@ -142,8 +202,8 @@ Copy the ZIP to the Pi, open a terminal in its download directory, and run:
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.31-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.31
+unzip USB-Extender-Home-Assistant-0.1.35-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.35
 sudo bash install.sh
 ```
 

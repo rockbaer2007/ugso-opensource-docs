@@ -5,7 +5,7 @@ description: Relier des touches USB, Stream Deck et claviers à macros à trois 
 
 # USB Extender pour Home Assistant
 
-**0.1.31 · Version de test publique · Raspberry Pi · Mise à jour du 22 novembre 2026**
+**0.1.35 · Version de test publique · Raspberry Pi · Mise à jour du 22 novembre 2026**
 
 Un clavier USB connecté au Raspberry Pi peut servir de commande pour Home
 Assistant ou ioBroker. USB Extender lit les entrées et les publie vers **trois
@@ -13,7 +13,7 @@ courtiers MQTT simultanément** au maximum. L’interface Web sert à la configu
 et peut ensuite être arrêtée ; le service USB/MQTT continue indépendamment.
 
 [GitHub / README allemand et anglais](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.31](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.31)
+· [ZIP 0.1.35 et SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.35)
 · [Modifications](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 Il s’agit d’un programme autonome pour Raspberry Pi, pas d’une application HA à
@@ -27,7 +27,66 @@ ouvrir à leur taille d’origine.
 
 [![Liste large des touches et groupes de canaux MQTT](/images/usb-extender/key-list.png)](/images/usb-extender/key-list.png)
 
-## Nouveautés 0.1.31 : T650, périphériques et droits d’installation {#release-031}
+## Nouveautés 0.1.35 : scanners de codes-barres/QR et tags HA {#release-035}
+
+Les scanners USB HID de type clavier disposent d’un mode distinct, désactivé par
+défaut. Dans **USB / Virtuelle Geräte**, autoriser le périphérique et le mode
+scanner, choisir la disposition **DE/US**, la fin par **Entrée/Tab/pause**, le topic
+et les courtiers cibles, puis enregistrer. Exemple : `barcodescanner`. La pause
+par défaut est de 500 ms ; les entrées incomplètes ou trop longues sont rejetées.
+Les scanners série, Unicode arbitraire et séquences de contrôle GS1 ne sont pas pris en charge.
+
+Chaque lecture complète publie du texte brut sans retain. Un même code déclenche
+un événement à chaque lecture ; les zéros initiaux fournis par l’appareil sont
+conservés. Aucun lien ni commande n’est exécuté. L’aperçu montre le dernier texte
+brut. Les actions de touches existantes de cet appareil sont suspendues en mode
+scanner, mais leurs affectations restent enregistrées.
+
+### Où apparaissent les lectures dans Home Assistant ? {#scanner-ha}
+
+Activer la découverte pour le courtier HA. Le scanner est annoncé par
+l’[intégration MQTT tag native](https://www.home-assistant.io/integrations/tag.mqtt/).
+Les lectures produisent des **événements `tag_scanned`**, pas des entités capteurs
+ordinaires. Dans **Paramètres → Tags**, nommer le tag et créer une automatisation
+de tag, par exemple pour basculer une lampe. L’action est définie dans HA.
+USB Extender n’a pas besoin de jeton d’accès HA.
+
+En option, `https://www.home-assistant.io/tag/atelier` devient l’identifiant
+`atelier`. Les autres textes restent inchangés. ioBroker reçoit le texte sur le
+topic choisi ; la découverte peut rester désactivée pour son courtier.
+
+### Test pratique réussi avec l’Aplic 305045 {#scanner-test}
+
+Le **22 novembre 2026**, quatre lectures réelles ont été effectuées sur Raspberry
+Pi .112 avec 0.1.35 : deux fois le même code-barres, un QR texte et un QR de tag HA.
+Chaque lecture a été transmise à trois courtiers ; HA .193 a reçu quatre événements
+natifs distincts. La réception dans ioBroker sur `barcodescanner` est également
+confirmée. Les codes répétés ne sont pas supprimés. À la fin, services USB/MQTT et
+Web actifs, sans redémarrage ni erreur signalée. Aucune action HA n’a été exécutée.
+
+[Test complet et limites](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/v0.1.35/docs/tests/scanner-live-0.1.35-20261122.md).
+La sauvegarde vérifiée avant le test n’était plus au chemin enregistré lors de la
+comparaison finale ; ce test ne fournit donc pas de preuve finale par empreintes
+des métadonnées. L’agent n’a modifié ni réglages ni appairages. La découverte après
+redémarrage et désactivation reste à vérifier sur le matériel.
+
+### Également inclus depuis 0.1.32–0.1.34 {#values-gamepad}
+
+- **Logitech Touchpad T650 :** huit valeurs directionnelles activables séparément et X/Y, avec
+  topics et capteurs HA propres, nombres bruts 0–100. Dix valeurs réelles confirmées dans HA.
+- **Mode de surface alternatif :** cinq curseurs verticaux. Le premier contact
+  choisit une bande, conservée jusqu’au relâchement ; haut 100, bas 0. Les actions
+  directionnelles sont suspendues sans perdre leurs réglages. X/Y reste indépendant.
+  Curseurs actifs turquoise, directions dorées, commandes suspendues grises ;
+  valeurs et dernier déclenchement visibles. Cinq valeurs réelles confirmées dans ioBroker.
+- **Manette DragonRise `0079:0006` :** stick gauche `ABS_X/ABS_Y`, droit
+  `ABS_RX/ABS_RZ`, chacun 0–100, centre 50, topics et capteurs HA propres. Activer
+  explicitement la sortie ; fréquence 1–30/s par axe. `ABS_Z` est ignoré. Apprendre
+  L1/R1, L2/R2 et clics des sticks comme des touches ordinaires ; L2/R2 sont numériques.
+  Affectation mesurée sur le matériel, nouveau traitement MQTT testé localement ;
+  ce n’est pas un profil universel. Autres vérifications pratiques dans la feuille de route.
+
+## Déjà en 0.1.31 : Logitech Touchpad T650, périphériques et droits d’installation {#release-031}
 
 0.1.31 inclut les modifications auparavant locales des versions 0.1.29 et 0.1.30.
 **Tasten & Anzeigen** regroupe les périphériques par ordre alphabétique, repliés
@@ -43,7 +102,7 @@ touches, pages et topics sont conservés. La suppression confirmée par la corbe
 sauvegarde les métadonnées et conserve les icônes partagées. Révoquer séparément
 la confiance Mobile.
 
-### T650 : glissement à un doigt et X/Y {#t650}
+### Logitech Touchpad T650 : glissement à un doigt et X/Y {#t650}
 
 Dans **USB / Virtuelle Geräte**, autoriser le T650, activer **Touchpad-Gesten
 auswerten**, puis ouvrir **Ein-Finger-Slide und optionale X/Y-Werte**. Régler la
@@ -79,7 +138,7 @@ doigts, un clic mécanique, une perte d’entrée ou une modification des option
 annulent les valeurs en attente. Pas de conservation MQTT ni de renvoi aux
 courtiers précédemment déconnectés ; X/Y reste muet pendant l’apprentissage.
 
-### Test réel du T650 et limites {#t650-test}
+### Logitech Touchpad T650 : test réel et limites {#t650-test}
 
 Test du 22 novembre 2026 avec un véritable T650 et un Raspberry Pi 4 en 64 bits :
 
@@ -128,7 +187,9 @@ autorisation explicite dans l’application. Ce sont deux capacités distinctes.
 | Claviers USB, y compris claviers multimédias Windows | Codes de touches, appui/relâchement, bascule, état d’appui, clic/double-clic/appui long | Claviers Trust/HCT utilisés dans le montage réel |
 | Touches de volume et multimédias | `KEY_VOLUMEUP`, `KEY_VOLUMEDOWN`, `KEY_MUTE` ; autres touches de lecture/piste signalées par le matériel | Volume/muet observés ; autres touches à tester par modèle |
 | Claviers à macros HID et pédales USB | Même traitement si Linux fournit des codes de touches ordinaires | Selon le modèle ; retours bienvenus |
-| Logitech T650 | Huit directions à un doigt, X/Y 0–100 optionnel | Test isolé T650/MQTT réel réussi ; limites ci-dessus |
+| Scanners de codes-barres/QR USB HID | Texte MQTT et découverte native des tags HA | Aplic 305045 : code-barres répété, QR texte et tag HA confirmés sur le matériel |
+| Manette DragonRise 0079:0006 | Quatre valeurs de sticks 0–100 et touches ordinaires | Affectation matérielle mesurée, nouveau traitement MQTT testé localement |
+| Logitech Touchpad T650 | Huit directions, valeurs/X/Y optionnels, cinq curseurs verticaux alternatifs | Directions/X/Y confirmés dans HA, cinq curseurs dans ioBroker ; limites ci-dessus |
 | Elgato Stream Deck physiques | Pilote HID dédié ; fonctions d’affichage et d’entrée ci-dessous | Implémentées ; aucun Stream Deck physique encore testé dans ce projet |
 | Autres appareils à touches LCD | Entrées clavier éventuellement via HID ; affichage nécessitant le pilote du fabricant | Aucune compatibilité générale garantie |
 | Imprimantes, caméras, stockage USB, interfaces audio, appareils série et autres contrôleurs | Inventaire ; fonctions particulières nécessitant des adaptateurs spécifiques | Pas de transmission générale d’impression, caméra, audio, MIDI ou série |
@@ -153,8 +214,8 @@ Copier le ZIP sur le Pi, ouvrir un terminal dans son dossier de téléchargement
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.31-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.31
+unzip USB-Extender-Home-Assistant-0.1.35-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.35
 sudo bash install.sh
 ```
 
