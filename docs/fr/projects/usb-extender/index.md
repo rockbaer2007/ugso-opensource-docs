@@ -5,7 +5,7 @@ description: Relier des touches USB, Stream Deck et claviers à macros à trois 
 
 # USB Extender pour Home Assistant
 
-**0.1.36 · Version de test publique · Raspberry Pi · Mise à jour du 23 novembre 2026**
+**0.1.38 · Version de test publique · Raspberry Pi · Mise à jour du 23 novembre 2026**
 
 Un clavier USB connecté au Raspberry Pi peut servir de commande pour Home
 Assistant ou ioBroker. USB Extender lit les entrées et les publie vers **trois
@@ -13,7 +13,7 @@ courtiers MQTT simultanément** au maximum. L’interface Web sert à la configu
 et peut ensuite être arrêtée ; le service USB/MQTT continue indépendamment.
 
 [GitHub / README allemand et anglais](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.36 et SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.36)
+· [ZIP 0.1.38 et SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.38)
 · [Modifications](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 Il s’agit d’un programme autonome pour Raspberry Pi, pas d’une application HA à
@@ -27,7 +27,49 @@ ouvrir à leur taille d’origine.
 
 [![Liste large des touches et groupes de canaux MQTT](/images/usb-extender/key-list.png)](/images/usb-extender/key-list.png)
 
-## Nouveautés 0.1.36 : affichage compact des disques USB {#release-036}
+## Nouveautés 0.1.38 : commandes système MQTT et cartes HA {#release-038}
+
+L’interface Web peut maintenant être démarrée et arrêtée par MQTT lorsque son
+service Web est arrêté. **Démarrage automatique Web**, **sauvegarde** et **demande
+d’état** sont également disponibles. Dans **MQTT-Broker**, activez explicitement
+la commande système du courtier souhaité et enregistrez ; les courtiers existants
+restent initialement inchangés. Avec la découverte HA, deux interrupteurs, un
+bouton de sauvegarde et deux capteurs d’état apparaissent sous **USB Extender**.
+
+Les commandes utilisent `usb-extender/global/web/set` et
+`usb-extender/global/web/autorun/set` avec `ON/OFF` ; sauvegarde et demande d’état
+utilisent `usb-extender/global/backup/set` et `usb-extender/global/web/status/set`
+avec `PRESS`. Les retours séparés sous `usb-extender/global/state/` sont
+`webrun`, `autorun`, `state` et `backup`. Ne pas conserver les commandes avec Retain.
+**Plusieurs Extenders sur le même courtier réagissent ensemble à ces topics globaux.**
+[Configuration et formats exacts des retours](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/v0.1.38/docs/mqtt-system-control.md).
+
+### USB Extender Cards 0.1.0 {#cards}
+
+Le [paquet de cartes indépendant sur GitHub](https://github.com/rockbaer2007/usb-extender-cards)
+propose des **présentations inspirées de Mushroom et Bubble**, sans installation
+supplémentaire de ces cartes. Ajoutez le dépôt personnalisé de tableau de bord
+dans HACS ou chargez manuellement le JavaScript de la
+[version avec ZIP](https://github.com/rockbaer2007/usb-extender-cards/releases/tag/v0.1.0).
+Dans l’éditeur visuel, utilisez **Affectation automatique**, saisissez l’adresse Web
+et choisissez la présentation. Les identifiants d’entités viennent du registre ;
+si plusieurs Extenders sont présents, choisissez explicitement l’appareil.
+
+**Ouvrir l’interface Web** ouvre un onglet d’attente au clic, demande le démarrage,
+puis charge l’URL après confirmation. Interrupteurs Web/démarrage automatique,
+sauvegarde et états sont inclus. Un lien manuel est proposé si les fenêtres sont
+bloquées. La carte utilise la session HA existante, sans jeton supplémentaire.
+L’installateur Pi ne modifie aucun tableau de bord ; l’onglet Système contient
+un lien vers le paquet.
+
+[![Présentation Mushroom avec entités HA simulées](/images/usb-extender/cards-mushroom.png)](/images/usb-extender/cards-mushroom.png)
+[![Présentation Bubble avec entités HA simulées](/images/usb-extender/cards-bubble.png)](/images/usb-extender/cards-bubble.png)
+
+Ces images sont des aperçus locaux. La logique et les parcours du navigateur ont
+été testés avec des entités HA simulées ; un nouveau test réel HA ou Companion
+reste à effectuer. L’interface de la carte prend en charge DE/EN/FR.
+
+## Déjà en 0.1.36 : affichage compact des disques USB {#release-036}
 
 Les clés et autres supports de stockage USB sont reconnus par leur classe USB de
 périphérique ou d’interface. Les nouveaux supports n’ont aucune cible MQTT cochée
@@ -237,8 +279,8 @@ Copier le ZIP sur le Pi, ouvrir un terminal dans son dossier de téléchargement
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.36-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.36
+unzip USB-Extender-Home-Assistant-0.1.38-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.38
 sudo bash install.sh
 ```
 

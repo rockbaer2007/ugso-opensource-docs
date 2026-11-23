@@ -5,7 +5,7 @@ description: USB-Tasten, Stream Decks und Makropads über bis zu drei MQTT-Broke
 
 # USB Extender für Home Assistant
 
-**0.1.36 · Öffentliches Testrelease · Raspberry Pi · Stand 23. November 2026**
+**0.1.38 · Öffentliches Testrelease · Raspberry Pi · Stand 23. November 2026**
 
 Eine USB-Tastatur am Raspberry Pi kann zum Bedienteil für Home Assistant oder
 ioBroker werden. Der USB Extender erkennt Eingaben und sendet sie über MQTT an
@@ -13,7 +13,7 @@ bis zu **drei Broker gleichzeitig**. Die Weboberfläche dient zum Einrichten und
 kann danach abgeschaltet werden; USB und MQTT laufen unabhängig weiter.
 
 [GitHub / README DE und EN](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.36 und SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.36)
+· [ZIP 0.1.38 und SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.38)
 · [Änderungen](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 Dies ist ein eigenständiges Raspberry-Pi-Programm, keine HA-App zum Installieren
@@ -26,7 +26,47 @@ derzeit deutsch. Breite Bilder lassen sich durch Anklicken in Originalgröße ö
 
 [![Breite Tastenliste mit MQTT-Kanälen](/images/usb-extender/key-list.png)](/images/usb-extender/key-list.png)
 
-## Neu in 0.1.36: USB-Laufwerke kompakt anzeigen {#release-036}
+## Neu in 0.1.38: MQTT-Systemsteuerung und HA-Kartenpaket {#release-038}
+
+Die Weboberfläche lässt sich jetzt auch bei abgeschaltetem Webdienst per MQTT
+starten und stoppen. **Web-Autostart**, **Backup** und **Statusabfrage** sind ebenfalls
+verfügbar. Unter **MQTT-Broker** die Systemsteuerung ausdrücklich für den gewünschten
+Broker einschalten und speichern; vorhandene Broker bleiben zunächst unverändert.
+Mit aktiver HA-Discovery entstehen zwei Schalter, ein Backup-Button und zwei
+Statussensoren unter dem Gerät **USB Extender**.
+
+Befehle verwenden `usb-extender/global/web/set` und
+`usb-extender/global/web/autorun/set` mit `ON/OFF`; Backup und Statusabfrage verwenden
+`usb-extender/global/backup/set` bzw. `usb-extender/global/web/status/set` mit `PRESS`.
+Getrennte Rückmeldungen liegen unter `usb-extender/global/state/`:
+`webrun`, `autorun`, `state` und `backup`. Keine Retain-Befehle senden.
+**Mehrere Extender am selben Broker reagieren auf diese globalen Topics gemeinsam.**
+[Einrichtung und genaue Rückmeldungen](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/v0.1.38/docs/mqtt-system-control.md).
+
+### USB Extender Cards 0.1.0 {#cards}
+
+Das eigenständige [Kartenpaket auf GitHub](https://github.com/rockbaer2007/usb-extender-cards)
+bietet **Mushroom- und Bubble-inspirierte Darstellung** ohne zusätzliche Installation
+dieser Karten. Über HACS als benutzerdefiniertes Dashboard-Repository installieren
+oder die JavaScript-Datei aus dem [Release mit ZIP](https://github.com/rockbaer2007/usb-extender-cards/releases/tag/v0.1.0)
+manuell einbinden. Im visuellen Editor **Automatisch zuordnen**, Webadresse eintragen
+und Darstellung wählen. Entity-IDs werden aus der Registry gelesen; bei mehreren
+Extendern das Gerät ausdrücklich auswählen.
+
+**Webfrontend öffnen** öffnet beim Klick einen Wartetab, fordert den Start an und
+lädt die URL erst nach bestätigter Rückmeldung. Dazu kommen Web-/Autostart-Schalter,
+Backup und Statusanzeige. Bei blockierten Popups gibt es einen manuellen Link.
+Die Karte verwendet die bestehende HA-Sitzung, keinen zusätzlichen Token.
+Der Pi-Installer ändert kein Dashboard; im Systembereich steht ein Paketverweis.
+
+[![Mushroom-Darstellung mit simulierten HA-Entitäten](/images/usb-extender/cards-mushroom.png)](/images/usb-extender/cards-mushroom.png)
+[![Bubble-Darstellung mit simulierten HA-Entitäten](/images/usb-extender/cards-bubble.png)](/images/usb-extender/cards-bubble.png)
+
+Die Bilder zeigen lokale Vorschauen. Kartenlogik und Browserabläufe wurden mit
+simulierten HA-Entitäten geprüft; ein neuer Praxistest auf HA oder in der
+Companion-App steht aus. Die Oberfläche der Karte unterstützt DE/EN/FR.
+
+## Bereits in 0.1.36: USB-Laufwerke kompakt anzeigen {#release-036}
 
 USB-Sticks und andere USB-Massenspeicher werden anhand ihrer USB-Geräte- bzw.
 Interface-Klasse erkannt. Neue Laufwerke übernehmen keine ausgewählten MQTT-Ziele;
@@ -229,8 +269,8 @@ ZIP auf den Pi kopieren, im Terminal in den Downloadordner wechseln und ausführ
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.36-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.36
+unzip USB-Extender-Home-Assistant-0.1.38-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.38
 sudo bash install.sh
 ```
 

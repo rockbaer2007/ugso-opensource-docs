@@ -17146,11 +17146,12 @@
         "de": {
           "path": "projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "566a815978271f0267cbd46371a637fb482ff017f0aea4a62b6394018654eae2",
-          "words": 4462,
-          "headings": 24,
+          "sha256": "35e2645c56b70fbd2405954d3d416196f42d851fdcae30944b55d052fce0049c",
+          "words": 4826,
+          "headings": 26,
           "examples": 3,
           "versions": [
+            "0.1.0",
             "0.1.22",
             "0.1.28",
             "0.1.29",
@@ -17160,6 +17161,7 @@
             "0.1.34",
             "0.1.35",
             "0.1.36",
+            "0.1.38",
             "0.1.5",
             "0.10.0"
           ],
@@ -17168,11 +17170,12 @@
         "en": {
           "path": "en/projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "19955cd74695a73a09b216fd8482f128fb231e3e01e8ae5fd91e8ff7be98a2ed",
-          "words": 4697,
-          "headings": 24,
+          "sha256": "9cb9152d55251b23fed60fc0fdf61dca903b017e2a7a5666db93c9b3490921ac",
+          "words": 5077,
+          "headings": 26,
           "examples": 3,
           "versions": [
+            "0.1.0",
             "0.1.22",
             "0.1.28",
             "0.1.29",
@@ -17182,6 +17185,7 @@
             "0.1.34",
             "0.1.35",
             "0.1.36",
+            "0.1.38",
             "0.1.5",
             "0.10.0"
           ],
@@ -17197,11 +17201,12 @@
         "fr": {
           "path": "fr/projects/usb-extender/index.md",
           "status": "content-present",
-          "sha256": "3e29dfa49fd2f1956671f1180887caaa18f5f32bc9edd3a9db77193c20a6f67a",
-          "words": 5290,
-          "headings": 24,
+          "sha256": "f3d98ff0619a7225cf2717b98ca3f390d40da5ce34f0aa3a2c86effb6b750e3e",
+          "words": 5706,
+          "headings": 26,
           "examples": 3,
           "versions": [
+            "0.1.0",
             "0.1.22",
             "0.1.28",
             "0.1.29",
@@ -17211,6 +17216,7 @@
             "0.1.34",
             "0.1.35",
             "0.1.36",
+            "0.1.38",
             "0.1.5",
             "0.10.0"
           ],
