@@ -1,0 +1,13 @@
+{
+  "reviewed_at": "2026-11-23",
+  "branch": "dev",
+  "previous_revision": "6597c4def884f1595a6c3ffcbd337b1579f3fd80",
+  "revision": "105c5145a158e18be9934e1c7553633ed5c5f1fe",
+  "source_pages": 66,
+  "changed_pages": [
+    "forge/sparks/lock.md"
+  ],
+  "unchanged_pages": 65,
+  "scope": "All 66 canonical source hashes compared; Lock Spark reviewed in DE/EN/FR: persistent-notification automation, visual event trigger, event order, duplicate-alert warning and browser fields. Canonical YAML example preserved verbatim.",
+  "limitations": "Documentation comparison only; no Home Assistant runtime test. Stable baseline remains 9.1.0; additions describe dev."
+}

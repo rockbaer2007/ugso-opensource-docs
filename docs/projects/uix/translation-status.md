@@ -4,6 +4,10 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Ergänzung 105c514 – HA-Benachrichtigung bei Fehlversuchen
+
+Am 23.11.2026 mit [`dev 105c5145a158`](https://github.com/Lint-Free-Technology/uix/commit/105c5145a158e18be9934e1c7553633ed5c5f1fe) verglichen: Von 66 kanonischen Seiten ist nur `forge/sparks/lock.md` geändert, 65 sind unverändert. DE/EN/FR enthalten jetzt die vollständige Automation mit `persistent_notification.create`, den visuellen Ereignisauslöser und die HA-Referenzen. Das YAML samt Jinja wurde unverändert übernommen. Dokumentiert sind auch die Reihenfolge `retry_event` vor `failed_event`, die mögliche doppelte Benachrichtigung beim letzten Fehlversuch und die optionalen Browserdaten. [Quellenvergleich](/projects/uix/source-audit-20261123-105c514.json). Keine neue HA-Laufzeitprüfung; stabile Basis und Entwicklungsstand bleiben getrennt. Die folgenden Abschnitte dokumentieren frühere Abgleiche.
+
 ## Kanonischer Abgleich – 23. November 2026
 
 Alle 66 englischen Quellseiten wurden mit [`dev 6597c4def884`](https://github.com/Lint-Free-Technology/uix/commit/6597c4def884f1595a6c3ffcbd337b1579f3fd80) verglichen. Gegenüber `fb36536` sind ausschließlich `broker/directives.md`, `extras/uix-actions.md` und `forge/sparks/lock.md` geändert; 63 Seiten sind identisch. DE und FR übernehmen die beiden neuen Sperrereignisse: `retry_event` bei jedem falschen Code, zusätzlich `failed_event` beim Erreichen von `max_retries`. Dokumentiert sind `user`, `retry_count`, `browser` sowie das optionale `browser_id` und der Zählerstand beim Grenzwert. Das neue YAML-Beispiel wurde unverändert übernommen.

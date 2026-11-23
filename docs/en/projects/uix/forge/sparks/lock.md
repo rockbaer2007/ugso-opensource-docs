@@ -3,7 +3,7 @@ description: Learn about the lock spark for UIX Forge — add interactive lock o
 icon: material/lock
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0**, revision [6597c4d](https://github.com/Lint-Free-Technology/uix/commit/6597c4def884f1595a6c3ffcbd337b1579f3fd80), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0**, revision [105c514](https://github.com/Lint-Free-Technology/uix/commit/105c5145a158e18be9934e1c7553633ed5c5f1fe), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Lock spark
 
@@ -193,6 +193,28 @@ locks:
     retry_event: uix_lock_retry
     failed_event: uix_lock_failed
 ```
+
+Create a Home Assistant automation with the **Manual event received** trigger to react to the final failed attempt. This example creates a persistent notification that includes the UIX event data:
+
+```yaml
+alias: Alert when a UIX lock fails
+triggers:
+  - trigger: event
+    event_type: uix_lock_failed
+conditions: []
+actions:
+  - action: persistent_notification.create
+    data:
+      title: UIX lock failed
+      message: >-
+        {{ trigger.event.data.user }} entered an incorrect code
+        {{ trigger.event.data.retry_count }} times.
+mode: single
+```
+
+To react to every wrong entry instead, set `event_type` to `uix_lock_retry`. When the final wrong entry reaches `max_retries`, UIX fires both events: `retry_event` first and then `failed_event`. Do not listen for both in one alert automation unless receiving two alerts for that final entry is intended. The same event data is available through `trigger.event.data.browser` and, when supplied by the browser, `trigger.event.data.browser_id`.
+
+For the visual editor, add a **Manual event received** trigger and enter the matching event type. Home Assistant documents the corresponding [event trigger YAML](https://www.home-assistant.io/triggers/event/) and [trigger data](https://www.home-assistant.io/docs/automation/trigger-data/#event-triggers).
 
 ---
 

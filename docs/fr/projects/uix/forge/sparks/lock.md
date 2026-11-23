@@ -190,6 +190,28 @@ locks:
 
 ---
 
+Créez une automatisation Home Assistant avec le déclencheur **Événement reçu manuellement** pour réagir à la dernière tentative incorrecte. Cet exemple crée une notification persistante contenant les données de l’événement UIX :
+
+```yaml
+alias: Alert when a UIX lock fails
+triggers:
+  - trigger: event
+    event_type: uix_lock_failed
+conditions: []
+actions:
+  - action: persistent_notification.create
+    data:
+      title: UIX lock failed
+      message: >-
+        {{ trigger.event.data.user }} entered an incorrect code
+        {{ trigger.event.data.retry_count }} times.
+mode: single
+```
+
+Pour réagir à chaque code incorrect, utilisez plutôt `event_type: uix_lock_retry`. Lorsque la dernière tentative atteint `max_retries`, UIX émet les deux événements : d’abord `retry_event`, puis `failed_event`. N’écoutez pas les deux dans une même automatisation d’alerte, sauf si vous souhaitez deux notifications pour cette dernière tentative. Les autres données sont accessibles dans `trigger.event.data.browser` et, si le navigateur le fournit, `trigger.event.data.browser_id`.
+
+Dans l’éditeur visuel, ajoutez un déclencheur **Événement reçu manuellement** et saisissez le type d’événement correspondant. Home Assistant documente le [déclencheur événement en YAML](https://www.home-assistant.io/triggers/event/) et les [données du déclencheur](https://www.home-assistant.io/docs/automation/trigger-data/#event-triggers).
+
 ## Exemples
 
 ### Même code PIN pour tout le monde, administrateurs compris

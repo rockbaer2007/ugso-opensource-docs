@@ -1,6 +1,6 @@
 {
   "reviewed_at": "2026-11-23",
-  "source_revision": "6597c4def884f1595a6c3ffcbd337b1579f3fd80",
+  "source_revision": "105c5145a158e18be9934e1c7553633ed5c5f1fe",
   "scope": "Editorial technical-reference review; page coverage, table identifiers, defaults and selected missing examples",
   "limitations": "Translations retain editorial summaries. Not sentence-by-sentence identity, independent linguistic certification or a Home Assistant runtime test.",
   "pages": [
@@ -662,7 +662,7 @@
     },
     {
       "path": "forge/sparks/lock.md",
-      "source_sha256": "24aa9e0d31f5ebdc2e92e47213c880991401957f8edeb5712b58e0313c5c8544",
+      "source_sha256": "cdfff444e6c6f576eb07dac2c567174acf8ca6ea817880afc01dfe1ec2a50480",
       "table_identifiers": [
         "--uix-lock-background",
         "--uix-lock-background-blocked",
@@ -721,10 +721,10 @@
         "unlocked_action",
         "users"
       ],
-      "de_sha256": "9f90d9aeda8930481dde7ed48015d6597f5a6d61bda9c4822318f52a448b774d",
-      "de_example_blocks": 17,
-      "fr_sha256": "9adb52eb957fa5ac292e26eec7fae938a636e8f818e157395d7a8a90e9d2a346",
-      "fr_example_blocks": 17
+      "de_sha256": "0a3814590c3f21c667ff3b3dddfa962c9645ff633dc0b50c43982f52257ada0e",
+      "de_example_blocks": 18,
+      "fr_sha256": "c8c0695ba6a270475adf0d602917103d91d979df60a9af643799ef5ce823c642",
+      "fr_example_blocks": 18
     },
     {
       "path": "forge/sparks/map.md",
@@ -994,9 +994,9 @@
       "path": "index.md",
       "source_sha256": "602465d9e9b2aa6af3e2360d2ef343e88609cf2089c04db29dfa87d95c08ce30",
       "table_identifiers": [],
-      "de_sha256": "7d5aae9c2121a5164828e8c535d0c61740f0effcac7315a38094e1f78abebdc5",
+      "de_sha256": "addbc0680ee59a754c009cc54608933b603b6e469072952735cac0ecec06d3d5",
       "de_example_blocks": 0,
-      "fr_sha256": "e392e120bd7ba1f20149aeecabf533f10e33d2ce3ae91e1bf8b8f7655c260901",
+      "fr_sha256": "e7736ff08e0d7f87dc1bb1e83b5d9725a782612c65c4c8f3bb65d0b37936f335",
       "fr_example_blocks": 0
     },
     {

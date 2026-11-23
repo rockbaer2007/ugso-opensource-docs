@@ -3,7 +3,7 @@ description: Use the button spark to insert an interactive ha-button element as 
 icon: material/button-cursor
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0**, revision [6597c4d](https://github.com/Lint-Free-Technology/uix/commit/6597c4def884f1595a6c3ffcbd337b1579f3fd80), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0**, revision [105c514](https://github.com/Lint-Free-Technology/uix/commit/105c5145a158e18be9934e1c7553633ed5c5f1fe), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Button spark
 
@@ -287,7 +287,7 @@ Button `appearance` can be one of `accent`, `filled`, `outlined`, `plain`. When 
 :::
 
 ::: warning Editorial source-code clarification (2026-11-20)
-At this frozen revision, target lookup prefers `after` (including the Blank Card default), while a nonempty `before` selects insertion before that resolved target. Do not combine both selectors or rely on an empty `after` to disable the Blank Card default. For predictable Blank Card placement, use explicit `after`. This is a source-code finding, not a new browser test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/6597c4def884f1595a6c3ffcbd337b1579f3fd80/src/forge/sparks/uix-spark-button.ts).
+At this frozen revision, target lookup prefers `after` (including the Blank Card default), while a nonempty `before` selects insertion before that resolved target. Do not combine both selectors or rely on an empty `after` to disable the Blank Card default. For predictable Blank Card placement, use explicit `after`. This is a source-code finding, not a new browser test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/105c5145a158e18be9934e1c7553633ed5c5f1fe/src/forge/sparks/uix-spark-button.ts).
 :::
 
 Icon-only buttons use `neutral` and `plain` defaults, as specified in the configuration table; the general `brand`/`accent` defaults apply to labelled buttons.

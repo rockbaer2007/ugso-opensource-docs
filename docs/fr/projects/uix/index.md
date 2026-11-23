@@ -4,7 +4,7 @@ title: À propos
 # UI eXtension pour Home Assistant
 
 ::: info État vérifié le 23 novembre 2026 – UIX 9.1.0 stable, documentation dev
-Les **66** pages canoniques ont été comparées à `dev 6597c4d` : trois pages ont changé et 63 sont identiques. Le [spark Lock](./forge/sparks/lock), les [actions protégées](./extras/uix-actions) et les [directives Broker](./broker/directives) décrivent désormais `retry_event` et `failed_event`, leurs données et un exemple. Cet ajout vient de la branche de développement et ne garantit pas sa disponibilité dans la version stable 9.1.0.
+Les **66** pages canoniques ont été comparées à `dev 105c514` : une page a changé et 65 sont identiques. Le [spark Lock](./forge/sparks/lock) ajoute une automatisation de notification HA, l’ordre des événements et un avertissement contre les alertes doubles lors de la dernière tentative. Les nouveaux événements décrivent la branche de développement, sans garantir leur disponibilité dans la version stable 9.1.0.
 :::
 
 > Cette traduction française est maintenue par UGSo Software. La documentation anglaise reste la référence. La base est la version stable [`UIX 9.1.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0), révision [`ca36726`](https://github.com/Lint-Free-Technology/uix/commit/ca3672619a11858bbc7f9165db999c0aaa7cef00). **Home Assistant 2026.11.0 ou ultérieur est requis.**

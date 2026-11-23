@@ -278,10 +278,10 @@ const UgsoLayout = defineComponent({
                   h(
                     'span',
                     isEnglish
-                      ? 'Stable baseline: UIX 9.1.0, Home Assistant 2026.11.0 minimum, release ca36726. All 66 canonical pages compared on 23 November 2026 through dev 6597c4d: three changed, 63 unchanged. Retry/failed events describe dev, without claiming stable availability. The original English documentation remains authoritative.'
+                      ? 'Stable baseline: UIX 9.1.0, Home Assistant 2026.11.0 minimum, release ca36726. All 66 canonical pages compared on 23 November 2026 through dev 105c514: one changed, 65 unchanged. Retry/failed events describe dev, without claiming stable availability. The original English documentation remains authoritative.'
                       : isFrench
-                      ? 'Base stable : UIX 9.1.0, Home Assistant 2026.11.0 minimum, révision ca36726. Les 66 pages sont comparées le 23/11/2026 à dev 6597c4d : trois modifiées, 63 inchangées. Les événements retry/failed décrivent dev, sans garantir leur disponibilité dans la version stable. La documentation originale en anglais reste la référence.'
-                      : 'Stabile Basis: UIX 9.1.0, benötigt Home Assistant ab 2026.11.0, Release ca36726. Alle 66 Quellseiten am 23.11.2026 bis dev 6597c4d verglichen: drei geändert, 63 unverändert. Retry-/Failed-Ereignisse beschreiben dev, ohne Zusage zur stabilen Verfügbarkeit. Maßgeblich bleibt die englische Originaldokumentation.'
+                      ? 'Base stable : UIX 9.1.0, Home Assistant 2026.11.0 minimum, révision ca36726. Les 66 pages sont comparées le 23/11/2026 à dev 105c514 : une modifiée, 65 inchangées. Les événements retry/failed décrivent dev, sans garantir leur disponibilité dans la version stable. La documentation originale en anglais reste la référence.'
+                      : 'Stabile Basis: UIX 9.1.0, benötigt Home Assistant ab 2026.11.0, Release ca36726. Alle 66 Quellseiten am 23.11.2026 bis dev 105c514 verglichen: eine geändert, 65 unverändert. Retry-/Failed-Ereignisse beschreiben dev, ohne Zusage zur stabilen Verfügbarkeit. Maßgeblich bleibt die englische Originaldokumentation.'
                   ),
                   h('span', [
                     h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical English documentation' : isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),
@@ -298,7 +298,7 @@ const UgsoLayout = defineComponent({
                     ' · ',
                     h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/ca3672619a11858bbc7f9165db999c0aaa7cef00', target: '_blank', rel: 'noopener' }, isEnglish ? 'Release revision ca36726' : isFrench ? 'Révision publiée ca36726' : 'Release-Revision ca36726'),
                     ' · ',
-                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/6597c4def884f1595a6c3ffcbd337b1579f3fd80', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical docs 6597c4d' : isFrench ? 'Sources documentaires 6597c4d' : 'Quellabgleich 6597c4d'),
+                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/105c5145a158e18be9934e1c7553633ed5c5f1fe', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical docs 105c514' : isFrench ? 'Sources documentaires 105c514' : 'Quellabgleich 105c514'),
                     ' · ',
                     h('a', { href: isEnglish ? '/en/projects/uix/translation-status' : isFrench ? '/fr/projects/uix/translation-status' : '/projects/uix/translation-status' }, isEnglish ? 'Translation status' : isFrench ? 'État de la traduction' : 'Übersetzungsstatus')
                   ]),

@@ -152,6 +152,28 @@ locks:
     failed_event: uix_lock_failed
 ```
 
+Erstelle in Home Assistant eine Automation mit dem Auslöser **Manuell empfangenes Ereignis**, um auf den letzten Fehlversuch zu reagieren. Dieses Beispiel erstellt eine dauerhafte Benachrichtigung mit den UIX-Ereignisdaten:
+
+```yaml
+alias: Alert when a UIX lock fails
+triggers:
+  - trigger: event
+    event_type: uix_lock_failed
+conditions: []
+actions:
+  - action: persistent_notification.create
+    data:
+      title: UIX lock failed
+      message: >-
+        {{ trigger.event.data.user }} entered an incorrect code
+        {{ trigger.event.data.retry_count }} times.
+mode: single
+```
+
+Für eine Reaktion auf jeden falschen Code setze `event_type` stattdessen auf `uix_lock_retry`. Erreicht der letzte Fehlversuch `max_retries`, löst UIX beide Ereignisse aus: zuerst `retry_event`, danach `failed_event`. Höre in einer Benachrichtigungsautomation nicht auf beide, außer du möchtest für diesen letzten Versuch zwei Meldungen erhalten. Weitere Ereignisdaten stehen unter `trigger.event.data.browser` und, sofern vom Browser bereitgestellt, `trigger.event.data.browser_id` zur Verfügung.
+
+Im visuellen Editor den Auslöser **Manuell empfangenes Ereignis** hinzufügen und den passenden Ereignistyp eintragen. Die HA-Dokumentation beschreibt den [Ereignisauslöser in YAML](https://www.home-assistant.io/triggers/event/) und die [Auslöserdaten](https://www.home-assistant.io/docs/automation/trigger-data/#event-triggers).
+
 ## Beispiele
 
 ### Gleiche PIN für alle, inklusive Admins
