@@ -4,6 +4,12 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Complément 9528baa — actions de verrou et données d’exécution
+
+Le 23 novembre 2026, les **66** pages canoniques ont été comparées à [`dev 9528baaee9ce`](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c) : `broker/directives.md`, `extras/uix-actions.md` et `forge/sparks/lock.md` changent ; 63 pages sont identiques. Les traductions allemande et française remplacent les événements par les actions HA classiques `retry_action` / `failed_action`, avec ordre d’exécution et indication de migration. Le miroir anglais est actualisé. Les substitutions récursives à type conservé avec valeurs exactes `$uix.*` et l’exemple complet de script Notify sont documentés ; le YAML et Jinja de cet exemple restent inchangés. [Comparaison des sources](/projects/uix/source-audit-20261123-9528baa.json). Développement **9.2.0-beta.1**, base stable **9.1.0** ; aucun nouveau test d’exécution HA.
+
+Les sections suivantes sont historiques. Leurs exemples `retry_event` / `failed_event` décrivent d’anciennes révisions de développement, pas la configuration actuelle.
+
 ## Complément 105c514 — notification HA des tentatives incorrectes
 
 Comparaison du 23 novembre 2026 avec [`dev 105c5145a158`](https://github.com/Lint-Free-Technology/uix/commit/105c5145a158e18be9934e1c7553633ed5c5f1fe) : seule `forge/sparks/lock.md` change parmi les 66 pages canoniques ; 65 sont identiques. DE/EN/FR contiennent l’automatisation complète avec `persistent_notification.create`, le déclencheur visuel et les références HA. Le YAML et Jinja restent identiques à la source. L’ordre `retry_event` puis `failed_event`, le risque d’alerte double au dernier essai et les données facultatives du navigateur sont expliqués. [Comparaison des sources](/projects/uix/source-audit-20261123-105c514.json). Aucun nouveau test d’exécution HA ; base stable et branche de développement restent distinguées. Les sections suivantes décrivent les comparaisons précédentes.

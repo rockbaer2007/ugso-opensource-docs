@@ -317,6 +317,20 @@ Die Sperre wirkt im Frontend und ist keine Berechtigungsgrenze. Wer das Dashboar
 
 `locked_action` akzeptiert normale Home-Assistant-Action-Objekte, darunter `perform-action`, `toggle`, `more-info`, `navigate` und `fire-dom-event`.
 
+### Ersetzungen in Aktionsdaten
+
+Sperraktionen können Laufzeitwerte in `data:` einsetzen. Dies ist keine Template-Auswertung: Verwende einen exakten `$uix.*`-Token als Datenwert, nicht `{{ }}` oder einen Token innerhalb eines längeren Textes. UIX ersetzt rekursiv Werte in Objekten und Listen und erhält ihren Datentyp. Normale Strings bleiben unverändert; Aktionsnamen, Ziele und Datenschlüssel werden nicht ersetzt.
+
+| Token | Wert |
+| --- | --- |
+| `$uix.user` oder `$uix.user.name` | Name des aktuellen HA-Benutzers; `null`, wenn nicht verfügbar. |
+| `$uix.user.id` | Stabile Benutzer-ID; `null`, wenn nicht verfügbar. |
+| `$uix.user.is_admin` | Boolean: Ist der aktuelle Benutzer Administrator? |
+| `$uix.retry` oder `$uix.retry.count` | Fehlversuchszähler ab 1; bei erfolgreicher `locked_action` ist er `0`. |
+| `$uix.browser` oder `$uix.browser_id` | Browser-Mod-ID, `CAST` bei einer Cast-Sitzung oder `null`, wenn beides fehlt. |
+
+Die Ersetzungen gelten für `retry_action`, `failed_action`, `locked_action` und `unlocked_action` des Forge Lock Sparks. So kann eine verschachtelte `perform-action` nützliche Script-Felder ohne zusätzliche UIX-Template-Syntax übergeben.
+
 ### Zuordnung der Sperren
 
 `locks` wird in Reihenfolge geprüft. Der erste passende aktive Eintrag bestimmt die Abfrage. Passt kein aktiver Eintrag, erlaubt der erste passende Eintrag mit `active: false` die Aktion ohne Abfrage.
@@ -343,10 +357,10 @@ Die Sperre wirkt im Frontend und ist keine Berechtigungsgrenze. Wer das Dashboar
 | `retry_delay` | number oder string | — | Wartezeit nach falschem Code; Zahl in Millisekunden oder String mit Einheit, etwa `"10s"`. |
 | `max_retries` | number | — | Erlaubte Fehlversuche vor der längeren Sperre. |
 | `max_retries_delay` | number oder string | `30000` | Sperrdauer nach `max_retries`; Millisekunden oder etwa `"30s"` / `"5m"`. |
-| `retry_event` | string | — | Home-Assistant-Ereignis nach jeder falschen Codeeingabe. |
-| `failed_event` | string | — | Home-Assistant-Ereignis, wenn eine falsche Eingabe `max_retries` erreicht. |
+| `retry_action` | object | — | Normale Home-Assistant-Action nach jeder falschen Codeeingabe. |
+| `failed_action` | object | — | Normale Home-Assistant-Action beim Erreichen von `max_retries`. |
 
-`retry_event` wird bei jedem falschen Code ausgelöst. Erreicht diese Eingabe `max_retries`, wird zusätzlich `failed_event` ausgelöst. Beide Ereignisse enthalten `user`, `retry_count` und `browser`; `browser_id` wird ergänzt, sofern verfügbar. Der beim Grenzwert übertragene Zählerstand bleibt auch dann erhalten, wenn der interne Versuchszähler anschließend zurückgesetzt wird.
+Ab Entwicklungsstand 9.2.0-beta.1 wird `retry_action` nach jeder falschen Eingabe ausgeführt. Erreicht diese `max_retries`, folgt `failed_action`. Beide nehmen normale Home-Assistant-Action-Objekte an, etwa `perform-action` zum Aufruf eines Scripts oder Benachrichtigungsdienstes. Die früheren `retry_event` / `failed_event` sind im aktuellen Entwicklungsstand ersetzt.
 
 ### Code-Dialog
 
@@ -377,7 +391,35 @@ tap_action:
           admins: true
           max_retries: 3
           max_retries_delay: 5m
+          retry_action:
+            action: perform-action
+            perform_action: script.notify_uix_lock_attempt
+            data:
+              user: "$uix.user"
+              retry: "$uix.retry"
+              browser_id: "$uix.browser_id"
       locked_action:
         action: perform-action
         perform_action: homeassistant.restart
+```
+
+Definiere das Script in Home Assistant und ersetze `mobile_app_your_phone` durch die Notify-Action deiner Mobil-App. Die folgenden `{{ }}`-Ausdrücke sind normale HA-Script-Templates, keine UIX-Ersetzungen.
+
+```yaml
+script:
+  notify_uix_lock_attempt:
+    alias: Notify UIX Lock Attempt
+    fields:
+      user:
+        required: true
+      retry:
+        required: true
+      browser_id:
+        required: false
+    sequence:
+      - action: notify.mobile_app_your_phone
+        data:
+          title: UIX lock attempt
+          message: >-
+            {{ user }} entered an incorrect code (attempt {{ retry }}) from {{ browser_id or "an unknown browser" }}.
 ```

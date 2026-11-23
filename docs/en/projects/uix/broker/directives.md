@@ -3,7 +3,7 @@ title: Directives
 description: Apply declarative UIX Broker operations to a selected element.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.1.0**, revision [105c514](https://github.com/Lint-Free-Technology/uix/commit/105c5145a158e18be9934e1c7553633ed5c5f1fe), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.1**, revision [9528baa](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Directives
 
@@ -542,7 +542,7 @@ The directive anchor is the locked element by default. Set `for` to a relative s
       admins: true
 ```
 
-Use `anchor` to change the directive's root for `for` selectors. `locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position`, and `icon_size` have the same meaning as the Forge lock spark. Lock entries can also set `retry_event` and `failed_event`; these Home Assistant bus events include `user`, `retry_count`, and `browser`, plus `browser_id` when available. `retry_event` fires for every wrong code and `failed_event` fires when a wrong code reaches `max_retries`.
+Use `anchor` to change the directive's root for `for` selectors. `locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position`, and `icon_size` have the same meaning as the Forge lock spark. Lock entries can also set `retry_action` and `failed_action`, which run ordinary Home Assistant actions after a wrong code and when a wrong code reaches `max_retries`, respectively. On the final wrong code, `retry_action` runs before `failed_action`.
 
 `unlocked_action` is optional. A normal Home Assistant action runs against `entity`; `element_tap`, `element_hold`, and `element_double_tap` dispatch the corresponding action from the locked element's `config` when it has one.
 

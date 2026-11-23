@@ -17,7 +17,7 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 253 | 0 | 0 | 0 |
-| EN | 253 | 0 | 0 | 0 |
+| EN | 253 | 0 | 0 | 2 |
 | FR | 253 | 0 | 0 | 0 |
 
 **Comparaison technique du 2026-11-22 :** les évaluations sont liées aux empreintes actuelles des fichiers ; toute modification exige une nouvelle revue. Les lacunes et contradictions sont corrigées, tandis que les différences voulues d’historique et de structure sont justifiées. Le tableau indique les points encore ouverts ; le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Évaluations documentées](/documentation-review.json).
@@ -181,7 +181,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/realms) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Contenu vérifié · Différence examinée](/en/projects/uix/broker/rules) | [Contenu vérifié · Différence examinée](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Contenu vérifié · Différence examinée](/en/projects/uix/concepts/application) | [Contenu vérifié · Différence examinée](/fr/projects/uix/concepts/application) |
-| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Contenu vérifié](/en/projects/uix/concepts/context) | [Contenu vérifié](/fr/projects/uix/concepts/context) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Contenu vérifié · Points à examiner](/en/projects/uix/concepts/context) | [Contenu vérifié](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Contenu vérifié · Différence examinée](/en/projects/uix/concepts/dom) | [Contenu vérifié](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Contenu vérifié · Différence examinée](/en/projects/uix/concepts/) | [Contenu vérifié](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Contenu vérifié · Différence examinée](/en/projects/uix/contributing) | [Contenu vérifié · Différence examinée](/fr/projects/uix/contributing) |
@@ -193,7 +193,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/developers/index.md](/projects/uix/developers/) | [Contenu vérifié · Différence examinée](/en/projects/uix/developers/) | [Contenu vérifié](/fr/projects/uix/developers/) |
 | [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Contenu vérifié · Différence examinée](/en/projects/uix/developers/themes) | [Contenu vérifié](/fr/projects/uix/developers/themes) |
 | [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Contenu vérifié · Différence examinée](/en/projects/uix/extras/always-patch-ha-card) | [Contenu vérifié · Différence examinée](/fr/projects/uix/extras/always-patch-ha-card) |
-| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Contenu vérifié](/en/projects/uix/extras/custom-sidebar-panels) | [Contenu vérifié](/fr/projects/uix/extras/custom-sidebar-panels) |
+| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Contenu vérifié · Points à examiner](/en/projects/uix/extras/custom-sidebar-panels) | [Contenu vérifié](/fr/projects/uix/extras/custom-sidebar-panels) |
 | [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Contenu vérifié · Différence examinée](/en/projects/uix/extras/dialog-styling-delay) | [Contenu vérifié](/fr/projects/uix/extras/dialog-styling-delay) |
 | [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Contenu vérifié · Différence examinée](/en/projects/uix/extras/disable-entity-picture-image-override) | [Contenu vérifié · Différence examinée](/fr/projects/uix/extras/disable-entity-picture-image-override) |
 | [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Contenu vérifié · Différence examinée](/en/projects/uix/extras/disable-icon-styling) | [Contenu vérifié · Différence examinée](/fr/projects/uix/extras/disable-icon-styling) |

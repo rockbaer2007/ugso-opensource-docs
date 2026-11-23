@@ -4,14 +4,14 @@ title: Übersicht
 # UI eXtension für Home Assistant
 
 ::: info Stand geprüft am 23.11.2026 – UIX 9.1.0 stabil, Dokumentation aus dev
-Alle **66** kanonischen Seiten wurden mit `dev 105c514` verglichen: eine Seite geändert, 65 unverändert. [Lock Spark](./forge/sparks/lock) ergänzt eine HA-Benachrichtigungsautomation, die Ereignisreihenfolge und einen Hinweis gegen doppelte Meldungen beim letzten Fehlversuch. Die neuen Sperrereignisse stammen aus dem Entwicklungszweig; dies ist keine Zusage zur Verfügbarkeit in der stabilen Version 9.1.0.
+Alle **66** kanonischen Seiten wurden mit `dev 9528baa` verglichen: drei Seiten geändert, 63 unverändert. [Lock Spark](./forge/sparks/lock), Broker-Sperrdirektive und `locked_action` verwenden jetzt `retry_action` / `failed_action` statt der bisherigen Ereignisse. Exakte `$uix.*`-Werte setzen Benutzer-, Browser- und Versuchsdaten ein. Diese Neuerungen sind für 9.2.0-beta.1 im Entwicklungszweig dokumentiert; die stabile Basis dieser Seite bleibt 9.1.0.
 :::
 
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
 > Basis ist GitHub-Release [`v9.1.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0). Benötigt **Home Assistant 2026.11.0 oder neuer**. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`ca36726`](https://github.com/Lint-Free-Technology/uix/commit/ca3672619a11858bbc7f9165db999c0aaa7cef00).
-> Der aktuelle Dokumentationsabgleich verwendet `dev 105c514` vom 23.11.2026. Einzelheiten und Prüfgrenzen stehen im [Übersetzungsstatus](./translation-status).
+> Der aktuelle Dokumentationsabgleich verwendet `dev 9528baa` vom 23.11.2026. Einzelheiten und Prüfgrenzen stehen im [Übersetzungsstatus](./translation-status).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
 >
@@ -60,4 +60,4 @@ Der beste Einstieg ist der [Schnellstart](./quick-start). Dort findest du Instal
 - [FAQ](./faq)
 
 > **Stand dieser deutschen Doku**
-> Aktueller Quellenabgleich: 23.11.2026, stabile Basis UIX 9.1.0 und Dokumentation aus `dev 105c514`. Bei Unklarheiten gilt die englische Originaldokumentation. Frühere Abgleiche sind historische Prüfstände.
+> Aktueller Quellenabgleich: 23.11.2026, stabile Basis UIX 9.1.0 und Dokumentation aus `dev 9528baa`. Bei Unklarheiten gilt die englische Originaldokumentation. Frühere Abgleiche sind historische Prüfstände.

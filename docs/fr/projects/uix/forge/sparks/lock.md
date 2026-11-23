@@ -172,45 +172,42 @@ Contrôle l'apparence de la boîte de dialogue de saisie du code PIN ou de la ph
 | `retry_delay` | nombre ou chaîne | — | Délai entre deux tentatives après un code incorrect. Les nombres sont en millisecondes ; les chaînes acceptent des unités lisibles, par exemple `"10s"`. |
 | `max_retries` | nombre | — | Nombre maximal de tentatives incorrectes consécutives avant l'application du délai prolongé. |
 | `max_retries_delay` | nombre ou chaîne | `30000` | Durée du blocage après le nombre maximal de tentatives. Les nombres sont en millisecondes ; les chaînes acceptent des unités lisibles, par exemple `"30s"` ou `"5m"`. |
-| `retry_event` | chaîne | — | Nom de l’événement Home Assistant émis après chaque code incorrect. |
-| `failed_event` | chaîne | — | Nom de l’événement Home Assistant émis lorsqu’un code incorrect atteint `max_retries`. |
+| `retry_action` | object | — | Action Home Assistant classique après chaque code incorrect. |
+| `failed_action` | object | — | Action Home Assistant classique lorsqu’un code incorrect atteint `max_retries`. |
 
-### Événements des tentatives incorrectes
+### Actions des tentatives incorrectes
 
-Utilisez `retry_event` pour réagir à chaque code incorrect et `failed_event` pour réagir lorsque le seuil `max_retries` est atteint. Les deux événements sont émis sur le bus Home Assistant avec `user`, `retry_count` et `browser` ; `browser_id` est ajouté si le navigateur fournit un identifiant. Lors de la dernière tentative incorrecte, les deux événements reçoivent le compteur qui a atteint le seuil.
+::: info Branche de développement à partir de 9.2.0-beta.1
+Les anciennes options `retry_event` / `failed_event` sont remplacées par `retry_action` / `failed_action`. Cela décrit le développement, pas une fonction de la base stable 9.1.0.
+:::
+
+Définissez `retry_action` pour exécuter une action Home Assistant après chaque code incorrect et `failed_action` au seuil `max_retries`. Ces actions fonctionnent aussi pour les non-administrateurs ; les autorisations du service HA appelé restent applicables. À la dernière tentative incorrecte, UIX exécute `retry_action` avant `failed_action`. Configurez les deux en tenant compte du risque de deux notifications.
 
 ```yaml
 locks:
   - code: 1234
     admins: true
     max_retries: 3
-    retry_event: uix_lock_retry
-    failed_event: uix_lock_failed
+    failed_action:
+      action: perform-action
+      perform_action: persistent_notification.create
+      data:
+        title: UIX lock failed
+        message: A user reached the maximum number of incorrect code entries.
 ```
 
----
-
-Créez une automatisation Home Assistant avec le déclencheur **Événement reçu manuellement** pour réagir à la dernière tentative incorrecte. Cet exemple crée une notification persistante contenant les données de l’événement UIX :
+L’exemple crée directement une notification persistante après la troisième saisie incorrecte, sans automatisation supplémentaire ni autorisation d’émettre sur le bus d’événements. Ajoutez `retry_action` pour réagir séparément à chaque tentative :
 
 ```yaml
-alias: Alert when a UIX lock fails
-triggers:
-  - trigger: event
-    event_type: uix_lock_failed
-conditions: []
-actions:
-  - action: persistent_notification.create
-    data:
-      title: UIX lock failed
-      message: >-
-        {{ trigger.event.data.user }} entered an incorrect code
-        {{ trigger.event.data.retry_count }} times.
-mode: single
+retry_action:
+  action: perform-action
+  perform_action: persistent_notification.create
+  data:
+    title: UIX lock retry
+    message: An incorrect lock code was entered.
 ```
 
-Pour réagir à chaque code incorrect, utilisez plutôt `event_type: uix_lock_retry`. Lorsque la dernière tentative atteint `max_retries`, UIX émet les deux événements : d’abord `retry_event`, puis `failed_event`. N’écoutez pas les deux dans une même automatisation d’alerte, sauf si vous souhaitez deux notifications pour cette dernière tentative. Les autres données sont accessibles dans `trigger.event.data.browser` et, si le navigateur le fournit, `trigger.event.data.browser_id`.
-
-Dans l’éditeur visuel, ajoutez un déclencheur **Événement reçu manuellement** et saisissez le type d’événement correspondant. Home Assistant documente le [déclencheur événement en YAML](https://www.home-assistant.io/triggers/event/) et les [données du déclencheur](https://www.home-assistant.io/docs/automation/trigger-data/#event-triggers).
+Les valeurs ordinaires de `data` sont transmises sans modification. Les valeurs exactes `$uix.*` peuvent insérer des données d’exécution ; voir les [substitutions dans les données](../../extras/uix-actions.md#action-data-substitutions). Utilisez une action de script pour un message dynamique ou un routage supplémentaire.
 
 ## Exemples
 

@@ -413,7 +413,7 @@ L'info-bulle est insérée comme élément frère de sa cible. Définissez les v
 
 La cible par défaut est l’ancre de directive. `for` choisit un descendant relatif ; `for: previous` reprend l’élément créé immédiatement avant par `button`, `badge` ou `tile-icon`. `anchor` change la racine de recherche de `for`.
 
-`locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position` et `icon_size` ont le même sens que dans le Spark. Les règles acceptent aussi `retry_event` et `failed_event`. Ces événements Home Assistant contiennent `user`, `retry_count` et `browser`, ainsi que `browser_id` si disponible. `retry_event` est émis après chaque code incorrect ; `failed_event` est aussi émis lorsque `max_retries` est atteint.
+`locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position` et `icon_size` ont le même sens que dans le Spark. À partir de la branche de développement 9.2.0-beta.1, les règles acceptent `retry_action` après chaque code incorrect et `failed_action` lorsque `max_retries` est atteint. Ce sont des objets d’action Home Assistant classiques. À la dernière tentative incorrecte, `retry_action` est exécutée avant `failed_action`. Pour les valeurs d’exécution dans `data`, voir les [substitutions dans les données](../extras/uix-actions.md#action-data-substitutions).
 
 `unlocked_action` est facultatif : les actions HA normales utilisent `entity` ; `element_tap`, `element_hold` et `element_double_tap` déclenchent l’action correspondante depuis la `config` de l’élément lorsqu’elle existe.
 

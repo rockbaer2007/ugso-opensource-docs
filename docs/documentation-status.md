@@ -17,7 +17,7 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 253 | 0 | 0 | 0 |
-| EN | 253 | 0 | 0 | 0 |
+| EN | 253 | 0 | 0 | 2 |
 | FR | 253 | 0 | 0 | 0 |
 
 **Technischer Abgleich vom 2026-11-22:** Vorhandene Einzelbewertungen sind an die aktuellen Datei-Prüfsummen gebunden; Änderungen erfordern eine erneute Prüfung. Echte Lücken und widersprüchliche Angaben werden korrigiert, bewusst unterschiedliche Versionshistorien und redaktionelle Gliederungen mit Begründung eingeordnet. Die Tabelle zeigt die noch offenen Hinweise; der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Dokumentierte Einzelbewertungen](/documentation-review.json).
@@ -181,7 +181,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/broker/realms) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/broker/rules) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/concepts/application) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/concepts/application) |
-| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Inhaltlich geprüft](/en/projects/uix/concepts/context) | [Inhaltlich geprüft](/fr/projects/uix/concepts/context) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Inhaltlich geprüft · Prüfhinweise](/en/projects/uix/concepts/context) | [Inhaltlich geprüft](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/concepts/dom) | [Inhaltlich geprüft](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/concepts/) | [Inhaltlich geprüft](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/contributing) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/contributing) |
@@ -193,7 +193,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/developers/index.md](/projects/uix/developers/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/developers/) | [Inhaltlich geprüft](/fr/projects/uix/developers/) |
 | [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/developers/themes) | [Inhaltlich geprüft](/fr/projects/uix/developers/themes) |
 | [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/always-patch-ha-card) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/extras/always-patch-ha-card) |
-| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Inhaltlich geprüft](/en/projects/uix/extras/custom-sidebar-panels) | [Inhaltlich geprüft](/fr/projects/uix/extras/custom-sidebar-panels) |
+| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Inhaltlich geprüft · Prüfhinweise](/en/projects/uix/extras/custom-sidebar-panels) | [Inhaltlich geprüft](/fr/projects/uix/extras/custom-sidebar-panels) |
 | [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/dialog-styling-delay) | [Inhaltlich geprüft](/fr/projects/uix/extras/dialog-styling-delay) |
 | [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/disable-entity-picture-image-override) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/extras/disable-entity-picture-image-override) |
 | [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/extras/disable-icon-styling) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/extras/disable-icon-styling) |

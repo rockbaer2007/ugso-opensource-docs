@@ -18,11 +18,11 @@
       "content-present": 253,
       "existing_pages": 253,
       "unmatched_pages": 0,
-      "review_signals": 65,
+      "review_signals": 67,
       "reviewed_findings": 74,
       "technically_compared": 187,
       "content_reviewed": 249,
-      "open_review_signals": 0
+      "open_review_signals": 2
     },
     "fr": {
       "content-present": 253,
@@ -11248,13 +11248,14 @@
         "en": {
           "path": "en/projects/uix/broker/broker.md",
           "status": "content-present",
-          "sha256": "60887146f68300328565bdc09c1071e7b4ed0fdeb709a2e0675a8005ce8b4b57",
-          "words": 964,
+          "sha256": "af3d321408397e4427c51b033c99937a48e244b57cfca998f4713c8f83586827",
+          "words": 966,
           "headings": 7,
           "examples": 6,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11263,7 +11264,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11317,26 +11319,28 @@
         "de": {
           "path": "projects/uix/broker/directives.md",
           "status": "content-present",
-          "sha256": "8a14c75c8967abc4a4d77af94e808aca9e727b3563462d7e607d1708bde6a5b1",
-          "words": 3297,
+          "sha256": "d9aeac33a271cbcaac58ff090a6a9299c8e56be5aa52636ebc688cddf3359012",
+          "words": 3316,
           "headings": 26,
           "examples": 42,
           "versions": [
             "8.3.0-beta.3",
-            "8.3.0-beta.5"
+            "8.3.0-beta.5",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/broker/directives.md",
           "status": "content-present",
-          "sha256": "bb858b60bc4c2be94f20a9b51f6f00846409653814bb27cac7560f51b431c88c",
+          "sha256": "40c226d96853fa7a40399b6b8a462d72f79756be226e2fe3b804f9c606e59d04",
           "words": 4187,
           "headings": 20,
           "examples": 42,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11360,18 +11364,19 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "All15directives compared in full localechunks: syncblock first/anchor-readiness,10directiveanchor defaults, copiedtypedwholevalues/notinterpolation, deepmerge/noarraymerge,callthisbinding, badgeparent placement,previous/textslots,action-handler ownership,templatebrowsercache/ms/JSONkey and synchronousJS-versusawaitedactionPromise agree. DEFR incompleteanchor lists restored, FRallrules prerequisite/cacheage/no-cache rerender/brackets and configdirective namespace corrected; encoded Jinja inline repaired. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline."
+            "assessment": "All15directives compared in full localechunks: syncblock first/anchor-readiness,10directiveanchor defaults, copiedtypedwholevalues/notinterpolation, deepmerge/noarraymerge,callthisbinding, badgeparent placement,previous/textslots,action-handler ownership,templatebrowsercache/ms/JSONkey and synchronousJS-versusawaitedactionPromise agree. DEFR incompleteanchor lists restored, FRallrules prerequisite/cacheage/no-cache rerender/brackets and configdirective namespace corrected; encoded Jinja inline repaired. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
         "fr": {
           "path": "fr/projects/uix/broker/directives.md",
           "status": "content-present",
-          "sha256": "72d6c7ae9eae2dfb0df2e2ff14d704cedcc1fdfb9cd98d0484287a30ebd4a24f",
-          "words": 3927,
+          "sha256": "29b531ff33abbeec519b55a58d938f94a9f34d80f1875d1a0c6aee2412191266",
+          "words": 3956,
           "headings": 26,
           "examples": 42,
           "versions": [
-            "8.3.0-beta.3"
+            "8.3.0-beta.3",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11391,7 +11396,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "All15directives compared in full localechunks: syncblock first/anchor-readiness,10directiveanchor defaults, copiedtypedwholevalues/notinterpolation, deepmerge/noarraymerge,callthisbinding, badgeparent placement,previous/textslots,action-handler ownership,templatebrowsercache/ms/JSONkey and synchronousJS-versusawaitedactionPromise agree. DEFR incompleteanchor lists restored, FRallrules prerequisite/cacheage/no-cache rerender/brackets and configdirective namespace corrected; encoded Jinja inline repaired. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline."
+            "assessment": "All15directives compared in full localechunks: syncblock first/anchor-readiness,10directiveanchor defaults, copiedtypedwholevalues/notinterpolation, deepmerge/noarraymerge,callthisbinding, badgeparent placement,previous/textslots,action-handler ownership,templatebrowsercache/ms/JSONkey and synchronousJS-versusawaitedactionPromise agree. DEFR incompleteanchor lists restored, FRallrules prerequisite/cacheage/no-cache rerender/brackets and configdirective namespace corrected; encoded Jinja inline repaired. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         }
       }
@@ -11414,19 +11419,21 @@
         "en": {
           "path": "en/projects/uix/broker/examples.md",
           "status": "content-present",
-          "sha256": "a8c5afffbfacdfdabc64961bb44fb48a549cf9803a550b5d9b11d59f0628b862",
-          "words": 942,
+          "sha256": "97f7a54a953aae0aff8a4f41893de367cccefe8a2e007433925571babe7cd1ac",
+          "words": 944,
           "headings": 6,
           "examples": 6,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "2026.11.0"
+              "2026.11.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -11492,13 +11499,14 @@
         "en": {
           "path": "en/projects/uix/broker/index.md",
           "status": "content-present",
-          "sha256": "128dcd3f916dfefc61915f83bb5d0cd90c4df716cd86f95ad1864ca25734b391",
-          "words": 318,
+          "sha256": "f8e927ea677e9e71a1c03ad53a259bb35feb2ef0f21de2b706e93745f7cfafce",
+          "words": 320,
           "headings": 2,
           "examples": 2,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11507,7 +11515,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11573,13 +11582,14 @@
         "en": {
           "path": "en/projects/uix/broker/interaction-anchors.md",
           "status": "content-present",
-          "sha256": "9789f305474328e3321be7969b5d8b81ca75f670c08f63a6e0d3f465867a0ab8",
-          "words": 519,
+          "sha256": "1b819b599b1afb31efae0669cbb5eeb972b15b17de58e254c437c0c906a97e77",
+          "words": 521,
           "headings": 10,
           "examples": 8,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11588,7 +11598,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11654,13 +11665,14 @@
         "en": {
           "path": "en/projects/uix/broker/realms.md",
           "status": "content-present",
-          "sha256": "2e8dd5c75301bc9c53c3d5da5160bf197b8163c7a214dda4498afbae7c10e5cf",
-          "words": 1035,
+          "sha256": "e1f3238ca98bbab6d86c2dfc84b2572c05a8434618e8cb7a863aabc7ddccab78",
+          "words": 1037,
           "headings": 8,
           "examples": 5,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11669,7 +11681,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11737,13 +11750,14 @@
         "en": {
           "path": "en/projects/uix/broker/rules.md",
           "status": "content-present",
-          "sha256": "373ae2de3eeb793a7dba80f9d6aba10dcf37fcbd60266c2d0dc89360885da62a",
-          "words": 1065,
+          "sha256": "6a3d45ad8a23929f7313c9da2ef731f27dfd279b337b6213a7d505037482ffc1",
+          "words": 1067,
           "headings": 11,
           "examples": 12,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11754,7 +11768,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -11821,20 +11836,22 @@
         "en": {
           "path": "en/projects/uix/concepts/application.md",
           "status": "content-present",
-          "sha256": "6b0503f2794f4e76901dd0b51d746166e0fd0b4cbb404f22bf01c1e66b0fa823",
-          "words": 575,
+          "sha256": "ba47ad8f3c3cdd319771828d61b28a841e29875ba7f569746c67ef1c86c9b6af",
+          "words": 577,
           "headings": 4,
           "examples": 6,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11899,18 +11916,21 @@
         "en": {
           "path": "en/projects/uix/concepts/context.md",
           "status": "content-present",
-          "sha256": "309277a66b4f4e4bdbe43e6c926d127c7c1131b1cd47e333a323559a1be41543",
-          "words": 550,
+          "sha256": "3bc0e2abf097ad63cbde47cb34266f9e04077eba87f08c2034eea2d9d1540585",
+          "words": 552,
           "headings": 10,
           "examples": 10,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
-            "versions_only_in_translation": [],
+            "versions_only_in_translation": [
+              "9.2.0-beta.1"
+            ],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
@@ -11976,20 +11996,22 @@
         "en": {
           "path": "en/projects/uix/concepts/dom.md",
           "status": "content-present",
-          "sha256": "93fbf730a8fa905c6d2036c7412b8b1afd7c2bcd452c99387e0177a8349aed82",
-          "words": 2208,
+          "sha256": "5b03fb6045684fa629feae23af64cb877be4916207f9990161f2c78609cff41a",
+          "words": 2210,
           "headings": 9,
           "examples": 28,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12057,20 +12079,22 @@
         "en": {
           "path": "en/projects/uix/concepts/index.md",
           "status": "content-present",
-          "sha256": "3db674b1f058ecbc629c9c5810495e684f8dc57bdaaee2f9a33dd8964c3e5712",
-          "words": 152,
+          "sha256": "4c83b8c070ed36782c9eb9a6eb54f08f326f2b4289be7dee13df10a5f397aca4",
+          "words": 154,
           "headings": 2,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12137,8 +12161,8 @@
         "en": {
           "path": "en/projects/uix/contributing.md",
           "status": "content-present",
-          "sha256": "acf9e01fa9aabd701966e0c2a797e9c834f2eda057974eaacadc1d00baef974c",
-          "words": 1822,
+          "sha256": "bd370df5e11bde3f56e028669e5272f035f5685fee37f0145659fb35f527e9f0",
+          "words": 1824,
           "headings": 11,
           "examples": 6,
           "versions": [
@@ -12146,7 +12170,8 @@
             "5.0.1-mydev.1",
             "8.3.0",
             "8.3.0-beta.1",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12156,7 +12181,8 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "5.0.1-mydev.1",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12225,20 +12251,22 @@
         "en": {
           "path": "en/projects/uix/debugging/cache.md",
           "status": "content-present",
-          "sha256": "fd94f8de52fa93696456b7a98240c0b8d1a5e36dd08a704d4d43e5fa0d00e2ec",
-          "words": 204,
+          "sha256": "749d639950655f6d61f1e08a589267eb728b922a553f165e0e5e22a9170ac80f",
+          "words": 206,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12300,20 +12328,22 @@
         "en": {
           "path": "en/projects/uix/debugging/cards.md",
           "status": "content-present",
-          "sha256": "606a478d2412e93539623507f2829c860a7e3837ba9b94a8eb1cbefb40c2e9af",
-          "words": 542,
+          "sha256": "3911561980a366a01db0fec28a5236a956ca4bceea803907481a087bc6381b7b",
+          "words": 544,
           "headings": 2,
           "examples": 4,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12376,20 +12406,22 @@
         "en": {
           "path": "en/projects/uix/debugging/index.md",
           "status": "content-present",
-          "sha256": "07d8dafccc04b1fb9bfe6ad76a91c8dfba0ba397c9935466f304082cb901d98d",
-          "words": 117,
+          "sha256": "504ee0ec95d429b119554f055a5bc8d5687b7460877b4ccf4ae1def960fd24d8",
+          "words": 119,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12452,20 +12484,22 @@
         "en": {
           "path": "en/projects/uix/debugging/templates.md",
           "status": "content-present",
-          "sha256": "46dd800f67fd222db4771c4acf618b11b4214b21256b4ef733b73d6b9463b27d",
-          "words": 154,
+          "sha256": "b51d255834b7b7938172a1773c5cfc12fdf48dae405456b6b7efd42189c9f98c",
+          "words": 156,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -12527,20 +12561,22 @@
         "en": {
           "path": "en/projects/uix/developers/cards.md",
           "status": "content-present",
-          "sha256": "631da0847e8411dc0219b7daa3eea65c1b7c4bdb8f660911e48a706f042f311f",
-          "words": 365,
+          "sha256": "e555c593c3fde271394f63286ece84bc5627481b52156a9abb4415e11539436f",
+          "words": 367,
           "headings": 2,
           "examples": 4,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12603,20 +12639,22 @@
         "en": {
           "path": "en/projects/uix/developers/index.md",
           "status": "content-present",
-          "sha256": "ac0f326d0fb0901d9eeb8b0cdca6a41d78a2fd279fc5951a5888382b2df5c2db",
-          "words": 113,
+          "sha256": "133318d9b4338a84e67b3996e66ebf50fdb03e2be1944195121a511fe4bde6fd",
+          "words": 115,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12679,20 +12717,22 @@
         "en": {
           "path": "en/projects/uix/developers/themes.md",
           "status": "content-present",
-          "sha256": "873178eddbe67e3721e75f7ee72c2e5fd95ac9747f2da57c29d2e2850f2bb7a6",
-          "words": 173,
+          "sha256": "e05b41e57e66e9d496d7cace2d32cfb01a551ecda7c37c3a03c11efd25b3a22f",
+          "words": 175,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -12762,13 +12802,14 @@
         "en": {
           "path": "en/projects/uix/extras/always-patch-ha-card.md",
           "status": "content-present",
-          "sha256": "de5b230ef0cd5e2abe13dfba669006d5e6e4bb2fc9a58b3d8a4d12f75db37674",
-          "words": 261,
+          "sha256": "51ee46cce9a2f8208a2b515b6a9e272744494865cb5063d8f116a6ed47f6b2a4",
+          "words": 263,
           "headings": 3,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12777,7 +12818,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12844,18 +12886,21 @@
         "en": {
           "path": "en/projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "4ea033e2cf21827ba0b15c1698a9bf00f969a028c16575f02f41c8e1d7440791",
-          "words": 406,
+          "sha256": "3e614b36b4dcbbc462662b85b6ec4fd7c1bf47926be0060d22c9e5e7d80e06f4",
+          "words": 408,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
-            "versions_only_in_translation": [],
+            "versions_only_in_translation": [
+              "9.2.0-beta.1"
+            ],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
@@ -12921,20 +12966,22 @@
         "en": {
           "path": "en/projects/uix/extras/dialog-styling-delay.md",
           "status": "content-present",
-          "sha256": "a32ce2711f9c15e74ce72e66204d462911f2097b3c2bb9eccebe90049b4912ff",
-          "words": 616,
+          "sha256": "bd92b463875bc6c4290cdd4990da7587d8694979f8bd9247f628080d7d687cbf",
+          "words": 618,
           "headings": 11,
           "examples": 4,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13002,20 +13049,22 @@
         "en": {
           "path": "en/projects/uix/extras/disable-entity-picture-image-override.md",
           "status": "content-present",
-          "sha256": "3074fe486ee589e99789562bbcf8a7fab7bc68ec24abf8d87b8c31d460652ab1",
-          "words": 253,
+          "sha256": "80ba41623b6bfc63e5f0efe56fa9365f24d164b31756c368965a6f2d085f87a2",
+          "words": 255,
           "headings": 3,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13077,20 +13126,22 @@
         "en": {
           "path": "en/projects/uix/extras/disable-icon-styling.md",
           "status": "content-present",
-          "sha256": "8019affdd17f19b5e7f55f96e1a2660f72cd626f6b04f57a837507b55eddb78b",
-          "words": 253,
+          "sha256": "c0c097b48b563e396462a5b753d51f9036262ddafcf0b582720a8bb788fb06f8",
+          "words": 255,
           "headings": 3,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13152,20 +13203,22 @@
         "en": {
           "path": "en/projects/uix/extras/frontend-states-throttling.md",
           "status": "content-present",
-          "sha256": "259cf6c5f823b492ebbfd10fab20877b200d5815206aa67b62947b3e0902966f",
-          "words": 823,
+          "sha256": "8d738a45535f718af8ea88c1c7d037f35f23b8e78fc53d905983893f071a9386",
+          "words": 825,
           "headings": 12,
           "examples": 4,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -13227,20 +13280,22 @@
         "en": {
           "path": "en/projects/uix/extras/hash-template-variable-updates.md",
           "status": "content-present",
-          "sha256": "9b4c9401209100f185474a3b4228f0768b646530f3e62a5007947a66b1f0a3f8",
-          "words": 284,
+          "sha256": "3b8080017621cae90495cda178f28c17cfa83b33a148af2f4475332fc4a4c7b0",
+          "words": 286,
           "headings": 3,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13303,20 +13358,22 @@
         "en": {
           "path": "en/projects/uix/extras/index.md",
           "status": "content-present",
-          "sha256": "96f1f8f29e66957c7b7ff5db36de911a874b79a4dbe94ddb683cd5c32da9f87b",
-          "words": 168,
+          "sha256": "b8645759baab871e3da6a5254978633186831206040c75e851853acd04b20eb2",
+          "words": 170,
           "headings": 0,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13451,21 +13508,23 @@
         "en": {
           "path": "en/projects/uix/extras/style-frame-panels.md",
           "status": "content-present",
-          "sha256": "4848a9cbed73794fe75034b0f5e3d128bcde6fc360b04b94db8675fd653f1274",
-          "words": 482,
+          "sha256": "9a815897ee84365fd81ef8be064be4153859e2d65d8a0bf0828e683507b22507",
+          "words": 484,
           "headings": 3,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.0.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13520,28 +13579,30 @@
         "de": {
           "path": "projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "ec6499062ba6b1b68cb54dd1cba9e239567b9828fb6382e959248578af1e165f",
-          "words": 1407,
-          "headings": 14,
-          "examples": 11,
+          "sha256": "6416d212bf4d2abf90fe03b1e12668ca9c18ffc5c127bb546afb32ac070efc9f",
+          "words": 1585,
+          "headings": 15,
+          "examples": 12,
           "versions": [
             "2026.11.0",
             "8.3.0-beta.2",
             "8.4.0",
-            "9.0.0"
+            "9.0.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "e2830e7d4378ddc259947edff2d30842bc053cd3a1a6ecef149c406018a01782",
-          "words": 1809,
-          "headings": 14,
-          "examples": 11,
+          "sha256": "4c1c8cbe62335c66fe5d8a283fa7a77b25ab03bad9301aab9bcdba17580f84dc",
+          "words": 2010,
+          "headings": 15,
+          "examples": 12,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13565,20 +13626,21 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline."
+            "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
         "fr": {
           "path": "fr/projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "855e9eca17700dde3b6c217c937c08e25364d5b2cbad75c3f0da1fa146b65797",
-          "words": 1877,
-          "headings": 14,
-          "examples": 11,
+          "sha256": "1dc2f8f52aa3246eaa4f58f29e05f9d2f0c53f4f8e519687fb9f722b5e705188",
+          "words": 2107,
+          "headings": 15,
+          "examples": 12,
           "versions": [
             "2026.11.0",
             "8.3.0-beta.2",
-            "9.0.0"
+            "9.0.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13598,7 +13660,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline."
+            "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         }
       }
@@ -13624,8 +13686,8 @@
         "en": {
           "path": "en/projects/uix/faq.md",
           "status": "content-present",
-          "sha256": "e8f0a1535f71fdf1bb4a5e4af5dadf30c3f37c411635f8125efa991702e4128b",
-          "words": 1111,
+          "sha256": "47c2e7789e2b948e432d29a338b337f2f49110dba0c11994ce4c147ff9c8ac13",
+          "words": 1113,
           "headings": 11,
           "examples": 0,
           "versions": [
@@ -13635,7 +13697,8 @@
             "4.2.1",
             "8.0.1",
             "8.1.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13646,7 +13709,8 @@
               "2026.11.0",
               "8.0.1",
               "8.1.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13720,13 +13784,14 @@
         "en": {
           "path": "en/projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "c092769e919c0bf3c097d8a0d4cdb4ad9d7d6383eccc157216aa56ebcb44c427",
-          "words": 7242,
+          "sha256": "005468a6fa56cff8a228991014c04259a2a2074247510c4c69841dfdcfde6522",
+          "words": 7244,
           "headings": 41,
           "examples": 37,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13735,7 +13800,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -13808,13 +13874,14 @@
         "en": {
           "path": "en/projects/uix/forge/foundries.md",
           "status": "content-present",
-          "sha256": "ea76b0578ef41852244a7ee607960a43cea3ed3d94f80dfb1a71d3da23add54b",
-          "words": 1737,
+          "sha256": "7b223a13bad3f97306008f0fe60eeacb8222c5d5434c75ad3d7ebc884a6cc652",
+          "words": 1739,
           "headings": 35,
           "examples": 28,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13822,7 +13889,8 @@
               "9.0.0"
             ],
             "versions_only_in_translation": [
-              "2026.11.0"
+              "2026.11.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -13894,13 +13962,14 @@
         "en": {
           "path": "en/projects/uix/forge/index.md",
           "status": "content-present",
-          "sha256": "8ea10f19f2c3ae8919e7c7c0d38ccbeec862bc8ca5f0c51de6a1df2ad3e13e8c",
-          "words": 689,
+          "sha256": "d9cd5de406f075e84882f0067d07656d0dc1fe658e274c2de3e7d4574ba42f40",
+          "words": 691,
           "headings": 2,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13910,7 +13979,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13975,20 +14045,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/attribute.md",
           "status": "content-present",
-          "sha256": "d5bd6ad33e28d9ed38557f62a0461fedd51827403da10e3db1f6ad429f97668d",
-          "words": 415,
+          "sha256": "08227ed5fc49fff962a449944537a41d36d1bbc5d2c5d4d9f18570d4bedcdcb3",
+          "words": 417,
           "headings": 6,
           "examples": 3,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14050,20 +14122,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/background.md",
           "status": "content-present",
-          "sha256": "87f6b8786f401f3ce520f19e9b4041c2a4fbbeb8c1dc2989fb63f5d668e46faa",
-          "words": 1992,
+          "sha256": "cbd26d07e5ca173b9df5fea36dcd7cc8f3a2f53f13eed05b6beefb1a7ec415e8",
+          "words": 1994,
           "headings": 24,
           "examples": 16,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14133,19 +14207,21 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/badge.md",
           "status": "content-present",
-          "sha256": "a0431e47604f9d64d606e1b5a3a7495ca744c759492589f1c8046563d831641f",
-          "words": 1785,
+          "sha256": "06f6c08c2332c03b83f4ac3a134a63d26dc37a00a683adde8b3518089f3c9fba",
+          "words": 1787,
           "headings": 12,
           "examples": 7,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "2026.11.0"
+              "2026.11.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14212,13 +14288,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/button.md",
           "status": "content-present",
-          "sha256": "9375e95eb8d315c8f75bad00fea28585be2b9a9000fd2bd712f7ec396c88e290",
-          "words": 1345,
+          "sha256": "75cd94d755d12c163b0b416bcb44e23fd387910243cd2465d11f000412ddf08b",
+          "words": 1347,
           "headings": 7,
           "examples": 7,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14227,7 +14304,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14291,20 +14369,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/event.md",
           "status": "content-present",
-          "sha256": "16dc6c8f57306a045c8189a242397be1a9b6b9e7f2dd90969adf88a71391d85e",
-          "words": 720,
+          "sha256": "707c971d859cd94c30b6a0366a2a230ce3c187e42f7a87e28cce22fee15d22d9",
+          "words": 722,
           "headings": 10,
           "examples": 14,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14374,19 +14454,21 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/form.md",
           "status": "content-present",
-          "sha256": "6932ac06ab1585e7321cb5434ef3b988ddc3f642ed0c8deab898739a35e48c2e",
-          "words": 1379,
+          "sha256": "cc33e857e05e180099b577e7b1c3146d07d05ac7ce68cdaa78c17ca856c57f01",
+          "words": 1381,
           "headings": 14,
           "examples": 9,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "2026.11.0"
+              "2026.11.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14451,20 +14533,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/grid.md",
           "status": "content-present",
-          "sha256": "cdc08b07518e9aae0248894128d8e996d663b7302f732c3d6cb18ebf63d43267",
-          "words": 978,
+          "sha256": "e67b9e6957d449a089c4a5882126d80ac911aab2b9542d4e702d9a5ed8f34328",
+          "words": 980,
           "headings": 6,
           "examples": 7,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14532,20 +14616,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/index.md",
           "status": "content-present",
-          "sha256": "f4054e38a70559b0af485f82f7777c676591a67ec3301d76e106b822c8cade07",
-          "words": 457,
+          "sha256": "0ef11fdab8b0dade49162a43607e04d68724f26ac94ebe466f27b5e5db611e19",
+          "words": 459,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14597,30 +14683,33 @@
         "de": {
           "path": "projects/uix/forge/sparks/lock.md",
           "status": "content-present",
-          "sha256": "0a3814590c3f21c667ff3b3dddfa962c9645ff633dc0b50c43982f52257ada0e",
-          "words": 1296,
+          "sha256": "2d41723641101f7c615073fbcf72e451df54644159f1945df1539bbdeaa8cf1f",
+          "words": 1259,
           "headings": 25,
           "examples": 18,
-          "versions": [],
+          "versions": [
+            "9.1.0",
+            "9.2.0-beta.1"
+          ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/forge/sparks/lock.md",
           "status": "content-present",
-          "sha256": "88a1ff02c5df625968d81202f0d08755d99c1da1dd48f2141c471a21e7afe07b",
-          "words": 2365,
+          "sha256": "c4181c348b8e5dc2f649101a66420324500f1bb88ed7fa3233228a72477ff548",
+          "words": 2286,
           "headings": 27,
           "examples": 18,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "2026.11.0",
-              "9.1.0"
+              "2026.11.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14634,17 +14723,20 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented."
+            "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/lock.md",
           "status": "content-present",
-          "sha256": "c8c0695ba6a270475adf0d602917103d91d979df60a9af643799ef5ce823c642",
-          "words": 2505,
+          "sha256": "024af390c56d8160cceb5133cddeca89a7f9baf48db2130c16bc2649c16fb80a",
+          "words": 2461,
           "headings": 27,
           "examples": 18,
-          "versions": [],
+          "versions": [
+            "9.1.0",
+            "9.2.0-beta.1"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -14656,13 +14748,13 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-23",
-            "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented.",
+            "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented."
+            "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         }
       }
@@ -14686,13 +14778,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/map.md",
           "status": "content-present",
-          "sha256": "4bf3b5581eba81b602d63e33f54e4444e53b7706c1dcfe8413d762c5c28b2383",
-          "words": 2476,
+          "sha256": "d226f04cc8a4be6bb02f098ee7dc899fb1aa232c413b9257378f240bfd68c18a",
+          "words": 2478,
           "headings": 18,
           "examples": 9,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14702,7 +14795,8 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14773,20 +14867,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/more-info.md",
           "status": "content-present",
-          "sha256": "0e27617ad64692a3446e8db3d4df99264cb034d837453627e09cd6e5f5984ec5",
-          "words": 1247,
+          "sha256": "5bf165512521360017852471ccbfbe48e506eef07cfdaabdf4a77f70cfa48515",
+          "words": 1249,
           "headings": 12,
           "examples": 6,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14854,20 +14950,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/overlay-icon.md",
           "status": "content-present",
-          "sha256": "b481bfb93b64b97664413266ef7b50dd88cad2c5b56081123dc47c5cefe95964",
-          "words": 1192,
+          "sha256": "09a198ae03c82685eb2fee965512cc91f4d9bf1921e9bc838d083794ed4e665a",
+          "words": 1194,
           "headings": 12,
           "examples": 7,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14935,20 +15033,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/search.md",
           "status": "content-present",
-          "sha256": "f4c21dfcb3d4c8dd6717c210ded37d79abf6689462dc0b86340680f4ff28d67c",
-          "words": 701,
+          "sha256": "479d6650e5ec3756ad834b03bc104d8503a987e114b316d910de5f55e9af9546",
+          "words": 703,
           "headings": 9,
           "examples": 5,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -15016,20 +15116,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/state-badge.md",
           "status": "content-present",
-          "sha256": "e7cf2e4f9735643ed4e017ed18e363947c8625e915fc57b68a115a9d4d561dfb",
-          "words": 957,
+          "sha256": "d1cddc68c03a095b21a289f2ae1eaff98db8e8ef9c272b555dcad658fd6a616f",
+          "words": 959,
           "headings": 4,
           "examples": 6,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -15097,20 +15199,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/theme.md",
           "status": "content-present",
-          "sha256": "7094e7d6866ae6f55d2d1da451b88034571fd7216bf5b590ece1bc3e3a1c6ca5",
-          "words": 340,
+          "sha256": "72fcfffc33a2f190c52f0dd5fb5b01455293696410f8a80318411309450f9c4b",
+          "words": 342,
           "headings": 4,
           "examples": 4,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15173,20 +15277,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/tile-icon.md",
           "status": "content-present",
-          "sha256": "d8cda328dd434e598292a62579c34d82ddad3bb57bd29b88e8b1a89da07954d9",
-          "words": 1014,
+          "sha256": "427ecf0393ab41cb3823615ae80dc75debbe98a71889a27f42d2cdb76951eeec",
+          "words": 1016,
           "headings": 5,
           "examples": 7,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15253,14 +15359,15 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/tooltip.md",
           "status": "content-present",
-          "sha256": "e09c29b1fed062aa5885a329ae8c73ffb16ce85c7e71df8622c7899c88037f59",
-          "words": 1089,
+          "sha256": "463b080732ecd318a085d7f79ee3116fc2c0925fd404c831f31c5804b4732068",
+          "words": 1091,
           "headings": 8,
           "examples": 6,
           "versions": [
             "2026.11.0",
             "8.3.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15273,7 +15380,8 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "8.3.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15344,20 +15452,22 @@
         "en": {
           "path": "en/projects/uix/guides.md",
           "status": "content-present",
-          "sha256": "f41e0fc79c2b651744df9544d7b115b2ade4683eba616bd02ee5de6db14ead58",
-          "words": 136,
+          "sha256": "6097c954ed4d90ed30fd1927a9d658881c92ab5ca6baf9adf0fa9f2cea3eb8dc",
+          "words": 138,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15410,26 +15520,28 @@
         "de": {
           "path": "projects/uix/index.md",
           "status": "content-present",
-          "sha256": "addbc0680ee59a754c009cc54608933b603b6e469072952735cac0ecec06d3d5",
-          "words": 631,
+          "sha256": "398241ed37abd352aa914a600844cc76778c83c7c179d5abe62998c28de52e5a",
+          "words": 638,
           "headings": 5,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "2f00f8971a745be29ef6a7a10e079da1e48bb06e9376f5d1a20ff91f02cac678",
-          "words": 353,
+          "sha256": "9babe82c1f9e779b5794e19f11d3d3ea35a6381c9cb6e709f5cd83d1c1d29aaa",
+          "words": 355,
           "headings": 4,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15447,19 +15559,20 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "Styling/Forge/Broker purpose, independent translation/source authority, stable9.1/HA2026.11 and66-page canonical update scope agree. German contradictory old current-status footer now clearly historical; DE/FR9.x feature heading avoids assigning9.1 behavior to9.0. Canonical EN intentionally compact overview; local supplemental release features remain DE/FR editorial guidance. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented."
+            "assessment": "Styling/Forge/Broker purpose, independent translation/source authority, stable9.1/HA2026.11 and66-page canonical update scope agree. German contradictory old current-status footer now clearly historical; DE/FR9.x feature heading avoids assigning9.1 behavior to9.0. Canonical EN intentionally compact overview; local supplemental release features remain DE/FR editorial guidance. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
         "fr": {
           "path": "fr/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "e7736ff08e0d7f87dc1bb1e83b5d9725a782612c65c4c8f3bb65d0b37936f335",
-          "words": 605,
+          "sha256": "0f9dbcb3772afc7f10feb8ddb5dffea008f218c2255ee538feff09733a7797ff",
+          "words": 611,
           "headings": 5,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15472,13 +15585,13 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-23",
-            "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented.",
+            "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "Styling/Forge/Broker purpose, independent translation/source authority, stable9.1/HA2026.11 and66-page canonical update scope agree. German contradictory old current-status footer now clearly historical; DE/FR9.x feature heading avoids assigning9.1 behavior to9.0. Canonical EN intentionally compact overview; local supplemental release features remain DE/FR editorial guidance. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented."
+            "assessment": "Styling/Forge/Broker purpose, independent translation/source authority, stable9.1/HA2026.11 and66-page canonical update scope agree. German contradictory old current-status footer now clearly historical; DE/FR9.x feature heading avoids assigning9.1 behavior to9.0. Canonical EN intentionally compact overview; local supplemental release features remain DE/FR editorial guidance. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         }
       }
@@ -15499,20 +15612,22 @@
         "en": {
           "path": "en/projects/uix/license.md",
           "status": "content-present",
-          "sha256": "3a65086766deced5966268d1543376faf26e94c99ada0268e35ca6ef4dc931ef",
-          "words": 231,
+          "sha256": "5564351f8fe3d2b20a1dc93b55bb23690a360655cd564f9a501cacbf0522f6b4",
+          "words": 233,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15578,18 +15693,21 @@
         "en": {
           "path": "en/projects/uix/quick-start.md",
           "status": "content-present",
-          "sha256": "39ee4d1d0e72d346976a786ba02d28b95d939a41ff14c45340033e3ac5de3a5f",
-          "words": 510,
+          "sha256": "5c1823111033cd3d643c211022db9537001b6ca449395c23ebc16464c877c197",
+          "words": 512,
           "headings": 5,
           "examples": 2,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
-            "versions_only_in_translation": [],
+            "versions_only_in_translation": [
+              "9.2.0-beta.1"
+            ],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
@@ -15643,9 +15761,9 @@
         "de": {
           "path": "projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "bb0eea478ca0650750ef6a28c2ebf29eab8ea768b67798fc9b74fb728d175db0",
-          "words": 4140,
-          "headings": 28,
+          "sha256": "d72ee0a58115fc57a777924d220b9820c0bdc8b9a1ec6dcf73d652dbeae1d5cb",
+          "words": 4270,
+          "headings": 29,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -15671,7 +15789,8 @@
             "9.1.0-beta.1",
             "9.1.0-beta.2",
             "9.1.0-beta.5",
-            "9.1.0-beta.8"
+            "9.1.0-beta.8",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": []
         },
@@ -15710,7 +15829,8 @@
               "8.3.1",
               "8.4.0-beta.3",
               "8.4.0-beta.9",
-              "8.4.1"
+              "8.4.1",
+              "9.2.0-beta.1"
             ],
             "versions_only_in_translation": [],
             "fewer_examples": false,
@@ -15725,15 +15845,15 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "Read all DE/EN/FR review histories in bounded sections, source66 versus formerly67/65/64 counts and stable-versuspreview transitions, badge/params512KiB/footer notices and oldreviewlimitations agree. EN condensed olderhistory explicitlylinksDEFR. New section explains actualcontentreview/hashrevocation and explicit supplemental/originalerrata without implying newHAverification. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented."
+            "assessment": "Read all DE/EN/FR review histories in bounded sections, source66 versus formerly67/65/64 counts and stable-versuspreview transitions, badge/params512KiB/footer notices and oldreviewlimitations agree. EN condensed olderhistory explicitlylinksDEFR. New section explains actualcontentreview/hashrevocation and explicit supplemental/originalerrata without implying newHAverification. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
         "fr": {
           "path": "fr/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "76851e8e0d42fd1c95d49cf372203376c7b2300b5e8a170f8a1537ca74236798",
-          "words": 4301,
-          "headings": 25,
+          "sha256": "32acc8cd5cd288082af2843cd866a6ecffc33626ddbb63532d2405b9873782e3",
+          "words": 4452,
+          "headings": 26,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -15756,7 +15876,8 @@
             "9.1.0-beta.1",
             "9.1.0-beta.2",
             "9.1.0-beta.5",
-            "9.1.0-beta.8"
+            "9.1.0-beta.8",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15778,7 +15899,7 @@
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-23",
-            "assessment": "Read all DE/EN/FR review histories in bounded sections, source66 versus formerly67/65/64 counts and stable-versuspreview transitions, badge/params512KiB/footer notices and oldreviewlimitations agree. EN condensed olderhistory explicitlylinksDEFR. New section explains actualcontentreview/hashrevocation and explicit supplemental/originalerrata without implying newHAverification. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented."
+            "assessment": "Read all DE/EN/FR review histories in bounded sections, source66 versus formerly67/65/64 counts and stable-versuspreview transitions, badge/params512KiB/footer notices and oldreviewlimitations agree. EN condensed olderhistory explicitlylinksDEFR. New section explains actualcontentreview/hashrevocation and explicit supplemental/originalerrata without implying newHAverification. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         }
       }
@@ -15801,21 +15922,23 @@
         "en": {
           "path": "en/projects/uix/using/apps.md",
           "status": "content-present",
-          "sha256": "4b36e7e476df14e3fb09b7853252299d63fe6a1c466d0b26ed0c97d99eaf093f",
-          "words": 425,
+          "sha256": "e4dbc714c23787fd1a4210f231f50a784d7f45eca627823d697820c80b847d17",
+          "words": 427,
           "headings": 4,
           "examples": 1,
           "versions": [
             "2026.11.0",
             "8.4.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15880,20 +16003,22 @@
         "en": {
           "path": "en/projects/uix/using/cards.md",
           "status": "content-present",
-          "sha256": "63962b0c0ae0538f411400994d58114a3161ae19df091299840786f39921975e",
-          "words": 417,
+          "sha256": "ffd5a3a18517c97ff82496d0531b880d55dfb4147c4b97cb5ca36156edbf1963",
+          "words": 419,
           "headings": 2,
           "examples": 5,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15955,20 +16080,22 @@
         "en": {
           "path": "en/projects/uix/using/custom-panels.md",
           "status": "content-present",
-          "sha256": "25ff7daa2184edb5c21e89d51a1655c975463f92c9e6924eaf1361ec58439cc4",
-          "words": 451,
+          "sha256": "44ec9a5e8dc0972b8bc22471f8291062d2f4dd2d735c3982c5c7f7250273a3f6",
+          "words": 453,
           "headings": 4,
           "examples": 2,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16104,21 +16231,23 @@
         "en": {
           "path": "en/projects/uix/using/entities.md",
           "status": "content-present",
-          "sha256": "d3e1c0e93557137630908ccc7e2054d32f6f58034de1cde453cb348caf156b30",
-          "words": 562,
+          "sha256": "c03eb849774b03c54554fad67aa9b7a46f87e6a6695adf7e43ec0e52907b2b0f",
+          "words": 564,
           "headings": 5,
           "examples": 11,
           "versions": [
             "2026.10.0",
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16183,20 +16312,22 @@
         "en": {
           "path": "en/projects/uix/using/icons.md",
           "status": "content-present",
-          "sha256": "b2a7a1de2d9c313ef422520f99cde612bb1ef444c9308dd9754529155bf39200",
-          "words": 603,
+          "sha256": "11c4ff6a3153d0be29a5bf504524c38b58802349628f88ca95aa336021a11cbd",
+          "words": 605,
           "headings": 4,
           "examples": 3,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16259,20 +16390,22 @@
         "en": {
           "path": "en/projects/uix/using/images.md",
           "status": "content-present",
-          "sha256": "e65c2f2ea1741d0476925f1a9b114b15cd2546b31f83bf21e6b2bd100864d186",
-          "words": 395,
+          "sha256": "f5790372b1bcdefc4603ee3523a3f126ce53f22c013099e725a7bf557143a324",
+          "words": 397,
           "headings": 3,
           "examples": 1,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16335,20 +16468,22 @@
         "en": {
           "path": "en/projects/uix/using/index.md",
           "status": "content-present",
-          "sha256": "2368425cd5a001d6861f04f8363d215398d5f079f4a656b957572a7b9db95d38",
-          "words": 157,
+          "sha256": "aea3f2f696604f6397a96656f503b1a0e6b851889407144d2a647262f90f4212",
+          "words": 159,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -16416,20 +16551,22 @@
         "en": {
           "path": "en/projects/uix/using/other.md",
           "status": "content-present",
-          "sha256": "8b3bafa86913802e679d55533864ebccc54b911ab5adbfb3e2fd7c87a009e614",
-          "words": 169,
+          "sha256": "dc31886e6e182fc4cd1364a42494bbed7096d2f1e332339a921ed8e30d81d464",
+          "words": 171,
           "headings": 1,
           "examples": 1,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16492,20 +16629,22 @@
         "en": {
           "path": "en/projects/uix/using/section-backgrounds.md",
           "status": "content-present",
-          "sha256": "104d9f92eb822b8ec5e88a3f9ea0ef910bfe04f790abad057d30e622775b5c10",
-          "words": 337,
+          "sha256": "b76e6ec373fe296b85ba91dac377f49ef6cad07b877a29f79af866594a544bc1",
+          "words": 339,
           "headings": 3,
           "examples": 2,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16568,20 +16707,22 @@
         "en": {
           "path": "en/projects/uix/using/templates.md",
           "status": "content-present",
-          "sha256": "9680b595a79c704779da72c98d9bb88d28580a588fc65a6c4a53247cd0db8cae",
-          "words": 1355,
+          "sha256": "a58fb34114ac1f761ba72ffd7d78aa2b6dbfd8c53afbdb12964246c70d874905",
+          "words": 1357,
           "headings": 11,
           "examples": 14,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16644,20 +16785,22 @@
         "en": {
           "path": "en/projects/uix/using/themes.md",
           "status": "content-present",
-          "sha256": "1cbd41536a371fcf1a21f57741880d6a6f39a171a67a82312361bdffb8fffb2b",
-          "words": 1581,
+          "sha256": "4d3c8bd577c1576899518382ce94e9ac774ca7784a1e7cf302041e7949987692",
+          "words": 1583,
           "headings": 12,
           "examples": 19,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16725,20 +16868,22 @@
         "en": {
           "path": "en/projects/uix/using/view-backgrounds.md",
           "status": "content-present",
-          "sha256": "412d9c6491e0923e59342a8b34afce3a4c5f1edb6367dc3d8a2e830ad0f0dc92",
-          "words": 1469,
+          "sha256": "03e33ed112633d19d0b356b1a1f0c65fd7ecde7cae40bfa18f0ab8c2b0ccedad",
+          "words": 1471,
           "headings": 16,
           "examples": 17,
           "versions": [
             "2026.11.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.1"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,

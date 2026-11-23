@@ -136,43 +136,42 @@ element:
 | `retry_delay` | number oder string | - | Wartezeit zwischen falschen Codeversuchen. |
 | `max_retries` | number | - | Anzahl falscher Versuche vor der längeren Sperrzeit. |
 | `max_retries_delay` | number oder string | `30000` | Sperrzeit nach `max_retries`, z. B. `30s` oder `5m`. |
-| `retry_event` | string | - | Name des Home-Assistant-Ereignisses nach jeder falschen Codeeingabe. |
-| `failed_event` | string | - | Name des Home-Assistant-Ereignisses, wenn eine falsche Eingabe `max_retries` erreicht. |
+| `retry_action` | object | - | Normale Home-Assistant-Action nach jeder falschen Codeeingabe. |
+| `failed_action` | object | - | Normale Home-Assistant-Action, wenn eine falsche Eingabe `max_retries` erreicht. |
 
-### Ereignisse bei Fehlversuchen
+### Aktionen bei Fehlversuchen
 
-Mit `retry_event` kannst du auf jeden falschen Code reagieren. `failed_event` wird zusätzlich ausgelöst, wenn die Eingabe den Grenzwert `max_retries` erreicht. Beide Ereignisse werden auf dem Home-Assistant-Ereignisbus mit `user`, `retry_count` und `browser` gesendet; `browser_id` kommt hinzu, sofern der Browser eine Kennung bereitstellt. Beim letzten Fehlversuch erhalten beide Ereignisse den Zählerstand, der den Grenzwert erreicht hat.
+::: info Entwicklungsstand ab 9.2.0-beta.1
+Die früheren `retry_event` / `failed_event` werden durch `retry_action` / `failed_action` ersetzt. Dies beschreibt den Entwicklungszweig, keine Funktion der stabilen Basis 9.1.0.
+:::
+
+Mit `retry_action` führst du nach jedem falschen Code eine normale Home-Assistant-Action aus. `failed_action` läuft zusätzlich beim Grenzwert `max_retries`. Die Aktionen können auch von Nicht-Administratoren verwendet werden; die Berechtigungen des aufgerufenen HA-Dienstes gelten weiterhin. Beim letzten Fehlversuch führt UIX zuerst `retry_action`, dann `failed_action` aus. Konfiguriere beide bewusst, wenn dadurch zwei Meldungen entstehen können.
 
 ```yaml
 locks:
   - code: 1234
     admins: true
     max_retries: 3
-    retry_event: uix_lock_retry
-    failed_event: uix_lock_failed
+    failed_action:
+      action: perform-action
+      perform_action: persistent_notification.create
+      data:
+        title: UIX lock failed
+        message: A user reached the maximum number of incorrect code entries.
 ```
 
-Erstelle in Home Assistant eine Automation mit dem Auslöser **Manuell empfangenes Ereignis**, um auf den letzten Fehlversuch zu reagieren. Dieses Beispiel erstellt eine dauerhafte Benachrichtigung mit den UIX-Ereignisdaten:
+Dieses Beispiel erstellt direkt nach der dritten falschen Eingabe eine dauerhafte Benachrichtigung. Eine zusätzliche Automation oder eine Berechtigung zum Senden auf den Ereignisbus wird dafür nicht benötigt. Für eine gesonderte Reaktion auf jeden Fehlversuch ergänze `retry_action`:
 
 ```yaml
-alias: Alert when a UIX lock fails
-triggers:
-  - trigger: event
-    event_type: uix_lock_failed
-conditions: []
-actions:
-  - action: persistent_notification.create
-    data:
-      title: UIX lock failed
-      message: >-
-        {{ trigger.event.data.user }} entered an incorrect code
-        {{ trigger.event.data.retry_count }} times.
-mode: single
+retry_action:
+  action: perform-action
+  perform_action: persistent_notification.create
+  data:
+    title: UIX lock retry
+    message: An incorrect lock code was entered.
 ```
 
-Für eine Reaktion auf jeden falschen Code setze `event_type` stattdessen auf `uix_lock_retry`. Erreicht der letzte Fehlversuch `max_retries`, löst UIX beide Ereignisse aus: zuerst `retry_event`, danach `failed_event`. Höre in einer Benachrichtigungsautomation nicht auf beide, außer du möchtest für diesen letzten Versuch zwei Meldungen erhalten. Weitere Ereignisdaten stehen unter `trigger.event.data.browser` und, sofern vom Browser bereitgestellt, `trigger.event.data.browser_id` zur Verfügung.
-
-Im visuellen Editor den Auslöser **Manuell empfangenes Ereignis** hinzufügen und den passenden Ereignistyp eintragen. Die HA-Dokumentation beschreibt den [Ereignisauslöser in YAML](https://www.home-assistant.io/triggers/event/) und die [Auslöserdaten](https://www.home-assistant.io/docs/automation/trigger-data/#event-triggers).
+Normale Werte in `data` werden unverändert weitergegeben. Exakte `$uix.*`-Werte können Laufzeitdaten einsetzen; siehe [Ersetzungen in Aktionsdaten](../../extras/uix-actions.md#ersetzungen-in-aktionsdaten). Verwende eine Script-Action für dynamische Nachrichtentexte oder zusätzliche Weiterleitung.
 
 ## Beispiele
 

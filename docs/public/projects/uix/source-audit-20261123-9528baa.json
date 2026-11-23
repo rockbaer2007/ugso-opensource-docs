@@ -1,0 +1,15 @@
+{
+  "reviewed_at": "2026-11-23",
+  "branch": "dev",
+  "previous_revision": "105c5145a158e18be9934e1c7553633ed5c5f1fe",
+  "revision": "9528baaee9cedc2cfb862cda2d6391b8a1fc647c",
+  "source_pages": 66,
+  "changed_pages": [
+    "broker/directives.md",
+    "extras/uix-actions.md",
+    "forge/sparks/lock.md"
+  ],
+  "unchanged_pages": 63,
+  "scope": "Complete canonical Markdown hash comparison. Three changed pages reviewed in DE/EN/FR: retry_action/failed_action migration, ordering, exact recursive type-preserving $uix data substitutions, non-admin action dispatch and Notify script example. Canonical new YAML/Jinja examples preserved verbatim.",
+  "limitations": "Documentation only, no new Home Assistant runtime test. Features describe dev 9.2.0-beta.1; stable baseline remains 9.1.0."
+}

@@ -17,7 +17,7 @@ Every Markdown content page was inventoried, excluding these three generated rep
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 253 | 0 | 0 | 0 |
-| EN | 253 | 0 | 0 | 0 |
+| EN | 253 | 0 | 0 | 2 |
 | FR | 253 | 0 | 0 | 0 |
 
 **Technical comparison of 2026-11-22:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
@@ -181,7 +181,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/broker/realms.md](/projects/uix/broker/realms) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/realms) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/realms) |
 | [projects/uix/broker/rules.md](/projects/uix/broker/rules) | [Content reviewed · Difference reviewed](/en/projects/uix/broker/rules) | [Content reviewed · Difference reviewed](/fr/projects/uix/broker/rules) |
 | [projects/uix/concepts/application.md](/projects/uix/concepts/application) | [Content reviewed · Difference reviewed](/en/projects/uix/concepts/application) | [Content reviewed · Difference reviewed](/fr/projects/uix/concepts/application) |
-| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Content reviewed](/en/projects/uix/concepts/context) | [Content reviewed](/fr/projects/uix/concepts/context) |
+| [projects/uix/concepts/context.md](/projects/uix/concepts/context) | [Content reviewed · Review signals](/en/projects/uix/concepts/context) | [Content reviewed](/fr/projects/uix/concepts/context) |
 | [projects/uix/concepts/dom.md](/projects/uix/concepts/dom) | [Content reviewed · Difference reviewed](/en/projects/uix/concepts/dom) | [Content reviewed](/fr/projects/uix/concepts/dom) |
 | [projects/uix/concepts/index.md](/projects/uix/concepts/) | [Content reviewed · Difference reviewed](/en/projects/uix/concepts/) | [Content reviewed](/fr/projects/uix/concepts/) |
 | [projects/uix/contributing.md](/projects/uix/contributing) | [Content reviewed · Difference reviewed](/en/projects/uix/contributing) | [Content reviewed · Difference reviewed](/fr/projects/uix/contributing) |
@@ -193,7 +193,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/developers/index.md](/projects/uix/developers/) | [Content reviewed · Difference reviewed](/en/projects/uix/developers/) | [Content reviewed](/fr/projects/uix/developers/) |
 | [projects/uix/developers/themes.md](/projects/uix/developers/themes) | [Content reviewed · Difference reviewed](/en/projects/uix/developers/themes) | [Content reviewed](/fr/projects/uix/developers/themes) |
 | [projects/uix/extras/always-patch-ha-card.md](/projects/uix/extras/always-patch-ha-card) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/always-patch-ha-card) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/always-patch-ha-card) |
-| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Content reviewed](/en/projects/uix/extras/custom-sidebar-panels) | [Content reviewed](/fr/projects/uix/extras/custom-sidebar-panels) |
+| [projects/uix/extras/custom-sidebar-panels.md](/projects/uix/extras/custom-sidebar-panels) | [Content reviewed · Review signals](/en/projects/uix/extras/custom-sidebar-panels) | [Content reviewed](/fr/projects/uix/extras/custom-sidebar-panels) |
 | [projects/uix/extras/dialog-styling-delay.md](/projects/uix/extras/dialog-styling-delay) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/dialog-styling-delay) | [Content reviewed](/fr/projects/uix/extras/dialog-styling-delay) |
 | [projects/uix/extras/disable-entity-picture-image-override.md](/projects/uix/extras/disable-entity-picture-image-override) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/disable-entity-picture-image-override) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/disable-entity-picture-image-override) |
 | [projects/uix/extras/disable-icon-styling.md](/projects/uix/extras/disable-icon-styling) | [Content reviewed · Difference reviewed](/en/projects/uix/extras/disable-icon-styling) | [Content reviewed · Difference reviewed](/fr/projects/uix/extras/disable-icon-styling) |

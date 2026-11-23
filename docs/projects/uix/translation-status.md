@@ -4,6 +4,12 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Ergänzung 9528baa – Sperraktionen und Laufzeitdaten
+
+Am 23.11.2026 wurden alle **66** kanonischen Seiten mit [`dev 9528baaee9ce`](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c) verglichen: `broker/directives.md`, `extras/uix-actions.md` und `forge/sparks/lock.md` sind geändert, 63 Seiten unverändert. Deutsch und Französisch ersetzen die bisherigen Ereignisse durch normale HA-Aktionen `retry_action` / `failed_action`, einschließlich Ausführungsreihenfolge und Hinweis zur Migration. Die englische Spiegelung wurde aktualisiert. Dokumentiert sind rekursive, typbewahrende Ersetzungen mit exakten `$uix.*`-Werten und das vollständige Notify-Script-Beispiel; YAML und Jinja daraus bleiben unverändert. [Quellenvergleich](/projects/uix/source-audit-20261123-9528baa.json). Entwicklungsstand **9.2.0-beta.1**, stabile Basis **9.1.0**; keine neue HA-Laufzeitprüfung.
+
+Die folgenden Abschnitte sind historische Prüfstände. Deren `retry_event` / `failed_event`-Beispiele beschreiben frühere Entwicklungsrevisionen und sind keine aktuelle Konfiguration.
+
 ## Ergänzung 105c514 – HA-Benachrichtigung bei Fehlversuchen
 
 Am 23.11.2026 mit [`dev 105c5145a158`](https://github.com/Lint-Free-Technology/uix/commit/105c5145a158e18be9934e1c7553633ed5c5f1fe) verglichen: Von 66 kanonischen Seiten ist nur `forge/sparks/lock.md` geändert, 65 sind unverändert. DE/EN/FR enthalten jetzt die vollständige Automation mit `persistent_notification.create`, den visuellen Ereignisauslöser und die HA-Referenzen. Das YAML samt Jinja wurde unverändert übernommen. Dokumentiert sind auch die Reihenfolge `retry_event` vor `failed_event`, die mögliche doppelte Benachrichtigung beim letzten Fehlversuch und die optionalen Browserdaten. [Quellenvergleich](/projects/uix/source-audit-20261123-105c514.json). Keine neue HA-Laufzeitprüfung; stabile Basis und Entwicklungsstand bleiben getrennt. Die folgenden Abschnitte dokumentieren frühere Abgleiche.

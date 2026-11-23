@@ -4567,7 +4567,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-23",
       "source_sha256": "e7fd54e3fdb7d3ca0c72822009cd3d0abf4fc5862a117c3f1f40c79d20a81b03",
-      "target_sha256": "309277a66b4f4e4bdbe43e6c926d127c7c1131b1cd47e333a323559a1be41543",
+      "target_sha256": "3bc0e2abf097ad63cbde47cb34266f9e04077eba87f08c2034eea2d9d1540585",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -4742,7 +4742,7 @@
       "locale": "en",
       "reviewed_at": "2026-11-23",
       "source_sha256": "549e3f398f1369de22c7dd8cea7cf756f9313548c564c0949bf4e3f7a80d78f4",
-      "target_sha256": "4ea033e2cf21827ba0b15c1698a9bf00f969a028c16575f02f41c8e1d7440791",
+      "target_sha256": "3e614b36b4dcbbc462662b85b6ec4fd7c1bf47926be0060d22c9e5e7d80e06f4",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -5015,9 +5015,9 @@
       "target": "fr/projects/uix/forge/sparks/lock.md",
       "locale": "fr",
       "reviewed_at": "2026-11-23",
-      "source_sha256": "0a3814590c3f21c667ff3b3dddfa962c9645ff633dc0b50c43982f52257ada0e",
-      "target_sha256": "c8c0695ba6a270475adf0d602917103d91d979df60a9af643799ef5ce823c642",
-      "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented.",
+      "source_sha256": "2d41723641101f7c615073fbcf72e451df54644159f1945df1539bbdeaa8cf1f",
+      "target_sha256": "024af390c56d8160cceb5133cddeca89a7f9baf48db2130c16bc2649c16fb80a",
+      "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
         "missing_inline": [],
@@ -5180,9 +5180,9 @@
       "target": "fr/projects/uix/index.md",
       "locale": "fr",
       "reviewed_at": "2026-11-23",
-      "source_sha256": "addbc0680ee59a754c009cc54608933b603b6e469072952735cac0ecec06d3d5",
-      "target_sha256": "e7736ff08e0d7f87dc1bb1e83b5d9725a782612c65c4c8f3bb65d0b37936f335",
-      "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented.",
+      "source_sha256": "398241ed37abd352aa914a600844cc76778c83c7c179d5abe62998c28de52e5a",
+      "target_sha256": "0f9dbcb3772afc7f10feb8ddb5dffea008f218c2255ee538feff09733a7797ff",
+      "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
         "missing_inline": [

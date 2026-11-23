@@ -363,6 +363,21 @@ tap_action:
 `locked_action` accepte tout objet d'action Home Assistant classique, notamment `perform-action`, `toggle`, `more-info`, `navigate` et `fire-dom-event`.
 
 <a id="lock-matching"></a>
+<a id="action-data-substitutions"></a>
+### Substitutions dans les données d’action
+
+Les actions de verrou peuvent insérer des valeurs d’exécution dans `data:`. Il ne s’agit pas d’un rendu de modèle : utilisez un jeton exact `$uix.*` comme valeur, pas `{{ }}` ni un jeton dans une chaîne plus longue. UIX remplace récursivement les valeurs dans les objets et listes, conserve leur type et laisse les chaînes ordinaires intactes. Les noms d’actions, cibles et clés de données ne sont jamais remplacés.
+
+| Jeton | Valeur |
+| --- | --- |
+| `$uix.user` ou `$uix.user.name` | Nom de l’utilisateur HA actuel, ou `null` si indisponible. |
+| `$uix.user.id` | Identifiant stable de l’utilisateur, ou `null` si indisponible. |
+| `$uix.user.is_admin` | Booléen indiquant si l’utilisateur est administrateur. |
+| `$uix.retry` ou `$uix.retry.count` | Compteur de saisies incorrectes à partir de 1 ; `0` pour une `locked_action` réussie. |
+| `$uix.browser` ou `$uix.browser_id` | Identifiant Browser Mod, `CAST` pour une session Cast, ou `null` si aucun n’est disponible. |
+
+Ces substitutions sont disponibles pour `retry_action`, `failed_action`, `locked_action` et `unlocked_action` du spark Lock Forge. Une `perform-action` imbriquée peut ainsi transmettre des champs utiles à un script sans syntaxe de modèle UIX supplémentaire.
+
 ### Correspondance des verrous
 
 `locks` est une liste ordonnée. La première règle active correspondante détermine le contrôle demandé. Si aucune règle active ne correspond, la première règle correspondante avec `active: false` autorise l'action sans contrôle.
@@ -390,10 +405,10 @@ tap_action:
 | `retry_delay` | number ou string | — | Délai après un code erroné avant une nouvelle tentative. Les nombres sont en millisecondes ; les chaînes acceptent des unités comme `"10s"`. |
 | `max_retries` | number | — | Nombre de codes erronés autorisés avant le blocage prolongé. |
 | `max_retries_delay` | number ou string | `30000` | Durée du blocage après `max_retries`. Les nombres sont en millisecondes ; les chaînes acceptent des unités comme `"30s"` ou `"5m"`. |
-| `retry_event` | string | — | Événement Home Assistant émis après chaque code incorrect. |
-| `failed_event` | string | — | Événement Home Assistant émis lorsqu’un code incorrect atteint `max_retries`. |
+| `retry_action` | object | — | Action Home Assistant classique après chaque code incorrect. |
+| `failed_action` | object | — | Action Home Assistant classique lorsque `max_retries` est atteint. |
 
-`retry_event` est émis après chaque code incorrect. Si cette saisie atteint `max_retries`, `failed_event` est également émis. Les deux événements contiennent `user`, `retry_count` et `browser` ; `browser_id` est ajouté lorsqu’il est disponible. Le compteur envoyé au seuil est conservé même si le compteur interne est ensuite remis à zéro.
+À partir de la branche de développement 9.2.0-beta.1, `retry_action` est exécutée après chaque saisie incorrecte. Si celle-ci atteint `max_retries`, `failed_action` suit. Les deux acceptent des objets d’action Home Assistant classiques, par exemple `perform-action` appelant un script ou un service de notification. Les anciennes options `retry_event` / `failed_event` sont remplacées dans le développement actuel.
 
 <a id="code-dialog"></a>
 ### Boîte de dialogue du code
@@ -425,7 +440,35 @@ tap_action:
           admins: true
           max_retries: 3
           max_retries_delay: 5m
+          retry_action:
+            action: perform-action
+            perform_action: script.notify_uix_lock_attempt
+            data:
+              user: "$uix.user"
+              retry: "$uix.retry"
+              browser_id: "$uix.browser_id"
       locked_action:
         action: perform-action
         perform_action: homeassistant.restart
+```
+
+Définissez le script dans Home Assistant et remplacez `mobile_app_your_phone` par l’action de notification de votre application mobile. Les expressions `{{ }}` ci-dessous sont des modèles de script HA classiques, pas des substitutions UIX.
+
+```yaml
+script:
+  notify_uix_lock_attempt:
+    alias: Notify UIX Lock Attempt
+    fields:
+      user:
+        required: true
+      retry:
+        required: true
+      browser_id:
+        required: false
+    sequence:
+      - action: notify.mobile_app_your_phone
+        data:
+          title: UIX lock attempt
+          message: >-
+            {{ user }} entered an incorrect code (attempt {{ retry }}) from {{ browser_id or "an unknown browser" }}.
 ```
