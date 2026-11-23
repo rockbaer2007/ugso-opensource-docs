@@ -5,7 +5,7 @@ description: Connect USB keys, Stream Decks and macro pads to up to three MQTT b
 
 # USB Extender for Home Assistant
 
-**0.1.35 · Public test release · Raspberry Pi · Updated 22 November 2026**
+**0.1.36 · Public test release · Raspberry Pi · Updated 23 November 2026**
 
 A USB keyboard connected to a Raspberry Pi can become a control panel for Home
 Assistant or ioBroker. USB Extender reads inputs and publishes them to up to
@@ -13,7 +13,7 @@ Assistant or ioBroker. USB Extender reads inputs and publishes them to up to
 be stopped; the USB/MQTT service continues independently.
 
 [GitHub / German and English README](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.35 and SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.35)
+· [ZIP 0.1.36 and SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.36)
 · [Changelog](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 This is a standalone Raspberry Pi program, not an HA app installed through the
@@ -25,7 +25,28 @@ currently uses German labels. Click wide images to open their original size.
 
 [![Wide key list with MQTT channel groups](/images/usb-extender/key-list.png)](/images/usb-extender/key-list.png)
 
-## New in 0.1.35: barcode/QR scanners and HA tags {#release-035}
+## New in 0.1.36: compact USB drives {#release-036}
+
+USB sticks and other USB mass-storage devices are detected through their USB
+device or interface class. New drives have no selected MQTT targets and start
+with input disabled. Irrelevant input, display and reassignment controls are omitted.
+
+USB / Virtual Devices offers two checkboxes:
+
+- **System:** the collapsed row shows the device name and **Systemlaufwerk (system drive)**.
+- **Hidden:** the collapsed row shows only the device name.
+
+These options are mutually exclusive. Expand the row to edit it and use **Save**
+to persist the choice. With neither option selected, the entry starts expanded.
+Classification is retained for saved offline drives. **System is a manual label**,
+not automatic boot-partition detection. Hidden keeps the device in the list.
+
+These options affect display only. They do not mount, format or write to drives.
+Existing MQTT targets, bindings, other devices and Mobile pairings are preserved.
+The free-space indicator in the header still measures the filesystem containing
+the application's data directory.
+
+## Previously in 0.1.35: barcode/QR scanners and HA tags {#release-035}
 
 USB HID keyboard scanners have a separate mode, disabled by default. In
 **USB / Virtuelle Geräte**, enable the device and scanner mode, choose the
@@ -202,8 +223,8 @@ Copy the ZIP to the Pi, open a terminal in its download directory, and run:
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.35-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.35
+unzip USB-Extender-Home-Assistant-0.1.36-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.36
 sudo bash install.sh
 ```
 

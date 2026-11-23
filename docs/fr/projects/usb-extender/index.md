@@ -5,7 +5,7 @@ description: Relier des touches USB, Stream Deck et claviers à macros à trois 
 
 # USB Extender pour Home Assistant
 
-**0.1.35 · Version de test publique · Raspberry Pi · Mise à jour du 22 novembre 2026**
+**0.1.36 · Version de test publique · Raspberry Pi · Mise à jour du 23 novembre 2026**
 
 Un clavier USB connecté au Raspberry Pi peut servir de commande pour Home
 Assistant ou ioBroker. USB Extender lit les entrées et les publie vers **trois
@@ -13,7 +13,7 @@ courtiers MQTT simultanément** au maximum. L’interface Web sert à la configu
 et peut ensuite être arrêtée ; le service USB/MQTT continue indépendamment.
 
 [GitHub / README allemand et anglais](https://github.com/rockbaer2007/usb-extender-home-assistant)
-· [ZIP 0.1.35 et SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.35)
+· [ZIP 0.1.36 et SHA256](https://github.com/rockbaer2007/usb-extender-home-assistant/releases/tag/v0.1.36)
 · [Modifications](https://github.com/rockbaer2007/usb-extender-home-assistant/blob/master/CHANGELOG.md)
 
 Il s’agit d’un programme autonome pour Raspberry Pi, pas d’une application HA à
@@ -27,7 +27,30 @@ ouvrir à leur taille d’origine.
 
 [![Liste large des touches et groupes de canaux MQTT](/images/usb-extender/key-list.png)](/images/usb-extender/key-list.png)
 
-## Nouveautés 0.1.35 : scanners de codes-barres/QR et tags HA {#release-035}
+## Nouveautés 0.1.36 : affichage compact des disques USB {#release-036}
+
+Les clés et autres supports de stockage USB sont reconnus par leur classe USB de
+périphérique ou d’interface. Les nouveaux supports n’ont aucune cible MQTT cochée
+et leurs entrées sont désactivées. Les réglages d’entrée, d’affichage et de
+réaffectation sans rapport avec le stockage ne sont pas proposés.
+
+Dans USB / Périphériques virtuels, deux cases sont disponibles :
+
+- **System :** la ligne repliée affiche le nom et **Systemlaufwerk (disque système)**.
+- **Hidden :** la ligne repliée affiche uniquement le nom.
+
+Les deux options s’excluent. Dépliez la ligne pour la modifier, puis utilisez
+**Enregistrer**. Sans ces options, l’entrée s’ouvre dépliée. La classification reste
+disponible pour les supports enregistrés hors ligne. **System est un marquage manuel**,
+pas une détection automatique de la partition de démarrage. Hidden conserve le
+périphérique dans la liste.
+
+Ces options changent uniquement l’affichage : aucun montage, formatage ni écriture
+sur le disque. Les cibles MQTT existantes, affectations, autres appareils et
+appairages Mobile sont conservés. L’indicateur d’espace libre en haut mesure toujours
+le système de fichiers contenant le répertoire de données du programme.
+
+## Déjà en 0.1.35 : scanners de codes-barres/QR et tags HA {#release-035}
 
 Les scanners USB HID de type clavier disposent d’un mode distinct, désactivé par
 défaut. Dans **USB / Virtuelle Geräte**, autoriser le périphérique et le mode
@@ -214,8 +237,8 @@ Copier le ZIP sur le Pi, ouvrir un terminal dans son dossier de téléchargement
 
 ```bash
 sudo apt-get update && sudo apt-get install -y unzip
-unzip USB-Extender-Home-Assistant-0.1.35-Raspi4.zip
-cd USB-Extender-Home-Assistant-0.1.35
+unzip USB-Extender-Home-Assistant-0.1.36-Raspi4.zip
+cd USB-Extender-Home-Assistant-0.1.36
 sudo bash install.sh
 ```
 
