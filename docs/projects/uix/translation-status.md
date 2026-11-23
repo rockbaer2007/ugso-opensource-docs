@@ -4,6 +4,12 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Kanonischer Abgleich – 23. November 2026
+
+Alle 66 englischen Quellseiten wurden mit [`dev 6597c4def884`](https://github.com/Lint-Free-Technology/uix/commit/6597c4def884f1595a6c3ffcbd337b1579f3fd80) verglichen. Gegenüber `fb36536` sind ausschließlich `broker/directives.md`, `extras/uix-actions.md` und `forge/sparks/lock.md` geändert; 63 Seiten sind identisch. DE und FR übernehmen die beiden neuen Sperrereignisse: `retry_event` bei jedem falschen Code, zusätzlich `failed_event` beim Erreichen von `max_retries`. Dokumentiert sind `user`, `retry_count`, `browser` sowie das optionale `browser_id` und der Zählerstand beim Grenzwert. Das neue YAML-Beispiel wurde unverändert übernommen.
+
+Die englischen Seiten werden aus dem festgehaltenen Original erzeugt; vorhandene ausdrücklich dokumentierte redaktionelle Korrekturen bleiben erhalten. Stabile Basis bleibt 9.1.0; die neue Funktion wird als Dokumentationsstand des Entwicklungszweigs beschrieben. Keine neue HA-Laufzeitprüfung. [Quellenvergleich](/projects/uix/source-audit-20261123.json). Die folgenden Abschnitte sind historische Prüfstände.
+
 ## Inhaltliche Prüfung der Sprachfassungen
 
 Die Seiten werden zusätzlich redaktionell gegen die festgehaltene Quelle gelesen: Bedeutung, Voraussetzungen, Standardwerte und Einschränkungen werden verglichen und gefundene Widersprüche korrigiert. „Inhaltlich geprüft“ gilt nur für die erfasste Textfassung; Änderungen an Quelle oder Übersetzung erfordern eine erneute Prüfung. Den aktuellen Stand je Seite zeigt die [Dokumentationsübersicht](/documentation-status), die Prüfsummen und Begründungen stehen im [Inhaltsprüfbericht](/documentation-semantic-review.json).

@@ -1,0 +1,15 @@
+{
+  "reviewed_at": "2026-11-23",
+  "branch": "dev",
+  "previous_revision": "fb36536e5836d595637fbf3bc253d5fc0d3ed8d6",
+  "revision": "6597c4def884f1595a6c3ffcbd337b1579f3fd80",
+  "source_pages": 66,
+  "changed_pages": [
+    "broker/directives.md",
+    "extras/uix-actions.md",
+    "forge/sparks/lock.md"
+  ],
+  "unchanged_pages": 63,
+  "scope": "All 66 canonical source hashes compared; three changed pages reviewed in DE/EN/FR, including new event properties, payload fields, threshold behaviour and unchanged YAML example.",
+  "limitations": "Documentation comparison only; no Home Assistant runtime test. Stable baseline remains 9.1.0; additions describe dev."
+}

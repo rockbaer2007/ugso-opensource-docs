@@ -3,8 +3,8 @@ title: À propos
 ---
 # UI eXtension pour Home Assistant
 
-::: info État vérifié le 20 novembre 2026 – UIX 9.1.0 stable
-Les **66** pages canoniques ont été comparées à `dev fb36536` et à la documentation de **v9.1.0**. Quatre pages ont changé et 62 restent identiques. Le [spark Lock](./forge/sparks/lock) bloque aussi la bordure stylisée ; les anciennes mentions bêta des [contextes](./concepts/context), des [raccourcis de barre latérale](./extras/custom-sidebar-panels) et du [pied de page](./forge/forge#pied-de-page) sont supprimées. Cette mise à jour du contenu résout les deux points de traduction ouverts concernant les contextes et les raccourcis.
+::: info État vérifié le 23 novembre 2026 – UIX 9.1.0 stable, documentation dev
+Les **66** pages canoniques ont été comparées à `dev 6597c4d` : trois pages ont changé et 63 sont identiques. Le [spark Lock](./forge/sparks/lock), les [actions protégées](./extras/uix-actions) et les [directives Broker](./broker/directives) décrivent désormais `retry_event` et `failed_event`, leurs données et un exemple. Cet ajout vient de la branche de développement et ne garantit pas sa disponibilité dans la version stable 9.1.0.
 :::
 
 > Cette traduction française est maintenue par UGSo Software. La documentation anglaise reste la référence. La base est la version stable [`UIX 9.1.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0), révision [`ca36726`](https://github.com/Lint-Free-Technology/uix/commit/ca3672619a11858bbc7f9165db999c0aaa7cef00). **Home Assistant 2026.11.0 ou ultérieur est requis.**

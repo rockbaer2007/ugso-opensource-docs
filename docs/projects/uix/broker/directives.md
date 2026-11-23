@@ -456,7 +456,9 @@ Da der Tooltip neben dem Ziel liegt, müssen vererbte CSS-Variablen auf dem Elte
 
 Standardziel ist der Direktiven-Anchor. `for` wählt ein relativ dazu gelegenes Element; `for: previous` verwendet das unmittelbar zuvor durch `button`, `badge` oder `tile-icon` erzeugte Element. `anchor` ändert den Ausgangspunkt der `for`-Suche.
 
-`locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position` und `icon_size` haben dieselbe Bedeutung wie beim Spark. `unlocked_action` ist optional: normale HA-Aktionen verwenden `entity`; `element_tap`, `element_hold` und `element_double_tap` lösen die entsprechende Aktion aus der vorhandenen Element-`config` aus.
+`locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position` und `icon_size` haben dieselbe Bedeutung wie beim Spark. Sperreinträge unterstützen auch `retry_event` und `failed_event`: Diese Home-Assistant-Ereignisse enthalten `user`, `retry_count` und `browser` sowie `browser_id`, sofern verfügbar. `retry_event` wird bei jedem falschen Code ausgelöst, `failed_event` zusätzlich beim Erreichen von `max_retries`.
+
+`unlocked_action` ist optional: normale HA-Aktionen verwenden `entity`; `element_tap`, `element_hold` und `element_double_tap` lösen die entsprechende Aktion aus der vorhandenen Element-`config` aus.
 
 `style` ist eine flache Zuordnung von CSS-Namen zu Werten auf der erzeugten Sperre. Die CSS-Variablen sind meist besser geeignet, weil sie auch beim Wechsel zwischen gesperrt, entsperrt und blockiert gelten. Mit `uix` lässt sich das Overlay als UIX-Typ `uix-broker-lock` gestalten; die aufgelösten Sperreinstellungen stehen als `config`, vorherige Ergebnisse als `directive` bereit.
 

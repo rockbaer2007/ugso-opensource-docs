@@ -413,7 +413,9 @@ L'info-bulle est insérée comme élément frère de sa cible. Définissez les v
 
 La cible par défaut est l’ancre de directive. `for` choisit un descendant relatif ; `for: previous` reprend l’élément créé immédiatement avant par `button`, `badge` ou `tile-icon`. `anchor` change la racine de recherche de `for`.
 
-`locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position` et `icon_size` ont le même sens que dans le Spark. `unlocked_action` est facultatif : les actions HA normales utilisent `entity` ; `element_tap`, `element_hold` et `element_double_tap` déclenchent l’action correspondante depuis la `config` de l’élément lorsqu’elle existe.
+`locks`, `permissive`, `code_dialog`, `action`, `duration`, `icon_locked`, `icon_unlocked`, `icon_locked_color`, `icon_unlocked_color`, `icon_position` et `icon_size` ont le même sens que dans le Spark. Les règles acceptent aussi `retry_event` et `failed_event`. Ces événements Home Assistant contiennent `user`, `retry_count` et `browser`, ainsi que `browser_id` si disponible. `retry_event` est émis après chaque code incorrect ; `failed_event` est aussi émis lorsque `max_retries` est atteint.
+
+`unlocked_action` est facultatif : les actions HA normales utilisent `entity` ; `element_tap`, `element_hold` et `element_double_tap` déclenchent l’action correspondante depuis la `config` de l’élément lorsqu’elle existe.
 
 `style` est une table plate de propriétés CSS sur le verrou généré. Les variables CSS sont généralement préférables car elles restent actives pendant les transitions verrouillé, déverrouillé et bloqué. `uix` applique UIX Styling à l’overlay de type `uix-broker-lock` ; les réglages résolus sont disponibles comme `config`, les résultats précédents comme `directive`.
 

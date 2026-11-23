@@ -343,6 +343,10 @@ Die Sperre wirkt im Frontend und ist keine Berechtigungsgrenze. Wer das Dashboar
 | `retry_delay` | number oder string | — | Wartezeit nach falschem Code; Zahl in Millisekunden oder String mit Einheit, etwa `"10s"`. |
 | `max_retries` | number | — | Erlaubte Fehlversuche vor der längeren Sperre. |
 | `max_retries_delay` | number oder string | `30000` | Sperrdauer nach `max_retries`; Millisekunden oder etwa `"30s"` / `"5m"`. |
+| `retry_event` | string | — | Home-Assistant-Ereignis nach jeder falschen Codeeingabe. |
+| `failed_event` | string | — | Home-Assistant-Ereignis, wenn eine falsche Eingabe `max_retries` erreicht. |
+
+`retry_event` wird bei jedem falschen Code ausgelöst. Erreicht diese Eingabe `max_retries`, wird zusätzlich `failed_event` ausgelöst. Beide Ereignisse enthalten `user`, `retry_count` und `browser`; `browser_id` wird ergänzt, sofern verfügbar. Der beim Grenzwert übertragene Zählerstand bleibt auch dann erhalten, wenn der interne Versuchszähler anschließend zurückgesetzt wird.
 
 ### Code-Dialog
 

@@ -390,6 +390,10 @@ tap_action:
 | `retry_delay` | number ou string | — | Délai après un code erroné avant une nouvelle tentative. Les nombres sont en millisecondes ; les chaînes acceptent des unités comme `"10s"`. |
 | `max_retries` | number | — | Nombre de codes erronés autorisés avant le blocage prolongé. |
 | `max_retries_delay` | number ou string | `30000` | Durée du blocage après `max_retries`. Les nombres sont en millisecondes ; les chaînes acceptent des unités comme `"30s"` ou `"5m"`. |
+| `retry_event` | string | — | Événement Home Assistant émis après chaque code incorrect. |
+| `failed_event` | string | — | Événement Home Assistant émis lorsqu’un code incorrect atteint `max_retries`. |
+
+`retry_event` est émis après chaque code incorrect. Si cette saisie atteint `max_retries`, `failed_event` est également émis. Les deux événements contiennent `user`, `retry_count` et `browser` ; `browser_id` est ajouté lorsqu’il est disponible. Le compteur envoyé au seuil est conservé même si le compteur interne est ensuite remis à zéro.
 
 <a id="code-dialog"></a>
 ### Boîte de dialogue du code

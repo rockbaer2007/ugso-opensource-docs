@@ -3,15 +3,15 @@ title: Übersicht
 ---
 # UI eXtension für Home Assistant
 
-::: info Stand geprüft am 20.11.2026 – UIX 9.1.0 stabil
-Alle **66** kanonischen Seiten wurden mit `dev fb36536` und der Dokumentation von **v9.1.0** verglichen. Seit dem letzten Abgleich wurden vier Seiten geändert und 62 sind unverändert. [Lock Spark](./forge/sparks/lock) sperrt auch den gestalteten Rahmen; veraltete Beta-Hinweise bei [Kontexten](./concepts/context), [Seitenleisten-Verknüpfungen](./extras/custom-sidebar-panels) und [Footer-Konfiguration](./forge/forge#footer) sind entfernt. Die zwei offenen Sprachprüfhinweise zu Kontexten und Seitenleisten-Verknüpfungen werden durch diesen Inhaltsabgleich behoben.
+::: info Stand geprüft am 23.11.2026 – UIX 9.1.0 stabil, Dokumentation aus dev
+Alle **66** kanonischen Seiten wurden mit `dev 6597c4d` verglichen: drei Seiten geändert, 63 unverändert. [Lock Spark](./forge/sparks/lock), [gesperrte Aktionen](./extras/uix-actions) und [Broker-Direktiven](./broker/directives) beschreiben jetzt `retry_event` und `failed_event` einschließlich Ereignisdaten und Beispiel. Diese Ergänzung stammt aus dem Entwicklungszweig; sie ist keine Zusage zur Verfügbarkeit in der stabilen Version 9.1.0.
 :::
 
 > **Unabhängige Übersetzung**
 > Diese Dokumentation ist eine unabhängige deutsche Übersetzung und wird von UGSo Software gepflegt. Sie ist nicht die offizielle Dokumentation des UIX-Projekts. Maßgeblich bleibt die englische Originaldokumentation unter https://uix.lf.technology/.
 >
 > Basis ist GitHub-Release [`v9.1.0`](https://github.com/Lint-Free-Technology/uix/releases/tag/v9.1.0). Benötigt **Home Assistant 2026.11.0 oder neuer**. Original-Repository [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), Release-Stand [`ca36726`](https://github.com/Lint-Free-Technology/uix/commit/ca3672619a11858bbc7f9165db999c0aaa7cef00).
-> Der aktuelle Dokumentationsabgleich verwendet `dev fb36536` vom 20.11.2026. Einzelheiten und Prüfgrenzen stehen im [Übersetzungsstatus](./translation-status).
+> Der aktuelle Dokumentationsabgleich verwendet `dev 6597c4d` vom 23.11.2026. Einzelheiten und Prüfgrenzen stehen im [Übersetzungsstatus](./translation-status).
 >
 > Vielen Dank an das UIX-Projekt für die durchdachte Umsetzung und die sehr gute englische Originaldokumentation, auf der diese deutsche Arbeitsfassung basiert.
 >
@@ -60,4 +60,4 @@ Der beste Einstieg ist der [Schnellstart](./quick-start). Dort findest du Instal
 - [FAQ](./faq)
 
 > **Stand dieser deutschen Doku**
-> Aktueller Quellenabgleich: 20.11.2026, UIX 9.1.0 und `dev fb36536`. Bei Unklarheiten gilt die englische Originaldokumentation. Der frühere Abgleich vom 05.11.2026 ist ein historischer Prüfstand.
+> Aktueller Quellenabgleich: 23.11.2026, stabile Basis UIX 9.1.0 und Dokumentation aus `dev 6597c4d`. Bei Unklarheiten gilt die englische Originaldokumentation. Frühere Abgleiche sind historische Prüfstände.

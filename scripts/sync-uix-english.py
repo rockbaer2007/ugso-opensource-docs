@@ -16,8 +16,8 @@ import sys
 import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
-REVISION = 'fb36536e5836d595637fbf3bc253d5fc0d3ed8d6'
-REVIEWED_AT = '2026-11-20'
+REVISION = '6597c4def884f1595a6c3ffcbd337b1579f3fd80'
+REVIEWED_AT = '2026-11-23'
 SOURCE_VERSION = '9.1.0'
 SOURCE_BRANCH = 'dev'
 

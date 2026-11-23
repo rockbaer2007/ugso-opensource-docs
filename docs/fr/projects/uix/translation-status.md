@@ -4,6 +4,12 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Comparaison canonique — 23 novembre 2026
+
+Les 66 pages anglaises ont été comparées à [`dev 6597c4def884`](https://github.com/Lint-Free-Technology/uix/commit/6597c4def884f1595a6c3ffcbd337b1579f3fd80). Depuis `fb36536`, seuls `broker/directives.md`, `extras/uix-actions.md` et `forge/sparks/lock.md` changent ; 63 pages sont identiques. DE et FR intègrent les deux événements : `retry_event` après chaque code incorrect, puis aussi `failed_event` au seuil `max_retries`. Les données `user`, `retry_count`, `browser`, l’identifiant facultatif `browser_id` et le compteur au seuil sont documentés. Le nouvel exemple YAML est conservé sans modification.
+
+Les pages anglaises sont produites depuis la source figée, en conservant les corrections rédactionnelles explicitement documentées. La base stable reste 9.1.0 ; cet ajout décrit la branche de développement. Aucun nouveau test d’exécution HA. [Comparaison des sources](/projects/uix/source-audit-20261123.json). Les sections suivantes sont historiques.
+
 ## Vérification rédactionnelle du contenu
 
 Les traductions sont aussi lues face à la référence enregistrée : sens, prérequis, valeurs par défaut et limites sont comparés ; les contradictions trouvées sont corrigées. « Contenu vérifié » ne vaut que pour le texte enregistré. Modifier la référence ou la traduction exige une nouvelle vérification. Consultez le [statut actuel par page](/fr/documentation-status) et les [évaluations avec empreintes](/documentation-semantic-review.json).

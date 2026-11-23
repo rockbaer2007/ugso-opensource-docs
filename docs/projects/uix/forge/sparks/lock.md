@@ -136,6 +136,21 @@ element:
 | `retry_delay` | number oder string | - | Wartezeit zwischen falschen Codeversuchen. |
 | `max_retries` | number | - | Anzahl falscher Versuche vor der längeren Sperrzeit. |
 | `max_retries_delay` | number oder string | `30000` | Sperrzeit nach `max_retries`, z. B. `30s` oder `5m`. |
+| `retry_event` | string | - | Name des Home-Assistant-Ereignisses nach jeder falschen Codeeingabe. |
+| `failed_event` | string | - | Name des Home-Assistant-Ereignisses, wenn eine falsche Eingabe `max_retries` erreicht. |
+
+### Ereignisse bei Fehlversuchen
+
+Mit `retry_event` kannst du auf jeden falschen Code reagieren. `failed_event` wird zusätzlich ausgelöst, wenn die Eingabe den Grenzwert `max_retries` erreicht. Beide Ereignisse werden auf dem Home-Assistant-Ereignisbus mit `user`, `retry_count` und `browser` gesendet; `browser_id` kommt hinzu, sofern der Browser eine Kennung bereitstellt. Beim letzten Fehlversuch erhalten beide Ereignisse den Zählerstand, der den Grenzwert erreicht hat.
+
+```yaml
+locks:
+  - code: 1234
+    admins: true
+    max_retries: 3
+    retry_event: uix_lock_retry
+    failed_event: uix_lock_failed
+```
 
 ## Beispiele
 

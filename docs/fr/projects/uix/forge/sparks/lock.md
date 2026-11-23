@@ -172,6 +172,21 @@ Contrôle l'apparence de la boîte de dialogue de saisie du code PIN ou de la ph
 | `retry_delay` | nombre ou chaîne | — | Délai entre deux tentatives après un code incorrect. Les nombres sont en millisecondes ; les chaînes acceptent des unités lisibles, par exemple `"10s"`. |
 | `max_retries` | nombre | — | Nombre maximal de tentatives incorrectes consécutives avant l'application du délai prolongé. |
 | `max_retries_delay` | nombre ou chaîne | `30000` | Durée du blocage après le nombre maximal de tentatives. Les nombres sont en millisecondes ; les chaînes acceptent des unités lisibles, par exemple `"30s"` ou `"5m"`. |
+| `retry_event` | chaîne | — | Nom de l’événement Home Assistant émis après chaque code incorrect. |
+| `failed_event` | chaîne | — | Nom de l’événement Home Assistant émis lorsqu’un code incorrect atteint `max_retries`. |
+
+### Événements des tentatives incorrectes
+
+Utilisez `retry_event` pour réagir à chaque code incorrect et `failed_event` pour réagir lorsque le seuil `max_retries` est atteint. Les deux événements sont émis sur le bus Home Assistant avec `user`, `retry_count` et `browser` ; `browser_id` est ajouté si le navigateur fournit un identifiant. Lors de la dernière tentative incorrecte, les deux événements reçoivent le compteur qui a atteint le seuil.
+
+```yaml
+locks:
+  - code: 1234
+    admins: true
+    max_retries: 3
+    retry_event: uix_lock_retry
+    failed_event: uix_lock_failed
+```
 
 ---
 
