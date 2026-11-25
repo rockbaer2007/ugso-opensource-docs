@@ -48,6 +48,10 @@ for locale, config in data['locales'].items():
     assert nav[2]['items'][4:] == [{'text': test_name, 'link': test_path}], f'{locale}: test systems must follow the four HA categories'
     assert nav[3]['text'] == 'ATLAS' and nav[7]['text'] == 'UIX'
     prefix = '' if locale == 'root' else f'/{locale}'
+    for group_index in (1, 3):
+        festtags = [item for item in nav[2]['items'][group_index]['items']
+                    if item.get('link') == f'{prefix}/projects/festtags-card-editor/']
+        assert len(festtags) == 1, f'{locale}: Festtags-Card-Editor missing or duplicated in Apps/Cards'
     assert nav[4]['text'] == 'ioBroker'
     assert nav[4]['items'] == [{'text': 'Widgets', 'items': [
         {'text': 'UGSo Special', 'link': f'{prefix}/iobroker/widgets/ugso-spezial/'}

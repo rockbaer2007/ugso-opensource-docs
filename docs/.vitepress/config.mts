@@ -354,6 +354,7 @@ const sidebarDe = {
       collapsed: false,
       items: [
         { text: 'Übersicht', link: '/projects-mqtt/' },
+        { text: 'Festtags-Card-Editor', link: '/projects/festtags-card-editor/' },
         { text: 'Dashboard-Benutzerverwaltung', link: '/projects/dashboard-user-manager/' },
         { text: 'Seitenleistenfarben', link: '/projects/sidebar-colors/' },
         { text: 'Sidebar Manager', link: '/projects/sidebar-manager/' },
@@ -798,6 +799,7 @@ const sidebarEn = {
       collapsed: false,
       items: [
         { text: 'Overview', link: '/en/projects-mqtt/' },
+        { text: 'Festtags-Card-Editor', link: '/en/projects/festtags-card-editor/' },
         { text: 'Dashboard User Manager', link: '/en/projects/dashboard-user-manager/' },
         { text: 'Sidebar Colors', link: '/en/projects/sidebar-colors/' },
         { text: 'Sidebar Manager', link: '/en/projects/sidebar-manager/' },
@@ -1005,6 +1007,7 @@ const sidebarFr = {
   '/fr/projects/dashboard-user-manager/': [{text:'Utilisateurs des tableaux de bord',items:[{text:'Installation et utilisation',link:'/fr/projects/dashboard-user-manager/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
   '/fr/projects-mqtt/': [{ text: 'UGSo HA Apps', items: [
     { text: 'Vue d’ensemble', link: '/fr/projects-mqtt/' },
+    { text: 'Festtags-Card-Editor', link: '/fr/projects/festtags-card-editor/' },
     { text: 'Logic Studio', link: '/fr/projects/logic-studio/' },
     { text: 'Utilisateurs des tableaux de bord', link: '/fr/projects/dashboard-user-manager/' },
     { text: 'Couleurs du menu latéral', link: '/fr/projects/sidebar-colors/' },
