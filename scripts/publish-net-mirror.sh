@@ -23,7 +23,7 @@ curl --fail --silent --show-error --retry 3 \
 python3 -c 'import json,sys; print("".join("github.com " + key + "\n" for key in json.load(open(sys.argv[1]))["ssh_keys"]), end="")' "$temporary/meta.json" > "$temporary/known_hosts"
 export GIT_SSH_COMMAND="ssh -i $temporary/key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$temporary/known_hosts"
 
-git clone --quiet git@github.com:rockbaer2007/ugso-opensource-net.git "$temporary/repository"
+git clone --depth 1 --single-branch --quiet git@github.com:rockbaer2007/ugso-opensource-net.git "$temporary/repository"
 rsync -a --delete --exclude='.git' "$site/" "$temporary/repository/"
 cd "$temporary/repository"
 printf '%s\n' 'ugso-opensource.net' > CNAME
