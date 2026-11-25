@@ -5650,8 +5650,8 @@
         "de": {
           "path": "projects/festtags-card-editor/index.md",
           "status": "content-present",
-          "sha256": "8ddca1c25a978924a26458c065fa75d6cdec6c8b9b3961abed738b81f3635a37",
-          "words": 625,
+          "sha256": "d2f3634990c0e55c448253e8c3e313bf5d324d58688f9c7d197de2d628003333",
+          "words": 664,
           "headings": 7,
           "examples": 1,
           "versions": [
@@ -5663,8 +5663,8 @@
         "en": {
           "path": "en/projects/festtags-card-editor/index.md",
           "status": "content-present",
-          "sha256": "a9433174ca60f1b5761713ee99a498d65b9a0e75788823254063077330705238",
-          "words": 611,
+          "sha256": "37ad01116c75e0b1a9ff6d10aff09e72fbe1b345edb241fee7f36f6db68a9aeb",
+          "words": 659,
           "headings": 7,
           "examples": 1,
           "versions": [
@@ -5694,8 +5694,8 @@
         "fr": {
           "path": "fr/projects/festtags-card-editor/index.md",
           "status": "content-present",
-          "sha256": "bd5d3159600e5085ac952cbdfd902b86c12e23daa4e9d82ce8972365604d6bb0",
-          "words": 731,
+          "sha256": "de53224079f8da533ef13d5b25fc80e85cdd8c9787297fd98d53360838b4ff48",
+          "words": 784,
           "headings": 7,
           "examples": 1,
           "versions": [

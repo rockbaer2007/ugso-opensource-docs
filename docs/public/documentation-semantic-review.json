@@ -5655,8 +5655,8 @@
       "target": "en/projects/festtags-card-editor/index.md",
       "locale": "en",
       "reviewed_at": "2026-11-25",
-      "source_sha256": "8ddca1c25a978924a26458c065fa75d6cdec6c8b9b3961abed738b81f3635a37",
-      "target_sha256": "a9433174ca60f1b5761713ee99a498d65b9a0e75788823254063077330705238",
+      "source_sha256": "d2f3634990c0e55c448253e8c3e313bf5d324d58688f9c7d197de2d628003333",
+      "target_sha256": "37ad01116c75e0b1a9ff6d10aff09e72fbe1b345edb241fee7f36f6db68a9aeb",
       "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim.",
       "method": "Section-by-section comparison with German source and the observed Chrome test."
     },
@@ -5665,8 +5665,8 @@
       "target": "fr/projects/festtags-card-editor/index.md",
       "locale": "fr",
       "reviewed_at": "2026-11-25",
-      "source_sha256": "8ddca1c25a978924a26458c065fa75d6cdec6c8b9b3961abed738b81f3635a37",
-      "target_sha256": "bd5d3159600e5085ac952cbdfd902b86c12e23daa4e9d82ce8972365604d6bb0",
+      "source_sha256": "d2f3634990c0e55c448253e8c3e313bf5d324d58688f9c7d197de2d628003333",
+      "target_sha256": "de53224079f8da533ef13d5b25fc80e85cdd8c9787297fd98d53360838b4ff48",
       "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim.",
       "method": "Section-by-section comparison with German source and the observed Chrome test."
     }

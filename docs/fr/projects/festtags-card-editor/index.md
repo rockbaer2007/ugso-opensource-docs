@@ -9,6 +9,10 @@ description: Programmation de Noël avec cinq commandes, images de fêtes, déco
 
 [Deutsch](/projects/festtags-card-editor/) · [English](/en/projects/festtags-card-editor/)
 
+![Commande de Noël avec un fond personnel, de la neige et deux commandes d’éclairage](/images/festtags-card-editor/weihnachtssteuerung-card.png)
+
+Exemple d’un tableau de bord configuré. Le fond est fourni par l’utilisateur et n’est pas inclus dans l’application. La capture ne montre pas le mouvement des flocons.
+
 ## Fonctions
 
 - Choix de la région puis du pays : 47 pays et dates personnalisées, traditions occidentales/juliennes.

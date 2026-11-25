@@ -9,6 +9,10 @@ description: Weihnachtssteuerung mit fünf Zeitplänen, Festtagsbildern, GIF-Dek
 
 [English](/en/projects/festtags-card-editor/) · [Français](/fr/projects/festtags-card-editor/)
 
+![Weihnachtssteuerung mit eigenem Hintergrund, Schneefall und zwei Lichtsteuerungen](/images/festtags-card-editor/weihnachtssteuerung-card.png)
+
+Beispiel aus einem eingerichteten Dashboard. Das Hintergrundmotiv wird vom Nutzer bereitgestellt und gehört nicht zum App-Paket. Die Schneefallbewegung ist im Bildschirmfoto nicht sichtbar.
+
 ## Funktionen
 
 - Region und Land auswählen: 47 Länder und eigene Termine, westliche/julianische Traditionen.

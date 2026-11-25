@@ -9,6 +9,10 @@ description: Christmas scheduling with five controls, observance pictures, GIF d
 
 [Deutsch](/projects/festtags-card-editor/) · [Français](/fr/projects/festtags-card-editor/)
 
+![Christmas control with a custom background, snowfall and two lighting controls](/images/festtags-card-editor/weihnachtssteuerung-card.png)
+
+Example from a configured dashboard. The background artwork is supplied by the user and is not included in the app package. The screenshot cannot show the falling snow in motion.
+
 ## Features
 
 - Select region/country: 47 countries and custom dates, western/Julian traditions.
