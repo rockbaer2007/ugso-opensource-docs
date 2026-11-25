@@ -11,6 +11,7 @@ Les versions ci-dessous désignent des états fonctionnels documentés antérieu
 
 | Projet | Documentation |
 | --- | --- |
+| [Festtags-Card-Editor](/fr/projects/festtags-card-editor/) | 0.1.12 : cinq programmations de Noël, capteurs de fêtes, images/GIF personnels et neige avec diamètre en pixels. GIF et 30 flocons animés confirmés dans Chrome ; documentation DE/EN/FR. |
 | [HA Logic Studio Pro](/fr/projects/logic-studio/#ha-logic-studio-pro) | Environnement commun avec plans fonctionnels, Rules, Blocks A, Blocks JS, JavaScript, TypeScript et HA-YAML, gestion des projets et moteur d’exécution. Logic Studio et Blocks for HA constituent les bases de cette évolution. |
 | <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/fr/projects/logic-studio/) | 0.1.12 : interface DE/EN/FR, langue mémorisée, raccourcis et aide des blocs. Testée sur le [système de test PC (64)](/fr/collection/test-systems#testsystem-pc) avec redémarrage ; plan et export conservés. |
 | <img class="package-icon" src="/images/packages/projects-dashboard-user-manager.png" width="32" height="32" alt="" aria-hidden="true"> [Gestion des utilisateurs du tableau de bord](/fr/projects/dashboard-user-manager/) | 0.1.4 : Utilisateurs présentés sous forme de colonnes avec cases à cocher, affectation groupée ou individuelle, interface disponible en DE/EN/FR et sauvegarde du tableau de bord avant l'enregistrement. |

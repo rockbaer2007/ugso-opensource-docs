@@ -1,12 +1,12 @@
 {
-  "reviewed_at": "2026-11-22",
+  "reviewed_at": "2026-11-25",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 253,
+  "source_pages": 254,
   "summary": {
     "de": {
-      "content-present": 253,
-      "existing_pages": 253,
+      "content-present": 254,
+      "existing_pages": 254,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
@@ -15,24 +15,24 @@
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 253,
-      "existing_pages": 253,
+      "content-present": 254,
+      "existing_pages": 254,
       "unmatched_pages": 0,
       "review_signals": 67,
       "reviewed_findings": 74,
-      "technically_compared": 187,
-      "content_reviewed": 249,
-      "open_review_signals": 2
+      "technically_compared": 186,
+      "content_reviewed": 248,
+      "open_review_signals": 3
     },
     "fr": {
-      "content-present": 253,
-      "existing_pages": 253,
+      "content-present": 254,
+      "existing_pages": 254,
       "unmatched_pages": 0,
       "review_signals": 30,
       "reviewed_findings": 47,
-      "technically_compared": 221,
-      "content_reviewed": 249,
-      "open_review_signals": 0
+      "technically_compared": 220,
+      "content_reviewed": 248,
+      "open_review_signals": 1
     }
   },
   "unmatched_pages": {
@@ -1412,8 +1412,8 @@
         "de": {
           "path": "projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "2881977d572f16bdf7cfae314a31a3e17c5ab55a06545e5f51aef70f939739ea",
-          "words": 809,
+          "sha256": "e8ee37ab3db0acfbc10a9869173cdcfb5fccb78a1d036e4dce26f63a9b9ea1f3",
+          "words": 842,
           "headings": 8,
           "examples": 1,
           "versions": [
@@ -1431,8 +1431,8 @@
         "en": {
           "path": "en/projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "0427582daeb048a913016a3a7834f5789b4e307e49f5ab5aaeeba0270da7d299",
-          "words": 863,
+          "sha256": "f8516ebfc582bed8690cb9bb7acf537d174294c23573e3eeb92e554dd7f83fa6",
+          "words": 899,
           "headings": 8,
           "examples": 1,
           "versions": [
@@ -1454,13 +1454,13 @@
             "fewer_headings": false
           },
           "content_review": {
-            "status": "technically-compared",
+            "status": "needs-recheck",
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
-            "status": "content-reviewed",
+            "status": "needs-recheck",
             "reviewed_at": "2026-11-20",
             "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases."
           }
@@ -1468,8 +1468,8 @@
         "fr": {
           "path": "fr/projects-mqtt/index.md",
           "status": "content-present",
-          "sha256": "6994fa9b855f394f52b6e6397ce01c57787dcd53891eed6624399c589dfb5f78",
-          "words": 1055,
+          "sha256": "5d2ead962a849e5bb9bd0d7df549901710c846ad5dfa753957fb4cb7e44ecef9",
+          "words": 1094,
           "headings": 8,
           "examples": 1,
           "versions": [
@@ -1491,13 +1491,13 @@
             "fewer_headings": false
           },
           "content_review": {
-            "status": "technically-compared",
+            "status": "needs-recheck",
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
-            "status": "content-reviewed",
+            "status": "needs-recheck",
             "reviewed_at": "2026-11-20",
             "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases."
           }
@@ -5640,6 +5640,64 @@
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
             "assessment": "Full DE/EN/FR pages and historical test chronology read: admin-only Ingress, tab visibility is not access control, drafts/cancel do not undo received writes, three reconciliation outcomes, backup privacy and app-versusfullrestore scope agree. Historical pending tests remain under explicit earlier-status heading. Corrected EN empty-map mistranslation; localized screenshot captions intentionally differ by their actual language image."
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/festtags-card-editor/index.md",
+      "locales": {
+        "de": {
+          "path": "projects/festtags-card-editor/index.md",
+          "status": "content-present",
+          "sha256": "8ddca1c25a978924a26458c065fa75d6cdec6c8b9b3961abed738b81f3635a37",
+          "words": 625,
+          "headings": 7,
+          "examples": 1,
+          "versions": [
+            "0.1.12",
+            "0.1.8"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/festtags-card-editor/index.md",
+          "status": "content-present",
+          "sha256": "a9433174ca60f1b5761713ee99a498d65b9a0e75788823254063077330705238",
+          "words": 611,
+          "headings": 7,
+          "examples": 1,
+          "versions": [
+            "0.1.12",
+            "0.1.8"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          }
+        },
+        "fr": {
+          "path": "fr/projects/festtags-card-editor/index.md",
+          "status": "content-present",
+          "sha256": "bd5d3159600e5085ac952cbdfd902b86c12e23daa4e9d82ce8972365604d6bb0",
+          "words": 731,
+          "headings": 7,
+          "examples": 1,
+          "versions": [
+            "0.1.12",
+            "0.1.8"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
           }
         }
       }

@@ -944,6 +944,21 @@
     "EN": "/en/projects/dashboard-user-manager/",
     "FR": "/fr/projects/dashboard-user-manager/"
   },
+  "/projects/festtags-card-editor/": {
+    "DE": "/projects/festtags-card-editor/",
+    "EN": "/en/projects/festtags-card-editor/",
+    "FR": "/fr/projects/festtags-card-editor/"
+  },
+  "/en/projects/festtags-card-editor/": {
+    "DE": "/projects/festtags-card-editor/",
+    "EN": "/en/projects/festtags-card-editor/",
+    "FR": "/fr/projects/festtags-card-editor/"
+  },
+  "/fr/projects/festtags-card-editor/": {
+    "DE": "/projects/festtags-card-editor/",
+    "EN": "/en/projects/festtags-card-editor/",
+    "FR": "/fr/projects/festtags-card-editor/"
+  },
   "/projects/fritzbox-to-mqtt/beispiele": {
     "DE": "/projects/fritzbox-to-mqtt/beispiele",
     "EN": "/en/projects/fritzbox-to-mqtt/examples",

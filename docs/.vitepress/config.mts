@@ -141,6 +141,7 @@ const sourceNavFr = [
 ]
 
 const sidebarDe = {
+  '/projects/festtags-card-editor/': [{text:'Festtags-Card-Editor',items:[{text:'Einrichtung und Chrome-Test',link:'/projects/festtags-card-editor/'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
   '/projects/usb-extender/': [{ text: 'USB Extender', items: [
     { text: 'Überblick und Bilder', link: '/projects/usb-extender/' },
     { text: 'Geräte und Unterstützung', link: '/projects/usb-extender/#hardware' },
@@ -627,6 +628,7 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects/festtags-card-editor/': [{text:'Festtags-Card-Editor',items:[{text:'Setup and Chrome test',link:'/en/projects/festtags-card-editor/'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
   '/en/projects/usb-extender/': [{ text: 'USB Extender', items: [
     { text: 'Overview and screenshots', link: '/en/projects/usb-extender/' },
     { text: 'Devices and support', link: '/en/projects/usb-extender/#hardware' },
@@ -965,6 +967,7 @@ const sidebarEn = {
 }
 
 const sidebarFr = {
+  '/fr/projects/festtags-card-editor/': [{text:'Festtags-Card-Editor',items:[{text:'Installation et test Chrome',link:'/fr/projects/festtags-card-editor/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
   '/fr/projects/usb-extender/': [{ text: 'USB Extender', items: [
     { text: 'Présentation et captures', link: '/fr/projects/usb-extender/' },
     { text: 'Appareils et compatibilité', link: '/fr/projects/usb-extender/#hardware' },

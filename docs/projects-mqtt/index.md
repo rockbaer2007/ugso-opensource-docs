@@ -8,6 +8,7 @@ Die Versionsnennungen unten kennzeichnen frühere dokumentierte Funktionsstände
 
 | Projekt | Dokumentation |
 | --- | --- |
+| [Festtags-Card-Editor](/projects/festtags-card-editor/) | 0.1.12: fünf Weihnachtszeitpläne, Festtagssensoren, eigene Bilder/GIFs und Schneefall mit Pixel-Durchmesser. GIF und 30 animierte Flocken in Chrome bestätigt; Doku DE/EN/FR. |
 | [HA Logic Studio Pro](/projects/logic-studio/#ha-logic-studio-pro) | Gemeinsame Umgebung mit Funktionsplan, Rules, Blocks A, Blocks JS, JavaScript, TypeScript und HA-YAML; Projektverwaltung und Runtime. Logic Studio und Blocks for HA sind die Grundlagen dieser Weiterentwicklung. |
 | <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/projects/logic-studio/) | 0.1.12: Oberfläche DE/EN/FR, gespeicherte Sprachwahl, Tastenkürzel und Bausteinhilfe. Auf dem [Testsystem PC (64)](/sammlung/testsysteme#testsystem-pc) einschließlich App-Neustart geprüft; Plan und Export erhalten. |
 | <img class="package-icon" src="/images/packages/projects-dashboard-user-manager.png" width="32" height="32" alt="" aria-hidden="true"> [Dashboard-Benutzerverwaltung](/projects/dashboard-user-manager/) | 0.1.4: Benutzer als Checkbox-Spalten, Sammel-/Einzelzuordnung, automatische DE/EN/FR-Oberfläche und Dashboard-Sicherung vor dem Speichern. |

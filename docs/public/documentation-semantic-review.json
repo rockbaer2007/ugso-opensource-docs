@@ -1,11 +1,11 @@
 {
   "reviewed_at": "2026-11-20",
-  "scope_pages": 506,
+  "scope_pages": 508,
   "coverage": {
-    "en": 249,
-    "fr": 249
+    "en": 250,
+    "fr": 250
   },
-  "scope": "Current inventory contains 506 EN/FR entries, including the new USB Extender pages. Recorded content/meaning reviews cover only the explicitly listed pages; new unreviewed pages retain their existing technical status.",
+  "scope": "Current inventory: 508 EN/FR entries including Festtags-Card-Editor. Only explicitly listed pages are reviewed; pending pages retain their prior status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
   "pages": [
     {
@@ -373,20 +373,22 @@
       "locale": "en",
       "target": "en/projects-mqtt/index.md",
       "reviewed_at": "2026-11-20",
-      "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases.",
+      "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases. Added Festtags row checked in DE/EN/FR: five schedules, GIF and 30 animated flakes in Chrome, localized link; other rows unchanged.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "2881977d572f16bdf7cfae314a31a3e17c5ab55a06545e5f51aef70f939739ea",
-      "target_sha256": "0427582daeb048a913016a3a7834f5789b4e307e49f5ab5aaeeba0270da7d299"
+      "source_sha256": "e8ee37ab3db0acfbc10a9869173cdcfb5fccb78a1d036e4dce26f63a9b9ea1f3",
+      "target_sha256": "f8516ebfc582bed8690cb9bb7acf537d174294c23573e3eeb92e554dd7f83fa6",
+      "revalidated_at": "2026-11-25"
     },
     {
       "source": "projects-mqtt/index.md",
       "locale": "fr",
       "target": "fr/projects-mqtt/index.md",
       "reviewed_at": "2026-11-20",
-      "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases.",
+      "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases. Added Festtags row checked in DE/EN/FR: five schedules, GIF and 30 animated flakes in Chrome, localized link; other rows unchanged.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "2881977d572f16bdf7cfae314a31a3e17c5ab55a06545e5f51aef70f939739ea",
-      "target_sha256": "6994fa9b855f394f52b6e6397ce01c57787dcd53891eed6624399c589dfb5f78"
+      "source_sha256": "e8ee37ab3db0acfbc10a9869173cdcfb5fccb78a1d036e4dce26f63a9b9ea1f3",
+      "target_sha256": "5d2ead962a849e5bb9bd0d7df549901710c846ad5dfa753957fb4cb7e44ecef9",
+      "revalidated_at": "2026-11-25"
     },
     {
       "source": "projects/atlas-plugins/automation-extractor.md",
@@ -5647,6 +5649,26 @@
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
       "source_sha256": "6b2ffaa6e6093b525751bccbc8acac05b26adb74b2eef505e6d8145983b935b1",
       "target_sha256": "5ed0e4232ea1eb91b272cabfcd200bd610ddacbfaad2d2f491bcbffc5827be40"
+    },
+    {
+      "source": "projects/festtags-card-editor/index.md",
+      "target": "en/projects/festtags-card-editor/index.md",
+      "locale": "en",
+      "reviewed_at": "2026-11-25",
+      "source_sha256": "8ddca1c25a978924a26458c065fa75d6cdec6c8b9b3961abed738b81f3635a37",
+      "target_sha256": "a9433174ca60f1b5761713ee99a498d65b9a0e75788823254063077330705238",
+      "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim.",
+      "method": "Section-by-section comparison with German source and the observed Chrome test."
+    },
+    {
+      "source": "projects/festtags-card-editor/index.md",
+      "target": "fr/projects/festtags-card-editor/index.md",
+      "locale": "fr",
+      "reviewed_at": "2026-11-25",
+      "source_sha256": "8ddca1c25a978924a26458c065fa75d6cdec6c8b9b3961abed738b81f3635a37",
+      "target_sha256": "bd5d3159600e5085ac952cbdfd902b86c12e23daa4e9d82ce8972365604d6bb0",
+      "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim.",
+      "method": "Section-by-section comparison with German source and the observed Chrome test."
     }
   ]
 }

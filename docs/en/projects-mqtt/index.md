@@ -8,6 +8,7 @@ Version numbers below identify earlier documented feature snapshots, not automat
 
 | Project | Documentation |
 | --- | --- |
+| [Festtags-Card-Editor](/en/projects/festtags-card-editor/) | 0.1.12: five Christmas schedules, observance sensors, own images/GIFs and snowfall with pixel diameter. GIF and 30 animated particles confirmed in Chrome; DE/EN/FR docs. |
 | [HA Logic Studio Pro](/en/projects/logic-studio/#ha-logic-studio-pro) | Shared environment with function plans, Rules, Blocks A, Blocks JS, JavaScript, TypeScript and HA-YAML, plus project management and runtime. Logic Studio and Blocks for HA provide the foundations for this development. |
 | <img class="package-icon" src="/images/logic-studio/icon.svg" width="32" height="32" alt="" aria-hidden="true"> [Logic Studio](/en/projects/logic-studio/) | 0.1.12: DE/EN/FR interface, saved language, shortcuts and block help. Tested on the [PC (64) test system](/en/collection/test-systems#testsystem-pc) including app restart; plan and export preserved. |
 | <img class="package-icon" src="/images/packages/projects-dashboard-user-manager.png" width="32" height="32" alt="" aria-hidden="true"> [Dashboard User Manager](/en/projects/dashboard-user-manager/) | 0.1.4: user checkbox columns, bulk/individual assignments, automatic DE/EN/FR interface and dashboard backup before saving. |

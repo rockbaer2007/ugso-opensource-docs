@@ -6,7 +6,7 @@ aside: false
 
 # État des traductions de la documentation
 
-DE / EN / FR · 2026-11-22
+DE / EN / FR · 2026-11-25
 
 Toutes les pages de référence allemandes disposent désormais de contenu en anglais et en français. Les 128 pages provisoires ont été remplacées et les 20 pages françaises manquantes ajoutées.
 
@@ -16,11 +16,11 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 253 | 0 | 0 | 0 |
-| EN | 253 | 0 | 0 | 2 |
-| FR | 253 | 0 | 0 | 0 |
+| DE | 254 | 0 | 0 | 0 |
+| EN | 254 | 0 | 0 | 3 |
+| FR | 254 | 0 | 0 | 1 |
 
-**Comparaison technique du 2026-11-22 :** les évaluations sont liées aux empreintes actuelles des fichiers ; toute modification exige une nouvelle revue. Les lacunes et contradictions sont corrigées, tandis que les différences voulues d’historique et de structure sont justifiées. Le tableau indique les points encore ouverts ; le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Évaluations documentées](/documentation-review.json).
+**Comparaison technique du 2026-11-25 :** les évaluations sont liées aux empreintes actuelles des fichiers ; toute modification exige une nouvelle revue. Les lacunes et contradictions sont corrigées, tandis que les différences voulues d’historique et de structure sont justifiées. Le tableau indique les points encore ouverts ; le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Évaluations documentées](/documentation-review.json).
 
 
 Les ajouts ont été réalisés avec une aide à la traduction et vérifiés techniquement par rapport à la source allemande : code, identifiants, tableaux et images. Quatorze autres lacunes ont été comblées par des références complémentaires, en conservant les pages et liens existants. Il ne s’agit pas d’une certification linguistique complète. Les points à examiner comprennent aussi des résumés volontairement différents et des versions historiques.
@@ -31,7 +31,7 @@ Le rapport JSON complet contient, pour chaque page, les chemins, empreintes SHA-
 
 [UIX DE](/projects/uix/translation-status) · [UIX EN](/en/projects/uix/translation-status) · [UIX FR](/fr/projects/uix/translation-status)
 
-**Comparaison étendue du 20 novembre 2026 : 187 pages EN et 221 pages FR.** Tous les fichiers auparavant marqués uniquement « Contenu présent » ont été comparés intégralement à leur référence sur le plan technique : versions, blocs de code, identifiants et liens. Les différences ont été classées individuellement ; la détection automatique de langue a été suivie de la correction des passages anglais trouvés dans les pages françaises. **« Comparaison technique effectuée » ne constitue pas une validation linguistique complète ni une vérification du contenu phrase par phrase.** « Différence examinée » conserve l’évaluation structurelle antérieure. « À revérifier » apparaît dès qu’un des fichiers change. [Périmètre et évaluations](/documentation-content-review.json).
+**Comparaison étendue du 20 novembre 2026 : 186 pages EN et 220 pages FR.** Tous les fichiers auparavant marqués uniquement « Contenu présent » ont été comparés intégralement à leur référence sur le plan technique : versions, blocs de code, identifiants et liens. Les différences ont été classées individuellement ; la détection automatique de langue a été suivie de la correction des passages anglais trouvés dans les pages françaises. **« Comparaison technique effectuée » ne constitue pas une validation linguistique complète ni une vérification du contenu phrase par phrase.** « Différence examinée » conserve l’évaluation structurelle antérieure. « À revérifier » apparaît dès qu’un des fichiers change. [Périmètre et évaluations](/documentation-content-review.json).
 
 Corrections : passages anglais dans les concepts, macros, thèmes et arrière-plans caméra UIX français, erreur de syntaxe JavaScript dans l’exemple développeur, sept liens d’ancrage et deux liens vidéo. La règle de repli active:false du spark Lock est précisée en DE/FR. Les exemples, médias et ancres existants sont conservés.
 
@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 249 | 4 |
-| FR | 249 | 4 |
+| EN | 248 | 6 |
+| FR | 248 | 6 |
 
 ## Inventaire complet des pages
 
@@ -66,7 +66,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Contenu vérifié](/en/iobroker/publish-assistant/) | [Contenu vérifié](/fr/iobroker/publish-assistant/) |
 | [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Contenu vérifié](/en/iobroker/widgets/ugso-spezial/) | [Contenu vérifié](/fr/iobroker/widgets/ugso-spezial/) |
 | [projects-diverse/index.md](/projects-diverse/) | [Contenu vérifié](/en/projects-diverse/) | [Contenu vérifié](/fr/projects-diverse/) |
-| [projects-mqtt/index.md](/projects-mqtt/) | [Contenu vérifié](/en/projects-mqtt/) | [Contenu vérifié](/fr/projects-mqtt/) |
+| [projects-mqtt/index.md](/projects-mqtt/) | [À revérifier](/en/projects-mqtt/) | [À revérifier](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Contenu vérifié](/en/projects/atlas-plugins/automation-extractor) | [Contenu vérifié](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Contenu vérifié](/en/projects/atlas-plugins/demo-repository) | [Contenu vérifié](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Contenu vérifié](/en/projects/atlas-plugins/developers/compatibility) | [Contenu vérifié](/fr/projects/atlas-plugins/developers/compatibility) |
@@ -111,6 +111,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Contenu vérifié](/en/projects/callmebot-signal/) | [Contenu vérifié](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Contenu vérifié](/en/projects/callmebot/) | [Contenu vérifié](/fr/projects/callmebot/) |
 | [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Contenu vérifié](/en/projects/dashboard-user-manager/) | [Contenu vérifié](/fr/projects/dashboard-user-manager/) |
+| [projects/festtags-card-editor/index.md](/projects/festtags-card-editor/) | [Contenu présent](/en/projects/festtags-card-editor/) | [Contenu présent](/fr/projects/festtags-card-editor/) |
 | [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/examples) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/examples) |
 | [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/entities) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/entities) |
 | [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Contenu vérifié](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Contenu vérifié](/fr/projects/fritzbox-to-mqtt/troubleshooting) |

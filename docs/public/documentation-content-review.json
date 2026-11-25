@@ -1,8 +1,8 @@
 {
   "reviewed_at": "2026-11-20",
   "coverage": {
-    "en": 187,
-    "fr": 221
+    "en": 188,
+    "fr": 222
   },
   "scope": "408 locale files previously displayed only as Content present. Full-file structural/technical comparison: versions, fenced examples, inline identifiers and Markdown external reference differences; manual triage of all reported differences; local page/image resolution and targeted prose language screening. Built HTML references, anchors, images and downloads are checked by check-content-review.py --built.",
   "limitations": [
@@ -677,8 +677,8 @@
       "target": "en/projects-mqtt/index.md",
       "locale": "en",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "2881977d572f16bdf7cfae314a31a3e17c5ab55a06545e5f51aef70f939739ea",
-      "target_sha256": "0427582daeb048a913016a3a7834f5789b4e307e49f5ab5aaeeba0270da7d299",
+      "source_sha256": "e8ee37ab3db0acfbc10a9869173cdcfb5fccb78a1d036e4dce26f63a9b9ea1f3",
+      "target_sha256": "f8516ebfc582bed8690cb9bb7acf537d174294c23573e3eeb92e554dd7f83fa6",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -688,16 +688,16 @@
       },
       "difference_assessment": [],
       "corrections": null,
-      "revalidated_at": "2026-11-20",
-      "revalidation_note": "Revalidated during the complete prose/content comparison; see documentation-semantic-review.json for the per-page assessment."
+      "revalidated_at": "2026-11-25",
+      "revalidation_note": "Added Festtags row checked in DE/EN/FR: five schedules, GIF and 30 animated flakes in Chrome, localized link; other rows unchanged."
     },
     {
       "source": "projects-mqtt/index.md",
       "target": "fr/projects-mqtt/index.md",
       "locale": "fr",
       "reviewed_at": "2026-11-20",
-      "source_sha256": "2881977d572f16bdf7cfae314a31a3e17c5ab55a06545e5f51aef70f939739ea",
-      "target_sha256": "6994fa9b855f394f52b6e6397ce01c57787dcd53891eed6624399c589dfb5f78",
+      "source_sha256": "e8ee37ab3db0acfbc10a9869173cdcfb5fccb78a1d036e4dce26f63a9b9ea1f3",
+      "target_sha256": "5d2ead962a849e5bb9bd0d7df549901710c846ad5dfa753957fb4cb7e44ecef9",
       "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
       "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review.",
       "differences": {
@@ -707,8 +707,8 @@
       },
       "difference_assessment": [],
       "corrections": null,
-      "revalidated_at": "2026-11-20",
-      "revalidation_note": "Revalidated during the complete prose/content comparison; see documentation-semantic-review.json for the per-page assessment."
+      "revalidated_at": "2026-11-25",
+      "revalidation_note": "Added Festtags row checked in DE/EN/FR: five schedules, GIF and 30 animated flakes in Chrome, localized link; other rows unchanged."
     },
     {
       "source": "projects/atlas-plugins/automation-extractor.md",
@@ -7568,6 +7568,44 @@
         "nonidentical_source_code_blocks": 0
       },
       "difference_assessment": [],
+      "corrections": null
+    },
+    {
+      "source": "projects/festtags-card-editor/index.md",
+      "target": "en/projects/festtags-card-editor/index.md",
+      "locale": "en",
+      "reviewed_at": "2026-11-25",
+      "source_sha256": "8ddca1c25a978924a26458c065fa75d6cdec6c8b9b3961abed738b81f3635a37",
+      "target_sha256": "a9433174ca60f1b5761713ee99a498d65b9a0e75788823254063077330705238",
+      "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim.",
+      "language_scope": "Manual comparison of newly authored DE/EN/FR pages and identifiers; not formal linguistic certification.",
+      "differences": {
+        "missing_inline": [],
+        "missing_external": [],
+        "nonidentical_source_code_blocks": 1
+      },
+      "difference_assessment": [
+        "Only the example card title is localized; YAML type and structure are unchanged."
+      ],
+      "corrections": null
+    },
+    {
+      "source": "projects/festtags-card-editor/index.md",
+      "target": "fr/projects/festtags-card-editor/index.md",
+      "locale": "fr",
+      "reviewed_at": "2026-11-25",
+      "source_sha256": "8ddca1c25a978924a26458c065fa75d6cdec6c8b9b3961abed738b81f3635a37",
+      "target_sha256": "bd5d3159600e5085ac952cbdfd902b86c12e23daa4e9d82ce8972365604d6bb0",
+      "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim.",
+      "language_scope": "Manual comparison of newly authored DE/EN/FR pages and identifiers; not formal linguistic certification.",
+      "differences": {
+        "missing_inline": [],
+        "missing_external": [],
+        "nonidentical_source_code_blocks": 1
+      },
+      "difference_assessment": [
+        "Only the example card title is localized; YAML type and structure are unchanged."
+      ],
       "corrections": null
     }
   ]

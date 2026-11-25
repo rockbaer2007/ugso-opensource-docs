@@ -6,7 +6,7 @@ aside: false
 
 # Documentation language status
 
-DE / EN / FR · 2026-11-22
+DE / EN / FR · 2026-11-25
 
 All German reference pages now have English and French content. The 128 placeholder pages have been replaced and the 20 missing French pages added.
 
@@ -16,11 +16,11 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 253 | 0 | 0 | 0 |
-| EN | 253 | 0 | 0 | 2 |
-| FR | 253 | 0 | 0 | 0 |
+| DE | 254 | 0 | 0 | 0 |
+| EN | 254 | 0 | 0 | 3 |
+| FR | 254 | 0 | 0 | 1 |
 
-**Technical comparison of 2026-11-22:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
+**Technical comparison of 2026-11-25:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
 
 
 The additions were created with translation assistance and checked technically against the German source: code, identifiers, tables and images. Fourteen further content gaps were filled with supplementary references while preserving existing pages and links. This is not a complete linguistic certification. Remaining review signals also include intentionally different summaries and historical version mentions.
@@ -31,7 +31,7 @@ The complete JSON report records paths, SHA-256 hashes, version differences, str
 
 [UIX DE](/projects/uix/translation-status) · [UIX EN](/en/projects/uix/translation-status) · [UIX FR](/fr/projects/uix/translation-status)
 
-**Extended comparison of 2026-11-20: 187 EN and 221 FR pages.** Every file previously labelled only “Content present” was technically compared in full against its reference: versions, code blocks, technical identifiers and links. Differences were individually classified; automatic language screening was followed by corrections to the English prose found in French pages. **“Technically compared” is not a full linguistic or sentence-by-sentence content approval.** “Difference reviewed” retains the earlier structural assessment. “Recheck required” appears when either file changes. [Scope and individual assessments](/documentation-content-review.json).
+**Extended comparison of 2026-11-20: 186 EN and 220 FR pages.** Every file previously labelled only “Content present” was technically compared in full against its reference: versions, code blocks, technical identifiers and links. Differences were individually classified; automatic language screening was followed by corrections to the English prose found in French pages. **“Technically compared” is not a full linguistic or sentence-by-sentence content approval.** “Difference reviewed” retains the earlier structural assessment. “Recheck required” appears when either file changes. [Scope and individual assessments](/documentation-content-review.json).
 
 Corrections include English prose left in French UIX concepts, macros, themes and camera backgrounds, a JavaScript syntax error in the developer example, seven anchor links and two video links. The Lock Spark active:false fallback is clarified in DE/FR. Examples, media and existing anchors are preserved.
 
@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 249 | 4 |
-| FR | 249 | 4 |
+| EN | 248 | 6 |
+| FR | 248 | 6 |
 
 ## Complete page inventory
 
@@ -66,7 +66,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Content reviewed](/en/iobroker/publish-assistant/) | [Content reviewed](/fr/iobroker/publish-assistant/) |
 | [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Content reviewed](/en/iobroker/widgets/ugso-spezial/) | [Content reviewed](/fr/iobroker/widgets/ugso-spezial/) |
 | [projects-diverse/index.md](/projects-diverse/) | [Content reviewed](/en/projects-diverse/) | [Content reviewed](/fr/projects-diverse/) |
-| [projects-mqtt/index.md](/projects-mqtt/) | [Content reviewed](/en/projects-mqtt/) | [Content reviewed](/fr/projects-mqtt/) |
+| [projects-mqtt/index.md](/projects-mqtt/) | [Recheck required](/en/projects-mqtt/) | [Recheck required](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Content reviewed](/en/projects/atlas-plugins/automation-extractor) | [Content reviewed](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Content reviewed](/en/projects/atlas-plugins/demo-repository) | [Content reviewed](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Content reviewed](/en/projects/atlas-plugins/developers/compatibility) | [Content reviewed](/fr/projects/atlas-plugins/developers/compatibility) |
@@ -111,6 +111,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Content reviewed](/en/projects/callmebot-signal/) | [Content reviewed](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Content reviewed](/en/projects/callmebot/) | [Content reviewed](/fr/projects/callmebot/) |
 | [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Content reviewed](/en/projects/dashboard-user-manager/) | [Content reviewed](/fr/projects/dashboard-user-manager/) |
+| [projects/festtags-card-editor/index.md](/projects/festtags-card-editor/) | [Content present](/en/projects/festtags-card-editor/) | [Content present](/fr/projects/festtags-card-editor/) |
 | [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Content reviewed](/en/projects/fritzbox-to-mqtt/examples) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/examples) |
 | [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Content reviewed](/en/projects/fritzbox-to-mqtt/entities) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/entities) |
 | [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Content reviewed](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Content reviewed](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
