@@ -20,9 +20,9 @@
       "unmatched_pages": 0,
       "review_signals": 67,
       "reviewed_findings": 74,
-      "technically_compared": 186,
-      "content_reviewed": 248,
-      "open_review_signals": 3
+      "technically_compared": 188,
+      "content_reviewed": 250,
+      "open_review_signals": 2
     },
     "fr": {
       "content-present": 254,
@@ -30,9 +30,9 @@
       "unmatched_pages": 0,
       "review_signals": 30,
       "reviewed_findings": 47,
-      "technically_compared": 220,
-      "content_reviewed": 248,
-      "open_review_signals": 1
+      "technically_compared": 222,
+      "content_reviewed": 250,
+      "open_review_signals": 0
     }
   },
   "unmatched_pages": {
@@ -1454,15 +1454,15 @@
             "fewer_headings": false
           },
           "content_review": {
-            "status": "needs-recheck",
+            "status": "technically-compared",
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
-            "status": "needs-recheck",
+            "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases."
+            "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases. Added Festtags row checked in DE/EN/FR: five schedules, GIF and 30 animated flakes in Chrome, localized link; other rows unchanged."
           }
         },
         "fr": {
@@ -1491,15 +1491,15 @@
             "fewer_headings": false
           },
           "content_review": {
-            "status": "needs-recheck",
+            "status": "technically-compared",
             "reviewed_at": "2026-11-20",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
-            "status": "needs-recheck",
+            "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
-            "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases."
+            "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases. Added Festtags row checked in DE/EN/FR: five schedules, GIF and 30 animated flakes in Chrome, localized link; other rows unchanged."
           }
         }
       }
@@ -5678,6 +5678,17 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "content_review": {
+            "status": "technically-compared",
+            "reviewed_at": "2026-11-25",
+            "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim.",
+            "language_scope": "Manual comparison of newly authored DE/EN/FR pages and identifiers; not formal linguistic certification."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-25",
+            "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim."
           }
         },
         "fr": {
@@ -5698,6 +5709,17 @@
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": false
+          },
+          "content_review": {
+            "status": "technically-compared",
+            "reviewed_at": "2026-11-25",
+            "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim.",
+            "language_scope": "Manual comparison of newly authored DE/EN/FR pages and identifiers; not formal linguistic certification."
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-25",
+            "assessment": "Compared restart/resource steps, five targets, calendar limits, own-file rights and paths, upload limits, live icons, transparency/position, 1-20 CSS pixel diameter, explicit reduced-motion override, visibility pause and confirmed Chrome GIF/30-particle test. UI DE/EN distinguished from documentation DE/EN/FR. No general tablet-performance claim."
           }
         }
       }

@@ -17,8 +17,8 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
 | DE | 254 | 0 | 0 | 0 |
-| EN | 254 | 0 | 0 | 3 |
-| FR | 254 | 0 | 0 | 1 |
+| EN | 254 | 0 | 0 | 2 |
+| FR | 254 | 0 | 0 | 0 |
 
 **Technischer Abgleich vom 2026-11-25:** Vorhandene Einzelbewertungen sind an die aktuellen Datei-Prüfsummen gebunden; Änderungen erfordern eine erneute Prüfung. Echte Lücken und widersprüchliche Angaben werden korrigiert, bewusst unterschiedliche Versionshistorien und redaktionelle Gliederungen mit Begründung eingeordnet. Die Tabelle zeigt die noch offenen Hinweise; der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Dokumentierte Einzelbewertungen](/documentation-review.json).
 
@@ -31,7 +31,7 @@ Der vollständige JSON-Bericht enthält für jede Seite die Pfade, SHA-256-Prüf
 
 [UIX DE](/projects/uix/translation-status) · [UIX EN](/en/projects/uix/translation-status) · [UIX FR](/fr/projects/uix/translation-status)
 
-**Erweiterter Abgleich vom 20.11.2026: 186 EN- und 220 FR-Seiten.** Alle zuvor nur als „Inhalt vorhanden“ ausgewiesenen Dateien wurden vollständig technisch mit ihrer Referenz verglichen: Versionen, Codeblöcke, technische Bezeichner und Verweise. Abweichungen wurden einzeln eingeordnet; eine automatische Sprachsuche wurde durch die Korrektur der gefundenen englischen Textreste ergänzt. **„Technisch abgeglichen“ ist keine vollständige sprachliche oder satzweise Inhaltsfreigabe.** „Unterschied geprüft“ bleibt die frühere Bewertung struktureller Abweichungen. „Erneut prüfen“ erscheint, sobald sich eine der beiden Dateien ändert. [Prüfumfang und Einzelbewertungen](/documentation-content-review.json).
+**Erweiterter Abgleich vom 20.11.2026: 188 EN- und 222 FR-Seiten.** Alle zuvor nur als „Inhalt vorhanden“ ausgewiesenen Dateien wurden vollständig technisch mit ihrer Referenz verglichen: Versionen, Codeblöcke, technische Bezeichner und Verweise. Abweichungen wurden einzeln eingeordnet; eine automatische Sprachsuche wurde durch die Korrektur der gefundenen englischen Textreste ergänzt. **„Technisch abgeglichen“ ist keine vollständige sprachliche oder satzweise Inhaltsfreigabe.** „Unterschied geprüft“ bleibt die frühere Bewertung struktureller Abweichungen. „Erneut prüfen“ erscheint, sobald sich eine der beiden Dateien ändert. [Prüfumfang und Einzelbewertungen](/documentation-content-review.json).
 
 Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und Kamera-Hintergründen, ein JavaScript-Syntaxfehler im Entwicklerbeispiel sowie sieben Sprungmarken und zwei Videolinks. Die Rückfallregel für `active: false` beim Lock Spark ist in DE/FR präzisiert. Beispiele, Medien und vorhandene Anker bleiben erhalten.
 
@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 248 | 6 |
-| FR | 248 | 6 |
+| EN | 250 | 4 |
+| FR | 250 | 4 |
 
 ## Vollständiges Seiteninventar
 
@@ -66,7 +66,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [iobroker/publish-assistant/index.md](/iobroker/publish-assistant/) | [Inhaltlich geprüft](/en/iobroker/publish-assistant/) | [Inhaltlich geprüft](/fr/iobroker/publish-assistant/) |
 | [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Inhaltlich geprüft](/en/iobroker/widgets/ugso-spezial/) | [Inhaltlich geprüft](/fr/iobroker/widgets/ugso-spezial/) |
 | [projects-diverse/index.md](/projects-diverse/) | [Inhaltlich geprüft](/en/projects-diverse/) | [Inhaltlich geprüft](/fr/projects-diverse/) |
-| [projects-mqtt/index.md](/projects-mqtt/) | [Erneut prüfen](/en/projects-mqtt/) | [Erneut prüfen](/fr/projects-mqtt/) |
+| [projects-mqtt/index.md](/projects-mqtt/) | [Inhaltlich geprüft](/en/projects-mqtt/) | [Inhaltlich geprüft](/fr/projects-mqtt/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Inhaltlich geprüft](/en/projects/atlas-plugins/automation-extractor) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Inhaltlich geprüft](/en/projects/atlas-plugins/demo-repository) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Inhaltlich geprüft](/en/projects/atlas-plugins/developers/compatibility) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/developers/compatibility) |
@@ -111,7 +111,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/callmebot-signal/index.md](/projects/callmebot-signal/) | [Inhaltlich geprüft](/en/projects/callmebot-signal/) | [Inhaltlich geprüft](/fr/projects/callmebot-signal/) |
 | [projects/callmebot/index.md](/projects/callmebot/) | [Inhaltlich geprüft](/en/projects/callmebot/) | [Inhaltlich geprüft](/fr/projects/callmebot/) |
 | [projects/dashboard-user-manager/index.md](/projects/dashboard-user-manager/) | [Inhaltlich geprüft](/en/projects/dashboard-user-manager/) | [Inhaltlich geprüft](/fr/projects/dashboard-user-manager/) |
-| [projects/festtags-card-editor/index.md](/projects/festtags-card-editor/) | [Inhalt vorhanden](/en/projects/festtags-card-editor/) | [Inhalt vorhanden](/fr/projects/festtags-card-editor/) |
+| [projects/festtags-card-editor/index.md](/projects/festtags-card-editor/) | [Inhaltlich geprüft](/en/projects/festtags-card-editor/) | [Inhaltlich geprüft](/fr/projects/festtags-card-editor/) |
 | [projects/fritzbox-to-mqtt/beispiele.md](/projects/fritzbox-to-mqtt/beispiele) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/examples) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/examples) |
 | [projects/fritzbox-to-mqtt/entitaeten.md](/projects/fritzbox-to-mqtt/entitaeten) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/entities) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/entities) |
 | [projects/fritzbox-to-mqtt/fehlersuche.md](/projects/fritzbox-to-mqtt/fehlersuche) | [Inhaltlich geprüft](/en/projects/fritzbox-to-mqtt/troubleshooting) | [Inhaltlich geprüft](/fr/projects/fritzbox-to-mqtt/troubleshooting) |
