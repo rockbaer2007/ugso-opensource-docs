@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.98 · Runtime log retention
+description: HA Logic Studio Pro 0.1.132 · HA-style entity selection and separate READ/WRITE/EVENT/TOPICS permissions.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,27 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.132 · Four separate runtime permissions {#runtime-alle-freigaben}
+
+Under **Settings → Apps → HA Logic Studio Pro → Configuration**, there is a separate “All” checkbox for **READ**, **WRITE**, **EVENT** and **TOPICS**. Labels are available in DE/EN/FR.
+
+| Checkbox | Associated list | Effect when on |
+| --- | --- | --- |
+| `runtime_read_all` · READ | `runtime_read_entities` | Read all valid HA entity IDs, including new entities. |
+| `runtime_write_all` · WRITE | `runtime_write_entities` | Allow all target IDs for supported runtime actions. |
+| `runtime_events_all` · EVENT | `runtime_events` | Allow all supported event types; the script still subscribes to specific names. |
+| `runtime_mqtt_all` · TOPICS | `runtime_mqtt_topics` | Allow publishing to all concrete MQTT topics. |
+
+All checkboxes are **off** by default. When **on**, only the associated list is ignored; its entries stay stored and apply again when switched **off**. The standard HA form still lets you edit these lists and does not automatically grey them out. READ, WRITE, EVENT and TOPICS are configured independently.
+
+For a sensor reporting “HA input not allowed”, enabling **READ** is sufficient. After saving, restart the affected project and, if necessary, the app. WRITE alone does not enable general read access. ID/action validation, concrete MQTT topics without `+`/`#` and the existing `logic_studio_*` restriction for sent events remain in place.
+
+**Since 0.1.131:** All seven editors and import mappings share one HA-style entity picker: search as you type, icon, name, area/device, ID, state, keyboard navigation and more results. Attributes, output modes, multiple selections and expandable manual entry remain available.
+
+**Local verification:** 41 Node tests and ten server tests, including independent permissions, preserved lists, new entities and reconnection. The entity picker was checked with artificial data in all seven editors in an isolated browser. No real device actions; a live HA test is still pending.
+
+[HA Logic Studio Pro 0.1.132 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.132)
 
 **0.1.130 · Preserve ioBroker adapter restart when importing**
 
@@ -564,11 +585,16 @@ On 12 November 2026, all three triggers were tested directly in Home Assistant o
 Under **Settings → Apps → HA Logic Studio Pro → Configuration**, add the required entries, save and restart the app. The lists start empty. Example for a dedicated test helper:
 
 ```yaml
+runtime_read_all: false
 runtime_read_entities: []
+runtime_write_all: false
 runtime_write_entities:
   - input_boolean.logic_studio_runtime_test
+runtime_events_all: false
 runtime_events:
   - logic_studio_runtime_test
+runtime_mqtt_all: false
+runtime_mqtt_topics: []
 ```
 
 Write access also allows reads. `ha.readState` and `ha.readAttribute` return the latest values confirmed by HA. `ha.onState`, `ha.onAttribute` and `ha.onEvent` respond to authorized changes and events. `ha.callAction` supports switching, setting number, text and select helpers, and pressing buttons on a single authorized target. `ha.schedule` handles time patterns and fixed times with optional weekdays in the HA time zone.

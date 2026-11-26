@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.98 · Aufbewahrung der Runtime-Protokolle
+description: HA Logic Studio Pro 0.1.132 · HA-typische Entitätenauswahl und getrennte READ-/WRITE-/EVENT-/TOPICS-Freigaben.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,27 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.132 · Vier getrennte Runtime-Freigaben {#runtime-alle-freigaben}
+
+In **Einstellungen → Apps → HA Logic Studio Pro → Konfiguration** gibt es je eine separate „Alle“-Checkbox für **READ**, **WRITE**, **EVENT** und **TOPICS**. Die Beschriftungen stehen in DE/EN/FR bereit.
+
+| Checkbox | Zugehörige Liste | Wirkung bei Ein |
+| --- | --- | --- |
+| `runtime_read_all` · READ | `runtime_read_entities` | Alle gültigen HA-Entitäts-IDs lesen, einschließlich neuer Entitäten. |
+| `runtime_write_all` · WRITE | `runtime_write_entities` | Alle Ziel-IDs für die unterstützten Runtime-Aktionen erlauben. |
+| `runtime_events_all` · EVENT | `runtime_events` | Alle unterstützten Ereignistypen erlauben; das Skript abonniert weiterhin konkrete Namen. |
+| `runtime_mqtt_all` · TOPICS | `runtime_mqtt_topics` | Publizieren auf allen konkreten MQTT-Topics erlauben. |
+
+Alle Checkboxen sind standardmäßig **aus**. Bei **Ein** wird nur die zugehörige Liste ignoriert; ihre Einträge bleiben gespeichert und gelten nach **Aus** wieder. Die HA-Standardmaske lässt diese Listen weiterhin bearbeiten und schaltet sie nicht automatisch grau. READ, WRITE, EVENT und TOPICS werden unabhängig voneinander eingestellt.
+
+Für einen Sensor mit „HA-Eingang nicht freigegeben“ genügt **READ**. Nach dem Speichern das betroffene Projekt neu starten, bei Bedarf die App neu starten. WRITE allein aktiviert keine allgemeine Lesefreigabe. ID-/Aktionsprüfung, MQTT ohne Platzhalter `+`/`#` und die bisherige Begrenzung gesendeter Ereignisse auf `logic_studio_*` bleiben erhalten.
+
+**Seit 0.1.131:** Alle sieben Editoren und Importzuordnungen verwenden dieselbe HA-typische Entitätenauswahl: Sofortsuche, Symbol, Name, Bereich/Gerät, ID, Zustand, Tastaturbedienung und weitere Treffer. Attributauswahl, Ausgangsmodus, Mehrfachlisten und aufklappbare manuelle Eingabe bleiben verfügbar.
+
+**Lokal geprüft:** 41 Node- und zehn Serverprüfungen, darunter unabhängige Freigaben, gespeicherte Listen, neue Entitäten und Wiederverbindung. Die Entitätenauswahl wurde mit künstlichen Daten in allen sieben Editoren im isolierten Browser geprüft. Keine echten Geräteaktionen; ein Live-Test auf HA steht noch aus.
+
+[HA Logic Studio Pro 0.1.132 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.132)
 
 **0.1.130 · ioBroker-Adapterneustart beim Import erhalten**
 
@@ -564,11 +585,16 @@ Am 12. November 2026 wurden alle drei Auslöser direkt in Home Assistant auf dem
 In **Einstellungen → Apps → HA Logic Studio Pro → Konfiguration** die benötigten Einträge setzen, speichern und die App neu starten. Die Listen sind anfangs leer. Beispiel für einen eigens angelegten Testhelfer:
 
 ```yaml
+runtime_read_all: false
 runtime_read_entities: []
+runtime_write_all: false
 runtime_write_entities:
   - input_boolean.logic_studio_runtime_test
+runtime_events_all: false
 runtime_events:
   - logic_studio_runtime_test
+runtime_mqtt_all: false
+runtime_mqtt_topics: []
 ```
 
 Eine Schreibfreigabe erlaubt auch das Lesen. `ha.readState` und `ha.readAttribute` liefern die zuletzt von HA bestätigten Werte. `ha.onState`, `ha.onAttribute` und `ha.onEvent` reagieren auf freigegebene Änderungen und Ereignisse. `ha.callAction` unterstützt Schaltaktionen, Werte für Zahlen-, Text- und Auswahlhelfer sowie Taster mit genau einem freigegebenen Ziel. `ha.schedule` verarbeitet Zeitmuster und feste Uhrzeiten mit optionalen Wochentagen in der HA-Zeitzone.

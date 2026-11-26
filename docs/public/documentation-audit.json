@@ -9539,9 +9539,9 @@
         "de": {
           "path": "projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "d8578c0ffaa3079c78ae02067f086b0b7080d8ddd2481e06ed512024965dd288",
-          "words": 10183,
-          "headings": 15,
+          "sha256": "3cac190ff88188419bf56359e1f864389977f51e9189d9f53e844c4acc74d60f",
+          "words": 10466,
+          "headings": 16,
           "examples": 2,
           "versions": [
             "0.1.1",
@@ -9577,6 +9577,8 @@
             "0.1.128",
             "0.1.129",
             "0.1.130",
+            "0.1.131",
+            "0.1.132",
             "0.1.140",
             "0.1.20",
             "0.1.21",
@@ -9638,9 +9640,9 @@
         "en": {
           "path": "en/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "0ecf5ba43301e6c31f9c1fa50473d035c570b8a7db1154f27ba74ec35fdb9635",
-          "words": 10768,
-          "headings": 15,
+          "sha256": "b256f7d6d85988ba86b4c80311c6d9c9403febbd404e148463b27e2909db9098",
+          "words": 11070,
+          "headings": 16,
           "examples": 2,
           "versions": [
             "0.1.1",
@@ -9676,6 +9678,8 @@
             "0.1.128",
             "0.1.129",
             "0.1.130",
+            "0.1.131",
+            "0.1.132",
             "0.1.140",
             "0.1.20",
             "0.1.21",
@@ -9742,7 +9746,7 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-26",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           }
@@ -9750,9 +9754,9 @@
         "fr": {
           "path": "fr/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "8b2248a8f85a8539f4f5a97818a4f4716421f49a9e705758d2b03032b81db0ac",
-          "words": 12292,
-          "headings": 15,
+          "sha256": "8dfd8dd45fd120fb1c6be88cdc0a897b4b37d3231b8e6990028007c7e59cfc17",
+          "words": 12633,
+          "headings": 16,
           "examples": 2,
           "versions": [
             "0.1.1",
@@ -9788,6 +9792,8 @@
             "0.1.128",
             "0.1.129",
             "0.1.130",
+            "0.1.131",
+            "0.1.132",
             "0.1.140",
             "0.1.20",
             "0.1.21",
@@ -9854,7 +9860,7 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-26",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           }

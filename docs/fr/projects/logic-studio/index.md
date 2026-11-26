@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.98 · Conservation des journaux d’exécution
+description: HA Logic Studio Pro 0.1.132 · Sélecteur d’entités de style HA et autorisations READ/WRITE/EVENT/TOPICS séparées.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,27 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.132 · Quatre autorisations runtime séparées {#runtime-alle-freigaben}
+
+Dans **Paramètres → Applications → HA Logic Studio Pro → Configuration**, une case « Tous » distincte est disponible pour **READ**, **WRITE**, **EVENT** et **TOPICS**. Les libellés sont disponibles en DE/EN/FR.
+
+| Case | Liste associée | Effet si activée |
+| --- | --- | --- |
+| `runtime_read_all` · READ | `runtime_read_entities` | Lire tous les ID d’entités HA valides, y compris les nouvelles entités. |
+| `runtime_write_all` · WRITE | `runtime_write_entities` | Autoriser toutes les cibles pour les actions runtime prises en charge. |
+| `runtime_events_all` · EVENT | `runtime_events` | Autoriser tous les types d’événements pris en charge ; le script s’abonne toujours à des noms précis. |
+| `runtime_mqtt_all` · TOPICS | `runtime_mqtt_topics` | Autoriser la publication sur tous les sujets MQTT concrets. |
+
+Toutes les cases sont **désactivées** par défaut. Si une case est **activée**, seule la liste associée est ignorée ; ses entrées restent enregistrées et s’appliquent à nouveau après **désactivation**. Le formulaire HA standard permet toujours de modifier ces listes et ne les grise pas automatiquement. READ, WRITE, EVENT et TOPICS sont configurés indépendamment.
+
+Pour un capteur signalant un accès en lecture non autorisé, **READ** suffit. Après l’enregistrement, redémarrer le projet concerné et, si nécessaire, l’application. WRITE seul n’active pas la lecture générale. La validation des ID/actions, les sujets MQTT sans `+`/`#` et la restriction existante `logic_studio_*` pour les événements envoyés restent en place.
+
+**Depuis 0.1.131 :** Les sept éditeurs et les associations à l’import partagent le même sélecteur d’entités de style HA : recherche pendant la saisie, icône, nom, zone/appareil, ID, état, clavier et résultats supplémentaires. Les attributs, modes de sortie, sélections multiples et la saisie manuelle dépliable restent disponibles.
+
+**Vérification locale :** 41 tests Node et dix tests serveur, dont les autorisations indépendantes, les listes conservées, les nouvelles entités et la reconnexion. Le sélecteur a été vérifié avec des données artificielles dans les sept éditeurs dans un navigateur isolé. Aucune action réelle sur les appareils ; un test HA réel reste à effectuer.
+
+[HA Logic Studio Pro 0.1.132 · GitHub / ZIP](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.132)
 
 **0.1.130 · Conservation du redémarrage de l’adaptateur ioBroker à l’import**
 
@@ -566,11 +587,16 @@ Le 12 novembre 2026, les trois déclencheurs ont été testés directement dans 
 Dans **Paramètres → Applications → HA Logic Studio Pro → Configuration**, ajouter les entrées nécessaires, enregistrer puis redémarrer l’application. Les listes sont vides par défaut. Exemple avec une entrée booléenne dédiée au test :
 
 ```yaml
+runtime_read_all: false
 runtime_read_entities: []
+runtime_write_all: false
 runtime_write_entities:
   - input_boolean.logic_studio_runtime_test
+runtime_events_all: false
 runtime_events:
   - logic_studio_runtime_test
+runtime_mqtt_all: false
+runtime_mqtt_topics: []
 ```
 
 L’autorisation d’écriture inclut la lecture. `ha.readState` et `ha.readAttribute` renvoient les dernières valeurs confirmées par HA. `ha.onState`, `ha.onAttribute` et `ha.onEvent` réagissent aux changements et événements autorisés. `ha.callAction` permet la commutation, la modification des entrées numériques, textuelles ou de sélection et l’appui sur des boutons pour une cible autorisée. `ha.schedule` accepte des motifs horaires et des heures fixes, avec des jours de la semaine facultatifs, dans le fuseau horaire de HA.
