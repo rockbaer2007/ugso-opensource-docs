@@ -1,13 +1,33 @@
 {
   "reviewed_at": "2026-11-20",
-  "scope_pages": 508,
+  "scope_pages": 510,
   "coverage": {
-    "en": 250,
-    "fr": 250
+    "en": 251,
+    "fr": 251
   },
-  "scope": "Current inventory: 508 EN/FR entries including Festtags-Card-Editor. Only explicitly listed pages are reviewed; pending pages retain their prior status.",
+  "scope": "Current inventory: 510 EN/FR entries including 3D Printer Card. Only explicitly listed pages are reviewed; pending pages retain their prior status.",
   "limitations": "Reference-based editorial content review, not legal certification, a new upstream-release audit or an application runtime test.",
   "pages": [
+    {
+      "source": "projects/3d-printer-card/index.md",
+      "locale": "en",
+      "target": "en/projects/3d-printer-card/index.md",
+      "reviewed_at": "2026-11-27",
+      "assessment": "Klipper/Moonraker prerequisite, custom HACS installation and resource paths, profile save sequence, German editor labels, charts, camera, cancellation confirmation and limited real-printer test scope match the German source.",
+      "method": "Compared all sections and technical identifiers against the German source and the released 0.1.6 package.",
+      "source_sha256": "46aa62bdcbfc7f413dca82bd0baac5a55663deed970c406e2ab43260be9581cc",
+      "target_sha256": "b0565b5f444cb13e9aa1fdc776826d9b0f2713f9f97bfd83072c75e728cee627"
+    },
+    {
+      "source": "projects/3d-printer-card/index.md",
+      "locale": "fr",
+      "target": "fr/projects/3d-printer-card/index.md",
+      "reviewed_at": "2026-11-27",
+      "assessment": "Klipper/Moonraker prerequisite, custom HACS installation and resource paths, profile save sequence, German editor labels, charts, camera, cancellation confirmation and limited real-printer test scope match the German source.",
+      "method": "Compared all sections and technical identifiers against the German source and the released 0.1.6 package.",
+      "source_sha256": "46aa62bdcbfc7f413dca82bd0baac5a55663deed970c406e2ab43260be9581cc",
+      "target_sha256": "819e1289838746abfb332a7b68ed7f46564ef610820a80e29de0ad46a45d1502"
+    },
     {
       "source": "blog/beitragsvorlage.md",
       "locale": "en",

@@ -284,6 +284,21 @@
     "EN": "/en/projects-mqtt/",
     "FR": "/fr/projects-mqtt/"
   },
+  "/projects/3d-printer-card/": {
+    "DE": "/projects/3d-printer-card/",
+    "EN": "/en/projects/3d-printer-card/",
+    "FR": "/fr/projects/3d-printer-card/"
+  },
+  "/en/projects/3d-printer-card/": {
+    "DE": "/projects/3d-printer-card/",
+    "EN": "/en/projects/3d-printer-card/",
+    "FR": "/fr/projects/3d-printer-card/"
+  },
+  "/fr/projects/3d-printer-card/": {
+    "DE": "/projects/3d-printer-card/",
+    "EN": "/en/projects/3d-printer-card/",
+    "FR": "/fr/projects/3d-printer-card/"
+  },
   "/projects/atlas-plugins/automation-extractor": {
     "DE": "/projects/atlas-plugins/automation-extractor",
     "EN": "/en/projects/atlas-plugins/automation-extractor",

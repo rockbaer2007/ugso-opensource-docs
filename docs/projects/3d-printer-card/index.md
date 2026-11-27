@@ -1,0 +1,45 @@
+---
+title: 3D Printer Card
+description: Kompakte Home-Assistant-Card für Klipper und Moonraker mit Profilen, Kamera und Temperaturgraphen.
+---
+
+# 3D Printer Card
+
+[English](/en/projects/3d-printer-card/) · [Français](/fr/projects/3d-printer-card/)
+
+**Version 0.1.6. Funktioniert nur mit Klipper und Moonraker.** Die [Moonraker-Integration](https://github.com/marcolivierarsenault/moonraker-home-assistant) muss installiert und für jeden Drucker eingerichtet sein. Die Card verwendet deren HA-Entitäten ohne eigene Anmeldung oder zusätzliche Druckerverbindung.
+
+## Installation
+
+[![In HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=3d-printer-card&category=plugin)
+
+1. Einstellungen sichern. Die [Moonraker-Integration in HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=marcolivierarsenault&repository=moonraker-home-assistant&category=integration) installieren und konfigurieren.
+2. `https://github.com/rockbaer2007/3d-printer-card` in HACS als benutzerdefiniertes **Dashboard**-Repository hinzufügen und herunterladen. Noch nicht im allgemeinen HACS-Katalog gelistet.
+3. Ressource `/hacsfiles/3d-printer-card/3d-printer-card.js` als **JavaScript-Modul** prüfen und Browser neu laden. Eine bisherige lokale Ressource ersetzen; nicht beide gleichzeitig laden.
+4. Im Dashboard **3D Printer Card** hinzufügen. Der technische Typ bleibt `custom:moonraker-display-card`.
+
+Manuell: JS-Datei aus dem Release nach `/config/www/3d-printer-card/` kopieren und `/local/3d-printer-card/3d-printer-card.js?v=0.1.6` als JavaScript-Modul registrieren. Kein HA-Neustart nötig. Alle Entitäten der Beispielvorlage durch die eigenen ersetzen.
+
+## Anzeige und Profile
+
+- Status, Dateiname, Fortschritt, Druckdauer, Restzeit, geschätzte Gesamtdauer, Fertigstellung und Schichten; außerdem Geschwindigkeit, Lüfter und Meldungen.
+- Düse und Bett jeweils Ist/Soll in einem Graphen; Board- und Padtemperatur jeweils Ist im zweiten Graphen. Verläufe benötigen die entsprechenden Entitäten im HA-Recorder.
+- Livekamera rechts mit ungefähr einem Drittel der Breite und optionaler Modellvorschau. Auf schmalen Displays untereinander.
+- Kompakte Wertefelder, flache Graphen, Standardbreite 24 Spalten, automatische Höhe. Eine HA-Abschnittsansicht verwenden; Panelansichten erzwingen volle Breite.
+- Bis zu 20 Druckerprofile mit eigenen Entitäten und Kameras.
+
+Im visuellen Editor **Profil hinzufügen** oder **Profil bearbeiten** öffnen. Über **Drucker erkennen** den `current_print_state`-Sensor wählen; das Entitätspräfix wird erkannt. Kameras und abweichende Zuordnungen über die native HA-Entitätensuche auswählen. **Profil übernehmen**, danach im äußeren Editor **Speichern**. Der Editor ist derzeit Deutsch; Doku DE/EN/FR. Bestehende Profile bleiben kompatibel.
+
+## Druckabbruch und Prüfung
+
+Einzige Aktion: **Druck abbrechen**, über den vorhandenen HA-Button bei aktivem/pausiertem Druck und betriebsbereitem Drucker. Bestätigung und erneute Zustandsprüfung sind erforderlich. Profilwechsel senden keine Druckerbefehle. Kein Filamentverbrauch und keine Gesamtstatistik.
+
+Mit echten Entitäten unter HA 2026.11.3 geprüft: Anzeige, Kamera, Graphen und Profilbearbeitung bei erhaltenen Einstellungen. Zusätzlich 16 automatisierte Tests und Browserprüfungen mit 390, 800 und 1500 Pixeln ohne Überläufe oder ungewollte Dienstaufrufe. Kein echter laufender Druck wurde im Test abgebrochen.
+
+## Downloads
+
+- [GitHub und vollständige Anleitung](https://github.com/rockbaer2007/3d-printer-card)
+- [Release 0.1.6 mit ZIP und JavaScript](https://github.com/rockbaer2007/3d-printer-card/releases/tag/v0.1.6)
+- [Changelog](https://github.com/rockbaer2007/3d-printer-card/blob/main/CHANGELOG.md)
+
+MIT-Lizenz. Eigenständiges Frontend-Projekt, getrennt von der Moonraker-Integration.

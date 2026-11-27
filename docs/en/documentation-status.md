@@ -6,7 +6,7 @@ aside: false
 
 # Documentation language status
 
-DE / EN / FR · 2026-11-25
+DE / EN / FR · 2026-11-27
 
 All German reference pages now have English and French content. The 128 placeholder pages have been replaced and the 20 missing French pages added.
 
@@ -16,11 +16,11 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 254 | 0 | 0 | 0 |
-| EN | 254 | 0 | 0 | 2 |
-| FR | 254 | 0 | 0 | 0 |
+| DE | 255 | 0 | 0 | 0 |
+| EN | 255 | 0 | 0 | 2 |
+| FR | 255 | 0 | 0 | 0 |
 
-**Technical comparison of 2026-11-25:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
+**Technical comparison of 2026-11-27:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
 
 
 The additions were created with translation assistance and checked technically against the German source: code, identifiers, tables and images. Fourteen further content gaps were filled with supplementary references while preserving existing pages and links. This is not a complete linguistic certification. Remaining review signals also include intentionally different summaries and historical version mentions.
@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 250 | 4 |
-| FR | 250 | 4 |
+| EN | 251 | 4 |
+| FR | 251 | 4 |
 
 ## Complete page inventory
 
@@ -67,6 +67,7 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Content reviewed](/en/iobroker/widgets/ugso-spezial/) | [Content reviewed](/fr/iobroker/widgets/ugso-spezial/) |
 | [projects-diverse/index.md](/projects-diverse/) | [Content reviewed](/en/projects-diverse/) | [Content reviewed](/fr/projects-diverse/) |
 | [projects-mqtt/index.md](/projects-mqtt/) | [Content reviewed](/en/projects-mqtt/) | [Content reviewed](/fr/projects-mqtt/) |
+| [projects/3d-printer-card/index.md](/projects/3d-printer-card/) | [Content reviewed](/en/projects/3d-printer-card/) | [Content reviewed](/fr/projects/3d-printer-card/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Content reviewed](/en/projects/atlas-plugins/automation-extractor) | [Content reviewed](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Content reviewed](/en/projects/atlas-plugins/demo-repository) | [Content reviewed](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Content reviewed](/en/projects/atlas-plugins/developers/compatibility) | [Content reviewed](/fr/projects/atlas-plugins/developers/compatibility) |

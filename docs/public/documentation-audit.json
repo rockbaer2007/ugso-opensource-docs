@@ -1,12 +1,12 @@
 {
-  "reviewed_at": "2026-11-25",
+  "reviewed_at": "2026-11-27",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 254,
+  "source_pages": 255,
   "summary": {
     "de": {
-      "content-present": 254,
-      "existing_pages": 254,
+      "content-present": 255,
+      "existing_pages": 255,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
@@ -15,23 +15,23 @@
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 254,
-      "existing_pages": 254,
+      "content-present": 255,
+      "existing_pages": 255,
       "unmatched_pages": 0,
       "review_signals": 67,
       "reviewed_findings": 74,
       "technically_compared": 188,
-      "content_reviewed": 250,
+      "content_reviewed": 251,
       "open_review_signals": 2
     },
     "fr": {
-      "content-present": 254,
-      "existing_pages": 254,
+      "content-present": 255,
+      "existing_pages": 255,
       "unmatched_pages": 0,
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 222,
-      "content_reviewed": 250,
+      "content_reviewed": 251,
       "open_review_signals": 0
     }
   },
@@ -1500,6 +1500,74 @@
             "status": "content-reviewed",
             "reviewed_at": "2026-11-20",
             "assessment": "Central-repo/per-app packaging, seven legacy app summaries, three frontend/Supervisor distinctions, safe MQTT retained-topic behavior, archived individual repos and Parcel discontinuation agree. Historical version snapshots now explicit and HA Logic Studio Pro successor added in all languages; no claim that old table versions are current releases. Added Festtags row checked in DE/EN/FR: five schedules, GIF and 30 animated flakes in Chrome, localized link; other rows unchanged."
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/3d-printer-card/index.md",
+      "locales": {
+        "de": {
+          "path": "projects/3d-printer-card/index.md",
+          "status": "content-present",
+          "sha256": "46aa62bdcbfc7f413dca82bd0baac5a55663deed970c406e2ab43260be9581cc",
+          "words": 480,
+          "headings": 5,
+          "examples": 0,
+          "versions": [
+            "0.1.6",
+            "2026.11.3"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/3d-printer-card/index.md",
+          "status": "content-present",
+          "sha256": "b0565b5f444cb13e9aa1fdc776826d9b0f2713f9f97bfd83072c75e728cee627",
+          "words": 509,
+          "headings": 5,
+          "examples": 0,
+          "versions": [
+            "0.1.6",
+            "2026.11.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-27",
+            "assessment": "Klipper/Moonraker prerequisite, custom HACS installation and resource paths, profile save sequence, German editor labels, charts, camera, cancellation confirmation and limited real-printer test scope match the German source."
+          }
+        },
+        "fr": {
+          "path": "fr/projects/3d-printer-card/index.md",
+          "status": "content-present",
+          "sha256": "819e1289838746abfb332a7b68ed7f46564ef610820a80e29de0ad46a45d1502",
+          "words": 525,
+          "headings": 5,
+          "examples": 0,
+          "versions": [
+            "0.1.6",
+            "2026.11.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-27",
+            "assessment": "Klipper/Moonraker prerequisite, custom HACS installation and resource paths, profile save sequence, German editor labels, charts, camera, cancellation confirmation and limited real-printer test scope match the German source."
           }
         }
       }

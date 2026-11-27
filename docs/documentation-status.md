@@ -6,7 +6,7 @@ aside: false
 
 # Sprachstand der Dokumentation
 
-DE / EN / FR · 2026-11-25
+DE / EN / FR · 2026-11-27
 
 Alle deutschen Referenzseiten sind jetzt auch in EN und FR mit Inhalt vorhanden. Die 128 Platzhalter wurden ersetzt und die 20 fehlenden französischen Seiten ergänzt.
 
@@ -16,11 +16,11 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 254 | 0 | 0 | 0 |
-| EN | 254 | 0 | 0 | 2 |
-| FR | 254 | 0 | 0 | 0 |
+| DE | 255 | 0 | 0 | 0 |
+| EN | 255 | 0 | 0 | 2 |
+| FR | 255 | 0 | 0 | 0 |
 
-**Technischer Abgleich vom 2026-11-25:** Vorhandene Einzelbewertungen sind an die aktuellen Datei-Prüfsummen gebunden; Änderungen erfordern eine erneute Prüfung. Echte Lücken und widersprüchliche Angaben werden korrigiert, bewusst unterschiedliche Versionshistorien und redaktionelle Gliederungen mit Begründung eingeordnet. Die Tabelle zeigt die noch offenen Hinweise; der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Dokumentierte Einzelbewertungen](/documentation-review.json).
+**Technischer Abgleich vom 2026-11-27:** Vorhandene Einzelbewertungen sind an die aktuellen Datei-Prüfsummen gebunden; Änderungen erfordern eine erneute Prüfung. Echte Lücken und widersprüchliche Angaben werden korrigiert, bewusst unterschiedliche Versionshistorien und redaktionelle Gliederungen mit Begründung eingeordnet. Die Tabelle zeigt die noch offenen Hinweise; der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Dokumentierte Einzelbewertungen](/documentation-review.json).
 
 
 Die Ergänzungen wurden mit Übersetzungsunterstützung erstellt und technisch gegen die deutsche Vorlage geprüft: Code, Bezeichner, Tabellen und Bilder. 14 weitere Inhaltslücken wurden als ergänzende Referenz geschlossen; vorhandene Seiten und Links bleiben erhalten. Das ist keine vollständige sprachliche Zertifizierung. Verbleibende Prüfhinweise betreffen auch bewusst unterschiedliche Zusammenfassungen und historische Versionsangaben.
@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 250 | 4 |
-| FR | 250 | 4 |
+| EN | 251 | 4 |
+| FR | 251 | 4 |
 
 ## Vollständiges Seiteninventar
 
@@ -67,6 +67,7 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Inhaltlich geprüft](/en/iobroker/widgets/ugso-spezial/) | [Inhaltlich geprüft](/fr/iobroker/widgets/ugso-spezial/) |
 | [projects-diverse/index.md](/projects-diverse/) | [Inhaltlich geprüft](/en/projects-diverse/) | [Inhaltlich geprüft](/fr/projects-diverse/) |
 | [projects-mqtt/index.md](/projects-mqtt/) | [Inhaltlich geprüft](/en/projects-mqtt/) | [Inhaltlich geprüft](/fr/projects-mqtt/) |
+| [projects/3d-printer-card/index.md](/projects/3d-printer-card/) | [Inhaltlich geprüft](/en/projects/3d-printer-card/) | [Inhaltlich geprüft](/fr/projects/3d-printer-card/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Inhaltlich geprüft](/en/projects/atlas-plugins/automation-extractor) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Inhaltlich geprüft](/en/projects/atlas-plugins/demo-repository) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Inhaltlich geprüft](/en/projects/atlas-plugins/developers/compatibility) | [Inhaltlich geprüft](/fr/projects/atlas-plugins/developers/compatibility) |

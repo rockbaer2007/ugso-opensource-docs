@@ -141,6 +141,7 @@ const sourceNavFr = [
 ]
 
 const sidebarDe = {
+  '/projects/3d-printer-card/': [{text:'3D Printer Card',items:[{text:'Installation und Profile',link:'/projects/3d-printer-card/'}]}],
   '/projects/festtags-card-editor/': [{text:'Festtags-Card-Editor',items:[{text:'Einrichtung und Chrome-Test',link:'/projects/festtags-card-editor/'},{text:'UGSo HA Apps',link:'/projects-mqtt/'}]}],
   '/projects/usb-extender/': [{ text: 'USB Extender', items: [
     { text: 'Überblick und Bilder', link: '/projects/usb-extender/' },
@@ -629,6 +630,7 @@ const sidebarDe = {
 }
 
 const sidebarEn = {
+  '/en/projects/3d-printer-card/': [{text:'3D Printer Card',items:[{text:'Installation and profiles',link:'/en/projects/3d-printer-card/'}]}],
   '/en/projects/festtags-card-editor/': [{text:'Festtags-Card-Editor',items:[{text:'Setup and Chrome test',link:'/en/projects/festtags-card-editor/'},{text:'UGSo HA Apps',link:'/en/projects-mqtt/'}]}],
   '/en/projects/usb-extender/': [{ text: 'USB Extender', items: [
     { text: 'Overview and screenshots', link: '/en/projects/usb-extender/' },
@@ -969,6 +971,7 @@ const sidebarEn = {
 }
 
 const sidebarFr = {
+  '/fr/projects/3d-printer-card/': [{text:'3D Printer Card',items:[{text:'Installation et profils',link:'/fr/projects/3d-printer-card/'}]}],
   '/fr/projects/festtags-card-editor/': [{text:'Festtags-Card-Editor',items:[{text:'Installation et test Chrome',link:'/fr/projects/festtags-card-editor/'},{text:'UGSo HA Apps',link:'/fr/projects-mqtt/'}]}],
   '/fr/projects/usb-extender/': [{ text: 'USB Extender', items: [
     { text: 'Présentation et captures', link: '/fr/projects/usb-extender/' },

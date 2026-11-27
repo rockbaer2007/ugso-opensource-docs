@@ -51,6 +51,7 @@ export function reorganizeNavigation(
     ] },
     { text: text.cards, items: [
       overview('ha-cards'), project('automation-status-card'), project('festtags-card-editor'),
+      { text: '3D Printer Card', link: `${prefix}/projects/3d-printer-card/` },
       page('Calendar Card Pro', 'calendar-card-pro/'), page('Mushroom Cards', 'mushroom/'),
       page('flex-table-card', 'flex-table-card/'),
       { text: 'Bubble Card', link: 'https://github.com/Clooos/Bubble-Card' }

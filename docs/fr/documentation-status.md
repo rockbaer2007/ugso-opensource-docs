@@ -6,7 +6,7 @@ aside: false
 
 # État des traductions de la documentation
 
-DE / EN / FR · 2026-11-25
+DE / EN / FR · 2026-11-27
 
 Toutes les pages de référence allemandes disposent désormais de contenu en anglais et en français. Les 128 pages provisoires ont été remplacées et les 20 pages françaises manquantes ajoutées.
 
@@ -16,11 +16,11 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 254 | 0 | 0 | 0 |
-| EN | 254 | 0 | 0 | 2 |
-| FR | 254 | 0 | 0 | 0 |
+| DE | 255 | 0 | 0 | 0 |
+| EN | 255 | 0 | 0 | 2 |
+| FR | 255 | 0 | 0 | 0 |
 
-**Comparaison technique du 2026-11-25 :** les évaluations sont liées aux empreintes actuelles des fichiers ; toute modification exige une nouvelle revue. Les lacunes et contradictions sont corrigées, tandis que les différences voulues d’historique et de structure sont justifiées. Le tableau indique les points encore ouverts ; le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Évaluations documentées](/documentation-review.json).
+**Comparaison technique du 2026-11-27 :** les évaluations sont liées aux empreintes actuelles des fichiers ; toute modification exige une nouvelle revue. Les lacunes et contradictions sont corrigées, tandis que les différences voulues d’historique et de structure sont justifiées. Le tableau indique les points encore ouverts ; le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Évaluations documentées](/documentation-review.json).
 
 
 Les ajouts ont été réalisés avec une aide à la traduction et vérifiés techniquement par rapport à la source allemande : code, identifiants, tableaux et images. Quatorze autres lacunes ont été comblées par des références complémentaires, en conservant les pages et liens existants. Il ne s’agit pas d’une certification linguistique complète. Les points à examiner comprennent aussi des résumés volontairement différents et des versions historiques.
@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 250 | 4 |
-| FR | 250 | 4 |
+| EN | 251 | 4 |
+| FR | 251 | 4 |
 
 ## Inventaire complet des pages
 
@@ -67,6 +67,7 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [iobroker/widgets/ugso-spezial/index.md](/iobroker/widgets/ugso-spezial/) | [Contenu vérifié](/en/iobroker/widgets/ugso-spezial/) | [Contenu vérifié](/fr/iobroker/widgets/ugso-spezial/) |
 | [projects-diverse/index.md](/projects-diverse/) | [Contenu vérifié](/en/projects-diverse/) | [Contenu vérifié](/fr/projects-diverse/) |
 | [projects-mqtt/index.md](/projects-mqtt/) | [Contenu vérifié](/en/projects-mqtt/) | [Contenu vérifié](/fr/projects-mqtt/) |
+| [projects/3d-printer-card/index.md](/projects/3d-printer-card/) | [Contenu vérifié](/en/projects/3d-printer-card/) | [Contenu vérifié](/fr/projects/3d-printer-card/) |
 | [projects/atlas-plugins/automation-extractor.md](/projects/atlas-plugins/automation-extractor) | [Contenu vérifié](/en/projects/atlas-plugins/automation-extractor) | [Contenu vérifié](/fr/projects/atlas-plugins/automation-extractor) |
 | [projects/atlas-plugins/demo-repository.md](/projects/atlas-plugins/demo-repository) | [Contenu vérifié](/en/projects/atlas-plugins/demo-repository) | [Contenu vérifié](/fr/projects/atlas-plugins/demo-repository) |
 | [projects/atlas-plugins/developers/compatibility.md](/projects/atlas-plugins/developers/compatibility) | [Contenu vérifié](/en/projects/atlas-plugins/developers/compatibility) | [Contenu vérifié](/fr/projects/atlas-plugins/developers/compatibility) |
