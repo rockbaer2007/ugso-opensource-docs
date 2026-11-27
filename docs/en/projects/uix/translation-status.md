@@ -4,6 +4,12 @@ description: Scope of canonical UIX documentation updates reviewed in German, En
 ---
 # Translation status
 
+## Canonical comparison: 6a2bad2 / 675a633
+
+Reviewed on **2026-11-27** through `dev` revision [6a2bad250e1a](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8): **69** canonical pages. German now documents strategies, Configuration/Entities/Home Summary Sparks, inspectors, examples, navigation and five new images. All 30 code blocks in the three new Spark pages are unchanged. English is synchronized; French contains corresponding summaries and original examples. The subsequent beta notes identify availability in **9.2.0-beta.3**.
+
+Also covered since the previous review: toast icon/supporting-text/keep-open options and the updated lock notification script using `$uix.*` substitutions. [Source comparison](/projects/uix/source-audit-20261127.json). Stable baseline remains **9.1.0**. This is a documentation review, not a new HA runtime test.
+
 ## Editorial content review
 
 Translations are also read against the recorded reference for meaning, prerequisites, defaults and limitations; discovered contradictions are corrected. “Content reviewed” applies only to the recorded text. Changing the reference or translation requires another review. See the current [per-page status](/en/documentation-status) and the [hash-bound assessments](/documentation-semantic-review.json).

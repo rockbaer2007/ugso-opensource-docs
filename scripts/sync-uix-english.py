@@ -16,9 +16,9 @@ import sys
 import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
-REVISION = '9528baaee9cedc2cfb862cda2d6391b8a1fc647c'
-REVIEWED_AT = '2026-11-23'
-SOURCE_VERSION = '9.2.0-beta.1'
+REVISION = '6a2bad250e1af75b058353a22371154df23474c8'
+REVIEWED_AT = '2026-11-27'
+SOURCE_VERSION = '9.2.0-beta.3'
 SOURCE_BRANCH = 'dev'
 
 
@@ -34,14 +34,14 @@ def reviewed_corrections(text, raw, relative):
     path = relative.as_posix()
     expected_sources = {
         'developers/cards.md': 'b015e562376a5bb3b6c437b48d2b0a1c461419490667859b1c2bad9963806d1d',
-        'forge/sparks/index.md': '97178ef31bb7b5b88e10e2cc7531e020b80328d3ca7ddb5a46d035ba2585ec70',
+        'forge/sparks/index.md': 'f056492c8681570d3c7ba8314fecca58ec3133f8b96c98749d6191cca26b432a',
         'concepts/application.md': '24be57e32f05eed9eafede271b99958f51dd94d3435666a2ba5a79f24c7f242a',
         'forge/sparks/tile-icon.md': 'eaf8210dbf464eca19c3a96113bc5f9812128c2dd5803e6df91cb728dc4376a5',
         'forge/sparks/state-badge.md': 'dd8b0527f0d457131335d7538ccb5e5a02c524848ad13af5a20ef73e68ed0361',
         'forge/sparks/more-info.md': '6e157b4563e761900f14f0d013f483fbeb0d2b040008c050a1eb806622ad738c',
         'extras/frontend-states-throttling.md': 'bd12e71948743dd03086bd30dddebb223b34ea619548d3ed87d52a85b3d4a00b',
         'forge/sparks/button.md': '3e7eff524e19c14bed60b7c7ab8dfaad080faa638b2e15f1d760be1535d3268b',
-        'using/templates.md': '95ffe84883d1b2fd65c4de38551d7c0c5e46da4bf7f5328ee10c20b3b4875ab2',
+        'using/templates.md': 'dee9217159c670a08c804081bd48229e3765dad17d56b815ccad97d8a2dd9979',
     }
     if path not in expected_sources:
         return text
@@ -171,6 +171,9 @@ def convert(text, relative, source_files):
             'Host/element path selection':'hostelement-path-selection',
             '`uix_forge_path($0)`':'uix_forge_path0-forge-helper',
             '`uix_broker_path($0)`':'uix_broker_path0-broker-directive-anchor-helper',
+            '`uix_dashboard_inspect()`':'uix_dashboard_inspect-current-dashboard-helper',
+            '`uix_strategy_inspect(scope, element)`':'uix_strategy_inspectscope-element-strategy-config-helper',
+            '`uix_entities_inspect(forge, spark?)`':'uix_entities_inspectforge-spark-entities-spark-helper',
         },
         'forge/forge.md': {"Keep the element's configuration":'keep-the-elements-configuration-in-element_base'},
         'using/themes.md': {'Local theme override':'local-theme-override-with-uixtheme'},

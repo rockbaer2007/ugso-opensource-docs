@@ -3,7 +3,7 @@ description: Learn about the lock spark for UIX Forge — add interactive lock o
 icon: material/lock
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.1**, revision [9528baa](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.3**, revision [6a2bad2](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8), reviewed 2026-11-27. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Lock spark
 
@@ -197,24 +197,37 @@ locks:
     max_retries: 3
     failed_action:
       action: perform-action
-      perform_action: persistent_notification.create
+      perform_action: script.notify_uix_lock_attempt
       data:
-        title: UIX lock failed
-        message: A user reached the maximum number of incorrect code entries.
+        user: "$uix.user"
+        retry: "$uix.retry"
+        browser_id: "$uix.browser_id"
 ```
 
-The example sends a persistent notification directly after the third failed entry; no automation or event-bus permission is required. Use `retry_action` as well when every wrong entry needs a separate response.
+Lock-action `data` supports the explicit [UIX action data substitutions](../../extras/uix-actions.md#action-data-substitutions), including the current user, retry count, and Browser Mod browser ID. These are exact `$uix.*` values, not <code v-pre>{{ }}</code> templates.
 
 ```yaml
-retry_action:
-  action: perform-action
-  perform_action: persistent_notification.create
-  data:
-    title: UIX lock retry
-    message: An incorrect lock code was entered.
+script:
+  notify_uix_lock_attempt:
+    alias: Notify about a UIX lock attempt
+    fields:
+      user:
+        required: true
+      retry:
+        required: true
+      browser_id:
+        required: false
+    sequence:
+      - action: notify.mobile_app_your_phone
+        data:
+          title: UIX lock attempt
+          message: >-
+            {{ user }} entered an incorrect code (attempt {{ retry }}) from {{ browser_id or "an unknown browser" }}.
 ```
 
-The action's own `data` is forwarded unchanged. Use a script action when your notification needs a dynamic message or additional routing.
+Define the script in Home Assistant and replace `mobile_app_your_phone` with your mobile app's notify action. The script's <code v-pre>{{ }}</code> expressions are native Home Assistant templates; UIX only resolves the `$uix.*` fields in the lock action.
+
+Use the same action under `retry_action` when every wrong entry should send a notification rather than only the entry that reaches `max_retries`.
 
 ---
 

@@ -4,6 +4,8 @@ description: "Les fonderies sont des configurations UIX Forge enregistrées sur 
 ---
 # Fonderies
 
+Depuis **9.2.0-beta.3**, un filtre Entities nommé peut être partagé entre un résumé Home, un patch de stratégie et une carte Entities. Chaque Forge exécute sa propre requête et choisit la collecte ou l'écriture d'une liste. Voir [réutiliser une Foundry Entities](./sparks/entities#reuse-an-entities-foundry-query-in-another-element).
+
 Une **fonderie** est une configuration UIX Forge nommée et enregistrée dans Home Assistant. Elle sert de base réutilisable : définissez une fois les configurations `forge` et `element`, attribuez-leur un nom, puis référencez-les dans autant d'éléments que nécessaire avec la clé `foundry:`. La configuration locale de l'élément est fusionnée avec cette base ; vous pouvez donc remplacer chaque valeur pour une instance donnée.
 
 Une fonderie peut aussi fournir un fragment `element_base`. La base appartenant à l'élément et la surcouche Forge `element` sont résolues séparément. Une base résolue active la [configuration en couches](./forge#layered-configuration), intégrée à la version stable **9.0.0**.

@@ -6,6 +6,8 @@ UIX Forge crée des éléments Home Assistant avec des modèles dans la configur
 
 Forge prend en charge les moules `card`, `badge`, `row`, `picture-element`, `section`, `footer` et `card-feature`. Les moules intercontextes permettent d'intégrer un type d'élément dans un autre contexte parent, par exemple une carte utilisée comme ligne dans une carte Entités ; consultez les [moules intercontextes](./forge.md#cross-context-molds). La configuration en couches est disponible pour tous les moules.
 
+Depuis **9.2.0-beta.3**, Forge propose les [stratégies](./forge#strategies), [Entities Spark](./sparks/entities), [Configuration Spark](./sparks/config) et [Home Summary Spark](./sparks/home-summary). La configuration en couches fonctionne aussi avec ces stratégies ; la base stable reste 9.1.0.
+
 Consultez [Forge](./forge.md) pour la référence complète de la configuration.
 
 UIX **9.0.0** contient l’[éditeur visuel de cartes et badges](./forge#visual-editor-cards-and-badges). `element_base` conserve les réglages et modèles natifs inchangés ; seules les valeurs modifiées par Forge vont dans `element`, pour tous les moules. Le `element_base` d’une Foundry est une source native préservée : le générer depuis Export et le conserver lors des modifications. Voir la [règle d’ancrage du type](./foundries#type-de-foundry-et-editeur-native).

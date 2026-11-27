@@ -6,7 +6,7 @@ description: Überblick über UIX Forge, Molds, Foundries und Sparks.
 
 UIX Forge erzeugt Home-Assistant-Elemente dynamisch. Du definierst eine `forge`-Konfiguration, ein Ziel-`element` und optional zusätzliche `sparks`, die Verhalten oder Darstellung erweitern.
 
-Unterstützt werden die Molds `card`, `badge`, `row`, `picture-element`, `section`, `footer` und `card-feature`. Cross-Context-Molds erlauben, ein Element in einem anderen Kontext zu verwenden, zum Beispiel eine Karte als Zeile in einer Entities-Karte.
+Unterstützt werden die Molds `card`, `badge`, `row`, `picture-element`, `section`, `footer` und `card-feature` sowie ab **9.2.0-beta.3** [Dashboard-, Ansichts- und Section-Strategien](./forge#strategies). Cross-Context-Molds erlauben, ein Element in einem anderen Kontext zu verwenden, zum Beispiel eine Karte als Zeile in einer Entities-Karte. Die geschichtete Konfiguration gilt für alle Molds.
 
 Ab **UIX 9.0.0-beta.0** ermöglicht die [geschichtete Konfiguration](./forge#layered-configuration), native Templates des eingebetteten Elements unverändert zu erhalten und darüber eine separate Forge-Konfiguration zu legen. Sie gilt für alle Molds und benötigt keinen visuellen Editor.
 
@@ -25,6 +25,10 @@ Mehr dazu: [Foundries](./foundries)
 Sparks sind optionale Bausteine in `forge.sparks`. Jeder Spark hat einen `type` und eigene Optionen.
 
 Verfügbare Sparks:
+
+- [Entities](./sparks/entities) – Entitätslisten filtern oder IDs für Patches und Templates sammeln, ab 9.2.0-beta.3.
+- [Configuration](./sparks/config) – Konfigurationen einschließlich Strategieausgaben ändern, ab 9.2.0-beta.3.
+- [Home Summary](./sparks/home-summary) – gezählte Entitäten nativer Home-Zusammenfassungen auswählen, ab 9.2.0-beta.3.
 
 - :speech_balloon: [Tooltip](./sparks/tooltip) - Tooltip an ein Element hängen.
 - :material-button-cursor: [Button](./sparks/button) - Button mit Aktionen einfügen.

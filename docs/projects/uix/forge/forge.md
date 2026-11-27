@@ -81,7 +81,7 @@ element:
 | `billets` | mapping | nein | - | Benannte YAML-Werte als Template-Konstanten für alle Templates in der Forge-Konfiguration. |
 | `hidden` | boolean | ja | `false` | Blendet das Element aus, wenn der Wert wahr ist. |
 | `grid_options` | mapping | ja | - | Lovelace-Grid-Optionen wie `rows` und `columns`, nur für `mold: card`. |
-| `show_error` | boolean | nein | `false` | Bei `true` wird bei Fehlern die Lovelace-Fehlerkarte angezeigt, statt das Element zu verstecken. |
+| `show_error` | boolean | nein | `false` | Bei `true` wird ein Lovelace-Zielfehler angezeigt, statt das Element zu verstecken. Fehler beim Umformen einer Forge-Konfiguration werden immer bis zur Korrektur angezeigt. |
 | `template_nesting` | string | nein | `"<<>>"` | Vier Zeichen zum Escapen verschachtelter Templates. Standard: `<<...>>` für <code v-pre>{{...}}</code> und `<%...%>` für <code v-pre>{%...%}</code>. |
 | `sparks` | list | ja | `[]` | Liste von [Spark-Konfigurationen](./sparks/), die an das erzeugte Element angehängt werden. |
 | `delayed_hass` | boolean | nein | - | Verzögert die Übergabe des `hass`-Objekts, bis die Karte geladen ist. Hilft bei manchen Custom Cards, z. B. ApexCharts. |
@@ -529,6 +529,85 @@ element:
 ### Theme-Styling
 
 UIX-Themes können Forge-Molds gezielt stylen. Nutze die bekannten Variablen wie `uix-card`, `uix-row`, `uix-badge` oder spezifischere Klassen.
+
+## Strategien {#strategies}
+
+Ab **9.2.0-beta.3** liefert `mold: strategy` die Konfiguration eines Dashboards, einer Ansicht oder einer Section. Definiere die eigene Konfiguration unter `element` oder verwende dort beispielsweise `type: home-overview`, um die HA-Ausgabe zu erweitern.
+
+```yaml
+views:
+  - path: overview
+    strategy:
+      type: custom:uix-forge
+      forge:
+        mold: strategy
+      element:
+        type: home-overview
+```
+
+Unterstützt werden eingebaute Dashboard-, Ansichts- und Section-Strategien sowie registrierte `custom:`-Strategien. Ein Dashboard verwendet `views`, eine Section `cards`, eine Ansicht `cards` oder `sections` und weitere Ansichtsoptionen wie `badges` und `footer`. Ein leeres `element` ergibt eine leere Konfiguration.
+
+Bei einer Dashboard-Strategie gehört `strategy:` an die Dashboard-Wurzel statt unter eine Ansicht. Das erforderliche `views: []` wird durch die erzeugte Konfiguration ersetzt. Dieses Beispiel delegiert an `original-states` und ersetzt dessen erste Ansicht:
+
+```yaml
+title: Alternate states
+views: []
+strategy:
+  type: custom:uix-forge
+  forge:
+    mold: strategy
+    sparks:
+      - type: config
+        patches:
+          - op: replace
+            path: /views/0
+            value:
+              path: states
+              cards:
+                - type: markdown
+                  content: "## Dashboard loaded by Forge"
+  element:
+    type: original-states
+```
+
+Auch eine vollständige Ansicht lässt sich direkt bereitstellen:
+
+```yaml
+# A complete direct View config.
+strategy:
+  type: custom:uix-forge
+  forge:
+    mold: strategy
+  element:
+    type: sections
+    badges:
+      - type: entity
+        entity: person.darryn
+    sections:
+      - type: grid
+        cards:
+          - type: tile
+            entity: light.kitchen
+    footer:
+      type: markdown
+      content: Last updated {{ now() }}
+```
+
+### Sparks und Templates in Strategien {#sparks-and-templates-in-strategies}
+
+Strategien sind nur per YAML konfigurierbar. Sie unterstützen Foundries, `element_base`, Makros, Billets und Template-Verschachtelung. Ein [Entities Spark](./sparks/entities) füllt eine Liste in der Strategieeingabe oder sammelt IDs. Ein [Configuration Spark](./sparks/config) ändert das Ergebnis vor der Darstellung. Dies sind die beiden für `mold: strategy` unterstützten Spark-Typen.
+
+Eine Strategie erzeugt Konfiguration ohne ein Forge-Element auf der Seite. Anzeigeoptionen `hidden`, `grid_options`, `show_error`, `delayed_hass` und `forge.uix` gehören zu einer Element-Forge. Um erzeugte Karten mit Sparks zu ergänzen, verwende [`wrap_card`](./sparks/config#wrap-generated-cards).
+
+Strategie-Templates erhalten Benutzer-, Browser- und Hash-Kontext sowie den zuletzt bekannten Panelkontext. Dieser kann bei der ersten Erzeugung leer sein.
+
+::: info Aktualisierung einer Strategie
+Forge erzeugt die Konfiguration neu, wenn die HA-Aktualisierungsregeln der Basisstrategie dies verlangen oder sich ein Entities-Spark-Ergebnis ändert. Templates wie <code v-pre>{{ now() }}</code> werden erst bei dieser nächsten Erzeugung neu ausgewertet. Eine erzeugte Karte aktualisiert ihre Werte unabhängig davon: Beispielsweise kann eine Energiezusammenfassung neue Energiedaten erhalten, während das Overview-Layout bestehen bleibt. Für laufend aktualisierte Templatewerte eine gewöhnliche Card Forge verwenden.
+:::
+
+Für ein erweitertes Home-Dashboard die `home`-Dashboard-Strategie verwenden und deren erzeugte Overview-Ansicht einhüllen. Das [People-Beispiel](./sparks/config#wrap-the-overview-strategy-to-add-a-people-map) enthält vollständiges YAML und [Bearbeitungshinweise](./sparks/config#create-or-edit-the-dashboard). Standarddashboard: **Einstellungen → Dashboards → Als Standard festlegen**, individuell über **Benutzerprofil → Darstellung**. Siehe [HA-Dashboards](https://www.home-assistant.io/dashboards/dashboards/).
+
+Element- und Hüllen-Styling-Templates können die IDs eines benannten reinen Abfrage-Sparks als `uixForge.entities["spark-id"]` lesen. Siehe [Abfragen in Templates](./sparks/entities#use-a-query-result-in-templates).
 
 ## Sections
 

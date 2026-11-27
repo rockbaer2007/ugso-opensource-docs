@@ -16,9 +16,9 @@ Every Markdown content page was inventoried, excluding these three generated rep
 
 | Language | Existing pages | Missing pages | Placeholders | Open review findings |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 255 | 0 | 0 | 0 |
-| EN | 255 | 0 | 0 | 2 |
-| FR | 255 | 0 | 0 | 0 |
+| DE | 258 | 0 | 0 | 0 |
+| EN | 258 | 0 | 0 | 2 |
+| FR | 258 | 0 | 0 | 0 |
 
 **Technical comparison of 2026-11-27:** Existing assessments are bound to current file hashes; changes require another review. Actual gaps and contradictions are corrected, while intentional differences in version history and editorial structure have recorded explanations. The table shows outstanding findings; raw automatic signals remain in the JSON report. “0 open” means reviewed and classified, not word-for-word identity. [Recorded assessments](/documentation-review.json).
 
@@ -41,8 +41,8 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 
 | Language | Reviewed | Pending |
 | --- | ---: | ---: |
-| EN | 251 | 4 |
-| FR | 251 | 4 |
+| EN | 254 | 4 |
+| FR | 254 | 4 |
 
 ## Complete page inventory
 
@@ -213,9 +213,12 @@ Corrections include English prose left in French UIX concepts, macros, themes an
 | [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/background) | [Content reviewed](/fr/projects/uix/forge/sparks/background) |
 | [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/badge) | [Content reviewed](/fr/projects/uix/forge/sparks/badge) |
 | [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/button) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/button) |
+| [projects/uix/forge/sparks/config.md](/projects/uix/forge/sparks/config) | [Content reviewed](/en/projects/uix/forge/sparks/config) | [Content reviewed](/fr/projects/uix/forge/sparks/config) |
+| [projects/uix/forge/sparks/entities.md](/projects/uix/forge/sparks/entities) | [Content reviewed](/en/projects/uix/forge/sparks/entities) | [Content reviewed](/fr/projects/uix/forge/sparks/entities) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/event) | [Content reviewed](/fr/projects/uix/forge/sparks/event) |
 | [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/form) | [Content reviewed](/fr/projects/uix/forge/sparks/form) |
 | [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/grid) | [Content reviewed](/fr/projects/uix/forge/sparks/grid) |
+| [projects/uix/forge/sparks/home-summary.md](/projects/uix/forge/sparks/home-summary) | [Content reviewed](/en/projects/uix/forge/sparks/home-summary) | [Content reviewed](/fr/projects/uix/forge/sparks/home-summary) |
 | [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/) | [Content reviewed · Difference reviewed](/fr/projects/uix/forge/sparks/) |
 | [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/lock) | [Content reviewed](/fr/projects/uix/forge/sparks/lock) |
 | [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Content reviewed · Difference reviewed](/en/projects/uix/forge/sparks/map) | [Content reviewed](/fr/projects/uix/forge/sparks/map) |

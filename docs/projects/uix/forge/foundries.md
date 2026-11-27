@@ -4,6 +4,8 @@ description: Wiederverwendbare Forge-Konfigurationen, native Basis, Vererbung, Y
 ---
 # Foundries
 
+Ab **9.2.0-beta.3** kann eine benannte Entities-Spark-Abfrage einmal in einer Foundry gespeichert und für Home-Summary-Karten, Strategie-Patches oder Entities-Karten wiederverwendet werden. Jede Forge führt die gemeinsame Abfrage selbst aus und entscheidet, ob sie IDs sammelt oder eine Liste füllt. Siehe [Entities-Foundry in einem anderen Element verwenden](./sparks/entities#reuse-an-entities-foundry-query-in-another-element).
+
 Eine **Foundry** ist eine benannte Forge-Konfiguration in Home Assistant. Definiere `forge`, `element` und bei vom Forge-Editor exportierten nativen Einstellungen optional `element_base` einmal und verwende sie mit dem obersten Schlüssel `foundry:` mehrfach. Lokale Werte überschreiben die Vorlage.
 
 ::: info Versionsstand

@@ -99,8 +99,8 @@ def main():
     spec = importlib.util.spec_from_file_location("uix_sync", ROOT / "scripts/sync-uix-english.py")
     sync = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(sync)
-    if len(manifest["pages"]) != 66:
-        errors.append("Canonical review does not cover all 66 source pages")
+    if len(manifest["pages"]) != 69:
+        errors.append("Canonical review does not cover all 69 source pages")
     for entry in manifest["pages"]:
         for prefix in ("projects/uix", "en/projects/uix", "fr/projects/uix"):
             if not (ROOT / "docs" / prefix / entry["path"]).is_file():
@@ -148,7 +148,7 @@ def main():
             errors.append(f"Preview version/revision missing from page/footer: {url}")
         reviewed = date.fromisoformat(metadata['reviewed_at'])
         review_dates = (reviewed.strftime('%d %B %Y').lstrip('0'),
-                        reviewed.strftime('%d/%m/%Y'), reviewed.strftime('%d.%m.%Y'))
+                        reviewed.strftime('%d/%m/%Y'), reviewed.strftime('%d.%m.%Y'), reviewed.isoformat())
         if not any(date in visible_text for date in review_dates):
             errors.append(f"Current review date missing from page/footer: {url}")
         if any(entity in "".join(page.code) for entity in ("&#123;", "&#125;")):

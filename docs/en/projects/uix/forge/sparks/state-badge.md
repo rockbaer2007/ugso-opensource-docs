@@ -3,7 +3,7 @@ description: Use the state-badge spark to insert a state-badge element as a sibl
 icon: material/shield-half-full
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.1**, revision [9528baa](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.3**, revision [6a2bad2](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8), reviewed 2026-11-27. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # State Badge spark
 
@@ -16,7 +16,7 @@ The badge can display:
 - a fixed override image URL (via `override_image`)
 
 ::: warning Editorial source-code clarification (2026-11-20)
-At the frozen documented revision, an empty `after` falls back to the default Blank Card target. It does not disable that fallback, so setting an empty `after` is not a reliable workaround for `before` on Blank Card. Use explicit `after` placement there. This is a source-code finding, not a new browser runtime test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/9528baaee9cedc2cfb862cda2d6391b8a1fc647c/src/forge/sparks/uix-spark-state-badge.ts).
+At the frozen documented revision, an empty `after` falls back to the default Blank Card target. It does not disable that fallback, so setting an empty `after` is not a reliable workaround for `before` on Blank Card. Use explicit `after` placement there. This is a source-code finding, not a new browser runtime test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/6a2bad250e1af75b058353a22371154df23474c8/src/forge/sparks/uix-spark-state-badge.ts).
 :::
 
 ## Basic usage

@@ -4,6 +4,8 @@ description: Templates in UIX verwenden.
 ---
 # Templates
 
+Ab **9.2.0-beta.3** können Forge-Element- und Hüllen-Styling-Templates auch Ergebnisse eines benannten Entities Sparks als `uixForge.entities["spark-id"]` lesen, etwa zum Zählen von Entitäten mit einem Label. Siehe [Abfrageergebnisse in Templates](../forge/sparks/entities#use-a-query-result-in-templates).
+
 ::: info Forge-Billets und lokale Werte
 `forge.billets` steht in Forge-Templates sowie in `uix`-Stilen der Forge und des erzeugten Elements zur Verfügung. Direkt unter `uix` definierte Billets werden damit zusammengeführt; die lokalen `uix`-Werte haben Vorrang.
 :::

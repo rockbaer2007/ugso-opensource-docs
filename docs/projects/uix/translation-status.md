@@ -4,6 +4,14 @@ description: Status der deutschen UIX-Dokumentation gegenüber der englischen Or
 ---
 # Übersetzungsstatus
 
+## Abgleich 6a2bad2 / 675a633 – Strategien und neue Sparks
+
+Am **27.11.2026** wurden alle **69** kanonischen Seiten bis [`dev 6a2bad250e1a`](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8) abgeglichen. Die Meldung [`675a6339204d`](https://github.com/Lint-Free-Technology/uix/commit/675a6339204d3791f29b3a9046cc9cd38d70dba7) ergänzt Configuration-, Entities- und Home-Summary-Spark, Strategie-Mold, DOM-Helfer, Foundry-/Template-Verweise und fünf Bilder. Die spätere Meldung kennzeichnet alle drei Sparks ausdrücklich **ab 9.2.0-beta.3**.
+
+Deutsch enthält die vollständigen neuen Anleitungen einschließlich aller **30 unveränderten Codeblöcke** dieser drei Seiten, Tabellen, Standardwerte, Einschränkungen, Bilder und Navigation. Die englische Spiegelung ist synchronisiert; Französisch bietet entsprechende Zusammenfassungen mit Originalbeispielen. Strategie-Updates, die Unterscheidung von Dashboard- und Strategieeditor, Patch-Fehler sowie das getrennte Filtern von Home-Zusammenfassung und Zielseite sind erläutert.
+
+Zusätzlich gegenüber dem vorherigen geprüften Stand berücksichtigt: Toast-Icons, `supportingText`/`keepOpen` und das aktualisierte Lock-Notify-Script mit exakten `$uix.*`-Ersetzungen. Die [Quellenprüfung](/projects/uix/source-audit-20261127.json) hält die Änderungen fest. Stabile Basis bleibt **9.1.0**; **9.2.0-beta.3** ist der dokumentierte Entwicklungsstand. Keine neue HA-Laufzeitprüfung.
+
 ## Ergänzung 9528baa – Sperraktionen und Laufzeitdaten
 
 Am 23.11.2026 wurden alle **66** kanonischen Seiten mit [`dev 9528baaee9ce`](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c) verglichen: `broker/directives.md`, `extras/uix-actions.md` und `forge/sparks/lock.md` sind geändert, 63 Seiten unverändert. Deutsch und Französisch ersetzen die bisherigen Ereignisse durch normale HA-Aktionen `retry_action` / `failed_action`, einschließlich Ausführungsreihenfolge und Hinweis zur Migration. Die englische Spiegelung wurde aktualisiert. Dokumentiert sind rekursive, typbewahrende Ersetzungen mit exakten `$uix.*`-Werten und das vollständige Notify-Script-Beispiel; YAML und Jinja daraus bleiben unverändert. [Quellenvergleich](/projects/uix/source-audit-20261123-9528baa.json). Entwicklungsstand **9.2.0-beta.1**, stabile Basis **9.1.0**; keine neue HA-Laufzeitprüfung.

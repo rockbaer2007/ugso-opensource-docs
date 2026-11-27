@@ -2,7 +2,7 @@
 description: Learn how to review the Home Assistant DOM to become a UI eXtension expert.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.1**, revision [9528baa](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.3**, revision [6a2bad2](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8), reviewed 2026-11-27. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # DOM navigation
 
@@ -437,6 +437,7 @@ If you are adding a spark element of the same type, e.g. a tile icon **before** 
 After selecting `ha-tile-icon` in a tile card and running `uix_forge_path($0)`
 
 ```
+
 📦 Closest UIX Forge Parent
   Element: <uix-forge class=​"type-custom-uix-forge">​…​</uix-forge>​
 📍 Forge Path to Target
@@ -455,6 +456,48 @@ forge:
 ```
 
 :::
+
+<a id="uix_dashboard_inspect-current-dashboard-helper"></a>
+### `uix_dashboard_inspect()` — current dashboard helper
+
+Open the native Home panel or a Lovelace dashboard and run `uix_dashboard_inspect()` in the browser DevTools console. It saves the report as `window.uix_inspect.dashboard`. Read `rawConfig` for the saved configuration, `generatedConfig` for what Home Assistant is rendering, and `strategy` for the saved top-level strategy settings, if present. If the panel is still loading, wait for it to appear and run the helper again.
+
+```js
+uix_dashboard_inspect();
+window.uix_inspect.dashboard.strategy;
+```
+
+On the native Home dashboard, this gives you the `type: home` settings to copy into Forge's `element`. You can also generate a preview from those settings and find the Overview strategy it creates. See the [complete strategy inspection walkthrough](../forge/sparks/config.md#inspect-generated-strategies).
+
+```js
+await uix_strategy_inspect("dashboard", window.uix_inspect.dashboard.strategy);
+window.uix_inspect.strategy.paths("home-overview");
+await uix_strategy_inspect(
+  "view",
+  window.uix_inspect.strategy.config.views.find(
+    (view) => view.strategy?.type === "home-overview",
+  ).strategy,
+);
+window.uix_inspect.strategy.paths("favorites");
+```
+
+For a dashboard with strategies on individual Views or Sections, look under `window.uix_inspect.dashboard.rawConfig.views` for the saved strategy settings. Pass the relevant `strategy` entry to the helper below with the corresponding scope.
+
+<a id="uix_strategy_inspectscope-element-strategy-config-helper"></a>
+### `uix_strategy_inspect(scope, element)` — strategy config helper
+
+Pass the scope (`"dashboard"`, `"view"`, or `"section"`) and the settings you would put under Forge's `element`. The helper saves the generated output as `window.uix_inspect.strategy.config`. Use `paths(term)` to search its paths and values, `get(path)` to read one value, and `test(patches)` to try a Configuration Spark's patch list. For `$in_entities`, pass an object mapping Spark names to entity ID lists as the second argument to `test`. See [Test a patch](../forge/sparks/config.md#test-a-patch).
+
+```js
+await uix_strategy_inspect("view", { type: "home-overview" });
+window.uix_inspect.strategy.paths("home-summary");
+window.uix_inspect.strategy.test([{ op: "merge", path: "", value: { title: "Overview" } }]);
+```
+
+<a id="uix_entities_inspectforge-spark-entities-spark-helper"></a>
+### `uix_entities_inspect(forge, spark?)` — Entities Spark helper
+
+Inspect the entity IDs and list entries produced by an Entities Spark. Select a `<uix-forge>` in DevTools and run `await uix_entities_inspect($0)`. For a strategy, pass its Forge settings as a JavaScript object. If the Forge has several Entities Sparks, supply the Spark ID or its position in the Entities Spark list, counting from zero. The helper saves the report as `window.uix_inspect.entities`. See [Inspect a list](../forge/sparks/entities.md#inspect-a-list).
 
 <a id="uix_broker_path0-broker-directive-anchor-helper"></a>
 ### `uix_broker_path($0)` — Broker directive-anchor helper

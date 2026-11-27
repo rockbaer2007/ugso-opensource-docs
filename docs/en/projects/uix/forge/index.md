@@ -3,7 +3,7 @@ title: UIX Forge
 description: Learn about UIX Forge, a powerful custom element that combines templates, sparks, and UIX styling.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.1**, revision [9528baa](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.3**, revision [6a2bad2](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8), reviewed 2026-11-27. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 UIX Forge lets you use templates anywhere in a Home Assistant element's
 configuration, then add behaviours with [UIX Forge Sparks](./sparks/) and
@@ -16,7 +16,7 @@ In YAML, put the wrapped element's own configuration in
 when it needs to be passed through unchanged, and put the values Forge should
 change in `element`.
 
-Forge supports the card, badge, row, picture-element, section, footer, and card-feature molds. Cross-context molds allow embedding one element type in a different parent context, such as a card used as a row inside an entities card — see [Cross-context molds](./forge.md#cross-context-molds). The `element_base`/`element` layout works with every mold.
+Forge supports cards, badges, rows, picture elements, sections, footers, card features, and [Dashboard, View, and Section strategies](forge.md#strategies). The `element_base`/`element` layout works with every mold. You can also use a card as a row inside an Entities card with a [cross-context mold](forge.md#cross-context-molds).
 
 See [Forge](./forge.md) for complete forge config reference.
 
@@ -32,6 +32,9 @@ Sparks are optional behaviours that you add to the `forge.sparks` list. Each spa
 
 Available sparks:
 
+- :material-format-list-bulleted: [Entities](sparks/entities.md) — use auto-entities filters to fill a list or collect entity IDs for a patch or template.
+- :material-file-tree: [Configuration](sparks/config.md) — add, change, or remove parts of a config, including the output of a Home Assistant strategy.
+- :material-home-analytics: [Home Summary](sparks/home-summary.md) — choose which entities count toward a native Home Overview summary.
 - :speech_balloon: [Tooltip](./sparks/tooltip.md) — attach a styled tooltip to any element inside the forged element.
 - :material-button-cursor: [Button](./sparks/button.md) - attach a styled button (`ha-button`) with actions as a sibling before or after any element within the forged element.
 - :material-badge-account-horizontal-outline: [Badge](./sparks/badge.md) - insert a Web Awesome-styled `uix-badge` as a sibling before or after any element within the forged element.

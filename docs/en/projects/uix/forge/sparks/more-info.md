@@ -3,7 +3,7 @@ description: Use the more-info spark to embed Home Assistant more-info content i
 icon: material/information-outline
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.1**, revision [9528baa](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.3**, revision [6a2bad2](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8), reviewed 2026-11-27. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # More-info spark
 
@@ -224,5 +224,5 @@ uix:
 ![Forge spark more-info applied to shortcut card](/projects/uix/assets/page-assets/forge/sparks/more-info-shortcut-card.png)
 
 ::: warning Editorial source-code clarification (2026-11-20)
-At this frozen revision, target lookup prefers `after` (including the Blank Card default), while a nonempty `before` selects insertion before that resolved target. Do not combine both selectors or rely on an empty `after` to disable the Blank Card default. For predictable Blank Card placement, use explicit `after`. This is a source-code finding, not a new browser test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/9528baaee9cedc2cfb862cda2d6391b8a1fc647c/src/forge/sparks/uix-spark-more-info.ts).
+At this frozen revision, target lookup prefers `after` (including the Blank Card default), while a nonempty `before` selects insertion before that resolved target. Do not combine both selectors or rely on an empty `after` to disable the Blank Card default. For predictable Blank Card placement, use explicit `after`. This is a source-code finding, not a new browser test. [Frozen implementation](https://github.com/Lint-Free-Technology/uix/blob/6a2bad250e1af75b058353a22371154df23474c8/src/forge/sparks/uix-spark-more-info.ts).
 :::

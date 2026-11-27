@@ -4,6 +4,12 @@ description: État de la documentation UIX française.
 ---
 # État de la traduction
 
+## Comparaison 6a2bad2 / 675a633
+
+Le **27.11.2026**, comparaison des **69** pages canoniques jusqu'à [6a2bad250e1a](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8). Nouvelles pages : [Configuration](./forge/sparks/config), [Entities](./forge/sparks/entities), [Home Summary](./forge/sparks/home-summary), disponibles à partir de **9.2.0-beta.3**, avec stratégies, inspecteurs, navigation et cinq images. L'allemand propose les guides complets ; le français des synthèses avec les 30 blocs de code originaux inchangés. L'anglais est synchronisé.
+
+Les ajouts Toast (`supportingText`, icônes, `keepOpen`) et le script de notification Lock avec `$uix.*` sont également pris en compte. [Comparaison des sources](/projects/uix/source-audit-20261127.json). Base stable **9.1.0** ; pas de nouvel essai d'exécution HA.
+
 ## Complément 9528baa — actions de verrou et données d’exécution
 
 Le 23 novembre 2026, les **66** pages canoniques ont été comparées à [`dev 9528baaee9ce`](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c) : `broker/directives.md`, `extras/uix-actions.md` et `forge/sparks/lock.md` changent ; 63 pages sont identiques. Les traductions allemande et française remplacent les événements par les actions HA classiques `retry_action` / `failed_action`, avec ordre d’exécution et indication de migration. Le miroir anglais est actualisé. Les substitutions récursives à type conservé avec valeurs exactes `$uix.*` et l’exemple complet de script Notify sont documentés ; le YAML et Jinja de cet exemple restent inchangés. [Comparaison des sources](/projects/uix/source-audit-20261123-9528baa.json). Développement **9.2.0-beta.1**, base stable **9.1.0** ; aucun nouveau test d’exécution HA.

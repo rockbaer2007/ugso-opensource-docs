@@ -190,21 +190,32 @@ locks:
     max_retries: 3
     failed_action:
       action: perform-action
-      perform_action: persistent_notification.create
+      perform_action: script.notify_uix_lock_attempt
       data:
-        title: UIX lock failed
-        message: A user reached the maximum number of incorrect code entries.
+        user: "$uix.user"
+        retry: "$uix.retry"
+        browser_id: "$uix.browser_id"
 ```
 
-L’exemple crée directement une notification persistante après la troisième saisie incorrecte, sans automatisation supplémentaire ni autorisation d’émettre sur le bus d’événements. Ajoutez `retry_action` pour réagir séparément à chaque tentative :
+L'exemple actuel appelle un script après la troisième saisie incorrecte. Les valeurs exactes `$uix.*` transmettent utilisateur, compteur et ID Browser Mod : ce ne sont pas des templates Jinja. Créez ce script dans HA et remplacez `mobile_app_your_phone` par votre service de notification. HA évalue les expressions Jinja du script ; UIX ne fait que les substitutions `$uix.*`. Utilisez la même action sous `retry_action` pour chaque saisie incorrecte.
 
 ```yaml
-retry_action:
-  action: perform-action
-  perform_action: persistent_notification.create
-  data:
-    title: UIX lock retry
-    message: An incorrect lock code was entered.
+script:
+  notify_uix_lock_attempt:
+    alias: Notify about a UIX lock attempt
+    fields:
+      user:
+        required: true
+      retry:
+        required: true
+      browser_id:
+        required: false
+    sequence:
+      - action: notify.mobile_app_your_phone
+        data:
+          title: UIX lock attempt
+          message: >-
+            {{ user }} entered an incorrect code (attempt {{ retry }}) from {{ browser_id or "an unknown browser" }}.
 ```
 
 Les valeurs ordinaires de `data` sont transmises sans modification. Les valeurs exactes `$uix.*` peuvent insérer des données d’exécution ; voir les [substitutions dans les données](../../extras/uix-actions.md#action-data-substitutions). Utilisez une action de script pour un message dynamique ou un routage supplémentaire.

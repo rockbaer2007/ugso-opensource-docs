@@ -4,6 +4,45 @@ description: Home-Assistant-DOM prüfen und UIX-Selektoren sicher finden.
 ---
 # DOM-Navigation
 
+## Strategie- und Entitätsinspektoren ab 9.2.0-beta.3
+
+### `uix_dashboard_inspect()` – Dashboard untersuchen {#uix_dashboard_inspect-current-dashboard-helper}
+
+Öffne Home oder ein Lovelace-Dashboard und führe `uix_dashboard_inspect()` in der DevTools-Konsole aus. `window.uix_inspect.dashboard` enthält `rawConfig` (gespeichert), `generatedConfig` (dargestellt) und gegebenenfalls `strategy` (oberste Strategie). Warte bei einem noch ladenden Panel und wiederhole den Befehl. Auf Home kannst du dessen `type: home`-Einstellungen als Forge-`element` verwenden.
+
+```js
+uix_dashboard_inspect();
+window.uix_inspect.dashboard.strategy;
+```
+
+```js
+await uix_strategy_inspect("dashboard", window.uix_inspect.dashboard.strategy);
+window.uix_inspect.strategy.paths("home-overview");
+await uix_strategy_inspect(
+  "view",
+  window.uix_inspect.strategy.config.views.find(
+    (view) => view.strategy?.type === "home-overview",
+  ).strategy,
+);
+window.uix_inspect.strategy.paths("favorites");
+```
+
+Strategien einzelner Ansichten oder Sections findest du in `window.uix_inspect.dashboard.rawConfig.views`. Übergebe den betreffenden `strategy`-Eintrag mit seinem Bereich an den nächsten Helfer. Siehe [vollständiger Rundgang](../forge/sparks/config#inspect-generated-strategies).
+
+### `uix_strategy_inspect(scope, element)` – Strategieausgabe {#uix_strategy_inspectscope-element-strategy-config-helper}
+
+Übergebe `"dashboard"`, `"view"` oder `"section"` sowie die für Forge-`element` vorgesehenen Einstellungen. Ausgabe: `window.uix_inspect.strategy.config`. `paths(term)` durchsucht Pfade und Werte, `get(path)` liest einen Wert, `test(patches)` probiert Patches auf einer Kopie. Für `$in_entities` als zweites `test`-Argument ein Mapping aus Spark-Namen und ID-Listen übergeben. Siehe [Patch-Test](../forge/sparks/config#test-a-patch).
+
+```js
+await uix_strategy_inspect("view", { type: "home-overview" });
+window.uix_inspect.strategy.paths("home-summary");
+window.uix_inspect.strategy.test([{ op: "merge", path: "", value: { title: "Overview" } }]);
+```
+
+### `uix_entities_inspect(forge, spark?)` – Entities Spark {#uix_entities_inspectforge-spark-entities-spark-helper}
+
+Wähle `<uix-forge>` in DevTools und verwende `await uix_entities_inspect($0)`. Für Strategien deren Forge-Einstellungen als JavaScript-Objekt übergeben. Bei mehreren Entities Sparks eine Spark-ID oder Listenposition ab null angeben. Der Bericht steht unter `window.uix_inspect.entities`. Siehe [Liste untersuchen](../forge/sparks/entities#inspect-a-list).
+
 Home Assistant nutzt intensiv [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM). Dadurch lassen sich Komponenten wie `<ha-card>` oder `<ha-icon>` gut wiederverwenden. Für CSS-Styling bedeutet es aber, dass Elemente in einem `#shadow-root` nicht einfach von außen gestylt werden können.
 
 Wenn du Karten im Element-Inspector des Browsers untersuchst, siehst du oft Einträge wie `#shadow-root (open)`. Elemente darin erben nicht automatisch Styles aus dem äußeren DOM.

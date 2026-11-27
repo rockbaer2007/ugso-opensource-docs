@@ -2,11 +2,11 @@
   "reviewed_at": "2026-11-27",
   "hash_format": "SHA-256 of UTF-8 text with normalized LF line endings",
   "scope": "All Markdown pages, excluding these generated reports. Structural and technical inventory, not a sentence-by-sentence translation certification or an upstream-release audit.",
-  "source_pages": 255,
+  "source_pages": 258,
   "summary": {
     "de": {
-      "content-present": 255,
-      "existing_pages": 255,
+      "content-present": 258,
+      "existing_pages": 258,
       "unmatched_pages": 0,
       "review_signals": 0,
       "reviewed_findings": 0,
@@ -15,23 +15,23 @@
       "open_review_signals": 0
     },
     "en": {
-      "content-present": 255,
-      "existing_pages": 255,
+      "content-present": 258,
+      "existing_pages": 258,
       "unmatched_pages": 0,
       "review_signals": 67,
       "reviewed_findings": 74,
       "technically_compared": 188,
-      "content_reviewed": 251,
+      "content_reviewed": 254,
       "open_review_signals": 2
     },
     "fr": {
-      "content-present": 255,
-      "existing_pages": 255,
+      "content-present": 258,
+      "existing_pages": 258,
       "unmatched_pages": 0,
       "review_signals": 30,
       "reviewed_findings": 47,
       "technically_compared": 222,
-      "content_reviewed": 251,
+      "content_reviewed": 254,
       "open_review_signals": 0
     }
   },
@@ -11402,14 +11402,14 @@
         "en": {
           "path": "en/projects/uix/broker/broker.md",
           "status": "content-present",
-          "sha256": "af3d321408397e4427c51b033c99937a48e244b57cfca998f4713c8f83586827",
+          "sha256": "23b560a13f69edc714904b9e1c1255d25af97979587ea2eca59c7945ca9f8422",
           "words": 966,
           "headings": 7,
           "examples": 6,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11419,7 +11419,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11432,7 +11432,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Eight interaction options/defaults, ordered block behavior, browser-only listen lists, reentrancy scope, ready event on every reload, files-before-UI/config include/secret paths, synchronous rule/block versus50ms/two-second async retry and state_changed helper reactivity agree. French file-error reporting mistranslation and broken extra bracket repaired."
           }
         },
@@ -11487,24 +11487,26 @@
         "en": {
           "path": "en/projects/uix/broker/directives.md",
           "status": "content-present",
-          "sha256": "40c226d96853fa7a40399b6b8a462d72f79756be226e2fe3b804f9c606e59d04",
+          "sha256": "5dda4522ba2b9122a97a4e56fcb89f3454318f85da1133ddaaf9328994c3b8b4",
           "words": 4187,
           "headings": 20,
           "examples": 42,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
               "8.3.0-beta.3",
-              "8.3.0-beta.5"
+              "8.3.0-beta.5",
+              "9.2.0-beta.1"
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11517,7 +11519,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "All15directives compared in full localechunks: syncblock first/anchor-readiness,10directiveanchor defaults, copiedtypedwholevalues/notinterpolation, deepmerge/noarraymerge,callthisbinding, badgeparent placement,previous/textslots,action-handler ownership,templatebrowsercache/ms/JSONkey and synchronousJS-versusawaitedactionPromise agree. DEFR incompleteanchor lists restored, FRallrules prerequisite/cacheage/no-cache rerender/brackets and configdirective namespace corrected; encoded Jinja inline repaired. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
@@ -11573,21 +11575,21 @@
         "en": {
           "path": "en/projects/uix/broker/examples.md",
           "status": "content-present",
-          "sha256": "97f7a54a953aae0aff8a4f41893de367cccefe8a2e007433925571babe7cd1ac",
+          "sha256": "93e53f35473945342ea7a724458c2b4a5b4de70c4e5b1cb76a0ceb11ce3ee846",
           "words": 944,
           "headings": 6,
           "examples": 6,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -11600,7 +11602,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Five current broker examples and marked historical YAML-mode archive read; anchors, admin-only guard, synchronous block/event deepmerge, trigger-only filter, server helper/custombrowser event and exact matchIDs agree. FR accordion translated as extension/module corrected to foldout panels; toggle incorrectly turn-on corrected, home-assistant technical tag restored. DE frozen9.1 review label reconciled."
           }
         },
@@ -11653,14 +11655,14 @@
         "en": {
           "path": "en/projects/uix/broker/index.md",
           "status": "content-present",
-          "sha256": "f8e927ea677e9e71a1c03ad53a259bb35feb2ef0f21de2b706e93745f7cfafce",
+          "sha256": "90a32a45894d5c92812ca5501c8d7ff1d47e98f6579ad79bd0e5139232af93ba",
           "words": 320,
           "headings": 2,
           "examples": 2,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11670,7 +11672,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11683,7 +11685,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Three event realms, select/rule/directive flow, synchronous block exception, all sixteen directives, six guide links and Browser Mod identity prerequisite agree with canonical EN. German9.0 introduction is a historical feature baseline, not a claim of latest UIX release."
           }
         },
@@ -11736,14 +11738,14 @@
         "en": {
           "path": "en/projects/uix/broker/interaction-anchors.md",
           "status": "content-present",
-          "sha256": "1b819b599b1afb31efae0669cbb5eeb972b15b17de58e254c437c0c906a97e77",
+          "sha256": "1fa11a6665b3342a18f821c387e28e40697650626d7c5e95afa0cc6cc52f3e42",
           "words": 521,
           "headings": 10,
           "examples": 8,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11753,7 +11755,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11766,7 +11768,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Four compact selection forms, right-to-left composed path, browser/shortcut versus select-tree-only server, synchronous block,50ms/two-second retry, relative/absolute overrides and console helpers agree. French Shadow Root/Light DOM terminology and relative-anchor grammar clarified."
           }
         },
@@ -11819,14 +11821,14 @@
         "en": {
           "path": "en/projects/uix/broker/realms.md",
           "status": "content-present",
-          "sha256": "e1f3238ca98bbab6d86c2dfc84b2572c05a8434618e8cb7a863aabc7ddccab78",
+          "sha256": "95a300d5038a83d2bc8bf40d2fad11815969fe2d8b32a2527e3f95df6892d5e0",
           "words": 1037,
           "headings": 8,
           "examples": 5,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11836,7 +11838,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -11849,7 +11851,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Browser capture/detail roots, shortcut Tinykeys input conflicts, server select-tree only, synchronous block limits and three UIX lifecycle events/updateComplete sequencing agree. Missing distinct-enabled-event shared listener/subscription explanation restored in DE/FR. French keyboard key terminology and grammar repaired."
           }
         },
@@ -11904,14 +11906,14 @@
         "en": {
           "path": "en/projects/uix/broker/rules.md",
           "status": "content-present",
-          "sha256": "6a3d45ad8a23929f7313c9da2ef731f27dfd279b337b6213a7d505037482ffc1",
+          "sha256": "0a6cdab8bd67eed45d8219e8fb5cacbd026ae39a4ba1286c7d45d1a8078d4dd2",
           "words": 1067,
           "headings": 11,
           "examples": 12,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -11923,7 +11925,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -11936,7 +11938,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Seven typed rules, name/ID versus unavailable login, positiveOR/negativeboth exclusions, hostundefined-versus-absent, captured roots/bracket paths/operators and async-panelblock incompatibility agree. DE absolute/relative rule anchor explanation restored. FR indented unfenced YAML had translated type/user keys: repaired and regression checks added; earlier fenced-only technical comparison did not detect these. French user matching prose repaired. No runtime test."
           }
         },
@@ -11990,14 +11992,14 @@
         "en": {
           "path": "en/projects/uix/concepts/application.md",
           "status": "content-present",
-          "sha256": "ba47ad8f3c3cdd319771828d61b28a841e29875ba7f569746c67ef1c86c9b6af",
+          "sha256": "06283aa4f582f98f5df1cfb0f7dd0b6129cb94d920c668da4079907e7dad4685",
           "words": 577,
           "headings": 4,
           "examples": 6,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12005,7 +12007,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12018,7 +12020,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Three patch/apply/ignore definitions, standard/custom/streamline structures and dual-selector/theme examples agree with canonical EN. Missing lifecycle-events navigation restored in DE/FR. Canonical uppercase UIX-card typo corrected to case-sensitive uix-card using a source-bound sync correction; no code examples changed."
           }
         },
@@ -12070,20 +12072,20 @@
         "en": {
           "path": "en/projects/uix/concepts/context.md",
           "status": "content-present",
-          "sha256": "3bc0e2abf097ad63cbde47cb34266f9e04077eba87f08c2034eea2d9d1540585",
+          "sha256": "c3f4090e377620c97dc09477f77aad5db2bb7cf4c5e4dbdf71bdc01595b8cb3c",
           "words": 552,
           "headings": 10,
           "examples": 10,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12091,13 +12093,13 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "First matching theme anchor, direct same-host precedence, inherited subtree/specific exceptions, user display names preserved, five exact allowed name parts, grouped requests, punctuation control and inspector/debug helpers agree against frozen canonical EN. All energy/view/card/direct examples retain their purposes."
           }
         },
@@ -12140,32 +12142,33 @@
         "de": {
           "path": "projects/uix/concepts/dom.md",
           "status": "content-present",
-          "sha256": "8f6ac782da3f8aa4c11b564a4596eed739c72095465d7c3cdeaf6aee4ae95fde",
-          "words": 1504,
-          "headings": 12,
-          "examples": 26,
-          "versions": [],
+          "sha256": "cd9ab5cd7918868a13116fe04fadb7d90350cd1280e9a00dd85f3964c36e98fc",
+          "words": 1726,
+          "headings": 16,
+          "examples": 29,
+          "versions": [
+            "9.2.0-beta.3"
+          ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/concepts/dom.md",
           "status": "content-present",
-          "sha256": "5b03fb6045684fa629feae23af64cb877be4916207f9990161f2c78609cff41a",
-          "words": 2210,
-          "headings": 9,
-          "examples": 28,
+          "sha256": "61c3bee72991c73c3ba2b10d5e5e96bafe95849d076ce1e932ef3df6d91a2f56",
+          "words": 2530,
+          "headings": 12,
+          "examples": 31,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0",
-              "9.2.0-beta.1"
+              "9.1.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12178,18 +12181,20 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "FullDEENFR selector tutorial/18hostpropertytokens, first-versus-all and trailing$ chain behavior, $$midpath/retrycost, bareundefined/missing/null distinction, arrayindices and fiveDOMhelpers agree. DE outdatedthreehelper count removed; remaining FR English headings/tablefragment translated. No mutation/execution of user's dashboards."
           }
         },
         "fr": {
           "path": "fr/projects/uix/concepts/dom.md",
           "status": "content-present",
-          "sha256": "f169f324583ec2aa5b2f7af3178c5b98b3d4f8fd751b9898d70c142331664579",
-          "words": 2527,
-          "headings": 26,
-          "examples": 43,
-          "versions": [],
+          "sha256": "e60ccf3028c48d7dcb409e6dc765e81c039003107181739f0fe0371a1e00cb25",
+          "words": 2750,
+          "headings": 31,
+          "examples": 46,
+          "versions": [
+            "9.2.0-beta.3"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -12205,13 +12210,13 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-27",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-27",
             "assessment": "FullDEENFR selector tutorial/18hostpropertytokens, first-versus-all and trailing$ chain behavior, $$midpath/retrycost, bareundefined/missing/null distinction, arrayindices and fiveDOMhelpers agree. DE outdatedthreehelper count removed; remaining FR English headings/tablefragment translated. No mutation/execution of user's dashboards."
           }
         }
@@ -12233,14 +12238,14 @@
         "en": {
           "path": "en/projects/uix/concepts/index.md",
           "status": "content-present",
-          "sha256": "4c83b8c070ed36782c9eb9a6eb54f08f326f2b4289be7dee13df10a5f397aca4",
+          "sha256": "911e0e80e7353204ba252b92e8d32cca32de489fb0ffd21d15a3f395445ab05c",
           "words": 154,
           "headings": 2,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12248,7 +12253,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12261,7 +12266,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "DOM/application/context destinations and UIX styling-node concept agree with the canonical English overview. French practical quick-start/Styling/Forge links added from the German local guidance; canonical English retains its original guide-oriented introduction."
           }
         },
@@ -12315,7 +12320,7 @@
         "en": {
           "path": "en/projects/uix/contributing.md",
           "status": "content-present",
-          "sha256": "bd370df5e11bde3f56e028669e5272f035f5685fee37f0145659fb35f527e9f0",
+          "sha256": "96571302816985ca2a6e6b96411949734fa172c7ac58f929ed25c99183249648",
           "words": 1824,
           "headings": 11,
           "examples": 6,
@@ -12325,7 +12330,7 @@
             "8.3.0",
             "8.3.0-beta.1",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12336,7 +12341,7 @@
               "2026.11.0",
               "5.0.1-mydev.1",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12349,7 +12354,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Original integration/frontend versus unofficial docs, versionbuild/restart/no bundlecommit, MITcode versusCCBYprose/grandfatheredMIT, Zensical workflow/translationfork directories and metadata contracts agree. Missing DE integration/frontend consistency and licensing scope restored. Canonical66page reference unchanged; all curator optin/preview/no public posting effects, prerelease compatibility window and warn-notfail health-check boundaries retained. Omitted canonical EN registration section reread in full."
           }
         },
@@ -12405,14 +12410,14 @@
         "en": {
           "path": "en/projects/uix/debugging/cache.md",
           "status": "content-present",
-          "sha256": "749d639950655f6d61f1e08a589267eb728b922a553f165e0e5e22a9170ac80f",
+          "sha256": "be8e922dc4410669e9c48d64fde5570186c8b779779f448aabbecd835cd91119",
           "words": 206,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12420,7 +12425,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12433,7 +12438,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Cache Storage deletion/reload versus preserved localStorage/BrowserMod ID agree and retain the implementation-based correction. French cache symptoms/reload order added from German advice; no recommendation to erase all browser/app data."
           }
         },
@@ -12482,14 +12487,14 @@
         "en": {
           "path": "en/projects/uix/debugging/cards.md",
           "status": "content-present",
-          "sha256": "3911561980a366a01db0fec28a5236a956ca4bceea803907481a087bc6381b7b",
+          "sha256": "23ce6bc2b76ba630066e7a152bcb8219f5eb12b1d7bc6f263cc296ffdf79fe2b",
           "words": 544,
           "headings": 2,
           "examples": 4,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12497,7 +12502,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12510,7 +12515,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Inspector chain/string-versus-object/input/children/parent workflow and both type/class debug variables agree. French raw MkDocs warning converted to a rendered warning; misleading final exclusion of card-local themes corrected: active HA theme may be local, but UIX config alone is not a theme variable."
           }
         },
@@ -12560,14 +12565,14 @@
         "en": {
           "path": "en/projects/uix/debugging/index.md",
           "status": "content-present",
-          "sha256": "504ee0ec95d429b119554f055a5bc8d5687b7460877b4ccf4ae1def960fd24d8",
+          "sha256": "51488860b05b4e8c6b2ef9891c73aea044b67be10f23ec235316aee96df92b45",
           "words": 119,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12575,7 +12580,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12588,7 +12593,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "All three debugging topics and five DOM helpers retained. French missing introductory troubleshooting context and cache/resources/selectors/delayed-render causes restored; English is the compact canonical index."
           }
         },
@@ -12638,14 +12643,14 @@
         "en": {
           "path": "en/projects/uix/debugging/templates.md",
           "status": "content-present",
-          "sha256": "b51d255834b7b7938172a1773c5cfc12fdf48dae405456b6b7efd42189c9f98c",
+          "sha256": "7f243a0c321edea0de74b2619456bcfdb322ad4c72dc1c855ce894c3e7c98613",
           "words": 156,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12653,7 +12658,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -12666,7 +12671,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Canonical debug marker, five lifecycle events and20-second subscription cooldown preserved. French four-step fixed-value/CSS/condition/type workflow, common entity/none/YAML causes and CSS fallback explanation restored from German local guidance. Canonical EN deliberately remains the original compact API explanation."
           }
         },
@@ -12715,14 +12720,14 @@
         "en": {
           "path": "en/projects/uix/developers/cards.md",
           "status": "content-present",
-          "sha256": "e555c593c3fde271394f63286ece84bc5627481b52156a9abb4415e11539436f",
+          "sha256": "4ca64acbc701c028b09df7b45e87e05fe3a21d02b053ee78771ea75560d618b6",
           "words": 367,
           "headings": 2,
           "examples": 4,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12730,7 +12735,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12743,7 +12748,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Automatic hui-card/ha-card cases and missing-config fallback now have explicit AND/OR nesting in German matching EN/FR. Four optional config fields, local theme application and custom-card/YAML/theme purpose agree. Frozen EN first JS example had missing comma/callback delimiters, repaired with visible editorial note, original hashes retained and source-bound sync guard; all DE/EN/FR JS examples parse with node --check. French remaining English theme/alt labels translated. No browser runtime test claimed."
           }
         },
@@ -12793,14 +12798,14 @@
         "en": {
           "path": "en/projects/uix/developers/index.md",
           "status": "content-present",
-          "sha256": "133318d9b4338a84e67b3996e66ebf50fdb03e2be1944195121a511fe4bde6fd",
+          "sha256": "9bbe01c1e52fcb055743f9981a36f8e460936ae8c211b087eb457640752eca8e",
           "words": 115,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12808,7 +12813,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12821,7 +12826,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Custom-card/theme/integration audience and both developer guides agree. German stable-DOM advice added to French; canonical English keeps its concise navigational introduction."
           }
         },
@@ -12871,14 +12876,14 @@
         "en": {
           "path": "en/projects/uix/developers/themes.md",
           "status": "content-present",
-          "sha256": "e05b41e57e66e9d496d7cace2d32cfb01a551ecda7c37c3a03c11efd25b3a22f",
+          "sha256": "add8206a9b1b2df19d3faa7ca983b67ebe495b0d28dab9fe88a60fc18be31417",
           "words": 175,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12886,7 +12891,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -12899,7 +12904,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "No bundling UIX in themes, quick-start dependency requirement, manifest.json dependency for integrations and discussion destination retained. Four German theme recommendations and example are present in French; canonical English focuses on integration-distribution rules."
           }
         },
@@ -12956,14 +12961,14 @@
         "en": {
           "path": "en/projects/uix/extras/always-patch-ha-card.md",
           "status": "content-present",
-          "sha256": "51ee46cce9a2f8208a2b515b6a9e272744494865cb5063d8f116a6ed47f6b2a4",
+          "sha256": "a26dfbd76cf3c755367b0b091bddcb30adece061822aa29a7a02ac868ca68adf",
           "words": 263,
           "headings": 3,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -12973,7 +12978,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -12986,7 +12991,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Default unset, ancestor-config condition, experimental scope, config/custom panels, uix-card(-yaml), type-generic-card and immediate availability with possible reload agree with canonical EN. French translated labels retain identical meaning."
           }
         },
@@ -13040,20 +13045,20 @@
         "en": {
           "path": "en/projects/uix/extras/custom-sidebar-panels.md",
           "status": "content-present",
-          "sha256": "3e614b36b4dcbbc462662b85b6ec4fd7c1bf47926be0060d22c9e5e7d80e06f4",
+          "sha256": "3f3c8c1deac727c05f27e8cd044deb7849f0af3edb266fa428c6d7edb9f65309",
           "words": 408,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13061,13 +13066,13 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Stable9.1/HA2026.11 prerequisite, supported target schemes, admin restriction, desktop internal new-tab versus Companion navigation, popup fallback, stable internal URL/edit/delete/order and history-replacing redirect agree with canonical EN. External URLs not falsely offered inside Companion."
           }
         },
@@ -13120,14 +13125,14 @@
         "en": {
           "path": "en/projects/uix/extras/dialog-styling-delay.md",
           "status": "content-present",
-          "sha256": "bd92b463875bc6c4290cdd4990da7587d8694979f8bd9247f628080d7d687cbf",
+          "sha256": "426afb40e58124fa4f49b05c408c8de39c9c39712eea3b58921caf32efa620f5",
           "words": 618,
           "headings": 11,
           "examples": 4,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13135,7 +13140,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13148,7 +13153,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Default off, after-show rather than mid-animation, immediate integration setting, per-session true/false/null priority, Browser Mod/default action and button-card examples agree. German hard-reload test step contradicted temporary override behavior; now reopen without reload. French comparison workflow restored; canonical EN intentionally shorter reference."
           }
         },
@@ -13203,14 +13208,14 @@
         "en": {
           "path": "en/projects/uix/extras/disable-entity-picture-image-override.md",
           "status": "content-present",
-          "sha256": "80ba41623b6bfc63e5f0efe56fa9365f24d164b31756c368965a6f2d085f87a2",
+          "sha256": "91acfead15be993fb0d53247ec8610ea79ec0d6a855249d281e40bf971a5536d",
           "words": 255,
           "headings": 3,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13218,7 +13223,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13231,7 +13236,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Five affected badge/marker elements, image variables, unset default, immediate effect without reload and preserved other styling agree. German vague menu step replaced with canonical Performance settings."
           }
         },
@@ -13280,14 +13285,14 @@
         "en": {
           "path": "en/projects/uix/extras/disable-icon-styling.md",
           "status": "content-present",
-          "sha256": "c0c097b48b563e396462a5b753d51f9036262ddafcf0b582720a8bb788fb06f8",
+          "sha256": "67b68fdefac053acce885f120c07f264133063fe3ca6a7aa3871dabc9a93d910",
           "words": 255,
           "headings": 3,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13295,7 +13300,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13308,7 +13313,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Three affected icon elements, icon/color/dim/entity-specific overrides, default unset, immediate no-reload performance option and other styling retained agree with canonical EN."
           }
         },
@@ -13357,14 +13362,14 @@
         "en": {
           "path": "en/projects/uix/extras/frontend-states-throttling.md",
           "status": "content-present",
-          "sha256": "8d738a45535f718af8ea88c1c7d037f35f23b8e78fc53d905983893f071a9386",
+          "sha256": "e2bc70e336bad49714ddcf75041eeaa4f1165325858486d9514fb1a7ab984bc7",
           "words": 825,
           "headings": 12,
           "examples": 4,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13372,7 +13377,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -13385,7 +13390,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Only hass.states versus unaffected backend, default200/range50-10000, interval+50ms after last suppressed update/cancel on natural update and session versus global precedence compared with frozen canonical EN and coordinator connection.ts. DE/FR obsolete numeric API calls corrected to object enable/ms; null restores defaults rather than always disabling. No-reload comparison clarified; canonical examples unchanged with explicit editorial null clarification."
           }
         },
@@ -13434,14 +13439,14 @@
         "en": {
           "path": "en/projects/uix/extras/hash-template-variable-updates.md",
           "status": "content-present",
-          "sha256": "3b8080017621cae90495cda178f28c17cfa83b33a148af2f4475332fc4a4c7b0",
+          "sha256": "0da7e85a0bb5af612f2e98c7b724dadf505a1bd54800ad8067a56ceeafa83f4b",
           "words": 286,
           "headings": 3,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13449,7 +13454,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13462,7 +13467,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Disabled-by-default option, four configuration steps, immediate all-session effect, removal of hash and prevention of template/Forge hash updates agree with canonical source. French event names restored and broken MkDocs warning/escaped Jinja converted to readable VitePress markup without changing the expressions."
           }
         },
@@ -13512,14 +13517,14 @@
         "en": {
           "path": "en/projects/uix/extras/index.md",
           "status": "content-present",
-          "sha256": "b8645759baab871e3da6a5254978633186831206040c75e851853acd04b20eb2",
+          "sha256": "bec26cf40961753889f168363606dfc409afb82d6ef2e5ea8522002abf002566",
           "words": 170,
           "headings": 0,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13527,7 +13532,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13540,7 +13545,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "All nine settings destinations and both explicit experimental labels agree. Canonical EN/FR use a compact index rather than German editorial headings; no functional omission."
           }
         },
@@ -13662,7 +13667,7 @@
         "en": {
           "path": "en/projects/uix/extras/style-frame-panels.md",
           "status": "content-present",
-          "sha256": "9a815897ee84365fd81ef8be064be4153859e2d65d8a0bf0828e683507b22507",
+          "sha256": "be7ad6cb0bb180af5c61bfcc2c0382766d0cdb78502508f158ee654256b5ef9f",
           "words": 484,
           "headings": 3,
           "examples": 0,
@@ -13670,7 +13675,7 @@
             "2026.11.0",
             "9.0.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13678,7 +13683,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13691,7 +13696,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Experimental default off, same-origin frames versus unaffected host styling, Lit/non-Lit fallback CSS-only limitation, per-app validation, immediate setting with possible reload, target slug precedence and only matching theme target agree with canonical EN. Console version is illustrative, not a current-version assertion."
           }
         },
@@ -13733,15 +13738,16 @@
         "de": {
           "path": "projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "6416d212bf4d2abf90fe03b1e12668ca9c18ffc5c127bb546afb32ac070efc9f",
+          "sha256": "5048919dd31543b2ba68e6a4229bb3bdf1aeb9bf2839a5bac64ef848cb0d90a0",
           "words": 1585,
           "headings": 15,
-          "examples": 12,
+          "examples": 13,
           "versions": [
             "2026.11.0",
             "8.3.0-beta.2",
             "8.4.0",
             "9.0.0",
+            "9.1.0-beta.3",
             "9.2.0-beta.1"
           ],
           "unresolved_local_references": []
@@ -13749,26 +13755,29 @@
         "en": {
           "path": "en/projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "4c1c8cbe62335c66fe5d8a283fa7a77b25ab03bad9301aab9bcdba17580f84dc",
+          "sha256": "ca14e1e09020ef4b377353c6f9971ae372423e969a66f68ed827aab4573e3acf",
           "words": 2010,
           "headings": 15,
           "examples": 12,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.1.0-beta.3",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [
               "8.3.0-beta.2",
               "8.4.0",
-              "9.0.0"
+              "9.0.0",
+              "9.2.0-beta.1"
             ],
             "versions_only_in_translation": [
-              "9.1.0"
+              "9.1.0",
+              "9.2.0-beta.3"
             ],
-            "fewer_examples": false,
+            "fewer_examples": true,
             "substantially_shorter": false,
             "fewer_headings": false
           },
@@ -13779,21 +13788,22 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
         "fr": {
           "path": "fr/projects/uix/extras/uix-actions.md",
           "status": "content-present",
-          "sha256": "1dc2f8f52aa3246eaa4f58f29e05f9d2f0c53f4f8e519687fb9f722b5e705188",
+          "sha256": "fe8571a9f34031aad6fdd85b8a2f877fe59dbdb7223e1b1661a25d2e703262ea",
           "words": 2107,
           "headings": 15,
-          "examples": 12,
+          "examples": 13,
           "versions": [
             "2026.11.0",
             "8.3.0-beta.2",
             "9.0.0",
+            "9.1.0-beta.3",
             "9.2.0-beta.1"
           ],
           "unresolved_local_references": [],
@@ -13813,7 +13823,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Sixbrowseractions,fire-dom-event support,clearcache/localStorage,defaultwindow versus brokerplacementevent,formdata transfer, sixmoreinfoviews,toast4000/-1, popovertimeoutbounds/headerfooter/buttons and sessionlockmatching/retryids agree. DE missing localStorage retention/aliases made explicit. FR detail/field-name wording retains technical keys. Frontendguard distinct from HAauthorization. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         }
@@ -13840,7 +13850,7 @@
         "en": {
           "path": "en/projects/uix/faq.md",
           "status": "content-present",
-          "sha256": "47c2e7789e2b948e432d29a338b337f2f49110dba0c11994ce4c147ff9c8ac13",
+          "sha256": "8fce9aa0491056e679b0032551d8258916edfe16bab7a25f891ed6e8e0d502ab",
           "words": 1113,
           "headings": 11,
           "examples": 0,
@@ -13852,7 +13862,7 @@
             "8.0.1",
             "8.1.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13864,7 +13874,7 @@
               "8.0.1",
               "8.1.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -13877,7 +13887,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Card-mod4.2.1 compatibility versus no parallel resources, Minimalist load-order conflict, precedence, CAST/version resources,60s reload and server-restart requirement, uninstall service/config versus preserved YAML agree with frozen canonical EN. Missing DE six key/debug differences restored; FR obsolete beta preview label made historical. Full DE reread after truncation."
           }
         },
@@ -13926,26 +13936,27 @@
         "de": {
           "path": "projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "57a8a6581545c61e9fe2d76f0e39384d10812092fd1ba928e518e271066455db",
-          "words": 3745,
-          "headings": 53,
-          "examples": 40,
+          "sha256": "d7870ddd832273f0eccb5e9791781b28594a0f31b85f6d3bd5a967b9bf2cdffe",
+          "words": 4151,
+          "headings": 56,
+          "examples": 43,
           "versions": [
-            "9.0.0"
+            "9.0.0",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "005468a6fa56cff8a228991014c04259a2a2074247510c4c69841dfdcfde6522",
-          "words": 7244,
-          "headings": 41,
-          "examples": 37,
+          "sha256": "f324c4360fe24c3aabeb56ab653a7d70fdee1eddef8b2da6495fa4679ef8deba",
+          "words": 7796,
+          "headings": 44,
+          "examples": 40,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13954,8 +13965,7 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0",
-              "9.2.0-beta.1"
+              "9.1.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -13968,19 +13978,20 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Full visualfivepanel/nativebase/disabledpath/null/sourcepreservation/reference in DEENFR read plus sevenmolds/sevencrossmolds/9options/footer/table/billets/nesting. DE falsemacro-nesting support corrected, Jinja-in-billet exception andcardfeaturecontext restored. DEFR runtime-default exceptions, invalidYAML outerSave gate/tabdiscard/inheritedsparkresumption and nullvalue-versus-keydeletion clarified. FR HTMLencoded inlineJinja rendered literally fixed to protectedcode; canonicalENcodeunchanged."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/forge.md",
           "status": "content-present",
-          "sha256": "98427f6f8db2943ae3c4ff98b8ef2ade01dc0f67e1eeda22407554021354fabd",
-          "words": 6247,
-          "headings": 81,
-          "examples": 75,
+          "sha256": "31c8611f23eff549e37756e5e14ea409a9b0dfc8516b1a9edb7abc710ac844f7",
+          "words": 6527,
+          "headings": 84,
+          "examples": 78,
           "versions": [
-            "9.0.0"
+            "9.0.0",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -13997,13 +14008,13 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-27",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-27",
             "assessment": "Full visualfivepanel/nativebase/disabledpath/null/sourcepreservation/reference in DEENFR read plus sevenmolds/sevencrossmolds/9options/footer/table/billets/nesting. DE falsemacro-nesting support corrected, Jinja-in-billet exception andcardfeaturecontext restored. DEFR runtime-default exceptions, invalidYAML outerSave gate/tabdiscard/inheritedsparkresumption and nullvalue-versus-keydeletion clarified. FR HTMLencoded inlineJinja rendered literally fixed to protectedcode; canonicalENcodeunchanged."
           }
         }
@@ -14015,27 +14026,28 @@
         "de": {
           "path": "projects/uix/forge/foundries.md",
           "status": "content-present",
-          "sha256": "9fcb59998207327a165923fe34132a9608eaf1858e9fb21e8b19b97ec01278ac",
-          "words": 1084,
+          "sha256": "637fe713de895d1ae73956cc01cc080f2e0dea5ff86259c7f8fe8c728b66d139",
+          "words": 1149,
           "headings": 48,
           "examples": 29,
           "versions": [
             "9.0.0",
-            "9.1.0"
+            "9.1.0",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/forge/foundries.md",
           "status": "content-present",
-          "sha256": "7b223a13bad3f97306008f0fe60eeacb8222c5d5434c75ad3d7ebc884a6cc652",
-          "words": 1739,
+          "sha256": "753bbaa34a2255df8ec6ec365cb22f3e344a32032f38e539d58d5757e4054f1f",
+          "words": 1798,
           "headings": 35,
           "examples": 28,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14043,8 +14055,7 @@
               "9.0.0"
             ],
             "versions_only_in_translation": [
-              "2026.11.0",
-              "9.2.0-beta.1"
+              "2026.11.0"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14057,20 +14068,21 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "FullDEENFR global/mold/named/local mergeorder, UIoverfile/latestregisteredfile, arrayclear and sameid+type sparkmerge, nativebase/type/no-local-disabledpaths, quotedUI versus unquotedfile includes/secrets, typedreturns and billetnull fallback agree. DE oldercitation updated frozen9.1, originalEN examples retained. No liveHA operation."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/foundries.md",
           "status": "content-present",
-          "sha256": "f329151d2c8faefcab18a5a701c26d0e45122ecbbd6b5403902bbde457f37284",
-          "words": 2113,
+          "sha256": "61a5922d55dd8bc0999a499bf48ccf69382e62283e6af98f47ed6ba9042885b9",
+          "words": 2169,
           "headings": 59,
           "examples": 44,
           "versions": [
             "9.0.0",
-            "9.0.0-beta.0"
+            "9.0.0-beta.0",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14091,7 +14103,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-27",
             "assessment": "FullDEENFR global/mold/named/local mergeorder, UIoverfile/latestregisteredfile, arrayclear and sameid+type sparkmerge, nativebase/type/no-local-disabledpaths, quotedUI versus unquotedfile includes/secrets, typedreturns and billetnull fallback agree. DE oldercitation updated frozen9.1, originalEN examples retained. No liveHA operation."
           }
         }
@@ -14103,27 +14115,28 @@
         "de": {
           "path": "projects/uix/forge/index.md",
           "status": "content-present",
-          "sha256": "c8b4a5e33383d77d687a638176bde646cdde0eb4dc9ef26b0eba18a9d7b57b39",
-          "words": 426,
+          "sha256": "92d7fabb2f86e2ab19e2b1e5e2ae0e6f65c94c0224679fb6e918f6d6275cd1f3",
+          "words": 495,
           "headings": 3,
           "examples": 0,
           "versions": [
             "9.0.0",
-            "9.0.0-beta.0"
+            "9.0.0-beta.0",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/forge/index.md",
           "status": "content-present",
-          "sha256": "d9cd5de406f075e84882f0067d07656d0dc1fe658e274c2de3e7d4574ba42f40",
-          "words": 691,
+          "sha256": "967fabca47c41d87d16d3eec3084f2e34119cc8e291163f4f54c0b9b7d13223b",
+          "words": 753,
           "headings": 2,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14133,8 +14146,7 @@
             ],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0",
-              "9.2.0-beta.1"
+              "9.1.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14147,25 +14159,29 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Seven molds/cross-context, preserved element_base versus changed element, local disabled paths, Foundry source/export preservation and optional sparks agree. Missing Badge destination restored in DE/FR; More-info local navigation added. EN remains the frozen canonical overview and links its separate complete spark index."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/index.md",
           "status": "content-present",
-          "sha256": "680dbde794bdd1650557d55377b499639ecfa3c5bd0c2d526e3e18f337273c7d",
-          "words": 613,
+          "sha256": "2beb606892ff406cd782459063223fc5e842e5450ac9961223a61504809d01b6",
+          "words": 656,
           "headings": 2,
           "examples": 0,
           "versions": [
             "9.0.0",
-            "9.0.0-beta.0"
+            "9.0.0-beta.0",
+            "9.1.0",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
-            "versions_only_in_translation": [],
+            "versions_only_in_translation": [
+              "9.1.0"
+            ],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
@@ -14177,7 +14193,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-27",
             "assessment": "Seven molds/cross-context, preserved element_base versus changed element, local disabled paths, Foundry source/export preservation and optional sparks agree. Missing Badge destination restored in DE/FR; More-info local navigation added. EN remains the frozen canonical overview and links its separate complete spark index."
           }
         }
@@ -14199,14 +14215,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/attribute.md",
           "status": "content-present",
-          "sha256": "08227ed5fc49fff962a449944537a41d36d1bbc5d2c5d4d9f18570d4bedcdcb3",
+          "sha256": "d0a97a67353d2de4fe728f77b9b4015a297c44c1e5bebf962bb5772ddf0b930e",
           "words": 417,
           "headings": 6,
           "examples": 3,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14214,7 +14230,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14227,7 +14243,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Five fields/defaults, first-match semantics, Blank Card selector, shadow-root crossing, templated value and empty attribute versus remove agree. Three example purposes retained; German Tooltip alternative is an editorial suggestion rather than different API behavior."
           }
         },
@@ -14276,14 +14292,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/background.md",
           "status": "content-present",
-          "sha256": "cbd26d07e5ca173b9df5fea36dcd7cc8f3a2f53f13eed05b6beefb1a7ec415e8",
+          "sha256": "2f3a6166cfe69ea7d8c8bcd7328b5c5b9e25d5d06f0b00af1bd8ed452a2a7b09",
           "words": 1994,
           "headings": 24,
           "examples": 16,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14291,7 +14307,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14304,7 +14320,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Fiveprioritysources,16configfields,cache20s connectedholder/samedimensions,media_source resolution,ha-card/section adapters/restorepadding and stringreplacement-versus-object overrides reviewed. DE supplemental dissolve_target examples used invalid stringlist/opacity(0.5); confirmed against frozen uix-spark-background.ts _applyDissolveTarget then corrected DE and matchingFR supplements to CSSmapping/opacity_50 with expliciterrata. CanonicalEnglish examples unchanged. DE priority/z-index restored."
           }
         },
@@ -14361,21 +14377,21 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/badge.md",
           "status": "content-present",
-          "sha256": "06f6c08c2332c03b83f4ac3a134a63d26dc37a00a683adde8b3518089f3c9fba",
+          "sha256": "28daed3f5bf2f10e7971b3ae055e907af3a4b4be0af98bf5bf5c4b8a3374c905",
           "words": 1787,
           "headings": 12,
           "examples": 7,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14388,7 +14404,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Elevenconfigrows/twentyCSSvariables, only ha-button/ha-tile-icon automatic top-end, contents-wrapper recognition, other targets parent not measured, twelve placements/percentage offsets and text-notHTML agree. Six example purposes and pulse-static-shadow/hover/directpointer rules retained. DEFR attribution now references frozen9.1.0 comparison rather than former8.4 source link."
           }
         },
@@ -14442,14 +14458,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/button.md",
           "status": "content-present",
-          "sha256": "75cd94d755d12c163b0b416bcb44e23fd387910243cd2465d11f000412ddf08b",
+          "sha256": "60821f0dcd6f597240f5a633524c541ee0ff63673c93d82bff0e8fb73bddbd83",
           "words": 1347,
           "headings": 7,
           "examples": 7,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14459,7 +14475,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14472,7 +14488,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Sixteenoptions/sevenCSSvariables, icon-over-label/neutralplain versus labelledbrandaccent, isolatedtileactions and five example purposes agree. Frozen button.ts reveals after-target lookup plus before insertion/Blankdefault pitfall like more-info; misleading empty-after workaround replaced in all locales with source-bound editorial warning. Outlined omitted from ENFR closing prose restored; canonical code unchanged."
           }
         },
@@ -14508,6 +14524,148 @@
       }
     },
     {
+      "source": "projects/uix/forge/sparks/config.md",
+      "locales": {
+        "de": {
+          "path": "projects/uix/forge/sparks/config.md",
+          "status": "content-present",
+          "sha256": "3a0f244020e6bbb6b3772c8fd84412e3683a95db28da9540b9d46a0cdf4a12fb",
+          "words": 1969,
+          "headings": 17,
+          "examples": 15,
+          "versions": [
+            "2026.11.0",
+            "9.1.0",
+            "9.2.0-beta.3"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/uix/forge/sparks/config.md",
+          "status": "content-present",
+          "sha256": "a55777e03f4ddae95325f958da78ce323e55cd706e14224db0c8ae5e53e5b3d9",
+          "words": 2280,
+          "headings": 17,
+          "examples": 15,
+          "versions": [
+            "2026.11.0",
+            "9.1.0",
+            "9.2.0-beta.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-27",
+            "assessment": "Reviewed prerequisite 9.2.0-beta.3, stable baseline 9.1.0, options and defaults, filters and query-only limitations, patch/strategy/update behavior, editor scope, inspectors, original examples and image/link targets. French is an explicitly identified editorial summary with unchanged examples; English is a canonical adaptation."
+          }
+        },
+        "fr": {
+          "path": "fr/projects/uix/forge/sparks/config.md",
+          "status": "content-present",
+          "sha256": "6bf2d5bc8c942d82699c8be606abb0731f0a8d89cb75dd973d4fb50b7fecccca",
+          "words": 1489,
+          "headings": 17,
+          "examples": 15,
+          "versions": [
+            "2026.11.0",
+            "9.1.0",
+            "9.2.0-beta.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-27",
+            "assessment": "Reviewed prerequisite 9.2.0-beta.3, stable baseline 9.1.0, options and defaults, filters and query-only limitations, patch/strategy/update behavior, editor scope, inspectors, original examples and image/link targets. French is an explicitly identified editorial summary with unchanged examples; English is a canonical adaptation."
+          }
+        }
+      }
+    },
+    {
+      "source": "projects/uix/forge/sparks/entities.md",
+      "locales": {
+        "de": {
+          "path": "projects/uix/forge/sparks/entities.md",
+          "status": "content-present",
+          "sha256": "7f5beda3ced00336d028f5f0c9016d96ede096ea46c57d5e9866d7b8ad92c9f7",
+          "words": 1050,
+          "headings": 14,
+          "examples": 12,
+          "versions": [
+            "2026.11.0",
+            "9.1.0",
+            "9.2.0-beta.3"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/uix/forge/sparks/entities.md",
+          "status": "content-present",
+          "sha256": "7b1465b0b4ff142f19e542b3d8d0de9d6ac6acc1d3adda0a9e81fd59e89e9e5d",
+          "words": 1299,
+          "headings": 14,
+          "examples": 12,
+          "versions": [
+            "2026.11.0",
+            "9.1.0",
+            "9.2.0-beta.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-27",
+            "assessment": "Reviewed prerequisite 9.2.0-beta.3, stable baseline 9.1.0, options and defaults, filters and query-only limitations, patch/strategy/update behavior, editor scope, inspectors, original examples and image/link targets. French is an explicitly identified editorial summary with unchanged examples; English is a canonical adaptation."
+          }
+        },
+        "fr": {
+          "path": "fr/projects/uix/forge/sparks/entities.md",
+          "status": "content-present",
+          "sha256": "06978db1d3f5a7158bacf8629d61ea0c67a63c82c9cf2acd3adbaa77aae0a1f7",
+          "words": 845,
+          "headings": 14,
+          "examples": 12,
+          "versions": [
+            "2026.11.0",
+            "9.1.0",
+            "9.2.0-beta.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-27",
+            "assessment": "Reviewed prerequisite 9.2.0-beta.3, stable baseline 9.1.0, options and defaults, filters and query-only limitations, patch/strategy/update behavior, editor scope, inspectors, original examples and image/link targets. French is an explicitly identified editorial summary with unchanged examples; English is a canonical adaptation."
+          }
+        }
+      }
+    },
+    {
       "source": "projects/uix/forge/sparks/event.md",
       "locales": {
         "de": {
@@ -14523,14 +14681,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/event.md",
           "status": "content-present",
-          "sha256": "707c971d859cd94c30b6a0366a2a230ce3c187e42f7a87e28cce22fee15d22d9",
+          "sha256": "e7c878eca5168de2f446ca8407d0be0312f65f563dc3576894321d181d8643e7",
           "words": 722,
           "headings": 10,
           "examples": 14,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14538,7 +14696,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14551,7 +14709,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Local DOM merge/replace behavior, own versus external namespace, optional identifiers, first-event defaults, one/multiple consumers and17 supplemental example purposes agree. French local-only/nonpersistent boundary restored with HA helper/entity guidance for shared durable state. No new runtime test."
           }
         },
@@ -14608,21 +14766,21 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/form.md",
           "status": "content-present",
-          "sha256": "cc33e857e05e180099b577e7b1c3146d07d05ac7ce68cdaa78c17ca856c57f01",
+          "sha256": "2b6ae6da2b66274b0140103d2f581abe101ec5d6c065217d839d308aa5e2c332",
           "words": 1381,
           "headings": 14,
           "examples": 9,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14635,7 +14793,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Fullreference8topkeys/7submit/6clear/3densities/12CSS tokens agree: unique schema names, overwrite staticdata withformvalues, JavaScriptvariables/eventdetail,optionalpopoverfooter,clearalways-empty notresetdefaults,24/16/8pxgaps and56pxhittargetretention. DEFR frozenrevisioncitation updated; canonicalcodeunchanged."
           }
         },
@@ -14687,14 +14845,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/grid.md",
           "status": "content-present",
-          "sha256": "e67b9e6957d449a089c4a5882126d80ac911aab2b9542d4e702d9a5ed8f34328",
+          "sha256": "9d5e900ef2d351d3864159ffb9ee001e6c80f44436ffff2ad1ff0e005bb67202",
           "words": 980,
           "headings": 6,
           "examples": 7,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14702,7 +14860,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14715,7 +14873,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Nineteenbasefields/mediaquerysubset, numericrepeat/pixels versus rawstrings, directchildDOMorder/areas and firstcontainer troubleshooting agree. DE inline versus scopedstyle cleanup and breakpoint-independent element assignment restored. French raw nested MkDocs tip converted to readable advice; canonical examples unchanged."
           }
         },
@@ -14755,37 +14913,109 @@
       }
     },
     {
+      "source": "projects/uix/forge/sparks/home-summary.md",
+      "locales": {
+        "de": {
+          "path": "projects/uix/forge/sparks/home-summary.md",
+          "status": "content-present",
+          "sha256": "75c0da0e22c503694c39dbfc1fbc02a650488b4b3d3ee9ee9170f859dac2b316",
+          "words": 448,
+          "headings": 6,
+          "examples": 3,
+          "versions": [
+            "2026.11.0",
+            "9.1.0",
+            "9.2.0-beta.3"
+          ],
+          "unresolved_local_references": []
+        },
+        "en": {
+          "path": "en/projects/uix/forge/sparks/home-summary.md",
+          "status": "content-present",
+          "sha256": "82ba41f6e64cd3582768d340b5bc16b9b6dd03b7385368962267bdc7dc565e6f",
+          "words": 502,
+          "headings": 6,
+          "examples": 3,
+          "versions": [
+            "2026.11.0",
+            "9.1.0",
+            "9.2.0-beta.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-27",
+            "assessment": "Reviewed prerequisite 9.2.0-beta.3, stable baseline 9.1.0, options and defaults, filters and query-only limitations, patch/strategy/update behavior, editor scope, inspectors, original examples and image/link targets. French is an explicitly identified editorial summary with unchanged examples; English is a canonical adaptation."
+          }
+        },
+        "fr": {
+          "path": "fr/projects/uix/forge/sparks/home-summary.md",
+          "status": "content-present",
+          "sha256": "3f6abfa7b69124deb056d2eebd9b85bf485d1506d8df7e0021f88f32688775f5",
+          "words": 405,
+          "headings": 6,
+          "examples": 3,
+          "versions": [
+            "2026.11.0",
+            "9.1.0",
+            "9.2.0-beta.3"
+          ],
+          "unresolved_local_references": [],
+          "review_signals": {
+            "versions_only_in_de": [],
+            "versions_only_in_translation": [],
+            "fewer_examples": false,
+            "substantially_shorter": false,
+            "fewer_headings": false
+          },
+          "semantic_review": {
+            "status": "content-reviewed",
+            "reviewed_at": "2026-11-27",
+            "assessment": "Reviewed prerequisite 9.2.0-beta.3, stable baseline 9.1.0, options and defaults, filters and query-only limitations, patch/strategy/update behavior, editor scope, inspectors, original examples and image/link targets. French is an explicitly identified editorial summary with unchanged examples; English is a canonical adaptation."
+          }
+        }
+      }
+    },
+    {
       "source": "projects/uix/forge/sparks/index.md",
       "locales": {
         "de": {
           "path": "projects/uix/forge/sparks/index.md",
           "status": "content-present",
-          "sha256": "1467c4ae719d6dba865a32d9f52ba6aa63cf92188fef79ebe5936d0b215c61b0",
-          "words": 83,
+          "sha256": "b5aa225532519528066a01bd6140a20d9bdb79f8fd8c8e5eef8f5f9b5f62e1f2",
+          "words": 140,
           "headings": 2,
           "examples": 0,
-          "versions": [],
+          "versions": [
+            "9.2.0-beta.3"
+          ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/forge/sparks/index.md",
           "status": "content-present",
-          "sha256": "0ef11fdab8b0dade49162a43607e04d68724f26ac94ebe466f27b5e5db611e19",
-          "words": 459,
+          "sha256": "5126789b8d5a4239c99e74abef927d65924ca8ab439ce19d873225b7c08c3efc",
+          "words": 527,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0",
-              "9.2.0-beta.1"
+              "9.1.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14798,18 +15028,20 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "All sixteen spark destinations and optional forge.sparks/type purpose agree. Canonical EN button summary corrected to before OR after, matching the frozen canonical button page; no code change. German intentionally compact index and French equivalent descriptions retained."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/index.md",
           "status": "content-present",
-          "sha256": "62c17de590fa57b2bd2c6ec21254301e08d21aadc8ea69d25019a886f607a738",
-          "words": 346,
+          "sha256": "545dffd138544d8cff2eb6e805a1fb895862adc8cef8a513ee9dc8a6db263c49",
+          "words": 385,
           "headings": 1,
           "examples": 0,
-          "versions": [],
+          "versions": [
+            "9.2.0-beta.3"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -14825,7 +15057,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-27",
             "assessment": "All sixteen spark destinations and optional forge.sparks/type purpose agree. Canonical EN button summary corrected to before OR after, matching the frozen canonical button page; no code change. German intentionally compact index and French equivalent descriptions retained."
           }
         }
@@ -14837,8 +15069,8 @@
         "de": {
           "path": "projects/uix/forge/sparks/lock.md",
           "status": "content-present",
-          "sha256": "2d41723641101f7c615073fbcf72e451df54644159f1945df1539bbdeaa8cf1f",
-          "words": 1259,
+          "sha256": "c14db7e713725375f615e5942d3c7007b609d0dd0ea39a7329588a43f97137a2",
+          "words": 1288,
           "headings": 25,
           "examples": 18,
           "versions": [
@@ -14850,20 +15082,22 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/lock.md",
           "status": "content-present",
-          "sha256": "c4181c348b8e5dc2f649101a66420324500f1bb88ed7fa3233228a72477ff548",
-          "words": 2286,
+          "sha256": "8188d283c346c54e6311659db9036d71fdf6672eb1177f239dfe6f96be872567",
+          "words": 2324,
           "headings": 27,
           "examples": 18,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.1",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "2026.11.0"
+              "2026.11.0",
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -14876,15 +15110,15 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
         "fr": {
           "path": "fr/projects/uix/forge/sparks/lock.md",
           "status": "content-present",
-          "sha256": "024af390c56d8160cceb5133cddeca89a7f9baf48db2130c16bc2649c16fb80a",
-          "words": 2461,
+          "sha256": "dad8fafdbb7bb677f539de60ebf4ca907ad7adb9e52a54ca71fe00223c6ee306",
+          "words": 2495,
           "headings": 27,
           "examples": 18,
           "versions": [
@@ -14901,13 +15135,13 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Matching/users/admin additive/except/inactivefallback/permissive defaults and badgeleft24 fullreplacement agree. DE inline-row restriction/DOMselector support restored. FR matching-active qualification and per-user inactive fallback clarified, explicitusers exception added to admins row consistent with ownmatchingtable.14topkeys/10entrykeys/22CSSvariables and 3000/30000ms retained. No serverauthorization claim. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         }
@@ -14932,14 +15166,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/map.md",
           "status": "content-present",
-          "sha256": "d226f04cc8a4be6bb02f098ee7dc899fb1aa232c413b9257378f240bfd68c18a",
+          "sha256": "355a475ce69cfba319b2295f18a84c97da5f6e188d4299247b56af06d8eb3f2a",
           "words": 2478,
           "headings": 18,
           "examples": 9,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -14950,7 +15184,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -14963,7 +15197,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Fivemodes/allconfigrows and42CSSoptions compared; map engine fallback, numericmillisecond period,40pxdefaultsharedrow,POI entitymembership, lastentity guard/show_all/filterrestart agree. MissingDE memory suppression duringtour and skipinitialunready restoration restored. FR fullincludingtail/ENhead separatelyreread after initial truncation; examples preserved."
           }
         },
@@ -15021,14 +15255,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/more-info.md",
           "status": "content-present",
-          "sha256": "5bf165512521360017852471ccbfbe48e506eef07cfdaabdf4a77f70cfa48515",
+          "sha256": "83110f3101f2c5b26c31c889d23a817008e2e1bdfb2d0f043e19a4511764804a",
           "words": 1249,
           "headings": 12,
           "examples": 6,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15036,7 +15270,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -15049,7 +15283,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Six options/nine CSS variables, native info/details defaults, conditional YAML toggle, child-dialog behavior, inDialog workaround and shadow padding/stack example purposes compared. Missing German child-view and first-match guidance restored. Frozen more-info implementation differs from tile placement: after chooses target while before controls insertion; explicit editorial warning added without modifying upstream code or canonical examples."
           }
         },
@@ -15104,14 +15338,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/overlay-icon.md",
           "status": "content-present",
-          "sha256": "09a198ae03c82685eb2fee965512cc91f4d9bf1921e9bc838d083794ed4e665a",
+          "sha256": "c230b503ea21b035ce7b44ad234b836844513d45ec488cf1525a20d7c3c9f05e",
           "words": 1194,
           "headings": 12,
           "examples": 7,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15119,7 +15353,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -15132,7 +15366,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Eleventopfields/twelveappearancevariables, entity>image>icon priority, native statecolor/none/defaults, top-left priority/calcpositions,3targetadapters and12supplemental configurations compared. DE missing inline-row/shadowRoot targeting and nonentity source priority guidance restored. Two uses of radius variable clarified from frozen overlay implementation: wrapper inherit versus icon none/tile50percent."
           }
         },
@@ -15187,14 +15421,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/search.md",
           "status": "content-present",
-          "sha256": "479d6650e5ec3756ad834b03bc104d8503a987e114b316d910de5f55e9af9546",
+          "sha256": "d01e824bf60a56d211db9de31d9c8270d21817db602f83d5d48f0cfc5b72c86f",
           "words": 703,
           "headings": 9,
           "examples": 5,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15202,7 +15436,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -15215,7 +15449,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Five fields/seven mutation types, full descendant text regex, all-match processing and dynamic MutationObserver agree. German observer/helper explanation restored, French regex escaping/narrow-container performance advice restored alongside ten unchanged German supplemental configurations. Optional text filtering and regex-removal versus replacement semantics retained."
           }
         },
@@ -15270,14 +15504,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/state-badge.md",
           "status": "content-present",
-          "sha256": "d1cddc68c03a095b21a289f2ae1eaff98db8e8ef9c272b555dcad658fd6a616f",
+          "sha256": "b652ed840200ab8b7d81357641b0250e64133ceee7d2ac3f2cf893f70c17116b",
           "words": 959,
           "headings": 4,
           "examples": 6,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15285,7 +15519,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -15298,7 +15532,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Seven fields/native state/icon/image/color modes, first-match sibling/exclusion and supplemental examples agree. Frozen implementation permits override-only badge without entity, unlike mandatory table in original; corrected in all locales. Empty-after Blank Card placement limitation also explicitly documented with immutable source link. No browser validation implied."
           }
         },
@@ -15353,14 +15587,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/theme.md",
           "status": "content-present",
-          "sha256": "72fcfffc33a2f190c52f0dd5fb5b01455293696410f8a80318411309450f9c4b",
+          "sha256": "8d705285b428901f5be415e2443f0ae208e3e46b19ef014b3d3c10712c1f5248",
           "words": 342,
           "headings": 4,
           "examples": 4,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15368,7 +15602,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15381,7 +15615,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Element-local theme versus global styling, Blank Card selector default, optional templated theme and examples agree. Missing canonical reset-to-empty-string and nested inline-override subset cautions restored in German; French retains both canonical cautions and German DOM/variable troubleshooting."
           }
         },
@@ -15431,14 +15665,14 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/tile-icon.md",
           "status": "content-present",
-          "sha256": "427ecf0393ab41cb3823615ae80dc75debbe98a71889a27f42d2cdb76951eeec",
+          "sha256": "adf2ed0ed7d0b994cbdc071387c4251cc4ed11a5470b0743a56acbf786d824f4",
           "words": 1016,
           "headings": 5,
           "examples": 7,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15446,7 +15680,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15459,7 +15693,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Four icon modes/eleven fields/actions/five examples compared. Frozen source confirms entity+icon override despite original exactly-one-source prose and shows empty-after Blank Card fallback overriding before. All locales now explicitly correct/flag these source contradictions; first-match/sibling/exclusion guidance and native default tap/none opt-out documented. Checked src/forge/sparks/uix-spark-tile-icon.ts, base defaultTarget and shared helper at fb36536; no new browser test or upstream code fix claimed."
           }
         },
@@ -15513,7 +15747,7 @@
         "en": {
           "path": "en/projects/uix/forge/sparks/tooltip.md",
           "status": "content-present",
-          "sha256": "463b080732ecd318a085d7f79ee3116fc2c0925fd404c831f31c5804b4732068",
+          "sha256": "1841560bb7df086c5115a5787b1c7cde2637b7c1f213b2c1f560f1fbd2c0ca38",
           "words": 1091,
           "headings": 8,
           "examples": 6,
@@ -15521,7 +15755,7 @@
             "2026.11.0",
             "8.3.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15535,7 +15769,7 @@
               "2026.11.0",
               "8.3.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15548,7 +15782,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Eleven options/twelve placements, first-match Shadow DOM/Blank Card targeting, default hover/focus/manual/open, sibling-parent CSS styling and23variables agree with canonical EN. French native-title removal advice restored; obsolete stable-reference label updated while retaining historical8.2/beta CSS defaults and scroll behavior."
           }
         },
@@ -15606,14 +15840,14 @@
         "en": {
           "path": "en/projects/uix/guides.md",
           "status": "content-present",
-          "sha256": "6097c954ed4d90ed30fd1927a9d658881c92ab5ca6baf9adf0fa9f2cea3eb8dc",
+          "sha256": "b71cf1759fb89fa9e9f4db59da93b672e7789342c57159ddc6175420f0453de6",
           "words": 138,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15621,7 +15855,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15634,7 +15868,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Shared community-guide destination retained. EN/FR CC BY-SA4.0 attribution checked against frozen canonical guides.md; German local introduction intentionally adds only its own future-translation note."
           }
         },
@@ -15688,19 +15922,23 @@
         "en": {
           "path": "en/projects/uix/index.md",
           "status": "content-present",
-          "sha256": "9babe82c1f9e779b5794e19f11d3d3ea35a6381c9cb6e709f5cd83d1c1d29aaa",
+          "sha256": "412c9d385a5fc326a7ff3f222913f8b41805a1b3930fc36293398d69fc901eba",
           "words": 355,
           "headings": 4,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
-            "versions_only_in_de": [],
-            "versions_only_in_translation": [],
+            "versions_only_in_de": [
+              "9.2.0-beta.1"
+            ],
+            "versions_only_in_translation": [
+              "9.2.0-beta.3"
+            ],
             "fewer_examples": false,
             "substantially_shorter": false,
             "fewer_headings": true
@@ -15712,7 +15950,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Styling/Forge/Broker purpose, independent translation/source authority, stable9.1/HA2026.11 and66-page canonical update scope agree. German contradictory old current-status footer now clearly historical; DE/FR9.x feature heading avoids assigning9.1 behavior to9.0. Canonical EN intentionally compact overview; local supplemental release features remain DE/FR editorial guidance. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
@@ -15766,14 +16004,14 @@
         "en": {
           "path": "en/projects/uix/license.md",
           "status": "content-present",
-          "sha256": "5564351f8fe3d2b20a1dc93b55bb23690a360655cd564f9a501cacbf0522f6b4",
+          "sha256": "df7b842574bd651c2e6a4a1a4215c7969cfb4649d535d7d6c2c2dd5d208e5d1f",
           "words": 233,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15781,7 +16019,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15794,7 +16032,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "CC BY4 sharing/adaptation/commercial rights and attribution conditions, separate MIT code/examples/tools and third-party rights agree with canonical license.md. Historical MIT alternative added to German; proper German characters restored. This checks the documented licence meaning, not legal certification."
           }
         },
@@ -15847,20 +16085,20 @@
         "en": {
           "path": "en/projects/uix/quick-start.md",
           "status": "content-present",
-          "sha256": "5c1823111033cd3d643c211022db9537001b6ca449395c23ebc16464c877c197",
+          "sha256": "73cf63c51e3d6bd7ebb3081450725d87faf3ba23f82ee58f89ca4b02149c4f1b",
           "words": 512,
           "headings": 5,
           "examples": 2,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -15873,7 +16111,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Marketplace versus manual copy/restart/add-service/refresh, red-card and brush behavior, conditional Tile Forge and templated config purpose agree. German missing full Forge templating explanation restored; stale DE/FR9.0 heading brought to declared9.1 reference; French integration badge caption translated."
           }
         },
@@ -15915,9 +16153,9 @@
         "de": {
           "path": "projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "d72ee0a58115fc57a777924d220b9820c0bdc8b9a1ec6dcf73d652dbeae1d5cb",
-          "words": 4270,
-          "headings": 29,
+          "sha256": "66313dc8ac04d99b5c7de7d8947b8c872d3a38e0aa0c547f8490f08e9a24a626",
+          "words": 4446,
+          "headings": 30,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -15944,16 +16182,17 @@
             "9.1.0-beta.2",
             "9.1.0-beta.5",
             "9.1.0-beta.8",
-            "9.2.0-beta.1"
+            "9.2.0-beta.1",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "7c4f070236acd38e4165e22a4c345c131ab770ac01bd28344b86db0a01e35346",
-          "words": 2415,
-          "headings": 15,
+          "sha256": "9e8127f40f3a75b3969af959b2564ca40cf5109c15d5c497dafb3c1bfb5160a2",
+          "words": 2537,
+          "headings": 16,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -15970,7 +16209,8 @@
             "9.1.0-beta.1",
             "9.1.0-beta.2",
             "9.1.0-beta.5",
-            "9.1.0-beta.8"
+            "9.1.0-beta.8",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -15998,16 +16238,16 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Read all DE/EN/FR review histories in bounded sections, source66 versus formerly67/65/64 counts and stable-versuspreview transitions, badge/params512KiB/footer notices and oldreviewlimitations agree. EN condensed olderhistory explicitlylinksDEFR. New section explains actualcontentreview/hashrevocation and explicit supplemental/originalerrata without implying newHAverification. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         },
         "fr": {
           "path": "fr/projects/uix/translation-status.md",
           "status": "content-present",
-          "sha256": "32acc8cd5cd288082af2843cd866a6ecffc33626ddbb63532d2405b9873782e3",
-          "words": 4452,
-          "headings": 26,
+          "sha256": "a382f46728c0b91594c8e7eac23e8c96819dbdc786cdc22a5ad244a3a042c9cf",
+          "words": 4570,
+          "headings": 27,
           "examples": 0,
           "versions": [
             "2026.10.0",
@@ -16031,7 +16271,8 @@
             "9.1.0-beta.2",
             "9.1.0-beta.5",
             "9.1.0-beta.8",
-            "9.2.0-beta.1"
+            "9.2.0-beta.1",
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16052,7 +16293,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Read all DE/EN/FR review histories in bounded sections, source66 versus formerly67/65/64 counts and stable-versuspreview transitions, badge/params512KiB/footer notices and oldreviewlimitations agree. EN condensed olderhistory explicitlylinksDEFR. New section explains actualcontentreview/hashrevocation and explicit supplemental/originalerrata without implying newHAverification. UIX 6597c4d update reviewed on 2026-11-23: retry/failed event semantics, payloads, threshold count and YAML preserved; dev availability distinguished from stable baseline. UIX 105c514 update reviewed on 2026-11-23: persistent-notification automation and Jinja preserved, event trigger setup, retry-before-failed order, duplicate-alert warning and optional browser_id documented. UIX 9528baa reviewed 2026-11-23: retry/failed actions replace events; recursive exact-token data substitutions preserve types; retry-before-failed ordering; canonical Notify YAML/Jinja preserved; dev 9.2.0-beta.1 distinguished from stable 9.1.0."
           }
         }
@@ -16076,7 +16317,7 @@
         "en": {
           "path": "en/projects/uix/using/apps.md",
           "status": "content-present",
-          "sha256": "e4dbc714c23787fd1a4210f231f50a784d7f45eca627823d697820c80b847d17",
+          "sha256": "a48db96fc0dc7f2c24a541664aafa241fa68063740bdcad1425b5b3cc295517a",
           "words": 427,
           "headings": 4,
           "examples": 1,
@@ -16084,7 +16325,7 @@
             "2026.11.0",
             "8.4.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16092,7 +16333,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16105,7 +16346,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "App host versus config-installed-list, noninteractive CRT versus frame content, experimental same-origin frame styling, full slug precedence over stripped hash/core/local slug, console discovery, internal runtime separation and optional Always-patch requirement agree with canonical EN."
           }
         },
@@ -16157,14 +16398,14 @@
         "en": {
           "path": "en/projects/uix/using/cards.md",
           "status": "content-present",
-          "sha256": "ffd5a3a18517c97ff82496d0531b880d55dfb4147c4b97cb5ca36156edbf1963",
+          "sha256": "b18d67d2b7339f4ad4056beb9c88524b890256f5599a1f7a089a9cf31f9de794",
           "words": 419,
           "headings": 2,
           "examples": 5,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16172,7 +16413,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16185,7 +16426,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "hui-card versus ha-card injection roots, CSS variables, local theme precedence/child override and high-to-low custom CSS variable scope agree. Examples and canonical image retained; no runtime claim."
           }
         },
@@ -16234,14 +16475,14 @@
         "en": {
           "path": "en/projects/uix/using/custom-panels.md",
           "status": "content-present",
-          "sha256": "44ec9a5e8dc0972b8bc22471f8291062d2f4dd2d735c3982c5c7f7250273a3f6",
+          "sha256": "ad3a1b5ab4ec7cbfefbfe82b351249c389aeb0af7a3e255f01ae559ad2c079c8",
           "words": 453,
           "headings": 4,
           "examples": 2,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16249,7 +16490,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16262,7 +16503,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Direct versus experimental iframe styling, shared internal runtime, inherited/current theme, name-based frame variable, two BrowserMod examples, actual-DOM inspection and reload only on selected-theme change agree. French example title is cosmetic; no extra behavior promised."
           }
         },
@@ -16385,7 +16626,7 @@
         "en": {
           "path": "en/projects/uix/using/entities.md",
           "status": "content-present",
-          "sha256": "c03eb849774b03c54554fad67aa9b7a46f87e6a6695adf7e43ec0e52907b2b0f",
+          "sha256": "7de7f9c0773e3642cc950117bb057bc9b8b168a54c5faa78e6918730a63209f9",
           "words": 564,
           "headings": 5,
           "examples": 11,
@@ -16393,7 +16634,7 @@
             "2026.10.0",
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16401,7 +16642,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16414,7 +16655,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Individual entity/badge/picture/map uix with :host, direct versus legacy conditional wrappers and style leakage, HA2026.10 CSS parts/ID hyphen normalization versus legacy marker theme methods agree with canonical EN. Both paired-example purposes retained."
           }
         },
@@ -16466,14 +16707,14 @@
         "en": {
           "path": "en/projects/uix/using/icons.md",
           "status": "content-present",
-          "sha256": "11c4ff6a3153d0be29a5bf504524c38b58802349628f88ca95aa336021a11cbd",
+          "sha256": "64078f377cf7d178b1b8a41f7deaf3e4edf4ad52395c4173b60188cc8d25a554",
           "words": 605,
           "headings": 4,
           "examples": 3,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16481,7 +16722,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16494,7 +16735,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Three supported elements, entity-ID normalization, ancestor and theme-scope overrides, generic icon/color precedence, required rendered icon and multi-icon caution agree. Two macro theme example and yaml-root purpose retained."
           }
         },
@@ -16544,14 +16785,14 @@
         "en": {
           "path": "en/projects/uix/using/images.md",
           "status": "content-present",
-          "sha256": "f5790372b1bcdefc4603ee3523a3f126ce53f22c013099e725a7bf557143a324",
+          "sha256": "165ad9396a7f6e1a4cfc1e7cc9bf77e6aab686dee69754d08a7b708f3726bcf0",
           "words": 397,
           "headings": 3,
           "examples": 1,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16559,7 +16800,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16572,7 +16813,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Seven affected element types, entity-picture prerequisite, dots-to-underscores IDs, ancestor/theme scope, entity-specific-only map overview and generic override precedence agree with canonical EN. Template support and original image fallback retained."
           }
         },
@@ -16622,14 +16863,14 @@
         "en": {
           "path": "en/projects/uix/using/index.md",
           "status": "content-present",
-          "sha256": "aea3f2f696604f6397a96656f503b1a0e6b851889407144d2a647262f90f4212",
+          "sha256": "11a3c3e64bbce623506f7e7acdc1c8163ba500c8f7b2ecc99d038e04bba71212",
           "words": 159,
           "headings": 1,
           "examples": 0,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16637,7 +16878,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": true,
             "substantially_shorter": false,
@@ -16650,7 +16891,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "All eleven styling topic links and basic uix/YAML example agree. French missing scope and DOM/shadow/template explanation restored; English canonical index deliberately uses topic navigation instead of the German editorial tutorial introduction."
           }
         },
@@ -16705,14 +16946,14 @@
         "en": {
           "path": "en/projects/uix/using/other.md",
           "status": "content-present",
-          "sha256": "dc31886e6e182fc4cd1364a42494bbed7096d2f1e332339a921ed8e30d81d464",
+          "sha256": "c9e4e2b5cbd0025af18e89ea5bc0363bbddd152f73d510d67091023fd88d6de2",
           "words": 171,
           "headings": 1,
           "examples": 1,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16720,7 +16961,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16733,7 +16974,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Rare mod-card fallback, prefer inner-card styling and wrapper transparency/no-border behavior retained. French placeholder/not-directly-runnable caveat added from German guidance; English canonical example remains the authoritative original."
           }
         },
@@ -16783,14 +17024,14 @@
         "en": {
           "path": "en/projects/uix/using/section-backgrounds.md",
           "status": "content-present",
-          "sha256": "b76e6ec373fe296b85ba91dac377f49ef6cad07b877a29f79af866594a544bc1",
+          "sha256": "dd6ddd1fa1857be4ecad27a50ab2b31ab5c71ef29f2d57a7592a9a68e8890cda",
           "words": 339,
           "headings": 3,
           "examples": 2,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16798,7 +17039,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16811,7 +17052,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Sibling background DOM, two override methods, required background:true, direct per-update variable transfer, whole-section template context and !important caveat agree with canonical EN and both translations."
           }
         },
@@ -16851,32 +17092,33 @@
         "de": {
           "path": "projects/uix/using/templates.md",
           "status": "content-present",
-          "sha256": "9d220e27f4e3c2efe642b77beee879871b990d3848a4526872912ed159f22f52",
-          "words": 957,
+          "sha256": "e1514716f9a006dd2a3ae765cfc26e2680aac2c3289c8dee7dc900dc6ac45799",
+          "words": 1003,
           "headings": 11,
           "examples": 13,
-          "versions": [],
+          "versions": [
+            "9.2.0-beta.3"
+          ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/uix/using/templates.md",
           "status": "content-present",
-          "sha256": "a58fb34114ac1f761ba72ffd7d78aa2b6dbfd8c53afbdb12964246c70d874905",
-          "words": 1357,
+          "sha256": "62ecda324178690faf9a3c557e079485003058a4a852c919b94c2119301d1364",
+          "words": 1402,
           "headings": 11,
           "examples": 14,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
             "versions_only_in_translation": [
               "2026.11.0",
-              "9.1.0",
-              "9.2.0-beta.1"
+              "9.1.0"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16889,18 +17131,20 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "Sixvariables/512KiBlargest-first complete params omission, paneltheme distinction,20scooldown, macrostrings versus typedreturns/as_function, dependency closure/theme priority and file imports agree. Canonical original had singular custom_template typo: corrected EN via guarded adaptation and DE to plural verified against official HA custom-template docs; FR already correct. FR literal HTML wrappers around Jinja examples fixed, DE0-based billet index explicit. Merge localbillets/forge scope and cycle unchanged-values behavior retained."
           }
         },
         "fr": {
           "path": "fr/projects/uix/using/templates.md",
           "status": "content-present",
-          "sha256": "8446ef9bb0462eaaaf6a41205dd2202d452631db1a9be39248a4b7f93ae81c48",
-          "words": 1383,
+          "sha256": "4bc9d225cc5ba0bd111ca73ea93ade89d797b57b063d599802270244c154bca8",
+          "words": 1427,
           "headings": 11,
           "examples": 14,
-          "versions": [],
+          "versions": [
+            "9.2.0-beta.3"
+          ],
           "unresolved_local_references": [],
           "review_signals": {
             "versions_only_in_de": [],
@@ -16911,13 +17155,13 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-27",
             "assessment": "Full-file technical/reference comparison and manual triage of detected differences completed. No unresolved issue in the recorded technical checks.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
+            "reviewed_at": "2026-11-27",
             "assessment": "Sixvariables/512KiBlargest-first complete params omission, paneltheme distinction,20scooldown, macrostrings versus typedreturns/as_function, dependency closure/theme priority and file imports agree. Canonical original had singular custom_template typo: corrected EN via guarded adaptation and DE to plural verified against official HA custom-template docs; FR already correct. FR literal HTML wrappers around Jinja examples fixed, DE0-based billet index explicit. Merge localbillets/forge scope and cycle unchanged-values behavior retained."
           }
         }
@@ -16939,14 +17183,14 @@
         "en": {
           "path": "en/projects/uix/using/themes.md",
           "status": "content-present",
-          "sha256": "4d3c8bd577c1576899518382ce94e9ac774ca7784a1e7cf302041e7949987692",
+          "sha256": "65b5ffde4f4f035cb19cc8f2d1caec28499b03ab19cbc69850051a4f0f9ef335",
           "words": 1583,
           "headings": 12,
           "examples": 19,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -16954,7 +17198,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -16967,7 +17211,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "FullDEENFR theme tutorial, requireduix-theme/reference reuse, precedence-yaml, localoverridecontext and FontFace descriptors/globalmodes/stringmapping/nonblockingcleanup/macros-onlystyling agree. Missinguix-app target restoredDEFR, other26target identifiers preserved; FR extras code supplements reviewed separately by technicalgates."
           }
         },
@@ -17022,14 +17266,14 @@
         "en": {
           "path": "en/projects/uix/using/view-backgrounds.md",
           "status": "content-present",
-          "sha256": "03e33ed112633d19d0b356b1a1f0c65fd7ecde7cae40bfa18f0ab8c2b0ccedad",
+          "sha256": "e1cec39a4e677d54e4c439e7ee9c3a1643ee7d7f773fd6333d17e779f228667a",
           "words": 1471,
           "headings": 16,
           "examples": 17,
           "versions": [
             "2026.11.0",
             "9.1.0",
-            "9.2.0-beta.1"
+            "9.2.0-beta.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -17037,7 +17281,7 @@
             "versions_only_in_translation": [
               "2026.11.0",
               "9.1.0",
-              "9.2.0-beta.1"
+              "9.2.0-beta.3"
             ],
             "fewer_examples": false,
             "substantially_shorter": false,
@@ -17050,7 +17294,7 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-23",
+            "reviewed_at": "2026-11-27",
             "assessment": "TenCSSvariables/five simultaneous layers, authentication/source types, view/full coverage, ninepositions and drawer-over-background variable priority agree with frozenEN. Missing DE double-header compensation caveat, center/screen-spacepan and exact upper-leftquarter centering restored. FR camera reuse explicit; spinners/tab recovery/static images unaffected retained."
           }
         },

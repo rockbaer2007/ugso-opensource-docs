@@ -16,9 +16,9 @@ Toutes les pages de contenu Markdown ont été inventoriées, à l’exclusion d
 
 | Langue | Pages existantes | Pages absentes | Textes provisoires | Points restant à examiner |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 255 | 0 | 0 | 0 |
-| EN | 255 | 0 | 0 | 2 |
-| FR | 255 | 0 | 0 | 0 |
+| DE | 258 | 0 | 0 | 0 |
+| EN | 258 | 0 | 0 | 2 |
+| FR | 258 | 0 | 0 | 0 |
 
 **Comparaison technique du 2026-11-27 :** les évaluations sont liées aux empreintes actuelles des fichiers ; toute modification exige une nouvelle revue. Les lacunes et contradictions sont corrigées, tandis que les différences voulues d’historique et de structure sont justifiées. Le tableau indique les points encore ouverts ; le JSON conserve les signaux automatiques bruts. « 0 restant » signifie examiné et classé, pas une identité mot à mot. [Évaluations documentées](/documentation-review.json).
 
@@ -41,8 +41,8 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 
 | Langue | Vérifié | Restant |
 | --- | ---: | ---: |
-| EN | 251 | 4 |
-| FR | 251 | 4 |
+| EN | 254 | 4 |
+| FR | 254 | 4 |
 
 ## Inventaire complet des pages
 
@@ -213,9 +213,12 @@ Corrections : passages anglais dans les concepts, macros, thèmes et arrière-pl
 | [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/background) | [Contenu vérifié](/fr/projects/uix/forge/sparks/background) |
 | [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/badge) | [Contenu vérifié](/fr/projects/uix/forge/sparks/badge) |
 | [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/button) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/sparks/button) |
+| [projects/uix/forge/sparks/config.md](/projects/uix/forge/sparks/config) | [Contenu vérifié](/en/projects/uix/forge/sparks/config) | [Contenu vérifié](/fr/projects/uix/forge/sparks/config) |
+| [projects/uix/forge/sparks/entities.md](/projects/uix/forge/sparks/entities) | [Contenu vérifié](/en/projects/uix/forge/sparks/entities) | [Contenu vérifié](/fr/projects/uix/forge/sparks/entities) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/event) | [Contenu vérifié](/fr/projects/uix/forge/sparks/event) |
 | [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/form) | [Contenu vérifié](/fr/projects/uix/forge/sparks/form) |
 | [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/grid) | [Contenu vérifié](/fr/projects/uix/forge/sparks/grid) |
+| [projects/uix/forge/sparks/home-summary.md](/projects/uix/forge/sparks/home-summary) | [Contenu vérifié](/en/projects/uix/forge/sparks/home-summary) | [Contenu vérifié](/fr/projects/uix/forge/sparks/home-summary) |
 | [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/) | [Contenu vérifié · Différence examinée](/fr/projects/uix/forge/sparks/) |
 | [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/lock) | [Contenu vérifié](/fr/projects/uix/forge/sparks/lock) |
 | [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Contenu vérifié · Différence examinée](/en/projects/uix/forge/sparks/map) | [Contenu vérifié](/fr/projects/uix/forge/sparks/map) |

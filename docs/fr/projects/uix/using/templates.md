@@ -3,6 +3,8 @@ description: Utiliser les modèles dans UIX.
 ---
 # Modèles
 
+Depuis **9.2.0-beta.3**, les templates d'élément Forge et de style de l'enveloppe peuvent lire `uixForge.entities["spark-id"]`, résultat d'une requête seule nommée. Voir [résultats Entities dans les templates](../forge/sparks/entities#use-a-query-result-in-templates).
+
 Tous les styles peuvent contenir des [modèles Jinja2](https://www.home-assistant.io/docs/configuration/templating/), qui seront traités par le moteur de Home Assistant.
 
 UI eXtension met également les variables suivantes à disposition des modèles :

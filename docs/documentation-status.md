@@ -16,9 +16,9 @@ Geprüft wurden sämtliche Markdown-Inhaltsseiten, ohne diese drei erzeugten Ber
 
 | Sprache | Seiten vorhanden | Fehlende Seiten | Platzhalter | Offene Prüfhinweise |
 | --- | ---: | ---: | ---: | ---: |
-| DE | 255 | 0 | 0 | 0 |
-| EN | 255 | 0 | 0 | 2 |
-| FR | 255 | 0 | 0 | 0 |
+| DE | 258 | 0 | 0 | 0 |
+| EN | 258 | 0 | 0 | 2 |
+| FR | 258 | 0 | 0 | 0 |
 
 **Technischer Abgleich vom 2026-11-27:** Vorhandene Einzelbewertungen sind an die aktuellen Datei-Prüfsummen gebunden; Änderungen erfordern eine erneute Prüfung. Echte Lücken und widersprüchliche Angaben werden korrigiert, bewusst unterschiedliche Versionshistorien und redaktionelle Gliederungen mit Begründung eingeordnet. Die Tabelle zeigt die noch offenen Hinweise; der JSON-Bericht behält die automatischen Rohsignale bei. „0 offen“ bedeutet geprüft und eingeordnet, nicht wortgleiche Übersetzungen. [Dokumentierte Einzelbewertungen](/documentation-review.json).
 
@@ -41,8 +41,8 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 
 | Sprache | Geprüft | Noch offen |
 | --- | ---: | ---: |
-| EN | 251 | 4 |
-| FR | 251 | 4 |
+| EN | 254 | 4 |
+| FR | 254 | 4 |
 
 ## Vollständiges Seiteninventar
 
@@ -213,9 +213,12 @@ Korrigiert wurden französische UIX-Textreste in Konzepten, Makros, Themes und K
 | [projects/uix/forge/sparks/background.md](/projects/uix/forge/sparks/background) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/background) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/background) |
 | [projects/uix/forge/sparks/badge.md](/projects/uix/forge/sparks/badge) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/badge) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/badge) |
 | [projects/uix/forge/sparks/button.md](/projects/uix/forge/sparks/button) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/button) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/sparks/button) |
+| [projects/uix/forge/sparks/config.md](/projects/uix/forge/sparks/config) | [Inhaltlich geprüft](/en/projects/uix/forge/sparks/config) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/config) |
+| [projects/uix/forge/sparks/entities.md](/projects/uix/forge/sparks/entities) | [Inhaltlich geprüft](/en/projects/uix/forge/sparks/entities) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/entities) |
 | [projects/uix/forge/sparks/event.md](/projects/uix/forge/sparks/event) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/event) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/event) |
 | [projects/uix/forge/sparks/form.md](/projects/uix/forge/sparks/form) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/form) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/form) |
 | [projects/uix/forge/sparks/grid.md](/projects/uix/forge/sparks/grid) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/grid) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/grid) |
+| [projects/uix/forge/sparks/home-summary.md](/projects/uix/forge/sparks/home-summary) | [Inhaltlich geprüft](/en/projects/uix/forge/sparks/home-summary) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/home-summary) |
 | [projects/uix/forge/sparks/index.md](/projects/uix/forge/sparks/) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/) | [Inhaltlich geprüft · Unterschied geprüft](/fr/projects/uix/forge/sparks/) |
 | [projects/uix/forge/sparks/lock.md](/projects/uix/forge/sparks/lock) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/lock) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/lock) |
 | [projects/uix/forge/sparks/map.md](/projects/uix/forge/sparks/map) | [Inhaltlich geprüft · Unterschied geprüft](/en/projects/uix/forge/sparks/map) | [Inhaltlich geprüft](/fr/projects/uix/forge/sparks/map) |

@@ -104,6 +104,36 @@ tap_action:
 
 ## `toast` — afficher une notification Home Assistant
 
+Exemple canonique avec texte secondaire, icône et action gardant la notification ouverte :
+
+```yaml
+type: tile
+entity: light.bed_light
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: toast
+    data:
+      message: "Bed Light"
+      supportingText: "The light can be controlled from this notification."
+      duration: 10000
+      dismissable: true
+      bottomOffset: 550
+      action:
+        icon: mdi:lightbulb
+        text: Toggle bed light
+        keepOpen: true
+        tap_action:
+          action: perform-action
+          perform_action: light.toggle
+          target:
+            entity_id: light.bed_light
+```
+
+::: info À partir de 9.1.0-beta.3
+`supportingText` affiche un texte secondaire sous `message`, sous forme de chaîne ou d'objet `translationKey` avec `args` optionnel. `action.icon` et `secondary_action.icon` acceptent un nom d'icône ou chemin SVG. Un seul chemin avec viewBox `0 0 24 24` est accepté. Après deux secondes sans icône ou pour un format non pris en charge, le texte est utilisé, sinon le nom d'icône. Le texte associé à l'icône est son libellé accessible. `action.keepOpen` et `secondary_action.keepOpen` gardent la notification après l'action si `true` ; valeur initiale `false`.
+:::
+
 Affiche une notification temporaire (toast) de Home Assistant.
 
 | Configuration | Paramètre | Valeur par défaut | Description |
@@ -117,11 +147,16 @@ Affiche une notification temporaire (toast) de Home Assistant.
 | | `bottomOffset` | `0` | Décalage vertical positif par rapport au bas de la fenêtre du navigateur. Les notifications apparaissent à `--ha-space-4` (16 px par défaut) au-dessus de la limite de la zone sûre. |
 | | `action` | — | Si elle est définie, affiche un bouton qui exécute `action.tap_action` au clic. |
 | | `action.primary` | — | Si la valeur est `true`, affiche le bouton `action` avec le style principal rempli. La variante du bouton est toujours `brand`. |
-| | `action.text` | **OBLIGATOIRE** | Chaîne ou objet définissant le texte du bouton. Une chaîne n'est pas traduite ; pour utiliser une traduction Home Assistant, indiquez un objet avec `translationKey` et, éventuellement, `args`. |
+| | `supportingText` | — | Texte secondaire ou objet de traduction. |
+| | `action.text` | Obligatoire sans `action.icon` | Texte ou traduction ; libellé accessible de l'icône. |
+| | `action.icon` | Obligatoire sans `action.text` | Nom d'icône ou chemin SVG. |
+| | `action.keepOpen` | `false` | Garder la notification après l'action. |
 | | `action.tap_action` | **OBLIGATOIRE** | Configuration d'action Home Assistant. |
 | | `secondary_action` | — | Si elle est définie, affiche à gauche du bouton `action` un bouton qui exécute `secondary_action.tap_action`. |
 | | `secondary_action.primary` | — | Si la valeur est `true`, affiche le bouton `secondary_action` avec le style principal rempli. La variante du bouton est toujours `brand`. |
-| | `secondary_action.text` | **OBLIGATOIRE** | Chaîne ou objet définissant le texte du bouton. Une chaîne n'est pas traduite ; pour utiliser une traduction Home Assistant, indiquez un objet avec `translationKey` et, éventuellement, `args`. |
+| | `secondary_action.text` | Obligatoire sans `secondary_action.icon` | Texte ou traduction de la seconde action. |
+| | `secondary_action.icon` | Obligatoire sans `secondary_action.text` | Icône de la seconde action. |
+| | `secondary_action.keepOpen` | `false` | Garder la notification après la seconde action. |
 | | `secondary_action.tap_action` | **OBLIGATOIRE** | Configuration d'action Home Assistant. |
 
 Exemple de notification avec une action dont le libellé est traduit :

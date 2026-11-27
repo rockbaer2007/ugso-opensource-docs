@@ -3,7 +3,7 @@ title: Foundries
 description: Foundries are reusable UIX Forge configurations that let you define Forge, Element, and Native-base fragments once and apply them to many elements.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.1**, revision [9528baa](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.3**, revision [6a2bad2](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8), reviewed 2026-11-27. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Foundries
 
@@ -288,6 +288,8 @@ For **object values** (e.g. `forge`, `element`, and `element_base`), merging is 
 - To override/merge a spark, give both entries the same `id` (or `spark_id`).
 - Spark override matching requires both the same identifier and the same spark `type`.
 - Set `forge.sparks: []` locally to explicitly clear inherited sparks.
+
+For example, save a named Entities Spark filter once and reuse it in a Home Summary card, a strategy patch, or an Entities card. Each Forge can use the shared filter to collect IDs or fill its own list. See [Reuse an Entities Foundry query in another element](sparks/entities.md#reuse-an-entities-foundry-query-in-another-element).
 
 ### Merge example
 

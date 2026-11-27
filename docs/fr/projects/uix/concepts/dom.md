@@ -3,6 +3,20 @@ description: Apprenez à examiner le DOM de Home Assistant pour maîtriser UI eX
 ---
 # Navigation dans le DOM
 
+## Inspecteurs depuis 9.2.0-beta.3
+
+### Dashboard {#uix_dashboard_inspect-current-dashboard-helper}
+
+`uix_dashboard_inspect()` lit le panneau ouvert et conserve `rawConfig`, `generatedConfig` et `strategy` dans `window.uix_inspect.dashboard`. Attendez la fin du chargement. Sur Home, copiez `strategy` dans Forge-`element` pour reprendre les réglages natifs. Pour des stratégies propres à une vue/section, consultez `rawConfig.views` et passez leur entrée `strategy` avec le bon périmètre. Voir [le parcours complet](../forge/sparks/config#inspect-generated-strategies).
+
+### Stratégie {#uix_strategy_inspectscope-element-strategy-config-helper}
+
+`await uix_strategy_inspect(scope, element)` accepte `"dashboard"`, `"view"` ou `"section"` et les réglages prévus pour `element`. Résultat : `window.uix_inspect.strategy.config`. `paths(term)` cherche les chemins/valeurs, `get(path)` lit une valeur, `test(patches, entitySets?)` essaie les patches sur une copie. Pour `$in_entities`, passez un mapping nom de Spark → liste d'IDs. Voir [les tests de patches](../forge/sparks/config#test-a-patch).
+
+### Entities {#uix_entities_inspectforge-spark-entities-spark-helper}
+
+Sélectionnez `<uix-forge>` puis exécutez `await uix_entities_inspect($0)`. Pour une stratégie, passez sa configuration comme objet JavaScript. Un second argument choisit l'ID du Spark ou sa position à partir de zéro. Le rapport est dans `window.uix_inspect.entities`. Voir [examiner une liste](../forge/sparks/entities#inspect-a-list).
+
 Home Assistant utilise largement le [DOM fantôme](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM). Il facilite la réutilisation de composants comme `<ha-card>` ou `<ha-icon>`, mais nécessite des techniques particulières pour appliquer des styles CSS aux éléments.
 
 En examinant une carte dans l'inspecteur d'éléments de votre navigateur, vous avez peut-être vu une ligne comme `#shadow-root (open)` (son libellé exact dépend du navigateur). Les éléments qui se trouvent à l'intérieur n'héritent pas des styles extérieurs.
@@ -616,3 +630,31 @@ uix:
 ```
 
 ::::
+
+
+## Exemples canoniques complémentaires · 9.2.0-beta.3
+
+Exemples inchangés de la référence : les instructions et limites sont expliquées dans les sections précédentes. Adaptez les entités avant utilisation.
+
+```js
+uix_dashboard_inspect();
+window.uix_inspect.dashboard.strategy;
+```
+
+```js
+await uix_strategy_inspect("dashboard", window.uix_inspect.dashboard.strategy);
+window.uix_inspect.strategy.paths("home-overview");
+await uix_strategy_inspect(
+  "view",
+  window.uix_inspect.strategy.config.views.find(
+    (view) => view.strategy?.type === "home-overview",
+  ).strategy,
+);
+window.uix_inspect.strategy.paths("favorites");
+```
+
+```js
+await uix_strategy_inspect("view", { type: "home-overview" });
+window.uix_inspect.strategy.paths("home-summary");
+window.uix_inspect.strategy.test([{ op: "merge", path: "", value: { title: "Overview" } }]);
+```

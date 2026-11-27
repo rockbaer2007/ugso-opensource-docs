@@ -83,6 +83,36 @@ tap_action:
 
 ## `toast`: Home-Assistant-Toast anzeigen
 
+Aktuelles kanonisches Beispiel mit Zusatztext, Icon und geöffnet bleibender Aktion:
+
+```yaml
+type: tile
+entity: light.bed_light
+tap_action:
+  action: fire-dom-event
+  uix:
+    action: toast
+    data:
+      message: "Bed Light"
+      supportingText: "The light can be controlled from this notification."
+      duration: 10000
+      dismissable: true
+      bottomOffset: 550
+      action:
+        icon: mdi:lightbulb
+        text: Toggle bed light
+        keepOpen: true
+        tap_action:
+          action: perform-action
+          perform_action: light.toggle
+          target:
+            entity_id: light.bed_light
+```
+
+::: info Ergänzungen ab 9.1.0-beta.3
+`supportingText` ergänzt kleinere Zusatzinformationen unter `message` als Text oder Objekt mit `translationKey` und optional `args`. `action.icon` und `secondary_action.icon` akzeptieren Iconnamen oder SVG-Pfade. Ein einzelner SVG-Pfad mit ViewBox `0 0 24 24` wird unterstützt. Nach zwei Sekunden ohne geladenes Icon oder bei ungeeignetem Format erscheint der Text, ersatzweise der Iconname. Bei Icon plus Text ist der Text die barrierefreie Beschriftung. `action.keepOpen` und `secondary_action.keepOpen` halten bei `true` den Toast nach der Aktion offen; Standard ist `false`.
+:::
+
 | Konfiguration | Einstellung | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `action: toast` | - | - | Zeigt eine Home-Assistant-Toast-Benachrichtigung mit Optionen aus `data`. |
@@ -94,11 +124,16 @@ tap_action:
 | | `bottomOffset` | `0` | Zusätzlicher Abstand vom unteren Fensterrand. |
 | | `action` | - | Optionale Schaltfläche mit `action.tap_action`. |
 | | `action.primary` | - | Rendert die Action-Schaltfläche im Primary-Stil. |
-| | `action.text` | **Pflicht** | Text oder Übersetzungsobjekt für die Action. |
+| | `supportingText` | — | Zusatztext oder Übersetzungsobjekt. |
+| | `action.text` | Pflicht ohne `action.icon` | Text oder Übersetzungsobjekt; mit Icon barrierefreie Beschriftung. |
+| | `action.icon` | Pflicht ohne `action.text` | Iconname oder SVG-Pfad. |
+| | `action.keepOpen` | `false` | Toast nach der Aktion offen halten. |
 | | `action.tap_action` | **Pflicht** | Home-Assistant-Action-Konfiguration. |
 | | `secondary_action` | - | Zweite Schaltfläche links neben `action`. |
 | | `secondary_action.primary` | - | Rendert die zweite Schaltfläche im Primary-Stil. |
-| | `secondary_action.text` | **Pflicht** | Text oder Übersetzungsobjekt für die zweite Action. |
+| | `secondary_action.text` | Pflicht ohne `secondary_action.icon` | Text oder Übersetzungsobjekt für die zweite Action. |
+| | `secondary_action.icon` | Pflicht ohne `secondary_action.text` | Icon für die zweite Action. |
+| | `secondary_action.keepOpen` | `false` | Toast nach der zweiten Aktion offen halten. |
 | | `secondary_action.tap_action` | **Pflicht** | Home-Assistant-Action-Konfiguration. |
 
 ```yaml

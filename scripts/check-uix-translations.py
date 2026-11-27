@@ -79,8 +79,8 @@ def main():
             if previous and previous_pages.get(path, {}).get(locale + "_sha256") != item[locale + "_sha256"]:
                 raise SystemExit(f"Translation changed since the recorded review: {locale}/{path}")
         result.append(item)
-    if len(result) != 66:
-        raise SystemExit("Expected the reviewed 66 canonical source pages")
+    if len(result) != 69:
+        raise SystemExit("Expected the reviewed 69 canonical source pages")
     if args.write:
         RECORD.write_text(json.dumps({
             "reviewed_at": date.fromisoformat(args.review_date).isoformat() if args.review_date else date.today().isoformat(),

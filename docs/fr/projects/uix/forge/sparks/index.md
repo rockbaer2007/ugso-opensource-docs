@@ -4,6 +4,8 @@ description: Comportements autonomes qui enrichissent un élément créé avec U
 ---
 # Sparks
 
+Depuis **9.2.0-beta.3** : [Entities](./entities) filtre des listes ou collecte des IDs, [Configuration](./config) modifie les configurations, [Home Summary](./home-summary) filtre les compteurs Home. Entities et Configuration prennent aussi en charge les [stratégies](../forge#strategies).
+
 Les sparks sont des comportements facultatifs que vous ajoutez à un élément créé avec [UIX Forge](../index.md), dans la liste `forge.sparks`. Chaque spark possède une clé `type` et ses propres options de configuration.
 
 Sparks disponibles :

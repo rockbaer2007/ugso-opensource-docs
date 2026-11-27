@@ -3,14 +3,17 @@ title: Sparks
 description: Sparks are self-contained behaviours that augment an element forged with UIX Forge.
 ---
 
-> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.1**, revision [9528baa](https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c), reviewed 2026-11-23. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
+> Adapted from the canonical English UIX documentation by [Lint-Free-Technology/uix](https://github.com/Lint-Free-Technology/uix), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: `dev` / **9.2.0-beta.3**, revision [6a2bad2](https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8), reviewed 2026-11-27. Stable baseline on this site: **9.1.0**. Requires Home Assistant 2026.11.0 or later. Markup adapted for this site; the [original documentation](https://uix.lf.technology/) remains authoritative.
 
 # Sparks
 
-Sparks are optional behaviours added to a [UIX Forge](../index.md) forged element via the `forge.sparks` list. Each spark has a `type` key and its own configuration options.
+Add Sparks to the `forge.sparks` list to extend what Forge does. Each Spark has a `type` and its own options. Entities and Configuration Sparks also work with [Forge strategies](../forge.md#strategies).
 
 Available sparks:
 
+- :material-format-list-bulleted: [Entities](entities.md) — use auto-entities filters to fill a list or collect entity IDs for a patch or template.
+- :material-file-tree: [Configuration](config.md) — add, change, or remove parts of a config, including the output of a Home Assistant strategy.
+- :material-home-analytics: [Home Summary](home-summary.md) — choose which entities count toward a native Home Overview summary.
 - :speech_balloon: [Tooltip](./tooltip.md) — attach a styled tooltip to any element within the forged element.
 - :material-button-cursor: [Button](button.md) — insert an interactive `ha-button` element as a sibling before or after a target element within the forged element.
 - :material-badge-account-horizontal-outline: [Badge](badge.md) — insert a Web Awesome-styled `uix-badge` as a sibling before or after any element within the forged element.

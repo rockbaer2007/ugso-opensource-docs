@@ -154,21 +154,32 @@ locks:
     max_retries: 3
     failed_action:
       action: perform-action
-      perform_action: persistent_notification.create
+      perform_action: script.notify_uix_lock_attempt
       data:
-        title: UIX lock failed
-        message: A user reached the maximum number of incorrect code entries.
+        user: "$uix.user"
+        retry: "$uix.retry"
+        browser_id: "$uix.browser_id"
 ```
 
-Dieses Beispiel erstellt direkt nach der dritten falschen Eingabe eine dauerhafte Benachrichtigung. Eine zusätzliche Automation oder eine Berechtigung zum Senden auf den Ereignisbus wird dafür nicht benötigt. Für eine gesonderte Reaktion auf jeden Fehlversuch ergänze `retry_action`:
+Dieses aktuelle Beispiel ruft nach der dritten falschen Eingabe ein HA-Script auf. Die exakten `$uix.*`-Werte ersetzen Benutzer, Versuchszähler und Browser-Mod-ID rekursiv und typbewahrend; sie sind keine Jinja-Templates. Lege das folgende Script in HA an und ersetze `mobile_app_your_phone` durch deinen Benachrichtigungsdienst. Die Jinja-Ausdrücke im Script verarbeitet HA, nicht UIX. Für eine Meldung bei jedem Fehlversuch dieselbe Action unter `retry_action` verwenden.
 
 ```yaml
-retry_action:
-  action: perform-action
-  perform_action: persistent_notification.create
-  data:
-    title: UIX lock retry
-    message: An incorrect lock code was entered.
+script:
+  notify_uix_lock_attempt:
+    alias: Notify about a UIX lock attempt
+    fields:
+      user:
+        required: true
+      retry:
+        required: true
+      browser_id:
+        required: false
+    sequence:
+      - action: notify.mobile_app_your_phone
+        data:
+          title: UIX lock attempt
+          message: >-
+            {{ user }} entered an incorrect code (attempt {{ retry }}) from {{ browser_id or "an unknown browser" }}.
 ```
 
 Normale Werte in `data` werden unverändert weitergegeben. Exakte `$uix.*`-Werte können Laufzeitdaten einsetzen; siehe [Ersetzungen in Aktionsdaten](../../extras/uix-actions.md#ersetzungen-in-aktionsdaten). Verwende eine Script-Action für dynamische Nachrichtentexte oder zusätzliche Weiterleitung.

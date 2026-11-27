@@ -278,10 +278,10 @@ const UgsoLayout = defineComponent({
                   h(
                     'span',
                     isEnglish
-                      ? 'Stable baseline: UIX 9.1.0, Home Assistant 2026.11.0 minimum, release ca36726. All 66 canonical pages compared on 23 November 2026 through dev 9528baa: three changed, 63 unchanged. Retry/failed actions and data substitutions describe dev 9.2.0-beta.1, without claiming stable availability. The original English documentation remains authoritative.'
+                      ? 'Stable baseline: UIX 9.1.0, Home Assistant 2026.11.0 minimum, release ca36726. All 69 canonical pages compared on 2026-11-27 through dev 6a2bad2: three added, eight changed, 58 unchanged. Strategies and the three new Sparks describe dev 9.2.0-beta.3, not stable availability. The English original remains authoritative.'
                       : isFrench
-                      ? 'Base stable : UIX 9.1.0, Home Assistant 2026.11.0 minimum, révision ca36726. Les 66 pages sont comparées le 23/11/2026 à dev 9528baa : trois modifiées, 63 inchangées. Les actions retry/failed et substitutions décrivent dev 9.2.0-beta.1, sans garantir leur disponibilité dans la version stable. La documentation originale en anglais reste la référence.'
-                      : 'Stabile Basis: UIX 9.1.0, benötigt Home Assistant ab 2026.11.0, Release ca36726. Alle 66 Quellseiten am 23.11.2026 bis dev 9528baa verglichen: drei geändert, 63 unverändert. Retry-/Failed-Aktionen und Datenersetzungen beschreiben dev 9.2.0-beta.1, ohne Zusage zur stabilen Verfügbarkeit. Maßgeblich bleibt die englische Originaldokumentation.'
+                      ? 'Base stable : UIX 9.1.0, HA 2026.11.0 minimum, révision ca36726. Comparaison des 69 pages au 2026-11-27 avec dev 6a2bad2 : trois ajoutées, huit modifiées, 58 inchangées. Stratégies et nouveaux Sparks décrivent dev 9.2.0-beta.3, pas une disponibilité stable. L’original anglais fait autorité.'
+                      : 'Stabile Basis: UIX 9.1.0, HA ab 2026.11.0, Release ca36726. Alle 69 Quellseiten am 2026-11-27 bis dev 6a2bad2 verglichen: drei neu, acht geändert, 58 unverändert. Strategien und die drei neuen Sparks beschreiben dev 9.2.0-beta.3, keine stabile Freigabe. Maßgeblich bleibt das englische Original.'
                   ),
                   h('span', [
                     h('a', { href: 'https://uix.lf.technology/', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical English documentation' : isFrench ? 'Documentation originale en anglais' : 'Englische Originaldoku'),
@@ -298,7 +298,7 @@ const UgsoLayout = defineComponent({
                     ' · ',
                     h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/ca3672619a11858bbc7f9165db999c0aaa7cef00', target: '_blank', rel: 'noopener' }, isEnglish ? 'Release revision ca36726' : isFrench ? 'Révision publiée ca36726' : 'Release-Revision ca36726'),
                     ' · ',
-                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/9528baaee9cedc2cfb862cda2d6391b8a1fc647c', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical docs 9528baa' : isFrench ? 'Sources documentaires 9528baa' : 'Quellabgleich 9528baa'),
+                    h('a', { href: 'https://github.com/Lint-Free-Technology/uix/commit/6a2bad250e1af75b058353a22371154df23474c8', target: '_blank', rel: 'noopener' }, isEnglish ? 'Canonical docs 6a2bad2' : isFrench ? 'Sources documentaires 6a2bad2' : 'Quellabgleich 6a2bad2'),
                     ' · ',
                     h('a', { href: isEnglish ? '/en/projects/uix/translation-status' : isFrench ? '/fr/projects/uix/translation-status' : '/projects/uix/translation-status' }, isEnglish ? 'Translation status' : isFrench ? 'État de la traduction' : 'Übersetzungsstatus')
                   ]),

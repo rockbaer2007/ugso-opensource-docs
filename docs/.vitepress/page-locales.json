@@ -2474,6 +2474,36 @@
     "EN": "/en/projects/uix/forge/sparks/button",
     "FR": "/fr/projects/uix/forge/sparks/button"
   },
+  "/projects/uix/forge/sparks/config": {
+    "DE": "/projects/uix/forge/sparks/config",
+    "EN": "/en/projects/uix/forge/sparks/config",
+    "FR": "/fr/projects/uix/forge/sparks/config"
+  },
+  "/en/projects/uix/forge/sparks/config": {
+    "DE": "/projects/uix/forge/sparks/config",
+    "EN": "/en/projects/uix/forge/sparks/config",
+    "FR": "/fr/projects/uix/forge/sparks/config"
+  },
+  "/fr/projects/uix/forge/sparks/config": {
+    "DE": "/projects/uix/forge/sparks/config",
+    "EN": "/en/projects/uix/forge/sparks/config",
+    "FR": "/fr/projects/uix/forge/sparks/config"
+  },
+  "/projects/uix/forge/sparks/entities": {
+    "DE": "/projects/uix/forge/sparks/entities",
+    "EN": "/en/projects/uix/forge/sparks/entities",
+    "FR": "/fr/projects/uix/forge/sparks/entities"
+  },
+  "/en/projects/uix/forge/sparks/entities": {
+    "DE": "/projects/uix/forge/sparks/entities",
+    "EN": "/en/projects/uix/forge/sparks/entities",
+    "FR": "/fr/projects/uix/forge/sparks/entities"
+  },
+  "/fr/projects/uix/forge/sparks/entities": {
+    "DE": "/projects/uix/forge/sparks/entities",
+    "EN": "/en/projects/uix/forge/sparks/entities",
+    "FR": "/fr/projects/uix/forge/sparks/entities"
+  },
   "/projects/uix/forge/sparks/event": {
     "DE": "/projects/uix/forge/sparks/event",
     "EN": "/en/projects/uix/forge/sparks/event",
@@ -2518,6 +2548,21 @@
     "DE": "/projects/uix/forge/sparks/grid",
     "EN": "/en/projects/uix/forge/sparks/grid",
     "FR": "/fr/projects/uix/forge/sparks/grid"
+  },
+  "/projects/uix/forge/sparks/home-summary": {
+    "DE": "/projects/uix/forge/sparks/home-summary",
+    "EN": "/en/projects/uix/forge/sparks/home-summary",
+    "FR": "/fr/projects/uix/forge/sparks/home-summary"
+  },
+  "/en/projects/uix/forge/sparks/home-summary": {
+    "DE": "/projects/uix/forge/sparks/home-summary",
+    "EN": "/en/projects/uix/forge/sparks/home-summary",
+    "FR": "/fr/projects/uix/forge/sparks/home-summary"
+  },
+  "/fr/projects/uix/forge/sparks/home-summary": {
+    "DE": "/projects/uix/forge/sparks/home-summary",
+    "EN": "/en/projects/uix/forge/sparks/home-summary",
+    "FR": "/fr/projects/uix/forge/sparks/home-summary"
   },
   "/projects/uix/forge/sparks/": {
     "DE": "/projects/uix/forge/sparks/",

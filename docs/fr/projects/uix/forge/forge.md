@@ -4,6 +4,16 @@ description: "Configuration de UIX Forge : macros, billets, imbrication des mod�
 ---
 # UIX Forge
 
+## Stratégies depuis 9.2.0-beta.3 {#strategies}
+
+`mold: strategy` génère la configuration d'un dashboard, d'une vue ou d'une section sans créer d'élément visible. `element` contient une configuration directe ou une stratégie HA/`custom:`, par exemple `home-overview`. Un dashboard produit `views`, une section `cards`, une vue `cards`/`sections` avec `badges`/`footer`. Un `element` vide donne une configuration vide. Au niveau dashboard, `strategy:` appartient à la racine avec `views: []`.
+
+Configuration uniquement en YAML : Foundries, `element_base`, macros, billets et imbrication des templates sont acceptés. Les deux Sparks autorisés sont [Entities](./sparks/entities) et [Configuration](./sparks/config). Les réglages visuels `hidden`, `grid_options`, `show_error`, `delayed_hass`, `forge.uix` concernent les éléments. Utilisez [`wrap_card`](./sparks/config#wrap-generated-cards) pour enrichir une carte générée.
+
+Les templates reçoivent utilisateur/navigateur/hash et le dernier contexte de panneau, éventuellement vide au démarrage. Réévaluation seulement lors d'une génération imposée par HA ou un résultat Entities modifié ; même <code v-pre>{{ now() }}</code> attend cette génération. Les cartes gardent leurs mises à jour propres. Utilisez une Card Forge pour les templates en direct.
+
+Voir [l'exemple People](./sparks/config#wrap-the-overview-strategy-to-add-a-people-map) et les [consignes d'édition](./sparks/config#create-or-edit-the-dashboard). Le dashboard par défaut se règle dans Paramètres → Tableaux de bord ou Profil → Apparence. Les templates d'élément et de style de l'enveloppe lisent une requête seule nommée via `uixForge.entities["spark-id"]` ; voir [les templates Entities](./sparks/entities#use-a-query-result-in-templates).
+
 UIX Forge (`custom:uix-forge`) est un élément Lovelace personnalisé qui associe une configuration basée sur des modèles à des comportements supplémentaires appelés **sparks**. Utilisez-le pour :
 
 - **Créer** des éléments Home Assistant à partir de modèles, afin que la configuration contrôlée par Forge réagisse aux états des entités, à l'utilisateur, au navigateur et aux autres variables de modèle.
@@ -87,7 +97,7 @@ element:
 | `billets` | mapping | | — | [Billets](#billets) : valeurs YAML nommées disponibles comme constantes dans tous les modèles de la configuration Forge. |
 | `hidden` | boolean | ✅ | `false` | Si la valeur est vraie, l'élément est masqué. |
 | `grid_options` | mapping | ✅ | — | Options de grille Lovelace, par exemple `rows` et `columns`, lorsque `mold` vaut `card`. Ignorées pour les autres types. |
-| `show_error` | boolean | | `false` | Si `true`, affiche la carte d'erreur Lovelace au lieu de masquer l'élément lorsque sa création échoue. |
+| `show_error` | boolean | | `false` | Afficher l'erreur de l'élément Lovelace plutôt que le masquer. Les erreurs de transformation Forge sont toujours affichées jusqu'à correction. |
 | `template_nesting` | string | | `"<<>>"` | Chaîne de quatre caractères qui protège les modèles imbriqués. Elle contrôle les deux syntaxes Jinja : avec `<<>>` par défaut, utilisez `<<...>>` pour <code v-pre>{{...}}</code> et `<%...%>` pour `{%...%}`. À utiliser si la configuration de l'élément contient elle-même une syntaxe de type Jinja2. Pour chaque niveau Forge supplémentaire, ajoutez une paire `<>`, par exemple `<<< >>>` et `<<% %>>` pour deux niveaux. |
 | `sparks` | list | ✅ | `[]` | Liste des configurations de [sparks](./sparks/index.md) à appliquer à l'élément créé. |
 | `delayed_hass` | boolean | | — | Retarde la transmission de l'objet hass à la carte jusqu'à son chargement. Cela peut éviter des erreurs de console ou d'autres problèmes avec certaines cartes personnalisées, par exemple `apexcharts_card`. |
@@ -1673,3 +1683,61 @@ elements:
 ```
 
 ::::
+
+
+## Exemples canoniques complémentaires · 9.2.0-beta.3
+
+Exemples inchangés de la référence : les instructions et limites sont expliquées dans les sections précédentes. Adaptez les entités avant utilisation.
+
+```yaml
+views:
+  - path: overview
+    strategy:
+      type: custom:uix-forge
+      forge:
+        mold: strategy
+      element:
+        type: home-overview
+```
+
+```yaml
+title: Alternate states
+views: []
+strategy:
+  type: custom:uix-forge
+  forge:
+    mold: strategy
+    sparks:
+      - type: config
+        patches:
+          - op: replace
+            path: /views/0
+            value:
+              path: states
+              cards:
+                - type: markdown
+                  content: "## Dashboard loaded by Forge"
+  element:
+    type: original-states
+```
+
+```yaml
+# A complete direct View config.
+strategy:
+  type: custom:uix-forge
+  forge:
+    mold: strategy
+  element:
+    type: sections
+    badges:
+      - type: entity
+        entity: person.darryn
+    sections:
+      - type: grid
+        cards:
+          - type: tile
+            entity: light.kitchen
+    footer:
+      type: markdown
+      content: Last updated {{ now() }}
+```
