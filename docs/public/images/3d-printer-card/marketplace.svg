@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="28" viewBox="0 0 154 28" role="img" aria-label="Marketplace">
+  <title>Marketplace</title>
+  <rect width="154" height="28" rx="5" fill="#087f8c"/>
+  <path d="M12 9h12l-1 13H13L12 9m4 0V7a2 2 0 0 1 4 0v2" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+  <text x="34" y="19" fill="#fff" font-family="Arial,sans-serif" font-size="14">Marketplace</text>
+</svg>

@@ -1510,12 +1510,12 @@
         "de": {
           "path": "projects/3d-printer-card/index.md",
           "status": "content-present",
-          "sha256": "46aa62bdcbfc7f413dca82bd0baac5a55663deed970c406e2ab43260be9581cc",
-          "words": 480,
+          "sha256": "54a7f98bf2997924f2ce8bbf7a0e184057015a4ec83e8de1457c01b6331888be",
+          "words": 509,
           "headings": 5,
           "examples": 0,
           "versions": [
-            "0.1.6",
+            "0.1.7",
             "2026.11.3"
           ],
           "unresolved_local_references": []
@@ -1523,12 +1523,12 @@
         "en": {
           "path": "en/projects/3d-printer-card/index.md",
           "status": "content-present",
-          "sha256": "b0565b5f444cb13e9aa1fdc776826d9b0f2713f9f97bfd83072c75e728cee627",
-          "words": 509,
+          "sha256": "062f4cdb8f5de7c4bfa2dd49e71631671081280f69d3d491c645d75dcc96a65f",
+          "words": 541,
           "headings": 5,
           "examples": 0,
           "versions": [
-            "0.1.6",
+            "0.1.7",
             "2026.11.3"
           ],
           "unresolved_local_references": [],
@@ -1548,12 +1548,12 @@
         "fr": {
           "path": "fr/projects/3d-printer-card/index.md",
           "status": "content-present",
-          "sha256": "819e1289838746abfb332a7b68ed7f46564ef610820a80e29de0ad46a45d1502",
-          "words": 525,
+          "sha256": "d3023610a45257c834cd4bbbd0d5c7d117c50c5dafb49017b7d67bceba06431f",
+          "words": 558,
           "headings": 5,
           "examples": 0,
           "versions": [
-            "0.1.6",
+            "0.1.7",
             "2026.11.3"
           ],
           "unresolved_local_references": [],

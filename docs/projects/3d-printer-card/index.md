@@ -7,18 +7,18 @@ description: Kompakte Home-Assistant-Card für Klipper und Moonraker mit Profile
 
 [English](/en/projects/3d-printer-card/) · [Français](/fr/projects/3d-printer-card/)
 
-**Version 0.1.6. Funktioniert nur mit Klipper und Moonraker.** Die [Moonraker-Integration](https://github.com/marcolivierarsenault/moonraker-home-assistant) muss installiert und für jeden Drucker eingerichtet sein. Die Card verwendet deren HA-Entitäten ohne eigene Anmeldung oder zusätzliche Druckerverbindung.
+**Version 0.1.7. Funktioniert nur mit Klipper und Moonraker.** Die [Moonraker-Integration](https://github.com/marcolivierarsenault/moonraker-home-assistant) muss installiert und für jeden Drucker eingerichtet sein. Die Card verwendet deren HA-Entitäten ohne eigene Anmeldung oder zusätzliche Druckerverbindung.
 
 ## Installation
 
-[![In HACS öffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=3d-printer-card&category=plugin)
+[![Im Marketplace öffnen](/images/3d-printer-card/marketplace.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rockbaer2007&repository=3d-printer-card&category=plugin)
 
-1. Einstellungen sichern. Die [Moonraker-Integration in HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=marcolivierarsenault&repository=moonraker-home-assistant&category=integration) installieren und konfigurieren.
-2. `https://github.com/rockbaer2007/3d-printer-card` in HACS als benutzerdefiniertes **Dashboard**-Repository hinzufügen und herunterladen. Noch nicht im allgemeinen HACS-Katalog gelistet.
+1. Einstellungen sichern. Die [Moonraker-Integration im Marketplace](https://my.home-assistant.io/redirect/hacs_repository/?owner=marcolivierarsenault&repository=moonraker-home-assistant&category=integration) installieren und konfigurieren.
+2. `https://github.com/rockbaer2007/3d-printer-card` im Marketplace als benutzerdefiniertes **Dashboard**-Repository hinzufügen und herunterladen. Noch nicht im allgemeinen Marketplace-Katalog gelistet.
 3. Ressource `/hacsfiles/3d-printer-card/3d-printer-card.js` als **JavaScript-Modul** prüfen und Browser neu laden. Eine bisherige lokale Ressource ersetzen; nicht beide gleichzeitig laden.
 4. Im Dashboard **3D Printer Card** hinzufügen. Der technische Typ bleibt `custom:moonraker-display-card`.
 
-Manuell: JS-Datei aus dem Release nach `/config/www/3d-printer-card/` kopieren und `/local/3d-printer-card/3d-printer-card.js?v=0.1.6` als JavaScript-Modul registrieren. Kein HA-Neustart nötig. Alle Entitäten der Beispielvorlage durch die eigenen ersetzen.
+Manuell: JS-Datei aus dem Release nach `/config/www/3d-printer-card/` kopieren und `/local/3d-printer-card/3d-printer-card.js?v=0.1.7` als JavaScript-Modul registrieren. Kein HA-Neustart nötig. Alle Entitäten der Beispielvorlage durch die eigenen ersetzen.
 
 ## Anzeige und Profile
 
@@ -38,8 +38,10 @@ Mit echten Entitäten unter HA 2026.11.3 geprüft: Anzeige, Kamera, Graphen und 
 
 ## Downloads
 
+Kopierfertige Forenbeiträge: [Deutsch](https://github.com/rockbaer2007/3d-printer-card/blob/main/forum/forenbeitrag-de.md) · [English](https://github.com/rockbaer2007/3d-printer-card/blob/main/forum/forum-post-en.md).
+
 - [GitHub und vollständige Anleitung](https://github.com/rockbaer2007/3d-printer-card)
-- [Release 0.1.6 mit ZIP und JavaScript](https://github.com/rockbaer2007/3d-printer-card/releases/tag/v0.1.6)
+- [Release 0.1.7 mit ZIP und JavaScript](https://github.com/rockbaer2007/3d-printer-card/releases/tag/v0.1.7)
 - [Changelog](https://github.com/rockbaer2007/3d-printer-card/blob/main/CHANGELOG.md)
 
 MIT-Lizenz. Eigenständiges Frontend-Projekt, getrennt von der Moonraker-Integration.
