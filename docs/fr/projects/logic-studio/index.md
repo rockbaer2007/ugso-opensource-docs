@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.132 · Sélecteur d’entités de style HA et autorisations READ/WRITE/EVENT/TOPICS séparées.
+description: HA Logic Studio Pro 0.1.133 · Définir les états des capteurs dans Blocks A/JS et créer des plans indépendants avec nom et dossier.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,20 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.133 · États des capteurs et nouveaux plans fonctionnels {#sensorzustand-funktionsplan}
+
+**System → Définir l’état du capteur** est disponible dans Blocks A et Blocks JS. Choisis un `sensor.*` existant et connecte un nombre, un texte ou un calcul. Le sélecteur de style HA affiche le nom, l’identifiant et l’état des capteurs. L’unité, la classe d’appareil et les autres attributs sont conservés. Le capteur nécessite l’autorisation WRITE ; READ seul ne suffit pas.
+
+Blocks JS utilise `ha.setSensorState("sensor.example", 42)`. Blocks A exporte l’événement HA natif `logic_studio_set_sensor_state` avec `entity_id` et `state`. **L’application Studio active** le reçoit et vérifie la même autorisation WRITE. Cette entrée interne ne nécessite pas d’autorisation EVENT générale. Sans l’application, la demande d’écriture n’est pas traitée. Les erreurs du pont apparaissent dans le journal de l’application ; émettre l’événement ne confirme pas la réussite de l’écriture.
+
+Le comportement correspond à **Outils de développement → États** : aucune commande à l’appareil et aucun nouveau capteur permanent. Une intégration ou un redémarrage de HA peut remplacer la valeur. Les tests JS simulent l’écriture ; l’aperçu YAML n’écrit rien.
+
+**Nouveau projet → Plan fonctionnel** demande désormais un nom et un dossier à chaque création. Plusieurs plans indépendants sont possibles et commencent vides. Les plans, dossiers et réglages existants sont conservés. Annuler ne crée aucun projet.
+
+**Vérifié :** 50 tests Node et 12 tests du serveur. Après sauvegarde sur Home Assistant 2026.11.3, Blocks JS a écrit 40 + 2 sous forme de **42 W** ; les données d’événement générées par Blocks A ont défini **43 W** via le pont. Les attributs ont été conservés. Une écriture a été refusée après retrait de WRITE. Deux nouveaux plans sont restés distincts après rechargement et le plan existant a été conservé. Les autorisations initiales ont été rétablies. Les libellés des blocs ont été vérifiés en DE/EN/FR.
+
+[Version GitHub 0.1.133 avec ZIP et journal des modifications](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.133) · [Blocks A](./user-guide/blocks-a#sensorzustand-setzen) · [Blocks JS](./user-guide/blocks-js#sensorzustand-setzen) · [Nouveaux plans](./user-guide/function-plan#neue-funktionsplaene)
 
 #### 0.1.132 · Quatre autorisations runtime séparées {#runtime-alle-freigaben}
 

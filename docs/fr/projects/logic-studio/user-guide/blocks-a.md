@@ -1,5 +1,28 @@
 # Blocks A
 
+## Définir l’état du capteur {#sensorzustand-setzen}
+
+À partir de **0.1.133**, **System** propose **Définir l’état du capteur** :
+
+1. Sélectionne un `sensor.*` existant avec le sélecteur d’entités de style HA.
+2. Connecte un nombre, un texte ou un calcul à l’entrée de valeur (état de 255 caractères maximum).
+3. Autorise le capteur dans **WRITE – cibles individuelles** (`runtime_write_entities`) dans la configuration de l’application. Conserve les entrées existantes. READ seul ne suffit pas.
+4. Choisis **Vérifier les blocs → Ouvrir en YAML HA**. Vérifie puis installe toi-même l’automatisation dans Home Assistant.
+
+Exemple d’action générée :
+
+```yaml
+actions:
+  - event: logic_studio_set_sensor_state
+    event_data:
+      entity_id: sensor.example
+      state: 43
+```
+
+L’application Studio active reçoit l’événement et vérifie WRITE. Sans l’application, il n’est pas traité. Cette entrée interne ne nécessite pas d’autorisation EVENT générale. Les erreurs apparaissent dans le journal de l’application ; émettre l’événement ne confirme pas la réussite de l’écriture.
+
+Le bloc conserve l’unité, la classe d’appareil et les autres attributs. Il correspond à **Outils de développement → États**, ne commande aucun appareil et ne crée aucun capteur permanent. L’intégration responsable peut remplacer la valeur ultérieurement. L’aperçu YAML n’écrit rien.
+
 ## Premier exemple
 
 L’automatisation allume la lumière du couloir lorsque le capteur de mouvement passe à `on`.

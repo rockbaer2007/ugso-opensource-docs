@@ -1,5 +1,19 @@
 # Blocks JS
 
+## Définir l’état du capteur {#sensorzustand-setzen}
+
+À partir de **0.1.133**, **System** propose **Définir l’état du capteur**. Sélectionne un `sensor.*` existant avec le sélecteur de style HA et connecte un nombre, un texte ou un calcul à l’entrée de valeur. Les nombres doivent être finis ; les textes sont limités à 255 caractères.
+
+Le capteur nécessite l’autorisation WRITE, par exemple dans `runtime_write_entities`. Exemple de code généré :
+
+```js
+ha.setSensorState("sensor.example", 40 + 2);
+```
+
+**Test** simule l’écriture. **Enregistrer → Play** l’exécute dans le moteur Studio. L’unité, la classe d’appareil et les autres attributs sont conservés. Aucun appareil n’est commandé et aucun capteur permanent n’est créé. L’intégration responsable peut remplacer la valeur ultérieurement. Les autorisations WRITE manquantes et les erreurs d’écriture apparaissent dans le journal d’exécution.
+
+Lors du test réel sur HA après sauvegarde, le calcul a produit **42 W**. Une écriture ultérieure a été refusée après retrait de l’autorisation temporaire ; les autorisations initiales ont été conservées.
+
 ## Premier exemple
 
 Le test lit l’état simulé d’une entité et l’affiche dans le journal.

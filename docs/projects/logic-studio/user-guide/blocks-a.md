@@ -1,5 +1,28 @@
 # Blocks A
 
+## Sensorzustand setzen {#sensorzustand-setzen}
+
+Ab **0.1.133** steht unter **System** der Baustein **Sensorzustand setzen** bereit:
+
+1. Wähle einen vorhandenen `sensor.*` über die HA-typische Entitätenauswahl.
+2. Verbinde den Werteingang mit einer Zahl, einem Text oder einer Berechnung (höchstens 255 Zeichen als Zustand).
+3. Gib den Sensor in der App-Konfiguration unter **WRITE – einzelne Ziele** (`runtime_write_entities`) frei. Vorhandene Einträge erhalten. READ allein genügt nicht.
+4. Wähle **Blöcke prüfen → Als HA-YAML öffnen**. Installiere die geprüfte Automation anschließend selbst in Home Assistant.
+
+Beispiel der erzeugten Aktion:
+
+```yaml
+actions:
+  - event: logic_studio_set_sensor_state
+    event_data:
+      entity_id: sensor.example
+      state: 43
+```
+
+Die laufende Studio-App empfängt das Ereignis und prüft WRITE. Ohne laufende App erfolgt keine Verarbeitung. Für diesen internen Eingang ist keine allgemeine EVENT-Freigabe nötig. Fehler stehen im App-Protokoll; ein erfolgreich ausgelöstes Ereignis bestätigt noch keinen erfolgreichen Schreibzugriff.
+
+Der Baustein erhält Einheit, Geräteklasse und andere Attribute. Er verhält sich wie **Entwicklerwerkzeuge → Zustände**, schaltet kein Gerät und legt keinen dauerhaften Sensor an. Die zuständige Integration kann den Wert später ersetzen. Die YAML-Vorschau führt keinen Schreibzugriff aus.
+
 ## Erstes Beispiel
 
 Die Beispielautomation schaltet das Flurlicht ein, sobald der Bewegungssensor `on` meldet.

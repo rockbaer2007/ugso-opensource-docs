@@ -1,5 +1,13 @@
 # Plan fonctionnel
 
+## Nouveaux plans avec nom et dossier {#neue-funktionsplaene}
+
+À partir de **0.1.133**, **Nouveau projet → Plan fonctionnel** ouvre les champs **Nom**, **Dossier** et un **ID** dérivé automatiquement à chaque création. Saisis un nom, choisis un dossier existant puis clique sur **Créer**.
+
+Chaque nouveau plan commence vide. Plusieurs plans peuvent être modifiés, enregistrés et rouverts indépendamment. La création ne renvoie plus au premier plan existant. En cas d’identifiants identiques, un suffixe unique est ajouté. **Annuler** ne crée aucun plan.
+
+Les plans, affectations de dossiers et réglages existants sont conservés. Les plans arrêtés peuvent être supprimés comme les autres projets. Le test HA a enregistré deux nouveaux plans dans des dossiers distincts et les a retrouvés après rechargement ; le plan existant a conservé ses quatre blocs et deux connexions.
+
 ## Inverser un signal dans le plan fonctionnel
 
 ### 1. Ouvrir le plan et ajouter les blocs

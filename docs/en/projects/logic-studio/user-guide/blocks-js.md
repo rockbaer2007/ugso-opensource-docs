@@ -1,5 +1,19 @@
 # Blocks JS
 
+## Set sensor state {#sensorzustand-setzen}
+
+From **0.1.133**, **System** includes **Set sensor state**. Select an existing `sensor.*` using HA-style selection and connect a number, text or calculation to the value input. Numbers must be finite; text is limited to 255 characters.
+
+The sensor requires WRITE permission, for example in `runtime_write_entities`. Example generated code:
+
+```js
+ha.setSensorState("sensor.example", 40 + 2);
+```
+
+**Test run** simulates the write. **Save → Play** runs it in the Studio runtime. Unit, device class and other attributes are retained. No device is controlled and no persistent sensor is created. The owning integration may replace the value later. Missing WRITE permissions and write errors appear in the runtime log.
+
+In the backed-up HA live test, the calculation produced **42 W**. A subsequent write was rejected after removing the temporary permission; the original permissions were preserved.
+
 ## First example
 
 The test run reads a simulated entity state and writes it to the log.

@@ -1,5 +1,28 @@
 # Blocks A
 
+## Set sensor state {#sensorzustand-setzen}
+
+From **0.1.133**, **System** includes **Set sensor state**:
+
+1. Select an existing `sensor.*` using HA-style entity selection.
+2. Connect a number, text or calculation block to the value input (state length: at most 255 characters).
+3. Permit this sensor under **WRITE – individual targets** (`runtime_write_entities`) in the app configuration. Preserve existing entries. READ alone is insufficient.
+4. Choose **Check blocks → Open as HA YAML**. Review and install the automation in Home Assistant yourself.
+
+Example generated action:
+
+```yaml
+actions:
+  - event: logic_studio_set_sensor_state
+    event_data:
+      entity_id: sensor.example
+      state: 43
+```
+
+The running Studio app receives the event and checks WRITE. Without the app, it is not processed. No general EVENT permission is required for this internal input. Errors appear in the app log; successfully firing an event does not confirm that the write succeeded.
+
+The block retains unit, device class and other attributes. It behaves like **Developer Tools → States**, controls no device and creates no persistent sensor. The owning integration may replace the value later. YAML previews perform no writes.
+
 ## First example
 
 The example turns on a hallway light when the motion sensor changes to `on`.

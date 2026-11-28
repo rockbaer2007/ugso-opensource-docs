@@ -1,5 +1,19 @@
 # Blocks JS
 
+## Sensorzustand setzen {#sensorzustand-setzen}
+
+Ab **0.1.133** findest du unter **System** den Baustein **Sensorzustand setzen**. Wähle einen vorhandenen `sensor.*` mit der HA-typischen Auswahl und verbinde eine Zahl, einen Text oder eine Berechnung mit dem Werteingang. Zahlen müssen endlich sein, Texte dürfen höchstens 255 Zeichen enthalten.
+
+Der Sensor braucht eine WRITE-Freigabe, etwa in `runtime_write_entities`. Der Baustein erzeugt beispielsweise:
+
+```js
+ha.setSensorState("sensor.example", 40 + 2);
+```
+
+**Testlauf** simuliert den Zugriff. **Speichern → Play** führt ihn in der Studio-Runtime aus. Einheit, Geräteklasse und andere Attribute bleiben erhalten. Es wird kein Gerät geschaltet und kein dauerhafter Sensor angelegt. Die zuständige Integration kann den Wert später ersetzen. Fehlende WRITE-Freigaben und Schreibfehler erscheinen im Runtime-Protokoll.
+
+Im gesicherten HA-Livetest ergab die Berechnung **42 W**. Nach Entfernen der temporären Freigabe wurde ein weiterer Schreibversuch abgewiesen; die ursprünglichen Freigaben blieben erhalten.
+
 ## Erstes Beispiel
 
 Der Testlauf liest einen simulierten Entitätszustand und schreibt ihn ins Protokoll.

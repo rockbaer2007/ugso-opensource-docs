@@ -1,5 +1,13 @@
 # Funktionsplan
 
+## Neue Funktionspläne mit Name und Ordner {#neue-funktionsplaene}
+
+Ab **0.1.133** öffnet **Neues Projekt → Funktionsplan** bei jeder Neuanlage die Auswahl **Name**, **Ordner** und eine automatisch daraus abgeleitete **ID**. Wähle einen eigenen Namen und einen vorhandenen Ordner und klicke **Erstellen**.
+
+Jeder neue Plan startet leer. Du kannst mehrere Pläne getrennt bearbeiten, speichern und wieder öffnen. Die Neuanlage springt nicht mehr zum ersten vorhandenen Funktionsplan. Namensgleiche IDs erhalten einen eindeutigen Zusatz. **Abbrechen** legt keinen Plan an.
+
+Vorhandene Pläne, Ordnerzuordnungen und Einstellungen bleiben erhalten. Angehaltene Pläne lassen sich wie andere Projekte löschen. Beim HA-Test wurden zwei neue Pläne in unterschiedlichen Ordnern gespeichert und nach Neuladen wiedergefunden; der bisherige Plan behielt seine vier Bausteine und zwei Verbindungen.
+
 ## Ein Signal im Funktionsplan umkehren
 
 ### 1. Plan öffnen und Bausteine hinzufügen

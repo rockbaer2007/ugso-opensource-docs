@@ -1,5 +1,13 @@
 # Function plan
 
+## New function plans with names and folders {#neue-funktionsplaene}
+
+From **0.1.133**, **New project → Function plan** opens **Name**, **Folder** and an automatically derived **ID** for every new plan. Enter a name, choose an existing folder and select **Create**.
+
+Each new plan starts empty. Multiple plans can be edited, saved and reopened independently. Creating a plan no longer jumps to the first existing function plan. Colliding IDs receive a unique suffix. **Cancel** creates no plan.
+
+Existing plans, folder assignments and settings are preserved. Stopped plans can be deleted like other projects. The HA test saved two new plans in different folders and reopened them after reloading; the existing plan retained its four blocks and two connections.
+
 ## Invert a signal in the function plan
 
 ### 1. Open the plan and add the blocks
