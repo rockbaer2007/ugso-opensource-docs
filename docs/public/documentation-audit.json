@@ -9607,9 +9607,9 @@
         "de": {
           "path": "projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "372cd569cd28a74e4bc06027977d2edb8f82486577c53fb092603ee819134f7f",
-          "words": 11483,
-          "headings": 20,
+          "sha256": "72fa7ec6be7da77bfe956116f2e4405d60ec4d2895ea8da49a9acc1e6e1710a7",
+          "words": 11675,
+          "headings": 21,
           "examples": 2,
           "versions": [
             "0.1.1",
@@ -9651,6 +9651,7 @@
             "0.1.134",
             "0.1.135",
             "0.1.136",
+            "0.1.137",
             "0.1.140",
             "0.1.20",
             "0.1.21",
@@ -9713,9 +9714,9 @@
         "en": {
           "path": "en/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "ca04042a97faa6f89fb778744aaa43c7eb5e00833b34b7d2d6051ff1249cd9e6",
-          "words": 12133,
-          "headings": 20,
+          "sha256": "72fc01d623c2bbe4b50053461a4730ffbdc5f944d660512ce6db4c8fb009b741",
+          "words": 12348,
+          "headings": 21,
           "examples": 2,
           "versions": [
             "0.1.1",
@@ -9757,6 +9758,7 @@
             "0.1.134",
             "0.1.135",
             "0.1.136",
+            "0.1.137",
             "0.1.140",
             "0.1.20",
             "0.1.21",
@@ -9825,16 +9827,16 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test. Also reviewed the matching 0.1.137 dotted-grid and wheel-navigation addendum in all three locales: 101 local tests, no HA live-test claim for 0.1.137.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           }
         },
         "fr": {
           "path": "fr/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "82f9a4866bc3c135cd4239694e22783da50ff5ada7258536767627f2abf636d8",
-          "words": 13817,
-          "headings": 20,
+          "sha256": "53ca53f590009d422af5195ebcae9c9c2322483f971ad657b1c9f296cb939174",
+          "words": 14058,
+          "headings": 21,
           "examples": 2,
           "versions": [
             "0.1.1",
@@ -9876,6 +9878,7 @@
             "0.1.134",
             "0.1.135",
             "0.1.136",
+            "0.1.137",
             "0.1.140",
             "0.1.20",
             "0.1.21",
@@ -9944,7 +9947,7 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test. Also reviewed the matching 0.1.137 dotted-grid and wheel-navigation addendum in all three locales: 101 local tests, no HA live-test claim for 0.1.137.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           }
         }
@@ -10027,8 +10030,8 @@
         "de": {
           "path": "projects/logic-studio/user-guide/blocks-a.md",
           "status": "content-present",
-          "sha256": "05774a53d377c0d40d5d5b850cc9ed435cb367421a7055333a0838b926844b5a",
-          "words": 675,
+          "sha256": "710cf89da177dd5094e1780b0d6df9101b7c9584b0b3999163406165727da602",
+          "words": 744,
           "headings": 12,
           "examples": 1,
           "versions": [
@@ -10036,6 +10039,7 @@
             "0.1.134",
             "0.1.135",
             "0.1.136",
+            "0.1.137",
             "2026.11.3"
           ],
           "unresolved_local_references": []
@@ -10043,8 +10047,8 @@
         "en": {
           "path": "en/projects/logic-studio/user-guide/blocks-a.md",
           "status": "content-present",
-          "sha256": "37a45f795c299115bac7211678228105f88fe7ef29cfd06366c911e39490d011",
-          "words": 661,
+          "sha256": "702f10fdd47f55d268d54a0b656bb7d74dc4f0a996e6b81d882c1da22b6562f8",
+          "words": 739,
           "headings": 12,
           "examples": 1,
           "versions": [
@@ -10052,6 +10056,7 @@
             "0.1.134",
             "0.1.135",
             "0.1.136",
+            "0.1.137",
             "2026.11.3"
           ],
           "unresolved_local_references": [],
@@ -10065,20 +10070,20 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained."
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test."
           }
         },
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/blocks-a.md",
           "status": "content-present",
-          "sha256": "27296a47cda3456c7ebace5842f605ed652455a4d650440b077468404b669686",
-          "words": 736,
+          "sha256": "b01ff63fdd8dd950e8bcee2bc9a7ef919ae1776636b40f6dd61e457bb69c3448",
+          "words": 824,
           "headings": 12,
           "examples": 1,
           "versions": [
@@ -10086,6 +10091,7 @@
             "0.1.134",
             "0.1.135",
             "0.1.136",
+            "0.1.137",
             "2026.11.3"
           ],
           "unresolved_local_references": [],
@@ -10099,13 +10105,13 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained."
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test."
           }
         }
       }
@@ -10116,8 +10122,8 @@
         "de": {
           "path": "projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "f8fdea68650b734a4b099b0b36f2b3be330e8049f26f21dd34a584902529173a",
-          "words": 1453,
+          "sha256": "de47d48820f8dfec4dfb7f0f2984b89febaadc5e032feb178e9069cc2dc149fe",
+          "words": 1518,
           "headings": 18,
           "examples": 1,
           "versions": [
@@ -10125,7 +10131,7 @@
             "0.1.133",
             "0.1.134",
             "0.1.135",
-            "0.1.136",
+            "0.1.137",
             "2026.11.3"
           ],
           "unresolved_local_references": []
@@ -10133,8 +10139,8 @@
         "en": {
           "path": "en/projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "602ae96ad26f88903c30622592de95c4d1a8aa079a82d76a55b73940054a8b67",
-          "words": 1435,
+          "sha256": "6f4f69f8bdda710739c75e5c5453eb7dd498e29fc5f98f7b7241e819db102abb",
+          "words": 1509,
           "headings": 18,
           "examples": 1,
           "versions": [
@@ -10142,7 +10148,7 @@
             "0.1.133",
             "0.1.134",
             "0.1.135",
-            "0.1.136",
+            "0.1.137",
             "2026.11.3"
           ],
           "unresolved_local_references": [],
@@ -10156,20 +10162,20 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained."
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test."
           }
         },
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "61bc3f869bf0c7fd9e4c0bd5890291225708e57b33dfe4b167d714112b724328",
-          "words": 1591,
+          "sha256": "b35395d1a513f7f65c117cd7e8e13c0546124862ef2d32b0fa8705bef46325a3",
+          "words": 1675,
           "headings": 18,
           "examples": 1,
           "versions": [
@@ -10177,7 +10183,7 @@
             "0.1.133",
             "0.1.134",
             "0.1.135",
-            "0.1.136",
+            "0.1.137",
             "2026.11.3"
           ],
           "unresolved_local_references": [],
@@ -10191,13 +10197,13 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained."
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test."
           }
         }
       }
@@ -10427,24 +10433,26 @@
         "de": {
           "path": "projects/logic-studio/user-guide/javascript.md",
           "status": "content-present",
-          "sha256": "9ec963896900a7f6ecd08429da84f72ec050a32a0cd738376f802826d8ef7796",
-          "words": 300,
+          "sha256": "23ecd0a767cea11f38b4312c3557a0f449991e74036ff9695c527caef91d49bd",
+          "words": 341,
           "headings": 10,
           "examples": 0,
           "versions": [
-            "0.1.136"
+            "0.1.136",
+            "2026.11.3"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/logic-studio/user-guide/javascript.md",
           "status": "content-present",
-          "sha256": "29c8ec88799141c1c85c784a3b8f644ca8b887c68e6727b7ba56be4d53c26cd7",
-          "words": 283,
+          "sha256": "22ab945758c631d0b0b3df778649c000d196fdbd1d8dbb5fa4e35cccb505cfcf",
+          "words": 328,
           "headings": 10,
           "examples": 0,
           "versions": [
-            "0.1.136"
+            "0.1.136",
+            "2026.11.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10456,25 +10464,26 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-20",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "reviewed_at": "2026-11-28",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained."
+            "reviewed_at": "2026-11-28",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test."
           }
         },
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/javascript.md",
           "status": "content-present",
-          "sha256": "3ba4d8d5dcb62f9c5798d835fdc025f4dd9d78254807f8ecc46a86196cae2b0d",
-          "words": 304,
+          "sha256": "b05e501ad039bbd37f517216b307a5f76b8856c2f8e6356ee509a2dc956f7d14",
+          "words": 353,
           "headings": 10,
           "examples": 0,
           "versions": [
-            "0.1.136"
+            "0.1.136",
+            "2026.11.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10486,14 +10495,14 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-20",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "reviewed_at": "2026-11-28",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained."
+            "reviewed_at": "2026-11-28",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test."
           }
         }
       }
@@ -10575,24 +10584,26 @@
         "de": {
           "path": "projects/logic-studio/user-guide/typescript.md",
           "status": "content-present",
-          "sha256": "fc58130279b3c8d58749cdaf3863c026e945fae618476af9d4be213083105a6c",
-          "words": 308,
+          "sha256": "18d85a82420bf94f3f3e812b6a22356b37606f8b06ca7d6f5d24e7c2c5c3db52",
+          "words": 349,
           "headings": 10,
           "examples": 0,
           "versions": [
-            "0.1.136"
+            "0.1.136",
+            "2026.11.3"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/logic-studio/user-guide/typescript.md",
           "status": "content-present",
-          "sha256": "1c5e2201cf8bd15b9b3ee8d1f8e22e26f57cf6344ddb2eb992024a462bc7be17",
-          "words": 291,
+          "sha256": "91bd7104ef6b5ce45215cd4705e5f725faf719b4f571be05a92cbad0fd3a2031",
+          "words": 336,
           "headings": 10,
           "examples": 0,
           "versions": [
-            "0.1.136"
+            "0.1.136",
+            "2026.11.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10604,25 +10615,26 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-20",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "reviewed_at": "2026-11-28",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained."
+            "reviewed_at": "2026-11-28",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test."
           }
         },
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/typescript.md",
           "status": "content-present",
-          "sha256": "ddcbd2435ef63080d223325db1f5fae8feefbba3145367d586c45b587fef8276",
-          "words": 319,
+          "sha256": "9ddd15c267cccbfbae4bd48336c3009146104f0452d3ddb778faaf52be61bd29",
+          "words": 368,
           "headings": 10,
           "examples": 0,
           "versions": [
-            "0.1.136"
+            "0.1.136",
+            "2026.11.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10634,14 +10646,14 @@
           },
           "content_review": {
             "status": "technically-compared",
-            "reviewed_at": "2026-11-20",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained.",
+            "reviewed_at": "2026-11-28",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-20",
-            "assessment": "Reviewed added 0.1.136 sections in DE/EN/FR against the shipped implementation and 99-test report: state/attribute branches, gear editor/custom values/else/duplicate validation, confirmed sensor write before reading, ordinary HA request acceptance versus physical response, explicit await for JS/TS, unchanged native Blocks A bridge, focus commit, stale-runtime warning and durable log clearing. Exact exported example checked in offline QuickJS with delayed mocked HA responses; no HA live-test claim. Prior features and historical test scope retained."
+            "reviewed_at": "2026-11-28",
+            "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test."
           }
         }
       }

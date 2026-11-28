@@ -1,5 +1,7 @@
 # Blocks A
 
+**Surface de travail depuis 0.1.137 :** Grille de points sans alignement imposé. La molette déplace la vue ; Maj + molette la déplace horizontalement. Ctrl + molette change le zoom. Boutons de zoom et pincement également disponibles. Positions enregistrées des blocs conservées.
+
 **Portée de 0.1.136 :** le nouveau déclencheur d’état et l’ordre automatique avec confirmation concernent **Blocks JS**. Le YAML de Blocks A conserve son pont d’événements natif. Les deux variantes de capteur restent disponibles ; autorisations et projets enregistrés conservés. La validation sans Entrée et **Vider le journal** appartiennent à l’interface commune du Studio. 99 tests locaux réussis ; Test réel supplémentaire le 28 novembre 2026 après sauvegarde complète sur HA 2026.11.3 (.193, port 80) : branches d’état/d’attribut de Blocks JS, écriture avant débogage, saisie décimale sans Entrée, avertissement d’ancien code et effacement du journal. Valeurs de test restaurées, projets et autorisations conservés ; exemples arrêtés. [Résultats du test réel](../#zustandstrigger-reihenfolge).
 
 **0.1.135 :** Les 51 champs d’entités directs des 285 blocs enregistrés dans Blocks A/JS ont été vérifiés pour la sélection HA. Le nouveau sélecteur multiple et les déclencheurs compacts concernent Blocks JS. Les champs de cibles HA structurés, les listes et les associations enregistrées dans Blocks A sont conservés. 68 tests Node et 12 tests serveur réussis ; aucun test réel sur HA pour cette version.

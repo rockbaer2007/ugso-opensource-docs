@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+#### 0.1.137 · Grille de points et molette {#punkteraster-mausrad}
+
+Blocks A et Blocks JS affichent une grille de points sans alignement imposé. La molette déplace la surface, Maj + molette la déplace horizontalement et Ctrl + molette change le zoom. Les boutons de zoom et le pincement sont également disponibles. Positions des blocs, projets et autorisations conservés. 101 tests automatisés réussis ; les deux grilles, le déplacement par molette et le zoom ont été vérifiés localement dans Chrome. Aucun test réel sur HA de 0.1.137 ; les résultats suivants sur .193 concernent 0.1.136.
+
+[GitHub · ZIP · Changelog 0.1.137](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.137)
+
 #### 0.1.136 · Branches d’état et ordre confirmé {#zustandstrigger-reihenfolge}
 
 **Nouveau déclencheur Blocks JS « Si la valeur de l’entité change » :** sélectionner une entité et évaluer son **État** ou un **Attribut**. Modifier les branches on/off initiales. L’engrenage ajoute d’autres branches et éventuellement **sinon**. Chaque branche accepte un **Texte** (`mi-ouvert`, `open`, `closed`) ou un **Nombre** (`50` pour `current_position`). Les doublons empêchent le démarrage. Une branche s’exécute lors d’un changement vers sa valeur ; l’état initial du projet ne la déclenche pas.

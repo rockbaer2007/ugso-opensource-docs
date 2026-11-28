@@ -1,5 +1,7 @@
 # Blocks JS
 
+**Arbeitsfläche ab 0.1.137:** Punkteraster ohne Einrasten. Mausrad verschiebt die Ansicht; Shift + Mausrad verschiebt horizontal. Strg + Mausrad zoomt. Zoomtasten und Pinch sind ebenfalls verfügbar. Gespeicherte Blockpositionen bleiben erhalten.
+
 ## Zustandstrigger mit mehreren Zweigen {#zustandstrigger-reihenfolge}
 
 1. Unter **Trigger → Wenn Entität ihren Wert ändert** die Entität wählen.

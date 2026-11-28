@@ -27,6 +27,12 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+#### 0.1.137 · Punkteraster und Mausrad {#punkteraster-mausrad}
+
+Blocks A und Blocks JS zeigen ein Punkteraster ohne erzwungenes Einrasten. Mausrad verschiebt, Shift + Mausrad verschiebt horizontal, Strg + Mausrad zoomt. Zoomtasten und Pinch sind ebenfalls verfügbar. Gespeicherte Blockpositionen, Projekte und Freigaben bleiben erhalten. 101 automatisierte Tests erfolgreich; beide Raster, Mausradverschiebung und Zoom lokal in Chrome geprüft. Kein HA-Livetest von 0.1.137; der folgende Testnachweis auf .193 gilt für 0.1.136.
+
+[GitHub · ZIP · Changelog 0.1.137](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.137)
+
 #### 0.1.136 · Zustandstrigger und bestätigte Reihenfolge {#zustandstrigger-reihenfolge}
 
 **Neuer Blocks-JS-Trigger „Wenn Entität ihren Wert ändert“:** Eine Entität wählen und **Zustand** oder ein **Attribut** auswerten. Standardzweige on/off sind frei änderbar. Über das Zahnrad weitere Zustandszweige und optional **sonst** ergänzen. Pro Zweig **Text** (`halb`, `open`, `closed`) oder **Zahl** (`50` für `current_position`) wählen. Doppelte Werte verhindern den Start. Ein Zweig läuft beim Wechsel zum passenden Wert; der Anfangszustand beim Projektstart löst ihn nicht aus.

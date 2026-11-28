@@ -1,5 +1,7 @@
 # Blocks JS
 
+**Workspace from 0.1.137:** Dotted grid without snapping. The mouse wheel pans the view; Shift + wheel pans horizontally. Ctrl + wheel zooms. Zoom buttons and pinch are also available. Saved block positions are preserved.
+
 ## State trigger with multiple branches {#zustandstrigger-reihenfolge}
 
 1. Under **Trigger → When entity value changes**, select the entity.

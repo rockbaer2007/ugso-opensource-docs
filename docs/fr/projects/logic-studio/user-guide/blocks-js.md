@@ -1,5 +1,7 @@
 # Blocks JS
 
+**Surface de travail depuis 0.1.137 :** Grille de points sans alignement imposé. La molette déplace la vue ; Maj + molette la déplace horizontalement. Ctrl + molette change le zoom. Boutons de zoom et pincement également disponibles. Positions enregistrées des blocs conservées.
+
 ## Déclencheur d’état à plusieurs branches {#zustandstrigger-reihenfolge}
 
 1. Dans **Déclencheurs → Si la valeur de l’entité change**, sélectionner l’entité.

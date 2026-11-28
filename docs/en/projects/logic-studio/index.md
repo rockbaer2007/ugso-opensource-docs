@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+#### 0.1.137 · Dotted grid and mouse wheel {#punkteraster-mausrad}
+
+Blocks A and Blocks JS show a dotted grid without forced snapping. The wheel pans, Shift + wheel pans horizontally, and Ctrl + wheel zooms. Zoom buttons and pinch are also available. Saved block positions, projects and permissions are preserved. 101 automated tests passed; both grids, wheel panning and zoom were checked locally in Chrome. No live HA test of 0.1.137; the following .193 test evidence applies to 0.1.136.
+
+[GitHub · ZIP · Changelog 0.1.137](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.137)
+
 #### 0.1.136 · State branches and confirmed execution order {#zustandstrigger-reihenfolge}
 
 **New Blocks JS trigger “When entity value changes”:** Select one entity and evaluate its **State** or an **Attribute**. Edit the default on/off branches. Use the gear editor for additional state branches and optional **else**. Each branch accepts **Text** (`half`, `open`, `closed`) or a **Number** (`50` for `current_position`). Duplicate values prevent startup. A branch runs when the value changes to its target; the initial project state does not trigger it.

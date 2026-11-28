@@ -1,5 +1,7 @@
 # Blocks A
 
+**Workspace from 0.1.137:** Dotted grid without snapping. The mouse wheel pans the view; Shift + wheel pans horizontally. Ctrl + wheel zooms. Zoom buttons and pinch are also available. Saved block positions are preserved.
+
 **0.1.136 scope:** The new state trigger and automatic confirmed write order apply to **Blocks JS**. Blocks A YAML retains its native event bridge. Both sensor variants remain available; permissions and saved projects are retained. Field commits without Enter and **Clear log** are shared Studio UI features. 99 local tests passed; Additionally live-tested on 28 November 2026 after a full backup on HA 2026.11.3 (.193, port 80): Blocks JS state/attribute branches, writing before debug, decimal input without Enter, the previous-code warning and log clearing. Test values restored, projects and permissions preserved; examples stopped. [Live test evidence](../#zustandstrigger-reihenfolge).
 
 **0.1.135:** All 51 direct entity fields in 285 registered Blocks A/JS blocks were checked for HA selection. The new multi-selector and compact change triggers affect Blocks JS. Existing structured HA target fields, lists and saved mappings in Blocks A are retained. 68 Node tests and 12 server tests passed; no HA live test for this version.
