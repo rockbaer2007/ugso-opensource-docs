@@ -27,6 +27,12 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+#### 0.1.138 · Start Blocks JS after an app restart {#blocks-js-autostart}
+
+**Blocks JS autostart from 0.1.138:** In the desired project, enable **Run when the app starts** and **Save**. After an app restart or update, the app regenerates the saved Blockly workspace without an open browser and starts it with the existing runtime permissions. Play alone does not set this option. Existing projects without the saved option remain off; function-plan, JS and TS autostart is preserved. 105 local tests passed, including persisted autostart and a new server instance with an intercepted runtime start. No live HA test of 0.1.138.
+
+[GitHub · ZIP · Changelog 0.1.138](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.138)
+
 #### 0.1.137 · Dotted grid and mouse wheel {#punkteraster-mausrad}
 
 Blocks A and Blocks JS show a dotted grid without forced snapping. The wheel pans, Shift + wheel pans horizontally, and Ctrl + wheel zooms. Zoom buttons and pinch are also available. Saved block positions, projects and permissions are preserved. 101 automated tests passed; both grids, wheel panning and zoom were checked locally in Chrome. No live HA test of 0.1.137; the following .193 test evidence applies to 0.1.136.

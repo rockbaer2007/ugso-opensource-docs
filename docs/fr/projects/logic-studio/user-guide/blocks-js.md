@@ -1,5 +1,7 @@
 # Blocks JS
 
+**Démarrage automatique de Blocks JS depuis 0.1.138 :** Dans le projet souhaité, activer **Exécuter au démarrage de l’application** puis **Enregistrer**. Après redémarrage ou mise à jour, l’application traduit à nouveau l’espace Blockly enregistré sans navigateur ouvert et le démarre avec les autorisations existantes. Play seul n’active pas cette option. Les projets sans option enregistrée restent arrêtés ; le démarrage automatique des plans fonctionnels, JS et TS est conservé. 105 tests locaux réussis, dont la persistance de l’option et une nouvelle instance serveur avec interception du démarrage du runtime. Aucun test réel sur HA de 0.1.138.
+
 **Surface de travail depuis 0.1.137 :** Grille de points sans alignement imposé. La molette déplace la vue ; Maj + molette la déplace horizontalement. Ctrl + molette change le zoom. Boutons de zoom et pincement également disponibles. Positions enregistrées des blocs conservées.
 
 ## Déclencheur d’état à plusieurs branches {#zustandstrigger-reihenfolge}

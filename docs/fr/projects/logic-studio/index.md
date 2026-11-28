@@ -29,6 +29,12 @@ La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
 
+#### 0.1.138 · Démarrer Blocks JS après redémarrage {#blocks-js-autostart}
+
+**Démarrage automatique de Blocks JS depuis 0.1.138 :** Dans le projet souhaité, activer **Exécuter au démarrage de l’application** puis **Enregistrer**. Après redémarrage ou mise à jour, l’application traduit à nouveau l’espace Blockly enregistré sans navigateur ouvert et le démarre avec les autorisations existantes. Play seul n’active pas cette option. Les projets sans option enregistrée restent arrêtés ; le démarrage automatique des plans fonctionnels, JS et TS est conservé. 105 tests locaux réussis, dont la persistance de l’option et une nouvelle instance serveur avec interception du démarrage du runtime. Aucun test réel sur HA de 0.1.138.
+
+[GitHub · ZIP · Changelog 0.1.138](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.138)
+
 #### 0.1.137 · Grille de points et molette {#punkteraster-mausrad}
 
 Blocks A et Blocks JS affichent une grille de points sans alignement imposé. La molette déplace la surface, Maj + molette la déplace horizontalement et Ctrl + molette change le zoom. Les boutons de zoom et le pincement sont également disponibles. Positions des blocs, projets et autorisations conservés. 101 tests automatisés réussis ; les deux grilles, le déplacement par molette et le zoom ont été vérifiés localement dans Chrome. Aucun test réel sur HA de 0.1.137 ; les résultats suivants sur .193 concernent 0.1.136.

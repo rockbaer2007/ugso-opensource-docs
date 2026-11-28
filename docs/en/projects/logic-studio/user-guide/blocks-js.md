@@ -1,5 +1,7 @@
 # Blocks JS
 
+**Blocks JS autostart from 0.1.138:** In the desired project, enable **Run when the app starts** and **Save**. After an app restart or update, the app regenerates the saved Blockly workspace without an open browser and starts it with the existing runtime permissions. Play alone does not set this option. Existing projects without the saved option remain off; function-plan, JS and TS autostart is preserved. 105 local tests passed, including persisted autostart and a new server instance with an intercepted runtime start. No live HA test of 0.1.138.
+
 **Workspace from 0.1.137:** Dotted grid without snapping. The mouse wheel pans the view; Shift + wheel pans horizontally. Ctrl + wheel zooms. Zoom buttons and pinch are also available. Saved block positions are preserved.
 
 ## State trigger with multiple branches {#zustandstrigger-reihenfolge}

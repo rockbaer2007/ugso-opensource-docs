@@ -2155,20 +2155,20 @@
       "locale": "en",
       "target": "en/projects/logic-studio/user-guide/blocks-js.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
+      "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test. Reviewed 0.1.138 Blocks JS autostart addendum: opt-in and Save, headless regeneration after restart/update, existing permissions, other project types unchanged, 105 local tests and no HA live-test claim.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "de47d48820f8dfec4dfb7f0f2984b89febaadc5e032feb178e9069cc2dc149fe",
-      "target_sha256": "6f4f69f8bdda710739c75e5c5453eb7dd498e29fc5f98f7b7241e819db102abb"
+      "source_sha256": "5e7f5061d266187c33a5a550cad805a923aa2b5335f47175b5548971e1708854",
+      "target_sha256": "758ab779dacedc428d9dd6b857da74ecde7737e96e140e56a19a0dafe908a315"
     },
     {
       "source": "projects/logic-studio/user-guide/blocks-js.md",
       "locale": "fr",
       "target": "fr/projects/logic-studio/user-guide/blocks-js.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test.",
+      "assessment": "Compared the DE/EN/FR live-test addendum against the recorded 28 November 2026 HA 2026.11.3 test on .193: on/off writes followed by current debug values, 33.25 input without Enter and reload, previous-code warning, log clearing, numeric/text/fallback attribute branches, backup and restored values/permissions. Scope explicitly excludes a new Blocks A or physical device test. Reviewed 0.1.138 Blocks JS autostart addendum: opt-in and Save, headless regeneration after restart/update, existing permissions, other project types unchanged, 105 local tests and no HA live-test claim.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "de47d48820f8dfec4dfb7f0f2984b89febaadc5e032feb178e9069cc2dc149fe",
-      "target_sha256": "b35395d1a513f7f65c117cd7e8e13c0546124862ef2d32b0fa8705bef46325a3"
+      "source_sha256": "5e7f5061d266187c33a5a550cad805a923aa2b5335f47175b5548971e1708854",
+      "target_sha256": "941d672937e43a1d3d00e162fb7a2bccc10fe488d4afc4e22e9b2ba7d95ac910"
     },
     {
       "source": "projects/logic-studio/user-guide/feedback.md",

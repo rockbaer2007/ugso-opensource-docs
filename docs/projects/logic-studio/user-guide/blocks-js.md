@@ -1,5 +1,7 @@
 # Blocks JS
 
+**Blocks-JS-Autostart ab 0.1.138:** Im gewünschten Projekt **Beim Start der App ausführen** aktivieren und **Speichern**. Nach App-Neustart oder Update übersetzt die App den gespeicherten Blockly-Arbeitsbereich ohne offenen Browser neu und startet ihn mit den bisherigen Runtime-Freigaben. Play allein setzt die Option nicht. Bestehende Projekte ohne gespeicherte Option bleiben aus; Funktionsplan-, JS- und TS-Autostart bleiben erhalten. 105 lokale Tests erfolgreich, einschließlich gespeichertem Autostart und neuer Serverinstanz mit abgefangenem Runtime-Start. Kein HA-Livetest von 0.1.138.
+
 **Arbeitsfläche ab 0.1.137:** Punkteraster ohne Einrasten. Mausrad verschiebt die Ansicht; Shift + Mausrad verschiebt horizontal. Strg + Mausrad zoomt. Zoomtasten und Pinch sind ebenfalls verfügbar. Gespeicherte Blockpositionen bleiben erhalten.
 
 ## Zustandstrigger mit mehreren Zweigen {#zustandstrigger-reihenfolge}
