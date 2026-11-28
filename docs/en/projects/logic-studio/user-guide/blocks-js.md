@@ -14,7 +14,7 @@ Existing new/old event-value blocks also work in the new state and attribute bra
 
 Fields commit on leaving without Enter. Old running code is marked: **Save → Restart runtime**. On the left of the log, **Clear log** removes this project's local and persisted messages without stopping the process. New messages are still recorded.
 
-**Verification:** 99 local tests including the exported example in the real QuickJS runner with delayed, mocked HA responses. No HA live test for 0.1.136; projects and permissions retained.
+**Verification:** 99 local tests including the exported example in the real QuickJS runner with delayed, mocked HA responses. Additionally live-tested on 28 November 2026 after a full backup on HA 2026.11.3 (.193, port 80): Blocks JS state/attribute branches, writing before debug, decimal input without Enter, the previous-code warning and log clearing. Test values restored, projects and permissions preserved; examples stopped. [Live test evidence](../#zustandstrigger-reihenfolge).
 
 ## Change triggers and entity selection {#entitaetsauswahl-kompakte-trigger}
 

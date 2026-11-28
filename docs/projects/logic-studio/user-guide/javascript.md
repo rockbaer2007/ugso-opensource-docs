@@ -1,6 +1,6 @@
 # JavaScript
 
-Seit **0.1.136** liefern die schreibenden HA-APIs Promises. Für eine feste Reihenfolge beispielsweise `await ha.setSensorState("sensor.example", 1.5);` verwenden und danach mit `ha.readState("sensor.example")` lesen. Die Sensor-API wartet auf die bestätigte HA-Antwort und stellt den bestätigten Wert im lesbaren Snapshot bereit. `await ha.callAction(...)` wartet auf die Annahme des Auftrags, nicht auf eine physische Gerätebewegung. Timer und explizite Callback-Blöcke bleiben separate Fortsetzungen. 99 lokale Tests erfolgreich; kein HA-Livetest für diese Version.
+Seit **0.1.136** liefern die schreibenden HA-APIs Promises. Für eine feste Reihenfolge beispielsweise `await ha.setSensorState("sensor.example", 1.5);` verwenden und danach mit `ha.readState("sensor.example")` lesen. Die Sensor-API wartet auf die bestätigte HA-Antwort und stellt den bestätigten Wert im lesbaren Snapshot bereit. `await ha.callAction(...)` wartet auf die Annahme des Auftrags, nicht auf eine physische Gerätebewegung. Timer und explizite Callback-Blöcke bleiben separate Fortsetzungen. 99 lokale Tests erfolgreich; Zusätzlich am 28.11.2026 nach Vollsicherung auf HA 2026.11.3 (.193, Port 80) live geprüft: Blocks-JS-Zustands-/Attributzweige, Schreiben vor Debug, Dezimalfeld ohne Enter, Hinweis auf alten Runtime-Code und Protokoll-Leeren. Testwerte wiederhergestellt, Projekte und Freigaben erhalten; Beispiele gestoppt. [Live-Testnachweis](../#zustandstrigger-reihenfolge).
 
 ## Erstes Beispiel
 

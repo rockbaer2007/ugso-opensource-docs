@@ -1,6 +1,6 @@
 # JavaScript
 
-Depuis **0.1.136**, les API d’écriture HA renvoient des promesses. Pour garantir l’ordre, utiliser `await ha.setSensorState("sensor.example", 1.5);` puis lire avec `ha.readState("sensor.example")`. L’API du capteur attend la confirmation HA et fournit la valeur confirmée dans l’état lisible. `await ha.callAction(...)` attend l’acceptation de la demande, pas un mouvement physique de l’appareil. Temporisateurs et callbacks explicites restent des continuations indépendantes. 99 tests locaux réussis ; aucun test réel sur HA pour cette version.
+Depuis **0.1.136**, les API d’écriture HA renvoient des promesses. Pour garantir l’ordre, utiliser `await ha.setSensorState("sensor.example", 1.5);` puis lire avec `ha.readState("sensor.example")`. L’API du capteur attend la confirmation HA et fournit la valeur confirmée dans l’état lisible. `await ha.callAction(...)` attend l’acceptation de la demande, pas un mouvement physique de l’appareil. Temporisateurs et callbacks explicites restent des continuations indépendantes. 99 tests locaux réussis ; Test réel supplémentaire le 28 novembre 2026 après sauvegarde complète sur HA 2026.11.3 (.193, port 80) : branches d’état/d’attribut de Blocks JS, écriture avant débogage, saisie décimale sans Entrée, avertissement d’ancien code et effacement du journal. Valeurs de test restaurées, projets et autorisations conservés ; exemples arrêtés. [Résultats du test réel](../#zustandstrigger-reihenfolge).
 
 ## Premier exemple
 

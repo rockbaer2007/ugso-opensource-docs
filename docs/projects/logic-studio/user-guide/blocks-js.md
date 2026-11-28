@@ -14,7 +14,7 @@ Die vorhandenen Neuer-/Alter-Wert-Blöcke funktionieren auch in den neuen Zustan
 
 Felder werden beim Verlassen ohne Enter übernommen. Laufender alter Code wird markiert: **Speichern → Runtime neu starten**. Links im Protokoll entfernt **Protokoll leeren** lokale und gespeicherte Meldungen dieses Projekts ohne Prozessstopp. Neue Meldungen werden weiterhin erfasst.
 
-**Prüfung:** 99 lokale Tests einschließlich des exportierten Beispiels im echten QuickJS-Runner mit verzögerter, nachgebildeter HA-Antwort. Kein HA-Livetest für 0.1.136; Projekte und Freigaben erhalten.
+**Prüfung:** 99 lokale Tests einschließlich des exportierten Beispiels im echten QuickJS-Runner mit verzögerter, nachgebildeter HA-Antwort. Zusätzlich am 28.11.2026 nach Vollsicherung auf HA 2026.11.3 (.193, Port 80) live geprüft: Blocks-JS-Zustands-/Attributzweige, Schreiben vor Debug, Dezimalfeld ohne Enter, Hinweis auf alten Runtime-Code und Protokoll-Leeren. Testwerte wiederhergestellt, Projekte und Freigaben erhalten; Beispiele gestoppt. [Live-Testnachweis](../#zustandstrigger-reihenfolge).
 
 ## Änderungsauslöser und Entitätenauswahl {#entitaetsauswahl-kompakte-trigger}
 

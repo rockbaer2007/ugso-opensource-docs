@@ -14,7 +14,7 @@ Les blocs existants de nouvelle/ancienne valeur fonctionnent aussi dans les bran
 
 Les champs sont validés à la perte de focus sans Entrée. L’ancien code actif est signalé : **Enregistrer → Redémarrer le runtime**. À gauche du journal, **Vider le journal** retire les messages locaux et persistés de ce projet sans arrêter le processus. Les nouveaux messages restent enregistrés.
 
-**Vérification :** 99 tests locaux, dont l’export dans le véritable runtime QuickJS avec réponses HA simulées et retardées. Aucun test réel sur HA pour 0.1.136 ; projets et autorisations conservés.
+**Vérification :** 99 tests locaux, dont l’export dans le véritable runtime QuickJS avec réponses HA simulées et retardées. Test réel supplémentaire le 28 novembre 2026 après sauvegarde complète sur HA 2026.11.3 (.193, port 80) : branches d’état/d’attribut de Blocks JS, écriture avant débogage, saisie décimale sans Entrée, avertissement d’ancien code et effacement du journal. Valeurs de test restaurées, projets et autorisations conservés ; exemples arrêtés. [Résultats du test réel](../#zustandstrigger-reihenfolge).
 
 ## Déclencheurs de changement et sélection d’entités {#entitaetsauswahl-kompakte-trigger}
 
