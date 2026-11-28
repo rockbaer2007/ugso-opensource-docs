@@ -1,5 +1,21 @@
 # Blocks JS
 
+## State trigger with multiple branches {#zustandstrigger-reihenfolge}
+
+1. Under **Trigger → When entity value changes**, select the entity.
+2. Choose **State** or **Attribute**. For covers, use an attribute such as `current_position`; `half` is a state only if the entity actually provides that string.
+3. Edit the on/off branches. Choose **Text** or **Number** for each branch, for example `50` for an intermediate position.
+4. Drag **another state** into the gear editor and optionally add **else**. Reordering keeps connected actions with their branches. Duplicate values prevent startup.
+5. Put actions inside the branches, save and start **Play**. A change runs the matching branch; initial startup does not trigger a branch.
+
+Existing new/old event-value blocks also work in the new state and attribute branches. Under **Logic**, comparison values now include on/off strings alongside true/false booleans.
+
+**Write before reading:** Both JS sensor blocks await HA confirmation before subsequent blocks run. Debug therefore reads `1.5` after `on`, and `0` after `off`. Normal HA outputs await request acceptance; timers and explicit callback blocks remain separate continuations.
+
+Fields commit on leaving without Enter. Old running code is marked: **Save → Restart runtime**. On the left of the log, **Clear log** removes this project's local and persisted messages without stopping the process. New messages are still recorded.
+
+**Verification:** 99 local tests including the exported example in the real QuickJS runner with delayed, mocked HA responses. No HA live test for 0.1.136; projects and permissions retained.
+
 ## Change triggers and entity selection {#entitaetsauswahl-kompakte-trigger}
 
 Under **Trigger**, choose a trigger for one entity, several entities or an attribute. Since **0.1.135**, these blocks use compact vertical rows. Long captions are shortened; saved IDs remain complete.

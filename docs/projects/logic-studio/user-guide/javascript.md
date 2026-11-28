@@ -1,5 +1,7 @@
 # JavaScript
 
+Seit **0.1.136** liefern die schreibenden HA-APIs Promises. Für eine feste Reihenfolge beispielsweise `await ha.setSensorState("sensor.example", 1.5);` verwenden und danach mit `ha.readState("sensor.example")` lesen. Die Sensor-API wartet auf die bestätigte HA-Antwort und stellt den bestätigten Wert im lesbaren Snapshot bereit. `await ha.callAction(...)` wartet auf die Annahme des Auftrags, nicht auf eine physische Gerätebewegung. Timer und explizite Callback-Blöcke bleiben separate Fortsetzungen. 99 lokale Tests erfolgreich; kein HA-Livetest für diese Version.
+
 ## Erstes Beispiel
 
 In diesem Beispiel schreibt eine einzelne Zeile eine Meldung ins Protokoll.

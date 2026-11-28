@@ -1,5 +1,21 @@
 # Blocks JS
 
+## Zustandstrigger mit mehreren Zweigen {#zustandstrigger-reihenfolge}
+
+1. Unter **Trigger → Wenn Entität ihren Wert ändert** die Entität wählen.
+2. **Zustand** oder **Attribut** auswählen. Bei einem Rollo etwa `current_position` verwenden; `halb` ist nur dann ein Zustand, wenn die Entität diesen Text tatsächlich liefert.
+3. on/off-Zweige bearbeiten. Pro Zweig **Text** oder **Zahl** einstellen, etwa `50` für eine Zwischenposition.
+4. Im Zahnrad **weiterer Zustand** hineinziehen, optional **sonst** ergänzen. Zweige lassen sich umordnen; angeschlossene Aktionen bleiben zugeordnet. Doppelte Werte verhindern den Start.
+5. Aktionen in die Zweige setzen, speichern und **Play** starten. Ein Wertwechsel führt den passenden Zweig aus; der Anfangszustand beim Start löst noch keinen Zweig aus.
+
+Die vorhandenen Neuer-/Alter-Wert-Blöcke funktionieren auch in den neuen Zustands- und Attributzweigen. Unter **Logik** stehen im Vergleich neben wahr/falsch die Texte on/off bereit.
+
+**Schreiben vor Lesen:** Beide JS-Sensorbausteine warten auf die HA-Schreibbestätigung. Erst danach werden die folgenden Blöcke ausgeführt. Debug liest somit bei `on` den geschriebenen Wert `1.5`, bei `off` den Wert `0`. Normale HA-Ausgaben warten auf die Auftragsannahme; Timer und explizite Callback-Blöcke bleiben eigene Fortsetzungen.
+
+Felder werden beim Verlassen ohne Enter übernommen. Laufender alter Code wird markiert: **Speichern → Runtime neu starten**. Links im Protokoll entfernt **Protokoll leeren** lokale und gespeicherte Meldungen dieses Projekts ohne Prozessstopp. Neue Meldungen werden weiterhin erfasst.
+
+**Prüfung:** 99 lokale Tests einschließlich des exportierten Beispiels im echten QuickJS-Runner mit verzögerter, nachgebildeter HA-Antwort. Kein HA-Livetest für 0.1.136; Projekte und Freigaben erhalten.
+
 ## Änderungsauslöser und Entitätenauswahl {#entitaetsauswahl-kompakte-trigger}
 
 Unter **Trigger** einen Auslöser für eine Entität, mehrere Entitäten oder ein Attribut wählen. Seit **0.1.135** sind diese Bausteine kompakt mehrzeilig aufgebaut. Lange Anzeigen sind gekürzt, gespeicherte IDs bleiben vollständig.

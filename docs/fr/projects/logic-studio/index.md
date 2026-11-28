@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.135 · Sélecteur d’entités HA et déclencheurs compacts dans Blocks JS.
+description: HA Logic Studio Pro 0.1.136 · Branches d’état, écritures confirmées et valeurs de débogage correctes.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,18 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.136 · Branches d’état et ordre confirmé {#zustandstrigger-reihenfolge}
+
+**Nouveau déclencheur Blocks JS « Si la valeur de l’entité change » :** sélectionner une entité et évaluer son **État** ou un **Attribut**. Modifier les branches on/off initiales. L’engrenage ajoute d’autres branches et éventuellement **sinon**. Chaque branche accepte un **Texte** (`mi-ouvert`, `open`, `closed`) ou un **Nombre** (`50` pour `current_position`). Les doublons empêchent le démarrage. Une branche s’exécute lors d’un changement vers sa valeur ; l’état initial du projet ne la déclenche pas.
+
+**Ordre corrigé dans Blocks JS :** écrire le capteur → confirmation HA → lecture/débogage suivant avec la valeur confirmée. Les deux blocs de capteur JS et les sorties dans les procédures Blockly attendent la fin de l’opération. Les sorties HA normales attendent l’acceptation de la demande, sans confirmer un mouvement physique. Temporisateurs et callbacks explicitement asynchrones restent des continuations indépendantes. Le YAML de Blocks A conserve son pont d’événements natif.
+
+**Éditeur et journal :** clic hors du champ ou Tab valide la saisie sans Entrée. Un avertissement sur l’ancien code actif indique **Enregistrer → Redémarrer le runtime**. Les comparaisons proposent les textes on/off en plus des vrais booléens vrai/faux. **Vider le journal** retire les messages du projet courant, y compris les lignes persistées, sans arrêter le processus. Les anciennes réponses de rafraîchissement ne rétablissent pas les lignes effacées ; les nouveaux messages sont conservés.
+
+**Vérifié localement :** 85 tests Node et 14 tests serveur (99 au total), 289 blocs enregistrés et 52 champs d’entités directs. L’export utilisateur complet s’exécute dans le véritable runtime QuickJS avec réponses HA locales simulées et retardées : `on → 1.5`, `off → 0`, puis valeurs de débogage correctes. Erreurs d’écriture, changement de focus, branches à engrenage, valeurs personnalisées, attributs, sérialisation DE/EN/FR et effacement du journal vérifiés. Projets, options et autorisations conservés. **Aucun test réel sur HA pour 0.1.136.**
+
+[GitHub · ZIP · Changelog 0.1.136](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.136) · [Blocks JS](./user-guide/blocks-js#zustandstrigger-reihenfolge)
 
 #### 0.1.135 · Sélecteur d’entités et déclencheurs compacts {#entitaetsauswahl-kompakte-trigger}
 

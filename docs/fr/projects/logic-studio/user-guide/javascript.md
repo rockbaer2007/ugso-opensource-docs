@@ -1,5 +1,7 @@
 # JavaScript
 
+Depuis **0.1.136**, les API d’écriture HA renvoient des promesses. Pour garantir l’ordre, utiliser `await ha.setSensorState("sensor.example", 1.5);` puis lire avec `ha.readState("sensor.example")`. L’API du capteur attend la confirmation HA et fournit la valeur confirmée dans l’état lisible. `await ha.callAction(...)` attend l’acceptation de la demande, pas un mouvement physique de l’appareil. Temporisateurs et callbacks explicites restent des continuations indépendantes. 99 tests locaux réussis ; aucun test réel sur HA pour cette version.
+
 ## Premier exemple
 
 Une ligne de code écrit un message dans le journal.

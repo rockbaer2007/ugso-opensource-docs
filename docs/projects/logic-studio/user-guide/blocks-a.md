@@ -1,5 +1,7 @@
 # Blocks A
 
+**Hinweis zu 0.1.136:** Der neue Zustandstrigger und die automatische bestätigte Schreibreihenfolge betreffen **Blocks JS**. Blocks-A-YAML behält die native Ereignisbrücke. Beide Sensorvarianten bleiben verfügbar; Freigaben und gespeicherte Projekte bleiben erhalten. Die Feldübernahme ohne Enter sowie „Protokoll leeren“ gehören zur gemeinsamen Studio-Oberfläche. 99 lokale Tests erfolgreich, kein HA-Livetest für 0.1.136.
+
 **0.1.135:** Alle 51 direkten Entitätsfelder in 285 registrierten Blocks-A-/Blocks-JS-Bausteinen auf die HA-Auswahl geprüft. Die neue Mehrfachauswahl und die kompakteren Änderungsauslöser betreffen Blocks JS. Bestehende strukturierte HA-Zielfelder, Listen und gespeicherte Zuordnungen in Blocks A bleiben erhalten. 68 Node- und 12 Server-Tests erfolgreich; kein HA-Livetest für diese Version.
 
 ## Sensorzustand setzen {#sensorzustand-setzen}

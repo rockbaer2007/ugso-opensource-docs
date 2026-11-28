@@ -1,5 +1,21 @@
 # Blocks JS
 
+## Déclencheur d’état à plusieurs branches {#zustandstrigger-reihenfolge}
+
+1. Dans **Déclencheurs → Si la valeur de l’entité change**, sélectionner l’entité.
+2. Choisir **État** ou **Attribut**. Pour un volet, utiliser par exemple `current_position` ; `mi-ouvert` n’est un état que si l’entité fournit réellement ce texte.
+3. Modifier les branches on/off. Choisir **Texte** ou **Nombre** pour chaque branche, par exemple `50` pour une position intermédiaire.
+4. Glisser **autre état** dans l’éditeur à engrenage et ajouter éventuellement **sinon**. Le réordonnement conserve les actions associées. Les doublons empêchent le démarrage.
+5. Placer les actions dans les branches, enregistrer puis démarrer **Play**. Un changement exécute la branche correspondante ; le simple démarrage ne la déclenche pas.
+
+Les blocs existants de nouvelle/ancienne valeur fonctionnent aussi dans les branches d’état et d’attribut. Dans **Logique**, les valeurs de comparaison proposent on/off en plus des booléens vrai/faux.
+
+**Écrire avant de lire :** les deux blocs de capteur JS attendent la confirmation HA avant les blocs suivants. Le débogage lit donc `1.5` après `on` et `0` après `off`. Les sorties HA normales attendent l’acceptation de la demande ; temporisateurs et callbacks explicites restent indépendants.
+
+Les champs sont validés à la perte de focus sans Entrée. L’ancien code actif est signalé : **Enregistrer → Redémarrer le runtime**. À gauche du journal, **Vider le journal** retire les messages locaux et persistés de ce projet sans arrêter le processus. Les nouveaux messages restent enregistrés.
+
+**Vérification :** 99 tests locaux, dont l’export dans le véritable runtime QuickJS avec réponses HA simulées et retardées. Aucun test réel sur HA pour 0.1.136 ; projets et autorisations conservés.
+
 ## Déclencheurs de changement et sélection d’entités {#entitaetsauswahl-kompakte-trigger}
 
 Dans **Déclencheurs**, choisir un déclencheur pour une entité, plusieurs entités ou un attribut. Depuis **0.1.135**, ces blocs utilisent des lignes verticales compactes. Les longs libellés sont raccourcis ; les identifiants enregistrés restent complets.

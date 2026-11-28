@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.135 · HA entity selection and compact change triggers in Blocks JS.
+description: HA Logic Studio Pro 0.1.136 · State branches, confirmed write order and correct debug values.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,18 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.136 · State branches and confirmed execution order {#zustandstrigger-reihenfolge}
+
+**New Blocks JS trigger “When entity value changes”:** Select one entity and evaluate its **State** or an **Attribute**. Edit the default on/off branches. Use the gear editor for additional state branches and optional **else**. Each branch accepts **Text** (`half`, `open`, `closed`) or a **Number** (`50` for `current_position`). Duplicate values prevent startup. A branch runs when the value changes to its target; the initial project state does not trigger it.
+
+**Corrected Blocks JS order:** Write sensor → HA confirmation → following read/debug step with the confirmed sensor value. Both JS sensor blocks and outputs inside Blockly procedures wait for completion. Normal HA outputs wait for request acceptance; this does not confirm a physical device movement. Timers and explicitly asynchronous callback blocks remain separate continuations. Blocks A YAML retains its native event bridge.
+
+**Editor and log:** Clicking away or pressing Tab commits fields without Enter. A warning about previous runtime code points to **Save → Restart runtime**. The comparison dropdown includes on/off strings beside real true/false values. **Clear log** removes the current project's messages, including persisted runtime lines, without stopping its process. Old polling responses cannot restore cleared lines; new messages are retained.
+
+**Verified locally:** 85 Node tests and 14 server tests (99 total), 289 registered blocks and 52 direct entity fields. The complete user export runs in the real QuickJS runner with locally mocked, delayed HA responses: `on → 1.5`, `off → 0`, each followed by correct debug values. Write failures, focus changes, gear branches, custom values, attributes, DE/EN/FR serialization and log clearing checked. Existing projects, options and permissions retained. **No HA live test for 0.1.136.**
+
+[GitHub · ZIP · Changelog 0.1.136](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.136) · [Blocks JS](./user-guide/blocks-js#zustandstrigger-reihenfolge)
 
 #### 0.1.135 · Entity selection and compact triggers {#entitaetsauswahl-kompakte-trigger}
 

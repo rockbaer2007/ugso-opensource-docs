@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.135 · HA-Entitätenauswahl und kompakte Änderungsauslöser in Blocks JS.
+description: HA Logic Studio Pro 0.1.136 · Zustandstrigger mit Zweigen, bestätigte Schreibreihenfolge und korrekte Debug-Werte.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,18 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.136 · Zustandstrigger und bestätigte Reihenfolge {#zustandstrigger-reihenfolge}
+
+**Neuer Blocks-JS-Trigger „Wenn Entität ihren Wert ändert“:** Eine Entität wählen und **Zustand** oder ein **Attribut** auswerten. Standardzweige on/off sind frei änderbar. Über das Zahnrad weitere Zustandszweige und optional **sonst** ergänzen. Pro Zweig **Text** (`halb`, `open`, `closed`) oder **Zahl** (`50` für `current_position`) wählen. Doppelte Werte verhindern den Start. Ein Zweig läuft beim Wechsel zum passenden Wert; der Anfangszustand beim Projektstart löst ihn nicht aus.
+
+**Reihenfolge in Blocks JS korrigiert:** Sensor schreiben → HA-Schreibbestätigung → folgende Lese-/Debug-Ausgabe mit bestätigtem Sensorwert. Beide JS-Sensorbausteine und Ausgaben in Blockly-Prozeduren warten auf den Abschluss. Normale HA-Ausgaben warten auf die Annahme ihres Auftrags; das bestätigt keine physische Gerätebewegung. Timer und ausdrücklich asynchrone Callback-Blöcke bleiben separate Fortsetzungen. Blocks-A-YAML behält die native Ereignisbrücke.
+
+**Editor und Protokoll:** Feldwechsel per Klick oder Tab übernimmt Eingaben ohne Enter. Der Hinweis auf vorherigen Runtime-Code zeigt nötiges **Speichern → Runtime neu starten**. Die Vergleichsauswahl enthält on/off-Texte neben echten wahr/falsch-Werten. **Protokoll leeren** entfernt Meldungen des aktuellen Projekts einschließlich gespeicherter Runtime-Zeilen, ohne den Prozess zu stoppen. Alte Poll-Antworten erscheinen nicht wieder; neue Meldungen bleiben erhalten.
+
+**Erfolgreich lokal geprüft:** 85 Node- und 14 Server-Tests (99 insgesamt), 289 registrierte Bausteine und 52 direkte Entitätsfelder. Der vollständige Nutzerexport läuft im echten QuickJS-Runner mit lokal nachgebildeten, verzögerten HA-Antworten: `on → 1.5`, `off → 0`, danach jeweils korrekte Debug-Werte. Schreibfehler, Feldwechsel, Zahnrad-Zweige, eigene Werte, Attribute, Serialisierung DE/EN/FR und Protokoll-Leeren geprüft. Bestehende Projekte, Optionen und Freigaben bleiben erhalten. **Kein HA-Livetest für 0.1.136.**
+
+[GitHub · ZIP · Changelog 0.1.136](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.136) · [Blocks JS](./user-guide/blocks-js#zustandstrigger-reihenfolge)
 
 #### 0.1.135 · Entitätenauswahl und kompaktere Trigger {#entitaetsauswahl-kompakte-trigger}
 

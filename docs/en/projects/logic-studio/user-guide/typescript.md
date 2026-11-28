@@ -1,5 +1,7 @@
 # TypeScript
 
+Since **0.1.136**, HA write APIs return promises. For ordered execution, use `await ha.setSensorState("sensor.example", 1.5);` and then read with `ha.readState("sensor.example")`. The sensor API waits for HA confirmation and makes the confirmed value available in the readable snapshot. `await ha.callAction(...)` waits for request acceptance, not a physical device movement. Timers and explicit callback blocks remain separate continuations. 99 local tests passed; no HA live test for this version.
+
 ## First example
 
 The screenshot contains a deliberate type error. A variable declared as `number` is assigned the text `'42'`.
