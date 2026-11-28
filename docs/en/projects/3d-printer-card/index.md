@@ -30,6 +30,26 @@ Manual installation: copy the release JS file to `/config/www/3d-printer-card/` 
 
 Open **Profil hinzufügen** (add profile) or **Profil bearbeiten** (edit profile). Select the printer's `current_print_state` sensor under **Drucker erkennen** to detect its prefix. Choose cameras and adjust mappings using native HA selectors. Click **Profil übernehmen**, then **Speichern** in the outer editor. Editor labels are currently German; documentation is DE/EN/FR. Existing profiles remain compatible.
 
+## Screenshots in use
+
+These screenshots show the card and its German-language editor. Click an image to open it at full size.
+
+### Overview with camera and temperature charts
+
+[![3D Printer Card for the Ender3 V2: status, progress, timing, camera on the right and nozzle, bed and system temperature charts](/images/3d-printer-card/card-overview.png)](/images/3d-printer-card/card-overview.png)
+
+### Card editor with profile selection and preview
+
+[![Visual card editor with printer profile selection, add and edit profile buttons, and the preview on the right](/images/3d-printer-card/card-editor.jpeg)](/images/3d-printer-card/card-editor.jpeg)
+
+### Add a printer profile
+
+[![Add printer profile dialog with profile name, print-state entity, detected prefix, camera and model thumbnail](/images/3d-printer-card/profile-add.png)](/images/3d-printer-card/profile-add.png)
+
+### Edit a printer profile
+
+[![Ender3 V2 profile editor with HA entity selection, camera, model thumbnail and expandable status, temperature and print-time mappings](/images/3d-printer-card/profile-edit.png)](/images/3d-printer-card/profile-edit.png)
+
 ## Cancellation and verification
 
 Read-only except for **Cancel print**, using the existing HA button for an active/paused print and a ready printer. Confirmation and a fresh state check are required. Profile changes send no commands. No filament consumption or lifetime statistics.

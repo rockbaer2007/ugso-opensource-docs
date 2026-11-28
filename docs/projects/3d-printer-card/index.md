@@ -30,6 +30,26 @@ Manuell: JS-Datei aus dem Release nach `/config/www/3d-printer-card/` kopieren u
 
 Im visuellen Editor **Profil hinzufügen** oder **Profil bearbeiten** öffnen. Über **Drucker erkennen** den `current_print_state`-Sensor wählen; das Entitätspräfix wird erkannt. Kameras und abweichende Zuordnungen über die native HA-Entitätensuche auswählen. **Profil übernehmen**, danach im äußeren Editor **Speichern**. Der Editor ist derzeit Deutsch; Doku DE/EN/FR. Bestehende Profile bleiben kompatibel.
 
+## Bilder aus der Praxis
+
+Die folgenden Screenshots zeigen die Card und den deutschsprachigen Editor. Ein Klick öffnet das jeweilige Bild in voller Größe.
+
+### Übersicht mit Kamera und Temperaturgraphen
+
+[![3D Printer Card für den Ender3 V2: Status, Fortschritt, Zeitangaben, Kamera rechts sowie Temperaturgraphen für Düse, Bett und System](/images/3d-printer-card/card-overview.png)](/images/3d-printer-card/card-overview.png)
+
+### Karteneditor mit Profilwahl und Vorschau
+
+[![Visueller Karteneditor mit Druckerprofil-Auswahl, Profil hinzufügen und Profil bearbeiten sowie der Vorschau rechts](/images/3d-printer-card/card-editor.jpeg)](/images/3d-printer-card/card-editor.jpeg)
+
+### Druckerprofil hinzufügen
+
+[![Dialog zum Hinzufügen eines Druckerprofils mit Profilname, Druckstatus-Entität, erkanntem Präfix, Kamera und Modellvorschaubild](/images/3d-printer-card/profile-add.png)](/images/3d-printer-card/profile-add.png)
+
+### Druckerprofil bearbeiten
+
+[![Bearbeitung des Ender3-V2-Profils mit HA-Entitätenauswahl, Kamera, Modellvorschau und aufklappbaren Zuordnungen für Status, Temperaturen und Druckzeiten](/images/3d-printer-card/profile-edit.png)](/images/3d-printer-card/profile-edit.png)
+
 ## Druckabbruch und Prüfung
 
 Einzige Aktion: **Druck abbrechen**, über den vorhandenen HA-Button bei aktivem/pausiertem Druck und betriebsbereitem Drucker. Bestätigung und erneute Zustandsprüfung sind erforderlich. Profilwechsel senden keine Druckerbefehle. Kein Filamentverbrauch und keine Gesamtstatistik.

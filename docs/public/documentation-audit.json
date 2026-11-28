@@ -1510,9 +1510,9 @@
         "de": {
           "path": "projects/3d-printer-card/index.md",
           "status": "content-present",
-          "sha256": "54a7f98bf2997924f2ce8bbf7a0e184057015a4ec83e8de1457c01b6331888be",
-          "words": 509,
-          "headings": 5,
+          "sha256": "8e272372dd4f522386a5a0cbf29ccd4e292a5e74b052055fb4f82133b2dc599e",
+          "words": 667,
+          "headings": 10,
           "examples": 0,
           "versions": [
             "0.1.7",
@@ -1523,9 +1523,9 @@
         "en": {
           "path": "en/projects/3d-printer-card/index.md",
           "status": "content-present",
-          "sha256": "062f4cdb8f5de7c4bfa2dd49e71631671081280f69d3d491c645d75dcc96a65f",
-          "words": 541,
-          "headings": 5,
+          "sha256": "cb209447a984da64c308503478ea3167ab9e57cca0001999426ddb0abfc04d7d",
+          "words": 714,
+          "headings": 10,
           "examples": 0,
           "versions": [
             "0.1.7",
@@ -1541,16 +1541,16 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-27",
-            "assessment": "Klipper/Moonraker prerequisite, custom HACS installation and resource paths, profile save sequence, German editor labels, charts, camera, cancellation confirmation and limited real-printer test scope match the German source."
+            "reviewed_at": "2026-11-28",
+            "assessment": "Reviewed the four user-provided screenshots and translated captions in DE/EN/FR: card overview, visual editor, adding profiles and editing profiles. Identical image paths and full-size links; German UI language identified. Existing prerequisites, Marketplace installation, profile steps, cancellation limits and test claims preserved. Documentation-only update."
           }
         },
         "fr": {
           "path": "fr/projects/3d-printer-card/index.md",
           "status": "content-present",
-          "sha256": "d3023610a45257c834cd4bbbd0d5c7d117c50c5dafb49017b7d67bceba06431f",
-          "words": 558,
-          "headings": 5,
+          "sha256": "1ee34fe39d964f8112ebcab48c21baf929e430781d10b7849ad46704468dab24",
+          "words": 753,
+          "headings": 10,
           "examples": 0,
           "versions": [
             "0.1.7",
@@ -1566,8 +1566,8 @@
           },
           "semantic_review": {
             "status": "content-reviewed",
-            "reviewed_at": "2026-11-27",
-            "assessment": "Klipper/Moonraker prerequisite, custom HACS installation and resource paths, profile save sequence, German editor labels, charts, camera, cancellation confirmation and limited real-printer test scope match the German source."
+            "reviewed_at": "2026-11-28",
+            "assessment": "Reviewed the four user-provided screenshots and translated captions in DE/EN/FR: card overview, visual editor, adding profiles and editing profiles. Identical image paths and full-size links; German UI language identified. Existing prerequisites, Marketplace installation, profile steps, cancellation limits and test claims preserved. Documentation-only update."
           }
         }
       }

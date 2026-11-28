@@ -30,6 +30,26 @@ Installation manuelle : copiez le fichier JS dans `/config/www/3d-printer-card/`
 
 Dans l'éditeur, ouvrez **Profil hinzufügen** (ajouter) ou **Profil bearbeiten** (modifier). Sélectionnez le capteur `current_print_state` dans **Drucker erkennen** pour détecter le préfixe. Adaptez les caméras et correspondances avec les sélecteurs HA natifs. Cliquez sur **Profil übernehmen**, puis **Speichern** dans l'éditeur principal. Éditeur actuellement en allemand ; documentation DE/EN/FR. Les profils existants restent compatibles.
 
+## Captures en situation
+
+Ces captures montrent la carte et son éditeur en allemand. Cliquez sur une image pour l’ouvrir en taille réelle.
+
+### Vue d’ensemble avec caméra et courbes de température
+
+[![3D Printer Card pour l’Ender3 V2 : état, progression, durées, caméra à droite et courbes de température de la buse, du plateau et du système](/images/3d-printer-card/card-overview.png)](/images/3d-printer-card/card-overview.png)
+
+### Éditeur de carte avec sélection du profil et aperçu
+
+[![Éditeur visuel de carte avec sélection du profil d’imprimante, boutons d’ajout et de modification, et aperçu à droite](/images/3d-printer-card/card-editor.jpeg)](/images/3d-printer-card/card-editor.jpeg)
+
+### Ajouter un profil d’imprimante
+
+[![Dialogue d’ajout d’un profil avec nom, entité d’état d’impression, préfixe détecté, caméra et miniature du modèle](/images/3d-printer-card/profile-add.png)](/images/3d-printer-card/profile-add.png)
+
+### Modifier un profil d’imprimante
+
+[![Éditeur du profil Ender3 V2 avec sélection d’entités HA, caméra, miniature et correspondances dépliables pour l’état, les températures et les durées](/images/3d-printer-card/profile-edit.png)](/images/3d-printer-card/profile-edit.png)
+
 ## Annulation et vérifications
 
 La seule commande est l'annulation d'une impression active/en pause sur une imprimante prête, via le bouton HA existant, avec confirmation et nouvelle vérification de l'état. Changer de profil n'envoie aucune commande. Pas de consommation de filament ni de statistiques globales.
