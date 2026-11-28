@@ -1,5 +1,7 @@
 # Blocks A
 
+**0.1.135:** All 51 direct entity fields in 285 registered Blocks A/JS blocks were checked for HA selection. The new multi-selector and compact change triggers affect Blocks JS. Existing structured HA target fields, lists and saved mappings in Blocks A are retained. 68 Node tests and 12 server tests passed; no HA live test for this version.
+
 ## Set sensor state {#sensorzustand-setzen}
 
 ### Enter decimal values directly {#sensor-dezimalzahl}

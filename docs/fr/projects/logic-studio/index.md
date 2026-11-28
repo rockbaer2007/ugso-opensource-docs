@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.134 · Bloc décimal dans Blocks A/JS avec les valeurs vérifiées 0.5 et 33.25.
+description: HA Logic Studio Pro 0.1.135 · Sélecteur d’entités HA et déclencheurs compacts dans Blocks JS.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,16 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.135 · Sélecteur d’entités et déclencheurs compacts {#entitaetsauswahl-kompakte-trigger}
+
+**« Si les entités … a changé »** propose désormais le sélecteur multiple de style HA. Rechercher par nom ou identifiant, sélectionner ou désélectionner des entités puis choisir **Appliquer**. Les listes existantes séparées par des virgules ou des espaces restent compatibles.
+
+Les trois déclencheurs Blocks JS pour une entité, plusieurs entités et des attributs utilisent des lignes verticales compactes inspirées d’ioBroker : titre, sélection d’entités et condition de changement. Les longs libellés sont raccourcis uniquement à l’affichage ; identifiants complets, conditions, connexions et projets enregistrés sont conservés. Le filtre d’acquittement ioBroker n’est pas ajouté comme option sans effet, car les événements d’état HA ne proposent pas le modèle ack d’ioBroker.
+
+**Vérification locale :** 285 blocs enregistrés et les 51 champs d’entités directs dans Blocks A/JS. 68 tests Node et 12 tests serveur réussis, dont recherche, sélection multiple, désélection, application, annulation, enregistrement/rechargement, code généré et disposition en DE/EN/FR. Aucun test réel sur HA pour 0.1.135. Les autorisations runtime restent inchangées.
+
+[GitHub · ZIP · Changelog 0.1.135](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.135) · [Blocks JS](./user-guide/blocks-js#entitaetsauswahl-kompakte-trigger)
 
 #### 0.1.134 · Définir l’état du capteur · Nombre décimal {#sensor-dezimalzahl}
 

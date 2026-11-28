@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.134 · Dezimalzahl-Baustein in Blocks A/JS mit geprüften Werten 0.5 und 33.25.
+description: HA Logic Studio Pro 0.1.135 · HA-Entitätenauswahl und kompakte Änderungsauslöser in Blocks JS.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,16 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.135 · Entitätenauswahl und kompaktere Trigger {#entitaetsauswahl-kompakte-trigger}
+
+**„Falls Entitäten … wurde geändert“** bietet jetzt die HA-typische Mehrfachauswahl. Nach Name oder ID suchen, Entitäten markieren oder abwählen und **Übernehmen** wählen. Bestehende kommagetrennte bzw. durch Leerraum getrennte Listen bleiben kompatibel.
+
+Die drei Blocks-JS-Auslöser für eine Entität, mehrere Entitäten und Attribute sind kompakt wie im ioBroker-Vorbild untereinander angeordnet: Überschrift, Entitätsauswahl und Änderungsbedingung. Lange Entitätsanzeigen werden nur optisch gekürzt; vollständige IDs, Bedingungen, Verbindungen und gespeicherte Projekte bleiben erhalten. Die ioBroker-Option „Auslösung durch“ wird nicht als funktionslose Option ergänzt, da HA-Zustandsereignisse kein ioBroker-ack-Modell bieten.
+
+**Lokal geprüft:** 285 registrierte Bausteine und alle 51 direkten Entitätsfelder in Blocks A/JS. 68 Node- und 12 Server-Tests erfolgreich, einschließlich Suche, Mehrfachauswahl, Abwahl, Übernehmen, Abbrechen, Speichern/Laden, Codeausgabe und Trigger-Anordnung in DE/EN/FR. Kein HA-Livetest für 0.1.135. Runtime-Freigaben bleiben unverändert.
+
+[GitHub · ZIP · Changelog 0.1.135](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.135) · [Blocks JS](./user-guide/blocks-js#entitaetsauswahl-kompakte-trigger)
 
 #### 0.1.134 · Sensorzustand setzen · Dezimalzahl {#sensor-dezimalzahl}
 

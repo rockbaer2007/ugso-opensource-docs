@@ -2135,40 +2135,40 @@
       "locale": "en",
       "target": "en/projects/logic-studio/user-guide/blocks-a.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
+      "assessment": "Reviewed added 0.1.135 sections in DE/EN/FR against the shipped implementation and local 80-test report: HA multi-entity search/select/deselect/apply/cancel, retained comma/whitespace format, three compact trigger layouts and visual-only truncation, 285 blocks/51 direct fields, READ/WRITE unchanged, event-trigger versus startup execution. No HA live-test claim for 0.1.135. Existing decimal sensor and historical test scope retained.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "156d6871060a035ffeda855b5efdc12048d5daf11b14913ea32b4ed1c506d238",
-      "target_sha256": "2565aa4a4854edbd530bf542f3b20cc9bb5dcaa1c806e916cb45360f3d17c679"
+      "source_sha256": "8d61473a57259e40218aef3f86f65ae0937ab4b1e3f0ccde976c3a6fcc9b2daa",
+      "target_sha256": "6d23688d07a251bb91671d030de694f449f45fb4a4e629a2355efe8fd8702756"
     },
     {
       "source": "projects/logic-studio/user-guide/blocks-a.md",
       "locale": "fr",
       "target": "fr/projects/logic-studio/user-guide/blocks-a.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
+      "assessment": "Reviewed added 0.1.135 sections in DE/EN/FR against the shipped implementation and local 80-test report: HA multi-entity search/select/deselect/apply/cancel, retained comma/whitespace format, three compact trigger layouts and visual-only truncation, 285 blocks/51 direct fields, READ/WRITE unchanged, event-trigger versus startup execution. No HA live-test claim for 0.1.135. Existing decimal sensor and historical test scope retained.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "156d6871060a035ffeda855b5efdc12048d5daf11b14913ea32b4ed1c506d238",
-      "target_sha256": "cd1c341e2334685e837ebdaa3ea1c291d998410eff063ca15ea93077c2604cab"
+      "source_sha256": "8d61473a57259e40218aef3f86f65ae0937ab4b1e3f0ccde976c3a6fcc9b2daa",
+      "target_sha256": "c9f4c4d82968dc725371dd0cd734e3ea6aff63a70073611d9a5ff08ecdbb114b"
     },
     {
       "source": "projects/logic-studio/user-guide/blocks-js.md",
       "locale": "en",
       "target": "en/projects/logic-studio/user-guide/blocks-js.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
+      "assessment": "Reviewed added 0.1.135 sections in DE/EN/FR against the shipped implementation and local 80-test report: HA multi-entity search/select/deselect/apply/cancel, retained comma/whitespace format, three compact trigger layouts and visual-only truncation, 285 blocks/51 direct fields, READ/WRITE unchanged, event-trigger versus startup execution. No HA live-test claim for 0.1.135. Existing decimal sensor and historical test scope retained.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "25c07f1a6c34006a56d315974ff7f7d9a29c1e5f3986b20f43e40d1a90f8ec0f",
-      "target_sha256": "390f6881a36b8f153e6d8edd2d3a459df43e8db27ec22146d6abb222df575211"
+      "source_sha256": "a1bcc56938540cf64d18243307265a02ad9c86af5172bee9838b50395928b77b",
+      "target_sha256": "528bb1a5d5cc6ad414523bd209aa5749638aacdb678bd66aa3b50c4922e2ca38"
     },
     {
       "source": "projects/logic-studio/user-guide/blocks-js.md",
       "locale": "fr",
       "target": "fr/projects/logic-studio/user-guide/blocks-js.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
+      "assessment": "Reviewed added 0.1.135 sections in DE/EN/FR against the shipped implementation and local 80-test report: HA multi-entity search/select/deselect/apply/cancel, retained comma/whitespace format, three compact trigger layouts and visual-only truncation, 285 blocks/51 direct fields, READ/WRITE unchanged, event-trigger versus startup execution. No HA live-test claim for 0.1.135. Existing decimal sensor and historical test scope retained.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "25c07f1a6c34006a56d315974ff7f7d9a29c1e5f3986b20f43e40d1a90f8ec0f",
-      "target_sha256": "b1aeb5bc57ca9af3fcd3a3b373c8064c17bc9b8a756f67273373725ba717aaa5"
+      "source_sha256": "a1bcc56938540cf64d18243307265a02ad9c86af5172bee9838b50395928b77b",
+      "target_sha256": "a35130dc9cc9b26587d1fa2d22e21e4b270b08b8245af8dc26a4fde80726873f"
     },
     {
       "source": "projects/logic-studio/user-guide/feedback.md",

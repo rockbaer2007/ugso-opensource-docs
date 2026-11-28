@@ -1,5 +1,7 @@
 # Blocks A
 
+**0.1.135 :** Les 51 champs d’entités directs des 285 blocs enregistrés dans Blocks A/JS ont été vérifiés pour la sélection HA. Le nouveau sélecteur multiple et les déclencheurs compacts concernent Blocks JS. Les champs de cibles HA structurés, les listes et les associations enregistrées dans Blocks A sont conservés. 68 tests Node et 12 tests serveur réussis ; aucun test réel sur HA pour cette version.
+
 ## Définir l’état du capteur {#sensorzustand-setzen}
 
 ### Saisir directement un nombre décimal {#sensor-dezimalzahl}

@@ -1,5 +1,18 @@
 # Blocks JS
 
+## Change triggers and entity selection {#entitaetsauswahl-kompakte-trigger}
+
+Under **Trigger**, choose a trigger for one entity, several entities or an attribute. Since **0.1.135**, these blocks use compact vertical rows. Long captions are shortened; saved IDs remain complete.
+
+1. Click the entity field in the multiple-entity trigger. Search by name or ID; select or deselect multiple results.
+2. **Apply** saves the selection. **Close** discards unconfirmed changes. Existing comma/whitespace-separated lists remain compatible.
+3. Use the **changed** condition and put the logic and debug output inside the trigger.
+4. Save and start **Play**. The contents run again when the state changes. Standalone blocks run only at startup.
+
+Selection grants no runtime permissions. Watched entities require READ permission; output targets still require WRITE. For switches, **State of entity** returns `on`/`off`. **Entity exists** only checks existence.
+
+**Verified:** 285 blocks, 51 direct entity fields and 80 local tests. Selection and compact rows checked in DE/EN/FR; no HA live test for 0.1.135.
+
 ## Set sensor state {#sensorzustand-setzen}
 
 ### Enter decimal values directly {#sensor-dezimalzahl}

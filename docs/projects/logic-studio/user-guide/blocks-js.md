@@ -1,5 +1,18 @@
 # Blocks JS
 
+## Änderungsauslöser und Entitätenauswahl {#entitaetsauswahl-kompakte-trigger}
+
+Unter **Trigger** einen Auslöser für eine Entität, mehrere Entitäten oder ein Attribut wählen. Seit **0.1.135** sind diese Bausteine kompakt mehrzeilig aufgebaut. Lange Anzeigen sind gekürzt, gespeicherte IDs bleiben vollständig.
+
+1. Beim Mehrfachauslöser auf das Entitätsfeld klicken. Nach Name oder ID suchen; mehrere Treffer markieren oder wieder abwählen.
+2. **Übernehmen** speichert die Auswahl. **Schließen** verwirft die unbestätigte Auswahl. Bestehende Komma-/Leerraumlisten bleiben kompatibel.
+3. Die Bedingung **wurde geändert** verwenden und Logik sowie Debug-Ausgaben in den Auslöser setzen.
+4. Speichern und **Play** starten. Dann läuft der Inhalt bei einer Zustandsänderung erneut. Frei stehende Blöcke werden nur beim Start ausgeführt.
+
+Die Auswahl erteilt keine Runtime-Rechte. Die überwachten Entitäten benötigen READ-Freigabe; schreibende Ziele weiterhin WRITE. Bei Schaltern liefert **Zustand von Entität** `on`/`off`. **Entität vorhanden** prüft nur die Existenz.
+
+**Geprüft:** 285 Bausteine, 51 direkte Entitätsfelder und 80 lokale Tests. Auswahl und kompakte Zeilen in DE/EN/FR geprüft; kein HA-Livetest für 0.1.135.
+
 ## Sensorzustand setzen {#sensorzustand-setzen}
 
 ### Dezimalzahl direkt eingeben {#sensor-dezimalzahl}

@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.134 · Decimal number block in Blocks A/JS with verified values 0.5 and 33.25.
+description: HA Logic Studio Pro 0.1.135 · HA entity selection and compact change triggers in Blocks JS.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,16 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.135 · Entity selection and compact triggers {#entitaetsauswahl-kompakte-trigger}
+
+**“If entities … changed”** now offers HA-style multi-selection. Search by name or ID, select or deselect entities and choose **Apply**. Existing comma/whitespace-separated lists remain compatible.
+
+The three Blocks JS triggers for a single entity, multiple entities and attributes use compact vertical rows inspired by ioBroker: heading, entity selection and change condition. Long entity captions are shortened only visually; complete IDs, conditions, connections and saved projects are retained. The ioBroker acknowledgement filter is not added as a non-functional option because HA state events do not implement the ioBroker ack model.
+
+**Checked locally:** 285 registered blocks and all 51 direct entity fields in Blocks A/JS. 68 Node tests and 12 server tests passed, including searching, multi-selection, deselection, applying, cancelling, save/load, generated code and trigger layout in DE/EN/FR. No HA live test for 0.1.135. Runtime permissions are unchanged.
+
+[GitHub · ZIP · Changelog 0.1.135](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.135) · [Blocks JS](./user-guide/blocks-js#entitaetsauswahl-kompakte-trigger)
 
 #### 0.1.134 · Set sensor state · Decimal number {#sensor-dezimalzahl}
 

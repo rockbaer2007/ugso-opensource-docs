@@ -1,5 +1,18 @@
 # Blocks JS
 
+## Déclencheurs de changement et sélection d’entités {#entitaetsauswahl-kompakte-trigger}
+
+Dans **Déclencheurs**, choisir un déclencheur pour une entité, plusieurs entités ou un attribut. Depuis **0.1.135**, ces blocs utilisent des lignes verticales compactes. Les longs libellés sont raccourcis ; les identifiants enregistrés restent complets.
+
+1. Cliquer sur le champ d’entités du déclencheur multiple. Rechercher par nom ou identifiant ; sélectionner ou désélectionner plusieurs résultats.
+2. **Appliquer** enregistre la sélection. **Fermer** abandonne les changements non confirmés. Les listes séparées par des virgules ou des espaces restent compatibles.
+3. Utiliser la condition **a changé** et placer la logique et les sorties de débogage dans le déclencheur.
+4. Enregistrer puis démarrer **Play**. Le contenu est exécuté à nouveau lorsque l’état change. Les blocs isolés ne s’exécutent qu’au démarrage.
+
+La sélection n’accorde aucune autorisation runtime. Les entités surveillées nécessitent READ ; les cibles d’écriture nécessitent toujours WRITE. Pour un interrupteur, **État de l’entité** renvoie `on`/`off`. **Entité présente** vérifie uniquement l’existence.
+
+**Vérifié :** 285 blocs, 51 champs d’entités directs et 80 tests locaux. Sélection et lignes compactes vérifiées en DE/EN/FR ; aucun test réel sur HA pour 0.1.135.
+
 ## Définir l’état du capteur {#sensorzustand-setzen}
 
 ### Saisir directement un nombre décimal {#sensor-dezimalzahl}

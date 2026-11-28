@@ -1,5 +1,7 @@
 # Blocks A
 
+**0.1.135:** Alle 51 direkten Entitätsfelder in 285 registrierten Blocks-A-/Blocks-JS-Bausteinen auf die HA-Auswahl geprüft. Die neue Mehrfachauswahl und die kompakteren Änderungsauslöser betreffen Blocks JS. Bestehende strukturierte HA-Zielfelder, Listen und gespeicherte Zuordnungen in Blocks A bleiben erhalten. 68 Node- und 12 Server-Tests erfolgreich; kein HA-Livetest für diese Version.
+
 ## Sensorzustand setzen {#sensorzustand-setzen}
 
 ### Dezimalzahl direkt eingeben {#sensor-dezimalzahl}
