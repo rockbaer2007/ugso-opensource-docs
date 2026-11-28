@@ -9607,9 +9607,9 @@
         "de": {
           "path": "projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "fcdbc2ac92d2ba855a13a3e4df5c7ea82b26ee0b7f2cbd3ce8a6fc863d13e707",
-          "words": 10779,
-          "headings": 17,
+          "sha256": "c4e22a6e0c1cfadf6be982df075b67b34592a5d27acddd3aaf3540889643f0fc",
+          "words": 11008,
+          "headings": 18,
           "examples": 2,
           "versions": [
             "0.1.1",
@@ -9648,6 +9648,7 @@
             "0.1.131",
             "0.1.132",
             "0.1.133",
+            "0.1.134",
             "0.1.140",
             "0.1.20",
             "0.1.21",
@@ -9710,9 +9711,9 @@
         "en": {
           "path": "en/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "16b0ddeb74a0daf0c260def8b9e5a7e0401a75834b796a2fc64183ea873c8069",
-          "words": 11391,
-          "headings": 17,
+          "sha256": "e649a0c34cbee5374fa6f5b12c1cc44a6bd193f567cb2ca86f6058b64adebb57",
+          "words": 11632,
+          "headings": 18,
           "examples": 2,
           "versions": [
             "0.1.1",
@@ -9751,6 +9752,7 @@
             "0.1.131",
             "0.1.132",
             "0.1.133",
+            "0.1.134",
             "0.1.140",
             "0.1.20",
             "0.1.21",
@@ -9819,16 +9821,16 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           }
         },
         "fr": {
           "path": "fr/projects/logic-studio/index.md",
           "status": "content-present",
-          "sha256": "c6c9cfa4d447f25d474e4cf8e65f9257916c8741df669bf8271578b6f7f22af3",
-          "words": 13002,
-          "headings": 17,
+          "sha256": "8a85cb8b9f529ca869e6ed503bc489a9864dc3c47d6a39d098ea6e2cf7d78f29",
+          "words": 13259,
+          "headings": 18,
           "examples": 2,
           "versions": [
             "0.1.1",
@@ -9867,6 +9869,7 @@
             "0.1.131",
             "0.1.132",
             "0.1.133",
+            "0.1.134",
             "0.1.140",
             "0.1.20",
             "0.1.21",
@@ -9935,7 +9938,7 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           }
         }
@@ -10018,24 +10021,28 @@
         "de": {
           "path": "projects/logic-studio/user-guide/blocks-a.md",
           "status": "content-present",
-          "sha256": "7eb9d919628478852c12fa0bd05c7efbd251f3aa88820d21b42566c64a97f835",
-          "words": 456,
-          "headings": 11,
+          "sha256": "156d6871060a035ffeda855b5efdc12048d5daf11b14913ea32b4ed1c506d238",
+          "words": 563,
+          "headings": 12,
           "examples": 1,
           "versions": [
-            "0.1.133"
+            "0.1.133",
+            "0.1.134",
+            "2026.11.3"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/logic-studio/user-guide/blocks-a.md",
           "status": "content-present",
-          "sha256": "9179f4cf510e24744b2c9a4fec584a98dd54506fd648c142253e67e196067bab",
-          "words": 424,
-          "headings": 11,
+          "sha256": "2565aa4a4854edbd530bf542f3b20cc9bb5dcaa1c806e916cb45360f3d17c679",
+          "words": 541,
+          "headings": 12,
           "examples": 1,
           "versions": [
-            "0.1.133"
+            "0.1.133",
+            "0.1.134",
+            "2026.11.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10048,24 +10055,26 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained."
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained."
           }
         },
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/blocks-a.md",
           "status": "content-present",
-          "sha256": "40e80958904224e5377962bc023b506510cb1e4ead2b4698ab20ec41d8a8771a",
-          "words": 475,
-          "headings": 11,
+          "sha256": "cd1c341e2334685e837ebdaa3ea1c291d998410eff063ca15ea93077c2604cab",
+          "words": 598,
+          "headings": 12,
           "examples": 1,
           "versions": [
-            "0.1.133"
+            "0.1.133",
+            "0.1.134",
+            "2026.11.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10078,13 +10087,13 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained."
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained."
           }
         }
       }
@@ -10095,26 +10104,30 @@
         "de": {
           "path": "projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "2827dda8a44d2cb1f8c4bcff2defd39cc607050947fe770e635fc81cc58fe970",
-          "words": 941,
-          "headings": 15,
+          "sha256": "25c07f1a6c34006a56d315974ff7f7d9a29c1e5f3986b20f43e40d1a90f8ec0f",
+          "words": 1048,
+          "headings": 16,
           "examples": 1,
           "versions": [
             "0.1.122",
-            "0.1.133"
+            "0.1.133",
+            "0.1.134",
+            "2026.11.3"
           ],
           "unresolved_local_references": []
         },
         "en": {
           "path": "en/projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "76a1df6d4777c241dbb5f50f0a82d8857359cef8147d17a10f59d313f6dbbb38",
-          "words": 909,
-          "headings": 15,
+          "sha256": "390f6881a36b8f153e6d8edd2d3a459df43e8db27ec22146d6abb222df575211",
+          "words": 1026,
+          "headings": 16,
           "examples": 1,
           "versions": [
             "0.1.122",
-            "0.1.133"
+            "0.1.133",
+            "0.1.134",
+            "2026.11.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10127,25 +10140,27 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained."
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained."
           }
         },
         "fr": {
           "path": "fr/projects/logic-studio/user-guide/blocks-js.md",
           "status": "content-present",
-          "sha256": "48a2551deef75b3c40be8bb0036b7ba327625c1c08e3b6ad45af526f0340f57f",
-          "words": 1005,
-          "headings": 15,
+          "sha256": "b1aeb5bc57ca9af3fcd3a3b373c8064c17bc9b8a756f67273373725ba717aaa5",
+          "words": 1128,
+          "headings": 16,
           "examples": 1,
           "versions": [
             "0.1.122",
-            "0.1.133"
+            "0.1.133",
+            "0.1.134",
+            "2026.11.3"
           ],
           "unresolved_local_references": [],
           "review_signals": {
@@ -10158,13 +10173,13 @@
           "content_review": {
             "status": "technically-compared",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
             "language_scope": "Automatic paragraph and shorter-line language screening; flagged prose reviewed and corrected. Not a complete linguistic or sentence-by-sentence semantic review."
           },
           "semantic_review": {
             "status": "content-reviewed",
             "reviewed_at": "2026-11-28",
-            "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained."
+            "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained."
           }
         }
       }

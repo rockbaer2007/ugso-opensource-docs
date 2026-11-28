@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.133 · Définir les états des capteurs dans Blocks A/JS et créer des plans indépendants avec nom et dossier.
+description: HA Logic Studio Pro 0.1.134 · Bloc décimal dans Blocks A/JS avec les valeurs vérifiées 0.5 et 33.25.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -28,6 +28,17 @@ HA Logic Studio Pro est une application Home Assistant autonome dans le dépôt 
 La version **0.1.62** a ajouté les fonctions de règles décrites ci-dessous.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.134 · Définir l’état du capteur · Nombre décimal {#sensor-dezimalzahl}
+
+**System** dans Blocks A et Blocks JS propose aussi **Définir l’état du capteur · Nombre décimal**. Sélectionner un capteur existant et saisir `0.5` ou `33.25` dans le champ numérique direct. Utiliser un point décimal. La valeur par défaut est `0.5` ; les fractions sont conservées sans arrondi. Le bloc existant avec entrée de valeur reste disponible.
+
+Les deux variantes utilisent la même autorisation WRITE et conservent les attributs. Blocks JS génère par exemple `ha.setSensorState("sensor.example", 33.25)`. Blocks A génère l’événement natif `logic_studio_set_sensor_state` avec `state: 33.25` numérique ; l’application Studio doit fonctionner. Cette action définit un état sans créer de capteur permanent. L’intégration responsable peut remplacer la valeur.
+
+**Vérifié avec succès :** 60 tests Node et 12 tests serveur. Après sauvegarde sur Home Assistant 2026.11.3, Blocks JS a écrit exactement **0.5 W** et **33.25 W**. Le YAML de Blocks A contenait les deux valeurs numériques ; ses données d’événement ont été exécutées via le pont et les états HA confirmés. Les deux champs ont conservé `33.25` après enregistrement et rechargement. Attributs, projets et autorisations utilisateur conservés. L’état initial du capteur a été rétabli ; les deux exemples enregistrés restent arrêtés. Aucune automatisation au démarrage activée.
+
+[GitHub · ZIP · Changelog 0.1.134](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.134) · [Blocks A](./user-guide/blocks-a#sensor-dezimalzahl) · [Blocks JS](./user-guide/blocks-js#sensor-dezimalzahl)
+
 
 #### 0.1.133 · États des capteurs et nouveaux plans fonctionnels {#sensorzustand-funktionsplan}
 

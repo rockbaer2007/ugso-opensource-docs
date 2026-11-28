@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.133 · Set sensor states in Blocks A/JS and create independent function plans with names and folders.
+description: HA Logic Studio Pro 0.1.134 · Decimal number block in Blocks A/JS with verified values 0.5 and 33.25.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,17 @@ HA Logic Studio Pro is a standalone Home Assistant app in the shared UGSo reposi
 - **Language selection:** The editors are available in German, English, and French.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.134 · Set sensor state · Decimal number {#sensor-dezimalzahl}
+
+**System** in Blocks A and Blocks JS now also includes **Set sensor state · Decimal number**. Select an existing sensor and enter `0.5` or `33.25` in the direct number field. Use a decimal point. The default is `0.5`; fractional values are retained without rounding. The existing value-input block remains available.
+
+Both variants use the same WRITE permission and retain sensor attributes. Blocks JS generates, for example, `ha.setSensorState("sensor.example", 33.25)`. Blocks A generates the native `logic_studio_set_sensor_state` event with numeric `state: 33.25`; the Studio app must be running. The action sets a state without creating a persistent sensor. The owning integration can overwrite it.
+
+**Verified successfully:** 60 Node tests and 12 server tests. After backup on Home Assistant 2026.11.3, Blocks JS wrote exactly **0.5 W** and **33.25 W**. Blocks A YAML contained both values as numbers; its event data was executed through the bridge and the HA states were confirmed. Both number fields retained `33.25` after saving and reloading. Attributes, projects and user permissions were preserved. The original sensor value was restored; two saved examples remain stopped. No startup automation was enabled.
+
+[GitHub · ZIP · Changelog 0.1.134](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.134) · [Blocks A](./user-guide/blocks-a#sensor-dezimalzahl) · [Blocks JS](./user-guide/blocks-js#sensor-dezimalzahl)
+
 
 #### 0.1.133 · Sensor states and new function plans {#sensorzustand-funktionsplan}
 

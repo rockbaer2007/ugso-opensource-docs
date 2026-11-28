@@ -1,6 +1,6 @@
 ---
 title: Logic Studio
-description: HA Logic Studio Pro 0.1.133 · Sensorzustände in Blocks A/JS setzen und neue Funktionspläne mit Name und Ordner anlegen.
+description: HA Logic Studio Pro 0.1.134 · Dezimalzahl-Baustein in Blocks A/JS mit geprüften Werten 0.5 und 33.25.
 ---
 # <img class="package-icon" src="/images/logic-studio/icon.svg" width="40" height="40" alt=""> Logic Studio
 
@@ -26,6 +26,17 @@ HA Logic Studio Pro ist eine eigenständige Home-Assistant-App im UGSo-Sammelrep
 - **Sprachwahl:** Die Editoren stehen auf Deutsch, Englisch und Französisch zur Verfügung.
 
 ### HA Logic Studio Pro 0.1.121–0.1.140
+
+#### 0.1.134 · Sensorzustand setzen · Dezimalzahl {#sensor-dezimalzahl}
+
+Unter **System** gibt es in Blocks A und Blocks JS zusätzlich **Sensorzustand setzen · Dezimalzahl**. Wähle einen vorhandenen Sensor und gib im direkten Zahlenfeld beispielsweise `0.5` oder `33.25` ein. Verwende einen Punkt als Dezimaltrennzeichen. Vorgabe ist `0.5`; Nachkommastellen bleiben ohne Rundung erhalten. Der bisherige Baustein mit Werteingang bleibt verfügbar.
+
+Beide Varianten verwenden dieselbe WRITE-Freigabe und erhalten Sensorattribute. Blocks JS erzeugt beispielsweise `ha.setSensorState("sensor.example", 33.25)`. Blocks A erzeugt das native Ereignis `logic_studio_set_sensor_state` mit numerischem `state: 33.25`; die Studio-App muss laufen. Die Aktion setzt einen Zustand, legt aber keinen dauerhaften Sensor an. Die zuständige Integration kann den Wert überschreiben.
+
+**Erfolgreich geprüft:** 60 Node- und 12 Server-Tests. Nach Sicherung auf Home Assistant 2026.11.3 schrieb Blocks JS exakt **0.5 W** und **33.25 W**. Das Blocks-A-YAML enthielt beide Werte als Zahlen; dessen Ereignisdaten wurden über die Brücke ausgeführt und die HA-Zustände bestätigt. Beide Zahlenfelder behielten `33.25` nach Speichern und Neuladen. Attribute, Projekte und Nutzerfreigaben blieben erhalten. Der ursprüngliche Sensorwert wurde wiederhergestellt; zwei gespeicherte Beispiele bleiben gestoppt. Keine Start-Automation aktiviert.
+
+[GitHub · ZIP · Changelog 0.1.134](https://github.com/rockbaer2007/ugso-ha-mqtt-addons/releases/tag/ha-logic-studio-pro-v0.1.134) · [Blocks A](./user-guide/blocks-a#sensor-dezimalzahl) · [Blocks JS](./user-guide/blocks-js#sensor-dezimalzahl)
+
 
 #### 0.1.133 · Sensorzustand und neue Funktionspläne {#sensorzustand-funktionsplan}
 

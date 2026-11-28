@@ -2,6 +2,12 @@
 
 ## Définir l’état du capteur {#sensorzustand-setzen}
 
+### Saisir directement un nombre décimal {#sensor-dezimalzahl}
+
+Depuis **0.1.134** : choisir **System → Définir l’état du capteur · Nombre décimal**, sélectionner un capteur et saisir directement la valeur. Valeur par défaut `0.5` ; saisir par exemple `33.25` avec un point décimal. Aucun arrondi à un entier ; les valeurs restent enregistrées après rechargement. Le bloc avec entrée de valeur reste disponible. Autorisation WRITE et attributs traités de la même façon. Blocks A nécessite l’application Studio active.
+
+**Vérifié :** 72 tests locaux et, après sauvegarde sur HA 2026.11.3, `0.5` et `33.25` via Play dans Blocks JS et via les données d’événement générées et vérifiées de Blocks A. Les deux champs ont été confirmés après rechargement ; réglages et attributs conservés.
+
 À partir de **0.1.133**, **System** propose **Définir l’état du capteur** :
 
 1. Sélectionne un `sensor.*` existant avec le sélecteur d’entités de style HA.

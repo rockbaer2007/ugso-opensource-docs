@@ -2,6 +2,12 @@
 
 ## Sensorzustand setzen {#sensorzustand-setzen}
 
+### Dezimalzahl direkt eingeben {#sensor-dezimalzahl}
+
+Seit **0.1.134**: Wähle unter **System → Sensorzustand setzen · Dezimalzahl** einen Sensor und gib den Wert direkt ein. Vorgabe `0.5`, etwa `33.25` mit Punkt als Dezimaltrennzeichen. Es erfolgt keine Ganzzahlrundung; Speichern und Neuladen erhalten den Wert. Der bisherige Baustein mit Werteingang bleibt verfügbar. WRITE-Freigabe und Sensorattribute werden wie beim bisherigen Baustein behandelt. Blocks A benötigt die laufende Studio-App.
+
+**Geprüft:** 72 lokale Tests sowie nach Sicherung auf HA 2026.11.3 die Werte `0.5` und `33.25`: Blocks JS per Play, Blocks A über die generierten und geprüften Ereignisdaten. Beide Zahlenfelder nach Neuladen bestätigt, Einstellungen und Attribute erhalten.
+
 Ab **0.1.133** steht unter **System** der Baustein **Sensorzustand setzen** bereit:
 
 1. Wähle einen vorhandenen `sensor.*` über die HA-typische Entitätenauswahl.

@@ -2,6 +2,12 @@
 
 ## Set sensor state {#sensorzustand-setzen}
 
+### Enter decimal values directly {#sensor-dezimalzahl}
+
+Since **0.1.134**: Choose **System → Set sensor state · Decimal number**, select a sensor and enter the value directly. The default is `0.5`; enter values such as `33.25` using a decimal point. Values are not rounded to integers and survive saving and reloading. The existing value-input block remains available. WRITE permission and sensor attributes are handled in the same way. Blocks A requires the running Studio app.
+
+**Verified:** 72 local tests plus, after backup on HA 2026.11.3, `0.5` and `33.25` through Blocks JS Play and the generated and inspected Blocks A event data. Both fields were confirmed after reloading; settings and attributes were retained.
+
 From **0.1.133**, **System** includes **Set sensor state**:
 
 1. Select an existing `sensor.*` using HA-style entity selection.

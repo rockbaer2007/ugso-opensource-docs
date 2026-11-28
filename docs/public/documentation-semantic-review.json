@@ -2135,40 +2135,40 @@
       "locale": "en",
       "target": "en/projects/logic-studio/user-guide/blocks-a.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+      "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "7eb9d919628478852c12fa0bd05c7efbd251f3aa88820d21b42566c64a97f835",
-      "target_sha256": "9179f4cf510e24744b2c9a4fec584a98dd54506fd648c142253e67e196067bab"
+      "source_sha256": "156d6871060a035ffeda855b5efdc12048d5daf11b14913ea32b4ed1c506d238",
+      "target_sha256": "2565aa4a4854edbd530bf542f3b20cc9bb5dcaa1c806e916cb45360f3d17c679"
     },
     {
       "source": "projects/logic-studio/user-guide/blocks-a.md",
       "locale": "fr",
       "target": "fr/projects/logic-studio/user-guide/blocks-a.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+      "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "7eb9d919628478852c12fa0bd05c7efbd251f3aa88820d21b42566c64a97f835",
-      "target_sha256": "40e80958904224e5377962bc023b506510cb1e4ead2b4698ab20ec41d8a8771a"
+      "source_sha256": "156d6871060a035ffeda855b5efdc12048d5daf11b14913ea32b4ed1c506d238",
+      "target_sha256": "cd1c341e2334685e837ebdaa3ea1c291d998410eff063ca15ea93077c2604cab"
     },
     {
       "source": "projects/logic-studio/user-guide/blocks-js.md",
       "locale": "en",
       "target": "en/projects/logic-studio/user-guide/blocks-js.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+      "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "2827dda8a44d2cb1f8c4bcff2defd39cc607050947fe770e635fc81cc58fe970",
-      "target_sha256": "76a1df6d4777c241dbb5f50f0a82d8857359cef8147d17a10f59d313f6dbbb38"
+      "source_sha256": "25c07f1a6c34006a56d315974ff7f7d9a29c1e5f3986b20f43e40d1a90f8ec0f",
+      "target_sha256": "390f6881a36b8f153e6d8edd2d3a459df43e8db27ec22146d6abb222df575211"
     },
     {
       "source": "projects/logic-studio/user-guide/blocks-js.md",
       "locale": "fr",
       "target": "fr/projects/logic-studio/user-guide/blocks-js.md",
       "reviewed_at": "2026-11-28",
-      "assessment": "Reviewed 0.1.133 in DE/EN/FR against the shipped implementation and retained HA test report: sensor selection, WRITE, preserved attributes, running-app event bridge, simulated versus live execution, and independent function-plan name/folder/ID/cancel behavior. Existing documentation and historical test scope retained.",
+      "assessment": "Reviewed added 0.1.134 sections in DE/EN/FR against decimal block implementation and the successful 72-test and HA 2026.11.3 report: direct 0.5/33.25 numeric field, no rounding, save/reload, retained general block, WRITE and attributes, running-app requirement, JS Play versus inspected Blocks A event-data execution. Existing 0.1.133 meaning and historical test scope retained.",
       "method": "Complete prose, metadata and section-by-section meaning compared with the German reference; prerequisites, limits, example purpose and historical test scope retained. Code preservation covered by the separate technical review.",
-      "source_sha256": "2827dda8a44d2cb1f8c4bcff2defd39cc607050947fe770e635fc81cc58fe970",
-      "target_sha256": "48a2551deef75b3c40be8bb0036b7ba327625c1c08e3b6ad45af526f0340f57f"
+      "source_sha256": "25c07f1a6c34006a56d315974ff7f7d9a29c1e5f3986b20f43e40d1a90f8ec0f",
+      "target_sha256": "b1aeb5bc57ca9af3fcd3a3b373c8064c17bc9b8a756f67273373725ba717aaa5"
     },
     {
       "source": "projects/logic-studio/user-guide/feedback.md",
